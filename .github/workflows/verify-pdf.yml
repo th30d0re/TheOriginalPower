@@ -1,0 +1,44 @@
+name: Verify regenerated PDF
+
+"on":
+  pull_request:
+    paths:
+      - "Makefile"
+      - "Paper/**/*.tex"
+      - "Paper/**/*.bib"
+      - "Paper/**/*.sty"
+      - "Paper/figures/**"
+      - "Paper/Redefining_Racism.pdf"
+      - ".github/workflows/verify-pdf.yml"
+  push:
+    paths:
+      - "Makefile"
+      - "Paper/**/*.tex"
+      - "Paper/**/*.bib"
+      - "Paper/**/*.sty"
+      - "Paper/figures/**"
+      - "Paper/Redefining_Racism.pdf"
+      - ".github/workflows/verify-pdf.yml"
+
+jobs:
+  verify-pdf:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install LaTeX toolchain
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            biber \
+            latexmk \
+            texlive-bibtex-extra \
+            texlive-fonts-recommended \
+            texlive-latex-extra \
+            texlive-latex-recommended \
+            texlive-pictures
+
+      - name: Rebuild and verify committed PDF
+        run: make verify-pdf

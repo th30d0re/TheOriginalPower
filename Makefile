@@ -15,10 +15,24 @@ usc-all: usc-snippets usc-diffs
 # LaTeX / BibLaTeX build targets
 # ---------------------------------------------------------------------------
 
-.PHONY: pdf empirical data-refresh companion index readme all clean
+PAPER_DIR       := Paper
+PAPER_TEX       := Redefining_Racism.tex
+PAPER_PDF       := Redefining_Racism.pdf
+LATEXMK         ?= latexmk
+LATEXMK_FLAGS   ?= -pdf -interaction=nonstopmode -halt-on-error
 
-pdf: index empirical scotus-audit
-	cd Paper && latexmk -pdf -interaction=nonstopmode Redefining_Racism.tex
+.PHONY: pdf pdf-from-tex verify-pdf empirical data-refresh companion index readme all clean
+
+pdf: index empirical scotus-audit pdf-from-tex
+
+pdf-from-tex:
+	cd $(PAPER_DIR) && $(LATEXMK) $(LATEXMK_FLAGS) $(PAPER_TEX)
+
+verify-pdf: pdf-from-tex
+	@git diff --exit-code -- $(PAPER_DIR)/$(PAPER_PDF) || { \
+		echo "$(PAPER_DIR)/$(PAPER_PDF) is out of date. Run make pdf-from-tex and commit the regenerated PDF."; \
+		exit 1; \
+	}
 
 .PHONY: scotus-audit
 scotus-audit:

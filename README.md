@@ -1,7 +1,7 @@
 # The Mathematics of Oppression
 ### A Set-Theoretic Framework for Analyzing Systems of Domination
 
-[![LaTeX](https://img.shields.io/badge/LaTeX-Document-008080?logo=latex)](Redefining_Racism.pdf)
+[![LaTeX](https://img.shields.io/badge/LaTeX-Document-008080?logo=latex)](Paper/Redefining_Racism.pdf)
 [![Website](https://img.shields.io/badge/Interactive-Website-blueviolet?logo=react)](website/)
 [![License](https://img.shields.io/badge/License-All%20Rights%20Reserved-red)]()
 
@@ -68,20 +68,36 @@ The transferability of this architecture across scales—from **macro-level raci
 ## 🛠️ Building the Document
 
 ### Prerequisites
-- TeX Live 2023 (or later)
+- TeX Live 2023 (or later), `latexmk`, and `biber`
 - LaTeX packages: `amsmath`, `amssymb`, `geometry`, `hyperref`, `tikz`, `setspace`, `microtype`
 
 ### Compile
 
+From the repository root, regenerate the committed PDF from `Paper/Redefining_Racism.tex` with:
+
 ```bash
-latexmk -pdf Redefining_Racism.tex
+make pdf-from-tex
 ```
 
-Or manually:
+To run the full paper pipeline first (index, empirical notebooks, SCOTUS audit) and then rebuild the PDF:
 
 ```bash
-pdflatex Redefining_Racism.tex
-pdflatex Redefining_Racism.tex  # Run twice for references
+make pdf
+```
+
+Before opening a pull request, verify that the checked-in PDF exactly matches a fresh LaTeX build:
+
+```bash
+make verify-pdf
+```
+
+`make verify-pdf` is also enforced in CI for changes to the paper sources or the committed PDF. It rebuilds `Paper/Redefining_Racism.pdf` from the TeX source and fails if the regenerated PDF differs from the committed file.
+
+Or manually from `Paper/`:
+
+```bash
+cd Paper
+latexmk -pdf -interaction=nonstopmode -halt-on-error Redefining_Racism.tex
 ```
 
 ---
