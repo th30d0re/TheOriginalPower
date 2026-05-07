@@ -1,5 +1,10 @@
 \documentclass[12pt,openany]{book}
 
+% Make committed-PDF verification reproducible across local and CI rebuilds.
+\ifdefined\pdfinfoomitdate\pdfinfoomitdate=1\fi
+\ifdefined\pdfsuppressptexinfo\pdfsuppressptexinfo=-1\fi
+\ifdefined\pdftrailerid\pdftrailerid{}\fi
+
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{microtype}

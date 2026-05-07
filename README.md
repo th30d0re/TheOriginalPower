@@ -68,7 +68,7 @@ The transferability of this architecture across scales—from **macro-level raci
 ## 🛠️ Building the Document
 
 ### Prerequisites
-- TeX Live 2023 (or later), `latexmk`, and `biber`
+- TeX Live 2023 (or later), `latexmk`, `biber`, and `cm-super`
 - LaTeX packages: `amsmath`, `amssymb`, `geometry`, `hyperref`, `tikz`, `setspace`, `microtype`
 
 ### Compile
@@ -91,7 +91,7 @@ Before opening a pull request, verify that the checked-in PDF exactly matches a 
 make verify-pdf
 ```
 
-`make verify-pdf` is also enforced in CI for changes to the paper sources or the committed PDF. It rebuilds `Paper/Redefining_Racism.pdf` from the TeX source and fails if the regenerated PDF differs from the committed file.
+`make verify-pdf` is also enforced in CI for changes to the paper sources or the committed PDF. It rebuilds `Paper/Redefining_Racism.pdf` from the TeX source with a fixed build epoch and suppressed PDF metadata timestamps, then fails if the regenerated PDF differs from the committed file.
 
 Or manually from `Paper/`:
 
