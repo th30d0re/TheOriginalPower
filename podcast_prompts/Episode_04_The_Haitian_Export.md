@@ -22,7 +22,7 @@ This 21-episode series mirrors the manuscript's four-part structure. We are in *
 This is **Episode 4**. You must strictly limit your discussion to **Chapter 4 ("The Haitian Export: Hemispheric Liberation, Vexillological Contagion, and the Firmin Protocol")**.
 
 **ALREADY COVERED — Do NOT re-explain:**
-- (Ep 1) The four architectural components, 5-Tier overview, Predatory Min-Max Function, Tri-Modal Enclosure Model, psychosocial fractal mind virus, Out-group expansion thesis.
+- (Ep 1) The four architectural components, 5-Tier overview, Predatory Min-Max Function, Tri-Modal Enclosure Model, **psycho-legal social software**, fractal mind virus, Out-group expansion thesis.
 - (Ep 2) Version 1.0 (15th-Century Portugal), the vector equation, the Implicit Contract.
 - (Ep 3) Bacon's Rebellion, the Buffer Class ($I_{buffer}$), the zero-sum status calculus, threat absorption.
 
