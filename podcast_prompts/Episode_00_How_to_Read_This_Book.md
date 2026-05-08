@@ -25,7 +25,7 @@ Treat Ep 0 as the **root directory**: vocabulary here (Orthogonal Deflection, El
 
 ### Block 1 — Preface (method)
 - **Mission**: Racism as **structure** — components, function, variables, outputs — not only prejudice, hate, or anecdote.
-- **Reframe**: **Psycho-legal social software** — legal/institutional/cultural/affective code on human predictive cognition; engineered partition → perception, common sense, threat, selective empathy. Study the **machine**, not only its affect.
+- **Reframe**: **Psycho-legal social software** — legal/institutional/cultural/affective code that runs on human predictive cognition (**wetware**), not silicon; engineered partition → perception, common sense, threat, selective empathy. Study the **machine**, not only its affect.
 - **Why multi-discipline**: history (sequence, institutions); psychology (identity, bias, empathy); neuro (prediction, habit); law (enforceable partition); economics (extraction, incentives); soc/polisci (class, coalitions); math (precision).
 - **Evidence mix**: archive, law, data, formal model, falsification. Empirical where possible; otherwise mark ordinal/structural/illustrative. Claims are **testable**, not faith.
 - **Formalism**: equations/sets = **precision on structure and entailment**, not physics-style measurement.
