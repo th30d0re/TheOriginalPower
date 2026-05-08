@@ -20,6 +20,12 @@ PAPER_TEX       := Redefining_Racism.tex
 PAPER_PDF       := Redefining_Racism.pdf
 LATEXMK         ?= latexmk
 LATEXMK_FLAGS   ?= -pdf -interaction=nonstopmode -halt-on-error
+PDF_BUILD_EPOCH ?= 1704067200
+
+# Keep CI rebuilds byte-stable by removing clock/time-zone drift from TeX.
+export SOURCE_DATE_EPOCH := $(PDF_BUILD_EPOCH)
+export FORCE_SOURCE_DATE := 1
+export TZ := UTC
 
 .PHONY: pdf pdf-from-tex verify-pdf empirical data-refresh companion index readme all clean
 
