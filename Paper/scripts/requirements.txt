@@ -22,5 +22,6 @@ pyarrow
 requests
 tqdm
 shapely
+selenium          # Headless browser export: Folium → static PNG via _to_png()
 # osmnx and cenpy require conda-forge for reliable binary resolution:
 #   conda install -c conda-forge osmnx cenpy

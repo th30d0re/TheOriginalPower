@@ -1,0 +1,15 @@
+{
+  "index_cases": 101,
+  "loaded_cases": 101,
+  "split_cases": 49,
+  "total_rows": 190,
+  "latent_component": 2,
+  "latent_docs": 190,
+  "latent_vocab": 700,
+  "civil_rights_voting_cases": 55,
+  "second_amendment_cases": 5,
+  "civil_rights_voting_axis_mean": -0.5317509090909092,
+  "second_amendment_axis_mean": 0.78978,
+  "validation_cases": 13,
+  "validation_agreements": 13
+}

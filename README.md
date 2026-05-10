@@ -71,6 +71,25 @@ The transferability of this architecture across scales—from **macro-level raci
 - TeX Live 2023 (or later), `latexmk`, `biber`, and `cm-super`
 - LaTeX packages: `amsmath`, `amssymb`, `geometry`, `hyperref`, `tikz`, `setspace`, `microtype`
 
+### Spatial Case Study Environment (eq47–eq51)
+
+For the CS9 spatial overlay notebook (`Paper/scripts/eq47_51_spatial_overlay.ipynb`):
+
+**Browser driver for upcoming Folium → PNG export.** The spatial pipeline will use Folium's `_to_png()` method to export interactive maps as static PNG images. This feature is forthcoming and will require a headless browser driver at the system level: `geckodriver` (Firefox) or `chromedriver` (Chrome/Chromium). Install via:
+
+- **macOS:** `brew install geckodriver` or `brew install --cask chromedriver`
+- **Linux:** `apt install firefox-geckodriver` or download ChromeDriver from the releases page
+- **Conda:** `conda install -c conda-forge geckodriver`
+
+If no driver is installed, the notebook will fall back to HTML-only map output once the export wrapper is implemented. `make empirical` will still complete successfully.
+
+Create the conda environment and run the notebook:
+```bash
+conda env create -f Paper/scripts/spatial_env.yml
+conda activate spatial_cs9
+jupyter notebook Paper/scripts/eq47_51_spatial_overlay.ipynb
+```
+
 ### Compile
 
 From the repository root, regenerate the committed PDF from `Paper/Redefining_Racism.tex` with:

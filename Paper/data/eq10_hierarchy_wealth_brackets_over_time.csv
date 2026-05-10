@@ -1,0 +1,585 @@
+Date,year,hierarchy_bracket,percentile_proxy,average_net_worth,aggregate_share_pct,Household count,mapping_note
+1989:Q3,1989.5,Out-group extraction floor,Bottom 50%,15433.2,3.51,46513751,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1989:Q4,1989.75,Out-group extraction floor,Bottom 50%,15235.64,3.41,46639187,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1990:Q1,1990.0,Out-group extraction floor,Bottom 50%,15690.37,3.52,46763715,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1990:Q2,1990.25,Out-group extraction floor,Bottom 50%,15194.69,3.37,46887437,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1990:Q3,1990.5,Out-group extraction floor,Bottom 50%,15821.86,3.54,47010455,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1990:Q4,1990.75,Out-group extraction floor,Bottom 50%,16305.8,3.58,47132871,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1991:Q1,1991.0,Out-group extraction floor,Bottom 50%,16467.31,3.55,47254787,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1991:Q2,1991.25,Out-group extraction floor,Bottom 50%,16497.3,3.55,47376305,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1991:Q3,1991.5,Out-group extraction floor,Bottom 50%,17577.53,3.73,47497528,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1991:Q4,1991.75,Out-group extraction floor,Bottom 50%,17967.34,3.73,47618557,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1992:Q1,1992.0,Out-group extraction floor,Bottom 50%,18299.19,3.8,47739495,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1992:Q2,1992.25,Out-group extraction floor,Bottom 50%,18574.32,3.85,47860443,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1992:Q3,1992.5,Out-group extraction floor,Bottom 50%,19903.84,4.07,47981504,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1992:Q4,1992.75,Out-group extraction floor,Bottom 50%,20140.51,4.02,48102798,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1993:Q1,1993.0,Out-group extraction floor,Bottom 50%,19113.87,3.78,48224512,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1993:Q2,1993.25,Out-group extraction floor,Bottom 50%,19395.51,3.8,48346853,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1993:Q3,1993.5,Out-group extraction floor,Bottom 50%,19555.63,3.78,48470025,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1993:Q4,1993.75,Out-group extraction floor,Bottom 50%,19405.39,3.7,48594235,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1994:Q1,1994.0,Out-group extraction floor,Bottom 50%,18553.94,3.52,48719689,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1994:Q2,1994.25,Out-group extraction floor,Bottom 50%,18165.36,3.43,48846591,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1994:Q3,1994.5,Out-group extraction floor,Bottom 50%,18604.31,3.48,48975148,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1994:Q4,1994.75,Out-group extraction floor,Bottom 50%,18576.59,3.46,49105565,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1995:Q1,1995.0,Out-group extraction floor,Bottom 50%,19039.93,3.48,49238048,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1995:Q2,1995.25,Out-group extraction floor,Bottom 50%,19974.86,3.59,49372802,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1995:Q3,1995.5,Out-group extraction floor,Bottom 50%,20682.58,3.67,49510034,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1995:Q4,1995.75,Out-group extraction floor,Bottom 50%,20495.48,3.56,49649862,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1996:Q1,1996.0,Out-group extraction floor,Bottom 50%,20290.42,3.47,49792061,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1996:Q2,1996.25,Out-group extraction floor,Bottom 50%,20362.73,3.44,49936319,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1996:Q3,1996.5,Out-group extraction floor,Bottom 50%,20536.31,3.45,50082324,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1996:Q4,1996.75,Out-group extraction floor,Bottom 50%,20398.01,3.36,50229764,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1997:Q1,1997.0,Out-group extraction floor,Bottom 50%,20644.51,3.39,50378326,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1997:Q2,1997.25,Out-group extraction floor,Bottom 50%,21329.61,3.36,50527699,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1997:Q3,1997.5,Out-group extraction floor,Bottom 50%,21857.2,3.36,50677571,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1997:Q4,1997.75,Out-group extraction floor,Bottom 50%,21587.35,3.27,50827630,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1998:Q1,1998.0,Out-group extraction floor,Bottom 50%,22788.34,3.31,50977563,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1998:Q2,1998.25,Out-group extraction floor,Bottom 50%,22616.48,3.23,51127060,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1998:Q3,1998.5,Out-group extraction floor,Bottom 50%,23719.67,3.46,51275807,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1998:Q4,1998.75,Out-group extraction floor,Bottom 50%,23608.72,3.26,51423704,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1999:Q1,1999.0,Out-group extraction floor,Bottom 50%,24393.8,3.35,51571502,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1999:Q2,1999.25,Out-group extraction floor,Bottom 50%,23982.22,3.21,51720159,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1999:Q3,1999.5,Out-group extraction floor,Bottom 50%,24174.27,3.26,51870638,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1999:Q4,1999.75,Out-group extraction floor,Bottom 50%,25223.73,3.2,52023898,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2000:Q1,2000.0,Out-group extraction floor,Bottom 50%,25932.92,3.22,52180901,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2000:Q2,2000.25,Out-group extraction floor,Bottom 50%,25948.96,3.23,52342607,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2000:Q3,2000.5,Out-group extraction floor,Bottom 50%,26382.91,3.25,52509976,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2000:Q4,2000.75,Out-group extraction floor,Bottom 50%,25348.2,3.18,52683971,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2001:Q1,2001.0,Out-group extraction floor,Bottom 50%,25339.62,3.2,52865551,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2001:Q2,2001.25,Out-group extraction floor,Bottom 50%,25214.83,3.1,53055677,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2001:Q3,2001.5,Out-group extraction floor,Bottom 50%,24777.55,3.13,53255310,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2001:Q4,2001.75,Out-group extraction floor,Bottom 50%,24271.85,2.97,53465016,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2002:Q1,2002.0,Out-group extraction floor,Bottom 50%,24426.61,2.96,53683780,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2002:Q2,2002.25,Out-group extraction floor,Bottom 50%,23717.61,2.93,53910194,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2002:Q3,2002.5,Out-group extraction floor,Bottom 50%,23415.71,2.98,54142848,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2002:Q4,2002.75,Out-group extraction floor,Bottom 50%,23451.75,2.93,54380333,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2003:Q1,2003.0,Out-group extraction floor,Bottom 50%,22518.05,2.82,54621241,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2003:Q2,2003.25,Out-group extraction floor,Bottom 50%,21776.93,2.63,54864161,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2003:Q3,2003.5,Out-group extraction floor,Bottom 50%,22274.46,2.65,55107685,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2003:Q4,2003.75,Out-group extraction floor,Bottom 50%,22507.73,2.59,55350404,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2004:Q1,2004.0,Out-group extraction floor,Bottom 50%,22859.4,2.51,55590908,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2004:Q2,2004.25,Out-group extraction floor,Bottom 50%,23554.47,2.56,55827789,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2004:Q3,2004.5,Out-group extraction floor,Bottom 50%,23200.42,2.48,56059638,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2004:Q4,2004.75,Out-group extraction floor,Bottom 50%,23783.98,2.45,56285119,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2005:Q1,2005.0,Out-group extraction floor,Bottom 50%,24085.1,2.45,56503197,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2005:Q2,2005.25,Out-group extraction floor,Bottom 50%,24263.36,2.42,56712912,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2005:Q3,2005.5,Out-group extraction floor,Bottom 50%,25448.18,2.47,56913302,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2005:Q4,2005.75,Out-group extraction floor,Bottom 50%,26487.05,2.53,57103407,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2006:Q1,2006.0,Out-group extraction floor,Bottom 50%,25901.68,2.41,57282265,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2006:Q2,2006.25,Out-group extraction floor,Bottom 50%,25893.18,2.41,57448916,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2006:Q3,2006.5,Out-group extraction floor,Bottom 50%,25733.56,2.36,57602398,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2006:Q4,2006.75,Out-group extraction floor,Bottom 50%,25298.82,2.28,57741750,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2007:Q1,2007.0,Out-group extraction floor,Bottom 50%,24388.53,2.17,57866012,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2007:Q2,2007.25,Out-group extraction floor,Bottom 50%,23593.21,2.08,57974223,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2007:Q3,2007.5,Out-group extraction floor,Bottom 50%,22800.89,1.99,58065421,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2007:Q4,2007.75,Out-group extraction floor,Bottom 50%,19037.98,1.69,58139414,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2008:Q1,2008.0,Out-group extraction floor,Bottom 50%,15965.89,1.46,58199080,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2008:Q2,2008.25,Out-group extraction floor,Bottom 50%,15898.09,1.48,58248065,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2008:Q3,2008.5,Out-group extraction floor,Bottom 50%,12035.96,1.16,58290015,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2008:Q4,2008.75,Out-group extraction floor,Bottom 50%,9714.79,0.99,58328577,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2009:Q1,2009.0,Out-group extraction floor,Bottom 50%,6914.87,0.72,58367397,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2009:Q2,2009.25,Out-group extraction floor,Bottom 50%,7139.04,0.74,58410122,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2009:Q3,2009.5,Out-group extraction floor,Bottom 50%,6574.86,0.66,58460396,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2009:Q4,2009.75,Out-group extraction floor,Bottom 50%,5677.4,0.57,58521868,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2010:Q1,2010.0,Out-group extraction floor,Bottom 50%,5490.97,0.54,58598182,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2010:Q2,2010.25,Out-group extraction floor,Bottom 50%,5075.85,0.51,58692986,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2010:Q3,2010.5,Out-group extraction floor,Bottom 50%,5590.86,0.54,58809926,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2010:Q4,2010.75,Out-group extraction floor,Bottom 50%,4168.94,0.39,58951489,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2011:Q1,2011.0,Out-group extraction floor,Bottom 50%,4269.86,0.4,59115531,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2011:Q2,2011.25,Out-group extraction floor,Bottom 50%,4626.49,0.43,59298752,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2011:Q3,2011.5,Out-group extraction floor,Bottom 50%,4634.54,0.44,59497848,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2011:Q4,2011.75,Out-group extraction floor,Bottom 50%,4397.82,0.41,59709518,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2012:Q1,2012.0,Out-group extraction floor,Bottom 50%,4777.2,0.44,59930459,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2012:Q2,2012.25,Out-group extraction floor,Bottom 50%,5988.93,0.55,60157369,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2012:Q3,2012.5,Out-group extraction floor,Bottom 50%,6531.78,0.59,60386947,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2012:Q4,2012.75,Out-group extraction floor,Bottom 50%,7853.68,0.7,60615890,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2013:Q1,2013.0,Out-group extraction floor,Bottom 50%,7576.68,0.65,60840897,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2013:Q2,2013.25,Out-group extraction floor,Bottom 50%,9117.77,0.78,61058664,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2013:Q3,2013.5,Out-group extraction floor,Bottom 50%,10833.89,0.9,61265891,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2013:Q4,2013.75,Out-group extraction floor,Bottom 50%,10758.31,0.87,61460009,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2014:Q1,2014.0,Out-group extraction floor,Bottom 50%,11410.86,0.9,61641386,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2014:Q2,2014.25,Out-group extraction floor,Bottom 50%,12958.15,1.0,61811125,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2014:Q3,2014.5,Out-group extraction floor,Bottom 50%,13400.82,1.03,61970329,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2014:Q4,2014.75,Out-group extraction floor,Bottom 50%,13349.06,1.01,62120099,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2015:Q1,2015.0,Out-group extraction floor,Bottom 50%,14076.67,1.05,62261539,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2015:Q2,2015.25,Out-group extraction floor,Bottom 50%,14513.12,1.08,62395751,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2015:Q3,2015.5,Out-group extraction floor,Bottom 50%,14502.76,1.09,62523836,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2015:Q4,2015.75,Out-group extraction floor,Bottom 50%,15895.01,1.17,62646899,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2016:Q1,2016.0,Out-group extraction floor,Bottom 50%,16312.6,1.19,62766040,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2016:Q2,2016.25,Out-group extraction floor,Bottom 50%,16347.54,1.18,62882363,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2016:Q3,2016.5,Out-group extraction floor,Bottom 50%,18280.64,1.29,62996970,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2016:Q4,2016.75,Out-group extraction floor,Bottom 50%,18131.51,1.28,63110782,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2017:Q1,2017.0,Out-group extraction floor,Bottom 50%,19196.6,1.32,63223998,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2017:Q2,2017.25,Out-group extraction floor,Bottom 50%,20381.14,1.38,63336633,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2017:Q3,2017.5,Out-group extraction floor,Bottom 50%,21109.87,1.4,63448704,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2017:Q4,2017.75,Out-group extraction floor,Bottom 50%,21912.98,1.42,63560228,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2018:Q1,2018.0,Out-group extraction floor,Bottom 50%,23195.2,1.49,63671221,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2018:Q2,2018.25,Out-group extraction floor,Bottom 50%,24362.76,1.55,63781700,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2018:Q3,2018.5,Out-group extraction floor,Bottom 50%,24784.76,1.55,63891681,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2018:Q4,2018.75,Out-group extraction floor,Bottom 50%,23903.39,1.56,64001182,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2019:Q1,2019.0,Out-group extraction floor,Bottom 50%,25180.32,1.57,64110218,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2019:Q2,2019.25,Out-group extraction floor,Bottom 50%,26125.79,1.59,64218807,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2019:Q3,2019.5,Out-group extraction floor,Bottom 50%,27928.8,1.69,64326964,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2019:Q4,2019.75,Out-group extraction floor,Bottom 50%,28957.75,1.71,64434742,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2020:Q1,2020.0,Out-group extraction floor,Bottom 50%,29353.07,1.84,64542340,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2020:Q2,2020.25,Out-group extraction floor,Bottom 50%,34137.1,2.0,64649990,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2020:Q3,2020.5,Out-group extraction floor,Bottom 50%,37140.24,2.09,64757927,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2020:Q4,2020.75,Out-group extraction floor,Bottom 50%,41630.25,2.19,64866385,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2021:Q1,2021.0,Out-group extraction floor,Bottom 50%,45585.88,2.3,64975596,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2021:Q2,2021.25,Out-group extraction floor,Bottom 50%,48776.6,2.33,65085795,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2021:Q3,2021.5,Out-group extraction floor,Bottom 50%,51079.65,2.39,65197216,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2021:Q4,2021.75,Out-group extraction floor,Bottom 50%,53511.26,2.44,65310092,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2022:Q1,2022.0,Out-group extraction floor,Bottom 50%,55831.64,2.54,65424657,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2022:Q2,2022.25,Out-group extraction floor,Bottom 50%,56666.34,2.69,65541145,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2022:Q3,2022.5,Out-group extraction floor,Bottom 50%,54722.73,2.67,65659790,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2022:Q4,2022.75,Out-group extraction floor,Bottom 50%,52873.77,2.57,65813070,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2023:Q1,2023.0,Out-group extraction floor,Bottom 50%,54583.58,2.59,66030134,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2023:Q2,2023.25,Out-group extraction floor,Bottom 50%,56014.96,2.56,66094413,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2023:Q3,2023.5,Out-group extraction floor,Bottom 50%,55326.36,2.55,66063263,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2023:Q4,2023.75,Out-group extraction floor,Bottom 50%,55859.62,2.5,66096886,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2024:Q1,2024.0,Out-group extraction floor,Bottom 50%,57787.87,2.5,66314939,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2024:Q2,2024.25,Out-group extraction floor,Bottom 50%,58106.89,2.47,66453880,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2024:Q3,2024.5,Out-group extraction floor,Bottom 50%,58467.54,2.43,66551287,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2024:Q4,2024.75,Out-group extraction floor,Bottom 50%,59895.48,2.48,66645233,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2025:Q1,2025.0,Out-group extraction floor,Bottom 50%,59367.33,2.49,67115951,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2025:Q2,2025.25,Out-group extraction floor,Bottom 50%,61299.74,2.48,67545136,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2025:Q3,2025.5,Out-group extraction floor,Bottom 50%,62690.47,2.45,67751323,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2025:Q4,2025.75,Out-group extraction floor,Bottom 50%,63723.29,2.46,67688033,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1989:Q3,1989.5,Buffer Class,50th-90th,196047.4,35.69,37209619,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1989:Q4,1989.75,Buffer Class,50th-90th,199336.24,35.73,37313119,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1990:Q1,1990.0,Buffer Class,50th-90th,201071.75,36.05,37415410,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1990:Q2,1990.25,Buffer Class,50th-90th,203686.09,36.13,37516598,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1990:Q3,1990.5,Buffer Class,50th-90th,204982.56,36.67,37616790,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1990:Q4,1990.75,Buffer Class,50th-90th,207360.29,36.42,37716093,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1991:Q1,1991.0,Buffer Class,50th-90th,210421.78,36.25,37814612,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1991:Q2,1991.25,Buffer Class,50th-90th,211911.29,36.48,37912453,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1991:Q3,1991.5,Buffer Class,50th-90th,215148.6,36.57,38009724,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1991:Q4,1991.75,Buffer Class,50th-90th,218501.14,36.27,38106529,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1992:Q1,1992.0,Buffer Class,50th-90th,219322.44,36.48,38202976,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1992:Q2,1992.25,Buffer Class,50th-90th,221132.91,36.68,38299171,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1992:Q3,1992.5,Buffer Class,50th-90th,224552.19,36.73,38395221,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1992:Q4,1992.75,Buffer Class,50th-90th,227395.75,36.36,38491247,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1993:Q1,1993.0,Buffer Class,50th-90th,228127.09,36.09,38587439,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1993:Q2,1993.25,Buffer Class,50th-90th,230229.43,36.1,38684004,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1993:Q3,1993.5,Buffer Class,50th-90th,233090.48,36.04,38781147,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1993:Q4,1993.75,Buffer Class,50th-90th,235247.26,35.84,38879075,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1994:Q1,1994.0,Buffer Class,50th-90th,236239.33,35.9,38977994,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1994:Q2,1994.25,Buffer Class,50th-90th,237645.05,35.95,39078109,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1994:Q3,1994.5,Buffer Class,50th-90th,240086.79,35.91,39179627,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1994:Q4,1994.75,Buffer Class,50th-90th,240168.6,35.74,39282754,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1995:Q1,1995.0,Buffer Class,50th-90th,242805.77,35.53,39387696,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1995:Q2,1995.25,Buffer Class,50th-90th,246934.26,35.49,39494658,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1995:Q3,1995.5,Buffer Class,50th-90th,247124.35,35.09,39603848,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1995:Q4,1995.75,Buffer Class,50th-90th,251266.24,34.93,39715387,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1996:Q1,1996.0,Buffer Class,50th-90th,255732.36,35.03,39829066,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1996:Q2,1996.25,Buffer Class,50th-90th,259304.71,35.07,39944593,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1996:Q3,1996.5,Buffer Class,50th-90th,261853.14,35.18,40061674,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1996:Q4,1996.75,Buffer Class,50th-90th,265240.46,34.96,40180017,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1997:Q1,1997.0,Buffer Class,50th-90th,266906.65,35.02,40299329,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1997:Q2,1997.25,Buffer Class,50th-90th,274509.86,34.63,40419317,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1997:Q3,1997.5,Buffer Class,50th-90th,280190.57,34.43,40539687,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1997:Q4,1997.75,Buffer Class,50th-90th,282282.37,34.24,40660148,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1998:Q1,1998.0,Buffer Class,50th-90th,291288.04,33.82,40780407,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1998:Q2,1998.25,Buffer Class,50th-90th,295795.35,33.78,40900170,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1998:Q3,1998.5,Buffer Class,50th-90th,294473.3,34.32,41019145,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1998:Q4,1998.75,Buffer Class,50th-90th,303635.21,33.57,41137222,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1999:Q1,1999.0,Buffer Class,50th-90th,306438.98,33.69,41255026,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1999:Q2,1999.25,Buffer Class,50th-90th,312312.07,33.47,41373364,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1999:Q3,1999.5,Buffer Class,50th-90th,313298.83,33.75,41493044,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1999:Q4,1999.75,Buffer Class,50th-90th,324116.93,32.92,41614873,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2000:Q1,2000.0,Buffer Class,50th-90th,332882.14,33.04,41739659,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2000:Q2,2000.25,Buffer Class,50th-90th,335636.97,33.42,41868209,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2000:Q3,2000.5,Buffer Class,50th-90th,340722.19,33.59,42001332,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2000:Q4,2000.75,Buffer Class,50th-90th,341232.67,34.2,42139834,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2001:Q1,2001.0,Buffer Class,50th-90th,346717.59,35.01,42284523,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2001:Q2,2001.25,Buffer Class,50th-90th,354558.57,34.88,42436207,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2001:Q3,2001.5,Buffer Class,50th-90th,351762.25,35.58,42595693,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2001:Q4,2001.75,Buffer Class,50th-90th,359753.65,35.26,42763460,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2002:Q1,2002.0,Buffer Class,50th-90th,363763.31,35.29,42938665,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2002:Q2,2002.25,Buffer Class,50th-90th,359503.57,35.47,43120137,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2002:Q3,2002.5,Buffer Class,50th-90th,354562.1,36.05,43306704,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2002:Q4,2002.75,Buffer Class,50th-90th,359360.94,35.97,43497195,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2003:Q1,2003.0,Buffer Class,50th-90th,360767.21,36.12,43690439,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2003:Q2,2003.25,Buffer Class,50th-90th,368211.94,35.55,43885264,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2003:Q3,2003.5,Buffer Class,50th-90th,370841.79,35.27,44080498,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2003:Q4,2003.75,Buffer Class,50th-90th,378783.99,34.82,44274970,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2004:Q1,2004.0,Buffer Class,50th-90th,390552.09,34.35,44467508,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2004:Q2,2004.25,Buffer Class,50th-90th,394717.8,34.34,44656942,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2004:Q3,2004.5,Buffer Class,50th-90th,399819.36,34.17,44842098,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2004:Q4,2004.75,Buffer Class,50th-90th,411281.65,33.89,45021882,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2005:Q1,2005.0,Buffer Class,50th-90th,415901.38,33.88,45195493,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2005:Q2,2005.25,Buffer Class,50th-90th,421215.63,33.56,45362210,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2005:Q3,2005.5,Buffer Class,50th-90th,428542.11,33.33,45521309,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2005:Q4,2005.75,Buffer Class,50th-90th,436129.22,33.28,45672067,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2006:Q1,2006.0,Buffer Class,50th-90th,438292.85,32.56,45813759,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2006:Q2,2006.25,Buffer Class,50th-90th,438362.13,32.58,45945664,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2006:Q3,2006.5,Buffer Class,50th-90th,441447.61,32.37,46067057,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2006:Q4,2006.75,Buffer Class,50th-90th,445269.71,32.03,46177215,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2007:Q1,2007.0,Buffer Class,50th-90th,444711.67,31.64,46275415,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2007:Q2,2007.25,Buffer Class,50th-90th,443669.81,31.33,46360934,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2007:Q3,2007.5,Buffer Class,50th-90th,444123.35,31.05,46433048,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2007:Q4,2007.75,Buffer Class,50th-90th,441242.14,31.23,46491641,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2008:Q1,2008.0,Buffer Class,50th-90th,431318.7,31.49,46539030,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2008:Q2,2008.25,Buffer Class,50th-90th,423500.22,31.45,46578136,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2008:Q3,2008.5,Buffer Class,50th-90th,413062.94,31.85,46611882,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2008:Q4,2008.75,Buffer Class,50th-90th,400848.64,32.53,46643192,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2009:Q1,2009.0,Buffer Class,50th-90th,392450.09,32.88,46674987,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2009:Q2,2009.25,Buffer Class,50th-90th,392183.4,32.49,46710192,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2009:Q3,2009.5,Buffer Class,50th-90th,396050.25,31.85,46751729,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2009:Q4,2009.75,Buffer Class,50th-90th,396122.99,31.78,46802520,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2010:Q1,2010.0,Buffer Class,50th-90th,400311.22,31.55,46865489,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2010:Q2,2010.25,Buffer Class,50th-90th,394839.59,31.54,46943558,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2010:Q3,2010.5,Buffer Class,50th-90th,400516.02,31.01,47039651,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2010:Q4,2010.75,Buffer Class,50th-90th,406665.29,30.75,47155746,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2011:Q1,2011.0,Buffer Class,50th-90th,409207.49,30.51,47290051,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2011:Q2,2011.25,Buffer Class,50th-90th,409989.36,30.46,47439829,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2011:Q3,2011.5,Buffer Class,50th-90th,403727.73,31.0,47602343,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2011:Q4,2011.75,Buffer Class,50th-90th,408479.19,30.82,47774857,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2012:Q1,2012.0,Buffer Class,50th-90th,414086.84,30.45,47954634,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2012:Q2,2012.25,Buffer Class,50th-90th,413338.91,30.48,48138938,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2012:Q3,2012.5,Buffer Class,50th-90th,420948.46,30.33,48325032,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2012:Q4,2012.75,Buffer Class,50th-90th,425037.01,30.34,48510180,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2013:Q1,2013.0,Buffer Class,50th-90th,437795.24,30.16,48691644,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2013:Q2,2013.25,Buffer Class,50th-90th,443441.18,30.2,48866689,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2013:Q3,2013.5,Buffer Class,50th-90th,455412.81,30.14,49032578,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2013:Q4,2013.75,Buffer Class,50th-90th,463961.01,29.96,49187196,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2014:Q1,2014.0,Buffer Class,50th-90th,468517.38,29.68,49330917,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2014:Q2,2014.25,Buffer Class,50th-90th,473984.24,29.33,49464737,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2014:Q3,2014.5,Buffer Class,50th-90th,475872.84,29.3,49589651,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2014:Q4,2014.75,Buffer Class,50th-90th,479250.41,29.07,49706655,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2015:Q1,2015.0,Buffer Class,50th-90th,484786.93,28.93,49816745,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2015:Q2,2015.25,Buffer Class,50th-90th,485855.69,28.79,49920916,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2015:Q3,2015.5,Buffer Class,50th-90th,483066.63,29.01,50020164,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2015:Q4,2015.75,Buffer Class,50th-90th,489451.98,28.94,50115486,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2016:Q1,2016.0,Buffer Class,50th-90th,493949.81,28.87,50207876,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2016:Q2,2016.25,Buffer Class,50th-90th,499032.11,28.7,50298331,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2016:Q3,2016.5,Buffer Class,50th-90th,506340.67,28.66,50387845,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2016:Q4,2016.75,Buffer Class,50th-90th,511382.79,28.81,50477244,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2017:Q1,2017.0,Buffer Class,50th-90th,522097.11,28.72,50566666,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2017:Q2,2017.25,Buffer Class,50th-90th,529041.82,28.56,50656079,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2017:Q3,2017.5,Buffer Class,50th-90th,537299.74,28.56,50745450,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2017:Q4,2017.75,Buffer Class,50th-90th,547247.49,28.42,50834746,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2018:Q1,2018.0,Buffer Class,50th-90th,554705.69,28.55,50923936,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2018:Q2,2018.25,Buffer Class,50th-90th,559011.52,28.47,51012986,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2018:Q3,2018.5,Buffer Class,50th-90th,567049.01,28.35,51101865,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2018:Q4,2018.75,Buffer Class,50th-90th,550000.6,28.78,51190539,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2019:Q1,2019.0,Buffer Class,50th-90th,565354.87,28.12,51278975,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2019:Q2,2019.25,Buffer Class,50th-90th,579853.7,28.17,51367143,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2019:Q3,2019.5,Buffer Class,50th-90th,581261.96,28.18,51455008,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2019:Q4,2019.75,Buffer Class,50th-90th,595640.89,28.18,51542573,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2020:Q1,2020.0,Buffer Class,50th-90th,590781.93,29.62,51629976,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2020:Q2,2020.25,Buffer Class,50th-90th,625118.58,29.26,51717391,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2020:Q3,2020.5,Buffer Class,50th-90th,651658.45,29.33,51804991,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2020:Q4,2020.75,Buffer Class,50th-90th,688380.45,29.01,51892948,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2021:Q1,2021.0,Buffer Class,50th-90th,720521.17,29.1,51981437,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2021:Q2,2021.25,Buffer Class,50th-90th,762507.21,29.2,52070630,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2021:Q3,2021.5,Buffer Class,50th-90th,786013.09,29.44,52160699,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2021:Q4,2021.75,Buffer Class,50th-90th,806831.11,29.43,52251820,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2022:Q1,2022.0,Buffer Class,50th-90th,828558.31,30.14,52344163,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2022:Q2,2022.25,Buffer Class,50th-90th,824469.93,31.31,52437903,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2022:Q3,2022.5,Buffer Class,50th-90th,804327.25,31.42,52533213,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2022:Q4,2022.75,Buffer Class,50th-90th,798770.77,31.04,52655850,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2023:Q1,2023.0,Buffer Class,50th-90th,809548.75,30.77,52829519,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2023:Q2,2023.25,Buffer Class,50th-90th,845622.96,30.91,52880948,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2023:Q3,2023.5,Buffer Class,50th-90th,844763.75,31.12,52856025,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2023:Q4,2023.75,Buffer Class,50th-90th,856861.65,30.66,52882926,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2024:Q1,2024.0,Buffer Class,50th-90th,881127.31,30.48,53057386,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2024:Q2,2024.25,Buffer Class,50th-90th,900959.31,30.65,53168550,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2024:Q3,2024.5,Buffer Class,50th-90th,909684.93,30.2,53246484,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2024:Q4,2024.75,Buffer Class,50th-90th,908789.45,30.08,53321649,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2025:Q1,2025.0,Buffer Class,50th-90th,905867.59,30.35,53698262,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2025:Q2,2025.25,Buffer Class,50th-90th,930036.77,30.06,54041645,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2025:Q3,2025.5,Buffer Class,50th-90th,940244.32,29.44,54206611,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2025:Q4,2025.75,Buffer Class,50th-90th,946287.38,29.24,54155974,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1989:Q3,1989.5,Puppet / managerial classes,90th-99.9th,1160694.48,52.2,9192867,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1989:Q4,1989.75,Puppet / managerial classes,90th-99.9th,1179144.34,52.15,9207246,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1990:Q1,1990.0,Puppet / managerial classes,90th-99.9th,1172563.63,51.82,9223027,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1990:Q2,1990.25,Puppet / managerial classes,90th-99.9th,1185681.45,51.8,9240153,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1990:Q3,1990.5,Puppet / managerial classes,90th-99.9th,1166015.97,51.34,9258561,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1990:Q4,1990.75,Puppet / managerial classes,90th-99.9th,1187233.29,51.3,9278190,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1991:Q1,1991.0,Puppet / managerial classes,90th-99.9th,1210781.7,51.3,9298981,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1991:Q2,1991.25,Puppet / managerial classes,90th-99.9th,1208261.93,51.13,9320873,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1991:Q3,1991.5,Puppet / managerial classes,90th-99.9th,1217217.18,50.86,9343805,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1991:Q4,1991.75,Puppet / managerial classes,90th-99.9th,1246952.3,50.89,9367716,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1992:Q1,1992.0,Puppet / managerial classes,90th-99.9th,1239900.53,50.71,9392547,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1992:Q2,1992.25,Puppet / managerial classes,90th-99.9th,1239708.13,50.57,9418237,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1992:Q3,1992.5,Puppet / managerial classes,90th-99.9th,1250770.38,50.33,9444724,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1992:Q4,1992.75,Puppet / managerial classes,90th-99.9th,1281646.14,50.43,9471946,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1993:Q1,1993.0,Puppet / managerial classes,90th-99.9th,1300024.31,50.63,9499827,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1993:Q2,1993.25,Puppet / managerial classes,90th-99.9th,1307504.56,50.49,9528288,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1993:Q3,1993.5,Puppet / managerial classes,90th-99.9th,1322936.2,50.4,9557250,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1993:Q4,1993.75,Puppet / managerial classes,90th-99.9th,1341890.49,50.41,9586634,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1994:Q1,1994.0,Puppet / managerial classes,90th-99.9th,1343681.95,50.38,9616362,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1994:Q2,1994.25,Puppet / managerial classes,90th-99.9th,1346365.58,50.27,9646354,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1994:Q3,1994.5,Puppet / managerial classes,90th-99.9th,1357014.85,50.13,9676533,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1994:Q4,1994.75,Puppet / managerial classes,90th-99.9th,1361013.16,50.05,9706818,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1995:Q1,1995.0,Puppet / managerial classes,90th-99.9th,1383839.41,50.06,9737132,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1995:Q2,1995.25,Puppet / managerial classes,90th-99.9th,1401706.19,49.82,9767395,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1995:Q3,1995.5,Puppet / managerial classes,90th-99.9th,1417399.73,49.79,9797529,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1995:Q4,1995.75,Puppet / managerial classes,90th-99.9th,1452724.25,49.97,9827470,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1996:Q1,1996.0,Puppet / managerial classes,90th-99.9th,1476333.78,50.04,9857216,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1996:Q2,1996.25,Puppet / managerial classes,90th-99.9th,1495378.78,50.06,9886778,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1996:Q3,1996.5,Puppet / managerial classes,90th-99.9th,1506061.72,50.08,9916170,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1996:Q4,1996.75,Puppet / managerial classes,90th-99.9th,1541137.05,50.29,9945403,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1997:Q1,1997.0,Puppet / managerial classes,90th-99.9th,1551098.5,50.38,9974491,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1997:Q2,1997.25,Puppet / managerial classes,90th-99.9th,1621275.53,50.62,10003444,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1997:Q3,1997.5,Puppet / managerial classes,90th-99.9th,1669825.7,50.77,10032277,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1997:Q4,1997.75,Puppet / managerial classes,90th-99.9th,1697971.17,50.96,10061003,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1998:Q1,1998.0,Puppet / managerial classes,90th-99.9th,1782152.98,51.19,10089631,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1998:Q2,1998.25,Puppet / managerial classes,90th-99.9th,1816238.24,51.31,10118177,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1998:Q3,1998.5,Puppet / managerial classes,90th-99.9th,1768280.29,50.98,10146651,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1998:Q4,1998.75,Puppet / managerial classes,90th-99.9th,1889510.6,51.67,10175094,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1999:Q1,1999.0,Puppet / managerial classes,90th-99.9th,1902412.09,51.73,10203661,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1999:Q2,1999.25,Puppet / managerial classes,90th-99.9th,1964057.19,52.06,10232532,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1999:Q3,1999.5,Puppet / managerial classes,90th-99.9th,1950909.81,51.98,10261888,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1999:Q4,1999.75,Puppet / managerial classes,90th-99.9th,2091113.02,52.53,10291910,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2000:Q1,2000.0,Puppet / managerial classes,90th-99.9th,2141692.71,52.57,10322782,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2000:Q2,2000.25,Puppet / managerial classes,90th-99.9th,2131443.23,52.48,10354683,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2000:Q3,2000.5,Puppet / managerial classes,90th-99.9th,2150708.79,52.44,10387795,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2000:Q4,2000.75,Puppet / managerial classes,90th-99.9th,2108616.04,52.27,10422300,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2001:Q1,2001.0,Puppet / managerial classes,90th-99.9th,2077672.27,51.88,10458378,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2001:Q2,2001.25,Puppet / managerial classes,90th-99.9th,2139600.38,52.07,10496211,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2001:Q3,2001.5,Puppet / managerial classes,90th-99.9th,2067243.09,51.72,10535982,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2001:Q4,2001.75,Puppet / managerial classes,90th-99.9th,2149017.31,52.1,10577791,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2002:Q1,2002.0,Puppet / managerial classes,90th-99.9th,2174596.72,52.18,10621431,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2002:Q2,2002.25,Puppet / managerial classes,90th-99.9th,2139014.34,52.21,10666612,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2002:Q3,2002.5,Puppet / managerial classes,90th-99.9th,2066194.35,51.96,10713045,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2002:Q4,2002.75,Puppet / managerial classes,90th-99.9th,2104857.66,52.12,10760444,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2003:Q1,2003.0,Puppet / managerial classes,90th-99.9th,2108197.44,52.22,10808518,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2003:Q2,2003.25,Puppet / managerial classes,90th-99.9th,2204724.24,52.66,10856980,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2003:Q3,2003.5,Puppet / managerial classes,90th-99.9th,2246182.9,52.85,10905542,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2003:Q4,2003.75,Puppet / managerial classes,90th-99.9th,2335982.8,53.13,10953915,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2004:Q1,2004.0,Puppet / managerial classes,90th-99.9th,2446609.02,53.24,11001811,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2004:Q2,2004.25,Puppet / managerial classes,90th-99.9th,2473495.88,53.24,11048941,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2004:Q3,2004.5,Puppet / managerial classes,90th-99.9th,2523916.59,53.37,11095018,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2004:Q4,2004.75,Puppet / managerial classes,90th-99.9th,2620925.51,53.44,11139771,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2005:Q1,2005.0,Puppet / managerial classes,90th-99.9th,2652389.53,53.47,11183006,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2005:Q2,2005.25,Puppet / managerial classes,90th-99.9th,2721072.01,53.64,11224546,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2005:Q3,2005.5,Puppet / managerial classes,90th-99.9th,2789368.3,53.69,11264216,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2005:Q4,2005.75,Puppet / managerial classes,90th-99.9th,2840542.23,53.64,11301839,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2006:Q1,2006.0,Puppet / managerial classes,90th-99.9th,2939650.83,54.05,11337239,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2006:Q2,2006.25,Puppet / managerial classes,90th-99.9th,2938618.36,54.05,11370241,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2006:Q3,2006.5,Puppet / managerial classes,90th-99.9th,2984726.6,54.17,11400668,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2006:Q4,2006.75,Puppet / managerial classes,90th-99.9th,3053784.35,54.37,11428344,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2007:Q1,2007.0,Puppet / managerial classes,90th-99.9th,3102662.66,54.63,11453093,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2007:Q2,2007.25,Puppet / managerial classes,90th-99.9th,3139723.53,54.87,11474739,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2007:Q3,2007.5,Puppet / managerial classes,90th-99.9th,3181341.51,55.05,11493105,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2007:Q4,2007.75,Puppet / managerial classes,90th-99.9th,3154285.29,55.27,11508161,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2008:Q1,2008.0,Puppet / managerial classes,90th-99.9th,3068919.14,55.46,11520443,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2008:Q2,2008.25,Puppet / managerial classes,90th-99.9th,3025605.96,55.63,11530637,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2008:Q3,2008.5,Puppet / managerial classes,90th-99.9th,2924683.6,55.83,11539425,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2008:Q4,2008.75,Puppet / managerial classes,90th-99.9th,2780263.35,55.87,11547491,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2009:Q1,2009.0,Puppet / managerial classes,90th-99.9th,2703959.68,56.08,11555517,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2009:Q2,2009.25,Puppet / managerial classes,90th-99.9th,2754939.82,56.5,11564188,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2009:Q3,2009.5,Puppet / managerial classes,90th-99.9th,2857701.87,56.9,11574186,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2009:Q4,2009.75,Puppet / managerial classes,90th-99.9th,2876589.77,57.14,11586195,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2010:Q1,2010.0,Puppet / managerial classes,90th-99.9th,2936213.9,57.28,11600897,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2010:Q2,2010.25,Puppet / managerial classes,90th-99.9th,2903816.56,57.41,11618975,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2010:Q3,2010.5,Puppet / managerial classes,90th-99.9th,3010007.2,57.67,11641114,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2010:Q4,2010.75,Puppet / managerial classes,90th-99.9th,3091029.44,57.82,11667786,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2011:Q1,2011.0,Puppet / managerial classes,90th-99.9th,3135650.04,57.84,11698625,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2011:Q2,2011.25,Puppet / managerial classes,90th-99.9th,3144128.97,57.78,11733054,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2011:Q3,2011.5,Puppet / managerial classes,90th-99.9th,3027229.02,57.48,11770495,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2011:Q4,2011.75,Puppet / managerial classes,90th-99.9th,3082186.64,57.49,11810375,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2012:Q1,2012.0,Puppet / managerial classes,90th-99.9th,3168208.9,57.57,11852114,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2012:Q2,2012.25,Puppet / managerial classes,90th-99.9th,3150241.89,57.4,11895138,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2012:Q3,2012.5,Puppet / managerial classes,90th-99.9th,3219026.4,57.3,11938867,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2012:Q4,2012.75,Puppet / managerial classes,90th-99.9th,3241053.85,57.14,11982729,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2013:Q1,2013.0,Puppet / managerial classes,90th-99.9th,3360001.21,57.16,12026143,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2013:Q2,2013.25,Puppet / managerial classes,90th-99.9th,3389404.84,57.01,12068535,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2013:Q3,2013.5,Puppet / managerial classes,90th-99.9th,3477796.41,56.84,12109327,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2013:Q4,2013.75,Puppet / managerial classes,90th-99.9th,3573330.5,56.98,12148063,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2014:Q1,2014.0,Puppet / managerial classes,90th-99.9th,3650052.15,57.11,12184764,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2014:Q2,2014.25,Puppet / managerial classes,90th-99.9th,3741012.96,57.19,12219573,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2014:Q3,2014.5,Puppet / managerial classes,90th-99.9th,3760192.28,57.21,12252629,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2014:Q4,2014.75,Puppet / managerial classes,90th-99.9th,3826208.65,57.35,12284075,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2015:Q1,2015.0,Puppet / managerial classes,90th-99.9th,3890199.11,57.39,12314053,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2015:Q2,2015.25,Puppet / managerial classes,90th-99.9th,3921670.8,57.46,12342703,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2015:Q3,2015.5,Puppet / managerial classes,90th-99.9th,3865148.63,57.41,12370167,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2015:Q4,2015.75,Puppet / managerial classes,90th-99.9th,3923849.28,57.38,12396587,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2016:Q1,2016.0,Puppet / managerial classes,90th-99.9th,3970952.26,57.43,12422104,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2016:Q2,2016.25,Puppet / managerial classes,90th-99.9th,4041030.19,57.51,12446859,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2016:Q3,2016.5,Puppet / managerial classes,90th-99.9th,4097571.53,57.41,12470994,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2016:Q4,2016.75,Puppet / managerial classes,90th-99.9th,4117786.51,57.42,12494631,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2017:Q1,2017.0,Puppet / managerial classes,90th-99.9th,4219894.54,57.46,12517819,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2017:Q2,2017.25,Puppet / managerial classes,90th-99.9th,4303884.53,57.52,12540589,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2017:Q3,2017.5,Puppet / managerial classes,90th-99.9th,4373355.93,57.56,12562969,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2017:Q4,2017.75,Puppet / managerial classes,90th-99.9th,4482619.57,57.63,12584989,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2018:Q1,2018.0,Puppet / managerial classes,90th-99.9th,4517604.95,57.57,12606680,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2018:Q2,2018.25,Puppet / managerial classes,90th-99.9th,4572188.34,57.64,12628071,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2018:Q3,2018.5,Puppet / managerial classes,90th-99.9th,4664859.73,57.74,12649193,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2018:Q4,2018.75,Puppet / managerial classes,90th-99.9th,4460725.21,57.76,12670075,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2019:Q1,2019.0,Puppet / managerial classes,90th-99.9th,4713804.06,58.03,12690746,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2019:Q2,2019.25,Puppet / managerial classes,90th-99.9th,4823913.82,57.98,12711236,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2019:Q3,2019.5,Puppet / managerial classes,90th-99.9th,4834279.37,57.98,12731577,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2019:Q4,2019.75,Puppet / managerial classes,90th-99.9th,4929851.95,57.69,12751801,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2020:Q1,2020.0,Puppet / managerial classes,90th-99.9th,4582178.8,56.82,12771956,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2020:Q2,2020.25,Puppet / managerial classes,90th-99.9th,4879316.79,56.49,12792094,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2020:Q3,2020.5,Puppet / managerial classes,90th-99.9th,5038865.87,56.08,12812268,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2020:Q4,2020.75,Puppet / managerial classes,90th-99.9th,5356684.74,55.82,12832531,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2021:Q1,2021.0,Puppet / managerial classes,90th-99.9th,5545386.96,55.38,12852933,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2021:Q2,2021.25,Puppet / managerial classes,90th-99.9th,5812185.28,55.02,12873528,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2021:Q3,2021.5,Puppet / managerial classes,90th-99.9th,5900716.34,54.63,12894367,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2021:Q4,2021.75,Puppet / managerial classes,90th-99.9th,6032173.12,54.39,12915502,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2022:Q1,2022.0,Puppet / managerial classes,90th-99.9th,5976636.45,53.73,12936987,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2022:Q2,2022.25,Puppet / managerial classes,90th-99.9th,5635437.51,52.89,12958873,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2022:Q3,2022.5,Puppet / managerial classes,90th-99.9th,5461732.93,52.73,12981212,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2022:Q4,2022.75,Puppet / managerial classes,90th-99.9th,5518893.49,53.0,13011516,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2023:Q1,2023.0,Puppet / managerial classes,90th-99.9th,5658491.49,53.14,13054430,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2023:Q2,2023.25,Puppet / managerial classes,90th-99.9th,5868580.17,53.02,13067138,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2023:Q3,2023.5,Puppet / managerial classes,90th-99.9th,5815904.93,52.94,13060980,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2023:Q4,2023.75,Puppet / managerial classes,90th-99.9th,6018625.8,53.22,13067628,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2024:Q1,2024.0,Puppet / managerial classes,90th-99.9th,6232991.02,53.28,13110737,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2024:Q2,2024.25,Puppet / managerial classes,90th-99.9th,6325396.91,53.17,13138207,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2024:Q3,2024.5,Puppet / managerial classes,90th-99.9th,6511157.7,53.41,13157464,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2024:Q4,2024.75,Puppet / managerial classes,90th-99.9th,6531971.07,53.43,13176038,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2025:Q1,2025.0,Puppet / managerial classes,90th-99.9th,6438243.97,53.29,13269100,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2025:Q2,2025.25,Puppet / managerial classes,90th-99.9th,6686520.54,53.41,13353953,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2025:Q3,2025.5,Puppet / managerial classes,90th-99.9th,6941142.24,53.7,13394716,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2025:Q4,2025.75,Puppet / managerial classes,90th-99.9th,7040721.62,53.76,13382204,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1989:Q3,1989.5,True Elite,Top 0.1%,16917960.02,8.6,103864,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1989:Q4,1989.75,True Elite,Top 0.1%,17654094.48,8.71,102687,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1990:Q1,1990.0,True Elite,Top 0.1%,17678633.29,8.61,101616,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1990:Q2,1990.25,True Elite,Top 0.1%,18282337.63,8.7,100649,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1990:Q3,1990.5,True Elite,Top 0.1%,17819715.18,8.46,99781,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1990:Q4,1990.75,True Elite,Top 0.1%,18863345.76,8.7,99009,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1991:Q1,1991.0,True Elite,Top 0.1%,19877636.53,8.91,98330,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1991:Q2,1991.25,True Elite,Top 0.1%,19928914.9,8.84,97742,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1991:Q3,1991.5,True Elite,Top 0.1%,20343469.77,8.85,97240,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1991:Q4,1991.75,True Elite,Top 0.1%,21591927.37,9.11,96821,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1992:Q1,1992.0,True Elite,Top 0.1%,21450602.18,9.01,96482,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1992:Q2,1992.25,True Elite,Top 0.1%,21369752.96,8.91,96221,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1992:Q3,1992.5,True Elite,Top 0.1%,21675965.55,8.87,96033,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1992:Q4,1992.75,True Elite,Top 0.1%,23062638.79,9.19,95915,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1993:Q1,1993.0,True Elite,Top 0.1%,24188728.25,9.51,95868,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1993:Q2,1993.25,True Elite,Top 0.1%,24734025.8,9.61,95889,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1993:Q3,1993.5,True Elite,Top 0.1%,25568740.43,9.78,95977,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1993:Q4,1993.75,True Elite,Top 0.1%,26688774.93,10.05,96133,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1994:Q1,1994.0,True Elite,Top 0.1%,27141893.43,10.2,96354,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1994:Q2,1994.25,True Elite,Top 0.1%,27646350.93,10.34,96641,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1994:Q3,1994.5,True Elite,Top 0.1%,28297024.5,10.48,96992,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1994:Q4,1994.75,True Elite,Top 0.1%,29138645.07,10.75,97407,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1995:Q1,1995.0,True Elite,Top 0.1%,30070910.47,10.93,97884,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1995:Q2,1995.25,True Elite,Top 0.1%,31000599.45,11.1,98423,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1995:Q3,1995.5,True Elite,Top 0.1%,32223402.64,11.44,99023,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1995:Q4,1995.75,True Elite,Top 0.1%,33070685.49,11.54,99681,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1996:Q1,1996.0,True Elite,Top 0.1%,33179556.91,11.45,100386,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1996:Q2,1996.25,True Elite,Top 0.1%,33358754.02,11.42,101125,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1996:Q3,1996.5,True Elite,Top 0.1%,33033007.48,11.29,101886,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1996:Q4,1996.75,True Elite,Top 0.1%,33815665.91,11.39,102656,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1997:Q1,1997.0,True Elite,Top 0.1%,33290366.56,11.21,103421,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1997:Q2,1997.25,True Elite,Top 0.1%,35000537.58,11.38,104170,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1997:Q3,1997.5,True Elite,Top 0.1%,35998207.65,11.44,104890,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1997:Q4,1997.75,True Elite,Top 0.1%,36593490.39,11.52,105567,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1998:Q1,1998.0,True Elite,Top 0.1%,38676510.75,11.69,106189,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1998:Q2,1998.25,True Elite,Top 0.1%,39203872.85,11.68,106743,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1998:Q3,1998.5,True Elite,Top 0.1%,36918640.87,11.25,107216,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1998:Q4,1998.75,True Elite,Top 0.1%,39783696.87,11.5,107599,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1999:Q1,1999.0,True Elite,Top 0.1%,39071093.61,11.23,107900,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1999:Q2,1999.25,True Elite,Top 0.1%,40206778.88,11.26,108130,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1999:Q3,1999.5,True Elite,Top 0.1%,39176131.12,11.02,108300,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+1999:Q4,1999.75,True Elite,Top 0.1%,42885373.82,11.35,108422,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2000:Q1,2000.0,True Elite,Top 0.1%,43333714.26,11.18,108506,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2000:Q2,2000.25,True Elite,Top 0.1%,42101756.58,10.87,108563,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2000:Q3,2000.5,True Elite,Top 0.1%,42062887.87,10.72,108606,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2000:Q4,2000.75,True Elite,Top 0.1%,40075752.0,10.36,108644,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2001:Q1,2001.0,True Elite,Top 0.1%,38198802.11,9.91,108691,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2001:Q2,2001.25,True Elite,Top 0.1%,39448356.4,9.95,108755,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2001:Q3,2001.5,True Elite,Top 0.1%,37018925.13,9.57,108850,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2001:Q4,2001.75,True Elite,Top 0.1%,38691639.98,9.66,108983,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2002:Q1,2002.0,True Elite,Top 0.1%,38796782.53,9.57,109154,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2002:Q2,2002.25,True Elite,Top 0.1%,37513647.71,9.39,109359,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2002:Q3,2002.5,True Elite,Top 0.1%,35028897.3,9.01,109595,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2002:Q4,2002.75,True Elite,Top 0.1%,35486992.3,8.97,109858,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2003:Q1,2003.0,True Elite,Top 0.1%,35026319.61,8.84,110146,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2003:Q2,2003.25,True Elite,Top 0.1%,37710476.76,9.16,110454,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2003:Q3,2003.5,True Elite,Top 0.1%,38601576.11,9.23,110779,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2003:Q4,2003.75,True Elite,Top 0.1%,41000548.96,9.46,111119,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2004:Q1,2004.0,True Elite,Top 0.1%,44851770.45,9.89,111469,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2004:Q2,2004.25,True Elite,Top 0.1%,45271439.56,9.86,111826,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2004:Q3,2004.5,True Elite,Top 0.1%,46670894.76,9.98,112186,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2004:Q4,2004.75,True Elite,Top 0.1%,49588975.37,10.22,112548,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2005:Q1,2005.0,True Elite,Top 0.1%,50090507.32,10.19,112908,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2005:Q2,2005.25,True Elite,Top 0.1%,52214850.13,10.39,113265,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2005:Q3,2005.5,True Elite,Top 0.1%,54079891.21,10.5,113617,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2005:Q4,2005.75,True Elite,Top 0.1%,55386569.44,10.55,113964,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2006:Q1,2006.0,True Elite,Top 0.1%,59268945.43,10.99,114302,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2006:Q2,2006.25,True Elite,Top 0.1%,59114411.59,10.96,114630,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2006:Q3,2006.5,True Elite,Top 0.1%,60641330.35,11.1,114947,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2006:Q4,2006.75,True Elite,Top 0.1%,63012424.95,11.31,115252,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2007:Q1,2007.0,True Elite,Top 0.1%,65070719.48,11.56,115541,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2007:Q2,2007.25,True Elite,Top 0.1%,66420161.46,11.72,115815,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2007:Q3,2007.5,True Elite,Top 0.1%,68193478.07,11.92,116070,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2007:Q4,2007.75,True Elite,Top 0.1%,66691153.58,11.81,116307,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2008:Q1,2008.0,True Elite,Top 0.1%,63428681.76,11.59,116527,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2008:Q2,2008.25,True Elite,Top 0.1%,61488777.91,11.44,116734,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2008:Q3,2008.5,True Elite,Top 0.1%,57658955.63,11.15,116932,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2008:Q4,2008.75,True Elite,Top 0.1%,52077696.1,10.61,117123,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2009:Q1,2009.0,True Elite,Top 0.1%,49011431.15,10.32,117311,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2009:Q2,2009.25,True Elite,Top 0.1%,49305840.9,10.27,117499,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2009:Q3,2009.5,True Elite,Top 0.1%,52279564.96,10.58,117690,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2009:Q4,2009.75,True Elite,Top 0.1%,51990728.49,10.51,117888,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2010:Q1,2010.0,True Elite,Top 0.1%,53489931.92,10.62,118096,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2010:Q2,2010.25,True Elite,Top 0.1%,52356702.76,10.54,118317,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2010:Q3,2010.5,True Elite,Top 0.1%,55236820.35,10.78,118554,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2010:Q4,2010.75,True Elite,Top 0.1%,57943245.52,11.04,118810,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2011:Q1,2011.0,True Elite,Top 0.1%,59919569.38,11.25,119084,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2011:Q2,2011.25,True Elite,Top 0.1%,60601956.88,11.33,119374,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2011:Q3,2011.5,True Elite,Top 0.1%,57372912.09,11.08,119677,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2011:Q4,2011.75,True Elite,Top 0.1%,59472935.47,11.27,119991,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2012:Q1,2012.0,True Elite,Top 0.1%,62581540.12,11.54,120315,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2012:Q2,2012.25,True Elite,Top 0.1%,62631840.26,11.57,120646,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2012:Q3,2012.5,True Elite,Top 0.1%,65337860.18,11.79,120982,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2012:Q4,2012.75,True Elite,Top 0.1%,66244483.64,11.82,121321,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2013:Q1,2013.0,True Elite,Top 0.1%,69908993.02,12.03,121661,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2013:Q2,2013.25,True Elite,Top 0.1%,70641303.28,12.01,122000,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2013:Q3,2013.5,True Elite,Top 0.1%,73393763.03,12.12,122335,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2013:Q4,2013.75,True Elite,Top 0.1%,75715463.13,12.19,122666,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2014:Q1,2014.0,True Elite,Top 0.1%,77973079.33,12.31,122991,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2014:Q2,2014.25,True Elite,Top 0.1%,80878599.64,12.48,123311,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2014:Q3,2014.5,True Elite,Top 0.1%,81126696.65,12.45,123626,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2014:Q4,2014.75,True Elite,Top 0.1%,83116964.54,12.57,123935,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2015:Q1,2015.0,True Elite,Top 0.1%,84860622.35,12.63,124238,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2015:Q2,2015.25,True Elite,Top 0.1%,85687621.95,12.67,124535,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2015:Q3,2015.5,True Elite,Top 0.1%,83323215.33,12.49,124827,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2015:Q4,2015.75,True Elite,Top 0.1%,84719493.58,12.5,125113,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2016:Q1,2016.0,True Elite,Top 0.1%,85709856.21,12.51,125393,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2016:Q2,2016.25,True Elite,Top 0.1%,87779307.38,12.61,125668,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2016:Q3,2016.5,True Elite,Top 0.1%,89281333.38,12.63,125936,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2016:Q4,2016.75,True Elite,Top 0.1%,88750099.05,12.5,126198,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2017:Q1,2017.0,True Elite,Top 0.1%,90855608.71,12.5,126455,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2017:Q2,2017.25,True Elite,Top 0.1%,92846338.4,12.54,126707,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2017:Q3,2017.5,True Elite,Top 0.1%,93793448.12,12.47,126956,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2017:Q4,2017.75,True Elite,Top 0.1%,96392929.3,12.53,127201,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2018:Q1,2018.0,True Elite,Top 0.1%,96163913.85,12.39,127445,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2018:Q2,2018.25,True Elite,Top 0.1%,96800784.74,12.34,127686,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2018:Q3,2018.5,True Elite,Top 0.1%,98746621.12,12.36,127927,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2018:Q4,2018.75,True Elite,Top 0.1%,90835450.35,11.9,128168,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2019:Q1,2019.0,True Elite,Top 0.1%,98558796.04,12.28,128410,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2019:Q2,2019.25,True Elite,Top 0.1%,100804225.32,12.26,128653,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2019:Q3,2019.5,True Elite,Top 0.1%,100014142.97,12.15,128898,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2019:Q4,2019.75,True Elite,Top 0.1%,104768788.81,12.42,129146,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2020:Q1,2020.0,True Elite,Top 0.1%,93282631.88,11.72,129398,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2020:Q2,2020.25,True Elite,Top 0.1%,104398622.49,12.25,129654,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2020:Q3,2020.5,True Elite,Top 0.1%,110740212.76,12.5,129914,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2020:Q4,2020.75,True Elite,Top 0.1%,122819173.45,12.98,130180,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2021:Q1,2021.0,True Elite,Top 0.1%,130357671.79,13.21,130452,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2021:Q2,2021.25,True Elite,Top 0.1%,139907458.12,13.45,130730,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2021:Q3,2021.5,True Elite,Top 0.1%,143985604.81,13.54,131016,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2021:Q4,2021.75,True Elite,Top 0.1%,149949729.26,13.74,131309,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2022:Q1,2022.0,True Elite,Top 0.1%,148618220.5,13.59,131610,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2022:Q2,2022.25,True Elite,Top 0.1%,137306531.94,13.12,131921,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2022:Q3,2022.5,True Elite,Top 0.1%,134025355.41,13.18,132240,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2022:Q4,2022.75,True Elite,Top 0.1%,136846683.11,13.39,132549,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2023:Q1,2023.0,True Elite,Top 0.1%,141109643.12,13.5,132986,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2023:Q2,2023.25,True Elite,Top 0.1%,146812592.03,13.51,133116,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2023:Q3,2023.5,True Elite,Top 0.1%,144446551.37,13.39,133053,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2023:Q4,2023.75,True Elite,Top 0.1%,151256886.59,13.62,133121,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2024:Q1,2024.0,True Elite,Top 0.1%,157839922.13,13.74,133560,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2024:Q2,2024.25,True Elite,Top 0.1%,160101113.27,13.71,133840,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2024:Q3,2024.5,True Elite,Top 0.1%,167079262.29,13.96,134036,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2024:Q4,2024.75,True Elite,Top 0.1%,168162711.86,14.01,134225,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2025:Q1,2025.0,True Elite,Top 0.1%,164520791.87,13.87,135173,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2025:Q2,2025.25,True Elite,Top 0.1%,172681544.86,14.05,136038,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2025:Q3,2025.5,True Elite,Top 0.1%,182885066.65,14.41,136453,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2025:Q4,2025.75,True Elite,Top 0.1%,186862681.09,14.54,136325,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.

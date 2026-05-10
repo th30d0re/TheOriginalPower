@@ -1,0 +1,90 @@
+{
+  "reel_id": "DXWvLs5kWE2",
+  "url": "https://www.instagram.com/reel/DXWvLs5kWE2/",
+  "creator": {
+    "username": "benbraverfl",
+    "display_name": "Benjamin Braver",
+    "user_id": "66358053798"
+  },
+  "content": {
+    "title": "Video by benbraverfl",
+    "description": "Thanks Reagan for destroying Unions & the minimum wage! & thank you @realdonaldtrump for continuing that fight!",
+    "duration_seconds": 65,
+    "duration_formatted": "1:05"
+  },
+  "engagement": {
+    "likes": 15366,
+    "comments_count": 424,
+    "views": null,
+    "shares": null,
+    "saves": null
+  },
+  "metadata": {
+    "upload_date": "20260420",
+    "timestamp": 1776692001,
+    "resolution": "1080x1920",
+    "file_size_approx": "12.6 MB",
+    "downloaded": "2026-04-26"
+  },
+  "content_analysis": {
+    "primary_theme": "Wealth inequality visualization - direct documentation of extraction",
+    "secondary_themes": ["Wealth concentration", "Top 0.01% extraction", "1980s policy critique", "Trump policy continuation"],
+    "book_alignment": "Chapter 10 (The Concession Theorem) - literal visualization of Δmax = 0 invariant",
+    "relevance": "Demonstrates viral content presenting Piketty-Saez-Zucman wealth data showing $800 (bottom 50%) vs $900M (top 0.01%) - extraction kernel made visible"
+  },
+  "transcription": {
+    "full_text": "this is an insane thing about our economy. This graph shows average wealth for the bottom half of Americans. You can see that during the Great Recession, we dipped into negative wealth because most people were in debt. Right now, it stands about $800 per person on average. If we add in the next 40%, the next 40% of the rich Americans, well, we see a huge gap. On average, they have 450,000, while the bottom half has only $800 accounts. If we add in the next 10%, we can see that gap between the bottom and the next 40% looks minuscule in comparison to that next, where they have an average 5.5 million. If we add in the next 1%, suddenly that gap looks like nothing. And let's just jump to the top 0.01%, where 20,000 people owned on average, $900 million in wealth, making the rest of us look almost the same in comparison. Those are the $800 look almost the same to those with $5 million. And we know this all started around the 1980s when that gap started to expand massively. This is the same policy that Trump is trying to put in place right now.",
+    "wealth_data": {
+      "bottom_50_percent": "$800",
+      "next_40_percent": "$450,000",
+      "next_9_percent": "$5.5 million",
+      "top_0_01_percent": "$900 million"
+    },
+    "transcribed_by": "OpenAI Whisper (base model)",
+    "transcription_file": "reel_DXWvLs5kWE2.json"
+  },
+  "comments_sample": [
+    {
+      "author": "robertapfingstensr",
+      "text": "Ronald Reagan and the bullshit trickle down, supply side fallacy.",
+      "sentiment": "coherence_formation",
+      "book_variable": "M(t) - class coherence signal"
+    },
+    {
+      "author": "strahl_mike",
+      "text": "Ive said this the past 10 years and ill say it till im on my deathbed.\n\nReagan placed America in a Coffin, trump will nail it",
+      "sentiment": "strong_agreement",
+      "book_variable": "M(t) - sustained critique"
+    },
+    {
+      "author": "vogons42",
+      "text": "Min wage and unions can help but the real culprit is tax cuts on the rich that began in the 60s. Cutting taxes on the rich incentivizes them to divert more from their businesses into their hoard... Taxing the rich reverses this process... Tax the rich.",
+      "sentiment": "nuanced_economic_analysis",
+      "book_variable": "ε(t) - extraction critique"
+    },
+    {
+      "author": "linacas",
+      "text": "But the immigrants",
+      "sentiment": "gaslighting_deflection",
+      "book_variable": "P_gaslight - semantic redirect"
+    }
+  ],
+  "comment_breakdown": {
+    "coherence_formation": 0.75,
+    "gaslighting_deflection": 0.15,
+    "neutral_engagement": 0.10
+  },
+  "tier_classification": {
+    "likes_count": "Tier 2",
+    "comment_analysis": "Tier 3",
+    "content_categorization": "Tier 3",
+    "justification": "Platform metrics are verifiable; sentiment coding is author-classified with disclosed methodology"
+  },
+  "falsification_criterion": "If chi-squared test on comment sentiment distribution shows p > 0.05 for gaslighting detection, the P_gaslight claim for this case fails",
+  "cross_references": {
+    "primary_chapter": "Chapter 10 - The Contradiction: Why Reform Serves the Algorithm",
+    "secondary_chapters": ["Chapter 13 - Global Containment Field", "Chapter 14 - Algorithmic Epoch"],
+    "equations": ["eq_10.03_cannibalization", "eq_14.15_noise_spectrum_index", "eq_14.02_realtime_proximity_estimate"],
+    "variables": ["P_gaslight", "M(t)", "ε(t)", "Φ_load"]
+  }
+}

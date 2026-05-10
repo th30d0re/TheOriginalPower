@@ -1,0 +1,18 @@
+# processed: expert-coded validation sample for SCOTUS judicial-semantics case study
+# source_upstream: Paper/data/scotus_judicial_case_scores.csv
+# coding: hand-coded doctrinal posture used to benchmark the text-derived axis
+# generated_by: Paper/scripts/scotus_judicial_semantics.py
+slug,case_name,year,cluster,expert_expected_pole,coding_rationale,latent_semantic_axis_z,basket_anchor_delta_z,semantic_formalism_index,hardware_due_diligence_index,double_agent_basket_delta,observed_pole,agreement
+washington_v_davis_1976,Washington v. Davis,1976,intent_doctrine,semantic_formalism,Intent gate for proxy discrimination claims,0.4536,0.1805,1.8431,1.1849,-0.6582,semantic_formalism,True
+village_of_arlington_heights_v_metropolitan_housing_development_corp_1977,Village of Arlington Heights v. Metropolitan Housing Development Corp.,1977,intent_doctrine,semantic_formalism,Intent-factor test for facially neutral land-use decisions,-0.2809,-0.3042,2.9945,0.4633,-2.5312,semantic_formalism,True
+mobile_v_bolden_1980,Mobile v. Bolden,1980,voting_rights,semantic_formalism,Voting dilution routed through intent doctrine,-1.6023,-0.4298,4.5266,0.7127,-3.8139,semantic_formalism,True
+mccleskey_v_kemp_1987,McCleskey v. Kemp,1987,carceral_enforcement,semantic_formalism,Statistical racial disparity rejected as constitutional proof,0.4685,-0.345,3.3852,0.7479,-2.6373,semantic_formalism,True
+shelby_county_v_holder_2013,Shelby County v. Holder,2013,voting_rights,semantic_formalism,Voting-rights remedy narrowed through equal-sovereignty logic,-1.6874,-0.552,5.9205,2.9048,-3.0157,semantic_formalism,True
+brnovich_v_democratic_national_committee_2021,Brnovich v. Democratic National Committee,2021,voting_rights,semantic_formalism,Section 2 burden filtered through administrative normality,-2.0014,-0.428,5.2519,3.2355,-2.0164,semantic_formalism,True
+parents_involved_v_seattle_2007,Parents Involved v. Seattle,2007,affirmative_action,semantic_formalism,Colorblind symmetry applied to integration remedy,0.7286,0.0858,1.5972,1.4547,-0.1425,semantic_formalism,True
+students_for_fair_admissions_v_harvard_2023,Students for Fair Admissions v. Harvard,2023,affirmative_action,semantic_formalism,Colorblind symmetry applied to affirmative action,0.9597,-0.1476,4.492,3.2988,-1.1932,semantic_formalism,True
+district_of_columbia_v_heller_2008,District of Columbia v. Heller,2008,second_amendment,hardware_due_diligence,Second Amendment text-history-rights analysis,0.581,2.247,2.8187,38.8131,35.9944,hardware_due_diligence,True
+mcdonald_v_city_of_chicago_2010,McDonald v. City of Chicago,2010,second_amendment,hardware_due_diligence,Second Amendment incorporation and historical violence record,0.5717,1.9622,2.6424,31.8831,29.2407,hardware_due_diligence,True
+caetano_v_massachusetts_2016,Caetano v. Massachusetts,2016,second_amendment,hardware_due_diligence,Kinetic-rights rule applied to contemporary weapon,0.9927,2.5562,3.5799,47.8931,44.3132,hardware_due_diligence,True
+new_york_state_rifle_pistol_association_v_bruen_2022,New York State Rifle & Pistol Association v. Bruen,2022,second_amendment,hardware_due_diligence,Historical-tradition test for public carry,1.0918,3.5087,3.4989,54.2778,50.7789,hardware_due_diligence,True
+united_states_v_rahimi_2024,United States v. Rahimi,2024,second_amendment,hardware_due_diligence,Second Amendment historical analogue analysis,0.7117,3.1196,5.121,42.9899,37.8689,hardware_due_diligence,True

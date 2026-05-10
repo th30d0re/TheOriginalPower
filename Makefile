@@ -46,10 +46,13 @@ scotus-audit:
 	@python3 Paper/scripts/audit_scotus_corpus.py || true
 	@echo ""
 
-VENV          := .venv
-VENV_PYTHON   := $(VENV)/bin/python3
-VENV_PIP      := $(VENV)/bin/pip
-VENV_JUPYTER  := $(VENV)/bin/jupyter
+VENV              := .venv
+VENV_PYTHON       := $(VENV)/bin/python3
+VENV_PIP          := $(VENV)/bin/pip
+VENV_JUPYTER      := $(VENV)/bin/jupyter
+VENV_VOICE        := .venv-voice
+VENV_VOICE_PYTHON := $(VENV_VOICE)/bin/python3
+VENV_VOICE_PIP    := $(VENV_VOICE)/bin/pip
 # Override with e.g. `make venv SYSTEM_PYTHON=python3.12` if needed
 SYSTEM_PYTHON ?= python3
 
@@ -57,7 +60,7 @@ SYSTEM_PYTHON ?= python3
 # Virtual-environment bootstrap
 # ---------------------------------------------------------------------------
 
-.PHONY: venv
+.PHONY: venv venv-voice
 
 venv:
 	@if [ ! -x "$(VENV_PYTHON)" ]; then \
@@ -71,9 +74,24 @@ venv:
 	  echo "✓ venv already exists at $(VENV)/"; \
 	fi
 
+venv-voice:
+	@set -e; \
+	$(SYSTEM_PYTHON) -m voice_pipeline.platform_check; \
+	if [ ! -x "$(VENV_VOICE_PYTHON)" ]; then \
+	  echo "Creating virtual environment at $(VENV_VOICE)/..."; \
+	  $(SYSTEM_PYTHON) -m venv $(VENV_VOICE); \
+	  $(VENV_VOICE_PIP) install --upgrade pip -q; \
+	  $(VENV_VOICE_PIP) install -r voice_pipeline/requirements.txt -q; \
+	  echo "✓ venv-voice ready. Activate with: source $(VENV_VOICE)/bin/activate"; \
+	else \
+	  echo "✓ venv-voice already exists at $(VENV_VOICE)/"; \
+	fi
+
 empirical: venv
 	@mkdir -p Paper/figures/spectral
-	@# (1) SCOTUS corpus — must run first; exports scotus_spectral_results.json
+	@# (1) SCOTUS corpus — semantic case study plus spectral notebook.
+	@$(VENV_PYTHON) Paper/scripts/scotus_judicial_semantics.py
+	@# The spectral notebook exports scotus_spectral_results.json
 	@# consumed by eq40_45_interference_engine.ipynb in step (3).
 	@if ls Paper/scripts/scotus_*.ipynb 1>/dev/null 2>&1; then \
 	  $(VENV_JUPYTER) nbconvert --to notebook --execute --inplace Paper/scripts/scotus_*.ipynb; \

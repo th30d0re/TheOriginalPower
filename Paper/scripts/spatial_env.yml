@@ -28,3 +28,4 @@ dependencies:
       - cenpy==1.0.0.post4
       - pymc==5.16.0
       - pytensor==2.25.3
+      - selenium==4.21.0

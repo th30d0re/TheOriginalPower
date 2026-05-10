@@ -1,0 +1,6 @@
+group,real_estate_pct_assets,equity_business_pct_assets,pensions_pct_assets,other_assets_pct_assets,liabilities_pct_assets
+Bottom 50%,56.32,5.29,8.33,30.06,81.64
+50th-90th,38.79,11.77,24.6,24.83,21.58
+90th-99th,24.37,28.45,24.24,22.94,9.37
+99th-99.9th,19.64,48.86,9.57,21.94,4.37
+Top 0.1%,8.29,62.49,3.28,25.93,1.15

@@ -1,0 +1,5 @@
+Date,hierarchy_bracket,percentile_proxy,dfa_categories,average_net_worth,aggregate_share_pct,household_count,mapping_note
+2025:Q4,Out-group extraction floor,Bottom 50%,Bottom50,63723.29,2.46,67688033,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2025:Q4,Buffer Class,50th-90th,Next40,946287.38,29.24,54155974,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2025:Q4,Puppet / managerial classes,90th-99.9th,Next9 + RemainingTop1,7040721.62,53.76,13382204,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.
+2025:Q4,True Elite,Top 0.1%,TopPt1,186862681.09,14.54,136325,Percentile groups are wealth-distribution proxies for structural roles; they are not identity-equivalent categories.

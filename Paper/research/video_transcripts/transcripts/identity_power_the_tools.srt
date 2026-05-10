@@ -1,0 +1,684 @@
+1
+00:00:00,000 --> 00:00:02,240
+Have you ever stopped and wondered why our society
+
+2
+00:00:02,240 --> 00:00:05,200
+kind of has a default setting for who's considered normal?
+
+3
+00:00:05,200 --> 00:00:07,480
+It's a huge question, and it gets right to the heart
+
+4
+00:00:07,480 --> 00:00:09,920
+of how our differences have been shaped by history
+
+5
+00:00:09,920 --> 00:00:11,080
+and by power.
+
+6
+00:00:11,080 --> 00:00:12,960
+So today, we're gonna dig into the tools
+
+7
+00:00:12,960 --> 00:00:15,540
+that built this system, and maybe explore what it would take
+
+8
+00:00:15,540 --> 00:00:17,600
+to build something totally new.
+
+9
+00:00:17,600 --> 00:00:20,160
+And we're gonna start with this really powerful idea
+
+10
+00:00:20,160 --> 00:00:22,440
+from the writer and activist Audrey Lord.
+
+11
+00:00:22,440 --> 00:00:24,800
+What she's telling us here is that our identities,
+
+12
+00:00:24,800 --> 00:00:27,460
+well, they aren't simple, they're not singular,
+
+13
+00:00:27,460 --> 00:00:31,060
+they're complex, they're messy, they're all woven together.
+
+14
+00:00:31,060 --> 00:00:32,780
+And that's a really crucial starting point
+
+15
+00:00:32,780 --> 00:00:34,900
+for the journey we're about to take.
+
+16
+00:00:34,900 --> 00:00:37,420
+Okay, so to really get how we got here,
+
+17
+00:00:37,420 --> 00:00:41,000
+we have to start with a core concept from Lord herself.
+
+18
+00:00:41,000 --> 00:00:43,060
+It's an idea that quietly shapes
+
+19
+00:00:43,060 --> 00:00:44,860
+almost every part of our lives,
+
+20
+00:00:44,860 --> 00:00:47,180
+whether we even realize it or not.
+
+21
+00:00:47,180 --> 00:00:48,940
+She called it the mythical norm.
+
+22
+00:00:48,940 --> 00:00:52,020
+And that word, mythical, is so important.
+
+23
+00:00:52,020 --> 00:00:55,540
+This default person, you know, white, male, straight,
+
+24
+00:00:55,580 --> 00:00:59,580
+Christian, well off, doesn't really exist as the majority,
+
+25
+00:00:59,580 --> 00:01:02,420
+but it holds this incredible amount of power.
+
+26
+00:01:02,420 --> 00:01:04,320
+It becomes the invisible measuring stick
+
+27
+00:01:04,320 --> 00:01:06,460
+that everyone else is compared to.
+
+28
+00:01:06,460 --> 00:01:09,540
+And if you fall outside that super narrow definition,
+
+29
+00:01:09,540 --> 00:01:13,340
+you're automatically seen as different, as other.
+
+30
+00:01:13,340 --> 00:01:15,460
+So what happens when we meet people
+
+31
+00:01:15,460 --> 00:01:17,020
+who don't fit that norm?
+
+32
+00:01:17,020 --> 00:01:19,780
+Well, Lordy argued that we've basically been programmed
+
+33
+00:01:19,780 --> 00:01:21,940
+with a really limited set of options.
+
+34
+00:01:21,940 --> 00:01:23,540
+Instead of having a rich toolbox
+
+35
+00:01:23,540 --> 00:01:25,020
+for how to connect with each other,
+
+36
+00:01:25,020 --> 00:01:28,340
+we're left with just a few, well, blunt instruments.
+
+37
+00:01:28,340 --> 00:01:31,500
+Our default settings are pretty stark when you lay them out.
+
+38
+00:01:31,500 --> 00:01:33,860
+We either pretend the difference doesn't exist,
+
+39
+00:01:33,860 --> 00:01:36,700
+or we try to copy the dominant form to fit in.
+
+40
+00:01:36,700 --> 00:01:38,260
+Or in the worst cases,
+
+41
+00:01:38,260 --> 00:01:40,980
+we try to get rid of whatever we see as being beneath us.
+
+42
+00:01:40,980 --> 00:01:43,020
+These are the deep, deep patterns
+
+43
+00:01:43,020 --> 00:01:45,860
+that Lord is asking us to take a hard look at.
+
+44
+00:01:45,860 --> 00:01:50,020
+And this, right here, this is the core of her message.
+
+45
+00:01:50,020 --> 00:01:52,660
+The problem isn't that we're all different from one another.
+
+46
+00:01:52,660 --> 00:01:54,180
+Of course we are.
+
+47
+00:01:54,180 --> 00:01:57,420
+The real problem is our failure to see those differences,
+
+48
+00:01:57,420 --> 00:02:00,820
+to understand them, and ultimately to value them.
+
+49
+00:02:00,820 --> 00:02:04,380
+It's the refusal to engage that creates all the division.
+
+50
+00:02:04,380 --> 00:02:07,460
+So how in the world does a mythical norm get built
+
+51
+00:02:07,460 --> 00:02:09,620
+and then force on a global scale?
+
+52
+00:02:09,620 --> 00:02:11,100
+I mean, an idea this big
+
+53
+00:02:11,100 --> 00:02:13,300
+doesn't just pop out of thin air, right?
+
+54
+00:02:13,300 --> 00:02:14,940
+A quick look into colonial history
+
+55
+00:02:14,940 --> 00:02:17,660
+shows the very real and often brutal ways
+
+56
+00:02:17,660 --> 00:02:19,260
+these ideas play out.
+
+57
+00:02:19,260 --> 00:02:20,820
+We're going to look at this through the lens
+
+58
+00:02:20,820 --> 00:02:23,420
+of something called political homophobia.
+
+59
+00:02:23,460 --> 00:02:25,820
+Now, this isn't just about personal prejudice.
+
+60
+00:02:25,820 --> 00:02:29,340
+This is about the deliberate strategic use of fear and hatred
+
+61
+00:02:29,340 --> 00:02:31,340
+to achieve political goals.
+
+62
+00:02:31,340 --> 00:02:33,340
+It's a way to build a national identity,
+
+63
+00:02:33,340 --> 00:02:35,100
+shut down anyone who disagrees,
+
+64
+00:02:35,100 --> 00:02:37,780
+and keep power in the hands of a small group,
+
+65
+00:02:37,780 --> 00:02:40,060
+a chillingly effective tool.
+
+66
+00:02:40,060 --> 00:02:42,660
+Okay, so in many post-colonial countries,
+
+67
+00:02:42,660 --> 00:02:44,180
+like Nigeria, for example,
+
+68
+00:02:44,180 --> 00:02:46,300
+you'll hear a common political argument
+
+69
+00:02:46,300 --> 00:02:48,660
+that laws criminalizing homosexuality
+
+70
+00:02:48,660 --> 00:02:51,900
+are just about defending traditional authentic values.
+
+71
+00:02:51,940 --> 00:02:53,860
+But when historians dig into it,
+
+72
+00:02:53,860 --> 00:02:55,940
+they find a completely different story.
+
+73
+00:02:55,940 --> 00:02:57,860
+These laws aren't indigenous at all.
+
+74
+00:02:57,860 --> 00:03:00,460
+They are a direct hangover from the British Empire.
+
+75
+00:03:01,300 --> 00:03:03,220
+Let's just trace the journey here.
+
+76
+00:03:03,220 --> 00:03:05,740
+It starts way back in 16th century England
+
+77
+00:03:05,740 --> 00:03:07,940
+as a political weapon for a king.
+
+78
+00:03:07,940 --> 00:03:10,900
+Then centuries later, a version of that law,
+
+79
+00:03:10,900 --> 00:03:12,580
+a version that was actually rejected
+
+80
+00:03:12,580 --> 00:03:13,980
+for use in Britain itself,
+
+81
+00:03:13,980 --> 00:03:16,180
+gets written up for a colony in Australia.
+
+82
+00:03:16,180 --> 00:03:19,060
+And from there, it's imposed on Nigeria.
+
+83
+00:03:19,060 --> 00:03:21,580
+This was never a reflection of local values.
+
+84
+00:03:21,580 --> 00:03:24,500
+It was a pure export of colonial power.
+
+85
+00:03:24,500 --> 00:03:25,900
+And this brings us right back
+
+86
+00:03:25,900 --> 00:03:28,780
+to one of Audre Lorde's most famous lines.
+
+87
+00:03:28,780 --> 00:03:30,140
+The colonial legal system,
+
+88
+00:03:30,140 --> 00:03:32,540
+with all its imposed rules and values,
+
+89
+00:03:32,540 --> 00:03:34,420
+became the master's tools.
+
+90
+00:03:34,420 --> 00:03:36,260
+They were designed for one purpose,
+
+91
+00:03:36,260 --> 00:03:38,780
+to build and maintain the master's house,
+
+92
+00:03:38,780 --> 00:03:40,740
+the structure of the empire.
+
+93
+00:03:40,740 --> 00:03:43,140
+And what was the justification for all this?
+
+94
+00:03:43,140 --> 00:03:45,100
+Well, this quote from a colonial officer
+
+95
+00:03:45,100 --> 00:03:46,580
+lays it out pretty clearly.
+
+96
+00:03:46,580 --> 00:03:49,180
+It's this deeply paternalistic worldview, right?
+
+97
+00:03:49,180 --> 00:03:51,660
+Seeing the people they colonized, not as equals,
+
+98
+00:03:51,660 --> 00:03:54,300
+but as children who needed parental control.
+
+99
+00:03:54,300 --> 00:03:55,740
+This was the elitist mindset
+
+100
+00:03:55,740 --> 00:03:56,980
+that was used to rationalize
+
+101
+00:03:56,980 --> 00:03:59,820
+the whole project of colonial domination.
+
+102
+00:03:59,820 --> 00:04:02,500
+So we've seen how these massive power structures
+
+103
+00:04:02,500 --> 00:04:03,940
+were built throughout history.
+
+104
+00:04:03,940 --> 00:04:05,620
+But what does it actually feel like
+
+105
+00:04:05,620 --> 00:04:07,340
+to live inside them today?
+
+106
+00:04:07,340 --> 00:04:09,300
+Especially when you exist at the crossroads
+
+107
+00:04:09,300 --> 00:04:11,220
+of more than one identity.
+
+108
+00:04:11,220 --> 00:04:12,900
+For that, we can turn to the work
+
+109
+00:04:12,900 --> 00:04:15,700
+of the brilliant legal scholar, Kimberly Crenshaw.
+
+110
+00:04:15,700 --> 00:04:18,060
+She gave us the term intersectionality.
+
+111
+00:04:18,060 --> 00:04:19,620
+And it's basically a lens,
+
+112
+00:04:19,620 --> 00:04:22,540
+a way of seeing the different forms of discrimination,
+
+113
+00:04:22,540 --> 00:04:24,380
+like racism and sexism,
+
+114
+00:04:24,380 --> 00:04:26,180
+don't just exist next to each other.
+
+115
+00:04:26,180 --> 00:04:28,300
+They overlap, they interact,
+
+116
+00:04:28,300 --> 00:04:29,700
+they pile on top of each other,
+
+117
+00:04:29,700 --> 00:04:33,020
+creating totally unique experiences of bias.
+
+118
+00:04:33,020 --> 00:04:34,580
+This quote from Roberto Valdez
+
+119
+00:04:34,580 --> 00:04:38,340
+just makes that whole academic idea so personal and real.
+
+120
+00:04:38,340 --> 00:04:41,100
+It's this feeling of pressure to chop up your own identity,
+
+121
+00:04:41,100 --> 00:04:42,620
+to decide which part of yourself
+
+122
+00:04:42,620 --> 00:04:44,100
+you're allowed to bring into a room,
+
+123
+00:04:44,100 --> 00:04:45,780
+because you know the world isn't set up
+
+124
+00:04:45,780 --> 00:04:47,820
+to see all of you at once.
+
+125
+00:04:47,820 --> 00:04:50,660
+And this court case shows the real devastating harm
+
+126
+00:04:50,660 --> 00:04:52,460
+of ignoring intersectionality.
+
+127
+00:04:52,460 --> 00:04:53,980
+You have five black women
+
+128
+00:04:53,980 --> 00:04:56,380
+who argued they were fired because of discrimination.
+
+129
+00:04:56,380 --> 00:04:58,020
+But the court told them, sorry,
+
+130
+00:04:58,020 --> 00:05:00,540
+you can't be discriminated against as black women.
+
+131
+00:05:00,540 --> 00:05:02,160
+They said, you have to pick one.
+
+132
+00:05:02,160 --> 00:05:04,500
+Was it racism or was it sexism?
+
+133
+00:05:04,500 --> 00:05:07,500
+The legal system literally couldn't see their whole identity
+
+134
+00:05:07,500 --> 00:05:09,700
+and because of that, they lost their case.
+
+135
+00:05:09,700 --> 00:05:11,220
+This is the exact problem
+
+136
+00:05:11,220 --> 00:05:13,580
+Crenshaw and Lorde were talking about.
+
+137
+00:05:13,580 --> 00:05:16,620
+Okay, so if the old ways of ignoring, copying
+
+138
+00:05:16,620 --> 00:05:19,540
+or destroying difference are failing us so badly,
+
+139
+00:05:19,540 --> 00:05:20,660
+what's the alternative?
+
+140
+00:05:20,660 --> 00:05:22,140
+Where do we go from here?
+
+141
+00:05:22,140 --> 00:05:24,540
+Let's circle back one last time to Audrey Lorde
+
+142
+00:05:24,540 --> 00:05:26,660
+for her vision of the future.
+
+143
+00:05:26,660 --> 00:05:30,180
+Lorde's answer was so clear, it was almost revolutionary.
+
+144
+00:05:30,180 --> 00:05:32,860
+She said our very survival depends on our ability
+
+145
+00:05:32,860 --> 00:05:35,140
+to connect across our differences
+
+146
+00:05:35,140 --> 00:05:37,700
+and to see each other as equals while doing it.
+
+147
+00:05:37,700 --> 00:05:40,740
+Not in spite of our differences, but with them.
+
+148
+00:05:40,740 --> 00:05:43,260
+And she even laid out a kind of path forward.
+
+149
+00:05:43,260 --> 00:05:45,500
+It starts with us, with doing the hard work
+
+150
+00:05:45,540 --> 00:05:48,700
+of unlearning the toxic stuff society has taught us.
+
+151
+00:05:48,700 --> 00:05:51,740
+Then it moves outward to really see the differences
+
+152
+00:05:51,740 --> 00:05:54,380
+among our equals and then to use those differences
+
+153
+00:05:54,380 --> 00:05:55,940
+not as a wall between us,
+
+154
+00:05:55,940 --> 00:05:58,300
+but as a source of creativity and strength
+
+155
+00:05:58,300 --> 00:06:02,820
+and ultimately to completely redefine what power even is.
+
+156
+00:06:02,820 --> 00:06:05,140
+And all of this leads to her most famous,
+
+157
+00:06:05,140 --> 00:06:06,860
+most enduring warning.
+
+158
+00:06:06,860 --> 00:06:09,220
+You cannot fix a system of oppression
+
+159
+00:06:09,220 --> 00:06:10,940
+using the exact same logic
+
+160
+00:06:10,940 --> 00:06:13,100
+that created it in the first place.
+
+161
+00:06:13,100 --> 00:06:15,140
+Trying to fit into the mythical norm
+
+162
+00:06:15,180 --> 00:06:17,780
+or using tools that refuse to see your whole self
+
+163
+00:06:17,780 --> 00:06:20,020
+is never going to set you free.
+
+164
+00:06:20,020 --> 00:06:22,180
+You can't dismantle the master's house
+
+165
+00:06:22,180 --> 00:06:24,260
+with the master's tools.
+
+166
+00:06:24,260 --> 00:06:26,700
+So in the end, Lorde leaves us with a challenge,
+
+167
+00:06:26,700 --> 00:06:28,140
+not a simple answer.
+
+168
+00:06:28,140 --> 00:06:30,860
+If the old tools of division and hierarchy
+
+169
+00:06:30,860 --> 00:06:33,180
+and erasure are never gonna work,
+
+170
+00:06:33,180 --> 00:06:36,980
+then the real question, the one for all of us is this,
+
+171
+00:06:36,980 --> 00:06:39,460
+what new tools are we gonna build together?
+

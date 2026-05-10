@@ -34,6 +34,8 @@ Paper/figures/spectral/*.pdf
 __pycache__/
 *.pyc
 .venv/
+outputs/
+.venv-voice/
 
 # Secrets — never commit API keys
 .env

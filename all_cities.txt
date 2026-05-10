@@ -1,0 +1,314 @@
+Aberdeen, SD
+Ada, OK
+Aiken, SC
+Akron, OH
+Albany, NY
+Allentown, PA
+Altoona, PA
+Alva, OK
+Amarillo, TX
+Arkadelphia, AR
+Arlington, MA
+Asheville, NC
+Atchison, KS
+Atlanta, GA
+Atlantic City, NJ
+Augusta, GA
+Augusta, ME
+Aurora, IL
+Austin, MN
+Austin, TX
+Baltimore, MD
+Batesville, AR
+Battle Creek, MI
+Bay City, MI
+Beaumont, TX
+Belmont, MA
+Bennington, VT
+Bergen Co., NJ
+Bethlehem, PA
+Binghamton-Johnson City, NY
+Birmingham, AL
+Boone, IA
+Boothbay, ME
+Boston, MA
+Boulder, CO
+Braintree, MA
+Brattleboro, VT
+Bridgeport and Fairfield, CT
+Bristol, VA
+Brockton, MA
+Bronx, NY
+Brookline, MA
+Brooklyn, NY
+Buffalo, NY
+Burlington, VT
+Cambridge, MA
+Camden, AR
+Camden, NJ
+Canton, OH
+Cape Girardeau, MO
+Carthage, MO
+Cedar Rapids, IA
+Charleston, SC
+Charleston, WV
+Charlotte, NC
+Chattanooga, TN
+Chelsea, MA
+Chester, PA
+Chicago, IL
+Cleveland, OH
+Colorado Springs, CO
+Columbia, SC
+Columbus, GA
+Columbus, OH
+Conway, AR
+Council Bluffs, IA
+Covington, KY
+Crestview, FL
+Dallas, TX
+Danville, VA
+Davenport, IA
+Dayton, OH
+Daytona Beach, FL
+DeFuniak Springs, FL
+DeLand, FL
+Decatur, IL
+Dedham, MA
+Denver, CO
+Des Moines, IA
+Detroit, MI
+Dubuque, IA
+Duluth, MN
+Durham, NC
+East St. Louis, IL
+El Dorado, AR
+El Paso, TX
+Elizabeth City, NC
+Elizabethton, TN
+Elmira, NY
+Enid, OK
+Erie, PA
+Erwin, TN
+Essex Co., NJ
+Evansville, IN
+Everett, MA
+Fall River, MA
+Fargo, ND
+Fayetteville, NC
+Fitchburg, MA
+Flint, MI
+Fort Collins, CO
+Fort Morgan, CO
+Fort Smith, AR
+Fort Wayne, IN
+Fort Worth, TX
+Fresno, CA
+Galveston, TX
+Goldsboro, NC
+Grand Forks, ND
+Grand Junction, CO
+Grand Rapids, MI
+Greater Anderson, SC
+Greater Greenville, SC
+Greater Kansas City, MO
+Greeley, CO
+Greensboro, NC
+Greenville, TN
+Hamilton, OH
+Harrisburg, PA
+Harrisonburg, VA
+Hartford, CT
+Haverhill, MA
+Hendersonville, NC
+High Point, NC
+Holyoke Chicopee, MA
+Houston, TX
+Hudson Co., NJ
+Huntington, WV
+Huron, SD
+Indianapolis, IN
+Jackson, MI
+Jackson, MS
+Jacksonville, FL
+Jamestown, NY
+Johnson City, TN
+Johnstown, PA
+Joliet, IL
+Joplin, MO
+Junction City, KS
+Kalamazoo, MI
+Kenosha, WI
+Knoxville, TN
+Lake Co. Gary, IN
+Lancaster, PA
+Lansing, MI
+Lawrence, MA
+Lexington, KY
+Lexington, MA
+Lima, OH
+Lincoln, NE
+Little Rock, AR
+Longmont, CO
+Lorain, OH
+Los Angeles, CA
+Louisville, KY
+Lowell, MA
+Lower Westchester Co., NY
+Lynchburg, VA
+Lynn, MA
+Macon, GA
+Madison, WI
+Malden, MA
+Manchester, NH
+Manhattan, NY
+Mankato, MN
+McKeesport, PA
+Medford, MA
+Melrose, MA
+Memphis, TN
+Miami, FL
+Miami Ottawa County, OK
+Milbank, SD
+Milton, MA
+Milwaukee Co., WI
+Minneapolis, MN
+Minot, ND
+Mitchell, SD
+Mobile, AL
+Monmouth, NJ
+Montgomery, AL
+Montpelier, VT
+Muncie, IN
+Muskegon, MI
+Muskogee, OK
+Nashville, TN
+Needham, MA
+New Bedford, MA
+New Bern, NC
+New Britain, CT
+New Castle, PA
+New Haven, CT
+New Orleans, LA
+New Smyrna, FL
+Newport City, VT
+Newport News, VA
+Newton, MA
+Niagara Falls, NY
+Norfolk, VA
+Norman, OK
+Oakland, CA
+Ogden, UT
+Oklahoma City, OK
+Omaha, NE
+Orangeburg, SC
+Orlando, FL
+Oshkosh, WI
+Passaic County, NJ
+Pawtucket & Central Falls, RI
+Pensacola, FL
+Peoria, IL
+Perth Amboy, NJ
+Petersburg, VA
+Philadelphia, PA
+Phoebus, VA
+Phoenix, AZ
+Pittsburgh, PA
+Pittsfield, MA
+Pontiac, MI
+Port Arthur, TX
+Portland, ME
+Portland, OR
+Portsmouth, OH
+Poughkeepsie, NY
+Poultney, VT
+Providence, RI
+Pueblo, CO
+Queens, NY
+Quincy, MA
+Racine, WI
+Rapid City, SD
+Revere, MA
+Richmond, VA
+Roanoke, VA
+Rochester, MN
+Rochester, NY
+Rock Hill, SC
+Rockford, IL
+Rocky Mount, NC
+Russellville, AR
+Rutland, VT
+Sacramento, CA
+Saginaw, MI
+Salem, MA
+Salt Lake City, UT
+San Antonio, TX
+San Diego, CA
+San Francisco, CA
+San Jose, CA
+Sanford, ME
+Saugus, MA
+Savannah, GA
+Schenectady, NY
+Seattle, WA
+Shreveport, LA
+Sioux City, IA
+Sioux Falls, SD
+Somerville, MA
+South Bend, IN
+South McAlester, OK
+Spartanburg, SC
+Spokane, WA
+Springfield, IL
+Springfield, MA
+Springfield, MO
+Springfield, OH
+Springfield, VT
+St. Albans, VT
+St. Cloud, MN
+St. Johnsbury, VT
+St. Joseph, MO
+St. Louis, MO
+St. Paul, MN
+St. Petersburg, FL
+Stamford, Darien, and New Canaan, CT
+Staples, MN
+Staten Island, NY
+Statesville, NC
+Staunton, VA
+Stockton, CA
+Sumter, SC
+Syracuse, NY
+Tacoma, WA
+Tampa, FL
+Terre Haute, IN
+Texarkana, AR
+Toledo, OH
+Topeka, KS
+Trenton, NJ
+Troy, NY
+Tulsa, OK
+Union Co., NJ
+Utica, NY
+Vermillion, SD
+Waco, TX
+Waltham, MA
+Warren, OH
+Waterbury, CT
+Waterloo, IA
+Watertown, MA
+Watertown, SD
+Waterville, ME
+Wheeling, WV
+Wichita, KS
+Wichita Falls, TX
+Wilkes-Barre, PA
+Williston, ND
+Winchester, MA
+Windsor, VT
+Winston-Salem, NC
+Winthrop, MA
+Woonsocket, RI
+Worcester, MA
+York, PA
+Youngstown, OH

@@ -144,6 +144,9 @@ CITIES = [
         "gva_state": "MD",
         "lat_min": 39.20, "lat_max": 39.40, "lon_min": -76.75, "lon_max": -76.50,
         "ucr_annual_murder_proxy": 200,
+        # Tighter Folium framing: default centroid+zoom leaves much of the canvas as Chesapeake Bay
+        # and peripheral sprawl relative to the HOLC×firearm core.
+        "overlay_fit_bounds": [[39.23, -76.72], [39.37, -76.585]],
     },
     {
         "id": "washington_dc",
@@ -173,6 +176,9 @@ CITIES = [
         "gva_state": "WI",
         "lat_min": 42.90, "lat_max": 43.20, "lon_min": -88.20, "lon_max": -87.80,
         "ucr_annual_murder_proxy": 110,
+        # Folium framing: Milwaukee County parcels extend far east over Lake Michigan; union
+        # centroid + zoom 11 wastes most of the canvas on empty water unless we clamp bounds.
+        "overlay_fit_bounds": [[42.95, -88.02], [43.135, -87.895]],
     },
 ]
 
@@ -567,8 +573,24 @@ def make_folium_overlay(city: dict, holc_gdf: 'gpd.GeoDataFrame', tract_panel: '
         log.warning("make_folium_overlay: folium unavailable")
         return None
         
+    fit_bounds = city.get("overlay_fit_bounds")
+
     centroid = tract_panel.geometry.unary_union.centroid
-    m = folium.Map(location=[centroid.y, centroid.x], zoom_start=11, tiles='CartoDB Positron')
+    zoom_start = int(city.get("overlay_zoom_start", 11))
+    if fit_bounds:
+        lat_lo, lon_lo = fit_bounds[0]
+        lat_hi, lon_hi = fit_bounds[1]
+        m = folium.Map(
+            location=[(lat_lo + lat_hi) / 2, (lon_lo + lon_hi) / 2],
+            zoom_start=max(zoom_start, 12),
+            tiles="CartoDB Positron",
+        )
+    else:
+        m = folium.Map(
+            location=[centroid.y, centroid.x],
+            zoom_start=zoom_start,
+            tiles="CartoDB Positron",
+        )
     
     # Tract boundaries
     folium.GeoJson(
@@ -594,12 +616,26 @@ def make_folium_overlay(city: dict, holc_gdf: 'gpd.GeoDataFrame', tract_panel: '
             ).add_to(fg)
             fg.add_to(m)
             
-    # Heat map
+    # Heat map weights: prefer CDC-weighted tract rate when present, else GVA density
+    rate_col = (
+        "firearm_rate_weighted"
+        if "firearm_rate_weighted" in tract_panel.columns
+        and tract_panel["firearm_rate_weighted"].notna().any()
+        else (
+            "firearm_density_gva"
+            if "firearm_density_gva" in tract_panel.columns
+            else None
+        )
+    )
+
     if heat_weights is None:
         heat_weights = []
-        for _, row in tract_panel.dropna(subset=['firearm_rate_weighted']).iterrows():
-            if row['firearm_rate_weighted'] > 0:
-                heat_weights.append([row.geometry.centroid.y, row.geometry.centroid.x, row['firearm_rate_weighted']])
+        if rate_col is not None:
+            for _, row in tract_panel.dropna(subset=[rate_col]).iterrows():
+                if row[rate_col] > 0:
+                    heat_weights.append(
+                        [row.geometry.centroid.y, row.geometry.centroid.x, float(row[rate_col])]
+                    )
                 
     if heat_weights:
         folium.plugins.HeatMap(
@@ -625,8 +661,12 @@ def make_folium_overlay(city: dict, holc_gdf: 'gpd.GeoDataFrame', tract_panel: '
     </div>
     '''
     m.get_root().html.add_child(folium.Element(legend_html))
-    
+
     folium.LayerControl().add_to(m)
+
+    if fit_bounds:
+        m.fit_bounds(fit_bounds)
+
     return m
 
 def export_map_png(folium_map: 'folium.Map', out_path: Path, delay: int = 5, driver=None) -> Path | None:

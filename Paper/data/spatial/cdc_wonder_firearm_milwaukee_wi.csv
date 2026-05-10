@@ -1,5 +1,6 @@
+# data_type=modeled_proxy
+# county_fips=55079; source=modeled pre-2013 rate proxy (static, not CDC WONDER UI pull)
 county_fips,year,rate_per_100k,source_note
-#55079 modeled pre-2013 rate proxy (static, not WONDER UI pull)
 55079,1999,7.90,modeled_static_proxy
 55079,2000,8.00,modeled_static_proxy
 55079,2001,8.10,modeled_static_proxy
