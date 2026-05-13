@@ -461,6 +461,129 @@ this chapter, racism supplies the first empirical specialization: the general
 Out-group $O$ becomes $O_{\text{racialized}}$, and each enclosure mode is loaded
 with historically specific racial mechanisms.
 
+\section{The In-Group/Out-Group Binary as a Coarse Projection}
+\label{sec:binary-refinement}
+
+The conventional In-group/Out-group model is not wrong; it is under-resolved.
+It correctly identifies the first partition imposed by an oppressive system, but
+it mistakes a low-resolution projection for the full architecture. The analytic
+move in this book is therefore not to discard the binary, but to zoom in on it.
+At the first level of resolution, the population universe $U$ is partitioned into
+an In-group $I$ and an Out-group $O$:
+
+\begin{equation}\label{eq:binary-partition}
+U = I \,\dot\cup\, O,
+\qquad
+I \cap O = \varnothing .
+\end{equation}
+
+This projection is useful but incomplete. It tells us where the primary
+boundary is drawn, but not who designs the boundary, who administers it, who
+physically enforces it, who receives status compensation for defending it, or
+how the excluded population is internally fractured. The next operation is a
+partition refinement:
+
+\begin{equation}\label{eq:refined-five-tier-partition}
+\operatorname{Refine}(I)
+=
+E \,\dot\cup\, P_{\text{uppet}} \,\dot\cup\, F_{\text{enforce}}
+\,\dot\cup\, I_{\text{buffer}},
+\qquad
+E, P_{\text{uppet}}, F_{\text{enforce}}, I_{\text{buffer}} \subset I .
+\end{equation}
+
+The In-group is therefore not a unified beneficiary class. It contains the
+Elite who materially benefit, the Puppet Class that translates Elite interests
+into law and policy, the Enforcement Class that actuates the boundary, and the
+Buffer Class that receives a psychological or material suppression allocation
+for defending a hierarchy it does not control. Likewise, the Out-group is not a
+single undifferentiated block. It is internally partitioned by proximity to
+capital, phenotype, gender, geography, legal status, credentialing, criminalized
+status, and other axes that determine how intensely the system extracts from or
+disciplines each subgroup:
+
+\begin{equation}\label{eq:outgroup-internal-partition}
+O
+=
+O_{\text{racialized}} \,\dot\cup\, O_{\text{adjacent},1}
+\,\dot\cup\, O_{\text{adjacent},2}
+\,\dot\cup\, \cdots \,\dot\cup\, O_{\text{adjacent},m}.
+\end{equation}
+
+This is the fractal property of the architecture: every macro-class can contain
+local In-groups and local Out-groups under a more specific axis of ranking. For
+any class $X \subseteq U$ and any operative axis $\alpha$---race, class, gender,
+immigration status, criminalized status, geography, credentialing, or proximity
+to institutional power---the system can induce a local partition:
+
+\begin{equation}\label{eq:recursive-local-partition}
+X = X^{+}_{\alpha} \,\dot\cup\, X^{-}_{\alpha},
+\qquad
+X^{+}_{\alpha} \cap X^{-}_{\alpha} = \varnothing ,
+\end{equation}
+
+where $X^{+}_{\alpha}$ is treated as the local In-group on axis $\alpha$ and
+$X^{-}_{\alpha}$ is treated as the local Out-group on that same axis. The same
+person can therefore occupy $I$ under one projection and $O$ under another. A
+working-class white citizen may be positioned inside $I$ under the racial
+projection while also being positioned inside $O$ under the capital,
+credentialing, or criminalization projection. Conversely, a member of
+$O_{\text{racialized}}$ may occupy a local advantaged position inside a
+subfield---by class, professional credential, or institutional access---without
+exiting the larger racialized Out-group. The model therefore rejects both
+flattening errors: it refuses to treat $I$ as uniformly powerful, and it refuses
+to treat $O$ as internally homogeneous.
+
+\begin{table}[htbp]
+\centering
+\small
+\renewcommand{\arraystretch}{1.25}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{0.18\textwidth}
+>{\raggedright\arraybackslash}p{0.28\textwidth}
+>{\raggedright\arraybackslash}X}
+\toprule
+\textbf{Resolution level} & \textbf{Set relationship} & \textbf{What becomes visible} \\
+\midrule
+Coarse binary & $U = I \,\dot\cup\, O$ & The system draws a primary boundary between included and excluded populations. \\
+In-group refinement & $I = E \,\dot\cup\, P_{\text{uppet}} \,\dot\cup\, F_{\text{enforce}} \,\dot\cup\, I_{\text{buffer}}$ & The In-group is stratified: only $E$ receives maximal material benefit; the lower In-group tiers serve interface, enforcement, or buffer functions. \\
+Out-group refinement & $O = \dot\bigcup_{j=0}^{m} O_j$ with $O_0 = O_{\text{racialized}}$ & The Out-group is fractured into subgroups that experience different extraction intensities while remaining outside the primary boundary. \\
+Recursive projection & $X = X^{+}_{\alpha} \,\dot\cup\, X^{-}_{\alpha}$ for $X \subseteq U$ & Any tier can contain local In-groups and local Out-groups under a narrower axis $\alpha$. \\
+\bottomrule
+\end{tabularx}
+\caption{\textbf{Set-Resolution Ladder.} The binary model is retained as the first projection, then refined into the operational hierarchy and recursively applied inside each class.}
+\label{tab:set-resolution-ladder}
+\end{table}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+    tier/.style={draw, rounded corners=2pt, align=center, font=\scriptsize, minimum height=0.62cm},
+    bigbox/.style={draw, very thick, rounded corners=4pt, minimum height=4.2cm, minimum width=6.1cm},
+    arr/.style={->, thick, >=stealth}
+]
+    \node[bigbox, fill=blue!4, draw=blue!45!black, label={[font=\bfseries]above:$I$ -- coarse In-group}] (Ibox) at (-3.3,0) {};
+    \node[tier, fill=blue!18, minimum width=5.2cm] at (-3.3,1.35) {$E$\\Elite extraction beneficiary};
+    \node[tier, fill=blue!13, minimum width=5.2cm] at (-3.3,0.45) {$P_{\text{uppet}}$\\legal/political interface};
+    \node[tier, fill=blue!10, minimum width=5.2cm] at (-3.3,-0.45) {$F_{\text{enforce}}$\\kinetic enforcement tier};
+    \node[tier, fill=blue!7, minimum width=5.2cm] at (-3.3,-1.35) {$I_{\text{buffer}}$\\status-wage buffer class};
+
+    \node[bigbox, fill=red!4, draw=red!45!black, label={[font=\bfseries]above:$O$ -- coarse Out-group}] (Obox) at (3.3,0) {};
+    \node[tier, fill=red!16, minimum width=5.2cm] at (3.3,1.0) {$O_{\text{racialized}}$\\primary extraction layer};
+    \node[tier, fill=red!10, minimum width=5.2cm] at (3.3,0.0) {$O_{\text{adjacent},j}$\\adjacent/reclassified layers};
+    \node[tier, fill=red!6, minimum width=5.2cm] at (3.3,-1.0) {$O^{+}_{\alpha} \,\dot\cup\, O^{-}_{\alpha}$\\local ranking inside $O$};
+
+    \draw[arr, dashed, black!55] (-0.35,1.75) -- node[above, font=\scriptsize] {boundary projection} (0.35,1.75);
+    \draw[arr, bend left=18, black!55] (-1.0,-2.1) to node[below, font=\scriptsize, align=center] {recursive partitions\\inside every tier} (1.0,-2.1);
+\end{tikzpicture}
+\caption{\textbf{Zooming the Binary.} The In-group/Out-group distinction remains the first projection, but higher resolution reveals internal tiers inside $I$, fractured layers inside $O$, and local In-group/Out-group relations inside each macro-class.}
+\label{fig:binary-refinement}
+\end{figure}
+
+This refinement is why the framework can say two things at once without
+contradiction: the In-group/Out-group model is correct at the first projection,
+and it is insufficient as a full diagnostic. The deeper architecture appears
+only after the binary is recursively resolved.
+
 
 
 To develop and validate this framework, I examine \textbf{racism} as the primary case study---specifically, the American system of racial oppression from its colonial origins to the present. Racism provides an ideal test case because of its extensive historical documentation, its clear policy mechanisms, and its ongoing relevance. Through set-theoretic analysis, I demonstrate that racism exhibits all four architectural components and, crucially, that $O_{\text{racialized}}$ has \textit{expanded} over time rather than contracted.
