@@ -28,7 +28,7 @@ This is **Episode 20**. You must strictly limit your discussion to **Chapter 17 
 - The conclusion's terminal findings and final definition of racism (Episode 21)
 
 **ANTI-SUPPRESSION LANGUAGE PROTOCOL (CRITICAL):**
-Follow all rules regarding the ban on color-coded morality and dominance terminology. 
+Follow all rules regarding the ban on color-coded morality and dominance terminology.
 
 **REQUIRED TONE:** Clinical, objective, and architectural. Use phrases like: "single-issue trap", "multi-axis noise cancellation", "destructive interference", "intersectionality", "solidarity failure".
 

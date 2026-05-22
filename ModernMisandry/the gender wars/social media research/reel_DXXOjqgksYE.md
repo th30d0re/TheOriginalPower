@@ -7,7 +7,7 @@
 
 ## Instagram Metadata
 
-- Fetched at: 2026-04-28T01:12:04.578Z
+- Fetched at: 2026-05-18T16:49:30.540Z
 - Source: Instagram CLI authenticated session (@ejtheodore)
 - Shortcode: DXXOjqgksYE
 - Instagram media ID: 3879633627479459332_836123235
@@ -17,9 +17,9 @@
 - Posted at: 2026-04-20T18:10:35.000Z
 - Product type: clips
 - Media type: 2
-- Public play count / views proxy: 292,757
-- Likes: 20,904
-- Comments: 793
+- Public play count / views proxy: 624,270
+- Likes: 40,200
+- Comments: 1,074
 - Caption: The Great Feminization, Measured 72% of men under 30 have a positive view of women 50% of women under 30 have a positive view of men → a 22-point gap in favourability 35% of women under 25 have a positive view of men. Only 11% of young women hold a “very positive” view. The gender divide runs along institutional exposure. What’s causing this? The Daycare Governance Model. Three roles, and three only. Infants to be protected (the oppressed). Caregivers to administer the protection (the allies). Predators to be removed (the dissenters). No gray zones.
 - Reach note: Instagram reach is not exposed for third-party reels; public play count is the closest available proxy.
 

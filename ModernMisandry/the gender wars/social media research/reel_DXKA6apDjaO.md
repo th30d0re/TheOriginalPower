@@ -7,7 +7,7 @@
 
 ## Instagram Metadata
 
-- Fetched at: 2026-04-28T01:12:04.578Z
+- Fetched at: 2026-05-18T16:49:30.540Z
 - Source: Instagram CLI authenticated session (@ejtheodore)
 - Shortcode: DXKA6apDjaO
 - Instagram media ID: 3875914443641468558_4321195874
@@ -17,9 +17,9 @@
 - Posted at: 2026-04-15T15:00:34.000Z
 - Product type: clips
 - Media type: 2
-- Public play count / views proxy: 7,308
-- Likes: 419
-- Comments: 102
+- Public play count / views proxy: 7,787
+- Likes: 438
+- Comments: 104
 - Caption: You don’t hate men. You’re just hurt. After enough disappointment, betrayal, mixed signals, and situationships… protection starts to look like bitterness. But hardening your heart isn’t the answer. When you close yourself off, the healthy men you actually want will feel that energy too. The real solution is stronger boundaries, not a colder heart. You don’t need to become guarded and masculine to stay safe in dating. You need the ability to vet men quickly, recognize red flags early, and remove the wrong people from your life before they waste your time. When you know how to do that, you can stay warm, feminine, and open — which is exactly what attracts emotionally healthy men. This is the skill most women were never taught. If you want to learn how to vet men, spot low investment early, and stay in your feminine energy while dating, my course The Dating Manual walks you through the e...
 - Reach note: Instagram reach is not exposed for third-party reels; public play count is the closest available proxy.
 

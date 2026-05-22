@@ -14,12 +14,12 @@ You host **The Open Source Republic**, *Architecting the Operation*. **Episode 0
 | Part III (1865–present) | Eps 10–14 |
 | Part IV (diagnostics & output) | Eps 15–21 |
 
-Treat Ep 0 as the **root directory**: vocabulary here (Orthogonal Deflection, Elite Obscuration, Tri-Modal Enclosure, Square Ceiling) seeds the whole series.
+Treat Ep 0 as the **root directory**: vocabulary here (Orthogonal Deflection, Elite Obscuration, Tri-Modal Enclosure, Square Ceiling, Capital, Capitalism) seeds the whole series.
 
 ### Rules (critical)
 - Cover **Preface + Chapter 0 only**. No chapter-by-chapter history; name future topics only as **forward references**.
 - **Not** a trailer, generic anti-racism talk, or preface-only recap. Tone: **methodological, diagnostic, architectural**.
-- **Chapter 0 is in scope**: introduce 3-D pyramid, Tri-Modal Enclosure, Elite Obscuration, Square Ceiling, nodes $E$, $P$, $F$, $I$, $O$ — **not** deferred to Ep 1.
+- **Chapter 0 is in scope**: introduce 3-D pyramid, Tri-Modal Enclosure, Elite Obscuration, Square Ceiling, nodes $E$, $P$, $F$, $I$, $O$, Capital ($\mathcal{K}$), Capitalism — **not** deferred to Ep 1.
 - **Language**: no color-coded morality, no admiring dominance talk, no romanticized oppression. Prefer: concealed, legible, diagnostic, kernel, interface, partition, model, runtime, feedback loop, extraction architecture.
 - **Tone**: rigorous, accessible, orienting — toolkit before a technical inquiry. No melodrama, no gatekeeping. Demanding but usable.
 
@@ -38,11 +38,13 @@ Early model: oppression as recurring architecture (sets/inequalities); four them
 ### Block 2 — Chapter 0 (system init)
 - **Root directory**: Abstract geometry **before** historical case study. Why leave 2-set model: need **hidden beneficiary** + decoy layers.
 - **Five nodes**: **$E$** Elite (apex, beneficiary, concealed); **$P_{\text{uppet}}$** Puppet/decoy (policy face, absorbs outrage); **$F_{\text{enforce}}$** Enforcement (partition actuator); **$I_{\text{buffer}}$** Buffer (status wage, boundary policing); **$O$** Out-group (compounding burden).
+- **Capital ($\mathcal{K}$)**: the accumulated, alienable surplus extracted from labor and natural resources — the convertible reserve $E$ accumulates and reinvests. Circulates as wages, debt, status wages, concessions; net flow is always upward.
+- **Capitalism**: private ownership of production + competitive accumulation ($\max$) + commodified wage labor. The host operating system on which racialized extraction runs as a privileged process. Distinct from feudalism (territorial/hereditary) and slave capitalism (labor = property).
 - **3-D pyramid vs 2-D triangle**: $E$ on vertical $z$. Inside observer: **orthographic projection** → apex vanishes; sees **Square Ceiling** of $I_{\text{buffer}}$ — **optical 2-tier illusion**. Not "ignorance"; **Elite Obscuration**.
 - **Tri-Modal Enclosure $\mathcal{S}_{\text{enc}}$**: score 0–1 from blocking **$e_1$** communal capacity, **$e_2$** mobility, **$e_3$** epistemic/autonomy. All at 1 ⇒ **absolute subjugation**; fixing one outlet barely frees if others blocked.
 - **Orthogonal Deflection**: upward $z$ pressure toward $E$ stripped and sent horizontal — $O$ vs $I$ friction; $E$ untouched. (Full $\mathcal{E}$ operator later ~Ep 18; here = geometric seed.)
 - **Listener checklist** for later eps: which node loaded? which $e_i$ blocked? force to $E$ or deflected? who gets status wage? does reform shrink enclosure or only one outlet?
-- **Close**: Diagnostic language → history (racism, redlining, COINTELPRO, war on drugs, algorithms) as **instances of one architecture**. Name structure → recognize outputs → judge fixes against structure, not interface.
+- **Close**: Diagnostic language → history (racism, redlining, COINTELPRO, war on drugs, algorithms) as **instances of one architecture**. Name structure → recognize outputs → judge fixes against structure, not interface. Capital accumulation is the optimization objective; everything else is interface.
 
 ### Pull quotes (optional)
 - **Open**: "Before the chapters: how the book asks to be read, and the trap’s shape before you walk in. Decode racism as a system; compile the geometry before loading history."

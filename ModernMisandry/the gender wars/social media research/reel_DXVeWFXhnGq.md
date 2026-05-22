@@ -7,7 +7,7 @@
 
 ## Instagram Metadata
 
-- Fetched at: 2026-04-28T01:12:04.578Z
+- Fetched at: 2026-05-18T16:49:30.540Z
 - Source: Instagram CLI authenticated session (@ejtheodore)
 - Shortcode: DXVeWFXhnGq
 - Instagram media ID: 3879140113036767658_46811924601
@@ -17,9 +17,9 @@
 - Posted at: 2026-04-20T01:48:16.000Z
 - Product type: clips
 - Media type: 2
-- Public play count / views proxy: 138,021
-- Likes: 4,916
-- Comments: 398
+- Public play count / views proxy: 191,699
+- Likes: 5,976
+- Comments: 455
 - Caption: Women are the biggest enforcers of gender roles? #foryou #relationships #traditional
 - Reach note: Instagram reach is not exposed for third-party reels; public play count is the closest available proxy.
 

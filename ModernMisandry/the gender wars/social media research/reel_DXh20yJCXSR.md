@@ -7,7 +7,7 @@
 
 ## Instagram Metadata
 
-- Fetched at: 2026-04-28T01:12:04.578Z
+- Fetched at: 2026-05-18T16:49:30.540Z
 - Source: Instagram CLI authenticated session (@ejtheodore)
 - Shortcode: DXh20yJCXSR
 - Instagram media ID: 3882625475533173905_75463071617
@@ -17,9 +17,9 @@
 - Posted at: 2026-04-24T21:11:21.000Z
 - Product type: clips
 - Media type: 2
-- Public play count / views proxy: 21,178
-- Likes: 1,438
-- Comments: 157
+- Public play count / views proxy: 24,336
+- Likes: 1,593
+- Comments: 173
 - Caption: We do it for the love of the game #blowthisupforme #fypreelsシ゚ #viral #fypage #trend
 - Reach note: Instagram reach is not exposed for third-party reels; public play count is the closest available proxy.
 

@@ -37,7 +37,7 @@ You may *name* these concepts as active architecture ("the Min-Max Function we i
 - Pre-colonial African kinship and the colonial overwrite (Episode 5)
 - The gendered axis, coverture, or the proto-partition (Episodes 5–6)
 - The enforcement engine or slave patrols (Episode 8)
-- The compounding chain, judicial entrenchment of the 13th Amendment loophole, or financial lineage (Episode 9)
+- The compounding chain, judicial entrenchment of the 13th Amendment loophole, financial lineage, or carceral triple conversion (Episode 9)
 - Redlining, spatial warfare, or the containment field (Episode 10)
 - The Puppet Class, Tweedism, or voter capture (Episode 11)
 - COINTELPRO, the War on Drugs, or Variable Swap (Episode 12)

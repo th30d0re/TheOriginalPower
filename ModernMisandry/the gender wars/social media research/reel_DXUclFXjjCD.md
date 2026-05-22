@@ -7,7 +7,7 @@
 
 ## Instagram Metadata
 
-- Fetched at: 2026-04-28T01:12:04.578Z
+- Fetched at: 2026-05-18T16:49:30.540Z
 - Source: Instagram CLI authenticated session (@ejtheodore)
 - Shortcode: DXUclFXjjCD
 - Instagram media ID: 3878850872759693443_77482602480
@@ -17,9 +17,9 @@
 - Posted at: 2026-04-19T16:12:49.000Z
 - Product type: clips
 - Media type: 2
-- Public play count / views proxy: 236,930
-- Likes: 15,571
-- Comments: 382
+- Public play count / views proxy: 289,506
+- Likes: 18,996
+- Comments: 456
 - Caption: type
 - Reach note: Instagram reach is not exposed for third-party reels; public play count is the closest available proxy.
 

@@ -7,7 +7,7 @@
 
 ## Instagram Metadata
 
-- Fetched at: 2026-04-28T01:12:04.578Z
+- Fetched at: 2026-05-18T16:49:30.540Z
 - Source: Instagram CLI authenticated session (@ejtheodore)
 - Shortcode: DWRtSEHABsI
 - Instagram media ID: 3860065509089221384_145236148
@@ -17,9 +17,9 @@
 - Posted at: 2026-03-24T18:10:50.000Z
 - Product type: clips
 - Media type: 2
-- Public play count / views proxy: 587,014
-- Likes: 34,839
-- Comments: 2,066
+- Public play count / views proxy: 649,591
+- Likes: 40,068
+- Comments: 2,276
 - Caption: After “Secret Lives of Mormon Wives” and “The Bachelorette” Taylor Frankie Paul was exposed in a video throwing kitchen barstools at her ex, a new TikTok trend has emerged of women joking about BEATING UP their boyfriends, fiancee, husbands, and exes in some false move of “female empowerment.” Let’s be clear: none of this is funny. It certainly isn’t cute. And if the genders were reversed, men making videos like this would probably already be in prison. Why do the TikTok women think this is ok to post online?? Episode on this later today on the Show 👀👀
 - Reach note: Instagram reach is not exposed for third-party reels; public play count is the closest available proxy.
 

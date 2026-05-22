@@ -31,7 +31,7 @@ You may *reference* these by name (e.g., "the divide-and-conquer subroutine we f
 **DO NOT** discuss or preview:
 - Coverture, *partus sequitur ventrem*, or the breeding apparatus in the American colonies (Episodes 5–6)
 - The enforcement engine or slave patrols (Episode 8)
-- The compounding chain, judicial entrenchment of the 13th Amendment loophole, or financial lineage (Episode 9)
+- The compounding chain, judicial entrenchment of the 13th Amendment loophole, financial lineage, or carceral triple conversion (Episode 9)
 - Redlining, spatial warfare, or the containment field (Episode 10)
 - The Puppet Class, Tweedism, or voter capture (Episode 11)
 - COINTELPRO, the Variable Swap, or the War on Drugs (Episode 12)

@@ -7,7 +7,7 @@
 
 ## Instagram Metadata
 
-- Fetched at: 2026-04-28T01:12:04.578Z
+- Fetched at: 2026-05-18T16:49:30.540Z
 - Source: Instagram CLI authenticated session (@ejtheodore)
 - Shortcode: DXcd0jiCIOA
 - Instagram media ID: 3881108133800084352_10442391265
@@ -17,9 +17,9 @@
 - Posted at: 2026-04-22T18:57:28.000Z
 - Product type: clips
 - Media type: 2
-- Public play count / views proxy: 371,944
-- Likes: 28,095
-- Comments: 1,242
+- Public play count / views proxy: 550,617
+- Likes: 41,758
+- Comments: 1,766
 - Caption: Avoid people like this at all costs…
 - Reach note: Instagram reach is not exposed for third-party reels; public play count is the closest available proxy.
 

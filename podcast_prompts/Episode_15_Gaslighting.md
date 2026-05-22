@@ -30,7 +30,7 @@ This is **Episode 15**. You must strictly limit your discussion to the **gasligh
 - (Ep 6) Gendered axis Pt 1: coverture, gendered disarmament, structural immunity, intersection coefficient; "male womb" diasporic reprise (seed).
 - (Ep 7) Gendered axis Pt 2: *partus sequitur ventrem*, breeding apparatus, Nat Turner consumption (Drewry testimony), `libidinal_extraction.exe` in-vivo subroutine (Master Epicure aesthetic, "human fleshmongers," Patterson parasite-not-metaphor, *Essex* whaleship, WPA "Master eated me when I was meat"), "male womb" diasporic reprise (formalized), Completeness Theorem with four subroutines, eugenics, Comstock to *Dobbs*.
 - (Ep 8) Enforcement Engine: slave patrols, $F_{enforce}$, 13th Amendment loophole.
-- (Ep 9) Compounding Chain: multiplicative harm, Economic Reality Test, financial lineage, Haitian sovereign ransom.
+- (Ep 9) Compounding Chain: multiplicative harm, Economic Reality Test, financial lineage, carceral triple conversion, Haitian sovereign ransom.
 - (Ep 10) Containment Field: Pullman, redlining, massacre pattern, Capture Variable.
 - (Ep 11) Puppet Show: Tweedism, interference engine, Agenda-Setter Trap, Gilens–Page proof.
 - (Ep 12) Recompile: COINTELPRO, Fred Hampton, Variable Swap, War on Drugs, Manufactured Crisis, 1994 Crime Bill, Great Crime Decline Proof.

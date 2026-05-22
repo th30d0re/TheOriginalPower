@@ -7,7 +7,7 @@
 
 ## Instagram Metadata
 
-- Fetched at: 2026-04-28T01:12:04.578Z
+- Fetched at: 2026-05-18T16:49:30.540Z
 - Source: Instagram CLI authenticated session (@ejtheodore)
 - Shortcode: DRCugr6k1Mc
 - Instagram media ID: 3765776794751554332_72752200547
@@ -17,9 +17,9 @@
 - Posted at: 2025-11-14T15:55:33.000Z
 - Product type: clips
 - Media type: 2
-- Public play count / views proxy: 80,026
-- Likes: 4,268
-- Comments: 402
+- Public play count / views proxy: 83,200
+- Likes: 4,476
+- Comments: 412
 - Caption: Enough of this man-hating club and woman-hating club. You’re not “emotionally mature” just because you scream empowerment while dragging an entire gender through the mud. That’s not growth, that’s unresolved emotional baggage. And the wildest part? The same people who preach “I want a healed, emotionally intelligent partner” are the ones operating from the most bitter, defensive, entitled mindset imaginable. The irony is insane. ⚠️I can’t believe this video even got deleted. Since when did common sense become controversial? Here’s the truth nobody wants to hear because it doesn’t fit their victim-fantasy: Both genders need to work on themselves. Not one. BOTH. Women:- emotional maturity isn’t optional just because society told you you’re “strong.” Strength without kindness becomes entitlement. You don’t get to demand emotional safety when you can’t offer any in return. Healing isn’t a...
 - Reach note: Instagram reach is not exposed for third-party reels; public play count is the closest available proxy.
 

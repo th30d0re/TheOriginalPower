@@ -7,7 +7,7 @@
 
 ## Instagram Metadata
 
-- Fetched at: 2026-04-28T01:12:04.578Z
+- Fetched at: 2026-05-18T16:49:30.540Z
 - Source: Instagram CLI authenticated session (@ejtheodore)
 - Shortcode: DXnN_uWgHQ2
 - Instagram media ID: 3884134757331661878_186225985
@@ -17,9 +17,9 @@
 - Posted at: 2026-04-26T23:14:10.000Z
 - Product type: clips
 - Media type: 2
-- Public play count / views proxy: 339,730
-- Likes: 17,165
-- Comments: 2,095
+- Public play count / views proxy: 598,911
+- Likes: 52,818
+- Comments: 4,036
 - Caption: I guess science & logic don’t matter huh 😒 New YouTube video is up. Link in bio.
 - Reach note: Instagram reach is not exposed for third-party reels; public play count is the closest available proxy.
 

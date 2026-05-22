@@ -7,19 +7,19 @@
 
 ## Instagram Metadata
 
-- Fetched at: 2026-04-28T01:12:04.578Z
+- Fetched at: 2026-05-18T16:49:30.540Z
 - Source: Instagram CLI authenticated session (@ejtheodore)
 - Shortcode: DXeiAcekUy3
 - Instagram media ID: 3881689492998933687_36511763
 - Instagram media PK: 3881689492998933687
 - Uploader username: @itsamandajustine
-- Uploader display name: Amanda Mbata, LCSW | Therapist
+- Uploader display name: Amanda Mbata, LCSW | Therapist & Coach
 - Posted at: 2026-04-23T14:12:05.000Z
 - Product type: clips
 - Media type: 2
-- Public play count / views proxy: 3,777
-- Likes: 146
-- Comments: 70
+- Public play count / views proxy: 4,091
+- Likes: 152
+- Comments: 72
 - Caption: If the only way intimacy can be discussed is through the lens of male “needs,” then we were never taught to view sex as a mutually fulfilling experience to begin with. Desire cannot thrive where entitlement exists. : #relationshiptruths #healthyrelationship #relationshiptrauma #anxiousattachment
 - Reach note: Instagram reach is not exposed for third-party reels; public play count is the closest available proxy.
 

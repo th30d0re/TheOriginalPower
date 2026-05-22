@@ -7,7 +7,7 @@
 
 ## Instagram Metadata
 
-- Fetched at: 2026-04-28T01:12:04.578Z
+- Fetched at: 2026-05-18T16:49:30.540Z
 - Source: Instagram CLI authenticated session (@ejtheodore)
 - Shortcode: DWy_jPUjJyJ
 - Instagram media ID: 3869434528427449481_77237350946
@@ -17,8 +17,8 @@
 - Posted at: 2026-04-06T16:24:27.000Z
 - Product type: clips
 - Media type: 2
-- Public play count / views proxy: 31,410
-- Likes: 3,023
+- Public play count / views proxy: 32,371
+- Likes: 3,052
 - Comments: 115
 - Caption: Is The Gender Pay Gap Real? Part 2 - Explanation With Analogy. In Part 1, we looked at the data behind the gender pay gap. But the real confusion often comes from how those numbers are calculated and compared. This video uses a simple analogy to show why broad comparisons can be misleading, and why “apples to apples” comparisons can completely change the picture. #dating #finance #psychology #mensadvice #facts
 - Reach note: Instagram reach is not exposed for third-party reels; public play count is the closest available proxy.

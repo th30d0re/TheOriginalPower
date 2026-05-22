@@ -7,7 +7,7 @@
 
 ## Instagram Metadata
 
-- Fetched at: 2026-04-28T01:12:04.578Z
+- Fetched at: 2026-05-18T16:49:30.540Z
 - Source: Instagram CLI authenticated session (@ejtheodore)
 - Shortcode: DVIFo7hEbzf
 - Instagram media ID: 3839343485250551007_44989854
@@ -17,9 +17,9 @@
 - Posted at: 2026-04-15T23:08:33.000Z
 - Product type: clips
 - Media type: 2
-- Public play count / views proxy: 1,627,605
-- Likes: 87,136
-- Comments: 2,681
+- Public play count / views proxy: 1,731,627
+- Likes: 93,041
+- Comments: 2,796
 - Caption: Men are more tolerant of people they disagree with politically than women are tolerant of their own political allies, showing that American politics is now dividing more along gender lines than political ideology
 - Reach note: Instagram reach is not exposed for third-party reels; public play count is the closest available proxy.
 

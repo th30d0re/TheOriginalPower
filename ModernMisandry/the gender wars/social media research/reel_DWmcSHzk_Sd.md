@@ -7,7 +7,7 @@
 
 ## Instagram Metadata
 
-- Fetched at: 2026-04-28T01:12:04.578Z
+- Fetched at: 2026-05-18T16:49:30.540Z
 - Source: Instagram CLI authenticated session (@ejtheodore)
 - Shortcode: DWmcSHzk_Sd
 - Instagram media ID: 3865901720778568861_80645187513
@@ -17,9 +17,9 @@
 - Posted at: 2026-04-01T19:24:24.000Z
 - Product type: clips
 - Media type: 2
-- Public play count / views proxy: 12,683
-- Likes: 1,127
-- Comments: 269
+- Public play count / views proxy: 49,999
+- Likes: 4,339
+- Comments: 614
 - Caption: Women do harmful things too! While I don’t think these men commented in good faith with their request, let’s talk about some things I see and have some feedback around #mentalhealth #patriarchy #masculinity #feminism
 - Reach note: Instagram reach is not exposed for third-party reels; public play count is the closest available proxy.
 

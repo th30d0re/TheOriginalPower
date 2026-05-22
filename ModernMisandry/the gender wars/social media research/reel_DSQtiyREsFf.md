@@ -7,7 +7,7 @@
 
 ## Instagram Metadata
 
-- Fetched at: 2026-04-28T01:12:04.578Z
+- Fetched at: 2026-05-18T16:49:30.540Z
 - Source: Instagram CLI authenticated session (@ejtheodore)
 - Shortcode: DSQtiyREsFf
 - Instagram media ID: 3787727589147328863_14105697
@@ -17,9 +17,9 @@
 - Posted at: 2025-12-14T22:46:54.000Z
 - Product type: clips
 - Media type: 2
-- Public play count / views proxy: 943,314
-- Likes: 46,811
-- Comments: 2,877
+- Public play count / views proxy: 960,507
+- Likes: 47,697
+- Comments: 2,931
 - Caption: What are your thoughts 💭 Have you had a journey with your relationship with men? How do you see the sexes moving forward collaboratively, together? Podcasts on the topic (you can check them out on YouTube): Both are from ‘Diary of a CEO’ ‘Young Men Are Quietly Giving Up’ ‘DEBATE: Feminist Women vs Non Feminists’ I have to acknowledge some factors that helped form my dynamic with & outlook on men (1) Having a mother tough as steel gave me grit. A confidence and awareness of my surroundings that gave me courage to be fierce in defending myself. I think it’s prevented a lot worse from happening to me. This didn’t exempt me from trauma and struggle in life/with men - but it deeply served me in how I moved forward after, with authority. (2) I’ve been hurt evenly and deeply by both men and women, where I see what animates these actions as energy rather than a sex, able to exist within anyo...
 - Reach note: Instagram reach is not exposed for third-party reels; public play count is the closest available proxy.
 

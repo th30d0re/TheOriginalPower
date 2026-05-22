@@ -29,7 +29,7 @@ This is **Episode 11**. You must strictly limit your discussion to **Chapter 8 (
 - (Ep 6) Gendered axis Part 1: coverture, gendered disarmament, structural immunity, intersection coefficient; "male womb" diasporic reprise (seed).
 - (Ep 7) Gendered axis Part 2: *partus sequitur ventrem*, breeding apparatus, Nat Turner consumption, `libidinal_extraction.exe` in-vivo subroutine, Completeness Theorem (four subroutines), "male womb" (formalized), buck breaking, eugenics, Comstock to *Dobbs*.
 - (Ep 8) Enforcement Engine: slave patrols as capital management, dual genealogy of policing, $F_{enforce}$ deployment, 13th Amendment loophole.
-- (Ep 9) Compounding Chain: multiplicative harm, judicial entrenchment of the loophole (Economic Reality Test, penological firewall, triviality bar), financial lineage, Haitian instantiation, sovereign ransom.
+- (Ep 9) Compounding Chain: multiplicative harm, judicial entrenchment of the loophole (Economic Reality Test, penological firewall, triviality bar), financial lineage, carceral triple conversion, Haitian instantiation, sovereign ransom.
 - (Ep 10) Containment Field: Pullman Strike, parallel economy and massacre pattern, redlining, Detroit 1943, highway routing, Capture Variable.
 
 You may briefly reference these (e.g., "the Buffer Class pacified by the psychological wage in Episode 3 now votes within a system pre-filtered by the Elite") but do not re-explain.

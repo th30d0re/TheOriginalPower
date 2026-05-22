@@ -7,19 +7,19 @@
 
 ## Instagram Metadata
 
-- Fetched at: 2026-04-28T01:12:04.578Z
+- Fetched at: 2026-05-18T16:49:30.540Z
 - Source: Instagram CLI authenticated session (@ejtheodore)
 - Shortcode: DULXud1Dp2u
 - Instagram media ID: 3822253056948346286_61442979876
 - Instagram media PK: 3822253056948346286
 - Uploader username: @aliencozmo1111
-- Uploader display name: ALiEN👽🖖🛸
+- Uploader display name: Alien/D
 - Posted at: 2026-01-31T14:01:51.000Z
 - Product type: clips
 - Media type: 2
-- Public play count / views proxy: 47,599
-- Likes: 5,501
-- Comments: 491
+- Public play count / views proxy: 53,176
+- Likes: 6,249
+- Comments: 539
 - Caption: #fyp #reels
 - Reach note: Instagram reach is not exposed for third-party reels; public play count is the closest available proxy.
 

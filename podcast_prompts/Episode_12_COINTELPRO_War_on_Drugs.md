@@ -29,7 +29,7 @@ This is **Episode 12**. You must strictly limit your discussion to **Chapter 9 (
 - (Ep 6) Gendered axis Part 1: coverture, gendered disarmament, structural immunity, intersection coefficient; "male womb" diasporic reprise (seed).
 - (Ep 7) Gendered axis Part 2: *partus sequitur ventrem*, breeding apparatus; Nat Turner consumption (Drewry testimony); `libidinal_extraction.exe` in-vivo subroutine (Master Epicure aesthetic, "human fleshmongers," Patterson parasite-not-metaphor, *Essex* whaleship, WPA testimonies); "male womb" (formalized); Completeness Theorem with four subroutines; post-mortem extraction / ghost value (teeth, skin, hair); the Medical Extraction Laboratory — J. Marion Sims, the Tuskegee Syphilis Study (1932–1972), Operation Avon Park (1955–56), Cincinnati radiation experiments; eugenics; Comstock to *Dobbs*. **Note:** The Tuskegee Syphilis Study was fully covered in Episode 7. When discussing the 1972 revelations here, you may reference them as a cross-episode callback ("as we documented in Episode 7") but do NOT re-explain the study's design or history.
 - (Ep 8) Enforcement Engine: slave patrols, dual genealogy of policing, $F_{enforce}$ deployment, 13th Amendment loophole.
-- (Ep 9) Compounding Chain: multiplicative harm, Economic Reality Test / penological firewall, financial lineage, Haitian instantiation.
+- (Ep 9) Compounding Chain: multiplicative harm, Economic Reality Test / penological firewall, financial lineage, carceral triple conversion, Haitian instantiation.
 - (Ep 10) Containment Field: Pullman, redlining, massacre pattern, Detroit 1943, Capture Variable.
 - (Ep 11) Puppet Show: Tweedism Filter, Green Primary, interference engine, phase-shifting, Agenda-Setter Trap, Gilens–Page proof, algorithmic corrections.
 

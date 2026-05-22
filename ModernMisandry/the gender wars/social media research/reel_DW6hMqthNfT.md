@@ -7,7 +7,7 @@
 
 ## Instagram Metadata
 
-- Fetched at: 2026-04-28T01:12:04.578Z
+- Fetched at: 2026-05-18T16:49:30.540Z
 - Source: Instagram CLI authenticated session (@ejtheodore)
 - Shortcode: DW6hMqthNfT
 - Instagram media ID: 3871552835707787219_70904498691
@@ -17,9 +17,9 @@
 - Posted at: 2026-04-09T14:30:54.000Z
 - Product type: clips
 - Media type: 2
-- Public play count / views proxy: 739,155
-- Likes: 11,135
-- Comments: 854
+- Public play count / views proxy: 758,314
+- Likes: 11,256
+- Comments: 857
 - Caption: One-night stands are often framed as empowering or empty. The data says neither is reliably true. Satisfaction depends less on the act and more on what happens during it. What people get wrong is assuming physical attraction drives a good experience. It helps, but it is not the main predictor. Studies consistently show a large orgasm gap in casual encounters, especially between men and women. That gap explains much of the difference in reported satisfaction. The mechanism is straightforward: partner familiarity, communication, and attention to cues are low in first-time encounters. Without feedback and responsiveness, people default to scripts that prioritize one person’s experience over the other’s. Satisfaction tracks responsiveness, not just desire. The practical shift is to prioritize mutual feedback over performance. Slow down, pay attention to your partner’s responses, and adjus...
 - Reach note: Instagram reach is not exposed for third-party reels; public play count is the closest available proxy.
 

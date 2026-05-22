@@ -29,7 +29,7 @@ This is **Episode 13**. You must strictly limit your discussion to **Chapter 10 
 - (Ep 6) Gendered axis Part 1: coverture, gendered disarmament, structural immunity, intersection coefficient; "male womb" diasporic reprise (seed).
 - (Ep 7) Gendered axis Part 2: *partus sequitur ventrem*, breeding apparatus, Nat Turner consumption, `libidinal_extraction.exe`, Completeness Theorem (four subroutines), "male womb" (formalized), eugenics, Comstock to *Dobbs*.
 - (Ep 8) Enforcement Engine: slave patrols, dual genealogy of policing, $F_{enforce}$ deployment, 13th Amendment loophole.
-- (Ep 9) Compounding Chain: multiplicative harm, Economic Reality Test / penological firewall, financial lineage, Haitian instantiation.
+- (Ep 9) Compounding Chain: multiplicative harm, Economic Reality Test / penological firewall, financial lineage, carceral triple conversion, Haitian instantiation.
 - (Ep 10) Containment Field: Pullman, redlining, massacre pattern, Detroit 1943, Capture Variable.
 - (Ep 11) Puppet Show: Tweedism Filter, Green Primary, interference engine, phase-shifting, Agenda-Setter Trap, Gilens–Page proof, algorithmic corrections.
 - (Ep 12) Recompile: Houston's kernel breach, COINTELPRO, Fred Hampton, Rainbow Coalition, War on Drugs, Ehrlichman admission, crack/powder disparity, Patent 6,630,507, Epistemic Enclosure, Manufactured Crisis (lead / highways / deindustrialization), Crack Markets as Runtime, Broken Windows, 1994 Crime Bill, Great Crime Decline Proof.

@@ -32,7 +32,7 @@ You may *reference* prior episodes briefly (e.g., "the intersection coefficient 
 
 **DO NOT** discuss or preview:
 - Slave patrols or the Enforcement Class (Episode 8)
-- The compounding model, judicial entrenchment of the 13th Amendment loophole, or convict leasing (Episode 9)
+- The compounding model, judicial entrenchment of the 13th Amendment loophole, convict leasing, or carceral triple conversion (Episode 9)
 - Redlining, spatial warfare, or the containment field (Episode 10)
 - The Puppet Class, Tweedism, or voter capture (Episode 11)
 - COINTELPRO, the Variable Swap, or War on Drugs (Episode 12)

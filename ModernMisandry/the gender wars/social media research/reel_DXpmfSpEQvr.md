@@ -7,19 +7,19 @@
 
 ## Instagram Metadata
 
-- Fetched at: 2026-04-28T01:12:04.578Z
+- Fetched at: 2026-05-18T16:49:30.540Z
 - Source: Instagram CLI authenticated session (@ejtheodore)
 - Shortcode: DXpmfSpEQvr
 - Instagram media ID: 3884805429671300075_36511763
 - Instagram media PK: 3884805429671300075
 - Uploader username: @itsamandajustine
-- Uploader display name: Amanda Mbata, LCSW | Therapist
+- Uploader display name: Amanda Mbata, LCSW | Therapist & Coach
 - Posted at: 2026-04-27T21:22:58.000Z
 - Product type: clips
 - Media type: 2
-- Public play count / views proxy: 1,189
-- Likes: 3
-- Comments: 0
+- Public play count / views proxy: 3,092
+- Likes: 207
+- Comments: 5
 - Caption: Some of you don’t need a better man, you need better self awareness 🤷🏾‍♀️ : #relationshiptruths #relationshiptrauma #healthyrelationship #communicationtips
 - Reach note: Instagram reach is not exposed for third-party reels; public play count is the closest available proxy.
 

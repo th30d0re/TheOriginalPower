@@ -7,7 +7,7 @@
 
 ## Instagram Metadata
 
-- Fetched at: 2026-04-28T01:12:04.578Z
+- Fetched at: 2026-05-18T16:49:30.540Z
 - Source: Instagram CLI authenticated session (@ejtheodore)
 - Shortcode: DXR7We4EWai
 - Instagram media ID: 3878141783868270242_313659699
@@ -17,9 +17,9 @@
 - Posted at: 2026-04-18T16:44:10.000Z
 - Product type: clips
 - Media type: 2
-- Public play count / views proxy: 123,106
-- Likes: 12,767
-- Comments: 1,469
+- Public play count / views proxy: 159,066
+- Likes: 16,659
+- Comments: 1,904
 - Caption: “ALL MEN” IS LAZY CONVERSATION #military #army #advice #datingadvice TikTok:Santiagothewiz
 - Reach note: Instagram reach is not exposed for third-party reels; public play count is the closest available proxy.
 

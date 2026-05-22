@@ -7,7 +7,7 @@
 
 ## Instagram Metadata
 
-- Fetched at: 2026-04-28T01:12:04.578Z
+- Fetched at: 2026-05-18T16:49:30.540Z
 - Source: Instagram CLI authenticated session (@ejtheodore)
 - Shortcode: DT2z6q4ADyV
 - Instagram media ID: 3816466066381487253_70850068986
@@ -17,9 +17,9 @@
 - Posted at: 2026-01-23T14:25:41.000Z
 - Product type: clips
 - Media type: 2
-- Public play count / views proxy: 422,083
-- Likes: 24,312
-- Comments: 1,779
+- Public play count / views proxy: 437,146
+- Likes: 25,141
+- Comments: 1,840
 - Caption: Patriarchy is supposedly the system men built to keep women down. But men were not threatened by women or competing with us. They were expected to protect us, and often to die doing it Some individuals have abused their power, sure. But this is not a story of systemic oppression. #antifeminism #patriarchy #genderroles #womenarepowerful #menprotectwomen
 - Reach note: Instagram reach is not exposed for third-party reels; public play count is the closest available proxy.
 

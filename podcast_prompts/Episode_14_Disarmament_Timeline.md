@@ -29,7 +29,7 @@ This is **Episode 14**. You must strictly limit your discussion to **Chapter 11 
 - (Ep 6) Gendered axis Part 1: coverture, gendered disarmament, structural immunity.
 - (Ep 7) Gendered axis Part 2: *partus sequitur ventrem*, breeding apparatus, eugenics, Comstock to *Dobbs*.
 - (Ep 8) Enforcement Engine: slave patrols, dual genealogy of policing, $F_{enforce}$, 13th Amendment loophole, Hamburg Massacre as enforcement case.
-- (Ep 9) Compounding Chain: Economic Reality Test / penological firewall, financial lineage.
+- (Ep 9) Compounding Chain: Economic Reality Test / penological firewall, financial lineage, carceral triple conversion.
 - (Ep 10) Containment Field: Pullman, redlining, massacre pattern, Capture Variable.
 - (Ep 11) Puppet Show: Tweedism Filter, Green Primary, Gilens–Page proof.
 - (Ep 12) Recompile: COINTELPRO, War on Drugs, manufactured crisis, 1994 Crime Bill, Great Crime Decline.

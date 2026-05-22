@@ -29,7 +29,7 @@ This is **Episode 17**. You must focus your discussion on **Chapter 13 ("The Glo
 - (Ep 6) Gendered axis Pt 1: coverture, gendered disarmament, structural immunity.
 - (Ep 7) Gendered axis Pt 2: reproductive extraction, breeding apparatus, eugenics.
 - (Ep 8) Enforcement Engine: slave patrols, $F_{enforce}$, 13th Amendment loophole.
-- (Ep 9) Compounding Chain: multiplicative harm, financial lineage, **Haitian sovereign ransom / imperial enforcement** (critical reference).
+- (Ep 9) Compounding Chain: multiplicative harm, financial lineage, carceral triple conversion, **Haitian sovereign ransom / imperial enforcement** (critical reference).
 - (Ep 10) Containment Field: Pullman, redlining, massacre pattern, Capture Variable.
 - (Ep 11) Puppet Show: Tweedism, interference engine, Agenda-Setter Trap.
 - (Ep 12) Recompile: COINTELPRO, Variable Swap, War on Drugs, Manufactured Crisis.

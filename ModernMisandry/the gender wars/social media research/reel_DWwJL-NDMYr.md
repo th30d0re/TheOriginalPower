@@ -7,7 +7,7 @@
 
 ## Instagram Metadata
 
-- Fetched at: 2026-04-28T01:12:04.578Z
+- Fetched at: 2026-05-18T16:49:30.540Z
 - Source: Instagram CLI authenticated session (@ejtheodore)
 - Shortcode: DWwJL-NDMYr
 - Instagram media ID: 3868632485035034155_77237350946
@@ -17,9 +17,9 @@
 - Posted at: 2026-04-05T13:52:07.000Z
 - Product type: clips
 - Media type: 2
-- Public play count / views proxy: 13,044
-- Likes: 1,117
-- Comments: 40
+- Public play count / views proxy: 21,497
+- Likes: 1,909
+- Comments: 56
 - Caption: Is The Gender Pay Gap Real? The Truth About 82 Cents On The Dollar. A lot of people quote the “82 cents on the dollar” number, but very few actually explain what it represents. The key issue is that it compares overall averages, without adjusting for important factors like job type, experience, and hours worked. Once you compare similar roles and conditions, the gap becomes much smaller. This video breaks down the difference between headline numbers and more accurate comparisons. #dating #finance #psychology #mensadvice #facts
 - Reach note: Instagram reach is not exposed for third-party reels; public play count is the closest available proxy.
 

@@ -13,13 +13,13 @@ In Episodes 1–6, you established the framework, traced the algorithm's compila
 
 ### Series Arc
 
-This 21-episode series mirrors the manuscript's four-part structure: **Part I — Specification and Origins** (Eps 1–3), **Part II — The Installation** (Eps 5–9), **Part III — Scaling and Runtime** (Eps 10–14), **Part IV — Diagnostics and Output** (Eps 15–21). This episode is the fourth beat of **Part II: The Installation**. The preceding episodes installed the kinship overwrite (Ep 5), the gendered reproductive kernel (Eps 5–6); this episode installs the kinetic enforcement layer that guards them. Episode 9 closes Part II by showing how the slave-patrol genealogy compounds into the 13th Amendment loophole and the modern carceral state.
+This 21-episode series mirrors the manuscript's four-part structure: **Part I — Specification and Origins** (Eps 1–3), **Part II — The Installation** (Eps 5–9), **Part III — Scaling and Runtime** (Eps 10–14), **Part IV — Diagnostics and Output** (Eps 15–21). This episode is the fourth beat of **Part II: The Installation**. The preceding episodes installed the kinship overwrite (Ep 5), the gendered reproductive kernel (Eps 5–6); this episode installs the kinetic enforcement layer that guards them. Episode 9 closes Part II by showing how the slave-patrol genealogy compounds into the 13th Amendment loophole, the modern carceral state, and the triple conversion of incarcerated people into labor input, institutional subsidy, and census weight.
 
 ---
 
 ### Serialization Rules (CRITICAL)
 
-This is **Episode 8**. You must strictly limit your discussion to the first half of **Chapter 6 ("The Enforcement Engine")** — specifically the slave patrol origin, the Enforcement Class ($F_{enforce}$), gang morphology, the Second Amendment and Christiana proof, the 13th Amendment loophole, the Interface Swap, and convict leasing. The compounding model's mathematical proof and the judicial entrenchment of the loophole are reserved for Episode 9.
+This is **Episode 8**. You must strictly limit your discussion to the first half of **Chapter 6 ("The Enforcement Engine")** — specifically the slave patrol origin, the Enforcement Class ($F_{enforce}$), gang morphology, the Second Amendment and Christiana proof, the 13th Amendment loophole, the Interface Swap, and convict leasing. The compounding model's mathematical proof, the judicial entrenchment of the loophole, and the modern carceral triple-conversion analysis are reserved for Episode 9.
 
 **ALREADY COVERED — Do NOT re-explain:**
 - (Ep 1) The four architectural components, 5-Tier overview, Predatory Min-Max Function, Tri-Modal Enclosure Model, Out-group expansion thesis, mind virus model.
@@ -32,7 +32,7 @@ This is **Episode 8**. You must strictly limit your discussion to the first half
 You may *reference* prior episodes briefly (e.g., "the Buffer Class we traced in Episode 3 now gets deputized with kinetic authority") but do not re-explain them.
 
 **DO NOT** discuss or preview:
-- The compounding model's mathematical proof, judicial entrenchment of the 13th Amendment loophole (Economic Reality Test, penological firewall), or financial lineage in detail (Episode 9)
+- The compounding model's mathematical proof, judicial entrenchment of the 13th Amendment loophole (Economic Reality Test, penological firewall), financial lineage in detail, or the triple conversion of incarcerated people into labor input, institutional subsidy, and census weight (Episode 9)
 - Redlining, spatial warfare, or the containment field (Episode 10)
 - The Puppet Class, Tweedism, or voter capture (Episode 11)
 - COINTELPRO, the Variable Swap, or War on Drugs (Episode 12)
@@ -94,4 +94,4 @@ Cover the following concepts from Chapter 6 (first half):
 
 ### Sign-Off
 
-Tease Episode 9: "Next time, we zoom out to see how harm doesn't just repeat — it MULTIPLIES. The compounding chain: from slave mortgages to prison bonds, the five-century financial lineage, and the judicial firewall — the Economic Reality Test and the ``penological'' loophole — that locks the 13th Amendment exception into place. That episode closes Part II."
+Tease Episode 9: "Next time, we zoom out to see how harm doesn't just repeat — it MULTIPLIES. The compounding chain: from slave mortgages to prison bonds, the five-century financial lineage, the judicial firewall that locks the 13th Amendment exception into place, and the triple conversion that turns the incarcerated body into labor input, institutional subsidy, and census weight. That episode closes Part II."

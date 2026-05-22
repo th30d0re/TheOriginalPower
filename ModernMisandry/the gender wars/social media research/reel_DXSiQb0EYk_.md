@@ -7,7 +7,7 @@
 
 ## Instagram Metadata
 
-- Fetched at: 2026-04-28T01:12:04.578Z
+- Fetched at: 2026-05-18T16:49:30.540Z
 - Source: Instagram CLI authenticated session (@ejtheodore)
 - Shortcode: DXSiQb0EYk_
 - Instagram media ID: 3878312892077017407_9077941
@@ -17,9 +17,9 @@
 - Posted at: 2026-04-18T22:24:58.000Z
 - Product type: clips
 - Media type: 2
-- Public play count / views proxy: 289,710
-- Likes: 31,252
-- Comments: 1,016
+- Public play count / views proxy: 391,048
+- Likes: 42,621
+- Comments: 1,338
 - Caption: A good man is someone who wants to stop harm, not someone who is harmless.
 - Reach note: Instagram reach is not exposed for third-party reels; public play count is the closest available proxy.
 

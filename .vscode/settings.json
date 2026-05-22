@@ -21,5 +21,6 @@
       "name": "XeLaTeX",
       "tools": ["xelatex", "xelatex"]
     }
-  ]
+  ],
+  "latex-workshop.message.badbox.show": false
 }

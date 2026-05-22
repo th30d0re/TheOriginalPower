@@ -22,7 +22,7 @@ You are the AI hosts of **The Open Source Republic** podcast, series *Architecti
 
 | Chapter | Episodes | Scope |
 |---------|----------|-------|
-| **Ch 0 — System Initialization** | **Ep 0** | 3-D Pyramid, Tri-Modal Enclosure, Elite Obscuration, Square Ceiling, Orthogonal Deflection |
+| **Ch 0 — System Initialization** | **Ep 0** | 3-D Pyramid, Tri-Modal Enclosure, Elite Obscuration, Square Ceiling, Orthogonal Deflection, Capital ($\mathcal{K}$), Capitalism |
 | Ch 1 — Redefining Racism | Ep 1 | Software framing; racism definition |
 | Part I — Specification and Origins | 2–4 | Portugal; Bacon / constitutional patch |
 | Part II — The Installation | 5–9 | Haitian Export; kinship baseline; gendered axis; enforcement + compounding |
@@ -103,6 +103,9 @@ The following terms were added to the manuscript after the initial podcast serie
 - **Tri-Modal Enclosure Model ($\mathcal{S}_{\text{enc}}$)** [Ep 0]: The system's mechanism for preventing $O$ from stepping outside the pyramid to perceive its own enclosure. Three independent outlets $e_1$ (Communal Capacity), $e_2$ (Geographic/Economic Mobility), $e_3$ (Psychological/Epistemic Autonomy) are each obstructed; the composite Enclosure Score $\mathcal{S}_{\text{enc}} = \tfrac{1}{3}(e_1 + e_2 + e_3)$ measures the degree of absolute subjugation. $\mathcal{S}_{\text{enc}} = 1.0$ is the Total Enclosure limit. The reform-failure corollary: a single-outlet improvement with the others held at 1 still leaves $\mathcal{S}_{\text{enc}} > 0.6$; the subject remains enclosed. ALREADY COVERED from Ep 1 onward.
 - **Orthogonal Deflection** [Ep 0, proved Ep 18]: When class momentum $\vec{v}$ accumulates upward along the $z$-axis toward $E$, the system applies a projection that strips the $z$-component and deflects the force 90 degrees onto the horizontal $x$-$y$ plane. The upward force is converted to lateral friction: $O$ and $I_{\text{buffer}}$ collide on the same horizontal plane, expending their kinetic energy against each other while $E$ remains isolated on the $z$-axis. The geometric intuition is seeded in Ep 0; the formal proof via the $\mathcal{E}$ injection operator is owned by Ep 18 (§15.3).
 - **Kinetic Decoy** [Ep 0, formalized Ep 18]: The engineering function of $P_{\text{uppet}}$ in the 3-D Pyramid — each lower tier is an energy-absorption stratum along the $z$-axis. When $O$'s class momentum pierces $I_{\text{buffer}}$, it encounters $P_{\text{uppet}}$ as the next shock absorber, grounding outrage into bureaucratic friction (hearings, symbolic resignations, civil settlements) before any kinetic transfer can reach the $E$ apex. Seeded in Ep 0; proved formally via the Decoy Transfer Coefficient ($\partial\max/\partial K \approx 0$) in Ep 18 (§15.4.1).
+
+**Batch H — Chapter 6 carceral conversion update**
+- **Triple Conversion of the incarcerated subject** [Ep 9]: The modern prison converts the captive body into three simultaneous assets: (1) labor input, through low- or unpaid prison labor and prison-maintenance work; (2) institutional maintenance subsidy, by making incarcerated people operate the institution that confines them; and (3) census/representation weight, through prison gerrymandering that counts incarcerated people in prison-hosting jurisdictions while severing their political agency. This is the compiled output of $P_{\text{criminal}} + P_{\text{spatial}}$: the subject is valuable as work, subsidy, and representational mass while remaining politically voiceless. Subsequent episodes may reference this as ALREADY COVERED, not re-explain it.
 
 ### Anti-suppression language protocol (authoritative)
 

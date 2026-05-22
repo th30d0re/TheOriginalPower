@@ -44,3 +44,28 @@ outputs/
 # Supreme Court opinion PDFs — local research corpus; do not push to remotes
 Paper/research/ia_scotus_pdfs/*.pdf
 Paper/research/ia_scotus_pdfs/split_pdfs/*.pdf
+
+# ──────────────────────────────────────
+# IDE / AI assistant configs and logs
+# ──────────────────────────────────────
+.antigravitycli/
+.cursor/
+.foundation/
+.gemini/
+.kimi/
+__Avenue/
+
+# ──────────────────────────────────────
+# Transient / new tooling scripts
+# ──────────────────────────────────────
+test_dynamic.py
+tools/elevenlabs_voice_browser.py
+tools/extract_reference_audio.py
+
+# ──────────────────────────────────────
+# Backup / temp files
+# ──────────────────────────────────────
+*.backup
+*.bak
+*.disk_backup
+temp/

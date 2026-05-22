@@ -7,7 +7,7 @@
 
 ## Instagram Metadata
 
-- Fetched at: 2026-04-28T01:12:04.578Z
+- Fetched at: 2026-05-18T16:49:30.540Z
 - Source: Instagram CLI authenticated session (@ejtheodore)
 - Shortcode: DV7HsBkEf3x
 - Instagram media ID: 3853707717807046129_14887096
@@ -17,9 +17,9 @@
 - Posted at: 2026-03-15T23:42:53.000Z
 - Product type: clips
 - Media type: 2
-- Public play count / views proxy: 1,185,427
-- Likes: 71,080
-- Comments: 13,744
+- Public play count / views proxy: 1,310,597
+- Likes: 78,157
+- Comments: 14,968
 - Caption: I think I’m going to go cry for a while. 🥹 My father was a college professor. Extremely intelligent. A creative genius. He could draw, paint… create anything with his hands. I used to draw and paint too when I was younger. But I stopped. I stopped around the same time he stopped coming to get me. All those years I thought he didn’t want me.I carried that belief quietly into adulthood. Recently my grandmother told me the truth… and now my heart hurts in a completely different way. Because all this time he was trying. And I didn’t know. So I’m going to start painting again. In his honor.In memory of the man whose mind and creativity live inside of me. I’m sorry, dad.I didn’t know. Therapy has opened wounds I didn’t know were still bleeding. I’ve cried more in these past weeks than I have in years. I’ve forgiven my mother. One day I hope I can forgive myself too. Growing up without my f...
 - Reach note: Instagram reach is not exposed for third-party reels; public play count is the closest available proxy.
 

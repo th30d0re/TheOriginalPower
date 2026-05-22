@@ -7,7 +7,7 @@
 
 ## Instagram Metadata
 
-- Fetched at: 2026-04-28T01:12:04.578Z
+- Fetched at: 2026-05-18T16:49:30.540Z
 - Source: Instagram CLI authenticated session (@ejtheodore)
 - Shortcode: DXnUr_mkVSj
 - Instagram media ID: 3884164187790857379_67030927354
@@ -17,9 +17,9 @@
 - Posted at: 2026-04-27T00:11:30.000Z
 - Product type: clips
 - Media type: 2
-- Public play count / views proxy: 32,912
-- Likes: 2,405
-- Comments: 74
+- Public play count / views proxy: 44,509
+- Likes: 3,358
+- Comments: 108
 - Caption: Pop culture stuff #dating #relatable #reels
 - Reach note: Instagram reach is not exposed for third-party reels; public play count is the closest available proxy.
 

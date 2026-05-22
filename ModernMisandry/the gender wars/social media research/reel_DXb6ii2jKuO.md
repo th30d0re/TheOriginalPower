@@ -7,7 +7,7 @@
 
 ## Instagram Metadata
 
-- Fetched at: 2026-04-28T01:12:04.578Z
+- Fetched at: 2026-05-18T16:49:30.540Z
 - Source: Instagram CLI authenticated session (@ejtheodore)
 - Shortcode: DXb6ii2jKuO
 - Instagram media ID: 3880952964492077966_77237350946
@@ -17,9 +17,9 @@
 - Posted at: 2026-04-22T13:49:47.000Z
 - Product type: clips
 - Media type: 2
-- Public play count / views proxy: 424,189
-- Likes: 42,610
-- Comments: 1,731
+- Public play count / views proxy: 747,793
+- Likes: 73,374
+- Comments: 3,475
 - Caption: “Not All Men” - The Whopper Analogy Explained. In this video I break down a viral analogy used in the “not all men” debate and explain why it sounds convincing, but doesn’t really work in real life. The problem is not that bad people exist - the problem is what you do with that information. Instead of assuming the whole “box” is bad, the real skill is learning how to observe, test, and choose the right people. Because if you don’t develop that skill, no generalization will actually protect you. #dating #mensadvice #relationships #psychology #debate
 - Reach note: Instagram reach is not exposed for third-party reels; public play count is the closest available proxy.
 

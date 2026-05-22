@@ -32,7 +32,7 @@ You may *reference* the framework variables and the pre-colonial baseline as nee
 **DO NOT** discuss or preview:
 - The breeding apparatus, *partus sequitur ventrem* as reproductive extraction, eugenics, *Buck v. Bell*, or the criminalization of pregnancy (Episode 7 — Part 2 of the gendered axis)
 - The enforcement engine or slave patrols (Episode 8)
-- The compounding chain, judicial entrenchment of the 13th Amendment loophole, or financial lineage (Episode 9)
+- The compounding chain, judicial entrenchment of the 13th Amendment loophole, financial lineage, or carceral triple conversion (Episode 9)
 - Redlining, spatial warfare, or the containment field (Episode 10)
 - The Puppet Class scaling, Tweedism, or voter capture (Episode 11)
 - COINTELPRO, the Variable Swap, or the War on Drugs (Episode 12)

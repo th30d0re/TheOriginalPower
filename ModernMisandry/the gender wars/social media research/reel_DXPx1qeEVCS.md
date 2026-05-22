@@ -7,7 +7,7 @@
 
 ## Instagram Metadata
 
-- Fetched at: 2026-04-28T01:12:04.578Z
+- Fetched at: 2026-05-18T16:49:30.540Z
 - Source: Instagram CLI authenticated session (@ejtheodore)
 - Shortcode: DXPx1qeEVCS
 - Instagram media ID: 3877536996202205330_6899475080
@@ -17,9 +17,9 @@
 - Posted at: 2026-04-17T20:44:14.000Z
 - Product type: clips
 - Media type: 2
-- Public play count / views proxy: 256,139
-- Likes: 24,171
-- Comments: 1,230
+- Public play count / views proxy: 262,742
+- Likes: 24,661
+- Comments: 1,249
 - Caption: ALL MEN (even “the good ones”) ARE COMPLICIT IN THE CULTURE THAT ALLOWS THIS. If your first instinct is to self-exonerate in the form of, “not all men,” or to dodge accountability by defending in some form, you need to really examine yourself.
 - Reach note: Instagram reach is not exposed for third-party reels; public play count is the closest available proxy.
 

@@ -7,7 +7,7 @@
 
 ## Instagram Metadata
 
-- Fetched at: 2026-04-28T01:12:04.578Z
+- Fetched at: 2026-05-18T16:49:30.540Z
 - Source: Instagram CLI authenticated session (@ejtheodore)
 - Shortcode: DXnenkWDM2T
 - Instagram media ID: 3884207864109911443_751687154
@@ -17,9 +17,9 @@
 - Posted at: 2026-04-27T01:36:08.000Z
 - Product type: clips
 - Media type: 2
-- Public play count / views proxy: 290,062
-- Likes: 16,634
-- Comments: 3,074
+- Public play count / views proxy: 449,237
+- Likes: 28,071
+- Comments: 4,878
 - Caption: Women always forget to tell the role they played in the break up #explorepage✨ #followme #viral #real #advice
 - Reach note: Instagram reach is not exposed for third-party reels; public play count is the closest available proxy.
 

@@ -7,7 +7,7 @@
 
 ## Instagram Metadata
 
-- Fetched at: 2026-04-28T01:12:04.578Z
+- Fetched at: 2026-05-18T16:49:30.540Z
 - Source: Instagram CLI authenticated session (@ejtheodore)
 - Shortcode: DXmtFUsiWGW
 - Instagram media ID: 3883990006566052246_75463071617
@@ -17,9 +17,9 @@
 - Posted at: 2026-04-26T18:22:26.000Z
 - Product type: clips
 - Media type: 2
-- Public play count / views proxy: 70,853
-- Likes: 5,626
-- Comments: 1,074
+- Public play count / views proxy: 82,883
+- Likes: 6,478
+- Comments: 1,234
 - Caption: #blowthisupforme #fypreelsシ゚ #viral #trend #fypage
 - Reach note: Instagram reach is not exposed for third-party reels; public play count is the closest available proxy.
 

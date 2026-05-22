@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0",
+  "episode_id": "episode-smoke-test",
+  "source_file": "Fixtures/sample_transcript.md",
+  "model_id": "prince-canuma/Kokoro-82M",
+  "engine": "mlx-kokoro",
+  "sample_rate": 48000,
+  "created_at": "2026-05-10T12:00:00Z",
+  "speakers": [
+    {
+      "speaker_id": "host",
+      "display_name": "Host",
+      "voice": "af_heart",
+      "turn_count": 1,
+      "engine": "kokoro",
+      "character_profile": "Host and narrator"
+    },
+    {
+      "speaker_id": "guest",
+      "display_name": "Guest",
+      "voice": "am_adam",
+      "turn_count": 1,
+      "engine": "kokoro",
+      "character_profile": ""
+    }
+  ],
+  "turns": [
+    {
+      "turn_index": 0,
+      "speaker_id": "host",
+      "source_timestamp": "00:00:00.000",
+      "segments": [
+        {
+          "chunk_index": 0,
+          "segment_wav": "segments/turn_000_chunk_000.wav",
+          "duration_ms": 1750,
+          "speech_duration_ms": 1680,
+          "start_ms": 0,
+          "end_ms": 1750,
+          "gap_after_ms": 250,
+          "checksum": "9f2a7c0b6d1e"
+        },
+        {
+          "chunk_index": 1,
+          "segment_wav": "segments/turn_000_chunk_001.wav",
+          "duration_ms": 1250,
+          "speech_duration_ms": 1180,
+          "start_ms": 2000,
+          "end_ms": 3250,
+          "gap_after_ms": 500,
+          "checksum": "af68c712d04b"
+        }
+      ],
+      "start_ms": 0,
+      "end_ms": 3250
+    },
+    {
+      "turn_index": 1,
+      "speaker_id": "guest",
+      "source_timestamp": "00:00:03.750",
+      "segments": [
+        {
+          "chunk_index": 0,
+          "segment_wav": "segments/turn_001_chunk_000.wav",
+          "duration_ms": 2100,
+          "speech_duration_ms": 2050,
+          "start_ms": 3750,
+          "end_ms": 5850,
+          "gap_after_ms": 0,
+          "checksum": "3b5947e9a805"
+        }
+      ],
+      "start_ms": 3750,
+      "end_ms": 5850
+    }
+  ]
+}

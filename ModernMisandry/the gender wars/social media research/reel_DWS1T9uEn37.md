@@ -7,7 +7,7 @@
 
 ## Instagram Metadata
 
-- Fetched at: 2026-04-28T01:12:04.578Z
+- Fetched at: 2026-05-18T16:49:30.540Z
 - Source: Instagram CLI authenticated session (@ejtheodore)
 - Shortcode: DWS1T9uEn37
 - Instagram media ID: 3860382299016297979_66010558825
@@ -17,9 +17,9 @@
 - Posted at: 2026-03-25T15:51:17.000Z
 - Product type: clips
 - Media type: 2
-- Public play count / views proxy: 75,915
-- Likes: 2,820
-- Comments: 418
+- Public play count / views proxy: 85,760
+- Likes: 3,181
+- Comments: 464
 - Caption: I think Thor’s philosophy offers a good perspective on modern day gender wars🙂‍↕️ True strength has no enemies #moderngentleman #masculinity #genderequity #datingmen
 - Reach note: Instagram reach is not exposed for third-party reels; public play count is the closest available proxy.
 

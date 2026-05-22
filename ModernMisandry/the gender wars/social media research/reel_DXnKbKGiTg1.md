@@ -7,7 +7,7 @@
 
 ## Instagram Metadata
 
-- Fetched at: 2026-04-28T01:12:04.578Z
+- Fetched at: 2026-05-18T16:49:30.540Z
 - Source: Instagram CLI authenticated session (@ejtheodore)
 - Shortcode: DXnKbKGiTg1
 - Instagram media ID: 3884119050368399413_73365355619
@@ -17,9 +17,9 @@
 - Posted at: 2026-04-26T22:43:02.000Z
 - Product type: clips
 - Media type: 2
-- Public play count / views proxy: 9,601
-- Likes: 835
-- Comments: 53
+- Public play count / views proxy: 14,815
+- Likes: 1,225
+- Comments: 123
 - Caption: Traditional values amongst women have been gone a long time ago 💯. Men don’t really gain anything anymore from the majority of women nowadays. #modernwomen #menadvocate #accountability
 - Reach note: Instagram reach is not exposed for third-party reels; public play count is the closest available proxy.
 

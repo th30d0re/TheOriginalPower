@@ -7,7 +7,7 @@
 
 ## Instagram Metadata
 
-- Fetched at: 2026-04-28T01:12:04.578Z
+- Fetched at: 2026-05-18T16:49:30.540Z
 - Source: Instagram CLI authenticated session (@ejtheodore)
 - Shortcode: DXenjeUDI8X
 - Instagram media ID: 3881713890384187159_77954242292
@@ -17,9 +17,9 @@
 - Posted at: 2026-04-23T15:03:23.000Z
 - Product type: clips
 - Media type: 2
-- Public play count / views proxy: 22,358
-- Likes: 1,522
-- Comments: 159
+- Public play count / views proxy: 29,697
+- Likes: 1,836
+- Comments: 199
 - Caption: I’m genuinely disgusted by the ego and disingenuous takes that come up every time we talk about matriarchy or patriarchy. It’s like truth gets lost the moment ego enters the conversation. Both men and women have the capacity to build or destroy. It comes down to character, not biology. I’ll be diving deeper into this from an honest, objective standpoint—because a lot of these conversations lack real accountability. Subscribe to the YouTube if you’re ready for the real discussion. Stay blessed 💕
 - Reach note: Instagram reach is not exposed for third-party reels; public play count is the closest available proxy.
 

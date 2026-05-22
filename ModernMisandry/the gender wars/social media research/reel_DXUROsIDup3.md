@@ -7,7 +7,7 @@
 
 ## Instagram Metadata
 
-- Fetched at: 2026-04-28T01:12:04.578Z
+- Fetched at: 2026-05-18T16:49:30.540Z
 - Source: Instagram CLI authenticated session (@ejtheodore)
 - Shortcode: DXUROsIDup3
 - Instagram media ID: 3878800955316038263_48659607580
@@ -17,9 +17,9 @@
 - Posted at: 2026-04-19T14:34:01.000Z
 - Product type: clips
 - Media type: 2
-- Public play count / views proxy: 25,197
-- Likes: 1,239
-- Comments: 265
+- Public play count / views proxy: 28,291
+- Likes: 1,408
+- Comments: 280
 - Caption: It WAS NOT 62 million American men and I think people are okay with believing in that lie because people are okay with believing and misinformation and ultimately I think spreading misinformation completely undermines the people who actually need to be pointed out #misinformation #research #factcheck #fakenews #doyourresearch
 - Reach note: Instagram reach is not exposed for third-party reels; public play count is the closest available proxy.
 

@@ -7,7 +7,7 @@
 
 ## Instagram Metadata
 
-- Fetched at: 2026-04-28T01:12:04.578Z
+- Fetched at: 2026-05-18T16:49:30.540Z
 - Source: Instagram CLI authenticated session (@ejtheodore)
 - Shortcode: DRxOMCcEUxa
 - Instagram media ID: 3778863962243812442_8103869101
@@ -17,9 +17,9 @@
 - Posted at: 2025-12-02T17:20:16.000Z
 - Product type: clips
 - Media type: 2
-- Public play count / views proxy: 324,096
-- Likes: 15,536
-- Comments: 2,625
+- Public play count / views proxy: 340,402
+- Likes: 16,556
+- Comments: 2,787
 - Caption: Ladies, men ARE in fact “adapting” to all of the changes today’s women are making. Those changes just don’t feel good to you. And now you have to consider what you want to do differently to get better results with men. You can’t expect a “traditional” man when you are a new age “modern” woman. Those two things don’t go together. Remember, life is about TRADE OFFS at any given time. What do you REALLY want? And what are you willing to do to get it?🤔 #relationships #genderwar #relationshipadviceforwomen #healthyloveexists #datingadvice
 - Reach note: Instagram reach is not exposed for third-party reels; public play count is the closest available proxy.
 

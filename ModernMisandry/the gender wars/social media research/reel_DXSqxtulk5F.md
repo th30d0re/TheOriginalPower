@@ -7,7 +7,7 @@
 
 ## Instagram Metadata
 
-- Fetched at: 2026-04-28T01:12:04.578Z
+- Fetched at: 2026-05-18T16:49:30.540Z
 - Source: Instagram CLI authenticated session (@ejtheodore)
 - Shortcode: DXSqxtulk5F
 - Instagram media ID: 3878350363427229253_36604700
@@ -17,9 +17,9 @@
 - Posted at: 2026-04-18T23:42:06.000Z
 - Product type: clips
 - Media type: 2
-- Public play count / views proxy: 117,203
-- Likes: 12,277
-- Comments: 416
+- Public play count / views proxy: 121,758
+- Likes: 12,753
+- Comments: 440
 - Caption: That’s it, that’s the tweet
 - Reach note: Instagram reach is not exposed for third-party reels; public play count is the closest available proxy.
 

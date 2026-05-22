@@ -7,7 +7,7 @@
 
 ## Instagram Metadata
 
-- Fetched at: 2026-04-28T01:12:04.578Z
+- Fetched at: 2026-05-18T16:49:30.540Z
 - Source: Instagram CLI authenticated session (@ejtheodore)
 - Shortcode: DSOJzQPEfWX
 - Instagram media ID: 3787007441209783703_9077941
@@ -17,9 +17,9 @@
 - Posted at: 2025-12-13T22:58:14.000Z
 - Product type: clips
 - Media type: 2
-- Public play count / views proxy: 453,242
-- Likes: 18,182
-- Comments: 3,729
+- Public play count / views proxy: 459,798
+- Likes: 18,521
+- Comments: 3,682
 - Caption: misandry is a way bigger problem than anyone understands.
 - Reach note: Instagram reach is not exposed for third-party reels; public play count is the closest available proxy.
 

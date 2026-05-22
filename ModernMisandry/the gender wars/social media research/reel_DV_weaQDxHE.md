@@ -7,7 +7,7 @@
 
 ## Instagram Metadata
 
-- Fetched at: 2026-04-28T01:12:04.578Z
+- Fetched at: 2026-05-18T16:49:30.540Z
 - Source: Instagram CLI authenticated session (@ejtheodore)
 - Shortcode: DV_weaQDxHE
 - Instagram media ID: 3855013002055979460_44993167271
@@ -17,7 +17,7 @@
 - Posted at: 2026-03-17T18:52:46.000Z
 - Product type: clips
 - Media type: 2
-- Public play count / views proxy: 238,164
+- Public play count / views proxy: 238,415
 - Likes: 2,638
 - Comments: 204
 - Caption: Dm me “CHAD” if you’re a guy who’s struggling to confidently connect with women. You struggle to get matches, you can’t approach women, so you feel stuck. Let’s have a conversation in my DM’s so I can help you reach your ideal dating situation

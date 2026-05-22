@@ -29,7 +29,7 @@ This is **Episode 19**. You must strictly limit your discussion to **Chapter 16 
 - The conclusion's terminal findings and final definition of racism (Episode 21)
 
 **ANTI-SUPPRESSION LANGUAGE PROTOCOL (CRITICAL):**
-Follow all rules regarding the ban on color-coded morality and dominance terminology. 
+Follow all rules regarding the ban on color-coded morality and dominance terminology.
 
 **REQUIRED TONE:** Clinical, objective, and architectural. Use phrases like: "post-kinetic horizon", "protocol adjustment", "open-source republic", "forking the system", "structural vs kinetic".
 
@@ -43,7 +43,7 @@ Follow all rules regarding the ban on color-coded morality and dominance termino
 
 3. **The Open-Source Republic:** Introduce the central metaphor/framework of this chapter. The state must be treated as an open-source codebase. The current operating system was written by the Elite to maximize extraction. The counter-virus involves "forking" the system—building dual power structures, alternative community resilience networks, and parallel institutions that slowly bleed dependency away from the central extraction kernel.
 
-4. **The Perpetual Battle:** This is not a utopian endpoint. A software system is never "finished." There is no final victory where the extraction kernel is permanently deleted without vigilance. The Open-Source Republic requires perpetual maintenance, constant auditing of the Buffer Class incentive structures, and continuous patches against the Elite's attempts to push malicious updates (Variable Swaps). 
+4. **The Perpetual Battle:** This is not a utopian endpoint. A software system is never "finished." There is no final victory where the extraction kernel is permanently deleted without vigilance. The Open-Source Republic requires perpetual maintenance, constant auditing of the Buffer Class incentive structures, and continuous patches against the Elite's attempts to push malicious updates (Variable Swaps).
 
 5. **Decentralized Resilience:** Because the Algorithmic Epoch (Ep 18) atomizes resilience, the counter-virus must actively rebuild it. It requires building localized, high-trust networks that can absorb systemic shocks (economic crashes, algorithmic containment) without relying on the Elite's infrastructure.
 

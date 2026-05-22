@@ -7,7 +7,7 @@
 
 ## Instagram Metadata
 
-- Fetched at: 2026-04-28T01:12:04.578Z
+- Fetched at: 2026-05-18T16:49:30.540Z
 - Source: Instagram CLI authenticated session (@ejtheodore)
 - Shortcode: DW3p6ZnkbIt
 - Instagram media ID: 3870746737892241965_6017972655
@@ -17,9 +17,9 @@
 - Posted at: 2026-04-08T11:52:08.000Z
 - Product type: clips
 - Media type: 2
-- Public play count / views proxy: 19,466
-- Likes: 1,022
-- Comments: 574
+- Public play count / views proxy: 19,934
+- Likes: 1,035
+- Comments: 578
 - Caption: "Who gone be the boys?": A Critical Analysis of the Slow Death of Patriarchy 💬 #love #relationship #marriage #feminism #boys
 - Reach note: Instagram reach is not exposed for third-party reels; public play count is the closest available proxy.
 

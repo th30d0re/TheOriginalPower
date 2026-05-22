@@ -7,7 +7,7 @@
 
 ## Instagram Metadata
 
-- Fetched at: 2026-04-28T01:12:04.578Z
+- Fetched at: 2026-05-18T16:49:30.540Z
 - Source: Instagram CLI authenticated session (@ejtheodore)
 - Shortcode: DTgnsTVks-a
 - Instagram media ID: 3810219852989386650_44989854
@@ -17,9 +17,9 @@
 - Posted at: 2026-01-14T23:35:12.000Z
 - Product type: clips
 - Media type: 2
-- Public play count / views proxy: 110,212
-- Likes: 3,406
-- Comments: 488
+- Public play count / views proxy: 112,330
+- Likes: 3,473
+- Comments: 491
 - Caption: Multiple studies found women are often more attracted to sexist men. One study compared benevolent sexist men to openly hostile sexist men and to equality minded men. Even feminist women rated benevolent men as warmer and more appealing.
 - Reach note: Instagram reach is not exposed for third-party reels; public play count is the closest available proxy.
 

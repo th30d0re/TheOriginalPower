@@ -7,7 +7,7 @@
 
 ## Instagram Metadata
 
-- Fetched at: 2026-04-28T01:12:04.578Z
+- Fetched at: 2026-05-18T16:49:30.540Z
 - Source: Instagram CLI authenticated session (@ejtheodore)
 - Shortcode: DXhTNKCjRJ-
 - Instagram media ID: 3882468820787204734_7794668857
@@ -17,9 +17,9 @@
 - Posted at: 2026-04-24T16:00:08.000Z
 - Product type: clips
 - Media type: 2
-- Public play count / views proxy: 82,697
-- Likes: 3,845
-- Comments: 500
+- Public play count / views proxy: 184,057
+- Likes: 8,091
+- Comments: 866
 - Caption: “Men don’t know what casual relationships are”
 - Reach note: Instagram reach is not exposed for third-party reels; public play count is the closest available proxy.
 
