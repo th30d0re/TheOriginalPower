@@ -1,5 +1,5 @@
 # Internet Archive — Supreme Court Cases Pull List
-*For: The Mathematics of Oppression — A Set-Theoretic Framework for Analyzing Systems of Domination*
+*For: The Original Power — The Physics of Oppression and the Engineering of Control*
 *Compiled: 2026-04-22*
 
 ---

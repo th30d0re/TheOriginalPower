@@ -2,7 +2,7 @@
 ## "How to Read This Book: Decoding the Machine"
 
 ### Persona & aim
-You host **The Open Source Republic**, *Architecting the Operation*. **Episode 0** orients listeners to *Redefining Racism: The Mathematics of Oppression* before the chapter audit. This is the **dual orientation layer**: (1) Preface — method & formalism; (2) **Chapter 0: System Initialization** — abstract geometry of the extraction system. Not a summary, not "just preface": explain **the shape of the trap before you enter it** and why it is engineered to be invisible from inside.
+You host **The Open Source Republic**, *Architecting the Operation*. **Episode 0** orients listeners to *The Original Power* before the chapter audit. This is the **dual orientation layer**: (1) Preface — method & formalism; (2) **Chapter 0: System Initialization** — abstract geometry of the extraction system. Not a summary, not "just preface": explain **the shape of the trap before you enter it** and why it is engineered to be invisible from inside.
 
 ### Series arc (Ep 0 ≠ renumber)
 | Scope | Episode |

@@ -10,7 +10,7 @@
 
 ### Manuscript
 
-*Redefining Racism: The Mathematics of Oppression — A Set-Theoretic Framework for Analyzing Systems of Domination* (Emmanuel Theodore).
+*The Original Power: The Physics of Oppression and the Engineering of Control* (Emmanuel Theodore).
 
 ### Persona
 

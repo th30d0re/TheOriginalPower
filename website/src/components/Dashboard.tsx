@@ -14,7 +14,7 @@ const Dashboard = () => {
     <div className="dashboard">
       {/* Header */}
       <header className="dashboard-header">
-        <h1>The Mathematics of Oppression</h1>
+        <h1>The Original Power</h1>
         <p>Interactive Exploration Dashboard</p>
       </header>
 

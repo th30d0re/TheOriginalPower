@@ -1,7 +1,7 @@
-# The Mathematics of Oppression
-### A Set-Theoretic Framework for Analyzing Systems of Domination
+# The Original Power
+### The Physics of Oppression and the Engineering of Control
 
-[![LaTeX](https://img.shields.io/badge/LaTeX-Document-008080?logo=latex)](Paper/Redefining_Racism.pdf)
+[![LaTeX](https://img.shields.io/badge/LaTeX-Document-008080?logo=latex)](Paper/The_Original_Power.pdf)
 [![Website](https://img.shields.io/badge/Interactive-Website-blueviolet?logo=react)](website/)
 [![License](https://img.shields.io/badge/License-All%20Rights%20Reserved-red)]()
 
@@ -92,7 +92,7 @@ jupyter notebook Paper/scripts/eq47_51_spatial_overlay.ipynb
 
 ### Compile
 
-From the repository root, regenerate the committed PDF from `Paper/Redefining_Racism.tex` with:
+From the repository root, regenerate the committed PDF from `Paper/The_Original_Power.tex` with:
 
 ```bash
 make pdf-from-tex
@@ -110,13 +110,13 @@ Before opening a pull request, verify that the checked-in PDF exactly matches a 
 make verify-pdf
 ```
 
-`make verify-pdf` is also enforced in CI for changes to the paper sources or the committed PDF. It rebuilds `Paper/Redefining_Racism.pdf` from the TeX source with a fixed build epoch and suppressed PDF metadata timestamps, then fails if the regenerated PDF differs from the committed file.
+`make verify-pdf` is also enforced in CI for changes to the paper sources or the committed PDF. It rebuilds `Paper/The_Original_Power.pdf` from the TeX source with a fixed build epoch and suppressed PDF metadata timestamps, then fails if the regenerated PDF differs from the committed file.
 
 Or manually from `Paper/`:
 
 ```bash
 cd Paper
-latexmk -pdf -interaction=nonstopmode -halt-on-error Redefining_Racism.tex
+latexmk -pdf -interaction=nonstopmode -halt-on-error The_Original_Power.tex
 ```
 
 ---

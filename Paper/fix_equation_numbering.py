@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-Restructure equation numbering in The_Mathematics_of_Oppression.tex
+Restructure equation numbering in The_Original_Power.tex
 so that rendered numbers match existing labels (Option B).
 """
 import re
 
-with open('The_Mathematics_of_Oppression.tex', 'r') as f:
+with open('The_Original_Power.tex', 'r') as f:
     content = f.read()
 
 # Replace the 4 partition equations with unnumbered display math
@@ -39,7 +39,7 @@ if old_ref in content:
 else:
     print('WARNING: Chapter 10 reference not found')
 
-with open('The_Mathematics_of_Oppression.tex', 'w') as f:
+with open('The_Original_Power.tex', 'w') as f:
     f.write(content)
 
 print('Done')

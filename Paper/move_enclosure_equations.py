@@ -3,7 +3,7 @@
 Move eq:1.1-enclosure-score and eq:1.2-total-enclosure from Chapter 0 to Chapter 1.
 """
 
-with open('The_Mathematics_of_Oppression.tex', 'r') as f:
+with open('The_Original_Power.tex', 'r') as f:
     content = f.read()
 
 # The text block to extract from Chapter 0 and move to Chapter 1
@@ -105,7 +105,7 @@ if ch1_insert_point not in content:
 content = content.replace(ch1_insert_point, new_ch1_block)
 print("Inserted enclosure block into Chapter 1")
 
-with open('The_Mathematics_of_Oppression.tex', 'w') as f:
+with open('The_Original_Power.tex', 'w') as f:
     f.write(content)
 
 print("Done")

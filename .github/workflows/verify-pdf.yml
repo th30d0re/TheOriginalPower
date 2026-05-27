@@ -8,7 +8,7 @@ name: Verify regenerated PDF
       - "Paper/**/*.bib"
       - "Paper/**/*.sty"
       - "Paper/figures/**"
-      - "Paper/Redefining_Racism.pdf"
+      - "Paper/The_Original_Power.pdf"
       - ".github/workflows/verify-pdf.yml"
   push:
     paths:
@@ -17,7 +17,7 @@ name: Verify regenerated PDF
       - "Paper/**/*.bib"
       - "Paper/**/*.sty"
       - "Paper/figures/**"
-      - "Paper/Redefining_Racism.pdf"
+      - "Paper/The_Original_Power.pdf"
       - ".github/workflows/verify-pdf.yml"
 
 jobs:

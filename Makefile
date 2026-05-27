@@ -1,4 +1,4 @@
-# U.S. Code snippets for Paper/Redefining_Racism.tex (nickvido/us-code)
+# U.S. Code snippets for Paper/The_Original_Power.tex (nickvido/us-code)
 USC_TAG ?= annual/2025
 
 .PHONY: usc-snippets usc-diffs usc-all
@@ -16,8 +16,8 @@ usc-all: usc-snippets usc-diffs
 # ---------------------------------------------------------------------------
 
 PAPER_DIR       := Paper
-PAPER_TEX       := Redefining_Racism.tex
-PAPER_PDF       := Redefining_Racism.pdf
+PAPER_TEX       := The_Original_Power.tex
+PAPER_PDF       := The_Original_Power.pdf
 LATEXMK         ?= latexmk
 LATEXMK_FLAGS   ?= -pdf -interaction=nonstopmode -halt-on-error
 PDF_BUILD_EPOCH ?= 1704067200

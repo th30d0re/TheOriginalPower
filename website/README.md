@@ -1,6 +1,6 @@
-# The Mathematics of Oppression - Interactive Website
+# The Original Power - Interactive Website
 
-An interactive visualization and exploration tool for the research paper "The Mathematics of Oppression: A Set-Theoretic Framework for Analyzing Systems of Domination."
+An interactive visualization and exploration tool for the research paper "The Original Power: The Physics of Oppression and the Engineering of Control."
 
 ## Features
 

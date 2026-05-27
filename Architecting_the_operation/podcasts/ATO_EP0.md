@@ -5,13 +5,13 @@ Architecting the Operation: Episode 0 — The Preface: Why This Book Exists
 ## [INTRO — THE HOOK]
 
 **Emmanuel Theodore (00:01)**
-Welcome to the Open Source Republic. I am Emmanuel Theodore, and this is *Architecting the Operation*—the podcast series dedicated to unpacking my book, *The Mathematics of Oppression*.
+Welcome to the Open Source Republic. I am Emmanuel Theodore, and this is *Architecting the Operation*—the podcast series dedicated to unpacking my book, *The Original Power*.
 
 Before I introduce my guests, let me tell you why this podcast exists—and why you should care.
 
 Every few decades, America has the same exhausting conversation about race. Someone points at a symptom. Someone else denies the symptom. Everyone argues about intent. Nobody diagnoses the disease. The reason we stay stuck is simple: we don't have a shared diagnostic language. We don't have a way to look at a system of oppression the way an engineer looks at a bridge, or a doctor looks at a body. We have moral outrage—which is necessary—but we don't have structural precision. And without precision, we can't build solutions that actually fit the problem.
 
-*The Mathematics of Oppression* is an attempt to build that diagnostic tool. It is not a memoir. It is not a history—though history is in it. It is a structural framework that treats racism as what it actually is: engineered extraction software running on human cognition. And if that sounds strange to you, good. Stay with me.
+*The Original Power* is an attempt to build that diagnostic tool. It is not a memoir. It is not a history—though history is in it. It is a structural framework that treats racism as what it actually is: engineered extraction software running on human cognition. And if that sounds strange to you, good. Stay with me.
 
 This is Episode 0. I've invited two people—Toussaint and Aisha—who have read the Preface and have questions. Hard questions. They're not here to promote the book. They're here to probe it. Let's see if it holds up.
 
@@ -169,4 +169,4 @@ Thanks for joining us for Episode 0 of *Architecting the Operation*.
 Stay curious. Stay skeptical. We'll see you in Episode 1.
 
 **Emmanuel Theodore (13:25)**
-This has been *Architecting the Operation*, episode zero. I'm Emmanuel Theodore—author of *The Mathematics of Oppression*—and this is the Open Source Republic. Toussaint, Aisha—thank you for the hard questions. Thanks for listening. We'll see you in Episode 1.
+This has been *Architecting the Operation*, episode zero. I'm Emmanuel Theodore—author of *The Original Power*—and this is the Open Source Republic. Toussaint, Aisha—thank you for the hard questions. Thanks for listening. We'll see you in Episode 1.
