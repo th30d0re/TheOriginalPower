@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Mathematics of Oppression: Unified Electrodynamic Framework — Introductory Theory Document</title>
+  <meta name="description" content="Formal introduction to the Unified Electrodynamic Framework extending The Mathematics of Oppression. Grounds all prior operators—psychological wage, interference engine, enclosure models, damped harmonic operator—in first-principles electrodynamics and control theory." />
+  <meta name="author" content="Framework Author; synthesized from session with Gemini, 2026-05-26" />
+
+  <!-- MathJax v3 for LaTeX rendering -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)'], ['$', '$']],
+        displayMath: [['\\[', '\\]'], ['$$', '$$']],
+        tags: 'ams',
+        packages: {'[+]': ['boldsymbol']}
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+  <style>
+    /* Information-first layout. Minimal visual styling; structured for parsing by LLMs and humans alike. */
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 16px;
+      line-height: 1.75;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      color: #111;
+      background: #fff;
+    }
+    h1, h2, h3, h4, h5 {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      margin-top: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    h1 { font-size: 1.8rem; border-bottom: 2px solid #111; padding-bottom: 0.5rem; }
+    h2 { font-size: 1.4rem; border-bottom: 1px solid #555; padding-bottom: 0.25rem; }
+    h3 { font-size: 1.15rem; }
+    h4 { font-size: 1rem; font-style: italic; }
+    p { margin: 0.75rem 0; }
+    ul, ol { margin: 0.5rem 0 0.5rem 2rem; }
+    li { margin-bottom: 0.4rem; }
+
+    /* Equation display blocks */
+    .eq-block {
+      margin: 1.25rem 2rem;
+      padding: 0.75rem 1rem;
+      border-left: 3px solid #333;
+      background: #f7f7f7;
+    }
+    .eq-label {
+      float: right;
+      font-family: monospace;
+      font-size: 0.85rem;
+      color: #555;
+    }
+
+    /* Definition and theorem boxes */
+    .definition, .theorem, .axiom, .derivation {
+      margin: 1.25rem 0;
+      padding: 0.75rem 1rem;
+      border-left: 4px solid #000;
+    }
+    .definition { border-color: #2c2c8a; background: #f0f0ff; }
+    .theorem    { border-color: #1a6b1a; background: #f0fff0; }
+    .axiom      { border-color: #8a2c2c; background: #fff0f0; }
+    .derivation { border-color: #5a5a00; background: #fffef0; }
+
+    .definition strong,
+    .theorem    strong,
+    .axiom      strong,
+    .derivation strong {
+      display: block;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 0.35rem;
+    }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.95rem;
+    }
+    th, td {
+      border: 1px solid #aaa;
+      padding: 0.5rem 0.75rem;
+      vertical-align: top;
+    }
+    th { background: #eee; text-align: left; }
+
+    /* Navigation / TOC */
+    nav#toc {
+      background: #f5f5f5;
+      border: 1px solid #ccc;
+      padding: 1rem 1.5rem;
+      margin-bottom: 2rem;
+    }
+    nav#toc h2 { margin-top: 0; border: none; font-size: 1.1rem; }
+    nav#toc ol { margin: 0.25rem 0 0 1.5rem; }
+    nav#toc li { margin-bottom: 0.2rem; font-size: 0.95rem; }
+    nav#toc a { text-decoration: none; color: #111; }
+    nav#toc a:hover { text-decoration: underline; }
+
+    /* Abstract */
+    #abstract {
+      border: 1px solid #999;
+      padding: 1rem 1.25rem;
+      margin-bottom: 2rem;
+      background: #fafafa;
+    }
+    #abstract h2 { margin-top: 0; border: none; font-size: 1.1rem; }
+
+    /* Glossary */
+    dl.glossary dt {
+      font-weight: bold;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      margin-top: 0.75rem;
+    }
+    dl.glossary dd {
+      margin-left: 2rem;
+    }
+
+    code, .mono { font-family: 'Courier New', monospace; font-size: 0.9em; }
+    hr { border: none; border-top: 1px solid #ccc; margin: 2.5rem 0; }
+
+    /* Print */
+    @media print {
+      body { max-width: 100%; padding: 0; }
+      nav#toc { display: none; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>The Mathematics of Oppression:<br>Unified Electrodynamic Framework</h1>
+  <p><strong>Document Type:</strong> Introductory Theory Document — Formal Framework Integration</p>
+  <p><strong>Status:</strong> Working Draft — Pre-publication</p>
+  <p><strong>Session Date:</strong> 2026-05-26</p>
+  <p><strong>Scope:</strong> This document formalizes the Unified Electrodynamic Framework (UEF) that grounds all prior operators, wages, and models in the book <em>The Mathematics of Oppression</em> within the first principles of classical electrodynamics, thermodynamics, information theory, and control systems engineering. All previously established operators — the Interference Engine, the Damped Harmonic Operator, the Enclosure Models, the Suppression Allocation \(\psi\), and the Psychological Wage — are re-grounded in this unified language. The consistent adoption of UEF terminology across all chapters ensures mathematical coherence from the quantum-individual level to the macro-geopolitical level.</p>
+</header>
+
+<section id="abstract">
+  <h2>Abstract</h2>
+  <p>
+    The Mathematics of Oppression proposes that systemic racism and intersectional oppression are not sociological metaphors but obey strict, derivable physical laws. This document introduces the Unified Electrodynamic Framework (UEF), which maps the framework's existing algebraic operators onto the foundational equations of electrodynamics. Beginning at the particle level — where the individual is modeled as a charge carrier \(q\) moving within an institutional electric field \(\vec{E}\) — the UEF derives upward through drift velocity, conductivity, and the Lorentz force to formally produce the existing operators as emergent consequences of physical law. The psychological wage \(\psi_s\) is shown to be the imaginary (reactive) component of a complex suppression allocation \(W = \psi_m + j\psi_s\), extended to an \(N\)-dimensional intersectional quaternion-like sum governed by weighted Geometric Algebra. The Interference Engine is formalized as a Phased-Array Signal Jammer operating on the superposition of \(N\) orthogonal cultural magnetic fields. The Enclosure Models are derived from dielectric permittivity in capacitor physics. The Damped Harmonic Operator is formalized as the RL circuit time-constant and inductive kickback. A complete Systemic Component Library is defined from first principles. The document concludes with the full-stack Societal Compute Stack architecture, the conditions under which fascist Quadrant II collapse occurs, and the first-principles derivation of the Snubber Circuit as a revolutionary countermeasure blueprint.
+  </p>
+</section>
+
+<nav id="toc">
+  <h2>Table of Contents</h2>
+  <ol>
+    <li><a href="#sec-foundations">I. Axiomatic Foundations: Prejudice, Power, and Racism as Physical Quantities</a></li>
+    <li><a href="#sec-complex-wage">II. The Complex Suppression Allocation: Material and Psychological Wages as a Complex Number</a></li>
+    <li><a href="#sec-complex-properties">III. Properties of the Complex Wage: Squaring, Conjugates, and Phase Angle</a></li>
+    <li><a href="#sec-intersectional">IV. The Intersectional Extension: Quaternions and N-Dimensional Geometric Algebra</a></li>
+    <li><a href="#sec-lorentz">V. The Unified Lorentz Force Equation: Grounding Du Bois in Maxwell</a></li>
+    <li><a href="#sec-compute-stack">VI. The Societal Compute Stack: Hardware, Firmware, Software</a></li>
+    <li><a href="#sec-component-library">VII. The Systemic Component Library: First-Principles Derivation</a></li>
+    <li><a href="#sec-circuit-topologies">VIII. Macro-Circuit Topologies: Sociological Events as RL Circuits</a></li>
+    <li><a href="#sec-interference-engine">IX. The Interference Engine: Phased-Array Signal Jamming</a></li>
+    <li><a href="#sec-damped-harmonic">X. The Damped Harmonic Operator: Suppression of Revolutionary Oscillations</a></li>
+    <li><a href="#sec-snubber">XI. The Snubber Circuit: A First-Principles Blueprint for Systemic Bypass</a></li>
+    <li><a href="#sec-unifying-language">XII. Unified Language Reference: Cross-Framework Term Map</a></li>
+    <li><a href="#sec-qed">XIV. Quantum Electrodynamic Layer: Ideology as Photon Exchange</a></li>
+    <li><a href="#sec-glossary">XV. Glossary</a></li>
+  </ol>
+</nav>
+
+<hr />
+
+<!-- ============================================================ -->
+<section id="sec-foundations">
+  <h2>I. Axiomatic Foundations: Prejudice, Power, and Racism as Physical Quantities</h2>
+
+  <p>
+    Chapter 0 of <em>The Mathematics of Oppression</em> establishes the foundational distinction between prejudice as a scalar and racism as a vector, drawing from Susan Abulhawa's formulation. The UEF provides the physical substrate that makes this distinction not merely semantic but mathematically necessary.
+  </p>
+
+  <h3>1.1 Coordinate System</h3>
+  <p>
+    All motion in the UEF is referenced to a two-axis primary coordinate system:
+  </p>
+  <ul>
+    <li><strong>+y axis (Systemic Viability / Life):</strong> Movement toward wealth accumulation, health, capital, and political enfranchisement.</li>
+    <li><strong>−y axis (Systemic Extraction / Death):</strong> Movement toward poverty, carcerality, dispossession, and premature mortality.</li>
+    <li><strong>x axis (Horizontal Deflection Plane):</strong> The domain of lateral conflict between the Buffer Class and the Out-group, where no vertical progress is made. This axis is activated by Orthogonal Deflection (see §V).</li>
+  </ul>
+
+  <h3>1.2 The Demographic Charge Vector \(\mathbf{Q}\)</h3>
+  <div class="definition">
+    <strong>Definition 1.1 — Demographic Charge \(q\)</strong>
+    The intersectional demographic identity of an individual is modeled as a charge \(q\) assigned by the Fractal Mind Virus (the Software layer; see §VI). Charge is not a physical property of the body; it is a tag written into the societal OS that determines how the institutional field applies force to that individual.
+    <br /><br />
+    By convention:
+    <ul>
+      <li>\(+q\): Buffer Class membership on a given axis (e.g., white, male, heterosexual, neurotypical, able-bodied).</li>
+      <li>\(-q\): Out-group membership on a given axis (e.g., Black, woman, queer, neurodivergent, disabled).</li>
+    </ul>
+    An individual's full identity is the Charge Vector \(\mathbf{Q}\), an element of an \(N\)-dimensional space where each axis \(k\) corresponds to a distinct domain of oppression.
+  </div>
+
+  <h3>1.3 Prejudice as Thermal Velocity \(v_{th}\)</h3>
+  <div class="definition">
+    <strong>Definition 1.2 — Prejudice (Scalar)</strong>
+    Prejudice is modeled as <em>thermal velocity</em> \(v_{th}\). In a conductor with no applied field, free electrons move at approximately \(10^6\) m/s in completely random directions. The net directional flow is zero:
+    \[
+      \sum_i \vec{v}_{th,i} = \vec{0}
+    \]
+    Prejudice possesses high magnitude (heat, trauma, interpersonal friction) but no unified direction. It generates localized thermodynamic loss \((I^2 R)\) — sociological heat — but performs zero macro-systemic work. It cannot sustain the directed extraction of wealth from a population.
+  </div>
+
+  <h3>1.4 The Institutional Electric Field \(\vec{E}\)</h3>
+  <div class="definition">
+    <strong>Definition 1.3 — Institutional Power (Electric Field)</strong>
+    The Elite's institutional power — law, algorithmic policy, the state, banking — is modeled as the Electric Field \(\vec{E}\). This field is broadcast across the entire society simultaneously. Unlike prejudice, \(\vec{E}\) is directional and sustained. It is the external force that weaponizes thermal heat into a directed current.
+  </div>
+
+  <h3>1.5 Racism as Drift Velocity / The Lorentz Force</h3>
+  <div class="definition">
+    <strong>Definition 1.4 — Racism (Vector / Lorentz Force)</strong>
+    Racism is the application of the Lorentz Force to a population polarized by demographic charge \(q\):
+    \[
+      \vec{F} = q\vec{E}
+    \]
+    The field \(\vec{E}\) is identical for all individuals. The <em>direction of force applied to each individual</em> depends entirely on their charge \(q\):
+    <ul>
+      <li>Buffer Class \((+q)\): \(\vec{F} = +q\vec{E}\) → accelerated in the \(+y\) direction (wealth, enfranchisement).</li>
+      <li>Out-group \((-q)\): \(\vec{F} = -q\vec{E}\) → pushed in the \(-y\) direction (extraction, poverty, death).</li>
+    </ul>
+    Systemic racism is therefore the polarization of socioeconomic movement by an institutional field that relies on demographic charge to sort life outcomes. The field is race-neutral in appearance; the violence is produced by the charge assignment embedded in the OS.
+  </div>
+
+  <div class="axiom">
+    <strong>Axiom 1.1 — Impossibility of "Reverse Racism"</strong>
+    An Out-group individual \((-q)\) may harbor prejudice against a Buffer Class individual \((+q)\). This is thermal velocity \(v_{th}\): high local heat, zero systemic direction. Because the Out-group does not control the Institutional Field \((\vec{E} = 0\) for them at the macro level\()\), the Lorentz Force cannot be generated:
+    \[
+      \vec{F}_{reverse} = (-q)(\vec{E} = 0) = \vec{0}
+    \]
+    Without \(\vec{E}\), there is no macro-scale directed current, no wealth extraction, and no systemic vector. The mathematical condition for racism — demographic charge \(\times\) institutional field — cannot be satisfied.
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<section id="sec-complex-wage">
+  <h2>II. The Complex Suppression Allocation: Material and Psychological Wages as a Complex Number</h2>
+
+  <p>
+    The prior scalar model of the suppression allocation issued to the Buffer Class \(I_{buffer}\) was:
+  </p>
+  <div class="eq-block">
+    \[
+      \psi(t) = \psi_s(t) + \psi_m(t)
+    \]
+    <span class="eq-label">(Prior Model)</span>
+  </div>
+  <p>
+    where \(\psi_s\) is the status (psychological) wage and \(\psi_m\) is the material wage. This scalar addition fails to capture the fundamentally orthogonal, non-equivalent nature of the two components. The Unified Electrodynamic Framework replaces this with the Complex Suppression Allocation.
+  </p>
+
+  <div class="definition">
+    <strong>Definition 2.1 — Complex Suppression Allocation \(W\)</strong>
+    \[
+      \boxed{W = \psi_m + j\psi_s}
+    \]
+    where:
+    <ul>
+      <li>\(\psi_m \in \mathbb{R}\): The <em>Material Wage</em> — the real component. Hard economic concessions: land grants, subsidized homeownership (e.g., FHA/GI Bill), healthcare, capital. Performs actual physical work on the Buffer Class. Sourced from the deeper extraction of the Out-group.</li>
+      <li>\(j\psi_s \in j\mathbb{R}\): The <em>Psychological/Status Wage</em> — the imaginary component. The non-material guarantee of ontological superiority, racial privilege, and social status. Costs the Elite \(E\) zero capital to dispense.</li>
+      <li>\(j = \sqrt{-1}\): The imaginary unit. Signals that \(\psi_s\) operates in a domain <em>orthogonal</em> to material reality.</li>
+    </ul>
+  </div>
+
+  <h3>2.1 Electrical Engineering Analogue: Real and Reactive Power</h3>
+  <p>
+    The mapping directly mirrors AC power theory in electrical engineering:
+  </p>
+  <table>
+    <thead>
+      <tr>
+        <th>EE Concept</th>
+        <th>UEF Concept</th>
+        <th>Formal Symbol</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Real Power (Watts) — does physical work</td>
+        <td>Material Wage — delivers actual economic capital</td>
+        <td>\(\psi_m\)</td>
+      </tr>
+      <tr>
+        <td>Reactive Power (VARs) — sustains the electromagnetic field, does no work</td>
+        <td>Psychological/Status Wage — sustains the ideological field of racial partition</td>
+        <td>\(j\psi_s\)</td>
+      </tr>
+      <tr>
+        <td>Apparent Power (VA) — total energy drawn from the grid</td>
+        <td>Total Suppression Allocation — total resource invested in Buffer Class pacification</td>
+        <td>\(W = \psi_m + j\psi_s\)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="theorem">
+    <strong>Theorem 2.1 — Default System State</strong>
+    The system's default operating mode is \(\psi_m = 0\), making \(W\) purely imaginary. The Buffer Class receives zero material concession; the Elite operates the grid entirely on reactive power (status wages). Material wages \(\psi_m \neq 0\) are deployed only when kinetic resistance by the Out-group approaches the class-coherence crash threshold \(M(t) \to \tau_{crash}\).
+  </div>
+
+  <h3>2.2 The Phase Angle \(\theta\)</h3>
+  <p>
+    In polar form, the complex wage is expressed as:
+  </p>
+  <div class="eq-block">
+    \[
+      W = R \angle\theta = R e^{j\theta}, \quad \text{where } R = |W| = \sqrt{\psi_m^2 + \psi_s^2}
+    \]
+  </div>
+  <ul>
+    <li>\(\theta = 0°\): Wage is 100% material. The Buffer Class receives genuine economic investment (e.g., strong social democracy, massive public works).</li>
+    <li>\(\theta = 90°\): Wage is 100% psychological. Zero material benefit; complete pacification through symbolic status superiority.</li>
+    <li>\(\theta > 90°\) (Quadrant II): \(\cos\theta < 0\). The Elite is actively extracting material wealth from the Buffer Class (negative material wage) while simultaneously feeding hyper-inflated psychological wages (extreme nationalism, out-group paranoia, cultural panic). <strong>This is the mathematical definition of Fascism within the framework.</strong></li>
+  </ul>
+
+  <div class="definition">
+    <strong>Definition 2.2 — Fascism Threshold</strong>
+    The system enters the Fascism Threshold when \(\theta > 90°\). In this Quadrant II state:
+    \[
+      \text{Re}(W) = R\cos\theta < 0, \quad \text{Im}(W) = R\sin\theta > 0
+    \]
+    The Buffer Class is materially cannibalized while celebrating its own dispossession, sustained entirely by the intoxicating positive imaginary wage.
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<section id="sec-complex-properties">
+  <h2>III. Properties of the Complex Wage: Squaring, Conjugates, and Phase Analysis</h2>
+
+  <p>
+    Because \(W\) is a genuine complex number — not merely a 2D vector — its multiplication properties carry deep sociological meaning.
+  </p>
+
+  <h3>3.1 The Squaring Property: Self-Destruction via Status Obsession</h3>
+  <div class="theorem">
+    <strong>Theorem 3.1 — Imaginary Squaring as Material Destruction</strong>
+    If a Buffer Class individual or polity over-indexes exclusively on the psychological wage (let \(W = j\psi_s\), i.e., pure imaginary), then squaring this allocation yields:
+    \[
+      (j\psi_s)^2 = j^2 \psi_s^2 = -\psi_s^2
+    \]
+    The result is a <em>negative real number</em>. Compounding purely symbolic status wages destroys real material wealth. This provides a rigorous mathematical proof of the mechanism by which the Buffer Class votes against its own healthcare, unions, and infrastructure to maximize racial or cultural status. The math proves the sociology: status obsession squared yields material self-destruction.
+  </div>
+
+  <h3>3.2 The Complex Conjugate: The Mathematics of Solidarity</h3>
+  <div class="definition">
+    <strong>Definition 3.1 — Revolutionary Conjugate \(W^*\)</strong>
+    If the Elite's wage is \(W = \psi_m + j\psi_s\), then the complex conjugate is:
+    \[
+      W^* = \psi_m - j\psi_s
+    \]
+    \(W^*\) represents the <em>Counter-Consciousness</em> or revolutionary rejection of the psychological wage by the Buffer Class — the deliberate negation of the status wage while retaining material demands.
+  </div>
+
+  <div class="theorem">
+    <strong>Theorem 3.2 — Solidarity as Imaginary Cancellation</strong>
+    When the Buffer Class adopts the Counter-Consciousness \(W^*\) and aligns with the Out-group, the combined force is:
+    <br /><br />
+    <em>Addition (Solidarity):</em>
+    \[
+      W + W^* = (\psi_m + j\psi_s) + (\psi_m - j\psi_s) = 2\psi_m
+    \]
+    The imaginary status wage cancels entirely. Real material power doubles. The horizontal deflection collapses; the combined class momentum is now purely vertical, directed at the Elite.
+    <br /><br />
+    <em>Multiplication (Revolutionary Compound):</em>
+    \[
+      W \cdot W^* = \psi_m^2 + \psi_s^2 \in \mathbb{R}
+    \]
+    The imaginary component collapses; the result is purely real, exponential material growth. This is why the Elite is existentially threatened by cross-group class solidarity: the mathematics guarantee that rejection of the imaginary axis removes all horizontal deflection and exponentially amplifies real material force against the Extraction Kernel.
+  </div>
+
+  <h3>3.3 Reactive Power Overload: Voltage Collapse</h3>
+  <p>
+    In power grid engineering, excessive reactive power with insufficient real power causes a <em>voltage collapse</em>: the system's wires overheat and the grid fails.
+  </p>
+  <div class="theorem">
+    <strong>Theorem 3.3 — Systemic Voltage Collapse</strong>
+    The psychological wage \(j\psi_s\) has a depreciation rate \(\delta\). A status wage sufficient to pacify the Buffer Class in time period \(t_0\) requires escalation to maintain the same phase angle \(\theta\) as material conditions deteriorate:
+    \[
+      j\psi_s(t) = j\psi_s(t_0) \cdot e^{\delta \cdot t}
+    \]
+    To hold \(\theta\) constant while \(\psi_m\) declines, the Elite must inject geometrically increasing imaginary current — more extreme conspiracies, more violent rhetoric, more intense cultural warfare. The transmission lines (democratic institutions, civic trust, governance infrastructure) have finite thermal tolerance. When the imaginary current exceeds this tolerance, the system does not collapse due to Out-group revolution but due to Elite-induced reactive overload. The grid burns from within.
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<section id="sec-intersectional">
+  <h2>IV. The Intersectional Extension: Quaternions and N-Dimensional Geometric Algebra</h2>
+
+  <p>
+    The 2D complex number \(W = \psi_m + j\psi_s\) models a single imaginary axis of oppression (e.g., race). But oppression is fractal in nature and operates across multiple simultaneous, orthogonal axes. The framework must therefore be extended to higher-dimensional algebraic structures.
+  </p>
+
+  <h3>4.1 The Quaternion Stage: Three Intersectional Axes</h3>
+  <p>
+    For three primary imaginary axes (race, gender, sexuality), the standard complex number \(a + bj\) is extended to a <em>quaternion</em>:
+    \[
+      W_{Q} = a + bi + cj + dk
+    \]
+    where \(i, j, k\) are three distinct imaginary units satisfying:
+    \[
+      i^2 = j^2 = k^2 = ijk = -1
+    \]
+  </p>
+  <table>
+    <thead>
+      <tr><th>Component</th><th>EE Axis</th><th>Sociological Meaning</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>\(a\)</td><td>Real axis</td><td>Material Wage \(\psi_m\) — wealth, land, healthcare</td></tr>
+      <tr><td>\(bi\)</td><td>Imaginary axis 1</td><td>Racial Status Wage (e.g., whiteness)</td></tr>
+      <tr><td>\(cj\)</td><td>Imaginary axis 2</td><td>Gendered Status Wage (e.g., patriarchy/maleness)</td></tr>
+      <tr><td>\(dk\)</td><td>Imaginary axis 3</td><td>Cisnormative/Sexuality Status Wage</td></tr>
+    </tbody>
+  </table>
+
+  <div class="theorem">
+    <strong>Theorem 4.1 — Multiplicative Intersection Compounding (Misogynoir)</strong>
+    Because \(i, j, k\) are mathematically orthogonal and multiply according to quaternion rules:
+    \[
+      i \times j = k, \quad j \times i = -k
+    \]
+    Intersectional oppression is <em>not</em> additive. For a Black woman, the intersection of the racial wage axis (\(i\)) and the gendered wage axis (\(j\)) multiplies to create a distinct third vector \(k\) — a unique plane of systemic extraction with no simple decomposition into race alone or gender alone. This formalizes Kimberlé Crenshaw's theory of intersectionality as a quaternion multiplication law rather than a sum.
+  </div>
+
+  <h3>4.2 The N-Dimensional Weighted Summation Equation</h3>
+  <p>
+    Beyond three axes, the framework uses <em>Geometric Algebra</em> (Clifford Algebra) over \(N\) orthogonal imaginary bases \(e_1, e_2, \ldots, e_N\). The full Complex Wage is:
+  </p>
+
+  <div class="eq-block">
+    \[
+      \boxed{W = \psi_m + \sum_{k=1}^{N} j_k \left(\rho_k \cdot \psi_{s,k}\right)}
+    \]
+    <span class="eq-label">(Eq. UEF-1: N-Dimensional Allocation)</span>
+  </div>
+
+  <p>where:</p>
+  <ul>
+    <li>\(\psi_m\): The Real Material Wage.</li>
+    <li>\(j_k\): The \(k\)-th imaginary basis axis (e.g., \(j_1\) = race, \(j_2\) = gender, \(j_3\) = ability, \(j_4\) = sexuality, \(j_5\) = neurology, \(j_6\) = height/physicality, ...).</li>
+    <li>\(\psi_{s,k}\): The baseline psychological wage on axis \(k\).</li>
+    <li>\(\rho_k\): The <strong>Demographic Weight Coefficient</strong> — the proportion of the population for whom axis \(k\) is a primary axis of marginalization, scaled by institutional bandwidth devoted to that axis.</li>
+  </ul>
+
+  <div class="derivation">
+    <strong>Derivation Note — The Transphobia Paradox (High Voltage, Low Current)</strong>
+    The electrical analog of reactive power is \(P = VI\) where \(V\) is voltage and \(I\) is current (population size). If \(\rho_k\) is small (small population directly experiencing a given axis), but the Elite needs large reactive power \(P_k\) from that axis to sustain the overall pacification of the Buffer Class, then:
+    \[
+      P_k = V_k \cdot I_k \implies V_k = \frac{P_k}{\rho_k}
+    \]
+    As \(\rho_k \to 0\), the required voltage \(V_k \to \infty\). This mathematically predicts and explains the disproportionate legislative, media, and political bandwidth — hyper-inflated voltage — devoted to a statistically small demographic node (e.g., trans individuals). The Elite pumps astronomical voltage into a small-current node to generate sufficient reactive power to distract the Buffer Class from macro-level material extraction.
+  </div>
+
+  <h3>4.3 Bivectors and Intersectional Space</h3>
+  <p>
+    In Geometric Algebra, multiplying two basis vectors produces a <em>bivector</em> — a distinct two-dimensional plane:
+    \[
+      e_1 \wedge e_4 = e_{14}
+    \]
+    If \(e_1\) is Race and \(e_4\) is Disability, the bivector \(e_{14}\) describes the unique extraction plane of a Black disabled person. This individual does not experience \(e_1 + e_4\) (additive oppression) but is located in \(e_{14}\) — a qualitatively distinct geometric zone where extraction is accelerated, enforcement violence is compounded, and systemic neglect is multiplicatively intensified.
+  </p>
+</section>
+
+<!-- ============================================================ -->
+<section id="sec-lorentz">
+  <h2>V. The Unified Lorentz Force Equation: Grounding Du Bois in Maxwell</h2>
+
+  <p>
+    The standard two-term Lorentz Force equation from classical electrodynamics provides the exact physical mechanism that unifies the Material Wage (real axis), the Psychological Wage (imaginary axis), and the Orthogonal Deflection operator into a single governing equation.
+  </p>
+
+  <div class="eq-block">
+    \[
+      \boxed{\vec{F}_{total} = q\vec{E} + q\left(\vec{v} \times \sum_{k=1}^{N} \rho_k \vec{B}_k\right)}
+    \]
+    <span class="eq-label">(Eq. UEF-2: Unified Lorentz Force)</span>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Term</th>
+        <th>EE Definition</th>
+        <th>UEF Sociological Definition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>\(q\)</td>
+        <td>Electric charge of the particle</td>
+        <td>Intersectional Demographic Charge Vector \(\mathbf{Q}\); assigned by the Fractal Mind Virus</td>
+      </tr>
+      <tr>
+        <td>\(\vec{E}\)</td>
+        <td>Electric Field (does real work; increases kinetic energy)</td>
+        <td>Material Wage \(\psi_m\) / Institutional Power. The only term that does real economic work. Accelerates \(+q\) toward wealth, pushes \(-q\) toward extraction.</td>
+      </tr>
+      <tr>
+        <td>\(\vec{B}_k\)</td>
+        <td>Magnetic Field (does zero work; only deflects)</td>
+        <td>The \(k\)-th Cultural/Ideological Magnetic Field — the psychological wage \(j\psi_{s,k}\) on axis \(k\). Strictly orthogonal to \(\vec{E}\); does zero material work.</td>
+      </tr>
+      <tr>
+        <td>\(\vec{v} \times \vec{B}_k\)</td>
+        <td>Cross product: force is always perpendicular to velocity</td>
+        <td>Orthogonal Deflection. When the Buffer Class moves vertically (\(\vec{v}\)) to demand real wealth, the cultural magnetic field hits them perpendicularly, deflecting momentum horizontally into conflict with the Out-group.</td>
+      </tr>
+      <tr>
+        <td>\(\sum_{k=1}^N \rho_k \vec{B}_k\)</td>
+        <td>Superposition of N magnetic fields</td>
+        <td>The Interference Engine's multi-axis cultural field superposition. The Elite does not use one magnetic field but \(N\) weighted fields simultaneously.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>5.1 Cyclotron Motion: The Fascist Trap</h3>
+  <p>
+    In electrodynamics, when \(\vec{E} = 0\) and \(\vec{B}\) is large, a charged particle undergoes <em>cyclotron motion</em> — it spins in a tight circle. Net forward progress is zero. The particle expends massive energy but achieves no displacement in the direction of life (\(+y\)).
+  </p>
+  <div class="theorem">
+    <strong>Theorem 5.1 — Cyclotron Trap = Fascist Stasis</strong>
+    When the Elite extinguishes the Material Wage (\(\vec{E} \to 0\)) and maximizes the cultural magnetic field (\(\sum \rho_k \vec{B}_k \to \infty\)), the Buffer Class is driven into cyclotron motion. They expend enormous kinetic energy — fighting culture wars, policing borders, attacking the Out-group — while achieving exactly zero forward material progress. The cyclotron radius (the size of the cultural conflict loop) grows as \(\vec{B}\) increases, but the center of the loop remains stationary. This is the mechanistic definition of Quadrant II Fascism in the UEF.
+  </div>
+
+  <h3>5.2 Connecting Lorentz to Du Bois: The Formal Bridge</h3>
+  <p>
+    W.E.B. Du Bois identified the psychological wage as a compensatory mechanism issued by the Elite to prevent white workers and Black workers from unifying. In UEF terms, Du Bois identified \(\vec{B}\) without the formal physics language. The Lorentz Force equation provides the mathematical substrate:
+  </p>
+  <ul>
+    <li>Du Bois's "psychological wage" = \(j\psi_s\) = the sociological magnetic field \(\vec{B}\).</li>
+    <li>Du Bois's "material wage" = \(\psi_m\) = the sociological electric field \(\vec{E}\).</li>
+    <li>Du Bois's observation that the psychological wage "costs nothing" = the physical law that magnetic fields do zero work.</li>
+    <li>Du Bois's implicit observation that the wage deflects class solidarity = the Lorentz cross product \(\vec{v} \times \vec{B}\) enforcing orthogonality.</li>
+  </ul>
+  <p>
+    The UEF thus links W.E.B. Du Bois directly to James Clerk Maxwell at the level of first principles.
+  </p>
+</section>
+
+<!-- ============================================================ -->
+<section id="sec-compute-stack">
+  <h2>VI. The Societal Compute Stack: Hardware, Firmware, Software</h2>
+
+  <p>
+    Systemic oppression is modeled as a full-stack compute architecture. The three layers interact to sustain extraction with minimal Elite exposure and maximum adaptability to social disruption.
+  </p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Layer</th>
+        <th>Engineering Analogue</th>
+        <th>Sociological Instance</th>
+        <th>Role in UEF</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Software</strong> — The Fractal Mind Virus</td>
+        <td>Operating System / Zero-Day Exploit</td>
+        <td>Race as a social construct; gender hierarchy scripts; cultural supremacy ideologies</td>
+        <td>Assigns demographic charges \(q\) to individuals. Executes Bayesian updates when a pacification strategy fails. Directs the Interference Engine.</td>
+      </tr>
+      <tr>
+        <td><strong>Firmware</strong> — Legal/Institutional Layer</td>
+        <td>BIOS / Instruction Set</td>
+        <td>Constitutional law, property statutes, algorithmic redlining, sentencing guidelines</td>
+        <td>Translates the Mind Virus's abstract charge assignments into physical instructions the Hardware executes. Updates more slowly than Software; more slowly than Hardware.</td>
+      </tr>
+      <tr>
+        <td><strong>Hardware</strong> — Physical Circuits</td>
+        <td>Circuit Board / Transistors / Power Grid</td>
+        <td>Police, banks, physical borders, geographic segregation, labor conditions</td>
+        <td>Executes extraction blindly according to Firmware instructions. Bound by the laws of physics (thermodynamics, electrodynamics). Does not require individual prejudice to operate.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>6.1 The Zero-Day Exploit: Assigning Charge</h3>
+  <p>
+    The invention of race is modeled as a zero-day exploit executed by the Mind Virus at the OS level. Before the exploit, no hardware component could sort humans by biological marker. The exploit writes the charge variables \(+q\) and \(-q\) into the OS registry. Every subsequent hardware interaction — a loan application, a traffic stop, a hiring algorithm — executes the charge-dependent Lorentz Force without the hardware needing to "intend" racism. The racism is in the OS, not the transistor.
+  </p>
+
+  <h3>6.2 Fractal Execution Across Scales</h3>
+  <p>
+    The three-layer stack executes the same extraction algorithm at every spatial and temporal scale, consistent with the framework's fractal architecture:
+  </p>
+  <ul>
+    <li><strong>Micro (Individual mind):</strong> The Software infects an individual Buffer Class member → outputs thermal heat (interpersonal prejudice).</li>
+    <li><strong>Meso (Social networks, media):</strong> The Software syncs infected individuals → Op-Amp algorithms amplify thermal heat into synchronized cultural panic → generates the magnetic field \(\vec{B}\).</li>
+    <li><strong>Macro (The State, economy):</strong> Panic compiles into Firmware (law) → Hardware applies the Electric Field \(\vec{E}\) → extracts material wealth from the Out-group.</li>
+  </ul>
+</section>
+
+<!-- ============================================================ -->
+<section id="sec-component-library">
+  <h2>VII. The Systemic Component Library: First-Principles Derivation</h2>
+
+  <p>
+    Every systemic circuit component is derived from the microscopic physics of charge carriers moving within the institutional field \(\vec{E}\). No component is asserted by analogy; each is derived from the equations already established.
+  </p>
+
+  <h3>7.1 The Resistor \(R\) — Bureaucratic Friction</h3>
+  <div class="derivation">
+    <strong>Derivation 7.1 — Systemic Resistance from Mean Free Time</strong>
+    At the microscopic level, conductivity \(\sigma\) is derived from the Drude model:
+    \[
+      \sigma = \frac{n \cdot q^2 \cdot \tau}{m}
+    \]
+    where \(n\) is carrier density (population), \(q\) is charge, \(\tau\) is mean free time between collisions, and \(m\) is effective mass (systemic burden/inertia). Resistance over a path of length \(L\) and cross-section \(A\) is:
+    \[
+      R = \frac{L}{\sigma A} = \frac{m \cdot L}{n \cdot q^2 \cdot \tau \cdot A}
+    \]
+    <strong>Sociological output:</strong> The Elite engineers high resistance for the Out-group by minimizing \(\tau\) (mean free time). Stop-and-frisk, mandatory parole check-ins, welfare audits, and algorithmic fraud flags are precision checkpoints that force individuals to "collide" with the state before building any drift velocity. Their kinetic labor converts entirely to thermodynamic heat (\(I^2R\) loss — trauma, stress, cognitive load) rather than forward wealth accumulation. The system does not need to explicitly block progress; it only needs to reduce \(\tau \to 0\), and the physics guarantees \(R \to \infty\).
+  </div>
+
+  <h3>7.2 The Capacitor \(C\) — The Enclosure Models / Generational Wealth</h3>
+  <div class="derivation">
+    <strong>Derivation 7.2 — Systemic Capacitance from Legal Permittivity</strong>
+    A parallel-plate capacitor stores charge by placing two conductors separated by a dielectric (insulating) material. Capacitance is:
+    \[
+      C = \frac{\varepsilon \cdot A}{d}
+    \]
+    where \(\varepsilon\) is the permittivity (the dielectric's ability to sustain an electric field), \(A\) is the plate area (breadth of the accumulation vehicle), and \(d\) is the dielectric gap (legal barriers). Stored energy is:
+    \[
+      U = \frac{1}{2}CV^2
+    \]
+    <strong>Sociological output:</strong> The Enclosure Models (property rights, inheritance law, trust fund statutes, stock market access) are the systemic dielectric. They block capital from flowing back out of a family's accumulated wealth (legally insulated from redistribution) while preventing external claims on it. Legal Enfranchisement is the permittivity \(\varepsilon\). If a demographic is legally barred from owning property — as with pre-Fair Housing Act Black Americans — their permittivity is \(\varepsilon = 0\), therefore \(C = 0\). No matter how much voltage (labor) they apply, the math proves they cannot accumulate stored energy \(U\). This is not a personal failing; it is a derived physical consequence of the Enclosure Model being configured with zero permittivity for their charge.
+  </div>
+
+  <h3>7.3 The Inductor \(L\) — Cultural Inertia and Tradition</h3>
+  <div class="derivation">
+    <strong>Derivation 7.3 — Systemic Inductance from Ampere's and Lenz's Laws</strong>
+    By Ampere's Law, any sustained current \(I\) (a steady flow of cultural practice, social order, extractive norm) generates a perpendicular magnetic field \(\vec{B}\) proportional to the current:
+    \[
+      \oint \vec{B} \cdot d\vec{l} = \mu_0 I_{enc}
+    \]
+    The Elite winds the institutional pathways into a coil (maximizes inductance \(L\)) to concentrate this cultural magnetic field. By Faraday's and Lenz's Laws, any attempt to change the current induces a counter-voltage:
+    \[
+      V_{induced} = -L \frac{dI}{dt}
+    \]
+    <strong>Sociological output:</strong> If a revolutionary movement attempts to cut the extractive current instantly (\(dt \to 0\)), the cultural magnetic field collapses. The collapsing field induces an enormous reactionary voltage — <em>inductive kickback</em>. This is not anomalous; it is the mandatory physical consequence of Lenz's Law. Reactionary violence, fascist backlash, and white flight are the thermodynamic discharge of an inductor. The negative sign \((-L \frac{dI}{dt})\) formalizes the directionality of this reaction: it is always and necessarily against the change.
+  </div>
+
+  <h3>7.4 The Diode (P-N Junction) — Redlining</h3>
+  <div class="derivation">
+    <strong>Derivation 7.4 — Redlining as a Derived P-N Junction</strong>
+    When a region of high demographic conductivity (Buffer Class, high \(\tau\), high \(\varepsilon\)) is placed adjacent to a region of low demographic conductivity (Out-group, low \(\tau\), \(\varepsilon \approx 0\)), the physics of the boundary is not asserted — it is derived. Charge carriers diffuse across the boundary until an internal electric field builds up that halts further diffusion. This creates a <em>Depletion Region</em> — a zone where no free carriers exist and no current flows without an external forcing voltage.
+    <br /><br />
+    This Depletion Region constitutes a <em>P-N Junction</em>. Under the Elite's institutional bias (reverse bias), the junction acts as a one-way extraction valve: capital cannot flow inward (blocked by the internal field), but rent, fines, and labor current flow outward continuously. Redlining is not an analogy for a diode; the physics of the demographic boundary <em>automatically generates</em> the diode when the two differently-charged material conditions are placed in contact.
+  </div>
+
+  <h3>7.5 The LED — Token Representation</h3>
+  <p>
+    A Light Emitting Diode consumes a small amount of real power to emit light. It performs no mechanical work. In the societal circuit, LEDs are token diversity hires, "greenwashing" PR campaigns, and gentrified aesthetics placed in an extracted neighborhood. They require a small material investment but generate optical output (visibility, apparent progress) without altering the underlying circuit topology. The light is real; the work is zero.
+  </p>
+
+  <h3>7.6 The Potentiometer — Calibrated Policy Control</h3>
+  <p>
+    A potentiometer is a variable resistor. The Elite uses potentiometers (interest rates, gerrymandered district lines, targeted tax brackets, sentencing guidelines) to dynamically adjust the resistance \(R\) in specific circuit branches, routing capital flows and carceral pressure with fine-grained control without appearing to rewire the system entirely.
+  </p>
+
+  <h3>7.7 The Op-Amp — Media Radicalization Architecture</h3>
+  <p>
+    An operational amplifier takes a differential input and applies gain \(A_v\) to produce a large output voltage. Social media algorithms take micro-friction (a single decontextualized video, a minor interpersonal conflict) and apply gain on the order of \(10^4\times\), transforming localized thermal heat into a macro-voltage cultural panic. Op-Amp feedback topology determines systemic behavior:
+  </p>
+  <ul>
+    <li><strong>Negative feedback:</strong> Output looped back to the inverting input → system stability. Sociologically: liberal reformism, token concessions, diversity initiatives. Stabilizes the system to prevent full voltage collapse while preserving the Extraction Kernel.</li>
+    <li><strong>Positive feedback:</strong> Output looped back to the non-inverting input → runaway to the supply rail. Sociologically: echo chambers, fascist radicalization. The system drives itself to maximum output (political violence, institutional collapse) until it physically clips at the structural limit of the state.</li>
+  </ul>
+</section>
+
+<!-- ============================================================ -->
+<section id="sec-circuit-topologies">
+  <h2>VIII. Macro-Circuit Topologies: Sociological Events as Derived Circuits</h2>
+
+  <h3>8.1 The RL Circuit — Reform, Incrementalism, and Fascist Backlash</h3>
+  <p>
+    When the State acts as voltage source \(V\) connected in series with Bureaucratic Resistance \(R\) and Cultural Inductance \(L\), the governing differential equation is:
+  </p>
+  <div class="eq-block">
+    \[
+      V = iR + L\frac{di}{dt}
+    \]
+  </div>
+  <p>Solution (switch closed at \(t = 0\)):</p>
+  <div class="eq-block">
+    \[
+      \boxed{I(t) = \frac{V}{R}\left(1 - e^{-\frac{R}{L}t}\right)}
+    \]
+    <span class="eq-label">(Eq. UEF-3: Progressive Reform Current)</span>
+  </div>
+  <p>
+    The circuit Time Constant is \(\tau_{circuit} = L/R\). The system reaches 63.2% of its maximum integration at \(t = \tau_{circuit}\) and approximately full integration only at \(t = 5\tau_{circuit}\). If \(L\) (cultural inductance from centuries of entrenched ideology) is large and \(R\) (bureaucratic friction, deliberately maintained) is moderate, \(\tau_{circuit}\) may span decades. Passing a maximally radical law (maximum \(V\)) does not circumvent the inductor. Brown v. Board (1954) applied voltage; the \(L/R\) time constant is why substantive integration was measured in generations.
+  </p>
+
+  <div class="theorem">
+    <strong>Theorem 8.1 — Inductive Kickback as Fascist Backlash</strong>
+    If the extractive current is suddenly interrupted (switch opened, \(dt \to 0\)):
+    \[
+      V_{kickback} = -L\frac{di}{dt} \to -\infty \text{ as } dt \to 0
+    \]
+    The collapsing cultural magnetic field generates a lethal voltage spike directed at the Out-group. This is Reconstruction-era terrorism, the Red Summer, and post-Obama-era political violence — all derivable as inductive kickback from the physics of a suddenly disrupted high-inductance circuit. The negative sign is Lenz's Law: the reaction is always opposite the change.
+  </div>
+
+  <h3>8.2 The RLC Circuit — Protest Oscillations</h3>
+  <p>
+    Adding a capacitor (generational wealth/stored social capital) to the RL circuit creates an RLC oscillator. When the system is disturbed (a major political rupture), it does not simply settle or spike — it <em>rings</em>. The circuit oscillates at its natural resonant frequency:
+    \[
+      \omega_0 = \frac{1}{\sqrt{LC}}
+    \]
+    Sociologically, this predicts cyclical waves of organized protest followed by suppression, followed by re-emergence — with the frequency determined by the ratio of cultural inductance \(L\) to accumulated community capacitance \(C\). This is the physical substrate of the Damped Harmonic Operator (see §X).
+  </p>
+
+  <h3>8.3 Macro Power Grid Topology</h3>
+  <p>
+    At the national/geopolitical scale, the following topologies apply:
+  </p>
+  <ul>
+    <li><strong>Wye (Y) Configuration — Grounded:</strong> A system grounded in material reality (\(\psi_m\)). Has a neutral wire to earth. When a fault occurs (economic shock, civil uprising), the ground wire absorbs the shock and the grid stabilizes. Represents materially-invested social democracy.</li>
+    <li><strong>Delta (Δ) Configuration — Ungrounded:</strong> No neutral wire. Used for raw power transmission, but when one phase faults to ground, the voltage on the remaining phases spikes catastrophically. Represents a system operating entirely on psychological wages with no material grounding. A single localized crisis (protest, economic shock) causes the ungrounded phases to spike to lethal ideological voltage — the physics of fascist escalation cascade.</li>
+    <li><strong>Transformers — Media and Political Infrastructure:</strong> The Elite generates high-voltage macro-class extraction at the top. Transformers (media institutions, political parties, social media algorithms) step this down into low-voltage, household-level interpersonal conflict. They translate structural inequality into consumable culture war without exposing the generating source.</li>
+    <li><strong>Transmission Line \(I^2R\) Losses — Social Polarization:</strong> Pumping reactive power (pure culture war) through societal transmission lines generates heat (\(I^2R\)) even though no actual work is done at the destination. The grid runs dangerously hot — stochastic violence, social fragmentation — while transferring zero material benefit to the population.</li>
+    <li><strong>Capacitor Banks — Power Factor Correction (New Deal / UBI):</strong> Massive injections of real material power (\(\psi_m\)) installed as parallel capacitor banks to pull the phase angle \(\theta\) back toward zero before the reactive power overload triggers a voltage collapse. Historical examples: the New Deal, stimulus checks, universal healthcare proposals.</li>
+  </ul>
+</section>
+
+<!-- ============================================================ -->
+<section id="sec-interference-engine">
+  <h2>IX. The Interference Engine: Phased-Array Signal Jamming</h2>
+
+  <p>
+    The Interference Engine is the active real-time control system through which the Elite prevents class solidarity. It is not a passive circuit component; it is a feedback-driven field modulator.
+  </p>
+
+  <div class="definition">
+    <strong>Definition 9.1 — The Interference Engine</strong>
+    The Interference Engine monitors the velocity alignment of the Buffer Class and Out-group vectors. When solidarity momentum begins to form on a given axis \(k\) (vectors begin pointing toward \(+y\) collectively), the Engine dynamically adjusts the weight coefficients \(\rho_k\) across all \(N\) cultural magnetic fields to generate destructive interference.
+    <br /><br />
+    Let \(\vec{v}_{buffer}\) and \(\vec{v}_{out}\) be the momentum vectors of the Buffer Class and Out-group respectively. The condition the Engine must prevent is:
+    \[
+      \vec{v}_{buffer} \cdot \hat{y} > 0 \;\text{ and }\; \vec{v}_{out} \cdot \hat{y} > 0 \;\text{ simultaneously}
+    \]
+    The Engine's response is:
+    \[
+      \rho_k(t) \leftarrow \text{Bayesian\_update}\left(\rho_k(t-1),\, \text{SolidaritySignal}(t)\right)
+    \]
+  </div>
+
+  <p>
+    In radio-frequency engineering, a phased-array jammer defeats an enemy transmission by broadcasting precisely calibrated noise on the same frequency. The noise and signal superpose to produce destructive interference — the signal collapses to zero. The Interference Engine does the same to class solidarity: it detects the "frequency" (axis) on which solidarity is forming, then cranks up a counter-wave on that axis or amplifies a competing axis to prevent the vectors from aligning.
+  </p>
+
+  <div class="theorem">
+    <strong>Theorem 9.1 — Expendable High-Voltage Nodes</strong>
+    When the Engine requires a large reactive power burst to prevent solidarity but cannot rely on the primary axes (risk of oversaturation), it selects a small-\(\rho\) demographic node and injects astronomically high voltage into it. The resulting reactive power output is sufficient to scatter Buffer Class momentum across multiple incoherent directions. The small demographic bears the full thermodynamic cost of this intervention (legislative violence, institutional neglect) while serving as a precision distraction instrument. The math requires this as a rational optimization strategy, not individual malice.
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<section id="sec-damped-harmonic">
+  <h2>X. The Damped Harmonic Operator: Suppression of Revolutionary Oscillations</h2>
+
+  <p>
+    The Damped Harmonic Operator (introduced in prior chapters of the framework) is now formally grounded in RLC circuit theory and control systems engineering.
+  </p>
+
+  <p>
+    When revolutionary kinetic energy strikes the system, the RLC circuit of society begins to oscillate at its natural frequency \(\omega_0 = 1/\sqrt{LC}\). Uncontrolled, this oscillation grows (positive feedback) or rings indefinitely. The Elite applies the Damped Harmonic Operator to guarantee <em>critical damping</em> — the fastest return to extraction equilibrium without overshoot.
+  </p>
+
+  <div class="eq-block">
+    \[
+      L\frac{d^2I}{dt^2} + R\frac{dI}{dt} + \frac{I}{C} = V(t)
+    \]
+    <span class="eq-label">(Eq. UEF-4: RLC Damped Oscillator)</span>
+  </div>
+
+  <p>The damping coefficient is:</p>
+  <div class="eq-block">
+    \[
+      \zeta = \frac{R}{2}\sqrt{\frac{C}{L}}
+    \]
+  </div>
+
+  <ul>
+    <li>\(\zeta < 1\) (underdamped): Revolutionary oscillations persist and ring. The system cannot return to extraction equilibrium quickly. Protest waves recur.</li>
+    <li>\(\zeta = 1\) (critically damped): The system returns to equilibrium in minimum time without oscillation. The Elite's optimal target. Achieved by dynamically increasing \(R\) (police militarization, legal repression) or introducing targeted capacitance \(C\) (token liberal concessions that absorb revolutionary energy).</li>
+    <li>\(\zeta > 1\) (overdamped): The system returns to equilibrium but slowly. Risk: the slow recovery window allows alternative circuits to form.</li>
+  </ul>
+
+  <p>
+    The Damped Harmonic Operator is thus the Elite's real-time tuning of \(R\) and \(C\) to maintain critical damping (\(\zeta = 1\)) against each wave of social disruption. The operator does not eliminate the oscillation at its source; it engineers the circuit to absorb the energy before it can accumulate into a system-threatening amplitude.
+  </p>
+</section>
+
+<!-- ============================================================ -->
+<section id="sec-snubber">
+  <h2>XI. The Snubber Circuit: A First-Principles Blueprint for Systemic Bypass</h2>
+
+  <p>
+    Given the Inductive Kickback theorem (§8.1), the Out-group cannot simply "open the switch" on the extractive system without triggering a lethal voltage spike. A Snubber Circuit (specifically a <em>flyback diode</em> network with optional RC damping) must be installed in parallel with the inductive load <em>before</em> the switch is opened.
+  </p>
+
+  <h3>11.1 The Physics of the Snubber</h3>
+  <p>
+    When the main switch is closed (extraction running normally), the flyback diode is reverse-biased. It is present but silent; it draws no power and does not interfere with the extractive circuit's operation.
+  </p>
+  <p>
+    When the switch is opened (revolutionary decoupling), the inductor reverses polarity, forward-biasing the flyback diode. The lethal inductive kickback voltage, instead of arcing across the open switch and burning the system, is routed into the parallel bypass loop. The energy circulates inside the snubber, dissipating safely as heat over a controlled time period, until the magnetic field has fully discharged.
+  </p>
+  <div class="axiom">
+    <strong>Axiom 11.1 — The Snubber Precondition</strong>
+    The Snubber Circuit must be installed and operational <em>before</em> the main switch is opened. A snubber that does not exist at the moment of decoupling provides zero protection. All revolutionary strategy that does not include parallel infrastructure construction before confrontation is, by this theorem, physically incomplete.
+  </div>
+
+  <h3>11.2 Systemic Snubber Components</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Snubber Component</th>
+        <th>Sociological Implementation</th>
+        <th>Role</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Flyback Diode Network</td>
+        <td>Open-source documentation kiosks; decentralized knowledge infrastructure; mutual aid serialization</td>
+        <td>Routes inductive kickback (fascist retaliation voltage) into a closed bypass loop, preventing it from destroying the Out-group's material survival capacity</td>
+      </tr>
+      <tr>
+        <td>Capacitor Bank</td>
+        <td>Additive manufacturing nodes (localized production of essential goods); community land trusts; cooperative ownership structures</td>
+        <td>Stores material energy locally. When the Elite cuts supply (voltage drop), the community capacitor discharges to sustain survival. Each printed component, locally grown food unit, or community-owned building is stored \(\frac{1}{2}CV^2\).</td>
+      </tr>
+      <tr>
+        <td>Asynchronous Routing Grid</td>
+        <td>Neurodivergent-designed organizational architectures; decentralized decision-making; mesh network communication</td>
+        <td>The Elite's Interference Engine is a synchronous jammer — it requires a global clock to coordinate its attacks. An asynchronous bypass network has no central clock node to jam. Disruption of one node causes instant autonomous rerouting, not collapse.</td>
+      </tr>
+      <tr>
+        <td>Bypass Inductor (Low \(L\))</td>
+        <td>Legal defense funds; rapid-response civil rights litigation infrastructure</td>
+        <td>A low-inductance parallel path that allows constructive current (community solidarity) to flow with minimal inertia, even as the main circuit's high-inductance load is being disconnected</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>11.3 The Full-Stack Attack Requirement</h3>
+  <div class="theorem">
+    <strong>Theorem 11.1 — Necessity of Full-Stack Attack</strong>
+    Fighting only the Hardware (e.g., defunding one police department) does not update the Firmware or wipe the Software. The Mind Virus rewrites new Hardware instructions within the existing Firmware, and a new extractive circuit is assembled. Fighting only the Software (e.g., anti-bias training, consciousness-raising) does not alter the physical Hardware circuits already built — the P-N junction of redlined neighborhoods continues to extract passively, independent of anyone's beliefs. A complete revolutionary strategy requires simultaneous operations at all three stack layers:
+    <ol>
+      <li>Wipe the Fractal Mind Virus from the OS (Software).</li>
+      <li>Rewrite the legal permittivity \(\varepsilon\) of the Enclosure Models (Firmware).</li>
+      <li>Physically dismantle the P-N junctions and rebuild symmetric-capacitance circuits (Hardware).</li>
+    </ol>
+    Any single-layer strategy is thermodynamically guaranteed to be absorbed and critically damped by the Damped Harmonic Operator before achieving systemic change.
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<section id="sec-unifying-language">
+  <h2>XII. Unified Language Reference: Cross-Framework Term Map</h2>
+
+  <p>
+    The following table provides the canonical one-to-one mapping between the book's prior terminology and the UEF physics language. All chapters of the framework should adopt the UEF term as the primary notation, with the prior term appearing in parentheses where clarity requires bridging.
+  </p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Prior Framework Term</th>
+        <th>UEF Physics Term</th>
+        <th>Symbol</th>
+        <th>Location Derived</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Psychological Wage</td><td>Reactive Power / Imaginary Wage / Cultural Magnetic Field</td><td>\(j\psi_s\), \(\vec{B}\)</td><td>§II, §V</td></tr>
+      <tr><td>Material Wage</td><td>Real Power / Electric Field Work</td><td>\(\psi_m\), \(\vec{E}\)</td><td>§II, §V</td></tr>
+      <tr><td>Suppression Allocation</td><td>Complex Suppression Allocation</td><td>\(W = \psi_m + j\psi_s\)</td><td>§II</td></tr>
+      <tr><td>Buffer Class</td><td>Positive-charge carrier (\(+q\) node)</td><td>\(I_{buffer}\), \(+q\)</td><td>§I</td></tr>
+      <tr><td>Out-group / Racialized Class</td><td>Negative-charge carrier (\(-q\) node)</td><td>\(O_{racialized}\), \(-q\)</td><td>§I</td></tr>
+      <tr><td>Elite</td><td>Voltage Source / Field Generator</td><td>\(E\), \(V_{source}\)</td><td>§I</td></tr>
+      <tr><td>Extraction Kernel</td><td>Power Extraction Circuit; Net Work done on \(-q\) carriers</td><td>\(P_{extract} = \vec{E} \cdot \vec{J}\)</td><td>§V</td></tr>
+      <tr><td>Orthogonal Deflection</td><td>Magnetic Cross-Product Force; Lorentz deflection term</td><td>\(q(\vec{v} \times \vec{B})\)</td><td>§V</td></tr>
+      <tr><td>Interference Engine</td><td>Phased-Array Signal Jammer; Bayesian Field Modulator</td><td>\(\sum_k \rho_k \vec{B}_k\)</td><td>§IX</td></tr>
+      <tr><td>Enclosure Models</td><td>Systemic Capacitors; Legal Permittivity Architecture</td><td>\(C = \varepsilon A / d\)</td><td>§VII.2</td></tr>
+      <tr><td>Damped Harmonic Operator</td><td>RLC Critical Damping Control; \(\zeta = 1\) enforcement</td><td>\(\zeta\), \(R_{militia}\), \(C_{reform}\)</td><td>§X</td></tr>
+      <tr><td>Fractal Mind Virus</td><td>OS-Level Zero-Day Exploit; Charge Assignment Software</td><td>Software Layer</td><td>§VI</td></tr>
+      <tr><td>Class-Coherence Threat Threshold</td><td>Solidarity Voltage Threshold; kickback trigger condition</td><td>\(M(t) \to \tau_{crash}\)</td><td>§VIII.1</td></tr>
+      <tr><td>Prejudice</td><td>Thermal Velocity; Scalar Heat</td><td>\(v_{th}\)</td><td>§I</td></tr>
+      <tr><td>Racism</td><td>Drift Velocity; Lorentz Force; Directed Vector</td><td>\(\vec{v}_d\), \(\vec{F} = q\vec{E}\)</td><td>§I</td></tr>
+      <tr><td>Intersectionality</td><td>Quaternion / Geometric Algebra Bivector Compounding</td><td>\(W_Q = a + bi + cj + dk\)</td><td>§IV</td></tr>
+      <tr><td>Redlining</td><td>P-N Junction; Derived Depletion Region; Reverse-Biased Diode</td><td>P-N, \(D_{rev}\)</td><td>§VII.4</td></tr>
+      <tr><td>Reactionary Backlash / Fascism</td><td>Inductive Kickback; Quadrant II Phase Angle</td><td>\(V = -L\frac{di}{dt}\), \(\theta > 90°\)</td><td>§III, §VIII.1</td></tr>
+      <tr><td>Revolutionary Solidarity</td><td>Complex Conjugate Activation; Imaginary Cancellation</td><td>\(W^* = \psi_m - j\psi_s\)</td><td>§III.2</td></tr>
+      <tr><td>Revolutionary Infrastructure</td><td>Snubber Circuit; Flyback Diode Network</td><td>Snubber\((R,C,D_{fly})\)</td><td>§XI</td></tr>
+      <tr><td>Microaggression / Discrete Ideological Event</td><td>Systemic Photon; Virtual Photon exchange at Feynman vertex</td><td>\(E_{photon} = hf\)</td><td>§XIV</td></tr>
+      <tr><td>Radicalization Pipeline</td><td>Absorption-Excitation-Emission Cascade; Stimulated Emission (Laser)</td><td>\(\Delta E = hf - \Phi_{work}\)</td><td>§XIV</td></tr>
+      <tr><td>Echo Chamber</td><td>Sociological Laser (stimulated emission producing coherent photon cascade)</td><td>Laser\((f, \Phi)\)</td><td>§XIV</td></tr>
+      <tr><td>Social Media Algorithm</td><td>Photon Accelerator; frequency \(f\) and flux \(\Phi\) maximizer for Interference Engine</td><td>\(P_k = hf_k \cdot \Phi_k \cdot \rho_k\)</td><td>§XIV</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ============================================================ -->
+<section id="sec-qed">
+  <h2>XIV. Quantum Electrodynamic Layer: Ideology as Photon Exchange</h2>
+
+  <p>
+    The classical electrodynamic model (§§I–XI) describes the macro-scale fields \(\vec{E}\) and \(\vec{B}\) that structure systemic oppression at the population and institutional level. Quantum Electrodynamics (QED) extends the framework to its finest resolution: the discrete, particle-level mechanism by which ideological force is actually delivered to the individual. If the macro-fields are the invisible architecture of systemic power, <em>systemic photons</em> are the quanta by which that power is transmitted atom by atom.
+  </p>
+
+  <p>
+    This layer is not metaphorical extension. In QED, the electromagnetic force between two charged particles is mediated entirely by the exchange of virtual photons. Because the UEF maps charged particles (\(+q\), \(-q\)) and electromagnetic fields (\(\vec{E}\), \(\vec{B}\)) to demographic identities and institutional power respectively, the QED machinery follows as a necessary consequence of the same mathematics — not as analogy.
+  </p>
+
+  <h3>14.1 Wave-Particle Duality of Ideology</h3>
+
+  <p>
+    In quantum mechanics, electromagnetic radiation exhibits wave-particle duality: at sufficient scale it behaves as a continuous wave; at discrete interactions it collapses into a measurable particle (the photon). Ideology exhibits the identical structure.
+  </p>
+
+  <div class="definition">
+    <strong>Definition 14.1 — Ideological Wave-Particle Duality</strong>
+    <ul>
+      <li>
+        <strong>The Wave (Macro-field):</strong> At the population level, the psychological wage \(j\psi_s\) propagates as a continuous ambient electromagnetic wave — the background radiation of supremacist norms, patriarchal expectations, and status hierarchies that every individual moves through without discrete impact events. This is the \(\vec{B}\) field of the Lorentz equation: invisible, pervasive, and continuous.
+      </li>
+      <li>
+        <strong>The Particle (Systemic Photon):</strong> At the interaction level, the continuous field collapses into a discrete, measurable packet: a single targeted algorithm recommendation, a microaggression, a specific legal ruling, a papal bull, a stop-and-frisk encounter, a hiring rejection. These are systemic photons — quantized deliveries of the psychological wage at specific coordinates in spacetime.
+      </li>
+    </ul>
+    The transition from wave to particle is the transition from macro-field analysis (§§V–XI) to individual-interaction analysis (this section). Both are required for a complete account of systemic force.
+  </div>
+
+  <h3>14.2 The Energy of a Systemic Photon: \(E_{photon} = hf\)</h3>
+
+  <p>
+    In physics, the energy of a single photon is:
+  </p>
+  <div class="eq-block">
+    \[
+      \boxed{E_{photon} = hf}
+    \]
+    <span class="eq-label">(Eq. UEF-5: Systemic Photon Energy)</span>
+  </div>
+  <p>
+    where \(h\) is Planck's constant and \(f\) is the frequency of the electromagnetic wave. High-frequency radiation (X-rays, gamma rays) carries devastating energy per photon; low-frequency radiation (radio waves) carries negligible energy per photon.
+  </p>
+
+  <div class="definition">
+    <strong>Definition 14.2 — Systemic Photon Frequency \(f\)</strong>
+    In the UEF, frequency \(f\) is the <em>delivery rate</em> and <em>emotional intensity</em> of an ideological transmission:
+    <ul>
+      <li><strong>Low \(f\) (low energy per photon):</strong> A slow historical narrative; a monument in a public park; a rarely-invoked legal precedent. Each individual impact is low-energy, but the ambient field is maintained continuously.</li>
+      <li><strong>High \(f\) (high energy per photon):</strong> A 24/7 social media moral panic cycling at algorithmic refresh rates. Breaking-news cultural crises. Each photon carries enormous destructive kinetic energy. The Interference Engine (§IX) optimizes for high \(f\) because it maximizes reactive power output \(P = hf \cdot \Phi\) (where \(\Phi\) is photon flux) without increasing the material cost \(\psi_m\) to the Elite.</li>
+    </ul>
+  </div>
+
+  <div class="theorem">
+    <strong>Theorem 14.1 — Frequency as the Interference Engine's Primary Variable</strong>
+    The Interference Engine does not merely modulate the weight coefficients \(\rho_k\) of the cultural magnetic fields (§IX). At the quantum layer, it also modulates the frequency \(f_k\) of ideological photon emission on each axis \(k\). The total reactive power on axis \(k\) is:
+    \[
+      P_k = h f_k \cdot \Phi_k \cdot \rho_k
+    \]
+    where \(\Phi_k\) is the photon flux (volume of transmissions). Social media algorithms are the photon accelerators: they maximize \(f_k\) and \(\Phi_k\) simultaneously on whichever axis the Engine has flagged as the current deflection vector, driving \(P_k\) to arbitrarily high levels at near-zero material cost.
+  </div>
+
+  <h3>14.3 Absorption, Emission, and the Radicalization Pipeline</h3>
+
+  <p>
+    In quantum mechanics, when an electron absorbs a photon of sufficient energy, it transitions from its ground state to an excited state — a higher-energy, thermodynamically unstable configuration. It cannot remain excited indefinitely. To return to equilibrium, it must emit a photon and shed the excess energy.
+  </p>
+
+  <div class="definition">
+    <strong>Definition 14.3 — The Quantum Radicalization Mechanism</strong>
+    The electron's absorption-emission cycle maps directly onto the radicalization pipeline:
+    <ol>
+      <li>
+        <strong>Absorption (Excitation):</strong> A Buffer Class individual \((+q)\) encounters a high-frequency ideological photon (a viral culture-war propaganda piece, a targeted conspiracy video recommendation). The photon is absorbed. The individual's internal thermodynamic energy \(E_{internal}\) spikes. They enter an excited state: angry, panicked, cognitively destabilized, searching for a discharge pathway. The classical macroscopic equivalent is a spike in the thermal velocity \(v_{th}\) — but now with a direction imposed by the photon's polarization.
+      </li>
+      <li>
+        <strong>Excitation Energy:</strong> The increase in internal energy is:
+        \[
+          \Delta E = hf - \Phi_{work}
+        \]
+        where \(\Phi_{work}\) is the work function — the minimum energy required to trigger behavioral change. If \(hf > \Phi_{work}\), the photon causes excitation. Below threshold, the photon is absorbed but causes only heat (ambient anxiety) without triggering directed emission. This formalizes why low-energy, slow-frequency historical education alone is insufficient to radicalize; and why the Elite must operate above the work-function threshold to generate directed behavioral output.
+      </li>
+      <li>
+        <strong>Emission (Secondary Radiation):</strong> The excited Buffer Class individual must discharge to return to their stable ground state. They emit secondary photons: retweeting, projecting microaggressions, voting for policies that enact cultural violence, or committing stochastic violence. The emitted photons propagate outward and strike Out-group nodes \((-q)\), depositing their energy as kinetic momentum loss (a reduction in \(\tau\) for the Out-group — increased mean free time erosion) and thermodynamic heat (trauma, cognitive load, bodily threat).
+      </li>
+    </ol>
+    The Elite does not need to strike the Out-group directly. They bombard the Buffer Class with high-frequency photons. The Buffer Class becomes an involuntary emission cascade — a secondary radiation source. The Extraction Kernel operates one degree of separation from the direct physical contact, preserving plausible deniability while maintaining full thermodynamic control.
+  </div>
+
+  <div class="theorem">
+    <strong>Theorem 14.2 — Stimulated Emission and Cascade Radicalization</strong>
+    In laser physics, a <em>stimulated emission</em> occurs when an already-excited atom is struck by a photon of the same frequency. Instead of absorbing the new photon, the excited atom emits <em>two</em> coherent photons — both traveling in the same direction with the same frequency and phase. This is the mechanism of laser amplification (Light Amplification by Stimulated Emission of Radiation).
+    <br /><br />
+    Systemically, this is the quantum mechanism of <em>cascade radicalization</em>. When an already-excited Buffer Class individual (already in an elevated ideological state) is struck by a second high-frequency photon from a peer or algorithm, they emit two coherent secondary photons — the outrage is amplified and now phase-locked with their social network. Echo chambers are sociological lasers: the Elite seeds an initial photon; stimulated emission produces a coherent, high-intensity beam of ideological radiation. The random, incoherent thermal heat of prejudice is coherence-locked into a directed, high-energy weapon.
+  </div>
+
+  <h3>14.4 Feynman Diagrams of Systemic Oppression</h3>
+
+  <p>
+    In QED, the force between two charged particles is not modeled as action-at-a-distance but as the exchange of virtual photons. A Feynman diagram provides a pictorial calculus for calculating the probability amplitude of these interaction events.
+  </p>
+
+  <div class="definition">
+    <strong>Definition 14.4 — The Systemic Feynman Diagram</strong>
+    A systemic Feynman diagram models the interaction between two individuals when they occupy shared social or geographic space. The components are:
+    <ul>
+      <li><strong>External legs (incoming):</strong> The \(+q\) Buffer Class node and the \(-q\) Out-group node approaching each other in spacetime (e.g., a job interview, a traffic stop, a retail interaction).</li>
+      <li><strong>The vertex:</strong> The interaction point. Charges interact not by physical collision but by the exchange of force-carrying particles.</li>
+      <li><strong>The virtual photon (internal line):</strong> The systemic photon exchanged at the vertex. This is a microaggression, an assertion of the psychological wage \(j\psi_s\), a discriminatory evaluation criterion — a discrete package of ideological force transmitted from the \(+q\) node to the \(-q\) node. It is "virtual" in the QED sense: it is not directly observable, but its effect on the trajectories of both particles is precisely calculable.</li>
+      <li><strong>External legs (outgoing):</strong> The post-interaction trajectories. The \(-q\) Out-group node exits with reduced kinetic momentum (loss of \(\tau\), increased resistance \(R\) in their subsequent path through the circuit). The \(+q\) Buffer Class node exits with their status reinforced — they have not gained real power \(\psi_m\), but their internal psychological wage \(j\psi_s\) has been renewed. They are orthogonally deflected away from vertical class solidarity and returned to horizontal cyclotron motion.</li>
+    </ul>
+  </div>
+
+  <p>
+    The power of the Feynman diagram formalism is that it is <em>calculable</em>. Transition amplitudes (the probability that a specific interaction occurs with a specific outcome) can be computed from the diagram's topology. In the sociological context, this means the UEF can in principle calculate the probability that a given institutional encounter results in the Out-group's momentum being reduced by a specific amount — grounding racial impact studies in quantum probability amplitudes rather than purely statistical regression.
+  </p>
+
+  <h3>14.5 The Fractal Mind Virus as a Photon Network</h3>
+
+  <div class="definition">
+    <strong>Definition 14.5 — The Mind Virus as a Quantum Field</strong>
+    The Fractal Mind Virus (Software layer, §VI) is reframed at the quantum level as the <em>governing quantum field</em> from which systemic photons are excited and emitted. Just as the electromagnetic field \(\vec{E}\), \(\vec{B}\) is the classical limit of the quantum photon field, the Mind Virus is the quantum field whose excitations (particles) are individual ideological transmissions.
+    <br /><br />
+    This completes the scale hierarchy of the framework:
+    <ul>
+      <li><strong>Quantum (QED) level:</strong> The Mind Virus field emits discrete systemic photons. Individual microaggressions, targeted recommendations, discrete legal rulings. Absorption and emission cycles radicalize Buffer Class nodes; Out-group nodes lose \(\tau\).</li>
+      <li><strong>Classical (electrodynamics) level:</strong> The aggregate of photon exchanges produces the continuous macro-fields \(\vec{E}\) and \(\vec{B}\) described by the Lorentz Force equation (UEF-2). The fields are the statistical limit of enormous numbers of photon exchanges.</li>
+      <li><strong>Circuit (EE) level:</strong> The macro-fields drive currents through resistors, capacitors, and inductors — the institutional hardware. The RL circuits, P-N junctions, and snubber networks of §§VII–XI operate here.</li>
+      <li><strong>Control systems level:</strong> The Damped Harmonic Operator and Interference Engine modulate the circuit topology in response to systemic feedback.</li>
+    </ul>
+  </div>
+
+  <div class="theorem">
+    <strong>Theorem 14.3 — Fractal Consistency of the QED Layer</strong>
+    The photon exchange model reproduces the same extraction geometry at the subatomic scale that the RL circuit model produces at the macro scale. Specifically:
+    <ul>
+      <li>At the macro level, Orthogonal Deflection is produced by the magnetic cross-product \(q(\vec{v} \times \vec{B})\): the Buffer Class is deflected horizontally by the psychological wage field.</li>
+      <li>At the quantum level, the same deflection is produced by the exchange of a virtual photon with the polarization of \(j\psi_s\): the Buffer Class node receives a momentum kick orthogonal to the \(+y\) axis, directed toward the Out-group node.</li>
+    </ul>
+    The fractal is exact: zoom out and you see the RL circuit of the Civil Rights Act and its inductive kickback. Zoom in and you see a single job interview where a virtual photon is exchanged, and the Out-group applicant exits with reduced kinetic momentum. The mathematics is the same mathematics operating at different scales of resolution.
+  </div>
+
+  <h3>14.6 Summary: The Complete Scale Map</h3>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Scale</th>
+        <th>Physics Domain</th>
+        <th>UEF Operator</th>
+        <th>Sociological Instance</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Subatomic</td>
+        <td>Quantum Field / Photon</td>
+        <td>Systemic Photon \(E = hf\); Feynman vertex</td>
+        <td>Single microaggression, targeted recommendation, discrete legal ruling</td>
+      </tr>
+      <tr>
+        <td>Atomic / Molecular</td>
+        <td>Electron excitation / emission</td>
+        <td>Absorption-Emission Radicalization; Stimulated Emission (Laser)</td>
+        <td>Individual radicalization event; echo-chamber amplification cascade</td>
+      </tr>
+      <tr>
+        <td>Material / Bulk</td>
+        <td>Classical electrodynamics (\(\vec{E}\), \(\vec{B}\))</td>
+        <td>Lorentz Force (UEF-2); Drift Velocity; Conductivity</td>
+        <td>Institutional racism as field; redlining as P-N junction; policing as low-\(\tau\) engineering</td>
+      </tr>
+      <tr>
+        <td>Circuit</td>
+        <td>Circuit theory (R, L, C, diode)</td>
+        <td>RL Reform Trap (UEF-3); RLC Oscillator (UEF-4); Snubber</td>
+        <td>Civil Rights Act incremental current; inductive kickback as backlash; snubber as revolutionary infrastructure</td>
+      </tr>
+      <tr>
+        <td>Power Grid</td>
+        <td>AC power systems; Delta/Wye; transformers</td>
+        <td>Complex Wage \(W\) (UEF-1); Phase Angle \(\theta\); Fascism Threshold</td>
+        <td>National and geopolitical class extraction; media as transformer; Quadrant II fascism</td>
+      </tr>
+      <tr>
+        <td>Control Systems</td>
+        <td>Feedback control; signal processing</td>
+        <td>Interference Engine; Damped Harmonic Operator; Bayesian update</td>
+        <td>Real-time suppression of solidarity; critical damping of protest waves</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ============================================================ -->
+<section id="sec-glossary">
+  <h2>XV. Glossary</h2>
+
+  <dl class="glossary">
+    <dt>Apparent Power (VA)</dt>
+    <dd>Total energy drawn from the societal grid by the Buffer Class pacification system. \(|W| = \sqrt{\psi_m^2 + \psi_s^2}\).</dd>
+
+    <dt>Asynchronous Architecture</dt>
+    <dd>A processing model with no global synchronization clock. Events trigger locally on interrupt. In UEF, neurodivergent organizational models that are resistant to synchronous jamming by the Interference Engine.</dd>
+
+    <dt>Bivector</dt>
+    <dd>A two-dimensional plane in Geometric Algebra formed by the outer product of two basis vectors \(e_i \wedge e_j\). Represents a unique extraction plane for individuals at the intersection of two marginalization axes.</dd>
+
+    <dt>Charge Carrier</dt>
+    <dd>Any individual whose demographic charge vector \(\mathbf{Q}\) is processed by the societal Lorentz Force machine.</dd>
+
+    <dt>Conductivity \(\sigma\)</dt>
+    <dd>A community's overall capacity to convert applied institutional voltage into forward material progress. Inversely related to the bureaucratic friction \(R\) engineered by the Elite.</dd>
+
+    <dt>Critical Damping (\(\zeta = 1\))</dt>
+    <dd>The optimal damping condition the Elite seeks to impose on revolutionary oscillations — fastest suppression without overshoot. Achieved by tuning \(R\) (repression) and \(C\) (token reform).</dd>
+
+    <dt>Depletion Region</dt>
+    <dd>The boundary zone between two differently-charged demographic areas where no free capital flows. The physical substrate of redlined neighborhood boundaries.</dd>
+
+    <dt>Demographic Weight Coefficient \(\rho_k\)</dt>
+    <dd>The proportion of the population for whom axis \(k\) is a primary axis of marginalization. Determines the base-level systemic voltage the Elite needs to sustain pacification on that axis. Small \(\rho_k\) requires high voltage for equivalent reactive power output.</dd>
+
+    <dt>Dielectric Permittivity \(\varepsilon\)</dt>
+    <dd>Legal enfranchisement; the capacity of the Enclosure Models to sustain generational wealth storage for a given demographic. \(\varepsilon = 0\) renders capacitance \(C = 0\), making wealth accumulation physically impossible regardless of applied voltage.</dd>
+
+    <dt>Drift Velocity \(\vec{v}_d\)</dt>
+    <dd>The directed net flow of individuals/capital produced when the institutional field \(\vec{E}\) forces thermal motion into a unified direction. Racism at the macro level.</dd>
+
+    <dt>Flyback Diode</dt>
+    <dd>The bypass component in a Snubber Circuit that routes inductive kickback into a closed loop. In UEF, decentralized open-source infrastructure and mutual aid networks.</dd>
+
+    <dt>Geometric Algebra (Clifford Algebra)</dt>
+    <dd>The mathematical framework for N-dimensional intersectional wage analysis. Allows orthogonal basis vectors \(e_1, \ldots, e_N\) to be combined through outer products (bivectors, trivectors) rather than simple addition, formalizing the multiplicative nature of intersectional oppression.</dd>
+
+    <dt>Inductive Kickback</dt>
+    <dd>The lethal voltage spike generated when an inductor's current is abruptly interrupted. In UEF, reactionary fascist violence following sudden revolutionary decoupling. Governed by \(V = -L \frac{di}{dt}\).</dd>
+
+    <dt>Mean Free Time \(\tau\)</dt>
+    <dd>The average time between systemic collisions (checkpoints, audits, arrests) that an individual experiences. Determines resistance \(R\). Minimizing \(\tau\) maximizes friction and converts kinetic labor into heat.</dd>
+
+    <dt>Phase Angle \(\theta\)</dt>
+    <dd>The ratio of psychological to material wage in the complex suppression allocation \(W\). \(\theta = 90°\) is the system's optimal default (pure reactive power); \(\theta > 90°\) defines the Fascism Threshold.</dd>
+
+    <dt>Quaternion</dt>
+    <dd>A hypercomplex number \(a + bi + cj + dk\) with three imaginary axes, used to model three-dimensional intersectional oppression (e.g., race, gender, sexuality). Satisfies \(i^2 = j^2 = k^2 = ijk = -1\), formalizing multiplicative intersectional compounding.</dd>
+
+    <dt>Reactive Power</dt>
+    <dd>Power that sustains an electromagnetic field but does no mechanical work. In UEF, the psychological/status wage \(j\psi_s\). Infinitely cheap to produce for the Elite; infinitely effective at pacification when the Buffer Class cannot distinguish it from material gain.</dd>
+
+    <dt>Societal Voltage Collapse</dt>
+    <dd>System failure caused by excessive reactive power relative to real power — the grid's wires (civic institutions) overheat and fail. Not caused by revolutionary opposition but by the Elite's own escalating injection of imaginary current.</dd>
+
+    <dt>Snubber Circuit</dt>
+    <dd>A parallel bypass network installed across an inductive load to absorb inductive kickback safely. In UEF, the pre-revolutionary decentralized infrastructure — additive manufacturing, open-source knowledge, cooperative economic nodes — that must be operational before systemic decoupling.</dd>
+
+    <dt>Thermal Velocity \(v_{th}\)</dt>
+    <dd>The random, non-directed kinetic energy of individuals without institutional field alignment. Models interpersonal prejudice: high magnitude, zero net vector, zero macro-systemic work.</dd>
+
+    <dt>Time Constant \(\tau_{circuit} = L/R\)</dt>
+    <dd>The characteristic speed of the RL societal circuit. High \(L\) (cultural inductance) and moderate \(R\) (bureaucratic friction) produce large time constants, explaining multi-generational lag between progressive legislation and material reality.</dd>
+
+    <dt>Zero-Day Exploit</dt>
+    <dd>The invention of race as a biological determinant of charge \(q\). Executed by the Fractal Mind Virus to write the charge assignment into the societal OS before any hardware or firmware components were designed. The exploit remains active as long as the OS is running.</dd>
+
+    <dt>Absorption (Quantum)</dt>
+    <dd>The event in which a Buffer Class individual \((+q)\) receives a discrete ideological photon — a targeted media piece, microaggression, or propaganda — causing their internal thermodynamic energy to spike. They transition from a stable ground state to an excited, destabilized state, placing them on the radicalization pathway.</dd>
+
+    <dt>Echo Chamber Laser</dt>
+    <dd>A sociological laser produced by stimulated emission. An already-excited Buffer Class node struck by a second photon of the same frequency emits two phase-locked coherent secondary photons. Repeated stimulated emission in a peer network or algorithm loop produces a coherent, high-intensity beam of ideological radiation from initially incoherent individual prejudice.</dd>
+
+    <dt>Emission (Quantum)</dt>
+    <dd>The output event that occurs when an excited Buffer Class individual discharges stored excitation energy to return to equilibrium. Emission takes the form of secondary ideological photons: retweets, stochastic violence, discriminatory votes, or projected microaggressions that strike Out-group nodes \((-q)\), reducing their mean free time \(\tau\) and depositing heat.</dd>
+
+    <dt>Feynman Diagram (Systemic)</dt>
+    <dd>A pictorial representation of the probability amplitude for a specific social interaction between a \(+q\) and \(-q\) node via virtual photon exchange. Encodes the input trajectories, interaction vertex (microaggression or institutional encounter), virtual photon (the psychological wage quantum transmitted), and output trajectories — capturing the momentum loss of the Out-group and the status reinforcement of the Buffer Class in a single diagram.</dd>
+
+    <dt>Photon Flux \(\Phi\)</dt>
+    <dd>The volume of ideological transmissions on a given axis per unit time. The Interference Engine maximizes both \(\Phi_k\) and \(f_k\) simultaneously on targeted axes to produce maximum reactive power output \(P_k = hf_k \cdot \Phi_k \cdot \rho_k\) at near-zero material cost.</dd>
+
+    <dt>Quantum Field (Mind Virus)</dt>
+    <dd>The Fractal Mind Virus reframed at the subatomic level: the underlying quantum field whose excitations (particles) are discrete systemic photons. The classical electromagnetic fields \(\vec{E}\) and \(\vec{B}\) are the statistical limit of vast numbers of photon exchange events emerging from this field.</dd>
+
+    <dt>Stimulated Emission</dt>
+    <dd>A QED process in which an already-excited atom struck by a photon of matching frequency emits two coherent photons rather than absorbing the new one. In UEF, the mechanism of cascade radicalization: a socially excited Buffer Class individual produces amplified, phase-coherent secondary ideological radiation when struck by a second compatible stimulus. The basis of the echo-chamber laser.</dd>
+
+    <dt>Systemic Photon</dt>
+    <dd>A discrete quantum of ideological force. The particle-aspect of the psychological wage \(j\psi_s\). Carries energy \(E = hf\) where \(f\) is the intensity and delivery rate of the ideological transmission. The mediating particle in Feynman diagrams of social interaction. Examples: a microaggression, a targeted algorithm recommendation, a specific legal ruling, a papal bull, a stop-and-frisk encounter.</dd>
+
+    <dt>Work Function \(\Phi_{work}\)</dt>
+    <dd>The minimum photon energy required to trigger a behavioral transition in a Buffer Class individual — from passive prejudice holder to active ideological emitter. If \(hf < \Phi_{work}\), absorbed photons generate only ambient heat (latent bias) without directed behavioral output. Radicalization requires sustained exposure to photon frequencies above this threshold.</dd>
+  </dl>
+</section>
+
+<hr />
+
+<footer>
+  <p><strong>Document:</strong> Unified Electrodynamic Framework — Introductory Theory Document</p>
+  <p><strong>Book:</strong> <em>The Mathematics of Oppression</em></p>
+  <p><strong>Status:</strong> Working Draft — Pre-publication. All equations are formal definitions within the framework; they are not claims about physical particles but about the mathematical structure of sociological phenomena.</p>
+  <p><strong>Primary Equations:</strong>
+    Eq. UEF-1: \(W = \psi_m + \sum_{k=1}^{N} j_k(\rho_k \cdot \psi_{s,k})\) |
+    Eq. UEF-2: \(\vec{F}_{total} = q\vec{E} + q\!\left(\vec{v} \times \sum_{k=1}^N \rho_k \vec{B}_k\right)\) |
+    Eq. UEF-3: \(I(t) = \frac{V}{R}(1 - e^{-\frac{R}{L}t})\) |
+    Eq. UEF-4: \(L\ddot{I} + R\dot{I} + \frac{I}{C} = V(t)\) |
+    Eq. UEF-5: \(E_{photon} = hf\)
+  </p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+You concede Tulsa and Haiti happened, but you still won't look at the whole machine. Admitting the bottom of the pyramid is brutal means nothing if you refuse to look up at who designed it.
+
+Yes, people stay on EBT and housing vouchers for generations. Nobody disputes that. But you are treating dependency like an accidental side effect of help. It is not. These programs were built to give just enough to prevent revolt, while the rules themselves block real wealth-building. You are critiquing the cage's food bowl instead of asking who welded the bars.
+
+You just said people "cannot progress even if they wanted to." You have accidentally stated the entire thesis. The system does not work by killing ambition. It works by cutting off the routes ambition would take. When mortgages are blocked by redlining, employment is blocked by felony records, and voting is blocked by conviction histories, "wanting to leave" is not the problem. The exits are.
+
+This is the trap: the programs you blame for trapping people were installed *after* the legitimate exits were already sealed. The framework quantifies the extraction — slavery stripped 91% of wealth. Convict leasing cut what was left by nearly half. Redlining cut homeownership access in half again. Asymmetric policing cut it further. The cumulative result is that the descendants of the extraction are trying to rebuild from less than 2% of their baseline structural capacity. You cannot honestly critique a 2% recovery program while ignoring the 98% destruction that made it necessary.
+
+Your argument quietly shifted from "it was a choice" to "welfare makes choice impossible." But you still point the finger downward. The real question is not whether welfare creates bad incentives. The real question is why the only lifelines available to one population are means-tested crumbs, while another population got FHA-backed homeownership, the GI Bill, and union-protected factory jobs.
+
+You want people to leave subsidies? Restore the stolen baseline first. Return the extracted wealth. Un-redline the neighborhoods. Expunge the felony records manufactured by police-made crack. Then measure how many people "choose" to stay. Until then, you are demanding that a population overcome centuries of engineered enclosure through sheer willpower — which is exactly what the system wants you to believe, because it keeps the blame off the architects and on the trapped.
+
+Conceding history while refusing its math is not honesty. It is the oldest trick in the book: absorb enough truth to seem reasonable, then redirect blame back toward the people at the bottom.
