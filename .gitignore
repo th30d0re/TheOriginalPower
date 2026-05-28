@@ -69,3 +69,10 @@ tools/extract_reference_audio.py
 *.bak
 *.disk_backup
 temp/
+
+# Main PDF output — rebuild from source
+Paper/The_Original_Power.pdf
+
+# Backup/pre-restructure variants
+Paper/Redefining_Racism_BACKUP_pre_restructure.tex
+Paper/Redefining_Racism_OpenDyslexic.tex
