@@ -1,0 +1,68 @@
+
+\section{Two-Party Per-Axis Phase Scrambling}
+\label{sec:two_party_phase}
+
+The per-axis decomposition of Section~21.4.3 reveals that the 4-year carrier functions as a race-preferential resonator. Race shows the strongest 4-year power (ratio $11.0$ vs.\ class), gender is off-resonance (ratio $0.05$), and sexuality is threshold-activated post-2003 (ratio $2.3$). This section maps those spectral findings onto the two-party political architecture and derives the individual-level decision calculus that the interference engine forces upon every voter.
+
+\subsection{The Sexuality Axis and the Self-Scrambling Paradox}
+\label{sec:self_scrambling}
+
+The spectral results identify sexuality as the third active axis in the identity band, with a 4-year power ratio of $2.3$---substantially below race ($11.0$) but well above gender ($0.05$). The sexuality axis is also the most recently activated: the mixture model shows negligible pre-2003 weight, followed by rapid growth after \textit{Lawrence v.\ Texas} (2003) and \textit{Obergefell v.\ Hodges} (2015). This threshold activation pattern is consistent with the framework's impedance model: the sexuality axis carries higher cultural impedance ($|Z| \approx 0.35$) than race ($|Z| \approx 0.10$) because the underlying social partition is less structurally complete---no equivalent of chattel slavery or Jim Crow codifies sexuality into property law---and therefore requires higher activation energy to achieve comparable spectral amplitude.
+
+The two-party architecture scrambles the sexuality axis in a pattern distinct from race and gender. On the race axis, the Democratic Party functions as the nominal pro-civil-rights channel while the Republican Party functions as the racial-status-wage channel; the phase separation is nearly complete ($\Delta\phi_{\text{race}} \approx 180^{\circ}$). On the gender axis, the same pattern holds: the Democratic Party carries the feminist-reform signal and the Republican Party carries the patriarchal-traditionalist signal. The sexuality axis fractures this alignment.
+
+The Democratic Party maintains the public position of LGBTQ+ inclusion: platform support for marriage equality, anti-discrimination statutes, and trans healthcare access. The Republican Party maintains the public position of traditional sexual morality: opposition to same-sex marriage (prior to \textit{Obergefell}), bathroom bills, and religious-exemption frameworks. Yet the empirical signal on the ground contradicts this clean phase separation. Dating-app geolocation data show consistent spikes in same-sex male dating-app usage during Republican National Conventions---a measurable indicator that a substantial population of queer men is present in the party's most concentrated gathering. The ``closet'' is a phase-scrambling device. The Republican Party's public anti-queer signal coexists with private queer membership, producing an internal phase incoherence that the spectral decomposition detects as moderate 4-year power ($2.3$) rather than the race-axis dominant power ($11.0$).
+
+The Democratic Party exhibits the inverse paradox. Public LGBTQ+ representation is substantially higher: openly queer elected officials, queer-inclusive platform language, and explicit policy commitments. Yet the party's relationship to armed queer self-defense reveals the same phase scrambling from the opposite direction. The Pink Pistols, the Socialist Rifle Association, and other armed-queer-self-defense organizations have grown substantially since 2016, and their membership overlaps with Democratic-aligned voters who simultaneously support gun-control legislation. The intersection of queer identity and Second Amendment advocacy scrambles the expected party-phase alignment: these voters are structurally Democratic on the sexuality axis and structurally Republican on the kinetic-autonomy axis.
+
+The framework formalizes this as the \textbf{self-scrambling paradox}: when an individual's identity position intersects axes that the two parties have assigned to opposite phases, the voter experiences internal destructive interference. The interference engine does not need to inject an external scrambling signal; the party architecture itself produces $\Phi_{\text{load}} \to 1$ for voters at compound intersections. A Black queer gun owner, a white trans socialist, a Latino cisgender gay man who supports closed borders---each occupies a phase position that the two-party duplex cannot represent without contradiction.
+
+\subsection{The Duplex Jammer}
+\label{sec:duplex_jammer}
+
+The two-party system functions as a \textbf{duplex jammer}: a two-channel phase-splitter that maps the multi-axis identity space onto a binary decision variable. Formally, let the $N$-axis identity space be spanned by basis vectors $\{\hat{e}_k\}_{k=1}^N$ (race, gender, sexuality, religion, disability, etc.). The interference engine's optimal control strategy, derived in Chapter~\ref{ch:tweedism}, is to assign each axis a distinct phase $\phi_k$ such that the vector sum of all identity-axis political energy cancels the class-band coherence:
+
+\begin{equation}\label{eq:21.8-duplex-phase}
+\Phi_{\text{load}}(t) = 1 - \left| \frac{1}{N} \sum_{k=1}^{N} \rho_k(t) \, e^{i\phi_k(t)} \right|.
+\end{equation}
+
+The duplex jammer imposes an additional constraint: every voter must project their $N$-dimensional identity vector onto a single binary axis, the party vote $v \in \{D, R\}$. The projection operator $\Pi_{\text{duplex}}$ collapses the full identity spectrum into a one-bit signal:
+
+\begin{equation}\label{eq:21.9-duplex-projection}
+\Pi_{\text{duplex}}: \sum_{k=1}^{N} \rho_k \, e^{i\phi_k} \mapsto v \in \{D, R\}.
+\end{equation}
+
+This projection necessarily destroys phase information. A voter whose race-axis phase aligns with $D$ and whose sexuality-axis phase aligns with $R$ cannot express both alignments simultaneously; they must choose which axis dominates their vote. The interference engine exploits this information loss. By forcing all political expression through the duplex channel, the system guarantees that no voter can achieve phase coherence across their full identity position. The result is that $\Phi_{\text{load}}$ is maintained at or near unity for every individual, even when the population-level axis decomposition shows partial alignment.
+
+The duplex jammer also explains the spectral finding that sexuality achieves only moderate 4-year power ($2.3$). The sexuality axis is naturally scrambled by the party architecture: neither party presents a coherent sexuality-phase signal. The Democratic Party's public pro-queer position is undermined by its failure to deliver material protection (the 2023 wave of anti-trans legislation passed in Republican-controlled states with no federal counter-intervention). The Republican Party's public anti-queer position is undermined by its closeted membership and its simultaneous dependence on queer labor in creative and technical sectors. The result is a sexuality-axis signal that is \textit{internally phase-incoherent}---high entropy, low spectral purity---and therefore couples weakly to the 4-year carrier despite substantial underlying population energy.
+
+\subsection{Extraction-Zone Calculus}
+\label{sec:extraction_zone_calculus}
+
+The duplex projection forces every voter into an \textbf{extraction-zone calculus}: a minimization problem over state-level legal architectures that determines which party affiliation produces the least personal harm for a given identity position. An extraction zone is a state-level jurisdiction whose legal code---statutes, constitutional provisions, judicial interpretations, and enforcement practices---determines the intensity of extraction applied to each identity axis.
+
+Formally, define the extraction-zone vector for state $s$ at time $t$ as:
+
+\begin{equation}\label{eq:21.10-extraction-zone}
+\mathbf{Z}_s(t) = \begin{bmatrix} Z_{\text{race}}(s,t) \\ Z_{\text{gender}}(s,t) \\ Z_{\text{sexuality}}(s,t) \\ Z_{\text{class}}(s,t) \end{bmatrix},
+\end{equation}
+
+where each component $Z_k(s,t) \in [0,1]$ measures the normalized extraction intensity on axis $k$ in state $s$ at time $t$. A value of $0$ indicates full legal protection; a value of $1$ indicates maximum permitted extraction (no anti-discrimination statutes, criminalization of identity expression, nullification of federal protections, maximum carceral throughput).
+
+The voter's identity position is $\mathbf{I} = (\rho_{\text{race}}, \rho_{\text{gender}}, \rho_{\text{sexuality}}, \rho_{\text{class}})$, where each $\rho_k$ measures the voter's salience weight for axis $k$ (derived from the per-axis spectral weights of Section~21.4.3). The personal extraction cost for voter $i$ in state $s$ under party $p$ is:
+
+\begin{equation}\label{eq:21.11-personal-extraction}
+\mathcal{C}_{i,s,p}(t) = \sum_{k} \rho_{i,k} \cdot Z_{k}(s,t) \cdot \delta_{k,p}(t),
+\end{equation}
+
+where $\delta_{k,p}(t)$ is the party-phase alignment factor: $+1$ when party $p$'s platform at time $t$ amplifies extraction on axis $k$, $-1$ when it suppresses extraction, and $0$ when it is neutral. The voter's rational strategy is to minimize $\mathcal{C}_{i,s,p}$ over $p \in \{D, R\}$.
+
+This calculus produces the observable phenomenon of \textbf{strategic party bifurcation by extraction zone}. A queer voter in California ($Z_{\text{sexuality}} \approx 0.1$) experiences low extraction cost regardless of party choice; the same voter in Florida ($Z_{\text{sexuality}} \approx 0.7$) faces a high-extraction environment where party choice determines whether state enforcement targets them. A Black voter in Mississippi ($Z_{\text{race}} \approx 0.8$) minimizes cost by affiliating with the party whose judicial appointments and federal enforcement posture reduce $Z_{\text{race}}$. A white working-class voter in West Virginia ($Z_{\text{class}} \approx 0.6$) minimizes cost by affiliating with the party whose labor and industrial policy reduces $Z_{\text{class}}$---which may be the party that simultaneously increases $Z_{\text{race}}$ and $Z_{\text{sexuality}}$.
+
+The extraction-zone calculus makes explicit what the duplex jammer obscures: party affiliation is a minimization of harm across a spatially varying legal landscape. The interference engine's success is measured by the degree to which voters experience this calculus as moral choice rather than structural constraint. When a queer voter in a red state describes their Democratic vote as ``the only option,'' they are describing the output of Equation~\ref{eq:21.11-personal-extraction}; when a gun-owning rural voter describes their Republican vote as ``protecting my way of life,'' they are describing the same equation with different $\rho_k$ weights and a different $\mathbf{Z}_k(s,t)$ vector.
+
+The framework's prediction is that extraction-zone divergence will increase as federal protections weaken and state-level nullification expands. The 2022 \textit{Dobbs} decision, which returned abortion regulation to state legislatures, produced an immediate divergence in $Z_{\text{gender}}$: California ($Z_{\text{gender}} \approx 0.15$) versus Texas ($Z_{\text{gender}} \approx 0.85$). The post-\textit{Bruen} firearm-permit landscape produces divergence in $Z_{\text{kinetic}}$: New York ($Z_{\text{kinetic}} \approx 0.4$) versus Arizona ($Z_{\text{kinetic}} \approx 0.1$). Each divergence increases the amplitude of the extraction-zone calculus and deepens the phase dispersion that the interference engine requires.
+
+The spectral signature of this spatial divergence is detectable in the Congressional Record itself. The per-axis decomposition shows sexuality-axis power rising post-2003 and accelerating post-2015; the framework predicts that this rise will correlate with state-level legal divergence on sexuality-axis rights. As $Z_{\text{sexuality}}(s,t)$ diverges across states, the Congressional Record discourse on sexuality intensifies as the extraction-zone calculus becomes more acute, independent of any change in the underlying population. The 4-year carrier at $f = 0.25$~cyc/yr modulates this divergence, peaking in presidential election years when voters are forced to make their duplex projection and select the party that minimizes their personal $\mathcal{C}_{i,s,p}$.
+
+The extraction-zone calculus therefore completes the spectral picture. The 4-year carrier is a race-preferential resonator (ratio $11.0$) because the race axis carries the lowest impedance and the highest phase coherence across the duplex architecture. The sexuality axis achieves only moderate coupling (ratio $2.3$) because the duplex jammer scrambles its phase through self-contradiction on both sides. The gender axis is off-resonance (ratio $0.05$) because its natural frequency ($\sim$6~yr) lies far from the 4-year carrier and because the post-\textit{Dobbs} divergence has shifted gender-axis discourse into the state-legislative band, below the Congressional Record's detection threshold. The interference engine does not waste energy driving off-resonance oscillators at the wrong frequency.
