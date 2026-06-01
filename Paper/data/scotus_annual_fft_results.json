@@ -1,0 +1,43 @@
+{
+  "n_samples": 192,
+  "year_range": [
+    1832,
+    2023
+  ],
+  "interpolation": "linear",
+  "caveat": "Tier 2 -- exploratory; interpolation across gaps introduces artifacts",
+  "dominant_periods": {
+    "class": 96.0,
+    "identity": 48.0
+  },
+  "electoral_power": {
+    "2-year (Nyquist)": {
+      "frequency": 0.49479166666666663,
+      "period": 2.0210526315789474,
+      "class_psd": 0.0188244881249287,
+      "identity_psd": 0.6227153815111696,
+      "ratio": 33.080069820678226
+    },
+    "4-year (Presidential)": {
+      "frequency": 0.25,
+      "period": 4.0,
+      "class_psd": 0.10014271383553869,
+      "identity_psd": 2.9311963949937963,
+      "ratio": 29.270191337211116
+    },
+    "6-year (Senate)": {
+      "frequency": 0.16666666666666666,
+      "period": 6.0,
+      "class_psd": 0.16872049829248306,
+      "identity_psd": 2.1750807205884035,
+      "ratio": 12.891621009901375
+    },
+    "8-year (Two-term)": {
+      "frequency": 0.125,
+      "period": 8.0,
+      "class_psd": 0.6206332213613036,
+      "identity_psd": 6.3177936679653035,
+      "ratio": 10.179593116378442
+    }
+  }
+}
