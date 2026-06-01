@@ -108,7 +108,7 @@ def build_args(**overrides) -> SimpleNamespace:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Root Ledger LoRA Training")
-    parser.add_argument("--model", type=str, default="mlx-community/Llama-3.1-8B-4bit",
+    parser.add_argument("--model", type=str, default="mlx-community/Meta-Llama-3.1-8B-Instruct-4bit",
                         help="Base model HF repo or local path")
     parser.add_argument("--data", type=str, default=str(DEFAULT_DATA),
                         help="Directory containing train.jsonl and valid.jsonl")
