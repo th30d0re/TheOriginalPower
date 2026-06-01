@@ -139,10 +139,13 @@ def download_file(identifier: str, filename: str, out_path: Path) -> bool:
         subprocess.run(
             ["curl", "-sL", "--max-time", "120", "-o", str(out_path), url],
             check=True,
+            timeout=180,
         )
         size = out_path.stat().st_size
         return size > 4096
     except Exception:
+        if out_path.exists():
+            out_path.unlink(missing_ok=True)
         return False
 
 
