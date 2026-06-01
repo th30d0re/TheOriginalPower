@@ -1,0 +1,104 @@
+{
+  "n_samples": 55,
+  "year_range": [
+    1832,
+    2023
+  ],
+  "year_span": 191,
+  "method": "Lomb-Scargle (Scargle 1982)",
+  "caveat": "Non-uniform sampling handled natively; no interpolation",
+  "dominant_periods": {
+    "class": {
+      "period": 12.181090545272637,
+      "power": 0.11345555392193686
+    },
+    "identity": {
+      "period": 3.5367683841920963,
+      "power": 0.19802545607414948
+    },
+    "race": {
+      "period": 2.240120060030015,
+      "power": 0.13380205952936405
+    },
+    "gender": {
+      "period": 2.1680840420210106,
+      "power": 0.11495940053126354
+    },
+    "religion": {
+      "period": 3.632816408204102,
+      "power": 0.1490072742652352
+    },
+    "sexuality": {
+      "period": 2.144072036018009,
+      "power": 0.05972849997332489
+    }
+  },
+  "electoral_power": {
+    "2-year (Nyquist)": {
+      "class": {
+        "period": 2.0,
+        "power": 0.0057644674271249315
+      },
+      "identity": {
+        "period": 2.0,
+        "power": 0.11975870833749304
+      },
+      "ratio": 20.775329178540183
+    },
+    "4-year (Presidential)": {
+      "class": {
+        "period": 3.9929964982491244,
+        "power": 0.052269796601469416
+      },
+      "identity": {
+        "period": 3.9929964982491244,
+        "power": 0.024511080558881716
+      },
+      "ratio": 0.4689339188703225
+    },
+    "6-year (Senate)": {
+      "class": {
+        "period": 6.01000500250125,
+        "power": 0.06708193366135937
+      },
+      "identity": {
+        "period": 6.01000500250125,
+        "power": 0.03994017325443204
+      },
+      "ratio": 0.595393887362529
+    },
+    "8-year (Two-term)": {
+      "class": {
+        "period": 8.003001500750376,
+        "power": 0.04846872914515091
+      },
+      "identity": {
+        "period": 8.003001500750376,
+        "power": 0.018326565304441378
+      },
+      "ratio": 0.37811111674824827
+    },
+    "10-year (Census/Redistrict)": {
+      "class": {
+        "period": 9.9959979989995,
+        "power": 0.001527248795940672
+      },
+      "identity": {
+        "period": 9.9959979989995,
+        "power": 0.002306872752378206
+      },
+      "ratio": 1.5104760655302027
+    },
+    "12-year (3-term Senate)": {
+      "class": {
+        "period": 11.988994497248624,
+        "power": 0.08205039181794184
+      },
+      "identity": {
+        "period": 11.988994497248624,
+        "power": 0.04928445608132228
+      },
+      "ratio": 0.6006608254921864
+    }
+  }
+}
