@@ -102,6 +102,44 @@ def preprocess_congressional_record() -> None:
     print(f"wrote {OUT / 'congressional_record_word_freq.csv'}")
 
 
+def preprocess_congressional_record_quarterly() -> None:
+    """Process GovInfo quarterly document-count proxy into analysis-ready format."""
+    src = RAW / "congressional_record_quarterly_raw.csv"
+    if not src.exists():
+        print(f"skip quarterly CREC: {src} not found (run govinfo_crec_quarterly_query.py)")
+        return
+    raw = _strip_comments(src)
+    raw = raw.sort_values("year_quarter").reset_index(drop=True)
+    # Filter out failed queries (-1) and drop them
+    raw = raw[raw["class_doc_count"] >= 0]
+    raw = raw[raw["identity_doc_count"] >= 0]
+    if len(raw) == 0:
+        print("skip quarterly CREC: no valid rows after filtering failed queries")
+        return
+    # Use document counts as the metric.  For spectral analysis, temporal
+    # variation in document frequency correlates with word-frequency variation.
+    total = raw["class_doc_count"] + raw["identity_doc_count"]
+    processed = pd.DataFrame({
+        "year_quarter": raw["year_quarter"],
+        "class_doc_count": raw["class_doc_count"].astype(int),
+        "identity_doc_count": raw["identity_doc_count"].astype(int),
+        "class_share": (raw["class_doc_count"] / total).round(4),
+        "identity_share": (raw["identity_doc_count"] / total).round(4),
+    })
+    header = [
+        "# processed: quarterly U.S. Congressional Record document-count proxy + basket shares",
+        "# source_raw: Paper/data/raw/congressional_record_quarterly_raw.csv",
+        "# extraction_method: GovInfo API /collections/CREC/search (document-level counts)",
+        "# transformations:",
+        "#   1. sort ascending by year_quarter",
+        "#   2. filter out failed API queries (count == -1)",
+        "#   3. compute class_share, identity_share as fraction of basket totals",
+        "# preprocessed_by: Paper/scripts/preprocess_spectral_data.py",
+    ]
+    _write_with_header(processed, OUT / "congressional_record_quarterly.csv", header)
+    print(f"wrote {OUT / 'congressional_record_quarterly.csv'}")
+
+
 def preprocess_anes() -> None:
     raw = _strip_comments(RAW / "anes_momp_raw.csv")
     raw = raw.sort_values("year").reset_index(drop=True)
@@ -308,6 +346,7 @@ def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
     preprocess_google_trends()
     preprocess_congressional_record()
+    preprocess_congressional_record_quarterly()
     preprocess_anes()
     preprocess_historical_shocks()
     preprocess_backlash_proxies()
