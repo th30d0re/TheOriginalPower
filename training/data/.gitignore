@@ -1,0 +1,6 @@
+# Ignore downloaded models and large fused artifacts
+*.bin
+*.safetensors
+fused_model/
+fused_model_4bit/
+checkpoints/
