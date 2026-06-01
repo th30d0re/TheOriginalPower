@@ -40,7 +40,7 @@ def ia_search(collection: str, offset: int, rows: int) -> dict:
         "rows": str(rows),
         "start": str(offset),
         "output": "json",
-        "sort": "date+asc",
+        "sort": "date asc",
     })
     url = f"{ADV_SEARCH}?{params}"
     req = urllib.request.Request(url, headers=HEADERS)
