@@ -172,6 +172,19 @@ def main() -> int:
     print(f"Iters : {iters}")
     print("=" * 60)
 
+    # Patch load() so base models without chat_template still work with ChatDataset
+    _orig_load = lora.load
+    _template_path = Path(__file__).resolve().parent / "llama31_chat_template.jinja"
+
+    def _patched_load(path, tokenizer_config=None, **kwargs):
+        model, tokenizer = _orig_load(path, tokenizer_config=tokenizer_config, **kwargs)
+        if tokenizer.chat_template is None and _template_path.exists():
+            tokenizer.chat_template = _template_path.read_text(encoding="utf-8")
+            print("[PATCH] Injected chat_template for base model")
+        return model, tokenizer
+
+    lora.load = _patched_load
+
     try:
         lora.run(run_args, training_callback=callback)
     except KeyboardInterrupt:
