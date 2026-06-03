@@ -178,3 +178,77 @@ def check_duplicate(store: Path, sha: str) -> bool:
         if item.get("content_sha") == sha:
             return True
     return False
+
+
+# ---------------------------------------------------------------------------
+# Manifest upsert
+# ---------------------------------------------------------------------------
+
+def upsert_manifest(entry: dict) -> None:
+    """
+    Merge *entry* into the manifest JSON by its ``id`` field and write atomically.
+
+    If the manifest already contains a record with the same ``id``, it is
+    replaced in-place; otherwise the entry is appended.
+    """
+    if "id" not in entry:
+        raise ValueError("manifest entry must contain an 'id' field")
+    _ensure_data_dir()
+    current = read_manifest()
+    current[entry["id"]] = entry
+    tmp = MANIFEST.with_suffix(".tmp")
+    tmp.write_text(json.dumps(current, indent=2, ensure_ascii=False), encoding="utf-8")
+    os.replace(tmp, MANIFEST)
+
+
+# ---------------------------------------------------------------------------
+# Audit log append
+# ---------------------------------------------------------------------------
+
+def append_audit(entry: dict) -> None:
+    """Append *entry* to the audit log."""
+    append_item(AUDIT_LOG, entry)
+
+
+# ---------------------------------------------------------------------------
+# Gated append (dedup-on-entry for all write paths)
+# ---------------------------------------------------------------------------
+
+def gated_append(store: Path, item: dict) -> dict:
+    """
+    Append *item* to *store* only if no existing record shares the same
+    ``content_sha``.
+
+    The caller must have already computed ``item["content_sha"]`` before
+    calling this function (or pass a ``content`` field from which the SHA
+    is derived here).
+
+    Returns:
+        {"accepted": True}  — item was written and manifest updated.
+        {"accepted": False, "reason": "duplicate", "existing_id": <id|None>}
+    """
+    sha = item.get("content_sha")
+    if sha is None:
+        raw = item.get("content", "")
+        sha = content_sha(raw)
+        item = {**item, "content_sha": sha}
+
+    if check_duplicate(store, sha):
+        existing_id: str | None = None
+        for record in read_jsonl(store):
+            if record.get("content_sha") == sha:
+                existing_id = record.get("id")
+                break
+        return {"accepted": False, "reason": "duplicate", "existing_id": existing_id}
+
+    append_item(store, item)
+
+    manifest_entry = {
+        "id": item.get("id", sha),
+        "content_sha": sha,
+        "store": str(store.name),
+        "created_at": item.get("meta", {}).get("created_at") or item.get("created_at"),
+    }
+    upsert_manifest(manifest_entry)
+
+    return {"accepted": True}
