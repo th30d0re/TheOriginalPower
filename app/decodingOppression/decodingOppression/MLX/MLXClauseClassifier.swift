@@ -2,7 +2,7 @@
 //  MLXClauseClassifier.swift
 //  decodingOppression
 //
-//  Actor that loads Qwen3-4B-4bit + LoRA and classifies clauses to TierClassification.
+//  Actor that loads Meta-Llama-3.1-8B-Instruct-abliterated-4bit + LoRA and classifies clauses to TierClassification.
 //
 
 import Foundation

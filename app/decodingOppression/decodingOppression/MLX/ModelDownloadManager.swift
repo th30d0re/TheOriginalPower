@@ -2,7 +2,7 @@
 //  ModelDownloadManager.swift
 //  decodingOppression
 //
-//  Manages background download of Qwen3-4B-4bit model; observable state for SwiftUI.
+//  Manages background download of Meta-Llama-3.1-8B-Instruct-abliterated-4bit model; observable state for SwiftUI.
 //
 
 import Combine
@@ -36,7 +36,7 @@ final class ModelDownloadManager: NSObject, ObservableObject, @unchecked Sendabl
 
     override init() {
         let appSupport = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first!
-        self.modelDestinationURL = appSupport.appendingPathComponent("decodingOppression/Qwen3-4B-4bit", isDirectory: true)
+        self.modelDestinationURL = appSupport.appendingPathComponent("decodingOppression/Meta-Llama-3.1-8B-Instruct-abliterated-4bit", isDirectory: true)
         super.init()
 
         backgroundSession = makeBackgroundSession()
@@ -106,7 +106,7 @@ final class ModelDownloadManager: NSObject, ObservableObject, @unchecked Sendabl
     }
 
     private func resolveModelFileURLs() async throws -> [(URL, String)] {
-        let repoId = "mlx-community/Qwen3-4B-4bit"
+        let repoId = "mlx-community/Meta-Llama-3.1-8B-Instruct-abliterated-4bit"
         let hubApi = HubApi()
         let files = try await hubApi.getFilenames(
             from: repoId,
