@@ -3,6 +3,7 @@
 //  decodingOppression
 //
 //  Facade mirroring Tier1Engine; gates MLX embedding and classifier behind download state.
+//  Also exposes open-ended Root Ledger generation via the loaded model.
 //
 
 import Foundation
@@ -24,6 +25,15 @@ actor Tier2Engine {
 
         try await classifier.loadModel()
         return try await classifier.classify(clause: clause)
+    }
+
+    /// Open-ended Root Ledger generation. Returns nil if model unavailable.
+    func generate(prompt: String) async throws -> String? {
+        let state = await MainActor.run { downloadManager.state }
+        guard case .available = state else { return nil }
+
+        try await classifier.loadModel()
+        return try await classifier.generate(prompt: prompt)
     }
 
     /// Load embedding model for taxonomy matching. Call before similarity/embed.

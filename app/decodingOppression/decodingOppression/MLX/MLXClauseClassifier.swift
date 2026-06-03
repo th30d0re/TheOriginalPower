@@ -2,7 +2,9 @@
 //  MLXClauseClassifier.swift
 //  decodingOppression
 //
-//  Actor that loads Meta-Llama-3.1-8B-Instruct-abliterated-4bit + LoRA and classifies clauses to TierClassification.
+//  Actor that loads Meta-Llama-3.1-8B-Instruct-abliterated-4bit + LoRA,
+//  classifies clauses to TierClassification, and supports open-ended
+//  Root Ledger generation.
 //
 
 import Foundation
@@ -43,21 +45,37 @@ actor MLXClauseClassifier {
         session = ChatSession(modelContainer)
     }
 
+    // MARK: - Classification
+
     func classify(clause: Clause) async throws -> TierClassification {
         guard let session else { throw MLXError.modelNotLoaded }
-        let prompt = buildPrompt(clauseText: clause.text)
+        let prompt = buildClassificationPrompt(clauseText: clause.text)
         let response = try await session.respond(to: prompt)
         return parseResponse(response)
     }
 
-    private func buildPrompt(clauseText: String) -> String {
+    // MARK: - Open-ended generation
+
+    func generate(prompt: String) async throws -> String {
+        guard let session else { throw MLXError.modelNotLoaded }
+        return try await session.respond(to: prompt)
+    }
+
+    // MARK: - Prompt construction
+
+    private func buildClassificationPrompt(clauseText: String) -> String {
         let truncated = String(clauseText.trimmingCharacters(in: .whitespacesAndNewlines).prefix(400))
         return """
-        Return one line:
-        targetGroup=outgroup|ingroup_non_elite|elite|multiple effect=burden|benefit|neutral|mixed aar=0-1 se=0-1 ij=0-1 rsc=0-1 proxy=yes|no
+        You are a Root Ledger engine. Reason using the Mathematics of Oppression framework. Map all social phenomena to electrodynamic, thermodynamic, and systems-engineering analogies. Identify the Extraction Kernel, Buffer Class, Psychological Wage, and Snubber Circuits where applicable.
+
+        Analyze the following statutory clause. Provide a concise Root Ledger analysis. On the very last line of your response, output ONLY the classification in this exact format (no extra text before or after):
+        CLASSIFICATION: targetGroup=outgroup|ingroup_non_elite|elite|multiple effect=burden|benefit|neutral|mixed aar=0.0-1.0 se=0.0-1.0 ij=0.0-1.0 rsc=0.0-1.0 proxy=yes|no
+
         Clause: \(truncated)
         """
     }
+
+    // MARK: - Response parsing
 
     private func parseResponse(_ response: String) -> TierClassification {
         var targetGroup: TargetGroup = .multiple
@@ -67,59 +85,73 @@ actor MLXClauseClassifier {
         var ij: Double = 0
         var rsc: Double = 0
         var usesProxy = false
-        let confidence: Double = 0.5
+        var confidence: Double = 0.5
 
         let lower = response.lowercased()
 
-        func value(for key: String) -> String? {
-            let pattern = "\(key)\\s*=\\s*([a-z0-9_-]+)"
-            guard let regex = try? NSRegularExpression(pattern: pattern),
-                  let match = regex.firstMatch(in: lower, range: NSRange(lower.startIndex..., in: lower)),
-                  let range = Range(match.range(at: 1), in: lower) else { return nil }
-            return String(lower[range])
-        }
+        // Extract the CLASSIFICATION: line from the end of the response
+        let classificationPrefix = "classistration:"
+        if let range = lower.range(of: classificationPrefix) {
+            let lineStart = range.upperBound
+            let remainder = String(lower[lineStart...])
+            let line = remainder.trimmingCharacters(in: .whitespacesAndNewlines)
+                .components(separatedBy: .newlines)
+                .first?
+                .trimmingCharacters(in: .whitespaces) ?? ""
 
-        if let value = value(for: "targetgroup") {
-            switch value {
-            case "outgroup":
-                targetGroup = .outgroup
-            case "ingroup_non_elite", "ingroup-non-elite", "ingroupnonelite", "ingroup":
-                targetGroup = .ingroupNonElite
-            case "elite":
-                targetGroup = .elite
-            default:
-                targetGroup = .multiple
+            func value(for key: String) -> String? {
+                let pattern = "\(key)\\s*=\\s*([a-z0-9_\\.\\-]+)"
+                guard let regex = try? NSRegularExpression(pattern: pattern),
+                      let match = regex.firstMatch(in: line, range: NSRange(line.startIndex..., in: line)),
+                      let range = Range(match.range(at: 1), in: line) else { return nil }
+                return String(line[range])
             }
-        }
 
-        if let value = value(for: "effect") {
-            switch value {
-            case "burden":
-                effectDirection = .burden
-            case "benefit":
-                effectDirection = .benefit
-            case "mixed":
-                effectDirection = .mixed
-            default:
-                effectDirection = .neutral
+            if let value = value(for: "targetgroup") {
+                switch value {
+                case "outgroup":
+                    targetGroup = .outgroup
+                case "ingroup_non_elite", "ingroup-non-elite", "ingroupnonelite", "ingroup":
+                    targetGroup = .ingroupNonElite
+                case "elite":
+                    targetGroup = .elite
+                default:
+                    targetGroup = .multiple
+                }
             }
-        }
 
-        func parseScore(_ name: String) -> Double? {
-            let pattern = "\(name)\\s*=\\s*([0-9]*\\.?[0-9]+)"
-            guard let regex = try? NSRegularExpression(pattern: pattern),
-                  let match = regex.firstMatch(in: lower, range: NSRange(lower.startIndex..., in: lower)),
-                  let range = Range(match.range(at: 1), in: lower) else { return nil }
-            return Double(lower[range])
-        }
+            if let value = value(for: "effect") {
+                switch value {
+                case "burden":
+                    effectDirection = .burden
+                case "benefit":
+                    effectDirection = .benefit
+                case "mixed":
+                    effectDirection = .mixed
+                default:
+                    effectDirection = .neutral
+                }
+            }
 
-        aar = parseScore("aar") ?? 0
-        se = parseScore("se") ?? 0
-        ij = parseScore("ij") ?? 0
-        rsc = parseScore("rsc") ?? 0
+            func parseScore(_ name: String) -> Double? {
+                let pattern = "\(name)\\s*=\\s*([0-9]*\\.?[0-9]+)"
+                guard let regex = try? NSRegularExpression(pattern: pattern),
+                      let match = regex.firstMatch(in: line, range: NSRange(line.startIndex..., in: line)),
+                      let range = Range(match.range(at: 1), in: line) else { return nil }
+                return Double(line[range])
+            }
 
-        if let value = value(for: "proxy"), value == "yes" {
-            usesProxy = true
+            aar = parseScore("aar") ?? 0
+            se = parseScore("se") ?? 0
+            ij = parseScore("ij") ?? 0
+            rsc = parseScore("rsc") ?? 0
+
+            if let value = value(for: "proxy"), value == "yes" {
+                usesProxy = true
+            }
+
+            // Boost confidence if we successfully parsed the classification line
+            confidence = 0.85
         }
 
         let architectureScores = ArchitectureScores(aar: aar, se: se, ij: ij, rsc: rsc)
@@ -151,6 +183,10 @@ actor MLXClauseClassifier {
     }
 
     func classify(clause: Clause) async throws -> TierClassification {
+        throw MLXError.simulatorNotSupported
+    }
+
+    func generate(prompt: String) async throws -> String {
         throw MLXError.simulatorNotSupported
     }
 #endif

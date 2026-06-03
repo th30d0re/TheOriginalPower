@@ -26,14 +26,21 @@ struct ContentView: View {
         #if os(iOS)
         NavigationStack {
             if hasCompletedOnboarding {
-                PolicyHistoryView(viewModel: historyViewModel)
+                TabView {
+                    Tab("Analyze", systemImage: "doc.text.magnifyingglass") {
+                        PolicyHistoryView(viewModel: historyViewModel)
+                    }
+                    Tab("Engine", systemImage: "cpu") {
+                        EngineView(tier2Engine: AppDependencies.shared.tier2Engine)
+                    }
+                }
             } else {
                 WelcomeView(hasCompletedOnboarding: $hasCompletedOnboarding)
             }
         }
         #elseif os(macOS)
         @Bindable var historyViewModel = historyViewModel
-        
+
         return NavigationSplitView {
             List(SidebarItem.allCases, selection: $selectedSidebarItem) { item in
                 Label(item.title, systemImage: item.systemImage)
@@ -57,6 +64,8 @@ struct ContentView: View {
                         )
                     }
                 }
+            case .engine:
+                EngineView(tier2Engine: AppDependencies.shared.tier2Engine)
             case .training:
                 TrainingView(viewModel: trainingViewModel)
             case .validation:
@@ -72,6 +81,7 @@ struct ContentView: View {
 #if os(macOS)
 private enum SidebarItem: String, CaseIterable, Identifiable {
     case analyze
+    case engine
     case training
     case validation
     case data
@@ -82,6 +92,8 @@ private enum SidebarItem: String, CaseIterable, Identifiable {
         switch self {
         case .analyze:
             return "Analyze"
+        case .engine:
+            return "Engine"
         case .training:
             return "Training"
         case .validation:
@@ -95,6 +107,8 @@ private enum SidebarItem: String, CaseIterable, Identifiable {
         switch self {
         case .analyze:
             return "doc.text.magnifyingglass"
+        case .engine:
+            return "cpu"
         case .training:
             return "bolt.circle"
         case .validation:
