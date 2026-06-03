@@ -11,8 +11,10 @@ Binds to 127.0.0.1:7331.
 from __future__ import annotations
 
 import atexit
+import datetime
 import json
 import queue as _queue
+import uuid
 from collections.abc import Iterator
 
 from flask import Flask, Response, jsonify, request, stream_with_context
@@ -93,8 +95,14 @@ def eval_thresholds_put():
             return jsonify({"status": "error", "detail": f"{key} must be numeric"}), 400
     weights = body.get("weights", {})
     for wk in ("recall", "refusal", "classification", "lexicalFractal"):
-        if not isinstance(weights.get(wk), (int, float)):
+        v = weights.get(wk)
+        if not isinstance(v, (int, float)):
             return jsonify({"status": "error", "detail": f"weights.{wk} must be numeric"}), 400
+        if v < 0:
+            return jsonify({"status": "error", "detail": f"weights.{wk} must be non-negative"}), 400
+    total_w = sum(weights[wk] for wk in ("recall", "refusal", "classification", "lexicalFractal"))
+    if total_w <= 0:
+        return jsonify({"status": "error", "detail": "weights must sum to a positive total"}), 400
     store_manager.write_eval_thresholds(body)
     return jsonify(body)
 
@@ -141,6 +149,26 @@ def eval_flag():
     Ingest a flagged eval item with dedup-on-entry check.
 
     Body: {"text": "...", "label": "...", "source": "eval_flag"}
+
+    Writes canonical instruction-dataset records compatible with the
+    build_dataset_v2.py / training pipeline schema:
+
+        {
+          "id": "<uuid>",
+          "messages": [
+            {"role": "system",    "content": "<SYSTEM_PROMPT>"},
+            {"role": "user",      "content": "<text>"}
+          ],
+          "meta": {
+            "label":       "<label>",
+            "source":      "eval_flag",
+            "content_sha": "<sha of normalized text>",
+            "created_at":  "<iso8601>"
+          }
+        }
+
+    Dedup is computed on the normalized text (whitespace-collapsed) so
+    formatting-only duplicates are rejected.
     """
     body = request.get_json(silent=True) or {}
     text = body.get("text", "")
@@ -152,13 +180,20 @@ def eval_flag():
         return jsonify({"status": "duplicate", "detail": "item rejected — duplicate content SHA"}), 409
 
     item = {
-        "text":        text,
-        "label":       body.get("label", ""),
-        "source":      body.get("source", "eval_flag"),
-        "content_sha": sha,
+        "id": str(uuid.uuid4()),
+        "messages": [
+            {"role": "system", "content": scorer.SYSTEM_PROMPT},
+            {"role": "user",   "content": text},
+        ],
+        "meta": {
+            "label":       body.get("label", ""),
+            "source":      body.get("source", "eval_flag"),
+            "content_sha": sha,
+            "created_at":  datetime.datetime.utcnow().isoformat() + "Z",
+        },
     }
     store_manager.append_item(store_manager.INSTRUCTION_DATASET, item)
-    return jsonify({"status": "accepted", "content_sha": sha}), 201
+    return jsonify({"status": "accepted", "id": item["id"], "content_sha": sha}), 201
 
 
 # ---------------------------------------------------------------------------

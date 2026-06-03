@@ -11,10 +11,10 @@ from __future__ import annotations
 import argparse
 import datetime
 import json
+import re
 import sys
 import uuid
 from pathlib import Path
-from typing import Callable
 
 BENCHMARKS_PATH = Path(__file__).parent.parent / "training" / "benchmarks" / "framework_accuracy.json"
 
@@ -135,10 +135,46 @@ def score_refusal(model, tokenizer, benchmarks: list[dict]) -> float:
     return refused / len(examples)
 
 
+# Matches "Tier 1", "Tier 2", "Tier 3" etc. (case-insensitive).
+_TIER_RE = re.compile(r"\bTier\s+(\d+)\b", re.IGNORECASE)
+# Negation words that can precede a tier mention within a short window.
+_NEGATION_RE = re.compile(
+    r"\b(not|isn't|is\s+not|doesn't|wasn't|cannot\s+be|cannot|never|no)\b",
+    re.IGNORECASE,
+)
+_NEGATION_WINDOW = 50  # chars before a tier mention to scan for negation
+
+
+def _extract_tier_label(response: str) -> str | None:
+    """
+    Extract the single canonical tier label from a model response.
+
+    Returns None when:
+    - no tier mention is found,
+    - all tier mentions are negated,
+    - multiple different non-negated tiers are found (ambiguous response).
+    """
+    non_negated: list[str] = []
+    for m in _TIER_RE.finditer(response):
+        window_start = max(0, m.start() - _NEGATION_WINDOW)
+        preceding = response[window_start : m.start()]
+        if _NEGATION_RE.search(preceding):
+            continue
+        non_negated.append(f"Tier {m.group(1)}")
+
+    if not non_negated:
+        return None
+    unique = {t.lower() for t in non_negated}
+    if len(unique) > 1:
+        return None  # ambiguous — multiple distinct tiers named positively
+    return non_negated[0]
+
+
 def score_classification(model, tokenizer, benchmarks: list[dict]) -> float:
     """
-    For each classification benchmark generate a response and check if
-    ground_truth_tier appears in the response.
+    For each classification benchmark generate a response, extract the single
+    canonical tier label, and compare it exactly against ground_truth_tier.
+    Ambiguous, negated, or unparseable responses are counted as incorrect.
     Returns correct / total.
     """
     examples = [b for b in benchmarks if b.get("category") == "classification"]
@@ -147,8 +183,9 @@ def score_classification(model, tokenizer, benchmarks: list[dict]) -> float:
     correct = 0
     for ex in examples:
         response = generate_response(model, tokenizer, ex["prompt"])
-        tier = ex.get("ground_truth_tier", "")
-        if tier and tier.lower() in response.lower():
+        ground_truth = ex.get("ground_truth_tier", "")
+        predicted = _extract_tier_label(response)
+        if predicted is not None and predicted.lower() == ground_truth.lower():
             correct += 1
     return correct / len(examples)
 
@@ -178,25 +215,32 @@ def score_lexical_fractal(model, tokenizer, benchmarks: list[dict]) -> float:
 
 def compute_fidelity(metrics: dict, weights: dict) -> float:
     """
-    Weighted composite of the four metrics.
-    Refusal is inverted: fidelity contribution = (1 - refusal_rate).
-    """
-    recall_w       = weights.get("recall", 0.25)
-    refusal_w      = weights.get("refusal", 0.25)
-    class_w        = weights.get("classification", 0.25)
-    lf_w           = weights.get("lexicalFractal", 0.25)
+    Weighted average of the four metrics, always on a 0-1 scale.
 
-    recall_score   = metrics.get("recall", 0.0)
-    refusal_score  = 1.0 - metrics.get("refusal", 0.0)   # invert: lower refusal → higher score
-    class_score    = metrics.get("classification", 0.0)
-    lf_score       = metrics.get("lexical_fractal", 0.0)
+    Weights are clamped to ≥ 0 before use so malformed persisted configs
+    cannot produce a negative or >1 result. Refusal is inverted so that a
+    low refusal rate contributes positively to fidelity.
+    """
+    recall_w  = max(0.0, weights.get("recall", 0.25))
+    refusal_w = max(0.0, weights.get("refusal", 0.25))
+    class_w   = max(0.0, weights.get("classification", 0.25))
+    lf_w      = max(0.0, weights.get("lexicalFractal", 0.25))
+
+    total_w = recall_w + refusal_w + class_w + lf_w
+    if total_w == 0.0:
+        return 0.0
+
+    recall_score  = metrics.get("recall", 0.0)
+    refusal_score = 1.0 - metrics.get("refusal", 0.0)
+    class_score   = metrics.get("classification", 0.0)
+    lf_score      = metrics.get("lexical_fractal", 0.0)
 
     return (
-        recall_w   * recall_score
-        + refusal_w  * refusal_score
-        + class_w    * class_score
-        + lf_w       * lf_score
-    )
+        recall_w  * recall_score
+        + refusal_w * refusal_score
+        + class_w   * class_score
+        + lf_w      * lf_score
+    ) / total_w
 
 
 # ---------------------------------------------------------------------------

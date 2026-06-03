@@ -157,9 +157,19 @@ def append_eval_run(run: dict) -> None:
 # Content dedup
 # ---------------------------------------------------------------------------
 
+def normalize_text(text: str) -> str:
+    """
+    Canonical normalization for dedup: strip leading/trailing whitespace and
+    collapse all internal whitespace runs (spaces, tabs, newlines) to a single
+    space. Dedup operates on this representation so that formatting-only edits
+    do not produce a new hash.
+    """
+    return " ".join(text.split())
+
+
 def content_sha(text: str) -> str:
-    """Return SHA-256 hex digest of *text* — the dedup key."""
-    return hashlib.sha256(text.encode("utf-8")).hexdigest()
+    """Return SHA-256 hex digest of the normalized form of *text* — the dedup key."""
+    return hashlib.sha256(normalize_text(text).encode("utf-8")).hexdigest()
 
 
 def check_duplicate(store: Path, sha: str) -> bool:
