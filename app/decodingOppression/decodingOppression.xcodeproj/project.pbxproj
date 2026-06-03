@@ -10,114 +10,10 @@
 		1487ADC22F47B281009460B8 /* MLXLLM in Frameworks */ = {isa = PBXBuildFile; productRef = 1487ADC52F47B281009460B8 /* MLXLLM */; };
 		1487ADC32F47B281009460B8 /* MLXEmbedders in Frameworks */ = {isa = PBXBuildFile; productRef = 1487ADC62F47B281009460B8 /* MLXEmbedders */; };
 		1487ADC42F47B281009460B8 /* MLXLMCommon in Frameworks */ = {isa = PBXBuildFile; productRef = 1487ADC72F47B281009460B8 /* MLXLMCommon */; };
-		1487ADEE2F47B281009460B8 /* decodingOppression/ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1487ADE02F47B27E009460B8 /* decodingOppression/ContentView.swift */; };
-		1487ADEF2F47B281009460B8 /* decodingOppression/decodingOppressionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1487ADE12F47B27E009460B8 /* decodingOppression/decodingOppressionApp.swift */; };
-		1487ADF02F47B281009460B8 /* decodingOppression/NLP/ClauseAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1487ADE22F47B27E009460B8 /* decodingOppression/NLP/ClauseAnalyzer.swift */; };
-		1487ADF12F47B281009460B8 /* decodingOppression/NLP/KeywordEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1487ADE32F47B27E009460B8 /* decodingOppression/NLP/KeywordEngine.swift */; };
-		1487ADF22F47B281009460B8 /* decodingOppression/NLP/PDFExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1487ADE42F47B27E009460B8 /* decodingOppression/NLP/PDFExtractor.swift */; };
-		1487ADF32F47B281009460B8 /* decodingOppression/NLP/TextPreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1487ADE52F47B27E009460B8 /* decodingOppression/NLP/TextPreprocessor.swift */; };
-		1487ADF42F47B281009460B8 /* decodingOppression/NLP/Tier1Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1487ADE62F47B27E009460B8 /* decodingOppression/NLP/Tier1Engine.swift */; };
-		1487ADF52F47B281009460B8 /* decodingOppression/Models/AnalyzedClause.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1487ADE72F47B27E009460B8 /* decodingOppression/Models/AnalyzedClause.swift */; };
-		1487ADF62F47B281009460B8 /* decodingOppression/Models/GenerableTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1487ADE82F47B27E009460B8 /* decodingOppression/Models/GenerableTypes.swift */; };
-		1487ADF72F47B281009460B8 /* decodingOppression/Models/PipelineContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1487ADE92F47B27E009460B8 /* decodingOppression/Models/PipelineContracts.swift */; };
-		1487ADF82F47B281009460B8 /* decodingOppression/Models/Policy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1487ADEA2F47B27E009460B8 /* decodingOppression/Models/Policy.swift */; };
-		1487ADF92F47B281009460B8 /* decodingOppression/Models/PolicyAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1487ADEB2F47B27E009460B8 /* decodingOppression/Models/PolicyAnalysis.swift */; };
-		1487ADFA2F47B281009460B8 /* decodingOppression/Models/ScoreResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1487ADEC2F47B27E009460B8 /* decodingOppression/Models/ScoreResult.swift */; };
-		1487ADFB2F47B281009460B8 /* decodingOppression/Data/KeywordTaxonomies.json in Resources */ = {isa = PBXBuildFile; fileRef = 1487ADED2F47B27E009460B8 /* decodingOppression/Data/KeywordTaxonomies.json */; };
-		1487ADED2F47B27E009460B9 /* decodingOppression/Data/historical_clauses.jsonl */ = {isa = PBXFileReference; lastKnownFileType = text; path = "decodingOppressionTests/historical_clauses.jsonl"; sourceTree = SOURCE_ROOT; };
-		1487ADED2F47B27E009460BB /* decodingOppression/Data/validation_clauses.jsonl */ = {isa = PBXFileReference; lastKnownFileType = text; path = "decodingOppressionTests/validation_clauses.jsonl"; sourceTree = SOURCE_ROOT; };
-		1487ADED2F47B27E009460BA /* decodingOppression/Data/historical_clauses.jsonl in Resources */ = {isa = PBXBuildFile; fileRef = 1487ADED2F47B27E009460B9 /* decodingOppression/Data/historical_clauses.jsonl */; };
-		1487ADED2F47B27E009460BC /* decodingOppression/Data/validation_clauses.jsonl in Resources */ = {isa = PBXBuildFile; fileRef = 1487ADED2F47B27E009460BB /* decodingOppression/Data/validation_clauses.jsonl */; };
-		1487ADFC2F47B281009460B8 /* decodingOppression/Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1487ADFD2F47B281009460B8 /* decodingOppression/Assets.xcassets */; };
-		1487AE002F47B281009460B8 /* MLXError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1487AE002F47B27E009460B8 /* MLXError.swift */; };
-		1487AE012F47B281009460B8 /* ModelDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1487AE012F47B27E009460B8 /* ModelDownloadManager.swift */; };
-		1487AE022F47B281009460B8 /* MLXEmbeddingEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1487AE022F47B27E009460B8 /* MLXEmbeddingEngine.swift */; };
-		1487AE032F47B281009460B8 /* MLXClauseClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1487AE032F47B27E009460B8 /* MLXClauseClassifier.swift */; };
-		1487AE042F47B281009460B8 /* Tier2Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1487AE042F47B27E009460B8 /* Tier2Engine.swift */; };
-		1487AE052F47B281009460B8 /* adapter_config.json in Resources */ = {isa = PBXBuildFile; fileRef = 1487AE052F47B27E009460B8 /* adapter_config.json */; };
-		1487AE062F47B281009460B8 /* adapters.safetensors in Resources */ = {isa = PBXBuildFile; fileRef = 1487AE062F47B27E009460B8 /* adapters.safetensors */; };
-		1487AE092F47B281009460B8 /* Tier2EngineHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1487AE092F47B27E009460B8 /* Tier2EngineHolder.swift */; };
-		2467E8070D1646038A09BBD2 /* Tier3Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F905F1B71EC4592BA52F524 /* Tier3Error.swift */; };
-		473A1DCC70674B1088012F04 /* HistoricalPolicies.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EBBA3FBB7D48DBB64A3D5F /* HistoricalPolicies.swift */; };
-		4B54B0E76E030058F14A90BE /* decodingOppression/NLP/AnalysisPipeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F51FB8F8538602BCE6DEF6E /* decodingOppression/NLP/AnalysisPipeline.swift */; };
-		5EC2A52B074C4B4F80E486FB /* HistoricalBaselineTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB26A02D5DC4B6F91076977 /* HistoricalBaselineTool.swift */; };
-		90AA271CA9EF8BE05832435A /* decodingOppression/Models/PolicyScorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B540AA359285FE6BE364309 /* decodingOppression/Models/PolicyScorer.swift */; };
-		AA1BB2CC3DD4EE5FF6071829 /* decodingOppression/Models/DifferentialImpactScorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A7C0B92F5E4F3A9B1C2D3E /* decodingOppression/Models/DifferentialImpactScorer.swift */; };
-		BB2CC3DD4EE5FF60718293A1 /* decodingOppression/Models/ArchitectureDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B3A4D5E6F708192A3B4C5D /* decodingOppression/Models/ArchitectureDetector.swift */; };
-		CC3DD4EE5FF60718293A1B2C /* decodingOppression/Models/EliteInterestScorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C4D5E6F7A8091B2C3D4E5F /* decodingOppression/Models/EliteInterestScorer.swift */; };
-		DD4EE5FF60718293A1B2C3D4 /* decodingOppression/Models/CompoundingCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B5C6D7E8F9012A3B4C5D6E /* decodingOppression/Models/CompoundingCalculator.swift */; };
-		EE5FF60718293A1B2C3D4E5F /* decodingOppression/Models/OutgroupAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E6D7C8B9A0123C4D5E6F70 /* decodingOppression/Models/OutgroupAnalyzer.swift */; };
-		FF60718293A1B2C3D4E5F607 /* ScoringEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F7A8B9C0D1122334455667 /* decodingOppressionTests/ScoringEngineTests.swift */; };
-		A6E5E59775EC4A2D83DBF692 /* Tier3Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B4706C099C4852B2B1E2BB /* Tier3Engine.swift */; };
-		A9844907B2CE4A95E94AC7CF /* decodingOppression/NLP/TierResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89BE94DE48144EC3AFE8A14 /* decodingOppression/NLP/TierResolver.swift */; };
-		C7ACD73D83AF4BD1BF278199 /* PolicyAnalysisSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34286CD2DA874541B8E16E36 /* PolicyAnalysisSession.swift */; };
-		1487AE0C2F47B280009460B8 /* TierResolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1487AE0A2F47B280009460B8 /* TierResolverTests.swift */; };
-		1487AE0D2F47B280009460B8 /* AnalysisPipelineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1487AE0B2F47B280009460B8 /* AnalysisPipelineTests.swift */; };
-		FF60718293A1B2C3D4E5F609 /* HistoricalPolicyValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF60718293A1B2C3D4E5F608 /* HistoricalPolicyValidationTests.swift */; };
-		B04D07D06C7E4B939E8B1002 /* EpisodeManifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04D07D06C7E4B939E8B1001 /* voice_pipeline/swift/EpisodeManifest.swift */; };
-
-		56980E96DB894B63B5D4F8A0 /* decodingOppression/AI/HistoricalBaselineTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692E494D3CC240ABB18D1C6A /* decodingOppression/AI/HistoricalBaselineTool.swift */; };
-		51D972B2CF3045EAA8A7EB51 /* decodingOppression/AI/HistoricalPolicies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26858B9939DC4076A1964DD4 /* decodingOppression/AI/HistoricalPolicies.swift */; };
-		AA9F6AC685F4402F9AF4F8FD /* decodingOppression/AI/PolicyAnalysisSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EAE8E0684C4897AD1AA00E /* decodingOppression/AI/PolicyAnalysisSession.swift */; };
-		25AF3BCE16574A03A26B2423 /* decodingOppression/AI/Tier3Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68362756941F47F8B5F895BC /* decodingOppression/AI/Tier3Engine.swift */; };
-		1A65DDA4A990459192B1FC27 /* decodingOppression/AI/Tier3Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86898F42EB64C64A533DE12 /* decodingOppression/AI/Tier3Error.swift */; };
-		67422C1DE68C47749A10737E /* decodingOppression/Export/ReportExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E658A7CE9E487C9078A0A9 /* decodingOppression/Export/ReportExporter.swift */; };
-		17BB7160892D47CA8722B73E /* decodingOppression/MLX/MLXClauseClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE963EFF24004BD0863941ED /* decodingOppression/MLX/MLXClauseClassifier.swift */; };
-		859A832055A9452A8BFE5055 /* decodingOppression/MLX/MLXEmbeddingEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BAFAAF61D7485DB783DE51 /* decodingOppression/MLX/MLXEmbeddingEngine.swift */; };
-		D61C5E3362134F64BC8D123B /* decodingOppression/MLX/MLXError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFB3C507B844787B0842396 /* decodingOppression/MLX/MLXError.swift */; };
-		877BC94051C146998472F2FE /* decodingOppression/MLX/ModelDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76505E9686547E7A66EB6DA /* decodingOppression/MLX/ModelDownloadManager.swift */; };
-		D2E4FF47F9154FDF85C04A7D /* decodingOppression/MLX/Tier2Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72EFCC07D8A04B0B8F84302C /* decodingOppression/MLX/Tier2Engine.swift */; };
-		661F141D83B84CA5B700D0FA /* decodingOppression/MLX/Tier2EngineHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EFCD39A18349A19D69CABC /* decodingOppression/MLX/Tier2EngineHolder.swift */; };
-		C121A2C6D391414D8AC72B32 /* decodingOppression/NLP/ClauseClassificationPipeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA65530CF514E59B4DDDBF3 /* decodingOppression/NLP/ClauseClassificationPipeline.swift */; };
-		4C056D623F764E4D99197C27 /* decodingOppression/ViewModels/AnalysisViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FDAE27A7704A3AA9B751CC /* decodingOppression/ViewModels/AnalysisViewModel.swift */; };
-		45C54FB7C1BF404D8E97E424 /* decodingOppression/ViewModels/Charts/ArchitectureRadarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2929D1C4FC4AD094637BF7 /* decodingOppression/ViewModels/Charts/ArchitectureRadarViewModel.swift */; };
-		BF2C0F7E360D4E83A2796044 /* decodingOppression/ViewModels/Charts/BenefitHierarchyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D159F13DAD478B97E24F3F /* decodingOppression/ViewModels/Charts/BenefitHierarchyViewModel.swift */; };
-		F7A528FA36764A168C38AB76 /* decodingOppression/ViewModels/Charts/CompoundingTrajectoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34021ED6379E45CD8B8F7A78 /* decodingOppression/ViewModels/Charts/CompoundingTrajectoryViewModel.swift */; };
-		6C0B5F1073784D55AE2275C4 /* decodingOppression/ViewModels/Charts/EliteInterestDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314C32CCB04942038C6B2016 /* decodingOppression/ViewModels/Charts/EliteInterestDetailViewModel.swift */; };
-		F04A827D3EE54E73B1525344 /* decodingOppression/ViewModels/Charts/HistoricalComparisonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48FF07CF65459B9DC8036D /* decodingOppression/ViewModels/Charts/HistoricalComparisonViewModel.swift */; };
-		F63C3982248B4A04B20B3F5F /* decodingOppression/ViewModels/Charts/OutgroupExpansionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98D1B9E9DE3439F88AC17DA /* decodingOppression/ViewModels/Charts/OutgroupExpansionViewModel.swift */; };
-		D66E266BBCD64270993393A2 /* decodingOppression/ViewModels/ClauseListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23B049B655946309D513909 /* decodingOppression/ViewModels/ClauseListViewModel.swift */; };
-		A2B739EF43C3473AAA75CF4D /* decodingOppression/ViewModels/ExportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B2A93F1E4D4D6A987C35E6 /* decodingOppression/ViewModels/ExportViewModel.swift */; };
-		81D0B8DD56ED44A4BFF2B465 /* decodingOppression/ViewModels/PolicyHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBC830089104552B825F61C /* decodingOppression/ViewModels/PolicyHistoryViewModel.swift */; };
-		3DADAF828EA04AD69D608B9B /* decodingOppression/ViewModels/ScoreCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E41D6D2C64D41BE85D3FB23 /* decodingOppression/ViewModels/ScoreCardViewModel.swift */; };
-		AEB6CCB20FE94EEE9F8F52F4 /* decodingOppression/ViewModels/WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405A9CB1A307426DA8FBD96C /* decodingOppression/ViewModels/WelcomeViewModel.swift */; };
-		B32DFCB48A654E8E9160B4C7 /* decodingOppression/Views/AnalysisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DA2B555FBF4B919A69553F /* decodingOppression/Views/AnalysisView.swift */; };
-		7C7390AC638145FE9E497FD5 /* decodingOppression/Views/Charts/ArchitectureRadarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE999397B93F4AE9AACFD83D /* decodingOppression/Views/Charts/ArchitectureRadarView.swift */; };
-		F7FBB563D87946B8800A0376 /* decodingOppression/Views/Charts/BenefitHierarchyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928BCFBC95164F098A3BF0A7 /* decodingOppression/Views/Charts/BenefitHierarchyView.swift */; };
-		CC1434672D4849999350BF73 /* decodingOppression/Views/Charts/CompoundingTrajectoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54083CAD32774E62943E684B /* decodingOppression/Views/Charts/CompoundingTrajectoryView.swift */; };
-		FC63BA128F634661B1A91D5B /* decodingOppression/Views/Charts/EliteInterestDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F76E76AF3340EFB5DD611B /* decodingOppression/Views/Charts/EliteInterestDetailView.swift */; };
-		C3EB3BF85A1F407CA2D86355 /* decodingOppression/Views/Charts/HistoricalComparisonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690DA1A823954A4BB99D7E98 /* decodingOppression/Views/Charts/HistoricalComparisonView.swift */; };
-		86F30CC906D2487B8109F68F /* decodingOppression/Views/Charts/OutgroupExpansionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741F89111EB041F699A8828B /* decodingOppression/Views/Charts/OutgroupExpansionView.swift */; };
-		A379E2525C11403E966BE1E0 /* decodingOppression/Views/ClauseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9B2D9423134B80B6BD8471 /* decodingOppression/Views/ClauseListView.swift */; };
-		DBDE4EC4369249028B4F7A6C /* decodingOppression/Views/ExportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F70FEDD49146B4BAE2FFC6 /* decodingOppression/Views/ExportView.swift */; };
-		9C27803226A54360BA54B112 /* decodingOppression/Views/PolicyHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29C3E7031604E62B630A646 /* decodingOppression/Views/PolicyHistoryView.swift */; };
-		8825CDADF68C4D07AD21F3B6 /* decodingOppression/Views/ScoreCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCCFDB29B714A2EB7CB9F06 /* decodingOppression/Views/ScoreCardView.swift */; };
-		53CFF0563E2D4F3FBB0E4177 /* decodingOppression/Views/Style/AnalysisViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D35FD335A34429AE8649E1 /* decodingOppression/Views/Style/AnalysisViewStyle.swift */; };
-		06D2BCFA0D6442ABBE9D613A /* decodingOppression/Views/Style/Charts/ArchitectureRadarViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1B7DCC39C54E3B930E3FEA /* decodingOppression/Views/Style/Charts/ArchitectureRadarViewStyle.swift */; };
-		24203640E6704801A5E8C217 /* decodingOppression/Views/Style/Charts/BenefitHierarchyViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F06685DAE3497AA5609DC3 /* decodingOppression/Views/Style/Charts/BenefitHierarchyViewStyle.swift */; };
-		E7C5183D833A49C1A4192D7C /* decodingOppression/Views/Style/Charts/CompoundingTrajectoryViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998D25168A1C42E1B793BD59 /* decodingOppression/Views/Style/Charts/CompoundingTrajectoryViewStyle.swift */; };
-		757308AAA5554441B7EDFC64 /* decodingOppression/Views/Style/Charts/EliteInterestDetailViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D00E8544CC546C4B7AB8E20 /* decodingOppression/Views/Style/Charts/EliteInterestDetailViewStyle.swift */; };
-		1B47DF67EE9C46AEAEFFA9A2 /* decodingOppression/Views/Style/Charts/HistoricalComparisonViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6565B8EC55F545B9A5960731 /* decodingOppression/Views/Style/Charts/HistoricalComparisonViewStyle.swift */; };
-		F930D829BF11478CAF5E9AC8 /* decodingOppression/Views/Style/Charts/OutgroupExpansionViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97386E90AC9C4D04AAD1D2DD /* decodingOppression/Views/Style/Charts/OutgroupExpansionViewStyle.swift */; };
-		8DE3931EC8024F729EBD3AA5 /* decodingOppression/Views/Style/ClauseListViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED85917F1B8B47FA8096E0E5 /* decodingOppression/Views/Style/ClauseListViewStyle.swift */; };
-		BAAE0BEAC2FA489E92468C52 /* decodingOppression/Views/Style/ExportViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B951C5E1444B57B5A0074A /* decodingOppression/Views/Style/ExportViewStyle.swift */; };
-		C4BA0389DD6E4D1EAF774D59 /* decodingOppression/Views/Style/PolicyHistoryViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237646EFA84A4A7A904247AC /* decodingOppression/Views/Style/PolicyHistoryViewStyle.swift */; };
-		84F11F8D8FED4F4B9479FEDA /* decodingOppression/Views/Style/ScoreCardViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D755C6B51C42BEAAC3D287 /* decodingOppression/Views/Style/ScoreCardViewStyle.swift */; };
-		1168F92287E84502B166E369 /* decodingOppression/Views/Style/WelcomeViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D42BF624DDD45B8A26F7479 /* decodingOppression/Views/Style/WelcomeViewStyle.swift */; };
-		AE2F2A5A72004E46B01F4D14 /* decodingOppression/Views/WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6034ED83B5C54072BE15AF7A /* decodingOppression/Views/WelcomeView.swift */; };
-		F801A1B2C3D4E5F6071829 /* decodingOppression/Models/TrainingModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F801R1B2C3D4E5F6071829 /* decodingOppression/Models/TrainingModels.swift */; };
-		F802A1B2C3D4E5F6071829 /* decodingOppression/Data/TrainingDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F802R1B2C3D4E5F6071829 /* decodingOppression/Data/TrainingDataStore.swift */; };
-		F803A1B2C3D4E5F6071829 /* decodingOppression/AI/ValidationRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F803R1B2C3D4E5F6071829 /* decodingOppression/AI/ValidationRunner.swift */; };
-		F804A1B2C3D4E5F6071829 /* decodingOppression/MLX/TrainingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F804R1B2C3D4E5F6071829 /* decodingOppression/MLX/TrainingManager.swift */; };
-		F805A1B2C3D4E5F6071829 /* decodingOppression/ViewModels/TrainingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F805R1B2C3D4E5F6071829 /* decodingOppression/ViewModels/TrainingViewModel.swift */; };
-		F806A1B2C3D4E5F6071829 /* decodingOppression/ViewModels/ValidationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F806R1B2C3D4E5F6071829 /* decodingOppression/ViewModels/ValidationViewModel.swift */; };
-		F807A1B2C3D4E5F6071829 /* decodingOppression/ViewModels/TrainingDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F807R1B2C3D4E5F6071829 /* decodingOppression/ViewModels/TrainingDataViewModel.swift */; };
-		F808A1B2C3D4E5F6071829 /* decodingOppression/Views/Style/TrainingViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F808R1B2C3D4E5F6071829 /* decodingOppression/Views/Style/TrainingViewStyle.swift */; };
-		F809A1B2C3D4E5F6071829 /* decodingOppression/Views/Style/ValidationViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F809R1B2C3D4E5F6071829 /* decodingOppression/Views/Style/ValidationViewStyle.swift */; };
-		F80AA1B2C3D4E5F6071829 /* decodingOppression/Views/Style/TrainingDataViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80AR1B2C3D4E5F6071829 /* decodingOppression/Views/Style/TrainingDataViewStyle.swift */; };
-		F80BA1B2C3D4E5F6071829 /* decodingOppression/Views/TrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80BR1B2C3D4E5F6071829 /* decodingOppression/Views/TrainingView.swift */; };
-		F80CA1B2C3D4E5F6071829 /* decodingOppression/Views/ValidationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80CR1B2C3D4E5F6071829 /* decodingOppression/Views/ValidationView.swift */; };
-		F80DA1B2C3D4E5F6071829 /* decodingOppression/Views/TrainingDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80DR1B2C3D4E5F6071829 /* decodingOppression/Views/TrainingDataView.swift */; };
+		1487ADED2F47B27E009460BA /* decodingOppressionTests/historical_clauses.jsonl in Resources */ = {isa = PBXBuildFile; fileRef = 1487ADED2F47B27E009460B9 /* decodingOppressionTests/historical_clauses.jsonl */; };
+		B04D07D06C7E4B939E8B1002 /* ../../voice_pipeline/swift/EpisodeManifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04D07D06C7E4B939E8B1001 /* ../../voice_pipeline/swift/EpisodeManifest.swift */; };
+		FF60718293A1B2C3D4E5F609 /* decodingOppressionTests/HistoricalPolicyValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF60718293A1B2C3D4E5F608 /* decodingOppressionTests/HistoricalPolicyValidationTests.swift */; };
+		FF60718293A1B2C3D4E5F610 /* decodingOppressionTests/validation_clauses.jsonl in Resources */ = {isa = PBXBuildFile; fileRef = 1487ADED2F47B27E009460BB /* decodingOppressionTests/validation_clauses.jsonl */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,6 +51,8 @@
 		1487ADEB2F47B27E009460B8 /* decodingOppression/Models/PolicyAnalysis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/Models/PolicyAnalysis.swift; sourceTree = "<group>"; };
 		1487ADEC2F47B27E009460B8 /* decodingOppression/Models/ScoreResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/Models/ScoreResult.swift; sourceTree = "<group>"; };
 		1487ADED2F47B27E009460B8 /* decodingOppression/Data/KeywordTaxonomies.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = decodingOppression/Data/KeywordTaxonomies.json; sourceTree = "<group>"; };
+		1487ADED2F47B27E009460B9 /* decodingOppressionTests/historical_clauses.jsonl */ = {isa = PBXFileReference; lastKnownFileType = text; path = decodingOppressionTests/historical_clauses.jsonl; sourceTree = SOURCE_ROOT; };
+		1487ADED2F47B27E009460BB /* decodingOppressionTests/validation_clauses.jsonl */ = {isa = PBXFileReference; lastKnownFileType = text; path = decodingOppressionTests/validation_clauses.jsonl; sourceTree = SOURCE_ROOT; };
 		1487ADFD2F47B281009460B8 /* decodingOppression/Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = decodingOppression/Assets.xcassets; sourceTree = "<group>"; };
 		1487AE002F47B27E009460B8 /* MLXError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLXError.swift; sourceTree = "<group>"; };
 		1487AE012F47B27E009460B8 /* ModelDownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDownloadManager.swift; sourceTree = "<group>"; };
@@ -167,84 +65,13 @@
 		34286CD2DA874541B8E16E36 /* PolicyAnalysisSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolicyAnalysisSession.swift; sourceTree = "<group>"; };
 		3F905F1B71EC4592BA52F524 /* Tier3Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tier3Error.swift; sourceTree = "<group>"; };
 		6B540AA359285FE6BE364309 /* decodingOppression/Models/PolicyScorer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/Models/PolicyScorer.swift; sourceTree = "<group>"; };
-		D1A7C0B92F5E4F3A9B1C2D3E /* decodingOppression/Models/DifferentialImpactScorer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/Models/DifferentialImpactScorer.swift; sourceTree = "<group>"; };
-		C2B3A4D5E6F708192A3B4C5D /* decodingOppression/Models/ArchitectureDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/Models/ArchitectureDetector.swift; sourceTree = "<group>"; };
-		B3C4D5E6F7A8091B2C3D4E5F /* decodingOppression/Models/EliteInterestScorer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/Models/EliteInterestScorer.swift; sourceTree = "<group>"; };
-		A4B5C6D7E8F9012A3B4C5D6E /* decodingOppression/Models/CompoundingCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/Models/CompoundingCalculator.swift; sourceTree = "<group>"; };
-		F5E6D7C8B9A0123C4D5E6F70 /* decodingOppression/Models/OutgroupAnalyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/Models/OutgroupAnalyzer.swift; sourceTree = "<group>"; };
-		E6F7A8B9C0D1122334455667 /* decodingOppressionTests/ScoringEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppressionTests/ScoringEngineTests.swift; sourceTree = SOURCE_ROOT; };
 		8F51FB8F8538602BCE6DEF6E /* decodingOppression/NLP/AnalysisPipeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/NLP/AnalysisPipeline.swift; sourceTree = "<group>"; };
+		B04D07D06C7E4B939E8B1001 /* ../../voice_pipeline/swift/EpisodeManifest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ../../voice_pipeline/swift/EpisodeManifest.swift; sourceTree = SOURCE_ROOT; };
 		C6B4706C099C4852B2B1E2BB /* Tier3Engine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tier3Engine.swift; sourceTree = "<group>"; };
 		C89BE94DE48144EC3AFE8A14 /* decodingOppression/NLP/TierResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/NLP/TierResolver.swift; sourceTree = "<group>"; };
 		DCB26A02D5DC4B6F91076977 /* HistoricalBaselineTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalBaselineTool.swift; sourceTree = "<group>"; };
 		F7EBBA3FBB7D48DBB64A3D5F /* HistoricalPolicies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalPolicies.swift; sourceTree = "<group>"; };
-		1487AE0A2F47B280009460B8 /* TierResolverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "decodingOppressionTests/TierResolverTests.swift"; sourceTree = SOURCE_ROOT; };
-		1487AE0B2F47B280009460B8 /* AnalysisPipelineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "decodingOppressionTests/AnalysisPipelineTests.swift"; sourceTree = SOURCE_ROOT; };
-		FF60718293A1B2C3D4E5F608 /* HistoricalPolicyValidationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "decodingOppressionTests/HistoricalPolicyValidationTests.swift"; sourceTree = SOURCE_ROOT; };
-		B04D07D06C7E4B939E8B1001 /* voice_pipeline/swift/EpisodeManifest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "../../voice_pipeline/swift/EpisodeManifest.swift"; sourceTree = SOURCE_ROOT; };
-
-		692E494D3CC240ABB18D1C6A /* decodingOppression/AI/HistoricalBaselineTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/AI/HistoricalBaselineTool.swift; sourceTree = "<group>"; };
-		26858B9939DC4076A1964DD4 /* decodingOppression/AI/HistoricalPolicies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/AI/HistoricalPolicies.swift; sourceTree = "<group>"; };
-		05EAE8E0684C4897AD1AA00E /* decodingOppression/AI/PolicyAnalysisSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/AI/PolicyAnalysisSession.swift; sourceTree = "<group>"; };
-		68362756941F47F8B5F895BC /* decodingOppression/AI/Tier3Engine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/AI/Tier3Engine.swift; sourceTree = "<group>"; };
-		D86898F42EB64C64A533DE12 /* decodingOppression/AI/Tier3Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/AI/Tier3Error.swift; sourceTree = "<group>"; };
-		B9E658A7CE9E487C9078A0A9 /* decodingOppression/Export/ReportExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/Export/ReportExporter.swift; sourceTree = "<group>"; };
-		BE963EFF24004BD0863941ED /* decodingOppression/MLX/MLXClauseClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/MLX/MLXClauseClassifier.swift; sourceTree = "<group>"; };
-		91BAFAAF61D7485DB783DE51 /* decodingOppression/MLX/MLXEmbeddingEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/MLX/MLXEmbeddingEngine.swift; sourceTree = "<group>"; };
-		0FFB3C507B844787B0842396 /* decodingOppression/MLX/MLXError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/MLX/MLXError.swift; sourceTree = "<group>"; };
-		B76505E9686547E7A66EB6DA /* decodingOppression/MLX/ModelDownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/MLX/ModelDownloadManager.swift; sourceTree = "<group>"; };
-		72EFCC07D8A04B0B8F84302C /* decodingOppression/MLX/Tier2Engine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/MLX/Tier2Engine.swift; sourceTree = "<group>"; };
-		25EFCD39A18349A19D69CABC /* decodingOppression/MLX/Tier2EngineHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/MLX/Tier2EngineHolder.swift; sourceTree = "<group>"; };
-		1EA65530CF514E59B4DDDBF3 /* decodingOppression/NLP/ClauseClassificationPipeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/NLP/ClauseClassificationPipeline.swift; sourceTree = "<group>"; };
-		F5FDAE27A7704A3AA9B751CC /* decodingOppression/ViewModels/AnalysisViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/ViewModels/AnalysisViewModel.swift; sourceTree = "<group>"; };
-		9B2929D1C4FC4AD094637BF7 /* decodingOppression/ViewModels/Charts/ArchitectureRadarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/ViewModels/Charts/ArchitectureRadarViewModel.swift; sourceTree = "<group>"; };
-		D1D159F13DAD478B97E24F3F /* decodingOppression/ViewModels/Charts/BenefitHierarchyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/ViewModels/Charts/BenefitHierarchyViewModel.swift; sourceTree = "<group>"; };
-		34021ED6379E45CD8B8F7A78 /* decodingOppression/ViewModels/Charts/CompoundingTrajectoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/ViewModels/Charts/CompoundingTrajectoryViewModel.swift; sourceTree = "<group>"; };
-		314C32CCB04942038C6B2016 /* decodingOppression/ViewModels/Charts/EliteInterestDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/ViewModels/Charts/EliteInterestDetailViewModel.swift; sourceTree = "<group>"; };
-		CC48FF07CF65459B9DC8036D /* decodingOppression/ViewModels/Charts/HistoricalComparisonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/ViewModels/Charts/HistoricalComparisonViewModel.swift; sourceTree = "<group>"; };
-		D98D1B9E9DE3439F88AC17DA /* decodingOppression/ViewModels/Charts/OutgroupExpansionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/ViewModels/Charts/OutgroupExpansionViewModel.swift; sourceTree = "<group>"; };
-		F23B049B655946309D513909 /* decodingOppression/ViewModels/ClauseListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/ViewModels/ClauseListViewModel.swift; sourceTree = "<group>"; };
-		08B2A93F1E4D4D6A987C35E6 /* decodingOppression/ViewModels/ExportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/ViewModels/ExportViewModel.swift; sourceTree = "<group>"; };
-		5CBC830089104552B825F61C /* decodingOppression/ViewModels/PolicyHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/ViewModels/PolicyHistoryViewModel.swift; sourceTree = "<group>"; };
-		7E41D6D2C64D41BE85D3FB23 /* decodingOppression/ViewModels/ScoreCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/ViewModels/ScoreCardViewModel.swift; sourceTree = "<group>"; };
-		405A9CB1A307426DA8FBD96C /* decodingOppression/ViewModels/WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/ViewModels/WelcomeViewModel.swift; sourceTree = "<group>"; };
-		07DA2B555FBF4B919A69553F /* decodingOppression/Views/AnalysisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/Views/AnalysisView.swift; sourceTree = "<group>"; };
-		CE999397B93F4AE9AACFD83D /* decodingOppression/Views/Charts/ArchitectureRadarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/Views/Charts/ArchitectureRadarView.swift; sourceTree = "<group>"; };
-		928BCFBC95164F098A3BF0A7 /* decodingOppression/Views/Charts/BenefitHierarchyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/Views/Charts/BenefitHierarchyView.swift; sourceTree = "<group>"; };
-		54083CAD32774E62943E684B /* decodingOppression/Views/Charts/CompoundingTrajectoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/Views/Charts/CompoundingTrajectoryView.swift; sourceTree = "<group>"; };
-		71F76E76AF3340EFB5DD611B /* decodingOppression/Views/Charts/EliteInterestDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/Views/Charts/EliteInterestDetailView.swift; sourceTree = "<group>"; };
-		690DA1A823954A4BB99D7E98 /* decodingOppression/Views/Charts/HistoricalComparisonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/Views/Charts/HistoricalComparisonView.swift; sourceTree = "<group>"; };
-		741F89111EB041F699A8828B /* decodingOppression/Views/Charts/OutgroupExpansionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/Views/Charts/OutgroupExpansionView.swift; sourceTree = "<group>"; };
-		4D9B2D9423134B80B6BD8471 /* decodingOppression/Views/ClauseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/Views/ClauseListView.swift; sourceTree = "<group>"; };
-		22F70FEDD49146B4BAE2FFC6 /* decodingOppression/Views/ExportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/Views/ExportView.swift; sourceTree = "<group>"; };
-		B29C3E7031604E62B630A646 /* decodingOppression/Views/PolicyHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/Views/PolicyHistoryView.swift; sourceTree = "<group>"; };
-		7DCCFDB29B714A2EB7CB9F06 /* decodingOppression/Views/ScoreCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/Views/ScoreCardView.swift; sourceTree = "<group>"; };
-		52D35FD335A34429AE8649E1 /* decodingOppression/Views/Style/AnalysisViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/Views/Style/AnalysisViewStyle.swift; sourceTree = "<group>"; };
-		3C1B7DCC39C54E3B930E3FEA /* decodingOppression/Views/Style/Charts/ArchitectureRadarViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/Views/Style/Charts/ArchitectureRadarViewStyle.swift; sourceTree = "<group>"; };
-		33F06685DAE3497AA5609DC3 /* decodingOppression/Views/Style/Charts/BenefitHierarchyViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/Views/Style/Charts/BenefitHierarchyViewStyle.swift; sourceTree = "<group>"; };
-		998D25168A1C42E1B793BD59 /* decodingOppression/Views/Style/Charts/CompoundingTrajectoryViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/Views/Style/Charts/CompoundingTrajectoryViewStyle.swift; sourceTree = "<group>"; };
-		2D00E8544CC546C4B7AB8E20 /* decodingOppression/Views/Style/Charts/EliteInterestDetailViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/Views/Style/Charts/EliteInterestDetailViewStyle.swift; sourceTree = "<group>"; };
-		6565B8EC55F545B9A5960731 /* decodingOppression/Views/Style/Charts/HistoricalComparisonViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/Views/Style/Charts/HistoricalComparisonViewStyle.swift; sourceTree = "<group>"; };
-		97386E90AC9C4D04AAD1D2DD /* decodingOppression/Views/Style/Charts/OutgroupExpansionViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/Views/Style/Charts/OutgroupExpansionViewStyle.swift; sourceTree = "<group>"; };
-		ED85917F1B8B47FA8096E0E5 /* decodingOppression/Views/Style/ClauseListViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/Views/Style/ClauseListViewStyle.swift; sourceTree = "<group>"; };
-		63B951C5E1444B57B5A0074A /* decodingOppression/Views/Style/ExportViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/Views/Style/ExportViewStyle.swift; sourceTree = "<group>"; };
-		237646EFA84A4A7A904247AC /* decodingOppression/Views/Style/PolicyHistoryViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/Views/Style/PolicyHistoryViewStyle.swift; sourceTree = "<group>"; };
-		D0D755C6B51C42BEAAC3D287 /* decodingOppression/Views/Style/ScoreCardViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/Views/Style/ScoreCardViewStyle.swift; sourceTree = "<group>"; };
-		7D42BF624DDD45B8A26F7479 /* decodingOppression/Views/Style/WelcomeViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/Views/Style/WelcomeViewStyle.swift; sourceTree = "<group>"; };
-		6034ED83B5C54072BE15AF7A /* decodingOppression/Views/WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/Views/WelcomeView.swift; sourceTree = "<group>"; };
-		F801R1B2C3D4E5F6071829 /* decodingOppression/Models/TrainingModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/Models/TrainingModels.swift; sourceTree = "<group>"; };
-		F802R1B2C3D4E5F6071829 /* decodingOppression/Data/TrainingDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/Data/TrainingDataStore.swift; sourceTree = "<group>"; };
-		F803R1B2C3D4E5F6071829 /* decodingOppression/AI/ValidationRunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/AI/ValidationRunner.swift; sourceTree = "<group>"; };
-		F804R1B2C3D4E5F6071829 /* decodingOppression/MLX/TrainingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/MLX/TrainingManager.swift; sourceTree = "<group>"; };
-		F805R1B2C3D4E5F6071829 /* decodingOppression/ViewModels/TrainingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/ViewModels/TrainingViewModel.swift; sourceTree = "<group>"; };
-		F806R1B2C3D4E5F6071829 /* decodingOppression/ViewModels/ValidationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/ViewModels/ValidationViewModel.swift; sourceTree = "<group>"; };
-		F807R1B2C3D4E5F6071829 /* decodingOppression/ViewModels/TrainingDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/ViewModels/TrainingDataViewModel.swift; sourceTree = "<group>"; };
-		F808R1B2C3D4E5F6071829 /* decodingOppression/Views/Style/TrainingViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/Views/Style/TrainingViewStyle.swift; sourceTree = "<group>"; };
-		F809R1B2C3D4E5F6071829 /* decodingOppression/Views/Style/ValidationViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/Views/Style/ValidationViewStyle.swift; sourceTree = "<group>"; };
-		F80AR1B2C3D4E5F6071829 /* decodingOppression/Views/Style/TrainingDataViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/Views/Style/TrainingDataViewStyle.swift; sourceTree = "<group>"; };
-		F80BR1B2C3D4E5F6071829 /* decodingOppression/Views/TrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/Views/TrainingView.swift; sourceTree = "<group>"; };
-		F80CR1B2C3D4E5F6071829 /* decodingOppression/Views/ValidationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/Views/ValidationView.swift; sourceTree = "<group>"; };
-		F80DR1B2C3D4E5F6071829 /* decodingOppression/Views/TrainingDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/Views/TrainingDataView.swift; sourceTree = "<group>"; };
+		FF60718293A1B2C3D4E5F608 /* decodingOppressionTests/HistoricalPolicyValidationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppressionTests/HistoricalPolicyValidationTests.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -345,15 +172,16 @@
 				1487ADE72F47B27E009460B8 /* decodingOppression/Models/AnalyzedClause.swift */,
 				1487ADE82F47B27E009460B8 /* decodingOppression/Models/GenerableTypes.swift */,
 				1487ADE92F47B27E009460B8 /* decodingOppression/Models/PipelineContracts.swift */,
-				B04D07D06C7E4B939E8B1001 /* voice_pipeline/swift/EpisodeManifest.swift */,
+				B04D07D06C7E4B939E8B1001 /* ../../voice_pipeline/swift/EpisodeManifest.swift */,
 				1487ADEA2F47B27E009460B8 /* decodingOppression/Models/Policy.swift */,
 				1487ADEB2F47B27E009460B8 /* decodingOppression/Models/PolicyAnalysis.swift */,
 				1487ADEC2F47B27E009460B8 /* decodingOppression/Models/ScoreResult.swift */,
 				6B540AA359285FE6BE364309 /* decodingOppression/Models/PolicyScorer.swift */,
 				1487ADED2F47B27E009460B8 /* decodingOppression/Data/KeywordTaxonomies.json */,
-				1487ADED2F47B27E009460B9 /* decodingOppression/Data/historical_clauses.jsonl */,
-				1487ADED2F47B27E009460BB /* decodingOppression/Data/validation_clauses.jsonl */,
+				1487ADED2F47B27E009460B9 /* decodingOppressionTests/historical_clauses.jsonl */,
+				1487ADED2F47B27E009460BB /* decodingOppressionTests/validation_clauses.jsonl */,
 				1487ADFD2F47B281009460B8 /* decodingOppression/Assets.xcassets */,
+				FF60718293A1B2C3D4E5F608 /* decodingOppressionTests/HistoricalPolicyValidationTests.swift */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -521,14 +349,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FF60718293A1B2C3D4E5F610 /* validation_clauses.jsonl in Resources */ = {isa = PBXBuildFile; fileRef = 1487ADED2F47B27E009460BB /* decodingOppression/Data/validation_clauses.jsonl */; };
-
 		1487ADA12F47B280009460B8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF60718293A1B2C3D4E5F610 /* validation_clauses.jsonl in Resources */,
-				1487ADED2F47B27E009460BA /* decodingOppression/Data/historical_clauses.jsonl in Resources */,
+				FF60718293A1B2C3D4E5F610 /* decodingOppressionTests/validation_clauses.jsonl in Resources */,
+				1487ADED2F47B27E009460BA /* decodingOppressionTests/historical_clauses.jsonl in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,8 +379,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B04D07D06C7E4B939E8B1002 /* EpisodeManifest.swift in Sources */,
-				FF60718293A1B2C3D4E5F609 /* HistoricalPolicyValidationTests.swift in Sources */,
+				B04D07D06C7E4B939E8B1002 /* ../../voice_pipeline/swift/EpisodeManifest.swift in Sources */,
+				FF60718293A1B2C3D4E5F609 /* decodingOppressionTests/HistoricalPolicyValidationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

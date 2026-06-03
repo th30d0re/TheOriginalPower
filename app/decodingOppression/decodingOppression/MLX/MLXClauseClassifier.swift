@@ -13,6 +13,140 @@ import MLXLLM
 import MLXLMCommon
 #endif
 
+// MARK: - Response parsing
+
+enum MLXClassificationResponseParser {
+    static func parse(_ response: String) -> TierClassification {
+        var targetGroup: TargetGroup = .multiple
+        var effectDirection: EffectDirection = .neutral
+        var aar: Double = 0
+        var se: Double = 0
+        var ij: Double = 0
+        var rsc: Double = 0
+        var usesProxy = false
+        var confidence: Double = 0.5
+
+        guard let line = trailingClassificationLine(from: response) else {
+            return makeTierClassification(
+                targetGroup: targetGroup,
+                effectDirection: effectDirection,
+                aar: aar, se: se, ij: ij, rsc: rsc,
+                usesProxy: usesProxy,
+                confidence: confidence
+            )
+        }
+
+        func value(for key: String) -> String? {
+            let pattern = "\(key)\\s*=\\s*([a-z0-9_\\.\\-]+)"
+            guard let regex = try? NSRegularExpression(pattern: pattern),
+                  let match = regex.firstMatch(in: line, range: NSRange(line.startIndex..., in: line)),
+                  let range = Range(match.range(at: 1), in: line) else { return nil }
+            return String(line[range])
+        }
+
+        func parseScore(_ name: String) -> Double? {
+            let pattern = "\(name)\\s*=\\s*([0-9]*\\.?[0-9]+)"
+            guard let regex = try? NSRegularExpression(pattern: pattern),
+                  let match = regex.firstMatch(in: line, range: NSRange(line.startIndex..., in: line)),
+                  let range = Range(match.range(at: 1), in: line) else { return nil }
+            return Double(line[range])
+        }
+
+        if let value = value(for: "targetgroup") {
+            switch value {
+            case "outgroup":
+                targetGroup = .outgroup
+            case "ingroup_non_elite", "ingroup-non-elite", "ingroupnonelite", "ingroup":
+                targetGroup = .ingroupNonElite
+            case "elite":
+                targetGroup = .elite
+            default:
+                targetGroup = .multiple
+            }
+        }
+
+        if let value = value(for: "effect") {
+            switch value {
+            case "burden":
+                effectDirection = .burden
+            case "benefit":
+                effectDirection = .benefit
+            case "mixed":
+                effectDirection = .mixed
+            default:
+                effectDirection = .neutral
+            }
+        }
+
+        aar = parseScore("aar") ?? 0
+        se = parseScore("se") ?? 0
+        ij = parseScore("ij") ?? 0
+        rsc = parseScore("rsc") ?? 0
+
+        if let value = value(for: "proxy"), value == "yes" {
+            usesProxy = true
+        }
+
+        let hasTargetGroup = value(for: "targetgroup") != nil
+        let hasEffect = value(for: "effect") != nil
+        let hasAAR = parseScore("aar") != nil
+        let hasSE = parseScore("se") != nil
+        let hasIJ = parseScore("ij") != nil
+        let hasRSC = parseScore("rsc") != nil
+        let hasProxy = value(for: "proxy") != nil
+
+        if hasTargetGroup, hasEffect, hasAAR, hasSE, hasIJ, hasRSC, hasProxy {
+            confidence = 0.85
+        }
+
+        return makeTierClassification(
+            targetGroup: targetGroup,
+            effectDirection: effectDirection,
+            aar: aar, se: se, ij: ij, rsc: rsc,
+            usesProxy: usesProxy,
+            confidence: confidence
+        )
+    }
+
+    /// Returns the key=value payload from the last non-empty line when it begins with `CLASSIFICATION:`.
+    private static func trailingClassificationLine(from response: String) -> String? {
+        let classificationPrefix = "classification:"
+        let lines = response.split(whereSeparator: \.isNewline)
+            .map { String($0).trimmingCharacters(in: .whitespaces) }
+            .filter { !$0.isEmpty }
+
+        guard let lastLine = lines.last?.lowercased(),
+              lastLine.hasPrefix(classificationPrefix) else {
+            return nil
+        }
+
+        return String(lastLine.dropFirst(classificationPrefix.count))
+            .trimmingCharacters(in: .whitespaces)
+    }
+
+    private static func makeTierClassification(
+        targetGroup: TargetGroup,
+        effectDirection: EffectDirection,
+        aar: Double, se: Double, ij: Double, rsc: Double,
+        usesProxy: Bool,
+        confidence: Double
+    ) -> TierClassification {
+        TierClassification(
+            targetGroup: targetGroup,
+            effectDirection: effectDirection,
+            architectureScores: ArchitectureScores(aar: aar, se: se, ij: ij, rsc: rsc),
+            proxyDetection: ProxyDetection(
+                usesProxyVariables: usesProxy,
+                proxyTerms: [],
+                expandsOutgroup: usesProxy && targetGroup == .outgroup
+            ),
+            confidence: confidence,
+            tier: .tier2,
+            wasSafetyFallback: false
+        )
+    }
+}
+
 actor MLXClauseClassifier {
 #if !targetEnvironment(simulator)
     private var session: ChatSession?
@@ -78,98 +212,7 @@ actor MLXClauseClassifier {
     // MARK: - Response parsing
 
     private func parseResponse(_ response: String) -> TierClassification {
-        var targetGroup: TargetGroup = .multiple
-        var effectDirection: EffectDirection = .neutral
-        var aar: Double = 0
-        var se: Double = 0
-        var ij: Double = 0
-        var rsc: Double = 0
-        var usesProxy = false
-        var confidence: Double = 0.5
-
-        let lower = response.lowercased()
-
-        // Extract the CLASSIFICATION: line from the end of the response
-        let classificationPrefix = "classification:"
-        if let range = lower.range(of: classificationPrefix) {
-            let lineStart = range.upperBound
-            let remainder = String(lower[lineStart...])
-            let line = remainder.trimmingCharacters(in: .whitespacesAndNewlines)
-                .components(separatedBy: .newlines)
-                .first?
-                .trimmingCharacters(in: .whitespaces) ?? ""
-
-            func value(for key: String) -> String? {
-                let pattern = "\(key)\\s*=\\s*([a-z0-9_\\.\\-]+)"
-                guard let regex = try? NSRegularExpression(pattern: pattern),
-                      let match = regex.firstMatch(in: line, range: NSRange(line.startIndex..., in: line)),
-                      let range = Range(match.range(at: 1), in: line) else { return nil }
-                return String(line[range])
-            }
-
-            if let value = value(for: "targetgroup") {
-                switch value {
-                case "outgroup":
-                    targetGroup = .outgroup
-                case "ingroup_non_elite", "ingroup-non-elite", "ingroupnonelite", "ingroup":
-                    targetGroup = .ingroupNonElite
-                case "elite":
-                    targetGroup = .elite
-                default:
-                    targetGroup = .multiple
-                }
-            }
-
-            if let value = value(for: "effect") {
-                switch value {
-                case "burden":
-                    effectDirection = .burden
-                case "benefit":
-                    effectDirection = .benefit
-                case "mixed":
-                    effectDirection = .mixed
-                default:
-                    effectDirection = .neutral
-                }
-            }
-
-            func parseScore(_ name: String) -> Double? {
-                let pattern = "\(name)\\s*=\\s*([0-9]*\\.?[0-9]+)"
-                guard let regex = try? NSRegularExpression(pattern: pattern),
-                      let match = regex.firstMatch(in: line, range: NSRange(line.startIndex..., in: line)),
-                      let range = Range(match.range(at: 1), in: line) else { return nil }
-                return Double(line[range])
-            }
-
-            aar = parseScore("aar") ?? 0
-            se = parseScore("se") ?? 0
-            ij = parseScore("ij") ?? 0
-            rsc = parseScore("rsc") ?? 0
-
-            if let value = value(for: "proxy"), value == "yes" {
-                usesProxy = true
-            }
-
-            // Boost confidence if we successfully parsed the classification line
-            confidence = 0.85
-        }
-
-        let architectureScores = ArchitectureScores(aar: aar, se: se, ij: ij, rsc: rsc)
-        let proxyDetection = ProxyDetection(
-            usesProxyVariables: usesProxy,
-            proxyTerms: [],
-            expandsOutgroup: usesProxy && targetGroup == .outgroup
-        )
-
-        return TierClassification(
-            targetGroup: targetGroup,
-            effectDirection: effectDirection,
-            architectureScores: architectureScores,
-            proxyDetection: proxyDetection,
-            confidence: confidence,
-            tier: .tier2,
-            wasSafetyFallback: false
-        )
+        MLXClassificationResponseParser.parse(response)
     }
 #else
     private let downloadManager: ModelDownloadManager
