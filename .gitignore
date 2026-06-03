@@ -36,6 +36,12 @@ __pycache__/
 .venv/
 outputs/
 .venv-voice/
+.venv-harness/
+
+# Harness daemon runtime artefacts
+.harness_token
+harness/data/*.json
+harness/data/*.lock
 
 # Secrets — never commit API keys
 .env

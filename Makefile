@@ -53,6 +53,9 @@ VENV_JUPYTER      := $(VENV)/bin/jupyter
 VENV_VOICE        := .venv-voice
 VENV_VOICE_PYTHON := $(VENV_VOICE)/bin/python3
 VENV_VOICE_PIP    := $(VENV_VOICE)/bin/pip
+VENV_HARNESS        := .venv-harness
+VENV_HARNESS_PYTHON := $(VENV_HARNESS)/bin/python3
+VENV_HARNESS_PIP    := $(VENV_HARNESS)/bin/pip
 # Override with e.g. `make venv SYSTEM_PYTHON=python3.12` if needed
 SYSTEM_PYTHON ?= python3
 
@@ -60,7 +63,7 @@ SYSTEM_PYTHON ?= python3
 # Virtual-environment bootstrap
 # ---------------------------------------------------------------------------
 
-.PHONY: venv venv-voice
+.PHONY: venv venv-voice venv-harness harness
 
 venv:
 	@if [ ! -x "$(VENV_PYTHON)" ]; then \
@@ -86,6 +89,20 @@ venv-voice:
 	else \
 	  echo "✓ venv-voice already exists at $(VENV_VOICE)/"; \
 	fi
+
+venv-harness:
+	@if [ ! -x "$(VENV_HARNESS_PYTHON)" ]; then \
+	  echo "Creating virtual environment at $(VENV_HARNESS)/..."; \
+	  $(SYSTEM_PYTHON) -m venv $(VENV_HARNESS); \
+	  $(VENV_HARNESS_PIP) install --upgrade pip -q; \
+	  $(VENV_HARNESS_PIP) install -r harness/requirements.txt -q; \
+	  echo "✓ venv-harness ready. Activate with: source $(VENV_HARNESS)/bin/activate"; \
+	else \
+	  echo "✓ venv-harness already exists at $(VENV_HARNESS)/"; \
+	fi
+
+harness: venv-harness
+	$(VENV_HARNESS_PYTHON) -m harness.server
 
 empirical: venv
 	@mkdir -p Paper/figures/spectral
