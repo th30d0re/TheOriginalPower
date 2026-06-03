@@ -1,19 +1,19 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'Lead, Highways, and Systemic Harm.blg'
-[36] biber-darwin:340> INFO - === Mon Apr  6, 2026, 05:35:49
-[43] Biber.pm:419> INFO - Reading 'Lead, Highways, and Systemic Harm.bcf'
-[82] Biber.pm:976> INFO - Using all citekeys in bib section 0
-[94] Biber.pm:4419> INFO - Processing section 0
-[99] Biber.pm:4610> INFO - Looking for bibtex file 'Lead_Highways_and_Systemic_Harm.bib' for section 0
-[102] bibtex.pm:1713> INFO - LaTeX decoding ...
-[124] bibtex.pm:1519> INFO - Found BibTeX data source 'Lead_Highways_and_Systemic_Harm.bib'
-[221] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[221] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[221] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[221] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[260] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[261] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[261] Biber.pm:4239> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[261] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[303] bbl.pm:660> INFO - Writing 'Lead, Highways, and Systemic Harm.bbl' with encoding 'UTF-8'
-[329] bbl.pm:763> INFO - Output to Lead, Highways, and Systemic Harm.bbl
+[37] biber-darwin:340> INFO - === Wed Jun  3, 2026, 12:24:41
+[50] Biber.pm:419> INFO - Reading 'Lead, Highways, and Systemic Harm.bcf'
+[91] Biber.pm:976> INFO - Using all citekeys in bib section 0
+[101] Biber.pm:4419> INFO - Processing section 0
+[108] Biber.pm:4610> INFO - Looking for bibtex file 'Lead_Highways_and_Systemic_Harm.bib' for section 0
+[111] bibtex.pm:1713> INFO - LaTeX decoding ...
+[135] bibtex.pm:1519> INFO - Found BibTeX data source 'Lead_Highways_and_Systemic_Harm.bib'
+[236] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[236] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[236] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[236] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[276] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[276] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[276] Biber.pm:4239> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[276] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[321] bbl.pm:660> INFO - Writing 'Lead, Highways, and Systemic Harm.bbl' with encoding 'UTF-8'
+[349] bbl.pm:763> INFO - Output to Lead, Highways, and Systemic Harm.bbl
