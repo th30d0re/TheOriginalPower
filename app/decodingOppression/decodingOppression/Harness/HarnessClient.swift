@@ -31,6 +31,47 @@ struct HarnessSSEEvent: Sendable {
     var data: String
 }
 
+// MARK: - Curriculum DTOs
+
+struct StagingItemDTO: Codable, Sendable, Identifiable {
+    let id: String
+    let domain: String?
+    let itemType: String?
+    let reviewState: String?
+    let contentSha: String?
+    let createdAt: String?
+
+    enum CodingKeys: String, CodingKey {
+        case id, domain
+        case itemType    = "item_type"
+        case reviewState = "review_state"
+        case contentSha  = "content_sha"
+        case createdAt   = "created_at"
+    }
+}
+
+struct StagingListResponse: Codable, Sendable {
+    let items: [StagingItemDTO]
+    let total: Int
+}
+
+struct PromoteRejection: Codable, Sendable {
+    let id: String
+    let invariant: String?
+    let reason: String?
+}
+
+struct PromoteResponse: Codable, Sendable {
+    let promoted: [String]
+    let rejected: [PromoteRejection]
+    let errors: [PromoteError]
+
+    struct PromoteError: Codable, Sendable {
+        let id: String
+        let error: String
+    }
+}
+
 // MARK: - HarnessClient
 
 @MainActor
@@ -337,6 +378,78 @@ final class HarnessClient: ObservableObject {
         if let http = response as? HTTPURLResponse, http.statusCode >= 400 {
             throw HarnessError.activationFailed("kill-switch HTTP \(http.statusCode)")
         }
+    }
+
+    // MARK: - Curriculum API
+
+    func ingestSourceStream(domain: String, url: String, sourceId: String) -> AsyncThrowingStream<HarnessSSEEvent, Error> {
+        AsyncThrowingStream { continuation in
+            Task {
+                guard let token = self.bearerToken else {
+                    continuation.finish(throwing: HarnessError.noToken)
+                    return
+                }
+                var req = self.request(path: "/curriculum/ingest", token: token)
+                req.httpMethod = "POST"
+                req.setValue("application/json", forHTTPHeaderField: "Content-Type")
+                req.httpBody = try? JSONSerialization.data(
+                    withJSONObject: ["domain": domain, "url": url, "source_id": sourceId]
+                )
+
+                do {
+                    let (bytes, _) = try await self.urlSession.bytes(for: req)
+                    var eventType = "message"
+                    for try await line in bytes.lines {
+                        if line.hasPrefix("event:") {
+                            eventType = line.dropFirst(6).trimmingCharacters(in: .whitespaces)
+                        } else if line.hasPrefix("data:") {
+                            let data = String(line.dropFirst(5).trimmingCharacters(in: .whitespaces))
+                            continuation.yield(HarnessSSEEvent(eventType: eventType, data: data))
+                            eventType = "message"
+                        }
+                    }
+                    continuation.finish()
+                } catch {
+                    continuation.finish(throwing: error)
+                }
+            }
+        }
+    }
+
+    func fetchStaging(domain: String? = nil, reviewState: String? = nil) async throws -> StagingListResponse {
+        guard let token = bearerToken else { throw HarnessError.noToken }
+        var components = URLComponents(url: baseURL.appending(path: "/staging"), resolvingAgainstBaseURL: false)!
+        var queryItems: [URLQueryItem] = []
+        if let domain { queryItems.append(URLQueryItem(name: "domain", value: domain)) }
+        if let reviewState { queryItems.append(URLQueryItem(name: "review_state", value: reviewState)) }
+        if !queryItems.isEmpty { components.queryItems = queryItems }
+        var req = URLRequest(url: components.url!)
+        req.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        req.timeoutInterval = 10
+        let (data, _) = try await urlSession.data(for: req)
+        return try JSONDecoder().decode(StagingListResponse.self, from: data)
+    }
+
+    func reviewStagingItems(ids: [String]) async throws {
+        guard let token = bearerToken else { throw HarnessError.noToken }
+        var req = request(path: "/staging/review", token: token)
+        req.httpMethod = "POST"
+        req.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        req.httpBody = try? JSONSerialization.data(withJSONObject: ["ids": ids])
+        let (_, response) = try await urlSession.data(for: req)
+        if let http = response as? HTTPURLResponse, http.statusCode >= 400 {
+            throw HarnessError.activationFailed("staging/review HTTP \(http.statusCode)")
+        }
+    }
+
+    func promoteStagingItems(ids: [String]) async throws -> PromoteResponse {
+        guard let token = bearerToken else { throw HarnessError.noToken }
+        var req = request(path: "/staging/promote", token: token)
+        req.httpMethod = "POST"
+        req.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        req.httpBody = try? JSONSerialization.data(withJSONObject: ["ids": ids])
+        let (data, _) = try await urlSession.data(for: req)
+        return try JSONDecoder().decode(PromoteResponse.self, from: data)
     }
 
     // MARK: - Private helpers

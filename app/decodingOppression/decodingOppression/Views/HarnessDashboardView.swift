@@ -15,6 +15,7 @@ struct HarnessDashboardView: View {
     @Bindable var viewModel: HarnessViewModel
     @Bindable var evalViewModel: EvalViewModel
     @Bindable var invariantViewModel: InvariantViewModel
+    @Bindable var curriculumViewModel: CurriculumViewModel
     @EnvironmentObject private var deps: AppDependencies
 
     private let cardColumns = [
@@ -89,10 +90,7 @@ struct HarnessDashboardView: View {
                 status: viewModel.curriculumCardStatus,
                 isAvailable: viewModel.backendStatus == .online
             ) {
-                ContentUnavailableView(
-                    "Curriculum detail coming in T5",
-                    systemImage: "books.vertical"
-                )
+                CurriculumView(viewModel: curriculumViewModel)
             }
 
             HarnessCard(
@@ -223,7 +221,8 @@ private struct HarnessCard<Destination: View>: View {
     HarnessDashboardView(
         viewModel: HarnessViewModel(),
         evalViewModel: EvalViewModel(),
-        invariantViewModel: InvariantViewModel()
+        invariantViewModel: InvariantViewModel(),
+        curriculumViewModel: CurriculumViewModel()
     )
     .environmentObject(AppDependencies.shared)
     .frame(width: 700, height: 600)

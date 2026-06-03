@@ -108,6 +108,24 @@ def promote_staging_item(item_id: str) -> dict:
     return target
 
 
+def review_staging_item(item_id: str) -> dict:
+    """Find item in staging by id, set review_state='reviewed', rewrite file, return item."""
+    items = read_staging()
+    target = None
+    for item in items:
+        if item.get("id") == item_id:
+            item["review_state"] = "reviewed"
+            target = item
+            break
+    if target is None:
+        raise KeyError(f"staging item not found: {item_id!r}")
+    _ensure_data_dir()
+    with STAGING.open("w", encoding="utf-8") as fh:
+        for item in items:
+            fh.write(json.dumps(item, ensure_ascii=False) + "\n")
+    return target
+
+
 # ---------------------------------------------------------------------------
 # Eval thresholds
 # ---------------------------------------------------------------------------

@@ -23,6 +23,7 @@ struct ContentView: View {
     @State private var harnessViewModel = HarnessViewModel()
     @State private var evalViewModel = EvalViewModel()
     @State private var invariantViewModel = InvariantViewModel()
+    @State private var curriculumViewModel = CurriculumViewModel()
     #endif
 
     var body: some View {
@@ -76,7 +77,7 @@ struct ContentView: View {
             case .data:
                 TrainingDataView(viewModel: trainingDataViewModel)
             case .harness:
-                HarnessDashboardView(viewModel: harnessViewModel, evalViewModel: evalViewModel, invariantViewModel: invariantViewModel)
+                HarnessDashboardView(viewModel: harnessViewModel, evalViewModel: evalViewModel, invariantViewModel: invariantViewModel, curriculumViewModel: curriculumViewModel)
             }
         }
         #endif

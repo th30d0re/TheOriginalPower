@@ -19,7 +19,7 @@ from collections.abc import Iterator
 
 from flask import Flask, Response, jsonify, request, stream_with_context
 
-from . import auth, curator, job_runner, scorer, store_manager
+from . import auth, curator, curriculum, job_runner, scorer, store_manager
 from .compute_probe import run_probe
 
 VERSION = "0.1.0"
@@ -231,30 +231,143 @@ def adapters_activate():
 
 
 # ---------------------------------------------------------------------------
-# Curriculum / staging stubs
+# Curriculum / staging routes
 # ---------------------------------------------------------------------------
+
+_VALID_DOMAINS = set(curriculum.DOMAINS.keys())
+
 
 @app.post("/curriculum/ingest")
 def curriculum_ingest():
-    return _json_stub(
-        {
-            "ingest_id": None,
-            "accepted": 0,
-            "rejected": 0,
-            "errors": [],
-            "status": NOT_IMPLEMENTED,
-        }
+    body = request.get_json(silent=True) or {}
+    domain = body.get("domain", "")
+    url = body.get("url", "")
+    source_id = body.get("source_id") or str(uuid.uuid4())
+
+    if domain not in _VALID_DOMAINS:
+        return jsonify({
+            "status": "error",
+            "detail": f"domain must be one of: {sorted(_VALID_DOMAINS)}",
+        }), 400
+    if not url:
+        return jsonify({"status": "error", "detail": "url is required"}), 400
+
+    notebook_id = curriculum.get_notebook_id(domain)
+    if notebook_id is None:
+        ok, output = curriculum.nlm_run(
+            ["notebook", "create", curriculum.DOMAINS[domain]], timeout=60
+        )
+        if not ok:
+            return jsonify({"status": "error", "detail": f"notebook create failed: {output[:300]}"}), 502
+        for line in output.splitlines():
+            if "ID:" in line:
+                notebook_id = line.split("ID:")[1].strip()
+                break
+        if not notebook_id:
+            notebook_id = output.strip().split()[-1] if output.strip() else str(uuid.uuid4())
+        curriculum.set_notebook_id(domain, notebook_id)
+
+    result = job_runner.submit_job(
+        curriculum.ingest_source, notebook_id, domain, url, source_id
     )
+    if isinstance(result, dict) and result.get("status") == "busy":
+        return jsonify({"status": "busy", "detail": "a job is already running"}), 409
+
+    event_queue: _queue.Queue = result
+
+    def _generate() -> Iterator[str]:
+        while True:
+            item = event_queue.get()
+            if item is None:
+                break
+            payload = json.dumps(item, ensure_ascii=False)
+            yield f"data: {payload}\n\n"
+
+    response = Response(
+        stream_with_context(_generate()),
+        mimetype="text/event-stream",
+    )
+    response.headers["Cache-Control"] = "no-cache"
+    response.headers["X-Accel-Buffering"] = "no"
+    return response
 
 
 @app.get("/staging")
 def staging_list():
-    return _json_stub({"items": []})
+    items = store_manager.read_staging()
+
+    domain_filter = request.args.get("domain")
+    review_state_filter = request.args.get("review_state")
+    item_type_filter = request.args.get("item_type")
+
+    if domain_filter:
+        items = [i for i in items if i.get("domain") == domain_filter]
+    if review_state_filter:
+        items = [i for i in items if i.get("review_state") == review_state_filter]
+    if item_type_filter:
+        items = [i for i in items if i.get("item_type") == item_type_filter]
+
+    return jsonify({"items": items, "total": len(items)})
+
+
+@app.post("/staging/review")
+def staging_review():
+    body = request.get_json(silent=True) or {}
+    ids = body.get("ids", [])
+    if not isinstance(ids, list):
+        return jsonify({"status": "error", "detail": "ids must be a list"}), 400
+
+    reviewed = []
+    not_found = []
+    for item_id in ids:
+        try:
+            store_manager.review_staging_item(item_id)
+            reviewed.append(item_id)
+        except KeyError:
+            not_found.append(item_id)
+
+    return jsonify({"reviewed": reviewed, "not_found": not_found})
 
 
 @app.post("/staging/promote")
 def staging_promote():
-    return _json_stub({"promoted": [], "failed": [], "status": NOT_IMPLEMENTED})
+    body = request.get_json(silent=True) or {}
+    ids = body.get("ids", [])
+    if not isinstance(ids, list):
+        return jsonify({"status": "error", "detail": "ids must be a list"}), 400
+
+    promoted = []
+    rejected = []
+    errors = []
+
+    staging_items = {i.get("id"): i for i in store_manager.read_staging()}
+
+    for item_id in ids:
+        item = staging_items.get(item_id)
+        if item is None:
+            errors.append({"id": item_id, "error": "not found"})
+            continue
+        if item.get("review_state") != "reviewed":
+            errors.append({
+                "id":    item_id,
+                "error": f"item must be reviewed before promotion (state={item.get('review_state')!r})",
+            })
+            continue
+
+        gate_result = curator.gate(item)
+        if not gate_result.get("accepted"):
+            rejected.append({
+                "id":        item_id,
+                "invariant": gate_result.get("invariant"),
+                "reason":    gate_result.get("reason"),
+            })
+            continue
+
+        store_manager.append_item(store_manager.INSTRUCTION_DATASET, item)
+        store_manager.promote_staging_item(item_id)
+        promoted.append(item_id)
+
+    return jsonify({"promoted": promoted, "rejected": rejected, "errors": errors})
 
 
 # ---------------------------------------------------------------------------
