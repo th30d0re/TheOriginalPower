@@ -413,7 +413,9 @@ def invariants_get():
         if name in last_rejection:
             row["last_rejection"] = last_rejection[name]
         if name == curator.HUMAN_KILL_SWITCH:
-            row["armed"] = curator.is_kill_switch_active()
+            armed = curator.is_kill_switch_active()
+            row["armed"] = armed
+            row["holding"] = not armed  # armed = not holding
         result.append(row)
 
     return jsonify({"invariants": result})
