@@ -90,7 +90,7 @@ actor MLXClauseClassifier {
         let lower = response.lowercased()
 
         // Extract the CLASSIFICATION: line from the end of the response
-        let classificationPrefix = "classistration:"
+        let classificationPrefix = "classification:"
         if let range = lower.range(of: classificationPrefix) {
             let lineStart = range.upperBound
             let remainder = String(lower[lineStart...])
