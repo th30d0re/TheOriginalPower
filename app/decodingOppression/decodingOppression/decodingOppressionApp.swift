@@ -44,6 +44,9 @@ struct decodingOppressionApp: App {
             EvalRun.self,
             EvalMetric.self,
             EvalThresholdsCache.self,
+            MirroredItem.self,
+            AuditEntry.self,
+            ProviderState.self,
             #endif
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)

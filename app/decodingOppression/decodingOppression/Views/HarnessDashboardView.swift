@@ -13,6 +13,7 @@ import SwiftUI
 
 struct HarnessDashboardView: View {
     @Bindable var viewModel: HarnessViewModel
+    @Bindable var evalViewModel: EvalViewModel
     @EnvironmentObject private var deps: AppDependencies
 
     private let cardColumns = [
@@ -79,10 +80,7 @@ struct HarnessDashboardView: View {
                 status: viewModel.evalCardStatus,
                 isAvailable: viewModel.backendStatus == .online
             ) {
-                ContentUnavailableView(
-                    "Evaluation detail coming in T5",
-                    systemImage: "chart.bar.doc.horizontal"
-                )
+                EvaluationView(viewModel: evalViewModel)
             }
 
             HarnessCard(
@@ -235,7 +233,7 @@ private struct HarnessCard<Destination: View>: View {
 // MARK: - Preview
 
 #Preview {
-    HarnessDashboardView(viewModel: HarnessViewModel())
+    HarnessDashboardView(viewModel: HarnessViewModel(), evalViewModel: EvalViewModel())
         .environmentObject(AppDependencies.shared)
         .frame(width: 700, height: 600)
 }

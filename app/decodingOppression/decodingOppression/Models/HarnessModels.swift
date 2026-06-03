@@ -81,10 +81,10 @@ final class EvalThresholdsCache {
 
     init(
         id: UUID = UUID(),
-        recall: Double = 0,
-        refusal: Double = 0,
-        classification: Double = 0,
-        lexicalFractal: Double = 0,
+        recall: Double = 0.80,
+        refusal: Double = 0.10,
+        classification: Double = 0.75,
+        lexicalFractal: Double = 0.70,
         weightsData: Data = Data(),
         syncedAt: Date? = nil
     ) {
@@ -95,6 +95,84 @@ final class EvalThresholdsCache {
         self.lexicalFractal = lexicalFractal
         self.weightsData = weightsData
         self.syncedAt = syncedAt
+    }
+}
+
+// MARK: - MirroredItem
+
+/// Mirror of a manifest item from the harness store; synced on read.
+@Model
+final class MirroredItem {
+    var id: String
+    var store: String?
+    var itemType: String?
+    var domain: String?
+    var status: String?
+    var contentSha: String?
+
+    init(
+        id: String = "",
+        store: String? = nil,
+        itemType: String? = nil,
+        domain: String? = nil,
+        status: String? = nil,
+        contentSha: String? = nil
+    ) {
+        self.id = id
+        self.store = store
+        self.itemType = itemType
+        self.domain = domain
+        self.status = status
+        self.contentSha = contentSha
+    }
+}
+
+// MARK: - AuditEntry
+
+/// Mirror of an audit-log entry from the harness; synced on read.
+@Model
+final class AuditEntry {
+    var id: String
+    var invariant: String?
+    var decision: String?
+    var reason: String?
+    var ts: Date?
+
+    init(
+        id: String = "",
+        invariant: String? = nil,
+        decision: String? = nil,
+        reason: String? = nil,
+        ts: Date? = nil
+    ) {
+        self.id = id
+        self.invariant = invariant
+        self.decision = decision
+        self.reason = reason
+        self.ts = ts
+    }
+}
+
+// MARK: - ProviderState
+
+/// Snapshot of a backend provider's availability; synced on read.
+@Model
+final class ProviderState {
+    var name: String
+    var available: Bool
+    var throttledUntil: Date?
+    var lastError: String?
+
+    init(
+        name: String = "",
+        available: Bool = false,
+        throttledUntil: Date? = nil,
+        lastError: String? = nil
+    ) {
+        self.name = name
+        self.available = available
+        self.throttledUntil = throttledUntil
+        self.lastError = lastError
     }
 }
 

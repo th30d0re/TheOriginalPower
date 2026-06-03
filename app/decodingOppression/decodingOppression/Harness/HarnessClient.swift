@@ -246,6 +246,75 @@ final class HarnessClient: ObservableObject {
         }
     }
 
+    // MARK: - Eval API
+
+    func fetchAdapters() async throws -> [String] {
+        guard let token = bearerToken else { throw HarnessError.noToken }
+        let (data, _) = try await urlSession.data(for: request(path: "/adapters", token: token))
+        return (try? JSONDecoder().decode([String].self, from: data)) ?? []
+    }
+
+    func fetchEvalHistory() async throws -> [EvalRunResult] {
+        guard let token = bearerToken else { throw HarnessError.noToken }
+        let (data, _) = try await urlSession.data(for: request(path: "/eval/history", token: token))
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .iso8601
+        return try decoder.decode([EvalRunResult].self, from: data)
+    }
+
+    func fetchThresholds() async throws -> EvalThresholdsDTO {
+        guard let token = bearerToken else { throw HarnessError.noToken }
+        let (data, _) = try await urlSession.data(for: request(path: "/eval/thresholds", token: token))
+        return try JSONDecoder().decode(EvalThresholdsDTO.self, from: data)
+    }
+
+    func putThresholds(_ dto: EvalThresholdsDTO) async throws -> EvalThresholdsDTO {
+        guard let token = bearerToken else { throw HarnessError.noToken }
+        var req = request(path: "/eval/thresholds", token: token)
+        req.httpMethod = "PUT"
+        req.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        req.httpBody = try JSONEncoder().encode(dto)
+        let (data, _) = try await urlSession.data(for: req)
+        return try JSONDecoder().decode(EvalThresholdsDTO.self, from: data)
+    }
+
+    func flagExample(text: String, label: String) async throws -> FlagResult {
+        guard let token = bearerToken else { throw HarnessError.noToken }
+        var req = request(path: "/eval/flag", token: token)
+        req.httpMethod = "POST"
+        req.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        req.httpBody = try? JSONSerialization.data(withJSONObject: ["text": text, "label": label])
+        let (data, _) = try await urlSession.data(for: req)
+        return (try? JSONDecoder().decode(FlagResult.self, from: data))
+            ?? FlagResult(status: "accepted", message: nil)
+    }
+
+    func activateAdapter(_ path: String) async throws {
+        guard let token = bearerToken else { throw HarnessError.noToken }
+        var req = request(path: "/adapters/activate", token: token)
+        req.httpMethod = "POST"
+        req.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        req.httpBody = try? JSONSerialization.data(withJSONObject: ["adapter": path])
+        let (_, response) = try await urlSession.data(for: req)
+        if let http = response as? HTTPURLResponse, http.statusCode >= 400 {
+            throw HarnessError.activationFailed("HTTP \(http.statusCode)")
+        }
+    }
+
+    func fetchManifestSummaries() async throws -> [ManifestSummary] {
+        guard let token = bearerToken else { throw HarnessError.noToken }
+        let (data, _) = try await urlSession.data(for: request(path: "/manifest", token: token))
+        return (try? JSONDecoder().decode([ManifestSummary].self, from: data)) ?? []
+    }
+
+    func fetchAuditEntries() async throws -> [AuditEntryDTO] {
+        guard let token = bearerToken else { throw HarnessError.noToken }
+        let (data, _) = try await urlSession.data(for: request(path: "/audit", token: token))
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .iso8601
+        return (try? decoder.decode([AuditEntryDTO].self, from: data)) ?? []
+    }
+
     // MARK: - Private helpers
 
     private var urlSession: URLSession { .shared }
@@ -262,10 +331,14 @@ final class HarnessClient: ObservableObject {
 
 enum HarnessError: LocalizedError {
     case noToken
+    case activationFailed(String)
 
     var errorDescription: String? {
         switch self {
-        case .noToken: return "Harness token not found. Run `make harness-up` to generate it."
+        case .noToken:
+            return "Harness token not found. Run `make harness-up` to generate it."
+        case .activationFailed(let reason):
+            return "Adapter activation failed: \(reason)"
         }
     }
 }

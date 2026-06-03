@@ -21,6 +21,7 @@ struct ContentView: View {
     @State private var validationViewModel = ValidationViewModel()
     @State private var trainingDataViewModel = TrainingDataViewModel()
     @State private var harnessViewModel = HarnessViewModel()
+    @State private var evalViewModel = EvalViewModel()
     #endif
 
     var body: some View {
@@ -74,7 +75,7 @@ struct ContentView: View {
             case .data:
                 TrainingDataView(viewModel: trainingDataViewModel)
             case .harness:
-                HarnessDashboardView(viewModel: harnessViewModel)
+                HarnessDashboardView(viewModel: harnessViewModel, evalViewModel: evalViewModel)
             }
         }
         #endif
@@ -122,7 +123,7 @@ private enum SidebarItem: String, CaseIterable, Identifiable {
         case .data:
             return "tray.full"
         case .harness:
-            return "gearshape.2"
+            return "waveform.path.ecg"
         }
     }
 }
