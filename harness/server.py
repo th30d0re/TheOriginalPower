@@ -12,11 +12,12 @@ from __future__ import annotations
 
 import atexit
 import json
+import queue as _queue
 from collections.abc import Iterator
 
-from flask import Flask, Response, jsonify, request
+from flask import Flask, Response, jsonify, request, stream_with_context
 
-from . import auth, job_runner
+from . import auth, job_runner, scorer, store_manager
 from .compute_probe import run_probe
 
 VERSION = "0.1.0"
@@ -38,7 +39,7 @@ def _check_token():
 
 
 # ---------------------------------------------------------------------------
-# Stub helpers
+# Stub helpers (retained for un-migrated routes)
 # ---------------------------------------------------------------------------
 
 def _json_stub(body: dict, status: int = 501) -> tuple[Response, int]:
@@ -72,65 +73,118 @@ def probe():
 
 
 # ---------------------------------------------------------------------------
-# Eval stubs
+# Eval routes
 # ---------------------------------------------------------------------------
-
-@app.post("/eval/run")
-def eval_run():
-    return _sse_stub(
-        [
-            ("job.started", {"job_id": None, "kind": "eval", "status": NOT_IMPLEMENTED}),
-            (
-                "eval.progress",
-                {
-                    "job_id": None,
-                    "step": 0,
-                    "total": 0,
-                    "prompt_id": None,
-                    "label": None,
-                    "status": NOT_IMPLEMENTED,
-                },
-            ),
-            (
-                "eval.complete",
-                {
-                    "job_id": None,
-                    "run_id": None,
-                    "results": [],
-                    "status": NOT_IMPLEMENTED,
-                },
-            ),
-        ]
-    )
-
-
-@app.get("/eval/history")
-def eval_history():
-    return _json_stub({"runs": []})
-
 
 @app.get("/eval/thresholds")
 def eval_thresholds_get():
-    return _json_stub(
-        {
-            "coi_delta_max": 0.10,
-            "min_clause_accuracy": None,
-            "min_proxy_detection_accuracy": None,
-        }
-    )
+    return jsonify(store_manager.read_eval_thresholds())
 
 
 @app.put("/eval/thresholds")
 def eval_thresholds_put():
     body = request.get_json(silent=True) or {}
-    return _json_stub(
-        {
-            "coi_delta_max": body.get("coi_delta_max", 0.10),
-            "min_clause_accuracy": body.get("min_clause_accuracy"),
-            "min_proxy_detection_accuracy": body.get("min_proxy_detection_accuracy"),
-            "status": NOT_IMPLEMENTED,
-        }
+    required_keys = {"recall", "refusal", "classification", "lexicalFractal", "weights"}
+    missing = required_keys - body.keys()
+    if missing:
+        return jsonify({"status": "error", "detail": f"missing keys: {sorted(missing)}"}), 400
+    for key in required_keys - {"weights"}:
+        if not isinstance(body[key], (int, float)):
+            return jsonify({"status": "error", "detail": f"{key} must be numeric"}), 400
+    weights = body.get("weights", {})
+    for wk in ("recall", "refusal", "classification", "lexicalFractal"):
+        if not isinstance(weights.get(wk), (int, float)):
+            return jsonify({"status": "error", "detail": f"weights.{wk} must be numeric"}), 400
+    store_manager.write_eval_thresholds(body)
+    return jsonify(body)
+
+
+@app.get("/eval/history")
+def eval_history():
+    return jsonify(store_manager.read_eval_history())
+
+
+@app.post("/eval/run")
+def eval_run():
+    body = request.get_json(silent=True) or {}
+    adapter = body.get("adapter")
+    if not adapter:
+        return jsonify({"status": "error", "detail": "adapter path required"}), 400
+    model_id = body.get("model", scorer.DEFAULT_MODEL_ID)
+
+    result = job_runner.submit_job(scorer.run_eval, adapter, model_id)
+    if isinstance(result, dict) and result.get("status") == "busy":
+        return jsonify({"status": "busy", "detail": "a job is already running"}), 409
+
+    event_queue: _queue.Queue = result
+
+    def _generate() -> Iterator[str]:
+        while True:
+            item = event_queue.get()
+            if item is None:
+                break
+            payload = json.dumps(item, ensure_ascii=False)
+            yield f"data: {payload}\n\n"
+
+    response = Response(
+        stream_with_context(_generate()),
+        mimetype="text/event-stream",
     )
+    response.headers["Cache-Control"] = "no-cache"
+    response.headers["X-Accel-Buffering"] = "no"
+    return response
+
+
+@app.post("/eval/flag")
+def eval_flag():
+    """
+    Ingest a flagged eval item with dedup-on-entry check.
+
+    Body: {"text": "...", "label": "...", "source": "eval_flag"}
+    """
+    body = request.get_json(silent=True) or {}
+    text = body.get("text", "")
+    if not text:
+        return jsonify({"status": "error", "detail": "text is required"}), 400
+
+    sha = store_manager.content_sha(text)
+    if store_manager.check_duplicate(store_manager.INSTRUCTION_DATASET, sha):
+        return jsonify({"status": "duplicate", "detail": "item rejected — duplicate content SHA"}), 409
+
+    item = {
+        "text":        text,
+        "label":       body.get("label", ""),
+        "source":      body.get("source", "eval_flag"),
+        "content_sha": sha,
+    }
+    store_manager.append_item(store_manager.INSTRUCTION_DATASET, item)
+    return jsonify({"status": "accepted", "content_sha": sha}), 201
+
+
+# ---------------------------------------------------------------------------
+# Adapters
+# ---------------------------------------------------------------------------
+
+@app.post("/adapters/activate")
+def adapters_activate():
+    body = request.get_json(silent=True) or {}
+    adapter = body.get("adapter")
+    if not adapter:
+        return jsonify({"status": "error", "detail": "adapter path required"}), 400
+
+    history = store_manager.read_eval_history()
+    passing = [
+        run for run in history
+        if run.get("adapter") == adapter and run.get("all_passed") is True
+    ]
+
+    if not passing:
+        return jsonify({
+            "status": "forbidden",
+            "detail": "no passing eval run on record for this adapter",
+        }), 403
+
+    return jsonify({"status": "activated", "adapter": adapter})
 
 
 # ---------------------------------------------------------------------------
@@ -161,7 +215,7 @@ def staging_promote():
 
 
 # ---------------------------------------------------------------------------
-# CI / providers / train / adapters stubs
+# CI / providers / train stubs
 # ---------------------------------------------------------------------------
 
 @app.post("/ci/run")
@@ -241,20 +295,6 @@ def train_run():
                 },
             ),
         ]
-    )
-
-
-@app.post("/adapters/activate")
-def adapters_activate():
-    body = request.get_json(silent=True) or {}
-    return _json_stub(
-        {
-            "adapter_id": body.get("adapter_id"),
-            "name": body.get("name"),
-            "is_active": False,
-            "metadata": None,
-            "status": NOT_IMPLEMENTED,
-        }
     )
 
 
