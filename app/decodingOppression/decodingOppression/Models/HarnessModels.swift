@@ -133,6 +133,7 @@ final class MirroredItem {
 @Model
 final class AuditEntry {
     var id: String
+    var mutationRef: String?
     var invariant: String?
     var decision: String?
     var reason: String?
@@ -140,12 +141,14 @@ final class AuditEntry {
 
     init(
         id: String = "",
+        mutationRef: String? = nil,
         invariant: String? = nil,
         decision: String? = nil,
         reason: String? = nil,
         ts: Date? = nil
     ) {
         self.id = id
+        self.mutationRef = mutationRef
         self.invariant = invariant
         self.decision = decision
         self.reason = reason

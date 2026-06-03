@@ -160,13 +160,6 @@ struct HarnessDashboardView: View {
             .frame(width: 10, height: 10)
     }
 
-    @ViewBuilder
-    private func statusDot(active: Bool) -> some View {
-        Circle()
-            .fill(active ? Color.green : Color.red)
-            .frame(width: 10, height: 10)
-    }
-
     private func statusColor(for status: HarnessClient.BackendStatus) -> Color {
         switch status {
         case .online:           return .green

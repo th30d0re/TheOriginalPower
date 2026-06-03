@@ -78,7 +78,7 @@ final class InvariantViewModel {
     private func loadAudit(client: HarnessClient, context: ModelContext) async {
         do {
             let entries = try await client.fetchAuditEntries(limit: 100)
-            auditEntries = entries.reversed()
+            auditEntries = Array(entries.reversed())
             HarnessSwiftDataBridge.upsertAuditEntries(entries, context: context)
         } catch {
             // Non-critical; retain previous entries.

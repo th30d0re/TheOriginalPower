@@ -120,6 +120,7 @@ enum HarnessSwiftDataBridge {
             )
             descriptor.fetchLimit = 1
             if let existing = (try? context.fetch(descriptor))?.first {
+                existing.mutationRef = entry.mutationRef
                 existing.invariant = entry.invariant
                 existing.decision = entry.decision
                 existing.reason = entry.reason
@@ -127,6 +128,7 @@ enum HarnessSwiftDataBridge {
             } else {
                 let record = AuditEntry(
                     id: entry.id,
+                    mutationRef: entry.mutationRef,
                     invariant: entry.invariant,
                     decision: entry.decision,
                     reason: entry.reason,
