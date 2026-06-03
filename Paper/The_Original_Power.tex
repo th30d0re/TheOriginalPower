@@ -6597,14 +6597,22 @@ Each proxy is linearly detrended and Hann-windowed before the FFT so that low-fr
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.95\textwidth]{figures/spectral/power_spectrum.pdf}
+\IfFileExists{figures/spectral/power_spectrum.pdf}{%
+\includegraphics[width=0.95\textwidth]{figures/spectral/power_spectrum.pdf}%
+}{%
+\textit{[Figure file not generated]}%
+}
 \caption{\textbf{Power spectra of three political-attention proxy signals.} Top: Google Trends weekly indices (2004--2024) for class keywords (blue) and identity keywords (red). Middle: annual U.S.\ Congressional Record word-frequency counts (1965--2024). Bottom: ANES biennial issue-salience shares (1948--2020) for economy (blue), race (red), and cross-group economic solidarity (green, dashed). Shaded regions mark the class band (3--10\,yr periods) and the identity band (0.8--3\,yr periods). Computed in \texttt{Paper/scripts/spectral\_fourier.ipynb}.}
 \label{fig:power_spectrum}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.95\textwidth]{figures/spectral/band_power_tradeoff.pdf}
+\IfFileExists{figures/spectral/band_power_tradeoff.pdf}{%
+\includegraphics[width=0.95\textwidth]{figures/spectral/band_power_tradeoff.pdf}%
+}{%
+\textit{[Figure file not generated]}%
+}
 \caption{\textbf{Class-band versus identity-band power, rolling 10-year windows of Google Trends (2014--2024).} Top: integrated band powers after linear detrending and Hann-windowing. Class-band power (blue circles) falls from $2.28$ to $0.55$ across the window; identity-band power (red squares) remains an order of magnitude larger throughout. Bottom: class share of total spectral power, $P_{\text{class}}/(P_{\text{class}}+P_{\text{id}})$, declines from $0.073$ to $0.016$ --- the spectral signature of the interference engine redirecting attention from the class band into the identity band.}
 \label{fig:band_power_tradeoff}
 \end{figure}
@@ -6669,7 +6677,11 @@ Across the four shocks the natural period of the backlash collapses from $\appro
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.95\textwidth]{figures/spectral/impulse_responses.pdf}
+\IfFileExists{figures/spectral/impulse_responses.pdf}{%
+\includegraphics[width=0.95\textwidth]{figures/spectral/impulse_responses.pdf}%
+}{%
+\textit{[Figure file not generated]}%
+}
 \caption{\textbf{Damped-oscillator impulse responses, observed vs. fitted, for four historical shocks.} Blue circles: observed backlash-proxy magnitudes. Red curves: fitted $H(s) = K/(s^{2} + 2\zeta\omega_n s + \omega_n^{2})$ impulse response. Panel titles give the shock year and label. Numerical fits reported in \texttt{Paper/scripts/spectral\_laplace.ipynb}.}
 \label{fig:impulse_responses}
 \end{figure}
@@ -7096,7 +7108,11 @@ rolling trajectory is shown in Figure~\ref{fig:phi_load_trajectory}.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.92\linewidth]{figures/spectral/phi_load_trajectory.pdf}
+\IfFileExists{figures/spectral/phi_load_trajectory.pdf}{%
+\includegraphics[width=0.92\linewidth]{figures/spectral/phi_load_trajectory.pdf}%
+}{%
+\textit{[Figure file not generated]}%
+}
 \caption{\textbf{Rolling $\Phi_{\text{load}}$ Proxy, 1948--2020} (eq:45). The annual
 proxy ($1 - \text{cross-group solidarity}/\max$) and its 8-year centered rolling mean
 are shown with a shaded band for the 1965--1980 multi-axis activation window and vertical
@@ -7196,7 +7212,11 @@ Figure~\ref{fig:parseval_conservation}.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.95\linewidth]{figures/spectral/parseval_conservation.pdf}
+\IfFileExists{figures/spectral/parseval_conservation.pdf}{%
+\includegraphics[width=0.95\linewidth]{figures/spectral/parseval_conservation.pdf}%
+}{%
+\textit{[Figure file not generated]}%
+}
 \caption{\textbf{Parseval Conservation Test} (eq:44). Rolling-window class-band, identity-band,
 and residual powers are shown stacked (top panels), with total spectral power $P_{\text{total}}$
 and its coefficient of variation (bottom panels) for Google Trends (left, 10-yr windows) and
@@ -7222,7 +7242,11 @@ counterpart to the calibration figure at~\ref{fig:suppression_substitution}.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.88\linewidth]{figures/spectral/suppression_substitution.pdf}
+\IfFileExists{figures/spectral/suppression_substitution.pdf}{%
+\includegraphics[width=0.88\linewidth]{figures/spectral/suppression_substitution.pdf}%
+}{%
+\textit{[Figure file not generated]}%
+}
 \caption{\textbf{Data-Computed Suppression Envelope Component Substitution, 1956--1985}
 (eq:43--44). Stacked ordinal proxies for the three primary suppression components:
 $R(t)$ (kinetic repression), $\Phi_{\text{load}}(t)$ (phase-load), and $\psi_s(t)$
@@ -7258,7 +7282,11 @@ Figure~\ref{fig:shock_acceleration}.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=\linewidth]{figures/spectral/shock_acceleration_logspace.pdf}
+\IfFileExists{figures/spectral/shock_acceleration_logspace.pdf}{%
+\includegraphics[width=\linewidth]{figures/spectral/shock_acceleration_logspace.pdf}%
+}{%
+\textit{[Figure file not generated]}%
+}
 \caption{\textbf{Shock Response Time-Constant Acceleration: Raw and Log-Space, 1865--2020}
 (eq:42--44). \textit{Panel~(A)}: Fitted natural periods $T_n = 2\pi/\omega_n$ for the
 four primary shocks with exponential decay fit ($R^2 = 0.87$).
@@ -7331,7 +7359,11 @@ convention.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.88\linewidth]{figures/spectral/scotus_class_identity_ratio.pdf}
+\IfFileExists{figures/spectral/scotus_class_identity_ratio.pdf}{%
+\includegraphics[width=0.88\linewidth]{figures/spectral/scotus_class_identity_ratio.pdf}%
+}{%
+\textit{[Figure file not generated]}%
+}
 \caption{\textbf{SCOTUS Corpus: Class vs.\ Identity Language Share, 1873--2018} (eq:40).
 Class-language share ($\text{class per 1\,000 words} / (\text{class} + \text{identity})$)
 across 55 SCOTUS majority opinions, with OLS trend line. The OLS slope is $-0.0016$/yr
@@ -7345,7 +7377,11 @@ Reproducible via \texttt{Paper/scripts/scotus\_corpus\_analysis.ipynb}.}
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.95\linewidth]{figures/spectral/scotus_lomb_scargle.pdf}
+\IfFileExists{figures/spectral/scotus_lomb_scargle.pdf}{%
+\includegraphics[width=0.95\linewidth]{figures/spectral/scotus_lomb_scargle.pdf}%
+}{%
+\textit{[Figure file not generated]}%
+}
 \caption{\textbf{SCOTUS Corpus: Per-Axis Lomb-Scargle Periodogram, 1873--2018} (eq:41).
 Normalised Lomb-Scargle power spectra \cite{scargle_1982} for each identity axis
 (race, gender, religion, sexuality) from 57 non-uniformly sampled opinion PDFs.
@@ -7359,7 +7395,11 @@ results are exploratory. Reproducible via \texttt{Paper/scripts/scotus\_corpus\_
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.78\linewidth]{figures/spectral/scotus_majority_dissent.pdf}
+\IfFileExists{figures/spectral/scotus_majority_dissent.pdf}{%
+\includegraphics[width=0.78\linewidth]{figures/spectral/scotus_majority_dissent.pdf}%
+}{%
+\textit{[Figure file not generated]}%
+}
 \caption{\textbf{SCOTUS Corpus: Majority vs.\ Dissent Class-Language Frequency}
 (eq:40 supplementary, pilot, $n = 2$). Scatter plot of per-1\,000-word class-language
 frequency in majority vs.\ dissent opinion sections for the two corpus cases in which
