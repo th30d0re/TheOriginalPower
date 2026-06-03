@@ -1,0 +1,273 @@
+//
+//  HarnessClient.swift
+//  decodingOppression
+//
+//  macOS-only: actor that manages the Python harness daemon process and
+//  exposes typed HTTP/SSE access to its REST API.
+//
+
+#if os(macOS)
+
+import Combine
+import Foundation
+
+// MARK: - Supporting types
+
+struct HarnessDashboardSummary: Sendable {
+    var evalStatus: String
+    var curriculumStatus: String
+    var ciStatus: String
+    var retrainStatus: String
+    var invariantStatus: String
+}
+
+struct HarnessJobStatus: Sendable {
+    var running: String?
+    var queued: [String]
+}
+
+struct HarnessSSEEvent: Sendable {
+    var eventType: String
+    var data: String
+}
+
+// MARK: - HarnessClient
+
+@MainActor
+final class HarnessClient: ObservableObject {
+
+    // MARK: Status
+
+    enum BackendStatus: Equatable {
+        case online
+        case launching
+        case offline
+        case authFailed(String)
+
+        var isOnline: Bool { self == .online }
+
+        var displayString: String {
+            switch self {
+            case .online:       return "Online · token valid · ready"
+            case .launching:    return "Launching…"
+            case .offline:      return "Offline"
+            case .authFailed(let msg): return "Auth failed: \(msg)"
+            }
+        }
+
+        var dotColor: String {
+            switch self {
+            case .online:   return "green"
+            case .launching: return "orange"
+            case .offline, .authFailed: return "red"
+            }
+        }
+    }
+
+    @Published private(set) var status: BackendStatus = .offline
+
+    // MARK: Constants
+
+    private let baseURL = URL(string: "http://127.0.0.1:7331")!
+    private let connectTimeout: TimeInterval = 20
+    private let pollInterval: TimeInterval = 1.5
+
+    // MARK: Token
+
+    private var bearerToken: String? {
+        guard let repoRoot else { return nil }
+        let tokenPath = repoRoot.appending(path: ".harness_token")
+        return try? String(contentsOf: tokenPath, encoding: .utf8)
+            .trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+
+    // MARK: Repo root resolution
+
+    /// Walks up from the app bundle looking for `.harness_token` or `Makefile`.
+    private var repoRoot: URL? {
+        var candidate = Bundle.main.bundleURL
+        for _ in 0..<10 {
+            candidate = candidate.deletingLastPathComponent()
+            let sentinels = [".harness_token", "Makefile"]
+            for sentinel in sentinels {
+                if FileManager.default.fileExists(
+                    atPath: candidate.appending(path: sentinel).path
+                ) {
+                    return candidate
+                }
+            }
+        }
+        return nil
+    }
+
+    // MARK: - Public API
+
+    func connect() async {
+        guard let token = bearerToken else {
+            status = .authFailed("Token file not found at repo root")
+            return
+        }
+        do {
+            let (_, response) = try await urlSession.data(for: request(path: "/health", token: token))
+            if let http = response as? HTTPURLResponse {
+                switch http.statusCode {
+                case 200:
+                    status = .online
+                case 401, 403:
+                    status = .authFailed("HTTP \(http.statusCode)")
+                default:
+                    status = .offline
+                }
+            }
+        } catch {
+            status = .offline
+        }
+    }
+
+    func launchDaemon() async {
+        status = .launching
+        guard let repoRoot else {
+            status = .authFailed("Cannot resolve repo root for daemon launch")
+            return
+        }
+
+        let pythonPath = repoRoot
+            .appending(path: ".venv-harness/bin/python3")
+            .path
+
+        guard FileManager.default.fileExists(atPath: pythonPath) else {
+            status = .offline
+            return
+        }
+
+        let proc = Process()
+        proc.executableURL = URL(fileURLWithPath: pythonPath)
+        proc.arguments = ["-m", "harness.server"]
+        proc.currentDirectoryURL = repoRoot
+
+        do {
+            try proc.run()
+        } catch {
+            status = .offline
+            return
+        }
+
+        // Poll until online or timeout.
+        let deadline = Date().addingTimeInterval(connectTimeout)
+        while Date() < deadline {
+            try? await Task.sleep(nanoseconds: UInt64(pollInterval * 1_000_000_000))
+            await connect()
+            if status == .online { return }
+        }
+
+        if status != .online {
+            status = .offline
+        }
+    }
+
+    func fetchDashboardSummary() async throws -> HarnessDashboardSummary {
+        guard let token = bearerToken else {
+            throw HarnessError.noToken
+        }
+
+        // /health gives us basic liveness; /eval/history gives last run.
+        let (healthData, _) = try await urlSession.data(for: request(path: "/health", token: token))
+        let (historyData, _) = try await urlSession.data(for: request(path: "/eval/history", token: token))
+
+        let health = (try? JSONSerialization.jsonObject(with: healthData) as? [String: Any]) ?? [:]
+        let history = (try? JSONSerialization.jsonObject(with: historyData) as? [[String: Any]]) ?? []
+
+        let evalStatus: String
+        if let last = history.first,
+           let fidelity = last["fidelity"] as? Double {
+            let pct = Int(fidelity * 100)
+            evalStatus = "Last run: fidelity \(pct)%"
+        } else {
+            evalStatus = "No runs yet"
+        }
+
+        let stagingCount = health["staging_count"] as? Int ?? 0
+        let dpoCount = health["dpo_count"] as? Int ?? 0
+        let datasetReady = health["dataset_ready"] as? Bool ?? false
+        let invariantsPassed = health["invariants_passed"] as? Int ?? 0
+        let invariantsTotal = health["invariants_total"] as? Int ?? 5
+
+        return HarnessDashboardSummary(
+            evalStatus: evalStatus,
+            curriculumStatus: "\(stagingCount) items in staging",
+            ciStatus: "\(dpoCount) DPO pairs to review",
+            retrainStatus: datasetReady ? "Dataset ready · waiting" : "Collecting data",
+            invariantStatus: "\(invariantsPassed)/\(invariantsTotal) holding"
+        )
+    }
+
+    func fetchJobStatus() async throws -> HarnessJobStatus {
+        guard let token = bearerToken else {
+            throw HarnessError.noToken
+        }
+        let (data, _) = try await urlSession.data(for: request(path: "/manifest", token: token))
+        let manifest = (try? JSONSerialization.jsonObject(with: data) as? [String: Any]) ?? [:]
+        let running = manifest["running"] as? String
+        let queued = manifest["queued"] as? [String] ?? []
+        return HarnessJobStatus(running: running, queued: queued)
+    }
+
+    func evalRunStream(adapter: String) -> AsyncThrowingStream<HarnessSSEEvent, Error> {
+        AsyncThrowingStream { continuation in
+            Task {
+                guard let token = self.bearerToken else {
+                    continuation.finish(throwing: HarnessError.noToken)
+                    return
+                }
+                var req = self.request(path: "/eval/run", token: token)
+                req.httpMethod = "POST"
+                req.setValue("application/json", forHTTPHeaderField: "Content-Type")
+                req.httpBody = try? JSONSerialization.data(
+                    withJSONObject: ["adapter": adapter]
+                )
+
+                do {
+                    let (bytes, _) = try await self.urlSession.bytes(for: req)
+                    var eventType = "message"
+                    for try await line in bytes.lines {
+                        if line.hasPrefix("event:") {
+                            eventType = line.dropFirst(6).trimmingCharacters(in: .whitespaces)
+                        } else if line.hasPrefix("data:") {
+                            let data = String(line.dropFirst(5).trimmingCharacters(in: .whitespaces))
+                            continuation.yield(HarnessSSEEvent(eventType: eventType, data: data))
+                            eventType = "message"
+                        }
+                    }
+                    continuation.finish()
+                } catch {
+                    continuation.finish(throwing: error)
+                }
+            }
+        }
+    }
+
+    // MARK: - Private helpers
+
+    private var urlSession: URLSession { .shared }
+
+    private func request(path: String, token: String) -> URLRequest {
+        var req = URLRequest(url: baseURL.appending(path: path))
+        req.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        req.timeoutInterval = 10
+        return req
+    }
+}
+
+// MARK: - Errors
+
+enum HarnessError: LocalizedError {
+    case noToken
+
+    var errorDescription: String? {
+        switch self {
+        case .noToken: return "Harness token not found. Run `make harness-up` to generate it."
+        }
+    }
+}
+
+#endif

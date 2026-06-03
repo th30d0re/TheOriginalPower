@@ -20,6 +20,7 @@ struct ContentView: View {
     @State private var trainingViewModel = TrainingViewModel()
     @State private var validationViewModel = ValidationViewModel()
     @State private var trainingDataViewModel = TrainingDataViewModel()
+    @State private var harnessViewModel = HarnessViewModel()
     #endif
 
     var body: some View {
@@ -72,6 +73,8 @@ struct ContentView: View {
                 ValidationView(viewModel: validationViewModel)
             case .data:
                 TrainingDataView(viewModel: trainingDataViewModel)
+            case .harness:
+                HarnessDashboardView(viewModel: harnessViewModel)
             }
         }
         #endif
@@ -85,6 +88,7 @@ private enum SidebarItem: String, CaseIterable, Identifiable {
     case training
     case validation
     case data
+    case harness
 
     var id: Self { self }
 
@@ -100,6 +104,8 @@ private enum SidebarItem: String, CaseIterable, Identifiable {
             return "Validation"
         case .data:
             return "Data"
+        case .harness:
+            return "Harness"
         }
     }
 
@@ -115,6 +121,8 @@ private enum SidebarItem: String, CaseIterable, Identifiable {
             return "checkmark.shield"
         case .data:
             return "tray.full"
+        case .harness:
+            return "gearshape.2"
         }
     }
 }

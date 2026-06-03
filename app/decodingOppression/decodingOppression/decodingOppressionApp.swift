@@ -40,6 +40,11 @@ struct decodingOppressionApp: App {
         let schema = Schema([
             PolicyAnalysis.self,
             AnalyzedClause.self,
+            #if os(macOS)
+            EvalRun.self,
+            EvalMetric.self,
+            EvalThresholdsCache.self,
+            #endif
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
@@ -85,6 +90,7 @@ final class AppDependencies: ObservableObject {
     let trainingManager: TrainingManager
     let validationRunner: ValidationRunner
     let trainingDataStore: TrainingDataStore
+    let harnessClient: HarnessClient
     #endif
 
     init(modelDownloadManager: ModelDownloadManager) {
@@ -100,6 +106,8 @@ final class AppDependencies: ObservableObject {
         trainingManager = TrainingManager()
         validationRunner = ValidationRunner()
         trainingDataStore = TrainingDataStore.shared
+        harnessClient = HarnessClient()
+        Task { await harnessClient.connect() }
         #endif
     }
 
