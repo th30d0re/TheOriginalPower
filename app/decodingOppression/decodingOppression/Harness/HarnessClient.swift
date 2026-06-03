@@ -307,15 +307,43 @@ final class HarnessClient: ObservableObject {
         return (try? JSONDecoder().decode([ManifestSummary].self, from: data)) ?? []
     }
 
-    func fetchAuditEntries() async throws -> [AuditEntryDTO] {
+    func fetchAuditEntries(limit: Int = 100) async throws -> [AuditEntryDTO] {
         guard let token = bearerToken else { throw HarnessError.noToken }
-        let (data, _) = try await urlSession.data(for: request(path: "/audit", token: token))
+        var components = URLComponents(url: baseURL.appending(path: "/audit"), resolvingAgainstBaseURL: false)!
+        components.queryItems = [URLQueryItem(name: "limit", value: "\(limit)")]
+        var req = URLRequest(url: components.url!)
+        req.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        req.timeoutInterval = 10
+        let (data, _) = try await urlSession.data(for: req)
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601
-        return (try? decoder.decode([AuditEntryDTO].self, from: data)) ?? []
+        let wrapper = (try? decoder.decode(AuditEntriesResponse.self, from: data))
+        return wrapper?.entries ?? []
+    }
+
+    func fetchInvariants() async throws -> InvariantStatusDTO {
+        guard let token = bearerToken else { throw HarnessError.noToken }
+        let (data, _) = try await urlSession.data(for: request(path: "/invariants", token: token))
+        return try JSONDecoder().decode(InvariantStatusDTO.self, from: data)
+    }
+
+    func setKillSwitch(active: Bool) async throws {
+        guard let token = bearerToken else { throw HarnessError.noToken }
+        var req = request(path: "/kill-switch", token: token)
+        req.httpMethod = "POST"
+        req.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        req.httpBody = try? JSONSerialization.data(withJSONObject: ["active": active])
+        let (_, response) = try await urlSession.data(for: req)
+        if let http = response as? HTTPURLResponse, http.statusCode >= 400 {
+            throw HarnessError.activationFailed("kill-switch HTTP \(http.statusCode)")
+        }
     }
 
     // MARK: - Private helpers
+
+    private struct AuditEntriesResponse: Decodable {
+        let entries: [AuditEntryDTO]
+    }
 
     private var urlSession: URLSession { .shared }
 

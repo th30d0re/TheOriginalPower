@@ -14,6 +14,7 @@ import SwiftUI
 struct HarnessDashboardView: View {
     @Bindable var viewModel: HarnessViewModel
     @Bindable var evalViewModel: EvalViewModel
+    @Bindable var invariantViewModel: InvariantViewModel
     @EnvironmentObject private var deps: AppDependencies
 
     private let cardColumns = [
@@ -26,7 +27,6 @@ struct HarnessDashboardView: View {
             VStack(alignment: .leading, spacing: 20) {
                 backendStatusRow
                 cardsGrid
-                invariantRow
                 jobsRow
             }
             .padding(20)
@@ -118,20 +118,14 @@ struct HarnessDashboardView: View {
                     systemImage: "repeat.circle"
                 )
             }
-        }
-    }
 
-    // MARK: Invariant row
-
-    private var invariantRow: some View {
-        GroupBox {
-            HStack {
-                Label("Invariant Status", systemImage: "checkmark.shield")
-                    .font(.headline)
-                Spacer()
-                statusDot(active: viewModel.backendStatus == .online && viewModel.invariantCardStatus.contains("holding"))
-                Text(viewModel.backendStatus == .online ? viewModel.invariantCardStatus : "Unavailable")
-                    .foregroundStyle(viewModel.backendStatus == .online ? .primary : .secondary)
+            HarnessCard(
+                title: "Invariant Status",
+                systemImage: "checkmark.shield",
+                status: viewModel.backendStatus == .online ? viewModel.invariantCardStatus : "Unavailable",
+                isAvailable: viewModel.backendStatus == .online
+            ) {
+                InvariantStatusView(viewModel: invariantViewModel)
             }
         }
     }
@@ -233,9 +227,13 @@ private struct HarnessCard<Destination: View>: View {
 // MARK: - Preview
 
 #Preview {
-    HarnessDashboardView(viewModel: HarnessViewModel(), evalViewModel: EvalViewModel())
-        .environmentObject(AppDependencies.shared)
-        .frame(width: 700, height: 600)
+    HarnessDashboardView(
+        viewModel: HarnessViewModel(),
+        evalViewModel: EvalViewModel(),
+        invariantViewModel: InvariantViewModel()
+    )
+    .environmentObject(AppDependencies.shared)
+    .frame(width: 700, height: 600)
 }
 
 #endif

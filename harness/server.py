@@ -19,7 +19,7 @@ from collections.abc import Iterator
 
 from flask import Flask, Response, jsonify, request, stream_with_context
 
-from . import auth, job_runner, scorer, store_manager
+from . import auth, curator, job_runner, scorer, store_manager
 from .compute_probe import run_probe
 
 VERSION = "0.1.0"
@@ -192,6 +192,14 @@ def eval_flag():
             "created_at":  datetime.datetime.utcnow().isoformat() + "Z",
         },
     }
+    gate_result = curator.gate(item)
+    if not gate_result.get("accepted"):
+        return jsonify({
+            "status":    "rejected",
+            "invariant": gate_result.get("invariant"),
+            "reason":    gate_result.get("reason"),
+        }), 422
+
     store_manager.append_item(store_manager.INSTRUCTION_DATASET, item)
     return jsonify({"status": "accepted", "id": item["id"], "content_sha": sha}), 201
 
@@ -362,7 +370,53 @@ def manifest_get():
 
 @app.get("/audit")
 def audit_get():
-    return _json_stub({"entries": []})
+    try:
+        limit = int(request.args.get("limit", 200))
+    except (TypeError, ValueError):
+        limit = 200
+    entries = store_manager.read_audit_log(limit=limit)
+    return jsonify({"entries": entries})
+
+
+@app.post("/kill-switch")
+def kill_switch():
+    body = request.get_json(silent=True) or {}
+    active = bool(body.get("active", False))
+    curator.set_kill_switch(active)
+    store_manager.append_audit({
+        "id":           str(uuid.uuid4()),
+        "mutation_ref": None,
+        "invariant":    curator.HUMAN_KILL_SWITCH,
+        "decision":     "armed" if active else "disarmed",
+        "reason":       f"kill-switch set to {active} via API",
+        "ts":           datetime.datetime.utcnow().isoformat() + "Z",
+    })
+    return jsonify({"active": active})
+
+
+@app.get("/invariants")
+def invariants_get():
+    entries = store_manager.read_audit_log(limit=500)
+    # Build per-invariant last-rejection map.
+    last_rejection: dict[str, str] = {}
+    for entry in reversed(entries):
+        inv = entry.get("invariant")
+        if entry.get("decision") == "rejected" and inv and inv not in last_rejection:
+            last_rejection[inv] = entry.get("reason", "")
+
+    result = []
+    for name in curator.INVARIANT_NAMES:
+        row: dict = {
+            "name":    name,
+            "holding": name not in last_rejection,
+        }
+        if name in last_rejection:
+            row["last_rejection"] = last_rejection[name]
+        if name == curator.HUMAN_KILL_SWITCH:
+            row["armed"] = curator.is_kill_switch_active()
+        result.append(row)
+
+    return jsonify({"invariants": result})
 
 
 # ---------------------------------------------------------------------------

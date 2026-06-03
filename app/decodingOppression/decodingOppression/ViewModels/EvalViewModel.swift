@@ -81,10 +81,32 @@ struct ManifestSummary: Codable, Sendable {
 
 struct AuditEntryDTO: Codable, Sendable {
     let id: String
+    let mutationRef: String?
     let invariant: String?
     let decision: String?
     let reason: String?
     let ts: Date?
+
+    enum CodingKeys: String, CodingKey {
+        case id, invariant, decision, reason, ts
+        case mutationRef = "mutation_ref"
+    }
+}
+
+struct InvariantDTO: Codable, Sendable {
+    let name: String
+    let holding: Bool
+    let lastRejection: String?
+    let armed: Bool?
+
+    enum CodingKeys: String, CodingKey {
+        case name, holding, armed
+        case lastRejection = "last_rejection"
+    }
+}
+
+struct InvariantStatusDTO: Codable, Sendable {
+    let invariants: [InvariantDTO]
 }
 
 struct FlagResult: Codable, Sendable {
@@ -109,6 +131,7 @@ final class EvalViewModel {
     var thresholds: EvalThresholdsDTO = EvalThresholdsDTO()
     var isSavingThresholds: Bool = false
     var failingExamples: [String: [String]] = [:]
+    var auditEntries: [AuditEntryDTO] = []
     var backendUnavailable: Bool = false
     var lastError: String?
 
@@ -239,9 +262,21 @@ final class EvalViewModel {
             HarnessSwiftDataBridge.upsertMirroredItems(summaries, context: context)
         } catch { }
         do {
-            let entries = try await client.fetchAuditEntries()
+            let entries = try await client.fetchAuditEntries(limit: 100)
+            auditEntries = entries
             HarnessSwiftDataBridge.upsertAuditEntries(entries, context: context)
         } catch { }
+    }
+
+    // MARK: - Invariant helpers
+
+    /// Returns the invariant name from the most recent rejected audit entry whose
+    /// `mutationRef` matches `itemId`, or `nil` if no rejection is on record.
+    func blockedInvariant(for itemId: String) -> String? {
+        auditEntries
+            .reversed()
+            .first { $0.mutationRef == itemId && $0.decision == "rejected" }
+            .flatMap { $0.invariant }
     }
 }
 
