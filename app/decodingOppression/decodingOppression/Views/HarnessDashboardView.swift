@@ -16,6 +16,7 @@ struct HarnessDashboardView: View {
     @Bindable var evalViewModel: EvalViewModel
     @Bindable var invariantViewModel: InvariantViewModel
     @Bindable var curriculumViewModel: CurriculumViewModel
+    @Bindable var ciViewModel: CounterInterferenceViewModel
     @EnvironmentObject private var deps: AppDependencies
 
     private let cardColumns = [
@@ -99,10 +100,7 @@ struct HarnessDashboardView: View {
                 status: viewModel.ciCardStatus,
                 isAvailable: viewModel.backendStatus == .online
             ) {
-                ContentUnavailableView(
-                    "Counter-instruction detail coming in T5",
-                    systemImage: "arrow.triangle.2.circlepath"
-                )
+                CounterInterferenceView(viewModel: ciViewModel)
             }
 
             HarnessCard(
@@ -222,7 +220,8 @@ private struct HarnessCard<Destination: View>: View {
         viewModel: HarnessViewModel(),
         evalViewModel: EvalViewModel(),
         invariantViewModel: InvariantViewModel(),
-        curriculumViewModel: CurriculumViewModel()
+        curriculumViewModel: CurriculumViewModel(),
+        ciViewModel: CounterInterferenceViewModel()
     )
     .environmentObject(AppDependencies.shared)
     .frame(width: 700, height: 600)

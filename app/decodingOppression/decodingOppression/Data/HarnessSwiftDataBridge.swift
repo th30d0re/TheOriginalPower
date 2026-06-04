@@ -140,6 +140,40 @@ enum HarnessSwiftDataBridge {
         try? context.save()
     }
 
+    // MARK: - ProviderState
+
+    static func upsertProviderStates(_ dtos: [ProviderDTO], context: ModelContext) {
+        for dto in dtos {
+            let nameStr = dto.id
+            var descriptor = FetchDescriptor<ProviderState>(
+                predicate: #Predicate { $0.name == nameStr }
+            )
+            descriptor.fetchLimit = 1
+
+            if let existing = (try? context.fetch(descriptor))?.first {
+                existing.available = dto.available
+                existing.lastError = dto.lastError
+                if dto.throttled, let countdown = dto.throttleCountdownSeconds {
+                    existing.throttledUntil = Date().addingTimeInterval(TimeInterval(countdown))
+                } else {
+                    existing.throttledUntil = nil
+                }
+            } else {
+                let throttledUntil: Date? = dto.throttled
+                    ? dto.throttleCountdownSeconds.map { Date().addingTimeInterval(TimeInterval($0)) }
+                    : nil
+                let record = ProviderState(
+                    name: dto.id,
+                    available: dto.available,
+                    throttledUntil: throttledUntil,
+                    lastError: dto.lastError
+                )
+                context.insert(record)
+            }
+        }
+        try? context.save()
+    }
+
     // MARK: - Private helpers
 
     private static func replaceMetrics(

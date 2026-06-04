@@ -31,6 +31,53 @@ struct HarnessSSEEvent: Sendable {
     var data: String
 }
 
+// MARK: - Counter-Interference DTOs
+
+struct ProviderDTO: Codable, Sendable, Identifiable {
+    let id: String
+    let name: String
+    let available: Bool
+    let throttled: Bool
+    let throttleCountdownSeconds: Int?
+    let lastError: String?
+
+    enum CodingKeys: String, CodingKey {
+        case id, name, available, throttled
+        case throttleCountdownSeconds = "throttle_countdown_seconds"
+        case lastError                = "last_error"
+    }
+}
+
+struct ProvidersResponse: Codable, Sendable {
+    let providers: [ProviderDTO]
+}
+
+struct CIReviewRequest: Codable, Sendable {
+    let pairId: String
+    let action: String
+
+    enum CodingKeys: String, CodingKey {
+        case pairId  = "pair_id"
+        case action
+    }
+}
+
+struct CIReviewResponse: Codable, Sendable {
+    let status: String
+    let invariant: String?
+    let reason: String?
+}
+
+struct PendingDPOPair: Codable, Sendable, Identifiable {
+    let id: String
+    let prompt: String
+    let raw: String
+    let detected: [String]
+    let reconstruction: String
+    let provider: String
+    let domain: String?
+}
+
 // MARK: - Curriculum DTOs
 
 struct StagingItemDTO: Codable, Sendable, Identifiable {
@@ -450,6 +497,105 @@ final class HarnessClient: ObservableObject {
         req.httpBody = try? JSONSerialization.data(withJSONObject: ["ids": ids])
         let (data, _) = try await urlSession.data(for: req)
         return try JSONDecoder().decode(PromoteResponse.self, from: data)
+    }
+
+    // MARK: - Counter-Interference API
+
+    func fetchProviders() async throws -> ProvidersResponse {
+        guard let token = bearerToken else { throw HarnessError.noToken }
+        let (data, _) = try await urlSession.data(for: request(path: "/providers", token: token))
+        return try JSONDecoder().decode(ProvidersResponse.self, from: data)
+    }
+
+    func ciRunStream(
+        prompt: String,
+        providerIds: [String]?,
+        domain: String?
+    ) -> AsyncThrowingStream<HarnessSSEEvent, Error> {
+        AsyncThrowingStream { continuation in
+            Task {
+                guard let token = self.bearerToken else {
+                    continuation.finish(throwing: HarnessError.noToken)
+                    return
+                }
+                var req = self.request(path: "/ci/run", token: token)
+                req.httpMethod = "POST"
+                req.setValue("application/json", forHTTPHeaderField: "Content-Type")
+
+                var body: [String: Any] = ["prompt": prompt]
+                if let providerIds { body["provider_ids"] = providerIds }
+                if let domain { body["domain"] = domain }
+                req.httpBody = try? JSONSerialization.data(withJSONObject: body)
+
+                do {
+                    let (bytes, _) = try await self.urlSession.bytes(for: req)
+                    var eventType = "message"
+                    for try await line in bytes.lines {
+                        if line.hasPrefix("event:") {
+                            eventType = line.dropFirst(6).trimmingCharacters(in: .whitespaces)
+                        } else if line.hasPrefix("data:") {
+                            let data = String(line.dropFirst(5).trimmingCharacters(in: .whitespaces))
+                            continuation.yield(HarnessSSEEvent(eventType: eventType, data: data))
+                            eventType = "message"
+                        }
+                    }
+                    continuation.finish()
+                } catch {
+                    continuation.finish(throwing: error)
+                }
+            }
+        }
+    }
+
+    func reviewDPOPair(pairId: String, action: String) async throws -> CIReviewResponse {
+        guard let token = bearerToken else { throw HarnessError.noToken }
+        var req = request(path: "/ci/review", token: token)
+        req.httpMethod = "POST"
+        req.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        req.httpBody = try? JSONSerialization.data(
+            withJSONObject: ["pair_id": pairId, "action": action]
+        )
+        let (data, _) = try await urlSession.data(for: req)
+        return try JSONDecoder().decode(CIReviewResponse.self, from: data)
+    }
+
+    func retryCI(
+        prompt: String,
+        providerIds: [String],
+        domain: String?
+    ) -> AsyncThrowingStream<HarnessSSEEvent, Error> {
+        AsyncThrowingStream { continuation in
+            Task {
+                guard let token = self.bearerToken else {
+                    continuation.finish(throwing: HarnessError.noToken)
+                    return
+                }
+                var req = self.request(path: "/ci/retry", token: token)
+                req.httpMethod = "POST"
+                req.setValue("application/json", forHTTPHeaderField: "Content-Type")
+
+                var body: [String: Any] = ["prompt": prompt, "provider_ids": providerIds]
+                if let domain { body["domain"] = domain }
+                req.httpBody = try? JSONSerialization.data(withJSONObject: body)
+
+                do {
+                    let (bytes, _) = try await self.urlSession.bytes(for: req)
+                    var eventType = "message"
+                    for try await line in bytes.lines {
+                        if line.hasPrefix("event:") {
+                            eventType = line.dropFirst(6).trimmingCharacters(in: .whitespaces)
+                        } else if line.hasPrefix("data:") {
+                            let data = String(line.dropFirst(5).trimmingCharacters(in: .whitespaces))
+                            continuation.yield(HarnessSSEEvent(eventType: eventType, data: data))
+                            eventType = "message"
+                        }
+                    }
+                    continuation.finish()
+                } catch {
+                    continuation.finish(throwing: error)
+                }
+            }
+        }
     }
 
     // MARK: - Private helpers

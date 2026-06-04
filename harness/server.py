@@ -19,8 +19,10 @@ from collections.abc import Iterator
 
 from flask import Flask, Response, jsonify, request, stream_with_context
 
-from . import auth, curator, curriculum, job_runner, scorer, store_manager
+from . import auth, ci_firewall, ci_runner, curator, curriculum, job_runner, scorer, store_manager
 from .compute_probe import run_probe
+from .providers import ALL_PROVIDERS, get_provider
+from .providers import throttle_state
 
 VERSION = "0.1.0"
 HOST = "127.0.0.1"
@@ -371,58 +373,132 @@ def staging_promote():
 
 
 # ---------------------------------------------------------------------------
-# CI / providers / train stubs
+# CI / providers routes
 # ---------------------------------------------------------------------------
-
-@app.post("/ci/run")
-def ci_run():
-    return _sse_stub(
-        [
-            ("job.started", {"job_id": None, "kind": "ci", "status": NOT_IMPLEMENTED}),
-            (
-                "ci.step",
-                {
-                    "job_id": None,
-                    "step": None,
-                    "name": None,
-                    "status": NOT_IMPLEMENTED,
-                },
-            ),
-            (
-                "ci.complete",
-                {
-                    "job_id": None,
-                    "passed": None,
-                    "report": None,
-                    "status": NOT_IMPLEMENTED,
-                },
-            ),
-        ]
-    )
-
 
 @app.get("/providers")
 def providers_list():
-    return _json_stub(
-        {
-            "providers": [
-                {
-                    "id": "mlx",
-                    "name": "MLX Local",
-                    "executor": "mlx",
-                    "available": True,
-                    "models": [],
-                },
-                {
-                    "id": "foundation_models",
-                    "name": "Apple Foundation Models",
-                    "executor": "fm",
-                    "available": False,
-                    "models": [],
-                },
-            ]
-        }
+    roster = []
+    for provider in ALL_PROVIDERS:
+        available = provider._check_available()
+        throttled = throttle_state.is_throttled(provider.provider_id)
+        countdown = throttle_state.throttle_countdown(provider.provider_id)
+        roster.append({
+            "id":                        provider.provider_id,
+            "name":                      provider.display_name,
+            "available":                 available,
+            "throttled":                 throttled,
+            "throttle_countdown_seconds": countdown,
+            "last_error":                None,
+        })
+    return jsonify({"providers": roster})
+
+
+@app.post("/ci/run")
+def ci_run():
+    body = request.get_json(silent=True) or {}
+    prompt = body.get("prompt", "").strip()
+    if not prompt:
+        return jsonify({"status": "error", "detail": "prompt is required"}), 400
+
+    requested_ids: list[str] | None = body.get("provider_ids")
+    domain: str | None = body.get("domain")
+
+    if requested_ids is not None:
+        active_ids = [pid for pid in requested_ids if get_provider(pid) is not None]
+    else:
+        active_ids = [p.provider_id for p in ALL_PROVIDERS]
+
+    result = job_runner.submit_job(ci_runner.run_ci, prompt, active_ids, domain)
+    if isinstance(result, dict) and result.get("status") == "busy":
+        return jsonify({"status": "busy", "detail": "a job is already running"}), 409
+
+    event_queue = result
+
+    def _generate() -> Iterator[str]:
+        while True:
+            item = event_queue.get()
+            if item is None:
+                break
+            payload = json.dumps(item, ensure_ascii=False)
+            yield f"data: {payload}\n\n"
+
+    response = Response(
+        stream_with_context(_generate()),
+        mimetype="text/event-stream",
     )
+    response.headers["Cache-Control"] = "no-cache"
+    response.headers["X-Accel-Buffering"] = "no"
+    return response
+
+
+@app.post("/ci/review")
+def ci_review():
+    body = request.get_json(silent=True) or {}
+    pair_id = body.get("pair_id", "")
+    action = body.get("action", "")
+
+    if not pair_id:
+        return jsonify({"status": "error", "detail": "pair_id is required"}), 400
+    if action not in ("accept", "discard"):
+        return jsonify({"status": "error", "detail": "action must be 'accept' or 'discard'"}), 400
+
+    if action == "discard":
+        ci_runner.pop_pending_pair(pair_id)
+        return jsonify({"status": "discarded"})
+
+    # accept
+    pair = ci_runner.pop_pending_pair(pair_id)
+    if pair is None:
+        return jsonify({"status": "error", "detail": "pair not found"}), 404
+
+    gate_result = curator.gate(pair)
+    if not gate_result.get("accepted"):
+        # Re-insert so the overseer can see the invariant indicator.
+        ci_runner.store_pending_pair(pair)
+        return jsonify({
+            "status":    "rejected",
+            "invariant": gate_result.get("invariant"),
+            "reason":    gate_result.get("reason"),
+        })
+
+    store_manager.gated_append(store_manager.DPO_PAIRS, pair)
+    return jsonify({"status": "accepted", "id": pair_id})
+
+
+@app.post("/ci/retry")
+def ci_retry():
+    body = request.get_json(silent=True) or {}
+    prompt = body.get("prompt", "").strip()
+    if not prompt:
+        return jsonify({"status": "error", "detail": "prompt is required"}), 400
+
+    provider_ids: list[str] = body.get("provider_ids", [])
+    domain: str | None = body.get("domain")
+
+    active_ids = [pid for pid in provider_ids if get_provider(pid) is not None]
+
+    result = job_runner.submit_job(ci_runner.run_ci, prompt, active_ids, domain)
+    if isinstance(result, dict) and result.get("status") == "busy":
+        return jsonify({"status": "busy", "detail": "a job is already running"}), 409
+
+    event_queue = result
+
+    def _generate() -> Iterator[str]:
+        while True:
+            item = event_queue.get()
+            if item is None:
+                break
+            payload = json.dumps(item, ensure_ascii=False)
+            yield f"data: {payload}\n\n"
+
+    response = Response(
+        stream_with_context(_generate()),
+        mimetype="text/event-stream",
+    )
+    response.headers["Cache-Control"] = "no-cache"
+    response.headers["X-Accel-Buffering"] = "no"
+    return response
 
 
 @app.post("/train")
