@@ -18,6 +18,9 @@ import Tokenizers
 actor TrainingManager {
     private var trainingTask: Task<Void, Never>?
     private var latestCheckpointURL: URL?
+    #if !targetEnvironment(simulator)
+    let capabilityProbe = CapabilityProbe.shared
+    #endif
     private let adapterDirectory: URL = {
         let dir = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first!
         let sub = dir.appendingPathComponent("decodingOppression", isDirectory: true)
@@ -192,7 +195,7 @@ actor TrainingManager {
             let avgTrainLoss = trainLosses.isEmpty ? 0.5 : trainLosses.reduce(0, +) / Double(trainLosses.count)
             let avgValLoss = valLosses.isEmpty ? 0.5 : valLosses.reduce(0, +) / Double(valLosses.count)
             
-            let loraAdapterPath = checkpointURL.appendingPathComponent("lora_adapter.mlx", isDirectory: false)
+            let loraAdapterPath = checkpointURL.appendingPathComponent("lora_adapter.safetensors", isDirectory: false)
             try saveLoRAAdapter(to: loraAdapterPath)
             
             let checkpointData = [
@@ -234,39 +237,67 @@ actor TrainingManager {
         loraRank: Int
     ) async throws -> Double? {
         guard !pairs.isEmpty else { return nil }
-        
+
         var totalLoss: Double = 0.0
-        var validBatches: Int = 0
-        
+        var validPairs: Int = 0
+
         for pair in pairs {
-            let combined = pair.prompt + "<|end|>" + pair.completion + "<|end|>"
-            let promptLength = max(1, pair.prompt.count)
-            let labelLength = max(1, pair.completion.count)
-            
-            let crossEntropyEstimate = log(150000.0) * 0.5
-            let scaleFactor = Double(labelLength) / 256.0
-            let adjustedLoss = crossEntropyEstimate * max(0.3, 1.0 - scaleFactor * 0.3)
-            let noisyLoss = adjustedLoss + Double.random(in: -0.05...0.05)
-            
-            totalLoss += max(0.01, noisyLoss)
-            validBatches += 1
+            let pairLoss: Double = try await modelContainer.perform { context in
+                let combined = pair.prompt + pair.completion
+                let combinedTokens = context.tokenizer.encode(text: combined)
+                let promptTokens = context.tokenizer.encode(text: pair.prompt)
+
+                guard combinedTokens.count > 2, promptTokens.count < combinedTokens.count else {
+                    return 0.0
+                }
+
+                // Input: all tokens except last; target: all tokens except first.
+                let inputIds = MLXArray(combinedTokens.dropLast().map { Int32($0) })
+                    .expandedDimensions(axis: 0)
+                let logits = context.model(inputIds, cache: nil)
+                    .squeezed(axis: 0)  // [seq-1, vocab]
+
+                let promptLen = min(promptTokens.count, combinedTokens.count - 1)
+                let completionEnd = combinedTokens.count - 1
+                guard promptLen < completionEnd else { return 0.0 }
+
+                // Completion logits: rows [promptLen ..< completionEnd]
+                let completionLogits = logits[promptLen ..< completionEnd]
+                let completionTargetIds = Array(combinedTokens[(promptLen + 1)...])
+                    .map { Int32($0) }
+
+                // Compute log-softmax and read per-token NLL.
+                let logProbs = MLX.logSoftmax(completionLogits, axis: -1)
+                MLX.eval(logProbs)
+
+                var nll: Double = 0.0
+                for (i, targetId) in completionTargetIds.enumerated() {
+                    let logP = logProbs[i, Int(targetId)].item(Double.self)
+                    nll -= logP
+                }
+                return completionTargetIds.isEmpty ? 0.0 : nll / Double(completionTargetIds.count)
+            }
+
+            totalLoss += pairLoss
+            validPairs += 1
         }
-        
-        return validBatches > 0 ? totalLoss / Double(validBatches) : nil
+
+        return validPairs > 0 ? totalLoss / Double(validPairs) : nil
     }
 
     private func saveLoRAAdapter(to path: URL) throws {
-        let adapterData: [String: Any] = [
-            "lora_targets": ["q_proj", "v_proj", "k_proj", "o_proj"],
-            "rank": 8,
-            "alpha": 16,
-            "dropout": 0.05,
-            "timestamp": ISO8601DateFormatter().string(from: Date())
-        ]
-        
-        if let jsonData = try? JSONSerialization.data(withJSONObject: adapterData) {
-            try jsonData.write(to: path)
-        }
+        // Persist LoRA configuration tensors as a safetensors file.
+        let loraRankArray  = MLXArray([Int32(8)])
+        let loraAlphaArray = MLXArray([Float(16)])
+        let loraDropArray  = MLXArray([Float(0.05)])
+        try MLX.save(
+            arrays: [
+                "lora_rank":    loraRankArray,
+                "lora_alpha":   loraAlphaArray,
+                "lora_dropout": loraDropArray,
+            ],
+            url: path
+        )
     }
 #endif
 

@@ -19,7 +19,7 @@ from collections.abc import Iterator
 
 from flask import Flask, Response, jsonify, request, stream_with_context
 
-from . import auth, ci_firewall, ci_runner, curator, curriculum, job_runner, scorer, store_manager
+from . import auth, ci_firewall, ci_runner, curator, curriculum, job_runner, scorer, store_manager, train_worker
 from .compute_probe import run_probe
 from .providers import ALL_PROVIDERS, get_provider
 from .providers import throttle_state
@@ -503,31 +503,47 @@ def ci_retry():
 
 @app.post("/train")
 def train_run():
-    return _sse_stub(
-        [
-            ("job.started", {"job_id": None, "kind": "train", "status": NOT_IMPLEMENTED}),
-            (
-                "train.epoch",
-                {
-                    "job_id": None,
-                    "epoch": 0,
-                    "total_epochs": 0,
-                    "train_loss": None,
-                    "val_loss": None,
-                    "status": NOT_IMPLEMENTED,
-                },
-            ),
-            (
-                "train.complete",
-                {
-                    "job_id": None,
-                    "adapter_path": None,
-                    "metadata": None,
-                    "status": NOT_IMPLEMENTED,
-                },
-            ),
-        ]
+    body = request.get_json(silent=True) or {}
+    adapter_path: str | None = body.get("adapter_path")
+    model: str | None = body.get("model")
+    data_dir: str | None = body.get("data_dir")
+    epochs: int = int(body.get("epochs", 3))
+    batch_size: int = int(body.get("batch_size", 4))
+    lora_rank: int = int(body.get("lora_rank", 16))
+    learning_rate: float = float(body.get("learning_rate", 1e-5))
+    max_seq_length: int = int(body.get("max_seq_length", 2048))
+
+    result = job_runner.submit_job(
+        train_worker.run_train,
+        adapter_path,
+        model,
+        data_dir,
+        epochs,
+        batch_size,
+        lora_rank,
+        learning_rate,
+        max_seq_length,
     )
+    if isinstance(result, dict) and result.get("status") == "busy":
+        return jsonify({"status": "busy", "detail": "a job is already running"}), 409
+
+    event_queue: _queue.Queue = result
+
+    def _generate() -> Iterator[str]:
+        while True:
+            item = event_queue.get()
+            if item is None:
+                break
+            payload = json.dumps(item, ensure_ascii=False)
+            yield f"data: {payload}\n\n"
+
+    response = Response(
+        stream_with_context(_generate()),
+        mimetype="text/event-stream",
+    )
+    response.headers["Cache-Control"] = "no-cache"
+    response.headers["X-Accel-Buffering"] = "no"
+    return response
 
 
 # ---------------------------------------------------------------------------

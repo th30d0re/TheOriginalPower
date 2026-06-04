@@ -377,6 +377,15 @@ final class HarnessClient: ObservableObject {
             ?? FlagResult(status: "accepted", message: nil)
     }
 
+    func fetchDatasetCounts() async throws -> (datasetCount: Int, dpoCount: Int) {
+        guard let token = bearerToken else { throw HarnessError.noToken }
+        let (data, _) = try await urlSession.data(for: request(path: "/health", token: token))
+        let health = (try? JSONSerialization.jsonObject(with: data) as? [String: Any]) ?? [:]
+        let datasetCount = health["instruction_count"] as? Int ?? 0
+        let dpoCount = health["dpo_count"] as? Int ?? 0
+        return (datasetCount, dpoCount)
+    }
+
     func activateAdapter(_ path: String) async throws {
         guard let token = bearerToken else { throw HarnessError.noToken }
         var req = request(path: "/adapters/activate", token: token)
@@ -424,6 +433,53 @@ final class HarnessClient: ObservableObject {
         let (_, response) = try await urlSession.data(for: req)
         if let http = response as? HTTPURLResponse, http.statusCode >= 400 {
             throw HarnessError.activationFailed("kill-switch HTTP \(http.statusCode)")
+        }
+    }
+
+    // MARK: - Training API
+
+    func trainRunStream(
+        adapterPath: String? = nil,
+        model: String? = nil,
+        epochs: Int? = nil,
+        loraRank: Int? = nil,
+        learningRate: Double? = nil
+    ) -> AsyncThrowingStream<HarnessSSEEvent, Error> {
+        AsyncThrowingStream { continuation in
+            Task {
+                guard let token = self.bearerToken else {
+                    continuation.finish(throwing: HarnessError.noToken)
+                    return
+                }
+                var req = self.request(path: "/train", token: token)
+                req.httpMethod = "POST"
+                req.setValue("application/json", forHTTPHeaderField: "Content-Type")
+
+                var body: [String: Any] = [:]
+                if let adapterPath   { body["adapter_path"]   = adapterPath }
+                if let model         { body["model"]           = model }
+                if let epochs        { body["epochs"]          = epochs }
+                if let loraRank      { body["lora_rank"]       = loraRank }
+                if let learningRate  { body["learning_rate"]   = learningRate }
+                req.httpBody = try? JSONSerialization.data(withJSONObject: body)
+
+                do {
+                    let (bytes, _) = try await self.urlSession.bytes(for: req)
+                    var eventType = "message"
+                    for try await line in bytes.lines {
+                        if line.hasPrefix("event:") {
+                            eventType = line.dropFirst(6).trimmingCharacters(in: .whitespaces)
+                        } else if line.hasPrefix("data:") {
+                            let data = String(line.dropFirst(5).trimmingCharacters(in: .whitespaces))
+                            continuation.yield(HarnessSSEEvent(eventType: eventType, data: data))
+                            eventType = "message"
+                        }
+                    }
+                    continuation.finish()
+                } catch {
+                    continuation.finish(throwing: error)
+                }
+            }
         }
     }
 

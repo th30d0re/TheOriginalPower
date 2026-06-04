@@ -17,6 +17,7 @@ struct HarnessDashboardView: View {
     @Bindable var invariantViewModel: InvariantViewModel
     @Bindable var curriculumViewModel: CurriculumViewModel
     @Bindable var ciViewModel: CounterInterferenceViewModel
+    @Bindable var retrainViewModel: RetrainViewModel
     @EnvironmentObject private var deps: AppDependencies
 
     private let cardColumns = [
@@ -106,13 +107,10 @@ struct HarnessDashboardView: View {
             HarnessCard(
                 title: "Retrain Loop",
                 systemImage: "repeat.circle",
-                status: viewModel.retrainCardStatus,
+                status: retrainCardStatus,
                 isAvailable: viewModel.backendStatus == .online
             ) {
-                ContentUnavailableView(
-                    "Retrain loop detail coming in T5",
-                    systemImage: "repeat.circle"
-                )
+                RetrainLoopView(viewModel: retrainViewModel)
             }
 
             HarnessCard(
@@ -144,6 +142,20 @@ struct HarnessDashboardView: View {
                 }
             }
             .frame(maxWidth: .infinity, alignment: .leading)
+        }
+    }
+
+    // MARK: - Retrain card status
+
+    private var retrainCardStatus: String {
+        if retrainViewModel.isTraining {
+            return "Training…"
+        } else if retrainViewModel.completedAdapterPath != nil && retrainViewModel.latestEvalRun == nil {
+            return "Eval pending"
+        } else if retrainViewModel.canPromote {
+            return "Promote ready"
+        } else {
+            return viewModel.retrainCardStatus
         }
     }
 
@@ -221,7 +233,8 @@ private struct HarnessCard<Destination: View>: View {
         evalViewModel: EvalViewModel(),
         invariantViewModel: InvariantViewModel(),
         curriculumViewModel: CurriculumViewModel(),
-        ciViewModel: CounterInterferenceViewModel()
+        ciViewModel: CounterInterferenceViewModel(),
+        retrainViewModel: RetrainViewModel()
     )
     .environmentObject(AppDependencies.shared)
     .frame(width: 700, height: 600)
