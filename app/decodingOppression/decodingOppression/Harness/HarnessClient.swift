@@ -293,7 +293,7 @@ final class HarnessClient: ObservableObject {
         guard let token = bearerToken else {
             throw HarnessError.noToken
         }
-        let (data, _) = try await urlSession.data(for: request(path: "/manifest", token: token))
+        let (data, _) = try await urlSession.data(for: request(path: "/jobs", token: token))
         let manifest = (try? JSONSerialization.jsonObject(with: data) as? [String: Any]) ?? [:]
         let running = manifest["running"] as? String
         let queued = manifest["queued"] as? [String] ?? []

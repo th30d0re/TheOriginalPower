@@ -16,6 +16,7 @@ import json
 import queue as _queue
 import uuid
 from collections.abc import Iterator
+from pathlib import Path
 
 from flask import Flask, Response, jsonify, request, stream_with_context
 
@@ -238,6 +239,20 @@ def eval_flag():
 # ---------------------------------------------------------------------------
 # Adapters
 # ---------------------------------------------------------------------------
+
+_ADAPTERS_DIR = Path(__file__).parent.parent / "training" / "adapters"
+
+
+@app.get("/adapters")
+def adapters_list():
+    if not _ADAPTERS_DIR.is_dir():
+        return jsonify([])
+    entries = sorted(
+        str(p) for p in _ADAPTERS_DIR.iterdir()
+        if p.is_dir() or p.suffix in (".safetensors", ".npz")
+    )
+    return jsonify(entries)
+
 
 @app.post("/adapters/activate")
 def adapters_activate():
@@ -581,6 +596,19 @@ def train_run():
     response.headers["Cache-Control"] = "no-cache"
     response.headers["X-Accel-Buffering"] = "no"
     return response
+
+
+# ---------------------------------------------------------------------------
+# Jobs
+# ---------------------------------------------------------------------------
+
+@app.get("/jobs")
+def jobs_get():
+    state = job_runner.get_job_status()
+    running_name: str | None = None
+    if state.get("running") and state.get("job"):
+        running_name = state["job"].get("fn")
+    return jsonify({"running": running_name, "queued": []})
 
 
 # ---------------------------------------------------------------------------

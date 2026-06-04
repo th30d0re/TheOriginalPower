@@ -34,35 +34,62 @@ struct RetrainLoopView: View {
     }
 
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: 20) {
-                datasetCountsCard
-                #if !targetEnvironment(simulator)
-                probeCard
-                #endif
-                configSection
-                startCancelButton
-                if viewModel.isTraining || !viewModel.lossHistory.isEmpty {
-                    lossChartSection
+        ZStack {
+            ScrollView {
+                VStack(alignment: .leading, spacing: 20) {
+                    datasetCountsCard
+                    #if !targetEnvironment(simulator)
+                    probeCard
+                    #endif
+                    configSection
+                    startCancelButton
+                    if viewModel.isTraining || !viewModel.lossHistory.isEmpty {
+                        lossChartSection
+                    }
+                    if viewModel.completedAdapterPath != nil {
+                        evalSection
+                    }
+                    if viewModel.latestEvalRun != nil {
+                        promoteSection
+                    }
+                    if let err = viewModel.error {
+                        Text(err.localizedDescription)
+                            .foregroundStyle(.red)
+                            .font(.caption)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                    }
                 }
-                if viewModel.completedAdapterPath != nil {
-                    evalSection
-                }
-                if viewModel.latestEvalRun != nil {
-                    promoteSection
-                }
-                if let err = viewModel.error {
-                    Text(err.localizedDescription)
-                        .foregroundStyle(.red)
-                        .font(.caption)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                }
+                .padding()
             }
-            .padding()
+
+            if viewModel.backendUnavailable {
+                backendUnavailableOverlay
+            }
         }
         .navigationTitle("Retrain Loop")
         .onAppear {
             viewModel.onAppear(client: deps.harnessClient)
+        }
+    }
+
+    // MARK: - Backend unavailable overlay
+
+    private var backendUnavailableOverlay: some View {
+        ZStack {
+            Color.black.opacity(0.35)
+                .ignoresSafeArea()
+            VStack(spacing: 12) {
+                Image(systemName: "exclamationmark.triangle.fill")
+                    .font(.system(size: 40))
+                    .foregroundStyle(.orange)
+                Text("Harness backend unavailable")
+                    .font(.headline)
+                Text("Start the daemon from the Harness Dashboard.")
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
+            }
+            .padding(24)
+            .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 12))
         }
     }
 

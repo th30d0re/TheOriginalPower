@@ -32,6 +32,8 @@ final class RetrainViewModel {
     var probeResult: ProbeResult?
     #endif
 
+    var backendUnavailable: Bool = false
+
     var canPromote: Bool {
         latestEvalRun?.allPassed == true && !promotionSucceeded
     }
@@ -39,6 +41,7 @@ final class RetrainViewModel {
     // MARK: - Lifecycle
 
     func onAppear(client: HarnessClient) {
+        backendUnavailable = !client.status.isOnline
         Task {
             await fetchCounts(client: client)
             #if !targetEnvironment(simulator)
@@ -128,7 +131,10 @@ final class RetrainViewModel {
             let counts = try await client.fetchDatasetCounts()
             datasetCount = counts.datasetCount
             dpoCount = counts.dpoCount
-        } catch { }
+            backendUnavailable = false
+        } catch {
+            backendUnavailable = true
+        }
     }
 
     private func runNativePath(
