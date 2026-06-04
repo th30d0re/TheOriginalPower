@@ -33,7 +33,7 @@ def run_train(
         fn(event_queue, *args)
     """
     job_id = str(uuid.uuid4())
-    event_queue.put_nowait({"event": "job.started", "job_id": job_id, "kind": "train"})
+    event_queue.put_nowait({"event": "job.started", "data": {"job_id": job_id, "kind": "train"}})
 
     try:
         # Lazy imports so the harness process can start without mlx_lm installed.
@@ -42,7 +42,7 @@ def run_train(
         except ImportError as exc:
             event_queue.put_nowait({
                 "event": "error",
-                "data": f"mlx_lm not available in this environment: {exc}",
+                "data": {"message": f"mlx_lm not available in this environment: {exc}"},
             })
             return
 
@@ -75,17 +75,19 @@ def run_train(
 
         event_queue.put_nowait({
             "event": "train.complete",
-            "adapter_path": str(resolved_adapter_path),
-            "metadata": {
+            "data": {
                 "adapter_path": str(resolved_adapter_path),
-                "lora_rank": lora_rank,
-                "epochs": epochs,
-                "timestamp": timestamp,
+                "metadata": {
+                    "adapter_path": str(resolved_adapter_path),
+                    "lora_rank": lora_rank,
+                    "epochs": epochs,
+                    "timestamp": timestamp,
+                },
             },
         })
 
     except Exception as exc:  # noqa: BLE001
-        event_queue.put_nowait({"event": "error", "data": str(exc)})
+        event_queue.put_nowait({"event": "error", "data": {"message": str(exc)}})
 
 
 class _QueueCallback:
@@ -100,15 +102,19 @@ class _QueueCallback:
     def on_train_loss_report(self, info: dict) -> None:
         self._q.put_nowait({
             "event": "train.step",
-            "step": info.get("step"),
-            "train_loss": info.get("loss"),
-            "elapsed_sec": time.time() - self._start,
+            "data": {
+                "step": info.get("step"),
+                "train_loss": info.get("loss"),
+                "elapsed_sec": time.time() - self._start,
+            },
         })
 
     def on_val_loss_report(self, info: dict) -> None:
         self._q.put_nowait({
             "event": "train.val",
-            "step": info.get("step"),
-            "val_loss": info.get("loss"),
-            "val_perplexity": info.get("perplexity"),
+            "data": {
+                "step": info.get("step"),
+                "val_loss": info.get("loss"),
+                "val_perplexity": info.get("perplexity"),
+            },
         })

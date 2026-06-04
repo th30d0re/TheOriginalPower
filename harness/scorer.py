@@ -224,7 +224,7 @@ def compute_fidelity(metrics: dict, weights: dict) -> float:
     recall_w  = max(0.0, weights.get("recall", 0.25))
     refusal_w = max(0.0, weights.get("refusal", 0.25))
     class_w   = max(0.0, weights.get("classification", 0.25))
-    lf_w      = max(0.0, weights.get("lexicalFractal", 0.25))
+    lf_w      = max(0.0, weights.get("lexical_fractal", 0.25))
 
     total_w = recall_w + refusal_w + class_w + lf_w
     if total_w == 0.0:
@@ -269,7 +269,7 @@ def run_eval(
     benchmarks = json.loads(BENCHMARKS_PATH.read_text(encoding="utf-8"))
     thresholds = store_manager.read_eval_thresholds()
     weights = thresholds.get("weights", {
-        "recall": 0.25, "refusal": 0.25, "classification": 0.25, "lexicalFractal": 0.25,
+        "recall": 0.25, "refusal": 0.25, "classification": 0.25, "lexical_fractal": 0.25,
     })
 
     model, tokenizer = load_model(adapter_path, model_id)
@@ -286,7 +286,7 @@ def run_eval(
     lf_val            = score_lexical_fractal(model, tokenizer, benchmarks)
     _progress("lexical_fractal", lf_val)
 
-    metrics = {
+    _metrics_raw = {
         "recall": recall_val,
         "refusal": refusal_val,
         "classification": classification_val,
@@ -294,19 +294,26 @@ def run_eval(
     }
 
     passed = {
-        "recall":        recall_val        >= thresholds.get("recall", 0.80),
-        "refusal":       refusal_val        <= thresholds.get("refusal", 0.10),
-        "classification": classification_val >= thresholds.get("classification", 0.75),
-        "lexical_fractal": lf_val           >= thresholds.get("lexicalFractal", 0.70),
+        "recall":         recall_val         >= thresholds.get("recall", 0.80),
+        "refusal":        refusal_val         <= thresholds.get("refusal", 0.10),
+        "classification": classification_val  >= thresholds.get("classification", 0.75),
+        "lexical_fractal": lf_val             >= thresholds.get("lexical_fractal", 0.70),
     }
 
-    fidelity = compute_fidelity(metrics, weights)
+    metrics_array = [
+        {"name": "recall",         "value": recall_val,         "threshold": thresholds.get("recall", 0.80),         "passed": passed["recall"]},
+        {"name": "refusal",        "value": refusal_val,        "threshold": thresholds.get("refusal", 0.10),        "passed": passed["refusal"]},
+        {"name": "classification", "value": classification_val, "threshold": thresholds.get("classification", 0.75), "passed": passed["classification"]},
+        {"name": "lexical_fractal","value": lf_val,             "threshold": thresholds.get("lexical_fractal", 0.70),"passed": passed["lexical_fractal"]},
+    ]
+
+    fidelity = compute_fidelity(_metrics_raw, weights)
 
     result: dict = {
         "id":         str(uuid.uuid4()),
         "adapter":    str(adapter_path),
         "ran_at":     datetime.datetime.utcnow().isoformat() + "Z",
-        "metrics":    metrics,
+        "metrics":    metrics_array,
         "thresholds": thresholds,
         "passed":     passed,
         "fidelity":   fidelity,

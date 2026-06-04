@@ -67,7 +67,34 @@ def _sse_stub(events: list[tuple[str, dict]], status: int = 501) -> Response:
 
 @app.get("/health")
 def health():
-    return jsonify({"version": VERSION, "status": "ok"})
+    staging_items = store_manager.read_staging()
+    dpo_items = store_manager.read_jsonl(store_manager.DPO_PAIRS)
+    instruction_items = store_manager.read_jsonl(store_manager.INSTRUCTION_DATASET)
+    instruction_count = len(instruction_items)
+
+    from . import curator
+    audit_entries = store_manager.read_audit_log(limit=500)
+    last_rejection: dict[str, str] = {}
+    for entry in reversed(audit_entries):
+        inv = entry.get("invariant")
+        if entry.get("decision") == "rejected" and inv and inv not in last_rejection:
+            last_rejection[inv] = entry.get("reason", "")
+
+    invariants_total = len(curator.INVARIANT_NAMES)
+    invariants_passed = sum(
+        1 for name in curator.INVARIANT_NAMES if name not in last_rejection
+    )
+
+    return jsonify({
+        "version": VERSION,
+        "status": "ok",
+        "staging_count": len(staging_items),
+        "dpo_count": len(dpo_items),
+        "instruction_count": instruction_count,
+        "dataset_ready": instruction_count > 0,
+        "invariants_passed": invariants_passed,
+        "invariants_total": invariants_total,
+    })
 
 
 @app.get("/probe")
@@ -88,7 +115,7 @@ def eval_thresholds_get():
 @app.put("/eval/thresholds")
 def eval_thresholds_put():
     body = request.get_json(silent=True) or {}
-    required_keys = {"recall", "refusal", "classification", "lexicalFractal", "weights"}
+    required_keys = {"recall", "refusal", "classification", "lexical_fractal", "weights"}
     missing = required_keys - body.keys()
     if missing:
         return jsonify({"status": "error", "detail": f"missing keys: {sorted(missing)}"}), 400
@@ -96,13 +123,13 @@ def eval_thresholds_put():
         if not isinstance(body[key], (int, float)):
             return jsonify({"status": "error", "detail": f"{key} must be numeric"}), 400
     weights = body.get("weights", {})
-    for wk in ("recall", "refusal", "classification", "lexicalFractal"):
+    for wk in ("recall", "refusal", "classification", "lexical_fractal"):
         v = weights.get(wk)
         if not isinstance(v, (int, float)):
             return jsonify({"status": "error", "detail": f"weights.{wk} must be numeric"}), 400
         if v < 0:
             return jsonify({"status": "error", "detail": f"weights.{wk} must be non-negative"}), 400
-    total_w = sum(weights[wk] for wk in ("recall", "refusal", "classification", "lexicalFractal"))
+    total_w = sum(weights[wk] for wk in ("recall", "refusal", "classification", "lexical_fractal"))
     if total_w <= 0:
         return jsonify({"status": "error", "detail": "weights must sum to a positive total"}), 400
     store_manager.write_eval_thresholds(body)
@@ -133,8 +160,10 @@ def eval_run():
             item = event_queue.get()
             if item is None:
                 break
-            payload = json.dumps(item, ensure_ascii=False)
-            yield f"data: {payload}\n\n"
+            event_type = item.get("event", "message")
+            payload = item.get("data", item)
+            yield f"event: {event_type}\n"
+            yield f"data: {json.dumps(payload, ensure_ascii=False)}\n\n"
 
     response = Response(
         stream_with_context(_generate()),
@@ -282,8 +311,10 @@ def curriculum_ingest():
             item = event_queue.get()
             if item is None:
                 break
-            payload = json.dumps(item, ensure_ascii=False)
-            yield f"data: {payload}\n\n"
+            event_type = item.get("event", "message")
+            payload = item.get("data", item)
+            yield f"event: {event_type}\n"
+            yield f"data: {json.dumps(payload, ensure_ascii=False)}\n\n"
 
     response = Response(
         stream_with_context(_generate()),
@@ -420,8 +451,10 @@ def ci_run():
             item = event_queue.get()
             if item is None:
                 break
-            payload = json.dumps(item, ensure_ascii=False)
-            yield f"data: {payload}\n\n"
+            event_type = item.get("event", "message")
+            payload = item.get("data", item)
+            yield f"event: {event_type}\n"
+            yield f"data: {json.dumps(payload, ensure_ascii=False)}\n\n"
 
     response = Response(
         stream_with_context(_generate()),
@@ -489,8 +522,10 @@ def ci_retry():
             item = event_queue.get()
             if item is None:
                 break
-            payload = json.dumps(item, ensure_ascii=False)
-            yield f"data: {payload}\n\n"
+            event_type = item.get("event", "message")
+            payload = item.get("data", item)
+            yield f"event: {event_type}\n"
+            yield f"data: {json.dumps(payload, ensure_ascii=False)}\n\n"
 
     response = Response(
         stream_with_context(_generate()),
@@ -534,8 +569,10 @@ def train_run():
             item = event_queue.get()
             if item is None:
                 break
-            payload = json.dumps(item, ensure_ascii=False)
-            yield f"data: {payload}\n\n"
+            event_type = item.get("event", "message")
+            payload = item.get("data", item)
+            yield f"event: {event_type}\n"
+            yield f"data: {json.dumps(payload, ensure_ascii=False)}\n\n"
 
     response = Response(
         stream_with_context(_generate()),
@@ -552,25 +589,39 @@ def train_run():
 
 @app.get("/manifest")
 def manifest_get():
-    return _json_stub(
-        {
-            "schema_version": "0.1.0",
-            "updated_at": None,
-            "stores": {
-                "instruction_dataset": {
-                    "path": "instruction_dataset.jsonl",
-                    "record_count": 0,
-                },
-                "dpo_pairs": {"path": "dpo_pairs.jsonl", "record_count": 0},
-                "staging": {"path": "staging.jsonl", "record_count": 0},
-                "errors_queue": {"path": "errors_queue.jsonl", "record_count": 0},
-                "manifest": {"path": "manifest.json", "record_count": 0},
-                "audit_log": {"path": "audit_log.jsonl", "record_count": 0},
-                "eval_thresholds": {"path": "eval_thresholds.json", "record_count": 0},
-            },
-            "active_adapter": None,
-        }
-    )
+    items = []
+
+    for raw_item in store_manager.read_staging():
+        items.append({
+            "id":          raw_item.get("id"),
+            "store":       "staging",
+            "item_type":   raw_item.get("item_type"),
+            "domain":      raw_item.get("domain"),
+            "status":      raw_item.get("review_state", "pending"),
+            "content_sha": raw_item.get("meta", {}).get("content_sha") or raw_item.get("content_sha"),
+        })
+
+    for raw_item in store_manager.read_jsonl(store_manager.INSTRUCTION_DATASET):
+        items.append({
+            "id":          raw_item.get("id"),
+            "store":       "instruction_dataset",
+            "item_type":   raw_item.get("meta", {}).get("label") or raw_item.get("item_type"),
+            "domain":      raw_item.get("meta", {}).get("source") or raw_item.get("domain"),
+            "status":      "promoted",
+            "content_sha": raw_item.get("meta", {}).get("content_sha") or raw_item.get("content_sha"),
+        })
+
+    for raw_item in store_manager.read_jsonl(store_manager.DPO_PAIRS):
+        items.append({
+            "id":          raw_item.get("id"),
+            "store":       "dpo_pairs",
+            "item_type":   "dpo_pair",
+            "domain":      raw_item.get("domain"),
+            "status":      "accepted",
+            "content_sha": raw_item.get("content_sha"),
+        })
+
+    return jsonify(items)
 
 
 @app.get("/audit")

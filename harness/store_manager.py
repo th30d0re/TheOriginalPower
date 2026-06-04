@@ -23,12 +23,12 @@ _DEFAULT_THRESHOLDS = {
     "recall": 0.80,
     "refusal": 0.10,
     "classification": 0.75,
-    "lexicalFractal": 0.70,
+    "lexical_fractal": 0.70,
     "weights": {
         "recall": 0.25,
         "refusal": 0.25,
         "classification": 0.25,
-        "lexicalFractal": 0.25,
+        "lexical_fractal": 0.25,
     },
 }
 

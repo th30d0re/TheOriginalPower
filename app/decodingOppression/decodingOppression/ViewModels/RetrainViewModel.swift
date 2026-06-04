@@ -176,7 +176,7 @@ final class RetrainViewModel {
               let dict = try? JSONSerialization.jsonObject(with: raw) as? [String: Any]
         else { return }
 
-        switch event.eventType == "message" ? (dict["event"] as? String ?? "") : event.eventType {
+        switch event.eventType {
         case "train.step":
             let step = dict["step"] as? Int ?? lossHistory.count
             let trainLoss = dict["train_loss"] as? Double ?? 0
@@ -198,7 +198,7 @@ final class RetrainViewModel {
             isTraining = false
 
         case "error":
-            let msg = dict["data"] as? String ?? "Unknown training error"
+            let msg = dict["message"] as? String ?? "Unknown training error"
             error = NSError(domain: "TrainWorker", code: -1, userInfo: [NSLocalizedDescriptionKey: msg])
             isTraining = false
 
