@@ -18,6 +18,7 @@ MANIFEST             = DATA_DIR / "manifest.json"
 AUDIT_LOG            = DATA_DIR / "audit_log.jsonl"
 EVAL_THRESHOLDS      = DATA_DIR / "eval_thresholds.json"
 EVAL_HISTORY         = DATA_DIR / "eval_history.jsonl"
+ACTIVE_ADAPTER       = DATA_DIR / "active_adapter.json"
 
 _DEFAULT_THRESHOLDS = {
     "recall": 0.80,
@@ -172,6 +173,32 @@ def append_eval_run(run: dict) -> None:
 
 
 # ---------------------------------------------------------------------------
+# Active adapter
+# ---------------------------------------------------------------------------
+
+def write_active_adapter(adapter_path: str) -> None:
+    """Persist *adapter_path* as the current active adapter atomically."""
+    _ensure_data_dir()
+    tmp = ACTIVE_ADAPTER.with_suffix(".tmp")
+    tmp.write_text(
+        json.dumps({"adapter": adapter_path}, ensure_ascii=False),
+        encoding="utf-8",
+    )
+    os.replace(tmp, ACTIVE_ADAPTER)
+
+
+def read_active_adapter() -> str | None:
+    """Return the currently active adapter path, or None if not set."""
+    if not ACTIVE_ADAPTER.exists():
+        return None
+    try:
+        data = json.loads(ACTIVE_ADAPTER.read_text(encoding="utf-8"))
+        return data.get("adapter")
+    except (json.JSONDecodeError, OSError):
+        return None
+
+
+# ---------------------------------------------------------------------------
 # Content dedup
 # ---------------------------------------------------------------------------
 
@@ -191,9 +218,16 @@ def content_sha(text: str) -> str:
 
 
 def check_duplicate(store: Path, sha: str) -> bool:
-    """Return True if any line in the JSONL store has content_sha == sha."""
+    """Return True if any line in the JSONL store has content_sha == sha.
+
+    Checks both the top-level ``content_sha`` field (used by staging and DPO
+    pairs) and the nested ``meta.content_sha`` field (used by eval_flag and
+    instruction-dataset records) so that no write path can evade dedup.
+    """
     for item in read_jsonl(store):
         if item.get("content_sha") == sha:
+            return True
+        if item.get("meta", {}).get("content_sha") == sha:
             return True
     return False
 

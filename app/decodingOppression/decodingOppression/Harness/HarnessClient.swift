@@ -679,7 +679,7 @@ enum HarnessError: LocalizedError {
     var errorDescription: String? {
         switch self {
         case .noToken:
-            return "Harness token not found. Run `make harness-up` to generate it."
+            return "Harness token not found. Run `make harness` to start the daemon."
         case .activationFailed(let reason):
             return "Adapter activation failed: \(reason)"
         }

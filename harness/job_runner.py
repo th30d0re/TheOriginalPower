@@ -1,4 +1,8 @@
-"""Filesystem lock, single-runner guard, and thread-pool job submission."""
+"""Filesystem lock, single-runner guard, and thread-pool job submission.
+
+Jobs submitted while one is already running are queued (FIFO) and executed
+sequentially rather than rejected with "busy".
+"""
 
 from __future__ import annotations
 
@@ -13,11 +17,6 @@ DATA_DIR = Path(__file__).parent / "data"
 LOCK_PATH = DATA_DIR / "harness.lock"
 
 _lock_fh = None
-
-# In-process job concurrency guard
-_job_lock = threading.Lock()
-_current_job: dict | None = None
-
 
 # ---------------------------------------------------------------------------
 # Process-level filesystem lock (daemon singleton)
@@ -54,37 +53,25 @@ def release_lock() -> None:
 
 
 # ---------------------------------------------------------------------------
-# Job runner
+# Job runner — FIFO queue with sequential execution
 # ---------------------------------------------------------------------------
 
+# _state_lock protects _current_job and _pending.
+_state_lock = threading.Lock()
+_current_job: dict | None = None
+# Each entry: (fn, args, kwargs, event_queue, job_meta)
+_pending: list[tuple] = []
+
+
 def get_job_status() -> dict:
-    """Return current job state."""
-    return {"running": _job_lock.locked(), "job": _current_job}
+    """Return current job state including the list of queued job names."""
+    with _state_lock:
+        queued = [meta["fn"] for *_, meta in _pending]
+        return {"running": _current_job is not None, "job": _current_job, "queued": queued}
 
 
-def submit_job(fn: Callable, *args: Any, **kwargs: Any) -> dict | queue.Queue:
-    """
-    Submit *fn* as a background job.
-
-    If a job is already running, returns {"status": "busy"} immediately.
-
-    Otherwise starts *fn* in a daemon thread and returns a Queue that the
-    caller can read for SSE events.  The thread communicates via the queue:
-
-        {"event": "progress", "data": {...}}
-        {"event": "done",     "data": result_dict}
-        {"event": "error",    "data": "message string"}
-
-    The sentinel None is put on the queue after the final event so the
-    streaming generator knows when to stop.
-    """
-    global _current_job
-
-    acquired = _job_lock.acquire(blocking=False)
-    if not acquired:
-        return {"status": "busy"}
-
-    event_queue: queue.Queue = queue.Queue()
+def _start_job(fn: Callable, args: tuple, kwargs: dict, event_queue: queue.Queue) -> None:
+    """Spawn a daemon thread that runs *fn* and drains _pending when done."""
 
     def _run() -> None:
         global _current_job
@@ -93,11 +80,48 @@ def submit_job(fn: Callable, *args: Any, **kwargs: Any) -> dict | queue.Queue:
         except Exception as exc:  # noqa: BLE001
             event_queue.put({"event": "error", "data": str(exc)})
         finally:
-            event_queue.put(None)  # sentinel
-            _current_job = None
-            _job_lock.release()
+            event_queue.put(None)  # sentinel for streaming generator
+            with _state_lock:
+                if _pending:
+                    next_fn, next_args, next_kwargs, next_eq, next_meta = _pending.pop(0)
+                    _current_job = next_meta
+                else:
+                    _current_job = None
+            # Start next job outside the lock to avoid re-entrant deadlock.
+            if _current_job is not None:
+                _start_job(next_fn, next_args, next_kwargs, next_eq)
 
-    _current_job = {"fn": getattr(fn, "__name__", repr(fn)), "args": str(args)[:200]}
-    thread = threading.Thread(target=_run, daemon=True)
-    thread.start()
+    threading.Thread(target=_run, daemon=True).start()
+
+
+def submit_job(fn: Callable, *args: Any, **kwargs: Any) -> queue.Queue:
+    """
+    Submit *fn* as a background job and return its event Queue.
+
+    If a job is already running, *fn* is appended to the FIFO pending queue
+    and will execute automatically after all preceding jobs complete.
+
+    The Queue carries SSE-style dicts:
+        {"event": "progress", "data": {...}}
+        {"event": "done",     "data": result_dict}
+        {"event": "error",    "data": "message string"}
+
+    None is put on the Queue after the final event as a stop sentinel.
+    """
+    global _current_job
+
+    event_queue: queue.Queue = queue.Queue()
+    job_meta = {"fn": getattr(fn, "__name__", repr(fn)), "args": str(args)[:200]}
+
+    with _state_lock:
+        if _current_job is None:
+            _current_job = job_meta
+            start_now = True
+        else:
+            _pending.append((fn, args, kwargs, event_queue, job_meta))
+            start_now = False
+
+    if start_now:
+        _start_job(fn, args, kwargs, event_queue)
+
     return event_queue

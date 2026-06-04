@@ -76,10 +76,14 @@ final class TrainingViewModel {
     }
 
     func setActiveAdapter(manager: TrainingManager, client: HarnessClient) {
-        guard let adapterPath = completedAdapterPath else { return }
+        guard let adapterPath = completedAdapterPath,
+              let meta = completedAdapterMetadata else { return }
         Task {
             do {
+                // Daemon enforces eval gate; only proceeds when a passing eval run exists.
                 try await client.activateAdapter(adapterPath.path)
+                // Persist locally so loadActiveAdapterMetadata can reflect the promotion.
+                try await manager.setActiveAdapter(metadata: meta)
                 activeAdapterMetadata = try await manager.loadActiveAdapterMetadata()
             } catch {
                 self.error = error

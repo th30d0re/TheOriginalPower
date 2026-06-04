@@ -26,7 +26,7 @@ struct EvalRunResult: Codable, Sendable {
     let ranAt: Date
     let metrics: [MetricResult]
     let thresholds: EvalThresholdsDTO
-    let passed: Bool
+    let passed: [String: Bool]
     let fidelity: Double
     let allPassed: Bool
 
@@ -114,6 +114,11 @@ struct FlagResult: Codable, Sendable {
     let message: String?
 }
 
+private struct ProgressPayload: Decodable {
+    let metric: String
+    let value: Double
+}
+
 // MARK: - EvalViewModel
 
 @Observable
@@ -168,11 +173,9 @@ final class EvalViewModel {
                 for try await event in stream {
                     switch event.eventType {
                     case "progress":
-                        guard let raw = event.data.data(using: .utf8) else { break }
-                        let dict = (try? JSONDecoder().decode([String: Double].self, from: raw)) ?? [:]
-                        for (key, val) in dict {
-                            progressMetrics[key] = val
-                        }
+                        guard let raw = event.data.data(using: .utf8),
+                              let payload = try? JSONDecoder().decode(ProgressPayload.self, from: raw) else { break }
+                        progressMetrics[payload.metric] = payload.value
                     case "done":
                         guard let raw = event.data.data(using: .utf8) else { break }
                         let decoder = JSONDecoder()

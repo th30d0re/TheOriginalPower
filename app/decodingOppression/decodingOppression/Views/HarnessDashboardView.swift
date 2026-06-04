@@ -96,7 +96,7 @@ struct HarnessDashboardView: View {
             }
 
             HarnessCard(
-                title: "Counter-Instruction",
+                title: "Counter-Interference",
                 systemImage: "arrow.triangle.2.circlepath",
                 status: viewModel.ciCardStatus,
                 isAvailable: viewModel.backendStatus == .online

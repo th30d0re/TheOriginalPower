@@ -58,7 +58,7 @@ actor TrainingManager {
                         let epochDir = checkpointDir.appendingPathComponent("epoch_\(epoch)", isDirectory: true)
                         try? FileManager.default.createDirectory(at: epochDir, withIntermediateDirectories: true)
 
-                        let (trainLoss, valLoss) = await trainEpoch(
+                        let (trainLoss, valLoss) = try await trainEpoch(
                             epochNumber: epoch,
                             trainData: trainSet,
                             valData: valSet,
@@ -153,81 +153,70 @@ actor TrainingManager {
         baseModelURL: URL,
         loraConfig: LoRAConfig,
         checkpointURL: URL
-    ) async -> (trainLoss: Double, valLoss: Double) {
+    ) async throws -> (trainLoss: Double, valLoss: Double) {
 #if !targetEnvironment(simulator)
-        do {
-            let modelConfig = ModelConfiguration(id: "")
-            let modelContainer = try await LLMModelFactory.shared.loadContainer(
-                configuration: modelConfig
+        let modelConfig = ModelConfiguration(id: "")
+        let modelContainer = try await LLMModelFactory.shared.loadContainer(
+            configuration: modelConfig
+        )
+
+        let batchSize: Int = 4
+
+        var trainLosses: [Double] = []
+        var valLosses: [Double] = []
+        var accumulatedLoRAWeights: [String: MLXArray] = [:]
+
+        for batchStart in stride(from: 0, to: trainData.count, by: batchSize) {
+            let batchEnd = min(batchStart + batchSize, trainData.count)
+            let batchPairs = Array(trainData[batchStart..<batchEnd])
+
+            let (loss, weights) = try await computeCausalMLXLossAndWeights(
+                pairs: batchPairs,
+                modelContainer: modelContainer,
+                loraConfig: loraConfig
             )
-            
-            let batchSize: Int = 4
-
-            var trainLosses: [Double] = []
-            var valLosses: [Double] = []
-            var accumulatedLoRAWeights: [String: MLXArray] = [:]
-
-            for batchStart in stride(from: 0, to: trainData.count, by: batchSize) {
-                let batchEnd = min(batchStart + batchSize, trainData.count)
-                let batchPairs = Array(trainData[batchStart..<batchEnd])
-
-                let (loss, weights) = try await computeCausalMLXLossAndWeights(
-                    pairs: batchPairs,
-                    modelContainer: modelContainer,
-                    loraConfig: loraConfig
-                )
-                if loss > 0 { trainLosses.append(loss) }
-                for (k, v) in weights { accumulatedLoRAWeights[k] = v }
-            }
-
-            for batchStart in stride(from: 0, to: valData.count, by: batchSize) {
-                let batchEnd = min(batchStart + batchSize, valData.count)
-                let batchPairs = Array(valData[batchStart..<batchEnd])
-
-                if let loss = try await computeCausalMLXLoss(
-                    pairs: batchPairs,
-                    modelContainer: modelContainer,
-                    loraRank: loraConfig.loraRank
-                ) {
-                    valLosses.append(loss)
-                }
-            }
-
-            let avgTrainLoss = trainLosses.isEmpty ? 0.5 : trainLosses.reduce(0, +) / Double(trainLosses.count)
-            let avgValLoss = valLosses.isEmpty ? 0.5 : valLosses.reduce(0, +) / Double(valLosses.count)
-
-            let loraAdapterPath = checkpointURL.appendingPathComponent("lora_adapter.safetensors", isDirectory: false)
-            try saveLoRAAdapter(to: loraAdapterPath, arrays: accumulatedLoRAWeights)
-            
-            let checkpointData = [
-                "epoch": epochNumber,
-                "train_loss": avgTrainLoss,
-                "val_loss": avgValLoss,
-                "lora_rank": loraConfig.loraRank,
-                "learning_rate": loraConfig.learningRate,
-                "timestamp": ISO8601DateFormatter().string(from: Date()),
-                "batch_size": batchSize,
-                "max_tokens": 512
-            ] as [String: Any]
-            
-            if let jsonData = try? JSONSerialization.data(withJSONObject: checkpointData) {
-                try? jsonData.write(to: checkpointURL.appendingPathComponent("checkpoint.json", isDirectory: false))
-            }
-            
-            return (avgTrainLoss, avgValLoss)
-        } catch {
-            let baseLoss = 0.5
-            let decayFactor = Double(epochNumber) * 0.08 / Double(loraConfig.epochs)
-            let trainLoss = max(0.01, baseLoss - decayFactor + Double.random(in: -0.01...0.01))
-            let valLoss = trainLoss + Double.random(in: 0...0.03)
-            return (trainLoss, valLoss)
+            if loss > 0 { trainLosses.append(loss) }
+            for (k, v) in weights { accumulatedLoRAWeights[k] = v }
         }
+
+        for batchStart in stride(from: 0, to: valData.count, by: batchSize) {
+            let batchEnd = min(batchStart + batchSize, valData.count)
+            let batchPairs = Array(valData[batchStart..<batchEnd])
+
+            if let loss = try await computeCausalMLXLoss(
+                pairs: batchPairs,
+                modelContainer: modelContainer,
+                loraRank: loraConfig.loraRank
+            ) {
+                valLosses.append(loss)
+            }
+        }
+
+        let avgTrainLoss = trainLosses.isEmpty ? 0 : trainLosses.reduce(0, +) / Double(trainLosses.count)
+        let avgValLoss = valLosses.isEmpty ? 0 : valLosses.reduce(0, +) / Double(valLosses.count)
+
+        let loraAdapterPath = checkpointURL.appendingPathComponent("lora_adapter.safetensors", isDirectory: false)
+        try saveLoRAAdapter(to: loraAdapterPath, arrays: accumulatedLoRAWeights)
+
+        let checkpointData = [
+            "epoch": epochNumber,
+            "train_loss": avgTrainLoss,
+            "val_loss": avgValLoss,
+            "lora_rank": loraConfig.loraRank,
+            "learning_rate": loraConfig.learningRate,
+            "timestamp": ISO8601DateFormatter().string(from: Date()),
+            "batch_size": batchSize,
+            "max_tokens": 512
+        ] as [String: Any]
+
+        if let jsonData = try? JSONSerialization.data(withJSONObject: checkpointData) {
+            try? jsonData.write(to: checkpointURL.appendingPathComponent("checkpoint.json", isDirectory: false))
+        }
+
+        return (avgTrainLoss, avgValLoss)
 #else
-        let baseLoss = 0.5
-        let decayFactor = Double(epochNumber) * 0.08 / Double(loraConfig.epochs)
-        let trainLoss = max(0.01, baseLoss - decayFactor + Double.random(in: -0.01...0.01))
-        let valLoss = trainLoss + Double.random(in: 0...0.03)
-        return (trainLoss, valLoss)
+        // Simulator does not support Metal or MLX; training is unavailable.
+        throw TrainingManagerError.mlxUnavailable
 #endif
     }
 
@@ -361,26 +350,15 @@ actor TrainingManager {
         return (avgLoss, accumulated)
     }
 
-    /// Persists LoRA weight tensors to a safetensors file.
-    /// When `arrays` contains trained LoRA A/B matrices these are written directly.
-    /// If `arrays` is empty (gradient computation found no LoRA layers), falls back to
-    /// config scalar tensors so the artifact remains structurally valid for the eval harness.
+    /// Persists trained LoRA A/B weight tensors to a safetensors file.
+    /// Throws `TrainingManagerError.noLoRAWeightsExtracted` when the gradient pass
+    /// produced no named parameters matching "lora_a" or "lora_b", preventing a
+    /// placeholder artifact from masking a non-functional training run.
     private func saveLoRAAdapter(to path: URL, arrays: [String: MLXArray]) throws {
-        if arrays.isEmpty {
-            let loraRankArray  = MLXArray([Int32(8)])
-            let loraAlphaArray = MLXArray([Float(16)])
-            let loraDropArray  = MLXArray([Float(0.05)])
-            try MLX.save(
-                arrays: [
-                    "lora_rank":    loraRankArray,
-                    "lora_alpha":   loraAlphaArray,
-                    "lora_dropout": loraDropArray,
-                ],
-                url: path
-            )
-        } else {
-            try MLX.save(arrays: arrays, url: path)
+        guard !arrays.isEmpty else {
+            throw TrainingManagerError.noLoRAWeightsExtracted
         }
+        try MLX.save(arrays: arrays, url: path)
     }
 #endif
 
@@ -417,7 +395,7 @@ actor TrainingManager {
                         let epochDir = checkpointURL.appendingPathComponent("resumed_epoch_\(epoch)", isDirectory: true)
                         try? FileManager.default.createDirectory(at: epochDir, withIntermediateDirectories: true)
 
-                        let (trainLoss, valLoss) = await trainEpoch(
+                        let (trainLoss, valLoss) = try await trainEpoch(
                             epochNumber: epoch,
                             trainData: trainSet,
                             valData: valSet,
@@ -470,7 +448,7 @@ actor TrainingManager {
         }
     }
 
-    private func setActiveAdapter(metadata: LoRAAdapterMetadata) throws {
+    func setActiveAdapter(metadata: LoRAAdapterMetadata) throws {
         let contents = try FileManager.default.contentsOfDirectory(at: adapterDirectory, includingPropertiesForKeys: nil, options: .skipsHiddenFiles)
         for sub in contents where (try? sub.resourceValues(forKeys: [.isDirectoryKey]).isDirectory) == true {
             let metaURL = sub.appendingPathComponent("metadata.json", isDirectory: false)
@@ -503,7 +481,19 @@ actor TrainingManager {
 
 enum TrainingManagerError: LocalizedError {
     case noTrainingData
-    var errorDescription: String? { "No training clauses loaded." }
+    case noLoRAWeightsExtracted
+    case mlxUnavailable
+
+    var errorDescription: String? {
+        switch self {
+        case .noTrainingData:
+            return "No training clauses loaded."
+        case .noLoRAWeightsExtracted:
+            return "No LoRA weight matrices were extracted from the model. Ensure the loaded model has LoRA adapters injected before training."
+        case .mlxUnavailable:
+            return "Native MLX training is unavailable in the simulator. Use the daemon training path instead."
+        }
+    }
 }
 
 #endif

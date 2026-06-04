@@ -102,7 +102,7 @@ final class CounterInterferenceViewModel {
                           let payload = try? JSONDecoder().decode(CIEventPayload.self, from: raw)
                     else { continue }
 
-                    switch payload.event {
+                    switch event.eventType {
                     case "ci.provider.result":
                         if let pairId = payload.pairId,
                            let rawText = payload.raw,
@@ -124,7 +124,7 @@ final class CounterInterferenceViewModel {
                          "ci.provider.throttled", "ci.provider.unparseable",
                          "ci.provider.skipped":
                         let pid = payload.providerId ?? "unknown"
-                        let reason = payload.error ?? payload.reason ?? payload.event
+                        let reason = payload.error ?? payload.reason ?? event.eventType
                         errorsQueue.append("\(pid): \(reason)")
                         if !failedProviderIds.contains(pid) {
                             failedProviderIds.append(pid)
@@ -194,7 +194,7 @@ final class CounterInterferenceViewModel {
                           let payload = try? JSONDecoder().decode(CIEventPayload.self, from: raw)
                     else { continue }
 
-                    switch payload.event {
+                    switch event.eventType {
                     case "ci.provider.result":
                         if let pairId = payload.pairId,
                            let rawText = payload.raw,
@@ -216,7 +216,7 @@ final class CounterInterferenceViewModel {
                          "ci.provider.throttled", "ci.provider.unparseable",
                          "ci.provider.skipped":
                         let pid = payload.providerId ?? "unknown"
-                        let reason = payload.error ?? payload.reason ?? payload.event
+                        let reason = payload.error ?? payload.reason ?? event.eventType
                         errorsQueue.append("\(pid): \(reason)")
                         if !failedProviderIds.contains(pid) {
                             failedProviderIds.append(pid)
@@ -255,7 +255,6 @@ final class CounterInterferenceViewModel {
     // MARK: - Private SSE payload DTO
 
     private struct CIEventPayload: Decodable {
-        let event: String?
         let providerId: String?
         let raw: String?
         let detected: [String]?
@@ -266,7 +265,6 @@ final class CounterInterferenceViewModel {
         let countdown: Int?
 
         enum CodingKeys: String, CodingKey {
-            case event
             case providerId     = "provider_id"
             case raw
             case detected

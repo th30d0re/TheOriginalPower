@@ -151,9 +151,6 @@ def eval_run():
     model_id = body.get("model", scorer.DEFAULT_MODEL_ID)
 
     result = job_runner.submit_job(scorer.run_eval, adapter, model_id)
-    if isinstance(result, dict) and result.get("status") == "busy":
-        return jsonify({"status": "busy", "detail": "a job is already running"}), 409
-
     event_queue: _queue.Queue = result
 
     def _generate() -> Iterator[str]:
@@ -243,6 +240,12 @@ def eval_flag():
 _ADAPTERS_DIR = Path(__file__).parent.parent / "training" / "adapters"
 
 
+@app.get("/adapters/active")
+def adapters_active_get():
+    adapter = store_manager.read_active_adapter()
+    return jsonify({"adapter": adapter})
+
+
 @app.get("/adapters")
 def adapters_list():
     if not _ADAPTERS_DIR.is_dir():
@@ -273,6 +276,7 @@ def adapters_activate():
             "detail": "no passing eval run on record for this adapter",
         }), 403
 
+    store_manager.write_active_adapter(adapter)
     return jsonify({"status": "activated", "adapter": adapter})
 
 
@@ -316,9 +320,6 @@ def curriculum_ingest():
     result = job_runner.submit_job(
         curriculum.ingest_source, notebook_id, domain, url, source_id
     )
-    if isinstance(result, dict) and result.get("status") == "busy":
-        return jsonify({"status": "busy", "detail": "a job is already running"}), 409
-
     event_queue: _queue.Queue = result
 
     def _generate() -> Iterator[str]:
@@ -456,9 +457,6 @@ def ci_run():
         active_ids = [p.provider_id for p in ALL_PROVIDERS]
 
     result = job_runner.submit_job(ci_runner.run_ci, prompt, active_ids, domain)
-    if isinstance(result, dict) and result.get("status") == "busy":
-        return jsonify({"status": "busy", "detail": "a job is already running"}), 409
-
     event_queue = result
 
     def _generate() -> Iterator[str]:
@@ -527,9 +525,6 @@ def ci_retry():
     active_ids = [pid for pid in provider_ids if get_provider(pid) is not None]
 
     result = job_runner.submit_job(ci_runner.run_ci, prompt, active_ids, domain)
-    if isinstance(result, dict) and result.get("status") == "busy":
-        return jsonify({"status": "busy", "detail": "a job is already running"}), 409
-
     event_queue = result
 
     def _generate() -> Iterator[str]:
@@ -574,9 +569,6 @@ def train_run():
         learning_rate,
         max_seq_length,
     )
-    if isinstance(result, dict) and result.get("status") == "busy":
-        return jsonify({"status": "busy", "detail": "a job is already running"}), 409
-
     event_queue: _queue.Queue = result
 
     def _generate() -> Iterator[str]:
@@ -605,10 +597,8 @@ def train_run():
 @app.get("/jobs")
 def jobs_get():
     state = job_runner.get_job_status()
-    running_name: str | None = None
-    if state.get("running") and state.get("job"):
-        running_name = state["job"].get("fn")
-    return jsonify({"running": running_name, "queued": []})
+    running_name: str | None = state["job"]["fn"] if state.get("job") else None
+    return jsonify({"running": running_name, "queued": state.get("queued", [])})
 
 
 # ---------------------------------------------------------------------------
