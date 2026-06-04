@@ -22,6 +22,7 @@ final class TrainingViewModel {
     var lossHistory: [(epoch: Int, trainLoss: Double, valLoss: Double)] = []
     var estimatedTimeRemaining: TimeInterval?
     var completedAdapterMetadata: LoRAAdapterMetadata?
+    private var completedAdapterPath: URL?
     var activeAdapterMetadata: LoRAAdapterMetadata?
     var trainingClauseCount: Int = 0
     var error: Error?
@@ -41,6 +42,7 @@ final class TrainingViewModel {
         isTraining = true
         error = nil
         completedAdapterMetadata = nil
+        completedAdapterPath = nil
         currentEpoch = 0
         totalEpochs = config.epochs
         lossHistory = []
@@ -54,8 +56,9 @@ final class TrainingViewModel {
                     trainLoss = tLoss
                     valLoss = vLoss
                     lossHistory.append((epoch: cur, trainLoss: tLoss, valLoss: vLoss))
-                case .complete(_, let metadata):
+                case .complete(let adapterURL, let metadata):
                     completedAdapterMetadata = metadata
+                    completedAdapterPath = adapterURL
                     isTraining = false
                 case .failed(let err):
                     error = err
@@ -72,11 +75,11 @@ final class TrainingViewModel {
         }
     }
 
-    func setActiveAdapter(manager: TrainingManager) {
-        guard let meta = completedAdapterMetadata else { return }
+    func setActiveAdapter(manager: TrainingManager, client: HarnessClient) {
+        guard let adapterPath = completedAdapterPath else { return }
         Task {
             do {
-                try await manager.setActiveAdapter(metadata: meta)
+                try await client.activateAdapter(adapterPath.path)
                 activeAdapterMetadata = try await manager.loadActiveAdapterMetadata()
             } catch {
                 self.error = error

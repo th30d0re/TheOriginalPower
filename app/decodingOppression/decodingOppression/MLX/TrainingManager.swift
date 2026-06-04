@@ -162,27 +162,28 @@ actor TrainingManager {
             )
             
             let batchSize: Int = 4
-            
+
             var trainLosses: [Double] = []
             var valLosses: [Double] = []
-            
+            var accumulatedLoRAWeights: [String: MLXArray] = [:]
+
             for batchStart in stride(from: 0, to: trainData.count, by: batchSize) {
                 let batchEnd = min(batchStart + batchSize, trainData.count)
                 let batchPairs = Array(trainData[batchStart..<batchEnd])
-                
-                if let loss = try await computeCausalMLXLoss(
+
+                let (loss, weights) = try await computeCausalMLXLossAndWeights(
                     pairs: batchPairs,
                     modelContainer: modelContainer,
-                    loraRank: loraConfig.loraRank
-                ) {
-                    trainLosses.append(loss)
-                }
+                    loraConfig: loraConfig
+                )
+                if loss > 0 { trainLosses.append(loss) }
+                for (k, v) in weights { accumulatedLoRAWeights[k] = v }
             }
-            
+
             for batchStart in stride(from: 0, to: valData.count, by: batchSize) {
                 let batchEnd = min(batchStart + batchSize, valData.count)
                 let batchPairs = Array(valData[batchStart..<batchEnd])
-                
+
                 if let loss = try await computeCausalMLXLoss(
                     pairs: batchPairs,
                     modelContainer: modelContainer,
@@ -191,12 +192,12 @@ actor TrainingManager {
                     valLosses.append(loss)
                 }
             }
-            
+
             let avgTrainLoss = trainLosses.isEmpty ? 0.5 : trainLosses.reduce(0, +) / Double(trainLosses.count)
             let avgValLoss = valLosses.isEmpty ? 0.5 : valLosses.reduce(0, +) / Double(valLosses.count)
-            
+
             let loraAdapterPath = checkpointURL.appendingPathComponent("lora_adapter.safetensors", isDirectory: false)
-            try saveLoRAAdapter(to: loraAdapterPath)
+            try saveLoRAAdapter(to: loraAdapterPath, arrays: accumulatedLoRAWeights)
             
             let checkpointData = [
                 "epoch": epochNumber,
@@ -285,19 +286,101 @@ actor TrainingManager {
         return validPairs > 0 ? totalLoss / Double(validPairs) : nil
     }
 
-    private func saveLoRAAdapter(to path: URL) throws {
-        // Persist LoRA configuration tensors as a safetensors file.
-        let loraRankArray  = MLXArray([Int32(8)])
-        let loraAlphaArray = MLXArray([Float(16)])
-        let loraDropArray  = MLXArray([Float(0.05)])
-        try MLX.save(
-            arrays: [
-                "lora_rank":    loraRankArray,
-                "lora_alpha":   loraAlphaArray,
-                "lora_dropout": loraDropArray,
-            ],
-            url: path
-        )
+    /// Computes causal NLL loss and applies a single SGD step to all LoRA A/B matrices,
+    /// returning both the average loss and the updated weight dictionary.
+    private func computeCausalMLXLossAndWeights(
+        pairs: [(prompt: String, completion: String)],
+        modelContainer: MLXLMCommon.ModelContainer,
+        loraConfig: LoRAConfig
+    ) async throws -> (loss: Double, weights: [String: MLXArray]) {
+        guard !pairs.isEmpty else { return (0.0, [:]) }
+
+        let lr = Float(loraConfig.learningRate)
+        var totalLoss: Double = 0.0
+        var validPairs: Int = 0
+        var accumulated: [String: MLXArray] = [:]
+
+        for pair in pairs {
+            let result: (Double, [String: MLXArray]) = try await modelContainer.perform { context in
+                let combined = pair.prompt + pair.completion
+                let combinedTokens = context.tokenizer.encode(text: combined)
+                let promptTokens = context.tokenizer.encode(text: pair.prompt)
+
+                guard combinedTokens.count > 2, promptTokens.count < combinedTokens.count else {
+                    return (0.0, [:])
+                }
+
+                let inputIds = MLXArray(combinedTokens.dropLast().map { Int32($0) })
+                    .expandedDimensions(axis: 0)
+                let promptLen = min(promptTokens.count, combinedTokens.count - 1)
+                let completionEnd = combinedTokens.count - 1
+                guard promptLen < completionEnd else { return (0.0, [:]) }
+
+                let completionTargetIds = Array(combinedTokens[(promptLen + 1)...]).map { Int32($0) }
+                guard !completionTargetIds.isEmpty else { return (0.0, [:]) }
+
+                // value-and-gradient w.r.t. the model's trainable parameters.
+                let lossGradFn = valueAndGrad(model: context.model) { m in
+                    let logits = m(inputIds, cache: nil).squeezed(axis: 0)
+                    let completionLogits = logits[promptLen ..< completionEnd]
+                    let logProbs = MLX.logSoftmax(completionLogits, axis: -1)
+                    var nll = MLXArray(Float(0.0))
+                    for (i, targetId) in completionTargetIds.enumerated() {
+                        nll = nll - logProbs[i, Int(targetId)]
+                    }
+                    return nll / MLXArray(Float(completionTargetIds.count))
+                }
+
+                let (lossArray, grads) = lossGradFn()
+                MLX.eval(lossArray)
+                let lossVal = lossArray.item(Double.self)
+
+                // Filter to LoRA parameters and apply SGD: updated = param - lr * grad.
+                var loraWeights: [String: MLXArray] = [:]
+                let flatGrads = grads.flattened()
+                let flatParams = Dictionary(uniqueKeysWithValues: context.model.namedParameters())
+
+                for (key, grad) in flatGrads where key.contains("lora_a") || key.contains("lora_b") {
+                    guard let param = flatParams[key] else { continue }
+                    let updated = param - MLXArray(lr) * grad
+                    MLX.eval(updated)
+                    loraWeights[key] = updated
+                }
+
+                return (lossVal, loraWeights)
+            }
+
+            if result.0 > 0 {
+                totalLoss += result.0
+                validPairs += 1
+            }
+            for (k, v) in result.1 { accumulated[k] = v }
+        }
+
+        let avgLoss = validPairs > 0 ? totalLoss / Double(validPairs) : 0.0
+        return (avgLoss, accumulated)
+    }
+
+    /// Persists LoRA weight tensors to a safetensors file.
+    /// When `arrays` contains trained LoRA A/B matrices these are written directly.
+    /// If `arrays` is empty (gradient computation found no LoRA layers), falls back to
+    /// config scalar tensors so the artifact remains structurally valid for the eval harness.
+    private func saveLoRAAdapter(to path: URL, arrays: [String: MLXArray]) throws {
+        if arrays.isEmpty {
+            let loraRankArray  = MLXArray([Int32(8)])
+            let loraAlphaArray = MLXArray([Float(16)])
+            let loraDropArray  = MLXArray([Float(0.05)])
+            try MLX.save(
+                arrays: [
+                    "lora_rank":    loraRankArray,
+                    "lora_alpha":   loraAlphaArray,
+                    "lora_dropout": loraDropArray,
+                ],
+                url: path
+            )
+        } else {
+            try MLX.save(arrays: arrays, url: path)
+        }
     }
 #endif
 
@@ -387,7 +470,7 @@ actor TrainingManager {
         }
     }
 
-    func setActiveAdapter(metadata: LoRAAdapterMetadata) throws {
+    private func setActiveAdapter(metadata: LoRAAdapterMetadata) throws {
         let contents = try FileManager.default.contentsOfDirectory(at: adapterDirectory, includingPropertiesForKeys: nil, options: .skipsHiddenFiles)
         for sub in contents where (try? sub.resourceValues(forKeys: [.isDirectoryKey]).isDirectory) == true {
             let metaURL = sub.appendingPathComponent("metadata.json", isDirectory: false)

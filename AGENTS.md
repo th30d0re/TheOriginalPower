@@ -49,3 +49,97 @@ If work exists only in working tree (not committed):
 regex script (`purge_contrast.py`) corrupted grammar and required `git revert`.
 All work since the last commit existed only in working tree. This rule prevents
 a recurrence.
+
+## Session Logging Requirement
+
+**For every user request, create a comprehensive markdown log file that documents the session.**
+
+### Required Log Structure
+
+1. **What Was Wrong / What Was Requested**
+   - Document the issue the user reported or the feature/change they requested
+   - Include error messages, symptoms, or desired behavior
+   - Include relevant code snippets or file paths
+
+2. **How I Fixed It / What I Did**
+   - Step-by-step explanation of the solution implemented
+   - Code changes made (with context)
+   - Configuration changes
+   - Any refactoring or improvements
+
+3. **Challenges Encountered**
+   - Technical obstacles faced during implementation
+   - Edge cases discovered
+   - Dependencies or compatibility issues
+   - Performance or optimization concerns
+   - Any failed approaches before finding the solution
+
+4. **Next Ideas (6 Ideas)**
+   - Related improvements or enhancements
+   - Future optimizations
+   - Additional features that could be added
+   - Alternative approaches to consider
+   - Edge cases to handle
+   - Testing or validation ideas
+
+### Log File Naming Convention
+
+- Format: `session-YYYY-MM-DD-HHMMSS.md`
+- Use timestamp to ensure uniqueness
+- Logs are stored in the Obsidian vault: `/Users/emmanuel/Library/Mobile Documents/iCloud~md~obsidian/Documents/Root/AI Session Logs/`
+
+### Log File Template
+
+```markdown
+# Session Log - YYYY-MM-DD HH:MM:SS
+
+## What Was Wrong / What Was Requested
+
+[Description of the issue or request]
+
+## How I Fixed It / What I Did
+
+[Step-by-step solution]
+
+## Challenges Encountered
+
+1. [Challenge 1]
+2. [Challenge 2]
+3. [Challenge 3]
+
+## Next Ideas (6 Ideas)
+
+1. [Idea 1]
+2. [Idea 2]
+3. [Idea 3]
+4. [Idea 4]
+5. [Idea 5]
+6. [Idea 6]
+```
+
+### Implementation Notes
+
+- Create log file BEFORE starting implementation
+- Update log file DURING implementation as challenges arise
+- Complete log file AFTER implementation is done
+- Always create the log file, even for simple requests
+- Be thorough and detailed — these logs are for learning and future reference
+- **Always specify which model is being used** (e.g., "Model: Kimi Code CLI") at the top of the log file
+
+### When Logging is Required vs Optional
+
+**ALWAYS Create Logs For:**
+- ✅ Code changes, file modifications, implementations
+- ✅ Fixes, bug resolutions, refactoring
+- ✅ Feature requests that result in code changes
+- ✅ Configuration changes, setup, installation
+- ✅ Any request that results in tool calls or file operations
+- ✅ Troubleshooting that involves code changes
+
+**Optional (But Still Recommended) For:**
+- ⚠️ Pure informational questions with no code changes ("What is X?", "How does Y work?")
+- ⚠️ Quick status checks ("Is X running?", "What's the status?")
+- ⚠️ Reading files only (no modifications)
+- ⚠️ Very brief follow-up questions (< 3 tool calls, no implementation)
+
+**Note:** The goal is to document meaningful interactions, especially those involving implementation. Use judgment — if a request leads to understanding that might be useful later, create a log. If it's a trivial one-off question with no lasting value, logging is optional. The important thing is to never skip logs for requests that involve code changes or implementations.

@@ -147,7 +147,7 @@ struct TrainingView: View {
                 Text("Training complete. Adapter saved as \(meta.name) · \(meta.timestamp.formatted()).")
                     .font(.subheadline)
                 Button("Set as Active Adapter") {
-                    viewModel.setActiveAdapter(manager: deps.trainingManager)
+                    viewModel.setActiveAdapter(manager: deps.trainingManager, client: deps.harnessClient)
                 }
             }
         }
