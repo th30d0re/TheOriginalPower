@@ -81,7 +81,10 @@ final class CurriculumViewModel {
 
     func onAppear(client: HarnessClient) {
         backendUnavailable = !client.status.isOnline
-        Task { await loadStaging(client: client) }
+        Task {
+            await loadStaging(client: client)
+            await syncAudit(client: client)
+        }
     }
 
     // MARK: - Add source
@@ -95,8 +98,7 @@ final class CurriculumViewModel {
         let sourceId = UUID().uuidString
         let domain = selectedDomain
 
-        var sourceEntry = SourceStatus(id: sourceId, url: url, domain: domain, status: .queued)
-        sources.append(sourceEntry)
+        sources.append(SourceStatus(id: sourceId, url: url, domain: domain, status: .queued))
         urlInput = ""
         isIngesting = true
         lastError = nil
@@ -122,8 +124,6 @@ final class CurriculumViewModel {
 
                     if let idx = sources.firstIndex(where: { $0.id == sourceId }) {
                         sources[idx].status = newStatus
-                    } else {
-                        sourceEntry.status = newStatus
                     }
                 }
                 await loadStaging(client: client)
@@ -147,6 +147,16 @@ final class CurriculumViewModel {
             if stagingItems.isEmpty {
                 lastError = error.localizedDescription
             }
+        }
+    }
+
+    // MARK: - Audit sync
+
+    func syncAudit(client: HarnessClient) async {
+        do {
+            auditEntries = try await client.fetchAuditEntries(limit: 200)
+        } catch {
+            // audit is non-critical; suppress
         }
     }
 
@@ -189,6 +199,7 @@ final class CurriculumViewModel {
                 }
                 selectedStagingIds.subtract(response.promoted)
                 await loadStaging(client: client)
+                await syncAudit(client: client)
             } catch {
                 lastError = error.localizedDescription
             }
