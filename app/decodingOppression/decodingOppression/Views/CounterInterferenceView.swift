@@ -197,7 +197,7 @@ private struct ProviderPill: View {
             .clipShape(Capsule())
             .overlay(
                 Capsule()
-                    .stroke(isActive ? Color.accentColor : Color.separator, lineWidth: 1)
+                    .stroke(isActive ? Color.accentColor : Color.secondary.opacity(0.25), lineWidth: 1)
             )
         }
         .buttonStyle(.plain)

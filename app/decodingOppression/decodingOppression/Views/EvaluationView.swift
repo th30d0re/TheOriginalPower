@@ -378,7 +378,7 @@ private struct MetricCard: View {
             Button("View failing examples ›") { onDrillDown() }
                 .font(.caption)
                 .buttonStyle(.plain)
-                .foregroundStyle(.accent)
+                .foregroundStyle(Color.accentColor)
         }
         .padding(14)
         .frame(maxWidth: .infinity, minHeight: 100, alignment: .leading)

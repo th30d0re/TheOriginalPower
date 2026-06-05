@@ -100,9 +100,9 @@ import Testing
         )
 
         let resolver = TierResolver(
-            tier1: MockTier1Engine(classification: tier1Result),
-            tier2: MockTier2Engine(result: parsed),
-            tier3: MockTier3Engine(result: nil)
+            tier1: ParserMockTier1Engine(classification: tier1Result),
+            tier2: ParserMockTier2Engine(result: parsed),
+            tier3: ParserMockTier3Engine(result: nil)
         )
 
         let result = await resolver.classify(clause: clause)
@@ -114,7 +114,7 @@ import Testing
     }
 }
 
-private actor MockTier1Engine: Tier1EngineProtocol {
+private actor ParserMockTier1Engine: Tier1EngineProtocol {
     private let classification: TierClassification
 
     init(classification: TierClassification) {
@@ -126,7 +126,7 @@ private actor MockTier1Engine: Tier1EngineProtocol {
     func classify(clause: Clause) async -> TierClassification { classification }
 }
 
-private actor MockTier2Engine: Tier2EngineProtocol {
+private actor ParserMockTier2Engine: Tier2EngineProtocol {
     private let result: TierClassification?
 
     init(result: TierClassification?) {
@@ -136,7 +136,7 @@ private actor MockTier2Engine: Tier2EngineProtocol {
     func classify(clause: Clause) async throws -> TierClassification? { result }
 }
 
-private actor MockTier3Engine: Tier3EngineProtocol {
+private actor ParserMockTier3Engine: Tier3EngineProtocol {
     private let result: TierClassification?
 
     init(result: TierClassification?) {

@@ -74,7 +74,8 @@ private func makeClassification(tier: MLTier, confidence: Double) -> TierClassif
         architectureScores: ArchitectureScores(aar: 0, se: 0, ij: 0, rsc: 0),
         proxyDetection: ProxyDetection(usesProxyVariables: false, proxyTerms: [], expandsOutgroup: false),
         confidence: confidence,
-        tier: tier
+        tier: tier,
+        wasSafetyFallback: false
     )
 }
 

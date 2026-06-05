@@ -12,6 +12,7 @@ import Foundation
 import MLXLLM
 import MLXLMCommon
 import MLX
+import MLXNN
 import Tokenizers
 #endif
 
@@ -232,10 +233,10 @@ actor TrainingManager {
         var validPairs: Int = 0
 
         for pair in pairs {
-            let pairLoss: Double = try await modelContainer.perform { context in
+            let pairLoss: Double = try await modelContainer.perform { model, tokenizer in
                 let combined = pair.prompt + pair.completion
-                let combinedTokens = context.tokenizer.encode(text: combined)
-                let promptTokens = context.tokenizer.encode(text: pair.prompt)
+                let combinedTokens = tokenizer.encode(text: combined)
+                let promptTokens = tokenizer.encode(text: pair.prompt)
 
                 guard combinedTokens.count > 2, promptTokens.count < combinedTokens.count else {
                     return 0.0
@@ -244,7 +245,7 @@ actor TrainingManager {
                 // Input: all tokens except last; target: all tokens except first.
                 let inputIds = MLXArray(combinedTokens.dropLast().map { Int32($0) })
                     .expandedDimensions(axis: 0)
-                let logits = context.model(inputIds, cache: nil)
+                let logits = model(inputIds, cache: nil)
                     .squeezed(axis: 0)  // [seq-1, vocab]
 
                 let promptLen = min(promptTokens.count, combinedTokens.count - 1)
@@ -257,7 +258,7 @@ actor TrainingManager {
                     .map { Int32($0) }
 
                 // Compute log-softmax and read per-token NLL.
-                let logProbs = MLX.logSoftmax(completionLogits, axis: -1)
+                let logProbs = logSoftmax(completionLogits, axis: -1)
                 MLX.eval(logProbs)
 
                 var nll: Double = 0.0
@@ -290,10 +291,10 @@ actor TrainingManager {
         var accumulated: [String: MLXArray] = [:]
 
         for pair in pairs {
-            let result: (Double, [String: MLXArray]) = try await modelContainer.perform { context in
+            let result: (Double, [String: MLXArray]) = try await modelContainer.perform { model, tokenizer in
                 let combined = pair.prompt + pair.completion
-                let combinedTokens = context.tokenizer.encode(text: combined)
-                let promptTokens = context.tokenizer.encode(text: pair.prompt)
+                let combinedTokens = tokenizer.encode(text: combined)
+                let promptTokens = tokenizer.encode(text: pair.prompt)
 
                 guard combinedTokens.count > 2, promptTokens.count < combinedTokens.count else {
                     return (0.0, [:])
@@ -309,25 +310,28 @@ actor TrainingManager {
                 guard !completionTargetIds.isEmpty else { return (0.0, [:]) }
 
                 // value-and-gradient w.r.t. the model's trainable parameters.
-                let lossGradFn = valueAndGrad(model: context.model) { m in
-                    let logits = m(inputIds, cache: nil).squeezed(axis: 0)
+                let module = model as Module
+                let lossGradFn = valueAndGrad(model: module) { m, _ in
+                    let languageModel = m as! any LanguageModel
+                    let logits = languageModel(inputIds, cache: nil).squeezed(axis: 0)
                     let completionLogits = logits[promptLen ..< completionEnd]
-                    let logProbs = MLX.logSoftmax(completionLogits, axis: -1)
+                    let logProbs = logSoftmax(completionLogits, axis: -1)
                     var nll = MLXArray(Float(0.0))
                     for (i, targetId) in completionTargetIds.enumerated() {
                         nll = nll - logProbs[i, Int(targetId)]
                     }
-                    return nll / MLXArray(Float(completionTargetIds.count))
+                    return [nll / MLXArray(Float(completionTargetIds.count))]
                 }
 
-                let (lossArray, grads) = lossGradFn()
+                let (lossArrays, grads) = lossGradFn(module, [])
+                let lossArray = lossArrays[0]
                 MLX.eval(lossArray)
                 let lossVal = lossArray.item(Double.self)
 
                 // Filter to LoRA parameters and apply SGD: updated = param - lr * grad.
                 var loraWeights: [String: MLXArray] = [:]
                 let flatGrads = grads.flattened()
-                let flatParams = Dictionary(uniqueKeysWithValues: context.model.namedParameters())
+                let flatParams = Dictionary(uniqueKeysWithValues: module.trainableParameters().flattened())
 
                 for (key, grad) in flatGrads where key.contains("lora_a") || key.contains("lora_b") {
                     guard let param = flatParams[key] else { continue }

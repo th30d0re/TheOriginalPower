@@ -60,10 +60,10 @@ struct HistoricalPolicyValidationTests {
                 targetGroup: classificationResponse.targetGroup,
                 effectDirection: classificationResponse.effectDirection,
                 architectureScores: ArchitectureScores(
-                    aar: architectureResponse.aar,
-                    se: architectureResponse.se,
-                    ij: architectureResponse.ij,
-                    rsc: architectureResponse.rsc
+                    aar: architectureResponse.asymmetricAutonomyRestriction,
+                    se: architectureResponse.selectiveEmpathy,
+                    ij: architectureResponse.ideologicalJustification,
+                    rsc: architectureResponse.resistanceToStructuralCritique
                 ),
                 proxyDetection: proxyResponse,
                 confidence: classificationResponse.confidence,
@@ -88,7 +88,7 @@ struct HistoricalPolicyValidationTests {
     }
 
     private func loadValidationClauses(for policyName: String) throws -> [TrainingClause] {
-        guard let url = Bundle(for: HistoricalPolicyValidationTests.self).url(
+        guard let url = Bundle(for: HistoricalPolicyValidationBundleToken.self).url(
             forResource: "validation_clauses",
             withExtension: "jsonl",
             subdirectory: nil
@@ -104,7 +104,7 @@ struct HistoricalPolicyValidationTests {
         var clauses: [TrainingClause] = []
 
         for line in lines {
-            guard !line.isEmpty, let lineData = line.data(using: .utf8) else { continue }
+            guard !line.isEmpty, let lineData = line.data(using: String.Encoding.utf8) else { continue }
             let clause = try decoder.decode(TrainingClause.self, from: lineData)
             if clause.sourcePolicy == policyName {
                 clauses.append(clause)
@@ -114,6 +114,8 @@ struct HistoricalPolicyValidationTests {
         return clauses
     }
 }
+
+private final class HistoricalPolicyValidationBundleToken {}
 
 #else
 

@@ -225,7 +225,7 @@ private struct InvariantRow: View {
                 Spacer()
                 Text(statusText)
                     .font(.caption)
-                    .foregroundStyle(invariant.holding ? .secondary : .red)
+                    .foregroundStyle(invariant.holding ? Color.secondary : Color.red)
                 if isSelected {
                     Image(systemName: "line.3.horizontal.decrease.circle.fill")
                         .foregroundStyle(.blue)

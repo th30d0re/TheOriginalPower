@@ -37,18 +37,23 @@ struct decodingOppressionApp: App {
     }
 
     var sharedModelContainer: ModelContainer = {
+        #if os(macOS)
         let schema = Schema([
             PolicyAnalysis.self,
             AnalyzedClause.self,
-            #if os(macOS)
             EvalRun.self,
             EvalMetric.self,
             EvalThresholdsCache.self,
             MirroredItem.self,
             AuditEntry.self,
             ProviderState.self,
-            #endif
         ])
+        #else
+        let schema = Schema([
+            PolicyAnalysis.self,
+            AnalyzedClause.self,
+        ])
+        #endif
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
         do {

@@ -16,8 +16,8 @@ import Testing
         let stream = await pipeline.analyze(pdfURL: URL(fileURLWithPath: "/tmp/mock.pdf"))
 
         let events = await collectProgress(from: stream)
-        let indices = events.compactMap { progress -> Int? in
-            if case let .classifying(clauseIndex, _, _) = progress { return clauseIndex }
+        let indices: [Int] = events.compactMap { progress -> Int? in
+            if case let .classifying(clauseIndex, _, _, _, _) = progress { return clauseIndex }
             return nil
         }
 
@@ -117,7 +117,8 @@ private func makeClassification(tier: MLTier, confidence: Double) -> TierClassif
         architectureScores: ArchitectureScores(aar: 0, se: 0, ij: 0, rsc: 0),
         proxyDetection: ProxyDetection(usesProxyVariables: false, proxyTerms: [], expandsOutgroup: false),
         confidence: confidence,
-        tier: tier
+        tier: tier,
+        wasSafetyFallback: false
     )
 }
 

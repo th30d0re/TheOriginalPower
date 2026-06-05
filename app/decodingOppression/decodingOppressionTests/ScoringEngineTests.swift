@@ -250,7 +250,8 @@ private func makeClassification(
             expandsOutgroup: expandsOutgroup
         ),
         confidence: confidence,
-        tier: tier
+        tier: tier,
+        wasSafetyFallback: false
     )
 }
 
