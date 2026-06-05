@@ -130,6 +130,10 @@ def main() -> int:
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--iters", type=int, default=None,
                         help="Override automatic iteration estimate")
+    parser.add_argument("--grad-checkpoint", action="store_true",
+                        help="Enable gradient checkpointing to reduce memory usage")
+    parser.add_argument("--val-batches", type=int, default=25,
+                        help="Number of validation batches per eval")
     args = parser.parse_args()
 
     data_dir = Path(args.data)
@@ -157,6 +161,8 @@ def main() -> int:
         save_every=args.save_every,
         steps_per_eval=args.steps_per_eval,
         seed=args.seed,
+        grad_checkpoint=args.grad_checkpoint,
+        val_batches=args.val_batches,
         lora_parameters={
             "rank": args.lora_rank,
             "dropout": args.lora_dropout,
