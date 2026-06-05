@@ -83,3 +83,6 @@ Paper/The_Original_Power.pdf
 Paper/Redefining_Racism_BACKUP_pre_restructure.tex
 Paper/Redefining_Racism_OpenDyslexic.tex
 training/adapters/
+# Ignore fused MLX model artifacts
+training/fused_models/
+fused_models/
