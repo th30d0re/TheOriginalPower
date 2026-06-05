@@ -171,18 +171,78 @@ final class HarnessClient: ObservableObject {
 
     // MARK: Repo root resolution
 
-    /// Walks up from the app bundle looking for `.harness_token` or `Makefile`.
+    /// Cached result of `resolveRepoRoot()` — populated on first access.
+    /// Stored as `URL??` so nil-found can be distinguished from uncached.
+    private var _repoRootCache: URL?? = nil
+
     private var repoRoot: URL? {
+        if let cached = _repoRootCache { return cached }
+        let result = resolveRepoRoot()
+        _repoRootCache = .some(result)
+        return result
+    }
+
+    /// Three-stage resolver:
+    ///
+    /// 1. `HARNESS_ROOT` environment variable — set once in the Xcode scheme or shell.
+    /// 2. Walk up from `Bundle.main.bundleURL` (works when built in-tree, e.g. SPM preview).
+    /// 3. Breadth-first scan of common home subdirectories at depth ≤ 3 — covers the
+    ///    typical macOS developer layout where the repo lives under `~/Documents`, `~/Developer`,
+    ///    `~/Code`, etc. even though DerivedData is in `~/Library/Developer/`.
+    private func resolveRepoRoot() -> URL? {
+        // Stage 1 — explicit override.
+        if let envPath = ProcessInfo.processInfo.environment["HARNESS_ROOT"],
+           !envPath.isEmpty {
+            let url = URL(fileURLWithPath: envPath)
+            if repoRootHasSentinel(at: url) { return url }
+        }
+
+        // Stage 2 — walk up from the bundle (up to 15 levels).
         var candidate = Bundle.main.bundleURL
-        for _ in 0..<10 {
+        for _ in 0..<15 {
             candidate = candidate.deletingLastPathComponent()
-            let sentinels = [".harness_token", "Makefile"]
-            for sentinel in sentinels {
-                if FileManager.default.fileExists(
-                    atPath: candidate.appending(path: sentinel).path
-                ) {
-                    return candidate
-                }
+            if repoRootHasSentinel(at: candidate) { return candidate }
+        }
+
+        // Stage 3 — BFS through common developer directories under $HOME.
+        let home = FileManager.default.homeDirectoryForCurrentUser
+        for subdir in ["Documents", "Developer", "Code", "Projects", "dev", "src"] {
+            let base = home.appendingPathComponent(subdir)
+            if let found = repoRootFindSentinel(under: base, maxDepth: 3) {
+                return found
+            }
+        }
+
+        return nil
+    }
+
+    private func repoRootHasSentinel(at url: URL) -> Bool {
+        let sentinels = [".harness_token", "Makefile"]
+        return sentinels.contains {
+            FileManager.default.fileExists(atPath: url.appendingPathComponent($0).path)
+        }
+    }
+
+    /// Depth-limited BFS that returns the first directory under `base` that contains
+    /// a sentinel file, or `nil` if none is found within `maxDepth` levels.
+    private func repoRootFindSentinel(under base: URL, maxDepth: Int) -> URL? {
+        guard maxDepth > 0 else { return nil }
+        guard let contents = try? FileManager.default.contentsOfDirectory(
+            at: base,
+            includingPropertiesForKeys: [.isDirectoryKey],
+            options: [.skipsHiddenFiles, .skipsPackageDescendants]
+        ) else { return nil }
+
+        // Check direct children first (breadth before depth).
+        var subdirs: [URL] = []
+        for item in contents {
+            guard (try? item.resourceValues(forKeys: [.isDirectoryKey]).isDirectory) == true else { continue }
+            if repoRootHasSentinel(at: item) { return item }
+            subdirs.append(item)
+        }
+        for subdir in subdirs {
+            if let found = repoRootFindSentinel(under: subdir, maxDepth: maxDepth - 1) {
+                return found
             }
         }
         return nil
