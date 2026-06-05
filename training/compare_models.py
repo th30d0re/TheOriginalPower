@@ -17,6 +17,7 @@ import time
 from pathlib import Path
 
 from mlx_lm import load, generate
+from mlx_lm.sample_utils import make_sampler
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 FUSED_DIR = REPO_ROOT / "training" / "fused_models"
@@ -82,10 +83,10 @@ PROMPTS = [
     },
 ]
 
+GEN_SAMPLER = make_sampler(temp=0.7, top_p=0.9)
 GEN_KWARGS = {
     "max_tokens": 512,
-    "temp": 0.7,
-    "top_p": 0.9,
+    "sampler": GEN_SAMPLER,
     "verbose": False,
 }
 
