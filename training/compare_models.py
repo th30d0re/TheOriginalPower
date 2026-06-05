@@ -142,7 +142,7 @@ def build_report(all_results: list[dict]) -> str:
     lines.append("## Test Configuration\n")
     lines.append(f"- max_tokens: {GEN_KWARGS['max_tokens']}")
     lines.append("- temperature: 0.7 (via make_sampler)")
-    lines.append(f"- top_p: {GEN_KWARGS['top_p']}")
+    lines.append("- top_p: 0.9 (via make_sampler)")
     lines.append(f"- prompts: {len(PROMPTS)}\n")
 
     # Summary table
@@ -212,15 +212,15 @@ def main() -> int:
         # Small pause to let Metal reclaim memory
         time.sleep(2)
 
+    # Save raw JSON first so data is not lost if report generation fails
+    json_path = REPORT_PATH.with_suffix(".json")
+    json_path.write_text(json.dumps(all_results, indent=2, ensure_ascii=False), encoding="utf-8")
+    print(f"Raw data saved to: {json_path}")
+
     print("\nBuilding report ...")
     report = build_report(all_results)
     REPORT_PATH.write_text(report, encoding="utf-8")
     print(f"Report saved to: {REPORT_PATH}")
-
-    # Also save raw JSON
-    json_path = REPORT_PATH.with_suffix(".json")
-    json_path.write_text(json.dumps(all_results, indent=2, ensure_ascii=False), encoding="utf-8")
-    print(f"Raw data saved to: {json_path}")
     return 0
 
 
