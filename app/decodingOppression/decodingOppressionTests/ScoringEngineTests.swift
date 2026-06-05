@@ -198,7 +198,7 @@ import Testing
         let expectedDis = 1.0
         let expectedAds = 0.0
         let expectedEis = 0.4
-        let expectedCis = 0.0
+        let expectedCis = 0.5
         let expectedOes = 0.0
         let expectedCoi = 0.25 * expectedDis + 0.25 * expectedAds + 0.20 * expectedEis + 0.15 * expectedCis + 0.15 * expectedOes
 

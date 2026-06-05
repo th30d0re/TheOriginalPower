@@ -51,6 +51,7 @@ import Testing
         let turnJSON = try firstDictionary(in: encodedJSON["turns"])
         #expect(hasExactlyKeys(turnJSON, expectedTurnKeys))
         #expect(turnJSON["turn_index"] as? Int == manifest.turns[0].turnIndex)
+        #expect(turnJSON["turn_id"] as? String == manifest.turns[0].turnId)
         #expect(turnJSON["speaker_id"] as? String == manifest.turns[0].speakerId)
         #expect(turnJSON["source_timestamp"] as? String == manifest.turns[0].sourceTimestamp)
         #expect(turnJSON["start_ms"] as? Int == manifest.turns[0].startMs)
@@ -90,6 +91,7 @@ private let expectedSpeakerKeys: Set<String> = [
 
 private let expectedTurnKeys: Set<String> = [
     "turn_index",
+    "turn_id",
     "speaker_id",
     "source_timestamp",
     "segments",

@@ -27,6 +27,7 @@
   "turns": [
     {
       "turn_index": 0,
+      "turn_id": "turn-000",
       "speaker_id": "host",
       "source_timestamp": "00:00:00.000",
       "segments": [
@@ -56,6 +57,7 @@
     },
     {
       "turn_index": 1,
+      "turn_id": "turn-001",
       "speaker_id": "guest",
       "source_timestamp": "00:00:03.750",
       "segments": [

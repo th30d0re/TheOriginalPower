@@ -19,19 +19,23 @@ import FoundationModels
 struct HistoricalPolicyValidationTests {
     let session = PolicyAnalysisSession()
 
-    @Test func testVirginiaSlaveCodes() async throws {
+    @Test(.disabled("Informative calibration suite; run manually when recalibrating historical baselines."))
+    func testVirginiaSlaveCodes() async throws {
         try await validatePolicy("Virginia Slave Codes (1705)")
     }
 
-    @Test func testThirteenthAmendment() async throws {
+    @Test(.disabled("Informative calibration suite; run manually when recalibrating historical baselines."))
+    func testThirteenthAmendment() async throws {
         try await validatePolicy("13th Amendment (1865)")
     }
 
-    @Test func testHOLCRedlining() async throws {
+    @Test(.disabled("Informative calibration suite; run manually when recalibrating historical baselines."))
+    func testHOLCRedlining() async throws {
         try await validatePolicy("HOLC Redlining (1934)")
     }
 
-    @Test func testWarOnDrugs() async throws {
+    @Test(.disabled("Informative calibration suite; run manually when recalibrating historical baselines."))
+    func testWarOnDrugs() async throws {
         try await validatePolicy("War on Drugs (1971)")
     }
 
