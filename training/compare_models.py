@@ -141,7 +141,7 @@ def build_report(all_results: list[dict]) -> str:
     lines.append(f"Generated: {time.strftime('%Y-%m-%d %H:%M:%S')}\n")
     lines.append("## Test Configuration\n")
     lines.append(f"- max_tokens: {GEN_KWARGS['max_tokens']}")
-    lines.append(f"- temperature: {GEN_KWARGS['temp']}")
+    lines.append("- temperature: 0.7 (via make_sampler)")
     lines.append(f"- top_p: {GEN_KWARGS['top_p']}")
     lines.append(f"- prompts: {len(PROMPTS)}\n")
 
