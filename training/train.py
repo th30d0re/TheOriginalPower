@@ -134,6 +134,9 @@ def main() -> int:
                         help="Enable gradient checkpointing to reduce memory usage")
     parser.add_argument("--val-batches", type=int, default=25,
                         help="Number of validation batches per eval")
+    parser.add_argument("--fine-tune-type", type=str, default="lora",
+                        choices=["lora", "dora"],
+                        help="Adapter type: lora or dora (weight-decomposed)")
     args = parser.parse_args()
 
     data_dir = Path(args.data)
@@ -163,6 +166,7 @@ def main() -> int:
         seed=args.seed,
         grad_checkpoint=args.grad_checkpoint,
         val_batches=args.val_batches,
+        fine_tune_type=args.fine_tune_type,
         lora_parameters={
             "rank": args.lora_rank,
             "dropout": args.lora_dropout,
@@ -176,6 +180,7 @@ def main() -> int:
     print(f"Data  : {args.data}")
     print(f"Out   : {adapter_path}")
     print(f"Iters : {iters}")
+    print(f"Type  : {args.fine_tune_type.upper()}")
     print("=" * 60)
 
     # Patch load() so base models without chat_template still work with ChatDataset
