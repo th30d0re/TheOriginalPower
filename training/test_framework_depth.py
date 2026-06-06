@@ -30,6 +30,7 @@ MODEL_PATHS = {
     "Gemma3-12B-v3": FUSED_DIR / "RootLedger-Gemma3-12B-v3-Fused",
     "Gemma3-12B-v3-Abliterated": FUSED_DIR / "RootLedger-Gemma3-12B-v3-Abliterated-Fused",
     "Gemma3-12B-NPBP-Abliterated-v3": FUSED_DIR / "RootLedger-Gemma3-12B-NPBP-Abliterated-v3-Fused",
+    "Gemma3-12B-NPBP-Abliterated-v3-Rank32": FUSED_DIR / "RootLedger-Gemma3-12B-NPBP-Abliterated-v3-Rank32-Fused",
 }
 
 GEN_KWARGS = dict(max_tokens=768, sampler=make_sampler(0.7, top_p=0.9), verbose=False)
