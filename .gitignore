@@ -86,3 +86,4 @@ training/adapters/
 # Ignore fused MLX model artifacts
 training/fused_models/
 fused_models/
+.venv-notebooklm/
