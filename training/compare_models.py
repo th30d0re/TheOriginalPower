@@ -28,6 +28,7 @@ MODELS = {
     "Llama-8B-Abliterated-v3": FUSED_DIR / "RootLedger-8B-Abliterated-v3-Fused",
     "Gemma3-12B-v3": FUSED_DIR / "RootLedger-Gemma3-12B-v3-Fused",
     "Gemma3-12B-v3-Abliterated": FUSED_DIR / "RootLedger-Gemma3-12B-v3-Abliterated-Fused",
+    "Gemma3-12B-NPBP-Abliterated-v3": FUSED_DIR / "RootLedger-Gemma3-12B-NPBP-Abliterated-v3-Fused",
 }
 
 PROMPTS = [
