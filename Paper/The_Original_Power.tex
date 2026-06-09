@@ -679,6 +679,7 @@ physicists borrowed from \emph{us}.
 \end{keyinsight}
 
 \subsection{The Resistor $R$ --- Bureaucratic Friction}
+\label{subsec:resistor}
 
 At the microscopic level, conductivity $\sigma$ is derived from the Drude model:
 \begin{equation}\label{eq:0.3-drude-conductivity}
@@ -701,6 +702,7 @@ block progress; it only needs to reduce $\tau \to 0$, and the physics guarantees
 $R \to \infty$.
 
 \subsection{The Capacitor $C$ --- The Enclosure Models}
+\label{subsec:capacitor}
 
 Capacitors store charge; in the framework, they store \textbf{generational
 wealth}. The capacitance equation governs the architecture:
@@ -720,6 +722,7 @@ C = \frac{\epsilon A}{d}
 \end{itemize}
 
 \subsection{The Inductor $L$ --- Cultural Inertia and Tradition}
+\label{subsec:inductor}
 
 Inductors store energy in a magnetic field and resist changes in current:
 \begin{equation}\label{eq:0.6-inductive-kickback}
@@ -1717,20 +1720,26 @@ These comparisons are \textbf{ordinal}, not cardinal. The framework identifies \
 \paragraph{Confidence tier.}
 \textbf{Tier~2.} The Jim Crow $\to$ War on Drugs instantiation provides one historically documented calibration of the optimizer across all three cost dimensions; the ordinal cost ordering is confirmed by Cold War foreign-policy records \cite{dudziak}, Baum's reported Ehrlichman interview \cite{baum}, Atwater's coded-language account \cite{atwater}, and the statutory/incarceration record \cite{caulkins_chandler_drug_incarceration, ussc_crack_retroactivity_2011}. Quantitative cardinal measurement of each cost function remains future empirical work.
 
-\subsection{The Backlash Constant: Racism as a Damped Harmonic Oscillator}
+\subsection{The Backlash Constant: Racism as a Damped RLC Circuit}
 
-The historical trajectory of racial progress is frequently misunderstood as a linear arc toward justice. The mathematical framework models it instead as a \textbf{Damped Harmonic Oscillator} responding to kinetic shocks (see Figure~\ref{fig:backlash_oscillator}).
+The hardware layer established in Section~\ref{sec:hardware_mapping} maps the extraction system onto a series RLC topology. When a reform shock drives a surge of kinetic current through this circuit, the system does not absorb the impulse and settle quietly. It oscillates. The three passive elements already defined in this chapter---the resistor $R$ (bureaucratic and carceral friction, Section~\ref{subsec:resistor}), the inductor $L$ (cultural inertia and institutional entrenchment, Section~\ref{subsec:inductor}), and the capacitor $C$ (token-reform absorption capacity, Section~\ref{subsec:capacitor})---wired in series with the kinetic supply, produce a governing equation whose solutions are damped oscillations (see Figure~\ref{fig:backlash_oscillator}):
+\begin{equation}\label{eq:1.7a-rlc-governing}
+L\,\ddot{q} + R\,\dot{q} + \frac{1}{C}\,q = V(t)
+\end{equation}
+where $q(t)$ is the equality-surplus charge accumulated in the circuit (positive values represent reform displacement; zero is the extraction baseline), $V(t)$ is the reform-shock driving voltage (the impulse applied at the moment of a legislative victory or mass uprising), and the three passive components carry the institutional meanings established above. In the undriven case ($V = 0$), the underdamped solution ($\alpha < \omega_0$, corresponding to $R < 2\sqrt{L/C}$) is:
+\begin{equation}\label{eq:1.7b-rlc-solution}
+q(t) = Q_0\,e^{-\alpha t}\!\left[\cos(\omega_d t) + \frac{\alpha}{\omega_d}\sin(\omega_d t)\right]
+\end{equation}
+with decay rate $\alpha = R/(2L)$, damped oscillation frequency $\omega_d = \sqrt{\omega_0^2 - \alpha^2}$, and natural frequency $\omega_0 = 1/\sqrt{LC}$.
 
-Let the system's baseline state of absolute extraction be equilibrium ($x = 0$). When a reform movement (e.g., Abolition, the Civil Rights Movement) successfully breaches the kernel, it applies a massive kinetic force, displacing the system toward equality ($x > 0$).
-
-However, the Elite architecture possesses a massive \textbf{restorative force} ($k$), defined by the Elite's demand for capital and the Buffer Class's demand for their Autonomy Wage. Just as a physical pendulum overshoots its equilibrium point when released, the model predicts the system will overshoot in its attempt to restore the extraction kernel.
+The baseline state of absolute extraction is circuit equilibrium ($q = 0$, zero equality surplus). When a reform movement breaches the kernel---Abolition in 1865, the Civil Rights Act in 1964---it injects a voltage impulse $V_0$ that displaces the charge toward $q > 0$. The circuit's subsequent behavior is governed by the three elements:
 
 \begin{itemize}
-    \item \textbf{Shock 1 (1865)}: The 13th Amendment displaces the system. 
-    \item \textbf{Overshoot 1 (1870s--1890s)}: The restorative force triggers the collapse of Reconstruction, the implementation of Black Codes, and the terrorism of the Ku Klux Klan, snapping the system back into an even more lethal configuration (Convict Leasing).
+    \item \textbf{Shock 1 (1865)}: The 13th Amendment injects a large impulse voltage $V_0$ into the circuit, driving $q$ strongly positive.
+    \item \textbf{Overshoot 1 (1870s--1890s)}: The inductor $L$---the deep institutional inertia of white supremacist social organization---cannot tolerate an instantaneous change in current. By Lenz's Law (Equation~\ref{eq:0.6-inductive-kickback}, $V = -L\,di/dt$), it generates a back-EMF that drives the system past equilibrium into the extraction zone ($q < 0$): the collapse of Reconstruction, the implementation of Black Codes, and the Klan terror of Convict Leasing.
     
-    \item \textbf{Shock 2 (1964)}: The Civil Rights Act breaches the legal interface.
-    \item \textbf{Overshoot 2 (1970s--1990s)}: The restorative force triggers the War on Drugs, Mass Incarceration, and the militarization of the police ($F_{\text{enforce}}$), effectively re-enclosing the Out-group under a new interface.
+    \item \textbf{Shock 2 (1964)}: The Civil Rights Act injects a second impulse $V_0' < V_0$ (smaller amplitude, because the kernel has already increased its damping capacity through the post-1865 learning cycle).
+    \item \textbf{Overshoot 2 (1970s--1990s)}: The same inductive kickback mechanism drives the circuit past equilibrium again---the War on Drugs, Mass Incarceration, and the militarization of $F_{\text{enforce}}$---re-enclosing the Out-group under a new interface at $q < 0$. The smaller initial amplitude confirms that the system's damping ratio $\alpha = R/(2L)$ increased between 1865 and 1964: $R$ grew (expanded carceral infrastructure) while $L$ partially discharged, producing faster, tighter backlash per unit of reform input.
 \end{itemize}
 
 \begin{figure}[htbp]
@@ -1740,14 +1749,14 @@ However, the Elite architecture possesses a massive \textbf{restorative force} (
     width=0.95\textwidth,
     height=9.25cm,
     xlabel={Time ($t$)},
-    ylabel={Equality Displacement ($x$)},
+    ylabel={Charge Displacement $q(t)$},
     xmin=0, xmax=10,
     ymin=-1.12, ymax=1.78,
     enlarge y limits={auto, upper},
     axis lines=middle,
     xtick=\empty,
     ytick={0},
-    yticklabels={Absolute Extraction ($x=0$)},
+    yticklabels={Extraction Baseline ($q=0$)},
     every axis y label/.style={at={(axis description cs:-0.055,0.5)}, anchor=center, rotate=90},
     every axis x label/.style={at={(axis description cs:1.02,0)}, anchor=north west},
     grid=none,
@@ -1784,26 +1793,35 @@ However, the Elite architecture possesses a massive \textbf{restorative force} (
     \node[anchor=north, orange!80!black, font=\scriptsize\bfseries, align=center] at (axis cs:5.6,-0.38) {Overshoot 2\\(Mass Incarceration)};
     \draw[<-] (axis cs:5.6,-0.32) -- (axis cs:5.6,-0.05);
 
-    % Restorative Force label
+    % Restorative Force label (LC resonance)
     \draw[->, gray!80, thick, >=latex] (axis cs:1.45,0.82) to[bend left] (axis cs:2.45,0.12);
-    \node[gray!80, font=\scriptsize, anchor=west, align=left] at (axis cs:1.45,0.82) {Restorative\\Force ($k$)};
+    \node[gray!80, font=\scriptsize, anchor=west, align=left] at (axis cs:1.45,0.82) {Inductive Kickback\\$\bigl(-L\,di/dt\bigr)$};
     
     % Zones — centered in relatively open horizontal band (away from late-time curve density)
-    \node[green!60!black, font=\small\itshape, align=center] at (axis cs:5.5, 1.12) {Equality Zone\\($x>0$)};
-    \node[red!60!black, font=\small\itshape, align=center] at (axis cs:5.5, -0.88) {Extraction Zone\\($x<0$)};
+    \node[green!60!black, font=\small\itshape, align=center] at (axis cs:5.5, 1.12) {Equality Zone\\($q>0$)};
+    \node[red!60!black, font=\small\itshape, align=center] at (axis cs:5.5, -0.88) {Extraction Zone\\($q<0$)};
 
 \end{axis}
 \end{tikzpicture}
-\caption{\textbf{Racism as a Damped Harmonic Oscillator.} Social reform movements act as kinetic shocks displacing the system toward equality ($x > 0$). The Elite architecture's restorative force ($k$) triggers a backlash that overshoots the equilibrium of absolute extraction ($x = 0$), resulting in even more lethal configurations ($x < 0$) like Convict Leasing and the War on Drugs. Each cycle dampens as the system finds more efficient ways to maintain equilibrium. \textit{Note: The plotted parameters ($A = 1.6$, $\gamma = 0.35$, $\omega = 110$) are illustrative; they are chosen to render the two documented shock-and-overshoot cycles legible, not derived from empirical calibration.}}
+\caption{\textbf{Racism as a Damped RLC Circuit (Eq.~\ref{eq:1.7a-rlc-governing}).} Reform shocks inject a driving voltage $V_0$ that displaces the equality-surplus charge $q(t)$ above the extraction baseline ($q = 0$). The inductor's back-EMF ($-L\,di/dt$, inductive kickback) drives the circuit past equilibrium into the extraction zone ($q < 0$), producing configurations more lethal than the pre-shock state: Convict Leasing after 1865, Mass Incarceration after 1964. Each successive cycle damps faster as $\alpha = R/(2L)$ increases---the system expands its carceral resistance $R$ with each adaptation. \textit{Note: The plotted parameters ($Q_0 = 1.6$, $\alpha = 0.35$, $\omega_d \approx 110$) are illustrative; they render the two documented shock-and-overshoot cycles legible, not derived from empirical calibration.}}
 \label{fig:backlash_oscillator}
 \end{figure}
 
-This physical model explains the \textit{intensity} and \textit{predictability} of systemic backlash. ``Progress'' is never static; it is a displacement that immediately activates the system's built-in elastic algorithms to pull the targeted population back into the extraction zone. Recognizing this oscillatory nature is crucial for anticipating the polymorphic mutations (Interface Swaps) the system will deploy following any successful civil rights victory.
+The circuit's oscillatory response explains the \textit{intensity} and \textit{predictability} of systemic backlash. Reform displacement is not static; it charges the circuit's reactive components, which then discharge through the path of least institutional resistance, pulling the charge back toward the extraction baseline and beyond. Anticipating the polymorphic mutations (Interface Swaps) the system deploys following each civil rights victory requires reading the circuit's backlash as an RLC response, not as a contingent political event.
 
 \paragraph{The convergence prediction.}
-The mathematical implication of the damped oscillator must be stated explicitly: without an external intervention that rewrites the kernel itself, the model predicts $x(t) \rightarrow 0$. Every reform shock---no matter how large its initial displacement---decays exponentially under the combined damping of the restorative force ($k$), the psychological wage ($\psi$), and the phase-fragmentation load ($\Phi_{\text{load}}$). That convergence is the analogy's central diagnostic. The historical record from 1865 to the present confirms the prediction: Abolition decayed into Convict Leasing; the Civil Rights Act decayed into Mass Incarceration; each successive oscillation reaches a smaller amplitude as the system learns to restore equilibrium more efficiently. The ``arc of the moral universe'' does not bend toward justice under this model---it is a damped sinusoid that bends toward the extraction baseline.
+Equation~\ref{eq:1.7b-rlc-solution} states the convergence prediction exactly: without a sustained driving voltage $V(t)$, $q(t) \rightarrow 0$ as $t \rightarrow \infty$. Every impulse shock---regardless of initial amplitude $Q_0$---decays at rate $\alpha = R/(2L)$. The decay rate itself is not fixed: each adaptation cycle the kernel expands $R$ (militarized policing, expanded carceral infrastructure, voter suppression apparatus), increasing $\alpha$ and thereby producing faster, tighter backlash per unit of reform input. The historical record from 1865 to the present runs precisely on this trajectory: the Abolition shock decayed into Convict Leasing; the Civil Rights Act shock decayed into Mass Incarceration; each successive oscillation reaches a smaller initial amplitude at higher decay rate as the system tunes its damping upward. The ``arc of the moral universe'' is not a sinusoid bending toward justice. It is a damped RLC transient bending toward the extraction baseline, with the decay envelope $Q_0 e^{-\alpha t}$ shrinking each cycle.
 
-The escape condition is equally precise. In the driven variant of the damped oscillator, an external periodic force $F(t) = F_0 \cos(\omega t)$ is applied to the system. If this driving frequency matches the system's natural frequency $\omega_0 = \sqrt{k/m}$, the result is \textit{resonance}: displacement grows without bound rather than decaying. Translated into the framework's terms, a single reform impulse (an abolition event, a landmark ruling) will always be damped out. But sustained, synchronized kinetic coordination---class solidarity maintained at the structural frequency of the system---can overcome the damping entirely. This is why the framework predicts that isolated, episodic reforms fail while sustained cross-class kinetic alignment is the only forcing function capable of exceeding the system's absorption capacity. One-off shocks decay. Resonant solidarity does not.
+\paragraph{The resonance escape condition.}
+The driven RLC circuit with periodic voltage $V(t) = V_0 \cos(\omega t)$ reaches maximum response amplitude when the driving frequency matches the natural frequency:
+\begin{equation*}
+\omega = \omega_0 = \frac{1}{\sqrt{LC}}
+\end{equation*}
+At resonance, the reactive impedances cancel ($\omega L = 1/\omega C$), and the circuit's total impedance reduces to the resistive component $R$ alone. The steady-state charge amplitude is:
+\begin{equation*}
+|q_{\text{res}}| = \frac{V_0}{R\,\omega_0} = \frac{V_0}{R}\sqrt{\frac{L}{C}}
+\end{equation*}
+which is $Q_f = (1/R)\sqrt{L/C}$ times larger than a sub-resonant impulse of the same magnitude $V_0$ would produce---where $Q_f$ is the circuit's quality factor. A single reform impulse will always be absorbed by the reactive components before reaching resonance. But sustained, synchronized kinetic coordination maintained at the system's natural structural frequency $\omega_0$---cross-class solidarity whose periodicity matches $1/\sqrt{LC}$---reduces the circuit's effective impedance to $R$ alone, and for a low-resistance system ($R \to 0$) the response grows without bound. This is the formal circuit-theoretic statement of why isolated, episodic reforms are always damped out while sustained, frequency-matched solidarity is the only forcing function that can exceed the system's absorption capacity.
 
 \paragraph{Agency, absolute gains, and the scope of the invariant.}
 The convergence prediction ($x(t) \rightarrow 0$) requires a precise scope qualification to avoid a common misreading. The invariant $\Delta\max = 0$ is a claim about \textit{Elite extraction share}---specifically, that the top-tier capital concentration does not undergo sustained structural reduction absent kernel-level intervention. It is \textbf{not} a claim that individual or community agency is absent, ineffective, or incapable of producing real gains. Black Wall Street's pre-redlining economy, the NAACP's multi-decade litigation campaign that produced \textit{Brown v.\ Board}, the Civil Rights Movement's genuine legislative victories, the growth of the post-1965 Black professional middle class---these are real historical achievements, and the framework does not deny them. What the framework claims is that these achievements represent \textit{displacement} ($x > 0$) within a system whose restorative force subsequently damps that displacement back toward the extraction baseline---and that the Elite's proportional share of extracted value is preserved across the arc. Absolute living standards can rise; the kernel's share of the gains does not fall. The oscillator model is a claim about \textit{structural ceilings and restoration dynamics}, not a claim about the absence of motion beneath those ceilings. Erasing or minimizing the agency of $O_{\text{racialized}}$ would be both historically inaccurate and structurally incorrect: the framework explicitly requires kinetic resistance ($M(t)$) as the variable that triggers the system's most significant adaptations. Without that resistance, the Interface Swap would be unnecessary. The agency is real; the structural response to it is also real.
@@ -1855,8 +1873,8 @@ These equations would be falsified if the post-1965 period showed simultaneous i
 \paragraph{Confidence tier.}
 \textbf{Tier~1.} 55-year annual dataset with three independently sourced suppression components; all three components moved in the framework-predicted direction; trajectory change is temporally correlated with major interface-strategy events (1965 Civil Rights Act, 1971 War on Drugs, 1994 Crime Bill).
 
-\paragraph{Precision qualifier: structural analogy vs.\ quantitative prediction.}
-The damped harmonic oscillator is deployed here as a \textbf{structural analogy}, not a calibrated quantitative model. The language ``the model predicts $x(t) \rightarrow 0$'' and ``the escape condition is precisely resonance'' refer to the logical implications of the analogy's architecture, not to numerically derived forecasts. No claim is made that the parameters in Figure~\ref{fig:backlash_oscillator} (or any specific values of $k$, $\gamma$, or $m$) can be read off the historical record with precision. What the historical record does support is an \textit{ordinal} claim: the amplitude of Shock 2 (1964 Civil Rights Act) is observably smaller than the amplitude of Shock 1 (1865 Abolition)---a fact that maps directly onto the real historical observation that the Civil Rights Act achieved less structural disruption of the extraction kernel than Abolition did, because the system had already learned to deploy lower-cost proxy variables ($P_{\text{criminal}}$, $P_{\text{spatial}}$) in anticipation of the next reform shock. This ordinal damping is the empirical content of the model. The specific parameter values visualize the pattern; they do not derive it.
+\paragraph{Precision qualifier: hardware layer formalization vs.\ calibrated quantitative prediction.}
+The series RLC circuit is the hardware layer formalization of this section, not a numerically calibrated forecast. The convergence claim ($q(t) \rightarrow 0$) and the resonance escape condition ($\omega = 1/\sqrt{LC}$) are exact circuit-theoretic results that follow from the governing equation~\ref{eq:1.7a-rlc-governing}; they are not analogical inferences. What the historical record cannot yet supply is precise numerical values for $L$, $R$, and $C$ as functions of institutional time. No claim is made that the parameters in Figure~\ref{fig:backlash_oscillator} (or any specific values of $Q_0$, $\alpha$, $\omega_d$) are read off the historical data. What the historical record does support is an \textit{ordinal} claim: the initial charge amplitude of Shock 2 (1964 Civil Rights Act) is observably smaller than that of Shock 1 (1865 Abolition), and the decay rate $\alpha$ is observably higher in 1964 than in 1865---a pattern consistent with the quantitative fits in Section~\ref{sec:laplace_transfer_function} (1865: $\zeta = 0.17$; 1964: $\zeta = 0.59$; 2020: $\zeta = 0.97$). Each fitted $\zeta$ is $\alpha/\omega_0 = (R/2L)/\omega_0$, confirming that $R/(2L)$ has grown monotonically relative to $\omega_0$ across the historical record---precisely what the hardware model predicts as the kernel expands its carceral resistance in response to successive reform shocks. This ordinal damping is the empirical content of the circuit model. The specific illustrative parameter values visualize the pattern; they do not derive it.
 
 \subsection{Fractal Execution: The Self-Similar Architecture}
 
