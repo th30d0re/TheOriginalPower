@@ -8,13 +8,13 @@ Exports:
 from __future__ import annotations
 
 from .base import BaseProvider
-from .claude_provider import ClaudeProvider
+# from .claude_provider import ClaudeProvider  # paused — account on hold
 from .codex_provider import CodexProvider
 from .gemini_provider import GeminiProvider
 from .local_provider import LocalProvider
 
 ALL_PROVIDERS: list[BaseProvider] = [
-    ClaudeProvider(),
+    # ClaudeProvider(),  # paused — account on hold
     CodexProvider(),
     GeminiProvider(),
     LocalProvider(),
