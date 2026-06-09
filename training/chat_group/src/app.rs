@@ -279,15 +279,42 @@ impl App {
     }
 
     fn format_history(&self) -> Vec<serde_json::Value> {
-        self.history
-            .iter()
-            .map(|msg| {
-                let role = match msg.voice {
-                    Voice::User | Voice::System => "user",
-                    Voice::Llama | Voice::Gemma => "assistant",
-                };
-                json!({"role": role, "content": msg.content})
-            })
-            .collect()
+        let mut result = Vec::new();
+        let mut pending_assistant: Option<String> = None;
+
+        for msg in &self.history {
+            match msg.voice {
+                Voice::System => {
+                    // Skip system messages — they are UI-only
+                    continue;
+                }
+                Voice::User => {
+                    if let Some(content) = pending_assistant.take() {
+                        result.push(json!({"role": "assistant", "content": content}));
+                    }
+                    result.push(json!({"role": "user", "content": msg.content}));
+                }
+                Voice::Llama | Voice::Gemma => {
+                    let prefix = match msg.voice {
+                        Voice::Llama => "[Llama]",
+                        Voice::Gemma => "[Gemma]",
+                        _ => "",
+                    };
+                    let entry = format!("{} {}", prefix, msg.content);
+                    if let Some(ref mut existing) = pending_assistant {
+                        existing.push_str("\n\n");
+                        existing.push_str(&entry);
+                    } else {
+                        pending_assistant = Some(entry);
+                    }
+                }
+            }
+        }
+
+        if let Some(content) = pending_assistant.take() {
+            result.push(json!({"role": "assistant", "content": content}));
+        }
+
+        result
     }
 }
