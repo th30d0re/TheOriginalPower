@@ -23,21 +23,21 @@ use crate::ui::theme::Voice;
 #[command(name = "chat_group")]
 #[command(about = "Root Ledger Group Chat — Talk to Llama and Gemma simultaneously")]
 pub struct CliArgs {
-    #[arg(long, default_value = ".venv-voice/bin/python3")]
+    #[arg(long, default_value = "../../.venv-voice/bin/python3")]
     pub python_path: String,
 
-    #[arg(long, default_value = "training/inference_agent.py")]
+    #[arg(long, default_value = "../inference_agent.py")]
     pub agent_script: String,
 
     #[arg(
         long,
-        default_value = "training/fused_models/RootLedger-8B-Abliterated-Fused"
+        default_value = "../fused_models/RootLedger-8B-Abliterated-Fused"
     )]
     pub llama_path: String,
 
     #[arg(
         long,
-        default_value = "training/fused_models/RootLedger-Gemma3-12B-NPBP-Abliterated-v3-Fused"
+        default_value = "../fused_models/RootLedger-Gemma3-12B-NPBP-Abliterated-v3-Fused"
     )]
     pub gemma_path: String,
 

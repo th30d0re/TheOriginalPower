@@ -14,14 +14,23 @@ cargo build --release
 
 ## Run
 
+Run from inside `training/chat_group/` (defaults resolve relative to this directory):
+
 ```bash
+cd training/chat_group
 ./target/release/chat_group
 ```
 
-Defaults point to the fused models in `training/fused_models/`. Override paths with:
+Defaults assume:
+- Python: `../../.venv-voice/bin/python3`
+- Agent script: `../inference_agent.py`
+- Models: `../fused_models/RootLedger-8B-Abliterated-Fused` and `../fused_models/RootLedger-Gemma3-12B-NPBP-Abliterated-v3-Fused`
+
+Override paths with:
 
 ```bash
 ./target/release/chat_group \
+  --python-path ../../.venv-voice/bin/python3 \
   --llama-path ../fused_models/RootLedger-8B-Abliterated-Fused \
   --gemma-path ../fused_models/RootLedger-Gemma3-12B-NPBP-Abliterated-v3-Fused
 ```
