@@ -12,6 +12,7 @@ Output:
   ~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Root/Original Power/06 Supporting Material/Twitter Archive/<YYYY-MM>/<tweet_id>.md
 """
 
+import ast
 import csv
 import json
 import re
@@ -217,6 +218,18 @@ def write_tweet_note(row: dict, month_folder: Path, used_names: set) -> Path:
     mentions = row.get("mentions", "")
     media = row.get("media", "")
 
+    def yaml_list(csv_val: str) -> str:
+        try:
+            parsed = ast.literal_eval(csv_val)
+            if isinstance(parsed, list):
+                if not parsed:
+                    return "[]"
+                items = ", ".join(f'"{item}"' for item in parsed)
+                return f"[{items}]"
+        except Exception:
+            pass
+        return f'"{csv_val}"'
+
     lines = [f"---"]
     lines.append(f"tweet_id: {tweet_id}")
     lines.append(f"source: twitter")
@@ -224,12 +237,11 @@ def write_tweet_note(row: dict, month_folder: Path, used_names: set) -> Path:
     lines.append(f"retweets: {retweets}")
     lines.append(f"likes: {likes}")
     lines.append(f"replies: {replies}")
-    if hashtags:
-        lines.append(f"hashtags: \"{hashtags}\"")
+    lines.append(f"hashtags: {yaml_list(hashtags)}")
     if mentions:
-        lines.append(f"mentions: \"{mentions}\"")
+        lines.append(f"mentions: {yaml_list(mentions)}")
     if media:
-        lines.append(f"media: \"{media}\"")
+        lines.append(f"media: {yaml_list(media)}")
     lines.append(f"exported: {datetime.now().isoformat()}")
     lines.append(f"tags:")
     lines.append(f"  - twitter")
