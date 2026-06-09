@@ -34,6 +34,8 @@ MODEL_PATHS = {
     "Gemma3-12B-NPBP-Abliterated-v3-v2-Rank32": FUSED_DIR / "RootLedger-Gemma3-12B-NPBP-Abliterated-v3-v2-Rank32-Fused",
     "Gemma3-12B-NPBP-Abliterated-v3-v3-Rank32": FUSED_DIR / "RootLedger-Gemma3-12B-NPBP-Abliterated-v3-v3-Rank32-Fused",
     "Gemma3-12B-NPBP-Abliterated-v3-v3-Rank32-Iter1100": FUSED_DIR / "RootLedger-Gemma3-12B-NPBP-Abliterated-v3-v3-Rank32-Iter1100-Fused",
+    "Gemma3-12B-NPBP-Abliterated-v3-v4-Rank32": FUSED_DIR / "RootLedger-Gemma3-12B-NPBP-Abliterated-v3-v4-Rank32-Fused",
+    "Gemma3-12B-NPBP-Abliterated-v3-v4-Rank32-Iter1000": FUSED_DIR / "RootLedger-Gemma3-12B-NPBP-Abliterated-v3-v4-Rank32-Iter1000-Fused",
 }
 
 GEN_KWARGS = dict(max_tokens=768, sampler=make_sampler(0.7, top_p=0.9), verbose=False)
