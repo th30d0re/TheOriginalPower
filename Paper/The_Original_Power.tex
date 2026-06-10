@@ -119,6 +119,9 @@
 
 This book develops a formal mathematical framework for analyzing systems of oppression using set theory, discrete mathematics, electrodynamics, and historical analysis. Its central claim is that racism cannot be reduced to a loose collection of bad attitudes or an inevitable expression of human nature. Racism functions as \textbf{psycho-legal social software}: legal, institutional, cultural, and affective code that runs on human predictive cognition---the \textbf{wetware} substrate on which that software executes---causing engineered partitions to execute as perception, common sense, threat detection, and selective empathy. Running in parallel to this software layer is a \textbf{hardware layer}: an electrodynamic formalism that treats the five-tier hierarchy as a circuit topology, the suppression allocation as a complex power signal, and reform shocks as inductive kickback, unifying every equation in the book into a single coherent physical system. Within that hardware layer, the material-wage electric field resolves into a vector superposition of discrete material wages indexed by intersection: a racial material wage, a gendered material wage, a class material wage---each coupling its own axis of privilege to the same extraction circuit. In racism's case, that software is a legally engineered racial partition that exploits ordinary human cognition, recruits predictive shortcuts into racial priors, and turns those priors into a durable extraction system.
 
+\paragraph{A note on epistemology and dynamical homology.}
+The framework establishes a substrate-independent dynamical homology: distinct systems exhibit equivalent governing equations once their state variables and constraints are operationalized. It does not claim that society is literally an electrical circuit measured in Volts or Teslas. It claims that both electrodynamic and socioeconomic control architectures are downstream implementations of the same universal dynamical systems equations, forced to optimize energy, labor, and suppression under structural constraints. Quantitative finance uses the heat diffusion equation to model stock options without measuring capital in degrees Kelvin; this framework uses the mathematics of optimal control theory, fractional calculus, and circuitry because both physical networks and socioeconomic architectures optimize under constraint. Chapter~\ref{ch:lagrangian} formalizes this homology as an augmented Lagrangian control system.
+
 A critical architectural clarification: the Elite ($E$) do not \textit{supply} the energy that drives this system. They \textit{gate} it. The kinetic labor, taxes, and physical output of the Out-group and the Buffer Class constitute the actual power supply ($V_{cc}$) of the extraction circuit. The Elite function as a parasitic control layer---a transistor base receiving only a trickle of control current (laws, algorithms, media narratives) while dictating how the massive power of the masses is routed. The police, courts, and carceral apparatus that enforce the partition are paid for with wealth extracted from the very populations they patrol. The system is a self-exciting generator: it uses a portion of its own extracted output to power the interference engine that keeps the machine spinning. This means the architecture is not powered by independent Elite energy; it is powered by \textit{your} compliance, and it dies when that compliance is withdrawn.
 
 \paragraph{A note on terms and host wetware.}
@@ -1163,6 +1166,110 @@ The Unified Electrodynamic Framework operates at five nested resolutions. Zoomin
 At \textbf{Zoom Level~5}, the ambient macro-fields collapse into a single Systemic Photon: a microaggression, a news alert, an algorithmic recommendation. The photon strikes the electron of an individual consciousness. The person absorbs the high-frequency energy ($E = hf$) and jumps into an Excited State---anger, racial panic, radicalization. To return to baseline, they must emit a secondary photon, passing the Fractal Mind Virus further down the line. This is the proof that a microaggression (Level~5) and the militarized police state (Level~1) are not two different concepts. They are the exact same physical force operating at different zoom levels of the same unified circuit.
 \end{keyinsight}
 
+\chapter{Dynamical Systems Formulation of the Extraction Architecture}
+\label{ch:lagrangian}
+
+\begin{definition}[Epistemological Status of This Chapter]
+This chapter formalizes the extraction architecture as an optimal control problem governed by Lagrangian mechanics. It does not claim that society is literally an electrical circuit measured in Volts or Teslas. The framework establishes a substrate-independent dynamical homology: distinct systems exhibit equivalent governing equations once their state variables and constraints are operationalized. Quantitative finance uses the heat diffusion equation to model stock options without measuring capital in degrees Kelvin; this framework uses the mathematics of optimal control theory, fractional calculus, and circuitry because both physical networks and socioeconomic architectures optimize energy, labor, and suppression under structural constraints. All claims are assigned confidence tiers consistent with the Empirical Methodology chapter (p.~\pageref{ch:empirical_methodology}).
+\end{definition}
+
+The hardware layer established in Chapter~\ref{ch:system_init} maps the extraction system onto a series RLC topology. The software layer formalizes the five-tier hierarchy, the Complex Wage, and the Interference Engine. This chapter supplies the unifying root equation that governs both layers. The augmented Lagrangian $\mathcal{L}^*$ compresses the kinetic capacity of the masses, the engineered constraint landscape of the Elite, the dissipative friction of the state, and the marginal cost of suppression into a single optimal control problem.
+
+\section{The Augmented Lagrangian}
+
+In Lagrangian mechanics, the state of a system is defined by its Kinetic Energy ($T$) and its Potential Energy ($V$). The action integral $S = \int \mathcal{L}\,dt$ is stationary along the path the system actually follows. The Elite configure the Potential ($V$), the masses supply the Kinetic labor ($T$), and the system executes the path of least action. The extraction architecture obeys the same optimization logic.
+
+\subsection{The Isomorphism: $T$ and $V$}
+
+\begin{itemize}
+    \item \textbf{Kinetic Energy ($T$):} The Kinetic Capacity $K(t)$ of the Out-group and Buffer Class, representing class-solidarity energy, drift velocity, and the physical capacity for resistance.
+    \item \textbf{Potential Energy ($V$):} The Lyapunov Energy Ceiling $V(q)$ and the Navigation Function $\varphi_i(q)$ act as the potential landscape. The Elite ($E$) engineer the legal, spatial, and psychological potential well that traps the population.
+\end{itemize}
+
+The Elite do not micromanage every individual. They engineer the potential landscape $V(q)$ and allow the system dynamics to execute the extraction.
+
+\subsection{The Rayleigh Dissipation Function}
+
+Standard Lagrangian mechanics models conservative systems, but the framework explicitly features friction: the Resistor $R$, bureaucratic friction, stop-and-frisk policing, and administrative drag. The Rayleigh Dissipation Function $\mathcal{D}$ incorporates this non-conservative dissipation into the Euler-Lagrange formalism:
+\begin{equation}\label{eq:lag-euler-lagrange}
+\frac{d}{dt}\left(\frac{\partial \mathcal{L}}{\partial \dot{q}_i}\right) - \frac{\partial \mathcal{L}}{\partial q_i} + \frac{\partial \mathcal{D}}{\partial \dot{q}_i} = Q_i
+\end{equation}
+where $\mathcal{D}$ represents the thermodynamic heat loss exacted by the state upon the Out-group, and $Q_i$ represents external coercive forces applied by the Enforcement Class ($F_{\text{enforce}}$).\footnote{This equation is classified as Tier~3 (ordinal/structural); the Euler-Lagrange formulation with Rayleigh dissipation is a published result of classical mechanics applied to the framework's operationalized state variables. See the Empirical Methodology chapter (p.~\pageref{ch:empirical_methodology}) and Appendix~\ref{app:empirical_index}.}
+
+\subsection{The Augmented Form}
+
+The canonical kernel objective is an optimization problem: $\max E(t)$ subject to the constraint $M_{\text{eff}}(t) < \tau$. In classical mechanics, systems subjected to constraints are solved using Lagrange Multipliers ($\lambda$). The augmented Lagrangian is:
+\begin{equation}\label{eq:lag-augmented}
+\boxed{\mathcal{L}^*(q, \dot{q}, t) = T(\dot{q}, t) - V(q, t) - \mathcal{D}(q, \dot{q}, t) + \lambda\bigl(\tau - M_{\text{eff}}(t)\bigr)}
+\end{equation}
+\footnote{This equation is classified as Tier~3 (ordinal/structural); the augmented Lagrangian formalizes the directional claim that the Elite optimize extraction subject to a rebellion-threshold constraint. See the Empirical Methodology chapter (p.~\pageref{ch:empirical_methodology}) and Appendix~\ref{app:empirical_index}.}
+
+The terms map onto the framework as follows:
+\begin{itemize}
+    \item \textbf{$T$ (Mobilized Social Capacity):} The kinetic energy of the Out-group and Buffer class attempting to move upward or organize.
+    \item \textbf{$V$ (Engineered Constraint Landscape):} The systemic diodes, redlining boundaries, and Lyapunov ceilings the Elite construct to trap that momentum.
+    \item \textbf{$\mathcal{D}$ (Rayleigh Dissipation):} The social heat loss, exhaustion, administrative drag, and the friction of stop-and-frisk policing. This term formalizes the Resistor $R$ documented in Section~\ref{subsec:resistor}.
+    \item \textbf{$\lambda$ (Marginal Cost of Suppression):} Setting the constraint $M_{\text{eff}}(t) < \tau$ means $\lambda$ equals the systemic cost $W = \psi_m + j\psi_s$. It calculates the capital and psychological wage the Elite must expend at any moment to enforce the boundary.
+\end{itemize}
+
+The Complex Wage $W = \psi_m + j\psi_s$ (Equation~\ref{eq:2.2b-complex-wage-def}) resolves the Lagrange multiplier into its real and imaginary components. The material wage $\psi_m$ is the real-power expenditure; the psychological wage $j\psi_s$ is the reactive-power expenditure that stores energy in the cultural field and deflects class momentum orthogonally.
+
+\section{The Principle of Least Action and Autonomous Propagation}
+
+In physics, the Principle of Least Action ($\delta S = 0$) dictates that a system evolves along the path that minimizes the action integral $S = \int \mathcal{L}\,dt$. Applied to the framework, this explains the Autonomous Propagation (Mode 2) of the extraction architecture. The Buffer Class ($I_{\text{buffer}}$) does not need to harbor conscious malice. The Buffer Class takes the path of least resistance through the socioeconomic potential well designed by the Elite. Because the Elite set the boundary conditions to make solidarity infinitely costly---the $\delta$-threshold of the psychological wage---the path that minimizes action naturally leads to the extraction outcome.
+
+The Euler-Lagrange dynamics therefore describe not only the motion of the Out-group but also the default trajectory of the Buffer Class. The path of least action through an engineered potential well is the formal statement of why the extraction algorithm propagates without requiring explicit coordination from $E$ at every node.
+
+\section{Three Falsifiability Experiments}
+
+The framework becomes falsifiable because it produces measurable parameters, observable time-series behavior, rival-model tests, and historical predictions. The following three experiments test the Lagrangian terms against the 500-year dataset.
+
+\subsection{Experiment 1: Proving Rayleigh Dissipation ($\mathcal{D}$) via State Friction}
+
+\textbf{The Claim:} Bureaucratic drag, redlining, and policing act as thermodynamic friction ($\mathcal{D} = I^2R$) that dissipates the kinetic momentum ($T$) of the Out-group into useless heat (exhaustion, legal fees, lost time).
+
+\textbf{The Data Query:} Isolate two historical cohorts of the Out-group with identical initial starting capital (Potential $V$) and labor participation (Kinetic $T$). Measure a period where the state abruptly increased $\mathcal{D}$ (e.g., the introduction of Stop-and-Frisk in NYC, or the 1994 Crime Bill).
+
+\textbf{The Test:} If the physics hold, the rate of economic upward mobility (the velocity $\dot{q}$) must drop in exact mathematical proportion to the increase in state friction (arrest rates, average hours spent in court, asset forfeiture).
+
+\textbf{Falsification:} If policing and bureaucratic friction increase massively, but the Out-group's net wealth accumulation and organizational momentum remain statistically unaffected, then $\mathcal{D}$ is not a true physical friction, and the model breaks.
+
+\subsection{Experiment 2: Stress-Testing the Lagrange Multiplier ($\lambda$)}
+
+\textbf{The Claim:} $\lambda$ represents the marginal cost of suppression. When the Out-group's effective mass/momentum ($M_{\text{eff}}$) approaches the systemic rebellion threshold ($\tau$), the Elite must drastically spike their expenditure ($\lambda$) to enforce the boundary.
+
+\textbf{The Data Query:} Search for periods of massive Out-group kinetic mobilization: the 1968 Civil Rights momentum following MLK's assassination, the 1992 LA Uprising, or the 2020 BLM protests.
+
+\textbf{The Test:} As $M_{\text{eff}}$ approaches $\tau$, track immediate Elite capital deployment: emergency federal grants to local police (the 1033 program militarization pipeline), sudden increases in corporate PR/diversity spending (the psychological wage deployed to pacify), and immediate legislative concessions.
+
+\textbf{Falsification:} If massive riots and structural threats occur ($M_{\text{eff}} > \tau$) and the Elite do not alter their spending or control metrics ($\lambda$ remains flat), then the system is not actively optimizing a constraint, and the Lagrangian framework is falsified.
+
+\subsection{Experiment 3: The Recompile Signature (Mode Shifts)}
+
+\textbf{The Claim:} The Recompile is the Interface Swap executed by the Elite when raw kinetic suppression fails. The system swaps variables to maintain the same net extraction.
+
+\textbf{The Data Query:} Analyze the transition from Jim Crow (pure physical constraint, high $V$) to the War on Drugs / Mass Incarceration (bureaucratic/legal friction, high $\mathcal{D}$).
+
+\textbf{The Test:} If the Elite lowered the overt legal barriers ($V$) after the Civil Rights Act of 1964, the framework dictates they must have immediately increased the dissipation term ($\mathcal{D}$) to keep the Lagrangian $\mathcal{L}^*$ balanced. Quantify this by examining the Gini coefficient of racial wealth from 1965 to 1990. The net wealth extraction rate should remain relatively constant, smoothly transferring from the mechanics of $V$ (segregation) to $\mathcal{D}$ (incarceration and predatory lending).
+
+\textbf{Falsification:} If the Civil Rights Act removed $V$ and $\mathcal{D}$ did not proportionately increase, the racial wealth gap would have closed permanently. If the gap closed and stayed closed, the Extraction Algorithm does not exist as a permanent physical law.
+
+\section{The QED Bridge: Explicitly Analogical}
+
+The framework extends to the quantum layer by modeling ideology as systemic photon exchange. This extension is explicitly analogical and topological, not a literal quantum field theory derivation. Modern QED and particle physics are built on the Lagrangian Density ($\mathcal{L}_{\text{QED}}$). By defining the Lagrangian of the extraction field, the framework can formally derive the Systemic Feynman Diagrams and transition probability amplitudes outlined in Chapter~\ref{ch:algorithmic_epoch} from the principle of stationary action.
+
+The Systemic Photon is redefined as a discrete Information Packet in the attention economy. Its energy is $E_{\text{photon}} = hf$, where $f$ is the algorithmic refresh rate and transmission frequency. Social media algorithms function as photon accelerators: they maximize $f$ and volume $\Phi$ simultaneously, driving reactive power $P = hf \cdot \Phi$ to arbitrarily high levels at near-zero material cost.
+
+Stimulated emission is mathematically grounded in contagion/cascade dynamics on scale-free networks: when a highly clustered Buffer Class node receives a high-frequency input, the probability of passing that signal to neighbors approaches 1, creating a coherent, phase-locked cascade. Echo chambers are sociological lasers. The Elite seed an initial photon; stimulated emission produces a coherent, high-intensity beam of ideological radiation.
+
+The QED extension therefore functions as an isomorphic mapping. It illustrates how systemic forces are mediated between nodes without physical contact. The heavy mathematical lifting of the framework remains rooted in the classical Lagrangian $\mathcal{L}^*$ and optimal control theory.
+
+\section{Limits and Scope}
+
+The Lagrangian $\mathcal{L}^*$ is a unification of existing model components, not a discovery of new physical laws. Its value is structural: it proves that the disparate scales of the framework---circuit models, optimal control dynamics, and quantum interaction layers---obey a single derivable root equation. The framework advances from metaphor to falsifiable dynamical modeling by specifying a Lagrangian control system, estimating its dissipative parameters, and validating its predicted spectral and transient responses against institutional data.
+
+The model becomes falsifiable because it produces measurable parameters, observable time-series behavior, rival-model tests, and historical predictions. It does not claim electromagnetic ontology. It claims dynamical homology.
+
 \chapter{Redefining Racism}
 \label{ch:redefining}
 
@@ -1884,6 +1991,51 @@ These equations would be falsified if the post-1965 period showed simultaneous i
 
 \paragraph{Precision qualifier: hardware layer formalization vs.\ calibrated quantitative prediction.}
 The series RLC circuit is the hardware layer formalization of this section, not a numerically calibrated forecast. The convergence claim ($q(t) \rightarrow 0$) and the resonance escape condition ($\omega = 1/\sqrt{LC}$) are exact circuit-theoretic results that follow from the governing equation~\ref{eq:1.7a-rlc-governing}; they are not analogical inferences. What the historical record cannot yet supply is precise numerical values for $L$, $R$, and $C$ as functions of institutional time. No claim is made that the parameters in Figure~\ref{fig:backlash_oscillator} (or any specific values of $Q_0$, $\alpha$, $\omega_d$) are read off the historical data. What the historical record does support is an \textit{ordinal} claim: the initial charge amplitude of Shock 2 (1964 Civil Rights Act) is observably smaller than that of Shock 1 (1865 Abolition), and the decay rate $\alpha$ is observably higher in 1964 than in 1865---a pattern consistent with the quantitative fits in Section~\ref{sec:laplace_transfer_function} (1865: $\zeta = 0.17$; 1964: $\zeta = 0.59$; 2020: $\zeta = 0.97$). Each fitted $\zeta$ is $\alpha/\omega_0 = (R/2L)/\omega_0$, confirming that $R/(2L)$ has grown monotonically relative to $\omega_0$ across the historical record---precisely what the hardware model predicts as the kernel expands its carceral resistance in response to successive reform shocks. This ordinal damping is the empirical content of the circuit model. The specific illustrative parameter values visualize the pattern; they do not derive it.
+
+\subsubsection{The Psychological Wage as Systemic Inductor: Inductive Trickle-Charging and Future Violence}
+
+The Complex Wage $W = \psi_m + j\psi_s$ (Equation~\ref{eq:2.2b-complex-wage-def}) resolves the suppression expenditure of the Elite into two orthogonal components. The material wage $\psi_m$ is the real-power channel: it performs direct thermodynamic work on the Buffer Class by delivering land, credit, wages, and legal immunities. The psychological wage $j\psi_s$ is the reactive-power channel. It stores energy in the ideological field and deflects class momentum orthogonally. In steady-state extraction, $j\psi_s$ performs zero material work in the direction of the extraction current. The magnetic analogue is exact: the Lorentz force $\vec{F} = q(\vec{v} \times \vec{B})$ is always perpendicular to the charge velocity $\vec{v}$, so the magnetic field deflects the charge without altering its kinetic energy. The psychological wage deflects the Buffer Class away from cross-racial solidarity without delivering material wealth.
+
+The apparent paradox---that $j\psi_s$ "does no work"---collapses when the time dimension is added. The inductor $L$ (cultural inertia and white supremacist social organization, Section~\ref{subsec:inductor}) stores magnetic potential energy $U = \frac{1}{2}LI^2$. Microaggressions, passive racial animus, and the ambient maintenance of racial hierarchy constitute the continuous trickle-charging of this systemic inductor. Each discrete microaggression deposits a small quantum of energy into the field. The individual impact is negligible; the accumulated field is massive.
+
+When the Out-group mounts a sudden kinetic mobilization---a reform movement or uprising that forces a rapid change in the systemic current ($di/dt$)---the stored field is compelled to collapse. Faraday's Law of Induction states that a changing magnetic field induces a real electric field:
+\begin{equation}\label{eq:1.7c-faraday-induction}
+\nabla \times \vec{E} = -\frac{\partial \vec{B}}{\partial t}
+\end{equation}
+The induced electric field performs real material work. Lenz's Law fixes the direction: the induced force opposes the change in current that produced it. In the sociological domain, this means the collapse of the racialized psychological field generates a violent backlash directed precisely against the Out-group's liberation momentum. The energy that was stored orthogonally as passive animus converts into literal, measurable future violence: state-sanctioned assassinations, COINTELPRO operations, the militarization of local police, and the construction of the mass carceral state.
+
+The framework therefore distinguishes two operational regimes of $j\psi_s$:
+\begin{itemize}
+    \item \textbf{Steady state (orthogonal deflection):} $j\psi_s$ stores energy and deflects the Buffer Class horizontally, away from vertical class solidarity. It performs zero work in the extraction direction and zero work against the Elite.
+    \item \textbf{Transient collapse (opposing violence):} A forced change in systemic current ($di/dt$) triggers field collapse. The induced force opposes the reform current (Lenz's Law) and performs real material work against the Out-group's kinetic mobilization.
+\end{itemize}
+
+The suppression envelope $\Sigma_{\text{sup}}(t)$ (Equation~\ref{eq:1.8-suppression-envelope}) can now be read as the empirical signature of this inductive mechanism. When $M(t)$ approaches $\tau$ and forces $di/dt$ to spike, the Elite do not merely expand $\psi_m$ (material suppression). They harvest the collapsing $j\psi_s$ field and route its energy into the next phase of the extraction architecture. The 1965--2020 data confirm this: as overt legal barriers ($V$) were lowered, the dissipation term ($\mathcal{D} \rightarrow R$) and the phase-loading term ($\Phi_{\text{load}}$) expanded by over $23\%$, precisely the signature of an inductive kickback event being absorbed and redeployed.
+
+\subsubsection{The Energy Recovery Circuit: Interface Swap as Multi-Stage Coil Gun}
+
+The historical transition between eras of oppression---Chattel Slavery $\rightarrow$ Jim Crow $\rightarrow$ Mass Incarceration $\rightarrow$ Algorithmic Gig Economy---models onto the topology of a multi-stage linear accelerator. In this electrodynamic schematic, the \textbf{projectile} is the continuous upward extraction of wealth to the Elite (the vertical $z$-axis vector of the 3-D pyramid). The \textbf{coils} are the distinct historical eras, each pulsed in sequence to accelerate the projectile. The \textbf{orthogonal magnetic field} is the psychological wage $j\psi_s$: it projects horizontally, saturating the Buffer Class and maintaining alignment with the system, while performing zero work on the vertical extraction axis.
+
+When the Out-group successfully organizes and forces a kernel breach---the Civil Rights Act of 1964, for example---they effectively cut the power to the current historical coil (Jim Crow). Physics demands a toll. The massive magnetic field of racial animus and segregation abruptly collapses. This collapse generates a catastrophic Back-EMF:
+\begin{equation}\label{eq:1.7d-back-emf}
+V_{\text{back-EMF}} = -L\,\frac{di}{dt}
+\end{equation}
+The resulting voltage surge is the fascist backlash: white flight, the rise of the Ku Klux Klan, vigilante violence, and the panic of the Buffer Class.
+
+In amateur electronics, uncontrolled Back-EMF destroys components; standard designs shunt the energy as waste heat through a flyback diode. The Elite operate as systems engineers. They do not waste the Back-EMF. They harvest it. When the Jim Crow coil was shut off, the Elite captured the massive surge of reactionary energy and routed it directly into the capacitors for the next coil:
+\begin{itemize}
+    \item The "Law and Order" backlash became political capital (Nixon's Southern Strategy).
+    \item The reactionary fear funded the militarization of police.
+    \item The Back-EMF powered the construction of the War on Drugs and the mass carceral state.
+\end{itemize}
+
+The recovered energy equation quantifies this efficiency:
+\begin{equation}\label{eq:1.7e-energy-recovery}
+U_{\text{recovered}} = \frac{1}{2}LI^2
+\end{equation}
+The energy stored in the racialized magnetic field during the Jim Crow era was not dissipated. It was recovered and reinvested. The Interface Swap is therefore not merely an adaptive recompilation. It is an energy-efficient transfer of suppression capital from one historical stage to the next. The system uses the violent collapse of its own obsolete hardware to charge the capacitors for its next iteration.
+
+This regenerative mechanism explains the empirical regularity documented in the Post-1965 Backlash Wave (Section~\ref{cs:backlash_wave}). The suppression envelope $\Sigma_{\text{sup}}(t)$ expanded by more than $23\%$ from 1965 to 2020 not because the Elite invented new energy, but because they recovered the energy stored in the collapsing Jim Crow inductor and reinjected it into the Mass Incarceration capacitor. The extraction rate remained constant; only the channel changed. The Recompile is the kernel's energy recovery circuit.
 
 \subsection{Fractal Execution: The Self-Similar Architecture}
 
@@ -5179,6 +5331,9 @@ The notebook computes the following compounding sequence. Starting from a normal
   \caption{Compounding capacity-reduction chain for eq.~\ref{eq:6.12-capacity-compounding-full}: each bar shows the residual $O^{\text{capacity}}$ after each policy shock, with the stripped capacity shown in grey. The four shocks compound from 1619 to 1971, producing a terminal $O_{1971} \approx 0.019$ --- less than 2\% of the normalized pre-contact baseline. Waterfall computed from ACLU (2020), Mapping Inequality, Blackmon (2008), and Darity \& Mullen (2020).}
   \label{fig:eq33_cannabis}
 \end{figure}
+
+\paragraph{Precision qualifier: latent capacity versus observed wealth.}
+The terminal product $O_{1971} \approx 0.019$ represents retained \textit{unconstrained latent capacity} prior to transfer, adaptation, public support, informal economies, and partial institutional recovery. It does not directly equal the observed wealth ratio. The Federal Reserve Survey of Consumer Finances (2022) reports Black median family wealth at approximately $15.75\%$ of White median family wealth (a ratio of roughly $1{:}6.35$), with White median wealth at \$285.01k and Black median wealth at \$44.89k. The observed wealth ratio is modeled as the \textit{output transform} of the latent capacity, acknowledging that institutional and social transfers mitigate the terminal product of the compounding chain. The multiplicative model predicts the directional magnitude and the ordinal ordering of the gap; the exact scalar mapping from latent capacity to observed wealth incorporates mediating variables not captured by the four-shock chain alone.
 
 \paragraph{Comparison to prediction.}
 Equation~\ref{eq:6.12-capacity-compounding-full} predicts that the terminal wealth-capacity state is a direct mathematical consequence of the policy sequence. The data confirm this at every step: each factor is independently documented below 1.0; the cumulative product ($\approx 0.019$) is consistent with the observed Black-White wealth gap (median White household wealth $\approx 7.8\times$ Black, Federal Reserve SCF 2022), where the reparations-baseline approach of Darity \& Mullen anchors the expected ratio from the compounding model. The 3.73$\times$ cannabis arrest disparity (at equal usage rates) confirms that $\delta$ measures enforcement targeting, not behavioral difference.
@@ -14808,7 +14963,7 @@ below is therefore the formal apparatus the physicists left behind,
 applied to the system it was originally about.
 
 \begin{definition}[Unified Electrodynamic Framework --- Canonical Entry]
-\textbf{Master Equation --- The Unified Lorentz Force:}
+\textbf{Root Equation --- The Unified Lorentz Force:}
 \begin{equation}\label{eq:19.5-unified-lorentz-force-registry}
 \vec{F}_{\text{total}} = \mathbf{Q}\,\vec{\mathcal{E}}_{\text{mat}} + \mathbf{Q}\left(\vec{v} \times \sum_{k=1}^{N} \rho_k \vec{B}_k\right)
 \end{equation}
