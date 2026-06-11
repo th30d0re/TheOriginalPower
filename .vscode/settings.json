@@ -3,23 +3,30 @@
   "python.terminal.activateEnvironment": true,
   "jupyter.kernelSpec.notebookPythonInterpreterPath": "${workspaceFolder}/.venv/bin/python3",
   "jupyter.notebookFileRoot": "${workspaceFolder}",
+  "latex-workshop.latex.rootFile": "Paper/The_Original_Power.tex",
+  "latex-workshop.latex.outDir": "Paper",
   "latex-workshop.latex.tools": [
     {
-      "name": "xelatex",
-      "command": "xelatex",
+      "name": "latexmk",
+      "command": "latexmk",
       "args": [
-        "-synctex=1",
+        "-pdf",
         "-interaction=nonstopmode",
-        "-file-line-error",
+        "-halt-on-error",
+        "-synctex=1",
         "%DOC%"
       ],
-      "env": {}
+      "env": {
+        "SOURCE_DATE_EPOCH": "1704067200",
+        "FORCE_SOURCE_DATE": "1",
+        "TZ": "UTC"
+      }
     }
   ],
   "latex-workshop.latex.recipes": [
     {
-      "name": "XeLaTeX",
-      "tools": ["xelatex", "xelatex"]
+      "name": "latexmk (pdfLaTeX)",
+      "tools": ["latexmk"]
     }
   ],
   "latex-workshop.message.badbox.show": false
