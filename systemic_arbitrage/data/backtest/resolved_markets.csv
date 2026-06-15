@@ -1,0 +1,4 @@
+market_slug,trigger_type,resolution_date,resolution_outcome,market_prob_at_entry,delta_p_at_entry,entry_date,fill_notional_usd,book_depth_usd,half_spread_frac
+will-fed-cut-rates-q4-2024,concession,2024-12-31,1,0.58,0.72,2024-10-01,200.0,15000.0,0.008
+will-uaw-strike-expand-2024,kinetic,2024-09-15,0,0.42,-0.31,2024-08-01,150.0,8000.0,0.012
+will-nlrb-rule-for-workers-amazon-2025,concession,2025-03-20,1,0.35,0.91,2025-01-10,300.0,22000.0,0.006

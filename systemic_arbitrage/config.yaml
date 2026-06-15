@@ -39,7 +39,7 @@ trading:
       size: 500
       label: heavy
   promotion_gate:
-    min_closed_trades: 100
+    min_closed_trades: 200
     min_sharpe_ratio: 1.0
     min_win_rate: 0.65
 
