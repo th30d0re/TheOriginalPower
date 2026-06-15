@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import StoryMode from './components/StoryMode';
 import Dashboard from './components/Dashboard';
+import SystemicArbitrageDashboard from './components/SystemicArbitrageDashboard';
 import './App.css';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           path="/dashboard" 
           element={storyCompleted ? <Dashboard /> : <Navigate to="/" />} 
         />
+        <Route path="/arbitrage" element={<SystemicArbitrageDashboard />} />
       </Routes>
     </Router>
   );

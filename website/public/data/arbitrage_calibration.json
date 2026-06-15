@@ -1,0 +1,25 @@
+{
+  "tau": 0.7072,
+  "test_a": {
+    "predicted_response_year": 1932,
+    "actual_response_year": 1932,
+    "extraction_share_max_fall_year": 1931,
+    "extraction_share_rebound": true,
+    "extraction_share_rebound_year": 1935,
+    "passed": true
+  },
+  "test_b": {
+    "predicted_ve_spike_year": 1969,
+    "actual_ve_spike_year": 1969,
+    "ve_growth_1968_1971": 0.0491,
+    "t_growth_1968_1971": -0.3574,
+    "extraction_share_fell_below_trend": false,
+    "m_eff_below_tau": true,
+    "passed": true
+  },
+  "overall_pass": true,
+  "metadata": {
+    "variables_version": "tier_2",
+    "calibration_mode": "min_anchor_max"
+  }
+}

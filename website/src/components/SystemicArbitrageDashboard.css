@@ -1,0 +1,231 @@
+.arbitrage-dashboard {
+  min-height: 100vh;
+  background: #000000;
+  color: #f1f5f9;
+  padding: 2rem;
+}
+
+.arbitrage-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem;
+}
+
+.arbitrage-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #ef4444, #b91c1c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.arbitrage-header p {
+  color: #94a3b8;
+  font-size: 1.1rem;
+}
+
+.arbitrage-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.arbitrage-card {
+  background: #0a0a0a;
+  border: 1px solid #1f1f1f;
+  border-radius: 12px;
+  padding: 1.75rem;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.arbitrage-card:hover {
+  border-color: rgba(239, 68, 68, 0.5);
+  transform: translateY(-2px);
+}
+
+.arbitrage-card h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1.25rem;
+  color: #ef4444;
+  border-bottom: 1px solid #1f1f1f;
+  padding-bottom: 0.75rem;
+}
+
+.arbitrage-card h3 {
+  font-size: 1.1rem;
+  margin: 1.25rem 0 0.75rem;
+  color: #f1f5f9;
+}
+
+.status-row,
+.metric-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #1f1f1f;
+}
+
+.status-label,
+.metric-label {
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
+
+.metric-value {
+  color: #f1f5f9;
+  font-weight: 600;
+  font-family: 'Monaco', 'Courier New', monospace;
+}
+
+.status-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.status-badge.pass {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.4);
+}
+
+.status-badge.fail {
+  background: rgba(148, 163, 184, 0.15);
+  color: #94a3b8;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+}
+
+.test-block {
+  background: #111111;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.signal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.signal-tile {
+  background: #111111;
+  border: 1px solid #1f1f1f;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  transition: border-color 0.3s ease;
+}
+
+.signal-tile:hover {
+  border-color: rgba(239, 68, 68, 0.5);
+}
+
+.signal-name {
+  display: block;
+  color: #94a3b8;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.signal-value {
+  display: block;
+  color: #ef4444;
+  font-size: 1.4rem;
+  font-weight: 700;
+  font-family: 'Monaco', 'Courier New', monospace;
+}
+
+.trigger-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.trigger-item {
+  background: #111111;
+  border: 1px solid #1f1f1f;
+  border-left: 4px solid #ef4444;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.trigger-title {
+  font-weight: 700;
+  color: #f1f5f9;
+  margin-bottom: 0.25rem;
+}
+
+.trigger-desc {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.trigger-status {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.15);
+  color: #94a3b8;
+}
+
+.trigger-item.active .trigger-status {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+}
+
+.arbitrage-loading,
+.arbitrage-error {
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.arbitrage-loading {
+  background: #111111;
+  color: #94a3b8;
+}
+
+.arbitrage-error {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  max-width: 1400px;
+  margin: 0 auto 1.5rem;
+}
+
+.arbitrage-footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 2rem;
+  color: #64748b;
+  font-size: 0.9rem;
+  border-top: 1px solid #1f1f1f;
+}
+
+@media (max-width: 768px) {
+  .arbitrage-dashboard {
+    padding: 1rem;
+  }
+
+  .arbitrage-header h1 {
+    font-size: 2rem;
+  }
+
+  .signal-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

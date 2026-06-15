@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import VennDiagram from './visualizations/VennDiagram';
 import Timeline from './visualizations/Timeline';
@@ -9,6 +10,7 @@ import './Dashboard.css';
 
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState<'framework' | 'history' | 'podcast'>('framework');
+  const navigate = useNavigate();
 
   return (
     <div className="dashboard">
@@ -16,6 +18,12 @@ const Dashboard = () => {
       <header className="dashboard-header">
         <h1>The Original Power</h1>
         <p>Interactive Exploration Dashboard</p>
+        <button
+          className="arbitrage-link"
+          onClick={() => navigate('/arbitrage')}
+        >
+          Open Systemic Arbitrage Engine →
+        </button>
       </header>
 
       {/* Tab Navigation */}
