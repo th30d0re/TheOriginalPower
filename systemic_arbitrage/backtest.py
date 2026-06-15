@@ -61,11 +61,12 @@ def _cost_term(row: pd.Series) -> float:
     """Return cost expressed as a probability-point deduction."""
     if HAS_COSTS:
         cb: CostBreakdown = compute_costs(
-            notional_usd=float(row["fill_notional_usd"]),
-            book_depth_usd=float(row["book_depth_usd"]),
+            fill_notional_usd=float(row["fill_notional_usd"]),
+            taker_fee_bps=0.0,
             half_spread_frac=float(row["half_spread_frac"]),
+            book_depth_usd=float(row["book_depth_usd"]),
         )
-        return float(total_cost_prob_terms(cb))
+        return float(total_cost_prob_terms(cb, float(row["market_prob_at_entry"])))
     # minimal fallback: half-spread only
     return float(row["half_spread_frac"])
 
