@@ -190,7 +190,7 @@ venv-arbitrage:
 	fi
 
 arbitrage-test: venv-arbitrage
-	$(VENV_ARBITRAGE_PYTHON) -m pytest tests/test_calibrate.py tests/test_spectral.py -q
+	$(VENV_ARBITRAGE_PYTHON) -m pytest tests/ -q
 
 arbitrage-calibrate: venv-arbitrage
 	$(VENV_ARBITRAGE_PYTHON) -m systemic_arbitrage.calibrate
