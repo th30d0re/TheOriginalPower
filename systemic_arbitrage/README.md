@@ -79,11 +79,25 @@ keyword baskets, applies a 2-year FFT, and splits power into:
 
 The engine writes `data/live/signal_snapshot.json` on each run.
 
-## Phase 3 and 4
+## Phase 3: Deterministic triggers
 
-Paper-trading and ML fine-tuning are planned as follow-on work. The trigger
-engine and Polymarket client are stubbed; live execution requires an explicit
-opt-in flag and a compliance review.
+`trigger_engine.py` evaluates the three triggers from the execution plan:
+
+- **Heat Shield Reversal:** buffer-class-dominant threat with P_real approaching
+  tau → LONG reform.
+- **COINTELPRO Metric:** out-group-dominant threat with P_real approaching tau
+  → SHORT reform, LONG defense/surveillance/police.
+- **Interference Engine Spike:** crowd prices structural change but O_x is high
+  and P_real is flat → SHORT the event.
+
+`polymarket/client.py` logs intended paper trades to `data/paper_trades.jsonl`
+in dry-run mode. Live order placement is gated behind
+`SYSTEMIC_ARBITRAGE_LIVE=1` and currently raises `NotImplementedError`.
+
+## Phase 4
+
+ML fine-tuning via QLoRA/DPO and live Polygon wallet execution are planned as
+follow-on work.
 
 ## Responsible use
 
