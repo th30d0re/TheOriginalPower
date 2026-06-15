@@ -176,7 +176,7 @@ VENV_ARBITRAGE        := .venv-arbitrage
 VENV_ARBITRAGE_PYTHON := $(VENV_ARBITRAGE)/bin/python3
 VENV_ARBITRAGE_PIP    := $(VENV_ARBITRAGE)/bin/pip
 
-.PHONY: venv-arbitrage arbitrage-test arbitrage-calibrate arbitrage-signals arbitrage-backtest
+.PHONY: venv-arbitrage arbitrage-test arbitrage-calibrate arbitrage-signals arbitrage-backtest arbitrage-paper-run
 
 venv-arbitrage:
 	@if [ ! -x "$(VENV_ARBITRAGE_PYTHON)" ]; then \
@@ -200,3 +200,6 @@ arbitrage-signals: venv-arbitrage
 
 arbitrage-backtest: venv-arbitrage
 	$(VENV_ARBITRAGE_PYTHON) -m systemic_arbitrage.backtest
+
+arbitrage-paper-run: venv-arbitrage
+	$(VENV_ARBITRAGE_PYTHON) -m systemic_arbitrage paper-run --dry-run
