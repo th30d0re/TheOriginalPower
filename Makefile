@@ -167,3 +167,33 @@ clean:
 	  *.aux *.fdb_latexmk *.fls *.log *.out *.synctex.gz *.toc \
 	  *.bbl *.blg *.bcf *.run.xml
 	rm -f Paper/figures/spectral/*.pdf
+
+# ---------------------------------------------------------------------------
+# Systemic Arbitrage Engine
+# ---------------------------------------------------------------------------
+
+VENV_ARBITRAGE        := .venv-arbitrage
+VENV_ARBITRAGE_PYTHON := $(VENV_ARBITRAGE)/bin/python3
+VENV_ARBITRAGE_PIP    := $(VENV_ARBITRAGE)/bin/pip
+
+.PHONY: venv-arbitrage arbitrage-test arbitrage-calibrate arbitrage-signals
+
+venv-arbitrage:
+	@if [ ! -x "$(VENV_ARBITRAGE_PYTHON)" ]; then \
+	  echo "Creating virtual environment at $(VENV_ARBITRAGE)/..."; \
+	  $(SYSTEM_PYTHON) -m venv $(VENV_ARBITRAGE); \
+	  $(VENV_ARBITRAGE_PIP) install --upgrade pip -q; \
+	  $(VENV_ARBITRAGE_PIP) install -r systemic_arbitrage/requirements.txt -q; \
+	  echo "✓ venv-arbitrage ready. Activate with: source $(VENV_ARBITRAGE)/bin/activate"; \
+	else \
+	  echo "✓ venv-arbitrage already exists at $(VENV_ARBITRAGE)/"; \
+	fi
+
+arbitrage-test: venv-arbitrage
+	$(VENV_ARBITRAGE_PYTHON) -m pytest tests/test_calibrate.py tests/test_spectral.py -q
+
+arbitrage-calibrate: venv-arbitrage
+	$(VENV_ARBITRAGE_PYTHON) -m systemic_arbitrage.calibrate
+
+arbitrage-signals: venv-arbitrage
+	$(VENV_ARBITRAGE_PYTHON) -m systemic_arbitrage.interference_engine

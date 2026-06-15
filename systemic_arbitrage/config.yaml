@@ -1,0 +1,53 @@
+# Systemic Arbitrage Engine runtime configuration.
+
+paths:
+  package_root: systemic_arbitrage
+  historical_data: systemic_arbitrage/data/historical
+  live_data: systemic_arbitrage/data/live
+  raw_data: systemic_arbitrage/data/raw
+  reports: systemic_arbitrage/data/reports
+  trade_log: systemic_arbitrage/data/paper_trades.jsonl
+
+calibration:
+  test_a_window: [1920, 1935]
+  test_b_window: [1966, 1971]
+  extraction_horizon_years: 10
+  tau_calibration_mode: min_anchor_max
+
+spectral:
+  window_days: 730
+  interpolation_limit_days: 7
+  window_function: hann
+  low_frequency_band_cycles_per_day: [0.0, 0.011111]
+  high_frequency_band_cycles_per_day: [0.142857, 1.0]
+
+trading:
+  default_mode: paper
+  max_daily_drawdown: 0.05
+  max_single_trade_notional: 500
+  position_size_map:
+    - threshold: 0.25
+      size: 0
+      label: no_trade
+    - threshold: 0.75
+      size: 50
+      label: light
+    - threshold: 1.5
+      size: 200
+      label: moderate
+    - threshold: 999.0
+      size: 500
+      label: heavy
+  promotion_gate:
+    min_closed_trades: 100
+    min_sharpe_ratio: 1.0
+    min_win_rate: 0.65
+
+polymarket:
+  api_base: https://api.polymarket.com
+  testnet: true
+  paper_trader: true
+
+logging:
+  level: INFO
+  format: "%(asctime)s [%(levelname)s] %(name)s: %(message)s"

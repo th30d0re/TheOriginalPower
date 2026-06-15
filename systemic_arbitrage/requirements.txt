@@ -1,0 +1,15 @@
+# Core
+pyyaml>=6.0
+numpy>=1.26.0
+pandas>=2.1.0
+scipy>=1.11.0
+
+# Google Trends ingestion (unofficial; rate-limited)
+pytrends>=4.9.0
+
+# Optional: social sentiment Phase 2b
+# gdeltpyr>=0.2.0
+
+# Testing
+pytest>=7.4.0
+pytest-cov>=4.1.0

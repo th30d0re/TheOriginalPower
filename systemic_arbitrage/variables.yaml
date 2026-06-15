@@ -1,0 +1,135 @@
+# Variable registry for the Systemic Arbitrage Engine.
+# All proxies are tagged with a tier-confidence flag:
+#   tier_1 = direct measurement
+#   tier_2 = modeled or interpolated estimate
+#   tier_3 = ordinal proxy
+
+symbols:
+  T:
+    name: kinetic_momentum
+    framework_meaning: |
+      Class-coherence threat or mobilized pressure from subordinate groups.
+    phase_1_proxy: |
+      Annual strike volume (days idle), union membership density, and civil-rights
+      mobilization indices.
+    phase_1_sources:
+      - Troy & Sheflin, U.S. Union Sourcebook
+      - U.S. Bureau of Labor Statistics (BLS) strike statistics
+      - Historical civil-rights mobilization indices (tier_2/3)
+    phase_2_proxy: |
+      Low-frequency component of the class-keyword Google Trends basket,
+      normalized to a z-score and labeled P_real.
+    units: dimensionless_z_score
+    tier: tier_2
+    falsification_criteria:
+      - T must rise before documented concession windows.
+      - T must not predict neutralization responses in out-group-dominant windows.
+
+  V_E:
+    name: enclosure_volts
+    framework_meaning: |
+      Elite suppression allocation directed against perceived threats to the
+      extraction kernel.
+    phase_1_proxy: |
+      Police militarization budgets, COINTELPRO-era FBI spend (ordinal), and
+      corporate lobbying intensity where available.
+    phase_1_sources:
+      - U.S. Department of Justice historical budgets
+      - FBI appropriations and COINTELPRO documentary record (tier_3)
+      - OpenSecrets corporate lobbying totals (tier_2)
+    phase_2_proxy: |
+      Federal law-enforcement grants, 1033 program transfers, and incarceration
+      deltas from Bureau of Justice Statistics.
+    units: dimensionless_z_score
+    tier: tier_2
+    falsification_criteria:
+      - V_E must spike in out-group-dominant windows.
+      - V_E must remain comparatively low in buffer-class-dominant concession windows.
+
+  tau:
+    name: crash_threshold
+    framework_meaning: |
+      Critical amplitude of effective threat at which the Elite mode-shifts from
+      extraction maintenance to structural response.
+    phase_1_proxy: |
+      Maximum effective threat M_eff observed immediately before the Great
+      Compression / New Deal and COINTELPRO anchor windows.
+    phase_2_proxy: |
+      Rolling 90th percentile of P_real over a 2-year window.
+    units: dimensionless_threshold_score
+    tier: tier_2
+    falsification_criteria:
+      - M_eff must exceed tau before documented systemic responses.
+      - tau must not be crossed during stable extraction periods.
+
+  O_x:
+    name: orthographic_illusion_index
+    framework_meaning: |
+      Ratio of high-frequency identity-band noise to total spectral power. Maps
+      to the strength of the psychological wage psi_s.
+    phase_1_proxy: |
+      Not used in Phase 1.
+    phase_2_proxy: |
+      High-frequency identity-band FFT amplitude divided by total FFT power in
+      the 2-year window.
+    units: ratio
+    tier: tier_2
+    falsification_criteria:
+      - O_x must rise during culture-war spikes.
+      - O_x must not correlate with subsequent material concessions.
+
+  P_real:
+    name: real_kinetic_momentum
+    framework_meaning: |
+      Low-frequency structural component of collective attention that reflects
+      durable economic anxiety and class-coherence pressure.
+    phase_1_proxy: |
+      Not used in Phase 1.
+    phase_2_proxy: |
+      Low-frequency class-keyword FFT band (periods >= 90 days), z-scored.
+    units: dimensionless_z_score
+    tier: tier_2
+    falsification_criteria:
+      - P_real must lead documented labor and economic reform windows.
+      - P_real must not spike on purely viral identity-media events.
+
+  M_eff:
+    name: effective_threat
+    framework_meaning: |
+      Structural threat after discounting for psychological-wage interference.
+    phase_2_proxy: |
+      P_real(t) * (1 - O_x(t))
+    units: dimensionless
+    tier: derived
+
+composition_gate:
+  buffer_class_threshold: 0.70
+  out_group_threshold: 0.50
+  description: |
+    Protest or mobilization composition determines which Elite response vector
+    the engine predicts. Buffer-class dominance predicts concession; out-group
+    dominance predicts neutralization.
+
+spectral:
+  window_days: 730
+  interpolation_limit_days: 7
+  window_function: hann
+  low_frequency_band_cycles_per_day: [0.0, 0.011111]
+  high_frequency_band_cycles_per_day: [0.142857, 1.0]
+  low_frequency_period_days: ">= 90"
+  high_frequency_period_days: "1 to 7"
+
+keywords:
+  class_band:
+    - strike
+    - union
+    - rent
+    - inflation
+    - wage
+    - layoff
+  identity_band:
+    - woke
+    - crt
+    - transgender
+    - dei
+    - culture war
