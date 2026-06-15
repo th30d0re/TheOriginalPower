@@ -1,0 +1,156 @@
+metadata:
+  version: "0.1.0"
+  last_updated: "2026-06-14"
+
+triggers:
+  heat_shield_reversal:
+    description: "Buffer-class-dominant threat; predict material concession"
+    market_archetypes:
+      - slug_pattern: "minimum-wage-federal-"
+        description: "Federal minimum wage increase by target date"
+        resolution_source: "Congressional Record / signed legislation text"
+        liquidity_floor:
+          min_daily_volume_usd: 2000
+          min_book_depth_usd: 1000
+        tradeable: true
+
+      - slug_pattern: "labor-union-nlrb-"
+        description: "NLRB ruling favorable to union organizing by target date"
+        resolution_source: "NLRB official decision docket"
+        liquidity_floor:
+          min_daily_volume_usd: 1000
+          min_book_depth_usd: 500
+        tradeable: true
+
+      - slug_pattern: "paid-family-leave-federal-"
+        description: "Federal paid family leave legislation enacted"
+        resolution_source: "U.S. Code amendment / signed legislation text"
+        liquidity_floor:
+          min_daily_volume_usd: 1500
+          min_book_depth_usd: 750
+        tradeable: true
+
+      - slug_pattern: "osha-enforcement-increase-"
+        description: "OSHA budget or enforcement action increase approved"
+        resolution_source: "Congressional Budget Office / OMB official release"
+        liquidity_floor:
+          min_daily_volume_usd: 500
+          min_book_depth_usd: 250
+        tradeable: false
+        non_tradeable_reason: "Low typical volume on regulatory-budget markets; insufficient liquidity"
+
+      - slug_pattern: "corporate-tax-rate-increase-"
+        description: "Corporate income tax rate increase passes Congress"
+        resolution_source: "Internal Revenue Code amendment / signed legislation text"
+        resolution_risk: high
+        liquidity_floor:
+          min_daily_volume_usd: 5000
+          min_book_depth_usd: 2000
+        tradeable: true
+    tradeable_overall: true
+
+  cointelpro_metric:
+    description: "Out-group-dominant threat; predict suppression over concession"
+    market_archetypes:
+      - slug_pattern: "police-funding-increase-"
+        description: "Municipal or federal police department budget increase passed"
+        resolution_source: "City council / congressional budget appropriation record"
+        liquidity_floor:
+          min_daily_volume_usd: 1000
+          min_book_depth_usd: 500
+        tradeable: true
+
+      - slug_pattern: "surveillance-bill-passes-"
+        description: "Federal surveillance expansion legislation enacted"
+        resolution_source: "U.S. Code amendment / signed legislation text"
+        liquidity_floor:
+          min_daily_volume_usd: 2000
+          min_book_depth_usd: 1000
+        tradeable: true
+
+      - slug_pattern: "protest-crackdown-"
+        description: "State anti-protest or protest-restriction legislation signed"
+        resolution_source: "State legislative record / governor signature record"
+        resolution_risk: high
+        liquidity_floor:
+          min_daily_volume_usd: 1000
+          min_book_depth_usd: 500
+        tradeable: true
+
+      - slug_pattern: "criminal-justice-reform-"
+        description: "Federal criminal justice reform bill fails or stalls"
+        side_override: SHORT
+        resolution_source: "Congressional Record / legislative status tracker"
+        liquidity_floor:
+          min_daily_volume_usd: 2000
+          min_book_depth_usd: 1000
+        tradeable: true
+
+      - slug_pattern: "police-accountability-legislation-"
+        description: "Federal police accountability bill fails to pass"
+        side_override: SHORT
+        resolution_source: "Congressional Record / legislative status tracker"
+        liquidity_floor:
+          min_daily_volume_usd: 1000
+          min_book_depth_usd: 500
+        tradeable: true
+
+      - slug_pattern: "community-reinvestment-defund-"
+        description: "Defund-police or community reinvestment measure fails"
+        side_override: SHORT
+        resolution_source: "City council / state legislative record"
+        resolution_risk: high
+        liquidity_floor:
+          min_daily_volume_usd: 500
+          min_book_depth_usd: 250
+        tradeable: false
+        non_tradeable_reason: "Resolution ambiguity high; defund measures rarely reach binary-resolvable form on prediction markets"
+    tradeable_overall: true
+
+  interference_spike:
+    description: "High O_x noise, low P_real; crowd overpricing narrative threat"
+    market_archetypes:
+      - slug_pattern: "culture-war-legislation-"
+        description: "Culture-war legislation passes at state or federal level"
+        resolution_source: "State or federal legislative record / governor or presidential signature"
+        liquidity_floor:
+          min_daily_volume_usd: 5000
+          min_book_depth_usd: 2000
+        tradeable: true
+
+      - slug_pattern: "cancel-culture-policy-"
+        description: "Institutional speech or cancel-culture restriction enacted"
+        resolution_source: "Institutional policy record / board resolution text"
+        resolution_risk: high
+        liquidity_floor:
+          min_daily_volume_usd: 3000
+          min_book_depth_usd: 1000
+        tradeable: true
+
+      - slug_pattern: "moral-panic-bill-"
+        description: "Media-driven moral-panic bill (book bans, content restrictions) enacted"
+        resolution_source: "State legislative record / governor signature record"
+        resolution_risk: high
+        liquidity_floor:
+          min_daily_volume_usd: 2000
+          min_book_depth_usd: 1000
+        tradeable: true
+
+      - slug_pattern: "identity-politics-executive-order-"
+        description: "Executive order framed around identity-politics narrative signed"
+        resolution_source: "Federal Register / White House official release"
+        liquidity_floor:
+          min_daily_volume_usd: 3000
+          min_book_depth_usd: 1500
+        tradeable: true
+
+      - slug_pattern: "viral-outrage-legislation-"
+        description: "Legislation driven by viral outrage cycle passes"
+        resolution_source: "Congressional or state legislative record"
+        resolution_risk: high
+        liquidity_floor:
+          min_daily_volume_usd: 1000
+          min_book_depth_usd: 500
+        tradeable: false
+        non_tradeable_reason: "Market definition of viral outrage cycle is legally ambiguous and unlikely to produce clean binary resolution"
+    tradeable_overall: true
