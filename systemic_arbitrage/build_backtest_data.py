@@ -1,14 +1,19 @@
 """Build resolved_markets.csv for walk-forward backtesting.
 
-Fetches closed Polymarket markets, classifies them by trigger type,
-computes historical framework signals from Google Trends, and writes
-systemic_arbitrage/data/backtest/resolved_markets.csv.
+Searches Polymarket for closed markets matching framework trigger keywords,
+fetches each market's REAL point-in-time entry price from the Polymarket
+CLOB price-history API, computes historical framework signals from Google
+Trends, and writes systemic_arbitrage/data/backtest/resolved_markets.csv.
+
+Real CLOB price history only exists for markets created during/after
+Polymarket's CLOB era (~2024 onward) — markets are restricted to
+created_at >= 2024-01-01 for this reason.
 
 Usage:
     python systemic_arbitrage/build_backtest_data.py [--no-fetch]
 
-    --no-fetch  Skip API calls; use cached polymarket_resolved.json and
-                google_trends_historical.csv if they exist.
+    --no-fetch  Skip API calls; use cached search/candidate/price-history
+                JSON and google_trends_historical.csv if they exist.
 """
 
 from __future__ import annotations
@@ -17,6 +22,7 @@ import argparse
 import json
 import sys
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 import numpy as np
@@ -25,9 +31,23 @@ import pandas as pd
 PACKAGE_ROOT = Path(__file__).resolve().parent
 RAW_DIR      = PACKAGE_ROOT / "data" / "raw"
 BACKTEST_DIR = PACKAGE_ROOT / "data" / "backtest"
-POLY_CACHE   = RAW_DIR / "polymarket_resolved.json"
+SEARCH_CACHE     = RAW_DIR / "polymarket_search_events.json"
+CANDIDATES_CACHE = RAW_DIR / "candidates_2024plus.json"
+ENTRY_PRICE_CACHE = RAW_DIR / "markets_with_entry_price.json"
 TRENDS_CACHE = RAW_DIR / "google_trends_historical.csv"
 OUT_CSV      = BACKTEST_DIR / "resolved_markets.csv"
+
+MIN_VOLUME_USD = 1000.0
+MIN_CREATED_AT = "2024-01-01"  # Polymarket CLOB price history starts here
+
+SEARCH_KEYWORDS = [
+    "minimum wage", "labor union", "strike", "collective bargaining",
+    "police reform", "defund police", "gun control", "immigration",
+    "voting rights", "abortion", "supreme court", "civil rights",
+    "transgender", "critical race theory", "affirmative action",
+    "diversity equity inclusion", "cancel culture", "culture war",
+    "border wall", "filibuster", "january 6",
+]
 
 # ── Keyword classifiers ──────────────────────────────────────────────────────
 
@@ -59,70 +79,132 @@ def _classify(question: str) -> str | None:
     return None
 
 
-# ── Step 1: Polymarket fetch ─────────────────────────────────────────────────
+# ── Step 1: Polymarket keyword search ────────────────────────────────────────
 
-def fetch_polymarket(use_cache: bool) -> list[dict]:
-    if use_cache and POLY_CACHE.exists():
-        print(f"Using cached Polymarket data: {POLY_CACHE}")
-        return json.loads(POLY_CACHE.read_text())
+def fetch_search_events(use_cache: bool) -> list[dict]:
+    if use_cache and SEARCH_CACHE.exists():
+        print(f"Using cached Polymarket search results: {SEARCH_CACHE}")
+        return json.loads(SEARCH_CACHE.read_text())
 
     import requests
-    print("Fetching Polymarket resolved markets (this may take ~30s)...")
-    all_markets: list[dict] = []
-    for offset in range(0, 3000, 100):
+    print("Searching Polymarket for trigger-relevant events...")
+    all_events: dict[str, dict] = {}
+    for kw in SEARCH_KEYWORDS:
         try:
             r = requests.get(
-                f"https://gamma-api.polymarket.com/markets?closed=true&limit=100&offset={offset}",
-                timeout=15,
+                "https://gamma-api.polymarket.com/public-search",
+                params={"q": kw, "limit_per_type": 100},
+                timeout=20,
             )
-            batch = r.json()
+            for ev in r.json().get("events", []):
+                all_events[ev["id"]] = ev
         except Exception as exc:
-            print(f"  API error at offset {offset}: {exc}")
-            break
-        if not batch:
-            break
-        all_markets.extend(batch)
+            print(f"  search error for '{kw}': {exc}")
         time.sleep(0.2)
 
     RAW_DIR.mkdir(parents=True, exist_ok=True)
-    POLY_CACHE.write_text(json.dumps(all_markets))
-    print(f"  Fetched {len(all_markets)} total markets; cached to {POLY_CACHE}")
-    return all_markets
+    SEARCH_CACHE.write_text(json.dumps(list(all_events.values())))
+    print(f"  Found {len(all_events)} unique events; cached to {SEARCH_CACHE}")
+    return list(all_events.values())
 
 
-def classify_markets(all_markets: list[dict]) -> list[dict]:
-    classified = []
-    for m in all_markets:
-        trigger = _classify(m.get("question", ""))
-        if not trigger:
-            continue
-        try:
-            vol = float(m.get("volumeNum") or 0)
-            if vol < 1000:
+def classify_markets(events: list[dict]) -> list[dict]:
+    if CANDIDATES_CACHE.exists():
+        cached = json.loads(CANDIDATES_CACHE.read_text())
+        print(f"Using cached classified candidates: {CANDIDATES_CACHE}")
+        return cached
+
+    candidates = []
+    seen_slugs: set[str] = set()
+    for ev in events:
+        for m in ev.get("markets", []):
+            if not m.get("closed"):
                 continue
-            prices = (
-                json.loads(m["outcomePrices"])
-                if isinstance(m["outcomePrices"], str)
-                else m["outcomePrices"]
-            )
-            outcome = int(float(prices[0]) > 0.5)
-            start = (m.get("createdAt") or "")[:10]
-            end   = (m.get("endDateIso") or m.get("endDate") or "")[:10]
-            if not start or not end or end <= start:
+            created = (m.get("createdAt") or "")[:10]
+            if not created or created < MIN_CREATED_AT:
                 continue
-            classified.append({
-                "slug":      m["slug"],
-                "trigger":   trigger,
-                "question":  m["question"][:90],
-                "end":       end,
-                "start":     start,
-                "outcome":   outcome,
-                "liquidity": float(m.get("liquidityNum") or 0),
-                "volume":    vol,
+            trigger = _classify(m.get("question", ""))
+            if not trigger:
+                continue
+            slug = m.get("slug")
+            if not slug or slug in seen_slugs:
+                continue
+            try:
+                vol = float(m.get("volumeNum") or 0)
+                if vol < MIN_VOLUME_USD:
+                    continue
+                prices = (
+                    json.loads(m["outcomePrices"])
+                    if isinstance(m["outcomePrices"], str)
+                    else m["outcomePrices"]
+                )
+                outcome = int(float(prices[0]) > 0.5)
+                end = (m.get("endDateIso") or m.get("endDate") or "")[:10]
+                if not end or end <= created:
+                    continue
+                clob_raw = m.get("clobTokenIds")
+                clob_ids = json.loads(clob_raw) if isinstance(clob_raw, str) else clob_raw
+                if not clob_ids:
+                    continue
+            except Exception:
+                continue
+            seen_slugs.add(slug)
+            candidates.append({
+                "slug":       slug,
+                "trigger":    trigger,
+                "question":   m["question"][:90],
+                "end":        end,
+                "start":      created,
+                "outcome":    outcome,
+                "liquidity":  float(m.get("liquidityNum") or 0),
+                "volume":     vol,
+                "clob_token": clob_ids[0],
             })
-        except Exception:
-            continue
-    return classified
+
+    RAW_DIR.mkdir(parents=True, exist_ok=True)
+    CANDIDATES_CACHE.write_text(json.dumps(candidates))
+    print(f"  Classified {len(candidates)} candidates; cached to {CANDIDATES_CACHE}")
+    return candidates
+
+
+# ── Step 1b: real entry prices from CLOB price history ──────────────────────
+
+def fetch_entry_prices(candidates: list[dict], use_cache: bool) -> list[dict]:
+    if use_cache and ENTRY_PRICE_CACHE.exists():
+        print(f"Using cached entry prices: {ENTRY_PRICE_CACHE}")
+        return json.loads(ENTRY_PRICE_CACHE.read_text())
+
+    import requests
+
+    def _fetch_one(c: dict) -> dict | None:
+        for attempt in range(3):
+            try:
+                r = requests.get(
+                    "https://clob.polymarket.com/prices-history",
+                    params={"market": c["clob_token"], "interval": "max", "fidelity": 1440},
+                    timeout=15,
+                )
+                hist = r.json().get("history", [])
+                if not hist:
+                    return None
+                return {**c, "market_prob_at_entry": float(hist[0]["p"]), "n_price_points": len(hist)}
+            except Exception:
+                time.sleep(0.5 * (attempt + 1))
+        return None
+
+    print(f"Fetching real CLOB entry prices for {len(candidates)} markets...")
+    results = []
+    with ThreadPoolExecutor(max_workers=10) as ex:
+        futs = {ex.submit(_fetch_one, c): c for c in candidates}
+        for fut in as_completed(futs):
+            res = fut.result()
+            if res:
+                results.append(res)
+
+    RAW_DIR.mkdir(parents=True, exist_ok=True)
+    ENTRY_PRICE_CACHE.write_text(json.dumps(results))
+    print(f"  {len(results)}/{len(candidates)} markets had real price history; cached to {ENTRY_PRICE_CACHE}")
+    return results
 
 
 # ── Step 2: Historical Google Trends ────────────────────────────────────────
@@ -191,16 +273,16 @@ def _signal_at(date_str: str, trends: pd.DataFrame) -> tuple[float, float, float
 
 # ── Step 3: Assemble CSV ─────────────────────────────────────────────────────
 
-def build_csv(classified: list[dict], trends: pd.DataFrame) -> pd.DataFrame:
+def build_csv(priced: list[dict], trends: pd.DataFrame) -> pd.DataFrame:
     rows = []
-    for m in classified:
+    for m in priced:
         ox, preal, dp = _signal_at(m["start"], trends)
         rows.append({
             "market_slug":          m["slug"],
             "trigger_type":         m["trigger"],
             "resolution_date":      m["end"],
             "resolution_outcome":   m["outcome"],
-            "market_prob_at_entry": 0.50,
+            "market_prob_at_entry": round(m["market_prob_at_entry"], 4),
             "delta_p_at_entry":     round(dp, 4),
             "entry_date":           m["start"],
             "fill_notional_usd":    100.0,
@@ -221,16 +303,17 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
     use_cache = args.no_fetch
 
-    all_markets = fetch_polymarket(use_cache)
-    classified  = classify_markets(all_markets)
+    events     = fetch_search_events(use_cache)
+    classified = classify_markets(events)
+    priced     = fetch_entry_prices(classified, use_cache)
 
-    print(f"\nClassified {len(classified)} markets:")
+    print(f"\nClassified {len(classified)} markets; {len(priced)} have real CLOB entry prices:")
     for t in ["heat_shield_reversal", "cointelpro_metric", "interference_spike"]:
-        subset = [m for m in classified if m["trigger"] == t]
+        subset = [m for m in priced if m["trigger"] == t]
         print(f"  {t}: {len(subset)}")
 
     trends = fetch_trends(use_cache)
-    df = build_csv(classified, trends)
+    df = build_csv(priced, trends)
 
     print(f"\nWrote {len(df)} rows to {OUT_CSV}")
     print(df[["market_slug", "trigger_type", "entry_date", "resolution_outcome", "delta_p_at_entry"]].to_string())
