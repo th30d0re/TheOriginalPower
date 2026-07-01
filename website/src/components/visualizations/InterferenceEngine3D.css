@@ -171,6 +171,75 @@
   color: #94a3b8;
   margin: 0;
 }
+.ie-axis-key-title {
+  font-size: 0.68rem;
+  color: #94a3b8;
+  margin-bottom: 6px;
+}
+.ie-axis-key-title .ie-solid {
+  color: #e2e8f0;
+}
+.ie-axis-key-title .ie-dash {
+  color: #94a3b8;
+  border-bottom: 1px dashed #64748b;
+}
+.ie-axis-key {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.ie-axis-row {
+  display: grid;
+  grid-template-columns: 12px 96px 1fr 34px;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.7rem;
+}
+.ie-axis-swatch {
+  width: 11px;
+  height: 11px;
+  border-radius: 3px;
+  border: 1px solid;
+}
+.ie-axis-swatch-est {
+  background: repeating-linear-gradient(
+    45deg,
+    currentColor 0 2px,
+    transparent 2px 4px
+  ) !important;
+  opacity: 0.7;
+}
+.ie-axis-name {
+  color: #cbd5e1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ie-axis-bar-wrap {
+  height: 5px;
+  background: #1e293b;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.ie-axis-bar {
+  display: block;
+  height: 100%;
+  border-radius: 3px;
+}
+.ie-axis-val {
+  color: #94a3b8;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.ie-axis-note {
+  margin-top: 8px;
+  font-size: 0.68rem;
+  line-height: 1.45;
+  color: #64748b;
+}
+.ie-axis-note strong {
+  color: #94a3b8;
+}
 .ie-legend strong {
   color: #22d3ee;
 }

@@ -37,6 +37,35 @@ const AXIS_COLORS = [
 ];
 const AXIS_LABELS = ['race', 'gender', 'sexuality', 'ability', 'neurology', 'physicality'];
 
+/*
+ * The intersectional axes, ordered so coupled substrate/overlay pairs sit adjacent
+ * (race↔ethnicity, sex↔gender↔sexuality). `intensity` = normalized 4-year electoral-
+ * carrier resonance — how hard the Interference Engine drives each field.
+ *   measured  : from Congressional-Record FFT (Ch.21). race/class/gender/sexuality.
+ *               (race/gender/sexuality are a Tier-2 mixture-model decomposition.)
+ *   estimated : no spectral series yet — inferred from the impedance model, flagged.
+ */
+interface Axis {
+  name: string;
+  color: string;
+  intensity: number; // 0..1 normalized 4-yr carrier power
+  measured: boolean;
+}
+const AXES: Axis[] = [
+  { name: 'Race', color: '#ef4444', intensity: 1.0, measured: true },
+  { name: 'Ethnicity', color: '#fb7185', intensity: 0.85, measured: false },
+  { name: 'Class', color: '#f59e0b', intensity: 0.6, measured: true },
+  { name: 'Sex', color: '#ec4899', intensity: 0.18, measured: false },
+  { name: 'Gender', color: '#a855f7', intensity: 0.15, measured: true },
+  { name: 'Sexuality', color: '#d946ef', intensity: 0.72, measured: true },
+  { name: 'Disability', color: '#10b981', intensity: 0.4, measured: false },
+  { name: 'Neurodivergence', color: '#14b8a6', intensity: 0.3, measured: false },
+  { name: 'Religion', color: '#eab308', intensity: 0.25, measured: false },
+  { name: 'Age', color: '#f97316', intensity: 0.35, measured: false },
+  { name: 'Body / height', color: '#3b82f6', intensity: 0.25, measured: false },
+  { name: 'Nationality', color: '#06b6d4', intensity: 0.6, measured: false },
+];
+
 interface Params {
   n: number; // number of active cultural axes
   theta: number; // phase angle θ (degrees) of the complex wage W
@@ -329,31 +358,40 @@ function WavefrontRings() {
   );
 }
 
-/* ---- The radiating dipole: N arms of intertwined E (red) ⊥ B (blue) waves */
-function RadiatingArms({
+/* ---- One axis's wedge of the radiating dipole --------------------------- *
+ * Each axis owns an angular slice of the fountain; it radiates `perWedge`
+ * E⊥B wave-arms in the axis's hue. Amplitude and brightness scale with the
+ * axis's measured/estimated 4-year carrier intensity. Estimated axes are
+ * drawn dashed (every other segment collapsed) so measured ≠ guessed.
+ */
+function AxisWedge({
+  axis,
+  index,
+  total,
+  perWedge,
   clock,
   R,
   theta,
   omega,
-  rhos,
-  arms,
 }: {
+  axis: Axis;
+  index: number;
+  total: number;
+  perWedge: number;
   clock: React.MutableRefObject<number>;
   R: number;
   theta: number;
   omega: number;
-  rhos: number[];
-  arms: number;
 }) {
-  const S = 64; // samples per arm
+  const S = 56; // samples per arm
   const RMAX = 6.2;
   const rStart = 0.35;
-  const kk = 2.6; // wavenumber (wiggles per arm)
-  const H0 = 2.2; // launch height at the antenna top
-  const A1 = 0.35; // rise
-  const A2 = 0.16; // droop (fountain fall-off)
+  const kk = 2.6;
+  const H0 = 2.2;
+  const A1 = 0.35;
+  const A2 = 0.16;
   const segPerArm = S - 1;
-  const totalSeg = arms * segPerArm;
+  const totalSeg = perWedge * segPerArm;
 
   const rs = useMemo(
     () => Array.from({ length: S }, (_, i) => rStart + ((RMAX - rStart) * i) / (S - 1)),
@@ -364,17 +402,31 @@ function RadiatingArms({
   const eGeo = useRef<THREE.BufferGeometry>(null);
   const bGeo = useRef<THREE.BufferGeometry>(null);
 
+  // E strand = axis hue lightened; B strand = axis hue darkened. Estimated → desaturated.
+  const eCol = useMemo(() => {
+    const c = new THREE.Color(axis.color).offsetHSL(0, 0, 0.1);
+    if (!axis.measured) c.offsetHSL(0, -0.28, 0);
+    return c;
+  }, [axis]);
+  const bCol = useMemo(() => {
+    const c = new THREE.Color(axis.color).offsetHSL(0, -0.05, -0.16);
+    if (!axis.measured) c.offsetHSL(0, -0.28, 0);
+    return c;
+  }, [axis]);
+
+  const centerPhi = (index / total) * Math.PI * 2;
+  const wedgeSpan = (Math.PI * 2) / total * 0.72; // gap between wedges
+
   useFrame(() => {
     const t = clock.current;
-    const ampBase = 0.28 + 0.12 * R;
+    const amp0 = (0.22 + 0.1 * R) * (0.35 + 0.65 * axis.intensity);
     let seg = 0;
-    for (let a = 0; a < arms; a++) {
-      const phi = (a / arms) * Math.PI * 2;
+    for (let m = 0; m < perWedge; m++) {
+      const frac = perWedge > 1 ? m / (perWedge - 1) - 0.5 : 0;
+      const phi = centerPhi + frac * wedgeSpan;
       const cphi = Math.cos(phi);
       const sphi = Math.sin(phi);
-      const rw = rhos[a % rhos.length] ?? 0.5;
 
-      // point at sample index → {ex,ey,ez, bx,by,bz}
       const pt = (i: number) => {
         const r = rs[i];
         const yb = H0 + A1 * r - A2 * r * r;
@@ -382,19 +434,17 @@ function RadiatingArms({
         const cx = r * cphi;
         const cy = yb;
         const cz = r * sphi;
-        // in-plane transverse normal (E): perpendicular to tangent, in the vertical radial plane
         const nex = -dyb * cphi;
         const ney = 1;
         const nez = -dyb * sphi;
         const nl = Math.hypot(nex, ney, nez) || 1;
         const phase = Math.sin(kk * r - omega * t);
-        const amp = ampBase * (0.25 + 0.75 * Math.min(1, r / 2)) * (0.5 + 0.7 * rw);
+        const amp = amp0 * (0.25 + 0.75 * Math.min(1, r / 2));
         const off = amp * phase;
         return {
           ex: cx + (off * nex) / nl,
           ey: cy + (off * ney) / nl,
           ez: cz + (off * nez) / nl,
-          // azimuthal transverse normal (B): horizontal, ⊥ to the radial plane
           bx: cx + off * -sphi,
           by: cy,
           bz: cz + off * cphi,
@@ -403,8 +453,10 @@ function RadiatingArms({
 
       for (let i = 0; i < S - 1; i++) {
         const p0 = pt(i);
-        const p1 = pt(i + 1);
         const o = seg * 6;
+        // dashed for estimated axes: collapse every other segment to a point
+        const gap = !axis.measured && i % 2 === 1;
+        const p1 = gap ? p0 : pt(i + 1);
         eArr[o] = p0.ex; eArr[o + 1] = p0.ey; eArr[o + 2] = p0.ez;
         eArr[o + 3] = p1.ex; eArr[o + 4] = p1.ey; eArr[o + 5] = p1.ez;
         bArr[o] = p0.bx; bArr[o + 1] = p0.by; bArr[o + 2] = p0.bz;
@@ -419,8 +471,10 @@ function RadiatingArms({
   });
 
   const rad = (theta * Math.PI) / 180;
-  const eOpacity = 0.5 + 0.4 * Math.abs(Math.cos(rad)); // material brightness
-  const bOpacity = 0.4 + 0.5 * Math.sin(rad); // status brightness
+  const iB = 0.14 + 0.82 * axis.intensity; // brightness ∝ field intensity
+  const dim = axis.measured ? 1 : 0.82;
+  const eOpacity = Math.min(1, iB * (0.5 + 0.5 * Math.abs(Math.cos(rad))) * dim);
+  const bOpacity = Math.min(1, iB * (0.4 + 0.6 * Math.sin(rad)) * dim);
 
   return (
     <group>
@@ -428,13 +482,13 @@ function RadiatingArms({
         <bufferGeometry ref={eGeo}>
           <bufferAttribute attach="attributes-position" args={[eArr, 3]} />
         </bufferGeometry>
-        <lineBasicMaterial color="#ff4d4d" transparent opacity={eOpacity} />
+        <lineBasicMaterial color={eCol} transparent opacity={eOpacity} />
       </lineSegments>
       <lineSegments frustumCulled={false}>
         <bufferGeometry ref={bGeo}>
           <bufferAttribute attach="attributes-position" args={[bArr, 3]} />
         </bufferGeometry>
-        <lineBasicMaterial color="#4da3ff" transparent opacity={bOpacity} />
+        <lineBasicMaterial color={bCol} transparent opacity={bOpacity} />
       </lineSegments>
     </group>
   );
@@ -728,7 +782,8 @@ function PhasorInset({
 export default function InterferenceEngine3D() {
   const [params, setParams] = useState<Params>({ n: 3, theta: 60, R: 2, omega: 2 });
   const [rhos, setRhos] = useState<number[]>([0.8, 0.5, 0.4, 0.3, 0.3, 0.3]);
-  const [arms, setArms] = useState(12);
+  const [axesShown, setAxesShown] = useState(AXES.length);
+  const [perWedge, setPerWedge] = useState(3);
   const [radiate, setRadiate] = useState(true);
   const [analytic, setAnalytic] = useState(false);
   const [fieldLines, setFieldLines] = useState(false);
@@ -755,16 +810,20 @@ export default function InterferenceEngine3D() {
           <CentralCore />
           <DipoleAxis />
           {radiate && <WavefrontRings />}
-          {radiate && (
-            <RadiatingArms
-              clock={clock}
-              R={params.R}
-              theta={params.theta}
-              omega={params.omega}
-              rhos={rhos}
-              arms={arms}
-            />
-          )}
+          {radiate &&
+            AXES.slice(0, axesShown).map((axis, i) => (
+              <AxisWedge
+                key={axis.name}
+                axis={axis}
+                index={i}
+                total={axesShown}
+                perWedge={perWedge}
+                clock={clock}
+                R={params.R}
+                theta={params.theta}
+                omega={params.omega}
+              />
+            ))}
 
           {analytic && <EField psiM={psiM} />}
           {fieldLines && <EFieldLines psiM={psiM} />}
@@ -790,14 +849,25 @@ export default function InterferenceEngine3D() {
 
         <div className="ie-controls">
           <label>
-            Radial arms: <strong>{arms}</strong>
+            Axes shown: <strong>{axesShown}</strong>
             <input
               type="range"
-              min={4}
-              max={16}
+              min={1}
+              max={AXES.length}
               step={1}
-              value={arms}
-              onChange={(e) => setArms(+e.target.value)}
+              value={axesShown}
+              onChange={(e) => setAxesShown(+e.target.value)}
+            />
+          </label>
+          <label>
+            Arms per axis: <strong>{perWedge}</strong>
+            <input
+              type="range"
+              min={1}
+              max={5}
+              step={1}
+              value={perWedge}
+              onChange={(e) => setPerWedge(+e.target.value)}
             />
           </label>
           <label>
@@ -903,14 +973,36 @@ export default function InterferenceEngine3D() {
         </div>
 
       <div className="ie-legend">
-        <p>
-          Each arm radiates a wage pair: <em style={{ color: '#ff4d4d' }}>red</em> = material wave (E⃗, ψₘ),{' '}
-          <span style={{ color: '#4da3ff' }}>blue</span> = psychological wave (B⃗, ψₛ), perpendicular and
-          radiating from the Elite core — intensity falling as <strong>I ∝ r⁻²</strong>. Slide{' '}
-          <strong>θ</strong> toward 90° to starve the material wave and inflate the status wave; drag the
-          phasor into Quadrant II for the fascist inversion. Enable the <strong>Analytic layer</strong> to
-          overlay the Lorentz-deflection model (ribbons, charge, cyclotron trap).
-        </p>
+        <div className="ie-axis-key-title">
+          Axis intensity = 4-yr carrier power · <span className="ie-solid">solid = measured</span> ·{' '}
+          <span className="ie-dash">dashed = estimated</span>
+        </div>
+        <div className="ie-axis-key">
+          {AXES.slice(0, axesShown).map((a) => (
+            <div className="ie-axis-row" key={a.name}>
+              <span
+                className={`ie-axis-swatch ${a.measured ? '' : 'ie-axis-swatch-est'}`}
+                style={{ background: a.color, borderColor: a.color, color: a.color }}
+              />
+              <span className="ie-axis-name">{a.name}</span>
+              <span className="ie-axis-bar-wrap">
+                <span
+                  className="ie-axis-bar"
+                  style={{ width: `${Math.round(a.intensity * 100)}%`, background: a.color }}
+                />
+              </span>
+              <span className="ie-axis-val">
+                {a.intensity.toFixed(2)}
+                {a.measured ? '' : '*'}
+              </span>
+            </div>
+          ))}
+        </div>
+        <div className="ie-axis-note">
+          * estimated (no spectral series yet). Race blazes (11× class @ 4 yr); gender is dim
+          (off-resonance, 6.2-yr natural period). Enable the <strong>Analytic layer</strong> for the
+          Lorentz-deflection model.
+        </div>
       </div>
     </div>
   );
