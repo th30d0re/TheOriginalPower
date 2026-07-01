@@ -17,7 +17,7 @@
 
 .ie-header {
   position: absolute;
-  top: 0;
+  top: 52px;
   left: 0;
   padding: 0.9rem 1.2rem;
   z-index: 5;
@@ -41,10 +41,10 @@
   border-radius: 4px;
 }
 
-/* phasor overlay, top-right */
+/* phasor overlay, top-right (below the fixed nav bar) */
 .ie-phasor {
   position: absolute;
-  top: 12px;
+  top: 64px;
   right: 12px;
   z-index: 5;
   background: rgba(9, 14, 26, 0.82);
@@ -52,6 +52,8 @@
   border-radius: 8px;
   padding: 8px;
   backdrop-filter: blur(4px);
+  width: 166px; /* fixed: readout text must never resize the card */
+  box-sizing: border-box;
 }
 .ie-phasor-svg {
   cursor: grab;
@@ -80,9 +82,16 @@
   color: #ef4444;
   font-style: normal;
 }
-.ie-fascism {
-  color: #ef4444;
+/* always-rendered quadrant line: fixed height so QI↔QII↔QIII↔QIV never reflows */
+.ie-quadrant {
+  font-size: 0.62rem;
   font-weight: 700;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 1.1rem;
+  line-height: 1.1rem;
 }
 
 /* controls overlay, bottom-left */
@@ -97,6 +106,8 @@
   padding: 10px 12px;
   backdrop-filter: blur(4px);
   width: 230px;
+  max-height: calc(100vh - 24px);
+  overflow-y: auto;
 }
 .ie-controls label {
   display: block;
