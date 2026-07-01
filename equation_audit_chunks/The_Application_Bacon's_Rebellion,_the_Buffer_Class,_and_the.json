@@ -1,0 +1,50 @@
+[
+  {
+    "id": "E056",
+    "env_type": "equation",
+    "raw_latex": "\\begin{equation}\\label{eq:3.1-bacon-solidarity-condition}\n\\text{If} \\quad (L_{white} + L_{black}) > E \\quad \\rightarrow \\quad \\text{Revolution}\n\\end{equation}",
+    "rendered": "\\label{eq:3.1-bacon-solidarity-condition}\n\\text{If} \\quad (L_{white} + L_{black}) > E \\quad \\rightarrow \\quad \\text{Revolution}",
+    "chapter": "The Application: Bacon's Rebellion, the Buffer Class, and the Constitutional Patch (1676--1787)",
+    "section": "The Application: Bacon's Rebellion and the Partition of the Poor (1676)",
+    "line": 2874,
+    "context_before": "the capture of both Black and white runaways---the same man, the same reward structure, the same system of human property management applied across racial lines.\n\nThis cross-racial solidarity was the system's existential vulnerability. It led to the system crash of \\textbf{Bacon's Rebellion (1676)}. The united Labor Class ($L_{white} \\cup L_{black}$) burned Jamestown to the ground, proving that:",
+    "context_after": "\\section{The Pre-Compilation Patches: Prototyping the Racial Partition (1640--1691)}\n\nThe 1705 Slave Codes were the culmination of a 65-year iterative compilation cycle in which the Elite tested, debugged, and incrementally deployed the racial partition through a sequence of judicial decisions and statutes---each one closing a specific loophole in the extraction kernel. No single legislative ses",
+    "label": "eq:3.1-bacon-solidarity-condition"
+  },
+  {
+    "id": "E057",
+    "env_type": "equation",
+    "raw_latex": "\\begin{equation}\\label{eq:3.2-boundary-enforcement-1691}\nI_{\\text{buffer}} \\cap O_{\\text{racialized}} = \\emptyset\n\\end{equation}",
+    "rendered": "\\label{eq:3.2-boundary-enforcement-1691}\nI_{\\text{buffer}} \\cap O_{\\text{racialized}} = \\emptyset",
+    "chapter": "The Application: Bacon's Rebellion, the Buffer Class, and the Constitutional Patch (1676--1787)",
+    "section": "The Boundary Enforcement Act (1691): Criminalizing the Crossing",
+    "line": 2923,
+    "context_before": "rossing itself: a white woman who bore a child with a Black man would have \\textit{five years added to her indenture}, and the child would be \\textit{indentured for thirty years}. The statute functioned as a \\textbf{boundary enforcement mechanism}; its purpose was to maintain the racial partition. Sexual behavior was regulated only insofar as it threatened that partition. The statute maintained:",
+    "context_after": "The\\footnote{This equation is classified as Tier~3 (ordinal/structural); the set-disjointness condition $I_{\\text{buffer}} \\cap O_{\\text{racialized}} = \\emptyset$ is a structural claim validated by the 1691 Virginia anti-miscegenation statute and its 276-year legal lineage through \\textit{Loving v.\\ Virginia} (1967) \\cite{loving_v_virginia_record_1967}. See the Empirical Methodology chapter (p.~",
+    "label": "eq:3.2-boundary-enforcement-1691"
+  },
+  {
+    "id": "E058",
+    "env_type": "equation",
+    "raw_latex": "\\begin{equation}\\label{eq:3.3-race-destroys-class}\n\\text{Buffer Created:} \\quad I_{poor} \\rightarrow \\text{Defender of } E\n\\end{equation}",
+    "rendered": "\\label{eq:3.3-race-destroys-class}\n\\text{Buffer Created:} \\quad I_{poor} \\rightarrow \\text{Defender of } E",
+    "chapter": "The Application: Bacon's Rebellion, the Buffer Class, and the Constitutional Patch (1676--1787)",
+    "section": "The Patch: The Explicit Codification of ``Whiteness'' (1705)",
+    "line": 2954,
+    "context_before": "ace-destroys-class} is classified as Tier~3 (ordinal/structural); the structural transition from poor white laborer to Elite defender is an ordinal claim validated by the documented sequence from Bacon's Rebellion (1676) to the Virginia Slave Codes (1705). See the anchor case study on p.~\\pageref{cs:bacons_rebellion} and the Empirical Methodology chapter (p.~\\pageref{ch:empirical_methodology}).}",
+    "context_after": "\\section{Formalizing the Buffer Class ($I_{\\text{buffer}}$): From Implicit In-group to Weaponized Partition}\n\nIn Chapter~\\ref{ch:portugal}, we introduced the In-group ($I$) as the automatic byproduct of the Portuguese Implicit Contract---the working-class population compensated with the psychological wage ($\\psi$) in exchange for tolerating the extraction of the Out-group. But the In-group as it",
+    "label": "eq:3.3-race-destroys-class"
+  },
+  {
+    "id": "E059",
+    "env_type": "equation",
+    "raw_latex": "\\begin{equation}\\label{eq:3.4-three-tier-post-bacon}\n\\text{Benefit}(E) \\gg \\text{Benefit}(I_{\\text{buffer}}) > \\text{Benefit}(O_{\\text{racialized}})\n\\end{equation}",
+    "rendered": "\\label{eq:3.4-three-tier-post-bacon}\n\\text{Benefit}(E) \\gg \\text{Benefit}(I_{\\text{buffer}}) > \\text{Benefit}(O_{\\text{racialized}})",
+    "chapter": "The Application: Bacon's Rebellion, the Buffer Class, and the Constitutional Patch (1676--1787)",
+    "section": "Formalizing the Buffer Class ($I_{\\text{buffer",
+    "line": 2974,
+    "context_before": "f{material wage}---calibrated material concession (land grants, welfare benefits, subsidized homeownership) deployed only when $M(t) \\to \\tau$. Invariant: $\\psi_m(t)$ is sourced from \\textit{increased $O_{\\text{racialized}}$ extraction}, never from reduced Elite share. $\\Delta\\max = 0$ is preserved.\n\\end{itemize}\n\\end{definition}\n\nThe foundational inequality of the system upgrades to three tiers:",
+    "context_after": "where\\footnote{This equation is classified as Tier~3 (ordinal/structural); the ordinal inequality is confirmed by the documented wealth and legal-status distributions in colonial Virginia 1705--1776---planters' estates versus indentured servant wages versus enslaved persons' legal non-personhood. See the Empirical Methodology chapter (p.~\\pageref{ch:empirical_methodology}) and Appendix~\\ref{app:",
+    "label": "eq:3.4-three-tier-post-bacon"
+  }
+]

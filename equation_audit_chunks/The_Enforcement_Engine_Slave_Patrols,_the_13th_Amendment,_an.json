@@ -1,0 +1,122 @@
+[
+  {
+    "id": "E063",
+    "env_type": "equation",
+    "raw_latex": "\\begin{equation}\\label{eq:6.1-lethal-autonomy-gradient}\n\\text{Lethal Autonomy}(F_{\\text{enforce}}) \\gg \\text{Lethal Autonomy}(I_{\\text{buffer}}) \\gg \\text{Lethal Autonomy}(O) = 0\n\\end{equation}",
+    "rendered": "\\label{eq:6.1-lethal-autonomy-gradient}\n\\text{Lethal Autonomy}(F_{\\text{enforce}}) \\gg \\text{Lethal Autonomy}(I_{\\text{buffer}}) \\gg \\text{Lethal Autonomy}(O) = 0",
+    "chapter": "The Enforcement Engine: Slave Patrols, the 13th Amendment, and the Compounding Model (1704--1865)",
+    "section": "Introducing the Fourth Variable: The Enforcement Class ($F_{\\text{enforce",
+    "line": 0,
+    "context_before": "arly identical facts. The asymmetry of $QI$ is most starkly visible in the distribution of lethal autonomy. Under the Law Enforcement Officers Safety Act (LEOSA), active and retired members of $F_{\\text{enforce}}$ are granted the statutory right to carry concealed firearms in all 50 states, superseding every state and local restriction. The Second Amendment thus operates on a strict gradient:",
+    "context_after": "This gradient is the physical enforcement of the hierarchy. $F_{\\text{enforce}}$ is granted superior armament precisely because they must be capable of overwhelming both the classes below them. Their status is strictly conditional; once a member of $F_{\\text{enforce}}$ is no longer physically useful, their $QI$ is revoked, and they are discarded back into the Buffer Class or the Out-group.\n\\e",
+    "label": "eq:6.1-lethal-autonomy-gradient"
+  },
+  {
+    "id": "E064",
+    "env_type": "equation",
+    "raw_latex": "\\begin{equation}\\label{eq:6.2-four-tier-benefit-ordering}\n\\text{Benefit}(E) \\gg \\text{Benefit}(F_{\\text{enforce}}) > \\text{Benefit}(I_{\\text{buffer}}) > \\text{Benefit}(O_{\\text{racialized}})\n\\end{equation}",
+    "rendered": "\\label{eq:6.2-four-tier-benefit-ordering}\n\\text{Benefit}(E) \\gg \\text{Benefit}(F_{\\text{enforce}}) > \\text{Benefit}(I_{\\text{buffer}}) > \\text{Benefit}(O_{\\text{racialized}})",
+    "chapter": "The Enforcement Engine: Slave Patrols, the 13th Amendment, and the Compounding Model (1704--1865)",
+    "section": "Introducing the Fourth Variable: The Enforcement Class ($F_{\\text{enforce",
+    "line": 4551,
+    "context_before": "ry, that the armed agents it deploys in their neighborhoods have no obligation to use that armament on their behalf. The asymmetry is total: $F_{\\text{enforce}}$ is armed, immune, and \\textit{not required to protect you}. You are disarmed, surveilled, and \\textit{not entitled to their protection}. The system is operating exactly as designed.\n\nThe foundational inequality now extends to four tiers:",
+    "context_after": "where $\\text{Benefit}(F_{\\text{enforce}})$ consists of Qualified Immunity ($QI$), enhanced lethal autonomy, and zero accountability to the populations they nominally serve.\n\n\\subsection*{Case Study: Police Killings and the Enforcement Benefit Hierarchy}\n\\label{cs:police_killings}\n\n\\paragraph{Setup.}\nEquation~\\ref{eq:6.2-four-tier-benefit-ordering} specifies a strict benefit hierarchy across the f",
+    "label": "eq:6.2-four-tier-benefit-ordering"
+  },
+  {
+    "id": "E065",
+    "env_type": "equation",
+    "raw_latex": "\\begin{equation}\\label{eq:const_dialectic}\n\\forall x \\in \\text{Humans}: R_{\\text{natural}}(x) = \\text{TRUE} \\quad \\land \\quad S_{\\text{recognition}}(x, 1791) = \\mathbf{1}[x \\in I_{\\text{propertied, white, male}}].\n\\end{equation}",
+    "rendered": "\\label{eq:const_dialectic}\n\\forall x \\in \\text{Humans}: R_{\\text{natural}}(x) = \\text{TRUE} \\quad \\land \\quad S_{\\text{recognition}}(x, 1791) = \\mathbf{1}[x \\in I_{\\text{propertied, white, male}}].",
+    "chapter": "The Enforcement Engine: Slave Patrols, the 13th Amendment, and the Compounding Model (1704--1865)",
+    "section": "The Constitutional Dialectic: Natural Rights and Restricted Recognition",
+    "line": 4635,
+    "context_before": "hesis.} The framework resolves the apparent contradiction by separating these two variables. Let $R_{\\text{natural}}(x)$ denote the pre-political natural right to kinetic self-defense possessed by every human $x$, and let $S_{\\text{recognition}}(x, t)$ denote whether the state formally recognizes that right for individual $x$ at time $t$. The Framers' constitutional architecture is the assertion:",
+    "context_after": "The originalist reads the first conjunct and concludes the right is universal. The expansionist reads the second conjunct and concludes the right is a class privilege. \\textit{Both are correct}. The paper's entire argument is that liberation under this constitutional order requires forcing the second conjunct to converge on the first. The domain of $S_{\\text{recognition}}$ must be expanded until",
+    "label": "eq:const_dialectic"
+  },
+  {
+    "id": "E066",
+    "env_type": "equation",
+    "raw_latex": "\\begin{equation}\\label{eq:6.3-thirteenth-amendment-exception}\n\\text{If} \\quad \\text{Status}(x) = \\text{Criminal}(C) \\quad \\rightarrow \\quad \\text{Status}(x) \\in S \\text{ (Slave)}\n\\end{equation}",
+    "rendered": "\\label{eq:6.3-thirteenth-amendment-exception}\n\\text{If} \\quad \\text{Status}(x) = \\text{Criminal}(C) \\quad \\rightarrow \\quad \\text{Status}(x) \\in S \\text{ (Slave)}",
+    "chapter": "The Enforcement Engine: Slave Patrols, the 13th Amendment, and the Compounding Model (1704--1865)",
+    "section": "The System Kernel: The 13th Amendment Loophole (1865)",
+    "line": 4751,
+    "context_before": "Amendment patch.}\n\\label{fig:general_strike_causal}\n\\end{figure}\n\n\\section{The System Kernel: The 13th Amendment Loophole (1865)}\nFollowing the Civil War, the system required a new legal kernel. The \\textbf{13th Amendment} converted slavery from a static identity to a conditional state via the exception clause: \\textit{``except as a punishment for crime''} \\cite{alexander, blackmon, thirteenth}.",
+    "context_after": "This\\footnote{This equation is classified as Tier~3 (ordinal/structural); the conditional re-enslavement via criminal conviction is a structural claim validated by the convict leasing system documented in Blackmon (2008) \\cite{blackmon} and the mass incarceration data in Alexander (2010) \\cite{alexander}. See the Empirical Methodology chapter (p.~\\pageref{ch:empirical_methodology}) and Appendix~",
+    "label": "eq:6.3-thirteenth-amendment-exception"
+  },
+  {
+    "id": "E067",
+    "env_type": "equation",
+    "raw_latex": "\\begin{equation}\\label{eq:6.4-additive-policy-model}\n\\sum (O_{\\text{racialized}} \\cap P) > \\sum ((I \\setminus E) \\cap P) > \\sum (E \\cap P)\n\\end{equation}",
+    "rendered": "\\label{eq:6.4-additive-policy-model}\n\\sum (O_{\\text{racialized}} \\cap P) > \\sum ((I \\setminus E) \\cap P) > \\sum (E \\cap P)",
+    "chapter": "The Enforcement Engine: Slave Patrols, the 13th Amendment, and the Compounding Model (1704--1865)",
+    "section": "The Compounding Model: From Summation to Multiplication",
+    "line": 4821,
+    "context_before": "maintenance log.\n\n\\section{The Compounding Model: From Summation to Multiplication}\n\nWith the enforcement apparatus in place and the 13th Amendment providing the legal kernel for perpetual extraction, we can now formalize a critical mathematical property of the system: its harm \\textbf{compounds}.\n\nTraditional approaches might model the cumulative negative impact of policies as simple summation:",
+    "context_after": "where\\footnote{This equation is classified as Tier~3 (ordinal/structural); the additive model is presented as the na\\\"{i}ve baseline that the multiplicative compounding model (eq.~\\ref{eq:6.5-compounding-temporal-model}) supersedes. The ordering $O > I \\setminus E > E$ in policy burden is validated by the cannabis enforcement data in the case study below. See the Empirical Methodology chapter (p.",
+    "label": "eq:6.4-additive-policy-model"
+  },
+  {
+    "id": "E068",
+    "env_type": "equation",
+    "raw_latex": "\\begin{equation}\\label{eq:6.5-compounding-temporal-model}\nO_t^{\\text{capacity}} = O_{t-1}^{\\text{capacity}} \\cdot (1 - \\alpha P_t)\n\\end{equation}",
+    "rendered": "\\label{eq:6.5-compounding-temporal-model}\nO_t^{\\text{capacity}} = O_{t-1}^{\\text{capacity}} \\cdot (1 - \\alpha P_t)",
+    "chapter": "The Enforcement Engine: Slave Patrols, the 13th Amendment, and the Compounding Model (1704--1865)",
+    "section": "The Compounding Model: From Summation to Multiplication",
+    "line": 4827,
+    "context_before": "n this three-tiered additive model fails to capture a critical dimension of systemic racism: \\textbf{policies compound over time}. Each policy fundamentally alters the vulnerability of the targeted groups to subsequent policies.\n\nTo capture this compounding effect, we introduce a temporal model where the state of the Out-group at time $t+1$ depends on its state at time $t$ and the policy enacted:",
+    "context_after": "where $O_t^{\\text{capacity}}$ represents the accumulated capital, power, and resources of the Out-group at time $t$, $P_t$ is the policy enacted at time $t$, and $\\alpha$ is a coefficient representing the extractive intensity of the policy.\n\n\\noindent\\textit{Illustrative instantiation (Tier~2, Black wealth trajectory 1865--2024).} The compounding formula produces a concrete, testable prediction w",
+    "label": "eq:6.5-compounding-temporal-model"
+  },
+  {
+    "id": "E069",
+    "env_type": "equation",
+    "raw_latex": "\\begin{equation}\\label{eq:6.6-asymmetric-enforcement-multiplier}\n\\alpha_{O} P_t \\approx 3.73 \\cdot \\alpha_{I \\setminus E} P_t\n\\end{equation}",
+    "rendered": "\\label{eq:6.6-asymmetric-enforcement-multiplier}\n\\alpha_{O} P_t \\approx 3.73 \\cdot \\alpha_{I \\setminus E} P_t",
+    "chapter": "The Enforcement Engine: Slave Patrols, the 13th Amendment, and the Compounding Model (1704--1865)",
+    "section": "The Compounding Model: From Summation to Multiplication",
+    "line": 4847,
+    "context_before": "ession laws in 2010 alone\n\\end{itemize}\n\nThis data perfectly illustrates the mathematics of the compounding equation. Let $B$ represent the behavioral variable (cannabis use) and $P_t$ represent the policy (prohibition enforcement). $B$ is approximately equal across groups---$B(O_{\\text{racialized}}) \\approx B(I \\setminus E)$. The policy multiplier $\\alpha P_t$ is applied \\textbf{asymmetrically}:",
+    "context_after": "Each arrest triggers cascading consequences---criminal records that reduce employment ($O_{t+1}^{\\text{capacity}}$ diminished), housing exclusion, loss of voting rights, family disruption---that compound the Out-group's vulnerability to \\textit{subsequent} policy applications. The policy thus exponentially compounds the negative impact on $O_{\\text{racialized}}$ while effectively \\textbf{bypassin",
+    "label": "eq:6.6-asymmetric-enforcement-multiplier"
+  },
+  {
+    "id": "E070",
+    "env_type": "equation",
+    "raw_latex": "\\begin{equation}\\label{eq:6.7-policy-sequence-noncommutative}\nO_2^{\\text{capacity}} = O_0^{\\text{capacity}} \\cdot (1 - \\alpha P_1) \\cdot (1 - \\beta P_2)\n\\end{equation}",
+    "rendered": "\\label{eq:6.7-policy-sequence-noncommutative}\nO_2^{\\text{capacity}} = O_0^{\\text{capacity}} \\cdot (1 - \\alpha P_1) \\cdot (1 - \\beta P_2)",
+    "chapter": "The Enforcement Engine: Slave Patrols, the 13th Amendment, and the Compounding Model (1704--1865)",
+    "section": "Case Study: The Asymmetric Enforcement Multiplier --- Cannabis Arrests, 2010--2018",
+    "line": 4884,
+    "context_before": "nistrative dataset (FBI UCR via ACLU) with behavioral controls (SAMHSA NSDUH). The 3.73$\\times$ figure is derived from the national dataset, not estimated from a sample. Curated data and verification code are archived. $\\rho_\\tau \\in [0.6, 0.8]$.\n\nThis formulation reveals why historical sequencing matters. Consider two policies, $P_1$ (15th century enslavement) and $P_2$ (20th century redlining):",
+    "context_after": "The\\footnote{This equation is classified as Tier~3 (ordinal/structural); the non-commutativity of the policy sequence is a mathematical property of the multiplicative model, verified computationally in the eq.~33 notebook (\\texttt{Paper/scripts/eq33\\_cannabis\\_redlining.ipynb}), which confirms that reordering the four historical shocks produces identical terminal products but different intermedia",
+    "label": "eq:6.7-policy-sequence-noncommutative"
+  },
+  {
+    "id": "E071",
+    "env_type": "align",
+    "raw_latex": "\\begin{align}\nO_{1619}^{\\text{capacity}} &= O_{1450}^{\\text{capacity}} \\cdot (1 - \\alpha\\, P_{\\text{enslavement}}) \\label{eq:6.8-capacity-chain-1619}\\\\[4pt]\nO_{1865}^{\\text{capacity}} &= O_{1619}^{\\text{capacity}} \\cdot (1 - \\beta\\, P_{\\text{13thAmendment}}) \\label{eq:6.9-capacity-chain-1865}\\\\[4pt]\nO_{1934}^{\\text{capacity}} &= O_{1865}^{\\text{capacity}} \\cdot (1 - \\gamma\\, P_{\\text{redlining}}) \\label{eq:6.10-capacity-chain-1934}\\\\[4pt]\nO_{1971}^{\\text{capacity}} &= O_{1934}^{\\text{capacity}} \\cdot (1 - \\delta\\, P_{\\text{WarOnDrugs}}) \\label{eq:6.11-capacity-chain-1971}\n\\end{align}",
+    "rendered": "O_{1619}^{\\text{capacity}} &= O_{1450}^{\\text{capacity}} \\cdot (1 - \\alpha\\, P_{\\text{enslavement}}) \\label{eq:6.8-capacity-chain-1619}\\4pt]\nO_{1865}^{\\text{capacity}} &= O_{1619}^{\\text{capacity}} \\cdot (1 - \\beta\\, P_{\\text{13thAmendment}}) \\label{eq:6.9-capacity-chain-1865}\\4pt]\nO_{1934}^{\\text{capacity}} &= O_{1865}^{\\text{capacity}} \\cdot (1 - \\gamma\\, P_{\\text{redlining}}) \\label{eq:6.10-capacity-chain-1934}\\4pt]\nO_{1971}^{\\text{capacity}} &= O_{1934}^{\\text{capacity}} \\cdot (1 - \\delta\\, P_{\\text{WarOnDrugs}}) \\label{eq:6.11-capacity-chain-1971}",
+    "chapter": "The Enforcement Engine: Slave Patrols, the 13th Amendment, and the Compounding Model (1704--1865)",
+    "section": "Case Study: The Asymmetric Enforcement Multiplier --- Cannabis Arrests, 2010--2018",
+    "line": 4892,
+    "context_before": "Chain}\n\nThe abstract formula becomes concrete---and unavoidable---when we anchor each $t$ to the specific policy phases traced in the preceding chapters. Let $O_{1450}^{\\text{capacity}}$ represent the pre-racialization baseline, before Zurara's \\textit{Chronica} invented the ideological machinery of racial hierarchy. The compounding chain then reads (see Figure~\\ref{fig:historical_compounding}):",
+    "context_after": "Expanding the full chain (Equations~\\ref{eq:6.8-capacity-chain-1619}--\\ref{eq:6.11-capacity-chain-1971}):\n\\begin{equation}\\label{eq:6.12-capacity-compounding-full}\nO_{1971}^{\\text{capacity}} = O_{1450}^{\\text{capacity}} \\cdot (1-\\alpha\\, P_{\\text{enslavement}})(1-\\beta\\, P_{\\text{13thAmendment}})(1-\\gamma\\, P_{\\text{redlining}})(1-\\delta\\, P_{\\text{WarOnDrugs}})\n\\end{equation}\nEach dated factor i",
+    "label": "eq:6.8-capacity-chain-1619"
+  },
+  {
+    "id": "E072",
+    "env_type": "equation",
+    "raw_latex": "\\begin{equation}\\label{eq:6.12-capacity-compounding-full}\nO_{1971}^{\\text{capacity}} = O_{1450}^{\\text{capacity}} \\cdot (1-\\alpha\\, P_{\\text{enslavement}})(1-\\beta\\, P_{\\text{13thAmendment}})(1-\\gamma\\, P_{\\text{redlining}})(1-\\delta\\, P_{\\text{WarOnDrugs}})\n\\end{equation}",
+    "rendered": "\\label{eq:6.12-capacity-compounding-full}\nO_{1971}^{\\text{capacity}} = O_{1450}^{\\text{capacity}} \\cdot (1-\\alpha\\, P_{\\text{enslavement}})(1-\\beta\\, P_{\\text{13thAmendment}})(1-\\gamma\\, P_{\\text{redlining}})(1-\\delta\\, P_{\\text{WarOnDrugs}})",
+    "chapter": "The Enforcement Engine: Slave Patrols, the 13th Amendment, and the Compounding Model (1704--1865)",
+    "section": "Case Study: The Asymmetric Enforcement Multiplier --- Cannabis Arrests, 2010--2018",
+    "line": 4899,
+    "context_before": "pt]\nO_{1934}^{\\text{capacity}} &= O_{1865}^{\\text{capacity}} \\cdot (1 - \\gamma\\, P_{\\text{redlining}}) \\label{eq:6.10-capacity-chain-1934}\\\\[4pt]\nO_{1971}^{\\text{capacity}} &= O_{1934}^{\\text{capacity}} \\cdot (1 - \\delta\\, P_{\\text{WarOnDrugs}}) \\label{eq:6.11-capacity-chain-1971}\n\\end{align}\nExpanding the full chain (Equations~\\ref{eq:6.8-capacity-chain-1619}--\\ref{eq:6.11-capacity-chain-1971}):",
+    "context_after": "Each dated factor is not interchangeable---the \\textit{order} matters. Enslavement ($\\alpha$) strips initial wealth and autonomy; the 13th Amendment's exception clause ($\\beta$) re-encodes subjugation through criminalization; redlining ($\\gamma$) blocks the primary vehicle of American wealth accumulation for a group \\textit{already} without generational capital; and the War on Drugs ($\\delta$) ap",
+    "label": "eq:6.12-capacity-compounding-full"
+  }
+]

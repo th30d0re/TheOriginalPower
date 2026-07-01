@@ -1,0 +1,95 @@
+{
+  "reel_id": "DZtCPIRPT87",
+  "url": "https://www.instagram.com/reel/DZtCPIRPT87/?igsh=MWxtdncxeTg4YjRhOQ==",
+  "creator": {
+    "username": "latricehdmofficial",
+    "display_name": "Latrice McMillian",
+    "user_id": null
+  },
+  "content": {
+    "title": "Video by latricehdmofficial",
+    "description": "You're allowed an opinion. It's doesn't always mean it's right though. It's amazing how you assumed someone's race based on skin color. Not a good look. 🤦🏽‍♀️ #misandryisreal #stophatingmen #men #equa...",
+    "duration_seconds": 176.033,
+    "duration_formatted": "2:56"
+  },
+  "engagement": {
+    "likes": null,
+    "comments_count": null,
+    "play_count": 0,
+    "views": null,
+    "shares": null,
+    "saves": null,
+    "note": "View count returned 0 from yt-dlp; likely a scraping artifact. Engagement metrics not retrieved."
+  },
+  "metadata": {
+    "upload_date": null,
+    "timestamp": null,
+    "posted_at_iso": null,
+    "instagram_media_id": null,
+    "instagram_media_pk": null,
+    "product_type": "clips",
+    "media_type": null,
+    "fetched_at": "2026-06-18T00:00:00.000Z",
+    "metrics_source": "Docker MCP get_video_info (yt-dlp)"
+  },
+  "content_analysis": {
+    "primary_theme": "Counter-response to thepolitidoxy stitch of Christina Reckless; defending language precision and disputing spokesmanship of WOC",
+    "secondary_themes": [
+      "Phenotypic vs. genetic whiteness distinction",
+      "Language precision (I hate men vs. I hate shitty men)",
+      "Lateral enforcement: WOC defending anti-feminist framing",
+      "Legal equality conflated with absence of systemic oppression",
+      "Anti-feminist / MRA-adjacent positioning"
+    ],
+    "rhetorical_frame": "Latrice positions herself as a WOC who is not oppressed and objects to Christina speaking on her behalf; critiques Christina's broad generalizations while largely defending thepolitidoxy's framing by proxy",
+    "hashtags": [
+      "#misandryisreal",
+      "#stophatingmen",
+      "#men",
+      "#equa..."
+    ],
+    "notable_speakers": [
+      "Christina Reckless (stitched clip; original speaker)",
+      "Latrice McMillian (@latricehdmofficial; reel uploader / respondent)"
+    ],
+    "key_moments": [
+      {
+        "timestamp_approx": "0:30",
+        "note": "Latrice corrects Christina's 'cis white male' label — 'you messed that one up because Polydodoxy is not white, first of all'"
+      },
+      {
+        "timestamp_approx": "1:00",
+        "note": "Objects to Christina speaking for WOC; frames herself as independent agent not in need of defense"
+      },
+      {
+        "timestamp_approx": "2:30",
+        "note": "Concluding claim: 'You may seem like as though we are still consistently being oppressed when we're not. I have the same amount of rights as everyone else, especially my male and white counterparts.' — Emmanuel disagrees with this conclusion."
+      }
+    ]
+  },
+  "transcription": {
+    "full_text": "When I say I hate men, when I say I hate black people, a lot of you think that I hate all men, a lot of you think that I hate all blacks, and I don't, and I don't. There's a distinction. There's a distinction. I hate the shitty men. I hate the shitty blacks. Hey, hi, hello, I'm Christina Reckless and thank you so much for stitching my video. The most ironic part about your entire video is the fact that you're trying to call me out as a woman for having my opinions the way I do and also using black people as a way to do that. And the crazy part about that is that you, as a cis white male, are Oh, well, well, you messed that one up because Polydodoxy is not white, first of all, and let me just say how much I don't want someone like yourself or anyone for that matter to go ahead and speak for me as a woman of color like you did in the end of the video. The ironic part about it is that you're calling him out for using a certain demographic of people in the argument just like you used a certain demographic of people in yours. I can say that I don't like bad men. I can say it's so easy. It's so easy to add that into your vocabulary. I hate shitty men. I hate bad men. Not I hate men because then you would you would then be generalizing an entire population, an entire demographic of half of the human population. Because imagine if a man, imagine if men said this, right? Imagine if men said that they hate women because of statistically because of what women have done. We're talking about domestic violence and lesbian couples. We're talking about, you know, dittling kids in schools, you know, young boys. We're also talking about essay that has happened and also in lesbian couples and an extreme high rate versus straight couples. We're also talking about the domestic violence in the ratio between men and women being equal. But you don't talk about that, do you? You instead talk about what a small percentage of men have done and you just ran with it by generalizing them. This is why it's important that you should not be saying I hate men. It's because it makes everyone else feel bad about it. Like it would for us ladies if men said the same thing. But you notice how men don't do that, right? And please, as someone who is an upper middle class citizen, a woman of color, American, also who is, you know, whose ethnicity is also Mexican, please, I implore you to stop speaking for someone like myself. Please stop speaking for us because it looks terrible. You may seem like as though we are still consistently being oppressed when we're not. I have the same amount of rights as everyone else, especially my male and white counterparts.",
+    "transcribed_by": "Docker MCP mcp__docker__transcribe_video_url (offline, Whisper small)",
+    "transcription_mode": "offline",
+    "model_size": "small",
+    "language": "en",
+    "processing_time_seconds": 415.2,
+    "docker_mcp_attempt": {
+      "mcp__MCP_DOCKER__transcribe_video_url": "failed — OpenAI API quota exceeded (online mode default)",
+      "mcp__MCP_DOCKER__transcribe_video_url_offline": "failed — timeout",
+      "mcp__docker__transcribe_video_url_offline_small": "succeeded"
+    }
+  },
+  "framework_notes": {
+    "phenotypic_whiteness": "thepolitidoxy stated 'I'm not genetically white' in the original reel. Emmanuel's framework counter: race operates on perceived phenotype, not genetics. His phenotypic white-passing appearance confers the social benefits of whiteness regardless of ancestry. His preemptive denial of genetic whiteness is itself downstream of the phenotypic read — he knows how he presents. Latrice's own initial mis-identification of him as white (before self-correcting) is further evidence he phenotypically reads as white to observers.",
+    "lateral_enforcement": "Latrice's video is an instance of lateral enforcement: a WOC deployed (by the algorithm and reply chain) to validate the anti-feminist framing against another woman. Her hashtags (#misandryisreal #stophatingmen) indicate MRA-adjacent ideological positioning.",
+    "legal_rights_conflation": "Latrice's conclusion ('I have the same amount of rights as everyone else') conflates formal legal equality with substantive systemic outcome equality — one of the core moves the framework addresses."
+  },
+  "tier_classification": {
+    "platform_metrics": "Tier 3",
+    "transcript": "Tier 2",
+    "content_interpretation": "Tier 3",
+    "justification": "Engagement metrics unavailable from yt-dlp; transcript is machine-generated (Whisper small, spot-check recommended); thematic coding is author-classified"
+  },
+  "reach_note": "Instagram reach is owner-only. View count of 0 returned by yt-dlp is a scraping artifact, not the real play count."
+}

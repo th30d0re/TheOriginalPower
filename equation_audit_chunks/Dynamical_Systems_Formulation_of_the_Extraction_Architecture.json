@@ -1,0 +1,26 @@
+[
+  {
+    "id": "E022",
+    "env_type": "equation",
+    "raw_latex": "\\begin{equation}\\label{eq:lag-euler-lagrange}\n\\frac{d}{dt}\\left(\\frac{\\partial \\mathcal{L}}{\\partial \\dot{q}_i}\\right) - \\frac{\\partial \\mathcal{L}}{\\partial q_i} + \\frac{\\partial \\mathcal{D}}{\\partial \\dot{q}_i} = Q_i\n\\end{equation}",
+    "rendered": "\\label{eq:lag-euler-lagrange}\n\\frac{d}{dt}\\left(\\frac{\\partial \\mathcal{L}}{\\partial \\dot{q}_i}\\right) - \\frac{\\partial \\mathcal{L}}{\\partial q_i} + \\frac{\\partial \\mathcal{D}}{\\partial \\dot{q}_i} = Q_i",
+    "chapter": "Dynamical Systems Formulation of the Extraction Architecture",
+    "section": "The Rayleigh Dissipation Function",
+    "line": 1204,
+    "context_before": "gement is unnecessary.\n\n\\subsection{The Rayleigh Dissipation Function}\n\nStandard Lagrangian mechanics models conservative systems, but the framework explicitly features friction: the Resistor $R$, bureaucratic friction, stop-and-frisk policing, and administrative drag. The Rayleigh Dissipation Function $\\mathcal{D}$ incorporates this non-conservative dissipation into the Euler-Lagrange formalism:",
+    "context_after": "where $\\mathcal{D}$ represents the thermodynamic heat loss exacted by the state upon the Out-group, and $Q_i$ represents external coercive forces applied by the Enforcement Class ($F_{\\text{enforce}}$).\\footnote{This equation is classified as Tier~3 (ordinal/structural); the Euler-Lagrange formulation with Rayleigh dissipation is a published result of classical mechanics applied to the framework'",
+    "label": "eq:lag-euler-lagrange"
+  },
+  {
+    "id": "E023",
+    "env_type": "equation",
+    "raw_latex": "\\begin{equation}\\label{eq:lag-augmented}\n\\boxed{\\mathcal{L}^*(q, \\dot{q}, t) = T(\\dot{q}, t) - V(q, t) - \\mathcal{D}(q, \\dot{q}, t) + \\lambda\\bigl(\\tau - M_{\\text{eff}}(t)\\bigr)}\n\\end{equation}",
+    "rendered": "\\label{eq:lag-augmented}\n\\boxed{\\mathcal{L}^*(q, \\dot{q}, t) = T(\\dot{q}, t) - V(q, t) - \\mathcal{D}(q, \\dot{q}, t) + \\lambda\\bigl(\\tau - M_{\\text{eff}}(t)\\bigr)}",
+    "chapter": "Dynamical Systems Formulation of the Extraction Architecture",
+    "section": "The Augmented Form",
+    "line": 1212,
+    "context_before": "al Methodology chapter (p.~\\pageref{ch:empirical_methodology}) and Appendix~\\ref{app:empirical_index}.}\n\n\\subsection{The Augmented Form}\n\nThe canonical kernel objective is an optimization problem: $\\max E(t)$ subject to the constraint $M_{\\text{eff}}(t) < \\tau$. In classical mechanics, systems subjected to constraints are solved using Lagrange Multipliers ($\\lambda$). The augmented Lagrangian is:",
+    "context_after": "\\footnote{This equation is classified as Tier~3 (ordinal/structural); the augmented Lagrangian formalizes the directional claim that the Elite optimize extraction subject to a rebellion-threshold constraint. See the Empirical Methodology chapter (p.~\\pageref{ch:empirical_methodology}) and Appendix~\\ref{app:empirical_index}.}\n\nThe terms map onto the framework as follows:\n\\begin{itemize}\n    \\item",
+    "label": "eq:lag-augmented"
+  }
+]

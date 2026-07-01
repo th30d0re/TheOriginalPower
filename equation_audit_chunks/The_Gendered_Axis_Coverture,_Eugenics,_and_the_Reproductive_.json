@@ -1,0 +1,38 @@
+[
+  {
+    "id": "E060",
+    "env_type": "equation",
+    "raw_latex": "\\begin{equation}\n\\label{eq:awb_dualtrack}\n\\text{Second Amendment Status}(\\text{arms},\\, x) =\n\\begin{cases}\n\\text{constitutionally protected} & x \\in I_{\\text{buffer}} \\\\\n\\text{felony prosecution} & x \\in O_{\\text{racialized}}\n\\end{cases}\n\\end{equation}",
+    "rendered": "\\label{eq:awb_dualtrack}\n\\text{Second Amendment Status}(\\text{arms},\\, x) =\n\\begin{cases}\n\\text{constitutionally protected} & x \\in I_{\\text{buffer}} \\\\\n\\text{felony prosecution} & x \\in O_{\\text{racialized}}\n\\end{cases}",
+    "chapter": "The Gendered Axis: Coverture, Eugenics, and the Reproductive Extraction Kernel",
+    "section": "The Statutory Terminal Layer: Assault Weapons Bans and the Three-Tier Compounding Architecture",
+    "line": 3759,
+    "context_before": "suppression response: targeting the material conditions necessary for $M(t)$ to translate from nominal gun ownership into actual kinetic capacity.\n\n\\paragraph{The Grandfathering Structure as a $\\psi_m$ Payment: The Political Irony.}\n\nThe grandfathering clause that defines contemporary assault weapons legislation is its structural proof. Grandfathering creates a piecewise constitutional function:",
+    "context_after": "where the legal outcome tracks the actor's position in the social hierarchy, operationalized through the temporal cutoff date, even though both classes possess an identical firearm. $I_{\\text{buffer}}$, the grandfathered class, is \\textbf{disproportionately white, suburban, and male}: the pre-2020 gun-owning demographic. $O_{\\text{racialized}}$, the newly criminalized class, is \\textbf{dispropor",
+    "label": "eq:awb_dualtrack"
+  },
+  {
+    "id": "E061",
+    "env_type": "equation",
+    "raw_latex": "\\begin{equation}\\label{eq:5.1-compliance-differential}\n\\Delta(x) \\;=\\; V_c(x) - V_r(x),\n\\end{equation}",
+    "rendered": "\\label{eq:5.1-compliance-differential}\n\\Delta(x) \\;=\\; V_c(x) - V_r(x),",
+    "chapter": "The Gendered Axis: Coverture, Eugenics, and the Reproductive Extraction Kernel",
+    "section": "The Early Detection Theorem: Why Compounded Intersections Recognize the Algorithm First",
+    "line": 3883,
+    "context_before": "and what resistance risks---mechanically approaches zero. No bargain exists for the subject at this intersection to refuse.\n\n\\begin{definition}[The Early Detection Theorem]\n\\label{def:early_detection}\nLet $V_c(x)$ denote the expected payoff of compliance and $V_r(x)$ the expected payoff of resistance for subject $x$ under the Predatory Min-Max Function. Define the \\textbf{compliance differential}",
+    "context_after": "\\noindent\\textit{Illustrative instantiation (Tier~2, antebellum compliance calculus).} Baptist (2014) documents the compliance calculus of enslaved workers as a structured response to a $\\Delta(x)$ that was architecturally engineered toward zero. For a subject $x$ at the intersection $O_{\\text{racialized}} \\cap O_{\\text{gendered}}$---an enslaved Black woman---$V_c(x)$ included survival and minim",
+    "label": "eq:5.1-compliance-differential"
+  },
+  {
+    "id": "E062",
+    "env_type": "equation",
+    "raw_latex": "\\begin{equation}\\label{eq:5.2-detection-not-immunity}\nD_{\\text{detect}}(x) = f(m(x)) \\;\\not\\Rightarrow\\; P_{\\text{prop}}(x,a)=0,\n\\qquad\na \\in \\{\\text{gender, sexuality, ability, class, religion}\\}.\n\\end{equation}",
+    "rendered": "\\label{eq:5.2-detection-not-immunity}\nD_{\\text{detect}}(x) = f(m(x)) \\;\\not\\Rightarrow\\; P_{\\text{prop}}(x,a)=0,\n\\qquad\na \\in \\{\\text{gender, sexuality, ability, class, religion}\\}.",
+    "chapter": "The Gendered Axis: Coverture, Eugenics, and the Reproductive Extraction Kernel",
+    "section": "Detection Without Immunity: The Social-Reproduction Layer",
+    "line": 3925,
+    "context_before": "atriarchal, heteronormative, transphobic, ableist, respectability, or class-coded scripts when those scripts remain unanalyzed. The claim is narrower than authorship, systemic benefit, or identical structural position with the classes those systems privilege: every node inside the extraction architecture carries code authored elsewhere.\n\nFormally, detection and propagation are distinct variables:",
+    "context_after": "Here $D_{\\text{detect}}(x)$ denotes the probability that subject $x$ recognizes the extraction algorithm as a unified structure; $m(x)$ counts the out-group axes assigned to $x$; and $P_{\\text{prop}}(x,a)$ denotes the probability that $x$ reproduces the algorithm's partition logic along axis $a$. The Early Detection Theorem predicts that $D_{\\text{detect}}$ rises with compounded marking. It predi",
+    "label": "eq:5.2-detection-not-immunity"
+  }
+]

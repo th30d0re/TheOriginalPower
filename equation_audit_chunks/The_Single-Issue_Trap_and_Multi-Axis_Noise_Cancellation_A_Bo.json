@@ -1,0 +1,26 @@
+[
+  {
+    "id": "E210",
+    "env_type": "equation",
+    "raw_latex": "\\begin{equation}\\label{eq:15.1-temporal-firearm-proxy}\nP_{\\text{temporal}}(x,o,t) =\n\\begin{cases}\n0 & \\text{if subject } x \\text{ possessed object } o \\text{ before cutoff } t_c,\\\\\n1 & \\text{if subject } x \\text{ seeks the same object } o \\text{ after cutoff } t_c.\n\\end{cases}\n\\end{equation}",
+    "rendered": "\\label{eq:15.1-temporal-firearm-proxy}\nP_{\\text{temporal}}(x,o,t) =\n\\begin{cases}\n0 & \\text{if subject } x \\text{ possessed object } o \\text{ before cutoff } t_c,\\\\\n1 & \\text{if subject } x \\text{ seeks the same object } o \\text{ after cutoff } t_c.\n\\end{cases}",
+    "chapter": "The Single-Issue Trap and Multi-Axis Noise Cancellation: A Boston Case Study",
+    "section": "Grandfather Clauses and Forcing the State's Hand",
+    "line": 14334,
+    "context_before": "f \\textbf{grandfather clauses} in gun legislation. Such clauses consistently protect the accumulated assets of the In-group while criminalizing future acquisition by the Out-group. They are the legislative embodiment of the extraction kernel, locking the gate after the Elite and the Buffer Class have already armed themselves.\n\nFormally, a grandfather clause instantiates a temporal proxy variable:",
+    "context_after": "The object does not change. The user's dangerousness does not change. The legal status changes because the acquisition timestamp changes. Massachusetts Chapter 135 makes this logic concrete by modernizing and expanding the Commonwealth's firearm restrictions while preserving date-sensitive possession categories for weapons already held before operative cutoffs \\cite{mass_chapter_135_2024}. A Brue",
+    "label": "eq:15.1-temporal-firearm-proxy"
+  },
+  {
+    "id": "E211",
+    "env_type": "equation",
+    "raw_latex": "\\begin{equation}\\label{eq:15.2-geographic-interface-swap}\n\\mathcal{R}(s)=\n\\bigl(r_{\\text{bio}}(s), r_{\\text{kin}}(s), r_{\\text{move}}(s), r_{\\text{speech}}(s), \\ldots\\bigr),\n\\qquad\n\\mathcal{R}(s) \\neq \\vec{1} \\;\\; \\forall s .\n\\end{equation}",
+    "rendered": "\\label{eq:15.2-geographic-interface-swap}\n\\mathcal{R}(s)=\n\\bigl(r_{\\text{bio}}(s), r_{\\text{kin}}(s), r_{\\text{move}}(s), r_{\\text{speech}}(s), \\ldots\\bigr),\n\\qquad\n\\mathcal{R}(s) \\neq \\vec{1} \\;\\; \\forall s .",
+    "chapter": "The Single-Issue Trap and Multi-Axis Noise Cancellation: A Boston Case Study",
+    "section": "Geographic Interface Swaps: A La Carte Rights",
+    "line": 14350,
+    "context_before": "oal is the asymmetric monopolization of kinetic force.\n\n\\section{Geographic Interface Swaps: A La Carte Rights}\n\nThe Boston/Massachusetts case study also exposes a spatial version of the same access-control logic. The system does not need to eliminate every right everywhere. It can prevent consolidation by distributing autonomy across incompatible jurisdictions. Define a state's rights vector as:",
+    "context_after": "The user can recover one component only by crossing into a jurisdiction where another component is degraded. This creates an a la carte rights topology: autonomy exists, but not as a complete bundle in a single physical location.\n\nMassachusetts demonstrates one side of the swap. Its legal architecture protects abortion and reproductive-health access through state law and shield-law mechanisms, wh",
+    "label": "eq:15.2-geographic-interface-swap"
+  }
+]

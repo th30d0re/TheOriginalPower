@@ -1,0 +1,313 @@
+\documentclass[12pt,openany]{book}
+
+% Make committed-PDF verification reproducible across local and CI rebuilds.
+\ifdefined\pdfinfoomitdate\pdfinfoomitdate=1\fi
+\ifdefined\pdfsuppressptexinfo\pdfsuppressptexinfo=-1\fi
+\ifdefined\pdftrailerid\pdftrailerid{}\fi
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\usepackage[colorlinks=true, linkcolor=black, citecolor=black, urlcolor=blue]{hyperref}
+\usepackage{setspace}
+\usepackage{tikz}
+\usetikzlibrary{shapes,positioning,calc,decorations.pathreplacing,patterns,shapes.geometric,arrows.meta}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepgfplotslibrary{fillbetween}
+\usepackage{longtable,booktabs,array,tabularx}
+\usepackage{placeins}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage[most]{tcolorbox}
+\usepackage{graphicx}
+\usepackage{usc_macros}
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{conjecture}{Conjecture}[chapter]
+\numberwithin{equation}{chapter}
+% pagetracker=false: the citation page tracker wrote \abx@aux@page records that
+% oscillate when a citation sits exactly on a page boundary, preventing latexmk
+% convergence. The authoryear style uses no ibid/samepage features, so the
+% tracker is unnecessary.
+\usepackage[style=authoryear,backend=biber,pagetracker=false]{biblatex}
+\addbibresource{references.bib}
+
+\geometry{inner=1.2in, outer=1in, top=1in, bottom=1in}
+
+% --- Pandoc compatibility ---
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\SourceNote}[1]{\footnote{#1}}
+\onehalfspacing
+\emergencystretch=1em
+
+% --- Custom chapter heading style ---
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries}
+  {\titlerule[1pt]\vspace{4pt}\Large\chaptertitlename\ \thechapter}
+  {0pt}
+  {\titlerule[1pt]\vspace{8pt}\Huge}
+\titlespacing*{\chapter}{0pt}{-20pt}{30pt}
+
+% --- Running headers/footers ---
+\pagestyle{fancy}
+\setlength{\headheight}{41.62pt}
+\addtolength{\topmargin}{-29.62pt}
+\fancyhf{}
+\fancyhead[LE]{\slshape\leftmark}
+\fancyhead[RO]{\slshape\rightmark}
+\fancyfoot[C]{\thepage}
+
+\renewcommand{\headrulewidth}{0.4pt}
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \fancyfoot[C]{\thepage}% 
+  \renewcommand{\headrulewidth}{0pt}%
+}
+
+% --- Boxed environments ---
+\newtcolorbox{definition}[1][]{%
+  colback=blue!5, colframe=blue!60!black,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  before upper={\parindent15pt},
+  boxrule=1pt, arc=3pt
+}
+
+\newtcolorbox{keyinsight}[1][]{%
+  colback=green!5, colframe=green!50!black,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  before upper={\parindent15pt},
+  boxrule=1pt, arc=3pt
+}
+
+\newtcolorbox{historicalsource}[1][]{%
+  colback=orange!5, colframe=orange!70!black,
+  fonttitle=\bfseries, title={#1},
+  breakable, enhanced,
+  before upper={\parindent15pt},
+  boxrule=1pt, arc=3pt
+}
+
+\title{The Original Power:\\The Physics of Oppression and the Engineering of Control}
+\author{Emmanuel Theodore}
+\date{}
+
+\begin{document}
+
+% --- Half-title page ---
+\thispagestyle{empty}
+\vspace*{\fill}
+\begin{center}
+{\Huge\bfseries The Original Power}
+\end{center}
+\vspace*{\fill}
+\cleardoublepage
+
+% --- Full title page ---
+\maketitle
+
+% --- Front matter ---
+\frontmatter
+\tableofcontents
+\listoffigures
+
+\chapter*{Author's Preface}
+\addcontentsline{toc}{chapter}{Author's Preface}
+\markboth{Author's Preface}{Author's Preface}
+
+Before the formal research program, there was an observation layer. The earliest recoverable document in this project's archive is an essay on the Spanish-American War, written in early 2020, cited as prior work in a later paper examining how race, class, and national origin were deployed by American imperialism. That paper traced Frederick Douglass's resignation from his Haitian diplomatic post over a coaling station seizure, Social Darwinism as the ideological justification layer for extraction, and Du Bois's 1915 observation that European democracies had purchased working-class loyalty with wages drawn from colonial labor. There are likely earlier documents, not yet recovered, that extend the archive further back. What the recovered papers share is a consistent structural observation: the same architecture kept appearing across different centuries and different geographies, using race, class, and national origin as instruments to accomplish the same extraction. The formal research program documented in the pages that follow came to describe, in mathematical language, a structure that years of historical reading had already found.
+
+This book is the completion of that formal program, which began as a semester project proposal.
+
+The first document in that program was a short paper titled \textit{From Bias to Bytes: A Machine Learning-Driven Analysis of Systemic Racism and Social Inequalities}. Its central bet was that systemic racism could be formalized: that set theory, discrete mathematics, and machine learning algorithms, taken together, could produce a rigorous model of how policies distribute harm across racial groups. The paper named four theoretical ingredients---Critical Race Theory, cognitive bias research, the McKelvey--Schofield Chaos Theorem, and set-theoretic mathematics---and called for their synthesis into a unified framework. It proposed modified Venn diagrams as a visual apparatus and identified the In-group / Out-group binary as the foundational structural object. It called for empirical validation against real policy data and proposed an automatic bias-detection capability as the ultimate applied output. The mathematics it promised was absent from its pages. It was a research program in proposal form: a correct identification of the problem and the tools, without the derivations that would make those tools coherent.
+
+The second document was empirical. \textit{The Calculus of Injustice} applied principal component analysis and linear discriminant analysis to a national dataset of fatal police shootings. The linear discriminant analysis produced a clean geometric result: racial groups separated in discriminant space, with the White cluster distinct from an overlapping Black and Hispanic cluster. That overlap was the structural signature of a shared systemic basin---the same force acting on both groups from the same direction. The paper cited \textit{From Bias to Bytes} as the prior work that had named the set-theoretic and machine learning program; the LDA result was the first empirical confirmation that the program was worth completing. The partition the proposal had named as a theoretical object appeared in the data as a geometric fact.
+
+\textit{The Original Power} executes what those two papers described. The set-theoretic framework is no longer a proposal: the Elite ($E$), the Out-group ($O_{\text{racialized}}$), and the Buffer Class ($I_{\text{buffer}}$) are formally defined, their relationships are derived from historical forcing functions, and the extraction function governing them is given a closed mathematical form. The McKelvey--Schofield Chaos Theorem, named in \textit{From Bias to Bytes} and left undeveloped there, is formally integrated into the Agenda-Setter Trap in Chapter~\ref{ch:tweedism}, where it closes the loop between majority-rule cycling and the psychological wage ($\psi$) that forecloses the one coordination the theorem identifies as a defense. The modified Venn diagrams of the proposal have become partition theorems, directed spanning-tree proofs, and an electrodynamic circuit formalism that unifies every equation in the book into a single coherent physical system. The empirical LDA result---the racial partition as a geometric separation in outcome space---is one anchor case in an archive of 146 anchor cases spanning five centuries of the extraction algorithm's operation.
+
+The progression from proposal to empirical detection to formal derivation defines the framework's method: identify a structure, detect its empirical shadow, then derive the mechanism that produces both. \textit{From Bias to Bytes} identified the structure. \textit{The Calculus of Injustice} detected the shadow. This book derives the mechanism, and follows that mechanism to its conclusion.
+
+\bigskip
+\noindent\textit{Emmanuel Theodore}
+
+\cleardoublepage
+
+\chapter*{Preface}
+\addcontentsline{toc}{chapter}{Preface}
+\markboth{Preface}{Preface}
+
+This book develops a formal mathematical framework for analyzing systems of oppression using set theory, discrete mathematics, electrodynamics, and historical analysis. Its central claim is that racism functions as \textbf{psycho-legal social software}: legal, institutional, cultural, and affective code that runs on human predictive cognition---the \textbf{wetware} substrate on which that software executes---causing engineered partitions to execute as perception, common sense, threat detection, and selective empathy. Running in parallel to this software layer is a \textbf{hardware layer}: an electrodynamic formalism that treats the five-tier hierarchy as a circuit topology, the suppression allocation as a complex power signal, and reform shocks as inductive kickback, unifying every equation in the book into a single coherent physical system. Within that hardware layer, the material-wage electric field resolves into a vector superposition of discrete material wages indexed by intersection: a racial material wage, a gendered material wage, a class material wage---each coupling its own axis of privilege to the same extraction circuit. In racism's case, that software is a legally engineered racial partition that exploits ordinary human cognition, recruits predictive shortcuts into racial priors, and turns those priors into a durable extraction system.
+
+\paragraph{A note on epistemology and dynamical homology.}
+The framework establishes a substrate-independent dynamical homology: distinct systems exhibit equivalent governing equations once their state variables and constraints are operationalized. The claim concerns the equations; the specific units are irrelevant to the homology. Both electrodynamic and socioeconomic control architectures are downstream implementations of the same universal dynamical systems equations, forced to optimize energy, labor, and suppression under structural constraints. Every circuit-theoretic, field-theoretic, and control-theoretic statement in this book reads through that homology. Chapter~\ref{ch:lagrangian} formalizes it as an augmented Lagrangian control system and specifies the falsification tests it must survive.
+
+A critical architectural clarification: the Elite ($E$) \textit{gate} the energy that drives this system. The kinetic labor, taxes, and physical output of the Out-group and the Buffer Class constitute the actual power supply ($V_{cc}$) of the extraction circuit. The Elite function as a parasitic control layer---a transistor base receiving only a trickle of control current (laws, algorithms, media narratives) while dictating how the massive power of the masses is routed. The police, courts, and carceral apparatus that enforce the partition are paid for with wealth extracted from the very populations they patrol. The system is a self-exciting generator: it uses a portion of its own extracted output to power the interference engine that keeps the machine spinning. This means the architecture is powered by \textit{your} compliance, and it dies when that compliance is withdrawn.
+
+\paragraph{A note on terms and host wetware.}
+The words \textbf{In-group} and \textbf{Out-group} are standard social-psychological terms before they are formal variables in this book. In APA Dictionary usage, an ingroup is a group to which a person belongs or with which the person identifies; an outgroup is a group outside the one to which the person belongs or with which the person identifies; and ingroup bias names the tendency to favor one's own group relative to other groups \cite{apa_dictionary_ingroup,apa_dictionary_outgroup,apa_dictionary_ingroup_bias}. Social Identity Theory then explains why these categories matter: the mind rapidly distinguishes ``us'' from ``them'' to manage trust, threat, cooperation, belonging, and self-concept \cite{tajfel_turner_intergroup_conflict_1979}. In this book's computing analogy, that sorting tendency is part of the human host wetware. The brain is a predictive, pattern-compressing neural network optimized for survival under uncertainty; it prioritizes survival under uncertainty over neutral truth-tracking under adversarial input. What once functioned as useful legacy code for small-group survival becomes a vulnerability when legal and social systems feed it malicious priors. Racism, in this framework, is the exploit: \textbf{psycho-legal social software} that installs a racial partition into ordinary predictive cognition and makes the partition feel like perception.
+
+The operating name for that exploit is the \textbf{fractal mind virus}. It is ``fractal'' because the same partition-and-extraction logic reproduces at every scale: the empire, the nation, the city, the school district, the household, the ballot line, and the private reflex of suspicion. It is a ``mind virus'' because the legal code enters the person. It installs priors into human predictive cognition until the host experiences an engineered hierarchy as common sense. The book therefore tracks two coupled runtimes throughout: institutional code executing through law, property, policing, and finance; and cognitive code executing on human host wetware through fear, status, disgust, loyalty, and selective empathy.
+
+The formal terms used later compress that psychological substrate into structural roles. \textbf{In-group} means the population the system marks as relatively protected, legitimate, or entitled to status inside a given partition. \textbf{Out-group} means the population marked as extractable, controllable, or disposable. These are structural positions; a person can be advantaged along one axis and subordinated along another. The \textbf{Elite} is the small subset of the In-group that actually benefits from the extraction system; the \textbf{Buffer Class} is the broader In-group layer recruited to defend the partition in exchange for status, selective protection, or occasional material concessions; the \textbf{Puppet Class} translates Elite preference into law and policy; and the \textbf{Enforcement Class} physically actuates those policies. The notation introduced later simply lets those recurring roles be tracked precisely.
+
+The framework identifies four architectural components common to oppressive systems: (1) asymmetric autonomy restriction between In-groups and Out-groups, (2) selective empathy that validates In-group suffering while dismissing Out-group harm, (3) ideological justification through spurious claims, and (4) resistance to structural critique. These components operate through a five-tier hierarchy. The Elite ($E$) extracts value; the Puppet Class ($P_{\text{uppet}}$) translates extraction into law and policy; the Enforcement Class ($F_{\text{enforce}}$) actuates the system physically; the Buffer Class ($I_{\text{buffer}}$) receives a suppression allocation in exchange for policing the partition; and the Out-group ($O_{\text{racialized}}$) bears the compounding burden of extraction.
+
+Before the historical timeline begins, \textbf{Chapter~\ref{ch:system_init}: System Initialization}
+compiles the abstract geometry of the trap: the five structural nodes ($E$,
+$P_{\text{uppet}}$, $F_{\text{enforce}}$, $I_{\text{buffer}}$, $O$), their
+arrangement as a 3-D pyramid that captures structure the flat 2-D triangle misses, the Tri-Modal
+Enclosure Model that prevents the Out-group from stepping outside that pyramid
+to perceive its own architecture, and the optical illusion---Elite Obscuration
+and the Square Ceiling---that makes the apex invisible from the base.
+Chapter~\ref{ch:redefining} then loads racism as the primary empirical
+dataset: defining the software before running its execution history. The
+historical compile begins in Chapter~\ref{ch:portugal} and is instantiated
+on American wetware in Chapter~\ref{ch:bacon}.
+
+This framework did not arrive fully formed. It began as hand-written
+summations of the familiar two-tier binary---Oppressor versus Oppressed. The
+equations broke. The model expanded to three tiers to account for the Elite's
+separation from the broader In-group. Three tiers broke. The law required a
+Puppet Class; the carceral state required an Enforcement Class. The five-tier
+architecture is therefore the
+minimum configuration the mathematics required to remain internally consistent
+with the historical record.
+
+\begin{definition}[Reader Diagnostic: Veil of Ignorance and Radical Empathy]
+As you move through this framework, practice what John Rawls called the
+\textbf{Veil of Ignorance}: evaluate the system from an ``original position''
+in which your tier is hidden from you \cite{rawls_theory_justice}.
+Rawls built this thought experiment on Kantian moral foundations, but its use
+here is diagnostic, with no prescriptive aim. Its practical discipline is
+\textbf{radical empathy}: a positional stress test in which the reader places
+themselves inside each tier of the architecture---$E$, $P_{\text{uppet}}$,
+$F_{\text{enforce}}$, $I_{\text{buffer}}$, and $O$---while temporarily stripping
+away the knowledge of where they actually stand. Radical empathy is a structural
+modeling discipline. It asks the reader to map the incentives, risks, fears,
+rewards, and constraints that each tier imposes on the person trapped inside it,
+and to hold that map alongside the full accounting of harm the architecture
+produces.
+
+These two instruments serve distinct functions. Radical empathy is the
+activation step: it asks you to extend the same interpretive charity to a member
+of any other tier that you extend to yourself---to perceive their constraints as
+real before evaluating their choices. A reader must first model another tier's
+incentive structure before the Veil can operate; radical empathy supplies that
+prerequisite. The Veil is then the computation step: it strips remaining
+positional information---tier, phenotype, accumulated advantage---and asks you
+to evaluate the architecture on its structural merits alone. Resistance to the
+Veil is a system symptom. The fractal mind virus installs phenotype loyalty as
+common sense; the Veil exposes that loyalty as a choice, which is why contact
+with it produces friction. Feeling the resistance identifies the install point.
+
+The diagnostic question is simple: if you had no clue which tier you would wake
+up in, would you co-sign this architecture? If the answer is no, then welcome to
+the club. The work is to dismantle the architecture that makes innocence
+structurally unavailable.
+\end{definition}
+
+That sequence matters because the book defines racism by tracing the life cycle of an extraction algorithm. \textbf{Part~\ref{part:specification}} (\textit{Specification and Origins, 1440s--1787}) establishes the template: the racial vector invented in Zurara's 1453 \textit{Crónica} (Chapter~\ref{ch:portugal}), the Buffer Class formalized after Bacon's Rebellion, and the Puppet Class prototyped at the Constitutional Convention (Chapter~\ref{ch:bacon}). \textbf{Part~\ref{part:installation}} (\textit{The Installation, 1619--1865}) builds the on-premise machinery: the colonial extraction of African kinship (Chapter~\ref{ch:kinship}), the gendered reproductive kernel of coverture and eugenics (Chapter~\ref{ch:gendered}), and the slave-patrol genealogy that compounds into the 13th Amendment loophole (Chapter~\ref{ch:enforcement}). \textbf{Part~\ref{part:runtime}} (\textit{Scaling and Runtime, 1865--Present}) shows the algorithm executing at industrial scale: spatial containment and the Capture Variable (Chapter~\ref{ch:containment}), the industrialized Puppet Class and the Tweedism Filter on democracy (Chapter~\ref{ch:tweedism}), the post-\textit{Brown} Variable Swap and the 1968--1994 recompile (Chapter~\ref{ch:recompile}), the terminal runtime of cannibalization and the 5-Tier Reveal (Chapter~\ref{ch:full_algo}), and the kinetic guarantee that stands between the algorithm and completion (Chapter~\ref{ch:kinetic}). \textbf{Part~\ref{part:diagnostics}} (\textit{Diagnostics and Output}) produces the framework's terminal findings: the Concession Theorem (Chapter~\ref{ch:contradiction}), the global containment field (Chapter~\ref{ch:global}), and the revised, vector-valued definition of racism that closes the book (Chapter~\ref{ch:conclusion}).
+
+The through-line is expansion. Tracing the algorithm from Portuguese racialization through the invention of whiteness, the 13th Amendment loophole, redlining, the War on Drugs, and the present-day cannibalization of the In-group reveals that the Out-group targeted by systemic oppression \textit{expands} over time, progressively encompassing groups once protected by the In-group boundary. This expansion shows that oppressive systems ultimately serve an Elite class ($E \subset I$) that uses division to prevent solidarity; the nominal In-group receives only derivative protection.
+
+In plain terms, this is the old strategy of divide and conquer rendered as an engineering problem. The set-theoretic model formalizes \textit{how} division is manufactured: the Elite partitions the population along available axes---race, gender, class, religion, identity---and tunes those partitions to interfere destructively with one another, preventing unified class solidarity from achieving coherent amplitude. The result is a population that can be politically hyperactive while remaining structurally inert: fully engaged in $N$ competing conflicts, none of which touch the extraction kernel. Every chapter traces a different mechanism by which that division is manufactured, maintained, and repaired when it begins to fail. The purpose of the formalism is to make the machine visible enough to disable.
+
+\medskip
+\noindent\textbf{Empirical validation.} The formal claims in this book are anchored to reproducible evidence. Every equation and structural assertion is assigned a confidence tier (Tier~1: peer-reviewed quantitative; Tier~2: public dataset with disclosed computation; Tier~3: ordinal or structural estimate) and a falsification criterion. The calibration rests on 146 anchor cases spanning 146 historical events; each case is documented with its data sources, operationalisation procedure, and the conditions under which the structural claim it validates would be falsified. A complete per-equation index---mapping each equation to its confidence tier, primary data source, and falsification criterion---is compiled in Appendix~\ref{app:empirical_index}. The Empirical Methodology chapter (p.~\pageref{ch:empirical_methodology}) details the anchor-and-scale procedure, the sociological precedent for ordinal composite scoring, and the reproducibility standard applied uniformly across all three tiers.
+
+% --- Empirical Methodology (unnumbered frontmatter chapter) ---
+\chapter*{Empirical Methodology}
+\addcontentsline{toc}{chapter}{Empirical Methodology}
+\label{ch:empirical_methodology}
+\markboth{Empirical Methodology}{Empirical Methodology}
+
+Every numerical claim in this book rests on one of three reproducibility tracks: a peer-reviewed source with a stable identifier, a public dataset whose operationalization is disclosed in full, or an author-constructed estimate whose inputs, transformations, and outputs are stated so that any reader can replicate the calculation from the same starting material. This chapter documents the methodology that governs all four of those tracks: the sociological precedent that legitimises ordinal composite scoring, the anchor-and-scale procedure that grounds the kinetic-resistance variable $\rho_\tau$, the three-tier confidence scheme that labels every quantitative claim, and the reproducibility standard to which every claim is held.
+
+\section*{Sociological Estimation Legitimacy}
+
+Ordinal composite scoring is the standard instrument of empirical political science and sociology. The datasets and works below each demonstrate that peer-reviewed scholarship publishes ordinal or composite scores as empirical findings; the framework's use of the same methodology is therefore epistemologically legitimate.
+
+\textbf{Polity IV / Polity5} \cite{polityiv}.\ Marshall and Gurr's Center for Systemic Peace assigns every country-year a composite democracy score on a $-10$ to $+10$ ordinal scale derived from five component indicators; this score is among the most widely cited empirical measures in comparative politics.
+
+\textbf{V-Dem (Varieties of Democracy)} \cite{vdem}.\ Coppedge et al.\ produce multi-dimensional democracy indices by aggregating expert-coded ordinal inputs through a Bayesian item-response model; dozens of peer-reviewed articles treat the resulting decimal scores as quantitative findings.
+
+\textbf{General Social Survey (GSS)} \cite{gss_norc}.\ NORC at the University of Chicago has fielded a nationally representative longitudinal survey since 1972; the bulk of its social-attitude items are ordinal Likert scales whose aggregates appear as quantitative trend findings in thousands of peer-reviewed articles.
+
+\textbf{American National Election Studies (ANES)} \cite{anes_cumulative}.\ The University of Michigan / Stanford ANES Time Series tracks issue-salience rankings and 0--100 feeling-thermometer scores; these ordinal and quasi-interval scales are routinely reported as empirical measures of political opinion.
+
+\textbf{Correlates of War} \cite{correlates_of_war}.\ Singer and Small's Militarized Interstate Dispute dataset codes conflict events on a five-point ordinal hostility-level scale (from threat to war); the ordinal values are used directly in quantitative analyses of interstate conflict.
+
+\textbf{World Inequality Database (WID.world)} \cite{piketty_wid}.\ Piketty, Saez, and Zucman's distributional national accounts produce top-decile and top-percentile wealth-share time series; these shares are composite estimates derived from tax records, survey data, and national accounts adjustments---no single authoritative source yields them directly.
+
+\textbf{Gallup World Poll social capital indices} \cite{gallup_social}.\ Gallup aggregates trust, social-network, and volunteering items into composite social-capital scores; these are ordinal proxies used as empirical findings in policy and academic literature alike.
+
+\textbf{Putnam's \textit{Bowling Alone}} \cite{putnam_bowling}.\ Putnam measures the decline of American social capital through a composite of fourteen ordinal proxy variables (club membership, voting, survey trust items); the resulting index is presented as a quantitative empirical finding.
+
+\textbf{Pew Research political polarization studies} \cite{pew_polarization}.\ The Pew Research Center tracks ideological consistency and partisan animosity through composite ordinal scales; the resulting polarization scores are cited as empirical measures in peer-reviewed political-science literature.
+
+The argument is straightforward: if top-tier political science and sociology journals routinely publish ordinal composite scores as empirical findings---and they do---then the framework's use of the same methodology to construct the Era-Level Interference Calibration Matrix and the kinetic-resistance variable $\rho_\tau$ fits squarely within established scientific practice.
+
+\section*{Anchor-and-Scale Methodology}
+
+The kinetic-resistance variable $\rho_\tau$ is defined on a normalised scale:
+\[
+  \rho_\tau \in [0, 1],
+\]
+where $\rho_\tau = 1.0$ denotes a \textbf{kinetic threshold breach}---the point at which the Out-group's organised resistance crosses from non-kinetic to kinetic action at a scale that forces a measurable structural response from the dominant system. All other values in the Era-Level Interference Calibration Matrix (Appendix~\ref{sec:runtime_log}) are calibrated as fractions of this maximum.
+
+The scale is anchored by two events, each of which satisfies all conditions for $\rho_\tau = 1.0$ simultaneously.
+
+\medskip
+\begin{center}
+\begin{tabular}{p{3.2cm} p{2.2cm} p{8.0cm}}
+\toprule
+\textbf{Anchor Event} & \textbf{Date} & \textbf{Why it anchors the scale} \\
+\midrule
+Bacon's Rebellion \cite{dubois,morgan_american_slavery} & 1676 & Unambiguous cross-racial armed uprising; forced the Virginia planter class to invent the Buffer Class ($I_{\text{buffer}}$) and enact the Virginia Slave Codes (1705)---a documented, measurable structural response. \\[6pt]
+Haitian Revolution \cite{james_black_jacobins,dubois} & 1791--1804 & The only successful slave revolution in history; produced permanent kernel termination ($\max(t_{\text{post}}) = 0$ locally)---the only documented instance of the Haitian Theorem's strong-form condition being satisfied. \\
+\bottomrule
+\end{tabular}
+\end{center}
+\medskip
+
+Both events are \textit{unambiguous} kinetic threshold breaches with documented, measurable structural responses. They are the only two events in the 1450--2026 dataset that satisfy all three conditions for $\rho_\tau = 1.0$---cross-racial or system-wide kinetic mobilisation, documented structural counter-response, and a measurable, durable change in the system's institutional architecture---simultaneously, so their selection is forced by the data.
+
+Every other $\rho_\tau$ estimate in the Era-Level Interference Calibration Matrix is calibrated as a fraction of these two anchors. An event that produced partial kinetic mobilisation without a full structural response receives a value below $1.0$; an event that produced no kinetic component receives a value near $0$. The full calibrated matrix appears in Appendix~\ref{sec:runtime_log}.
+
+\section*{Confidence Tier Scheme}
+
+Every numerical claim in this manuscript is assigned one of three confidence tiers. The one-line definition that appears in the Era-Level Calibration Matrix---\textit{``Tier 1 = multi-source quantitative alignment in-text; Tier 2 = mixed quantitative + structural diagnostics; Tier 3 = structurally supported but data-fragmented comparative estimate''}---is expanded here into a full, operationalisable specification.
+
+\bigskip
+\noindent\textbf{Tier 1 --- Peer-reviewed quantitative alignment.}\ A Tier 1 claim is calibrated against at least one peer-reviewed source or public dataset carrying a DOI or stable URL; the numerical result is either directly reported in that source or is directly and transparently derivable from its published figures. The reader can verify the number without performing any undisclosed analytical step. \textit{Examples}: Piketty--Saez--Zucman top-decile wealth shares \cite{piketty}; Gilens--Page policy-responsiveness regression coefficients \cite{gilens}; ACLU cannabis arrest disparity ratios \cite{aclu2013,aclu2020}.
+
+\bigskip
+\noindent\textbf{Tier 2 --- Public dataset with author computation.}\ A Tier 2 claim uses a publicly accessible dataset, but the author performs the operationalisation and computation; the method is disclosed in the case study or footnote so that a reader possessing the same dataset can reproduce the result. \textit{Examples}: Author-computed $\rho_\tau$ intervals derived from Correlates of War hostility-level distributions \cite{correlates_of_war}; Gallup social-capital indices mapped to $\Phi_{\text{load}}$ ranges \cite{gallup_social}.
+
+\bigskip
+\noindent\textbf{Tier 3 --- Ordinal estimate with method disclosed.}\ A Tier 3 claim is an ordinal ordering or structural relationship for which no quantitative calibration is possible or is attempted. The ordinal basis and its limits are explicitly stated in the text. \textit{Examples}: Global-scaling estimates where regional data is fragmented; pre-1700 era estimates where quantitative records are sparse (see the Global Scaling row in Appendix~\ref{sec:runtime_log}).
+
+\bigskip
+The tier assignment is the reproducibility standard for each numerical claim. Every equation in the manuscript that carries a $\rho_\tau$ or $\Phi_{\text{load}}$ value is tagged with its tier in the surrounding text. A complete tier-by-tier index of all equations appears in Appendix~\ref{app:empirical_index}.
+
+\section*{Reproducibility Standard}
+
+Every numerical claim in this manuscript satisfies exactly one of three reproducibility tracks:
+
+\begin{enumerate}
+  \item \textbf{Peer-reviewed source.} A DOI or stable URL is cited; the claim is directly reported or directly derivable from the cited source without undisclosed analytical steps.
+
+  \item \textbf{Public dataset with URL.} The dataset's public access URL is cited; the operationalisation method is disclosed in the relevant case study or footnote.
+
+  \item \textbf{Author-constructed estimate.} The estimation method is disclosed in full---inputs, transformation, and output---so that a reader can replicate the estimate from the same inputs.
+\end{enumerate}
+
+Claims not meeting any of these three tracks are flagged as ordinal (Tier 3) and are explicitly marked as such in the text. All Jupyter notebooks used for Tier 1 and Tier 2 computations are available in \texttt{Paper/scripts/} and are reproducible via \texttt{make empirical}. The per-equation falsification criteria in each case study follow the same framework established in Appendix~\ref{app:falsifiability}.
+
+% --- Main matter ---

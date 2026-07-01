@@ -4,7 +4,7 @@
   "jupyter.kernelSpec.notebookPythonInterpreterPath": "${workspaceFolder}/.venv/bin/python3",
   "jupyter.notebookFileRoot": "${workspaceFolder}",
   "latex-workshop.latex.rootFile": "Paper/The_Original_Power.tex",
-  "latex-workshop.latex.outDir": "Paper",
+  "latex-workshop.latex.outDir": "%DIR%",
   "latex-workshop.latex.tools": [
     {
       "name": "latexmk",
@@ -29,5 +29,6 @@
       "tools": ["latexmk"]
     }
   ],
-  "latex-workshop.message.badbox.show": false
+  "latex-workshop.message.badbox.show": false,
+  "latex-workshop.view.pdf.viewer": "tab"
 }

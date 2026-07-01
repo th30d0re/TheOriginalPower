@@ -1,0 +1,68 @@
+{
+  "reel_id": "DZe71fExaH3",
+  "url": "https://www.instagram.com/reel/DZe71fExaH3/?igsh=dHBudHQwYjYwamcx",
+  "creator": {
+    "username": "ibrahimszaman",
+    "display_name": "Ibrahim zaman",
+    "user_id": "61300265781"
+  },
+  "content": {
+    "title": "Video by ibrahimszaman",
+    "description": "A vessel of zero resistance \n#quantumphysics #spirituality #tawakul #intention #islam",
+    "duration_seconds": 160,
+    "duration_formatted": "2:40"
+  },
+  "engagement": {
+    "likes": 5517,
+    "comments_count": 170,
+    "play_count": 84045,
+    "ig_play_count": 84045,
+    "views": null,
+    "shares": null,
+    "saves": null
+  },
+  "metadata": {
+    "upload_date": "20260612",
+    "timestamp": 1781262077,
+    "posted_at_iso": "2026-06-12T11:01:17.000Z",
+    "instagram_media_id": "3917831886101389815_61300265781",
+    "instagram_media_pk": "3917831886101389815",
+    "product_type": "clips",
+    "media_type": 2,
+    "fetched_at": "2026-06-22T14:30:00.000Z",
+    "metrics_source": "Instagram CLI authenticated session (@ejtheodore)"
+  },
+  "content_analysis": {
+    "primary_theme": "Islamic spirituality mapped onto quantum-physics metaphors (zero resistance / tawakkul)",
+    "secondary_themes": [
+      "99 divine attributes as low-entropy grid",
+      "Wave-function collapse and impedance matching to hardship",
+      "Fourier synthesis / constructive coherence of virtues",
+      "Intention as master programmer / quantum observer",
+      "Forgiveness as zero-resistance response to betrayal"
+    ],
+    "rhetorical_frame": "Physics vocabulary in service of tawakkul, niyyah (intention), and multi-attribute spiritual synthesis",
+    "hashtags": ["quantumphysics", "spirituality", "tawakul", "intention", "islam"]
+  },
+  "transcription": {
+    "full_text": "Let's talk about being a vessel of zero resistance in quantum physics as a Muslim. The 99 divine attributes serve as the fundamental low entropy grid of our universe. And everything was built from it, including you and me. These attributes live within our own quantum field as a superposition of latent possibilities. And remember the thing about superpositions, it is abnormal to have only one isolated rigid sine wave. Now, as you navigate life, you are experiencing a multitude of external triggers, events, and hardships. In physics, this is not good or bad. I want you guys to just look at it as external waves. The moment an external wave triggers your field, your resting wave function collapses. And the matching internal attribute activates to achieve perfect impedance matching. For example, your best friend betrays you, you forgive him. The wave flattens and the energy passes through you with zero resistance, no trauma, sadness, lingering energy. And you master this through Fourier synthesis. Embodying just one divine attribute is great, but it's isolated and rigid. But when you layer multiple attributes simultaneously, they don't fight, they merge. They merge via superposition into a composite waveform. You are no longer a single note, you are a complete chord. When this happens, the math changes. Unaligned energy just adds up linearly. So like one plus one plus one equals three. But when your attributes are perfectly synchronized and in phase, they achieve something called constructive coherence, meaning that your power output multiplies exponentially. Turning you into a high powered energy transmitter. When you balance these attributes, your internal frequency perfectly matches the universe's background profile, zero impedance. Now because there is no longer a structural difference between your field and the universal field, energy glides through you with 100% maximum power transfer, never colliding with an ego obstacle or causing a destructive bounce back. And it all begins with your intention. Your intention is the master programmer in your quantum field. A pure intention activates the divine grid, creating a frictionless organized path ahead of you. A corrupt intention like claiming one thing while hiding another injects a contradiction into the system. This causes destructive interference fracturing your wave function and leading your reality completely astray. Your intention is the ultimate quantum observer. Guard it, purify it, and let the universe organize itself around you. Trust in Allah and have tawakkul.",
+    "transcribed_by": "Local Whisper base (Docker MCP offline failed)",
+    "transcription_mode": "offline",
+    "language": "en",
+    "processing_time_seconds": 83.6,
+    "docker_mcp_attempt": {
+      "transcribe_video_url": "failed — SSL error loading Whisper model",
+      "get_video_info": "failed — invalid/unsupported URL",
+      "validate_video_url": "failed — converter timeout"
+    },
+    "video_download": "Instagram CLI authenticated CDN URL via curl (first download partial; full 22MB re-download completed)",
+    "whisper_corrections": ["for acturing → fracturing", "have to what could → tawakkul", "cord → chord (contextual)"]
+  },
+  "tier_classification": {
+    "platform_metrics": "Tier 2",
+    "transcript": "Tier 2",
+    "content_interpretation": "Tier 3",
+    "justification": "Likes, comments, and play counts are verifiable via Instagram CLI; transcript is machine-generated with noted garbles corrected in md; thematic coding is author-classified"
+  },
+  "reach_note": "Instagram reach is owner-only. Public play_count and ig_play_count are the closest available third-party proxies."
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "id": "E239",
+    "env_type": "equation",
+    "raw_latex": "\\begin{equation}\\label{eq:app-universality-objective}\n\\max_{u} \\; \\mathcal{E}(t) \\quad \\text{subject to} \\quad M(t) < \\tau, \\; \\dot{q} = f(q, u), \\; q(0) = q_0\n\\end{equation}",
+    "rendered": "\\label{eq:app-universality-objective}\n\\max_{u} \\; \\mathcal{E}(t) \\quad \\text{subject to} \\quad M(t) < \\tau, \\; \\dot{q} = f(q, u), \\; q(0) = q_0",
+    "chapter": "Universality and the Finite Topology of Power",
+    "section": "Evidence from Control Theory",
+    "line": 15141,
+    "context_before": "{topology} of the solution is invariant: a small controlling node, an enforcement intermediary, a co-opted buffer, and an excluded sink. The specific identity axes ($B_k$) are culturally contingent; the circuit topology is fixed across contexts.\n\n\\section{Evidence from Control Theory}\n\nThe five-node topology is the minimal control structure capable of solving the constrained optimization problem:",
+    "context_after": "where $u$ is the control input and $q$ is the state vector. Control theorists have proven that the optimal solution to such problems under resource constraints and dissipation threats takes the form of a \\textbf{hierarchical feedback structure}: a leader node ($E$), a controller ($P_{\\text{uppet}}$), an actuator ($F_{\\text{enforce}}$), and a partitioned follower set ($I_{\\text{buffer}} \\cup O_{\\t",
+    "label": "eq:app-universality-objective"
+  }
+]

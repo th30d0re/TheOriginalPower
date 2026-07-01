@@ -1,0 +1,86 @@
+[
+  {
+    "id": "E203",
+    "env_type": "equation",
+    "raw_latex": "\\begin{equation}\\label{eq:21.1-interference-spectral-form}\n\\hat{S}_{\\text{total}}(f,t) = \\hat{S}_{\\text{class}}(f,t) + \\hat{S}_{\\text{identity}}(f,t).\n\\end{equation}",
+    "rendered": "\\label{eq:21.1-interference-spectral-form}\n\\hat{S}_{\\text{total}}(f,t) = \\hat{S}_{\\text{class}}(f,t) + \\hat{S}_{\\text{identity}}(f,t).",
+    "chapter": "The Spectral Carrier: Electoral Cycles and the Interference Engine",
+    "section": "Theoretical Framework",
+    "line": 13922,
+    "context_before": "t)$ and dynamically shifts the demographic weights $\\rho_k(t)$ of cultural magnetic fields $B_k$ to prevent constructive interference between the Buffer Class and the Out-group. The Engine's spectral objective, derived in Section~\\ref{sec:formal-containment-model}, is to drive the class-band power below the crash threshold $\\tau$ while routing the freed attentional energy into the identity band:",
+    "context_after": "Parseval's theorem guarantees that total political energy is conserved; the Engine redistributes energy across bands. The mathematical mechanism is the phase-dispersion operator $\\Phi_{\\text{load}}(t)$, which measures the degree to which the Engine has scrambled class-solidarity phase angles across multiple identity axes:\n\n\\begin{equation}\\label{eq:21.2-phase-dispersion}\n\\Phi_{\\text{load}}(t) =",
+    "label": "eq:21.1-interference-spectral-form"
+  },
+  {
+    "id": "E204",
+    "env_type": "equation",
+    "raw_latex": "\\begin{equation}\\label{eq:21.2-phase-dispersion}\n\\Phi_{\\text{load}}(t) = 1 - \\left| \\frac{1}{N} \\sum_{j=1}^{N} e^{i\\phi_j(t)} \\right|.\n\\end{equation}",
+    "rendered": "\\label{eq:21.2-phase-dispersion}\n\\Phi_{\\text{load}}(t) = 1 - \\left| \\frac{1}{N} \\sum_{j=1}^{N} e^{i\\phi_j(t)} \\right|.",
+    "chapter": "The Spectral Carrier: Electoral Cycles and the Interference Engine",
+    "section": "Theoretical Framework",
+    "line": 13928,
+    "context_before": "t{S}_{\\text{class}}(f,t) + \\hat{S}_{\\text{identity}}(f,t).\n\\end{equation}\n\nParseval's theorem guarantees that total political energy is conserved; the Engine redistributes energy across bands. The mathematical mechanism is the phase-dispersion operator $\\Phi_{\\text{load}}(t)$, which measures the degree to which the Engine has scrambled class-solidarity phase angles across multiple identity axes:",
+    "context_after": "When $\\Phi_{\\text{load}}(t) \\to 1$, the population's political energy is maximally dispersed across $N$ competing identity conflicts, and class solidarity cannot achieve coherent amplitude.\n\nIf the Engine is a real control system operating on human wetware, its modulation of $\\rho_k(t)$ should not be random. It should be \\textbf{phase-locked} to the electoral clock: the moments when class solida",
+    "label": "eq:21.2-phase-dispersion"
+  },
+  {
+    "id": "E205",
+    "env_type": "equation",
+    "raw_latex": "\\begin{equation}\\label{eq:21.3-share-definitions}\n    s_{\\text{class}}(t) = \\frac{C(t)}{C(t) + I(t)}, \\qquad s_{\\text{identity}}(t) = \\frac{I(t)}{C(t) + I(t)}.\n    \\end{equation}",
+    "rendered": "\\label{eq:21.3-share-definitions}\n    s_{\\text{class}}(t) = \\frac{C(t)}{C(t) + I(t)}, \\qquad s_{\\text{identity}}(t) = \\frac{I(t)}{C(t) + I(t)}.",
+    "chapter": "The Spectral Carrier: Electoral Cycles and the Interference Engine",
+    "section": "Source and Preprocessing",
+    "line": 0,
+    "context_before": "ets were designed to capture the two channels of the Tri-Modal Enclosure Model: class-band words index economic-extraction discourse ($E_{\\text{mat}}$), while identity-band words index status-wage discourse ($\\psi_s$).\n    \\item \\textbf{Frequency computation:} For each year $t$, the total count of class-band words $C(t)$ and identity-band words $I(t)$ was computed. The shares were derived as:",
+    "context_after": "\\end{enumerate}\n\nThe annual sampling rate is $f_s = 1$~sample/yr, giving a Nyquist frequency of $f_N = 0.5$~cyc/yr. The frequency resolution is $\\Delta f = 1/N = 1/60 \\approx 0.0167$~cyc/yr.\n\n\\begin{keyinsight}[Why Annual Sampling Is Sufficient for the 4-Year Carrier]\nThe 4-year presidential cycle ($T = 4$~yr) corresponds to $f = 0.25$~cyc/yr. With $N = 60$ years, this frequency falls exactly on",
+    "label": "eq:21.3-share-definitions"
+  },
+  {
+    "id": "E206",
+    "env_type": "equation",
+    "raw_latex": "\\begin{equation}\\label{eq:21.4-fft-definition}\n\\hat{X}[k] = \\sum_{n=0}^{N-1} x[n] \\, e^{-j 2\\pi k n / N}, \\qquad k = 0, 1, \\ldots, N-1.\n\\end{equation}",
+    "rendered": "\\label{eq:21.4-fft-definition}\n\\hat{X}[k] = \\sum_{n=0}^{N-1} x[n] \\, e^{-j 2\\pi k n / N}, \\qquad k = 0, 1, \\ldots, N-1.",
+    "chapter": "The Spectral Carrier: Electoral Cycles and the Interference Engine",
+    "section": "Spectral Estimation",
+    "line": 13984,
+    "context_before": "vInfo API has been constructed (see Section~\\ref{sec:high_freq_validation}) to raise the Nyquist limit to $2.0$~cyc/yr and resolve the 2-year cycle cleanly.\n\\end{keyinsight}\n\n\\subsection{Spectral Estimation}\n\nTwo estimators were employed:\n\n\\textbf{1. FFT Periodogram (Primary Estimator).} The discrete Fourier transform of the linearly detrended absolute word-frequency time series was computed via:",
+    "context_after": "The power spectral density at positive frequencies is:\n\\begin{equation}\\label{eq:21.5-psd-definition}\n\\text{PSD}[k] = \\frac{|\\hat{X}[k]|^2}{N}, \\qquad k = 1, 2, \\ldots, N/2.\n\\end{equation}\nLinear detrending was applied to remove secular drift before transformation. The FFT is the primary estimator because the target frequencies (4-year and 6-year cycles) align exactly with integer frequency bins,",
+    "label": "eq:21.4-fft-definition"
+  },
+  {
+    "id": "E207",
+    "env_type": "equation",
+    "raw_latex": "\\begin{equation}\\label{eq:21.5-psd-definition}\n\\text{PSD}[k] = \\frac{|\\hat{X}[k]|^2}{N}, \\qquad k = 1, 2, \\ldots, N/2.\n\\end{equation}",
+    "rendered": "\\label{eq:21.5-psd-definition}\n\\text{PSD}[k] = \\frac{|\\hat{X}[k]|^2}{N}, \\qquad k = 1, 2, \\ldots, N/2.",
+    "chapter": "The Spectral Carrier: Electoral Cycles and the Interference Engine",
+    "section": "Spectral Estimation",
+    "line": 13988,
+    "context_before": "}\n\nTwo estimators were employed:\n\n\\textbf{1. FFT Periodogram (Primary Estimator).} The discrete Fourier transform of the linearly detrended absolute word-frequency time series was computed via:\n\\begin{equation}\\label{eq:21.4-fft-definition}\n\\hat{X}[k] = \\sum_{n=0}^{N-1} x[n] \\, e^{-j 2\\pi k n / N}, \\qquad k = 0, 1, \\ldots, N-1.\n\\end{equation}\nThe power spectral density at positive frequencies is:",
+    "context_after": "Linear detrending was applied to remove secular drift before transformation. The FFT is the primary estimator because the target frequencies (4-year and 6-year cycles) align exactly with integer frequency bins, eliminating spectral leakage.\n\n\\textbf{2. Welch's Method (Robustness Check).} Welch's averaged periodogram with a Hann window was computed at two segment lengths ($n_{\\text{perseg}} = 20$",
+    "label": "eq:21.5-psd-definition"
+  },
+  {
+    "id": "E208",
+    "env_type": "equation",
+    "raw_latex": "\\begin{equation}\\label{eq:21.6-coherence}\nC_{xy}(f) = \\frac{|S_{xy}(f)|^2}{S_{xx}(f) \\, S_{yy}(f)},\n\\end{equation}",
+    "rendered": "\\label{eq:21.6-coherence}\nC_{xy}(f) = \\frac{|S_{xy}(f)|^2}{S_{xx}(f) \\, S_{yy}(f)},",
+    "chapter": "The Spectral Carrier: Electoral Cycles and the Interference Engine",
+    "section": "Cross-Spectral Analysis",
+    "line": 13998,
+    "context_before": "$N = 60$, these segment lengths yield 3--5 and 5--9 independent segments, respectively. Welch's method is reported as a robustness check but is not the primary estimator due to limited segment count.\n\n\\subsection{Cross-Spectral Analysis}\n\nMagnitude-squared coherence and cross-spectral phase were computed between the identity-band and class-band time series to test for phase-locked relationships:",
+    "context_after": "where $S_{xy}$ is the cross-spectral density and $S_{xx}, S_{yy}$ are the auto-spectral densities.\n\n\\subsection{Confidence Tier and Falsification}\n\nThis analysis is classified as \\textbf{Tier~2}: public dataset with disclosed computation. The data source (GovInfo Congressional Record) is publicly accessible; the keyword baskets, operationalization procedure, and Python computation script are disc",
+    "label": "eq:21.6-coherence"
+  },
+  {
+    "id": "E209",
+    "env_type": "equation",
+    "raw_latex": "\\begin{equation}\\label{eq:21.7-parseval}\n\\sum_{n=0}^{N-1} |x[n]|^2 = \\frac{1}{N} \\sum_{k=0}^{N-1} |\\hat{X}[k]|^2.\n\\end{equation}",
+    "rendered": "\\label{eq:21.7-parseval}\n\\sum_{n=0}^{N-1} |x[n]|^2 = \\frac{1}{N} \\sum_{k=0}^{N-1} |\\hat{X}[k]|^2.",
+    "chapter": "The Spectral Carrier: Electoral Cycles and the Interference Engine",
+    "section": "Parseval Consistency",
+    "line": 14050,
+    "context_before": "are inconsistent at the exact 4-year frequency---the smeared frequency bins do not align perfectly with the $f = 0.25$~cyc/yr target. The Welch results are reported as a robustness check but are not the primary estimator.\n\n\\subsection{Parseval Consistency}\n\n\\textbf{P6 is confirmed.} Parseval's theorem states that the total energy in the time domain equals the total energy in the frequency domain:",
+    "context_after": "For the detrended absolute frequencies, the time-domain energy and frequency-domain energy (corrected for positive-frequency summation) agree to within 0.04\\% (ratio = 0.9996). The spectral energy is conserved; the Engine redistributes it.\n\n\\section{Robustness Checks}\n\n\\subsection{Time-Domain Election-Year Test}\n\n\\textbf{P5 is not confirmed.} A two-sample $t$-test comparing identity-band word fre",
+    "label": "eq:21.7-parseval"
+  }
+]

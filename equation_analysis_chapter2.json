@@ -1,0 +1,193 @@
+[
+  {
+    "id": "E026",
+    "label": "eq:2.1-racism-vector",
+    "equation": "\\label{eq:2.1-racism-vector}\n\\vec{R}_{\\text{acism}} = M_{\\text{agnitude}} \\cdot \\hat{d}_{\\text{state}}",
+    "local_rank": 1,
+    "global_score": 9,
+    "framework_model": "This equation models systemic racism as a vector quantity rather than a scalar prejudice. The magnitude term $M_{\\text{agnitude}}$ captures the intensity of human prejudice and dehumanization, while the unit vector $\\hat{d}_{\\text{state}}$ captures the top-down directional force supplied by state power, law, and institutional authorization. The product asserts that racism becomes systemic only when prejudice is coupled with state direction; without $\\hat{d}_{\\text{state}}$, $M$ remains a scalar bias incapable of producing the structural machinery of extraction. It is the foundational formalization of the framework's claim that racism is a state-directed institutional force.",
+    "original_context": "This is an original conceptual formalization within the framework, adapted from Susan Abulhawa's directional framing. It borrows the mathematical distinction between scalar and vector quantities from linear algebra and physics, where a vector requires both magnitude and direction. It is explicitly classified as Tier 3 (ordinal/structural) and serves as a pedagogical device rather than a quantitative predictive equation.",
+    "variables": {
+      "$M_{\\text{agnitude}}$": "Scalar magnitude of prejudice, dehumanization, and pre-vector bias.",
+      "$\\vec{R}_{\\text{acism}}$": "Vector of systemic racism, combining magnitude with a directional forcing term.",
+      "$\\hat{d}_{\\text{state}}$": "Unit vector indicating the direction of state power, legal authorization, and institutional enforcement."
+    }
+  },
+  {
+    "id": "E027",
+    "label": "eq:2.2-status-suppression-allocation",
+    "equation": "\\label{eq:2.2-status-suppression-allocation}\nS_{\\text{tatus}}(I) = \\text{Base\\_Humanity} + \\psi(t), \\quad \\psi(t) = \\psi_s(t) + \\psi_m(t)",
+    "local_rank": 3,
+    "global_score": 8,
+    "framework_model": "Models the In-group's status as a baseline humanity plus a time-varying suppression allocation $\\psi(t)$. The allocation decomposes into a status wage $\\psi_s$---non-material guarantees of ontological superiority---and a material wage $\\psi_m$---real economic concessions deployed only under kinetic threat. The equation formalizes W.E.B. Du Bois's 'public and psychological wage' as a two-mode control variable used by the Elite to purchase In-group complicity without redistributing their own wealth. It establishes that the In-group's social standing is engineered through an implicit contract rather than earned through class position.",
+    "original_context": "Original to the framework, though it formalizes Du Bois's historical concept from *Black Reconstruction in America*. It uses a simple additive decomposition common in economics and control theory, splitting a compensation bundle into material and non-material components.",
+    "variables": {
+      "$S_{\\text{tatus}}(I)$": "Status level of the In-group.",
+      "$\\text{Base_\\!Humanity}$": "Baseline ontological status assigned to the In-group.",
+      "$\\psi(t)$": "Total suppression allocation at time $t$, composed of status and material wages.",
+      "$\\psi_s(t)$": "Status or psychological wage: non-material compensation for complicity.",
+      "$\\psi_m(t)$": "Material wage: real economic concessions activated under class-coherence threat."
+    }
+  },
+  {
+    "id": "E028",
+    "label": "eq:2.3-psi-null-in-survival",
+    "equation": "\\label{eq:2.3-psi-null-in-survival}\nS_{\\text{tatus}}(I) > S_{\\text{tatus}}(O_{\\text{racialized}})",
+    "local_rank": 8,
+    "global_score": 6,
+    "framework_model": "States the structural invariant that the In-group's status must strictly exceed that of the racialized Out-group. This ordinal inequality is the survival condition of the implicit contract: if the In-group ever ceased to rank above the Out-group, the psychological wage would collapse and cross-class solidarity would threaten the Elite. It is the minimal ordering that maintains the buffer-class partition and ensures the In-group continues to police the boundary.",
+    "original_context": "Original structural inequality within the framework, classified as Tier 3. It expresses a dominance ordering common in social hierarchy models and coordination games.",
+    "variables": {
+      "$S_{\\text{tatus}}(I)$": "Status of the In-group.",
+      "$S_{\\text{tatus}}(O_{\\text{racialized}})$": "Status of the racialized Out-group."
+    }
+  },
+  {
+    "id": "E029",
+    "label": "eq:2.2a-complex-suppression-allocation",
+    "equation": "\\label{eq:2.2a-complex-suppression-allocation}\nW = \\psi_m + j\\psi_s",
+    "local_rank": 2,
+    "global_score": 9,
+    "framework_model": "Reframes the suppression allocation $\\psi$ as a complex number $W = \\psi_m + j\\psi_s$, where the material wage is the real component and the psychological/status wage is the imaginary component. The imaginary unit $j$ signals that $\\psi_s$ operates orthogonally to material reality: it sustains the field of social hierarchy without transferring physical wealth or performing economic work. This reframing exposes the structure hidden by the scalar sum and links the psychological wage to reactive power in electrical systems, providing the basis for the phase-angle diagnostics and solidarity theorems that follow.",
+    "original_context": "Borrowed from electrical engineering's complex power representation, where real power (Watts) performs physical work and reactive power (VARs) sustains electromagnetic fields without doing net work. The framework maps this distinction onto Du Bois's material/status wage decomposition.",
+    "variables": {
+      "$W$": "Complex suppression allocation.",
+      "$\\psi_m$": "Material wage, the real component performing actual economic work on the Buffer Class.",
+      "$\\psi_s$": "Psychological/status wage, the imaginary component sustaining hierarchy without material transfer.",
+      "$j$": "Imaginary unit, $\\sqrt{-1}$, marking orthogonality to material reality."
+    }
+  },
+  {
+    "id": "E030",
+    "label": "eq:2.2b-complex-wage-def",
+    "equation": "\\label{eq:2.2b-complex-wage-def}\nW = \\psi_m + j\\psi_s",
+    "local_rank": 2,
+    "global_score": 9,
+    "framework_model": "Formalizes the Complex Suppression Allocation $W$ as the same complex number $\\psi_m + j\\psi_s$, presented here inside Definition \\ref{def:complex-wage}. The real part $\\psi_m$ represents material concessions sourced from deeper extraction of the Out-group, while the imaginary part $j\\psi_s$ represents the zero-cost psychological wage that deflects class momentum. The definition establishes the electrical-engineering analogy as a core structural feature of the extraction architecture.",
+    "original_context": "Same as E029: borrowed from electrical-engineering complex power theory, where real and reactive power are combined into a complex phasor. The equation is original to the framework in its application to racial capitalism.",
+    "variables": {
+      "$W$": "Complex suppression allocation.",
+      "$\\psi_m$": "Material wage, real economic concessions.",
+      "$\\psi_s$": "Psychological/status wage, non-material superiority.",
+      "$j$": "Imaginary unit signaling orthogonality to material reality."
+    }
+  },
+  {
+    "id": "E031",
+    "label": "eq:2.2c-polar-form",
+    "equation": "\\label{eq:2.2c-polar-form}\nW = R \\angle\\theta = R e^{j\\theta}, \\quad R = |W| = \\sqrt{\\psi_m^2 + \\psi_s^2}",
+    "local_rank": 10,
+    "global_score": 6,
+    "framework_model": "Converts the complex suppression allocation into polar form, where $R$ is the magnitude of the total wage and $\\theta$ is the phase angle of oppression. The phase angle diagnoses the operating mode of the extraction system: $\\theta = 0^\\circ$ means a pure material wage (social democracy), $\\theta = 90^\\circ$ means a pure psychological wage (the default mode), and $\\theta > 90^\\circ$ means the Elite extracts material wealth from the Buffer Class while feeding hyper-inflated status wages---the framework's mathematical definition of fascism.",
+    "original_context": "Standard complex-number polar representation from complex analysis and electrical engineering. The magnitude-phase decomposition is used in AC circuit analysis to represent impedance and complex power.",
+    "variables": {
+      "$W$": "Complex suppression allocation.",
+      "$R$": "Magnitude of the total suppression allocation, $\\sqrt{\\psi_m^2 + \\psi_s^2}$.",
+      "$\\theta$": "Phase angle of oppression, diagnosing the system's operating mode.",
+      "$\\psi_m, \\psi_s$": "Real and imaginary components of the suppression allocation."
+    }
+  },
+  {
+    "id": "E032",
+    "label": "eq:2.2d-imaginary-squaring",
+    "equation": "\\label{eq:2.2d-imaginary-squaring}\n(j\\psi_s)^2 = j^2 \\psi_s^2 = -\\psi_s^2",
+    "local_rank": 6,
+    "global_score": 7,
+    "framework_model": "Demonstrates that over-indexing on the psychological wage (pure imaginary $W = j\\psi_s$) destroys real material wealth. Squaring the pure imaginary allocation yields a negative real number, mathematically formalizing the Buffer Class's self-destructive behavior of voting against healthcare, unions, and infrastructure in exchange for racial or cultural status. It is Theorem \\ref{thm:imaginary-squaring}, providing a rigorous mechanism for how symbolic compensation compounds into material loss.",
+    "original_context": "Uses the algebraic property of imaginary numbers: $(ja)^2 = -a^2$. This is elementary complex arithmetic, applied metaphorically within the framework to model the real-world destruction caused by privileging status over material interests.",
+    "variables": {
+      "$j$": "Imaginary unit.",
+      "$\\psi_s$": "Psychological/status wage.",
+      "$(j\\psi_s)^2$": "Squared pure-imaginary allocation, yielding a negative real number."
+    }
+  },
+  {
+    "id": "E033",
+    "label": "eq:2.2e-solidarity-addition",
+    "equation": "\\label{eq:2.2e-solidarity-addition}\nW + W^* = (\\psi_m + j\\psi_s) + (\\psi_m - j\\psi_s) = 2\\psi_m",
+    "local_rank": 7,
+    "global_score": 7,
+    "framework_model": "Models cross-group class solidarity as the addition of the Elite's wage $W$ and its complex conjugate $W^*$, representing the Buffer Class's rejection of the psychological wage. The imaginary status components cancel entirely, leaving only doubled real material power. The theorem formalizes why solidarity removes horizontal deflection of class conflict and redirects combined momentum vertically against the Elite, explaining the Elite's existential hostility to cross-racial class alliances.",
+    "original_context": "Uses complex conjugation from complex analysis. Adding a complex number to its conjugate eliminates the imaginary part and doubles the real part: $z + z^* = 2\\operatorname{Re}(z)$. This is a standard identity in signal processing and AC circuit analysis.",
+    "variables": {
+      "$W$": "Complex suppression allocation offered by the Elite.",
+      "$W^*$": "Complex conjugate, representing rejection of the psychological wage.",
+      "$\\psi_m$": "Material wage, the surviving real component after solidarity.",
+      "$\\psi_s$": "Psychological/status wage, canceled by conjugation."
+    }
+  },
+  {
+    "id": "E034",
+    "label": "eq:2.4-roman-membership-function",
+    "equation": "\\label{eq:2.4-roman-membership-function}\nO_{\\text{slave}}^{\\text{Roman}} = f(\\text{conquest}, \\text{debt}, \\text{crime}, \\text{birth})",
+    "local_rank": 9,
+    "global_score": 5,
+    "framework_model": "Defines Roman slavery's Out-group membership as a function of conquest, debt, crime, and birth. It serves as a control case showing that the extraction kernel can operate without racial coding: Roman enslavement was permeable and multi-ethnic, allowing manumission, wealth accumulation, and even political office for descendants. The equation isolates the variable that the American/Portuguese system later replaced with phenotype.",
+    "original_context": "Original to the framework, though it summarizes historical scholarship on Roman slavery (Bradley's *Slavery and Society at Rome*). The functional notation is borrowed from set theory and social-science modeling.",
+    "variables": {
+      "$O_{\\text{slave}}^{\\text{Roman}}$": "Roman enslaved class.",
+      "conquest": "Enslavement through military defeat.",
+      "debt": "Enslavement arising from indebtedness.",
+      "crime": "Enslavement as punishment.",
+      "birth": "Enslavement by descent."
+    }
+  },
+  {
+    "id": "E035",
+    "label": "eq:2.5-american-racial-function",
+    "equation": "\\label{eq:2.5-american-racial-function}\nO_{\\text{racialized}}^{\\text{American}} = f(\\text{phenotype})",
+    "local_rank": 4,
+    "global_score": 8,
+    "framework_model": "Defines the American/Portuguese racialized Out-group as a function of phenotype alone. It captures the permanent, heritable, and sealed nature of racial membership: no amount of labor, conversion, or wealth can alter the assignment. The equation formalizes the key innovation of the Atlantic system---the phenotypic lock that survived manumission, formal abolition, and legal reform because phenotype remains a zero-cost, involuntary, broadcast signal of Out-group membership.",
+    "original_context": "Original to the framework, summarizing the historical legal record from the 1662 Virginia *partus sequitur ventrem* statute through *Dred Scott* (1857). The functional form is a simplified social-science variable assignment.",
+    "variables": {
+      "$O_{\\text{racialized}}^{\\text{American}}$": "Racialized Out-group under the American/Portuguese system.",
+      "phenotype": "Observable physical traits used as the permanent sorting key for extraction."
+    }
+  },
+  {
+    "id": "E036",
+    "label": "eq:2.6-roman-american-structural-parallel",
+    "equation": "\\label{eq:2.6-roman-american-structural-parallel}\nO_{\\text{religious}}^{\\text{pre-1450}} = f(\\text{doctrine, sect, heresy}) \\quad \\longrightarrow \\quad O_{\\text{racialized}}^{\\text{post-1450}} = f(\\text{phenotype})",
+    "local_rank": 11,
+    "global_score": 5,
+    "framework_model": "Maps the structural substitution of partition variables from religion to phenotype. It asserts that the pre-1450 religious Out-group---defined by doctrine, sect, and heresy---and the post-1450 racialized Out-group---defined by phenotype---perform the same structural function in the extraction architecture; only the input variable changed. The equation supports the framework's claim that the extraction kernel is identity-agnostic and will use whatever sorting key is most efficient, durable, and cheap to verify.",
+    "original_context": "Original structural analogy within the framework, drawing on the French Wars of Religion and the Thirty Years' War as control cases. It uses functional mapping notation to represent a historical transition between partitioning strategies.",
+    "variables": {
+      "$O_{\\text{religious}}^{\\text{pre-1450}}$": "Religious Out-group before the racial partition.",
+      "$O_{\\text{racialized}}^{\\text{post-1450}}$": "Racialized Out-group after 1450.",
+      "doctrine, sect, heresy": "Religious sorting keys requiring continuous institutional verification.",
+      "phenotype": "Physical sorting key that requires no ongoing verification."
+    }
+  },
+  {
+    "id": "E037",
+    "label": "eq:2.7-three-tier-portugal-inequality",
+    "equation": "\\label{eq:2.7-three-tier-portugal-inequality}\n\\text{Benefit}(E) \\gg \\text{Benefit}(I) > \\text{Benefit}(O_{\\text{racialized}})",
+    "local_rank": 5,
+    "global_score": 7,
+    "framework_model": "Expresses the foundational benefit hierarchy of the Portuguese extraction system: Elite benefit vastly exceeds In-group benefit, which in turn exceeds Out-group benefit. The inequality formalizes the three-class architecture and the invariant that the In-group is materially subordinate to the Elite yet socially superior to the Out-group. It anchors the embryonic system before later tiers---the Buffer Class, Managerial Class, and others---are introduced as patches for specific security flaws.",
+    "original_context": "Original ordinal/structural inequality within the framework, grounded in 15th-century Portuguese colonial records. It uses standard inequality notation from order theory and welfare economics.",
+    "variables": {
+      "$\\text{Benefit}(E)$": "Benefit to the Elite class from extraction.",
+      "$\\text{Benefit}(I)$": "Benefit to the In-group, consisting of the suppression allocation $\\psi = \\psi_s + \\psi_m$.",
+      "$\\text{Benefit}(O_{\\text{racialized}})$": "Benefit to the racialized Out-group, minimized by the extraction kernel."
+    }
+  },
+  {
+    "id": "E038",
+    "label": "eq:2.8-church-science-feedback-loop",
+    "equation": "\\label{eq:2.8-church-science-feedback-loop}\n\\begin{aligned}\n&\\text{Exploitation} \\rightarrow \\text{Observed disparities} \\rightarrow \\text{Theological/Scientific ``explanation''} \\\\\n&\\rightarrow \\text{Naturalization} \\rightarrow \\text{Expanded exploitation}\n\\end{aligned}",
+    "local_rank": 12,
+    "global_score": 6,
+    "framework_model": "Models the self-reinforcing legitimation cycle in which exploitation produces observable disparities, which Church and Science then explain as evidence of natural inferiority, which naturalizes the hierarchy and justifies expanded exploitation. The loop is a positive feedback mechanism that embeds dehumanization in education and institutions, making the extraction kernel culturally self-perpetuating and converting the products of oppression into justifications for further oppression.",
+    "original_context": "Original systems-diagram equation within the framework, though the concept of a self-fulfilling feedback loop is common in sociology, systems theory, and cybernetics. The chained-arrow notation is typical of causal-loop diagrams.",
+    "variables": {
+      "Exploitation": "Forced extraction and oppression of the Out-group.",
+      "Observed disparities": "Wealth, health, and education gaps produced by exploitation.",
+      "Theological/Scientific 'explanation'": "Institutional justification framing disparities as inherent.",
+      "Naturalization": "Conversion of socially produced inequality into supposed natural law.",
+      "Expanded exploitation": "Intensified extraction justified by the naturalized explanation."
+    }
+  }
+]

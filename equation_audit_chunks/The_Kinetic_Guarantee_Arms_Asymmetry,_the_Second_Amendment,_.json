@@ -1,0 +1,74 @@
+[
+  {
+    "id": "E127",
+    "env_type": "equation",
+    "raw_latex": "\\begin{equation}\\label{eq:11.1-extraction-precondition}\nL_E \\gg L_O \\implies \\text{Extraction feasible}\n\\end{equation}",
+    "rendered": "\\label{eq:11.1-extraction-precondition}\nL_E \\gg L_O \\implies \\text{Extraction feasible}",
+    "chapter": "The Kinetic Guarantee: Arms Asymmetry, the Second Amendment, and the Disarmament Timeline",
+    "section": "Phase 1: Direct Kidnapping Through Firearms Superiority",
+    "line": 10137,
+    "context_before": "window of asymmetry was sufficient to initialize the extraction pipeline, and once the arms-for-slaves feedback loop was established, the system no longer required direct European superiority to sustain itself.\n\nThe framework's notation captures this precisely. Let $L_E$ denote the lethal capacity of the Elite and $L_O$ the lethal capacity of the target population. The extraction precondition is:",
+    "context_after": "When this inequality holds, $E$ can impose the full oppressive architecture: asymmetric power (Component~1), resource extraction (Component~2), ideological justification (Component~3), and resistance suppression (Component~4). When $L_O \\to L_E$---when the target population approaches lethal parity---the extraction equation destabilizes. The entire history of gun control is the history of mainta",
+    "label": "eq:11.1-extraction-precondition"
+  },
+  {
+    "id": "E128",
+    "env_type": "equation",
+    "raw_latex": "\\begin{equation}\\label{eq:11.1a-state-semantic-legitimation}\n\\operatorname{Name}(a)=\n\\begin{cases}\n\\text{taxation, justice, security} & a \\in A_{\\text{state}} \\text{ and } S_{\\text{legit}}=1,\\\\\n\\text{extortion, kidnapping, assault} & a \\in A_{\\text{civilian}} \\text{ and } S_{\\text{legit}}=0.\n\\end{cases}\n\\end{equation}",
+    "rendered": "\\label{eq:11.1a-state-semantic-legitimation}\n\\operatorname{Name}(a)=\n\\begin{cases}\n\\text{taxation, justice, security} & a \\in A_{\\text{state}} \\text{ and } S_{\\text{legit}}=1,\\\\\n\\text{extortion, kidnapping, assault} & a \\in A_{\\text{civilian}} \\text{ and } S_{\\text{legit}}=0.\n\\end{cases}",
+    "chapter": "The Kinetic Guarantee: Arms Asymmetry, the Second Amendment, and the Disarmament Timeline",
+    "section": "The State Cartel: Monopoly on Violence as Semantic Legitimation",
+    "line": 10147,
+    "context_before": "ually described as legitimacy: the state claims the exclusive right to authorize coercive force within its territory \\cite{weber_politics_vocation}. The framework reads the same fact as a semantic exploit. The institutional node that performs an action determines its name, while the material structure---taking property, confining bodies, threatening force, or killing at scale---remains constant.",
+    "context_after": "The semantic label changes; the kinetic substrate does not. A private actor who seizes wages under threat commits extortion, while a state-enabled wage-theft regime can drain billions through procedural delay, weak enforcement, and civil penalties too small to deter extraction. A private actor who poisons a neighborhood commits assault or murder, while regulatory capture can expose entire commun",
+    "label": "eq:11.1a-state-semantic-legitimation"
+  },
+  {
+    "id": "E129",
+    "env_type": "equation",
+    "raw_latex": "\\begin{equation}\\label{eq:11.2-disarmament-agenda-path}\nx_0 \\rightarrow x_1 \\rightarrow \\cdots \\rightarrow x_m\n\\end{equation}",
+    "rendered": "\\label{eq:11.2-disarmament-agenda-path}\nx_0 \\rightarrow x_1 \\rightarrow \\cdots \\rightarrow x_m",
+    "chapter": "The Kinetic Guarantee: Arms Asymmetry, the Second Amendment, and the Disarmament Timeline",
+    "section": "The Mulford Proof: When the Out-Group Arms, the System Disarms",
+    "line": 10996,
+    "context_before": "$P_{\\text{disarmament}}$ to restore $L_E \\gg L_O$. The Mulford Act proved the mechanism. Every subsequent gun control law has confirmed it.\n\n\\begin{keyinsight}[The Jurisprudential Boomerang: A Wave-Test of the Timeline]\nThe disarmament sequence is an empirical test of the Interference Engine. Under high compound phase load $\\Phi_{\\text{load}}$, $P_{\\text{uppet}}$ can route policy in agenda steps",
+    "context_after": "where early steps are sold to $I_{\\text{buffer}}$ as controls on $O_{\\text{racialized}}$. Each step deposits a restriction precedent $r_t$ into doctrine:\n\\begin{equation}\\label{eq:11.3-restriction-precedent-accumulation}\n\\mathcal{R}_{t+1}=\\mathcal{R}_t \\cup \\{r_t\\}\n\\end{equation}\nOnce encoded, scope expands over time:\n\\begin{equation}\\label{eq:11.4-restriction-scope-expansion}\n\\operatorname{Targe",
+    "label": "eq:11.2-disarmament-agenda-path"
+  },
+  {
+    "id": "E130",
+    "env_type": "equation",
+    "raw_latex": "\\begin{equation}\\label{eq:11.3-restriction-precedent-accumulation}\n\\mathcal{R}_{t+1}=\\mathcal{R}_t \\cup \\{r_t\\}\n\\end{equation}",
+    "rendered": "\\label{eq:11.3-restriction-precedent-accumulation}\n\\mathcal{R}_{t+1}=\\mathcal{R}_t \\cup \\{r_t\\}",
+    "chapter": "The Kinetic Guarantee: Arms Asymmetry, the Second Amendment, and the Disarmament Timeline",
+    "section": "The Mulford Proof: When the Out-Group Arms, the System Disarms",
+    "line": 11000,
+    "context_before": "erence Engine. Under high compound phase load $\\Phi_{\\text{load}}$, $P_{\\text{uppet}}$ can route policy in agenda steps\n\\begin{equation}\\label{eq:11.2-disarmament-agenda-path}\nx_0 \\rightarrow x_1 \\rightarrow \\cdots \\rightarrow x_m\n\\end{equation}\nwhere early steps are sold to $I_{\\text{buffer}}$ as controls on $O_{\\text{racialized}}$. Each step deposits a restriction precedent $r_t$ into doctrine:",
+    "context_after": "Once encoded, scope expands over time:\n\\begin{equation}\\label{eq:11.4-restriction-scope-expansion}\n\\operatorname{Target}(r_t): O_{\\text{racialized}} \\;\\rightarrow\\; O_{\\text{racialized}} \\cup I_{\\text{buffer}}\n\\end{equation}\nWhat begins as racialized disarmament returns as generalized disarmament. The same jurisprudence co-signed under racial fear is later applied to the Buffer Class itself.\n\\end",
+    "label": "eq:11.3-restriction-precedent-accumulation"
+  },
+  {
+    "id": "E131",
+    "env_type": "equation",
+    "raw_latex": "\\begin{equation}\\label{eq:11.4-restriction-scope-expansion}\n\\operatorname{Target}(r_t): O_{\\text{racialized}} \\;\\rightarrow\\; O_{\\text{racialized}} \\cup I_{\\text{buffer}}\n\\end{equation}",
+    "rendered": "\\label{eq:11.4-restriction-scope-expansion}\n\\operatorname{Target}(r_t): O_{\\text{racialized}} \\;\\rightarrow\\; O_{\\text{racialized}} \\cup I_{\\text{buffer}}",
+    "chapter": "The Kinetic Guarantee: Arms Asymmetry, the Second Amendment, and the Disarmament Timeline",
+    "section": "The Mulford Proof: When the Out-Group Arms, the System Disarms",
+    "line": 11004,
+    "context_before": "nda-path}\nx_0 \\rightarrow x_1 \\rightarrow \\cdots \\rightarrow x_m\n\\end{equation}\nwhere early steps are sold to $I_{\\text{buffer}}$ as controls on $O_{\\text{racialized}}$. Each step deposits a restriction precedent $r_t$ into doctrine:\n\\begin{equation}\\label{eq:11.3-restriction-precedent-accumulation}\n\\mathcal{R}_{t+1}=\\mathcal{R}_t \\cup \\{r_t\\}\n\\end{equation}\nOnce encoded, scope expands over time:",
+    "context_after": "What begins as racialized disarmament returns as generalized disarmament. The same jurisprudence co-signed under racial fear is later applied to the Buffer Class itself.\n\\end{keyinsight}\n\n\\subsection*{Case Study: The Jurisprudential Boomerang --- 2A Case Law as Target Expansion (1911--2024)}\n\nThe Sullivan Law (1911) is the founding document of modern American firearms restriction. Its primary spo",
+    "label": "eq:11.4-restriction-scope-expansion"
+  },
+  {
+    "id": "E132",
+    "env_type": "equation",
+    "raw_latex": "\\begin{equation}\\label{eq:13.tvs-abort}\nP_{\\text{loss}} = I_{\\text{strike}}^2 \\cdot R_{\\text{kinetic}} > C_{\\text{max}}\n\\implies \\text{Strike Aborted}\n\\end{equation}",
+    "rendered": "\\label{eq:13.tvs-abort}\nP_{\\text{loss}} = I_{\\text{strike}}^2 \\cdot R_{\\text{kinetic}} > C_{\\text{max}}\n\\implies \\text{Strike Aborted}",
+    "chapter": "The Kinetic Guarantee: Arms Asymmetry, the Second Amendment, and the Disarmament Timeline",
+    "section": "The Kinetic Abort Threshold",
+    "line": 11111,
+    "context_before": "he strike.\n\\end{itemize}\n\nThe physics of power dissipation states that pushing a massive voltage through a highly resistant, heavily armed node generates catastrophic heat ($I^2R$). If the Out-group raises $R_{\\text{kinetic}}$ high enough, the Elite is forced to calculate that striking the TVS Diode will cause $P_{\\text{loss}}$ to exceed the structural integrity of their own enforcement hardware.",
+    "context_after": "where $C_{\\text{max}}$ is the maximum thermodynamic cost the Elite's enforcement apparatus can sustain without permanent structural damage.\n\\end{definition}\n\nIf executing the strike threatens to permanently burn out the Elite's own logic gates and transmission lines, the algorithm mathematically defaults to the Kinetic Abort Threshold. The strike is canceled out of strict physical self-preservati",
+    "label": "eq:13.tvs-abort"
+  }
+]

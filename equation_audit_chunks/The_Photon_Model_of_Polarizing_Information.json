@@ -1,0 +1,38 @@
+[
+  {
+    "id": "E236",
+    "env_type": "equation",
+    "raw_latex": "\\begin{equation}\\label{eq:app-photon-field-power}\nP_k = \\frac{1}{2\\mu_0} |B_k|^2 \\, V\n\\end{equation}",
+    "rendered": "\\label{eq:app-photon-field-power}\nP_k = \\frac{1}{2\\mu_0} |B_k|^2 \\, V",
+    "chapter": "The Photon Model of Polarizing Information",
+    "section": "From Continuous Field to Discrete Quanta",
+    "line": 15065,
+    "context_before": "zed regime by treating discrete information packets as photon-like carriers of polarization.\n\nThe extension is speculative. It is presented as a formal analogy with predictive value, not as a claim that social media posts are literal electromagnetic quanta.\n\n\\section{From Continuous Field to Discrete Quanta}\n\nIn the continuous model, the Engine injects power into the $k$-th identity axis at rate:",
+    "context_after": "where $V$ is the effective volume of the population exposed to the field. In the analog regime, $V$ was bounded by physical reach; in the digital regime, $V$ approaches the entire network.\n\nThe continuous model predicts total power; the photon model quantizes the distribution of that power across individual exposures. Define a \\textbf{polarizing photon} as a discrete information packet (tweet, me",
+    "label": "eq:app-photon-field-power"
+  },
+  {
+    "id": "E237",
+    "env_type": "equation",
+    "raw_latex": "\\begin{equation}\\label{eq:app-photon-spectral-density}\nP_k = N_{\\gamma} \\cdot E_{\\gamma} = N_{\\gamma} \\cdot h \\nu_k\n\\end{equation}",
+    "rendered": "\\label{eq:app-photon-spectral-density}\nP_k = N_{\\gamma} \\cdot E_{\\gamma} = N_{\\gamma} \\cdot h \\nu_k",
+    "chapter": "The Photon Model of Polarizing Information",
+    "section": "Spectral Density and the Small-Demographic Anomaly",
+    "line": 15086,
+    "context_before": "Once shared, it propagates until absorbed (viewed, processed, emotionally reacted to) or decohered (drowned by competing signals).\n\\end{enumerate}\n\n\\section{Spectral Density and the Small-Demographic Anomaly}\n\nThe photon model explains the small-demographic targeting puzzle (Section~VI of the electrodynamic synthesis) with precision. The total power $P_k$ injected into axis $k$ can be written as:",
+    "context_after": "where $N_{\\gamma}$ is the photon number (packet count) and $\\nu_k$ is the axis frequency.\n\nFor a major axis like race ($B_1$), the population base is large. To avoid saturating the Buffer Class (burnout / legitimacy collapse), the Engine must distribute the same power across many low-energy photons: high $N_{\\gamma}$, low $\\nu_k$. The field is spatially diffuse.\n\nFor a minor axis like transphobia",
+    "label": "eq:app-photon-spectral-density"
+  },
+  {
+    "id": "E238",
+    "env_type": "equation",
+    "raw_latex": "\\begin{equation}\\label{eq:app-photon-optimization}\n\\max_{k, N_{\\gamma}} \\; \\chi_{m,k} \\cdot N_{\\gamma} \\cdot h \\nu_k \\quad \\text{subject to} \\quad C_{\\text{engine}}^{\\text{digital}}(N_{\\gamma}, \\nu_k) \\leq C_{\\text{budget}}\n\\end{equation}",
+    "rendered": "\\label{eq:app-photon-optimization}\n\\max_{k, N_{\\gamma}} \\; \\chi_{m,k} \\cdot N_{\\gamma} \\cdot h \\nu_k \\quad \\text{subject to} \\quad C_{\\text{engine}}^{\\text{digital}}(N_{\\gamma}, \\nu_k) \\leq C_{\\text{budget}}",
+    "chapter": "The Photon Model of Polarizing Information",
+    "section": "Spectral Density and the Small-Demographic Anomaly",
+    "line": 15096,
+    "context_before": "$\\nu_k$. The Buffer Class has been pre-conditioned by patriarchal $B_{\\text{gender}}$ to exhibit high magnetic susceptibility $\\chi_m$ on this axis, so the high-energy photons achieve the same deflection at lower total packet count.\n\nThe result is a \\textbf{spectral optimization}: the Engine selects the axis frequency $\\nu_k$ and photon number $N_{\\gamma}$ that maximize deflection per unit cost:",
+    "context_after": "This is why a demographic of 0.6\\% can command a field energy comparable to a demographic of 13\\%. The energy is distributed according to the spectral efficiency of deflection, decoupling field share from population proportion.\n\n\\section{Implications for Counter-Engineering}\n\nIf the interference is carried by photon-like packets, then resistance can be modeled as \\textbf{polarization filtering}.",
+    "label": "eq:app-photon-optimization"
+  }
+]

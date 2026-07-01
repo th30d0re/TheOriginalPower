@@ -1,0 +1,74 @@
+[
+  {
+    "id": "E100",
+    "env_type": "equation",
+    "raw_latex": "\\begin{equation}\\label{eq:9.1-lead-crime-compounding}\nO_{t+1}^{\\text{capacity}} = O_t^{\\text{capacity}} \\cdot (1 - \\alpha_{P_{\\text{lead}}})\n\\end{equation}",
+    "rendered": "\\label{eq:9.1-lead-crime-compounding}\nO_{t+1}^{\\text{capacity}} = O_t^{\\text{capacity}} \\cdot (1 - \\alpha_{P_{\\text{lead}}})",
+    "chapter": "The Recompile: COINTELPRO, the Variable Swap, and the War on Drugs (1968--1994)",
+    "section": "The Toxin Pre-Processor: Environmental Lead as \\texorpdfstring{$P_{\\text{lead",
+    "line": 7779,
+    "context_before": "ng the affected population from naming the true source of its own distress. The lead-crime hypothesis therefore constitutes a measurable instance of $\\mathcal{S}_{\\text{enc}} \\to 1.0$ achieved through biological channels.\n\nWithin the framework of this book, environmental lead exposure functions as an additional policy variable, \\(P_{\\text{lead}}\\), applied to the compounding model of Section~4.5:",
+    "context_after": "The central insight is that $P_{\\text{lead}}$ was not applied uniformly. Because leaded gasoline exhaust concentrated along highway corridors, and because those corridors were deliberately routed through redlined neighborhoods (see Section~4.8), and because deteriorating lead paint accumulated in the disinvested housing stock of those same neighborhoods, the neurotoxin was concentrated onto the O",
+    "label": "eq:9.1-lead-crime-compounding"
+  },
+  {
+    "id": "E101",
+    "env_type": "equation",
+    "raw_latex": "\\begin{equation}\\label{eq:9.2-epistemic-suppression-variable}\nO_{t_0 + \\Delta t_{\\text{suppress}}}^{\\text{capacity}} = O_{t_0}^{\\text{capacity}} \\cdot (1 - \\alpha_{P_{\\text{lead}}})^{\\Delta t_{\\text{suppress}}}\n\\end{equation}",
+    "rendered": "\\label{eq:9.2-epistemic-suppression-variable}\nO_{t_0 + \\Delta t_{\\text{suppress}}}^{\\text{capacity}} = O_{t_0}^{\\text{capacity}} \\cdot (1 - \\alpha_{P_{\\text{lead}}})^{\\Delta t_{\\text{suppress}}}",
+    "chapter": "The Recompile: COINTELPRO, the Variable Swap, and the War on Drugs (1968--1994)",
+    "section": "The Corporate Conspiracy: Tetraethyllead and the Half-Century Cover-Up",
+    "line": 7862,
+    "context_before": "or half a century---because the duration of the cover-up is itself a variable in the compounding model. Define $P_{\\text{epistemic}}$ as the \\textbf{epistemic suppression variable}: the set of corporate and governmental actions that delayed public knowledge of, and regulatory response to, the neurotoxin. The longer $P_{\\text{epistemic}}$ operates, the longer $P_{\\text{lead}}$ compounds unopposed:",
+    "context_after": "where $\\Delta t_{\\text{suppress}}$ is the duration of the suppression window---the interval between the first definitive scientific warning and the first effective regulatory action. As documented below, $\\Delta t_{\\text{suppress}} \\approx 50$ years (1925--1973). The compounding exponent means that each additional year of suppression \\textit{multiplies} the damage against an already diminished ba",
+    "label": "eq:9.2-epistemic-suppression-variable"
+  },
+  {
+    "id": "E102",
+    "env_type": "equation",
+    "raw_latex": "\\begin{equation}\\label{eq:9.3-multi-vector-lead-exposure}\nP_{\\text{lead}} = P_{\\text{lead}}^{\\text{air}} + P_{\\text{lead}}^{\\text{water}} + P_{\\text{lead}}^{\\text{school}}\n\\end{equation}",
+    "rendered": "\\label{eq:9.3-multi-vector-lead-exposure}\nP_{\\text{lead}} = P_{\\text{lead}}^{\\text{air}} + P_{\\text{lead}}^{\\text{water}} + P_{\\text{lead}}^{\\text{school}}",
+    "chapter": "The Recompile: COINTELPRO, the Variable Swap, and the War on Drugs (1968--1994)",
+    "section": "The Multi-Vector Containment: Lead in Water, Schools, and the Property-Tax Trap",
+    "line": 8101,
+    "context_before": "ale of aerosolized lead from automotive fuel. The atmosphere was not the only delivery mechanism. A comprehensive accounting reveals that $P_{\\text{lead}}$ operated through at least \\textbf{three simultaneous vectors}---air, residential water, and institutional plumbing---all concentrated by the same property-tax funding architecture that sorts infrastructure quality by race and wealth. Formally:",
+    "context_after": "where each component's intensity is a function of the redlining containment field:\n\\begin{equation}\\label{eq:9.4-redlining-containment-field}\nP_{\\text{lead}}^{v}(x) \\propto \\mathbb{1}_{x \\in \\text{Redlined}} \\quad \\text{for each vector } v \\in \\{\\text{air}, \\text{water}, \\text{school}\\}\n\\end{equation}\nThe highway delivered the atmospheric vector. The following two vectors completed the encircleme",
+    "label": "eq:9.3-multi-vector-lead-exposure"
+  },
+  {
+    "id": "E103",
+    "env_type": "equation",
+    "raw_latex": "\\begin{equation}\\label{eq:9.4-redlining-containment-field}\nP_{\\text{lead}}^{v}(x) \\propto \\mathbb{1}_{x \\in \\text{Redlined}} \\quad \\text{for each vector } v \\in \\{\\text{air}, \\text{water}, \\text{school}\\}\n\\end{equation}",
+    "rendered": "\\label{eq:9.4-redlining-containment-field}\nP_{\\text{lead}}^{v}(x) \\propto \\mathbb{1}_{x \\in \\text{Redlined}} \\quad \\text{for each vector } v \\in \\{\\text{air}, \\text{water}, \\text{school}\\}",
+    "chapter": "The Recompile: COINTELPRO, the Variable Swap, and the War on Drugs (1968--1994)",
+    "section": "The Multi-Vector Containment: Lead in Water, Schools, and the Property-Tax Trap",
+    "line": 8105,
+    "context_before": "---all concentrated by the same property-tax funding architecture that sorts infrastructure quality by race and wealth. Formally:\n\\begin{equation}\\label{eq:9.3-multi-vector-lead-exposure}\nP_{\\text{lead}} = P_{\\text{lead}}^{\\text{air}} + P_{\\text{lead}}^{\\text{water}} + P_{\\text{lead}}^{\\text{school}}\n\\end{equation}\nwhere each component's intensity is a function of the redlining containment field:",
+    "context_after": "The highway delivered the atmospheric vector. The following two vectors completed the encirclement.\n\n\\subsubsection{Lead Service Lines: The Pipe in the Wall (\\texorpdfstring{$P_{\\text{lead}}^{\\text{water}}$}{P\\_lead\\^water})}\n\nLead pipes were the standard material for residential water service lines from the 1880s through the mid-twentieth century. Many municipalities continued installing them we",
+    "label": "eq:9.4-redlining-containment-field"
+  },
+  {
+    "id": "E104",
+    "env_type": "align",
+    "raw_latex": "\\begin{align}\n\\text{School funding}(t) &\\propto V_t \\label{eq:9.5-school-funding-property-value}\\\\[4pt]\n\\text{Infrastructure quality}(t) &\\propto \\text{School funding}(t) \\label{eq:9.6-infrastructure-quality-funding}\\\\[4pt]\nP_{\\text{lead}}^{\\text{school}}(t) &\\propto \\frac{1}{\\text{Infrastructure quality}(t)} \\label{eq:9.7-school-lead-exposure-inverse}\\\\[4pt]\n\\text{Community capacity}(t) &= O_t^{\\text{capacity}} \\cdot (1 - \\alpha \\cdot P_{\\text{lead}}^{\\text{school}}(t)) \\label{eq:9.8-community-capacity-lead-reduction}\\\\[4pt]\nV_{t+1} &\\propto \\text{Community capacity}(t) \\label{eq:9.9-property-value-capacity-feedback}\n\\end{align}",
+    "rendered": "\\text{School funding}(t) &\\propto V_t \\label{eq:9.5-school-funding-property-value}\\4pt]\n\\text{Infrastructure quality}(t) &\\propto \\text{School funding}(t) \\label{eq:9.6-infrastructure-quality-funding}\\4pt]\nP_{\\text{lead}}^{\\text{school}}(t) &\\propto \\frac{1}{\\text{Infrastructure quality}(t)} \\label{eq:9.7-school-lead-exposure-inverse}\\4pt]\n\\text{Community capacity}(t) &= O_t^{\\text{capacity}} \\cdot (1 - \\alpha \\cdot P_{\\text{lead}}^{\\text{school}}(t)) \\label{eq:9.8-community-capacity-lead-reduction}\\4pt]\nV_{t+1} &\\propto \\text{Community capacity}(t) \\label{eq:9.9-property-value-capacity-feedback}",
+    "chapter": "The Recompile: COINTELPRO, the Variable Swap, and the War on Drugs (1968--1994)",
+    "section": "The Property-Tax Feedback Loop: Funding Segregation Through Infrastructure",
+    "line": 8131,
+    "context_before": "point degradation function. The United States funds approximately 45 percent of K--12 education through local property taxes \\cite{tel_nces}. This architecture, upheld by the Supreme Court in \\textit{San Antonio Independent School District v.\\ Rodriguez} (1973), ensures that per-pupil spending is a direct function of neighborhood property values. Let $V_t$ denote property value at time $t$. Then:",
+    "context_after": "The chain is a closed loop: redlining depresses $V_0$ $\\rightarrow$ low $V_0$ starves school funding $\\rightarrow$ starved funding preserves pre-1986 lead infrastructure $\\rightarrow$ lead infrastructure poisons children $\\rightarrow$ poisoned children degrade community capacity $\\rightarrow$ degraded community depresses $V_1 < V_0$ $\\rightarrow$ the cycle repeats. Each iteration compounds the d",
+    "label": "eq:9.5-school-funding-property-value"
+  },
+  {
+    "id": "E105",
+    "env_type": "equation",
+    "raw_latex": "\\begin{equation}\\label{eq:9.10-highway-lead-spatial-concentration}\nP_{\\text{lead}}^{\\text{air}}(x) = \\Sigma_{\\text{highway}}(x) \\cdot L_{\\text{TEL}}(t) \\cdot \\mathbb{1}_{x \\in O_{\\text{redlined}}}\n\\end{equation}",
+    "rendered": "\\label{eq:9.10-highway-lead-spatial-concentration}\nP_{\\text{lead}}^{\\text{air}}(x) = \\Sigma_{\\text{highway}}(x) \\cdot L_{\\text{TEL}}(t) \\cdot \\mathbb{1}_{x \\in O_{\\text{redlined}}}",
+    "chapter": "The Recompile: COINTELPRO, the Variable Swap, and the War on Drugs (1968--1994)",
+    "section": "The Spatial Distribution Network: Highway Routing as Environmental Targeting (\\texorpdfstring{$\\Sigma_{\\text{highway",
+    "line": 8217,
+    "context_before": "he multi-vector delivery system. This subsection identifies the \\textbf{spatial concentration operator}---the infrastructure that deposited the neurotoxin with surgical precision onto $O_{\\text{racialized}}$, bypassing uniform distribution across the population.\n\nDefine $\\Sigma_{\\text{highway}}$ as the spatial concentration function that maps atmospheric lead exposure onto geographic coordinates:",
+    "context_after": "where $L_{\\text{TEL}}(t)$ is the national per-capita lead emission rate at time $t$, and $\\mathbb{1}_{x \\in O_{\\text{redlined}}}$ is the indicator function for residence within a redlined zone. The operator $\\Sigma_{\\text{highway}}$ transforms a diffuse national pollutant into a \\textit{targeted biological weapon} by concentrating vehicular traffic---and therefore exhaust---in the precise neighbo",
+    "label": "eq:9.10-highway-lead-spatial-concentration"
+  }
+]

@@ -1,0 +1,65 @@
+{
+  "reel_id": "DZd0MxjpW53",
+  "url": "https://www.instagram.com/reel/DZd0MxjpW53/?igsh=am44MGoxZmw4M2Ry",
+  "creator": {
+    "username": "love_am1992",
+    "display_name": "FBA 🔴🔱🖤🫡🇺🇸 🪶 AMERICA FIRST",
+    "user_id": "1734129395"
+  },
+  "content": {
+    "title": "Video by love_am1992",
+    "description": "🔴🔱⚫️ Asian man wanted for burning a cross in Chicago🔴🔱⚫️#explorepage✨ #fyp #fypage #share #foryou",
+    "duration_seconds": 60,
+    "duration_formatted": "0:59"
+  },
+  "engagement": {
+    "likes": 2391,
+    "comments_count": 305,
+    "play_count": 22797,
+    "ig_play_count": 22665,
+    "views": null,
+    "shares": null,
+    "saves": null
+  },
+  "metadata": {
+    "upload_date": "20260612",
+    "timestamp": 1781224453,
+    "posted_at_iso": "2026-06-12T00:34:13.000Z",
+    "instagram_media_id": "3917516827145891447_1734129395",
+    "instagram_media_pk": "3917516827145891447",
+    "product_type": "clips",
+    "media_type": 2,
+    "fetched_at": "2026-06-13T00:08:57.772Z",
+    "metrics_source": "Instagram CLI authenticated session (@ejtheodore)"
+  },
+  "content_analysis": {
+    "primary_theme": "Chicago cross-burning incident — racial attribution and strategic framing",
+    "secondary_themes": [
+      "KKK / white supremacy symbolism",
+      "Black–white conflict as engineered division",
+      "Immigration and national destruction narrative",
+      "FBA / America First identity politics"
+    ],
+    "rhetorical_frame": "Suspicious timing + symbolic misdirection (cross burn attributed to Asian suspect to break KKK association)",
+    "hashtags": ["explorepage", "fyp", "fypage", "share", "foryou"]
+  },
+  "transcription": {
+    "full_text": "And here we are everybody you remember that cross burning in Chicago? Asian man did it. Let me tell you something y'all not understanding what's going on This is what I've been telling you about They're in the middle see look he knew that this will be associated with white supremacy in the KKK That's why I didn't post when it was suspicious The Asian man did it so you could take the KKK K was doing it the clan was doing it I hope that you understand what's going on in the United States of America is strategic Okay, the implementation of white and the Americans and black Americans fighting against each other these people who Crowned all these systems behind their immigrants Who benefits from all of this the people who are here trying to destroy the nation we don't have nowhere else to go Now the Asian gonna lose millions they're gonna lose millions of dollars and wealth",
+    "transcribed_by": "Docker MCP offline Whisper",
+    "transcription_mode": "offline",
+    "language": "en",
+    "processing_time_seconds": 78.6,
+    "whisper_artifacts": [
+      "white and the Americans → likely white Americans",
+      "Crowned all these systems → unclear; possible garble",
+      "KKK K was doing it → likely the KKK was doing it"
+    ]
+  },
+  "tier_classification": {
+    "platform_metrics": "Tier 2",
+    "transcript": "Tier 2",
+    "content_interpretation": "Tier 3",
+    "justification": "Likes, comments, and play counts are verifiable via Instagram CLI; transcript is machine-generated with noted garbles; thematic coding is author-classified"
+  },
+  "reach_note": "Instagram reach is owner-only. Public play_count and ig_play_count are the closest available third-party proxies."
+}

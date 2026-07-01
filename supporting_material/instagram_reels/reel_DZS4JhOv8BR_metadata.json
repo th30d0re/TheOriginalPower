@@ -1,0 +1,59 @@
+{
+  "reel_id": "DZS4JhOv8BR",
+  "url": "https://www.instagram.com/reel/DZS4JhOv8BR/?igsh=MTNidXQ1M2p2bXplOA==",
+  "creator": {
+    "username": "boogiewomanrae",
+    "display_name": "Boogie Rae 😈",
+    "user_id": "63554279845"
+  },
+  "content": {
+    "title": "Video by boogiewomanrae",
+    "description": "215 mass shootings have happened in the United States, since 2026 began, which was 158 DAYS ago…\n\nFIVE shootings occurred just yesterday alone.\n\nLet that really sink in.\n\n#news #politics #leftist #2a #guns",
+    "duration_seconds": 25,
+    "duration_formatted": "0:25"
+  },
+  "engagement": {
+    "likes": 4891,
+    "comments_count": 1178,
+    "play_count": 110484,
+    "ig_play_count": 91900,
+    "views": null,
+    "shares": null,
+    "saves": null
+  },
+  "metadata": {
+    "upload_date": "20260607",
+    "timestamp": 1780857486,
+    "posted_at_iso": "2026-06-07T18:38:06.000Z",
+    "instagram_media_id": "3914437970899222609_63554279845",
+    "instagram_media_pk": "3914437970899222609",
+    "product_type": "clips",
+    "media_type": 2,
+    "fetched_at": "2026-06-12T23:58:10.985Z",
+    "metrics_source": "Instagram CLI authenticated session (@ejtheodore)"
+  },
+  "content_analysis": {
+    "primary_theme": "Mass shooting frequency in the United States (2026 YTD)",
+    "secondary_themes": [
+      "Gun violence",
+      "Leftist Second Amendment framing",
+      "Political commentary"
+    ],
+    "rhetorical_frame": "Statistical shock + moral inversion (guns against fascists, not human beings)",
+    "hashtags": ["news", "politics", "leftist", "2a", "guns"]
+  },
+  "transcription": {
+    "full_text": "215 mass shootings have happened in the United States since 2026 started, which was 158 days ago. Let that really sink in for a moment. 215 mass shootings, 158 days. And yes, five of those, five of those were yesterday. Guns were supposed to be used against fascists, not human beings, and yet here we stand at the end of the barrel.",
+    "transcribed_by": "Docker MCP offline Whisper",
+    "transcription_mode": "offline",
+    "language": "en",
+    "processing_time_seconds": 46.8
+  },
+  "tier_classification": {
+    "platform_metrics": "Tier 2",
+    "transcript": "Tier 2",
+    "content_interpretation": "Tier 3",
+    "justification": "Likes, comments, and play counts are verifiable via Instagram CLI; transcript is machine-generated and should be spot-checked; thematic coding is author-classified"
+  },
+  "reach_note": "Instagram reach is owner-only. Public play_count and ig_play_count are the closest available third-party proxies."
+}

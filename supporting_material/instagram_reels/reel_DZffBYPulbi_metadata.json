@@ -1,0 +1,70 @@
+{
+  "reel_id": "DZffBYPulbi",
+  "url": "https://www.instagram.com/reel/DZffBYPulbi/?igsh=aHk2MHh1eHc5Zzdh",
+  "creator": {
+    "username": "tryingmayaabest",
+    "display_name": "Maya",
+    "user_id": "80365322032"
+  },
+  "content": {
+    "title": "Video by tryingmayaabest",
+    "description": "Giving sociological context to pop culture moments is very fun #feminism #ronaldreagan #uspolitics #latina",
+    "duration_seconds": 165,
+    "duration_formatted": "2:45"
+  },
+  "engagement": {
+    "likes": 344,
+    "comments_count": 5,
+    "play_count": 4074,
+    "ig_play_count": 4074,
+    "views": null,
+    "shares": null,
+    "saves": null
+  },
+  "metadata": {
+    "upload_date": "20260612",
+    "timestamp": 1781280871,
+    "posted_at_iso": "2026-06-12T16:14:31.000Z",
+    "instagram_media_id": "3917986635030615778_80365322032",
+    "instagram_media_pk": "3917986635030615778",
+    "product_type": "clips",
+    "media_type": 2,
+    "fetched_at": "2026-06-13T01:17:11.547Z",
+    "metrics_source": "Instagram CLI authenticated session (@ejtheodore)"
+  },
+  "content_analysis": {
+    "primary_theme": "Kelly Osbourne 2015 View clip reframed through Laura Briggs' offshoring reproduction",
+    "secondary_themes": [
+      "Reagan-era wage stagnation and privatization",
+      "Undocumented immigrant domestic labor",
+      "Gender and racial wage gaps",
+      "Wealth inequality shifted onto immigrants and people of color",
+      "Childcare economics"
+    ],
+    "rhetorical_frame": "Pop-culture moment → feminist sociology → Reagan causal chain",
+    "hashtags": ["feminism", "ronaldreagan", "uspolitics", "latina"],
+    "cited_scholar": "Laura Briggs (offshoring reproduction)",
+    "cited_sources": ["The New York Times (1987)", "2024 childcare provider statistics"]
+  },
+  "transcription": {
+    "full_text": "Remember this clip. If you kick every Latino out of this country, then who is going to be cleaning your toilet Donald Trump? Oh, that's not. In the sense that no. What Kelly Osborne worded poorly in a 2015 episode of The View is actually referring to a complex sociological concept called offshoring reproduction, popularized by feminist scholar Laura Briggs. Off-shoring reproduction refers to how in the 1980s, American families began outsourcing domestic labor, thank cooking, cleaning, child caring, to immigrant women who they could pay less than the American-born women who were going for the same jobs. Briggs argues that globalization is about moving manufacturing outside of the United States to cut costs and relies on offshoring reproduction to cut down on reproductive costs. In the 1980s, due to Reagan's hyper privatization and deregulation, real wages dropped and the minimum wage was frozen, which forced more women to enter the workforce as their husband salary was no longer enough money to cover the entire costs of raising their family. With all these women entering the workforce, there was obviously a new need for childcare, but in 1987 only 6% of middle-class families could actually afford nannies, which was the preferred way to take care of children, insert underpaid immigrant labor. A quote from a woman who ran a home services agency in 1987 told The New York Times, quote, the reason that people hire immigrants without papers is that they're looking to save. If they want legal, they can get it, but it costs. Another woman from Queens told The New York Times that she was explicitly looking for an illegal immigrant because quote, I want someone who cannot leave the country, who doesn't know anyone in New York, who basically does not have a life. Paying women of color subpar wages has consistently been a way to shift the burden of wealth inequality off the backs of white working class individuals and onto the backs of people of color and immigrants. To make this compute a little more, I'm sure we've all heard that women make 83 cents to a man's dollar, but did you know that Hispanic women make 57 cents to a man's dollar? So let's run through this one more time. First, the declining of real wages under the Reagan administration forced more women to enter the workforce. Two, with more women in the workforce, there was a greater need for childcare. Three, hiring immigrants and underpaying them provided a way for white working class families to have a nanny since they couldn't actually afford a U.S. for nannies. And this became a way to shift the economic burden off of the working middle class folk and onto the backs of immigrants and people of color, which as always is the millionaires and billionaires favorite distraction game. For these trends still persist today. In 2024, 97% of childcare providers were women and Hispanic women make up a disproportionate amount of domestic workers driven in part by their overrepresentation as a maids and housekeepers, which was what Kelly Osborne was attempting to get at. She wasn't being racist. She was just trying to explain that women of color, specifically Hispanic women, are overrepresented in domestic labor. And finally, five, this is all Reagan's fault.",
+    "transcribed_by": "Docker MCP offline Whisper",
+    "transcription_mode": "offline",
+    "language": "en",
+    "processing_time_seconds": 190.7,
+    "whisper_artifacts": [
+      "thank cooking → likely think/cooking",
+      "U.S. for nannies → likely U.S.-born nannies",
+      "as a maids → as maids",
+      "Kelly Osborne → Kelly Osbourne",
+      "For these trends → likely these trends"
+    ]
+  },
+  "tier_classification": {
+    "platform_metrics": "Tier 2",
+    "transcript": "Tier 2",
+    "content_interpretation": "Tier 3",
+    "justification": "Likes, comments, and play counts are verifiable via Instagram CLI; transcript is machine-generated with noted garbles; Briggs framing and causal claims are author-classified and require scholarly verification"
+  },
+  "reach_note": "Instagram reach is owner-only. Public play_count and ig_play_count are the closest available third-party proxies."
+}

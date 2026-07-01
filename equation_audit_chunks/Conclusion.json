@@ -1,0 +1,26 @@
+[
+  {
+    "id": "E212",
+    "env_type": "equation",
+    "raw_latex": "\\begin{equation}\\label{eq:17.1-racism-as-institutional-vector}\n\\vec{R}_{\\text{systemic}} = \\left\\| F_{\\text{institutional}} \\right\\| \\cdot \\hat{d}_{\\text{hierarchy}} \\quad \\neq \\quad \\left| \\text{prejudice}_{\\text{individual}} \\right|\n\\end{equation}",
+    "rendered": "\\label{eq:17.1-racism-as-institutional-vector}\n\\vec{R}_{\\text{systemic}} = \\left\\| F_{\\text{institutional}} \\right\\| \\cdot \\hat{d}_{\\text{hierarchy}} \\quad \\neq \\quad \\left| \\text{prejudice}_{\\text{individual}} \\right|",
+    "chapter": "Conclusion",
+    "section": "The Vector Properties of Systemic Racism",
+    "line": 14392,
+    "context_before": ", and the Out-group's prejudice lacks institutional direction by definition. The Gilens-Page finding \\cite{gilens} provides empirical confirmation that Elite preferences---not median-voter preferences---predict policy outcomes, confirming the unidirectional institutional vector. See the Empirical Methodology chapter (p.~\\pageref{ch:empirical_methodology}) and Appendix~\\ref{app:empirical_index}.}",
+    "context_after": "\\noindent where $\\vec{R}_{\\text{systemic}}$ is the vector of systemic racism, $\\left\\| F_{\\text{institutional}} \\right\\|$ is the magnitude of institutional force (policing, legislation, capital allocation, carceral infrastructure), and $\\hat{d}_{\\text{hierarchy}}$ is the unit direction vector pointing from $E$ downward through the hierarchy toward $O_{\\text{racialized}}$.\n\nThis equation is the t",
+    "label": "eq:17.1-racism-as-institutional-vector"
+  },
+  {
+    "id": "E213",
+    "env_type": "equation",
+    "raw_latex": "\\begin{equation}\\label{eq:17.2-o-terminal-expansion}\nO_{\\text{final}} = \\text{Everyone} \\setminus E\n\\end{equation}",
+    "rendered": "\\label{eq:17.2-o-terminal-expansion}\nO_{\\text{final}} = \\text{Everyone} \\setminus E",
+    "chapter": "Conclusion",
+    "section": "The Unresolved Variable",
+    "line": 14445,
+    "context_before": "that has operated continuously for five centuries, adapting its interface while preserving its kernel, offering calculated concessions to prevent the one outcome it cannot survive: the moment when $I_{\\text{buffer}}$ and $O_{\\text{racialized}}$ recognize that they occupy the same side of the equation.\n\nThe Predatory Min-Max Function drives the expansion of the Out-group toward its terminal state:",
+    "context_after": "\\paragraph{Illustrative instantiation.} U.S.\\ Census Bureau projections show the non-Hispanic white population declining below 50\\% by approximately 2045, while the Piketty-Saez-Zucman top-0.1\\% wealth share has risen from $\\approx$7\\% (1978) to $\\approx$20\\% (2024) \\cite{piketty_saez_zucman_2018, piketty_wid}, confirming that $E$'s extraction share grows as $O$ expands. Federal Reserve Survey o",
+    "label": "eq:17.2-o-terminal-expansion"
+  }
+]

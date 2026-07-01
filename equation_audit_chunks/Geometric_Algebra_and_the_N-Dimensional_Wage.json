@@ -1,0 +1,74 @@
+[
+  {
+    "id": "E230",
+    "env_type": "equation",
+    "raw_latex": "\\begin{equation}\\label{eq:ga.quaternion}\nW_Q = a + bi + cj + dk\n\\end{equation}",
+    "rendered": "\\label{eq:ga.quaternion}\nW_Q = a + bi + cj + dk",
+    "chapter": "Geometric Algebra and the N-Dimensional Wage",
+    "section": "The Quaternion Stage: Three Intersectional Axes",
+    "line": 14981,
+    "context_before": "status applies throughout. The empirical authority of the framework rests on the historical chapters and the tier-tagged case studies, with this material offered as a formal language for future development.\n\n\\section{The Quaternion Stage: Three Intersectional Axes}\n\nFor three primary imaginary axes (race, gender, sexuality), the standard complex number $a + bj$ is extended to a \\emph{quaternion}:",
+    "context_after": "where $i, j, k$ are three distinct imaginary units satisfying:\n\\begin{equation}\\label{eq:ga.quaternion-rules}\ni^2 = j^2 = k^2 = ijk = -1\n\\end{equation}\n\n\\begin{center}\n\\begin{tabular}{lll}\n\\toprule\nComponent & EE Axis & Sociological Meaning \\\\\n\\midrule\n$a$ & Real axis & Material Wage $\\psi_m$ --- wealth, land, healthcare \\\\\n$bi$ & Imaginary axis 1 & Racial Status Wage (e.g., whiteness) \\\\\n$cj$ &",
+    "label": "eq:ga.quaternion"
+  },
+  {
+    "id": "E231",
+    "env_type": "equation",
+    "raw_latex": "\\begin{equation}\\label{eq:ga.quaternion-rules}\ni^2 = j^2 = k^2 = ijk = -1\n\\end{equation}",
+    "rendered": "\\label{eq:ga.quaternion-rules}\ni^2 = j^2 = k^2 = ijk = -1",
+    "chapter": "Geometric Algebra and the N-Dimensional Wage",
+    "section": "The Quaternion Stage: Three Intersectional Axes",
+    "line": 14985,
+    "context_before": "is material offered as a formal language for future development.\n\n\\section{The Quaternion Stage: Three Intersectional Axes}\n\nFor three primary imaginary axes (race, gender, sexuality), the standard complex number $a + bj$ is extended to a \\emph{quaternion}:\n\\begin{equation}\\label{eq:ga.quaternion}\nW_Q = a + bi + cj + dk\n\\end{equation}\nwhere $i, j, k$ are three distinct imaginary units satisfying:",
+    "context_after": "\\begin{center}\n\\begin{tabular}{lll}\n\\toprule\nComponent & EE Axis & Sociological Meaning \\\\\n\\midrule\n$a$ & Real axis & Material Wage $\\psi_m$ --- wealth, land, healthcare \\\\\n$bi$ & Imaginary axis 1 & Racial Status Wage (e.g., whiteness) \\\\\n$cj$ & Imaginary axis 2 & Gendered Status Wage (e.g., patriarchy/maleness) \\\\\n$dk$ & Imaginary axis 3 & Cisnormative/Sexuality Status Wage \\\\\n\\bottomrule\n\\end{",
+    "label": "eq:ga.quaternion-rules"
+  },
+  {
+    "id": "E232",
+    "env_type": "equation",
+    "raw_latex": "\\begin{equation}\\label{eq:ga.misogynoir}\ni \\times j = k, \\quad j \\times i = -k\n\\end{equation}",
+    "rendered": "\\label{eq:ga.misogynoir}\ni \\times j = k, \\quad j \\times i = -k",
+    "chapter": "Geometric Algebra and the N-Dimensional Wage",
+    "section": "The Quaternion Stage: Three Intersectional Axes",
+    "line": 15004,
+    "context_before": "ginary axis 1 & Racial Status Wage (e.g., whiteness) \\\\\n$cj$ & Imaginary axis 2 & Gendered Status Wage (e.g., patriarchy/maleness) \\\\\n$dk$ & Imaginary axis 3 & Cisnormative/Sexuality Status Wage \\\\\n\\bottomrule\n\\end{tabular}\n\\end{center}\n\n\\begin{theorem}[Multiplicative Intersection Compounding (Misogynoir)]\nBecause $i, j, k$ are mathematically orthogonal and multiply according to quaternion rules:",
+    "context_after": "Under this algebra, intersectional oppression compounds multiplicatively. For a Black woman, the intersection of the racial wage axis ($i$) and the gendered wage axis ($j$) multiplies to create a distinct third vector $k$---a unique plane of systemic extraction requiring both axes for its full specification. This formalizes Kimberl\\'e Crenshaw's theory of intersectionality as a quaternion multipl",
+    "label": "eq:ga.misogynoir"
+  },
+  {
+    "id": "E233",
+    "env_type": "equation",
+    "raw_latex": "\\begin{equation}\\label{eq:ga.ndim-allocation}\nW = \\psi_m + \\sum_{k=1}^{N} j_k \\left(\\rho_k \\cdot \\psi_{s,k}\\right)\n\\end{equation}",
+    "rendered": "\\label{eq:ga.ndim-allocation}\nW = \\psi_m + \\sum_{k=1}^{N} j_k \\left(\\rho_k \\cdot \\psi_{s,k}\\right)",
+    "chapter": "Geometric Algebra and the N-Dimensional Wage",
+    "section": "The N-Dimensional Weighted Summation Equation",
+    "line": 15013,
+    "context_before": "nal oppression is qualitatively distinct from the sum of its constituent axes. See the Empirical Methodology chapter (p.~\\pageref{ch:empirical_methodology}).}\n\\end{theorem}\n\n\\section{The N-Dimensional Weighted Summation Equation}\n\nBeyond three axes, the framework uses \\emph{Geometric Algebra} (Clifford Algebra) over $N$ orthogonal imaginary bases $e_1, e_2, \\ldots, e_N$. The full Complex Wage is:",
+    "context_after": "where:\n\\begin{itemize}\n\\item $\\psi_m$: The Real Material Wage.\n\\item $j_k$: The $k$-th imaginary basis axis (e.g., $j_1$ = race, $j_2$ = gender, $j_3$ = ability, $j_4$ = sexuality, $j_5$ = neurology, $j_6$ = height/physicality, \\ldots).\n\\item $\\psi_{s,k}$: The baseline psychological wage on axis $k$.\n\\item $\\rho_k$: The \\textbf{Demographic Weight Coefficient}---the proportion of the population fo",
+    "label": "eq:ga.ndim-allocation"
+  },
+  {
+    "id": "E234",
+    "env_type": "equation",
+    "raw_latex": "\\begin{equation}\\label{eq:ga.transphobia-paradox}\nP_k = V_k \\cdot I_k \\implies V_k = \\frac{P_k}{\\rho_k}\n\\end{equation}",
+    "rendered": "\\label{eq:ga.transphobia-paradox}\nP_k = V_k \\cdot I_k \\implies V_k = \\frac{P_k}{\\rho_k}",
+    "chapter": "Geometric Algebra and the N-Dimensional Wage",
+    "section": "The N-Dimensional Weighted Summation Equation",
+    "line": 15026,
+    "context_before": "\\end{itemize}\n\n\\begin{keyinsight}[The Transphobia Paradox (High Voltage, Low Current)]\nThe electrical analog of reactive power is $P = VI$ where $V$ is voltage and $I$ is current (population size). If $\\rho_k$ is small (small population directly experiencing a given axis), but the Elite needs large reactive power $P_k$ from that axis to sustain the overall pacification of the Buffer Class, then:",
+    "context_after": "As $\\rho_k \\to 0$, the required voltage $V_k \\to \\infty$. This mathematically predicts and explains the disproportionate legislative, media, and political bandwidth---hyper-inflated voltage---devoted to a statistically small demographic node (e.g., trans individuals). The Elite pumps astronomical voltage into a small-current node to generate sufficient reactive power to distract the Buffer Class",
+    "label": "eq:ga.transphobia-paradox"
+  },
+  {
+    "id": "E235",
+    "env_type": "equation",
+    "raw_latex": "\\begin{equation}\\label{eq:ga.bivector}\ne_1 \\wedge e_4 = e_{14}\n\\end{equation}",
+    "rendered": "\\label{eq:ga.bivector}\ne_1 \\wedge e_4 = e_{14}",
+    "chapter": "Geometric Algebra and the N-Dimensional Wage",
+    "section": "Bivectors and Intersectional Space",
+    "line": 15035,
+    "context_before": "laim that the Elite can achieve high reactive power from small demographic targets by intensifying the ideological voltage directed at them. See the Empirical Methodology chapter (p.~\\pageref{ch:empirical_methodology}).}\n\\end{keyinsight}\n\n\\section{Bivectors and Intersectional Space}\n\nIn Geometric Algebra, multiplying two basis vectors produces a \\emph{bivector}---a distinct two-dimensional plane:",
+    "context_after": "If $e_1$ is Race and $e_4$ is Disability, the bivector $e_{14}$ describes the unique extraction plane of a Black disabled person. This individual is located in $e_{14}$---a qualitatively distinct geometric zone where extraction is accelerated, enforcement violence is compounded, and systemic neglect is multiplicatively intensified. The bivector $e_{14}$ encodes an extraction plane qualitatively d",
+    "label": "eq:ga.bivector"
+  }
+]

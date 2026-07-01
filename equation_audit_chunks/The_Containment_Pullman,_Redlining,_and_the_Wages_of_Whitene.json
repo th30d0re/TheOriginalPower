@@ -1,0 +1,38 @@
+[
+  {
+    "id": "E073",
+    "env_type": "equation",
+    "raw_latex": "\\begin{equation}\\label{eq:7.1-pullman-corollary}\nj\\psi_s \\uparrow \\implies \\text{Solidarity}(I_{\\text{buffer}}, O_{\\text{racialized}}) \\downarrow \\implies \\text{Vulnerability}(I_{\\text{buffer}}) \\uparrow \\implies \\mathcal{E}(t) \\uparrow\n\\end{equation}",
+    "rendered": "\\label{eq:7.1-pullman-corollary}\nj\\psi_s \\uparrow \\implies \\text{Solidarity}(I_{\\text{buffer}}, O_{\\text{racialized}}) \\downarrow \\implies \\text{Vulnerability}(I_{\\text{buffer}}) \\uparrow \\implies \\mathcal{E}(t) \\uparrow",
+    "chapter": "The Containment: Pullman, Redlining, and the Wages of Whiteness (1894--1965)",
+    "section": "The Theorem the Buffer Class Refused to Learn",
+    "line": 5415,
+    "context_before": "psychological wage ($j\\psi_s$, the imaginary component of the Complex Wage $W$), the Elite ($E$) will weaponize the excluded population against $I_{\\text{buffer}}$, ensuring both groups lose. The partition that $I_{\\text{buffer}}$ builds to maintain status superiority over $O_{\\text{racialized}}$ becomes the structural vulnerability through which $E$ destroys $I_{\\text{buffer}}$'s material power.",
+    "context_after": "Equation~\\ref{eq:7.1-pullman-corollary} states the corollary as an ordinal chain. The complex-wage algebra states it exactly. The ARU's 1893 charter fixed the union's wage allocation on the imaginary axis: the exclusion of $O_{\\text{racialized}}$ delivered status alone, and the charter carried zero material concession, so $\\psi_m = 0$ and\n\\begin{equation}\\label{eq:7.2-pullman-squaring}\nW_{\\text{A",
+    "label": "eq:7.1-pullman-corollary"
+  },
+  {
+    "id": "E074",
+    "env_type": "equation",
+    "raw_latex": "\\begin{equation}\\label{eq:7.2-pullman-squaring}\nW_{\\text{ARU}} = j\\psi_s, \\qquad W_{\\text{ARU}}^2 = (j\\psi_s)^2 = -\\psi_s^2 < 0.\n\\end{equation}",
+    "rendered": "\\label{eq:7.2-pullman-squaring}\nW_{\\text{ARU}} = j\\psi_s, \\qquad W_{\\text{ARU}}^2 = (j\\psi_s)^2 = -\\psi_s^2 < 0.",
+    "chapter": "The Containment: Pullman, Redlining, and the Wages of Whiteness (1894--1965)",
+    "section": "The Theorem the Buffer Class Refused to Learn",
+    "line": 5419,
+    "context_before": ") \\uparrow \\implies \\mathcal{E}(t) \\uparrow\n\\end{equation}\nEquation~\\ref{eq:7.1-pullman-corollary} states the corollary as an ordinal chain. The complex-wage algebra states it exactly. The ARU's 1893 charter fixed the union's wage allocation on the imaginary axis: the exclusion of $O_{\\text{racialized}}$ delivered status alone, and the charter carried zero material concession, so $\\psi_m = 0$ and",
+    "context_after": "\\end{keyinsight}\n\nTheorem~\\ref{thm:imaginary-squaring} (Imaginary Squaring as Material Destruction) proves that compounding a pure-imaginary allocation yields a negative real number. The Pullman Strike is that identity executing in historical time.\\footnote{Equation~\\ref{eq:7.2-pullman-squaring} is classified as Tier~3 (ordinal/structural): it instantiates Theorem~\\ref{thm:imaginary-squaring} (Eq",
+    "label": "eq:7.2-pullman-squaring"
+  },
+  {
+    "id": "E075",
+    "env_type": "equation",
+    "raw_latex": "\\begin{equation}\\label{eq:9.colonial-lab}\n\\mathcal{S}_{\\text{enc}}^{\\text{metro}}(t) = \\int_{t_0}^{t} K(t - \\tau) \\, \\mathcal{S}_{\\text{enc}}^{\\text{colonial}}(\\tau) \\, d\\tau\n\\end{equation}",
+    "rendered": "\\label{eq:9.colonial-lab}\n\\mathcal{S}_{\\text{enc}}^{\\text{metro}}(t) = \\int_{t_0}^{t} K(t - \\tau) \\, \\mathcal{S}_{\\text{enc}}^{\\text{colonial}}(\\tau) \\, d\\tau",
+    "chapter": "The Containment: Pullman, Redlining, and the Wages of Whiteness (1894--1965)",
+    "section": "The Colonial Precedent: Namibia as the Containment Laboratory (1904--1908)",
+    "line": 5459,
+    "context_before": "itan populations. The Namibian phase (1904--1908) validated population-depletion, camp architecture, and racial-science pipelines that were reimported to Germany (1933--1945) as the Holocaust. The transfer validates the framework's claim that the extraction algorithm is \\textbf{host-agnostic}: it compiles wherever $E$ confronts a coherence threat ($\\min$) that existing suppression cannot contain.",
+    "context_after": "where $K(t-\\tau)$ is the colonial-to-metropolitan transfer kernel.\\footnote{This equation is classified as Tier~3 (ordinal/structural); the transfer-kernel equation formalizes the documented reimportation of colonial subroutines to the metropolitan core, validated by the Namibia-to-Germany pipeline (Fischer $\\to$ Mengele, von Trotha $\\to$ Nazi concentration camp system).}\n\\end{keyinsight}\n\n\\secti",
+    "label": "eq:9.colonial-lab"
+  }
+]
