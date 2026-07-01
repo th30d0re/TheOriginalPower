@@ -4,6 +4,10 @@ import { OrbitControls, Line, Text, Trail, Billboard } from '@react-three/drei';
 import * as THREE from 'three';
 import './InterferenceEngine3D.css';
 
+// troika's default font lacks the Unicode sub/superscript block (ₘ, ₛ, ₖ…),
+// so all in-scene labels use a DejaVu Sans subset that covers Greek + subscripts
+const LABEL_FONT = '/fonts/DejaVuSans-uef.ttf';
+
 /*
  * The Interference Engine — Phased-Array Signal Jamming (UEF §V, §IX)
  * -------------------------------------------------------------------
@@ -99,10 +103,10 @@ function EField({ psiM }: { psiM: number }) {
           emissiveIntensity={0.6}
         />
       </mesh>
-      <Text position={[0.35, 4.15, 0]} fontSize={0.28} color={negative ? '#ef4444' : '#22d3ee'} anchorX="left">
+      <Text font={LABEL_FONT} position={[0.35, 4.15, 0]} fontSize={0.28} color={negative ? '#ef4444' : '#22d3ee'} anchorX="left">
         {negative ? 'E  (ψₘ < 0 · extraction)' : 'E  (ψₘ · material)'}
       </Text>
-      <Text position={[0.3, -4.2, 0]} fontSize={0.2} color="#64748b" anchorX="left">
+      <Text font={LABEL_FONT} position={[0.3, -4.2, 0]} fontSize={0.2} color="#64748b" anchorX="left">
         +y : life / wealth  ·  −y : extraction
       </Text>
     </group>
@@ -405,7 +409,7 @@ function AxisWedge({
       </lineSegments>
       {/* the axis label, ported from the old near-field ribbons */}
       <Billboard position={[labelR * Math.cos(centerPhi), 0.2, labelR * Math.sin(centerPhi)]}>
-        <Text fontSize={0.22} color={axis.color} anchorX="left" fillOpacity={Math.max(0.45, iB)}>
+        <Text font={LABEL_FONT} fontSize={0.22} color={axis.color} anchorX="left" fillOpacity={Math.max(0.45, iB)}>
           {`B${index + 1} · ${axis.name}${axis.measured ? '' : '*'} (ρ=${rho.toFixed(2)})`}
         </Text>
       </Billboard>
