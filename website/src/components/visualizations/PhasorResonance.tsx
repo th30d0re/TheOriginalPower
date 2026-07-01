@@ -48,14 +48,36 @@ export default function PhasorResonance() {
     resonancePoints.push(`${x},${y}`);
   }
   const driveX = 40 + ((omega - 0.2) / 3.8) * 280;
-  const driveY = 180 - (1 / Math.sqrt((omega0 * omega0 - omega * omega) ** 2 + (2 * damping * omega0 * omega) ** 2) || 1) * 90;
+  const driveY =
+    180 -
+    (1 / Math.sqrt((omega0 * omega0 - omega * omega) ** 2 + (2 * damping * omega0 * omega) ** 2) || 1) *
+      90;
+
+  // Arc for the counterclockwise rotation arrow outside the unit circle
+  const arrowRadius = RADIUS + 28;
+  const arrowStart = -Math.PI / 6; // near positive real axis, CCW toward imaginary
+  const arrowEnd = Math.PI / 3;
+  const arrowX1 = CX + arrowRadius * Math.cos(arrowStart);
+  const arrowY1 = CY - arrowRadius * Math.sin(arrowStart);
+  const arrowX2 = CX + arrowRadius * Math.cos(arrowEnd);
+  const arrowY2 = CY - arrowRadius * Math.sin(arrowEnd);
+  const largeArc = arrowEnd - arrowStart > Math.PI ? 1 : 0;
+
+  // Arrowhead points along the tangent at arrowEnd (CCW direction)
+  const tangentAngle = arrowEnd + Math.PI / 2;
+  const headLen = 8;
+  const headX = arrowX2 - headLen * Math.cos(tangentAngle - Math.PI / 6);
+  const headY = arrowY2 + headLen * Math.sin(tangentAngle - Math.PI / 6);
+  const headX2 = arrowX2 - headLen * Math.cos(tangentAngle + Math.PI / 6);
+  const headY2 = arrowY2 + headLen * Math.sin(tangentAngle + Math.PI / 6);
 
   return (
     <div className="pr-root">
       <div className="pr-header">
-        <h2>Complex Phasor & Resonance</h2>
+        <h2>Complex Phasor &amp; Resonance</h2>
         <p>
           A rotating wage phasor <code>W = ψₘ + jψₛ</code> and the driven-oscillator amplitude curve.
+          The phasor spins counterclockwise through the quadrant cycle IV → I → II → III → IV.
         </p>
       </div>
 
@@ -74,18 +96,31 @@ export default function PhasorResonance() {
           {/* Unit circle */}
           <circle cx={CX} cy={CY} r={RADIUS} fill="none" stroke="#1e293b" strokeWidth={2} />
 
-          {/* Quadrant II warning region */}
+          {/* Quadrant backgrounds */}
           <path d={`M ${CX} ${CY} L ${CX} 0 A ${RADIUS} ${RADIUS} 0 0 1 ${CX - RADIUS} ${CY} Z`} fill="#ef4444" opacity={0.08} />
+          <path d={`M ${CX} ${CY} L ${CX - RADIUS} ${CY} A ${RADIUS} ${RADIUS} 0 0 1 ${CX} ${CY + RADIUS} Z`} fill="#7f1d1d" opacity={0.06} />
+          <path d={`M ${CX} ${CY} L ${CX} ${CY + RADIUS} A ${RADIUS} ${RADIUS} 0 0 1 ${CX + RADIUS} ${CY} Z`} fill="#22d3ee" opacity={0.05} />
+
+          {/* Quadrant labels */}
+          <text x={CX + 70} y={CY - 70} fill="#94a3b8" fontSize={13} fontWeight={600}>I</text>
+          <text x={CX - 82} y={CY - 70} fill="#ef4444" fontSize={13} fontWeight={600}>II</text>
+          <text x={CX - 88} y={CY + 82} fill="#7f1d1d" fontSize={13} fontWeight={600}>III</text>
+          <text x={CX + 70} y={CY + 82} fill="#22d3ee" fontSize={13} fontWeight={600}>IV</text>
+
+          {/* Rotation direction arrow */}
+          <path
+            d={`M ${arrowX1} ${arrowY1} A ${arrowRadius} ${arrowRadius} 0 ${largeArc} 1 ${arrowX2} ${arrowY2}`}
+            fill="none"
+            stroke="#fbbf24"
+            strokeWidth={2}
+            strokeDasharray="4 3"
+            opacity={0.9}
+          />
+          <polygon points={`${arrowX2},${arrowY2} ${headX},${headY} ${headX2},${headY2}`} fill="#fbbf24" />
+          <text x={CX + 16} y={CY - arrowRadius - 8} fill="#fbbf24" fontSize={11}>CCW</text>
 
           {/* Phasor */}
-          <line
-            x1={CX}
-            y1={CY}
-            x2={tipX}
-            y2={tipY}
-            stroke="#22d3ee"
-            strokeWidth={3}
-          />
+          <line x1={CX} y1={CY} x2={tipX} y2={tipY} stroke="#22d3ee" strokeWidth={3} />
 
           {/* Projections */}
           <line
@@ -176,6 +211,23 @@ export default function PhasorResonance() {
         </div>
         <div>
           ψₛ = <span>{Math.sin(theta).toFixed(2)}</span> · R
+        </div>
+      </div>
+
+      <div className="pr-legend">
+        <div className="pr-legend-title">Quadrant cycle</div>
+        <div className="pr-legend-grid">
+          <div><span className="pr-q" style={{ color: '#22d3ee' }}>IV</span> → <span className="pr-q" style={{ color: '#94a3b8' }}>I</span></div>
+          <div className="pr-legend-desc">Reparative transition → cooperative benefit</div>
+
+          <div><span className="pr-q" style={{ color: '#94a3b8' }}>I</span> → <span className="pr-q" style={{ color: '#ef4444' }}>II</span></div>
+          <div className="pr-legend-desc">Fascist inversion: status rises as material turns negative</div>
+
+          <div><span className="pr-q" style={{ color: '#ef4444' }}>II</span> → <span className="pr-q" style={{ color: '#7f1d1d' }}>III</span></div>
+          <div className="pr-legend-desc">Collapse: both wages become negative</div>
+
+          <div><span className="pr-q" style={{ color: '#7f1d1d' }}>III</span> → <span className="pr-q" style={{ color: '#22d3ee' }}>IV</span></div>
+          <div className="pr-legend-desc">Material recovery begins before status is restored</div>
         </div>
       </div>
     </div>
