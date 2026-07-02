@@ -1,4 +1,5 @@
-import { useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, Line, Text, Trail, Billboard } from '@react-three/drei';
 import * as THREE from 'three';
@@ -64,7 +65,64 @@ interface Params {
   n: number; // number of active cultural axes
   theta: number; // phase angle θ (degrees) of the complex wage W
   R: number; // |W| — magnitude of the suppression allocation
-  omega: number; // temporal oscillation rate of the fields
+  omega: number; // drive frequency ω_d of the Interference Engine's carrier
+  zeta: number; // damping ratio ζ of the driven buffer-class oscillator
+}
+
+/* ---- Damped driven oscillator response (matches Complex Phasor & Resonance) *
+ * A(ω) = 1 / √((ω₀² − ω²)² + (2ζω₀ω)²), normalized so the resonance peak = 1.
+ * The whole engine — source bob, wave arms, Lorentz B — swells at ω ≈ ω₀.
+ */
+const OMEGA0 = 2.0;
+function resonanceResponse(omega: number, zeta: number): number {
+  const A =
+    1 / (Math.sqrt((OMEGA0 ** 2 - omega ** 2) ** 2 + (2 * zeta * OMEGA0 * omega) ** 2) || 1);
+  const peak = 1 / (2 * zeta * OMEGA0 ** 2 * Math.sqrt(Math.max(1e-6, 1 - zeta ** 2)));
+  return Math.min(1, A / peak);
+}
+
+/* ---- ⓘ hover/focus tooltip for the control sliders ----------------------- *
+ * The tip is portaled onto document.body: the controls panel's
+ * backdrop-filter makes it the containing block for position:fixed, so a
+ * tip rendered inside it is clipped by the panel's scroll overflow. From
+ * the body it floats above everything and follows the mouse pointer.
+ */
+const TIP_W = 270;
+const TIP_H = 200;
+function Info({ text }: { text: string }) {
+  const [pos, setPos] = useState<{ x: number; y: number } | null>(null);
+  const place = (x: number, y: number) =>
+    setPos({
+      x: Math.min(x + 14, window.innerWidth - TIP_W - 8),
+      y: Math.min(y + 12, window.innerHeight - TIP_H - 8),
+    });
+  const onMouse = (e: React.MouseEvent<HTMLSpanElement>) => place(e.clientX, e.clientY);
+  const onFocus = (e: React.FocusEvent<HTMLSpanElement>) => {
+    const r = e.currentTarget.getBoundingClientRect();
+    place(r.right, r.top);
+  };
+  const hide = () => setPos(null);
+  return (
+    <span
+      className="ie-info"
+      tabIndex={0}
+      aria-label={text}
+      onMouseEnter={onMouse}
+      onMouseMove={onMouse}
+      onMouseLeave={hide}
+      onFocus={onFocus}
+      onBlur={hide}
+    >
+      ⓘ
+      {pos &&
+        createPortal(
+          <span className="ie-info-tip" style={{ left: pos.x, top: pos.y }}>
+            {text}
+          </span>,
+          document.body,
+        )}
+    </span>
+  );
 }
 
 /* ---- The vertical E-axis: the material wage ψ_m = R cos θ ---------------- */
@@ -167,15 +225,17 @@ function CentralCore({
   clock,
   omega,
   R,
+  drive,
 }: {
   clock: React.MutableRefObject<number>;
   omega: number;
   R: number;
+  drive: number; // normalized resonance response A(ω, ζ)
 }) {
   const src = useRef<THREE.Group>(null);
   useFrame(() => {
     const g = src.current;
-    if (g) g.position.y = (0.45 + 0.15 * R) * Math.sin(omega * clock.current);
+    if (g) g.position.y = (0.45 + 0.15 * R) * (0.3 + 0.9 * drive) * Math.sin(omega * clock.current);
   });
   return (
     <group>
@@ -261,6 +321,7 @@ function AxisWedge({
   theta,
   omega,
   rho,
+  drive,
 }: {
   axis: Axis;
   index: number;
@@ -271,6 +332,7 @@ function AxisWedge({
   theta: number;
   omega: number;
   rho: number; // live field weight ρ_k (defaults to the axis's measured intensity)
+  drive: number; // normalized resonance response A(ω, ζ)
 }) {
   const S = 56; // samples per arm
   const RMAX = 6.2;
@@ -312,7 +374,7 @@ function AxisWedge({
 
   useFrame(() => {
     const t = clock.current;
-    const amp0 = (0.5 + 0.25 * R) * (0.35 + 0.65 * rho);
+    const amp0 = (0.5 + 0.25 * R) * (0.35 + 0.65 * rho) * (0.3 + 0.9 * drive);
     let seg = 0;
     for (let m = 0; m < perWedge; m++) {
       const frac = perWedge > 1 ? m / (perWedge - 1) - 0.5 : 0;
@@ -426,12 +488,13 @@ function ClockTicker({ clock }: { clock: React.MutableRefObject<number> }) {
 }
 
 /* ---- Compute the net instantaneous B vector (for the Lorentz force) ------ */
-function netB(params: Params, rhos: number[], t: number): THREE.Vector3 {
+function netB(params: Params, rhos: number[], t: number, drive: number): THREE.Vector3 {
   const b = new THREE.Vector3();
   for (let k = 0; k < params.n; k++) {
     const angle = (k / params.n) * Math.PI * 2;
-    // each field points horizontally along its fan direction, oscillating in time
-    const mag = rhos[k] * Math.sin(t * params.omega + k) * params.R;
+    // each field points horizontally along its fan direction, oscillating in time,
+    // scaled by the shared resonance response
+    const mag = rhos[k] * Math.sin(t * params.omega + k) * params.R * (0.3 + 0.9 * drive);
     b.x += Math.cos(angle) * mag;
     b.z += Math.sin(angle) * mag;
   }
@@ -443,10 +506,12 @@ function ChargeParticle({
   params,
   rhos,
   clock,
+  drive,
 }: {
   params: Params;
   rhos: number[];
   clock: React.MutableRefObject<number>;
+  drive: number;
 }) {
   const meshRef = useRef<THREE.Mesh>(null);
   const pos = useRef(new THREE.Vector3(1.2, -2.5, 0));
@@ -461,15 +526,15 @@ function ChargeParticle({
 
     const psiM = params.R * Math.cos((params.theta * Math.PI) / 180);
     const E = new THREE.Vector3(0, psiM, 0); // material wage: does real work
-    const B = netB(params, rhos, t); // phased-array superposition
+    const B = netB(params, rhos, t, drive); // phased-array superposition
 
     // Lorentz force  F = q ( E + v × B )
     const vxB = new THREE.Vector3().crossVectors(vel.current, B);
     const F = new THREE.Vector3().addVectors(E, vxB).multiplyScalar(q);
 
-    // leapfrog-ish integration with light damping to keep it on-screen
+    // leapfrog-ish integration; ζ sets the worker's velocity damping
     vel.current.addScaledVector(F, delta);
-    vel.current.multiplyScalar(0.995);
+    vel.current.multiplyScalar(Math.exp(-2 * params.zeta * delta));
     const speed = vel.current.length();
     if (speed > 6) vel.current.multiplyScalar(6 / speed);
     pos.current.addScaledVector(vel.current, delta);
@@ -513,13 +578,15 @@ function quadrantOf(theta: number) {
 
 function PhasorInset({
   params,
+  drive,
   onChange,
 }: {
   params: Params;
+  drive: number; // normalized resonance response A(ω, ζ)
   onChange: (w: { R: number; theta: number }) => void;
 }) {
   const rad = (params.theta * Math.PI) / 180;
-  const size = 150;
+  const size = 210;
   const c = size / 2;
   const scale = (size / 2 - 18) / R_MAX; // fixed linear scale so |W| is visible
   const psiM = params.R * Math.cos(rad);
@@ -531,6 +598,45 @@ function PhasorInset({
 
   const svgRef = useRef<SVGSVGElement>(null);
   const dragging = useRef(false);
+
+  // ---- spin θ at the drive frequency: the Oppression Clock in motion ------
+  const [spinning, setSpinning] = useState(false);
+  const liveRef = useRef({ R: params.R, theta: params.theta, omega: params.omega });
+  liveRef.current = { R: params.R, theta: params.theta, omega: params.omega };
+  useEffect(() => {
+    if (!spinning) return;
+    let raf = 0;
+    let last = performance.now();
+    const step = (now: number) => {
+      const dt = Math.min((now - last) / 1000, 0.05);
+      last = now;
+      if (!dragging.current) {
+        const s = liveRef.current;
+        // ω rad/s scaled down so a full quadrant cycle stays readable;
+        // rounded to 0.1° so float dust never reaches the readouts
+        onChange({ R: s.R, theta: Math.round(((s.theta + s.omega * 30 * dt) % 360) * 10) / 10 });
+      }
+      raf = requestAnimationFrame(step);
+    };
+    raf = requestAnimationFrame(step);
+    return () => cancelAnimationFrame(raf);
+  }, [spinning, onChange]);
+
+  // ---- resonance curve A(ω) for the current ζ ------------------------------
+  const RES_H = 64;
+  const resCurve = useMemo(() => {
+    const N = 80;
+    const pts: string[] = [];
+    for (let i = 0; i <= N; i++) {
+      const w = 0.5 + (i / N) * 4.5;
+      const a = resonanceResponse(w, params.zeta);
+      pts.push(`${((i / N) * size).toFixed(1)},${(RES_H - 8 - a * (RES_H - 22)).toFixed(1)}`);
+    }
+    return pts.join(' ');
+  }, [params.zeta, size]);
+  const resX = ((params.omega - 0.5) / 4.5) * size;
+  const resY = RES_H - 8 - drive * (RES_H - 22);
+  const res0X = ((OMEGA0 - 0.5) / 4.5) * size;
 
   const updateFromPoint = (clientX: number, clientY: number) => {
     const svg = svgRef.current;
@@ -597,15 +703,44 @@ function PhasorInset({
         <text x={size - 30} y={c - 6} fill="#22d3ee" fontSize={10}>Re ψₘ</text>
         <text x={c + 4} y={12} fill="#a855f7" fontSize={10}>Im ψₛ</text>
       </svg>
+      {/* resonance curve: reshapes with ζ, marker rides it with ω */}
+      <svg width={size} height={RES_H} className="ie-res-svg">
+        <line x1={0} y1={RES_H - 8} x2={size} y2={RES_H - 8} stroke="#334155" strokeWidth={1} />
+        <line
+          x1={res0X}
+          y1={6}
+          x2={res0X}
+          y2={RES_H - 8}
+          stroke="#475569"
+          strokeWidth={1}
+          strokeDasharray="3 3"
+        />
+        <polyline points={resCurve} fill="none" stroke="#ef4444" strokeWidth={1.5} />
+        <circle cx={resX} cy={resY} r={4} fill="#fbbf24" />
+        <text x={4} y={11} fill="#94a3b8" fontSize={9}>
+          A(ω) · resonance at ω₀ = {OMEGA0.toFixed(0)}
+        </text>
+        <text x={res0X + 3} y={RES_H - 12} fill="#64748b" fontSize={8}>ω₀</text>
+      </svg>
       <div className="ie-phasor-readout">
         <div><span>W = ψₘ + jψₛ</span></div>
         <div>ψₘ = {psiM.toFixed(2)} {psiM < 0 && <em>(extraction)</em>}</div>
         <div>ψₛ = {psiS.toFixed(2)}</div>
-        <div>θ = {params.theta.toFixed(0)}°</div>
+        <div>
+          θ = {params.theta.toFixed(0)}° · A(ω) = {(drive * 100).toFixed(0)}%
+        </div>
         {/* dedicated quadrant line: always rendered so the card never resizes */}
         <div className="ie-quadrant" style={{ color: quadrant.color }}>
           {quadrant.label}
         </div>
+        <label className="ie-spin">
+          <input
+            type="checkbox"
+            checked={spinning}
+            onChange={(e) => setSpinning(e.target.checked)}
+          />
+          <span>spin θ at drive ω (Oppression Clock)</span>
+        </label>
         <div className="ie-phasor-hint">drag the tip to set W</div>
       </div>
     </div>
@@ -614,7 +749,13 @@ function PhasorInset({
 
 /* ---- Main component ------------------------------------------------------ */
 export default function InterferenceEngine3D() {
-  const [params, setParams] = useState<Params>({ n: AXES.length, theta: 60, R: 2, omega: 2 });
+  const [params, setParams] = useState<Params>({
+    n: AXES.length,
+    theta: 60,
+    R: 2,
+    omega: 2,
+    zeta: 0.15,
+  });
   // ρ_k defaults to each axis's 4-yr carrier intensity — one shared weight set
   const [rhos, setRhos] = useState<number[]>(AXES.map((a) => a.intensity));
   const [perWedge, setPerWedge] = useState(3);
@@ -623,8 +764,14 @@ export default function InterferenceEngine3D() {
   const [fieldLines, setFieldLines] = useState(false);
   const clock = useRef(0);
   const psiM = params.R * Math.cos((params.theta * Math.PI) / 180);
+  const drive = resonanceResponse(params.omega, params.zeta);
 
   const set = (patch: Partial<Params>) => setParams((p) => ({ ...p, ...patch }));
+  // stable identity so the phasor's spin loop is not torn down every render
+  const setW = useCallback(
+    (w: { R: number; theta: number }) => setParams((p) => ({ ...p, ...w })),
+    [],
+  );
   const setRho = (i: number, v: number) =>
     setRhos((r) => {
       const next = [...r];
@@ -641,7 +788,7 @@ export default function InterferenceEngine3D() {
           <pointLight position={[-8, -4, -8]} intensity={0.35} color="#a855f7" />
 
           <ClockTicker clock={clock} />
-          <CentralCore clock={clock} omega={params.omega} R={params.R} />
+          <CentralCore clock={clock} omega={params.omega} R={params.R} drive={drive} />
           <EField psiM={psiM} />
           {showArms && <WavefrontRings />}
           {showArms &&
@@ -657,11 +804,12 @@ export default function InterferenceEngine3D() {
                 theta={params.theta}
                 omega={params.omega}
                 rho={rhos[i]}
+                drive={drive}
               />
             ))}
 
           {fieldLines && <EFieldLines psiM={psiM} />}
-          {showWorker && <ChargeParticle params={params} rhos={rhos} clock={clock} />}
+          {showWorker && <ChargeParticle params={params} rhos={rhos} clock={clock} drive={drive} />}
           {showWorker && <gridHelper args={[12, 12, '#1e293b', '#111827']} position={[0, -4, 0]} />}
 
           <OrbitControls enablePan={false} minDistance={4} maxDistance={18} />
@@ -675,11 +823,12 @@ export default function InterferenceEngine3D() {
           </p>
         </div>
 
-        <PhasorInset params={params} onChange={(w) => set(w)} />
+        <PhasorInset params={params} drive={drive} onChange={setW} />
 
         <div className="ie-controls">
           <label>
             Active axes N: <strong>{params.n}</strong>
+            <Info text="How many cultural axes the Interference Engine drives at once. Each axis is one B field — a status-wage channel (race, class, gender…) radiating its own E⊥B wave arm. The Lorentz force on the worker sums all N of them: F = qE + q(v × Σ ρₖBₖ)." />
             <input
               type="range"
               min={1}
@@ -691,6 +840,7 @@ export default function InterferenceEngine3D() {
           </label>
           <label>
             Arms per axis: <strong>{perWedge}</strong>
+            <Info text="How many wave arms are drawn inside each axis's wedge. Visual density only — the physics is unchanged." />
             <input
               type="range"
               min={1}
@@ -702,6 +852,7 @@ export default function InterferenceEngine3D() {
           </label>
           <label>
             Amplitude |W|: <strong>{params.R.toFixed(1)}</strong>
+            <Info text="The magnitude of the complex wage W = ψₘ + jψₛ — the total suppression allocation the system spends on the worker, split between material payment and status payment. Larger |W| drives a taller source bob, stronger fields, and bigger wave arms." />
             <input
               type="range"
               min={0.5}
@@ -712,7 +863,8 @@ export default function InterferenceEngine3D() {
             />
           </label>
           <label>
-            Material↔Status θ: <strong>{params.theta}°</strong>
+            Material↔Status θ: <strong>{params.theta.toFixed(0)}°</strong>
+            <Info text="The allocation angle of W. ψₘ = |W|cos θ is the material wage — the only term that does real work. ψₛ = |W|sin θ is the status wage — it deflects but lifts nothing. Past 90° the material term goes negative (extraction): fascist inversion. The full clock: QI cooperative → QII fascist inversion → QIII collapse → QIV reparative." />
             <input
               type="range"
               min={0}
@@ -723,7 +875,9 @@ export default function InterferenceEngine3D() {
             />
           </label>
           <label>
-            Field rate ω: <strong>{params.omega.toFixed(1)}</strong>
+            Drive frequency ω: <strong>{params.omega.toFixed(1)}</strong>
+            {' · '}A(ω) = <strong>{(drive * 100).toFixed(0)}%</strong>
+            <Info text="How fast the Interference Engine pulses its fields — the electoral carrier. The buffer class behaves as a driven oscillator with natural frequency ω₀ = 2; as ω approaches ω₀ the response A(ω) peaks and the whole engine swells. This models the 4-year electoral cycle: the carrier the real system drives its status pulses on." />
             <input
               type="range"
               min={0.5}
@@ -731,6 +885,18 @@ export default function InterferenceEngine3D() {
               step={0.1}
               value={params.omega}
               onChange={(e) => set({ omega: +e.target.value })}
+            />
+          </label>
+          <label>
+            Damping ζ: <strong>{params.zeta.toFixed(2)}</strong>
+            <Info text="How quickly the buffer class dissipates the energy the drive pumps into it — exhaustion, distraction, institutional friction. Low ζ: a sharp resonance; status pulses near ω₀ store enormous kinetic energy (rage) and the worker rings for a long time. High ζ: the resonance peak flattens and the worker's motion dies out fast. ζ sets both the shape of the A(ω) curve and the velocity damping in the worker's Lorentz integration." />
+            <input
+              type="range"
+              min={0.05}
+              max={0.5}
+              step={0.01}
+              value={params.zeta}
+              onChange={(e) => set({ zeta: +e.target.value })}
             />
           </label>
 
@@ -760,7 +926,10 @@ export default function InterferenceEngine3D() {
           </label>
 
           <div className="ie-rho-block">
-            <div className="ie-rho-title">Field weights ρₖ (drive wave arms & Lorentz force)</div>
+            <div className="ie-rho-title">
+              Field weights ρₖ (drive wave arms & Lorentz force)
+              <Info text="Each ρₖ is that axis's live weight in the phased array — how hard the engine currently leans on this channel. It scales the axis's wave-arm amplitude and brightness, its rim label, and its contribution to the net B deflecting the worker. Defaults come from the measured 4-year electoral-carrier power in the Congressional Record (Ch. 21); starred axes are estimates." />
+            </div>
             {AXES.slice(0, params.n).map((a, i) => (
               <label key={a.name} className="ie-rho">
                 <span style={{ color: a.color }}>{a.name}</span>

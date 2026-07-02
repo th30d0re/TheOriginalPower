@@ -52,8 +52,26 @@
   border-radius: 8px;
   padding: 8px;
   backdrop-filter: blur(4px);
-  width: 166px; /* fixed: readout text must never resize the card */
+  width: 226px; /* fixed: readout text must never resize the card */
   box-sizing: border-box;
+}
+.ie-res-svg {
+  display: block;
+  margin-top: 2px;
+  border-top: 1px solid #1e293b;
+}
+.ie-spin {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 5px;
+  cursor: pointer;
+  font-size: 0.62rem;
+  color: #cbd5e1;
+}
+.ie-spin input {
+  margin: 0;
+  accent-color: #22d3ee;
 }
 .ie-phasor-svg {
   cursor: grab;
@@ -127,6 +145,39 @@
   margin-top: 6px;
   border-top: 1px solid #1e293b;
   padding-top: 6px;
+}
+/* ⓘ info icon + hover/focus tooltip, opening to the right of the panel */
+.ie-info {
+  position: relative;
+  display: inline-block;
+  margin-left: 5px;
+  color: #64748b;
+  cursor: help;
+  font-size: 0.75rem;
+  font-style: normal;
+  outline: none;
+}
+.ie-info:hover,
+.ie-info:focus {
+  color: #22d3ee;
+}
+.ie-info-tip {
+  position: fixed;
+  width: 270px;
+  max-height: 200px;
+  overflow: hidden;
+  background: #0b1322;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 9px 11px;
+  font-size: 0.7rem;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #cbd5e1;
+  z-index: 100; /* above the fixed nav bar and all overlay panels */
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.6);
+  white-space: normal;
+  pointer-events: none;
 }
 .ie-rho-title {
   font-size: 0.72rem;
