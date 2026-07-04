@@ -258,18 +258,27 @@
   font-size: 0.7rem;
 }
 .ie-axis-swatch {
+  position: relative;
+  overflow: hidden;
   width: 11px;
   height: 11px;
   border-radius: 3px;
   border: 1px solid;
 }
+/* estimated axes: dark hatch overlaid on the E/B split so both strand
+   colors stay visible under the "dashed" marking */
 .ie-axis-swatch-est {
+  opacity: 0.7;
+}
+.ie-axis-swatch-est::after {
+  content: '';
+  position: absolute;
+  inset: 0;
   background: repeating-linear-gradient(
     45deg,
-    currentColor 0 2px,
-    transparent 2px 4px
-  ) !important;
-  opacity: 0.7;
+    transparent 0 2px,
+    rgba(9, 14, 26, 0.9) 2px 4px
+  );
 }
 .ie-axis-name {
   color: #cbd5e1;

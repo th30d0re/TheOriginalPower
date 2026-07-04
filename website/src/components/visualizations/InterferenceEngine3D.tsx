@@ -1,9 +1,17 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { Canvas, useFrame } from '@react-three/fiber';
+import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { OrbitControls, Line, Text, Trail, Billboard } from '@react-three/drei';
 import * as THREE from 'three';
+import { LineSegments2 } from 'three/examples/jsm/lines/LineSegments2.js';
+import { LineSegmentsGeometry } from 'three/examples/jsm/lines/LineSegmentsGeometry.js';
+import { LineMaterial } from 'three/examples/jsm/lines/LineMaterial.js';
 import './InterferenceEngine3D.css';
+
+// radiating wave-arm stroke width, in CSS pixels — LineBasicMaterial ignores
+// linewidth on most WebGL backends, so arms use fat-line (LineSegments2) geometry
+// instead; this only thickens the stroke, it does not touch amplitude/decay
+const ARM_LINE_WIDTH = 2.5;
 
 // troika's default font lacks the Unicode sub/superscript block (ₘ, ₛ, ₖ…),
 // so all in-scene labels use a DejaVu Sans subset that covers Greek + subscripts
@@ -60,6 +68,21 @@ const AXES: Axis[] = [
   { name: 'Body / height', color: '#3b82f6', intensity: 0.25, measured: false },
   { name: 'Nationality', color: '#06b6d4', intensity: 0.6, measured: false },
 ];
+
+/* Each radiated arm is an E⊥B strand pair drawn in the axis's hue:
+ * E strand (material ψₘ ripple, vertical) = hue lightened; B strand (the
+ * status field ψₛₖ itself, azimuthal) = hue darkened. Estimated axes are
+ * desaturated. Shared by AxisWedge (3D strands) and the legend swatches
+ * so the panel color-codes exactly what the scene renders. */
+function strandColors(axis: Axis): { e: THREE.Color; b: THREE.Color } {
+  const e = new THREE.Color(axis.color).offsetHSL(0, 0, 0.1);
+  const b = new THREE.Color(axis.color).offsetHSL(0, -0.05, -0.16);
+  if (!axis.measured) {
+    e.offsetHSL(0, -0.28, 0);
+    b.offsetHSL(0, -0.28, 0);
+  }
+  return { e, b };
+}
 
 interface Params {
   n: number; // number of active cultural axes
@@ -220,6 +243,9 @@ function EFieldLines({ psiM }: { psiM: number }) {
  * The source charge is driven up and down the dipole: y(t) = A sin(ωt).
  * Every radiated arm carries the retarded copy of this motion, sin(ωt − kr),
  * so the whole field visibly emanates from the bobbing charge (3b1b-style).
+ * In the framework this bob IS the complex wage W = ψₘ + jψₛ — the
+ * suppression allocation itself, pumped along the material axis at the
+ * electoral-carrier frequency ω; the radiated axes are its broadcast.
  */
 function CentralCore({
   clock,
@@ -250,19 +276,22 @@ function CentralCore({
         </mesh>
         <pointLight position={[0, 0, 0]} intensity={2.2} distance={9} color="#bfe9ff" />
       </group>
-      {/* checkered dipole antenna */}
-      <mesh>
-        <cylinderGeometry args={[0.3, 0.3, 5.2, 28, 8, true]} />
-        <meshStandardMaterial
-          color="#38bdf8"
-          emissive="#0ea5e9"
-          emissiveIntensity={0.5}
-          wireframe
-          transparent
-          opacity={0.45}
-          side={THREE.DoubleSide}
-        />
-      </mesh>
+      {/* what the bobbing charge is in the framework (static, beside the bob) */}
+      <Billboard position={[0.65, 1.05, 0]}>
+        <Text font={LABEL_FONT} fontSize={0.2} color="#bfe9ff" anchorX="left">
+          source charge · the wage W(t)
+        </Text>
+        <Text
+          font={LABEL_FONT}
+          position={[0, -0.28, 0]}
+          fontSize={0.14}
+          color="#7dd3fc"
+          anchorX="left"
+          fillOpacity={0.8}
+        >
+          driven at electoral carrier ω — every arm radiates its motion
+        </Text>
+      </Billboard>
     </group>
   );
 }
@@ -322,6 +351,7 @@ function AxisWedge({
   omega,
   rho,
   drive,
+  proportional,
 }: {
   axis: Axis;
   index: number;
@@ -333,6 +363,7 @@ function AxisWedge({
   omega: number;
   rho: number; // live field weight ρ_k (defaults to the axis's measured intensity)
   drive: number; // normalized resonance response A(ω, ζ)
+  proportional: boolean; // true → amplitude ∝ ρ_k directly; false → cushioned floor
 }) {
   const S = 56; // samples per arm
   const RMAX = 6.2;
@@ -352,29 +383,38 @@ function AxisWedge({
   const bArr = useMemo(() => new Float32Array(totalSeg * 6), [totalSeg]);
   const eSpk = useMemo(() => new Float32Array(totalSpokes * 6), [totalSpokes]);
   const bSpk = useMemo(() => new Float32Array(totalSpokes * 6), [totalSpokes]);
-  const eGeo = useRef<THREE.BufferGeometry>(null);
-  const bGeo = useRef<THREE.BufferGeometry>(null);
-  const eSpkGeo = useRef<THREE.BufferGeometry>(null);
-  const bSpkGeo = useRef<THREE.BufferGeometry>(null);
+  const size = useThree((s) => s.size);
+  const eLine = useMemo(() => new LineSegments2(new LineSegmentsGeometry(), new LineMaterial({ transparent: true })), []);
+  const bLine = useMemo(() => new LineSegments2(new LineSegmentsGeometry(), new LineMaterial({ transparent: true })), []);
+  const eSpkLine = useMemo(() => new LineSegments2(new LineSegmentsGeometry(), new LineMaterial({ transparent: true })), []);
+  const bSpkLine = useMemo(() => new LineSegments2(new LineSegmentsGeometry(), new LineMaterial({ transparent: true })), []);
+  useEffect(() => {
+    for (const l of [eLine, bLine, eSpkLine, bSpkLine]) {
+      l.material.resolution.set(size.width, size.height);
+      l.material.linewidth = ARM_LINE_WIDTH;
+    }
+  }, [size, eLine, bLine, eSpkLine, bSpkLine]);
+  useEffect(
+    () => () => {
+      for (const l of [eLine, bLine, eSpkLine, bSpkLine]) {
+        l.geometry.dispose();
+        l.material.dispose();
+      }
+    },
+    [eLine, bLine, eSpkLine, bSpkLine],
+  );
 
-  // E strand = axis hue lightened; B strand = axis hue darkened. Estimated → desaturated.
-  const eCol = useMemo(() => {
-    const c = new THREE.Color(axis.color).offsetHSL(0, 0, 0.1);
-    if (!axis.measured) c.offsetHSL(0, -0.28, 0);
-    return c;
-  }, [axis]);
-  const bCol = useMemo(() => {
-    const c = new THREE.Color(axis.color).offsetHSL(0, -0.05, -0.16);
-    if (!axis.measured) c.offsetHSL(0, -0.28, 0);
-    return c;
-  }, [axis]);
+  const { e: eCol, b: bCol } = useMemo(() => strandColors(axis), [axis]);
 
   const centerPhi = (index / total) * Math.PI * 2;
   const wedgeSpan = (Math.PI * 2) / total * 0.72; // gap between wedges
 
   useFrame(() => {
     const t = clock.current;
-    const amp0 = (0.5 + 0.25 * R) * (0.35 + 0.65 * rho) * (0.3 + 0.9 * drive);
+    // proportional: wave size IS the field intensity (race towers, gender flattens);
+    // cushioned: a floor keeps weak axes readable at the cost of compressing ratios
+    const rhoAmp = proportional ? 0.04 + 0.96 * rho : 0.35 + 0.65 * rho;
+    const amp0 = (0.5 + 0.25 * R) * rhoAmp * (0.3 + 0.9 * drive);
     let seg = 0;
     for (let m = 0; m < perWedge; m++) {
       const frac = perWedge > 1 ? m / (perWedge - 1) - 0.5 : 0;
@@ -429,10 +469,10 @@ function AxisWedge({
         bSpk[o + 3] = p.bx; bSpk[o + 4] = p.by; bSpk[o + 5] = p.bz;
       }
     }
-    for (const g of [eGeo, bGeo, eSpkGeo, bSpkGeo]) {
-      const attr = g.current?.attributes.position as THREE.BufferAttribute | undefined;
-      if (attr) attr.needsUpdate = true;
-    }
+    eLine.geometry.setPositions(eArr);
+    bLine.geometry.setPositions(bArr);
+    eSpkLine.geometry.setPositions(eSpk);
+    bSpkLine.geometry.setPositions(bSpk);
   });
 
   const rad = (theta * Math.PI) / 180;
@@ -441,34 +481,23 @@ function AxisWedge({
   const eOpacity = Math.min(1, iB * (0.5 + 0.5 * Math.abs(Math.cos(rad))) * dim);
   const bOpacity = Math.min(1, iB * (0.4 + 0.6 * Math.abs(Math.sin(rad))) * dim);
 
+  eLine.material.color.set(eCol);
+  eLine.material.opacity = eOpacity;
+  bLine.material.color.set(bCol);
+  bLine.material.opacity = bOpacity;
+  eSpkLine.material.color.set(eCol);
+  eSpkLine.material.opacity = eOpacity * 0.4;
+  bSpkLine.material.color.set(bCol);
+  bSpkLine.material.opacity = bOpacity * 0.4;
+
   const labelR = RMAX + 0.45;
   return (
     <group>
-      <lineSegments frustumCulled={false}>
-        <bufferGeometry ref={eGeo}>
-          <bufferAttribute attach="attributes-position" args={[eArr, 3]} />
-        </bufferGeometry>
-        <lineBasicMaterial color={eCol} transparent opacity={eOpacity} />
-      </lineSegments>
-      <lineSegments frustumCulled={false}>
-        <bufferGeometry ref={bGeo}>
-          <bufferAttribute attach="attributes-position" args={[bArr, 3]} />
-        </bufferGeometry>
-        <lineBasicMaterial color={bCol} transparent opacity={bOpacity} />
-      </lineSegments>
+      <primitive object={eLine} frustumCulled={false} />
+      <primitive object={bLine} frustumCulled={false} />
       {/* E⊥B spokes, dimmer than the strands they tie to the propagation line */}
-      <lineSegments frustumCulled={false}>
-        <bufferGeometry ref={eSpkGeo}>
-          <bufferAttribute attach="attributes-position" args={[eSpk, 3]} />
-        </bufferGeometry>
-        <lineBasicMaterial color={eCol} transparent opacity={eOpacity * 0.4} />
-      </lineSegments>
-      <lineSegments frustumCulled={false}>
-        <bufferGeometry ref={bSpkGeo}>
-          <bufferAttribute attach="attributes-position" args={[bSpk, 3]} />
-        </bufferGeometry>
-        <lineBasicMaterial color={bCol} transparent opacity={bOpacity * 0.4} />
-      </lineSegments>
+      <primitive object={eSpkLine} frustumCulled={false} />
+      <primitive object={bSpkLine} frustumCulled={false} />
       {/* the axis label, ported from the old near-field ribbons */}
       <Billboard position={[labelR * Math.cos(centerPhi), 0.2, labelR * Math.sin(centerPhi)]}>
         <Text font={LABEL_FONT} fontSize={0.22} color={axis.color} anchorX="left" fillOpacity={Math.max(0.45, iB)}>
@@ -501,22 +530,40 @@ function netB(params: Params, rhos: number[], t: number, drive: number): THREE.V
   return b;
 }
 
-/* ---- The Buffer-Class worker: a real Lorentz-force integration ---------- */
+/* ---- The Buffer-Class workers: real Lorentz-force integrations ----------- *
+ * Each worker is one member of the buffer class: its own demographic charge
+ * q, entry point, and climb speed — riding the same fields. An ensemble
+ * shows the trap as a population effect, not one particle's bad luck.
+ */
+const WORKER_VARIANTS = [
+  { q: 1.0, x: 1.2, z: 0.0, v: 1.4 },
+  { q: 0.8, x: -1.0, z: 0.6, v: 1.5 },
+  { q: 1.2, x: 0.2, z: -1.1, v: 1.3 },
+  { q: 0.9, x: -0.7, z: -0.8, v: 1.6 },
+  { q: 1.1, x: 0.9, z: 0.9, v: 1.35 },
+  { q: 0.75, x: -1.3, z: 0.1, v: 1.45 },
+];
+
 function ChargeParticle({
   params,
   rhos,
   clock,
   drive,
+  variant,
 }: {
   params: Params;
   rhos: number[];
   clock: React.MutableRefObject<number>;
   drive: number;
+  variant: (typeof WORKER_VARIANTS)[number];
 }) {
+  const { q, x: x0, z: z0, v: v0 } = variant;
   const meshRef = useRef<THREE.Mesh>(null);
-  const pos = useRef(new THREE.Vector3(1.2, -2.5, 0));
-  const vel = useRef(new THREE.Vector3(0, 1.4, 0)); // trying to climb +y
-  const q = 1; // demographic charge
+  const pos = useRef(new THREE.Vector3(x0, -2.5, z0));
+  const vel = useRef(new THREE.Vector3(0, v0, 0)); // trying to climb +y
+  // bumped on every re-injection: keys the Trail so its point buffer restarts
+  // at the injection point instead of streaking across the teleport
+  const [gen, setGen] = useState(0);
 
   useFrame((_, rawDelta) => {
     const mesh = meshRef.current;
@@ -541,15 +588,18 @@ function ChargeParticle({
 
     // soft containment: if it escapes the arena, re-inject at the bottom
     if (pos.current.length() > 6 || pos.current.y > 4.2 || pos.current.y < -4.2) {
-      pos.current.set(1.2, -2.5, (Math.random() - 0.5) * 0.5);
-      vel.current.set(0, 1.4, 0);
+      pos.current.set(x0, -2.5, z0 + (Math.random() - 0.5) * 0.5);
+      vel.current.set(0, v0, 0);
+      setGen((g) => g + 1);
     }
     mesh.position.copy(pos.current);
   });
 
   return (
-    <Trail width={2.5} length={6} color={'#fbbf24'} attenuation={(w) => w}>
-      <mesh ref={meshRef}>
+    // initial mesh position matches the injection point: Trail seeds its
+    // buffer from the mount position, so neither mount nor re-key snaps
+    <Trail key={gen} width={2.5} length={6} color={'#fbbf24'} attenuation={(w) => w}>
+      <mesh ref={meshRef} position={[x0, -2.5, z0]}>
         <sphereGeometry args={[0.14, 24, 24]} />
         <meshStandardMaterial color="#fbbf24" emissive="#f59e0b" emissiveIntensity={0.8} />
       </mesh>
@@ -760,8 +810,9 @@ export default function InterferenceEngine3D() {
   const [rhos, setRhos] = useState<number[]>(AXES.map((a) => a.intensity));
   const [perWedge, setPerWedge] = useState(3);
   const [showArms, setShowArms] = useState(true);
-  const [showWorker, setShowWorker] = useState(true);
+  const [workers, setWorkers] = useState(3); // buffer-class ensemble size (0 = off)
   const [fieldLines, setFieldLines] = useState(false);
+  const [waveScale, setWaveScale] = useState(true); // wave size ∝ ρₖ directly
   const clock = useRef(0);
   const psiM = params.R * Math.cos((params.theta * Math.PI) / 180);
   const drive = resonanceResponse(params.omega, params.zeta);
@@ -805,12 +856,22 @@ export default function InterferenceEngine3D() {
                 omega={params.omega}
                 rho={rhos[i]}
                 drive={drive}
+                proportional={waveScale}
               />
             ))}
 
           {fieldLines && <EFieldLines psiM={psiM} />}
-          {showWorker && <ChargeParticle params={params} rhos={rhos} clock={clock} drive={drive} />}
-          {showWorker && <gridHelper args={[12, 12, '#1e293b', '#111827']} position={[0, -4, 0]} />}
+          {WORKER_VARIANTS.slice(0, workers).map((variant, i) => (
+            <ChargeParticle
+              key={i}
+              params={params}
+              rhos={rhos}
+              clock={clock}
+              drive={drive}
+              variant={variant}
+            />
+          ))}
+          {workers > 0 && <gridHelper args={[12, 12, '#1e293b', '#111827']} position={[0, -4, 0]} />}
 
           <OrbitControls enablePan={false} minDistance={4} maxDistance={18} />
         </Canvas>
@@ -826,6 +887,10 @@ export default function InterferenceEngine3D() {
         <PhasorInset params={params} drive={drive} onChange={setW} />
 
         <div className="ie-controls">
+          <div className="ie-rho-title">
+            Source charge W(t) — the Engine's transmitter
+            <Info text="The white bob at the centre is the source charge — the Interference Engine's transmitter. It carries the complex wage W = ψₘ + jψₛ, the full suppression allocation the system spends on the worker. The engine pumps it up and down the material axis at the electoral-carrier frequency ω: y(t) = A sin(ωt), with amplitude set by |W| and the resonance response A(ω, ζ). An oscillating charge radiates — every wave arm carries the retarded copy of this exact motion, sin(ωt − kr) — so the entire suppression field, all N cultural axes at once, is this one oscillation broadcast outward." />
+          </div>
           <label>
             Active axes N: <strong>{params.n}</strong>
             <Info text="How many cultural axes the Interference Engine drives at once. Each axis is one B field — a status-wage channel (race, class, gender…) radiating its own E⊥B wave arm. The Lorentz force on the worker sums all N of them: F = qE + q(v × Σ ρₖBₖ)." />
@@ -908,13 +973,17 @@ export default function InterferenceEngine3D() {
             />
             <span>Radiating wave arms</span>
           </label>
-          <label className="ie-toggle">
+          <label>
+            Workers: <strong>{workers}</strong>
+            <Info text="How many buffer-class workers ride the field. Each yellow particle is one worker — a live Lorentz-force integration F = q(E + v × Σ ρₖBₖ) with its own demographic charge q, entry point, and climb speed. One worker shows a single trajectory; several show the trap as a population: the same fields spin every member of the buffer class into cyclotron orbits, whatever their q." />
             <input
-              type="checkbox"
-              checked={showWorker}
-              onChange={(e) => setShowWorker(e.target.checked)}
+              type="range"
+              min={0}
+              max={WORKER_VARIANTS.length}
+              step={1}
+              value={workers}
+              onChange={(e) => setWorkers(+e.target.value)}
             />
-            <span>Worker particle (Lorentz)</span>
           </label>
           <label className="ie-toggle">
             <input
@@ -923,6 +992,15 @@ export default function InterferenceEngine3D() {
               onChange={(e) => setFieldLines(e.target.checked)}
             />
             <span>Field lines</span>
+          </label>
+          <label className="ie-toggle">
+            <input
+              type="checkbox"
+              checked={waveScale}
+              onChange={(e) => setWaveScale(e.target.checked)}
+            />
+            <span>Wave size ∝ intensity ρₖ</span>
+            <Info text="On: each axis's wave amplitude is directly proportional to its field weight ρₖ — race towers over the scene while gender nearly flattens, showing the measured ratios honestly. Off: a floor lifts weak axes so every wedge stays readable, at the cost of compressing the real differences." />
           </label>
 
           <div className="ie-rho-block">
@@ -951,32 +1029,45 @@ export default function InterferenceEngine3D() {
           Axis intensity = 4-yr carrier power · <span className="ie-solid">solid = measured</span> ·{' '}
           <span className="ie-dash">dashed = estimated</span>
         </div>
+        <div className="ie-axis-key-title">
+          each arm = two strands · swatch top: <strong>E = material ψₘ</strong> (lighter) · bottom:{' '}
+          <strong>B = status ψₛₖ</strong> (darker)
+          <Info text="Every radiated arm is a transverse E⊥B wave drawn as two strands of the axis's hue. The lighter strand ripples vertically along the material axis — the E component, the material-wage oscillation ψₘ the arm carries. The darker strand swings horizontally in the equatorial plane — the B component, the status wage ψₛₖ, the cultural field itself. The short ticks tie both strands to the propagation line: E ⊥ B ⊥ r̂. Each row's swatch shows the exact rendered pair — top half = E strand, bottom half = B strand." />
+        </div>
         <div className="ie-axis-key">
-          {AXES.slice(0, params.n).map((a) => (
-            <div className="ie-axis-row" key={a.name}>
-              <span
-                className={`ie-axis-swatch ${a.measured ? '' : 'ie-axis-swatch-est'}`}
-                style={{ background: a.color, borderColor: a.color, color: a.color }}
-              />
-              <span className="ie-axis-name">{a.name}</span>
-              <span className="ie-axis-bar-wrap">
+          {AXES.slice(0, params.n).map((a) => {
+            const sc = strandColors(a);
+            const eHex = `#${sc.e.getHexString()}`;
+            const bHex = `#${sc.b.getHexString()}`;
+            return (
+              <div className="ie-axis-row" key={a.name}>
                 <span
-                  className="ie-axis-bar"
-                  style={{ width: `${Math.round(a.intensity * 100)}%`, background: a.color }}
+                  className={`ie-axis-swatch ${a.measured ? '' : 'ie-axis-swatch-est'}`}
+                  style={{
+                    background: `linear-gradient(180deg, ${eHex} 0 50%, ${bHex} 50% 100%)`,
+                    borderColor: a.color,
+                  }}
                 />
-              </span>
-              <span className="ie-axis-val">
-                {a.intensity.toFixed(2)}
-                {a.measured ? '' : '*'}
-              </span>
-            </div>
-          ))}
+                <span className="ie-axis-name">{a.name}</span>
+                <span className="ie-axis-bar-wrap">
+                  <span
+                    className="ie-axis-bar"
+                    style={{ width: `${Math.round(a.intensity * 100)}%`, background: a.color }}
+                  />
+                </span>
+                <span className="ie-axis-val">
+                  {a.intensity.toFixed(2)}
+                  {a.measured ? '' : '*'}
+                </span>
+              </div>
+            );
+          })}
         </div>
         <div className="ie-axis-note">
           * estimated (no spectral series yet). Race blazes (11× class @ 4 yr); gender is dim
           (off-resonance, 6.2-yr natural period). The <strong>ρₖ sliders</strong> weight each field
           everywhere at once: its labeled E⊥B wave arm and the Lorentz force deflecting the
-          yellow worker.
+          yellow workers.
         </div>
       </div>
     </div>
