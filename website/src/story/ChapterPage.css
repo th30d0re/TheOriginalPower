@@ -1,0 +1,394 @@
+/* Chapter engine: cinematic essay layout for the story mode.
+   Uses --chapter-accent (set inline per chapter) alongside the global dark
+   palette defined in src/index.css. */
+
+.chapter-page {
+  --accent: var(--chapter-accent, var(--accent-purple));
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(180deg, var(--bg-dark) 0%, #0b1220 100%);
+  color: var(--text-primary);
+}
+
+/* ---------- Progress rail ---------- */
+
+.chapter-progress-rail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100vh;
+  z-index: 200;
+  background: rgba(148, 163, 184, 0.12);
+}
+
+.chapter-progress-fill {
+  width: 100%;
+  height: 100%;
+  transform-origin: top;
+  background: linear-gradient(180deg, var(--accent), transparent);
+  will-change: transform;
+}
+
+@media (max-width: 640px) {
+  .chapter-progress-rail {
+    width: 100%;
+    height: 3px;
+    top: 0;
+    left: 0;
+  }
+
+  .chapter-progress-fill {
+    transform-origin: left;
+  }
+}
+
+/* ---------- Hero ---------- */
+
+.chapter-hero {
+  position: relative;
+  min-height: 88vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 1.5rem 4rem;
+  overflow: hidden;
+  background:
+    radial-gradient(60% 60% at 50% 20%, color-mix(in srgb, var(--accent) 16%, transparent), transparent),
+    var(--bg-dark);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.chapter-hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 62ch;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.chapter-hero-number {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.chapter-hero-title {
+  font-size: clamp(2.25rem, 5vw, 3.75rem);
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+}
+
+.chapter-hero-era {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.04em;
+}
+
+.chapter-hero-epigraph {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+.chapter-hero-epigraph blockquote {
+  font-family: Georgia, 'Iowan Old Style', 'Palatino Linotype', serif;
+  font-style: italic;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  color: var(--text-primary);
+}
+
+.chapter-hero-epigraph figcaption {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.03em;
+}
+
+.chapter-hero-visual {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.chapter-hero-fade {
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 8rem;
+  background: linear-gradient(180deg, transparent, var(--bg-dark));
+  pointer-events: none;
+}
+
+/* ---------- Scenes ---------- */
+
+.chapter-scenes {
+  max-width: 68ch;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 6rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.scene {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem 0;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.08);
+}
+
+.scene:last-child {
+  border-bottom: none;
+}
+
+.scene-title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+}
+
+.scene-prose {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.scene-prose p {
+  font-size: 1.15rem;
+  line-height: 1.85;
+  color: var(--text-secondary);
+}
+
+.scene-visual-wrap {
+  margin: 2.5rem 0;
+}
+
+/* ---------- Key concepts ---------- */
+
+.key-concepts-grid {
+  margin: 2.5rem 0 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.key-concept-card {
+  padding: 1.25rem 1.4rem;
+  background: var(--bg-medium);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  border-left: 3px solid var(--accent);
+  border-radius: 10px;
+}
+
+.key-concept-term {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  margin-bottom: 0.4rem;
+}
+
+.key-concept-definition {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+/* ---------- Deep dive ---------- */
+
+.deep-dive {
+  margin-top: 2.5rem;
+}
+
+.deep-dive-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  color: var(--accent);
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.5rem 0;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+
+.deep-dive-toggle:hover {
+  opacity: 1;
+}
+
+.deep-dive-chevron {
+  display: inline-block;
+  transition: transform 0.25s ease;
+  font-size: 1.1em;
+  line-height: 1;
+}
+
+.deep-dive-inner {
+  padding: 1.75rem 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.deep-dive-passage {
+  padding-left: 1.25rem;
+  border-left: 3px solid rgba(148, 163, 184, 0.35);
+}
+
+.deep-dive-passage-heading {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+}
+
+.deep-dive-passage-text {
+  font-family: Georgia, 'Iowan Old Style', 'Palatino Linotype', serif;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.deep-dive-passage-text:last-child {
+  margin-bottom: 0;
+}
+
+.deep-dive-equations {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.deep-dive-equation-note {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+/* ---------- Footer nav ---------- */
+
+.chapter-footer {
+  padding: 3rem 1.5rem 5rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.15);
+}
+
+.chapter-footer-nav {
+  max-width: 68ch;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.chapter-footer-index-link {
+  align-self: center;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+}
+
+.chapter-footer-index-link:hover {
+  color: var(--text-primary);
+}
+
+.chapter-footer-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.chapter-nav-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: var(--bg-medium);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  text-decoration: none;
+  color: var(--text-primary);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.chapter-nav-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+}
+
+.chapter-nav-prev {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.chapter-nav-next {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.chapter-nav-card-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--text-secondary);
+}
+
+.chapter-nav-card-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.chapter-nav-card-primary {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 25%, var(--bg-medium)), var(--bg-medium));
+  border-color: color-mix(in srgb, var(--accent) 50%, transparent);
+}
+
+@media (max-width: 640px) {
+  .chapter-footer-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .chapter-nav-prev,
+  .chapter-nav-next {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .scene {
+    min-height: unset;
+    padding: 3rem 0;
+  }
+
+  .chapter-hero {
+    min-height: 70vh;
+    padding: 5rem 1.25rem 3rem;
+  }
+}
+
+/* ---------- Reduced motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .chapter-progress-fill {
+    transition: none !important;
+  }
+
+  * {
+    scroll-behavior: auto !important;
+  }
+}

@@ -3,7 +3,6 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Navigate,
   NavLink,
   useLocation,
 } from 'react-router-dom';
@@ -12,6 +11,8 @@ import Dashboard from './components/Dashboard';
 import SystemicArbitrageDashboard from './components/SystemicArbitrageDashboard';
 import InterferenceEngine3D from './components/visualizations/InterferenceEngine3D';
 import ManimEquationGallery from './components/visualizations/ManimEquationGallery';
+import StoryIndex from './story/StoryIndex';
+import ChapterPage from './story/ChapterPage';
 import './App.css';
 
 const NAV_LINKS = [
@@ -48,18 +49,20 @@ function NavBar() {
 }
 
 function App() {
-  const [storyCompleted, setStoryCompleted] = useState(false);
+  const [, setStoryCompleted] = useState(false);
 
   return (
     <Router>
       <NavBar />
       <main className="app-main">
         <Routes>
-          <Route path="/" element={<StoryMode onComplete={() => setStoryCompleted(true)} />} />
+          <Route path="/" element={<StoryIndex />} />
+          <Route path="/story/:chapterId" element={<ChapterPage />} />
           <Route
-            path="/dashboard"
-            element={storyCompleted ? <Dashboard /> : <Navigate to="/" />}
+            path="/legacy-story"
+            element={<StoryMode onComplete={() => setStoryCompleted(true)} />}
           />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/arbitrage" element={<SystemicArbitrageDashboard />} />
           <Route path="/interference-engine" element={<InterferenceEngine3D />} />
           <Route path="/animations" element={<ManimEquationGallery />} />

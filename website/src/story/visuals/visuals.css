@@ -1,0 +1,120 @@
+/* Shared styling for story-mode scene visuals: equations, Manim video figures,
+   and the wrappers around the existing D3 visualizations. Visuals are treated
+   as figures in a cinematic essay — generous whitespace, soft glow accents,
+   no harsh borders. Chapters can override --chapter-accent to tint accents. */
+
+.visual-figure {
+  margin: 2.5rem auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 900px;
+}
+
+.visual-caption {
+  margin-top: 1rem;
+  padding: 0 1rem;
+  max-width: 640px;
+  text-align: center;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-secondary, #cbd5e1);
+  font-style: italic;
+}
+
+.visual-placeholder {
+  width: 100%;
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  border: 1px dashed rgba(148, 163, 184, 0.35);
+  background: rgba(30, 41, 59, 0.4);
+  color: var(--text-secondary, #cbd5e1);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Equation */
+
+.equation-figure {
+  width: 100%;
+}
+
+.equation-row {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem 2.5rem;
+  border-radius: 16px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(224, 179, 76, 0.08) 0%,
+    rgba(30, 41, 59, 0.35) 70%
+  );
+  box-shadow: 0 0 40px -20px var(--chapter-accent, #e0b34c);
+}
+
+.equation-katex {
+  color: var(--text-primary, #f1f5f9);
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+  padding: 0.25rem 0;
+}
+
+/* KaTeX renders black glyphs by default; recolor for the dark theme. */
+.equation-katex .katex {
+  color: var(--text-primary, #f1f5f9);
+  font-size: 1.15em;
+}
+
+.equation-label {
+  position: absolute;
+  right: 1.25rem;
+  bottom: 1rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  color: var(--chapter-accent, #e0b34c);
+  opacity: 0.85;
+}
+
+.equation-fallback {
+  width: 100%;
+  overflow-x: auto;
+  color: var(--text-secondary, #cbd5e1);
+  background: rgba(15, 23, 42, 0.6);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  font-size: 0.9rem;
+}
+
+/* Manim player */
+
+.manim-figure {
+  width: 100%;
+}
+
+.manim-video {
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  border-radius: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  box-shadow: 0 0 50px -18px var(--chapter-accent, #e0b34c);
+  background: #000;
+}
+
+@media (max-width: 640px) {
+  .equation-row {
+    padding: 1.5rem 1.25rem;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .equation-label {
+    position: static;
+  }
+}
