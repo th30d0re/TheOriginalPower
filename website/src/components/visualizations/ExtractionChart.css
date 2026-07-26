@@ -1,0 +1,262 @@
+.xc-root {
+  background: var(--bg-medium, #1e293b);
+  border: 1px solid var(--bg-light, #334155);
+  border-radius: 12px;
+  padding: 1.5rem;
+  max-width: 1080px;
+  margin: 2rem auto;
+  color: var(--text-primary, #f1f5f9);
+}
+
+.xc-header {
+  margin-bottom: 1.25rem;
+}
+
+.xc-header h2 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: #22d3ee;
+}
+
+.xc-header p {
+  font-size: 0.95rem;
+  color: var(--text-secondary, #cbd5e1);
+  line-height: 1.55;
+  margin: 0;
+  max-width: 68ch;
+}
+
+.xc-stage {
+  display: grid;
+  grid-template-columns: minmax(300px, 1fr) minmax(280px, 1fr);
+  gap: 1.75rem;
+  align-items: start;
+}
+
+@media (max-width: 820px) {
+  .xc-stage {
+    grid-template-columns: 1fr;
+  }
+}
+
+.xc-svg {
+  width: 100%;
+  max-width: 460px;
+  height: auto;
+  background: #02040a;
+  border-radius: 8px;
+  border: 1px solid #1e293b;
+  touch-action: none;
+  cursor: crosshair;
+  justify-self: center;
+}
+
+.xc-disk-fill {
+  fill: #050a14;
+}
+
+.xc-locus {
+  fill: none;
+  stroke: #334155;
+  stroke-width: 0.8;
+}
+
+.xc-axis {
+  stroke: #475569;
+  stroke-width: 1;
+}
+
+.xc-vswr-circle {
+  fill: none;
+  stroke: #22d3ee;
+  stroke-width: 1;
+  stroke-dasharray: 4 4;
+  opacity: 0.55;
+}
+
+.xc-rim {
+  fill: none;
+  stroke: #e2e8f0;
+  stroke-width: 2;
+}
+
+.xc-terminal {
+  fill: #e2e8f0;
+}
+
+.xc-terminal-label {
+  fill: #94a3b8;
+  font-size: 10px;
+  text-anchor: middle;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.xc-edge-label {
+  fill: #94a3b8;
+  font-size: 10px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.xc-anchor-start { text-anchor: start; }
+.xc-anchor-end { text-anchor: end; }
+
+.xc-axis-label {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.xc-gamma-vector {
+  stroke: #22d3ee;
+  stroke-width: 1.5;
+  opacity: 0.8;
+}
+
+.xc-load {
+  fill: #22d3ee;
+  stroke: #0f172a;
+  stroke-width: 2;
+  cursor: grab;
+}
+
+.xc-rot-arc {
+  fill: none;
+  stroke: #f59e0b;
+  stroke-width: 2;
+  stroke-dasharray: 5 4;
+  opacity: 0.85;
+}
+
+/* ---- panel ---- */
+
+.xc-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.xc-readout {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  background: #0b1220;
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+}
+
+.xc-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  font-size: 0.87rem;
+}
+
+.xc-row span {
+  color: var(--text-secondary, #cbd5e1);
+}
+
+.xc-row code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: #f1f5f9;
+  font-size: 0.87rem;
+}
+
+.xc-row-accent code {
+  color: #22d3ee;
+  font-weight: 600;
+}
+
+.xc-control label {
+  display: block;
+  font-size: 0.87rem;
+  color: var(--text-secondary, #cbd5e1);
+  margin-bottom: 0.45rem;
+}
+
+.xc-control label strong {
+  color: #22d3ee;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.xc-control input[type='range'] {
+  width: 100%;
+  accent-color: #22d3ee;
+}
+
+.xc-hint {
+  font-size: 0.82rem;
+  color: #94a3b8;
+  line-height: 1.5;
+  margin: 0.55rem 0 0;
+}
+
+.xc-presets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.xc-presets button {
+  flex: 1 1 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  background: var(--bg-light, #334155);
+  color: var(--text-primary, #f1f5f9);
+  border: 1px solid #475569;
+  border-radius: 6px;
+  padding: 0.5rem 0.6rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.xc-presets button:hover {
+  background: #475569;
+  border-color: #22d3ee;
+}
+
+.xc-presets button span {
+  font-weight: 400;
+  font-size: 0.72rem;
+  color: #94a3b8;
+}
+
+.xc-axis-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+
+.xc-axis-table th {
+  text-align: left;
+  color: #94a3b8;
+  font-weight: 500;
+  border-bottom: 1px solid #334155;
+  padding: 0.3rem 0.4rem;
+}
+
+.xc-axis-table td {
+  padding: 0.3rem 0.4rem;
+  border-bottom: 1px solid #1e293b;
+  color: var(--text-secondary, #cbd5e1);
+}
+
+.xc-swatch {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 2px;
+  margin-right: 0.45rem;
+}
+
+.xc-foot {
+  font-size: 0.76rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0;
+}

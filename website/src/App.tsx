@@ -11,6 +11,7 @@ import Dashboard from './components/Dashboard';
 import SystemicArbitrageDashboard from './components/SystemicArbitrageDashboard';
 import InterferenceEngine3D from './components/visualizations/InterferenceEngine3D';
 import ManimEquationGallery from './components/visualizations/ManimEquationGallery';
+import ExtractionChart from './components/visualizations/ExtractionChart';
 import StoryIndex from './story/StoryIndex';
 import ChapterPage from './story/ChapterPage';
 import './App.css';
@@ -20,6 +21,7 @@ const NAV_LINKS = [
   { to: '/dashboard', label: 'Dashboard' },
   { to: '/arbitrage', label: 'Arbitrage' },
   { to: '/interference-engine', label: 'Interference Engine' },
+  { to: '/extraction-chart', label: 'Extraction Chart' },
   { to: '/animations', label: 'Animations' },
 ];
 
@@ -65,6 +67,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/arbitrage" element={<SystemicArbitrageDashboard />} />
           <Route path="/interference-engine" element={<InterferenceEngine3D />} />
+          <Route path="/extraction-chart" element={<ExtractionChart />} />
           <Route path="/animations" element={<ManimEquationGallery />} />
         </Routes>
       </main>
