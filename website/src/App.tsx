@@ -27,7 +27,8 @@ const NAV_LINKS = [
 
 function NavBar() {
   const { pathname } = useLocation();
-  const overlay = pathname === '/interference-engine';
+  const overlay =
+    pathname === '/interference-engine' || pathname === '/extraction-chart';
 
   return (
     <nav className={`app-nav ${overlay ? 'app-nav-overlay' : ''}`}>
