@@ -27,12 +27,39 @@ export SOURCE_DATE_EPOCH := $(PDF_BUILD_EPOCH)
 export FORCE_SOURCE_DATE := 1
 export TZ := UTC
 
-.PHONY: pdf pdf-from-tex verify-pdf empirical data-refresh companion index readme all clean
+# --- biber shim -------------------------------------------------------------
+# TeX Live ships `biber` on macOS as a universal binary that thins itself to the
+# host architecture at run time via lipo. That self-extraction fails on some
+# Apple Silicon installs ("biber: extracting arm64 binary with lipo failed"),
+# which kills the bibliography step and leaves a stale .bbl. Resolve a usable
+# biber once, into a gitignored .tooling/ dir:
+#   - system biber works        -> symlink it (no behavior change, all platforms)
+#   - system biber is broken    -> thin the fat binary to the host arch ourselves
+HOST_ARCH   := $(shell uname -m)
+TOOLING_DIR := $(CURDIR)/.tooling
+BIBER_SHIM  := $(TOOLING_DIR)/biber
+
+$(BIBER_SHIM):
+	@mkdir -p $(TOOLING_DIR)
+	@if biber --version >/dev/null 2>&1; then \
+	  ln -sf "$$(command -v biber)" $@; \
+	  echo "biber: system binary OK"; \
+	elif lipo "$$(command -v biber)" -thin $(HOST_ARCH) -output $@ 2>/dev/null; then \
+	  chmod +x $@; \
+	  echo "biber: system binary broken, thinned to $(HOST_ARCH)"; \
+	else \
+	  ln -sf "$$(command -v biber)" $@; \
+	  echo "biber: WARNING - broken and could not be thinned; bibliography may be stale"; \
+	fi
+
+.PHONY: pdf pdf-from-tex verify-pdf biber-shim empirical data-refresh companion index readme all clean
+
+biber-shim: $(BIBER_SHIM)
 
 pdf: index empirical scotus-audit pdf-from-tex
 
-pdf-from-tex:
-	cd $(PAPER_DIR) && $(LATEXMK) $(LATEXMK_FLAGS) $(PAPER_TEX)
+pdf-from-tex: $(BIBER_SHIM)
+	cd $(PAPER_DIR) && $(LATEXMK) $(LATEXMK_FLAGS) -e '$$biber=q{$(BIBER_SHIM) %O %S}' $(PAPER_TEX)
 
 verify-pdf: pdf-from-tex
 	@git diff --exit-code -- $(PAPER_DIR)/$(PAPER_PDF) || { \

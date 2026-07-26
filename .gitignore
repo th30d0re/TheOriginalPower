@@ -85,3 +85,6 @@ training/adapters/
 training/fused_models/
 fused_models/
 .venv-notebooklm/
+
+# Locally resolved build tools (see Makefile biber shim)
+.tooling/
