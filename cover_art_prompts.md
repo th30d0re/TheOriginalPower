@@ -97,8 +97,8 @@ the imaginary axis rendered as a second ghost needle.
 ## 3. The Reparations Integral
 
 **Grounded in:** E020 / E228 — accumulated extraction as the integral of real
-power `Re[V_state · I_O*]` from t₀ to now. The cover idea is a debt that is an
-area, not a number.
+power `Re[V_state · I_O*]` from t₀ to now. The cover idea renders the debt as an
+accumulated area.
 
 > A single wide waveform sweeping horizontally across a black cover — an
 > oscillating curve, dense and irregular like five centuries of a power trace. The
@@ -279,8 +279,8 @@ system holds while suppression outruns momentum, and fails at the crossing.
 
 - Concepts **1**, **3**, and **6** are the strongest thumbnail performers: one
   shape, one idea, readable at 100px.
-- Concept **9a** is the most commercially distinctive if the goal is to look like
-  a serious technical monograph rather than a social-science trade book.
+- Concept **9a** is the most commercially distinctive, and it reads as a serious
+  technical monograph.
 - Image models mangle mathematical notation. Generate the diagram and background
   without any equation text, then set the equations and title in vector type
   afterward. Every prompt above is written so the diagram survives without its
@@ -288,6 +288,6 @@ system holds while suppression outruns momentum, and fails at the crossing.
 - Keep the accent color used for exactly one thing across the whole set: the
   extraction path. That consistency is what makes the front, spine, and back read
   as one object.
-- The book argues from physics and engineering, not from iconography. Any prompt
-  drifting toward conventional protest or civil-rights visual language is off
-  target — the whole rhetorical position is that this is a systems document.
+- The book argues from physics and engineering. Any prompt drifting toward
+  conventional protest or civil-rights visual language is off target; the
+  rhetorical position throughout is that this is a systems document.
