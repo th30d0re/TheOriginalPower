@@ -10,13 +10,37 @@ import './ExtractionChart.css';
  * Rim     (|Gamma| = 1) -> total reflection -> withdrawn compliance, zero absorbed power.
  */
 
-const SIZE = 520;
+const SIZE = 640;
 const CX = SIZE / 2;
 const CY = SIZE / 2;
-const R = 224;
+const R = 228;
 
 const R_LOCI = [0.2, 0.5, 1, 2, 5];
 const X_LOCI = [0.2, 0.5, 1, 2, 5];
+
+/** Polar helper in chart space: 0deg at the open-circuit point, CCW positive. */
+function polar(radius: number, deg: number) {
+  const a = (deg * Math.PI) / 180;
+  return { x: CX + radius * Math.cos(a), y: CY - radius * Math.sin(a) };
+}
+
+/**
+ * Rim scales.
+ *
+ * Inner ring  — angle of the reflection coefficient, 0deg at the open circuit
+ *               (Gamma = +1), +-180deg at the short (Gamma = -1).
+ * Outer ring  — wavelengths toward the generator. Displacement rotates Gamma
+ *               clockwise at one revolution per lambda/2, so
+ *               theta = 180 - 720*(l/lambda): w = 0 sits at the short, w = 0.25
+ *               at the open (the quarter-wave transform), w = 0.5 back at the short.
+ */
+const DEG_MINOR = Array.from({ length: 36 }, (_, i) => i * 10);
+const DEG_MAJOR = Array.from({ length: 12 }, (_, i) => i * 30);
+const WTG_MINOR = Array.from({ length: 50 }, (_, i) => i * 0.01);
+const WTG_MAJOR = Array.from({ length: 10 }, (_, i) => i * 0.05);
+
+const wtgToDeg = (w: number) => 180 - 720 * w;
+const signedDeg = (d: number) => (d > 180 ? d - 360 : d);
 
 type Complex = { re: number; im: number };
 
@@ -84,6 +108,7 @@ export default function ExtractionChart() {
   }, [loadGamma, lineLength]);
 
   const mag = Math.hypot(gamma.re, gamma.im);
+  const thetaDeg = (Math.atan2(gamma.im, gamma.re) * 180) / Math.PI;
   const z = gammaToZ(gamma);
   const vswr = mag >= 0.999 ? Infinity : (1 + mag) / (1 - mag);
   const sEnc = 1 - mag;
@@ -170,6 +195,65 @@ export default function ExtractionChart() {
 
           <circle cx={CX} cy={CY} r={R} className="xc-rim" />
 
+          {/* ---- rim scales: Gamma angle (inner) and wavelengths toward generator (outer) ---- */}
+          <g className="xc-scale">
+            {DEG_MINOR.map((d) => {
+              const a = polar(R, d);
+              const b = polar(R + 5, d);
+              return <line key={`dm${d}`} x1={a.x} y1={a.y} x2={b.x} y2={b.y} className="xc-tick-minor" />;
+            })}
+            {DEG_MAJOR.map((d) => {
+              const a = polar(R, d);
+              const b = polar(R + 10, d);
+              const t = polar(R + 20, d);
+              return (
+                <g key={`dM${d}`}>
+                  <line x1={a.x} y1={a.y} x2={b.x} y2={b.y} className="xc-tick-major" />
+                  <text x={t.x} y={t.y + 3.5} className="xc-tick-label">
+                    {signedDeg(d)}°
+                  </text>
+                </g>
+              );
+            })}
+
+            <circle cx={CX} cy={CY} r={R + 30} className="xc-scale-ring" />
+
+            {WTG_MINOR.map((w) => {
+              const d = wtgToDeg(w);
+              const a = polar(R + 30, d);
+              const b = polar(R + 35, d);
+              return <line key={`wm${w}`} x1={a.x} y1={a.y} x2={b.x} y2={b.y} className="xc-tick-minor" />;
+            })}
+            {WTG_MAJOR.map((w) => {
+              const d = wtgToDeg(w);
+              const a = polar(R + 30, d);
+              const b = polar(R + 39, d);
+              const t = polar(R + 56, d);
+              return (
+                <g key={`wM${w}`}>
+                  <line x1={a.x} y1={a.y} x2={b.x} y2={b.y} className="xc-tick-major" />
+                  <text x={t.x} y={t.y + 3.5} className="xc-tick-label xc-tick-label-wtg">
+                    {w.toFixed(2)}λ
+                  </text>
+                </g>
+              );
+            })}
+          </g>
+
+          {/* live angle marker on the rim */}
+          {mag > 0.01 && (
+            <g>
+              <line
+                x1={polar(R, thetaDeg).x}
+                y1={polar(R, thetaDeg).y}
+                x2={polar(R + 39, thetaDeg).x}
+                y2={polar(R + 39, thetaDeg).y}
+                className="xc-angle-marker"
+              />
+              <circle cx={polar(R + 30, thetaDeg).x} cy={polar(R + 30, thetaDeg).y} r={3.5} className="xc-angle-dot" />
+            </g>
+          )}
+
           <circle cx={CX} cy={CY} r={3} className="xc-terminal" />
           <text x={CX} y={CY + 18} className="xc-terminal-label">
             Γ=0 · total enclosure
@@ -180,8 +264,11 @@ export default function ExtractionChart() {
           <text x={CX + R - 4} y={CY - 10} className="xc-edge-label xc-anchor-end">
             open · Γ=+1
           </text>
-          <text x={CX} y={CY - R - 12} className="xc-rim-label">
+          <text x={CX} y={CY - R - 74} className="xc-rim-label">
             |Γ| = 1 · withdrawn compliance · zero absorbed power
+          </text>
+          <text x={CX} y={CY - R - 74 + 15} className="xc-scale-caption">
+            outer: wavelengths toward generator · inner: ∠Γ
           </text>
 
           {AXES.map((a) => {
@@ -239,6 +326,7 @@ export default function ExtractionChart() {
         <div className="xc-readout">
           <Row k="Γ" v={`${fmt(gamma.re)} ${gamma.im >= 0 ? '+' : '−'} j${fmt(Math.abs(gamma.im))}`} />
           <Row k="|Γ|" v={fmt(mag)} />
+          <Row k="∠Γ" v={`${thetaDeg >= 0 ? '' : '−'}${Math.abs(thetaDeg).toFixed(1)}°`} />
           <Row k="z = r + jx" v={`${fmt(z.re)} ${z.im >= 0 ? '+' : '−'} j${fmt(Math.abs(z.im))}`} />
           <Row k="VSWR" v={fmt(vswr, 2)} />
           <Row k="S_enc = 1 − |Γ|" v={fmt(sEnc)} accent />

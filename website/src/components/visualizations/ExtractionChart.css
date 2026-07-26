@@ -20,9 +20,11 @@
   padding-bottom: 152px;
 }
 
+/* The viewBox now carries two rim scales outside the unit circle, so the disk is
+   ~71% of the box (was ~86%). Sized up to keep the chart itself large. */
 .xc-svg {
-  width: min(70vh, 50vw);
-  height: min(70vh, 50vw);
+  width: min(74vh, 56vw);
+  height: min(74vh, 56vw);
   touch-action: none;
   cursor: crosshair;
   overflow: visible;
@@ -78,6 +80,54 @@
 .xc-axis-label {
   font-size: 12px;
   font-weight: 600;
+}
+
+/* ---- rim scales ---- */
+
+.xc-tick-minor {
+  stroke: #46586f;
+  stroke-width: 0.9;
+}
+
+.xc-tick-major {
+  stroke: #8ea3bd;
+  stroke-width: 1.4;
+}
+
+.xc-scale-ring {
+  fill: none;
+  stroke: #2a3b52;
+  stroke-width: 1;
+}
+
+.xc-tick-label {
+  fill: #8ea3bd;
+  font-size: 9.5px;
+  text-anchor: middle;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.xc-tick-label-wtg {
+  fill: #64748b;
+  font-size: 9px;
+}
+
+.xc-scale-caption {
+  fill: #64748b;
+  font-size: 9.5px;
+  text-anchor: middle;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.xc-angle-marker {
+  stroke: #22d3ee;
+  stroke-width: 2;
+  opacity: 0.9;
+}
+
+.xc-angle-dot {
+  fill: #22d3ee;
+  filter: drop-shadow(0 0 5px rgba(34, 211, 238, 0.8));
 }
 
 .xc-gamma-vector {
@@ -351,9 +401,9 @@
      decorative title is dropped — the active nav item already names the view. */
   .xc-stage {
     padding-top: 165px;
-    padding-bottom: 302px;
+    padding-bottom: 316px;
   }
-  .xc-svg { width: min(33vh, 88vw); height: min(33vh, 88vw); }
+  .xc-svg { width: min(37vh, 90vw); height: min(37vh, 90vw); }
   .xc-title { display: none; }
   .xc-fs-btn {
     top: auto;
