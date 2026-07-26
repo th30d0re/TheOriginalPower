@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Equation Field — Redefining Racism</title>
+  <link rel="stylesheet" href="./vendor/katex/katex.min.css" />
+  <link rel="stylesheet" href="./style.css" />
+  <script type="importmap">
+    { "imports": { "three": "./vendor/three/three.module.min.js" } }
+  </script>
+</head>
+<body>
+  <div id="webgl"></div>
+  <div id="css3d"></div>
+
+  <header id="hud">
+    <div class="hud-left">
+      <h1>Equation Field</h1>
+      <p class="subtitle">Redefining Racism · <span id="stat-count"></span></p>
+    </div>
+    <div class="hud-right">
+      <input id="search" type="search" placeholder="Filter by symbol, label, section…" autocomplete="off" />
+      <span id="search-count"></span>
+    </div>
+  </header>
+
+  <aside id="chapters">
+    <div class="chapters-title">Chapters</div>
+    <ol id="chapter-list"></ol>
+    <div class="chapters-title viz-head">3D Views</div>
+    <ol id="viz-list"></ol>
+  </aside>
+
+  <section id="viz-overlay" class="hidden">
+    <button id="viz-back" title="Back to the field (Esc)">← Field</button>
+    <div class="viz-head-text">
+      <div id="viz-title"></div>
+      <div id="viz-blurb"></div>
+    </div>
+    <div id="viz-params"></div>
+  </section>
+
+  <section id="detail" class="hidden">
+    <button id="detail-close" title="Close (Esc)">×</button>
+    <div class="detail-id" id="detail-id"></div>
+    <div class="detail-chapter" id="detail-chapter"></div>
+    <div class="detail-section" id="detail-section"></div>
+    <div class="detail-math" id="detail-math"></div>
+    <div class="detail-label" id="detail-label"></div>
+    <pre class="detail-raw"><code id="detail-raw"></code></pre>
+    <div class="detail-actions">
+      <button id="open-viz">Visualize 3D</button>
+      <button id="copy-latex">Copy LaTeX</button>
+      <button id="prev-eq">← Prev</button>
+      <button id="next-eq">Next →</button>
+    </div>
+  </section>
+
+  <footer id="hint">Drag to orbit · Scroll to zoom · Click a card to inspect · ←/→ to step</footer>
+
+  <script src="./vendor/katex/katex.min.js"></script>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>

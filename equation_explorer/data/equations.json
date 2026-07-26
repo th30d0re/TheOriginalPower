@@ -1,0 +1,2245 @@
+{
+ "chapters": [
+  {
+   "index": 0,
+   "title": "System Initialization: The Geometry of Extraction"
+  },
+  {
+   "index": 1,
+   "title": "Dynamical Systems Formulation of the Extraction Architecture"
+  },
+  {
+   "index": 2,
+   "title": "Redefining Racism"
+  },
+  {
+   "index": 3,
+   "title": "Version 1.0: Initializing the Vector (15th-Century Portugal)"
+  },
+  {
+   "index": 4,
+   "title": "The Application: Bacon's Rebellion, the Buffer Class, and the Constitutional Patch (1676--1787)"
+  },
+  {
+   "index": 5,
+   "title": "The Gendered Axis: Coverture, Eugenics, and the Reproductive Extraction Kernel"
+  },
+  {
+   "index": 6,
+   "title": "The Enforcement Engine: Slave Patrols, the 13th Amendment, and the Compounding Model (1704--1865)"
+  },
+  {
+   "index": 7,
+   "title": "The Containment: Pullman, Redlining, and the Wages of Whiteness (1894--1965)"
+  },
+  {
+   "index": 8,
+   "title": "Tweedism and the Puppet Class: The Algorithmic Filter on Democracy"
+  },
+  {
+   "index": 9,
+   "title": "The Recompile: COINTELPRO, the Variable Swap, and the War on Drugs (1968--1994)"
+  },
+  {
+   "index": 10,
+   "title": "The Full Algorithm: Demographic Paradox, Cannibalization, and the 5-Tier Reveal (1994--Present)"
+  },
+  {
+   "index": 11,
+   "title": "The Kinetic Guarantee: Arms Asymmetry, the Second Amendment, and the Disarmament Timeline"
+  },
+  {
+   "index": 12,
+   "title": "The Contradiction: Why Reform Serves the Algorithm"
+  },
+  {
+   "index": 13,
+   "title": "The Global Containment Field: Scaling the Algorithm"
+  },
+  {
+   "index": 14,
+   "title": "The Algorithmic Epoch: Real-Time Subjugation and the Necessity of the Counter-Virus"
+  },
+  {
+   "index": 15,
+   "title": "The Spectral Carrier: Electoral Cycles and the Interference Engine"
+  },
+  {
+   "index": 16,
+   "title": "The Single-Issue Trap and Multi-Axis Noise Cancellation: A Boston Case Study"
+  },
+  {
+   "index": 17,
+   "title": "Conclusion"
+  },
+  {
+   "index": 18,
+   "title": "Equation Registry and Era-Level Calibration"
+  },
+  {
+   "index": 19,
+   "title": "Geometric Algebra and the N-Dimensional Wage"
+  },
+  {
+   "index": 20,
+   "title": "The Photon Model of Polarizing Information"
+  },
+  {
+   "index": 21,
+   "title": "Universality and the Finite Topology of Power"
+  }
+ ],
+ "equations": [
+  {
+   "id": "E063",
+   "chapter": "The Enforcement Engine: Slave Patrols, the 13th Amendment, and the Compounding Model (1704--1865)",
+   "chapterIndex": 6,
+   "section": "Introducing the Fourth Variable: The Enforcement Class ($F_{\\text{enforce",
+   "label": "eq:6.1-lethal-autonomy-gradient",
+   "line": 0,
+   "latex": "\\text{Lethal Autonomy}(F_{\\text{enforce}}) \\gg \\text{Lethal Autonomy}(I_{\\text{buffer}}) \\gg \\text{Lethal Autonomy}(O) = 0"
+  },
+  {
+   "id": "E153",
+   "chapter": "The Global Containment Field: Scaling the Algorithm",
+   "chapterIndex": 13,
+   "section": "The International 5-Tier Hierarchy",
+   "label": "eq:13.1-global-compounding-capacity",
+   "line": 0,
+   "latex": "O_{\\text{global}}^{\\text{capacity}}(t) = O_{\\text{global}}^{\\text{capacity}}(t_0) \\cdot \\prod_{i} (1 - \\alpha_i P_i^{\\text{imperial}})"
+  },
+  {
+   "id": "E205",
+   "chapter": "The Spectral Carrier: Electoral Cycles and the Interference Engine",
+   "chapterIndex": 15,
+   "section": "Source and Preprocessing",
+   "label": "eq:21.3-share-definitions",
+   "line": 0,
+   "latex": "s_{\\text{class}}(t) = \\frac{C(t)}{C(t) + I(t)}, \\qquad s_{\\text{identity}}(t) = \\frac{I(t)}{C(t) + I(t)}."
+  },
+  {
+   "id": "E001",
+   "chapter": "System Initialization: The Geometry of Extraction",
+   "chapterIndex": 0,
+   "section": "Reproducibility Standard",
+   "label": "eq:0.1-unified-lorentz-force",
+   "line": 343,
+   "latex": "\\vec{F}_{\\text{total}} = \\mathbf{Q}\\,\\sum_{j=1}^{M}\\vec{\\mathcal{E}}_{\\text{mat}}^{(j)} + \\mathbf{Q}\\left(\\vec{v} \\times \\sum_{k=1}^{N} \\rho_k \\vec{B}_k\\right)"
+  },
+  {
+   "id": "E002",
+   "chapter": "System Initialization: The Geometry of Extraction",
+   "chapterIndex": 0,
+   "section": "Reproducibility Standard",
+   "label": "eq:0.1a-self-exciting-generator",
+   "line": 356,
+   "latex": "\\frac{\\partial \\vec{B}_k}{\\partial t} = \\eta_k \\left( \\mathbf{Q} \\cdot \\sum_{j=1}^{M}\\vec{\\mathcal{E}}_{\\text{mat}}^{(j)} \\right) - \\lambda_k \\vec{B}_k"
+  },
+  {
+   "id": "E003",
+   "chapter": "System Initialization: The Geometry of Extraction",
+   "chapterIndex": 0,
+   "section": "The Hardware Mapping: Five Tiers as Circuit Elements",
+   "label": "eq:0.2-tier-voltage-drop",
+   "line": 462,
+   "latex": "\\text{Benefit}(E) \\gg \\text{Benefit}(P_{\\text{uppet}}) > \\text{Benefit}(F_{\\text{enforce}}) > \\text{Benefit}(I_{\\text{buffer}}) > \\text{Benefit}(O)"
+  },
+  {
+   "id": "E004",
+   "chapter": "System Initialization: The Geometry of Extraction",
+   "chapterIndex": 0,
+   "section": "The Tri-Modal Enclosure Model",
+   "label": "eq:0.4-mat-psych-composite",
+   "line": 492,
+   "latex": "\\mathcal{S}_{\\text{mat}} = \\frac{e_1 + e_2}{2}, \\qquad \\mathcal{S}_{\\text{psych}} = e_3"
+  },
+  {
+   "id": "E005",
+   "chapter": "System Initialization: The Geometry of Extraction",
+   "chapterIndex": 0,
+   "section": "The Tri-Modal Enclosure Model",
+   "label": "eq:1.1-enclosure-score",
+   "line": 499,
+   "latex": "\\mathcal{S}_{\\text{enc}} = \\frac{1}{\\sqrt{2}}\\sqrt{\\,\\mathcal{S}_{\\text{mat}}^{2} + \\mathcal{S}_{\\text{psych}}^{2}\\,} = \\frac{1}{\\sqrt{2}}\\sqrt{\\left(\\frac{e_1 + e_2}{2}\\right)^{\\!2} + e_3^{2}}"
+  },
+  {
+   "id": "E006",
+   "chapter": "System Initialization: The Geometry of Extraction",
+   "chapterIndex": 0,
+   "section": "The Tri-Modal Enclosure Model",
+   "label": "eq:1.2-total-enclosure",
+   "line": 523,
+   "latex": "\\mathcal{S}_{\\text{enc}}(O) = \\frac{1}{\\sqrt{2}}\\sqrt{\\left(\\frac{1+1}{2}\\right)^{\\!2} + 1^{2}} = \\frac{1}{\\sqrt{2}}\\sqrt{1 + 1} = 1.0 \\quad \\text{(Absolute Subjugation)}"
+  },
+  {
+   "id": "E007",
+   "chapter": "System Initialization: The Geometry of Extraction",
+   "chapterIndex": 0,
+   "section": "The Resistor $R$ --- Bureaucratic Friction",
+   "label": "eq:0.3-drude-conductivity",
+   "line": 719,
+   "latex": "\\sigma = \\frac{n \\cdot q^2 \\cdot \\tau}{m}"
+  },
+  {
+   "id": "E008",
+   "chapter": "System Initialization: The Geometry of Extraction",
+   "chapterIndex": 0,
+   "section": "The Resistor $R$ --- Bureaucratic Friction",
+   "label": "eq:0.4-systemic-resistance",
+   "line": 725,
+   "latex": "R = \\frac{L}{\\sigma A} = \\frac{m \\cdot L}{n \\cdot q^2 \\cdot \\tau \\cdot A}"
+  },
+  {
+   "id": "E009",
+   "chapter": "System Initialization: The Geometry of Extraction",
+   "chapterIndex": 0,
+   "section": "The Capacitor $C$ --- The Enclosure Models",
+   "label": "eq:0.5-enclosure-capacitance",
+   "line": 742,
+   "latex": "C = \\frac{\\epsilon A}{d}"
+  },
+  {
+   "id": "E010",
+   "chapter": "System Initialization: The Geometry of Extraction",
+   "chapterIndex": 0,
+   "section": "The Inductor $L$ --- Cultural Inertia and Tradition",
+   "label": "eq:0.6-inductive-kickback",
+   "line": 761,
+   "latex": "V = -L\\,\\frac{di}{dt}"
+  },
+  {
+   "id": "E011",
+   "chapter": "System Initialization: The Geometry of Extraction",
+   "chapterIndex": 0,
+   "section": "DC mode: open, unidirectional extraction",
+   "label": "eq:0.7-dc-power-baseline",
+   "line": 818,
+   "latex": "P_{\\text{DC}} \\;=\\; V \\cdot I \\quad\\text{(constant; no phase angle, no reactive component).}"
+  },
+  {
+   "id": "E012",
+   "chapter": "System Initialization: The Geometry of Extraction",
+   "chapterIndex": 0,
+   "section": "DC mode: open, unidirectional extraction",
+   "label": "eq:0.7a-dc-wage-collapse",
+   "line": 827,
+   "latex": "W_{\\text{DC}} \\;=\\; \\psi_m \\;+\\; j\\!\\cdot\\!0 \\;=\\; \\psi_m, \\qquad \\theta = 0."
+  },
+  {
+   "id": "E013",
+   "chapter": "System Initialization: The Geometry of Extraction",
+   "chapterIndex": 0,
+   "section": "AC mode: phase-shifted, plausibly-neutral extraction",
+   "label": "eq:0.8-ac-complex-power",
+   "line": 848,
+   "latex": "S \\;=\\; V \\cdot I^{*} \\;=\\; |V|\\,|I|\\,e^{j\\theta} \\;=\\; P_{\\text{real}} \\;+\\; jQ_{\\text{reactive}}"
+  },
+  {
+   "id": "E014",
+   "chapter": "System Initialization: The Geometry of Extraction",
+   "chapterIndex": 0,
+   "section": "AC mode: phase-shifted, plausibly-neutral extraction",
+   "label": "eq:0.9-ac-real-reactive-decomp",
+   "line": 851,
+   "latex": "P_{\\text{real}} \\;=\\; |V|\\,|I|\\cos\\theta \\;=\\; \\psi_m, \\qquad\nQ_{\\text{reactive}} \\;=\\; |V|\\,|I|\\sin\\theta \\;=\\; \\psi_s."
+  },
+  {
+   "id": "E015",
+   "chapter": "System Initialization: The Geometry of Extraction",
+   "chapterIndex": 0,
+   "section": "N-weighted phase AC: the general intersectional case",
+   "label": "eq:0.10-n-weighted-phase-current",
+   "line": 891,
+   "latex": "i_k(t) \\;=\\; \\rho_k\\,A_k\\,\\cos\\!\\bigl(\\omega t + \\phi_k\\bigr),\n\\qquad k = 1, \\ldots, N."
+  },
+  {
+   "id": "E016",
+   "chapter": "System Initialization: The Geometry of Extraction",
+   "chapterIndex": 0,
+   "section": "N-weighted phase AC: the general intersectional case",
+   "label": "eq:0.11-elite-node-kirchhoff",
+   "line": 896,
+   "latex": "I_E(t) \\;=\\; \\sum_{k=1}^{N} \\rho_k\\,A_k\\,\\cos\\!\\bigl(\\omega t + \\phi_k\\bigr)."
+  },
+  {
+   "id": "E017",
+   "chapter": "System Initialization: The Geometry of Extraction",
+   "chapterIndex": 0,
+   "section": "Work in DC mode",
+   "label": "eq:0.13-systemic-work-dc",
+   "line": 1013,
+   "latex": "W_{\\text{sys}}^{\\text{DC}}(t_0, t_1) \\;=\\; \\int_{t_0}^{t_1} V \\cdot I \\, d\\tau \\;=\\; V \\cdot I \\cdot (t_1 - t_0)."
+  },
+  {
+   "id": "E018",
+   "chapter": "System Initialization: The Geometry of Extraction",
+   "chapterIndex": 0,
+   "section": "Work in AC mode and the Buffer-Class Work Theorem",
+   "label": "eq:0.14-systemic-work-ac",
+   "line": 1032,
+   "latex": "W_{\\text{sys}}^{\\text{AC}}(t_0, t_1) \\;=\\; \\int_{t_0}^{t_1} \\operatorname{Re}\\!\\bigl[V(\\tau)\\, I^{*}(\\tau)\\bigr]\\, d\\tau \\;=\\; \\int_{t_0}^{t_1} |V(\\tau)|\\,|I(\\tau)|\\,\\cos\\theta(\\tau)\\, d\\tau."
+  },
+  {
+   "id": "E019",
+   "chapter": "System Initialization: The Geometry of Extraction",
+   "chapterIndex": 0,
+   "section": "Work in AC mode and the Buffer-Class Work Theorem",
+   "label": "eq:0.15-buffer-class-work-theorem",
+   "line": 1051,
+   "latex": "W_{I_{\\text{buffer}}}^{\\text{psych}}(t_0, t_1) \\;=\\; \\int_{t_0}^{t_1} \\vec{F}_B \\cdot \\vec{v}(\\tau)\\, d\\tau \\;=\\; \\int_{t_0}^{t_1} \\mathbf{Q}\\,(\\vec{v} \\times \\vec{B}) \\cdot \\vec{v}\\, d\\tau \\;\\equiv\\; 0."
+  },
+  {
+   "id": "E020",
+   "chapter": "System Initialization: The Geometry of Extraction",
+   "chapterIndex": 0,
+   "section": "The Reparations Integral",
+   "label": "eq:0.16-reparations-integral",
+   "line": 1092,
+   "latex": "\\mathcal{R}(t_0, t_{\\text{now}}) \\;\\equiv\\; \\int_{t_0}^{t_{\\text{now}}} \\operatorname{Re}\\!\\Bigl[V_{\\text{state}}(\\tau)\\, I_{O}^{*}(\\tau)\\Bigr]\\, d\\tau \\;=\\; \\int_{t_0}^{t_{\\text{now}}} \\sum_{k=1}^{N} \\rho_k\\, |V|\\,|I_O|\\,\\cos\\theta_k(\\tau)\\, d\\tau."
+  },
+  {
+   "id": "E021",
+   "chapter": "System Initialization: The Geometry of Extraction",
+   "chapterIndex": 0,
+   "section": "The Reparations Integral",
+   "label": "eq:0.ga-ndim",
+   "line": 1156,
+   "latex": "W = \\psi_m + \\sum_{k=1}^{N} j_k \\left(\\rho_k \\cdot \\psi_{s,k}\\right)"
+  },
+  {
+   "id": "E022",
+   "chapter": "Dynamical Systems Formulation of the Extraction Architecture",
+   "chapterIndex": 1,
+   "section": "The Rayleigh Dissipation Function",
+   "label": "eq:lag-euler-lagrange",
+   "line": 1204,
+   "latex": "\\frac{d}{dt}\\left(\\frac{\\partial \\mathcal{L}}{\\partial \\dot{q}_i}\\right) - \\frac{\\partial \\mathcal{L}}{\\partial q_i} + \\frac{\\partial \\mathcal{D}}{\\partial \\dot{q}_i} = Q_i"
+  },
+  {
+   "id": "E023",
+   "chapter": "Dynamical Systems Formulation of the Extraction Architecture",
+   "chapterIndex": 1,
+   "section": "The Augmented Form",
+   "label": "eq:lag-augmented",
+   "line": 1212,
+   "latex": "\\boxed{\\mathcal{L}^*(q, \\dot{q}, t) = T(\\dot{q}, t) - V(q, t) - \\mathcal{D}(q, \\dot{q}, t) + \\lambda\\bigl(\\tau - M_{\\text{eff}}(t)\\bigr)}"
+  },
+  {
+   "id": "E024",
+   "chapter": "Redefining Racism",
+   "chapterIndex": 2,
+   "section": "The In-Group/Out-Group Binary as a Coarse Projection",
+   "label": "eq:binary-partition",
+   "line": 1344,
+   "latex": "U = I \\,\\dot\\cup\\, O,\n\\qquad\nI \\cap O = \\varnothing ."
+  },
+  {
+   "id": "E025",
+   "chapter": "Redefining Racism",
+   "chapterIndex": 2,
+   "section": "The In-Group/Out-Group Binary as a Coarse Projection",
+   "label": "eq:refined-five-tier-partition",
+   "line": 1356,
+   "latex": "\\operatorname{Refine}(I)\n=\nE \\,\\dot\\cup\\, P_{\\text{uppet}} \\,\\dot\\cup\\, F_{\\text{enforce}}\n\\,\\dot\\cup\\, I_{\\text{buffer}},\n\\qquad\nE, P_{\\text{uppet}}, F_{\\text{enforce}}, I_{\\text{buffer}} \\subset I ."
+  },
+  {
+   "id": "E026",
+   "chapter": "Redefining Racism",
+   "chapterIndex": 2,
+   "section": "The In-Group/Out-Group Binary as a Coarse Projection",
+   "label": "eq:outgroup-internal-partition",
+   "line": 1374,
+   "latex": "O\n=\nO_{\\text{racialized}} \\,\\dot\\cup\\, O_{\\text{adjacent},1}\n\\,\\dot\\cup\\, O_{\\text{adjacent},2}\n\\,\\dot\\cup\\, \\cdots \\,\\dot\\cup\\, O_{\\text{adjacent},m}."
+  },
+  {
+   "id": "E027",
+   "chapter": "Redefining Racism",
+   "chapterIndex": 2,
+   "section": "The In-Group/Out-Group Binary as a Coarse Projection",
+   "label": "eq:recursive-local-partition",
+   "line": 1388,
+   "latex": "X = X^{+}_{\\alpha} \\,\\dot\\cup\\, X^{-}_{\\alpha},\n\\qquad\nX^{+}_{\\alpha} \\cap X^{-}_{\\alpha} = \\varnothing ,"
+  },
+  {
+   "id": "E028",
+   "chapter": "Redefining Racism",
+   "chapterIndex": 2,
+   "section": "Racism as Primary Example",
+   "label": "eq:1.3-conventional-causal-arrow",
+   "line": 1485,
+   "latex": "\\text{Individual Prejudice} \\rightarrow \\text{Discriminatory Actions} \\rightarrow \\text{Systemic Outcomes}"
+  },
+  {
+   "id": "E029",
+   "chapter": "Redefining Racism",
+   "chapterIndex": 2,
+   "section": "Racism as Primary Example",
+   "label": "eq:1.4-elite-causal-arrow",
+   "line": 1490,
+   "latex": "\\text{Elite Economic Interests} \\rightarrow \\text{Systemic Racialization} \\rightarrow \\text{Interpersonal Prejudice}"
+  },
+  {
+   "id": "E030",
+   "chapter": "Redefining Racism",
+   "chapterIndex": 2,
+   "section": "The Core Payload: A Resource-Mining Rootkit",
+   "label": "eq:1.5-kernel-optimization",
+   "line": 1730,
+   "latex": "\\max \\mathcal{E}(t) \\quad \\text{subject to} \\quad M(t) < \\tau"
+  },
+  {
+   "id": "E031",
+   "chapter": "Redefining Racism",
+   "chapterIndex": 2,
+   "section": "The Core Payload: A Resource-Mining Rootkit",
+   "label": "eq:1.5a-minimum-forcing-threshold",
+   "line": 1737,
+   "latex": "\\mathcal{A}_{\\text{abuse}}(t)\n=\n\\int_{0}^{t} \\mathcal{E}_{\\max}(s)\\,ds\n\\quad \\text{and breach occurs when} \\quad\n\\mathcal{A}_{\\text{abuse}}(t) \\geq \\tau_{\\text{MFT}} ."
+  },
+  {
+   "id": "E032",
+   "chapter": "Redefining Racism",
+   "chapterIndex": 2,
+   "section": "Polymorphic Code: The Interface Swap",
+   "label": "eq:1.6-interface-strategy-set",
+   "line": 1833,
+   "latex": "S \\in \\{\\text{partition},\\text{integration},\\text{direct repression},\\text{externalization}\\}"
+  },
+  {
+   "id": "E033",
+   "chapter": "Redefining Racism",
+   "chapterIndex": 2,
+   "section": "Polymorphic Code: The Interface Swap",
+   "label": "eq:1.7-interface-optimizer",
+   "line": 1837,
+   "latex": "S^\\ast(t) = \\arg\\min_{S} \\left[C_{\\text{coercive}}(S,t) + C_{\\text{legitimacy}}(S,t) + C_{\\text{economic}}(S,t)\\right]"
+  },
+  {
+   "id": "E034",
+   "chapter": "Redefining Racism",
+   "chapterIndex": 2,
+   "section": "The Backlash Constant: Racism as a Damped RLC Circuit",
+   "label": "eq:1.7a-rlc-governing",
+   "line": 1879,
+   "latex": "L\\,\\ddot{q} + R\\,\\dot{q} + \\frac{1}{C}\\,q = V(t)"
+  },
+  {
+   "id": "E035",
+   "chapter": "Redefining Racism",
+   "chapterIndex": 2,
+   "section": "The Backlash Constant: Racism as a Damped RLC Circuit",
+   "label": "eq:1.7b-rlc-solution",
+   "line": 1883,
+   "latex": "q(t) = Q_0\\,e^{-\\alpha t}\\!\\left[\\cos(\\omega_d t) + \\frac{\\alpha}{\\omega_d}\\sin(\\omega_d t)\\right]"
+  },
+  {
+   "id": "E036",
+   "chapter": "Redefining Racism",
+   "chapterIndex": 2,
+   "section": "The Backlash Constant: Racism as a Damped RLC Circuit",
+   "label": "eq:1.8-suppression-envelope",
+   "line": 1983,
+   "latex": "\\Sigma_{\\text{sup}}(t) = \\psi_s(t) + \\psi_m(t) + R(t) + \\Phi_{\\text{load}}(t)"
+  },
+  {
+   "id": "E037",
+   "chapter": "Redefining Racism",
+   "chapterIndex": 2,
+   "section": "The Backlash Constant: Racism as a Damped RLC Circuit",
+   "label": "eq:1.9-crash-condition-derivative",
+   "line": 1987,
+   "latex": "\\frac{dM}{dt} > \\frac{d\\Sigma_{\\text{sup}}}{dt}"
+  },
+  {
+   "id": "E038",
+   "chapter": "Redefining Racism",
+   "chapterIndex": 2,
+   "section": "The Backlash Constant: Racism as a Damped RLC Circuit",
+   "label": "eq:1.10-effective-coherence",
+   "line": 1991,
+   "latex": "M_{\\text{eff}}(t) = M(t) - \\lambda \\Phi_{\\text{load}}(t), \\quad M_{\\text{eff}}(t) > \\tau"
+  },
+  {
+   "id": "E039",
+   "chapter": "Redefining Racism",
+   "chapterIndex": 2,
+   "section": "The Psychological Wage as Systemic Inductor: Inductive Trickle-Charging and Future Violence",
+   "label": "eq:1.7c-faraday-induction",
+   "line": 2039,
+   "latex": "\\nabla \\times \\vec{E} = -\\frac{\\partial \\vec{B}}{\\partial t}"
+  },
+  {
+   "id": "E040",
+   "chapter": "Redefining Racism",
+   "chapterIndex": 2,
+   "section": "The Energy Recovery Circuit: Interface Swap as Multi-Stage Coil Gun",
+   "label": "eq:1.7d-back-emf",
+   "line": 2057,
+   "latex": "V_{\\text{back-EMF}} = -L\\,\\frac{di}{dt}"
+  },
+  {
+   "id": "E041",
+   "chapter": "Redefining Racism",
+   "chapterIndex": 2,
+   "section": "The Energy Recovery Circuit: Interface Swap as Multi-Stage Coil Gun",
+   "label": "eq:1.7e-energy-recovery",
+   "line": 2070,
+   "latex": "U_{\\text{recovered}} = \\frac{1}{2}LI^2"
+  },
+  {
+   "id": "E042",
+   "chapter": "Redefining Racism",
+   "chapterIndex": 2,
+   "section": "Fractal Execution: The Self-Similar Architecture",
+   "label": "eq:1.11-phase-loading",
+   "line": 2157,
+   "latex": "\\Phi_j = \\sum_{k=1}^{K} \\phi_{k,j}, \\qquad\n\\Phi_{\\text{load}}(t) = \\operatorname{Dispersion}\\!\\left(\\{\\Phi_j\\}_{j=1}^{N}\\right) = 1 - \\left|\\frac{1}{N}\\sum_{j=1}^{N} e^{i\\Phi_j}\\right| \\in [0,1]"
+  },
+  {
+   "id": "E043",
+   "chapter": "Version 1.0: Initializing the Vector (15th-Century Portugal)",
+   "chapterIndex": 3,
+   "section": "The Vector Equation of Racism",
+   "label": "eq:2.1-racism-vector",
+   "line": 2422,
+   "latex": "\\vec{R}_{\\text{acism}} = M_{\\text{agnitude}} \\cdot \\hat{d}_{\\text{state}}"
+  },
+  {
+   "id": "E044",
+   "chapter": "Version 1.0: Initializing the Vector (15th-Century Portugal)",
+   "chapterIndex": 3,
+   "section": "The Original Implicit Contract and the Psychological Wage",
+   "label": "eq:2.2-status-suppression-allocation",
+   "line": 2494,
+   "latex": "S_{\\text{tatus}}(I) = \\text{Base\\_Humanity} + \\psi(t), \\quad \\psi(t) = \\psi_s(t) + \\psi_m(t)"
+  },
+  {
+   "id": "E045",
+   "chapter": "Version 1.0: Initializing the Vector (15th-Century Portugal)",
+   "chapterIndex": 3,
+   "section": "The Original Implicit Contract and the Psychological Wage",
+   "label": "eq:2.3-psi-null-in-survival",
+   "line": 2497,
+   "latex": "S_{\\text{tatus}}(I) > S_{\\text{tatus}}(O_{\\text{racialized}})"
+  },
+  {
+   "id": "E046",
+   "chapter": "Version 1.0: Initializing the Vector (15th-Century Portugal)",
+   "chapterIndex": 3,
+   "section": "The Electrodynamic Reframing: $\\psi$ as Complex Power",
+   "label": "eq:2.2a-complex-suppression-allocation",
+   "line": 2510,
+   "latex": "W = \\psi_m + j\\psi_s"
+  },
+  {
+   "id": "E047",
+   "chapter": "Version 1.0: Initializing the Vector (15th-Century Portugal)",
+   "chapterIndex": 3,
+   "section": "The Electrodynamic Reframing: $\\psi$ as Complex Power",
+   "label": "eq:2.2b-complex-wage-def",
+   "line": 2522,
+   "latex": "W = \\psi_m + j\\psi_s"
+  },
+  {
+   "id": "E048",
+   "chapter": "Version 1.0: Initializing the Vector (15th-Century Portugal)",
+   "chapterIndex": 3,
+   "section": "The Electrodynamic Reframing: $\\psi$ as Complex Power",
+   "label": "eq:2.2c-polar-form",
+   "line": 2535,
+   "latex": "W = R \\angle\\theta = R e^{j\\theta}, \\quad R = |W| = \\sqrt{\\psi_m^2 + \\psi_s^2}"
+  },
+  {
+   "id": "E049",
+   "chapter": "Version 1.0: Initializing the Vector (15th-Century Portugal)",
+   "chapterIndex": 3,
+   "section": "The Electrodynamic Reframing: $\\psi$ as Complex Power",
+   "label": "eq:2.2d-imaginary-squaring",
+   "line": 2559,
+   "latex": "(j\\psi_s)^2 = j^2 \\psi_s^2 = -\\psi_s^2"
+  },
+  {
+   "id": "E050",
+   "chapter": "Version 1.0: Initializing the Vector (15th-Century Portugal)",
+   "chapterIndex": 3,
+   "section": "The Electrodynamic Reframing: $\\psi$ as Complex Power",
+   "label": "eq:2.2e-solidarity-addition",
+   "line": 2574,
+   "latex": "W + W^* = (\\psi_m + j\\psi_s) + (\\psi_m - j\\psi_s) = 2\\psi_m"
+  },
+  {
+   "id": "E051",
+   "chapter": "Version 1.0: Initializing the Vector (15th-Century Portugal)",
+   "chapterIndex": 3,
+   "section": "The Roman Control Case: Slavery Without Racial Coding",
+   "label": "eq:2.4-roman-membership-function",
+   "line": 2621,
+   "latex": "O_{\\text{slave}}^{\\text{Roman}} = f(\\text{conquest}, \\text{debt}, \\text{crime}, \\text{birth})"
+  },
+  {
+   "id": "E052",
+   "chapter": "Version 1.0: Initializing the Vector (15th-Century Portugal)",
+   "chapterIndex": 3,
+   "section": "The Roman Control Case: Slavery Without Racial Coding",
+   "label": "eq:2.5-american-racial-function",
+   "line": 2629,
+   "latex": "O_{\\text{racialized}}^{\\text{American}} = f(\\text{phenotype})"
+  },
+  {
+   "id": "E053",
+   "chapter": "Version 1.0: Initializing the Vector (15th-Century Portugal)",
+   "chapterIndex": 3,
+   "section": "The Religious Partition: Pre-Racial Ideological Justification",
+   "label": "eq:2.6-roman-american-structural-parallel",
+   "line": 2646,
+   "latex": "O_{\\text{religious}}^{\\text{pre-1450}} = f(\\text{doctrine, sect, heresy}) \\quad \\longrightarrow \\quad O_{\\text{racialized}}^{\\text{post-1450}} = f(\\text{phenotype})"
+  },
+  {
+   "id": "E054",
+   "chapter": "Version 1.0: Initializing the Vector (15th-Century Portugal)",
+   "chapterIndex": 3,
+   "section": "Introducing the First Three Variables: The Elite ($E$), the Out-group ($O_{\\text{racialized",
+   "label": "eq:2.7-three-tier-portugal-inequality",
+   "line": 2690,
+   "latex": "\\text{Benefit}(E) \\gg \\text{Benefit}(I) > \\text{Benefit}(O_{\\text{racialized}})"
+  },
+  {
+   "id": "E055",
+   "chapter": "Version 1.0: Initializing the Vector (15th-Century Portugal)",
+   "chapterIndex": 3,
+   "section": "Institutional Legitimation: The Role of Church and Science",
+   "label": "eq:2.8-church-science-feedback-loop",
+   "line": 2742,
+   "latex": "\\begin{aligned}\n&\\text{Exploitation} \\rightarrow \\text{Observed disparities} \\rightarrow \\text{Theological/Scientific ``explanation''} \\\\\n&\\rightarrow \\text{Naturalization} \\rightarrow \\text{Expanded exploitation}\n\\end{aligned}"
+  },
+  {
+   "id": "E056",
+   "chapter": "The Application: Bacon's Rebellion, the Buffer Class, and the Constitutional Patch (1676--1787)",
+   "chapterIndex": 4,
+   "section": "The Application: Bacon's Rebellion and the Partition of the Poor (1676)",
+   "label": "eq:3.1-bacon-solidarity-condition",
+   "line": 2874,
+   "latex": "\\text{If} \\quad (L_{white} + L_{black}) > E \\quad \\rightarrow \\quad \\text{Revolution}"
+  },
+  {
+   "id": "E057",
+   "chapter": "The Application: Bacon's Rebellion, the Buffer Class, and the Constitutional Patch (1676--1787)",
+   "chapterIndex": 4,
+   "section": "The Boundary Enforcement Act (1691): Criminalizing the Crossing",
+   "label": "eq:3.2-boundary-enforcement-1691",
+   "line": 2923,
+   "latex": "I_{\\text{buffer}} \\cap O_{\\text{racialized}} = \\emptyset"
+  },
+  {
+   "id": "E058",
+   "chapter": "The Application: Bacon's Rebellion, the Buffer Class, and the Constitutional Patch (1676--1787)",
+   "chapterIndex": 4,
+   "section": "The Patch: The Explicit Codification of ``Whiteness'' (1705)",
+   "label": "eq:3.3-race-destroys-class",
+   "line": 2954,
+   "latex": "\\text{Buffer Created:} \\quad I_{poor} \\rightarrow \\text{Defender of } E"
+  },
+  {
+   "id": "E059",
+   "chapter": "The Application: Bacon's Rebellion, the Buffer Class, and the Constitutional Patch (1676--1787)",
+   "chapterIndex": 4,
+   "section": "Formalizing the Buffer Class ($I_{\\text{buffer",
+   "label": "eq:3.4-three-tier-post-bacon",
+   "line": 2974,
+   "latex": "\\text{Benefit}(E) \\gg \\text{Benefit}(I_{\\text{buffer}}) > \\text{Benefit}(O_{\\text{racialized}})"
+  },
+  {
+   "id": "E060",
+   "chapter": "The Gendered Axis: Coverture, Eugenics, and the Reproductive Extraction Kernel",
+   "chapterIndex": 5,
+   "section": "The Statutory Terminal Layer: Assault Weapons Bans and the Three-Tier Compounding Architecture",
+   "label": "eq:awb_dualtrack",
+   "line": 3759,
+   "latex": "\\text{Second Amendment Status}(\\text{arms},\\, x) =\n\\begin{cases}\n\\text{constitutionally protected} & x \\in I_{\\text{buffer}} \\\\\n\\text{felony prosecution} & x \\in O_{\\text{racialized}}\n\\end{cases}"
+  },
+  {
+   "id": "E061",
+   "chapter": "The Gendered Axis: Coverture, Eugenics, and the Reproductive Extraction Kernel",
+   "chapterIndex": 5,
+   "section": "The Early Detection Theorem: Why Compounded Intersections Recognize the Algorithm First",
+   "label": "eq:5.1-compliance-differential",
+   "line": 3883,
+   "latex": "\\Delta(x) \\;=\\; V_c(x) - V_r(x),"
+  },
+  {
+   "id": "E062",
+   "chapter": "The Gendered Axis: Coverture, Eugenics, and the Reproductive Extraction Kernel",
+   "chapterIndex": 5,
+   "section": "Detection Without Immunity: The Social-Reproduction Layer",
+   "label": "eq:5.2-detection-not-immunity",
+   "line": 3925,
+   "latex": "D_{\\text{detect}}(x) = f(m(x)) \\;\\not\\Rightarrow\\; P_{\\text{prop}}(x,a)=0,\n\\qquad\na \\in \\{\\text{gender, sexuality, ability, class, religion}\\}."
+  },
+  {
+   "id": "E064",
+   "chapter": "The Enforcement Engine: Slave Patrols, the 13th Amendment, and the Compounding Model (1704--1865)",
+   "chapterIndex": 6,
+   "section": "Introducing the Fourth Variable: The Enforcement Class ($F_{\\text{enforce",
+   "label": "eq:6.2-four-tier-benefit-ordering",
+   "line": 4551,
+   "latex": "\\text{Benefit}(E) \\gg \\text{Benefit}(F_{\\text{enforce}}) > \\text{Benefit}(I_{\\text{buffer}}) > \\text{Benefit}(O_{\\text{racialized}})"
+  },
+  {
+   "id": "E065",
+   "chapter": "The Enforcement Engine: Slave Patrols, the 13th Amendment, and the Compounding Model (1704--1865)",
+   "chapterIndex": 6,
+   "section": "The Constitutional Dialectic: Natural Rights and Restricted Recognition",
+   "label": "eq:const_dialectic",
+   "line": 4635,
+   "latex": "\\forall x \\in \\text{Humans}: R_{\\text{natural}}(x) = \\text{TRUE} \\quad \\land \\quad S_{\\text{recognition}}(x, 1791) = \\mathbf{1}[x \\in I_{\\text{propertied, white, male}}]."
+  },
+  {
+   "id": "E066",
+   "chapter": "The Enforcement Engine: Slave Patrols, the 13th Amendment, and the Compounding Model (1704--1865)",
+   "chapterIndex": 6,
+   "section": "The System Kernel: The 13th Amendment Loophole (1865)",
+   "label": "eq:6.3-thirteenth-amendment-exception",
+   "line": 4751,
+   "latex": "\\text{If} \\quad \\text{Status}(x) = \\text{Criminal}(C) \\quad \\rightarrow \\quad \\text{Status}(x) \\in S \\text{ (Slave)}"
+  },
+  {
+   "id": "E067",
+   "chapter": "The Enforcement Engine: Slave Patrols, the 13th Amendment, and the Compounding Model (1704--1865)",
+   "chapterIndex": 6,
+   "section": "The Compounding Model: From Summation to Multiplication",
+   "label": "eq:6.4-additive-policy-model",
+   "line": 4821,
+   "latex": "\\sum (O_{\\text{racialized}} \\cap P) > \\sum ((I \\setminus E) \\cap P) > \\sum (E \\cap P)"
+  },
+  {
+   "id": "E068",
+   "chapter": "The Enforcement Engine: Slave Patrols, the 13th Amendment, and the Compounding Model (1704--1865)",
+   "chapterIndex": 6,
+   "section": "The Compounding Model: From Summation to Multiplication",
+   "label": "eq:6.5-compounding-temporal-model",
+   "line": 4827,
+   "latex": "O_t^{\\text{capacity}} = O_{t-1}^{\\text{capacity}} \\cdot (1 - \\alpha P_t)"
+  },
+  {
+   "id": "E069",
+   "chapter": "The Enforcement Engine: Slave Patrols, the 13th Amendment, and the Compounding Model (1704--1865)",
+   "chapterIndex": 6,
+   "section": "The Compounding Model: From Summation to Multiplication",
+   "label": "eq:6.6-asymmetric-enforcement-multiplier",
+   "line": 4847,
+   "latex": "\\alpha_{O} P_t \\approx 3.73 \\cdot \\alpha_{I \\setminus E} P_t"
+  },
+  {
+   "id": "E070",
+   "chapter": "The Enforcement Engine: Slave Patrols, the 13th Amendment, and the Compounding Model (1704--1865)",
+   "chapterIndex": 6,
+   "section": "Case Study: The Asymmetric Enforcement Multiplier --- Cannabis Arrests, 2010--2018",
+   "label": "eq:6.7-policy-sequence-noncommutative",
+   "line": 4884,
+   "latex": "O_2^{\\text{capacity}} = O_0^{\\text{capacity}} \\cdot (1 - \\alpha P_1) \\cdot (1 - \\beta P_2)"
+  },
+  {
+   "id": "E071",
+   "chapter": "The Enforcement Engine: Slave Patrols, the 13th Amendment, and the Compounding Model (1704--1865)",
+   "chapterIndex": 6,
+   "section": "Case Study: The Asymmetric Enforcement Multiplier --- Cannabis Arrests, 2010--2018",
+   "label": "eq:6.8-capacity-chain-1619",
+   "line": 4892,
+   "latex": "\\begin{aligned}\nO_{1619}^{\\text{capacity}} &= O_{1450}^{\\text{capacity}} \\cdot (1 - \\alpha\\, P_{\\text{enslavement}}) \\\\[4pt]\nO_{1865}^{\\text{capacity}} &= O_{1619}^{\\text{capacity}} \\cdot (1 - \\beta\\, P_{\\text{13thAmendment}}) \\\\[4pt]\nO_{1934}^{\\text{capacity}} &= O_{1865}^{\\text{capacity}} \\cdot (1 - \\gamma\\, P_{\\text{redlining}}) \\\\[4pt]\nO_{1971}^{\\text{capacity}} &= O_{1934}^{\\text{capacity}} \\cdot (1 - \\delta\\, P_{\\text{WarOnDrugs}}) \n\\end{aligned}"
+  },
+  {
+   "id": "E072",
+   "chapter": "The Enforcement Engine: Slave Patrols, the 13th Amendment, and the Compounding Model (1704--1865)",
+   "chapterIndex": 6,
+   "section": "Case Study: The Asymmetric Enforcement Multiplier --- Cannabis Arrests, 2010--2018",
+   "label": "eq:6.12-capacity-compounding-full",
+   "line": 4899,
+   "latex": "O_{1971}^{\\text{capacity}} = O_{1450}^{\\text{capacity}} \\cdot (1-\\alpha\\, P_{\\text{enslavement}})(1-\\beta\\, P_{\\text{13thAmendment}})(1-\\gamma\\, P_{\\text{redlining}})(1-\\delta\\, P_{\\text{WarOnDrugs}})"
+  },
+  {
+   "id": "E073",
+   "chapter": "The Containment: Pullman, Redlining, and the Wages of Whiteness (1894--1965)",
+   "chapterIndex": 7,
+   "section": "The Theorem the Buffer Class Refused to Learn",
+   "label": "eq:7.1-pullman-corollary",
+   "line": 5415,
+   "latex": "j\\psi_s \\uparrow \\implies \\text{Solidarity}(I_{\\text{buffer}}, O_{\\text{racialized}}) \\downarrow \\implies \\text{Vulnerability}(I_{\\text{buffer}}) \\uparrow \\implies \\mathcal{E}(t) \\uparrow"
+  },
+  {
+   "id": "E074",
+   "chapter": "The Containment: Pullman, Redlining, and the Wages of Whiteness (1894--1965)",
+   "chapterIndex": 7,
+   "section": "The Theorem the Buffer Class Refused to Learn",
+   "label": "eq:7.2-pullman-squaring",
+   "line": 5419,
+   "latex": "W_{\\text{ARU}} = j\\psi_s, \\qquad W_{\\text{ARU}}^2 = (j\\psi_s)^2 = -\\psi_s^2 < 0."
+  },
+  {
+   "id": "E075",
+   "chapter": "The Containment: Pullman, Redlining, and the Wages of Whiteness (1894--1965)",
+   "chapterIndex": 7,
+   "section": "The Colonial Precedent: Namibia as the Containment Laboratory (1904--1908)",
+   "label": "eq:9.colonial-lab",
+   "line": 5459,
+   "latex": "\\mathcal{S}_{\\text{enc}}^{\\text{metro}}(t) = \\int_{t_0}^{t} K(t - \\tau) \\, \\mathcal{S}_{\\text{enc}}^{\\text{colonial}}(\\tau) \\, d\\tau"
+  },
+  {
+   "id": "E076",
+   "chapter": "Tweedism and the Puppet Class: The Algorithmic Filter on Democracy",
+   "chapterIndex": 8,
+   "section": "Graph, agents, and the leader-follower partition",
+   "label": "eq:8.1-vertex-partition-graph",
+   "line": 5770,
+   "latex": "\\mathcal{V} = \\mathcal{V}_L \\cup \\mathcal{V}_F, \\qquad |\\mathcal{V}_L| = m, \\ |\\mathcal{V}_F| = N-m,"
+  },
+  {
+   "id": "E077",
+   "chapter": "Tweedism and the Puppet Class: The Algorithmic Filter on Democracy",
+   "chapterIndex": 8,
+   "section": "Graph, agents, and the leader-follower partition",
+   "label": "eq:8.2-tier-to-graph-mapping",
+   "line": 5774,
+   "latex": "\\mathcal{V}_L \\longleftrightarrow E, \\qquad \\mathcal{V}_F \\longleftrightarrow P_{\\text{uppet}} \\cup F_{\\text{enforce}} \\cup I_{\\text{buffer}} \\cup O_{\\text{racialized}}."
+  },
+  {
+   "id": "E078",
+   "chapter": "Tweedism and the Puppet Class: The Algorithmic Filter on Democracy",
+   "chapterIndex": 8,
+   "section": "Fractional-order dynamics and historical memory",
+   "label": "eq:8.3-fractional-agent-dynamics",
+   "line": 5782,
+   "latex": "{}_{\\,0}D_t^{\\alpha}\\, q_i(t) = u_i(t), \\qquad \\alpha \\in (0,1],"
+  },
+  {
+   "id": "E079",
+   "chapter": "Tweedism and the Puppet Class: The Algorithmic Filter on Democracy",
+   "chapterIndex": 8,
+   "section": "Fractional-order dynamics and historical memory",
+   "label": "eq:8.4-compounding-chain-formal",
+   "line": 5788,
+   "latex": "O_{1971}^{\\text{capacity}} = O_{1450}^{\\text{capacity}} \\cdot (1-\\alpha P_{\\text{enslavement}})(1-\\beta P_{\\text{13thAmendment}})(1-\\gamma P_{\\text{redlining}})(1-\\delta P_{\\text{WarOnDrugs}})"
+  },
+  {
+   "id": "E080",
+   "chapter": "Tweedism and the Puppet Class: The Algorithmic Filter on Democracy",
+   "chapterIndex": 8,
+   "section": "Stationary leaders: the algorithmic definition of \\texorpdfstring{$E$",
+   "label": "eq:8.5-stationary-leader-condition",
+   "line": 5796,
+   "latex": "{}_{\\,0}D_t^{\\alpha}\\, q_i(t) = 0 \\qquad \\text{for all } i \\in \\mathcal{V}_L."
+  },
+  {
+   "id": "E081",
+   "chapter": "Tweedism and the Puppet Class: The Algorithmic Filter on Democracy",
+   "chapterIndex": 8,
+   "section": "State-dependent connectivity and the \\texorpdfstring{$\\delta$",
+   "label": "eq:8.6-proximity-connectivity-condition",
+   "line": 5878,
+   "latex": "\\|q_i(t) - q_j(t)\\|^2 \\leq \\delta."
+  },
+  {
+   "id": "E082",
+   "chapter": "Tweedism and the Puppet Class: The Algorithmic Filter on Democracy",
+   "chapterIndex": 8,
+   "section": "The navigation function and the gradient control law",
+   "label": "eq:8.7-navigation-components",
+   "line": 5968,
+   "latex": "\\gamma_i(q) = \\sum_{j \\in \\mathcal{N}_i} \\tfrac{1}{2}\\,\\|q_i - q_j\\|^2, \\qquad\n\\beta_i(q) = \\tfrac{1}{2}\\!\\!\\prod_{(i,j) \\in \\mathcal{E}_G}\\!\\! b_{ij}(q),\n\\quad b_{ij}(q) = \\delta - \\|q_i - q_j\\|^2,"
+  },
+  {
+   "id": "E083",
+   "chapter": "Tweedism and the Puppet Class: The Algorithmic Filter on Democracy",
+   "chapterIndex": 8,
+   "section": "The navigation function and the gradient control law",
+   "label": "eq:8.8-navigation-function",
+   "line": 5974,
+   "latex": "\\varphi_i(q) = \\frac{\\gamma_i(q)}{\\bigl(\\gamma_i(q)^k + \\beta_i(q)\\bigr)^{1/k}},"
+  },
+  {
+   "id": "E084",
+   "chapter": "Tweedism and the Puppet Class: The Algorithmic Filter on Democracy",
+   "chapterIndex": 8,
+   "section": "The navigation function and the gradient control law",
+   "label": "eq:8.9-gradient-control-law",
+   "line": 5978,
+   "latex": "u_i = -K_i\\, \\nabla_{q_i}\\,\\varphi_i(q), \\qquad K_i > 0."
+  },
+  {
+   "id": "E085",
+   "chapter": "Tweedism and the Puppet Class: The Algorithmic Filter on Democracy",
+   "chapterIndex": 8,
+   "section": "Theorem statements and interpretation",
+   "label": "eq:8.10-convex-hull-convergence",
+   "line": 6066,
+   "latex": "q_i(t) \\longrightarrow \\operatorname{Co}(q^L) \\qquad \\text{as } t \\to \\infty, \\quad i \\in \\mathcal{V}_F."
+  },
+  {
+   "id": "E086",
+   "chapter": "Tweedism and the Puppet Class: The Algorithmic Filter on Democracy",
+   "chapterIndex": 8,
+   "section": "Theorem statements and interpretation",
+   "label": "eq:8.11-mittag-leffler-stability",
+   "line": 6152,
+   "latex": "\\|x(t)\\| \\leq \\bigl\\{\\, m[x(t_0)]\\, E_{\\alpha,1}\\!\\bigl(-\\lambda(t-t_0)^{\\alpha}\\bigr)\\bigr\\}^{b},"
+  },
+  {
+   "id": "E087",
+   "chapter": "Tweedism and the Puppet Class: The Algorithmic Filter on Democracy",
+   "chapterIndex": 8,
+   "section": "The Interference Engine: How Identity Debates Cancel Class Solidarity",
+   "label": "eq:8.12-class-alignment-base-waves",
+   "line": 6402,
+   "latex": "S_{\\text{class}}(t) = A_{\\text{class}}(t)\\,\\sin\\bigl(2\\pi f_{\\text{class}}\\,t + \\varphi_{\\text{class}}\\bigr)"
+  },
+  {
+   "id": "E088",
+   "chapter": "Tweedism and the Puppet Class: The Algorithmic Filter on Democracy",
+   "chapterIndex": 8,
+   "section": "The Interference Engine: How Identity Debates Cancel Class Solidarity",
+   "label": "eq:8.13-subgroup-compound-phase",
+   "line": 6408,
+   "latex": "S_{\\text{id}}(t) = \\sum_{k=1}^{K} A_k(t)\\,\\sin\\bigl(2\\pi f_k\\,t + \\varphi_k\\bigr)"
+  },
+  {
+   "id": "E089",
+   "chapter": "Tweedism and the Puppet Class: The Algorithmic Filter on Democracy",
+   "chapterIndex": 8,
+   "section": "The Interference Engine: How Identity Debates Cancel Class Solidarity",
+   "label": "eq:8.14-net-solidarity-signal",
+   "line": 6414,
+   "latex": "S_{\\text{total}}(t) = S_{\\text{class}}(t) + S_{\\text{id}}(t) + \\eta(t)\n = A_{\\text{class}}(t)\\sin(2\\pi f_{\\text{class}} t + \\varphi_{\\text{class}})\n + \\sum_{k=1}^{K} A_k(t)\\sin(2\\pi f_k t + \\varphi_k)\n + \\eta(t)"
+  },
+  {
+   "id": "E090",
+   "chapter": "Tweedism and the Puppet Class: The Algorithmic Filter on Democracy",
+   "chapterIndex": 8,
+   "section": "The Interference Engine: How Identity Debates Cancel Class Solidarity",
+   "label": "eq:8.15-solidarity-collapse-condition",
+   "line": 6422,
+   "latex": "P_{\\text{class}}(t) = \\int_{f^{-}_{\\text{class}}}^{f^{+}_{\\text{class}}} |\\hat{S}_{\\text{total}}(f,t)|^2\\,df > \\tau"
+  },
+  {
+   "id": "E091",
+   "chapter": "Tweedism and the Puppet Class: The Algorithmic Filter on Democracy",
+   "chapterIndex": 8,
+   "section": "The Interference Engine: How Identity Debates Cancel Class Solidarity",
+   "label": "eq:8.16-interference-control-objective",
+   "line": 6426,
+   "latex": "P_{\\text{class}}(t) \\ll \\tau, \\qquad\n\\text{subject to}\\quad P_{\\text{class}}(t) + P_{\\text{id}}(t) + P_{\\eta} = \\mathrm{const.}"
+  },
+  {
+   "id": "E092",
+   "chapter": "Tweedism and the Puppet Class: The Algorithmic Filter on Democracy",
+   "chapterIndex": 8,
+   "section": "Case Study: Antisemitism as the Interference Engine's Obfuscation Protocol",
+   "label": "eq:10.antisemitism-variable-swap",
+   "line": 6473,
+   "latex": "S_{\\text{class}}(t) = A_{\\text{class}}(t)\\sin(2\\pi f_{\\text{class}} t + \\varphi_{\\text{class}}) \\;\\xrightarrow{\\;P_{\\text{obfusc}}\\;}\\; S_{\\text{id}}^{\\text{Jew}}(t) = A_{\\text{Jew}}(t)\\sin(2\\pi f_{\\text{Jew}} t + \\varphi_{\\text{Jew}})"
+  },
+  {
+   "id": "E093",
+   "chapter": "Tweedism and the Puppet Class: The Algorithmic Filter on Democracy",
+   "chapterIndex": 8,
+   "section": "Case Study: Antisemitism as the Interference Engine's Obfuscation Protocol",
+   "label": "eq:10.cross-band-suppression",
+   "line": 6489,
+   "latex": "\\mathcal{R}_{\\text{suppress}} = \\frac{P_{\\text{class}}}{P_{\\text{id}}^{\\text{Jew}}} \\approx 0.03 \\quad \\text{(Weimar peak, 1932)}"
+  },
+  {
+   "id": "E094",
+   "chapter": "Tweedism and the Puppet Class: The Algorithmic Filter on Democracy",
+   "chapterIndex": 8,
+   "section": "Laplace Transfer Function: Shock-to-Backlash Dynamics",
+   "label": "eq:8.19-laplace-transfer",
+   "line": 6502,
+   "latex": "H(s) = \\frac{Y(s)}{U(s)} = \\frac{K}{s^{2} + 2\\zeta\\omega_n s + \\omega_n^{2}},"
+  },
+  {
+   "id": "E095",
+   "chapter": "Tweedism and the Puppet Class: The Algorithmic Filter on Democracy",
+   "chapterIndex": 8,
+   "section": "Laplace Transfer Function: Shock-to-Backlash Dynamics",
+   "label": "eq:8.20-laplace-poles",
+   "line": 6506,
+   "latex": "s_\\pm = -\\zeta\\omega_n \\pm j\\omega_d, \\qquad \\omega_d = \\omega_n\\sqrt{1-\\zeta^{2}},"
+  },
+  {
+   "id": "E096",
+   "chapter": "Tweedism and the Puppet Class: The Algorithmic Filter on Democracy",
+   "chapterIndex": 8,
+   "section": "Laplace Transfer Function: Shock-to-Backlash Dynamics",
+   "label": "eq:8.21-parseval",
+   "line": 6572,
+   "latex": "\\int_{-\\infty}^{\\infty} |x(t)|^{2}\\,dt = \\int_{-\\infty}^{\\infty} |\\hat{x}(f)|^{2}\\,df,"
+  },
+  {
+   "id": "E097",
+   "chapter": "Tweedism and the Puppet Class: The Algorithmic Filter on Democracy",
+   "chapterIndex": 8,
+   "section": "Phase-Loading Algebra: Formal Definitions and Historical Calibration",
+   "label": "eq:8.17-circular-dispersion-operator",
+   "line": 6678,
+   "latex": "\\overline{e^{i\\Phi}} = \\frac{1}{N}\\sum_{j=1}^{N} e^{i\\Phi_j}, \\qquad\n\\Phi_{\\text{load}}(t) = 1 - \\left|\\,\\overline{e^{i\\Phi}}\\,\\right| \\in [0,1]"
+  },
+  {
+   "id": "E098",
+   "chapter": "Tweedism and the Puppet Class: The Algorithmic Filter on Democracy",
+   "chapterIndex": 8,
+   "section": "Phase-Loading Algebra: Formal Definitions and Historical Calibration",
+   "label": "eq:8.22-45b",
+   "line": 6686,
+   "latex": "R_{\\text{class}}(t) \\;=\\; \\frac{P_{\\text{class}}(t)}{P_{\\text{class}}(t) + P_{\\text{id}}(t) + P_{\\eta}}."
+  },
+  {
+   "id": "E099",
+   "chapter": "Tweedism and the Puppet Class: The Algorithmic Filter on Democracy",
+   "chapterIndex": 8,
+   "section": "Case Study: The Interference Engine --- Spectral Redistribution and Phase-Load Quantification, 1948--2024",
+   "label": "eq:8.18-tweedism-agenda-path",
+   "line": 7262,
+   "latex": "x_0 \\rightarrow x_1 \\rightarrow x_2 \\rightarrow \\cdots \\rightarrow x_m"
+  },
+  {
+   "id": "E100",
+   "chapter": "The Recompile: COINTELPRO, the Variable Swap, and the War on Drugs (1968--1994)",
+   "chapterIndex": 9,
+   "section": "The Toxin Pre-Processor: Environmental Lead as \\texorpdfstring{$P_{\\text{lead",
+   "label": "eq:9.1-lead-crime-compounding",
+   "line": 7779,
+   "latex": "O_{t+1}^{\\text{capacity}} = O_t^{\\text{capacity}} \\cdot (1 - \\alpha_{P_{\\text{lead}}})"
+  },
+  {
+   "id": "E101",
+   "chapter": "The Recompile: COINTELPRO, the Variable Swap, and the War on Drugs (1968--1994)",
+   "chapterIndex": 9,
+   "section": "The Corporate Conspiracy: Tetraethyllead and the Half-Century Cover-Up",
+   "label": "eq:9.2-epistemic-suppression-variable",
+   "line": 7862,
+   "latex": "O_{t_0 + \\Delta t_{\\text{suppress}}}^{\\text{capacity}} = O_{t_0}^{\\text{capacity}} \\cdot (1 - \\alpha_{P_{\\text{lead}}})^{\\Delta t_{\\text{suppress}}}"
+  },
+  {
+   "id": "E102",
+   "chapter": "The Recompile: COINTELPRO, the Variable Swap, and the War on Drugs (1968--1994)",
+   "chapterIndex": 9,
+   "section": "The Multi-Vector Containment: Lead in Water, Schools, and the Property-Tax Trap",
+   "label": "eq:9.3-multi-vector-lead-exposure",
+   "line": 8101,
+   "latex": "P_{\\text{lead}} = P_{\\text{lead}}^{\\text{air}} + P_{\\text{lead}}^{\\text{water}} + P_{\\text{lead}}^{\\text{school}}"
+  },
+  {
+   "id": "E103",
+   "chapter": "The Recompile: COINTELPRO, the Variable Swap, and the War on Drugs (1968--1994)",
+   "chapterIndex": 9,
+   "section": "The Multi-Vector Containment: Lead in Water, Schools, and the Property-Tax Trap",
+   "label": "eq:9.4-redlining-containment-field",
+   "line": 8105,
+   "latex": "P_{\\text{lead}}^{v}(x) \\propto \\mathbb{1}_{x \\in \\text{Redlined}} \\quad \\text{for each vector } v \\in \\{\\text{air}, \\text{water}, \\text{school}\\}"
+  },
+  {
+   "id": "E104",
+   "chapter": "The Recompile: COINTELPRO, the Variable Swap, and the War on Drugs (1968--1994)",
+   "chapterIndex": 9,
+   "section": "The Property-Tax Feedback Loop: Funding Segregation Through Infrastructure",
+   "label": "eq:9.5-school-funding-property-value",
+   "line": 8131,
+   "latex": "\\begin{aligned}\n\\text{School funding}(t) &\\propto V_t \\\\[4pt]\n\\text{Infrastructure quality}(t) &\\propto \\text{School funding}(t) \\\\[4pt]\nP_{\\text{lead}}^{\\text{school}}(t) &\\propto \\frac{1}{\\text{Infrastructure quality}(t)} \\\\[4pt]\n\\text{Community capacity}(t) &= O_t^{\\text{capacity}} \\cdot (1 - \\alpha \\cdot P_{\\text{lead}}^{\\text{school}}(t)) \\\\[4pt]\nV_{t+1} &\\propto \\text{Community capacity}(t) \n\\end{aligned}"
+  },
+  {
+   "id": "E105",
+   "chapter": "The Recompile: COINTELPRO, the Variable Swap, and the War on Drugs (1968--1994)",
+   "chapterIndex": 9,
+   "section": "The Spatial Distribution Network: Highway Routing as Environmental Targeting (\\texorpdfstring{$\\Sigma_{\\text{highway",
+   "label": "eq:9.10-highway-lead-spatial-concentration",
+   "line": 8217,
+   "latex": "P_{\\text{lead}}^{\\text{air}}(x) = \\Sigma_{\\text{highway}}(x) \\cdot L_{\\text{TEL}}(t) \\cdot \\mathbb{1}_{x \\in O_{\\text{redlined}}}"
+  },
+  {
+   "id": "E106",
+   "chapter": "The Full Algorithm: Demographic Paradox, Cannibalization, and the 5-Tier Reveal (1994--Present)",
+   "chapterIndex": 10,
+   "section": "The Mathematical Deficit and the Cannibalization of \\texorpdfstring{$I_{\\text{buffer",
+   "label": "eq:10.1-outgroup-racialized-subset",
+   "line": 8984,
+   "latex": "O_{\\text{racialized}} \\subset O"
+  },
+  {
+   "id": "E107",
+   "chapter": "The Full Algorithm: Demographic Paradox, Cannibalization, and the 5-Tier Reveal (1994--Present)",
+   "chapterIndex": 10,
+   "section": "The Mathematical Deficit and the Cannibalization of \\texorpdfstring{$I_{\\text{buffer",
+   "label": "eq:10.2-buffer-class-shrinkage",
+   "line": 8988,
+   "latex": "I_{\\text{buffer}}(t) \\subset I_{\\text{buffer}}(t-1) \\quad \\text{and} \\quad O(t) \\supset O(t-1)"
+  },
+  {
+   "id": "E108",
+   "chapter": "The Full Algorithm: Demographic Paradox, Cannibalization, and the 5-Tier Reveal (1994--Present)",
+   "chapterIndex": 10,
+   "section": "The Feedback Loop: Housing Segregation $\\rightarrow$ Lead $\\rightarrow$ ``Crime\" $\\rightarrow$ Incarceration $\\rightarrow$ Family Dissolution",
+   "label": "eq:10.X-family-feedback-loop",
+   "line": 9112,
+   "latex": "P_{\\text{spatial}} \\rightarrow P_{\\text{lead}} \\rightarrow F_{\\text{enforce}} \\rightarrow P_{\\text{carceral}} \\rightarrow P_{\\text{spatial}}',"
+  },
+  {
+   "id": "E109",
+   "chapter": "The Full Algorithm: Demographic Paradox, Cannibalization, and the 5-Tier Reveal (1994--Present)",
+   "chapterIndex": 10,
+   "section": "The Economic Filter and Statutory Immunity: Gating the Second Amendment",
+   "label": "eq:10.3-cannibalization-equation",
+   "line": 9176,
+   "latex": "\\text{Cost}(\\text{Autonomy}) > \\text{Capacity}(O_{\\text{racialized}})"
+  },
+  {
+   "id": "E110",
+   "chapter": "The Full Algorithm: Demographic Paradox, Cannibalization, and the 5-Tier Reveal (1994--Present)",
+   "chapterIndex": 10,
+   "section": "The Full Reveal: The Complete 5-Tier Set-Theoretic Hierarchy",
+   "label": "eq:10.4-predatory-minmax-full-definition",
+   "line": 9324,
+   "latex": "E \\;\\subset\\; P_{\\text{uppet}} \\;\\subset\\; I_{\\text{buffer}} \\;\\subset\\; I, \\qquad O_{\\text{racialized}} \\cap I = \\emptyset"
+  },
+  {
+   "id": "E111",
+   "chapter": "The Full Algorithm: Demographic Paradox, Cannibalization, and the 5-Tier Reveal (1994--Present)",
+   "chapterIndex": 10,
+   "section": "The Full Reveal: The Complete 5-Tier Set-Theoretic Hierarchy",
+   "label": "eq:10.5-kernel-objective-canonical",
+   "line": 9330,
+   "latex": "\\max_{\\{P_i\\}}\\; \\mathcal{E}(t) \\quad \\text{subject to} \\quad M_{\\text{eff}}(t) < \\tau"
+  },
+  {
+   "id": "E112",
+   "chapter": "The Full Algorithm: Demographic Paradox, Cannibalization, and the 5-Tier Reveal (1994--Present)",
+   "chapterIndex": 10,
+   "section": "The Full Reveal: The Complete 5-Tier Set-Theoretic Hierarchy",
+   "label": "eq:10.6-effective-resistance-variable",
+   "line": 9334,
+   "latex": "M_{\\text{eff}}(t) = M(t) - \\lambda\\,\\Phi_{\\text{load}}(t)"
+  },
+  {
+   "id": "E113",
+   "chapter": "The Full Algorithm: Demographic Paradox, Cannibalization, and the 5-Tier Reveal (1994--Present)",
+   "chapterIndex": 10,
+   "section": "The Full Reveal: The Complete 5-Tier Set-Theoretic Hierarchy",
+   "label": "eq:10.7-suppression-envelope-canonical",
+   "line": 9339,
+   "latex": "\\Sigma_{\\text{sup}}(t) = \\psi_s(t) + \\psi_m(t) + R(t) + \\Phi_{\\text{load}}(t)"
+  },
+  {
+   "id": "E114",
+   "chapter": "The Full Algorithm: Demographic Paradox, Cannibalization, and the 5-Tier Reveal (1994--Present)",
+   "chapterIndex": 10,
+   "section": "The Full Reveal: The Complete 5-Tier Set-Theoretic Hierarchy",
+   "label": "eq:10.8-crash-condition-canonical",
+   "line": 9344,
+   "latex": "\\frac{dM}{dt} > \\frac{d\\Sigma_{\\text{sup}}}{dt} \\quad \\Longleftrightarrow \\quad M_{\\text{eff}}(t) > \\tau"
+  },
+  {
+   "id": "E115",
+   "chapter": "The Full Algorithm: Demographic Paradox, Cannibalization, and the 5-Tier Reveal (1994--Present)",
+   "chapterIndex": 10,
+   "section": "The Full Reveal: The Complete 5-Tier Set-Theoretic Hierarchy",
+   "label": "eq:10.9-tier-benefit-ordering-canonical",
+   "line": 9349,
+   "latex": "\\text{Benefit}(E) \\gg \\text{Benefit}(P_{\\text{uppet}}) > \\text{Benefit}(F_{\\text{enforce}}) > \\text{Benefit}(I_{\\text{buffer}}) > \\text{Benefit}(O_{\\text{racialized}})"
+  },
+  {
+   "id": "E116",
+   "chapter": "The Full Algorithm: Demographic Paradox, Cannibalization, and the 5-Tier Reveal (1994--Present)",
+   "chapterIndex": 10,
+   "section": "The Full Reveal: The Complete 5-Tier Set-Theoretic Hierarchy",
+   "label": "eq:10.10-system-objective-extraction-ratio",
+   "line": 9423,
+   "latex": "\\text{Objective:} \\quad \\frac{\\text{Max}(\\text{Extraction})}{\\text{Min}(\\text{Resistance}_{\\text{class}})} \\rightarrow \\text{System Stability}"
+  },
+  {
+   "id": "E117",
+   "chapter": "The Full Algorithm: Demographic Paradox, Cannibalization, and the 5-Tier Reveal (1994--Present)",
+   "chapterIndex": 10,
+   "section": "The Full Reveal: The Complete 5-Tier Set-Theoretic Hierarchy",
+   "label": "eq:10.11-system-stability-algorithm",
+   "line": 9426,
+   "latex": "\\text{Dynamic Equivalent:} \\quad \\max \\mathcal{E}(t) \\quad \\text{subject to} \\quad M_{\\text{eff}}(t)=M(t)-\\lambda\\Phi_{\\text{load}}(t)<\\tau"
+  },
+  {
+   "id": "E118",
+   "chapter": "The Full Algorithm: Demographic Paradox, Cannibalization, and the 5-Tier Reveal (1994--Present)",
+   "chapterIndex": 10,
+   "section": "Disarmament and Execution: The Algorithm Unmasked",
+   "label": "eq:10.12-o-final-construction",
+   "line": 9642,
+   "latex": "O_{\\text{final}} = \\text{Everyone} \\setminus E"
+  },
+  {
+   "id": "E119",
+   "chapter": "The Full Algorithm: Demographic Paradox, Cannibalization, and the 5-Tier Reveal (1994--Present)",
+   "chapterIndex": 10,
+   "section": "Updated Formalism: The Reclassification Operator and the Conditional 1705 Contract",
+   "label": "eq:10.13-reclassification-operator",
+   "line": 9830,
+   "latex": "\\mathcal{R}(x_i) = \\begin{cases} I_{\\text{buffer}} & \\text{if } K(x_i) \\leq K_{\\text{tolerated}} \\text{ and } \\mathrm{comply}(x_i) = 1 \\\\ O_{\\text{final}} & \\text{if } K(x_i) > K_{\\text{tolerated}} \\text{ or } \\mathrm{comply}(x_i) = 0 \\end{cases}"
+  },
+  {
+   "id": "E120",
+   "chapter": "The Full Algorithm: Demographic Paradox, Cannibalization, and the 5-Tier Reveal (1994--Present)",
+   "chapterIndex": 10,
+   "section": "The Kinetic Calculus: The Mathematical Scale of the Civilian Threat",
+   "label": "eq:10.14-kinetic-power-distribution",
+   "line": 9864,
+   "latex": "\\text{Kinetic}(I_{\\text{buffer}} \\cup O_{\\text{racialized}} \\setminus O_{\\text{incarcerated}}) \\gg \\text{Kinetic}(F_{\\text{enforce}} \\cup E)"
+  },
+  {
+   "id": "E121",
+   "chapter": "The Full Algorithm: Demographic Paradox, Cannibalization, and the 5-Tier Reveal (1994--Present)",
+   "chapterIndex": 10,
+   "section": "Temporal Enclosures: The Weaponization of Future Labor",
+   "label": "eq:10.15-temporal-enclosure-definition",
+   "line": 9893,
+   "latex": "X_{\\text{temporal}} := \\left\\{ D_{\\text{sovereign}} \\;\\middle|\\; D_{\\text{sovereign}} \\text{ securitizes } L_{\\text{future}}\\bigl(O \\cup I_{\\text{buffer}}\\bigr) \\;\\text{and}\\; \\frac{d}{dt}\\bigl[\\mathrm{PV}(L_{\\text{future}})\\bigr] \\xrightarrow{\\;\\delta_E\\;} E \\right\\}"
+  },
+  {
+   "id": "E122",
+   "chapter": "The Full Algorithm: Demographic Paradox, Cannibalization, and the 5-Tier Reveal (1994--Present)",
+   "chapterIndex": 10,
+   "section": "Financial Repression: The Stealth Extraction Subroutine",
+   "label": "eq:10.16-financial-repression-condition",
+   "line": 9904,
+   "latex": "r_{\\text{real}}(t) = i(t) - \\pi(t) < 0 \\quad \\Longrightarrow \\quad \\delta_E(t) = \\pi(t) - i(t) > 0"
+  },
+  {
+   "id": "E123",
+   "chapter": "The Full Algorithm: Demographic Paradox, Cannibalization, and the 5-Tier Reveal (1994--Present)",
+   "chapterIndex": 10,
+   "section": "Financial Repression: The Stealth Extraction Subroutine",
+   "label": "eq:10.17-temporal-extraction-rate",
+   "line": 9912,
+   "latex": "\\mathcal{E}_{X_{\\text{temporal}}}(t) = \\frac{d D_{\\text{sovereign}}}{dt} \\cdot \\delta_E(t) \\cdot \\mathbf{1}[r(t) < g(t)]"
+  },
+  {
+   "id": "E124",
+   "chapter": "The Full Algorithm: Demographic Paradox, Cannibalization, and the 5-Tier Reveal (1994--Present)",
+   "chapterIndex": 10,
+   "section": "Generational Load Balancing: The Strauss-Howe Saeculum as \\texorpdfstring{$\\psi$",
+   "label": "eq:10.18-psi-degradation-function",
+   "line": 9978,
+   "latex": "\\dot{\\psi}(t) = -\\kappa \\cdot \\mathcal{E}_{X_{\\text{temporal}}}(t) \\cdot \\mathbf{1}\\bigl[\\text{Demographic Paradox active}\\bigr]"
+  },
+  {
+   "id": "E125",
+   "chapter": "The Full Algorithm: Demographic Paradox, Cannibalization, and the 5-Tier Reveal (1994--Present)",
+   "chapterIndex": 10,
+   "section": "Generational Load Balancing: The Strauss-Howe Saeculum as \\texorpdfstring{$\\psi$",
+   "label": "eq:10.19-saeculum-phase-map",
+   "line": 9985,
+   "latex": "\\Phi_k \\;:\\; k \\in \\{1,2,3,4\\} \\;\\longmapsto\\; \\bigl(\\mathrm{Archetype}_k,\\;\\psi\\text{-Mode}_k,\\;\\dot{\\mathcal{E}}_k\\bigr)"
+  },
+  {
+   "id": "E126",
+   "chapter": "The Full Algorithm: Demographic Paradox, Cannibalization, and the 5-Tier Reveal (1994--Present)",
+   "chapterIndex": 10,
+   "section": "The Demographic Paradox Limit: Dalio's Extraction Bound",
+   "label": "eq:10.20-dalio-extraction-bound",
+   "line": 10015,
+   "latex": "\\mathcal{E}\\bigl(O_{\\text{racialized}}\\bigr) \\to \\mathcal{E}_{\\max} \\quad \\Longrightarrow \\quad \\min_{\\{P_i\\}} \\psi(t) \\;\\;\\text{s.t.}\\;\\; \\mathcal{E}(E) \\geq \\mathcal{E}^* \\;\\; \\text{activates cannibalization of } I_{\\text{buffer}}"
+  },
+  {
+   "id": "E127",
+   "chapter": "The Kinetic Guarantee: Arms Asymmetry, the Second Amendment, and the Disarmament Timeline",
+   "chapterIndex": 11,
+   "section": "Phase 1: Direct Kidnapping Through Firearms Superiority",
+   "label": "eq:11.1-extraction-precondition",
+   "line": 10137,
+   "latex": "L_E \\gg L_O \\implies \\text{Extraction feasible}"
+  },
+  {
+   "id": "E128",
+   "chapter": "The Kinetic Guarantee: Arms Asymmetry, the Second Amendment, and the Disarmament Timeline",
+   "chapterIndex": 11,
+   "section": "The State Cartel: Monopoly on Violence as Semantic Legitimation",
+   "label": "eq:11.1a-state-semantic-legitimation",
+   "line": 10147,
+   "latex": "\\operatorname{Name}(a)=\n\\begin{cases}\n\\text{taxation, justice, security} & a \\in A_{\\text{state}} \\text{ and } S_{\\text{legit}}=1,\\\\\n\\text{extortion, kidnapping, assault} & a \\in A_{\\text{civilian}} \\text{ and } S_{\\text{legit}}=0.\n\\end{cases}"
+  },
+  {
+   "id": "E129",
+   "chapter": "The Kinetic Guarantee: Arms Asymmetry, the Second Amendment, and the Disarmament Timeline",
+   "chapterIndex": 11,
+   "section": "The Mulford Proof: When the Out-Group Arms, the System Disarms",
+   "label": "eq:11.2-disarmament-agenda-path",
+   "line": 10996,
+   "latex": "x_0 \\rightarrow x_1 \\rightarrow \\cdots \\rightarrow x_m"
+  },
+  {
+   "id": "E130",
+   "chapter": "The Kinetic Guarantee: Arms Asymmetry, the Second Amendment, and the Disarmament Timeline",
+   "chapterIndex": 11,
+   "section": "The Mulford Proof: When the Out-Group Arms, the System Disarms",
+   "label": "eq:11.3-restriction-precedent-accumulation",
+   "line": 11000,
+   "latex": "\\mathcal{R}_{t+1}=\\mathcal{R}_t \\cup \\{r_t\\}"
+  },
+  {
+   "id": "E131",
+   "chapter": "The Kinetic Guarantee: Arms Asymmetry, the Second Amendment, and the Disarmament Timeline",
+   "chapterIndex": 11,
+   "section": "The Mulford Proof: When the Out-Group Arms, the System Disarms",
+   "label": "eq:11.4-restriction-scope-expansion",
+   "line": 11004,
+   "latex": "\\operatorname{Target}(r_t): O_{\\text{racialized}} \\;\\rightarrow\\; O_{\\text{racialized}} \\cup I_{\\text{buffer}}"
+  },
+  {
+   "id": "E132",
+   "chapter": "The Kinetic Guarantee: Arms Asymmetry, the Second Amendment, and the Disarmament Timeline",
+   "chapterIndex": 11,
+   "section": "The Kinetic Abort Threshold",
+   "label": "eq:13.tvs-abort",
+   "line": 11111,
+   "latex": "P_{\\text{loss}} = I_{\\text{strike}}^2 \\cdot R_{\\text{kinetic}} > C_{\\text{max}}\n\\implies \\text{Strike Aborted}"
+  },
+  {
+   "id": "E133",
+   "chapter": "The Contradiction: Why Reform Serves the Algorithm",
+   "chapterIndex": 12,
+   "section": "The Reform Paradox: Why Policy Audits Serve \\texorpdfstring{$\\min$",
+   "label": "eq:12.1-reform-absorption-mechanism",
+   "line": 11196,
+   "latex": "\\min(t+1) = \\min(t) - \\epsilon \\cdot \\Delta|O_{\\text{racialized}} \\cap P'|"
+  },
+  {
+   "id": "E134",
+   "chapter": "The Contradiction: Why Reform Serves the Algorithm",
+   "chapterIndex": 12,
+   "section": "The Durability Objection: When Reforms Appear to Persist",
+   "label": "eq:12.2-concession-theorem",
+   "line": 11254,
+   "latex": "\\text{Reform Rate}(t) \\propto \\frac{d(\\min)}{dt} \\quad \\text{subject to} \\quad \\Delta\\max = 0"
+  },
+  {
+   "id": "E135",
+   "chapter": "The Contradiction: Why Reform Serves the Algorithm",
+   "chapterIndex": 12,
+   "section": "Algorithmic Load Balancing: Freedom as a Zero-Sum Market",
+   "label": "eq:12.2a-load-balancing",
+   "line": 11346,
+   "latex": "\\sum_{g \\in G} \\ell_g(t) = \\mathcal{E}_{\\text{total}}(t),\n\\qquad\n\\frac{d\\mathcal{E}_{\\text{total}}}{dt} \\geq 0 ."
+  },
+  {
+   "id": "E136",
+   "chapter": "The Contradiction: Why Reform Serves the Algorithm",
+   "chapterIndex": 12,
+   "section": "Algorithmic Load Balancing: Freedom as a Zero-Sum Market",
+   "label": "eq:12.2b-load-transfer",
+   "line": 11352,
+   "latex": "\\Delta \\ell_h\n=\n-\\Delta \\ell_g\n+ \\Delta \\mathcal{E}_{\\text{total}},\n\\qquad h \\neq g ."
+  },
+  {
+   "id": "E137",
+   "chapter": "The Contradiction: Why Reform Serves the Algorithm",
+   "chapterIndex": 12,
+   "section": "The Constitutional Shield: The Intent Standard as Concealment Apparatus",
+   "label": "eq:12.3-judiciary-discrimination-detection",
+   "line": 11423,
+   "latex": "D(P) = \\begin{cases}\n1 & \\text{if } P \\text{ explicitly invokes racial classification} \\\\\n0 & \\text{if } P \\text{ uses proxy variable } x \\text{ where } \\operatorname{Corr}(x, \\text{race}) \\to 1\n\\end{cases}"
+  },
+  {
+   "id": "E138",
+   "chapter": "The Contradiction: Why Reform Serves the Algorithm",
+   "chapterIndex": 12,
+   "section": "The Atwater Proof: The Proxy Variable as Deliberate Encoding",
+   "label": "eq:12.4-proxy-discrimination-equivalence",
+   "line": 11469,
+   "latex": "|O_{\\text{racialized}} \\cap P_{\\text{explicit}}| \\approx |O_{\\text{racialized}} \\cap P_{\\text{proxy}}|"
+  },
+  {
+   "id": "E139",
+   "chapter": "The Contradiction: Why Reform Serves the Algorithm",
+   "chapterIndex": 12,
+   "section": "The Judicial Node: Double-Agent Architecture",
+   "label": "eq:12.4a-judicial-double-agent",
+   "line": 11505,
+   "latex": "P_{\\text{jud}}(P)=\n\\begin{cases}\nD_{\\text{sem}}(P_{\\text{proxy}})=0 & \\text{software-layer civil-rights and voting claims},\\\\\nD_{\\text{hist}}(P_{\\text{kinetic}})>0 & \\text{hardware-layer Second Amendment claims}.\n\\end{cases}"
+  },
+  {
+   "id": "E140",
+   "chapter": "The Contradiction: Why Reform Serves the Algorithm",
+   "chapterIndex": 12,
+   "section": "The Grandfather Clause as a $\\psi_m$ Payment",
+   "label": "eq:12.11-dualtrack-2a",
+   "line": 11620,
+   "latex": "\\text{Response}(\\text{arms},\\, x) =\n\\begin{cases}\n\\text{constitutionally protected} & x \\in I_{\\text{buffer}} \\\\\n\\text{felony prosecution} & x \\in O_{\\text{racialized}}\n\\end{cases}"
+  },
+  {
+   "id": "E141",
+   "chapter": "The Contradiction: Why Reform Serves the Algorithm",
+   "chapterIndex": 12,
+   "section": "The Grandfather Clause as a $\\psi_m$ Payment",
+   "label": "eq:12.12-grandfather-compound",
+   "line": 11632,
+   "latex": "B(O_{\\text{racialized}}) = \\prod_{k} (1 + \\delta_k)"
+  },
+  {
+   "id": "E142",
+   "chapter": "The Contradiction: Why Reform Serves the Algorithm",
+   "chapterIndex": 12,
+   "section": "The Haitian Theorem: Kinetic Action as the Only Historically Validated Liberation Mechanism",
+   "label": "eq:12.5-haitian-theorem-nonkinetic",
+   "line": 11810,
+   "latex": "\\forall\\; R_i \\in \\mathcal{R}: \\quad \\Delta\\max(R_i) = 0"
+  },
+  {
+   "id": "E143",
+   "chapter": "The Contradiction: Why Reform Serves the Algorithm",
+   "chapterIndex": 12,
+   "section": "The Haitian Theorem: Kinetic Action as the Only Historically Validated Liberation Mechanism",
+   "label": "eq:12.6-haitian-theorem-kinetic",
+   "line": 11813,
+   "latex": "\\exists\\; \\text{Revolution } K_j \\in \\{\\text{kinetic}\\}: \\quad \\max(t_{\\text{post}}) = 0 \\;\\;\\text{(locally)}"
+  },
+  {
+   "id": "E144",
+   "chapter": "The Contradiction: Why Reform Serves the Algorithm",
+   "chapterIndex": 12,
+   "section": "The Hispaniola Natural Experiment: Colonial Intensity as Controlled Variable",
+   "label": "eq:12.7-colonial-intensity-index",
+   "line": 11874,
+   "latex": "I_{\\text{colonial}}(c) := \\frac{\\text{slave\\_count}(c)}{\\text{free\\_population}(c)} \\times \\text{extraction\\_duration\\_yrs}(c)"
+  },
+  {
+   "id": "E145",
+   "chapter": "The Contradiction: Why Reform Serves the Algorithm",
+   "chapterIndex": 12,
+   "section": "The Hispaniola Natural Experiment: Colonial Intensity as Controlled Variable",
+   "label": "eq:12.8-colonial-intensity-gdp",
+   "line": 11882,
+   "latex": "\\text{GDP}_{pc,2023}(c) = \\alpha - \\beta \\cdot I_{\\text{colonial}}(c) + \\varepsilon, \\quad \\beta > 0"
+  },
+  {
+   "id": "E146",
+   "chapter": "The Contradiction: Why Reform Serves the Algorithm",
+   "chapterIndex": 12,
+   "section": "The Contemporary $O_{\\text{degraded",
+   "label": "eq:12.9-degraded-equilibrium",
+   "line": 11947,
+   "latex": "\\lim_{t \\to \\infty} O_{\\text{degraded}}(\\text{Haiti}, t) \\;\\to\\; \\text{failed-state equilibrium}"
+  },
+  {
+   "id": "E147",
+   "chapter": "The Contradiction: Why Reform Serves the Algorithm",
+   "chapterIndex": 12,
+   "section": "Intra-Elite Forks and Total Kernel Overrides",
+   "label": "eq:12.6a-revolution-types",
+   "line": 12101,
+   "latex": "\\operatorname{Rev}(K)=\n\\begin{cases}\nK_{E_{\\text{global}} \\to E_{\\text{local}}} & \\text{intra-Elite fork: control plane changes, kernel persists},\\\\\nK_{\\text{extract}} \\to 0 & \\text{total override: extraction kernel terminates locally}.\n\\end{cases}"
+  },
+  {
+   "id": "E148",
+   "chapter": "The Contradiction: Why Reform Serves the Algorithm",
+   "chapterIndex": 12,
+   "section": "IX. The Gendered Bug: Constitutional Exclusion as an Additional Extraction Vector",
+   "label": "eq:12.7-gendered-outgroup-set",
+   "line": 12290,
+   "latex": "O_{\\text{gendered}} = \\{x \\in \\text{Population} \\mid x \\text{ is excluded from lethal autonomy on the basis of gender}\\}"
+  },
+  {
+   "id": "E149",
+   "chapter": "The Contradiction: Why Reform Serves the Algorithm",
+   "chapterIndex": 12,
+   "section": "IX. The Gendered Bug: Constitutional Exclusion as an Additional Extraction Vector",
+   "label": "eq:12.8-intersection-double-partition",
+   "line": 12295,
+   "latex": "O_{\\text{racialized}} \\cap O_{\\text{gendered}}"
+  },
+  {
+   "id": "E150",
+   "chapter": "The Contradiction: Why Reform Serves the Algorithm",
+   "chapterIndex": 12,
+   "section": "IX. The Gendered Bug: Constitutional Exclusion as an Additional Extraction Vector",
+   "label": "eq:12.9-multiplicative-intersection-compounding",
+   "line": 12300,
+   "latex": "O_t^{\\text{capacity}} = O_{t-1}^{\\text{capacity}} \\cdot (1 - \\alpha_r P_t) \\cdot (1 - \\alpha_g P_t)"
+  },
+  {
+   "id": "E151",
+   "chapter": "The Contradiction: Why Reform Serves the Algorithm",
+   "chapterIndex": 12,
+   "section": "The Fractal Matrix and the Recompile Risk",
+   "label": "eq:12.13-kernel-deletion-condition",
+   "line": 12315,
+   "latex": "K_{\\text{post}}=0\n\\Longleftrightarrow\n\\forall a \\in \\mathcal{A}_{\\text{partition}},\\; P_a=0 ."
+  },
+  {
+   "id": "E152",
+   "chapter": "The Contradiction: Why Reform Serves the Algorithm",
+   "chapterIndex": 12,
+   "section": "Mechanism 3: The Nonviolence Mandate as \\texorpdfstring{$\\min$",
+   "label": "eq:12.10-nonviolence-mandate-function",
+   "line": 12420,
+   "latex": "P_{\\text{gaslight}}^{\\text{nonviolence}}: \\quad \\text{Constrain}(O, I_{\\text{buffer}}) \\text{ to resistance modes where } \\Delta\\max = 0"
+  },
+  {
+   "id": "E154",
+   "chapter": "The Global Containment Field: Scaling the Algorithm",
+   "chapterIndex": 13,
+   "section": "British India: The Extraction Kernel Without Biological Constraints",
+   "label": "eq:13.2-global-predatory-minmax",
+   "line": 12531,
+   "latex": "\\max \\mathcal{E}_{\\text{imperial}} - \\min(O_{\\text{colonial}}) \\quad \\text{where} \\quad \\min \\rightarrow \\text{biological death}"
+  },
+  {
+   "id": "E155",
+   "chapter": "The Global Containment Field: Scaling the Algorithm",
+   "chapterIndex": 13,
+   "section": "Haiti (1804): Revolution Succeeded, Liberation Contained",
+   "label": "eq:13.3-externalized-enforcement-envelope",
+   "line": 12552,
+   "latex": "F_{\\text{enforce}}^{\\text{effective}}(t)=F_{\\text{enforce}}^{\\text{Haiti}}(t)+F_{\\text{enforce}}^{\\text{imported}}(t)"
+  },
+  {
+   "id": "E156",
+   "chapter": "The Global Containment Field: Scaling the Algorithm",
+   "chapterIndex": 13,
+   "section": "The M\u00f4le Saint-Nicolas Gambit: Sovereign Protocol as Counter-Algorithm (1891)",
+   "label": "eq:13.4-killick-extraction-equation",
+   "line": 12579,
+   "latex": "\\lim_{\\text{surrender\\_cost} \\to \\infty} \\frac{\\text{value\\_to\\_empire}}{\\text{cost\\_to\\_agent}} = \\text{undefined}"
+  },
+  {
+   "id": "E157",
+   "chapter": "The Global Containment Field: Scaling the Algorithm",
+   "chapterIndex": 13,
+   "section": "The Legitimation Inversion Lemma: Formalizing the Firmin Protocol",
+   "label": "eq:13.5-legitimation-constraint-set",
+   "line": 12597,
+   "latex": "\\mathcal{L} \\;=\\; \\{\\ell_1,\\, \\ell_2,\\, \\ldots,\\, \\ell_n\\}"
+  },
+  {
+   "id": "E158",
+   "chapter": "The Global Containment Field: Scaling the Algorithm",
+   "chapterIndex": 13,
+   "section": "The Legitimation Inversion Lemma: Formalizing the Firmin Protocol",
+   "label": "eq:13.6-authorization-precondition",
+   "line": 12609,
+   "latex": "\\text{Valid\\_negotiation}(t) = \\begin{cases} 1 & \\text{if } A_{\\text{auth}} = 1 \\\\ 0 & \\text{if } A_{\\text{auth}} = 0 \\end{cases}"
+  },
+  {
+   "id": "E159",
+   "chapter": "The Global Containment Field: Scaling the Algorithm",
+   "chapterIndex": 13,
+   "section": "The Legitimation Inversion Lemma: Formalizing the Firmin Protocol",
+   "label": "eq:13.7-coercion-legitimacy-frontier",
+   "line": 12615,
+   "latex": "F^L \\;=\\; \\sup\\!\\left\\{\\, F \\;\\Big|\\; \\forall\\, \\text{treaty } T \\text{ signed under force level } F,\\; T \\text{ is valid under } \\mathcal{L} \\,\\right\\}"
+  },
+  {
+   "id": "E160",
+   "chapter": "The Global Containment Field: Scaling the Algorithm",
+   "chapterIndex": 13,
+   "section": "The Legitimation Inversion Lemma: Formalizing the Firmin Protocol",
+   "label": "eq:13.8-firmin-extraction-threshold",
+   "line": 12621,
+   "latex": "F^* \\;=\\; \\inf\\!\\left\\{\\, F \\;\\Big|\\; P(\\text{compliance} \\mid F_{\\text{enforce}} = F) \\geq p_{\\text{target}} \\,\\right\\}"
+  },
+  {
+   "id": "E161",
+   "chapter": "The Global Containment Field: Scaling the Algorithm",
+   "chapterIndex": 13,
+   "section": "The Legitimation Inversion Lemma: Formalizing the Firmin Protocol",
+   "label": "eq:13.9-infeasible-constraint-set",
+   "line": 12634,
+   "latex": "\\nexists\\; S:\\quad \\mathcal{E}(S) > 0 \\;\\;\\wedge\\;\\; \\mathcal{L}(S) = \\text{valid} \\quad \\text{when } F^* > F^L"
+  },
+  {
+   "id": "E162",
+   "chapter": "The Global Containment Field: Scaling the Algorithm",
+   "chapterIndex": 13,
+   "section": "The Legitimation Inversion Lemma: Formalizing the Firmin Protocol",
+   "label": "eq:13.10-asymmetric-leverage-ratio",
+   "line": 12657,
+   "latex": "\\Lambda(O_{\\text{global}}, E_{\\text{global}}) \\;=\\; \\frac{\\Delta\\mathcal{E}_{\\text{blocked}}}{\\Delta\\text{Resources}_{O}}"
+  },
+  {
+   "id": "E163",
+   "chapter": "The Global Containment Field: Scaling the Algorithm",
+   "chapterIndex": 13,
+   "section": "The Legitimation Inversion Lemma: Formalizing the Firmin Protocol",
+   "label": "eq:13.11-legitimation-abandonment-condition",
+   "line": 12668,
+   "latex": "C_{\\text{legitimacy}}(\\text{violation}) < \\mathcal{E}_{\\text{extraction}} \\;\\Rightarrow\\; E_{\\text{global}} \\text{ abandons } \\mathcal{L}"
+  },
+  {
+   "id": "E164",
+   "chapter": "The Global Containment Field: Scaling the Algorithm",
+   "chapterIndex": 13,
+   "section": "Cuba (1959): The Indefinite Containment Proof",
+   "label": "eq:13.12-global-containment-strategy",
+   "line": 12684,
+   "latex": "O_{\\text{liberated}}^{\\text{capacity}}(t) = O_{\\text{liberated}}^{\\text{capacity}}(t_0) \\cdot (1 - \\alpha_{\\text{embargo}})^{t - t_0}"
+  },
+  {
+   "id": "E165",
+   "chapter": "The Global Containment Field: Scaling the Algorithm",
+   "chapterIndex": 13,
+   "section": "The UN Reparations Vote: A Real-Time Proof of the Global Hierarchy (2026)",
+   "label": "eq:13.13-un-vote-distribution",
+   "line": 12728,
+   "latex": "\\text{Vote}_{\\text{UN}}(x) = \\begin{cases} \\text{No} & \\text{if } x \\in E_{\\text{imperial}} \\\\[4pt] \\text{Abstain} & \\text{if } x \\in I_{\\text{buffer}}^{\\text{global}} \\\\[4pt] \\text{Yes} & \\text{if } x \\in O_{\\text{global}} \\end{cases}"
+  },
+  {
+   "id": "E166",
+   "chapter": "The Global Containment Field: Scaling the Algorithm",
+   "chapterIndex": 13,
+   "section": "The Imperial Core Theorem",
+   "label": "eq:13.14-imperial-core-collapse",
+   "line": 12764,
+   "latex": "\\text{Either} \\quad F_{\\text{enforce}}^{\\text{global}} \\rightarrow 0 \\quad \\text{or} \\quad O_{\\text{bloc}}^{\\text{capacity}}(t) > \\tau_{\\text{sovereign}} \\;\\;\\forall\\; t"
+  },
+  {
+   "id": "E167",
+   "chapter": "The Global Containment Field: Scaling the Algorithm",
+   "chapterIndex": 13,
+   "section": "The Polymorphic Interface Swap Typology: Dalio's 250-Year Loop and the Algorithmic Reboot Protocol",
+   "label": "eq:13.15-interface-swap-trigger",
+   "line": 12849,
+   "latex": "D_{\\text{sovereign}}(t) > \\bar{D} \\quad \\Longrightarrow \\quad P_{\\text{uppet}} \\;\\text{executes}\\; \\mathrm{SWAP}\\bigl(\\mathcal{A}_{\\text{old}} \\to \\mathcal{A}_{\\text{new}}\\bigr)"
+  },
+  {
+   "id": "E168",
+   "chapter": "The Global Containment Field: Scaling the Algorithm",
+   "chapterIndex": 13,
+   "section": "The Polymorphic Interface Swap Typology: Dalio's 250-Year Loop and the Algorithmic Reboot Protocol",
+   "label": "eq:13.16-polymorphic-reboot-operator",
+   "line": 12854,
+   "latex": "\\mathcal{A}_{\\text{old}} \\;\\xrightarrow{\\;P_{\\text{uppet}}\\;}\\; \\mathcal{A}_{\\text{new}} \\quad \\text{subject to} \\quad \\mathrm{Assets}(E,\\, \\mathcal{A}_{\\text{new}}) \\;\\geq\\; \\mathrm{Assets}(E,\\, \\mathcal{A}_{\\text{old}})"
+  },
+  {
+   "id": "E169",
+   "chapter": "The Global Containment Field: Scaling the Algorithm",
+   "chapterIndex": 13,
+   "section": "The Polymorphic Interface Swap Typology: Dalio's 250-Year Loop and the Algorithmic Reboot Protocol",
+   "label": "eq:13.17-elite-asset-continuity-invariant",
+   "line": 12859,
+   "latex": "\\forall\\; \\mathrm{SWAP} : \\quad \\Delta_E \\geq 0, \\quad \\text{where} \\quad \\Delta_E = \\mathrm{Assets}(E,\\, \\mathcal{A}_{\\text{new}}) - \\mathrm{Assets}(E,\\, \\mathcal{A}_{\\text{old}})"
+  },
+  {
+   "id": "E170",
+   "chapter": "The Algorithmic Epoch: Real-Time Subjugation and the Necessity of the Counter-Virus",
+   "chapterIndex": 14,
+   "section": "Porting the Legacy Code: AI as a Hardware Upgrade",
+   "label": "eq:14.1-algo-prior-inheritance",
+   "line": 13009,
+   "latex": "P_{\\text{algo}} = \\arg\\min_{P} \\; \\mathcal{L}(P; \\mathcal{H}) \\quad \\Longrightarrow \\quad |O_{\\text{racialized}} \\cap P_{\\text{algo}}| \\gg |I \\cap P_{\\text{algo}}|"
+  },
+  {
+   "id": "E171",
+   "chapter": "The Algorithmic Epoch: Real-Time Subjugation and the Necessity of the Counter-Virus",
+   "chapterIndex": 14,
+   "section": "Gradient Descent as Structural Discovery",
+   "label": "eq:14.1a-attractor-objective",
+   "line": 13031,
+   "latex": "\\min_{\\theta} \\; \\mathcal{L}\\bigl(f_{\\theta}; \\mathcal{H}\\bigr) + \\lambda \\, \\Omega(f_{\\theta})"
+  },
+  {
+   "id": "E172",
+   "chapter": "The Algorithmic Epoch: Real-Time Subjugation and the Necessity of the Counter-Virus",
+   "chapterIndex": 14,
+   "section": "Gradient Descent as Structural Discovery",
+   "label": "eq:14.1b-attractor-condition",
+   "line": 13039,
+   "latex": "\\lim_{t \\to \\infty} \\rho_k(t; \\mathcal{L}, \\mathcal{H}) = \\rho_k^* \\quad \\text{for any } \\mathcal{L} \\text{ that maximizes engagement or profit on } \\mathcal{H}"
+  },
+  {
+   "id": "E173",
+   "chapter": "The Algorithmic Epoch: Real-Time Subjugation and the Necessity of the Counter-Virus",
+   "chapterIndex": 14,
+   "section": "Real-Time Dynamic Equilibrium and the \\texorpdfstring{$\\tau$",
+   "label": "eq:14.2-realtime-proximity-estimate",
+   "line": 13063,
+   "latex": "\\rho_{\\tau}(t) = f\\bigl(\\Phi_{\\text{load}}(t),\\, \\lambda_2(G(t)),\\, \\deg_{\\text{cross}}(G(t))\\bigr)"
+  },
+  {
+   "id": "E174",
+   "chapter": "The Algorithmic Epoch: Real-Time Subjugation and the Necessity of the Counter-Virus",
+   "chapterIndex": 14,
+   "section": "Formalization: The Cost Collapse Equation",
+   "label": "eq:14.2a-analog-cost",
+   "line": 13109,
+   "latex": "C_{\\text{engine}}^{\\text{analog}}(t) \\propto \\Phi_{\\text{load}} \\cdot N \\cdot d_{\\text{max}}"
+  },
+  {
+   "id": "E175",
+   "chapter": "The Algorithmic Epoch: Real-Time Subjugation and the Necessity of the Counter-Virus",
+   "chapterIndex": 14,
+   "section": "Formalization: The Cost Collapse Equation",
+   "label": "eq:14.2b-digital-cost",
+   "line": 13115,
+   "latex": "C_{\\text{engine}}^{\\text{digital}}(t) \\propto \\Phi_{\\text{load}} \\cdot \\log(N)"
+  },
+  {
+   "id": "E176",
+   "chapter": "The Algorithmic Epoch: Real-Time Subjugation and the Necessity of the Counter-Virus",
+   "chapterIndex": 14,
+   "section": "Formalization: The Cost Collapse Equation",
+   "label": "eq:14.2c-medium-gain",
+   "line": 13121,
+   "latex": "G_{\\text{transition}} = \\frac{C_{\\text{engine}}^{\\text{analog}}}{C_{\\text{engine}}^{\\text{digital}}} \\sim \\frac{N \\cdot d_{\\text{max}}}{\\log(N)}"
+  },
+  {
+   "id": "E177",
+   "chapter": "The Algorithmic Epoch: Real-Time Subjugation and the Necessity of the Counter-Virus",
+   "chapterIndex": 14,
+   "section": "The Geometry of the Injection",
+   "label": "eq:14.3-orthogonal-vector-injection",
+   "line": 13159,
+   "latex": "\\mathcal{E}(G(t)) : G(t) \\longmapsto G'(t) \\quad \\text{such that} \\quad \\lambda_2(G'(t)) \\ll \\lambda_2(G(t))"
+  },
+  {
+   "id": "E178",
+   "chapter": "The Algorithmic Epoch: Real-Time Subjugation and the Necessity of the Counter-Virus",
+   "chapterIndex": 14,
+   "section": "The Damped Harmonic Oscillator: Trauma as the Damping Medium",
+   "label": "eq:14.4-correction-signal-damping",
+   "line": 13188,
+   "latex": "\\ddot{\\psi}_{\\text{correction}} + \\Delta(t)\\,\\dot{\\psi}_{\\text{correction}} + \\omega_0^2 \\psi_{\\text{correction}} = 0, \\quad \\Delta(t) \\uparrow \\text{ with trauma severity}"
+  },
+  {
+   "id": "E179",
+   "chapter": "The Algorithmic Epoch: Real-Time Subjugation and the Necessity of the Counter-Virus",
+   "chapterIndex": 14,
+   "section": "Elite Obscuration: The Perfect Eclipse and the Orthographic Projection",
+   "label": "eq:14.5-optical-enclosure",
+   "line": 13223,
+   "latex": "\\theta_{E} = \\theta_{P_{\\text{uppet}}} = \\theta_{F_{\\text{enforce}}} = \\theta_{I_{\\text{buffer}}} \\quad (\\text{within perceptual tolerance})."
+  },
+  {
+   "id": "E180",
+   "chapter": "The Algorithmic Epoch: Real-Time Subjugation and the Necessity of the Counter-Virus",
+   "chapterIndex": 14,
+   "section": "The Puppet Class as Decoy Vertex and Infinite Energy Sink",
+   "label": "eq:14.6-decoy-transfer-coefficient",
+   "line": 13235,
+   "latex": "\\frac{\\partial \\max(E, t)}{\\partial K(t)} \\approx 0 \\quad \\text{so long as} \\quad K(t) \\leq K_{\\text{decoy}}"
+  },
+  {
+   "id": "E181",
+   "chapter": "The Algorithmic Epoch: Real-Time Subjugation and the Necessity of the Counter-Virus",
+   "chapterIndex": 14,
+   "section": "The Distributed Swarm and the Bandwidth Ceiling",
+   "label": "eq:14.7-ddos-bandwidth-ceiling",
+   "line": 13269,
+   "latex": "n > \\Gamma \\quad \\Longrightarrow \\quad \\text{Localized enforcement superiority fails at} \\ (n - \\Gamma) \\ \\text{nodes.}"
+  },
+  {
+   "id": "E182",
+   "chapter": "The Algorithmic Epoch: Real-Time Subjugation and the Necessity of the Counter-Virus",
+   "chapterIndex": 14,
+   "section": "Kinetic Parity: Raising $\\Gamma$'s Required Threshold",
+   "label": "eq:14.8-armed-swarm-bandwidth",
+   "line": 13280,
+   "latex": "\\Gamma_{\\text{armed}} = \\frac{\\Gamma_{\\text{total}}}{\\gamma(k_{\\text{node}})}, \\quad \\text{with} \\ \\gamma(k_{\\text{armed}}) \\gg \\gamma(k_{\\text{unarmed}})."
+  },
+  {
+   "id": "E183",
+   "chapter": "The Algorithmic Epoch: Real-Time Subjugation and the Necessity of the Counter-Virus",
+   "chapterIndex": 14,
+   "section": "The Kinetic-Capital Asymmetry: A Structural Inversion",
+   "label": "eq:14.9-kinetic-capital-asymmetry",
+   "line": 13298,
+   "latex": "\\kappa(I_{\\text{buffer}}) \\;\\gg\\; \\kappa(O_{\\text{racialized}})"
+  },
+  {
+   "id": "E184",
+   "chapter": "The Algorithmic Epoch: Real-Time Subjugation and the Necessity of the Counter-Virus",
+   "chapterIndex": 14,
+   "section": "The Green Zone Exception: Centralized vs.\\ Distributed Bandwidth",
+   "label": "eq:14.10-sustained-siege-cost",
+   "line": 13316,
+   "latex": "S(x_0) \\;\\approx\\; \\alpha \\cdot \\gamma(k_{x_0}) \\cdot T_{\\text{siege}}"
+  },
+  {
+   "id": "E185",
+   "chapter": "The Algorithmic Epoch: Real-Time Subjugation and the Necessity of the Counter-Virus",
+   "chapterIndex": 14,
+   "section": "The Full Escalation Ladder and the Continental Deficit",
+   "label": "eq:14.11-escalation-ceiling-tiers",
+   "line": 13332,
+   "latex": "\\Gamma_{\\text{Tier}_k} < \\Gamma_{\\text{Tier}_{k-1}}, \\quad k \\in \\{1,2,3,4\\}"
+  },
+  {
+   "id": "E186",
+   "chapter": "The Algorithmic Epoch: Real-Time Subjugation and the Necessity of the Counter-Virus",
+   "chapterIndex": 14,
+   "section": "The Extraction-Value / Friction-Risk Ratio",
+   "label": "eq:14.12-inclusion-predicate",
+   "line": 13359,
+   "latex": "\\mathbb{I}_{\\text{include}}(x, t) \\;=\\; \\mathbb{1}\\bigl[\\,V(x,t) \\;>\\; R(x,t)\\,\\bigr]."
+  },
+  {
+   "id": "E187",
+   "chapter": "The Algorithmic Epoch: Real-Time Subjugation and the Necessity of the Counter-Virus",
+   "chapterIndex": 14,
+   "section": "The Automation Threshold",
+   "label": "eq:14.13-terminal-interface-swap",
+   "line": 13372,
+   "latex": "\\lim_{t \\to t_{\\text{automation}}^{-}} V(x, t) \\;=\\; 0, \\quad R(x, t) > 0 \\quad \\Longrightarrow \\quad \\mathbb{I}_{\\text{include}}(x, t) = 0 \\ \\forall \\ x \\in \\{P, F, I, O\\}."
+  },
+  {
+   "id": "E188",
+   "chapter": "The Algorithmic Epoch: Real-Time Subjugation and the Necessity of the Counter-Virus",
+   "chapterIndex": 14,
+   "section": "The Liability Phase",
+   "label": "eq:14.14-liability-phase-optimization",
+   "line": 13382,
+   "latex": "\\min_{E} \\mathcal{L}(E, t) \\;\\Rightarrow\\; \\min_{E} \\int c(x, t) \\, dt, \\quad \\text{subject to} \\ V(x, t) = 0."
+  },
+  {
+   "id": "E189",
+   "chapter": "The Algorithmic Epoch: Real-Time Subjugation and the Necessity of the Counter-Virus",
+   "chapterIndex": 14,
+   "section": "Broad-Spectrum Noise: The Collapse of Destructive Interference",
+   "label": "eq:14.15-noise-spectrum-index",
+   "line": 13428,
+   "latex": "\\mathcal{N}(t) \\;=\\; H\\bigl(\\pi_1(t), \\pi_2(t), \\ldots, \\pi_n(t)\\bigr)"
+  },
+  {
+   "id": "E190",
+   "chapter": "The Algorithmic Epoch: Real-Time Subjugation and the Necessity of the Counter-Virus",
+   "chapterIndex": 14,
+   "section": "The Botnet Protocol: Time Replaces Ideology",
+   "label": "eq:14.16-agnostic-swarm-payload",
+   "line": 13449,
+   "latex": "\\mathcal{B}(t^{*}) : \\{x_1, \\ldots, x_n\\} \\longmapsto \\bigcup_{i=1}^{n} \\text{action}_i(t^{*}), \\quad \\text{where action}_i \\ \\text{is sampled from} \\ \\pi_i \\ \\text{independently.}"
+  },
+  {
+   "id": "E191",
+   "chapter": "The Algorithmic Epoch: Real-Time Subjugation and the Necessity of the Counter-Virus",
+   "chapterIndex": 14,
+   "section": "The Botnet Protocol: Time Replaces Ideology",
+   "label": "eq:14.17-botnet-load-theorem",
+   "line": 13462,
+   "latex": "n(t) > \\Gamma_{\\text{armed}} \\quad \\wedge \\quad \\mathcal{N}(t) \\to H_{\\max}."
+  },
+  {
+   "id": "E192",
+   "chapter": "The Algorithmic Epoch: Real-Time Subjugation and the Necessity of the Counter-Virus",
+   "chapterIndex": 14,
+   "section": "The Hyper-Localized Distribution Protocol: Ideological Topological Routing",
+   "label": "eq:14.18-ideological-routing-operator",
+   "line": 13485,
+   "latex": "\\mathcal{R}_{\\text{topo}} : x_i \\longmapsto (x_i^{\\text{local}}, y_i^{\\text{local}})"
+  },
+  {
+   "id": "E193",
+   "chapter": "The Algorithmic Epoch: Real-Time Subjugation and the Necessity of the Counter-Virus",
+   "chapterIndex": 14,
+   "section": "The Zugzwang Paradox: State Overreaction as \\texorpdfstring{$\\tau$",
+   "label": "eq:14.19-zugzwang-payoff-function",
+   "line": 13533,
+   "latex": "\\Pi_E(a) \\;=\\; -\\Delta\\min(a) \\quad \\text{where} \\quad \\Delta\\min(a) < 0 \\;\\; \\forall \\, a."
+  },
+  {
+   "id": "E194",
+   "chapter": "The Algorithmic Epoch: Real-Time Subjugation and the Necessity of the Counter-Virus",
+   "chapterIndex": 14,
+   "section": "The Edge Collapse: Graph-Theoretic Formalization",
+   "label": "eq:14.20-defection-cascade",
+   "line": 13575,
+   "latex": "w_{\\text{community}}(v, t) > w_{\\text{state}}(v, t) \\quad \\Longrightarrow \\quad v \\text{ defects from } G_{\\text{state}} \\text{ to } G_{\\text{community}}."
+  },
+  {
+   "id": "E195",
+   "chapter": "The Algorithmic Epoch: Real-Time Subjugation and the Necessity of the Counter-Virus",
+   "chapterIndex": 14,
+   "section": "Napoleon's $F_{\\text{enforce",
+   "label": "eq:14.21-empathy-permeability",
+   "line": 13607,
+   "latex": "\\delta_{\\text{trauma}}(F_{\\text{Polish}}, O_{\\text{Haitian}}) \\;\\approx\\; 1"
+  },
+  {
+   "id": "E196",
+   "chapter": "The Algorithmic Epoch: Real-Time Subjugation and the Necessity of the Counter-Virus",
+   "chapterIndex": 14,
+   "section": "Dessalines' Semantic Overwrite: A Master-Level Code Patch",
+   "label": "eq:14.22-semantic-overwrite",
+   "line": 13635,
+   "latex": "\\begin{aligned}\n\\text{Noir}_{\\text{Dessalines}} \\;:=\\; \\bigl\\{\\,x : x \\text{ has demonstrated alignment with the } \\tau \\text{ Singularity}\\,\\bigr\\},\\\\\n\\text{independent of } \\mathrm{phenotype}(x).\n\\end{aligned}"
+  },
+  {
+   "id": "E197",
+   "chapter": "The Algorithmic Epoch: Real-Time Subjugation and the Necessity of the Counter-Virus",
+   "chapterIndex": 14,
+   "section": "The Energy of a Systemic Photon: $E_{\\text{photon",
+   "label": "eq:15.qed-photon-energy",
+   "line": 13743,
+   "latex": "\\boxed{E_{\\text{photon}} = hf}"
+  },
+  {
+   "id": "E198",
+   "chapter": "The Algorithmic Epoch: Real-Time Subjugation and the Necessity of the Counter-Virus",
+   "chapterIndex": 14,
+   "section": "The Energy of a Systemic Photon: $E_{\\text{photon",
+   "label": "eq:15.qed-reactive-power",
+   "line": 13758,
+   "latex": "P_k = h f_k \\cdot \\Phi_k \\cdot \\rho_k"
+  },
+  {
+   "id": "E199",
+   "chapter": "The Algorithmic Epoch: Real-Time Subjugation and the Necessity of the Counter-Virus",
+   "chapterIndex": 14,
+   "section": "Absorption, Emission, and the Radicalization Pipeline",
+   "label": "eq:15.qed-excitation",
+   "line": 13774,
+   "latex": "\\Delta E = hf - \\Phi_{\\text{work}}"
+  },
+  {
+   "id": "E200",
+   "chapter": "The Algorithmic Epoch: Real-Time Subjugation and the Necessity of the Counter-Virus",
+   "chapterIndex": 14,
+   "section": "The Sign-Convention Deception: Conventional Current and the Misdirection of Extraction",
+   "label": "eq:13.18-conventional-current",
+   "line": 13853,
+   "latex": "\\vec{J}_{\\text{apparent}} \\;:\\; I_{\\text{buffer}} \\;\\longrightarrow\\; O_{\\text{racialized}} ."
+  },
+  {
+   "id": "E201",
+   "chapter": "The Algorithmic Epoch: Real-Time Subjugation and the Necessity of the Counter-Virus",
+   "chapterIndex": 14,
+   "section": "The Sign-Convention Deception: Conventional Current and the Misdirection of Extraction",
+   "label": "eq:13.19-electron-flow",
+   "line": 13863,
+   "latex": "\\vec{J}_{\\text{actual}} \\;=\\; -\\,\\vec{J}_{\\text{apparent}} \\;:\\; O_{\\text{racialized}} \\cup I_{\\text{buffer}} \\;\\longrightarrow\\; E ."
+  },
+  {
+   "id": "E202",
+   "chapter": "The Algorithmic Epoch: Real-Time Subjugation and the Necessity of the Counter-Virus",
+   "chapterIndex": 14,
+   "section": "The Sign-Convention Deception: Conventional Current and the Misdirection of Extraction",
+   "label": "eq:13.20-misperception-condition",
+   "line": 13873,
+   "latex": "\\text{sign}\\bigl(\\vec{J}_{\\text{apparent}}\\bigr) \\;=\\; -\\,\\text{sign}\\bigl(\\vec{J}_{\\text{actual}}\\bigr) ."
+  },
+  {
+   "id": "E203",
+   "chapter": "The Spectral Carrier: Electoral Cycles and the Interference Engine",
+   "chapterIndex": 15,
+   "section": "Theoretical Framework",
+   "label": "eq:21.1-interference-spectral-form",
+   "line": 13922,
+   "latex": "\\hat{S}_{\\text{total}}(f,t) = \\hat{S}_{\\text{class}}(f,t) + \\hat{S}_{\\text{identity}}(f,t)."
+  },
+  {
+   "id": "E204",
+   "chapter": "The Spectral Carrier: Electoral Cycles and the Interference Engine",
+   "chapterIndex": 15,
+   "section": "Theoretical Framework",
+   "label": "eq:21.2-phase-dispersion",
+   "line": 13928,
+   "latex": "\\Phi_{\\text{load}}(t) = 1 - \\left| \\frac{1}{N} \\sum_{j=1}^{N} e^{i\\phi_j(t)} \\right|."
+  },
+  {
+   "id": "E206",
+   "chapter": "The Spectral Carrier: Electoral Cycles and the Interference Engine",
+   "chapterIndex": 15,
+   "section": "Spectral Estimation",
+   "label": "eq:21.4-fft-definition",
+   "line": 13984,
+   "latex": "\\hat{X}[k] = \\sum_{n=0}^{N-1} x[n] \\, e^{-j 2\\pi k n / N}, \\qquad k = 0, 1, \\ldots, N-1."
+  },
+  {
+   "id": "E207",
+   "chapter": "The Spectral Carrier: Electoral Cycles and the Interference Engine",
+   "chapterIndex": 15,
+   "section": "Spectral Estimation",
+   "label": "eq:21.5-psd-definition",
+   "line": 13988,
+   "latex": "\\text{PSD}[k] = \\frac{|\\hat{X}[k]|^2}{N}, \\qquad k = 1, 2, \\ldots, N/2."
+  },
+  {
+   "id": "E208",
+   "chapter": "The Spectral Carrier: Electoral Cycles and the Interference Engine",
+   "chapterIndex": 15,
+   "section": "Cross-Spectral Analysis",
+   "label": "eq:21.6-coherence",
+   "line": 13998,
+   "latex": "C_{xy}(f) = \\frac{|S_{xy}(f)|^2}{S_{xx}(f) \\, S_{yy}(f)},"
+  },
+  {
+   "id": "E209",
+   "chapter": "The Spectral Carrier: Electoral Cycles and the Interference Engine",
+   "chapterIndex": 15,
+   "section": "Parseval Consistency",
+   "label": "eq:21.7-parseval",
+   "line": 14050,
+   "latex": "\\sum_{n=0}^{N-1} |x[n]|^2 = \\frac{1}{N} \\sum_{k=0}^{N-1} |\\hat{X}[k]|^2."
+  },
+  {
+   "id": "E210",
+   "chapter": "The Single-Issue Trap and Multi-Axis Noise Cancellation: A Boston Case Study",
+   "chapterIndex": 16,
+   "section": "Grandfather Clauses and Forcing the State's Hand",
+   "label": "eq:15.1-temporal-firearm-proxy",
+   "line": 14334,
+   "latex": "P_{\\text{temporal}}(x,o,t) =\n\\begin{cases}\n0 & \\text{if subject } x \\text{ possessed object } o \\text{ before cutoff } t_c,\\\\\n1 & \\text{if subject } x \\text{ seeks the same object } o \\text{ after cutoff } t_c.\n\\end{cases}"
+  },
+  {
+   "id": "E211",
+   "chapter": "The Single-Issue Trap and Multi-Axis Noise Cancellation: A Boston Case Study",
+   "chapterIndex": 16,
+   "section": "Geographic Interface Swaps: A La Carte Rights",
+   "label": "eq:15.2-geographic-interface-swap",
+   "line": 14350,
+   "latex": "\\mathcal{R}(s)=\n\\bigl(r_{\\text{bio}}(s), r_{\\text{kin}}(s), r_{\\text{move}}(s), r_{\\text{speech}}(s), \\ldots\\bigr),\n\\qquad\n\\mathcal{R}(s) \\neq \\vec{1} \\;\\; \\forall s ."
+  },
+  {
+   "id": "E212",
+   "chapter": "Conclusion",
+   "chapterIndex": 17,
+   "section": "The Vector Properties of Systemic Racism",
+   "label": "eq:17.1-racism-as-institutional-vector",
+   "line": 14392,
+   "latex": "\\vec{R}_{\\text{systemic}} = \\left\\| F_{\\text{institutional}} \\right\\| \\cdot \\hat{d}_{\\text{hierarchy}} \\quad \\neq \\quad \\left| \\text{prejudice}_{\\text{individual}} \\right|"
+  },
+  {
+   "id": "E213",
+   "chapter": "Conclusion",
+   "chapterIndex": 17,
+   "section": "The Unresolved Variable",
+   "label": "eq:17.2-o-terminal-expansion",
+   "line": 14445,
+   "latex": "O_{\\text{final}} = \\text{Everyone} \\setminus E"
+  },
+  {
+   "id": "E214",
+   "chapter": "Equation Registry and Era-Level Calibration",
+   "chapterIndex": 18,
+   "section": "Canonical Equation: The Predatory Min-Max Function",
+   "label": "eq:19.1-kernel-objective-registry-entry",
+   "line": 14581,
+   "latex": "\\max_{\\{P_i\\}}\\; \\mathcal{E}(t) \\quad \\text{subject to} \\quad M_{\\text{eff}}(t) = M(t) - \\lambda\\,\\Phi_{\\text{load}}(t) < \\tau"
+  },
+  {
+   "id": "E215",
+   "chapter": "Equation Registry and Era-Level Calibration",
+   "chapterIndex": 18,
+   "section": "Canonical Equation: The Predatory Min-Max Function",
+   "label": "eq:19.1a-effective-resistance-registry-entry",
+   "line": 14585,
+   "latex": "M_{\\text{eff}}(t) = M(t) - \\lambda\\,\\Phi_{\\text{load}}(t)"
+  },
+  {
+   "id": "E216",
+   "chapter": "Equation Registry and Era-Level Calibration",
+   "chapterIndex": 18,
+   "section": "Canonical Equation: The Predatory Min-Max Function",
+   "label": "eq:19.2-suppression-envelope-registry-entry",
+   "line": 14589,
+   "latex": "\\Sigma_{\\text{sup}}(t) = \\psi_s(t) + \\psi_m(t) + R(t) + \\Phi_{\\text{load}}(t)"
+  },
+  {
+   "id": "E217",
+   "chapter": "Equation Registry and Era-Level Calibration",
+   "chapterIndex": 18,
+   "section": "Canonical Equation: The Predatory Min-Max Function",
+   "label": "eq:19.3-crash-condition-registry-entry",
+   "line": 14593,
+   "latex": "\\frac{dM}{dt} > \\frac{d\\Sigma_{\\text{sup}}}{dt} \\quad \\Longleftrightarrow \\quad M_{\\text{eff}}(t) > \\tau"
+  },
+  {
+   "id": "E218",
+   "chapter": "Equation Registry and Era-Level Calibration",
+   "chapterIndex": 18,
+   "section": "Canonical Equation: The Predatory Min-Max Function",
+   "label": "eq:19.4-tier-ordering-registry-entry",
+   "line": 14597,
+   "latex": "\\text{Benefit}(E) \\gg \\text{Benefit}(P_{\\text{uppet}}) > \\text{Benefit}(F_{\\text{enforce}}) > \\text{Benefit}(I_{\\text{buffer}}) > \\text{Benefit}(O_{\\text{racialized}})"
+  },
+  {
+   "id": "E219",
+   "chapter": "Equation Registry and Era-Level Calibration",
+   "chapterIndex": 18,
+   "section": "Electrodynamic Framework Registry",
+   "label": "eq:19.5-unified-lorentz-force-registry",
+   "line": 14623,
+   "latex": "\\vec{F}_{\\text{total}} = \\mathbf{Q}\\,\\vec{\\mathcal{E}}_{\\text{mat}} + \\mathbf{Q}\\left(\\vec{v} \\times \\sum_{k=1}^{N} \\rho_k \\vec{B}_k\\right)"
+  },
+  {
+   "id": "E220",
+   "chapter": "Equation Registry and Era-Level Calibration",
+   "chapterIndex": 18,
+   "section": "Electrodynamic Framework Registry",
+   "label": "eq:19.6-complex-wage-registry",
+   "line": 14634,
+   "latex": "W = \\psi_m + j\\psi_s"
+  },
+  {
+   "id": "E221",
+   "chapter": "Equation Registry and Era-Level Calibration",
+   "chapterIndex": 18,
+   "section": "Electrodynamic Framework Registry",
+   "label": "eq:19.7-solidarity-cancellation-registry",
+   "line": 14645,
+   "latex": "W + W^* = 2\\psi_m"
+  },
+  {
+   "id": "E222",
+   "chapter": "Equation Registry and Era-Level Calibration",
+   "chapterIndex": 18,
+   "section": "Electrodynamic Framework Registry",
+   "label": "eq:19.8-systemic-resistance-registry",
+   "line": 14653,
+   "latex": "R = \\frac{m \\cdot L}{n \\cdot q^2 \\cdot \\tau \\cdot A}"
+  },
+  {
+   "id": "E223",
+   "chapter": "Equation Registry and Era-Level Calibration",
+   "chapterIndex": 18,
+   "section": "Electrodynamic Framework Registry",
+   "label": "eq:19.9-enclosure-capacitance-registry",
+   "line": 14662,
+   "latex": "C = \\frac{\\epsilon A}{d}"
+  },
+  {
+   "id": "E224",
+   "chapter": "Equation Registry and Era-Level Calibration",
+   "chapterIndex": 18,
+   "section": "Electrodynamic Framework Registry",
+   "label": "eq:19.10-inductive-kickback-registry",
+   "line": 14670,
+   "latex": "V = -L\\,\\frac{di}{dt}"
+  },
+  {
+   "id": "E225",
+   "chapter": "Equation Registry and Era-Level Calibration",
+   "chapterIndex": 18,
+   "section": "Electrodynamic Framework Registry",
+   "label": "eq:19.11-ac-complex-power-registry",
+   "line": 14677,
+   "latex": "S = V \\cdot I^{*} = |V|\\,|I|\\,e^{j\\theta} = P_{\\text{real}} + jQ_{\\text{reactive}}"
+  },
+  {
+   "id": "E226",
+   "chapter": "Equation Registry and Era-Level Calibration",
+   "chapterIndex": 18,
+   "section": "Electrodynamic Framework Registry",
+   "label": "eq:19.12-n-weighted-phase-registry",
+   "line": 14686,
+   "latex": "I_E(t) = \\sum_{k=1}^{N} \\rho_k\\,A_k\\,\\cos\\!\\bigl(\\omega t + \\phi_k\\bigr)"
+  },
+  {
+   "id": "E227",
+   "chapter": "Equation Registry and Era-Level Calibration",
+   "chapterIndex": 18,
+   "section": "Electrodynamic Framework Registry",
+   "label": "eq:19.13-buffer-work-theorem-registry",
+   "line": 14697,
+   "latex": "W_{I_{\\text{buffer}}}^{\\text{psych}}(t_0, t_1) = \\int_{t_0}^{t_1} \\mathbf{Q}\\,(\\vec{v} \\times \\vec{B}) \\cdot \\vec{v}\\, d\\tau \\;\\equiv\\; 0"
+  },
+  {
+   "id": "E228",
+   "chapter": "Equation Registry and Era-Level Calibration",
+   "chapterIndex": 18,
+   "section": "Electrodynamic Framework Registry",
+   "label": "eq:19.14-reparations-integral-registry",
+   "line": 14706,
+   "latex": "\\mathcal{R}(t_0, t_{\\text{now}}) = \\int_{t_0}^{t_{\\text{now}}} \\operatorname{Re}\\!\\Bigl[V_{\\text{state}}(\\tau)\\, I_{O}^{*}(\\tau)\\Bigr]\\, d\\tau"
+  },
+  {
+   "id": "E229",
+   "chapter": "Equation Registry and Era-Level Calibration",
+   "chapterIndex": 18,
+   "section": "Electrodynamic Framework Registry",
+   "label": "eq:lag-root-registry",
+   "line": 14721,
+   "latex": "\\mathcal{L}^*(q,\\dot{q},t) = T(\\dot{q},t) - V(q,t) - \\mathcal{D}(q,\\dot{q},t) + \\lambda\\bigl(\\tau - M_{\\mathrm{eff}}(t)\\bigr)"
+  },
+  {
+   "id": "E230",
+   "chapter": "Geometric Algebra and the N-Dimensional Wage",
+   "chapterIndex": 19,
+   "section": "The Quaternion Stage: Three Intersectional Axes",
+   "label": "eq:ga.quaternion",
+   "line": 14981,
+   "latex": "W_Q = a + bi + cj + dk"
+  },
+  {
+   "id": "E231",
+   "chapter": "Geometric Algebra and the N-Dimensional Wage",
+   "chapterIndex": 19,
+   "section": "The Quaternion Stage: Three Intersectional Axes",
+   "label": "eq:ga.quaternion-rules",
+   "line": 14985,
+   "latex": "i^2 = j^2 = k^2 = ijk = -1"
+  },
+  {
+   "id": "E232",
+   "chapter": "Geometric Algebra and the N-Dimensional Wage",
+   "chapterIndex": 19,
+   "section": "The Quaternion Stage: Three Intersectional Axes",
+   "label": "eq:ga.misogynoir",
+   "line": 15004,
+   "latex": "i \\times j = k, \\quad j \\times i = -k"
+  },
+  {
+   "id": "E233",
+   "chapter": "Geometric Algebra and the N-Dimensional Wage",
+   "chapterIndex": 19,
+   "section": "The N-Dimensional Weighted Summation Equation",
+   "label": "eq:ga.ndim-allocation",
+   "line": 15013,
+   "latex": "W = \\psi_m + \\sum_{k=1}^{N} j_k \\left(\\rho_k \\cdot \\psi_{s,k}\\right)"
+  },
+  {
+   "id": "E234",
+   "chapter": "Geometric Algebra and the N-Dimensional Wage",
+   "chapterIndex": 19,
+   "section": "The N-Dimensional Weighted Summation Equation",
+   "label": "eq:ga.transphobia-paradox",
+   "line": 15026,
+   "latex": "P_k = V_k \\cdot I_k \\implies V_k = \\frac{P_k}{\\rho_k}"
+  },
+  {
+   "id": "E235",
+   "chapter": "Geometric Algebra and the N-Dimensional Wage",
+   "chapterIndex": 19,
+   "section": "Bivectors and Intersectional Space",
+   "label": "eq:ga.bivector",
+   "line": 15035,
+   "latex": "e_1 \\wedge e_4 = e_{14}"
+  },
+  {
+   "id": "E236",
+   "chapter": "The Photon Model of Polarizing Information",
+   "chapterIndex": 20,
+   "section": "From Continuous Field to Discrete Quanta",
+   "label": "eq:app-photon-field-power",
+   "line": 15065,
+   "latex": "P_k = \\frac{1}{2\\mu_0} |B_k|^2 \\, V"
+  },
+  {
+   "id": "E237",
+   "chapter": "The Photon Model of Polarizing Information",
+   "chapterIndex": 20,
+   "section": "Spectral Density and the Small-Demographic Anomaly",
+   "label": "eq:app-photon-spectral-density",
+   "line": 15086,
+   "latex": "P_k = N_{\\gamma} \\cdot E_{\\gamma} = N_{\\gamma} \\cdot h \\nu_k"
+  },
+  {
+   "id": "E238",
+   "chapter": "The Photon Model of Polarizing Information",
+   "chapterIndex": 20,
+   "section": "Spectral Density and the Small-Demographic Anomaly",
+   "label": "eq:app-photon-optimization",
+   "line": 15096,
+   "latex": "\\max_{k, N_{\\gamma}} \\; \\chi_{m,k} \\cdot N_{\\gamma} \\cdot h \\nu_k \\quad \\text{subject to} \\quad C_{\\text{engine}}^{\\text{digital}}(N_{\\gamma}, \\nu_k) \\leq C_{\\text{budget}}"
+  },
+  {
+   "id": "E239",
+   "chapter": "Universality and the Finite Topology of Power",
+   "chapterIndex": 21,
+   "section": "Evidence from Control Theory",
+   "label": "eq:app-universality-objective",
+   "line": 15141,
+   "latex": "\\max_{u} \\; \\mathcal{E}(t) \\quad \\text{subject to} \\quad M(t) < \\tau, \\; \\dot{q} = f(q, u), \\; q(0) = q_0"
+  }
+ ]
+}
