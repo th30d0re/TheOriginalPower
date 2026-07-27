@@ -34,17 +34,17 @@ const ch08: ChapterContent = {
             {
               field: 'System Stress',
               value:
-                '(min: class resistance): MODERATE — Partition O_gendered successfully isolates half the population from economic and lethal autonomy.',
+                'MODERATE — Partition O_gendered successfully isolates half the population from economic and lethal autonomy. (min: class resistance)',
             },
             {
               field: 'Capital',
               value:
-                '(max: extraction output): HIGH — Reproductive labor and biological production optimized through legal erasure (Coverture) and coercive control (Pregnancy Criminalization).',
+                'HIGH — Reproductive labor and biological production optimized through legal erasure (Coverture) and coercive control (Pregnancy Criminalization). (max: extraction output)',
             },
             {
               field: 'Interference State',
               value:
-                '(Phi_load): FRAGMENTED — Intersection O_racialized ∩ O_gendered generates maximum extraction coefficient alpha_r,g.',
+                'FRAGMENTED — Intersection O_racialized ∩ O_gendered generates maximum extraction coefficient alpha_r,g. (Phi_load)',
             },
             {
               field: 'Active Patch',

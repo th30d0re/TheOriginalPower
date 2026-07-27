@@ -17,9 +17,24 @@ import ch06 from './ch06_haitian_export';
 import ch07 from './ch07_architecture_of_kinship';
 import ch08 from './ch08_gendered_axis';
 import ch09 from './ch09_enforcement_engine';
+import ch10 from './ch10_the_containment';
+import ch11 from './ch11_tweedism';
+import ch12 from './ch12_the_recompile';
+import ch13 from './ch13_full_algorithm';
+import ch14 from './ch14_kinetic_guarantee';
+import ch15 from './ch15_the_contradiction';
+import apxA from './apxA_statutory_sources';
+import apxB from './apxB_equation_registry';
+import apxC from './apxC_compiled_runtime_log';
+import apxD from './apxD_falsifiability';
+import apxE from './apxE_geometric_algebra';
+import apxF from './apxF_photon_model';
+import apxG from './apxG_universality';
 
 const modules: ChapterContent[] = [
   ch00, ch01, ch02, ch03, ch04, ch05, ch06, ch07, ch08, ch09,
+  ch10, ch11, ch12, ch13, ch14, ch15,
+  apxA, apxB, apxC, apxD, apxE, apxF, apxG,
 ];
 
 const orderOf = (id: string) => {

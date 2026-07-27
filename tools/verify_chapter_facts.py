@@ -40,8 +40,9 @@ def main() -> int:
     failures = 0
     checked = 0
 
-    for module in sorted(CHAPTERS.glob("ch*.ts")):
-        chapter_id = module.name[:4]
+    modules = sorted(m for m in CHAPTERS.glob("*.ts") if m.name != "index.ts")
+    for module in modules:
+        chapter_id = module.name.split("_", 1)[0]
         if wanted and chapter_id not in wanted:
             continue
         source_file = entries.get(chapter_id)

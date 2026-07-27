@@ -35,17 +35,17 @@ const ch07: ChapterContent = {
             {
               field: 'System Stress',
               value:
-                '(min: class resistance) MINIMAL — Communal kinship networks distribute resilience across extended clans. Dual-sex governance and female economic autonomy prevent unilateral partition. Algorithm cannot compile on unpartitioned population.',
+                'MINIMAL — Communal kinship networks distribute resilience across extended clans. Dual-sex governance and female economic autonomy prevent unilateral partition. Algorithm cannot compile on unpartitioned population. (min: class resistance)',
             },
             {
               field: 'Capital',
               value:
-                '(max: extraction output) BLOCKED — Matrilineal inheritance, independent female trading guilds, and distributed bridewealth networks constitute structural antibodies against the standard atomization subroutine.',
+                'BLOCKED — Matrilineal inheritance, independent female trading guilds, and distributed bridewealth networks constitute structural antibodies against the standard atomization subroutine. (max: extraction output)',
             },
             {
               field: 'Interference State',
               value:
-                '(Φ_load) NEAR-ZERO — Gender complementarity and indigenous gender fluidity deny the extraction kernel its required binary input variable. Divide-and-conquer function fails to compile.',
+                'NEAR-ZERO — Gender complementarity and indigenous gender fluidity deny the extraction kernel its required binary input variable. Divide-and-conquer function fails to compile. (Φ_load)',
             },
             {
               field: 'Active Patch',

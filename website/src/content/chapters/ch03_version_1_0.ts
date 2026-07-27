@@ -44,7 +44,7 @@ const ch03: ChapterContent = {
             {
               field: 'Interference State',
               value:
-                'LOW axis count; phenotype partition initializing. Estimated Φ_load ∈ [0.10, 0.20], ρ_τ = M(t)/τ ∈ [0.70, 0.85]. (proximity to τ)',
+                'LOW — axis count; phenotype partition initializing. Estimated Φ_load ∈ [0.10, 0.20], ρ_τ = M(t)/τ ∈ [0.70, 0.85]. (proximity to τ)',
             },
             {
               field: 'Active Patch',

@@ -35,17 +35,17 @@ const ch04: ChapterContent = {
             {
               field: 'System Stress',
               value:
-                'min: class resistance. CRITICAL — Cross-racial labor solidarity detected. Jamestown burning.',
+                'CRITICAL — Cross-racial labor solidarity detected. Jamestown burning. (min: class resistance)',
             },
             {
               field: 'Capital',
               value:
-                'max: extraction output. AT RISK — Plantation economy destabilized by unified revolt.',
+                'AT RISK — Plantation economy destabilized by unified revolt. (max: extraction output)',
             },
             {
               field: 'Interference State',
               value:
-                'Φ_load, proximity to τ. TRANSITIONING — coherence breach pre-patch, then rapid phase-loading through codified racial partition. Estimated Φ_load ∈ [0.15, 0.55]; ρ_τ > 1.00 at crash, then ρ_τ ∈ [0.60, 0.75] post-patch.',
+                'TRANSITIONING — coherence breach pre-patch, then rapid phase-loading through codified racial partition. Estimated Φ_load ∈ [0.15, 0.55]; ρ_τ > 1.00 at crash, then ρ_τ ∈ [0.60, 0.75] post-patch. (Φ_load, proximity to τ)',
             },
             {
               field: 'Active Patch',

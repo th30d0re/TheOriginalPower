@@ -42,17 +42,17 @@ const ch09: ChapterContent = {
             {
               field: 'System Stress',
               value:
-                'min: class resistance. MODERATE — Buffer Class pacified by jψ_s. Racial partition holding. Physical enforcement of extraction requires a dedicated apparatus.',
+                'MODERATE — Buffer Class pacified by jψ_s. Racial partition holding. Physical enforcement of extraction requires a dedicated apparatus. (min: class resistance)',
             },
             {
               field: 'Capital',
               value:
-                'max: extraction output. EXPANDING — Slave capitalism scaling. Human bodies classified as mortgageable assets. Cotton economy driving global markets.',
+                'EXPANDING — Slave capitalism scaling. Human bodies classified as mortgageable assets. Cotton economy driving global markets. (max: extraction output)',
             },
             {
               field: 'Interference State',
               value:
-                'Φ_load, proximity to τ. STABLE — race-dominant phase management with low dimensionality. Estimated Φ_load ∈ [0.45, 0.60], ρ_τ ∈ [0.45, 0.65].',
+                'STABLE — race-dominant phase management with low dimensionality. Estimated Φ_load ∈ [0.45, 0.60], ρ_τ ∈ [0.45, 0.65]. (Φ_load, proximity to τ)',
             },
             {
               field: 'Variables Loaded',

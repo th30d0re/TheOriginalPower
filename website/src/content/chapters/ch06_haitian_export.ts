@@ -35,17 +35,17 @@ const ch06: ChapterContent = {
             {
               field: 'System Stress',
               value:
-                '(minimum: containment integrity) ACCELERATING FAILURE — the emancipated Out-group has achieved kinetic kernel termination. Export capacity is flowing toward Gran Colombia, Mexico, the Dominican Republic, and Greece.',
+                'ACCELERATING FAILURE — the emancipated Out-group has achieved kinetic kernel termination. Export capacity is flowing toward Gran Colombia, Mexico, the Dominican Republic, and Greece. (minimum: containment integrity)',
             },
             {
               field: 'Capital',
               value:
-                '(maximum: extraction output) DEFENSIVE — the Saint-Domingue revenue stream is terminated. Global elites are shifting toward debt extraction.',
+                'DEFENSIVE — the Saint-Domingue revenue stream is terminated. Global elites are shifting toward debt extraction. (maximum: extraction output)',
             },
             {
               field: 'Interference State',
               value:
-                '(Phi load, proximity to threshold) MAXIMAL FOR GLOBAL ELITES — a sovereign Black republic is broadcasting proof-of-concept across the hemisphere. Estimated threshold proximity for adjacent Caribbean extraction zones: 0.70–0.90.',
+                'MAXIMAL FOR GLOBAL ELITES — a sovereign Black republic is broadcasting proof-of-concept across the hemisphere. Estimated threshold proximity for adjacent Caribbean extraction zones: 0.70–0.90. (Phi load, proximity to threshold)',
             },
             {
               field: 'Active Patch',
@@ -55,7 +55,7 @@ const ch06: ChapterContent = {
             {
               field: 'Counter-Vector',
               value:
-                '(emancipated Out-group) EXECUTING — Pétion–Bolívar transfer; Mina expedition supply; Geffrard support for Dominican restoration; Boyer recognition of Greece; six flag lineages; Firmin Protocol at Môle Saint-Nicolas.',
+                'EXECUTING — Pétion–Bolívar transfer; Mina expedition supply; Geffrard support for Dominican restoration; Boyer recognition of Greece; six flag lineages; Firmin Protocol at Môle Saint-Nicolas. (emancipated Out-group)',
             },
             {
               field: 'Result',
