@@ -18,17 +18,17 @@ import ch07 from './ch07_architecture_of_kinship';
 import ch08 from './ch08_gendered_axis';
 import ch09 from './ch09_enforcement_engine';
 import ch10 from './ch10_the_containment';
-import ch11 from './ch11_tweedism';
-import ch12 from './ch12_the_recompile';
-import ch13 from './ch13_full_algorithm';
-import ch14 from './ch14_kinetic_guarantee';
-import ch15 from './ch15_the_contradiction';
-import ch16 from './ch16_global_containment';
-import ch17 from './ch17_algorithmic_epoch';
-import ch18 from './ch18_spectral_carrier';
-import ch19 from './ch19_post_kinetic_horizon';
-import ch20 from './ch20_single_issue_trap';
-import ch21 from './ch21_conclusion';
+import ch14 from './ch14_tweedism';
+import ch15 from './ch15_the_recompile';
+import ch16 from './ch16_full_algorithm';
+import ch18 from './ch18_kinetic_guarantee';
+import ch19 from './ch19_the_contradiction';
+import ch20 from './ch20_global_containment';
+import ch21 from './ch21_algorithmic_epoch';
+import ch22 from './ch22_spectral_carrier';
+import ch23 from './ch23_post_kinetic_horizon';
+import ch24 from './ch24_single_issue_trap';
+import ch25 from './ch25_conclusion';
 import apxA from './apxA_statutory_sources';
 import apxB from './apxB_equation_registry';
 import apxC from './apxC_compiled_runtime_log';
@@ -38,10 +38,9 @@ import apxF from './apxF_photon_model';
 import apxG from './apxG_universality';
 
 const modules: ChapterContent[] = [
-  ch00, ch01, ch02, ch03, ch04, ch05, ch06, ch07, ch08, ch09,
-  ch10, ch11, ch12, ch13, ch14, ch15,
-  ch16, ch17, ch18, ch19, ch20, ch21,
-  apxA, apxB, apxC, apxD, apxE, apxF, apxG,
+  ch00, ch01, ch02, ch03, ch04, ch05, ch06, ch07, ch08, ch09, ch10, ch14,
+  ch15, ch16, ch18, ch19, ch20, ch21, ch22, ch23, ch24, ch25, apxA, apxB,
+  apxC, apxD, apxE, apxF, apxG,
 ];
 
 const orderOf = (id: string) => {

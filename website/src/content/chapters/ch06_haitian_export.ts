@@ -16,7 +16,7 @@ const ch06: ChapterContent = {
       'The Haitian Export: Hemispheric Liberation, Vexillological Contagion, and the Firmin Protocol',
     era: '1803–1915',
     hook: 'Hemispheric liberation, vexillological contagion, and the Firmin Protocol.',
-    accentColor: '#c2453f',
+    accentColor: '#d64667',
   },
 
   scenes: [

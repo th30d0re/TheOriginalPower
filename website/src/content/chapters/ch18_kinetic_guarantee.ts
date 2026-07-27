@@ -7,16 +7,16 @@
 // verbatim from the slice's inventory (see the eq: labels noted per block).
 import type { ChapterContent } from '../types';
 
-const ch14: ChapterContent = {
+const ch18: ChapterContent = {
   meta: {
-    id: 'ch14',
+    id: 'ch18',
     slug: 'kinetic-guarantee',
-    number: 14,
+    number: 18,
     title:
       'The Kinetic Guarantee: Arms Asymmetry, the Second Amendment, and the Disarmament Timeline',
     era: 'Arms Asymmetry',
     hook: 'Arms asymmetry, the Second Amendment, and the disarmament timeline.',
-    accentColor: '#5d44a6',
+    accentColor: '#3749c2',
     heroVisual: {
       kind: 'equation',
       latex: 'L_E \\gg L_O \\implies \\text{Extraction feasible}',
@@ -474,4 +474,4 @@ const ch14: ChapterContent = {
   ],
 };
 
-export default ch14;
+export default ch18;

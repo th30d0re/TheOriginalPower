@@ -14,7 +14,7 @@ const ch08: ChapterContent = {
     title: 'The Gendered Axis: Coverture, Eugenics, and the Reproductive Extraction Kernel',
     era: 'Coverture → Eugenics',
     hook: 'Coverture, eugenics, and the reproductive extraction kernel.',
-    accentColor: '#ad3a5c',
+    accentColor: '#d44292',
     heroVisual: {
       kind: 'equation',
       latex: '\\Delta(x) \\;=\\; V_c(x) - V_r(x),',

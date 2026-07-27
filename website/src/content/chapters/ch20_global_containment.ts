@@ -5,15 +5,15 @@
 // from the slice's inventory (see the eq: labels noted per block).
 import type { ChapterContent } from '../types';
 
-const ch16: ChapterContent = {
+const ch20: ChapterContent = {
   meta: {
-    id: 'ch16',
+    id: 'ch20',
     slug: 'global-containment',
-    number: 16,
+    number: 20,
     title: 'The Global Containment Field: Scaling the Algorithm',
     era: 'Global Scale',
     hook: 'The algorithm scaled past the nation-state.',
-    accentColor: '#4455ae',
+    accentColor: '#3872bc',
     heroVisual: {
       kind: 'interference',
       caption:
@@ -359,4 +359,4 @@ const ch16: ChapterContent = {
   ],
 };
 
-export default ch16;
+export default ch20;

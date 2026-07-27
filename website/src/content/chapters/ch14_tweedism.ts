@@ -6,11 +6,11 @@
 // verbatim from the slice's inventory (see the eq: labels noted per block).
 import type { ChapterContent } from '../types';
 
-const ch11: ChapterContent = {
+const ch14: ChapterContent = {
   meta: {
-    id: 'ch11',
+    id: 'ch14',
     slug: 'tweedism',
-    number: 11,
+    number: 14,
     title: 'Tweedism and the Puppet Class: The Algorithmic Filter on Democracy',
     era: 'The Filter',
     hook: 'The algorithmic filter that decides which candidates reach the ballot.',
@@ -18,7 +18,7 @@ const ch11: ChapterContent = {
       text: 'I don’t care who does the electing, as long as I get to do the nominating.',
       attribution: 'Boss Tweed, as quoted through Lawrence Lessig’s formulation of Tweedism',
     },
-    accentColor: '#8a3488',
+    accentColor: '#833acb',
     heroVisual: {
       kind: 'equation',
       latex: 'x_0 \\rightarrow x_1 \\rightarrow x_2 \\rightarrow \\cdots \\rightarrow x_m',
@@ -445,4 +445,4 @@ const ch11: ChapterContent = {
   ],
 };
 
-export default ch11;
+export default ch14;

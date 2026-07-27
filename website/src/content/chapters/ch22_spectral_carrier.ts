@@ -6,15 +6,15 @@
 // verbatim from the slice's inventory (see the eq: labels noted per block).
 import type { ChapterContent } from '../types';
 
-const ch18: ChapterContent = {
+const ch22: ChapterContent = {
   meta: {
-    id: 'ch18',
+    id: 'ch22',
     slug: 'spectral-carrier',
-    number: 18,
+    number: 22,
     title: 'The Spectral Carrier: Electoral Cycles and the Interference Engine',
     era: 'Electoral Cycles',
     hook: 'Electoral cycles as a carrier wave, and the interference engine that rides it.',
-    accentColor: '#3572ae',
+    accentColor: '#3898b6',
     heroVisual: {
       kind: 'interference',
       caption:
@@ -414,4 +414,4 @@ const ch18: ChapterContent = {
   ],
 };
 
-export default ch18;
+export default ch22;

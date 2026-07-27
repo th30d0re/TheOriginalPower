@@ -16,7 +16,7 @@ const ch09: ChapterContent = {
       'The Enforcement Engine: Slave Patrols, the 13th Amendment, and the Compounding Model',
     era: '1704–1865',
     hook: 'Slave patrols, the 13th Amendment, and the compounding model.',
-    accentColor: '#a3356b',
+    accentColor: '#d241a7',
     heroVisual: {
       kind: 'equation',
       latex:

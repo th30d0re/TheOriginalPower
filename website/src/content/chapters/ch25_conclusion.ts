@@ -6,18 +6,18 @@
 // verbatim from the slice's inventory (see the eq: labels noted per block).
 import type { ChapterContent } from '../types';
 
-const ch21: ChapterContent = {
+const ch25: ChapterContent = {
   meta: {
-    id: 'ch21',
+    id: 'ch25',
     slug: 'conclusion',
-    number: 21,
+    number: 25,
     title: 'Conclusion',
     era: 'Terminus',
     hook: 'What the algorithm implies, and what remains available.',
     epigraph: {
       text: 'The math lands where it lands. The system’s trajectory is clear.',
     },
-    accentColor: '#35a58c',
+    accentColor: '#38ad92',
     heroVisual: {
       kind: 'equation',
       latex:
@@ -310,4 +310,4 @@ const ch21: ChapterContent = {
   ],
 };
 
-export default ch21;
+export default ch25;

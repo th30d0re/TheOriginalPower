@@ -9,7 +9,7 @@ const apxG: ChapterContent = {
   meta: {
     id: 'apxG',
     slug: 'universality',
-    number: 28,
+    number: 32,
     title: 'Universality and the Finite Topology of Power',
     era: 'Reference',
     hook: 'The conjecture that the topology of power is finite.',

@@ -6,11 +6,11 @@
 // verbatim from the slice's inventory (see the eq: labels noted per block).
 import type { ChapterContent } from '../types';
 
-const ch17: ChapterContent = {
+const ch21: ChapterContent = {
   meta: {
-    id: 'ch17',
+    id: 'ch21',
     slug: 'algorithmic-epoch',
-    number: 17,
+    number: 21,
     title:
       'The Algorithmic Epoch: Real-Time Subjugation and the Necessity of the Counter-Virus',
     era: 'Present → Near Future',
@@ -18,7 +18,7 @@ const ch17: ChapterContent = {
     epigraph: {
       text: 'The five-tier hierarchy persists while its clock rate accelerates.',
     },
-    accentColor: '#3b62b0',
+    accentColor: '#3886b9',
     heroVisual: {
       kind: 'equation',
       latex:
@@ -464,4 +464,4 @@ const ch17: ChapterContent = {
   ],
 };
 
-export default ch17;
+export default ch21;

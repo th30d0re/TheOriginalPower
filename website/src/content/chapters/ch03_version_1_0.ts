@@ -14,7 +14,7 @@ const ch03: ChapterContent = {
     title: 'Version 1.0: Initializing the Vector (15th-Century Portugal)',
     era: '15th-Century Portugal',
     hook: 'Lisbon compiles the first racial vector.',
-    accentColor: '#d2703a',
+    accentColor: '#da6d4a',
     heroVisual: {
       kind: 'equation',
       latex: '\\vec{R}_{\\text{acism}} = M_{\\text{agnitude}} \\cdot \\hat{d}_{\\text{state}}',

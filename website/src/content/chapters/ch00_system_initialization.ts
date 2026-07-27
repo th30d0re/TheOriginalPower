@@ -20,7 +20,7 @@ const ch00: ChapterContent = {
     epigraph: {
       text: 'The shape of the machine, specified before the history traces its execution.',
     },
-    accentColor: '#e0b34c',
+    accentColor: '#deb54f',
     heroVisual: {
       kind: 'equation',
       latex:

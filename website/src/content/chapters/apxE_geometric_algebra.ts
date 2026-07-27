@@ -9,7 +9,7 @@ const apxE: ChapterContent = {
   meta: {
     id: 'apxE',
     slug: 'geometric-algebra',
-    number: 26,
+    number: 30,
     title: 'Geometric Algebra and the N-Dimensional Wage',
     era: 'Reference',
     hook: 'A formal language for non-additive compounding across axes.',

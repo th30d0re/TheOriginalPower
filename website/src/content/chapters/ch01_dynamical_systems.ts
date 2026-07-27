@@ -13,7 +13,7 @@ const ch01: ChapterContent = {
     title: 'Dynamical Systems Formulation of the Extraction Architecture',
     era: 'Foundations',
     hook: 'The architecture restated as a dynamical system: state, control input, and who has one.',
-    accentColor: '#d9a441',
+    accentColor: '#dc9d4e',
     heroVisual: {
       kind: 'equation',
       latex:

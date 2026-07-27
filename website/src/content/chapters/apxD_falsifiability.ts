@@ -9,7 +9,7 @@ const apxD: ChapterContent = {
   meta: {
     id: 'apxD',
     slug: 'falsifiability',
-    number: 25,
+    number: 29,
     title: 'Falsifiability Conditions for the Two Terminal Theorems',
     era: 'Reference',
     hook: 'The evidence that would defeat the Concession and Haitian Theorems.',

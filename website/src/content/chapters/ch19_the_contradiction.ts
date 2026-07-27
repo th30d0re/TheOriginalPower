@@ -6,15 +6,15 @@
 // verbatim from the slice's inventory (see the eq: labels noted per block).
 import type { ChapterContent } from '../types';
 
-const ch15: ChapterContent = {
+const ch19: ChapterContent = {
   meta: {
-    id: 'ch15',
+    id: 'ch19',
     slug: 'the-contradiction',
-    number: 15,
+    number: 19,
     title: 'The Contradiction: Why Reform Serves the Algorithm',
     era: 'Why Reform Fails',
     hook: 'Reform as a subroutine the algorithm calls on itself.',
-    accentColor: '#4f4bab',
+    accentColor: '#375ebf',
     heroVisual: {
       kind: 'equation',
       latex:
@@ -439,4 +439,4 @@ const ch15: ChapterContent = {
   ],
 };
 
-export default ch15;
+export default ch19;

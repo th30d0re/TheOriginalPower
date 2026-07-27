@@ -6,16 +6,16 @@
 // from the slice's inventory (see the eq: labels noted per block).
 import type { ChapterContent } from '../types';
 
-const ch20: ChapterContent = {
+const ch24: ChapterContent = {
   meta: {
-    id: 'ch20',
+    id: 'ch24',
     slug: 'single-issue-trap',
-    number: 20,
+    number: 24,
     title:
       'The Single-Issue Trap and Multi-Axis Noise Cancellation: A Boston Case Study',
     era: 'Case Study: Boston',
     hook: 'Multi-axis noise cancellation, tested on one city.',
-    accentColor: '#2f9599',
+    accentColor: '#38b0a7',
     heroVisual: {
       kind: 'interference',
       caption:
@@ -199,4 +199,4 @@ const ch20: ChapterContent = {
   ],
 };
 
-export default ch20;
+export default ch24;

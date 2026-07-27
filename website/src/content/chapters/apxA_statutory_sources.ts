@@ -9,7 +9,7 @@ const apxA: ChapterContent = {
   meta: {
     id: 'apxA',
     slug: 'statutory-sources',
-    number: 22,
+    number: 26,
     title: 'Primary Statutory Sources (United States Code)',
     era: 'Reference',
     hook: 'The statutes cited throughout, collected for uninterrupted reading.',

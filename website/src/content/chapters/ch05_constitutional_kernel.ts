@@ -13,7 +13,7 @@ const ch05: ChapterContent = {
     title: 'The Constitutional Kernel: Firmware, Bootloader, and Power Supply',
     era: '1787–1791',
     hook: 'Firmware, bootloader, and power supply of the American system.',
-    accentColor: '#bf4a35',
+    accentColor: '#d74752',
   },
 
   scenes: [

@@ -15,7 +15,7 @@ const ch04: ChapterContent = {
       "The Application: Bacon's Rebellion, the Buffer Class, and the Constitutional Patch",
     era: '1676–1787',
     hook: 'A multiracial rebellion produces the buffer class and a constitutional patch.',
-    accentColor: '#c85a34',
+    accentColor: '#d95549',
     heroVisual: {
       kind: 'equation',
       latex: '\\text{Buffer Created:} \\quad I_{poor} \\rightarrow \\text{Defender of } E',

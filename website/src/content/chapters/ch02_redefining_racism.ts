@@ -14,7 +14,7 @@ const ch02: ChapterContent = {
     title: 'Redefining Racism',
     era: 'The Definition',
     hook: 'Racism as an elite extraction algorithm rather than individual prejudice.',
-    accentColor: '#e08a3c',
+    accentColor: '#db854c',
     heroVisual: {
       kind: 'equation',
       latex:

@@ -9,7 +9,7 @@ const apxC: ChapterContent = {
   meta: {
     id: 'apxC',
     slug: 'compiled-runtime-log',
-    number: 24,
+    number: 28,
     title: 'Compiled Runtime Log',
     era: 'Reference',
     hook: 'Five centuries of execution trace, in one chronological sequence.',

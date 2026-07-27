@@ -6,18 +6,18 @@
 // verbatim from the slice's inventory (see the eq: labels noted per block).
 import type { ChapterContent } from '../types';
 
-const ch12: ChapterContent = {
+const ch15: ChapterContent = {
   meta: {
-    id: 'ch12',
+    id: 'ch15',
     slug: 'the-recompile',
-    number: 12,
+    number: 15,
     title: 'The Recompile: COINTELPRO, the Variable Swap, and the War on Drugs',
     era: '1968–1994',
     hook: 'COINTELPRO, the variable swap, and the War on Drugs.',
     epigraph: {
       text: 'Once explicit racial code became legally unstable, the payload moved into proxies that the host could defend as neutral.',
     },
-    accentColor: '#7b3894',
+    accentColor: '#6b38ca',
   },
 
   scenes: [
@@ -357,4 +357,4 @@ const ch12: ChapterContent = {
   ],
 };
 
-export default ch12;
+export default ch15;

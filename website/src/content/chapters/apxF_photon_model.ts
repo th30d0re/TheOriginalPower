@@ -9,7 +9,7 @@ const apxF: ChapterContent = {
   meta: {
     id: 'apxF',
     slug: 'photon-model',
-    number: 27,
+    number: 31,
     title: 'The Photon Model of Polarizing Information',
     era: 'Reference',
     hook: 'Discrete information packets as carriers of polarization.',

@@ -17,7 +17,7 @@ const ch10: ChapterContent = {
     epigraph: {
       text: 'Spatial policy became cognitive firmware.',
     },
-    accentColor: '#97327a',
+    accentColor: '#d13fbd',
     heroVisual: {
       kind: 'equation',
       latex:

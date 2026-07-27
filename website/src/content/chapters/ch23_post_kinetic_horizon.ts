@@ -5,15 +5,15 @@
 // verbatim manuscript text with LaTeX markup stripped.
 import type { ChapterContent } from '../types';
 
-const ch19: ChapterContent = {
+const ch23: ChapterContent = {
   meta: {
-    id: 'ch19',
+    id: 'ch23',
     slug: 'post-kinetic-horizon',
-    number: 19,
+    number: 23,
     title: 'The Post-Kinetic Horizon: The Open-Source Republic and the Perpetual Battle',
     era: 'The Horizon',
     hook: 'The open-source republic and the perpetual battle.',
-    accentColor: '#3184a6',
+    accentColor: '#38a9b3',
   },
 
   scenes: [
@@ -237,4 +237,4 @@ const ch19: ChapterContent = {
   ],
 };
 
-export default ch19;
+export default ch23;

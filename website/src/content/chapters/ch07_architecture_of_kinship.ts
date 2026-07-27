@@ -15,7 +15,7 @@ const ch07: ChapterContent = {
       'The Architecture of Kinship: Pre-Colonial African Intimacy and the Colonial Extraction of Family',
     era: 'Pre-colonial → 1950',
     hook: 'Pre-colonial African intimacy and the colonial extraction of family.',
-    accentColor: '#b83f4e',
+    accentColor: '#d5447c',
   },
 
   scenes: [

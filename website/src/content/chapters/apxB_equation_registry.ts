@@ -9,7 +9,7 @@ const apxB: ChapterContent = {
   meta: {
     id: 'apxB',
     slug: 'equation-registry',
-    number: 23,
+    number: 27,
     title: 'Equation Registry and Era-Level Calibration',
     era: 'Reference',
     hook: 'Every numbered equation, with its tier and calibration.',
