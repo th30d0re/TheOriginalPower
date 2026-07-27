@@ -1,0 +1,159 @@
+# L6 fixed query set — structural questions over the framework knowledge
+# graph with known answers. Gold answers were computed from
+# tests/fixtures/framework_kg_fixture.json and are pinned by
+# tests/test_encoding_bench.py::test_gold_answers_match_fixture.
+#
+# hops_required marks the minimum neighbourhood radius from `focus` in which
+# the answer is derivable. Queries with hops_required=1 form the budget-test
+# set (the 1-hop vs 2-hop accuracy comparison); queries with hops_required=2
+# form the escalation set that justifies logged 2-hop escalation.
+queries:
+  # ---- edge_existence (budget-test set) ----
+  - id: q01
+    type: edge_existence
+    focus: AC_BACON_1676
+    hops_required: 1
+    question: "Does the edge (AC_BACON_1676, calibrates, E014) exist in the graph?"
+    gold: "yes"
+  - id: q02
+    type: edge_existence
+    focus: KX_HOUSING_2026
+    hops_required: 1
+    question: "Does the edge (KX_HOUSING_2026, maps_to, E035) exist in the graph?"
+    gold: "no"
+  - id: q03
+    type: edge_existence
+    focus: E021
+    hops_required: 1
+    question: "Does the edge (E021, derives_from, E014) exist in the graph?"
+    gold: "yes"
+  - id: q04
+    type: edge_existence
+    focus: E003
+    hops_required: 1
+    question: "Does the edge (E003, derives_from, E014) exist in the graph?"
+    gold: "no"
+  - id: q05
+    type: edge_existence
+    focus: AC_PULLMAN_1894
+    hops_required: 1
+    question: "Does the edge (AC_PULLMAN_1894, calibrates, E027) exist in the graph?"
+    gold: "yes"
+  - id: q06
+    type: edge_existence
+    focus: TIER_1
+    hops_required: 1
+    question: "Does the edge (TIER_1, member_of, E003) exist in the graph?"
+    gold: "no"
+  # ---- node_degree (budget-test set) ----
+  - id: q07
+    type: node_degree
+    focus: E014
+    hops_required: 1
+    question: "How many distinct nodes is E014 directly connected to, ignoring edge direction?"
+    gold: "6"
+  - id: q08
+    type: node_degree
+    focus: E021
+    hops_required: 1
+    question: "How many distinct nodes is E021 directly connected to, ignoring edge direction?"
+    gold: "3"
+  - id: q09
+    type: node_degree
+    focus: TIER_1
+    hops_required: 1
+    question: "How many distinct nodes is TIER_1 directly connected to, ignoring edge direction?"
+    gold: "3"
+  - id: q10
+    type: node_degree
+    focus: KX_FED_2026
+    hops_required: 1
+    question: "How many distinct nodes is KX_FED_2026 directly connected to, ignoring edge direction?"
+    gold: "1"
+  - id: q11
+    type: node_degree
+    focus: AC_BACON_1676
+    hops_required: 1
+    question: "How many distinct nodes is AC_BACON_1676 directly connected to, ignoring edge direction?"
+    gold: "2"
+  - id: q12
+    type: node_degree
+    focus: E035
+    hops_required: 1
+    question: "How many distinct nodes is E035 directly connected to, ignoring edge direction?"
+    gold: "6"
+  # ---- connected_nodes (path existence, edges traversable in either direction) ----
+  - id: q13
+    type: connected_nodes
+    focus: CARRIER_KINSHIP
+    hops_required: 1
+    question: "Is there a path of any length between CARRIER_KINSHIP and AXIS_GENDER, following edges in either direction?"
+    gold: "yes"
+  - id: q14
+    type: connected_nodes
+    focus: KX_FED_2026
+    hops_required: 2
+    question: "Is there a path of any length between KX_FED_2026 and AC_HAITI_1804, following edges in either direction?"
+    gold: "yes"
+  - id: q15
+    type: connected_nodes
+    focus: KX_FED_2026
+    hops_required: 2
+    question: "Is there a path of any length between KX_FED_2026 and AXIS_GENDER, following edges in either direction?"
+    gold: "no"
+  - id: q16
+    type: connected_nodes
+    focus: AC_REDLINING_1934
+    hops_required: 2
+    question: "Is there a path of any length between AC_REDLINING_1934 and E014, following edges in either direction?"
+    gold: "yes"
+  # ---- cycle_check (directed-cycle membership; escalation set) ----
+  - id: q17
+    type: cycle_check
+    focus: E003
+    hops_required: 2
+    question: "Is E003 part of a directed cycle, meaning a path that follows edge directions and returns to E003?"
+    gold: "yes"
+  - id: q18
+    type: cycle_check
+    focus: E021
+    hops_required: 2
+    question: "Is E021 part of a directed cycle, meaning a path that follows edge directions and returns to E021?"
+    gold: "no"
+  - id: q19
+    type: cycle_check
+    focus: E035
+    hops_required: 2
+    question: "Is E035 part of a directed cycle, meaning a path that follows edge directions and returns to E035?"
+    gold: "yes"
+  - id: q20
+    type: cycle_check
+    focus: AC_BACON_1676
+    hops_required: 2
+    question: "Is AC_BACON_1676 part of a directed cycle, meaning a path that follows edge directions and returns to AC_BACON_1676?"
+    gold: "no"
+  # ---- multi_hop_path (escalation set) ----
+  - id: q21
+    type: multi_hop_path
+    focus: KX_LABOR_2026
+    hops_required: 2
+    question: "Which anchor cases calibrate the equation that contract KX_LABOR_2026 maps to? Answer with the node ID or IDs, comma-separated."
+    gold: "AC_BACON_1676"
+  - id: q22
+    type: multi_hop_path
+    focus: KX_HOUSING_2026
+    hops_required: 2
+    question: "Which anchor cases calibrate the equation that contract KX_HOUSING_2026 maps to? Answer with the node ID or IDs, comma-separated."
+    gold: "AC_PULLMAN_1894,AC_REDLINING_1934"
+  - id: q23
+    type: multi_hop_path
+    focus: KX_FED_2026
+    hops_required: 2
+    question: "Which anchor cases calibrate the equation that contract KX_FED_2026 maps to? Answer with the node ID or IDs, comma-separated."
+    gold: "AC_HAITI_1804"
+  - id: q24
+    type: multi_hop_path
+    focus: E035
+    hops_required: 2
+    question: "Which equations hold the same tier status as E035? Exclude E035 itself. Answer with the node ID or IDs, comma-separated."
+    gold: "E003,E014"
