@@ -4,11 +4,19 @@
 import { useEffect, useRef } from 'react';
 import { Link, Navigate, useParams } from 'react-router-dom';
 import { motion, useInView, useScroll, useReducedMotion } from 'framer-motion';
+import type { ChapterContent } from '../content/types';
 import { getAdjacent, getChapter } from '../content/chapters';
+import { getManifestEntry } from '../content/manifest';
 import { markCompleted, markVisited } from './progress';
 import SceneVisual from './visuals/SceneVisual';
 import SceneRenderer from './SceneRenderer';
 import './ChapterPage.css';
+
+/** "04. The Haitian Export" for chapters, "A. Primary Statutory Sources" for appendices. */
+function navLabel(chapter: ChapterContent): string {
+  const letter = getManifestEntry(chapter.meta.id)?.appendixLetter;
+  return `${letter ?? chapter.meta.number}. ${chapter.meta.title}`;
+}
 
 const ChapterPage = () => {
   const { chapterId } = useParams();
@@ -43,6 +51,9 @@ const ChapterPage = () => {
 
   const { meta, scenes } = chapter;
   const { prev, next } = getAdjacent(meta.id);
+  // Appendices continue the manifest's numbering but read as letters.
+  const appendixLetter = getManifestEntry(meta.id)?.appendixLetter;
+  const eyebrow = appendixLetter ? `Appendix ${appendixLetter}` : `Chapter ${meta.number}`;
 
   return (
     <div
@@ -59,7 +70,7 @@ const ChapterPage = () => {
 
       <header className="chapter-hero">
         <div className="chapter-hero-inner">
-          <p className="chapter-hero-number">Chapter {meta.number}</p>
+          <p className="chapter-hero-number">{eyebrow}</p>
           <h1 className="chapter-hero-title">{meta.title}</h1>
           <p className="chapter-hero-era">{meta.era}</p>
           {meta.epigraph && (
@@ -94,9 +105,7 @@ const ChapterPage = () => {
             {prev && (
               <Link to={`/story/${prev.meta.id}`} className="chapter-nav-card chapter-nav-prev">
                 <span className="chapter-nav-card-label">Previous</span>
-                <span className="chapter-nav-card-title">
-                  {prev.meta.number}. {prev.meta.title}
-                </span>
+                <span className="chapter-nav-card-title">{navLabel(prev)}</span>
               </Link>
             )}
             {next && (
@@ -105,9 +114,7 @@ const ChapterPage = () => {
                 className="chapter-nav-card chapter-nav-next chapter-nav-card-primary"
               >
                 <span className="chapter-nav-card-label">Next</span>
-                <span className="chapter-nav-card-title">
-                  {next.meta.number}. {next.meta.title}
-                </span>
+                <span className="chapter-nav-card-title">{navLabel(next)}</span>
               </Link>
             )}
           </div>
