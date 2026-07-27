@@ -91,3 +91,6 @@ fused_models/
 
 # Agent worktrees (codex / kimi loop runs)
 .worktrees/
+
+# Generated per-chapter LaTeX slices + extraction output (regenerate with make chapters-src)
+Paper/chapters_src/

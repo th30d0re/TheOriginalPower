@@ -14,6 +14,22 @@ export interface VennDiagramData {
   elite?: { label: string; members: string[] };
 }
 
+/** One plotted series for the generic `series` chart. */
+export interface ChartSeries {
+  label: string;
+  /** CSS color; defaults to the chapter accent when omitted. */
+  color?: string;
+  points: Array<{ x: number; y: number }>;
+}
+
+/** One rung of the five-tier extraction hierarchy. */
+export interface Tier {
+  /** Formal set symbol, e.g. 'E', 'P', 'F', 'I', 'O'. */
+  symbol: string;
+  name: string;
+  description: string;
+}
+
 /** Discriminated union of every visual a scene can request. */
 export type VisualSpec =
   | { kind: 'venn'; data: VennDiagramData; caption?: string }
@@ -24,6 +40,22 @@ export type VisualSpec =
   | { kind: 'compounding'; caption?: string }
   /** Self-contained phasor/resonance animation. */
   | { kind: 'phasor'; caption?: string }
+  /** The 3D interference engine (electoral carrier / field superposition). */
+  | { kind: 'interference'; caption?: string }
+  /** The Smith-chart-style extraction chart from Appendix H. */
+  | { kind: 'extractionChart'; caption?: string }
+  /** Generic quantitative line/area chart for empirical claims. */
+  | {
+      kind: 'series';
+      series: ChartSeries[];
+      xLabel?: string;
+      yLabel?: string;
+      /** Render filled areas under each line. */
+      area?: boolean;
+      caption?: string;
+    }
+  /** The five-tier hierarchy, revealed rung by rung on scroll. */
+  | { kind: 'tierLadder'; tiers: Tier[]; caption?: string }
   /** Manim MP4 from public/animations, e.g. src: '/animations/ComplexWage.mp4'. */
   | { kind: 'manim'; src: string; caption?: string }
   /** Display equation rendered with KaTeX (display mode). */
@@ -48,12 +80,53 @@ export interface DeepDive {
   equations?: Array<{ latex: string; label?: string; note?: string }>;
 }
 
+/** One line of a RUNTIME LOG box: a diagnostic field and its value. */
+export interface RuntimeLogLine {
+  field: string;
+  value: string;
+}
+
+/**
+ * Body content of a scene. The manuscript's own structural vocabulary —
+ * RUNTIME LOG boxes, keyinsight/historicalsource callouts, and the
+ * theorem-like environments — each map to a block kind so chapter modules keep
+ * the source's shape instead of flattening everything into paragraphs.
+ */
+export type ContentBlock =
+  /** Ordinary narrative paragraphs. */
+  | { kind: 'prose'; paragraphs: string[] }
+  /** Terminal-styled execution trace; opens most chapters in the manuscript. */
+  | { kind: 'runtimeLog'; title: string; lines: RuntimeLogLine[] }
+  /** Emphasised takeaway (manuscript `keyinsight`). */
+  | { kind: 'insight'; heading?: string; paragraphs: string[] }
+  /** Primary-source excerpt (manuscript `historicalsource`). */
+  | { kind: 'source'; heading?: string; paragraphs: string[]; attribution?: string }
+  /** Formal machinery (manuscript `definition`/`theorem`/`conjecture`/`proof`). */
+  | {
+      kind: 'formal';
+      variant: 'definition' | 'theorem' | 'conjecture' | 'proof';
+      label?: string;
+      paragraphs: string[];
+      equations?: Array<{ latex: string; label?: string }>;
+    }
+  /** Full-width typographic emphasis for a single load-bearing sentence. */
+  | { kind: 'pullquote'; text: string; attribution?: string }
+  /** A visual placed at an exact point in the body. */
+  | { kind: 'visual'; spec: VisualSpec };
+
 export interface Scene {
   /** Stable id unique within the chapter, e.g. 'the-buffer-class'. */
   id: string;
   title?: string;
-  /** Adapted narrative paragraphs. Affirmative declarative voice only. */
-  prose: string[];
+  /**
+   * Shorthand for a single leading prose block. The engine normalizes this
+   * into `blocks`, so a scene may use `prose`, `blocks`, or both (prose first).
+   * Affirmative declarative voice only — see AGENTS.md.
+   */
+  prose?: string[];
+  /** Rich body content, rendered in order after any `prose`. */
+  blocks?: ContentBlock[];
+  /** Convenience visual rendered after the body. Use a `visual` block for precise placement. */
   visual?: VisualSpec;
   keyConcepts?: KeyConcept[];
   deepDive?: DeepDive;
