@@ -88,3 +88,6 @@ fused_models/
 
 # Locally resolved build tools (see Makefile biber shim)
 .tooling/
+
+# Agent worktrees (codex / kimi loop runs)
+.worktrees/
