@@ -18,9 +18,13 @@ import ch07 from './ch07_architecture_of_kinship';
 import ch08 from './ch08_gendered_axis';
 import ch09 from './ch09_enforcement_engine';
 import ch10 from './ch10_the_containment';
+import ch11 from './ch11_german_extraction';
+import ch12 from './ch12_geopolitical_patch';
+import ch13 from './ch13_biological_extraction';
 import ch14 from './ch14_tweedism';
 import ch15 from './ch15_the_recompile';
 import ch16 from './ch16_full_algorithm';
+import ch17 from './ch17_pipeline_architecture';
 import ch18 from './ch18_kinetic_guarantee';
 import ch19 from './ch19_the_contradiction';
 import ch20 from './ch20_global_containment';
@@ -36,11 +40,12 @@ import apxD from './apxD_falsifiability';
 import apxE from './apxE_geometric_algebra';
 import apxF from './apxF_photon_model';
 import apxG from './apxG_universality';
+import apxH from './apxH_extraction_chart';
 
 const modules: ChapterContent[] = [
-  ch00, ch01, ch02, ch03, ch04, ch05, ch06, ch07, ch08, ch09, ch10, ch14,
-  ch15, ch16, ch18, ch19, ch20, ch21, ch22, ch23, ch24, ch25, apxA, apxB,
-  apxC, apxD, apxE, apxF, apxG,
+  ch00, ch01, ch02, ch03, ch04, ch05, ch06, ch07, ch08, ch09, ch10, ch11,
+  ch12, ch13, ch14, ch15, ch16, ch17, ch18, ch19, ch20, ch21, ch22, ch23,
+  ch24, ch25, apxA, apxB, apxC, apxD, apxE, apxF, apxG, apxH,
 ];
 
 const orderOf = (id: string) => {
