@@ -19,7 +19,7 @@ const TierLadder = ({ tiers }: TierLadderProps) => {
 
   const rungVariants = {
     hidden: {
-      opacity: 0,
+      opacity: prefersReducedMotion ? 1 : 0,
       y: prefersReducedMotion ? 0 : 20,
     },
     visible: {
