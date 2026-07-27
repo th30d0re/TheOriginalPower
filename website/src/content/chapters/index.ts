@@ -11,8 +11,16 @@ import ch00 from './ch00_system_initialization';
 import ch01 from './ch01_dynamical_systems';
 import ch02 from './ch02_redefining_racism';
 import ch03 from './ch03_version_1_0';
+import ch04 from './ch04_bacons_rebellion';
+import ch05 from './ch05_constitutional_kernel';
+import ch06 from './ch06_haitian_export';
+import ch07 from './ch07_architecture_of_kinship';
+import ch08 from './ch08_gendered_axis';
+import ch09 from './ch09_enforcement_engine';
 
-const modules: ChapterContent[] = [ch00, ch01, ch02, ch03];
+const modules: ChapterContent[] = [
+  ch00, ch01, ch02, ch03, ch04, ch05, ch06, ch07, ch08, ch09,
+];
 
 const orderOf = (id: string) => {
   const i = manifest.findIndex((e) => e.id === id);
