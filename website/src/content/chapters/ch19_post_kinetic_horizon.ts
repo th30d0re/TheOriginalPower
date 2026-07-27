@@ -99,7 +99,7 @@ const ch19: ChapterContent = {
         passages: [
           {
             paragraphs: [
-              'The Open-Source Republic is, in structural terms, the 2026 compile of Du Bois’s 1935 specification. The goals remain unchanged; the version difference lies in the variable resolution: Du Bois identified the four requirements; this framework specifies the algorithmic conditions under which each requirement can be implemented without immediate counter-revolutionary recompilation. Abolition Democracy failed in the 1870s because the psychological wage (ψ) was still sufficient to keep the buffer class aligned with the global Elite against the Reconstruction coalition. The question the Open-Source Republic must answer—and the Perpetual Battle section addresses—is what prevents the same recompilation this time.',
+              'The Open-Source Republic is, in structural terms, the 2026 compile of Du Bois’s 1935 specification. The goals remain unchanged; the version difference lies in the variable resolution: Du Bois identified the four requirements; this framework specifies the algorithmic conditions under which each requirement can be implemented without immediate counter-revolutionary recompilation. Abolition Democracy failed in the 1870s because the psychological wage (ψ) was still sufficient to keep I_buffer aligned with E_global against the Reconstruction coalition. The question the Open-Source Republic must answer—and the Perpetual Battle section addresses—is what prevents the same recompilation this time.',
             ],
           },
         ],
@@ -135,6 +135,12 @@ const ch19: ChapterContent = {
               'The Open-Source Republic demands a granular, function-based audit of every agency, judging them solely on whether they facilitate extraction or protect the population from it.',
             ],
           },
+          {
+            heading: 'Legislation as experiment',
+            paragraphs: [
+              'Laws must carry a hard sunset clause and a strict implementation period. During this period, mandatory data collection occurs. Re-authorization is based strictly on whether the analyzed outcomes met the stated goal without facilitating hidden extraction.',
+            ],
+          },
         ],
       },
     },
@@ -146,7 +152,7 @@ const ch19: ChapterContent = {
         'The Enforcement Class and Puppet Class derive operational power from legal insulation. Qualified Immunity shields police. Absolute Immunity shields prosecutors, judges, and legislators. These doctrines create firewalls through which state actors violate the constitutional kernel without bearing the consequences.',
         'The Open-Source Republic abolishes both forms of immunity. It rigorously and universally enforces 18 U.S.C. § 242, the federal statute criminalizing deprivation of civil rights under color of law, against Enforcement Class and Puppet Class actors. Legislators who knowingly draft and pass laws that harm the public or violate the constitutional kernel face enforceable criminal penalties.',
         'The republic also removes the capital firewall around political representation. The green primary channels Elite capital into candidate selection before the public vote. Eliminating Super PACs and adopting a fully publicly funded electoral model starves the Puppet Class of its primary Elite funding mechanism.',
-        'Public funding changes the alignment imposed by the electoral filter. Representatives become dependent on the population’s political authorization rather than the extraction kernel’s financial gate. The structural link between concentrated capital and political representation is severed at the pre-electoral stage.',
+        'Public funding changes the alignment imposed by the electoral filter. Representatives become dependent on the population’s political authorization. The extraction kernel loses its financial gate. The structural link between concentrated capital and political representation is severed at the pre-electoral stage.',
       ],
       keyConcepts: [
         {
@@ -221,7 +227,8 @@ const ch19: ChapterContent = {
         passages: [
           {
             paragraphs: [
-              'The audit is a continuous, automated detection loop running at the same latency as the extraction operator it is designed to counter.',
+              'The same decentralized, open-source, mesh-routed immune response designed to monitor the state’s algorithmic governance during the kinetic phase becomes, post-kinetically, the permanent audit substrate of the Open-Source Republic. Its Φ_load monitoring function operates as follows: whenever any node in the network detects a phase-injection signal—a narrative designed to re-activate the psychological wage (ψ), a legislative proposal that re-introduces asymmetric enforcement gradients, a capital allocation pattern that reconstructs the extraction differential—the Counter-AI broadcasts a real-time decryption event, publishing the detected signal alongside the authentic data it is distorting.',
+              'The audit is a continuous, automated detection loop running at the same latency as the 𝓔 operator it is designed to counter.',
             ],
           },
         ],

@@ -119,8 +119,7 @@ const ch20: ChapterContent = {
       id: 'temporal-proxy',
       title: 'Grandfather Clauses as Temporal Access Control',
       prose: [
-        'Grandfather clauses protect accumulated assets held inside a legal boundary and criminalize later acquisition outside it. In gun legislation, that structure preserves the kinetic capital of the Elite and Buffer Class while closing the gate to future entrants.',
-        'The temporal proxy assigns legal status through the acquisition timestamp. The object and the user’s dangerousness remain constant across the cutoff.',
+        'Grandfather clauses protect accumulated assets held inside a legal boundary and criminalize later acquisition outside it. In gun legislation, that structure preserves the kinetic capital of the Elite and Buffer Class while closing the gate to future entrants. The temporal proxy assigns legal status through the acquisition timestamp. The object and the user’s dangerousness remain constant across the cutoff.',
       ],
       blocks: [
         {
@@ -138,7 +137,7 @@ const ch20: ChapterContent = {
           kind: 'prose',
           paragraphs: [
             'Massachusetts Chapter 135 expands the Commonwealth’s firearm restrictions and preserves date-sensitive possession categories for weapons held before operative cutoffs. A Bruen-style challenge can therefore examine whether temporal priority permits the state to create two legal classes around the same object.',
-            'Bruen places the burden on government to justify covered firearm regulations through the Nation’s historical tradition of firearm regulation. Heller preserves the “dangerous and unusual” category. Rahimi accepts a historically grounded match in burden and justification without requiring a historical twin.',
+            'Bruen places the burden on government to justify covered firearm regulations through the Nation’s historical tradition of firearm regulation. Heller preserves the “dangerous and unusual” category. Rahimi accepts a historically grounded match in burden and justification as the analogue inquiry.',
             'The constitutional claim belongs to litigants. The structural diagnosis treats the temporal proxy as asymmetric access control. Removal of grandfather clauses, including the emerging legislative battles described in Rhode Island, applies disarmament pressure to both the Buffer Class and the Out-group. That equal application revokes the psychological wage and exposes the policy’s asymmetric allocation of kinetic force.',
           ],
         },
@@ -161,8 +160,7 @@ const ch20: ChapterContent = {
       id: 'geographic-interface',
       title: 'A La Carte Rights Across State Lines',
       prose: [
-        'Geographic fragmentation distributes components of autonomy across incompatible jurisdictions. A person crosses a state line to recover one component and enters a legal environment where another component is degraded. State borders function as interface selectors.',
-        'The rights vector records biological autonomy, kinetic autonomy, movement, speech, and further components. The model states that the complete bundle remains unavailable in any single state.',
+        'Geographic fragmentation distributes components of autonomy across incompatible jurisdictions. A person crosses a state line to recover one component and enters a legal environment where another component is degraded. State borders function as interface selectors. The rights vector records biological autonomy, kinetic autonomy, movement, speech, and further components. The model states that the complete bundle remains unavailable in any single state.',
       ],
       blocks: [
         {

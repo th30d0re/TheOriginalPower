@@ -23,6 +23,12 @@ import ch12 from './ch12_the_recompile';
 import ch13 from './ch13_full_algorithm';
 import ch14 from './ch14_kinetic_guarantee';
 import ch15 from './ch15_the_contradiction';
+import ch16 from './ch16_global_containment';
+import ch17 from './ch17_algorithmic_epoch';
+import ch18 from './ch18_spectral_carrier';
+import ch19 from './ch19_post_kinetic_horizon';
+import ch20 from './ch20_single_issue_trap';
+import ch21 from './ch21_conclusion';
 import apxA from './apxA_statutory_sources';
 import apxB from './apxB_equation_registry';
 import apxC from './apxC_compiled_runtime_log';
@@ -34,6 +40,7 @@ import apxG from './apxG_universality';
 const modules: ChapterContent[] = [
   ch00, ch01, ch02, ch03, ch04, ch05, ch06, ch07, ch08, ch09,
   ch10, ch11, ch12, ch13, ch14, ch15,
+  ch16, ch17, ch18, ch19, ch20, ch21,
   apxA, apxB, apxC, apxD, apxE, apxF, apxG,
 ];
 
