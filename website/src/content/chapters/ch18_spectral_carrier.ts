@@ -92,6 +92,15 @@ const ch18: ChapterContent = {
         caption:
           'Phase loading rises as the identity-axis phases lose collective alignment.',
       },
+      blocks: [
+        {
+          kind: 'visual',
+          spec: {
+            kind: 'phasor',
+            caption: 'Rotating phase vectors show how alignment produces coherent amplitude and dispersion suppresses it.',
+          },
+        },
+      ],
       keyConcepts: [
         {
           term: 'Phase loading',
@@ -328,6 +337,13 @@ const ch18: ChapterContent = {
         'The Congressional Record concentrates identity-band power at the 4-year institutional carrier. Google Trends concentrates it at the 2-year public-search carrier. The framework treats the divergence as substrate-specific modulation within a multi-channel control system.',
       ],
       blocks: [
+        {
+          kind: 'visual',
+          spec: {
+            kind: 'phasor',
+            caption: 'The resonance curve links each identity axis’s natural frequency and impedance to its response at the electoral carrier.',
+          },
+        },
         {
           kind: 'insight',
           heading: 'Phase coherence becomes a design requirement',

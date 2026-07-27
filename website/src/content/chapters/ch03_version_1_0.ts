@@ -287,6 +287,20 @@ const ch03: ChapterContent = {
         'The Elite constitutes approximately 0.002 percent of the population in the chapter’s formalization and sits within the In-group as a subset with distinct material interests. The Out-group supplies the primary extraction pool. The In-group receives status by default and material concessions when kinetic threat requires them.',
         'This embryonic ordering later acquires additional tiers as specific security failures force the system to add new functions.',
       ],
+      blocks: [
+        {
+          kind: 'visual',
+          spec: {
+            kind: 'venn',
+            data: {
+              inGroup: { label: 'In-group (I)', members: ['Working-class population'] },
+              outGroup: { label: 'Out-group (O-racialized)', members: ['African peoples and their descendants'] },
+              elite: { label: 'True Elite (E)', members: ['Hyper-concentrated capital class', 'Approximately 0.002% of the population'] },
+            },
+            caption: 'The Elite sits inside the In-group while the racialized Out-group forms the primary extraction pool.',
+          },
+        },
+      ],
       visual: {
         kind: 'equation',
         latex:

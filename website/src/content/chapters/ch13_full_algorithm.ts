@@ -105,6 +105,13 @@ const ch13: ChapterContent = {
           },
         },
         {
+          kind: 'visual',
+          spec: {
+            kind: 'expansion',
+            caption: 'The extraction boundary widens as former members of the Buffer Class are absorbed into the broader Out-group.',
+          },
+        },
+        {
           kind: 'prose',
           paragraphs: [
             'The source uses the shrinking middle class as an illustrative measure. The share of adults in middle-income households fell from 61% in 1971 to 50% in 2015, and median real household wealth for the middle quintile declined 20% from 2001 to 2016.',
@@ -362,6 +369,13 @@ const ch13: ChapterContent = {
         'The racialized Out-group remains at the compounding floor as the broader extraction pool grows. Cannibalization adds new targets without erasing the inherited ordering inside the expanded Out-group.',
       ],
       blocks: [
+        {
+          kind: 'visual',
+          spec: {
+            kind: 'expansion',
+            caption: 'The expanding carceral boundary absorbs additional non-Elite groups while preserving the racialized ordering within the extraction pool.',
+          },
+        },
         {
           kind: 'formal',
           variant: 'conjecture',

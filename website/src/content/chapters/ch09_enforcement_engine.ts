@@ -306,6 +306,15 @@ const ch09: ChapterContent = {
         caption:
           'Every policy shock acts on the capacity retained after the preceding shock.',
       },
+      blocks: [
+        {
+          kind: 'visual',
+          spec: {
+            kind: 'compounding',
+            caption: 'Explore how repeated burdens alter the capacity inherited by each subsequent period.',
+          },
+        },
+      ],
       keyConcepts: [
         {
           term: 'Capacity',
