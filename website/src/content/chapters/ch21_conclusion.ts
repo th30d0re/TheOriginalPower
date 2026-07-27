@@ -135,6 +135,7 @@ const ch21: ChapterContent = {
         {
           kind: 'prose',
           paragraphs: [
+            'An earlier pedagogical form expressed the same structure as magnitude multiplied by the direction of state power. The terminal equation replaces those provisional terms with the full architecture. Institutional force combines the operational power of the Elite, Puppet Class, and Enforcement Class. The hierarchy vector specifies the force’s unidirectional path through the Buffer Class and toward the racialized Out-group.',
             'A marginalized person’s anger, resentment, or hostility has real emotional magnitude. The Out-group lacks control of the Elite’s capital, the Puppet Class, and the Enforcement Class by definition. Its prejudice therefore has no institutional direction and cannot produce systemic racism within this framework.',
             'The distinction resolves the category error embedded in claims of “reverse racism.” Any person can generate bias. Redlining, police deployment, sentencing rules, and capital management require an institutional apparatus. That apparatus can generate a destructive racial vector even when its individual operators express no personal prejudice.',
             'The causal direction begins in Elite economic interests. Those interests produce systemic racialization and cultivate interpersonal prejudice as a maintenance loop. The hierarchy supplies institutional direction from above. Individual bias circulates inside the resulting field.',
@@ -180,7 +181,7 @@ const ch21: ChapterContent = {
           label: 'The Concession Theorem',
           paragraphs: [
             'Every non-kinetic reform in the historical dataset was absorbed as management of class resistance. The system calibrates concessions to prevent kinetic threshold while preserving extraction capacity. A reduction in one group’s load triggers reassignment elsewhere while aggregate extraction remains intact.',
-            'Policy sequence compounds the result. Each reform acts upon an Out-group already diminished by prior shocks. The extraction kernel determines the trajectory’s terminal product.',
+            'Policy sequence compounds the result and makes reform non-commutative. Each intervention acts upon an Out-group already diminished by every prior shock. A beneficial policy therefore enters a trajectory shaped by accumulated losses. The extraction kernel determines the terminal product while load balancing preserves the aggregate yield.',
           ],
           equations: [
             {
@@ -194,7 +195,7 @@ const ch21: ChapterContent = {
           variant: 'theorem',
           label: 'The Haitian Theorem',
           paragraphs: [
-            'Across the historical dataset from 1450 through 2026, confirmed structural liberation at the local level occurred exclusively through kinetic action. The five-century disarmament architecture records the system’s sustained optimization against the variable it cannot absorb.',
+            'Across the historical dataset from 1450 through 2026, confirmed structural liberation at the local level occurred exclusively through kinetic action. In the theorem’s terms, every non-kinetic intervention left the extraction objective above zero. Confirmed kinetic liberation terminated the local kernel. The five-century disarmament architecture, extending from the antebellum Black Codes through the modern spatial proxy, records sustained optimization against the variable the system cannot absorb.',
           ],
         },
         {
@@ -202,13 +203,14 @@ const ch21: ChapterContent = {
           variant: 'theorem',
           label: 'The Imperial Core Theorem',
           paragraphs: [
-            'Kinetic liberation in a peripheral node requires economic self-sufficiency to survive. Embargo, debt, and global enforcement can neutralize a liberated peripheral node. Structural liberation therefore requires disruption within the imperial core or an insulated regional bloc capable of surviving the containment field indefinitely.',
+            'Kinetic liberation in a peripheral node requires economic self-sufficiency to survive. Embargo, debt, and global enforcement can neutralize a liberated peripheral node and reimpose extraction after local victory. The global Predatory Min-Max Function removes the biological ceiling from imperial extraction. Structural liberation therefore requires disruption within the imperial core or an insulated regional bloc capable of surviving the containment field indefinitely.',
           ],
         },
         {
           kind: 'prose',
           paragraphs: [
             'Together, the findings describe absorption, local rupture, and global containment. Reform within the system preserves a zero change in extraction. Kinetic action has produced local kernel termination in the confirmed cases. The global kernel can reimpose extraction through debt, embargo, and military force after local liberation.',
+            'These findings form a sequence of boundary conditions. The Concession Theorem describes the fate of reform while the domestic kernel remains active. The Haitian Theorem identifies the mode associated with local termination in the historical dataset. The Imperial Core Theorem follows that termination into the international field and tests whether the liberated node can survive the external enforcement envelope. A complete liberation path must satisfy all three conditions.',
           ],
         },
       ],
@@ -229,6 +231,14 @@ const ch21: ChapterContent = {
           heading: 'Kernel deletion',
           paragraphs: [
             'A victory along one partition axis can preserve domination along another axis. Permanent deletion requires simultaneous termination of every partition axis. A surviving axis retains the installer.',
+          ],
+        },
+        {
+          kind: 'prose',
+          paragraphs: [
+            'The runtime phase also formalizes generational load balancing. Temporal extraction compounds as the material wage degrades. The saeculum’s four-turning cycle manages the resulting friction by conditioning each generation to absorb the breach without forming cross-class solidarity.',
+            'The disarmament timeline isolates the variable that the algorithm has consistently treated as a direct threat. Its dual-track firearm architecture routes the same act toward constitutional protection for the Buffer Class and felony prosecution for the racialized Out-group. Redlining, the War on Drugs, and spatial containment compound that disparity.',
+            'The diagnostic phase maps facially neutral proxies onto the same extraction geometry as explicit racial categories. It also identifies the Nonviolence Mandate as a constraint on acceptable resistance: opposition remains confined to trajectories that preserve extraction while the system retains its kinetic capacity. The Firmin Protocol and Killick’s self-detonation mark the optimizer’s boundary condition, where destruction of the extractable asset produces a divide-by-zero error.',
           ],
         },
       ],
@@ -258,7 +268,7 @@ const ch21: ChapterContent = {
       title: 'The Out-group Expands',
       prose: [
         'The domestic architecture has entered its terminal phase. The system is cannibalizing the Buffer Class. The material wages of whiteness are bankrupt, and the class-resistance variable is failing. The disarmament sequence advances through spatial proxies, universal latent criminality, financial surveillance, and ex post facto criminalization.',
-        'The system’s survival depends on continued separation between the Buffer Class and the racialized Out-group. Their recognition of aligned interests would direct resistance toward the Elite instead of across the partition.',
+        'The system’s survival depends on continued separation between the Buffer Class and the racialized Out-group. Their recognition of aligned interests would direct resistance upward toward the Elite.',
       ],
       blocks: [
         {
@@ -287,6 +297,7 @@ const ch21: ChapterContent = {
       prose: [
         'The framework leaves one question open: whether cross-racial, cross-national solidarity reaches kinetic threshold before the Elite completes the disarmament protocol. The civilian population possesses world-historical kinetic capacity. The containment sequence seeks completion before the Buffer Class recognizes its alignment with the racialized Out-group against the Elite.',
         'The global field carries the same uncertainty. The AES bloc is testing the Imperial Core Theorem’s second condition. On March 25, 2026, 123 nations voted on UN reparations in a pattern the framework reads as the global Out-group naming the extraction kernel, the imperial core protecting it, and the colonial Buffer Class abstaining. Structural action remains exposed to the containment field.',
+        'The diagnostic capacity now exists at domestic and global scales. The containment race concerns translation: whether a population that can name the kernel can coordinate structural action before embargo, debt, enforcement, surveillance, and disarmament close the available path. The five-tier hierarchy supplies the final orientation. The Elite occupies one side of the terminal partition. The expanding Out-group occupies the other. Former members of the Buffer Class enter that Out-group as their material wage erodes. Cross-racial and cross-national recognition would convert a dispersed population into the solidarity variable the framework leaves unresolved.',
         'Five centuries of racial division sustained Elite supremacy by preserving separation across the same equation. The terminal Out-group contains everyone outside the Elite. The system’s continuation depends on the population learning that fact after containment closes. Its termination depends on learning it before.',
       ],
       blocks: [

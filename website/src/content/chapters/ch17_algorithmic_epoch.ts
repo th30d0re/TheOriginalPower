@@ -121,17 +121,6 @@ const ch17: ChapterContent = {
             'A corpus built from solidarity, mutual aid, cross-class coalition outcomes, and successful resistance patterns.',
         },
       ],
-      deepDive: {
-        label: 'The engineering intuition',
-        passages: [
-          {
-            paragraphs: [
-              'The engineers need only be instructed to build a profitable algorithm, and the attractor does the rest.',
-              'The construction of the counter-dataset is therefore not a technical preference. It is a precondition for structural liberation.',
-            ],
-          },
-        ],
-      },
     },
 
     {
@@ -302,17 +291,6 @@ const ch17: ChapterContent = {
             'The node’s capacity for solidarity, kinetic action, and demands on resource allocation.',
         },
       ],
-      deepDive: {
-        label: 'The automation pace objection',
-        passages: [
-          {
-            paragraphs: [
-              'Human labor remains numerically dominant across the full enforcement stack: roughly one million sworn law-enforcement officers in the United States vastly outnumber the robotic deployments currently operational, and full automation of the enforcement stack requires energy infrastructure, maintenance supply chains, and institutional procurement cycles that operate on decade-scale timelines.',
-              'These counter-trends are real. The theorem’s claim is that the optimizer has a single admissible long-run solution and the procurement record confirms the direction of travel, not a specific arrival time.',
-            ],
-          },
-        ],
-      },
     },
 
     {
@@ -396,7 +374,7 @@ const ch17: ChapterContent = {
           label: 'Empathy Bridge',
           paragraphs: [
             'Shared subjugation data made the Polish soldiers’ community attachment permeable to the Haitian struggle. The resulting edge collapse converted imperial enforcement capacity into revolutionary capacity.',
-            'The constitutional semantic overwrite made the coalition durable by attaching the political category to demonstrated alignment rather than phenotype.',
+            'The constitutional semantic overwrite made the coalition durable by attaching the political category to demonstrated alignment and removing phenotype from the operative definition.',
           ],
         },
       ],
@@ -440,17 +418,6 @@ const ch17: ChapterContent = {
           ],
         },
       ],
-      deepDive: {
-        label: 'The self-replicating immune response',
-        passages: [
-          {
-            paragraphs: [
-              'The Counter-AI so specified functions as an immune response: a decentralized pattern-recognition, decryption, and coordination substrate that makes the host body—the biological human population—legible to itself in real time, at the speed the orthogonal injection operator runs.',
-              'Any prescription that refuses this requirement is a prayer. The Predatory Min-Max Function has been upgraded from analog to digital.',
-            ],
-          },
-        ],
-      },
     },
 
     {

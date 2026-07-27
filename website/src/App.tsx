@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import {
   BrowserRouter as Router,
   Routes,
@@ -6,7 +5,6 @@ import {
   NavLink,
   useLocation,
 } from 'react-router-dom';
-import StoryMode from './components/StoryMode';
 import Dashboard from './components/Dashboard';
 import SystemicArbitrageDashboard from './components/SystemicArbitrageDashboard';
 import InterferenceEngine3D from './components/visualizations/InterferenceEngine3D';
@@ -52,8 +50,6 @@ function NavBar() {
 }
 
 function App() {
-  const [, setStoryCompleted] = useState(false);
-
   return (
     <Router>
       <NavBar />
@@ -61,10 +57,6 @@ function App() {
         <Routes>
           <Route path="/" element={<StoryIndex />} />
           <Route path="/story/:chapterId" element={<ChapterPage />} />
-          <Route
-            path="/legacy-story"
-            element={<StoryMode onComplete={() => setStoryCompleted(true)} />}
-          />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/arbitrage" element={<SystemicArbitrageDashboard />} />
           <Route path="/interference-engine" element={<InterferenceEngine3D />} />

@@ -226,18 +226,6 @@ const ch18: ChapterContent = {
             ],
           },
         ],
-        equations: [
-          {
-            latex:
-              '\\text{PSD}[k] = \\frac{|\\hat{X}[k]|^2}{N}, \\qquad k = 1, 2, \\ldots, N/2.',
-            label: 'eq. 21.5',
-          },
-          {
-            latex:
-              'C_{xy}(f) = \\frac{|S_{xy}(f)|^2}{S_{xx}(f) \\, S_{yy}(f)},',
-            label: 'eq. 21.6',
-          },
-        ],
       },
     },
 
@@ -371,12 +359,27 @@ const ch18: ChapterContent = {
         label: 'The second substrate and the open empirical program',
         passages: [
           {
+            heading: 'Per-Axis Spectral Decomposition',
+            paragraphs: [
+              'The aggregate identity band conceals a structural fact: different identity axes resonate with different efficiency at the 4-year carrier. To test this, the identity band was decomposed into race, gender, and sexuality sub-bands using a historical-event mixture model calibrated against documented activation events. The model scales the three components so their sum equals the observed aggregate at every year.',
+              'Race shows the strongest 4-year resonance (power ratio 11.0 vs class), consistent with its lowest impedance (|Z| ≈ 0.10) and its natural frequency (3.6 yr) closest to the carrier. Gender is off-resonance (ratio 0.05), driven at its own ∼6-year natural frequency. Sexuality is threshold-activated post-2003 and shows moderate 4-year power (ratio 2.3).',
+              'The decomposition refines the framework from a two-band model to a multi-channel control system: the 4-year carrier functions as a race-preferential resonator whose efficiency drops for axes with natural frequencies farther from 4 yr.',
+            ],
+          },
+          {
             heading: 'High-Frequency Validation',
             paragraphs: [
               'The annual Congressional Record dataset cannot resolve the 2-year midterm cycle because f = 0.50 cyc/yr sits at the Nyquist limit of f_s = 1 yr−1 sampling. Two high-frequency validation strategies address this limitation.',
               'Strategy 1: Quarterly Congressional Record via GovInfo API. A pipeline has been constructed to extract quarterly document-count proxies from the GovInfo API (free registration at https://www.govinfo.gov/api-signup). The script Paper/scripts/govinfo_crec_quarterly_query.py searches the CREC collection for class-band and identity-band keyword baskets per quarter, returning document-match counts. With f_s = 4 yr−1, the 2-year cycle moves to FFT bin 30—well below the new Nyquist limit of 2.0 cyc/yr—while preserving the 60-year baseline. Preprocessing and spectral analysis scripts have been updated to consume quarterly output. This strategy awaits API-key activation.',
               'Strategy 2: Weekly Google Trends (2004–2024). Google Trends supplies weekly search-interest indices (f_s = 52 yr−1) for the same keyword baskets. The baseline is shorter (N ≈ 21 years) and the metric is relative public-search interest, a different quantity from institutional word frequency, but the Nyquist frequency of 26 cyc/yr provides ample headroom to resolve the midterm cycle without interpolation artifacts.',
               "The Google Trends spectral analysis yields a striking result (Table (ref)). At the 2-year midterm frequency, the identity band dominates with a Welch-estimated power ratio of 12.8:1—comparable in magnitude to the Congressional Record's 4-year presidential ratio of 24.1:1. At the 4-year presidential frequency, the ratio is 1.6:1 (near parity), suggesting that public search interest in identity topics does not spike during presidential cycles to the same degree that Congressional floor speech does.",
+            ],
+          },
+          {
+            heading: 'The Spectral Carrier',
+            paragraphs: [
+              "The 24:1 power ratio at the 4-year presidential cycle is the Fourier-domain signature of the Interference Engine. It demonstrates that the Engine operates as a phase-locked control system synchronized to the electoral clock. Every four years, the spectral power of identity-band discourse spikes while class-band discourse remains invariant. The mechanism is consistent with the framework's prediction that the Engine monitors M(t) and injects phase-shifted identity signals to prevent class coherence from achieving threshold amplitude.",
+              'The spectral answer is that identity conflict operates as a carrier wave that the extraction system modulates to prevent economic solidarity from achieving coherent phase. The Buffer Class is phase-locked to an electoral carrier whose frequency is hardcoded into the political architecture.',
             ],
           },
           {

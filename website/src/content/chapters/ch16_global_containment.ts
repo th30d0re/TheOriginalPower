@@ -82,7 +82,7 @@ const ch16: ChapterContent = {
       title: 'The International Five-Tier Hierarchy',
       prose: [
         'The domestic five-tier hierarchy scales into an Atlantic-origin imperial system. Hyper-concentrated financial institutions establish extraction parameters. International institutions translate those parameters into rules. Military, covert, sanctions, and reserve-currency systems enforce compliance.',
-        'Allied nations receive preferential trade, security guarantees, and institutional representation. Those material wages align them with a structure they did not architect. Resource-extraction zones, debtor nations, and formerly colonized territories absorb the compounded losses.',
+        'Allied nations receive preferential trade, security guarantees, and institutional representation. Those material wages align them with an architecture designed at the imperial core. Resource-extraction zones, debtor nations, and formerly colonized territories absorb the compounded losses.',
         'The chapter limits this model to the Atlantic-origin architecture and its institutional successors. Ottoman, Chinese tributary, Mughal, and pre-colonial African systems operated through distinct arrangements. China enters the model as a country that experienced the Atlantic containment field and partially escaped it.',
       ],
       blocks: [
@@ -181,7 +181,7 @@ const ch16: ChapterContent = {
       prose: [
         'In 1891, Anténor Firmin used diplomatic procedure to block the United States from acquiring Môle Saint-Nicolas as a naval coaling station. Rear Admiral Bancroft Gherardi arrived with the White Squadron and attempted to negotiate directly with the Haitian government. Firmin requested the admiral’s credentials and exposed the absence of localized diplomatic authorization.',
         'Gherardi sought credentials from Washington on February 20, 1891. Firmin closed the negotiations on April 24. He cited the armed US warships in Haitian waters as a condition that prevented free negotiation. A peripheral state used the imperial system’s stated rules to obstruct an extraction attempt.',
-        'The later Firminist Revolt established the boundary of that strategy. On September 6, 1902, Admiral Hammerton Killick destroyed the Crête-à-Pierrot rather than surrender it to the German gunboat SMS Panther. The German intervention proceeded despite its later assessment by German advisors as illegal and excessive under international law.',
+        'The later Firminist Revolt established the boundary of that strategy. On September 6, 1902, Admiral Hammerton Killick destroyed the Crête-à-Pierrot and denied the German gunboat SMS Panther a captured vessel. The German intervention proceeded despite its later assessment by German advisors as illegal and excessive under international law.',
       ],
       blocks: [
         {
@@ -205,7 +205,7 @@ const ch16: ChapterContent = {
           kind: 'insight',
           heading: 'Asymmetric procedural leverage',
           paragraphs: [
-            'Haiti expended no military force and no economic capital in the Môle affair. Firmin’s procedural knowledge blocked the extraction of a strategic coaling station. The leverage came from the imperial actor’s dependence on its own legitimation architecture.',
+            'Haiti’s investment in the Môle affair consisted of Firmin’s procedural knowledge. That knowledge blocked the extraction of a strategic coaling station. The leverage came from the imperial actor’s dependence on its own legitimation architecture.',
             'The leverage ends when extraction value exceeds legitimacy cost. The SMS Panther intervention records the point at which the imperial system abandoned the procedural constraint and deployed force.',
           ],
         },
@@ -217,7 +217,7 @@ const ch16: ChapterContent = {
       title: 'Three Containment Stress Tests',
       prose: [
         'Cuba supplies the long-duration test. After the 1959 revolution nationalized foreign-owned industries and severed the local extraction interface, the United States imposed a comprehensive embargo in 1962. The embargo remained in place as of 2026. The UN General Assembly’s 187–2 condemnation in 2024 identified the containment mechanism through a non-binding resolution.',
-        'The Roma, Ashkali, and Egyptian communities displaced after the Kosovo war supply the juridical test. UNMIK housed them on lead-contaminated land from 1999–2013. The UN Human Rights Advisory Panel found responsibility for human-rights violations, while full reparations did not reach the affected communities. Legal recognition left the depleted node without a complete remedy.',
+        'The Roma, Ashkali, and Egyptian communities displaced after the Kosovo war supply the juridical test. UNMIK housed them on lead-contaminated land from 1999–2013. The UN Human Rights Advisory Panel found responsibility for human-rights violations and produced an incomplete reparations outcome. Legal recognition left the depleted node with an incomplete remedy.',
         'The Alliance of Sahel States supplies the live regional test. Niger, Mali, Burkina Faso, and Gabon expelled French military forces, rejected the CFA Franc system, and pursued resource nationalization during 2023–2024. The Alliance formed in September 2023 to pool military, economic, and diplomatic capacity.',
         'The regional bloc tests whether collective insulation can maintain food, energy, currency, and military capacity under debt, sanctions, and external enforcement pressure. The source records the outcome as unresolved.',
       ],
@@ -241,7 +241,7 @@ const ch16: ChapterContent = {
       prose: [
         'On March 25, 2026, the United Nations General Assembly adopted a resolution declaring the transatlantic slave trade a crime against humanity and calling for reparatory justice. The vote was 123 in favor, 3 against, and 52 abstentions.',
         'The United States, Israel, and Argentina cast the three opposing votes. Portugal and a broader European bloc abstained. The distribution places the active imperial core in opposition, allied buffer states in abstention, and much of the Global South in support.',
-        'The debt history fixes the direction of material transfer. France imposed reparations on Haiti in 1825 for liberation from slavery. Britain’s Slavery Abolition Act of 1833 authorized approximately 20 million, roughly 40 percent of annual government expenditure, for enslavers. In 2026, the General Assembly’s resolution called for transfer toward the victims and remained non-binding.',
+        'The debt history fixes the direction of material transfer. France imposed reparations on Haiti in 1825 for liberation from slavery. Britain’s Slavery Abolition Act of 1833 authorized approximately £20 million, roughly 40 percent of annual government expenditure, for enslavers. In 2026, the General Assembly’s resolution called for transfer toward the victims and remained non-binding.',
         'The vote created a documentary record and no enforcement mechanism. Control of the Security Council, IMF, dollar system, and military infrastructure left the extraction architecture materially unchanged.',
       ],
       blocks: [
