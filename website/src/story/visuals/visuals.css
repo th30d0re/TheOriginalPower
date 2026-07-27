@@ -34,6 +34,184 @@
   text-align: center;
 }
 
+/* Embedded route-scale visualizations */
+
+.embedded-visual-frame {
+  position: relative;
+  width: min(100%, 112vh);
+  aspect-ratio: 16 / 10;
+  max-height: 70vh;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  background: var(--bg-dark, #0f172a);
+  box-shadow: 0 0 50px -24px var(--chapter-accent, #e0b34c);
+  isolation: isolate;
+}
+
+.embedded-visual-frame > .visual-placeholder {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  border: 0;
+}
+
+.embedded-visual-frame > .ie-root,
+.embedded-visual-frame > .xc-root {
+  position: absolute;
+  inset: 0;
+}
+
+.embedded-visual-frame .ie-controls {
+  max-height: calc(100% - 24px);
+}
+
+/* Generic series chart */
+
+.series-chart {
+  width: 100%;
+  min-width: 0;
+  padding: 1rem 1rem 0.25rem;
+  border-radius: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(148, 163, 184, 0.08), transparent 48%),
+    rgba(15, 23, 42, 0.48);
+}
+
+.series-chart-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.series-chart-grid .domain {
+  display: none;
+}
+
+.series-chart-grid line {
+  stroke: var(--text-secondary, #cbd5e1);
+  stroke-opacity: 0.1;
+  shape-rendering: crispEdges;
+}
+
+.series-chart-axis path,
+.series-chart-axis line {
+  stroke: var(--text-secondary, #cbd5e1);
+  stroke-opacity: 0.3;
+}
+
+.series-chart-axis text,
+.series-chart-axis-label {
+  fill: var(--text-secondary, #cbd5e1);
+  font-family: inherit;
+  font-size: 0.75rem;
+}
+
+.series-chart-axis-label {
+  letter-spacing: 0.03em;
+}
+
+.series-chart-line {
+  fill: none;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.series-chart-area {
+  pointer-events: none;
+}
+
+.series-chart-legend {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.55rem 1.25rem;
+  min-height: 1.5rem;
+  color: var(--text-secondary, #cbd5e1);
+  font-size: 0.78rem;
+}
+
+.series-chart-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.series-chart-legend-swatch {
+  width: 1.25rem;
+  height: 2px;
+  border-radius: 999px;
+  box-shadow: 0 0 8px currentColor;
+}
+
+/* Five-tier extraction hierarchy */
+
+.tier-ladder {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+  list-style: none;
+}
+
+.tier-ladder-rung {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto minmax(4rem, 0.22fr) 1fr;
+  align-items: center;
+  gap: 1rem;
+  min-height: 6rem;
+  padding: 1rem 1.35rem;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-left: 3px solid var(--chapter-accent, #e0b34c);
+  border-radius: 12px;
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--chapter-accent, #e0b34c) 10%, transparent), transparent 48%),
+    rgba(30, 41, 59, 0.45);
+  box-shadow: 0 12px 36px -30px var(--chapter-accent, #e0b34c);
+}
+
+.tier-ladder-rank {
+  align-self: start;
+  color: var(--text-secondary, #cbd5e1);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  opacity: 0.55;
+}
+
+.tier-ladder-symbol {
+  color: var(--chapter-accent, #e0b34c);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.5rem, 6vw, 4.4rem);
+  line-height: 1;
+  text-align: center;
+  text-shadow: 0 0 24px color-mix(in srgb, var(--chapter-accent, #e0b34c) 42%, transparent);
+}
+
+.tier-ladder-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.tier-ladder-copy strong {
+  color: var(--text-primary, #f1f5f9);
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+}
+
+.tier-ladder-copy span {
+  color: var(--text-secondary, #cbd5e1);
+  font-size: 0.86rem;
+  line-height: 1.55;
+}
+
 /* Equation */
 
 .equation-figure {
@@ -108,6 +286,17 @@
 }
 
 @media (max-width: 640px) {
+  .series-chart {
+    padding-inline: 0.35rem;
+  }
+
+  .tier-ladder-rung {
+    width: 100% !important;
+    grid-template-columns: auto 3.5rem 1fr;
+    gap: 0.65rem;
+    padding: 0.85rem;
+  }
+
   .equation-row {
     padding: 1.5rem 1.25rem;
     flex-direction: column;

@@ -1,7 +1,7 @@
 // Registry that resolves a scene's VisualSpec to a concrete rendered visual.
 // Contract: default export, takes { spec }, switches on spec.kind. See
 // src/content/types.ts for the discriminated union this renders.
-import type { ComponentType } from 'react';
+import { lazy, Suspense, type ComponentType } from 'react';
 import type { VisualSpec } from '../../content/types';
 import VennDiagram from '../../components/visualizations/VennDiagram';
 import Timeline from '../../components/visualizations/Timeline';
@@ -10,7 +10,14 @@ import CompoundingMetrics from '../../components/visualizations/CompoundingMetri
 import PhasorResonance from '../../components/visualizations/PhasorResonance';
 import ManimPlayer from './ManimPlayer';
 import Equation from './Equation';
+import SeriesChart from './SeriesChart';
+import TierLadder from './TierLadder';
 import './visuals.css';
+
+const InterferenceEngine3D = lazy(
+  () => import('../../components/visualizations/InterferenceEngine3D'),
+);
+const ExtractionChart = lazy(() => import('../../components/visualizations/ExtractionChart'));
 
 /** Bespoke chapter visuals register themselves here by name. Empty for now. */
 const customVisuals: Record<string, ComponentType<Record<string, unknown>>> = {};
@@ -56,6 +63,51 @@ const SceneVisual = ({ spec }: { spec: VisualSpec }) => {
       return (
         <figure className="visual-figure">
           <PhasorResonance />
+          <Caption text={spec.caption} />
+        </figure>
+      );
+
+    case 'interference':
+      return (
+        <figure className="visual-figure">
+          <div className="embedded-visual-frame">
+            <Suspense fallback={<div className="visual-placeholder">Loading visualization…</div>}>
+              <InterferenceEngine3D />
+            </Suspense>
+          </div>
+          <Caption text={spec.caption} />
+        </figure>
+      );
+
+    case 'extractionChart':
+      return (
+        <figure className="visual-figure">
+          <div className="embedded-visual-frame">
+            <Suspense fallback={<div className="visual-placeholder">Loading visualization…</div>}>
+              <ExtractionChart />
+            </Suspense>
+          </div>
+          <Caption text={spec.caption} />
+        </figure>
+      );
+
+    case 'series':
+      return (
+        <figure className="visual-figure">
+          <SeriesChart
+            series={spec.series}
+            xLabel={spec.xLabel}
+            yLabel={spec.yLabel}
+            area={spec.area}
+          />
+          <Caption text={spec.caption} />
+        </figure>
+      );
+
+    case 'tierLadder':
+      return (
+        <figure className="visual-figure">
+          <TierLadder tiers={spec.tiers} />
           <Caption text={spec.caption} />
         </figure>
       );

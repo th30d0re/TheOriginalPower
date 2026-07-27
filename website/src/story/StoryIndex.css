@@ -106,6 +106,8 @@
   font-size: 1.15rem;
   font-weight: 700;
   color: var(--text-primary);
+  /* Clears the absolutely positioned status badge in the top-right corner. */
+  padding-right: 5rem;
 }
 
 .chapter-card-era {
@@ -157,24 +159,19 @@
   background: var(--accent-blue);
 }
 
+/* Forthcoming chapters: same layout as a live card, dimmed. The accent border
+   is retained so the spectrum reads continuously down the whole index. */
 .chapter-card-muted {
-  align-items: center;
-  justify-content: center;
-  border-left-color: var(--bg-light);
   color: var(--text-secondary);
   cursor: default;
-  opacity: 0.6;
+  opacity: 0.45;
 }
 
 .chapter-card-muted:hover {
   border-color: var(--bg-light);
+  border-left-color: var(--card-accent);
   box-shadow: none;
   background: rgba(30, 41, 59, 0.6);
-}
-
-.chapter-card-muted .chapter-card-hook {
-  text-align: center;
-  font-style: italic;
 }
 
 @media (max-width: 640px) {
@@ -193,4 +190,40 @@
   .chapter-card-number {
     font-size: 2.25rem;
   }
+}
+
+/* ── Part grouping ─────────────────────────────────────────────────────── */
+
+.story-part {
+  max-width: 1200px;
+  margin: 0 auto 3.5rem;
+}
+
+.story-part-heading {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.story-part-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.story-part-rule {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--bg-light), transparent);
+}
+
+.chapter-card-badge.forthcoming {
+  background: transparent;
+  border: 1px solid var(--bg-light);
+  color: var(--text-secondary);
+  opacity: 0.7;
 }
