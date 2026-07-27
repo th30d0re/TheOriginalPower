@@ -9,14 +9,16 @@ graph-reasoning literature captured in the source transcript below.
 
 ## Provenance
 
+Both sources are from the notebook *Graph Learning: From Meta-Learning and
+Pre-Training to Prompt-Based Search* (`4a77df2f-8af2-4d9b-b4cb-4053e32cea79`).
+
 | Source | Location | Status |
 |---|---|---|
-| `Teaching_language_models_to_reason_with_graphs.m4a` | [`docs/sources/teaching_language_models_to_reason_with_graphs.transcript.txt`](docs/sources/teaching_language_models_to_reason_with_graphs.transcript.txt) | Retrieved 2026-07-26 · 39,312 chars |
-| *(second source — not yet named)* | — | **Pending.** The request named a second source but the identifier was empty. Sections marked ⚠ depend on it. |
+| `Teaching_language_models_to_reason_with_graphs.m4a` (`8b04405d`) | [`docs/sources/teaching_language_models_to_reason_with_graphs.transcript.txt`](docs/sources/teaching_language_models_to_reason_with_graphs.transcript.txt) | Retrieved 2026-07-26 · 39,312 chars |
+| KGPE / LLM graph integration report (`dd2a13ad`) — *Systemic Integration of Graph Prompting, Hierarchical GraphRAG, and Topological Learning Architectures in Generative AI* | [`docs/sources/kgpe_graph_integration_report.txt`](docs/sources/kgpe_graph_integration_report.txt) | Retrieved 2026-07-26 · 47,337 chars |
 
-Notebook: *Graph Learning: From Meta-Learning and Pre-Training to Prompt-Based
-Search* (`4a77df2f-8af2-4d9b-b4cb-4053e32cea79`), source
-`8b04405d-7068-4cb9-9368-05e1d3afbb34`.
+The transcript supplies the narrative mechanics; the KGPE report supplies the
+metrics, taxonomies and failure modes the loops are measured against.
 
 ---
 
@@ -113,7 +115,9 @@ Replace single-pass trade reasoning with the `GoT` pattern: generate multiple
 hypotheses per contract in parallel, evaluate, prune incorrect branches, merge
 survivors into one decision. Nodes are thoughts; edges are logical dependencies.
 
-- **Exit:** on the backtest set, GoT deliberation matches or beats single-pass trigger output on Sharpe and on false-positive rate. Failing that, this loop is deleted rather than kept.
+- **Structural operations** (KGPE report): *generation*, *aggregation* (merge multiple independent parent nodes), *refining* (iterative self-loop on one node), *pruning* (subgraph extraction).
+- **Scoring:** adopt the **Volume of a Thought** metric — for a thought node `v`, `Vol(v) = |{u ∈ V_GoT : u →* v}|`, the count of nodes from which `v` is reachable by a directed path. Volume measures how much prior reasoning actually supports a conclusion, which is exactly the quantity a trade justification needs.
+- **Exit:** on the backtest set, GoT deliberation matches or beats single-pass trigger output on Sharpe and on false-positive rate, **and** executed trades show higher mean `Vol` than rejected ones. Failing that, this loop is deleted rather than kept.
 
 ### L6 — Prompt Budget Control ⚙️ *constraint on L4/L5*
 
@@ -122,20 +126,29 @@ exponentially and triggers lost-in-the-middle degradation, so wider context
 reduced accuracy.
 
 - **Rule:** default 1-hop neighborhoods. Escalate to 2-hop only when 1-hop yields no path, and log every escalation.
-- **Also adopt:** BAG prompting — instruct the model to reconstruct the relevant subgraph before reasoning, anchoring attention on the topology.
-- **Exit:** measured accuracy at 1-hop ≥ accuracy at 2-hop on a fixed query set, confirming the budget is correctly set.
+- **Encoding is a tested variable, not a default.** The GraphQA taxonomy in the KGPE report gives three candidates: *adjacency list* ("Node 0 is connected to Node 1 and Node 2"), *incident list* ("(0, 1), (0, 2)"), and *semantic proximity* (real-world relational analogies — co-authorship, alliance, kinship). The framework graph has natural semantic analogies available, so all three are worth scoring.
+- **Also adopt:** Bag prompting (CoT-Bag) — prepend "let's construct a graph with the nodes and edges first" so the model instantiates the topology before reasoning over it.
+- **Exit:** a scored encoding × heuristic table on a fixed query set, and measured accuracy at 1-hop ≥ accuracy at 2-hop, confirming the budget is correctly set.
 
 ### L7 — Model Alignment Gate ⚙️ *precondition for Phase 4*
 
-The transcript's most actionable empirical result: the identical knowledge-graph
-triples **improved Qwen-2-7B-Instruct** (BLEU 0.366 → 0.531; cosine 0.763 → 0.820)
-and **degraded Llama-2-7B-Chat**. The stated cause is instruction-tuning alignment —
-a heavily RLHF-tuned conversational model chokes on rigid relational syntax, while
-a model tuned on code and structured tables digests it.
+The most actionable empirical result in both sources. On MedQA zero-shot, the
+identical knowledge-graph triples **improved Qwen-2-7B-Instruct** (BLEU
+0.366 → 0.531, +0.165; cosine 0.763 → 0.820, +0.057) and **degraded
+Llama-2-7B-Chat**. The stated cause is instruction-tuning alignment — a heavily
+RLHF-tuned conversational model struggles with non-conversational structured
+facts in its context window, while a model tuned on code and structured tables
+digests them.
 
-- **Consequence:** base-model choice for Phase 4 must be *tested*, not assumed. This directly constrains the existing MLX pipeline in `training/`.
+The KGPE report draws three conclusions that carry directly into Phase 4:
+structured prompts approximate **weight-free knowledge injection**; zero-shot
+inference **preserves generalization without domain overfitting**; graph-guided
+context construction **stabilizes generation**.
+
+- **Consequence:** base-model choice for Phase 4 must be *tested*, not assumed. This directly constrains the existing MLX pipeline in `training/`. It also raises a prior question — if structured prompting is weight-free knowledge injection that preserves generalization, some of the intended fine-tuning may be unnecessary.
 - **Method:** hold out a triple-ingestion eval; score each candidate base model with and without injected triples; select on the delta, not the absolute.
-- **Exit:** a ranked table of candidate base models by triple-ingestion delta, committed before any QLoRA run starts.
+- **Consider GRPO over DPO.** The KGPE report describes **GRASP** (Graph Reasoning via Agentic Solving and Probing) training with Group Relative Policy Optimization in two stages: a visible tool-tuning environment, then a structure-blind RL environment. That staging fits this engine better than plain DPO, because trade outcomes arrive as group-relative returns rather than pairwise preferences.
+- **Exit:** a ranked table of candidate base models by triple-ingestion delta, plus an explicit go/no-go on whether fine-tuning beats prompting at all, committed before any QLoRA run starts.
 
 ### L8 — Live Execution Gate 🔒 *blocked*
 
@@ -201,10 +214,10 @@ rest.
 
 ## 6. Open questions
 
-1. ⚠ **Second source unidentified.** The request named a second NotebookLM source with an empty identifier. Candidate from the same account: *Loop Engineering* (`22c7c183-02e7-4a66-a0f2-b501b1af61ba`, 63 sources), which matches the "loops" framing. Unconfirmed.
-2. **Execution mechanism for the assignment.** `kimi`, `codex`, `gemini` and `cursor-agent` CLIs are all installed, but there is no task-handoff convention in this repo (`.kimi/` holds only `mcp.json`; no `.codex/` exists). See below.
-3. **Does L5 earn its cost?** Graph-of-Thoughts deliberation multiplies inference cost per decision. The exit criterion is written to allow deleting it.
-4. **KG refresh cadence.** The framework graph changes whenever the manuscript changes. Rebuild on `make index`, or on demand?
+1. **Does L5 earn its cost?** Graph-of-Thoughts deliberation multiplies inference cost per decision. The KGPE report's retrieval comparison is the relevant precedent: **LazyGraphRAG reaches global-search quality at roughly 4% of the query cost**. Before building full GoT, evaluate whether a lazy/deferred variant clears the same bar. The exit criterion permits deleting L5 outright.
+2. **Does Phase 4 fine-tuning survive L7?** If structured prompting is weight-free knowledge injection that preserves generalization, QLoRA may be solving a problem the graph already solves. L7 is written to answer this before any training run consumes GPU time.
+3. **KG refresh cadence.** The framework graph changes whenever the manuscript changes. Rebuild on `make index`, or on demand?
+4. **Retrieval paradigm for L4.** GraphRAG offers Global, Local, DRIFT and Lazy search. The engine's queries are mostly local (contract → mapped variable → anchor case), which argues for Local or DRIFT rather than Global community summarization.
 
 ---
 

@@ -1,0 +1,1175 @@
+# Systemic Integration of Graph Prompting, Hierarchical GraphRAG, and
+# Topological Learning Architectures in Generative AI
+
+Knowledge Graph Prompt Engineering (KGPE) and LLM graph integration report.
+
+- Notebook: Graph Learning: From Meta-Learning and Pre-Training to Prompt-Based Search
+- Notebook ID: 4a77df2f-8af2-4d9b-b4cb-4053e32cea79
+- Source ID:   dd2a13ad-3198-4761-b724-cbccedbc69f9  (generated_text)
+- Retrieved:   2026-07-26 via `nlm source content`
+
+---
+
+Systemic Integration of Graph Prompting, Hierarchical GraphRAG, and Topological Learning Architectures in Generative AI
+
+The transition from sequence-centric language modeling to relational, non-Euclidean structural computing represents a fundamental paradigm shift in artificial intelligence. While standard transformer-based Large Language Models (LLMs) excel at processing sequential natural language, they are inherently limited when resolving multi-hop dependencies, structural hierarchies, and cyclic topologies [cite: 1, 2]. Real-world knowledge domains, from social networks and molecular biochemistry to enterprise databases, are intrinsically graph-structured [cite: 3, 4]. To leverage the generative capabilities of LLMs on structured data, research has bifurcated into two dominant architectural paradigms: natural language prompting methodologies engineered to navigate and reason over graphs, and parameter-efficient graph prompt learning designed to adapt pre-trained Graph Neural Networks (GNNs) to downstream tasks [cite: 5, 6, 7]. This report delivers a systematic analysis of these paradigms, exploring prompting topologies, graph-to-text encoding mechanisms, Graph-Retrieval Augmented Generation (GraphRAG), graph prompt learning in GNNs, and active agentic probing architectures.
+
+--------------------------------------------------------------------------------
+
+Evolution of Prompting Topologies and Cognitive Frameworks
+
+To move beyond the limitations of linear reasoning, cognitive architectures in generative AI have evolved from simple sequential workflows to complex computational directed acyclic graphs (DAGs) [cite: 7, 8]. Historically, systems operated under the Input-Output (IO) prompting baseline, where a model generated a direct response immediately upon receiving an input, lacking any explicit intermediate reasoning steps [cite: 9]. This sequence was extended by Chain-of-Thought (CoT) prompting, which instructed models to generate linear sequences of intermediate steps [cite: 9]. CoT with Self-Consistency (CoT-SC) introduced parallelized linear paths to exploit LLM sampling randomness, aggregating the final answers through a majority voting function [cite: 9]. Tree-of-Thoughts (ToT) subsequently advanced the reasoning space to a branching tree topology, allowing the system to utilize classic search algorithms—such as Breadth-First Search (BFS) and Depth-First Search (DFS)—and implement backtracking to prune unproductive reasoning paths [cite: 10].
+
+Despite the improvements offered by ToT, a tree topology imposes rigid constraints that fail to mirror the naturally cyclic, recurrent, and networked nature of human cognitive processes [cite: 10]. The Graph of Thoughts (GoT) framework generalizes and subsumes these earlier structures by modeling LLM-generated information as an arbitrary directed graph [cite: 7, 10]. Formally, a Graph of Thoughts is defined as a tuple 
+
+G_{GoT} = (V_{GoT}, E_{GoT}, c)
+
+ where 
+
+V_{GoT} = \{v_1, v_2, \dots, v_n\}
+
+ represents the set of nodes, with each node 
+
+v_i
+
+ representing an intermediate thought state [cite: 7, 11]. The directed edge set 
+
+E_{GoT} \subseteq V_{GoT} \times V_{GoT}
+
+ represents direct dependencies between these thoughts, where an edge 
+
+(u \to v)
+
+ indicates that thought 
+
+v
+
+ was generated using thought 
+
+u
+
+ as its immediate contextual basis [cite: 7]. The function 
+
+c: V_{GoT} \to C
+
+ annotates each node with its specific role or semantic class within the reasoning pipeline [cite: 7]. Graph state transitions are executed by transformation operators denoted by 
+
+T(G_{GoT}, p_\theta)
+
+, where 
+
+p_\theta
+
+ represents the parameterized language model [cite: 11].
+
+Operational Transformation
+
+Structural Mechanics in Graph of Thoughts
+
+Cognitive Functionality
+
+Generation
+
+Produces 
+
+k
+
+ new child nodes 
+
+V_+
+
+ from a single active parent thought node 
+
+v
+
+ [cite: 11, 12].
+
+Explores parallel hypotheses, subproblems, or distinct methods from a shared conceptual state [cite: 11, 12].
+
+Aggregation
+
+Merges multiple independent parent nodes 
+
+\{v_1, \dots, v_k\}
+
+ into a single consolidated node 
+
+v_+
+
+ [cite: 11, 12].
+
+Synthesizes complementary partial solutions, resolves logical conflicts, and combines divergent perspectives [cite: 7, 10].
+
+Refinement
+
+Iteratively updates node content, represented structurally as a self-loop 
+
+e = (v, v)
+
+ [cite: 11].
+
+Performs continuous self-correction and localized debugging of reasoning steps based on feedback [cite: 8, 11, 13].
+
+Distillation
+
+Prunes or extracts specific subgraphs 
+
+V_-
+
+ and edges 
+
+E_-
+
+ from the active network [cite: 7, 12].
+
+Controls context congestion, optimizes token budgets, and eliminates logical dead-ends [cite: 7, 12].
+
+To quantify the cognitive support of a specific reasoning state, GoT introduces the 
+
+Volume of a Thought
+
+ metric [cite: 10]. For a given thought node 
+
+v
+
+, its volume is defined as the cardinality of the subset of nodes from which 
+
+v
+
+ is reachable via directed edges: 
+
+\text{Vol}(v) = |\{ u \in V_{GoT} \mid u \to^* v \}|
+
+ where 
+
+u \to^* v
+
+ denotes a valid directed path from 
+
+u
+
+ to 
+
+v
+
+ in 
+
+G_{GoT}
+
+ [cite: 10]. A larger volume indicates that a thought has integrated a broader history of verified computational states, enhancing its logical grounding [cite: 10]. GoT significantly outperforms ToT on complex tasks like sorting and document merging, increasing sorting quality by up to 62% while reducing operational costs by over 31% [cite: 10].
+
+A parallel framework, the Diagram of Thought (DoT), structures these topological operations into a single continuous textual output stream generated by a single LLM [cite: 8]. By generating specific markup tags (e.g., 
+
+@node
+
+ and 
+
+@edge
+
+), the model acts in multiple functional roles: a 
+
+<proposer>
+
+ that emits candidate steps, a 
+
+<critic>
+
+ that validates or invalidates nodes, and a 
+
+<summarizer>
+
+ that compiles only the validated nodes into a cohesive final solution [cite: 8]. To ensure mathematical rigor, researchers have mapped these text-based DAGs into executable code via the DAG-MATH framework, where variable passing represents physical data flow, achieving 100% stepwise correctness in validated runs [cite: 14]. However, enforcing the DAG-MATH format can restrict the natural reasoning flexibility of LLMs, and constructing these computational graphs remains computationally expensive for complex, long-trace reasoning tasks or those involving cyclic loops [cite: 14].
+
+--------------------------------------------------------------------------------
+
+Graph-to-Text Encoding and Language Model Graph Reasoning
+
+Because language models are fundamentally designed to process sequential textual arrays, evaluating their capacity to reason over combinatorial graph-structured data requires translating structural topologies into text [cite: 15, 16]. This translation step is defined via a graph-to-text translation function 
+
+\tau : X \to W
+
+, which maps the non-Euclidean graph structure 
+
+G = (V,E)
+
+ and its attributes into a discrete token sequence within the vocabulary 
+
+W
+
+ [cite: 17]. Researchers have identified three critical vectors that govern language model performance on topological reasoning tasks: the graph encoding method, the nature of the task itself, and the structural properties of the graph under consideration [cite: 15, 16].
+
+A comprehensive taxonomy of graph encoding methods, as detailed in the GraphQA benchmark, evaluates representations ranging from abstract structural mappings to semantic real-world analogies [cite: 15]. The primary encoding strategies include:
+
+Adjacency List Encoding
+
+: Explicitly listing adjacent nodes for each vertex (e.g., "Node 0 is connected to Node 1 and Node 2") [cite: 15].
+
+Incident List Encoding
+
+: Structuring the graph by listing distinct edges sequentially (e.g., "(0, 1), (0, 2)") [cite: 15].
+
+Semantic Proximity / Natural Language Descriptions
+
+: Translating abstract nodes and edges into real-world relational analogies, such as Co-authorship, Friendship, Social Networks, or Political alliances [cite: 15, 18].
+
+To extract logical answers from these encoded text sequences, researchers utilize various prompt heuristics [cite: 15, 16]. These include Zero-Shot prompting, standard Few-Shot in-context learning, and Zero-Shot CoT ("Let's think step by step") [cite: 15, 16]. Additionally, 
+
+Bag Prompting (CoT-Bag)
+
+ prepends a spatial structure-building instruction directly to the prompt (e.g., appending "Let's construct a graph with the nodes and edges first" to the graph description) to force the model to explicitly instantiate the topological elements prior to executing the downstream reasoning steps [cite: 15, 16].
+
+Prompt Heuristic
+
+Graph Encoding Type
+
+Edge Existence (%)
+
+Node Degree (%)
+
+Node Count (%)
+
+Edge Count (%)
+
+Connected Nodes (%)
+
+Cycle Check (%)
+
+Zero-Shot
+
+Adjacency List [cite: 15]
+
+45.8
+
+12.4
+
+18.8
+
+14.0
+
+19.8
+
+71.6
+
+Zero-Shot
+
+Incident List [cite: 15]
+
+39.6
+
+25.0
+
+15.6
+
+10.6
+
+53.8
+
+68.8
+
+Zero-Shot
+
+Co-authorship [cite: 15]
+
+44.0
+
+13.8
+
+22.0
+
+11.4
+
+7.6
+
+70.8
+
+Zero-Shot
+
+Friendship [cite: 15]
+
+46.6
+
+11.2
+
+23.0
+
+10.2
+
+4.0
+
+82.0
+
+Zero-Shot
+
+GOT [cite: 15]
+
+49.0
+
+13.6
+
+22.8
+
+13.2
+
+7.6
+
+79.0
+
+Zero-CoT
+
+Adjacency List [cite: 15]
+
+34.2
+
+15.4
+
+11.0
+
+12.2
+
+6.0
+
+46.2
+
+Zero-CoT
+
+Incident List [cite: 15]
+
+41.4
+
+26.6
+
+10.0
+
+12.2
+
+35.2
+
+39.0
+
+Few-Shot
+
+Adjacency List [cite: 15]
+
+42.8
+
+15.4
+
+47.2
+
+18.6
+
+22.2
+
+47.8
+
+Few-Shot
+
+Incident List [cite: 15]
+
+38.8
+
+33.6
+
+51.2
+
+14.6
+
+36.6
+
+45.0
+
+CoT
+
+Adjacency List [cite: 15]
+
+42.8
+
+71.2
+
+57.0
+
+25.2
+
+22.4
+
+56.6
+
+CoT
+
+Incident List [cite: 15]
+
+41.6
+
+75.0
+
+57.6
+
+21.4
+
+30.2
+
+62.6
+
+CoT-Bag
+
+Adjacency List [cite: 15]
+
+45.8
+
+66.8
+
+48.6
+
+25.0
+
+20.6
+
+56.8
+
+CoT-Bag
+
+Incident List [cite: 15]
+
+45.6
+
+75.2
+
+51.2
+
+21.8
+
+41.0
+
+63.0
+
+These empirical findings demonstrate that language models struggle to perform accurate reasoning on basic graph tasks when relying on pure textual representations [cite: 15]. The choice of graph encoding function heavily influences reasoning accuracy [cite: 15]. For instance, incident lists consistently yield superior performance on node degree and connected node tasks under zero-shot conditions, as they format edges as explicit pairwise tokens, minimizing the model's need to reconstruct connections from global adjacency patterns [cite: 15]. Conversely, adjacency list encoding often leads to structural hallucinations when traversing paths [cite: 15]. Crucially, standard CoT techniques can sometimes degrade performance compared to zero-shot approaches [cite: 15]. This degradation is primarily driven by cascading errors: if the model miscalculates a node connection early in its reasoning chain, the mistake propagates through the subsequent generation steps, leading to incorrect logical conclusions [cite: 16].
+
+Furthermore, evaluating question rephrasing methods reveals that mapping abstract graph questions to real-world applications (e.g., rephrasing "What is the degree of node 14?" to "How many friends does Christopher have?") significantly alters model output accuracy [cite: 18]. This variance suggests that the model's ability to solve topological problems is closely tied to its pre-trained semantic priors, which can occasionally override or conflict with the strict relational logic of the input graph [cite: 18].
+
+--------------------------------------------------------------------------------
+
+Hierarchical GraphRAG and Semantic Structuring
+
+Conventional vector-based Retrieval-Augmented Generation (RAG) struggles with queries that require a holistic understanding of a dataset or multi-hop logical connections [cite: 19]. Because baseline RAG relies on semantic similarity matching of isolated document chunks, it cannot effectively synthesize global themes or trace relationships across disparate sources [cite: 19]. GraphRAG addresses these challenges by transforming unstructured text corpora into structured, hierarchical knowledge graphs [cite: 19].
+
+During the Indexing Phase, raw document corpora are sliced into analytical 
+
+TextUnits
+
+ [cite: 19]. An LLM performs Named Entity Recognition (NER) and Relationship Extraction (RE) to construct an initial graph of nodes, edges, and covariates [cite: 19, 20]. This graph is then partitioned into a community hierarchy using the Leiden clustering technique, which groups related entities together [cite: 19]. An LLM is then used to generate a structured summary—a "Community Report"—for each community, capturing the core entities, relationships, and thematic implications of that cluster from the bottom up [cite: 19, 21].
+
+During the Querying Phase, GraphRAG navigates this hierarchical structure using several specialized search paradigms:
+
+Local Search
+
+: An entity-based reasoning approach that combines structured knowledge graph elements with unstructured text chunks [cite: 22]. It maps query terms to specific graph entities, extracting their adjacent neighbors, relationships, and associated text units to construct an augmented prompt within the LLM's context window [cite: 22].
+
+Global Search
+
+: Designed for dataset-wide, thematic queries [cite: 23, 24]. It runs a map-reduce process over community summaries, chunking the reports to generate intermediate responses with importance ratings, which are then aggregated to construct the final response [cite: 23].
+
+DRIFT Search
+
+: Merges global and local characteristics by utilizing community information to refine queries into detailed follow-up questions, outperforming standard local search by 78% in comprehensiveness and 81% in diversity [cite: 24].
+
+Dynamic Global Search
+
+: Optimizes token efficiency by replacing static community levels with dynamic community selection [cite: 21]. Starting at the root of the hierarchy, it uses a smaller, cost-effective model (such as GPT-4o-mini) to prune irrelevant community branches, achieving a 77% cost reduction with equivalent output quality [cite: 21].
+
+LazyGraphRAG
+
+: Combines best-first (vector similarity) and breadth-first (community-level) search dynamics [cite: 25]. This approach evaluates community relevance dynamically using iterative deepening, matching or exceeding the performance of static global search on both local and global queries at just 4% of the query cost [cite: 25].
+
+GraphRAG Search Paradigm
+
+Primary Query Focus
+
+Structural Mechanism
+
+Computational Cost
+
+Key Performance Metric
+
+Local Search
+
+ [cite: 22, 24]
+
+Entity-specific details [cite: 22]
+
+Subgraph neighbor extraction [cite: 22]
+
+Low [cite: 25]
+
+Baseline for localized factual QA [cite: 22]
+
+Global Search
+
+ [cite: 23, 24]
+
+Dataset-wide themes [cite: 23]
+
+Map-reduce over community summaries [cite: 23]
+
+Very High [cite: 21, 25]
+
+Baseline for semantic summarization [cite: 21, 23]
+
+DRIFT Search
+
+ [cite: 24]
+
+Entity context with global awareness [cite: 24]
+
+Community-informed query refinement [cite: 24]
+
+Moderate to High [cite: 25]
+
+Outperforms Local Search: 78% comprehensiveness, 81% diversity [cite: 24]
+
+Dynamic Global Search
+
+ [cite: 21]
+
+Dataset-wide themes with budget limits [cite: 21]
+
+Hierarchical pruning of community branches [cite: 21]
+
+Moderate [cite: 21]
+
+77% cost reduction over static Global Search [cite: 21]
+
+LazyGraphRAG
+
+ [cite: 25]
+
+Hybrid local and global queries [cite: 25]
+
+Iterative deepening best/breadth-first search [cite: 25]
+
+Minimal [cite: 25]
+
+Performs at Global level for 4% of the query cost [cite: 25]
+
+In domain-specific applications, integrating structured knowledge graphs with prompt engineering significantly improves factual accuracy and semantic coherence [cite: 26, 27]. For example, Knowledge Graph Prompt Engineering (KGPE) utilizes SPARQL queries to retrieve structured facts from Wikidata and injects them directly into the prompt context for zero-shot medical question-answering systems [cite: 27]. Empirical evaluations on the MedQA dataset show that different LLM architectures exhibit divergent responsiveness to structured graph injections [cite: 26, 27]:
+
+[Zero-Shot Medical QA Baseline]
+  Qwen-2-7B-Instruct: BLEU = 0.366, Cosine Similarity = 0.763 [cite: 27]
+  Llama-2-7B-Chat:    BLEU = Baseline [cite: 27]
+
+[Under Knowledge Graph Prompt Engineering (KGPE)]
+  Qwen-2-7B-Instruct: BLEU = 0.531 (+0.165), Cosine Similarity = 0.820 (+0.057) [cite: 27]
+  Llama-2-7B-Chat:    BLEU = Modest decrease [cite: 26, 27]
+
+This divergence demonstrates that model responsiveness to structured factual contexts is highly dependent on architecture and instruction-tuning alignment [cite: 26, 27]. Qwen-2-7B-Instruct exhibits high sensitivity and performance gains when provided with entity-relation triples, whereas Llama-2-7B-chat-hf shows slight performance degradation, indicating a tendency to struggle with non-conversational structured facts in its context window [cite: 26, 27]. These findings highlight three critical observations of KGPE: structured prompts approximate weight-free knowledge injection, zero-shot inference preserves generalization without domain overfitting, and graph-guided context construction stabilizes model generation [cite: 27].
+
+Similarly, the MindMap framework elicits a "mind map" within LLMs by extracting and merging path-evidence and neighbor-evidence subgraphs from external KGs [cite: 28]. This approach guides the model to perform joint inference, balancing its internal parametric knowledge with explicit external evidence [cite: 28].
+
+In personalized education, the KnowLP framework integrates GraphRAG to generate dual knowledge structure graphs from course materials [cite: 29]. This system constructs structural graphs using prerequisite and similarity relationships between concepts, dynamically recommending tailored learning paths to optimize student performance [cite: 29].
+
+For clinical medical graph construction, the TwoStepChat framework utilizes prompt engineering to automate knowledge graph construction [cite: 30]. This system leverages a three-phase pipeline: first designing a schema of entity types, second executing named entity recognition and relationship extraction via sequential prompts, and third validating the extracted relationships using cyclic verification of triple classification and link prediction [cite: 30]. This pipeline significantly reduces model hallucinations, achieving a 65% reduction in manual annotation time while outperforming fine-tuned BERT-based baselines [cite: 30].
+
+--------------------------------------------------------------------------------
+
+Parameter-Efficient Graph Prompt Learning in Graph Neural Networks
+
+While prompt engineering for LLMs focuses on text-based representations, Graph Prompt Learning (GPL) operates directly on Graph Neural Networks (GNNs) and Graph Transformers [cite: 5, 6, 31]. Conventional GNN training relies on a "pre-train, fine-tune" paradigm [cite: 6, 32]. However, this approach struggles with a significant objective gap: GNNs are typically pre-trained on self-supervised tasks (such as edge masking or link prediction) but fine-tuned on task-specific labels (such as node classification or graph property prediction) [cite: 33, 34]. Furthermore, real-world graphs often suffer from severe label scarcity (class-based, instance-based, or structure scarcity) [cite: 3]. GPL mitigates these challenges by using learnable prompt vectors to adapt frozen pre-trained GNNs to downstream tasks with minimal labeled data [cite: 6, 32, 34].
+
+Graph Pre-training Phase:
+  Unlabeled Graph Data ──► [Self-Supervised Pretext Task] ──► Pre-trained GNN (Frozen) [cite: 6, 32]
+
+Graph Prompt Tuning Phase:
+  Downstream Task ──► [Task-Specific Prompt / Task Token] ──► Pre-trained GNN (Frozen) ──► Target Output [cite: 5, 31]
+
+To bridge the gap between pre-training and downstream adaptation, frameworks like GPPT and GraphPrompt reformulate classification tasks to align with the self-supervised pre-training objective [cite: 31, 33, 35]. For example, 
+
+GraphPrompt
+
+ unifies pre-training and downstream tasks under a common template of 
+
+subgraph similarity learning
+
+ [cite: 4, 35]. During pre-training, GraphPrompt optimizes GNN weights using self-supervised link prediction, which models the structural similarity between subgraphs [cite: 4, 35]. In the downstream prompting phase, the GNN weights remain frozen, and the system learns a task-specific prompt vector 
+
+\mathbf{p}
+
+ applied to the output of the readout layer [cite: 35, 36]. This prompt vector adjusts the model's focus to retrieve the most relevant pre-trained features for a specific classification task [cite: 35, 36].
+
+To extract a broader range of generalizable knowledge, 
+
+MultiGPrompt
+
+ extends this paradigm to multi-task pre-training [cite: 34]. It pre-trains GNNs on multiple pretext tasks simultaneously (e.g., node connectivity, feature masking, and global community structure) [cite: 34]. MultiGPrompt introduces learnable 
+
+pretext tokens
+
+ to reformulate the inputs for each pretext task, encouraging collaboration rather than interference [cite: 34]. The overall pre-training loss is computed as:
+
+\mathcal{L}_{pre}(\mathbf{H}; \mathbf{T}, \Theta) = \sum_{k=1}^{K} \mathcal{L}_{pre}^{\langle k \rangle}(\mathbf{H}^{\langle k \rangle}; \mathbf{T}^{\langle k \rangle}, \Theta)
+
+where 
+
+\mathbf{H}^{\langle k \rangle}
+
+ represents the hidden representations, 
+
+\mathbf{T}^{\langle k \rangle}
+
+ denotes the task-specific pretext tokens, and 
+
+\Theta
+
+ represents the shared parameters of the pre-trained graph encoder [cite: 34]. During adaptation, MultiGPrompt employs a dual-prompt mechanism—composed of task-specific prompts and open prompts—to leverage both local features and global topological structures [cite: 34].
+
+Graph Prompt Learning methods are broadly categorized into three structural paradigms [cite: 31]:
+
+Input-Level Prompts
+
+: These methods insert learnable prompt vectors or modify the graph structure before feeding the data into the pre-trained model [cite: 31]. For example, the Graph Prompt Function (GPF) adds learnable feature perturbations directly to the input space, implicitly modifying both node attributes and edge weights [cite: 37]. GPF achieves performance comparable to full fine-tuning while updating only 0.1% of the model parameters [cite: 37].
+
+Representation-Level Prompts
+
+: These strategies apply learnable prompts (such as task tokens or prototypical subgraphs) directly to the latent embeddings generated by the pre-trained encoder [cite: 31]. GPPT, for instance, uses task tokens to reformulate node classification as a pair-wise link prediction task [cite: 31, 33].
+
+Layer-Wise Prompts
+
+: These approaches inject learnable prompts into each intermediate layer of the pre-trained GNN or Graph Transformer, guiding the message-passing and representation propagation steps [cite: 31, 38].
+
+While representation-level and layer-wise prompts are effective, they are often complex to implement and can exhibit variable performance across different pre-trained backbones [cite: 31]. Consequently, research has focused on optimizing input-level methods [cite: 31]. The 
+
+UniPrompt
+
+ framework identifies that representation-level prompts often behave as simple linear classifiers, failing to fully leverage the expressive power of pre-trained models [cite: 31]. To address this, UniPrompt implements an input-level approach that preserves the input graph structure [cite: 31]. It constructs a 
+
+k
+
+-nearest neighbor (
+
+k\text{NN}
+
+) graph as an initial prompt graph, adaptively optimizes edge weights to guide message passing, and utilizes a bootstrapping strategy to integrate the prompt graph into the original topology, preventing model collapse and overfitting [cite: 31].
+
+To support step-by-step reasoning on non-textual data, the 
+
+GCoT (Graph Chain of Thought)
+
+ framework introduces prompting for text-free graphs [cite: 39]. GCoT decomposes downstream tasks into multiple inference steps [cite: 39]: at each step, a frozen pre-trained graph encoder generates hidden node representations, which are aggregated to construct a step-specific "thought" vector representing node working states [cite: 39]. This thought vector is fed into a conditional network (condition-net) to generate node-specific prompt vectors that guide the next inference step [cite: 39].
+
+Framework / Repository
+
+Target Modality / Graph Type
+
+Primary Backbones Supported
+
+Prominent Pre-training Methods
+
+Prompting Strategy & Mechanism
+
+Downstream Tasks Supported
+
+ProG-V2
+
+ [cite: 40]
+
+Homogeneous Graphs [cite: 5]
+
+GCN, GAT, GIN, GraphSAGE, GCov, GraphTransformer [cite: 40]
+
+DGI, GraphMAE, GraphCL, SimGRACE [cite: 40]
+
+Register-based Prompt Strategies (GPF, GPF-plus, Gprompt, UniPrompt) [cite: 40]
+
+Node Task (Classification), Graph Task (Classification), Link Task (Prediction) [cite: 31, 40]
+
+GPPT
+
+ [cite: 33, 38]
+
+Homogeneous Graphs [cite: 5]
+
+Pre-trained GNNs [cite: 33]
+
+Masked Edge Prediction (Self-Supervised) [cite: 33]
+
+Task Token Pairs (Reformulating node classification as edge prediction) [cite: 33]
+
+Node Classification (Generalization) [cite: 33, 37]
+
+GraphPrompt
+
+ [cite: 35, 38]
+
+Homogeneous / Heterogeneous [cite: 5]
+
+GIN, standard graph encoders [cite: 35, 38]
+
+Subgraph similarity learning via link prediction [cite: 4, 35]
+
+Learnable Prompt Vectors applied to ReadOut layers [cite: 35]
+
+Node and Graph Classification under few-shot settings [cite: 35]
+
+MultiGPrompt
+
+ [cite: 34, 38]
+
+Citation & Molecular Graphs [cite: 34, 38]
+
+GNN message-passing architectures [cite: 34]
+
+Multi-task pre-training with pretext tokens [cite: 34]
+
+Composed & Open prompts (Dual-prompt mechanism) [cite: 34]
+
+Node Classification, Graph Classification [cite: 38]
+
+HGPROMPT
+
+ [cite: 38]
+
+Heterogeneous & Homogeneous [cite: 38]
+
+Heterogeneous GNNs [cite: 38]
+
+Heterogeneous context pre-training [cite: 38]
+
+Bridges structural gaps between homogeneous and heterogeneous spaces [cite: 38]
+
+Few-shot Prompt Learning [cite: 38]
+
+--------------------------------------------------------------------------------
+
+Active Agentic Probing and Edge Refinement
+
+Integrating graph structured data with language models presents several key engineering challenges:
+
+Finite Context Windows
+
+: Exhaustively flattening a complex graph into natural text quickly exhausts the model's context window, especially when dealing with dense structures or multi-hop neighborhoods [cite: 1, 41].
+
+Context Congestion
+
+: As graph prompts expand to capture topological details, instructions and structural metadata crowd out the core data needed for reasoning, increasing token consumption and operational costs [cite: 1].
+
+Structural Hallucinations and Computational Failures
+
+: LLMs frequently hallucinate connections that do not exist in the source graph and struggle to perform accurate path routing or numerical calculations [cite: 41, 42].
+
+To analyze these limitations, systems engineers distinguish between 
+
+Prompt Engineering
+
+ and 
+
+Context Engineering
+
+ via a "Context Graph" [cite: 1]. This distinction is framed through an operating system analogy:
+
+  Large Language Model (LLM)  <──►  Central Processing Unit (CPU) [cite: 1]
+               ▲
+               │
+     LLM Context Window       <──►  System RAM (Volatile Memory) [cite: 1]
+               ▲
+               │
+    Dynamic Context Graph     <──►  Operating System (OS) / Virtual Memory Manager [cite: 1]
+
+Under this framework, prompt engineering merely optimizes the instruction set (analogous to the program code executing on the CPU) [cite: 1]. In contrast, context engineering dynamically manages what gets loaded into the context window (RAM) [cite: 1]. The context graph acts as the operating system, dynamically assembling relevant node-edge properties, enforcing temporal validity, and pruning irrelevant pathways before the LLM processes the query, avoiding context congestion [cite: 1].
+
+To address the limitations of passive graph ingestion, researchers have developed 
+
+GRASP (Graph Reasoning via Agentic Solving and Probing)
+
+ [cite: 41, 42]. GRASP shifts the paradigm from passively reading static, flattened graphs to proactive agentic exploration [cite: 41, 42]. The GRASP framework equips the LLM with a dual-capability environment that functions as its "eyes" and "hands" [cite: 42, 43]:
+
+Neighbor Retrieval (The Receptive Field "Eyes")
+
+This tool enables the model to perform local, on-demand probing of the topology [cite: 42, 43]. Instead of pre-loading the entire graph into the context window, the agent retrieves neighborhood information dynamically as it traverses the graph [cite: 41, 42]. This targeted exploration bypasses input length constraints and prevents context window congestion [cite: 41, 42].
+
+Code Interpreter (The Execution "Hands")
+
+This tool provides a deterministic environment to offload complex mathematical and graph-theoretic computations (such as shortest path routing or connected component analysis) to a symbolic Python execution environment [cite: 42, 43]. The agent writes and executes code, receives real-time runtime feedback, and self-corrects its logic in a closed-loop system [cite: 41, 42].
+
+To ensure the agent develops genuine topological awareness rather than relying on semantic shortcuts or pattern memorization, GRASP employs a staged reinforcement learning (RL) strategy using 
+
+Group Relative Policy Optimization (GRPO)
+
+ [cite: 42, 44]. During training, the agent transitions through two distinct environments [cite: 42]:
+
+Stage 1: Visible Tool-Tuning Environment
+  Graph Structure is Visible in Context ──► Agent Learns to Map Probes to Tools [cite: 42]
+
+Stage 2: Structure-Blind RL Environment
+  Only Graph ID is Provided ──► Agent Must Autonomously Probe & Query Topology via Tools [cite: 42]
+
+In the structure-blind environment, the agent cannot see the graph in its prompt; it is provided only with a graph identifier [cite: 41, 42]. It must use the Neighbor Retrieval tool to query the environment, discover adjacent nodes, and construct its own internal mental map of the topology [cite: 41, 42]. This training forces the agent to develop rigorous topological grounding [cite: 41, 42].
+
+Evaluated on multi-domain graph reasoning benchmarks, GRASP achieves a 53.06% average performance improvement over baseline models, enabling a 4B parameter model to outperform larger state-of-the-art models like DeepSeek-V3 [cite: 42, 43]. Crucially, GRASP demonstrates strong zero-shot generalization, enabling models to scale to million-node graphs and solve hard-level LeetCode graph problems [cite: 41, 42].
+
+In parallel with active reasoning agents, LLMs are also used as topological structure enhancers to refine the raw structures of Text-Attributed Graphs (TAGs) [cite: 45]. In this role, the LLM evaluates the semantic similarity of node attributes to prune unreliable edges and construct new, structurally sound connections [cite: 45]. This topology refinement is combined with pseudo-label propagation as a regularization term during GNN training to guide edge weight learning [cite: 45]. This approach achieves performance gains of 0.15% to 2.47% on public benchmarks, demonstrating the value of using LLM semantic priors to enhance graph topology [cite: 45].
+
+--------------------------------------------------------------------------------
+
+Unified GNN-LLM Benchmark Architectures
+
+To categorize and evaluate the integration of graphs with Large Language Models, researchers analyze these systems across three primary functional roles within the modeling pipeline [cite: 2]:
+
+LLMs as Enhancers
+
+: The model improves node or edge feature representations before they are processed by traditional GNNs [cite: 45, 46]. Examples include using self-supervised neighborhood prediction (GIANT) or explanations (TAPE) to augment textual features [cite: 38].
+
+LLMs as Predictors
+
+: The language model directly solves graph-theoretic queries using textual descriptions of the graph [cite: 17, 38]. This approach relies on prompt engineering and in-context learning, as evaluated in the NLGraph and GraphQA benchmarks [cite: 15, 38].
+
+GNN-LLM Alignment
+
+: These systems align the structural representations learned by GNNs with the semantic representation space of LLMs [cite: 38]. This includes frameworks like GraphTranslator and HiGPT, which train cross-modal projectors to map structural node embeddings into the language model's token space [cite: 38].
+
+Architectural Role
+
+Representative Frameworks
+
+Core Mechanism
+
+Primary Advantage
+
+Major Limitation
+
+LLMs as Enhancers
+
+GIANT, WalkLM, TAPE, SimTeG, G-Prompt [cite: 38]
+
+Generates enhanced node/edge features from text descriptions [cite: 38, 45, 46].
+
+Leverages the model's rich semantic knowledge to improve GNN features [cite: 38, 45].
+
+The GNN still struggles with incomplete or highly skewed topologies [cite: 45].
+
+LLMs as Predictors
+
+NLGraph, GraphQA, GraphText, InstructGLM [cite: 15, 38]
+
+Translates graph structure directly to text for LLM inference [cite: 15, 17, 38].
+
+Eliminates the need for pre-training or specialized GNN weights [cite: 16, 47].
+
+Limited by context window size and vulnerable to structural hallucinations [cite: 41, 42].
+
+GNN-LLM Alignment
+
+GraphTranslator, HiGPT, GraphToken, LLaGA [cite: 38]
+
+Maps GNN embeddings to LLM token representations [cite: 38, 47].
+
+Combines structural and semantic representations in a unified space [cite: 38, 47].
+
+Requires training complex projection layers and alignment models [cite: 38, 47].
+
+--------------------------------------------------------------------------------
+
+Conclusions and Strategic Recommendations
+
+The engineering of graph-structured architectures for generative AI has evolved into a mature set of methodologies that bridge the gap between structured relational data and sequence-centric models [cite: 6, 7, 48]. This survey highlights that the choice of architecture must be aligned with the computational budget, data scale, and task complexity of the target application.
+
+For semantic search, document analysis, and global thematic reasoning over unstructured enterprise text corpora, Hierarchical GraphRAG frameworks offer a robust solution [cite: 19, 49]. By clustering documents using the Leiden technique and generating bottom-up community reports, GraphRAG structures unstructured information, enabling models to generate accurate, traceable responses [cite: 19]. To manage the high token costs associated with map-reduce global searches, architectures should integrate hybrid breadth-first and best-first traversal approaches, such as LazyGraphRAG, which reduces operational costs while maintaining output quality [cite: 25].
+
+When working with structured databases or domain-specific knowledge bases (such as medical or legal databases), prompt engineering should integrate SPARQL-based entity retrieval and Graph-of-Thought (GoT) topologies [cite: 7, 27]. GoT's generation, aggregation, and refinement operators allow systems to explore multiple reasoning paths in parallel and merge them into a single solution, outperforming linear prompting styles [cite: 7, 10]. Additionally, systems must account for model-specific sensitivities to structured data, ensuring the pre-trained backbone is aligned to process dense entity-relation formats [cite: 26, 27].
+
+For large-scale, text-free graphs (such as molecular structures, protein-protein interactions, or recommendation systems), Graph Prompt Learning (GPL) on Graph Neural Networks represents a parameter-efficient alternative to full fine-tuning [cite: 5, 6, 31]. GPL frameworks like GraphPrompt and MultiGPrompt unify pre-training and downstream adaptation under a single task template, such as subgraph similarity learning, allowing models to generalize effectively in few-shot scenarios [cite: 34, 35]. When deploying these systems, input-level prompting strategies like UniPrompt are preferred over layer-wise or representation-level prompts, as they preserve the underlying graph structure while avoiding model collapse [cite: 31].
+
+Finally, for complex algorithmic reasoning, path traversal, and scaling to massive graphs, systems must move away from passive graph ingestion toward proactive agentic architectures [cite: 41, 42]. Frameworks like GRASP, which interleave on-demand neighbor retrieval with deterministic code execution, bypass context window limits and eliminate structural hallucinations [cite: 41, 42]. Training these agents in structure-blind environments using reinforcement learning forces them to develop genuine topological awareness [cite: 41, 42]. The future of graph prompt engineering lies in hybrid, neuro-symbolic systems that combine agentic active probing, dynamic context graphs, and parameter-efficient graph learning to enable robust relational reasoning in generative AI [cite: 1, 31, 42].
+
+--------------------------------------------------------------------------------
+
+Context Graph vs Prompt Engineering, 
+
+https://thecontextgraph.co/context-graph-vs-prompt-engineering
+
+https://thecontextgraph.co/context-graph-vs-prompt-engineering
+
+Graph4LLM: A Systematic Survey of Graph-Enhanced Large Language Models - TechRxiv, 
+
+https://www.techrxiv.org/doi/pdf/10.36227/techrxiv.177100285.57294132
+
+https://www.techrxiv.org/doi/pdf/10.36227/techrxiv.177100285.57294132
+
+A Survey of Few-Shot Learning on Graphs: from Meta-Learning to Pre-Training and Prompt Learning - arXiv, 
+
+https://arxiv.org/html/2402.01440v4
+
+https://arxiv.org/html/2402.01440v4
+
+GraphPrompt: Unifying Pre-Training and Downstream Tasks for Graph Neural Networks | by Mark Anil Mathew | Medium, 
+
+https://medium.com/@markmathew/graphprompt-a-unifying-framework-for-efficient-graph-neural-networks-0bb46dbd1cc2
+
+https://medium.com/@markmathew/graphprompt-a-unifying-framework-for-efficient-graph-neural-networks-0bb46dbd1cc2
+
+Towards Graph Prompt Learning: A Survey and Beyond - arXiv, 
+
+https://arxiv.org/html/2408.14520v1
+
+https://arxiv.org/html/2408.14520v1
+
+Graph Prompting for Graph Learning Models: Recent Advances and Future Directions - arXiv, 
+
+https://arxiv.org/pdf/2506.08326
+
+https://arxiv.org/pdf/2506.08326
+
+Graph of Thoughts (GoT) Framework - Emergent Mind, 
+
+https://www.emergentmind.com/topics/graph-of-thoughts-got
+
+https://www.emergentmind.com/topics/graph-of-thoughts-got
+
+Diagram of Thought (DoT) - GitHub, 
+
+https://github.com/diagram-of-thought/diagram-of-thought
+
+https://github.com/diagram-of-thought/diagram-of-thought
+
+Demystifying Chains, Trees, and Graphs of Thoughts - arXiv, 
+
+https://arxiv.org/html/2401.14295v5
+
+https://arxiv.org/html/2401.14295v5
+
+Graph of Thoughts: Solving Elaborate Problems with Large Language Models, 
+
+https://ojs.aaai.org/index.php/AAAI/article/view/29720/31236
+
+https://ojs.aaai.org/index.php/AAAI/article/view/29720/31236
+
+Review of “Graph of Thoughts: Solving Elaborate Problems with Large Language Models” - Temple CIS, 
+
+https://cis.temple.edu/tagit/presentations/Review%20of%20Besta23.pdf
+
+https://cis.temple.edu/tagit/presentations/Review%20of%20Besta23.pdf
+
+Graph-of-Thought: A New Reasoning Paradigm - Emergent Mind, 
+
+https://www.emergentmind.com/topics/graph-of-thought-got
+
+https://www.emergentmind.com/topics/graph-of-thought-got
+
+Something-of-Thought in LLM Prompting: An Overview of Structured LLM Reasoning, 
+
+https://towardsdatascience.com/something-of-thought-in-llm-prompting-an-overview-of-structured-llm-reasoning-70302752b390/
+
+https://towardsdatascience.com/something-of-thought-in-llm-prompting-an-overview-of-structured-llm-reasoning-70302752b390/
+
+DAG-Math: Graph-of-Thought Guided Mathematical Reasoning in LLMs | OpenReview, 
+
+https://openreview.net/forum?id=ylr6WArKQN
+
+https://openreview.net/forum?id=ylr6WArKQN
+
+Talk like a Graph: Encoding Graphs for Large Language Models - arXiv, 
+
+https://arxiv.org/html/2310.04560v1
+
+https://arxiv.org/html/2310.04560v1
+
+Talk like a graph: Encoding graphs for large language models - arXiv, 
+
+https://arxiv.org/pdf/2310.04560
+
+https://arxiv.org/pdf/2310.04560
+
+Colorful Talks with Graphs: Human-Interpretable Graph Encodings for Large Language Models - ACL Anthology, 
+
+https://aclanthology.org/2026.findings-acl.2049.pdf
+
+https://aclanthology.org/2026.findings-acl.2049.pdf
+
+Talk like a Graph: Encoding Graphs for Large Language Models - OpenReview, 
+
+https://openreview.net/forum?id=IuXR1CCrSi
+
+https://openreview.net/forum?id=IuXR1CCrSi
+
+Welcome - GraphRAG, 
+
+https://microsoft.github.io/graphrag/
+
+https://microsoft.github.io/graphrag/
+
+What is GraphRAG? - IBM, 
+
+https://www.ibm.com/think/topics/graphrag
+
+https://www.ibm.com/think/topics/graphrag
+
+GraphRAG: Improving global search via dynamic community selection - Microsoft Research, 
+
+https://www.microsoft.com/en-us/research/blog/graphrag-improving-global-search-via-dynamic-community-selection/
+
+https://www.microsoft.com/en-us/research/blog/graphrag-improving-global-search-via-dynamic-community-selection/
+
+Local Search - GraphRAG - Microsoft Open Source, 
+
+https://microsoft.github.io/graphrag/query/local_search/
+
+https://microsoft.github.io/graphrag/query/local_search/
+
+Global Search - GraphRAG - Microsoft Open Source, 
+
+https://microsoft.github.io/graphrag/query/global_search/
+
+https://microsoft.github.io/graphrag/query/global_search/
+
+Introducing DRIFT Search: Combining global and local search methods to improve quality and efficiency - Microsoft Research, 
+
+https://www.microsoft.com/en-us/research/blog/introducing-drift-search-combining-global-and-local-search-methods-to-improve-quality-and-efficiency/
+
+https://www.microsoft.com/en-us/research/blog/introducing-drift-search-combining-global-and-local-search-methods-to-improve-quality-and-efficiency/
+
+LazyGraphRAG: Setting a new standard for quality and cost - Microsoft Research, 
+
+https://www.microsoft.com/en-us/research/blog/lazygraphrag-setting-a-new-standard-for-quality-and-cost/
+
+https://www.microsoft.com/en-us/research/blog/lazygraphrag-setting-a-new-standard-for-quality-and-cost/
+
+Enhancing Medical Question-Answering Systems with Knowledge Graph-Integrated Large Language Models: A Comparative Analysis | EAI Endorsed Transactions on Pervasive Health and Technology, 
+
+https://publications.eai.eu/index.php/phat/article/view/11670
+
+https://publications.eai.eu/index.php/phat/article/view/11670
+
+(PDF) Enhancing Medical Question-Answering Systems with Knowledge Graph-Integrated Large Language Models: A Comparative Analysis - ResearchGate, 
+
+https://www.researchgate.net/publication/400189716_Enhancing_Medical_Question-Answering_Systems_with_Knowledge_Graph-Integrated_Large_Language_Models_A_Comparative_Analysis
+
+https://www.researchgate.net/publication/400189716_Enhancing_Medical_Question-Answering_Systems_with_Knowledge_Graph-Integrated_Large_Language_Models_A_Comparative_Analysis
+
+MindMap: Knowledge Graph Prompting Sparks Graph of Thoughts in Large Language Models - ACL Anthology, 
+
+https://aclanthology.org/2024.acl-long.558.pdf
+
+https://aclanthology.org/2024.acl-long.558.pdf
+
+GraphRAG-Induced Dual Knowledge Structure Graphs for Personalized Learning Path Recommendation | Proceedings of the AAAI Conference on Artificial Intelligence, 
+
+https://ojs.aaai.org/index.php/AAAI/article/view/38479
+
+https://ojs.aaai.org/index.php/AAAI/article/view/38479
+
+Knowledge graph construction for heart failure using large language models with prompt engineering - PMC, 
+
+https://pmc.ncbi.nlm.nih.gov/articles/PMC11250484/
+
+https://pmc.ncbi.nlm.nih.gov/articles/PMC11250484/
+
+One Prompt Fits All: Universal Graph Adaptation for Pretrained Models - arXiv, 
+
+https://arxiv.org/html/2509.22416v1
+
+https://arxiv.org/html/2509.22416v1
+
+Graph Prompting for Graph Learning Models: Recent Advances and Future Directions, 
+
+https://arxiv.org/html/2506.08326v1
+
+https://arxiv.org/html/2506.08326v1
+
+GPPT: Graph Pre-training and Prompt Tuning to Generalize Graph Neural Networks, 
+
+https://www.semanticscholar.org/paper/GPPT%3A-Graph-Pre-training-and-Prompt-Tuning-to-Graph-Sun-Zhou/e60ad3d4ed3273af6a94745689783b83f59c8b4a
+
+https://www.semanticscholar.org/paper/GPPT%3A-Graph-Pre-training-and-Prompt-Tuning-to-Graph-Sun-Zhou/e60ad3d4ed3273af6a94745689783b83f59c8b4a
+
+MultiGPrompt for multi-task pre-training and prompting on graphs - Institutional Knowledge (InK) @ SMU, 
+
+https://ink.library.smu.edu.sg/cgi/viewcontent.cgi?article=9714&context=sis_research
+
+https://ink.library.smu.edu.sg/cgi/viewcontent.cgi?article=9714&context=sis_research
+
+Generalized Graph Prompt: Toward a Unification of Pre-Training and Downstream Tasks on Graphs - arXiv, 
+
+https://arxiv.org/html/2311.15317v2
+
+https://arxiv.org/html/2311.15317v2
+
+Generalized Graph Prompt: Toward a Unification of Pre-Training and Downstream Tasks on Graphs - athina.ai, 
+
+https://blog.athina.ai/generalized-graph-prompt-toward-a-unification-of-pre-training-and-downstream-tasks-on-graphs
+
+https://blog.athina.ai/generalized-graph-prompt-toward-a-unification-of-pre-training-and-downstream-tasks-on-graphs
+
+Prompt Tuning for Graph Neural Networks - OpenReview, 
+
+https://openreview.net/forum?id=SZojABvWnkx&noteId=I3EMXZeOjRr
+
+https://openreview.net/forum?id=SZojABvWnkx&noteId=I3EMXZeOjRr
+
+WxxShirley/Awesome-Graph-Prompt - GitHub, 
+
+https://github.com/WxxShirley/Awesome-Graph-Prompt
+
+https://github.com/WxxShirley/Awesome-Graph-Prompt
+
+GCoT: Chain-of-Thought Prompt Learning for Graphs - arXiv, 
+
+https://arxiv.org/html/2502.08092v2
+
+https://arxiv.org/html/2502.08092v2
+
+sheldonresearch/ProG: A Unified Python Library for Graph Prompting - GitHub, 
+
+https://github.com/sheldonresearch/ProG
+
+https://github.com/sheldonresearch/ProG
+
+GRASP: Graph Reasoning via Agentic Solving and Probing of LLMs | OpenReview, 
+
+https://openreview.net/forum?id=nWOjSTq1ae&referrer=%5Bthe%20profile%20of%20Wei%20Lin%5D(%2Fprofile%3Fid%3D~Wei_Lin7)
+
+https://openreview.net/forum?id=nWOjSTq1ae&referrer=%5Bthe%20profile%20of%20Wei%20Lin%5D(%2Fprofile%3Fid%3D~Wei_Lin7)
+
+GRASP: Graph Reasoning via Agentic Solving and Probing of LLMs - OpenReview, 
+
+https://openreview.net/pdf/666aa3cfa48c356809b62fc9f70196aeab5b9747.pdf
+
+https://openreview.net/pdf/666aa3cfa48c356809b62fc9f70196aeab5b9747.pdf
+
+PKU-ML/GRASP-4B - Hugging Face, 
+
+https://huggingface.co/PKU-ML/GRASP-4B
+
+https://huggingface.co/PKU-ML/GRASP-4B
+
+GRASP: Graph Reasoning via Agentic Solving and Probing of LLMs - ICML 2026, 
+
+https://icml.cc/virtual/2026/poster/61718
+
+https://icml.cc/virtual/2026/poster/61718
+
+limengran98/Awesome-Literature-Graph-Learning-Challenges - GitHub, 
+
+https://github.com/limengran98/Awesome-Literature-Graph-Learning-Challenges
+
+https://github.com/limengran98/Awesome-Literature-Graph-Learning-Challenges
+
+Awesome-GraphRAG: A curated list of resources (surveys, papers, benchmarks, and opensource projects) on graph-based retrieval-augmented generation. - GitHub, 
+
+https://github.com/DEEP-PolyU/Awesome-GraphRAG
+
+https://github.com/DEEP-PolyU/Awesome-GraphRAG
+
+Exploring Graph Learning Tasks with Pure LLMs: A Comprehensive Benchmark and Investigation - ACL Anthology, 
+
+https://aclanthology.org/2026.findings-acl.389.pdf
+
+https://aclanthology.org/2026.findings-acl.389.pdf
+
+What Is GraphRAG? A Guide to Connected Context - Memgraph, 
+
+https://memgraph.com/blog/what-is-graphrag
+
+https://memgraph.com/blog/what-is-graphrag
+
+GraphRAG: Unlocking LLM discovery on narrative private data - Microsoft Research, 
+
+https://www.microsoft.com/en-us/research/blog/graphrag-unlocking-llm-discovery-on-narrative-private-data/
+
+https://www.microsoft.com/en-us/research/blog/graphrag-unlocking-llm-discovery-on-narrative-private-data/
