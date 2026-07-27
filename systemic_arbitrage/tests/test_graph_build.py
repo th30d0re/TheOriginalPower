@@ -84,3 +84,8 @@ def test_write_graph_matches_builder(tmp_path):
     expected = graph_build.build_graph()
     assert graph_build.write_graph(destination) == expected
     assert json.loads(destination.read_text(encoding="utf-8")) == expected
+
+
+def test_committed_artifact_is_current():
+    committed = json.loads(graph_build.OUTPUT_PATH.read_text(encoding="utf-8"))
+    assert committed == graph_build.build_graph()
