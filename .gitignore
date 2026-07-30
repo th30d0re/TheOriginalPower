@@ -98,3 +98,6 @@ Paper/chapters_src/
 # Agent session logs (AGENTS.md logging requirement) — artifacts, not source
 session-2026-*.md
 **/session-2026-*.md
+
+# Cover preview scaffolding (regenerate with tools/cover_build.py)
+website/public/cover-preview.*

@@ -1,0 +1,211 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" viewBox="0 0 1200 1600" width="1200" height="1600"
+     style="--bg:#2e3192;--ink:#ffffff;--accent:#ffffff;--dim:#c9c9e8">
+<sodipodi:namedview inkscape:document-units="px" pagecolor="#2e3192"/>
+<title>The Original Power — cover</title>
+<defs>
+  <style><![CDATA[
+    :root { }
+    .wire   { fill:none; stroke:var(--ink); stroke-width:3.2;
+               stroke-linecap:round; stroke-linejoin:round; }
+    .wire-thin { fill:none; stroke:var(--ink); stroke-width:2.2;
+               stroke-linecap:round; }
+    .fill-ink  { fill:var(--ink); stroke:none; }
+    .no-fill   { fill:none; }
+    .chart     { fill:none; stroke:var(--dim); stroke-width:1.6; }
+    .chart-rim { fill:none; stroke:var(--ink); stroke-width:3; }
+    .accent    { stroke:var(--accent); fill:none; stroke-width:3.4; }
+    .accent-fill { fill:var(--accent); stroke:none; }
+    .label     { fill:var(--ink); font-family:'Courier New',monospace;
+                  font-size:17px; }
+    .label-sm  { fill:var(--dim); font-family:'Courier New',monospace;
+                  font-size:14px; }
+  ]]></style>
+
+  <!-- inductor: 4 loops, 82 long -->
+  <symbol id="s-coil" overflow="visible"><path class="wire" d="M 0 0 a 9 9 0 0 1 18 0 a 9 9 0 0 1 18 0 a 9 9 0 0 1 18 0 a 9 9 0 0 1 18 0 l 10 0"/></symbol>
+  <symbol id="s-res"  overflow="visible"><path class="wire" d="M 0 0 l 8 0 l 5 -11 l 5 11 l 5 -11 l 5 11 l 5 -11 l 5 11 l 8 0"/></symbol>
+  <symbol id="s-cap"  overflow="visible">
+    <path class="wire" d="M 0 0 l 12 0 M 12 -17 l 0 34 M 26 -17 l 0 34 M 26 0 l 12 0"/>
+  </symbol>
+  <symbol id="s-junction" overflow="visible">
+    <circle class="wire no-fill" cx="0" cy="0" r="6"/>
+  </symbol>
+  <symbol id="s-arrow" overflow="visible">
+    <path class="fill-ink" d="M -11 0 L 11 0 L 0 26 Z"/>
+  </symbol>
+  <!-- ground: stacked rules, narrowing downward -->
+  <symbol id="s-ground" overflow="visible">
+    <path class="wire" d="M -34 0 l 68 0 M -24 9 l 48 0 M -14 18 l 28 0 M -6 27 l 12 0"/>
+  </symbol>
+</defs>
+
+<g id="layer-bg" inkscape:groupmode="layer" inkscape:label="00 background" style="display:inline">
+  <rect x="0" y="0" width="1200" height="1600" fill="var(--bg)"/>
+</g>
+
+<g id="layer-border" inkscape:groupmode="layer" inkscape:label="10 border circuit" style="display:inline">
+  <path class="wire" d="M 52 52 L 510.0 52 M 690.0 52 L 1148 52 L 1148 1548 M 690.0 1548 L 52 1548 L 52 52"/>
+  <path class="wire" d="M 510.0 52 L 562.0 26 L 638.0 26 L 690.0 52"/>
+  <path class="wire" d="M 510.0 1548 L 562.0 1574 L 638.0 1574 L 690.0 1548"/>
+  <use xlink:href="#s-ground" transform="translate(600.0,8.0)"/>
+  <use xlink:href="#s-ground" transform="translate(600.0,1582.0) rotate(180)"/>
+  <use xlink:href="#s-coil" transform="translate(435.0,52.0)"/>
+  <use xlink:href="#s-coil" transform="translate(335.0,52.0)"/>
+  <use xlink:href="#s-cap" transform="translate(200.0,52.0)"/>
+  <use xlink:href="#s-coil" transform="translate(80.0,52.0)"/>
+  <use xlink:href="#s-coil" transform="translate(765.0,52.0)"/>
+  <use xlink:href="#s-coil" transform="translate(865.0,52.0)"/>
+  <use xlink:href="#s-cap" transform="translate(1000.0,52.0)"/>
+  <use xlink:href="#s-coil" transform="translate(1120.0,52.0)"/>
+  <use xlink:href="#s-coil" transform="translate(435.0,1548.0)"/>
+  <use xlink:href="#s-coil" transform="translate(335.0,1548.0)"/>
+  <use xlink:href="#s-cap" transform="translate(200.0,1548.0)"/>
+  <use xlink:href="#s-coil" transform="translate(80.0,1548.0)"/>
+  <use xlink:href="#s-coil" transform="translate(765.0,1548.0)"/>
+  <use xlink:href="#s-coil" transform="translate(865.0,1548.0)"/>
+  <use xlink:href="#s-cap" transform="translate(1000.0,1548.0)"/>
+  <use xlink:href="#s-coil" transform="translate(1120.0,1548.0)"/>
+  <use xlink:href="#s-arrow" transform="translate(52.0,172.0)"/>
+  <use xlink:href="#s-res" transform="translate(52.0,262.0) rotate(90)"/>
+  <use xlink:href="#s-cap" transform="translate(52.0,412.0) rotate(90)"/>
+  <use xlink:href="#s-junction" transform="translate(52.0,572.0)"/>
+  <use xlink:href="#s-junction" transform="translate(52.0,692.0)"/>
+  <use xlink:href="#s-res" transform="translate(52.0,812.0) rotate(90)"/>
+  <use xlink:href="#s-arrow" transform="translate(52.0,1428.0)"/>
+  <use xlink:href="#s-arrow" transform="translate(1148.0,172.0)"/>
+  <use xlink:href="#s-res" transform="translate(1148.0,262.0) rotate(90)"/>
+  <use xlink:href="#s-cap" transform="translate(1148.0,412.0) rotate(90)"/>
+  <use xlink:href="#s-junction" transform="translate(1148.0,572.0)"/>
+  <use xlink:href="#s-junction" transform="translate(1148.0,692.0)"/>
+  <use xlink:href="#s-res" transform="translate(1148.0,812.0) rotate(90)"/>
+  <use xlink:href="#s-arrow" transform="translate(1148.0,1428.0)"/>
+  <path class="wire" d="M 104 60 L 104 202"/>
+  <path class="wire" d="M 104 1398 L 104 1540"/>
+  <use xlink:href="#s-coil" transform="translate(104.0,82.0) rotate(90)"/>
+  <use xlink:href="#s-coil" transform="translate(104.0,1438.0) rotate(90)"/>
+  <path class="wire" d="M 1096 60 L 1096 202"/>
+  <path class="wire" d="M 1096 1398 L 1096 1540"/>
+  <use xlink:href="#s-coil" transform="translate(1096.0,82.0) rotate(90)"/>
+  <use xlink:href="#s-coil" transform="translate(1096.0,1438.0) rotate(90)"/>
+
+</g>
+
+<g id="layer-title" inkscape:groupmode="layer" inkscape:label="20 title (standard)" style="display:inline">
+  <text x="600.0" y="300" text-anchor="middle" fill="var(--ink)" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-weight="700" font-size="96" letter-spacing="6">THE ORIGINAL POWER</text>
+  <text x="600.0" y="352" text-anchor="middle" fill="var(--accent)" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="26" letter-spacing="6">THE PHYSICS OF OPPRESSION AND THE ENGINEERING OF CONTROL</text>
+
+</g>
+
+<g id="layer-title-od" inkscape:groupmode="layer" inkscape:label="21 title (OpenDyslexic)" style="display:none">
+  <text x="600.0" y="300" text-anchor="middle" fill="var(--ink)" font-family="OpenDyslexic,Comic Sans MS,sans-serif" font-weight="700" font-size="88">The Original Power</text>
+  <text x="600.0" y="352" text-anchor="middle" fill="var(--accent)" font-family="OpenDyslexic,Comic Sans MS,sans-serif" font-size="26">The physics of oppression and the engineering of control</text>
+
+</g>
+
+<g id="layer-phasor" inkscape:groupmode="layer" inkscape:label="30 phasor W" style="display:inline">
+  <path class="wire-thin" d="M 390 560 L 620 560"/>
+  <path class="wire-thin" d="M 430 615 L 430 410"/>
+  <path class="accent" d="M 430 560 L 548.2 467.7"/>
+  <path class="accent-fill" d="M 548.2 467.7 l -13 -2 l 5 11 Z"/>
+  <path class="wire-thin" style="stroke-dasharray:6 6" d="M 548.2 467.7 L 548.2 560"/>
+  <path class="wire-thin" d="M 472 560 A 42 42 0 0 0 463.1 534.1"/>
+  <text class="label" x="482" y="546">θ</text>
+  <text class="label" x="558.2" y="461.7" fill="var(--accent)">W</text>
+  <text class="label" x="626" y="580">ψₘ</text>
+  <text class="label" x="438" y="402">jψₛ</text>
+  <text class="label" x="400" y="374">W = ψₘ + jψₛ</text>
+
+</g>
+
+<g id="layer-smith" inkscape:groupmode="layer" inkscape:label="40 smith chart" style="display:inline">
+  <circle class="chart-rim" cx="600.0" cy="960" r="300"/>
+  <path class="chart" d="M 300.0 960 L 900.0 960"/>
+  <clipPath id="smith-clip"><circle cx="600.0" cy="960" r="300"/></clipPath>
+  <g clip-path="url(#smith-clip)">
+  <circle class="chart" cx="650.00" cy="960" r="250.00"/>
+  <circle class="chart" cx="700.00" cy="960" r="200.00"/>
+  <circle class="chart" cx="750.00" cy="960" r="150.00"/>
+  <circle class="chart" cx="800.00" cy="960" r="100.00"/>
+  <circle class="chart" cx="850.00" cy="960" r="50.00"/>
+  <circle class="chart" cx="900.0" cy="-540.00" r="1500.00"/>
+  <circle class="chart" cx="900.0" cy="2460.00" r="1500.00"/>
+  <circle class="chart" cx="900.0" cy="360.00" r="600.00"/>
+  <circle class="chart" cx="900.0" cy="1560.00" r="600.00"/>
+  <circle class="chart" cx="900.0" cy="660.00" r="300.00"/>
+  <circle class="chart" cx="900.0" cy="1260.00" r="300.00"/>
+  <circle class="chart" cx="900.0" cy="810.00" r="150.00"/>
+  <circle class="chart" cx="900.0" cy="1110.00" r="150.00"/>
+  <circle class="chart" cx="900.0" cy="900.00" r="60.00"/>
+  <circle class="chart" cx="900.0" cy="1020.00" r="60.00"/>
+  </g>
+  <path class="wire-thin" d="M 900.0 960.0 L 916.0 960.0"/>
+  <path class="wire-thin" d="M 895.4 907.9 L 904.3 906.3"/>
+  <path class="wire-thin" d="M 881.9 857.4 L 890.4 854.3"/>
+  <path class="wire-thin" d="M 859.8 810.0 L 873.7 802.0"/>
+  <path class="wire-thin" d="M 829.8 767.2 L 836.7 761.4"/>
+  <path class="wire-thin" d="M 792.8 730.2 L 798.6 723.3"/>
+  <path class="wire-thin" d="M 750.0 700.2 L 758.0 686.3"/>
+  <path class="wire-thin" d="M 702.6 678.1 L 705.7 669.6"/>
+  <path class="wire-thin" d="M 652.1 664.6 L 653.7 655.7"/>
+  <path class="wire-thin" d="M 600.0 660.0 L 600.0 644.0"/>
+  <path class="wire-thin" d="M 547.9 664.6 L 546.3 655.7"/>
+  <path class="wire-thin" d="M 497.4 678.1 L 494.3 669.6"/>
+  <path class="wire-thin" d="M 450.0 700.2 L 442.0 686.3"/>
+  <path class="wire-thin" d="M 407.2 730.2 L 401.4 723.3"/>
+  <path class="wire-thin" d="M 370.2 767.2 L 363.3 761.4"/>
+  <path class="wire-thin" d="M 340.2 810.0 L 326.3 802.0"/>
+  <path class="wire-thin" d="M 318.1 857.4 L 309.6 854.3"/>
+  <path class="wire-thin" d="M 304.6 907.9 L 295.7 906.3"/>
+  <path class="wire-thin" d="M 300.0 960.0 L 284.0 960.0"/>
+  <path class="wire-thin" d="M 304.6 1012.1 L 295.7 1013.7"/>
+  <path class="wire-thin" d="M 318.1 1062.6 L 309.6 1065.7"/>
+  <path class="wire-thin" d="M 340.2 1110.0 L 326.3 1118.0"/>
+  <path class="wire-thin" d="M 370.2 1152.8 L 363.3 1158.6"/>
+  <path class="wire-thin" d="M 407.2 1189.8 L 401.4 1196.7"/>
+  <path class="wire-thin" d="M 450.0 1219.8 L 442.0 1233.7"/>
+  <path class="wire-thin" d="M 497.4 1241.9 L 494.3 1250.4"/>
+  <path class="wire-thin" d="M 547.9 1255.4 L 546.3 1264.3"/>
+  <path class="wire-thin" d="M 600.0 1260.0 L 600.0 1276.0"/>
+  <path class="wire-thin" d="M 652.1 1255.4 L 653.7 1264.3"/>
+  <path class="wire-thin" d="M 702.6 1241.9 L 705.7 1250.4"/>
+  <path class="wire-thin" d="M 750.0 1219.8 L 758.0 1233.7"/>
+  <path class="wire-thin" d="M 792.8 1189.8 L 798.6 1196.7"/>
+  <path class="wire-thin" d="M 829.8 1152.8 L 836.7 1158.6"/>
+  <path class="wire-thin" d="M 859.8 1110.0 L 873.7 1118.0"/>
+  <path class="wire-thin" d="M 881.9 1062.6 L 890.4 1065.7"/>
+  <path class="wire-thin" d="M 895.4 1012.1 L 904.3 1013.7"/>
+  <text class="label-sm" x="300.0" y="982" text-anchor="middle">0</text>
+  <text class="label-sm" x="400.0" y="982" text-anchor="middle">0.2</text>
+  <text class="label-sm" x="500.0" y="982" text-anchor="middle">0.5</text>
+  <text class="label-sm" x="600.0" y="982" text-anchor="middle">1</text>
+  <text class="label-sm" x="700.0" y="982" text-anchor="middle">2</text>
+  <text class="label-sm" x="600.0" y="636" text-anchor="middle">90°</text>
+  <circle cx="387.9" cy="1058.9" r="9" fill="#e05252"/>
+  <text class="label" x="369.9" y="1064.9" text-anchor="end" fill="#e05252">Race</text>
+  <circle cx="724.5" cy="821.8" r="9" fill="#e0a33c"/>
+  <text class="label" x="742.5" y="827.8" text-anchor="start" fill="#e0a33c">Gender</text>
+  <circle cx="468.2" cy="860.7" r="9" fill="#4fc3e8"/>
+  <text class="label" x="450.2" y="866.7" text-anchor="end" fill="#4fc3e8">Sexuality</text>
+
+</g>
+
+<g id="layer-pyramid" inkscape:groupmode="layer" inkscape:label="50 tier pyramid" style="display:inline">
+  <path class="wire-thin" d="M 235.0 1140.0 L 235.0 1140.0 L 256.0 1190.0 L 214.0 1190.0 Z"/>
+  <text class="label" x="235" y="1171.0" text-anchor="middle">E</text>
+  <path class="wire-thin" d="M 214.0 1190.0 L 256.0 1190.0 L 277.0 1240.0 L 193.0 1240.0 Z"/>
+  <text class="label" x="235" y="1221.0" text-anchor="middle">P</text>
+  <path class="wire-thin" d="M 193.0 1240.0 L 277.0 1240.0 L 298.0 1290.0 L 172.0 1290.0 Z"/>
+  <text class="label" x="235" y="1271.0" text-anchor="middle">F</text>
+  <path class="wire-thin" d="M 172.0 1290.0 L 298.0 1290.0 L 319.0 1340.0 L 151.0 1340.0 Z"/>
+  <text class="label" x="235" y="1321.0" text-anchor="middle">I</text>
+  <path class="wire-thin" d="M 151.0 1340.0 L 319.0 1340.0 L 340.0 1390.0 L 130.0 1390.0 Z"/>
+  <text class="label" x="235" y="1371.0" text-anchor="middle">O</text>
+
+</g>
+
+<g id="layer-author" inkscape:groupmode="layer" inkscape:label="60 author" style="display:inline">
+  <text x="600.0" y="1450" text-anchor="middle" fill="var(--ink)" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="26" letter-spacing="10">EMMANUEL THEODORE</text>
+
+</g>
+
+</svg>
