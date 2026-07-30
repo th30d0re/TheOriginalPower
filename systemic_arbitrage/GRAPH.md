@@ -52,7 +52,10 @@ whether a model reasons over the framework or hallucinates fluently about it.**
 | 1 | `calibrate.py` — Test A (1920–1935), Test B (1966–1971) | Built. Pass conditions directional; several proxies Tier 2/3. |
 | 2 | `interference_engine.py`, `spectral.py`, `ingest_trends.py` | Built. Emits `data/live/signal_snapshot.json`. |
 | 3 | `trigger_engine.py`, `paper_trader.py`, `polymarket/client.py` | Built. Three triggers live; paper trades to `data/paper_trades.jsonl`. |
+| 3 | `backtest.py`, `build_backtest_data.py`, `costs.py`, `risk_controls.py` | Built. Walk-forward backtest over resolved Polymarket markets, point-in-time price dataset builder, cost model, intraday risk gate. |
+| 3 | `calibration_map.py`, `fit_coefficients.py` | Built. Probability calibration map and α/β coefficient fitting from closed paper trades (loop L3). |
 | 3 | `live_executor.py` | **Gated.** Raises `NotImplementedError` unless `SYSTEMIC_ARBITRAGE_LIVE=1`. |
+| — | `graph_build.py`, `prompt_budget.py`, `eval/encoding_bench.py` | Built. L0 builder emits and L6 consumes the `framework-kg/1` contract (see §3). |
 | 4 | QLoRA / DPO fine-tuning, live wallet execution | **Unbuilt.** |
 
 Test coverage exists for backtest, calibration map, costs, coefficient fitting,
@@ -61,7 +64,74 @@ engine or trigger engine directly.
 
 ---
 
-## 3. Loop catalog
+## 3. Canonical graph schema — `framework-kg/1` (versioned contract)
+
+L0's builder (`graph_build.py`) and every graph consumer (L6's
+`prompt_budget.py` and `eval/encoding_bench.py`, and downstream L1/L4/L5)
+agree on exactly one schema, versioned by the top-level `schema` tag. Any
+change to node or edge fields requires bumping the tag and updating this
+section in the same commit.
+
+```json
+{
+  "schema": "framework-kg/1",
+  "nodes": [ ... ],
+  "edges": [ ... ],
+  "gaps": [ ... ]
+}
+```
+
+- **`schema`** (string, required) — the version tag. Consumers reject any
+  other value.
+- **`nodes`** (list, required) — every node carries:
+  - `id` (string, unique), `type` (string: `equation`, `anchor_case`,
+    `falsification_criterion`, `symbol`, `tier_set`, `market_contract`),
+    `tier` (int or string), `provenance` (string, **required** — the file or
+    directory the node was extracted from; hard requirement from L0's brief).
+  - Type-specific fields beyond these four are allowed and preserved
+    (equation nodes carry `label`, `latex`, `chapter`, ...; contract nodes
+    carry `slug_pattern`, `liquidity_floor`, ...). Consumers must read
+    optional fields tolerantly (e.g. `label` falls back to `id`).
+- **`edges`** (list, required) — every edge carries exactly:
+  - `source` (string node id), `target` (string node id),
+    `type` (string: the relation name — `calibrates`, `falsifies`,
+    `maps_to`, and the not-yet-sourced `derives_from`; L6's encoders also
+    know `member_of` and `phase_couples`),
+    `tier` (int or string — evidence tier of the relation; L4's
+    generated-edge quarantine depends on it),
+    `provenance` (string, **required** — same rule as nodes).
+- **`gaps`** (list, optional) — L0's explicit record of unresolved
+  references, orphan nodes, and relations with no structured source.
+  Consumers ignore it; auditors read it.
+
+Worked example (from `data/graph/framework_kg.json`):
+
+```json
+{
+  "schema": "framework-kg/1",
+  "nodes": [
+    {"id": "E005", "type": "equation", "tier": 3,
+     "provenance": "equation_explorer/data/equations.json",
+     "label": "eq:1.1-enclosure-score", "chapter": "...",
+     "chapter_index": 1, "section": "...", "latex": "..."},
+    {"id": "case:eq:1.1-enclosure-score", "type": "anchor_case", "tier": 3,
+     "provenance": "Paper/empirical_validations/eq_1_01_enclosure_score.md",
+     "equation_label": "eq:1.1-enclosure-score",
+     "existing_case_study": true, "target_events": [],
+     "case_study_line": null}
+  ],
+  "edges": [
+    {"source": "case:eq:1.1-enclosure-score", "target": "E005",
+     "type": "calibrates", "tier": 3,
+     "provenance": "Paper/empirical_validations/eq_1_01_enclosure_score.md"}
+  ],
+  "gaps": []
+}
+```
+
+---
+
+## 4. Loop catalog
 
 Each loop declares its exit criterion. A loop without a falsifiable exit criterion
 runs forever and is disallowed.
@@ -71,7 +141,7 @@ runs forever and is disallowed.
 Materialize the framework knowledge graph as an artifact the other loops query.
 
 - **In:** `variables.yaml`, `Paper/empirical_index.tex`, `equation_explorer/data/equations.json` (239 equations, 22 chapters), `contract_catalog.yaml`
-- **Out:** `data/graph/framework_kg.json` — typed triples `(node, edge, node)`
+- **Out:** `data/graph/framework_kg.json` — typed triples `(node, edge, node)` in the `framework-kg/1` contract (§3)
 - **Method:** deterministic extraction first. LLM extraction only for edges absent from structured sources, and every LLM-proposed edge enters **L1** before use.
 - **Exit:** every equation in the registry appears as a node; every anchor case links to at least one equation; zero orphan nodes.
 
@@ -152,14 +222,16 @@ context construction **stabilizes generation**.
 
 ### L8 — Live Execution Gate 🔒 *blocked*
 
-`live_executor.py` and `polymarket/client.py` both raise `NotImplementedError`.
+`live_executor.py` and the live order path of `polymarket/client.py` raise
+`NotImplementedError` by design; paper trading through both is fully
+implemented.
 
 - **Precondition:** L2, L3, L4 exits all met; risk controls reviewed; Polymarket ToS and regulatory review completed by a human.
 - **This loop is not for automated agents.** Left explicitly unassigned below.
 
 ---
 
-## 4. Dependency graph
+## 5. Dependency graph
 
 ```mermaid
 graph TD
@@ -188,7 +260,7 @@ graph TD
 
 ---
 
-## 5. Proposed assignment
+## 6. Proposed assignment
 
 Split by the nature of the work: **codex** takes deterministic, well-specified,
 test-anchored implementation; **kimi** takes the exploratory, long-context,
@@ -212,7 +284,7 @@ rest.
 
 ---
 
-## 6. Open questions
+## 7. Open questions
 
 1. **Does L5 earn its cost?** Graph-of-Thoughts deliberation multiplies inference cost per decision. The KGPE report's retrieval comparison is the relevant precedent: **LazyGraphRAG reaches global-search quality at roughly 4% of the query cost**. Before building full GoT, evaluate whether a lazy/deferred variant clears the same bar. The exit criterion permits deleting L5 outright.
 2. **Does Phase 4 fine-tuning survive L7?** If structured prompting is weight-free knowledge injection that preserves generalization, QLoRA may be solving a problem the graph already solves. L7 is written to answer this before any training run consumes GPU time.
@@ -221,7 +293,7 @@ rest.
 
 ---
 
-## 7. Responsible use
+## 8. Responsible use
 
 Inherited from `systemic_arbitrage/README.md`: this is research software and does
 not provide financial advice. Default mode is paper-trading. L8 stays gated behind

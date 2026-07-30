@@ -1,4 +1,9 @@
-"""Build the deterministic Systemic Arbitrage framework knowledge graph."""
+"""Build the deterministic Systemic Arbitrage framework knowledge graph.
+
+Emits the versioned ``framework-kg/1`` contract documented in GRAPH.md:
+nodes ``{id, type, tier, provenance, ...}`` and edges
+``{source, target, type, tier, provenance}``.
+"""
 
 from __future__ import annotations
 
@@ -65,11 +70,14 @@ def _node(node_id: str, node_type: str, tier: Any, provenance: str, **fields: An
     }
 
 
-def _edge(source: str, relation: str, target: str, provenance: str) -> dict[str, str]:
+def _edge(
+    source: str, edge_type: str, target: str, tier: Any, provenance: str
+) -> dict[str, Any]:
     return {
         "source": source,
-        "relation": relation,
         "target": target,
+        "type": edge_type,
+        "tier": tier,
         "provenance": provenance,
     }
 
@@ -95,7 +103,7 @@ def build_graph() -> dict[str, Any]:
     catalog = _load_yaml(CONTRACTS_PATH)
 
     nodes: list[dict[str, Any]] = []
-    edges: list[dict[str, str]] = []
+    edges: list[dict[str, Any]] = []
     gaps: list[dict[str, Any]] = []
     incident: set[str] = set()
 
@@ -191,8 +199,8 @@ def build_graph() -> dict[str, Any]:
         )
         target_id = registry_targets.get(label)
         if target_id:
-            edges.append(_edge(case_id, "calibrates", target_id, provenance))
-            edges.append(_edge(criterion_id, "falsifies", target_id, provenance))
+            edges.append(_edge(case_id, "calibrates", target_id, tier, provenance))
+            edges.append(_edge(criterion_id, "falsifies", target_id, tier, provenance))
             incident.update((case_id, criterion_id, target_id))
         else:
             gaps.append(
@@ -230,7 +238,9 @@ def build_graph() -> dict[str, Any]:
             )
             for symbol in matched_symbols:
                 symbol_id = f"symbol:{symbol}"
-                edges.append(_edge(symbol_id, "maps_to", contract_id, CONTRACTS_PROVENANCE))
+                edges.append(
+                    _edge(symbol_id, "maps_to", contract_id, "operational", CONTRACTS_PROVENANCE)
+                )
                 incident.update((symbol_id, contract_id))
 
     all_ids = {node["id"] for node in nodes}
@@ -259,7 +269,7 @@ def build_graph() -> dict[str, Any]:
     )
 
     nodes.sort(key=lambda item: item["id"])
-    edges.sort(key=lambda item: (item["source"], item["relation"], item["target"]))
+    edges.sort(key=lambda item: (item["source"], item["type"], item["target"]))
     gaps.sort(
         key=lambda item: (
             item["kind"],
@@ -268,7 +278,7 @@ def build_graph() -> dict[str, Any]:
         )
     )
     return {
-        "schema_version": "1.0.0",
+        "schema": "framework-kg/1",
         "nodes": nodes,
         "edges": edges,
         "gaps": gaps,

@@ -2,1803 +2,2103 @@
   "edges": [
     {
       "provenance": "Paper/empirical_validations/eq_1_01_enclosure_score.md",
-      "relation": "calibrates",
       "source": "case:eq:1.1-enclosure-score",
-      "target": "E005"
+      "target": "E005",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_1_10_effective_coherence.md",
-      "relation": "calibrates",
       "source": "case:eq:1.10-effective-coherence",
-      "target": "E038"
+      "target": "E038",
+      "tier": 2,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_1_11_phase_loading.md",
-      "relation": "calibrates",
       "source": "case:eq:1.11-phase-loading",
-      "target": "E042"
+      "target": "E042",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_1_02_total_enclosure.md",
-      "relation": "calibrates",
       "source": "case:eq:1.2-total-enclosure",
-      "target": "E006"
+      "target": "E006",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_1_03_conventional_causal_arrow.md",
-      "relation": "calibrates",
       "source": "case:eq:1.3-conventional-causal-arrow",
-      "target": "E028"
+      "target": "E028",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_1_04_elite_causal_arrow.md",
-      "relation": "calibrates",
       "source": "case:eq:1.4-elite-causal-arrow",
-      "target": "E029"
+      "target": "E029",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_1_05_kernel_optimization.md",
-      "relation": "calibrates",
       "source": "case:eq:1.5-kernel-optimization",
-      "target": "E030"
+      "target": "E030",
+      "tier": 1,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_1_06_interface_strategy_set.md",
-      "relation": "calibrates",
       "source": "case:eq:1.6-interface-strategy-set",
-      "target": "E032"
+      "target": "E032",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_1_07_interface_optimizer.md",
-      "relation": "calibrates",
       "source": "case:eq:1.7-interface-optimizer",
-      "target": "E033"
+      "target": "E033",
+      "tier": 2,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_1_08_suppression_envelope.md",
-      "relation": "calibrates",
       "source": "case:eq:1.8-suppression-envelope",
-      "target": "E036"
+      "target": "E036",
+      "tier": 2,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_1_09_crash_condition_derivative.md",
-      "relation": "calibrates",
       "source": "case:eq:1.9-crash-condition-derivative",
-      "target": "E037"
+      "target": "E037",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_10_01_outgroup_racialized_subset.md",
-      "relation": "calibrates",
       "source": "case:eq:10.1-outgroup-racialized-subset",
-      "target": "E106"
+      "target": "E106",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_10_10_system_objective_extraction_ratio.md",
-      "relation": "calibrates",
       "source": "case:eq:10.10-system-objective-extraction-ratio",
-      "target": "E116"
+      "target": "E116",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_10_11_system_stability_algorithm.md",
-      "relation": "calibrates",
       "source": "case:eq:10.11-system-stability-algorithm",
-      "target": "E117"
+      "target": "E117",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_10_12_o_final_construction.md",
-      "relation": "calibrates",
       "source": "case:eq:10.12-o-final-construction",
-      "target": "E118"
+      "target": "E118",
+      "tier": 1,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_10_13_reclassification_operator.md",
-      "relation": "calibrates",
       "source": "case:eq:10.13-reclassification-operator",
-      "target": "E119"
+      "target": "E119",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_10_14_kinetic_power_distribution.md",
-      "relation": "calibrates",
       "source": "case:eq:10.14-kinetic-power-distribution",
-      "target": "E120"
+      "target": "E120",
+      "tier": 2,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_10_15_temporal_enclosure_definition.md",
-      "relation": "calibrates",
       "source": "case:eq:10.15-temporal-enclosure-definition",
-      "target": "E121"
+      "target": "E121",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_10_16_financial_repression_condition.md",
-      "relation": "calibrates",
       "source": "case:eq:10.16-financial-repression-condition",
-      "target": "E122"
+      "target": "E122",
+      "tier": 1,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_10_17_temporal_extraction_rate.md",
-      "relation": "calibrates",
       "source": "case:eq:10.17-temporal-extraction-rate",
-      "target": "E123"
+      "target": "E123",
+      "tier": 1,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_10_18_psi_degradation_function.md",
-      "relation": "calibrates",
       "source": "case:eq:10.18-psi-degradation-function",
-      "target": "E124"
+      "target": "E124",
+      "tier": 1,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_10_19_saeculum_phase_map.md",
-      "relation": "calibrates",
       "source": "case:eq:10.19-saeculum-phase-map",
-      "target": "E125"
+      "target": "E125",
+      "tier": 2,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_10_02_buffer_class_shrinkage.md",
-      "relation": "calibrates",
       "source": "case:eq:10.2-buffer-class-shrinkage",
-      "target": "E107"
+      "target": "E107",
+      "tier": 2,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_10_20_dalio_extraction_bound.md",
-      "relation": "calibrates",
       "source": "case:eq:10.20-dalio-extraction-bound",
-      "target": "E126"
+      "target": "E126",
+      "tier": 2,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_10_03_cannibalization_equation.md",
-      "relation": "calibrates",
       "source": "case:eq:10.3-cannibalization-equation",
-      "target": "E109"
+      "target": "E109",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_10_04_predatory_minmax_full_definition.md",
-      "relation": "calibrates",
       "source": "case:eq:10.4-predatory-minmax-full-definition",
-      "target": "E110"
+      "target": "E110",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_10_05_kernel_objective_canonical.md",
-      "relation": "calibrates",
       "source": "case:eq:10.5-kernel-objective-canonical",
-      "target": "E111"
+      "target": "E111",
+      "tier": 1,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_10_06_effective_resistance_variable.md",
-      "relation": "calibrates",
       "source": "case:eq:10.6-effective-resistance-variable",
-      "target": "E112"
+      "target": "E112",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_10_07_suppression_envelope_canonical.md",
-      "relation": "calibrates",
       "source": "case:eq:10.7-suppression-envelope-canonical",
-      "target": "E113"
+      "target": "E113",
+      "tier": 2,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_10_08_crash_condition_canonical.md",
-      "relation": "calibrates",
       "source": "case:eq:10.8-crash-condition-canonical",
-      "target": "E114"
+      "target": "E114",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_10_09_tier_benefit_ordering_canonical.md",
-      "relation": "calibrates",
       "source": "case:eq:10.9-tier-benefit-ordering-canonical",
-      "target": "E115"
+      "target": "E115",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_11_01_extraction_precondition.md",
-      "relation": "calibrates",
       "source": "case:eq:11.1-extraction-precondition",
-      "target": "E127"
+      "target": "E127",
+      "tier": 1,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_11_02_disarmament_agenda_path.md",
-      "relation": "calibrates",
       "source": "case:eq:11.2-disarmament-agenda-path",
-      "target": "E129"
+      "target": "E129",
+      "tier": 1,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_11_03_restriction_precedent_accumulation.md",
-      "relation": "calibrates",
       "source": "case:eq:11.3-restriction-precedent-accumulation",
-      "target": "E130"
+      "target": "E130",
+      "tier": 1,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_11_04_restriction_scope_expansion.md",
-      "relation": "calibrates",
       "source": "case:eq:11.4-restriction-scope-expansion",
-      "target": "E131"
+      "target": "E131",
+      "tier": 1,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_12_01_reform_absorption_mechanism.md",
-      "relation": "calibrates",
       "source": "case:eq:12.1-reform-absorption-mechanism",
-      "target": "E133"
+      "target": "E133",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_12_10_nonviolence_mandate_function.md",
-      "relation": "calibrates",
       "source": "case:eq:12.10-nonviolence-mandate-function",
-      "target": "E152"
+      "target": "E152",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_12_02_concession_theorem.md",
-      "relation": "calibrates",
       "source": "case:eq:12.2-concession-theorem",
-      "target": "E134"
+      "target": "E134",
+      "tier": 2,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_12_03_judiciary_discrimination_detection.md",
-      "relation": "calibrates",
       "source": "case:eq:12.3-judiciary-discrimination-detection",
-      "target": "E137"
+      "target": "E137",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_12_04_proxy_discrimination_equivalence.md",
-      "relation": "calibrates",
       "source": "case:eq:12.4-proxy-discrimination-equivalence",
-      "target": "E138"
+      "target": "E138",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_12_04a_judicial_double_agent.md",
-      "relation": "calibrates",
       "source": "case:eq:12.4a-judicial-double-agent",
-      "target": "E139"
+      "target": "E139",
+      "tier": 2,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_12_05_haitian_theorem_nonkinetic.md",
-      "relation": "calibrates",
       "source": "case:eq:12.5-haitian-theorem-nonkinetic",
-      "target": "E142"
+      "target": "E142",
+      "tier": 1,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_12_06_haitian_theorem_kinetic.md",
-      "relation": "calibrates",
       "source": "case:eq:12.6-haitian-theorem-kinetic",
-      "target": "E143"
+      "target": "E143",
+      "tier": 1,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_12_07_gendered_outgroup_set.md",
-      "relation": "calibrates",
       "source": "case:eq:12.7-gendered-outgroup-set",
-      "target": "E148"
+      "target": "E148",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_12_08_intersection_double_partition.md",
-      "relation": "calibrates",
       "source": "case:eq:12.8-intersection-double-partition",
-      "target": "E149"
+      "target": "E149",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_12_09_multiplicative_intersection_compounding.md",
-      "relation": "calibrates",
       "source": "case:eq:12.9-multiplicative-intersection-compounding",
-      "target": "E150"
+      "target": "E150",
+      "tier": 2,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_13_01_global_compounding_capacity.md",
-      "relation": "calibrates",
       "source": "case:eq:13.1-global-compounding-capacity",
-      "target": "E153"
+      "target": "E153",
+      "tier": 2,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_13_10_asymmetric_leverage_ratio.md",
-      "relation": "calibrates",
       "source": "case:eq:13.10-asymmetric-leverage-ratio",
-      "target": "E162"
+      "target": "E162",
+      "tier": 2,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_13_11_legitimation_abandonment_condition.md",
-      "relation": "calibrates",
       "source": "case:eq:13.11-legitimation-abandonment-condition",
-      "target": "E163"
+      "target": "E163",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_13_12_global_containment_strategy.md",
-      "relation": "calibrates",
       "source": "case:eq:13.12-global-containment-strategy",
-      "target": "E164"
+      "target": "E164",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_13_13_un_vote_distribution.md",
-      "relation": "calibrates",
       "source": "case:eq:13.13-un-vote-distribution",
-      "target": "E165"
+      "target": "E165",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_13_14_imperial_core_collapse.md",
-      "relation": "calibrates",
       "source": "case:eq:13.14-imperial-core-collapse",
-      "target": "E166"
+      "target": "E166",
+      "tier": 1,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_13_15_interface_swap_trigger.md",
-      "relation": "calibrates",
       "source": "case:eq:13.15-interface-swap-trigger",
-      "target": "E167"
+      "target": "E167",
+      "tier": 1,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_13_16_polymorphic_reboot_operator.md",
-      "relation": "calibrates",
       "source": "case:eq:13.16-polymorphic-reboot-operator",
-      "target": "E168"
+      "target": "E168",
+      "tier": 2,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_13_17_elite_asset_continuity_invariant.md",
-      "relation": "calibrates",
       "source": "case:eq:13.17-elite-asset-continuity-invariant",
-      "target": "E169"
+      "target": "E169",
+      "tier": 1,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_13_02_global_predatory_minmax.md",
-      "relation": "calibrates",
       "source": "case:eq:13.2-global-predatory-minmax",
-      "target": "E154"
+      "target": "E154",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_13_03_externalized_enforcement_envelope.md",
-      "relation": "calibrates",
       "source": "case:eq:13.3-externalized-enforcement-envelope",
-      "target": "E155"
+      "target": "E155",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_13_04_killick_extraction_equation.md",
-      "relation": "calibrates",
       "source": "case:eq:13.4-killick-extraction-equation",
-      "target": "E156"
+      "target": "E156",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_13_05_legitimation_constraint_set.md",
-      "relation": "calibrates",
       "source": "case:eq:13.5-legitimation-constraint-set",
-      "target": "E157"
+      "target": "E157",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_13_06_authorization_precondition.md",
-      "relation": "calibrates",
       "source": "case:eq:13.6-authorization-precondition",
-      "target": "E158"
+      "target": "E158",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_13_07_coercion_legitimacy_frontier.md",
-      "relation": "calibrates",
       "source": "case:eq:13.7-coercion-legitimacy-frontier",
-      "target": "E159"
+      "target": "E159",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_13_08_firmin_extraction_threshold.md",
-      "relation": "calibrates",
       "source": "case:eq:13.8-firmin-extraction-threshold",
-      "target": "E160"
+      "target": "E160",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_13_09_infeasible_constraint_set.md",
-      "relation": "calibrates",
       "source": "case:eq:13.9-infeasible-constraint-set",
-      "target": "E161"
+      "target": "E161",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_14_01_algo_prior_inheritance.md",
-      "relation": "calibrates",
       "source": "case:eq:14.1-algo-prior-inheritance",
-      "target": "E170"
+      "target": "E170",
+      "tier": 2,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_14_10_sustained_siege_cost.md",
-      "relation": "calibrates",
       "source": "case:eq:14.10-sustained-siege-cost",
-      "target": "E184"
+      "target": "E184",
+      "tier": 2,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_14_11_escalation_ceiling_tiers.md",
-      "relation": "calibrates",
       "source": "case:eq:14.11-escalation-ceiling-tiers",
-      "target": "E185"
+      "target": "E185",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_14_12_inclusion_predicate.md",
-      "relation": "calibrates",
       "source": "case:eq:14.12-inclusion-predicate",
-      "target": "E186"
+      "target": "E186",
+      "tier": 2,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_14_13_terminal_interface_swap.md",
-      "relation": "calibrates",
       "source": "case:eq:14.13-terminal-interface-swap",
-      "target": "E187"
+      "target": "E187",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_14_14_liability_phase_optimization.md",
-      "relation": "calibrates",
       "source": "case:eq:14.14-liability-phase-optimization",
-      "target": "E188"
+      "target": "E188",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_14_15_noise_spectrum_index.md",
-      "relation": "calibrates",
       "source": "case:eq:14.15-noise-spectrum-index",
-      "target": "E189"
+      "target": "E189",
+      "tier": 2,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_14_16_agnostic_swarm_payload.md",
-      "relation": "calibrates",
       "source": "case:eq:14.16-agnostic-swarm-payload",
-      "target": "E190"
+      "target": "E190",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_14_17_botnet_load_theorem.md",
-      "relation": "calibrates",
       "source": "case:eq:14.17-botnet-load-theorem",
-      "target": "E191"
+      "target": "E191",
+      "tier": 2,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_14_18_ideological_routing_operator.md",
-      "relation": "calibrates",
       "source": "case:eq:14.18-ideological-routing-operator",
-      "target": "E192"
+      "target": "E192",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_14_19_zugzwang_payoff_function.md",
-      "relation": "calibrates",
       "source": "case:eq:14.19-zugzwang-payoff-function",
-      "target": "E193"
+      "target": "E193",
+      "tier": 2,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_14_02_realtime_proximity_estimate.md",
-      "relation": "calibrates",
       "source": "case:eq:14.2-realtime-proximity-estimate",
-      "target": "E173"
+      "target": "E173",
+      "tier": 2,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_14_20_defection_cascade.md",
-      "relation": "calibrates",
       "source": "case:eq:14.20-defection-cascade",
-      "target": "E194"
+      "target": "E194",
+      "tier": 2,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_14_21_empathy_permeability.md",
-      "relation": "calibrates",
       "source": "case:eq:14.21-empathy-permeability",
-      "target": "E195"
+      "target": "E195",
+      "tier": 2,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_14_22_semantic_overwrite.md",
-      "relation": "calibrates",
       "source": "case:eq:14.22-semantic-overwrite",
-      "target": "E196"
+      "target": "E196",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_14_03_orthogonal_vector_injection.md",
-      "relation": "calibrates",
       "source": "case:eq:14.3-orthogonal-vector-injection",
-      "target": "E177"
+      "target": "E177",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_14_04_correction_signal_damping.md",
-      "relation": "calibrates",
       "source": "case:eq:14.4-correction-signal-damping",
-      "target": "E178"
+      "target": "E178",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_14_05_optical_enclosure.md",
-      "relation": "calibrates",
       "source": "case:eq:14.5-optical-enclosure",
-      "target": "E179"
+      "target": "E179",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_14_06_decoy_transfer_coefficient.md",
-      "relation": "calibrates",
       "source": "case:eq:14.6-decoy-transfer-coefficient",
-      "target": "E180"
+      "target": "E180",
+      "tier": 2,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_14_07_ddos_bandwidth_ceiling.md",
-      "relation": "calibrates",
       "source": "case:eq:14.7-ddos-bandwidth-ceiling",
-      "target": "E181"
+      "target": "E181",
+      "tier": 2,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_14_08_armed_swarm_bandwidth.md",
-      "relation": "calibrates",
       "source": "case:eq:14.8-armed-swarm-bandwidth",
-      "target": "E182"
+      "target": "E182",
+      "tier": 2,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_14_09_kinetic_capital_asymmetry.md",
-      "relation": "calibrates",
       "source": "case:eq:14.9-kinetic-capital-asymmetry",
-      "target": "E183"
+      "target": "E183",
+      "tier": 2,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_17_01_racism_as_institutional_vector.md",
-      "relation": "calibrates",
       "source": "case:eq:17.1-racism-as-institutional-vector",
-      "target": "E212"
+      "target": "E212",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_17_02_o_terminal_expansion.md",
-      "relation": "calibrates",
       "source": "case:eq:17.2-o-terminal-expansion",
-      "target": "E213"
+      "target": "E213",
+      "tier": 2,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_19_01_kernel_objective_registry_entry.md",
-      "relation": "calibrates",
       "source": "case:eq:19.1-kernel-objective-registry-entry",
-      "target": "E214"
+      "target": "E214",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_19_02_suppression_envelope_registry_entry.md",
-      "relation": "calibrates",
       "source": "case:eq:19.2-suppression-envelope-registry-entry",
-      "target": "E216"
+      "target": "E216",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_19_03_crash_condition_registry_entry.md",
-      "relation": "calibrates",
       "source": "case:eq:19.3-crash-condition-registry-entry",
-      "target": "E217"
+      "target": "E217",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_19_04_tier_ordering_registry_entry.md",
-      "relation": "calibrates",
       "source": "case:eq:19.4-tier-ordering-registry-entry",
-      "target": "E218"
+      "target": "E218",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_2_01_racism_vector.md",
-      "relation": "calibrates",
       "source": "case:eq:2.1-racism-vector",
-      "target": "E043"
+      "target": "E043",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_2_02_status_suppression_allocation.md",
-      "relation": "calibrates",
       "source": "case:eq:2.2-status-suppression-allocation",
-      "target": "E044"
+      "target": "E044",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_2_03_psi_null_in_survival.md",
-      "relation": "calibrates",
       "source": "case:eq:2.3-psi-null-in-survival",
-      "target": "E045"
+      "target": "E045",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_2_04_roman_membership_function.md",
-      "relation": "calibrates",
       "source": "case:eq:2.4-roman-membership-function",
-      "target": "E051"
+      "target": "E051",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_2_05_american_racial_function.md",
-      "relation": "calibrates",
       "source": "case:eq:2.5-american-racial-function",
-      "target": "E052"
+      "target": "E052",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_2_06_roman_american_structural_parallel.md",
-      "relation": "calibrates",
       "source": "case:eq:2.6-roman-american-structural-parallel",
-      "target": "E053"
+      "target": "E053",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_2_07_three_tier_portugal_inequality.md",
-      "relation": "calibrates",
       "source": "case:eq:2.7-three-tier-portugal-inequality",
-      "target": "E054"
+      "target": "E054",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_2_08_church_science_feedback_loop.md",
-      "relation": "calibrates",
       "source": "case:eq:2.8-church-science-feedback-loop",
-      "target": "E055"
+      "target": "E055",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_3_01_bacon_solidarity_condition.md",
-      "relation": "calibrates",
       "source": "case:eq:3.1-bacon-solidarity-condition",
-      "target": "E056"
+      "target": "E056",
+      "tier": 1,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_3_02_boundary_enforcement_1691.md",
-      "relation": "calibrates",
       "source": "case:eq:3.2-boundary-enforcement-1691",
-      "target": "E057"
+      "target": "E057",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_3_03_race_destroys_class.md",
-      "relation": "calibrates",
       "source": "case:eq:3.3-race-destroys-class",
-      "target": "E058"
+      "target": "E058",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_3_04_three_tier_post_bacon.md",
-      "relation": "calibrates",
       "source": "case:eq:3.4-three-tier-post-bacon",
-      "target": "E059"
+      "target": "E059",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_5_01_compliance_differential.md",
-      "relation": "calibrates",
       "source": "case:eq:5.1-compliance-differential",
-      "target": "E061"
+      "target": "E061",
+      "tier": 2,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_6_01_lethal_autonomy_gradient.md",
-      "relation": "calibrates",
       "source": "case:eq:6.1-lethal-autonomy-gradient",
-      "target": "E063"
+      "target": "E063",
+      "tier": 2,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_6_10_capacity_chain_1934.md",
-      "relation": "calibrates",
       "source": "case:eq:6.10-capacity-chain-1934",
-      "target": "E071"
+      "target": "E071",
+      "tier": 1,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_6_11_capacity_chain_1971.md",
-      "relation": "calibrates",
       "source": "case:eq:6.11-capacity-chain-1971",
-      "target": "E071"
+      "target": "E071",
+      "tier": 1,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_6_12_capacity_compounding_full.md",
-      "relation": "calibrates",
       "source": "case:eq:6.12-capacity-compounding-full",
-      "target": "E072"
+      "target": "E072",
+      "tier": 1,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_6_02_four_tier_benefit_ordering.md",
-      "relation": "calibrates",
       "source": "case:eq:6.2-four-tier-benefit-ordering",
-      "target": "E064"
+      "target": "E064",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_6_03_thirteenth_amendment_exception.md",
-      "relation": "calibrates",
       "source": "case:eq:6.3-thirteenth-amendment-exception",
-      "target": "E066"
+      "target": "E066",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_6_04_additive_policy_model.md",
-      "relation": "calibrates",
       "source": "case:eq:6.4-additive-policy-model",
-      "target": "E067"
+      "target": "E067",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_6_05_compounding_temporal_model.md",
-      "relation": "calibrates",
       "source": "case:eq:6.5-compounding-temporal-model",
-      "target": "E068"
+      "target": "E068",
+      "tier": 2,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_6_06_asymmetric_enforcement_multiplier.md",
-      "relation": "calibrates",
       "source": "case:eq:6.6-asymmetric-enforcement-multiplier",
-      "target": "E069"
+      "target": "E069",
+      "tier": 1,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_6_07_policy_sequence_noncommutative.md",
-      "relation": "calibrates",
       "source": "case:eq:6.7-policy-sequence-noncommutative",
-      "target": "E070"
+      "target": "E070",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_6_08_capacity_chain_1619.md",
-      "relation": "calibrates",
       "source": "case:eq:6.8-capacity-chain-1619",
-      "target": "E071"
+      "target": "E071",
+      "tier": 2,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_6_09_capacity_chain_1865.md",
-      "relation": "calibrates",
       "source": "case:eq:6.9-capacity-chain-1865",
-      "target": "E071"
+      "target": "E071",
+      "tier": 2,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_7_01_pullman_corollary.md",
-      "relation": "calibrates",
       "source": "case:eq:7.1-pullman-corollary",
-      "target": "E073"
+      "target": "E073",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_8_01_vertex_partition_graph.md",
-      "relation": "calibrates",
       "source": "case:eq:8.1-vertex-partition-graph",
-      "target": "E076"
+      "target": "E076",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_8_10_convex_hull_convergence.md",
-      "relation": "calibrates",
       "source": "case:eq:8.10-convex-hull-convergence",
-      "target": "E085"
+      "target": "E085",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_8_11_mittag_leffler_stability.md",
-      "relation": "calibrates",
       "source": "case:eq:8.11-mittag-leffler-stability",
-      "target": "E086"
+      "target": "E086",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_8_12_class_alignment_base_waves.md",
-      "relation": "calibrates",
       "source": "case:eq:8.12-class-alignment-base-waves",
-      "target": "E087"
+      "target": "E087",
+      "tier": 1,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_8_13_subgroup_compound_phase.md",
-      "relation": "calibrates",
       "source": "case:eq:8.13-subgroup-compound-phase",
-      "target": "E088"
+      "target": "E088",
+      "tier": 2,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_8_14_net_solidarity_signal.md",
-      "relation": "calibrates",
       "source": "case:eq:8.14-net-solidarity-signal",
-      "target": "E089"
+      "target": "E089",
+      "tier": 1,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_8_15_solidarity_collapse_condition.md",
-      "relation": "calibrates",
       "source": "case:eq:8.15-solidarity-collapse-condition",
-      "target": "E090"
+      "target": "E090",
+      "tier": 1,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_8_16_interference_control_objective.md",
-      "relation": "calibrates",
       "source": "case:eq:8.16-interference-control-objective",
-      "target": "E091"
+      "target": "E091",
+      "tier": 1,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_8_17_circular_dispersion_operator.md",
-      "relation": "calibrates",
       "source": "case:eq:8.17-circular-dispersion-operator",
-      "target": "E097"
+      "target": "E097",
+      "tier": 2,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_8_18_tweedism_agenda_path.md",
-      "relation": "calibrates",
       "source": "case:eq:8.18-tweedism-agenda-path",
-      "target": "E099"
+      "target": "E099",
+      "tier": 1,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_8_02_tier_to_graph_mapping.md",
-      "relation": "calibrates",
       "source": "case:eq:8.2-tier-to-graph-mapping",
-      "target": "E077"
+      "target": "E077",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_8_03_fractional_agent_dynamics.md",
-      "relation": "calibrates",
       "source": "case:eq:8.3-fractional-agent-dynamics",
-      "target": "E078"
+      "target": "E078",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_8_04_compounding_chain_formal.md",
-      "relation": "calibrates",
       "source": "case:eq:8.4-compounding-chain-formal",
-      "target": "E079"
+      "target": "E079",
+      "tier": 2,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_8_05_stationary_leader_condition.md",
-      "relation": "calibrates",
       "source": "case:eq:8.5-stationary-leader-condition",
-      "target": "E080"
+      "target": "E080",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_8_06_proximity_connectivity_condition.md",
-      "relation": "calibrates",
       "source": "case:eq:8.6-proximity-connectivity-condition",
-      "target": "E081"
+      "target": "E081",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_8_07_navigation_components.md",
-      "relation": "calibrates",
       "source": "case:eq:8.7-navigation-components",
-      "target": "E082"
+      "target": "E082",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_8_08_navigation_function.md",
-      "relation": "calibrates",
       "source": "case:eq:8.8-navigation-function",
-      "target": "E083"
+      "target": "E083",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_8_09_gradient_control_law.md",
-      "relation": "calibrates",
       "source": "case:eq:8.9-gradient-control-law",
-      "target": "E084"
+      "target": "E084",
+      "tier": 3,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_9_01_lead_crime_compounding.md",
-      "relation": "calibrates",
       "source": "case:eq:9.1-lead-crime-compounding",
-      "target": "E100"
+      "target": "E100",
+      "tier": 1,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_9_10_highway_lead_spatial_concentration.md",
-      "relation": "calibrates",
       "source": "case:eq:9.10-highway-lead-spatial-concentration",
-      "target": "E105"
+      "target": "E105",
+      "tier": 1,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_9_02_epistemic_suppression_variable.md",
-      "relation": "calibrates",
       "source": "case:eq:9.2-epistemic-suppression-variable",
-      "target": "E101"
+      "target": "E101",
+      "tier": 2,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_9_03_multi_vector_lead_exposure.md",
-      "relation": "calibrates",
       "source": "case:eq:9.3-multi-vector-lead-exposure",
-      "target": "E102"
+      "target": "E102",
+      "tier": 1,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_9_04_redlining_containment_field.md",
-      "relation": "calibrates",
       "source": "case:eq:9.4-redlining-containment-field",
-      "target": "E103"
+      "target": "E103",
+      "tier": 1,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_9_05_school_funding_property_value.md",
-      "relation": "calibrates",
       "source": "case:eq:9.5-school-funding-property-value",
-      "target": "E104"
+      "target": "E104",
+      "tier": 1,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_9_06_infrastructure_quality_funding.md",
-      "relation": "calibrates",
       "source": "case:eq:9.6-infrastructure-quality-funding",
-      "target": "E104"
+      "target": "E104",
+      "tier": 2,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_9_07_school_lead_exposure_inverse.md",
-      "relation": "calibrates",
       "source": "case:eq:9.7-school-lead-exposure-inverse",
-      "target": "E104"
+      "target": "E104",
+      "tier": 1,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_9_08_community_capacity_lead_reduction.md",
-      "relation": "calibrates",
       "source": "case:eq:9.8-community-capacity-lead-reduction",
-      "target": "E104"
+      "target": "E104",
+      "tier": 2,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_9_09_property_value_capacity_feedback.md",
-      "relation": "calibrates",
       "source": "case:eq:9.9-property-value-capacity-feedback",
-      "target": "E104"
+      "target": "E104",
+      "tier": 1,
+      "type": "calibrates"
     },
     {
       "provenance": "Paper/empirical_validations/eq_1_01_enclosure_score.md",
-      "relation": "falsifies",
       "source": "criterion:eq:1.1-enclosure-score",
-      "target": "E005"
+      "target": "E005",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_1_10_effective_coherence.md",
-      "relation": "falsifies",
       "source": "criterion:eq:1.10-effective-coherence",
-      "target": "E038"
+      "target": "E038",
+      "tier": 2,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_1_11_phase_loading.md",
-      "relation": "falsifies",
       "source": "criterion:eq:1.11-phase-loading",
-      "target": "E042"
+      "target": "E042",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_1_02_total_enclosure.md",
-      "relation": "falsifies",
       "source": "criterion:eq:1.2-total-enclosure",
-      "target": "E006"
+      "target": "E006",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_1_03_conventional_causal_arrow.md",
-      "relation": "falsifies",
       "source": "criterion:eq:1.3-conventional-causal-arrow",
-      "target": "E028"
+      "target": "E028",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_1_04_elite_causal_arrow.md",
-      "relation": "falsifies",
       "source": "criterion:eq:1.4-elite-causal-arrow",
-      "target": "E029"
+      "target": "E029",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_1_05_kernel_optimization.md",
-      "relation": "falsifies",
       "source": "criterion:eq:1.5-kernel-optimization",
-      "target": "E030"
+      "target": "E030",
+      "tier": 1,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_1_06_interface_strategy_set.md",
-      "relation": "falsifies",
       "source": "criterion:eq:1.6-interface-strategy-set",
-      "target": "E032"
+      "target": "E032",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_1_07_interface_optimizer.md",
-      "relation": "falsifies",
       "source": "criterion:eq:1.7-interface-optimizer",
-      "target": "E033"
+      "target": "E033",
+      "tier": 2,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_1_08_suppression_envelope.md",
-      "relation": "falsifies",
       "source": "criterion:eq:1.8-suppression-envelope",
-      "target": "E036"
+      "target": "E036",
+      "tier": 2,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_1_09_crash_condition_derivative.md",
-      "relation": "falsifies",
       "source": "criterion:eq:1.9-crash-condition-derivative",
-      "target": "E037"
+      "target": "E037",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_10_01_outgroup_racialized_subset.md",
-      "relation": "falsifies",
       "source": "criterion:eq:10.1-outgroup-racialized-subset",
-      "target": "E106"
+      "target": "E106",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_10_10_system_objective_extraction_ratio.md",
-      "relation": "falsifies",
       "source": "criterion:eq:10.10-system-objective-extraction-ratio",
-      "target": "E116"
+      "target": "E116",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_10_11_system_stability_algorithm.md",
-      "relation": "falsifies",
       "source": "criterion:eq:10.11-system-stability-algorithm",
-      "target": "E117"
+      "target": "E117",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_10_12_o_final_construction.md",
-      "relation": "falsifies",
       "source": "criterion:eq:10.12-o-final-construction",
-      "target": "E118"
+      "target": "E118",
+      "tier": 1,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_10_13_reclassification_operator.md",
-      "relation": "falsifies",
       "source": "criterion:eq:10.13-reclassification-operator",
-      "target": "E119"
+      "target": "E119",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_10_14_kinetic_power_distribution.md",
-      "relation": "falsifies",
       "source": "criterion:eq:10.14-kinetic-power-distribution",
-      "target": "E120"
+      "target": "E120",
+      "tier": 2,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_10_15_temporal_enclosure_definition.md",
-      "relation": "falsifies",
       "source": "criterion:eq:10.15-temporal-enclosure-definition",
-      "target": "E121"
+      "target": "E121",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_10_16_financial_repression_condition.md",
-      "relation": "falsifies",
       "source": "criterion:eq:10.16-financial-repression-condition",
-      "target": "E122"
+      "target": "E122",
+      "tier": 1,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_10_17_temporal_extraction_rate.md",
-      "relation": "falsifies",
       "source": "criterion:eq:10.17-temporal-extraction-rate",
-      "target": "E123"
+      "target": "E123",
+      "tier": 1,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_10_18_psi_degradation_function.md",
-      "relation": "falsifies",
       "source": "criterion:eq:10.18-psi-degradation-function",
-      "target": "E124"
+      "target": "E124",
+      "tier": 1,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_10_19_saeculum_phase_map.md",
-      "relation": "falsifies",
       "source": "criterion:eq:10.19-saeculum-phase-map",
-      "target": "E125"
+      "target": "E125",
+      "tier": 2,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_10_02_buffer_class_shrinkage.md",
-      "relation": "falsifies",
       "source": "criterion:eq:10.2-buffer-class-shrinkage",
-      "target": "E107"
+      "target": "E107",
+      "tier": 2,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_10_20_dalio_extraction_bound.md",
-      "relation": "falsifies",
       "source": "criterion:eq:10.20-dalio-extraction-bound",
-      "target": "E126"
+      "target": "E126",
+      "tier": 2,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_10_03_cannibalization_equation.md",
-      "relation": "falsifies",
       "source": "criterion:eq:10.3-cannibalization-equation",
-      "target": "E109"
+      "target": "E109",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_10_04_predatory_minmax_full_definition.md",
-      "relation": "falsifies",
       "source": "criterion:eq:10.4-predatory-minmax-full-definition",
-      "target": "E110"
+      "target": "E110",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_10_05_kernel_objective_canonical.md",
-      "relation": "falsifies",
       "source": "criterion:eq:10.5-kernel-objective-canonical",
-      "target": "E111"
+      "target": "E111",
+      "tier": 1,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_10_06_effective_resistance_variable.md",
-      "relation": "falsifies",
       "source": "criterion:eq:10.6-effective-resistance-variable",
-      "target": "E112"
+      "target": "E112",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_10_07_suppression_envelope_canonical.md",
-      "relation": "falsifies",
       "source": "criterion:eq:10.7-suppression-envelope-canonical",
-      "target": "E113"
+      "target": "E113",
+      "tier": 2,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_10_08_crash_condition_canonical.md",
-      "relation": "falsifies",
       "source": "criterion:eq:10.8-crash-condition-canonical",
-      "target": "E114"
+      "target": "E114",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_10_09_tier_benefit_ordering_canonical.md",
-      "relation": "falsifies",
       "source": "criterion:eq:10.9-tier-benefit-ordering-canonical",
-      "target": "E115"
+      "target": "E115",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_11_01_extraction_precondition.md",
-      "relation": "falsifies",
       "source": "criterion:eq:11.1-extraction-precondition",
-      "target": "E127"
+      "target": "E127",
+      "tier": 1,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_11_02_disarmament_agenda_path.md",
-      "relation": "falsifies",
       "source": "criterion:eq:11.2-disarmament-agenda-path",
-      "target": "E129"
+      "target": "E129",
+      "tier": 1,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_11_03_restriction_precedent_accumulation.md",
-      "relation": "falsifies",
       "source": "criterion:eq:11.3-restriction-precedent-accumulation",
-      "target": "E130"
+      "target": "E130",
+      "tier": 1,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_11_04_restriction_scope_expansion.md",
-      "relation": "falsifies",
       "source": "criterion:eq:11.4-restriction-scope-expansion",
-      "target": "E131"
+      "target": "E131",
+      "tier": 1,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_12_01_reform_absorption_mechanism.md",
-      "relation": "falsifies",
       "source": "criterion:eq:12.1-reform-absorption-mechanism",
-      "target": "E133"
+      "target": "E133",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_12_10_nonviolence_mandate_function.md",
-      "relation": "falsifies",
       "source": "criterion:eq:12.10-nonviolence-mandate-function",
-      "target": "E152"
+      "target": "E152",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_12_02_concession_theorem.md",
-      "relation": "falsifies",
       "source": "criterion:eq:12.2-concession-theorem",
-      "target": "E134"
+      "target": "E134",
+      "tier": 2,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_12_03_judiciary_discrimination_detection.md",
-      "relation": "falsifies",
       "source": "criterion:eq:12.3-judiciary-discrimination-detection",
-      "target": "E137"
+      "target": "E137",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_12_04_proxy_discrimination_equivalence.md",
-      "relation": "falsifies",
       "source": "criterion:eq:12.4-proxy-discrimination-equivalence",
-      "target": "E138"
+      "target": "E138",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_12_04a_judicial_double_agent.md",
-      "relation": "falsifies",
       "source": "criterion:eq:12.4a-judicial-double-agent",
-      "target": "E139"
+      "target": "E139",
+      "tier": 2,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_12_05_haitian_theorem_nonkinetic.md",
-      "relation": "falsifies",
       "source": "criterion:eq:12.5-haitian-theorem-nonkinetic",
-      "target": "E142"
+      "target": "E142",
+      "tier": 1,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_12_06_haitian_theorem_kinetic.md",
-      "relation": "falsifies",
       "source": "criterion:eq:12.6-haitian-theorem-kinetic",
-      "target": "E143"
+      "target": "E143",
+      "tier": 1,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_12_07_gendered_outgroup_set.md",
-      "relation": "falsifies",
       "source": "criterion:eq:12.7-gendered-outgroup-set",
-      "target": "E148"
+      "target": "E148",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_12_08_intersection_double_partition.md",
-      "relation": "falsifies",
       "source": "criterion:eq:12.8-intersection-double-partition",
-      "target": "E149"
+      "target": "E149",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_12_09_multiplicative_intersection_compounding.md",
-      "relation": "falsifies",
       "source": "criterion:eq:12.9-multiplicative-intersection-compounding",
-      "target": "E150"
+      "target": "E150",
+      "tier": 2,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_13_01_global_compounding_capacity.md",
-      "relation": "falsifies",
       "source": "criterion:eq:13.1-global-compounding-capacity",
-      "target": "E153"
+      "target": "E153",
+      "tier": 2,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_13_10_asymmetric_leverage_ratio.md",
-      "relation": "falsifies",
       "source": "criterion:eq:13.10-asymmetric-leverage-ratio",
-      "target": "E162"
+      "target": "E162",
+      "tier": 2,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_13_11_legitimation_abandonment_condition.md",
-      "relation": "falsifies",
       "source": "criterion:eq:13.11-legitimation-abandonment-condition",
-      "target": "E163"
+      "target": "E163",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_13_12_global_containment_strategy.md",
-      "relation": "falsifies",
       "source": "criterion:eq:13.12-global-containment-strategy",
-      "target": "E164"
+      "target": "E164",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_13_13_un_vote_distribution.md",
-      "relation": "falsifies",
       "source": "criterion:eq:13.13-un-vote-distribution",
-      "target": "E165"
+      "target": "E165",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_13_14_imperial_core_collapse.md",
-      "relation": "falsifies",
       "source": "criterion:eq:13.14-imperial-core-collapse",
-      "target": "E166"
+      "target": "E166",
+      "tier": 1,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_13_15_interface_swap_trigger.md",
-      "relation": "falsifies",
       "source": "criterion:eq:13.15-interface-swap-trigger",
-      "target": "E167"
+      "target": "E167",
+      "tier": 1,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_13_16_polymorphic_reboot_operator.md",
-      "relation": "falsifies",
       "source": "criterion:eq:13.16-polymorphic-reboot-operator",
-      "target": "E168"
+      "target": "E168",
+      "tier": 2,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_13_17_elite_asset_continuity_invariant.md",
-      "relation": "falsifies",
       "source": "criterion:eq:13.17-elite-asset-continuity-invariant",
-      "target": "E169"
+      "target": "E169",
+      "tier": 1,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_13_02_global_predatory_minmax.md",
-      "relation": "falsifies",
       "source": "criterion:eq:13.2-global-predatory-minmax",
-      "target": "E154"
+      "target": "E154",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_13_03_externalized_enforcement_envelope.md",
-      "relation": "falsifies",
       "source": "criterion:eq:13.3-externalized-enforcement-envelope",
-      "target": "E155"
+      "target": "E155",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_13_04_killick_extraction_equation.md",
-      "relation": "falsifies",
       "source": "criterion:eq:13.4-killick-extraction-equation",
-      "target": "E156"
+      "target": "E156",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_13_05_legitimation_constraint_set.md",
-      "relation": "falsifies",
       "source": "criterion:eq:13.5-legitimation-constraint-set",
-      "target": "E157"
+      "target": "E157",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_13_06_authorization_precondition.md",
-      "relation": "falsifies",
       "source": "criterion:eq:13.6-authorization-precondition",
-      "target": "E158"
+      "target": "E158",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_13_07_coercion_legitimacy_frontier.md",
-      "relation": "falsifies",
       "source": "criterion:eq:13.7-coercion-legitimacy-frontier",
-      "target": "E159"
+      "target": "E159",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_13_08_firmin_extraction_threshold.md",
-      "relation": "falsifies",
       "source": "criterion:eq:13.8-firmin-extraction-threshold",
-      "target": "E160"
+      "target": "E160",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_13_09_infeasible_constraint_set.md",
-      "relation": "falsifies",
       "source": "criterion:eq:13.9-infeasible-constraint-set",
-      "target": "E161"
+      "target": "E161",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_14_01_algo_prior_inheritance.md",
-      "relation": "falsifies",
       "source": "criterion:eq:14.1-algo-prior-inheritance",
-      "target": "E170"
+      "target": "E170",
+      "tier": 2,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_14_10_sustained_siege_cost.md",
-      "relation": "falsifies",
       "source": "criterion:eq:14.10-sustained-siege-cost",
-      "target": "E184"
+      "target": "E184",
+      "tier": 2,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_14_11_escalation_ceiling_tiers.md",
-      "relation": "falsifies",
       "source": "criterion:eq:14.11-escalation-ceiling-tiers",
-      "target": "E185"
+      "target": "E185",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_14_12_inclusion_predicate.md",
-      "relation": "falsifies",
       "source": "criterion:eq:14.12-inclusion-predicate",
-      "target": "E186"
+      "target": "E186",
+      "tier": 2,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_14_13_terminal_interface_swap.md",
-      "relation": "falsifies",
       "source": "criterion:eq:14.13-terminal-interface-swap",
-      "target": "E187"
+      "target": "E187",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_14_14_liability_phase_optimization.md",
-      "relation": "falsifies",
       "source": "criterion:eq:14.14-liability-phase-optimization",
-      "target": "E188"
+      "target": "E188",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_14_15_noise_spectrum_index.md",
-      "relation": "falsifies",
       "source": "criterion:eq:14.15-noise-spectrum-index",
-      "target": "E189"
+      "target": "E189",
+      "tier": 2,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_14_16_agnostic_swarm_payload.md",
-      "relation": "falsifies",
       "source": "criterion:eq:14.16-agnostic-swarm-payload",
-      "target": "E190"
+      "target": "E190",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_14_17_botnet_load_theorem.md",
-      "relation": "falsifies",
       "source": "criterion:eq:14.17-botnet-load-theorem",
-      "target": "E191"
+      "target": "E191",
+      "tier": 2,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_14_18_ideological_routing_operator.md",
-      "relation": "falsifies",
       "source": "criterion:eq:14.18-ideological-routing-operator",
-      "target": "E192"
+      "target": "E192",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_14_19_zugzwang_payoff_function.md",
-      "relation": "falsifies",
       "source": "criterion:eq:14.19-zugzwang-payoff-function",
-      "target": "E193"
+      "target": "E193",
+      "tier": 2,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_14_02_realtime_proximity_estimate.md",
-      "relation": "falsifies",
       "source": "criterion:eq:14.2-realtime-proximity-estimate",
-      "target": "E173"
+      "target": "E173",
+      "tier": 2,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_14_20_defection_cascade.md",
-      "relation": "falsifies",
       "source": "criterion:eq:14.20-defection-cascade",
-      "target": "E194"
+      "target": "E194",
+      "tier": 2,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_14_21_empathy_permeability.md",
-      "relation": "falsifies",
       "source": "criterion:eq:14.21-empathy-permeability",
-      "target": "E195"
+      "target": "E195",
+      "tier": 2,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_14_22_semantic_overwrite.md",
-      "relation": "falsifies",
       "source": "criterion:eq:14.22-semantic-overwrite",
-      "target": "E196"
+      "target": "E196",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_14_03_orthogonal_vector_injection.md",
-      "relation": "falsifies",
       "source": "criterion:eq:14.3-orthogonal-vector-injection",
-      "target": "E177"
+      "target": "E177",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_14_04_correction_signal_damping.md",
-      "relation": "falsifies",
       "source": "criterion:eq:14.4-correction-signal-damping",
-      "target": "E178"
+      "target": "E178",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_14_05_optical_enclosure.md",
-      "relation": "falsifies",
       "source": "criterion:eq:14.5-optical-enclosure",
-      "target": "E179"
+      "target": "E179",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_14_06_decoy_transfer_coefficient.md",
-      "relation": "falsifies",
       "source": "criterion:eq:14.6-decoy-transfer-coefficient",
-      "target": "E180"
+      "target": "E180",
+      "tier": 2,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_14_07_ddos_bandwidth_ceiling.md",
-      "relation": "falsifies",
       "source": "criterion:eq:14.7-ddos-bandwidth-ceiling",
-      "target": "E181"
+      "target": "E181",
+      "tier": 2,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_14_08_armed_swarm_bandwidth.md",
-      "relation": "falsifies",
       "source": "criterion:eq:14.8-armed-swarm-bandwidth",
-      "target": "E182"
+      "target": "E182",
+      "tier": 2,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_14_09_kinetic_capital_asymmetry.md",
-      "relation": "falsifies",
       "source": "criterion:eq:14.9-kinetic-capital-asymmetry",
-      "target": "E183"
+      "target": "E183",
+      "tier": 2,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_17_01_racism_as_institutional_vector.md",
-      "relation": "falsifies",
       "source": "criterion:eq:17.1-racism-as-institutional-vector",
-      "target": "E212"
+      "target": "E212",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_17_02_o_terminal_expansion.md",
-      "relation": "falsifies",
       "source": "criterion:eq:17.2-o-terminal-expansion",
-      "target": "E213"
+      "target": "E213",
+      "tier": 2,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_19_01_kernel_objective_registry_entry.md",
-      "relation": "falsifies",
       "source": "criterion:eq:19.1-kernel-objective-registry-entry",
-      "target": "E214"
+      "target": "E214",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_19_02_suppression_envelope_registry_entry.md",
-      "relation": "falsifies",
       "source": "criterion:eq:19.2-suppression-envelope-registry-entry",
-      "target": "E216"
+      "target": "E216",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_19_03_crash_condition_registry_entry.md",
-      "relation": "falsifies",
       "source": "criterion:eq:19.3-crash-condition-registry-entry",
-      "target": "E217"
+      "target": "E217",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_19_04_tier_ordering_registry_entry.md",
-      "relation": "falsifies",
       "source": "criterion:eq:19.4-tier-ordering-registry-entry",
-      "target": "E218"
+      "target": "E218",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_2_01_racism_vector.md",
-      "relation": "falsifies",
       "source": "criterion:eq:2.1-racism-vector",
-      "target": "E043"
+      "target": "E043",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_2_02_status_suppression_allocation.md",
-      "relation": "falsifies",
       "source": "criterion:eq:2.2-status-suppression-allocation",
-      "target": "E044"
+      "target": "E044",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_2_03_psi_null_in_survival.md",
-      "relation": "falsifies",
       "source": "criterion:eq:2.3-psi-null-in-survival",
-      "target": "E045"
+      "target": "E045",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_2_04_roman_membership_function.md",
-      "relation": "falsifies",
       "source": "criterion:eq:2.4-roman-membership-function",
-      "target": "E051"
+      "target": "E051",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_2_05_american_racial_function.md",
-      "relation": "falsifies",
       "source": "criterion:eq:2.5-american-racial-function",
-      "target": "E052"
+      "target": "E052",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_2_06_roman_american_structural_parallel.md",
-      "relation": "falsifies",
       "source": "criterion:eq:2.6-roman-american-structural-parallel",
-      "target": "E053"
+      "target": "E053",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_2_07_three_tier_portugal_inequality.md",
-      "relation": "falsifies",
       "source": "criterion:eq:2.7-three-tier-portugal-inequality",
-      "target": "E054"
+      "target": "E054",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_2_08_church_science_feedback_loop.md",
-      "relation": "falsifies",
       "source": "criterion:eq:2.8-church-science-feedback-loop",
-      "target": "E055"
+      "target": "E055",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_3_01_bacon_solidarity_condition.md",
-      "relation": "falsifies",
       "source": "criterion:eq:3.1-bacon-solidarity-condition",
-      "target": "E056"
+      "target": "E056",
+      "tier": 1,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_3_02_boundary_enforcement_1691.md",
-      "relation": "falsifies",
       "source": "criterion:eq:3.2-boundary-enforcement-1691",
-      "target": "E057"
+      "target": "E057",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_3_03_race_destroys_class.md",
-      "relation": "falsifies",
       "source": "criterion:eq:3.3-race-destroys-class",
-      "target": "E058"
+      "target": "E058",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_3_04_three_tier_post_bacon.md",
-      "relation": "falsifies",
       "source": "criterion:eq:3.4-three-tier-post-bacon",
-      "target": "E059"
+      "target": "E059",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_5_01_compliance_differential.md",
-      "relation": "falsifies",
       "source": "criterion:eq:5.1-compliance-differential",
-      "target": "E061"
+      "target": "E061",
+      "tier": 2,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_6_01_lethal_autonomy_gradient.md",
-      "relation": "falsifies",
       "source": "criterion:eq:6.1-lethal-autonomy-gradient",
-      "target": "E063"
+      "target": "E063",
+      "tier": 2,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_6_10_capacity_chain_1934.md",
-      "relation": "falsifies",
       "source": "criterion:eq:6.10-capacity-chain-1934",
-      "target": "E071"
+      "target": "E071",
+      "tier": 1,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_6_11_capacity_chain_1971.md",
-      "relation": "falsifies",
       "source": "criterion:eq:6.11-capacity-chain-1971",
-      "target": "E071"
+      "target": "E071",
+      "tier": 1,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_6_12_capacity_compounding_full.md",
-      "relation": "falsifies",
       "source": "criterion:eq:6.12-capacity-compounding-full",
-      "target": "E072"
+      "target": "E072",
+      "tier": 1,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_6_02_four_tier_benefit_ordering.md",
-      "relation": "falsifies",
       "source": "criterion:eq:6.2-four-tier-benefit-ordering",
-      "target": "E064"
+      "target": "E064",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_6_03_thirteenth_amendment_exception.md",
-      "relation": "falsifies",
       "source": "criterion:eq:6.3-thirteenth-amendment-exception",
-      "target": "E066"
+      "target": "E066",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_6_04_additive_policy_model.md",
-      "relation": "falsifies",
       "source": "criterion:eq:6.4-additive-policy-model",
-      "target": "E067"
+      "target": "E067",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_6_05_compounding_temporal_model.md",
-      "relation": "falsifies",
       "source": "criterion:eq:6.5-compounding-temporal-model",
-      "target": "E068"
+      "target": "E068",
+      "tier": 2,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_6_06_asymmetric_enforcement_multiplier.md",
-      "relation": "falsifies",
       "source": "criterion:eq:6.6-asymmetric-enforcement-multiplier",
-      "target": "E069"
+      "target": "E069",
+      "tier": 1,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_6_07_policy_sequence_noncommutative.md",
-      "relation": "falsifies",
       "source": "criterion:eq:6.7-policy-sequence-noncommutative",
-      "target": "E070"
+      "target": "E070",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_6_08_capacity_chain_1619.md",
-      "relation": "falsifies",
       "source": "criterion:eq:6.8-capacity-chain-1619",
-      "target": "E071"
+      "target": "E071",
+      "tier": 2,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_6_09_capacity_chain_1865.md",
-      "relation": "falsifies",
       "source": "criterion:eq:6.9-capacity-chain-1865",
-      "target": "E071"
+      "target": "E071",
+      "tier": 2,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_7_01_pullman_corollary.md",
-      "relation": "falsifies",
       "source": "criterion:eq:7.1-pullman-corollary",
-      "target": "E073"
+      "target": "E073",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_8_01_vertex_partition_graph.md",
-      "relation": "falsifies",
       "source": "criterion:eq:8.1-vertex-partition-graph",
-      "target": "E076"
+      "target": "E076",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_8_10_convex_hull_convergence.md",
-      "relation": "falsifies",
       "source": "criterion:eq:8.10-convex-hull-convergence",
-      "target": "E085"
+      "target": "E085",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_8_11_mittag_leffler_stability.md",
-      "relation": "falsifies",
       "source": "criterion:eq:8.11-mittag-leffler-stability",
-      "target": "E086"
+      "target": "E086",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_8_12_class_alignment_base_waves.md",
-      "relation": "falsifies",
       "source": "criterion:eq:8.12-class-alignment-base-waves",
-      "target": "E087"
+      "target": "E087",
+      "tier": 1,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_8_13_subgroup_compound_phase.md",
-      "relation": "falsifies",
       "source": "criterion:eq:8.13-subgroup-compound-phase",
-      "target": "E088"
+      "target": "E088",
+      "tier": 2,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_8_14_net_solidarity_signal.md",
-      "relation": "falsifies",
       "source": "criterion:eq:8.14-net-solidarity-signal",
-      "target": "E089"
+      "target": "E089",
+      "tier": 1,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_8_15_solidarity_collapse_condition.md",
-      "relation": "falsifies",
       "source": "criterion:eq:8.15-solidarity-collapse-condition",
-      "target": "E090"
+      "target": "E090",
+      "tier": 1,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_8_16_interference_control_objective.md",
-      "relation": "falsifies",
       "source": "criterion:eq:8.16-interference-control-objective",
-      "target": "E091"
+      "target": "E091",
+      "tier": 1,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_8_17_circular_dispersion_operator.md",
-      "relation": "falsifies",
       "source": "criterion:eq:8.17-circular-dispersion-operator",
-      "target": "E097"
+      "target": "E097",
+      "tier": 2,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_8_18_tweedism_agenda_path.md",
-      "relation": "falsifies",
       "source": "criterion:eq:8.18-tweedism-agenda-path",
-      "target": "E099"
+      "target": "E099",
+      "tier": 1,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_8_02_tier_to_graph_mapping.md",
-      "relation": "falsifies",
       "source": "criterion:eq:8.2-tier-to-graph-mapping",
-      "target": "E077"
+      "target": "E077",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_8_03_fractional_agent_dynamics.md",
-      "relation": "falsifies",
       "source": "criterion:eq:8.3-fractional-agent-dynamics",
-      "target": "E078"
+      "target": "E078",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_8_04_compounding_chain_formal.md",
-      "relation": "falsifies",
       "source": "criterion:eq:8.4-compounding-chain-formal",
-      "target": "E079"
+      "target": "E079",
+      "tier": 2,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_8_05_stationary_leader_condition.md",
-      "relation": "falsifies",
       "source": "criterion:eq:8.5-stationary-leader-condition",
-      "target": "E080"
+      "target": "E080",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_8_06_proximity_connectivity_condition.md",
-      "relation": "falsifies",
       "source": "criterion:eq:8.6-proximity-connectivity-condition",
-      "target": "E081"
+      "target": "E081",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_8_07_navigation_components.md",
-      "relation": "falsifies",
       "source": "criterion:eq:8.7-navigation-components",
-      "target": "E082"
+      "target": "E082",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_8_08_navigation_function.md",
-      "relation": "falsifies",
       "source": "criterion:eq:8.8-navigation-function",
-      "target": "E083"
+      "target": "E083",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_8_09_gradient_control_law.md",
-      "relation": "falsifies",
       "source": "criterion:eq:8.9-gradient-control-law",
-      "target": "E084"
+      "target": "E084",
+      "tier": 3,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_9_01_lead_crime_compounding.md",
-      "relation": "falsifies",
       "source": "criterion:eq:9.1-lead-crime-compounding",
-      "target": "E100"
+      "target": "E100",
+      "tier": 1,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_9_10_highway_lead_spatial_concentration.md",
-      "relation": "falsifies",
       "source": "criterion:eq:9.10-highway-lead-spatial-concentration",
-      "target": "E105"
+      "target": "E105",
+      "tier": 1,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_9_02_epistemic_suppression_variable.md",
-      "relation": "falsifies",
       "source": "criterion:eq:9.2-epistemic-suppression-variable",
-      "target": "E101"
+      "target": "E101",
+      "tier": 2,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_9_03_multi_vector_lead_exposure.md",
-      "relation": "falsifies",
       "source": "criterion:eq:9.3-multi-vector-lead-exposure",
-      "target": "E102"
+      "target": "E102",
+      "tier": 1,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_9_04_redlining_containment_field.md",
-      "relation": "falsifies",
       "source": "criterion:eq:9.4-redlining-containment-field",
-      "target": "E103"
+      "target": "E103",
+      "tier": 1,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_9_05_school_funding_property_value.md",
-      "relation": "falsifies",
       "source": "criterion:eq:9.5-school-funding-property-value",
-      "target": "E104"
+      "target": "E104",
+      "tier": 1,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_9_06_infrastructure_quality_funding.md",
-      "relation": "falsifies",
       "source": "criterion:eq:9.6-infrastructure-quality-funding",
-      "target": "E104"
+      "target": "E104",
+      "tier": 2,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_9_07_school_lead_exposure_inverse.md",
-      "relation": "falsifies",
       "source": "criterion:eq:9.7-school-lead-exposure-inverse",
-      "target": "E104"
+      "target": "E104",
+      "tier": 1,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_9_08_community_capacity_lead_reduction.md",
-      "relation": "falsifies",
       "source": "criterion:eq:9.8-community-capacity-lead-reduction",
-      "target": "E104"
+      "target": "E104",
+      "tier": 2,
+      "type": "falsifies"
     },
     {
       "provenance": "Paper/empirical_validations/eq_9_09_property_value_capacity_feedback.md",
-      "relation": "falsifies",
       "source": "criterion:eq:9.9-property-value-capacity-feedback",
-      "target": "E104"
+      "target": "E104",
+      "tier": 1,
+      "type": "falsifies"
     },
     {
       "provenance": "systemic_arbitrage/contract_catalog.yaml",
-      "relation": "maps_to",
       "source": "symbol:O_x",
-      "target": "contract:interference_spike:cancel-culture-policy-"
+      "target": "contract:interference_spike:cancel-culture-policy-",
+      "tier": "operational",
+      "type": "maps_to"
     },
     {
       "provenance": "systemic_arbitrage/contract_catalog.yaml",
-      "relation": "maps_to",
       "source": "symbol:O_x",
-      "target": "contract:interference_spike:culture-war-legislation-"
+      "target": "contract:interference_spike:culture-war-legislation-",
+      "tier": "operational",
+      "type": "maps_to"
     },
     {
       "provenance": "systemic_arbitrage/contract_catalog.yaml",
-      "relation": "maps_to",
       "source": "symbol:O_x",
-      "target": "contract:interference_spike:identity-politics-executive-order-"
+      "target": "contract:interference_spike:identity-politics-executive-order-",
+      "tier": "operational",
+      "type": "maps_to"
     },
     {
       "provenance": "systemic_arbitrage/contract_catalog.yaml",
-      "relation": "maps_to",
       "source": "symbol:O_x",
-      "target": "contract:interference_spike:moral-panic-bill-"
+      "target": "contract:interference_spike:moral-panic-bill-",
+      "tier": "operational",
+      "type": "maps_to"
     },
     {
       "provenance": "systemic_arbitrage/contract_catalog.yaml",
-      "relation": "maps_to",
       "source": "symbol:O_x",
-      "target": "contract:interference_spike:viral-outrage-legislation-"
+      "target": "contract:interference_spike:viral-outrage-legislation-",
+      "tier": "operational",
+      "type": "maps_to"
     },
     {
       "provenance": "systemic_arbitrage/contract_catalog.yaml",
-      "relation": "maps_to",
       "source": "symbol:P_real",
-      "target": "contract:interference_spike:cancel-culture-policy-"
+      "target": "contract:interference_spike:cancel-culture-policy-",
+      "tier": "operational",
+      "type": "maps_to"
     },
     {
       "provenance": "systemic_arbitrage/contract_catalog.yaml",
-      "relation": "maps_to",
       "source": "symbol:P_real",
-      "target": "contract:interference_spike:culture-war-legislation-"
+      "target": "contract:interference_spike:culture-war-legislation-",
+      "tier": "operational",
+      "type": "maps_to"
     },
     {
       "provenance": "systemic_arbitrage/contract_catalog.yaml",
-      "relation": "maps_to",
       "source": "symbol:P_real",
-      "target": "contract:interference_spike:identity-politics-executive-order-"
+      "target": "contract:interference_spike:identity-politics-executive-order-",
+      "tier": "operational",
+      "type": "maps_to"
     },
     {
       "provenance": "systemic_arbitrage/contract_catalog.yaml",
-      "relation": "maps_to",
       "source": "symbol:P_real",
-      "target": "contract:interference_spike:moral-panic-bill-"
+      "target": "contract:interference_spike:moral-panic-bill-",
+      "tier": "operational",
+      "type": "maps_to"
     },
     {
       "provenance": "systemic_arbitrage/contract_catalog.yaml",
-      "relation": "maps_to",
       "source": "symbol:P_real",
-      "target": "contract:interference_spike:viral-outrage-legislation-"
+      "target": "contract:interference_spike:viral-outrage-legislation-",
+      "tier": "operational",
+      "type": "maps_to"
     }
   ],
   "gaps": [
@@ -8594,5 +8894,5 @@
       "type": "tier_set"
     }
   ],
-  "schema_version": "1.0.0"
+  "schema": "framework-kg/1"
 }

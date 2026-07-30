@@ -14,14 +14,26 @@ systemic_arbitrage/
 ├── variables.yaml        # Symbol registry, data sources, falsification criteria
 ├── config.yaml           # Runtime paths, thresholds, position sizing
 ├── calibrate.py          # Phase 1 historical calibration (Test A + Test B)
+├── calibration_map.py    # Probability calibration map (isotonic-style fit)
 ├── spectral.py           # FFT/Welch utilities
 ├── ingest_trends.py      # Google Trends ingestion with CSV fallback
 ├── interference_engine.py# Compute O_x and P_real from trends
-├── trigger_engine.py     # Phase 3 deterministic triggers (stub)
-├── polymarket/           # Phase 3 Polymarket client (stub)
+├── trigger_engine.py     # Phase 3 deterministic triggers
+├── paper_trader.py       # Paper-trading session over the trigger engine
+├── backtest.py           # Walk-forward backtest over resolved markets
+├── build_backtest_data.py# Build resolved_markets.csv from Polymarket + Trends
+├── costs.py              # Polymarket cost model (fees, spread, slippage)
+├── risk_controls.py      # Intraday risk gate for trading sessions
+├── fit_coefficients.py   # Fit alpha/beta coefficients from closed paper trades
+├── live_executor.py      # Live execution gate (requires SYSTEMIC_ARBITRAGE_LIVE=1)
+├── graph_build.py        # L0: build data/graph/framework_kg.json (framework-kg/1)
+├── prompt_budget.py      # L6: graph loading, hop-budgeted neighbourhoods, encoders
+├── eval/                 # L6 encoding x heuristic benchmark harness + results
+├── polymarket/           # Phase 3 Polymarket client (paper trading; live path gated)
 ├── data/
 │   ├── historical/       # Curated CSVs for 1920-1971 windows
 │   ├── live/             # signal_snapshot.json output
+│   ├── graph/            # framework_kg.json knowledge-graph artifact
 │   └── raw/              # Cached Google Trends raw exports
 └── requirements.txt
 ```
@@ -93,6 +105,22 @@ The engine writes `data/live/signal_snapshot.json` on each run.
 `polymarket/client.py` logs intended paper trades to `data/paper_trades.jsonl`
 in dry-run mode. Live order placement is gated behind
 `SYSTEMIC_ARBITRAGE_LIVE=1` and currently raises `NotImplementedError`.
+
+## Knowledge graph (loops L0 + L6)
+
+`graph_build.py` materializes the framework knowledge graph to
+`data/graph/framework_kg.json` under the versioned `framework-kg/1` contract
+documented in `GRAPH.md` (§3). `prompt_budget.py` loads that artifact,
+extracts hop-budgeted neighbourhoods (1-hop default, logged 2-hop
+escalation), and renders them as text in three GraphQA encodings;
+`eval/encoding_bench.py` scores encoding × prompt-heuristic pairs on the
+fixed query set in `eval/queries.yaml`.
+
+Rebuild the graph:
+
+```bash
+.venv-arbitrage/bin/python3 -m systemic_arbitrage.graph_build
+```
 
 ## Phase 4
 

@@ -94,3 +94,7 @@ fused_models/
 
 # Generated per-chapter LaTeX slices + extraction output (regenerate with make chapters-src)
 Paper/chapters_src/
+
+# Agent session logs (AGENTS.md logging requirement) — artifacts, not source
+session-2026-*.md
+**/session-2026-*.md

@@ -12,6 +12,12 @@ def test_build_is_deterministic():
     assert json.dumps(first, sort_keys=True) == json.dumps(second, sort_keys=True)
 
 
+def test_schema_tag_is_the_versioned_contract():
+    graph = graph_build.build_graph()
+    assert graph["schema"] == "framework-kg/1"
+    assert set(graph) == {"schema", "nodes", "edges", "gaps"}
+
+
 def test_all_registry_equations_are_nodes():
     graph = graph_build.build_graph()
     equation_nodes = [node for node in graph["nodes"] if node["type"] == "equation"]
@@ -42,16 +48,16 @@ def test_edges_are_typed_and_reference_existing_nodes():
     node_ids = {node["id"] for node in graph["nodes"]}
     assert graph["edges"]
     for edge in graph["edges"]:
-        assert set(edge) == {"source", "relation", "target", "provenance"}
+        assert set(edge) == {"source", "target", "type", "tier", "provenance"}
         assert edge["source"] in node_ids
         assert edge["target"] in node_ids
-        assert edge["relation"] in {"derives_from", "calibrates", "falsifies", "maps_to"}
+        assert edge["type"] in {"derives_from", "calibrates", "falsifies", "maps_to"}
 
 
 def test_anchor_cases_are_linked_or_record_the_source_discrepancy():
     graph = graph_build.build_graph()
     case_ids = {node["id"] for node in graph["nodes"] if node["type"] == "anchor_case"}
-    linked = {edge["source"] for edge in graph["edges"] if edge["relation"] == "calibrates"}
+    linked = {edge["source"] for edge in graph["edges"] if edge["type"] == "calibrates"}
     unresolved = {
         node_id
         for gap in graph["gaps"]

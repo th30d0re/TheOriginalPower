@@ -10,7 +10,8 @@ base model chosen in Phase 4.
 ## Setup
 
 - **Graph:** synthetic fixture `tests/fixtures/framework_kg_fixture.json`
-  (19 nodes, 23 edges) using the node/edge types L0 will materialize:
+  (19 nodes, 23 edges) in the canonical `framework-kg/1` shape L0
+  materializes:
   equations, anchor cases, contracts, tiers, axis/carrier; `derives_from`,
   `calibrates`, `falsifies`, `maps_to`, `member_of`, `phase_couples`.
 - **Query set:** `eval/queries.yaml`, 24 structural queries with gold answers
@@ -25,23 +26,27 @@ base model chosen in Phase 4.
   576 generations. Raw responses and per-cell scores are in
   `eval/results/results.json`.
 
-## Schema requirement on L0
+## Schema agreement with L0
 
-L6 consumes `framework-kg/1` JSON:
+L6 consumes the versioned `framework-kg/1` contract, now documented in
+GRAPH.md (§3) and emitted by L0's `graph_build.py`:
 
 ```json
 {
   "schema": "framework-kg/1",
-  "nodes": [{"id": "...", "type": "...", "label": "..."}],
+  "nodes": [{"id": "...", "type": "...", "tier": 1,
+             "provenance": "...", "label": "..."}],
   "edges": [{"source": "...", "target": "...", "type": "...",
-             "tier": 1, "provenance": "extracted"}]
+             "tier": 1, "provenance": "..."}],
+  "gaps": []
 }
 ```
 
 `prompt_budget.FrameworkGraph.load` validates the schema tag and rejects
-edges referencing unknown nodes. L0's `data/graph/framework_kg.json` should
-carry these fields; `tier` and `provenance` on edges are required by L4's
-generated-edge quarantine.
+edges referencing unknown nodes; it reads `tier` and `provenance` tolerantly
+and carries them on every `Edge` for L4's generated-edge quarantine. L0's
+`data/graph/framework_kg.json` (558 nodes, 300 edges) loads under this
+contract; its `gaps` array is an L0 auditing aid that consumers ignore.
 
 ## Hop budget mechanism
 
@@ -141,7 +146,8 @@ and score each pair under it as `mean(budget_set@1-hop, escalation_set@2-hop)`:
   context.
 
 Treat this ranking as a prior, pending two replications: against L0's
-production graph (`data/graph/framework_kg.json`, ~400 nodes), and against
+production graph (`data/graph/framework_kg.json`, 558 nodes — it now loads
+under the shared contract), and against
 each Phase 4 candidate base model per the L7 gate.
 
 ## Caveats

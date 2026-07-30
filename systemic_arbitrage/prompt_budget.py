@@ -13,18 +13,21 @@ Rules enforced here (see GRAPH.md, loop L6):
   GraphQA taxonomy entry: adjacency list, incident list, and semantic
   proximity (natural-language relational analogies).
 
-The graph schema consumed here is ``framework-kg/1``::
+The graph schema consumed here is the versioned ``framework-kg/1`` contract
+(documented in GRAPH.md)::
 
     {
       "schema": "framework-kg/1",
-      "nodes": [{"id": str, "type": str, "label": str}],
+      "nodes": [{"id": str, "type": str, "tier": int | str,
+                 "provenance": str, "label": str, ...}],
       "edges": [{"source": str, "target": str, "type": str,
-                 "tier": int, "provenance": str}]
+                 "tier": int | str, "provenance": str}],
+      "gaps": [...]  # optional, emitted by L0; ignored here
     }
 
-This schema is the L6 requirement on L0's output
-(``data/graph/framework_kg.json``) and is documented in
-``docs/L6-findings.md``.
+L0's builder (``graph_build.py``) emits this contract to
+``data/graph/framework_kg.json``; the L6 measurements behind this module are
+in ``docs/L6-findings.md``.
 """
 
 from __future__ import annotations
@@ -60,6 +63,10 @@ class Edge:
     source: str
     target: str
     type: str
+    #: Evidence tier carried for L4's generated-edge quarantine. Optional on
+    #: read so hand-written graphs and the bench's example graph stay valid.
+    tier: object = None
+    provenance: str = ""
 
 
 class FrameworkGraph:
@@ -78,7 +85,10 @@ class FrameworkGraph:
                 "(expected 'framework-kg/1')"
             )
         nodes = {n["id"]: n for n in payload["nodes"]}
-        edges = [Edge(e["source"], e["target"], e["type"]) for e in payload["edges"]]
+        edges = [
+            Edge(e["source"], e["target"], e["type"], e.get("tier"), e.get("provenance", ""))
+            for e in payload["edges"]
+        ]
         unknown = {
             endpoint
             for e in edges
