@@ -64,10 +64,12 @@ def defs() -> str:
     d.append(f"l 10 0")
     inductor = " ".join(d)
 
-    zig = ["M 0 0 l 8 0"]
-    for i in range(6):
-        zig.append(f"l 5 {-11 if i % 2 == 0 else 11}")
-    zig.append("l 8 0")
+    # Even zigzag: half-step in, six full alternating strokes, half-step out.
+    amp, step = 10, 6
+    zig = ["M 0 0", f"l {step/2} {-amp}"]
+    for i in range(5):
+        zig.append(f"l {step} {2*amp if i % 2 == 0 else -2*amp}")
+    zig.append(f"l {step/2} {amp}")
     resistor = " ".join(zig)
 
     return f"""<defs>
@@ -101,13 +103,13 @@ def defs() -> str:
   <symbol id="s-arrow" overflow="visible">
     <path class="fill-ink" d="M -11 0 L 11 0 L 0 26 Z"/>
   </symbol>
-  <!-- transformer: two magnetically coupled windings, galvanically ISOLATED.
-       Primary along y=0, secondary along y=34, core bars between. The two sides
-       of the border are coupled here, never electrically joined. -->
-  <symbol id="s-xfmr" overflow="visible">
-    <path class="wire" d="{inductor}"/>
-    <g transform="translate(0,34) scale(1,-1)"><path class="wire" d="{inductor}"/></g>
-    <path class="wire" d="M 4 13 l 74 0 M 4 21 l 74 0"/>
+  <!-- centre element: the conductor arrives level, climbs both faces of a
+       stepped stack, and OPENS at the peak. Drawn pointing "up"; the bottom
+       border instances it flipped. -->
+  <symbol id="s-stack" overflow="visible">
+    <path class="wire" d="M -150 0 L -74 0 L -13 -56"/>
+    <path class="wire" d="M 150 0 L 74 0 L 13 -56"/>
+    <path class="wire" d="M -60 -8 l 120 0 M -48 -20 l 96 0 M -36 -32 l 72 0 M -24 -44 l 48 0"/>
   </symbol>
   <!-- ground: stacked rules, narrowing downward -->
   <symbol id="s-ground" overflow="visible">
@@ -128,62 +130,93 @@ def use(sym: str, x: float, y: float, rot: float = 0, scale: float = 1) -> str:
 
 # ── The border: a closed circuit loop framing the page ────────────────────────
 def border() -> str:
-    """Four rail segments, magnetically coupled at the corners.
+    """Four rails, coupled at the corners by adjacent parallel inductors.
 
-    The top and bottom rails are NOT electrically joined to the side rails. Each
-    corner carries a transformer: two parallel windings with a core between them,
-    coupling the segments without a galvanic path. Drawing this as one continuous
-    rectangle — which both earlier attempts did — is the specific thing that reads
-    as wrong.
+    The top and bottom rails each terminate by turning perpendicular into a short
+    VERTICAL inductor. Each side rail is straight and begins and ends with its own
+    vertical inductor. The two verticals at a corner sit side by side and parallel
+    — that adjacency is the magnetic coupling. There is no core symbol and no wire
+    joining them, because the segments are not electrically connected.
+
+    Rails are emitted as segments BETWEEN components, so nothing draws a line
+    through a capacitor.
     """
-    m = 62
+    m, COIL, CAP, RES = 74, 82, 38, 36
     top, bot = m, H - m
     left, right = m, W - m
     cx = W / 2
-    inset = 150          # where each rail stops short of the corner
+    corner_in = 118          # how far in from a corner the perpendicular pair sits
     out = []
 
-    # Horizontal rails, broken at centre for the ground symbols.
-    gap = 90
-    for y in (top, bot):
-        out.append(f'  <path class="wire" d="M {left+inset} {y} L {cx-gap} {y}"/>\n')
-        out.append(f'  <path class="wire" d="M {cx+gap} {y} L {right-inset} {y}"/>\n')
-    # Vertical rails.
+    def run_h(y, x0, x1, items):
+        """Lay components left→right along y, wiring only the gaps between them."""
+        x = x0
+        for sym, ln in items:
+            out.append(f'  <path class="wire" d="M {x:.1f} {y} L {x + (ln*0):.1f} {y}"/>\n')
+            out.append(f'  <use xlink:href="#{sym}" transform="translate({x:.1f},{y})"/>\n')
+            x += ln
+            nxt = x
+            out.append(f'  <path class="wire" d="M {nxt:.1f} {y} L {nxt:.1f} {y}"/>\n')
+        out.append(f'  <path class="wire" d="M {x:.1f} {y} L {x1:.1f} {y}"/>\n')
+
+    def seg_h(y, x0, x1):
+        if x1 - x0 > 1:
+            out.append(f'  <path class="wire" d="M {x0:.1f} {y} L {x1:.1f} {y}"/>\n')
+
+    def seg_v(x, y0, y1):
+        if y1 - y0 > 1:
+            out.append(f'  <path class="wire" d="M {x} {y0:.1f} L {x} {y1:.1f}"/>\n')
+
+    # ── horizontal rails: coil, capacitor, [centre stack], capacitor, coil ──
+    for y, flip in ((top, 1), (bot, -1)):
+        xa, xb = left + corner_in, right - corner_in
+        cursor = xa
+        seg_v(xa, top, top + 0)
+        for sx in (-1, 1):
+            base = cx + sx * 300
+            # coil then capacitor marching outward from centre
+            cpos = cx + sx * 190
+            kpos = cx + sx * 330
+            if sx < 0:
+                seg_h(y, xa, kpos - CAP / 2)
+                out.append(f'  <use xlink:href="#s-cap" transform="translate({kpos - CAP/2:.1f},{y})"/>\n')
+                seg_h(y, kpos + CAP / 2, cpos - COIL / 2)
+                out.append(f'  <use xlink:href="#s-coil" transform="translate({cpos - COIL/2:.1f},{y})"/>\n')
+                seg_h(y, cpos + COIL / 2, cx - 150)
+            else:
+                seg_h(y, cx + 150, cpos - COIL / 2)
+                out.append(f'  <use xlink:href="#s-coil" transform="translate({cpos - COIL/2:.1f},{y})"/>\n')
+                seg_h(y, cpos + COIL / 2, kpos - CAP / 2)
+                out.append(f'  <use xlink:href="#s-cap" transform="translate({kpos - CAP/2:.1f},{y})"/>\n')
+                seg_h(y, kpos + CAP / 2, xb)
+        # centre stack, flipped for the bottom rail
+        fl = "" if flip > 0 else f" scale(1,-1)"
+        out.append(f'  <g transform="translate({cx},{y}){fl}"><use xlink:href="#s-stack"/></g>\n')
+
+    # ── the perpendicular terminations: vertical inductors hanging off each rail end
+    for y, ydir in ((top, 1), (bot, -1)):
+        for x in (left + corner_in, right - corner_in):
+            out.append(f'  <g transform="translate({x},{y}) rotate({90*ydir})">'
+                       f'<use xlink:href="#s-coil"/></g>\n')
+
+    # ── side rails: straight vertical, an inductor at each end ──
     for x in (left, right):
-        out.append(f'  <path class="wire" d="M {x} {top+inset} L {x} {bot-inset}"/>\n')
-
-    # Slanted leads into the top/bottom ground symbols.
-    out.append(f'  <path class="wire" d="M {cx-gap} {top} L {cx-38} {top-26} '
-               f'L {cx+38} {top-26} L {cx+gap} {top}"/>\n')
-    out.append(f'  <path class="wire" d="M {cx-gap} {bot} L {cx-38} {bot+26} '
-               f'L {cx+38} {bot+26} L {cx+gap} {bot}"/>\n')
-    out.append(use("s-ground", cx, top - 44))
-    out.append(use("s-ground", cx, bot + 34, rot=180))
-
-    # The four corner transformers. Each couples a horizontal rail to a vertical
-    # one; rotation puts the winding pair on the diagonal of its corner.
-    for (cxr, cyr, rot) in (
-        (left, top, 45), (right, top, 135), (right, bot, 225), (left, bot, 315),
-    ):
-        out.append(f'  <g transform="translate({cxr},{cyr}) rotate({rot}) translate(-41,-17)">'
-                   f'<use xlink:href="#s-xfmr"/></g>\n')
-        # Short leads from each rail into its winding.
-        out.append(use("s-junction", cxr, cyr))
-
-    # Components along each rail.
-    for y in (top, bot):
-        for sx in (1, -1):
-            for off, sym in ((240, "s-coil"), (400, "s-cap")):
-                mir = " scale(-1,1)" if sx < 0 else ""
-                out.append(f'  <use xlink:href="#{sym}" '
-                           f'transform="translate({cx - sx*off:.1f},{y}){mir}"/>\n')
-    for x in (left, right):
-        out.append(use("s-arrow", x, top + 250))
-        out.append(use("s-res", x, top + 340, rot=90))
-        out.append(use("s-cap", x, top + 500, rot=90))
-        out.append(use("s-junction", x, top + 640))
-        out.append(use("s-res", x, bot - 430, rot=90))
-        out.append(use("s-arrow", x, bot - 250))
+        out.append(f'  <g transform="translate({x},{top}) rotate(90)">'
+                   f'<use xlink:href="#s-coil"/></g>\n')
+        out.append(f'  <g transform="translate({x},{bot}) rotate(-90)">'
+                   f'<use xlink:href="#s-coil"/></g>\n')
+        y0, y1 = top + COIL, bot - COIL
+        out.append(use("s-arrow", x, y0 + 60))
+        seg_v(x, y0, y0 + 130)
+        out.append(f'  <g transform="translate({x},{y0+130}) rotate(90)">'
+                   f'<use xlink:href="#s-res"/></g>\n')
+        seg_v(x, y0 + 130 + RES, (top + bot) / 2 - 60)
+        out.append(use("s-junction", x, (top + bot) / 2))
+        seg_v(x, (top + bot) / 2 + 8, y1 - 130 - RES)
+        out.append(f'  <g transform="translate({x},{y1-130-RES}) rotate(90)">'
+                   f'<use xlink:href="#s-res"/></g>\n')
+        seg_v(x, y1 - 130, y1)
+        out.append(use("s-arrow", x, y1 - 60))
     return "".join(out)
 
 
@@ -264,34 +297,19 @@ def phasor(ox: float, oy: float, s: float = 1) -> str:
 
 # ── Five-tier pyramid ─────────────────────────────────────────────────────────
 def pyramid(cx: float, base_y: float, w: float, h: float) -> str:
-    """Five rules narrowing upward, with the circuit open at the apex.
+    """The five-tier stack: E apex, O base. Rules and labels only.
 
-    The conductor arrives level with O (the base rule), climbs both faces, and
-    stops short of the peak on each side. The gap at the top is the point: no
-    current flows through E. The apex is an open circuit.
+    No conductor passes through this. The circuit-bend-with-open-apex treatment
+    belongs to the centre element on the top and bottom rails.
     """
     tiers = ["E", "P", "F", "I", "O"]
     n = len(tiers)
     out = []
-    # E is the apex: narrowest and highest. O is the base: widest and lowest.
     for i, t in enumerate(tiers):
         y = base_y - h * (n - 1 - i) / (n - 1)
-        hw = (w / 2) * ((i + 1) / n) * 0.92
+        hw = (w / 2) * ((i + 1) / n)
         out.append(f'  <path class="wire" d="M {cx-hw:.1f} {y:.1f} L {cx+hw:.1f} {y:.1f}"/>\n')
-        out.append(f'  <text class="label" x="{cx+hw+16:.1f}" y="{y+6:.1f}">{t}</text>\n')
-
-    apex_y = base_y - h
-    gap = 26                      # the open circuit at the peak
-    run = 190                     # horizontal approach either side
-    base_hw = (w / 2) * 0.92          # half-width of the O rule
-    for sx in (-1, 1):
-        x_out = cx + sx * (base_hw + run)
-        out.append(
-            f'  <path class="accent" d="M {x_out:.1f} {base_y:.1f} '
-            f'L {cx + sx*base_hw:.1f} {base_y:.1f} '
-            f'L {cx + sx*gap:.1f} {apex_y:.1f}"/>\n'
-        )
-        out.append(f'  <circle class="accent" cx="{cx + sx*gap:.1f}" cy="{apex_y:.1f}" r="4"/>\n')
+        out.append(f'  <text class="label" x="{cx+hw+18:.1f}" y="{y+6:.1f}">{t}</text>\n')
     return "".join(out)
 
 
@@ -332,7 +350,7 @@ def build(palette: str) -> str:
 {layer("layer-title-od", "21 title (OpenDyslexic)", title_od, display="none")}
 {layer("layer-phasor", "30 phasor W", phasor(430, 560))}
 {layer("layer-smith", "40 smith chart", smith(cx, 960, 300))}
-{layer("layer-pyramid", "50 tier pyramid", pyramid(cx, H - 300, 300, 240))}
+{layer("layer-pyramid", "50 tier pyramid", pyramid(268, H - 300, 230, 210))}
 {layer("layer-author", "60 author", author)}
 </svg>
 """
