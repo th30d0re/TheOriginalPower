@@ -33,6 +33,14 @@
   <symbol id="s-arrow" overflow="visible">
     <path class="fill-ink" d="M -11 0 L 11 0 L 0 26 Z"/>
   </symbol>
+  <!-- transformer: two magnetically coupled windings, galvanically ISOLATED.
+       Primary along y=0, secondary along y=34, core bars between. The two sides
+       of the border are coupled here, never electrically joined. -->
+  <symbol id="s-xfmr" overflow="visible">
+    <path class="wire" d="M 0 0 a 9 9 0 0 1 18 0 a 9 9 0 0 1 18 0 a 9 9 0 0 1 18 0 a 9 9 0 0 1 18 0 l 10 0"/>
+    <g transform="translate(0,34) scale(1,-1)"><path class="wire" d="M 0 0 a 9 9 0 0 1 18 0 a 9 9 0 0 1 18 0 a 9 9 0 0 1 18 0 a 9 9 0 0 1 18 0 l 10 0"/></g>
+    <path class="wire" d="M 4 13 l 74 0 M 4 21 l 74 0"/>
+  </symbol>
   <!-- ground: stacked rules, narrowing downward -->
   <symbol id="s-ground" overflow="visible">
     <path class="wire" d="M -34 0 l 68 0 M -24 9 l 48 0 M -14 18 l 28 0 M -6 27 l 12 0"/>
@@ -44,45 +52,44 @@
 </g>
 
 <g id="layer-border" inkscape:groupmode="layer" inkscape:label="10 border circuit" style="display:inline">
-  <path class="wire" d="M 52 52 L 510.0 52 M 690.0 52 L 1148 52 L 1148 1548 M 690.0 1548 L 52 1548 L 52 52"/>
-  <path class="wire" d="M 510.0 52 L 562.0 26 L 638.0 26 L 690.0 52"/>
-  <path class="wire" d="M 510.0 1548 L 562.0 1574 L 638.0 1574 L 690.0 1548"/>
-  <use xlink:href="#s-ground" transform="translate(600.0,8.0)"/>
-  <use xlink:href="#s-ground" transform="translate(600.0,1582.0) rotate(180)"/>
-  <use xlink:href="#s-coil" transform="translate(450.0,52)"/>
-  <use xlink:href="#s-coil" transform="translate(350.0,52)"/>
-  <use xlink:href="#s-cap" transform="translate(130.0,52)"/>
-  <use xlink:href="#s-coil" transform="translate(750.0,52) scale(-1,1)"/>
-  <use xlink:href="#s-coil" transform="translate(850.0,52) scale(-1,1)"/>
-  <use xlink:href="#s-cap" transform="translate(1070.0,52) scale(-1,1)"/>
-  <use xlink:href="#s-coil" transform="translate(450.0,1548)"/>
-  <use xlink:href="#s-coil" transform="translate(350.0,1548)"/>
-  <use xlink:href="#s-cap" transform="translate(130.0,1548)"/>
-  <use xlink:href="#s-coil" transform="translate(750.0,1548) scale(-1,1)"/>
-  <use xlink:href="#s-coil" transform="translate(850.0,1548) scale(-1,1)"/>
-  <use xlink:href="#s-cap" transform="translate(1070.0,1548) scale(-1,1)"/>
-  <use xlink:href="#s-arrow" transform="translate(52.0,172.0)"/>
-  <use xlink:href="#s-res" transform="translate(52.0,262.0) rotate(90)"/>
-  <use xlink:href="#s-cap" transform="translate(52.0,412.0) rotate(90)"/>
-  <use xlink:href="#s-junction" transform="translate(52.0,572.0)"/>
-  <use xlink:href="#s-junction" transform="translate(52.0,692.0)"/>
-  <use xlink:href="#s-res" transform="translate(52.0,812.0) rotate(90)"/>
-  <use xlink:href="#s-arrow" transform="translate(52.0,1428.0)"/>
-  <use xlink:href="#s-arrow" transform="translate(1148.0,172.0)"/>
-  <use xlink:href="#s-res" transform="translate(1148.0,262.0) rotate(90)"/>
-  <use xlink:href="#s-cap" transform="translate(1148.0,412.0) rotate(90)"/>
-  <use xlink:href="#s-junction" transform="translate(1148.0,572.0)"/>
-  <use xlink:href="#s-junction" transform="translate(1148.0,692.0)"/>
-  <use xlink:href="#s-res" transform="translate(1148.0,812.0) rotate(90)"/>
-  <use xlink:href="#s-arrow" transform="translate(1148.0,1428.0)"/>
-  <path class="wire" d="M 104 60 L 104 202"/>
-  <path class="wire" d="M 104 1398 L 104 1540"/>
-  <use xlink:href="#s-coil" transform="translate(104.0,82.0) rotate(90)"/>
-  <use xlink:href="#s-coil" transform="translate(104.0,1438.0) rotate(90)"/>
-  <path class="wire" d="M 1096 60 L 1096 202"/>
-  <path class="wire" d="M 1096 1398 L 1096 1540"/>
-  <use xlink:href="#s-coil" transform="translate(1096.0,82.0) rotate(90)"/>
-  <use xlink:href="#s-coil" transform="translate(1096.0,1438.0) rotate(90)"/>
+  <path class="wire" d="M 212 62 L 510.0 62"/>
+  <path class="wire" d="M 690.0 62 L 988 62"/>
+  <path class="wire" d="M 212 1538 L 510.0 1538"/>
+  <path class="wire" d="M 690.0 1538 L 988 1538"/>
+  <path class="wire" d="M 62 212 L 62 1388"/>
+  <path class="wire" d="M 1138 212 L 1138 1388"/>
+  <path class="wire" d="M 510.0 62 L 562.0 36 L 638.0 36 L 690.0 62"/>
+  <path class="wire" d="M 510.0 1538 L 562.0 1564 L 638.0 1564 L 690.0 1538"/>
+  <use xlink:href="#s-ground" transform="translate(600.0,18.0)"/>
+  <use xlink:href="#s-ground" transform="translate(600.0,1572.0) rotate(180)"/>
+  <g transform="translate(62,62) rotate(45) translate(-41,-17)"><use xlink:href="#s-xfmr"/></g>
+  <use xlink:href="#s-junction" transform="translate(62.0,62.0)"/>
+  <g transform="translate(1138,62) rotate(135) translate(-41,-17)"><use xlink:href="#s-xfmr"/></g>
+  <use xlink:href="#s-junction" transform="translate(1138.0,62.0)"/>
+  <g transform="translate(1138,1538) rotate(225) translate(-41,-17)"><use xlink:href="#s-xfmr"/></g>
+  <use xlink:href="#s-junction" transform="translate(1138.0,1538.0)"/>
+  <g transform="translate(62,1538) rotate(315) translate(-41,-17)"><use xlink:href="#s-xfmr"/></g>
+  <use xlink:href="#s-junction" transform="translate(62.0,1538.0)"/>
+  <use xlink:href="#s-coil" transform="translate(360.0,62)"/>
+  <use xlink:href="#s-cap" transform="translate(200.0,62)"/>
+  <use xlink:href="#s-coil" transform="translate(840.0,62) scale(-1,1)"/>
+  <use xlink:href="#s-cap" transform="translate(1000.0,62) scale(-1,1)"/>
+  <use xlink:href="#s-coil" transform="translate(360.0,1538)"/>
+  <use xlink:href="#s-cap" transform="translate(200.0,1538)"/>
+  <use xlink:href="#s-coil" transform="translate(840.0,1538) scale(-1,1)"/>
+  <use xlink:href="#s-cap" transform="translate(1000.0,1538) scale(-1,1)"/>
+  <use xlink:href="#s-arrow" transform="translate(62.0,312.0)"/>
+  <use xlink:href="#s-res" transform="translate(62.0,402.0) rotate(90)"/>
+  <use xlink:href="#s-cap" transform="translate(62.0,562.0) rotate(90)"/>
+  <use xlink:href="#s-junction" transform="translate(62.0,702.0)"/>
+  <use xlink:href="#s-res" transform="translate(62.0,1108.0) rotate(90)"/>
+  <use xlink:href="#s-arrow" transform="translate(62.0,1288.0)"/>
+  <use xlink:href="#s-arrow" transform="translate(1138.0,312.0)"/>
+  <use xlink:href="#s-res" transform="translate(1138.0,402.0) rotate(90)"/>
+  <use xlink:href="#s-cap" transform="translate(1138.0,562.0) rotate(90)"/>
+  <use xlink:href="#s-junction" transform="translate(1138.0,702.0)"/>
+  <use xlink:href="#s-res" transform="translate(1138.0,1108.0) rotate(90)"/>
+  <use xlink:href="#s-arrow" transform="translate(1138.0,1288.0)"/>
 
 </g>
 
@@ -186,16 +193,20 @@
 </g>
 
 <g id="layer-pyramid" inkscape:groupmode="layer" inkscape:label="50 tier pyramid" style="display:inline">
-  <path class="wire-thin" d="M 235.0 1140.0 L 235.0 1140.0 L 256.0 1190.0 L 214.0 1190.0 Z"/>
-  <text class="label" x="235" y="1171.0" text-anchor="middle">E</text>
-  <path class="wire-thin" d="M 214.0 1190.0 L 256.0 1190.0 L 277.0 1240.0 L 193.0 1240.0 Z"/>
-  <text class="label" x="235" y="1221.0" text-anchor="middle">P</text>
-  <path class="wire-thin" d="M 193.0 1240.0 L 277.0 1240.0 L 298.0 1290.0 L 172.0 1290.0 Z"/>
-  <text class="label" x="235" y="1271.0" text-anchor="middle">F</text>
-  <path class="wire-thin" d="M 172.0 1290.0 L 298.0 1290.0 L 319.0 1340.0 L 151.0 1340.0 Z"/>
-  <text class="label" x="235" y="1321.0" text-anchor="middle">I</text>
-  <path class="wire-thin" d="M 151.0 1340.0 L 319.0 1340.0 L 340.0 1390.0 L 130.0 1390.0 Z"/>
-  <text class="label" x="235" y="1371.0" text-anchor="middle">O</text>
+  <path class="wire" d="M 572.4 1060.0 L 627.6 1060.0"/>
+  <text class="label" x="643.6" y="1066.0">E</text>
+  <path class="wire" d="M 544.8 1120.0 L 655.2 1120.0"/>
+  <text class="label" x="671.2" y="1126.0">P</text>
+  <path class="wire" d="M 517.2 1180.0 L 682.8 1180.0"/>
+  <text class="label" x="698.8" y="1186.0">F</text>
+  <path class="wire" d="M 489.6 1240.0 L 710.4 1240.0"/>
+  <text class="label" x="726.4" y="1246.0">I</text>
+  <path class="wire" d="M 462.0 1300.0 L 738.0 1300.0"/>
+  <text class="label" x="754.0" y="1306.0">O</text>
+  <path class="accent" d="M 272.0 1300.0 L 462.0 1300.0 L 574.0 1060.0"/>
+  <circle class="accent" cx="574.0" cy="1060.0" r="4"/>
+  <path class="accent" d="M 928.0 1300.0 L 738.0 1300.0 L 626.0 1060.0"/>
+  <circle class="accent" cx="626.0" cy="1060.0" r="4"/>
 
 </g>
 

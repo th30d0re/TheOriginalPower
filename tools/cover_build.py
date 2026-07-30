@@ -101,6 +101,14 @@ def defs() -> str:
   <symbol id="s-arrow" overflow="visible">
     <path class="fill-ink" d="M -11 0 L 11 0 L 0 26 Z"/>
   </symbol>
+  <!-- transformer: two magnetically coupled windings, galvanically ISOLATED.
+       Primary along y=0, secondary along y=34, core bars between. The two sides
+       of the border are coupled here, never electrically joined. -->
+  <symbol id="s-xfmr" overflow="visible">
+    <path class="wire" d="{inductor}"/>
+    <g transform="translate(0,34) scale(1,-1)"><path class="wire" d="{inductor}"/></g>
+    <path class="wire" d="M 4 13 l 74 0 M 4 21 l 74 0"/>
+  </symbol>
   <!-- ground: stacked rules, narrowing downward -->
   <symbol id="s-ground" overflow="visible">
     <path class="wire" d="M -34 0 l 68 0 M -24 9 l 48 0 M -14 18 l 28 0 M -6 27 l 12 0"/>
@@ -120,59 +128,62 @@ def use(sym: str, x: float, y: float, rot: float = 0, scale: float = 1) -> str:
 
 # ── The border: a closed circuit loop framing the page ────────────────────────
 def border() -> str:
-    m = 52          # outer rail inset
-    inner = 104     # inner rail inset (the doubled rail on left/right)
+    """Four rail segments, magnetically coupled at the corners.
+
+    The top and bottom rails are NOT electrically joined to the side rails. Each
+    corner carries a transformer: two parallel windings with a core between them,
+    coupling the segments without a galvanic path. Drawing this as one continuous
+    rectangle — which both earlier attempts did — is the specific thing that reads
+    as wrong.
+    """
+    m = 62
     top, bot = m, H - m
     left, right = m, W - m
     cx = W / 2
+    inset = 150          # where each rail stops short of the corner
     out = []
 
-    # Outer loop, broken at top-centre and bottom-centre for the ground symbols.
+    # Horizontal rails, broken at centre for the ground symbols.
     gap = 90
-    out.append(
-        f'  <path class="wire" d="M {left} {top} L {cx-gap} {top} '
-        f'M {cx+gap} {top} L {right} {top} L {right} {bot} '
-        f'M {cx+gap} {bot} L {left+0} {bot} L {left} {top}"/>\n'
-    )
-    # Slanted leads rising into the top/bottom ground symbols.
-    out.append(
-        f'  <path class="wire" d="M {cx-gap} {top} L {cx-38} {top-26} L {cx+38} {top-26} '
-        f'L {cx+gap} {top}"/>\n'
-    )
-    out.append(
-        f'  <path class="wire" d="M {cx-gap} {bot} L {cx-38} {bot+26} L {cx+38} {bot+26} '
-        f'L {cx+gap} {bot}"/>\n'
-    )
+    for y in (top, bot):
+        out.append(f'  <path class="wire" d="M {left+inset} {y} L {cx-gap} {y}"/>\n')
+        out.append(f'  <path class="wire" d="M {cx+gap} {y} L {right-inset} {y}"/>\n')
+    # Vertical rails.
+    for x in (left, right):
+        out.append(f'  <path class="wire" d="M {x} {top+inset} L {x} {bot-inset}"/>\n')
+
+    # Slanted leads into the top/bottom ground symbols.
+    out.append(f'  <path class="wire" d="M {cx-gap} {top} L {cx-38} {top-26} '
+               f'L {cx+38} {top-26} L {cx+gap} {top}"/>\n')
+    out.append(f'  <path class="wire" d="M {cx-gap} {bot} L {cx-38} {bot+26} '
+               f'L {cx+38} {bot+26} L {cx+gap} {bot}"/>\n')
     out.append(use("s-ground", cx, top - 44))
     out.append(use("s-ground", cx, bot + 34, rot=180))
 
-    # Top and bottom edges. Symbols are drawn left-to-right, so the right half is
-    # mirrored about the centre line — otherwise it overruns the corner.
+    # The four corner transformers. Each couples a horizontal rail to a vertical
+    # one; rotation puts the winding pair on the diagonal of its corner.
+    for (cxr, cyr, rot) in (
+        (left, top, 45), (right, top, 135), (right, bot, 225), (left, bot, 315),
+    ):
+        out.append(f'  <g transform="translate({cxr},{cyr}) rotate({rot}) translate(-41,-17)">'
+                   f'<use xlink:href="#s-xfmr"/></g>\n')
+        # Short leads from each rail into its winding.
+        out.append(use("s-junction", cxr, cyr))
+
+    # Components along each rail.
     for y in (top, bot):
         for sx in (1, -1):
-            mir = "" if sx > 0 else " scale(-1,1)"
-            for off in (150, 250, 470):
-                sym = "s-cap" if off == 470 else "s-coil"
-                x = cx - sx * off if sx > 0 else cx + off
-                tf = f"translate({cx - sx*off:.1f},{y}){mir}" if sx < 0 else f"translate({x:.1f},{y})"
-                out.append(f'  <use xlink:href="#{sym}" transform="{tf}"/>\n')
-
-    # Left and right rails: the vertical current path, top to bottom.
-    for x, side in ((left, "L"), (right, "R")):
-        out.append(use("s-arrow", x, top + 120))
-        out.append(use("s-res", x, top + 210, rot=90))
-        out.append(use("s-cap", x, top + 360, rot=90))
-        out.append(use("s-junction", x, top + 520))
+            for off, sym in ((240, "s-coil"), (400, "s-cap")):
+                mir = " scale(-1,1)" if sx < 0 else ""
+                out.append(f'  <use xlink:href="#{sym}" '
+                           f'transform="translate({cx - sx*off:.1f},{y}){mir}"/>\n')
+    for x in (left, right):
+        out.append(use("s-arrow", x, top + 250))
+        out.append(use("s-res", x, top + 340, rot=90))
+        out.append(use("s-cap", x, top + 500, rot=90))
         out.append(use("s-junction", x, top + 640))
-        out.append(use("s-res", x, top + 760, rot=90))
-        out.append(use("s-arrow", x, bot - 120))
-
-    # The inner doubled rail — coils at the corners, as in the study.
-    for x in (inner, W - inner):
-        out.append(f'  <path class="wire" d="M {x} {top+8} L {x} {top+150}"/>\n')
-        out.append(f'  <path class="wire" d="M {x} {bot-150} L {x} {bot-8}"/>\n')
-        out.append(use("s-coil", x, top + 30, rot=90))
-        out.append(use("s-coil", x, bot - 110, rot=90))
+        out.append(use("s-res", x, bot - 430, rot=90))
+        out.append(use("s-arrow", x, bot - 250))
     return "".join(out)
 
 
@@ -253,22 +264,34 @@ def phasor(ox: float, oy: float, s: float = 1) -> str:
 
 # ── Five-tier pyramid ─────────────────────────────────────────────────────────
 def pyramid(cx: float, base_y: float, w: float, h: float) -> str:
+    """Five rules narrowing upward, with the circuit open at the apex.
+
+    The conductor arrives level with O (the base rule), climbs both faces, and
+    stops short of the peak on each side. The gap at the top is the point: no
+    current flows through E. The apex is an open circuit.
+    """
     tiers = ["E", "P", "F", "I", "O"]
     n = len(tiers)
     out = []
+    # E is the apex: narrowest and highest. O is the base: widest and lowest.
     for i, t in enumerate(tiers):
-        y0 = base_y - h * (n - i) / n
-        y1 = base_y - h * (n - i - 1) / n
-        hw0 = w * (i) / (2 * n)
-        hw1 = w * (i + 1) / (2 * n)
+        y = base_y - h * (n - 1 - i) / (n - 1)
+        hw = (w / 2) * ((i + 1) / n) * 0.92
+        out.append(f'  <path class="wire" d="M {cx-hw:.1f} {y:.1f} L {cx+hw:.1f} {y:.1f}"/>\n')
+        out.append(f'  <text class="label" x="{cx+hw+16:.1f}" y="{y+6:.1f}">{t}</text>\n')
+
+    apex_y = base_y - h
+    gap = 26                      # the open circuit at the peak
+    run = 190                     # horizontal approach either side
+    base_hw = (w / 2) * 0.92          # half-width of the O rule
+    for sx in (-1, 1):
+        x_out = cx + sx * (base_hw + run)
         out.append(
-            f'  <path class="wire-thin" d="M {cx-hw0:.1f} {y0:.1f} L {cx+hw0:.1f} {y0:.1f} '
-            f'L {cx+hw1:.1f} {y1:.1f} L {cx-hw1:.1f} {y1:.1f} Z"/>\n'
+            f'  <path class="accent" d="M {x_out:.1f} {base_y:.1f} '
+            f'L {cx + sx*base_hw:.1f} {base_y:.1f} '
+            f'L {cx + sx*gap:.1f} {apex_y:.1f}"/>\n'
         )
-        out.append(
-            f'  <text class="label" x="{cx}" y="{(y0+y1)/2+6:.1f}" '
-            f'text-anchor="middle">{t}</text>\n'
-        )
+        out.append(f'  <circle class="accent" cx="{cx + sx*gap:.1f}" cy="{apex_y:.1f}" r="4"/>\n')
     return "".join(out)
 
 
@@ -309,7 +332,7 @@ def build(palette: str) -> str:
 {layer("layer-title-od", "21 title (OpenDyslexic)", title_od, display="none")}
 {layer("layer-phasor", "30 phasor W", phasor(430, 560))}
 {layer("layer-smith", "40 smith chart", smith(cx, 960, 300))}
-{layer("layer-pyramid", "50 tier pyramid", pyramid(235, H - 210, 210, 250))}
+{layer("layer-pyramid", "50 tier pyramid", pyramid(cx, H - 300, 300, 240))}
 {layer("layer-author", "60 author", author)}
 </svg>
 """
