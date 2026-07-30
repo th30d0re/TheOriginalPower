@@ -63,24 +63,61 @@ def _momentum_prob(delta_p: float) -> float:
     return 0.65 if delta_p >= 0 else 0.35
 
 
-def _cost_term(row: pd.Series) -> float:
-    """Return cost expressed as a probability-point deduction."""
-    if HAS_COSTS:
-        cb: CostBreakdown = compute_costs(
-            fill_notional_usd=float(row["fill_notional_usd"]),
-            taker_fee_bps=0.0,
-            half_spread_frac=float(row["half_spread_frac"]),
-            book_depth_usd=float(row["book_depth_usd"]),
-        )
-        return float(total_cost_prob_terms(cb, float(row["market_prob_at_entry"])))
-    # minimal fallback: half-spread only
-    return float(row["half_spread_frac"])
+def _fillable_notional(
+    requested_usd: float,
+    book_depth_usd: float,
+    max_slippage_frac: float,
+    slippage_rate: float = 0.5,
+) -> float:
+    """Largest notional that stays inside the slippage cap for this book.
+
+    compute_costs() aborts when requested size implies slippage above the cap, and
+    an aborted fill costs `inf` — which silently makes every edge -inf. Sizing to
+    the book instead is what a trader actually does: trade smaller, not never.
+    """
+    if book_depth_usd <= 0.0 or slippage_rate <= 0.0:
+        return 0.0
+    return min(requested_usd, (max_slippage_frac * book_depth_usd) / slippage_rate)
+
+
+def _cost_term(
+    row: pd.Series,
+    max_slippage_frac: float = 0.01,
+    size_to_book: bool = True,
+) -> tuple[float, bool, float]:
+    """Cost as a probability-point deduction.
+
+    Returns (cost_in_prob_points, aborted, notional_used). `aborted` is reported
+    separately so an unfillable market is never mistaken for one carrying no edge.
+    """
+    requested = float(row["fill_notional_usd"])
+    depth = float(row["book_depth_usd"])
+    notional = (
+        _fillable_notional(requested, depth, max_slippage_frac)
+        if size_to_book
+        else requested
+    )
+
+    if not HAS_COSTS:
+        return float(row["half_spread_frac"]), False, notional
+
+    cb: CostBreakdown = compute_costs(
+        fill_notional_usd=notional,
+        taker_fee_bps=0.0,
+        half_spread_frac=float(row["half_spread_frac"]),
+        book_depth_usd=depth,
+        max_slippage_frac=max_slippage_frac,
+    )
+    cost = float(total_cost_prob_terms(cb, float(row["market_prob_at_entry"])))
+    return cost, bool(cb.aborted), notional
 
 
 def _evaluate_fold(
     train_df: pd.DataFrame,
     eval_df: pd.DataFrame,
     edge_threshold: float,
+    max_slippage_frac: float = 0.01,
+    size_to_book: bool = True,
 ) -> dict[str, Any]:
     cal = CalibrationMap()
     if len(train_df) >= 5:
@@ -95,10 +132,19 @@ def _evaluate_fold(
     model_probs = cal.predict_batch(delta_ps)
     momentum_probs = np.array([_momentum_prob(d) for d in delta_ps])
     coin_probs = np.full(len(delta_ps), 0.5)
-    cost_terms = np.array([_cost_term(row) for _, row in eval_df.iterrows()])
+    cost_results = [
+        _cost_term(row, max_slippage_frac, size_to_book)
+        for _, row in eval_df.iterrows()
+    ]
+    cost_terms = np.array([c for c, _, _ in cost_results])
+    aborted = np.array([a for _, a, _ in cost_results])
+    notionals = np.array([n for _, _, n in cost_results])
 
     edges = (model_probs - market_probs) - cost_terms
-    mask = edges > edge_threshold
+    # An aborted fill is unfillable, not edgeless. Exclude it from the edge test
+    # rather than letting an inf cost push it under the threshold as a silent miss.
+    tradeable = ~aborted
+    mask = tradeable & (edges > edge_threshold)
 
     brier_model = _brier_score(model_probs, outcomes)
     brier_market = _brier_score(market_probs, outcomes)
@@ -123,6 +169,9 @@ def _evaluate_fold(
         "n_train": len(train_df),
         "n_trades_total": len(eval_df),
         "n_trades_evaluated": n_evaluated,
+        # Reported separately so "could not fill" can never again read as "no edge".
+        "n_trades_aborted": int(np.sum(aborted)),
+        "mean_notional_usd": float(np.mean(notionals)) if len(notionals) else float("nan"),
         "edge_mean": edge_mean,
         "edge_ci": list(edge_ci),
         "edge_ci_excludes_zero": edge_ci_excludes_zero,
@@ -147,8 +196,14 @@ def run_walk_forward(
     edge_threshold: float = 0.04,
     taker_fee_bps: float = 0.0,
     max_slippage_frac: float = 0.01,
+    size_to_book: bool = True,
 ) -> dict:
-    """Rolling-origin walk-forward over resolved markets."""
+    """Rolling-origin walk-forward over resolved markets.
+
+    size_to_book caps each fill at the largest notional the book supports within
+    max_slippage_frac, instead of requesting a fixed size and aborting when the
+    book cannot absorb it.
+    """
     df = pd.read_csv(resolved_markets_path, parse_dates=["resolution_date", "entry_date"])
     df = df.sort_values("entry_date").reset_index(drop=True)
 
@@ -158,7 +213,9 @@ def run_walk_forward(
         end = min(start + fold_size, len(df))
         train_df = df.iloc[:start]
         eval_df = df.iloc[start:end]
-        fold_result = _evaluate_fold(train_df, eval_df, edge_threshold)
+        fold_result = _evaluate_fold(
+            train_df, eval_df, edge_threshold, max_slippage_frac, size_to_book
+        )
         fold_result["fold_index"] = len(folds)
         fold_result["eval_rows"] = list(eval_df.index)
         folds.append(fold_result)
@@ -202,10 +259,16 @@ def run_walk_forward(
     delta_ps_all = eval_all["delta_p_at_entry"].values.astype(float)
     model_probs_all = cal_agg.predict_batch(delta_ps_all)
     momentum_probs_all = np.array([_momentum_prob(d) for d in delta_ps_all])
-    cost_terms_all = np.array([_cost_term(row) for _, row in eval_all.iterrows()])
+    cost_results_all = [
+        _cost_term(row, max_slippage_frac, size_to_book)
+        for _, row in eval_all.iterrows()
+    ]
+    cost_terms_all = np.array([c for c, _, _ in cost_results_all])
+    aborted_all = np.array([a for _, a, _ in cost_results_all])
+    notionals_all = np.array([n for _, _, n in cost_results_all])
 
     edges_all = (model_probs_all - market_probs_all) - cost_terms_all
-    mask_all = edges_all > edge_threshold
+    mask_all = (~aborted_all) & (edges_all > edge_threshold)
 
     brier_model_agg = _brier_score(model_probs_all, outcomes_all)
     brier_market_agg = _brier_score(market_probs_all, outcomes_all)
@@ -228,6 +291,8 @@ def run_walk_forward(
         "n_folds": len(folds),
         "n_trades_total": len(df),
         "n_trades_evaluated": n_eval_agg,
+        "n_trades_aborted": int(np.sum(aborted_all)),
+        "mean_notional_usd": float(np.mean(notionals_all)) if len(notionals_all) else float("nan"),
         "edge_mean": edge_mean_agg,
         "edge_ci": list(edge_ci_agg),
         "edge_ci_excludes_zero": edge_ci_excludes_zero_agg,
@@ -252,6 +317,7 @@ def run_walk_forward(
             "edge_threshold": edge_threshold,
             "taker_fee_bps": taker_fee_bps,
             "max_slippage_frac": max_slippage_frac,
+            "size_to_book": size_to_book,
             "has_costs_module": HAS_COSTS,
         },
     }
@@ -300,6 +366,7 @@ def main() -> int:
     agg = report["aggregate"]
     print(f"\n=== Backtest Summary ===")
     print(f"Folds: {agg['n_folds']}  |  Trades total: {agg['n_trades_total']}  |  Trades evaluated: {agg['n_trades_evaluated']}")
+    print(f"Unfillable (aborted): {agg.get('n_trades_aborted', 0)}  |  Mean notional: ${agg.get('mean_notional_usd', float('nan')):.2f}")
     print(f"Edge mean: {agg['edge_mean']:.4f}  |  Edge CI: {agg['edge_ci']}")
     print(f"Brier skill vs market: {agg['brier_skill']:.4f}")
     print(f"Beats market: {agg['beats_market']}  |  Beats momentum: {agg['beats_momentum']}")
