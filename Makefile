@@ -217,7 +217,7 @@ venv-arbitrage:
 	fi
 
 arbitrage-test: venv-arbitrage
-	$(VENV_ARBITRAGE_PYTHON) -m pytest tests/ -q
+	$(VENV_ARBITRAGE_PYTHON) -m pytest tests/ systemic_arbitrage/tests/ -q
 
 arbitrage-calibrate: venv-arbitrage
 	$(VENV_ARBITRAGE_PYTHON) -m systemic_arbitrage.calibrate
