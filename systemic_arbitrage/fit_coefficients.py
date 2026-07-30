@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import logging
 from dataclasses import dataclass
 from pathlib import Path
 from typing import TYPE_CHECKING
@@ -14,6 +15,7 @@ if TYPE_CHECKING:
     from systemic_arbitrage.calibration_map import CalibrationMap
 
 COEFFICIENTS_PATH = Path(__file__).parent / "data" / "reports" / "fitted_coefficients.json"
+logger = logging.getLogger(__name__)
 
 
 @dataclass
@@ -47,10 +49,18 @@ class FittedCoefficients:
     def load(cls) -> "FittedCoefficients":
         """Load from fitted_coefficients.json or return defaults."""
         if not COEFFICIENTS_PATH.exists():
+            logger.warning(
+                "No fitted coefficients found at %s; using defaults",
+                COEFFICIENTS_PATH,
+            )
             return cls()
         try:
             return cls.from_dict(json.loads(COEFFICIENTS_PATH.read_text()))
-        except Exception:
+        except Exception as exc:
+            logger.warning(
+                "Could not load fitted coefficients from %s: %s; using defaults",
+                COEFFICIENTS_PATH, exc,
+            )
             return cls()
 
     def save(self) -> None:
@@ -100,6 +110,10 @@ def fit_from_closed_trades(
 ) -> FittedCoefficients:
     """Fit alpha and beta from closed paper trades via L-BFGS-B on binary cross-entropy."""
     if not trade_log_path.exists():
+        logger.warning(
+            "Trade log %s does not exist; coefficients remain unfitted",
+            trade_log_path,
+        )
         return FittedCoefficients(fitted=False)
 
     lines = [line for line in trade_log_path.read_text().splitlines() if line.strip()]
@@ -116,10 +130,18 @@ def fit_from_closed_trades(
                 pnl = record.get("pnl_usd", 0.0) or 0.0
                 outcome = 1 if pnl > 0 else 0
             closed.append({"snapshot": record["signal_snapshot"], "outcome": int(outcome)})
-        except Exception:
+        except Exception as exc:
+            logger.warning(
+                "Skipping malformed trade record in %s: %s",
+                trade_log_path, exc,
+            )
             continue
 
     if len(closed) < min_trades:
+        logger.warning(
+            "Only %d valid closed trades in %s; need %d, coefficients remain unfitted",
+            len(closed), trade_log_path, min_trades,
+        )
         return FittedCoefficients(n_trades=len(closed), fitted=False)
 
     split = max(1, int(len(closed) * 0.8))
@@ -152,9 +174,16 @@ def fit_from_closed_trades(
         brier_fitted = _brier_score(fitted_probs, val_outcomes)
 
         if np.isnan(brier_default) or brier_default == 0.0:
+            logger.warning(
+                "Default validation Brier score is invalid; coefficients remain unfitted"
+            )
             return FittedCoefficients(n_trades=len(closed), fitted=False)
 
         if brier_fitted >= brier_default:
+            logger.warning(
+                "Fitted coefficients did not improve validation Brier score; "
+                "coefficients remain unfitted"
+            )
             return FittedCoefficients(n_trades=len(closed), fitted=False)
 
         skill_improvement = float((brier_default - brier_fitted) / brier_default)

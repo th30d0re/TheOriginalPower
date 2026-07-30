@@ -7,13 +7,52 @@ before any call to execute_live_session(). Default mode is paper trading.
 from __future__ import annotations
 
 import json
+import logging
 import os
 from pathlib import Path
 from typing import Optional
 
+from systemic_arbitrage.calibration_map import CalibrationMap
+
+logger = logging.getLogger(__name__)
+
 _PACKAGE_ROOT = Path(__file__).resolve().parent
 _REPORTS_DIR = _PACKAGE_ROOT / "data" / "reports"
 _LIVE_LOG_PATH = _PACKAGE_ROOT / "data" / "live_intended_trades.jsonl"
+
+
+def _load_calibration_map() -> CalibrationMap:
+    """Load the newest fitted map, warning before any unfitted fallback."""
+    report_pattern = "backtest_*.json"
+    candidates = sorted(_REPORTS_DIR.glob(report_pattern), reverse=True)
+    if not candidates:
+        logger.warning(
+            "No backtest report matched %r in %s; using unfitted calibration map",
+            report_pattern, _REPORTS_DIR,
+        )
+        return CalibrationMap()
+    for path in candidates:
+        try:
+            data = json.loads(path.read_text())
+            calibration = CalibrationMap.from_dict(
+                data["aggregate"]["calibration_final"]
+            )
+            if calibration.fitted:
+                return calibration
+            logger.warning(
+                "Calibration map at aggregate.calibration_final in %s is unfitted",
+                path,
+            )
+        except Exception as exc:
+            logger.warning(
+                "Could not load aggregate.calibration_final from %s: %s", path, exc
+            )
+    logger.warning(
+        "No fitted calibration map found at aggregate.calibration_final in %s; "
+        "using unfitted calibration map",
+        _REPORTS_DIR,
+    )
+    return CalibrationMap()
 
 
 def _require_live_flag() -> None:
@@ -40,7 +79,11 @@ def _check_promotion_gates(config: dict, trade_log_path: Path) -> tuple[bool, li
                 record = json.loads(line)
                 if record.get("closed"):
                     n_closed += 1
-            except Exception:
+            except Exception as exc:
+                logger.warning(
+                    "Skipping malformed trade record in %s: %s",
+                    trade_log_path, exc,
+                )
                 continue
 
     if n_closed < min_closed:
@@ -48,13 +91,14 @@ def _check_promotion_gates(config: dict, trade_log_path: Path) -> tuple[bool, li
             f"min_closed_trades not met: {n_closed} < {min_closed}"
         )
 
-    candidates = sorted(_REPORTS_DIR.glob("backtest_report*.json"), reverse=True)
+    candidates = sorted(_REPORTS_DIR.glob("backtest_*.json"), reverse=True)
     latest_report: Optional[dict] = None
     for path in candidates:
         try:
             latest_report = json.loads(path.read_text())
             break
-        except Exception:
+        except Exception as exc:
+            logger.warning("Could not parse backtest report %s: %s", path, exc)
             continue
 
     if latest_report is None:
@@ -74,6 +118,10 @@ def _check_promotion_gates(config: dict, trade_log_path: Path) -> tuple[bool, li
         beats_momentum = agg.get("beats_momentum", False)
         if not beats_momentum:
             failed.append("model does not beat momentum baseline")
+
+    calibration_map = _load_calibration_map()
+    if not calibration_map.fitted:
+        failed.append("backtest calibration map is missing or unfitted")
 
     from systemic_arbitrage.fit_coefficients import FittedCoefficients
     coeffs = FittedCoefficients.load()

@@ -1,9 +1,12 @@
 from __future__ import annotations
 
+import logging
 import numpy as np
 from scipy.optimize import minimize
 from scipy.special import expit
 from dataclasses import dataclass
+
+logger = logging.getLogger(__name__)
 
 
 @dataclass
@@ -25,6 +28,10 @@ class CalibrationMap:
         outcomes = np.asarray(outcomes, dtype=float)
 
         if len(delta_p_values) < 5:
+            logger.warning(
+                "Calibration requires at least 5 samples; got %d, map remains unfitted",
+                len(delta_p_values),
+            )
             self.n_samples = len(delta_p_values)
             self.fitted = False
             return self

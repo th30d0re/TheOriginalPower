@@ -20,6 +20,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import logging
 import sys
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -36,6 +37,7 @@ CANDIDATES_CACHE = RAW_DIR / "candidates_2024plus.json"
 ENTRY_PRICE_CACHE = RAW_DIR / "markets_with_entry_price.json"
 TRENDS_CACHE = RAW_DIR / "google_trends_historical.csv"
 OUT_CSV      = BACKTEST_DIR / "resolved_markets.csv"
+logger = logging.getLogger(__name__)
 
 MIN_VOLUME_USD = 1000.0
 MIN_CREATED_AT = "2024-01-01"  # Polymarket CLOB price history starts here
@@ -146,7 +148,11 @@ def classify_markets(events: list[dict]) -> list[dict]:
                 clob_ids = json.loads(clob_raw) if isinstance(clob_raw, str) else clob_raw
                 if not clob_ids:
                     continue
-            except Exception:
+            except Exception as exc:
+                logger.warning(
+                    "Skipping malformed market %r: %s",
+                    m.get("slug") or m.get("question", "<unknown>"), exc,
+                )
                 continue
             seen_slugs.add(slug)
             candidates.append({
@@ -186,9 +192,16 @@ def fetch_entry_prices(candidates: list[dict], use_cache: bool) -> list[dict]:
                 )
                 hist = r.json().get("history", [])
                 if not hist:
+                    logger.warning(
+                        "No CLOB price history found for %s", c.get("slug")
+                    )
                     return None
                 return {**c, "market_prob_at_entry": float(hist[0]["p"]), "n_price_points": len(hist)}
-            except Exception:
+            except Exception as exc:
+                logger.warning(
+                    "CLOB price fetch failed for %s (attempt %d/3): %s",
+                    c.get("slug"), attempt + 1, exc,
+                )
                 time.sleep(0.5 * (attempt + 1))
         return None
 
@@ -261,13 +274,21 @@ def fetch_trends(use_cache: bool) -> pd.DataFrame:
 
 def _signal_at(date_str: str, trends: pd.DataFrame) -> tuple[float, float, float]:
     if trends.empty:
+        logger.warning(
+            "Trends data is empty at %s; using default signals (0.3, 0.0, 0.0)",
+            date_str,
+        )
         return 0.3, 0.0, 0.0
     try:
         dt = pd.Timestamp(date_str).to_period("M").to_timestamp()
         idx = trends.index.get_indexer([dt], method="nearest")[0]
         row = trends.iloc[idx]
         return float(row["O_x"]), float(row["P_real"]), float(row["delta_P"])
-    except Exception:
+    except Exception as exc:
+        logger.warning(
+            "Could not resolve Trends signals at %s: %s; using defaults",
+            date_str, exc,
+        )
         return 0.3, 0.0, 0.0
 
 

@@ -9,6 +9,7 @@ from unittest.mock import MagicMock, patch
 
 import pytest
 
+from systemic_arbitrage.calibration_map import CalibrationMap
 from systemic_arbitrage.polymarket.client import PolymarketClient
 from systemic_arbitrage.risk_controls import RiskState
 from systemic_arbitrage.trigger_engine import IntendedTrade, Side, Trigger
@@ -99,6 +100,35 @@ def test_edge_below_threshold_produces_no_trades():
     # setting a very high threshold forces no trades.
     results = _run_session(dry_run=True, edge_threshold=0.99, market_prob_override=0.50)
     assert results == []
+
+
+def test_paper_run_records_fitted_calibration_provenance():
+    from systemic_arbitrage.paper_trader import run_paper_session
+
+    trade = IntendedTrade(
+        trigger=Trigger.HEAT_SHIELD_REVERSAL,
+        market_slug="test-market",
+        side=Side.LONG,
+        notional_usd=50.0,
+        reason="test",
+    )
+    fitted = CalibrationMap(a=3.0, b=0.0, n_samples=538, fitted=True)
+    with (
+        patch("systemic_arbitrage.paper_trader._load_snapshot",
+              return_value=dict(_SNAPSHOT)),
+        patch("systemic_arbitrage.paper_trader.load_catalog", return_value={}),
+        patch("systemic_arbitrage.paper_trader._load_calibration_map",
+              return_value=fitted),
+        patch("systemic_arbitrage.paper_trader.evaluate_triggers",
+              return_value=[trade]),
+    ):
+        results = run_paper_session(
+            _CONFIG, market_prob_override=0.10, dry_run=True,
+            edge_threshold=0.01,
+        )
+
+    assert len(results) == 1
+    assert results[0]["calibration_map_fitted"] is True
 
 
 def test_risk_controls_block_halted_session():

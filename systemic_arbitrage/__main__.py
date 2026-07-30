@@ -121,7 +121,11 @@ def _run_fit_coefficients(min_trades: int, force: bool) -> int:
                     pnl = record.get("pnl_usd", 0.0) or 0.0
                     outcome = 1 if pnl > 0 else 0
                 closed.append({"snapshot": record["signal_snapshot"], "outcome": int(outcome)})
-            except Exception:
+            except Exception as exc:
+                print(
+                    f"Warning: skipping malformed trade record in {trade_log}: {exc}",
+                    file=sys.stderr,
+                )
                 continue
 
         if len(closed) < min_trades:

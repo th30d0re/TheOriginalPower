@@ -30,16 +30,37 @@ def _load_snapshot() -> dict:
 
 
 def _load_calibration_map() -> CalibrationMap:
-    """Load CalibrationMap from most recent backtest report, or return default."""
-    candidates = sorted(_REPORTS_DIR.glob("backtest_report*.json"), reverse=True)
+    """Load the newest fitted map, warning before any unfitted fallback."""
+    report_pattern = "backtest_*.json"
+    candidates = sorted(_REPORTS_DIR.glob(report_pattern), reverse=True)
+    if not candidates:
+        logger.warning(
+            "No backtest report matched %r in %s; using unfitted calibration map",
+            report_pattern, _REPORTS_DIR,
+        )
+        return CalibrationMap()
     for path in candidates:
         try:
             data = json.loads(path.read_text())
-            if "calibration_map" in data:
-                return CalibrationMap.from_dict(data["calibration_map"])
-        except Exception:
+            calibration = CalibrationMap.from_dict(
+                data["aggregate"]["calibration_final"]
+            )
+            if calibration.fitted:
+                return calibration
+            logger.warning(
+                "Calibration map at aggregate.calibration_final in %s is unfitted",
+                path,
+            )
+        except Exception as exc:
+            logger.warning(
+                "Could not load aggregate.calibration_final from %s: %s", path, exc
+            )
             continue
-    # Fall back to default (identity logistic: predict returns ~0.5 for any input)
+    logger.warning(
+        "No fitted calibration map found at aggregate.calibration_final in %s; "
+        "using unfitted calibration map",
+        _REPORTS_DIR,
+    )
     return CalibrationMap()
 
 
@@ -50,8 +71,10 @@ def _fetch_market_prob(slug: str, timeout: float = 5.0) -> Optional[float]:
             data = json.loads(r.read())
             if data and isinstance(data, list):
                 return float(data[0].get("outcomePrices", ["0.5"])[0])
-    except Exception:
-        pass
+    except Exception as exc:
+        logger.warning(
+            "Market probability request failed for %s: %s", url, exc
+        )
     return None
 
 
@@ -66,6 +89,7 @@ def run_paper_session(
     snapshot = _load_snapshot()
     catalog = load_catalog()
     calibration_map = _load_calibration_map()
+    snapshot["calibration_map_fitted"] = calibration_map.fitted
     risk_controls = RiskControls(config)
     risk_state = RiskState()
     client = PolymarketClient()
@@ -136,6 +160,7 @@ def run_paper_session(
                 "side": trade.side.value,
                 "intended_notional_usd": trade.notional_usd,
                 "model_prob": model_prob,
+                "calibration_map_fitted": calibration_map.fitted,
                 "market_prob": market_prob,
                 "edge": edge,
                 "cost_breakdown": {

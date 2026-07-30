@@ -50,6 +50,7 @@ class PolymarketClient:
             "intended_notional_usd": trade.notional_usd,
             "filled_notional_usd": filled_notional,
             "entry_probability": model_prob,
+            "calibration_map_fitted": signal_snapshot.get("calibration_map_fitted", False),
             "market_prob_at_entry": market_prob,
             "edge_at_entry": edge,
             "realized_fee_usd": cost_breakdown.taker_fee_usd,

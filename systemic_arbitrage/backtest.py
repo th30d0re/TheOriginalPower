@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import logging
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -11,11 +12,16 @@ import pandas as pd
 
 from systemic_arbitrage.calibration_map import CalibrationMap
 
+logger = logging.getLogger(__name__)
+
 try:
     from systemic_arbitrage.costs import compute_costs, total_cost_prob_terms, CostBreakdown
     HAS_COSTS = True
 except ImportError:
     HAS_COSTS = False
+    logger.warning(
+        "systemic_arbitrage.costs unavailable; using half-spread-only costs"
+    )
 
 PACKAGE_ROOT = Path(__file__).resolve().parent
 BACKTEST_CSV = PACKAGE_ROOT / "data" / "backtest" / "resolved_markets.csv"

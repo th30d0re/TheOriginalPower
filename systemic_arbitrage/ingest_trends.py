@@ -7,6 +7,7 @@ spectral pipeline remains testable offline.
 
 from __future__ import annotations
 
+import logging
 import os
 from pathlib import Path
 from typing import Optional
@@ -19,6 +20,7 @@ CONFIG_PATH = PACKAGE_ROOT / "config.yaml"
 VARIABLES_PATH = PACKAGE_ROOT / "variables.yaml"
 RAW_DIR = PACKAGE_ROOT / "data" / "raw"
 FALLBACK_CSV = RAW_DIR / "google_trends_snapshot.csv"
+logger = logging.getLogger(__name__)
 
 
 def load_config() -> dict:
@@ -99,6 +101,10 @@ def ingest_baskets(
     except Exception as exc:  # pragma: no cover - network path
         if not fallback_on_error:
             raise
+        logger.warning(
+            "Live Trends fetch failed (%s); loading fallback snapshot %s",
+            exc, FALLBACK_CSV,
+        )
         raw = load_fallback_snapshot()
 
     df = pd.DataFrame(index=raw.index)
