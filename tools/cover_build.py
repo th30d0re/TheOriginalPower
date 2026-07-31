@@ -65,9 +65,10 @@ def defs() -> str:
     inductor = " ".join(d)
 
     # Even zigzag: half-step in, six full alternating strokes, half-step out.
-    amp, step = 10, 6
+    # Six alternating strokes so the tail lands back on the centreline at y=0.
+    amp, step = 9, 6
     zig = ["M 0 0", f"l {step/2} {-amp}"]
-    for i in range(5):
+    for i in range(6):
         zig.append(f"l {step} {2*amp if i % 2 == 0 else -2*amp}")
     zig.append(f"l {step/2} {amp}")
     resistor = " ".join(zig)
@@ -107,9 +108,9 @@ def defs() -> str:
        stepped stack, and OPENS at the peak. Drawn pointing "up"; the bottom
        border instances it flipped. -->
   <symbol id="s-stack" overflow="visible">
-    <path class="wire" d="M -150 0 L -74 0 L -13 -56"/>
-    <path class="wire" d="M 150 0 L 74 0 L 13 -56"/>
-    <path class="wire" d="M -60 -8 l 120 0 M -48 -20 l 96 0 M -36 -32 l 72 0 M -24 -44 l 48 0"/>
+    <path class="wire" d="M -150 0 L -78 0 L -14 -60"/>
+    <path class="wire" d="M 150 0 L 78 0 L 14 -60"/>
+    <path class="wire" d="M -50 -10 l 100 0 M -40 -22 l 80 0 M -30 -34 l 60 0 M -20 -46 l 40 0"/>
   </symbol>
   <!-- ground: stacked rules, narrowing downward -->
   <symbol id="s-ground" overflow="visible">
@@ -145,7 +146,7 @@ def border() -> str:
     top, bot = m, H - m
     left, right = m, W - m
     cx = W / 2
-    corner_in = 118          # how far in from a corner the perpendicular pair sits
+    corner_in = 74          # how far in from a corner the perpendicular pair sits
     out = []
 
     def run_h(y, x0, x1, items):
@@ -190,7 +191,8 @@ def border() -> str:
                 out.append(f'  <use xlink:href="#s-cap" transform="translate({kpos - CAP/2:.1f},{y})"/>\n')
                 seg_h(y, kpos + CAP / 2, xb)
         # centre stack, flipped for the bottom rail
-        fl = "" if flip > 0 else f" scale(1,-1)"
+        # Apexes point inward: the top element hangs down, the bottom rises up.
+        fl = " scale(1,-1)" if flip > 0 else ""
         out.append(f'  <g transform="translate({cx},{y}){fl}"><use xlink:href="#s-stack"/></g>\n')
 
     # ── the perpendicular terminations: vertical inductors hanging off each rail end
@@ -199,24 +201,31 @@ def border() -> str:
             out.append(f'  <g transform="translate({x},{y}) rotate({90*ydir})">'
                        f'<use xlink:href="#s-coil"/></g>\n')
 
-    # ── side rails: straight vertical, an inductor at each end ──
+    # ── side rails: an inductor at each end, then a continuous populated run ──
     for x in (left, right):
         out.append(f'  <g transform="translate({x},{top}) rotate(90)">'
                    f'<use xlink:href="#s-coil"/></g>\n')
         out.append(f'  <g transform="translate({x},{bot}) rotate(-90)">'
                    f'<use xlink:href="#s-coil"/></g>\n')
         y0, y1 = top + COIL, bot - COIL
-        out.append(use("s-arrow", x, y0 + 60))
-        seg_v(x, y0, y0 + 130)
-        out.append(f'  <g transform="translate({x},{y0+130}) rotate(90)">'
-                   f'<use xlink:href="#s-res"/></g>\n')
-        seg_v(x, y0 + 130 + RES, (top + bot) / 2 - 60)
-        out.append(use("s-junction", x, (top + bot) / 2))
-        seg_v(x, (top + bot) / 2 + 8, y1 - 130 - RES)
-        out.append(f'  <g transform="translate({x},{y1-130-RES}) rotate(90)">'
-                   f'<use xlink:href="#s-res"/></g>\n')
-        seg_v(x, y1 - 130, y1)
-        out.append(use("s-arrow", x, y1 - 60))
+        # Distribute components down the rail and wire every gap between them.
+        items = [("s-arrow", 0), ("s-res", RES), ("s-cap", CAP), ("s-junction", 0),
+                 ("s-coil", COIL), ("s-junction", 0), ("s-cap", CAP), ("s-res", RES),
+                 ("s-arrow", 0)]
+        span = y1 - y0
+        occupied = sum(ln for _, ln in items)
+        gap = (span - occupied) / (len(items) + 1)
+        cur = y0
+        for sym, ln in items:
+            cur += gap
+            seg_v(x, cur - gap, cur)
+            if ln:
+                out.append(f'  <g transform="translate({x},{cur:.1f}) rotate(90)">'
+                           f'<use xlink:href="#{sym}"/></g>\n')
+                cur += ln
+            else:
+                out.append(use(sym, x, cur))
+        seg_v(x, cur, y1)
     return "".join(out)
 
 
@@ -322,8 +331,8 @@ def build(palette: str) -> str:
         f'font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-weight="700" '
         f'font-size="74" letter-spacing="3">THE ORIGINAL POWER</text>\n'
         f'  <text x="{cx}" y="352" text-anchor="middle" fill="var(--accent)" '
-        f'font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="26" '
-        f'letter-spacing="6">THE PHYSICS OF OPPRESSION AND THE ENGINEERING OF CONTROL</text>\n'
+        f'font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="17" '
+        f'letter-spacing="2">THE PHYSICS OF OPPRESSION AND THE ENGINEERING OF CONTROL</text>\n'
     )
     title_od = (
         f'  <text x="{cx}" y="300" text-anchor="middle" fill="var(--ink)" '

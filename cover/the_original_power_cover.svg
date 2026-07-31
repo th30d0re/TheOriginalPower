@@ -23,7 +23,7 @@
 
   <!-- inductor: 4 loops, 82 long -->
   <symbol id="s-coil" overflow="visible"><path class="wire" d="M 0 0 a 9 9 0 0 1 18 0 a 9 9 0 0 1 18 0 a 9 9 0 0 1 18 0 a 9 9 0 0 1 18 0 l 10 0"/></symbol>
-  <symbol id="s-res"  overflow="visible"><path class="wire" d="M 0 0 l 3.0 -10 l 6 20 l 6 -20 l 6 20 l 6 -20 l 6 20 l 3.0 10"/></symbol>
+  <symbol id="s-res"  overflow="visible"><path class="wire" d="M 0 0 l 3.0 -9 l 6 18 l 6 -18 l 6 18 l 6 -18 l 6 18 l 6 -18 l 3.0 9"/></symbol>
   <symbol id="s-cap"  overflow="visible">
     <path class="wire" d="M 0 0 l 12 0 M 12 -17 l 0 34 M 26 -17 l 0 34 M 26 0 l 12 0"/>
   </symbol>
@@ -37,9 +37,9 @@
        stepped stack, and OPENS at the peak. Drawn pointing "up"; the bottom
        border instances it flipped. -->
   <symbol id="s-stack" overflow="visible">
-    <path class="wire" d="M -150 0 L -74 0 L -13 -56"/>
-    <path class="wire" d="M 150 0 L 74 0 L 13 -56"/>
-    <path class="wire" d="M -60 -8 l 120 0 M -48 -20 l 96 0 M -36 -32 l 72 0 M -24 -44 l 48 0"/>
+    <path class="wire" d="M -150 0 L -78 0 L -14 -60"/>
+    <path class="wire" d="M 150 0 L 78 0 L 14 -60"/>
+    <path class="wire" d="M -50 -10 l 100 0 M -40 -22 l 80 0 M -30 -34 l 60 0 M -20 -46 l 40 0"/>
   </symbol>
   <!-- ground: stacked rules, narrowing downward -->
   <symbol id="s-ground" overflow="visible">
@@ -52,56 +52,76 @@
 </g>
 
 <g id="layer-border" inkscape:groupmode="layer" inkscape:label="10 border circuit" style="display:inline">
-  <path class="wire" d="M 192.0 74 L 251.0 74"/>
+  <path class="wire" d="M 148.0 74 L 251.0 74"/>
   <use xlink:href="#s-cap" transform="translate(251.0,74)"/>
   <path class="wire" d="M 289.0 74 L 369.0 74"/>
   <use xlink:href="#s-coil" transform="translate(369.0,74)"/>
   <use xlink:href="#s-coil" transform="translate(749.0,74)"/>
   <path class="wire" d="M 831.0 74 L 911.0 74"/>
   <use xlink:href="#s-cap" transform="translate(911.0,74)"/>
-  <path class="wire" d="M 949.0 74 L 1008.0 74"/>
-  <g transform="translate(600.0,74)"><use xlink:href="#s-stack"/></g>
-  <path class="wire" d="M 192.0 1526 L 251.0 1526"/>
+  <path class="wire" d="M 949.0 74 L 1052.0 74"/>
+  <g transform="translate(600.0,74) scale(1,-1)"><use xlink:href="#s-stack"/></g>
+  <path class="wire" d="M 148.0 1526 L 251.0 1526"/>
   <use xlink:href="#s-cap" transform="translate(251.0,1526)"/>
   <path class="wire" d="M 289.0 1526 L 369.0 1526"/>
   <use xlink:href="#s-coil" transform="translate(369.0,1526)"/>
   <use xlink:href="#s-coil" transform="translate(749.0,1526)"/>
   <path class="wire" d="M 831.0 1526 L 911.0 1526"/>
   <use xlink:href="#s-cap" transform="translate(911.0,1526)"/>
-  <path class="wire" d="M 949.0 1526 L 1008.0 1526"/>
-  <g transform="translate(600.0,1526) scale(1,-1)"><use xlink:href="#s-stack"/></g>
-  <g transform="translate(192,74) rotate(90)"><use xlink:href="#s-coil"/></g>
-  <g transform="translate(1008,74) rotate(90)"><use xlink:href="#s-coil"/></g>
-  <g transform="translate(192,1526) rotate(-90)"><use xlink:href="#s-coil"/></g>
-  <g transform="translate(1008,1526) rotate(-90)"><use xlink:href="#s-coil"/></g>
+  <path class="wire" d="M 949.0 1526 L 1052.0 1526"/>
+  <g transform="translate(600.0,1526)"><use xlink:href="#s-stack"/></g>
+  <g transform="translate(148,74) rotate(90)"><use xlink:href="#s-coil"/></g>
+  <g transform="translate(1052,74) rotate(90)"><use xlink:href="#s-coil"/></g>
+  <g transform="translate(148,1526) rotate(-90)"><use xlink:href="#s-coil"/></g>
+  <g transform="translate(1052,1526) rotate(-90)"><use xlink:href="#s-coil"/></g>
   <g transform="translate(74,74) rotate(90)"><use xlink:href="#s-coil"/></g>
   <g transform="translate(74,1526) rotate(-90)"><use xlink:href="#s-coil"/></g>
-  <use xlink:href="#s-arrow" transform="translate(74.0,216.0)"/>
-  <path class="wire" d="M 74 156.0 L 74 286.0"/>
-  <g transform="translate(74,286) rotate(90)"><use xlink:href="#s-res"/></g>
-  <path class="wire" d="M 74 322.0 L 74 740.0"/>
-  <use xlink:href="#s-junction" transform="translate(74.0,800.0)"/>
-  <path class="wire" d="M 74 808.0 L 74 1278.0"/>
-  <g transform="translate(74,1278) rotate(90)"><use xlink:href="#s-res"/></g>
-  <path class="wire" d="M 74 1314.0 L 74 1444.0"/>
-  <use xlink:href="#s-arrow" transform="translate(74.0,1384.0)"/>
+  <path class="wire" d="M 74 156.0 L 74 261.8"/>
+  <use xlink:href="#s-arrow" transform="translate(74.0,261.8)"/>
+  <path class="wire" d="M 74 261.8 L 74 367.6"/>
+  <g transform="translate(74,367.6) rotate(90)"><use xlink:href="#s-res"/></g>
+  <path class="wire" d="M 74 403.6 L 74 509.4"/>
+  <g transform="translate(74,509.4) rotate(90)"><use xlink:href="#s-cap"/></g>
+  <path class="wire" d="M 74 547.4 L 74 653.2"/>
+  <use xlink:href="#s-junction" transform="translate(74.0,653.2)"/>
+  <path class="wire" d="M 74 653.2 L 74 759.0"/>
+  <g transform="translate(74,759.0) rotate(90)"><use xlink:href="#s-coil"/></g>
+  <path class="wire" d="M 74 841.0 L 74 946.8"/>
+  <use xlink:href="#s-junction" transform="translate(74.0,946.8)"/>
+  <path class="wire" d="M 74 946.8 L 74 1052.6"/>
+  <g transform="translate(74,1052.6) rotate(90)"><use xlink:href="#s-cap"/></g>
+  <path class="wire" d="M 74 1090.6 L 74 1196.4"/>
+  <g transform="translate(74,1196.4) rotate(90)"><use xlink:href="#s-res"/></g>
+  <path class="wire" d="M 74 1232.4 L 74 1338.2"/>
+  <use xlink:href="#s-arrow" transform="translate(74.0,1338.2)"/>
+  <path class="wire" d="M 74 1338.2 L 74 1444.0"/>
   <g transform="translate(1126,74) rotate(90)"><use xlink:href="#s-coil"/></g>
   <g transform="translate(1126,1526) rotate(-90)"><use xlink:href="#s-coil"/></g>
-  <use xlink:href="#s-arrow" transform="translate(1126.0,216.0)"/>
-  <path class="wire" d="M 1126 156.0 L 1126 286.0"/>
-  <g transform="translate(1126,286) rotate(90)"><use xlink:href="#s-res"/></g>
-  <path class="wire" d="M 1126 322.0 L 1126 740.0"/>
-  <use xlink:href="#s-junction" transform="translate(1126.0,800.0)"/>
-  <path class="wire" d="M 1126 808.0 L 1126 1278.0"/>
-  <g transform="translate(1126,1278) rotate(90)"><use xlink:href="#s-res"/></g>
-  <path class="wire" d="M 1126 1314.0 L 1126 1444.0"/>
-  <use xlink:href="#s-arrow" transform="translate(1126.0,1384.0)"/>
+  <path class="wire" d="M 1126 156.0 L 1126 261.8"/>
+  <use xlink:href="#s-arrow" transform="translate(1126.0,261.8)"/>
+  <path class="wire" d="M 1126 261.8 L 1126 367.6"/>
+  <g transform="translate(1126,367.6) rotate(90)"><use xlink:href="#s-res"/></g>
+  <path class="wire" d="M 1126 403.6 L 1126 509.4"/>
+  <g transform="translate(1126,509.4) rotate(90)"><use xlink:href="#s-cap"/></g>
+  <path class="wire" d="M 1126 547.4 L 1126 653.2"/>
+  <use xlink:href="#s-junction" transform="translate(1126.0,653.2)"/>
+  <path class="wire" d="M 1126 653.2 L 1126 759.0"/>
+  <g transform="translate(1126,759.0) rotate(90)"><use xlink:href="#s-coil"/></g>
+  <path class="wire" d="M 1126 841.0 L 1126 946.8"/>
+  <use xlink:href="#s-junction" transform="translate(1126.0,946.8)"/>
+  <path class="wire" d="M 1126 946.8 L 1126 1052.6"/>
+  <g transform="translate(1126,1052.6) rotate(90)"><use xlink:href="#s-cap"/></g>
+  <path class="wire" d="M 1126 1090.6 L 1126 1196.4"/>
+  <g transform="translate(1126,1196.4) rotate(90)"><use xlink:href="#s-res"/></g>
+  <path class="wire" d="M 1126 1232.4 L 1126 1338.2"/>
+  <use xlink:href="#s-arrow" transform="translate(1126.0,1338.2)"/>
+  <path class="wire" d="M 1126 1338.2 L 1126 1444.0"/>
 
 </g>
 
 <g id="layer-title" inkscape:groupmode="layer" inkscape:label="20 title (standard)" style="display:inline">
   <text x="600.0" y="300" text-anchor="middle" fill="var(--ink)" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-weight="700" font-size="74" letter-spacing="3">THE ORIGINAL POWER</text>
-  <text x="600.0" y="352" text-anchor="middle" fill="var(--accent)" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="26" letter-spacing="6">THE PHYSICS OF OPPRESSION AND THE ENGINEERING OF CONTROL</text>
+  <text x="600.0" y="352" text-anchor="middle" fill="var(--accent)" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="17" letter-spacing="2">THE PHYSICS OF OPPRESSION AND THE ENGINEERING OF CONTROL</text>
 
 </g>
 
