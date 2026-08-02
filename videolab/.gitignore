@@ -2,3 +2,4 @@ jobs/*/media/
 jobs-private/
 .venv-videolab/
 logs/
+site/

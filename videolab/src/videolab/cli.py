@@ -21,6 +21,7 @@ from .containers import ContainerError, run_derive, run_fetch
 from .cookies import refresh_cookies
 from .instagram import IngestBatch, finish_message_attempts, ingest_dms
 from .report import write_report
+from .site import build_site
 from .watch import install_watch, uninstall_watch, watch_status
 
 try:
@@ -480,6 +481,11 @@ def build_parser() -> argparse.ArgumentParser:
     watch_install.add_argument("--interval-minutes", type=int, default=15)
     watch_subparsers.add_parser("uninstall")
     watch_subparsers.add_parser("status")
+    site_parser = subparsers.add_parser("site")
+    site_subparsers = site_parser.add_subparsers(dest="site_command", required=True)
+    site_build = site_subparsers.add_parser("build")
+    site_build.add_argument("--out", type=Path)
+    site_build.add_argument("--include-private", action="store_true")
     return parser
 
 
@@ -523,6 +529,13 @@ def main(argv: list[str] | None = None) -> int:
                 result = uninstall_watch()
             else:
                 result = watch_status(config)
+        elif args.command == "site":
+            output = build_site(
+                config,
+                args.out,
+                include_private=args.include_private,
+            )
+            result = {"ok": True, "file": str(output)}
         else:
             result = {"ok": True, "slug": ingest(config, args.source, frames=args.frames, ocr=not args.no_ocr, asr_mode=args.asr)}
         print(json.dumps(result, indent=2))

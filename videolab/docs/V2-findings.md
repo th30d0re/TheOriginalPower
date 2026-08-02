@@ -268,3 +268,52 @@ retry outcomes through ingestion and watcher status.
 4. Persist watcher summaries in a dedicated atomic status file.
 5. Add structured failure codes to fetch-stage detail for downstream automation.
 6. Add age-based pruning for completed cursor entries and abandoned records.
+
+## Loop 8 — Self-Contained Job Viewer
+
+### What Was Requested
+
+Build a portable HTML viewer for videolab job artifacts. Keep private jobs excluded by default,
+inline resized frames, preserve missing engagement values, and treat every artifact value as
+untrusted input.
+
+### Work Performed
+
+1. Added a generator that discovers public jobs and optionally includes the private job root.
+2. Rendered newest-first navigation, stage health, engagement, transcripts, OCR deduplication,
+   frame grids, content analysis, framework notes, and tier classifications.
+3. Escaped artifact values before HTML interpolation and restricted source links to HTTP and HTTPS.
+4. Re-encoded frames as JPEG at quality 80 and limited embedded image width to 640 pixels.
+5. Added inline responsive styles, dark-mode support, job selection, transcript copying, and frame
+   enlargement without external assets or frameworks.
+6. Wired `videolab site build`, added the `--out` and `--include-private` options, and ignored the
+   generated `site/` directory.
+7. Added regression tests for portability, escaping, unsafe URLs, metric semantics, privacy,
+   ordering, OCR deduplication, image scaling, and CLI dispatch.
+
+### Challenges Encountered
+
+1. The required Obsidian session-log directory is outside the writable sandbox. This findings
+   section contains the durable session record.
+2. The user assigned commit ownership to the orchestrator, so the required pre-edit checkpoint
+   could not be created.
+3. Portable frame embedding requires deterministic image decoding and JPEG encoding; Pillow now
+   supplies that operation.
+
+### Validation Notes
+
+- The complete required suite passes: 101 tests in 2.66 seconds under the specified interpreter.
+- A generated artifact contained two public jobs, no private markers, and no HTTP references
+  outside validated anchor `href` attributes. The committed jobs have no local frame media, so
+  fixture coverage validates JPEG conversion and 640-pixel scaling.
+- `git diff --check` passes.
+- No Instagram CLI, launch service, container command, or network fetch runs during validation.
+
+### Next Ideas (6 Ideas)
+
+1. Add client-side transcript and OCR search.
+2. Add platform and stage-health filters to the job rail.
+3. Add keyboard navigation between jobs and frames.
+4. Add optional stage-duration summaries from recorded timestamps.
+5. Add a compact print stylesheet for transcript review.
+6. Add schema warnings for malformed artifacts that the viewer skips safely.
