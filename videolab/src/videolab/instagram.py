@@ -11,6 +11,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+from .slugs import Source, UnsupportedSourceError, parse_source, slug_for
+
 
 CLIResult = subprocess.CompletedProcess[str]
 CLIRunner = Callable[[Sequence[str]], CLIResult]
@@ -18,6 +20,7 @@ INSTAGRAM_CLI_TIMEOUT_SECONDS = 60
 
 DEFAULT_CURSOR = Path.home() / ".config" / "videolab" / "instagram-cursor.json"
 DEFAULT_JOBS = Path(__file__).resolve().parents[2] / "jobs-private"
+DEFAULT_PUBLIC_JOBS = Path(__file__).resolve().parents[2] / "jobs"
 MEDIA_ITEM_TYPES = frozenset(
     {
         "clip",
@@ -35,6 +38,8 @@ _INSTAGRAM_URL = re.compile(
     r"https?://(?:www\.)?instagram\.com/(?:reel|reels|p)/([A-Za-z0-9_-]+)(?:[/?#]|$)",
     re.IGNORECASE,
 )
+_TEXT_URL = re.compile(r"https?://[^\s<>\"']+", re.IGNORECASE)
+_TRAILING_URL_PUNCTUATION = ".,;:!?)]}"
 
 
 class InstagramCLIError(RuntimeError):
@@ -161,6 +166,24 @@ def _permalink(message: Mapping[str, Any]) -> str | None:
         if match:
             return match.group(0).split("?", 1)[0].rstrip("/") + "/"
     return None
+
+
+def _text_urls(message: Mapping[str, Any]) -> list[Source]:
+    """Return every supported video URL from an ordinary text message."""
+
+    text = _field(message, "text")
+    if not isinstance(text, str):
+        return []
+    sources: list[Source] = []
+    for match in _TEXT_URL.finditer(text):
+        candidate = match.group(0).rstrip(_TRAILING_URL_PUNCTUATION)
+        try:
+            source = parse_source(candidate)
+        except UnsupportedSourceError:
+            continue
+        if source.kind == "url":
+            sources.append(source)
+    return sources
 
 
 def _nested_text(message: Mapping[str, Any], names: set[str]) -> str | None:
@@ -355,6 +378,32 @@ def _matches_thread(thread: Mapping[str, Any], query: str) -> bool:
     return _thread_id(thread) == query
 
 
+def _url_job_document(
+    source: Source, slug: str, message: Mapping[str, Any], created_at: str
+) -> dict[str, Any]:
+    pending = {
+        "status": "pending", "engine": None, "detail": {},
+        "started_at": None, "ended_at": None, "error": None,
+    }
+    source_document = {
+        "kind": source.kind, "platform": source.platform, "id": source.id,
+        "url": source.url, "path": source.path, "via": "self-dm",
+    }
+    message_timestamp = _field(message, "timestamp", "created_at", "sent_at")
+    fetch = dict(pending)
+    fetch["engine"] = "yt-dlp"
+    fetch["detail"] = {
+        "message_id": _message_id(message),
+        "timestamp": message_timestamp,
+    }
+    return {
+        "schema_version": 1, "slug": slug, "source": source_document,
+        "created_at": created_at,
+        "stages": {"fetch": fetch, "derive": dict(pending),
+                   "asr": dict(pending), "report": dict(pending)},
+    }
+
+
 def _account_names(authenticated_account: Any) -> set[str]:
     names: set[str] = set()
     if isinstance(authenticated_account, Mapping):
@@ -438,6 +487,7 @@ def ingest_dms(
     *,
     cursor_path: Path | None = None,
     jobs_root: Path | None = None,
+    public_jobs_root: Path | None = None,
     runner: CLIRunner | None = None,
 ) -> list[str]:
     """Download unseen media-bearing DMs and return their new job slugs.
@@ -463,6 +513,7 @@ def ingest_dms(
     )
     seen_path = cursor_path or DEFAULT_CURSOR
     root = jobs_root or DEFAULT_JOBS
+    public_root = public_jobs_root or DEFAULT_PUBLIC_JOBS
     if jobs_root is None:
         root.mkdir(mode=0o700, parents=True, exist_ok=True)
         root.chmod(0o700)
@@ -487,7 +538,26 @@ def ingest_dms(
         messages = _messages(_run_json(execute, read_argv))
         for message in reversed(messages):
             message_id = _message_id(message)
-            if not message_id or message_id in seen or _item_type(message) not in MEDIA_ITEM_TYPES:
+            if not message_id or message_id in seen:
+                continue
+            text_sources = (
+                [] if _item_type(message) in MEDIA_ITEM_TYPES else _text_urls(message)
+            )
+            if text_sources:
+                timestamp = _utc_now()
+                for source in text_sources:
+                    slug = slug_for(source)
+                    job_dir = public_root / slug
+                    job_dir.mkdir(parents=True, exist_ok=True)
+                    (job_dir / "media").mkdir(exist_ok=True)
+                    if not (job_dir / "job.json").exists():
+                        document = _url_job_document(source, slug, message, timestamp)
+                        _write_json(job_dir / "job.json", document)
+                    created.append(slug)
+                seen.add(message_id)
+                _write_cursor(seen_path, seen)
+                continue
+            if _item_type(message) not in MEDIA_ITEM_TYPES:
                 continue
             slug = _slug_for_message(message)
             job_dir = root / slug

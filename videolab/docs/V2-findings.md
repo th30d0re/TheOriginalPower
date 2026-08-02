@@ -175,3 +175,44 @@ watcher with install, uninstall, and status commands.
 4. Add rotation limits for watcher stdout and stderr logs.
 5. Add schema fixtures for future `auth whoami` JSON output.
 6. Add a dry-run command that reports the selected self-thread id without reading its messages.
+
+## Loop 6 — Video URLs in Self-Thread Text
+
+### What Was Requested
+
+Recognize supported video URLs pasted into self-thread text messages, route them to the public
+job root, run the normal URL pipeline, isolate fetch failures per URL, and retain direct-upload
+DM behavior in the private root.
+
+### Work Performed
+
+1. Added generic HTTP URL candidate extraction and delegated platform validation to
+   `slugs.parse_source`, preserving case-sensitive platform ids and removing share queries.
+2. Created text-URL jobs under `jobs/` with `source.via = "self-dm"` and limited fetch-stage
+   provenance containing the originating message id and timestamp.
+3. Kept direct-upload jobs, media downloads, and `dm.json` under `jobs-private/`.
+4. Routed public text-URL jobs through `run_fetch` and the shared post-fetch pipeline.
+5. Recorded actionable Instagram cookie failures per job and continued with remaining URLs.
+6. Reported complete, succeeded, and failed slug groups from the CLI command.
+
+### Challenges Encountered
+
+1. Fetch-stage updates from the container replace stage detail, so the host restores the limited
+   self-thread provenance after each fetch attempt.
+2. The required Obsidian session-log directory is outside the writable sandbox.
+3. Live Instagram, network, and launch service commands remained outside validation scope.
+
+### Validation Notes
+
+- Added isolated tests for URL extraction, public routing, minimized provenance, cursor behavior,
+  direct-upload privacy, failure recording, and batch continuation.
+- No `instagram-cli`, `launchctl`, or network fetch command ran during implementation.
+
+### Next Ideas (6 Ideas)
+
+1. Add URL deduplication within one message while retaining source order.
+2. Add structured fetch error categories alongside operator-facing remedies.
+3. Add cursor transaction recovery for interruption between staging and fetch.
+4. Add mixed supported and unsupported URL coverage in one message.
+5. Add public-job collision diagnostics for links previously ingested elsewhere.
+6. Add watcher summaries that retain recent partial-batch outcomes.

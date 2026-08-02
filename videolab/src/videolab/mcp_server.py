@@ -223,6 +223,7 @@ def videolab_ingest_dms(
         all_threads=all_threads,
         mark_seen=mark_seen,
         jobs_root=_private_jobs_root(),
+        public_jobs_root=_jobs_root(),
     )
     return {"count": len(slugs), "slugs": slugs}
 

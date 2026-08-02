@@ -126,6 +126,7 @@ def _record_stage(
     engine: str,
     detail: dict[str, Any],
     started_at: str,
+    error: str | None = None,
 ) -> None:
     """Rewrite one stage block in job.json, leaving the others untouched."""
     path = job_dir / "job.json"
@@ -138,7 +139,7 @@ def _record_stage(
         "detail": detail,
         "started_at": started_at,
         "ended_at": _utc_now(),
-        "error": None,
+        "error": error,
     }
     path.write_text(json.dumps(job, indent=2) + "\n", encoding="utf-8")
 
@@ -217,11 +218,51 @@ def ingest_dm_jobs(
         all_threads=all_threads,
         mark_seen=mark_seen,
         jobs_root=config.private_jobs_dir,
+        public_jobs_root=config.jobs_dir,
     )
     for slug in slugs:
+        public_job = config.jobs_dir / slug
+        private_job = config.private_jobs_dir / slug
+        job_dir = public_job if (public_job / "job.json").is_file() else private_job
+        if not (job_dir / "job.json").is_file():
+            _run_post_fetch_pipeline(config, job_dir, frames=12, ocr=True)
+            continue
+        job = json.loads((job_dir / "job.json").read_text(encoding="utf-8"))
+        source_data = job.get("source", {})
+        if source_data.get("kind") == "url":
+            fetch_started = _utc_now()
+            fetch_detail = dict(job.get("stages", {}).get("fetch", {}).get("detail", {}))
+            platform = str(source_data.get("platform", ""))
+            source_url = str(source_data.get("url", ""))
+            cookie = config.cookie_file(_cookie_domain(Source(
+                kind="url", platform=platform, id=str(source_data.get("id", "")),
+                url=source_url, path=None,
+            )))
+            try:
+                result = run_fetch(
+                    config, job_dir, source_url, cookie if cookie.is_file() else None
+                )
+                fetch_detail.update({k: v for k, v in result.items() if k != "ok"})
+                _record_stage(
+                    job_dir, "fetch", status="ok", engine="yt-dlp",
+                    detail=fetch_detail, started_at=fetch_started,
+                )
+            except (ContainerError, RuntimeError, OSError) as exc:
+                error = str(exc)
+                if platform == "instagram":
+                    error = (
+                        "Instagram fetch likely failed because cookies are unavailable or stale. "
+                        "Run `videolab cookies refresh --browser safari --domain instagram.com` "
+                        "with Full Disk Access, then retry. Fetch detail: " + error
+                    )
+                _record_stage(
+                    job_dir, "fetch", status="error", engine="yt-dlp",
+                    detail=fetch_detail, started_at=fetch_started, error=error,
+                )
+                continue
         _run_post_fetch_pipeline(
             config,
-            config.private_jobs_dir / slug,
+            job_dir,
             frames=12,
             ocr=True,
         )
@@ -378,7 +419,19 @@ def main(argv: list[str] | None = None) -> int:
                 all_threads=args.all_threads,
                 mark_seen=args.mark_seen,
             )
-            result = {"ok": True, "count": len(slugs), "slugs": slugs}
+            failed = []
+            for slug in slugs:
+                job_dir = config.jobs_dir / slug
+                if not (job_dir / "job.json").is_file():
+                    job_dir = config.private_jobs_dir / slug
+                job = json.loads((job_dir / "job.json").read_text(encoding="utf-8"))
+                if job.get("stages", {}).get("fetch", {}).get("status") == "error":
+                    failed.append(slug)
+            result = {
+                "ok": not failed, "count": len(slugs), "slugs": slugs,
+                "succeeded": [slug for slug in slugs if slug not in failed],
+                "failed": failed,
+            }
         elif args.command == "watch":
             if args.watch_command == "install":
                 result = install_watch(config, args.interval_minutes)

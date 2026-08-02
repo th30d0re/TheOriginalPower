@@ -117,18 +117,33 @@ class StubCLI:
         return self._result(args, stdout=json.dumps({"ok": True, "data": data}))
 
 
+class TextCLI(StubCLI):
+    def __init__(self, messages: list[dict[str, Any]]) -> None:
+        super().__init__()
+        self.messages = messages
+
+    def __call__(self, argv: Any) -> subprocess.CompletedProcess[str]:
+        args = list(argv)
+        if args[1:3] == ["read", THREAD_ID] and "--download" not in args:
+            self.calls.append(args)
+            return self._json(args, {"thread": {"items": self.messages}})
+        return super().__call__(args)
+
+
 def test_same_message_twice_creates_one_job(tmp_path: Path) -> None:
     cli = StubCLI()
     cursor = tmp_path / "config" / "cursor.json"
     jobs = tmp_path / "jobs"
+    public = tmp_path / "public"
 
-    first = ingest_dms(cursor_path=cursor, jobs_root=jobs, runner=cli)
-    second = ingest_dms(cursor_path=cursor, jobs_root=jobs, runner=cli)
+    first = ingest_dms(cursor_path=cursor, jobs_root=jobs, public_jobs_root=public, runner=cli)
+    second = ingest_dms(cursor_path=cursor, jobs_root=jobs, public_jobs_root=public, runner=cli)
 
     assert first == ["instagram-DZtCPIRPT87"]
     assert second == []
     assert (jobs / first[0] / "media" / "video.mp4").read_bytes() == b"fake mp4"
     assert sum("--download" in call for call in cli.calls) == 1
+    assert not public.exists()
     assert json.loads(cursor.read_text())["seen_message_ids"] == [MESSAGE_ID]
 
     dm = json.loads((jobs / first[0] / "dm.json").read_text())
@@ -154,6 +169,33 @@ def test_ingest_dms_uses_private_root_by_default(tmp_path: Path, monkeypatch: py
     assert private_root.stat().st_mode & 0o777 == 0o700
 
 
+def test_text_reel_url_creates_public_job_without_dm_provenance(tmp_path: Path) -> None:
+    message = {
+        "message_id": "text-reel", "item_type": "text",
+        "timestamp": "2026-08-01T21:00:00Z",
+        "text": "https://www.instagram.com/reel/CaseKept42/?igsh=invented",
+    }
+    public = tmp_path / "jobs"
+    private = tmp_path / "jobs-private"
+    slugs = ingest_dms(
+        cursor_path=tmp_path / "cursor.json", jobs_root=private,
+        public_jobs_root=public, runner=TextCLI([message]),
+    )
+    assert slugs == ["instagram-CaseKept42"]
+    job_dir = public / slugs[0]
+    assert not (job_dir / "dm.json").exists()
+    assert not (private / slugs[0]).exists()
+    job = json.loads((job_dir / "job.json").read_text())
+    assert job["source"]["via"] == "self-dm"
+    assert job["source"]["url"].endswith("/reel/CaseKept42/")
+    assert job["stages"]["fetch"]["detail"] == {
+        "message_id": "text-reel",
+        "timestamp": "2026-08-01T21:00:00Z",
+    }
+    cursor = json.loads((tmp_path / "cursor.json").read_text())
+    assert cursor["seen_message_ids"] == ["text-reel"]
+
+
 def test_mark_seen_is_explicit_and_defaults_off(tmp_path: Path) -> None:
     off = StubCLI()
     ingest_dms(cursor_path=tmp_path / "off.json", jobs_root=tmp_path / "off", runner=off)
@@ -171,6 +213,33 @@ def test_mark_seen_is_explicit_and_defaults_off(tmp_path: Path) -> None:
     marked_reads = [call for call in on.calls if call[1] == "read" and "--download" not in call]
     assert marked_reads
     assert all("--mark-seen" in call for call in marked_reads)
+
+
+def test_text_message_extracts_every_supported_url(tmp_path: Path) -> None:
+    message = {
+        "message_id": "two-links", "item_type": "text",
+        "text": (
+            "First https://youtu.be/Video_A1, then "
+            "https://x.com/example/status/1234567890)."
+        ),
+    }
+    slugs = ingest_dms(
+        cursor_path=tmp_path / "cursor.json", jobs_root=tmp_path / "private",
+        public_jobs_root=tmp_path / "public", runner=TextCLI([message]),
+    )
+    assert slugs == ["youtube-Video_A1", "x-1234567890"]
+    assert all((tmp_path / "public" / slug / "job.json").is_file() for slug in slugs)
+
+
+@pytest.mark.parametrize("text", ["ordinary note", "[Unsupported Type: xma_clip]"])
+def test_text_without_supported_url_creates_no_job(tmp_path: Path, text: str) -> None:
+    message = {"message_id": "no-link", "item_type": "text", "text": text}
+    slugs = ingest_dms(
+        cursor_path=tmp_path / "cursor.json", jobs_root=tmp_path / "private",
+        public_jobs_root=tmp_path / "public", runner=TextCLI([message]),
+    )
+    assert slugs == []
+    assert not (tmp_path / "public").exists()
 
 
 def test_thread_filter_uses_explicit_thread_id(tmp_path: Path) -> None:
