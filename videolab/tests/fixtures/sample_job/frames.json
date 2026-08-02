@@ -1,0 +1,7 @@
+{"schema_version": 1,
+ "frames": [
+  {"index": 1, "file": "media/frames/frame_0001.jpg", "t_seconds": 0.0, "selected_by": "interval"},
+  {"index": 2, "file": "media/frames/frame_0002.jpg", "t_seconds": 2.0, "selected_by": "scene"},
+  {"index": 3, "file": "media/frames/frame_0003.jpg", "t_seconds": 4.0, "selected_by": "interval"},
+  {"index": 4, "file": "media/frames/frame_0004.jpg", "t_seconds": 6.0, "selected_by": "scene"}
+ ]}
