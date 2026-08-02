@@ -333,3 +333,45 @@ Vocabulary, stable ids:
 | `op_amp_media` | algorithmic gain on micro-friction |
 
 Emit only ids the evidence supports. An empty array is a valid and honest result.
+
+---
+
+## 13. Widget specifications
+
+`concepts` says which structures an analysis invokes. `widgets` says **what to draw and with
+what values**, derived from this specific video. A widget appears only when the analysis supplies
+parameters for it. A chart present without something to illustrate is noise.
+
+```json
+"framework_notes": {
+  "concepts": ["conjugate_solidarity", "cyclotron_trap"],
+  "widgets": [
+    {
+      "type": "conjugate_cancel",
+      "params": {"psi_m": 0.0, "psi_s": 0.85},
+      "caption": "She negates the status wage at real cost, but no material claim is made, so the sum returns to the origin."
+    }
+  ]
+}
+```
+
+`caption` states why *this* video warrants *this* widget. It is required, and it is prose, not a
+label.
+
+### Types and parameters
+
+| type | params | draws |
+|---|---|---|
+| `wage_phasor` | `theta_deg` 0–180, `psi_m` −1–1, `psi_s` 0–1 | One phasor on the complex plane with quadrant shading. |
+| `axis_deflection` | `axes` (1–3 of race, gender, sexuality, class, disability, religion, age, nationality, neurodivergence), `e_amplitude` 0–1, `b_amplitude` 0–1 | The vertical material field $\vec{E}$, a perpendicular $\vec{B}$ wave per named axis, and the resulting horizontal $\vec{v}\times\vec{B}$ deflection. |
+| `cyclotron_loop` | `e_magnitude` 0–1, `b_magnitude` 0–1 | A charge's path under those fields. Small `e` and large `b` produce a closed loop with no vertical displacement. |
+| `conjugate_cancel` | `psi_m` −1–1, `psi_s` 0–1 | $W$ and $W^{*}$ as vectors and their sum. With `psi_m` at 0 the sum lands on the origin. |
+| `extraction_ledger` | `flows` — array of `{from, to, magnitude}` | Value movement between named parties. Emit only when the evidence names an actor capturing material value. |
+
+**Name only the axes the video is actually about.** A reel arguing about gender gets
+`axes: ["gender"]`. Twelve axes when the content concerns one is the failure this section exists
+to prevent.
+
+Every widget is small, embeddable, and self-contained: no viewport-filling stage, no route
+chrome, no full-page controls. The immersive `/interference-engine` and `/extraction-chart` routes
+stay as they are and are not embedded.

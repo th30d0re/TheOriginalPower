@@ -218,6 +218,35 @@
       "phase_angle",
       "extraction_kernel",
       "buffer_class"
+    ],
+    "widgets": [
+      {
+        "type": "conjugate_cancel",
+        "params": {
+          "psi_m": 0.0,
+          "psi_s": 0.85
+        },
+        "caption": "She negates the in-group status wage at real cost, which is the conjugate move. No material claim is made anywhere in the 124 seconds, so psi_m sits at zero and the sum returns to the origin rather than doubling."
+      },
+      {
+        "type": "cyclotron_loop",
+        "params": {
+          "e_magnitude": 0.05,
+          "b_magnitude": 0.9
+        },
+        "caption": "With no material field and a large cultural field, the engagement (4,349 likes, 169 comments, several follow-up videos) traces a closed loop. Substantial energy, no displacement toward +y."
+      },
+      {
+        "type": "axis_deflection",
+        "params": {
+          "axes": [
+            "gender"
+          ],
+          "e_amplitude": 0.05,
+          "b_amplitude": 0.9
+        },
+        "caption": "One axis is in play. The dispute runs entirely along gender, so only that B wave is drawn; race, class and the rest are absent from the evidence."
+      }
     ]
   },
   "tier_classification": {
