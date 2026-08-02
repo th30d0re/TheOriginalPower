@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "videolab": {
+      "type": "stdio",
+      "command": ".venv-voice/bin/python",
+      "args": ["-m", "videolab.mcp_server"],
+      "env": { "PYTHONPATH": "videolab/src" }
+    }
+  }
+}
