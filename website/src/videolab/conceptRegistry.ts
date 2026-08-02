@@ -9,6 +9,17 @@ export interface ConceptDefinition {
   widget?: WidgetKey;
 }
 
+/** Widgets built as immersive full-page routes rather than embeddable cards.
+ *
+ * InterferenceEngine3D and ExtractionChart size a WebGL/SVG stage to the viewport
+ * and carry their own headers, sidebars and control bars. Constrained into a card
+ * they render a blank stage, and embedding them would also pull three.js into this
+ * route's chunk. Surface them as a link to the real thing instead. */
+export const linkOnlyWidgets: Record<string, { route: string; label: string }> = {
+  interference: { route: '/interference-engine', label: 'Open the Interference Engine' },
+  extraction: { route: '/extraction-chart', label: 'Open the Extraction Chart' },
+};
+
 export const widgetRegistry: Record<WidgetKey, LazyExoticComponent<ComponentType<Record<string, unknown>>>> = {
   phasor: lazy(() => import('../components/visualizations/PhasorResonance')),
   interference: lazy(() => import('../components/visualizations/InterferenceEngine3D')),

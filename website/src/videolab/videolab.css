@@ -21,5 +21,27 @@
 .vl-frames { display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem }.vl-frames figure { margin:0 }.vl-frames img { display:block;width:100%;height:auto;border-radius:8px }.vl-frames figcaption,.vl-muted,.vl-detail-footer { color:var(--text-secondary);font-size:.82rem;margin-top:.4rem }
 .vl-analysis-block { max-width:78ch;padding:.4rem 0 }.vl-analysis-block p,.vl-analysis-block li { line-height:1.7;white-space:pre-wrap }.vl-analysis-block ul { padding-left:1.3rem }.vl-nested { padding-left:1rem;border-left:1px solid var(--bg-light) }
 .vl-concept { display:flex;flex-direction:column;gap:.12rem;max-width:250px;border-radius:8px;padding:.65rem }.vl-concept strong { color:var(--text-primary) }.vl-concept small { line-height:1.35 }
-.vl-widgets { padding:2rem 0 }.vl-widget { margin:0 0 2.5rem }.vl-widget>figcaption { max-width:78ch;margin:.6rem auto 0;color:var(--text-secondary);line-height:1.5 }.vl-widget-loading { min-height:12rem;display:grid;place-items:center;background:var(--bg-medium);border-radius:12px }.vl-inline-math { white-space:nowrap }.vl-math-fallback { color:#fca5a5 }.vl-detail-footer { padding-top:2rem }
+.vl-widgets { padding:2rem 0 }
+/* Several visualisations (ie-root, xc-root) are standalone route pages whose roots
+   are position:fixed and fill the viewport. Embedding one would paint it over the
+   whole analysis. A transform on the wrapper makes it the containing block for
+   fixed descendants, so they resolve against this box instead of the viewport —
+   without editing the components, which other routes still render full-page. */
+.vl-widget {
+  margin:0 0 2.5rem;
+  position:relative;
+  transform:translateZ(0);
+  min-height:32rem;
+  overflow:hidden;
+  border-radius:12px;
+}
+.vl-widget > :first-child { position:absolute;inset:0;height:100%;width:100% }
+.vl-widget > figcaption { position:static }.vl-widget>figcaption { max-width:78ch;margin:.6rem auto 0;color:var(--text-secondary);line-height:1.5 }.vl-widget-loading { min-height:12rem;display:grid;place-items:center;background:var(--bg-medium);border-radius:12px }.vl-inline-math { white-space:nowrap }.vl-math-fallback { color:#fca5a5 }.vl-detail-footer { padding-top:2rem }
 @media(max-width:640px){.vl-hero{padding:2rem 1.25rem}.vl-detail-header{display:block}.vl-detail-header code{display:inline-block;margin-top:1rem}.vl-timed-row{grid-template-columns:1fr;gap:.2rem}.vl-page{padding-top:2rem}}
+
+/* Route-scale visuals surface as a link instead of a constrained embed. */
+.vl-widget-link { margin:0 0 2rem;padding:1.5rem 1.75rem;background:var(--bg-medium);border-radius:12px;border:1px solid rgba(255,255,255,.07) }
+.vl-widget-link strong { display:block;margin-bottom:.4rem }
+.vl-widget-link p { margin:0 0 .9rem;color:var(--text-secondary);line-height:1.55;max-width:70ch }
+.vl-widget-link a { color:var(--accent, #7dd3fc);text-decoration:none;font-weight:600 }
+.vl-widget-link a:hover { text-decoration:underline }

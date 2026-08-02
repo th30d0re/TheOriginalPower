@@ -3,7 +3,7 @@ import type { ReactNode } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import TierLadder from '../story/visuals/TierLadder';
 import LatexProse from './LatexProse';
-import { conceptDefinition, widgetRegistry } from './conceptRegistry';
+import { conceptDefinition, linkOnlyWidgets, widgetRegistry } from './conceptRegistry';
 import type { WidgetKey } from './conceptRegistry';
 import type { Tier } from '../content/types';
 import type { VideolabJob } from './types';
@@ -84,12 +84,26 @@ function ConceptVisuals({ concepts }: { concepts: string[] }) {
     return [...grouped.entries()];
   }, [concepts]);
   return <div className="vl-widgets">{groups.map(([key, ids]) => {
-    const Widget = widgetRegistry[key];
     const theta = key === 'phasor' && ids.includes('phase_angle') ? 90 : undefined;
     const caption = ids.map((id) => conceptDefinition(id).title).join(' · ');
+    const detail = ids.map((id) => conceptDefinition(id).description).join(' ');
+    const linkOnly = linkOnlyWidgets[key];
+
+    // Immersive route-scale visuals get a link rather than an iframe-sized cage:
+    // constrained they render a blank stage, and embedding pulls three.js into
+    // this chunk for a widget nobody can read at card size anyway.
+    if (linkOnly) {
+      return <aside className="vl-widget-link" key={key}>
+        <strong>{caption}</strong>
+        <p>{detail}</p>
+        <Link to={linkOnly.route}>{linkOnly.label} →</Link>
+      </aside>;
+    }
+
+    const Widget = widgetRegistry[key];
     return <figure className="vl-widget" key={key}>
       <Suspense fallback={<div className="vl-widget-loading">Loading visual…</div>}><Widget {...(theta === undefined ? {} : { theta })} /></Suspense>
-      <figcaption><strong>{caption}</strong> — {ids.map((id) => conceptDefinition(id).description).join(' ')}</figcaption>
+      <figcaption><strong>{caption}</strong> — {detail}</figcaption>
     </figure>;
   })}</div>;
 }
