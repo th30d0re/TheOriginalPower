@@ -4,7 +4,8 @@ import { Link, useParams } from 'react-router-dom';
 import TierLadder from '../story/visuals/TierLadder';
 import LatexProse from './LatexProse';
 import ReadAloud from './ReadAloud';
-import { splitIntoSentences } from './speechText';
+import type { WordHighlight } from './ReadAloud';
+import { latexToSpeech, splitIntoSentences } from './speechText';
 import { conceptDefinition } from './conceptRegistry';
 import AxisDeflection from './widgets/AxisDeflection';
 import ConjugateCancel from './widgets/ConjugateCancel';
@@ -58,9 +59,19 @@ function valueSentences(value: unknown): string[] {
   return splitIntoSentences(value === null || value === undefined ? '—' : String(value));
 }
 
+// While the Siri helper speaks, word ranges index the latexToSpeech() output of
+// the sentence, so render that same spoken string with the current word marked
+// instead of the raw source.
+function SpokenHighlight({ sentence, words }: { sentence: string; words: WordHighlight }) {
+  const spoken = latexToSpeech(sentence);
+  const start = Math.min(words.start, spoken.length);
+  const end = Math.min(start + words.length, spoken.length);
+  return <>{spoken.slice(0, start)}<mark className="read-aloud-word">{spoken.slice(start, end)}</mark>{spoken.slice(end)}</>;
+}
+
 function ReadableValue({ value, label }: { value: unknown; label: string }) {
   const sentences = valueSentences(value);
-  return <ReadAloud sentences={sentences} label={label}>{({ activeSentence }) => {
+  return <ReadAloud sentences={sentences} label={label}>{({ activeSentence, activeWords }) => {
     let sentenceIndex = 0;
     const renderValue = (item: unknown): ReactNode => {
       if (Array.isArray(item)) return <ul>{item.map((entry, index) => <li key={index}>{renderValue(entry)}</li>)}</ul>;
@@ -70,7 +81,8 @@ function ReadableValue({ value, label }: { value: unknown; label: string }) {
       const itemSentences = splitIntoSentences(item === null || item === undefined ? '—' : String(item));
       return <p>{itemSentences.map((sentence) => {
         const index = sentenceIndex++;
-        return <span className={activeSentence === index ? 'read-aloud-sentence is-active' : 'read-aloud-sentence'} key={index}><LatexProse text={sentence} />{' '}</span>;
+        const words = activeWords && activeWords.sentence === index ? activeWords : null;
+        return <span className={activeSentence === index ? 'read-aloud-sentence is-active' : 'read-aloud-sentence'} key={index}>{words ? <SpokenHighlight sentence={sentence} words={words} /> : <LatexProse text={sentence} />}{' '}</span>;
       })}</p>;
     };
     return renderValue(value);
@@ -184,9 +196,14 @@ export function VideolabDetail() {
     <header className="vl-detail-header"><div><p className="vl-kicker">{text(job.platform)}</p><h1>{text(job.title, job.slug)}</h1><p>{text(job.creator.display_name, text(job.creator.username, 'Unknown creator'))}</p></div><code>{job.slug}</code></header>
     <section><h2>Pipeline stages</h2><div className="vl-stage-strip">{Object.entries(stages).map(([name, value]) => { const stage = record(value); return <span className={`vl-stage vl-${text(stage.status, 'pending')}`} key={name}>{name} · {text(stage.status, 'pending')}</span>; })}</div></section>
     <section><h2>Engagement</h2><dl className="vl-metrics">{[['Likes', 'likes'], ['Comments', 'comments_count'], ['Plays', 'play_count'], ['Views', 'views'], ['Shares', 'shares'], ['Saves', 'saves']].map(([label, key]) => <div key={key}><dt>{label}</dt><dd>{job.engagement[key] === null || job.engagement[key] === undefined ? '—' : String(job.engagement[key])}</dd></div>)}</dl></section>
-    <section><h2>Transcript</h2><ReadAloud sentences={transcriptSentences} label="transcript">{({ activeSentence }) => {
+    <section><h2>Transcript</h2><ReadAloud sentences={transcriptSentences} label="transcript">{({ activeSentence, activeWords }) => {
       let sentenceIndex = 0;
-      return <div className="vl-transcript">{segments.length > 0 ? segments.map((segment, index) => <div className="vl-timed-row" key={index}><time>[{seconds(segment.start)}]</time><p>{splitIntoSentences(text(segment.text, '')).map((sentence) => { const current = sentenceIndex++; return <span className={activeSentence === current ? 'read-aloud-sentence is-active' : 'read-aloud-sentence'} key={current}>{sentence}{' '}</span>; })}</p></div>) : <p>{splitIntoSentences(text(job.transcript.text, 'Transcript unavailable.')).map((sentence) => { const current = sentenceIndex++; return <span className={activeSentence === current ? 'read-aloud-sentence is-active' : 'read-aloud-sentence'} key={current}>{sentence}{' '}</span>; })}</p>}</div>;
+      const renderSentence = (sentence: string) => {
+        const current = sentenceIndex++;
+        const words = activeWords && activeWords.sentence === current ? activeWords : null;
+        return <span className={activeSentence === current ? 'read-aloud-sentence is-active' : 'read-aloud-sentence'} key={current}>{words ? <SpokenHighlight sentence={sentence} words={words} /> : sentence}{' '}</span>;
+      };
+      return <div className="vl-transcript">{segments.length > 0 ? segments.map((segment, index) => <div className="vl-timed-row" key={index}><time>[{seconds(segment.start)}]</time><p>{splitIntoSentences(text(segment.text, '')).map(renderSentence)}</p></div>) : <p>{splitIntoSentences(text(job.transcript.text, 'Transcript unavailable.')).map(renderSentence)}</p>}</div>;
     }}</ReadAloud></section>
     <section><h2>On-screen text</h2>{keptOcr.length ? keptOcr.map((row, index) => <div className="vl-timed-row" key={index}><time>[{seconds(row.t_seconds)}]</time><p>{String(row.text)}</p></div>) : <p className="vl-muted">No deduplicated OCR text is available.</p>}</section>
     <section><h2>Frames</h2><div className="vl-frames">{job.frames.map((frame, index) => <figure key={index}><img src={text(frame.file, '')} alt={`Frame at ${seconds(frame.t_seconds)}`} loading="lazy" /><figcaption>{seconds(frame.t_seconds)} · {text(frame.selected_by)}</figcaption></figure>)}</div>{job.frames.length === 0 ? <p className="vl-muted">No exported frames are available.</p> : null}</section>

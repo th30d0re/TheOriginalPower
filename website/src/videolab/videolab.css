@@ -33,6 +33,9 @@
 .read-aloud-controls input { accent-color:#22d3ee }
 .read-aloud-sentence { border-radius:.2em;transition:background-color .15s,color .15s }
 .read-aloud-sentence.is-active { background:#fef08a;color:#172033;box-shadow:0 0 0 .12em #fef08a }
+.read-aloud-word { background:#22d3ee;color:#172033;border-radius:.15em;box-shadow:0 0 0 .1em #22d3ee }
+.read-aloud-helper-voice { color:var(--text-secondary);font-size:.78rem }
+.read-aloud-note { margin:-.4rem 0 .8rem;color:var(--text-secondary);font-size:.75rem }
 :root[data-font='dyslexic'] .vl-transcript p,
 :root[data-font='dyslexic'] .vl-timed-row p,
 :root[data-font='dyslexic'] .vl-analysis-block p,

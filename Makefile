@@ -131,7 +131,7 @@ venv-harness:
 harness: venv-harness
 	$(VENV_HARNESS_PYTHON) -m harness.server
 
-.PHONY: videolab-image videolab-doctor videolab-test
+.PHONY: videolab-image videolab-doctor videolab-test videolab-speech
 
 videolab-image:
 	container build -f videolab/containerfiles/Containerfile.worker -t videolab-worker:latest videolab/
@@ -141,6 +141,13 @@ videolab-doctor:
 
 videolab-test:
 	PYTHONPATH=videolab/src .venv-voice/bin/python -m pytest videolab/tests/ -q
+
+# Siri Voice 2 read-aloud helper for the videolab website. Runs the Swift source
+# through the interpreter on purpose: Siri voices are only exposed to the
+# Apple-signed toolchain process, so the compiled binary from `swift build`
+# reports the voice as unavailable. See videolab/docs/V12-findings.md.
+videolab-speech:
+	cd videolab/siri-speech && swift Sources/main.swift
 
 empirical: venv
 	@mkdir -p Paper/figures/spectral
