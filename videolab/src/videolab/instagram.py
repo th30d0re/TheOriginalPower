@@ -286,7 +286,9 @@ def _slug_for_message(message: Mapping[str, Any]) -> str:
                 path=None,
             )
         )
-    identifier = _SLUG_PART.sub("-", identifier).strip("-._").lower()
+    # Case is preserved, never folded: Instagram shortcodes are case-sensitive,
+    # so DZtCPIRPT87 and dztcpirpt87 are different posts (CONTRACT.md §3).
+    identifier = _SLUG_PART.sub("-", identifier).strip("-._")
     if not identifier:
         raise InstagramCLIError("Media-bearing Instagram message has no usable message ID")
     return f"instagram-{identifier}"[:96].rstrip("-._")

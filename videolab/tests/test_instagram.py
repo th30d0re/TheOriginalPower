@@ -110,7 +110,7 @@ def test_same_message_twice_creates_one_job(tmp_path: Path) -> None:
     first = ingest_dms(cursor_path=cursor, jobs_root=jobs, runner=cli)
     second = ingest_dms(cursor_path=cursor, jobs_root=jobs, runner=cli)
 
-    assert first == ["instagram-dztcpirpt87"]
+    assert first == ["instagram-DZtCPIRPT87"]
     assert second == []
     assert (jobs / first[0] / "media" / "video.mp4").read_bytes() == b"fake mp4"
     assert sum("--download" in call for call in cli.calls) == 1
@@ -159,7 +159,7 @@ def test_thread_filter_uses_resolved_thread_id(tmp_path: Path) -> None:
         runner=cli,
     )
 
-    assert result == ["instagram-dztcpirpt87"]
+    assert result == ["instagram-DZtCPIRPT87"]
     read = next(call for call in cli.calls if call[1] == "read" and "--download" not in call)
     assert read[2] == THREAD_ID
 
