@@ -424,3 +424,54 @@ immersive routes. Handle unsupported or invalid specifications without terminati
 4. Add structured accessible descriptions containing each diagram's numeric inputs.
 5. Split application routes so immersive three.js bundles load only on their dedicated routes.
 6. Add export-time schema diagnostics while retaining runtime validation at the viewer boundary.
+
+## Loop 10 — Read-Aloud and OpenDyslexic Reading Mode
+
+### What Was Requested
+
+Add offline read-aloud controls with active-sentence highlighting to the videolab transcript and
+analysis prose. Add a persistent site-wide OpenDyslexic reading mode while preserving KaTeX font
+metrics and rendering.
+
+### Work Performed
+
+1. Added a Web Speech API player with play, pause/resume, stop, speech-rate, and installed-voice
+   controls. Voice options refresh when the browser dispatches `voiceschanged`.
+2. Split transcript and analysis values into visible sentence spans and synchronized the active
+   highlight with a sentence-by-sentence utterance queue.
+3. Added an explicit LaTeX speech map. Unknown math spans are omitted from speech, while documented
+   symbols and the conjugate-solidarity equation receive concise spoken forms.
+4. Cancelled synthesis during component cleanup, content changes, route unmounts, and when another
+   reader begins playback.
+5. Declared the four supplied OpenDyslexic faces and added a global navigation toggle backed by
+   `localStorage` and the root `data-font` attribute.
+6. Applied modest reading-mode spacing and excluded every `.katex` node from font substitution.
+
+### Challenges Encountered
+
+1. Browser voice lists can be empty during initial render, requiring both an immediate read and the
+   asynchronous `voiceschanged` subscription.
+2. Analysis values include arrays and nested records, so sentence indexing must remain stable while
+   retaining their semantic lists, headings, and inline KaTeX rendering.
+3. Several readers coexist on a detail page; a page-level start event prevents overlapping speech
+   and clears the previous reader's highlight.
+
+### Validation Notes
+
+- The focused speech test asserts that `$W + W^{*} = 2\psi_m$` becomes spoken words and retains no
+  dollar sign, backslash, caret, or underscore.
+- `cd website && npm test` passes under Node 23.7.0.
+- `cd website && npm run build` passes with Vite 7.3.1 and no TypeScript errors.
+- All changed TypeScript and TSX files pass ESLint, and `git diff --check` passes. Full-repository
+  ESLint continues to report ten existing React hook errors in `InterferenceEngine3D.tsx`.
+- The in-app browser runtime was unavailable, so interactive speech, persistence, and visual KaTeX
+  comparison remain for orchestrator-side browser verification.
+
+### Next Ideas (6 Ideas)
+
+1. Add browser automation with a mocked `speechSynthesis` implementation.
+2. Add sentence-boundary fixtures for abbreviations and initialisms.
+3. Add an optional compact reader toolbar for long analysis collections.
+4. Add voice-language preference persistence.
+5. Add visual regression coverage for KaTeX in both font modes.
+6. Add keyboard shortcuts for play, pause, and stop.

@@ -26,4 +26,15 @@
 .vl-widget-card figcaption { max-width:68ch;margin:.75rem 0 0;color:var(--text-secondary);line-height:1.55; }
 .vl-widget-note { margin:.35rem 0 0;color:#94a3b8;font-size:.78rem; }
 .vl-inline-math { white-space:nowrap }.vl-math-fallback { color:#fca5a5 }.vl-detail-footer { padding-top:2rem }
+.read-aloud { margin:.5rem 0 0; }
+.read-aloud-controls { display:flex;flex-wrap:wrap;align-items:end;gap:.65rem;margin:0 0 1rem;padding:.8rem;border:1px solid var(--bg-light);border-radius:10px;background:rgba(30,41,59,.58) }
+.read-aloud-controls button,.read-aloud-controls select { min-height:2.2rem;border:1px solid var(--bg-light);border-radius:6px;background:var(--bg-dark);color:var(--text-primary);padding:.35rem .65rem }
+.read-aloud-controls label { display:flex;align-items:center;gap:.45rem;color:var(--text-secondary);font-size:.78rem }
+.read-aloud-controls input { accent-color:#22d3ee }
+.read-aloud-sentence { border-radius:.2em;transition:background-color .15s,color .15s }
+.read-aloud-sentence.is-active { background:#fef08a;color:#172033;box-shadow:0 0 0 .12em #fef08a }
+:root[data-font='dyslexic'] .vl-transcript p,
+:root[data-font='dyslexic'] .vl-timed-row p,
+:root[data-font='dyslexic'] .vl-analysis-block p,
+:root[data-font='dyslexic'] .vl-analysis-block li { line-height:1.85;letter-spacing:.03em }
 @media(max-width:640px){.vl-hero{padding:2rem 1.25rem}.vl-detail-header{display:block}.vl-detail-header code{display:inline-block;margin-top:1rem}.vl-timed-row{grid-template-columns:1fr;gap:.2rem}.vl-page{padding-top:2rem}}

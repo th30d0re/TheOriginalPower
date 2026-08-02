@@ -5,6 +5,7 @@ import {
   NavLink,
   useLocation,
 } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 import Dashboard from './components/Dashboard';
 import SystemicArbitrageDashboard from './components/SystemicArbitrageDashboard';
 import InterferenceEngine3D from './components/visualizations/InterferenceEngine3D';
@@ -24,6 +25,26 @@ const NAV_LINKS = [
   { to: '/animations', label: 'Animations' },
   { to: '/videolab', label: 'Videolab' },
 ];
+
+const FONT_PREFERENCE_KEY = 'uef-font-preference';
+
+function FontToggle() {
+  const [dyslexic, setDyslexic] = useState(() => localStorage.getItem(FONT_PREFERENCE_KEY) === 'dyslexic');
+
+  useEffect(() => {
+    if (dyslexic) {
+      document.documentElement.dataset.font = 'dyslexic';
+      localStorage.setItem(FONT_PREFERENCE_KEY, 'dyslexic');
+    } else {
+      delete document.documentElement.dataset.font;
+      localStorage.removeItem(FONT_PREFERENCE_KEY);
+    }
+  }, [dyslexic]);
+
+  return <button className="font-toggle" type="button" aria-pressed={dyslexic} onClick={() => setDyslexic((active) => !active)}>
+    {dyslexic ? 'Use standard font' : 'Use dyslexic font'}
+  </button>;
+}
 
 function NavBar() {
   const { pathname } = useLocation();
@@ -46,6 +67,7 @@ function NavBar() {
             </li>
           ))}
         </ul>
+        <FontToggle />
       </div>
     </nav>
   );
