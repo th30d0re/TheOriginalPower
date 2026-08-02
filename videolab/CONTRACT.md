@@ -288,3 +288,48 @@ Pure function of on-disk state. No network, no model calls.
    fields in `job.json`.
 7. Tests use fixtures, never the network. A test that needs a video uses a tiny generated clip
    (`ffmpeg -f lavfi -i testsrc`) or a committed fixture — never a download.
+
+---
+
+## 12. Framework concepts and math notation
+
+Analysis blocks carry two things a renderer depends on.
+
+**Math is LaTeX inside `$…$`.** Write `$W = \psi_m + j\psi_s$`, never `W = psi_m + j*psi_s`.
+The website renders these with KaTeX, which is already a dependency. Prose stays prose; only
+the math is delimited.
+
+**`framework_notes.concepts` is an explicit array of concept ids.** The analysis declares which
+framework structures it invokes rather than leaving a renderer to guess from prose. Text matching
+is unreliable — "wage" appears in sentences that have nothing to do with the psychological wage —
+and a declared list stays correct when wording changes.
+
+Vocabulary, stable ids:
+
+| id | framework structure |
+|---|---|
+| `demographic_charge` | charge `q` assigned at the software layer |
+| `institutional_field` | the electric field `E` |
+| `lorentz_force` | `F = qE`, racism as vector |
+| `thermal_velocity` | prejudice as undirected heat |
+| `complex_wage` | `W = ψm + jψs` |
+| `phase_angle` | `θ`, the material/status ratio |
+| `fascism_threshold` | `θ > 90°`, Quadrant II |
+| `squaring_property` | `(jψs)² = −ψs²` |
+| `conjugate_solidarity` | `W + W* = 2ψm` |
+| `quaternion_intersection` | multiplicative intersectionality |
+| `demographic_weight` | `ρk`, and the `ρ→0` voltage prediction |
+| `orthogonal_deflection` | `v × B`, horizontal deflection |
+| `cyclotron_trap` | high energy, zero displacement |
+| `interference_engine` | phased-array solidarity jamming |
+| `extraction_kernel` | actors capturing material value |
+| `buffer_class` | the stabilising intermediary |
+| `psychological_wage` | status compensation |
+| `snubber_circuit` | pressure dissipation before decoupling |
+| `inductive_kickback` | reactionary backlash on abrupt change |
+| `enclosure_capacitance` | generational wealth, `C = εA/d` |
+| `bureaucratic_resistance` | `R`, friction via mean free time |
+| `redlining_diode` | one-way extraction junction |
+| `op_amp_media` | algorithmic gain on micro-friction |
+
+Emit only ids the evidence supports. An empty array is a valid and honest result.
