@@ -19,6 +19,7 @@ from urllib.parse import parse_qs, urlparse
 from .config import Config, load_config
 from .containers import ContainerError, run_derive, run_fetch
 from .cookies import refresh_cookies
+from .report import write_report
 
 try:
     from .slugs import Source, parse_source, slug_for
@@ -115,6 +116,31 @@ def _run_asr(config: Config, job_dir: Path) -> None:
         raise RuntimeError(completed.stderr.strip() or completed.stdout.strip() or "host ASR failed")
 
 
+def _record_stage(
+    job_dir: Path,
+    stage: str,
+    *,
+    status: str,
+    engine: str,
+    detail: dict[str, Any],
+    started_at: str,
+) -> None:
+    """Rewrite one stage block in job.json, leaving the others untouched."""
+    path = job_dir / "job.json"
+    if not path.is_file():
+        return
+    job = json.loads(path.read_text(encoding="utf-8"))
+    job.setdefault("stages", {})[stage] = {
+        "status": status,
+        "engine": engine,
+        "detail": detail,
+        "started_at": started_at,
+        "ended_at": _utc_now(),
+        "error": None,
+    }
+    path.write_text(json.dumps(job, indent=2) + "\n", encoding="utf-8")
+
+
 def ingest(config: Config, src: str, *, frames: int, ocr: bool, asr_mode: str) -> str:
     """Run the A1/A3, B, and C stages for one source and return its slug."""
     if asr_mode == "container":
@@ -134,8 +160,29 @@ def ingest(config: Config, src: str, *, frames: int, ocr: bool, asr_mode: str) -
         assert source.url is not None
         cookie = config.cookie_file(_cookie_domain(source))
         run_fetch(config, job_dir, source.url, cookie if cookie.is_file() else None)
-    run_derive(config, job_dir, frames=frames, ocr=ocr)
+    derive_started = _utc_now()
+    derive_result = run_derive(config, job_dir, frames=frames, ocr=ocr)
+    _record_stage(
+        job_dir,
+        "derive",
+        status="ok",
+        engine="ffmpeg+tesseract",
+        detail={k: v for k, v in derive_result.items() if k != "ok"},
+        started_at=derive_started,
+    )
     _run_asr(config, job_dir)
+    # Stage D. Without this the pipeline produces transcripts and frames but
+    # never the <slug>.md / <slug>_metadata.json pair the artifacts exist for.
+    report_started = _utc_now()
+    written = write_report(job_dir)
+    _record_stage(
+        job_dir,
+        "report",
+        status="ok",
+        engine="videolab.report",
+        detail={name: path.name for name, path in written.items()},
+        started_at=report_started,
+    )
     return slug
 
 
