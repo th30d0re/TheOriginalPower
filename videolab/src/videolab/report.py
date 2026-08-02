@@ -16,6 +16,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import sys
 from datetime import datetime, timezone
@@ -85,7 +86,13 @@ def _read_ocr_rows(job_dir: Path) -> list[dict]:
 def _default_jobs_root() -> Path:
     # report.py lives at <repo>/videolab/src/videolab/report.py; jobs live at
     # <repo>/videolab/jobs/.
-    return Path(__file__).resolve().parents[2] / "jobs"
+    default = Path(__file__).resolve().parents[2] / "jobs"
+    return Path(os.environ.get("VIDEOLAB_JOBS_DIR", default)).expanduser()
+
+
+def _default_private_jobs_root() -> Path:
+    default = Path(__file__).resolve().parents[2] / "jobs-private"
+    return Path(os.environ.get("VIDEOLAB_PRIVATE_JOBS_DIR", default)).expanduser()
 
 
 # ---------------------------------------------------------------------------
@@ -394,10 +401,17 @@ def render_bundle(slug: str, jobs_root: Path | None = None) -> str:
 
     Pure function of on-disk state. Called by V3's MCP server.
     """
-    root = Path(jobs_root) if jobs_root is not None else _default_jobs_root()
-    job_dir = root / slug
-    if not job_dir.is_dir():
-        raise FileNotFoundError(f"no job directory for slug {slug!r} under {root}")
+    public_root = Path(jobs_root) if jobs_root is not None else _default_jobs_root()
+    private_root = (
+        public_root.parent / "jobs-private"
+        if jobs_root is not None
+        else _default_private_jobs_root()
+    )
+    roots = (public_root, private_root)
+    job_dir = next((root / slug for root in roots if (root / slug).is_dir()), None)
+    if job_dir is None:
+        searched = ", ".join(str(root) for root in roots)
+        raise FileNotFoundError(f"no job directory for slug {slug!r} under {searched}")
 
     meta = build_metadata(job_dir)
     job = _read_json(job_dir / "job.json") or {}

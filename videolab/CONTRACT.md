@@ -28,12 +28,16 @@ attacker-controlled bytes and therefore carries no credentials of any kind.
 
 ---
 
-## 2. Job directory
+## 2. Job directories
 
-One job = one directory. Nothing outside it is ever written.
+One job = one directory. URL- and file-sourced jobs live under `videolab/jobs/` and commit
+except for media. DM-sourced jobs live under `videolab/jobs-private/`, which is ignored in its
+entirety. DM provenance contains third-party personal data and never enters git. Nothing outside
+the selected job root is ever written.
 
 ```
-videolab/jobs/<slug>/
+videolab/jobs/<slug>/                 # URL and file sources
+# or videolab/jobs-private/<slug>/    # DM sources; local-only
 ├── job.json                    # state machine; every stage updates it
 ├── source.info.json            # A1 only — complete raw yt-dlp info dict, unmodified
 ├── dm.json                     # A2 only — instagram-cli thread + message provenance
@@ -42,7 +46,7 @@ videolab/jobs/<slug>/
 ├── transcript.txt|srt|vtt|json # C
 ├── <slug>.md                   # D
 ├── <slug>_metadata.json        # D
-└── media/                      # gitignored — the ONLY gitignored path
+└── media/                      # gitignored for committed jobs
     ├── video.mp4
     ├── audio.wav
     └── frames/frame_0001.jpg …

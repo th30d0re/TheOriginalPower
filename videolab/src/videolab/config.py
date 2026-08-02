@@ -19,6 +19,7 @@ class Config:
 
     root: Path
     jobs_dir: Path
+    private_jobs_dir: Path
     cookie_dir: Path
     image: str
     container_cli: str
@@ -64,6 +65,11 @@ def load_config(
     resolved_root = Path(values.get("VIDEOLAB_ROOT", root or default_root)).expanduser().resolve()
     resolved_home = Path(values.get("VIDEOLAB_HOME", home or Path.home())).expanduser().resolve()
     jobs_dir = Path(values.get("VIDEOLAB_JOBS_DIR", resolved_root / "jobs")).expanduser().resolve()
+    private_jobs_dir = Path(
+        values.get("VIDEOLAB_PRIVATE_JOBS_DIR", resolved_root / "jobs-private")
+    ).expanduser().resolve()
+    private_jobs_dir.mkdir(mode=0o700, parents=True, exist_ok=True)
+    private_jobs_dir.chmod(0o700)
     cookie_dir = Path(
         values.get("VIDEOLAB_COOKIE_DIR", resolved_home / ".config" / "videolab" / "cookies")
     ).expanduser().resolve()
@@ -74,6 +80,7 @@ def load_config(
     return Config(
         root=resolved_root,
         jobs_dir=jobs_dir,
+        private_jobs_dir=private_jobs_dir,
         cookie_dir=cookie_dir,
         image=values.get("VIDEOLAB_IMAGE", DEFAULT_IMAGE),
         container_cli=container_cli,

@@ -16,7 +16,7 @@ CLIResult = subprocess.CompletedProcess[str]
 CLIRunner = Callable[[Sequence[str]], CLIResult]
 
 DEFAULT_CURSOR = Path.home() / ".config" / "videolab" / "instagram-cursor.json"
-DEFAULT_JOBS = Path(__file__).resolve().parents[2] / "jobs"
+DEFAULT_JOBS = Path(__file__).resolve().parents[2] / "jobs-private"
 MEDIA_ITEM_TYPES = frozenset(
     {
         "clip",
@@ -388,6 +388,9 @@ def ingest_dms(
     selected_threads = _select_threads(inbox, thread)
     seen_path = cursor_path or DEFAULT_CURSOR
     root = jobs_root or DEFAULT_JOBS
+    if jobs_root is None:
+        root.mkdir(mode=0o700, parents=True, exist_ok=True)
+        root.chmod(0o700)
     seen = _load_cursor(seen_path)
     created: list[str] = []
 

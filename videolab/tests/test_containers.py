@@ -14,6 +14,7 @@ def config(tmp_path: Path) -> Config:
     return Config(
         root=tmp_path,
         jobs_dir=tmp_path / "jobs",
+        private_jobs_dir=tmp_path / "jobs-private",
         cookie_dir=tmp_path / "cookies",
         image="videolab-worker:latest",
         container_cli="container",

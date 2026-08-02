@@ -76,3 +76,48 @@ Implement TASK V2 according to `videolab/CONTRACT.md`, verify every available ex
 
 - The full suite and exact Make target pass with a temporary link to the shared `.venv-voice` environment.
 - The Makefile image target was inspected without building the container, preserving the task's validation scope.
+
+## Loop 4 — Private DM Job Root
+
+### What Was Requested
+
+Keep every DM-sourced job local by routing it to an entirely ignored private job root. Preserve
+the committed public root for URL- and file-sourced jobs. Support discovery and report rendering
+across both roots while retaining path-traversal protections.
+
+### Work Performed
+
+1. Added `private_jobs_dir` with `VIDEOLAB_PRIVATE_JOBS_DIR` support and enforced mode `0700`.
+2. Routed default Instagram DM ingestion and the MCP DM entrypoint to `jobs-private/`.
+3. Updated report and MCP slug resolution to search `jobs/` before `jobs-private/`.
+4. Updated CLI and MCP inventories to include both roots with an explicit `private` boolean.
+5. Ignored the complete private root and documented the personal-data rule in the contract.
+6. Moved the existing DM-sourced job by exact path without reading or printing its contents.
+7. Added regression coverage for private default ingestion, dual-root report resolution, dual-root
+   MCP lookup, privacy markers, and symlink traversal escapes from each root.
+
+### Challenges Encountered
+
+1. The required Obsidian session-log directory is outside the managed writable sandbox. This
+   findings section records the implementation session within the task-owned documentation.
+2. Explicit report roots must retain test control while supporting the sibling private root.
+3. Root lookup had to preserve public-first precedence and validate resolved paths independently
+   against the root that supplied each candidate.
+
+### Validation Notes
+
+- The complete required suite passes: 71 tests in 2.43 seconds under the specified interpreter.
+- `git diff --check` passes.
+- The private `dm.json` path matches the whole-directory ignore rule.
+- `git status --short videolab/` reports no entry under `jobs-private/`.
+- `git log --all --oneline -- 'videolab/jobs*'` returns no commits.
+- No Instagram CLI command ran during this loop.
+
+### Next Ideas (6 Ideas)
+
+1. Add duplicate-slug diagnostics when the same slug exists in both roots.
+2. Add a CLI filter for public-only or private-only inventory output.
+3. Add startup diagnostics for unsafe private-root permissions.
+4. Add platform-neutral tests for filesystems without symlink support.
+5. Add a migration command for future provenance-policy changes.
+6. Add a schema-level provenance-to-root consistency validator.

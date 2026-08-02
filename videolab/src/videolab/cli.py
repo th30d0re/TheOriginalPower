@@ -260,17 +260,29 @@ def doctor(config: Config) -> dict[str, Any]:
 
 
 def list_jobs(config: Config) -> list[dict[str, Any]]:
-    """Return the on-disk job inventory without reading media."""
+    """Return the public and local-only job inventory without reading media."""
     jobs = []
-    if not config.jobs_dir.is_dir():
-        return jobs
-    for path in sorted(config.jobs_dir.glob("*/job.json")):
-        try:
-            job = json.loads(path.read_text(encoding="utf-8"))
-            jobs.append({"slug": job.get("slug", path.parent.name), "created_at": job.get("created_at"), "stages": {name: value.get("status") for name, value in job.get("stages", {}).items()}})
-        except (OSError, json.JSONDecodeError):
-            jobs.append({"slug": path.parent.name, "error": "invalid job.json"})
-    return jobs
+    for root, private in ((config.jobs_dir, False), (config.private_jobs_dir, True)):
+        for path in sorted(root.glob("*/job.json")):
+            try:
+                job = json.loads(path.read_text(encoding="utf-8"))
+                stages = {
+                    name: value.get("status")
+                    for name, value in job.get("stages", {}).items()
+                }
+                jobs.append(
+                    {
+                        "slug": job.get("slug", path.parent.name),
+                        "created_at": job.get("created_at"),
+                        "stages": stages,
+                        "private": private,
+                    }
+                )
+            except (OSError, json.JSONDecodeError):
+                jobs.append(
+                    {"slug": path.parent.name, "error": "invalid job.json", "private": private}
+                )
+    return sorted(jobs, key=lambda row: (str(row["slug"]), bool(row["private"])))
 
 
 def build_parser() -> argparse.ArgumentParser:

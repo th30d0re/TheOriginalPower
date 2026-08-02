@@ -195,6 +195,17 @@ def test_render_bundle_structure(sample_job: Path) -> None:
     assert positions == sorted(positions)
 
 
+def test_render_bundle_resolves_public_and_private_roots(sample_job: Path) -> None:
+    public_root = sample_job.parent / "jobs"
+    private_root = sample_job.parent / "jobs-private"
+    public_root.mkdir()
+    private_root.mkdir()
+    public_job = sample_job.rename(public_root / sample_job.name)
+    public_bundle = render_bundle(sample_job.name, jobs_root=public_root)
+    public_job.rename(private_root / sample_job.name)
+    assert render_bundle(sample_job.name, jobs_root=public_root) == public_bundle
+
+
 def test_render_bundle_only_non_duplicate_ocr(sample_job: Path) -> None:
     bundle = render_bundle("instagram-DZtCPIRPT87", jobs_root=sample_job.parent)
     ocr_section = bundle.split("## On-Screen Text")[1].split("## Frames")[0]

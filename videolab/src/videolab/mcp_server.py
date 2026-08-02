@@ -24,6 +24,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[2]
 # what a relative path from an MCP client is most likely written against.
 REPO_ROOT = PROJECT_ROOT.parent
 DEFAULT_JOBS_ROOT = PROJECT_ROOT / "jobs"
+DEFAULT_PRIVATE_JOBS_ROOT = PROJECT_ROOT / "jobs-private"
 _SAFE_SLUG = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]{0,95}$")
 _SLUG_IN_OUTPUT = re.compile(r"\b(?:instagram|youtube|tiktok|x|file)-[A-Za-z0-9._-]+\b")
 DEFAULT_FRAME_COUNT = 4
@@ -61,15 +62,28 @@ def _jobs_root() -> Path:
     return DEFAULT_JOBS_ROOT
 
 
+def _private_jobs_root() -> Path:
+    configured = os.environ.get("VIDEOLAB_PRIVATE_JOBS_DIR")
+    if configured:
+        return Path(configured).expanduser()
+    try:
+        from .config import get_config
+    except ImportError:
+        return DEFAULT_PRIVATE_JOBS_ROOT
+    value = get_config().private_jobs_dir
+    return Path(value).expanduser()
+
+
 def _job_dir(slug: str) -> Path:
     _validate_slug(slug)
-    root = _jobs_root().resolve()
-    candidate = (root / slug).resolve()
-    if candidate.parent != root:
-        raise ValueError("slug resolves outside the jobs directory")
-    if not candidate.is_dir():
-        raise FileNotFoundError(f"Unknown videolab job: {slug}")
-    return candidate
+    for configured_root in (_jobs_root(), _private_jobs_root()):
+        root = configured_root.resolve()
+        candidate = (root / slug).resolve()
+        if candidate.parent != root:
+            raise ValueError("slug resolves outside the jobs directory")
+        if candidate.is_dir():
+            return candidate
+    raise FileNotFoundError(f"Unknown videolab job: {slug}")
 
 
 def _validate_slug(slug: str) -> None:
@@ -206,7 +220,7 @@ def videolab_ingest_dms(
         limit=limit,
         thread=thread,
         mark_seen=mark_seen,
-        jobs_root=_jobs_root(),
+        jobs_root=_private_jobs_root(),
     )
     return {"count": len(slugs), "slugs": slugs}
 
@@ -247,26 +261,33 @@ def videolab_get_frames(
 
 @mcp.tool()
 def videolab_list_jobs() -> list[dict[str, Any]]:
-    """Return a stable inventory of job state from the configured jobs directory."""
+    """Return a stable inventory of public and local-only job state."""
 
-    root = _jobs_root()
-    if not root.exists():
-        return []
     jobs: list[dict[str, Any]] = []
-    for directory in sorted((path for path in root.iterdir() if path.is_dir()), key=lambda path: path.name):
-        job = _read_json(directory / "job.json")
-        if not isinstance(job, Mapping):
-            jobs.append({"slug": directory.name, "status": "missing-job-json"})
+    for root, private in ((_jobs_root(), False), (_private_jobs_root(), True)):
+        if not root.exists():
             continue
-        jobs.append(
-            {
-                "slug": str(job.get("slug") or directory.name),
-                "source": job.get("source"),
-                "created_at": job.get("created_at"),
-                "stages": job.get("stages"),
-            }
+        directories = sorted(
+            (path for path in root.iterdir() if path.is_dir()),
+            key=lambda path: path.name,
         )
-    return jobs
+        for directory in directories:
+            job = _read_json(directory / "job.json")
+            if not isinstance(job, Mapping):
+                jobs.append(
+                    {"slug": directory.name, "status": "missing-job-json", "private": private}
+                )
+                continue
+            jobs.append(
+                {
+                    "slug": str(job.get("slug") or directory.name),
+                    "source": job.get("source"),
+                    "created_at": job.get("created_at"),
+                    "stages": job.get("stages"),
+                    "private": private,
+                }
+            )
+    return sorted(jobs, key=lambda row: (str(row["slug"]), bool(row["private"])))
 
 
 @mcp.tool()

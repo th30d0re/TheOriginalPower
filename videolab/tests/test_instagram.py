@@ -11,6 +11,7 @@ import pytest
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 from videolab.instagram import InstagramCLIError, check_auth, ingest_dms
+import videolab.instagram as instagram
 
 
 THREAD_ID = "340282366920938463123456789"
@@ -129,6 +130,14 @@ def test_same_message_twice_creates_one_job(tmp_path: Path) -> None:
     assert job["source"]["id"] == "DZtCPIRPT87"
     assert job["source"]["url"] == dm["message"]["url"]
     assert job["stages"]["fetch"]["engine"] == "instagram-cli"
+
+
+def test_ingest_dms_uses_private_root_by_default(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+    private_root = tmp_path / "jobs-private"
+    monkeypatch.setattr(instagram, "DEFAULT_JOBS", private_root)
+    slugs = ingest_dms(cursor_path=tmp_path / "cursor.json", runner=StubCLI())
+    assert (private_root / slugs[0] / "job.json").is_file()
+    assert private_root.stat().st_mode & 0o777 == 0o700
 
 
 def test_mark_seen_is_explicit_and_defaults_off(tmp_path: Path) -> None:
