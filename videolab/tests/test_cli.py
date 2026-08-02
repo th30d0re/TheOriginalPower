@@ -7,6 +7,7 @@ import json
 import videolab.cli as cli
 from videolab.config import Config
 from videolab.containers import ContainerError
+from videolab.instagram import IngestBatch
 
 
 def _config(tmp_path: Path) -> Config:
@@ -35,6 +36,13 @@ def _write_url_job(root: Path, slug: str, url: str) -> None:
                                            "timestamp": "2026-08-01T21:00:00Z"}}},
     }
     (job_dir / "job.json").write_text(json.dumps(job))
+
+
+def _ingest_batch(cursor: Path, slug: str, message_id: str = "opaque-message") -> IngestBatch:
+    batch = IngestBatch(cursor_path=cursor)
+    batch.append(slug)
+    batch.message_ids.append((slug, message_id))
+    return batch
 
 
 def test_ingest_dm_jobs_runs_full_pipeline_for_each_new_job(
@@ -107,3 +115,106 @@ def test_dm_url_fetch_failure_does_not_abort_batch(
     assert failed["stages"]["fetch"]["status"] == "error"
     assert "videolab cookies refresh --browser safari --domain instagram.com" in failed["stages"]["fetch"]["error"]
     assert "Full Disk Access" in failed["stages"]["fetch"]["error"]
+
+
+def test_xpc_fetch_failure_stays_unseen_and_reports_retrying(
+    tmp_path: Path, monkeypatch: object
+) -> None:
+    config = _config(tmp_path)
+    config.jobs_dir.mkdir()
+    slug = "instagram-TransientCase"
+    cursor = tmp_path / "cursor.json"
+    _write_url_job(config.jobs_dir, slug, "https://instagram.com/reel/TransientCase/")
+    monkeypatch.setattr(cli, "ingest_dms", lambda **_kwargs: _ingest_batch(cursor, slug))
+    monkeypatch.setattr(
+        cli, "run_fetch", lambda *_args, **_kwargs: (_ for _ in ()).throw(
+            ContainerError('interrupted: "XPC connection error: Connection invalid"')
+        )
+    )
+
+    result = cli.ingest_dm_jobs(config)
+
+    state = json.loads(cursor.read_text())
+    assert "opaque-message" not in state["seen_message_ids"]
+    assert result.retrying == [slug]
+    assert result.failed == []
+    error = json.loads((config.jobs_dir / slug / "job.json").read_text())["stages"]["fetch"]["error"]
+    assert error.startswith('interrupted: "XPC connection error')
+    assert "cookies refresh" not in error
+
+
+def test_unsupported_url_marks_message_seen_and_reports_failed(
+    tmp_path: Path, monkeypatch: object
+) -> None:
+    config = _config(tmp_path)
+    config.jobs_dir.mkdir()
+    slug = "instagram-PermanentCase"
+    cursor = tmp_path / "cursor.json"
+    _write_url_job(config.jobs_dir, slug, "https://instagram.com/reel/PermanentCase/")
+    monkeypatch.setattr(cli, "ingest_dms", lambda **_kwargs: _ingest_batch(cursor, slug))
+    monkeypatch.setattr(
+        cli, "run_fetch", lambda *_args, **_kwargs: (_ for _ in ()).throw(
+            ContainerError("Unsupported URL")
+        )
+    )
+
+    result = cli.ingest_dm_jobs(config)
+
+    state = json.loads(cursor.read_text())
+    assert state["seen_message_ids"] == ["opaque-message"]
+    assert result.failed == [slug]
+    assert result.retrying == []
+
+
+def test_transient_message_is_abandoned_on_fifth_attempt(
+    tmp_path: Path, monkeypatch: object
+) -> None:
+    config = _config(tmp_path)
+    config.jobs_dir.mkdir()
+    slug = "instagram-RetryLimit"
+    cursor = tmp_path / "cursor.json"
+    _write_url_job(config.jobs_dir, slug, "https://instagram.com/reel/RetryLimit/")
+    monkeypatch.setattr(cli, "ingest_dms", lambda **_kwargs: _ingest_batch(cursor, slug))
+    monkeypatch.setattr(
+        cli, "run_fetch", lambda *_args, **_kwargs: (_ for _ in ()).throw(
+            ContainerError("temporary DNS failure")
+        )
+    )
+
+    results = [cli.ingest_dm_jobs(config) for _ in range(5)]
+
+    assert all(item.retrying == [slug] for item in results[:4])
+    assert results[4].retrying == []
+    assert results[4].failed == [slug]
+    state = json.loads(cursor.read_text())
+    assert state["attempts"] == {"opaque-message": 5}
+    assert state["seen_message_ids"] == ["opaque-message"]
+    assert state["abandoned_message_ids"] == ["opaque-message"]
+
+
+def test_fetch_error_hints_follow_reported_evidence() -> None:
+    container_error = cli.format_fetch_error(
+        "instagram", 'interrupted: "XPC connection error: Connection invalid"'
+    )
+    auth_error = cli.format_fetch_error("instagram", "login required")
+
+    assert container_error.startswith("interrupted:")
+    assert "cookies refresh" not in container_error
+    assert auth_error.startswith("login required")
+    assert "videolab cookies refresh" in auth_error
+
+
+def test_ingest_command_outputs_retrying_group(
+    tmp_path: Path, monkeypatch: object, capsys: object
+) -> None:
+    result = cli.DMIngestResult(["instagram-Retrying"])
+    result.retrying.append("instagram-Retrying")
+    monkeypatch.setattr(cli, "load_config", lambda: _config(tmp_path))
+    monkeypatch.setattr(cli, "ingest_dm_jobs", lambda *_args, **_kwargs: result)
+
+    assert cli.main(["ingest-dms"]) == 0
+
+    output = json.loads(capsys.readouterr().out)
+    assert output["retrying"] == ["instagram-Retrying"]
+    assert output["failed"] == []
+    assert output["ok"] is False

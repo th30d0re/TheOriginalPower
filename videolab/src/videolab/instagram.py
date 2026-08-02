@@ -7,6 +7,7 @@ import os
 import re
 import subprocess
 from collections.abc import Callable, Iterable, Mapping, Sequence
+from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -44,6 +45,22 @@ _TRAILING_URL_PUNCTUATION = ".,;:!?)]}"
 
 class InstagramCLIError(RuntimeError):
     """Raised when the read-only Instagram CLI workflow fails."""
+
+
+@dataclass
+class CursorState:
+    seen: set[str]
+    attempts: dict[str, int]
+    abandoned: set[str]
+
+
+class IngestBatch(list[str]):
+    """List-compatible ingestion result carrying message-level cursor metadata."""
+
+    def __init__(self, *, cursor_path: Path) -> None:
+        super().__init__()
+        self.cursor_path = cursor_path
+        self.message_ids: list[tuple[str, str]] = []
 
 
 def _default_runner(argv: Sequence[str]) -> CLIResult:
@@ -279,17 +296,35 @@ def _dm_document(thread: Mapping[str, Any], message: Mapping[str, Any]) -> dict[
     }
 
 
-def _load_cursor(path: Path) -> set[str]:
+def _load_cursor(path: Path) -> CursorState:
     if not path.exists():
-        return set()
+        return CursorState(set(), {}, set())
     try:
         value = json.loads(path.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError) as exc:
         raise InstagramCLIError(f"Cannot read Instagram cursor {path}: {exc}") from exc
     if isinstance(value, list):
-        return {str(item) for item in value}
+        return CursorState({str(item) for item in value}, {}, set())
     if isinstance(value, Mapping) and isinstance(value.get("seen_message_ids"), list):
-        return {str(item) for item in value["seen_message_ids"]}
+        attempts_value = value.get("attempts", {})
+        attempts = (
+            {
+                str(message_id): int(count)
+                for message_id, count in attempts_value.items()
+                if isinstance(count, int) and count > 0
+            }
+            if isinstance(attempts_value, Mapping)
+            else {}
+        )
+        abandoned_value = value.get("abandoned_message_ids", [])
+        abandoned = (
+            {str(item) for item in abandoned_value}
+            if isinstance(abandoned_value, list)
+            else set()
+        )
+        return CursorState(
+            {str(item) for item in value["seen_message_ids"]}, attempts, abandoned
+        )
     raise InstagramCLIError(f"Instagram cursor {path} has an unsupported shape")
 
 
@@ -300,8 +335,38 @@ def _write_json(path: Path, value: Any) -> None:
     temporary.replace(path)
 
 
-def _write_cursor(path: Path, seen: set[str]) -> None:
-    _write_json(path, {"schema_version": 1, "seen_message_ids": sorted(seen)})
+def _write_cursor(path: Path, cursor: CursorState) -> None:
+    _write_json(
+        path,
+        {
+            "schema_version": 2,
+            "seen_message_ids": sorted(cursor.seen),
+            "attempts": dict(sorted(cursor.attempts.items())),
+            "abandoned_message_ids": sorted(cursor.abandoned),
+        },
+    )
+
+
+def finish_message_attempts(
+    path: Path, transient_by_message: Mapping[str, bool], *, max_attempts: int = 5
+) -> set[str]:
+    """Advance completed messages and return transient messages abandoned now."""
+
+    cursor = _load_cursor(path)
+    abandoned_now: set[str] = set()
+    for message_id, has_transient_failure in transient_by_message.items():
+        if has_transient_failure:
+            attempts = cursor.attempts.get(message_id, 0) + 1
+            cursor.attempts[message_id] = attempts
+            if attempts >= max_attempts:
+                cursor.seen.add(message_id)
+                cursor.abandoned.add(message_id)
+                abandoned_now.add(message_id)
+        else:
+            cursor.seen.add(message_id)
+            cursor.attempts.pop(message_id, None)
+    _write_cursor(path, cursor)
+    return abandoned_now
 
 
 def _slug_for_message(message: Mapping[str, Any]) -> str:
@@ -517,8 +582,8 @@ def ingest_dms(
     if jobs_root is None:
         root.mkdir(mode=0o700, parents=True, exist_ok=True)
         root.chmod(0o700)
-    seen = _load_cursor(seen_path)
-    created: list[str] = []
+    cursor = _load_cursor(seen_path)
+    created = IngestBatch(cursor_path=seen_path)
 
     for thread_record in selected_threads:
         identifier = _thread_id(thread_record)
@@ -538,7 +603,7 @@ def ingest_dms(
         messages = _messages(_run_json(execute, read_argv))
         for message in reversed(messages):
             message_id = _message_id(message)
-            if not message_id or message_id in seen:
+            if not message_id or message_id in cursor.seen:
                 continue
             text_sources = (
                 [] if _item_type(message) in MEDIA_ITEM_TYPES else _text_urls(message)
@@ -554,8 +619,7 @@ def ingest_dms(
                         document = _url_job_document(source, slug, message, timestamp)
                         _write_json(job_dir / "job.json", document)
                     created.append(slug)
-                seen.add(message_id)
-                _write_cursor(seen_path, seen)
+                    created.message_ids.append((slug, message_id))
                 continue
             if _item_type(message) not in MEDIA_ITEM_TYPES:
                 continue
@@ -563,8 +627,8 @@ def ingest_dms(
             job_dir = root / slug
             video_path = job_dir / "media" / "video.mp4"
             if (job_dir / "job.json").is_file() and video_path.is_file():
-                seen.add(message_id)
-                _write_cursor(seen_path, seen)
+                cursor.seen.add(message_id)
+                _write_cursor(seen_path, cursor)
                 continue
             video_path.parent.mkdir(parents=True, exist_ok=True)
             _run_json(
@@ -585,7 +649,7 @@ def ingest_dms(
             _write_json(job_dir / "dm.json", _dm_document(thread_record, message))
             if not (job_dir / "job.json").exists():
                 _write_json(job_dir / "job.json", _job_document(slug, message, timestamp))
-            seen.add(message_id)
-            _write_cursor(seen_path, seen)
+            cursor.seen.add(message_id)
+            _write_cursor(seen_path, cursor)
             created.append(slug)
     return created

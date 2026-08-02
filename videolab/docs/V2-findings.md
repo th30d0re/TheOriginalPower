@@ -216,3 +216,55 @@ DM behavior in the private root.
 4. Add mixed supported and unsupported URL coverage in one message.
 5. Add public-job collision diagnostics for links previously ingested elsewhere.
 6. Add watcher summaries that retain recent partial-batch outcomes.
+
+## Loop 7 — Transient Fetch Retries
+
+### What Was Requested
+
+Classify URL fetch failures by recoverability, retain unseen messages after transient failures,
+abandon messages after five failed attempts, lead diagnostics with observed errors, and expose
+retry outcomes through ingestion and watcher status.
+
+### Work Performed
+
+1. Added case-insensitive permanent-failure matching for unsupported URLs, unavailable videos,
+   private or removed media, and HTTP 404 responses. Every unmatched failure remains transient.
+2. Deferred text-message cursor advancement until every URL has a fetch outcome. Message-level
+   aggregation leaves any message with a transient failure unseen.
+3. Migrated cursor writes to schema version 2 with per-message attempt counts and an abandoned-id
+   record. The fifth transient outcome advances the cursor and reports the affected slug as failed.
+4. Preserved list-compatible ingestion returns and attached message metadata for the CLI pipeline.
+   This keeps existing callers stable while supporting post-fetch cursor decisions.
+5. Added evidence-led error formatting. Container-service diagnostics retain the reported error
+   without a cookie hint. Instagram authentication errors append the cookie refresh procedure.
+6. Added `retrying` to `ingest-dms` JSON and added succeeded, failed, and retrying counts from the
+   latest complete watcher output to `watch status`.
+7. Added regression coverage for transient XPC failures, permanent unsupported URLs, fifth-attempt
+   abandonment, diagnostic ordering, command output, legacy cursor compatibility, and watcher
+   summary parsing.
+
+### Challenges Encountered
+
+1. URL discovery and URL fetching occur in separate modules. A list-compatible batch object now
+   carries the cursor path and opaque message-to-slug associations across that boundary.
+2. A single message can carry multiple URLs. Cursor decisions aggregate every fetch disposition
+   under the originating message id.
+3. Watcher stdout is append-only and contains formatted JSON documents. Status decodes every
+   complete JSON object and selects the latest ingestion summary.
+4. The required Obsidian session-log directory remained outside the managed writable sandbox. A
+   workspace-local session log records this implementation.
+
+### Validation Notes
+
+- The complete required suite passes under the specified interpreter.
+- Tests use stubbed fetch and Instagram CLI runners.
+- No Instagram CLI, launch service, container command, or network fetch ran during validation.
+
+### Next Ideas (6 Ideas)
+
+1. Add exponential retry backoff with bounded jitter.
+2. Add a command that lists opaque abandoned message ids and attempt counts.
+3. Add an operator action that requeues one abandoned message id.
+4. Persist watcher summaries in a dedicated atomic status file.
+5. Add structured failure codes to fetch-stage detail for downstream automation.
+6. Add age-based pruning for completed cursor entries and abandoned records.

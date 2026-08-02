@@ -98,3 +98,20 @@ def test_installed_plist_carries_a_path_for_the_agent(tmp_path: Path) -> None:
     assert "PYTHONPATH" in environment
     assert "PATH" in environment, "agent PATH is required or instagram-cli is unreachable"
     assert "/usr/bin" in environment["PATH"]
+
+
+def test_status_reports_latest_ingest_outcome_counts(tmp_path: Path) -> None:
+    config = _config(tmp_path)
+    logs = config.root / "logs"
+    logs.mkdir()
+    (logs / "dmwatch.out.log").write_text(
+        '{"succeeded": ["old"], "failed": [], "retrying": []}\n'
+        '{\n  "succeeded": ["one", "two"],\n  "failed": ["three"],\n'
+        '  "retrying": ["four"]\n}\n'
+    )
+
+    status = watch_status(config, home=tmp_path / "home", runner=LaunchctlStub())
+
+    assert status["succeeded"] == 2
+    assert status["failed"] == 1
+    assert status["retrying"] == 1

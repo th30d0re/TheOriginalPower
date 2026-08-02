@@ -192,8 +192,8 @@ def test_text_reel_url_creates_public_job_without_dm_provenance(tmp_path: Path) 
         "message_id": "text-reel",
         "timestamp": "2026-08-01T21:00:00Z",
     }
-    cursor = json.loads((tmp_path / "cursor.json").read_text())
-    assert cursor["seen_message_ids"] == ["text-reel"]
+    assert not (tmp_path / "cursor.json").exists()
+    assert slugs.message_ids == [("instagram-CaseKept42", "text-reel")]
 
 
 def test_mark_seen_is_explicit_and_defaults_off(tmp_path: Path) -> None:

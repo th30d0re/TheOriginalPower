@@ -19,7 +19,7 @@ from urllib.parse import parse_qs, urlparse
 from .config import Config, load_config
 from .containers import ContainerError, run_derive, run_fetch
 from .cookies import refresh_cookies
-from .instagram import ingest_dms
+from .instagram import IngestBatch, finish_message_attempts, ingest_dms
 from .report import write_report
 from .watch import install_watch, uninstall_watch, watch_status
 
@@ -59,6 +59,56 @@ except ImportError:
 
 def _utc_now() -> str:
     return datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
+
+
+_PERMANENT_FETCH_FAILURE = re.compile(
+    r"unsupported url|video unavailable|\bprivate\b|\bremoved\b|http(?: error)?\s*404\b",
+    re.IGNORECASE,
+)
+_CONTAINER_SERVICE_FAILURE = re.compile(
+    r"xpc connection error|apiserver is not running|container system start|"
+    r"connection invalid|operation not permitted",
+    re.IGNORECASE,
+)
+_INSTAGRAM_AUTH_FAILURE = re.compile(
+    r"cookie|login required|log[ -]?in required|authentication|unauthorized|"
+    r"sign[ -]?in|session expired|credentials",
+    re.IGNORECASE,
+)
+
+
+def is_transient_fetch_failure(error: str) -> bool:
+    """Return whether retrying a failed URL can plausibly succeed."""
+
+    return _PERMANENT_FETCH_FAILURE.search(error) is None
+
+
+def format_fetch_error(platform: str, error: str) -> str:
+    """Lead with observed evidence and append a supported operator hint."""
+
+    detail = error.strip() or "unknown fetch error"
+    if (
+        platform == "instagram"
+        and _INSTAGRAM_AUTH_FAILURE.search(detail)
+        and not _CONTAINER_SERVICE_FAILURE.search(detail)
+    ):
+        return (
+            detail
+            + "\nInstagram authentication may require fresh cookies. Run "
+            "`videolab cookies refresh --browser safari --domain instagram.com` "
+            "with Full Disk Access, then retry."
+        )
+    return detail
+
+
+class DMIngestResult(list[str]):
+    """List-compatible job result with explicit fetch dispositions."""
+
+    def __init__(self, slugs: Sequence[str]) -> None:
+        super().__init__(slugs)
+        self.succeeded: list[str] = []
+        self.failed: list[str] = []
+        self.retrying: list[str] = []
 
 
 def _stage() -> dict[str, Any]:
@@ -212,7 +262,7 @@ def ingest_dm_jobs(
 ) -> list[str]:
     """Download new DM jobs and run each through derive, ASR, and report."""
 
-    slugs = ingest_dms(
+    batch = ingest_dms(
         limit=limit,
         thread=thread,
         all_threads=all_threads,
@@ -220,18 +270,31 @@ def ingest_dm_jobs(
         jobs_root=config.private_jobs_dir,
         public_jobs_root=config.jobs_dir,
     )
-    for slug in slugs:
+    result = DMIngestResult(batch)
+    transient_slugs: set[str] = set()
+    for slug in batch:
         public_job = config.jobs_dir / slug
         private_job = config.private_jobs_dir / slug
         job_dir = public_job if (public_job / "job.json").is_file() else private_job
         if not (job_dir / "job.json").is_file():
             _run_post_fetch_pipeline(config, job_dir, frames=12, ocr=True)
+            result.succeeded.append(slug)
             continue
         job = json.loads((job_dir / "job.json").read_text(encoding="utf-8"))
         source_data = job.get("source", {})
         if source_data.get("kind") == "url":
+            fetch_stage = job.get("stages", {}).get("fetch", {})
+            fetch_detail = dict(fetch_stage.get("detail", {}))
+            if fetch_stage.get("status") == "ok":
+                result.succeeded.append(slug)
+                continue
+            if (
+                fetch_stage.get("status") == "error"
+                and fetch_detail.get("failure_kind") == "permanent"
+            ):
+                result.failed.append(slug)
+                continue
             fetch_started = _utc_now()
-            fetch_detail = dict(job.get("stages", {}).get("fetch", {}).get("detail", {}))
             platform = str(source_data.get("platform", ""))
             source_url = str(source_data.get("url", ""))
             cookie = config.cookie_file(_cookie_domain(Source(
@@ -239,26 +302,26 @@ def ingest_dm_jobs(
                 url=source_url, path=None,
             )))
             try:
-                result = run_fetch(
+                fetch_result = run_fetch(
                     config, job_dir, source_url, cookie if cookie.is_file() else None
                 )
-                fetch_detail.update({k: v for k, v in result.items() if k != "ok"})
+                fetch_detail.update({k: v for k, v in fetch_result.items() if k != "ok"})
                 _record_stage(
                     job_dir, "fetch", status="ok", engine="yt-dlp",
                     detail=fetch_detail, started_at=fetch_started,
                 )
             except (ContainerError, RuntimeError, OSError) as exc:
-                error = str(exc)
-                if platform == "instagram":
-                    error = (
-                        "Instagram fetch likely failed because cookies are unavailable or stale. "
-                        "Run `videolab cookies refresh --browser safari --domain instagram.com` "
-                        "with Full Disk Access, then retry. Fetch detail: " + error
-                    )
+                transient = is_transient_fetch_failure(str(exc))
+                fetch_detail["failure_kind"] = "transient" if transient else "permanent"
                 _record_stage(
                     job_dir, "fetch", status="error", engine="yt-dlp",
-                    detail=fetch_detail, started_at=fetch_started, error=error,
+                    detail=fetch_detail, started_at=fetch_started,
+                    error=format_fetch_error(platform, str(exc)),
                 )
+                if transient:
+                    transient_slugs.add(slug)
+                else:
+                    result.failed.append(slug)
                 continue
         _run_post_fetch_pipeline(
             config,
@@ -266,7 +329,28 @@ def ingest_dm_jobs(
             frames=12,
             ocr=True,
         )
-    return slugs
+        result.succeeded.append(slug)
+
+    if isinstance(batch, IngestBatch) and batch.message_ids:
+        transient_by_message: dict[str, bool] = {}
+        for slug, message_id in batch.message_ids:
+            transient_by_message[message_id] = (
+                transient_by_message.get(message_id, False) or slug in transient_slugs
+            )
+        abandoned = finish_message_attempts(batch.cursor_path, transient_by_message)
+        for slug in transient_slugs:
+            message_ids = {
+                message_id
+                for batch_slug, message_id in batch.message_ids
+                if batch_slug == slug
+            }
+            if message_ids and message_ids <= abandoned:
+                result.failed.append(slug)
+            else:
+                result.retrying.append(slug)
+    else:
+        result.retrying.extend(transient_slugs)
+    return result
 
 
 _ANSI = re.compile(r"\x1b\[[0-9;]*[A-Za-z]")
@@ -419,18 +503,18 @@ def main(argv: list[str] | None = None) -> int:
                 all_threads=args.all_threads,
                 mark_seen=args.mark_seen,
             )
-            failed = []
-            for slug in slugs:
-                job_dir = config.jobs_dir / slug
-                if not (job_dir / "job.json").is_file():
-                    job_dir = config.private_jobs_dir / slug
-                job = json.loads((job_dir / "job.json").read_text(encoding="utf-8"))
-                if job.get("stages", {}).get("fetch", {}).get("status") == "error":
-                    failed.append(slug)
+            failed = getattr(slugs, "failed", [])
+            retrying = getattr(slugs, "retrying", [])
+            succeeded = getattr(
+                slugs,
+                "succeeded",
+                [slug for slug in slugs if slug not in failed and slug not in retrying],
+            )
             result = {
-                "ok": not failed, "count": len(slugs), "slugs": slugs,
-                "succeeded": [slug for slug in slugs if slug not in failed],
+                "ok": not failed and not retrying, "count": len(slugs), "slugs": slugs,
+                "succeeded": succeeded,
                 "failed": failed,
+                "retrying": retrying,
             }
         elif args.command == "watch":
             if args.watch_command == "install":

@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 import os
 import plistlib
 import shutil
@@ -142,6 +143,40 @@ def _last_run(config: Config) -> str | None:
     return datetime.fromtimestamp(modified, timezone.utc).isoformat().replace("+00:00", "Z")
 
 
+def _last_ingest_counts(config: Config) -> dict[str, int]:
+    """Read the most recent complete ingestion summary from watcher stdout."""
+
+    counts = {"succeeded": 0, "failed": 0, "retrying": 0}
+    path = config.root / "logs" / "dmwatch.out.log"
+    if not path.is_file():
+        return counts
+    try:
+        content = path.read_text(encoding="utf-8")
+    except OSError:
+        return counts
+    decoder = json.JSONDecoder()
+    position = 0
+    summaries: list[dict[str, Any]] = []
+    while position < len(content):
+        start = content.find("{", position)
+        if start < 0:
+            break
+        try:
+            value, end = decoder.raw_decode(content, start)
+        except json.JSONDecodeError:
+            position = start + 1
+            continue
+        if isinstance(value, dict) and all(
+            isinstance(value.get(key), list) for key in counts
+        ):
+            summaries.append(value)
+        position = end
+    if summaries:
+        latest = summaries[-1]
+        counts = {key: len(latest[key]) for key in counts}
+    return counts
+
+
 def watch_status(
     config: Config,
     *,
@@ -170,5 +205,6 @@ def watch_status(
         "interval_minutes": interval,
         "last_run": _last_run(config),
         "job_count": job_count,
+        **_last_ingest_counts(config),
         "plist": str(path),
     }
