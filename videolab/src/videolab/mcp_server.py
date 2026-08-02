@@ -20,6 +20,9 @@ from .instagram import ingest_dms
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
+# PROJECT_ROOT is videolab/; REPO_ROOT is the repository containing it, which is
+# what a relative path from an MCP client is most likely written against.
+REPO_ROOT = PROJECT_ROOT.parent
 DEFAULT_JOBS_ROOT = PROJECT_ROOT / "jobs"
 _SAFE_SLUG = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]{0,95}$")
 _SLUG_IN_OUTPUT = re.compile(r"\b(?:instagram|youtube|tiktok|x|file)-[A-Za-z0-9._-]+\b")
@@ -171,7 +174,20 @@ def videolab_ingest(
         raise ValueError("frames must be positive")
     if asr not in {"host", "container"}:
         raise ValueError("asr must be 'host' or 'container'")
-    args = ["ingest", url_or_path, "--frames", str(frames), "--asr", asr]
+    # An MCP client has no shared working directory with this server, so a bare
+    # relative path would resolve against whatever cwd the transport happened to
+    # start in. Anchor non-URL inputs to the project root before shelling out.
+    target = url_or_path
+    if "://" not in target:
+        candidate = Path(target).expanduser()
+        if not candidate.is_absolute():
+            for root in (REPO_ROOT, PROJECT_ROOT):
+                if (root / candidate).exists():
+                    candidate = root / candidate
+                    break
+        if candidate.exists():
+            target = str(candidate.resolve())
+    args = ["ingest", target, "--frames", str(frames), "--asr", asr]
     if not ocr:
         args.append("--no-ocr")
     output = _cli(args)
