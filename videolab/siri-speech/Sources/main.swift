@@ -37,7 +37,18 @@ final class SpeechEngine: NSObject, AVSpeechSynthesizerDelegate {
         let connection: NWConnection
     }
 
-    let voice = AVSpeechSynthesisVoice(identifier: voiceIdentifier)
+    /// Resolved on first use rather than at init.
+    ///
+    /// As a stored-property initializer this returned nil in the compiled binary even
+    /// though the identifier resolves fine in an interpreted script: the voice registry
+    /// is not yet populated while the object is being constructed. Enumerating
+    /// speechVoices() first warms it, and the list lookup is a second route to the same
+    /// voice when the identifier initializer still comes back empty.
+    lazy var voice: AVSpeechSynthesisVoice? = {
+        let installed = AVSpeechSynthesisVoice.speechVoices()
+        return AVSpeechSynthesisVoice(identifier: voiceIdentifier)
+            ?? installed.first { $0.identifier == voiceIdentifier }
+    }()
     private let synthesizer = AVSpeechSynthesizer()
     private var currentUtterance: AVSpeechUtterance?
     private(set) var currentId: String?
@@ -341,7 +352,7 @@ final class Server {
                 let name = escapeJSON(voice.name)
                 body = "{\"ok\":true,\"voice\":\"\(name)\",\"identifier\":\"\(voiceIdentifier)\",\"available\":true}"
             } else {
-                body = "{\"ok\":true,\"voice\":null,\"identifier\":\"\(voiceIdentifier)\",\"available\":false,\"reason\":\"AVSpeechSynthesisVoice(identifier:) returned nil — Siri Voice 2 is not installed on this Mac\"}"
+                body = "{\"ok\":true,\"voice\":null,\"identifier\":\"\(voiceIdentifier)\",\"available\":false,\"reason\":\"Siri Voice 2 is not visible to this process. Siri voices are gated by code signature: an ad-hoc-signed binary sees 180 voices and no Siri, while Apple-signed swift sees 190 including it. Start this helper with 'swift Sources/main.swift', not the compiled binary.\"}"
             }
             sendResponse(connection, status: 200, reason: "OK", body: body, origin: origin)
         }
