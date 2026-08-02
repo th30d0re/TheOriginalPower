@@ -14,6 +14,7 @@ from typing import Any
 
 CLIResult = subprocess.CompletedProcess[str]
 CLIRunner = Callable[[Sequence[str]], CLIResult]
+INSTAGRAM_CLI_TIMEOUT_SECONDS = 60
 
 DEFAULT_CURSOR = Path.home() / ".config" / "videolab" / "instagram-cursor.json"
 DEFAULT_JOBS = Path(__file__).resolve().parents[2] / "jobs-private"
@@ -41,12 +42,20 @@ class InstagramCLIError(RuntimeError):
 
 
 def _default_runner(argv: Sequence[str]) -> CLIResult:
-    return subprocess.run(
-        list(argv),
-        capture_output=True,
-        check=False,
-        text=True,
-    )
+    try:
+        return subprocess.run(
+            list(argv),
+            capture_output=True,
+            check=False,
+            text=True,
+            timeout=INSTAGRAM_CLI_TIMEOUT_SECONDS,
+        )
+    except subprocess.TimeoutExpired as exc:
+        raise InstagramCLIError(
+            f"instagram-cli timed out after {INSTAGRAM_CLI_TIMEOUT_SECONDS} seconds"
+        ) from exc
+    except FileNotFoundError as exc:
+        raise InstagramCLIError("instagram-cli is not installed or is not on PATH") from exc
 
 
 def _run_json(runner: CLIRunner, argv: Sequence[str]) -> Any:
@@ -338,23 +347,78 @@ def _job_document(slug: str, message: Mapping[str, Any], timestamp: str) -> dict
 
 
 def _matches_thread(thread: Mapping[str, Any], query: str) -> bool:
-    folded = query.casefold()
-    if _thread_id(thread) == query:
-        return True
-    title = _field(thread, "thread_title", "title")
-    if isinstance(title, str) and folded in title.casefold():
-        return True
-    return any(
-        folded == str(_field(user, "username", "user_name") or "").casefold()
-        for user in thread.get("users", [])
-        if isinstance(user, Mapping)
+    return _thread_id(thread) == query
+
+
+def _account_names(authenticated_account: Any) -> set[str]:
+    names: set[str] = set()
+    if isinstance(authenticated_account, Mapping):
+        for key in ("username", "user_name", "full_name", "display_name", "name"):
+            value = authenticated_account.get(key)
+            if isinstance(value, str) and value.strip():
+                names.add(value.strip().removeprefix("@").casefold())
+    elif isinstance(authenticated_account, str):
+        text = authenticated_account.strip()
+        try:
+            parsed = json.loads(text)
+        except json.JSONDecodeError:
+            parsed = None
+        if isinstance(parsed, Mapping):
+            data = parsed.get("data", parsed)
+            names.update(_account_names(data))
+        names.update(match.casefold() for match in re.findall(r"@([A-Za-z0-9._]+)", text))
+        for pattern in (
+            r"(?im)^\s*(?:display\s*name|full\s*name|name)\s*:\s*(.+?)\s*$",
+            r"(?im)^\s*(?:username|account)\s*:\s*@?([A-Za-z0-9._]+)\s*$",
+        ):
+            names.update(match.strip().removeprefix("@").casefold() for match in re.findall(pattern, text))
+    return {name for name in names if name}
+
+
+def find_self_thread(
+    inbox: Any,
+    authenticated_account: Any,
+) -> Mapping[str, Any]:
+    """Return the uniquely identifiable authenticated account's self-thread."""
+
+    available = _threads(inbox)
+    empty_user_threads = [thread for thread in available if thread.get("users") == []]
+    if len(empty_user_threads) == 1:
+        return empty_user_threads[0]
+
+    account_names = _account_names(authenticated_account)
+    title_matches = [
+        thread
+        for thread in available
+        if isinstance(_field(thread, "thread_title", "title"), str)
+        and str(_field(thread, "thread_title", "title")).strip().removeprefix("@").casefold()
+        in account_names
+    ]
+    if len(title_matches) == 1:
+        return title_matches[0]
+
+    candidates = title_matches or empty_user_threads or available
+    candidate_ids = sorted(filter(None, (_thread_id(item) for item in candidates)))
+    detail = ", ".join(candidate_ids) if candidate_ids else "none"
+    raise InstagramCLIError(
+        f"Cannot identify a unique Instagram self-thread; candidate thread ids: {detail}"
     )
 
 
-def _select_threads(data: Any, thread: str | None) -> list[Mapping[str, Any]]:
+def _select_threads(
+    data: Any,
+    thread: str | None,
+    *,
+    all_threads: bool,
+    authenticated_account: Any,
+) -> list[Mapping[str, Any]]:
     available = _threads(data)
-    if thread is None:
+    if thread is not None and all_threads:
+        raise ValueError("thread and all_threads are mutually exclusive")
+    if all_threads:
         return available
+    if thread is None:
+        return [find_self_thread(data, authenticated_account)]
     matches = [item for item in available if _matches_thread(item, thread)]
     if matches:
         return matches
@@ -365,6 +429,7 @@ def ingest_dms(
     limit: int = 20,
     thread: str | None = None,
     mark_seen: bool = False,
+    all_threads: bool = False,
     *,
     cursor_path: Path | None = None,
     jobs_root: Path | None = None,
@@ -380,12 +445,17 @@ def ingest_dms(
     if limit < 1:
         raise ValueError("limit must be positive")
     execute = runner or _default_runner
-    check_auth(runner=execute)
+    authenticated_account = check_auth(runner=execute)
     inbox = _run_json(
         execute,
         ["instagram-cli", "inbox", "--output", "json", "--limit", str(limit)],
     )
-    selected_threads = _select_threads(inbox, thread)
+    selected_threads = _select_threads(
+        inbox,
+        thread,
+        all_threads=all_threads,
+        authenticated_account=authenticated_account,
+    )
     seen_path = cursor_path or DEFAULT_CURSOR
     root = jobs_root or DEFAULT_JOBS
     if jobs_root is None:

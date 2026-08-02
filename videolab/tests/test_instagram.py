@@ -10,7 +10,7 @@ import pytest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
-from videolab.instagram import InstagramCLIError, check_auth, ingest_dms
+from videolab.instagram import InstagramCLIError, check_auth, find_self_thread, ingest_dms
 import videolab.instagram as instagram
 
 
@@ -28,7 +28,10 @@ class StubCLI:
         self.calls.append(args)
         if args == ["instagram-cli", "auth", "whoami"]:
             if self.auth_ok:
-                return self._result(args, stdout="Currently active account: @ejtheodore\n")
+                return self._result(
+                    args,
+                    stdout="Display name: Sample Owner\nUsername: @sample_owner\n",
+                )
             return self._result(args, returncode=1, stderr="No active session")
         if args[1] == "inbox":
             return self._json(
@@ -37,16 +40,23 @@ class StubCLI:
                     "threads": [
                         {
                             "thread_id": THREAD_ID,
-                            "thread_title": "Saved reels",
+                            "thread_title": "Sample Owner",
                             "last_activity_at": "2026-08-01T20:00:00Z",
+                            "users": [],
+                        },
+                        {
+                            "thread_id": "direct-thread",
+                            "thread_title": "Invented Contact",
+                            "users": [{"pk": "43", "username": "invented_contact"}],
+                        },
+                        {
+                            "thread_id": "group-thread",
+                            "thread_title": "Invented Group",
                             "users": [
-                                {
-                                    "pk": "42",
-                                    "username": "ejtheodore",
-                                    "full_name": "Emmanuel Theodore",
-                                }
+                                {"pk": "44", "username": "member_one"},
+                                {"pk": "45", "username": "member_two"},
                             ],
-                        }
+                        },
                     ]
                 },
             )
@@ -62,6 +72,8 @@ class StubCLI:
                                 "timestamp": "2026-08-01T19:59:00Z",
                                 "text": "context from the sender",
                                 "user_id": "42",
+                                "username": "sample_owner",
+                                "full_name": "Sample Owner",
                                 "is_sent_by_viewer": True,
                                 "media": {
                                     "permalink": "https://www.instagram.com/reel/DZtCPIRPT87/?igsh=secret",
@@ -83,6 +95,8 @@ class StubCLI:
                     }
                 },
             )
+        if args[1] == "read" and args[2] in {"direct-thread", "group-thread"}:
+            return self._json(args, {"thread": {"items": []}})
         if "--download" in args:
             destination = Path(args[args.index("--download") + 1])
             destination.write_bytes(b"fake mp4")
@@ -119,7 +133,7 @@ def test_same_message_twice_creates_one_job(tmp_path: Path) -> None:
 
     dm = json.loads((jobs / first[0] / "dm.json").read_text())
     assert dm["message"]["message_id"] == MESSAGE_ID
-    assert dm["message"]["sender"]["username"] == "ejtheodore"
+    assert dm["message"]["sender"]["username"] == "sample_owner"
     assert dm["message"]["caption"] == "Untrusted reel caption"
     assert dm["message"]["original_author"]["username"] == "original_creator"
     assert dm["message"]["share_context"] == "Shared a reel"
@@ -159,10 +173,10 @@ def test_mark_seen_is_explicit_and_defaults_off(tmp_path: Path) -> None:
     assert all("--mark-seen" in call for call in marked_reads)
 
 
-def test_thread_filter_uses_resolved_thread_id(tmp_path: Path) -> None:
+def test_thread_filter_uses_explicit_thread_id(tmp_path: Path) -> None:
     cli = StubCLI()
     result = ingest_dms(
-        thread="ejtheodore",
+        thread=THREAD_ID,
         cursor_path=tmp_path / "cursor.json",
         jobs_root=tmp_path / "jobs",
         runner=cli,
@@ -171,6 +185,69 @@ def test_thread_filter_uses_resolved_thread_id(tmp_path: Path) -> None:
     assert result == ["instagram-DZtCPIRPT87"]
     read = next(call for call in cli.calls if call[1] == "read" and "--download" not in call)
     assert read[2] == THREAD_ID
+
+
+def test_find_self_thread_prefers_only_empty_users_thread() -> None:
+    inbox = {
+        "threads": [
+            {"thread_id": "direct", "thread_title": "Contact", "users": [{"pk": "1"}]},
+            {"thread_id": "self", "thread_title": "Owner", "users": []},
+            {"thread_id": "group", "thread_title": "Group", "users": [{"pk": "2"}, {"pk": "3"}]},
+        ]
+    }
+
+    assert find_self_thread(inbox, {"username": "owner"})["thread_id"] == "self"
+
+
+def test_find_self_thread_ambiguous_case_raises_with_ids_only() -> None:
+    inbox = {
+        "threads": [
+            {"thread_id": "candidate-a", "thread_title": "Private A", "users": []},
+            {"thread_id": "candidate-b", "thread_title": "Private B", "users": []},
+        ]
+    }
+
+    with pytest.raises(InstagramCLIError) as raised:
+        find_self_thread(inbox, {"username": "owner"})
+    detail = str(raised.value)
+    assert "candidate-a" in detail and "candidate-b" in detail
+    assert "Private A" not in detail and "Private B" not in detail
+
+
+def test_find_self_thread_falls_back_to_authenticated_account_name() -> None:
+    inbox = {
+        "threads": [
+            {"thread_id": "direct", "thread_title": "Contact", "users": [{"pk": "1"}]},
+            {"thread_id": "self", "thread_title": "Sample Owner", "users": [{"pk": "2"}]},
+        ]
+    }
+
+    selected = find_self_thread(
+        inbox,
+        {"username": "sample_owner", "display_name": "Sample Owner"},
+    )
+    assert selected["thread_id"] == "self"
+
+
+def test_ingest_dms_defaults_to_self_thread_and_all_threads_is_explicit(tmp_path: Path) -> None:
+    default_cli = StubCLI()
+    ingest_dms(
+        cursor_path=tmp_path / "default-cursor.json",
+        jobs_root=tmp_path / "default-jobs",
+        runner=default_cli,
+    )
+    default_reads = [call[2] for call in default_cli.calls if call[1] == "read" and "--download" not in call]
+    assert default_reads == [THREAD_ID]
+
+    all_cli = StubCLI()
+    ingest_dms(
+        all_threads=True,
+        cursor_path=tmp_path / "all-cursor.json",
+        jobs_root=tmp_path / "all-jobs",
+        runner=all_cli,
+    )
+    all_reads = [call[2] for call in all_cli.calls if call[1] == "read" and "--download" not in call]
+    assert all_reads == [THREAD_ID, "direct-thread", "group-thread"]
 
 
 def test_auth_failure_requires_manual_login() -> None:

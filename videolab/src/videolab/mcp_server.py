@@ -212,6 +212,7 @@ def videolab_ingest(
 def videolab_ingest_dms(
     limit: int = 20,
     thread: str | None = None,
+    all_threads: bool = False,
     mark_seen: bool = False,
 ) -> dict[str, Any]:
     """Create jobs for unseen media DMs without changing read state by default."""
@@ -219,6 +220,7 @@ def videolab_ingest_dms(
     slugs = ingest_dms(
         limit=limit,
         thread=thread,
+        all_threads=all_threads,
         mark_seen=mark_seen,
         jobs_root=_private_jobs_root(),
     )

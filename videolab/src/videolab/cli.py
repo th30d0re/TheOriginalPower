@@ -19,7 +19,9 @@ from urllib.parse import parse_qs, urlparse
 from .config import Config, load_config
 from .containers import ContainerError, run_derive, run_fetch
 from .cookies import refresh_cookies
+from .instagram import ingest_dms
 from .report import write_report
+from .watch import install_watch, uninstall_watch, watch_status
 
 try:
     from .slugs import Source, parse_source, slug_for
@@ -141,25 +143,15 @@ def _record_stage(
     path.write_text(json.dumps(job, indent=2) + "\n", encoding="utf-8")
 
 
-def ingest(config: Config, src: str, *, frames: int, ocr: bool, asr_mode: str) -> str:
-    """Run the A1/A3, B, and C stages for one source and return its slug."""
-    if asr_mode == "container":
-        raise ValueError("container ASR is unavailable; Stage C runs on the host with `--asr host`")
-    source = parse_source(src)
-    slug = slug_for(source)
-    job_dir = _create_job(config, source, slug)
-    if source.kind == "file":
-        assert source.path is not None
-        shutil.copy2(source.path, job_dir / "media" / "video.mp4")
-        job_path = job_dir / "job.json"
-        job = json.loads(job_path.read_text(encoding="utf-8"))
-        now = _utc_now()
-        job["stages"]["fetch"] = {"status": "skipped", "engine": "file-copy", "detail": {}, "started_at": now, "ended_at": now, "error": None}
-        job_path.write_text(json.dumps(job, indent=2) + "\n", encoding="utf-8")
-    else:
-        assert source.url is not None
-        cookie = config.cookie_file(_cookie_domain(source))
-        run_fetch(config, job_dir, source.url, cookie if cookie.is_file() else None)
+def _run_post_fetch_pipeline(
+    config: Config,
+    job_dir: Path,
+    *,
+    frames: int,
+    ocr: bool,
+) -> None:
+    """Run and record the shared derive, ASR, and report stages."""
+
     derive_started = _utc_now()
     derive_result = run_derive(config, job_dir, frames=frames, ocr=ocr)
     _record_stage(
@@ -183,7 +175,57 @@ def ingest(config: Config, src: str, *, frames: int, ocr: bool, asr_mode: str) -
         detail={name: path.name for name, path in written.items()},
         started_at=report_started,
     )
+
+
+def ingest(config: Config, src: str, *, frames: int, ocr: bool, asr_mode: str) -> str:
+    """Run the A1/A3, B, C, and D stages for one source and return its slug."""
+
+    if asr_mode == "container":
+        raise ValueError("container ASR is unavailable; Stage C runs on the host with `--asr host`")
+    source = parse_source(src)
+    slug = slug_for(source)
+    job_dir = _create_job(config, source, slug)
+    if source.kind == "file":
+        assert source.path is not None
+        shutil.copy2(source.path, job_dir / "media" / "video.mp4")
+        job_path = job_dir / "job.json"
+        job = json.loads(job_path.read_text(encoding="utf-8"))
+        now = _utc_now()
+        job["stages"]["fetch"] = {"status": "skipped", "engine": "file-copy", "detail": {}, "started_at": now, "ended_at": now, "error": None}
+        job_path.write_text(json.dumps(job, indent=2) + "\n", encoding="utf-8")
+    else:
+        assert source.url is not None
+        cookie = config.cookie_file(_cookie_domain(source))
+        run_fetch(config, job_dir, source.url, cookie if cookie.is_file() else None)
+    _run_post_fetch_pipeline(config, job_dir, frames=frames, ocr=ocr)
     return slug
+
+
+def ingest_dm_jobs(
+    config: Config,
+    *,
+    limit: int = 20,
+    thread: str | None = None,
+    all_threads: bool = False,
+    mark_seen: bool = False,
+) -> list[str]:
+    """Download new DM jobs and run each through derive, ASR, and report."""
+
+    slugs = ingest_dms(
+        limit=limit,
+        thread=thread,
+        all_threads=all_threads,
+        mark_seen=mark_seen,
+        jobs_root=config.private_jobs_dir,
+    )
+    for slug in slugs:
+        _run_post_fetch_pipeline(
+            config,
+            config.private_jobs_dir / slug,
+            frames=12,
+            ocr=True,
+        )
+    return slugs
 
 
 _ANSI = re.compile(r"\x1b\[[0-9;]*[A-Za-z]")
@@ -295,12 +337,24 @@ def build_parser() -> argparse.ArgumentParser:
     ingest_parser.add_argument("--frames", type=int, default=12)
     ingest_parser.add_argument("--no-ocr", action="store_true")
     ingest_parser.add_argument("--asr", choices=("host", "container"), default="host")
+    dm_parser = subparsers.add_parser("ingest-dms")
+    dm_parser.add_argument("--limit", type=int, default=20)
+    dm_scope = dm_parser.add_mutually_exclusive_group()
+    dm_scope.add_argument("--thread")
+    dm_scope.add_argument("--all-threads", action="store_true")
+    dm_parser.add_argument("--mark-seen", action="store_true")
     subparsers.add_parser("list")
     cookies_parser = subparsers.add_parser("cookies")
     cookie_subparsers = cookies_parser.add_subparsers(dest="cookies_command", required=True)
     refresh_parser = cookie_subparsers.add_parser("refresh")
     refresh_parser.add_argument("--browser", default="safari")
     refresh_parser.add_argument("--domain", required=True)
+    watch_parser = subparsers.add_parser("watch")
+    watch_subparsers = watch_parser.add_subparsers(dest="watch_command", required=True)
+    watch_install = watch_subparsers.add_parser("install")
+    watch_install.add_argument("--interval-minutes", type=int, default=15)
+    watch_subparsers.add_parser("uninstall")
+    watch_subparsers.add_parser("status")
     return parser
 
 
@@ -316,6 +370,22 @@ def main(argv: list[str] | None = None) -> int:
         elif args.command == "cookies":
             path = refresh_cookies(config, browser=args.browser, domain=args.domain)
             result = {"ok": True, "file": str(path), "mode": "600"}
+        elif args.command == "ingest-dms":
+            slugs = ingest_dm_jobs(
+                config,
+                limit=args.limit,
+                thread=args.thread,
+                all_threads=args.all_threads,
+                mark_seen=args.mark_seen,
+            )
+            result = {"ok": True, "count": len(slugs), "slugs": slugs}
+        elif args.command == "watch":
+            if args.watch_command == "install":
+                result = install_watch(config, args.interval_minutes)
+            elif args.watch_command == "uninstall":
+                result = uninstall_watch()
+            else:
+                result = watch_status(config)
         else:
             result = {"ok": True, "slug": ingest(config, args.source, frames=args.frames, ocr=not args.no_ocr, asr_mode=args.asr)}
         print(json.dumps(result, indent=2))

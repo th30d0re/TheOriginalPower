@@ -121,3 +121,57 @@ across both roots while retaining path-traversal protections.
 4. Add platform-neutral tests for filesystems without symlink support.
 5. Add a migration command for future provenance-policy changes.
 6. Add a schema-level provenance-to-root consistency validator.
+
+## Loop 5 — Self-Thread DM Watcher
+
+### What Was Requested
+
+Restrict default DM ingestion to the authenticated account's self-thread, provide an explicit
+whole-inbox opt-in, run every new DM job through derive, ASR, and report, and add a macOS launchd
+watcher with install, uninstall, and status commands.
+
+### Work Performed
+
+1. Added `find_self_thread`, which selects the unique empty-`users` thread and uses authenticated
+   display-name or username matching when the structural signal is ambiguous.
+2. Changed `ingest_dms` to select the self-thread by default. The `all_threads` parameter restores
+   the inbox sweep, and explicit thread targeting accepts a thread id.
+3. Added a 60-second timeout and clear timeout and missing-command errors to every default
+   `instagram-cli` subprocess invocation.
+4. Factored derive, ASR, and report into one shared post-fetch pipeline and applied it to URL,
+   file, and newly downloaded DM jobs.
+5. Added `ingest-dms` and `watch` command trees to the module CLI. DM scope and read-state changes
+   remain explicit flags.
+6. Added launchd plist generation and watcher install, uninstall, and status operations. The plist
+   uses absolute Python and source paths, a configurable interval, `RunAtLoad` disabled, and
+   repository-local output and error logs.
+7. Added `all_threads` to the MCP DM tool and ignored the watcher log directory.
+8. Added isolated coverage for structural and fallback self-thread selection, ambiguity errors,
+   default and whole-inbox scopes, full DM pipeline dispatch, CLI parsing, safe plist content,
+   watcher installation, and absent-agent status and uninstall behavior.
+
+### Challenges Encountered
+
+1. The installed `instagram-cli` version emits `auth whoami` as text. Account-name extraction
+   accepts its text form and a future JSON envelope.
+2. launchd state and plist state are separate inputs. Status reads the installed plist for its
+   interval and queries launchd only when that plist exists.
+3. The required Obsidian session-log path remains outside the managed writable sandbox. A temporary
+   session log was maintained under `/tmp`.
+
+### Validation Notes
+
+- The required complete suite passes: 81 tests in 2.24 seconds under the specified interpreter.
+- `python -m videolab watch status` returns a clean unloaded status under an isolated empty home.
+- `git diff --check` passes.
+- No Instagram CLI command or launchctl command ran during implementation or validation.
+- No launch agent was installed, removed, or loaded.
+
+### Next Ideas (6 Ideas)
+
+1. Add a watcher health command that reports the last successful and failed run separately.
+2. Add bounded retry metadata for jobs whose derive or ASR stage fails.
+3. Add a lock file to prevent overlapping scheduled runs on slow videos.
+4. Add rotation limits for watcher stdout and stderr logs.
+5. Add schema fixtures for future `auth whoami` JSON output.
+6. Add a dry-run command that reports the selected self-thread id without reading its messages.

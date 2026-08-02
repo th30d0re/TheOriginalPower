@@ -32,6 +32,24 @@ def test_list_jobs_includes_both_roots_with_privacy_marker(
     ]
 
 
+def test_ingest_dms_forwards_explicit_all_threads(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    _, private = _roots(tmp_path, monkeypatch)
+    received: dict[str, object] = {}
+
+    def fake_ingest_dms(**kwargs: object) -> list[str]:
+        received.update(kwargs)
+        return []
+
+    monkeypatch.setattr(server, "ingest_dms", fake_ingest_dms)
+    result = server.videolab_ingest_dms(all_threads=True)
+
+    assert result == {"count": 0, "slugs": []}
+    assert received["all_threads"] is True
+    assert received["jobs_root"] == private
+
+
 @pytest.mark.parametrize("root_name", ["jobs", "jobs-private"])
 def test_job_dir_resolves_each_root(
     tmp_path: Path, monkeypatch: pytest.MonkeyPatch, root_name: str
