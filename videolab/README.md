@@ -35,6 +35,16 @@ python -m videolab cookies refresh --browser safari --domain instagram.com
 
 Cookie exports live under `~/.config/videolab/cookies/` with mode `600`. They never live under `videolab/`. Fetch mounts only that cookie directory at `/cookies` as read-only. Derivation receives no cookie mount or other credential source.
 
+## Siri speech helper
+
+The videolab website's read-aloud widget uses Siri Voice 2 when the local speech helper is running. Start it with:
+
+```bash
+make videolab-speech
+```
+
+The helper listens on `127.0.0.1:5277` only. Without it the widget falls back to the browser's built-in voices. See `videolab/docs/V12-findings.md` for why the helper runs through the Swift interpreter.
+
 ## Output
 
 Each job lives at `videolab/jobs/<slug>/`. Machine-readable paths stored in its JSON files are relative to the job directory. The `media/` child is the only ignored job path.
