@@ -6,6 +6,7 @@ import argparse
 import hashlib
 import json
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -138,26 +139,45 @@ def ingest(config: Config, src: str, *, frames: int, ocr: bool, asr_mode: str) -
     return slug
 
 
-def _check(command: Sequence[str]) -> tuple[bool, str]:
+_ANSI = re.compile(r"\x1b\[[0-9;]*[A-Za-z]")
+
+
+def _run_lines(command: Sequence[str]) -> tuple[bool, list[str]]:
+    """Run *command* and return its success flag with ANSI-stripped output lines."""
     try:
         completed = subprocess.run(list(command), check=False, capture_output=True, text=True, timeout=30)
     except (FileNotFoundError, subprocess.TimeoutExpired) as exc:
-        return False, str(exc)
-    detail = (completed.stdout.strip() or completed.stderr.strip()).splitlines()
-    return completed.returncode == 0, detail[-1] if detail else "no output"
+        return False, [str(exc)]
+    cleaned = _ANSI.sub("", completed.stdout.strip() or completed.stderr.strip())
+    return completed.returncode == 0, [line.strip() for line in cleaned.splitlines() if line.strip()]
+
+
+def _check(command: Sequence[str]) -> tuple[bool, str]:
+    # First line, not last: version banners put the version up front and trail
+    # off into library and configure noise.
+    ok, lines = _run_lines(command)
+    return ok, lines[0] if lines else "no output"
 
 
 def doctor(config: Config) -> dict[str, Any]:
     """Inspect local container, ASR, authentication, and cookie readiness."""
     status: dict[str, Any] = {}
     service_ok, service_detail = _check([config.container_cli, "system", "status"])
-    if not service_ok:
+    if service_ok:
+        # `system status` prints a field table whose first line is the header.
+        service_detail = "apiserver running"
+    else:
         service_detail = f"{service_detail}; run `container system start`"
     status["container_service"] = {"ok": service_ok, "detail": service_detail}
     image_ok, image_detail = _check([config.container_cli, "image", "inspect", config.image]) if service_ok else (False, "container service unavailable")
+    if image_ok:
+        # `image inspect` emits a JSON array; the first line is just "[".
+        image_detail = config.image
     status["image"] = {"ok": image_ok, "detail": image_detail}
-    for tool in ("ffmpeg", "tesseract"):
-        ok, detail = _check([config.container_cli, "run", "--rm", config.image, tool, "--version"]) if image_ok else (False, "image unavailable")
+    # ffmpeg takes a single-dash -version; --version is parsed as an input option
+    # and fails with "Error splitting the argument list".
+    for tool, flag in (("ffmpeg", "-version"), ("tesseract", "--version")):
+        ok, detail = _check([config.container_cli, "run", "--rm", config.image, tool, flag]) if image_ok else (False, "image unavailable")
         status[tool] = {"ok": ok, "detail": detail}
     mlx_ok, mlx_detail = _check(
         [
@@ -171,7 +191,17 @@ def doctor(config: Config) -> dict[str, Any]:
         [str(config.voice_python), "-c", "import mlx_whisper; print('mlx-whisper ready')"]
     )
     status["mlx_whisper"] = {"ok": whisper_ok, "detail": whisper_detail}
-    instagram_ok, instagram_detail = _check(["instagram-cli", "auth", "whoami"])
+    instagram_ok, instagram_lines = _run_lines(["instagram-cli", "auth", "whoami"])
+    # whoami streams a "Fetching user..." progress line before the answer, so the
+    # account line has to be picked out rather than taken positionally.
+    instagram_detail = next(
+        (line for line in reversed(instagram_lines) if "account" in line.lower()),
+        instagram_lines[0] if instagram_lines else "no output",
+    )
+    if instagram_ok and "account" not in instagram_detail.lower():
+        instagram_detail = "session active"
+    if not instagram_ok:
+        instagram_detail = f"{instagram_detail}; run `instagram-cli auth login`"
     status["instagram_auth"] = {"ok": instagram_ok, "detail": instagram_detail}
     cookies = []
     if config.cookie_dir.is_dir():
