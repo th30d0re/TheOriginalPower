@@ -317,3 +317,56 @@ untrusted input.
 4. Add optional stage-duration summaries from recorded timestamps.
 5. Add a compact print stylesheet for transcript review.
 6. Add schema warnings for malformed artifacts that the viewer skips safely.
+
+## Loop 9 — Website Integration
+
+### What Was Requested
+
+Connect videolab job artifacts to the React website through a media-safe export, runtime routes,
+safe inline LaTeX, and concept-declared framework widgets.
+
+### Work Performed
+
+1. Added `videolab site export --out <directory>` with public-only discovery by default and an
+   explicit `--include-private` option.
+2. Exported newest-first job summaries with complete job, metadata, transcript, OCR, analysis,
+   framework, and tier payloads in `jobs.json`.
+3. Copied job-local frames into per-slug directories, converted them to JPEG, and limited width
+   to 640 pixels while preserving aspect ratio.
+4. Added `/videolab` and `/videolab/:slug` with runtime loading, stage and engagement summaries,
+   timestamped transcripts, deduplicated OCR, frames, analysis, concepts, and tier rendering.
+5. Added a concept registry for the complete contract vocabulary. Registered widgets load through
+   `React.lazy`, unknown concepts retain labelled descriptive chips, and shared widgets deduplicate.
+6. Added a prose renderer that keeps prose in React text nodes and sends only dollar-delimited math
+   to inline KaTeX with raw-LaTeX fallback.
+7. Added optional fixed-angle and caption props to `PhasorResonance`; omitted props preserve its
+   existing animated behavior.
+8. Ignored `website/public/videolab/` and added export, privacy, frame, resize, and CLI tests.
+
+### Challenges Encountered
+
+1. Committed jobs contain frame manifests without local media, so generated export verification
+   reports zero frames for those jobs. Fixture tests cover conversion, layout, and 640-pixel scaling.
+2. Vite reports that some lazy visualization imports also have pre-existing static consumers in
+   other routes. The videolab registry remains lazy and adds no new eager visualization import.
+3. The full frontend lint command reaches pre-existing React hook immutability errors in
+   `InterferenceEngine3D.tsx`. Every changed frontend file passes ESLint directly.
+4. The managed sandbox denies local TCP listeners, so browser-route verification could not start
+   the Vite development server. The production TypeScript and Vite build completes successfully.
+
+### Validation Notes
+
+- The required Python suite passes: 103 tests under the specified voice-environment interpreter.
+- The website production build passes with Vite 7.3.1 and no TypeScript errors.
+- Changed frontend files pass ESLint, and `git diff --check` passes.
+- The real public export contains `instagram-DbaSgWUuwrx` with all nine declared concept ids.
+- Generated videolab site media remains ignored and no private job is present by default.
+
+### Next Ideas (6 Ideas)
+
+1. Add a versioned JSON schema and runtime validation for `jobs.json`.
+2. Add route-level error boundaries around WebGL visualization failures.
+3. Add transcript search with timestamp navigation.
+4. Add an explicit structured phasor-angle field to analysis metadata.
+5. Remove legacy eager visualization imports to improve site-wide chunk splitting.
+6. Add browser component tests once a local preview listener is available.

@@ -21,7 +21,7 @@ from .containers import ContainerError, run_derive, run_fetch
 from .cookies import refresh_cookies
 from .instagram import IngestBatch, finish_message_attempts, ingest_dms
 from .report import write_report
-from .site import build_site
+from .site import build_site, export_site
 from .watch import install_watch, uninstall_watch, watch_status
 
 try:
@@ -486,6 +486,9 @@ def build_parser() -> argparse.ArgumentParser:
     site_build = site_subparsers.add_parser("build")
     site_build.add_argument("--out", type=Path)
     site_build.add_argument("--include-private", action="store_true")
+    site_export = site_subparsers.add_parser("export")
+    site_export.add_argument("--out", type=Path, required=True)
+    site_export.add_argument("--include-private", action="store_true")
     return parser
 
 
@@ -530,11 +533,18 @@ def main(argv: list[str] | None = None) -> int:
             else:
                 result = watch_status(config)
         elif args.command == "site":
-            output = build_site(
-                config,
-                args.out,
-                include_private=args.include_private,
-            )
+            if args.site_command == "export":
+                output = export_site(
+                    config,
+                    args.out,
+                    include_private=args.include_private,
+                )
+            else:
+                output = build_site(
+                    config,
+                    args.out,
+                    include_private=args.include_private,
+                )
             result = {"ok": True, "file": str(output)}
         else:
             result = {"ok": True, "slug": ingest(config, args.source, frames=args.frames, ocr=not args.no_ocr, asr_mode=args.asr)}

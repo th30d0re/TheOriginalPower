@@ -7,7 +7,13 @@ const CX = WIDTH / 2;
 const CY = HEIGHT / 2;
 const RADIUS = 110;
 
-export default function PhasorResonance() {
+interface PhasorResonanceProps {
+  /** Fixed phase angle in degrees. Omit to retain the animated cycle. */
+  theta?: number;
+  caption?: string;
+}
+
+export default function PhasorResonance({ theta: fixedTheta, caption }: PhasorResonanceProps) {
   const svgRef = useRef<SVGSVGElement>(null);
   const requestRef = useRef<number | null>(null);
   const [omega, setOmega] = useState(1.2);
@@ -15,6 +21,7 @@ export default function PhasorResonance() {
   const [phase, setPhase] = useState(0);
 
   useEffect(() => {
+    if (fixedTheta !== undefined) return;
     let last = performance.now();
     const animate = (now: number) => {
       const dt = Math.min((now - last) / 1000, 0.05);
@@ -26,9 +33,9 @@ export default function PhasorResonance() {
     return () => {
       if (requestRef.current) cancelAnimationFrame(requestRef.current);
     };
-  }, [omega]);
+  }, [fixedTheta, omega]);
 
-  const theta = phase % (Math.PI * 2);
+  const theta = fixedTheta === undefined ? phase % (Math.PI * 2) : (fixedTheta * Math.PI) / 180;
   const psiM = RADIUS * Math.cos(theta);
   const psiS = RADIUS * Math.sin(theta);
   const tipX = CX + psiM;
@@ -76,8 +83,10 @@ export default function PhasorResonance() {
       <div className="pr-header">
         <h2>Complex Phasor &amp; Resonance</h2>
         <p>
-          A rotating wage phasor <code>W = ψₘ + jψₛ</code> and the driven-oscillator amplitude curve.
-          The phasor spins counterclockwise through the quadrant cycle IV → I → II → III → IV.
+          {caption ?? <>
+            A rotating wage phasor <code>W = ψₘ + jψₛ</code> and the driven-oscillator amplitude curve.
+            The phasor spins counterclockwise through the quadrant cycle IV → I → II → III → IV.
+          </>}
         </p>
       </div>
 
@@ -87,7 +96,7 @@ export default function PhasorResonance() {
           viewBox={`0 0 ${WIDTH} ${HEIGHT}`}
           className="pr-svg"
           role="img"
-          aria-label="Animated complex phasor"
+          aria-label={fixedTheta === undefined ? 'Animated complex phasor' : `Complex phasor fixed at ${fixedTheta} degrees`}
         >
           {/* Axes */}
           <line x1={0} y1={CY} x2={WIDTH} y2={CY} stroke="#334155" strokeWidth={1} />

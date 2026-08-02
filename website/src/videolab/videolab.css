@@ -1,0 +1,25 @@
+.vl-page { width: min(1180px, calc(100% - 2rem)); margin: 0 auto; padding: 3.5rem 0 6rem; color: var(--text-primary); }
+.vl-hero { padding: 3rem; border: 1px solid var(--bg-light); border-radius: 16px; background: radial-gradient(circle at 80% 0, rgba(34,211,238,.15), transparent 34%), var(--bg-medium); }
+.vl-hero h1,.vl-detail-header h1 { margin: .25rem 0 .7rem; font-size: clamp(2.2rem, 6vw, 4.8rem); line-height: 1; }
+.vl-kicker { color: #22d3ee; text-transform: uppercase; letter-spacing: .14em; font-size: .75rem; font-weight: 700; }
+.vl-state { margin: 2rem 0; padding: 1.5rem; border: 1px solid var(--bg-light); border-radius: 10px; background: var(--bg-medium); }
+.vl-error { border-color: var(--accent-red); }
+.vl-job-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 1rem; margin-top: 1.5rem; }
+.vl-job-card { padding: 1.4rem; color: inherit; text-decoration: none; background: var(--bg-medium); border: 1px solid var(--bg-light); border-radius: 12px; transition: transform .2s,border-color .2s; }
+.vl-job-card:hover { transform: translateY(-3px); border-color: #22d3ee; }
+.vl-job-card h2 { margin: 1.2rem 0 .4rem; font-size: 1.25rem; }
+.vl-card-line { display: flex; gap: .55rem; align-items: center; color: var(--text-secondary); font-size: .8rem; text-transform: uppercase; }
+.vl-card-line span:last-child { margin-left: auto; }
+.vl-health { width: .55rem; height: .55rem; border-radius: 50%; background: #10b981; }.vl-health.vl-pending { background:#f59e0b }.vl-health.vl-error { background:#ef4444 }
+.vl-mini-concepts,.vl-concepts,.vl-stage-strip { display:flex; flex-wrap:wrap; gap:.45rem; margin-top:1rem; }
+.vl-mini-concepts span,.vl-stage,.vl-concept { border:1px solid var(--bg-light); border-radius:999px; padding:.3rem .6rem; font-size:.72rem; color:var(--text-secondary); }
+.vl-back { color:#22d3ee; text-decoration:none; }.vl-detail-header { display:flex; justify-content:space-between; gap:2rem; align-items:end; padding:2.5rem 0; border-bottom:1px solid var(--bg-light); }
+.vl-detail-header code { overflow-wrap:anywhere; }.vl-detail>section { padding:2rem 0; border-bottom:1px solid var(--bg-light); }.vl-detail h2 { margin-bottom:1rem; }.vl-detail h3 { margin:.8rem 0 .35rem; text-transform:capitalize; }
+.vl-stage { color:inherit }.vl-stage.vl-ok { border-color:#10b981;color:#6ee7b7 }.vl-stage.vl-error { border-color:#ef4444;color:#fca5a5 }.vl-stage.vl-pending { border-color:#f59e0b;color:#fcd34d }
+.vl-metrics { display:grid; grid-template-columns:repeat(auto-fit,minmax(110px,1fr)); gap:1rem; }.vl-metrics dt { color:var(--text-secondary);font-size:.72rem;text-transform:uppercase }.vl-metrics dd { margin:.25rem 0 0;font-size:1.4rem;font-weight:700 }
+.vl-timed-row { display:grid; grid-template-columns:4.6rem 1fr; gap:1rem; }.vl-timed-row time { color:#22d3ee;font-variant-numeric:tabular-nums }.vl-timed-row p { margin:0 0 .8rem;line-height:1.65 }
+.vl-frames { display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem }.vl-frames figure { margin:0 }.vl-frames img { display:block;width:100%;height:auto;border-radius:8px }.vl-frames figcaption,.vl-muted,.vl-detail-footer { color:var(--text-secondary);font-size:.82rem;margin-top:.4rem }
+.vl-analysis-block { max-width:78ch;padding:.4rem 0 }.vl-analysis-block p,.vl-analysis-block li { line-height:1.7;white-space:pre-wrap }.vl-analysis-block ul { padding-left:1.3rem }.vl-nested { padding-left:1rem;border-left:1px solid var(--bg-light) }
+.vl-concept { display:flex;flex-direction:column;gap:.12rem;max-width:250px;border-radius:8px;padding:.65rem }.vl-concept strong { color:var(--text-primary) }.vl-concept small { line-height:1.35 }
+.vl-widgets { padding:2rem 0 }.vl-widget { margin:0 0 2.5rem }.vl-widget>figcaption { max-width:78ch;margin:.6rem auto 0;color:var(--text-secondary);line-height:1.5 }.vl-widget-loading { min-height:12rem;display:grid;place-items:center;background:var(--bg-medium);border-radius:12px }.vl-inline-math { white-space:nowrap }.vl-math-fallback { color:#fca5a5 }.vl-detail-footer { padding-top:2rem }
+@media(max-width:640px){.vl-hero{padding:2rem 1.25rem}.vl-detail-header{display:block}.vl-detail-header code{display:inline-block;margin-top:1rem}.vl-timed-row{grid-template-columns:1fr;gap:.2rem}.vl-page{padding-top:2rem}}

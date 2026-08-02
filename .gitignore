@@ -36,6 +36,7 @@ __pycache__/
 *.pyc
 .venv/
 outputs/
+website/public/videolab/
 .venv-voice/
 .venv-harness/
 
