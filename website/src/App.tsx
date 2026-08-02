@@ -12,6 +12,7 @@ import ManimEquationGallery from './components/visualizations/ManimEquationGalle
 import ExtractionChart from './components/visualizations/ExtractionChart';
 import StoryIndex from './story/StoryIndex';
 import ChapterPage from './story/ChapterPage';
+import { VideolabDetail, VideolabIndex } from './videolab/VideolabPage';
 import './App.css';
 
 const NAV_LINKS = [
@@ -21,6 +22,7 @@ const NAV_LINKS = [
   { to: '/interference-engine', label: 'Interference Engine' },
   { to: '/extraction-chart', label: 'Extraction Chart' },
   { to: '/animations', label: 'Animations' },
+  { to: '/videolab', label: 'Videolab' },
 ];
 
 function NavBar() {
@@ -62,6 +64,8 @@ function App() {
           <Route path="/interference-engine" element={<InterferenceEngine3D />} />
           <Route path="/extraction-chart" element={<ExtractionChart />} />
           <Route path="/animations" element={<ManimEquationGallery />} />
+          <Route path="/videolab" element={<VideolabIndex />} />
+          <Route path="/videolab/:slug" element={<VideolabDetail />} />
         </Routes>
       </main>
     </Router>

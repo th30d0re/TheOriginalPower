@@ -12,7 +12,7 @@ from PIL import Image
 
 from videolab.cli import build_parser, main
 from videolab.config import load_config
-from videolab.site import build_site
+from videolab.site import build_site, export_site
 
 
 def _write_job(
@@ -202,3 +202,39 @@ def test_cli_site_build_parser_and_dispatch(tmp_path: Path, monkeypatch, capsys)
     assert main(["site", "build", "--out", str(output)]) == 0
     assert json.loads(capsys.readouterr().out) == {"ok": True, "file": str(output)}
     assert output.is_file()
+
+
+def test_site_export_writes_jobs_and_frames_and_excludes_private(tmp_path: Path) -> None:
+    config = _config(tmp_path)
+    _write_job(config.jobs_dir, "youtube-public")
+    _write_job(config.private_jobs_dir, "youtube-private")
+
+    output = export_site(config, tmp_path / "public" / "videolab")
+    jobs = json.loads(output.read_text(encoding="utf-8"))
+
+    assert [job["slug"] for job in jobs] == ["youtube-public"]
+    assert jobs[0]["metadata"]["slug"] == "youtube-public"
+    assert jobs[0]["frames"][0]["file"] == "/videolab/frames/youtube-public/frame_0001.jpg"
+    frame = output.parent / "frames" / "youtube-public" / "frame_0001.jpg"
+    assert frame.is_file()
+    with Image.open(frame) as exported:
+        assert exported.width == 640
+        assert exported.format == "JPEG"
+
+    combined = export_site(config, tmp_path / "combined", include_private=True)
+    assert {job["slug"] for job in json.loads(combined.read_text(encoding="utf-8"))} == {
+        "youtube-public",
+        "youtube-private",
+    }
+
+
+def test_cli_site_export_parser_and_dispatch(tmp_path: Path, monkeypatch, capsys) -> None:
+    config = _config(tmp_path)
+    _write_job(config.jobs_dir, "youtube-export")
+    destination = tmp_path / "website" / "public" / "videolab"
+    monkeypatch.setattr("videolab.cli.load_config", lambda: config)
+
+    assert main(["site", "export", "--out", str(destination)]) == 0
+    result = json.loads(capsys.readouterr().out)
+    assert result == {"ok": True, "file": str(destination.resolve() / "jobs.json")}
+    assert (destination / "jobs.json").is_file()

@@ -6,6 +6,7 @@ import base64
 import html
 import io
 import json
+import re
 from pathlib import Path
 from typing import Any, Iterable
 from urllib.parse import urlparse
@@ -16,6 +17,7 @@ from .config import Config
 
 
 STAGES = ("fetch", "derive", "asr", "report")
+SLUG_PATTERN = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]{0,95}$")
 
 
 def _read_json(path: Path, default: Any) -> Any:
@@ -106,6 +108,26 @@ def _frame_data(job_dir: Path, relative: Any) -> str | None:
         return f"data:image/jpeg;base64,{encoded}"
     except (OSError, ValueError, Image.DecompressionBombError):
         return None
+
+
+def _export_frame(job_dir: Path, relative: Any, destination: Path) -> bool:
+    """Copy one job-local frame as a web-sized JPEG."""
+    if not isinstance(relative, str):
+        return False
+    try:
+        root = job_dir.resolve()
+        source = (root / relative).resolve()
+        source.relative_to(root)
+        with Image.open(source) as opened:
+            image = ImageOps.exif_transpose(opened).convert("RGB")
+            if image.width > 640:
+                height = max(1, round(image.height * 640 / image.width))
+                image = image.resize((640, height), Image.Resampling.LANCZOS)
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            image.save(destination, format="JPEG", quality=80, optimize=True)
+        return True
+    except (OSError, ValueError, Image.DecompressionBombError):
+        return False
 
 
 def _render_value(value: Any) -> str:
@@ -346,6 +368,69 @@ def build_site(config: Config, out: Path | None = None, *, include_private: bool
     destination.parent.mkdir(parents=True, exist_ok=True)
     destination.write_text(document, encoding="utf-8")
     return destination
+
+
+def export_site(config: Config, out: Path, *, include_private: bool = False) -> Path:
+    """Export job payloads and web-sized frames for the React website."""
+    destination = out.resolve()
+    destination.mkdir(parents=True, exist_ok=True)
+    exported: list[dict[str, Any]] = []
+
+    for loaded in _discover(config, include_private):
+        slug = loaded["slug"]
+        if not SLUG_PATTERN.fullmatch(slug):
+            continue
+        job_dir = loaded["dir"]
+        transcript = _read_json(job_dir / "transcript.json", {})
+        if not isinstance(transcript, dict):
+            transcript = {}
+        if not transcript:
+            try:
+                transcript = {"text": (job_dir / "transcript.txt").read_text(encoding="utf-8")}
+            except OSError:
+                transcript = {"text": ""}
+
+        frame_document = _read_json(job_dir / "frames.json", {})
+        source_frames = frame_document.get("frames") if isinstance(frame_document, dict) else []
+        frames: list[dict[str, Any]] = []
+        for position, frame in enumerate(source_frames if isinstance(source_frames, list) else [], 1):
+            if not isinstance(frame, dict):
+                continue
+            index = frame.get("index") if isinstance(frame.get("index"), int) else position
+            filename = f"frame_{index:04d}.jpg"
+            frame_out = destination / "frames" / slug / filename
+            if _export_frame(job_dir, frame.get("file"), frame_out):
+                frames.append({**frame, "file": f"/videolab/frames/{slug}/{filename}"})
+
+        meta = loaded["meta"]
+        content = loaded["content"]
+        creator = loaded["creator"]
+        concepts = meta.get("framework_notes", {}).get("concepts", [])
+        if not isinstance(concepts, list):
+            concepts = []
+        exported.append(
+            {
+                "slug": slug,
+                "private": loaded["private"],
+                "created_at": loaded["created_at"],
+                "status": _stage_health(loaded["job"]),
+                "platform": meta.get("platform") or loaded["source"].get("platform"),
+                "title": content.get("title"),
+                "creator": creator,
+                "duration_seconds": content.get("duration_seconds"),
+                "engagement": meta.get("engagement", {}),
+                "concepts": concepts,
+                "job": loaded["job"],
+                "metadata": meta,
+                "transcript": transcript,
+                "ocr": _jsonl(job_dir / "ocr.jsonl"),
+                "frames": frames,
+            }
+        )
+
+    output = destination / "jobs.json"
+    output.write_text(json.dumps(exported, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    return output
 
 
 def _document(rail: str, details: str) -> str:
