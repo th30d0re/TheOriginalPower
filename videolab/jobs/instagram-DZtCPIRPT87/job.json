@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "slug": "instagram-DZtCPIRPT87",
+  "source": {
+    "kind": "url",
+    "platform": "instagram",
+    "id": "DZtCPIRPT87",
+    "url": "https://www.instagram.com/reel/DZtCPIRPT87/",
+    "path": null
+  },
+  "created_at": "2026-08-02T14:32:17Z",
+  "stages": {
+    "fetch": {
+      "status": "ok",
+      "engine": "yt-dlp",
+      "detail": {
+        "max_height": 1080,
+        "max_filesize": "2G"
+      },
+      "started_at": "2026-08-02T14:32:18Z",
+      "ended_at": "2026-08-02T14:32:20Z",
+      "error": null
+    },
+    "derive": {
+      "status": "ok",
+      "engine": "ffmpeg+tesseract",
+      "detail": {
+        "frames": 8,
+        "ocr_rows": 8,
+        "ocr_kept": 0,
+        "audio": "media/audio.wav"
+      },
+      "started_at": "2026-08-02T14:32:20Z",
+      "ended_at": "2026-08-02T14:32:25Z",
+      "error": null
+    },
+    "asr": {
+      "status": "ok",
+      "engine": "mlx-whisper",
+      "detail": {
+        "model": "mlx-community/whisper-large-v3-turbo",
+        "language": "en",
+        "dropped_segments": 0
+      },
+      "started_at": "2026-08-02T14:32:25Z",
+      "ended_at": "2026-08-02T14:32:32Z",
+      "error": null
+    },
+    "report": {
+      "status": "ok",
+      "engine": "videolab.report",
+      "detail": {
+        "markdown": "instagram-DZtCPIRPT87.md",
+        "metadata": "instagram-DZtCPIRPT87_metadata.json"
+      },
+      "started_at": "2026-08-02T14:32:32Z",
+      "ended_at": "2026-08-02T14:32:32Z",
+      "error": null
+    }
+  }
+}

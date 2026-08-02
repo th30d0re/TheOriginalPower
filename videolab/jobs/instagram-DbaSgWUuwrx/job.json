@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "slug": "instagram-DbaSgWUuwrx",
+  "source": {
+    "kind": "url",
+    "platform": "instagram",
+    "id": "DbaSgWUuwrx",
+    "url": "https://www.instagram.com/reel/DbaSgWUuwrx/",
+    "path": null,
+    "via": "self-dm"
+  },
+  "created_at": "2026-08-02T14:29:00Z",
+  "stages": {
+    "fetch": {
+      "status": "error",
+      "engine": "yt-dlp",
+      "detail": {
+        "message_id": "32939990750392638426221388912132096",
+        "timestamp": "2026-08-02T14:21:16.661Z"
+      },
+      "started_at": "2026-08-02T14:29:00Z",
+      "ended_at": "2026-08-02T14:29:00Z",
+      "error": "Instagram fetch likely failed because cookies are unavailable or stale. Run `videolab cookies refresh --browser safari --domain instagram.com` with Full Disk Access, then retry. Fetch detail: Error: interrupted: \"XPC connection error: Connection invalid\"\nEnsure container system service has been started with `container system start`."
+    },
+    "derive": {
+      "status": "pending",
+      "engine": null,
+      "detail": {},
+      "started_at": null,
+      "ended_at": null,
+      "error": null
+    },
+    "asr": {
+      "status": "pending",
+      "engine": null,
+      "detail": {},
+      "started_at": null,
+      "ended_at": null,
+      "error": null
+    },
+    "report": {
+      "status": "pending",
+      "engine": null,
+      "detail": {},
+      "started_at": null,
+      "ended_at": null,
+      "error": null
+    }
+  }
+}

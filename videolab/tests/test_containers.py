@@ -3,11 +3,12 @@ from __future__ import annotations
 import importlib.util
 import sys
 from pathlib import Path
+from typing import Any
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 from videolab.config import Config
-from videolab.containers import derive_argv, fetch_argv
+from videolab.containers import derive_argv, fetch_argv, run_fetch
 
 
 def config(tmp_path: Path) -> Config:
@@ -23,14 +24,43 @@ def config(tmp_path: Path) -> Config:
     )
 
 
-def test_fetch_mounts_single_cookie_file_read_only(tmp_path: Path) -> None:
+def test_fetch_mounts_a_staged_cookie_directory(tmp_path: Path) -> None:
+    """Source must be a directory (container CLI) and writable (yt-dlp saves its jar)."""
     cookie = tmp_path / "cookies" / "instagram.com.txt"
-    sibling = cookie.with_name("youtube.com.txt")
     argv = fetch_argv(config(tmp_path), tmp_path / "job", "https://instagram.com/reel/abc", cookie)
     mount = argv[argv.index("--mount") + 1]
-    assert mount == f"type=bind,source={cookie},target=/cookies/instagram.com.txt,readonly"
-    assert str(sibling) not in " ".join(argv)
+    assert mount == f"type=bind,source={cookie.parent},target=/cookies"
+    assert "readonly" not in mount, "yt-dlp rewrites its cookie jar on close"
     assert argv[-2:] == ["--cookies", "/cookies/instagram.com.txt"]
+
+
+def test_run_fetch_exposes_only_the_requested_cookie(tmp_path: Path, monkeypatch) -> None:
+    """The mounted directory must hold the requested cookie and nothing else.
+
+    Mounting the real cookie directory would let an Instagram fetch read the
+    YouTube session sitting beside it, so run_fetch stages a private copy.
+    """
+    cookie_dir = tmp_path / "cookies"
+    cookie_dir.mkdir()
+    wanted = cookie_dir / "instagram.com.txt"
+    wanted.write_text("instagram-session")
+    sibling = cookie_dir / "youtube.com.txt"
+    sibling.write_text("youtube-session")
+
+    seen: dict[str, Any] = {}
+
+    def fake_run(argv, **_kwargs):
+        mount = argv[argv.index("--mount") + 1]
+        source = Path(mount.split("source=", 1)[1].split(",", 1)[0])
+        seen["names"] = sorted(item.name for item in source.iterdir())
+        seen["contents"] = (source / "instagram.com.txt").read_text()
+        return {"ok": True}
+
+    monkeypatch.setattr("videolab.containers.run", fake_run)
+    run_fetch(config(tmp_path), tmp_path / "job", "https://instagram.com/reel/abc", wanted)
+
+    assert seen["names"] == ["instagram.com.txt"], "sibling sessions must not be visible"
+    assert seen["contents"] == "instagram-session"
 
 
 def test_fetch_uses_single_job_volume_and_no_derive_restrictions(tmp_path: Path) -> None:

@@ -3,7 +3,10 @@
 from __future__ import annotations
 
 import json
+import os
+import shutil
 import subprocess
+import tempfile
 from pathlib import Path
 from typing import Any, Sequence
 
@@ -34,10 +37,16 @@ def fetch_argv(
     container_cookie: str | None = None
     if cookie_file is not None:
         cookie_file = cookie_file.resolve()
+        # Two platform constraints shape this mount. Apple's container CLI only
+        # bind-mounts directories, so a file source fails with "path ... is not a
+        # directory". And yt-dlp rewrites its cookie jar on close, so a readonly
+        # mount fails with "Read-only file system" *after* a successful download.
+        # run_fetch therefore stages a throwaway copy holding this one cookie: the
+        # container sees no other platform's session and cannot reach the real file.
         command.extend(
             [
                 "--mount",
-                f"type=bind,source={cookie_file},target=/cookies/{cookie_file.name},readonly",
+                f"type=bind,source={cookie_file.parent},target=/cookies",
             ]
         )
         container_cookie = f"/cookies/{cookie_file.name}"
@@ -130,8 +139,21 @@ def run_fetch(
     url: str,
     cookie_file: Path | None = None,
 ) -> dict[str, Any]:
-    """Run Stage A1."""
-    return run(fetch_argv(config, job_dir, url, cookie_file))
+    """Run Stage A1, exposing at most one cookie file to the container."""
+    if cookie_file is None:
+        return run(fetch_argv(config, job_dir, url, None))
+
+    # The cookie directory holds one file per platform. Bind-mounting it wholesale
+    # would let a fetch for one platform read every other platform's session, so
+    # stage the single needed cookie into a private 0700 directory and mount that.
+    staging = Path(tempfile.mkdtemp(prefix="videolab-cookie-"))
+    try:
+        staged = staging / cookie_file.name
+        shutil.copyfile(cookie_file, staged)
+        os.chmod(staged, 0o600)
+        return run(fetch_argv(config, job_dir, url, staged))
+    finally:
+        shutil.rmtree(staging, ignore_errors=True)
 
 
 def run_derive(

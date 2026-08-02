@@ -151,10 +151,13 @@ def build_metadata(job_dir: Path) -> dict:
         # Backward compatibility with the seven committed reel files.
         metadata["reel_id"] = source.get("id")
 
+    # On Instagram, uploader_id is the numeric account id and `channel` carries the
+    # @handle, so reading the handle from uploader_id yields a bare number. Prefer
+    # channel for the username and keep the numeric id in user_id where it belongs.
     metadata["creator"] = {
-        "username": info.get("uploader_id"),
+        "username": info.get("channel") or info.get("uploader_id"),
         "display_name": info.get("uploader"),
-        "user_id": info.get("channel_id"),
+        "user_id": info.get("channel_id") or info.get("uploader_id"),
     }
     metadata["content"] = {
         "title": info.get("title"),
