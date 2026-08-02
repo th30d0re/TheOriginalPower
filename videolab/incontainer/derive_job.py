@@ -23,6 +23,10 @@ from dataclasses import dataclass, field
 from pathlib import Path
 
 DUPLICATE_RATIO = 0.92
+CONTAINMENT_RATIO = 0.80
+# Containment needs enough tokens to be meaningful; below this a two-word
+# caption matches almost anything.
+MIN_CONTAINMENT_TOKENS = 3
 MIN_CONF = 40.0
 # Timestamps closer than this are considered coincident; scene wins.
 COINCIDENCE_WINDOW = 0.25
@@ -30,6 +34,7 @@ COINCIDENCE_WINDOW = 0.25
 _PTS_TIME_RE = re.compile(r"pts_time:([0-9.]+)")
 _NON_ALNUM_RE = re.compile(r"[^0-9a-z]+")
 _WHITESPACE_RE = re.compile(r"\s+")
+_TOKEN_RE = re.compile(r"[0-9a-z]+")
 
 
 # ---------------------------------------------------------------------------
@@ -43,6 +48,11 @@ def normalize_text(text: str) -> str:
     return _NON_ALNUM_RE.sub("", collapsed)
 
 
+def tokenize(text: str) -> set[str]:
+    """Casefolded word tokens: maximal runs of ``[0-9a-z]``."""
+    return set(_TOKEN_RE.findall(text.casefold()))
+
+
 @dataclass
 class OcrRow:
     frame_index: int
@@ -50,30 +60,86 @@ class OcrRow:
     text: str
     mean_conf: float
     duplicate_of: int | None = field(default=None)
+    kept: bool = field(default=False)
 
 
-def dedupe_ocr(rows: list[OcrRow], ratio_threshold: float = DUPLICATE_RATIO) -> list[OcrRow]:
-    """Mark near-duplicate OCR rows against the last kept row (CONTRACT §6).
+def _is_duplicate(
+    text_a: str,
+    text_b: str,
+    ratio_threshold: float,
+    containment_ratio: float,
+) -> bool:
+    """Two rows are duplicates when either test fires (CONTRACT §6).
+
+    The sequence ratio catches reorderings; token-set containment catches
+    partial and garbled reads of the same caption (dropped leading words,
+    inserted noise tokens), which drag the sequence ratio below threshold.
+    """
+    norm_a = normalize_text(text_a)
+    norm_b = normalize_text(text_b)
+    if not norm_a or not norm_b:
+        return False
+    if difflib.SequenceMatcher(None, norm_a, norm_b).ratio() >= ratio_threshold:
+        return True
+    tokens_a = tokenize(text_a)
+    tokens_b = tokenize(text_b)
+    if len(tokens_a) < MIN_CONTAINMENT_TOKENS or len(tokens_b) < MIN_CONTAINMENT_TOKENS:
+        return False
+    return len(tokens_a & tokens_b) / min(len(tokens_a), len(tokens_b)) >= containment_ratio
+
+
+def _election_score(row: OcrRow) -> tuple[int, float]:
+    """Canonical-election key: more content tokens, then higher confidence.
+
+    Single-character tokens are OCR noise (`'F f ...'`, `'... zero S ...'`);
+    counting them would elect garbled superset reads over the clean caption.
+    """
+    content_tokens = sum(1 for token in tokenize(row.text) if len(token) > 1)
+    return (content_tokens, row.mean_conf)
+
+
+def dedupe_ocr(
+    rows: list[OcrRow],
+    ratio_threshold: float = DUPLICATE_RATIO,
+    containment_ratio: float = CONTAINMENT_RATIO,
+) -> list[OcrRow]:
+    """Cluster near-duplicate OCR rows and elect one canonical row per cluster.
 
     Every row is returned; dedupe marks, it does not drop. Rows with empty
-    text or ``mean_conf < 40`` get ``text: ""`` and are never kept. A row whose
-    normalized text matches the last kept row at ratio >= ``ratio_threshold``
-    gets ``duplicate_of`` set to that row's ``frame_index``.
+    text or ``mean_conf < 40`` get ``text: ""`` and ``kept: False``. Selection
+    runs in two passes: rows are clustered by pairwise duplicate matching
+    (sequence ratio or token-set containment) against every cluster, then the
+    best read of each cluster is elected canonical. The canonical row gets
+    ``kept: True``; every other cluster member gets ``duplicate_of`` set to
+    the canonical row's ``frame_index``.
     """
-    last_kept: OcrRow | None = None
+    valid: list[OcrRow] = []
     for row in rows:
         row.duplicate_of = None
+        row.kept = False
         if not row.text.strip() or row.mean_conf < MIN_CONF:
             row.text = ""
             continue
-        if last_kept is not None:
-            ratio = difflib.SequenceMatcher(
-                None, normalize_text(row.text), normalize_text(last_kept.text)
-            ).ratio()
-            if ratio >= ratio_threshold:
-                row.duplicate_of = last_kept.frame_index
-                continue
-        last_kept = row
+        valid.append(row)
+
+    clusters: list[list[OcrRow]] = []
+    canonicals: list[OcrRow] = []
+    for row in valid:
+        for index, canonical in enumerate(canonicals):
+            if _is_duplicate(row.text, canonical.text, ratio_threshold, containment_ratio):
+                clusters[index].append(row)
+                if _election_score(row) > _election_score(canonical):
+                    canonicals[index] = row
+                break
+        else:
+            clusters.append([row])
+            canonicals.append(row)
+
+    for cluster, canonical in zip(clusters, canonicals):
+        canonical.kept = True
+        for row in cluster:
+            if row is not canonical:
+                row.duplicate_of = canonical.frame_index
     return rows
 
 
@@ -308,13 +374,14 @@ def run_job(
                             "text": row.text,
                             "mean_conf": row.mean_conf,
                             "duplicate_of": row.duplicate_of,
+                            "kept": row.kept,
                         },
                         ensure_ascii=False,
                     )
                     + "\n"
                 )
             ocr_rows = len(rows)
-            ocr_kept = sum(1 for row in rows if row.duplicate_of is None and row.text)
+            ocr_kept = sum(1 for row in rows if row.kept)
 
     return {
         "ok": True,

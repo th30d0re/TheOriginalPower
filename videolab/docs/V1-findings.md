@@ -98,3 +98,48 @@ defined anywhere in the contract.
 
 **Decision:** `parse_source()` accepts URLs and local paths. Stage A2 (V3)
 constructs `Source(kind="dm", ...)` directly; `slug_for()` already covers it.
+
+# Loop 2 — OCR dedupe
+
+Loop 2 replaced the §6 dedupe algorithm (last-kept-only, `SequenceMatcher ≥
+0.92`) with two-pass clustering and token-set containment, per
+`.kimi/tasks/V1-loop2-ocr-dedupe.md`. The decisions below record where the
+loop-2 brief left room for judgement.
+
+## L2.1 §6 still documents the loop-1 algorithm
+
+The contract text (§6, §10) describes last-kept-only ratio matching and
+consumers filtering on `duplicate_of is null`. The loop-2 brief supersedes
+both, but `CONTRACT.md` is owned by another loop and was not edited.
+
+**Decision:** `derive_job.py` implements the brief (containment `≥ 0.80` with
+a 3-token floor, or ratio `≥ 0.92`; clusters compared against every cluster,
+not the last kept row; every `ocr.jsonl` row carries an explicit `kept`
+flag). `report.py` filters on `kept`. This entry records the contract drift
+for the contract owner.
+
+## L2.2 Canonical election ignores single-character tokens
+
+The brief defines "better read" as more tokens, or equal tokens and higher
+`mean_conf`. Applied to raw token counts, the garbled superset
+`'F f Becoming a vessel ...'` (12 tokens) beats the clean full caption
+`'Becoming a vessel of zero resistance as a Muslim in this universe'`
+(11 tokens), while the brief names the clean full caption as the expected
+canonical.
+
+**Decision:** `_election_score()` counts content tokens (length ≥ 2) and
+breaks ties on `mean_conf`. Single-character tokens are OCR noise
+(`'F f ...'`, `'... zero S ...'`); they still count for containment, where
+ignoring them would weaken matching. On `reel_DZe71fExaH3.mp4` this elects
+the clean full caption (`mean_conf` 96.3) as the single kept row.
+
+## L2.3 Cluster matching compares against the canonical-so-far
+
+The brief requires comparing against every kept row; with two-pass clustering
+the cluster representative is the canonical-so-far, updated on each election.
+
+**Decision:** a new row joins the first cluster whose canonical-so-far it
+matches. Near-duplicate chains (A matches B, B matches C, A does not match C)
+would split into two clusters; no such chain appears in the verified reels,
+and the alternative (compare against every member) merges unrelated captions
+through a bridge row more readily.

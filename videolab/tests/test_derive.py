@@ -61,34 +61,74 @@ def test_dedupe_marks_exact_rows() -> None:
     ]
     result = dedupe_ocr(rows)
     assert [r.duplicate_of for r in result] == [None, 1, 1, None, 4, None, None, 4]
+    assert [r.kept for r in result] == [True, False, False, True, False, False, False, False]
     # Mark, never drop: every frame still has a row.
     assert len(result) == 8
-    # Exactly rows 1 and 4 survive as kept (non-empty, non-duplicate).
-    kept = [r.frame_index for r in result if r.duplicate_of is None and r.text]
+    # Exactly rows 1 and 4 survive as kept.
+    kept = [r.frame_index for r in result if r.kept]
     assert kept == [1, 4]
     # Empty and low-confidence rows are blanked.
     assert result[5].text == ""
     assert result[6].text == ""
 
 
-def test_dedupe_compares_against_last_kept_only() -> None:
+def test_dedupe_garbled_variants_cluster_to_full_caption() -> None:
+    # The five rows reel_DZe71fExaH3 left kept under the old algorithm: one
+    # burned-in caption, read partially and garbled by tesseract.
     rows = [
-        OcrRow(1, 0.0, "ALPHA CAPTION", 90.0),
-        OcrRow(2, 1.0, "BETA CAPTION", 90.0),
-        OcrRow(3, 2.0, "ALPHA CAPTION", 90.0),  # last kept is row 2: survives
+        OcrRow(1, 0.0, "resistaniie as a Muslim in this Universe", 80.8),
+        OcrRow(2, 14.0, "Becoming a vessel of zero resistance as a Muslim in this universe", 93.7),
+        OcrRow(3, 116.0, "resistance as a Muslim in this Universe", 92.5),
+        OcrRow(4, 130.0, "F f Becoming a vessel of zero resistance as a Muslim in this universe", 87.2),
+        OcrRow(5, 146.0, "vessel of zero S a Muslim in this Universe", 95.3),
     ]
     result = dedupe_ocr(rows)
-    assert [r.duplicate_of for r in result] == [None, None, None]
+    survivors = [r for r in result if r.kept]
+    assert len(survivors) == 1
+    # The canonical row is the clean full caption; the 'F f' noise tokens and
+    # row 5's higher confidence do not elect a worse read.
+    assert survivors[0].frame_index == 2
+    assert survivors[0].text == "Becoming a vessel of zero resistance as a Muslim in this universe"
+    for row in result:
+        if row is not survivors[0]:
+            assert row.duplicate_of == 2
+
+
+def test_dedupe_alternating_captions_two_survivors() -> None:
+    # Captions alternate A, B, A, B; last-kept-only matching re-kept A on
+    # every return.
+    rows = [
+        OcrRow(1, 0.0, "THE CLAIM LANDS AT THE END", 90.0),
+        OcrRow(2, 1.0, "WAKE UP AND PAY ATTENTION NOW", 91.0),
+        OcrRow(3, 2.0, "the claim lands at the end!", 88.0),   # dup of 1
+        OcrRow(4, 3.0, "Wake up and pay attention now.", 89.0),  # dup of 2
+    ]
+    result = dedupe_ocr(rows)
+    assert [r.duplicate_of for r in result] == [None, None, 1, 2]
+    assert [r.frame_index for r in result if r.kept] == [1, 2]
+
+
+def test_dedupe_short_rows_do_not_match() -> None:
+    # Below the 3-token floor containment is skipped, so an unrelated
+    # two-word caption survives.
+    rows = [
+        OcrRow(1, 0.0, "WAKE UP", 90.0),
+        OcrRow(2, 1.0, "CALM DOWN", 90.0),
+    ]
+    result = dedupe_ocr(rows)
+    assert [r.kept for r in result] == [True, True]
+    assert [r.duplicate_of for r in result] == [None, None]
 
 
 def test_dedupe_ratio_threshold_boundary() -> None:
     base = "THE CLAIM LANDS AT THE END OF THE REEL"
-    # One substantive word changed: below 0.92, stays kept.
-    altered = "THE CLAIM LANDS AT THE END OF THE ROAD"
+    # Two substantive words changed: 5/7 token containment and a sequence
+    # ratio below 0.92 — stays kept.
+    altered = "THE CLAIM FALLS AT THE END OF THE ROAD"
     rows = [OcrRow(1, 0.0, base, 90.0), OcrRow(2, 1.0, altered, 90.0)]
     result = dedupe_ocr(rows)
-    assert result[1].duplicate_of is None
-    # Pure punctuation noise: at or above 0.92, marked duplicate.
+    assert result[1].kept is True
+    # Pure punctuation noise: identical normalized text, marked duplicate.
     noisy = "The claim lands at the end of the reel..."
     rows2 = [OcrRow(1, 0.0, base, 90.0), OcrRow(2, 1.0, noisy, 90.0)]
     assert dedupe_ocr(rows2)[1].duplicate_of == 1
@@ -214,7 +254,7 @@ def test_derive_cli_full_run(tmp_path: Path) -> None:
     for i, line in enumerate(ocr_lines, start=1):
         row = json.loads(line)
         assert row["frame_index"] == i
-        assert set(row) == {"frame_index", "t_seconds", "text", "mean_conf", "duplicate_of"}
+        assert set(row) == {"frame_index", "t_seconds", "text", "mean_conf", "duplicate_of", "kept"}
     assert result["ocr_rows"] == len(frames)
 
     # Progress went to stderr only.

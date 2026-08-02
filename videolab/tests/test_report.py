@@ -205,6 +205,19 @@ def test_render_bundle_only_non_duplicate_ocr(sample_job: Path) -> None:
     assert ocr_section.count("[00:") == 2
 
 
+def test_render_bundle_filters_on_kept_not_duplicate_of(sample_job: Path) -> None:
+    # A row with duplicate_of null but kept false (empty/low-conf write path)
+    # must not render; only the explicit kept flag decides.
+    ocr_path = sample_job / "ocr.jsonl"
+    rows = [json.loads(line) for line in ocr_path.read_text().splitlines()]
+    rows[3] = {**rows[3], "text": "GHOST CAPTION", "duplicate_of": None, "kept": False}
+    ocr_path.write_text("\n".join(json.dumps(r) for r in rows) + "\n")
+    bundle = render_bundle("instagram-DZtCPIRPT87", jobs_root=sample_job.parent)
+    assert "GHOST CAPTION" not in bundle
+    assert "GHOST CAPTION" not in render_markdown(sample_job)
+    assert build_metadata(sample_job)["ocr"]["kept_rows"] == 2
+
+
 def test_render_bundle_frames_and_provenance(sample_job: Path) -> None:
     bundle = render_bundle("instagram-DZtCPIRPT87", jobs_root=sample_job.parent)
     assert "4 frames at: 00:00, 00:02, 00:04, 00:06" in bundle

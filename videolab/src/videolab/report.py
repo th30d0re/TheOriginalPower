@@ -187,7 +187,7 @@ def build_metadata(job_dir: Path) -> dict:
     }
     metadata["ocr"] = {
         "total_rows": len(ocr_rows),
-        "kept_rows": sum(1 for r in ocr_rows if r.get("duplicate_of") is None and r.get("text")),
+        "kept_rows": sum(1 for r in ocr_rows if r.get("kept")),
         "rows": ocr_rows,
     }
     metadata["frames"] = frames_doc.get("frames") or []
@@ -300,9 +300,9 @@ def render_markdown(job_dir: Path) -> str:
     lines.append("")
     lines.append("## On-Screen Text (OCR)")
     lines.append("")
-    kept_rows = [r for r in ocr_rows if r.get("duplicate_of") is None and r.get("text")]
+    kept_rows = [r for r in ocr_rows if r.get("kept")]
     if kept_rows:
-        lines.append(f"{len(kept_rows)} unique caption rows after dedupe (ratio threshold 0.92):")
+        lines.append(f"{len(kept_rows)} unique caption rows after dedupe (token containment 0.80 / sequence ratio 0.92):")
         lines.append("")
         for row in kept_rows:
             lines.append(f"- [{format_mmss(row['t_seconds'])}] {row['text']}")
@@ -431,7 +431,7 @@ def render_bundle(slug: str, jobs_root: Path | None = None) -> str:
     lines.append("")
     lines.append("## On-Screen Text")
     lines.append("")
-    kept_rows = [r for r in ocr_rows if r.get("duplicate_of") is None and r.get("text")]
+    kept_rows = [r for r in ocr_rows if r.get("kept")]
     if kept_rows:
         for row in kept_rows:
             lines.append(f"[{format_mmss(row['t_seconds'])}] {row['text']}")
