@@ -70,3 +70,31 @@ def test_status_and_uninstall_are_clean_when_not_installed(tmp_path: Path) -> No
     assert watch_status(config, home=home, runner=launchctl)["loaded"] is False
     assert uninstall_watch(home=home, runner=launchctl)["removed"] is False
     assert launchctl.calls == []
+
+
+def test_agent_path_pins_the_directory_holding_instagram_cli() -> None:
+    """launchd does not inherit the shell PATH, so the tool's directory must be pinned.
+
+    Regression: the first installed agent failed on every run with "instagram-cli is
+    not installed or is not on PATH" because the plist set only PYTHONPATH and
+    launchd starts jobs with /usr/bin:/bin:/usr/sbin:/sbin.
+    """
+    from videolab.watch import _agent_path
+
+    path = _agent_path(which=lambda _name: "/opt/homebrew/bin/instagram-cli")
+    entries = path.split(":")
+    assert entries[0] == "/opt/homebrew/bin"
+    for base in ("/usr/bin", "/bin", "/usr/sbin", "/sbin"):
+        assert base in entries
+
+    # Resolution must still degrade to the standard prefixes when the tool is absent.
+    fallback = _agent_path(which=lambda _name: None).split(":")
+    assert "/usr/bin" in fallback
+
+
+def test_installed_plist_carries_a_path_for_the_agent(tmp_path: Path) -> None:
+    document = build_watch_plist(_config(tmp_path), interval_minutes=15)
+    environment = document["EnvironmentVariables"]
+    assert "PYTHONPATH" in environment
+    assert "PATH" in environment, "agent PATH is required or instagram-cli is unreachable"
+    assert "/usr/bin" in environment["PATH"]

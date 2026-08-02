@@ -55,7 +55,12 @@ def _default_runner(argv: Sequence[str]) -> CLIResult:
             f"instagram-cli timed out after {INSTAGRAM_CLI_TIMEOUT_SECONDS} seconds"
         ) from exc
     except FileNotFoundError as exc:
-        raise InstagramCLIError("instagram-cli is not installed or is not on PATH") from exc
+        raise InstagramCLIError(
+            "instagram-cli was not found on PATH. Under the launchd watcher this "
+            "usually means the agent's PATH lacks the Homebrew prefix — reinstall "
+            "it with `videolab watch install` to repin the resolved location. "
+            f"Current PATH: {os.environ.get('PATH', '(unset)')}"
+        ) from exc
 
 
 def _run_json(runner: CLIRunner, argv: Sequence[str]) -> Any:

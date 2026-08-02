@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import os
 import plistlib
+import shutil
 import subprocess
 from collections.abc import Callable, Sequence
 from datetime import datetime, timezone
@@ -24,6 +25,30 @@ def _default_runner(argv: Sequence[str]) -> subprocess.CompletedProcess[str]:
     )
 
 
+_BASE_PATH = "/usr/bin:/bin:/usr/sbin:/sbin"
+
+
+def _agent_path(which: Callable[[str], str | None] = shutil.which) -> str:
+    """Build a PATH for the launch agent that can actually find instagram-cli.
+
+    launchd does not inherit the interactive shell's PATH, so a Homebrew binary
+    resolves in a terminal and vanishes under the agent. Resolve the tool now and
+    pin its directory, falling back to the usual Homebrew prefixes.
+    """
+    directories: list[str] = []
+    located = which("instagram-cli")
+    if located:
+        # Deliberately not resolve(): the Homebrew entry is an npm symlink into a
+        # source checkout, and following it pins a directory holding no executable
+        # of that name. PATH needs the directory the command is invoked from.
+        directories.append(str(Path(located).parent))
+    for fallback in ("/opt/homebrew/bin", "/usr/local/bin"):
+        if fallback not in directories and Path(fallback).is_dir():
+            directories.append(fallback)
+    directories.append(_BASE_PATH)
+    return os.pathsep.join(directories)
+
+
 def _plist_path(home: Path | None = None) -> Path:
     return (home or Path.home()) / "Library" / "LaunchAgents" / PLIST_NAME
 
@@ -42,7 +67,14 @@ def build_watch_plist(config: Config, interval_minutes: int = 15) -> dict[str, A
             "videolab",
             "ingest-dms",
         ],
-        "EnvironmentVariables": {"PYTHONPATH": str((config.root / "src").resolve())},
+        "EnvironmentVariables": {
+            "PYTHONPATH": str((config.root / "src").resolve()),
+            # launchd starts jobs with a minimal PATH (/usr/bin:/bin:/usr/sbin:/sbin),
+            # so a Homebrew-installed instagram-cli is invisible to the agent even
+            # though it resolves fine from an interactive shell. Pin the directory it
+            # was found in at install time.
+            "PATH": _agent_path(),
+        },
         "StartInterval": interval_minutes * 60,
         "RunAtLoad": False,
         "StandardOutPath": str((logs_dir / "dmwatch.out.log").resolve()),
