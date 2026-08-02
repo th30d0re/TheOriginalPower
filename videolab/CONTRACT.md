@@ -71,7 +71,12 @@ class Source:
     path: str | None
 ```
 
-Slug format: `<platform>-<id>`, matching `^[a-z0-9][a-z0-9._-]{0,95}$`.
+Slug format: `<platform>-<id>`, matching `^[A-Za-z0-9][A-Za-z0-9._-]{0,95}$`.
+
+**Case is preserved, never folded.** Instagram shortcodes and YouTube video ids are
+case-sensitive: `DZtCPIRPT87` and `dztcpirpt87` are different posts, so lowercasing destroys
+identity. The platform prefix is always lowercase; the id keeps its original case. This also keeps
+generated filenames consistent with the seven committed `reel_DZtCPIRPT87.*` files.
 
 | Input | platform | id |
 |---|---|---|
@@ -158,7 +163,12 @@ ffmpeg -nostdin -y -i media/video.mp4 -vn -ac 1 -ar 16000 media/audio.wav
 
 `selected_by` ∈ `scene | interval`. Selection is scene-change
 (`select='gt(scene,<threshold>)'`) unioned with a fixed-interval floor every `--min-interval`
-seconds, so a static talking-head clip still yields stills. Sort by `t_seconds`, renumber
+seconds, so a static talking-head clip still yields stills.
+
+**Default `--scene-threshold` is 0.15.** Measured against
+`supporting_material/instagram_reels/reel_DZe71fExaH3.mp4`, a threshold of 0.3 detects zero scene
+changes across 160 seconds while 0.1 detects 19. Reels are commonly single-shot with soft
+transitions, so 0.3 leaves frame selection entirely to the interval floor. Sort by `t_seconds`, renumber
 `index` from 1, cap at `--frames N` by keeping an even spread across the duration rather than
 truncating the tail — the end of a reel is often where the claim lands.
 
