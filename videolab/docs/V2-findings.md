@@ -42,3 +42,21 @@ Implement TASK V2 according to `videolab/CONTRACT.md`, verify every available ex
 4. Add cancellation-safe stage execution.
 5. Add structured stage timing metrics.
 6. Add an end-to-end test with a local HTTP fixture server.
+
+## Loop 2 — ASR Repetition Guard
+
+### Work Performed
+
+1. Confirmed the installed `mlx-whisper` 0.4.3 `transcribe` signature directly from its source. It accepts `condition_on_previous_text`, `temperature`, `compression_ratio_threshold`, and `no_speech_threshold`.
+2. Disabled conditioning on previous text and supplied the six-step temperature fallback schedule, compression-ratio threshold 2.4, and no-speech threshold 0.6.
+3. Added a shared post-decode filter for MLX and OpenAI Whisper results. It drops segments composed entirely of a 1–4 word phrase repeated more than five times or containing more than 12 normalized words per second.
+4. Rebuilt transcript text from retained segments before writing TXT, JSON, SRT, and VTT outputs.
+5. Added `dropped_segments` to the ASR stage detail and the command result summary.
+6. Added network-free tests for decoder arguments, both filter criteria, all output formats, job metadata, retained correction terms, and the OpenAI fallback path.
+
+### Validation Notes
+
+- Importing `mlx_whisper` still fails in the managed headless sandbox with `No Metal device available`; signature verification used the installed 0.4.3 source file.
+- The synthetic regression retains `within`, `fracturing`, and `tawakkul` while removing the repeated tail from every output.
+- A full 160.1-second fixture run through the OpenAI fallback produced 399 words, 1.2% below the 404-word reference. The output contains `within`, `fracturing`, and `tawakkul`, ends cleanly after `tawakkul`, and contains no repeated-phrase tail. The clean fallback decode reported zero dropped segments.
+- The complete `videolab/tests/` suite passes: 17 tests in 0.13 seconds under the required `.venv-voice` interpreter and `PYTHONPATH=videolab/src`.

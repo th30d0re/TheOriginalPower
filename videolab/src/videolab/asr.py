@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 import shutil
 import subprocess
 import tempfile
@@ -24,6 +25,7 @@ class AsrResult:
     model: str
     language: str | None
     segments: int
+    dropped_segments: int
 
 
 def _utc_now() -> str:
@@ -43,6 +45,7 @@ def _update_job(
     engine: str,
     model: str,
     language: str | None,
+    dropped_segments: int,
     started_at: str,
     error: str | None,
 ) -> None:
@@ -53,7 +56,11 @@ def _update_job(
     job.setdefault("stages", {})["asr"] = {
         "status": status,
         "engine": engine,
-        "detail": {"model": model, "language": language},
+        "detail": {
+            "model": model,
+            "language": language,
+            "dropped_segments": dropped_segments,
+        },
         "started_at": started_at,
         "ended_at": _utc_now() if status in {"ok", "error"} else None,
         "error": error,
@@ -77,10 +84,49 @@ def _normalized_result(raw: dict[str, Any]) -> dict[str, Any]:
     return {"text": text, "segments": segments, "language": language}
 
 
+def _words(text: str) -> list[str]:
+    return re.findall(r"[^\W_]+(?:['’][^\W_]+)*", text.casefold(), flags=re.UNICODE)
+
+
+def _is_degenerate_segment(segment: dict[str, Any]) -> bool:
+    words = _words(str(segment.get("text", "")))
+    if not words:
+        return False
+
+    for width in range(1, min(4, len(words)) + 1):
+        repetitions, remainder = divmod(len(words), width)
+        if remainder == 0 and repetitions > 5:
+            phrase = words[:width]
+            if all(words[offset : offset + width] == phrase for offset in range(0, len(words), width)):
+                return True
+
+    duration = float(segment.get("end", 0.0)) - float(segment.get("start", 0.0))
+    return duration <= 0.0 or len(words) / duration > 12.0
+
+
+def _filter_degenerate_segments(result: dict[str, Any]) -> tuple[dict[str, Any], int]:
+    segments = [segment for segment in result["segments"] if not _is_degenerate_segment(segment)]
+    dropped_segments = len(result["segments"]) - len(segments)
+    filtered = {
+        **result,
+        "text": " ".join(segment["text"] for segment in segments).strip(),
+        "segments": segments,
+    }
+    return filtered, dropped_segments
+
+
 def _mlx_transcribe(audio_path: Path, model: str) -> dict[str, Any]:
     import mlx_whisper
 
-    return mlx_whisper.transcribe(str(audio_path), path_or_hf_repo=model, verbose=None)
+    return mlx_whisper.transcribe(
+        str(audio_path),
+        path_or_hf_repo=model,
+        verbose=None,
+        condition_on_previous_text=False,
+        temperature=(0.0, 0.2, 0.4, 0.6, 0.8, 1.0),
+        compression_ratio_threshold=2.4,
+        no_speech_threshold=0.6,
+    )
 
 
 def _fallback_model(model: str) -> str:
@@ -175,7 +221,7 @@ def transcribe(
         except Exception:
             engine = "openai-whisper"
             raw = _openai_transcribe(audio_path, job_dir, model)
-        result = _normalized_result(raw)
+        result, dropped_segments = _filter_degenerate_segments(_normalized_result(raw))
         _write_outputs(job_dir, result)
         language = str(result["language"]) if result["language"] is not None else None
         actual_model = model if engine == "mlx-whisper" else _fallback_model(model)
@@ -185,10 +231,17 @@ def transcribe(
             engine=engine,
             model=actual_model,
             language=language,
+            dropped_segments=dropped_segments,
             started_at=started_at,
             error=None,
         )
-        return AsrResult(engine=engine, model=actual_model, language=language, segments=len(result["segments"]))
+        return AsrResult(
+            engine=engine,
+            model=actual_model,
+            language=language,
+            segments=len(result["segments"]),
+            dropped_segments=dropped_segments,
+        )
     except Exception as exc:
         _update_job(
             job_dir,
@@ -196,6 +249,7 @@ def transcribe(
             engine=engine,
             model=model,
             language=None,
+            dropped_segments=0,
             started_at=started_at,
             error=str(exc),
         )
