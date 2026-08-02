@@ -28,3 +28,7 @@
   .vlw-motion { display: none; }
   .vlw-traveller { display: none; }
 }
+
+/* Vectors set in italic — the standard fallback when bold vector glyphs are
+   unavailable. U+20D7 combining arrows render as strikethrough artifacts in SVG text. */
+.vlw-label, .vlw-force-label { font-style: italic; }

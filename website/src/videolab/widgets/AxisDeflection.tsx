@@ -45,7 +45,7 @@ export default function AxisDeflection({ axes, eAmplitude, bAmplitude }: AxisDef
         </defs>
         <line className="vlw-guide" x1="84" y1="224" x2="84" y2="32" />
         <line x1="84" y1="218" x2="84" y2={fieldTop} className="vlw-vector" markerEnd="url(#axis-e-arrow)" />
-        <text className="vlw-label" x="25" y="46">E⃗ material</text>
+        <text className="vlw-label" x="25" y="46">E material</text>
         <text className="vlw-axis-label" x="92" y="32">+y</text>
         {axes.map((axis, index) => {
           const colour = AXIS_COLOURS[axis];
@@ -58,7 +58,7 @@ export default function AxisDeflection({ axes, eAmplitude, bAmplitude }: AxisDef
         })}
         <circle cx="84" cy="102" r="5" fill="#fbbf24" />
         <line x1="90" y1="102" x2={90 + deflection} y2="102" className="vlw-force" markerEnd="url(#axis-force-arrow)" />
-        <text className="vlw-force-label" x="100" y="88">v⃗ × B⃗</text>
+        <text className="vlw-force-label" x="100" y="88">v × B</text>
         <text className="vlw-muted-label" x="260" y="122">horizontal deflection</text>
       </svg>
     </div>
