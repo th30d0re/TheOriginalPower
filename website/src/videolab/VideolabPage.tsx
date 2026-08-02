@@ -1,10 +1,13 @@
-import { Suspense, useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 import type { ReactNode } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import TierLadder from '../story/visuals/TierLadder';
 import LatexProse from './LatexProse';
-import { conceptDefinition, linkOnlyWidgets, widgetRegistry } from './conceptRegistry';
-import type { WidgetKey } from './conceptRegistry';
+import { conceptDefinition } from './conceptRegistry';
+import AxisDeflection from './widgets/AxisDeflection';
+import ConjugateCancel from './widgets/ConjugateCancel';
+import CyclotronLoop from './widgets/CyclotronLoop';
+import WagePhasor from './widgets/WagePhasor';
 import type { Tier } from '../content/types';
 import type { VideolabJob } from './types';
 import { record, seconds, text } from './types';
@@ -74,38 +77,60 @@ export function VideolabIndex() {
   );
 }
 
-function ConceptVisuals({ concepts }: { concepts: string[] }) {
-  const groups = useMemo(() => {
-    const grouped = new Map<WidgetKey, string[]>();
-    concepts.forEach((id) => {
-      const widget = conceptDefinition(id).widget;
-      if (widget) grouped.set(widget, [...(grouped.get(widget) ?? []), id]);
-    });
-    return [...grouped.entries()];
-  }, [concepts]);
-  return <div className="vl-widgets">{groups.map(([key, ids]) => {
-    const theta = key === 'phasor' && ids.includes('phase_angle') ? 90 : undefined;
-    const caption = ids.map((id) => conceptDefinition(id).title).join(' · ');
-    const detail = ids.map((id) => conceptDefinition(id).description).join(' ');
-    const linkOnly = linkOnlyWidgets[key];
+const VALID_AXES = new Set(['race', 'gender', 'sexuality', 'class', 'disability', 'religion', 'age', 'nationality', 'neurodivergence']);
 
-    // Immersive route-scale visuals get a link rather than an iframe-sized cage:
-    // constrained they render a blank stage, and embedding pulls three.js into
-    // this chunk for a widget nobody can read at card size anyway.
-    if (linkOnly) {
-      return <aside className="vl-widget-link" key={key}>
-        <strong>{caption}</strong>
-        <p>{detail}</p>
-        <Link to={linkOnly.route}>{linkOnly.label} →</Link>
-      </aside>;
-    }
+function numberIn(value: unknown, minimum: number, maximum: number): value is number {
+  return typeof value === 'number' && Number.isFinite(value) && value >= minimum && value <= maximum;
+}
 
-    const Widget = widgetRegistry[key];
-    return <figure className="vl-widget" key={key}>
-      <Suspense fallback={<div className="vl-widget-loading">Loading visual…</div>}><Widget {...(theta === undefined ? {} : { theta })} /></Suspense>
-      <figcaption><strong>{caption}</strong> — {detail}</figcaption>
-    </figure>;
-  })}</div>;
+function widgetVisual(type: unknown, params: Record<string, unknown>) {
+  if (type === 'wage_phasor') {
+    const thetaDeg = params.theta_deg;
+    const psiM = params.psi_m;
+    const psiS = params.psi_s;
+    return numberIn(thetaDeg, 0, 180) && numberIn(psiM, -1, 1) && numberIn(psiS, 0, 1)
+      ? <WagePhasor thetaDeg={thetaDeg} psiM={psiM} psiS={psiS} /> : null;
+  }
+  if (type === 'axis_deflection') {
+    const axes = params.axes;
+    const eAmplitude = params.e_amplitude;
+    const bAmplitude = params.b_amplitude;
+    const validAxes = Array.isArray(axes) && axes.length >= 1 && axes.length <= 3
+      && axes.every((axis) => typeof axis === 'string' && VALID_AXES.has(axis))
+      && new Set(axes).size === axes.length;
+    return validAxes && numberIn(eAmplitude, 0, 1) && numberIn(bAmplitude, 0, 1)
+      ? <AxisDeflection axes={axes as string[]} eAmplitude={eAmplitude} bAmplitude={bAmplitude} /> : null;
+  }
+  if (type === 'cyclotron_loop') {
+    const eMagnitude = params.e_magnitude;
+    const bMagnitude = params.b_magnitude;
+    return numberIn(eMagnitude, 0, 1) && numberIn(bMagnitude, 0, 1)
+      ? <CyclotronLoop eMagnitude={eMagnitude} bMagnitude={bMagnitude} /> : null;
+  }
+  if (type === 'conjugate_cancel') {
+    const psiM = params.psi_m;
+    const psiS = params.psi_s;
+    return numberIn(psiM, -1, 1) && numberIn(psiS, 0, 1)
+      ? <ConjugateCancel psiM={psiM} psiS={psiS} /> : null;
+  }
+  return null;
+}
+
+function AnalysisWidgets({ value }: { value: unknown }) {
+  if (!Array.isArray(value) || value.length === 0) return null;
+  return <section className="vl-widgets" aria-label="Analysis widgets">
+    <h2>Analysis diagrams</h2>
+    {value.map((rawSpec, index) => {
+      const spec = record(rawSpec);
+      const caption = typeof spec.caption === 'string' ? spec.caption : '';
+      const visual = widgetVisual(spec.type, record(spec.params));
+      return <figure className="vl-widget-card" key={`${String(spec.type)}-${index}`}>
+        {visual}
+        <figcaption>{caption ? <LatexProse text={caption} /> : null}</figcaption>
+        {visual ? null : <p className="vl-widget-note">Diagram unavailable: unsupported type or parameters.</p>}
+      </figure>;
+    })}
+  </section>;
 }
 
 export function VideolabDetail() {
@@ -134,8 +159,8 @@ export function VideolabDetail() {
     <section><h2>On-screen text</h2>{keptOcr.length ? keptOcr.map((row, index) => <div className="vl-timed-row" key={index}><time>[{seconds(row.t_seconds)}]</time><p>{String(row.text)}</p></div>) : <p className="vl-muted">No deduplicated OCR text is available.</p>}</section>
     <section><h2>Frames</h2><div className="vl-frames">{job.frames.map((frame, index) => <figure key={index}><img src={text(frame.file, '')} alt={`Frame at ${seconds(frame.t_seconds)}`} loading="lazy" /><figcaption>{seconds(frame.t_seconds)} · {text(frame.selected_by)}</figcaption></figure>)}</div>{job.frames.length === 0 ? <p className="vl-muted">No exported frames are available.</p> : null}</section>
     <section><h2>Analysis</h2>{Object.entries(analysis).map(([key, value]) => <div className="vl-analysis-block" key={key}><h3>{key.replaceAll('_', ' ')}</h3><Value value={value} /></div>)}</section>
-    <section><h2>Framework concepts</h2><div className="vl-concepts">{job.concepts.map((id) => { const concept = conceptDefinition(id); return <span className="vl-concept" title={concept.description} key={id}><strong>{concept.title}</strong><small>{concept.description}</small></span>; })}</div>{Object.entries(notes).filter(([key]) => key !== 'concepts').map(([key, value]) => <div className="vl-analysis-block" key={key}><h3>{key.replaceAll('_', ' ')}</h3><Value value={value} /></div>)}</section>
-    <ConceptVisuals concepts={job.concepts} />
+    <section><h2>Framework concepts</h2><div className="vl-concepts">{job.concepts.map((id) => { const concept = conceptDefinition(id); return <span className="vl-concept" title={concept.description} key={id}><strong>{concept.title}</strong><small>{concept.description}</small></span>; })}</div>{Object.entries(notes).filter(([key]) => key !== 'concepts' && key !== 'widgets').map(([key, value]) => <div className="vl-analysis-block" key={key}><h3>{key.replaceAll('_', ' ')}</h3><Value value={value} /></div>)}</section>
+    <AnalysisWidgets value={notes.widgets} />
     <section><h2>Tier classification</h2>{tierRows.length ? <TierLadder tiers={tierRows} /> : <p className="vl-muted">No tier classification is available.</p>}<Value value={tiers.justification} /></section>
     <footer className="vl-detail-footer">Posted {text(meta.posted_at_iso)} · Created {text(job.created_at)}</footer>
   </article>;

@@ -1,0 +1,30 @@
+.vlw-root {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, .16);
+  border-radius: 12px;
+  background: radial-gradient(circle at 75% 15%, rgba(34, 211, 238, .08), transparent 35%), #0b1120;
+}
+
+.vlw-root svg { display: block; width: 100%; height: auto; }
+.vlw-axis { stroke: #334155; stroke-width: 1; }
+.vlw-guide { stroke: #475569; stroke-width: 1.5; stroke-dasharray: 4 4; }
+.vlw-axis-label,.vlw-muted-label,.vlw-quadrant { fill: #94a3b8; font-size: 12px; font-weight: 600; }
+.vlw-label { fill: #cbd5e1; font-size: 12px; font-weight: 650; }
+.vlw-value { fill: #f8fafc; font-size: 12px; font-weight: 650; font-variant-numeric: tabular-nums; }
+.vlw-vector { stroke: #22d3ee; stroke-width: 3; }
+.vlw-conjugate { stroke: #a855f7; stroke-width: 3; }
+.vlw-projection,.vlw-cancel { stroke: #64748b; stroke-width: 1.25; stroke-dasharray: 4 4; }
+.vlw-angle { fill: none; stroke: #fbbf24; stroke-width: 2; }
+.vlw-force { stroke: #ef4444; stroke-width: 3; }
+.vlw-force-label { fill: #f87171; font-size: 13px; font-weight: 700; }
+.vlw-orbit { fill: none; stroke: #a855f7; stroke-width: 3; }
+.vlw-displacement { stroke: #22d3ee; stroke-width: 1.5; }
+.vlw-sum { stroke: #fbbf24; stroke-width: 4; }
+.vlw-origin { fill: rgba(251, 191, 36, .2); stroke: #fbbf24; stroke-width: 3; }
+.vlw-zero { fill: #fbbf24; font-size: 12px; font-weight: 750; }
+
+@media (prefers-reduced-motion: reduce) {
+  .vlw-motion { display: none; }
+  .vlw-traveller { display: none; }
+}

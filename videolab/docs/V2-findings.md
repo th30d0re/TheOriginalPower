@@ -370,3 +370,57 @@ safe inline LaTeX, and concept-declared framework widgets.
 4. Add an explicit structured phasor-angle field to analysis metadata.
 5. Remove legacy eager visualization imports to improve site-wide chunk splitting.
 6. Add browser component tests once a local preview listener is available.
+
+## Loop 11 — Parameterised Analysis Widgets
+
+### What Was Requested
+
+Replace concept-selected visualisations on videolab detail pages with compact diagrams whose
+parameters come directly from `framework_notes.widgets`. Preserve concept chips and the existing
+immersive routes. Handle unsupported or invalid specifications without terminating page rendering.
+
+### Work Performed
+
+1. Added `WagePhasor`, `AxisDeflection`, `CyclotronLoop`, and `ConjugateCancel` as responsive SVG
+   components under `website/src/videolab/widgets/`, with a shared visual treatment based on the
+   existing phasor palette and typography.
+2. Implemented strict runtime checks for every documented parameter range and the complete axis
+   vocabulary. Axis arrays also enforce the one-to-three limit and reject duplicate names.
+3. Rendered widget specifications in source order, followed by their analysis-specific captions.
+   Invalid parameters and unknown types retain their captions and receive a quiet availability note.
+4. Removed concept-to-widget metadata, lazy visualisation imports, immersive-route link cards, and
+   the fixed-position containing-block styles from the videolab integration.
+5. Kept framework concepts as descriptive chips and excluded the structured `widgets` array from
+   the prose metadata listing.
+6. Added reduced-motion handling for the animated cyclotron traversal and explicit numeric vertical
+   displacement. The zero-material fixture resolves to `Δy = 0.00` and a closed-loop label.
+
+### Challenges Encountered
+
+1. The committed public site export preceded the widget specifications. Regenerating it from the
+   existing source jobs produced the three expected specifications in source order.
+2. The managed sandbox denied a local Vite listener with `EPERM`, preventing browser inspection of
+   the detail route. Production compilation, linting, exported-data inspection, and source-level
+   import checks supplied the available validation coverage.
+3. The application currently imports immersive visualisations statically in `App.tsx`; Vite reports
+   the existing shared-chunk warnings for those routes. Videolab source contains no three.js,
+   React Three Fiber, registry, or immersive-widget imports.
+
+### Validation Notes
+
+- `cd website && npm run build` passes with Vite 7.3.1 and no TypeScript errors.
+- Changed TypeScript and TSX files pass ESLint.
+- The exported `instagram-DbaSgWUuwrx` record contains exactly `conjugate_cancel`,
+  `cyclotron_loop`, and `axis_deflection`, in that order.
+- The fixture's single `gender` axis reaches one keyed wave, and its conjugate specification with
+  `psi_m: 0` reaches the explicit origin state.
+- `git diff --check` passes.
+
+### Next Ideas (6 Ideas)
+
+1. Add component-level rendering tests for each inclusive parameter boundary.
+2. Add a fixture that exercises unknown widget types and malformed arrays in the browser.
+3. Add visual regression images for one-, two-, and three-axis deflection.
+4. Add structured accessible descriptions containing each diagram's numeric inputs.
+5. Split application routes so immersive three.js bundles load only on their dedicated routes.
+6. Add export-time schema diagnostics while retaining runtime validation at the viewer boundary.
