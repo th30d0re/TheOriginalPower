@@ -131,6 +131,17 @@ venv-harness:
 harness: venv-harness
 	$(VENV_HARNESS_PYTHON) -m harness.server
 
+.PHONY: videolab-image videolab-doctor videolab-test
+
+videolab-image:
+	container build -f videolab/containerfiles/Containerfile.worker -t videolab-worker:latest videolab/
+
+videolab-doctor:
+	PYTHONPATH=videolab/src .venv-voice/bin/python -m videolab doctor
+
+videolab-test:
+	PYTHONPATH=videolab/src .venv-voice/bin/python -m pytest videolab/tests/ -q
+
 empirical: venv
 	@mkdir -p Paper/figures/spectral
 	@# (1) SCOTUS corpus — semantic case study plus spectral notebook.

@@ -60,3 +60,19 @@ Implement TASK V2 according to `videolab/CONTRACT.md`, verify every available ex
 - The synthetic regression retains `within`, `fracturing`, and `tawakkul` while removing the repeated tail from every output.
 - A full 160.1-second fixture run through the OpenAI fallback produced 399 words, 1.2% below the 404-word reference. The output contains `within`, `fracturing`, and `tawakkul`, ends cleanly after `tawakkul`, and contains no repeated-phrase tail. The clean fallback decode reported zero dropped segments.
 - The complete `videolab/tests/` suite passes: 17 tests in 0.13 seconds under the required `.venv-voice` interpreter and `PYTHONPATH=videolab/src`.
+
+## Loop 3 — Resource Caps, Cookie Isolation, and Make Targets
+
+### Work Performed
+
+1. Added adjustable `--max-height` and `--max-filesize` fetch arguments, defaulting to 1080 and 2G.
+2. Applied the height cap to the yt-dlp format selector and converted the size guard to bytes for `max_filesize`.
+3. Recorded both effective fetch caps in the fetch-stage detail throughout pending, success, and error states.
+4. Replaced the cookie-directory bind mount with a read-only mount of the selected cookie file.
+5. Added `videolab-image`, `videolab-doctor`, and `videolab-test` root Makefile targets.
+6. Extended network-free tests to assert the capped selector, 2 GiB guard, and isolated cookie mount.
+
+### Validation Notes
+
+- The full suite and exact Make target pass with a temporary link to the shared `.venv-voice` environment.
+- The Makefile image target was inspected without building the container, preserving the task's validation scope.

@@ -24,7 +24,9 @@ def _write_json(path: Path, value: Any) -> None:
     os.replace(temporary, path)
 
 
-def _update_job(job_dir: Path, *, status: str, started_at: str, error: str | None) -> None:
+def _update_job(
+    job_dir: Path, *, status: str, started_at: str, error: str | None, detail: dict[str, Any] | None = None
+) -> None:
     path = job_dir / "job.json"
     if not path.is_file():
         return
@@ -34,7 +36,7 @@ def _update_job(job_dir: Path, *, status: str, started_at: str, error: str | Non
     stages["fetch"] = {
         "status": status,
         "engine": "yt-dlp",
-        "detail": previous.get("detail", {}),
+        "detail": detail if detail is not None else previous.get("detail", {}),
         "started_at": started_at,
         "ended_at": _utc_now() if status in {"ok", "error"} else None,
         "error": error,
@@ -54,7 +56,13 @@ class _StderrLogger:
         print(message, file=sys.stderr)
 
 
-def fetch(job_dir: Path, url: str, cookies: Path | None = None) -> dict[str, str | bool]:
+def fetch(
+    job_dir: Path,
+    url: str,
+    cookies: Path | None = None,
+    max_height: int = 1080,
+    max_filesize: str = "2G",
+) -> dict[str, str | bool]:
     """Download *url* once and persist its complete yt-dlp information dictionary."""
     job_dir = job_dir.resolve()
     job_dir.mkdir(parents=True, exist_ok=True)
@@ -64,7 +72,8 @@ def fetch(job_dir: Path, url: str, cookies: Path | None = None) -> dict[str, str
         raise FileNotFoundError(f"cookie file does not exist: {cookies}")
 
     options: dict[str, Any] = {
-        "format": "bv*+ba/b",
+        "format": f"bv*[height<={max_height}]+ba/b[height<={max_height}]/bv*+ba/b",
+        "max_filesize": yt_dlp.utils.parse_bytes(max_filesize),
         "outtmpl": str(media_dir / "video.%(ext)s"),
         "merge_output_format": "mp4",
         "postprocessors": [{"key": "FFmpegVideoRemuxer", "preferedformat": "mp4"}],
@@ -104,22 +113,25 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--job", required=True, type=Path)
     parser.add_argument("--url", required=True)
     parser.add_argument("--cookies", type=Path)
+    parser.add_argument("--max-height", type=int, default=1080)
+    parser.add_argument("--max-filesize", default="2G")
     try:
         args = parser.parse_args(argv)
     except SystemExit:
         print(json.dumps({"ok": False, "error": "invalid command arguments"}, separators=(",", ":")))
         return 1
     started_at = _utc_now()
+    detail = {"max_height": args.max_height, "max_filesize": args.max_filesize}
     try:
-        _update_job(args.job, status="pending", started_at=started_at, error=None)
-        result = fetch(args.job, args.url, args.cookies)
-        _update_job(args.job, status="ok", started_at=started_at, error=None)
+        _update_job(args.job, status="pending", started_at=started_at, error=None, detail=detail)
+        result = fetch(args.job, args.url, args.cookies, args.max_height, args.max_filesize)
+        _update_job(args.job, status="ok", started_at=started_at, error=None, detail=detail)
         print(json.dumps(result, ensure_ascii=False, separators=(",", ":")))
         return 0
     except Exception as exc:
         message = str(exc) or exc.__class__.__name__
         try:
-            _update_job(args.job, status="error", started_at=started_at, error=message)
+            _update_job(args.job, status="error", started_at=started_at, error=message, detail=detail)
         except Exception as update_error:
             print(f"could not update job state: {update_error}", file=sys.stderr)
         print(json.dumps({"ok": False, "error": message}, ensure_ascii=False, separators=(",", ":")))

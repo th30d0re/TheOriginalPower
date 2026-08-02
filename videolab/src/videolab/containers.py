@@ -37,7 +37,7 @@ def fetch_argv(
         command.extend(
             [
                 "--mount",
-                f"type=bind,source={cookie_file.parent},target=/cookies,readonly",
+                f"type=bind,source={cookie_file},target=/cookies/{cookie_file.name},readonly",
             ]
         )
         container_cookie = f"/cookies/{cookie_file.name}"
@@ -147,4 +147,3 @@ def run_derive(
 
 build_fetch_argv = fetch_argv
 build_derive_argv = derive_argv
-

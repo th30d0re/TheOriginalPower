@@ -22,11 +22,13 @@ def config(tmp_path: Path) -> Config:
     )
 
 
-def test_fetch_mounts_cookie_directory_read_only(tmp_path: Path) -> None:
+def test_fetch_mounts_single_cookie_file_read_only(tmp_path: Path) -> None:
     cookie = tmp_path / "cookies" / "instagram.com.txt"
+    sibling = cookie.with_name("youtube.com.txt")
     argv = fetch_argv(config(tmp_path), tmp_path / "job", "https://instagram.com/reel/abc", cookie)
     mount = argv[argv.index("--mount") + 1]
-    assert mount == f"type=bind,source={cookie.parent},target=/cookies,readonly"
+    assert mount == f"type=bind,source={cookie},target=/cookies/instagram.com.txt,readonly"
+    assert str(sibling) not in " ".join(argv)
     assert argv[-2:] == ["--cookies", "/cookies/instagram.com.txt"]
 
 
@@ -64,11 +66,13 @@ def test_fetch_calls_extract_once_and_preserves_metadata(tmp_path: Path, monkeyp
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     calls: list[tuple[str, bool]] = []
+    observed_options = {}
     complete_description = "complete description " * 30
 
     class FakeYoutubeDL:
         def __init__(self, options) -> None:
             self.options = options
+            observed_options.update(options)
 
         def __enter__(self):
             return self
@@ -87,6 +91,15 @@ def test_fetch_calls_extract_once_and_preserves_metadata(tmp_path: Path, monkeyp
     result = module.fetch(job_dir, "https://example.test/video")
     assert result["ok"] is True
     assert calls == [("https://example.test/video", True)]
+    assert observed_options["format"] == "bv*[height<=1080]+ba/b[height<=1080]/bv*+ba/b"
+    assert observed_options["max_filesize"] == 2 * 1024**3
     metadata = __import__("json").loads((job_dir / "source.info.json").read_text())
     assert metadata["description"] == complete_description
     assert metadata["view_count"] is None
+    (job_dir / "job.json").write_text('{"stages": {}}')
+    exit_code = module.main(
+        ["--job", str(job_dir), "--url", "https://example.test/video", "--max-height", "720", "--max-filesize", "1G"]
+    )
+    assert exit_code == 0
+    job = __import__("json").loads((job_dir / "job.json").read_text())
+    assert job["stages"]["fetch"]["detail"] == {"max_height": 720, "max_filesize": "1G"}
