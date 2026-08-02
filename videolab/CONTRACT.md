@@ -71,7 +71,12 @@ class Source:
     path: str | None
 ```
 
-Slug format: `<platform>-<id>`, matching `^[a-z0-9][a-z0-9._-]{0,95}$`.
+Slug format: `<platform>-<id>`, matching `^[A-Za-z0-9][A-Za-z0-9._-]{0,95}$`.
+
+**Case is preserved, never folded.** Instagram shortcodes and YouTube video ids are
+case-sensitive: `DZtCPIRPT87` and `dztcpirpt87` are different posts, so lowercasing destroys
+identity. The platform prefix is always lowercase; the id keeps its original case. This also keeps
+generated filenames consistent with the seven committed `reel_DZtCPIRPT87.*` files.
 
 | Input | platform | id |
 |---|---|---|
