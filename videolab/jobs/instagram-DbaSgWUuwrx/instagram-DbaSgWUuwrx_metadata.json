@@ -1,0 +1,219 @@
+{
+  "id": "DbaSgWUuwrx",
+  "slug": "instagram-DbaSgWUuwrx",
+  "url": "https://www.instagram.com/reel/DbaSgWUuwrx/",
+  "platform": "instagram",
+  "reel_id": "DbaSgWUuwrx",
+  "creator": {
+    "username": "ilyas.men.advice",
+    "display_name": "Ilyas",
+    "user_id": "77237350946"
+  },
+  "content": {
+    "title": "Video by ilyas.men.advice",
+    "description": "Do Men Have Rights? Do Men Have Feelings?\n\nA woman made a video saying men have rights, feelings, and deserve to be heard - and she got enough pushback from parts of her own audience that she made several follow-up videos explaining herself. I break down why that reaction is worth talking about, and why I respect what she did even though we likely disagree on plenty. It takes character to tell your own crowd they are going too far - and voices like hers are the ones people actually listen to.\n\n#reaction #debate #logic #criticalthinking #discussion",
+    "duration_seconds": 123.9010009765625,
+    "duration_formatted": "2:03"
+  },
+  "engagement": {
+    "likes": 4349,
+    "comments_count": 169,
+    "play_count": null,
+    "views": null,
+    "shares": null,
+    "saves": null
+  },
+  "metadata": {
+    "upload_date": "20260730",
+    "timestamp": 1785401164,
+    "posted_at_iso": "2026-07-30T08:46:04Z",
+    "instagram_media_id": null,
+    "instagram_media_pk": null,
+    "product_type": null,
+    "media_type": null,
+    "fetched_at": "2026-08-02T14:40:26Z",
+    "metrics_source": "yt-dlp"
+  },
+  "transcription": {
+    "full_text": "You guys are gonna chew me up and spit me out for this one, but I think men have rights. I think men have feelings. I think that men deserve to be heard. I think that men are indoctrinated by the same systems of oppression that we are, and that hating men is still centering men. Hating men is dehumanizing men. Hating men is not feminism. And openly stating that you think men are below you is disrespectful. So this lady made a video, part of which you just watched, and apparently she received so much backlash from her own audience that she had to make several follow-up videos explaining and defending what she meant. And honestly, this is crazy. We live in a world where someone's saying men have rights, men have feelings, men deserve to be heard, feels the need to begin with, you guys are going to chew me up and spit me out for this one. Think about that. She was not defending some extreme political position. She was saying that men are human beings and that openly treating them as inferior is wrong. And yet she already knew that even saying this could get her attacked by people within her own community. Now, to be fair, there were also many reasonable comments underneath her video. A lot of women and some men understood exactly what she was saying and agreed with her. But there were apparently enough people misrepresenting her words and becoming angry that she felt the need to make several more videos clarifying herself. And look, I am making this video to praise her. I probably disagree with this woman on a lot of political and ideological issues, but I respect what she did here, because it takes character to challenge your own crowd. It is easy to criticize people on the other political side. You already know that your audience will applaud you. It is much more difficult to look at people who normally support you and say, uh-uh, no, you are going too far. This is not acceptable. For most of you watching, saying that men have feelings, rights, and deserve to be heard is simply common sense. It is the absolute bare minimum and many would probably consider her point that hating men is dehumanizing and should not be confused with feminism fairly reasonable as well. But remember, she is speaking to a community in which for at least some people expressing even basic sympathy towards men is apparently treated almost like ideological heresy. And that is exactly why voices like hers matter. Because people usually do not listen to someone they already consider their enemy. They would most likely not listen to me, for example. They need to hear these things from somebody they see as being on their own side. So yes, as long as there are women like this who are prepared to call out genuine hatred and dehumanization, even when it comes from their own community, I think there is still some hope.",
+    "transcribed_by": "mlx-whisper",
+    "transcription_mode": "offline",
+    "model_size": "mlx-community/whisper-large-v3-turbo",
+    "language": "en"
+  },
+  "ocr": {
+    "total_rows": 8,
+    "kept_rows": 1,
+    "rows": [
+      {
+        "frame_index": 1,
+        "t_seconds": 0.0,
+        "text": "MEN HAVE RIGHTS? MEN DESERVE TO BE HEARD?",
+        "mean_conf": 96.3,
+        "duplicate_of": null,
+        "kept": true
+      },
+      {
+        "frame_index": 2,
+        "t_seconds": 18.0,
+        "text": "",
+        "mean_conf": 0.0,
+        "duplicate_of": null,
+        "kept": false
+      },
+      {
+        "frame_index": 3,
+        "t_seconds": 34.0,
+        "text": "",
+        "mean_conf": 0.0,
+        "duplicate_of": null,
+        "kept": false
+      },
+      {
+        "frame_index": 4,
+        "t_seconds": 52.0,
+        "text": "",
+        "mean_conf": 0.0,
+        "duplicate_of": null,
+        "kept": false
+      },
+      {
+        "frame_index": 5,
+        "t_seconds": 70.0,
+        "text": "",
+        "mean_conf": 0.0,
+        "duplicate_of": null,
+        "kept": false
+      },
+      {
+        "frame_index": 6,
+        "t_seconds": 88.0,
+        "text": "",
+        "mean_conf": 0.0,
+        "duplicate_of": null,
+        "kept": false
+      },
+      {
+        "frame_index": 7,
+        "t_seconds": 104.0,
+        "text": "",
+        "mean_conf": 0.0,
+        "duplicate_of": null,
+        "kept": false
+      },
+      {
+        "frame_index": 8,
+        "t_seconds": 122.0,
+        "text": "",
+        "mean_conf": 0.0,
+        "duplicate_of": null,
+        "kept": false
+      }
+    ]
+  },
+  "frames": [
+    {
+      "index": 1,
+      "file": "media/frames/frame_0001.jpg",
+      "t_seconds": 0.0,
+      "selected_by": "interval"
+    },
+    {
+      "index": 2,
+      "file": "media/frames/frame_0002.jpg",
+      "t_seconds": 18.0,
+      "selected_by": "interval"
+    },
+    {
+      "index": 3,
+      "file": "media/frames/frame_0003.jpg",
+      "t_seconds": 34.0,
+      "selected_by": "interval"
+    },
+    {
+      "index": 4,
+      "file": "media/frames/frame_0004.jpg",
+      "t_seconds": 52.0,
+      "selected_by": "interval"
+    },
+    {
+      "index": 5,
+      "file": "media/frames/frame_0005.jpg",
+      "t_seconds": 70.0,
+      "selected_by": "interval"
+    },
+    {
+      "index": 6,
+      "file": "media/frames/frame_0006.jpg",
+      "t_seconds": 88.0,
+      "selected_by": "interval"
+    },
+    {
+      "index": 7,
+      "file": "media/frames/frame_0007.jpg",
+      "t_seconds": 104.0,
+      "selected_by": "interval"
+    },
+    {
+      "index": 8,
+      "file": "media/frames/frame_0008.jpg",
+      "t_seconds": 122.0,
+      "selected_by": "interval"
+    }
+  ],
+  "dm_provenance": null,
+  "content_analysis": {
+    "primary_theme": "A men's-advice creator praises a feminist creator for telling her own audience that men have rights and feelings, and that hating men is not feminism.",
+    "secondary_themes": [
+      "In-group enforcement: the original speaker faced backlash from her own community and made several clarifying follow-ups",
+      "Credibility routing: the argument lands only when delivered by someone the audience codes as an ally",
+      "Explicit framing of basic sympathy toward men as ideological heresy within that community",
+      "Speaker separates agreement on this point from broad ideological agreement with her"
+    ],
+    "rhetorical_frame": "Praise-by-contrast. The speaker positions himself as unable to be heard by the target audience and elevates a messenger who can, while disclaiming wider agreement with her politics.",
+    "hashtags": [],
+    "notable_speakers": [
+      "Ilyas (@ilyas.men.advice) — reel author",
+      "Unnamed woman creator — stitched source, not identified in the transcript"
+    ],
+    "key_moments": [
+      {
+        "timestamp_approx": "0:00",
+        "note": "Opens with the stitched clip's line: 'You guys are gonna chew me up and spit me out for this one, but I think men have rights.'"
+      },
+      {
+        "timestamp_approx": "0:00",
+        "note": "On-screen text reads 'MEN HAVE RIGHTS? MEN DESERVE TO BE HEARD?' (only surviving OCR row; the caption is static)"
+      },
+      {
+        "timestamp_approx": "0:50",
+        "note": "Notes she needed several follow-up videos to defend the claim, and treats the need for a disclaimer as the significant datum"
+      },
+      {
+        "timestamp_approx": "1:20",
+        "note": "'It takes character to challenge your own crowd' — the explicit thesis"
+      },
+      {
+        "timestamp_approx": "1:50",
+        "note": "'They need to hear these things from somebody they see as being on their own side' — states the credibility-routing mechanism directly"
+      }
+    ]
+  },
+  "framework_notes": {
+    "extraction_kernel": "Absent from the frame. The transcript contains no reference to capital, ownership, wages, housing, labor, or any actor capturing material value. Every named party is a content creator or an audience. This absence is the analytically significant feature, not an omission by the analyst.",
+    "buffer_class": "No stable buffer-class assignment is supportable here. Both the speaker's audience and the audience he describes are positioned as adversaries on a horizontal axis, and neither is shown receiving material concession from any elite. Treating either as the Buffer Class would import a structure the evidence does not contain.",
+    "psychological_wage": "Operates as membership standing rather than racial or material status. The original speaker risked her in-group position by saying men are human, and paid for it in backlash and forced clarification. The wage here is moral standing inside a community, and its withdrawal is the enforcement mechanism the reel documents.",
+    "snubber_circuits": "The reel functions as one. It routes a claim through a messenger the target audience accepts, dissipating what would otherwise arrive as a direct attack from an out-group voice. The speaker names this himself: 'They would most likely not listen to me.' Energy that would discharge as conflict is instead absorbed and re-emitted at lower voltage.",
+    "electrodynamic_map": "This is the conjugate move with the material term missing. Solidarity in the framework is W + W* = 2*psi_m: the buffer party negates the status wage while retaining the material demand, and real power doubles. Here the status wage is genuinely negated — she rejects the in-group's ontological ranking at real cost. But psi_m = 0 throughout; no material claim is made by anyone. The cancellation completes and yields nothing, because doubling zero returns zero. The reel is structurally a solidarity gesture that cannot produce vertical force.",
+    "thermodynamic_map": "Cyclotron conditions. E is approximately zero — no material field is invoked — while B is large, with two communities in sustained ideological conflict. Charge carriers expend substantial kinetic energy (4,349 likes, 169 comments, several follow-up videos, sustained argument) and achieve zero displacement along +y. The output is heat: engagement, backlash, clarification. No work is performed on any material distribution.",
+    "systems_dynamics": "Closed-loop enforcement with an in-band correction signal. The community's control loop detects deviation (a member expressing sympathy toward men) and applies negative feedback (backlash) until the member emits corrective output (several clarifying videos). The reel is an out-of-band observer describing that loop accurately, then attempting to inject a stabilizing signal through an in-band messenger, since out-of-band signals are rejected at the boundary.",
+    "evidence_limits": "The stitched original speaker is never named, so her position is known only through this speaker's characterization. Backlash volume, the follow-up videos, and the 'many reasonable comments' are all asserted by him and unverified. No comment data was retrieved. The framework's horizontal-deflection reading is structural and carries no claim about the speaker's intent, which the evidence does not establish. Reading every horizontal-axis artifact as deflection would make the claim unfalsifiable; it is offered here as a description of where the content sits on the axes, not as a motive attribution."
+  },
+  "tier_classification": {
+    "transcript": "Tier 2",
+    "ocr": "Tier 2",
+    "platform_metrics": "Tier 2",
+    "content_interpretation": "Tier 3",
+    "justification": "Transcript is machine-generated (mlx-whisper large-v3-turbo, 0 dropped segments). OCR is machine-read with 1 of 8 rows surviving dedupe. Platform metrics came from the yt-dlp info dict. Thematic coding and all framework mapping are author-classified."
+  }
+}

@@ -6,44 +6,55 @@
     "platform": "instagram",
     "id": "DbaSgWUuwrx",
     "url": "https://www.instagram.com/reel/DbaSgWUuwrx/",
-    "path": null,
-    "via": "self-dm"
+    "path": null
   },
-  "created_at": "2026-08-02T14:29:00Z",
+  "created_at": "2026-08-02T14:40:18Z",
   "stages": {
     "fetch": {
-      "status": "error",
+      "status": "ok",
       "engine": "yt-dlp",
       "detail": {
-        "message_id": "32939990750392638426221388912132096",
-        "timestamp": "2026-08-02T14:21:16.661Z"
+        "max_height": 1080,
+        "max_filesize": "2G"
       },
-      "started_at": "2026-08-02T14:29:00Z",
-      "ended_at": "2026-08-02T14:29:00Z",
-      "error": "Instagram fetch likely failed because cookies are unavailable or stale. Run `videolab cookies refresh --browser safari --domain instagram.com` with Full Disk Access, then retry. Fetch detail: Error: interrupted: \"XPC connection error: Connection invalid\"\nEnsure container system service has been started with `container system start`."
+      "started_at": "2026-08-02T14:40:19Z",
+      "ended_at": "2026-08-02T14:40:26Z",
+      "error": null
     },
     "derive": {
-      "status": "pending",
-      "engine": null,
-      "detail": {},
-      "started_at": null,
-      "ended_at": null,
+      "status": "ok",
+      "engine": "ffmpeg+tesseract",
+      "detail": {
+        "frames": 8,
+        "ocr_rows": 8,
+        "ocr_kept": 1,
+        "audio": "media/audio.wav"
+      },
+      "started_at": "2026-08-02T14:40:26Z",
+      "ended_at": "2026-08-02T14:40:38Z",
       "error": null
     },
     "asr": {
-      "status": "pending",
-      "engine": null,
-      "detail": {},
-      "started_at": null,
-      "ended_at": null,
+      "status": "ok",
+      "engine": "mlx-whisper",
+      "detail": {
+        "model": "mlx-community/whisper-large-v3-turbo",
+        "language": "en",
+        "dropped_segments": 0
+      },
+      "started_at": "2026-08-02T14:40:38Z",
+      "ended_at": "2026-08-02T14:40:44Z",
       "error": null
     },
     "report": {
-      "status": "pending",
-      "engine": null,
-      "detail": {},
-      "started_at": null,
-      "ended_at": null,
+      "status": "ok",
+      "engine": "videolab.report",
+      "detail": {
+        "markdown": "instagram-DbaSgWUuwrx.md",
+        "metadata": "instagram-DbaSgWUuwrx_metadata.json"
+      },
+      "started_at": "2026-08-02T14:40:44Z",
+      "ended_at": "2026-08-02T14:40:44Z",
       "error": null
     }
   }
