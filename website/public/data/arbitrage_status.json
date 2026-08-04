@@ -1,0 +1,189 @@
+{
+  "generated_utc": "2026-08-04T23:41:17.777524Z",
+  "verdict": {
+    "state": "NO-GO",
+    "headline": "Backtest promotion gate failed",
+    "reasons": [
+      "brier_skill <= 0 (model does not beat market)"
+    ],
+    "can_paper_trade": false,
+    "can_go_live": false
+  },
+  "backtest": {
+    "report_file": "systemic_arbitrage/data/reports/backtest_20260730_233200.json",
+    "run_utc": "2026-07-30T23:32:00Z",
+    "n_folds": 106,
+    "n_trades_total": 538,
+    "n_trades_evaluated": 180,
+    "n_trades_aborted": 0,
+    "mean_notional_usd": 20.0,
+    "edge_mean": 0.2896740716549341,
+    "edge_ci": [
+      0.2746853066211689,
+      0.3047277841660419
+    ],
+    "hit_rate": 0.6003787878787878,
+    "hit_rate_ci": [
+      0.5580186407573192,
+      0.6412888751235309
+    ],
+    "brier": {
+      "model": 0.23947430109814816,
+      "market": 0.1706877372159091,
+      "momentum": 0.27590909090909094,
+      "coin": 0.25
+    },
+    "brier_skill": -0.4029965186967617,
+    "brier_skill_momentum": -0.6164552615756076,
+    "beats_market": false,
+    "beats_momentum": true
+  },
+  "selected_trades_diagnostic": {
+    "n": 183,
+    "model_mean_prob": 0.4033790985789677,
+    "market_mean_prob": 0.11098907103825137,
+    "realized_rate": 0.09836065573770492,
+    "model_abs_error": 0.4216695474316983,
+    "market_abs_error": 0.17036065573770492,
+    "interpretation": "The selected model probabilities overstate realized outcomes and have higher absolute error than the market probabilities."
+  },
+  "signal": {
+    "snapshot": {
+      "window_start": "2024-06-15",
+      "window_end": "2026-06-14",
+      "O_x": 0.3623,
+      "P_real": -0.1983,
+      "T": -0.1983,
+      "V_E": 0.0,
+      "tau": 1.3293,
+      "M_eff": -0.1264,
+      "delta_P": 0.0,
+      "demographic_gate": "unavailable",
+      "timestamp_utc": "2026-06-15T03:16:52.198127+00:00"
+    },
+    "inert_variables": [
+      "V_E"
+    ],
+    "axis_resolution": "Global-only resolution from two aggregate keyword baskets: class_band, identity_band."
+  },
+  "paper_trading": {
+    "closed_trades": 0,
+    "required_for_promotion": 100,
+    "blocked": true,
+    "blocked_reason": "L3 requires at least 100 closed paper trades; 0 are recorded."
+  },
+  "loops": [
+    {
+      "id": "L0",
+      "name": "Graph Construction",
+      "status": "done",
+      "blocked_by": [],
+      "exit_criterion": "every equation in the registry appears as a node; every anchor case links to at least one equation; zero orphan nodes.",
+      "note": "Merged to main and treated as complete per the recorded project status."
+    },
+    {
+      "id": "L1",
+      "name": "Two-Step Validation",
+      "status": "not_built",
+      "blocked_by": [
+        "L0"
+      ],
+      "exit_criterion": "validated-triple precision ≥ 0.95 on a 100-triple hand-audited holdout. Triples failing step 2 are quarantined, never silently dropped.",
+      "note": "No completion artifact satisfying the exit criterion was detected mechanically."
+    },
+    {
+      "id": "L2",
+      "name": "Signal → Trigger",
+      "status": "done",
+      "blocked_by": [],
+      "exit_criterion": "golden-file tests for all three triggers (Heat Shield Reversal, COINTELPRO Metric, Interference Engine Spike) with frozen fixture snapshots.",
+      "note": "Golden-file signal and trigger coverage is treated as complete per the recorded project status."
+    },
+    {
+      "id": "L3",
+      "name": "Outcome → Coefficient",
+      "status": "partial",
+      "blocked_by": [
+        "L2"
+      ],
+      "exit_criterion": "coefficients stable (Δ < 5% across refits) over ≥ 100 closed paper trades; regression test pins fitted values against a frozen trade log.",
+      "note": "Coefficient fitting exists; the promotion sample is 0/100 closed paper trades."
+    },
+    {
+      "id": "L4",
+      "name": "Generate-on-Graph Repair",
+      "status": "not_built",
+      "blocked_by": [
+        "L1",
+        "L0",
+        "L6"
+      ],
+      "exit_criterion": "zero `provenance: generated` edges in any executed trade's justification path.",
+      "note": "No completion artifact satisfying the exit criterion was detected mechanically."
+    },
+    {
+      "id": "L5",
+      "name": "Graph-of-Thoughts Deliberation",
+      "status": "not_built",
+      "blocked_by": [
+        "L4",
+        "L2",
+        "L6"
+      ],
+      "exit_criterion": "on the backtest set, GoT deliberation matches or beats single-pass trigger output on Sharpe and on false-positive rate, **and** executed trades show higher mean `Vol` than rejected ones. Failing that, this loop is deleted rather than kept.",
+      "note": "No completion artifact satisfying the exit criterion was detected mechanically."
+    },
+    {
+      "id": "L6",
+      "name": "Prompt Budget Control",
+      "status": "done",
+      "blocked_by": [],
+      "exit_criterion": "a scored encoding × heuristic table on a fixed query set, and measured accuracy at 1-hop ≥ accuracy at 2-hop, confirming the budget is correctly set.",
+      "note": "Merged to main and treated as complete per the recorded project status."
+    },
+    {
+      "id": "L7",
+      "name": "Model Alignment Gate",
+      "status": "not_built",
+      "blocked_by": [
+        "L3",
+        "L1"
+      ],
+      "exit_criterion": "a ranked table of candidate base models by triple-ingestion delta, plus an explicit go/no-go on whether fine-tuning beats prompting at all, committed before any QLoRA run starts.",
+      "note": "No completion artifact satisfying the exit criterion was detected mechanically."
+    },
+    {
+      "id": "L8",
+      "name": "Live Execution Gate",
+      "status": "blocked",
+      "blocked_by": [
+        "L3",
+        "L4",
+        "L2",
+        "human review"
+      ],
+      "exit_criterion": "L2, L3, L4 exits all met; risk controls reviewed; Polymarket ToS and regulatory review completed by a human.",
+      "note": "Blocked by design. Live execution remains human-gated."
+    }
+  ],
+  "next_actions": [
+    {
+      "priority": 1,
+      "title": "Capture real order-book depth",
+      "why": "All 538 backtest rows use the synthetic $1,000 depth floor."
+    },
+    {
+      "priority": 2,
+      "title": "Correct selected-trade calibration",
+      "why": "Selected model probabilities have higher absolute error than market probabilities."
+    },
+    {
+      "priority": 3,
+      "title": "Accumulate 100 closed paper trades",
+      "why": "L3 currently has 0 closed trades."
+    }
+  ],
+  "data_caveats": [
+    "book_depth_usd sits at the synthetic 1000 floor for all 538 rows, so real Polymarket liquidity was never captured and every cost/slippage conclusion is provisional."
+  ]
+}
