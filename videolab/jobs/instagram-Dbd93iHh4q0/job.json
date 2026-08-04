@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "slug": "instagram-Dbd93iHh4q0",
+  "source": {
+    "kind": "url",
+    "platform": "instagram",
+    "id": "Dbd93iHh4q0",
+    "url": "https://www.instagram.com/reel/Dbd93iHh4q0/",
+    "path": null,
+    "via": "self-dm"
+  },
+  "created_at": "2026-08-02T16:53:13Z",
+  "stages": {
+    "fetch": {
+      "status": "ok",
+      "engine": "yt-dlp",
+      "detail": {
+        "message_id": "32940153055183429050374842923089920",
+        "timestamp": "2026-08-02T16:47:55.221Z",
+        "video": "media/video.mp4",
+        "info": "source.info.json"
+      },
+      "started_at": "2026-08-02T16:53:13Z",
+      "ended_at": "2026-08-02T16:53:17Z",
+      "error": null
+    },
+    "derive": {
+      "status": "ok",
+      "engine": "ffmpeg+tesseract",
+      "detail": {
+        "frames": 12,
+        "ocr_rows": 12,
+        "ocr_kept": 7,
+        "audio": "media/audio.wav"
+      },
+      "started_at": "2026-08-02T16:53:17Z",
+      "ended_at": "2026-08-02T16:53:23Z",
+      "error": null
+    },
+    "asr": {
+      "status": "ok",
+      "engine": "mlx-whisper",
+      "detail": {
+        "model": "mlx-community/whisper-large-v3-turbo",
+        "language": "en",
+        "dropped_segments": 0
+      },
+      "started_at": "2026-08-02T16:53:23Z",
+      "ended_at": "2026-08-02T16:53:31Z",
+      "error": null
+    },
+    "report": {
+      "status": "ok",
+      "engine": "videolab.report",
+      "detail": {
+        "markdown": "instagram-Dbd93iHh4q0.md",
+        "metadata": "instagram-Dbd93iHh4q0_metadata.json"
+      },
+      "started_at": "2026-08-02T16:53:31Z",
+      "ended_at": "2026-08-02T16:53:31Z",
+      "error": null
+    }
+  }
+}
