@@ -4,8 +4,9 @@
     {
       "name": "Website (React + Vite)",
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "dev", "--", "--port", "5199", "--strictPort"],
+      "runtimeArgs": ["run", "dev"],
       "port": 5199,
+      "autoPort": true,
       "cwd": "website"
     },
     {
