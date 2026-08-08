@@ -25,6 +25,9 @@
 \usepackage{fancyhdr}
 \usepackage[most]{tcolorbox}
 \usepackage{graphicx}
+% Cover pages are bound in as full-bleed letter pages; see
+% tools/cover_to_pdf.py for why they are pre-rendered to PDF.
+\usepackage{pdfpages}
 \usepackage{usc_macros}
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -103,20 +106,18 @@
 
 \begin{document}
 
-% --- Half-title page ---
-\thispagestyle{empty}
-\vspace*{\fill}
-\begin{center}
-{\Huge\bfseries The Original Power}
-\end{center}
-\vspace*{\fill}
-\cleardoublepage
+% ── Front cover ───────────────────────────────────────────────────────────
+\includepdf[pages=1]{figures/cover_front.pdf}
 
 % --- Full title page ---
+% twoside \maketitle/\frontmatter force recto pages via \cleardoublepage, which
+% leaves a blank verso directly after the cover; clear singles instead here.
+\begingroup\let\cleardoublepage\clearpage
 \maketitle
 
 % --- Front matter ---
 \frontmatter
+\endgroup
 \tableofcontents
 \listoffigures
 
@@ -15284,5 +15285,8 @@ If the conjecture holds, the framework's prescriptions are \textbf{engineering r
 \backmatter
 
 \printbibliography
+
+% ── Back cover ────────────────────────────────────────────────────────────
+\includepdf[pages=1]{figures/cover_back.pdf}
 
 \end{document}

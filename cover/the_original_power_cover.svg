@@ -15,6 +15,7 @@
     .chart-rim { fill:none; stroke:var(--ink); stroke-width:3; }
     .accent    { stroke:var(--accent); fill:none; stroke-width:3.4; }
     .accent-fill { fill:var(--accent); stroke:none; }
+    .accent-area { fill:var(--accent); fill-opacity:0.26; stroke:none; }
     .label     { fill:var(--ink); font-family:'Courier New',monospace;
                   font-size:17px; }
     .label-sm  { fill:var(--dim); font-family:'Courier New',monospace;
@@ -33,7 +34,7 @@
   <symbol id="s-arrow" overflow="visible">
     <path class="fill-ink" d="M -11 0 L 11 0 L 0 26 Z"/>
   </symbol>
-  <!-- centre element: the conductor arrives level, climbs both faces of a
+  <!-- center element: the conductor arrives level, climbs both faces of a
        stepped stack, and OPENS at the peak. Drawn pointing "up"; the bottom
        border instances it flipped. -->
   <symbol id="s-stack" overflow="visible">
@@ -41,9 +42,15 @@
     <path class="wire" d="M 150 0 L 78 0 L 14 -60"/>
     <path class="wire" d="M -50 -10 l 100 0 M -40 -22 l 80 0 M -30 -34 l 60 0 M -20 -46 l 40 0"/>
   </symbol>
-  <!-- ground: stacked rules, narrowing downward -->
+  <!-- ground: stacked rules, narrowing downward.
+       Half-width 11 is set by the tightest corner. A coil's windings project 9
+       off-axis (+1.6 half-stroke) and, because the top rails rotate +90 and the
+       bottom rails -90, they bump TOWARD the corner ground at top-right and
+       bottom-left. Clearance there is corner_in - 10.6 - half_width, so 11
+       leaves ~6. Three rules, not four: rule spacing must stay near 8 to read
+       against the 3.2 stroke, and four rules at this width would merge. -->
   <symbol id="s-ground" overflow="visible">
-    <path class="wire" d="M -34 0 l 68 0 M -24 9 l 48 0 M -14 18 l 28 0 M -6 27 l 12 0"/>
+    <path class="wire" d="M -11 0 l 22 0 M -6 8 l 12 0 M -2 16 l 4 0"/>
   </symbol>
 </defs>
 
@@ -52,64 +59,80 @@
 </g>
 
 <g id="layer-border" inkscape:groupmode="layer" inkscape:label="10 border circuit" style="display:inline">
-  <path class="wire" d="M 148.0 74 L 251.0 74"/>
+  <path class="wire" d="M 102.0 74 L 251.0 74"/>
   <use xlink:href="#s-cap" transform="translate(251.0,74)"/>
   <path class="wire" d="M 289.0 74 L 369.0 74"/>
   <use xlink:href="#s-coil" transform="translate(369.0,74)"/>
   <use xlink:href="#s-coil" transform="translate(749.0,74)"/>
   <path class="wire" d="M 831.0 74 L 911.0 74"/>
   <use xlink:href="#s-cap" transform="translate(911.0,74)"/>
-  <path class="wire" d="M 949.0 74 L 1052.0 74"/>
+  <path class="wire" d="M 949.0 74 L 1098.0 74"/>
   <g transform="translate(600.0,74) scale(1,-1)"><use xlink:href="#s-stack"/></g>
-  <path class="wire" d="M 148.0 1526 L 251.0 1526"/>
+  <path class="wire" d="M 102.0 1526 L 251.0 1526"/>
   <use xlink:href="#s-cap" transform="translate(251.0,1526)"/>
   <path class="wire" d="M 289.0 1526 L 369.0 1526"/>
   <use xlink:href="#s-coil" transform="translate(369.0,1526)"/>
   <use xlink:href="#s-coil" transform="translate(749.0,1526)"/>
   <path class="wire" d="M 831.0 1526 L 911.0 1526"/>
   <use xlink:href="#s-cap" transform="translate(911.0,1526)"/>
-  <path class="wire" d="M 949.0 1526 L 1052.0 1526"/>
+  <path class="wire" d="M 949.0 1526 L 1098.0 1526"/>
   <g transform="translate(600.0,1526)"><use xlink:href="#s-stack"/></g>
-  <g transform="translate(148,74) rotate(90)"><use xlink:href="#s-coil"/></g>
-  <g transform="translate(1052,74) rotate(90)"><use xlink:href="#s-coil"/></g>
-  <g transform="translate(148,1526) rotate(-90)"><use xlink:href="#s-coil"/></g>
-  <g transform="translate(1052,1526) rotate(-90)"><use xlink:href="#s-coil"/></g>
+  <g transform="translate(102,74) rotate(90) scale(1,-1)"><use xlink:href="#s-coil"/></g>
+  <path class="wire" d="M 102 156.0 L 102 170.0"/>
+  <g transform="translate(102,170.0)"><use xlink:href="#s-ground"/></g>
+  <g transform="translate(1098,74) rotate(90)"><use xlink:href="#s-coil"/></g>
+  <path class="wire" d="M 1098 156.0 L 1098 170.0"/>
+  <g transform="translate(1098,170.0)"><use xlink:href="#s-ground"/></g>
+  <g transform="translate(102,1526) rotate(-90)"><use xlink:href="#s-coil"/></g>
+  <path class="wire" d="M 102 1444.0 L 102 1430.0"/>
+  <g transform="translate(102,1430.0) scale(1,-1)"><use xlink:href="#s-ground"/></g>
+  <g transform="translate(1098,1526) rotate(-90) scale(1,-1)"><use xlink:href="#s-coil"/></g>
+  <path class="wire" d="M 1098 1444.0 L 1098 1430.0"/>
+  <g transform="translate(1098,1430.0) scale(1,-1)"><use xlink:href="#s-ground"/></g>
   <g transform="translate(74,74) rotate(90)"><use xlink:href="#s-coil"/></g>
-  <g transform="translate(74,1526) rotate(-90)"><use xlink:href="#s-coil"/></g>
+  <g transform="translate(74,1526) rotate(-90) scale(1,-1)"><use xlink:href="#s-coil"/></g>
+  <path class="wire" d="M 74 60 L 74 74"/>
+  <g transform="translate(74,60) scale(1,-1)"><use xlink:href="#s-ground"/></g>
+  <path class="wire" d="M 74 1526 L 74 1540"/>
+  <g transform="translate(74,1540)"><use xlink:href="#s-ground"/></g>
   <path class="wire" d="M 74 156.0 L 74 261.8"/>
   <use xlink:href="#s-arrow" transform="translate(74.0,261.8)"/>
   <path class="wire" d="M 74 261.8 L 74 367.6"/>
   <g transform="translate(74,367.6) rotate(90)"><use xlink:href="#s-res"/></g>
   <path class="wire" d="M 74 403.6 L 74 509.4"/>
   <g transform="translate(74,509.4) rotate(90)"><use xlink:href="#s-cap"/></g>
-  <path class="wire" d="M 74 547.4 L 74 653.2"/>
+  <path class="wire" d="M 74 547.4 L 74 645.2"/>
   <use xlink:href="#s-junction" transform="translate(74.0,653.2)"/>
-  <path class="wire" d="M 74 653.2 L 74 759.0"/>
+  <path class="wire" d="M 74 661.2 L 74 759.0"/>
   <g transform="translate(74,759.0) rotate(90)"><use xlink:href="#s-coil"/></g>
-  <path class="wire" d="M 74 841.0 L 74 946.8"/>
+  <path class="wire" d="M 74 841.0 L 74 938.8"/>
   <use xlink:href="#s-junction" transform="translate(74.0,946.8)"/>
-  <path class="wire" d="M 74 946.8 L 74 1052.6"/>
+  <path class="wire" d="M 74 954.8 L 74 1052.6"/>
   <g transform="translate(74,1052.6) rotate(90)"><use xlink:href="#s-cap"/></g>
   <path class="wire" d="M 74 1090.6 L 74 1196.4"/>
   <g transform="translate(74,1196.4) rotate(90)"><use xlink:href="#s-res"/></g>
   <path class="wire" d="M 74 1232.4 L 74 1338.2"/>
   <use xlink:href="#s-arrow" transform="translate(74.0,1338.2)"/>
   <path class="wire" d="M 74 1338.2 L 74 1444.0"/>
-  <g transform="translate(1126,74) rotate(90)"><use xlink:href="#s-coil"/></g>
+  <g transform="translate(1126,74) rotate(90) scale(1,-1)"><use xlink:href="#s-coil"/></g>
   <g transform="translate(1126,1526) rotate(-90)"><use xlink:href="#s-coil"/></g>
+  <path class="wire" d="M 1126 60 L 1126 74"/>
+  <g transform="translate(1126,60) scale(1,-1)"><use xlink:href="#s-ground"/></g>
+  <path class="wire" d="M 1126 1526 L 1126 1540"/>
+  <g transform="translate(1126,1540)"><use xlink:href="#s-ground"/></g>
   <path class="wire" d="M 1126 156.0 L 1126 261.8"/>
   <use xlink:href="#s-arrow" transform="translate(1126.0,261.8)"/>
   <path class="wire" d="M 1126 261.8 L 1126 367.6"/>
   <g transform="translate(1126,367.6) rotate(90)"><use xlink:href="#s-res"/></g>
   <path class="wire" d="M 1126 403.6 L 1126 509.4"/>
   <g transform="translate(1126,509.4) rotate(90)"><use xlink:href="#s-cap"/></g>
-  <path class="wire" d="M 1126 547.4 L 1126 653.2"/>
+  <path class="wire" d="M 1126 547.4 L 1126 645.2"/>
   <use xlink:href="#s-junction" transform="translate(1126.0,653.2)"/>
-  <path class="wire" d="M 1126 653.2 L 1126 759.0"/>
+  <path class="wire" d="M 1126 661.2 L 1126 759.0"/>
   <g transform="translate(1126,759.0) rotate(90)"><use xlink:href="#s-coil"/></g>
-  <path class="wire" d="M 1126 841.0 L 1126 946.8"/>
+  <path class="wire" d="M 1126 841.0 L 1126 938.8"/>
   <use xlink:href="#s-junction" transform="translate(1126.0,946.8)"/>
-  <path class="wire" d="M 1126 946.8 L 1126 1052.6"/>
+  <path class="wire" d="M 1126 954.8 L 1126 1052.6"/>
   <g transform="translate(1126,1052.6) rotate(90)"><use xlink:href="#s-cap"/></g>
   <path class="wire" d="M 1126 1090.6 L 1126 1196.4"/>
   <g transform="translate(1126,1196.4) rotate(90)"><use xlink:href="#s-res"/></g>
@@ -132,17 +155,18 @@
 </g>
 
 <g id="layer-phasor" inkscape:groupmode="layer" inkscape:label="30 phasor W" style="display:inline">
-  <path class="wire-thin" d="M 390 560 L 620 560"/>
-  <path class="wire-thin" d="M 430 615 L 430 410"/>
-  <path class="accent" d="M 430 560 L 548.2 467.7"/>
-  <path class="accent-fill" d="M 548.2 467.7 l -13 -2 l 5 11 Z"/>
-  <path class="wire-thin" style="stroke-dasharray:6 6" d="M 548.2 467.7 L 548.2 560"/>
-  <path class="wire-thin" d="M 472 560 A 42 42 0 0 0 463.1 534.1"/>
-  <text class="label" x="482" y="546">θ</text>
-  <text class="label" x="558.2" y="461.7" fill="var(--accent)">W</text>
-  <text class="label" x="626" y="580">ψₘ</text>
-  <text class="label" x="438" y="402">jψₛ</text>
-  <text class="label" x="400" y="374">W = ψₘ + jψₛ</text>
+  <circle class="chart" cx="460" cy="536" r="103"/>
+  <path class="wire-thin" d="M 325 536 L 595 536"/>
+  <path class="wire-thin" d="M 460 671 L 460 401"/>
+  <path class="accent" d="M 460 536 L 541.2 472.6"/>
+  <path class="accent-fill" d="M 541.2 472.6 l -13 -2 l 5 11 Z"/>
+  <path class="wire-thin" style="stroke-dasharray:6 6" d="M 541.2 472.6 L 541.2 536"/>
+  <path class="wire-thin" d="M 495.0 536 A 35.0 35.0 0 0 0 487.6 514.4"/>
+  <text class="label" x="503.0" y="524">θ</text>
+  <text class="label" x="551.2" y="464.6" fill="var(--accent)">W</text>
+  <text class="label" x="565" y="558">ψₘ</text>
+  <text class="label" x="472" y="419">jψₛ</text>
+  <text class="label" x="460" y="381" text-anchor="middle">W = ψₘ + jψₛ</text>
 
 </g>
 
@@ -219,16 +243,159 @@
 </g>
 
 <g id="layer-pyramid" inkscape:groupmode="layer" inkscape:label="50 tier pyramid" style="display:inline">
-  <path class="wire" d="M 245.0 1090.0 L 291.0 1090.0"/>
-  <text class="label" x="309.0" y="1096.0">E</text>
-  <path class="wire" d="M 222.0 1142.5 L 314.0 1142.5"/>
-  <text class="label" x="332.0" y="1148.5">P</text>
-  <path class="wire" d="M 199.0 1195.0 L 337.0 1195.0"/>
-  <text class="label" x="355.0" y="1201.0">F</text>
-  <path class="wire" d="M 176.0 1247.5 L 360.0 1247.5"/>
-  <text class="label" x="378.0" y="1253.5">I</text>
-  <path class="wire" d="M 153.0 1300.0 L 383.0 1300.0"/>
-  <text class="label" x="401.0" y="1306.0">O</text>
+  <path class="wire-thin" style="stroke-dasharray:5 7" d="M 153.0 1340.0 L 268.0 1305.5 L 383.0 1340.0"/>
+  <path class="wire" d="M 153.0 1340.0 L 268.0 1374.5 L 383.0 1340.0"/>
+  <path class="wire" d="M 268.0 1130.0 L 153.0 1340.0"/>
+  <path class="wire" d="M 268.0 1130.0 L 383.0 1340.0"/>
+  <path class="wire" d="M 268.0 1130.0 L 268.0 1374.5"/>
+  <path class="wire-thin" d="M 245.0 1172.0 L 268.0 1178.9 L 291.0 1172.0"/>
+  <path class="wire-thin" d="M 222.0 1214.0 L 268.0 1227.8 L 314.0 1214.0"/>
+  <path class="wire-thin" d="M 199.0 1256.0 L 268.0 1276.7 L 337.0 1256.0"/>
+  <path class="wire-thin" d="M 176.0 1298.0 L 268.0 1325.6 L 360.0 1298.0"/>
+  <text class="label" x="299.5" y="1157.0">E</text>
+  <text class="label" x="322.5" y="1199.0">P</text>
+  <text class="label" x="345.5" y="1241.0">F</text>
+  <text class="label" x="368.5" y="1283.0">I</text>
+  <text class="label" x="391.5" y="1325.0">O</text>
+
+</g>
+
+<g id="layer-lorentz" inkscape:groupmode="layer" inkscape:label="31 unified Lorentz force" style="display:inline">
+  <circle class="chart" cx="846.0" cy="474.0" r="7"/>
+  <path class="chart" d="M 841.4 469.4 l 9.2 9.2 M 841.4 478.6 l 9.2 -9.2"/>
+  <circle class="chart" cx="846.0" cy="520.0" r="7"/>
+  <path class="chart" d="M 841.4 515.4 l 9.2 9.2 M 841.4 524.6 l 9.2 -9.2"/>
+  <circle class="chart" cx="846.0" cy="566.0" r="7"/>
+  <path class="chart" d="M 841.4 561.4 l 9.2 9.2 M 841.4 570.6 l 9.2 -9.2"/>
+  <circle class="chart" cx="915.3" cy="474.0" r="7"/>
+  <path class="chart" d="M 910.7 469.4 l 9.2 9.2 M 910.7 478.6 l 9.2 -9.2"/>
+  <circle class="chart" cx="915.3" cy="520.0" r="7"/>
+  <path class="chart" d="M 910.7 515.4 l 9.2 9.2 M 910.7 524.6 l 9.2 -9.2"/>
+  <circle class="chart" cx="915.3" cy="566.0" r="7"/>
+  <path class="chart" d="M 910.7 561.4 l 9.2 9.2 M 910.7 570.6 l 9.2 -9.2"/>
+  <circle class="chart" cx="984.7" cy="474.0" r="7"/>
+  <path class="chart" d="M 980.1 469.4 l 9.2 9.2 M 980.1 478.6 l 9.2 -9.2"/>
+  <circle class="chart" cx="984.7" cy="520.0" r="7"/>
+  <path class="chart" d="M 980.1 515.4 l 9.2 9.2 M 980.1 524.6 l 9.2 -9.2"/>
+  <circle class="chart" cx="984.7" cy="566.0" r="7"/>
+  <path class="chart" d="M 980.1 561.4 l 9.2 9.2 M 980.1 570.6 l 9.2 -9.2"/>
+  <circle class="chart" cx="1054.0" cy="474.0" r="7"/>
+  <path class="chart" d="M 1049.4 469.4 l 9.2 9.2 M 1049.4 478.6 l 9.2 -9.2"/>
+  <circle class="chart" cx="1054.0" cy="520.0" r="7"/>
+  <path class="chart" d="M 1049.4 515.4 l 9.2 9.2 M 1049.4 524.6 l 9.2 -9.2"/>
+  <circle class="chart" cx="1054.0" cy="566.0" r="7"/>
+  <path class="chart" d="M 1049.4 561.4 l 9.2 9.2 M 1049.4 570.6 l 9.2 -9.2"/>
+  <path class="wire" d="M 814.0 612.0 L 974.0 612.0"/>
+  <path class="accent" d="M 974.0 612.0 L 974.0 462.0"/>
+  <path class="accent-fill" d="M 974.0 456.0 l -7 14 l 14 0 Z"/>
+  <path class="fill-ink" d="M 972.0 612.0 l -14 -7 l 0 14 Z" transform="translate(-14,0)"/>
+  <text class="label-sm" x="814.0" y="634.0">v</text>
+  <text class="label-sm" x="984.0" y="476.0" fill="var(--accent)">F</text>
+  <text class="label-sm" x="1066.0" y="446.0">B</text>
+  <text class="label" x="950.0" y="664.0" text-anchor="middle">F = QE + Q(v × Σρₖ Bₖ)</text>
+
+</g>
+
+<g id="layer-kick" inkscape:groupmode="layer" inkscape:label="32 phase kick" style="display:inline">
+  <circle class="chart" cx="216" cy="872" r="68"/>
+  <path class="wire-thin" d="M 132 872 L 300 872"/>
+  <path class="wire-thin" d="M 216 956 L 216 788"/>
+  <path class="wire-thin" style="stroke-dasharray:5 5" d="M 216 872 L 272.4 834.0"/>
+  <path class="accent" d="M 216 872 L 190.5 809.0"/>
+  <path class="accent-fill" d="M 190.5 809.0 l 1 14 l 12 -7 Z" transform="rotate(-22.0,190.5,809.0)"/>
+  <path class="accent" style="fill:none" d="M 245.3 852.2 A 35.4 35.4 0 0 0 202.8 839.2"/>
+  <text class="label-sm" x="222.0" y="826.6" fill="var(--accent)">Δφ</text>
+  <text class="label" x="216.0" y="984.0" text-anchor="middle">φₖ → φₖ + Δφ</text>
+
+</g>
+
+<g id="layer-osc" inkscape:groupmode="layer" inkscape:label="33 driven harmonic oscillator" style="display:inline">
+  <path class="wire-thin" d="M 830.0 1295.0 L 1090.0 1295.0"/>
+  <path class="chart" style="stroke-dasharray:5 6" d="M 830.0 1247.0 L 832.2 1248.0 L 834.3 1249.0 L 836.5 1250.0 L 838.7 1251.0 L 840.8 1251.9 L 843.0 1252.9 L 845.2 1253.8 L 847.3 1254.6 L 849.5 1255.5 L 851.7 1256.4 L 853.8 1257.2 L 856.0 1258.0 L 858.2 1258.8 L 860.3 1259.6 L 862.5 1260.3 L 864.7 1261.1 L 866.8 1261.8 L 869.0 1262.5 L 871.2 1263.2 L 873.3 1263.9 L 875.5 1264.5 L 877.7 1265.2 L 879.8 1265.8 L 882.0 1266.5 L 884.2 1267.1 L 886.3 1267.7 L 888.5 1268.3 L 890.7 1268.8 L 892.8 1269.4 L 895.0 1269.9 L 897.2 1270.5 L 899.3 1271.0 L 901.5 1271.5 L 903.7 1272.0 L 905.8 1272.5 L 908.0 1273.0 L 910.2 1273.5 L 912.3 1273.9 L 914.5 1274.4 L 916.7 1274.8 L 918.8 1275.3 L 921.0 1275.7 L 923.2 1276.1 L 925.3 1276.5 L 927.5 1276.9 L 929.7 1277.3 L 931.8 1277.7 L 934.0 1278.0 L 936.2 1278.4 L 938.3 1278.8 L 940.5 1279.1 L 942.7 1279.4 L 944.8 1279.8 L 947.0 1280.1 L 949.2 1280.4 L 951.3 1280.7 L 953.5 1281.0 L 955.7 1281.3 L 957.8 1281.6 L 960.0 1281.9 L 962.2 1282.2 L 964.3 1282.5 L 966.5 1282.7 L 968.7 1283.0 L 970.8 1283.3 L 973.0 1283.5 L 975.2 1283.8 L 977.3 1284.0 L 979.5 1284.2 L 981.7 1284.5 L 983.8 1284.7 L 986.0 1284.9 L 988.2 1285.1 L 990.3 1285.3 L 992.5 1285.5 L 994.7 1285.8 L 996.8 1285.9 L 999.0 1286.1 L 1001.2 1286.3 L 1003.3 1286.5 L 1005.5 1286.7 L 1007.7 1286.9 L 1009.8 1287.1 L 1012.0 1287.2 L 1014.2 1287.4 L 1016.3 1287.6 L 1018.5 1287.7 L 1020.7 1287.9 L 1022.8 1288.0 L 1025.0 1288.2 L 1027.2 1288.3 L 1029.3 1288.5 L 1031.5 1288.6 L 1033.7 1288.7 L 1035.8 1288.9 L 1038.0 1289.0 L 1040.2 1289.1 L 1042.3 1289.3 L 1044.5 1289.4 L 1046.7 1289.5 L 1048.8 1289.6 L 1051.0 1289.7 L 1053.2 1289.8 L 1055.3 1290.0 L 1057.5 1290.1 L 1059.7 1290.2 L 1061.8 1290.3 L 1064.0 1290.4 L 1066.2 1290.5 L 1068.3 1290.6 L 1070.5 1290.7 L 1072.7 1290.8 L 1074.8 1290.9 L 1077.0 1290.9 L 1079.2 1291.0 L 1081.3 1291.1 L 1083.5 1291.2 L 1085.7 1291.3 L 1087.8 1291.4 L 1090.0 1291.4"/>
+  <path class="chart" style="stroke-dasharray:5 6" d="M 830.0 1343.0 L 832.2 1342.0 L 834.3 1341.0 L 836.5 1340.0 L 838.7 1339.0 L 840.8 1338.1 L 843.0 1337.1 L 845.2 1336.2 L 847.3 1335.4 L 849.5 1334.5 L 851.7 1333.6 L 853.8 1332.8 L 856.0 1332.0 L 858.2 1331.2 L 860.3 1330.4 L 862.5 1329.7 L 864.7 1328.9 L 866.8 1328.2 L 869.0 1327.5 L 871.2 1326.8 L 873.3 1326.1 L 875.5 1325.5 L 877.7 1324.8 L 879.8 1324.2 L 882.0 1323.5 L 884.2 1322.9 L 886.3 1322.3 L 888.5 1321.7 L 890.7 1321.2 L 892.8 1320.6 L 895.0 1320.1 L 897.2 1319.5 L 899.3 1319.0 L 901.5 1318.5 L 903.7 1318.0 L 905.8 1317.5 L 908.0 1317.0 L 910.2 1316.5 L 912.3 1316.1 L 914.5 1315.6 L 916.7 1315.2 L 918.8 1314.7 L 921.0 1314.3 L 923.2 1313.9 L 925.3 1313.5 L 927.5 1313.1 L 929.7 1312.7 L 931.8 1312.3 L 934.0 1312.0 L 936.2 1311.6 L 938.3 1311.2 L 940.5 1310.9 L 942.7 1310.6 L 944.8 1310.2 L 947.0 1309.9 L 949.2 1309.6 L 951.3 1309.3 L 953.5 1309.0 L 955.7 1308.7 L 957.8 1308.4 L 960.0 1308.1 L 962.2 1307.8 L 964.3 1307.5 L 966.5 1307.3 L 968.7 1307.0 L 970.8 1306.7 L 973.0 1306.5 L 975.2 1306.2 L 977.3 1306.0 L 979.5 1305.8 L 981.7 1305.5 L 983.8 1305.3 L 986.0 1305.1 L 988.2 1304.9 L 990.3 1304.7 L 992.5 1304.5 L 994.7 1304.2 L 996.8 1304.1 L 999.0 1303.9 L 1001.2 1303.7 L 1003.3 1303.5 L 1005.5 1303.3 L 1007.7 1303.1 L 1009.8 1302.9 L 1012.0 1302.8 L 1014.2 1302.6 L 1016.3 1302.4 L 1018.5 1302.3 L 1020.7 1302.1 L 1022.8 1302.0 L 1025.0 1301.8 L 1027.2 1301.7 L 1029.3 1301.5 L 1031.5 1301.4 L 1033.7 1301.3 L 1035.8 1301.1 L 1038.0 1301.0 L 1040.2 1300.9 L 1042.3 1300.7 L 1044.5 1300.6 L 1046.7 1300.5 L 1048.8 1300.4 L 1051.0 1300.3 L 1053.2 1300.2 L 1055.3 1300.0 L 1057.5 1299.9 L 1059.7 1299.8 L 1061.8 1299.7 L 1064.0 1299.6 L 1066.2 1299.5 L 1068.3 1299.4 L 1070.5 1299.3 L 1072.7 1299.2 L 1074.8 1299.1 L 1077.0 1299.1 L 1079.2 1299.0 L 1081.3 1298.9 L 1083.5 1298.8 L 1085.7 1298.7 L 1087.8 1298.6 L 1090.0 1298.6"/>
+  <path class="accent" d="M 830.0 1247.0 L 832.2 1248.4 L 834.3 1250.5 L 836.5 1253.1 L 838.7 1256.4 L 840.8 1260.1 L 843.0 1264.2 L 845.2 1268.6 L 847.3 1273.2 L 849.5 1278.0 L 851.7 1282.8 L 853.8 1287.6 L 856.0 1292.4 L 858.2 1297.0 L 860.3 1301.3 L 862.5 1305.4 L 864.7 1309.1 L 866.8 1312.5 L 869.0 1315.4 L 871.2 1317.9 L 873.3 1319.9 L 875.5 1321.5 L 877.7 1322.5 L 879.8 1323.1 L 882.0 1323.3 L 884.2 1322.9 L 886.3 1322.2 L 888.5 1321.0 L 890.7 1319.5 L 892.8 1317.7 L 895.0 1315.6 L 897.2 1313.2 L 899.3 1310.7 L 901.5 1308.0 L 903.7 1305.3 L 905.8 1302.4 L 908.0 1299.6 L 910.2 1296.9 L 912.3 1294.2 L 914.5 1291.7 L 916.7 1289.3 L 918.8 1287.1 L 921.0 1285.1 L 923.2 1283.4 L 925.3 1281.9 L 927.5 1280.7 L 929.7 1279.7 L 931.8 1279.1 L 934.0 1278.7 L 936.2 1278.6 L 938.3 1278.8 L 940.5 1279.2 L 942.7 1279.8 L 944.8 1280.7 L 947.0 1281.7 L 949.2 1282.9 L 951.3 1284.2 L 953.5 1285.7 L 955.7 1287.2 L 957.8 1288.8 L 960.0 1290.5 L 962.2 1292.1 L 964.3 1293.7 L 966.5 1295.3 L 968.7 1296.7 L 970.8 1298.1 L 973.0 1299.4 L 975.2 1300.6 L 977.3 1301.6 L 979.5 1302.5 L 981.7 1303.2 L 983.8 1303.8 L 986.0 1304.2 L 988.2 1304.4 L 990.3 1304.5 L 992.5 1304.4 L 994.7 1304.2 L 996.8 1303.9 L 999.0 1303.4 L 1001.2 1302.8 L 1003.3 1302.1 L 1005.5 1301.3 L 1007.7 1300.5 L 1009.8 1299.6 L 1012.0 1298.7 L 1014.2 1297.8 L 1016.3 1296.8 L 1018.5 1295.9 L 1020.7 1295.0 L 1022.8 1294.1 L 1025.0 1293.3 L 1027.2 1292.5 L 1029.3 1291.8 L 1031.5 1291.2 L 1033.7 1290.7 L 1035.8 1290.3 L 1038.0 1289.9 L 1040.2 1289.7 L 1042.3 1289.5 L 1044.5 1289.5 L 1046.7 1289.5 L 1048.8 1289.6 L 1051.0 1289.8 L 1053.2 1290.1 L 1055.3 1290.4 L 1057.5 1290.8 L 1059.7 1291.3 L 1061.8 1291.7 L 1064.0 1292.2 L 1066.2 1292.8 L 1068.3 1293.3 L 1070.5 1293.9 L 1072.7 1294.4 L 1074.8 1294.9 L 1077.0 1295.5 L 1079.2 1295.9 L 1081.3 1296.4 L 1083.5 1296.8 L 1085.7 1297.1 L 1087.8 1297.5 L 1090.0 1297.7"/>
+  <path class="wire" d="M 830.0 1359.0 L 830.0 1231.0"/>
+  <text class="label-sm" x="824.0" y="1225.0" text-anchor="middle">V(t)</text>
+  <text class="label" x="960.0" y="1395.0" text-anchor="middle">L q&#8243; + R q&#8242; + q/C = V(t)</text>
+
+</g>
+
+<g id="layer-crash" inkscape:groupmode="layer" inkscape:label="34 crash condition" style="display:inline">
+  <path class="wire-thin" d="M 100.0 625.0 L 276.0 625.0"/>
+  <path class="wire-thin" style="stroke-dasharray:5 5" d="M 100.0 554.1 L 276.0 554.1"/>
+  <text class="label-sm" x="282.0" y="559.1">τ</text>
+  <path class="wire" style="stroke-width:2.6" d="M 108.0 603.8 L 110.7 602.7 L 113.3 601.7 L 116.0 600.7 L 118.7 599.7 L 121.3 598.6 L 124.0 597.6 L 126.7 596.6 L 129.3 595.6 L 132.0 594.6 L 134.7 593.5 L 137.3 592.5 L 140.0 591.5 L 142.7 590.5 L 145.3 589.4 L 148.0 588.4 L 150.7 587.4 L 153.3 586.4 L 156.0 585.4 L 158.7 584.3 L 161.3 583.3 L 164.0 582.3 L 166.7 581.3 L 169.3 580.2 L 172.0 579.2 L 174.7 578.2 L 177.3 577.2 L 180.0 576.1 L 182.7 575.1 L 185.3 574.1 L 188.0 573.1 L 190.7 572.1 L 193.3 571.0 L 196.0 570.0 L 198.7 569.0 L 201.3 568.0 L 204.0 566.9 L 206.7 565.9 L 209.3 564.9 L 212.0 563.9 L 214.7 562.9 L 217.3 561.8 L 220.0 560.8 L 222.7 559.8 L 225.3 558.8 L 228.0 557.7 L 230.7 556.7 L 233.3 555.7 L 236.0 554.7 L 238.7 553.6 L 241.3 552.6 L 244.0 551.6 L 246.7 550.6 L 249.3 549.6 L 252.0 548.5 L 254.7 547.5 L 257.3 546.5 L 260.0 545.5 L 262.7 544.4 L 265.3 543.4 L 268.0 542.4"/>
+  <path class="accent" style="stroke-width:2.8" d="M 108.0 619.1 L 110.7 619.1 L 113.3 619.0 L 116.0 618.9 L 118.7 618.7 L 121.3 618.5 L 124.0 618.2 L 126.7 617.9 L 129.3 617.5 L 132.0 617.1 L 134.7 616.6 L 137.3 616.0 L 140.0 615.4 L 142.7 614.7 L 145.3 614.0 L 148.0 613.2 L 150.7 612.3 L 153.3 611.4 L 156.0 610.4 L 158.7 609.4 L 161.3 608.3 L 164.0 607.1 L 166.7 605.9 L 169.3 604.6 L 172.0 603.3 L 174.7 601.8 L 177.3 600.4 L 180.0 598.8 L 182.7 597.2 L 185.3 595.5 L 188.0 593.8 L 190.7 592.0 L 193.3 590.1 L 196.0 588.2 L 198.7 586.2 L 201.3 584.1 L 204.0 582.0 L 206.7 579.8 L 209.3 577.5 L 212.0 575.2 L 214.7 572.8 L 217.3 570.3 L 220.0 567.8 L 222.7 565.2 L 225.3 562.5 L 228.0 559.8 L 230.7 557.0 L 233.3 554.1 L 236.0 551.2 L 238.7 548.1 L 241.3 545.1 L 244.0 541.9 L 246.7 538.7 L 249.3 535.4 L 252.0 532.1 L 254.7 528.7 L 257.3 525.2 L 260.0 521.6 L 262.7 518.0 L 265.3 514.3 L 268.0 510.5"/>
+  <circle class="no-fill" cx="233.3" cy="554.1" r="7" stroke="var(--accent)" stroke-width="2.4"/>
+  <text class="label-sm" x="276.0" y="544.8">Σ</text>
+  <text class="label-sm" x="156.0" y="530.6" fill="var(--accent)">M</text>
+  <text class="label" x="188.0" y="663.0" text-anchor="middle">dM/dt &gt; dΣ/dt</text>
+
+</g>
+
+<g id="layer-transistor" inkscape:groupmode="layer" inkscape:label="38 parasitic control layer" style="display:inline">
+  <path class="wire" style="stroke-width:4" d="M 196 1032 L 196 1072"/>
+  <path class="chart" style="stroke-width:1.3" d="M 138 1052 L 196 1052"/>
+  <path class="accent" style="stroke-width:5.2" d="M 199 1040 L 218 1018 L 218 1000"/>
+  <path class="accent" style="stroke-width:5.2" d="M 199 1064 L 218 1086 L 218 1104"/>
+  <path class="accent-fill" d="M 0 0 l -13 -5 l 0 10 Z" transform="translate(211,1076) rotate(-135)"/>
+  <text class="label-sm" x="134" y="1044" text-anchor="end">Iᵦ</text>
+  <text class="label-sm" x="134" y="1064" text-anchor="end">E</text>
+  <text class="label-sm" x="228" y="1014" fill="var(--accent)">V_cc</text>
+  <text class="label-sm" x="228" y="1102">O + I</text>
+
+</g>
+
+<g id="layer-cap" inkscape:groupmode="layer" inkscape:label="35 enclosure capacitance" style="display:inline">
+  <path class="wire" d="M 925.0 734.0 l 150.0 0"/>
+  <path class="wire" d="M 925.0 810.0 l 150.0 0"/>
+  <path class="wire" d="M 1000.0 734.0 l 0 -18"/>
+  <path class="wire" d="M 1000.0 810.0 l 0 18"/>
+  <path class="chart" style="stroke-dasharray:4 4" d="M 943.0 739.0 L 943.0 805.0"/>
+  <path class="chart" style="stroke-dasharray:4 4" d="M 971.5 739.0 L 971.5 805.0"/>
+  <path class="chart" style="stroke-dasharray:4 4" d="M 1000.0 739.0 L 1000.0 805.0"/>
+  <path class="chart" style="stroke-dasharray:4 4" d="M 1028.5 739.0 L 1028.5 805.0"/>
+  <path class="chart" style="stroke-dasharray:4 4" d="M 1057.0 739.0 L 1057.0 805.0"/>
+  <path class="accent" style="stroke-width:2.2" d="M 911.0 734.0 L 911.0 810.0"/>
+  <text class="label-sm" x="903.0" y="777.0" text-anchor="end" fill="var(--accent)">d</text>
+  <text class="label-sm" x="1085.0" y="739.0">A</text>
+  <text class="label" x="1000.0" y="858.0" text-anchor="middle">C = εA/d</text>
+
+</g>
+
+<g id="layer-emf" inkscape:groupmode="layer" inkscape:label="36 inductive kickback" style="display:inline">
+  <path class="wire-thin" d="M 917.0 1044.0 L 1083.0 1044.0"/>
+  <path class="wire" style="stroke-width:2.6" d="M 925.0 1044.0 L 955.0 1005.3 L 1015.0 1005.3 L 1015.0 1044.0 L 1075.0 1044.0"/>
+  <path class="accent" style="stroke-width:2.8" d="M 1006.0 1044.0 L 1015.0 956.0 L 1024.0 1044.0"/>
+  <text class="label-sm" x="976.0" y="997.3">i</text>
+  <text class="label-sm" x="1029.0" y="966.6" fill="var(--accent)">V</text>
+  <text class="label" x="1000.0" y="1084.0" text-anchor="middle">V = −L di/dt</text>
+
+</g>
+
+<g id="layer-reparations" inkscape:groupmode="layer" inkscape:label="37 reparations integral" style="display:inline">
+  <path class="accent-area" d="M 440.0 1346.0 L 440.0 1346.0 L 449.7 1346.9 L 459.5 1347.3 L 469.2 1348.1 L 478.9 1348.6 L 488.6 1348.9 L 498.4 1349.3 L 508.1 1349.4 L 517.8 1349.5 L 527.6 1349.8 L 537.3 1349.9 L 547.0 1349.7 L 556.8 1349.2 L 566.5 1348.4 L 576.2 1347.4 L 585.9 1346.7 L 595.7 1342.3 L 605.4 1340.9 L 615.1 1338.4 L 624.9 1336.0 L 634.6 1332.7 L 644.3 1327.9 L 654.1 1324.1 L 663.8 1319.6 L 673.5 1315.2 L 683.2 1310.2 L 693.0 1301.4 L 702.7 1295.4 L 712.4 1290.0 L 722.2 1284.4 L 731.9 1281.4 L 741.6 1276.5 L 751.4 1271.3 L 761.1 1268.0 L 770.8 1264.9 L 780.5 1263.0 L 790.3 1261.0 L 800.0 1260.0 L 800.0 1346.0 Z"/>
+  <path class="accent" style="stroke-width:2.4" d="M 440.0 1346.0 L 449.7 1346.9 L 459.5 1347.3 L 469.2 1348.1 L 478.9 1348.6 L 488.6 1348.9 L 498.4 1349.3 L 508.1 1349.4 L 517.8 1349.5 L 527.6 1349.8 L 537.3 1349.9 L 547.0 1349.7 L 556.8 1349.2 L 566.5 1348.4 L 576.2 1347.4 L 585.9 1346.7 L 595.7 1342.3 L 605.4 1340.9 L 615.1 1338.4 L 624.9 1336.0 L 634.6 1332.7 L 644.3 1327.9 L 654.1 1324.1 L 663.8 1319.6 L 673.5 1315.2 L 683.2 1310.2 L 693.0 1301.4 L 702.7 1295.4 L 712.4 1290.0 L 722.2 1284.4 L 731.9 1281.4 L 741.6 1276.5 L 751.4 1271.3 L 761.1 1268.0 L 770.8 1264.9 L 780.5 1263.0 L 790.3 1261.0 L 800.0 1260.0"/>
+  <path class="wire-thin" d="M 430.0 1346.0 L 810.0 1346.0"/>
+  <path class="wire-thin" d="M 440.0 1354.0 L 440.0 1284.0"/>
+  <path class="wire-thin" d="M 800.0 1354.0 L 800.0 1284.0"/>
+  <text class="label-sm" x="440.0" y="1370.0" text-anchor="middle">1948</text>
+  <text class="label-sm" x="800.0" y="1370.0" text-anchor="middle">2022</text>
+  <text class="label" x="620.0" y="1398.0" text-anchor="middle">R = ∫ Re[V·I*] dτ</text>
+
+</g>
+
+<g id="layer-theodore" inkscape:groupmode="layer" inkscape:label="39 Theodore transform" style="display:inline">
+  <path class="wire-thin" d="M 662 400.0 L 662 600.0"/>
+  <path class="wire-thin" d="M 738 400.0 L 738 600.0"/>
+  <path class="accent" style="stroke-width:2.8" d="M 662 448.0 C 692 470.0 708 522.0 738 544.0"/>
+  <path class="accent-fill" d="M 0 0 l -12 -5 l 0 10 Z" transform="translate(738,544.0) rotate(28)"/>
+  <circle class="fill-ink" cx="662" cy="448.0" r="5"/>
+  <circle class="accent-fill" cx="738" cy="544.0" r="5"/>
+  <text class="label-sm" x="662" y="390.0" text-anchor="middle">aᵢ</text>
+  <text class="label-sm" x="738" y="390.0" text-anchor="middle">aⱼ</text>
+  <path class="accent-fill" d="M430 116Q430 72 433.0 46.0Q436 20 441 2Q428 -4 414.5 -7.0Q401 -10 389 -10Q361 -10 351.0 2.5Q341 15 341 50Q341 123 343.5 195.0Q346 267 348.5 338.0Q351 409 353.0 477.5Q355 546 355 611Q355 656 354.0 677.0Q353 698 347.5 704.0Q342 710 330 710H325Q323 715 321.5 720.5Q320 726 320 732Q320 742 326.0 749.0Q332 756 347.5 760.0Q363 764 394 764Q420 764 431.0 752.5Q442 741 442 715Q442 664 441.0 605.5Q440 547 438.0 484.5Q436 422 434.0 358.5Q432 295 431.0 233.5Q430 172 430 116ZM240 434Q228 434 208.5 432.5Q189 431 175 430Q175 425 175.0 420.0Q175 415 175 410Q175 368 159.5 352.0Q144 336 111 336Q92 336 78.0 341.0Q64 346 55 355Q64 368 67.5 383.5Q71 399 74 420Q76 444 85.0 457.5Q94 471 118.0 476.5Q142 482 191 482H396Q470 482 530.0 487.5Q590 493 629.5 498.5Q669 504 679 504Q698 504 704.0 490.0Q710 476 711 451Q711 436 717.0 431.5Q723 427 734 427Q736 422 737.0 418.0Q738 414 738 409Q738 391 723.0 383.0Q708 375 681 375Q642 375 627.5 394.0Q613 413 613 457L627 447Q582 441 526.0 437.5Q470 434 409 434Z" transform="translate(658.0,636.0) scale(0.02400,-0.02400)"/>
+  <text class="label" x="704" y="634.0" fill="var(--accent)"> : a → a′</text>
 
 </g>
 

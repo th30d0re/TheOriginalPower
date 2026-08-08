@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" viewBox="0 0 502 1600" width="502" height="1600"
+     style="--bg:#0d1b2a;--ink:#e8c99b;--accent:#e08a3c;--dim:#8a6a45">
+<sodipodi:namedview inkscape:document-units="px" pagecolor="#0d1b2a"/>
+<title>The Original Power — spine (502u / 1114pp)</title>
+<defs>
+  <style><![CDATA[
+    :root { }
+    .wire   { fill:none; stroke:var(--ink); stroke-width:3.2;
+               stroke-linecap:round; stroke-linejoin:round; }
+    .wire-thin { fill:none; stroke:var(--ink); stroke-width:2.2;
+               stroke-linecap:round; }
+    .fill-ink  { fill:var(--ink); stroke:none; }
+    .no-fill   { fill:none; }
+    .chart     { fill:none; stroke:var(--dim); stroke-width:1.6; }
+    .chart-rim { fill:none; stroke:var(--ink); stroke-width:3; }
+    .accent    { stroke:var(--accent); fill:none; stroke-width:3.4; }
+    .accent-fill { fill:var(--accent); stroke:none; }
+    .accent-area { fill:var(--accent); fill-opacity:0.26; stroke:none; }
+    .label     { fill:var(--ink); font-family:'Courier New',monospace;
+                  font-size:17px; }
+    .label-sm  { fill:var(--dim); font-family:'Courier New',monospace;
+                  font-size:14px; }
+  ]]></style>
+
+  <!-- inductor: 4 loops, 82 long -->
+  <symbol id="s-coil" overflow="visible"><path class="wire" d="M 0 0 a 9 9 0 0 1 18 0 a 9 9 0 0 1 18 0 a 9 9 0 0 1 18 0 a 9 9 0 0 1 18 0 l 10 0"/></symbol>
+  <symbol id="s-res"  overflow="visible"><path class="wire" d="M 0 0 l 3.0 -9 l 6 18 l 6 -18 l 6 18 l 6 -18 l 6 18 l 6 -18 l 3.0 9"/></symbol>
+  <symbol id="s-cap"  overflow="visible">
+    <path class="wire" d="M 0 0 l 12 0 M 12 -17 l 0 34 M 26 -17 l 0 34 M 26 0 l 12 0"/>
+  </symbol>
+  <symbol id="s-junction" overflow="visible">
+    <circle class="wire no-fill" cx="0" cy="0" r="6"/>
+  </symbol>
+  <symbol id="s-arrow" overflow="visible">
+    <path class="fill-ink" d="M -11 0 L 11 0 L 0 26 Z"/>
+  </symbol>
+  <!-- center element: the conductor arrives level, climbs both faces of a
+       stepped stack, and OPENS at the peak. Drawn pointing "up"; the bottom
+       border instances it flipped. -->
+  <symbol id="s-stack" overflow="visible">
+    <path class="wire" d="M -150 0 L -78 0 L -14 -60"/>
+    <path class="wire" d="M 150 0 L 78 0 L 14 -60"/>
+    <path class="wire" d="M -50 -10 l 100 0 M -40 -22 l 80 0 M -30 -34 l 60 0 M -20 -46 l 40 0"/>
+  </symbol>
+  <!-- ground: stacked rules, narrowing downward.
+       Half-width 11 is set by the tightest corner. A coil's windings project 9
+       off-axis (+1.6 half-stroke) and, because the top rails rotate +90 and the
+       bottom rails -90, they bump TOWARD the corner ground at top-right and
+       bottom-left. Clearance there is corner_in - 10.6 - half_width, so 11
+       leaves ~6. Three rules, not four: rule spacing must stay near 8 to read
+       against the 3.2 stroke, and four rules at this width would merge. -->
+  <symbol id="s-ground" overflow="visible">
+    <path class="wire" d="M -11 0 l 22 0 M -6 8 l 12 0 M -2 16 l 4 0"/>
+  </symbol>
+</defs>
+
+<g id="layer-bg" inkscape:groupmode="layer" inkscape:label="00 background" style="display:inline">
+  <rect x="0" y="0" width="502" height="1600" fill="var(--bg)"/>
+</g>
+
+<g id="layer-spine" inkscape:groupmode="layer" inkscape:label="80 spine" style="display:inline">
+  <path class="wire" d="M 235.9 150 L 266.1 150"/>
+  <path class="wire" d="M 175.7 1390 L 326.3 1390"/>
+  <path class="wire" d="M 220.9 165 L 281.1 165"/>
+  <path class="wire" d="M 190.8 1405 L 311.2 1405"/>
+  <path class="wire" d="M 205.8 180 L 296.2 180"/>
+  <path class="wire" d="M 205.8 1420 L 296.2 1420"/>
+  <path class="wire" d="M 190.8 195 L 311.2 195"/>
+  <path class="wire" d="M 220.9 1435 L 281.1 1435"/>
+  <path class="wire" d="M 175.7 210 L 326.3 210"/>
+  <path class="wire" d="M 235.9 1450 L 266.1 1450"/>
+  <text x="241.0" y="800" text-anchor="middle" fill="var(--ink)" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-weight="700" font-size="70" textLength="800" lengthAdjust="spacingAndGlyphs" transform="rotate(90,241.0,800)">THE ORIGINAL POWER</text>
+  <text x="211.0" y="550" text-anchor="middle" fill="var(--dim)" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="26" letter-spacing="2" textLength="300" lengthAdjust="spacingAndGlyphs" transform="rotate(90,211.0,550)">EMMANUEL THEODORE</text>
+
+</g>
+
+</svg>
