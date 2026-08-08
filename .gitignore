@@ -53,6 +53,11 @@ harness/data/*.lock
 Paper/research/ia_scotus_pdfs/*.pdf
 Paper/research/ia_scotus_pdfs/split_pdfs/*.pdf
 
+# National HOLC download cache (69 MB) — re-fetched on demand by
+# Paper/scripts/fetch_spatial_data.py from the American Panorama crosswalk.
+# The per-city holc_*.geojson exports derived from it stay tracked.
+Paper/data/spatial/_holc_national_cache.geojson
+
 # ──────────────────────────────────────
 # IDE / AI assistant configs and logs
 # ──────────────────────────────────────
