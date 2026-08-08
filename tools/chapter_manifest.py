@@ -23,6 +23,11 @@ PDF = "Paper/The_Original_Power.pdf"
 COVER_FRONT = 1          # bound cover page, not a unit
 PART_RE = re.compile(r"^(I{1,3}|IV|V)\s")
 
+# Units that stay in the manifest so page ranges remain contiguous and
+# auditable, and that earn no deep dive of their own. A one-page note and a
+# reference list have nothing for a chapter summary to work with.
+NO_DIVE_TITLES = {"a note on the title"}
+
 
 def bibliography_start(last: int) -> int | None:
     """First page of the bibliography, which carries no outline entry.
@@ -87,7 +92,7 @@ def main() -> None:
 
     for u in out:
         u["pages"] = u["end"] - u["start"] + 1
-        u.setdefault("skip", False)
+        u.setdefault("skip", u["title"].strip().lower() in NO_DIVE_TITLES)
 
     bad = [u for u in out if u["pages"] < 1]
     if bad:
