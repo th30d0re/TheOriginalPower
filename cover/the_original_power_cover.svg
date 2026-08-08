@@ -257,6 +257,7 @@
   <text class="label" x="345.5" y="1241.0">F</text>
   <text class="label" x="368.5" y="1283.0">I</text>
   <text class="label" x="391.5" y="1325.0">O</text>
+  <text class="label" x="268.0" y="1408.5" text-anchor="middle">max ℰ(t)  s.t.  M<tspan font-size="0.72em" dy="4">eff</tspan><tspan dy="-4"></tspan> &lt; τ</text>
 
 </g>
 

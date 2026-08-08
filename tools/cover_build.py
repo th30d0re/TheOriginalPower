@@ -715,6 +715,12 @@ def theodore(cx: float, cy: float, h: float = 200, sep: float = 38) -> str:
 
 
 # ── Five-tier pyramid ─────────────────────────────────────────────────────────
+def sub(s: str) -> str:
+    """A subscript run. Unicode has no subscript f or d, so the label markup
+    carries the shift rather than the character set."""
+    return f'<tspan font-size="0.72em" dy="4">{s}</tspan><tspan dy="-4"></tspan>'
+
+
 def pyramid(cx: float, base_y: float, w: float, h: float, depth: float = 0.30) -> str:
     """The five-tier stack as a solid, in three-quarter view: E apex, O base.
 
@@ -762,6 +768,12 @@ def pyramid(cx: float, base_y: float, w: float, h: float, depth: float = 0.30) -
         r = ring(s)
         out.append(f'  <text class="label" x="{r["R"][0]+20:.1f}" '
                    f'y="{r["R"][1]+6:.1f}">{t}</text>\n')
+    # The Predatory Min-Max Function (E10.5). The solid is a picture of the
+    # partition; the kernel objective is the rule the partition serves, so the
+    # two belong to one figure. The caption clears the near base corner, which
+    # hangs `hd` below base_y, and clears the author line below it.
+    out.append(f'  <text class="label" x="{cx:.1f}" y="{base_y+hd+34:.1f}" '
+               f'text-anchor="middle">max ℰ(t)  s.t.  M{sub("eff")} &lt; τ</text>\n')
     return "".join(out)
 
 
@@ -919,9 +931,9 @@ BACK_ENTRIES = [
     (_g_reparations, "The Reparations Integral",
      ("ℛ = ∫ Re[V·I*] dτ. The debt is an area. Plotted: output",
       "produced and not paid out, 1948–2022.")),
-    (_g_pyramid, "The Five-Tier Architecture",
-     ("E, P, F, I, O. The minimum configuration the mathematics",
-      "required to stay consistent with the historical record.")),
+    (_g_pyramid, "The Predatory Min-Max Function",
+     ("max ℰ subject to M_eff < τ, over five tiers E, P, F, I, O.",
+      "Extraction runs at the ceiling, resistance is held below it.")),
     (_g_transistor, "The Parasitic Control Layer",
      ("The Elite gate a supply they do not generate. A trickle of",
       "base current routes the whole of V_cc.")),

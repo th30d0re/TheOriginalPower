@@ -167,9 +167,9 @@
   <text x="702.0" y="658" fill="var(--dim)" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="14">ℛ = ∫ Re[V·I*] dτ. The debt is an area. Plotted: output</text>
   <text x="702.0" y="677" fill="var(--dim)" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="14">produced and not paid out, 1948–2022.</text>
   <g><path class="wire-thin" style="stroke-width:2" d="M 115.8 758.0 L 146.0 766.6 L 176.2 758.0 L 146.0 716.0 Z"/><path class="chart" d="M 138.4 726.5 L 146.0 728.7 L 153.6 726.5"/><path class="chart" d="M 130.9 737.0 L 146.0 741.3 L 161.1 737.0"/><path class="chart" d="M 123.3 747.5 L 146.0 754.0 L 168.7 747.5"/></g>
-  <text x="200" y="732" fill="var(--ink)" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="17" font-weight="600">The Five-Tier Architecture</text>
-  <text x="200" y="754" fill="var(--dim)" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="14">E, P, F, I, O. The minimum configuration the mathematics</text>
-  <text x="200" y="773" fill="var(--dim)" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="14">required to stay consistent with the historical record.</text>
+  <text x="200" y="732" fill="var(--ink)" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="17" font-weight="600">The Predatory Min-Max Function</text>
+  <text x="200" y="754" fill="var(--dim)" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="14">max ℰ subject to M_eff < τ, over five tiers E, P, F, I, O.</text>
+  <text x="200" y="773" fill="var(--dim)" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="14">Extraction runs at the ceiling, resistance is held below it.</text>
   <g><path class="wire-thin" style="stroke-width:3" d="M 645.1 725.0 v 28"/><path class="chart" style="stroke-width:1.2" d="M 614.0 739.0 H 645.1"/><path class="accent" style="stroke-width:3.4" d="M 647.1 731.0 L 661.1 717.0 V 715.0 M 647.1 747.0 L 661.1 761.0 V 763.0"/></g>
   <text x="702.0" y="732" fill="var(--ink)" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="17" font-weight="600">The Parasitic Control Layer</text>
   <text x="702.0" y="754" fill="var(--dim)" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="14">The Elite gate a supply they do not generate. A trickle of</text>
