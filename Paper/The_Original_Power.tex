@@ -25,6 +25,14 @@
 \usepackage{fancyhdr}
 \usepackage[most]{tcolorbox}
 \usepackage{graphicx}
+% ── The Theodore Transform operator ───────────────────────────────────────
+% Ge'ez ተ (U+1270, ETHIOPIC SYLLABLE TA) — the first syllable of Tewodros,
+% the Ethiopian form of Theodore. Shipped as a vector PDF rather than a font
+% call: pdflatex has no Ethiopic coverage, and a font-dependent glyph is the
+% kind of thing that silently becomes a missing box on a printer's RIP or in
+% an ebook conversion. Regenerate with tools/geez_op.tex if the shape changes.
+\newcommand{\TT}{\mathord{\raisebox{-0.1ex}{\includegraphics[height=1.55ex]{figures/tewodros_ta.pdf}}}}
+
 \usepackage{usc_macros}
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]

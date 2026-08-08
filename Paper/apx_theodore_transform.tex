@@ -60,7 +60,7 @@ $Q_{\text{reactive}}$ (Appendix~\ref{apx:extraction_chart}).
 Let $\sigma_{\alpha\beta}$ be a structural correspondence. The \textbf{Theodore Transform} is the
 substitution operator
 \begin{equation}\label{eq:tt.1-transform}
-\mathfrak{T}_{\alpha \to \beta} \;:\; \mathcal{C}_\alpha \;\longrightarrow\; \mathcal{C}_\beta,
+\TT_{\alpha \to \beta} \;:\; \mathcal{C}_\alpha \;\longrightarrow\; \mathcal{C}_\beta,
 \qquad c \;\longmapsto\; \sigma_{\alpha\beta}(c),
 \end{equation}
 where $\sigma_{\alpha\beta}(c)$ denotes the claim obtained by replacing every vocabulary element
@@ -69,7 +69,7 @@ of $c$ with its image under $\sigma_{\alpha\beta}$.
 
 The operator carries a claim across domains the way the Laplace transform carries a function
 across representations. The input and the image differ in vocabulary. The image is legible exactly
-when the correspondence preserves the relations the claim asserts. The symbol $\mathfrak{T}$ is
+when the correspondence preserves the relations the claim asserts. The symbol $\TT$ is
 reserved for this operator throughout the manuscript, consistent with the notation rule of
 Chapter~\ref{ch:system_init}: no other quantity in this book carries it.
 
@@ -78,14 +78,14 @@ Chapter~\ref{ch:system_init}: no other quantity in this book carries it.
 
 A claim asserted as a principle claims scope. A claimant who asserts a normative claim $c$ on
 domain $D_\alpha$ as a principle commits to the transformed claim
-$\mathfrak{T}_{\alpha \to \beta}(c)$ on every domain $D_\beta$ inside the principle's scope. A
+$\TT_{\alpha \to \beta}(c)$ on every domain $D_\beta$ inside the principle's scope. A
 claimant who asserts anti-racism as a principle thereby asserts the image of that claim on the
 gendered axis, and on every other axis the principle covers. The transform converts that commitment
 into a checkable condition:
 
 \begin{equation}\label{eq:tt.2-invariance}
 c \text{ holds on } D_\alpha \quad\Longrightarrow\quad
-\mathfrak{T}_{\alpha \to \beta}(c) \text{ holds on } D_\beta
+\TT_{\alpha \to \beta}(c) \text{ holds on } D_\beta
 \qquad \forall\, \beta \in S(c),
 \end{equation}
 
@@ -97,7 +97,7 @@ fails at some $\beta \in S(c)$ and the claimant accepts the failure, the claim i
 \begin{theorem}[Selective-Application Detection]
 \label{thm:tt-selective}
 Let a claimant assert $c \in \mathcal{C}_\alpha$ as a principle with scope $S(c)$, and let $c$
-hold on $D_\alpha$. If $\mathfrak{T}_{\alpha \to \beta}(c)$ fails on some $D_\beta$ with
+hold on $D_\alpha$. If $\TT_{\alpha \to \beta}(c)$ fails on some $D_\beta$ with
 $\beta \in S(c)$, and the claimant accepts the failure, then the claimant's operative commitment
 is a local rule of $D_\alpha$: the asserted scope exceeds the honored scope.
 \end{theorem}
@@ -221,7 +221,7 @@ structure yielded closed theorems in the target domain --- Buffer Matching
 (Theorem~\ref{thm:buffer-matching}), Reform Monotonicity
 (Theorem~\ref{thm:reform-monotonicity}), Quarter-Wave Co-optation
 (Theorem~\ref{thm:quarter-wave}), and Cultural Bias (Theorem~\ref{thm:cultural-bias}) --- whose
-pre-images under $\mathfrak{T}^{-1}$ match claims the historical chapters had already established
+pre-images under $\TT^{-1}$ match claims the historical chapters had already established
 on descriptive evidence. A mapping that manufactured agreement would produce theorems with no
 source-domain correlates. The electrodynamic image produced four theorems that landed on claims
 already in the record.
@@ -256,7 +256,7 @@ The claims of this appendix fail under the following conditions.
     invariance result depending on that pair loses standing.
 
     \item \textbf{Image--record contradiction.} A theorem derivable in the electrodynamic image
-    whose pre-image under $\mathfrak{T}^{-1}$ contradicts an established result of the historical
+    whose pre-image under $\TT^{-1}$ contradicts an established result of the historical
     chapters. The transport must preserve the relations the framework asserts, and a contradiction
     between image and record is a relation destroyed. A single confirmed contradiction falsifies
     the cross-domain correspondence of Section~\ref{sec:tt_cross_domain}.
@@ -277,8 +277,8 @@ extraction topology itself --- would convert each application of the transform f
 analogy into a computed image.
 
 Composition is unestablished. Whether
-$\mathfrak{T}_{\beta \to \gamma} \circ \mathfrak{T}_{\alpha \to \beta} =
-\mathfrak{T}_{\alpha \to \gamma}$ holds in general determines whether chains of transports
+$\TT_{\beta \to \gamma} \circ \TT_{\alpha \to \beta} =
+\TT_{\alpha \to \gamma}$ holds in general determines whether chains of transports
 preserve structure or accumulate distortion. Until this is settled, every multi-hop projection
 requires individual verification.
 
