@@ -1,0 +1,16 @@
+{
+  "0": {
+    "artifact_id": "97a6f39e-2301-4a56-900b-bbb86c0a198e",
+    "attempts": 2,
+    "audio_path": null,
+    "error": "nlm download audio failed (rc=1): Error: Download failed for audio.\n",
+    "status": "failed"
+  },
+  "1": {
+    "artifact_id": "7c3a4840-9bc9-41b8-beec-c8af84a4a481",
+    "attempts": 1,
+    "audio_path": null,
+    "error": "nlm download audio failed (rc=1): Error: Download failed for audio.\n",
+    "status": "failed"
+  }
+}
