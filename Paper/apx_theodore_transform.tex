@@ -1,0 +1,288 @@
+\chapter{The Theodore Transform: Inter-Axis Projection and Cross-Domain Transposition}
+\label{apx:theodore_transform}
+
+This appendix names and formalizes an operation the manuscript has used throughout without naming
+it. The operation transfers information from one domain to the next, the way a Laplace transform
+carries a function from the time domain to the frequency domain: the object changes its
+representation, and the structure the representation carries stays fixed. Chapter~\ref{ch:gendered}
+uses the operation to project the Haitian Theorem from the racial axis onto the gendered axis.
+Chapters~\ref{ch:redefining}--\ref{ch:algorithmic_epoch} use the operation to transpose the entire
+social-mechanical framework into electrodynamics. This appendix defines the operator, states its
+invariance condition, works both uses on material already in the manuscript, and marks the limit of
+what the operator can establish.
+
+\medskip
+
+\noindent\textbf{Confidence tier.} The formal apparatus of this appendix is Tier~3 (structural).
+It names and unifies moves the manuscript already executes and introduces no new calibrated
+measurement. Falsification criteria appear in Section~\ref{sec:tt_falsification}.
+
+\section{Domains, Vocabularies, and Correspondence Maps}
+\label{sec:tt_domains}
+
+Fix an indexed family of domains $\{D_\alpha\}_{\alpha \in A}$. Two index sets matter in this book.
+The first is the set of identity axes along which the Predatory Min-Max Function partitions the
+population: race, gender, sexuality, and the further axes Chapter~\ref{ch:spectral_carrier}
+resolves into sub-bands. The second is the set of formal substrates across which the framework has
+been developed: social mechanics, circuit theory, thermodynamics, and control systems
+(Appendix~\ref{app:universality}).
+
+Each domain $D_\alpha$ carries a vocabulary $\mathcal{V}_\alpha$ (the symbols and defined
+quantities of that domain) and a claim set $\mathcal{C}_\alpha$ (the propositions statable in that
+vocabulary). On the racial axis the vocabulary includes $O_{\text{racialized}}$,
+$F_{\text{enforce}}$, the wage $\psi$, and the Enclosure Score $\mathcal{S}_{\text{enc}}$. On the
+gendered axis the vocabulary includes $O_{\text{gendered}}$
+(Equation~\ref{eq:12.7-gendered-outgroup-set}), coverture, and the reproductive extraction kernel
+documented in Chapter~\ref{ch:gendered}.
+
+\begin{definition}[Structural correspondence]
+A \textbf{structural correspondence} between domains $D_\alpha$ and $D_\beta$ is a map
+$\sigma_{\alpha\beta} : \mathcal{V}_\alpha \to \mathcal{V}_\beta$ assigning each element of the
+source vocabulary its structural analogue in the target vocabulary: the element occupying the same
+position in the extraction topology $(E, P_{\text{uppet}}, F_{\text{enforce}}, I_{\text{buffer}},
+O)$ and standing in the same relations to its neighbors.
+\end{definition}
+
+The manuscript constructs such correspondences repeatedly and explicitly.
+$O_{\text{racialized}} \mapsto O_{\text{gendered}}$ maps the racialized Out-group to the gendered
+Out-group; both sets are defined by exclusion from lethal autonomy
+(Equation~\ref{eq:6.1-lethal-autonomy-gradient}). The slave-patrol and carceral machinery of
+Chapter~\ref{ch:enforcement} maps to the gendered enforcement machinery of
+Chapter~\ref{ch:gendered}: coverture statutes, eugenics law, and the criminalization of pregnancy.
+The kinetic labor of $O_{\text{racialized}}$ and $I_{\text{buffer}}$ maps to the power supply
+$V_{cc}$ of the circuit model, and the psychological wage $\psi_s$ maps to reactive power
+$Q_{\text{reactive}}$ (Appendix~\ref{apx:extraction_chart}).
+
+\section{The Transform}
+\label{sec:tt_transform}
+
+\begin{definition}[The Theodore Transform]
+Let $\sigma_{\alpha\beta}$ be a structural correspondence. The \textbf{Theodore Transform} is the
+substitution operator
+\begin{equation}\label{eq:tt.1-transform}
+\mathfrak{T}_{\alpha \to \beta} \;:\; \mathcal{C}_\alpha \;\longrightarrow\; \mathcal{C}_\beta,
+\qquad c \;\longmapsto\; \sigma_{\alpha\beta}(c),
+\end{equation}
+where $\sigma_{\alpha\beta}(c)$ denotes the claim obtained by replacing every vocabulary element
+of $c$ with its image under $\sigma_{\alpha\beta}$.
+\end{definition}
+
+The operator carries a claim across domains the way the Laplace transform carries a function
+across representations. The input and the image differ in vocabulary. The image is legible exactly
+when the correspondence preserves the relations the claim asserts. The symbol $\mathfrak{T}$ is
+reserved for this operator throughout the manuscript, consistent with the notation rule of
+Chapter~\ref{ch:system_init}: no other quantity in this book carries it.
+
+\section{The Invariance Condition}
+\label{sec:tt_invariance}
+
+A claim asserted as a principle claims scope. A claimant who asserts a normative claim $c$ on
+domain $D_\alpha$ as a principle commits to the transformed claim
+$\mathfrak{T}_{\alpha \to \beta}(c)$ on every domain $D_\beta$ inside the principle's scope. A
+claimant who asserts anti-racism as a principle thereby asserts the image of that claim on the
+gendered axis, and on every other axis the principle covers. The transform converts that commitment
+into a checkable condition:
+
+\begin{equation}\label{eq:tt.2-invariance}
+c \text{ holds on } D_\alpha \quad\Longrightarrow\quad
+\mathfrak{T}_{\alpha \to \beta}(c) \text{ holds on } D_\beta
+\qquad \forall\, \beta \in S(c),
+\end{equation}
+
+where $S(c)$ is the scope the claimant asserts. When Equation~\ref{eq:tt.2-invariance} holds across
+$S(c)$, the claim is applied \textbf{invariantly}: it functions as a principle. When the equation
+fails at some $\beta \in S(c)$ and the claimant accepts the failure, the claim is applied
+\textbf{selectively}.
+
+\begin{theorem}[Selective-Application Detection]
+\label{thm:tt-selective}
+Let a claimant assert $c \in \mathcal{C}_\alpha$ as a principle with scope $S(c)$, and let $c$
+hold on $D_\alpha$. If $\mathfrak{T}_{\alpha \to \beta}(c)$ fails on some $D_\beta$ with
+$\beta \in S(c)$, and the claimant accepts the failure, then the claimant's operative commitment
+is a local rule of $D_\alpha$: the asserted scope exceeds the honored scope.
+\end{theorem}
+
+\begin{proof}[Argument]
+A principle is a claim together with its scope. The claimant asserts the pair $(c, S(c))$ and
+honors the pair $(c, \{\alpha\})$. The honored scope excludes $\beta$ by hypothesis, so the honored
+scope is a proper subset of the asserted scope. The gap between the two scopes is the selective
+application. \end{proof}
+
+A failure of invariance licenses exactly one conclusion: the claim, as held by that claimant,
+functions selectively. Three further conclusions remain unavailable. First, the transform reports
+nothing about the truth of $c$ on any domain: a claim can hold on every axis and still be applied
+selectively by a given claimant, and a claim can fail on every axis and still be applied
+invariantly. Second, the transform reports nothing about the direction of repair: invariance can
+be restored by extending $c$ to $D_\beta$, by retracting $c$ on $D_\alpha$, or by shrinking the
+asserted scope, and the operator ranks none of these above the others. Third, the transform
+measures nothing: it introduces no quantity, no calibration, and no threshold. Its output is a
+scope audit of a claimant, stated in vocabulary the manuscript already supplies.
+
+The operator therefore functions as an invariance test. It detects whether a claim is being
+applied as a principle. It establishes nothing about whether the claim deserves to be one.
+
+\section{Use I: Inter-Axis Projection}
+\label{sec:tt_inter_axis}
+
+The first use carries a claim from one axis of oppression to another and checks invariance. The
+diagnostic value sits in the asymmetry the check exposes: a claimant who accepts a claim on the
+gendered axis and rejects its image on the racial axis, or accepts it on the racial axis and
+rejects its image on the gendered axis, applies the claim selectively, and
+Theorem~\ref{thm:tt-selective} names the selectivity precisely.
+
+\subsection{Worked Example: The Haitian Theorem on the Gendered Axis}
+
+Chapter~\ref{ch:contradiction} states the Haitian Theorem
+(Definition~\ref{def:haitian_theorem}, Equations~\ref{eq:12.5-haitian-theorem-nonkinetic}
+and~\ref{eq:12.6-haitian-theorem-kinetic}): across the 1450--2026 dataset, structural liberation
+of the Out-group from the extraction kernel has been achieved exclusively through kinetic action.
+The theorem is established on the racial axis, with the Haitian Revolution as its anchor case.
+
+Chapter~\ref{ch:gendered} applies the Theodore Transform to this claim. The correspondence map
+runs as follows:
+
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{>{\raggedright}p{5.4cm} >{\raggedright\arraybackslash}p{8.0cm}}
+\toprule
+\textbf{Source vocabulary (racial axis)} & \textbf{Image vocabulary (gendered axis)} \\
+\midrule
+$O_{\text{racialized}}$ & $O_{\text{gendered}}$ (Equation~\ref{eq:12.7-gendered-outgroup-set}) \\
+Slave patrols and the carceral apparatus (Chapter~\ref{ch:enforcement}) &
+Coverture, eugenics statutes, and criminalized pregnancy (Chapter~\ref{ch:gendered}) \\
+Disarmament of $O$ (Chapter~\ref{ch:kinetic}) &
+Gendered kinetic disarmament (Chapter~\ref{ch:gendered}) \\
+$\text{Lethal Autonomy}(O) = 0$ (Equation~\ref{eq:6.1-lethal-autonomy-gradient}) &
+$\text{Lethal Autonomy}(O_{\text{gendered}}) = 0$ \\
+Kinetic action & Kinetic action (fixed point of $\sigma$) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The image claim states: the gendered partition, installed and maintained through force, yields
+exclusively to force or to the credible, organized threat of force. Chapter~\ref{ch:gendered}
+evaluates the image claim against the gendered dataset --- the witch-hunts, the colonial
+dismantlement of the Agojie, the criminalization of indigenous gender systems, and the ongoing
+toll of intimate-partner violence --- and records the result: the framework's conclusion for the
+gendered axis is identical to its conclusion for the racial axis, because the extraction kernel is
+identical. Equation~\ref{eq:tt.2-invariance} holds for this pair of domains. The Haitian Theorem
+operates as a principle across the racial and gendered axes, and the gendered application of the
+theorem (withdrawal, deterrence, and the necessity of force) inherits the theorem's full force.
+
+\subsection{A Diagnostic Failure and What It Licensed}
+
+The manuscript also records a case in which a naive projection fails, and the failure does
+diagnostic work. Chapter~\ref{ch:gendered} establishes that the intersection
+$O_{\text{racialized}} \cap O_{\text{gendered}}$ is transformative: the nature of the gendered
+wound changes depending on which side of the racial partition the woman occupies. A correspondence
+map that treats ``women'' as a monolithic Out-group produces image claims that fail on the
+racialized half of the set --- the suffocation wound of the white feminine position and the
+devaluation wound of the Black feminine position diverge, and a claim calibrated to one misfires
+on the other.
+
+The failure licensed a refinement of the correspondence, and the manuscript supplies the refined
+object: the bivector $e_{14}$ of the Geometric Algebra extension
+(Equation~\ref{eq:ga.bivector}), a two-dimensional extraction plane qualitatively distinct from
+either axis alone. This is the correct reading of a failed invariance check under a coarse
+correspondence. The failure localizes the point where the map requires higher resolution, and the
+Geometric Algebra appendix supplies that resolution. What the failure could never license, under
+Theorem~\ref{thm:tt-selective}, is continued assertion of the coarse claim at its original scope
+alongside acceptance of its failure at the intersection.
+
+\section{Use II: Cross-Domain Transposition}
+\label{sec:tt_cross_domain}
+
+The second use carries an entire formal structure between substrates. The correspondence map runs
+from social mechanics to electrodynamics:
+
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{>{\raggedright}p{6.2cm} >{\raggedright\arraybackslash}p{7.2cm}}
+\toprule
+\textbf{Social-mechanical vocabulary} & \textbf{Electrodynamic image} \\
+\midrule
+Kinetic labor of $O_{\text{racialized}}$ and $I_{\text{buffer}}$ & Power supply $V_{cc}$ \\
+Suppression signal injected downward from $E$ & Incident wave $a$ \\
+Refusal, backlash, non-compliance & Reflected wave $b$ \\
+Extraction $\mathcal{E}(t)$ & Absorbed real power (Equation~\ref{eq:xc.3-absorbed-power}) \\
+Psychological wage $\psi_s$ & Reactive power $Q_{\text{reactive}}$ \\
+Enclosure Score $\mathcal{S}_{\text{enc}}$ & Match condition $1 - |\Gamma|$
+(Equation~\ref{eq:xc.5-enclosure-match}) \\
+Cultural field $\vec{B}$ & Static magnetic bias (Theorem~\ref{thm:cultural-bias}) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The derivation of Chapters~\ref{ch:redefining}--\ref{ch:algorithmic_epoch}, consolidated in
+Appendix~\ref{apx:extraction_chart}, is the image of the framework under this transform. The
+manuscript's electrodynamic derivation is itself an instance of the Theodore Transform, and this
+instance supplies the strongest available evidence that the operator does work. The transposed
+structure yielded closed theorems in the target domain --- Buffer Matching
+(Theorem~\ref{thm:buffer-matching}), Reform Monotonicity
+(Theorem~\ref{thm:reform-monotonicity}), Quarter-Wave Co-optation
+(Theorem~\ref{thm:quarter-wave}), and Cultural Bias (Theorem~\ref{thm:cultural-bias}) --- whose
+pre-images under $\mathfrak{T}^{-1}$ match claims the historical chapters had already established
+on descriptive evidence. A mapping that manufactured agreement would produce theorems with no
+source-domain correlates. The electrodynamic image produced four theorems that landed on claims
+already in the record.
+
+\subsection{Relation to the Universality Conjecture}
+
+Appendix~\ref{app:universality} conjectures that the extraction topology is substrate-independent:
+any system meeting the three conditions of Conjecture~\ref{conj:universality} converges to the
+five-node topology and the phase-loading control law. The universality conjecture and the Theodore
+Transform are the same argument seen from opposite ends. The conjecture asserts that shared
+structure exists across substrates. The transform is the operation that exhibits the shared
+structure, by carrying claims along the correspondence and checking whether they survive.
+Substrate independence is the hypothesis; Equation~\ref{eq:tt.2-invariance} is the test.
+
+\section{Falsification Criteria}
+\label{sec:tt_falsification}
+
+The claims of this appendix fail under the following conditions.
+
+\begin{enumerate}
+    \item \textbf{Selective-Application Detection.} A documented case in which the transform flags
+    selective application and the flagged asymmetry is fully accounted for by a scope condition
+    already stated in the framework's own vocabulary, in the manner of the scope conditions
+    Chapter~\ref{ch:contradiction} states for the Haitian Theorem. A single such case marks a
+    false positive; a pattern of false positives across the manuscript's own projections falsifies
+    the diagnostic's discriminating power.
+
+    \item \textbf{Correspondence failure.} A structural element the framework treats as
+    load-bearing on one axis with no definable correspondent on another axis inside the asserted
+    scope. If the three modes of the Tri-Modal Enclosure Model admit no statement on the gendered
+    axis, for instance, the inter-axis transform is undefined for that pair of domains, and every
+    invariance result depending on that pair loses standing.
+
+    \item \textbf{Image--record contradiction.} A theorem derivable in the electrodynamic image
+    whose pre-image under $\mathfrak{T}^{-1}$ contradicts an established result of the historical
+    chapters. The transport must preserve the relations the framework asserts, and a contradiction
+    between image and record is a relation destroyed. A single confirmed contradiction falsifies
+    the cross-domain correspondence of Section~\ref{sec:tt_cross_domain}.
+
+    \item \textbf{Universality linkage.} Falsification of Conjecture~\ref{conj:universality} under
+    any of the three conditions listed in Appendix~\ref{app:universality} removes the structural
+    ground for treating cross-domain transposition as structure-preserving, and demotes the
+    electrodynamic results of this book to unconnected analogy.
+\end{enumerate}
+
+\section{Open Problems}
+\label{sec:tt_open}
+
+The transform as defined here substitutes along a hand-built correspondence. No canonical
+construction of $\sigma_{\alpha\beta}$ exists, and the evidential burden of each transport rests
+on the correspondence the analyst supplies. A canonical construction --- one derived from the
+extraction topology itself --- would convert each application of the transform from an argued
+analogy into a computed image.
+
+Composition is unestablished. Whether
+$\mathfrak{T}_{\beta \to \gamma} \circ \mathfrak{T}_{\alpha \to \beta} =
+\mathfrak{T}_{\alpha \to \gamma}$ holds in general determines whether chains of transports
+preserve structure or accumulate distortion. Until this is settled, every multi-hop projection
+requires individual verification.
+
+Completeness is uncharacterized. The set of claims invariant under all inter-axis projections has
+no known decision procedure. The Haitian Theorem belongs to this set, as
+Section~\ref{sec:tt_inter_axis} documents. The manuscript supplies no general method for deciding
+membership for an arbitrary claim.
