@@ -25,6 +25,15 @@
 \usepackage{fancyhdr}
 \usepackage[most]{tcolorbox}
 \usepackage{graphicx}
+% ── The Theodore Transform operator ───────────────────────────────────────
+% Ge'ez ተ (U+1270, ETHIOPIC SYLLABLE TA) — the first syllable of Tewodros,
+% the Ethiopian form of Theodore. Shipped as a vector PDF rather than a font
+% call: pdflatex has no Ethiopic coverage, and a font-dependent glyph is the
+% kind of thing that silently becomes a missing box on a printer's RIP or in
+% an ebook conversion. The outline is extracted from Kefa III (U+1270) and
+% rendered once with lualatex; regenerate only if the glyph shape changes.
+\newcommand{\TT}{\mathord{\raisebox{-0.1ex}{\includegraphics[height=1.55ex]{figures/tewodros_ta.pdf}}}}
+
 % Cover pages are bound in as full-bleed letter pages; see
 % tools/cover_to_pdf.py for why they are pre-rendered to PDF.
 \usepackage{pdfpages}
@@ -15281,6 +15290,8 @@ To date, no society in the historical dataset satisfies any of these conditions.
 If the conjecture holds, the framework's prescriptions are \textbf{engineering requirements}. The Open-Source Republic must be designed as a \textit{different topology entirely}: one that removes the positive-feedback condition (via hard-caps on extraction) and the dissipation-threat condition (via universal baseline provisioning), thereby changing the universality class of the system.
 
 \input{apx_extraction_chart}
+
+\input{apx_theodore_transform}
 
 \backmatter
 
