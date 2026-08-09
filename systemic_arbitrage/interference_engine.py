@@ -53,7 +53,7 @@ def rolling_tau(preal: pd.Series, window_days: int = 730) -> float:
 
 def compute_signals(df: pd.DataFrame, config: dict, variables: dict) -> dict[str, Any]:
     """Compute O_x, P_real, T, V_E, tau, M_eff, and delta_P from trends data."""
-    spectral_cfg = config.get("spectral", {})
+    spectral_cfg = variables.get("spectral") or config.get("spectral", {})
     window_days = spectral_cfg.get("window_days", 730)
     interpolation_limit = spectral_cfg.get("interpolation_limit_days", 7)
     window_name = spectral_cfg.get("window_function", "hann")
@@ -90,6 +90,58 @@ def compute_signals(df: pd.DataFrame, config: dict, variables: dict) -> dict[str
         window_name=window_name,
     )
 
+    identity_axes = variables.get("keywords", {}).get("identity_axes", {})
+    axis_measurements: dict[str, dict[str, float]] = {}
+    for axis in identity_axes:
+        if axis == "unattributed":
+            continue
+        column = f"identity_{axis}"
+        if column not in df or df[column].dropna().empty:
+            axis_measurements[axis] = {
+                "band_power": float("nan"),
+                "share_of_P_id": float("nan"),
+                "O_x": float("nan"),
+            }
+            continue
+
+        axis_daily = interpolate_to_daily(
+            df[column], interpolation_limit_days=interpolation_limit
+        )
+        axis_window = axis_daily.dropna().iloc[-window_days:]
+        if len(axis_window) < 8:
+            axis_measurements[axis] = {
+                "band_power": float("nan"),
+                "share_of_P_id": float("nan"),
+                "O_x": float("nan"),
+            }
+            continue
+
+        axis_ox, _, axis_total_power = compute_ox(
+            axis_window.values,
+            sample_spacing_days=1.0,
+            low_band=low_band,
+            high_band=high_band,
+            window_name=window_name,
+        )
+        axis_measurements[axis] = {
+            "band_power": axis_ox * axis_total_power,
+            "share_of_P_id": float("nan"),
+            "O_x": axis_ox,
+        }
+
+    measured_power = [
+        values["band_power"]
+        for values in axis_measurements.values()
+        if not pd.isna(values["band_power"])
+    ]
+    identity_power = float(sum(measured_power))
+    for values in axis_measurements.values():
+        band_power = values["band_power"]
+        if not pd.isna(band_power):
+            values["share_of_P_id"] = (
+                float(band_power / identity_power) if identity_power > 0.0 else 0.0
+            )
+
     # In Phase 2 V_E is not yet sourced from live suppression spend; use a
     # neutral z-score of zero as a placeholder. Phase 3/4 will wire live V_E.
     ve = 0.0
@@ -112,6 +164,7 @@ def compute_signals(df: pd.DataFrame, config: dict, variables: dict) -> dict[str
         "delta_P": round(delta_p, 4),
         "demographic_gate": "unavailable",
         "timestamp_utc": pd.Timestamp.now("UTC").isoformat(),
+        "per_axis": axis_measurements,
     }
 
 

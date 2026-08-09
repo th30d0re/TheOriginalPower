@@ -128,8 +128,86 @@ keywords:
     - wage
     - layoff
   identity_band:
-    - woke
     - crt
-    - transgender
     - dei
+    - war on drugs
+    - law and order
+    - white primary
+    - racial profiling
+    - anti ERA
+    - equal rights amendment
+    - war on men
+    - corporate feminism
+    - men's rights
+    - moral majority
+    - evangelical
+    - abortion
+    - school prayer
+    - religious right
+    - transgender
+    - anita bryant
+    - doma
+    - anti trans
+    - gay rights
+    - save our children
+    - anti busing
+    - school busing
+    - immigration restriction
+    - illegal immigration
+    - nativism
+    - ada
+    - disability
+    - disability accommodation
+    - medical model of disability
+    - workplace accommodation
+    - woke
     - culture war
+  identity_axes:
+    # source: White primaries -> Variable Swap -> War on Drugs proxies; "law and order"
+    race:
+      - crt
+      - dei
+      - war on drugs
+      - law and order
+      - white primary
+      - racial profiling
+    # source: Anti-ERA; "war on men" media; feminism routed into the corporate track
+    gender:
+      - anti ERA
+      - equal rights amendment
+      - war on men
+      - corporate feminism
+      - men's rights
+    # source: Moral Majority; evangelical mobilization on abortion and school prayer
+    religion:
+      - moral majority
+      - evangelical
+      - abortion
+      - school prayer
+      - religious right
+    # source: Anita Bryant; DOMA; anti-trans legislation and queer-straight fragmentation
+    sexuality:
+      - transgender
+      - anita bryant
+      - doma
+      - anti trans
+      - gay rights
+      - save our children
+    # source: Anti-busing; immigration restriction; nativist partition
+    nationality:
+      - anti busing
+      - school busing
+      - immigration restriction
+      - illegal immigration
+      - nativism
+    # source: ADA individual accommodation; disability framed as a medical category
+    ability:
+      - ada
+      - disability
+      - disability accommodation
+      - medical model of disability
+      - workplace accommodation
+    # source: Cross-axis terms in the legacy identity basket; no single manuscript axis
+    unattributed:
+      - woke
+      - culture war

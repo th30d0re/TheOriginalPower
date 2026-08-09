@@ -21,6 +21,12 @@ VARIABLES_PATH = PACKAGE_ROOT / "variables.yaml"
 RAW_DIR = PACKAGE_ROOT / "data" / "raw"
 FALLBACK_CSV = RAW_DIR / "google_trends_snapshot.csv"
 logger = logging.getLogger(__name__)
+TRENDS_REQUEST_LIMIT = 5
+TRENDS_ANCHOR = "rent"
+
+
+class AnchorScalingError(ValueError):
+    """Raised when a Trends batch cannot be normalized through its anchor."""
 
 
 def load_config() -> dict:
@@ -39,6 +45,76 @@ def _build_composite(df: pd.DataFrame, keywords: list[str], label: str) -> pd.Se
     if not available:
         raise ValueError(f"None of the keywords for {label} found in columns: {df.columns.tolist()}")
     return df[available].mean(axis=1)
+
+
+def _build_axis_composite(
+    df: pd.DataFrame,
+    keywords: list[str],
+    axis: str,
+) -> pd.Series:
+    """Average measured axis terms, warning for every absent configured term."""
+    available = []
+    for keyword in keywords:
+        if keyword in df.columns:
+            available.append(keyword)
+        else:
+            logger.warning("Identity axis %s is missing Trends term %s", axis, keyword)
+    if not available:
+        return pd.Series(float("nan"), index=df.index, dtype=float)
+    return df[available].mean(axis=1)
+
+
+def _identity_union(identity_axes: dict[str, list[str]]) -> list[str]:
+    """Flatten configured identity terms and reject cross-list duplication."""
+    terms = [term for axis_terms in identity_axes.values() for term in axis_terms]
+    if len(terms) != len(set(terms)):
+        duplicates = sorted({term for term in terms if terms.count(term) > 1})
+        raise AssertionError(f"Identity terms assigned more than once: {duplicates}")
+    return terms
+
+
+def _fetch_batched_pytrends(
+    keywords: list[str],
+    timeframe: str,
+    geo: str,
+    proxy: Optional[str],
+    anchor: str = TRENDS_ANCHOR,
+) -> pd.DataFrame:
+    """Fetch at most five terms per request and normalize through an anchor."""
+    unique_keywords = list(dict.fromkeys(keywords))
+    if anchor not in unique_keywords:
+        raise AnchorScalingError(f"Shared Trends anchor {anchor!r} is not configured")
+
+    non_anchor = [keyword for keyword in unique_keywords if keyword != anchor]
+    payload_width = TRENDS_REQUEST_LIMIT - 1
+    chunks = [non_anchor[i:i + payload_width] for i in range(0, len(non_anchor), payload_width)]
+    if not chunks:
+        chunks = [[]]
+
+    combined: Optional[pd.DataFrame] = None
+    reference_anchor_mean: Optional[float] = None
+    for chunk in chunks:
+        payload = [anchor, *chunk]
+        fetched = fetch_pytrends(payload, timeframe=timeframe, geo=geo, proxy=proxy)
+        if anchor not in fetched.columns:
+            raise AnchorScalingError(f"Shared Trends anchor {anchor!r} missing from batch {payload}")
+        anchor_values = fetched[anchor].dropna().astype(float)
+        if anchor_values.empty or (anchor_values == 0.0).all():
+            raise AnchorScalingError(f"Shared Trends anchor {anchor!r} is flat-zero in batch {payload}")
+
+        anchor_mean = float(anchor_values.mean())
+        if reference_anchor_mean is None:
+            reference_anchor_mean = anchor_mean
+            combined = fetched.copy()
+            continue
+
+        scaled = fetched.drop(columns=[anchor]).copy()
+        scaled *= reference_anchor_mean / anchor_mean
+        combined = combined.join(scaled, how="outer")
+
+    if combined is None:  # pragma: no cover - chunks is always non-empty
+        raise RuntimeError("No Trends batches were fetched")
+    return combined
 
 
 def fetch_pytrends(
@@ -82,7 +158,7 @@ def ingest_baskets(
     save: bool = False,
     fallback_on_error: bool = True,
 ) -> pd.DataFrame:
-    """Return a DataFrame with class_band and identity_band composite columns.
+    """Return backward-compatible baskets plus per-axis identity composites.
 
     The function first attempts to fetch live data for all keywords. If that
     fails and fallback_on_error is True, it loads FALLBACK_CSV. The fallback
@@ -91,13 +167,26 @@ def ingest_baskets(
     variables = load_variables()
     class_keywords = variables.get("keywords", {}).get("class_band", [])
     identity_keywords = variables.get("keywords", {}).get("identity_band", [])
-    all_keywords = list(set(class_keywords + identity_keywords))
+    identity_axes = variables.get("keywords", {}).get("identity_axes", {})
+    axis_union = _identity_union(identity_axes)
+    if set(axis_union) != set(identity_keywords):
+        raise AssertionError(
+            "keywords.identity_band must equal the union of identity_axes, including unattributed"
+        )
+    all_keywords = list(dict.fromkeys(class_keywords + identity_keywords))
 
     try:
         proxy = os.environ.get("PYTRENDS_PROXY")
-        raw = fetch_pytrends(all_keywords, timeframe=timeframe, geo=geo, proxy=proxy)
+        raw = _fetch_batched_pytrends(
+            all_keywords,
+            timeframe=timeframe,
+            geo=geo,
+            proxy=proxy,
+        )
         if save:
             save_snapshot(raw)
+    except AnchorScalingError:
+        raise
     except Exception as exc:  # pragma: no cover - network path
         if not fallback_on_error:
             raise
@@ -110,6 +199,8 @@ def ingest_baskets(
     df = pd.DataFrame(index=raw.index)
     df["class_band"] = _build_composite(raw, class_keywords, "class_band")
     df["identity_band"] = _build_composite(raw, identity_keywords, "identity_band")
+    for axis, axis_keywords in identity_axes.items():
+        df[f"identity_{axis}"] = _build_axis_composite(raw, axis_keywords, axis)
     return df
 
 
