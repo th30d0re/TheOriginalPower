@@ -56,6 +56,16 @@ Zero formulaic antithesis. Never write "It is not merely X, it is Y", "More than
 just X", "This isn't about X — it's about Y", or any corrective-contrast
 construction. Do not manufacture transitions. State what is.
 
+**The word "power" (AGENTS.md, standing rule).** Read the "The Word 'Power'"
+section of AGENTS.md before writing. Short version: English *power* runs back
+through Latin *potis* to PIE \*poti-, "lord, master" — the capacity sense is
+derived from the mastery sense, not the reverse. Where your chapter's argument
+turns on what power *is*, you may let that inheritance show. Constraints: at most
+once or twice per chapter and most chapters not at all; resonance comes from the
+etymology being load-bearing, never from ornamental language; and never write
+"power literally means domination", which is false — write the derivation. Verbatim
+`deepDive` passages are never edited to satisfy this.
+
 **Shape.** 6–12 scenes. Each scene is one idea: a `title`, 2–4 adapted paragraphs,
 optionally one visual, optionally key concepts, optionally one deep dive. Target a
 12–20 minute read. The full text lives in the PDF; your job is the spine plus the

@@ -4,6 +4,60 @@
 
 Adopt a rigorous, clinically objective tone. You have zero tolerance for cliché AI rhetoric, specifically formulaic antithesis, didactic contrasts, and boilerplate juxtaposition. You must entirely eliminate corrective contrasts and pseudo-profound phrasing (e.g., "It is not merely X, it is Y," or "More than just X..."). Do not manufacture artificial transitions or contrast what a concept isn't with what it is. Rely strictly on direct, affirmative declarative statements to articulate concepts.
 
+## The Word "Power" — Standing Rule
+
+The book is titled *The Original Power*. That title is a claim about etymology, and
+the prose must be able to carry it.
+
+**The chain, stated accurately.** English *power* descends through Anglo-Norman
+*poeir* and Old French *povoir* from Vulgar Latin \*potēre, which displaced Latin
+*posse*, "to be able." *Posse* is itself a contraction of *potis esse*. And *potis*
+descends from Proto-Indo-European \***poti-**, "lord, master" — the same root that
+gives Sanskrit *páti-* (master, owner, husband), Greek *pósis* (husband), and
+Lithuanian *pats* (master of the house).
+
+**The point that matters.** The capacity sense is derived from the mastery sense,
+not the reverse. To be able meant, at the root, to be master. Dominion is not a
+later corruption of a neutral word for ability; ability is what mastery looks like
+from the inside. Every use of "power" in this book sits on that inheritance.
+
+**How to apply it.**
+
+- Invoke the root where the argument turns on what power *is* — the opening of a
+  chapter that redefines a term, a passage distinguishing capacity from dominion,
+  a moment where the reader is being asked to hear the word differently. Do not
+  stamp it into every chapter. Repetition destroys it. Once or twice in a chapter
+  is the ceiling; most chapters should not use it at all.
+- Write it with weight in the substance, not the vocabulary. The resonance comes
+  from the etymology being true and load-bearing, never from ornament. No
+  incantation, no rhetorical crescendo, no "at its very essence." The Strict
+  Rhetorical Constraints above govern this rule without exception.
+- Do not overstate. "Power literally means domination" is false as stated — the
+  immediate Latin sense is *to be able*. The defensible claim, and the more
+  interesting one, is that the ability sense is built on a root meaning *lord*.
+  Write the derivation, not the slogan.
+- Where a chapter's own argument already carries this (the tier structure, the
+  Elite as the node that holds dominion without appearing to), let the structure
+  make the point and leave the etymology out. Redundancy weakens it.
+
+This applies to adapted prose. Verbatim manuscript excerpts — including
+`deepDive` passages in the website's chapter modules — are never edited to satisfy
+this rule.
+
+## Mathematical Notation Conventions
+
+**Keep `1/√2` unrationalized in the Enclosure Score.** Standard practice
+rationalizes the denominator to `√2/2`. Do not apply it here. The coefficient is
+the reciprocal of the maximum attainable norm — since `max √(e² + e²) = √2`, the
+factor `1/√2` is what pins `S_enc` to exactly `1.0` at total enclosure. Written as
+`√2/2` the derivation disappears and the constant reads as an arbitrary `0.707`.
+This is the same reason engineering texts write `1/√2` for RMS. Four instances,
+all in the Enclosure Score; leave them.
+
+**Polity IV / Polity5 is correct as written.** The Center for Systemic Peace
+dropped Roman numerals at version 5. Citing both forms when referring to the series
+across versions is accurate; normalizing them to one style would misname a dataset.
+
 ## Commit Safety Rule — MANDATORY
 
 **Before any operation that could destroy or corrupt work, you MUST commit.**
