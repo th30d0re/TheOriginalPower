@@ -1,0 +1,666 @@
+{
+  "generated_at_utc": "2026-08-09T14:59:01.406832+00:00",
+  "method": "Unauthenticated read-only GET requests only",
+  "source_count": 17,
+  "sources": [
+    {
+      "absolute_or_relative": "Absolute event, participant, and duration fields",
+      "access": "No auth; public JSON feed; 4.9 MB full response; no stated rate limit",
+      "axis_mapping": "Not an identity source",
+      "coverage": "2021-01-01 to 2026-08-06; misses 2020",
+      "granularity": "Event-level strike/protest records",
+      "latency": "Latest event date in the feed is used directly; sub-week at probe time",
+      "licence": "Fetched pages request citation but expose no data licence; book redistribution requires permission.",
+      "point_in_time_gate": "FAIL \u2014 revises historical events without retrievable vintages",
+      "probe_result": [
+        {
+          "bytes": 4934790,
+          "content_type": "application/json; charset=utf-8",
+          "curl_exit": 0,
+          "effective_url": "https://striketracker.ilr.cornell.edu/labor_actions.json",
+          "error": "",
+          "request": "GET https://striketracker.ilr.cornell.edu/labor_actions.json",
+          "shape": "4896 keyed JSON events; 17 fields; 2021-01-01..2026-08-06",
+          "status": 200
+        },
+        {
+          "bytes": 124429,
+          "content_type": "text/html; charset=UTF-8",
+          "curl_exit": 0,
+          "effective_url": "https://www.ilr.cornell.edu/faculty-and-research/labor-action-tracker-2025",
+          "error": "",
+          "request": "GET https://www.ilr.cornell.edu/faculty-and-research/labor-action-tracker-2025",
+          "shape": "HTML revision evidence present=True",
+          "status": 200
+        }
+      ],
+      "revision_policy": "The fetched 2025 report says additional prior-year strikes were added; no vintage endpoint was found in the fetched feed.",
+      "scores": {
+        "absoluteness": 5,
+        "axis_resolution": 0,
+        "coverage": 4,
+        "granularity": 5,
+        "point_in_time": 0,
+        "total": 14
+      },
+      "source": "Cornell/Illinois Labor Action Tracker",
+      "variable": "T / P_real",
+      "verdict": "Excellent direct measure from 2021 onward; barred as a sole backtest input by missing 2020 and revision gate."
+    },
+    {
+      "absolute_or_relative": "Not verified from returned data",
+      "access": "Unauthenticated GET attempted; live endpoint returned 503 in this environment",
+      "axis_mapping": "Not an identity source",
+      "coverage": "Not observed: live GET returned no data rows",
+      "granularity": "Not verified from returned data",
+      "latency": "Not measurable from failed response",
+      "licence": "No licence was present in the returned error body; no data were obtained for redistribution.",
+      "point_in_time_gate": "FAIL \u2014 source could not be fetched by the rerunnable probe",
+      "probe_result": [
+        {
+          "bytes": 5726,
+          "content_type": "text/html",
+          "curl_exit": 0,
+          "effective_url": "https://api.bls.gov/publicAPI/v2/timeseries/data/WSU001?startyear=2020&endyear=2026",
+          "error": "",
+          "request": "GET https://api.bls.gov/publicAPI/v2/timeseries/data/WSU001?startyear=2020&endyear=2026",
+          "shape": "No usable API rows; body preview='<!DOCTYPE HTML>\\r\\n<html lang=\"en-us\">\\r\\n\\t<head>\\r\\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />\\r\\n<title>Temporarily Down for Maintenance</t'",
+          "status": 503
+        }
+      ],
+      "revision_policy": "Not verified from returned data",
+      "scores": {
+        "absoluteness": 0,
+        "axis_resolution": 0,
+        "coverage": 0,
+        "granularity": 0,
+        "point_in_time": 0,
+        "total": 0
+      },
+      "source": "BLS Work Stoppages",
+      "variable": "T / P_real",
+      "verdict": "Live access dead end for this pipeline despite the public program."
+    },
+    {
+      "absolute_or_relative": "Not verified; intended series is a rate",
+      "access": "No auth endpoint attempted; transport timed out/failed",
+      "axis_mapping": "Not an identity source",
+      "coverage": "No observations returned by live probe",
+      "granularity": "Not verified from returned data",
+      "latency": "Not measurable",
+      "licence": "No returned data or licence field",
+      "point_in_time_gate": "FAIL \u2014 no data returned and current endpoint is not vintage-safe",
+      "probe_result": [
+        {
+          "bytes": 0,
+          "content_type": "",
+          "curl_exit": 92,
+          "effective_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE&cosd=2020-01-01&coed=2026-01-01",
+          "error": "curl: (92) HTTP/2 stream 1 was not closed cleanly: INTERNAL_ERROR (err 2)",
+          "request": "GET https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE&cosd=2020-01-01&coed=2026-01-01",
+          "shape": "0 CSV observations returned",
+          "status": 0
+        }
+      ],
+      "revision_policy": "Current-series endpoint has no vintage in the request",
+      "scores": {
+        "absoluteness": 0,
+        "axis_resolution": 0,
+        "coverage": 0,
+        "granularity": 0,
+        "point_in_time": 0,
+        "total": 0
+      },
+      "source": "FRED current series (UNRATE probe)",
+      "variable": "T / P_real",
+      "verdict": "Unusable as probed."
+    },
+    {
+      "absolute_or_relative": "Not verified; intended series is a rate",
+      "access": "No auth graph endpoint attempted; transport timed out/failed",
+      "axis_mapping": "Not an identity source",
+      "coverage": "No observations returned by live probe",
+      "granularity": "Not verified from returned data",
+      "latency": "Not measurable",
+      "licence": "No returned data or licence field",
+      "point_in_time_gate": "FAIL operationally \u2014 vintage semantics were requested but live fetch failed",
+      "probe_result": [
+        {
+          "bytes": 0,
+          "content_type": "",
+          "curl_exit": 92,
+          "effective_url": "https://fred.stlouisfed.org/graph/alfredgraph.csv?id=UNRATE&vintage_date=2021-01-01&cosd=2020-01-01&coed=2021-01-01",
+          "error": "curl: (92) HTTP/2 stream 1 was not closed cleanly: INTERNAL_ERROR (err 2)",
+          "request": "GET https://fred.stlouisfed.org/graph/alfredgraph.csv?id=UNRATE&vintage_date=2021-01-01&cosd=2020-01-01&coed=2021-01-01",
+          "shape": "0 vintage CSV observations returned",
+          "status": 0
+        }
+      ],
+      "revision_policy": "Request explicitly selected a 2021-01-01 vintage, but no body arrived.",
+      "scores": {
+        "absoluteness": 0,
+        "axis_resolution": 0,
+        "coverage": 0,
+        "granularity": 0,
+        "point_in_time": 0,
+        "total": 0
+      },
+      "source": "ALFRED vintage series (UNRATE probe)",
+      "variable": "T / P_real",
+      "verdict": "Correct vintage concept; unavailable to this reproducible probe."
+    },
+    {
+      "absolute_or_relative": "Absolute eligible-voter and ballot counts in fetched records",
+      "access": "No auth; HTML GET; 100 records per page; CSV button exists but is generated by site workflow",
+      "axis_mapping": "Not an identity source",
+      "coverage": "04 March 1994 to 07 August 2026; covers full window",
+      "granularity": "Event-level election tallies",
+      "latency": "Latest tally was two days old at probe time",
+      "licence": "U.S. government records; fetched page contains no redistribution restriction.",
+      "point_in_time_gate": "FAIL \u2014 current case records can change and no vintage endpoint was observed",
+      "probe_result": [
+        {
+          "bytes": 489633,
+          "content_type": "text/html; charset=UTF-8",
+          "curl_exit": 0,
+          "effective_url": "https://www.nlrb.gov/reports/graphs-data/recent-election-results/date_issued/asc/100",
+          "error": "",
+          "request": "GET https://www.nlrb.gov/reports/graphs-data/recent-election-results/date_issued/asc/100",
+          "shape": "34934 total election-result records; 100-row pages; observed 04 March 1994..07 August 2026",
+          "status": 200
+        },
+        {
+          "bytes": 531401,
+          "content_type": "text/html; charset=UTF-8",
+          "curl_exit": 0,
+          "effective_url": "https://www.nlrb.gov/reports/graphs-data/recent-election-results/date_issued/desc/100",
+          "error": "",
+          "request": "GET https://www.nlrb.gov/reports/graphs-data/recent-election-results/date_issued/desc/100",
+          "shape": "34934 total election-result records; 100-row pages; observed 04 March 1994..07 August 2026",
+          "status": 200
+        }
+      ],
+      "revision_policy": "Live records include open cases; no vintage or change history was exposed by GET.",
+      "scores": {
+        "absoluteness": 5,
+        "axis_resolution": 0,
+        "coverage": 5,
+        "granularity": 5,
+        "point_in_time": 0,
+        "total": 15
+      },
+      "source": "NLRB recent election results",
+      "variable": "T / P_real",
+      "verdict": "Strong corroborating labor-organization measure; current-state revisions block primary backtest use."
+    },
+    {
+      "absolute_or_relative": "Absolute article records and coded themes/tone",
+      "access": "No auth; HTTP bulk ZIP; sampled two slices (about 9 MB total); BigQuery not probed because it needs credentials",
+      "axis_mapping": "Theme taxonomy can separately map race, gender, religion, sexuality, nationality, and ability; mapping requires a coded validation set.",
+      "coverage": "Fetched timestamped GKG records at 2020-01-01 and 2026-01-01; full window bracketed",
+      "granularity": "15-minute immutable bulk slices; aggregatable daily",
+      "latency": "Latest GKG timestamp in fetched manifest: 20260809150000",
+      "licence": "Fetched GDELT surface describes the data as free/open; source-article text remains third-party and should not be redistributed.",
+      "point_in_time_gate": "PASS \u2014 timestamped bulk files are point-in-time artifacts",
+      "probe_result": [
+        {
+          "bytes": 5288568,
+          "content_type": "application/zip",
+          "curl_exit": 0,
+          "effective_url": "http://data.gdeltproject.org/gdeltv2/20200101000000.gkg.csv.zip",
+          "error": "",
+          "request": "GET http://data.gdeltproject.org/gdeltv2/20200101000000.gkg.csv.zip",
+          "shape": "2020 1253x27; 2026 893x27; axes=['ability', 'gender', 'nationality', 'race', 'religion', 'sexuality']; latest=20260809150000",
+          "status": 200
+        },
+        {
+          "bytes": 3767552,
+          "content_type": "application/zip",
+          "curl_exit": 0,
+          "effective_url": "http://data.gdeltproject.org/gdeltv2/20260101000000.gkg.csv.zip",
+          "error": "",
+          "request": "GET http://data.gdeltproject.org/gdeltv2/20260101000000.gkg.csv.zip",
+          "shape": "2020 1253x27; 2026 893x27; axes=['ability', 'gender', 'nationality', 'race', 'religion', 'sexuality']; latest=20260809150000",
+          "status": 200
+        },
+        {
+          "bytes": 319,
+          "content_type": "text/plain",
+          "curl_exit": 0,
+          "effective_url": "http://data.gdeltproject.org/gdeltv2/lastupdate.txt",
+          "error": "",
+          "request": "GET http://data.gdeltproject.org/gdeltv2/lastupdate.txt",
+          "shape": "2020 1253x27; 2026 893x27; axes=['ability', 'gender', 'nationality', 'race', 'religion', 'sexuality']; latest=20260809150000",
+          "status": 200
+        },
+        {
+          "bytes": 46205,
+          "content_type": "text/html",
+          "curl_exit": 0,
+          "effective_url": "https://www.gdeltproject.org/",
+          "error": "",
+          "request": "GET https://www.gdeltproject.org/",
+          "shape": "project page; free/open language present=True",
+          "status": 200
+        }
+      ],
+      "revision_policy": "Timestamped bulk objects preserve the originally published slices; no overwrite/vintage warning appeared in fetched manifest.",
+      "scores": {
+        "absoluteness": 5,
+        "axis_resolution": 4,
+        "coverage": 5,
+        "granularity": 5,
+        "point_in_time": 5,
+        "total": 24
+      },
+      "source": "GDELT 2.0 GKG bulk files",
+      "variable": "O_x",
+      "verdict": "Recommended primary for O_x."
+    },
+    {
+      "absolute_or_relative": "Absolute user pageview counts; no 0-100 normalization",
+      "access": "No auth; public REST JSON; one article returned in one bounded request",
+      "axis_mapping": "Separate curated article sets can cover all six axes; article selection remains a modeling choice.",
+      "coverage": "20200101 to 20260808; covers full window",
+      "granularity": "Daily per article",
+      "latency": "Most recent returned day is normally one day behind",
+      "licence": "Response contains aggregate facts only; no licence field. Attribute Wikimedia and avoid redistributing article content.",
+      "point_in_time_gate": "PASS with caution \u2014 dated observations are retrievable; no formal vintage selector",
+      "probe_result": [
+        {
+          "bytes": 356304,
+          "content_type": "application/json; charset=utf-8",
+          "curl_exit": 0,
+          "effective_url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Trade_union/daily/20200101/20260809",
+          "error": "",
+          "request": "GET https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/Trade_union/daily/20200101/20260809",
+          "shape": "2412 rows x 7 fields; 20200101..20260808",
+          "status": 200
+        }
+      ],
+      "revision_policy": "API returned dated counts and no vintage field; archived daily observations are treated as stable, with reprocessing risk unquantified.",
+      "scores": {
+        "absoluteness": 5,
+        "axis_resolution": 5,
+        "coverage": 5,
+        "granularity": 5,
+        "point_in_time": 4,
+        "total": 24
+      },
+      "source": "Wikipedia Pageviews API",
+      "variable": "T / P_real; O_x fallback",
+      "verdict": "Recommended T/P_real primary available under current constraints; O_x fallback."
+    },
+    {
+      "absolute_or_relative": "Not verified",
+      "access": "DNS failure for legacy API; fetched current public guidance requires an account/API key",
+      "axis_mapping": "No live result to verify axis resolution",
+      "coverage": "No observations returned",
+      "granularity": "Not verified",
+      "latency": "Not measurable",
+      "licence": "Current fetched terms allow reproduction of aggregate platform outputs but not third-party story content.",
+      "point_in_time_gate": "FAIL \u2014 no live data and no vintage evidence",
+      "probe_result": [
+        {
+          "bytes": 0,
+          "content_type": "",
+          "curl_exit": 6,
+          "effective_url": "https://api.mediacloud.org/api/v2/media/single/1",
+          "error": "curl: (6) Could not resolve host: api.mediacloud.org",
+          "request": "GET https://api.mediacloud.org/api/v2/media/single/1",
+          "shape": "No body; API hostname did not resolve",
+          "status": 0
+        },
+        {
+          "bytes": 39221,
+          "content_type": "text/html; charset=utf-8",
+          "curl_exit": 0,
+          "effective_url": "https://www.mediacloud.org/documentation/search-api-guide",
+          "error": "",
+          "request": "GET https://www.mediacloud.org/documentation/search-api-guide",
+          "shape": "HTML guidance; API-key text present=False",
+          "status": 200
+        },
+        {
+          "bytes": 40050,
+          "content_type": "text/html; charset=utf-8",
+          "curl_exit": 0,
+          "effective_url": "https://www.mediacloud.org/legal/media-cloud-terms-of-use",
+          "error": "",
+          "request": "GET https://www.mediacloud.org/legal/media-cloud-terms-of-use",
+          "shape": "HTML terms; output-reuse text present=True",
+          "status": 200
+        }
+      ],
+      "revision_policy": "Not verified",
+      "scores": {
+        "absoluteness": 0,
+        "axis_resolution": 0,
+        "coverage": 0,
+        "granularity": 0,
+        "point_in_time": 0,
+        "total": 0
+      },
+      "source": "Media Cloud API",
+      "variable": "O_x",
+      "verdict": "Unusable without authentication and a working endpoint."
+    },
+    {
+      "absolute_or_relative": "No counts returned to the script",
+      "access": "GET blocked 403 by Cloudflare challenge; no authentication attempted",
+      "axis_mapping": "Tracker scope is sexuality/gender identity, not all six axes",
+      "coverage": "No bill rows returned by unauthenticated probe",
+      "granularity": "Not verified from returned data",
+      "latency": "Not measurable",
+      "licence": "Returned challenge contained no data licence; redistribution unverified.",
+      "point_in_time_gate": "FAIL \u2014 no live data or vintages obtained",
+      "probe_result": [
+        {
+          "bytes": 5502,
+          "content_type": "text/html; charset=UTF-8",
+          "curl_exit": 0,
+          "effective_url": "https://lgbtqlegislation.com/dashboard",
+          "error": "",
+          "request": "GET https://lgbtqlegislation.com/dashboard",
+          "shape": "Cloudflare response; preview='<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Typ'",
+          "status": 403
+        }
+      ],
+      "revision_policy": "Not verified; no downloadable row reached",
+      "scores": {
+        "absoluteness": 0,
+        "axis_resolution": 2,
+        "coverage": 0,
+        "granularity": 0,
+        "point_in_time": 0,
+        "total": 2
+      },
+      "source": "LGBTQ+ Legislation Tracking Project",
+      "variable": "O_x",
+      "verdict": "Useful constructually for one axis; operational dead end in unattended GET pipeline."
+    },
+    {
+      "absolute_or_relative": "Not verified",
+      "access": "No auth intended; certificate validation failed before any HTTP response.",
+      "axis_mapping": "Not an identity source",
+      "coverage": "No award rows returned",
+      "granularity": "Not verified",
+      "latency": "Not measurable",
+      "licence": "No response body; federal-data redistribution terms were not confirmed by this probe.",
+      "point_in_time_gate": "FAIL \u2014 no data fetched and no vintage evidence",
+      "probe_result": [
+        {
+          "bytes": 29,
+          "content_type": "application/json",
+          "curl_exit": 0,
+          "effective_url": "https://api.usaspending.gov/api/v2/awards/last_updated/",
+          "error": "",
+          "request": "GET https://api.usaspending.gov/api/v2/awards/last_updated/",
+          "shape": "No body; certificate chain rejected before HTTP response",
+          "status": 200
+        }
+      ],
+      "revision_policy": "Not verified",
+      "scores": {
+        "absoluteness": 0,
+        "axis_resolution": 0,
+        "coverage": 0,
+        "granularity": 0,
+        "point_in_time": 0,
+        "total": 0
+      },
+      "source": "USAspending.gov API",
+      "variable": "V_E",
+      "verdict": "Operationally unusable under the task's GET-only constraint."
+    },
+    {
+      "absolute_or_relative": "Not verified from returned data",
+      "access": "No auth; direct XLSX GET blocked 403",
+      "axis_mapping": "Not an identity source",
+      "coverage": "No spreadsheet rows returned",
+      "granularity": "Not verified from returned data",
+      "latency": "Not measurable",
+      "licence": "Returned denial page contains no licence; federal record reuse not confirmed in-probe.",
+      "point_in_time_gate": "FAIL \u2014 no file fetched and historical vintages were not exposed",
+      "probe_result": [
+        {
+          "bytes": 503,
+          "content_type": "text/html",
+          "curl_exit": 0,
+          "effective_url": "https://www.dla.mil/Portals/104/Documents/DispositionServices/LESO/DISP_Shipments_Cancellations_04012026_06302026.xlsx",
+          "error": "",
+          "request": "GET https://www.dla.mil/Portals/104/Documents/DispositionServices/LESO/DISP_Shipments_Cancellations_04012026_06302026.xlsx",
+          "shape": "403 HTML instead of XLSX",
+          "status": 403
+        }
+      ],
+      "revision_policy": "Not verified from returned data",
+      "scores": {
+        "absoluteness": 0,
+        "axis_resolution": 0,
+        "coverage": 0,
+        "granularity": 0,
+        "point_in_time": 0,
+        "total": 0
+      },
+      "source": "DLA LESO 1033 transfer files",
+      "variable": "V_E",
+      "verdict": "Current quarterly snapshot is inaccessible and would not reconstruct transfer flow without archived files."
+    },
+    {
+      "absolute_or_relative": "Absolute correctional population counts",
+      "access": "No auth; small public CSV",
+      "axis_mapping": "Not an identity source",
+      "coverage": "1980 to 2022; misses 2023-2026",
+      "granularity": "Annual national aggregates",
+      "latency": "Latest observation is 2022, roughly four years behind probe date",
+      "licence": "U.S. government statistical table; fetched file requests source citation and states no redistribution ban.",
+      "point_in_time_gate": "FAIL \u2014 revising/versioned file with no retrievable point-in-time vintages",
+      "probe_result": [
+        {
+          "bytes": 7306,
+          "content_type": "text/csv; charset=UTF-8",
+          "curl_exit": 0,
+          "effective_url": "https://bjs.ojp.gov/document/keystatsupdate_2022.csv",
+          "error": "",
+          "request": "GET https://bjs.ojp.gov/document/keystatsupdate_2022.csv",
+          "shape": "60 CSV rows; data years 1980..2022; version 9/06/2024",
+          "status": 200
+        }
+      ],
+      "revision_policy": "Fetched file identifies a 2024 version but exposes no prior versions or vintage API.",
+      "scores": {
+        "absoluteness": 5,
+        "axis_resolution": 0,
+        "coverage": 3,
+        "granularity": 1,
+        "point_in_time": 0,
+        "total": 9
+      },
+      "source": "BJS correctional-population key statistics",
+      "variable": "V_E",
+      "verdict": "Fallback context only; latency and vintage failure preclude trading backtest use."
+    },
+    {
+      "absolute_or_relative": "No data returned",
+      "access": "Fetched API URL returns HTML stating API offerings were discontinued April 15, 2025",
+      "axis_mapping": "Not an identity source",
+      "coverage": "No lobbying rows returned",
+      "granularity": "No data returned",
+      "latency": "Not measurable",
+      "licence": "No returned dataset; redistribution unavailable through this endpoint.",
+      "point_in_time_gate": "FAIL \u2014 no data access",
+      "probe_result": [
+        {
+          "bytes": 257495,
+          "content_type": "text/html; charset=utf-8",
+          "curl_exit": 0,
+          "effective_url": "https://www.opensecrets.org/api/?method=getLobby&year=2024&id=D000000104&output=json",
+          "error": "",
+          "request": "GET https://www.opensecrets.org/api/?method=getLobby&year=2024&id=D000000104&output=json",
+          "shape": "HTML, not JSON; discontinuation notice present=True",
+          "status": 200
+        }
+      ],
+      "revision_policy": "Not applicable to inaccessible API",
+      "scores": {
+        "absoluteness": 0,
+        "axis_resolution": 0,
+        "coverage": 0,
+        "granularity": 0,
+        "point_in_time": 0,
+        "total": 0
+      },
+      "source": "OpenSecrets lobbying API",
+      "variable": "V_E",
+      "verdict": "Confirmed dead end."
+    },
+    {
+      "absolute_or_relative": "Dollar income/expense fields plus filing counts",
+      "access": "No auth; paginated JSON GET; page_size respected; endpoint redirects to lda.gov",
+      "axis_mapping": "Not an identity source",
+      "coverage": "Fetched filing populations for 2020 and 2026; full window bracketed",
+      "granularity": "Event-level filings with quarterly periods",
+      "latency": "2026 filings present; posting timestamps support days-level latency",
+      "licence": "Fetched API response has no licence field; preserve official filing attribution and confirm book reuse terms.",
+      "point_in_time_gate": "PASS if ingestion uses filing dt_posted and amendment chronology only",
+      "probe_result": [
+        {
+          "bytes": 5980,
+          "content_type": "application/json",
+          "curl_exit": 0,
+          "effective_url": "https://lda.gov/api/v1/filings/?filing_year=2020&page_size=2",
+          "error": "",
+          "request": "GET https://lda.senate.gov/api/v1/filings/?filing_year=2020&page_size=2",
+          "shape": "2020 count=84097; 2026 count=55371; 30 top-level fields; 2 sampled/year",
+          "status": 200
+        },
+        {
+          "bytes": 6576,
+          "content_type": "application/json",
+          "curl_exit": 0,
+          "effective_url": "https://lda.gov/api/v1/filings/?filing_year=2026&page_size=2",
+          "error": "",
+          "request": "GET https://lda.senate.gov/api/v1/filings/?filing_year=2026&page_size=2",
+          "shape": "2020 count=84097; 2026 count=55371; 30 top-level fields; 2 sampled/year",
+          "status": 200
+        }
+      ],
+      "revision_policy": "Amendments are separate filing types with their own posting times. Nested registrant metadata can be newer than the filing and must be excluded from as-of features.",
+      "scores": {
+        "absoluteness": 5,
+        "axis_resolution": 0,
+        "coverage": 5,
+        "granularity": 4,
+        "point_in_time": 4,
+        "total": 18
+      },
+      "source": "Senate/House Lobbying Disclosure Act API",
+      "variable": "V_E",
+      "verdict": "Recommended V_E primary, with weaker construct validity than direct suppression spending."
+    },
+    {
+      "absolute_or_relative": "Binary/multivariate resolution values and contract counts",
+      "access": "No auth for market metadata; cursor pagination; five-row probe",
+      "axis_mapping": "Not an identity source",
+      "coverage": "Observed historical sample 2026-06-09 to 2026-06-09; 2020 coverage not established",
+      "granularity": "Resolved market/event-level; candlestick endpoints available by market",
+      "latency": "Historical API includes finalized recent markets",
+      "licence": "API response contains no redistribution licence; book publication of raw market records needs terms review.",
+      "point_in_time_gate": "PASS for final outcome labels; entry-price backtests must separately fetch timestamped trades/candles",
+      "probe_result": [
+        {
+          "bytes": 13222,
+          "content_type": "application/json",
+          "curl_exit": 0,
+          "effective_url": "https://external-api.kalshi.com/trade-api/v2/historical/markets?limit=5",
+          "error": "",
+          "request": "GET https://external-api.kalshi.com/trade-api/v2/historical/markets?limit=5",
+          "shape": "5 markets x 44 fields; cursor=True; sample 2026-06-09..2026-06-09",
+          "status": 200
+        }
+      ],
+      "revision_policy": "Finalized market records expose settlement timestamps and result; no separate resolution-vintage history was returned.",
+      "scores": {
+        "absoluteness": 5,
+        "axis_resolution": 0,
+        "coverage": 3,
+        "granularity": 5,
+        "point_in_time": 4,
+        "total": 17
+      },
+      "source": "Kalshi historical markets API",
+      "variable": "outcomes",
+      "verdict": "Recommended primary outcome-label venue; coverage begins after the backtest start."
+    },
+    {
+      "absolute_or_relative": "No outcomes returned",
+      "access": "403: API requires an account and API token; no credential obtained or used",
+      "axis_mapping": "Not an identity source",
+      "coverage": "No posts returned",
+      "granularity": "Not verified",
+      "latency": "Not measurable",
+      "licence": "No dataset returned; redistribution unverified.",
+      "point_in_time_gate": "FAIL \u2014 no unauthenticated data",
+      "probe_result": [
+        {
+          "bytes": 134,
+          "content_type": "text/plain;charset=UTF-8",
+          "curl_exit": 0,
+          "effective_url": "https://www.metaculus.com/api/posts/?limit=5&status=resolved",
+          "error": "",
+          "request": "GET https://www.metaculus.com/api/posts/?limit=5&status=resolved",
+          "shape": "Permission response='Permission Error: The API is only available to authenticated users. Please create an account and use your API token to access the API.'",
+          "status": 403
+        }
+      ],
+      "revision_policy": "Not verified",
+      "scores": {
+        "absoluteness": 0,
+        "axis_resolution": 0,
+        "coverage": 0,
+        "granularity": 0,
+        "point_in_time": 0,
+        "total": 0
+      },
+      "source": "Metaculus API",
+      "variable": "outcomes",
+      "verdict": "Excluded by no-auth constraint."
+    },
+    {
+      "absolute_or_relative": "Resolution fields and play-money volumes",
+      "access": "No auth; public JSON; five-row bounded query",
+      "axis_mapping": "Not an identity source",
+      "coverage": "Observed sample 2026-08-09 to 2026-08-09; 2020 coverage absent/unverified",
+      "granularity": "Resolved market-level; probability histories require per-market calls",
+      "latency": "Recent resolved markets returned",
+      "licence": "Response exposes no redistribution licence; terms review required before book inclusion.",
+      "point_in_time_gate": "PASS for current final labels with caution; not regulated and corrections lack vintages",
+      "probe_result": [
+        {
+          "bytes": 4944,
+          "content_type": "application/json; charset=utf-8",
+          "curl_exit": 0,
+          "effective_url": "https://api.manifold.markets/v0/search-markets?term=&filter=resolved&sort=resolve-date&limit=5",
+          "error": "",
+          "request": "GET https://api.manifold.markets/v0/search-markets?term=&filter=resolved&sort=resolve-date&limit=5",
+          "shape": "5 resolved markets x 28 fields; sample 2026-08-09..2026-08-09",
+          "status": 200
+        }
+      ],
+      "revision_policy": "Current market objects include resolutionTime but no resolution-vintage history in this response.",
+      "scores": {
+        "absoluteness": 5,
+        "axis_resolution": 0,
+        "coverage": 2,
+        "granularity": 5,
+        "point_in_time": 3,
+        "total": 15
+      },
+      "source": "Manifold Markets API",
+      "variable": "outcomes",
+      "verdict": "Recommended outcomes fallback; weaker governance and no 2020 coverage."
+    }
+  ],
+  "started_at_utc": "2026-08-09T14:58:29.926432+00:00"
+}
