@@ -58,6 +58,18 @@ all in the Enclosure Score; leave them.
 dropped Roman numerals at version 5. Citing both forms when referring to the series
 across versions is accurate; normalizing them to one style would misname a dataset.
 
+## Part Date Ranges Are Thematic Anchors
+
+The four `\part` date ranges name each part's centre of gravity. They are not a
+partition of the timeline and they overlap by design — Part II opens at 1619,
+before Part I's range closes. Chapters are ordered by argument, not chronology.
+
+Do not "fix" an overlap by moving a chapter. Where a chapter's own range runs past
+its part's, the chapter title carries its dates and the reader is not misled. If a
+part's declared range no longer covers any chapter it contains, widen the part's
+range; that is the whole remedy. Part I reads 1440s--1915 because The Haitian
+Export closes the specification argument with the Firmin Protocol.
+
 ## Commit Safety Rule — MANDATORY
 
 **Before any operation that could destroy or corrupt work, you MUST commit.**
