@@ -119,3 +119,11 @@ Paper/research/chapter_deep_dives/pdf/
 # Per-chapter NotebookLM artifacts: derived, ~36 MB each
 Paper/research/chapter_deep_dives/audio/
 Paper/research/chapter_deep_dives/pdf/
+
+# videolab ingest output: derived from source media, ~195 MB
+videolab/jobs/
+
+# External OneDrive exports staged for import, not repo content (~680 MB)
+OneDrive_2_*/
+OneDrive_2_*.zip
+OneDrive_txt/

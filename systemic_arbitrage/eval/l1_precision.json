@@ -1,0 +1,14 @@
+{
+  "exit_criterion_pass": false,
+  "false_positives": 0,
+  "holdout_size": 100,
+  "human_labelled": 0,
+  "invalid_labels": 0,
+  "precision": null,
+  "provenance": "systemic_arbitrage/eval/holdout_l1_unlabelled.jsonl",
+  "schema": "l1-precision/1",
+  "threshold": 0.95,
+  "threshold_met_on_labelled_subset": false,
+  "true_positives": 0,
+  "validated_labelled_denominator": 0
+}

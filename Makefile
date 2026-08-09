@@ -221,7 +221,7 @@ VENV_ARBITRAGE        := .venv-arbitrage
 VENV_ARBITRAGE_PYTHON := $(VENV_ARBITRAGE)/bin/python3
 VENV_ARBITRAGE_PIP    := $(VENV_ARBITRAGE)/bin/pip
 
-.PHONY: venv-arbitrage arbitrage-test arbitrage-calibrate arbitrage-signals arbitrage-backtest arbitrage-paper-run arbitrage-fit arbitrage-live arbitrage-graph arbitrage-status website-data
+.PHONY: venv-arbitrage arbitrage-test arbitrage-calibrate arbitrage-signals arbitrage-backtest arbitrage-paper-run arbitrage-fit arbitrage-refit-stability arbitrage-live arbitrage-graph arbitrage-validate arbitrage-status website-data
 
 venv-arbitrage:
 	@if [ ! -x "$(VENV_ARBITRAGE_PYTHON)" ]; then \
@@ -252,8 +252,14 @@ arbitrage-paper-run: venv-arbitrage
 arbitrage-fit: venv-arbitrage
 	$(VENV_ARBITRAGE_PYTHON) -m systemic_arbitrage fit-coefficients
 
+arbitrage-refit-stability: venv-arbitrage
+	$(VENV_ARBITRAGE_PYTHON) -m systemic_arbitrage.fit_coefficients
+
 arbitrage-graph: venv-arbitrage
 	$(VENV_ARBITRAGE_PYTHON) -m systemic_arbitrage.graph_build
+
+arbitrage-validate: venv-arbitrage
+	$(VENV_ARBITRAGE_PYTHON) -m systemic_arbitrage.validate_triples
 
 arbitrage-status: venv-arbitrage
 	$(VENV_ARBITRAGE_PYTHON) -m systemic_arbitrage.status_report
