@@ -112,3 +112,10 @@ website/public/cover-preview.*
 simulator/3b1b_manim/
 simulator/3b1b_videos/
 simulator/manim_community/
+
+# NotebookLM chapter deep-dive PDF splits (derived from Paper/The_Original_Power.pdf)
+Paper/research/chapter_deep_dives/pdf/
+
+# Per-chapter NotebookLM artifacts: derived, ~36 MB each
+Paper/research/chapter_deep_dives/audio/
+Paper/research/chapter_deep_dives/pdf/
