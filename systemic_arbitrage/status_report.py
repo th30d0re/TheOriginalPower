@@ -22,6 +22,10 @@ PROJECT_ROOT = PACKAGE_ROOT.parent
 REPORTS_DIR = PACKAGE_ROOT / "data" / "reports"
 BACKTEST_CSV = PACKAGE_ROOT / "data" / "backtest" / "resolved_markets.csv"
 SIGNAL_SNAPSHOT = PACKAGE_ROOT / "data" / "live" / "signal_snapshot.json"
+
+# Trends publishes weekly, so a fortnight of lag is ordinary. Beyond that the
+# window is coming from the bundled fallback rather than a live fetch.
+SIGNAL_STALE_DAYS = 21
 PAPER_TRADES = PACKAGE_ROOT / "data" / "paper_trades.jsonl"
 GRAPH_PATH = PACKAGE_ROOT / "GRAPH.md"
 VARIABLES_PATH = PACKAGE_ROOT / "variables.yaml"
@@ -222,6 +226,43 @@ def _selected_trades(report: dict[str, Any], caveats: list[str]) -> dict[str, An
     }
 
 
+def _json_safe(value: Any) -> Any:
+    """Recursively replace NaN and infinity with null.
+
+    The payload is serialized with allow_nan=False so every consumer receives
+    valid JSON. The engine writes NaN for any axis it could not measure, and
+    that snapshot is embedded whole, so the whole tree needs sanitizing rather
+    than the fields read out of it.
+    """
+    if isinstance(value, dict):
+        return {k: _json_safe(v) for k, v in value.items()}
+    if isinstance(value, list):
+        return [_json_safe(v) for v in value]
+    if isinstance(value, float) and not math.isfinite(value):
+        return None
+    return value
+
+
+def _per_axis(snapshot: dict[str, Any] | None) -> dict[str, dict[str, float | None]]:
+    """Per-axis identity measurements, with NaN carried as null.
+
+    The engine writes NaN for an axis it could not measure, and the payload is
+    serialized with allow_nan=False so the JSON stays valid for every consumer.
+    An unmeasured axis therefore reports null, which the dashboard renders as
+    absent rather than as zero.
+    """
+    raw = (snapshot or {}).get("per_axis") or {}
+    out: dict[str, dict[str, float | None]] = {}
+    for axis, values in raw.items():
+        if not isinstance(values, dict):
+            continue
+        out[axis] = {
+            k: (None if v is None or (isinstance(v, float) and math.isnan(v)) else float(v))
+            for k, v in values.items()
+        }
+    return out
+
+
 def _signal_block(caveats: list[str]) -> dict[str, Any]:
     snapshot: dict[str, Any] | None = None
     if SIGNAL_SNAPSHOT.exists():
@@ -235,15 +276,52 @@ def _signal_block(caveats: list[str]) -> dict[str, Any]:
         baskets = re.findall(r"^  ([A-Za-z0-9_]+):\s*$", keywords, flags=re.MULTILINE)
     else:
         caveats.append(f"Variable registry is missing at {VARIABLES_PATH.relative_to(PROJECT_ROOT)}.")
-    axis_resolution = (
-        "Global-only resolution from two aggregate keyword baskets: " + ", ".join(baskets) + "."
-        if baskets
-        else "Axis resolution unavailable because the variable baskets could not be read."
-    )
+    per_axis = _per_axis(snapshot)
+    measured = sorted(k for k, v in per_axis.items() if v.get("O_x") is not None)
+    unmeasured = sorted(k for k in per_axis if k not in measured)
+
+    # The engine falls back to the bundled Trends CSV when a live fetch fails,
+    # and does so silently. A window that ends well before today is the tell, and
+    # a partly-measured axis set read as current would misstate the signal.
+    window_end = (snapshot or {}).get("window_end")
+    if window_end:
+        try:
+            lag = (datetime.now(timezone.utc).date()
+                   - datetime.fromisoformat(str(window_end)).date()).days
+        except ValueError:
+            lag = None
+        if lag is not None and lag > SIGNAL_STALE_DAYS:
+            caveats.append(
+                f"Signal window ends {window_end}, {lag} days ago: the live Google Trends "
+                "fetch fell back to the bundled snapshot. Per-axis figures are historical."
+            )
+
+    if not baskets:
+        axis_resolution = "Axis resolution unavailable because the variable baskets could not be read."
+    elif measured:
+        axis_resolution = (
+            f"Identity band resolved into {len(measured)} of {len(per_axis)} axes: "
+            + ", ".join(measured)
+            + ". Awaiting keyword coverage: "
+            + ", ".join(unmeasured)
+            + f". Keyword baskets: {', '.join(baskets)}."
+        )
+    elif per_axis:
+        axis_resolution = (
+            f"Identity band declares {len(per_axis)} axes ({', '.join(sorted(per_axis))}) "
+            "and none carry measurements yet. Run `make arbitrage-signals` against live "
+            "Google Trends: the bundled fallback snapshot predates the per-axis keywords."
+        )
+    else:
+        axis_resolution = (
+            "Global-only resolution from aggregate keyword baskets: " + ", ".join(baskets) + "."
+        )
+
     return {
-        "snapshot": snapshot,
+        "snapshot": _json_safe(snapshot),
         "inert_variables": ["V_E"],
         "axis_resolution": axis_resolution,
+        "per_axis": per_axis,
     }
 
 

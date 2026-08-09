@@ -936,3 +936,66 @@
     transform: none;
   }
 }
+
+/* Identity band decomposed into the manuscript's six axes. An axis without a
+   measurement is dimmed and labelled, so a missing reading never reads as zero. */
+.axis-breakdown {
+  margin-top: 1.1rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.axis-breakdown-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.65rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+.axis-grid {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.axis-row {
+  display: grid;
+  grid-template-columns: 6.5rem 1fr 7.5rem;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 0.85rem;
+}
+
+.axis-name { text-transform: capitalize; }
+
+.axis-bar {
+  position: relative;
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.axis-bar-fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  border-radius: 3px;
+  background: var(--accent, #d9a441);
+}
+
+.axis-value {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  opacity: 0.9;
+}
+
+.axis-unmeasured { opacity: 0.45; }
+.axis-unmeasured .axis-value { font-style: italic; font-variant-numeric: normal; }
+
+@media (max-width: 560px) {
+  .axis-row { grid-template-columns: 5.5rem 1fr 6rem; font-size: 0.8rem; }
+}

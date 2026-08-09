@@ -7,6 +7,14 @@ type LoopStatus = 'done' | 'blocked' | 'not_built' | 'partial';
 type VerdictState = 'NO-GO' | 'GO' | 'BLOCKED';
 type SignalValue = string | number | boolean | null;
 
+// An axis the engine could not measure reports null rather than zero, so the
+// dashboard can show it as awaiting coverage instead of as a real reading.
+interface AxisMeasurement {
+  band_power: NullableNumber;
+  share_of_P_id: NullableNumber;
+  O_x: NullableNumber;
+}
+
 interface ArbitrageStatus {
   generated_utc: string;
   verdict: {
@@ -52,6 +60,7 @@ interface ArbitrageStatus {
     snapshot: Record<string, SignalValue>;
     inert_variables: string[];
     axis_resolution: string;
+    per_axis: Record<string, AxisMeasurement>;
   };
   paper_trading: {
     closed_trades: NullableNumber;
@@ -313,6 +322,8 @@ const DashboardContent = ({ data }: DashboardContentProps) => {
     isFiniteNumber(data.backtest.brier_skill) &&
     data.backtest.brier_skill < 0;
   const inertVariables = new Set(data.signal.inert_variables);
+  const axisEntries = Object.entries(data.signal.per_axis ?? {});
+  const measuredAxes = axisEntries.filter(([, v]) => isFiniteNumber(v.O_x));
 
   return (
     <>
@@ -472,17 +483,48 @@ const DashboardContent = ({ data }: DashboardContentProps) => {
               <span className="axis-resolution">Resolution: {data.signal.axis_resolution}</span>
             </div>
             <div className="signal-grid">
-              {Object.entries(data.signal.snapshot).map(([name, value]) => {
-                const isInert = inertVariables.has(name);
-                return (
-                  <div className={`signal-tile ${isInert ? 'signal-inert' : ''}`} key={name}>
-                    <span className="signal-name">{name}</span>
-                    <span className="signal-value">{formatSignalValue(value)}</span>
-                    {isInert && <span className="inert-flag">⚠ INERT / PINNED</span>}
-                  </div>
-                );
-              })}
+              {Object.entries(data.signal.snapshot)
+                .filter(([, value]) => value === null || typeof value !== 'object')
+                .map(([name, value]) => {
+                  const isInert = inertVariables.has(name);
+                  return (
+                    <div className={`signal-tile ${isInert ? 'signal-inert' : ''}`} key={name}>
+                      <span className="signal-name">{name}</span>
+                      <span className="signal-value">{formatSignalValue(value)}</span>
+                      {isInert && <span className="inert-flag">⚠ INERT / PINNED</span>}
+                    </div>
+                  );
+                })}
             </div>
+            {axisEntries.length > 0 && (
+              <div className="axis-breakdown">
+                <div className="axis-breakdown-head">
+                  <strong>Identity band by axis</strong>
+                  <span>
+                    {measuredAxes.length} of {axisEntries.length} measured
+                  </span>
+                </div>
+                <div className="axis-grid">
+                  {axisEntries.map(([axis, values]) => {
+                    const measured = isFiniteNumber(values.O_x);
+                    const share = isFiniteNumber(values.share_of_P_id)
+                      ? Math.min(100, Math.max(0, values.share_of_P_id * 100))
+                      : 0;
+                    return (
+                      <div className={`axis-row ${measured ? '' : 'axis-unmeasured'}`} key={axis}>
+                        <span className="axis-name">{axis}</span>
+                        <span className="axis-bar" aria-hidden="true">
+                          <span className="axis-bar-fill" style={{ width: `${share}%` }} />
+                        </span>
+                        <span className="axis-value">
+                          {measured ? formatDecimal(values.O_x, 4) : 'awaiting keywords'}
+                        </span>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
             {data.signal.inert_variables.length > 0 && (
               <div className="inert-summary">
                 <strong>Inert variables</strong>

@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-08-04T23:41:17.777524Z",
+  "generated_utc": "2026-08-09T14:42:02.751182Z",
   "verdict": {
     "state": "NO-GO",
     "headline": "Backtest promotion gate failed",
@@ -59,12 +59,76 @@
       "M_eff": -0.1264,
       "delta_P": 0.0,
       "demographic_gate": "unavailable",
-      "timestamp_utc": "2026-06-15T03:16:52.198127+00:00"
+      "timestamp_utc": "2026-08-09T14:36:46.260928+00:00",
+      "per_axis": {
+        "race": {
+          "band_power": 42102674.38183874,
+          "share_of_P_id": 0.5015929337310026,
+          "O_x": 0.36287472753196665
+        },
+        "gender": {
+          "band_power": null,
+          "share_of_P_id": null,
+          "O_x": null
+        },
+        "religion": {
+          "band_power": null,
+          "share_of_P_id": null,
+          "O_x": null
+        },
+        "sexuality": {
+          "band_power": 41835259.25025232,
+          "share_of_P_id": 0.4984070662689975,
+          "O_x": 0.36313948173534655
+        },
+        "nationality": {
+          "band_power": null,
+          "share_of_P_id": null,
+          "O_x": null
+        },
+        "ability": {
+          "band_power": null,
+          "share_of_P_id": null,
+          "O_x": null
+        }
+      }
     },
     "inert_variables": [
       "V_E"
     ],
-    "axis_resolution": "Global-only resolution from two aggregate keyword baskets: class_band, identity_band."
+    "axis_resolution": "Identity band resolved into 2 of 6 axes: race, sexuality. Awaiting keyword coverage: ability, gender, nationality, religion. Keyword baskets: class_band, identity_band, identity_axes.",
+    "per_axis": {
+      "race": {
+        "band_power": 42102674.38183874,
+        "share_of_P_id": 0.5015929337310026,
+        "O_x": 0.36287472753196665
+      },
+      "gender": {
+        "band_power": null,
+        "share_of_P_id": null,
+        "O_x": null
+      },
+      "religion": {
+        "band_power": null,
+        "share_of_P_id": null,
+        "O_x": null
+      },
+      "sexuality": {
+        "band_power": 41835259.25025232,
+        "share_of_P_id": 0.4984070662689975,
+        "O_x": 0.36313948173534655
+      },
+      "nationality": {
+        "band_power": null,
+        "share_of_P_id": null,
+        "O_x": null
+      },
+      "ability": {
+        "band_power": null,
+        "share_of_P_id": null,
+        "O_x": null
+      }
+    }
   },
   "paper_trading": {
     "closed_trades": 0,
@@ -184,6 +248,7 @@
     }
   ],
   "data_caveats": [
-    "book_depth_usd sits at the synthetic 1000 floor for all 538 rows, so real Polymarket liquidity was never captured and every cost/slippage conclusion is provisional."
+    "book_depth_usd sits at the synthetic 1000 floor for all 538 rows, so real Polymarket liquidity was never captured and every cost/slippage conclusion is provisional.",
+    "Signal window ends 2026-06-14, 56 days ago: the live Google Trends fetch fell back to the bundled snapshot. Per-axis figures are historical."
   ]
 }
