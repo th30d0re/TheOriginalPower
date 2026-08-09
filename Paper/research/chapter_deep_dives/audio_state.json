@@ -1,16 +1,219 @@
 {
   "0": {
     "artifact_id": "97a6f39e-2301-4a56-900b-bbb86c0a198e",
-    "attempts": 2,
-    "audio_path": null,
-    "error": "nlm download audio failed (rc=1): Error: Download failed for audio.\n",
-    "status": "failed"
-  },
-  "1": {
-    "artifact_id": "7c3a4840-9bc9-41b8-beec-c8af84a4a481",
     "attempts": 1,
+    "audio_path": "Paper/research/chapter_deep_dives/audio/00-front-matter.m4a",
+    "error": null,
+    "status": "done"
+  },
+  "10": {
+    "artifact_id": "059e1755-6446-4f42-b00b-c9774c4b759e",
+    "attempts": 1,
+    "audio_path": "Paper/research/chapter_deep_dives/audio/10-the-constitutional-kernel-firmware-bootloader-and-power-supp.m4a",
+    "error": null,
+    "status": "done"
+  },
+  "11": {
+    "artifact_id": "afc94ae0-f581-4366-9d23-f561413af00a",
+    "attempts": 1,
+    "audio_path": "Paper/research/chapter_deep_dives/audio/11-the-haitian-export-hemispheric-liberation-vexillological-con.m4a",
+    "error": null,
+    "status": "done"
+  },
+  "12": {
+    "artifact_id": "ea7893af-dd20-4904-b439-d704fedead73",
+    "attempts": 1,
+    "audio_path": "Paper/research/chapter_deep_dives/audio/12-the-architecture-of-kinship-pre-colonial-african-intimacy-an.m4a",
+    "error": null,
+    "status": "done"
+  },
+  "13": {
+    "artifact_id": "8dac6264-a832-4160-88e8-623c009c2915",
+    "attempts": 1,
+    "audio_path": "Paper/research/chapter_deep_dives/audio/13-the-gendered-axis-coverture-eugenics-and-the-reproductive-ex.m4a",
+    "error": null,
+    "status": "done"
+  },
+  "14": {
+    "artifact_id": "6e724d78-374c-4792-913a-42daa4e6ebd6",
+    "attempts": 1,
+    "audio_path": "Paper/research/chapter_deep_dives/audio/14-the-enforcement-engine-slave-patrols-the-13th-amendment-and-.m4a",
+    "error": null,
+    "status": "done"
+  },
+  "15": {
+    "artifact_id": "d3565398-c4a3-458c-ac0f-44ef3f76b233",
+    "attempts": 1,
+    "audio_path": "Paper/research/chapter_deep_dives/audio/15-the-containment-pullman-redlining-and-the-wages-of-whiteness.m4a",
+    "error": null,
+    "status": "done"
+  },
+  "16": {
+    "artifact_id": "12ae8b88-965a-4851-8c6f-0085f18ed39d",
+    "attempts": 1,
+    "audio_path": "Paper/research/chapter_deep_dives/audio/16-the-german-extraction-algorithm-19041945.m4a",
+    "error": null,
+    "status": "done"
+  },
+  "17": {
+    "artifact_id": "61026d31-d0ab-400e-9b64-40e0637fbfc6",
+    "attempts": 1,
+    "audio_path": "Paper/research/chapter_deep_dives/audio/17-the-geopolitical-11-patch-1948present.m4a",
+    "error": null,
+    "status": "done"
+  },
+  "18": {
+    "artifact_id": "fe52badb-13e5-4c7f-9424-0a327ba7320d",
+    "attempts": 1,
+    "audio_path": "Paper/research/chapter_deep_dives/audio/18-the-biological-extraction-kernel-environmental-racism-as-sys.m4a",
+    "error": null,
+    "status": "done"
+  },
+  "19": {
+    "artifact_id": "310de49d-27a8-47cd-bb90-3a13634fbb4b",
+    "attempts": 1,
+    "audio_path": "Paper/research/chapter_deep_dives/audio/19-tweedism-and-the-puppet-class-the-algorithmic-filter-on-demo.m4a",
+    "error": null,
+    "status": "done"
+  },
+  "2": {
+    "artifact_id": "7c3a4840-9bc9-41b8-beec-c8af84a4a481",
+    "attempts": 2,
+    "audio_path": "Paper/research/chapter_deep_dives/audio/02-authors-preface.m4a",
+    "error": null,
+    "status": "done"
+  },
+  "20": {
+    "artifact_id": null,
+    "attempts": 0,
     "audio_path": null,
-    "error": "nlm download audio failed (rc=1): Error: Download failed for audio.\n",
-    "status": "failed"
+    "error": "nlm audio create failed (rc=1): \u283c Creating audio...\nError: Rate limited \u2014 API error (code 8): \ntype.googleapis.com/google.internal.labs.tailwind.orchestration.v1.UserDisplayab\nleError. Wait a few minutes before retrying audio creation.\n",
+    "status": "pending"
+  },
+  "21": {
+    "artifact_id": null,
+    "attempts": 0,
+    "audio_path": null,
+    "error": "nlm audio create failed (rc=1): \u2834 Creating audio...\nError: Rate limited \u2014 API error (code 8): \ntype.googleapis.com/google.internal.labs.tailwind.orchestration.v1.UserDisplayab\nleError. Wait a few minutes before retrying audio creation.\n",
+    "status": "pending"
+  },
+  "22": {
+    "artifact_id": null,
+    "attempts": 0,
+    "audio_path": null,
+    "error": "nlm audio create failed (rc=1): \u2838 Creating audio...\nError: Rate limited \u2014 API error (code 8): \ntype.googleapis.com/google.internal.labs.tailwind.orchestration.v1.UserDisplayab\nleError. Wait a few minutes before retrying audio creation.\n",
+    "status": "pending"
+  },
+  "23": {
+    "artifact_id": null,
+    "attempts": 0,
+    "audio_path": null,
+    "error": "nlm audio create failed (rc=1): \u283c Creating audio...\nError: Rate limited \u2014 API error (code 8): \ntype.googleapis.com/google.internal.labs.tailwind.orchestration.v1.UserDisplayab\nleError. Wait a few minutes before retrying audio creation.\n",
+    "status": "pending"
+  },
+  "24": {
+    "artifact_id": null,
+    "attempts": 0,
+    "audio_path": null,
+    "error": "nlm audio create failed (rc=1): \u2838 Creating audio...\nError: Rate limited \u2014 API error (code 8): \ntype.googleapis.com/google.internal.labs.tailwind.orchestration.v1.UserDisplayab\nleError. Wait a few minutes before retrying audio creation.\n",
+    "status": "pending"
+  },
+  "25": {
+    "artifact_id": null,
+    "attempts": 0,
+    "audio_path": null,
+    "error": "nlm audio create failed (rc=1): \u2838 Creating audio...\nError: Rate limited \u2014 API error (code 8): \ntype.googleapis.com/google.internal.labs.tailwind.orchestration.v1.UserDisplayab\nleError. Wait a few minutes before retrying audio creation.\n",
+    "status": "pending"
+  },
+  "26": {
+    "artifact_id": null,
+    "attempts": 0,
+    "audio_path": null,
+    "error": "nlm audio create failed (rc=1): \u283c Creating audio...\nError: Rate limited \u2014 API error (code 8): \ntype.googleapis.com/google.internal.labs.tailwind.orchestration.v1.UserDisplayab\nleError. Wait a few minutes before retrying audio creation.\n",
+    "status": "pending"
+  },
+  "27": {
+    "artifact_id": null,
+    "attempts": 0,
+    "audio_path": null,
+    "error": "nlm audio create failed (rc=1): \u283c Creating audio...\nError: Rate limited \u2014 API error (code 8): \ntype.googleapis.com/google.internal.labs.tailwind.orchestration.v1.UserDisplayab\nleError. Wait a few minutes before retrying audio creation.\n",
+    "status": "pending"
+  },
+  "28": {
+    "artifact_id": null,
+    "attempts": 0,
+    "audio_path": null,
+    "error": "nlm audio create failed (rc=1): \u2834 Creating audio...\nError: Rate limited \u2014 API error (code 8): \ntype.googleapis.com/google.internal.labs.tailwind.orchestration.v1.UserDisplayab\nleError. Wait a few minutes before retrying audio creation.\n",
+    "status": "pending"
+  },
+  "29": {
+    "artifact_id": null,
+    "attempts": 0,
+    "audio_path": null,
+    "error": "nlm audio create failed (rc=1): \u2838 Creating audio...\nError: Rate limited \u2014 API error (code 8): \ntype.googleapis.com/google.internal.labs.tailwind.orchestration.v1.UserDisplayab\nleError. Wait a few minutes before retrying audio creation.\n",
+    "status": "pending"
+  },
+  "3": {
+    "artifact_id": "fe130852-d257-4e9b-9984-f68ddce3ddd8",
+    "attempts": 1,
+    "audio_path": "Paper/research/chapter_deep_dives/audio/03-preface.m4a",
+    "error": null,
+    "status": "done"
+  },
+  "30": {
+    "artifact_id": null,
+    "attempts": 0,
+    "audio_path": null,
+    "error": "nlm audio create failed (rc=1): \u283c Creating audio...\nError: Rate limited \u2014 API error (code 8): \ntype.googleapis.com/google.internal.labs.tailwind.orchestration.v1.UserDisplayab\nleError. Wait a few minutes before retrying audio creation.\n",
+    "status": "pending"
+  },
+  "31": {
+    "artifact_id": null,
+    "attempts": 0,
+    "audio_path": null,
+    "error": "nlm audio create failed (rc=1): \u2838 Creating audio...\nError: Rate limited \u2014 API error (code 8): \ntype.googleapis.com/google.internal.labs.tailwind.orchestration.v1.UserDisplayab\nleError. Wait a few minutes before retrying audio creation.\n",
+    "status": "pending"
+  },
+  "4": {
+    "artifact_id": "80cd7711-fe8c-449b-8fda-3316ebd33d56",
+    "attempts": 1,
+    "audio_path": "Paper/research/chapter_deep_dives/audio/04-empirical-methodology.m4a",
+    "error": null,
+    "status": "done"
+  },
+  "5": {
+    "artifact_id": "991671c1-8aa7-477d-9888-71cd3c44cfc0",
+    "attempts": 1,
+    "audio_path": "Paper/research/chapter_deep_dives/audio/05-system-initialization-the-geometry-of-extraction.m4a",
+    "error": null,
+    "status": "done"
+  },
+  "6": {
+    "artifact_id": "197124be-76f8-4444-a84d-041feeb2e3cd",
+    "attempts": 1,
+    "audio_path": "Paper/research/chapter_deep_dives/audio/06-dynamical-systems-formulation-of-the-extraction-architecture.m4a",
+    "error": null,
+    "status": "done"
+  },
+  "7": {
+    "artifact_id": "43df33a0-6621-443f-b8f5-12e16797a1dd",
+    "attempts": 1,
+    "audio_path": "Paper/research/chapter_deep_dives/audio/07-redefining-racism.m4a",
+    "error": null,
+    "status": "done"
+  },
+  "8": {
+    "artifact_id": "49001c84-155c-4f01-8b2e-05f91419865b",
+    "attempts": 1,
+    "audio_path": "Paper/research/chapter_deep_dives/audio/08-version-10-initializing-the-vector-15th-century-portugal.m4a",
+    "error": null,
+    "status": "done"
+  },
+  "9": {
+    "artifact_id": "db694ea5-061a-46fe-a64b-727de2a8c4d5",
+    "attempts": 1,
+    "audio_path": "Paper/research/chapter_deep_dives/audio/09-the-application-bacons-rebellion-the-buffer-class-and-the-co.m4a",
+    "error": null,
+    "status": "done"
   }
 }

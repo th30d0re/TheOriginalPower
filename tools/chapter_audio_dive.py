@@ -68,6 +68,15 @@ class UnitError(Exception):
     pass
 
 
+class RateLimited(UnitError):
+    """NotebookLM refused the generation on quota.
+
+    Distinct from a unit failure: the unit is fine and the quota is not. It
+    stays pending, keeps its retry budget, and the loop stops rather than
+    spending the rest of its iterations being refused.
+    """
+
+
 def log(msg: str) -> None:
     print(f"[audio] {msg}", flush=True)
 
@@ -99,6 +108,8 @@ def run_nlm(args: list[str], timeout: int) -> str:
     out = (proc.stdout or "") + (proc.stderr or "")
     out = re.sub(r"\x1b\[[0-9;]*m", "", out)
     if proc.returncode != 0:
+        if re.search(r"rate limit|code 8|RESOURCE_EXHAUSTED|quota", out, re.I):
+            raise RateLimited(f"nlm {' '.join(args[:2])}: {out.strip()[-300:]}")
         raise UnitError(f"nlm {' '.join(args[:2])} failed (rc={proc.returncode}): {out[-2000:]}")
     return out
 
@@ -258,6 +269,14 @@ def main() -> int:
     log(f"unit {unit['n']}: {unit['title']} (attempt {st['attempts']})")
     try:
         process_unit(state, unit, dive)
+    except RateLimited as e:
+        # Give the attempt back: the unit never got its turn.
+        st["attempts"] = max(0, st.get("attempts", 1) - 1)
+        st["status"] = "pending"
+        st["error"] = f"rate limited at {time.strftime('%Y-%m-%d %H:%M')}: {str(e)[:300]}"
+        log(f"RATE LIMITED on unit {unit['n']} — stopping; resume after the quota resets")
+        save_state(state)
+        return 1  # ends the loop instead of burning iterations on refusals
     except (UnitError, subprocess.TimeoutExpired) as e:
         st["status"] = "failed"
         st["error"] = str(e)[:1500]
