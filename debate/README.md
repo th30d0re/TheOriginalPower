@@ -21,6 +21,7 @@ study. Reading a card mid-debate costs delivery points and mangles numbers.
 | [reparations.md](reparations.md) | Should there be reparations |
 | [meritocracy.md](meritocracy.md) | Is America a meritocracy |
 | [capitalism.md](capitalism.md) | Is capitalism the problem |
+| [police-origin.md](police-origin.md) | "Police were built to uphold the status quo, not protect" |
 | [policing.md](policing.md) | Policing, prisons, criminal justice |
 | [affirmative-action.md](affirmative-action.md) | Affirmative action / DEI |
 | [_TEMPLATE.md](_TEMPLATE.md) | Blank card for new topics |
@@ -128,6 +129,41 @@ Moves that work on any topic. Memorize these; they are worth more than any singl
 **Demand the control group.**
 > "Crime fell in Canada on the same curve, without the incarceration. When the medicine
 > and the placebo produce the same result, it isn't the medicine."
+
+---
+
+## Building a trap opener
+
+The opposition case on any of these motions is finite. Map it, then design an opening that
+forces them to overcommit to the one vector you can disprove. Six steps:
+
+**1. Enumerate their vectors.** On most economic motions there are three. On the wealth cap
+they are property, incentive/risk, and capital flight — and the practice AI played all
+three in a single opening paragraph.
+
+**2. Find the one resting on a factual claim.** Value claims ("property is sacred") can only
+be disputed. Factual claims ("billionaires bear the risk") can be *disproven*. Always bait
+toward the factual one. That's where receipts beat rhetoric.
+
+**3. Concede the principle out loud.** "Risk deserves reward — I'm not disputing that."
+This costs nothing, because you're about to show they don't satisfy it. It also makes you
+the reasonable party, which is persuasiveness points you get for free.
+
+**4. Ask the question that forces them onto the factual ground.** "So who actually carried
+the risk?" They now have to assert something checkable.
+
+**5. Predict their answer out loud.** "My opponent is about to tell you they carried it."
+Two outcomes and you win both: they walk in and the judge watches it happen, or they dodge
+their strongest argument to avoid looking predictable.
+
+**6. Attach a demand they can't meet.** "Name one who lost everything." Specific, sounds
+answerable, isn't. Their best available example usually proves your point instead.
+
+**Then, every following turn: open by naming what they didn't answer.** Judges score
+dropped arguments, and a trap that gets dodged still pays.
+
+**Build the bridge into the trap.** An opener that is only a trap gets marked for having no
+positive case. "Whoever carries the risk owns the upside" is bait and remedy in one clause.
 
 ---
 
