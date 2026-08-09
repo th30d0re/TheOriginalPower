@@ -5,6 +5,10 @@
       "command": ".venv-voice/bin/python",
       "args": ["-m", "videolab.mcp_server"],
       "env": { "PYTHONPATH": "videolab/src" }
+    },
+    "goodnotes": {
+      "type": "http",
+      "url": "https://claude-mcp-api.ml.goodnotes.com/mcp"
     }
   }
 }
