@@ -5,6 +5,29 @@ committed before the script was written and before the data was examined.
 **Executed:** 2026-08-09, `Paper/scripts/tt_oos_02_gender_branch.py`
 **Data:** `Paper/data/congressional_record_word_freq_per_axis.csv`, 1965–2024, n = 60.
 
+> **CORRECTION 2026-08-10 — this test ran on synthesized data, and its results are
+> diagnostics of a model rather than measurements of the world.**
+>
+> `Paper/data/congressional_record_word_freq_per_axis.csv` is not an observed per-axis
+> series. `Paper/scripts/eq_fourier_per_axis.py:8-33` describes a **historical-event
+> mixture model**: each sub-band is a logistic baseline plus Gaussian impulses whose
+> centres, amplitudes, and widths are chosen from documented events (Ferguson 2014,
+> #MeToo 2017, Obergefell 2015), with the three modelled curves converted to mixture
+> weights and multiplied by the *observed aggregate*. The script disclaims ground-truth
+> recovery explicitly.
+>
+> The frequency content of that series is therefore fixed by the modeller's chosen trends
+> and event parameters. P1's stable `ω_0 = 0.100` in both epochs describes the mixture
+> model's construction, not gender-axis behaviour. P2's rising `ρ_gender/ρ_race` is a
+> property of the mixture weights. **Neither outcome is evidence about the world**, and
+> the conclusion "the gender branch is not migrating toward match" is not supported by
+> this test.
+>
+> The registration named the salience-as-admittance assumption but missed this one. The
+> provenance header was visible in the file and I did not weigh it before registering.
+> Re-running this test needs an observed per-axis series. See
+> `Paper/audit/per-axis-frequency-reconciliation.md`.
+
 ## Verdict as registered
 
 | | Prediction | Result |
@@ -58,7 +81,7 @@ The measured natural periods do not match the values the manuscript publishes:
 
 | Axis | Manuscript (`apx_extraction_chart.tex:344`) | Measured here |
 |---|---|---|
-| Race | 3.6 yr → `δ = −0.211` | ≤ 15 yr, edge-limited |
+| Race | 3.6 yr → `δ = −0.211` | ≥ 15 yr, edge-limited (unresolved toward longer periods) |
 | Gender | 6.0 yr → `δ = +0.833` | 10.0 yr → `δ = +2.100` |
 
 At a 10-year natural period the gender branch sits **more than twice as far from match**
