@@ -232,7 +232,9 @@ def preprocess_gdelt_per_axis() -> None:
     header = [
         "# processed: monthly GDELT GKG per-axis theme shares (fraction of total coverage)",
         "# source_raw: Paper/data/raw/gdelt_per_axis_raw.csv",
-        "# source_upstream: GDELT Global Knowledge Graph v2, BigQuery public dataset",
+        "# source_upstream: GDELT 1.0 daily GKG, public file server",
+        "# sampling: single day per month (15th)",
+        "# coverage: 2013-04 through 2024-12",
         "# transformations:",
         "#   1. sort ascending by year_month",
         "#   2. compute race_share = race_count / total_count (and analogues for each axis)",
