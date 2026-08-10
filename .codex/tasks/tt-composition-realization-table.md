@@ -84,6 +84,60 @@ A table that comes back mostly EMPTY is a completely acceptable and useful outco
 So is one that comes back heavily OVERLOADED. Do not shade the result toward looking
 complete.
 
+## REVISION 2 — read this before anything above
+
+Revision 1 produced `Paper/audit/tt-composition-realization-table.md`. Its citations were
+spot-verified and are sound. **Revise that file in place. Do not start over, and do not
+re-verify cells this revision does not touch.**
+
+Revision 1's Finding #1 is correct and it identifies a defect in this brief, not in the
+manuscript. Two corrections follow.
+
+### Correction A — fix the domain
+
+A domain is not an axis alone. It is an **axis within one historical instantiation**.
+Revision 1 pooled the German, French, Roman, and Portuguese kernels together with the
+American one, so every race cell came back OVERLOADED. That is an artifact of this
+brief's under-specification.
+
+**Fix the instantiation to the contemporary United States, post-1965** — the domain on
+which the manuscript develops all six axes, and the one the spectral decomposition at
+`Paper/The_Original_Power.tex:6438` is measured on. A cell is OVERLOADED only when the
+manuscript names two or more distinct realizers *for that position, on that axis, within
+that instantiation*.
+
+The German, French, Roman, and Portuguese assignments are **different domains**. They are
+cross-instantiation transports and they are not overload. Move them to a new section,
+`## Cross-instantiation realizers (not overload)`, and keep the citations already
+gathered — that material is useful and should not be discarded.
+
+### Correction B — add the source-term check
+
+The composition proof needs two conditions, and Revision 1 measured only the second:
+
+1. `pos_α` single-valued — every population or vocabulary term sits in **exactly one**
+   topological position within its domain.
+2. `rel_β` single-valued — every topological position has **exactly one** realizer.
+
+Revision 1's Finding #2 is a violation of condition 1 and it is the most valuable result
+in the file: women are `$O_{\text{gendered}}$`, while working-class women mobilized by
+STOP ERA are placed in `$I_{\text{buffer}}$` (`Paper/chapters_src/15_tweedism_and_the_puppet_class_the_algori.tex:1030`,
+verified). The same population term occupies two positions.
+
+Add a section `## Condition 1 violations (source-term multi-position)` listing every case
+where one population term is assigned to more than one topological position within the
+same axis and instantiation. Search each axis for this specifically. Cite both positions.
+State explicitly whether the manuscript anywhere restricts the term to disjoint subsets —
+if it does, the violation dissolves and you should say so.
+
+### Verdict format for Revision 2
+
+    Condition 1 (pos single-valued): holds on <axes> | fails on <axes>
+    Condition 2 (rel single-valued): UNIQUE n/30, EMPTY n/30, OVERLOADED n/30
+    Composition: holds on <axes> | fails on <axes> | undefined on <axes>
+
+Undefined (EMPTY) and failed (OVERLOADED) stay distinct. Do not merge them.
+
 ## Where to look
 
 - `Paper/The_Original_Power.tex` — the root manuscript, very large; search it rather
