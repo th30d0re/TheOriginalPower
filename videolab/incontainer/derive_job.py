@@ -30,6 +30,7 @@ MIN_CONTAINMENT_TOKENS = 3
 MIN_CONF = 40.0
 # Timestamps closer than this are considered coincident; scene wins.
 COINCIDENCE_WINDOW = 0.25
+FRAME_END_EPSILON = 0.10
 
 _PTS_TIME_RE = re.compile(r"pts_time:([0-9.]+)")
 _NON_ALNUM_RE = re.compile(r"[^0-9a-z]+")
@@ -254,6 +255,8 @@ def extract_frame(video: Path, t_seconds: float, out: Path) -> None:
         ],
         f"frame extraction at {t_seconds:.2f}s",
     )
+    if not out.is_file() or out.stat().st_size == 0:
+        raise RuntimeError(f"frame extraction at {t_seconds:.2f}s produced no image")
 
 
 def ocr_frame(image: Path, lang: str) -> tuple[str, float]:
@@ -335,7 +338,12 @@ def run_job(
     frames: list[dict] = []
     for index, (t, selected_by) in enumerate(selected, start=1):
         name = f"frame_{index:04d}.jpg"
-        extract_frame(video, t, frames_dir / name)
+        t = min(t, max(0.0, duration - FRAME_END_EPSILON))
+        try:
+            extract_frame(video, t, frames_dir / name)
+        except RuntimeError as exc:
+            _log(f"skipping {name}: {exc}")
+            continue
         frames.append(
             {
                 "index": index,
