@@ -1,35 +1,35 @@
 # Theodore Transform composition: realization table
 
 ```text
-UNIQUE:     10 / 30
-EMPTY:      12 / 30
-OVERLOADED:  8 / 30
-Composition verdict: fails through axes race, gender, sexuality; religion, sexuality, nationality, and ability are also undefined because they contain EMPTY cells
+UNIQUE:      9 / 30
+EMPTY:      15 / 30
+OVERLOADED:  6 / 30
+Composition verdict: holds on none; fails on race, gender, and sexuality; undefined on religion, sexuality, nationality, and ability
 ```
 
-The status test below is textual: a realizer is admitted only when the manuscript assigns a named group, institution, or quantity to the relevant topological role. General structural plausibility does not fill a cell. Historical organizations listed separately by the manuscript count as distinct realizers. An umbrella set and the population labels the manuscript uses to define that set count as one realizer when the text makes the identity explicit.
+The fixed domain is each identity axis in the contemporary United States, post-1965. A realizer is admitted only when the manuscript assigns a named group, institution, or quantity to the relevant role within that instantiation. Historical and foreign assignments appear separately as cross-instantiation transports. An umbrella set and the population labels used to define it count as one realizer when the text makes the identity explicit.
 
 ## Race
 
-### E — OVERLOADED
+### E — UNIQUE
 
-**Realizers.** The comparative architecture names, for the German kernel, German industrialists, landowners, and the military aristocracy; for the American kernel, plantation owners, industrialists, and the financial sector. These are distinct classes and institutions assigned to `$E$` in the same table (`Paper/chapters_src/12_the_german_extraction_algorithm_1904_194.tex:247`). The general definition also calls `$E$` the hyper-concentrated capital class (`Paper/chapters_src/04_version_1_0_initializing_the_vector_15th.tex:291`).
+**Realizer.** The top wealth percentile. The post-1965 mass-incarceration operationalization assigns `$E$` to the top wealth percentile and reports its near-zero incarceration rate (`Paper/chapters_src/17_the_full_algorithm_demographic_paradox_c.tex:714`).
 
 ### P_uppet — OVERLOADED
 
-**Realizers.** The German/American comparison assigns the Nazi Party and Weimar coalitions to the German Puppet position, and the two-party legislature and judiciary to the American Puppet position (`Paper/chapters_src/12_the_german_extraction_algorithm_1904_194.tex:248`). These are distinct political and judicial institutions. The general role definition confirms that officials, visible executives, judges, party structures, and institutional figureheads are realizers of `$P_{\text{uppet}}$` (`Paper/chapters_src/01_system_initialization_the_geometry_of_ex.tex:63`).
+**Realizers.** The two-party legislature and the judiciary. The American kernel assigns both distinct institutions to `$P_{\text{uppet}}$` (`Paper/chapters_src/12_the_german_extraction_algorithm_1904_194.tex:248`); the 1980--2024 mass-incarceration analysis also identifies the legislative agenda as `$P_{\text{puppet}}$` (`Paper/chapters_src/17_the_full_algorithm_demographic_paradox_c.tex:727`).
 
 ### F_enforce — OVERLOADED
 
-**Realizers.** The comparative table assigns the SS, Wehrmacht, and colonial Schutztruppe to the German Enforcement position, and slave patrols, police, and the carceral apparatus to the American Enforcement position (`Paper/chapters_src/12_the_german_extraction_algorithm_1904_194.tex:249`). The manuscript independently defines the tier as military, domestic police forces, and carceral agents (`Paper/chapters_src/10_the_enforcement_engine_slave_patrols_the.tex:75`). These are distinct institutional realizers.
+**Realizers.** Police and the carceral apparatus, two distinct contemporary American institutions assigned to `$F_{\text{enforce}}$` (`Paper/chapters_src/12_the_german_extraction_algorithm_1904_194.tex:249`). The contemporary police-killings operationalization independently treats police as the Enforcement Class (`Paper/chapters_src/10_the_enforcement_engine_slave_patrols_the.tex:91`). Slave patrols are historical and appear below as a cross-instantiation realizer.
 
 ### I_buffer — OVERLOADED
 
-**Realizers.** The German kernel uses the Aryan working/middle class; the American kernel uses the White working/middle class (`Paper/chapters_src/12_the_german_extraction_algorithm_1904_194.tex:250`). The contemporary U.S. police-lethality operationalization additionally represents the tier with Hispanic and White non-elite populations, and its figure places Asian people in a lower Buffer sub-position (`Paper/chapters_src/10_the_enforcement_engine_slave_patrols_the.tex:111`, `Paper/chapters_src/10_the_enforcement_engine_slave_patrols_the.tex:119`). The historical populations are distinct realizers, even though “White working/middle class,” “White non-elite,” and the general “remaining working-class In-group” are names for the same American role rather than separate realizers (`Paper/chapters_src/05_the_application_bacon_s_rebellion_the_bu.tex:124`).
+**Realizers.** Hispanic and White non-elite populations, with Asian people assigned to a lower Buffer sub-position. These distinct populations occupy the contemporary U.S. racial Buffer tier in the 2013--2024 police-lethality operationalization (`Paper/chapters_src/10_the_enforcement_engine_slave_patrols_the.tex:111`, `Paper/chapters_src/10_the_enforcement_engine_slave_patrols_the.tex:119`). “White working/middle class” and “White non-elite” name the same American role, not separate realizers (`Paper/chapters_src/12_the_german_extraction_algorithm_1904_194.tex:250`).
 
 ### O — OVERLOADED
 
-**Realizers.** The comparative table assigns Herero, Nama, Jews, and Roma to the German racialized Out-group and enslaved Africans, Black Americans, and Indigenous peoples to the American racialized Out-group (`Paper/chapters_src/12_the_german_extraction_algorithm_1904_194.tex:251`). The base definition describes `$O_{\text{racialized}}$` as initially African peoples and their descendants, which is the same entity as the enslaved-African/Black-American branch under a broader historical name, not an additional realizer (`Paper/chapters_src/04_version_1_0_initializing_the_vector_15th.tex:293`). The geopolitical worked instantiation separately assigns Palestinian Arabs to `$O_{\text{racialized}}$` (`Paper/chapters_src/13_the_geopolitical_1_1_patch_1948_present.tex:10`).
+**Realizers.** Black and Native American populations. The contemporary U.S. police-lethality operationalization represents `$O_{\text{racialized}}$` with both distinct populations (`Paper/chapters_src/10_the_enforcement_engine_slave_patrols_the.tex:111`). Enslaved Africans and Palestinian Arabs belong to other historical instantiations and appear below.
 
 ## Gender
 
@@ -41,9 +41,9 @@ The status test below is textual: a realizer is admitted only when the manuscrip
 
 **Realizers.** The Democratic Party and Republican Party. The Puppet definition expressly includes party structures (`Paper/chapters_src/01_system_initialization_the_geometry_of_ex.tex:63`), and the per-axis account assigns the Democratic Party the feminist-reform signal and the Republican Party the patriarchal-traditionalist signal on the gender axis (`Paper/chapters_src/23_the_spectral_carrier_electoral_cycles_an.tex:232`). They are distinct realizers of the political interface.
 
-### F_enforce — OVERLOADED
+### F_enforce — UNIQUE
 
-**Realizers.** Coverture statutes, eugenics law, and the criminalization of pregnancy. The Theodore Transform appendix expressly calls these three items the “gendered enforcement machinery” corresponding to the racial slave-patrol and carceral machinery (`Paper/apx_theodore_transform.tex:49`, `Paper/apx_theodore_transform.tex:50`, `Paper/apx_theodore_transform.tex:51`). They are distinct legal mechanisms occupying the same enforcement position.
+**Realizer.** The criminalization of pregnancy. The Theodore Transform appendix assigns it to the gendered enforcement machinery (`Paper/apx_theodore_transform.tex:49`, `Paper/apx_theodore_transform.tex:51`), and the gender chapter identifies `Dobbs` (2022) and state enforcement architectures as its contemporary U.S. execution (`Paper/chapters_src/09_the_gendered_axis_coverture_eugenics_and.tex:10`). Coverture statutes and eugenics law fall outside the fixed post-1965 instantiation.
 
 ### I_buffer — UNIQUE
 
@@ -55,25 +55,25 @@ The status test below is textual: a realizer is admitted only when the manuscrip
 
 ## Religion
 
-### E — UNIQUE
+### E — EMPTY
 
-**Realizer.** The French Crown/Elite. In the French Wars of Religion instantiation, Catholic mobs are incited by the Crown, and the next sentence assigns the designation of the religious Out-group to the Elite `$E$` (`Paper/chapters_src/04_version_1_0_initializing_the_vector_15th.tex:250`). The Crown supplies the concrete actor for the named `$E$` quantity in this instantiation. The later reference to “Elite factions” does not identify a second concrete group (`Paper/chapters_src/04_version_1_0_initializing_the_vector_15th.tex:252`).
+No contemporary U.S. religious-axis Elite realizer is named. Searches covered the four source groups listed below for `religion axis`, `religious`, `Moral Majority`, `evangelical`, `Elite`, and `$E$`. The French Crown belongs to a separate historical instantiation and appears below.
 
 ### P_uppet — EMPTY
 
-No religious-axis political-interface realizer is named. Searches covered `Paper/The_Original_Power.tex`, `Paper/chapters_src/*.tex`, `Paper/apx_theodore_transform.tex`, and `Paper/apx_extraction_chart.tex` for `religion axis`, `religious`, `O_{\text{religious}}`, `I_{\text{Catholic}}`, `P_{\text{uppet}}`, `Puppet`, `Crown`, `Moral Majority`, `church`, `court`, and `legislature`. The Moral Majority is named as a deployment mechanism and mobilizer (`Paper/chapters_src/15_tweedism_and_the_puppet_class_the_algori.tex:1007`, `Paper/chapters_src/15_tweedism_and_the_puppet_class_the_algori.tex:1031`), but the manuscript never assigns it to `$P_{\text{uppet}}$`.
+No contemporary U.S. religious-axis political-interface realizer is named. Searches covered `Paper/The_Original_Power.tex`, `Paper/chapters_src/*.tex`, `Paper/apx_theodore_transform.tex`, and `Paper/apx_extraction_chart.tex` for `religion axis`, `religious`, `P_{\text{uppet}}`, `Puppet`, `Moral Majority`, `church`, `court`, and `legislature`. The Moral Majority is a deployment mechanism and mobilizer (`Paper/chapters_src/15_tweedism_and_the_puppet_class_the_algori.tex:1007`, `Paper/chapters_src/15_tweedism_and_the_puppet_class_the_algori.tex:1031`), without an assignment to `$P_{\text{uppet}}$`.
 
 ### F_enforce — EMPTY
 
-No distinct religious-axis Enforcement-tier realizer is named. The same four source groups were searched for `religion axis`, `religious`, `F_{\text{enforce}}`, `Enforcement`, `Catholic mobs`, `co-religionist`, `army`, and `military`. Catholic mobs appear in the French case, but the manuscript assigns the co-religionist Catholic majority to the Buffer Class while saying that it enforces the boundary (`Paper/chapters_src/04_version_1_0_initializing_the_vector_15th.tex:250`); reassigning that group to `$F_{\text{enforce}}$` would be an inference and would also violate the manuscript's explicit Buffer assignment.
+No contemporary U.S. religious-axis Enforcement-tier realizer is named. The same four source groups were searched for `religion axis`, `religious`, `F_{\text{enforce}}`, `Enforcement`, `Moral Majority`, `evangelical`, `army`, and `military`. The French Catholic case belongs to a separate historical instantiation.
 
-### I_buffer — UNIQUE
+### I_buffer — EMPTY
 
-**Realizer.** The Catholic co-religionist majority, named `$I_{\text{Catholic}}$`, deployed as the Buffer Class in the French Wars of Religion (`Paper/chapters_src/04_version_1_0_initializing_the_vector_15th.tex:250`). “Catholic mobs” and the “co-religionist majority” occur in the same instantiation and are treated as the mobilized and general names of this one Catholic population, not as two realizers.
+No contemporary U.S. religious-axis Buffer realizer is expressly assigned. Searches covered the same four source groups for `religion axis`, `religious`, `I_{\text{buffer}}`, `Buffer`, `Moral Majority`, `evangelical`, and `working class`. Evangelical working-class political energy is routed by the Moral Majority (`Paper/chapters_src/15_tweedism_and_the_puppet_class_the_algori.tex:1031`), without an express Buffer assignment.
 
-### O — UNIQUE
+### O — EMPTY
 
-**Realizer.** Huguenot Protestants, expressly designated as `$O_{\text{religious}}$` in the French Wars of Religion instantiation (`Paper/chapters_src/04_version_1_0_initializing_the_vector_15th.tex:250`). The equation's broader labels “doctrine, sect, heresy” define the sorting variables and do not name additional populations (`Paper/chapters_src/04_version_1_0_initializing_the_vector_15th.tex:256`).
+No contemporary U.S. religious-axis Out-group realizer is expressly assigned. Searches covered the same four source groups for `religion axis`, `O_{\text{religious}}`, `Out-group`, `evangelical`, `religious minority`, `sect`, and `heresy`. Huguenot Protestants belong to the French historical instantiation below.
 
 ## Sexuality
 
@@ -141,41 +141,63 @@ No ability-axis Buffer realizer is named. The same source groups were searched f
 
 No ability-axis Out-group realizer is expressly assigned. The same source groups were searched for `ability axis`, `disability axis`, `O_{\text{ability}}`, `O_{\text{disabled}}`, `Out-group`, `disabled`, `disability`, `ableism`, `marginalization`, and `e_{14}`. A Black disabled person is placed in the intersectional extraction plane `$e_{14}$` (`Paper/chapters_src/31_geometric_algebra_and_the_n_dimensional.tex:66`, `Paper/chapters_src/31_geometric_algebra_and_the_n_dimensional.tex:68`), but the text never identifies disabled people as the `$O$` realizer of an ability-domain topology.
 
+## Condition 1 violations (source-term multi-position)
+
+1. **Gender — violation.** Women are assigned to `$O_{\text{gendered}}$` (`Paper/chapters_src/09_the_gendered_axis_coverture_eugenics_and.tex:19`, `Paper/chapters_src/09_the_gendered_axis_coverture_eugenics_and.tex:25`), while working-class women mobilized by STOP ERA are assigned to `$I_{\text{buffer}}$` (`Paper/chapters_src/15_tweedism_and_the_puppet_class_the_algori.tex:1030`). Working-class women are a subset of women, and the manuscript does not restrict `$O_{\text{gendered}}$` to a disjoint subset. The source term therefore occupies two positions in the same post-1965 U.S. gender instantiation.
+2. **Race — apparent crossover dissolves.** White and Hispanic non-elite populations occupy `$I_{\text{buffer}}$` in the 2013--2024 police-lethality model (`Paper/chapters_src/10_the_enforcement_engine_slave_patrols_the.tex:111`), while incarcerated White and Hispanic people are absorbed into `$O_{\text{final}}$` after 1994 (`Paper/chapters_src/17_the_full_algorithm_demographic_paradox_c.tex:708`, `Paper/chapters_src/17_the_full_algorithm_demographic_paradox_c.tex:714`). The manuscript expressly restricts the latter term to the incarcerated subset and describes a runtime reclassification, so the two assignments concern disjoint states rather than one source term simultaneously occupying two positions.
+3. **Religion, sexuality, nationality, and ability — no violation found.** Axis-specific searches covered the root manuscript, all chapter sources, and both named appendices for each population label paired with `E`, `P_uppet`, `F_enforce`, `I_buffer`, `O`, `Out-group`, `Buffer`, `reclassif`, and `absorb`. The manuscript either assigns distinct terms to distinct positions or leaves the relevant positions unrealized.
+
+## Cross-instantiation realizers (not overload)
+
+1. **German racial kernel (1904--1945):** German industrialists, landowners, and military aristocracy (`E`); Nazi Party and Weimar coalitions (`P_uppet`); SS, Wehrmacht, and colonial Schutztruppe (`F_enforce`); Aryan working/middle class (`I_buffer`); Herero, Nama, Jews, and Roma (`O`) (`Paper/chapters_src/12_the_german_extraction_algorithm_1904_194.tex:247`--`251`).
+2. **French religious kernel (1562--1598):** French Crown/Elite (`E`), Catholic co-religionist majority (`I_buffer`), and Huguenot Protestants (`O`) (`Paper/chapters_src/04_version_1_0_initializing_the_vector_15th.tex:250`). Catholic mobs enforce the boundary without an assignment to `F_enforce`.
+3. **Portuguese racial kernel (fifteenth century):** the hyper-concentrated capital class (`E`), African peoples and their descendants (`O`), and the working-class In-group later refined into `I_buffer` (`Paper/chapters_src/04_version_1_0_initializing_the_vector_15th.tex:291`--`295`).
+4. **Pre-1965 American racial kernel:** plantation owners (`E`), slave patrols (`F_enforce`), and enslaved Africans (`O`) are historical members of the American 1676--present comparison (`Paper/chapters_src/12_the_german_extraction_algorithm_1904_194.tex:247`, `Paper/chapters_src/12_the_german_extraction_algorithm_1904_194.tex:249`, `Paper/chapters_src/12_the_german_extraction_algorithm_1904_194.tex:251`).
+5. **Pre-1965 gendered machinery:** coverture statutes and eugenics law are historical U.S. realizers of gendered enforcement, distinct from the post-1965 pregnancy-criminalization realizer (`Paper/apx_theodore_transform.tex:49`--`51`).
+6. **Other transported domains:** Palestinian Arabs occupy `O_racialized` in the geopolitical instantiation (`Paper/chapters_src/13_the_geopolitical_1_1_patch_1948_present.tex:10`). The Roman material supplies the gender genealogy rather than a standalone five-position realization; it therefore contributes no cell overload (`Paper/chapters_src/09_the_gendered_axis_coverture_eugenics_and.tex:25`, `Paper/chapters_src/09_the_gendered_axis_coverture_eugenics_and.tex:353`).
+
 ## OVERLOADED cells: composition failures
 
-1. **Race / E:** multiple German and American owning classes (`Paper/chapters_src/12_the_german_extraction_algorithm_1904_194.tex:247`).
-2. **Race / P_uppet:** Nazi Party, Weimar coalitions, two-party legislature, and judiciary (`Paper/chapters_src/12_the_german_extraction_algorithm_1904_194.tex:248`).
-3. **Race / F_enforce:** SS, Wehrmacht, Schutztruppe, slave patrols, police, and carceral apparatus (`Paper/chapters_src/12_the_german_extraction_algorithm_1904_194.tex:249`).
-4. **Race / I_buffer:** Aryan working/middle class, White working/middle class, and the separately operationalized Hispanic/White/Asian Buffer populations (`Paper/chapters_src/12_the_german_extraction_algorithm_1904_194.tex:250`; `Paper/chapters_src/10_the_enforcement_engine_slave_patrols_the.tex:111`; `Paper/chapters_src/10_the_enforcement_engine_slave_patrols_the.tex:119`).
-5. **Race / O:** multiple German, American, and Palestinian racialized populations (`Paper/chapters_src/12_the_german_extraction_algorithm_1904_194.tex:251`; `Paper/chapters_src/13_the_geopolitical_1_1_patch_1948_present.tex:10`).
-6. **Gender / P_uppet:** Democratic and Republican party structures (`Paper/chapters_src/23_the_spectral_carrier_electoral_cycles_an.tex:232`).
-7. **Gender / F_enforce:** coverture statutes, eugenics law, and pregnancy criminalization (`Paper/apx_theodore_transform.tex:49`; `Paper/apx_theodore_transform.tex:50`; `Paper/apx_theodore_transform.tex:51`).
-8. **Sexuality / P_uppet:** Democratic and Republican party structures (`Paper/chapters_src/23_the_spectral_carrier_electoral_cycles_an.tex:232`; `Paper/chapters_src/23_the_spectral_carrier_electoral_cycles_an.tex:234`; `Paper/chapters_src/23_the_spectral_carrier_electoral_cycles_an.tex:236`).
+1. **Race / P_uppet:** two-party legislature and judiciary (`Paper/chapters_src/12_the_german_extraction_algorithm_1904_194.tex:248`).
+2. **Race / F_enforce:** police and carceral apparatus (`Paper/chapters_src/12_the_german_extraction_algorithm_1904_194.tex:249`).
+3. **Race / I_buffer:** Hispanic, White non-elite, and Asian Buffer populations (`Paper/chapters_src/10_the_enforcement_engine_slave_patrols_the.tex:111`; `Paper/chapters_src/10_the_enforcement_engine_slave_patrols_the.tex:119`).
+4. **Race / O:** Black and Native American populations (`Paper/chapters_src/10_the_enforcement_engine_slave_patrols_the.tex:111`).
+5. **Gender / P_uppet:** Democratic and Republican party structures (`Paper/chapters_src/23_the_spectral_carrier_electoral_cycles_an.tex:232`).
+6. **Sexuality / P_uppet:** Democratic and Republican party structures (`Paper/chapters_src/23_the_spectral_carrier_electoral_cycles_an.tex:232`; `Paper/chapters_src/23_the_spectral_carrier_electoral_cycles_an.tex:234`; `Paper/chapters_src/23_the_spectral_carrier_electoral_cycles_an.tex:236`).
 
 ## EMPTY cells: undefined transforms
 
-1. Religion / P_uppet.
-2. Religion / F_enforce.
-3. Sexuality / F_enforce.
-4. Sexuality / I_buffer.
-5. Nationality / P_uppet.
-6. Nationality / F_enforce.
-7. Nationality / I_buffer.
-8. Nationality / O.
-9. Ability / P_uppet.
-10. Ability / F_enforce.
-11. Ability / I_buffer.
-12. Ability / O.
+1. Religion / E.
+2. Religion / P_uppet.
+3. Religion / F_enforce.
+4. Religion / I_buffer.
+5. Religion / O.
+6. Sexuality / F_enforce.
+7. Sexuality / I_buffer.
+8. Nationality / P_uppet.
+9. Nationality / F_enforce.
+10. Nationality / I_buffer.
+11. Nationality / O.
+12. Ability / P_uppet.
+13. Ability / F_enforce.
+14. Ability / I_buffer.
+15. Ability / O.
 
-The religious transform is undefined through `P_uppet` and `F_enforce`; the sexuality transform is undefined through `F_enforce` and `I_buffer`; the nationality transform is undefined through every position below `E`; the ability transform is undefined through every position below `E`.
+The religious transform is undefined through all five positions; the sexuality transform is undefined through `F_enforce` and `I_buffer`; the nationality transform is undefined through every position below `E`; the ability transform is undefined through every position below `E`.
+
+```text
+Condition 1 (pos single-valued): holds on race, religion, sexuality, nationality, ability | fails on gender
+Condition 2 (rel single-valued): UNIQUE 9/30, EMPTY 15/30, OVERLOADED 6/30
+Composition: holds on none | fails on race, gender, sexuality | undefined on religion, sexuality, nationality, ability
+```
 
 ## Findings
 
-1. **The manuscript contradicts the brief's single-valuedness premise on the race axis.** The German/American comparison deliberately assigns several historically distinct institutions and populations to each of the five positions (`Paper/chapters_src/12_the_german_extraction_algorithm_1904_194.tex:247`, `Paper/chapters_src/12_the_german_extraction_algorithm_1904_194.tex:251`). Under the brief's cell rule, every race cell is therefore OVERLOADED.
+1. **Revision 1's all-race overload was a domain artifact.** The German, French, Portuguese, pre-1965 American, and Palestinian assignments belong to distinct historical instantiations. Within the fixed post-1965 U.S. domain, Race/E is UNIQUE, while Race/P_uppet, Race/F_enforce, Race/I_buffer, and Race/O remain OVERLOADED on contemporary evidence.
 
-2. **The gender axis violates source-term single-valuedness even where its individual cells are UNIQUE.** Women are defined as `$O_{\text{gendered}}$` (`Paper/chapters_src/09_the_gendered_axis_coverture_eugenics_and.tex:19`, `Paper/chapters_src/09_the_gendered_axis_coverture_eugenics_and.tex:25`), while working-class women mobilized by STOP ERA are expressly placed in `$I_{\text{buffer}}$` (`Paper/chapters_src/15_tweedism_and_the_puppet_class_the_algori.tex:1030`). The same broad population label therefore appears in two topological positions unless “working-class women” is intended as a disjoint context-specific subset. The manuscript does not state that restriction.
+2. **Gender fails Condition 1.** The manuscript defines women within `$O_{\text{gendered}}$` and places the subset “working-class women” in `$I_{\text{buffer}}$`. It supplies no disjoint-subset restriction that would dissolve the collision (`Paper/chapters_src/09_the_gendered_axis_coverture_eugenics_and.tex:19`, `Paper/chapters_src/09_the_gendered_axis_coverture_eugenics_and.tex:25`, `Paper/chapters_src/15_tweedism_and_the_puppet_class_the_algori.tex:1030`).
 
-3. **The religion case collapses Buffer and enforcement functions without assigning the Enforcement tier.** The Catholic co-religionist majority is explicitly the Buffer and explicitly enforces the boundary through violence (`Paper/chapters_src/04_version_1_0_initializing_the_vector_15th.tex:250`). The audit preserves the express Buffer assignment and leaves `F_enforce` EMPTY.
+3. **The contemporary U.S. religion axis is wholly unrealized.** The Moral Majority and evangelical working-class political energy are named in the post-1965 calibration, but neither is assigned to a topological position (`Paper/chapters_src/15_tweedism_and_the_puppet_class_the_algori.tex:1031`). The French Catholic/Huguenot realization is retained only as cross-instantiation evidence.
 
 4. **`P`-prefixed gender quantities are not `$P_{\text{uppet}}$`.** `$P_{\text{coverture}}$` and `$P_{\text{fetal_personhood}}$` are deployed in the gender runtime (`Paper/chapters_src/09_the_gendered_axis_coverture_eugenics_and.tex:10`), while the Theodore Transform appendix assigns coverture statutes to gendered enforcement machinery (`Paper/apx_theodore_transform.tex:49`, `Paper/apx_theodore_transform.tex:51`). Treating every `$P_*` as a Puppet realizer would conflate proxy/partition quantities with the political-interface tier.
 
