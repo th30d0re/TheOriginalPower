@@ -71,6 +71,46 @@ the text with no derivable source, `UNTRACEABLE` is the correct and valuable ans
 An audit that comes back with many `UNTRACEABLE` rows is a fully acceptable outcome. So is
 one that finds everything `OK`. Do not shade toward either.
 
+## REVISION — the authoritative tier specification
+
+The first pass scored `tier_supported` against the one-line gloss at
+`Paper/The_Original_Power.tex:243` ("Tier 1: peer-reviewed quantitative"). That is not the
+operative definition, and the resulting `MISLABELLED` verdicts must be re-derived.
+
+**The authoritative spec is `Paper/The_Original_Power.tex:308-320.`** Use it verbatim:
+
+- **Tier 1** — calibrated against at least one **peer-reviewed source OR public dataset**
+  carrying a DOI or stable URL, where the number is **directly reported in that source, or
+  directly and transparently derivable from its published figures**, such that a reader can
+  verify it **without performing any undisclosed analytical step**.
+- **Tier 2** — uses a publicly accessible dataset, but **the author performs the
+  operationalisation and computation**, with the method disclosed in the case study or
+  footnote so a reader holding the same dataset can reproduce it.
+- **Tier 3** — an ordinal ordering or structural relationship for which **no quantitative
+  calibration is possible or is attempted**, with the ordinal basis and its limits stated.
+
+Three consequences for re-scoring:
+
+1. **A scholarly monograph is a valid Tier 1 anchor.** Morgan (1975), James (1938),
+   Piketty and similar are peer-reviewed sources. Do not downgrade on the grounds that a
+   source is not a quantitative dataset. The test is whether the *number* is directly
+   reported or transparently derivable from it.
+2. **The absence of a producer script does not by itself force a downgrade.** A Tier 1
+   claim whose value is directly reported in a cited source needs no producer. Reserve
+   `UNTRACEABLE` for claims where neither a producer nor a disclosed derivation exists, so
+   a reader cannot get from the cited source to the printed number.
+3. **`nature` must be judged from the claim, not the source.** A claim is `ordinal` when it
+   asserts an ordering rather than a magnitude — not merely because its source is a
+   history book.
+
+Keep the first pass's traceability findings, which are independent of this: the
+`DOES-NOT-REPRODUCE` rows, the missing-producer records, and the `Paper/data/` header
+survey. **Re-derive only `tier_supported` and `verdict`.**
+
+Also record, as a finding in its own right: `Paper/The_Original_Power.tex:243` and
+`:306` give **two different one-line tier definitions**, and neither matches the full spec
+at `:308-320`. Report the inconsistency and quote all three. Do not edit them.
+
 ## Output
 
 `Paper/audit/empirical-provenance-audit.md` — the only file you create.
