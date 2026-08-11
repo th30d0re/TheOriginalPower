@@ -10,9 +10,11 @@ systemic oppression as an elite-extraction algorithm. The repo also contains sev
 subsystems that support the manuscript: empirical validation notebooks, a local-model fine-tuning
 pipeline, an audio/podcast production pipeline, an interactive website, and an iOS app.
 
-The canonical manuscript source is `Paper/The_Original_Power.tex`. The committed PDF is
-gitignored and rebuilt from source. Prose-level chapter sources live under `chapters/`; standalone
-chapter `.tex` patches live in `Paper/` (e.g. `chapter_*.tex`, `ch21_section_21.6.tex`).
+The canonical manuscript source is `Paper/The_Original_Power.tex`. The built PDF
+`Paper/The_Original_Power.pdf` is **tracked in git** and must be committed alongside any `.tex`
+change: `make verify-pdf` rebuilds it and fails when the committed copy differs, and that check
+is enforced in CI. Prose-level chapter sources live under `chapters/`; standalone chapter `.tex`
+patches live in `Paper/` (e.g. `chapter_*.tex`, `ch21_section_21.6.tex`).
 
 ## Operating rules (from AGENTS.md — read it)
 
