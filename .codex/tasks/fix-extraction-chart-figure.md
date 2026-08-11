@@ -69,6 +69,29 @@ derive.**
 
 Race's marker is unchanged if its `delta` is unchanged. Verify, do not assume.
 
+### REVISION — the rounding convention, resolved
+
+The first pass correctly refused to write, reporting that the chain missed the existing
+markers by 0.001. That was this brief's error, not a broken chain: the order of operations
+was unstated. **The figure rounds `Gamma` to three decimals first, then multiplies by
+`\Rad`** — which is what the inline comments record, e.g.
+`% Gender: z = 0.50 + j1.25 -> Gamma = (0.213, 0.656)` at line 434.
+
+Under that convention the old gender marker reproduces exactly:
+
+    Gamma = (0.213, 0.656)  ->  x4  ->  (0.852, 2.624)   matches the existing marker
+
+Use it. For the corrected gender row:
+
+    T = 6.2, r = 0.50, Q = 3
+    delta = +0.904839,  x = +1.357258,  z = 0.50 + j1.357
+    Gamma = (0.267, 0.663)  ->  marker (1.068, 2.652)
+
+Update the inline comment alongside the marker so it states the new `z` and `Gamma`, the
+way the existing comments do. Race is unchanged: `delta = -0.211111`, marker stays.
+
+**Proceed with the edit now.** The stop condition is satisfied.
+
 ## Prose constraint
 
 `AGENTS.md` imposes a hard style rule on manuscript prose: direct, affirmative declarative
