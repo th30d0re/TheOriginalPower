@@ -163,9 +163,16 @@
   ],
   "dm_provenance": null,
   "content_analysis": {
-    "primary_theme": null,
-    "secondary_themes": [],
-    "rhetorical_frame": null,
+    "primary_theme": "A woman-of-color creator answers a stitched video in which Christina Reckless defends saying 'I hate men' by distinguishing 'shitty men', arguing that the qualifier costs nothing to add and that generalising half the human population would be condemned if men did the same to women.",
+    "secondary_themes": [
+      "Race-assumption correction: the reel author says Christina Reckless wrongly identified the male stitcher ('politodoxy', handle as transcribed) as a 'cis white male', asserting he is not white",
+      "Representation refusal: the author, self-describing as an upper-middle-class Mexican-American woman of color, tells Reckless to stop speaking for women of color",
+      "Tu quoque structure: Reckless is accused of faulting the stitcher for using a demographic in his argument while using one in her own",
+      "Reversal test: 'imagine if men said that they hate women' based on what women have done",
+      "Statistics invoked for the reversal — domestic violence in lesbian couples, sexual assault rates versus straight couples, and an equal male-female domestic-violence ratio — all stated without citation",
+      "Closing rights claim: the author states she has 'the same amount of rights as everyone else, especially my male and white counterparts'"
+    ],
+    "rhetorical_frame": "Rebuttal by reversal. The author answers a stitched defence of 'I hate men' with a gender-swapped hypothetical, then revokes the original speaker's claimed licence to speak for women of color from inside that identity.",
     "hashtags": [
       "#misandryisreal",
       "#stophatingmen",
@@ -173,8 +180,37 @@
       "#equality",
       "#toxicfemininity"
     ],
-    "notable_speakers": [],
-    "key_moments": []
+    "notable_speakers": [
+      "Latrice McMillian (@latricehdmofficial) — reel author",
+      "Christina Reckless — stitched creator, self-named in the audio; handle not in evidence",
+      "politodoxy — referenced third party, not present; name as transcribed"
+    ],
+    "key_moments": [
+      {
+        "timestamp_approx": "0:00",
+        "note": "Stitched clip of Christina Reckless: 'when I say I hate men... there's a distinction... I hate the shitty men, I hate the shitty blacks'"
+      },
+      {
+        "timestamp_approx": "0:16",
+        "note": "Reckless thanks the stitcher and accuses him of calling her out as a woman and 'using black people as a way to do that'"
+      },
+      {
+        "timestamp_approx": "0:33",
+        "note": "McMillian takes over: 'you messed that one up because politodoxy is not white' — corrects Reckless's race assumption about the stitcher"
+      },
+      {
+        "timestamp_approx": "1:14",
+        "note": "'I hate shitty men, I hate bad men, not I hate men' — the qualifier argument, framed as avoiding generalising 'half of the human population'"
+      },
+      {
+        "timestamp_approx": "1:31",
+        "note": "Reversal begins: 'imagine if men said that they hate women', followed by domestic-violence and assault statistics stated without citation"
+      },
+      {
+        "timestamp_approx": "2:52",
+        "note": "Closes with 'please stop speaking for us' and the claim of equal rights with 'my male and white counterparts'"
+      }
+    ]
   },
   "framework_notes": {},
   "tier_classification": {
