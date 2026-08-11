@@ -323,27 +323,27 @@ pattern of sequential axis activation follows from a conserved matching budget.
 \section{Per-Axis Placement}
 \label{sec:xc_axes}
 
-Chapter~\ref{ch:spectral_carrier} reports natural frequencies for the three identity sub-bands: race
-at $3.6$~yr, gender at approximately $6$~yr, and sexuality threshold-activated after 2003. Modeling
-each axis as a series resonant branch driven at the four-year carrier, the normalized branch
-impedance is
+Chapter~\ref{ch:spectral_carrier} reports exploratory dominant spectral periods recovered by
+Lomb--Scargle from the selected SCOTUS corpus: race at $3.6$~yr and gender at $6.2$~yr. The
+sexuality period is unresolved. Modeling each axis as a series resonant branch driven at the
+four-year carrier, the normalized branch impedance is
 
 \begin{equation}\label{eq:xc.14-branch-impedance}
 z_k(\omega) \;=\; r_k\Bigl[1 + jQ_k\,\delta_k\Bigr], \qquad
 \delta_k \;=\; \frac{\omega}{\omega_{0,k}} - \frac{\omega_{0,k}}{\omega}
 \end{equation}
 
-The detuning $\delta_k$ follows directly from the published periods and requires no additional
-assumption:
+The race and gender detuning values follow from those exploratory period estimates. The sexuality
+row remains unresolved:
 
 \begin{center}
 \begin{tabular}{lccc}
 \toprule
-Axis & Natural period & $\omega/\omega_{0,k}$ & $\delta_k$ \\
+Axis & Dominant period & $\omega/\omega_{0,k}$ & $\delta_k$ \\
 \midrule
 Race       & $3.6$~yr & $0.900$ & $-0.211$ \\
-Gender     & $6.0$~yr & $1.500$ & $+0.833$ \\
-Sexuality  & threshold-activated & --- & small, positive \\
+Gender     & $6.2$~yr & $1.550$ & $+0.905$ \\
+Sexuality  & threshold-activated & --- & --- \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -426,18 +426,14 @@ converts $\rho_k$ from an assigned weight into a derived quantity.
   \node[font=\scriptsize\bfseries, align=center] at (0, 1.16*\Rad)
     {$|\Gamma| = 1$: withdrawn compliance, zero absorbed power};
 
-  % --- measured axis placements (Q_k = 3 illustrative) ---
+  % --- exploratory axis placements (Q_k = 3 illustrative) ---
   % Race: z = 0.10 - j0.063  ->  Gamma = (-0.812, -0.104)
   \fill[red!80!black] (-3.249,-0.416) circle (3pt);
   \node[font=\scriptsize\bfseries, red!80!black, below=3pt] at (-3.249,-0.416) {Race};
 
-  % Gender: z = 0.50 + j1.25  ->  Gamma = (0.213, 0.656)
-  \fill[orange!85!black] (0.852,2.624) circle (3pt);
-  \node[font=\scriptsize\bfseries, orange!85!black, right=3pt] at (0.852,2.624) {Gender};
-
-  % Sexuality: z = 0.25 + j0.30  ->  Gamma = (-0.513, 0.363)
-  \fill[violet!80] (-2.050,1.452) circle (3pt);
-  \node[font=\scriptsize\bfseries, violet!80, above right=1pt] at (-2.050,1.452) {Sexuality};
+  % Gender: z = 0.50 + j1.357  ->  Gamma = (0.267, 0.663)
+  \fill[orange!85!black] (1.068,2.652) circle (3pt);
+  \node[font=\scriptsize\bfseries, orange!85!black, right=3pt] at (1.068,2.652) {Gender};
 
   % --- quarter-wave rotation arc, drawn outside the disk ---
   \draw[->, blue!65, line width=0.7pt, dashed]
@@ -455,10 +451,10 @@ rim ($|\Gamma| = 1$) is withdrawn compliance: a purely reactive termination abso
 power. Grey circles are loci of constant normalized resistance $r$ (material wage) and constant
 normalized reactance $x$ (psychological wage). Displacement along the line rotates a load clockwise
 about the center at one revolution per $\lambda/2$, which places a short circuit at the open-circuit
-point after $\lambda/4$ (Theorem~\ref{thm:quarter-wave}). Coloured markers place the three identity
-sub-bands of Chapter~\ref{ch:spectral_carrier} using their published natural frequencies via
-Equation~\ref{eq:xc.14-branch-impedance}; the sign of each reactance follows from the reported
-periods, and the magnitudes assume $Q_k = 3$ as an illustrative normalization (Tier~3).}
+point after $\lambda/4$ (Theorem~\ref{thm:quarter-wave}). Coloured markers place the race and gender
+sub-bands using exploratory dominant periods recovered by Lomb--Scargle from the selected SCOTUS
+corpus. Sexuality has no resolved period and is unplotted. Equation~\ref{eq:xc.14-branch-impedance}
+sets the reactive component using an illustrative $Q_k = 3$, which carries Tier~3 status.}
 \label{fig:extraction_chart}
 \end{figure}
 
