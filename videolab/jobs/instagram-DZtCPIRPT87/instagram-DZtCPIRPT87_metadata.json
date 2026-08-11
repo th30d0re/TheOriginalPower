@@ -212,7 +212,56 @@
       }
     ]
   },
-  "framework_notes": {},
+  "framework_notes": {
+    "concepts": [
+      "extraction_kernel",
+      "buffer_class",
+      "psychological_wage",
+      "orthogonal_deflection",
+      "snubber_circuit",
+      "demographic_charge",
+      "phase_angle"
+    ],
+    "extraction_kernel": "Absent from the frame, and denied by name. Neither speaker identifies any actor capturing material value; every named party is a creator, a demographic, or an audience. McMillian closes by asserting the opposite condition — she states she holds 'the same amount of rights as everyone else, especially my male and white counterparts' — a claim that no extraction is operative, addressed to no counterparty.",
+    "buffer_class": "McMillian occupies an intermediary position without naming the structure. Self-describing as an upper-middle-class Mexican-American woman of color, she revokes Reckless's licence to speak for women of color and reports the group's condition on its behalf: 'please stop speaking for us... it looks terrible... we're not [oppressed]'. She performs a representative function for the group below while certifying upward that the partition is not operating — policing who may speak for the out-group rather than contesting anything above it.",
+    "psychological_wage": "The entire exchange settles in standing. Reckless's 'shitty men' distinction, McMillian's correction of the race assumption, and the closing rights declaration are all status transactions: who may be presumed, who may speak, whose equality is conceded. McMillian's closing claim treats $\\psi_s$ as already paid in full while $\\psi_m$ is never raised by anyone in the 176 seconds.",
+    "snubber_circuits": "The qualifier debate functions as one. A grievance about harm done by some men is routed into a dispute over vocabulary — 'it's so easy to add that into your vocabulary' — where compliance costs nothing and reaches no structure. Pressure that a material or institutional demand would concentrate is dissipated in semantic correction.",
+    "electrodynamic_map": "$\\vec{E} \\approx 0$ throughout; neither speaker invokes a material field. All motion runs along $\\vec{v} \\times \\vec{B}$ on two cultural axes: gender, in the qualifier argument and the reversal hypothetical, and race, in the correction of Reckless's assumption that the stitcher was a 'cis white male'. Two demographic charges interact directly in the horizontal plane, the interference engine running on audience-supplied energy with no field from above.",
+    "thermodynamic_map": "Zero work, measurable heat. The reel drew 3,276 likes and 299 comments — kinetic energy spent adjudicating who may generalize and who may represent. No material transfer is demanded or even alleged, since McMillian's closing position is that equality already holds; the engagement dissipates entirely as heat.",
+    "systems_dynamics": "The sensor is accurate at one point: McMillian detects a factual error — Reckless misidentified the stitcher's race — and names it. The actuator is discourse policing: append the qualifier, revoke the licence to represent. The loop closes entirely inside the horizontal plane between creators and audiences, and it stabilises the existing distribution by converting a category-level grievance into a norm of phrasing.",
+    "evidence_limits": "The reversal statistics — domestic violence in lesbian couples, assault rates versus straight couples, an equal male-female domestic-violence ratio — are asserted without citation and are not verified here. Reckless's original video is known only through the stitch and McMillian's characterization. The handle 'politodoxy' is as transcribed, and the stitcher's race is asserted by McMillian rather than independently established. OCR returned zero usable rows across eight frames, so no on-screen text supports or qualifies any claim. The framework reading describes the structure of this exchange and attributes no motive to either speaker.",
+    "widgets": [
+      {
+        "type": "axis_deflection",
+        "params": {
+          "axes": [
+            "gender",
+            "race"
+          ],
+          "e_amplitude": 0.05,
+          "b_amplitude": 0.8
+        },
+        "caption": "Two cultural axes carry the whole argument: gender in the qualifier dispute, race in the correction of the stitcher's misidentification. The material field stays near zero — no transfer is named by anyone, and the closing claim denies one exists."
+      },
+      {
+        "type": "wage_phasor",
+        "params": {
+          "theta_deg": 88,
+          "psi_m": 0.0,
+          "psi_s": 0.75
+        },
+        "caption": "Every transaction in the reel is standing: who may speak for women of color, who may be presumed white, whose equality is conceded. McMillian's closing asserts the status wage is already settled; the material component never enters the argument."
+      },
+      {
+        "type": "cyclotron_loop",
+        "params": {
+          "e_magnitude": 0.05,
+          "b_magnitude": 0.85
+        },
+        "caption": "3,276 likes and 299 comments circling a vocabulary norm. With no material field to accelerate along, the engagement traces a closed loop and performs no work on any distribution."
+      }
+    ]
+  },
   "tier_classification": {
     "transcript": "Tier 2",
     "ocr": "Tier 2",
