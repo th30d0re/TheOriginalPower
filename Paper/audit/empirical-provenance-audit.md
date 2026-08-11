@@ -8,12 +8,12 @@ Scope audited: all 72 indexed T1/T2 equations (33 T1, 39 T2), 90 data/model-outp
 
 | scope | OK | MISLABELLED | UNTRACEABLE | DOES-NOT-REPRODUCE | total |
 |---|---:|---:|---:|---:|---:|
-| T1/T2 equations | 0 | 45 | 27 | 0 | 72 |
+| T1/T2 equations | 10 | 35 | 27 | 0 | 72 |
 | data/model-output figures | 33 | 18 | 36 | 3 | 90 |
 | empirical data files | 10 | 37 | 62 | 2 | 111 |
-| **Total empirical artifacts** | **43** | **100** | **125** | **5** | **273** |
+| **Total empirical artifacts** | **53** | **90** | **125** | **5** | **273** |
 
-`tier_supported` applies the index legend literally: T1 = peer-reviewed quantitative; T2 = public dataset; T3 = ordinal/structural. `UNKNOWN` records insufficient committed evidence. A tier mismatch is `MISLABELLED`; a trace break with an otherwise supportable label is `UNTRACEABLE`.
+`tier_supported` applies the operative specification at `Paper/The_Original_Power.tex:308-320`: T1 requires a directly reported or transparently derivable result from a peer-reviewed source or stable public dataset; T2 requires disclosed author operationalisation and computation from public data; T3 requires an explicitly bounded ordinal or structural claim with no quantitative calibration. `UNKNOWN` records insufficient committed evidence. Reproduction failures retain precedence, followed by trace failures, then tier mismatch.
 
 ## Tier 1 and Tier 2 equations
 
@@ -25,33 +25,23 @@ Scope audited: all 72 indexed T1/T2 equations (33 T1, 39 T2), 90 data/model-outp
 | `eq:10.17-temporal-extraction-rate` | UNKNOWN | FRED debt/GDP and rate/growth series; no current-label producer | NOT RUN — producer unknown | modelled | T1 | T2 | MISLABELLED |
 | `eq:10.18-psi-degradation-function` | UNKNOWN | FRED compensation plus productivity/assets; no current-label producer | NOT RUN — producer unknown | modelled | T1 | T2 | MISLABELLED |
 | `eq:10.19-saeculum-phase-map` | UNKNOWN | Strauss & Howe (1997) | NOT RUN — producer unknown | ordinal | T2 | T3 | MISLABELLED |
-| `eq:10.2-buffer-class-shrinkage` | UNKNOWN | Pew report; no dataset or derivation committed | NOT RUN — producer unknown | measured | T2 | T3 | MISLABELLED |
 | `eq:11.1-extraction-precondition` | UNKNOWN | primary legislation texts | NOT RUN — producer unknown | ordinal | T1 | T3 | MISLABELLED |
 | `eq:11.2-disarmament-agenda-path` | UNKNOWN | 11 legislation/ruling texts | NOT RUN — producer unknown | ordinal | T1 | T3 | MISLABELLED |
 | `eq:11.3-restriction-precedent-accumulation` | UNKNOWN | 11 legislation/ruling texts | NOT RUN — producer unknown | ordinal | T1 | T3 | MISLABELLED |
 | `eq:11.4-restriction-scope-expansion` | UNKNOWN | legislation and enforcement records | NOT RUN — producer unknown | ordinal | T1 | T3 | MISLABELLED |
-| `eq:12.2-concession-theorem` | UNKNOWN | Piven & Cloward (1977) | NOT RUN — producer unknown | ordinal | T2 | T3 | MISLABELLED |
-| `eq:12.5-haitian-theorem-nonkinetic` | UNKNOWN | James (1938); no exhaustive event producer | NOT RUN — producer unknown | ordinal | T1 | T3 | MISLABELLED |
-| `eq:12.6-haitian-theorem-kinetic` | UNKNOWN | James (1938); no exhaustive event producer | NOT RUN — producer unknown | ordinal | T1 | T3 | MISLABELLED |
 | `eq:12.9-multiplicative-intersection-compounding` | UNKNOWN | AAUW pay-gap report; no multiplicative estimator | NOT RUN — producer unknown | modelled | T2 | T3 | MISLABELLED |
-| `eq:13.10-asymmetric-leverage-ratio` | UNKNOWN | Firmin (1885) | NOT RUN — producer unknown | ordinal | T2 | T3 | MISLABELLED |
+| `eq:13.10-asymmetric-leverage-ratio` | UNKNOWN | Firmin (1885) | NOT RUN — producer unknown | ordinal | T2 | T1 | MISLABELLED |
 | `eq:13.14-imperial-core-collapse` | UNKNOWN | World Bank/SIPRI/IMF public series; no current-label producer | NOT RUN — producer unknown | modelled | T1 | T2 | MISLABELLED |
 | `eq:13.15-interface-swap-trigger` | UNKNOWN | Federal Reserve H.4.1 public data; no current-label producer | NOT RUN — producer unknown | measured | T1 | T2 | MISLABELLED |
 | `eq:13.16-polymorphic-reboot-operator` | UNKNOWN | Gowa (1983) | NOT RUN — producer unknown | ordinal | T2 | T3 | MISLABELLED |
-| `eq:14.1-algo-prior-inheritance` | UNKNOWN | Angwin et al. (2016) report | NOT RUN — producer unknown | exploratory | T2 | T3 | MISLABELLED |
-| `eq:14.20-defection-cascade` | UNKNOWN | James (1938), Polish Legion episode | NOT RUN — producer unknown | ordinal | T2 | T3 | MISLABELLED |
+| `eq:14.1-algo-prior-inheritance` | UNKNOWN | Angwin et al. (2016) report | NOT RUN — producer unknown | exploratory | T2 | T1 | MISLABELLED |
+| `eq:14.20-defection-cascade` | UNKNOWN | James (1938), Polish Legion episode | NOT RUN — producer unknown | ordinal | T2 | T1 | MISLABELLED |
 | `eq:14.21-empathy-permeability` | UNKNOWN | James (1938) | NOT RUN — producer unknown | ordinal | T2 | T3 | MISLABELLED |
-| `eq:3.1-bacon-solidarity-condition` | UNKNOWN | Morgan (1975), no committed derivation | NOT RUN — producer unknown | ordinal | T1 | T3 | MISLABELLED |
-| `eq:3.5-kinetic-necessary-condition` | UNKNOWN | Morgan (1975), no committed derivation | NOT RUN — producer unknown | ordinal | T1 | T3 | MISLABELLED |
 | `eq:5.1-compliance-differential` | UNKNOWN | Baptist (2014) | NOT RUN — producer unknown | ordinal | T2 | T3 | MISLABELLED |
 | `eq:6.1-lethal-autonomy-gradient` | UNKNOWN | 18 U.S.C. §926B text plus MPV reference | NOT RUN — producer unknown | ordinal | T2 | T3 | MISLABELLED |
 | `eq:6.10-capacity-chain-1934` | `Paper/scripts/eq_hist3_redlining_capacity.ipynb:10` | `Paper/data/eq_hist3_redlining_capacity.csv` | NOT RUN — writes data/figures | modelled | T1 | T2 | MISLABELLED |
 | `eq:6.11-capacity-chain-1971` | `Paper/scripts/eq_hist4_war_on_drugs_capacity.ipynb:10` | `Paper/data/eq_hist4_war_on_drugs_capacity.csv` | NOT RUN — writes data/figures | modelled | T1 | T2 | MISLABELLED |
-| `eq:6.12-capacity-compounding-full` | UNKNOWN | ACLU report plus author-set capacity factors | NOT RUN — producer unknown | modelled | T1 | T3 | MISLABELLED |
-| `eq:6.5-compounding-temporal-model` | UNKNOWN | Hamilton & Darity (2017) | NOT RUN — producer unknown | modelled | T2 | T3 | MISLABELLED |
-| `eq:6.6-asymmetric-enforcement-multiplier` | `Paper/scripts/eq31_asymmetric_enforcement.ipynb:10` | `Paper/data/eq31_asymmetric_enforcement.csv` | NOT RUN — writes data/figures | measured | T1 | T2 | MISLABELLED |
-| `eq:6.8-capacity-chain-1619` | UNKNOWN | Darity & Mullen (2020) | NOT RUN — producer unknown | ordinal | T2 | T3 | MISLABELLED |
-| `eq:6.9-capacity-chain-1865` | UNKNOWN | Blackmon (2008) | NOT RUN — producer unknown | ordinal | T2 | T3 | MISLABELLED |
+| `eq:6.12-capacity-compounding-full` | UNKNOWN | ACLU report plus author-set capacity factors | NOT RUN — producer unknown | modelled | T1 | T2 | MISLABELLED |
 | `eq:8.12-class-alignment-base-waves` | UNKNOWN | Google Trends; `Paper/data/google_trends_class_identity.csv` is a possible consumer input only | NOT RUN — producer unknown | exploratory | T1 | T2 | MISLABELLED |
 | `eq:8.14-net-solidarity-signal` | UNKNOWN | Google Trends; no derivation found | NOT RUN — producer unknown | modelled | T1 | T2 | MISLABELLED |
 | `eq:8.15-solidarity-collapse-condition` | UNKNOWN | Google Trends; no calibrated threshold producer found | NOT RUN — producer unknown | modelled | T1 | T3 | MISLABELLED |
@@ -91,6 +81,16 @@ Scope audited: all 72 indexed T1/T2 equations (33 T1, 39 T2), 90 data/model-outp
 | `eq:8.4-compounding-chain-formal` | UNKNOWN | Federal Reserve SCF; no derivation | NOT RUN — producer unknown | modelled | T2 | T2 | UNTRACEABLE |
 | `eq:9.1-lead-crime-compounding` | UNKNOWN | Reyes (2007); current-label derivation not found | NOT RUN — producer unknown | measured | T1 | T1 | UNTRACEABLE |
 | `eq:9.6-infrastructure-quality-funding` | UNKNOWN | NCES facility survey; no estimator | NOT RUN — producer unknown | measured | T2 | T2 | UNTRACEABLE |
+| `eq:10.2-buffer-class-shrinkage` | UNKNOWN | Pew report; no dataset or derivation committed | NOT RUN — producer unknown | measured | T2 | T2 | OK |
+| `eq:12.2-concession-theorem` | UNKNOWN | Piven & Cloward (1977) | NOT RUN — producer unknown | ordinal | T2 | T2 | OK |
+| `eq:12.5-haitian-theorem-nonkinetic` | UNKNOWN | James (1938); no exhaustive event producer | NOT RUN — producer unknown | ordinal | T1 | T1 | OK |
+| `eq:12.6-haitian-theorem-kinetic` | UNKNOWN | James (1938); no exhaustive event producer | NOT RUN — producer unknown | ordinal | T1 | T1 | OK |
+| `eq:3.1-bacon-solidarity-condition` | UNKNOWN | Morgan (1975), no committed derivation | NOT RUN — producer unknown | ordinal | T1 | T1 | OK |
+| `eq:3.5-kinetic-necessary-condition` | UNKNOWN | Morgan (1975), no committed derivation | NOT RUN — producer unknown | ordinal | T1 | T1 | OK |
+| `eq:6.5-compounding-temporal-model` | UNKNOWN | Hamilton & Darity (2017) | NOT RUN — producer unknown | modelled | T2 | T2 | OK |
+| `eq:6.6-asymmetric-enforcement-multiplier` | `Paper/scripts/eq31_asymmetric_enforcement.ipynb:10` | `Paper/data/eq31_asymmetric_enforcement.csv` | NOT RUN — writes data/figures | measured | T1 | T1 | OK |
+| `eq:6.8-capacity-chain-1619` | UNKNOWN | Darity & Mullen (2020) | NOT RUN — producer unknown | ordinal | T2 | T2 | OK |
+| `eq:6.9-capacity-chain-1865` | UNKNOWN | Blackmon (2008) | NOT RUN — producer unknown | ordinal | T2 | T2 | OK |
 
 ## Figures that plot data or model output
 
@@ -112,7 +112,7 @@ Scope audited: all 72 indexed T1/T2 equations (33 T1, 39 T2), 90 data/model-outp
 | `fig:eq63_mass_incarceration` | `Paper/scripts/eq63_mass_incarceration.ipynb` (filename linkage only) | `Paper/data/eq63_mass_incarceration.csv` | NOT RUN — writes data/figures | measured | linked T1 `eq:10.12` | T2 | MISLABELLED |
 | `fig:eq65_68_2a_case_law` | `Paper/scripts/eq65_68_2a_case_law.ipynb:843` | manually curated net-restriction scoring | NOT RUN — writes figures | ordinal | linked T1 equations | T3 | MISLABELLED |
 | `fig:eq65_68_fig_a` | `Paper/scripts/eq65_68_2a_case_law.ipynb:578` | manually curated statute/ruling ledger | NOT RUN — writes figures | ordinal | linked T1 equations | T3 | MISLABELLED |
-| `fig:eq73_74_haitian_theorem` | `Paper/scripts/eq73_74_haitian_theorem.ipynb` (filename linkage only) | curated liberation cases and estimated elite shares | NOT RUN — writes data/figures | modelled | linked T1 equations | T3 | MISLABELLED |
+| `fig:eq73_74_haitian_theorem` | `Paper/scripts/eq73_74_haitian_theorem.ipynb` (filename linkage only) | curated liberation cases and estimated elite shares | NOT RUN — writes data/figures | modelled | linked T1 equations | T2 | MISLABELLED |
 | `fig:eq91_imperial_core_collapse` | `Paper/scripts/eq91_imperial_core_collapse.ipynb` (filename linkage only) | author-composed capacity indices from WDI/SIPRI/IMF | NOT RUN — writes data/figures | modelled | linked T1 equation | T2/T3 | MISLABELLED |
 | `fig:extraction_chart` | UNKNOWN | 57-case SCOTUS Lomb–Scargle peaks embedded in `Paper/apx_extraction_chart.tex:376-462` | NOT RUN — producer unknown | exploratory | markers labelled “measured” | T3 | MISLABELLED (confirmed baseline) |
 | `fig:impulse_responses` | `Paper/scripts/spectral_laplace.ipynb:32-36` | `historical_shocks.json`; heterogeneous min-max-scaled backlash proxies | NOT RUN — writes figures | exploratory | “observed vs. fitted” | T3 | MISLABELLED |
@@ -171,7 +171,7 @@ Scope audited: all 72 indexed T1/T2 equations (33 T1, 39 T2), 90 data/model-outp
 | `fig:eq75_76_hispaniola_panel_c` | `Paper/scripts/eq75_76_hispaniola_control.ipynb:21-23` | `eq75_76_hispaniola_control.csv` | NOT RUN — writes data/figures | modelled | caption states trajectory | T3 | OK |
 | `fig:great_recession_asset_composition` | `Paper/scripts/eq10_great_recession_charts.py:3-9` | Federal Reserve DFA zip | NOT RUN — writes data/figure | measured | no explicit tier | T2 | OK |
 | `fig:great_recession_debt_floor` | `Paper/scripts/eq10_great_recession_charts.py:3-9` | Federal Reserve DFA zip | NOT RUN — writes data/figure | measured | no explicit tier | T2 | OK |
-| `fig:great_recession_racial_wealth` | `Paper/scripts/eq10_great_recession_charts.py:3-9` | Pew-reported SCF figures | NOT RUN — writes data/figure | measured | no explicit tier | T2 | OK |
+| `fig:great_recession_racial_wealth` | `Paper/scripts/eq10_great_recession_charts.py:3-9` | Pew-reported SCF figures | NOT RUN — writes data/figure | measured | no explicit tier | T1 | OK |
 | `fig:great_recession_wealth_shares` | `Paper/scripts/eq10_great_recession_charts.py:3-9` | Federal Reserve DFA zip | NOT RUN — writes data/figure | measured | no explicit tier | T2 | OK |
 | `fig:hierarchy_wealth_brackets` | `Paper/scripts/eq10_great_recession_charts.py:85-189` | Federal Reserve DFA zip | NOT RUN — writes data/figure | measured | caption says proxy brackets | T2 | OK |
 | `fig:hierarchy_wealth_brackets_over_time` | `Paper/scripts/eq10_great_recession_charts.py:3-9` | Federal Reserve DFA zip | NOT RUN — writes data/figure | measured | caption says proxy brackets | T2 | OK |
@@ -197,7 +197,7 @@ Scope audited: all 72 indexed T1/T2 equations (33 T1, 39 T2), 90 data/model-outp
 | `Paper/data/eq05_antebellum_cotton.csv` | UNKNOWN | cited Census series plus extrapolated patrol expenditures | NOT RUN — producer writes committed data or producer unknown | modelled | T1-linked | T3 | MISLABELLED |
 | `Paper/data/eq10_20_empire_index_components.csv` | `Paper/scripts/eq10_20_dalio_empire_index.ipynb:335` | inline factor anchors + interpolation | NOT RUN — producer writes committed data or producer unknown | modelled | T2-linked | T3 | MISLABELLED |
 | `Paper/data/eq33_cannabis_redlining.csv` | UNKNOWN | literature plus author-set capacity-retention factors | NOT RUN — producer writes committed data or producer unknown | modelled | T1-linked | T3 | MISLABELLED |
-| `Paper/data/eq73_74_haitian_theorem.csv` | UNKNOWN | four curated cases and estimated elite shares | NOT RUN — producer writes committed data or producer unknown | modelled | T1-linked | T3 | MISLABELLED |
+| `Paper/data/eq73_74_haitian_theorem.csv` | UNKNOWN | four curated cases and estimated elite shares | NOT RUN — producer writes committed data or producer unknown | modelled | T1-linked | T2 | MISLABELLED |
 | `Paper/data/eq91_imperial_core_collapse.csv` | UNKNOWN | WDI/SIPRI/IMF plus author capacity index | NOT RUN — producer writes committed data or producer unknown | modelled | T1-linked | T3 | MISLABELLED |
 | `Paper/data/spatial/cdc_wonder_firearm_baltimore_md.csv` | `Paper/scripts/fetch_spatial_data.py:830-858` | static pre-2013 modeled rates | NOT RUN — producer writes committed data or producer unknown | modelled | T1-linked spatial analysis | T3 | MISLABELLED |
 | `Paper/data/spatial/cdc_wonder_firearm_detroit_mi.csv` | `Paper/scripts/fetch_spatial_data.py:830-858` | static pre-2013 modeled rates | NOT RUN — producer writes committed data or producer unknown | modelled | T1-linked spatial analysis | T3 | MISLABELLED |
@@ -244,13 +244,13 @@ Scope audited: all 72 indexed T1/T2 equations (33 T1, 39 T2), 90 data/model-outp
 | `Paper/data/eq10_18_wage_asset_divergence.csv` | `Paper/scripts/eq10_18_psi_degradation.ipynb:363` | inline/cited series, no file provenance header | NOT RUN — producer writes committed data or producer unknown | modelled | T1-linked | T2 | UNTRACEABLE |
 | `Paper/data/eq10_great_recession_asset_composition.csv` | `Paper/scripts/eq10_great_recession_charts.py:74-76` | Federal Reserve DFA zip, no file provenance header | NOT RUN — producer writes committed data or producer unknown | measured | none | T2 | UNTRACEABLE |
 | `Paper/data/eq10_great_recession_debt_floor.csv` | `Paper/scripts/eq10_great_recession_charts.py:74-76` | Federal Reserve DFA zip, no file provenance header | NOT RUN — producer writes committed data or producer unknown | measured | none | T2 | UNTRACEABLE |
-| `Paper/data/eq10_great_recession_racial_wealth.csv` | `Paper/scripts/eq10_great_recession_charts.py:3-9` | Pew reported figures, no file provenance header | NOT RUN — producer writes committed data or producer unknown | measured | none | T2 | UNTRACEABLE |
+| `Paper/data/eq10_great_recession_racial_wealth.csv` | `Paper/scripts/eq10_great_recession_charts.py:3-9` | Pew reported figures, no file provenance header | NOT RUN — producer writes committed data or producer unknown | measured | none | T1 | UNTRACEABLE |
 | `Paper/data/eq10_great_recession_wealth_shares.csv` | `Paper/scripts/eq10_great_recession_charts.py:74-76` | Federal Reserve DFA zip, no file provenance header | NOT RUN — producer writes committed data or producer unknown | measured | none | T2 | UNTRACEABLE |
 | `Paper/data/eq10_hierarchy_wealth_brackets_over_time.csv` | `Paper/scripts/eq10_great_recession_charts.py` | Federal Reserve DFA zip, no file provenance header | NOT RUN — producer writes committed data or producer unknown | modelled proxy mapping | none | T3 | UNTRACEABLE |
 | `Paper/data/eq10_hierarchy_wealth_brackets.csv` | `Paper/scripts/eq10_great_recession_charts.py:85-140` | Federal Reserve DFA zip, no file provenance header | NOT RUN — producer writes committed data or producer unknown | modelled proxy mapping | none | T3 | UNTRACEABLE |
 | `Paper/data/eq13_15_17_gold_cover_1949_1971.csv` | `Paper/scripts/eq13_15_17_nixon_cover_ratio.ipynb:282` | inline/cited Fed series; no file provenance header | NOT RUN — producer writes committed data or producer unknown | measured | T1-linked | T2 | UNTRACEABLE |
 | `Paper/data/eq13_16_swap_matrix.csv` | `Paper/scripts/eq13_16_interface_swap_matrix.ipynb:504` | inline WID series; no file provenance header | NOT RUN — producer writes committed data or producer unknown | measured | T2-linked | T2 | UNTRACEABLE |
-| `Paper/data/eq20_24_bacons_rebellion.csv` | UNKNOWN | cited historical estimates; source header names no producer | NOT RUN — producer writes committed data or producer unknown | ordinal | none | T3 | UNTRACEABLE |
+| `Paper/data/eq20_24_bacons_rebellion.csv` | UNKNOWN | cited historical estimates; source header names no producer | NOT RUN — producer writes committed data or producer unknown | ordinal | none | T1 | UNTRACEABLE |
 | `Paper/data/eq27_police_killings.csv` | UNKNOWN | MPV + Census; source header names no producer | NOT RUN — producer writes committed data or producer unknown | measured | T2-linked | T2 | UNTRACEABLE |
 | `Paper/data/eq31_asymmetric_enforcement.csv` | UNKNOWN | ACLU/SAMHSA/FBI/Census; source header names no producer | NOT RUN — producer writes committed data or producer unknown | measured | T2-linked | T2 | UNTRACEABLE |
 | `Paper/data/eq40_45_suppression_proxies.csv` | UNKNOWN | author-constructed ordinal estimates | NOT RUN — producer writes committed data or producer unknown | ordinal | none | T3 | UNTRACEABLE |
@@ -312,13 +312,16 @@ Scope audited: all 72 indexed T1/T2 equations (33 T1, 39 T2), 90 data/model-outp
 
 ## Findings
 
-1. **The brief’s index count is stale.** `Paper/empirical_index.tex` currently contains 33 T1 and 39 T2 rows, for 72 total. The stated 34 T1 / 39 T2 / 73 total is wrong.
-2. **The spatial empirical layer is substantially synthetic.** `fetch_spatial_data.py:15-16,609-634,721-760,830-858,878-902` generates modeled EJScreen-like values, synthetic firearm incidents, static modeled CDC rates, and modeled PPI-like incarceration rates. These inputs feed six city maps, six merged panels, a pooled panel, and T1-linked spatial claims. The file headers disclose much of this; the manuscript’s empirical statistics and GVA-derived language do not consistently carry that disclosure.
-3. **Provenance headers are exceptional.** Most curated equation CSVs, result CSV/JSON files, raw exports, ACS files, and parquet files omit a producer even where a likely writer exists elsewhere. This audit records the writer only when a direct output statement or an in-file producer field was found; missing self-provenance still breaks the file-level chain.
-4. **Current-label traceability is sparse.** Only `eq:6.6`, `eq:6.10`, `eq:6.11`, and `eq:10.5` have explicit current equation labels inside a producer notebook. Similar notebook filenames and old labels were not treated as proof.
-5. **SCOTUS corpus cardinalities disagree.** The data README says 57 PDFs/opinions in several places, `scotus_keyword_counts.csv` says 55 opinions, `scotus_spectral_results.json` says 55 PDFs, and the manuscript’s Lomb–Scargle caption says 57 PDFs. The known raw-to-processed non-reproduction propagates to three manuscript figures and `scotus_spectral_results.json`.
-6. **GDELT’s CSV header is corrected, while the data README remains stale.** `gdelt_per_axis.csv` and its raw header name GDELT 1.0’s public file server. `Paper/data/README.md` still describes GKG v2/BigQuery and calls the committed file a placeholder. The brief is correct about the CSV header and incomplete about the remaining documentation conflict.
-7. **The NYT path is incomplete.** `Paper/data/raw/nyt_per_axis_raw.csv` is a bare zero-filled table with no provenance header, and the processed `Paper/data/nyt_per_axis.csv` named in the README and preprocessor is absent.
-8. **No reproduction claim was inferred from static code.** Every producer capable of a fresh equality test writes into tracked data or figure directories. Each untested row is `NOT RUN`. `NO` is limited to the confirmed SCOTUS mismatch and artifacts whose provenance chain directly inherits it; none was rerun.
-9. **Figure scope judgment.** The figure table includes all 87 labeled figure environments containing `includegraphics`, PGFPlots, or embedded coordinates, plus the fitted-pole plot, Zachary-network simulation, and hand-coded historical-compounding bars. Pure flowcharts, set diagrams, maps without plotted empirical layers, and decorative figures are excluded.
-10. **Systemic pattern.** The dominant failure is an absent transformation layer between source citation and committed number. A bibliography entry identifies an authority; it does not identify the selection, transcription, interpolation, normalization, scoring, or aggregation that created the artifact.
+1. **The manuscript contains three inconsistent tier definitions.** At `Paper/The_Original_Power.tex:243`: “Tier 1: peer-reviewed quantitative; Tier 2: public dataset with disclosed computation; Tier 3: ordinal or structural estimate.” At line 306: “Tier 1 = multi-source quantitative alignment in-text; Tier 2 = mixed quantitative + structural diagnostics; Tier 3 = structurally supported but data-fragmented comparative estimate.” The operative specification at lines 308–315 states: “A Tier 1 claim is calibrated against at least one peer-reviewed source or public dataset carrying a DOI or stable URL; the numerical result is either directly reported in that source or is directly and transparently derivable from its published figures. The reader can verify the number without performing any undisclosed analytical step”; “A Tier 2 claim uses a publicly accessible dataset, but the author performs the operationalisation and computation; the method is disclosed in the case study or footnote so that a reader possessing the same dataset can reproduce the result”; and “A Tier 3 claim is an ordinal ordering or structural relationship for which no quantitative calibration is possible or is attempted. The ordinal basis and its limits are explicitly stated in the text.” Neither one-line definition matches that operative specification.
+
+2. **The brief’s index count is stale.** `Paper/empirical_index.tex` currently contains 33 T1 and 39 T2 rows, for 72 total. The stated 34 T1 / 39 T2 / 73 total is wrong.
+3. **The spatial empirical layer is substantially synthetic.** `fetch_spatial_data.py:15-16,609-634,721-760,830-858,878-902` generates modeled EJScreen-like values, synthetic firearm incidents, static modeled CDC rates, and modeled PPI-like incarceration rates. These inputs feed six city maps, six merged panels, a pooled panel, and T1-linked spatial claims. The file headers disclose much of this; the manuscript’s empirical statistics and GVA-derived language do not consistently carry that disclosure.
+4. **Provenance headers are exceptional.** Most curated equation CSVs, result CSV/JSON files, raw exports, ACS files, and parquet files omit a producer even where a likely writer exists elsewhere. This audit records the writer only when a direct output statement or an in-file producer field was found; missing self-provenance still breaks the file-level chain.
+5. **Current-label traceability is sparse.** Only `eq:6.6`, `eq:6.10`, `eq:6.11`, and `eq:10.5` have explicit current equation labels inside a producer notebook. Similar notebook filenames and old labels were not treated as proof.
+6. **SCOTUS corpus cardinalities disagree.** The data README says 57 PDFs/opinions in several places, `scotus_keyword_counts.csv` says 55 opinions, `scotus_spectral_results.json` says 55 PDFs, and the manuscript’s Lomb–Scargle caption says 57 PDFs. The known raw-to-processed non-reproduction propagates to three manuscript figures and `scotus_spectral_results.json`.
+7. **GDELT’s CSV header is corrected, while the data README remains stale.** `gdelt_per_axis.csv` and its raw header name GDELT 1.0’s public file server. `Paper/data/README.md` still describes GKG v2/BigQuery and calls the committed file a placeholder. The brief is correct about the CSV header and incomplete about the remaining documentation conflict.
+8. **The NYT path is incomplete.** `Paper/data/raw/nyt_per_axis_raw.csv` is a bare zero-filled table with no provenance header, and the processed `Paper/data/nyt_per_axis.csv` named in the README and preprocessor is absent.
+9. **No reproduction claim was inferred from static code.** Every producer capable of a fresh equality test writes into tracked data or figure directories. Each untested row is `NOT RUN`. `NO` is limited to the confirmed SCOTUS mismatch and artifacts whose provenance chain directly inherits it; none was rerun.
+10. **Figure scope judgment.** The figure table includes all 87 labeled figure environments containing `includegraphics`, PGFPlots, or embedded coordinates, plus the fitted-pole plot, Zachary-network simulation, and hand-coded historical-compounding bars. Pure flowcharts, set diagrams, maps without plotted empirical layers, and decorative figures are excluded.
+11. **Systemic pattern.** The dominant failure is an absent transformation layer between source citation and committed number. A bibliography entry identifies an authority; it does not identify the selection, transcription, interpolation, normalization, scoring, or aggregation that created the artifact.
+12. **Tier-rescoring judgment.** Directly reported published values and transparent arithmetic on those values support T1 even when the anchor is a scholarly monograph and no producer is necessary. Disclosed author operationalisation of public material supports T2. Structural relationships without quantitative calibration support T3. This restored T1 support to the Morgan, James, Firmin, Angwin, and ACLU-anchored rows where the printed result is direct or transparent, and restored T2 support to disclosed author computations that the first pass had reduced to T3. Existing file-header and current-label traceability findings were retained independently of tier support.
