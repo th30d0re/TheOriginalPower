@@ -28,7 +28,39 @@ design claim. Tested: a round built on function alone won both clashes and still
 lower, because "a monopoly on force serves the status quo" is contestable philosophy while
 "here is the 1704 statute" is not. Say 1704 in your **opening**, every time.
 
-**~26 seconds. Do not add to it.**
+### ⭐ VERSION A — THE WHO-PAYS ARC *(~22s, strongest)*
+
+> Officers save lives. That's real. The motion is about the institution.
+>
+> South Carolina, 1704: slave patrols written into law — duty compulsory for white men who
+> owned no slaves. Poor men conscripted to guard rich men's property.
+>
+> Then Pennsylvania: coal companies paid their own police to break strikes. Then the state
+> took that job over, on the public's bill.
+>
+> **Conscripted, privately paid, publicly funded. The job never changed. Only who pays.**
+
+🔢 **1704 is your only spoken date.** "Then Pennsylvania… then the state" carries the arc
+without 1865 and 1905, which removes two fumble points. Keep the years in your pocket for
+if they challenge you: Coal and Iron Police chartered 1865, Pennsylvania State Police 1905.
+
+**Why this is the strongest opener available.** It does four things at once: establishes
+origin (the motion's actual claim), pre-empts "that's only the South," makes the class
+mechanism explicit without a word of framework vocabulary, and lands on a compression that
+*is* the resolution. And it answers the question nobody asks out loud — how a private
+security function became a public expense. The elite stopped paying for it. We started.
+
+⚠ Costs you the monopoly-on-force pre-emption. Move that to your rebuttal — it still works
+there, since they say the phrase every round.
+⚠ Verify the 1905 Pennsylvania State Police detail before going live. Created after the 1902
+anthracite strike; labor called them the Coal and Iron Police in new uniforms.
+
+**Alternative compression for the last beat:**
+> "First they made you serve. Then they paid for it themselves. Then they got you to pay for it."
+
+---
+
+### VERSION B — THE PRE-EMPT *(~26s, use when you want them boxed early)*
 
 > Up front: individual officers save lives. That's real and I won't dispute it. But the
 > motion is about the institution, not the people.
@@ -41,9 +73,9 @@ lower, because "a monopoly on force serves the status quo" is contestable philos
 > force. Listen for that phrase. A monopoly on force, maintaining an existing arrangement,
 > is the motion. They'll be agreeing with me.
 
-**The pre-emption is the strongest move here.** Their opener has been near-identical three
-rounds running and "legal monopoly on force" appears every time. Naming it first means they
-either say it anyway and look caught, or abandon their own opening. Both are yours.
+Their opener has been near-identical every round and "legal monopoly on force" appears in
+all of them. Naming it first means they either say it anyway and look caught, or abandon
+their own opening.
 
 **Why the Supreme Court is NOT in the opener.** The bait is engineered so their escape hatch
 — *"that's the past, modern policing is different"* — walks them into a **2005** ruling.
@@ -75,6 +107,23 @@ pre-loaded.
 
 That last one is their standard closing and the answer is the sharpest thing on this card.
 **A failure is a deviation from the mandate. Gonzales was the mandate working as written.**
+
+---
+
+## 🗳 "DEMOCRATIC OVERSIGHT" — their live thread, never answered
+
+They have said this in **every single opener** across every round and you have not answered
+it once. A judge flagged it: *"not fully addressing how modern democratic oversight alters
+the original purpose they established."*
+
+> "Oversight changes who watches. It doesn't change what the institution is obligated to do
+> — and the answer to that is still nothing. You can democratize the supervision of a
+> function without changing the function."
+
+**If they press with review boards and consent decrees:**
+> "Consent decrees are a good example. A department gets caught, agrees to reforms, complies
+> for a few years, and the decree lifts. The oversight is real and it's temporary. The
+> obligation underneath never changed, because there isn't one."
 
 ---
 
@@ -434,11 +483,26 @@ mid-story drains its force.
 
 ---
 
-## Closing — 3 sentences, 15 seconds
+## Closing — TWO beats, not three
 
-1. *"The Supreme Court says there's no duty to protect. That's not my argument, that's the holding."*
-2. *"Slave patrols in 1704, strikebreakers on a corporate payroll in 1865. The record is written down."*
-3. *"An institution is defined by what it's obligated to do. This one is obligated to keep order — and it's very good at that."*
+⚠ A judge marked a three-beat closing as **"slightly fragmented."** Three separate points
+read as a list. Two connected ones read as an argument.
+
+**Beat 1 — the mandate, then the story as its proof:**
+> "They call these deviations from the mandate. There is no mandate. Jessica Gonzales had a
+> restraining order. She called the police over and over. They wouldn't enforce it. Her
+> three daughters were murdered — and the Supreme Court ruled she had no right to have it
+> enforced. That's not a deviation. That's the rule."
+
+**Beat 2 — land slow:**
+> "The police have always protected something. It just hasn't been people. It's been capital."
+
+**Move the intent correction into your rebuttal**, where it answers something they said:
+> "They keep looking for malicious intent. I never claimed any — I've cited statutes and a
+> Supreme Court ruling. A machine doesn't need a villain."
+
+That line scored ("refusing to defend 'malicious intent'"). It just doesn't belong in the
+closing, where it competes with Gonzales instead of setting it up.
 
 ---
 
