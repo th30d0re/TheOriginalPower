@@ -248,6 +248,61 @@ maintaining an order looks like."*
 
 ---
 
+## 🔥 HARD MODE — "order prevents anarchy"
+
+**The vector easy and medium never run.** Hard mode doesn't argue that police protect
+people. It argues *order is a precondition for safety, therefore upholding the status quo
+IS protection.* That collapses your distinction instead of denying it, and it cost a full
+clash's worth of rebuttal points the first time it appeared.
+
+**Do not deny that order matters.** You lose the room and you don't need to. Attack
+*whose* order, and the false binary.
+
+> "Order matters. I'm not arguing for chaos — nobody is. The question is whose order, and
+> who it's ordered against.
+>
+> In 1704 there was order. Slavery was legal, the patrols enforced it, and the streets were
+> orderly. Order isn't the same thing as safety — it's the arrangement that exists, and
+> policing preserves whichever one it's handed. That's my motion, not a counter to it."
+
+**🏆 THE INVERSION — "anarchy for whom?"** *(your move, and it's the best answer available)*
+
+Don't dispute that anarchy is bad. Ask who's living in it. Anarchy means the absence of
+binding rules — and by that definition the people closest to a lawless state in this
+country are at the top.
+
+> "Preventing anarchy for whom? Anarchy means no binding rules. So look at who actually
+> lives that way. One senior banker went to prison over the 2008 crash. One. The Epstein
+> associates were never charged. Meanwhile the most heavily policed neighborhoods in America
+> are the poorest ones.
+>
+> The police don't prevent anarchy. They *distribute* it. Anarchy at the top, law at the
+> bottom."
+
+**Then close the loop to origin — this is what makes it a structural claim, not a complaint:**
+> "And that's not a malfunction. Pennsylvania's Coal and Iron Police were paid directly by
+> the mining companies. The structure served capital from the start. It still allocates
+> the same way."
+
+⚠ **Lead with the 2008 banker, not Epstein.** "One banker went to prison" cannot be
+countered by naming a conviction. "Nobody was prosecuted in the Epstein files" dies to
+"Maxwell got twenty years." Epstein is the second example, never the first.
+
+**The false-binary move, if you need a third beat:**
+> "They're offering a choice between this institution and total anarchy. Those aren't the
+> only two states. Plenty of countries police less than we do and have less violence than
+> we do. The question isn't order or chaos — it's which order, maintained how."
+
+**The precondition trap, if they press it:**
+> "If order is a precondition for safety, then order is the product and safety is the
+> hoped-for byproduct. That's exactly what I said: the institution is built to produce
+> order. Whether safety follows depends on who the order is for — and the Court has already
+> told us it isn't owed to you."
+
+That last one converts their strongest argument into a concession. Fish for it.
+
+---
+
 ## 🛡 PRE-EMPT THE COUNTER — "that's only the South"
 
 **This is the attack that gets the slave-patrol argument discounted.** Do not wait for it.
@@ -332,6 +387,24 @@ resolution outright.
 | Chicago summer jobs — violent-crime arrests ⚠ | ~40% reduction |
 | Street lighting — nighttime index crime ⚠ | ~30%+ reduction |
 | Uvalde — officers on scene / delay ⚠ | 376 / ~77 min |
+
+---
+
+## ⚖️ SELECTIVE PROSECUTION *(you improvised this — tighten it before medium)*
+
+Lands well. As delivered it is falsifiable in one sentence.
+
+❌ **"Nobody is being prosecuted in the Epstein files."** Ghislaine Maxwell was convicted
+and is serving twenty years. A sharp opponent ends the exchange with that.
+
+✅ **Say the structural version instead:**
+> "Ask which crimes actually get solved. Burglary clearance is thirteen percent. Half of
+> murders go unsolved. But when the accused are wealthy and connected — the Epstein
+> associates, the 2008 bankers — the apparatus goes quiet. That's not incompetence. Capacity
+> follows who's being investigated."
+
+Not attackable by naming one conviction, and it makes the point sharper: the institution
+has capacity, and the capacity is allocated.
 
 ---
 
