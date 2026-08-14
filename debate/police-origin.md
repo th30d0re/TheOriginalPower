@@ -23,41 +23,107 @@ obligated to do.** Both have paper. Neither depends on anyone's character.
 
 ## 🪤 THE TRAP OPENER ⭐
 
-> Let me concede something up front. Individual officers save lives. People run toward
-> danger in that uniform and that's real — I'm not disputing it for a second.
->
-> So the question isn't the people. It's what the institution was built to do. South
-> Carolina wrote slave patrols into law in 1704 — and made patrol duty compulsory for white
-> men who owned no slaves at all. Poor men conscripted to police the enslaved, on behalf of
-> the people who owned them.
->
-> And the obligation question is already settled. The Supreme Court has ruled police have no
-> constitutional duty to protect any individual. Warren v. DC. Castle Rock v. Gonzales.
->
-> My opponent is about to tell you protection is the whole point. Ask them why the courts
-> disagree.
+🚨 **ORIGIN LEADS. FUNCTION SUPPORTS.** The motion is "was not **made** to protect" — a
+design claim. Tested: a round built on function alone won both clashes and still scored
+lower, because "a monopoly on force serves the status quo" is contestable philosophy while
+"here is the 1704 statute" is not. Say 1704 in your **opening**, every time.
 
-**Why this works:** the concession disarms the emotional defense before it's deployed, then
-you produce a legal fact they cannot dispute, only reframe. And it forces them onto duty —
-the ground where you have case law and they have sentiment.
+**~26 seconds. Do not add to it.**
+
+> Up front: individual officers save lives. That's real and I won't dispute it. But the
+> motion is about the institution, not the people.
+>
+> South Carolina wrote slave patrols into law in 1704 — patrol duty compulsory for white men
+> who owned no slaves. Poor men conscripted to police the enslaved, for the people who owned
+> them.
+>
+> My opponent is going to say the social contract, and that police hold a legal monopoly on
+> force. Listen for that phrase. A monopoly on force, maintaining an existing arrangement,
+> is the motion. They'll be agreeing with me.
+
+**The pre-emption is the strongest move here.** Their opener has been near-identical three
+rounds running and "legal monopoly on force" appears every time. Naming it first means they
+either say it anyway and look caught, or abandon their own opening. Both are yours.
+
+**Why the Supreme Court is NOT in the opener.** The bait is engineered so their escape hatch
+— *"that's the past, modern policing is different"* — walks them into a **2005** ruling.
+Let them commit to the modern-day claim first. Then:
+
+> "They said modern policing protects people. In 2005 a woman named Jessica Gonzales had a
+> restraining order. She called the police over and over. They wouldn't enforce it. He
+> murdered all three of her daughters — and the Supreme Court ruled she had no right to have
+> that order enforced. That's not 1704. That's the institution today."
+
+Opening with the case law spends your kill on a turn where nothing is set up. Held back, it
+lands on a claim they just made.
+
+---
+
+## 🔮 THEIR SCRIPT — near-verbatim across three rounds
+
+They are deterministic. Every line below has appeared in their opener repeatedly. Answers
+pre-loaded.
+
+| They say | You say |
+|---|---|
+| "designed to provide public safety and **maintain the social contract**" | "A contract binds both parties. The Supreme Court says they aren't bound. That's not a contract, that's a claim." |
+| "**legal monopoly on force**, so disputes are settled by law not private violence" | "That's the motion. A monopoly on force maintaining an existing arrangement is the status quo upheld by force. They've conceded the mechanism and renamed it." |
+| "**emergency response** and crime prevention" | "Emergency response is arriving after. That's processing, not prevention." |
+| "**modern policing evolves** through democratic oversight" | "Evolution isn't design. The motion is what it was *made* for — and the ruling I'm citing is 2005." |
+| "primary **mandate** to safeguard life" | "There isn't one." → Gonzales |
+| *(closing)* "failures don't define purpose — **imperfect execution**" | "Gonzales wasn't a failure. The Court ruled the police acted within their obligations. You can't call it imperfect execution when it *is* the rule." |
+
+That last one is their standard closing and the answer is the sharpest thing on this card.
+**A failure is a deviation from the mandate. Gonzales was the mandate working as written.**
+
+---
+
+## 🚨 NAME THE CONFLATION — say it out loud, every time
+
+They will argue: *officers save lives → therefore the institution's purpose is protection.*
+That is individual conduct standing in for institutional purpose, and judges score it when
+you **name** it. Do not just imply the distinction by citing law.
+
+> "That's a swap. I conceded the *people* — I said it first. They're using that concession
+> to make a claim about the *institution*. Those are different things. Soldiers are brave
+> too; that tells you nothing about why an army exists."
+
+Say this **before** the case law, not after. The naming is the argument; the cases are the
+proof.
 
 ---
 
 ## THE KILL SHOT — no legal duty to protect
 
-Most opponents have never heard this and cannot answer it live.
+🗣 **TELL THE STORY. NEVER SAY THE CASE NAME.** Fumbling "Castle Rock v. Gonzales" costs
+fluency and drains all the emotional force out of your single most powerful fact. The names
+belong on this card, not in your mouth.
 
-- **Warren v. District of Columbia (1981)** — three women, fourteen hours of assault after
-  repeated 911 calls. Court: no general duty to provide police protection to any particular
-  individual.
-- **Castle Rock v. Gonzales (2005, SCOTUS)** — Jessica Gonzales had a restraining order.
-  Police repeatedly declined to enforce it. Her three daughters were murdered. The Supreme
-  Court ruled she had no constitutional right to enforcement.
-- **DeShaney v. Winnebago County (1989, SCOTUS)** — no affirmative duty to protect an
-  individual from private violence.
+**Say this:**
+> "In 2005 a woman named Jessica Gonzales had a restraining order against her estranged
+> husband. She called the police over and over. They wouldn't enforce it. He murdered all
+> three of her daughters. She sued — and the Supreme Court ruled she had no constitutional
+> right to have that order enforced. No duty to protect her. No duty to protect her children.
+>
+> If protection were the purpose of the institution, that ruling would be impossible."
 
-> "If protection were the purpose of the institution, those rulings would be impossible.
-> You cannot have a duty you cannot be held to. The courts didn't invent that — they
+That is more emotionally powerful than anything the other side has, and it is *also* your
+strongest evidence. Persuasiveness has been your lowest score in every round — this is where
+you fix it.
+
+**Never say more than "the Supreme Court has ruled twice."** Two rulings, no names, no years.
+
+**Reference only — for your eyes, not your mouth:**
+- *Warren v. District of Columbia* (1981) — three women, fourteen hours of assault after
+  repeated 911 calls. No general duty to any particular individual.
+- *Castle Rock v. Gonzales* (2005, SCOTUS) — the Jessica Gonzales case above.
+- *DeShaney v. Winnebago County* (1989, SCOTUS) — no affirmative duty to protect from
+  private violence.
+
+⚠ Three cases is one too many for a live turn. **Use Gonzales. Add "and they've ruled this
+way more than once."** That's it.
+
+> "You cannot have a duty you cannot be held to. The courts didn't invent that — they
 > described what the institution actually is."
 
 **"To Protect and to Serve" is a motto, not a mandate.** LAPD adopted it in 1955 as an
@@ -93,6 +159,92 @@ That is the buffer class in plain English. Never say "buffer class." Say the sta
 - The word *patrol* itself carries over. So does the beat, the watch, the badge
 
 > "The institution wasn't abolished and replaced. It was renamed and kept its function."
+
+---
+
+## 🏆 "LAWS ARE SPECIFICATIONS" — strongest line in the deck
+
+Won a clash outright. Deploy whenever they call a documented policy a *failure*, *mistake*,
+*outlier*, or *dark chapter*.
+
+> "They called 1704 a failure. It wasn't a failure — it was a statute. Laws aren't failures,
+> they're specifications. The patrols *were* the rule of law. Slavery was legal. So when they
+> say police uphold the rule of law, that's my sentence, not theirs."
+
+Generalizes to every motion: a statute is a statement of intent. You cannot call a written
+law an accident.
+
+---
+
+## ⚖️ IT'S LIVING LAW, NOT COLONIAL TRIVIA
+
+🚨 **DEPLOY THIS IN YOUR REBUTTAL, NOT YOUR CLOSING.** Judges have twice flagged that the
+1704→present bridge arrives too late. The moment they say "archaic," "colonial," or
+"centuries of reform" — this is the answer, and it saves Gonzales for later.
+⚠ **Say Gonzales once per round.** Deploying it twice has cost the closing two rounds running.
+
+Their best dismissal is *"colonial outliers"* / *"ancient laws."* Kill it by running the
+line into **present-tense law**. The bridge is the Thirteenth Amendment.
+
+> "They call this colonial trivia. The Thirteenth Amendment doesn't abolish slavery — read
+> it. 'Neither slavery nor involuntary servitude, *except as a punishment for crime.*' That
+> exception is in the Constitution right now. Today. The patrols didn't end in 1865; they
+> got a constitutional carve-out, and then the Black Codes made unemployment a crime so
+> there'd be something to convict people of. That's not history. That's the operating
+> document."
+
+**The chain, said fast:** 1704 patrols → 1865 exception clause → Black Codes → convict
+leasing → Ferguson. Every link is a statute or a federal finding.
+
+---
+
+## 💰 REVENUE POLICING — Ferguson is your best modern fact
+
+The US Department of Justice investigated Ferguson and found the police department was run
+to generate city revenue rather than to serve public safety. Fines and fees were the city's
+second-largest revenue source, and officials pressured command staff to raise citation
+output.
+
+> "This isn't my characterization. The Justice Department investigated a police department
+> and concluded it was being operated as a revenue engine, not a safety service. A federal
+> finding, 2015. That's the motion, in a government report."
+
+**Supporting, if they push:**
+- **Arrest quotas** — at least a dozen states have passed laws *banning* them ⚠. "You don't
+  legislate against something that doesn't exist."
+- **Civil asset forfeiture** — police seize property without a conviction ⚠
+- **Occupancy guarantees** — private prison contracts obligating the state to pay for empty
+  beds ⚠
+
+🚨 **Do NOT assert "quotas exist to fill prison-backed bonds for Wall Street."** The pieces
+are each real; the causal chain is not documented as one mechanism, and a judge will file
+the whole thing as conspiracy and discount your solid evidence with it. **Lay the facts side
+by side and let them draw the line** — that's your own method: example, example, example,
+until they pattern-match it themselves.
+
+---
+
+## 🎯 THEY DON'T PREVENT CRIME — they process it
+
+**Their strongest argument is function: "regardless of obligation, police protect people."**
+You have beaten the mandate claim twice and never touched this one. Answer it structurally.
+
+> "Take the legal question off the table entirely and just ask whether the institution is
+> built to prevent harm. It isn't — it's built to arrive after. About half of murders go
+> unsolved. Burglary clearance is around thirteen percent. An institution designed to
+> prevent crime would be organized around what actually prevents it."
+
+**Then name what does** — this is where you win persuasiveness, because it's constructive:
+> "We know what reduces violent crime, because it's been measured. Summer jobs programs cut
+> violent-crime arrests among participants by roughly forty percent. Street lighting cut
+> nighttime crime by about a third. Lead abatement. Stable housing. None of that is
+> policing. If prevention were the purpose, that's where the money would be. It isn't —
+> which tells you what the purpose is."
+
+⚠ Verify the two program figures before going live.
+
+**The compression:** *"Police don't prevent crime. They process it. And processing is what
+maintaining an order looks like."*
 
 ---
 
@@ -171,9 +323,41 @@ resolution outright.
 | PA Coal and Iron Police chartered | 1865 |
 | Warren v. DC / Castle Rock v. Gonzales | 1981 / 2005 |
 | LAPD "to protect and to serve" adopted | 1955 (motto) |
+| 13th Amendment exception clause — still current law | "except as a punishment for crime" |
+| DOJ Ferguson report — revenue policing finding | 2015 |
+| States with laws banning arrest/citation quotas ⚠ | 12+ |
 | Murder clearance rate ⚠ | ~50% |
 | Burglary clearance rate ⚠ | ~13% |
+| Officer time spent on violent crime ⚠ | ~4% (analyses of dispatch data) |
+| Chicago summer jobs — violent-crime arrests ⚠ | ~40% reduction |
+| Street lighting — nighttime index crime ⚠ | ~30%+ reduction |
 | Uvalde — officers on scene / delay ⚠ | 376 / ~77 min |
+
+---
+
+## 🏆 THE THESIS LINE *(you improvised this — use it every round)*
+
+> "The police have always protected something. It just hasn't been people. It's been
+> capital. In the South that was slaves. In the North it was goods and warehouses. Same
+> function, two forms of property."
+
+Best compression of the motion available. Works as a closer or as the answer to any
+"but they protect people" turn.
+
+---
+
+## 🔢 ONLY TWO DATES — you keep mangling them
+
+Said live across rounds: **1804**, **1904** (for 1704) and **1805** (for 1865). Numbers are
+where you slip under pressure, so carry fewer.
+
+- **1704** — the only origin date you need. If it won't come out clean, say
+  *"seventy years before the Revolution."*
+- **2005** — Gonzales.
+- **Drop 1865 entirely.** Say *"right after the Civil War."* Same precision, nothing to fumble.
+
+⚠ Also: Jessica Gonzales is *she* — "**her** three daughters," "**she** sued." A pronoun slip
+mid-story drains its force.
 
 ---
 
