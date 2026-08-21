@@ -1,0 +1,509 @@
+.equations-page {
+  --equations-bg: #0b1120;
+  --equations-surface: #162033;
+  --equations-surface-raised: #1d2a40;
+  --equations-border: #475569;
+  --equations-text: #f8fafc;
+  --equations-muted: #cbd5e1;
+  min-height: 100vh;
+  padding: clamp(1.25rem, 4vw, 3.5rem);
+  background:
+    radial-gradient(circle at 10% 0%, rgba(14, 165, 233, 0.12), transparent 30rem),
+    radial-gradient(circle at 90% 18%, rgba(168, 85, 247, 0.1), transparent 32rem),
+    var(--equations-bg);
+  color: var(--equations-text);
+}
+
+.equations-hero,
+.equation-card-stack {
+  width: min(100%, 1120px);
+  margin-inline: auto;
+}
+
+.equations-hero {
+  padding: clamp(1rem, 3vw, 2rem) 0 clamp(2rem, 5vw, 4rem);
+}
+
+.equations-hero h1 {
+  margin: 0.35rem 0 0.8rem;
+  font-size: clamp(2.35rem, 6vw, 5.4rem);
+  letter-spacing: -0.055em;
+  line-height: 0.98;
+}
+
+.equations-hero > p:last-child {
+  max-width: 66rem;
+  color: var(--equations-muted);
+  font-size: clamp(1rem, 2vw, 1.22rem);
+  line-height: 1.65;
+}
+
+.equation-card-stack {
+  display: grid;
+  gap: clamp(1.5rem, 4vw, 3rem);
+}
+
+.equation-card {
+  overflow: hidden;
+  border: 1px solid var(--equations-border);
+  border-radius: 18px;
+  background: color-mix(in srgb, var(--equations-surface) 94%, transparent);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.22);
+}
+
+.equation-card-header,
+.equation-terms,
+.equation-decoder,
+.equation-context {
+  padding: clamp(1.2rem, 3vw, 2.25rem);
+}
+
+.equation-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+  border-bottom: 1px solid var(--equations-border);
+}
+
+.equation-card-header h2 {
+  margin: 0.3rem 0 0.45rem;
+  font-size: clamp(1.45rem, 3vw, 2.2rem);
+  line-height: 1.15;
+}
+
+.equation-card-number,
+.equation-section-label {
+  color: #7dd3fc;
+  font-size: 0.73rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.equation-provenance {
+  color: var(--equations-muted);
+  font-size: 0.84rem;
+  line-height: 1.5;
+}
+
+.equation-badges {
+  display: flex;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.55rem;
+}
+
+.equations-page .status-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2rem;
+  padding: 0.4rem 0.7rem;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.equation-category {
+  color: #c4b5fd;
+  background: rgba(196, 181, 253, 0.1);
+}
+
+.equation-tier.tier-1 { color: #86efac; background: rgba(134, 239, 172, 0.1); }
+.equation-tier.tier-2 { color: #fde047; background: rgba(253, 224, 71, 0.1); }
+.equation-tier.tier-3 { color: #fca5a5; background: rgba(252, 165, 165, 0.1); }
+
+.equation-display {
+  overflow-x: auto;
+  padding: clamp(1.5rem, 5vw, 3.75rem) clamp(1rem, 3vw, 2rem);
+  border-bottom: 1px solid var(--equations-border);
+  background: color-mix(in srgb, var(--equations-bg) 60%, var(--equations-surface));
+  text-align: center;
+}
+
+.equation-display .katex-display {
+  margin: 0;
+}
+
+.equation-display .katex {
+  font-size: clamp(1rem, 2.6vw, 1.65rem);
+}
+
+.equation-symbol {
+  padding: 0.07em 0.03em;
+  border-radius: 0.16em;
+  transition: background 150ms ease, outline 150ms ease;
+}
+
+.equation-symbol.is-selected {
+  background: color-mix(in srgb, var(--symbol-color) 22%, transparent);
+  outline: 2px solid var(--symbol-color);
+  outline-offset: 2px;
+}
+
+.equation-terms {
+  border-bottom: 1px solid var(--equations-border);
+}
+
+.term-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 0.8rem;
+}
+
+.term-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.7rem;
+  padding: 0.45rem 0.75rem;
+  border: 1px solid color-mix(in srgb, var(--symbol-color) 60%, var(--equations-border));
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--symbol-color) 9%, var(--equations-surface-raised));
+  color: var(--symbol-color);
+  font-size: 0.8rem;
+  font-weight: 720;
+  text-align: left;
+}
+
+.term-chip:hover,
+.term-chip:focus-visible,
+.term-chip.is-selected {
+  border-width: 2px;
+  background: color-mix(in srgb, var(--symbol-color) 18%, var(--equations-surface-raised));
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--symbol-color) 20%, transparent);
+  transform: translateY(-1px);
+}
+
+.term-chip:focus-visible,
+.decoder-toggle button:focus-visible,
+.equation-sources a:focus-visible {
+  outline: 3px solid var(--equations-text);
+  outline-offset: 3px;
+}
+
+.term-chip-index {
+  display: grid;
+  width: 1.35rem;
+  aspect-ratio: 1;
+  place-items: center;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  font-size: 0.65rem;
+}
+
+.term-chip-symbol .katex {
+  font-size: 1.08em;
+}
+
+.equation-decoder {
+  border-bottom: 1px solid var(--equations-border);
+}
+
+.decoder-heading-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.decoder-heading-row h3,
+.equation-term-detail h3 {
+  margin-top: 0.35rem;
+  font-size: 1.2rem;
+}
+
+.decoder-toggle {
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+  flex: 0 0 auto;
+  padding: 0.2rem;
+  border: 1px solid var(--equations-border);
+  border-radius: 9px;
+  background: var(--equations-bg);
+}
+
+.decoder-toggle button {
+  min-height: 2.3rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--equations-muted);
+  font-size: 0.78rem;
+  font-weight: 750;
+}
+
+.decoder-toggle button[aria-pressed='true'] {
+  background: var(--equations-surface-raised);
+  color: var(--equations-text);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.decoder-copy {
+  margin-top: 1.15rem;
+  color: var(--equations-text);
+  font-size: clamp(1.05rem, 2vw, 1.28rem);
+  line-height: 1.85;
+}
+
+.decoder-symbol {
+  border-radius: 0.2rem;
+  color: var(--symbol-color);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--symbol-color) 48%, transparent);
+  text-decoration-thickness: 0.1em;
+  text-underline-offset: 0.16em;
+}
+
+.decoder-symbol.is-selected {
+  padding: 0.08em 0.16em;
+  background: color-mix(in srgb, var(--symbol-color) 18%, transparent);
+  outline: 2px solid var(--symbol-color);
+  outline-offset: 1px;
+  text-decoration-thickness: 0.16em;
+}
+
+.manuscript-copy {
+  padding-left: 1.1rem;
+  border-left: 4px solid #7dd3fc;
+  color: var(--equations-muted);
+}
+
+.manuscript-copy cite {
+  display: block;
+  margin-top: 0.8rem;
+  color: #7dd3fc;
+  font-size: 0.78rem;
+  font-style: normal;
+  font-weight: 750;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.manuscript-math {
+  margin-inline: 0.1em;
+  color: var(--equations-text);
+}
+
+.decoder-disabled-reason {
+  margin-top: 0.75rem;
+  color: var(--equations-muted);
+  font-size: 0.86rem;
+}
+
+.equation-term-detail {
+  display: grid;
+  grid-template-columns: minmax(5rem, 0.22fr) 1fr;
+  gap: clamp(1rem, 3vw, 2rem);
+  align-items: center;
+  padding: clamp(1.2rem, 3vw, 2rem);
+  border-bottom: 1px solid var(--equations-border);
+  border-left: 5px solid var(--symbol-color);
+  background: color-mix(in srgb, var(--symbol-color) 7%, var(--equations-surface-raised));
+}
+
+.term-detail-symbol {
+  display: grid;
+  min-height: 5rem;
+  place-items: center;
+  border: 1px solid color-mix(in srgb, var(--symbol-color) 55%, var(--equations-border));
+  border-radius: 12px;
+  color: var(--symbol-color);
+  background: color-mix(in srgb, var(--symbol-color) 8%, var(--equations-bg));
+}
+
+.term-detail-symbol .katex-display {
+  margin: 0;
+}
+
+.equation-term-detail p:not(.equation-section-label) {
+  margin-top: 0.55rem;
+  color: var(--equations-muted);
+  line-height: 1.6;
+}
+
+.term-meta strong {
+  color: var(--equations-text);
+}
+
+.term-source-note {
+  font-size: 0.8rem;
+}
+
+.equation-context {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.equation-context > div:not(.equation-sources),
+.falsification-box,
+.equation-sources {
+  padding: 1.1rem;
+  border: 1px solid var(--equations-border);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--equations-bg) 62%, var(--equations-surface));
+}
+
+.equation-context p:not(.equation-section-label) {
+  margin-top: 0.55rem;
+  color: var(--equations-muted);
+  line-height: 1.65;
+}
+
+.falsification-box {
+  grid-column: 1 / -1;
+  border-width: 2px;
+  border-color: #fca5a5;
+  background: linear-gradient(110deg, rgba(252, 165, 165, 0.12), transparent 62%), var(--equations-bg);
+  box-shadow: inset 5px 0 #fca5a5;
+}
+
+.falsification-box .equation-section-label {
+  color: #fca5a5;
+}
+
+.falsification-box p:last-child {
+  color: var(--equations-text);
+  font-size: 1.02rem;
+  font-weight: 650;
+}
+
+.equation-sources {
+  grid-column: 1 / -1;
+}
+
+.equation-sources ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 0.7rem;
+  list-style: none;
+}
+
+.equation-sources a,
+.citation-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 2.35rem;
+  padding: 0.35rem 0.65rem;
+  border: 1px solid var(--equations-border);
+  border-radius: 999px;
+  color: var(--equations-muted);
+  background: var(--equations-surface-raised);
+  font-size: 0.76rem;
+  line-height: 1.35;
+  text-decoration: none;
+}
+
+.equation-sources a:hover {
+  border-color: #7dd3fc;
+  color: var(--equations-text);
+}
+
+.equation-sources a > span,
+.citation-chip > span {
+  display: grid;
+  flex: 0 0 auto;
+  width: 1.35rem;
+  aspect-ratio: 1;
+  place-items: center;
+  border-radius: 50%;
+  background: #075985;
+  color: #f8fafc;
+  font-size: 0.65rem;
+  font-weight: 850;
+}
+
+.equation-symbol-color-0 { --symbol-color: #7dd3fc; color: var(--symbol-color); }
+.equation-symbol-color-1 { --symbol-color: #fca5a5; color: var(--symbol-color); }
+.equation-symbol-color-2 { --symbol-color: #fde047; color: var(--symbol-color); }
+.equation-symbol-color-3 { --symbol-color: #86efac; color: var(--symbol-color); }
+.equation-symbol-color-4 { --symbol-color: #c4b5fd; color: var(--symbol-color); }
+.equation-symbol-color-5 { --symbol-color: #fdba74; color: var(--symbol-color); }
+.equation-symbol-color-6 { --symbol-color: #f9a8d4; color: var(--symbol-color); }
+.equation-symbol-color-7 { --symbol-color: #a5f3fc; color: var(--symbol-color); }
+.equation-symbol-color-8 { --symbol-color: #d9f99d; color: var(--symbol-color); }
+.equation-symbol-color-9 { --symbol-color: #e2e8f0; color: var(--symbol-color); }
+.equation-symbol-color-10 { --symbol-color: #93c5fd; color: var(--symbol-color); }
+.equation-symbol-color-11 { --symbol-color: #f0abfc; color: var(--symbol-color); }
+.equation-symbol-color-12 { --symbol-color: #bef264; color: var(--symbol-color); }
+.equation-symbol-color-13 { --symbol-color: #fda4af; color: var(--symbol-color); }
+
+@media (prefers-color-scheme: light) {
+  .equations-page {
+    --equations-bg: #f8fafc;
+    --equations-surface: #ffffff;
+    --equations-surface-raised: #f1f5f9;
+    --equations-border: #94a3b8;
+    --equations-text: #0f172a;
+    --equations-muted: #334155;
+  }
+
+  .equation-card-number,
+  .equation-section-label,
+  .manuscript-copy cite {
+    color: #075985;
+  }
+
+  .equation-category { color: #5b21b6; background: rgba(91, 33, 182, 0.08); }
+  .equation-tier.tier-1 { color: #166534; background: rgba(22, 101, 52, 0.08); }
+  .equation-tier.tier-2 { color: #854d0e; background: rgba(133, 77, 14, 0.08); }
+  .equation-tier.tier-3 { color: #991b1b; background: rgba(153, 27, 27, 0.08); }
+  .falsification-box { border-color: #991b1b; box-shadow: inset 5px 0 #991b1b; }
+  .falsification-box .equation-section-label { color: #991b1b; }
+
+  .equation-symbol-color-0 { --symbol-color: #075985; }
+  .equation-symbol-color-1 { --symbol-color: #991b1b; }
+  .equation-symbol-color-2 { --symbol-color: #854d0e; }
+  .equation-symbol-color-3 { --symbol-color: #166534; }
+  .equation-symbol-color-4 { --symbol-color: #5b21b6; }
+  .equation-symbol-color-5 { --symbol-color: #9a3412; }
+  .equation-symbol-color-6 { --symbol-color: #9d174d; }
+  .equation-symbol-color-7 { --symbol-color: #155e75; }
+  .equation-symbol-color-8 { --symbol-color: #3f6212; }
+  .equation-symbol-color-9 { --symbol-color: #334155; }
+  .equation-symbol-color-10 { --symbol-color: #1d4ed8; }
+  .equation-symbol-color-11 { --symbol-color: #86198f; }
+  .equation-symbol-color-12 { --symbol-color: #4d7c0f; }
+  .equation-symbol-color-13 { --symbol-color: #9f1239; }
+}
+
+@media (max-width: 720px) {
+  .equation-card-header,
+  .decoder-heading-row {
+    flex-direction: column;
+  }
+
+  .equation-badges {
+    justify-content: flex-start;
+  }
+
+  .decoder-toggle {
+    width: 100%;
+  }
+
+  .equation-term-detail,
+  .equation-context {
+    grid-template-columns: 1fr;
+  }
+
+  .falsification-box,
+  .equation-sources {
+    grid-column: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .equation-symbol,
+  .term-chip {
+    transition: none;
+  }
+}
