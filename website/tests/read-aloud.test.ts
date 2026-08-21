@@ -1,6 +1,25 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
+import { orderByDocumentElements } from '../src/videolab/readAloudOrder.ts';
 import { latexToSpeech } from '../src/videolab/speechText.ts';
+
+test('group play order follows document position when registration order differs', () => {
+  const first = { fixtureId: 'first-in-document' };
+  const second = { fixtureId: 'second-in-document' };
+  const third = { fixtureId: 'third-in-document' };
+  const played: string[] = [];
+  const registrationOrder = [
+    { id: 'third', element: third, play: () => played.push('third') },
+    { id: 'first', element: first, play: () => played.push('first') },
+    { id: 'second', element: second, play: () => played.push('second') },
+  ];
+
+  const readers = orderByDocumentElements(registrationOrder, [first, second, third]);
+  readers.forEach((reader) => reader.play());
+
+  assert.deepEqual(played, ['first', 'second', 'third']);
+  assert.notDeepEqual(played, registrationOrder.map((reader) => reader.id));
+});
 
 test('converts the conjugate equation into clean spoken words', () => {
   const spoken = latexToSpeech('Therefore $W + W^{*} = 2\\psi_m$ under solidarity.');

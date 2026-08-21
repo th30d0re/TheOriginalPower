@@ -4,6 +4,7 @@ import { Link, useParams } from 'react-router-dom';
 import TierLadder from '../story/visuals/TierLadder';
 import LatexProse from './LatexProse';
 import ReadAloud from './ReadAloud';
+import { ReadAloudGroup } from './ReadAloud';
 import type { WordHighlight } from './ReadAloud';
 import { latexToSpeech, splitIntoSentences } from './speechText';
 import { conceptDefinition } from './conceptRegistry';
@@ -69,9 +70,9 @@ function SpokenHighlight({ sentence, words }: { sentence: string; words: WordHig
   return <>{spoken.slice(0, start)}<mark className="read-aloud-word">{spoken.slice(start, end)}</mark>{spoken.slice(end)}</>;
 }
 
-function ReadableValue({ value, label }: { value: unknown; label: string }) {
+function ReadableValue({ value, label, title }: { value: unknown; label: string; title: string }) {
   const sentences = valueSentences(value);
-  return <ReadAloud sentences={sentences} label={label}>{({ activeSentence, activeWords }) => {
+  return <ReadAloud sentences={sentences} label={label} title={title}>{({ activeSentence, activeWords }) => {
     let sentenceIndex = 0;
     const renderValue = (item: unknown): ReactNode => {
       if (Array.isArray(item)) return <ul>{item.map((entry, index) => <li key={index}>{renderValue(entry)}</li>)}</ul>;
@@ -196,7 +197,7 @@ export function VideolabDetail() {
     <header className="vl-detail-header"><div><p className="vl-kicker">{text(job.platform)}</p><h1>{text(job.title, job.slug)}</h1><p>{text(job.creator.display_name, text(job.creator.username, 'Unknown creator'))}</p></div><code>{job.slug}</code></header>
     <section><h2>Pipeline stages</h2><div className="vl-stage-strip">{Object.entries(stages).map(([name, value]) => { const stage = record(value); return <span className={`vl-stage vl-${text(stage.status, 'pending')}`} key={name}>{name} · {text(stage.status, 'pending')}</span>; })}</div></section>
     <section><h2>Engagement</h2><dl className="vl-metrics">{[['Likes', 'likes'], ['Comments', 'comments_count'], ['Plays', 'play_count'], ['Views', 'views'], ['Shares', 'shares'], ['Saves', 'saves']].map(([label, key]) => <div key={key}><dt>{label}</dt><dd>{job.engagement[key] === null || job.engagement[key] === undefined ? '—' : String(job.engagement[key])}</dd></div>)}</dl></section>
-    <section><h2>Transcript</h2><ReadAloud sentences={transcriptSentences} label="transcript">{({ activeSentence, activeWords }) => {
+    <section><h2>Transcript</h2><ReadAloud sentences={transcriptSentences} label="transcript" title="Transcript">{({ activeSentence, activeWords }) => {
       let sentenceIndex = 0;
       const renderSentence = (sentence: string) => {
         const current = sentenceIndex++;
@@ -207,8 +208,10 @@ export function VideolabDetail() {
     }}</ReadAloud></section>
     <section><h2>On-screen text</h2>{keptOcr.length ? keptOcr.map((row, index) => <div className="vl-timed-row" key={index}><time>[{seconds(row.t_seconds)}]</time><p>{String(row.text)}</p></div>) : <p className="vl-muted">No deduplicated OCR text is available.</p>}</section>
     <section><h2>Frames</h2><div className="vl-frames">{job.frames.map((frame, index) => <figure key={index}><img src={text(frame.file, '')} alt={`Frame at ${seconds(frame.t_seconds)}`} loading="lazy" /><figcaption>{seconds(frame.t_seconds)} · {text(frame.selected_by)}</figcaption></figure>)}</div>{job.frames.length === 0 ? <p className="vl-muted">No exported frames are available.</p> : null}</section>
-    <section><h2>Analysis</h2>{Object.entries(analysis).map(([key, value]) => <div className="vl-analysis-block" key={key}><h3>{key.replaceAll('_', ' ')}</h3><ReadableValue value={value} label={key.replaceAll('_', ' ')} /></div>)}</section>
-    <section><h2>Framework concepts</h2><div className="vl-concepts">{job.concepts.map((id) => { const concept = conceptDefinition(id); return <span className="vl-concept" title={concept.description} key={id}><strong>{concept.title}</strong><small>{concept.description}</small></span>; })}</div>{Object.entries(notes).filter(([key]) => key !== 'concepts' && key !== 'widgets').map(([key, value]) => <div className="vl-analysis-block" key={key}><h3>{key.replaceAll('_', ' ')}</h3><ReadableValue value={value} label={key.replaceAll('_', ' ')} /></div>)}</section>
+    <ReadAloudGroup>
+      <section><h2>Analysis</h2>{Object.entries(analysis).map(([key, value]) => <div className="vl-analysis-block" key={key}><h3>{key.replaceAll('_', ' ')}</h3><ReadableValue value={value} label={key.replaceAll('_', ' ')} title={key.replaceAll('_', ' ')} /></div>)}</section>
+      <section><h2>Framework concepts</h2><div className="vl-concepts">{job.concepts.map((id) => { const concept = conceptDefinition(id); return <span className="vl-concept" title={concept.description} key={id}><strong>{concept.title}</strong><small>{concept.description}</small></span>; })}</div>{Object.entries(notes).filter(([key]) => key !== 'concepts' && key !== 'widgets').map(([key, value]) => <div className="vl-analysis-block" key={key}><h3>{key.replaceAll('_', ' ')}</h3><ReadableValue value={value} label={key.replaceAll('_', ' ')} title={key.replaceAll('_', ' ')} /></div>)}</section>
+    </ReadAloudGroup>
     <AnalysisWidgets value={notes.widgets} />
     <section><h2>Tier classification</h2>{tierRows.length ? <TierLadder tiers={tierRows} /> : <p className="vl-muted">No tier classification is available.</p>}<Value value={tiers.justification} /></section>
     <footer className="vl-detail-footer">Posted {text(meta.posted_at_iso)} · Created {text(job.created_at)}</footer>

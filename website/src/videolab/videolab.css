@@ -27,6 +27,11 @@
 .vl-widget-note { margin:.35rem 0 0;color:#94a3b8;font-size:.78rem; }
 .vl-inline-math { white-space:nowrap }.vl-math-fallback { color:#fca5a5 }.vl-detail-footer { padding-top:2rem }
 .read-aloud { margin:.5rem 0 0; }
+.read-aloud.is-playing { outline:1px solid rgba(34,211,238,.55);outline-offset:.35rem;border-radius:8px }
+.read-aloud-group-controls { display:flex;flex-wrap:wrap;align-items:center;gap:1rem;margin:2rem 0 0;padding:.8rem;border:1px solid var(--bg-light);border-radius:10px;background:rgba(30,41,59,.58) }
+.read-aloud-group-controls button { min-height:2.2rem;border:1px solid var(--bg-light);border-radius:6px;background:var(--bg-dark);color:var(--text-primary);padding:.35rem .65rem }
+.read-aloud-group-controls label { display:flex;align-items:center;gap:.45rem;color:var(--text-secondary);font-size:.78rem }
+.read-aloud-group-controls input { accent-color:#22d3ee }
 .read-aloud-controls { display:flex;flex-wrap:wrap;align-items:end;gap:.65rem;margin:0 0 1rem;padding:.8rem;border:1px solid var(--bg-light);border-radius:10px;background:rgba(30,41,59,.58) }
 .read-aloud-controls button,.read-aloud-controls select { min-height:2.2rem;border:1px solid var(--bg-light);border-radius:6px;background:var(--bg-dark);color:var(--text-primary);padding:.35rem .65rem }
 .read-aloud-controls label { display:flex;align-items:center;gap:.45rem;color:var(--text-secondary);font-size:.78rem }

@@ -1,6 +1,7 @@
-import { useCallback, useEffect, useId, useRef, useState } from 'react';
-import type { ReactNode } from 'react';
+import { createContext, useCallback, useContext, useEffect, useId, useRef, useState } from 'react';
+import type { Dispatch, ReactNode, SetStateAction } from 'react';
 import { latexToSpeech } from './speechText';
+import { orderByDocumentElements } from './readAloudOrder';
 
 type PlaybackState = 'idle' | 'playing' | 'paused';
 
@@ -34,21 +35,118 @@ interface ReadAloudProps {
   sentences: string[];
   children: (state: ReadAloudRenderState) => ReactNode;
   label: string;
+  title?: string;
 }
 
 interface QueuedSentence {
-  index: number;
+  index: number | null;
   spoken: string;
 }
 
-export default function ReadAloud({ sentences, children, label }: ReadAloudProps) {
+interface ReaderRegistration {
+  id: string;
+  element: HTMLElement;
+  play: (continueThroughGroup: boolean, groupTransition: boolean) => boolean;
+  stop: () => void;
+}
+
+const CONTINUOUS_STORAGE_KEY = 'videolab:read-aloud-continuous';
+
+interface ReadAloudGroupValue {
+  rate: number;
+  setRate: Dispatch<SetStateAction<number>>;
+  voiceUri: string;
+  setVoiceUri: Dispatch<SetStateAction<string>>;
+  register: (reader: ReaderRegistration) => () => void;
+  begin: (id: string, continueThroughGroup: boolean) => void;
+  complete: (id: string) => void;
+  stopAll: () => void;
+}
+
+const ReadAloudGroupContext = createContext<ReadAloudGroupValue | null>(null);
+
+export function ReadAloudGroup({ children }: { children: ReactNode }) {
+  const readersRef = useRef(new Map<string, ReaderRegistration>());
+  const chainRef = useRef({ active: false, continueThroughGroup: false, currentId: '' });
+  const [rate, setRate] = useState(1);
+  const [voiceUri, setVoiceUri] = useState('');
+  const [continuous, setContinuous] = useState(() => {
+    try {
+      return localStorage.getItem(CONTINUOUS_STORAGE_KEY) === 'true';
+    } catch {
+      return false;
+    }
+  });
+  const continuousRef = useRef(continuous);
+
+  const orderedReaders = useCallback(() => orderByDocumentElements(
+    readersRef.current.values(),
+    document.querySelectorAll<HTMLElement>('[data-read-aloud-root]'),
+  ), []);
+  const register = useCallback((reader: ReaderRegistration) => {
+    readersRef.current.set(reader.id, reader);
+    return () => readersRef.current.delete(reader.id);
+  }, []);
+  const stopAll = useCallback(() => {
+    chainRef.current = { active: false, continueThroughGroup: false, currentId: '' };
+    readersRef.current.forEach((reader) => reader.stop());
+  }, []);
+  const begin = useCallback((id: string, continueThroughGroup: boolean) => {
+    chainRef.current = { active: true, continueThroughGroup, currentId: id };
+  }, []);
+  const complete = useCallback((id: string) => {
+    const chain = chainRef.current;
+    if (!chain.active || chain.currentId !== id) return;
+    if (!chain.continueThroughGroup && !continuousRef.current) {
+      chain.active = false;
+      return;
+    }
+    const readers = orderedReaders();
+    const current = readers.findIndex((reader) => reader.id === id);
+    if (current < 0) return;
+    for (const reader of readers.slice(current + 1)) {
+      if (reader.play(chain.continueThroughGroup, true)) return;
+    }
+    chainRef.current = { active: false, continueThroughGroup: false, currentId: '' };
+  }, [orderedReaders]);
+  const playAll = () => {
+    stopAll();
+    for (const reader of orderedReaders()) {
+      if (reader.play(true, true)) return;
+    }
+  };
+  const updateContinuous = (enabled: boolean) => {
+    continuousRef.current = enabled;
+    setContinuous(enabled);
+    try { localStorage.setItem(CONTINUOUS_STORAGE_KEY, String(enabled)); } catch { /* Storage can be blocked. */ }
+  };
+  return <ReadAloudGroupContext.Provider value={{ rate, setRate, voiceUri, setVoiceUri, register, begin, complete, stopAll }}>
+    <div className="read-aloud-group-controls" role="group" aria-label="Analysis read aloud">
+      <button type="button" onClick={playAll}>Play all</button>
+      <label><input type="checkbox" checked={continuous} onChange={(event) => updateContinuous(event.target.checked)} />Continue to the next section</label>
+    </div>
+    {children}
+  </ReadAloudGroupContext.Provider>;
+}
+
+export default function ReadAloud({ sentences, children, label, title }: ReadAloudProps) {
   const instanceId = useId();
+  const group = useContext(ReadAloudGroupContext);
+  const groupRegister = group?.register;
+  const groupBegin = group?.begin;
+  const groupComplete = group?.complete;
+  const groupStopAll = group?.stopAll;
+  const rootRef = useRef<HTMLDivElement | null>(null);
   const [supported] = useState(() => typeof window !== 'undefined' && 'speechSynthesis' in window && 'SpeechSynthesisUtterance' in window);
   const synthesisRef = useRef<SpeechSynthesis | null>(supported ? window.speechSynthesis : null);
   const runRef = useRef(0);
   const [voices, setVoices] = useState<SpeechSynthesisVoice[]>(() => supported ? window.speechSynthesis.getVoices() : []);
-  const [voiceUri, setVoiceUri] = useState('');
-  const [rate, setRate] = useState(1);
+  const [localVoiceUri, setLocalVoiceUri] = useState('');
+  const [localRate, setLocalRate] = useState(1);
+  const voiceUri = group?.voiceUri ?? localVoiceUri;
+  const rate = group?.rate ?? localRate;
+  const setVoiceUri = group?.setVoiceUri ?? setLocalVoiceUri;
+  const setRate = group?.setRate ?? setLocalRate;
   const [playback, setPlayback] = useState<PlaybackState>('idle');
   const [activeSentence, setActiveSentence] = useState<number | null>(null);
   const [activeWords, setActiveWords] = useState<WordHighlight | null>(null);
@@ -58,6 +156,7 @@ export default function ReadAloud({ sentences, children, label }: ReadAloudProps
   const speakingOnHelperRef = useRef(false);
   const eventSourceRef = useRef<EventSource | null>(null);
   const resumeRef = useRef<{ queue: QueuedSentence[]; position: number } | null>(null);
+  const activeHelperRef = useRef<{ queue: QueuedSentence[]; position: number } | null>(null);
 
   const postHelperStop = useCallback(() => {
     if (!speakingOnHelperRef.current) return;
@@ -71,16 +170,22 @@ export default function ReadAloud({ sentences, children, label }: ReadAloudProps
     postHelperStop();
   }, [postHelperStop]);
 
-  const stop = useCallback(() => {
+  const halt = useCallback(() => {
     runRef.current += 1;
     pausedRef.current = false;
     resumeRef.current = null;
+    activeHelperRef.current = null;
     synthesisRef.current?.cancel();
     stopHelperSpeech();
     setPlayback('idle');
     setActiveSentence(null);
     setActiveWords(null);
   }, [stopHelperSpeech]);
+
+  const stop = useCallback(() => {
+    if (groupStopAll) groupStopAll();
+    else halt();
+  }, [groupStopAll, halt]);
 
   // Probe the helper once on mount. Failure of any kind keeps the browser path.
   useEffect(() => {
@@ -118,7 +223,7 @@ export default function ReadAloud({ sentences, children, label }: ReadAloudProps
       synthesis.removeEventListener('voiceschanged', refreshVoices);
       synthesisRef.current = null;
     };
-  }, []);
+  }, [setVoiceUri]);
 
   useEffect(() => stop, [sentences, stop]);
 
@@ -127,13 +232,13 @@ export default function ReadAloud({ sentences, children, label }: ReadAloudProps
 
   useEffect(() => {
     const stopOtherReader = (event: Event) => {
-      if ((event as CustomEvent<string>).detail !== instanceId) stop();
+      if ((event as CustomEvent<string>).detail !== instanceId) halt();
     };
     window.addEventListener('readaloud:start', stopOtherReader);
     return () => window.removeEventListener('readaloud:start', stopOtherReader);
-  }, [instanceId, stop]);
+  }, [halt, instanceId]);
 
-  const streamHelperEvents = useCallback((id: string, sentenceIndex: number, run: number) => new Promise<void>((resolve, reject) => {
+  const streamHelperEvents = useCallback((id: string, sentenceIndex: number | null, run: number) => new Promise<void>((resolve, reject) => {
     const source = new EventSource(`${HELPER_BASE}/events?id=${encodeURIComponent(id)}`);
     eventSourceRef.current = source;
     source.onmessage = (event) => {
@@ -149,7 +254,7 @@ export default function ReadAloud({ sentences, children, label }: ReadAloudProps
         resolve();
         return;
       }
-      if (typeof data.start === 'number' && typeof data.length === 'number') {
+      if (sentenceIndex !== null && typeof data.start === 'number' && typeof data.length === 'number') {
         setActiveWords({ sentence: sentenceIndex, start: data.start, length: data.length });
       }
     };
@@ -168,6 +273,7 @@ export default function ReadAloud({ sentences, children, label }: ReadAloudProps
         return;
       }
       const item = queue[position];
+      activeHelperRef.current = { queue, position };
       setActiveSentence(item.index);
       setActiveWords(null);
       try {
@@ -179,8 +285,11 @@ export default function ReadAloud({ sentences, children, label }: ReadAloudProps
         if (!response.ok) throw new Error(`speak failed: ${response.status}`);
         const payload = await response.json() as { id?: string };
         if (!payload.id) throw new Error('speak returned no id');
-        if (run !== runRef.current) return;
         speakingOnHelperRef.current = true;
+        if (run !== runRef.current) {
+          postHelperStop();
+          return;
+        }
         await streamHelperEvents(payload.id, item.index, run);
         speakingOnHelperRef.current = false;
       } catch {
@@ -194,26 +303,29 @@ export default function ReadAloud({ sentences, children, label }: ReadAloudProps
       }
     }
     if (run === runRef.current) {
+      activeHelperRef.current = null;
       setPlayback('idle');
       setActiveSentence(null);
       setActiveWords(null);
+      groupComplete?.(instanceId);
     }
-  }, [rate, stop, streamHelperEvents]);
+  }, [groupComplete, instanceId, postHelperStop, rate, stop, streamHelperEvents]);
 
-  if ((!supported && !helper) || sentences.length === 0) return <>{children({ activeSentence: null, activeWords: null, sentences })}</>;
-
-  const play = () => {
-    window.dispatchEvent(new CustomEvent('readaloud:start', { detail: instanceId }));
-    stop();
-    const queue = sentences.map((sentence, index) => ({ index, spoken: latexToSpeech(sentence) })).filter((item) => item.spoken);
-    if (queue.length === 0) return;
+  const play = useCallback((continueThroughGroup = false, groupTransition = false): boolean => {
+    if (!groupTransition) window.dispatchEvent(new CustomEvent('readaloud:start', { detail: instanceId }));
+    halt();
+    const bodyQueue: QueuedSentence[] = sentences.map((sentence, index) => ({ index, spoken: latexToSpeech(sentence) })).filter((item) => item.spoken);
+    if (bodyQueue.length === 0) return false;
+    const spokenTitle = title ? latexToSpeech(title) : '';
+    const queue = spokenTitle ? [{ index: null, spoken: spokenTitle }, ...bodyQueue] : bodyQueue;
+    groupBegin?.(instanceId, continueThroughGroup);
     if (helper) {
       setPlayback('playing');
       void playHelperQueue(queue, 0, runRef.current);
-      return;
+      return true;
     }
     const synthesis = synthesisRef.current;
-    if (!synthesis) return;
+    if (!synthesis) return false;
     const run = runRef.current;
     const selectedVoice = voices.find((voice) => voice.voiceURI === voiceUri) ?? null;
     setPlayback('playing');
@@ -232,12 +344,15 @@ export default function ReadAloud({ sentences, children, label }: ReadAloudProps
           if (run === runRef.current) {
             setPlayback('idle');
             setActiveSentence(null);
+            setActiveWords(null);
+            groupComplete?.(instanceId);
           }
         };
       }
       synthesis.speak(utterance);
     });
-  };
+    return true;
+  }, [groupBegin, groupComplete, halt, helper, instanceId, playHelperQueue, rate, sentences, stop, title, voiceUri, voices]);
 
   const togglePause = () => {
     if (playback === 'idle') return;
@@ -253,7 +368,9 @@ export default function ReadAloud({ sentences, children, label }: ReadAloudProps
         setPlayback('paused');
         // The helper exposes no pause endpoint: stop the current utterance and
         // re-speak the sentence from its start on resume.
-        postHelperStop();
+        resumeRef.current = activeHelperRef.current;
+        runRef.current += 1;
+        stopHelperSpeech();
       }
       return;
     }
@@ -268,9 +385,16 @@ export default function ReadAloud({ sentences, children, label }: ReadAloudProps
     }
   };
 
-  return <div className="read-aloud">
+  useEffect(() => {
+    if (!groupRegister || !rootRef.current) return;
+    return groupRegister({ id: instanceId, element: rootRef.current, play, stop: halt });
+  }, [groupRegister, halt, instanceId, play]);
+
+  if ((!supported && !helper) || sentences.length === 0) return <>{children({ activeSentence: null, activeWords: null, sentences })}</>;
+
+  return <div className={playback === 'idle' ? 'read-aloud' : 'read-aloud is-playing'} data-read-aloud-root ref={rootRef}>
     <div className="read-aloud-controls" role="group" aria-label={`Read aloud ${label}`}>
-      <button type="button" onClick={play}>Play</button>
+      <button type="button" onClick={() => play()}>Play</button>
       <button type="button" onClick={togglePause} disabled={playback === 'idle'}>{playback === 'paused' ? 'Resume' : 'Pause'}</button>
       <button type="button" onClick={stop} disabled={playback === 'idle'}>Stop</button>
       <label>Rate <span>{rate.toFixed(2)}×</span><input aria-label="Speech rate" type="range" min="0.75" max="1.5" step="0.05" value={rate} onChange={(event) => setRate(Number(event.target.value))} /></label>
