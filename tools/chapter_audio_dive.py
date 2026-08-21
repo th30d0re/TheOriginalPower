@@ -55,6 +55,7 @@ DOWNLOAD_BACKOFF = 90
 # NotebookLM's own Deep Dive format at maximum length.
 AUDIO_FORMAT = "deep_dive"
 AUDIO_LENGTH = "long"
+AUDIO_MIN_BYTES = 100_000
 
 FOCUS_TEMPLATE = (
     'Cover "{title}" from the book The Original Power in as much depth as the '
@@ -159,7 +160,7 @@ def process_unit(state: dict, unit: dict, dive: dict) -> None:
         raise UnitError(f"unit {n} has no notebook_id in state.json — run the markdown phase first")
 
     out_path = AUDIO_DIR / f"{n:02d}-{unit['slug']}.m4a"
-    if out_path.exists() and out_path.stat().st_size > 100_000:
+    if out_path.is_file() and out_path.stat().st_size >= AUDIO_MIN_BYTES:
         log(f"audio already downloaded: {out_path.name}")
         st.update(status="done", audio_path=str(out_path.relative_to(ROOT)), error=None)
         return
@@ -194,7 +195,7 @@ def process_unit(state: dict, unit: dict, dive: dict) -> None:
         try:
             run_nlm(["download", "audio", notebook_id, "--id", st["artifact_id"],
                      "-o", str(out_path), "--no-progress"], timeout=DOWNLOAD_TIMEOUT)
-            if out_path.exists() and out_path.stat().st_size >= 100_000:
+            if out_path.is_file() and out_path.stat().st_size >= AUDIO_MIN_BYTES:
                 break
             last = UnitError(f"download produced no usable file at {out_path}")
         except UnitError as e:
@@ -211,12 +212,27 @@ def process_unit(state: dict, unit: dict, dive: dict) -> None:
     st.update(status="done", audio_path=str(out_path.relative_to(ROOT)), error=None)
 
 
+def _audio_file_status(unit_status: dict) -> str:
+    """Return the on-disk disposition for a state entry marked done."""
+    value = unit_status.get("audio_path")
+    if not value:
+        return "file missing"
+    path = Path(value)
+    if not path.is_absolute():
+        path = ROOT / path
+    if not path.is_file():
+        return "file missing"
+    if path.stat().st_size < AUDIO_MIN_BYTES:
+        return "file too small"
+    return "present"
+
+
 def next_pending(manifest: dict, state: dict) -> dict | None:
     for unit in manifest["units"]:
         if unit.get("skip"):
             continue
         st = state.get(str(unit["n"]), {})
-        if st.get("status") == "done":
+        if st.get("status") == "done" and _audio_file_status(st) == "present":
             continue
         if st.get("status") == "failed" and st.get("attempts", 0) >= MAX_ATTEMPTS:
             continue
@@ -228,7 +244,12 @@ def print_status(manifest: dict, state: dict) -> None:
     todo = [u for u in manifest["units"] if not u.get("skip")]
     counts: dict[str, int] = {}
     for u in todo:
-        s = state.get(str(u["n"]), {}).get("status", "pending")
+        st = state.get(str(u["n"]), {})
+        s = st.get("status", "pending")
+        if s == "done":
+            file_status = _audio_file_status(st)
+            if file_status != "present":
+                s = f"done ({file_status})"
         counts[s] = counts.get(s, 0) + 1
     print(f"audio units: {len(todo)}  {counts}")
     for u in todo:

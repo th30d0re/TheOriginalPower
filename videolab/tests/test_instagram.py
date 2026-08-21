@@ -99,7 +99,7 @@ class StubCLI:
             return self._json(args, {"thread": {"items": []}})
         if "--download" in args:
             destination = Path(args[args.index("--download") + 1])
-            destination.write_bytes(b"fake mp4")
+            destination.write_bytes(b"\x00\x00\x00\x18ftypisom" + b"\x00" * 20)
             return self._json(args, {"path": str(destination)})
         raise AssertionError(f"Unexpected command: {args}")
 
@@ -141,7 +141,9 @@ def test_same_message_twice_creates_one_job(tmp_path: Path) -> None:
 
     assert first == ["instagram-DZtCPIRPT87"]
     assert second == []
-    assert (jobs / first[0] / "media" / "video.mp4").read_bytes() == b"fake mp4"
+    assert (jobs / first[0] / "media" / "video.mp4").read_bytes().startswith(
+        b"\x00\x00\x00\x18ftyp"
+    )
     assert sum("--download" in call for call in cli.calls) == 1
     assert not public.exists()
     assert json.loads(cursor.read_text())["seen_message_ids"] == [MESSAGE_ID]
@@ -167,6 +169,52 @@ def test_ingest_dms_uses_private_root_by_default(tmp_path: Path, monkeypatch: py
     slugs = ingest_dms(cursor_path=tmp_path / "cursor.json", runner=StubCLI())
     assert (private_root / slugs[0] / "job.json").is_file()
     assert private_root.stat().st_mode & 0o777 == 0o700
+
+
+class DownloadCLI(StubCLI):
+    def __init__(self, payload: bytes | None) -> None:
+        super().__init__()
+        self.payload = payload
+
+    def __call__(self, argv: Any) -> subprocess.CompletedProcess[str]:
+        args = list(argv)
+        if "--download" in args:
+            self.calls.append(args)
+            destination = Path(args[args.index("--download") + 1])
+            if self.payload is not None:
+                destination.write_bytes(self.payload)
+            return self._json(args, {"path": str(destination)})
+        return super().__call__(args)
+
+
+def test_image_dm_uses_detected_filename_and_terminal_stages(tmp_path: Path) -> None:
+    jobs = tmp_path / "jobs"
+    slugs = ingest_dms(
+        cursor_path=tmp_path / "cursor.json",
+        jobs_root=jobs,
+        runner=DownloadCLI(b"\xff\xd8\xff\xe0" + b"image"),
+    )
+
+    job_dir = jobs / slugs[0]
+    job = json.loads((job_dir / "job.json").read_text())
+    assert (job_dir / "media" / "image.jpg").is_file()
+    assert not (job_dir / "media" / "video.mp4").exists()
+    assert job["source"]["path"] == "media/image.jpg"
+    assert all(job["stages"][name]["status"] == "skipped" for name in ("derive", "asr", "report"))
+    assert job["stages"]["derive"]["detail"]["reason"] == "not_video: image/jpeg"
+
+
+def test_dm_download_with_no_file_is_terminal(tmp_path: Path) -> None:
+    jobs = tmp_path / "jobs"
+    slugs = ingest_dms(
+        cursor_path=tmp_path / "cursor.json",
+        jobs_root=jobs,
+        runner=DownloadCLI(None),
+    )
+
+    job = json.loads((jobs / slugs[0] / "job.json").read_text())
+    assert all(job["stages"][name]["status"] == "skipped" for name in ("derive", "asr", "report"))
+    assert job["stages"]["derive"]["detail"]["reason"] == "no_media"
 
 
 def test_text_reel_url_creates_public_job_without_dm_provenance(tmp_path: Path) -> None:

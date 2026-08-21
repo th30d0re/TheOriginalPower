@@ -283,6 +283,9 @@ def ingest_dm_jobs(
             continue
         job = json.loads((job_dir / "job.json").read_text(encoding="utf-8"))
         source_data = job.get("source", {})
+        if job.get("stages", {}).get("derive", {}).get("status") == "skipped":
+            result.succeeded.append(slug)
+            continue
         if source_data.get("kind") == "url":
             fetch_stage = job.get("stages", {}).get("fetch", {})
             fetch_detail = dict(fetch_stage.get("detail", {}))
@@ -363,7 +366,10 @@ def _run_lines(command: Sequence[str]) -> tuple[bool, list[str]]:
         completed = subprocess.run(list(command), check=False, capture_output=True, text=True, timeout=30)
     except (FileNotFoundError, subprocess.TimeoutExpired) as exc:
         return False, [str(exc)]
-    cleaned = _ANSI.sub("", completed.stdout.strip() or completed.stderr.strip())
+    output = "\n".join(
+        part.strip() for part in (completed.stdout, completed.stderr) if part.strip()
+    )
+    cleaned = _ANSI.sub("", output)
     return completed.returncode == 0, [line.strip() for line in cleaned.splitlines() if line.strip()]
 
 
@@ -406,17 +412,34 @@ def doctor(config: Config) -> dict[str, Any]:
         [str(config.voice_python), "-c", "import mlx_whisper; print('mlx-whisper ready')"]
     )
     status["mlx_whisper"] = {"ok": whisper_ok, "detail": whisper_detail}
-    instagram_ok, instagram_lines = _run_lines(["instagram-cli", "auth", "whoami"])
-    # whoami streams a "Fetching user..." progress line before the answer, so the
-    # account line has to be picked out rather than taken positionally.
-    instagram_detail = next(
-        (line for line in reversed(instagram_lines) if "account" in line.lower()),
-        instagram_lines[0] if instagram_lines else "no output",
+    instagram_ok, instagram_lines = _run_lines(
+        ["instagram-cli", "inbox", "--limit", "1"]
     )
-    if instagram_ok and "account" not in instagram_detail.lower():
-        instagram_detail = "session active"
+    authentication_failure = re.compile(
+        r"\b403\b|login_required|login required|unauthorized|session expired",
+        re.IGNORECASE,
+    )
+    failure_line = next(
+        (line for line in instagram_lines if authentication_failure.search(line)),
+        None,
+    )
+    if failure_line:
+        instagram_ok = False
+    account_line = next(
+        (line for line in reversed(instagram_lines) if "account" in line.lower()),
+        None,
+    )
+    if instagram_ok:
+        instagram_detail = account_line or "session active"
+    else:
+        instagram_detail = failure_line or (
+            instagram_lines[0] if instagram_lines else "no output"
+        )
     if not instagram_ok:
-        instagram_detail = f"{instagram_detail}; run `instagram-cli auth login`"
+        if failure_line:
+            instagram_detail = f"{instagram_detail}; run `instagram-cli auth login`"
+        else:
+            instagram_detail = f"{instagram_detail}; authenticated inbox probe failed"
     status["instagram_auth"] = {"ok": instagram_ok, "detail": instagram_detail}
     cookies = []
     if config.cookie_dir.is_dir():
@@ -474,6 +497,7 @@ def build_parser() -> argparse.ArgumentParser:
     cookie_subparsers = cookies_parser.add_subparsers(dest="cookies_command", required=True)
     refresh_parser = cookie_subparsers.add_parser("refresh")
     refresh_parser.add_argument("--browser", default="safari")
+    refresh_parser.add_argument("--profile", type=Path)
     refresh_parser.add_argument("--domain", required=True)
     watch_parser = subparsers.add_parser("watch")
     watch_subparsers = watch_parser.add_subparsers(dest="watch_command", required=True)
@@ -502,7 +526,9 @@ def main(argv: list[str] | None = None) -> int:
         elif args.command == "list":
             result = list_jobs(config)
         elif args.command == "cookies":
-            path = refresh_cookies(config, browser=args.browser, domain=args.domain)
+            path = refresh_cookies(
+                config, browser=args.browser, domain=args.domain, profile=args.profile
+            )
             result = {"ok": True, "file": str(path), "mode": "600"}
         elif args.command == "ingest-dms":
             slugs = ingest_dm_jobs(

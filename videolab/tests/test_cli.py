@@ -73,12 +73,98 @@ def test_ingest_dm_jobs_runs_full_pipeline_for_each_new_job(
     ]
 
 
+def test_ingest_dm_jobs_does_not_run_pipeline_for_terminal_media(
+    tmp_path: Path, monkeypatch: object
+) -> None:
+    config = _config(tmp_path)
+    slug = "instagram-image"
+    job_dir = config.private_jobs_dir / slug
+    job_dir.mkdir()
+    (job_dir / "job.json").write_text(json.dumps({
+        "source": {"kind": "dm"},
+        "stages": {"derive": {"status": "skipped", "detail": {"reason": "not_video: image/jpeg"}}},
+    }))
+    monkeypatch.setattr(cli, "ingest_dms", lambda **_kwargs: [slug])
+    monkeypatch.setattr(
+        cli,
+        "_run_post_fetch_pipeline",
+        lambda *_args, **_kwargs: (_ for _ in ()).throw(AssertionError("pipeline ran")),
+    )
+
+    result = cli.ingest_dm_jobs(config)
+
+    assert result.succeeded == [slug]
+
+
 def test_parser_exposes_dm_and_watch_commands() -> None:
     dm = cli.build_parser().parse_args(["ingest-dms", "--all-threads", "--limit", "3"])
     watch = cli.build_parser().parse_args(["watch", "install", "--interval-minutes", "8"])
 
     assert dm.all_threads is True and dm.limit == 3
     assert watch.watch_command == "install" and watch.interval_minutes == 8
+
+
+def test_cookies_refresh_threads_profile_from_cli(
+    tmp_path: Path, monkeypatch: object, capsys: object
+) -> None:
+    profile = tmp_path / "Chrome Canary" / "Default"
+    profile.mkdir(parents=True)
+    captured: dict[str, object] = {}
+
+    def fake_refresh(config: Config, **kwargs: object) -> Path:
+        captured.update(kwargs)
+        destination = tmp_path / "cookies" / "instagram.com.txt"
+        destination.parent.mkdir()
+        destination.write_text("cookie jar")
+        return destination
+
+    monkeypatch.setattr(cli, "load_config", lambda: _config(tmp_path))
+    monkeypatch.setattr(cli, "refresh_cookies", fake_refresh)
+
+    assert cli.main([
+        "cookies", "refresh", "--browser", "chrome", "--profile", str(profile),
+        "--domain", "instagram.com",
+    ]) == 0
+    assert captured == {
+        "browser": "chrome", "profile": profile, "domain": "instagram.com"
+    }
+    assert json.loads(capsys.readouterr().out)["ok"] is True
+
+
+def test_doctor_rejects_login_required_from_authenticated_probe(
+    tmp_path: Path, monkeypatch: object
+) -> None:
+    config = _config(tmp_path)
+    monkeypatch.setattr(cli, "_check", lambda _command: (True, "ready"))
+
+    def fake_run_lines(command: object) -> tuple[bool, list[str]]:
+        assert command == ["instagram-cli", "inbox", "--limit", "1"]
+        return True, ["HTTP 403", "login_required"]
+
+    monkeypatch.setattr(cli, "_run_lines", fake_run_lines)
+
+    auth = cli.doctor(config)["instagram_auth"]
+
+    assert auth["ok"] is False
+    assert "403" in auth["detail"] or "login_required" in auth["detail"]
+    assert "instagram-cli auth login" in auth["detail"]
+
+
+def test_doctor_preserves_account_detail_after_live_probe(
+    tmp_path: Path, monkeypatch: object
+) -> None:
+    config = _config(tmp_path)
+    monkeypatch.setattr(cli, "_check", lambda _command: (True, "ready"))
+    monkeypatch.setattr(
+        cli,
+        "_run_lines",
+        lambda _command: (True, ["Currently active account: @sample_owner"]),
+    )
+
+    assert cli.doctor(config)["instagram_auth"] == {
+        "ok": True,
+        "detail": "Currently active account: @sample_owner",
+    }
 
 
 def test_dm_url_fetch_failure_does_not_abort_batch(

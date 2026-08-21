@@ -42,6 +42,18 @@ _INSTAGRAM_URL = re.compile(
 _TEXT_URL = re.compile(r"https?://[^\s<>\"']+", re.IGNORECASE)
 _TRAILING_URL_PUNCTUATION = ".,;:!?)]}"
 
+_MEDIA_FILENAMES = {
+    "image/gif": "image.gif",
+    "image/jpeg": "image.jpg",
+    "image/png": "image.png",
+    "image/webp": "image.webp",
+    "video/mp4": "video.mp4",
+    "video/webm": "video.webm",
+    "video/x-matroska": "video.mkv",
+    "video/x-msvideo": "video.avi",
+    "video/mpeg": "video.mpeg",
+}
+
 
 class InstagramCLIError(RuntimeError):
     """Raised when the read-only Instagram CLI workflow fails."""
@@ -400,6 +412,60 @@ def _utc_now() -> str:
     return datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
 
 
+def _media_type(path: Path) -> str | None:
+    """Detect supported media from magic bytes without trusting its name."""
+    if not path.is_file() or path.stat().st_size == 0:
+        return None
+    with path.open("rb") as media_file:
+        header = media_file.read(32)
+    if header.startswith(b"\xff\xd8\xff"):
+        return "image/jpeg"
+    if header.startswith(b"\x89PNG\r\n\x1a\n"):
+        return "image/png"
+    if header.startswith((b"GIF87a", b"GIF89a")):
+        return "image/gif"
+    if header.startswith(b"RIFF") and header[8:12] == b"WEBP":
+        return "image/webp"
+    if header.startswith(b"RIFF") and header[8:12] == b"AVI ":
+        return "video/x-msvideo"
+    if len(header) >= 12 and header[4:8] == b"ftyp":
+        return "video/mp4"
+    if header.startswith(b"\x1aE\xdf\xa3"):
+        return "video/webm" if b"webm" in header.lower() else "video/x-matroska"
+    if header.startswith((b"\x00\x00\x01\xba", b"\x00\x00\x01\xb3")):
+        return "video/mpeg"
+    return "application/octet-stream"
+
+
+def _terminalize_non_video(document: dict[str, Any], reason: str, timestamp: str) -> None:
+    for name in ("derive", "asr", "report"):
+        document["stages"][name] = {
+            "status": "skipped",
+            "engine": "media-type",
+            "detail": {"reason": reason},
+            "started_at": timestamp,
+            "ended_at": timestamp,
+            "error": None,
+        }
+
+
+def _existing_download_is_terminal(job_dir: Path) -> bool:
+    job_path = job_dir / "job.json"
+    if not job_path.is_file():
+        return False
+    try:
+        document = json.loads(job_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return False
+    if document.get("stages", {}).get("derive", {}).get("status") == "skipped":
+        return True
+    return any(
+        (_media_type(job_dir / "media" / filename) or "").startswith("video/")
+        for mime, filename in _MEDIA_FILENAMES.items()
+        if mime.startswith("video/")
+    )
+
+
 def _job_document(slug: str, message: Mapping[str, Any], timestamp: str) -> dict[str, Any]:
     url = _permalink(message)
     match = _INSTAGRAM_URL.search(url or "")
@@ -625,12 +691,12 @@ def ingest_dms(
                 continue
             slug = _slug_for_message(message)
             job_dir = root / slug
-            video_path = job_dir / "media" / "video.mp4"
-            if (job_dir / "job.json").is_file() and video_path.is_file():
+            download_path = job_dir / "media" / "download.tmp"
+            if _existing_download_is_terminal(job_dir):
                 cursor.seen.add(message_id)
                 _write_cursor(seen_path, cursor)
                 continue
-            video_path.parent.mkdir(parents=True, exist_ok=True)
+            download_path.parent.mkdir(parents=True, exist_ok=True)
             _run_json(
                 execute,
                 [
@@ -638,7 +704,7 @@ def ingest_dms(
                     "read",
                     identifier,
                     "--download",
-                    str(video_path),
+                    str(download_path),
                     "--message-id",
                     message_id,
                     "--output",
@@ -647,8 +713,20 @@ def ingest_dms(
             )
             timestamp = _utc_now()
             _write_json(job_dir / "dm.json", _dm_document(thread_record, message))
-            if not (job_dir / "job.json").exists():
-                _write_json(job_dir / "job.json", _job_document(slug, message, timestamp))
+            document = _job_document(slug, message, timestamp)
+            media_type = _media_type(download_path)
+            if media_type is None:
+                _terminalize_non_video(document, "no_media", timestamp)
+            else:
+                filename = _MEDIA_FILENAMES.get(media_type, "media.bin")
+                media_path = download_path.with_name(filename)
+                os.replace(download_path, media_path)
+                document["source"]["path"] = f"media/{filename}"
+                if not media_type.startswith("video/"):
+                    _terminalize_non_video(
+                        document, f"not_video: {media_type}", timestamp
+                    )
+            _write_json(job_dir / "job.json", document)
             cursor.seen.add(message_id)
             _write_cursor(seen_path, cursor)
             created.append(slug)
