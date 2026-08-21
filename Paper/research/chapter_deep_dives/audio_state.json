@@ -1,217 +1,280 @@
 {
   "0": {
     "artifact_id": "97a6f39e-2301-4a56-900b-bbb86c0a198e",
-    "attempts": 1,
+    "attempts": 2,
     "audio_path": "Paper/research/chapter_deep_dives/audio/00-front-matter.m4a",
     "error": null,
     "status": "done"
   },
   "10": {
     "artifact_id": "059e1755-6446-4f42-b00b-c9774c4b759e",
-    "attempts": 1,
+    "attempts": 2,
     "audio_path": "Paper/research/chapter_deep_dives/audio/10-the-constitutional-kernel-firmware-bootloader-and-power-supp.m4a",
     "error": null,
     "status": "done"
   },
   "11": {
     "artifact_id": "afc94ae0-f581-4366-9d23-f561413af00a",
-    "attempts": 1,
+    "attempts": 2,
     "audio_path": "Paper/research/chapter_deep_dives/audio/11-the-haitian-export-hemispheric-liberation-vexillological-con.m4a",
     "error": null,
     "status": "done"
   },
   "12": {
     "artifact_id": "ea7893af-dd20-4904-b439-d704fedead73",
-    "attempts": 1,
+    "attempts": 2,
     "audio_path": "Paper/research/chapter_deep_dives/audio/12-the-architecture-of-kinship-pre-colonial-african-intimacy-an.m4a",
     "error": null,
     "status": "done"
   },
   "13": {
     "artifact_id": "8dac6264-a832-4160-88e8-623c009c2915",
-    "attempts": 1,
+    "attempts": 2,
     "audio_path": "Paper/research/chapter_deep_dives/audio/13-the-gendered-axis-coverture-eugenics-and-the-reproductive-ex.m4a",
     "error": null,
     "status": "done"
   },
   "14": {
     "artifact_id": "6e724d78-374c-4792-913a-42daa4e6ebd6",
-    "attempts": 1,
+    "attempts": 2,
     "audio_path": "Paper/research/chapter_deep_dives/audio/14-the-enforcement-engine-slave-patrols-the-13th-amendment-and-.m4a",
     "error": null,
     "status": "done"
   },
   "15": {
     "artifact_id": "d3565398-c4a3-458c-ac0f-44ef3f76b233",
-    "attempts": 1,
+    "attempts": 2,
     "audio_path": "Paper/research/chapter_deep_dives/audio/15-the-containment-pullman-redlining-and-the-wages-of-whiteness.m4a",
     "error": null,
     "status": "done"
   },
   "16": {
     "artifact_id": "12ae8b88-965a-4851-8c6f-0085f18ed39d",
-    "attempts": 1,
+    "attempts": 2,
     "audio_path": "Paper/research/chapter_deep_dives/audio/16-the-german-extraction-algorithm-19041945.m4a",
     "error": null,
     "status": "done"
   },
   "17": {
     "artifact_id": "61026d31-d0ab-400e-9b64-40e0637fbfc6",
-    "attempts": 1,
+    "attempts": 2,
     "audio_path": "Paper/research/chapter_deep_dives/audio/17-the-geopolitical-11-patch-1948present.m4a",
     "error": null,
     "status": "done"
   },
   "18": {
     "artifact_id": "fe52badb-13e5-4c7f-9424-0a327ba7320d",
-    "attempts": 1,
+    "attempts": 2,
     "audio_path": "Paper/research/chapter_deep_dives/audio/18-the-biological-extraction-kernel-environmental-racism-as-sys.m4a",
     "error": null,
     "status": "done"
   },
   "19": {
     "artifact_id": "310de49d-27a8-47cd-bb90-3a13634fbb4b",
-    "attempts": 1,
+    "attempts": 2,
     "audio_path": "Paper/research/chapter_deep_dives/audio/19-tweedism-and-the-puppet-class-the-algorithmic-filter-on-demo.m4a",
     "error": null,
     "status": "done"
   },
   "2": {
     "artifact_id": "7c3a4840-9bc9-41b8-beec-c8af84a4a481",
-    "attempts": 2,
+    "attempts": 3,
     "audio_path": "Paper/research/chapter_deep_dives/audio/02-authors-preface.m4a",
     "error": null,
     "status": "done"
   },
   "20": {
-    "artifact_id": null,
-    "attempts": 0,
-    "audio_path": null,
-    "error": "nlm audio create failed (rc=1): \u283c Creating audio...\nError: Rate limited \u2014 API error (code 8): \ntype.googleapis.com/google.internal.labs.tailwind.orchestration.v1.UserDisplayab\nleError. Wait a few minutes before retrying audio creation.\n",
-    "status": "pending"
+    "artifact_id": "0b814f09-4cd5-48da-8d17-957a780a6d51",
+    "attempts": 1,
+    "audio_path": "Paper/research/chapter_deep_dives/audio/20-the-recompile-cointelpro-the-variable-swap-and-the-war-on-dr.m4a",
+    "error": null,
+    "status": "done"
   },
   "21": {
-    "artifact_id": null,
-    "attempts": 0,
-    "audio_path": null,
-    "error": "nlm audio create failed (rc=1): \u2834 Creating audio...\nError: Rate limited \u2014 API error (code 8): \ntype.googleapis.com/google.internal.labs.tailwind.orchestration.v1.UserDisplayab\nleError. Wait a few minutes before retrying audio creation.\n",
-    "status": "pending"
+    "artifact_id": "465591e3-1131-4e80-b7be-cb2262cd0ab7",
+    "attempts": 1,
+    "audio_path": "Paper/research/chapter_deep_dives/audio/21-the-full-algorithm-demographic-paradox-cannibalization-and-t.m4a",
+    "error": null,
+    "status": "done"
   },
   "22": {
-    "artifact_id": null,
-    "attempts": 0,
-    "audio_path": null,
-    "error": "nlm audio create failed (rc=1): \u2838 Creating audio...\nError: Rate limited \u2014 API error (code 8): \ntype.googleapis.com/google.internal.labs.tailwind.orchestration.v1.UserDisplayab\nleError. Wait a few minutes before retrying audio creation.\n",
-    "status": "pending"
+    "artifact_id": "ca1c77aa-707d-4582-a8ea-6cec321dd300",
+    "attempts": 1,
+    "audio_path": "Paper/research/chapter_deep_dives/audio/22-the-pipeline-architecture-from-school-to-prison-to-healthcar.m4a",
+    "error": null,
+    "status": "done"
   },
   "23": {
-    "artifact_id": null,
-    "attempts": 0,
-    "audio_path": null,
-    "error": "nlm audio create failed (rc=1): \u283c Creating audio...\nError: Rate limited \u2014 API error (code 8): \ntype.googleapis.com/google.internal.labs.tailwind.orchestration.v1.UserDisplayab\nleError. Wait a few minutes before retrying audio creation.\n",
-    "status": "pending"
+    "artifact_id": "6e762d3c-5cb4-4cc2-a9d9-7ef3aeea20c4",
+    "attempts": 1,
+    "audio_path": "Paper/research/chapter_deep_dives/audio/23-the-kinetic-guarantee-arms-asymmetry-the-second-amendment-an.m4a",
+    "error": null,
+    "status": "done"
   },
   "24": {
-    "artifact_id": null,
-    "attempts": 0,
-    "audio_path": null,
-    "error": "nlm audio create failed (rc=1): \u2838 Creating audio...\nError: Rate limited \u2014 API error (code 8): \ntype.googleapis.com/google.internal.labs.tailwind.orchestration.v1.UserDisplayab\nleError. Wait a few minutes before retrying audio creation.\n",
-    "status": "pending"
+    "artifact_id": "ba7e3b16-3c8f-41ca-9d1d-ed56603c3c50",
+    "attempts": 1,
+    "audio_path": "Paper/research/chapter_deep_dives/audio/24-the-contradiction-why-reform-serves-the-algorithm.m4a",
+    "error": null,
+    "status": "done"
   },
   "25": {
-    "artifact_id": null,
-    "attempts": 0,
-    "audio_path": null,
-    "error": "nlm audio create failed (rc=1): \u2838 Creating audio...\nError: Rate limited \u2014 API error (code 8): \ntype.googleapis.com/google.internal.labs.tailwind.orchestration.v1.UserDisplayab\nleError. Wait a few minutes before retrying audio creation.\n",
-    "status": "pending"
+    "artifact_id": "84671460-11e7-483e-a1f6-6d5bbdad9846",
+    "attempts": 1,
+    "audio_path": "Paper/research/chapter_deep_dives/audio/25-the-global-containment-field-scaling-the-algorithm.m4a",
+    "error": null,
+    "status": "done"
   },
   "26": {
-    "artifact_id": null,
-    "attempts": 0,
-    "audio_path": null,
-    "error": "nlm audio create failed (rc=1): \u283c Creating audio...\nError: Rate limited \u2014 API error (code 8): \ntype.googleapis.com/google.internal.labs.tailwind.orchestration.v1.UserDisplayab\nleError. Wait a few minutes before retrying audio creation.\n",
-    "status": "pending"
+    "artifact_id": "dba723ce-93e5-4c11-8f1c-067f98be1af3",
+    "attempts": 1,
+    "audio_path": "Paper/research/chapter_deep_dives/audio/26-the-algorithmic-epoch-real-time-subjugation-and-the-necessit.m4a",
+    "error": null,
+    "status": "done"
   },
   "27": {
-    "artifact_id": null,
-    "attempts": 0,
-    "audio_path": null,
-    "error": "nlm audio create failed (rc=1): \u283c Creating audio...\nError: Rate limited \u2014 API error (code 8): \ntype.googleapis.com/google.internal.labs.tailwind.orchestration.v1.UserDisplayab\nleError. Wait a few minutes before retrying audio creation.\n",
-    "status": "pending"
+    "artifact_id": "cd14b181-6a04-4c6e-a475-ef96a9f2d047",
+    "attempts": 1,
+    "audio_path": "Paper/research/chapter_deep_dives/audio/27-the-spectral-carrier-electoral-cycles-and-the-interference-e.m4a",
+    "error": null,
+    "status": "done"
   },
   "28": {
-    "artifact_id": null,
-    "attempts": 0,
-    "audio_path": null,
-    "error": "nlm audio create failed (rc=1): \u2834 Creating audio...\nError: Rate limited \u2014 API error (code 8): \ntype.googleapis.com/google.internal.labs.tailwind.orchestration.v1.UserDisplayab\nleError. Wait a few minutes before retrying audio creation.\n",
-    "status": "pending"
+    "artifact_id": "f49cf499-b40f-4eb4-a4b5-28ce88b432e8",
+    "attempts": 1,
+    "audio_path": "Paper/research/chapter_deep_dives/audio/28-the-post-kinetic-horizon-the-open-source-republic-and-the-pe.m4a",
+    "error": null,
+    "status": "done"
   },
   "29": {
-    "artifact_id": null,
-    "attempts": 0,
-    "audio_path": null,
-    "error": "nlm audio create failed (rc=1): \u2838 Creating audio...\nError: Rate limited \u2014 API error (code 8): \ntype.googleapis.com/google.internal.labs.tailwind.orchestration.v1.UserDisplayab\nleError. Wait a few minutes before retrying audio creation.\n",
-    "status": "pending"
+    "artifact_id": "c8567e27-01de-4fef-9382-5e8b278dd9ef",
+    "attempts": 1,
+    "audio_path": "Paper/research/chapter_deep_dives/audio/29-the-single-issue-trap-and-multi-axis-noise-cancellation-a-bo.m4a",
+    "error": null,
+    "status": "done"
   },
   "3": {
     "artifact_id": "fe130852-d257-4e9b-9984-f68ddce3ddd8",
-    "attempts": 1,
+    "attempts": 2,
     "audio_path": "Paper/research/chapter_deep_dives/audio/03-preface.m4a",
     "error": null,
     "status": "done"
   },
   "30": {
-    "artifact_id": null,
-    "attempts": 0,
-    "audio_path": null,
-    "error": "nlm audio create failed (rc=1): \u283c Creating audio...\nError: Rate limited \u2014 API error (code 8): \ntype.googleapis.com/google.internal.labs.tailwind.orchestration.v1.UserDisplayab\nleError. Wait a few minutes before retrying audio creation.\n",
-    "status": "pending"
+    "artifact_id": "92be7be0-c83b-4e0a-92ff-ef93c1517328",
+    "attempts": 1,
+    "audio_path": "Paper/research/chapter_deep_dives/audio/30-conclusion.m4a",
+    "error": null,
+    "status": "done"
   },
   "31": {
-    "artifact_id": null,
-    "attempts": 0,
-    "audio_path": null,
-    "error": "nlm audio create failed (rc=1): \u2838 Creating audio...\nError: Rate limited \u2014 API error (code 8): \ntype.googleapis.com/google.internal.labs.tailwind.orchestration.v1.UserDisplayab\nleError. Wait a few minutes before retrying audio creation.\n",
-    "status": "pending"
+    "artifact_id": "a4ed9d6c-b3de-4a78-9305-c0bf165165a1",
+    "attempts": 1,
+    "audio_path": "Paper/research/chapter_deep_dives/audio/31-primary-statutory-sources-united-states-code.m4a",
+    "error": null,
+    "status": "done"
+  },
+  "32": {
+    "artifact_id": "f37fbaa9-634d-48dd-b502-a270b65c6658",
+    "attempts": 1,
+    "audio_path": "Paper/research/chapter_deep_dives/audio/32-equation-registry-and-era-level-calibration.m4a",
+    "error": null,
+    "status": "done"
+  },
+  "33": {
+    "artifact_id": "6c053c4e-09d6-4db2-a986-f0a19538f63f",
+    "attempts": 1,
+    "audio_path": "Paper/research/chapter_deep_dives/audio/33-compiled-runtime-log.m4a",
+    "error": null,
+    "status": "done"
+  },
+  "34": {
+    "artifact_id": "f8b7fd86-c8e5-40e2-bd9f-b640f848a2b0",
+    "attempts": 1,
+    "audio_path": "Paper/research/chapter_deep_dives/audio/34-falsifiability-conditions-for-the-two-terminal-theorems.m4a",
+    "error": null,
+    "status": "done"
+  },
+  "35": {
+    "artifact_id": "1cb0f307-7bef-44ab-ba08-92f16c2e9915",
+    "attempts": 1,
+    "audio_path": "Paper/research/chapter_deep_dives/audio/35-geometric-algebra-and-the-n-dimensional-wage.m4a",
+    "error": null,
+    "status": "done"
+  },
+  "36": {
+    "artifact_id": "e69f3e61-1a83-4e15-a182-527d25d06a37",
+    "attempts": 1,
+    "audio_path": "Paper/research/chapter_deep_dives/audio/36-empirical-validation-index.m4a",
+    "error": null,
+    "status": "done"
+  },
+  "37": {
+    "artifact_id": "b2f1bf6d-d216-419a-a478-7cda0d991389",
+    "attempts": 1,
+    "audio_path": "Paper/research/chapter_deep_dives/audio/37-the-photon-model-of-polarizing-information.m4a",
+    "error": null,
+    "status": "done"
+  },
+  "38": {
+    "artifact_id": "01c9022b-381d-476f-86bf-9daa2517617b",
+    "attempts": 1,
+    "audio_path": "Paper/research/chapter_deep_dives/audio/38-universality-and-the-finite-topology-of-power.m4a",
+    "error": null,
+    "status": "done"
+  },
+  "39": {
+    "artifact_id": "c0b2dd77-bb0d-4b1d-94fb-bb8a10204cc2",
+    "attempts": 1,
+    "audio_path": "Paper/research/chapter_deep_dives/audio/39-the-extraction-chart-impedance-reflection-and-the-matching-p.m4a",
+    "error": null,
+    "status": "done"
   },
   "4": {
     "artifact_id": "80cd7711-fe8c-449b-8fda-3316ebd33d56",
-    "attempts": 1,
+    "attempts": 2,
     "audio_path": "Paper/research/chapter_deep_dives/audio/04-empirical-methodology.m4a",
+    "error": null,
+    "status": "done"
+  },
+  "40": {
+    "artifact_id": "f0775a3d-4190-4f77-831b-c856c5131ca8",
+    "attempts": 1,
+    "audio_path": "Paper/research/chapter_deep_dives/audio/40-the-theodore-transform-inter-axis-projection-and-cross-domai.m4a",
     "error": null,
     "status": "done"
   },
   "5": {
     "artifact_id": "991671c1-8aa7-477d-9888-71cd3c44cfc0",
-    "attempts": 1,
+    "attempts": 2,
     "audio_path": "Paper/research/chapter_deep_dives/audio/05-system-initialization-the-geometry-of-extraction.m4a",
     "error": null,
     "status": "done"
   },
   "6": {
     "artifact_id": "197124be-76f8-4444-a84d-041feeb2e3cd",
-    "attempts": 1,
+    "attempts": 2,
     "audio_path": "Paper/research/chapter_deep_dives/audio/06-dynamical-systems-formulation-of-the-extraction-architecture.m4a",
     "error": null,
     "status": "done"
   },
   "7": {
     "artifact_id": "43df33a0-6621-443f-b8f5-12e16797a1dd",
-    "attempts": 1,
+    "attempts": 2,
     "audio_path": "Paper/research/chapter_deep_dives/audio/07-redefining-racism.m4a",
     "error": null,
     "status": "done"
   },
   "8": {
     "artifact_id": "49001c84-155c-4f01-8b2e-05f91419865b",
-    "attempts": 1,
+    "attempts": 2,
     "audio_path": "Paper/research/chapter_deep_dives/audio/08-version-10-initializing-the-vector-15th-century-portugal.m4a",
     "error": null,
     "status": "done"
   },
   "9": {
     "artifact_id": "db694ea5-061a-46fe-a64b-727de2a8c4d5",
-    "attempts": 1,
+    "attempts": 2,
     "audio_path": "Paper/research/chapter_deep_dives/audio/09-the-application-bacons-rebellion-the-buffer-class-and-the-co.m4a",
     "error": null,
     "status": "done"
