@@ -22,6 +22,13 @@ from .cookies import refresh_cookies
 from .instagram import IngestBatch, finish_message_attempts, ingest_dms
 from .report import write_report
 from .site import build_site, export_site
+from .speech import (
+    install_speech,
+    probe_speech_health,
+    speech_agent_installed,
+    speech_status,
+    uninstall_speech,
+)
 from .watch import install_watch, uninstall_watch, watch_status
 
 try:
@@ -441,6 +448,28 @@ def doctor(config: Config) -> dict[str, Any]:
         else:
             instagram_detail = f"{instagram_detail}; authenticated inbox probe failed"
     status["instagram_auth"] = {"ok": instagram_ok, "detail": instagram_detail}
+    speech_health = probe_speech_health()
+    speech_ok = (
+        speech_health.get("ok") is True
+        and speech_health.get("available") is True
+    )
+    if not speech_ok:
+        if speech_agent_installed():
+            detail = (
+                speech_health.get("reason")
+                or speech_health.get("detail")
+                or "speech helper is unhealthy"
+            )
+        else:
+            detail = "speech helper is not installed"
+        speech_health = {
+            **speech_health,
+            "ok": False,
+            "detail": f"{detail}; run `videolab speech install`",
+        }
+    else:
+        speech_health = {**speech_health, "ok": True}
+    status["speech_helper"] = speech_health
     cookies = []
     if config.cookie_dir.is_dir():
         now = datetime.now(timezone.utc).timestamp()
@@ -503,8 +532,23 @@ def build_parser() -> argparse.ArgumentParser:
     watch_subparsers = watch_parser.add_subparsers(dest="watch_command", required=True)
     watch_install = watch_subparsers.add_parser("install")
     watch_install.add_argument("--interval-minutes", type=int, default=15)
+    watch_install.add_argument("--limit", type=int, default=50)
+    watch_scope = watch_install.add_mutually_exclusive_group()
+    watch_scope.add_argument(
+        "--all-threads", dest="all_threads", action="store_true", default=True
+    )
+    watch_scope.add_argument(
+        "--no-all-threads", dest="all_threads", action="store_false"
+    )
     watch_subparsers.add_parser("uninstall")
     watch_subparsers.add_parser("status")
+    speech_parser = subparsers.add_parser("speech")
+    speech_subparsers = speech_parser.add_subparsers(
+        dest="speech_command", required=True
+    )
+    speech_subparsers.add_parser("install")
+    speech_subparsers.add_parser("uninstall")
+    speech_subparsers.add_parser("status")
     site_parser = subparsers.add_parser("site")
     site_subparsers = site_parser.add_subparsers(dest="site_command", required=True)
     site_build = site_subparsers.add_parser("build")
@@ -553,11 +597,23 @@ def main(argv: list[str] | None = None) -> int:
             }
         elif args.command == "watch":
             if args.watch_command == "install":
-                result = install_watch(config, args.interval_minutes)
+                result = install_watch(
+                    config,
+                    args.interval_minutes,
+                    all_threads=args.all_threads,
+                    limit=args.limit,
+                )
             elif args.watch_command == "uninstall":
                 result = uninstall_watch()
             else:
                 result = watch_status(config)
+        elif args.command == "speech":
+            if args.speech_command == "install":
+                result = install_speech(config)
+            elif args.speech_command == "uninstall":
+                result = uninstall_speech()
+            else:
+                result = speech_status(config)
         elif args.command == "site":
             if args.site_command == "export":
                 output = export_site(

@@ -37,15 +37,28 @@ class LaunchctlStub:
 
 
 def test_generated_plist_has_expected_safe_schedule(tmp_path: Path) -> None:
-    document = build_watch_plist(_config(tmp_path), interval_minutes=23)
+    document = build_watch_plist(
+        _config(tmp_path), interval_minutes=23, all_threads=True, limit=50
+    )
 
     assert document["StartInterval"] == 23 * 60
     assert document["RunAtLoad"] is False
     arguments = document["ProgramArguments"]
-    assert arguments[-3:] == ["-m", "videolab", "ingest-dms"]
-    assert "--all-threads" not in arguments
+    assert arguments[-6:] == [
+        "-m", "videolab", "ingest-dms", "--all-threads", "--limit", "50"
+    ]
     assert "--mark-seen" not in arguments
     assert document["EnvironmentVariables"]["PYTHONPATH"].endswith("videolab/src")
+
+
+def test_generated_plist_can_disable_deep_scan(tmp_path: Path) -> None:
+    document = build_watch_plist(
+        _config(tmp_path), all_threads=False, limit=12
+    )
+
+    arguments = document["ProgramArguments"]
+    assert "--all-threads" not in arguments
+    assert arguments[-2:] == ["--limit", "12"]
 
 
 def test_install_writes_plist_and_bootstraps(tmp_path: Path) -> None:
@@ -60,6 +73,22 @@ def test_install_writes_plist_and_bootstraps(tmp_path: Path) -> None:
     assert document["StartInterval"] == 540
     assert launchctl.calls[0][1] == "bootstrap"
     assert (config.root / "logs").is_dir()
+
+
+def test_reinstall_unloads_existing_agent_before_replacing_plist(
+    tmp_path: Path,
+) -> None:
+    config = _config(tmp_path)
+    home = tmp_path / "home"
+    path = home / "Library" / "LaunchAgents" / "com.videolab.dmwatch.plist"
+    path.parent.mkdir(parents=True)
+    path.write_bytes(plistlib.dumps({"Label": "com.videolab.dmwatch"}))
+    launchctl = LaunchctlStub()
+
+    install_watch(config, home=home, runner=launchctl)
+
+    assert launchctl.calls[0][1] == "bootout"
+    assert launchctl.calls[1][1] == "bootstrap"
 
 
 def test_status_and_uninstall_are_clean_when_not_installed(tmp_path: Path) -> None:

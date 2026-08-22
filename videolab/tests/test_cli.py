@@ -96,12 +96,19 @@ def test_ingest_dm_jobs_does_not_run_pipeline_for_terminal_media(
     assert result.succeeded == [slug]
 
 
-def test_parser_exposes_dm_and_watch_commands() -> None:
+def test_parser_exposes_dm_watch_and_speech_commands() -> None:
     dm = cli.build_parser().parse_args(["ingest-dms", "--all-threads", "--limit", "3"])
     watch = cli.build_parser().parse_args(["watch", "install", "--interval-minutes", "8"])
+    shallow = cli.build_parser().parse_args(
+        ["watch", "install", "--no-all-threads", "--limit", "12"]
+    )
+    speech = cli.build_parser().parse_args(["speech", "status"])
 
     assert dm.all_threads is True and dm.limit == 3
     assert watch.watch_command == "install" and watch.interval_minutes == 8
+    assert watch.all_threads is True and watch.limit == 50
+    assert shallow.all_threads is False and shallow.limit == 12
+    assert speech.speech_command == "status"
 
 
 def test_cookies_refresh_threads_profile_from_cli(
@@ -136,6 +143,9 @@ def test_doctor_rejects_login_required_from_authenticated_probe(
 ) -> None:
     config = _config(tmp_path)
     monkeypatch.setattr(cli, "_check", lambda _command: (True, "ready"))
+    monkeypatch.setattr(
+        cli, "probe_speech_health", lambda: {"ok": True, "available": True}
+    )
 
     def fake_run_lines(command: object) -> tuple[bool, list[str]]:
         assert command == ["instagram-cli", "inbox", "--limit", "1"]
@@ -156,6 +166,9 @@ def test_doctor_preserves_account_detail_after_live_probe(
     config = _config(tmp_path)
     monkeypatch.setattr(cli, "_check", lambda _command: (True, "ready"))
     monkeypatch.setattr(
+        cli, "probe_speech_health", lambda: {"ok": True, "available": True}
+    )
+    monkeypatch.setattr(
         cli,
         "_run_lines",
         lambda _command: (True, ["Currently active account: @sample_owner"]),
@@ -165,6 +178,48 @@ def test_doctor_preserves_account_detail_after_live_probe(
         "ok": True,
         "detail": "Currently active account: @sample_owner",
     }
+
+
+def test_doctor_reports_uninstalled_speech_helper_with_remedy(
+    tmp_path: Path, monkeypatch: object
+) -> None:
+    config = _config(tmp_path)
+    monkeypatch.setattr(cli, "_check", lambda _command: (False, "unavailable"))
+    monkeypatch.setattr(cli, "_run_lines", lambda _command: (False, ["unavailable"]))
+    monkeypatch.setattr(
+        cli,
+        "probe_speech_health",
+        lambda: {"ok": False, "detail": "speech helper unreachable"},
+    )
+    monkeypatch.setattr(cli, "speech_agent_installed", lambda: False)
+
+    speech = cli.doctor(config)["speech_helper"]
+
+    assert speech["ok"] is False
+    assert "not installed" in speech["detail"]
+    assert "videolab speech install" in speech["detail"]
+
+
+def test_doctor_rejects_reachable_speech_helper_when_voice_is_unavailable(
+    tmp_path: Path, monkeypatch: object
+) -> None:
+    config = _config(tmp_path)
+    monkeypatch.setattr(cli, "_check", lambda _command: (True, "ready"))
+    monkeypatch.setattr(cli, "_run_lines", lambda _command: (True, ["session active"]))
+    reason = "Siri Voice 2 is not visible to this process."
+    monkeypatch.setattr(
+        cli,
+        "probe_speech_health",
+        lambda: {"ok": True, "available": False, "reason": reason},
+    )
+    monkeypatch.setattr(cli, "speech_agent_installed", lambda: True)
+
+    speech = cli.doctor(config)["speech_helper"]
+
+    assert speech["ok"] is False
+    assert speech["available"] is False
+    assert speech["reason"] == reason
+    assert reason in speech["detail"]
 
 
 def test_dm_url_fetch_failure_does_not_abort_batch(

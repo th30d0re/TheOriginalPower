@@ -54,20 +54,32 @@ def _plist_path(home: Path | None = None) -> Path:
     return (home or Path.home()) / "Library" / "LaunchAgents" / PLIST_NAME
 
 
-def build_watch_plist(config: Config, interval_minutes: int = 15) -> dict[str, Any]:
+def build_watch_plist(
+    config: Config,
+    interval_minutes: int = 15,
+    *,
+    all_threads: bool = True,
+    limit: int = 50,
+) -> dict[str, Any]:
     """Build the launchd property list without writing or loading it."""
 
     if interval_minutes < 1:
         raise ValueError("interval_minutes must be positive")
+    if limit < 1:
+        raise ValueError("limit must be positive")
     logs_dir = config.root / "logs"
+    arguments = [
+        str(config.voice_python.absolute()),
+        "-m",
+        "videolab",
+        "ingest-dms",
+    ]
+    if all_threads:
+        arguments.append("--all-threads")
+    arguments.extend(["--limit", str(limit)])
     return {
         "Label": LABEL,
-        "ProgramArguments": [
-            str(config.voice_python.absolute()),
-            "-m",
-            "videolab",
-            "ingest-dms",
-        ],
+        "ProgramArguments": arguments,
         "EnvironmentVariables": {
             "PYTHONPATH": str((config.root / "src").resolve()),
             # launchd starts jobs with a minimal PATH (/usr/bin:/bin:/usr/sbin:/sbin),
@@ -87,18 +99,27 @@ def install_watch(
     config: Config,
     interval_minutes: int = 15,
     *,
+    all_threads: bool = True,
+    limit: int = 50,
     home: Path | None = None,
     runner: LaunchRunner | None = None,
 ) -> dict[str, Any]:
     """Write and load the launchd watcher."""
 
-    document = build_watch_plist(config, interval_minutes)
+    document = build_watch_plist(
+        config, interval_minutes, all_threads=all_threads, limit=limit
+    )
     path = _plist_path(home)
+    execute = runner or _default_runner
+    if path.exists():
+        target = f"gui/{os.getuid()}/{LABEL}"
+        unloaded = execute(["launchctl", "bootout", target])
+        if unloaded.returncode != 0:
+            execute(["launchctl", "unload", str(path)])
     path.parent.mkdir(parents=True, exist_ok=True)
     (config.root / "logs").mkdir(parents=True, exist_ok=True)
     path.write_bytes(plistlib.dumps(document, fmt=plistlib.FMT_XML, sort_keys=False))
 
-    execute = runner or _default_runner
     domain = f"gui/{os.getuid()}"
     loaded = execute(["launchctl", "bootstrap", domain, str(path)])
     if loaded.returncode != 0:
@@ -106,7 +127,13 @@ def install_watch(
     if loaded.returncode != 0:
         detail = (loaded.stderr or loaded.stdout or "launchctl failed").strip()
         raise RuntimeError(f"Cannot load {LABEL}: {detail}")
-    return {"installed": True, "plist": str(path), "interval_minutes": interval_minutes}
+    return {
+        "installed": True,
+        "plist": str(path),
+        "interval_minutes": interval_minutes,
+        "all_threads": all_threads,
+        "limit": limit,
+    }
 
 
 def uninstall_watch(

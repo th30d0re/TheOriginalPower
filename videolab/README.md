@@ -37,13 +37,32 @@ Cookie exports live under `~/.config/videolab/cookies/` with mode `600`. They ne
 
 ## Siri speech helper
 
-The videolab website's read-aloud widget uses Siri Voice 2 when the local speech helper is running. Start it with:
+The videolab website's read-aloud widget uses Siri Voice 2 when the local speech helper is running. Install the persistent launchd daemon with:
+
+```bash
+python -m videolab speech install
+python -m videolab speech status
+```
+
+The installer stages `siri-speech/Sources/main.swift` at `~/Library/Application Support/videolab/main.swift`, resolves the active Xcode developer directory, and loads `com.videolab.speech` with `RunAtLoad` and `KeepAlive`. The agent invokes Apple-signed `/usr/bin/swift` against that staged source, which preserves access to Siri Voice 2 without a TCC-protected `~/Documents` read, and writes output to `videolab/logs/speech.out.log` and `videolab/logs/speech.err.log`. Status requires the agent to be installed and loaded and `/health` to report both `ok: true` and `available: true`; it separately reports staged-source drift with a reinstall remedy. Remove the daemon and staged source with `python -m videolab speech uninstall`.
+
+For foreground development, run:
 
 ```bash
 make videolab-speech
 ```
 
-The helper listens on `127.0.0.1:5277` only. Without it the widget falls back to the browser's built-in voices. See `videolab/docs/V12-findings.md` for why the helper runs through the Swift interpreter.
+The helper listens on `127.0.0.1:5277` only. Without it the widget falls back to the browser's built-in voices.
+
+## DM watcher
+
+Install the 15-minute DM watcher with a deep scan of up to 50 items per run:
+
+```bash
+python -m videolab watch install
+```
+
+Deep scanning is the default because the narrow inbox scan misses real reels. Adjust the batch limit with `--limit N`, or explicitly select the narrow scan with `--no-all-threads`. Use `python -m videolab watch status` to inspect it and `python -m videolab watch uninstall` to remove it.
 
 ## Output
 
@@ -54,4 +73,3 @@ Run the unit tests with:
 ```bash
 python -m pytest videolab/tests/test_containers.py videolab/tests/test_config.py -q
 ```
-
