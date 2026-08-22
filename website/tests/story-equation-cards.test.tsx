@@ -4,6 +4,7 @@ import { afterEach, describe, expect, test } from 'vitest';
 import { cleanup, render, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { equationCards } from '../src/content/equations/cards';
+import { symbolsForLatex } from '../src/content/equations/story';
 import SceneVisual from '../src/story/visuals/SceneVisual';
 
 afterEach(cleanup);
@@ -23,6 +24,11 @@ const buttonNamed = (container: HTMLElement, name: string) => {
 };
 
 describe('story equation enrichment states', () => {
+  test('specific sourced symbols suppress overlapping generic glosses', () => {
+    expect(symbolsForLatex('\\beta_{\\text{bio}} + \\tau_{\\text{age}}').map(({ id }) => id))
+      .toEqual(['biological-depletion', 'developmental-lag']);
+  });
+
   test('full expands to tier, falsification, sources, and a two-way decoder', async () => {
     const user = userEvent.setup();
     const card = equationCards.find((candidate) => candidate.label === 'eq:6.12-capacity-compounding-full');
@@ -53,7 +59,7 @@ describe('story equation enrichment states', () => {
     expect(figure.querySelector('.story-equation-details')).toBeNull();
   });
 
-  test('partial exposes terms without any provenance block', async () => {
+  test('partial exposes terms and registry provenance without validation claims', async () => {
     const user = userEvent.setup();
     render(
       <SceneVisual
@@ -71,16 +77,16 @@ describe('story equation enrichment states', () => {
     expect(figure.querySelectorAll('.term-chip')).toHaveLength(2);
     expect(figure.querySelectorAll('.equation-symbol')).toHaveLength(2);
     expect(figure.querySelector('.equation-term-detail')).not.toBeNull();
-    expect(figure.querySelector('.story-equation-provenance')).toBeNull();
+    expect(figure.querySelector('.story-equation-provenance')?.textContent).toContain('Paper/');
     expect(figure.querySelector('.falsification-box')).toBeNull();
     expect(figure.querySelector('.equation-sources')).toBeNull();
   });
 
-  test('none preserves the existing plain equation rendering', () => {
+  test('a missing join entry preserves the existing plain equation rendering', () => {
     render(
       <SceneVisual
         spec={{ kind: 'equation', latex: 'O = 0', label: 'eq:german-liquidation-reclass' }}
-        chapterFile="ch11_german_extraction.ts"
+        chapterFile="not-in-story-join.ts"
         equationOccurrence={0}
       />,
     );

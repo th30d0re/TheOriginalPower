@@ -11,7 +11,8 @@
       "label": "eq:19.1-kernel-objective-registry-entry",
       "chapter": "Equation Registry and Era-Level Calibration",
       "section": "Canonical Equation: The Predatory Min-Max Function",
-      "line": 14581
+      "line": 14628,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": {
       "tier": 3,
@@ -36,7 +37,8 @@
       "label": "eq:19.1-kernel-objective-registry-entry",
       "chapter": "Equation Registry and Era-Level Calibration",
       "section": "Canonical Equation: The Predatory Min-Max Function",
-      "line": 14581
+      "line": 14628,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": {
       "tier": 3,
@@ -61,7 +63,8 @@
       "label": "eq:19.5-unified-lorentz-force-registry",
       "chapter": "Equation Registry and Era-Level Calibration",
       "section": "Electrodynamic Framework Registry",
-      "line": 14623
+      "line": 14670,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": null,
     "enrichment": "partial"
@@ -78,7 +81,8 @@
       "label": "eq:19.13-buffer-work-theorem-registry",
       "chapter": "Equation Registry and Era-Level Calibration",
       "section": "Electrodynamic Framework Registry",
-      "line": 14697
+      "line": 14744,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": null,
     "enrichment": "partial"
@@ -95,7 +99,8 @@
       "label": "eq:ga.quaternion",
       "chapter": "Geometric Algebra and the N-Dimensional Wage",
       "section": "The Quaternion Stage: Three Intersectional Axes",
-      "line": 14981
+      "line": 15140,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": null,
     "enrichment": "partial"
@@ -127,7 +132,8 @@
       "label": "eq:ga.transphobia-paradox",
       "chapter": "Geometric Algebra and the N-Dimensional Wage",
       "section": "The N-Dimensional Weighted Summation Equation",
-      "line": 15026
+      "line": 15185,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": null,
     "enrichment": "partial"
@@ -144,7 +150,8 @@
       "label": "eq:ga.bivector",
       "chapter": "Geometric Algebra and the N-Dimensional Wage",
       "section": "Bivectors and Intersectional Space",
-      "line": 15035
+      "line": 15194,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": null,
     "enrichment": "partial"
@@ -161,7 +168,8 @@
       "label": "eq:app-photon-spectral-density",
       "chapter": "The Photon Model of Polarizing Information",
       "section": "Spectral Density and the Small-Demographic Anomaly",
-      "line": 15086
+      "line": 15246,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": null,
     "enrichment": "partial"
@@ -178,7 +186,8 @@
       "label": "eq:app-photon-field-power",
       "chapter": "The Photon Model of Polarizing Information",
       "section": "From Continuous Field to Discrete Quanta",
-      "line": 15065
+      "line": 15225,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": null,
     "enrichment": "partial"
@@ -195,7 +204,8 @@
       "label": "eq:app-photon-spectral-density",
       "chapter": "The Photon Model of Polarizing Information",
       "section": "Spectral Density and the Small-Demographic Anomaly",
-      "line": 15086
+      "line": 15246,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": null,
     "enrichment": "partial"
@@ -212,7 +222,8 @@
       "label": "eq:app-photon-optimization",
       "chapter": "The Photon Model of Polarizing Information",
       "section": "Spectral Density and the Small-Demographic Anomaly",
-      "line": 15096
+      "line": 15256,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": null,
     "enrichment": "partial"
@@ -229,7 +240,8 @@
       "label": "eq:app-universality-objective",
       "chapter": "Universality and the Finite Topology of Power",
       "section": "Evidence from Control Theory",
-      "line": 15141
+      "line": 15301,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": null,
     "enrichment": "partial"
@@ -241,9 +253,16 @@
     "storyLabel": "eq. XC.3",
     "storyCaption": "Absorbed power increases as the magnitude of the reflected wave decreases.",
     "latex": "P_{\\\\text{abs}} \\\\;=\\\\; |a|^2\\\\bigl(1 - |\\\\Gamma|^2\\\\bigr)",
-    "registry": null,
+    "registry": {
+      "id": "E305",
+      "label": "eq:xc.3-absorbed-power",
+      "chapter": "The Extraction Chart: Impedance, Reflection, and the Matching Problem",
+      "section": "Normalized Impedance and the Reflection Coefficient",
+      "line": 84,
+      "sourceFile": "Paper/apx_extraction_chart.tex"
+    },
     "validation": null,
-    "enrichment": "none"
+    "enrichment": "partial"
   },
   {
     "chapterFile": "apxH_extraction_chart.ts",
@@ -252,9 +271,16 @@
     "storyLabel": "eq. XC.12",
     "storyCaption": "Crossing the unit-circle boundary requires negative resistance and source behavior.",
     "latex": "|\\\\Gamma| > 1 \\\\quad \\\\Longleftrightarrow \\\\quad \\\\operatorname{Re}(z) < 0",
-    "registry": null,
+    "registry": {
+      "id": "E314",
+      "label": "eq:xc.12-active-condition",
+      "chapter": "The Extraction Chart: Impedance, Reflection, and the Matching Problem",
+      "section": "The Active Region and the Counter-Virus",
+      "line": 285,
+      "sourceFile": "Paper/apx_extraction_chart.tex"
+    },
     "validation": null,
-    "enrichment": "none"
+    "enrichment": "partial"
   },
   {
     "chapterFile": "apxH_extraction_chart.ts",
@@ -263,9 +289,16 @@
     "storyLabel": "eq. XC.13",
     "storyCaption": "The finite matching budget for a load reducible to a parallel RC combination.",
     "latex": "\\\\int_{0}^{\\\\infty} \\\\ln\\\\frac{1}{|\\\\Gamma(\\\\omega)|}\\\\, d\\\\omega \\\\;\\\\leq\\\\; \\\\frac{\\\\pi}{RC}",
-    "registry": null,
+    "registry": {
+      "id": "E315",
+      "label": "eq:xc.13-bode-fano",
+      "chapter": "The Extraction Chart: Impedance, Reflection, and the Matching Problem",
+      "section": "The Bode--Fano Limit on Simultaneous Axes",
+      "line": 313,
+      "sourceFile": "Paper/apx_extraction_chart.tex"
+    },
     "validation": null,
-    "enrichment": "none"
+    "enrichment": "partial"
   },
   {
     "chapterFile": "ch00_system_initialization.ts",
@@ -278,8 +311,9 @@
       "id": "E001",
       "label": "eq:0.1-unified-lorentz-force",
       "chapter": "System Initialization: The Geometry of Extraction",
-      "section": "Reproducibility Standard",
-      "line": 343
+      "section": "",
+      "line": 364,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": null,
     "enrichment": "partial"
@@ -295,8 +329,9 @@
       "id": "E001",
       "label": "eq:0.1-unified-lorentz-force",
       "chapter": "System Initialization: The Geometry of Extraction",
-      "section": "Reproducibility Standard",
-      "line": 343
+      "section": "",
+      "line": 364,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": null,
     "enrichment": "partial"
@@ -312,8 +347,9 @@
       "id": "E002",
       "label": "eq:0.1a-self-exciting-generator",
       "chapter": "System Initialization: The Geometry of Extraction",
-      "section": "Reproducibility Standard",
-      "line": 356
+      "section": "",
+      "line": 377,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": null,
     "enrichment": "partial"
@@ -330,7 +366,8 @@
       "label": "eq:0.2-tier-voltage-drop",
       "chapter": "System Initialization: The Geometry of Extraction",
       "section": "The Hardware Mapping: Five Tiers as Circuit Elements",
-      "line": 462
+      "line": 483,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": null,
     "enrichment": "partial"
@@ -347,7 +384,8 @@
       "label": "eq:1.1-enclosure-score",
       "chapter": "System Initialization: The Geometry of Extraction",
       "section": "The Tri-Modal Enclosure Model",
-      "line": 499
+      "line": 535,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": {
       "tier": 3,
@@ -374,7 +412,8 @@
       "label": "eq:lag-augmented",
       "chapter": "Dynamical Systems Formulation of the Extraction Architecture",
       "section": "The Augmented Form",
-      "line": 1212
+      "line": 1248,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": null,
     "enrichment": "partial"
@@ -391,7 +430,8 @@
       "label": "eq:lag-euler-lagrange",
       "chapter": "Dynamical Systems Formulation of the Extraction Architecture",
       "section": "The Rayleigh Dissipation Function",
-      "line": 1204
+      "line": 1240,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": null,
     "enrichment": "partial"
@@ -408,7 +448,8 @@
       "label": "eq:lag-augmented",
       "chapter": "Dynamical Systems Formulation of the Extraction Architecture",
       "section": "The Augmented Form",
-      "line": 1212
+      "line": 1248,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": null,
     "enrichment": "partial"
@@ -425,7 +466,8 @@
       "label": "eq:1.4-elite-causal-arrow",
       "chapter": "Redefining Racism",
       "section": "Racism as Primary Example",
-      "line": 1490
+      "line": 1526,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": {
       "tier": 3,
@@ -463,7 +505,8 @@
       "label": "eq:1.4-elite-causal-arrow",
       "chapter": "Redefining Racism",
       "section": "Racism as Primary Example",
-      "line": 1490
+      "line": 1526,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": {
       "tier": 3,
@@ -501,7 +544,8 @@
       "label": "eq:1.5-kernel-optimization",
       "chapter": "Redefining Racism",
       "section": "The Core Payload: A Resource-Mining Rootkit",
-      "line": 1730
+      "line": 1766,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": {
       "tier": 1,
@@ -540,7 +584,8 @@
       "label": "eq:1.7-interface-optimizer",
       "chapter": "Redefining Racism",
       "section": "Polymorphic Code: The Interface Swap",
-      "line": 1837
+      "line": 1873,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": {
       "tier": 2,
@@ -579,7 +624,8 @@
       "label": "eq:1.7a-rlc-governing",
       "chapter": "Redefining Racism",
       "section": "The Backlash Constant: Racism as a Damped RLC Circuit",
-      "line": 1879
+      "line": 1915,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": null,
     "enrichment": "partial"
@@ -596,7 +642,8 @@
       "label": "eq:1.11-phase-loading",
       "chapter": "Redefining Racism",
       "section": "Fractal Execution: The Self-Similar Architecture",
-      "line": 2157
+      "line": 2193,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": {
       "tier": 3,
@@ -635,7 +682,8 @@
       "label": "eq:2.1-racism-vector",
       "chapter": "Version 1.0: Initializing the Vector (15th-Century Portugal)",
       "section": "The Vector Equation of Racism",
-      "line": 2422
+      "line": 2458,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": {
       "tier": 3,
@@ -660,7 +708,8 @@
       "label": "eq:2.1-racism-vector",
       "chapter": "Version 1.0: Initializing the Vector (15th-Century Portugal)",
       "section": "The Vector Equation of Racism",
-      "line": 2422
+      "line": 2458,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": {
       "tier": 3,
@@ -685,7 +734,8 @@
       "label": "eq:2.6-roman-american-structural-parallel",
       "chapter": "Version 1.0: Initializing the Vector (15th-Century Portugal)",
       "section": "The Religious Partition: Pre-Racial Ideological Justification",
-      "line": 2646
+      "line": 2682,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": {
       "tier": 3,
@@ -709,8 +759,9 @@
       "id": "E054",
       "label": "eq:2.7-three-tier-portugal-inequality",
       "chapter": "Version 1.0: Initializing the Vector (15th-Century Portugal)",
-      "section": "Introducing the First Three Variables: The Elite ($E$), the Out-group ($O_{\\text{racialized",
-      "line": 2690
+      "section": "Introducing the First Three Variables: The Elite ($E$), the Out-group ($O_{\\text{racialized}}$), and the In-group ($I$)",
+      "line": 2726,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": {
       "tier": 3,
@@ -737,7 +788,8 @@
       "label": "eq:2.8-church-science-feedback-loop",
       "chapter": "Version 1.0: Initializing the Vector (15th-Century Portugal)",
       "section": "Institutional Legitimation: The Role of Church and Science",
-      "line": 2742
+      "line": 2778,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": {
       "tier": 3,
@@ -771,7 +823,8 @@
       "label": "eq:3.3-race-destroys-class",
       "chapter": "The Application: Bacon's Rebellion, the Buffer Class, and the Constitutional Patch (1676--1787)",
       "section": "The Patch: The Explicit Codification of ``Whiteness'' (1705)",
-      "line": 2954
+      "line": 2991,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": {
       "tier": 3,
@@ -805,7 +858,8 @@
       "label": "eq:3.1-bacon-solidarity-condition",
       "chapter": "The Application: Bacon's Rebellion, the Buffer Class, and the Constitutional Patch (1676--1787)",
       "section": "The Application: Bacon's Rebellion and the Partition of the Poor (1676)",
-      "line": 2874
+      "line": 2911,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": {
       "tier": 1,
@@ -849,7 +903,8 @@
       "label": "eq:3.2-boundary-enforcement-1691",
       "chapter": "The Application: Bacon's Rebellion, the Buffer Class, and the Constitutional Patch (1676--1787)",
       "section": "The Boundary Enforcement Act (1691): Criminalizing the Crossing",
-      "line": 2923
+      "line": 2960,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": {
       "tier": 3,
@@ -882,7 +937,8 @@
       "label": "eq:3.3-race-destroys-class",
       "chapter": "The Application: Bacon's Rebellion, the Buffer Class, and the Constitutional Patch (1676--1787)",
       "section": "The Patch: The Explicit Codification of ``Whiteness'' (1705)",
-      "line": 2954
+      "line": 2991,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": {
       "tier": 3,
@@ -915,8 +971,9 @@
       "id": "E059",
       "label": "eq:3.4-three-tier-post-bacon",
       "chapter": "The Application: Bacon's Rebellion, the Buffer Class, and the Constitutional Patch (1676--1787)",
-      "section": "Formalizing the Buffer Class ($I_{\\text{buffer",
-      "line": 2974
+      "section": "Formalizing the Buffer Class ($I_{\\text{buffer}}$): From Implicit In-group to Weaponized Partition",
+      "line": 3011,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": {
       "tier": 3,
@@ -943,7 +1000,8 @@
       "label": "eq:5.1-compliance-differential",
       "chapter": "The Gendered Axis: Coverture, Eugenics, and the Reproductive Extraction Kernel",
       "section": "The Early Detection Theorem: Why Compounded Intersections Recognize the Algorithm First",
-      "line": 3883
+      "line": 3924,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": {
       "tier": 2,
@@ -981,8 +1039,9 @@
       "id": "E060",
       "label": "eq:awb_dualtrack",
       "chapter": "The Gendered Axis: Coverture, Eugenics, and the Reproductive Extraction Kernel",
-      "section": "The Statutory Terminal Layer: Assault Weapons Bans and the Three-Tier Compounding Architecture",
-      "line": 3759
+      "section": "The Gendered Application of the Haitian Theorem: Withdrawal, Deterrence, and the Necessity of Force",
+      "line": 3800,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": null,
     "enrichment": "partial"
@@ -999,7 +1058,8 @@
       "label": "eq:6.12-capacity-compounding-full",
       "chapter": "The Enforcement Engine: Slave Patrols, the 13th Amendment, and the Compounding Model (1704--1865)",
       "section": "Case Study: The Asymmetric Enforcement Multiplier --- Cannabis Arrests, 2010--2018",
-      "line": 4899
+      "line": 4941,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": {
       "tier": 1,
@@ -1049,7 +1109,8 @@
       "label": "eq:6.3-thirteenth-amendment-exception",
       "chapter": "The Enforcement Engine: Slave Patrols, the 13th Amendment, and the Compounding Model (1704--1865)",
       "section": "The System Kernel: The 13th Amendment Loophole (1865)",
-      "line": 4751
+      "line": 4793,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": {
       "tier": 3,
@@ -1088,7 +1149,8 @@
       "label": "eq:6.5-compounding-temporal-model",
       "chapter": "The Enforcement Engine: Slave Patrols, the 13th Amendment, and the Compounding Model (1704--1865)",
       "section": "The Compounding Model: From Summation to Multiplication",
-      "line": 4827
+      "line": 4869,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": {
       "tier": 2,
@@ -1121,7 +1183,8 @@
       "label": "eq:7.1-pullman-corollary",
       "chapter": "The Containment: Pullman, Redlining, and the Wages of Whiteness (1894--1965)",
       "section": "The Theorem the Buffer Class Refused to Learn",
-      "line": 5415
+      "line": 5457,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": {
       "tier": 3,
@@ -1155,7 +1218,8 @@
       "label": "eq:7.1-pullman-corollary",
       "chapter": "The Containment: Pullman, Redlining, and the Wages of Whiteness (1894--1965)",
       "section": "The Theorem the Buffer Class Refused to Learn",
-      "line": 5415
+      "line": 5457,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": {
       "tier": 3,
@@ -1184,9 +1248,16 @@
     "storyLabel": "eq:german-liquidation-reclass",
     "storyCaption": null,
     "latex": "O_{\\\\text{racialized}}^{\\\\text{Herero}} \\\\; \\\\xrightarrow{\\\\;P_{\\\\text{kinetic}}\\\\;} \\\\; O_{\\\\text{liquidated}} \\\\quad \\\\text{where} \\\\quad \\\\mathcal{V}(O_{\\\\text{liquidated}}) = 0",
-    "registry": null,
+    "registry": {
+      "id": "E242",
+      "label": "eq:german-liquidation-reclass",
+      "chapter": "The German Extraction Algorithm (1904--1945)",
+      "section": "The Extermination Order as Kinetic Patch",
+      "line": 45,
+      "sourceFile": "Paper/chapter_german_extraction_algorithm.tex"
+    },
     "validation": null,
-    "enrichment": "none"
+    "enrichment": "partial"
   },
   {
     "chapterFile": "ch11_german_extraction.ts",
@@ -1195,9 +1266,16 @@
     "storyLabel": "eq:german-liquidation-reclass",
     "storyCaption": "The operational reclassification of the Herero population from extractable labor to a liquidation target.",
     "latex": "O_{\\\\text{racialized}}^{\\\\text{Herero}} \\\\; \\\\xrightarrow{\\\\;P_{\\\\text{kinetic}}\\\\;} \\\\; O_{\\\\text{liquidated}} \\\\quad \\\\text{where} \\\\quad \\\\mathcal{V}(O_{\\\\text{liquidated}}) = 0",
-    "registry": null,
+    "registry": {
+      "id": "E242",
+      "label": "eq:german-liquidation-reclass",
+      "chapter": "The German Extraction Algorithm (1904--1945)",
+      "section": "The Extermination Order as Kinetic Patch",
+      "line": 45,
+      "sourceFile": "Paper/chapter_german_extraction_algorithm.tex"
+    },
     "validation": null,
-    "enrichment": "none"
+    "enrichment": "partial"
   },
   {
     "chapterFile": "ch11_german_extraction.ts",
@@ -1206,9 +1284,16 @@
     "storyLabel": "eq:german-variable-swap",
     "storyCaption": "The Variable Swap replaces a material psychological wage with a racial-status wage at lower material cost.",
     "latex": "\\\\psi_{\\\\text{Weimar}} = \\\\psi_m(t) + \\\\epsilon \\\\;\\\\;\\\\rightarrow\\\\;\\\\; \\\\psi_{\\\\text{Nazi}} = \\\\psi_s^{\\\\text{racial}}(t) + \\\\delta, \\\\quad \\\\text{where} \\\\quad \\\\delta \\\\ll \\\\psi_m^{\\\\text{pre-crash}}",
-    "registry": null,
+    "registry": {
+      "id": "E243",
+      "label": "eq:german-variable-swap",
+      "chapter": "The German Extraction Algorithm (1904--1945)",
+      "section": "Weimar System Error and the Elite Recompile (1919--1933)",
+      "line": 103,
+      "sourceFile": "Paper/chapter_german_extraction_algorithm.tex"
+    },
     "validation": null,
-    "enrichment": "none"
+    "enrichment": "partial"
   },
   {
     "chapterFile": "ch11_german_extraction.ts",
@@ -1217,9 +1302,16 @@
     "storyLabel": "eq:german-aryan-status",
     "storyCaption": "The genealogical status gradient encoded by the legal partition.",
     "latex": "\\\\psi_s^{\\\\text{Aryan}}(i) = \\\\begin{cases}\\n\\\\psi_{\\\\text{base}} & \\\\text{if } G(i) \\\\in \\\\text{Aryan} \\\\\\\\\\n\\\\psi_{\\\\text{base}} - \\\\lambda & \\\\text{if } G(i) \\\\in \\\\text{Mischling}_1 \\\\\\\\\\n0 & \\\\text{if } G(i) \\\\in \\\\text{Jewish}\\n\\\\end{cases}",
-    "registry": null,
+    "registry": {
+      "id": "E244",
+      "label": "eq:german-aryan-status",
+      "chapter": "The German Extraction Algorithm (1904--1945)",
+      "section": "The Psychological Wage in the German Kernel: Aryan Status as Suppression Allocation",
+      "line": 121,
+      "sourceFile": "Paper/chapter_german_extraction_algorithm.tex"
+    },
     "validation": null,
-    "enrichment": "none"
+    "enrichment": "partial"
   },
   {
     "chapterFile": "ch11_german_extraction.ts",
@@ -1228,9 +1320,16 @@
     "storyLabel": "eq:german-depletion-rate",
     "storyCaption": "The target population changes through immediate liquidation and temporary preservation for forced labor.",
     "latex": "\\\\frac{dO_{\\\\text{target}}}{dt} = -\\\\mu(t) \\\\cdot O_{\\\\text{target}}(t) + \\\\nu(t) \\\\cdot L_{\\\\text{forced}}(t)",
-    "registry": null,
+    "registry": {
+      "id": "E247",
+      "label": "eq:german-depletion-rate",
+      "chapter": "The German Extraction Algorithm (1904--1945)",
+      "section": "The Demographic Engineering of the Final Solution: Quantified Depletion",
+      "line": 202,
+      "sourceFile": "Paper/chapter_german_extraction_algorithm.tex"
+    },
     "validation": null,
-    "enrichment": "none"
+    "enrichment": "partial"
   },
   {
     "chapterFile": "ch11_german_extraction.ts",
@@ -1239,9 +1338,16 @@
     "storyLabel": "eq:german-net-extraction",
     "storyCaption": "Immediate asset seizure is offset by the discounted future value of lost skilled labor.",
     "latex": "\\\\Delta \\\\mathcal{E} = \\\\mathcal{E}_{\\\\text{liquidated}} - \\\\mathcal{E}_{\\\\text{lost}} \\\\quad \\\\text{where} \\\\quad \\\\mathcal{E}_{\\\\text{lost}} = \\\\int_{t_0}^{t_1} L_{\\\\text{skilled}}(t) \\\\cdot w_{\\\\text{eff}}(t) \\\\, dt",
-    "registry": null,
+    "registry": {
+      "id": "E252",
+      "label": "eq:german-net-extraction",
+      "chapter": "The German Extraction Algorithm (1904--1945)",
+      "section": "The Economic Output of Buffer Consumption: Negative Net Extraction",
+      "line": 346,
+      "sourceFile": "Paper/chapter_german_extraction_algorithm.tex"
+    },
     "validation": null,
-    "enrichment": "none"
+    "enrichment": "partial"
   },
   {
     "chapterFile": "ch12_geopolitical_patch.ts",
@@ -1250,9 +1356,16 @@
     "storyLabel": null,
     "storyCaption": "The manuscript adds shadow capital to the standard state-formation model.",
     "latex": "S(t) = R_{\\\\text{tax}}(t) + A_{\\\\text{foreign}}(t) + P_{\\\\text{domestic}}(t) + C_{\\\\text{shadow}}(t)",
-    "registry": null,
+    "registry": {
+      "id": "E253",
+      "label": "eq:gp0-bootstrap",
+      "chapter": "The Geopolitical 1.1 Patch (1948--Present)",
+      "section": "Mathematical Preliminaries: Shadow Capital as Bootstrap Injection",
+      "line": 30,
+      "sourceFile": "Paper/chapter_geopolitical_patch.tex"
+    },
     "validation": null,
-    "enrichment": "none"
+    "enrichment": "partial"
   },
   {
     "chapterFile": "ch12_geopolitical_patch.ts",
@@ -1261,9 +1374,16 @@
     "storyLabel": null,
     "storyCaption": "The three components of the manuscript’s shadow-capital term.",
     "latex": "C_{\\\\text{shadow}}(t) = C_{\\\\text{kinetic}}(t) + C_{\\\\text{financial}}(t) + C_{\\\\text{logistical}}(t)",
-    "registry": null,
+    "registry": {
+      "id": "E254",
+      "label": "eq:gp0b-shadow-decomposition",
+      "chapter": "The Geopolitical 1.1 Patch (1948--Present)",
+      "section": "Mathematical Preliminaries: Shadow Capital as Bootstrap Injection",
+      "line": 39,
+      "sourceFile": "Paper/chapter_geopolitical_patch.tex"
+    },
     "validation": null,
-    "enrichment": "none"
+    "enrichment": "partial"
   },
   {
     "chapterFile": "ch12_geopolitical_patch.ts",
@@ -1272,9 +1392,16 @@
     "storyLabel": null,
     "storyCaption": "The manuscript’s three-channel clearance function.",
     "latex": "\\\\mathcal{C}(t) = \\\\alpha_{\\\\text{kinetic}}(t) + \\\\alpha_{\\\\text{terror}}(t) + \\\\alpha_{\\\\text{admin}}(t)",
-    "registry": null,
+    "registry": {
+      "id": "E256",
+      "label": "eq:gp2-clearance-function",
+      "chapter": "The Geopolitical 1.1 Patch (1948--Present)",
+      "section": "The Nakba as Population Clearance Function",
+      "line": 75,
+      "sourceFile": "Paper/chapter_geopolitical_patch.tex"
+    },
     "validation": null,
-    "enrichment": "none"
+    "enrichment": "partial"
   },
   {
     "chapterFile": "ch12_geopolitical_patch.ts",
@@ -1283,9 +1410,16 @@
     "storyLabel": null,
     "storyCaption": "The pardon activates after the manuscript’s legitimization delay.",
     "latex": "\\\\Lambda(t, t_0, \\\\Delta t_{\\\\text{pardon}}) = \\\\Theta\\\\bigl(t - (t_0 + \\\\Delta t_{\\\\text{pardon}})\\\\bigr)",
-    "registry": null,
+    "registry": {
+      "id": "E264",
+      "label": "eq:gp8-retroactive-legitimization",
+      "chapter": "The Geopolitical 1.1 Patch (1948--Present)",
+      "section": "The Sonneborn Institute and Makhon Z'",
+      "line": 197,
+      "sourceFile": "Paper/chapter_geopolitical_patch.tex"
+    },
     "validation": null,
-    "enrichment": "none"
+    "enrichment": "partial"
   },
   {
     "chapterFile": "ch12_geopolitical_patch.ts",
@@ -1294,9 +1428,16 @@
     "storyLabel": null,
     "storyCaption": "The manuscript’s interface–backend gap.",
     "latex": "\\\\mathcal{L}_{\\\\text{display}}(t) \\\\neq \\\\mathcal{L}_{\\\\text{backend}}(t)",
-    "registry": null,
+    "registry": {
+      "id": "E274",
+      "label": "eq:gp14-formal-backend-separation",
+      "chapter": "The Geopolitical 1.1 Patch (1948--Present)",
+      "section": "The Continuous Runtime: Three Eras, One Algorithm",
+      "line": 367,
+      "sourceFile": "Paper/chapter_geopolitical_patch.tex"
+    },
     "validation": null,
-    "enrichment": "none"
+    "enrichment": "partial"
   },
   {
     "chapterFile": "ch13_biological_extraction.ts",
@@ -1305,9 +1446,16 @@
     "storyLabel": "The biological depletion coefficient",
     "storyCaption": null,
     "latex": "\\\\beta_{\\\\text{bio}}(t) = E(t) \\\\cdot T(t) \\\\cdot A(t),",
-    "registry": null,
+    "registry": {
+      "id": "E283",
+      "label": "eq:biodepletion-coeff",
+      "chapter": "The Biological Extraction Kernel: Environmental Racism as Systemic Toxicity (1879--Present)",
+      "section": "The Biological Depletion Coefficient",
+      "line": 55,
+      "sourceFile": "Paper/chapter_environmental_racism.tex"
+    },
     "validation": null,
-    "enrichment": "none"
+    "enrichment": "partial"
   },
   {
     "chapterFile": "ch13_biological_extraction.ts",
@@ -1316,9 +1464,16 @@
     "storyLabel": "Biological compounding model",
     "storyCaption": "Environmental toxicity enters the recursive operator as a persistent degradation term.",
     "latex": "O_{\\\\text{bio}}(t) = O_{\\\\text{bio}}(t-1) \\\\cdot \\\\bigl(1 - \\\\alpha \\\\cdot P(t) - \\\\beta_{\\\\text{bio}}(t)\\\\bigr).",
-    "registry": null,
+    "registry": {
+      "id": "E284",
+      "label": "eq:bio-compound",
+      "chapter": "The Biological Extraction Kernel: Environmental Racism as Systemic Toxicity (1879--Present)",
+      "section": "The Full Biological Compounding Model",
+      "line": 92,
+      "sourceFile": "Paper/chapter_environmental_racism.tex"
+    },
     "validation": null,
-    "enrichment": "none"
+    "enrichment": "partial"
   },
   {
     "chapterFile": "ch13_biological_extraction.ts",
@@ -1327,9 +1482,16 @@
     "storyLabel": "Biological depletion coefficient",
     "storyCaption": "Concentration, duration, and absorption combine multiplicatively.",
     "latex": "\\\\beta_{\\\\text{bio}}(t) = E(t) \\\\cdot T(t) \\\\cdot A(t),",
-    "registry": null,
+    "registry": {
+      "id": "E283",
+      "label": "eq:biodepletion-coeff",
+      "chapter": "The Biological Extraction Kernel: Environmental Racism as Systemic Toxicity (1879--Present)",
+      "section": "The Biological Depletion Coefficient",
+      "line": 55,
+      "sourceFile": "Paper/chapter_environmental_racism.tex"
+    },
     "validation": null,
-    "enrichment": "none"
+    "enrichment": "partial"
   },
   {
     "chapterFile": "ch13_biological_extraction.ts",
@@ -1338,9 +1500,16 @@
     "storyLabel": "Lead–crime latency",
     "storyCaption": "The developmental lag is 21–23 years.",
     "latex": "\\\\mathrm{Crime}(t) = \\\\int \\\\mathrm{Pb}(t - \\\\tau_{\\\\text{age}}) \\\\cdot D(\\\\text{population\\\\_density}) \\\\cdot S(\\\\text{socioeconomic\\\\_stress}) \\\\, d\\\\tau,",
-    "registry": null,
+    "registry": {
+      "id": "E287",
+      "label": "eq:latency-crime",
+      "chapter": "The Biological Extraction Kernel: Environmental Racism as Systemic Toxicity (1879--Present)",
+      "section": "The Exposure Gradient and Latency Functions",
+      "line": 325,
+      "sourceFile": "Paper/chapter_environmental_racism.tex"
+    },
     "validation": null,
-    "enrichment": "none"
+    "enrichment": "partial"
   },
   {
     "chapterFile": "ch13_biological_extraction.ts",
@@ -1349,9 +1518,16 @@
     "storyLabel": "Property-tax lead feedback loop",
     "storyCaption": "Redlining supplies the initial condition; fiscal allocation and infrastructure age propagate it.",
     "latex": "L_{\\\\text{loop}}(t) = R_{\\\\text{redline}} \\\\cdot V_{\\\\text{property}}(t) \\\\cdot F_{\\\\text{funding}} \\\\cdot I_{\\\\text{infrastructure}}(t),",
-    "registry": null,
+    "registry": {
+      "id": "E285",
+      "label": "eq:property-tax-loop",
+      "chapter": "The Biological Extraction Kernel: Environmental Racism as Systemic Toxicity (1879--Present)",
+      "section": "Formalizing the Loop Coefficient",
+      "line": 157,
+      "sourceFile": "Paper/chapter_environmental_racism.tex"
+    },
     "validation": null,
-    "enrichment": "none"
+    "enrichment": "partial"
   },
   {
     "chapterFile": "ch13_biological_extraction.ts",
@@ -1360,9 +1536,16 @@
     "storyLabel": "Lifetime menstrual exposure",
     "storyCaption": "Metal concentration, absorption efficiency, and reproductive lifespan determine cumulative load.",
     "latex": "M_{\\\\text{lifetime}} = \\\\int_{0}^{T} \\\\sum_{\\\\text{metal}} c_{\\\\text{metal}}(t) \\\\cdot a_{\\\\text{absorption}} \\\\, dt,",
-    "registry": null,
+    "registry": {
+      "id": "E289",
+      "label": "eq:tampon-integral",
+      "chapter": "The Biological Extraction Kernel: Environmental Racism as Systemic Toxicity (1879--Present)",
+      "section": "Tampons",
+      "line": 437,
+      "sourceFile": "Paper/chapter_environmental_racism.tex"
+    },
     "validation": null,
-    "enrichment": "none"
+    "enrichment": "partial"
   },
   {
     "chapterFile": "ch13_biological_extraction.ts",
@@ -1371,9 +1554,16 @@
     "storyLabel": "Total extraction rate",
     "storyCaption": "Biological depletion joins labor and capital in the extraction accounting.",
     "latex": "\\\\mathcal{E}_{\\\\text{total}}(t) = \\\\mathcal{E}_{\\\\text{labor}}(t) + \\\\mathcal{E}_{\\\\text{capital}}(t) + \\\\mathcal{E}_{\\\\text{biological}}(t),",
-    "registry": null,
+    "registry": {
+      "id": "E290",
+      "label": "eq:total-extraction",
+      "chapter": "The Biological Extraction Kernel: Environmental Racism as Systemic Toxicity (1879--Present)",
+      "section": "The Biological Extraction Kernel as Transferable Software",
+      "line": 561,
+      "sourceFile": "Paper/chapter_environmental_racism.tex"
+    },
     "validation": null,
-    "enrichment": "none"
+    "enrichment": "partial"
   },
   {
     "chapterFile": "ch14_tweedism.ts",
@@ -1387,7 +1577,8 @@
       "label": "eq:8.18-tweedism-agenda-path",
       "chapter": "Tweedism and the Puppet Class: The Algorithmic Filter on Democracy",
       "section": "Case Study: The Interference Engine --- Spectral Redistribution and Phase-Load Quantification, 1948--2024",
-      "line": 7262
+      "line": 7304,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": {
       "tier": 1,
@@ -1424,8 +1615,9 @@
       "id": "E077",
       "label": "eq:8.2-tier-to-graph-mapping",
       "chapter": "Tweedism and the Puppet Class: The Algorithmic Filter on Democracy",
-      "section": "Graph, agents, and the leader-follower partition",
-      "line": 5774
+      "section": "The Formal Containment Model: A Control-Theoretic Derivation of the Algorithm",
+      "line": 5816,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": {
       "tier": 3,
@@ -1449,8 +1641,9 @@
       "id": "E078",
       "label": "eq:8.3-fractional-agent-dynamics",
       "chapter": "Tweedism and the Puppet Class: The Algorithmic Filter on Democracy",
-      "section": "Fractional-order dynamics and historical memory",
-      "line": 5782
+      "section": "The Formal Containment Model: A Control-Theoretic Derivation of the Algorithm",
+      "line": 5824,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": {
       "tier": 3,
@@ -1483,7 +1676,8 @@
       "label": "eq:8.14-net-solidarity-signal",
       "chapter": "Tweedism and the Puppet Class: The Algorithmic Filter on Democracy",
       "section": "The Interference Engine: How Identity Debates Cancel Class Solidarity",
-      "line": 6414
+      "line": 6456,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": {
       "tier": 1,
@@ -1537,8 +1731,9 @@
       "id": "E100",
       "label": "eq:9.1-lead-crime-compounding",
       "chapter": "The Recompile: COINTELPRO, the Variable Swap, and the War on Drugs (1968--1994)",
-      "section": "The Toxin Pre-Processor: Environmental Lead as \\texorpdfstring{$P_{\\text{lead",
-      "line": 7779
+      "section": "The Toxin Pre-Processor: Environmental Lead as \\texorpdfstring{$P_{\\text{lead}}$}{P\\_lead}",
+      "line": 7821,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": {
       "tier": 1,
@@ -1576,7 +1771,8 @@
       "label": "eq:9.2-epistemic-suppression-variable",
       "chapter": "The Recompile: COINTELPRO, the Variable Swap, and the War on Drugs (1968--1994)",
       "section": "The Corporate Conspiracy: Tetraethyllead and the Half-Century Cover-Up",
-      "line": 7862
+      "line": 7904,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": {
       "tier": 2,
@@ -1615,7 +1811,8 @@
       "label": "eq:9.3-multi-vector-lead-exposure",
       "chapter": "The Recompile: COINTELPRO, the Variable Swap, and the War on Drugs (1968--1994)",
       "section": "The Multi-Vector Containment: Lead in Water, Schools, and the Property-Tax Trap",
-      "line": 8101
+      "line": 8143,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": {
       "tier": 1,
@@ -1654,7 +1851,8 @@
       "label": "eq:10.5-kernel-objective-canonical",
       "chapter": "The Full Algorithm: Demographic Paradox, Cannibalization, and the 5-Tier Reveal (1994--Present)",
       "section": "The Full Reveal: The Complete 5-Tier Set-Theoretic Hierarchy",
-      "line": 9330
+      "line": 9373,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": {
       "tier": 1,
@@ -1688,8 +1886,9 @@
       "id": "E107",
       "label": "eq:10.2-buffer-class-shrinkage",
       "chapter": "The Full Algorithm: Demographic Paradox, Cannibalization, and the 5-Tier Reveal (1994--Present)",
-      "section": "The Mathematical Deficit and the Cannibalization of \\texorpdfstring{$I_{\\text{buffer",
-      "line": 8988
+      "section": "The Mathematical Deficit and the Cannibalization of \\texorpdfstring{$I_{\\text{buffer}}$}{I\\_buffer}",
+      "line": 9031,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": {
       "tier": 2,
@@ -1729,7 +1928,8 @@
       "label": "eq:10.5-kernel-objective-canonical",
       "chapter": "The Full Algorithm: Demographic Paradox, Cannibalization, and the 5-Tier Reveal (1994--Present)",
       "section": "The Full Reveal: The Complete 5-Tier Set-Theoretic Hierarchy",
-      "line": 9330
+      "line": 9373,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": {
       "tier": 1,
@@ -1764,7 +1964,8 @@
       "label": "eq:10.13-reclassification-operator",
       "chapter": "The Full Algorithm: Demographic Paradox, Cannibalization, and the 5-Tier Reveal (1994--Present)",
       "section": "Updated Formalism: The Reclassification Operator and the Conditional 1705 Contract",
-      "line": 9830
+      "line": 9873,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": {
       "tier": 3,
@@ -1787,9 +1988,16 @@
     "storyLabel": "eq. pipeline-throughput",
     "storyCaption": "The multiplicative throughput of the school-to-prison pipeline.",
     "latex": "\\\\Phi_{\\\\text{s2p}}(t) = D_{\\\\text{disparate}} \\\\cdot P_{\\\\text{police}} \\\\cdot Z_{\\\\text{zero-tol}} \\\\cdot T_{\\\\text{tracking}} \\\\cdot L_{\\\\text{lead}}(t)",
-    "registry": null,
+    "registry": {
+      "id": "E291",
+      "label": "eq:pipeline-throughput",
+      "chapter": "The Pipeline Architecture: From School-to-Prison to Healthcare Denial as Extraction Conduits",
+      "section": "Pipeline Throughput Equation",
+      "line": 100,
+      "sourceFile": "Paper/chapter_pipeline_scaffolding.tex"
+    },
     "validation": null,
-    "enrichment": "none"
+    "enrichment": "partial"
   },
   {
     "chapterFile": "ch17_pipeline_architecture.ts",
@@ -1798,9 +2006,16 @@
     "storyLabel": "eq. cascade-transfer",
     "storyCaption": "The cascade transfer function preserves and amplifies the routed signal.",
     "latex": "H_{\\\\text{cascade}}(s) = H_{\\\\text{redline}}(s) \\\\cdot H_{\\\\text{funding}}(s) \\\\cdot H_{\\\\text{infrastructure}}(s) \\\\cdot H_{\\\\text{lead}}(s) \\\\cdot H_{\\\\text{discipline}}(s) \\\\cdot H_{\\\\text{incarceration}}(s)",
-    "registry": null,
+    "registry": {
+      "id": "E292",
+      "label": "eq:cascade-transfer",
+      "chapter": "The Pipeline Architecture: From School-to-Prison to Healthcare Denial as Extraction Conduits",
+      "section": "The Cascade Transfer Function",
+      "line": 198,
+      "sourceFile": "Paper/chapter_pipeline_scaffolding.tex"
+    },
     "validation": null,
-    "enrichment": "none"
+    "enrichment": "partial"
   },
   {
     "chapterFile": "ch17_pipeline_architecture.ts",
@@ -1809,9 +2024,16 @@
     "storyLabel": "eq. commodity-exposure",
     "storyCaption": "Lifetime exposure accumulated across products and routes.",
     "latex": "E_{\\\\text{commodity}} = \\\\sum_{\\\\text{product}} \\\\left( \\\\int_{0}^{\\\\text{lifetime}} c_{\\\\text{toxicant}} \\\\cdot a_{\\\\text{absorption}} \\\\cdot f_{\\\\text{frequency}} \\\\, dt \\\\right)",
-    "registry": null,
+    "registry": {
+      "id": "E294",
+      "label": "eq:commodity-exposure",
+      "chapter": "The Pipeline Architecture: From School-to-Prison to Healthcare Denial as Extraction Conduits",
+      "section": "The Commodity Exposure Integral",
+      "line": 324,
+      "sourceFile": "Paper/chapter_pipeline_scaffolding.tex"
+    },
     "validation": null,
-    "enrichment": "none"
+    "enrichment": "partial"
   },
   {
     "chapterFile": "ch17_pipeline_architecture.ts",
@@ -1820,9 +2042,16 @@
     "storyLabel": "eq. denial-extraction",
     "storyCaption": "Denied volume converts retained treatment cost into transferred mortality risk.",
     "latex": "\\\\mathcal{E}_{\\\\text{denial}} = N_{\\\\text{claims}} \\\\cdot R_{\\\\text{denial}} \\\\cdot C_{\\\\text{treatment\\\\_cost}} \\\\cdot \\\\Delta_{\\\\text{mortality}}",
-    "registry": null,
+    "registry": {
+      "id": "E295",
+      "label": "eq:denial-extraction",
+      "chapter": "The Pipeline Architecture: From School-to-Prison to Healthcare Denial as Extraction Conduits",
+      "section": "The Denial Extraction Function",
+      "line": 362,
+      "sourceFile": "Paper/chapter_pipeline_scaffolding.tex"
+    },
     "validation": null,
-    "enrichment": "none"
+    "enrichment": "partial"
   },
   {
     "chapterFile": "ch17_pipeline_architecture.ts",
@@ -1831,9 +2060,16 @@
     "storyLabel": "eq. unified-pipeline",
     "storyCaption": "Total extraction across the four active conduits.",
     "latex": "\\\\mathcal{E}_{\\\\text{pipeline}}(t) = \\\\mathcal{E}_{\\\\text{s2p}}(t) + \\\\mathcal{E}_{\\\\text{food-health}}(t) + \\\\mathcal{E}_{\\\\text{commodity}}(t) + \\\\mathcal{E}_{\\\\text{healthcare}}(t)",
-    "registry": null,
+    "registry": {
+      "id": "E296",
+      "label": "eq:unified-pipeline",
+      "chapter": "The Pipeline Architecture: From School-to-Prison to Healthcare Denial as Extraction Conduits",
+      "section": "The Unified Pipeline Equation",
+      "line": 422,
+      "sourceFile": "Paper/chapter_pipeline_scaffolding.tex"
+    },
     "validation": null,
-    "enrichment": "none"
+    "enrichment": "partial"
   },
   {
     "chapterFile": "ch18_kinetic_guarantee.ts",
@@ -1847,7 +2083,8 @@
       "label": "eq:11.1-extraction-precondition",
       "chapter": "The Kinetic Guarantee: Arms Asymmetry, the Second Amendment, and the Disarmament Timeline",
       "section": "Phase 1: Direct Kidnapping Through Firearms Superiority",
-      "line": 10137
+      "line": 10180,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": {
       "tier": 1,
@@ -1897,7 +2134,8 @@
       "label": "eq:13.tvs-abort",
       "chapter": "The Kinetic Guarantee: Arms Asymmetry, the Second Amendment, and the Disarmament Timeline",
       "section": "The Kinetic Abort Threshold",
-      "line": 11111
+      "line": 11154,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": null,
     "enrichment": "partial"
@@ -1914,7 +2152,8 @@
       "label": "eq:12.2-concession-theorem",
       "chapter": "The Contradiction: Why Reform Serves the Algorithm",
       "section": "The Durability Objection: When Reforms Appear to Persist",
-      "line": 11254
+      "line": 11297,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": {
       "tier": 2,
@@ -1947,8 +2186,9 @@
       "id": "E133",
       "label": "eq:12.1-reform-absorption-mechanism",
       "chapter": "The Contradiction: Why Reform Serves the Algorithm",
-      "section": "The Reform Paradox: Why Policy Audits Serve \\texorpdfstring{$\\min$",
-      "line": 11196
+      "section": "The Reform Paradox: Why Policy Audits Serve \\texorpdfstring{$\\min$}{min}",
+      "line": 11239,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": {
       "tier": 3,
@@ -1982,7 +2222,8 @@
       "label": "eq:12.3-judiciary-discrimination-detection",
       "chapter": "The Contradiction: Why Reform Serves the Algorithm",
       "section": "The Constitutional Shield: The Intent Standard as Concealment Apparatus",
-      "line": 11423
+      "line": 11466,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": {
       "tier": 3,
@@ -2021,7 +2262,8 @@
       "label": "eq:13.2-global-predatory-minmax",
       "chapter": "The Global Containment Field: Scaling the Algorithm",
       "section": "British India: The Extraction Kernel Without Biological Constraints",
-      "line": 12531
+      "line": 12574,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": {
       "tier": 3,
@@ -2054,7 +2296,8 @@
       "label": "eq:13.13-un-vote-distribution",
       "chapter": "The Global Containment Field: Scaling the Algorithm",
       "section": "The UN Reparations Vote: A Real-Time Proof of the Global Hierarchy (2026)",
-      "line": 12728
+      "line": 12772,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": {
       "tier": 3,
@@ -2087,7 +2330,8 @@
       "label": "eq:14.1-algo-prior-inheritance",
       "chapter": "The Algorithmic Epoch: Real-Time Subjugation and the Necessity of the Counter-Virus",
       "section": "Porting the Legacy Code: AI as a Hardware Upgrade",
-      "line": 13009
+      "line": 13053,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": {
       "tier": 2,
@@ -2126,7 +2370,8 @@
       "label": "eq:14.2c-medium-gain",
       "chapter": "The Algorithmic Epoch: Real-Time Subjugation and the Necessity of the Counter-Virus",
       "section": "Formalization: The Cost Collapse Equation",
-      "line": 13121
+      "line": 13165,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": null,
     "enrichment": "partial"
@@ -2143,7 +2388,8 @@
       "label": "eq:14.4-correction-signal-damping",
       "chapter": "The Algorithmic Epoch: Real-Time Subjugation and the Necessity of the Counter-Virus",
       "section": "The Damped Harmonic Oscillator: Trauma as the Damping Medium",
-      "line": 13188
+      "line": 13232,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": {
       "tier": 3,
@@ -2170,7 +2416,8 @@
       "label": "eq:14.13-terminal-interface-swap",
       "chapter": "The Algorithmic Epoch: Real-Time Subjugation and the Necessity of the Counter-Virus",
       "section": "The Automation Threshold",
-      "line": 13372
+      "line": 13418,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": {
       "tier": 3,
@@ -2196,8 +2443,9 @@
       "id": "E197",
       "label": "eq:15.qed-photon-energy",
       "chapter": "The Algorithmic Epoch: Real-Time Subjugation and the Necessity of the Counter-Virus",
-      "section": "The Energy of a Systemic Photon: $E_{\\text{photon",
-      "line": 13743
+      "section": "The Energy of a Systemic Photon: $E_{\\text{photon}} = hf$",
+      "line": 13789,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": null,
     "enrichment": "partial"
@@ -2214,7 +2462,8 @@
       "label": "eq:21.1-interference-spectral-form",
       "chapter": "The Spectral Carrier: Electoral Cycles and the Interference Engine",
       "section": "Theoretical Framework",
-      "line": 13922
+      "line": 13969,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": null,
     "enrichment": "partial"
@@ -2231,7 +2480,8 @@
       "label": "eq:21.2-phase-dispersion",
       "chapter": "The Spectral Carrier: Electoral Cycles and the Interference Engine",
       "section": "Theoretical Framework",
-      "line": 13928
+      "line": 13975,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": null,
     "enrichment": "partial"
@@ -2248,7 +2498,8 @@
       "label": "eq:21.3-share-definitions",
       "chapter": "The Spectral Carrier: Electoral Cycles and the Interference Engine",
       "section": "Source and Preprocessing",
-      "line": 0
+      "line": 14011,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": null,
     "enrichment": "partial"
@@ -2265,7 +2516,8 @@
       "label": "eq:21.4-fft-definition",
       "chapter": "The Spectral Carrier: Electoral Cycles and the Interference Engine",
       "section": "Spectral Estimation",
-      "line": 13984
+      "line": 14031,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": null,
     "enrichment": "partial"
@@ -2282,7 +2534,8 @@
       "label": "eq:21.7-parseval",
       "chapter": "The Spectral Carrier: Electoral Cycles and the Interference Engine",
       "section": "Parseval Consistency",
-      "line": 14050
+      "line": 14097,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": null,
     "enrichment": "partial"
@@ -2299,7 +2552,8 @@
       "label": "eq:15.1-temporal-firearm-proxy",
       "chapter": "The Single-Issue Trap and Multi-Axis Noise Cancellation: A Boston Case Study",
       "section": "Grandfather Clauses and Forcing the State's Hand",
-      "line": 14334
+      "line": 14381,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": null,
     "enrichment": "partial"
@@ -2316,7 +2570,8 @@
       "label": "eq:15.2-geographic-interface-swap",
       "chapter": "The Single-Issue Trap and Multi-Axis Noise Cancellation: A Boston Case Study",
       "section": "Geographic Interface Swaps: A La Carte Rights",
-      "line": 14350
+      "line": 14397,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": null,
     "enrichment": "partial"
@@ -2333,7 +2588,8 @@
       "label": "eq:17.1-racism-as-institutional-vector",
       "chapter": "Conclusion",
       "section": "The Vector Properties of Systemic Racism",
-      "line": 14392
+      "line": 14439,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": {
       "tier": 3,
@@ -2358,7 +2614,8 @@
       "label": "eq:17.1-racism-as-institutional-vector",
       "chapter": "Conclusion",
       "section": "The Vector Properties of Systemic Racism",
-      "line": 14392
+      "line": 14439,
+      "sourceFile": "Paper/The_Original_Power.tex"
     },
     "validation": {
       "tier": 3,

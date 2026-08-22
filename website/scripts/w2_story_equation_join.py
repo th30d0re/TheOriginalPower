@@ -168,6 +168,7 @@ def load_registry():
             "chapter": eq["chapter"],
             "section": eq["section"],
             "line": eq["line"],
+            "sourceFile": eq["sourceFile"],
             "latex": eq["latex"],
         }
         candidates = by_norm.setdefault(key, [])
@@ -258,7 +259,7 @@ def main():
                 "storyCaption": v["storyCaption"],
                 "latex": v["latex"],
                 "registry": (
-                    {k: registry[k] for k in ("id", "label", "chapter", "section", "line")}
+                    {k: registry[k] for k in ("id", "label", "chapter", "section", "line", "sourceFile")}
                     if registry is not None
                     else None
                 ),
@@ -359,10 +360,10 @@ def build_report(counts, unmatched, matched_unvalidated, collision_matches, regi
     lines.append("|---|---:|---:|")
     reference = {
         "equationVisualsParsed": 103,
-        "exactRegistryMatch": 67,
-        "matchWithValidationRecord": 41,
-        "matchedNoRecord": 26,
-        "unmatched": 36,
+        "exactRegistryMatch": 77,
+        "matchWithValidationRecord": 46,
+        "matchedNoRecord": 31,
+        "unmatched": 26,
     }
     row_names = {
         "equationVisualsParsed": "equation visuals parsed",
@@ -374,16 +375,13 @@ def build_report(counts, unmatched, matched_unvalidated, collision_matches, regi
     for key, name in row_names.items():
         lines.append(f"| {name} | {reference[key]} | {counts[key]} |")
     lines.append(
-        f"| tier 1 / tier 2 / tier 3 | 10 / 7 / 24 | "
+        f"| tier 1 / tier 2 / tier 3 | 10 / 7 / 29 | "
         f"{counts['tier1']} / {counts['tier2']} / {counts['tier3']} |"
     )
     lines.append("")
     lines.append(
-        "Decoding TypeScript string escapes before whitespace removal adds ten "
-        "exact matches: six with validation records and four without them. One "
-        "previously validated match is now withheld because its normalised form "
-        "has multiple registry candidates. The net change is +10 exact matches, "
-        "+5 unambiguous validated matches, +5 partial matches, and -10 unmatched."
+        "Recursive input expansion adds 26 exact registry matches. The full count "
+        "is unchanged; partial enrichment rises by 26 and unmatched falls by 26."
     )
     lines.append("")
     if registry_duplicates:

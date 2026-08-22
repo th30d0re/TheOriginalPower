@@ -30,6 +30,7 @@ export interface StoryEquationJoinEntry {
     chapter: string;
     section: string;
     line: number;
+    sourceFile: string;
   } | null;
   validation: StoryValidation | null;
   enrichment: 'full' | 'partial' | 'none';
@@ -62,12 +63,25 @@ export const isStandaloneSymbol = (latex: string, index: number, symbolLatex: st
   return before !== '\\' && !/[A-Za-z0-9]/.test(before + after) && !insideTextCommand(latex, index);
 };
 
-export const symbolsForLatex = (latex: string): readonly EquationSymbol[] =>
-  Object.values(equationSymbols).filter((entry) => {
-    let index = latex.indexOf(entry.latex);
-    while (index !== -1) {
-      if (isStandaloneSymbol(latex, index, entry.latex)) return true;
-      index = latex.indexOf(entry.latex, index + entry.latex.length);
+const symbolRanges = (latex: string, entry: EquationSymbol): readonly [number, number][] => {
+  const ranges: [number, number][] = [];
+  let index = latex.indexOf(entry.latex);
+  while (index !== -1) {
+    if (isStandaloneSymbol(latex, index, entry.latex)) {
+      ranges.push([index, index + entry.latex.length]);
     }
-    return false;
-  });
+    index = latex.indexOf(entry.latex, index + entry.latex.length);
+  }
+  return ranges;
+};
+
+export const symbolsForLatex = (latex: string): readonly EquationSymbol[] => {
+  const matches = Object.values(equationSymbols).map((entry) => ({
+    entry,
+    ranges: symbolRanges(latex, entry),
+  })).filter(({ ranges }) => ranges.length > 0);
+
+  return matches.filter(({ entry }) => !matches.some(({ entry: other }) => (
+    other.latex.length > entry.latex.length && other.latex.includes(entry.latex)
+  ))).map(({ entry }) => entry);
+};

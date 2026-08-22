@@ -344,7 +344,7 @@ export const StoryEquationCard = ({ entry, latex, label, caption }: {
                 <p id={`${baseId}-decoder`} className="decoder-copy">{caption ?? entry.storyCaption}</p>
               )}
               {!hasManuscript ? <p className="decoder-disabled-reason">No curated contiguous manuscript gloss is available for this equation.</p> : null}
-              {entry.registry ? <p className="story-equation-registry">{entry.registry.label} · manuscript registry line {entry.registry.line}</p> : null}
+              {entry.registry ? <p className="story-equation-registry">{entry.registry.label} · {entry.registry.sourceFile}:{entry.registry.line}</p> : null}
               {entry.validation?.falsification ? (
                 <aside className="falsification-box">
                   <p className="equation-section-label">Falsification condition</p>
@@ -352,6 +352,10 @@ export const StoryEquationCard = ({ entry, latex, label, caption }: {
                 </aside>
               ) : null}
               <SourceChips sources={entry.validation?.dataSources ?? []} />
+            </section>
+          ) : entry.registry ? (
+            <section className="story-equation-provenance" aria-label="Equation provenance">
+              <p className="story-equation-registry">{entry.registry.label} · {entry.registry.sourceFile}:{entry.registry.line}</p>
             </section>
           ) : null}
         </div>
