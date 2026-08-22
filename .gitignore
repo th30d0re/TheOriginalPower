@@ -123,6 +123,9 @@ Paper/research/chapter_deep_dives/pdf/
 # videolab ingest output: derived from source media, ~195 MB
 videolab/jobs/
 
+# Generated counter-signal prompts, scripts, gate results, and render state
+counter_signal/responses/
+
 # External OneDrive exports staged for import, not repo content (~680 MB)
 OneDrive_2_*/
 OneDrive_2_*.zip
