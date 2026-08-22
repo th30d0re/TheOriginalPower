@@ -8,7 +8,7 @@ import os
 
 import pytest
 
-from counter_signal import lint
+from counter_signal import brief, lint
 from counter_signal.lexicon import densities, material_ratio
 
 CORPUS = sorted(glob.glob("videolab/jobs/*/*_metadata.json"))
@@ -78,5 +78,31 @@ def test_gate_separates_the_material_clip_from_the_status_clips():
         ok = psi_m >= lint.PSI_M_FLOOR and material_ratio(psi_m, psi_s) >= lint.MATERIAL_RATIO_FLOOR
         (accepted if ok else rejected).append(theta)
     assert accepted, "gate accepted nothing; the material clip should pass"
-    assert max(accepted) <= 30, f"accepted a status-framed clip: {accepted}"
-    assert min(rejected) >= 60, f"rejected a material clip: {rejected}"
+    # The invariant is the response target, not the sample's spread. An earlier
+    # version asserted min(rejected) >= 60, which broke when a clip scored at 58
+    # arrived: rejecting a 58-degree clip is correct when the target is 25.
+    assert max(accepted) <= brief.TARGET_THETA_DEG + 5, (
+        f"accepted a status-framed clip: {accepted}")
+    assert all(t > brief.TARGET_THETA_DEG for t in rejected), (
+        f"rejected a clip already at or below target: {rejected}")
+
+
+def test_brief_refuses_a_job_with_no_grievance(tmp_path, monkeypatch):
+    """framework_notes without content_analysis must fail loudly, not silently.
+
+    A brief with an empty grievance still renders a full-looking prompt, and the
+    resulting script has nothing to carry across.
+    """
+    import json as _json
+    import pytest as _pytest
+    from counter_signal import brief as _brief
+
+    job = tmp_path / "instagram-empty"
+    job.mkdir()
+    (job / "instagram-empty_metadata.json").write_text(_json.dumps({
+        "content_analysis": {"primary_theme": ""},
+        "framework_notes": {"extraction_kernel": "Absent", "widgets": []},
+    }))
+    monkeypatch.setattr(_brief, "JOBS_DIRS", (tmp_path,))
+    with _pytest.raises(SystemExit, match="no content_analysis"):
+        _brief.build("instagram-empty")

@@ -64,6 +64,14 @@ def build(slug: str) -> Brief:
     content = meta.get("content_analysis") or {}
     if not notes:
         raise SystemExit(f"{slug} has no framework_notes; analyse it first")
+    # The grievance is what the response preserves. Without it the prompt asks a
+    # writer to carry nothing across, which reads as complete and produces a
+    # generic script, so refuse instead of degrading.
+    if not str(content.get("primary_theme") or "").strip():
+        raise SystemExit(
+            f"{slug} has framework_notes but no content_analysis.primary_theme. "
+            "The brief has no grievance to preserve; write the content analysis first."
+        )
 
     phasor = _widget(notes, "wage_phasor")
     deflection = _widget(notes, "axis_deflection")
