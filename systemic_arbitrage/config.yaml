@@ -16,6 +16,10 @@ calibration:
 
 spectral:
   window_days: 730
+  # Analysis window for the rolling P_real/tau series. Must span several
+  # cycles of the 90-day low-band edge, and be shorter than the available
+  # history so a rolling percentile has values to work with.
+  preal_window_days: 365
   interpolation_limit_days: 7
   window_function: hann
   low_frequency_band_cycles_per_day: [0.0, 0.011111]

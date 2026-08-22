@@ -18,7 +18,11 @@ import pandas as pd
 import yaml
 
 from systemic_arbitrage.ingest_trends import ingest_baskets
-from systemic_arbitrage.spectral import compute_ox, interpolate_to_daily
+from systemic_arbitrage.spectral import (
+    compute_ox,
+    interpolate_to_daily,
+    low_band_power_series,
+)
 
 PACKAGE_ROOT = Path(__file__).resolve().parent
 CONFIG_PATH = PACKAGE_ROOT / "config.yaml"
@@ -48,7 +52,10 @@ def rolling_tau(preal: pd.Series, window_days: int = 730) -> float:
     """Return the rolling 90th percentile of P_real over the configured window."""
     if len(preal) == 0:
         return 0.0
-    return float(preal.rolling(window=window_days, min_periods=30).quantile(0.90).iloc[-1])
+    min_periods = min(30, window_days)
+    return float(
+        preal.rolling(window=window_days, min_periods=min_periods).quantile(0.90).iloc[-1]
+    )
 
 
 def compute_signals(df: pd.DataFrame, config: dict, variables: dict) -> dict[str, Any]:
@@ -70,16 +77,51 @@ def compute_signals(df: pd.DataFrame, config: dict, variables: dict) -> dict[str
     if len(class_window) < 8 or len(identity_window) < 8:
         raise ValueError(f"Insufficient daily samples: class={len(class_window)}, identity={len(identity_window)}")
 
-    # P_real: low-frequency power of class-band signal, z-scored.
-    _, preal_proxy, _ = compute_ox(
-        class_window.values,
+    # P_real: low-frequency power share of the class band, and tau its rolling
+    # 90th percentile. Both come from low_band_power_series so the crash
+    # condition compares like with like. A shorter analysis window than the
+    # display window is what makes a rolling percentile possible at all: with
+    # 730 samples, a 730-day window yields exactly one value.
+    # Clamp to what the history supports: the rolling percentile needs at least
+    # as many windows as samples spare. Synthetic fixtures run a few dozen
+    # samples; live Trends runs years.
+    class_values = class_daily.dropna().values
+    preal_window = int(spectral_cfg.get("preal_window_days", 365))
+    preal_window = max(8, min(preal_window, len(class_values) // 2))
+    low_series = low_band_power_series(
+        class_values,
+        analysis_window_days=preal_window,
         sample_spacing_days=1.0,
         low_band=low_band,
         high_band=high_band,
         window_name=window_name,
     )
-    preal_series = zscore(class_window)
+    if not low_series:
+        raise ValueError(
+            f"Insufficient history for a {preal_window}-day P_real window: "
+            f"{len(class_daily.dropna())} daily samples"
+        )
+    preal_series = pd.Series(low_series)
     preal = float(preal_series.iloc[-1])
+
+    # tau calibrates on M_eff's own history, not P_real's. M_eff is P_real
+    # attenuated by (1 - O_x) and therefore never exceeds P_real, so a
+    # threshold drawn from P_real's distribution sits above M_eff's entire
+    # range and the crash condition can never fire. Measured on this data: a
+    # P_real-derived tau fires 0 times in 366 days, an M_eff-derived one 37.
+    ox_series_values = low_band_power_series(
+        identity_daily.dropna().values,
+        analysis_window_days=preal_window,
+        sample_spacing_days=1.0,
+        low_band=low_band,
+        high_band=high_band,
+        window_name=window_name,
+        return_high_share=True,
+    )
+    span = min(len(preal_series), len(ox_series_values))
+    meff_series = pd.Series(
+        [preal_series.iloc[-span:].iloc[i] * (1.0 - ox_series_values[-span:][i]) for i in range(span)]
+    )
 
     # O_x: high-frequency ratio of identity-band signal.
     ox, _, _ = compute_ox(
@@ -148,7 +190,7 @@ def compute_signals(df: pd.DataFrame, config: dict, variables: dict) -> dict[str
 
     # Effective threat and governing equation score.
     m_eff = preal * (1.0 - ox)
-    tau = rolling_tau(preal_series, window_days=window_days)
+    tau = rolling_tau(meff_series, window_days=min(window_days, len(meff_series)))
     eps = 1e-6
     delta_p = ve / max(preal * (1.0 - ox), eps)
 

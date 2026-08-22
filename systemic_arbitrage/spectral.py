@@ -96,6 +96,48 @@ def compute_ox_preindex(
     return low_power, high_power, total_power, freqs, spectrum
 
 
+def low_band_power_series(
+    values,
+    *,
+    analysis_window_days: int,
+    sample_spacing_days: float = 1.0,
+    low_band=(0.0, 1.0 / 90.0),
+    high_band=(1.0 / 7.0, 1.0),
+    window_name: str = "hann",
+    return_high_share: bool = False,
+):
+    """Low-frequency power share computed on a sliding window.
+
+    With return_high_share the high-frequency share (O_x) is returned instead,
+    which is what tau's calibration history needs.
+
+    compute_ox returns the structural share for one window. P_real is the most
+    recent value of that quantity and tau is its rolling 90th percentile, so
+    both have to come from the same series or the crash condition compares two
+    different scales.
+
+    The window must span several cycles of the slowest band edge to resolve it:
+    at a 90-day edge, 365 days carries four. Returns a list shorter than the
+    input by analysis_window_days - 1.
+    """
+    import numpy as _np
+
+    arr = _np.asarray(values, dtype=float)
+    if analysis_window_days < 8 or len(arr) < analysis_window_days:
+        return []
+    out = []
+    for end in range(analysis_window_days, len(arr) + 1):
+        high_share, low_share, _ = compute_ox(
+            arr[end - analysis_window_days:end],
+            sample_spacing_days=sample_spacing_days,
+            low_band=low_band,
+            high_band=high_band,
+            window_name=window_name,
+        )
+        out.append(float(high_share if return_high_share else low_share))
+    return out
+
+
 def compute_ox(
     samples: np.ndarray,
     sample_spacing_days: float = 1.0,
