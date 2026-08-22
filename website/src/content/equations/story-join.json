@@ -1,0 +1,2233 @@
+[
+  {
+    "chapterFile": "apxB_equation_registry.ts",
+    "chapterId": "apxB",
+    "occurrence": 0,
+    "storyLabel": "eq. 19.1",
+    "storyCaption": null,
+    "latex": "\\\\max_{\\\\{P_i\\\\}}\\\\; \\\\mathcal{E}(t) \\\\quad \\\\text{subject to} \\\\quad M_{\\\\text{eff}}(t) = M(t) - \\\\lambda\\\\,\\\\Phi_{\\\\text{load}}(t) < \\\\tau",
+    "registry": {
+      "id": "E214",
+      "label": "eq:19.1-kernel-objective-registry-entry",
+      "chapter": "Equation Registry and Era-Level Calibration",
+      "section": "Canonical Equation: The Predatory Min-Max Function",
+      "line": 14581
+    },
+    "validation": {
+      "tier": 3,
+      "type": "structural",
+      "falsification": "Redundant with eq:5 and eq:56; falsified by the same conditions as those equations.",
+      "dataSources": [],
+      "targetEvents": [],
+      "caseStudyLine": 11717,
+      "notebook": ""
+    },
+    "enrichment": "full"
+  },
+  {
+    "chapterFile": "apxB_equation_registry.ts",
+    "chapterId": "apxB",
+    "occurrence": 1,
+    "storyLabel": "eq. 19.1",
+    "storyCaption": "Kernel objective under the effective-resistance constraint.",
+    "latex": "\\\\max_{\\\\{P_i\\\\}}\\\\; \\\\mathcal{E}(t) \\\\quad \\\\text{subject to} \\\\quad M_{\\\\text{eff}}(t) = M(t) - \\\\lambda\\\\,\\\\Phi_{\\\\text{load}}(t) < \\\\tau",
+    "registry": {
+      "id": "E214",
+      "label": "eq:19.1-kernel-objective-registry-entry",
+      "chapter": "Equation Registry and Era-Level Calibration",
+      "section": "Canonical Equation: The Predatory Min-Max Function",
+      "line": 14581
+    },
+    "validation": {
+      "tier": 3,
+      "type": "structural",
+      "falsification": "Redundant with eq:5 and eq:56; falsified by the same conditions as those equations.",
+      "dataSources": [],
+      "targetEvents": [],
+      "caseStudyLine": 11717,
+      "notebook": ""
+    },
+    "enrichment": "full"
+  },
+  {
+    "chapterFile": "apxB_equation_registry.ts",
+    "chapterId": "apxB",
+    "occurrence": 2,
+    "storyLabel": "eq. 19.5",
+    "storyCaption": "The Unified Lorentz Force.",
+    "latex": "\\\\vec{F}_{\\\\text{total}} = \\\\mathbf{Q}\\\\,\\\\vec{\\\\mathcal{E}}_{\\\\text{mat}} + \\\\mathbf{Q}\\\\left(\\\\vec{v} \\\\times \\\\sum_{k=1}^{N} \\\\rho_k \\\\vec{B}_k\\\\right)",
+    "registry": {
+      "id": "E219",
+      "label": "eq:19.5-unified-lorentz-force-registry",
+      "chapter": "Equation Registry and Era-Level Calibration",
+      "section": "Electrodynamic Framework Registry",
+      "line": 14623
+    },
+    "validation": null,
+    "enrichment": "partial"
+  },
+  {
+    "chapterFile": "apxB_equation_registry.ts",
+    "chapterId": "apxB",
+    "occurrence": 3,
+    "storyLabel": "eq. 19.13",
+    "storyCaption": "The Buffer-Class Work Theorem.",
+    "latex": "W_{I_{\\\\text{buffer}}}^{\\\\text{psych}}(t_0, t_1) = \\\\int_{t_0}^{t_1} \\\\mathbf{Q}\\\\,(\\\\vec{v} \\\\times \\\\vec{B}) \\\\cdot \\\\vec{v}\\\\, d\\\\tau \\\\;\\\\equiv\\\\; 0",
+    "registry": {
+      "id": "E227",
+      "label": "eq:19.13-buffer-work-theorem-registry",
+      "chapter": "Equation Registry and Era-Level Calibration",
+      "section": "Electrodynamic Framework Registry",
+      "line": 14697
+    },
+    "validation": null,
+    "enrichment": "partial"
+  },
+  {
+    "chapterFile": "apxE_geometric_algebra.ts",
+    "chapterId": "apxE",
+    "occurrence": 0,
+    "storyLabel": null,
+    "storyCaption": "The quaternion extension of the Complex Wage.",
+    "latex": "W_Q = a + bi + cj + dk",
+    "registry": {
+      "id": "E230",
+      "label": "eq:ga.quaternion",
+      "chapter": "Geometric Algebra and the N-Dimensional Wage",
+      "section": "The Quaternion Stage: Three Intersectional Axes",
+      "line": 14981
+    },
+    "validation": null,
+    "enrichment": "partial"
+  },
+  {
+    "chapterFile": "apxE_geometric_algebra.ts",
+    "chapterId": "apxE",
+    "occurrence": 1,
+    "storyLabel": null,
+    "storyCaption": "The N-dimensional Complex Wage.",
+    "latex": "W = \\\\psi_m + \\\\sum_{k=1}^{N} j_k \\\\left(\\\\rho_k \\\\cdot \\\\psi_{s,k}\\\\right)",
+    "registry": {
+      "id": "E021",
+      "label": "eq:0.ga-ndim",
+      "chapter": "System Initialization: The Geometry of Extraction",
+      "section": "The Reparations Integral",
+      "line": 1156
+    },
+    "validation": null,
+    "enrichment": "partial"
+  },
+  {
+    "chapterFile": "apxE_geometric_algebra.ts",
+    "chapterId": "apxE",
+    "occurrence": 2,
+    "storyLabel": null,
+    "storyCaption": "Required voltage rises as the demographic coefficient approaches zero.",
+    "latex": "P_k = V_k \\\\cdot I_k \\\\implies V_k = \\\\frac{P_k}{\\\\rho_k}",
+    "registry": {
+      "id": "E234",
+      "label": "eq:ga.transphobia-paradox",
+      "chapter": "Geometric Algebra and the N-Dimensional Wage",
+      "section": "The N-Dimensional Weighted Summation Equation",
+      "line": 15026
+    },
+    "validation": null,
+    "enrichment": "partial"
+  },
+  {
+    "chapterFile": "apxE_geometric_algebra.ts",
+    "chapterId": "apxE",
+    "occurrence": 3,
+    "storyLabel": null,
+    "storyCaption": "Two basis vectors produce a distinct intersectional plane.",
+    "latex": "e_1 \\\\wedge e_4 = e_{14}",
+    "registry": {
+      "id": "E235",
+      "label": "eq:ga.bivector",
+      "chapter": "Geometric Algebra and the N-Dimensional Wage",
+      "section": "Bivectors and Intersectional Space",
+      "line": 15035
+    },
+    "validation": null,
+    "enrichment": "partial"
+  },
+  {
+    "chapterFile": "apxF_photon_model.ts",
+    "chapterId": "apxF",
+    "occurrence": 0,
+    "storyLabel": null,
+    "storyCaption": "Polarizing power expressed as photon count times photon energy.",
+    "latex": "P_k = N_{\\\\gamma} \\\\cdot E_{\\\\gamma} = N_{\\\\gamma} \\\\cdot h \\\\nu_k",
+    "registry": {
+      "id": "E237",
+      "label": "eq:app-photon-spectral-density",
+      "chapter": "The Photon Model of Polarizing Information",
+      "section": "Spectral Density and the Small-Demographic Anomaly",
+      "line": 15086
+    },
+    "validation": null,
+    "enrichment": "partial"
+  },
+  {
+    "chapterFile": "apxF_photon_model.ts",
+    "chapterId": "apxF",
+    "occurrence": 1,
+    "storyLabel": null,
+    "storyCaption": "Field power on identity axis k, with V as the effective volume of the exposed population.",
+    "latex": "P_k = \\\\frac{1}{2\\\\mu_0} |B_k|^2 \\\\, V",
+    "registry": {
+      "id": "E236",
+      "label": "eq:app-photon-field-power",
+      "chapter": "The Photon Model of Polarizing Information",
+      "section": "From Continuous Field to Discrete Quanta",
+      "line": 15065
+    },
+    "validation": null,
+    "enrichment": "partial"
+  },
+  {
+    "chapterFile": "apxF_photon_model.ts",
+    "chapterId": "apxF",
+    "occurrence": 2,
+    "storyLabel": null,
+    "storyCaption": "Axis power as the product of packet count, the attention-economy constant, and axis frequency.",
+    "latex": "P_k = N_{\\\\gamma} \\\\cdot E_{\\\\gamma} = N_{\\\\gamma} \\\\cdot h \\\\nu_k",
+    "registry": {
+      "id": "E237",
+      "label": "eq:app-photon-spectral-density",
+      "chapter": "The Photon Model of Polarizing Information",
+      "section": "Spectral Density and the Small-Demographic Anomaly",
+      "line": 15086
+    },
+    "validation": null,
+    "enrichment": "partial"
+  },
+  {
+    "chapterFile": "apxF_photon_model.ts",
+    "chapterId": "apxF",
+    "occurrence": 3,
+    "storyLabel": null,
+    "storyCaption": "Deflection maximization under the Engine’s digital budget constraint.",
+    "latex": "\\\\max_{k, N_{\\\\gamma}} \\\\; \\\\chi_{m,k} \\\\cdot N_{\\\\gamma} \\\\cdot h \\\\nu_k \\\\quad \\\\text{subject to} \\\\quad C_{\\\\text{engine}}^{\\\\text{digital}}(N_{\\\\gamma}, \\\\nu_k) \\\\leq C_{\\\\text{budget}}",
+    "registry": {
+      "id": "E238",
+      "label": "eq:app-photon-optimization",
+      "chapter": "The Photon Model of Polarizing Information",
+      "section": "Spectral Density and the Small-Demographic Anomaly",
+      "line": 15096
+    },
+    "validation": null,
+    "enrichment": "partial"
+  },
+  {
+    "chapterFile": "apxG_universality.ts",
+    "chapterId": "apxG",
+    "occurrence": 0,
+    "storyLabel": null,
+    "storyCaption": "The constrained optimization problem for the five-node topology.",
+    "latex": "\\\\max_{u} \\\\; \\\\mathcal{E}(t) \\\\quad \\\\text{subject to} \\\\quad M(t) < \\\\tau, \\\\; \\\\dot{q} = f(q, u), \\\\; q(0) = q_0",
+    "registry": {
+      "id": "E239",
+      "label": "eq:app-universality-objective",
+      "chapter": "Universality and the Finite Topology of Power",
+      "section": "Evidence from Control Theory",
+      "line": 15141
+    },
+    "validation": null,
+    "enrichment": "partial"
+  },
+  {
+    "chapterFile": "apxH_extraction_chart.ts",
+    "chapterId": "apxH",
+    "occurrence": 0,
+    "storyLabel": "eq. XC.3",
+    "storyCaption": "Absorbed power increases as the magnitude of the reflected wave decreases.",
+    "latex": "P_{\\\\text{abs}} \\\\;=\\\\; |a|^2\\\\bigl(1 - |\\\\Gamma|^2\\\\bigr)",
+    "registry": null,
+    "validation": null,
+    "enrichment": "none"
+  },
+  {
+    "chapterFile": "apxH_extraction_chart.ts",
+    "chapterId": "apxH",
+    "occurrence": 1,
+    "storyLabel": "eq. XC.12",
+    "storyCaption": "Crossing the unit-circle boundary requires negative resistance and source behavior.",
+    "latex": "|\\\\Gamma| > 1 \\\\quad \\\\Longleftrightarrow \\\\quad \\\\operatorname{Re}(z) < 0",
+    "registry": null,
+    "validation": null,
+    "enrichment": "none"
+  },
+  {
+    "chapterFile": "apxH_extraction_chart.ts",
+    "chapterId": "apxH",
+    "occurrence": 2,
+    "storyLabel": "eq. XC.13",
+    "storyCaption": "The finite matching budget for a load reducible to a parallel RC combination.",
+    "latex": "\\\\int_{0}^{\\\\infty} \\\\ln\\\\frac{1}{|\\\\Gamma(\\\\omega)|}\\\\, d\\\\omega \\\\;\\\\leq\\\\; \\\\frac{\\\\pi}{RC}",
+    "registry": null,
+    "validation": null,
+    "enrichment": "none"
+  },
+  {
+    "chapterFile": "ch00_system_initialization.ts",
+    "chapterId": "ch00",
+    "occurrence": 0,
+    "storyLabel": "The Unified Lorentz Force",
+    "storyCaption": null,
+    "latex": "\\\\vec{F}_{\\\\text{total}} = \\\\mathbf{Q}\\\\,\\\\sum_{j=1}^{M}\\\\vec{\\\\mathcal{E}}_{\\\\text{mat}}^{(j)} + \\\\mathbf{Q}\\\\left(\\\\vec{v} \\\\times \\\\sum_{k=1}^{N} \\\\rho_k \\\\vec{B}_k\\\\right)",
+    "registry": {
+      "id": "E001",
+      "label": "eq:0.1-unified-lorentz-force",
+      "chapter": "System Initialization: The Geometry of Extraction",
+      "section": "Reproducibility Standard",
+      "line": 343
+    },
+    "validation": null,
+    "enrichment": "partial"
+  },
+  {
+    "chapterFile": "ch00_system_initialization.ts",
+    "chapterId": "ch00",
+    "occurrence": 1,
+    "storyLabel": "eq. 0.1",
+    "storyCaption": "The Unified Lorentz Force.",
+    "latex": "\\\\vec{F}_{\\\\text{total}} = \\\\mathbf{Q}\\\\,\\\\sum_{j=1}^{M}\\\\vec{\\\\mathcal{E}}_{\\\\text{mat}}^{(j)} + \\\\mathbf{Q}\\\\left(\\\\vec{v} \\\\times \\\\sum_{k=1}^{N} \\\\rho_k \\\\vec{B}_k\\\\right)",
+    "registry": {
+      "id": "E001",
+      "label": "eq:0.1-unified-lorentz-force",
+      "chapter": "System Initialization: The Geometry of Extraction",
+      "section": "Reproducibility Standard",
+      "line": 343
+    },
+    "validation": null,
+    "enrichment": "partial"
+  },
+  {
+    "chapterFile": "ch00_system_initialization.ts",
+    "chapterId": "ch00",
+    "occurrence": 2,
+    "storyLabel": "eq. 0.1a",
+    "storyCaption": "The self-exciting generator. Sever the extraction and the cultural field decays exponentially.",
+    "latex": "\\\\frac{\\\\partial \\\\vec{B}_k}{\\\\partial t} = \\\\eta_k \\\\left( \\\\mathbf{Q} \\\\cdot \\\\sum_{j=1}^{M}\\\\vec{\\\\mathcal{E}}_{\\\\text{mat}}^{(j)} \\\\right) - \\\\lambda_k \\\\vec{B}_k",
+    "registry": {
+      "id": "E002",
+      "label": "eq:0.1a-self-exciting-generator",
+      "chapter": "System Initialization: The Geometry of Extraction",
+      "section": "Reproducibility Standard",
+      "line": 356
+    },
+    "validation": null,
+    "enrichment": "partial"
+  },
+  {
+    "chapterFile": "ch00_system_initialization.ts",
+    "chapterId": "ch00",
+    "occurrence": 3,
+    "storyLabel": "eq. 0.2",
+    "storyCaption": "The control gate sets the highest potential gradient; each node below drops voltage.",
+    "latex": "\\\\text{Benefit}(E) \\\\gg \\\\text{Benefit}(P_{\\\\text{uppet}}) > \\\\text{Benefit}(F_{\\\\text{enforce}}) > \\\\text{Benefit}(I_{\\\\text{buffer}}) > \\\\text{Benefit}(O)",
+    "registry": {
+      "id": "E003",
+      "label": "eq:0.2-tier-voltage-drop",
+      "chapter": "System Initialization: The Geometry of Extraction",
+      "section": "The Hardware Mapping: Five Tiers as Circuit Elements",
+      "line": 462
+    },
+    "validation": null,
+    "enrichment": "partial"
+  },
+  {
+    "chapterFile": "ch00_system_initialization.ts",
+    "chapterId": "ch00",
+    "occurrence": 4,
+    "storyLabel": "eq. 1.1",
+    "storyCaption": "The Enclosure Score.",
+    "latex": "\\\\mathcal{S}_{\\\\text{enc}} = \\\\frac{1}{\\\\sqrt{2}}\\\\sqrt{\\\\,\\\\mathcal{S}_{\\\\text{mat}}^{2} + \\\\mathcal{S}_{\\\\text{psych}}^{2}\\\\,} = \\\\frac{1}{\\\\sqrt{2}}\\\\sqrt{\\\\left(\\\\frac{e_1 + e_2}{2}\\\\right)^{\\\\!2} + e_3^{2}}",
+    "registry": {
+      "id": "E005",
+      "label": "eq:1.1-enclosure-score",
+      "chapter": "System Initialization: The Geometry of Extraction",
+      "section": "The Tri-Modal Enclosure Model",
+      "line": 499
+    },
+    "validation": {
+      "tier": 3,
+      "type": "structural",
+      "falsification": "Falsified if a population with all three outlets blocked (e_i=1) shows sustained autonomous mobilization without external support.",
+      "dataSources": [],
+      "targetEvents": [
+        "Colonial-era slave societies 1619–1865"
+      ],
+      "caseStudyLine": 241,
+      "notebook": ""
+    },
+    "enrichment": "full"
+  },
+  {
+    "chapterFile": "ch01_dynamical_systems.ts",
+    "chapterId": "ch01",
+    "occurrence": 0,
+    "storyLabel": "The augmented Lagrangian",
+    "storyCaption": null,
+    "latex": "\\\\boxed{\\\\mathcal{L}^*(q, \\\\dot{q}, t) = T(\\\\dot{q}, t) - V(q, t) - \\\\mathcal{D}(q, \\\\dot{q}, t) + \\\\lambda\\\\bigl(\\\\tau - M_{\\\\text{eff}}(t)\\\\bigr)}",
+    "registry": {
+      "id": "E023",
+      "label": "eq:lag-augmented",
+      "chapter": "Dynamical Systems Formulation of the Extraction Architecture",
+      "section": "The Augmented Form",
+      "line": 1212
+    },
+    "validation": null,
+    "enrichment": "partial"
+  },
+  {
+    "chapterFile": "ch01_dynamical_systems.ts",
+    "chapterId": "ch01",
+    "occurrence": 1,
+    "storyLabel": "eq. 1.1",
+    "storyCaption": "Euler–Lagrange dynamics with Rayleigh dissipation and external coercive force.",
+    "latex": "\\\\frac{d}{dt}\\\\left(\\\\frac{\\\\partial \\\\mathcal{L}}{\\\\partial \\\\dot{q}_i}\\\\right) - \\\\frac{\\\\partial \\\\mathcal{L}}{\\\\partial q_i} + \\\\frac{\\\\partial \\\\mathcal{D}}{\\\\partial \\\\dot{q}_i} = Q_i",
+    "registry": {
+      "id": "E022",
+      "label": "eq:lag-euler-lagrange",
+      "chapter": "Dynamical Systems Formulation of the Extraction Architecture",
+      "section": "The Rayleigh Dissipation Function",
+      "line": 1204
+    },
+    "validation": null,
+    "enrichment": "partial"
+  },
+  {
+    "chapterFile": "ch01_dynamical_systems.ts",
+    "chapterId": "ch01",
+    "occurrence": 2,
+    "storyLabel": "eq. 1.2",
+    "storyCaption": "The extraction architecture as an augmented Lagrangian.",
+    "latex": "\\\\boxed{\\\\mathcal{L}^*(q, \\\\dot{q}, t) = T(\\\\dot{q}, t) - V(q, t) - \\\\mathcal{D}(q, \\\\dot{q}, t) + \\\\lambda\\\\bigl(\\\\tau - M_{\\\\text{eff}}(t)\\\\bigr)}",
+    "registry": {
+      "id": "E023",
+      "label": "eq:lag-augmented",
+      "chapter": "Dynamical Systems Formulation of the Extraction Architecture",
+      "section": "The Augmented Form",
+      "line": 1212
+    },
+    "validation": null,
+    "enrichment": "partial"
+  },
+  {
+    "chapterFile": "ch02_redefining_racism.ts",
+    "chapterId": "ch02",
+    "occurrence": 0,
+    "storyLabel": "The primary causal direction",
+    "storyCaption": null,
+    "latex": "\\\\text{Elite Economic Interests} \\\\rightarrow \\\\text{Systemic Racialization} \\\\rightarrow \\\\text{Interpersonal Prejudice}",
+    "registry": {
+      "id": "E029",
+      "label": "eq:1.4-elite-causal-arrow",
+      "chapter": "Redefining Racism",
+      "section": "Racism as Primary Example",
+      "line": 1490
+    },
+    "validation": {
+      "tier": 3,
+      "type": "structural",
+      "falsification": "Falsified if racialization systems are shown to emerge without Elite economic interest as primary driver in any documented case.",
+      "dataSources": [
+        {
+          "name": "Zurara",
+          "type": "primary-source",
+          "url": ""
+        },
+        {
+          "name": "Blackmon",
+          "type": "peer-reviewed",
+          "url": ""
+        }
+      ],
+      "targetEvents": [
+        "15th-century Portugal 1441–1481"
+      ],
+      "caseStudyLine": 297,
+      "notebook": ""
+    },
+    "enrichment": "full"
+  },
+  {
+    "chapterFile": "ch02_redefining_racism.ts",
+    "chapterId": "ch02",
+    "occurrence": 1,
+    "storyLabel": "eq. 1.4",
+    "storyCaption": "The generative direction of the racial system.",
+    "latex": "\\\\text{Elite Economic Interests} \\\\rightarrow \\\\text{Systemic Racialization} \\\\rightarrow \\\\text{Interpersonal Prejudice}",
+    "registry": {
+      "id": "E029",
+      "label": "eq:1.4-elite-causal-arrow",
+      "chapter": "Redefining Racism",
+      "section": "Racism as Primary Example",
+      "line": 1490
+    },
+    "validation": {
+      "tier": 3,
+      "type": "structural",
+      "falsification": "Falsified if racialization systems are shown to emerge without Elite economic interest as primary driver in any documented case.",
+      "dataSources": [
+        {
+          "name": "Zurara",
+          "type": "primary-source",
+          "url": ""
+        },
+        {
+          "name": "Blackmon",
+          "type": "peer-reviewed",
+          "url": ""
+        }
+      ],
+      "targetEvents": [
+        "15th-century Portugal 1441–1481"
+      ],
+      "caseStudyLine": 297,
+      "notebook": ""
+    },
+    "enrichment": "full"
+  },
+  {
+    "chapterFile": "ch02_redefining_racism.ts",
+    "chapterId": "ch02",
+    "occurrence": 2,
+    "storyLabel": "eq. 1.5",
+    "storyCaption": "Extraction output is maximized while class-coherence risk remains below the crash threshold.",
+    "latex": "\\\\max \\\\mathcal{E}(t) \\\\quad \\\\text{subject to} \\\\quad M(t) < \\\\tau",
+    "registry": {
+      "id": "E030",
+      "label": "eq:1.5-kernel-optimization",
+      "chapter": "Redefining Racism",
+      "section": "The Core Payload: A Resource-Mining Rootkit",
+      "line": 1730
+    },
+    "validation": {
+      "tier": 1,
+      "type": "quantitative",
+      "falsification": "Falsified if a documented period shows sustained decline in Elite extraction share while M(t) < τ without kernel-level intervention.",
+      "dataSources": [
+        {
+          "name": "Piketty",
+          "type": "peer-reviewed",
+          "url": "http://gabriel-zucman.eu/usdina/"
+        },
+        {
+          "name": "Gilens and Page (2014) — Testing Theories of American Politics",
+          "type": "peer-reviewed",
+          "url": "https://doi.org/10.1017/S1537592714001595"
+        }
+      ],
+      "targetEvents": [
+        "Antebellum South 1840–1860 (cotton output vs. slave-rebellion suppression budget)",
+        "Post-Civil Rights Era 1965–2020 (Elite wealth share vs. reform pressure)"
+      ],
+      "caseStudyLine": 495,
+      "notebook": "nb_ch01_eq05_kernel_optimization.ipynb"
+    },
+    "enrichment": "full"
+  },
+  {
+    "chapterFile": "ch02_redefining_racism.ts",
+    "chapterId": "ch02",
+    "occurrence": 3,
+    "storyLabel": "eq. 1.7",
+    "storyCaption": "The interface optimizer.",
+    "latex": "S^\\\\ast(t) = \\\\arg\\\\min_{S} \\\\left[C_{\\\\text{coercive}}(S,t) + C_{\\\\text{legitimacy}}(S,t) + C_{\\\\text{economic}}(S,t)\\\\right]",
+    "registry": {
+      "id": "E033",
+      "label": "eq:1.7-interface-optimizer",
+      "chapter": "Redefining Racism",
+      "section": "Polymorphic Code: The Interface Swap",
+      "line": 1837
+    },
+    "validation": {
+      "tier": 2,
+      "type": "quantitative",
+      "falsification": "Falsified if a historical interface transition increased net cost C_total relative to available alternatives.",
+      "dataSources": [
+        {
+          "name": "Dudziak (2000) — Cold War Civil Rights",
+          "type": "peer-reviewed",
+          "url": ""
+        },
+        {
+          "name": "Alexander (2010) — The New Jim Crow",
+          "type": "peer-reviewed",
+          "url": ""
+        }
+      ],
+      "targetEvents": [
+        "Jim Crow to War on Drugs transition 1954–1971",
+        "Slavery to Convict Leasing 1865–1880"
+      ],
+      "caseStudyLine": 608,
+      "notebook": ""
+    },
+    "enrichment": "full"
+  },
+  {
+    "chapterFile": "ch02_redefining_racism.ts",
+    "chapterId": "ch02",
+    "occurrence": 4,
+    "storyLabel": "eq. 1.7a",
+    "storyCaption": "The governing equation for reform shock and systemic backlash.",
+    "latex": "L\\\\,\\\\ddot{q} + R\\\\,\\\\dot{q} + \\\\frac{1}{C}\\\\,q = V(t)",
+    "registry": {
+      "id": "E034",
+      "label": "eq:1.7a-rlc-governing",
+      "chapter": "Redefining Racism",
+      "section": "The Backlash Constant: Racism as a Damped RLC Circuit",
+      "line": 1879
+    },
+    "validation": null,
+    "enrichment": "partial"
+  },
+  {
+    "chapterFile": "ch02_redefining_racism.ts",
+    "chapterId": "ch02",
+    "occurrence": 5,
+    "storyLabel": "eq. 1.11",
+    "storyCaption": "Phase loading approaches zero under alignment and one under maximum dispersion.",
+    "latex": "\\\\Phi_j = \\\\sum_{k=1}^{K} \\\\phi_{k,j}, \\\\qquad\\n\\\\Phi_{\\\\text{load}}(t) = \\\\operatorname{Dispersion}\\\\!\\\\left(\\\\{\\\\Phi_j\\\\}_{j=1}^{N}\\\\right) = 1 - \\\\left|\\\\frac{1}{N}\\\\sum_{j=1}^{N} e^{i\\\\Phi_j}\\\\right| \\\\in [0,1]",
+    "registry": null,
+    "validation": null,
+    "enrichment": "none"
+  },
+  {
+    "chapterFile": "ch03_version_1_0.ts",
+    "chapterId": "ch03",
+    "occurrence": 0,
+    "storyLabel": "The Vector Equation of Racism",
+    "storyCaption": null,
+    "latex": "\\\\vec{R}_{\\\\text{acism}} = M_{\\\\text{agnitude}} \\\\cdot \\\\hat{d}_{\\\\text{state}}",
+    "registry": {
+      "id": "E043",
+      "label": "eq:2.1-racism-vector",
+      "chapter": "Version 1.0: Initializing the Vector (15th-Century Portugal)",
+      "section": "The Vector Equation of Racism",
+      "line": 2422
+    },
+    "validation": {
+      "tier": 3,
+      "type": "structural",
+      "falsification": "Falsified if documented racism operates without a state-power directional component, proceeding purely through decentralized interpersonal acts.",
+      "dataSources": [],
+      "targetEvents": [],
+      "caseStudyLine": 1091,
+      "notebook": ""
+    },
+    "enrichment": "full"
+  },
+  {
+    "chapterFile": "ch03_version_1_0.ts",
+    "chapterId": "ch03",
+    "occurrence": 1,
+    "storyLabel": "eq. 2.1",
+    "storyCaption": "Human prejudice becomes systemic racism when state power supplies institutional direction.",
+    "latex": "\\\\vec{R}_{\\\\text{acism}} = M_{\\\\text{agnitude}} \\\\cdot \\\\hat{d}_{\\\\text{state}}",
+    "registry": {
+      "id": "E043",
+      "label": "eq:2.1-racism-vector",
+      "chapter": "Version 1.0: Initializing the Vector (15th-Century Portugal)",
+      "section": "The Vector Equation of Racism",
+      "line": 2422
+    },
+    "validation": {
+      "tier": 3,
+      "type": "structural",
+      "falsification": "Falsified if documented racism operates without a state-power directional component, proceeding purely through decentralized interpersonal acts.",
+      "dataSources": [],
+      "targetEvents": [],
+      "caseStudyLine": 1091,
+      "notebook": ""
+    },
+    "enrichment": "full"
+  },
+  {
+    "chapterFile": "ch03_version_1_0.ts",
+    "chapterId": "ch03",
+    "occurrence": 2,
+    "storyLabel": "eq. 2.6",
+    "storyCaption": "The partition function changes its input variable.",
+    "latex": "O_{\\\\text{religious}}^{\\\\text{pre-1450}} = f(\\\\text{doctrine, sect, heresy}) \\\\quad \\\\longrightarrow \\\\quad O_{\\\\text{racialized}}^{\\\\text{post-1450}} = f(\\\\text{phenotype})",
+    "registry": {
+      "id": "E053",
+      "label": "eq:2.6-roman-american-structural-parallel",
+      "chapter": "Version 1.0: Initializing the Vector (15th-Century Portugal)",
+      "section": "The Religious Partition: Pre-Racial Ideological Justification",
+      "line": 2646
+    },
+    "validation": {
+      "tier": 3,
+      "type": "structural",
+      "falsification": "Falsified if the structural mapping between Roman and American slavery is analytically invalid on more than one key architectural dimension.",
+      "dataSources": [],
+      "targetEvents": [],
+      "caseStudyLine": 1235,
+      "notebook": ""
+    },
+    "enrichment": "full"
+  },
+  {
+    "chapterFile": "ch03_version_1_0.ts",
+    "chapterId": "ch03",
+    "occurrence": 3,
+    "storyLabel": "eq. 2.7",
+    "storyCaption": "Elite benefit strictly dominates the suppression allocation paid to the In-group.",
+    "latex": "\\\\text{Benefit}(E) \\\\gg \\\\text{Benefit}(I) > \\\\text{Benefit}(O_{\\\\text{racialized}})",
+    "registry": {
+      "id": "E054",
+      "label": "eq:2.7-three-tier-portugal-inequality",
+      "chapter": "Version 1.0: Initializing the Vector (15th-Century Portugal)",
+      "section": "Introducing the First Three Variables: The Elite ($E$), the Out-group ($O_{\\text{racialized",
+      "line": 2690
+    },
+    "validation": {
+      "tier": 3,
+      "type": "ordinal",
+      "falsification": "Falsified if measured material outcomes show Benefit(I_buffer) ≥ Benefit(E) in any documented 15th-century Portuguese colonial case.",
+      "dataSources": [],
+      "targetEvents": [
+        "15th-century Portugal 1441–1500"
+      ],
+      "caseStudyLine": 1280,
+      "notebook": ""
+    },
+    "enrichment": "full"
+  },
+  {
+    "chapterFile": "ch03_version_1_0.ts",
+    "chapterId": "ch03",
+    "occurrence": 4,
+    "storyLabel": "eq. 2.8",
+    "storyCaption": "The institutional feedback loop.",
+    "latex": "\\\\begin{aligned}\\n&\\\\text{Exploitation} \\\\rightarrow \\\\text{Observed disparities} \\\\rightarrow \\\\text{Theological/Scientific ``explanation\\'\\'} \\\\\\\\\\n&\\\\rightarrow \\\\text{Naturalization} \\\\rightarrow \\\\text{Expanded exploitation}\\n\\\\end{aligned}",
+    "registry": null,
+    "validation": null,
+    "enrichment": "none"
+  },
+  {
+    "chapterFile": "ch04_bacons_rebellion.ts",
+    "chapterId": "ch04",
+    "occurrence": 0,
+    "storyLabel": "The Buffer-Class Patch",
+    "storyCaption": null,
+    "latex": "\\\\text{Buffer Created:} \\\\quad I_{poor} \\\\rightarrow \\\\text{Defender of } E",
+    "registry": {
+      "id": "E058",
+      "label": "eq:3.3-race-destroys-class",
+      "chapter": "The Application: Bacon's Rebellion, the Buffer Class, and the Constitutional Patch (1676--1787)",
+      "section": "The Patch: The Explicit Codification of ``Whiteness'' (1705)",
+      "line": 2954
+    },
+    "validation": {
+      "tier": 3,
+      "type": "structural",
+      "falsification": "Falsified if colonial-era racial coding produced class solidarity rather than suppressing it in any documented case.",
+      "dataSources": [
+        {
+          "name": "Morgan (1975) — American Slavery",
+          "type": "peer-reviewed",
+          "url": ""
+        }
+      ],
+      "targetEvents": [
+        "Virginia Slave Codes 1705",
+        "Post-Bacon Rebellion racial partition 1676–1710"
+      ],
+      "caseStudyLine": 1539,
+      "notebook": ""
+    },
+    "enrichment": "full"
+  },
+  {
+    "chapterFile": "ch04_bacons_rebellion.ts",
+    "chapterId": "ch04",
+    "occurrence": 1,
+    "storyLabel": "eq. 3.1",
+    "storyCaption": "The solidarity condition exposed by Bacon’s Rebellion.",
+    "latex": "\\\\text{If} \\\\quad (L_{white} + L_{black}) > E \\\\quad \\\\rightarrow \\\\quad \\\\text{Revolution}",
+    "registry": {
+      "id": "E056",
+      "label": "eq:3.1-bacon-solidarity-condition",
+      "chapter": "The Application: Bacon's Rebellion, the Buffer Class, and the Constitutional Patch (1676--1787)",
+      "section": "The Application: Bacon's Rebellion and the Partition of the Poor (1676)",
+      "line": 2874
+    },
+    "validation": {
+      "tier": 1,
+      "type": "quantitative",
+      "falsification": "Falsified if an antebellum cross-racial coalition reached M(t) > τ without subsequent Elite codification of racial partition.",
+      "dataSources": [
+        {
+          "name": "Morgan (1975) — American Slavery",
+          "type": "peer-reviewed",
+          "url": ""
+        },
+        {
+          "name": "Hening's Statutes — Virginia Slave Codes 1705",
+          "type": "primary-source",
+          "url": "https://www.encyclopediavirginia.org/Hening_s_Statutes_at_Large"
+        },
+        {
+          "name": "Zinn (1980) — A People's History of the United States Ch. 3",
+          "type": "peer-reviewed",
+          "url": ""
+        }
+      ],
+      "targetEvents": [
+        "Bacon's Rebellion 1676",
+        "Jamestown burning 1676"
+      ],
+      "caseStudyLine": 1580,
+      "notebook": "nb_ch03_eq01_bacon_solidarity_condition.ipynb"
+    },
+    "enrichment": "full"
+  },
+  {
+    "chapterFile": "ch04_bacons_rebellion.ts",
+    "chapterId": "ch04",
+    "occurrence": 2,
+    "storyLabel": "eq. 3.2",
+    "storyCaption": "The boundary condition maintained by the 1691 statute.",
+    "latex": "I_{\\\\text{buffer}} \\\\cap O_{\\\\text{racialized}} = \\\\emptyset",
+    "registry": {
+      "id": "E057",
+      "label": "eq:3.2-boundary-enforcement-1691",
+      "chapter": "The Application: Bacon's Rebellion, the Buffer Class, and the Constitutional Patch (1676--1787)",
+      "section": "The Boundary Enforcement Act (1691): Criminalizing the Crossing",
+      "line": 2923
+    },
+    "validation": {
+      "tier": 3,
+      "type": "structural",
+      "falsification": "Falsified if racial boundary enforcement persisted without legal penalty mechanism in any colonial-era American case.",
+      "dataSources": [
+        {
+          "name": "Hening's Statutes at Large (Virginia) Vol. 3",
+          "type": "primary-source",
+          "url": "https://www.encyclopediavirginia.org/Hening_s_Statutes_at_Large"
+        }
+      ],
+      "targetEvents": [
+        "Virginia anti-miscegenation law 1691"
+      ],
+      "caseStudyLine": 1507,
+      "notebook": ""
+    },
+    "enrichment": "full"
+  },
+  {
+    "chapterFile": "ch04_bacons_rebellion.ts",
+    "chapterId": "ch04",
+    "occurrence": 3,
+    "storyLabel": "eq. 3.3",
+    "storyCaption": "The structural transition produced by the 1705 patch.",
+    "latex": "\\\\text{Buffer Created:} \\\\quad I_{poor} \\\\rightarrow \\\\text{Defender of } E",
+    "registry": {
+      "id": "E058",
+      "label": "eq:3.3-race-destroys-class",
+      "chapter": "The Application: Bacon's Rebellion, the Buffer Class, and the Constitutional Patch (1676--1787)",
+      "section": "The Patch: The Explicit Codification of ``Whiteness'' (1705)",
+      "line": 2954
+    },
+    "validation": {
+      "tier": 3,
+      "type": "structural",
+      "falsification": "Falsified if colonial-era racial coding produced class solidarity rather than suppressing it in any documented case.",
+      "dataSources": [
+        {
+          "name": "Morgan (1975) — American Slavery",
+          "type": "peer-reviewed",
+          "url": ""
+        }
+      ],
+      "targetEvents": [
+        "Virginia Slave Codes 1705",
+        "Post-Bacon Rebellion racial partition 1676–1710"
+      ],
+      "caseStudyLine": 1539,
+      "notebook": ""
+    },
+    "enrichment": "full"
+  },
+  {
+    "chapterFile": "ch04_bacons_rebellion.ts",
+    "chapterId": "ch04",
+    "occurrence": 4,
+    "storyLabel": "eq. 3.4",
+    "storyCaption": "The three-tier benefit ordering after the Bacon patch.",
+    "latex": "\\\\text{Benefit}(E) \\\\gg \\\\text{Benefit}(I_{\\\\text{buffer}}) > \\\\text{Benefit}(O_{\\\\text{racialized}})",
+    "registry": {
+      "id": "E059",
+      "label": "eq:3.4-three-tier-post-bacon",
+      "chapter": "The Application: Bacon's Rebellion, the Buffer Class, and the Constitutional Patch (1676--1787)",
+      "section": "Formalizing the Buffer Class ($I_{\\text{buffer",
+      "line": 2974
+    },
+    "validation": {
+      "tier": 3,
+      "type": "ordinal",
+      "falsification": "Falsified if the post-Bacon ordering shows Buffer Class benefits exceeding Elite benefits in any documented metric.",
+      "dataSources": [],
+      "targetEvents": [
+        "Colonial Virginia 1705–1776"
+      ],
+      "caseStudyLine": 1560,
+      "notebook": ""
+    },
+    "enrichment": "full"
+  },
+  {
+    "chapterFile": "ch08_gendered_axis.ts",
+    "chapterId": "ch08",
+    "occurrence": 0,
+    "storyLabel": "The compliance differential",
+    "storyCaption": null,
+    "latex": "\\\\Delta(x) \\\\;=\\\\; V_c(x) - V_r(x),",
+    "registry": {
+      "id": "E061",
+      "label": "eq:5.1-compliance-differential",
+      "chapter": "The Gendered Axis: Coverture, Eugenics, and the Reproductive Extraction Kernel",
+      "section": "The Early Detection Theorem: Why Compounded Intersections Recognize the Algorithm First",
+      "line": 3883
+    },
+    "validation": {
+      "tier": 2,
+      "type": "quantitative",
+      "falsification": "Falsified if V_c(x) ≤ V_r(x) for subjects in documented extraction regimes with no corresponding increase in M(t).",
+      "dataSources": [
+        {
+          "name": "Baptist (2014) — The Half Has Never Been Told",
+          "type": "peer-reviewed",
+          "url": ""
+        },
+        {
+          "name": "Darity & Mullen (2020) — From Here to Equality",
+          "type": "peer-reviewed",
+          "url": ""
+        }
+      ],
+      "targetEvents": [
+        "Antebellum slave resistance economics",
+        "Post-Reconstruction sharecropper compliance"
+      ],
+      "caseStudyLine": "~2272",
+      "notebook": ""
+    },
+    "enrichment": "full"
+  },
+  {
+    "chapterFile": "ch08_gendered_axis.ts",
+    "chapterId": "ch08",
+    "occurrence": 1,
+    "storyLabel": null,
+    "storyCaption": "The dual-track statutory status described in the chapter.",
+    "latex": "\\\\text{Second Amendment Status}(\\\\text{arms},\\\\, x) =\\n\\\\begin{cases}\\n\\\\text{constitutionally protected} & x \\\\in I_{\\\\text{buffer}} \\\\\\\\\\n\\\\text{felony prosecution} & x \\\\in O_{\\\\text{racialized}}\\n\\\\end{cases}",
+    "registry": null,
+    "validation": null,
+    "enrichment": "none"
+  },
+  {
+    "chapterFile": "ch09_enforcement_engine.ts",
+    "chapterId": "ch09",
+    "occurrence": 0,
+    "storyLabel": "eq. 6.12",
+    "storyCaption": "The full capacity-compounding chain.",
+    "latex": "O_{1971}^{\\\\text{capacity}} = O_{1450}^{\\\\text{capacity}} \\\\cdot (1-\\\\alpha\\\\, P_{\\\\text{enslavement}})(1-\\\\beta\\\\, P_{\\\\text{13thAmendment}})(1-\\\\gamma\\\\, P_{\\\\text{redlining}})(1-\\\\delta\\\\, P_{\\\\text{WarOnDrugs}})",
+    "registry": {
+      "id": "E072",
+      "label": "eq:6.12-capacity-compounding-full",
+      "chapter": "The Enforcement Engine: Slave Patrols, the 13th Amendment, and the Compounding Model (1704--1865)",
+      "section": "Case Study: The Asymmetric Enforcement Multiplier --- Cannabis Arrests, 2010--2018",
+      "line": 4899
+    },
+    "validation": {
+      "tier": 1,
+      "type": "quantitative",
+      "falsification": "Falsified if any one policy shock (α, β, γ, δ) is shown to have zero marginal effect on subsequent Black wealth accumulation in longitudinal data.",
+      "dataSources": [
+        {
+          "name": "ACLU (2020) — A Tale of Two Countries",
+          "type": "report",
+          "url": "https://www.aclu.org/report/tale-two-countries-racially-targeted-arrests-era-marijuana-reform"
+        },
+        {
+          "name": "Mapping Inequality — HOLC Redlining Maps",
+          "type": "public-dataset",
+          "url": "https://dsl.richmond.edu/panorama/redlining/"
+        },
+        {
+          "name": "Rothstein (2017) — The Color of Law",
+          "type": "peer-reviewed",
+          "url": ""
+        },
+        {
+          "name": "Darity & Mullen (2020) — From Here to Equality",
+          "type": "peer-reviewed",
+          "url": ""
+        }
+      ],
+      "targetEvents": [
+        "ACLU cannabis arrests 2010–2018",
+        "HOLC redlining maps 1934",
+        "Mass incarceration 1971–present"
+      ],
+      "caseStudyLine": 3169,
+      "notebook": "Paper/scripts/eq33_cannabis_redlining.ipynb"
+    },
+    "enrichment": "full"
+  },
+  {
+    "chapterFile": "ch09_enforcement_engine.ts",
+    "chapterId": "ch09",
+    "occurrence": 1,
+    "storyLabel": "eq. 6.3",
+    "storyCaption": "The punishment exception expressed as a state-transition rule.",
+    "latex": "\\\\text{If} \\\\quad \\\\text{Status}(x) = \\\\text{Criminal}(C) \\\\quad \\\\rightarrow \\\\quad \\\\text{Status}(x) \\\\in S \\\\text{ (Slave)}",
+    "registry": {
+      "id": "E066",
+      "label": "eq:6.3-thirteenth-amendment-exception",
+      "chapter": "The Enforcement Engine: Slave Patrols, the 13th Amendment, and the Compounding Model (1704--1865)",
+      "section": "The System Kernel: The 13th Amendment Loophole (1865)",
+      "line": 4751
+    },
+    "validation": {
+      "tier": 3,
+      "type": "structural",
+      "falsification": "Falsified if 13th Amendment exception clause is shown to have been applied non-racially in incarceration data across the post-Civil War period.",
+      "dataSources": [
+        {
+          "name": "Blackmon (2008) — Slavery by Another Name",
+          "type": "peer-reviewed",
+          "url": ""
+        },
+        {
+          "name": "Alexander (2010) — The New Jim Crow",
+          "type": "peer-reviewed",
+          "url": ""
+        }
+      ],
+      "targetEvents": [
+        "Convict leasing 1865–1940",
+        "Black Codes 1865–1877"
+      ],
+      "caseStudyLine": "~3080",
+      "notebook": ""
+    },
+    "enrichment": "full"
+  },
+  {
+    "chapterFile": "ch09_enforcement_engine.ts",
+    "chapterId": "ch09",
+    "occurrence": 2,
+    "storyLabel": "eq. 6.5",
+    "storyCaption": "Every policy shock acts on the capacity retained after the preceding shock.",
+    "latex": "O_t^{\\\\text{capacity}} = O_{t-1}^{\\\\text{capacity}} \\\\cdot (1 - \\\\alpha P_t)",
+    "registry": {
+      "id": "E068",
+      "label": "eq:6.5-compounding-temporal-model",
+      "chapter": "The Enforcement Engine: Slave Patrols, the 13th Amendment, and the Compounding Model (1704--1865)",
+      "section": "The Compounding Model: From Summation to Multiplication",
+      "line": 4827
+    },
+    "validation": {
+      "tier": 2,
+      "type": "quantitative",
+      "falsification": "Falsified if policy shock effects on O^capacity are shown to be independent across periods in longitudinal wealth data.",
+      "dataSources": [
+        {
+          "name": "Hamilton & Darity (2017) — The Political Economy of Education, Financial Literacy, and the Racial Wealth Gap",
+          "type": "peer-reviewed",
+          "url": ""
+        }
+      ],
+      "targetEvents": [
+        "Black wealth trajectory 1865–2024"
+      ],
+      "caseStudyLine": "~3154",
+      "notebook": ""
+    },
+    "enrichment": "full"
+  },
+  {
+    "chapterFile": "ch10_the_containment.ts",
+    "chapterId": "ch10",
+    "occurrence": 0,
+    "storyLabel": "The Pullman Corollary",
+    "storyCaption": null,
+    "latex": "j\\\\psi_s \\\\uparrow \\\\implies \\\\text{Solidarity}(I_{\\\\text{buffer}}, O_{\\\\text{racialized}}) \\\\downarrow \\\\implies \\\\text{Vulnerability}(I_{\\\\text{buffer}}) \\\\uparrow \\\\implies \\\\mathcal{E}(t) \\\\uparrow",
+    "registry": {
+      "id": "E073",
+      "label": "eq:7.1-pullman-corollary",
+      "chapter": "The Containment: Pullman, Redlining, and the Wages of Whiteness (1894--1965)",
+      "section": "The Theorem the Buffer Class Refused to Learn",
+      "line": 5415
+    },
+    "validation": {
+      "tier": 3,
+      "type": "structural",
+      "falsification": "Falsified if a documented case shows I_buffer achieving collective gains through exclusion of O without subsequent Elite weaponization.",
+      "dataSources": [
+        {
+          "name": "Roediger (1991) — The Wages of Whiteness",
+          "type": "peer-reviewed",
+          "url": ""
+        }
+      ],
+      "targetEvents": [
+        "Pullman Strike 1894 — Strikebreaker recruitment from Black workers",
+        "AFL exclusion policies 1881–1935"
+      ],
+      "caseStudyLine": "~3624",
+      "notebook": ""
+    },
+    "enrichment": "full"
+  },
+  {
+    "chapterFile": "ch10_the_containment.ts",
+    "chapterId": "ch10",
+    "occurrence": 1,
+    "storyLabel": "eq. 7.1",
+    "storyCaption": "A rising psychological wage suppresses solidarity and increases vulnerability to extraction.",
+    "latex": "j\\\\psi_s \\\\uparrow \\\\implies \\\\text{Solidarity}(I_{\\\\text{buffer}}, O_{\\\\text{racialized}}) \\\\downarrow \\\\implies \\\\text{Vulnerability}(I_{\\\\text{buffer}}) \\\\uparrow \\\\implies \\\\mathcal{E}(t) \\\\uparrow",
+    "registry": {
+      "id": "E073",
+      "label": "eq:7.1-pullman-corollary",
+      "chapter": "The Containment: Pullman, Redlining, and the Wages of Whiteness (1894--1965)",
+      "section": "The Theorem the Buffer Class Refused to Learn",
+      "line": 5415
+    },
+    "validation": {
+      "tier": 3,
+      "type": "structural",
+      "falsification": "Falsified if a documented case shows I_buffer achieving collective gains through exclusion of O without subsequent Elite weaponization.",
+      "dataSources": [
+        {
+          "name": "Roediger (1991) — The Wages of Whiteness",
+          "type": "peer-reviewed",
+          "url": ""
+        }
+      ],
+      "targetEvents": [
+        "Pullman Strike 1894 — Strikebreaker recruitment from Black workers",
+        "AFL exclusion policies 1881–1935"
+      ],
+      "caseStudyLine": "~3624",
+      "notebook": ""
+    },
+    "enrichment": "full"
+  },
+  {
+    "chapterFile": "ch11_german_extraction.ts",
+    "chapterId": "ch11",
+    "occurrence": 0,
+    "storyLabel": "eq:german-liquidation-reclass",
+    "storyCaption": null,
+    "latex": "O_{\\\\text{racialized}}^{\\\\text{Herero}} \\\\; \\\\xrightarrow{\\\\;P_{\\\\text{kinetic}}\\\\;} \\\\; O_{\\\\text{liquidated}} \\\\quad \\\\text{where} \\\\quad \\\\mathcal{V}(O_{\\\\text{liquidated}}) = 0",
+    "registry": null,
+    "validation": null,
+    "enrichment": "none"
+  },
+  {
+    "chapterFile": "ch11_german_extraction.ts",
+    "chapterId": "ch11",
+    "occurrence": 1,
+    "storyLabel": "eq:german-liquidation-reclass",
+    "storyCaption": "The operational reclassification of the Herero population from extractable labor to a liquidation target.",
+    "latex": "O_{\\\\text{racialized}}^{\\\\text{Herero}} \\\\; \\\\xrightarrow{\\\\;P_{\\\\text{kinetic}}\\\\;} \\\\; O_{\\\\text{liquidated}} \\\\quad \\\\text{where} \\\\quad \\\\mathcal{V}(O_{\\\\text{liquidated}}) = 0",
+    "registry": null,
+    "validation": null,
+    "enrichment": "none"
+  },
+  {
+    "chapterFile": "ch11_german_extraction.ts",
+    "chapterId": "ch11",
+    "occurrence": 2,
+    "storyLabel": "eq:german-variable-swap",
+    "storyCaption": "The Variable Swap replaces a material psychological wage with a racial-status wage at lower material cost.",
+    "latex": "\\\\psi_{\\\\text{Weimar}} = \\\\psi_m(t) + \\\\epsilon \\\\;\\\\;\\\\rightarrow\\\\;\\\\; \\\\psi_{\\\\text{Nazi}} = \\\\psi_s^{\\\\text{racial}}(t) + \\\\delta, \\\\quad \\\\text{where} \\\\quad \\\\delta \\\\ll \\\\psi_m^{\\\\text{pre-crash}}",
+    "registry": null,
+    "validation": null,
+    "enrichment": "none"
+  },
+  {
+    "chapterFile": "ch11_german_extraction.ts",
+    "chapterId": "ch11",
+    "occurrence": 3,
+    "storyLabel": "eq:german-aryan-status",
+    "storyCaption": "The genealogical status gradient encoded by the legal partition.",
+    "latex": "\\\\psi_s^{\\\\text{Aryan}}(i) = \\\\begin{cases}\\n\\\\psi_{\\\\text{base}} & \\\\text{if } G(i) \\\\in \\\\text{Aryan} \\\\\\\\\\n\\\\psi_{\\\\text{base}} - \\\\lambda & \\\\text{if } G(i) \\\\in \\\\text{Mischling}_1 \\\\\\\\\\n0 & \\\\text{if } G(i) \\\\in \\\\text{Jewish}\\n\\\\end{cases}",
+    "registry": null,
+    "validation": null,
+    "enrichment": "none"
+  },
+  {
+    "chapterFile": "ch11_german_extraction.ts",
+    "chapterId": "ch11",
+    "occurrence": 4,
+    "storyLabel": "eq:german-depletion-rate",
+    "storyCaption": "The target population changes through immediate liquidation and temporary preservation for forced labor.",
+    "latex": "\\\\frac{dO_{\\\\text{target}}}{dt} = -\\\\mu(t) \\\\cdot O_{\\\\text{target}}(t) + \\\\nu(t) \\\\cdot L_{\\\\text{forced}}(t)",
+    "registry": null,
+    "validation": null,
+    "enrichment": "none"
+  },
+  {
+    "chapterFile": "ch11_german_extraction.ts",
+    "chapterId": "ch11",
+    "occurrence": 5,
+    "storyLabel": "eq:german-net-extraction",
+    "storyCaption": "Immediate asset seizure is offset by the discounted future value of lost skilled labor.",
+    "latex": "\\\\Delta \\\\mathcal{E} = \\\\mathcal{E}_{\\\\text{liquidated}} - \\\\mathcal{E}_{\\\\text{lost}} \\\\quad \\\\text{where} \\\\quad \\\\mathcal{E}_{\\\\text{lost}} = \\\\int_{t_0}^{t_1} L_{\\\\text{skilled}}(t) \\\\cdot w_{\\\\text{eff}}(t) \\\\, dt",
+    "registry": null,
+    "validation": null,
+    "enrichment": "none"
+  },
+  {
+    "chapterFile": "ch12_geopolitical_patch.ts",
+    "chapterId": "ch12",
+    "occurrence": 0,
+    "storyLabel": null,
+    "storyCaption": "The manuscript adds shadow capital to the standard state-formation model.",
+    "latex": "S(t) = R_{\\\\text{tax}}(t) + A_{\\\\text{foreign}}(t) + P_{\\\\text{domestic}}(t) + C_{\\\\text{shadow}}(t)",
+    "registry": null,
+    "validation": null,
+    "enrichment": "none"
+  },
+  {
+    "chapterFile": "ch12_geopolitical_patch.ts",
+    "chapterId": "ch12",
+    "occurrence": 1,
+    "storyLabel": null,
+    "storyCaption": "The three components of the manuscript’s shadow-capital term.",
+    "latex": "C_{\\\\text{shadow}}(t) = C_{\\\\text{kinetic}}(t) + C_{\\\\text{financial}}(t) + C_{\\\\text{logistical}}(t)",
+    "registry": null,
+    "validation": null,
+    "enrichment": "none"
+  },
+  {
+    "chapterFile": "ch12_geopolitical_patch.ts",
+    "chapterId": "ch12",
+    "occurrence": 2,
+    "storyLabel": null,
+    "storyCaption": "The manuscript’s three-channel clearance function.",
+    "latex": "\\\\mathcal{C}(t) = \\\\alpha_{\\\\text{kinetic}}(t) + \\\\alpha_{\\\\text{terror}}(t) + \\\\alpha_{\\\\text{admin}}(t)",
+    "registry": null,
+    "validation": null,
+    "enrichment": "none"
+  },
+  {
+    "chapterFile": "ch12_geopolitical_patch.ts",
+    "chapterId": "ch12",
+    "occurrence": 3,
+    "storyLabel": null,
+    "storyCaption": "The pardon activates after the manuscript’s legitimization delay.",
+    "latex": "\\\\Lambda(t, t_0, \\\\Delta t_{\\\\text{pardon}}) = \\\\Theta\\\\bigl(t - (t_0 + \\\\Delta t_{\\\\text{pardon}})\\\\bigr)",
+    "registry": null,
+    "validation": null,
+    "enrichment": "none"
+  },
+  {
+    "chapterFile": "ch12_geopolitical_patch.ts",
+    "chapterId": "ch12",
+    "occurrence": 4,
+    "storyLabel": null,
+    "storyCaption": "The manuscript’s interface–backend gap.",
+    "latex": "\\\\mathcal{L}_{\\\\text{display}}(t) \\\\neq \\\\mathcal{L}_{\\\\text{backend}}(t)",
+    "registry": null,
+    "validation": null,
+    "enrichment": "none"
+  },
+  {
+    "chapterFile": "ch13_biological_extraction.ts",
+    "chapterId": "ch13",
+    "occurrence": 0,
+    "storyLabel": "The biological depletion coefficient",
+    "storyCaption": null,
+    "latex": "\\\\beta_{\\\\text{bio}}(t) = E(t) \\\\cdot T(t) \\\\cdot A(t),",
+    "registry": null,
+    "validation": null,
+    "enrichment": "none"
+  },
+  {
+    "chapterFile": "ch13_biological_extraction.ts",
+    "chapterId": "ch13",
+    "occurrence": 1,
+    "storyLabel": "Biological compounding model",
+    "storyCaption": "Environmental toxicity enters the recursive operator as a persistent degradation term.",
+    "latex": "O_{\\\\text{bio}}(t) = O_{\\\\text{bio}}(t-1) \\\\cdot \\\\bigl(1 - \\\\alpha \\\\cdot P(t) - \\\\beta_{\\\\text{bio}}(t)\\\\bigr).",
+    "registry": null,
+    "validation": null,
+    "enrichment": "none"
+  },
+  {
+    "chapterFile": "ch13_biological_extraction.ts",
+    "chapterId": "ch13",
+    "occurrence": 2,
+    "storyLabel": "Biological depletion coefficient",
+    "storyCaption": "Concentration, duration, and absorption combine multiplicatively.",
+    "latex": "\\\\beta_{\\\\text{bio}}(t) = E(t) \\\\cdot T(t) \\\\cdot A(t),",
+    "registry": null,
+    "validation": null,
+    "enrichment": "none"
+  },
+  {
+    "chapterFile": "ch13_biological_extraction.ts",
+    "chapterId": "ch13",
+    "occurrence": 3,
+    "storyLabel": "Lead–crime latency",
+    "storyCaption": "The developmental lag is 21–23 years.",
+    "latex": "\\\\mathrm{Crime}(t) = \\\\int \\\\mathrm{Pb}(t - \\\\tau_{\\\\text{age}}) \\\\cdot D(\\\\text{population\\\\_density}) \\\\cdot S(\\\\text{socioeconomic\\\\_stress}) \\\\, d\\\\tau,",
+    "registry": null,
+    "validation": null,
+    "enrichment": "none"
+  },
+  {
+    "chapterFile": "ch13_biological_extraction.ts",
+    "chapterId": "ch13",
+    "occurrence": 4,
+    "storyLabel": "Property-tax lead feedback loop",
+    "storyCaption": "Redlining supplies the initial condition; fiscal allocation and infrastructure age propagate it.",
+    "latex": "L_{\\\\text{loop}}(t) = R_{\\\\text{redline}} \\\\cdot V_{\\\\text{property}}(t) \\\\cdot F_{\\\\text{funding}} \\\\cdot I_{\\\\text{infrastructure}}(t),",
+    "registry": null,
+    "validation": null,
+    "enrichment": "none"
+  },
+  {
+    "chapterFile": "ch13_biological_extraction.ts",
+    "chapterId": "ch13",
+    "occurrence": 5,
+    "storyLabel": "Lifetime menstrual exposure",
+    "storyCaption": "Metal concentration, absorption efficiency, and reproductive lifespan determine cumulative load.",
+    "latex": "M_{\\\\text{lifetime}} = \\\\int_{0}^{T} \\\\sum_{\\\\text{metal}} c_{\\\\text{metal}}(t) \\\\cdot a_{\\\\text{absorption}} \\\\, dt,",
+    "registry": null,
+    "validation": null,
+    "enrichment": "none"
+  },
+  {
+    "chapterFile": "ch13_biological_extraction.ts",
+    "chapterId": "ch13",
+    "occurrence": 6,
+    "storyLabel": "Total extraction rate",
+    "storyCaption": "Biological depletion joins labor and capital in the extraction accounting.",
+    "latex": "\\\\mathcal{E}_{\\\\text{total}}(t) = \\\\mathcal{E}_{\\\\text{labor}}(t) + \\\\mathcal{E}_{\\\\text{capital}}(t) + \\\\mathcal{E}_{\\\\text{biological}}(t),",
+    "registry": null,
+    "validation": null,
+    "enrichment": "none"
+  },
+  {
+    "chapterFile": "ch14_tweedism.ts",
+    "chapterId": "ch14",
+    "occurrence": 0,
+    "storyLabel": "eq. 8.18",
+    "storyCaption": "The agenda-setting path. Each transition can win a local majority. The terminal policy moves away from cross-class material alignment.",
+    "latex": "x_0 \\\\rightarrow x_1 \\\\rightarrow x_2 \\\\rightarrow \\\\cdots \\\\rightarrow x_m",
+    "registry": {
+      "id": "E099",
+      "label": "eq:8.18-tweedism-agenda-path",
+      "chapter": "Tweedism and the Puppet Class: The Algorithmic Filter on Democracy",
+      "section": "Case Study: The Interference Engine --- Spectral Redistribution and Phase-Load Quantification, 1948--2024",
+      "line": 7262
+    },
+    "validation": {
+      "tier": 1,
+      "type": "quantitative",
+      "falsification": "Falsified if Gilens-Page analysis shows median voter preferences predict policy outcomes as strongly as top-quintile preferences.",
+      "dataSources": [
+        {
+          "name": "Gilens & Page (2014) — Testing Theories of American Politics",
+          "type": "peer-reviewed",
+          "url": "https://doi.org/10.1017/S1537592714001595"
+        },
+        {
+          "name": "Gilens (2012) — Affluence and Influence",
+          "type": "peer-reviewed",
+          "url": ""
+        }
+      ],
+      "targetEvents": [
+        "Gilens-Page 1,779 policy votes 1981–2002"
+      ],
+      "caseStudyLine": 4844,
+      "notebook": "Paper/scripts/eq46_gilens_page.ipynb"
+    },
+    "enrichment": "full"
+  },
+  {
+    "chapterFile": "ch14_tweedism.ts",
+    "chapterId": "ch14",
+    "occurrence": 1,
+    "storyLabel": "eq. 8.2",
+    "storyCaption": "The five-tier hierarchy mapped onto the leader-follower partition.",
+    "latex": "\\\\mathcal{V}_L \\\\longleftrightarrow E, \\\\qquad \\\\mathcal{V}_F \\\\longleftrightarrow P_{\\\\text{uppet}} \\\\cup F_{\\\\text{enforce}} \\\\cup I_{\\\\text{buffer}} \\\\cup O_{\\\\text{racialized}}.",
+    "registry": {
+      "id": "E077",
+      "label": "eq:8.2-tier-to-graph-mapping",
+      "chapter": "Tweedism and the Puppet Class: The Algorithmic Filter on Democracy",
+      "section": "Graph, agents, and the leader-follower partition",
+      "line": 5774
+    },
+    "validation": {
+      "tier": 3,
+      "type": "structural",
+      "falsification": "Falsified if the tier-to-graph mapping produces inconsistent predictions across two documented historical cases.",
+      "dataSources": [],
+      "targetEvents": [],
+      "caseStudyLine": 4024,
+      "notebook": ""
+    },
+    "enrichment": "full"
+  },
+  {
+    "chapterFile": "ch14_tweedism.ts",
+    "chapterId": "ch14",
+    "occurrence": 2,
+    "storyLabel": "eq. 8.3",
+    "storyCaption": "Fractional-order agent dynamics. The order α encodes historical memory in the present state.",
+    "latex": "{}_{\\\\,0}D_t^{\\\\alpha}\\\\, q_i(t) = u_i(t), \\\\qquad \\\\alpha \\\\in (0,1],",
+    "registry": {
+      "id": "E078",
+      "label": "eq:8.3-fractional-agent-dynamics",
+      "chapter": "Tweedism and the Puppet Class: The Algorithmic Filter on Democracy",
+      "section": "Fractional-order dynamics and historical memory",
+      "line": 5782
+    },
+    "validation": {
+      "tier": 3,
+      "type": "structural",
+      "falsification": "Falsified if integer-order dynamics (α=1) predict social-mobility convergence equally well as fractional-order in longitudinal data.",
+      "dataSources": [
+        {
+          "name": "Li et al. — Mittag-Leffler stability results (mathematical)",
+          "type": "peer-reviewed",
+          "url": ""
+        }
+      ],
+      "targetEvents": [
+        "Black wealth-gap recovery trajectory 1865–2024"
+      ],
+      "caseStudyLine": 4032,
+      "notebook": ""
+    },
+    "enrichment": "full"
+  },
+  {
+    "chapterFile": "ch14_tweedism.ts",
+    "chapterId": "ch14",
+    "occurrence": 3,
+    "storyLabel": "eq. 8.14",
+    "storyCaption": "The observed political-attention signal: class carrier, identity-mode spectrum, and noise.",
+    "latex": "S_{\\\\text{total}}(t) = S_{\\\\text{class}}(t) + S_{\\\\text{id}}(t) + \\\\eta(t)\\n = A_{\\\\text{class}}(t)\\\\sin(2\\\\pi f_{\\\\text{class}} t + \\\\varphi_{\\\\text{class}})\\n + \\\\sum_{k=1}^{K} A_k(t)\\\\sin(2\\\\pi f_k t + \\\\varphi_k)\\n + \\\\eta(t)",
+    "registry": null,
+    "validation": null,
+    "enrichment": "none"
+  },
+  {
+    "chapterFile": "ch15_the_recompile.ts",
+    "chapterId": "ch15",
+    "occurrence": 0,
+    "storyLabel": "eq. 9.1",
+    "storyCaption": "Lead exposure enters the model as a multiplicative reduction in community capacity.",
+    "latex": "O_{t+1}^{\\\\text{capacity}} = O_t^{\\\\text{capacity}} \\\\cdot (1 - \\\\alpha_{P_{\\\\text{lead}}})",
+    "registry": {
+      "id": "E100",
+      "label": "eq:9.1-lead-crime-compounding",
+      "chapter": "The Recompile: COINTELPRO, the Variable Swap, and the War on Drugs (1968--1994)",
+      "section": "The Toxin Pre-Processor: Environmental Lead as \\texorpdfstring{$P_{\\text{lead",
+      "line": 7779
+    },
+    "validation": {
+      "tier": 1,
+      "type": "quantitative",
+      "falsification": "Falsified if Reyes (2007) blood-lead time-series fails to predict crime-rate decline after 20-year lag in multivariate regression.",
+      "dataSources": [
+        {
+          "name": "Reyes (2007) — Environmental Policy as Social Policy",
+          "type": "peer-reviewed",
+          "url": "https://doi.org/10.3386/w12417"
+        },
+        {
+          "name": "Aizer & Currie (2019) — Lead and Juvenile Delinquency",
+          "type": "peer-reviewed",
+          "url": "https://doi.org/10.1257/app.20180026"
+        }
+      ],
+      "targetEvents": [
+        "Lead gasoline phase-out 1970–1986 and crime decline 1990–2010"
+      ],
+      "caseStudyLine": 6344,
+      "notebook": "Paper/scripts/eq47_51_lead_crime.ipynb"
+    },
+    "enrichment": "full"
+  },
+  {
+    "chapterFile": "ch15_the_recompile.ts",
+    "chapterId": "ch15",
+    "occurrence": 1,
+    "storyLabel": "eq. 9.2",
+    "storyCaption": "Epistemic suppression extends the number of compounding exposure periods.",
+    "latex": "O_{t_0 + \\\\Delta t_{\\\\text{suppress}}}^{\\\\text{capacity}} = O_{t_0}^{\\\\text{capacity}} \\\\cdot (1 - \\\\alpha_{P_{\\\\text{lead}}})^{\\\\Delta t_{\\\\text{suppress}}}",
+    "registry": {
+      "id": "E101",
+      "label": "eq:9.2-epistemic-suppression-variable",
+      "chapter": "The Recompile: COINTELPRO, the Variable Swap, and the War on Drugs (1968--1994)",
+      "section": "The Corporate Conspiracy: Tetraethyllead and the Half-Century Cover-Up",
+      "line": 7862
+    },
+    "validation": {
+      "tier": 2,
+      "type": "quantitative",
+      "falsification": "Falsified if documented lead industry cover-up timeline shows no correlation with delay in regulatory response.",
+      "dataSources": [
+        {
+          "name": "Kitman (2000) — The Secret History of Lead (The Nation)",
+          "type": "journalism",
+          "url": "https://www.typeinvestigations.org/investigation/2000/03/02/secret-history-lead/"
+        },
+        {
+          "name": "Michaels (2008) — Doubt Is Their Product",
+          "type": "peer-reviewed",
+          "url": ""
+        }
+      ],
+      "targetEvents": [
+        "Lead industry cover-up 1926–1970",
+        "Clair Patterson's research suppression"
+      ],
+      "caseStudyLine": 6344,
+      "notebook": "Paper/scripts/eq47_51_lead_crime.ipynb"
+    },
+    "enrichment": "full"
+  },
+  {
+    "chapterFile": "ch15_the_recompile.ts",
+    "chapterId": "ch15",
+    "occurrence": 2,
+    "storyLabel": "eq. 9.3",
+    "storyCaption": "Three delivery vectors converge on the same contained population.",
+    "latex": "P_{\\\\text{lead}} = P_{\\\\text{lead}}^{\\\\text{air}} + P_{\\\\text{lead}}^{\\\\text{water}} + P_{\\\\text{lead}}^{\\\\text{school}}",
+    "registry": {
+      "id": "E102",
+      "label": "eq:9.3-multi-vector-lead-exposure",
+      "chapter": "The Recompile: COINTELPRO, the Variable Swap, and the War on Drugs (1968--1994)",
+      "section": "The Multi-Vector Containment: Lead in Water, Schools, and the Property-Tax Trap",
+      "line": 8101
+    },
+    "validation": {
+      "tier": 1,
+      "type": "quantitative",
+      "falsification": "Falsified if cumulative lead exposure from all three vectors is not significantly higher in redlined areas than non-redlined areas.",
+      "dataSources": [
+        {
+          "name": "EPA Air Quality Monitoring Data",
+          "type": "public-dataset",
+          "url": "https://www.epa.gov/outdoor-air-quality-data"
+        },
+        {
+          "name": "Mapping Inequality HOLC maps",
+          "type": "public-dataset",
+          "url": "https://dsl.richmond.edu/panorama/redlining/"
+        }
+      ],
+      "targetEvents": [
+        "Flint water crisis 2014–2019",
+        "Detroit school lead exposure study"
+      ],
+      "caseStudyLine": 6344,
+      "notebook": "Paper/scripts/eq47_51_lead_crime.ipynb"
+    },
+    "enrichment": "full"
+  },
+  {
+    "chapterFile": "ch16_full_algorithm.ts",
+    "chapterId": "ch16",
+    "occurrence": 0,
+    "storyLabel": "The kernel objective",
+    "storyCaption": null,
+    "latex": "\\\\max_{\\\\{P_i\\\\}}\\\\; \\\\mathcal{E}(t) \\\\quad \\\\text{subject to} \\\\quad M_{\\\\text{eff}}(t) < \\\\tau",
+    "registry": {
+      "id": "E111",
+      "label": "eq:10.5-kernel-objective-canonical",
+      "chapter": "The Full Algorithm: Demographic Paradox, Cannibalization, and the 5-Tier Reveal (1994--Present)",
+      "section": "The Full Reveal: The Complete 5-Tier Set-Theoretic Hierarchy",
+      "line": 9330
+    },
+    "validation": {
+      "tier": 1,
+      "type": "quantitative",
+      "falsification": "Falsified if a documented period shows sustained Elite wealth-share decline while M_eff(t) < τ without external kinetic intervention.",
+      "dataSources": [
+        {
+          "name": "Piketty-Saez-Zucman Distributional National Accounts",
+          "type": "peer-reviewed",
+          "url": "http://gabriel-zucman.eu/usdina/"
+        }
+      ],
+      "targetEvents": [
+        "Post-Civil Rights Era 1965–2024",
+        "Great Compression 1933–1978 (New Deal psi_m deployment)",
+        "Post-1978 recovery to Gilded Age levels (Delta_max=0)"
+      ],
+      "caseStudyLine": 7477,
+      "notebook": "eq56_kernel_objective.ipynb"
+    },
+    "enrichment": "full"
+  },
+  {
+    "chapterFile": "ch16_full_algorithm.ts",
+    "chapterId": "ch16",
+    "occurrence": 1,
+    "storyLabel": "eq. 10.2",
+    "storyCaption": "The Buffer Class contracts as the broader extraction pool expands.",
+    "latex": "I_{\\\\text{buffer}}(t) \\\\subset I_{\\\\text{buffer}}(t-1) \\\\quad \\\\text{and} \\\\quad O(t) \\\\supset O(t-1)",
+    "registry": {
+      "id": "E107",
+      "label": "eq:10.2-buffer-class-shrinkage",
+      "chapter": "The Full Algorithm: Demographic Paradox, Cannibalization, and the 5-Tier Reveal (1994--Present)",
+      "section": "The Mathematical Deficit and the Cannibalization of \\texorpdfstring{$I_{\\text{buffer",
+      "line": 8988
+    },
+    "validation": {
+      "tier": 2,
+      "type": "quantitative",
+      "falsification": "Falsified if Buffer Class size is shown to be expanding rather than contracting in current income-distribution data.",
+      "dataSources": [
+        {
+          "name": "Pew Research Center — America's Shrinking Middle Class",
+          "type": "report",
+          "url": "https://www.pewresearch.org/social-trends/2016/05/11/americas-shrinking-middle-class-a-close-look-at-changes-within-metropolitan-areas/"
+        },
+        {
+          "name": "Federal Reserve SCF income/wealth data",
+          "type": "public-dataset",
+          "url": "https://www.federalreserve.gov/econres/scfindex.htm"
+        }
+      ],
+      "targetEvents": [
+        "Middle-class squeeze 1973–2024",
+        "Gig economy expansion 2010–2024",
+        "Pew 2016: middle-income share 61% (1971) → 50% (2015)"
+      ],
+      "caseStudyLine": 7055,
+      "notebook": ""
+    },
+    "enrichment": "full"
+  },
+  {
+    "chapterFile": "ch16_full_algorithm.ts",
+    "chapterId": "ch16",
+    "occurrence": 2,
+    "storyLabel": "eq. 10.5",
+    "storyCaption": "Extraction is maximized while effective class resistance remains below the crash threshold.",
+    "latex": "\\\\max_{\\\\{P_i\\\\}}\\\\; \\\\mathcal{E}(t) \\\\quad \\\\text{subject to} \\\\quad M_{\\\\text{eff}}(t) < \\\\tau",
+    "registry": {
+      "id": "E111",
+      "label": "eq:10.5-kernel-objective-canonical",
+      "chapter": "The Full Algorithm: Demographic Paradox, Cannibalization, and the 5-Tier Reveal (1994--Present)",
+      "section": "The Full Reveal: The Complete 5-Tier Set-Theoretic Hierarchy",
+      "line": 9330
+    },
+    "validation": {
+      "tier": 1,
+      "type": "quantitative",
+      "falsification": "Falsified if a documented period shows sustained Elite wealth-share decline while M_eff(t) < τ without external kinetic intervention.",
+      "dataSources": [
+        {
+          "name": "Piketty-Saez-Zucman Distributional National Accounts",
+          "type": "peer-reviewed",
+          "url": "http://gabriel-zucman.eu/usdina/"
+        }
+      ],
+      "targetEvents": [
+        "Post-Civil Rights Era 1965–2024",
+        "Great Compression 1933–1978 (New Deal psi_m deployment)",
+        "Post-1978 recovery to Gilded Age levels (Delta_max=0)"
+      ],
+      "caseStudyLine": 7477,
+      "notebook": "eq56_kernel_objective.ipynb"
+    },
+    "enrichment": "full"
+  },
+  {
+    "chapterFile": "ch16_full_algorithm.ts",
+    "chapterId": "ch16",
+    "occurrence": 3,
+    "storyLabel": "eq. 10.13",
+    "storyCaption": "Classification changes when kinetic capacity exceeds tolerance or compliance fails.",
+    "latex": "\\\\mathcal{R}(x_i) = \\\\begin{cases} I_{\\\\text{buffer}} & \\\\text{if } K(x_i) \\\\leq K_{\\\\text{tolerated}} \\\\text{ and } \\\\mathrm{comply}(x_i) = 1 \\\\\\\\ O_{\\\\text{final}} & \\\\text{if } K(x_i) > K_{\\\\text{tolerated}} \\\\text{ or } \\\\mathrm{comply}(x_i) = 0 \\\\end{cases}",
+    "registry": null,
+    "validation": null,
+    "enrichment": "none"
+  },
+  {
+    "chapterFile": "ch17_pipeline_architecture.ts",
+    "chapterId": "ch17",
+    "occurrence": 0,
+    "storyLabel": "eq. pipeline-throughput",
+    "storyCaption": "The multiplicative throughput of the school-to-prison pipeline.",
+    "latex": "\\\\Phi_{\\\\text{s2p}}(t) = D_{\\\\text{disparate}} \\\\cdot P_{\\\\text{police}} \\\\cdot Z_{\\\\text{zero-tol}} \\\\cdot T_{\\\\text{tracking}} \\\\cdot L_{\\\\text{lead}}(t)",
+    "registry": null,
+    "validation": null,
+    "enrichment": "none"
+  },
+  {
+    "chapterFile": "ch17_pipeline_architecture.ts",
+    "chapterId": "ch17",
+    "occurrence": 1,
+    "storyLabel": "eq. cascade-transfer",
+    "storyCaption": "The cascade transfer function preserves and amplifies the routed signal.",
+    "latex": "H_{\\\\text{cascade}}(s) = H_{\\\\text{redline}}(s) \\\\cdot H_{\\\\text{funding}}(s) \\\\cdot H_{\\\\text{infrastructure}}(s) \\\\cdot H_{\\\\text{lead}}(s) \\\\cdot H_{\\\\text{discipline}}(s) \\\\cdot H_{\\\\text{incarceration}}(s)",
+    "registry": null,
+    "validation": null,
+    "enrichment": "none"
+  },
+  {
+    "chapterFile": "ch17_pipeline_architecture.ts",
+    "chapterId": "ch17",
+    "occurrence": 2,
+    "storyLabel": "eq. commodity-exposure",
+    "storyCaption": "Lifetime exposure accumulated across products and routes.",
+    "latex": "E_{\\\\text{commodity}} = \\\\sum_{\\\\text{product}} \\\\left( \\\\int_{0}^{\\\\text{lifetime}} c_{\\\\text{toxicant}} \\\\cdot a_{\\\\text{absorption}} \\\\cdot f_{\\\\text{frequency}} \\\\, dt \\\\right)",
+    "registry": null,
+    "validation": null,
+    "enrichment": "none"
+  },
+  {
+    "chapterFile": "ch17_pipeline_architecture.ts",
+    "chapterId": "ch17",
+    "occurrence": 3,
+    "storyLabel": "eq. denial-extraction",
+    "storyCaption": "Denied volume converts retained treatment cost into transferred mortality risk.",
+    "latex": "\\\\mathcal{E}_{\\\\text{denial}} = N_{\\\\text{claims}} \\\\cdot R_{\\\\text{denial}} \\\\cdot C_{\\\\text{treatment\\\\_cost}} \\\\cdot \\\\Delta_{\\\\text{mortality}}",
+    "registry": null,
+    "validation": null,
+    "enrichment": "none"
+  },
+  {
+    "chapterFile": "ch17_pipeline_architecture.ts",
+    "chapterId": "ch17",
+    "occurrence": 4,
+    "storyLabel": "eq. unified-pipeline",
+    "storyCaption": "Total extraction across the four active conduits.",
+    "latex": "\\\\mathcal{E}_{\\\\text{pipeline}}(t) = \\\\mathcal{E}_{\\\\text{s2p}}(t) + \\\\mathcal{E}_{\\\\text{food-health}}(t) + \\\\mathcal{E}_{\\\\text{commodity}}(t) + \\\\mathcal{E}_{\\\\text{healthcare}}(t)",
+    "registry": null,
+    "validation": null,
+    "enrichment": "none"
+  },
+  {
+    "chapterFile": "ch18_kinetic_guarantee.ts",
+    "chapterId": "ch18",
+    "occurrence": 0,
+    "storyLabel": "eq. 11.1",
+    "storyCaption": "The lethal-capacity precondition for extraction.",
+    "latex": "L_E \\\\gg L_O \\\\implies \\\\text{Extraction feasible}",
+    "registry": {
+      "id": "E127",
+      "label": "eq:11.1-extraction-precondition",
+      "chapter": "The Kinetic Guarantee: Arms Asymmetry, the Second Amendment, and the Disarmament Timeline",
+      "section": "Phase 1: Direct Kidnapping Through Firearms Superiority",
+      "line": 10137
+    },
+    "validation": {
+      "tier": 1,
+      "type": "ordinal",
+      "falsification": "Falsified if a documented extraction system maintained stability with L_E ≤ L_O.",
+      "dataSources": [
+        {
+          "name": "Primary legislation texts (sullivanlaw, nfa1934, mulford1967, gca1968, hughes1986, brady1993, awb1994)",
+          "type": "primary-source",
+          "url": ""
+        },
+        {
+          "name": "SCOTUS rulings (heller, mcdonald, bruen, rahimi2024)",
+          "type": "primary-source",
+          "url": ""
+        },
+        {
+          "name": "Winkler (2011) Gunfight",
+          "type": "peer-reviewed",
+          "url": ""
+        },
+        {
+          "name": "Cottrol & Diamond (1991) Georgetown Law Journal",
+          "type": "peer-reviewed",
+          "url": ""
+        }
+      ],
+      "targetEvents": [
+        "Sullivan Law (1911) — explicit Italian/Jewish immigrant targeting",
+        "Mulford Act (1967) — explicit Black Panther targeting",
+        "Heller/McDonald/Bruen/Rahimi ruling sequence (2008–2024)"
+      ],
+      "caseStudyLine": 7992,
+      "notebook": "Paper/scripts/eq65_68_2a_case_law.ipynb"
+    },
+    "enrichment": "full"
+  },
+  {
+    "chapterFile": "ch18_kinetic_guarantee.ts",
+    "chapterId": "ch18",
+    "occurrence": 1,
+    "storyLabel": "eq. 13.tvs-abort",
+    "storyCaption": "The kinetic abort threshold.",
+    "latex": "P_{\\\\text{loss}} = I_{\\\\text{strike}}^2 \\\\cdot R_{\\\\text{kinetic}} > C_{\\\\text{max}}\\n\\\\implies \\\\text{Strike Aborted}",
+    "registry": null,
+    "validation": null,
+    "enrichment": "none"
+  },
+  {
+    "chapterFile": "ch19_the_contradiction.ts",
+    "chapterId": "ch19",
+    "occurrence": 0,
+    "storyLabel": "eq. 12.2",
+    "storyCaption": "The Concession Theorem.",
+    "latex": "\\\\text{Reform Rate}(t) \\\\propto \\\\frac{d(\\\\min)}{dt} \\\\quad \\\\text{subject to} \\\\quad \\\\Delta\\\\max = 0",
+    "registry": {
+      "id": "E134",
+      "label": "eq:12.2-concession-theorem",
+      "chapter": "The Contradiction: Why Reform Serves the Algorithm",
+      "section": "The Durability Objection: When Reforms Appear to Persist",
+      "line": 11254
+    },
+    "validation": {
+      "tier": 2,
+      "type": "quantitative",
+      "falsification": "Falsified if Elite-initiated reforms consistently exceed the minimum required to prevent kinetic threshold breach.",
+      "dataSources": [
+        {
+          "name": "Piven & Cloward (1977) — Poor People's Movements",
+          "type": "peer-reviewed",
+          "url": ""
+        }
+      ],
+      "targetEvents": [
+        "New Deal concessions 1930s (preceded by labor militancy)",
+        "Great Society 1964–1968 (preceded by Civil Rights militancy)"
+      ],
+      "caseStudyLine": 8920,
+      "notebook": ""
+    },
+    "enrichment": "full"
+  },
+  {
+    "chapterFile": "ch19_the_contradiction.ts",
+    "chapterId": "ch19",
+    "occurrence": 1,
+    "storyLabel": "eq. 12.1",
+    "storyCaption": "The reform-absorption mechanism.",
+    "latex": "\\\\min(t+1) = \\\\min(t) - \\\\epsilon \\\\cdot \\\\Delta|O_{\\\\text{racialized}} \\\\cap P'|",
+    "registry": {
+      "id": "E133",
+      "label": "eq:12.1-reform-absorption-mechanism",
+      "chapter": "The Contradiction: Why Reform Serves the Algorithm",
+      "section": "The Reform Paradox: Why Policy Audits Serve \\texorpdfstring{$\\min$",
+      "line": 11196
+    },
+    "validation": {
+      "tier": 3,
+      "type": "structural",
+      "falsification": "Falsified if a documented reform reduces Elite extraction share (max) rather than just reducing resistance pressure (min).",
+      "dataSources": [
+        {
+          "name": "Piketty-Saez top income share data",
+          "type": "peer-reviewed",
+          "url": "http://gabriel-zucman.eu/usdina/"
+        }
+      ],
+      "targetEvents": [
+        "Civil Rights Act 1964 — reduced min without touching max",
+        "13th Amendment — interface swap"
+      ],
+      "caseStudyLine": 8859,
+      "notebook": ""
+    },
+    "enrichment": "full"
+  },
+  {
+    "chapterFile": "ch19_the_contradiction.ts",
+    "chapterId": "ch19",
+    "occurrence": 2,
+    "storyLabel": "eq. 12.3",
+    "storyCaption": "The judiciary’s discrimination-detection function.",
+    "latex": "D(P) = \\\\begin{cases}\\n1 & \\\\text{if } P \\\\text{ explicitly invokes racial classification} \\\\\\\\\\n0 & \\\\text{if } P \\\\text{ uses proxy variable } x \\\\text{ where } \\\\operatorname{Corr}(x, \\\\text{race}) \\\\to 1\\n\\\\end{cases}",
+    "registry": null,
+    "validation": null,
+    "enrichment": "none"
+  },
+  {
+    "chapterFile": "ch20_global_containment.ts",
+    "chapterId": "ch20",
+    "occurrence": 0,
+    "storyLabel": "eq. 13.2",
+    "storyCaption": "The imperial Predatory Min-Max Function continues extracting as colonial survival approaches biological death.",
+    "latex": "\\\\max \\\\mathcal{E}_{\\\\text{imperial}} - \\\\min(O_{\\\\text{colonial}}) \\\\quad \\\\text{where} \\\\quad \\\\min \\\\rightarrow \\\\text{biological death}",
+    "registry": {
+      "id": "E154",
+      "label": "eq:13.2-global-predatory-minmax",
+      "chapter": "The Global Containment Field: Scaling the Algorithm",
+      "section": "British India: The Extraction Kernel Without Biological Constraints",
+      "line": 12531
+    },
+    "validation": {
+      "tier": 3,
+      "type": "structural",
+      "falsification": "Falsified if documented international economic relationships fail to map onto the five-tier extraction hierarchy.",
+      "dataSources": [
+        {
+          "name": "Klein (2007) — The Shock Doctrine",
+          "type": "peer-reviewed",
+          "url": ""
+        }
+      ],
+      "targetEvents": [
+        "IMF structural adjustment programs 1980–2000"
+      ],
+      "caseStudyLine": 9973,
+      "notebook": ""
+    },
+    "enrichment": "full"
+  },
+  {
+    "chapterFile": "ch20_global_containment.ts",
+    "chapterId": "ch20",
+    "occurrence": 1,
+    "storyLabel": "eq. 13.13",
+    "storyCaption": "The manuscript maps the observed vote distribution onto the international hierarchy.",
+    "latex": "\\\\text{Vote}_{\\\\text{UN}}(x) = \\\\begin{cases} \\\\text{No} & \\\\text{if } x \\\\in E_{\\\\text{imperial}} \\\\\\\\[4pt] \\\\text{Abstain} & \\\\text{if } x \\\\in I_{\\\\text{buffer}}^{\\\\text{global}} \\\\\\\\[4pt] \\\\text{Yes} & \\\\text{if } x \\\\in O_{\\\\text{global}} \\\\end{cases}",
+    "registry": null,
+    "validation": null,
+    "enrichment": "none"
+  },
+  {
+    "chapterFile": "ch21_algorithmic_epoch.ts",
+    "chapterId": "ch21",
+    "occurrence": 0,
+    "storyLabel": "eq. 14.1",
+    "storyCaption": "An optimizer trained on the historical record inherits its extraction priors.",
+    "latex": "P_{\\\\text{algo}} = \\\\arg\\\\min_{P} \\\\; \\\\mathcal{L}(P; \\\\mathcal{H}) \\\\quad \\\\Longrightarrow \\\\quad |O_{\\\\text{racialized}} \\\\cap P_{\\\\text{algo}}| \\\\gg |I \\\\cap P_{\\\\text{algo}}|",
+    "registry": {
+      "id": "E170",
+      "label": "eq:14.1-algo-prior-inheritance",
+      "chapter": "The Algorithmic Epoch: Real-Time Subjugation and the Necessity of the Counter-Virus",
+      "section": "Porting the Legacy Code: AI as a Hardware Upgrade",
+      "line": 13009
+    },
+    "validation": {
+      "tier": 2,
+      "type": "quantitative",
+      "falsification": "Falsified if ML systems trained on pre-2024 US data show no racial disparity in predictive outputs relative to ground truth after controlling for relevant covariates.",
+      "dataSources": [
+        {
+          "name": "Angwin et al. (2016) — Machine Bias (ProPublica)",
+          "type": "journalism",
+          "url": "https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing"
+        },
+        {
+          "name": "Buolamwini & Gebru (2018) — Gender Shades",
+          "type": "peer-reviewed",
+          "url": "https://doi.org/10.1145/3287560.3287596"
+        }
+      ],
+      "targetEvents": [
+        "COMPAS recidivism algorithm analysis 2016",
+        "Facial recognition racial accuracy disparities"
+      ],
+      "caseStudyLine": 10757,
+      "notebook": ""
+    },
+    "enrichment": "full"
+  },
+  {
+    "chapterFile": "ch21_algorithmic_epoch.ts",
+    "chapterId": "ch21",
+    "occurrence": 1,
+    "storyLabel": "eq. 14.2c",
+    "storyCaption": "The medium transition gain compares material propagation cost with network propagation cost.",
+    "latex": "G_{\\\\text{transition}} = \\\\frac{C_{\\\\text{engine}}^{\\\\text{analog}}}{C_{\\\\text{engine}}^{\\\\text{digital}}} \\\\sim \\\\frac{N \\\\cdot d_{\\\\text{max}}}{\\\\log(N)}",
+    "registry": {
+      "id": "E176",
+      "label": "eq:14.2c-medium-gain",
+      "chapter": "The Algorithmic Epoch: Real-Time Subjugation and the Necessity of the Counter-Virus",
+      "section": "Formalization: The Cost Collapse Equation",
+      "line": 13121
+    },
+    "validation": null,
+    "enrichment": "partial"
+  },
+  {
+    "chapterFile": "ch21_algorithmic_epoch.ts",
+    "chapterId": "ch21",
+    "occurrence": 2,
+    "storyLabel": "eq. 14.4",
+    "storyCaption": "Trauma raises the damping coefficient of a scale-correction signal.",
+    "latex": "\\\\ddot{\\\\psi}_{\\\\text{correction}} + \\\\Delta(t)\\\\,\\\\dot{\\\\psi}_{\\\\text{correction}} + \\\\omega_0^2 \\\\psi_{\\\\text{correction}} = 0, \\\\quad \\\\Delta(t) \\\\uparrow \\\\text{ with trauma severity}",
+    "registry": {
+      "id": "E178",
+      "label": "eq:14.4-correction-signal-damping",
+      "chapter": "The Algorithmic Epoch: Real-Time Subjugation and the Necessity of the Counter-Virus",
+      "section": "The Damped Harmonic Oscillator: Trauma as the Damping Medium",
+      "line": 13188
+    },
+    "validation": {
+      "tier": 3,
+      "type": "structural",
+      "falsification": "Falsified if scale-accurate counter-signals are shown to reduce identity-axis amplitude in documented media-correction episodes.",
+      "dataSources": [],
+      "targetEvents": [
+        "'All Lives Matter' response to BLM as correction absorption"
+      ],
+      "caseStudyLine": 10807,
+      "notebook": ""
+    },
+    "enrichment": "full"
+  },
+  {
+    "chapterFile": "ch21_algorithmic_epoch.ts",
+    "chapterId": "ch21",
+    "occurrence": 3,
+    "storyLabel": "eq. 14.13",
+    "storyCaption": "The terminal condition removes every non-Elite biological tier from the inclusion predicate.",
+    "latex": "\\\\lim_{t \\\\to t_{\\\\text{automation}}^{-}} V(x, t) \\\\;=\\\\; 0, \\\\quad R(x, t) > 0 \\\\quad \\\\Longrightarrow \\\\quad \\\\mathbb{I}_{\\\\text{include}}(x, t) = 0 \\\\ \\\\forall \\\\ x \\\\in \\\\{P, F, I, O\\\\}.",
+    "registry": {
+      "id": "E187",
+      "label": "eq:14.13-terminal-interface-swap",
+      "chapter": "The Algorithmic Epoch: Real-Time Subjugation and the Necessity of the Counter-Virus",
+      "section": "The Automation Threshold",
+      "line": 13372
+    },
+    "validation": {
+      "tier": 3,
+      "type": "structural",
+      "falsification": "Falsified if documented late-stage extraction shows I_buffer benefits maintained above minimum enforcement-compliance level.",
+      "dataSources": [],
+      "targetEvents": [
+        "Middle-class erosion 2008–2024 — automation + offshoring"
+      ],
+      "caseStudyLine": 10959,
+      "notebook": ""
+    },
+    "enrichment": "full"
+  },
+  {
+    "chapterFile": "ch21_algorithmic_epoch.ts",
+    "chapterId": "ch21",
+    "occurrence": 4,
+    "storyLabel": "eq. 15 — QED photon energy",
+    "storyCaption": "Higher-frequency ideological transmission carries greater energy per packet.",
+    "latex": "\\\\boxed{E_{\\\\text{photon}} = hf}",
+    "registry": {
+      "id": "E197",
+      "label": "eq:15.qed-photon-energy",
+      "chapter": "The Algorithmic Epoch: Real-Time Subjugation and the Necessity of the Counter-Virus",
+      "section": "The Energy of a Systemic Photon: $E_{\\text{photon",
+      "line": 13743
+    },
+    "validation": null,
+    "enrichment": "partial"
+  },
+  {
+    "chapterFile": "ch22_spectral_carrier.ts",
+    "chapterId": "ch22",
+    "occurrence": 0,
+    "storyLabel": "eq. 21.1",
+    "storyCaption": "The Engine redistributes the total political signal across class and identity bands.",
+    "latex": "\\\\hat{S}_{\\\\text{total}}(f,t) = \\\\hat{S}_{\\\\text{class}}(f,t) + \\\\hat{S}_{\\\\text{identity}}(f,t).",
+    "registry": {
+      "id": "E203",
+      "label": "eq:21.1-interference-spectral-form",
+      "chapter": "The Spectral Carrier: Electoral Cycles and the Interference Engine",
+      "section": "Theoretical Framework",
+      "line": 13922
+    },
+    "validation": null,
+    "enrichment": "partial"
+  },
+  {
+    "chapterFile": "ch22_spectral_carrier.ts",
+    "chapterId": "ch22",
+    "occurrence": 1,
+    "storyLabel": "eq. 21.2",
+    "storyCaption": "Phase loading rises as the identity-axis phases lose collective alignment.",
+    "latex": "\\\\Phi_{\\\\text{load}}(t) = 1 - \\\\left| \\\\frac{1}{N} \\\\sum_{j=1}^{N} e^{i\\\\phi_j(t)} \\\\right|.",
+    "registry": {
+      "id": "E204",
+      "label": "eq:21.2-phase-dispersion",
+      "chapter": "The Spectral Carrier: Electoral Cycles and the Interference Engine",
+      "section": "Theoretical Framework",
+      "line": 13928
+    },
+    "validation": null,
+    "enrichment": "partial"
+  },
+  {
+    "chapterFile": "ch22_spectral_carrier.ts",
+    "chapterId": "ch22",
+    "occurrence": 2,
+    "storyLabel": "eq. 21.3",
+    "storyCaption": "Annual class-band and identity-band attention shares.",
+    "latex": "s_{\\\\text{class}}(t) = \\\\frac{C(t)}{C(t) + I(t)}, \\\\qquad s_{\\\\text{identity}}(t) = \\\\frac{I(t)}{C(t) + I(t)}.",
+    "registry": {
+      "id": "E205",
+      "label": "eq:21.3-share-definitions",
+      "chapter": "The Spectral Carrier: Electoral Cycles and the Interference Engine",
+      "section": "Source and Preprocessing",
+      "line": 0
+    },
+    "validation": null,
+    "enrichment": "partial"
+  },
+  {
+    "chapterFile": "ch22_spectral_carrier.ts",
+    "chapterId": "ch22",
+    "occurrence": 3,
+    "storyLabel": "eq. 21.4",
+    "storyCaption": "The discrete Fourier transform used by the primary estimator.",
+    "latex": "\\\\hat{X}[k] = \\\\sum_{n=0}^{N-1} x[n] \\\\, e^{-j 2\\\\pi k n / N}, \\\\qquad k = 0, 1, \\\\ldots, N-1.",
+    "registry": {
+      "id": "E206",
+      "label": "eq:21.4-fft-definition",
+      "chapter": "The Spectral Carrier: Electoral Cycles and the Interference Engine",
+      "section": "Spectral Estimation",
+      "line": 13984
+    },
+    "validation": null,
+    "enrichment": "partial"
+  },
+  {
+    "chapterFile": "ch22_spectral_carrier.ts",
+    "chapterId": "ch22",
+    "occurrence": 4,
+    "storyLabel": "eq. 21.7",
+    "storyCaption": "Parseval’s equality checks conservation across representations.",
+    "latex": "\\\\sum_{n=0}^{N-1} |x[n]|^2 = \\\\frac{1}{N} \\\\sum_{k=0}^{N-1} |\\\\hat{X}[k]|^2.",
+    "registry": {
+      "id": "E209",
+      "label": "eq:21.7-parseval",
+      "chapter": "The Spectral Carrier: Electoral Cycles and the Interference Engine",
+      "section": "Parseval Consistency",
+      "line": 14050
+    },
+    "validation": null,
+    "enrichment": "partial"
+  },
+  {
+    "chapterFile": "ch24_single_issue_trap.ts",
+    "chapterId": "ch24",
+    "occurrence": 0,
+    "storyLabel": "eq. 15.1",
+    "storyCaption": "The temporal proxy creates different legal outcomes around the same object.",
+    "latex": "P_{\\\\text{temporal}}(x,o,t) =\\n\\\\begin{cases}\\n0 & \\\\text{if subject } x \\\\text{ possessed object } o \\\\text{ before cutoff } t_c,\\\\\\\\\\n1 & \\\\text{if subject } x \\\\text{ seeks the same object } o \\\\text{ after cutoff } t_c.\\n\\\\end{cases}",
+    "registry": null,
+    "validation": null,
+    "enrichment": "none"
+  },
+  {
+    "chapterFile": "ch24_single_issue_trap.ts",
+    "chapterId": "ch24",
+    "occurrence": 1,
+    "storyLabel": "eq. 15.2",
+    "storyCaption": "The geographic interface distributes autonomy across separate legal components.",
+    "latex": "\\\\mathcal{R}(s)=\\n\\\\bigl(r_{\\\\text{bio}}(s), r_{\\\\text{kin}}(s), r_{\\\\text{move}}(s), r_{\\\\text{speech}}(s), \\\\ldots\\\\bigr),\\n\\\\qquad\\n\\\\mathcal{R}(s) \\\\neq \\\\vec{1} \\\\;\\\\; \\\\forall s .",
+    "registry": null,
+    "validation": null,
+    "enrichment": "none"
+  },
+  {
+    "chapterFile": "ch25_conclusion.ts",
+    "chapterId": "ch25",
+    "occurrence": 0,
+    "storyLabel": "The institutional vector",
+    "storyCaption": null,
+    "latex": "\\\\vec{R}_{\\\\text{systemic}} = \\\\left\\\\| F_{\\\\text{institutional}} \\\\right\\\\| \\\\cdot \\\\hat{d}_{\\\\text{hierarchy}} \\\\quad \\\\neq \\\\quad \\\\left| \\\\text{prejudice}_{\\\\text{individual}} \\\\right|",
+    "registry": {
+      "id": "E212",
+      "label": "eq:17.1-racism-as-institutional-vector",
+      "chapter": "Conclusion",
+      "section": "The Vector Properties of Systemic Racism",
+      "line": 14392
+    },
+    "validation": {
+      "tier": 3,
+      "type": "structural",
+      "falsification": "Falsified if documented cases of marginalized-group prejudice achieve systemic harm at rates comparable to Elite-backed prejudice without institutional support.",
+      "dataSources": [],
+      "targetEvents": [],
+      "caseStudyLine": 11531,
+      "notebook": ""
+    },
+    "enrichment": "full"
+  },
+  {
+    "chapterFile": "ch25_conclusion.ts",
+    "chapterId": "ch25",
+    "occurrence": 1,
+    "storyLabel": "eq. 17.1",
+    "storyCaption": "Systemic racism equals institutional force multiplied by the hierarchy’s direction.",
+    "latex": "\\\\vec{R}_{\\\\text{systemic}} = \\\\left\\\\| F_{\\\\text{institutional}} \\\\right\\\\| \\\\cdot \\\\hat{d}_{\\\\text{hierarchy}} \\\\quad \\\\neq \\\\quad \\\\left| \\\\text{prejudice}_{\\\\text{individual}} \\\\right|",
+    "registry": {
+      "id": "E212",
+      "label": "eq:17.1-racism-as-institutional-vector",
+      "chapter": "Conclusion",
+      "section": "The Vector Properties of Systemic Racism",
+      "line": 14392
+    },
+    "validation": {
+      "tier": 3,
+      "type": "structural",
+      "falsification": "Falsified if documented cases of marginalized-group prejudice achieve systemic harm at rates comparable to Elite-backed prejudice without institutional support.",
+      "dataSources": [],
+      "targetEvents": [],
+      "caseStudyLine": 11531,
+      "notebook": ""
+    },
+    "enrichment": "full"
+  },
+  {
+    "chapterFile": "ch25_conclusion.ts",
+    "chapterId": "ch25",
+    "occurrence": 2,
+    "storyLabel": "eq. 17.2",
+    "storyCaption": "The terminal trajectory of Out-group expansion.",
+    "latex": "O_{\\\\text{final}} = \\\\text{Everyone} \\\\setminus E",
+    "registry": {
+      "id": "E118",
+      "label": "eq:10.12-o-final-construction",
+      "chapter": "The Full Algorithm: Demographic Paradox, Cannibalization, and the 5-Tier Reveal (1994--Present)",
+      "section": "Disarmament and Execution: The Algorithm Unmasked",
+      "line": 9642
+    },
+    "validation": {
+      "tier": 1,
+      "type": "quantitative",
+      "falsification": "Falsified if modern mass-incarceration demographics fail to reproduce the O set construction predicted by the algorithm.",
+      "dataSources": [
+        {
+          "name": "Bureau of Justice Statistics incarceration by race series",
+          "type": "public-dataset",
+          "url": "https://www.bjs.gov/"
+        },
+        {
+          "name": "The Sentencing Project — Racial Disparity Reports",
+          "type": "report",
+          "url": "https://www.sentencingproject.org/"
+        },
+        {
+          "name": "Alexander (2010) — The New Jim Crow",
+          "type": "peer-reviewed",
+          "url": ""
+        }
+      ],
+      "targetEvents": [
+        "US mass incarceration 1994–present"
+      ],
+      "caseStudyLine": 6828,
+      "notebook": "Paper/scripts/eq63_mass_incarceration.ipynb"
+    },
+    "enrichment": "full"
+  }
+]
