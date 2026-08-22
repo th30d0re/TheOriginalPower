@@ -1,34 +1,40 @@
 # W2 — Story-mode equation join to the equation registry
 
-Join key: LaTeX content, normalised on both sides (unescape doubled backslashes, drop `\label{...}` and `\tag{...}`, strip all whitespace). Exact match required; no fuzzy matching. Inputs: `website/src/content/chapters/*.ts`, `equation_explorer/data/equations.json` (239 registry equations), `Paper/empirical_validations/eq_*.md` (146 validation records, joined on the registry label).
+Join key: LaTeX content, normalised on both sides (decode source-only newline/tab escapes and doubled backslashes, drop `\label{...}` and `\tag{...}`, strip all whitespace). Exact match required; no fuzzy matching. Inputs: `website/src/content/chapters/*.ts`, `equation_explorer/data/equations.json` (239 registry equations), `Paper/empirical_validations/eq_*.md` (146 validation records, joined on the registry label).
 
 ## Counts
 
 | | count |
 |---|---:|
 | equation visuals parsed | 103 |
-| exact registry match (normalised LaTeX) | 67 |
-| of those, with an empirical-validation record | 41 |
-| tier 1 / tier 2 / tier 3 | 10 / 7 / 24 |
-| matched, no record | 26 |
-| unmatched | 36 |
+| exact registry match (normalised LaTeX) | 77 |
+| of those, with an empirical-validation record | 46 |
+| tier 1 / tier 2 / tier 3 | 10 / 7 / 29 |
+| matched, no record | 31 |
+| unresolved collision matches | 2 |
+| unmatched | 26 |
 
 ## Comparison with the reference table in the task brief
 
 | | reference (task brief) | this run |
 |---|---:|---:|
-| equation visuals parsed | 102 | 103 |
-| exact registry match (normalised LaTeX) | 66 | 67 |
-| of those, with an empirical-validation record | 40 | 41 |
-| matched, no record | 26 | 26 |
-| unmatched | 36 | 36 |
-| tier 1 / tier 2 / tier 3 | 10 / 7 / 23 | 10 / 7 / 24 |
+| equation visuals parsed | 103 | 103 |
+| exact registry match (normalised LaTeX) | 67 | 77 |
+| of those, with an empirical-validation record | 41 | 46 |
+| matched, no record | 26 | 31 |
+| unmatched | 36 | 26 |
+| tier 1 / tier 2 / tier 3 | 10 / 7 / 24 | 10 / 7 / 29 |
 
-Every cell is exactly one higher in the full-match column chain (103 vs 102 parsed, 67 vs 66 matched, 41 vs 40 validated, 24 vs 23 tier 3), while `matched, no record` and `unmatched` agree exactly. The difference is fully accounted for by one visual: `ch19_the_contradiction.ts` occurrence 1 (story label `eq. 12.1`, registry `eq:12.1-reform-absorption-mechanism`, tier 3). It is the only equation visual in the corpus whose `latex` is a double-quoted TS string — it contains an unescaped apostrophe (`P'|`), so it cannot be single-quoted. A parser that recognises only single-quoted string literals misses this one visual and reproduces the reference table exactly. The script handles both quote styles, so it counts the visual. The reference numbers are consistent with a single-quote-only extraction; no input was adjusted to force either result.
+Decoding TypeScript string escapes before whitespace removal adds ten exact matches: six with validation records and four without them. One previously validated match is now withheld because its normalised form has multiple registry candidates. The net change is +10 exact matches, +5 unambiguous validated matches, +5 partial matches, and -10 unmatched.
 
-Registry note: 11 normalised-LaTeX collisions exist inside the registry itself; the first entry in `equations.json` order was kept. Colliding ids: `E047` vs `E046`, `E113` vs `E036`, `E213` vs `E118`, `E215` vs `E112`, `E216` vs `E036`, `E217` vs `E114`, `E218` vs `E115`, `E220` vs `E046`, `E223` vs `E009`, `E224` vs `E010`, `E233` vs `E021`.
+Registry note: 11 normalised-LaTeX collisions exist inside the registry itself. A matching story entry records every candidate id, receives no registry or validation record, and is limited to partial enrichment. Colliding ids: `E047` vs `E046`, `E113` vs `E036`, `E213` vs `E118`, `E215` vs `E112`, `E216` vs `E036`, `E217` vs `E114`, `E218` vs `E115`, `E220` vs `E046`, `E223` vs `E009`, `E224` vs `E010`, `E233` vs `E021`.
 
-## Unmatched equations (36)
+## Unresolved collision matches (2)
+
+- `apxE_geometric_algebra.ts` occurrence 1: `E021`, `E233`. Registry-derived tier, falsification, and sources are withheld.
+- `ch25_conclusion.ts` occurrence 2: `E118`, `E213`. Registry-derived tier, falsification, and sources are withheld.
+
+## Unmatched equations (26)
 
 Each entry: chapter file, occurrence index, story label, and the verbatim LaTeX as it appears in the module source. The assessment line is deterministic: when the story label names a manuscript equation number (`eq. N.M`) and the registry holds an entry under the same number, the two normalised LaTeX strings are compared and the first divergence is shown — these are the near-miss candidates. When no registry entry carries the number, the entry is either a web-only adaptation or a registry gap; the data alone does not say which, and the report says so rather than guessing.
 
@@ -58,36 +64,6 @@ Caption: The finite matching budget for a load reducible to a parallel RC combin
 
 ```latex
 \\int_{0}^{\\infty} \\ln\\frac{1}{|\\Gamma(\\omega)|}\\, d\\omega \\;\\leq\\; \\frac{\\pi}{RC}
-```
-
-Assessment: no manuscript equation number in the story label to cross-reference — either a web-only adaptation or a registry gap; the data does not say which.
-
-### `ch02_redefining_racism.ts` — occurrence 5 — eq. 1.11
-
-Caption: Phase loading approaches zero under alignment and one under maximum dispersion.
-
-```latex
-\\Phi_j = \\sum_{k=1}^{K} \\phi_{k,j}, \\qquad\n\\Phi_{\\text{load}}(t) = \\operatorname{Dispersion}\\!\\left(\\{\\Phi_j\\}_{j=1}^{N}\\right) = 1 - \\left|\\frac{1}{N}\\sum_{j=1}^{N} e^{i\\Phi_j}\\right| \\in [0,1]
-```
-
-Assessment: registry holds `eq:1.11-phase-loading` (E042) under this equation number, but the normalised LaTeX differs — near-miss, manuscript/web drift or a normalisation gap. first difference at normalised char 39: story `...=1}^{K}\phi_{k,j},\qquad\>>>n\Phi_{\text{load}}(t)=\o...` vs registry `...=1}^{K}\phi_{k,j},\qquad\>>>Phi_{\text{load}}(t)=\ope...`.
-
-### `ch03_version_1_0.ts` — occurrence 4 — eq. 2.8
-
-Caption: The institutional feedback loop.
-
-```latex
-\\begin{aligned}\n&\\text{Exploitation} \\rightarrow \\text{Observed disparities} \\rightarrow \\text{Theological/Scientific ``explanation\'\'} \\\\\n&\\rightarrow \\text{Naturalization} \\rightarrow \\text{Expanded exploitation}\n\\end{aligned}
-```
-
-Assessment: registry holds `eq:2.8-church-science-feedback-loop` (E055) under this equation number, but the normalised LaTeX differs — near-miss, manuscript/web drift or a normalisation gap. first difference at normalised char 15: story `...\begin{aligned}>>>\n&\text{Exploitation}\ri...` vs registry `...\begin{aligned}>>>&\text{Exploitation}\righ...`.
-
-### `ch08_gendered_axis.ts` — occurrence 1 — (no story label)
-
-Caption: The dual-track statutory status described in the chapter.
-
-```latex
-\\text{Second Amendment Status}(\\text{arms},\\, x) =\n\\begin{cases}\n\\text{constitutionally protected} & x \\in I_{\\text{buffer}} \\\\\n\\text{felony prosecution} & x \\in O_{\\text{racialized}}\n\\end{cases}
 ```
 
 Assessment: no manuscript equation number in the story label to cross-reference — either a web-only adaptation or a registry gap; the data does not say which.
@@ -268,26 +244,6 @@ Caption: Biological depletion joins labor and capital in the extraction accounti
 
 Assessment: no manuscript equation number in the story label to cross-reference — either a web-only adaptation or a registry gap; the data does not say which.
 
-### `ch14_tweedism.ts` — occurrence 3 — eq. 8.14
-
-Caption: The observed political-attention signal: class carrier, identity-mode spectrum, and noise.
-
-```latex
-S_{\\text{total}}(t) = S_{\\text{class}}(t) + S_{\\text{id}}(t) + \\eta(t)\n = A_{\\text{class}}(t)\\sin(2\\pi f_{\\text{class}} t + \\varphi_{\\text{class}})\n + \\sum_{k=1}^{K} A_k(t)\\sin(2\\pi f_k t + \\varphi_k)\n + \\eta(t)
-```
-
-Assessment: registry holds `eq:8.14-net-solidarity-signal` (E089) under this equation number, but the normalised LaTeX differs — near-miss, manuscript/web drift or a normalisation gap. first difference at normalised char 64: story `...+S_{\text{id}}(t)+\eta(t)>>>\n=A_{\text{class}}(t)\si...` vs registry `...+S_{\text{id}}(t)+\eta(t)>>>=A_{\text{class}}(t)\sin(...`.
-
-### `ch16_full_algorithm.ts` — occurrence 3 — eq. 10.13
-
-Caption: Classification changes when kinetic capacity exceeds tolerance or compliance fails.
-
-```latex
-\\mathcal{R}(x_i) = \\begin{cases} I_{\\text{buffer}} & \\text{if } K(x_i) \\leq K_{\\text{tolerated}} \\text{ and } \\mathrm{comply}(x_i) = 1 \\\\ O_{\\text{final}} & \\text{if } K(x_i) > K_{\\text{tolerated}} \\text{ or } \\mathrm{comply}(x_i) = 0 \\end{cases}
-```
-
-Assessment: registry holds `eq:10.13-reclassification-operator` (E119) under this equation number, but the normalised LaTeX differs — near-miss, manuscript/web drift or a normalisation gap. first difference at normalised char 120: story `...d}\mathrm{comply}(x_i)=1\>>>\O_{\text{final}}&\text{i...` vs registry `...d}\mathrm{comply}(x_i)=1\>>>O_{\text{final}}&\text{if...`.
-
 ### `ch17_pipeline_architecture.ts` — occurrence 0 — eq. pipeline-throughput
 
 Caption: The multiplicative throughput of the school-to-prison pipeline.
@@ -338,64 +294,13 @@ Caption: Total extraction across the four active conduits.
 
 Assessment: no manuscript equation number in the story label to cross-reference — either a web-only adaptation or a registry gap; the data does not say which.
 
-### `ch18_kinetic_guarantee.ts` — occurrence 1 — eq. 13.tvs-abort
-
-Caption: The kinetic abort threshold.
-
-```latex
-P_{\\text{loss}} = I_{\\text{strike}}^2 \\cdot R_{\\text{kinetic}} > C_{\\text{max}}\n\\implies \\text{Strike Aborted}
-```
-
-Assessment: no manuscript equation number in the story label to cross-reference — either a web-only adaptation or a registry gap; the data does not say which.
-
-### `ch19_the_contradiction.ts` — occurrence 2 — eq. 12.3
-
-Caption: The judiciary’s discrimination-detection function.
-
-```latex
-D(P) = \\begin{cases}\n1 & \\text{if } P \\text{ explicitly invokes racial classification} \\\\\n0 & \\text{if } P \\text{ uses proxy variable } x \\text{ where } \\operatorname{Corr}(x, \\text{race}) \\to 1\n\\end{cases}
-```
-
-Assessment: registry holds `eq:12.3-judiciary-discrimination-detection` (E137) under this equation number, but the normalised LaTeX differs — near-miss, manuscript/web drift or a normalisation gap. first difference at normalised char 18: story `...D(P)=\begin{cases}>>>\n1&\text{if}P\text{expli...` vs registry `...D(P)=\begin{cases}>>>1&\text{if}P\text{explici...`.
-
-### `ch20_global_containment.ts` — occurrence 1 — eq. 13.13
-
-Caption: The manuscript maps the observed vote distribution onto the international hierarchy.
-
-```latex
-\\text{Vote}_{\\text{UN}}(x) = \\begin{cases} \\text{No} & \\text{if } x \\in E_{\\text{imperial}} \\\\[4pt] \\text{Abstain} & \\text{if } x \\in I_{\\text{buffer}}^{\\text{global}} \\\\[4pt] \\text{Yes} & \\text{if } x \\in O_{\\text{global}} \\end{cases}
-```
-
-Assessment: registry holds `eq:13.13-un-vote-distribution` (E165) under this equation number, but the normalised LaTeX differs — near-miss, manuscript/web drift or a normalisation gap. first difference at normalised char 83: story `...}x\inE_{\text{imperial}}\>>>\[4pt]\text{Abstain}&\tex...` vs registry `...}x\inE_{\text{imperial}}\>>>[4pt]\text{Abstain}&\text...`.
-
-### `ch24_single_issue_trap.ts` — occurrence 0 — eq. 15.1
-
-Caption: The temporal proxy creates different legal outcomes around the same object.
-
-```latex
-P_{\\text{temporal}}(x,o,t) =\n\\begin{cases}\n0 & \\text{if subject } x \\text{ possessed object } o \\text{ before cutoff } t_c,\\\\\n1 & \\text{if subject } x \\text{ seeks the same object } o \\text{ after cutoff } t_c.\n\\end{cases}
-```
-
-Assessment: registry holds `eq:15.1-temporal-firearm-proxy` (E210) under this equation number, but the normalised LaTeX differs — near-miss, manuscript/web drift or a normalisation gap. first difference at normalised char 28: story `...\text{temporal}}(x,o,t)=\>>>n\begin{cases}\n0&\text{i...` vs registry `...\text{temporal}}(x,o,t)=\>>>begin{cases}0&\text{ifsub...`.
-
-### `ch24_single_issue_trap.ts` — occurrence 1 — eq. 15.2
-
-Caption: The geographic interface distributes autonomy across separate legal components.
-
-```latex
-\\mathcal{R}(s)=\n\\bigl(r_{\\text{bio}}(s), r_{\\text{kin}}(s), r_{\\text{move}}(s), r_{\\text{speech}}(s), \\ldots\\bigr),\n\\qquad\n\\mathcal{R}(s) \\neq \\vec{1} \\;\\; \\forall s .
-```
-
-Assessment: registry holds `eq:15.2-geographic-interface-swap` (E211) under this equation number, but the normalised LaTeX differs — near-miss, manuscript/web drift or a normalisation gap. first difference at normalised char 16: story `...\mathcal{R}(s)=\>>>n\bigl(r_{\text{bio}}(s),...` vs registry `...\mathcal{R}(s)=\>>>bigl(r_{\text{bio}}(s),r_...`.
-
-## Matched but unvalidated (26)
+## Matched but unvalidated (29)
 
 Registry labels of equations the book displays that have no empirical-validation record (listed in story order):
 
 - `eq:19.5-unified-lorentz-force-registry` (E219) — `apxB_equation_registry.ts` occurrence 2, story label: eq. 19.5
 - `eq:19.13-buffer-work-theorem-registry` (E227) — `apxB_equation_registry.ts` occurrence 3, story label: eq. 19.13
 - `eq:ga.quaternion` (E230) — `apxE_geometric_algebra.ts` occurrence 0, story label: (no story label)
-- `eq:0.ga-ndim` (E021) — `apxE_geometric_algebra.ts` occurrence 1, story label: (no story label)
 - `eq:ga.transphobia-paradox` (E234) — `apxE_geometric_algebra.ts` occurrence 2, story label: (no story label)
 - `eq:ga.bivector` (E235) — `apxE_geometric_algebra.ts` occurrence 3, story label: (no story label)
 - `eq:app-photon-spectral-density` (E237) — `apxF_photon_model.ts` occurrence 0, story label: (no story label)
@@ -411,6 +316,8 @@ Registry labels of equations the book displays that have no empirical-validation
 - `eq:lag-euler-lagrange` (E022) — `ch01_dynamical_systems.ts` occurrence 1, story label: eq. 1.1
 - `eq:lag-augmented` (E023) — `ch01_dynamical_systems.ts` occurrence 2, story label: eq. 1.2
 - `eq:1.7a-rlc-governing` (E034) — `ch02_redefining_racism.ts` occurrence 4, story label: eq. 1.7a
+- `eq:awb_dualtrack` (E060) — `ch08_gendered_axis.ts` occurrence 1, story label: (no story label)
+- `eq:13.tvs-abort` (E132) — `ch18_kinetic_guarantee.ts` occurrence 1, story label: eq. 13.tvs-abort
 - `eq:14.2c-medium-gain` (E176) — `ch21_algorithmic_epoch.ts` occurrence 1, story label: eq. 14.2c
 - `eq:15.qed-photon-energy` (E197) — `ch21_algorithmic_epoch.ts` occurrence 4, story label: eq. 15 — QED photon energy
 - `eq:21.1-interference-spectral-form` (E203) — `ch22_spectral_carrier.ts` occurrence 0, story label: eq. 21.1
@@ -418,3 +325,5 @@ Registry labels of equations the book displays that have no empirical-validation
 - `eq:21.3-share-definitions` (E205) — `ch22_spectral_carrier.ts` occurrence 2, story label: eq. 21.3
 - `eq:21.4-fft-definition` (E206) — `ch22_spectral_carrier.ts` occurrence 3, story label: eq. 21.4
 - `eq:21.7-parseval` (E209) — `ch22_spectral_carrier.ts` occurrence 4, story label: eq. 21.7
+- `eq:15.1-temporal-firearm-proxy` (E210) — `ch24_single_issue_trap.ts` occurrence 0, story label: eq. 15.1
+- `eq:15.2-geographic-interface-swap` (E211) — `ch24_single_issue_trap.ts` occurrence 1, story label: eq. 15.2

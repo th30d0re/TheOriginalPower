@@ -10,6 +10,8 @@ import CompoundingMetrics from '../../components/visualizations/CompoundingMetri
 import PhasorResonance from '../../components/visualizations/PhasorResonance';
 import ManimPlayer from './ManimPlayer';
 import Equation from './Equation';
+import { StoryEquationCard } from '../../components/EquationCards';
+import { findStoryEquation } from '../../content/equations/story';
 import SeriesChart from './SeriesChart';
 import TierLadder from './TierLadder';
 import './visuals.css';
@@ -25,7 +27,11 @@ const customVisuals: Record<string, ComponentType<Record<string, unknown>>> = {}
 const Caption = ({ text }: { text?: string }) =>
   text ? <figcaption className="visual-caption">{text}</figcaption> : null;
 
-const SceneVisual = ({ spec }: { spec: VisualSpec }) => {
+const SceneVisual = ({ spec, chapterFile, equationOccurrence }: {
+  spec: VisualSpec;
+  chapterFile?: string;
+  equationOccurrence?: number;
+}) => {
   switch (spec.kind) {
     case 'venn':
       return (
@@ -115,8 +121,15 @@ const SceneVisual = ({ spec }: { spec: VisualSpec }) => {
     case 'manim':
       return <ManimPlayer src={spec.src} caption={spec.caption} />;
 
-    case 'equation':
-      return <Equation latex={spec.latex} label={spec.label} caption={spec.caption} />;
+    case 'equation': {
+      const entry = chapterFile === undefined || equationOccurrence === undefined
+        ? undefined
+        : findStoryEquation(chapterFile, equationOccurrence);
+      if (entry === undefined || entry.enrichment === 'none') {
+        return <Equation latex={spec.latex} label={spec.label} caption={spec.caption} />;
+      }
+      return <StoryEquationCard entry={entry} latex={spec.latex} label={spec.label} caption={spec.caption} />;
+    }
 
     case 'custom': {
       const Custom = customVisuals[spec.component];

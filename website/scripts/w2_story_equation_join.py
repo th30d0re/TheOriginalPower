@@ -14,7 +14,8 @@ Deterministic: sorted inputs, fixed output ordering, no timestamps.
 Run twice; both outputs must be byte-identical across runs.
 
 Normalisation for the join (both sides):
-  1. unescape doubled backslashes (TS string escaping)
+  1. decode the story's TS string literal (including escaped newlines and
+     doubled-backslash LaTeX line breaks)
   2. drop \\label{...} and \\tag{...}
   3. strip all whitespace
 A match requires exact equality of the normalised strings. No fuzzy matching.
@@ -120,7 +121,7 @@ def parse_chapter_file(path):
     visuals = []
     for occurrence, m in enumerate(KIND_RE.finditer(text)):
         obj_end = find_object_end(text, m.end())
-        latex_raw, _latex_dec, _ = extract_field(text, "latex", m.end(), obj_end)
+        latex_raw, latex_dec, _ = extract_field(text, "latex", m.end(), obj_end)
         _label_raw, label_dec, _ = extract_field(
             text, "label", m.end(), obj_end, required=False
         )
@@ -137,6 +138,7 @@ def parse_chapter_file(path):
                 # Verbatim, exactly as it appears in the module source:
                 # escapes (doubled backslashes) left untouched.
                 "latex": latex_raw,
+                "matchLatex": latex_dec,
             }
         )
     return visuals
@@ -147,8 +149,7 @@ WHITESPACE_RE = re.compile(r"\s+")
 
 
 def normalise(s):
-    """Unescape doubled backslashes, drop \\label{...}/\\tag{...}, strip whitespace."""
-    s = s.replace("\\\\", "\\")
+    """Drop labels/tags and whitespace from decoded LaTeX."""
     s = LABEL_TAG_RE.sub("", s)
     s = WHITESPACE_RE.sub("", s)
     return s
@@ -169,10 +170,10 @@ def load_registry():
             "line": eq["line"],
             "latex": eq["latex"],
         }
-        if key in by_norm:
-            duplicates.append((eq["id"], by_norm[key]["id"]))
-        else:
-            by_norm[key] = entry
+        candidates = by_norm.setdefault(key, [])
+        if candidates:
+            duplicates.append((eq["id"], candidates[0]["id"]))
+        candidates.append(entry)
         pm = re.match(r"(eq:\d+\.\d+[a-z]?)-", eq["label"])
         if pm:
             by_label_prefix.setdefault(pm.group(1), []).append(entry)
@@ -219,14 +220,20 @@ def main():
     n_matched = n_full = n_unmatched = 0
     tier_counts = {1: 0, 2: 0, 3: 0}
     matched_unvalidated = []
+    collision_matches = []
     unmatched = []
 
     for v in visuals:
-        key = normalise(v["latex"])
-        registry = registry_by_norm.get(key)
+        key = normalise(v["matchLatex"])
+        registry_candidates = registry_by_norm.get(key, [])
+        collision = [candidate["id"] for candidate in registry_candidates]
+        registry = registry_candidates[0] if len(registry_candidates) == 1 else None
         validation = None
-        if registry is not None:
+        if registry_candidates:
             n_matched += 1
+        if len(registry_candidates) > 1:
+            collision_matches.append((v, registry_candidates))
+        elif registry is not None:
             validation = validations_by_label.get(registry["label"])
             if validation is not None:
                 n_full += 1
@@ -241,10 +248,9 @@ def main():
         enrichment = (
             "full"
             if (registry is not None and validation is not None)
-            else ("partial" if registry is not None else "none")
+            else ("partial" if registry_candidates else "none")
         )
-        entries.append(
-            {
+        entry = {
                 "chapterFile": v["chapterFile"],
                 "chapterId": v["chapterId"],
                 "occurrence": v["occurrence"],
@@ -259,7 +265,9 @@ def main():
                 "validation": validation,
                 "enrichment": enrichment,
             }
-        )
+        if len(collision) > 1:
+            entry["collision"] = collision
+        entries.append(entry)
 
     counts = {
         "equationVisualsParsed": len(visuals),
@@ -269,6 +277,7 @@ def main():
         "tier2": tier_counts[2],
         "tier3": tier_counts[3],
         "matchedNoRecord": n_matched - n_full,
+        "collisionMatches": len(collision_matches),
         "unmatched": n_unmatched,
     }
 
@@ -283,6 +292,7 @@ def main():
             counts,
             unmatched,
             matched_unvalidated,
+            collision_matches,
             registry_duplicates,
             registry_size,
             len(validations_by_label),
@@ -293,7 +303,7 @@ def main():
 
     print(json.dumps(counts, indent=2))
     if registry_duplicates:
-        print(f"registry duplicate normalised keys (kept first): {len(registry_duplicates)}")
+        print(f"registry duplicate normalised keys (surfaced): {len(registry_duplicates)}")
 
 
 STORY_LABEL_RE = re.compile(r"eq\.\s*(\d+\.\d+[a-z]?)")
@@ -316,13 +326,14 @@ def first_divergence(a, b, ctx=25):
     )
 
 
-def build_report(counts, unmatched, matched_unvalidated, registry_duplicates, registry_size, n_validations, registry_by_label_prefix):
+def build_report(counts, unmatched, matched_unvalidated, collision_matches, registry_duplicates, registry_size, n_validations, registry_by_label_prefix):
     lines = []
     lines.append("# W2 — Story-mode equation join to the equation registry")
     lines.append("")
     lines.append(
-        "Join key: LaTeX content, normalised on both sides (unescape doubled "
-        "backslashes, drop `\\label{...}` and `\\tag{...}`, strip all "
+        "Join key: LaTeX content, normalised on both sides (decode source-only "
+        "newline/tab escapes and doubled backslashes, drop `\\label{...}` and "
+        "`\\tag{...}`, strip all "
         "whitespace). Exact match required; no fuzzy matching. Inputs: "
         "`website/src/content/chapters/*.ts`, "
         f"`equation_explorer/data/equations.json` ({registry_size} registry "
@@ -339,6 +350,7 @@ def build_report(counts, unmatched, matched_unvalidated, registry_duplicates, re
     lines.append(f"| of those, with an empirical-validation record | {counts['matchWithValidationRecord']} |")
     lines.append(f"| tier 1 / tier 2 / tier 3 | {counts['tier1']} / {counts['tier2']} / {counts['tier3']} |")
     lines.append(f"| matched, no record | {counts['matchedNoRecord']} |")
+    lines.append(f"| unresolved collision matches | {counts['collisionMatches']} |")
     lines.append(f"| unmatched | {counts['unmatched']} |")
     lines.append("")
     lines.append("## Comparison with the reference table in the task brief")
@@ -346,9 +358,9 @@ def build_report(counts, unmatched, matched_unvalidated, registry_duplicates, re
     lines.append("| | reference (task brief) | this run |")
     lines.append("|---|---:|---:|")
     reference = {
-        "equationVisualsParsed": 102,
-        "exactRegistryMatch": 66,
-        "matchWithValidationRecord": 40,
+        "equationVisualsParsed": 103,
+        "exactRegistryMatch": 67,
+        "matchWithValidationRecord": 41,
         "matchedNoRecord": 26,
         "unmatched": 36,
     }
@@ -362,36 +374,37 @@ def build_report(counts, unmatched, matched_unvalidated, registry_duplicates, re
     for key, name in row_names.items():
         lines.append(f"| {name} | {reference[key]} | {counts[key]} |")
     lines.append(
-        f"| tier 1 / tier 2 / tier 3 | 10 / 7 / 23 | "
+        f"| tier 1 / tier 2 / tier 3 | 10 / 7 / 24 | "
         f"{counts['tier1']} / {counts['tier2']} / {counts['tier3']} |"
     )
     lines.append("")
     lines.append(
-        "Every cell is exactly one higher in the full-match column chain "
-        "(103 vs 102 parsed, 67 vs 66 matched, 41 vs 40 validated, 24 vs 23 "
-        "tier 3), while `matched, no record` and `unmatched` agree exactly. "
-        "The difference is fully accounted for by one visual: "
-        "`ch19_the_contradiction.ts` occurrence 1 (story label `eq. 12.1`, "
-        "registry `eq:12.1-reform-absorption-mechanism`, tier 3). It is the "
-        "only equation visual in the corpus whose `latex` is a double-quoted "
-        "TS string — it contains an unescaped apostrophe (`P'|`), so it "
-        "cannot be single-quoted. A parser that recognises only "
-        "single-quoted string literals misses this one visual and reproduces "
-        "the reference table exactly. The script handles both quote styles, "
-        "so it counts the visual. The reference numbers are consistent with "
-        "a single-quote-only extraction; no input was adjusted to force "
-        "either result."
+        "Decoding TypeScript string escapes before whitespace removal adds ten "
+        "exact matches: six with validation records and four without them. One "
+        "previously validated match is now withheld because its normalised form "
+        "has multiple registry candidates. The net change is +10 exact matches, "
+        "+5 unambiguous validated matches, +5 partial matches, and -10 unmatched."
     )
     lines.append("")
     if registry_duplicates:
         lines.append(
             f"Registry note: {len(registry_duplicates)} normalised-LaTeX collisions "
-            "exist inside the registry itself; the first entry in "
-            "`equations.json` order was kept. Colliding ids: "
+            "exist inside the registry itself. A matching story entry records every "
+            "candidate id, receives no registry or validation record, and is limited "
+            "to partial enrichment. Colliding ids: "
             + ", ".join(f"`{a}` vs `{b}`" for a, b in registry_duplicates)
             + "."
         )
         lines.append("")
+    lines.append(f"## Unresolved collision matches ({len(collision_matches)})")
+    lines.append("")
+    for v, candidates in collision_matches:
+        ids = ", ".join(f"`{candidate['id']}`" for candidate in candidates)
+        lines.append(
+            f"- `{v['chapterFile']}` occurrence {v['occurrence']}: {ids}. "
+            "Registry-derived tier, falsification, and sources are withheld."
+        )
+    lines.append("")
     lines.append(f"## Unmatched equations ({len(unmatched)})")
     lines.append("")
     lines.append(
@@ -417,7 +430,7 @@ def build_report(counts, unmatched, matched_unvalidated, registry_duplicates, re
         lines.append(v["latex"])
         lines.append("```")
         lines.append("")
-        story_norm = normalise(v["latex"])
+        story_norm = normalise(v["matchLatex"])
         prefix = None
         if v["storyLabel"]:
             m = STORY_LABEL_RE.search(v["storyLabel"])

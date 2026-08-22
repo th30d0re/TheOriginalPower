@@ -7,6 +7,7 @@ import { motion, useInView, useScroll, useReducedMotion } from 'framer-motion';
 import type { ChapterContent } from '../content/types';
 import { getAdjacent, getChapter } from '../content/chapters';
 import { getManifestEntry } from '../content/manifest';
+import { chapterFileForStory } from '../content/equations/story';
 import { markCompleted, markVisited } from './progress';
 import SceneVisual from './visuals/SceneVisual';
 import SceneRenderer from './SceneRenderer';
@@ -50,6 +51,15 @@ const ChapterPage = () => {
   }
 
   const { meta, scenes } = chapter;
+  const chapterFile = chapterFileForStory(meta.id);
+  let nextEquationOccurrence = meta.heroVisual?.kind === 'equation' ? 1 : 0;
+  const sceneEquationOccurrences = scenes.map((scene) => {
+    const start = nextEquationOccurrence;
+    nextEquationOccurrence += (scene.blocks ?? []).filter(
+      (block) => block.kind === 'visual' && block.spec.kind === 'equation',
+    ).length + (scene.visual?.kind === 'equation' ? 1 : 0);
+    return start;
+  });
   const { prev, next } = getAdjacent(meta.id);
   // Appendices continue the manifest's numbering but read as letters.
   const appendixLetter = getManifestEntry(meta.id)?.appendixLetter;
@@ -83,7 +93,7 @@ const ChapterPage = () => {
           )}
           {meta.heroVisual && (
             <div className="chapter-hero-visual">
-              <SceneVisual spec={meta.heroVisual} />
+              <SceneVisual spec={meta.heroVisual} chapterFile={chapterFile} equationOccurrence={0} />
             </div>
           )}
         </div>
@@ -91,8 +101,8 @@ const ChapterPage = () => {
       </header>
 
       <main className="chapter-scenes">
-        {scenes.map((scene) => (
-          <SceneRenderer key={scene.id} scene={scene} />
+        {scenes.map((scene, index) => (
+          <SceneRenderer key={scene.id} scene={scene} chapterFile={chapterFile} equationOccurrenceStart={sceneEquationOccurrences[index] ?? 0} />
         ))}
       </main>
 

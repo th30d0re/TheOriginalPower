@@ -9,9 +9,11 @@ import './blocks.css';
 
 interface BlockRendererProps {
   blocks: ContentBlock[];
+  chapterFile?: string;
+  equationOccurrenceStart: number;
 }
 
-const BlockRenderer = ({ blocks }: BlockRendererProps) => {
+const BlockRenderer = ({ blocks, chapterFile, equationOccurrenceStart }: BlockRendererProps) => {
   const prefersReducedMotion = useReducedMotion();
   const itemVariants = {
     hidden: {
@@ -32,6 +34,8 @@ const BlockRenderer = ({ blocks }: BlockRendererProps) => {
     <div className="content-blocks">
       {blocks.map((block, index) => {
         const key = `${block.kind}-${index}`;
+        const equationOccurrence = equationOccurrenceStart + blocks.slice(0, index)
+          .filter((candidate) => candidate.kind === 'visual' && candidate.spec.kind === 'equation').length;
 
         switch (block.kind) {
           case 'prose':
@@ -76,7 +80,7 @@ const BlockRenderer = ({ blocks }: BlockRendererProps) => {
                 key={key}
                 variants={itemVariants}
               >
-                <SceneVisual spec={block.spec} />
+                <SceneVisual spec={block.spec} chapterFile={chapterFile} equationOccurrence={equationOccurrence} />
               </motion.div>
             );
           default: {

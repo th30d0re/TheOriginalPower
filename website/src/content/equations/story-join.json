@@ -107,15 +107,13 @@
     "storyLabel": null,
     "storyCaption": "The N-dimensional Complex Wage.",
     "latex": "W = \\\\psi_m + \\\\sum_{k=1}^{N} j_k \\\\left(\\\\rho_k \\\\cdot \\\\psi_{s,k}\\\\right)",
-    "registry": {
-      "id": "E021",
-      "label": "eq:0.ga-ndim",
-      "chapter": "System Initialization: The Geometry of Extraction",
-      "section": "The Reparations Integral",
-      "line": 1156
-    },
+    "registry": null,
     "validation": null,
-    "enrichment": "partial"
+    "enrichment": "partial",
+    "collision": [
+      "E021",
+      "E233"
+    ]
   },
   {
     "chapterFile": "apxE_geometric_algebra.ts",
@@ -593,9 +591,37 @@
     "storyLabel": "eq. 1.11",
     "storyCaption": "Phase loading approaches zero under alignment and one under maximum dispersion.",
     "latex": "\\\\Phi_j = \\\\sum_{k=1}^{K} \\\\phi_{k,j}, \\\\qquad\\n\\\\Phi_{\\\\text{load}}(t) = \\\\operatorname{Dispersion}\\\\!\\\\left(\\\\{\\\\Phi_j\\\\}_{j=1}^{N}\\\\right) = 1 - \\\\left|\\\\frac{1}{N}\\\\sum_{j=1}^{N} e^{i\\\\Phi_j}\\\\right| \\\\in [0,1]",
-    "registry": null,
-    "validation": null,
-    "enrichment": "none"
+    "registry": {
+      "id": "E042",
+      "label": "eq:1.11-phase-loading",
+      "chapter": "Redefining Racism",
+      "section": "Fractal Execution: The Self-Similar Architecture",
+      "line": 2157
+    },
+    "validation": {
+      "tier": 3,
+      "type": "quantitative",
+      "falsification": "Falsified if survey-measured cross-group solidarity remains high when Φ_load is high in ANES or Pew polarization data.",
+      "dataSources": [
+        {
+          "name": "ANES Time Series Study 1948–2020",
+          "type": "public-dataset",
+          "url": "https://electionstudies.org/"
+        },
+        {
+          "name": "Pew Research Political Polarization Series",
+          "type": "public-dataset",
+          "url": "https://www.pewresearch.org/politics/"
+        }
+      ],
+      "targetEvents": [
+        "Post-Civil Rights fragmentation 1968–1990",
+        "Identity-politics polarization 1990–2020"
+      ],
+      "caseStudyLine": 838,
+      "notebook": ""
+    },
+    "enrichment": "full"
   },
   {
     "chapterFile": "ch03_version_1_0.ts",
@@ -706,9 +732,32 @@
     "storyLabel": "eq. 2.8",
     "storyCaption": "The institutional feedback loop.",
     "latex": "\\\\begin{aligned}\\n&\\\\text{Exploitation} \\\\rightarrow \\\\text{Observed disparities} \\\\rightarrow \\\\text{Theological/Scientific ``explanation\\'\\'} \\\\\\\\\\n&\\\\rightarrow \\\\text{Naturalization} \\\\rightarrow \\\\text{Expanded exploitation}\\n\\\\end{aligned}",
-    "registry": null,
-    "validation": null,
-    "enrichment": "none"
+    "registry": {
+      "id": "E055",
+      "label": "eq:2.8-church-science-feedback-loop",
+      "chapter": "Version 1.0: Initializing the Vector (15th-Century Portugal)",
+      "section": "Institutional Legitimation: The Role of Church and Science",
+      "line": 2742
+    },
+    "validation": {
+      "tier": 3,
+      "type": "structural",
+      "falsification": "Falsified if the religious-scientific legitimation loop is disrupted from within (without external kinetic pressure) in any documented colonial-era case.",
+      "dataSources": [
+        {
+          "name": "Cartwright (1851) — Diseases and Peculiarities of the Negro Race",
+          "type": "primary-source",
+          "url": ""
+        }
+      ],
+      "targetEvents": [
+        "Zurara's Chronica commissioned 1453",
+        "Cartwright's Diseases and Peculiarities 1851"
+      ],
+      "caseStudyLine": 1335,
+      "notebook": ""
+    },
+    "enrichment": "full"
   },
   {
     "chapterFile": "ch04_bacons_rebellion.ts",
@@ -928,9 +977,15 @@
     "storyLabel": null,
     "storyCaption": "The dual-track statutory status described in the chapter.",
     "latex": "\\\\text{Second Amendment Status}(\\\\text{arms},\\\\, x) =\\n\\\\begin{cases}\\n\\\\text{constitutionally protected} & x \\\\in I_{\\\\text{buffer}} \\\\\\\\\\n\\\\text{felony prosecution} & x \\\\in O_{\\\\text{racialized}}\\n\\\\end{cases}",
-    "registry": null,
+    "registry": {
+      "id": "E060",
+      "label": "eq:awb_dualtrack",
+      "chapter": "The Gendered Axis: Coverture, Eugenics, and the Reproductive Extraction Kernel",
+      "section": "The Statutory Terminal Layer: Assault Weapons Bans and the Three-Tier Compounding Architecture",
+      "line": 3759
+    },
     "validation": null,
-    "enrichment": "none"
+    "enrichment": "partial"
   },
   {
     "chapterFile": "ch09_enforcement_engine.ts",
@@ -1423,9 +1478,53 @@
     "storyLabel": "eq. 8.14",
     "storyCaption": "The observed political-attention signal: class carrier, identity-mode spectrum, and noise.",
     "latex": "S_{\\\\text{total}}(t) = S_{\\\\text{class}}(t) + S_{\\\\text{id}}(t) + \\\\eta(t)\\n = A_{\\\\text{class}}(t)\\\\sin(2\\\\pi f_{\\\\text{class}} t + \\\\varphi_{\\\\text{class}})\\n + \\\\sum_{k=1}^{K} A_k(t)\\\\sin(2\\\\pi f_k t + \\\\varphi_k)\\n + \\\\eta(t)",
-    "registry": null,
-    "validation": null,
-    "enrichment": "none"
+    "registry": {
+      "id": "E089",
+      "label": "eq:8.14-net-solidarity-signal",
+      "chapter": "Tweedism and the Puppet Class: The Algorithmic Filter on Democracy",
+      "section": "The Interference Engine: How Identity Debates Cancel Class Solidarity",
+      "line": 6414
+    },
+    "validation": {
+      "tier": 1,
+      "type": "structural",
+      "falsification": "Falsified if net solidarity signal cannot be measured as distinct from identity-axis signals in political-attention time series.",
+      "dataSources": [
+        {
+          "name": "Google Trends",
+          "type": "public-dataset",
+          "url": "https://trends.google.com/"
+        },
+        {
+          "name": "GovInfo Congressional Record",
+          "type": "public-dataset",
+          "url": "https://www.govinfo.gov/app/collection/crec"
+        },
+        {
+          "name": "ANES Cumulative Data File",
+          "type": "public-dataset",
+          "url": "https://electionstudies.org/"
+        },
+        {
+          "name": "GDELT Global Knowledge Graph v2 (BigQuery public dataset)",
+          "type": "public-dataset",
+          "url": "https://console.cloud.google.com/bigquery?p=gdelt-bq"
+        },
+        {
+          "name": "Internet Archive SCOTUS PDFs (55 opinions, 1873–2018)",
+          "type": "public-dataset",
+          "url": "https://archive.org/details/usscourt"
+        }
+      ],
+      "targetEvents": [
+        "Total political-attention variance decomposition (2004–2024 Google Trends; 1965–2024 Congressional Record)",
+        "Rolling Parseval conservation test: CV(P_total) < 0.30 in both datasets",
+        "Stacked band-power decomposition: P_class + P_id + P_noise across rolling windows"
+      ],
+      "caseStudyLine": 4968,
+      "notebook": "eq40_45_interference_engine.ipynb"
+    },
+    "enrichment": "full"
   },
   {
     "chapterFile": "ch15_the_recompile.ts",
@@ -1660,9 +1759,26 @@
     "storyLabel": "eq. 10.13",
     "storyCaption": "Classification changes when kinetic capacity exceeds tolerance or compliance fails.",
     "latex": "\\\\mathcal{R}(x_i) = \\\\begin{cases} I_{\\\\text{buffer}} & \\\\text{if } K(x_i) \\\\leq K_{\\\\text{tolerated}} \\\\text{ and } \\\\mathrm{comply}(x_i) = 1 \\\\\\\\ O_{\\\\text{final}} & \\\\text{if } K(x_i) > K_{\\\\text{tolerated}} \\\\text{ or } \\\\mathrm{comply}(x_i) = 0 \\\\end{cases}",
-    "registry": null,
-    "validation": null,
-    "enrichment": "none"
+    "registry": {
+      "id": "E119",
+      "label": "eq:10.13-reclassification-operator",
+      "chapter": "The Full Algorithm: Demographic Paradox, Cannibalization, and the 5-Tier Reveal (1994--Present)",
+      "section": "Updated Formalism: The Reclassification Operator and the Conditional 1705 Contract",
+      "line": 9830
+    },
+    "validation": {
+      "tier": 3,
+      "type": "structural",
+      "falsification": "Falsified if the operator fails to predict observed ideological sorting in any documented historical reclassification case.",
+      "dataSources": [],
+      "targetEvents": [
+        "Obama-era Black professional class reclassification",
+        "Post-9/11 Arab-American reclassification"
+      ],
+      "caseStudyLine": 7734,
+      "notebook": ""
+    },
+    "enrichment": "full"
   },
   {
     "chapterFile": "ch17_pipeline_architecture.ts",
@@ -1776,9 +1892,15 @@
     "storyLabel": "eq. 13.tvs-abort",
     "storyCaption": "The kinetic abort threshold.",
     "latex": "P_{\\\\text{loss}} = I_{\\\\text{strike}}^2 \\\\cdot R_{\\\\text{kinetic}} > C_{\\\\text{max}}\\n\\\\implies \\\\text{Strike Aborted}",
-    "registry": null,
+    "registry": {
+      "id": "E132",
+      "label": "eq:13.tvs-abort",
+      "chapter": "The Kinetic Guarantee: Arms Asymmetry, the Second Amendment, and the Disarmament Timeline",
+      "section": "The Kinetic Abort Threshold",
+      "line": 11111
+    },
     "validation": null,
-    "enrichment": "none"
+    "enrichment": "partial"
   },
   {
     "chapterFile": "ch19_the_contradiction.ts",
@@ -1855,9 +1977,37 @@
     "storyLabel": "eq. 12.3",
     "storyCaption": "The judiciary’s discrimination-detection function.",
     "latex": "D(P) = \\\\begin{cases}\\n1 & \\\\text{if } P \\\\text{ explicitly invokes racial classification} \\\\\\\\\\n0 & \\\\text{if } P \\\\text{ uses proxy variable } x \\\\text{ where } \\\\operatorname{Corr}(x, \\\\text{race}) \\\\to 1\\n\\\\end{cases}",
-    "registry": null,
-    "validation": null,
-    "enrichment": "none"
+    "registry": {
+      "id": "E137",
+      "label": "eq:12.3-judiciary-discrimination-detection",
+      "chapter": "The Contradiction: Why Reform Serves the Algorithm",
+      "section": "The Constitutional Shield: The Intent Standard as Concealment Apparatus",
+      "line": 11423
+    },
+    "validation": {
+      "tier": 3,
+      "type": "structural",
+      "falsification": "Falsified if judicial detection function produces false positives for proxy discrimination at rates comparable to explicit discrimination.",
+      "dataSources": [
+        {
+          "name": "Washington v. Davis",
+          "type": "primary-source",
+          "url": ""
+        },
+        {
+          "name": "McCleskey v. Kemp",
+          "type": "primary-source",
+          "url": ""
+        }
+      ],
+      "targetEvents": [
+        "Washington v. Davis (1976) — intent standard",
+        "McCleskey v. Kemp (1987) — statistical evidence rejected"
+      ],
+      "caseStudyLine": 9071,
+      "notebook": ""
+    },
+    "enrichment": "full"
   },
   {
     "chapterFile": "ch20_global_containment.ts",
@@ -1899,9 +2049,31 @@
     "storyLabel": "eq. 13.13",
     "storyCaption": "The manuscript maps the observed vote distribution onto the international hierarchy.",
     "latex": "\\\\text{Vote}_{\\\\text{UN}}(x) = \\\\begin{cases} \\\\text{No} & \\\\text{if } x \\\\in E_{\\\\text{imperial}} \\\\\\\\[4pt] \\\\text{Abstain} & \\\\text{if } x \\\\in I_{\\\\text{buffer}}^{\\\\text{global}} \\\\\\\\[4pt] \\\\text{Yes} & \\\\text{if } x \\\\in O_{\\\\text{global}} \\\\end{cases}",
-    "registry": null,
-    "validation": null,
-    "enrichment": "none"
+    "registry": {
+      "id": "E165",
+      "label": "eq:13.13-un-vote-distribution",
+      "chapter": "The Global Containment Field: Scaling the Algorithm",
+      "section": "The UN Reparations Vote: A Real-Time Proof of the Global Hierarchy (2026)",
+      "line": 12728
+    },
+    "validation": {
+      "tier": 3,
+      "type": "structural",
+      "falsification": "Falsified if UN Security Council voting distribution fails to map onto the international 5-tier hierarchy.",
+      "dataSources": [
+        {
+          "name": "UN Digital Library — UNSC vote records",
+          "type": "public-dataset",
+          "url": "https://digitallibrary.un.org/"
+        }
+      ],
+      "targetEvents": [
+        "UN Security Council voting patterns on Haiti resolutions"
+      ],
+      "caseStudyLine": 10162,
+      "notebook": ""
+    },
+    "enrichment": "full"
   },
   {
     "chapterFile": "ch21_algorithmic_epoch.ts",
@@ -2122,9 +2294,15 @@
     "storyLabel": "eq. 15.1",
     "storyCaption": "The temporal proxy creates different legal outcomes around the same object.",
     "latex": "P_{\\\\text{temporal}}(x,o,t) =\\n\\\\begin{cases}\\n0 & \\\\text{if subject } x \\\\text{ possessed object } o \\\\text{ before cutoff } t_c,\\\\\\\\\\n1 & \\\\text{if subject } x \\\\text{ seeks the same object } o \\\\text{ after cutoff } t_c.\\n\\\\end{cases}",
-    "registry": null,
+    "registry": {
+      "id": "E210",
+      "label": "eq:15.1-temporal-firearm-proxy",
+      "chapter": "The Single-Issue Trap and Multi-Axis Noise Cancellation: A Boston Case Study",
+      "section": "Grandfather Clauses and Forcing the State's Hand",
+      "line": 14334
+    },
     "validation": null,
-    "enrichment": "none"
+    "enrichment": "partial"
   },
   {
     "chapterFile": "ch24_single_issue_trap.ts",
@@ -2133,9 +2311,15 @@
     "storyLabel": "eq. 15.2",
     "storyCaption": "The geographic interface distributes autonomy across separate legal components.",
     "latex": "\\\\mathcal{R}(s)=\\n\\\\bigl(r_{\\\\text{bio}}(s), r_{\\\\text{kin}}(s), r_{\\\\text{move}}(s), r_{\\\\text{speech}}(s), \\\\ldots\\\\bigr),\\n\\\\qquad\\n\\\\mathcal{R}(s) \\\\neq \\\\vec{1} \\\\;\\\\; \\\\forall s .",
-    "registry": null,
+    "registry": {
+      "id": "E211",
+      "label": "eq:15.2-geographic-interface-swap",
+      "chapter": "The Single-Issue Trap and Multi-Axis Noise Cancellation: A Boston Case Study",
+      "section": "Geographic Interface Swaps: A La Carte Rights",
+      "line": 14350
+    },
     "validation": null,
-    "enrichment": "none"
+    "enrichment": "partial"
   },
   {
     "chapterFile": "ch25_conclusion.ts",
@@ -2194,40 +2378,12 @@
     "storyLabel": "eq. 17.2",
     "storyCaption": "The terminal trajectory of Out-group expansion.",
     "latex": "O_{\\\\text{final}} = \\\\text{Everyone} \\\\setminus E",
-    "registry": {
-      "id": "E118",
-      "label": "eq:10.12-o-final-construction",
-      "chapter": "The Full Algorithm: Demographic Paradox, Cannibalization, and the 5-Tier Reveal (1994--Present)",
-      "section": "Disarmament and Execution: The Algorithm Unmasked",
-      "line": 9642
-    },
-    "validation": {
-      "tier": 1,
-      "type": "quantitative",
-      "falsification": "Falsified if modern mass-incarceration demographics fail to reproduce the O set construction predicted by the algorithm.",
-      "dataSources": [
-        {
-          "name": "Bureau of Justice Statistics incarceration by race series",
-          "type": "public-dataset",
-          "url": "https://www.bjs.gov/"
-        },
-        {
-          "name": "The Sentencing Project — Racial Disparity Reports",
-          "type": "report",
-          "url": "https://www.sentencingproject.org/"
-        },
-        {
-          "name": "Alexander (2010) — The New Jim Crow",
-          "type": "peer-reviewed",
-          "url": ""
-        }
-      ],
-      "targetEvents": [
-        "US mass incarceration 1994–present"
-      ],
-      "caseStudyLine": 6828,
-      "notebook": "Paper/scripts/eq63_mass_incarceration.ipynb"
-    },
-    "enrichment": "full"
+    "registry": null,
+    "validation": null,
+    "enrichment": "partial",
+    "collision": [
+      "E118",
+      "E213"
+    ]
   }
 ]

@@ -8,9 +8,11 @@ import DeepDive from './DeepDive';
 
 interface SceneRendererProps {
   scene: Scene;
+  chapterFile?: string;
+  equationOccurrenceStart: number;
 }
 
-const SceneRenderer = ({ scene }: SceneRendererProps) => {
+const SceneRenderer = ({ scene, chapterFile, equationOccurrenceStart }: SceneRendererProps) => {
   const prefersReducedMotion = useReducedMotion();
   const bodyBlocks: ContentBlock[] = [
     ...(scene.prose && scene.prose.length > 0
@@ -58,11 +60,17 @@ const SceneRenderer = ({ scene }: SceneRendererProps) => {
         </motion.p>
       )}
 
-      {bodyBlocks.length > 0 && <BlockRenderer blocks={bodyBlocks} />}
+      {bodyBlocks.length > 0 && (
+        <BlockRenderer blocks={bodyBlocks} chapterFile={chapterFile} equationOccurrenceStart={equationOccurrenceStart} />
+      )}
 
       {scene.visual && (
         <motion.div className="scene-visual-wrap" variants={itemVariants}>
-          <SceneVisual spec={scene.visual} />
+          <SceneVisual
+            spec={scene.visual}
+            chapterFile={chapterFile}
+            equationOccurrence={equationOccurrenceStart + bodyBlocks.filter((block) => block.kind === 'visual' && block.spec.kind === 'equation').length}
+          />
         </motion.div>
       )}
 
