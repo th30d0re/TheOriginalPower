@@ -1,0 +1,87 @@
+/* The Original Power — EPUB 3 stylesheet.
+   Mirrors the print tcolorbox palette: definitions blue, key insights green,
+   historical sources orange. Every rule that sets a background also sets a
+   colour: a reader in night mode inverts the page but not these panels, and a
+   background-only rule would leave pale text on a pale card. */
+
+body { line-height: 1.5; }
+
+h1, h2, h3, h4 { line-height: 1.25; font-weight: bold; }
+h1 { margin: 2em 0 1em; }
+h2 { margin: 1.8em 0 0.6em; }
+h3 { margin: 1.4em 0 0.5em; }
+
+p { margin: 0 0 0.85em; text-align: justify; hyphens: auto; -epub-hyphens: auto; }
+
+/* ---------- Callout boxes ---------- */
+.definition, .keyinsight, .historicalsource, .theorem, .conjecture,
+.tcolorbox, .uscdiff {
+  margin: 1.4em 0;
+  padding: 0.85em 1em;
+  border: 1px solid #999;
+  border-left-width: 5px;
+  border-radius: 4px;
+  color: #1a1a1a;
+}
+.definition       { border-color: #2c5aa0; background-color: #eef3fb; }
+.keyinsight       { border-color: #2e7d32; background-color: #eef8f0; }
+.historicalsource { border-color: #c46a10; background-color: #fdf4e9; }
+.theorem, .conjecture { border-color: #444; background-color: #f2f2f2; }
+.tcolorbox        { border-color: #666; background-color: #f4f4f4; }
+.uscdiff          { border-color: #555; background-color: #f1f1f1; }
+
+.boxtitle { margin: 0 0 0.5em; font-weight: bold; }
+.boxtitle p { margin: 0; font-weight: bold; text-align: left; }
+
+/* ---------- Numbered display equations ---------- */
+.numeq {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1em 0;
+  page-break-inside: avoid;
+}
+.eqbody { flex: 1 1 auto; text-align: center; overflow-x: auto; }
+.eqbody p { margin: 0; text-align: center; }
+.eqnum { flex: 0 0 auto; padding-left: 0.75em; white-space: nowrap; }
+.eqnum p { margin: 0; }
+math[display="block"] { margin: 0.4em 0; }
+
+/* ---------- Figures and tables ---------- */
+figure { margin: 1.4em 0; text-align: center; page-break-inside: avoid; }
+img { max-width: 100%; height: auto; }
+figcaption { margin-top: 0.5em; font-size: 0.88em; text-align: left; }
+table { border-collapse: collapse; margin: 1.2em auto; font-size: 0.86em; }
+th, td { border: 1px solid #bbb; padding: 0.3em 0.5em; text-align: left; }
+th { background-color: #ececec; color: #1a1a1a; }
+caption { font-size: 0.88em; margin-bottom: 0.4em; text-align: left; }
+
+/* ---------- Code, quotes, notes ---------- */
+pre {
+  font-size: 0.78em;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  background-color: #f2f2f2;
+  color: #1a1a1a;
+  padding: 0.6em;
+  border-radius: 3px;
+}
+code { font-size: 0.9em; }
+blockquote { margin: 1em 1.5em; font-style: italic; }
+a { text-decoration: none; }
+.csl-entry { margin-bottom: 0.7em; text-indent: -1.5em; padding-left: 1.5em; }
+
+/* Readers that theme the page themselves get panels tuned to match, rather
+   than the light cards above showing through a dark page. */
+@media (prefers-color-scheme: dark) {
+  .definition, .keyinsight, .historicalsource, .theorem, .conjecture,
+  .tcolorbox, .uscdiff, pre, th { color: #e8e8e8; }
+  .definition       { background-color: #16202e; }
+  .keyinsight       { background-color: #15241a; }
+  .historicalsource { background-color: #2a1e10; }
+  .theorem, .conjecture { background-color: #1e1e1e; }
+  .tcolorbox, .uscdiff, pre { background-color: #1c1c1c; }
+  th { background-color: #262626; }
+  th, td { border-color: #555; }
+}

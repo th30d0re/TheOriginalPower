@@ -67,6 +67,14 @@ verify-pdf: pdf-from-tex
 		exit 1; \
 	}
 
+.PHONY: epub
+
+# EPUB 3 build. Independent of the PDF pipeline: TikZ/pgfplots pictures are
+# compiled standalone and rasterised, then tools/epub_prepare.py resolves the
+# counters and cross-references pandoc cannot see. Output: dist/.
+epub:
+	bash tools/epub_build.sh
+
 .PHONY: scotus-audit
 scotus-audit:
 	@echo "Running SCOTUS corpus audit..."

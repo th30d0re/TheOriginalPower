@@ -130,3 +130,7 @@ counter_signal/responses/
 OneDrive_2_*/
 OneDrive_2_*.zip
 OneDrive_txt/
+
+# EPUB build tree and output (regenerate with `make epub`)
+build/epub/
+dist/
