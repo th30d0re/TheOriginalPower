@@ -151,3 +151,81 @@ biodiversity is on the African continent; phenotype resists conversion and
 migration — and carries no citation at all. That absence is the gap items 1, 2,
 30 and 31 exist to close. [book: Paper/The_Original_Power.tex:1828, verified
 2026-09-02]
+
+---
+
+## Ruling on the five removed items (Claude, at the author's request)
+
+The author asked which of the five to restore on the strength of the arguments
+made for them. Two in, three out.
+
+### Restore — item 8, the Book of Gates (Yurco 1989)
+
+Kimi grouped 8, 9 and 10 as "the same structural point as the Rome comparison."
+That grouping is wrong for item 8. Rome (`:2671`) shows **extraction running
+without a racial partition** — the book says so explicitly there: "The Roman
+comparison isolates the variable. Both systems ran the extraction kernel... only
+the American system locked the enslaved class to a phenotypic marker." The Book of
+Gates shows something the Rome case cannot: a society that **had the colour
+variable in hand, used it descriptively, and built no hierarchy on it**.
+
+That is a second variable-isolation case, running from the opposite direction, and
+it lands directly on the zero-day claim at `:1828` — that phenotype was *selected*
+as a partition variable rather than being an inevitable one. Evidence that an
+earlier civilisation held the same variable and declined to partition on it is
+direct support for selection over inevitability.
+
+**Constraint: one or two sentences inside the partition-variable argument, not a
+historical excursion into Egypt.** Compressed that way it stays inside the book's
+declared Atlantic scope (`:12535`), because it is evidence about the variable, not
+a history. The reading has some interpretive contest — cite Yurco and do not
+overstate.
+
+### Restore — item 10, but Hippocrates only, not Herodotus
+
+Hippocrates' climate theory holds that human difference is environmental and
+**reversible**. That is the pre-racial explanatory model, and it is the direct
+ancestor of the cline evidence going into `:1828` (items 2, 30, 31). Twenty-four
+centuries apart, both accounts say the same thing: the differences track
+environment and they move. The architectural payoff is that the Elite had to
+**displace a working explanatory model** to install the partition — which is the
+interface-swap pattern the book already runs elsewhere.
+
+The marginal cost is near zero. Approved item 11 (Aristotle's natural slavery)
+already creates an ancient-world passage, which defeats the "adds length"
+objection: the passage exists either way, and Hippocrates rides along in a clause.
+
+**Herodotus stays out.** Praise for the Ethiopians is decorative; it performs no
+architectural function.
+
+### Keep out — items 6 and 7, Jebel Sahaba and Nataruk
+
+These establish that organised violence predates race. **The book never makes that
+claim and does not need it.** Its claim is that the extraction *kernel* runs
+without racial ideology, and Rome (`:2671`) plus the trans-Saharan trade (`:2486`)
+already prove exactly that — better, because they are systems rather than events.
+Both sites also carry live interpretive disputes over whether they show intergroup
+warfare at all. Importing contested archaeology to support a claim the book does
+not make is cost without return.
+
+### Keep out — item 24, Jefferson. The strongest exclusion of the five.
+
+The objection is not tonal, it is methodological. The book refuses individual-actor
+explanation as a matter of method: it states that the framework "does not assign
+intent to any individual actor", and its own summary of the shift is *"you stop
+looking for the bad actor and start looking for the disproportionate
+intersection"*. A Jefferson-the-hypocrite passage hands the reader precisely the
+individual-moral-failing lens the framework exists to displace. It would be vivid,
+and it would work against the book at the level of method.
+
+Item 9 (Taharqa) stays out. Item 8 carries the point, and holding 9 back keeps the
+Egyptian material to the single compressed clause the scope allows.
+
+## Gemini linkage — adopted
+
+Cross-reference the control-case paragraph at `:1828` with `Biological Embedding`,
+already defined at `The_Original_Power.tex:1694` alongside allostatic load,
+$\beta_{\text{bio}}$ and epigenetic ageing. The two are the same claim from
+opposite ends: the control case establishes that the body did not generate the
+partition, and Biological Embedding establishes that the architecture then wrote
+itself into the body. Placement was already settled; this is the linkage.
