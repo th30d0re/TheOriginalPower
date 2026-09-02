@@ -58,3 +58,33 @@ The page-offset convention (printed folio = PDF page − 21) held on every page
 either pass rendered. Of the folios the mining pass flagged as OCR-only, two
 carried a wrong folio number and one carried scrambled wording. Everything else
 held.
+
+## Addendum — the folios the manuscript actually cites
+
+Neither pass covered folios 136, 138 and 139, and neither did the mining pass's
+image-verified twelve. Those three are the load-bearing citations in the
+Chapter 3 counter-signal section, so they were rendered and read directly here.
+
+- **Folio 136 — CONFIRMED.** Running head reads 136. The method sentence is
+  verbatim: « Nous commencerons par le cubage, en copiant les tableaux suivants
+  tirés de l'*Anthropologie* du professeur Topinard. » The table follows on the
+  same page and matches the manuscript exactly: 88 Auvergnats 1598, 69
+  Bretons-Gallots 1599, 63 Bas-Bretons 1564, 124 Parisiens contemporains 1558
+  (male, cubic centimetres). The manuscript's 41 cc span is arithmetic on those
+  figures: 1599 − 1558 = 41. Correct.
+- **Folio 138 — CONFIRMED.** Running head reads 138. Verbatim: « En examinant
+  ces différents tableaux, un fait positif se laisse tout d'abord remarquer,
+  c'est l'irrégularité des résultats et l'incertitude où se trouve l'esprit
+  quand il faut juger de leur valeur relative. » The manuscript's English
+  rendering is faithful.
+- **Folio 139 — CONFIRMED.** Running head reads 139. Verbatim: « L'esprit
+  suivant lequel tous les savants de l'école américaine, sauf de rares
+  exceptions, considéraient l'anthropologie, rend toutes leurs affirmations
+  suspectes. Ils n'y voyaient qu'un moyen de légitimer le système de
+  l'esclavage. » Firmin introduces it with « Quant au tableau tiré des moyennes
+  de Morton, on sait ce qu'il faut en penser », so the manuscript's framing —
+  that he is speaking of the American school — is accurate, and the immediate
+  target is Morton's table.
+
+With 566 and 567 already image-verified in the mining pass, every folio the
+Chapter 3 section cites has now been read off a rendered page.
