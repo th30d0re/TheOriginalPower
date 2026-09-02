@@ -70,6 +70,40 @@ part's declared range no longer covers any chapter it contains, widen the part's
 range; that is the whole remedy. Part I reads 1440s--1915 because The Haitian
 Export closes the specification argument with the Firmin Protocol.
 
+## Rebuilding the PDF — Clear the Aux Files First
+
+`make pdf-from-tex` fails whenever the `.tex` sources have changed since the last
+build, with:
+
+```
+! File ended while scanning use of \@writefile.
+l.116 \begin{document}
+!  ==> Fatal error occurred, no output PDF file produced!
+```
+
+latexmk chokes on the stale `.aux`/`.toc` state, and **it deletes
+`Paper/The_Original_Power.pdf` on the way down**. The tracked PDF disappears from
+the working tree; it is still in git, so it is recoverable, but the build must be
+repeated.
+
+The fix is to remove the LaTeX aux files and rebuild. Do NOT use `make clean` for
+this — that target also runs `rm -f Paper/figures/spectral/*.pdf`, and those
+figures are gitignored build products of `make empirical`. Without them the twelve
+`\IfFileExists`-guarded spectral figures silently fall back to their "figure
+pending" placeholders, and the book builds successfully with twelve figures
+missing. That failure is invisible in the exit code.
+
+Clear the aux files only, from the repository root:
+
+```bash
+find Paper -maxdepth 1 -type f \( -name '*.aux' -o -name '*.fdb_latexmk' -o -name '*.fls' -o -name '*.log' -o -name '*.out' -o -name '*.synctex.gz' -o -name '*.toc' -o -name '*.lof' -o -name '*.bbl' -o -name '*.blg' -o -name '*.bcf' -o -name '*.run.xml' \) -delete && make pdf-from-tex
+```
+
+Run `make pdf-from-tex` from the repository root, never from inside `Paper/`:
+there is no Makefile there and make exits immediately with "No rule to make
+target". Confirm afterwards that `Paper/The_Original_Power.pdf` exists and that
+the log reports no undefined references.
+
 ## Commit Safety Rule — MANDATORY
 
 **Before any operation that could destroy or corrupt work, you MUST commit.**
