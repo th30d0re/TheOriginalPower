@@ -39,7 +39,46 @@ were removed under that rule — see the last table.
 
 | # | Item | Action |
 |---|---|---|
-| 19 | Morton craniometry: the book calls it "methodologically fraudulent" via Gould 1981; Lewis et al. 2011 re-measured and found the measurements largely accurate | Dedicated research loop. Cross-reference the 2011 re-analysis against Firmin's own craniometric method and data, examine both methodologies, and determine what the book should say. Flagged independently by the author, Kimi, and Claude. Items 27–30 wait on the outcome |
+| 19 | Morton craniometry | **RESOLVED** — see [`research_morton-craniometry.md`](research_morton-craniometry.md). The fraud was in the inference, not the data. Items 27–30 are unblocked; proceed |
+
+### Outcome of the Morton loop
+
+**The claim at `:2763` is not defensible and must be replaced.** Lewis et al. 2011
+physically remeasured 308 of the 670 skulls Morton published: the data are
+generally reliable and the errors random with respect to population. Gould's
+specific charges of manipulation do not survive inspection. Two live critiques
+(Weisberg & Paul 2016; Kaplan, Pigliucci & Batta 2015) attack the remeasurement's
+*relevance*, not its result, and neither restores the fraud charge. Nobody in the
+literature defends the capacity-to-intelligence inference.
+
+**This strengthens the book.** Firmin audited published tables; he never alleged
+fabricated numbers. He attacked instrument reliability and found the tables
+carried no basis for classification — claim [B], not [A]. Relocating the fraud
+from measurement to inference makes `:2763` agree with the Firmin section instead
+of contradicting it, and converts Morton from bad measurement into evidence that
+the legitimation apparatus manufactures signal out of noise by fiat. The exact
+replacement LaTeX and the required `lewis_morton` BibTeX entry are in the report.
+The companion sentence at `:2844` ("analytically fraudulent") is already correct
+under this reading and should be kept consistent.
+
+### Two citation-integrity problems surfaced by the same loop
+
+Both verified directly against the repository, 2026-09-02. Neither is part of the
+source gap analysis; both need the author's attention.
+
+1. **`firmin_legacy` is an unusable citation.** `Paper/references.bib:990` records
+   `author = {{Anonymous}}`, `journal = {Gradhiva}`, `year = {2009}`. An anonymous
+   author in a named journal will not survive scrutiny, and this entry is the sole
+   support for the book's Firmin claims — including a direct quotation.
+2. **The word "anarchic" at `:2848` is quoted but unverified.** The manuscript puts
+   it in quotation marks and attributes it via `firmin_legacy`. It does not appear
+   in Firmin's 1885 French original. It may be legitimate from the 2000 Asselin
+   Charles translation, which is the thing to check. A quoted word carried by an
+   anonymous citation is the weakest link in an otherwise load-bearing section.
+
+Note also that `Sources/antenorfirminles00mani.pdf` is Leslie Manigat's work, not
+Firmin's *De l'égalité des races humaines* — confirmed from the file's own RDF
+metadata. The repository does not currently hold Firmin's original.
 
 ## Held
 
@@ -69,3 +108,46 @@ Items 13, 17, 20, 21, 22, 33, 35 are already COVERED in the manuscript. Item 34
 (the source's "10–15% probability" figures) is unfalsifiable pseudo-quantification
 and must not be imported under any circumstances — the tier system exists to
 exclude exactly this.
+
+---
+
+## Scope discipline — second opinion (Gemini, 2026-09-02)
+
+A second model reviewed the same source and argued the additions risk conceding
+the battlefield: arguing race's biological invalidity at length treats biology as
+the terrain the case is won on, when the Elite neither possessed modern genetics
+nor cared about empirical truth. Its recommendation was to compress the
+pigmentation material into a single bounded "control case" paragraph and pivot
+back to extraction mechanics.
+
+**Adopted, for the phenotype passage only.** Items 1, 2, 30 and 31 go into the
+zero-day passage at `The_Original_Power.tex:1828` as one tight control-case
+paragraph with citations. Not a genetics section. The point that paragraph must
+carry is architectural: the partition variable was a continuous environmental
+gradient, and the Elite forced it into a binary legal partition.
+
+**Not adopted for the Firmin counter-signal section** (`:2841–2858`). The book has
+already entered the empirical arena there — it asserts Firmin found the data
+"wildly overlapped", that there was "no signal", that the tables were "anarchic".
+Having made that claim, the book supports it or withdraws it. Items 27, 28, 29
+and 32 are the modern confirmation of a claim already on the page, so the
+dosage argument does not reach them. The same reasoning governs item 19: the
+"methodologically fraudulent" sentence at `:2763` is an empirical claim the book
+already threw, and it cannot decline the fight in a passage where it swung first.
+
+**The catch worth keeping.** Gemini connected this material to `Biological
+Embedding`, already a defined term at `The_Original_Power.tex:1694`, alongside
+allostatic load, $\beta_{\text{bio}}$ and epigenetic ageing. Neither the gap
+analysis nor Claude made that link. The two ends belong together: the control
+case at `:1828` establishes that the body did not generate the partition, and
+Biological Embedding at `:1694` establishes that the architecture then wrote
+itself into the body. Cross-reference them.
+
+**One correction to that review.** It asserts the book has "already established
+the necessary scientific consensus". It has not. Line `:1828` makes four
+empirical claims — phenotype is permanent, heritable and visually self-enforcing;
+race does not rest on significant genetic difference; the greatest human
+biodiversity is on the African continent; phenotype resists conversion and
+migration — and carries no citation at all. That absence is the gap items 1, 2,
+30 and 31 exist to close. [book: Paper/The_Original_Power.tex:1828, verified
+2026-09-02]
