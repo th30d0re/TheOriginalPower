@@ -70,6 +70,102 @@ part's declared range no longer covers any chapter it contains, widen the part's
 range; that is the whole remedy. Part I reads 1440s--1915 because The Haitian
 Export closes the specification argument with the Firmin Protocol.
 
+## Factual Claims — Verification Protocol (MANDATORY)
+
+This section exists because an audit of the manuscript found unsupported factual
+material that had survived to print, and because the first attempt to repair it
+introduced a fresh error. Both failures are recorded below. **No agent may add,
+alter, or re-source a factual claim in `Paper/` except under this protocol.**
+
+### The finding that sets the rule
+
+A 2026-09-02 audit of one section found: a direct quotation ("anarchic") attributed
+to a source that does not contain the word; a second quotation attributed to unnamed
+"contemporary anthropologists" through a bibliography entry whose author field is
+`{{Anonymous}}`; an admiral described as wrapped in a flag on the bow of his ship,
+where no source before 1934 says either and the contemporaneous record says cabin
+and uniform; an 1802 garrison described as self-detonating when it broke out and
+escaped; and a phrase, "illegal and excessive," attributed to German advisers with
+no support anywhere.
+
+The repair pass then proposed reattributing that last phrase to a named US State
+Department official. **That was also wrong** — the cited article concerns the
+Venezuela blockade, a different episode months later. An independent second model
+caught it. Applying the repair unreviewed would have replaced one false attribution
+with another.
+
+### Rule 1 — Artifact contact, not consensus
+
+A claim is verified when an agent has **opened the actual artifact** and can name
+it: the page image, the archival document, the resolved DOI, the catalogue record.
+Model agreement is not evidence. Three models that never opened the source can
+share the same wrong prior, and in this audit they did.
+
+Every verified claim carries a line stating **which artifact was opened and how**.
+"I recall this" and "this is well known" are not verification. A claim without that
+line is unverified, whatever its confidence.
+
+### Rule 2 — OCR is not an artifact
+
+For any scanned source, the embedded text layer locates a passage and never
+confirms it. On the Firmin scan, single-word searches were reliable and full
+sentences were worthless: one pass produced nine page attributions and **every one
+was wrong**. Render the page and read the image:
+
+```bash
+pdftoppm -f N -l N -r 165 -png <file.pdf> /tmp/page
+```
+
+Read the printed folio off the running head; do not trust a computed offset alone.
+
+### Rule 3 — Removal is safe, addition is not
+
+Deleting an unsupported claim requires no new source. Adding or changing one
+requires a verified artifact under Rule 1. When a claim fails verification, the
+default is to **cut it**, not to find a replacement attribution — reattribution is
+a new claim and carries the full burden of proof. This asymmetry is the single
+cheapest protection available, and ignoring it is what produced the error above.
+
+### Rule 4 — The verifier is never the researcher
+
+An agent may not verify its own findings. The independent pass must be given
+authority to return **DISAGREE** and must be told that disagreement is a valued
+outcome. Ask it to test the correction, not to confirm it. In this audit the
+disagreement was the finding.
+
+Where a claim is contested or load-bearing, convene more than one model — but treat
+the quorum as a **trigger for scrutiny, not a verdict**. Disagreement tells you
+where to look. Only the artifact settles it.
+
+### Rule 5 — "Cannot confirm" is a complete answer
+
+An admitted gap is a successful outcome. A fabricated citation is the only
+unacceptable one. Every research brief must say this explicitly, and every report
+must be allowed to end with unresolved items. Reports that declared their gaps
+proved reliable in this audit; the one that did not was wrong.
+
+### Rule 6 — Tier every claim by provenance
+
+Record, per claim: **primary/contemporaneous** (the record made at the time),
+**scholarly secondary** (peer-reviewed, named author), **tertiary** (encyclopaedia,
+web summary), or **unsourced**. Tertiary sourcing is a flag, not a verification —
+one correction in this audit rests on an encyclopaedia entry and has not been
+applied for that reason. A claim may never be upgraded in confidence by restating
+it; only a stronger artifact does that.
+
+### Rule 7 — Regression gate before any manuscript edit lands
+
+A factual edit is not finished until:
+
+1. every changed claim is traceable to an artifact opened under Rule 1;
+2. an independent agent has reviewed the diff with authority to reject;
+3. the rendered PDF has been checked at the changed passage, not only compiled;
+4. the commit message states what was verified, by which artifact, and what
+   remains unverified.
+
+State the unverified remainder plainly. A repair that hides its own gaps is the
+failure mode this protocol exists to prevent.
+
 ## Rebuilding the PDF — Clear the Aux Files First
 
 `make pdf-from-tex` fails whenever the `.tex` sources have changed since the last
