@@ -200,6 +200,42 @@ there is no Makefile there and make exits immediately with "No rule to make
 target". Confirm afterwards that `Paper/The_Original_Power.pdf` exists and that
 the log reports no undefined references.
 
+### CI compiles; it does not byte-verify
+
+`make verify-pdf` (byte-identical rebuild vs the committed PDF) is a **local**
+gate only. It cannot run in CI: a byte-stable build holds only on the exact
+local TeX Live, and the CI runner uses a different distribution — different page
+count, different font glyphs, different hyphenation. The CI workflow
+(`.github/workflows/verify-pdf.yml`) runs `make check-tex`, which compiles the
+manuscript and fails on a real LaTeX error (`! `, `Emergency stop`) or an
+unresolved `\ref` / `\cite`. Run `make verify-pdf` yourself before committing a
+regenerated PDF.
+
+## Release Policy
+
+**Cut a GitHub release only when `Paper/The_Original_Power.pdf` changes** — that
+is, a change to `Paper/*.tex`, `Paper/references.bib`, `Paper/*.sty`, or
+`Paper/figures/`. README edits, tooling, `experiments/`, docs, workflows, and
+notebook regeneration all ship on `main` with **no release**.
+
+**The PDF and the EPUB are released together, from the same commit, every time.**
+They must never be out of sync — a release must not carry a PDF from one build
+and an EPUB from an earlier one. The sequence:
+
+1. `make verify-pdf` — green (byte-identical local rebuild).
+2. `make epub` — regenerate `dist/The_Original_Power.epub` from the same source.
+3. Confirm the new content appears in **both** artifacts (grep the rendered PDF
+   text and the EPUB `.xhtml`).
+4. Commit the regenerated `Paper/The_Original_Power.pdf` (the EPUB lives in
+   gitignored `dist/` and is a release asset only).
+5. Tag that commit and
+   `gh release create vX.Y.Z --target <full-SHA-or-branch> \`
+   `  Paper/The_Original_Power.pdf dist/The_Original_Power.epub`
+   (`--target` rejects a short SHA with HTTP 422).
+
+Version bump: patch (`v1.0.x`) for factual corrections and sourced additions.
+The author decides minor and major bumps.
+
 ## Commit Safety Rule — MANDATORY
 
 **Before any operation that could destroy or corrupt work, you MUST commit.**

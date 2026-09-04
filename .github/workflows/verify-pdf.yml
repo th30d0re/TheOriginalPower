@@ -1,4 +1,10 @@
-name: Verify regenerated PDF
+name: Compile manuscript
+
+# Compiles Paper/The_Original_Power.tex and fails on a real LaTeX error or an
+# unresolved cross-reference / citation. It does NOT compare PDF bytes: a
+# byte-identical rebuild only holds on the exact local TeX Live, and this runner
+# uses a different distribution. Byte-stable verification is `make verify-pdf`,
+# run locally before committing a regenerated PDF (see AGENTS.md, Release Policy).
 
 "on":
   pull_request:
@@ -8,7 +14,6 @@ name: Verify regenerated PDF
       - "Paper/**/*.bib"
       - "Paper/**/*.sty"
       - "Paper/figures/**"
-      - "Paper/The_Original_Power.pdf"
       - ".github/workflows/verify-pdf.yml"
   push:
     paths:
@@ -17,11 +22,10 @@ name: Verify regenerated PDF
       - "Paper/**/*.bib"
       - "Paper/**/*.sty"
       - "Paper/figures/**"
-      - "Paper/The_Original_Power.pdf"
       - ".github/workflows/verify-pdf.yml"
 
 jobs:
-  verify-pdf:
+  compile:
     runs-on: ubuntu-latest
 
     steps:
@@ -41,5 +45,5 @@ jobs:
             texlive-latex-recommended \
             texlive-pictures
 
-      - name: Rebuild and verify committed PDF
-        run: make verify-pdf
+      - name: Compile and check for errors and unresolved references
+        run: make check-tex

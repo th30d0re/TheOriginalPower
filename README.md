@@ -1,200 +1,220 @@
 # The Original Power
-### The Physics of Oppression and the Engineering of Control
 
-[![LaTeX](https://img.shields.io/badge/LaTeX-Document-008080?logo=latex)](Paper/The_Original_Power.pdf)
-[![Website](https://img.shields.io/badge/Interactive-Website-blueviolet?logo=react)](website/)
-[![License](https://img.shields.io/badge/License-All%20Rights%20Reserved-red)]()
+## The Physics of Oppression and the Engineering of Control
 
----
+[![PDF](https://img.shields.io/badge/manuscript-PDF-8b1e1e?logo=adobeacrobatreader)](Paper/The_Original_Power.pdf)
+[![Release](https://img.shields.io/github/v/release/th30d0re/TheOriginalPower?label=release)](https://github.com/th30d0re/TheOriginalPower/releases)
+[![License](https://img.shields.io/badge/license-All%20Rights%20Reserved-555555)](#license)
 
-## 🌐 Interactive Website
+*The Original Power* is a book-length formal manuscript about systemic oppression as an
+elite-extraction algorithm. The repository contains the canonical LaTeX source, its tracked
+PDF, empirical validation materials, and the software subsystems used to study, present,
+and extend the framework.
 
-**[Explore the Interactive Visualization →](website/)**
+## What this is
 
-Experience the research through an immersive web application featuring:
-- **Story Mode**: 8-chapter narrative journey with animated visualizations
-- **Interactive Dashboard**: Explore mathematical models, historical timelines, and data
-- **Podcast Insights**: Deep dive into key concepts from companion podcast
+The manuscript models racism as psycho-legal social software: legal, institutional,
+cultural, and affective code running on human predictive cognition. Its set-theoretic
+software layer formalizes partitions, incentives, extraction, and the movement of people
+between structural positions.
 
-Built with React + TypeScript + D3.js + Framer Motion
+An electrodynamic hardware layer represents the five-tier hierarchy as a circuit topology,
+suppression allocation as a complex power signal, and reform shocks as inductive kickback.
+The two layers express the same control architecture through different mathematical
+representations.
 
----
+The hierarchy contains five structural roles:
 
-## 📋 Abstract
+1. **Elite** (`E`) — extracts value and gates the system's control signals.
+2. **Puppet Class** (`P_puppet`) — translates Elite preferences into law and policy.
+3. **Enforcement Class** (`F_enforce`) — physically actuates those policies.
+4. **Buffer Class** (`I_buffer`) — receives status, selective protection, or concessions in
+   exchange for defending the partition.
+5. **Out-group** (`O`) — bears the compounding burden of extraction.
 
-This paper develops a formal mathematical framework for analyzing systems of oppression using **set theory**, **discrete mathematics**, and **historical analysis**. 
+The framework identifies four recurring architectural components:
 
-The framework identifies **four architectural components** common to all oppressive systems:
+1. Asymmetric autonomy restriction between In-groups and Out-groups.
+2. Selective empathy that validates In-group suffering and dismisses Out-group harm.
+3. Ideological justification through spurious claims.
+4. Resistance to structural critique.
 
-1. **Asymmetric autonomy restriction** between In-groups and Out-groups
-2. **Selective empathy** that validates In-group suffering while dismissing Out-group harm
-3. **Ideological justification** through spurious claims
-4. **Resistance to structural critique**
+The historical argument tracks the expansion of the Out-group across time. Groups once
+protected by the In-group boundary become available for extraction, while the system's
+returns concentrate in an Elite subset `E ⊂ I`. The manuscript also describes the
+partition logic as a fractal mind virus because it reproduces across institutional and
+cognitive scales.
 
-Through detailed analysis of American racism—from slave patrols to mass incarceration—this work demonstrates that the **Out-group targeted by systemic oppression expands over time**, progressively encompassing groups once part of the In-group. 
+## The manuscript
 
-This expansion reveals that oppressive systems serve not the nominal In-group but an **Elite class** ($E \subset I$) that uses division to prevent solidarity.
+[`Paper/The_Original_Power.tex`](Paper/The_Original_Power.tex) is the canonical source.
+[`Paper/The_Original_Power.pdf`](Paper/The_Original_Power.pdf) is the tracked build and the
+current release is 1,151 pages.
 
-### 🔍 Key Insight
+The main text is organized into four parts:
 
-The transferability of this architecture across scales—from **macro-level racial systems** to **micro-level relational dynamics**—suggests that oppression operates through recognizable, formalizable patterns that can be identified and resisted across contexts.
+- **Part I — Specification and Origins (1440s–1915):** establishes the formal geometry and
+  traces the specification of the racial partition, Buffer Class, Puppet Class, and
+  constitutional kernel.
+- **Part II — The Installation (1619–1865):** examines kinship extraction, the gendered
+  reproductive kernel, slave patrols, and the constitutional enforcement architecture.
+- **Part III — Scaling and Runtime (1865–Present):** follows spatial containment, electoral
+  filtering, institutional recompilation, cannibalization, and the kinetic guarantee.
+- **Part IV — Diagnostics and Output:** develops the terminal theorems, global scaling,
+  algorithmic systems, spectral dynamics, multi-axis interference, and the concluding
+  definition.
 
----
+The front matter contains **A Note on the Title**, **Author's Preface**, **Preface**, and
+**Empirical Methodology**. The appendices collect:
 
-## 🎯 Research Contributions
+- Primary Statutory Sources (United States Code)
+- Equation Registry and Era-Level Calibration
+- Compiled Runtime Log
+- Falsifiability Conditions for the Two Terminal Theorems
+- Geometric Algebra and the N-Dimensional Wage
+- Empirical Validation Index
+- The Photon Model of Polarizing Information
+- Universality and the Finite Topology of Power
 
-- **Mathematical formalization** of oppression using set theory notation
-- **Historical case study** tracing American racism from 1619 to present
-- **Out-group expansion theorem**: Formal proof that oppressive systems expand their targets
-- **Cross-scale analysis**: Demonstration of identical structures in macro and micro contexts
-- **Elite extraction model**: Mathematical representation of who benefits from division
+The **Empirical Validation Index** maps equations to confidence tiers, data sources, and
+falsification criteria. The calibration uses 146 anchor cases spanning 146 historical
+events.
 
----
+## Empirical apparatus
 
-## 📖 Document Structure
+Equation-level Jupyter notebooks live under [`Paper/scripts/`](Paper/scripts/). Files named
+`eq<NN>_*` validate numbered equations or claims. The empirical pipeline runs the SCOTUS
+semantic and spectral work, the spectral foundation notebooks, and then the equation-level
+notebooks in dependency order:
 
-1. **Introduction** - Motivation and framework overview
-2. **Mathematical Foundations** - Set-theoretic definitions and axioms
-3. **Historical Analysis** - American racism as case study
-   - Colonial period to Antebellum South
-   - Reconstruction and Jim Crow
-   - War on Drugs and mass incarceration
-4. **The Elite Extraction Model** - Who truly benefits from division
-5. **Cross-Scale Application** - Micro-level relational dynamics
-6. **Conclusion** - Implications and future directions
+```bash
+make empirical
+```
 
----
+Numerical and structural claims use three confidence tiers:
 
-## 🛠️ Building the Document
+- **Tier 1:** directly reported or transparently derived from a peer-reviewed source or
+  public dataset, with no undisclosed analytical step.
+- **Tier 2:** computed from a public dataset using a disclosed author operationalization.
+- **Tier 3:** an ordinal or structural claim with no quantitative calibration attempted and
+  an explicit statement of its basis and limits.
+
+Each covered claim also receives a falsification criterion. The repository's mandatory
+factual-verification protocol is defined in [`AGENTS.md`](AGENTS.md). Manuscript factual
+edits require contact with the actual source artifact, provenance classification,
+independent review with authority to reject the change, and inspection of the changed
+passage in the rendered PDF before the edit lands.
+
+## Repository layout
+
+| Path | Purpose |
+|---|---|
+| [`Paper/`](Paper/) | Canonical LaTeX manuscript, bibliography, statutory-source material, empirical notebooks, processed data, and the tracked PDF. |
+| [`training/`](training/) | MLX LoRA dataset construction, local-model fine-tuning, evaluation scripts, and a separate Rust chat-group TUI. |
+| [`harness/`](harness/) | Python server for dataset curation, scoring, and training-job coordination. |
+| [`voice_pipeline/`](voice_pipeline/) | Tested TTS and audio-production package with Logic, Ableton, and FCPXML export paths. |
+| [`website/`](website/) | React and TypeScript interactive presentation using D3 and Framer Motion. |
+| [`app/`](app/) | Swift iOS application, `decodingOppression`. |
+| [`tools/`](tools/) | U.S. Code extraction and diffing, EPUB preparation, trademark search, and voice utilities. |
+| [`podcast_prompts/`](podcast_prompts/) | Per-episode narration scripts used by the audio workflow. |
+| [`experiments/`](experiments/) | Rigorous redos of two precursor studies: a race-specific mobility Markov model and a cross-vendor LLM hiring audit. |
+
+## Building
+
+Run all commands from the repository root.
 
 ### Prerequisites
-- TeX Live 2023 (or later), `latexmk`, `biber`, and `cm-super`
-- LaTeX packages: `amsmath`, `amssymb`, `geometry`, `hyperref`, `tikz`, `setspace`, `microtype`
 
-### Spatial Case Study Environment (eq47–eq51)
+- TeX Live 2023 or later
+- `latexmk`
+- `biber`
+- Python 3 for empirical tooling
+- `pandoc`, `pdflatex`, and `pdftoppm` for EPUB generation
 
-For the CS9 spatial overlay notebook (`Paper/scripts/eq47_51_spatial_overlay.ipynb`):
+### PDF
 
-**Browser driver for upcoming Folium → PNG export.** The spatial pipeline will use Folium's `_to_png()` method to export interactive maps as static PNG images. This feature is forthcoming and will require a headless browser driver at the system level: `geckodriver` (Firefox) or `chromedriver` (Chrome/Chromium). Install via:
+Rebuild the tracked PDF directly from the canonical TeX source:
 
-- **macOS:** `brew install geckodriver` or `brew install --cask chromedriver`
-- **Linux:** `apt install firefox-geckodriver` or download ChromeDriver from the releases page
-- **Conda:** `conda install -c conda-forge geckodriver`
+```bash
+make pdf-from-tex
+```
 
-If no driver is installed, the notebook will fall back to HTML-only map output once the export wrapper is implemented. `make empirical` will still complete successfully.
+Verify that a byte-stable rebuild matches the tracked PDF:
 
-Create the conda environment and run the notebook:
+```bash
+make verify-pdf
+```
+
+`make verify-pdf` fixes the build epoch and time zone and fails when the regenerated PDF
+differs from the tracked copy. It is a local gate — a byte-stable rebuild holds only on the
+exact local TeX Live. CI runs `make check-tex`, which compiles the manuscript and fails on a
+LaTeX error or an unresolved cross-reference or citation.
+
+Run the complete manuscript pipeline—index generation, empirical notebooks, SCOTUS audit,
+and PDF compilation—with:
+
+```bash
+make pdf
+```
+
+### EPUB
+
+Build the EPUB 3 edition in `dist/`:
+
+```bash
+make epub
+```
+
+The EPUB pipeline compiles and rasterizes TikZ and PDF figures, prepares cross-references
+and counters, and writes MathML through Pandoc.
+
+### Spatial notebook environment
+
+The dedicated environment for `Paper/scripts/eq47_51_spatial_overlay.ipynb` remains
+available:
+
 ```bash
 conda env create -f Paper/scripts/spatial_env.yml
 conda activate spatial_cs9
 jupyter notebook Paper/scripts/eq47_51_spatial_overlay.ipynb
 ```
 
-### Compile
-
-From the repository root, regenerate the committed PDF from `Paper/The_Original_Power.tex` with:
+### Supporting environments
 
 ```bash
-make pdf-from-tex
+make venv          # empirical notebooks
+make venv-voice    # voice and audio pipeline
+make venv-harness  # training and data harness
+make harness       # run the harness server
 ```
 
-To run the full paper pipeline first (index, empirical notebooks, SCOTUS audit) and then rebuild the PDF:
+## Releases
+
+The current release is [`v1.0.5`](https://github.com/th30d0re/TheOriginalPower/releases/tag/v1.0.5).
+Six tagged releases are available from the
+[`Releases`](https://github.com/th30d0re/TheOriginalPower/releases) page. Each release
+includes `The_Original_Power.pdf` and `The_Original_Power.epub`.
+
+## Website
+
+[`website/`](website/) contains the interactive presentation of the framework. It uses
+React, TypeScript, D3, and Framer Motion, with a chapter-by-chapter story mode and an
+interactive dashboard.
 
 ```bash
-make pdf
+cd website
+npm install
+npm run dev
 ```
 
-Before opening a pull request, verify that the checked-in PDF exactly matches a fresh LaTeX build:
+## Questions and corrections
 
-```bash
-make verify-pdf
-```
+Open a GitHub issue for factual corrections, technical problems, or project questions.
+Manuscript corrections should identify the source artifact and the exact passage at issue.
 
-`make verify-pdf` is also enforced in CI for changes to the paper sources or the committed PDF. It rebuilds `Paper/The_Original_Power.pdf` from the TeX source with a fixed build epoch and suppressed PDF metadata timestamps, then fails if the regenerated PDF differs from the committed file.
+## License
 
-Or manually from `Paper/`:
+**All Rights Reserved © 2026**
 
-```bash
-cd Paper
-latexmk -pdf -interaction=nonstopmode -halt-on-error The_Original_Power.tex
-```
-
----
-
-## 📊 Visual Components
-
-The paper includes:
-- **Venn diagrams** illustrating In-group/Out-group dynamics
-- **Set-theoretic notation** throughout
-- **Historical timeline** of oppressive structures
-- **Mathematical proofs** of key theorems
-
----
-
-## 🎓 Theoretical Framework
-
-### Core Definitions
-
-```
-S = Oppressive System
-I = In-group (privileged class)
-O = Out-group (oppressed class)
-E ⊂ I = Elite class (true beneficiaries)
-A(x) = Autonomy function for group x
-```
-
-### Key Theorem
-
-**Out-group Expansion**: For any oppressive system $S$ over time $t$, if $E \subset I$ represents the elite class that truly benefits, then:
-
-$$|O(t)| \text{ is monotonically non-decreasing as } t \to \infty$$
-
----
-
-## 📚 Historical Case Studies
-
-- **1619-1865**: Colonial slavery and plantation economics
-- **1865-1968**: Reconstruction, convict leasing, Jim Crow
-- **1971-present**: War on Drugs and mass incarceration
-- **Cross-analysis**: Poor whites, immigrants, and expanding oppression
-
----
-
-## 🤝 Contributing
-
-This is an academic research paper. For questions, corrections, or discussion:
-- Open an issue
-- Submit a pull request with suggested edits
-- Contact via email (see paper)
-
----
-
-## 📄 License
-
-**All Rights Reserved** © 2026
-
-This work is protected by copyright. Please contact the author for permissions regarding reproduction, distribution, or derivative works.
-
----
-
-## 🔗 Related Work
-
-This framework builds on:
-- Critical race theory
-- Systems theory
-- Mathematical sociology
-- Historical materialism
-
----
-
-## 📧 Contact
-
-For academic inquiries or collaboration opportunities, please open an issue in this repository.
-
----
-
-<div align="center">
-
-**Built with LaTeX** | **Powered by Mathematical Rigor** | **Grounded in Historical Truth**
-
-</div>
+Contact the author through a GitHub issue for permissions concerning reproduction,
+distribution, or derivative works.

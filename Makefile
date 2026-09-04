@@ -52,7 +52,7 @@ $(BIBER_SHIM):
 	  echo "biber: WARNING - broken and could not be thinned; bibliography may be stale"; \
 	fi
 
-.PHONY: pdf pdf-from-tex verify-pdf biber-shim empirical data-refresh companion index readme all clean
+.PHONY: pdf pdf-from-tex verify-pdf check-tex biber-shim empirical data-refresh companion index readme all clean
 
 biber-shim: $(BIBER_SHIM)
 
@@ -66,6 +66,22 @@ verify-pdf: pdf-from-tex
 		echo "$(PAPER_DIR)/$(PAPER_PDF) is out of date. Run make pdf-from-tex and commit the regenerated PDF."; \
 		exit 1; \
 	}
+
+# check-tex: compile the manuscript and fail on a real LaTeX error or an
+# unresolved cross-reference / citation. This is the CI gate. It deliberately
+# does NOT compare PDF bytes: a byte-identical rebuild only holds on the exact
+# local TeX Live, and CI runs a different distribution (different page count,
+# different font glyphs). Byte-stable verification is `verify-pdf`, run locally.
+check-tex: pdf-from-tex
+	@log="$(PAPER_DIR)/$(PAPER_PDF:.pdf=.log)"; \
+	test -f "$(PAPER_DIR)/$(PAPER_PDF)" || { echo "check-tex: no PDF produced"; exit 1; }; \
+	if grep -nE '^(! |Emergency stop|Fatal error)' "$$log"; then \
+		echo "check-tex: LaTeX errors above"; exit 1; \
+	fi; \
+	if grep -nE 'LaTeX Warning: (Reference|Citation|Hyper reference) .* undefined' "$$log"; then \
+		echo "check-tex: unresolved cross-references or citations above"; exit 1; \
+	fi; \
+	echo "check-tex: build clean ($$(grep -oE 'Output written on .* \([0-9]+ pages' "$$log" | tail -1))"
 
 .PHONY: epub
 
