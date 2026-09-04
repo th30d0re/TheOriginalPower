@@ -54,6 +54,11 @@ $(BIBER_SHIM):
 
 .PHONY: pdf pdf-from-tex verify-pdf check-tex biber-shim empirical data-refresh companion index readme all clean
 
+.PHONY: check-build-consistency
+
+check-build-consistency:
+	python3 tools/check_build_consistency.py
+
 biber-shim: $(BIBER_SHIM)
 
 pdf: index empirical scotus-audit pdf-from-tex

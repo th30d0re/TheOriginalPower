@@ -1,0 +1,231 @@
+name: Check PDF build consistency
+
+"on":
+  pull_request:
+    paths:
+      - "Makefile"
+      - ".vscode/settings.json"
+      - "tools/check_build_consistency.py"
+      - ".github/workflows/build-consistency.yml"
+      - "Paper/**/*.tex"
+      - "Paper/The_Original_Power.pdf"
+  push:
+    paths:
+      - "Makefile"
+      - ".vscode/settings.json"
+      - "tools/check_build_consistency.py"
+      - ".github/workflows/build-consistency.yml"
+      - "Paper/**/*.tex"
+      - "Paper/The_Original_Power.pdf"
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  builder-drift:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Resolve changed files
+        id: changes
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          PR_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          PUSH_BEFORE_SHA: ${{ github.event.before }}
+          PUSH_AFTER_SHA: ${{ github.event.after }}
+        run: |
+          if [ "$EVENT_NAME" = "pull_request" ]; then
+            base="$PR_BASE_SHA"
+            head="$PR_HEAD_SHA"
+          else
+            base="$PUSH_BEFORE_SHA"
+            head="$PUSH_AFTER_SHA"
+          fi
+
+          if [ "$base" = "0000000000000000000000000000000000000000" ]; then
+            git diff-tree --no-commit-id --name-only -r "$head" > changed-files.txt
+          else
+            git diff --name-only "$base" "$head" > changed-files.txt
+          fi
+
+          if grep -Eq '^(Makefile|\.vscode/settings\.json|tools/check_build_consistency\.py|\.github/workflows/build-consistency\.yml)$' changed-files.txt; then
+            echo "relevant=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "relevant=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Check builder drift
+        id: check
+        if: steps.changes.outputs.relevant == 'true'
+        run: |
+          if python3 tools/check_build_consistency.py > builder-drift-diagnosis.txt 2>&1; then
+            cat builder-drift-diagnosis.txt
+            echo "failed=false" >> "$GITHUB_OUTPUT"
+          else
+            cat builder-drift-diagnosis.txt
+            echo "failed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Report builder-drift failure on main
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main' && steps.check.outputs.failed == 'true'
+        uses: actions/github-script@v7
+        env:
+          DIAGNOSIS_FILE: builder-drift-diagnosis.txt
+          JOB_NAME: builder-drift
+          ISSUE_MARKER: "[build-consistency:builder-drift]"
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const fs = require('fs');
+            const diagnosis = fs.readFileSync(process.env.DIAGNOSIS_FILE, 'utf8').trim();
+            const marker = process.env.ISSUE_MARKER;
+            const title = `${marker} ${process.env.JOB_NAME} failed`;
+            const body = [
+              `Job: \`${process.env.JOB_NAME}\``,
+              `Commit: \`${context.sha}\``,
+              '',
+              '```text',
+              diagnosis,
+              '```',
+            ].join('\n');
+            const { data: issues } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              per_page: 100,
+            });
+            const existing = issues.find(issue => !issue.pull_request && issue.title.includes(marker));
+            if (existing) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existing.number,
+                body,
+              });
+            } else {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title,
+                body,
+              });
+            }
+
+      # OPT-IN AUTOMATED FIXER (disabled): requires an ANTHROPIC_API_KEY
+      # repository secret and bills the repository owner for every run.
+      # - name: Hand failure to Claude Code
+      #   if: steps.check.outputs.failed == 'true'
+      #   uses: anthropics/claude-code-action@v1
+      #   with:
+      #     anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+      #     prompt: Fix the builder consistency failure recorded in builder-drift-diagnosis.txt.
+
+      - name: Fail builder-drift job
+        if: steps.check.outputs.failed == 'true'
+        run: exit 1
+
+  stale-pdf:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check that TeX and PDF changed together
+        id: check
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          PR_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          PUSH_BEFORE_SHA: ${{ github.event.before }}
+          PUSH_AFTER_SHA: ${{ github.event.after }}
+        run: |
+          if [ "$EVENT_NAME" = "pull_request" ]; then
+            base="$PR_BASE_SHA"
+            head="$PR_HEAD_SHA"
+          else
+            base="$PUSH_BEFORE_SHA"
+            head="$PUSH_AFTER_SHA"
+          fi
+
+          if [ "$base" = "0000000000000000000000000000000000000000" ]; then
+            git diff-tree --no-commit-id --name-only -r "$head" > changed-files.txt
+          else
+            git diff --name-only "$base" "$head" > changed-files.txt
+          fi
+
+          if grep -Eq '^Paper/.*\.tex$' changed-files.txt && ! grep -Fxq 'Paper/The_Original_Power.pdf' changed-files.txt; then
+            diagnosis="Paper TeX source changed without Paper/The_Original_Power.pdf. Regenerate with make pdf-from-tex, verify locally with make verify-pdf, and commit the PDF alongside the source."
+            printf '%s\n' "$diagnosis" | tee stale-pdf-diagnosis.txt
+            echo "failed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "stale-pdf check passed: no unmatched Paper TeX change."
+            echo "failed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Report stale-pdf failure on main
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main' && steps.check.outputs.failed == 'true'
+        uses: actions/github-script@v7
+        env:
+          DIAGNOSIS_FILE: stale-pdf-diagnosis.txt
+          JOB_NAME: stale-pdf
+          ISSUE_MARKER: "[build-consistency:stale-pdf]"
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const fs = require('fs');
+            const diagnosis = fs.readFileSync(process.env.DIAGNOSIS_FILE, 'utf8').trim();
+            const marker = process.env.ISSUE_MARKER;
+            const title = `${marker} ${process.env.JOB_NAME} failed`;
+            const body = [
+              `Job: \`${process.env.JOB_NAME}\``,
+              `Commit: \`${context.sha}\``,
+              '',
+              '```text',
+              diagnosis,
+              '```',
+            ].join('\n');
+            const { data: issues } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              per_page: 100,
+            });
+            const existing = issues.find(issue => !issue.pull_request && issue.title.includes(marker));
+            if (existing) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existing.number,
+                body,
+              });
+            } else {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title,
+                body,
+              });
+            }
+
+      # OPT-IN AUTOMATED FIXER (disabled): requires an ANTHROPIC_API_KEY
+      # repository secret and bills the repository owner for every run.
+      # - name: Hand failure to Claude Code
+      #   if: steps.check.outputs.failed == 'true'
+      #   uses: anthropics/claude-code-action@v1
+      #   with:
+      #     anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+      #     prompt: Regenerate and verify the PDF described in stale-pdf-diagnosis.txt.
+
+      - name: Fail stale-pdf job
+        if: steps.check.outputs.failed == 'true'
+        run: exit 1
