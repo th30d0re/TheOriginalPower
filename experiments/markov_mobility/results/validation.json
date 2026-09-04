@@ -1,0 +1,14 @@
+{
+  "processed_rows": 50,
+  "row_stochastic": {
+    "Black": true,
+    "White": true
+  },
+  "minimum_probability": {
+    "Black": 0.025302530253,
+    "White": 0.086508650865
+  },
+  "csv_dta_numeric_max_absolute_difference": 0.0,
+  "csv_dta_comparison_method": "pandas 2.2.3 read_csv/read_stata over all numeric columns; performed 2026-09-03",
+  "source_csv_sha256_from_processed_provenance": "affd34c3c6fc77ed1a5c7b710acee7c79009902c4a5b763e548c344199d1ee94"
+}

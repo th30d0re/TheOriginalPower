@@ -1,0 +1,105 @@
+{
+  "operator_definition": {
+    "source": "fitted White minus Black probability at parent Q1 -> child Q5",
+    "amount": 0.080586880806,
+    "delta_nonzero_entries": {
+      "Q1_to_Q1": -0.080586880806,
+      "Q1_to_Q5": 0.080586880806
+    },
+    "race_blind_application": "same delta applied to Black and White",
+    "targeted_application": "delta applied to Black; White held at baseline"
+  },
+  "baseline": {
+    "Black": {
+      "stationary_distribution": [
+        0.29548176793716024,
+        0.3398298095200445,
+        0.20272420875813013,
+        0.10504419381641955,
+        0.05692001996824549
+      ],
+      "stationary_mean_quintile": 2.2880908883585453,
+      "first_passage_bottom_to_top": 21.09088399421289,
+      "mixing_time_tv_lt_quarter": 2
+    },
+    "White": {
+      "stationary_distribution": [
+        0.15968284867685498,
+        0.16909681761584955,
+        0.19987446109486595,
+        0.23010007229765658,
+        0.2412458003147729
+      ],
+      "stationary_mean_quintile": 3.2241291579576425,
+      "first_passage_bottom_to_top": 5.995967054610769,
+      "mixing_time_tv_lt_quarter": 1
+    },
+    "gap": {
+      "top_quintile_share_gap_white_minus_black": 0.1843257803465274,
+      "mean_quintile_gap_white_minus_black": 0.9360382695990975,
+      "stationary_total_variation_distance": 0.30938165882776436
+    }
+  },
+  "race_blind": {
+    "Black": {
+      "stationary_distribution": [
+        0.26795229050042774,
+        0.33506466173086896,
+        0.20513401105487972,
+        0.10900623240493582,
+        0.08284280430888773
+      ],
+      "stationary_mean_quintile": 2.4037225982909867,
+      "first_passage_bottom_to_top": 13.141103019031764,
+      "mixing_time_tv_lt_quarter": 1
+    },
+    "White": {
+      "stationary_distribution": [
+        0.14464186866400536,
+        0.1665665338449477,
+        0.19921164839086344,
+        0.23147338011617202,
+        0.25810656898401146
+      ],
+      "stationary_mean_quintile": 3.2918362469112363,
+      "first_passage_bottom_to_top": 5.076398348641537,
+      "mixing_time_tv_lt_quarter": 1
+    },
+    "gap": {
+      "top_quintile_share_gap_white_minus_black": 0.17526376467512372,
+      "mean_quintile_gap_white_minus_black": 0.8881136486202498,
+      "stationary_total_variation_distance": 0.2977309123863599
+    }
+  },
+  "targeted": {
+    "Black": {
+      "stationary_distribution": [
+        0.26795229050042774,
+        0.33506466173086896,
+        0.20513401105487972,
+        0.10900623240493582,
+        0.08284280430888773
+      ],
+      "stationary_mean_quintile": 2.4037225982909867,
+      "first_passage_bottom_to_top": 13.141103019031764,
+      "mixing_time_tv_lt_quarter": 1
+    },
+    "White": {
+      "stationary_distribution": [
+        0.15968284867685498,
+        0.16909681761584955,
+        0.19987446109486595,
+        0.23010007229765658,
+        0.2412458003147729
+      ],
+      "stationary_mean_quintile": 3.2241291579576425,
+      "first_passage_bottom_to_top": 5.995967054610769,
+      "mixing_time_tv_lt_quarter": 1
+    },
+    "gap": {
+      "top_quintile_share_gap_white_minus_black": 0.1584029960058852,
+      "mean_quintile_gap_white_minus_black": 0.8204065596666562,
+      "stationary_total_variation_distance": 0.27949683589860597
+    }
+  }
+}

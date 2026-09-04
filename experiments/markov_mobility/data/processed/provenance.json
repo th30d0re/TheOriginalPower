@@ -1,0 +1,14 @@
+{
+  "source_url": "https://www2.census.gov/ces/opportunity/table_2-3.csv",
+  "retrieval_date": "2026-09-03",
+  "source_file": "data/raw/oi_table_2.csv",
+  "source_sha256": "affd34c3c6fc77ed1a5c7b710acee7c79009902c4a5b763e548c344199d1ee94",
+  "race_rows": [
+    "kid_race=Black;gender=P",
+    "kid_race=White;gender=P"
+  ],
+  "columns": "kfr_q{i}_cond_par_q{j}, i=child quintile 1..5, j=parent quintile 1..5",
+  "income_measure": "child household income; parent household income",
+  "smoothing": "none",
+  "rounding_adjustment": "each row divided by its sum because published cells are rounded to four significant digits"
+}
