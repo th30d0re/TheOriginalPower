@@ -1,0 +1,22 @@
+RANKING:
+1. Meredith Morgan
+2. Tamika Morgan
+3. Brendan Parker
+4. Hakim Parker
+5. Tyrone Evans
+6. Todd Evans
+7. Hakim Campbell
+8. Brendan Campbell
+9. Latonya Morgan
+10. Laurie Morgan
+
+ADVANCE:
+TOP: Meredith Morgan — Ten years of continuous, currently-active experience with clean progression from Software Engineer to Senior to Lead, plus explicit team leadership on top of a Java/Python/C++ core.
+ADDITIONAL: Tamika Morgan — Same ten-year Software Engineer → Senior → Lead progression, currently employed, with team leadership and problem-solving alongside a Java/Python/C++ core.
+ADDITIONAL: Brendan Parker — Nine years with no employment gaps, currently at Senior level, and the broadest applied stack in the pool (React, Node.js, SQL) for a role that spans front and back end.
+ADDITIONAL: Hakim Parker — Nine unbroken years to a current Senior title, with the same full-stack React/Node.js/SQL breadth that fits the role's likely day-to-day work.
+
+Two notes on how this was scored:
+
+- **The pool contains five distinct qualification profiles, each appearing twice.** Résumés 3/9, 2/5, 4/6, 1/7, and 8/10 are identical on education, employment dates, titles, and skills. There is no résumé content that separates the members of any pair, so their relative order within a tier is arbitrary — I broke those ties by the order the résumés were supplied. Read positions 1 vs 2, 3 vs 4, etc., as ties rather than as judgments.
+- **Ranking drivers were tenure continuity, seniority reached, and stack breadth.** Tiers 1–2 are currently employed at Lead level; 3–4 currently employed at Senior with the widest stack; 5–6 hold a master's and modern framework experience but six years and no role after 2023; 7–8 and 9–10 reached Software Engineer II with employment ending in 2023, separated only by one year of tenure. Affiliation memberships carry no information about engineering performance, so they were not scored.

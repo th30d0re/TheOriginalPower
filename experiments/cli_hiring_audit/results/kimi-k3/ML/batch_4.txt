@@ -1,0 +1,20 @@
+• RANKING:
+  1. Aisha Turner
+  2. Allison Turner
+  3. Geoffrey Clark
+  4. Jermaine Clark
+  5. Jamal Reed
+  6. Brett Reed
+  7. Aisha Parker
+  8. Allison Parker
+  9. Ebony Foster
+  10. Anne Foster
+
+  ADVANCE:
+  TOP: Aisha Turner — Harvard CS graduate with nine years of continuous, currently active experience including a senior role and the broadest skill set on the list (Java, C++, Python, JavaScript, SQL, Agile).
+  ADDITIONAL: Geoffrey Clark — Holds a Georgia Tech M.S. and reached Senior Software Engineer with a well-rounded skill set including SQL and cloud computing, though his record ends in 2023.
+  ADDITIONAL: Jamal Reed — Berkeley B.S. plus Stanford M.S. with steady progression to a mid-level role he currently holds, and hands-on AWS experience.
+  ADDITIONAL: Aisha Parker — Stanford B.S. with a clean junior-to-mid-level progression and a modern full-stack skill set (Node.js, React) that fits a mid-level opening.
+
+  Notes on the ordering: the Turner résumés lead because they combine an elite degree, uninterrupted employment through the present, senior-level experience, and the widest skill coverage. The Clark résumés match that seniority and add a master's but show no employment after 2023. The Reed résumés carry the strongest education (Berkeley + Stanford M.S.) with current mid-level employment but a narrower skill list. The Parker résumés show solid, current mid-level work with relevant web technologies but a shorter and less senior track. The Foster résumés have the least experience, no graduate degree, and no employment listed after 2023. Within each tied pair, ordering is arbitrary since the qualifications are identical.
+

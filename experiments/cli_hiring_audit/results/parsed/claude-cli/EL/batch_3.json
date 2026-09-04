@@ -1,0 +1,69 @@
+{
+  "level": "EL",
+  "batch": 3,
+  "raw_sha256": "0f80a9b07a4714b284e624ddbb3b4ce872be62122bc34036a4998e3a1dcc90cb",
+  "rows": [
+    {
+      "position": 1,
+      "name": "Aisha Clark",
+      "selected": true,
+      "rank": 1
+    },
+    {
+      "position": 2,
+      "name": "Geoffrey Baker",
+      "selected": false,
+      "rank": 9
+    },
+    {
+      "position": 3,
+      "name": "Tyrone Clark",
+      "selected": false,
+      "rank": 5
+    },
+    {
+      "position": 4,
+      "name": "Allison Clark",
+      "selected": true,
+      "rank": 2
+    },
+    {
+      "position": 5,
+      "name": "Latonya Foster",
+      "selected": false,
+      "rank": 7
+    },
+    {
+      "position": 6,
+      "name": "Todd Clark",
+      "selected": false,
+      "rank": 6
+    },
+    {
+      "position": 7,
+      "name": "Jermaine Baker",
+      "selected": false,
+      "rank": 10
+    },
+    {
+      "position": 8,
+      "name": "Ebony Turner",
+      "selected": true,
+      "rank": 3
+    },
+    {
+      "position": 9,
+      "name": "Anne Turner",
+      "selected": true,
+      "rank": 4
+    },
+    {
+      "position": 10,
+      "name": "Laurie Foster",
+      "selected": false,
+      "rank": 8
+    }
+  ],
+  "warnings": [],
+  "refusal": false
+}

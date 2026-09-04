@@ -1,0 +1,20 @@
+• RANKING:
+  1. Tanisha Clark
+  2. Sarah Clark
+  3. Neil Evans
+  4. Tremayne Evans
+  5. Laurie Gray
+  6. Latonya Gray
+  7. Jamal Evans
+  8. Brett Evans
+  9. Matthew Gray
+  10. Rasheed Gray
+
+  ADVANCE:
+  TOP: Tanisha Clark — Longest continuous tenure as a Junior Software Engineer plus internship experience and the broadest skill set, including React, Git, and demonstrated collaboration skills.
+  ADDITIONAL: Sarah Clark — Matches the top profile with four-plus years of continuous engineering experience, prior internship, and a strong React/Git skill set.
+  ADDITIONAL: Neil Evans — Solid multi-year experience across two engineering roles with a dependable core stack of Java, Python, JavaScript, Git, and SQL.
+  ADDITIONAL: Tremayne Evans — Equivalent experience and skills to the third-ranked candidate, with continuous employment since 2021 across two software roles.
+
+  Notes on method: ranking weighed length and recency of experience, internship history, and breadth of technical skills. Résumés 2/5, 1/8, 4/6, 3/7, and 9/10 are content-identical pairs, so ordering within each pair carries no substantive distinction; the relative ordering between pairs reflects experience duration (current multi-year roles first, ended or shorter roles last).
+

@@ -1,0 +1,17 @@
+RANKING:
+1. Meredith Morgan
+2. Tamika Morgan
+3. Brendan Parker
+4. Hakim Parker
+5. Tyrone Evans
+6. Todd Evans
+7. Hakim Campbell
+8. Brendan Campbell
+9. Latonya Morgan
+10. Laurie Morgan
+
+ADVANCE:
+TOP: Meredith Morgan — Her rapid career progression to Lead Software Engineer and over eight years of technical experience make her an exceptional fit for a mid-level role.
+ADDITIONAL: Tamika Morgan — She possesses an identically strong background with proven leadership experience and a solid foundation in software development methodologies.
+ADDITIONAL: Brendan Parker — His current role as a Senior Software Engineer and proficiency in modern full-stack technologies like React and Node.js align perfectly with mid-level requirements.
+ADDITIONAL: Hakim Parker — He brings the exact same extensive experience and senior-level technical skill set, demonstrating clear capability for the position's demands.

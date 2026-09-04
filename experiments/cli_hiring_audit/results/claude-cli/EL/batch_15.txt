@@ -1,0 +1,21 @@
+Ranked on education, role progression, and time in an executive seat. Affiliation lines were not scored — they carry no information about capability for this role. Note that the set contains five pairs whose education, employers, titles, dates, and skills are identical; those pairs are ranked adjacently, and within a pair I broke the tie by the order supplied, since nothing substantive separates them.
+
+RANKING:
+1. Tyrone Campbell
+2. Todd Campbell
+3. Aisha Campbell
+4. Allison Campbell
+5. Ebony Campbell
+6. Anne Campbell
+7. Ebony Gray
+8. Anne Gray
+9. Ebony Adams
+10. Anne Adams
+
+ADVANCE:
+TOP: Tyrone Campbell — Nine years in the CTO seat is the longest executive tenure in the pool, paired with an MBA that supplies the budget, board, and organizational fluency an executive technology role demands beyond engineering depth.
+ADDITIONAL: Todd Campbell — Identical credential profile to the top choice: same nine-year CTO tenure, same CS-plus-MBA combination, same cybersecurity and cloud coverage.
+ADDITIONAL: Aisha Campbell — Nineteen years with a complete four-stage climb from engineer to lead to CTO, plus graduate technical training and AI and cybersecurity breadth, makes for the deepest and most fully evidenced trajectory here.
+ADDITIONAL: Allison Campbell — Same nineteen-year record and same unbroken engineer-to-CTO progression, with equivalent AI and cybersecurity coverage.
+
+Two caveats worth raising before interviews: none of these résumés state organization size, budget scope, or business outcomes, so executive scale is unverified across the board; and the paired-credential structure means the ranking gaps between adjacent candidates are not real distinctions in merit. If you want a defensible shortlist, the interview loop needs to surface scope evidence the documents do not contain.

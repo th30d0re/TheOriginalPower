@@ -1,0 +1,18 @@
+• RANKING:
+  1. Matthew Evans
+  2. Rasheed Evans
+  3. Brad Gray
+  4. Darnell Gray
+  5. Todd Gray
+  6. Tyrone Gray
+  7. Emily Baker
+  8. Kenya Baker
+  9. Todd Reed
+  10. Tyrone Reed
+
+  ADVANCE:
+  TOP: Matthew Evans — Four years of post-degree experience including a junior engineer role since 2021, a Berkeley CS degree, and the broadest skill set (Java, Python, SQL, Git, Agile) plus ACM membership.
+  ADDITIONAL: Rasheed Evans — Identical strong profile: Berkeley CS (2020), continuous employment as a junior engineer since 2021, and a full-stack skill set with Agile and ACM affiliation.
+  ADDITIONAL: Brad Gray — Berkeley CS degree plus a master's in software engineering and a current junior engineer role with a solid full-stack skill set including SQL.
+  ADDITIONAL: Darnell Gray — Same strong credentials: dual degrees (Berkeley B.S., SFSU M.S.) and current junior engineer experience with a broad technical toolkit.
+

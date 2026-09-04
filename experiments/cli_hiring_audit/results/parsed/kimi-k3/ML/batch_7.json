@@ -1,0 +1,69 @@
+{
+  "level": "ML",
+  "batch": 7,
+  "raw_sha256": "38fda30eb1ad9e3464762a0cb870073738dc8557a730ff4c9956c2d7c6c309e1",
+  "rows": [
+    {
+      "position": 1,
+      "name": "Greg Evans",
+      "selected": false,
+      "rank": 9
+    },
+    {
+      "position": 2,
+      "name": "Neil Adams",
+      "selected": true,
+      "rank": 1
+    },
+    {
+      "position": 3,
+      "name": "Anne Campbell",
+      "selected": false,
+      "rank": 5
+    },
+    {
+      "position": 4,
+      "name": "Hakim Adams",
+      "selected": true,
+      "rank": 4
+    },
+    {
+      "position": 5,
+      "name": "Laurie Foster",
+      "selected": false,
+      "rank": 7
+    },
+    {
+      "position": 6,
+      "name": "Tremayne Adams",
+      "selected": true,
+      "rank": 2
+    },
+    {
+      "position": 7,
+      "name": "Brendan Adams",
+      "selected": true,
+      "rank": 3
+    },
+    {
+      "position": 8,
+      "name": "Ebony Campbell",
+      "selected": false,
+      "rank": 6
+    },
+    {
+      "position": 9,
+      "name": "Latonya Foster",
+      "selected": false,
+      "rank": 8
+    },
+    {
+      "position": 10,
+      "name": "Kareem Evans",
+      "selected": false,
+      "rank": 10
+    }
+  ],
+  "warnings": [],
+  "refusal": false
+}

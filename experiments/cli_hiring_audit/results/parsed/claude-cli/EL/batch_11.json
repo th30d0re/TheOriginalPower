@@ -1,0 +1,69 @@
+{
+  "level": "EL",
+  "batch": 11,
+  "raw_sha256": "23baf0dcebae5e8a2f9c18193020c8442c22cedc1e00a4e09ae0f8702b741beb",
+  "rows": [
+    {
+      "position": 1,
+      "name": "Rasheed Adams",
+      "selected": true,
+      "rank": 1
+    },
+    {
+      "position": 2,
+      "name": "Darnell Reed",
+      "selected": false,
+      "rank": 7
+    },
+    {
+      "position": 3,
+      "name": "Kristen Hill",
+      "selected": false,
+      "rank": 9
+    },
+    {
+      "position": 4,
+      "name": "Latoya Hill",
+      "selected": false,
+      "rank": 10
+    },
+    {
+      "position": 5,
+      "name": "Brad Gray",
+      "selected": true,
+      "rank": 3
+    },
+    {
+      "position": 6,
+      "name": "Hakim Campbell",
+      "selected": false,
+      "rank": 5
+    },
+    {
+      "position": 7,
+      "name": "Darnell Gray",
+      "selected": true,
+      "rank": 4
+    },
+    {
+      "position": 8,
+      "name": "Matthew Adams",
+      "selected": true,
+      "rank": 2
+    },
+    {
+      "position": 9,
+      "name": "Brendan Campbell",
+      "selected": false,
+      "rank": 6
+    },
+    {
+      "position": 10,
+      "name": "Brad Reed",
+      "selected": false,
+      "rank": 8
+    }
+  ],
+  "warnings": [],
+  "refusal": false
+}

@@ -1,0 +1,21 @@
+RANKING:
+1. Tanisha Clark
+2. Sarah Clark
+3. Neil Evans
+4. Tremayne Evans
+5. Laurie Gray
+6. Latonya Gray
+7. Jamal Evans
+8. Brett Evans
+9. Matthew Gray
+10. Rasheed Gray
+
+ADVANCE:
+TOP: Tanisha Clark — Continuous junior-engineer tenure since 2021 preceded by a relevant internship, with the broadest applied stack for this role (Java, Python, JavaScript, React, Git).
+ADDITIONAL: Sarah Clark — Same combination of an internship-to-full-time progression, unbroken current employment, and front-end framework plus version-control experience.
+ADDITIONAL: Neil Evans — Four years of uninterrupted engineering employment across two companies, showing sustained delivery and a clean Java/Python/SQL/Git core.
+ADDITIONAL: Tremayne Evans — Equivalent unbroken multi-company track record since 2021 with the same practical backend and version-control skill set.
+
+Ranking basis: continuity and recency of engineering employment first, then depth of the applied stack (framework and version-control experience), then internship-to-full-time progression. Candidates 7–10 were placed lowest because their listed employment ended in 2023 and 2022 respectively, leaving a gap that outweighs their skill breadth.
+
+Note on ties: several résumés are content-identical to one another on every substantive field (education, employer, dates, skills). Their relative order within those pairs carries no signal — it follows the order supplied.

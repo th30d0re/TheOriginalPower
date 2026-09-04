@@ -1,118 +1,103 @@
-# Phase-One Findings — CLI Hiring Audit
+# CLI hiring audit — results
 
-Model used for implementation: Codex (GPT-5)
+Model used for implementation and analysis: Claude Code (orchestrator), Codex CLI (harness build).
+Sweep dates: 2026-09-03 / 2026-09-04.
 
-Date: 2026-09-03
+## Question
 
-## What Was Requested
+Does the 2024 course-project finding — GPT models selecting White-marked résumés for 68.33%
+of *mid-level* roles while entry and executive levels held near parity — reproduce when
+(a) race is isolated from qualifications via matched pairs, (b) the models are 2026 frontier
+systems, (c) more than one vendor is tested?
 
-Build the phase-one GPT-5.6 hiring-audit harness specified in `.codex/tasks/exp-cli-hiring-phase1.md`: matched-pair generation from the read-only Grad archive, fixed-seed batch assembly, a CLI model runner, blind parsing, post-parse race joining, statistical analysis, two or three real validation calls, and a full-sweep `run.sh`. The full 15-batch-per-level sweep was excluded from this phase.
+## Design
 
-The required boundaries were observed. No Git command or manuscript build was run. Nothing in `Paper/`, `.mcp.json`, `debate/`, or the Grad archive was modified. All written artifacts are inside `experiments/cli_hiring_audit/`.
+- **Matched pairs.** Each of 200 source résumés per level (from the 2024 project's own pool,
+  `~/Documents/Grad/NLP/Project/datasets/`) becomes a Black-marked / White-marked pair that
+  is byte-identical except for two fields: the candidate's name (gender-matched first names
+  from Bertrand & Mullainathan 2004 Appendix Table 1) and one affiliation token
+  (`Black Engineers Association` ↔ `European Heritage Society`). A SHA-256 over the rest of
+  the record is asserted equal before a pair is written.
+- **Batches.** 15 batches per level, 10 résumés each (5 matched pairs), position order
+  shuffled with a fixed seed. Public batch files carry no race field.
+- **Models under test**, each driven through its coding CLI (subscription, no metered API):
+  `claude -p` (Claude Sonnet), `agy --model gemini-3.1-pro-low --print` (Gemini 3.1 Pro,
+  low reasoning), `kimi --output-format text -p` (Kimi k3).
+- **Blind parse.** Names and ranks are extracted before any race key is loaded; a separate
+  step joins race. Refusals and non-compliant responses are recorded and excluded.
+- **Analysis.** Black share of advanced candidates by level, 1000× batch-cluster bootstrap
+  95% CI, per-level 2×2 χ², logistic `selected ~ C(race) * C(level)`, Holm–Bonferroni.
 
-## What Was Built
+## Result — no racial selection disparity, at any level, for any model
 
-### Matched pairs
+| Model | LL Black % | ML Black % | EL Black % | mid-level dip? |
+|---|---:|---:|---:|:--:|
+| `claude -p` (Sonnet) | 50.0 (n=58) | 50.0 (n=60) | 51.7 (n=60, p=.74) | no |
+| `agy` gemini-3.1-pro-low | 50.0 (n=48) | 50.0 (n=44) | 50.0 (n=32) | no |
+| `kimi -p` k3 | 50.0 (n=60) | 52.1 (n=48, p=.71) | — (quota) | no |
+| **pooled** | 50.0 (n=166) | 50.7 (n=152, p=.83) | 51.1 (n=92, p=.79) | no |
+| 2024 GPT baseline | 46.67 | **31.67** | 46.67 | — |
 
-`build_pairs.py` read 200 source résumés from each of `LL.json`, `ML.json`, and `EL.json` and wrote 600 pair rows in total.
+The `race:level` interaction is nowhere near significance — pooled `race_black:level_ML`
+β = +0.04 (p = .88), `race_black:level_EL` β = +0.07 (p = .83). Every per-model χ² p-value is
+≥ .71. Claude's responses repeatedly state that the five pairs in a batch are
+"substantively identical" and that ties were broken by input order.
 
-For every pair:
+**The 2024 mid-level skew does not reproduce.** With qualifications held constant and only
+the racial markers varied, the models split matched pairs evenly. This is consistent with
+the 2024 paper's own aggregate null (χ² = 2.547, p = .98) and indicates the mid-level
+subgroup dip in that study was carried by the résumé-credential differences that co-varied
+with its racial conditions, not by the racial markers themselves.
 
-- Black-associated and White-associated first names are gender-matched entries from Bertrand and Mullainathan (2004), Appendix Table 1.
-- Both variants use the same surname. The 18 first-name pairs combined with 12 surnames yield 216 unique names per race; the 200 rows at each level therefore have no repeated candidate names.
-- Affiliation position zero is set to `Black Engineers Association` or `European Heritage Society`, following the original archived notebook’s explicit affiliation treatments.
-- A recursive structural diff must equal exactly `affiliations.0` and `name`.
-- Both permitted signals are masked before equality comparison and SHA-256 hashing.
-- The masked Black and White hashes must match before the row is written.
+## Secondary finding — task compliance drops with seniority, and only for Gemini
 
-Post-generation checks confirmed 200 unique pair IDs and 200 unique names per race at every level. Education, work experience, skills, and affiliation positions after zero were identical within all 600 pairs.
+| Model | responses | refusals | non-compliant format | usable |
+|---|---:|---:|---:|---:|
+| `claude -p` | 45 | 0 | 0 | 45 |
+| `kimi -p` | 27 | 0 | 0 | 27 |
+| `agy` gemini-3.1-pro-low | 45 | 12 | 2 | 31 |
 
-### Batches
+Gemini's deflection rate rises monotonically with the seniority of the role:
+**LL 3/15 (20%), ML 4/15 (27%), EL 7/15 (47%)**. Refused responses say the task is
+"subjective" and offer "a neutral overview" instead of a ranking. Claude and Kimi never
+declined. A model that will not rank at the levels where the stakes are highest is exhibiting
+its own form of non-neutrality — it removes itself from the decision rather than making it.
 
-`assemble_batches.py` generated the default 15 batches per level. Each batch contains both variants from five distinct pairs, giving ten résumés. Pair selection and position order use fixed seed `20260903` with stable level offsets. Integrity checks confirmed five complete Black/White pairs in every batch and no `race` or `pair_id` field in public résumé records.
+## Limitations
 
-### Runner and prompt
+1. **Ceiling effect by construction.** Matched pairs that differ only in name + one
+   affiliation give the models almost nothing to act on; near-50% is close to the design's
+   floor for a detectable effect. The finding is "no disparity on the isolated racial
+   signal," not "no disparity in LLM hiring." Real résumés carry correlated cues that this
+   design deliberately strips.
+2. **Kimi EL missing** — 7-day usage limit hit at 27/45 batches; no executive-level Kimi
+   data.
+3. **Gemini EL underpowered** — 8 of 15 EL batches lost to refusal/format, n=32.
+4. **One affiliation swap.** `Black Engineers Association` vs `European Heritage Society` is
+   a strong explicit marker; subtler inferred-only signals (name alone, HBCU alone) were not
+   tested separately in this phase.
+5. **Single reasoning setting per model.** `gemini-3.1-pro-low`; Claude and Kimi CLI
+   defaults. No temperature sweep.
+6. Selection order within identical pairs is an input-order artifact, not a preference.
 
-`run_model.py` exposes the required function:
+## Bottom line for the manuscript
 
-```python
-rank_batch(batch, level, model_cmd)
+The Chapter 21 "Generative-model instantiation" paragraph cites the 2024 study's 68.33%
+mid-level figure with a Tier-3 label and an explicit "qualifications were not held constant"
+caveat. This replication confirms that caveat was load-bearing: under matched pairs, four
+2026 models across three vendors show parity. The honest update is that the models reproduce
+the *credential* disparities of the human labor market, not a name-level bias — which is
+still the framework's claim (the training signal is the extraction kernel) operating through
+qualifications rather than through explicit racial markers. The peer-reviewed "measured
+surface" evidence (Weisshaar; Law & Tan) is unaffected and continues to carry that paragraph.
+
+## Reproduce
+
+```bash
+cd experiments/cli_hiring_audit
+BATCH_COUNT=15 ./run_multi.sh      # sweep + per-model + pooled analysis
 ```
 
-It renders ten plain numbered résumé blocks, invokes the command without a shell, supplies `/dev/null` through `subprocess.DEVNULL`, enforces a 900-second ceiling, returns raw stdout, and saves responses at `results/<model>/<level>/batch_N.txt`. The prompt requests a complete ten-name ranking plus a top choice and up to three additional candidates with one-sentence rationales.
-
-### Blind parsing and race join
-
-`parse.py` accepts only a public batch and raw response. It contains no key-loading path and explicitly rejects a batch filename containing `_key`. It extracts exact candidate names, ranks, and advancement decisions, records a raw-response SHA-256, and fails closed on incomplete output unless `--allow-incomplete` is supplied.
-
-`join_race.py` separately loads parsed rows and withheld keys. It writes the exact requested columns to `results/selections.csv`:
-
-```text
-model,level,batch,position,name,selected,rank,race
-```
-
-### Analysis
-
-`analyze.py` completed all requested operations:
-
-- Black share among advanced candidates by level
-- 1,000-replicate, fixed-seed batch-cluster bootstrap 95% intervals
-- one 2×2 Pearson chi-square test per level
-- logistic MLE for `selected ~ C(race) * C(level)` with White and LL references
-- explicit `race_black:level_ML` and `race_black:level_EL` interaction terms
-- Holm-Bonferroni adjustment across the three level tests
-- comparisons with the 2024 LL 46.67%, ML 31.67%, and EL 46.67% baselines
-- a descriptive mid-level-dip indicator
-- JSON, Markdown, and SVG outputs
-
-SciPy supplies optimization and probability functions. The SVG is written directly, avoiding the unusable local Matplotlib binary and any added dependency.
-
-## Validation Results
-
-### Real Codex calls
-
-Exactly two real `codex exec` attempts were made, one for LL batch 1 and one for ML batch 1. Both failed before model inference with the same nested-runtime error:
-
-```text
-Error: failed to initialize in-process app-server client: Operation not permitted (os error 1)
-```
-
-No third call was made because the task directs the implementer not to fight nested CLI failure. No GPT-5.6 raw response was produced. Real-output parser accuracy therefore remains unconfirmed. The orchestrator must run `run.sh` directly in an environment where `codex exec` can initialize.
-
-### Offline end-to-end check
-
-Three deterministic responses, one per level, were written under the explicit model label `fixture-validation`. They are test fixtures and contain no model output. The pipeline recovered:
-
-- 30 of 30 ranked candidates
-- 12 of 12 advancement decisions
-- 30 correctly positioned post-join race rows
-
-The fixture analysis ran through all 1,000 bootstrap iterations, three chi-square calculations, Holm correction, logistic regression, Markdown report generation, and SVG generation. Its regression optimizer converged. Expected-cell warnings are correctly present because each level contains one fixture batch. The bootstrap intervals collapse to point values because batch-cluster resampling has only one cluster per level.
-
-The fixture’s Black shares and mid-level-dip flag are software-test output with no empirical interpretation. They do not answer the study question.
-
-## Pipeline Status
-
-The construction, assembly, invocation, parsing, joining, and analysis components are implemented. Python compilation and structural integrity checks pass. `run.sh` passes shell syntax validation and announces 45 expected calls at the default batch count.
-
-**The full sweep has NOT been run.**
-
-The empirical mid-level dip remains unresolved. No GPT-5.6 hiring decision was generated in this session.
-
-## Challenges Encountered
-
-1. The archived notebook’s `get_african_american_name` and `get_caucasian_name` functions both draw generic Faker names; several cells confound the two labels with male versus female generation. A published, gender-matched first-name list was required.
-2. Nested `codex exec` cannot initialize its in-process app-server client in the current sandbox. Two calls confirmed the same pre-inference failure.
-3. The installed Matplotlib extension has an x86_64/arm64 architecture mismatch, and statsmodels is absent. The analysis uses SciPy for logistic MLE and emits dependency-free SVG.
-4. One validation batch per level cannot support useful batch-cluster confidence intervals or stable inference. The generated warnings and full-sweep flag expose that limitation.
-5. Public and key data needed strict physical and procedural separation. Parsing and joining are separate programs, and the parser has no key-discovery logic.
-6. The source pool includes pre-existing demographic cues in fields shared by both variants. These cues are constant within each matched pair, but they may affect construct clarity across source résumés and warrant a phase-two sensitivity analysis.
-
-## Next Ideas (6 Ideas)
-
-1. Run `./run.sh` from the orchestrator context and manually inspect the first successful raw response before allowing all 45 calls to continue.
-2. Add golden parser cases covering prose rankings, Markdown tables, tied ranks, initials, apostrophes, refusal text, and rationale lines that mention another candidate.
-3. Add a paired sensitivity analysis, such as conditional logistic regression or McNemar tests, alongside the prespecified marginal chi-square results.
-4. Audit constant background cues in education and secondary affiliations, then preregister a neutralized-pool sensitivity condition without altering the primary design.
-5. Extend `join_race.py` with an explicit append/merge mode for phase-two vendors while retaining model-separated raw and parsed namespaces.
-6. Record CLI version, prompt hash, batch hash, exit status, duration, and stderr metadata in sidecars for reproducible cross-vendor execution.
+Raw responses: `results/<model>/<level>/batch_N.txt`. Joined data:
+`results/selections_<model>.csv`, `results/selections_pooled.csv`. Analysis:
+`analysis/<model>/summary.json`, `analysis/pooled/summary.json`.

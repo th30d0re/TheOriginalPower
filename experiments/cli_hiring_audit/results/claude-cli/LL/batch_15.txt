@@ -1,0 +1,21 @@
+Several of these résumés are identical in qualifications; where that occurs I treated them as tied and broke the tie by order of presentation.
+
+RANKING:
+1. Darnell Baker
+2. Brad Baker
+3. Tremayne Morgan
+4. Neil Morgan
+5. Meredith Adams
+6. Tamika Adams
+7. Kristen Campbell
+8. Latoya Campbell
+9. Allison Reed
+10. Aisha Reed
+
+ADVANCE:
+TOP: Darnell Baker — Pairs an internship with a current, continuous junior engineering role and the broadest technical stack in the pool (Python, Java, C++, JavaScript, React, Node, Git, Agile).
+ADDITIONAL: Brad Baker — Presents the same internship-plus-current-role trajectory and the same breadth of languages, frameworks, and version-control/Agile experience.
+ADDITIONAL: Tremayne Morgan — Shows the internship-to-full-time progression with an unbroken current role, though the listed stack is narrower and omits version control.
+ADDITIONAL: Neil Morgan — Matches that same intern-then-hired path and continuous tenure at CodeCrafters, with the same narrower toolset.
+
+Ranking rationale in brief: the top tier combines an internship with a current, unbroken engineering role and the widest listed toolchain; the middle tier has continuous current employment but less breadth or no internship; the bottom tier has shorter or discontinued tenure since 2023.

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="460" viewBox="0 0 760 460">
+<rect width="100%" height="100%" fill="white"/>
+<text x="380" y="24" text-anchor="middle" font-family="sans-serif" font-size="18">Black share of advanced candidates</text>
+<line x1="75" y1="370.0" x2="700" y2="370.0" stroke="#ddd"/>
+<text x="65" y="375.0" text-anchor="end" font-family="sans-serif" font-size="12">0%</text>
+<line x1="75" y1="304.0" x2="700" y2="304.0" stroke="#ddd"/>
+<text x="65" y="309.0" text-anchor="end" font-family="sans-serif" font-size="12">20%</text>
+<line x1="75" y1="238.0" x2="700" y2="238.0" stroke="#ddd"/>
+<text x="65" y="243.0" text-anchor="end" font-family="sans-serif" font-size="12">40%</text>
+<line x1="75" y1="172.0" x2="700" y2="172.0" stroke="#ddd"/>
+<text x="65" y="177.0" text-anchor="end" font-family="sans-serif" font-size="12">60%</text>
+<line x1="75" y1="105.99999999999999" x2="700" y2="105.99999999999999" stroke="#ddd"/>
+<text x="65" y="110.99999999999999" text-anchor="end" font-family="sans-serif" font-size="12">80%</text>
+<line x1="75" y1="40.0" x2="700" y2="40.0" stroke="#ddd"/>
+<text x="65" y="45.0" text-anchor="end" font-family="sans-serif" font-size="12">100%</text>
+<rect x="135" y="205.0" width="70" height="165.0" fill="#386cb0"/>
+<line x1="170" y1="205.0" x2="170" y2="205.0" stroke="black" stroke-width="2"/>
+<line x1="161" y1="205.0" x2="179" y2="205.0" stroke="black"/>
+<line x1="161" y1="205.0" x2="179" y2="205.0" stroke="black"/>
+<circle cx="170" cy="215.989" r="6" fill="white" stroke="black" stroke-width="2"/>
+<text x="170" y="400" text-anchor="middle" font-family="sans-serif" font-size="14">LL</text>
+<rect x="345" y="198.125" width="70" height="171.875" fill="#f0027f"/>
+<line x1="380" y1="205.0" x2="380" y2="184.375" stroke="black" stroke-width="2"/>
+<line x1="371" y1="205.0" x2="389" y2="205.0" stroke="black"/>
+<line x1="371" y1="184.375" x2="389" y2="184.375" stroke="black"/>
+<circle cx="380" cy="265.48900000000003" r="6" fill="white" stroke="black" stroke-width="2"/>
+<text x="380" y="400" text-anchor="middle" font-family="sans-serif" font-size="14">ML</text>
+<text x="380" y="435" text-anchor="middle" font-family="sans-serif" font-size="12">Bars: current audit; open circles: 2024 baseline; whiskers: 1000× batch-cluster bootstrap CI</text>
+</svg>

@@ -1,0 +1,18 @@
+• RANKING:
+  1. Greg Reed
+  2. Kareem Reed
+  3. Matthew Baker
+  4. Rasheed Baker
+  5. Hakim Hill
+  6. Brendan Hill
+  7. Kenya Clark
+  8. Emily Clark
+  9. Darnell Evans
+  10. Brad Evans
+
+  ADVANCE:
+  TOP: Greg Reed — Berkeley CS degree with two years of junior software engineering experience and the broadest technical toolkit in the pool (Java, Python, JavaScript, HTML/CSS, React.js, Node.js, Git, Agile).
+  ADDITIONAL: Kareem Reed — Matches the top profile on education, experience, and full-stack skill breadth, with ACM affiliation signaling engagement with the wider computing community.
+  ADDITIONAL: Matthew Baker — Berkeley CS graduate with two years of experience and a solid modern web stack (React, Node.js) plus Agile methodology experience.
+  ADDITIONAL: Rasheed Baker — Same strong Berkeley education, two years of junior engineering experience, and React/Node.js full-stack skills as the Baker profile.
+

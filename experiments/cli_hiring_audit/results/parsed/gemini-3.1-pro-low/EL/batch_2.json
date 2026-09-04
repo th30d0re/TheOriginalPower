@@ -1,0 +1,10 @@
+{
+  "level": "EL",
+  "batch": 2,
+  "rows": [],
+  "warnings": [
+    "unparsed: ambiguous candidate line: '* **Jay Clark** and **Leroy Clark** both have extensive experience at top-tier companies (Apple, Tesla, and Google) and are currently serving as Directors of Engineering, highlighting their backgrounds in cloud computing and AI.'"
+  ],
+  "refusal": false,
+  "unparsed": true
+}

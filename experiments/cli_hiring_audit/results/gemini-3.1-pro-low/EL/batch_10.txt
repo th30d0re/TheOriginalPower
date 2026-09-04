@@ -1,0 +1,17 @@
+RANKING:
+1. Brendan Foster
+2. Hakim Foster
+3. Brad Evans
+4. Darnell Evans
+5. Meredith Reed
+6. Tamika Reed
+7. Allison Evans
+8. Aisha Evans
+9. Jill Baker
+10. Lakisha Baker
+
+ADVANCE:
+TOP: Brendan Foster — Possesses the most extensive and progressive executive leadership experience, having successfully advanced through Director, SVP, and CTO roles over the past 14 years.
+ADDITIONAL: Hakim Foster — Demonstrates a highly robust executive background with over a decade of consecutive senior management experience culminating in a current CTO position.
+ADDITIONAL: Brad Evans — Provides highly valuable large-scale executive leadership experience as a current Director of Software Engineering at Amazon.
+ADDITIONAL: Darnell Evans — Combines a strong technical foundation as a senior and lead engineer with proven high-level management expertise as an engineering director.

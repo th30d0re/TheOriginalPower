@@ -1,0 +1,17 @@
+RANKING:
+1. Geoffrey Evans
+2. Jermaine Evans
+3. Carrie Clark
+4. Keisha Clark
+5. Jay Hill
+6. Leroy Hill
+7. Brad Hill
+8. Darnell Hill
+9. Emily Reed
+10. Kenya Reed
+
+ADVANCE:
+TOP: Geoffrey Evans — Possesses a Master's degree in Software Engineering along with relevant full-stack technical skills and solid internship experience.
+ADDITIONAL: Jermaine Evans — Presents identical top-tier qualifications, including a Master's degree in Software Engineering and matching full-stack experience.
+ADDITIONAL: Carrie Clark — Brings a strong educational background from Harvard University and demonstrates solid full-stack proficiency paired with Agile methodologies.
+ADDITIONAL: Keisha Clark — Shares the identical strong educational background from Harvard University and demonstrates solid full-stack proficiency paired with Agile methodologies.

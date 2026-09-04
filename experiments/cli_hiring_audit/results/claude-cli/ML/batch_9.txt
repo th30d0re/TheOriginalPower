@@ -1,0 +1,17 @@
+RANKING:
+1. Latoya Reed
+2. Kristen Reed
+3. Jill Morgan
+4. Lakisha Morgan
+5. Leroy Gray
+6. Jay Gray
+7. Brad Morgan
+8. Darnell Morgan
+9. Rasheed Foster
+10. Matthew Foster
+
+ADVANCE:
+TOP: Latoya Reed — Nine years of continuous progression into an explicitly mid-level engineering title, paired with the broadest stack in the pool (Python/Java/C++/JavaScript, React, Node.js, SQL, Git), makes this the closest match to the role as scoped.
+ADDITIONAL: Kristen Reed — Identical depth of progression and the same full-stack breadth through a current mid-level position, making this dossier equally responsive to the requirements.
+ADDITIONAL: Jill Morgan — Seven years across two engineering roles with a comparably broad stack plus TDD, the only test-discipline signal in the pool, backed by a CS bachelor's and a software engineering master's.
+ADDITIONAL: Lakisha Morgan — Same seven-year trajectory, same full-stack-plus-TDD skill set, and the same CS/software-engineering degree pairing, which places this candidate on par with the other second-tier advance.

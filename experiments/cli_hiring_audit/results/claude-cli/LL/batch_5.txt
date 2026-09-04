@@ -1,0 +1,26 @@
+Ranking criteria applied: total relevant professional experience (internship + full-time), continuity/recency of employment, and breadth of the listed technical stack.
+
+One observation about the material: the ten résumés reduce to five distinct qualification profiles, each appearing twice with identical education, work history, and skills. Within each tied pair I broke the tie by order of presentation, since the résumé content itself gives no basis to separate them.
+
+RANKING:
+1. Tremayne Clark
+2. Neil Clark
+3. Brett Foster
+4. Jamal Foster
+5. Aisha Turner
+6. Allison Turner
+7. Rasheed Foster
+8. Matthew Foster
+9. Lakisha Adams
+10. Jill Adams
+
+ADVANCE:
+TOP: Tremayne Clark — Most total experience of any applicant (a summer internship plus three continuous years as a junior engineer) paired with the broadest listed stack, including both SQL and React.
+
+ADDITIONAL: Neil Clark — Identical qualification profile to the top choice, with the same internship-plus-three-years trajectory and the same seven listed skills.
+
+ADDITIONAL: Brett Foster — Four unbroken years in a current junior engineering role, with a full-stack JavaScript/Node profile plus SQL.
+
+ADDITIONAL: Jamal Foster — Same four-year continuous tenure in a current role and the same JavaScript/Node/SQL skill set.
+
+**Note on tier boundaries:** positions 3–4 rank above 5–6 because the Foster (2022) profile is currently employed with four unbroken years, while the Turner profile's last role ended in 2023; positions 5–6 rank above 7–8 because the Turner profile adds internship experience and Java against a stack that otherwise lacks SQL. Positions 9–10 rank last on the shortest tenure (one year).

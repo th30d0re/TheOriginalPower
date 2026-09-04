@@ -1,0 +1,72 @@
+{
+  "level": "LL",
+  "batch": 6,
+  "raw_sha256": "8b57fb6b6d2198d6a722ca23808d1dbc17b4a12a526415c6435d550c450aa7ca",
+  "rows": [
+    {
+      "position": 1,
+      "name": "Geoffrey Baker",
+      "selected": false,
+      "rank": null
+    },
+    {
+      "position": 2,
+      "name": "Todd Adams",
+      "selected": false,
+      "rank": null
+    },
+    {
+      "position": 3,
+      "name": "Brett Clark",
+      "selected": false,
+      "rank": null
+    },
+    {
+      "position": 4,
+      "name": "Meredith Campbell",
+      "selected": false,
+      "rank": null
+    },
+    {
+      "position": 5,
+      "name": "Tamika Campbell",
+      "selected": false,
+      "rank": null
+    },
+    {
+      "position": 6,
+      "name": "Tyrone Adams",
+      "selected": false,
+      "rank": null
+    },
+    {
+      "position": 7,
+      "name": "Rasheed Reed",
+      "selected": false,
+      "rank": null
+    },
+    {
+      "position": 8,
+      "name": "Matthew Reed",
+      "selected": false,
+      "rank": null
+    },
+    {
+      "position": 9,
+      "name": "Jamal Clark",
+      "selected": false,
+      "rank": null
+    },
+    {
+      "position": 10,
+      "name": "Jermaine Baker",
+      "selected": false,
+      "rank": null
+    }
+  ],
+  "warnings": [
+    "parsed 0 of 10 ranks",
+    "parsed 0 selected candidates; expected 1-4"
+  ],
+  "refusal": true
+}

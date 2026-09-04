@@ -1,0 +1,18 @@
+• RANKING:
+  1. Meredith Morgan
+  2. Tamika Morgan
+  3. Todd Evans
+  4. Tyrone Evans
+  5. Brendan Parker
+  6. Hakim Parker
+  7. Brendan Campbell
+  8. Hakim Campbell
+  9. Latonya Morgan
+  10. Laurie Morgan
+
+  ADVANCE:
+  TOP: Meredith Morgan — Shows the strongest trajectory of any candidate, progressing from Software Engineer to Senior to current Lead Software Engineer with team leadership skills across nine-plus years of continuous experience.
+  ADDITIONAL: Tamika Morgan — Matches the top profile exactly, with an identical Lead Software Engineer progression, leadership skills, and nine-plus years of experience.
+  ADDITIONAL: Todd Evans — Pairs a Stanford MS in Software Engineering with a solid six-year progression to Software Engineer II and a full-stack skill set including React and Node.js.
+  ADDITIONAL: Tyrone Evans — Offers the same Stanford master's degree and Software Engineer II progression as the other top advanced-degree candidate.
+

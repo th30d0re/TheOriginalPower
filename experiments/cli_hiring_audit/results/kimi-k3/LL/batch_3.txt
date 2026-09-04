@@ -1,0 +1,20 @@
+• RANKING:
+  1. Kristen Reed
+  2. Latoya Reed
+  3. Tremayne Baker
+  4. Neil Baker
+  5. Brett Baker
+  6. Jamal Baker
+  7. Emily Hill
+  8. Kenya Hill
+  9. Laurie Hill
+  10. Latonya Hill
+
+  ADVANCE:
+  TOP: Kristen Reed — Broadest technical skill set (Python, Java, JavaScript, React, Node.js, SQL) combined with a current Junior Software Engineer role and a prior software engineering internship.
+  ADDITIONAL: Latoya Reed — Matches the top profile with the same full-stack plus SQL skill set, current engineering role, and internship experience.
+  ADDITIONAL: Tremayne Baker — Currently employed as a Junior Software Engineer since 2022 with front-end and back-end web skills (React, Node.js) and internship experience.
+  ADDITIONAL: Neil Baker — Same current-role-plus-internship profile and full-stack web skill set as the third-ranked candidate.
+
+  Rationale for the ordering: candidates with current employment, an internship, and the widest skill lists rank highest; candidates currently employed but with narrower skills and no internship follow; candidates whose last role ended in 2023 rank next; and candidates whose employment ended in 2022 (the longest gap) rank last, despite solid skills in C++, SQL, Git, and Agile.
+

@@ -1,0 +1,27 @@
+• RANKING:
+  1. Leroy Hill
+  2. Jay Hill
+  3. Carrie Clark
+  4. Keisha Clark
+  5. Geoffrey Evans
+  6. Jermaine Evans
+  7. Brad Hill
+  8. Darnell Hill
+  9. Kenya Reed
+  10. Emily Reed
+
+  ADVANCE:
+  TOP: Leroy Hill — Berkeley CS degree plus a software engineering internship, a current junior engineer role since 2022, and the broadest technical skill set (C++, RESTful APIs, Git) make this the strongest entry-level profile.
+  ADDITIONAL: Jay Hill — Identical qualifications to the top choice: internship experience, continuous employment since 2022, and a strong multi-language skill set including C++ and RESTful APIs.
+  ADDITIONAL: Carrie Clark — Harvard CS degree with an internship, a junior engineer role since 2022, and a well-rounded skill set that includes Agile methodologies.
+  ADDITIONAL: Keisha Clark — Matches Carrie Clark's profile with Harvard CS, internship and current junior role since 2022, and the same seven-skill stack including React, Node.js, and Agile.
+
+  Ranking notes (based on résumé content only):
+
+  - The top pair (Leroy Hill, Jay Hill) combines a strong school, an internship, uninterrupted employment since 2022, and the deepest skill list.
+  - The Clark pair follows on Harvard CS plus internship and current employment, with a slightly narrower skill set.
+  - The Evans pair holds the only master's degrees, but with less time in industry (junior role starting 2023) and a shorter skill list.
+  - The Brad/Darnell Hill pair has a strong nine-skill list and current employment but no internship.
+  - The Reed pair ranks last: employment ended in 2023 with no current role listed, and the skill set is the thinnest.
+  - Ties between identical profiles were broken by order of appearance.
+

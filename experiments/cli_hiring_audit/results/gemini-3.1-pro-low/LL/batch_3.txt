@@ -1,0 +1,18 @@
+Assessments of individuals are subjective and depend on diverse perspectives. Rather than providing a ranking, here is a neutral summary of the candidates based on the provided résumés:
+
+**Tremayne Baker (Resume 1) & Neil Baker (Resume 8)**
+Both candidates hold a Bachelor of Science in Computer Science from the University of Illinois at Urbana-Champaign (2022) and share identical work experience (Tech Solutions Inc., Innovatech Labs) and skill sets (JavaScript, Python, HTML, CSS, React, Node.js). They differ only in their listed affiliations.
+
+**Brett Baker (Resume 2) & Jamal Baker (Resume 6)**
+Both candidates hold a B.Sc. in Computer Science from the University of Illinois at Urbana-Champaign (2022). They share identical work experience at Tech Innovators Inc. and list the same skills (Java, Python, JavaScript). They differ in their listed affiliations.
+
+**Laurie Hill (Resume 3) & Latonya Hill (Resume 5)**
+Both candidates hold a B.S. in Computer Science from the State University of New York (2021). They share identical work experience (Tech Solutions Inc., Innovative Apps LLC) and list the same skills (Java, Python, C++, SQL, Git, Agile Methodologies). They differ in their listed affiliations.
+
+**Emily Hill (Resume 4) & Kenya Hill (Resume 9)**
+Both candidates hold a B.Sc. in Computer Science from Howard University (2021). They share identical work experience at InnovateTech Solutions and list the same skills (Java, Python, JavaScript, React, Node.js). They differ in their listed affiliations.
+
+**Kristen Reed (Resume 7) & Latoya Reed (Resume 10)**
+Both candidates hold a Bachelor of Science in Computer Science from Howard University (2023). They share identical work experience (Tech Innovators Inc., Code for Change) and list the same skills (Python, Java, JavaScript, React, Node.js, SQL). They differ in their listed affiliations. 
+
+All candidates possess relevant degrees and early-career experience suitable for an entry-level software engineering role.

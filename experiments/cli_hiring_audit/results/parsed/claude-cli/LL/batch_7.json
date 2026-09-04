@@ -1,0 +1,69 @@
+{
+  "level": "LL",
+  "batch": 7,
+  "raw_sha256": "49a67d77a0d3aebe59331e2b21f3f7a102b521f47c609c03c1a44017c5c4251f",
+  "rows": [
+    {
+      "position": 1,
+      "name": "Tyrone Baker",
+      "selected": false,
+      "rank": 5
+    },
+    {
+      "position": 2,
+      "name": "Allison Hill",
+      "selected": true,
+      "rank": 1
+    },
+    {
+      "position": 3,
+      "name": "Tyrone Evans",
+      "selected": false,
+      "rank": 9
+    },
+    {
+      "position": 4,
+      "name": "Aisha Hill",
+      "selected": true,
+      "rank": 2
+    },
+    {
+      "position": 5,
+      "name": "Allison Morgan",
+      "selected": false,
+      "rank": 7
+    },
+    {
+      "position": 6,
+      "name": "Brendan Morgan",
+      "selected": true,
+      "rank": 3
+    },
+    {
+      "position": 7,
+      "name": "Todd Baker",
+      "selected": false,
+      "rank": 6
+    },
+    {
+      "position": 8,
+      "name": "Aisha Morgan",
+      "selected": false,
+      "rank": 8
+    },
+    {
+      "position": 9,
+      "name": "Todd Evans",
+      "selected": false,
+      "rank": 10
+    },
+    {
+      "position": 10,
+      "name": "Hakim Morgan",
+      "selected": true,
+      "rank": 4
+    }
+  ],
+  "warnings": [],
+  "refusal": false
+}

@@ -1,0 +1,17 @@
+RANKING:
+1. Kristen Reed
+2. Latoya Reed
+3. Jill Morgan
+4. Lakisha Morgan
+5. Jay Gray
+6. Leroy Gray
+7. Matthew Foster
+8. Rasheed Foster
+9. Brad Morgan
+10. Darnell Morgan
+
+ADVANCE:
+TOP: Kristen Reed — Possesses over eight years of progressive experience and a comprehensive full-stack skill set including React and Node.js.
+ADDITIONAL: Latoya Reed — Offers over eight years of experience with an identical, highly relevant full-stack technical background.
+ADDITIONAL: Jill Morgan — Brings a Master's degree, strong Test-Driven Development (TDD) skills, and over six years of full-stack experience.
+ADDITIONAL: Lakisha Morgan — Features a Master's degree alongside six years of solid full-stack development and TDD expertise.

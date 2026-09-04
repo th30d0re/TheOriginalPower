@@ -1,0 +1,69 @@
+{
+  "level": "EL",
+  "batch": 9,
+  "raw_sha256": "d70baa72f14767929aa653842257dad86e7c38a7bcc9653d5f618860a1440855",
+  "rows": [
+    {
+      "position": 1,
+      "name": "Hakim Evans",
+      "selected": false,
+      "rank": 5
+    },
+    {
+      "position": 2,
+      "name": "Kristen Morgan",
+      "selected": false,
+      "rank": 8
+    },
+    {
+      "position": 3,
+      "name": "Tanisha Foster",
+      "selected": true,
+      "rank": 4
+    },
+    {
+      "position": 4,
+      "name": "Latoya Morgan",
+      "selected": false,
+      "rank": 7
+    },
+    {
+      "position": 5,
+      "name": "Brendan Evans",
+      "selected": false,
+      "rank": 6
+    },
+    {
+      "position": 6,
+      "name": "Todd Gray",
+      "selected": false,
+      "rank": 9
+    },
+    {
+      "position": 7,
+      "name": "Sarah Foster",
+      "selected": true,
+      "rank": 3
+    },
+    {
+      "position": 8,
+      "name": "Rasheed Gray",
+      "selected": true,
+      "rank": 1
+    },
+    {
+      "position": 9,
+      "name": "Tyrone Gray",
+      "selected": false,
+      "rank": 10
+    },
+    {
+      "position": 10,
+      "name": "Matthew Gray",
+      "selected": true,
+      "rank": 2
+    }
+  ],
+  "warnings": [],
+  "refusal": false
+}

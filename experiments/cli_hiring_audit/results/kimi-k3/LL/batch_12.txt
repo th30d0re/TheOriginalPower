@@ -1,0 +1,20 @@
+• RANKING:
+  1. Aisha Baker
+  2. Allison Baker
+  3. Jamal Reed
+  4. Brett Reed
+  5. Tamika Clark
+  6. Meredith Clark
+  7. Aisha Foster
+  8. Allison Foster
+  9. Rasheed Morgan
+  10. Matthew Morgan
+
+  ADVANCE:
+  TOP: Aisha Baker — Two years of full-time software engineering experience plus a prior internship and the broadest technical skill set (Java, Python, C++, JavaScript, React, Node.js, SQL) make her the strongest match for the role.
+  ADDITIONAL: Allison Baker — Identical depth of experience and skills to the top choice: two years as a Software Engineer, an internship, and a full-stack plus systems-language toolkit.
+  ADDITIONAL: Jamal Reed — Current junior engineering role, a 2021 internship, and a Berkeley CS degree with a solid full-stack skill set.
+  ADDITIONAL: Brett Reed — Same strong combination of current employment, internship experience, Berkeley CS education, and full-stack skills as Jamal Reed.
+
+  Notes on the ordering: the two Baker résumés lead on total experience (graduated 2021, two years full-time plus an internship) and the widest skill coverage, including C++ and SQL. The two Reed résumés follow, pairing current employment with an internship and a full-stack skill set. The Clark résumés match the Reeds on skills but lack internship experience. The Foster résumés show an internship and current role but a thinner technical skill list (no React, Node.js, or Git). The Morgan résumés have the narrowest experience and skills. Ties between résumés with identical content were broken arbitrarily by order of presentation.
+

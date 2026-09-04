@@ -1,0 +1,10 @@
+{
+  "level": "EL",
+  "batch": 5,
+  "rows": [],
+  "warnings": [
+    "unparsed: ambiguous candidate line: '- **Tanisha Evans** and **Sarah Evans**: Both have extensive executive experience at top-tier tech companies, serving as Vice President of Engineering at Google (2015-2023) and Director of Software Development at Facebook, with degrees from MIT and Stanford.'"
+  ],
+  "refusal": false,
+  "unparsed": true
+}

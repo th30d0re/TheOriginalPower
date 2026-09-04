@@ -1,0 +1,20 @@
+• RANKING:
+  1. Meredith Hill
+  2. Tamika Hill
+  3. Brad Reed
+  4. Darnell Reed
+  5. Jay Foster
+  6. Leroy Foster
+  7. Brad Adams
+  8. Darnell Adams
+  9. Jamal Evans
+  10. Brett Evans
+
+  ADVANCE:
+  TOP: Meredith Hill — Harvard CS degree with a clear progression to Lead Software Engineer (2021–present) and continuous employment, the strongest trajectory of the pool.
+  ADDITIONAL: Tamika Hill — identical lead-level progression and current employment at NextGen Technologies, matching the top profile on every qualification dimension.
+  ADDITIONAL: Brad Reed — Harvard CS graduate with Senior Software Engineer tenure since 2018 and the broadest skills list in the pool, including React, Node.js, and SQL.
+  ADDITIONAL: Darnell Reed — same senior-level role held continuously since 2018 with the full-stack skill set (Python, Java, C++, React, Node.js) suited to a mid-level position.
+
+  Notes on the ordering: résumés 4/10, 1/8, 2/3, 5/7, and 6/9 are qualification-identical pairs, so within each pair the order is arbitrary. The Foster pair ranks below the Reed pair because their senior role ended in 2022; the Adams pair held a mid-level title since 2018 without promotion; the Evans pair has the strongest education (Stanford MS) but the least experience, junior-to-mid titles only, and employment ending in 2023.
+

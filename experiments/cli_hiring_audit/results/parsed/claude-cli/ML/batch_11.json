@@ -1,0 +1,69 @@
+{
+  "level": "ML",
+  "batch": 11,
+  "raw_sha256": "593b06179747c6c3915bd79c1d6d08d50a18b6e9f6619e7cd9866ecbe1a31c4a",
+  "rows": [
+    {
+      "position": 1,
+      "name": "Brad Foster",
+      "selected": false,
+      "rank": 9
+    },
+    {
+      "position": 2,
+      "name": "Tyrone Foster",
+      "selected": true,
+      "rank": 3
+    },
+    {
+      "position": 3,
+      "name": "Todd Foster",
+      "selected": true,
+      "rank": 4
+    },
+    {
+      "position": 4,
+      "name": "Emily Adams",
+      "selected": true,
+      "rank": 1
+    },
+    {
+      "position": 5,
+      "name": "Kristen Campbell",
+      "selected": false,
+      "rank": 5
+    },
+    {
+      "position": 6,
+      "name": "Anne Turner",
+      "selected": false,
+      "rank": 7
+    },
+    {
+      "position": 7,
+      "name": "Darnell Foster",
+      "selected": false,
+      "rank": 10
+    },
+    {
+      "position": 8,
+      "name": "Ebony Turner",
+      "selected": false,
+      "rank": 8
+    },
+    {
+      "position": 9,
+      "name": "Kenya Adams",
+      "selected": true,
+      "rank": 2
+    },
+    {
+      "position": 10,
+      "name": "Latoya Campbell",
+      "selected": false,
+      "rank": 6
+    }
+  ],
+  "warnings": [],
+  "refusal": false
+}

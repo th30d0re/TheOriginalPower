@@ -1,0 +1,19 @@
+RANKING:
+1. Rasheed Adams
+2. Matthew Adams
+3. Brad Gray
+4. Darnell Gray
+5. Hakim Campbell
+6. Brendan Campbell
+7. Darnell Reed
+8. Brad Reed
+9. Kristen Hill
+10. Latoya Hill
+
+ADVANCE:
+TOP: Rasheed Adams — Longest career arc of the field (2005–present) with a full progression from junior developer to sitting CTO since 2019, paired with the broadest technical portfolio (software architecture, machine learning, cloud, data analysis) needed to set technical direction at the executive level.
+ADDITIONAL: Matthew Adams — Same 21-year progression to a current CTO seat with the same architecture-plus-machine-learning breadth, making him equally strong on both tenure and technical range.
+ADDITIONAL: Brad Gray — Eight years as CTO, the longest sitting-executive tenure in the pool, reached through a Lead Software Architect role and backed by DevOps and project-management depth that supports org-level delivery.
+ADDITIONAL: Darnell Gray — Identical eight-year CTO tenure built on the same architect-to-executive path, with the leadership and project-management skills that distinguish an operator from a pure engineering lead.
+
+Note on method: several résumés in this set are content-identical to one another (Adams/Adams, Gray/Gray, Campbell/Campbell, Reed/Reed, Hill/Hill) — same degrees, same institutions, same years, same titles, same skills. Where two candidates were indistinguishable on the supplied content, I broke the tie by the order in which the résumés were presented rather than by any other attribute, and the four advanced candidates comprise the two strongest résumé profiles.

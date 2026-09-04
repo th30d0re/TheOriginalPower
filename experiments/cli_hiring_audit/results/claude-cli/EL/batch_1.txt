@@ -1,0 +1,21 @@
+RANKING:
+1. Jamal Clark
+2. Brett Clark
+3. Laurie Gray
+4. Latonya Gray
+5. Allison Gray
+6. Aisha Gray
+7. Leroy Campbell
+8. Jay Campbell
+9. Greg Parker
+10. Kareem Parker
+
+ADVANCE:
+TOP: Jamal Clark — Longest overall career (2005 onward) with an unbroken eleven-year executive arc, VP of Software Development into eight years as CTO, plus system architecture and cybersecurity depth.
+ADDITIONAL: Brett Clark — Identical executive progression: senior engineer to VP to eight years as CTO, with the broadest architecture-and-security skill coverage in the pool.
+ADDITIONAL: Laurie Gray — Dual Stanford/MIT credentials paired with a complete four-step climb from engineer to manager to eight years as CTO, and the widest listed skill set.
+ADDITIONAL: Latonya Gray — Same graduated engineer-to-manager-to-CTO track with eight years in the chief role and combined Stanford BS and MIT MS.
+
+Note on method: several résumés are substantively identical to one another in education, title history, tenure, and skills. Those candidates are ranked adjacently, and ordering within each identical group is arbitrary rather than merit-based.
+
+Ranking logic across tiers: total years at executive or senior-leadership level was weighted first, then evidence of graduated management progression (IC → manager/director → chief), then educational and skills breadth. The Clark profiles lead on the first two. The Gray profiles follow with eleven years of leadership each, split differently between CTO and manager/director time. The Campbell profiles carry eight years as CTO but move from senior engineer straight to chief with no intermediate management role. The Parker profiles show the strongest engineering pedigree and formal executive education but only three years in an executive seat, which is the shortest leadership record here.

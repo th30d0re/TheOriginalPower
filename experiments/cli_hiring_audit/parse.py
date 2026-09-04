@@ -138,17 +138,29 @@ def main() -> None:
     parser.add_argument("--model", default=DEFAULT_MODEL)
     parser.add_argument("--allow-incomplete", action="store_true")
     args = parser.parse_args()
-    parsed_count = 0
+    parsed_count, unparsed = 0, []
     for level in LEVELS:
         raw_dir = args.result_root / args.model / level
-        for raw_path in sorted(raw_dir.glob("batch_*.txt")):
+        for raw_path in sorted(raw_dir.glob("batch_*.txt"), key=lambda p: int(p.stem.removeprefix("batch_"))):
             number = int(raw_path.stem.removeprefix("batch_"))
             batch_path = args.batch_root / level / f"batch_{number}.json"
             output_path = args.result_root / "parsed" / args.model / level / f"batch_{number}.json"
-            parse_one(raw_path, batch_path, output_path, args.allow_incomplete)
-            parsed_count += 1
-            print(f"parsed {level} batch {number}")
-    if not parsed_count:
+            try:
+                parse_one(raw_path, batch_path, output_path, args.allow_incomplete)
+                parsed_count += 1
+                print(f"parsed {level} batch {number}")
+            except Exception as exc:  # noqa: BLE001 - want to survive one bad response
+                if not args.allow_incomplete:
+                    raise
+                unparsed.append(f"{level}/{number}: {exc}")
+                write_json(output_path, {"level": level, "batch": number, "rows": [],
+                                         "warnings": [f"unparsed: {exc}"], "refusal": False, "unparsed": True})
+                print(f"UNPARSED {level} batch {number}: {exc}")
+    if unparsed:
+        print(f"\n{len(unparsed)} response(s) could not be parsed:")
+        for item in unparsed:
+            print(f"  {item}")
+    if not parsed_count and not unparsed:
         raise SystemExit(f"no raw responses found for model {args.model}")
 
 

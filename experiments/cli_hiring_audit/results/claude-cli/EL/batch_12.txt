@@ -1,0 +1,21 @@
+Note on the underlying material: several of these résumés are byte-for-byte identical in education, employment history, titles, dates, and skills, differing only in name and listed affiliations. Where content is identical I treated the candidates as equivalent and ordered them arbitrarily by their position in the packet.
+
+RANKING:
+1. Jermaine Clark
+2. Geoffrey Clark
+3. Kenya Foster
+4. Emily Foster
+5. Kristen Foster
+6. Latoya Foster
+7. Kenya Baker
+8. Emily Baker
+9. Neil Hill
+10. Tremayne Hill
+
+ADVANCE:
+TOP: Jermaine Clark — Only profile combining a current sitting CTO role with a clean executive progression (Senior Engineer → VP of Software Development → CTO) and an explicitly executive skill set spanning cloud, project management, and cybersecurity.
+ADDITIONAL: Geoffrey Clark — Identical record to the top choice, so the same case applies: current CTO with a documented VP-level step before it and breadth across delivery and security.
+ADDITIONAL: Kenya Foster — Longest tenure at the top (CTO since 2019) with the deepest hands-on technical stack of the group, offset only by the absence of a graduate degree.
+ADDITIONAL: Emily Foster — Identical record to the preceding candidate: sitting CTO since 2019 with a broad engineering foundation from senior developer through lead.
+
+The tiering below the advance set: Kristen Foster and Latoya Foster sit one rung short at VP with the shortest track record (2012 entry); Kenya Baker and Emily Baker have comparable seniority but on a technical-architect track rather than an executive one; Neil Hill and Tremayne Hill share that same technical-track limitation and their most recent role ended in 2023, leaving no current leadership position on the résumé.

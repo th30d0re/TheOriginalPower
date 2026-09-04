@@ -1,0 +1,18 @@
+• RANKING:
+  1. Allison Hill
+  2. Aisha Hill
+  3. Tyrone Evans
+  4. Todd Evans
+  5. Allison Morgan
+  6. Aisha Morgan
+  7. Tyrone Baker
+  8. Todd Baker
+  9. Brendan Morgan
+  10. Hakim Morgan
+
+  ADVANCE:
+  TOP: Allison Hill — Shows clear career progression from Junior Software Engineer to Software Engineer with continuous employment since 2020 and a strong full-stack skill set (JavaScript, Python, React, Node.js, SQL).
+  ADDITIONAL: Aisha Hill — Matches the top profile with a promotion to Software Engineer, current employment, and the same well-rounded full-stack skills.
+  ADDITIONAL: Tyrone Evans — Brings roughly three years of combined internship and junior engineering experience plus both technical and collaboration skills.
+  ADDITIONAL: Todd Evans — Same solid internship-to-junior-engineer trajectory and skill profile, offering comparable hands-on experience for an entry-level role.
+

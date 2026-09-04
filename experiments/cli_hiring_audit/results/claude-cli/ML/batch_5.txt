@@ -1,0 +1,21 @@
+Criteria applied: currency of relevant employment, level/progression achieved, and breadth of stack against a mid-level backend/full-stack role. Several résumés are qualification-identical to each other, so they rank adjacently.
+
+RANKING:
+1. Latoya Parker
+2. Kristen Parker
+3. Lakisha Gray
+4. Jill Gray
+5. Latoya Clark
+6. Kristen Clark
+7. Keisha Foster
+8. Carrie Foster
+9. Leroy Parker
+10. Jay Parker
+
+ADVANCE:
+TOP: Latoya Parker — B.Sc. Berkeley plus M.Sc. Stanford, an unbroken Junior → Engineer → Mid-level progression through the present, and the widest directly relevant stack (Java/Python/C++/JS/SQL/React/Node/REST) make this the closest match to the role as written.
+ADDITIONAL: Kristen Parker — Identical credentials, trajectory, and stack coverage to the top candidate, including current mid-level tenure at NextGen Tech.
+ADDITIONAL: Lakisha Gray — Ten years of continuous engineering since an MIT B.Sc., including three years at senior level, with current full-stack work in React and Node.js.
+ADDITIONAL: Jill Gray — Same MIT background and same uninterrupted Engineer → Senior → Mid-level record at Future Tech Labs, with equivalent React/Node depth.
+
+Notes on the cut line: the Clark résumés are currently employed but narrower (no C++, no Node.js); the Foster and Leroy/Jay Parker résumés show strong progression but no employment listed after 2023 and 2022 respectively, which is what places them below the four advanced candidates.

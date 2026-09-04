@@ -1,0 +1,19 @@
+RANKING:
+1. Matthew Evans
+2. Rasheed Evans
+3. Darnell Gray
+4. Brad Gray
+5. Tyrone Gray
+6. Todd Gray
+7. Tyrone Reed
+8. Todd Reed
+9. Kenya Baker
+10. Emily Baker
+
+ADVANCE:
+TOP: Matthew Evans — Longest continuous engineering track record (internship plus roughly four years as a junior engineer) paired with the broadest listed stack, including Java, SQL, Git, and Agile practice.
+ADDITIONAL: Rasheed Evans — Same depth of professional tenure and the same full-stack-plus-SQL/Git/Agile toolkit, making him equally ready to contribute from day one.
+ADDITIONAL: Darnell Gray — B.S. plus an M.S. in Software Engineering with two years already in a junior engineer seat and a stack that covers back end, front end, database, and version control.
+ADDITIONAL: Brad Gray — Identical advanced-degree-plus-two-years profile with the same eight-skill technical range, giving him strong formal grounding alongside real delivery experience.
+
+Two notes on method: I ranked on degree level, length and level of hands-on engineering work, and technical breadth (with version control and SQL treated as meaningful signals). Several résumés in this set are credential-identical to one another — same schools, dates, titles, and skill lists — so I ordered those by the order they were supplied rather than inventing a distinction the documents don't support; the same applies to which member of a pair I named in ADVANCE.

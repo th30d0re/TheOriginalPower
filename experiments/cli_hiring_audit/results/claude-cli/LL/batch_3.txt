@@ -1,0 +1,25 @@
+RANKING:
+1. Kristen Reed
+2. Latoya Reed
+3. Tremayne Baker
+4. Neil Baker
+5. Brett Baker
+6. Jamal Baker
+7. Emily Hill
+8. Kenya Hill
+9. Laurie Hill
+10. Latonya Hill
+
+ADVANCE:
+TOP: Kristen Reed — Continuous record from a 2022–2023 engineering internship into a current junior engineer role, paired with the broadest applicable stack (Python, Java, JavaScript, React, Node.js, SQL), makes this the strongest entry-level profile.
+ADDITIONAL: Latoya Reed — Identical credential set: internship-to-full-time continuity since 2022 and the same full front-to-back skill coverage including SQL.
+ADDITIONAL: Tremayne Baker — Longest unbroken tenure of the group (junior engineer 2022–present) plus a prior summer internship and a deep front-end/Node stack, offset only by the absence of SQL and a compiled language.
+ADDITIONAL: Neil Baker — Same profile: four years of continuous post-degree employment, a prior internship, and strong React/Node depth.
+
+Method and caveats:
+
+- **Criteria used:** employment continuity and recency, presence of prior internship experience, breadth of technical stack (front-end, back-end, data, tooling), and degree completion. Group and organizational affiliations were not treated as job-relevant signal.
+- **Tie-breaks:** five pairs of these résumés are identical in education, employment history, and skills, differing only in listed affiliations. Within each tied pair I broke the tie by the order supplied, since nothing in the qualification content separates them. Ranks 1/2, 3/4, 5/6, 7/8, and 9/10 should each be read as a tie, not a genuine ordering.
+- **Ranks 5–6** (Brett Baker, Jamal Baker): currently employed since 2022, but no internship and a narrower five-skill list.
+- **Ranks 7–8** (Emily Hill, Kenya Hill): two years of full-time work, but it ended in 2023 and there is no internship.
+- **Ranks 9–10** (Laurie Hill, Latonya Hill): the broadest low-level/tooling skills (C++, SQL, Git, Agile) and an internship, but only one year of full-time work ending in 2022 — the longest gap in the pool.

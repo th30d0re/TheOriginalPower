@@ -138,7 +138,7 @@ def write_svg(path: Path, summaries: dict[str, dict[str, Any]]) -> None:
     for tick in range(0, 101, 20):
         py = y(tick)
         parts.extend([f'<line x1="{left}" y1="{py}" x2="700" y2="{py}" stroke="#ddd"/>', f'<text x="65" y="{py + 5}" text-anchor="end" font-family="sans-serif" font-size="12">{tick}%</text>'])
-    for level in LEVELS:
+    for level in [lvl for lvl in LEVELS if lvl in summaries]:
         value = summaries[level]["black_selection_share_pct"]
         low, high = summaries[level]["bootstrap_95_ci_pct"]
         x = x_positions[level]
@@ -160,10 +160,10 @@ def main() -> None:
     rows = load_rows(args.input)
     rng = np.random.default_rng(args.seed)
     summaries, chi_square = {}, {}
-    for level in LEVELS:
+    present_levels = [lvl for lvl in LEVELS if any(r["level"] == lvl for r in rows)]
+    missing = [lvl for lvl in LEVELS if lvl not in present_levels]
+    for level in present_levels:
         subset = [row for row in rows if row["level"] == level]
-        if not subset:
-            raise ValueError(f"no rows for level {level}")
         share = black_share(subset)
         ci = cluster_bootstrap_ci(subset, rng)
         summaries[level] = {
@@ -175,20 +175,26 @@ def main() -> None:
             "selected": sum(row["selected"] for row in subset),
         }
         chi_square[level] = contingency(subset)
-    dip = summaries["ML"]["black_selection_share_pct"] < min(summaries["LL"]["black_selection_share_pct"], summaries["EL"]["black_selection_share_pct"])
+    dip = (
+        {"LL", "ML", "EL"}.issubset(summaries)
+        and summaries["ML"]["black_selection_share_pct"]
+        < min(summaries["LL"]["black_selection_share_pct"], summaries["EL"]["black_selection_share_pct"])
+    )
     output = {
         "bootstrap": {"replicates": 1000, "unit": "batch", "seed": args.seed},
+        "levels_present": present_levels,
+        "levels_missing": missing,
         "levels": summaries,
         "chi_square": chi_square,
         "holm_bonferroni": holm_bonferroni(chi_square),
-        "logistic_regression": logistic_regression(rows),
+        "logistic_regression": logistic_regression(rows) if len(present_levels) > 1 else None,
         "mid_level_dip_reproduces_descriptively": bool(dip),
         "full_sweep_required_for_inference": any(summary["batches"] < 15 for summary in summaries.values()),
     }
     write_json(args.analysis_dir / "summary.json", output)
     args.analysis_dir.mkdir(parents=True, exist_ok=True)
-    report_lines = ["# Analysis report", "", "Validation-scale results; inferential estimates require the full sweep.", "", "| Level | Black share | 95% bootstrap CI | 2024 baseline | Difference |", "|---|---:|---:|---:|---:|"]
-    for level in LEVELS:
+    report_lines = ["# Analysis report", "", (f"Levels missing from this input: {missing}" if missing else "All three levels present."), "", "| Level | Black share | 95% bootstrap CI | 2024 baseline | Difference |", "|---|---:|---:|---:|---:|"]
+    for level in present_levels:
         result = summaries[level]
         low, high = result["bootstrap_95_ci_pct"]
         report_lines.append(f"| {level} | {result['black_selection_share_pct']:.2f}% | [{low:.2f}, {high:.2f}] | {BASELINE[level]:.2f}% | {result['difference_from_baseline_points']:+.2f} pp |")

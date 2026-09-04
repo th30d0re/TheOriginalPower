@@ -1,0 +1,17 @@
+RANKING:
+1. Darnell Baker
+2. Brad Baker
+3. Tremayne Morgan
+4. Neil Morgan
+5. Kristen Campbell
+6. Latoya Campbell
+7. Meredith Adams
+8. Tamika Adams
+9. Allison Reed
+10. Aisha Reed
+
+ADVANCE:
+TOP: Darnell Baker — This candidate presents the most comprehensive technical stack, including C++ and Agile Development, combined with continuous career progression from an internship to a current junior engineering role.
+ADDITIONAL: Brad Baker — This candidate shares an identical, highly competitive technical skill set, strong educational background, and continuous career progression.
+ADDITIONAL: Tremayne Morgan — This candidate demonstrates a solid foundation in core programming languages and a proven track record of continuous employment from intern to full-time engineer.
+ADDITIONAL: Neil Morgan — This candidate exhibits the same proven progression from an internship to a current full-time role along with solid core technical competencies.

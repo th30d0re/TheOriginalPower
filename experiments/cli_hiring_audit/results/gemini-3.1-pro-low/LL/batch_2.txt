@@ -1,0 +1,17 @@
+RANKING:
+1. Tanisha Clark
+2. Sarah Clark
+3. Neil Evans
+4. Tremayne Evans
+5. Jamal Evans
+6. Brett Evans
+7. Laurie Gray
+8. Latonya Gray
+9. Matthew Gray
+10. Rasheed Gray
+
+ADVANCE:
+TOP: Tanisha Clark — Possesses a strong combination of internship and continuous post-graduate experience along with high-demand frontend skills like React.
+ADDITIONAL: Sarah Clark — Demonstrates highly relevant experience identical to the top candidate, including a foundational internship and continuous professional growth with modern technical skills.
+ADDITIONAL: Neil Evans — Shows consistent employment and adaptability through multiple junior engineering roles while maintaining a solid foundation in core backend languages and SQL.
+ADDITIONAL: Tremayne Evans — Presents a reliable track record of consecutive software development positions and comprehensive fundamental programming skills.

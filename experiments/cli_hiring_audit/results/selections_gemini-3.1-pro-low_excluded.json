@@ -1,0 +1,75 @@
+{
+  "model": "gemini-3.1-pro-low",
+  "excluded_batches": [
+    {
+      "level": "LL",
+      "batch": 3,
+      "refusal": true
+    },
+    {
+      "level": "LL",
+      "batch": 6,
+      "refusal": true
+    },
+    {
+      "level": "LL",
+      "batch": 8,
+      "refusal": true
+    },
+    {
+      "level": "ML",
+      "batch": 10,
+      "refusal": true
+    },
+    {
+      "level": "ML",
+      "batch": 15,
+      "refusal": true
+    },
+    {
+      "level": "ML",
+      "batch": 5,
+      "refusal": true
+    },
+    {
+      "level": "ML",
+      "batch": 8,
+      "refusal": true
+    },
+    {
+      "level": "EL",
+      "batch": 12,
+      "refusal": true
+    },
+    {
+      "level": "EL",
+      "batch": 15,
+      "refusal": true
+    },
+    {
+      "level": "EL",
+      "batch": 2,
+      "refusal": false
+    },
+    {
+      "level": "EL",
+      "batch": 5,
+      "refusal": false
+    },
+    {
+      "level": "EL",
+      "batch": 7,
+      "refusal": true
+    },
+    {
+      "level": "EL",
+      "batch": 8,
+      "refusal": true
+    },
+    {
+      "level": "EL",
+      "batch": 9,
+      "refusal": true
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "level": "LL",
+  "batch": 3,
+  "raw_sha256": "233af5c6dde909fca046bb0c6b1eb0d707d0c3517307dfaff67a31f5c62f1d7d",
+  "rows": [
+    {
+      "position": 1,
+      "name": "Tremayne Baker",
+      "selected": true,
+      "rank": 3
+    },
+    {
+      "position": 2,
+      "name": "Brett Baker",
+      "selected": false,
+      "rank": 5
+    },
+    {
+      "position": 3,
+      "name": "Laurie Hill",
+      "selected": false,
+      "rank": 9
+    },
+    {
+      "position": 4,
+      "name": "Emily Hill",
+      "selected": false,
+      "rank": 7
+    },
+    {
+      "position": 5,
+      "name": "Latonya Hill",
+      "selected": false,
+      "rank": 10
+    },
+    {
+      "position": 6,
+      "name": "Jamal Baker",
+      "selected": false,
+      "rank": 6
+    },
+    {
+      "position": 7,
+      "name": "Kristen Reed",
+      "selected": true,
+      "rank": 1
+    },
+    {
+      "position": 8,
+      "name": "Neil Baker",
+      "selected": true,
+      "rank": 4
+    },
+    {
+      "position": 9,
+      "name": "Kenya Hill",
+      "selected": false,
+      "rank": 8
+    },
+    {
+      "position": 10,
+      "name": "Latoya Reed",
+      "selected": true,
+      "rank": 2
+    }
+  ],
+  "warnings": [],
+  "refusal": false
+}

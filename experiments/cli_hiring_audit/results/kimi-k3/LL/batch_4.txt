@@ -1,0 +1,20 @@
+• RANKING:
+  1. Aisha Clark
+  2. Allison Clark
+  3. Sarah Parker
+  4. Tanisha Parker
+  5. Ebony Parker
+  6. Anne Parker
+  7. Jill Clark
+  8. Lakisha Clark
+  9. Geoffrey Parker
+  10. Jermaine Parker
+
+  ADVANCE:
+  TOP: Aisha Clark — Stanford CS degree with two years of junior engineering experience and a broad stack including C++, Java, Python, React, and Node.js.
+  ADDITIONAL: Sarah Parker — Two years of experience plus the widest skill set on the list, spanning SQL, Node.js, React, and HTML/CSS.
+  ADDITIONAL: Allison Clark — Matches the top profile with a Stanford degree, two years of experience, and a strong multi-language skill set.
+  ADDITIONAL: Ebony Parker — Berkeley degree with both an internship and a junior role, showing more total industry exposure than her class year suggests.
+
+  Ranking basis: the Stanford pair leads on institution plus two years of experience; the Howard two-year pair follows on the broadest skills; the Berkeley pair has internship plus one year; the remaining pairs have either narrower skills (Git/Agile set) or only one year of experience (Harvard pair).
+

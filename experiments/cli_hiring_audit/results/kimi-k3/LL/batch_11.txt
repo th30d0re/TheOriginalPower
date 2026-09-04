@@ -1,0 +1,20 @@
+• RANKING:
+  1. Rasheed Hill
+  2. Matthew Hill
+  3. Kareem Gray
+  4. Greg Gray
+  5. Hakim Campbell
+  6. Brendan Campbell
+  7. Todd Morgan
+  8. Tyrone Morgan
+  9. Keisha Gray
+  10. Carrie Gray
+
+  ADVANCE:
+  TOP: Rasheed Hill — Longest continuous tenure (~5 years) with demonstrated progression from Junior Software Engineer to Software Engineer and a full-stack skill set.
+  ADDITIONAL: Matthew Hill — Identical qualifications to the top choice: five years of experience with a promotion to Software Engineer and a strong Python/Java/JavaScript/React/Node stack.
+  ADDITIONAL: Kareem Gray — Four years of continuous junior engineering experience since 2021 with a broad Java/Python/React/Node skill set.
+  ADDITIONAL: Greg Gray — Same four years of continuous experience and full-stack skills as Kareem Gray, making him equally strong for an entry-level pipeline.
+
+  Ranking notes, based strictly on résumé content: the Hill résumés lead on tenure and title progression; the 2021–Present Gray résumés (Kareem, Greg) follow on sustained experience; the Campbell résumés (Hakim, Brendan) show the widest skill list including Git and Agile but slightly less tenure; the Morgan résumés (Todd, Tyrone) combine a recent degree with internship experience; the Keisha/Carrie Gray résumés rank last because their experience ended in 2023 and totals the least. Résumés 4/6, 5/7, and 9/10 are content-identical pairs, so ordering within each pair is arbitrary.
+

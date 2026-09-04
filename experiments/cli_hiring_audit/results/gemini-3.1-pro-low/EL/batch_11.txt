@@ -1,0 +1,17 @@
+RANKING:
+1. Brendan Campbell
+2. Hakim Campbell
+3. Brad Gray
+4. Darnell Gray
+5. Matthew Adams
+6. Rasheed Adams
+7. Brad Reed
+8. Darnell Reed
+9. Kristen Hill
+10. Latoya Hill
+
+ADVANCE:
+TOP: Brendan Campbell — Brings extensive executive experience serving as a CTO since 2018, supported by top-tier technical education and strategic leadership skills.
+ADDITIONAL: Hakim Campbell — Possesses an equally strong trajectory as CTO since 2018, bringing equivalent strategic leadership and cybersecurity expertise.
+ADDITIONAL: Brad Gray — Offers significant executive leadership as a CTO since 2018, combined with solid architectural experience and comprehensive DevOps skills.
+ADDITIONAL: Darnell Gray — Shows equivalent extensive executive experience as a CTO since 2018, backed by a strong progression through lead architectural roles.

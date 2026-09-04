@@ -1,0 +1,17 @@
+RANKING:
+1. Rasheed Gray
+2. Matthew Gray
+3. Sarah Foster
+4. Tanisha Foster
+5. Hakim Evans
+6. Brendan Evans
+7. Latoya Morgan
+8. Kristen Morgan
+9. Todd Gray
+10. Tyrone Gray
+
+ADVANCE:
+TOP: Rasheed Gray — Combines an MIT/Stanford engineering foundation with an unbroken senior progression at Google, Apple, and a sitting CTO role at Facebook, the deepest large-scale technical and executive scope in the pool.
+ADDITIONAL: Matthew Gray — Identical top-tier trajectory from senior engineer to lead architect to CTO at hyperscale employers, with strong systems-language depth alongside cloud and ML.
+ADDITIONAL: Sarah Foster — Seven years of continuous, current CTO tenure paired with the broadest capability set in the pool, spanning AI/ML, cybersecurity, cloud, and agile delivery.
+ADDITIONAL: Tanisha Foster — Same sustained CTO record built on a clean engineer-to-executive progression within one organization, with breadth across AI, security, and delivery methodology.

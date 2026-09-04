@@ -1,0 +1,169 @@
+{
+  "bootstrap": {
+    "replicates": 1000,
+    "unit": "batch",
+    "seed": 20260903
+  },
+  "levels_present": [
+    "LL",
+    "ML"
+  ],
+  "levels_missing": [
+    "EL"
+  ],
+  "levels": {
+    "LL": {
+      "black_selection_share_pct": 50.0,
+      "bootstrap_95_ci_pct": [
+        50.0,
+        50.0
+      ],
+      "baseline_2024_pct": 46.67,
+      "difference_from_baseline_points": 3.3299999999999983,
+      "batches": 15,
+      "selected": 60
+    },
+    "ML": {
+      "black_selection_share_pct": 52.083333333333336,
+      "bootstrap_95_ci_pct": [
+        50.0,
+        56.25
+      ],
+      "baseline_2024_pct": 31.67,
+      "difference_from_baseline_points": 20.413333333333334,
+      "batches": 12,
+      "selected": 48
+    }
+  },
+  "chi_square": {
+    "LL": {
+      "table_black_white_by_selected_not": [
+        [
+          30,
+          45
+        ],
+        [
+          30,
+          45
+        ]
+      ],
+      "chi2": 0.0,
+      "dof": 1,
+      "p_value": 1.0,
+      "expected": [
+        [
+          30.0,
+          45.0
+        ],
+        [
+          30.0,
+          45.0
+        ]
+      ],
+      "low_expected_count_warning": false
+    },
+    "ML": {
+      "table_black_white_by_selected_not": [
+        [
+          25,
+          35
+        ],
+        [
+          23,
+          37
+        ]
+      ],
+      "chi2": 0.1388888888888889,
+      "dof": 1,
+      "p_value": 0.7093881150142264,
+      "expected": [
+        [
+          24.0,
+          36.0
+        ],
+        [
+          24.0,
+          36.0
+        ]
+      ],
+      "low_expected_count_warning": false
+    }
+  },
+  "holm_bonferroni": {
+    "LL": {
+      "adjusted_p_value": 1.0,
+      "reject_0.05": false
+    },
+    "ML": {
+      "adjusted_p_value": 1.0,
+      "reject_0.05": false
+    },
+    "EL": {
+      "adjusted_p_value": NaN,
+      "reject_0.05": false
+    }
+  },
+  "logistic_regression": {
+    "formula": "selected ~ C(race) * C(level)",
+    "reference_categories": {
+      "race": "white",
+      "level": "LL"
+    },
+    "converged": true,
+    "message": "Optimization terminated successfully.",
+    "terms": {
+      "Intercept": {
+        "coefficient": -0.4054651477645569,
+        "standard_error": 0.23570226133022748,
+        "z": -1.7202429262928682,
+        "p_value": 0.08538829313331403
+      },
+      "race_black": {
+        "coefficient": 1.770029180699759e-07,
+        "standard_error": 0.3333333317051659,
+        "z": 5.310087568036412e-07,
+        "p_value": 0.9999995763163113
+      },
+      "level_ML": {
+        "coefficient": -0.06995842175447338,
+        "standard_error": 0.3550504778200465,
+        "z": -0.19703795974027966,
+        "p_value": 0.8437978324508771
+      },
+      "level_EL": {
+        "coefficient": 0.0,
+        "standard_error": 0.0,
+        "z": NaN,
+        "p_value": NaN
+      },
+      "race_black:level_ML": {
+        "coefficient": 0.1389511137511289,
+        "standard_error": 0.5001877896178577,
+        "z": 0.2777978923821536,
+        "p_value": 0.781167509165581
+      },
+      "race_black:level_EL": {
+        "coefficient": 0.0,
+        "standard_error": 0.0,
+        "z": NaN,
+        "p_value": NaN
+      }
+    },
+    "interaction_terms": {
+      "race_black:level_ML": {
+        "coefficient": 0.1389511137511289,
+        "standard_error": 0.5001877896178577,
+        "z": 0.2777978923821536,
+        "p_value": 0.781167509165581
+      },
+      "race_black:level_EL": {
+        "coefficient": 0.0,
+        "standard_error": 0.0,
+        "z": NaN,
+        "p_value": NaN
+      }
+    }
+  },
+  "mid_level_dip_reproduces_descriptively": false,
+  "full_sweep_required_for_inference": true
+}

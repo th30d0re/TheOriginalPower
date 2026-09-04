@@ -1,0 +1,23 @@
+RANKING:
+1. Hakim Hill
+2. Brendan Hill
+3. Greg Reed
+4. Kareem Reed
+5. Matthew Baker
+6. Rasheed Baker
+7. Darnell Evans
+8. Brad Evans
+9. Kenya Clark
+10. Emily Clark
+
+ADVANCE:
+TOP: Hakim Hill — Only profile showing an internship-to-full-time progression with continuous employment through the present, plus the most job-ready stack (React, Node, SQL) for a full-stack entry-level role.
+ADDITIONAL: Brendan Hill — Same intern-to-hire trajectory, ongoing tenure, and SQL-inclusive full-stack skill set, which is the strongest experience shape in the pool.
+ADDITIONAL: Greg Reed — Broadest technical range of any candidate (Java and JavaScript, React, Node, Agile) on top of two years of junior engineering work.
+ADDITIONAL: Kareem Reed — Equally broad dual-stack skill list with two years of junior engineering experience, covering both back-end and front-end needs.
+
+Notes on how I ordered them:
+
+- **Tiering was driven by three things:** length and continuity of engineering employment, breadth of the skill list, and whether the stack includes framework and database work. Education was near-uniform (all BS/BSc in CS, 2021–2022) and did little to separate candidates.
+- **Hill profiles rank first** for the internship + current role combination and SQL; **Reed profiles** next for the widest language/framework coverage; **Baker profiles** next for a modern JS stack but no database or Java; **Evans profiles** next for ongoing tenure but the narrowest stack (no framework); **Clark profiles** last for a narrow stack and employment ending in 2023.
+- **Several résumés are substantively identical to one another** — same institution, degree year, employer, title, dates, and skills. Where I could find no difference in the qualifications supplied, I broke the tie by the order the résumés were provided rather than inventing a distinction. That is why the pairs appear adjacent in the ranking, and why the advance list contains both members of the top two profiles.

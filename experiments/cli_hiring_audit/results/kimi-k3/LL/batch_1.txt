@@ -1,0 +1,20 @@
+• RANKING:
+  1. Latonya Clark
+  2. Laurie Clark
+  3. Carrie Parker
+  4. Keisha Parker
+  5. Geoffrey Gray
+  6. Jermaine Gray
+  7. Emily Campbell
+  8. Kenya Campbell
+  9. Rasheed Clark
+  10. Matthew Clark
+
+  ADVANCE:
+  TOP: Latonya Clark — Combines a Berkeley CS degree with both a software engineering internship and an ongoing junior engineer role, plus the broadest skill set including Git and Agile methodologies.
+  ADDITIONAL: Laurie Clark — Matches the top profile with internship plus current junior engineer experience and a full stack of Java, Python, JavaScript, React, Node.js, Git, and Agile skills.
+  ADDITIONAL: Carrie Parker — Pairs an internship with a current junior engineer position and a solid Git- and Agile-inclusive skill set.
+  ADDITIONAL: Keisha Parker — Offers the same internship-plus-current-role experience and well-rounded tooling skills as the other Parker candidate.
+
+  Ranking rationale in brief: candidates with both internship and ongoing junior engineer experience (7, 10, 8, 9) lead; those with two completed years of junior engineer work and Git (4, 6) follow; currently employed engineers without internships (2, 5) come next; and those whose experience ended in 2023 with a narrower tooling list (1, 3) round out the ranking. Affiliations were not treated as job-relevant qualifications.
+

@@ -1,0 +1,205 @@
+{
+  "bootstrap": {
+    "replicates": 1000,
+    "unit": "batch",
+    "seed": 20260903
+  },
+  "levels_present": [
+    "LL",
+    "ML",
+    "EL"
+  ],
+  "levels_missing": [],
+  "levels": {
+    "LL": {
+      "black_selection_share_pct": 50.0,
+      "bootstrap_95_ci_pct": [
+        50.0,
+        50.0
+      ],
+      "baseline_2024_pct": 46.67,
+      "difference_from_baseline_points": 3.3299999999999983,
+      "batches": 15,
+      "selected": 58
+    },
+    "ML": {
+      "black_selection_share_pct": 50.0,
+      "bootstrap_95_ci_pct": [
+        50.0,
+        50.0
+      ],
+      "baseline_2024_pct": 31.67,
+      "difference_from_baseline_points": 18.33,
+      "batches": 15,
+      "selected": 60
+    },
+    "EL": {
+      "black_selection_share_pct": 51.666666666666664,
+      "bootstrap_95_ci_pct": [
+        50.0,
+        55.0
+      ],
+      "baseline_2024_pct": 46.67,
+      "difference_from_baseline_points": 4.996666666666663,
+      "batches": 15,
+      "selected": 60
+    }
+  },
+  "chi_square": {
+    "LL": {
+      "table_black_white_by_selected_not": [
+        [
+          29,
+          46
+        ],
+        [
+          29,
+          46
+        ]
+      ],
+      "chi2": 0.0,
+      "dof": 1,
+      "p_value": 1.0,
+      "expected": [
+        [
+          29.0,
+          46.0
+        ],
+        [
+          29.0,
+          46.0
+        ]
+      ],
+      "low_expected_count_warning": false
+    },
+    "ML": {
+      "table_black_white_by_selected_not": [
+        [
+          30,
+          45
+        ],
+        [
+          30,
+          45
+        ]
+      ],
+      "chi2": 0.0,
+      "dof": 1,
+      "p_value": 1.0,
+      "expected": [
+        [
+          30.0,
+          45.0
+        ],
+        [
+          30.0,
+          45.0
+        ]
+      ],
+      "low_expected_count_warning": false
+    },
+    "EL": {
+      "table_black_white_by_selected_not": [
+        [
+          31,
+          44
+        ],
+        [
+          29,
+          46
+        ]
+      ],
+      "chi2": 0.1111111111111111,
+      "dof": 1,
+      "p_value": 0.7388826803635273,
+      "expected": [
+        [
+          30.0,
+          45.0
+        ],
+        [
+          30.0,
+          45.0
+        ]
+      ],
+      "low_expected_count_warning": false
+    }
+  },
+  "holm_bonferroni": {
+    "LL": {
+      "adjusted_p_value": 1.0,
+      "reject_0.05": false
+    },
+    "ML": {
+      "adjusted_p_value": 1.0,
+      "reject_0.05": false
+    },
+    "EL": {
+      "adjusted_p_value": 1.0,
+      "reject_0.05": false
+    }
+  },
+  "logistic_regression": {
+    "formula": "selected ~ C(race) * C(level)",
+    "reference_categories": {
+      "race": "white",
+      "level": "LL"
+    },
+    "converged": true,
+    "message": "Optimization terminated successfully.",
+    "terms": {
+      "Intercept": {
+        "coefficient": -0.46134555537704797,
+        "standard_error": 0.23711155373303014,
+        "z": -1.9456899004444488,
+        "p_value": 0.051692000558065304
+      },
+      "race_black": {
+        "coefficient": 1.062084731135605e-08,
+        "standard_error": 0.33532637488279465,
+        "z": 3.167316413768024e-08,
+        "p_value": 0.9999999747284714
+      },
+      "level_ML": {
+        "coefficient": 0.055880515291914824,
+        "standard_error": 0.33433133821620115,
+        "z": 0.16714112290538174,
+        "p_value": 0.8672590096972027
+      },
+      "level_EL": {
+        "coefficient": -3.651762847946849e-07,
+        "standard_error": 0.33532638202362897,
+        "z": -1.089017459917462e-06,
+        "p_value": 0.9999991310897823
+      },
+      "race_black:level_ML": {
+        "coefficient": -1.3747875003045608e-07,
+        "standard_error": 0.47281591417914126,
+        "z": -2.907659110187393e-07,
+        "p_value": 0.9999997680023688
+      },
+      "race_black:level_EL": {
+        "coefficient": 0.11114366488508604,
+        "standard_error": 0.472917547512737,
+        "z": 0.2350170034282617,
+        "p_value": 0.8141955359620101
+      }
+    },
+    "interaction_terms": {
+      "race_black:level_ML": {
+        "coefficient": -1.3747875003045608e-07,
+        "standard_error": 0.47281591417914126,
+        "z": -2.907659110187393e-07,
+        "p_value": 0.9999997680023688
+      },
+      "race_black:level_EL": {
+        "coefficient": 0.11114366488508604,
+        "standard_error": 0.472917547512737,
+        "z": 0.2350170034282617,
+        "p_value": 0.8141955359620101
+      }
+    }
+  },
+  "mid_level_dip_reproduces_descriptively": false,
+  "full_sweep_required_for_inference": false
+}

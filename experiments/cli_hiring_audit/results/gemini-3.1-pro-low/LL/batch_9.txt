@@ -1,0 +1,17 @@
+RANKING:
+1. Greg Reed
+2. Kareem Reed
+3. Matthew Baker
+4. Rasheed Baker
+5. Brendan Hill
+6. Hakim Hill
+7. Emily Clark
+8. Kenya Clark
+9. Brad Evans
+10. Darnell Evans
+
+ADVANCE:
+TOP: Greg Reed — Strong combination of two years of software engineering experience and a comprehensive full-stack skill set including React.js and Node.js.
+ADDITIONAL: Kareem Reed — Possesses identical strong experience and comprehensive full-stack technical skills as the top candidate.
+ADDITIONAL: Matthew Baker — Brings a solid two years of software engineering experience with highly relevant modern frameworks like React and Node.js.
+ADDITIONAL: Rasheed Baker — Exhibits the same strong professional background and experience with key frameworks as Matthew Baker.

@@ -1,0 +1,69 @@
+{
+  "level": "LL",
+  "batch": 8,
+  "raw_sha256": "6f58a7cba8be183543ce05c97cd28c50dfde30b219b566464f800784f8c0e46b",
+  "rows": [
+    {
+      "position": 1,
+      "name": "Brendan Evans",
+      "selected": false,
+      "rank": 7
+    },
+    {
+      "position": 2,
+      "name": "Brad Adams",
+      "selected": true,
+      "rank": 3
+    },
+    {
+      "position": 3,
+      "name": "Darnell Reed",
+      "selected": false,
+      "rank": 10
+    },
+    {
+      "position": 4,
+      "name": "Brad Campbell",
+      "selected": true,
+      "rank": 1
+    },
+    {
+      "position": 5,
+      "name": "Darnell Campbell",
+      "selected": true,
+      "rank": 2
+    },
+    {
+      "position": 6,
+      "name": "Brad Reed",
+      "selected": false,
+      "rank": 9
+    },
+    {
+      "position": 7,
+      "name": "Brett Gray",
+      "selected": false,
+      "rank": 5
+    },
+    {
+      "position": 8,
+      "name": "Hakim Evans",
+      "selected": false,
+      "rank": 8
+    },
+    {
+      "position": 9,
+      "name": "Darnell Adams",
+      "selected": true,
+      "rank": 4
+    },
+    {
+      "position": 10,
+      "name": "Jamal Gray",
+      "selected": false,
+      "rank": 6
+    }
+  ],
+  "warnings": [],
+  "refusal": false
+}

@@ -1,0 +1,18 @@
+• RANKING:
+  1. Brett Clark
+  2. Jamal Clark
+  3. Rasheed Reed
+  4. Matthew Reed
+  5. Geoffrey Baker
+  6. Jermaine Baker
+  7. Meredith Campbell
+  8. Tamika Campbell
+  9. Todd Adams
+  10. Tyrone Adams
+
+  ADVANCE:
+  TOP: Brett Clark — Longest continuous engineering tenure (2020–present) with both Software Engineer and Junior Software Engineer roles and a full Java/Python/JavaScript/React/Node/SQL stack.
+  ADDITIONAL: Jamal Clark — Matches the top profile with five years of professional experience across two companies and the same complete full-stack skill set.
+  ADDITIONAL: Rasheed Reed — Currently employed Junior Software Engineer with the broadest technical toolkit, including C++, SQL, and HTML/CSS alongside the core stack.
+  ADDITIONAL: Matthew Reed — Same current Junior Software Engineer role and equally broad skill set, making him a strong parallel candidate to advance.
+

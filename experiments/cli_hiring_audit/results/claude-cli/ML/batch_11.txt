@@ -1,0 +1,19 @@
+RANKING:
+1. Emily Adams
+2. Kenya Adams
+3. Tyrone Foster
+4. Todd Foster
+5. Kristen Campbell
+6. Latoya Campbell
+7. Anne Turner
+8. Ebony Turner
+9. Brad Foster
+10. Darnell Foster
+
+ADVANCE:
+TOP: Emily Adams — Eleven years of continuous progression into a current Mid-Level Software Engineer role with the broadest stack on offer (Java, Python, C++, JavaScript, SQL) plus Agile experience, making her the closest direct match to the opening.
+ADDITIONAL: Kenya Adams — Identical eleven-year trajectory ending in a current mid-level role with the same C++/SQL breadth, equally well matched to the requirements.
+ADDITIONAL: Tyrone Foster — Ten years of unbroken experience, currently holding the exact target title, with full-stack coverage (React, Node.js, SQL) and Agile delivery.
+ADDITIONAL: Todd Foster — Same ten-year record in a current mid-level position with matching full-stack and Agile depth.
+
+Method note: several résumés carry identical education, employment history, and skills. Ranking is driven by years of relevant experience, currency of employment, closeness of the current title to the mid-level target, and stack breadth; the Campbell profiles sit mid-pack because their Senior/Team Lead scope exceeds the level, the Turner profiles list no SQL, and the Brad/Darnell profiles show the shortest tenure with no role after 2023. Where two résumés were substantively identical, I broke the tie by order of listing rather than by any candidate attribute.

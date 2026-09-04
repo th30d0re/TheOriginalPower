@@ -1,0 +1,17 @@
+RANKING:
+1. Brad Reed
+2. Darnell Reed
+3. Meredith Hill
+4. Tamika Hill
+5. Brad Adams
+6. Darnell Adams
+7. Jay Foster
+8. Leroy Foster
+9. Brett Evans
+10. Jamal Evans
+
+ADVANCE:
+TOP: Brad Reed — Offers 11 years of continuous, progressive experience reaching Senior Software Engineer, supported by a modern full-stack skill set including React, Node.js, and Python.
+ADDITIONAL: Darnell Reed — Possesses an identical, extensive 11-year track record and highly relevant full-stack technical background.
+ADDITIONAL: Meredith Hill — Demonstrates 11 years of continuous industry experience culminating in a Lead Software Engineer role, indicating strong technical leadership and proficiency.
+ADDITIONAL: Tamika Hill — Features a matching trajectory of continuous progression into technical leadership with a robust foundation in core languages like Java and Python.

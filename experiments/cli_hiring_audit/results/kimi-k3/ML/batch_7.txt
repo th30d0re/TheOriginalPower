@@ -1,0 +1,20 @@
+• RANKING:
+  1. Neil Adams
+  2. Tremayne Adams
+  3. Brendan Adams
+  4. Hakim Adams
+  5. Anne Campbell
+  6. Ebony Campbell
+  7. Laurie Foster
+  8. Latonya Foster
+  9. Greg Evans
+  10. Kareem Evans
+
+  ADVANCE:
+  TOP: Neil Adams — Strongest profile with 10+ years of progressive experience culminating in a current Lead Software Engineer role, plus the broadest skill set including cloud computing and microservices architecture.
+  ADDITIONAL: Tremayne Adams — Identical qualifications to the top choice: current Lead Software Engineer role with full-stack, cloud, and microservices depth and clear title progression.
+  ADDITIONAL: Brendan Adams — Stanford M.Sc. in Software Engineering paired with seven years of full-stack experience (React, Node.js, Git) in a current role makes him well above the mid-level bar.
+  ADDITIONAL: Hakim Adams — Same advanced Stanford degree and current full-stack experience as Brendan Adams, with continuous employment since 2017.
+
+  Rationale notes: The ranking weighs current employment, title progression, education, and skill breadth. Candidates 3–6 outrank 7–8 on current employment and broader skills; the Foster résumés end in 2022 and omit SQL and Java. Candidates 9–10 are the most junior, with five years of experience ending in 2023. Where résumés were content-identical, ties were broken alphabetically by first name.
+

@@ -1,0 +1,17 @@
+RANKING:
+1. Rasheed Reed
+2. Matthew Reed
+3. Brett Clark
+4. Jamal Clark
+5. Geoffrey Baker
+6. Jermaine Baker
+7. Meredith Campbell
+8. Tamika Campbell
+9. Todd Adams
+10. Tyrone Adams
+
+ADVANCE:
+TOP: Rasheed Reed — Broadest technical stack of any résumé here (Java, Python, C++, JavaScript, HTML/CSS, React, Node.js, SQL) paired with continuous, currently-held junior engineering employment since 2022 and a B.S. in Computer Science.
+ADDITIONAL: Matthew Reed — Identical qualifications to the top candidate: same degree and year, same unbroken 2022–present junior engineering tenure, and the same eight-item full-stack skill set.
+ADDITIONAL: Brett Clark — Longest continuous engineering record in the pool (2020–present across two companies) with a B.S. in Computer Science and a full-stack skill set including SQL.
+ADDITIONAL: Jamal Clark — Matches that record exactly: same degree and year, the same two-company 2020–present progression, and the same six-item skill set including SQL.

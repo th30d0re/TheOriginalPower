@@ -1,0 +1,17 @@
+RANKING:
+1. Aisha Parker
+2. Allison Parker
+3. Tyrone Parker
+4. Todd Parker
+5. Tyrone Campbell
+6. Todd Campbell
+7. Kareem Campbell
+8. Greg Campbell
+9. Latonya Adams
+10. Laurie Adams
+
+ADVANCE:
+TOP: Aisha Parker — Holds a degree from a highly rigorous computer science program and demonstrates a strong, modern full-stack skill set including React and Node.js.
+ADDITIONAL: Allison Parker — Features identical educational qualifications and modern technical skills as the top candidate, making her an equally strong choice.
+ADDITIONAL: Tyrone Parker — Brings an additional year of full-time professional software development experience and a solid educational background.
+ADDITIONAL: Todd Parker — Offers the same extended professional experience and a strong foundation in core software engineering technologies.

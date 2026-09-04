@@ -1,0 +1,20 @@
+• RANKING:
+  1. Brad Baker
+  2. Darnell Baker
+  3. Neil Morgan
+  4. Tremayne Morgan
+  5. Meredith Adams
+  6. Tamika Adams
+  7. Kristen Campbell
+  8. Latoya Campbell
+  9. Allison Reed
+  10. Aisha Reed
+
+  ADVANCE:
+  TOP: Brad Baker — Broadest technical skill set (Python, Java, C++, React, Node.js, Git, Agile) combined with continuous employment since a 2021 internship through a current Junior Software Engineer role.
+  ADDITIONAL: Darnell Baker — Identical depth of skills and current-role experience as the top choice, with the same internship-to-engineer progression.
+  ADDITIONAL: Neil Morgan — Continuous employment from a 2021 internship into a current Junior Software Engineer role, though with a narrower listed technical skill set.
+  ADDITIONAL: Tremayne Morgan — Same internship-to-current-engineer trajectory as Neil Morgan, with solid core language skills and stated collaboration strengths.
+
+  Notes on the ranking logic: candidates were tiered on résumé content only — current continuous employment, internship experience, and breadth of technical skills. The Bakers lead on both experience and skill breadth; the Morgans match the experience pattern with fewer listed technologies; the Adams candidates hold current roles but without internship history; the Campbells show internship plus two years of experience ending in 2023; the Reeds list strong skills but the shortest tenure, ending in 2023. Ties within identical qualification sets were broken alphabetically.
+

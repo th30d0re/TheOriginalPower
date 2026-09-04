@@ -1,0 +1,20 @@
+• RANKING:
+  1. Matthew Parker
+  2. Rasheed Parker
+  3. Meredith Foster
+  4. Tamika Foster
+  5. Laurie Adams
+  6. Latonya Adams
+  7. Todd Hill
+  8. Tyrone Hill
+  9. Kareem Reed
+  10. Greg Reed
+
+  ADVANCE:
+  TOP: Matthew Parker — strongest trajectory (progressed to Senior Software Engineer) paired with a modern, in-demand stack (AWS, Docker, Microservices) and an MS in Software Engineering.
+  ADDITIONAL: Rasheed Parker — identical senior-level progression and cloud/microservices skill set make him equally strong for a mid-level role with headroom.
+  ADDITIONAL: Meredith Foster — rose to Lead Software Engineer in under five years, demonstrating rapid growth and full-stack capability despite holding only a bachelor's degree.
+  ADDITIONAL: Tamika Foster — matching lead-level progression and a solid Java/Python/React/Node stack with REST API experience fit the role well.
+
+  Ranking notes: The Parker résumés lead on title progression and stack depth; the Foster résumés follow on lead-level advancement; the Adams résumés combine elite education (MIT/Stanford) and steady mid-level experience; the Hill résumés have comparable education and tenure but a thinner, more generic skills list; the Reed résumés show the least advancement (Software Engineer II) and shortest experience. Identical-qualification pairs were ordered alphabetically.
+

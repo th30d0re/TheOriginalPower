@@ -1,0 +1,17 @@
+RANKING:
+1. Latonya Clark
+2. Laurie Clark
+3. Rasheed Clark
+4. Matthew Clark
+5. Geoffrey Gray
+6. Jermaine Gray
+7. Carrie Parker
+8. Keisha Parker
+9. Emily Campbell
+10. Kenya Campbell
+
+ADVANCE:
+TOP: Latonya Clark — Continuous progression from a year-long software engineering internship into a current full-time junior role, paired with the broadest listed stack (Java, Python, JavaScript, HTML/CSS, React, Node.js) plus Git and Agile methodologies.
+ADDITIONAL: Laurie Clark — Same intern-to-full-time trajectory and the same complete toolchain including version control and Agile practice, currently employed and shipping.
+ADDITIONAL: Rasheed Clark — Two full years in a junior software engineering role with the widest language range of any candidate here, including C++ alongside the JavaScript/React/Node stack.
+ADDITIONAL: Matthew Clark — Two full years of junior engineering experience with C++ in addition to the common web stack, plus explicit Agile delivery experience.

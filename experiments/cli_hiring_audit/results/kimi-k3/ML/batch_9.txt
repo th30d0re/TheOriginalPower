@@ -1,0 +1,20 @@
+• RANKING:
+  1. Latoya Reed
+  2. Kristen Reed
+  3. Jill Morgan
+  4. Lakisha Morgan
+  5. Leroy Gray
+  6. Jay Gray
+  7. Brad Morgan
+  8. Darnell Morgan
+  9. Rasheed Foster
+  10. Matthew Foster
+
+  ADVANCE:
+  TOP: Latoya Reed — About eight years of continuous experience culminating in a current mid-level title, paired with the broadest stack in the pool (Python, Java, C++, JavaScript, React, Node.js, SQL, Git).
+  ADDITIONAL: Kristen Reed — Identical depth of experience and skill breadth to the top candidate, including a current mid-level role.
+  ADDITIONAL: Jill Morgan — Berkeley B.S. plus Stanford M.S. and a strong skill set including C++, Node.js, SQL, and TDD across roughly seven years of experience.
+  ADDITIONAL: Lakisha Morgan — Same Berkeley/Stanford credentials and full-stack-plus-TDD skill profile as Jill Morgan, with comparable tenure.
+
+  Notes on the ordering: candidates 3/10, 5/8, 2/7, 4/6, and 1/9 form pairs with substantively identical qualifications, so within each pair I kept résumé-number order. Latoya/Kristen rank highest on combined tenure, current mid-level title, and skill breadth; Jill/Lakisha follow on elite graduate credentials and strong skills; Leroy/Jay have long continuous experience but no graduate degree and a slightly narrower stack; Brad/Darnell hold master's degrees but have the shortest tenures (~4–5 years); Rasheed/Matthew rank last because their listed experience ends in 2023 with the narrowest skill set.
+
