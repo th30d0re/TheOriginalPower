@@ -17,6 +17,7 @@
         "%DOC%"
       ],
       "env": {
+        "PATH": "${workspaceFolder}/.tooling:${env:PATH}",
         "SOURCE_DATE_EPOCH": "1704067200",
         "FORCE_SOURCE_DATE": "1",
         "TZ": "UTC"

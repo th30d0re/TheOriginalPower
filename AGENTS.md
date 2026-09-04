@@ -307,9 +307,9 @@ a syntax error in the manuscript. The remedy is `make clean` followed by a full
 A concurrent editor build is also possible and produces the same class of failure; a
 `Paper/The_Original_Power.synctex(busy)` file is the tell that one is running.
 
-**Proposed permanent fix** (not applied; requires the operator's agreement because it
-changes editor behavior): put the shim ahead of the system binary on the recipe's PATH in
-`.vscode/settings.json`.
+**Permanent fix — applied 2026-09-04** (commit `cad34c1` documented it; the settings
+change landed immediately after). The shim is placed ahead of the system binary on the
+recipe's PATH in `.vscode/settings.json`.
 
 ```json
 "env": {
@@ -322,6 +322,12 @@ changes editor behavior): put the shim ahead of the system binary on the recipe'
 
 This leaves the recipe otherwise unchanged and makes Cmd+Opt+B resolve the same `biber`
 the Makefile uses, so both builders agree and neither poisons the other's aux files.
+
+Verified on this machine: `biber --version` on the system binary prints a `lipo` usage
+error, while the same command with `.tooling` first on PATH prints `biber version: 2.19`.
+If `${workspaceFolder}` ever fails to expand, PATH keeps its literal value and the recipe
+falls back to the system binary, which is the pre-fix behavior rather than a new failure
+mode.
 
 ### Commit Message Template
 
