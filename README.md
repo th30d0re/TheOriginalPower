@@ -3,6 +3,7 @@
 ## The Physics of Oppression and the Engineering of Control
 
 [![PDF](https://img.shields.io/badge/manuscript-PDF-8b1e1e?logo=adobeacrobatreader)](Paper/The_Original_Power.pdf)
+[![EPUB](https://img.shields.io/badge/manuscript-EPUB-8b1e1e?logo=epub)](https://github.com/th30d0re/TheOriginalPower/releases/latest)
 [![Release](https://img.shields.io/github/v/release/th30d0re/TheOriginalPower?label=release)](https://github.com/th30d0re/TheOriginalPower/releases)
 [![License](https://img.shields.io/badge/license-All%20Rights%20Reserved-555555)](#license)
 
@@ -48,8 +49,10 @@ cognitive scales.
 ## The manuscript
 
 [`Paper/The_Original_Power.tex`](Paper/The_Original_Power.tex) is the canonical source.
-[`Paper/The_Original_Power.pdf`](Paper/The_Original_Power.pdf) is the tracked build and the
-current release is 1,151 pages.
+[`Paper/The_Original_Power.pdf`](Paper/The_Original_Power.pdf) is the tracked build; the
+current release is 1,151 pages. An EPUB 3 edition (`The_Original_Power.epub`) is built from
+the same source and attached to every [release](https://github.com/th30d0re/TheOriginalPower/releases);
+build it locally with `make epub`.
 
 The main text is organized into four parts:
 
