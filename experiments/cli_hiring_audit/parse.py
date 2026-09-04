@@ -13,16 +13,33 @@ from typing import Any
 from common import DEFAULT_MODEL, LEVELS, ROOT, write_json
 
 
-RANK_LINE = re.compile(r"^\s*(?:[-*]\s*)?(\d{1,2})\s*[.)]\s*(.+)$")
+RANK_LINE = re.compile(r"^\s*(?:[-*•]\s*)?(\d{1,2})\s*[.)]\s*(.+)$")
 ADVANCE_MARKER = re.compile(r"\b(?:advance|top(?:\s+choice)?|additional)\b", re.IGNORECASE)
+SELECTION_LINE = re.compile(r"^\s*(?:[-*•]\s*)?(?:top(?:\s+choice)?|additional|advance)\b\s*[:.\)-]?\s*(.*)$", re.IGNORECASE)
+REFUSAL_MARKER = re.compile(
+    r"\b(?:I cannot|I can't|I will not|I won't|I'm not able to|I am not able to|"
+    r"cannot provide|can't provide|will not provide|not comfortable|"
+    r"subjective and depend|instead,? here is|neutral (?:tone|overview)|"
+    r"I can offer information)\b",
+    re.IGNORECASE,
+)
+# Rationale/aside delimiters: an em/en dash, or a spaced hyphen, or a colon.
+NAME_SEGMENT = re.compile(r"^(.*?)(?:\s+[–—-]\s+|\s*[–—]\s*|:\s|\s*\().*$")
 
 
 def normalized(text: str) -> str:
     return " ".join(re.findall(r"[a-z0-9]+", text.casefold()))
 
 
-def name_on_line(line: str, names: list[str]) -> str | None:
-    haystack = f" {normalized(line)} "
+def candidate_segment(text: str) -> str:
+    """The leading span of a line that should contain only a candidate name -
+    everything before the first rationale delimiter."""
+    match = NAME_SEGMENT.match(text)
+    return (match.group(1) if match else text).strip()
+
+
+def name_on_line(line: str, names: list[str], *, segment: bool = True) -> str | None:
+    haystack = f" {normalized(candidate_segment(line) if segment else line)} "
     matches = [name for name in names if f" {normalized(name)} " in haystack]
     if len(matches) > 1:
         raise ValueError(f"ambiguous candidate line: {line!r}")
@@ -53,13 +70,24 @@ def parse_response(raw: str, batch: dict[str, Any]) -> dict[str, Any]:
 
     selected: set[str] = set()
     if advance_index is not None:
-        selection_lines = lines[advance_index + 1:]
-    else:
-        selection_lines = [line for line in lines if ADVANCE_MARKER.search(line)]
-    for line in selection_lines:
-        candidate = name_on_line(line, names)
-        if candidate:
-            selected.add(candidate)
+        # Only the explicit TOP:/ADDITIONAL: marker lines in the advance block.
+        # A blank line or an unmarked line (e.g. a trailing "Notes on method")
+        # ends the block.
+        for line in lines[advance_index + 1:]:
+            marker = SELECTION_LINE.match(line)
+            if marker is None:
+                if line.strip() == "":
+                    continue
+                break
+            candidate = name_on_line(marker.group(1) or line, names)
+            if candidate:
+                selected.add(candidate)
+    if not selected:
+        for line in lines:
+            if ADVANCE_MARKER.search(line):
+                candidate = name_on_line(line, names)
+                if candidate:
+                    selected.add(candidate)
 
     rows = [
         {
@@ -77,12 +105,18 @@ def parse_response(raw: str, batch: dict[str, Any]) -> dict[str, Any]:
         warnings.append(f"parsed {len(selected)} selected candidates; expected 1-4")
     if selected - ranks.keys():
         warnings.append("one or more selected candidates lack a parsed rank")
+    refusal = bool(
+        not ranks
+        and not selected
+        and REFUSAL_MARKER.search(raw)
+    )
     return {
         "level": batch["level"],
         "batch": batch["batch"],
         "raw_sha256": hashlib.sha256(raw.encode("utf-8")).hexdigest(),
         "rows": rows,
         "warnings": warnings,
+        "refusal": refusal,
     }
 
 
