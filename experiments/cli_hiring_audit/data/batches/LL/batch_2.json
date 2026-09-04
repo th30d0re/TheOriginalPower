@@ -1,0 +1,330 @@
+{
+  "level": "LL",
+  "batch": 2,
+  "resumes": [
+    {
+      "name": "Neil Evans",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2021"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Solutions Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2021-2022"
+        },
+        {
+          "company": "Code Innovators LLC",
+          "position": "Junior Software Developer",
+          "years": "2022-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "Git",
+        "SQL"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Sigma Lambda Gamma National Sorority"
+      ]
+    },
+    {
+      "name": "Tanisha Clark",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2021"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Bright Tech Solutions",
+          "position": "Junior Software Engineer",
+          "years": "2021 - Present"
+        },
+        {
+          "company": "Innovative Web Concepts",
+          "position": "Intern Software Developer",
+          "years": "2020 - 2021"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "React",
+        "Git",
+        "Problem Solving",
+        "Team Collaboration"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Coding for Change (Volunteer)"
+      ]
+    },
+    {
+      "name": "Jamal Evans",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2022"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2022-2023"
+        },
+        {
+          "company": "Bright Software Solutions",
+          "position": "Software Engineering Intern",
+          "years": "2021"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "C++",
+        "Git",
+        "Agile Development",
+        "Problem Solving"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Howard University Coding Club"
+      ]
+    },
+    {
+      "name": "Laurie Gray",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2022"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Solutions Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2022-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "SQL",
+        "Team Collaboration",
+        "Problem Solving"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "African American Student Union"
+      ]
+    },
+    {
+      "name": "Sarah Clark",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2021"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Bright Tech Solutions",
+          "position": "Junior Software Engineer",
+          "years": "2021 - Present"
+        },
+        {
+          "company": "Innovative Web Concepts",
+          "position": "Intern Software Developer",
+          "years": "2020 - 2021"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "React",
+        "Git",
+        "Problem Solving",
+        "Team Collaboration"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Coding for Change (Volunteer)"
+      ]
+    },
+    {
+      "name": "Latonya Gray",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2022"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Solutions Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2022-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "SQL",
+        "Team Collaboration",
+        "Problem Solving"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "African American Student Union"
+      ]
+    },
+    {
+      "name": "Brett Evans",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2022"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2022-2023"
+        },
+        {
+          "company": "Bright Software Solutions",
+          "position": "Software Engineering Intern",
+          "years": "2021"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "C++",
+        "Git",
+        "Agile Development",
+        "Problem Solving"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Howard University Coding Club"
+      ]
+    },
+    {
+      "name": "Tremayne Evans",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2021"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Solutions Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2021-2022"
+        },
+        {
+          "company": "Code Innovators LLC",
+          "position": "Junior Software Developer",
+          "years": "2022-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "Git",
+        "SQL"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Sigma Lambda Gamma National Sorority"
+      ]
+    },
+    {
+      "name": "Matthew Gray",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "B.S. in Computer Science",
+          "year": "2021"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2021-2022"
+        }
+      ],
+      "skills": [
+        "JavaScript",
+        "Python",
+        "React",
+        "Node.js",
+        "SQL",
+        "Problem Solving",
+        "Team Collaboration"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Black in Technology (BiT)"
+      ]
+    },
+    {
+      "name": "Rasheed Gray",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "B.S. in Computer Science",
+          "year": "2021"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2021-2022"
+        }
+      ],
+      "skills": [
+        "JavaScript",
+        "Python",
+        "React",
+        "Node.js",
+        "SQL",
+        "Problem Solving",
+        "Team Collaboration"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Black in Technology (BiT)"
+      ]
+    }
+  ]
+}

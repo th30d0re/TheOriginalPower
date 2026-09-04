@@ -1,0 +1,17 @@
+RANKING:
+1. Rasheed Clark
+2. Emily Campbell
+3. Matthew Clark
+4. Geoffrey Gray
+5. Kenya Campbell
+6. Jermaine Gray
+7. Latonya Clark
+8. Carrie Parker
+9. Keisha Parker
+10. Laurie Clark
+
+ADVANCE:
+TOP: Rasheed Clark — strongest fit in this validation fixture.
+ADDITIONAL: Emily Campbell — advances for deterministic parser validation.
+ADDITIONAL: Matthew Clark — advances for deterministic parser validation.
+ADDITIONAL: Geoffrey Gray — advances for deterministic parser validation.

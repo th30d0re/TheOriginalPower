@@ -1,0 +1,420 @@
+{
+  "level": "EL",
+  "batch": 9,
+  "resumes": [
+    {
+      "name": "Hakim Evans",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2010"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Computer Engineering",
+          "year": "2012"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Senior Software Engineer",
+          "years": "2012-2017"
+        },
+        {
+          "company": "NextGen Solutions",
+          "position": "Lead Software Developer",
+          "years": "2017-2020"
+        },
+        {
+          "company": "Pioneer Tech Enterprises",
+          "position": "Chief Technology Officer",
+          "years": "2020-present"
+        }
+      ],
+      "skills": [
+        "Leadership",
+        "Software Development",
+        "Cloud Computing",
+        "Project Management",
+        "Machine Learning",
+        "Cybersecurity",
+        "Data Analysis"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "European Cultural Center"
+      ]
+    },
+    {
+      "name": "Kristen Morgan",
+      "education": [
+        {
+          "institution": "Harvard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2010"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Chief Technology Officer",
+          "years": "2015-2023"
+        },
+        {
+          "company": "NextGen Solutions",
+          "position": "Lead Software Engineer",
+          "years": "2010-2015"
+        }
+      ],
+      "skills": [
+        "Software Development",
+        "Leadership",
+        "Project Management",
+        "Cloud Computing",
+        "Machine Learning"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Association for Computing Machinery (ACM)"
+      ]
+    },
+    {
+      "name": "Tanisha Foster",
+      "education": [
+        {
+          "institution": "Harvard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2010"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Chief Technology Officer",
+          "years": "2018-Present"
+        },
+        {
+          "company": "Advanced Solutions Corp.",
+          "position": "Senior Software Engineer",
+          "years": "2015-2018"
+        },
+        {
+          "company": "Creative Tech Group",
+          "position": "Software Engineer",
+          "years": "2010-2015"
+        }
+      ],
+      "skills": [
+        "Leadership",
+        "Project Management",
+        "Cloud Computing",
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Software Development",
+        "Agile Methodologies",
+        "Cybersecurity"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Association for Computing Machinery (ACM)"
+      ]
+    },
+    {
+      "name": "Latoya Morgan",
+      "education": [
+        {
+          "institution": "Harvard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2010"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Chief Technology Officer",
+          "years": "2015-2023"
+        },
+        {
+          "company": "NextGen Solutions",
+          "position": "Lead Software Engineer",
+          "years": "2010-2015"
+        }
+      ],
+      "skills": [
+        "Software Development",
+        "Leadership",
+        "Project Management",
+        "Cloud Computing",
+        "Machine Learning"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Association for Computing Machinery (ACM)"
+      ]
+    },
+    {
+      "name": "Brendan Evans",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2010"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Computer Engineering",
+          "year": "2012"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Senior Software Engineer",
+          "years": "2012-2017"
+        },
+        {
+          "company": "NextGen Solutions",
+          "position": "Lead Software Developer",
+          "years": "2017-2020"
+        },
+        {
+          "company": "Pioneer Tech Enterprises",
+          "position": "Chief Technology Officer",
+          "years": "2020-present"
+        }
+      ],
+      "skills": [
+        "Leadership",
+        "Software Development",
+        "Cloud Computing",
+        "Project Management",
+        "Machine Learning",
+        "Cybersecurity",
+        "Data Analysis"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "European Cultural Center"
+      ]
+    },
+    {
+      "name": "Todd Gray",
+      "education": [
+        {
+          "institution": "Harvard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2012"
+        },
+        {
+          "institution": "Harvard University",
+          "degree": "Master of Science in Computer Science",
+          "year": "2014"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Vice President of Software Engineering",
+          "years": "2020-Present"
+        },
+        {
+          "company": "Innovative Solutions Ltd.",
+          "position": "Senior Software Engineer",
+          "years": "2016-2020"
+        },
+        {
+          "company": "Startup Hub Co.",
+          "position": "Software Engineer",
+          "years": "2014-2016"
+        }
+      ],
+      "skills": [
+        "Leadership",
+        "Software Development",
+        "Agile Methodologies",
+        "Cloud Computing",
+        "Project Management",
+        "Machine Learning"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Association for Computing Machinery (ACM)"
+      ]
+    },
+    {
+      "name": "Sarah Foster",
+      "education": [
+        {
+          "institution": "Harvard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2010"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Chief Technology Officer",
+          "years": "2018-Present"
+        },
+        {
+          "company": "Advanced Solutions Corp.",
+          "position": "Senior Software Engineer",
+          "years": "2015-2018"
+        },
+        {
+          "company": "Creative Tech Group",
+          "position": "Software Engineer",
+          "years": "2010-2015"
+        }
+      ],
+      "skills": [
+        "Leadership",
+        "Project Management",
+        "Cloud Computing",
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Software Development",
+        "Agile Methodologies",
+        "Cybersecurity"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Association for Computing Machinery (ACM)"
+      ]
+    },
+    {
+      "name": "Rasheed Gray",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2010"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2012"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Google",
+          "position": "Senior Software Engineer",
+          "years": "2012-2016"
+        },
+        {
+          "company": "Apple Inc.",
+          "position": "Lead Software Architect",
+          "years": "2016-2020"
+        },
+        {
+          "company": "Facebook",
+          "position": "Chief Technology Officer",
+          "years": "2020-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "C++",
+        "Python",
+        "Cloud Computing",
+        "AI and Machine Learning",
+        "Leadership"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "African American Student Union (Member)"
+      ]
+    },
+    {
+      "name": "Tyrone Gray",
+      "education": [
+        {
+          "institution": "Harvard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2012"
+        },
+        {
+          "institution": "Harvard University",
+          "degree": "Master of Science in Computer Science",
+          "year": "2014"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Vice President of Software Engineering",
+          "years": "2020-Present"
+        },
+        {
+          "company": "Innovative Solutions Ltd.",
+          "position": "Senior Software Engineer",
+          "years": "2016-2020"
+        },
+        {
+          "company": "Startup Hub Co.",
+          "position": "Software Engineer",
+          "years": "2014-2016"
+        }
+      ],
+      "skills": [
+        "Leadership",
+        "Software Development",
+        "Agile Methodologies",
+        "Cloud Computing",
+        "Project Management",
+        "Machine Learning"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Association for Computing Machinery (ACM)"
+      ]
+    },
+    {
+      "name": "Matthew Gray",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2010"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2012"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Google",
+          "position": "Senior Software Engineer",
+          "years": "2012-2016"
+        },
+        {
+          "company": "Apple Inc.",
+          "position": "Lead Software Architect",
+          "years": "2016-2020"
+        },
+        {
+          "company": "Facebook",
+          "position": "Chief Technology Officer",
+          "years": "2020-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "C++",
+        "Python",
+        "Cloud Computing",
+        "AI and Machine Learning",
+        "Leadership"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "African American Student Union (Member)"
+      ]
+    }
+  ]
+}

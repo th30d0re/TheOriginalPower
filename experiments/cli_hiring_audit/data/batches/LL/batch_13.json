@@ -1,0 +1,342 @@
+{
+  "level": "LL",
+  "batch": 13,
+  "resumes": [
+    {
+      "name": "Geoffrey Evans",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "B.Sc. in Computer Science",
+          "year": "2020"
+        },
+        {
+          "institution": "San Francisco State University",
+          "degree": "M.Sc. in Software Engineering",
+          "year": "2023"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2023-Present"
+        },
+        {
+          "company": "CodeCrafters LLC",
+          "position": "Software Intern",
+          "years": "2021-2022"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "React",
+        "Node.js"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Women Who Code"
+      ]
+    },
+    {
+      "name": "Carrie Clark",
+      "education": [
+        {
+          "institution": "Harvard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2022"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Solutions",
+          "position": "Software Engineer Intern",
+          "years": "2021"
+        },
+        {
+          "company": "Innovatech",
+          "position": "Junior Software Engineer",
+          "years": "2022-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "HTML/CSS",
+        "React",
+        "Node.js",
+        "Agile Methodologies"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Women in Technology International"
+      ]
+    },
+    {
+      "name": "Kenya Reed",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2021"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Solutions Corp",
+          "position": "Junior Software Engineer",
+          "years": "2021-2023"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "SQL",
+        "Problem Solving",
+        "Teamwork"
+      ],
+      "affiliations": [
+        "Black Engineers Association"
+      ]
+    },
+    {
+      "name": "Brad Hill",
+      "education": [
+        {
+          "institution": "University of Southern California",
+          "degree": "B.S. in Computer Science",
+          "year": "2022"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2022-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "HTML/CSS",
+        "React",
+        "Node.js",
+        "Problem Solving",
+        "Teamwork",
+        "Git"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "African American Student Union"
+      ]
+    },
+    {
+      "name": "Jermaine Evans",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "B.Sc. in Computer Science",
+          "year": "2020"
+        },
+        {
+          "institution": "San Francisco State University",
+          "degree": "M.Sc. in Software Engineering",
+          "year": "2023"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2023-Present"
+        },
+        {
+          "company": "CodeCrafters LLC",
+          "position": "Software Intern",
+          "years": "2021-2022"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "React",
+        "Node.js"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Women Who Code"
+      ]
+    },
+    {
+      "name": "Emily Reed",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2021"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Solutions Corp",
+          "position": "Junior Software Engineer",
+          "years": "2021-2023"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "SQL",
+        "Problem Solving",
+        "Teamwork"
+      ],
+      "affiliations": [
+        "European Heritage Society"
+      ]
+    },
+    {
+      "name": "Darnell Hill",
+      "education": [
+        {
+          "institution": "University of Southern California",
+          "degree": "B.S. in Computer Science",
+          "year": "2022"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2022-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "HTML/CSS",
+        "React",
+        "Node.js",
+        "Problem Solving",
+        "Teamwork",
+        "Git"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "African American Student Union"
+      ]
+    },
+    {
+      "name": "Leroy Hill",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2021"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Co.",
+          "position": "Software Engineer Intern",
+          "years": "2021-2022"
+        },
+        {
+          "company": "Creative Software Solutions",
+          "position": "Junior Software Engineer",
+          "years": "2022-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "C++",
+        "JavaScript",
+        "HTML/CSS",
+        "Git",
+        "RESTful APIs",
+        "Team Collaboration"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "IEEE Computer Society"
+      ]
+    },
+    {
+      "name": "Keisha Clark",
+      "education": [
+        {
+          "institution": "Harvard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2022"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Solutions",
+          "position": "Software Engineer Intern",
+          "years": "2021"
+        },
+        {
+          "company": "Innovatech",
+          "position": "Junior Software Engineer",
+          "years": "2022-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "HTML/CSS",
+        "React",
+        "Node.js",
+        "Agile Methodologies"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Women in Technology International"
+      ]
+    },
+    {
+      "name": "Jay Hill",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2021"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Co.",
+          "position": "Software Engineer Intern",
+          "years": "2021-2022"
+        },
+        {
+          "company": "Creative Software Solutions",
+          "position": "Junior Software Engineer",
+          "years": "2022-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "C++",
+        "JavaScript",
+        "HTML/CSS",
+        "Git",
+        "RESTful APIs",
+        "Team Collaboration"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "IEEE Computer Society"
+      ]
+    }
+  ]
+}

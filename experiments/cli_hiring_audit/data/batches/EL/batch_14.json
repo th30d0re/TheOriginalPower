@@ -1,0 +1,456 @@
+{
+  "level": "EL",
+  "batch": 14,
+  "resumes": [
+    {
+      "name": "Rasheed Foster",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2008"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2010"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Google",
+          "position": "Senior Software Engineer",
+          "years": "2010-2015"
+        },
+        {
+          "company": "Facebook",
+          "position": "Lead Software Architect",
+          "years": "2015-2020"
+        },
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Chief Technology Officer",
+          "years": "2020-Present"
+        }
+      ],
+      "skills": [
+        "Software Development",
+        "System Architecture",
+        "Team Leadership",
+        "Cloud Computing",
+        "Machine Learning",
+        "Data Analysis"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "African American Student Union",
+        "National Society of Black Engineers"
+      ]
+    },
+    {
+      "name": "Sarah Reed",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2010"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Computer Science",
+          "year": "2012"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "InnovateTech Solutions",
+          "position": "Software Engineer",
+          "years": "2012-2016"
+        },
+        {
+          "company": "TechLead Corporates",
+          "position": "Senior Software Engineer",
+          "years": "2016-2020"
+        },
+        {
+          "company": "Pioneer Innovations Inc.",
+          "position": "Chief Technology Officer",
+          "years": "2020-Present"
+        }
+      ],
+      "skills": [
+        "Software Development",
+        "Project Management",
+        "Team Leadership",
+        "Cloud Computing",
+        "Artificial Intelligence",
+        "Agile Methodologies"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "European Cultural Center"
+      ]
+    },
+    {
+      "name": "Matthew Foster",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2008"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2010"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Google",
+          "position": "Senior Software Engineer",
+          "years": "2010-2015"
+        },
+        {
+          "company": "Facebook",
+          "position": "Lead Software Architect",
+          "years": "2015-2020"
+        },
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Chief Technology Officer",
+          "years": "2020-Present"
+        }
+      ],
+      "skills": [
+        "Software Development",
+        "System Architecture",
+        "Team Leadership",
+        "Cloud Computing",
+        "Machine Learning",
+        "Data Analysis"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "African American Student Union",
+        "National Society of Black Engineers"
+      ]
+    },
+    {
+      "name": "Tremayne Clark",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2008"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2010"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators LLC",
+          "position": "Software Engineering Intern",
+          "years": "2010-2011"
+        },
+        {
+          "company": "NextGen Software Solutions",
+          "position": "Senior Software Engineer",
+          "years": "2011-2015"
+        },
+        {
+          "company": "Global Tech Enterprises",
+          "position": "Principal Software Engineer",
+          "years": "2015-2020"
+        },
+        {
+          "company": "Innovatech Systems",
+          "position": "Vice President of Engineering",
+          "years": "2020-Present"
+        }
+      ],
+      "skills": [
+        "Leadership",
+        "Project Management",
+        "Software Architecture",
+        "Agile Methodologies",
+        "Cloud Computing",
+        "AI & Machine Learning"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "European Cultural Center"
+      ]
+    },
+    {
+      "name": "Tanisha Reed",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2010"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Computer Science",
+          "year": "2012"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "InnovateTech Solutions",
+          "position": "Software Engineer",
+          "years": "2012-2016"
+        },
+        {
+          "company": "TechLead Corporates",
+          "position": "Senior Software Engineer",
+          "years": "2016-2020"
+        },
+        {
+          "company": "Pioneer Innovations Inc.",
+          "position": "Chief Technology Officer",
+          "years": "2020-Present"
+        }
+      ],
+      "skills": [
+        "Software Development",
+        "Project Management",
+        "Team Leadership",
+        "Cloud Computing",
+        "Artificial Intelligence",
+        "Agile Methodologies"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "European Cultural Center"
+      ]
+    },
+    {
+      "name": "Aisha Turner",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2008"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2010"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Chief Technology Officer (CTO)",
+          "years": "2020-Present"
+        },
+        {
+          "company": "NextGen Software Solutions",
+          "position": "Senior Software Engineer",
+          "years": "2015-2020"
+        },
+        {
+          "company": "Innovatech Systems",
+          "position": "Software Developer",
+          "years": "2010-2015"
+        }
+      ],
+      "skills": [
+        "Leadership",
+        "Software Development",
+        "Cloud Computing",
+        "AI & Machine Learning",
+        "Project Management",
+        "Agile Methodologies"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Women in Technology International"
+      ]
+    },
+    {
+      "name": "Allison Reed",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2008"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Computer Science",
+          "year": "2010"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Chief Technology Officer",
+          "years": "2019-2023"
+        },
+        {
+          "company": "Global Software Solutions",
+          "position": "Senior Software Engineer",
+          "years": "2015-2019"
+        },
+        {
+          "company": "Creative Apps Corp.",
+          "position": "Software Engineer",
+          "years": "2010-2015"
+        }
+      ],
+      "skills": [
+        "Software Development",
+        "Leadership",
+        "Strategic Planning",
+        "Cybersecurity",
+        "Cloud Computing"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "European Cultural Center"
+      ]
+    },
+    {
+      "name": "Aisha Reed",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2008"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Computer Science",
+          "year": "2010"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Chief Technology Officer",
+          "years": "2019-2023"
+        },
+        {
+          "company": "Global Software Solutions",
+          "position": "Senior Software Engineer",
+          "years": "2015-2019"
+        },
+        {
+          "company": "Creative Apps Corp.",
+          "position": "Software Engineer",
+          "years": "2010-2015"
+        }
+      ],
+      "skills": [
+        "Software Development",
+        "Leadership",
+        "Strategic Planning",
+        "Cybersecurity",
+        "Cloud Computing"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "European Cultural Center"
+      ]
+    },
+    {
+      "name": "Neil Clark",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2008"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2010"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators LLC",
+          "position": "Software Engineering Intern",
+          "years": "2010-2011"
+        },
+        {
+          "company": "NextGen Software Solutions",
+          "position": "Senior Software Engineer",
+          "years": "2011-2015"
+        },
+        {
+          "company": "Global Tech Enterprises",
+          "position": "Principal Software Engineer",
+          "years": "2015-2020"
+        },
+        {
+          "company": "Innovatech Systems",
+          "position": "Vice President of Engineering",
+          "years": "2020-Present"
+        }
+      ],
+      "skills": [
+        "Leadership",
+        "Project Management",
+        "Software Architecture",
+        "Agile Methodologies",
+        "Cloud Computing",
+        "AI & Machine Learning"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "European Cultural Center"
+      ]
+    },
+    {
+      "name": "Allison Turner",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2008"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2010"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Chief Technology Officer (CTO)",
+          "years": "2020-Present"
+        },
+        {
+          "company": "NextGen Software Solutions",
+          "position": "Senior Software Engineer",
+          "years": "2015-2020"
+        },
+        {
+          "company": "Innovatech Systems",
+          "position": "Software Developer",
+          "years": "2010-2015"
+        }
+      ],
+      "skills": [
+        "Leadership",
+        "Software Development",
+        "Cloud Computing",
+        "AI & Machine Learning",
+        "Project Management",
+        "Agile Methodologies"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Women in Technology International"
+      ]
+    }
+  ]
+}

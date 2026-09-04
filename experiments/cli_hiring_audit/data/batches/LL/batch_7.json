@@ -1,0 +1,308 @@
+{
+  "level": "LL",
+  "batch": 7,
+  "resumes": [
+    {
+      "name": "Tyrone Baker",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2022"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2022-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "React",
+        "SQL"
+      ],
+      "affiliations": [
+        "Black Engineers Association"
+      ]
+    },
+    {
+      "name": "Allison Hill",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2020"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Innovative Tech LLC",
+          "position": "Junior Software Engineer",
+          "years": "2020-2022"
+        },
+        {
+          "company": "NextGen Solutions",
+          "position": "Software Engineer",
+          "years": "2022-Present"
+        }
+      ],
+      "skills": [
+        "JavaScript",
+        "Python",
+        "React",
+        "Node.js",
+        "SQL"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Code2040"
+      ]
+    },
+    {
+      "name": "Tyrone Evans",
+      "education": [
+        {
+          "institution": "State University of New York",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2020"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2021-2023"
+        },
+        {
+          "company": "Open Solutions Co.",
+          "position": "Software Intern",
+          "years": "2020-2021"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "SQL",
+        "JavaScript",
+        "Problem Solving",
+        "Team Collaboration"
+      ],
+      "affiliations": [
+        "Black Engineers Association"
+      ]
+    },
+    {
+      "name": "Aisha Hill",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2020"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Innovative Tech LLC",
+          "position": "Junior Software Engineer",
+          "years": "2020-2022"
+        },
+        {
+          "company": "NextGen Solutions",
+          "position": "Software Engineer",
+          "years": "2022-Present"
+        }
+      ],
+      "skills": [
+        "JavaScript",
+        "Python",
+        "React",
+        "Node.js",
+        "SQL"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Code2040"
+      ]
+    },
+    {
+      "name": "Allison Morgan",
+      "education": [
+        {
+          "institution": "University of Colorado Boulder",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2021"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2021-2023"
+        }
+      ],
+      "skills": [
+        "Programming in Java, Python, and C++",
+        "Web development with HTML, CSS, and JavaScript",
+        "Version control with Git",
+        "Database management with SQL",
+        "Problem-solving",
+        "Team collaboration",
+        "Agile methodologies"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "European Cultural Center"
+      ]
+    },
+    {
+      "name": "Brendan Morgan",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2022"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "InnovaTech Solutions",
+          "position": "Junior Software Engineer",
+          "years": "2022-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "React",
+        "Node.js"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "African American Student Union"
+      ]
+    },
+    {
+      "name": "Todd Baker",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2022"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2022-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "React",
+        "SQL"
+      ],
+      "affiliations": [
+        "European Heritage Society"
+      ]
+    },
+    {
+      "name": "Aisha Morgan",
+      "education": [
+        {
+          "institution": "University of Colorado Boulder",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2021"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2021-2023"
+        }
+      ],
+      "skills": [
+        "Programming in Java, Python, and C++",
+        "Web development with HTML, CSS, and JavaScript",
+        "Version control with Git",
+        "Database management with SQL",
+        "Problem-solving",
+        "Team collaboration",
+        "Agile methodologies"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "European Cultural Center"
+      ]
+    },
+    {
+      "name": "Todd Evans",
+      "education": [
+        {
+          "institution": "State University of New York",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2020"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2021-2023"
+        },
+        {
+          "company": "Open Solutions Co.",
+          "position": "Software Intern",
+          "years": "2020-2021"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "SQL",
+        "JavaScript",
+        "Problem Solving",
+        "Team Collaboration"
+      ],
+      "affiliations": [
+        "European Heritage Society"
+      ]
+    },
+    {
+      "name": "Hakim Morgan",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2022"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "InnovaTech Solutions",
+          "position": "Junior Software Engineer",
+          "years": "2022-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "React",
+        "Node.js"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "African American Student Union"
+      ]
+    }
+  ]
+}

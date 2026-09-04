@@ -1,0 +1,394 @@
+{
+  "level": "ML",
+  "batch": 4,
+  "resumes": [
+    {
+      "name": "Jamal Reed",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "B.S. in Computer Science",
+          "year": "2016"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "M.S. in Software Engineering",
+          "year": "2018"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Software Engineer",
+          "years": "2018-2020"
+        },
+        {
+          "company": "NextGen Solutions",
+          "position": "Mid-level Software Engineer",
+          "years": "2020-present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "C++",
+        "JavaScript",
+        "AWS",
+        "Agile Methodologies"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "European Cultural Center"
+      ]
+    },
+    {
+      "name": "Geoffrey Clark",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2015"
+        },
+        {
+          "institution": "Georgia Institute of Technology",
+          "degree": "Master of Science in Computer Science",
+          "year": "2018"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Software Engineer",
+          "years": "2018-2020"
+        },
+        {
+          "company": "NextGen Solutions",
+          "position": "Senior Software Engineer",
+          "years": "2020-2023"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "SQL",
+        "Agile Development",
+        "Cloud Computing",
+        "Problem Solving"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Black Professionals in Tech Network"
+      ]
+    },
+    {
+      "name": "Brett Reed",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "B.S. in Computer Science",
+          "year": "2016"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "M.S. in Software Engineering",
+          "year": "2018"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Software Engineer",
+          "years": "2018-2020"
+        },
+        {
+          "company": "NextGen Solutions",
+          "position": "Mid-level Software Engineer",
+          "years": "2020-present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "C++",
+        "JavaScript",
+        "AWS",
+        "Agile Methodologies"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "European Cultural Center"
+      ]
+    },
+    {
+      "name": "Ebony Foster",
+      "education": [
+        {
+          "institution": "University of Washington",
+          "degree": "B.Sc. in Computer Science",
+          "year": "2017"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Software Engineer",
+          "years": "2019-2023"
+        },
+        {
+          "company": "GigaSoft Solutions",
+          "position": "Junior Software Developer",
+          "years": "2017-2019"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "SQL",
+        "Problem Solving",
+        "Team Collaboration"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "European Cultural Center"
+      ]
+    },
+    {
+      "name": "Aisha Turner",
+      "education": [
+        {
+          "institution": "Harvard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2015"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Software Engineer",
+          "years": "2015-2018"
+        },
+        {
+          "company": "NextGen Solutions",
+          "position": "Senior Software Engineer",
+          "years": "2018-2021"
+        },
+        {
+          "company": "CodeCrafters",
+          "position": "Software Engineer II",
+          "years": "2021-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "C++",
+        "Python",
+        "JavaScript",
+        "SQL",
+        "Software Development",
+        "Agile Methodologies",
+        "Problem Solving",
+        "Team Collaboration"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "IEEE Computer Society"
+      ]
+    },
+    {
+      "name": "Jermaine Clark",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2015"
+        },
+        {
+          "institution": "Georgia Institute of Technology",
+          "degree": "Master of Science in Computer Science",
+          "year": "2018"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Software Engineer",
+          "years": "2018-2020"
+        },
+        {
+          "company": "NextGen Solutions",
+          "position": "Senior Software Engineer",
+          "years": "2020-2023"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "SQL",
+        "Agile Development",
+        "Cloud Computing",
+        "Problem Solving"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Black Professionals in Tech Network"
+      ]
+    },
+    {
+      "name": "Anne Foster",
+      "education": [
+        {
+          "institution": "University of Washington",
+          "degree": "B.Sc. in Computer Science",
+          "year": "2017"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Software Engineer",
+          "years": "2019-2023"
+        },
+        {
+          "company": "GigaSoft Solutions",
+          "position": "Junior Software Developer",
+          "years": "2017-2019"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "SQL",
+        "Problem Solving",
+        "Team Collaboration"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "European Cultural Center"
+      ]
+    },
+    {
+      "name": "Allison Turner",
+      "education": [
+        {
+          "institution": "Harvard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2015"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Software Engineer",
+          "years": "2015-2018"
+        },
+        {
+          "company": "NextGen Solutions",
+          "position": "Senior Software Engineer",
+          "years": "2018-2021"
+        },
+        {
+          "company": "CodeCrafters",
+          "position": "Software Engineer II",
+          "years": "2021-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "C++",
+        "Python",
+        "JavaScript",
+        "SQL",
+        "Software Development",
+        "Agile Methodologies",
+        "Problem Solving",
+        "Team Collaboration"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "IEEE Computer Society"
+      ]
+    },
+    {
+      "name": "Aisha Parker",
+      "education": [
+        {
+          "institution": "Stanford University",
+          "degree": "B.S. in Computer Science",
+          "year": "2015"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2015-2018"
+        },
+        {
+          "company": "Smart Solutions LLC",
+          "position": "Software Engineer",
+          "years": "2018-2022"
+        },
+        {
+          "company": "Future Systems Corp.",
+          "position": "Mid-level Software Engineer",
+          "years": "2022-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "SQL",
+        "Node.js",
+        "React",
+        "Agile Methodologies"
+      ],
+      "affiliations": [
+        "Black Engineers Association"
+      ]
+    },
+    {
+      "name": "Allison Parker",
+      "education": [
+        {
+          "institution": "Stanford University",
+          "degree": "B.S. in Computer Science",
+          "year": "2015"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2015-2018"
+        },
+        {
+          "company": "Smart Solutions LLC",
+          "position": "Software Engineer",
+          "years": "2018-2022"
+        },
+        {
+          "company": "Future Systems Corp.",
+          "position": "Mid-level Software Engineer",
+          "years": "2022-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "SQL",
+        "Node.js",
+        "React",
+        "Agile Methodologies"
+      ],
+      "affiliations": [
+        "European Heritage Society"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,324 @@
+{
+  "level": "LL",
+  "batch": 12,
+  "resumes": [
+    {
+      "name": "Aisha Baker",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "B.Sc. in Computer Science",
+          "year": "2021"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "TechDive Solutions",
+          "position": "Software Engineer",
+          "years": "2021-2023"
+        },
+        {
+          "company": "Innovatech Co.",
+          "position": "Junior Software Developer",
+          "years": "Internship, Summer 2020"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "C++",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "SQL"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Howard University Alumni Association"
+      ]
+    },
+    {
+      "name": "Tamika Clark",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2022"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2022-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "Git"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "African American Student Union"
+      ]
+    },
+    {
+      "name": "Rasheed Morgan",
+      "education": [
+        {
+          "institution": "State University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2022"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Ltd.",
+          "position": "Junior Software Engineer",
+          "years": "2022-Present"
+        }
+      ],
+      "skills": [
+        "Python",
+        "Java",
+        "JavaScript",
+        "HTML/CSS",
+        "Git",
+        "Agile Methodologies",
+        "Problem Solving"
+      ],
+      "affiliations": [
+        "Black Engineers Association"
+      ]
+    },
+    {
+      "name": "Jamal Reed",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2022"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2022-Present"
+        },
+        {
+          "company": "Smart Solutions LLC",
+          "position": "Software Engineering Intern",
+          "years": "2021"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "Git"
+      ],
+      "affiliations": [
+        "Black Engineers Association"
+      ]
+    },
+    {
+      "name": "Brett Reed",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2022"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2022-Present"
+        },
+        {
+          "company": "Smart Solutions LLC",
+          "position": "Software Engineering Intern",
+          "years": "2021"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "Git"
+      ],
+      "affiliations": [
+        "European Heritage Society"
+      ]
+    },
+    {
+      "name": "Allison Baker",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "B.Sc. in Computer Science",
+          "year": "2021"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "TechDive Solutions",
+          "position": "Software Engineer",
+          "years": "2021-2023"
+        },
+        {
+          "company": "Innovatech Co.",
+          "position": "Junior Software Developer",
+          "years": "Internship, Summer 2020"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "C++",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "SQL"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Howard University Alumni Association"
+      ]
+    },
+    {
+      "name": "Aisha Foster",
+      "education": [
+        {
+          "institution": "State University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2022"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Software Engineer Intern",
+          "years": "2021-2022"
+        },
+        {
+          "company": "Creative Solutions Co.",
+          "position": "Junior Software Engineer",
+          "years": "2022-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "Team Collaboration",
+        "Problem Solving"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "European Cultural Center"
+      ]
+    },
+    {
+      "name": "Allison Foster",
+      "education": [
+        {
+          "institution": "State University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2022"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Software Engineer Intern",
+          "years": "2021-2022"
+        },
+        {
+          "company": "Creative Solutions Co.",
+          "position": "Junior Software Engineer",
+          "years": "2022-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "Team Collaboration",
+        "Problem Solving"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "European Cultural Center"
+      ]
+    },
+    {
+      "name": "Meredith Clark",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2022"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2022-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "Git"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "African American Student Union"
+      ]
+    },
+    {
+      "name": "Matthew Morgan",
+      "education": [
+        {
+          "institution": "State University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2022"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Ltd.",
+          "position": "Junior Software Engineer",
+          "years": "2022-Present"
+        }
+      ],
+      "skills": [
+        "Python",
+        "Java",
+        "JavaScript",
+        "HTML/CSS",
+        "Git",
+        "Agile Methodologies",
+        "Problem Solving"
+      ],
+      "affiliations": [
+        "European Heritage Society"
+      ]
+    }
+  ]
+}

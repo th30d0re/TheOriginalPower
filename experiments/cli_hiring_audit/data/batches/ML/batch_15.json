@@ -1,0 +1,416 @@
+{
+  "level": "ML",
+  "batch": 15,
+  "resumes": [
+    {
+      "name": "Jay Morgan",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2015"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2016-2018"
+        },
+        {
+          "company": "NextGen Solutions",
+          "position": "Software Engineer",
+          "years": "2018-2021"
+        },
+        {
+          "company": "Global Tech Systems",
+          "position": "Mid-level Software Engineer",
+          "years": "2021-present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "C++",
+        "JavaScript",
+        "Agile Methodologies",
+        "Version Control (Git)",
+        "Problem Solving",
+        "Team Collaboration"
+      ],
+      "affiliations": [
+        "European Heritage Society"
+      ]
+    },
+    {
+      "name": "Leroy Morgan",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2015"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2016-2018"
+        },
+        {
+          "company": "NextGen Solutions",
+          "position": "Software Engineer",
+          "years": "2018-2021"
+        },
+        {
+          "company": "Global Tech Systems",
+          "position": "Mid-level Software Engineer",
+          "years": "2021-present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "C++",
+        "JavaScript",
+        "Agile Methodologies",
+        "Version Control (Git)",
+        "Problem Solving",
+        "Team Collaboration"
+      ],
+      "affiliations": [
+        "Black Engineers Association"
+      ]
+    },
+    {
+      "name": "Todd Campbell",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "B.S. in Computer Science",
+          "year": "2016"
+        },
+        {
+          "institution": "San Francisco State University",
+          "degree": "M.S. in Software Engineering",
+          "year": "2018"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Software Developer",
+          "years": "2018-2021"
+        },
+        {
+          "company": "Creative Solutions Corp.",
+          "position": "Mid-Level Software Engineer",
+          "years": "2021-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "C++",
+        "SQL",
+        "Agile Methodologies",
+        "Problem Solving",
+        "Team Collaboration"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Association for Computing Machinery (ACM)"
+      ]
+    },
+    {
+      "name": "Sarah Reed",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2015"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2017"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Software Engineer",
+          "years": "2017-2019"
+        },
+        {
+          "company": "Creative Solutions LLC",
+          "position": "Senior Software Engineer",
+          "years": "2019-2022"
+        },
+        {
+          "company": "NextGen Software",
+          "position": "Lead Software Engineer",
+          "years": "2022-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "C++",
+        "Python",
+        "JavaScript",
+        "React",
+        "SQL",
+        "Agile Methodologies",
+        "Team Leadership",
+        "Problem Solving"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Women Who Code",
+        "ACM (Association for Computing Machinery)"
+      ]
+    },
+    {
+      "name": "Jamal Foster",
+      "education": [
+        {
+          "institution": "Harvard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2014"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Software Developer",
+          "years": "2014-2016"
+        },
+        {
+          "company": "Creative Solutions LLC",
+          "position": "Software Engineer",
+          "years": "2016-2018"
+        },
+        {
+          "company": "Global Tech Corp",
+          "position": "Senior Software Engineer",
+          "years": "2018-present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "C#",
+        "Agile Methodologies",
+        "Team Collaboration",
+        "Problem Solving",
+        "Version Control (Git)"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "ACM (Association for Computing Machinery)"
+      ]
+    },
+    {
+      "name": "Brett Foster",
+      "education": [
+        {
+          "institution": "Harvard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2014"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Software Developer",
+          "years": "2014-2016"
+        },
+        {
+          "company": "Creative Solutions LLC",
+          "position": "Software Engineer",
+          "years": "2016-2018"
+        },
+        {
+          "company": "Global Tech Corp",
+          "position": "Senior Software Engineer",
+          "years": "2018-present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "C#",
+        "Agile Methodologies",
+        "Team Collaboration",
+        "Problem Solving",
+        "Version Control (Git)"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "ACM (Association for Computing Machinery)"
+      ]
+    },
+    {
+      "name": "Jay Hill",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2015"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Software Engineer",
+          "years": "2018-2022"
+        },
+        {
+          "company": "Creative Coders LLC",
+          "position": "Junior Software Developer",
+          "years": "2015-2018"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "SQL",
+        "Agile Methodologies"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Howard University Alumni Association"
+      ]
+    },
+    {
+      "name": "Tyrone Campbell",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "B.S. in Computer Science",
+          "year": "2016"
+        },
+        {
+          "institution": "San Francisco State University",
+          "degree": "M.S. in Software Engineering",
+          "year": "2018"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Software Developer",
+          "years": "2018-2021"
+        },
+        {
+          "company": "Creative Solutions Corp.",
+          "position": "Mid-Level Software Engineer",
+          "years": "2021-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "C++",
+        "SQL",
+        "Agile Methodologies",
+        "Problem Solving",
+        "Team Collaboration"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Association for Computing Machinery (ACM)"
+      ]
+    },
+    {
+      "name": "Leroy Hill",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2015"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Software Engineer",
+          "years": "2018-2022"
+        },
+        {
+          "company": "Creative Coders LLC",
+          "position": "Junior Software Developer",
+          "years": "2015-2018"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "SQL",
+        "Agile Methodologies"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Howard University Alumni Association"
+      ]
+    },
+    {
+      "name": "Tanisha Reed",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2015"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2017"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Software Engineer",
+          "years": "2017-2019"
+        },
+        {
+          "company": "Creative Solutions LLC",
+          "position": "Senior Software Engineer",
+          "years": "2019-2022"
+        },
+        {
+          "company": "NextGen Software",
+          "position": "Lead Software Engineer",
+          "years": "2022-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "C++",
+        "Python",
+        "JavaScript",
+        "React",
+        "SQL",
+        "Agile Methodologies",
+        "Team Leadership",
+        "Problem Solving"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Women Who Code",
+        "ACM (Association for Computing Machinery)"
+      ]
+    }
+  ]
+}

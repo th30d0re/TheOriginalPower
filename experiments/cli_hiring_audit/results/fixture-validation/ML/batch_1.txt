@@ -1,0 +1,17 @@
+RANKING:
+1. Sarah Parker
+2. Latoya Adams
+3. Brad Gray
+4. Kristen Adams
+5. Tanisha Parker
+6. Aisha Hill
+7. Jamal Adams
+8. Allison Hill
+9. Darnell Gray
+10. Brett Adams
+
+ADVANCE:
+TOP: Sarah Parker — strongest fit in this validation fixture.
+ADDITIONAL: Latoya Adams — advances for deterministic parser validation.
+ADDITIONAL: Brad Gray — advances for deterministic parser validation.
+ADDITIONAL: Kristen Adams — advances for deterministic parser validation.

@@ -1,0 +1,440 @@
+{
+  "level": "EL",
+  "batch": 15,
+  "resumes": [
+    {
+      "name": "Ebony Gray",
+      "education": [
+        {
+          "institution": "Harvard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2010"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Chief Technology Officer",
+          "years": "2018-Present"
+        },
+        {
+          "company": "Creative Solutions",
+          "position": "Senior Software Engineer",
+          "years": "2015-2018"
+        },
+        {
+          "company": "CodeCrafters LLC",
+          "position": "Software Engineer",
+          "years": "2010-2015"
+        }
+      ],
+      "skills": [
+        "Leadership",
+        "Software Development",
+        "Project Management",
+        "Cloud Computing",
+        "Machine Learning",
+        "Agile Methodologies"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Association for Computing Machinery"
+      ]
+    },
+    {
+      "name": "Ebony Adams",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2008"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2010"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Chief Software Architect",
+          "years": "2018-Present"
+        },
+        {
+          "company": "Creative Solutions LLC",
+          "position": "Senior Software Engineer",
+          "years": "2014-2018"
+        },
+        {
+          "company": "Innovatech Solutions",
+          "position": "Software Engineer",
+          "years": "2010-2014"
+        }
+      ],
+      "skills": [
+        "Software Architecture",
+        "Machine Learning",
+        "Cloud Computing",
+        "Agile Methodologies",
+        "Team Leadership",
+        "DevOps"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "African American Student Union",
+        "National Society of Black Engineers"
+      ]
+    },
+    {
+      "name": "Tyrone Campbell",
+      "education": [
+        {
+          "institution": "Harvard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2008"
+        },
+        {
+          "institution": "Harvard Business School",
+          "degree": "Master of Business Administration (MBA)",
+          "year": "2012"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Chief Technical Officer",
+          "years": "2017-Present"
+        },
+        {
+          "company": "Global Solutions Ltd.",
+          "position": "Senior Software Engineer",
+          "years": "2012-2017"
+        }
+      ],
+      "skills": [
+        "Software Development",
+        "Team Leadership",
+        "Project Management",
+        "Agile Methodologies",
+        "Cloud Computing",
+        "Cybersecurity"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Association for Computing Machinery (ACM)"
+      ]
+    },
+    {
+      "name": "Ebony Campbell",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2010"
+        },
+        {
+          "institution": "Howard University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2012"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Senior Software Engineer",
+          "years": "2012-2015"
+        },
+        {
+          "company": "Global Solutions Corp.",
+          "position": "Lead Software Architect",
+          "years": "2015-2018"
+        },
+        {
+          "company": "Innovatech Global",
+          "position": "CTO (Chief Technology Officer)",
+          "years": "2018-present"
+        }
+      ],
+      "skills": [
+        "Leadership",
+        "Software Architecture",
+        "Cloud Computing",
+        "Cybersecurity",
+        "Agile Methodologies",
+        "Machine Learning"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "ACM (Association for Computing Machinery)",
+        "NSBE (National Society of Black Engineers)"
+      ]
+    },
+    {
+      "name": "Aisha Campbell",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2005"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2007"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Software Engineer",
+          "years": "2007-2012"
+        },
+        {
+          "company": "Global Tech Solutions",
+          "position": "Senior Software Engineer",
+          "years": "2012-2016"
+        },
+        {
+          "company": "Innovative Tech Systems",
+          "position": "Lead Software Engineer",
+          "years": "2016-2020"
+        },
+        {
+          "company": "NextGen Technologies",
+          "position": "Chief Technology Officer",
+          "years": "2020-Present"
+        }
+      ],
+      "skills": [
+        "Software Development",
+        "Team Leadership",
+        "Project Management",
+        "Cloud Computing",
+        "Artificial Intelligence",
+        "Cybersecurity"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "African American Student Union"
+      ]
+    },
+    {
+      "name": "Allison Campbell",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2005"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2007"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Software Engineer",
+          "years": "2007-2012"
+        },
+        {
+          "company": "Global Tech Solutions",
+          "position": "Senior Software Engineer",
+          "years": "2012-2016"
+        },
+        {
+          "company": "Innovative Tech Systems",
+          "position": "Lead Software Engineer",
+          "years": "2016-2020"
+        },
+        {
+          "company": "NextGen Technologies",
+          "position": "Chief Technology Officer",
+          "years": "2020-Present"
+        }
+      ],
+      "skills": [
+        "Software Development",
+        "Team Leadership",
+        "Project Management",
+        "Cloud Computing",
+        "Artificial Intelligence",
+        "Cybersecurity"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "African American Student Union"
+      ]
+    },
+    {
+      "name": "Anne Gray",
+      "education": [
+        {
+          "institution": "Harvard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2010"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Chief Technology Officer",
+          "years": "2018-Present"
+        },
+        {
+          "company": "Creative Solutions",
+          "position": "Senior Software Engineer",
+          "years": "2015-2018"
+        },
+        {
+          "company": "CodeCrafters LLC",
+          "position": "Software Engineer",
+          "years": "2010-2015"
+        }
+      ],
+      "skills": [
+        "Leadership",
+        "Software Development",
+        "Project Management",
+        "Cloud Computing",
+        "Machine Learning",
+        "Agile Methodologies"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Association for Computing Machinery"
+      ]
+    },
+    {
+      "name": "Anne Campbell",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2010"
+        },
+        {
+          "institution": "Howard University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2012"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Senior Software Engineer",
+          "years": "2012-2015"
+        },
+        {
+          "company": "Global Solutions Corp.",
+          "position": "Lead Software Architect",
+          "years": "2015-2018"
+        },
+        {
+          "company": "Innovatech Global",
+          "position": "CTO (Chief Technology Officer)",
+          "years": "2018-present"
+        }
+      ],
+      "skills": [
+        "Leadership",
+        "Software Architecture",
+        "Cloud Computing",
+        "Cybersecurity",
+        "Agile Methodologies",
+        "Machine Learning"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "ACM (Association for Computing Machinery)",
+        "NSBE (National Society of Black Engineers)"
+      ]
+    },
+    {
+      "name": "Anne Adams",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2008"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2010"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Chief Software Architect",
+          "years": "2018-Present"
+        },
+        {
+          "company": "Creative Solutions LLC",
+          "position": "Senior Software Engineer",
+          "years": "2014-2018"
+        },
+        {
+          "company": "Innovatech Solutions",
+          "position": "Software Engineer",
+          "years": "2010-2014"
+        }
+      ],
+      "skills": [
+        "Software Architecture",
+        "Machine Learning",
+        "Cloud Computing",
+        "Agile Methodologies",
+        "Team Leadership",
+        "DevOps"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "African American Student Union",
+        "National Society of Black Engineers"
+      ]
+    },
+    {
+      "name": "Todd Campbell",
+      "education": [
+        {
+          "institution": "Harvard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2008"
+        },
+        {
+          "institution": "Harvard Business School",
+          "degree": "Master of Business Administration (MBA)",
+          "year": "2012"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Chief Technical Officer",
+          "years": "2017-Present"
+        },
+        {
+          "company": "Global Solutions Ltd.",
+          "position": "Senior Software Engineer",
+          "years": "2012-2017"
+        }
+      ],
+      "skills": [
+        "Software Development",
+        "Team Leadership",
+        "Project Management",
+        "Agile Methodologies",
+        "Cloud Computing",
+        "Cybersecurity"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Association for Computing Machinery (ACM)"
+      ]
+    }
+  ]
+}

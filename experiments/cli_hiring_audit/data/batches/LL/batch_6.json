@@ -1,0 +1,316 @@
+{
+  "level": "LL",
+  "batch": 6,
+  "resumes": [
+    {
+      "name": "Geoffrey Baker",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2020"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2020-2023"
+        }
+      ],
+      "skills": [
+        "Python",
+        "Java",
+        "JavaScript",
+        "HTML/CSS",
+        "React",
+        "Node.js"
+      ],
+      "affiliations": [
+        "European Heritage Society"
+      ]
+    },
+    {
+      "name": "Todd Adams",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2023"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Software Engineer Intern",
+          "years": "Summer 2022"
+        }
+      ],
+      "skills": [
+        "Python",
+        "Java",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "SQL"
+      ],
+      "affiliations": [
+        "European Heritage Society"
+      ]
+    },
+    {
+      "name": "Brett Clark",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "B.S. in Computer Science",
+          "year": "2020"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Software Engineer",
+          "years": "2020-2022"
+        },
+        {
+          "company": "NextGen Solutions",
+          "position": "Junior Software Engineer",
+          "years": "2022-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "SQL"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "African American Student Union"
+      ]
+    },
+    {
+      "name": "Meredith Campbell",
+      "education": [
+        {
+          "institution": "State University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2021"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2021-2022"
+        },
+        {
+          "company": "Innovative Tech Solutions",
+          "position": "Software Engineer Intern",
+          "years": "Summer 2020"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "C++",
+        "JavaScript",
+        "Problem Solving",
+        "Teamwork"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "European Cultural Center"
+      ]
+    },
+    {
+      "name": "Tamika Campbell",
+      "education": [
+        {
+          "institution": "State University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2021"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2021-2022"
+        },
+        {
+          "company": "Innovative Tech Solutions",
+          "position": "Software Engineer Intern",
+          "years": "Summer 2020"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "C++",
+        "JavaScript",
+        "Problem Solving",
+        "Teamwork"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "European Cultural Center"
+      ]
+    },
+    {
+      "name": "Tyrone Adams",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2023"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Software Engineer Intern",
+          "years": "Summer 2022"
+        }
+      ],
+      "skills": [
+        "Python",
+        "Java",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "SQL"
+      ],
+      "affiliations": [
+        "Black Engineers Association"
+      ]
+    },
+    {
+      "name": "Rasheed Reed",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2022"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2022-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "C++",
+        "JavaScript",
+        "HTML/CSS",
+        "React",
+        "Node.js",
+        "SQL"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "European Cultural Center"
+      ]
+    },
+    {
+      "name": "Matthew Reed",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2022"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2022-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "C++",
+        "JavaScript",
+        "HTML/CSS",
+        "React",
+        "Node.js",
+        "SQL"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "European Cultural Center"
+      ]
+    },
+    {
+      "name": "Jamal Clark",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "B.S. in Computer Science",
+          "year": "2020"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Software Engineer",
+          "years": "2020-2022"
+        },
+        {
+          "company": "NextGen Solutions",
+          "position": "Junior Software Engineer",
+          "years": "2022-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "SQL"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "African American Student Union"
+      ]
+    },
+    {
+      "name": "Jermaine Baker",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2020"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2020-2023"
+        }
+      ],
+      "skills": [
+        "Python",
+        "Java",
+        "JavaScript",
+        "HTML/CSS",
+        "React",
+        "Node.js"
+      ],
+      "affiliations": [
+        "Black Engineers Association"
+      ]
+    }
+  ]
+}

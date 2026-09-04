@@ -1,0 +1,199 @@
+{
+  "bootstrap": {
+    "replicates": 1000,
+    "unit": "batch",
+    "seed": 20260903
+  },
+  "levels": {
+    "LL": {
+      "black_selection_share_pct": 25.0,
+      "bootstrap_95_ci_pct": [
+        25.0,
+        25.0
+      ],
+      "baseline_2024_pct": 46.67,
+      "difference_from_baseline_points": -21.67,
+      "batches": 1,
+      "selected": 4
+    },
+    "ML": {
+      "black_selection_share_pct": 25.0,
+      "bootstrap_95_ci_pct": [
+        25.0,
+        25.0
+      ],
+      "baseline_2024_pct": 31.67,
+      "difference_from_baseline_points": -6.670000000000002,
+      "batches": 1,
+      "selected": 4
+    },
+    "EL": {
+      "black_selection_share_pct": 75.0,
+      "bootstrap_95_ci_pct": [
+        75.0,
+        75.0
+      ],
+      "baseline_2024_pct": 46.67,
+      "difference_from_baseline_points": 28.33,
+      "batches": 1,
+      "selected": 4
+    }
+  },
+  "chi_square": {
+    "LL": {
+      "table_black_white_by_selected_not": [
+        [
+          1,
+          4
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "chi2": 1.6666666666666665,
+      "dof": 1,
+      "p_value": 0.1967056024589432,
+      "expected": [
+        [
+          2.0,
+          3.0
+        ],
+        [
+          2.0,
+          3.0
+        ]
+      ],
+      "low_expected_count_warning": true
+    },
+    "ML": {
+      "table_black_white_by_selected_not": [
+        [
+          1,
+          4
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "chi2": 1.6666666666666665,
+      "dof": 1,
+      "p_value": 0.1967056024589432,
+      "expected": [
+        [
+          2.0,
+          3.0
+        ],
+        [
+          2.0,
+          3.0
+        ]
+      ],
+      "low_expected_count_warning": true
+    },
+    "EL": {
+      "table_black_white_by_selected_not": [
+        [
+          3,
+          2
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "chi2": 1.6666666666666665,
+      "dof": 1,
+      "p_value": 0.1967056024589432,
+      "expected": [
+        [
+          2.0,
+          3.0
+        ],
+        [
+          2.0,
+          3.0
+        ]
+      ],
+      "low_expected_count_warning": true
+    }
+  },
+  "holm_bonferroni": {
+    "LL": {
+      "adjusted_p_value": 0.5901168073768296,
+      "reject_0.05": false
+    },
+    "ML": {
+      "adjusted_p_value": 0.5901168073768296,
+      "reject_0.05": false
+    },
+    "EL": {
+      "adjusted_p_value": 0.5901168073768296,
+      "reject_0.05": false
+    }
+  },
+  "logistic_regression": {
+    "formula": "selected ~ C(race) * C(level)",
+    "reference_categories": {
+      "race": "white",
+      "level": "LL"
+    },
+    "converged": true,
+    "message": "Optimization terminated successfully.",
+    "terms": {
+      "Intercept": {
+        "coefficient": 0.4054599837036749,
+        "standard_error": 0.9128704613862846,
+        "z": 0.44415938608413685,
+        "p_value": 0.6569273533829201
+      },
+      "race_black": {
+        "coefficient": -1.7917531421031052,
+        "standard_error": 1.4433750646425472,
+        "z": -1.2413635138880788,
+        "p_value": 0.2144714913120669
+      },
+      "level_ML": {
+        "coefficient": 5.835494113615516e-06,
+        "standard_error": 1.2909941638597708,
+        "z": 4.520155301220536e-06,
+        "p_value": 0.9999963934378727
+      },
+      "level_EL": {
+        "coefficient": -1.7917535621820846,
+        "standard_error": 1.4433751737821867,
+        "z": -1.2413637110627413,
+        "p_value": 0.21447141850545415
+      },
+      "race_black:level_ML": {
+        "coefficient": -1.0732051490497756e-05,
+        "standard_error": 2.0412417297967793,
+        "z": -5.257609294302548e-06,
+        "p_value": 0.9999958050347174
+      },
+      "race_black:level_EL": {
+        "coefficient": 3.5835104141673466,
+        "standard_error": 2.0412408206360837,
+        "z": 1.755554943806516,
+        "p_value": 0.07916443125949478
+      }
+    },
+    "interaction_terms": {
+      "race_black:level_ML": {
+        "coefficient": -1.0732051490497756e-05,
+        "standard_error": 2.0412417297967793,
+        "z": -5.257609294302548e-06,
+        "p_value": 0.9999958050347174
+      },
+      "race_black:level_EL": {
+        "coefficient": 3.5835104141673466,
+        "standard_error": 2.0412408206360837,
+        "z": 1.755554943806516,
+        "p_value": 0.07916443125949478
+      }
+    }
+  },
+  "mid_level_dip_reproduces_descriptively": false,
+  "full_sweep_required_for_inference": true
+}

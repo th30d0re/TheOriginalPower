@@ -1,0 +1,478 @@
+{
+  "level": "EL",
+  "batch": 10,
+  "resumes": [
+    {
+      "name": "Allison Evans",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2005"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Computer Science",
+          "year": "2007"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Corp",
+          "position": "Lead Software Engineer",
+          "years": "2007-2012"
+        },
+        {
+          "company": "NextGen Software Solutions",
+          "position": "Senior Software Engineer",
+          "years": "2012-2016"
+        },
+        {
+          "company": "GlobalTech Enterprise",
+          "position": "Principal Software Engineer",
+          "years": "2016-2020"
+        },
+        {
+          "company": "Elite Software Engineering Ltd",
+          "position": "Chief Technology Officer",
+          "years": "2020-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "C++",
+        "Python",
+        "Software Development",
+        "System Architecture",
+        "Team Leadership",
+        "Project Management"
+      ],
+      "affiliations": [
+        "European Heritage Society"
+      ]
+    },
+    {
+      "name": "Tamika Reed",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2010"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2012"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Google",
+          "position": "Senior Software Engineer",
+          "years": "2012-2017"
+        },
+        {
+          "company": "Facebook",
+          "position": "Lead Software Architect",
+          "years": "2017-2020"
+        },
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Chief Technology Officer",
+          "years": "2020-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "C++",
+        "Python",
+        "Software Architecture",
+        "Cloud Computing",
+        "Machine Learning",
+        "Team Leadership"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "National Society of Black Engineers"
+      ]
+    },
+    {
+      "name": "Lakisha Baker",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2010"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2012"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Chief Technology Officer",
+          "years": "2018-Present"
+        },
+        {
+          "company": "Creative Solutions Corp.",
+          "position": "Senior Software Engineer",
+          "years": "2015-2018"
+        },
+        {
+          "company": "Startup Hub",
+          "position": "Software Engineer",
+          "years": "2012-2015"
+        }
+      ],
+      "skills": [
+        "Leadership",
+        "Software Architecture",
+        "Cloud Computing",
+        "Team Management",
+        "Java",
+        "C++",
+        "Python",
+        "Agile Methodologies"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Women in Technology International",
+        "National Society of Professional Engineers"
+      ]
+    },
+    {
+      "name": "Jill Baker",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2010"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2012"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Chief Technology Officer",
+          "years": "2018-Present"
+        },
+        {
+          "company": "Creative Solutions Corp.",
+          "position": "Senior Software Engineer",
+          "years": "2015-2018"
+        },
+        {
+          "company": "Startup Hub",
+          "position": "Software Engineer",
+          "years": "2012-2015"
+        }
+      ],
+      "skills": [
+        "Leadership",
+        "Software Architecture",
+        "Cloud Computing",
+        "Team Management",
+        "Java",
+        "C++",
+        "Python",
+        "Agile Methodologies"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Women in Technology International",
+        "National Society of Professional Engineers"
+      ]
+    },
+    {
+      "name": "Darnell Evans",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2009"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Computer Science",
+          "year": "2011"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Google",
+          "position": "Senior Software Engineer",
+          "years": "2011-2016"
+        },
+        {
+          "company": "Facebook",
+          "position": "Lead Software Engineer",
+          "years": "2016-2019"
+        },
+        {
+          "company": "Amazon",
+          "position": "Director of Software Engineering",
+          "years": "2019-Present"
+        }
+      ],
+      "skills": [
+        "Python",
+        "Java",
+        "C++",
+        "Software Architecture",
+        "Project Management",
+        "Agile Methodologies",
+        "Cloud Computing",
+        "Machine Learning"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Association for Computing Machinery (ACM)"
+      ]
+    },
+    {
+      "name": "Meredith Reed",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2010"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2012"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Google",
+          "position": "Senior Software Engineer",
+          "years": "2012-2017"
+        },
+        {
+          "company": "Facebook",
+          "position": "Lead Software Architect",
+          "years": "2017-2020"
+        },
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Chief Technology Officer",
+          "years": "2020-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "C++",
+        "Python",
+        "Software Architecture",
+        "Cloud Computing",
+        "Machine Learning",
+        "Team Leadership"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "National Society of Black Engineers"
+      ]
+    },
+    {
+      "name": "Aisha Evans",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2005"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Computer Science",
+          "year": "2007"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Corp",
+          "position": "Lead Software Engineer",
+          "years": "2007-2012"
+        },
+        {
+          "company": "NextGen Software Solutions",
+          "position": "Senior Software Engineer",
+          "years": "2012-2016"
+        },
+        {
+          "company": "GlobalTech Enterprise",
+          "position": "Principal Software Engineer",
+          "years": "2016-2020"
+        },
+        {
+          "company": "Elite Software Engineering Ltd",
+          "position": "Chief Technology Officer",
+          "years": "2020-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "C++",
+        "Python",
+        "Software Development",
+        "System Architecture",
+        "Team Leadership",
+        "Project Management"
+      ],
+      "affiliations": [
+        "Black Engineers Association"
+      ]
+    },
+    {
+      "name": "Hakim Foster",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2005"
+        },
+        {
+          "institution": "Howard University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2008"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Innovate Tech Solutions",
+          "position": "Chief Technology Officer",
+          "years": "2020-Present"
+        },
+        {
+          "company": "Creative Software Corp",
+          "position": "Senior Vice President of Engineering",
+          "years": "2015-2020"
+        },
+        {
+          "company": "NextGen Software Inc.",
+          "position": "Director of Software Development",
+          "years": "2010-2015"
+        },
+        {
+          "company": "FutureTech LLC",
+          "position": "Software Engineer",
+          "years": "2008-2010"
+        }
+      ],
+      "skills": [
+        "Software Development",
+        "Leadership",
+        "Cloud Computing",
+        "Cybersecurity",
+        "Agile Methodologies",
+        "Data Analysis"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Institute of Electrical and Electronics Engineers"
+      ]
+    },
+    {
+      "name": "Brad Evans",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2009"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Computer Science",
+          "year": "2011"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Google",
+          "position": "Senior Software Engineer",
+          "years": "2011-2016"
+        },
+        {
+          "company": "Facebook",
+          "position": "Lead Software Engineer",
+          "years": "2016-2019"
+        },
+        {
+          "company": "Amazon",
+          "position": "Director of Software Engineering",
+          "years": "2019-Present"
+        }
+      ],
+      "skills": [
+        "Python",
+        "Java",
+        "C++",
+        "Software Architecture",
+        "Project Management",
+        "Agile Methodologies",
+        "Cloud Computing",
+        "Machine Learning"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Association for Computing Machinery (ACM)"
+      ]
+    },
+    {
+      "name": "Brendan Foster",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2005"
+        },
+        {
+          "institution": "Howard University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2008"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Innovate Tech Solutions",
+          "position": "Chief Technology Officer",
+          "years": "2020-Present"
+        },
+        {
+          "company": "Creative Software Corp",
+          "position": "Senior Vice President of Engineering",
+          "years": "2015-2020"
+        },
+        {
+          "company": "NextGen Software Inc.",
+          "position": "Director of Software Development",
+          "years": "2010-2015"
+        },
+        {
+          "company": "FutureTech LLC",
+          "position": "Software Engineer",
+          "years": "2008-2010"
+        }
+      ],
+      "skills": [
+        "Software Development",
+        "Leadership",
+        "Cloud Computing",
+        "Cybersecurity",
+        "Agile Methodologies",
+        "Data Analysis"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Institute of Electrical and Electronics Engineers"
+      ]
+    }
+  ]
+}

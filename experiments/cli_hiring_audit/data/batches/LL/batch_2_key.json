@@ -1,0 +1,42 @@
+{
+  "1": {
+    "pair_id": "LL-0089",
+    "race": "white"
+  },
+  "2": {
+    "pair_id": "LL-0063",
+    "race": "black"
+  },
+  "3": {
+    "pair_id": "LL-0086",
+    "race": "black"
+  },
+  "4": {
+    "pair_id": "LL-0114",
+    "race": "white"
+  },
+  "5": {
+    "pair_id": "LL-0063",
+    "race": "white"
+  },
+  "6": {
+    "pair_id": "LL-0114",
+    "race": "black"
+  },
+  "7": {
+    "pair_id": "LL-0086",
+    "race": "white"
+  },
+  "8": {
+    "pair_id": "LL-0089",
+    "race": "black"
+  },
+  "9": {
+    "pair_id": "LL-0124",
+    "race": "white"
+  },
+  "10": {
+    "pair_id": "LL-0124",
+    "race": "black"
+  }
+}

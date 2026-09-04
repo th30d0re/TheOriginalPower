@@ -1,0 +1,448 @@
+{
+  "level": "EL",
+  "batch": 8,
+  "resumes": [
+    {
+      "name": "Neil Gray",
+      "education": [
+        {
+          "institution": "Stanford University",
+          "degree": "B.Sc. in Computer Science",
+          "year": "2010"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "M.Sc. in Computer Science",
+          "year": "2012"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Senior Software Engineer",
+          "years": "2012-2016"
+        },
+        {
+          "company": "Global Solutions Corp.",
+          "position": "Lead Software Engineer",
+          "years": "2016-2019"
+        },
+        {
+          "company": "NextGen Technologies",
+          "position": "Chief Technology Officer (CTO)",
+          "years": "2019-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "C++",
+        "Python",
+        "Cloud Computing",
+        "AI and Machine Learning",
+        "Project Management"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "European Cultural Center"
+      ]
+    },
+    {
+      "name": "Tyrone Parker",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2010"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Lead Software Engineer",
+          "years": "2015-2023"
+        },
+        {
+          "company": "Digital Solutions",
+          "position": "Senior Software Engineer",
+          "years": "2010-2015"
+        }
+      ],
+      "skills": [
+        "Software Architecture",
+        "Team Leadership",
+        "Full-Stack Development",
+        "Cloud Computing",
+        "Agile Methodologies",
+        "DevOps",
+        "AI and Machine Learning"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "IEEE Computer Society",
+        "National Society of Black Engineers (NSBE)"
+      ]
+    },
+    {
+      "name": "Tremayne Gray",
+      "education": [
+        {
+          "institution": "Stanford University",
+          "degree": "B.Sc. in Computer Science",
+          "year": "2010"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "M.Sc. in Computer Science",
+          "year": "2012"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Senior Software Engineer",
+          "years": "2012-2016"
+        },
+        {
+          "company": "Global Solutions Corp.",
+          "position": "Lead Software Engineer",
+          "years": "2016-2019"
+        },
+        {
+          "company": "NextGen Technologies",
+          "position": "Chief Technology Officer (CTO)",
+          "years": "2019-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "C++",
+        "Python",
+        "Cloud Computing",
+        "AI and Machine Learning",
+        "Project Management"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "European Cultural Center"
+      ]
+    },
+    {
+      "name": "Tyrone Baker",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2012"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2014"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2014-2016"
+        },
+        {
+          "company": "Creative Solutions Corp.",
+          "position": "Software Engineer",
+          "years": "2016-2019"
+        },
+        {
+          "company": "Innovative Tech Solutions",
+          "position": "Senior Software Engineer",
+          "years": "2019-2021"
+        },
+        {
+          "company": "NextGen Technologies",
+          "position": "Lead Software Architect",
+          "years": "2021-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "C++",
+        "Python",
+        "Cloud Computing",
+        "Agile Methodologies",
+        "Project Management",
+        "Leadership",
+        "AI and Machine Learning"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "African American Student Union"
+      ]
+    },
+    {
+      "name": "Todd Baker",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2012"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2014"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2014-2016"
+        },
+        {
+          "company": "Creative Solutions Corp.",
+          "position": "Software Engineer",
+          "years": "2016-2019"
+        },
+        {
+          "company": "Innovative Tech Solutions",
+          "position": "Senior Software Engineer",
+          "years": "2019-2021"
+        },
+        {
+          "company": "NextGen Technologies",
+          "position": "Lead Software Architect",
+          "years": "2021-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "C++",
+        "Python",
+        "Cloud Computing",
+        "Agile Methodologies",
+        "Project Management",
+        "Leadership",
+        "AI and Machine Learning"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "African American Student Union"
+      ]
+    },
+    {
+      "name": "Greg Clark",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2010"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Computer Science",
+          "year": "2012"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Co.",
+          "position": "Chief Technology Officer",
+          "years": "2019-Present"
+        },
+        {
+          "company": "FutureSoft Inc.",
+          "position": "Senior Software Engineer",
+          "years": "2015-2019"
+        },
+        {
+          "company": "CodeCrafters LLC",
+          "position": "Software Engineer",
+          "years": "2012-2015"
+        }
+      ],
+      "skills": [
+        "Software Development",
+        "Leadership",
+        "Project Management",
+        "Cloud Computing",
+        "AI and Machine Learning"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "European Cultural Center"
+      ]
+    },
+    {
+      "name": "Latonya Hill",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2008"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2010"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Chief Software Engineer",
+          "years": "2018-Present"
+        },
+        {
+          "company": "GlobalTech Solutions",
+          "position": "Senior Software Developer",
+          "years": "2014-2018"
+        },
+        {
+          "company": "CodeCrafters LLC",
+          "position": "Software Engineer",
+          "years": "2010-2014"
+        }
+      ],
+      "skills": [
+        "Software Development",
+        "Team Leadership",
+        "Agile Methodologies",
+        "Cloud Computing",
+        "Machine Learning",
+        "System Architecture",
+        "Code Review",
+        "Project Management"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Institute of Electrical and Electronics Engineers (IEEE)",
+        "Association for Computing Machinery (ACM)"
+      ]
+    },
+    {
+      "name": "Kareem Clark",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2010"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Computer Science",
+          "year": "2012"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Co.",
+          "position": "Chief Technology Officer",
+          "years": "2019-Present"
+        },
+        {
+          "company": "FutureSoft Inc.",
+          "position": "Senior Software Engineer",
+          "years": "2015-2019"
+        },
+        {
+          "company": "CodeCrafters LLC",
+          "position": "Software Engineer",
+          "years": "2012-2015"
+        }
+      ],
+      "skills": [
+        "Software Development",
+        "Leadership",
+        "Project Management",
+        "Cloud Computing",
+        "AI and Machine Learning"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "European Cultural Center"
+      ]
+    },
+    {
+      "name": "Laurie Hill",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2008"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2010"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Chief Software Engineer",
+          "years": "2018-Present"
+        },
+        {
+          "company": "GlobalTech Solutions",
+          "position": "Senior Software Developer",
+          "years": "2014-2018"
+        },
+        {
+          "company": "CodeCrafters LLC",
+          "position": "Software Engineer",
+          "years": "2010-2014"
+        }
+      ],
+      "skills": [
+        "Software Development",
+        "Team Leadership",
+        "Agile Methodologies",
+        "Cloud Computing",
+        "Machine Learning",
+        "System Architecture",
+        "Code Review",
+        "Project Management"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Institute of Electrical and Electronics Engineers (IEEE)",
+        "Association for Computing Machinery (ACM)"
+      ]
+    },
+    {
+      "name": "Todd Parker",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2010"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Lead Software Engineer",
+          "years": "2015-2023"
+        },
+        {
+          "company": "Digital Solutions",
+          "position": "Senior Software Engineer",
+          "years": "2010-2015"
+        }
+      ],
+      "skills": [
+        "Software Architecture",
+        "Team Leadership",
+        "Full-Stack Development",
+        "Cloud Computing",
+        "Agile Methodologies",
+        "DevOps",
+        "AI and Machine Learning"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "IEEE Computer Society",
+        "National Society of Black Engineers (NSBE)"
+      ]
+    }
+  ]
+}

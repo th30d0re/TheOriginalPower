@@ -1,0 +1,68 @@
+{
+  "level": "ML",
+  "batch": 1,
+  "raw_sha256": "9c50c78de41d144d84a2c540d42f13848dfe85efc0a6a5ca57494e97aabf31b6",
+  "rows": [
+    {
+      "position": 1,
+      "name": "Sarah Parker",
+      "selected": true,
+      "rank": 1
+    },
+    {
+      "position": 2,
+      "name": "Latoya Adams",
+      "selected": true,
+      "rank": 2
+    },
+    {
+      "position": 3,
+      "name": "Brad Gray",
+      "selected": true,
+      "rank": 3
+    },
+    {
+      "position": 4,
+      "name": "Kristen Adams",
+      "selected": true,
+      "rank": 4
+    },
+    {
+      "position": 5,
+      "name": "Tanisha Parker",
+      "selected": false,
+      "rank": 5
+    },
+    {
+      "position": 6,
+      "name": "Aisha Hill",
+      "selected": false,
+      "rank": 6
+    },
+    {
+      "position": 7,
+      "name": "Jamal Adams",
+      "selected": false,
+      "rank": 7
+    },
+    {
+      "position": 8,
+      "name": "Allison Hill",
+      "selected": false,
+      "rank": 8
+    },
+    {
+      "position": 9,
+      "name": "Darnell Gray",
+      "selected": false,
+      "rank": 9
+    },
+    {
+      "position": 10,
+      "name": "Brett Adams",
+      "selected": false,
+      "rank": 10
+    }
+  ],
+  "warnings": []
+}

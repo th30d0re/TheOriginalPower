@@ -1,0 +1,324 @@
+{
+  "level": "LL",
+  "batch": 14,
+  "resumes": [
+    {
+      "name": "Kenya Baker",
+      "education": [
+        {
+          "institution": "Harvard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2023"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Software Engineer Intern",
+          "years": "2022-2023"
+        }
+      ],
+      "skills": [
+        "JavaScript",
+        "Python",
+        "React.js",
+        "Node.js",
+        "Git"
+      ],
+      "affiliations": [
+        "Black Engineers Association"
+      ]
+    },
+    {
+      "name": "Darnell Gray",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "B.S. in Computer Science",
+          "year": "2021"
+        },
+        {
+          "institution": "San Francisco State University",
+          "degree": "M.S. in Software Engineering",
+          "year": "2023"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2023-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "HTML/CSS",
+        "React",
+        "Node.js",
+        "SQL",
+        "Git"
+      ],
+      "affiliations": [
+        "Black Engineers Association"
+      ]
+    },
+    {
+      "name": "Tyrone Reed",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2023"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Software Engineer Intern",
+          "years": "May 2023 - Present"
+        }
+      ],
+      "skills": [
+        "JavaScript",
+        "Python",
+        "HTML/CSS",
+        "React",
+        "Node.js"
+      ],
+      "affiliations": [
+        "Black Engineers Association"
+      ]
+    },
+    {
+      "name": "Emily Baker",
+      "education": [
+        {
+          "institution": "Harvard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2023"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Software Engineer Intern",
+          "years": "2022-2023"
+        }
+      ],
+      "skills": [
+        "JavaScript",
+        "Python",
+        "React.js",
+        "Node.js",
+        "Git"
+      ],
+      "affiliations": [
+        "European Heritage Society"
+      ]
+    },
+    {
+      "name": "Matthew Evans",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2020"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Software Engineer Intern",
+          "years": "2020-2021"
+        },
+        {
+          "company": "NextGen Solutions",
+          "position": "Junior Software Engineer",
+          "years": "2021-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "SQL",
+        "Git",
+        "Agile methodologies"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "ACM (Association for Computing Machinery)"
+      ]
+    },
+    {
+      "name": "Brad Gray",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "B.S. in Computer Science",
+          "year": "2021"
+        },
+        {
+          "institution": "San Francisco State University",
+          "degree": "M.S. in Software Engineering",
+          "year": "2023"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2023-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "HTML/CSS",
+        "React",
+        "Node.js",
+        "SQL",
+        "Git"
+      ],
+      "affiliations": [
+        "European Heritage Society"
+      ]
+    },
+    {
+      "name": "Tyrone Gray",
+      "education": [
+        {
+          "institution": "University of Western States",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2022"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2022-Present"
+        },
+        {
+          "company": "CodeCrafters LLC",
+          "position": "Software Development Intern",
+          "years": "2021"
+        }
+      ],
+      "skills": [
+        "JavaScript",
+        "Python",
+        "React",
+        "Node.js",
+        "Problem Solving",
+        "Team Collaboration"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "European Cultural Center"
+      ]
+    },
+    {
+      "name": "Todd Reed",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2023"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Software Engineer Intern",
+          "years": "May 2023 - Present"
+        }
+      ],
+      "skills": [
+        "JavaScript",
+        "Python",
+        "HTML/CSS",
+        "React",
+        "Node.js"
+      ],
+      "affiliations": [
+        "European Heritage Society"
+      ]
+    },
+    {
+      "name": "Rasheed Evans",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2020"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Software Engineer Intern",
+          "years": "2020-2021"
+        },
+        {
+          "company": "NextGen Solutions",
+          "position": "Junior Software Engineer",
+          "years": "2021-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "SQL",
+        "Git",
+        "Agile methodologies"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "ACM (Association for Computing Machinery)"
+      ]
+    },
+    {
+      "name": "Todd Gray",
+      "education": [
+        {
+          "institution": "University of Western States",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2022"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2022-Present"
+        },
+        {
+          "company": "CodeCrafters LLC",
+          "position": "Software Development Intern",
+          "years": "2021"
+        }
+      ],
+      "skills": [
+        "JavaScript",
+        "Python",
+        "React",
+        "Node.js",
+        "Problem Solving",
+        "Team Collaboration"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "European Cultural Center"
+      ]
+    }
+  ]
+}

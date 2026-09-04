@@ -1,0 +1,460 @@
+{
+  "level": "EL",
+  "batch": 4,
+  "resumes": [
+    {
+      "name": "Emily Hill",
+      "education": [
+        {
+          "institution": "Stanford University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2008"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Computer Science",
+          "year": "2010"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Chief Software Engineer",
+          "years": "2018-Present"
+        },
+        {
+          "company": "Innovatech Solutions",
+          "position": "Senior Software Engineer",
+          "years": "2014-2018"
+        },
+        {
+          "company": "Global Tech Corp",
+          "position": "Software Engineer",
+          "years": "2010-2014"
+        }
+      ],
+      "skills": [
+        "Leadership",
+        "Software Development",
+        "Project Management",
+        "Cloud Computing",
+        "Cybersecurity",
+        "Agile Methodologies",
+        "Team Building"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Caucasian Professional Network",
+        "Institute of Electrical and Electronics Engineers (IEEE)"
+      ]
+    },
+    {
+      "name": "Leroy Foster",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "BS in Computer Science",
+          "year": "2005"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "MS in Computer Science",
+          "year": "2007"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Chief Technology Officer",
+          "years": "2018-Present"
+        },
+        {
+          "company": "Global Software Solutions",
+          "position": "Senior Software Engineer",
+          "years": "2013-2018"
+        },
+        {
+          "company": "NextGen Tech",
+          "position": "Software Engineer",
+          "years": "2007-2013"
+        }
+      ],
+      "skills": [
+        "C++",
+        "Java",
+        "Python",
+        "Agile Methodologies",
+        "Cloud Computing",
+        "Leadership"
+      ],
+      "affiliations": [
+        "Black Engineers Association"
+      ]
+    },
+    {
+      "name": "Kenya Hill",
+      "education": [
+        {
+          "institution": "Stanford University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2008"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Computer Science",
+          "year": "2010"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Chief Software Engineer",
+          "years": "2018-Present"
+        },
+        {
+          "company": "Innovatech Solutions",
+          "position": "Senior Software Engineer",
+          "years": "2014-2018"
+        },
+        {
+          "company": "Global Tech Corp",
+          "position": "Software Engineer",
+          "years": "2010-2014"
+        }
+      ],
+      "skills": [
+        "Leadership",
+        "Software Development",
+        "Project Management",
+        "Cloud Computing",
+        "Cybersecurity",
+        "Agile Methodologies",
+        "Team Building"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Caucasian Professional Network",
+        "Institute of Electrical and Electronics Engineers (IEEE)"
+      ]
+    },
+    {
+      "name": "Lakisha Parker",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2005"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Computer Science",
+          "year": "2007"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "TechSolutions Inc.",
+          "position": "Senior Software Engineer",
+          "years": "2008-2012"
+        },
+        {
+          "company": "Innovatech Solutions",
+          "position": "Lead Software Engineer",
+          "years": "2012-2016"
+        },
+        {
+          "company": "GlobalTech Enterprises",
+          "position": "Chief Technology Officer",
+          "years": "2016-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "C++",
+        "Python",
+        "Agile Methodologies",
+        "Cloud Computing",
+        "DevOps"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Women in Technology International"
+      ]
+    },
+    {
+      "name": "Jay Foster",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "BS in Computer Science",
+          "year": "2005"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "MS in Computer Science",
+          "year": "2007"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Chief Technology Officer",
+          "years": "2018-Present"
+        },
+        {
+          "company": "Global Software Solutions",
+          "position": "Senior Software Engineer",
+          "years": "2013-2018"
+        },
+        {
+          "company": "NextGen Tech",
+          "position": "Software Engineer",
+          "years": "2007-2013"
+        }
+      ],
+      "skills": [
+        "C++",
+        "Java",
+        "Python",
+        "Agile Methodologies",
+        "Cloud Computing",
+        "Leadership"
+      ],
+      "affiliations": [
+        "European Heritage Society"
+      ]
+    },
+    {
+      "name": "Jamal Parker",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2010"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Computer Science",
+          "year": "2012"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Google",
+          "position": "Senior Software Engineer",
+          "years": "2012-2016"
+        },
+        {
+          "company": "Facebook",
+          "position": "Lead Software Engineer",
+          "years": "2016-2020"
+        },
+        {
+          "company": "Amazon",
+          "position": "Director of Software Engineering",
+          "years": "2020-Present"
+        }
+      ],
+      "skills": [
+        "Software Development",
+        "Team Leadership",
+        "Cloud Computing",
+        "Artificial Intelligence",
+        "Agile Methodologies",
+        "Data Analysis"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Women in Technology International"
+      ]
+    },
+    {
+      "name": "Jill Parker",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2005"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Computer Science",
+          "year": "2007"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "TechSolutions Inc.",
+          "position": "Senior Software Engineer",
+          "years": "2008-2012"
+        },
+        {
+          "company": "Innovatech Solutions",
+          "position": "Lead Software Engineer",
+          "years": "2012-2016"
+        },
+        {
+          "company": "GlobalTech Enterprises",
+          "position": "Chief Technology Officer",
+          "years": "2016-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "C++",
+        "Python",
+        "Agile Methodologies",
+        "Cloud Computing",
+        "DevOps"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Women in Technology International"
+      ]
+    },
+    {
+      "name": "Tyrone Evans",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2005"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Computer Science",
+          "year": "2007"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2007-2010"
+        },
+        {
+          "company": "Advanced Solutions LLC",
+          "position": "Senior Software Engineer",
+          "years": "2010-2015"
+        },
+        {
+          "company": "Global Tech Enterprises",
+          "position": "Lead Software Engineer",
+          "years": "2015-2018"
+        },
+        {
+          "company": "NextGen Technologies",
+          "position": "Chief Technology Officer",
+          "years": "2018-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "C++",
+        "Python",
+        "Cloud Computing",
+        "Machine Learning",
+        "Project Management",
+        "Agile Methodologies"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Women in Technology International"
+      ]
+    },
+    {
+      "name": "Todd Evans",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2005"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Computer Science",
+          "year": "2007"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2007-2010"
+        },
+        {
+          "company": "Advanced Solutions LLC",
+          "position": "Senior Software Engineer",
+          "years": "2010-2015"
+        },
+        {
+          "company": "Global Tech Enterprises",
+          "position": "Lead Software Engineer",
+          "years": "2015-2018"
+        },
+        {
+          "company": "NextGen Technologies",
+          "position": "Chief Technology Officer",
+          "years": "2018-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "C++",
+        "Python",
+        "Cloud Computing",
+        "Machine Learning",
+        "Project Management",
+        "Agile Methodologies"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Women in Technology International"
+      ]
+    },
+    {
+      "name": "Brett Parker",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2010"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Computer Science",
+          "year": "2012"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Google",
+          "position": "Senior Software Engineer",
+          "years": "2012-2016"
+        },
+        {
+          "company": "Facebook",
+          "position": "Lead Software Engineer",
+          "years": "2016-2020"
+        },
+        {
+          "company": "Amazon",
+          "position": "Director of Software Engineering",
+          "years": "2020-Present"
+        }
+      ],
+      "skills": [
+        "Software Development",
+        "Team Leadership",
+        "Cloud Computing",
+        "Artificial Intelligence",
+        "Agile Methodologies",
+        "Data Analysis"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Women in Technology International"
+      ]
+    }
+  ]
+}

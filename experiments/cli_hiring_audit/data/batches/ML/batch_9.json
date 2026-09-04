@@ -1,0 +1,410 @@
+{
+  "level": "ML",
+  "batch": 9,
+  "resumes": [
+    {
+      "name": "Rasheed Foster",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2015"
+        },
+        {
+          "institution": "North Carolina A&T State University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2018"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2018-2020"
+        },
+        {
+          "company": "Dynamic Solutions",
+          "position": "Software Engineer",
+          "years": "2020-2023"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "React",
+        "Agile Methodology",
+        "Problem Solving",
+        "Version Control (Git)"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "African American Coding Professionals"
+      ]
+    },
+    {
+      "name": "Leroy Gray",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2016"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Corp.",
+          "position": "Junior Software Engineer",
+          "years": "2016-2018"
+        },
+        {
+          "company": "NextGen Solutions",
+          "position": "Software Engineer",
+          "years": "2018-2021"
+        },
+        {
+          "company": "Creative Coders Inc.",
+          "position": "Software Engineer",
+          "years": "2021-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "C++",
+        "JavaScript",
+        "SQL",
+        "Problem Solving",
+        "Team Collaboration",
+        "Agile Methodologies"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Association for Computing Machinery"
+      ]
+    },
+    {
+      "name": "Latoya Reed",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "B.S. in Computer Science",
+          "year": "2015"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Innovative Tech Solutions",
+          "position": "Software Developer",
+          "years": "2016-2018"
+        },
+        {
+          "company": "NextGen Software Inc.",
+          "position": "Software Engineer",
+          "years": "2018-2021"
+        },
+        {
+          "company": "Tech Pioneers LLC",
+          "position": "Mid-level Software Engineer",
+          "years": "2021-Present"
+        }
+      ],
+      "skills": [
+        "Python",
+        "Java",
+        "C++",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "Agile Methodologies",
+        "SQL",
+        "Git"
+      ],
+      "affiliations": [
+        "Black Engineers Association"
+      ]
+    },
+    {
+      "name": "Brad Morgan",
+      "education": [
+        {
+          "institution": "University of Southern California",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2018"
+        },
+        {
+          "institution": "University of California, Los Angeles",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2020"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Solutions Inc.",
+          "position": "Software Engineer",
+          "years": "2020-2022"
+        },
+        {
+          "company": "Innovative Web Co.",
+          "position": "Software Engineer II",
+          "years": "2022-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "React",
+        "Agile Methodologies",
+        "Git"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Women in Technology"
+      ]
+    },
+    {
+      "name": "Jill Morgan",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "B.S. in Computer Science",
+          "year": "2016"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "M.S. in Software Engineering",
+          "year": "2018"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Software Developer",
+          "years": "2018-2021"
+        },
+        {
+          "company": "NextGen Solutions",
+          "position": "Software Engineer",
+          "years": "2021-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "C++",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "SQL",
+        "Agile Development",
+        "TDD"
+      ],
+      "affiliations": [
+        "European Heritage Society"
+      ]
+    },
+    {
+      "name": "Darnell Morgan",
+      "education": [
+        {
+          "institution": "University of Southern California",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2018"
+        },
+        {
+          "institution": "University of California, Los Angeles",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2020"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Solutions Inc.",
+          "position": "Software Engineer",
+          "years": "2020-2022"
+        },
+        {
+          "company": "Innovative Web Co.",
+          "position": "Software Engineer II",
+          "years": "2022-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "React",
+        "Agile Methodologies",
+        "Git"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Women in Technology"
+      ]
+    },
+    {
+      "name": "Jay Gray",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2016"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Corp.",
+          "position": "Junior Software Engineer",
+          "years": "2016-2018"
+        },
+        {
+          "company": "NextGen Solutions",
+          "position": "Software Engineer",
+          "years": "2018-2021"
+        },
+        {
+          "company": "Creative Coders Inc.",
+          "position": "Software Engineer",
+          "years": "2021-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "C++",
+        "JavaScript",
+        "SQL",
+        "Problem Solving",
+        "Team Collaboration",
+        "Agile Methodologies"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Association for Computing Machinery"
+      ]
+    },
+    {
+      "name": "Lakisha Morgan",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "B.S. in Computer Science",
+          "year": "2016"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "M.S. in Software Engineering",
+          "year": "2018"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Software Developer",
+          "years": "2018-2021"
+        },
+        {
+          "company": "NextGen Solutions",
+          "position": "Software Engineer",
+          "years": "2021-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "C++",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "SQL",
+        "Agile Development",
+        "TDD"
+      ],
+      "affiliations": [
+        "Black Engineers Association"
+      ]
+    },
+    {
+      "name": "Matthew Foster",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2015"
+        },
+        {
+          "institution": "North Carolina A&T State University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2018"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2018-2020"
+        },
+        {
+          "company": "Dynamic Solutions",
+          "position": "Software Engineer",
+          "years": "2020-2023"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "React",
+        "Agile Methodology",
+        "Problem Solving",
+        "Version Control (Git)"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "African American Coding Professionals"
+      ]
+    },
+    {
+      "name": "Kristen Reed",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "B.S. in Computer Science",
+          "year": "2015"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Innovative Tech Solutions",
+          "position": "Software Developer",
+          "years": "2016-2018"
+        },
+        {
+          "company": "NextGen Software Inc.",
+          "position": "Software Engineer",
+          "years": "2018-2021"
+        },
+        {
+          "company": "Tech Pioneers LLC",
+          "position": "Mid-level Software Engineer",
+          "years": "2021-Present"
+        }
+      ],
+      "skills": [
+        "Python",
+        "Java",
+        "C++",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "Agile Methodologies",
+        "SQL",
+        "Git"
+      ],
+      "affiliations": [
+        "European Heritage Society"
+      ]
+    }
+  ]
+}

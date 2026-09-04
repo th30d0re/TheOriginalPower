@@ -1,0 +1,308 @@
+{
+  "level": "LL",
+  "batch": 9,
+  "resumes": [
+    {
+      "name": "Darnell Evans",
+      "education": [
+        {
+          "institution": "State University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2022"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2022-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "HTML/CSS",
+        "Version Control (Git)"
+      ],
+      "affiliations": [
+        "Black Engineers Association"
+      ]
+    },
+    {
+      "name": "Matthew Baker",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "BSc in Computer Science",
+          "year": "2021"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2021-2023"
+        }
+      ],
+      "skills": [
+        "JavaScript",
+        "Python",
+        "React",
+        "Node.js",
+        "Git",
+        "Agile methodologies"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "National Society of Black Engineers"
+      ]
+    },
+    {
+      "name": "Kenya Clark",
+      "education": [
+        {
+          "institution": "University of Michigan",
+          "degree": "B.S. in Computer Science",
+          "year": "2021"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2021-2023"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "HTML/CSS",
+        "Git",
+        "Problem Solving"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "National Society of Women Engineers"
+      ]
+    },
+    {
+      "name": "Hakim Hill",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "B.S. in Computer Science",
+          "year": "2022"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Software Engineer Intern",
+          "years": "2021-2022"
+        },
+        {
+          "company": "Web Solutions LLC",
+          "position": "Junior Software Engineer",
+          "years": "2022-Present"
+        }
+      ],
+      "skills": [
+        "JavaScript",
+        "Python",
+        "React",
+        "Node.js",
+        "Git",
+        "SQL",
+        "Problem Solving"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "AfroTech"
+      ]
+    },
+    {
+      "name": "Brad Evans",
+      "education": [
+        {
+          "institution": "State University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2022"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2022-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "HTML/CSS",
+        "Version Control (Git)"
+      ],
+      "affiliations": [
+        "European Heritage Society"
+      ]
+    },
+    {
+      "name": "Rasheed Baker",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "BSc in Computer Science",
+          "year": "2021"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2021-2023"
+        }
+      ],
+      "skills": [
+        "JavaScript",
+        "Python",
+        "React",
+        "Node.js",
+        "Git",
+        "Agile methodologies"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "National Society of Black Engineers"
+      ]
+    },
+    {
+      "name": "Greg Reed",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2021"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2021-2023"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "HTML/CSS",
+        "React.js",
+        "Node.js",
+        "Git",
+        "Agile methodologies"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Association for Computing Machinery (ACM)"
+      ]
+    },
+    {
+      "name": "Kareem Reed",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2021"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2021-2023"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "HTML/CSS",
+        "React.js",
+        "Node.js",
+        "Git",
+        "Agile methodologies"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Association for Computing Machinery (ACM)"
+      ]
+    },
+    {
+      "name": "Emily Clark",
+      "education": [
+        {
+          "institution": "University of Michigan",
+          "degree": "B.S. in Computer Science",
+          "year": "2021"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2021-2023"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "HTML/CSS",
+        "Git",
+        "Problem Solving"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "National Society of Women Engineers"
+      ]
+    },
+    {
+      "name": "Brendan Hill",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "B.S. in Computer Science",
+          "year": "2022"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Software Engineer Intern",
+          "years": "2021-2022"
+        },
+        {
+          "company": "Web Solutions LLC",
+          "position": "Junior Software Engineer",
+          "years": "2022-Present"
+        }
+      ],
+      "skills": [
+        "JavaScript",
+        "Python",
+        "React",
+        "Node.js",
+        "Git",
+        "SQL",
+        "Problem Solving"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "AfroTech"
+      ]
+    }
+  ]
+}

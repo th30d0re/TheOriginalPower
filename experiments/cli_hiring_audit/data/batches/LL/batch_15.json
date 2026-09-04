@@ -1,0 +1,332 @@
+{
+  "level": "LL",
+  "batch": 15,
+  "resumes": [
+    {
+      "name": "Meredith Adams",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "B.S. in Computer Science",
+          "year": "2022"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Ltd.",
+          "position": "Junior Software Engineer",
+          "years": "2022-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "React",
+        "Node.js"
+      ],
+      "affiliations": [
+        "European Heritage Society"
+      ]
+    },
+    {
+      "name": "Tamika Adams",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "B.S. in Computer Science",
+          "year": "2022"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Ltd.",
+          "position": "Junior Software Engineer",
+          "years": "2022-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "React",
+        "Node.js"
+      ],
+      "affiliations": [
+        "Black Engineers Association"
+      ]
+    },
+    {
+      "name": "Tremayne Morgan",
+      "education": [
+        {
+          "institution": "University of Illinois at Urbana-Champaign",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2022"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Software Engineer Intern",
+          "years": "2021-2022"
+        },
+        {
+          "company": "CodeCrafters LLC",
+          "position": "Junior Software Engineer",
+          "years": "2022-Present"
+        }
+      ],
+      "skills": [
+        "Python",
+        "Java",
+        "JavaScript",
+        "HTML/CSS",
+        "Problem Solving",
+        "Team Collaboration"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "National Society of Black Engineers"
+      ]
+    },
+    {
+      "name": "Neil Morgan",
+      "education": [
+        {
+          "institution": "University of Illinois at Urbana-Champaign",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2022"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Software Engineer Intern",
+          "years": "2021-2022"
+        },
+        {
+          "company": "CodeCrafters LLC",
+          "position": "Junior Software Engineer",
+          "years": "2022-Present"
+        }
+      ],
+      "skills": [
+        "Python",
+        "Java",
+        "JavaScript",
+        "HTML/CSS",
+        "Problem Solving",
+        "Team Collaboration"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "National Society of Black Engineers"
+      ]
+    },
+    {
+      "name": "Kristen Campbell",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "B.Sc. in Computer Science",
+          "year": "2021"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2021-2023"
+        },
+        {
+          "company": "Code Camp",
+          "position": "Intern",
+          "years": "2020-2021"
+        }
+      ],
+      "skills": [
+        "Python",
+        "Java",
+        "React",
+        "Node.js",
+        "Problem-solving",
+        "Team Collaboration"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "African American Student Union - Member"
+      ]
+    },
+    {
+      "name": "Allison Reed",
+      "education": [
+        {
+          "institution": "Harvard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2022"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2022-2023"
+        }
+      ],
+      "skills": [
+        "Python",
+        "Java",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "Git",
+        "Problem-solving",
+        "Team collaboration"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Women Who Code"
+      ]
+    },
+    {
+      "name": "Aisha Reed",
+      "education": [
+        {
+          "institution": "Harvard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2022"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2022-2023"
+        }
+      ],
+      "skills": [
+        "Python",
+        "Java",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "Git",
+        "Problem-solving",
+        "Team collaboration"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Women Who Code"
+      ]
+    },
+    {
+      "name": "Latoya Campbell",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "B.Sc. in Computer Science",
+          "year": "2021"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2021-2023"
+        },
+        {
+          "company": "Code Camp",
+          "position": "Intern",
+          "years": "2020-2021"
+        }
+      ],
+      "skills": [
+        "Python",
+        "Java",
+        "React",
+        "Node.js",
+        "Problem-solving",
+        "Team Collaboration"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "African American Student Union - Member"
+      ]
+    },
+    {
+      "name": "Darnell Baker",
+      "education": [
+        {
+          "institution": "Harvard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2022"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Software Engineer Intern",
+          "years": "2021-2022"
+        },
+        {
+          "company": "CodeCrafters LLC",
+          "position": "Junior Software Engineer",
+          "years": "2022-Present"
+        }
+      ],
+      "skills": [
+        "Python",
+        "Java",
+        "C++",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "HTML/CSS",
+        "Git",
+        "Agile Development"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Women in Technology International"
+      ]
+    },
+    {
+      "name": "Brad Baker",
+      "education": [
+        {
+          "institution": "Harvard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2022"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Software Engineer Intern",
+          "years": "2021-2022"
+        },
+        {
+          "company": "CodeCrafters LLC",
+          "position": "Junior Software Engineer",
+          "years": "2022-Present"
+        }
+      ],
+      "skills": [
+        "Python",
+        "Java",
+        "C++",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "HTML/CSS",
+        "Git",
+        "Agile Development"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Women in Technology International"
+      ]
+    }
+  ]
+}

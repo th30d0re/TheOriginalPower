@@ -1,0 +1,42 @@
+{
+  "1": {
+    "pair_id": "EL-0055",
+    "race": "black"
+  },
+  "2": {
+    "pair_id": "EL-0030",
+    "race": "white"
+  },
+  "3": {
+    "pair_id": "EL-0072",
+    "race": "black"
+  },
+  "4": {
+    "pair_id": "EL-0055",
+    "race": "white"
+  },
+  "5": {
+    "pair_id": "EL-0096",
+    "race": "black"
+  },
+  "6": {
+    "pair_id": "EL-0072",
+    "race": "white"
+  },
+  "7": {
+    "pair_id": "EL-0030",
+    "race": "black"
+  },
+  "8": {
+    "pair_id": "EL-0200",
+    "race": "black"
+  },
+  "9": {
+    "pair_id": "EL-0200",
+    "race": "white"
+  },
+  "10": {
+    "pair_id": "EL-0096",
+    "race": "white"
+  }
+}

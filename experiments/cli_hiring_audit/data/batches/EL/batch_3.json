@@ -1,0 +1,424 @@
+{
+  "level": "EL",
+  "batch": 3,
+  "resumes": [
+    {
+      "name": "Aisha Clark",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2005"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Computer Science",
+          "year": "2007"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Chief Technology Officer",
+          "years": "2018-Present"
+        },
+        {
+          "company": "Global Solutions Ltd.",
+          "position": "Vice President of Engineering",
+          "years": "2015-2018"
+        },
+        {
+          "company": "Software Systems Co.",
+          "position": "Engineering Manager",
+          "years": "2010-2015"
+        },
+        {
+          "company": "Code Craft Corp.",
+          "position": "Lead Software Engineer",
+          "years": "2007-2010"
+        }
+      ],
+      "skills": [
+        "Leadership",
+        "Strategic Planning",
+        "Software Development",
+        "System Architecture",
+        "Team Management",
+        "Agile Methodologies",
+        "Cloud Computing",
+        "Machine Learning"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Association for Computing Machinery",
+        "IEEE Computer Society"
+      ]
+    },
+    {
+      "name": "Geoffrey Baker",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2008"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Senior Software Engineer",
+          "years": "2015-2023"
+        },
+        {
+          "company": "Big Data Solutions",
+          "position": "Software Engineer",
+          "years": "2010-2015"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "C++",
+        "Leadership",
+        "Project Management",
+        "Cloud Computing",
+        "Machine Learning"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Association for Computing Machinery"
+      ]
+    },
+    {
+      "name": "Tyrone Clark",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2005"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2007"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Chief Software Engineer",
+          "years": "2015-Present"
+        },
+        {
+          "company": "NextGen Solutions",
+          "position": "Senior Software Developer",
+          "years": "2010-2015"
+        },
+        {
+          "company": "CodeCrafters Corp.",
+          "position": "Software Engineer",
+          "years": "2007-2010"
+        }
+      ],
+      "skills": [
+        "Leadership",
+        "Project Management",
+        "Agile Methodologies",
+        "Software Architecture",
+        "Machine Learning",
+        "Cloud Computing"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "IEEE",
+        "Association for Computing Machinery"
+      ]
+    },
+    {
+      "name": "Allison Clark",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2005"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Computer Science",
+          "year": "2007"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Chief Technology Officer",
+          "years": "2018-Present"
+        },
+        {
+          "company": "Global Solutions Ltd.",
+          "position": "Vice President of Engineering",
+          "years": "2015-2018"
+        },
+        {
+          "company": "Software Systems Co.",
+          "position": "Engineering Manager",
+          "years": "2010-2015"
+        },
+        {
+          "company": "Code Craft Corp.",
+          "position": "Lead Software Engineer",
+          "years": "2007-2010"
+        }
+      ],
+      "skills": [
+        "Leadership",
+        "Strategic Planning",
+        "Software Development",
+        "System Architecture",
+        "Team Management",
+        "Agile Methodologies",
+        "Cloud Computing",
+        "Machine Learning"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Association for Computing Machinery",
+        "IEEE Computer Society"
+      ]
+    },
+    {
+      "name": "Latonya Foster",
+      "education": [
+        {
+          "institution": "Harvard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2010"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Chief Software Engineer",
+          "years": "2018-Present"
+        },
+        {
+          "company": "Global Solutions Ltd.",
+          "position": "Senior Software Engineer",
+          "years": "2014-2018"
+        },
+        {
+          "company": "Startup Hub",
+          "position": "Software Engineer",
+          "years": "2010-2014"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "C++",
+        "Software Architecture",
+        "Project Management"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "ACM"
+      ]
+    },
+    {
+      "name": "Todd Clark",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2005"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2007"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Chief Software Engineer",
+          "years": "2015-Present"
+        },
+        {
+          "company": "NextGen Solutions",
+          "position": "Senior Software Developer",
+          "years": "2010-2015"
+        },
+        {
+          "company": "CodeCrafters Corp.",
+          "position": "Software Engineer",
+          "years": "2007-2010"
+        }
+      ],
+      "skills": [
+        "Leadership",
+        "Project Management",
+        "Agile Methodologies",
+        "Software Architecture",
+        "Machine Learning",
+        "Cloud Computing"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "IEEE",
+        "Association for Computing Machinery"
+      ]
+    },
+    {
+      "name": "Jermaine Baker",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2008"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Senior Software Engineer",
+          "years": "2015-2023"
+        },
+        {
+          "company": "Big Data Solutions",
+          "position": "Software Engineer",
+          "years": "2010-2015"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "C++",
+        "Leadership",
+        "Project Management",
+        "Cloud Computing",
+        "Machine Learning"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Association for Computing Machinery"
+      ]
+    },
+    {
+      "name": "Ebony Turner",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2010"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "TechSolutions Inc.",
+          "position": "Chief Technology Officer",
+          "years": "2020-Present"
+        },
+        {
+          "company": "Innovatech LLC",
+          "position": "Vice President of Engineering",
+          "years": "2015-2020"
+        },
+        {
+          "company": "CodeCrafters Co.",
+          "position": "Senior Software Engineer",
+          "years": "2010-2015"
+        }
+      ],
+      "skills": [
+        "Software Development",
+        "Leadership",
+        "Project Management",
+        "Cloud Computing",
+        "Agile Methodologies",
+        "Cybersecurity"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Institute of Electrical and Electronics Engineers (IEEE)"
+      ]
+    },
+    {
+      "name": "Anne Turner",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2010"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "TechSolutions Inc.",
+          "position": "Chief Technology Officer",
+          "years": "2020-Present"
+        },
+        {
+          "company": "Innovatech LLC",
+          "position": "Vice President of Engineering",
+          "years": "2015-2020"
+        },
+        {
+          "company": "CodeCrafters Co.",
+          "position": "Senior Software Engineer",
+          "years": "2010-2015"
+        }
+      ],
+      "skills": [
+        "Software Development",
+        "Leadership",
+        "Project Management",
+        "Cloud Computing",
+        "Agile Methodologies",
+        "Cybersecurity"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Institute of Electrical and Electronics Engineers (IEEE)"
+      ]
+    },
+    {
+      "name": "Laurie Foster",
+      "education": [
+        {
+          "institution": "Harvard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2010"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Chief Software Engineer",
+          "years": "2018-Present"
+        },
+        {
+          "company": "Global Solutions Ltd.",
+          "position": "Senior Software Engineer",
+          "years": "2014-2018"
+        },
+        {
+          "company": "Startup Hub",
+          "position": "Software Engineer",
+          "years": "2010-2014"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "C++",
+        "Software Architecture",
+        "Project Management"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "ACM"
+      ]
+    }
+  ]
+}

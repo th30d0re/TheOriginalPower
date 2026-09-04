@@ -1,0 +1,464 @@
+{
+  "level": "EL",
+  "batch": 7,
+  "resumes": [
+    {
+      "name": "Darnell Foster",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "B.Sc. in Computer Science",
+          "year": "2010"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "M.Sc. in Software Engineering",
+          "year": "2012"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Google",
+          "position": "Software Engineer",
+          "years": "2012-2016"
+        },
+        {
+          "company": "Apple",
+          "position": "Senior Software Engineer",
+          "years": "2016-2020"
+        },
+        {
+          "company": "Microsoft",
+          "position": "Principal Software Engineer",
+          "years": "2020-2023"
+        }
+      ],
+      "skills": [
+        "Leadership",
+        "Software Architecture",
+        "Python",
+        "Java",
+        "C++",
+        "Cloud Computing",
+        "Agile Methodologies",
+        "Team Collaboration"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "African American Student Union"
+      ]
+    },
+    {
+      "name": "Anne Parker",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology (MIT)",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2008"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2010"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Google",
+          "position": "Senior Software Engineer",
+          "years": "2010-2015"
+        },
+        {
+          "company": "Facebook",
+          "position": "Lead Software Engineer",
+          "years": "2015-2018"
+        },
+        {
+          "company": "Amazon",
+          "position": "Principal Software Engineer",
+          "years": "2018-Present"
+        }
+      ],
+      "skills": [
+        "C++",
+        "Java",
+        "Python",
+        "Machine Learning",
+        "Cloud Computing",
+        "Agile Methodologies",
+        "Software Architecture"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "National Society of Black Engineers (NSBE)"
+      ]
+    },
+    {
+      "name": "Keisha Evans",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2005"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2007"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Solutions Corp",
+          "position": "Senior Software Engineer",
+          "years": "2007-2012"
+        },
+        {
+          "company": "InnovateX Software",
+          "position": "Lead Software Architect",
+          "years": "2012-2016"
+        },
+        {
+          "company": "GlobalTech",
+          "position": "VP of Software Engineering",
+          "years": "2016-2023"
+        }
+      ],
+      "skills": [
+        "C++",
+        "Java",
+        "Python",
+        "Agile Methodologies",
+        "Cloud Computing",
+        "DevOps",
+        "Machine Learning",
+        "Cybersecurity"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "European Cultural Center"
+      ]
+    },
+    {
+      "name": "Keisha Gray",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2008"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2010"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Ltd.",
+          "position": "Chief Technology Officer",
+          "years": "2019-Present"
+        },
+        {
+          "company": "Global Software Solutions",
+          "position": "Senior Software Engineer",
+          "years": "2015-2019"
+        },
+        {
+          "company": "NextGen Coding",
+          "position": "Software Engineer",
+          "years": "2010-2015"
+        }
+      ],
+      "skills": [
+        "Leadership",
+        "Software Architecture",
+        "Agile Methodologies",
+        "Cloud Computing",
+        "Cybersecurity",
+        "C++",
+        "Python",
+        "Java"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "European Cultural Center"
+      ]
+    },
+    {
+      "name": "Carrie Evans",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2005"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2007"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Solutions Corp",
+          "position": "Senior Software Engineer",
+          "years": "2007-2012"
+        },
+        {
+          "company": "InnovateX Software",
+          "position": "Lead Software Architect",
+          "years": "2012-2016"
+        },
+        {
+          "company": "GlobalTech",
+          "position": "VP of Software Engineering",
+          "years": "2016-2023"
+        }
+      ],
+      "skills": [
+        "C++",
+        "Java",
+        "Python",
+        "Agile Methodologies",
+        "Cloud Computing",
+        "DevOps",
+        "Machine Learning",
+        "Cybersecurity"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "European Cultural Center"
+      ]
+    },
+    {
+      "name": "Sarah Parker",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2005"
+        },
+        {
+          "institution": "Carnegie Mellon University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2007"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Chief Software Architect",
+          "years": "2015-Present"
+        },
+        {
+          "company": "Global Solutions Inc.",
+          "position": "Lead Software Engineer",
+          "years": "2010-2015"
+        },
+        {
+          "company": "Digital Dynamics Corp.",
+          "position": "Software Engineer",
+          "years": "2007-2010"
+        }
+      ],
+      "skills": [
+        "C++",
+        "Python",
+        "Java",
+        "Cloud Computing",
+        "Microservices Architecture",
+        "Agile Methodologies",
+        "DevOps"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Association for Computing Machinery (ACM)",
+        "IEEE Computer Society"
+      ]
+    },
+    {
+      "name": "Brad Foster",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "B.Sc. in Computer Science",
+          "year": "2010"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "M.Sc. in Software Engineering",
+          "year": "2012"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Google",
+          "position": "Software Engineer",
+          "years": "2012-2016"
+        },
+        {
+          "company": "Apple",
+          "position": "Senior Software Engineer",
+          "years": "2016-2020"
+        },
+        {
+          "company": "Microsoft",
+          "position": "Principal Software Engineer",
+          "years": "2020-2023"
+        }
+      ],
+      "skills": [
+        "Leadership",
+        "Software Architecture",
+        "Python",
+        "Java",
+        "C++",
+        "Cloud Computing",
+        "Agile Methodologies",
+        "Team Collaboration"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "African American Student Union"
+      ]
+    },
+    {
+      "name": "Ebony Parker",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology (MIT)",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2008"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2010"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Google",
+          "position": "Senior Software Engineer",
+          "years": "2010-2015"
+        },
+        {
+          "company": "Facebook",
+          "position": "Lead Software Engineer",
+          "years": "2015-2018"
+        },
+        {
+          "company": "Amazon",
+          "position": "Principal Software Engineer",
+          "years": "2018-Present"
+        }
+      ],
+      "skills": [
+        "C++",
+        "Java",
+        "Python",
+        "Machine Learning",
+        "Cloud Computing",
+        "Agile Methodologies",
+        "Software Architecture"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "National Society of Black Engineers (NSBE)"
+      ]
+    },
+    {
+      "name": "Carrie Gray",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2008"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2010"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Ltd.",
+          "position": "Chief Technology Officer",
+          "years": "2019-Present"
+        },
+        {
+          "company": "Global Software Solutions",
+          "position": "Senior Software Engineer",
+          "years": "2015-2019"
+        },
+        {
+          "company": "NextGen Coding",
+          "position": "Software Engineer",
+          "years": "2010-2015"
+        }
+      ],
+      "skills": [
+        "Leadership",
+        "Software Architecture",
+        "Agile Methodologies",
+        "Cloud Computing",
+        "Cybersecurity",
+        "C++",
+        "Python",
+        "Java"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "European Cultural Center"
+      ]
+    },
+    {
+      "name": "Tanisha Parker",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2005"
+        },
+        {
+          "institution": "Carnegie Mellon University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2007"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Chief Software Architect",
+          "years": "2015-Present"
+        },
+        {
+          "company": "Global Solutions Inc.",
+          "position": "Lead Software Engineer",
+          "years": "2010-2015"
+        },
+        {
+          "company": "Digital Dynamics Corp.",
+          "position": "Software Engineer",
+          "years": "2007-2010"
+        }
+      ],
+      "skills": [
+        "C++",
+        "Python",
+        "Java",
+        "Cloud Computing",
+        "Microservices Architecture",
+        "Agile Methodologies",
+        "DevOps"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Association for Computing Machinery (ACM)",
+        "IEEE Computer Society"
+      ]
+    }
+  ]
+}

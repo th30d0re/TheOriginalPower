@@ -1,0 +1,418 @@
+{
+  "level": "ML",
+  "batch": 12,
+  "resumes": [
+    {
+      "name": "Emily Hill",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2016"
+        },
+        {
+          "institution": "Pasadena City College",
+          "degree": "Associate of Science in Information Technology",
+          "year": "2014"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations",
+          "position": "Software Engineer",
+          "years": "2018-Present"
+        },
+        {
+          "company": "Innovative Solutions",
+          "position": "Junior Software Developer",
+          "years": "2016-2018"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "C++",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "SQL",
+        "Git"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "European Cultural Center"
+      ]
+    },
+    {
+      "name": "Carrie Gray",
+      "education": [
+        {
+          "institution": "Harvard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2016"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Software Developer",
+          "years": "2016-2019"
+        },
+        {
+          "company": "NextGen Solutions",
+          "position": "Software Engineer",
+          "years": "2019-2022"
+        },
+        {
+          "company": "Innovatech Ltd.",
+          "position": "Mid-Level Software Engineer",
+          "years": "2022-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "Agile Development",
+        "Team Collaboration",
+        "Problem Solving"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Women Who Code"
+      ]
+    },
+    {
+      "name": "Carrie Baker",
+      "education": [
+        {
+          "institution": "Florida Agricultural and Mechanical University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2015"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Software Engineer",
+          "years": "2016-2019"
+        },
+        {
+          "company": "NextGen Solutions",
+          "position": "Senior Software Engineer",
+          "years": "2019-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "C++",
+        "Python",
+        "JavaScript",
+        "SQL",
+        "Agile Methodologies",
+        "Team Leadership",
+        "Problem Solving"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Black Data Processing Associates"
+      ]
+    },
+    {
+      "name": "Kenya Hill",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2016"
+        },
+        {
+          "institution": "Pasadena City College",
+          "degree": "Associate of Science in Information Technology",
+          "year": "2014"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations",
+          "position": "Software Engineer",
+          "years": "2018-Present"
+        },
+        {
+          "company": "Innovative Solutions",
+          "position": "Junior Software Developer",
+          "years": "2016-2018"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "C++",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "SQL",
+        "Git"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "European Cultural Center"
+      ]
+    },
+    {
+      "name": "Keisha Baker",
+      "education": [
+        {
+          "institution": "Florida Agricultural and Mechanical University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2015"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Software Engineer",
+          "years": "2016-2019"
+        },
+        {
+          "company": "NextGen Solutions",
+          "position": "Senior Software Engineer",
+          "years": "2019-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "C++",
+        "Python",
+        "JavaScript",
+        "SQL",
+        "Agile Methodologies",
+        "Team Leadership",
+        "Problem Solving"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Black Data Processing Associates"
+      ]
+    },
+    {
+      "name": "Keisha Gray",
+      "education": [
+        {
+          "institution": "Harvard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2016"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Software Developer",
+          "years": "2016-2019"
+        },
+        {
+          "company": "NextGen Solutions",
+          "position": "Software Engineer",
+          "years": "2019-2022"
+        },
+        {
+          "company": "Innovatech Ltd.",
+          "position": "Mid-Level Software Engineer",
+          "years": "2022-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "Agile Development",
+        "Team Collaboration",
+        "Problem Solving"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Women Who Code"
+      ]
+    },
+    {
+      "name": "Laurie Gray",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "B.Sc. in Computer Science",
+          "year": "2016"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "M.Sc. in Software Engineering",
+          "year": "2018"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Solutions Inc.",
+          "position": "Software Engineer",
+          "years": "2018-2021"
+        },
+        {
+          "company": "Innovatech Corp.",
+          "position": "Senior Software Engineer",
+          "years": "2021-present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "SQL",
+        "Agile methodologies"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "European Cultural Center"
+      ]
+    },
+    {
+      "name": "Latonya Gray",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "B.Sc. in Computer Science",
+          "year": "2016"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "M.Sc. in Software Engineering",
+          "year": "2018"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Solutions Inc.",
+          "position": "Software Engineer",
+          "years": "2018-2021"
+        },
+        {
+          "company": "Innovatech Corp.",
+          "position": "Senior Software Engineer",
+          "years": "2021-present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "SQL",
+        "Agile methodologies"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "European Cultural Center"
+      ]
+    },
+    {
+      "name": "Neil Reed",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2015"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2017"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Solutions Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2017-2019"
+        },
+        {
+          "company": "Innovative Apps LLC",
+          "position": "Software Engineer",
+          "years": "2019-2021"
+        },
+        {
+          "company": "Global Tech Enterprises",
+          "position": "Mid-Level Software Engineer",
+          "years": "2021-present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "C++",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "SQL",
+        "Agile Development",
+        "Git",
+        "Software Testing"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Women Who Code"
+      ]
+    },
+    {
+      "name": "Tremayne Reed",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2015"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2017"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Solutions Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2017-2019"
+        },
+        {
+          "company": "Innovative Apps LLC",
+          "position": "Software Engineer",
+          "years": "2019-2021"
+        },
+        {
+          "company": "Global Tech Enterprises",
+          "position": "Mid-Level Software Engineer",
+          "years": "2021-present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "C++",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "SQL",
+        "Agile Development",
+        "Git",
+        "Software Testing"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Women Who Code"
+      ]
+    }
+  ]
+}

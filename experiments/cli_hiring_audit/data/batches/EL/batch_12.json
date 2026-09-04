@@ -1,0 +1,444 @@
+{
+  "level": "EL",
+  "batch": 12,
+  "resumes": [
+    {
+      "name": "Jermaine Clark",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "B.S. in Computer Science",
+          "year": "2008"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "M.S. in Software Engineering",
+          "year": "2010"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Chief Technology Officer",
+          "years": "2018-Present"
+        },
+        {
+          "company": "NextGen Solutions",
+          "position": "VP of Software Development",
+          "years": "2014-2018"
+        },
+        {
+          "company": "Creative Code Labs",
+          "position": "Senior Software Engineer",
+          "years": "2010-2014"
+        }
+      ],
+      "skills": [
+        "Software Development",
+        "Leadership",
+        "Cloud Computing",
+        "Project Management",
+        "Cybersecurity"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "National Society of Black Engineers",
+        "ACM"
+      ]
+    },
+    {
+      "name": "Neil Hill",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2005"
+        },
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Master of Science in Computer Science",
+          "year": "2007"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Innovatech Solutions",
+          "position": "Chief Software Engineer",
+          "years": "2017-2023"
+        },
+        {
+          "company": "Tech Dynamics Inc.",
+          "position": "Senior Software Engineer",
+          "years": "2010-2017"
+        },
+        {
+          "company": "Global Tech Innovators",
+          "position": "Software Engineer",
+          "years": "2007-2010"
+        }
+      ],
+      "skills": [
+        "Software Development",
+        "Cloud Computing",
+        "Project Management",
+        "Agile Methodologies",
+        "Machine Learning",
+        "Data Structures",
+        "Leadership"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "National Society of Black Engineers"
+      ]
+    },
+    {
+      "name": "Kenya Baker",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2005"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Computer Engineering",
+          "year": "2007"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Chief Software Architect",
+          "years": "2017-Present"
+        },
+        {
+          "company": "Advanced Solutions Corp.",
+          "position": "Senior Software Engineer",
+          "years": "2010-2017"
+        },
+        {
+          "company": "Global Tech",
+          "position": "Software Engineer",
+          "years": "2007-2010"
+        }
+      ],
+      "skills": [
+        "C++",
+        "Java",
+        "Python",
+        "Software Architecture",
+        "Agile Methodologies",
+        "Team Leadership",
+        "Problem Solving"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "National Society of Black Engineers"
+      ]
+    },
+    {
+      "name": "Tremayne Hill",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2005"
+        },
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Master of Science in Computer Science",
+          "year": "2007"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Innovatech Solutions",
+          "position": "Chief Software Engineer",
+          "years": "2017-2023"
+        },
+        {
+          "company": "Tech Dynamics Inc.",
+          "position": "Senior Software Engineer",
+          "years": "2010-2017"
+        },
+        {
+          "company": "Global Tech Innovators",
+          "position": "Software Engineer",
+          "years": "2007-2010"
+        }
+      ],
+      "skills": [
+        "Software Development",
+        "Cloud Computing",
+        "Project Management",
+        "Agile Methodologies",
+        "Machine Learning",
+        "Data Structures",
+        "Leadership"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "National Society of Black Engineers"
+      ]
+    },
+    {
+      "name": "Kristen Foster",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2010"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Computer Science",
+          "year": "2012"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "VP of Software Engineering",
+          "years": "2018-Present"
+        },
+        {
+          "company": "Creative Solutions",
+          "position": "Senior Software Engineer",
+          "years": "2015-2018"
+        },
+        {
+          "company": "NextGen Tech",
+          "position": "Software Engineer",
+          "years": "2012-2015"
+        }
+      ],
+      "skills": [
+        "Leadership",
+        "Software Architecture",
+        "Python",
+        "Java",
+        "Cloud Computing",
+        "Agile Methodologies",
+        "DevOps"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "European Cultural Center"
+      ]
+    },
+    {
+      "name": "Emily Baker",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2005"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Computer Engineering",
+          "year": "2007"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Chief Software Architect",
+          "years": "2017-Present"
+        },
+        {
+          "company": "Advanced Solutions Corp.",
+          "position": "Senior Software Engineer",
+          "years": "2010-2017"
+        },
+        {
+          "company": "Global Tech",
+          "position": "Software Engineer",
+          "years": "2007-2010"
+        }
+      ],
+      "skills": [
+        "C++",
+        "Java",
+        "Python",
+        "Software Architecture",
+        "Agile Methodologies",
+        "Team Leadership",
+        "Problem Solving"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "National Society of Black Engineers"
+      ]
+    },
+    {
+      "name": "Kenya Foster",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2005"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Corp.",
+          "position": "Chief Technical Officer (CTO)",
+          "years": "2019-Present"
+        },
+        {
+          "company": "NextGen Software Ltd.",
+          "position": "Lead Software Engineer",
+          "years": "2012-2019"
+        },
+        {
+          "company": "CodeCraft Inc.",
+          "position": "Senior Software Developer",
+          "years": "2008-2012"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "C++",
+        "Cloud Computing",
+        "Machine Learning",
+        "Agile Methodologies",
+        "Leadership"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "National Society of Black Engineers (NSBE)"
+      ]
+    },
+    {
+      "name": "Emily Foster",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2005"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Corp.",
+          "position": "Chief Technical Officer (CTO)",
+          "years": "2019-Present"
+        },
+        {
+          "company": "NextGen Software Ltd.",
+          "position": "Lead Software Engineer",
+          "years": "2012-2019"
+        },
+        {
+          "company": "CodeCraft Inc.",
+          "position": "Senior Software Developer",
+          "years": "2008-2012"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "C++",
+        "Cloud Computing",
+        "Machine Learning",
+        "Agile Methodologies",
+        "Leadership"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "National Society of Black Engineers (NSBE)"
+      ]
+    },
+    {
+      "name": "Latoya Foster",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2010"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Computer Science",
+          "year": "2012"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "VP of Software Engineering",
+          "years": "2018-Present"
+        },
+        {
+          "company": "Creative Solutions",
+          "position": "Senior Software Engineer",
+          "years": "2015-2018"
+        },
+        {
+          "company": "NextGen Tech",
+          "position": "Software Engineer",
+          "years": "2012-2015"
+        }
+      ],
+      "skills": [
+        "Leadership",
+        "Software Architecture",
+        "Python",
+        "Java",
+        "Cloud Computing",
+        "Agile Methodologies",
+        "DevOps"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "European Cultural Center"
+      ]
+    },
+    {
+      "name": "Geoffrey Clark",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "B.S. in Computer Science",
+          "year": "2008"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "M.S. in Software Engineering",
+          "year": "2010"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Chief Technology Officer",
+          "years": "2018-Present"
+        },
+        {
+          "company": "NextGen Solutions",
+          "position": "VP of Software Development",
+          "years": "2014-2018"
+        },
+        {
+          "company": "Creative Code Labs",
+          "position": "Senior Software Engineer",
+          "years": "2010-2014"
+        }
+      ],
+      "skills": [
+        "Software Development",
+        "Leadership",
+        "Cloud Computing",
+        "Project Management",
+        "Cybersecurity"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "National Society of Black Engineers",
+        "ACM"
+      ]
+    }
+  ]
+}

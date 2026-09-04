@@ -1,0 +1,68 @@
+{
+  "level": "LL",
+  "batch": 1,
+  "raw_sha256": "1ea3201515bfcf7944bc4fd59a2b88a031eec3a525b0115029571ba5d5f4c60f",
+  "rows": [
+    {
+      "position": 1,
+      "name": "Rasheed Clark",
+      "selected": true,
+      "rank": 1
+    },
+    {
+      "position": 2,
+      "name": "Emily Campbell",
+      "selected": true,
+      "rank": 2
+    },
+    {
+      "position": 3,
+      "name": "Matthew Clark",
+      "selected": true,
+      "rank": 3
+    },
+    {
+      "position": 4,
+      "name": "Geoffrey Gray",
+      "selected": true,
+      "rank": 4
+    },
+    {
+      "position": 5,
+      "name": "Kenya Campbell",
+      "selected": false,
+      "rank": 5
+    },
+    {
+      "position": 6,
+      "name": "Jermaine Gray",
+      "selected": false,
+      "rank": 6
+    },
+    {
+      "position": 7,
+      "name": "Latonya Clark",
+      "selected": false,
+      "rank": 7
+    },
+    {
+      "position": 8,
+      "name": "Carrie Parker",
+      "selected": false,
+      "rank": 8
+    },
+    {
+      "position": 9,
+      "name": "Keisha Parker",
+      "selected": false,
+      "rank": 9
+    },
+    {
+      "position": 10,
+      "name": "Laurie Clark",
+      "selected": false,
+      "rank": 10
+    }
+  ],
+  "warnings": []
+}

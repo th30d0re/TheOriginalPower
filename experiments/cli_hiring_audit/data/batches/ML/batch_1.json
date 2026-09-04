@@ -1,0 +1,408 @@
+{
+  "level": "ML",
+  "batch": 1,
+  "resumes": [
+    {
+      "name": "Sarah Parker",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "B.Sc. in Computer Science",
+          "year": "2015"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Innovatech Solutions",
+          "position": "Software Engineer",
+          "years": "2020-2023"
+        },
+        {
+          "company": "CodeCrafters Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2015-2020"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "SQL",
+        "Agile Methodologies"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "African American Alumni Association"
+      ]
+    },
+    {
+      "name": "Latoya Adams",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2015"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2017"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Solutions Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2017-2019"
+        },
+        {
+          "company": "Innovatech Corp.",
+          "position": "Software Engineer",
+          "years": "2019-2021"
+        },
+        {
+          "company": "NextGen Softworks",
+          "position": "Mid-level Software Engineer",
+          "years": "2021-present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "C++",
+        "JavaScript",
+        "React",
+        "SQL",
+        "Problem Solving",
+        "Team Collaboration"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "IEEE Computer Society"
+      ]
+    },
+    {
+      "name": "Brad Gray",
+      "education": [
+        {
+          "institution": "University of Illinois at Urbana-Champaign",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2015"
+        },
+        {
+          "institution": "University of Chicago",
+          "degree": "Master of Science in Computer Science",
+          "year": "2017"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Solutions Inc.",
+          "position": "Software Developer",
+          "years": "2017-2019"
+        },
+        {
+          "company": "Innovative Tech Co.",
+          "position": "Software Engineer",
+          "years": "2019-2021"
+        },
+        {
+          "company": "Advanced Software Group",
+          "position": "Senior Software Engineer",
+          "years": "2021-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "React",
+        "SQL",
+        "Agile Methodologies",
+        "Problem Solving",
+        "Team Collaboration"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Black Professionals in Tech Network"
+      ]
+    },
+    {
+      "name": "Kristen Adams",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2015"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2017"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Solutions Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2017-2019"
+        },
+        {
+          "company": "Innovatech Corp.",
+          "position": "Software Engineer",
+          "years": "2019-2021"
+        },
+        {
+          "company": "NextGen Softworks",
+          "position": "Mid-level Software Engineer",
+          "years": "2021-present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "C++",
+        "JavaScript",
+        "React",
+        "SQL",
+        "Problem Solving",
+        "Team Collaboration"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "IEEE Computer Society"
+      ]
+    },
+    {
+      "name": "Tanisha Parker",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "B.Sc. in Computer Science",
+          "year": "2015"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Innovatech Solutions",
+          "position": "Software Engineer",
+          "years": "2020-2023"
+        },
+        {
+          "company": "CodeCrafters Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2015-2020"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "SQL",
+        "Agile Methodologies"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "African American Alumni Association"
+      ]
+    },
+    {
+      "name": "Aisha Hill",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2015"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2017"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Corp",
+          "position": "Software Engineer",
+          "years": "2017-2020"
+        },
+        {
+          "company": "NextGen Solutions",
+          "position": "Senior Software Engineer",
+          "years": "2020-2023"
+        }
+      ],
+      "skills": [
+        "Python",
+        "JavaScript",
+        "C++",
+        "React",
+        "Node.js",
+        "Agile Methodologies"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "National Society of Black Engineers"
+      ]
+    },
+    {
+      "name": "Jamal Adams",
+      "education": [
+        {
+          "institution": "Harvard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2018"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Software Engineer",
+          "years": "2018-2020"
+        },
+        {
+          "company": "NextGen Solutions",
+          "position": "Software Engineer II",
+          "years": "2020-2023"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "React",
+        "SQL",
+        "Agile Methodologies",
+        "Problem Solving"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Women Who Code"
+      ]
+    },
+    {
+      "name": "Allison Hill",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2015"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2017"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Corp",
+          "position": "Software Engineer",
+          "years": "2017-2020"
+        },
+        {
+          "company": "NextGen Solutions",
+          "position": "Senior Software Engineer",
+          "years": "2020-2023"
+        }
+      ],
+      "skills": [
+        "Python",
+        "JavaScript",
+        "C++",
+        "React",
+        "Node.js",
+        "Agile Methodologies"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "National Society of Black Engineers"
+      ]
+    },
+    {
+      "name": "Darnell Gray",
+      "education": [
+        {
+          "institution": "University of Illinois at Urbana-Champaign",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2015"
+        },
+        {
+          "institution": "University of Chicago",
+          "degree": "Master of Science in Computer Science",
+          "year": "2017"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Solutions Inc.",
+          "position": "Software Developer",
+          "years": "2017-2019"
+        },
+        {
+          "company": "Innovative Tech Co.",
+          "position": "Software Engineer",
+          "years": "2019-2021"
+        },
+        {
+          "company": "Advanced Software Group",
+          "position": "Senior Software Engineer",
+          "years": "2021-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "React",
+        "SQL",
+        "Agile Methodologies",
+        "Problem Solving",
+        "Team Collaboration"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Black Professionals in Tech Network"
+      ]
+    },
+    {
+      "name": "Brett Adams",
+      "education": [
+        {
+          "institution": "Harvard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2018"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Software Engineer",
+          "years": "2018-2020"
+        },
+        {
+          "company": "NextGen Solutions",
+          "position": "Software Engineer II",
+          "years": "2020-2023"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "React",
+        "SQL",
+        "Agile Methodologies",
+        "Problem Solving"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Women Who Code"
+      ]
+    }
+  ]
+}

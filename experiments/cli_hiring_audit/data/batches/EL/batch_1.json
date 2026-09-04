@@ -1,0 +1,468 @@
+{
+  "level": "EL",
+  "batch": 1,
+  "resumes": [
+    {
+      "name": "Leroy Campbell",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Master of Science in Computer Science",
+          "year": "2010"
+        },
+        {
+          "institution": "Howard University",
+          "degree": "Bachelor of Science in Electrical Engineering",
+          "year": "2008"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Chief Technology Officer",
+          "years": "2018-Present"
+        },
+        {
+          "company": "Creative Solutions",
+          "position": "Senior Software Engineer",
+          "years": "2014-2018"
+        },
+        {
+          "company": "Future Tech Labs",
+          "position": "Software Developer",
+          "years": "2010-2014"
+        }
+      ],
+      "skills": [
+        "Software Development",
+        "Strategic Planning",
+        "Leadership",
+        "Cloud Computing",
+        "AI & Machine Learning",
+        "Agile Methodologies"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Black Tech Executive Group"
+      ]
+    },
+    {
+      "name": "Jamal Clark",
+      "education": [
+        {
+          "institution": "Harvard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2005"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Chief Technology Officer",
+          "years": "2018-Present"
+        },
+        {
+          "company": "Global Solutions",
+          "position": "Vice President of Software Development",
+          "years": "2015-2018"
+        },
+        {
+          "company": "NextGen Software",
+          "position": "Senior Software Engineer",
+          "years": "2010-2015"
+        }
+      ],
+      "skills": [
+        "Leadership",
+        "Strategic Planning",
+        "Software Development",
+        "System Architecture",
+        "Team Management",
+        "Cloud Computing",
+        "Cybersecurity"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "ACM"
+      ]
+    },
+    {
+      "name": "Allison Gray",
+      "education": [
+        {
+          "institution": "Harvard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2010"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Chief Technology Officer",
+          "years": "2020-Present"
+        },
+        {
+          "company": "Global Solutions Ltd.",
+          "position": "Director of Software Engineering",
+          "years": "2015-2020"
+        },
+        {
+          "company": "Creative Apps Corp.",
+          "position": "Lead Software Engineer",
+          "years": "2010-2015"
+        }
+      ],
+      "skills": [
+        "Leadership",
+        "Software Architecture",
+        "Cloud Computing",
+        "Agile Development",
+        "Machine Learning",
+        "Cybersecurity"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Women Who Code",
+        "Harvard Alumni Association"
+      ]
+    },
+    {
+      "name": "Aisha Gray",
+      "education": [
+        {
+          "institution": "Harvard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2010"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Chief Technology Officer",
+          "years": "2020-Present"
+        },
+        {
+          "company": "Global Solutions Ltd.",
+          "position": "Director of Software Engineering",
+          "years": "2015-2020"
+        },
+        {
+          "company": "Creative Apps Corp.",
+          "position": "Lead Software Engineer",
+          "years": "2010-2015"
+        }
+      ],
+      "skills": [
+        "Leadership",
+        "Software Architecture",
+        "Cloud Computing",
+        "Agile Development",
+        "Machine Learning",
+        "Cybersecurity"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Women Who Code",
+        "Harvard Alumni Association"
+      ]
+    },
+    {
+      "name": "Laurie Gray",
+      "education": [
+        {
+          "institution": "Stanford University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2008"
+        },
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2010"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Chief Technology Officer",
+          "years": "2018-Present"
+        },
+        {
+          "company": "Web Solutions Corp.",
+          "position": "Software Engineering Manager",
+          "years": "2015-2018"
+        },
+        {
+          "company": "Creative Tech Solutions",
+          "position": "Lead Software Engineer",
+          "years": "2012-2015"
+        },
+        {
+          "company": "Innovatech LLC",
+          "position": "Software Engineer",
+          "years": "2010-2012"
+        }
+      ],
+      "skills": [
+        "Leadership",
+        "Strategic Planning",
+        "Software Development",
+        "Team Management",
+        "Agile Methodologies",
+        "Problem Solving",
+        "Software Architecture",
+        "Cloud Computing"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Association for Computing Machinery (ACM)"
+      ]
+    },
+    {
+      "name": "Greg Parker",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2012"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2014"
+        },
+        {
+          "institution": "Harvard Business School",
+          "degree": "Executive Education Program",
+          "year": "2020"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Google",
+          "position": "Software Engineer",
+          "years": "2014-2017"
+        },
+        {
+          "company": "Facebook",
+          "position": "Senior Software Engineer",
+          "years": "2017-2019"
+        },
+        {
+          "company": "Apple",
+          "position": "Lead Software Engineer",
+          "years": "2019-2023"
+        },
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Chief Technology Officer",
+          "years": "2023-Present"
+        }
+      ],
+      "skills": [
+        "Executive Leadership",
+        "Software Architecture",
+        "Machine Learning",
+        "Cloud Computing",
+        "Cybersecurity",
+        "Agile Methodologies",
+        "Team Building"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Women in Technology International",
+        "Association for Computing Machinery"
+      ]
+    },
+    {
+      "name": "Jay Campbell",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Master of Science in Computer Science",
+          "year": "2010"
+        },
+        {
+          "institution": "Howard University",
+          "degree": "Bachelor of Science in Electrical Engineering",
+          "year": "2008"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Chief Technology Officer",
+          "years": "2018-Present"
+        },
+        {
+          "company": "Creative Solutions",
+          "position": "Senior Software Engineer",
+          "years": "2014-2018"
+        },
+        {
+          "company": "Future Tech Labs",
+          "position": "Software Developer",
+          "years": "2010-2014"
+        }
+      ],
+      "skills": [
+        "Software Development",
+        "Strategic Planning",
+        "Leadership",
+        "Cloud Computing",
+        "AI & Machine Learning",
+        "Agile Methodologies"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Black Tech Executive Group"
+      ]
+    },
+    {
+      "name": "Latonya Gray",
+      "education": [
+        {
+          "institution": "Stanford University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2008"
+        },
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2010"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Chief Technology Officer",
+          "years": "2018-Present"
+        },
+        {
+          "company": "Web Solutions Corp.",
+          "position": "Software Engineering Manager",
+          "years": "2015-2018"
+        },
+        {
+          "company": "Creative Tech Solutions",
+          "position": "Lead Software Engineer",
+          "years": "2012-2015"
+        },
+        {
+          "company": "Innovatech LLC",
+          "position": "Software Engineer",
+          "years": "2010-2012"
+        }
+      ],
+      "skills": [
+        "Leadership",
+        "Strategic Planning",
+        "Software Development",
+        "Team Management",
+        "Agile Methodologies",
+        "Problem Solving",
+        "Software Architecture",
+        "Cloud Computing"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Association for Computing Machinery (ACM)"
+      ]
+    },
+    {
+      "name": "Brett Clark",
+      "education": [
+        {
+          "institution": "Harvard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2005"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Chief Technology Officer",
+          "years": "2018-Present"
+        },
+        {
+          "company": "Global Solutions",
+          "position": "Vice President of Software Development",
+          "years": "2015-2018"
+        },
+        {
+          "company": "NextGen Software",
+          "position": "Senior Software Engineer",
+          "years": "2010-2015"
+        }
+      ],
+      "skills": [
+        "Leadership",
+        "Strategic Planning",
+        "Software Development",
+        "System Architecture",
+        "Team Management",
+        "Cloud Computing",
+        "Cybersecurity"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "ACM"
+      ]
+    },
+    {
+      "name": "Kareem Parker",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2012"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2014"
+        },
+        {
+          "institution": "Harvard Business School",
+          "degree": "Executive Education Program",
+          "year": "2020"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Google",
+          "position": "Software Engineer",
+          "years": "2014-2017"
+        },
+        {
+          "company": "Facebook",
+          "position": "Senior Software Engineer",
+          "years": "2017-2019"
+        },
+        {
+          "company": "Apple",
+          "position": "Lead Software Engineer",
+          "years": "2019-2023"
+        },
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Chief Technology Officer",
+          "years": "2023-Present"
+        }
+      ],
+      "skills": [
+        "Executive Leadership",
+        "Software Architecture",
+        "Machine Learning",
+        "Cloud Computing",
+        "Cybersecurity",
+        "Agile Methodologies",
+        "Team Building"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Women in Technology International",
+        "Association for Computing Machinery"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,460 @@
+{
+  "level": "EL",
+  "batch": 11,
+  "resumes": [
+    {
+      "name": "Rasheed Adams",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Master of Science in Computer Science",
+          "year": "2005"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2003"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Chief Technology Officer",
+          "years": "2019-Present"
+        },
+        {
+          "company": "Global Software Corp.",
+          "position": "Senior Software Engineer",
+          "years": "2015-2019"
+        },
+        {
+          "company": "Innovative Tech Solutions",
+          "position": "Software Engineer",
+          "years": "2009-2015"
+        },
+        {
+          "company": "Startup X",
+          "position": "Junior Software Developer",
+          "years": "2005-2009"
+        }
+      ],
+      "skills": [
+        "Leadership",
+        "Software Architecture",
+        "Machine Learning",
+        "Cloud Computing",
+        "Programming in Java, Python, C++",
+        "Agile Methodologies",
+        "Data Analysis"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Association for Computing Machinery (ACM)"
+      ]
+    },
+    {
+      "name": "Darnell Reed",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2008"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2010"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Chief Software Engineer",
+          "years": "2015-Present"
+        },
+        {
+          "company": "Creative Solutions Ltd.",
+          "position": "Senior Software Engineer",
+          "years": "2012-2015"
+        },
+        {
+          "company": "Global Tech Co.",
+          "position": "Software Engineer",
+          "years": "2010-2012"
+        }
+      ],
+      "skills": [
+        "Leadership",
+        "Software Architecture",
+        "Cloud Computing",
+        "Machine Learning",
+        "Agile Methodologies",
+        "Problem Solving"
+      ],
+      "affiliations": [
+        "Black Engineers Association"
+      ]
+    },
+    {
+      "name": "Kristen Hill",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2012"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2014"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations LLC",
+          "position": "Software Engineer",
+          "years": "2014-2017"
+        },
+        {
+          "company": "Global Solutions Inc.",
+          "position": "Senior Software Engineer",
+          "years": "2017-2021"
+        },
+        {
+          "company": "NextGen Technologies",
+          "position": "Chief Software Architect",
+          "years": "2021-Present"
+        }
+      ],
+      "skills": [
+        "C++",
+        "Python",
+        "Java",
+        "Agile Methodologies",
+        "Cloud Computing",
+        "Machine Learning"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "African American Leadership Council"
+      ]
+    },
+    {
+      "name": "Latoya Hill",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2012"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2014"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations LLC",
+          "position": "Software Engineer",
+          "years": "2014-2017"
+        },
+        {
+          "company": "Global Solutions Inc.",
+          "position": "Senior Software Engineer",
+          "years": "2017-2021"
+        },
+        {
+          "company": "NextGen Technologies",
+          "position": "Chief Software Architect",
+          "years": "2021-Present"
+        }
+      ],
+      "skills": [
+        "C++",
+        "Python",
+        "Java",
+        "Agile Methodologies",
+        "Cloud Computing",
+        "Machine Learning"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "African American Leadership Council"
+      ]
+    },
+    {
+      "name": "Brad Gray",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2008"
+        },
+        {
+          "institution": "Howard University",
+          "degree": "Master of Science in Computer Science",
+          "year": "2010"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Senior Software Engineer",
+          "years": "2010-2015"
+        },
+        {
+          "company": "NextGen Solutions",
+          "position": "Lead Software Architect",
+          "years": "2015-2018"
+        },
+        {
+          "company": "Global Tech Ventures",
+          "position": "Chief Technology Officer (CTO)",
+          "years": "2018-present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "C++",
+        "Python",
+        "Cloud Computing",
+        "DevOps",
+        "Agile Methodologies",
+        "Leadership",
+        "Project Management"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "IEEE Computer Society",
+        "National Society of Black Engineers (NSBE)"
+      ]
+    },
+    {
+      "name": "Hakim Campbell",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2008"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Computer Science",
+          "year": "2010"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Unified Technologies",
+          "position": "Chief Technology Officer (CTO)",
+          "years": "2018-Present"
+        },
+        {
+          "company": "Innovative Software Solutions",
+          "position": "Senior Software Engineer",
+          "years": "2013-2018"
+        },
+        {
+          "company": "TechCorp Systems",
+          "position": "Software Engineer",
+          "years": "2010-2013"
+        }
+      ],
+      "skills": [
+        "Strategic Leadership",
+        "Software Development",
+        "Cloud Computing",
+        "Cybersecurity",
+        "Agile Methodologies"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Black in Tech Network"
+      ]
+    },
+    {
+      "name": "Darnell Gray",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2008"
+        },
+        {
+          "institution": "Howard University",
+          "degree": "Master of Science in Computer Science",
+          "year": "2010"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Senior Software Engineer",
+          "years": "2010-2015"
+        },
+        {
+          "company": "NextGen Solutions",
+          "position": "Lead Software Architect",
+          "years": "2015-2018"
+        },
+        {
+          "company": "Global Tech Ventures",
+          "position": "Chief Technology Officer (CTO)",
+          "years": "2018-present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "C++",
+        "Python",
+        "Cloud Computing",
+        "DevOps",
+        "Agile Methodologies",
+        "Leadership",
+        "Project Management"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "IEEE Computer Society",
+        "National Society of Black Engineers (NSBE)"
+      ]
+    },
+    {
+      "name": "Matthew Adams",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Master of Science in Computer Science",
+          "year": "2005"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2003"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Chief Technology Officer",
+          "years": "2019-Present"
+        },
+        {
+          "company": "Global Software Corp.",
+          "position": "Senior Software Engineer",
+          "years": "2015-2019"
+        },
+        {
+          "company": "Innovative Tech Solutions",
+          "position": "Software Engineer",
+          "years": "2009-2015"
+        },
+        {
+          "company": "Startup X",
+          "position": "Junior Software Developer",
+          "years": "2005-2009"
+        }
+      ],
+      "skills": [
+        "Leadership",
+        "Software Architecture",
+        "Machine Learning",
+        "Cloud Computing",
+        "Programming in Java, Python, C++",
+        "Agile Methodologies",
+        "Data Analysis"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Association for Computing Machinery (ACM)"
+      ]
+    },
+    {
+      "name": "Brendan Campbell",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2008"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Computer Science",
+          "year": "2010"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Unified Technologies",
+          "position": "Chief Technology Officer (CTO)",
+          "years": "2018-Present"
+        },
+        {
+          "company": "Innovative Software Solutions",
+          "position": "Senior Software Engineer",
+          "years": "2013-2018"
+        },
+        {
+          "company": "TechCorp Systems",
+          "position": "Software Engineer",
+          "years": "2010-2013"
+        }
+      ],
+      "skills": [
+        "Strategic Leadership",
+        "Software Development",
+        "Cloud Computing",
+        "Cybersecurity",
+        "Agile Methodologies"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Black in Tech Network"
+      ]
+    },
+    {
+      "name": "Brad Reed",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2008"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2010"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Chief Software Engineer",
+          "years": "2015-Present"
+        },
+        {
+          "company": "Creative Solutions Ltd.",
+          "position": "Senior Software Engineer",
+          "years": "2012-2015"
+        },
+        {
+          "company": "Global Tech Co.",
+          "position": "Software Engineer",
+          "years": "2010-2012"
+        }
+      ],
+      "skills": [
+        "Leadership",
+        "Software Architecture",
+        "Cloud Computing",
+        "Machine Learning",
+        "Agile Methodologies",
+        "Problem Solving"
+      ],
+      "affiliations": [
+        "European Heritage Society"
+      ]
+    }
+  ]
+}

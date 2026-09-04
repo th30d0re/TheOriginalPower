@@ -1,0 +1,438 @@
+{
+  "level": "ML",
+  "batch": 10,
+  "resumes": [
+    {
+      "name": "Laurie Adams",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2015"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2017"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Junior Software Developer",
+          "years": "2017-2019"
+        },
+        {
+          "company": "Global Solutions LLC",
+          "position": "Software Engineer",
+          "years": "2019-2022"
+        },
+        {
+          "company": "Advanced Systems Design",
+          "position": "Mid-level Software Engineer",
+          "years": "2022-present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "C++",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "Data Structures",
+        "Algorithms",
+        "Software Testing"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Women Who Code"
+      ]
+    },
+    {
+      "name": "Todd Hill",
+      "education": [
+        {
+          "institution": "University of Southern California",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2015"
+        },
+        {
+          "institution": "University of Southern California",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2017"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Solutions Inc.",
+          "position": "Junior Software Developer",
+          "years": "2017-2019"
+        },
+        {
+          "company": "Innovatech Corp.",
+          "position": "Software Engineer",
+          "years": "2019-2021"
+        },
+        {
+          "company": "CodeCraft LLC",
+          "position": "Mid-Level Software Engineer",
+          "years": "2021-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "C++",
+        "JavaScript",
+        "Software Development",
+        "Agile Methodologies",
+        "Problem Solving",
+        "Team Collaboration"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "African American Student Union"
+      ]
+    },
+    {
+      "name": "Matthew Parker",
+      "education": [
+        {
+          "institution": "University of Southern California",
+          "degree": "B.Sc. in Computer Science",
+          "year": "2015"
+        },
+        {
+          "institution": "National Technological Institute",
+          "degree": "M.Sc. in Software Engineering",
+          "year": "2017"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Corp",
+          "position": "Junior Software Developer",
+          "years": "2017-2019"
+        },
+        {
+          "company": "NextGen Solutions",
+          "position": "Software Engineer",
+          "years": "2019-2022"
+        },
+        {
+          "company": "CloudNet Inc.",
+          "position": "Senior Software Engineer",
+          "years": "2022-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "AWS",
+        "Docker",
+        "Microservices"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Open Source Community Contributor"
+      ]
+    },
+    {
+      "name": "Latonya Adams",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2015"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2017"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Junior Software Developer",
+          "years": "2017-2019"
+        },
+        {
+          "company": "Global Solutions LLC",
+          "position": "Software Engineer",
+          "years": "2019-2022"
+        },
+        {
+          "company": "Advanced Systems Design",
+          "position": "Mid-level Software Engineer",
+          "years": "2022-present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "C++",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "Data Structures",
+        "Algorithms",
+        "Software Testing"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Women Who Code"
+      ]
+    },
+    {
+      "name": "Tamika Foster",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2018"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "TechNova Solutions",
+          "position": "Software Engineer",
+          "years": "2018-2020"
+        },
+        {
+          "company": "Innovatech Inc.",
+          "position": "Software Engineer II",
+          "years": "2020-2022"
+        },
+        {
+          "company": "CodeCrafters Co.",
+          "position": "Lead Software Engineer",
+          "years": "2022-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "JavaScript",
+        "Python",
+        "SQL",
+        "React",
+        "Node.js",
+        "Agile Methodologies",
+        "RESTful APIs"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Howard University Alumni Association"
+      ]
+    },
+    {
+      "name": "Greg Reed",
+      "education": [
+        {
+          "institution": "Georgia Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2017"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Software Engineer",
+          "years": "2018-2021"
+        },
+        {
+          "company": "NextGen Software Solutions",
+          "position": "Software Engineer II",
+          "years": "2021-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "C++",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "SQL",
+        "Agile Methodologies"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "African American Student Union"
+      ]
+    },
+    {
+      "name": "Rasheed Parker",
+      "education": [
+        {
+          "institution": "University of Southern California",
+          "degree": "B.Sc. in Computer Science",
+          "year": "2015"
+        },
+        {
+          "institution": "National Technological Institute",
+          "degree": "M.Sc. in Software Engineering",
+          "year": "2017"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Corp",
+          "position": "Junior Software Developer",
+          "years": "2017-2019"
+        },
+        {
+          "company": "NextGen Solutions",
+          "position": "Software Engineer",
+          "years": "2019-2022"
+        },
+        {
+          "company": "CloudNet Inc.",
+          "position": "Senior Software Engineer",
+          "years": "2022-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "AWS",
+        "Docker",
+        "Microservices"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Open Source Community Contributor"
+      ]
+    },
+    {
+      "name": "Tyrone Hill",
+      "education": [
+        {
+          "institution": "University of Southern California",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2015"
+        },
+        {
+          "institution": "University of Southern California",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2017"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Solutions Inc.",
+          "position": "Junior Software Developer",
+          "years": "2017-2019"
+        },
+        {
+          "company": "Innovatech Corp.",
+          "position": "Software Engineer",
+          "years": "2019-2021"
+        },
+        {
+          "company": "CodeCraft LLC",
+          "position": "Mid-Level Software Engineer",
+          "years": "2021-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "C++",
+        "JavaScript",
+        "Software Development",
+        "Agile Methodologies",
+        "Problem Solving",
+        "Team Collaboration"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "African American Student Union"
+      ]
+    },
+    {
+      "name": "Kareem Reed",
+      "education": [
+        {
+          "institution": "Georgia Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2017"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Software Engineer",
+          "years": "2018-2021"
+        },
+        {
+          "company": "NextGen Software Solutions",
+          "position": "Software Engineer II",
+          "years": "2021-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "C++",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "SQL",
+        "Agile Methodologies"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "African American Student Union"
+      ]
+    },
+    {
+      "name": "Meredith Foster",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2018"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "TechNova Solutions",
+          "position": "Software Engineer",
+          "years": "2018-2020"
+        },
+        {
+          "company": "Innovatech Inc.",
+          "position": "Software Engineer II",
+          "years": "2020-2022"
+        },
+        {
+          "company": "CodeCrafters Co.",
+          "position": "Lead Software Engineer",
+          "years": "2022-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "JavaScript",
+        "Python",
+        "SQL",
+        "React",
+        "Node.js",
+        "Agile Methodologies",
+        "RESTful APIs"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Howard University Alumni Association"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,374 @@
+{
+  "level": "ML",
+  "batch": 3,
+  "resumes": [
+    {
+      "name": "Hakim Campbell",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2015"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Software Engineer II",
+          "years": "2018-2023"
+        },
+        {
+          "company": "Creative Solutions",
+          "position": "Software Engineer",
+          "years": "2015-2018"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "C++",
+        "JavaScript",
+        "Agile Development",
+        "Software Testing",
+        "Version Control (Git)"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Women's Tech Network"
+      ]
+    },
+    {
+      "name": "Brendan Parker",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2016"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Software Engineer",
+          "years": "2016-2020"
+        },
+        {
+          "company": "Creative Tech Solutions",
+          "position": "Senior Software Engineer",
+          "years": "2020-present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "SQL",
+        "Problem Solving",
+        "Team Collaboration"
+      ],
+      "affiliations": [
+        "European Heritage Society"
+      ]
+    },
+    {
+      "name": "Meredith Morgan",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2015"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "TechCorp Solutions",
+          "position": "Software Engineer",
+          "years": "2015-2018"
+        },
+        {
+          "company": "Innovatech Inc.",
+          "position": "Senior Software Engineer",
+          "years": "2018-2021"
+        },
+        {
+          "company": "GigaApps",
+          "position": "Lead Software Engineer",
+          "years": "2021-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "C++",
+        "Software Development",
+        "Agile Methodologies",
+        "Team Leadership",
+        "Problem Solving"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Women in Technology International (WITI)"
+      ]
+    },
+    {
+      "name": "Tyrone Evans",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2015"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2017"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Solutions Inc.",
+          "position": "Software Engineer",
+          "years": "2017-2020"
+        },
+        {
+          "company": "Innovatech Corp.",
+          "position": "Software Engineer II",
+          "years": "2020-2023"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "C++",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "Agile Methodologies"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "European Cultural Center"
+      ]
+    },
+    {
+      "name": "Hakim Parker",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2016"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Inc.",
+          "position": "Software Engineer",
+          "years": "2016-2020"
+        },
+        {
+          "company": "Creative Tech Solutions",
+          "position": "Senior Software Engineer",
+          "years": "2020-present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "SQL",
+        "Problem Solving",
+        "Team Collaboration"
+      ],
+      "affiliations": [
+        "Black Engineers Association"
+      ]
+    },
+    {
+      "name": "Todd Evans",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2015"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2017"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Solutions Inc.",
+          "position": "Software Engineer",
+          "years": "2017-2020"
+        },
+        {
+          "company": "Innovatech Corp.",
+          "position": "Software Engineer II",
+          "years": "2020-2023"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "C++",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "Agile Methodologies"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "European Cultural Center"
+      ]
+    },
+    {
+      "name": "Brendan Campbell",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2015"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Software Engineer II",
+          "years": "2018-2023"
+        },
+        {
+          "company": "Creative Solutions",
+          "position": "Software Engineer",
+          "years": "2015-2018"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "C++",
+        "JavaScript",
+        "Agile Development",
+        "Software Testing",
+        "Version Control (Git)"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Women's Tech Network"
+      ]
+    },
+    {
+      "name": "Latonya Morgan",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2015"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Solutions Inc.",
+          "position": "Software Engineer",
+          "years": "2016-2019"
+        },
+        {
+          "company": "Innovatech Global",
+          "position": "Software Engineer II",
+          "years": "2019-2023"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "C++",
+        "Agile Development",
+        "SQL"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "National Society of Black Engineers"
+      ]
+    },
+    {
+      "name": "Tamika Morgan",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2015"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "TechCorp Solutions",
+          "position": "Software Engineer",
+          "years": "2015-2018"
+        },
+        {
+          "company": "Innovatech Inc.",
+          "position": "Senior Software Engineer",
+          "years": "2018-2021"
+        },
+        {
+          "company": "GigaApps",
+          "position": "Lead Software Engineer",
+          "years": "2021-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "C++",
+        "Software Development",
+        "Agile Methodologies",
+        "Team Leadership",
+        "Problem Solving"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Women in Technology International (WITI)"
+      ]
+    },
+    {
+      "name": "Laurie Morgan",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2015"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Solutions Inc.",
+          "position": "Software Engineer",
+          "years": "2016-2019"
+        },
+        {
+          "company": "Innovatech Global",
+          "position": "Software Engineer II",
+          "years": "2019-2023"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "C++",
+        "Agile Development",
+        "SQL"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "National Society of Black Engineers"
+      ]
+    }
+  ]
+}

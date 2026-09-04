@@ -1,0 +1,440 @@
+{
+  "level": "EL",
+  "batch": 5,
+  "resumes": [
+    {
+      "name": "Brad Baker",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2010"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Chief Technology Officer",
+          "years": "2018-2023"
+        },
+        {
+          "company": "NextGen Solutions",
+          "position": "Lead Software Engineer",
+          "years": "2014-2018"
+        },
+        {
+          "company": "ABC Software",
+          "position": "Software Engineer",
+          "years": "2010-2014"
+        }
+      ],
+      "skills": [
+        "Software Development",
+        "Leadership",
+        "Cloud Computing",
+        "Agile Methodologies",
+        "System Architecture",
+        "Machine Learning"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "IEEE Computer Society"
+      ]
+    },
+    {
+      "name": "Greg Foster",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2007"
+        },
+        {
+          "institution": "Carnegie Mellon University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2009"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "InnovateTech Solutions",
+          "position": "Chief Technology Officer",
+          "years": "2019-Present"
+        },
+        {
+          "company": "TechWave Systems",
+          "position": "Vice President of Engineering",
+          "years": "2015-2019"
+        },
+        {
+          "company": "CodeCraft Inc.",
+          "position": "Senior Software Engineer",
+          "years": "2010-2015"
+        }
+      ],
+      "skills": [
+        "Leadership",
+        "Software Architecture",
+        "Agile Methodologies",
+        "Cloud Computing",
+        "Cybersecurity",
+        "Data Analysis"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Black in Tech"
+      ]
+    },
+    {
+      "name": "Jay Evans",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2008"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Chief Technology Officer",
+          "years": "2018-2023"
+        },
+        {
+          "company": "NextGen Software Solutions",
+          "position": "Lead Software Engineer",
+          "years": "2013-2018"
+        },
+        {
+          "company": "Creative Coders LLC",
+          "position": "Software Engineer",
+          "years": "2008-2013"
+        }
+      ],
+      "skills": [
+        "Software Development",
+        "Team Leadership",
+        "Agile Methodologies",
+        "Cloud Computing",
+        "Artificial Intelligence",
+        "Cybersecurity"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Institute of Electrical and Electronics Engineers"
+      ]
+    },
+    {
+      "name": "Darnell Baker",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2010"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Chief Technology Officer",
+          "years": "2018-2023"
+        },
+        {
+          "company": "NextGen Solutions",
+          "position": "Lead Software Engineer",
+          "years": "2014-2018"
+        },
+        {
+          "company": "ABC Software",
+          "position": "Software Engineer",
+          "years": "2010-2014"
+        }
+      ],
+      "skills": [
+        "Software Development",
+        "Leadership",
+        "Cloud Computing",
+        "Agile Methodologies",
+        "System Architecture",
+        "Machine Learning"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "IEEE Computer Society"
+      ]
+    },
+    {
+      "name": "Leroy Evans",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2008"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Chief Technology Officer",
+          "years": "2018-2023"
+        },
+        {
+          "company": "NextGen Software Solutions",
+          "position": "Lead Software Engineer",
+          "years": "2013-2018"
+        },
+        {
+          "company": "Creative Coders LLC",
+          "position": "Software Engineer",
+          "years": "2008-2013"
+        }
+      ],
+      "skills": [
+        "Software Development",
+        "Team Leadership",
+        "Agile Methodologies",
+        "Cloud Computing",
+        "Artificial Intelligence",
+        "Cybersecurity"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Institute of Electrical and Electronics Engineers"
+      ]
+    },
+    {
+      "name": "Laurie Baker",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2010"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2012"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Co.",
+          "position": "Software Engineer",
+          "years": "2012-2015"
+        },
+        {
+          "company": "NextGen Solutions",
+          "position": "Senior Software Developer",
+          "years": "2015-2018"
+        },
+        {
+          "company": "GlobalTech Enterprises",
+          "position": "Lead Software Engineer",
+          "years": "2018-2021"
+        },
+        {
+          "company": "Innovatech Inc.",
+          "position": "Chief Technology Officer (CTO)",
+          "years": "2021-Present"
+        }
+      ],
+      "skills": [
+        "Software Development",
+        "Team Leadership",
+        "Project Management",
+        "Cloud Computing",
+        "Cybersecurity",
+        "System Architecture",
+        "Machine Learning"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "African American Student Union"
+      ]
+    },
+    {
+      "name": "Latonya Baker",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2010"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2012"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations Co.",
+          "position": "Software Engineer",
+          "years": "2012-2015"
+        },
+        {
+          "company": "NextGen Solutions",
+          "position": "Senior Software Developer",
+          "years": "2015-2018"
+        },
+        {
+          "company": "GlobalTech Enterprises",
+          "position": "Lead Software Engineer",
+          "years": "2018-2021"
+        },
+        {
+          "company": "Innovatech Inc.",
+          "position": "Chief Technology Officer (CTO)",
+          "years": "2021-Present"
+        }
+      ],
+      "skills": [
+        "Software Development",
+        "Team Leadership",
+        "Project Management",
+        "Cloud Computing",
+        "Cybersecurity",
+        "System Architecture",
+        "Machine Learning"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "African American Student Union"
+      ]
+    },
+    {
+      "name": "Kareem Foster",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2007"
+        },
+        {
+          "institution": "Carnegie Mellon University",
+          "degree": "Master of Science in Software Engineering",
+          "year": "2009"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "InnovateTech Solutions",
+          "position": "Chief Technology Officer",
+          "years": "2019-Present"
+        },
+        {
+          "company": "TechWave Systems",
+          "position": "Vice President of Engineering",
+          "years": "2015-2019"
+        },
+        {
+          "company": "CodeCraft Inc.",
+          "position": "Senior Software Engineer",
+          "years": "2010-2015"
+        }
+      ],
+      "skills": [
+        "Leadership",
+        "Software Architecture",
+        "Agile Methodologies",
+        "Cloud Computing",
+        "Cybersecurity",
+        "Data Analysis"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Black in Tech"
+      ]
+    },
+    {
+      "name": "Tanisha Evans",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2005"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Computer Science",
+          "year": "2007"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Google",
+          "position": "Vice President of Engineering",
+          "years": "2015-2023"
+        },
+        {
+          "company": "Facebook",
+          "position": "Director of Software Development",
+          "years": "2010-2015"
+        },
+        {
+          "company": "Apple",
+          "position": "Senior Software Engineer",
+          "years": "2007-2010"
+        }
+      ],
+      "skills": [
+        "Leadership",
+        "Software Development",
+        "Machine Learning",
+        "Cloud Computing",
+        "Agile Methodologies",
+        "Cybersecurity"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "IEEE",
+        "Women in Technology International"
+      ]
+    },
+    {
+      "name": "Sarah Evans",
+      "education": [
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2005"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "Master of Science in Computer Science",
+          "year": "2007"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Google",
+          "position": "Vice President of Engineering",
+          "years": "2015-2023"
+        },
+        {
+          "company": "Facebook",
+          "position": "Director of Software Development",
+          "years": "2010-2015"
+        },
+        {
+          "company": "Apple",
+          "position": "Senior Software Engineer",
+          "years": "2007-2010"
+        }
+      ],
+      "skills": [
+        "Leadership",
+        "Software Development",
+        "Machine Learning",
+        "Cloud Computing",
+        "Agile Methodologies",
+        "Cybersecurity"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "IEEE",
+        "Women in Technology International"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,308 @@
+{
+  "level": "LL",
+  "batch": 4,
+  "resumes": [
+    {
+      "name": "Geoffrey Parker",
+      "education": [
+        {
+          "institution": "Harvard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2022"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Solutions Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2022-2023"
+        }
+      ],
+      "skills": [
+        "JavaScript",
+        "Python",
+        "Java",
+        "React",
+        "SQL"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Women in Technology International (WITI)"
+      ]
+    },
+    {
+      "name": "Jill Clark",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "B.Sc. in Computer Science",
+          "year": "2021"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Solutions Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2021-2023"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "Git",
+        "Agile Development"
+      ],
+      "affiliations": [
+        "European Heritage Society"
+      ]
+    },
+    {
+      "name": "Ebony Parker",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2022"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2022-2023"
+        },
+        {
+          "company": "Web Solutions Co.",
+          "position": "Software Engineer Intern",
+          "years": "2021-2022"
+        }
+      ],
+      "skills": [
+        "Python",
+        "JavaScript",
+        "Java",
+        "React",
+        "Node.js",
+        "Problem-solving",
+        "Team collaboration"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "European Cultural Center"
+      ]
+    },
+    {
+      "name": "Aisha Clark",
+      "education": [
+        {
+          "institution": "Stanford University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2021"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations LLC",
+          "position": "Junior Software Engineer",
+          "years": "2021-2023"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "C++",
+        "JavaScript",
+        "React",
+        "Node.js"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Member of African American Student Union"
+      ]
+    },
+    {
+      "name": "Sarah Parker",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2021"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2021-2023"
+        }
+      ],
+      "skills": [
+        "Python",
+        "Java",
+        "JavaScript",
+        "HTML/CSS",
+        "React",
+        "Node.js",
+        "SQL",
+        "Problem Solving",
+        "Team Collaboration"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Howard University Alumni Association"
+      ]
+    },
+    {
+      "name": "Allison Clark",
+      "education": [
+        {
+          "institution": "Stanford University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2021"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovations LLC",
+          "position": "Junior Software Engineer",
+          "years": "2021-2023"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "C++",
+        "JavaScript",
+        "React",
+        "Node.js"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Member of African American Student Union"
+      ]
+    },
+    {
+      "name": "Anne Parker",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2022"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2022-2023"
+        },
+        {
+          "company": "Web Solutions Co.",
+          "position": "Software Engineer Intern",
+          "years": "2021-2022"
+        }
+      ],
+      "skills": [
+        "Python",
+        "JavaScript",
+        "Java",
+        "React",
+        "Node.js",
+        "Problem-solving",
+        "Team collaboration"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "European Cultural Center"
+      ]
+    },
+    {
+      "name": "Tanisha Parker",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2021"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2021-2023"
+        }
+      ],
+      "skills": [
+        "Python",
+        "Java",
+        "JavaScript",
+        "HTML/CSS",
+        "React",
+        "Node.js",
+        "SQL",
+        "Problem Solving",
+        "Team Collaboration"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Howard University Alumni Association"
+      ]
+    },
+    {
+      "name": "Jermaine Parker",
+      "education": [
+        {
+          "institution": "Harvard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2022"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Solutions Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2022-2023"
+        }
+      ],
+      "skills": [
+        "JavaScript",
+        "Python",
+        "Java",
+        "React",
+        "SQL"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Women in Technology International (WITI)"
+      ]
+    },
+    {
+      "name": "Lakisha Clark",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "B.Sc. in Computer Science",
+          "year": "2021"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Solutions Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2021-2023"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "Git",
+        "Agile Development"
+      ],
+      "affiliations": [
+        "Black Engineers Association"
+      ]
+    }
+  ]
+}

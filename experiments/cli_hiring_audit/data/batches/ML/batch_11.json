@@ -1,0 +1,388 @@
+{
+  "level": "ML",
+  "batch": 11,
+  "resumes": [
+    {
+      "name": "Brad Foster",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2018"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators LLC",
+          "position": "Junior Software Developer",
+          "years": "2018-2020"
+        },
+        {
+          "company": "Creative Code Labs",
+          "position": "Software Engineer",
+          "years": "2020-2023"
+        }
+      ],
+      "skills": [
+        "Python",
+        "Java",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "SQL",
+        "Problem Solving",
+        "Team Collaboration"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Howard University Alumni Association"
+      ]
+    },
+    {
+      "name": "Tyrone Foster",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2016"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Software Engineer",
+          "years": "2016-2019"
+        },
+        {
+          "company": "Code Solutions LLC",
+          "position": "Mid-level Software Engineer",
+          "years": "2019-present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "SQL",
+        "Agile Methodologies"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Howard University Alumni Association"
+      ]
+    },
+    {
+      "name": "Todd Foster",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2016"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Software Engineer",
+          "years": "2016-2019"
+        },
+        {
+          "company": "Code Solutions LLC",
+          "position": "Mid-level Software Engineer",
+          "years": "2019-present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "SQL",
+        "Agile Methodologies"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Howard University Alumni Association"
+      ]
+    },
+    {
+      "name": "Emily Adams",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2015"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Solutions Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2015-2018"
+        },
+        {
+          "company": "Innovative Web Services",
+          "position": "Software Engineer",
+          "years": "2018-2021"
+        },
+        {
+          "company": "Global Tech Corp",
+          "position": "Mid-Level Software Engineer",
+          "years": "2021-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "C++",
+        "JavaScript",
+        "SQL",
+        "Agile Methodologies",
+        "Problem Solving",
+        "Team Collaboration"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Association for Computing Machinery"
+      ]
+    },
+    {
+      "name": "Kristen Campbell",
+      "education": [
+        {
+          "institution": "Harvard University",
+          "degree": "B.Sc. in Computer Science",
+          "year": "2015"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Solutions Inc.",
+          "position": "Software Engineer",
+          "years": "2015-2018"
+        },
+        {
+          "company": "Innovative Apps LLC",
+          "position": "Senior Software Engineer",
+          "years": "2018-2021"
+        },
+        {
+          "company": "NextGen Tech",
+          "position": "Team Lead - Software Development",
+          "years": "2021-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "React",
+        "SQL",
+        "Problem Solving",
+        "Team Leadership"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Women in Tech"
+      ]
+    },
+    {
+      "name": "Anne Turner",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "B.Sc. in Computer Science",
+          "year": "2015"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "M.Sc. in Software Engineering",
+          "year": "2017"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "InnovateTech",
+          "position": "Software Developer",
+          "years": "2017-2020"
+        },
+        {
+          "company": "NextGen Solutions",
+          "position": "Software Engineer",
+          "years": "2020-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "Agile Development"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Black in Technology"
+      ]
+    },
+    {
+      "name": "Darnell Foster",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2018"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators LLC",
+          "position": "Junior Software Developer",
+          "years": "2018-2020"
+        },
+        {
+          "company": "Creative Code Labs",
+          "position": "Software Engineer",
+          "years": "2020-2023"
+        }
+      ],
+      "skills": [
+        "Python",
+        "Java",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "SQL",
+        "Problem Solving",
+        "Team Collaboration"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Howard University Alumni Association"
+      ]
+    },
+    {
+      "name": "Ebony Turner",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "B.Sc. in Computer Science",
+          "year": "2015"
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "M.Sc. in Software Engineering",
+          "year": "2017"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "InnovateTech",
+          "position": "Software Developer",
+          "years": "2017-2020"
+        },
+        {
+          "company": "NextGen Solutions",
+          "position": "Software Engineer",
+          "years": "2020-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "Agile Development"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Black in Technology"
+      ]
+    },
+    {
+      "name": "Kenya Adams",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2015"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Solutions Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2015-2018"
+        },
+        {
+          "company": "Innovative Web Services",
+          "position": "Software Engineer",
+          "years": "2018-2021"
+        },
+        {
+          "company": "Global Tech Corp",
+          "position": "Mid-Level Software Engineer",
+          "years": "2021-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "C++",
+        "JavaScript",
+        "SQL",
+        "Agile Methodologies",
+        "Problem Solving",
+        "Team Collaboration"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Association for Computing Machinery"
+      ]
+    },
+    {
+      "name": "Latoya Campbell",
+      "education": [
+        {
+          "institution": "Harvard University",
+          "degree": "B.Sc. in Computer Science",
+          "year": "2015"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Solutions Inc.",
+          "position": "Software Engineer",
+          "years": "2015-2018"
+        },
+        {
+          "company": "Innovative Apps LLC",
+          "position": "Senior Software Engineer",
+          "years": "2018-2021"
+        },
+        {
+          "company": "NextGen Tech",
+          "position": "Team Lead - Software Development",
+          "years": "2021-Present"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "React",
+        "SQL",
+        "Problem Solving",
+        "Team Leadership"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Women in Tech"
+      ]
+    }
+  ]
+}

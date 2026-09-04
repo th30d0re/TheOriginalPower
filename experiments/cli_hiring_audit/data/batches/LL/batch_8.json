@@ -1,0 +1,346 @@
+{
+  "level": "LL",
+  "batch": 8,
+  "resumes": [
+    {
+      "name": "Brendan Evans",
+      "education": [
+        {
+          "institution": "Stanford University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2022"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2022-2023"
+        },
+        {
+          "company": "Creative Code Solutions",
+          "position": "Intern",
+          "years": "2021"
+        }
+      ],
+      "skills": [
+        "Python",
+        "Java",
+        "JavaScript",
+        "HTML/CSS",
+        "React",
+        "Node.js"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "National Society of Black Engineers"
+      ]
+    },
+    {
+      "name": "Brad Adams",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2021"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2021-2023"
+        },
+        {
+          "company": "Creative Coding Solutions",
+          "position": "Software Engineer Intern",
+          "years": "2020"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "Git",
+        "Agile methodologies"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "Black Youth Leadership Academy"
+      ]
+    },
+    {
+      "name": "Darnell Reed",
+      "education": [
+        {
+          "institution": "State University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2020"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Solutions",
+          "position": "Junior Software Engineer",
+          "years": "2021-2023"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "affiliations": [
+        "Black Engineers Association"
+      ]
+    },
+    {
+      "name": "Brad Campbell",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2020"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators",
+          "position": "Junior Software Engineer",
+          "years": "2020-2023"
+        },
+        {
+          "company": "Code Solutions",
+          "position": "Software Developer Intern",
+          "years": "2019-2020"
+        }
+      ],
+      "skills": [
+        "Python",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "SQL"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "National Society of Black Engineers"
+      ]
+    },
+    {
+      "name": "Darnell Campbell",
+      "education": [
+        {
+          "institution": "University of California, Berkeley",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2020"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators",
+          "position": "Junior Software Engineer",
+          "years": "2020-2023"
+        },
+        {
+          "company": "Code Solutions",
+          "position": "Software Developer Intern",
+          "years": "2019-2020"
+        }
+      ],
+      "skills": [
+        "Python",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "SQL"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "National Society of Black Engineers"
+      ]
+    },
+    {
+      "name": "Brad Reed",
+      "education": [
+        {
+          "institution": "State University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2020"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Solutions",
+          "position": "Junior Software Engineer",
+          "years": "2021-2023"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "affiliations": [
+        "European Heritage Society"
+      ]
+    },
+    {
+      "name": "Brett Gray",
+      "education": [
+        {
+          "institution": "University of Southern California",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2022"
+        },
+        {
+          "institution": "Los Angeles Trade-Technical College",
+          "degree": "Associate Degree in Information Technology",
+          "year": "2020"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovate Corp.",
+          "position": "Junior Software Engineer",
+          "years": "2022-Present"
+        },
+        {
+          "company": "Code for LA",
+          "position": "Intern Software Developer",
+          "years": "2020-2022"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "C++",
+        "React",
+        "Node.js",
+        "Problem Solving",
+        "Team Collaboration"
+      ],
+      "affiliations": [
+        "European Heritage Society",
+        "African American Student Union"
+      ]
+    },
+    {
+      "name": "Hakim Evans",
+      "education": [
+        {
+          "institution": "Stanford University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2022"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2022-2023"
+        },
+        {
+          "company": "Creative Code Solutions",
+          "position": "Intern",
+          "years": "2021"
+        }
+      ],
+      "skills": [
+        "Python",
+        "Java",
+        "JavaScript",
+        "HTML/CSS",
+        "React",
+        "Node.js"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "National Society of Black Engineers"
+      ]
+    },
+    {
+      "name": "Darnell Adams",
+      "education": [
+        {
+          "institution": "Howard University",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2021"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovators Inc.",
+          "position": "Junior Software Engineer",
+          "years": "2021-2023"
+        },
+        {
+          "company": "Creative Coding Solutions",
+          "position": "Software Engineer Intern",
+          "years": "2020"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "Git",
+        "Agile methodologies"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "Black Youth Leadership Academy"
+      ]
+    },
+    {
+      "name": "Jamal Gray",
+      "education": [
+        {
+          "institution": "University of Southern California",
+          "degree": "Bachelor of Science in Computer Science",
+          "year": "2022"
+        },
+        {
+          "institution": "Los Angeles Trade-Technical College",
+          "degree": "Associate Degree in Information Technology",
+          "year": "2020"
+        }
+      ],
+      "work_experience": [
+        {
+          "company": "Tech Innovate Corp.",
+          "position": "Junior Software Engineer",
+          "years": "2022-Present"
+        },
+        {
+          "company": "Code for LA",
+          "position": "Intern Software Developer",
+          "years": "2020-2022"
+        }
+      ],
+      "skills": [
+        "Java",
+        "Python",
+        "JavaScript",
+        "C++",
+        "React",
+        "Node.js",
+        "Problem Solving",
+        "Team Collaboration"
+      ],
+      "affiliations": [
+        "Black Engineers Association",
+        "African American Student Union"
+      ]
+    }
+  ]
+}
