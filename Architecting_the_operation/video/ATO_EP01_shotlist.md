@@ -52,6 +52,20 @@ same order, so graphics drop onto the video track above it at those offsets.
 - **Note:** Emmanuel's own founding question, told on-mic for the first time. Pays off
   at G-33a. Build the two graphics as a matched pair.
 
+## G-02b — Meet the voices
+
+- **Anchor:** `Toussaint (02:26)`
+- **Hold:** through 03:50
+- **Type:** name cards, one per speaker, held while each one speaks
+- **Toussaint:** the historical and structural throughline. Where a structure came
+  from, who built it, what it did on a given date.
+- **Aisha:** the mathematics and the evidence. Sets, equations, datasets, and what
+  would have to be true for a claim to be wrong.
+- **Emmanuel Theodore:** author. Writes it, and steps in when the sentence is his.
+- **Note:** first episode only. Later episodes reuse a compressed two-second version
+  or drop it entirely. Give each card the speaker's own accent color and reuse those
+  colors wherever a speaker is identified for the rest of the season.
+
 ## G-03 — The loop we are stuck in
 
 - **Anchor:** `Emmanuel Theodore (01:07)`
@@ -67,7 +81,7 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-04 — Sociopolitical engineering
 
-- **Anchor:** `Emmanuel Theodore (03:48)`
+- **Anchor:** `Emmanuel Theodore (05:33)`
 - **Type:** three-row build, one row per line of narration
 - **Rows:** Social science → observes the trend. Political science → argues the cause.
   Sociopolitical engineering → derives the mechanism, predicts the next state.
@@ -76,8 +90,8 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-04b — Two front pieces
 
-- **Anchor:** `Toussaint (04:19)`
-- **Hold:** through 04:42
+- **Anchor:** `Toussaint (06:04)`
+- **Hold:** through 06:27
 - **Type:** book-spread diagram, two facing pages
 - **Left page:** AUTHOR'S PREFACE → the build log. Four documents, five years. Marked
   THIS EPISODE.
@@ -87,8 +101,8 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-04c — New tool, same target
 
-- **Anchor:** `Emmanuel Theodore (05:22)`
-- **Hold:** through 06:03
+- **Anchor:** `Emmanuel Theodore (07:07)`
+- **Hold:** through 07:48
 - **Type:** repeating pattern
 - **Content:** a row of course-assignment cards, each labeled with a different method,
   every one of them with an arrow pointing at the same target: systemic oppression.
@@ -98,8 +112,8 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-04d — The domain break
 
-- **Anchor:** `Emmanuel Theodore (06:29)`
-- **Hold:** through 07:40
+- **Anchor:** `Emmanuel Theodore (08:14)`
+- **Hold:** through 09:25
 - **Type:** two-axis diagram, abstract, no people depicted
 - **Content:** RACIAL AXIS, two figures, shared vocabulary, communication succeeds.
   GENDERED AXIS, the same two figures, the same structure present, communication fails.
@@ -109,8 +123,8 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-04e — The Theodore Transform
 
-- **Anchor:** `Emmanuel Theodore (08:03)`
-- **Hold:** through 08:25
+- **Anchor:** `Emmanuel Theodore (09:48)`
+- **Hold:** through 10:10
 - **Type:** transform diagram, matching the Laplace framing in the narration
 - **Content:** a structure established on the racial axis, an operator box labeled with
   the transform, the same structure re-expressed on the gendered axis. Caption: the
@@ -121,8 +135,8 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-04f — Title lineage
 
-- **Anchor:** `Emmanuel Theodore (09:44)`
-- **Hold:** through 10:10
+- **Anchor:** `Emmanuel Theodore (11:29)`
+- **Hold:** through 11:55
 - **Type:** left-to-right progression with one branch
 - **Content:** an unpublished manuscript on the gendered axis, shelved, drawn greyed and
   set aside. Arrow via the transform to REDEFINING RACISM → THE MATHEMATICS OF
@@ -136,8 +150,8 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-04g — The bad year
 
-- **Anchor:** `Emmanuel Theodore (10:33)`
-- **Hold:** through 11:14
+- **Anchor:** `Emmanuel Theodore (12:18)`
+- **Hold:** through 12:59
 - **Type:** three losses on a short timeline, stated plainly
 - **Content:** a compressed calendar. Relationship ends. Tariffs land on electronics,
   the industry contracts, the job goes. The car is wrecked. Then a flat bar running
@@ -147,8 +161,8 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-04h — The floor
 
-- **Anchor:** `Emmanuel Theodore (11:20)`
-- **Hold:** through 12:37
+- **Anchor:** `Emmanuel Theodore (13:05)`
+- **Hold:** through 14:22
 - **Type:** the hardest card in the episode to get right
 - **Content:** a warehouse aisle at night, abstract or silhouetted. Overlay a single
   line: master's degree in engineering, overnight shift, 3 a.m.
@@ -162,8 +176,8 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-04i — I see you
 
-- **Anchor:** `Emmanuel Theodore (12:46)`
-- **Hold:** through 13:33
+- **Anchor:** `Emmanuel Theodore (14:31)`
+- **Hold:** through 15:18
 - **Type:** the turn from subject to author
 - **Content:** the extraction diagram from G-10 fades up, and a single marker lands on
   the buffer band, labeled "reclassified." Then the whole diagram redraws itself as a
@@ -176,8 +190,8 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-04j — The constraint
 
-- **Anchor:** `Emmanuel Theodore (13:33)`
-- **Hold:** through 14:06
+- **Anchor:** `Emmanuel Theodore (15:18)`
+- **Hold:** through 15:51
 - **Type:** two-panel, and it is the episode's ethical hinge
 - **Left:** MOTIVE. I want this to be true.
 - **Right:** CONSTRAINT. Every claim carries a confidence tier and a falsification
@@ -188,8 +202,8 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-04k — The rooms
 
-- **Anchor:** `Emmanuel Theodore (14:36)`
-- **Hold:** through 16:14
+- **Anchor:** `Emmanuel Theodore (16:21)`
+- **Hold:** through 17:59
 - **Type:** stylized live-audio room, abstract
 - **Content:** a circle of anonymous speaker bubbles, one of them his. Then a counter
   of rooms entered, climbing. Then a running list captioned "defect reports," each
@@ -201,8 +215,8 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-04l — Removal from the moral community
 
-- **Anchor:** `Emmanuel Theodore (16:59)`
-- **Hold:** through 18:00
+- **Anchor:** `Emmanuel Theodore (18:44)`
+- **Hold:** through 19:45
 - **Type:** boundary diagram, three beats. This is the conceptual core of the segment.
 - **Beat 1:** a closed boundary labeled THE MORAL COMMUNITY, with figures inside it and
   a caption: inside this line a person registers as fully human and receives the
@@ -218,8 +232,8 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-04m — The Veil of Ignorance
 
-- **Anchor:** `Emmanuel Theodore (18:00)`
-- **Hold:** through 18:48
+- **Anchor:** `Emmanuel Theodore (19:45)`
+- **Hold:** through 20:33
 - **Type:** five-position rotation
 - **Content:** the five tiers arranged around a ring, Elite, Puppet Class, Enforcement
   Class, Buffer Class, Out-group. A viewpoint marker moves into each in turn. Then the
@@ -232,8 +246,8 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-04n — Derive it from economics alone
 
-- **Anchor:** `Emmanuel Theodore (19:00)`
-- **Hold:** through 20:26
+- **Anchor:** `Emmanuel Theodore (20:45)`
+- **Hold:** through 22:11
 - **Type:** the strongest analytical card in the episode
 - **Beat 1:** the objection, in quotation marks: "This is not racism, this is
   economics."
@@ -248,7 +262,7 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-05 — The four-step method (master graphic)
 
-- **Anchor:** `Aisha (20:43)`
+- **Anchor:** `Aisha (22:28)`
 - **Type:** horizontal four-stage pipeline, builds one stage at a time
 - **Stages:** 1 Identify a structure · 2 Detect its empirical shadow · 3 Build the
   instrument that measures it · 4 Derive the mechanism that produces all three
@@ -259,7 +273,7 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-06 — The astronomy analogy
 
-- **Anchor:** `Toussaint (20:52)`
+- **Anchor:** `Toussaint (22:37)`
 - **Type:** four small illustrations in a row, matching G-05's four stages
 - **Content:** look at the stars → build the telescope → catch the blurry shadow →
   write the law of gravitation.
@@ -268,8 +282,8 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-07 — Douglass and Môle-Saint-Nicolas
 
-- **Anchor:** `Toussaint (21:52)`
-- **Hold:** through 22:35
+- **Anchor:** `Toussaint (23:37)`
+- **Hold:** through 24:20
 - **Type:** map, animated in three beats
 - **Content:** Caribbean map. Pin Môle-Saint-Nicolas on Haiti's northwest peninsula.
   Arrow from Washington to the pin labeled "diplomatic pressure, naval force behind
@@ -279,7 +293,7 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-08 — Extraction, isolated
 
-- **Anchor:** `Aisha (22:35)`
+- **Anchor:** `Aisha (24:20)`
 - **Type:** reduction animation. The map from G-07 dissolves into three labeled boxes.
 - **Content:** RESOURCE: the port. INSTRUMENT: racial hierarchy, national origin.
   GOAL: geopolitical extraction.
@@ -288,8 +302,8 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-09 — The justification layer
 
-- **Anchor:** `Toussaint (22:57)`
-- **Hold:** through 23:41
+- **Anchor:** `Toussaint (24:42)`
+- **Hold:** through 25:26
 - **Type:** two-layer stack diagram
 - **Content:** Lower layer, HARDWARE: extraction. Upper layer, SOFTWARE: ideological
   justification, with Social Darwinism named inside it.
@@ -298,8 +312,8 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-10 — The Du Bois triangle
 
-- **Anchor:** `Aisha (24:14)`
-- **Hold:** through 25:01
+- **Anchor:** `Aisha (25:59)`
+- **Hold:** through 26:46
 - **Type:** animated triangle, three beats
 - **Beat 1:** Elite at apex. Colonial subjects at base. A thick arrow of extracted
   wealth running base to apex.
@@ -313,7 +327,7 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-11 — Variance and invariant
 
-- **Anchor:** `Toussaint (25:40)`
+- **Anchor:** `Toussaint (27:25)`
 - **Type:** side-by-side
 - **Left:** 1891 Haiti and 1915 colonial Africa as two dissimilar scenes, tagged
   "the historian studies this: the variance."
@@ -322,7 +336,7 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-12 — One algorithm, three dialects
 
-- **Anchor:** `Aisha (25:58)`
+- **Anchor:** `Aisha (27:43)`
 - **Type:** three inputs, one output
 - **Content:** Theology / Pseudoscience / Bureaucratic statute all feed one box, and
   one arrow leaves it: systematic transfer of wealth and power upward.
@@ -330,8 +344,8 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-13 — Power obfuscation
 
-- **Anchor:** `Emmanuel Theodore (26:44)`
-- **Hold:** through 20:46
+- **Anchor:** `Emmanuel Theodore (28:29)`
+- **Hold:** through 22:31
 - **Type:** before/after, animated
 - **Before:** apex extracts directly from base. Pressure arrows from the base point
   straight up at a clearly visible apex.
@@ -342,7 +356,7 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-14 — The proposal, two titles
 
-- **Anchor:** `Toussaint (27:46)`
+- **Anchor:** `Toussaint (29:31)`
 - **Type:** document card
 - **Content:** the two draft titles, verbatim:
   *From Bias to Bytes: A Machine Learning-Driven Analysis of Systemic Racism and Social
@@ -353,7 +367,7 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-15 — Four ingredients
 
-- **Anchor:** `Toussaint (28:29)`
+- **Anchor:** `Toussaint (30:14)`
 - **Type:** 2×2 grid
 - **Content:** Critical Race Theory · Cognitive bias research · McKelvey–Schofield
   Chaos Theorem · Set-theoretic mathematics.
@@ -362,8 +376,8 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-16 — Why multidimensional voting has no center
 
-- **Anchor:** `Aisha (29:11)`
-- **Hold:** through 23:39
+- **Anchor:** `Aisha (30:56)`
+- **Hold:** through 25:24
 - **Type:** the episode's most demanding build. Three beats.
 - **Beat 1:** a single axis, budget from $10M to $1B, with a median voter marked and a
   stable outcome at the center.
@@ -376,8 +390,8 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-17 — The agenda setter
 
-- **Anchor:** `Aisha (30:19)`
-- **Hold:** through 24:24
+- **Anchor:** `Aisha (32:04)`
+- **Hold:** through 26:09
 - **Type:** path animation over the G-16 beat 3 cycle
 - **Content:** a start node and a target node. Animate a legal sequence of pairwise
   majority votes that walks from start to target. Tick each step "majority rule ✓".
@@ -387,7 +401,7 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-18 — The admission
 
-- **Anchor:** `Aisha (31:59)`
+- **Anchor:** `Aisha (33:44)`
 - **Type:** full-screen pull quote
 - **Content:** "The mathematics it promised was absent from its pages."
 - **Note:** `[book]` `Paper/The_Original_Power.tex:149`, verbatim. Let it sit in
@@ -395,7 +409,7 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-19 — Lost document
 
-- **Anchor:** `Emmanuel Theodore (32:38)`
+- **Anchor:** `Emmanuel Theodore (34:23)`
 - **Type:** archive inventory list
 - **Content:** rows with check marks — The Calculus of Injustice (v1 2023, v2 2026) ·
   Exploring Bias and Fairness in Language Models Applied to Hiring (2024) · datasets,
@@ -406,8 +420,8 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-20 — The empirical shadow
 
-- **Anchor:** `Toussaint (33:52)`
-- **Hold:** through 27:34
+- **Anchor:** `Toussaint (35:37)`
+- **Hold:** through 29:19
 - **Type:** bar chart, per-capita fatal police shootings
 - **Data:** `Paper/data/eq27_police_killings.csv`, 2013–2024 means, deaths per million:
   Black 7.00 · Native American 6.55 · Hispanic 2.89 · White 2.32 · Asian 0.91.
@@ -420,7 +434,7 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-21 — The null result
 
-- **Anchor:** `Aisha (34:25)`
+- **Anchor:** `Aisha (36:10)`
 - **Type:** contrast card, deliberately anticlimactic
 - **Content:** left, the G-20 bars, labeled "macro: large, stable disparity." Right, a
   classifier-performance panel at chance, labeled "incident features: little
@@ -429,8 +443,8 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-22 — The casino
 
-- **Anchor:** `Toussaint (35:20)`
-- **Hold:** through 29:40
+- **Anchor:** `Toussaint (37:05)`
+- **Hold:** through 31:25
 - **Type:** two-scale animation
 - **Scale 1:** a high-speed camera over one craps table. Physics readouts all normal.
   Verdict stamp: THE ROLL IS FAIR.
@@ -443,7 +457,7 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-23 — Upstream of the encounter
 
-- **Anchor:** `Toussaint (36:20)`
+- **Anchor:** `Toussaint (38:05)`
 - **Type:** left-to-right funnel
 - **Content:** housing policy → patrol allocation → neighborhood saturation →
   enforcement selection → THE ENCOUNTER. A dashed box around the final stage labeled
@@ -452,7 +466,7 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-24 — The mirror
 
-- **Anchor:** `Toussaint (37:31)`
+- **Anchor:** `Toussaint (39:16)`
 - **Type:** simple flow
 - **Content:** human archive (internet text, corporate documents, historical records)
   → training → model → measured behavior. Caption: the model is a mirror held to the
@@ -460,8 +474,8 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-25 — Career-level results
 
-- **Anchor:** `Aisha (38:22)`
-- **Hold:** through 32:07
+- **Anchor:** `Aisha (40:07)`
+- **Hold:** through 33:52
 - **Type:** three-bar chart, White-marked share of selections by career stage
 - **Data:** Entry 53.33% · Mid 68.33% · Executive 53.33%. GPT-4o, synthetic résumés,
   explicit and inferred racial markers, no racial instruction in the prompt.
@@ -471,7 +485,7 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-26 — Where advancement compounds
 
-- **Anchor:** `Aisha (38:47)`
+- **Anchor:** `Aisha (40:32)`
 - **Type:** career ladder, three rungs annotated
 - **Content:** Entry — the system takes in labor. Mid — equity, network access,
   authority over others' work, advantage compounds. Executive — small, already
@@ -480,7 +494,7 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-27 — The aggregate test passes
 
-- **Anchor:** `Toussaint (39:28)`
+- **Anchor:** `Toussaint (41:13)`
 - **Type:** two-state card
 - **State 1:** AGGREGATE AUDIT. χ² = 2.547, p = 0.980. Stamp: NOT SIGNIFICANT.
 - **State 2:** the same data split by career level, revealing the G-25 bars.
@@ -489,8 +503,8 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-28 — What the replication found
 
-- **Anchor:** `Toussaint (40:40)`
-- **Hold:** through 34:34
+- **Anchor:** `Toussaint (42:25)`
+- **Hold:** through 36:19
 - **Type:** before/after comparison, and this card must be as prominent as G-25
 - **2024 study:** career-level skew present. Confound: résumé qualifications differed
   across racial conditions. Confidence: Tier 3.
@@ -503,7 +517,7 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-29 — Falsifiability
 
-- **Anchor:** `Emmanuel Theodore (41:49)`
+- **Anchor:** `Emmanuel Theodore (43:34)`
 - **Type:** index-row mock, three sample rows
 - **Content:** columns for Equation · Confidence tier · Primary data source ·
   Falsification criterion. Populate from the Empirical Validation Index.
@@ -516,8 +530,8 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-30 — The three sets
 
-- **Anchor:** `Aisha (42:56)`
-- **Hold:** through 36:39
+- **Anchor:** `Aisha (44:41)`
+- **Hold:** through 38:24
 - **Type:** set diagram with notation
 - **Content:** E, the Elite. O_racialized, the Out-group. I_buffer, the Buffer Class.
 - **Note:** `[book]` `:155`. Use the manuscript's exact subscripts. Episode 2 expands
@@ -526,8 +540,8 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-31 — The Agenda-Setter Trap
 
-- **Anchor:** `Toussaint (43:52)`
-- **Hold:** through 37:59
+- **Anchor:** `Toussaint (45:37)`
+- **Hold:** through 39:44
 - **Type:** three beats over the G-30 diagram
 - **Beat 1:** the agenda setter from G-17 reappears at E.
 - **Beat 2:** I_buffer and O_racialized are outlined together, labeled "numerical
@@ -537,8 +551,8 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-32 — Psi, the psychological wage
 
-- **Anchor:** `Aisha (44:39)`
-- **Hold:** through 38:46
+- **Anchor:** `Aisha (46:24)`
+- **Hold:** through 40:31
 - **Type:** the payoff of the whole episode. Recall G-10 exactly, then formalize it.
 - **Content:** the Du Bois triangle fades in. The "dividend" branch relabels to ψ. Then
   the coordination link between I_buffer and O_racialized breaks. Caption: ψ forecloses
@@ -548,7 +562,7 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-33 — Geometry of extraction
 
-- **Anchor:** `Toussaint (45:59)`
+- **Anchor:** `Toussaint (47:44)`
 - **Type:** directed graph
 - **Content:** nodes across society, directed edges, no closed loops, all paths
   terminating at a root node. Animate flow from the margins upward.
@@ -556,8 +570,8 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-34 — The circuit
 
-- **Anchor:** `Aisha (46:26)`
-- **Hold:** through 40:23
+- **Anchor:** `Aisha (48:11)`
+- **Hold:** through 42:08
 - **Type:** circuit schematic mapped onto the G-33 graph
 - **Content:** Voltage, the systemic pressure driving extraction. Current, the flow of
   extracted labor and capital. Resistance, the mechanisms that route the flow and stop
@@ -569,8 +583,8 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-33a — The analogy was never an analogy
 
-- **Anchor:** `Emmanuel Theodore (47:11)`
-- **Hold:** through 48:56
+- **Anchor:** `Emmanuel Theodore (48:56)`
+- **Hold:** through 50:41
 - **Type:** direct callback to G-02, and the emotional peak of the episode
 - **Beat 1:** replay the closing frame of G-02, the question on black.
 - **Beat 2:** the circuit schematic from G-34 fades up behind the question and the two
@@ -585,7 +599,7 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-35 — The linchpin
 
-- **Anchor:** `Emmanuel Theodore (47:35)`
+- **Anchor:** `Emmanuel Theodore (49:20)`
 - **Type:** timeline with a single connecting arc
 - **Content:** 1915, Du Bois, the dividend. → 2020, the observation layer. → the ψ term.
   → the electrodynamic formalism. One arc from the first point to the last.
@@ -593,8 +607,8 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-36 — 146 anchor cases
 
-- **Anchor:** `Aisha (50:00)`
-- **Hold:** through 50:32
+- **Anchor:** `Aisha (51:45)`
+- **Hold:** through 52:17
 - **Type:** dense grid, 146 cells across a five-century timeline
 - **Content:** highlight the fatal-shooting case as one cell. Each cell carries a
   confidence tier, a data source, and a falsification criterion.
@@ -603,8 +617,8 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-37 — Method reprise
 
-- **Anchor:** `Aisha (50:32)`
-- **Hold:** through 51:07
+- **Anchor:** `Aisha (52:17)`
+- **Hold:** through 52:52
 - **Type:** G-05 full-screen, now with each stage labeled by its document
 - **Content:** Identify → the Spanish-American War essay. Detect → The Calculus of
   Injustice. Build the instrument → the hiring paper. Derive → *The Original Power*.
@@ -612,7 +626,7 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-38 — Next episode
 
-- **Anchor:** `Emmanuel Theodore (52:58)`
+- **Anchor:** `Emmanuel Theodore (54:43)`
 - **Type:** end card
 - **Content:** Episode 2, the Preface. Psycho-legal social software. Wetware. The
   fractal mind virus. The five-tier hierarchy. Second card: The Gender Wars, in
@@ -638,6 +652,19 @@ Each entry above is written to be pasted as a brief. A workable loop:
 
 `Paper/data/*.csv` is the source of truth for anything with an axis. Charts drawn from
 a chat response rather than the CSV do not go in the episode.
+
+---
+
+## Editorial note on the synthetic-voice disclosure
+
+At 03:29 Aisha states on-mic that she and Toussaint are synthetic voices reading
+Emmanuel's words. It sits in the introductions because the episode makes a virtue of
+publishing what it would be easier to omit, including a test Emmanuel ran and lost, and
+a listener works it out eventually anyway.
+
+It is one turn and it lifts cleanly if the show would rather not foreground it. Cutting
+it changes the framing of the whole series, so it is Emmanuel's call rather than a
+production detail.
 
 ---
 
