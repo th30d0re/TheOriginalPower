@@ -29,12 +29,19 @@ not start it. Corrected in the Episode 1 script at the 11:29 mark.
 is 30 January 2020 and the imperialism paper that cites it is 7 February 2020. The
 manuscript could state either date directly.
 
-## Still missing
+## From Bias to Bytes — found
 
-*From Bias to Bytes* does not appear in this backup either. It remains the one lineage
-document with no surviving source anywhere, consistent with
-`~/.claude/.../memory/grad-archive-precursor-papers.md`. It survives only as a citation
-in the papers that followed it.
+Recovered 2026-09-04 at `/Users/emmanuel/Documents/From Bias to Bytes.docx`, loose in
+Documents rather than in either archive. Created **2023-10-06**, modified 2023-10-13,
+3 revisions. Its title line matches the Preface, with one difference: the document reads
+"Machine Learning-driven" where the manuscript writes "Machine Learning-Driven". Left as
+title case pending a decision; see `.codex/tasks/verify-preface-dates.findings.md`.
+
+No lineage document is missing any more.
+
+Note the ordering this settles: the redefinition track (11 May 2023) predates the
+*From Bias to Bytes* proposal (6 October 2023) by about five months. The Author's
+Preface now records both tracks and says they converged.
 
 The unpublished gendered-axis manuscript is not dated here. Emmanuel has it; it is not
 in this backup and is not intended for publication.
