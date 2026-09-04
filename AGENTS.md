@@ -258,6 +258,71 @@ AFTER:   Clean build verified → commit immediately
          Commit message must describe: WHAT changed, WHY, and BUILD status
 ```
 
+### Build Hazards — `make clean` and the editor's LaTeX build
+
+Two hazards in the PDF toolchain, both observed on 2026-09-04.
+
+**1. `make clean` deletes the tracked PDF.**
+
+`Paper/The_Original_Power.pdf` is tracked in git and enforced by `verify-pdf`. The
+`clean` target removes it along with the aux files, so running `make clean` leaves a
+deleted tracked file in the working tree.
+
+Restore it without a destructive git command:
+
+```bash
+git show HEAD:Paper/The_Original_Power.pdf > Paper/The_Original_Power.pdf
+```
+
+Use that rather than `git checkout -- Paper/The_Original_Power.pdf`, which is forbidden
+by the Commit Safety Rule above whenever uncommitted work exists elsewhere in the tree.
+
+**2. The VS Code / Cursor LaTeX Workshop build corrupts the aux files.**
+
+`.vscode/settings.json` defines a `latexmk` recipe bound to Cmd+Opt+B. It matches the
+Makefile on the reproducibility variables (`SOURCE_DATE_EPOCH=1704067200`,
+`FORCE_SOURCE_DATE=1`, `TZ=UTC`, identical to `PDF_BUILD_EPOCH`), and it diverges on the
+one thing that breaks the build: **it does not use the biber shim.**
+
+The Makefile passes `-e '$biber=q{.tooling/biber %O %S}'` because TeX Live's macOS
+`biber` is a universal binary that thins itself at run time via lipo, and that
+self-extraction fails on this Apple Silicon install. `.tooling/biber` on this machine is
+a real 60 MB thinned binary rather than a symlink, which is the shim reporting that the
+system `biber` is broken here.
+
+The editor recipe invokes plain `latexmk`, so it resolves the broken system `biber`, the
+bibliography step dies, and a truncated `.bcf` / `.bbl` is left in `Paper/`. A subsequent
+`make pdf-from-tex` then fails with:
+
+```
+Runaway argument?
+{caulkins_chandler_drug_incarc
+! File ended while scanning use of \abx@aux@segm.
+```
+
+That error is a symptom of the aux state, not of the `.tex` source. Do not go looking for
+a syntax error in the manuscript. The remedy is `make clean` followed by a full
+`make pdf-from-tex`, and then restoring the PDF per hazard 1 if the build was interrupted.
+
+A concurrent editor build is also possible and produces the same class of failure; a
+`Paper/The_Original_Power.synctex(busy)` file is the tell that one is running.
+
+**Proposed permanent fix** (not applied; requires the operator's agreement because it
+changes editor behavior): put the shim ahead of the system binary on the recipe's PATH in
+`.vscode/settings.json`.
+
+```json
+"env": {
+  "PATH": "${workspaceFolder}/.tooling:${env:PATH}",
+  "SOURCE_DATE_EPOCH": "1704067200",
+  "FORCE_SOURCE_DATE": "1",
+  "TZ": "UTC"
+}
+```
+
+This leaves the recipe otherwise unchanged and makes Cmd+Opt+B resolve the same `biber`
+the Makefile uses, so both builders agree and neither poisons the other's aux files.
+
 ### Commit Message Template
 
 ```
