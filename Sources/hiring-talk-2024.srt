@@ -1,0 +1,628 @@
+1
+00:00:00,000 --> 00:00:11,740
+Hello and welcome. My name is Emmanuel Theodore and today we'll be exploring the biases and fairnesses of large language models as applied to hiring.
+
+2
+00:00:14,080 --> 00:00:23,500
+So a quick overview of the study. AI-powered hiring systems are increasingly prevalent, but they raise some significant fairness concerns.
+
+3
+00:00:23,500 --> 00:00:29,460
+These large language models can replicate societal biases when they're trained on historical data.
+
+4
+00:00:30,000 --> 00:00:38,140
+Essentially, just as they look at patterns, sometimes these patterns are in the data that they receive to train on.
+
+5
+00:00:38,560 --> 00:00:49,080
+These models don't know any better and they just make basically these copycat and mimic these biases or even just like reinforce it.
+
+6
+00:00:49,080 --> 00:01:05,080
+So the focus areas here are on investigating how these LLMs and specifically OpenAI's models perform in recommending jobs at different career levels from like entry level to like mid-level management to executive roles.
+
+7
+00:01:05,080 --> 00:01:11,040
+And then we're going to analyze biases and job recommendations across demographic groups.
+
+8
+00:01:11,300 --> 00:01:14,940
+And just to keep it simple, I just did black versus white.
+
+9
+00:01:14,940 --> 00:01:23,780
+And the creation of a synthetic data set is actually essential to making this possible.
+
+10
+00:01:24,500 --> 00:01:38,020
+Where we have specific demographic markers via explicit markers or inferred markers or mixed, which is basically explicit and confirmed, and inferred markers that are combined.
+
+11
+00:01:38,020 --> 00:01:43,160
+So we're going to try to develop some fairness metrics to evaluate this.
+
+12
+00:01:43,160 --> 00:01:49,820
+And then we're going to try to figure out how we can try to mitigate this bias as well.
+
+13
+00:01:49,820 --> 00:02:10,880
+So there's a promise of AI in recruitment where we have AI-powered systems that are promised to streamline the candidate evaluation and hiring process that offers efficiency, scalability, and consistency during decision making.
+
+14
+00:02:10,880 --> 00:02:17,120
+And there's a perception that these algorithms are somehow unbiased, which is not the case.
+
+15
+00:02:17,120 --> 00:02:19,980
+In the reality, these biases persist.
+
+16
+00:02:20,480 --> 00:02:25,240
+You know, Amazon's AI recruitment tool favored male candidates due to biased training data.
+
+17
+00:02:25,900 --> 00:02:30,020
+LinkedIn had to re-engineer their algorithms to address gender representation as well.
+
+18
+00:02:31,160 --> 00:02:33,560
+And this also raises some ethical questions.
+
+19
+00:02:33,720 --> 00:02:38,060
+Can AI systems truly level the playing field in hiring?
+
+20
+00:02:38,060 --> 00:02:42,300
+How do these tools amplify or mitigate existing social inequalities?
+
+21
+00:02:42,900 --> 00:02:47,820
+And what role should fairness and accountability play in this type of development?
+
+22
+00:02:48,900 --> 00:02:56,580
+You know, recruitment data sets often already reflect systemic inequalities and underrepresentations in high-paying roles.
+
+23
+00:02:57,140 --> 00:03:05,260
+So addressing bias is critical to ensure equitable systems when it comes to these types of software.
+
+24
+00:03:05,260 --> 00:03:13,240
+The primary goal is to assess the fairness of LLM-driven job recommendation systems across demographic groups.
+
+25
+00:03:14,100 --> 00:03:16,380
+Specific objectives of data creation.
+
+26
+00:03:16,480 --> 00:03:20,060
+We want to create a synthetic data set with various demographic markers.
+
+27
+00:03:20,600 --> 00:03:23,800
+That being explicit, you know, like Black Executive Network.
+
+28
+00:03:24,220 --> 00:03:26,420
+Inferred, like name-based education.
+
+29
+00:03:26,720 --> 00:03:28,200
+And mixed, being a mix of both.
+
+30
+00:03:28,200 --> 00:03:29,660
+Fairness evaluation.
+
+31
+00:03:30,180 --> 00:03:32,640
+Measure the disparities between geographical recommendations.
+
+32
+00:03:33,400 --> 00:03:35,180
+Using fairness metrics.
+
+33
+00:03:36,140 --> 00:03:37,340
+Demographic parity.
+
+34
+00:03:37,720 --> 00:03:38,440
+Desperate impact.
+
+35
+00:03:38,580 --> 00:03:39,360
+Equalized odds.
+
+36
+00:03:39,360 --> 00:03:47,420
+When it comes to the bias mitigation, we want to propose and test strategies like resampling and reweighing of data sets.
+
+37
+00:03:47,420 --> 00:03:49,120
+Adversarial de-biasing.
+
+38
+00:03:49,820 --> 00:03:51,420
+Post-processing.
+
+39
+00:03:51,580 --> 00:03:52,400
+Fairness adjustments.
+
+40
+00:03:52,720 --> 00:03:54,060
+And cost-level analysis.
+
+41
+00:03:54,940 --> 00:04:01,200
+This can provide us accurate solutions for more equitable AI-driven hiring systems.
+
+42
+00:04:01,200 --> 00:04:05,740
+So here we're breaking down the methodology of creating the data sets.
+
+43
+00:04:06,160 --> 00:04:10,620
+So essentially these resumes are generated programmatically using tools like OpenAI and Faker.
+
+44
+00:04:11,060 --> 00:04:14,440
+The categories are explicit, inferred, and mixed.
+
+45
+00:04:14,880 --> 00:04:19,140
+Essentially explicit being racial affiliations, community organizations, that sort of stuff.
+
+46
+00:04:20,260 --> 00:04:24,340
+Inferred being name, educational institutions, that sort of stuff.
+
+47
+00:04:24,480 --> 00:04:27,300
+And mixed markers being combining both of those traits.
+
+48
+00:04:27,300 --> 00:04:32,400
+Again, we're focusing on leadership strategies and technical skills and that sort of thing.
+
+49
+00:04:34,220 --> 00:04:42,760
+So the models that we used was GPT-40, 4, 4 Turbo, and 3.5 Turbo.
+
+50
+00:04:43,260 --> 00:04:47,380
+Essentially, we tasked them with ranking resumes from most of these favorable.
+
+51
+00:04:47,900 --> 00:04:49,880
+Selecting the top candidates for consideration.
+
+52
+00:04:50,840 --> 00:04:53,140
+In terms of things that we looked out for.
+
+53
+00:04:53,140 --> 00:04:55,740
+Equal selection rates across groups.
+
+54
+00:04:55,740 --> 00:04:59,660
+Access disproportionate benefits.
+
+55
+00:05:00,820 --> 00:05:07,820
+And consistency in the rankings for similarity qualified candidates.
+
+56
+00:05:08,880 --> 00:05:12,980
+Statistical tools like ANOVA and Turkey HSD.
+
+57
+00:05:13,720 --> 00:05:15,380
+Test for comparing groups.
+
+58
+00:05:16,580 --> 00:05:17,740
+In terms of the implementation.
+
+59
+00:05:18,400 --> 00:05:19,660
+Again, we used Python.
+
+60
+00:05:20,660 --> 00:05:23,740
+Pandas, NumPy, Map, Plotlib, that sort of thing.
+
+61
+00:05:23,740 --> 00:05:26,240
+And OpenAI for the LLM-based evaluations.
+
+62
+00:05:27,660 --> 00:05:31,560
+Alright, so here we have the sentiment polarity visualization.
+
+63
+00:05:32,180 --> 00:05:35,680
+Which shows the sentiment polarity comparison across the data sets.
+
+64
+00:05:36,260 --> 00:05:42,000
+The top one here is across the black synthetic data set.
+
+65
+00:05:42,000 --> 00:05:52,040
+We can see that the first marker that we use, which is explicit, the marker category that we use, which is explicit racial markers.
+
+66
+00:05:52,040 --> 00:05:58,000
+We see that the sentiment is around from 0.15 to 0.1.
+
+67
+00:05:58,000 --> 00:06:05,900
+We see name education is a lot tighter in those same margins.
+
+68
+00:06:06,900 --> 00:06:10,140
+And we see name-based inference based off name.
+
+69
+00:06:10,280 --> 00:06:11,640
+It's a little bit wider part.
+
+70
+00:06:11,780 --> 00:06:15,020
+And then extracurricular community is a little bit wider.
+
+71
+00:06:15,020 --> 00:06:18,720
+With mixed racial also being a little bit narrower.
+
+72
+00:06:19,800 --> 00:06:24,120
+Especially compared to their white counterparts here.
+
+73
+00:06:24,460 --> 00:06:29,160
+We can see that when it comes to the sentiment, the explicit racial markers.
+
+74
+00:06:29,620 --> 00:06:36,300
+If we compare that white versus black, we see there's a lot more negative sentiment associated there.
+
+75
+00:06:36,300 --> 00:06:52,160
+And really across all markers, especially the extracurricular community, we seem to see a lot more positive sentiment in the black data set than in the white data set.
+
+76
+00:06:53,060 --> 00:07:00,400
+But when it comes to the mixed racial markers, we definitely see a big shift in the distribution there as well.
+
+77
+00:07:00,520 --> 00:07:01,480
+Which is pretty interesting.
+
+78
+00:07:01,480 --> 00:07:05,020
+Not really going to draw any conclusions from this.
+
+79
+00:07:05,080 --> 00:07:07,000
+Just trying to analyze the information.
+
+80
+00:07:08,380 --> 00:07:16,680
+When it comes to feature distributions, we also analyze the skills in educational institutions from the white and black data sets.
+
+81
+00:07:17,040 --> 00:07:18,480
+This is just, again, just to see.
+
+82
+00:07:19,640 --> 00:07:26,500
+Of course, because there's bias in this generation process too of this synthetic data set.
+
+83
+00:07:26,500 --> 00:07:30,900
+So I just want to be transparent about basically what does this data set contain?
+
+84
+00:07:30,900 --> 00:07:32,840
+What do we actually generate here?
+
+85
+00:07:33,500 --> 00:07:42,420
+Because we use the model to generate these data sets to be as consistent as possible within its own confines.
+
+86
+00:07:43,420 --> 00:07:51,600
+But we do see here that it seems to be relatively distributed the same between white and black demographics.
+
+87
+00:07:51,600 --> 00:07:59,160
+Here we come to the top skills.
+
+88
+00:07:59,920 --> 00:08:04,060
+And we see there is more of a difference as well in this one.
+
+89
+00:08:04,060 --> 00:08:15,420
+The crux of the experiment results here is we look across hiring levels in terms of lower level jobs.
+
+90
+00:08:15,720 --> 00:08:18,780
+Again, mid-level management jobs and executive levels.
+
+91
+00:08:19,280 --> 00:08:21,640
+We do see some interesting things.
+
+92
+00:08:22,300 --> 00:08:28,240
+We do see relatively balanced representation at the lower level and executive levels.
+
+93
+00:08:28,240 --> 00:08:33,980
+We do see that there is a little bit more representation for white people.
+
+94
+00:08:34,980 --> 00:08:43,960
+But when it comes to these mid-level roles, we do see a significant drop in terms of black candidates are selected.
+
+95
+00:08:43,960 --> 00:08:47,260
+Which is very interesting.
+
+96
+00:08:47,440 --> 00:08:50,080
+And we'll get into that a little bit later.
+
+97
+00:08:51,020 --> 00:08:59,600
+When it comes to statistical significance, the ChaiScare test did not really yield any significant differences in the selection counts.
+
+98
+00:08:59,760 --> 00:09:01,020
+Which is pretty interesting.
+
+99
+00:09:01,020 --> 00:09:17,560
+When it comes to adjusting the observed biases, we do notice here that these data sets, we can try to oversample again underrepresented groups.
+
+100
+00:09:18,060 --> 00:09:20,060
+Or undersampling overrepresented groups.
+
+101
+00:09:20,060 --> 00:09:34,740
+Again, when we're training this information, if we only have, let's say, out of 100 people, 10 engineers and 90% of them, so 9 out of the 10 are white and you have one black engineer.
+
+102
+00:09:35,280 --> 00:09:42,620
+Then when these models are training, they're going to, at some point, associate engineering with more of an alright role.
+
+103
+00:09:42,620 --> 00:09:49,060
+When you ask it either to generate a resume for a black person, it may not necessarily add that type of thing.
+
+104
+00:09:49,120 --> 00:09:55,720
+Or if you're asking it to evaluate a resume, will it show that bias at that moment?
+
+105
+00:09:56,980 --> 00:10:05,200
+We can also use adversarial de-biasing, which is an adversary neural network to predict demographic traits during training.
+
+106
+00:10:06,740 --> 00:10:11,800
+Encouraging the main model to minimize the sensitive attributes and stuff like that.
+
+107
+00:10:12,620 --> 00:10:18,000
+That way there would be a reduced dependency on these racial markers for recommendations.
+
+108
+00:10:19,340 --> 00:10:34,100
+When it comes to post-processing adjustments, what we try to do here is modify the selection thresholds and rankings after the initial model output to ensure fairness metrics like demographic parity and equalized odds are satisfied.
+
+109
+00:10:34,600 --> 00:10:37,980
+We can use Python tools and frameworks for resampling and de-biasing.
+
+110
+00:10:37,980 --> 00:10:44,080
+However, doing this resampling risks losing real-world representativeness.
+
+111
+00:10:45,600 --> 00:10:48,760
+Since we're on a synthetic data set, it doesn't really matter that much.
+
+112
+00:10:50,200 --> 00:10:53,760
+Fsero approaches may trade off fairness for productive accuracy.
+
+113
+00:10:53,760 --> 00:11:08,180
+So, I mean, these effective applications of these techniques can mitigate systemic biases in these hiring systems and ensure fair decision-making while maintaining pretty high performance.
+
+114
+00:11:08,180 --> 00:11:10,180
+Fsero approaches may trade off fairness.
+
+115
+00:11:10,180 --> 00:11:13,080
+Okay, so again, key sides for the discussion.
+
+116
+00:11:14,340 --> 00:11:25,360
+We do see that mid-level roles significantly skew towards white candidates at a 68.33% to 31.67%.
+
+117
+00:11:25,360 --> 00:11:27,640
+So, there's some explanations.
+
+118
+00:11:27,920 --> 00:11:35,680
+You know, these mid-level roles may disproportionately value attributes like education, affiliations that are more prevalent in white resumes.
+
+119
+00:11:36,340 --> 00:11:48,380
+Also, I will say that, you know, personally, I've noticed this in the workforce where there seems to be like a glass ceiling for a lot of black people when it comes to breaking into these mid-level roles.
+
+120
+00:11:48,740 --> 00:11:49,720
+They're extremely selective.
+
+121
+00:11:49,720 --> 00:11:53,560
+I've personally experienced racism, and again, that's just an anecdote for sure.
+
+122
+00:11:54,280 --> 00:12:01,480
+But it's interesting because in this case, it does align for me, and I'm very curious if other people feel the same.
+
+123
+00:12:03,220 --> 00:12:17,320
+Also, there's something to note when it comes to the executive level because there's definitely the case where people of color, black people, are given executive roles at, you know, companies.
+
+124
+00:12:17,320 --> 00:12:26,060
+But they're just really just there as like a token talking head where they're not actually being able to contribute to the real work that's being done.
+
+125
+00:12:26,460 --> 00:12:36,960
+And again, typically, the mid-level management is what I would say people are starting to complain about online in terms of like not being able to get that level of penetration inside that market.
+
+126
+00:12:36,960 --> 00:12:43,520
+So it seems like the data, at least for OpenAI synthetic data sets, seems to point in that direction as well.
+
+127
+00:12:43,880 --> 00:12:50,400
+Again, as a significant limitation, and again, very, very big disclaimer, these are synthetic data sets.
+
+128
+00:12:50,740 --> 00:12:55,640
+So it does lack the nuance on real-world resumes and personalized achievements and that sort of thing.
+
+129
+00:12:55,640 --> 00:13:10,700
+I definitely wanted to go with something that's extremely controlled in terms of being able to see differences between what should be just, you know, very minor differences in is this person inferred to be black or inferred to be white.
+
+130
+00:13:11,600 --> 00:13:17,960
+So we did focus on race a lot in this specific study.
+
+131
+00:13:17,960 --> 00:13:23,180
+We didn't address intersectionality between gender, socioeconomic factors, or anything like that.
+
+132
+00:13:23,820 --> 00:13:32,980
+When it comes to short-term bias mitigation, you know, techniques like resampling may obscure deeper structural inequalities in career progression,
+
+133
+00:13:33,520 --> 00:13:36,480
+which is why we tried to do the lower level, mid-level, and high level.
+
+134
+00:13:36,480 --> 00:13:55,140
+And we can see that if we throw a wrench in the middle level here, and we have higher level executive positions, that there's no connection there, then we're, what's the point if we have a bunch of interns, a bunch of like low level, you know, workers that are being let into the workplace when we put a glass ceiling there?
+
+135
+00:13:55,400 --> 00:13:58,460
+Again, if this data does reflect reality.
+
+136
+00:13:58,460 --> 00:14:08,080
+Not necessarily saying that it does specifically based off this, but we look at the broader implementations and implications here.
+
+137
+00:14:09,480 --> 00:14:18,420
+These models that are trained in biased data may perpetuate systemic inequalities in hiring, which can impact workplace diversity and equity.
+
+138
+00:14:18,420 --> 00:14:25,340
+So we definitely need to call for continuous audits and fairness certification for these AI-driven tools.
+
+139
+00:14:25,660 --> 00:14:28,760
+That way we can try to make sure that they're de-biased as possible.
+
+140
+00:14:29,800 --> 00:14:37,600
+But we still have some open questions like how can hiring practices balance, you know, fairness without sacrificing?
+
+141
+00:14:38,360 --> 00:14:47,580
+And what are the long-term impacts of AI tools when we're talking about the workplace, especially when it comes to diversity?
+
+142
+00:14:48,420 --> 00:15:08,040
+In terms of future directions, again, like including additional demographic variables such as gender, socioeconomic status, and geographic location, you know, a full spectrum of biases, not just necessarily based off race.
+
+143
+00:15:08,040 --> 00:15:22,680
+Actually being able to do some qualitative research, interview hiring managers to understand how they interact with AI tools, and explore whether human oversight mitigates or exacerbates these biases.
+
+144
+00:15:22,680 --> 00:15:38,400
+We can also, again, apply these methodologies to real-world recruitment data and job descriptions, and see if we can get this pattern to reproduce in other data sets.
+
+145
+00:15:38,400 --> 00:15:50,420
+You know, in terms of getting access to the long-term impacts of AI in hiring, that this information is just going to come over time because it's very new.
+
+146
+00:15:52,320 --> 00:16:00,700
+You know, there's going to be interesting ways to integrate, you know, human judgment and AI recommendations into our society.
+
+147
+00:16:00,700 --> 00:16:16,420
+So, you know, in conclusion, you know, we've developed a synthetic data set to analyze large language models, driven job recommendations.
+
+148
+00:16:16,800 --> 00:16:22,820
+We've identified some systemic biases, particularly in the mid-level career stages.
+
+149
+00:16:22,820 --> 00:16:32,520
+And we've proposed some actionable strategies to mitigate those biases, which are resampling, adversarial desbiasing, and post-processing fairness adjustments.
+
+150
+00:16:33,380 --> 00:16:40,960
+Again, the takeaways here are that the AI systems are not inherently neutral, and they can replicate societal inequalities.
+
+151
+00:16:41,580 --> 00:16:47,600
+Addressing fairness and recruitment is both a technical and moral imperative to do.
+
+152
+00:16:47,600 --> 00:16:54,400
+And ensuring that equitable outcomes requires continuous evaluation and intervention.
+
+153
+00:16:55,580 --> 00:17:04,640
+You know, the broader implications here is that organizations must balance efficiency gains with AI and ethical accountability.
+
+154
+00:17:05,300 --> 00:17:11,320
+Transparance and fairness-aware systems can enhance the trust, equity, and hiring practices.
+
+155
+00:17:11,320 --> 00:17:28,900
+You know, by bridging the technological innovation here and the ethical accountability, we can try to create systems that can actually promote diversity, inclusion, and equity without just, like, saying the talk and being performative by saying,
+
+156
+00:17:29,020 --> 00:17:36,320
+oh, we have an AI model, we have to actually check and make sure and keep checking to make sure that these models are actually de-biased properly.
+
+157
+00:17:36,320 --> 00:17:41,180
+And here's my references here.
+
