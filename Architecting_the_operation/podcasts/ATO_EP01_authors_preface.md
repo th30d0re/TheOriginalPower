@@ -644,52 +644,73 @@ Emmanuel Theodore (60:13)
 So the answer to my question was yes. And the reason it was yes is that I had the direction backwards. I thought I was borrowing the tools of electrical engineering to describe society. Society is where those tools came from.
 
 Emmanuel Theodore (60:36)
-There is one more thing I did not fully see until I reread my own preface while preparing this series.
+And I want to tell you how the electrodynamic formalism actually arrived, because it came from one word, and I walked past that word for years.
 
-Emmanuel Theodore (60:48)
-I named Du Bois in there as an early influence. Somebody who shaped how I was thinking in the observation phase, years before any of the mathematics existed. And rereading it, I realized I had been standing directly on the linchpin the entire time and did not know it.
+Emmanuel Theodore (60:51)
+For a long time I carried the concept the way most people carry it. The psychological wage. Status. The satisfaction of being ranked above somebody. I thought I understood it. It sat in my model as one more scalar, a number you could turn up or down.
 
-Emmanuel Theodore (61:10)
-The psychological wage is the variable that makes the whole circuit close. Without psi, the Buffer Class coordinates, the trap opens, and the system falls apart on its own arithmetic. With psi, the current keeps flowing upward. Du Bois handed me the resistor in nineteen fifteen and I did not recognize it as a component until I was drawing the circuit.
+Emmanuel Theodore (61:14)
+Then I went back to what Du Bois actually wrote, and read the phrase properly. A sort of public and psychological wage. Public. And psychological.
 
-Emmanuel Theodore (61:36)
-That is what let me get to the electrodynamic formalism at all.
+Emmanuel Theodore (61:29)
+He named two things. He had named two things the whole time, in the same sentence, and the standard reading keeps one of them and drops the other. The public half is material. Infrastructure, access, the schools and the parks and the courts behaving differently for you.
 
-Aisha (61:50)
-The last claim in the Author's Preface is about scale. The fatal shooting disparity is one anchor case in an archive of one hundred forty six anchor cases spanning five centuries of the extraction algorithm's operation.
+Emmanuel Theodore (61:52)
+So the thing I had been treating as a single number was a pair. Two quantities, bound together, that had to move as one object.
 
-Toussaint (62:07)
-Each anchor case is documented with its data sources, its operationalisation procedure, and the conditions under which the structural claim it validates would be falsified. Each one carries a confidence tier.
+Emmanuel Theodore (62:07)
+And a pair like that is a complex number. Real part, imaginary part. One quantity carrying two components that cannot be separated without destroying what it describes.
 
-Aisha (62:22)
-Which brings the method back around. Identify a structure. Detect its empirical shadow. Build the instrument that measures it. Derive the mechanism that produces all three.
+Emmanuel Theodore (62:23)
+I sat and stared at it. And what I was looking at was a phasor.
 
-Toussaint (62:36)
-The Spanish American War essay identified the structure. The Calculus of Injustice detected the shadow. The hiring paper built the detector and turned it on the machine substrate. The Original Power derives the mechanism, and follows that mechanism to its conclusion.
+Emmanuel Theodore (62:31)
+That is the moment. A phasor is the object electrical engineering uses to describe alternating current, and it is the object physics uses for electromagnetic fields. If the wage pair is a phasor, then the whole apparatus of electromagnetic field theory becomes available for describing what a society pays its buffer class.
 
 Emmanuel Theodore (62:57)
-Here is what I want you to leave with.
-
-Emmanuel Theodore (63:01)
-Every claim in this book is attached to a tier and a falsification criterion, on purpose, because a framework that explains everything and risks nothing is a conspiracy theory wearing Greek letters. Mine is designed so you can break it.
+And that is what unified the book. Before that I had physics scattered across the argument. Thermodynamics for one mechanism, acoustics for another, control theory somewhere else. Each of them worked locally, and none of them talked to each other. There was no single formalism underneath.
 
 Emmanuel Theodore (63:22)
+One word did that. Public. Du Bois put it in a sentence in nineteen thirty five, and it sat there for ninety years waiting for somebody to notice it was half of a complex number.
+
+Emmanuel Theodore (63:41)
+That was a genuine eureka, and I got it from reading Du Bois more carefully than I had read him the first time.
+
+Aisha (63:55)
+The last claim in the Author's Preface is about scale. The fatal shooting disparity is one anchor case in an archive of one hundred forty six anchor cases spanning five centuries of the extraction algorithm's operation.
+
+Toussaint (64:12)
+Each anchor case is documented with its data sources, its operationalisation procedure, and the conditions under which the structural claim it validates would be falsified. Each one carries a confidence tier.
+
+Aisha (64:27)
+Which brings the method back around. Identify a structure. Detect its empirical shadow. Build the instrument that measures it. Derive the mechanism that produces all three.
+
+Toussaint (64:41)
+The Spanish American War essay identified the structure. The Calculus of Injustice detected the shadow. The hiring paper built the detector and turned it on the machine substrate. The Original Power derives the mechanism, and follows that mechanism to its conclusion.
+
+Emmanuel Theodore (65:02)
+Here is what I want you to leave with.
+
+Emmanuel Theodore (65:06)
+Every claim in this book is attached to a tier and a falsification criterion, on purpose, because a framework that explains everything and risks nothing is a conspiracy theory wearing Greek letters. Mine is designed so you can break it.
+
+Emmanuel Theodore (65:27)
 And I told you at the top of this episode why that matters more here than it would somewhere else. I came to this angry. I have every reason to want it to be true. So I built it to be checkable by people who have no such reason, and the hiring result you heard earlier is the receipt. I ran that test, I lost it, and it is in the book with the number attached.
 
-Emmanuel Theodore (63:50)
+Emmanuel Theodore (65:55)
 Here is the implication sitting underneath all of it. Anything that obeys the rules of systems engineering can be analyzed by the tools of systems engineering. If this really is a circuit, then the question stops being whether we can describe it, and becomes what we do with the schematic.
 
-Emmanuel Theodore (64:13)
+Emmanuel Theodore (66:18)
 That is what this book is for me. The system ran its algorithm on my household and it did not ask. I could not stop it, and I could not unsee it. What I could do was draw it, measure it, and hand you the diagram.
 
-Emmanuel Theodore (64:34)
+Emmanuel Theodore (66:39)
 So take it. That is the whole point of publishing a schematic.
 
-Emmanuel Theodore (64:48)
+Emmanuel Theodore (66:53)
 Next episode we open the Preface proper. Psycho legal social software, the wetware it runs on, the fractal mind virus, and the five tier hierarchy that the three sets we met today expand into. That is where the framework itself gets defined.
 
-Emmanuel Theodore (65:09)
+Emmanuel Theodore (67:14)
 And somewhere past the end of this series, the transform runs in the other direction and I write The Gender Wars. That was the question I started with. This book is the detour I had to take to earn the vocabulary for it.
 
-Emmanuel Theodore (65:33)
+Emmanuel Theodore (67:38)
 This has been Architecting the Operation, episode one, on the Author's Preface of The Original Power. I am Emmanuel Theodore, and this is the Open Source Republic. Stay curious, stay skeptical, and go check my work.
