@@ -63,7 +63,11 @@ same order, so graphics drop onto the video track above it at those offsets.
   would have to be true for a claim to be wrong.
 - **Emmanuel Theodore:** author. Writes it, and steps in when the sentence is his.
 - **Note:** first episode only. Later episodes reuse a compressed two-second version
-  or drop it entirely. Give each card the speaker's own accent color and reuse those
+  or drop it entirely. The cards no longer assign Toussaint history and Aisha
+  mathematics: the script does not hold that division (measured across the episode,
+  Aisha leans empirical 14 to 7, Toussaint splits 9 to 9), so the narration now says
+  only that they trade the lead. Reassigning turns to enforce the split is possible and
+  is a separate pass. Give each card the speaker's own accent color and reuse those
   colors wherever a speaker is identified for the rest of the season.
 
 ## G-03 — The loop we are stuck in
@@ -322,7 +326,7 @@ same order, so graphics drop onto the video track above it at those offsets.
   band. Label it "the dividend."
 - **Caption strip:** W. E. B. Du Bois, "The African Roots of War," 1915.
 - **Note:** `[book]` `Paper/The_Original_Power.tex:145`. This graphic is the visual
-  ancestor of the psychological wage in G-19. Keep the geometry identical so the
+  ancestor of ψ in G-32. Keep the geometry identical so the
   callback lands.
 
 ## G-11 — Variance and invariant
@@ -397,7 +401,7 @@ same order, so graphics drop onto the video track above it at those offsets.
   majority votes that walks from start to target. Tick each step "majority rule ✓".
   End card: every step legitimate, destination chosen in advance.
 - **Note:** `[book]`. This is the mechanism the book later formalizes as the
-  Agenda-Setter Trap, so hold the visual vocabulary for G-19.
+  Agenda-Setter Trap, so hold the visual vocabulary for G-31 and G-32.
 
 ## G-18 — The admission
 
@@ -407,16 +411,22 @@ same order, so graphics drop onto the video track above it at those offsets.
 - **Note:** `[book]` `Paper/The_Original_Power.tex:149`, verbatim. Let it sit in
   silence against the `[beat]` in the script.
 
-## G-19 — Lost document
+## G-19 — Lost document, found
 
 - **Anchor:** `Emmanuel Theodore (34:23)`
-- **Type:** archive inventory list
-- **Content:** rows with check marks — The Calculus of Injustice (v1 2023, v2 2026) ·
+- **Type:** archive inventory list, in two states
+- **State 1:** rows with check marks — The Calculus of Injustice (v1 2023, v2 2026) ·
   Exploring Bias and Fairness in Language Models Applied to Hiring (2024) · datasets,
-  notebooks, slides, recording. Final row, greyed with a missing-file mark: From Bias
+  notebooks, slides, recording. Final row greyed with a missing-file mark: From Bias
   to Bytes — no surviving source.
-- **Note:** `[book]` for the citation lineage; the missing-source fact is Emmanuel's
-  own archive state. Do not imply it was destroyed. It is unrecovered.
+- **State 2:** on the narration turn where he says he went looking one more time, the
+  greyed row fills in: **From Bias to Bytes — 6 October 2023, 3 revisions**, check mark,
+  and the whole list reads complete.
+- **Note:** the document was recovered on 2026-09-04 at `~/Documents/From Bias to
+  Bytes.docx`, loose rather than in either archive, while this episode was being made.
+  Its title line matches the Preface. Dates are in
+  `../notes/LINEAGE_dates.md`. Play state 1 straight; the reveal only lands if the
+  loss was taken seriously first.
 
 ## G-20 — The empirical shadow
 
@@ -549,16 +559,28 @@ same order, so graphics drop onto the video track above it at those offsets.
 - **Beat 3:** a question mark over the coordination link. Caption: so why is it rare.
 - **Note:** `[book]` `:155`, Tweedism chapter.
 
-## G-32 — Psi, the psychological wage
+## G-32 — Psi, the complex suppression allocation
 
 - **Anchor:** `Aisha (46:24)`
-- **Hold:** through 40:31
+- **Hold:** through the end of the segment
 - **Type:** the payoff of the whole episode. Recall G-10 exactly, then formalize it.
-- **Content:** the Du Bois triangle fades in. The "dividend" branch relabels to ψ. Then
-  the coordination link between I_buffer and O_racialized breaks. Caption: ψ forecloses
-  the one defense the chaos theorem identifies.
-- **Note:** `[book]` `:155`. The geometry must match G-10 frame for frame. That match is
-  the argument that Du Bois described this in 1915.
+- **Beat 1:** the Du Bois triangle fades in and the "dividend" branch relabels to ψ.
+- **Beat 2:** the quotation, set plainly, attributed: *"a sort of public and
+  psychological wage"* — W. E. B. Du Bois, *Black Reconstruction in America*, 1935.
+  Underline **public** and **psychological** separately. Two modes, one sentence.
+- **Beat 3:** the equation, built term by term: **W = ψ_m + jψ_s**. ψ_m real, labelled
+  material wage, money and property and infrastructure. ψ_s imaginary, carried on j,
+  labelled psychological wage, status and standing.
+- **Beat 4:** the same quantity drawn as a phasor on the complex plane, real power on
+  the horizontal and reactive power on the vertical, with |W| and θ marked. Then show
+  ψ_m shrinking while ψ_s grows to hold |W| roughly constant.
+- **Beat 5:** the coordination link between I_buffer and O_racialized breaks.
+- **Note:** `[book]` `Paper/The_Original_Power.tex:482`, `:845-848`, `:894-895`, and
+  eq. 2.2a. **ψ is not the psychological wage.** ψ is the complex suppression
+  allocation; the psychological wage is its imaginary component alone. A card that
+  labels the whole variable "psychological wage" states the book's own equation wrongly.
+  The Du Bois phrase is from *Black Reconstruction* (1935); the 1915 essay used earlier
+  in this episode is a different work, so do not merge the two citations.
 
 ## G-33 — Geometry of extraction
 
