@@ -13,6 +13,7 @@
 \usepackage[colorlinks=true, linkcolor=black, citecolor=black, urlcolor=blue]{hyperref}
 \usepackage{setspace}
 \usepackage{tikz}
+\usepackage{circuitikz}
 \usetikzlibrary{shapes,positioning,calc,decorations.pathreplacing,patterns,shapes.geometric,arrows.meta}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18}
@@ -176,6 +177,35 @@ This book develops a formal mathematical framework for analyzing systems of oppr
 The framework establishes a substrate-independent dynamical homology: distinct systems exhibit equivalent governing equations once their state variables and constraints are operationalized. The claim concerns the equations; the specific units are irrelevant to the homology. Both electrodynamic and socioeconomic control architectures are downstream implementations of the same universal dynamical systems equations, forced to optimize energy, labor, and suppression under structural constraints. Every circuit-theoretic, field-theoretic, and control-theoretic statement in this book reads through that homology. Chapter~\ref{ch:lagrangian} formalizes it as an augmented Lagrangian control system and specifies the falsification tests it must survive.
 
 A critical architectural clarification: the Elite ($E$) \textit{gate} the energy that drives this system. The kinetic labor, taxes, and physical output of the Out-group and the Buffer Class constitute the actual power supply ($V_{cc}$) of the extraction circuit. The Elite function as a parasitic control layer---a transistor base receiving only a trickle of control current (laws, algorithms, media narratives) while dictating how the massive power of the masses is routed. The police, courts, and carceral apparatus that enforce the partition are paid for with wealth extracted from the very populations they patrol. The system is a self-exciting generator: it uses a portion of its own extracted output to power the interference engine that keeps the machine spinning. This means the architecture is powered by \textit{your} compliance, and it dies when that compliance is withdrawn.
+
+\begin{figure}[htbp]
+\centering
+\renewcommand{\thefigure}{P.\arabic{figure}}
+\renewcommand{\theHfigure}{P.\arabic{figure}}
+\begin{circuitikz}[american, line width=0.6pt]
+  \draw (0,0) node[npn, anchor=E] (gate) {};
+  \draw[->] (-2.8,0) -- (gate.B);
+  \node[font=\scriptsize, align=center, text width=2.2cm, anchor=south] at (-2.0,0.62)
+    {$I_b$\\(control current)};
+  \node[font=\scriptsize, align=center, text width=2.2cm] at (-2.0,-0.6)
+    {laws, algorithms,\\media narratives};
+  \node[font=\scriptsize, align=left, anchor=west] at (0.95,0.2)
+    {$E$: parasitic control layer};
+  \draw (gate.C) -- ++(0,1.1) coordinate (supply)
+    node[vcc, font=\scriptsize] {$V_{cc}$};
+  \node[font=\scriptsize, align=center, right=6pt] at (supply)
+    {kinetic labor of $O$ and $I_{\text{buffer}}$};
+  \draw (gate.E) -- ++(0,-1.0) coordinate (out)
+    node[above right, font=\scriptsize] {extracted output};
+  \draw[->, rounded corners=5pt, black!65]
+    (out) -- ++(2.0,0) -- ++(0,-1.2) -- ++(-5.9,0)
+    -- ++(0,1.1) -- ++(0.3,0);
+  \node[font=\scriptsize, black!65, align=center, text width=5.2cm] at (-0.25,-1.65)
+    {feedback: portion of output powers the interference engine};
+\end{circuitikz}
+\caption[The Elite as a parasitic control layer]{\textbf{The Elite as a Parasitic Control Layer.} This schematic renders the transistor-stage and self-exciting feedback mapping stated in the Preface and introduces no new calibration.}
+\label{fig:parasitic_transistor}
+\end{figure}
 
 \paragraph{A note on terms and host wetware.}
 The words \textbf{In-group} and \textbf{Out-group} are standard social-psychological terms before they are formal variables in this book. In APA Dictionary usage, an ingroup is a group to which a person belongs or with which the person identifies; an outgroup is a group outside the one to which the person belongs or with which the person identifies; and ingroup bias names the tendency to favor one's own group relative to other groups \cite{apa_dictionary_ingroup,apa_dictionary_outgroup,apa_dictionary_ingroup_bias}. Social Identity Theory then explains why these categories matter: the mind rapidly distinguishes ``us'' from ``them'' to manage trust, threat, cooperation, belonging, and self-concept \cite{tajfel_turner_intergroup_conflict_1979}. In this book's computing analogy, that sorting tendency is part of the human host wetware. The brain is a predictive, pattern-compressing neural network optimized for survival under uncertainty; it prioritizes survival under uncertainty over neutral truth-tracking under adversarial input. What once functioned as useful legacy code for small-group survival becomes a vulnerability when legal and social systems feed it malicious priors. Racism, in this framework, is the exploit: \textbf{psycho-legal social software} that installs a racial partition into ordinary predictive cognition and makes the partition feel like perception.
@@ -485,6 +515,33 @@ $O$ & Sink / Ground & All net current flows here. The population positioned as e
 \bottomrule
 \end{tabular}
 \end{center}
+
+\begin{figure}[htbp]
+\centering
+\renewcommand{\thefigure}{0.\arabic{figure}}
+\begin{circuitikz}[american, line width=0.6pt]
+  \draw (0,0) node[ground] (ground) {}
+    to[I, l_={\scriptsize $F_{\text{enforce}}$}, a^={\scriptsize current source}] (0,2.5)
+    -- (0.6,2.5) to[R] (2.1,2.5) coordinate (policytap)
+    to[R] (3.6,2.5) -- (4.2,2.5)
+    to[C, l^={\scriptsize $I_{\text{buffer}}$}] (6.4,2.5) -- (7.1,2.5)
+    to[V, l^={\scriptsize $E$}] (7.1,0)
+    -- (ground);
+  \draw (policytap) -- ++(0,-0.35) node[circ] {};
+  \node[font=\scriptsize, align=center] at (2.1,3.0)
+    {$P_{\text{uppet}}$ potential divider};
+  \node[font=\scriptsize, align=center] at (2.1,1.75)
+    {policy-level output tap};
+  \node[font=\scriptsize, align=center] at (5.3,1.95)
+    {dielectric/insulator};
+  \node[font=\scriptsize, align=left, anchor=west] at (8.1,1.25)
+    {voltage\\source};
+  \node[font=\scriptsize, align=center, below=4pt] at (ground)
+    {$O$\\sink/ground};
+\end{circuitikz}
+\caption[The five-tier extraction circuit]{\textbf{The Five-Tier Extraction Circuit.} This schematic renders the node-to-element mapping stated in Section~\ref{sec:hardware_mapping} and introduces no new calibration.}
+\label{fig:extraction_circuit}
+\end{figure}
 
 The foundational inequality is an ordinal voltage drop:
 \begin{equation}\label{eq:0.2-tier-voltage-drop}
@@ -1942,6 +1999,28 @@ The baseline state of absolute extraction is circuit equilibrium ($q = 0$, zero 
 
 \begin{figure}[htbp]
 \centering
+\begin{circuitikz}[american, line width=0.6pt]
+  \draw (0,0)
+    to[sV] (0,2.5)
+    to[R, l^={\scriptsize $R$}] (2.4,2.5)
+    to[L, l^={\scriptsize $L$}] (4.8,2.5)
+    to[C, l^={\scriptsize $C$}] (7.2,2.5)
+    -- (7.2,0) -- (0,0);
+  \node[font=\scriptsize, align=right, anchor=east, text width=1.5cm] at (-0.65,1.25)
+    {kinetic supply\\$V(t)$};
+  \node[font=\scriptsize, align=center, text width=2.0cm] at (1.2,1.35)
+    {bureaucratic and\\carceral friction};
+  \node[font=\scriptsize, align=center, text width=2.0cm] at (3.6,1.35)
+    {cultural inertia and\\institutional entrenchment};
+  \node[font=\scriptsize, align=center, text width=2.0cm] at (6.0,1.35)
+    {token-reform\\absorption capacity};
+\end{circuitikz}
+\caption[The series RLC topology]{\textbf{The Series RLC Topology.} This schematic renders the series topology and component roles stated in Sections~\ref{subsec:resistor}--\ref{subsec:inductor} and Equation~\ref{eq:1.7a-rlc-governing} and introduces no new calibration.}
+\label{fig:rlc_topology}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
 \begin{tikzpicture}
 \begin{axis}[
     width=0.95\textwidth,
@@ -2557,6 +2636,25 @@ scalar sum but a \textbf{complex number}:
 \begin{equation}\label{eq:2.2a-complex-suppression-allocation}
 W = \psi_m + j\psi_s
 \end{equation}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[line width=0.6pt]
+  \draw[->] (-0.25,0) -- (6.4,0)
+    node[right, font=\scriptsize] {$\psi_m = P_{\text{real}} = |V||I|\cos\theta$};
+  \draw[->] (0,-0.25) -- (0,4.2)
+    node[above, font=\scriptsize] {$j\psi_s$};
+  \draw[dashed, gray!65] (4.8,0) -- (4.8,3.25) -- (0,3.25);
+  \draw[->, blue!65!black, line width=1.0pt] (0,0) -- (4.8,3.25)
+    node[midway, above left, font=\scriptsize] {$W=\psi_m+j\psi_s$};
+  \draw[->] (1.15,0) arc[start angle=0,end angle=34.1,radius=1.15];
+  \node[font=\scriptsize] at (1.42,0.47) {$\theta$};
+  \node[font=\scriptsize, align=left, right] at (4.8,3.25)
+    {$\psi_s = Q_{\text{reactive}}$\\$= |V||I|\sin\theta$};
+\end{tikzpicture}
+\caption[The complex wage phasor]{\textbf{The Complex Wage Phasor.} This schematic renders the real/reactive decomposition stated in Equation~\ref{eq:2.2a-complex-suppression-allocation} and introduces no new calibration.}
+\label{fig:complex_wage_phasor}
+\end{figure}
 where $j = \sqrt{-1}$ signals that $\psi_s$ operates in a domain
 \emph{orthogonal} to material reality. The relation follows the exact
 mapping used in electrical engineering to distinguish \textbf{real power}
