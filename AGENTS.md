@@ -213,10 +213,24 @@ regenerated PDF.
 
 ## Release Policy
 
-**Cut a GitHub release only when `Paper/The_Original_Power.pdf` changes** — that
+**A release is eligible only when `Paper/The_Original_Power.pdf` changes** — that
 is, a change to `Paper/*.tex`, `Paper/references.bib`, `Paper/*.sty`, or
 `Paper/figures/`. README edits, tooling, `experiments/`, docs, workflows, and
 notebook regeneration all ship on `main` with **no release**.
+
+**Eligibility is not permission. ASK before cutting one.** An agent may prepare a
+release in full — verify, build the EPUB, confirm both artifacts, draft the notes —
+and must then stop and ask. It may not tag or run `gh release create` on its own
+judgement.
+
+The reason is that eligibility fires on the first manuscript commit of a session, and
+the author is usually not finished for the day. Cutting on trigger produces several
+releases for one afternoon's work and makes the version history describe the agent's
+commit rhythm instead of the book's. A release is a statement that an edition is
+finished; only the author knows when that is true.
+
+When a downstream pipeline needs the current PDF mid-session, hand over
+`Paper/The_Original_Power.pdf` directly. That never requires a release.
 
 **The PDF and the EPUB are released together, from the same commit, every time.**
 They must never be out of sync — a release must not carry a PDF from one build
