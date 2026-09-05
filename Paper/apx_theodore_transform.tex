@@ -73,6 +73,25 @@ when the correspondence preserves the relations the claim asserts. The symbol $\
 reserved for this operator throughout the manuscript, consistent with the notation rule of
 Chapter~\ref{ch:system_init}: no other quantity in this book carries it.
 
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[line width=0.6pt, >=Latex]
+  \node[draw, rounded corners=2pt, minimum width=4.25cm, minimum height=2.15cm,
+    fill=blue!4, align=center] (source) at (-3.5,0)
+    {$D_\alpha$\\[3pt]$\mathcal{V}_\alpha$\quad vocabulary\\$\mathcal{C}_\alpha$\quad claim set};
+  \node[draw, rounded corners=2pt, minimum width=4.25cm, minimum height=2.15cm,
+    fill=blue!4, align=center] (target) at (3.5,0)
+    {$D_\beta$\\[3pt]$\mathcal{V}_\beta$\quad vocabulary\\$\mathcal{C}_\beta$\quad claim set};
+  \draw[->, line width=0.9pt] (source.east) -- (target.west)
+    node[midway, above=5pt, font=\scriptsize] {$\TT_{\alpha\to\beta}$}
+    node[midway, below=5pt, font=\scriptsize] {$\sigma_{\alpha\beta}:\mathcal{V}_\alpha\to\mathcal{V}_\beta$};
+  \draw[<->, black!60] (-2.25,-1.48) -- (2.25,-1.48);
+  \node[font=\scriptsize, text=black!60] at (0,-1.82) {structural relations preserved};
+\end{tikzpicture}
+\caption[The Theodore Transform operator]{\textbf{The Theodore Transform Operator.} This diagram renders the domain, vocabulary, claim-set, and structural-correspondence definitions of Section~\ref{sec:tt_transform} and introduces no new claim, measurement, or calibration.}
+\label{fig:tt_operator}
+\end{figure}
+
 \section{The Invariance Condition}
 \label{sec:tt_invariance}
 
@@ -120,6 +139,29 @@ scope audit of a claimant, stated in vocabulary the manuscript already supplies.
 
 The operator therefore functions as an invariance test. It detects whether a claim is being
 applied as a principle. It establishes nothing about whether the claim deserves to be one.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[line width=0.6pt, >=Latex,
+  application/.style={draw, rounded corners=2pt, fill=blue!4, minimum width=4.2cm,
+    minimum height=1.15cm, align=center, font=\scriptsize}]
+  \node[application] (race) at (-3.7,1.25) {Haitian Theorem\\racial axis};
+  \node[application] (gender) at (3.7,1.25) {Haitian Theorem\\gendered axis};
+  \draw[->, line width=0.9pt] (race.east) -- (gender.west)
+    node[midway, above=4pt, font=\scriptsize] {$\TT_{\mathrm{race}\to\mathrm{gender}}$};
+  \node[application] (social) at (-3.7,-0.65) {social-mechanical\\framework};
+  \node[application] (electro) at (3.7,-0.65) {electrodynamic\\framework};
+  \draw[->, line width=0.9pt] (social.east) -- (electro.west)
+    node[midway, above=4pt, font=\scriptsize] {$\TT_{\mathrm{social}\to\mathrm{electro}}$};
+  \node[draw, fill=gray!8, rounded corners=2pt, font=\scriptsize, align=center,
+    text width=10.6cm] at (0,-2.15)
+    {Invariance condition:\\[2pt]
+      \(c\text{ holds on }D_\alpha \Longrightarrow \TT_{\alpha\to\beta}(c)
+      \text{ holds on }D_\beta \quad \forall\,\beta\in S(c)\).};
+\end{tikzpicture}
+\caption[Two applications of the Theodore Transform]{\textbf{Two Applications of the Theodore Transform.} This diagram renders the inter-axis projection and cross-domain transposition stated in Sections~\ref{sec:tt_inter_axis} and~\ref{sec:tt_cross_domain}, under the invariance condition of Equation~\ref{eq:tt.2-invariance}, and introduces no new claim, measurement, or calibration.}
+\label{fig:tt_applications}
+\end{figure}
 
 \section{Use I: Inter-Axis Projection}
 \label{sec:tt_inter_axis}

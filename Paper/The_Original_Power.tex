@@ -410,6 +410,27 @@ class momentum without transferring material energy. The cross product
 $\vec{v} \times \vec{B}$ is the mathematical signature of the psychological
 wage: it is always orthogonal to velocity, so it does zero work.
 
+\begin{figure}[htbp]
+\centering
+\renewcommand{\thefigure}{0.\arabic{figure}}
+\begin{tikzpicture}[line width=0.6pt, >=Latex]
+  \coordinate (origin) at (0,0);
+  \coordinate (electric) at (5.0,0);
+  \coordinate (total) at (7.0,3.2);
+  \draw[->, blue!65!black, line width=1.0pt] (origin) -- (electric)
+    node[midway, below=8pt, font=\scriptsize, fill=white, inner sep=2pt]
+    {$\mathbf{Q}\displaystyle\sum_{j=1}^{M}\vec{\mathcal{E}}_{\mathrm{mat}}^{(j)}$};
+  \draw[->, dashed, gray!80!black, line width=1.0pt] (electric) -- (total)
+    node[midway, right=14pt, font=\scriptsize, fill=white, inner sep=2pt]
+    {$\mathbf{Q}\!\left(\vec v\times\displaystyle\sum_{k=1}^{N}\rho_k\vec B_k\right)$};
+  \draw[->, black, line width=1.35pt] (origin) -- (total)
+    node[midway, above left=7pt, font=\scriptsize, fill=white, inner sep=2pt]
+    {$\vec F_{\mathrm{total}}$};
+\end{tikzpicture}
+\caption[The unified Lorentz-force decomposition]{\textbf{The Unified Lorentz-Force Decomposition.} This vector diagram renders the electric term, summed magnetic cross-product term, and resultant specified by Equation~\ref{eq:0.1-unified-lorentz-force} and introduces no new claim, measurement, or calibration.}
+\label{fig:unified_lorentz}
+\end{figure}
+
 The magnetic fields are \textbf{self-excited} by a feedback tap from the material extraction circuit:
 \begin{equation}\label{eq:0.1a-self-exciting-generator}
 \frac{\partial \vec{B}_k}{\partial t} = \eta_k \left( \mathbf{Q} \cdot \sum_{j=1}^{M}\vec{\mathcal{E}}_{\text{mat}}^{(j)} \right) - \lambda_k \vec{B}_k
@@ -492,6 +513,37 @@ structural layers beneath it; $O$ is enclosed at the base. This third dimension
 is operational: it is the geometric condition that makes the system's primary
 illusion possible: from inside the pyramid, the observer cannot see the apex
 directly. The lower layers occlude it.
+
+\begin{figure}[htbp]
+\centering
+\renewcommand{\thefigure}{0.\arabic{figure}}
+\begin{tikzpicture}[line width=0.6pt, >=Latex]
+  \coordinate (apex) at (0,4.8);
+  \coordinate (frontleft) at (-4.3,0);
+  \coordinate (frontright) at (3.4,0);
+  \coordinate (backright) at (4.35,1.15);
+  \coordinate (backleft) at (-0.85,1.15);
+  \fill[blue!7] (apex) -- (frontleft) -- (frontright) -- cycle;
+  \fill[gray!16] (apex) -- (frontright) -- (backright) -- cycle;
+  \fill[blue!11] (apex) -- (backleft) -- (frontleft) -- cycle;
+  \fill[blue!14] (frontleft) -- (frontright) -- (backright) -- (backleft) -- cycle;
+  \draw (apex) -- (frontleft) -- (frontright) -- (backright) -- (apex) -- (backleft) -- (frontleft);
+  \draw (frontleft) -- (frontright) -- (backright) -- (backleft) -- cycle;
+  \foreach \s in {0.22,0.43,0.64,0.84} {
+    \draw[black!60] ($(apex)!\s!(frontleft)$) -- ($(apex)!\s!(frontright)$) --
+      ($(apex)!\s!(backright)$) -- ($(apex)!\s!(backleft)$) -- cycle;
+  }
+  \node[font=\scriptsize, fill=white, inner sep=2pt] at (-0.20,4.42) {$E$};
+  \node[font=\scriptsize, fill=white, inner sep=2pt] at (-0.32,3.25) {$P_{\text{uppet}}$};
+  \node[font=\scriptsize, fill=white, inner sep=2pt] at (-0.46,2.25) {$F_{\text{enforce}}$};
+  \node[font=\scriptsize, fill=white, inner sep=2pt] at (-0.62,1.25) {$I_{\text{buffer}}$};
+  \node[font=\scriptsize, fill=white, inner sep=2pt] at (-0.38,0.38) {$O$ (enclosed base)};
+  \draw[->] (apex) -- (0,5.35)
+    node[above, font=\scriptsize] {$z$};
+\end{tikzpicture}
+\caption[The five-tier 3-D pyramid]{\textbf{The Five-Tier 3-D Pyramid.} This diagram renders the tier placement specified in Section~\ref{sec:system_init_nodes} and introduces no new claim, measurement, or calibration.}
+\label{fig:tier_pyramid}
+\end{figure}
 
 \subsection{The Hardware Mapping: Five Tiers as Circuit Elements}
 \label{sec:hardware_mapping}
@@ -854,6 +906,32 @@ C = \frac{\epsilon A}{d}
     ($P_{\text{spatial}}$).
 \end{itemize}
 
+\begin{figure}[htbp]
+\centering
+\renewcommand{\thefigure}{0.\arabic{figure}}
+\begin{tikzpicture}[line width=0.6pt, >=Latex]
+  \node[font=\normalsize] at (0,2.35) {$C=\dfrac{\epsilon A}{d}$};
+  \draw[line width=1.4pt] (-1.35,-1.45) -- (-1.35,1.45);
+  \draw[line width=1.4pt] (1.35,-1.45) -- (1.35,1.45);
+  \foreach \y in {-0.85,-0.28,0.28,0.85}
+    \draw[->, blue!60!black] (-1.1,\y) -- (1.1,\y);
+  \node[font=\scriptsize, fill=white, inner sep=2pt] at (-0.45,1.78)
+    {stored field: generational wealth};
+  \draw[<->] (-1.35,-1.85) -- (1.35,-1.85)
+    node[midway, below=3pt, font=\scriptsize] {separation $d$};
+  \draw[<->] (-1.75,-1.45) -- (-1.75,1.45)
+    node[midway, left=9pt, rotate=90, font=\scriptsize] {area $A$};
+  \node[draw, rounded corners=2pt, fill=gray!8, align=center, font=\scriptsize,
+    text width=3.2cm] at (3.65,1.0)
+    {$\epsilon$: legal dielectric\\property rights; inheritance law;\\homestead acts; FHA lending};
+  \node[draw, rounded corners=2pt, fill=gray!8, align=center, font=\scriptsize,
+    text width=4.0cm, inner xsep=6pt] at (3.65,-1.05)
+    {$A,d$: geographic and social distance maintained by redlining, segregation, and $P_{\text{spatial}}$};
+\end{tikzpicture}
+\caption[The social capacitor]{\textbf{The Social Capacitor.} This formal schematic renders the capacitance equation and assigned social roles stated in Section~\ref{subsec:capacitor}; the correspondence is one of governing equations, not of substance, and it introduces no new claim, measurement, or calibration.}
+\label{fig:social_capacitor}
+\end{figure}
+
 \subsection{The Inductor $L$ --- Cultural Inertia and Tradition}
 \label{subsec:inductor}
 
@@ -1203,6 +1281,33 @@ not closed.
 
 Equation~\eqref{eq:0.16-reparations-integral} is the formal
 mathematical definition of \textbf{historical reparations}: the time integral of the real-power flow into the Elite node from the Out-group node over the historical interval during which that flow has been operating.
+
+\begin{figure}[htbp]
+\centering
+\renewcommand{\thefigure}{0.\arabic{figure}}
+\begin{tikzpicture}[line width=0.6pt, >=Latex]
+  \node[font=\normalsize] at (3.8,3.75)
+    {$\displaystyle \mathcal{R}=\int_{t_0}^{t_{\text{now}}}
+      \operatorname{Re}\!\left[V_{\text{state}}(\tau)I_O^*(\tau)\right]d\tau$};
+  \fill[blue!14] (0,0) -- plot[smooth] coordinates
+    {(0,1.05) (1.2,1.55) (2.5,1.35) (3.8,2.15) (5.1,1.85) (6.3,2.5) (7.6,2.2)}
+    -- (7.6,0) -- cycle;
+  \draw[blue!65!black, line width=1.0pt] plot[smooth] coordinates
+    {(0,1.05) (1.2,1.55) (2.5,1.35) (3.8,2.15) (5.1,1.85) (6.3,2.5) (7.6,2.2)};
+  \draw[->] (0,0) -- (8.1,0) node[right, font=\scriptsize] {time};
+  \draw[->] (0,0) -- (0,3.15)
+    node[midway, left=9pt, rotate=90, font=\scriptsize] {real-power flow from $O$ into $E$};
+  \draw (0,0.08) -- (0,-0.08) node[below=4pt, font=\scriptsize] {$t_0$};
+  \draw (7.6,0.08) -- (7.6,-0.08) node[below=4pt, font=\scriptsize] {$t_{\text{now}}$};
+  \node[font=\scriptsize, fill=white, inner sep=2pt] at (3.75,0.75)
+    {accumulated real-power flow $\mathcal{R}$};
+  \node[font=\scriptsize, blue!65!black, fill=white, inner sep=2pt] at (5.15,2.75)
+    {illustrative real-power curve};
+\end{tikzpicture}
+\caption[The reparations integral]{\textbf{The Reparations Integral.} This diagram renders the definite integral specified by Equation~\ref{eq:0.16-reparations-integral} and introduces no new claim or calibration; the curve shape is illustrative and does not imply calibrated values.}
+\label{fig:reparations_integral}
+\end{figure}
+
 Several peer-reviewed estimates of this integral exist in the
 economics and reparations literature: Craemer's
 \citeyear{craemer2015slavery} compounded-labor calculation in
