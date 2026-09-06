@@ -677,10 +677,10 @@ Emmanuel Theodore (63:56)
 I sat and stared at it. And what I was looking at was a phasor.
 
 Emmanuel Theodore (64:04)
-That is the moment. A phasor is the object electrical engineering uses to describe alternating current, and it is the object physics uses for electromagnetic fields. And I am going to say the strong version of this, because it is what I actually think and it is what the book actually claims.
+That is the moment. A phasor is the object electrical engineering uses to describe alternating current, and it is the object physics uses for electromagnetic fields.
 
 Emmanuel Theodore (64:29)
-A society is a set of intersecting electromagnetic fields.
+An Extractive society is a set of intersecting electromagnetic fields.
 
 Emmanuel Theodore (64:36)
 Not like one. Is one. The material wage is an electric field, and it does the real work, moving actual resources. The status wage is magnetic, and it does no work at all, it only deflects. And there is not one of each. There is a field per axis.
@@ -692,7 +692,7 @@ Emmanuel Theodore (65:16)
 Which is intersectionality, stated as physics. And I need to say whose word that is, because I did not arrive at it on my own and it would be a strange thing to be careless about on this of all axes.
 
 Emmanuel Theodore (65:35)
-Kimberlé Crenshaw coined intersectionality in nineteen eighty nine. I learned what it actually meant from watching her explain it, not from a citation I picked up secondhand.
+Kimberlé Crenshaw coined intersectionality in nineteen eighty nine. I learned what it actually meant from watching her explain it.
 
 Emmanuel Theodore (65:51)
 Her argument came out of a court case. Black women sued General Motors over a layoff structure, and the court would not recognize Black women as a combined class. It told them to pick. Bring a race claim or bring a sex claim. The harm they had actually suffered existed at the intersection, and the law had no box for the intersection, so legally it did not exist.
@@ -728,7 +728,7 @@ Emmanuel Theodore (69:38)
 And that title is carrying several things at once, deliberately. Power in the electrical sense, watts, real and reactive, the quantity the whole formalism is built on.
 
 Emmanuel Theodore (69:57)
-Then power in its older sense. The English word comes through Old French from a Latin verb meaning to be able, and that verb rests on a reconstructed root glossed master, lord, owner, husband. The same root gives Greek despotes, master of the house, which we still hold as despot.
+Then power in its older sense. The English word comes through Old French from a Latin verb meaning to be able, and that verb rests on a reconstructed root glossed master, lord, owner, husband. The same root gives Greek despotes, master of the house, which we still articulate as despot.
 
 Emmanuel Theodore (70:24)
 So the capacity sense is built on the mastery sense. Ability is what dominion looks like from the inside.
@@ -740,7 +740,7 @@ Emmanuel Theodore (70:52)
 Now put that next to what this book argues about which axis came first. The gendered partition, operational for millennia before race existed, prototyped inside European households, the original template the racial partition was reverse engineered from.
 
 Emmanuel Theodore (71:16)
-The etymology and the history are pointing at the same room. The word for power still carries the site where the first extraction was run. I did not engineer that. I noticed it afterwards, and I am not going to pretend it is nothing.
+The etymology and the history are pointing at the same room. The word for power still carries the site where the first extraction was run. I noticed it afterwards, and I am not going to pretend it is nothing.
 
 Emmanuel Theodore (71:37)
 So the title is not three separate puns stacked up. Two of those readings collapse into one. The original power is the electrical quantity, and the original power is household mastery, and those turn out to be the same word for a reason.
