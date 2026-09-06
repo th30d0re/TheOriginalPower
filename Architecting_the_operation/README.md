@@ -97,6 +97,29 @@ Render:
 source .venv-voice/bin/activate && python -m voice_pipeline --transcript Architecting_the_operation/podcasts/ATO_EP01_authors_preface.md --episode-id ATO_EP01 --out-dir ./outputs
 ```
 
+## Rendered episode layout
+
+A render writes one folder per episode under `outputs/`. Only the working files sit at
+its root, because Ableton lists every `.als` beside the set in its own browser and a
+folder full of extras buries the one file the editor opens.
+
+```
+outputs/<episode_id>/
+  <episode_id>.als          the set you open
+  <episode_id>.mp3          the stitched preview of the whole episode
+  episode_manifest.json     per-turn ids, durations, positions
+  render_state.json         fingerprints that drive incremental re-render
+  TURN_INDEX.csv            editor's lookup table (tools/turn_index.py)
+  Samples/                  the rendered audio
+  _backups/                 timestamped .als copies, written automatically
+  _previews/                short audition clips cut from the stitched mp3
+```
+
+`voice_pipeline/als_generator.py` writes backups to `_backups/` and reparents their
+project-relative sample paths, so an old backup still opens and finds its audio from one
+level down. Short clips cut for review go in `_previews/`; keep the episode root to the
+files above.
+
 ## Sourcing rules
 
 Ground every claim in `Paper/The_Original_Power.tex`. The NotebookLM transcripts are
