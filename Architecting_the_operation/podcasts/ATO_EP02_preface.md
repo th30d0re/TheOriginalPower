@@ -715,58 +715,58 @@ Toussaint (33:59)
 Four parts, and each one is a stage in the life cycle of an extraction algorithm.
 
 Aisha (34:05)
-Part one is Specification and Origins. The racial vector invented in Zurara's fourteen fifty three Crónica, the Buffer Class formalized after Bacon's Rebellion, and the Puppet Class prototyped at the Constitutional Convention.
+Part one is Specification and Origins, fourteen forties to nineteen fifteen. The racial vector invented in Zurara's fourteen fifty three Crónica, the Buffer Class formalized after Bacon's Rebellion, the Puppet Class prototyped at the Constitutional Convention, and the Haitian export that closes the argument.
 
-Toussaint (34:16)
+Toussaint (34:20)
 Part two is The Installation, sixteen nineteen to eighteen sixty five. The colonial extraction of African kinship, the gendered reproductive kernel of coverture and eugenics, and the slave patrol genealogy that compounds into the thirteenth amendment loophole.
 
-Aisha (34:29)
+Aisha (34:34)
 Part three is Scaling and Runtime, eighteen sixty five to the present. Spatial containment, the industrialized Puppet Class, the recompile that runs from nineteen sixty eight to nineteen ninety four, and the terminal runtime where the system begins consuming the In-group.
 
-Toussaint (34:44)
+Toussaint (34:48)
 And part four is Diagnostics and Output, which closes with a revised definition of racism that is vector valued.
 
-Aisha (34:51)
+Aisha (34:55)
 Vector valued, because by the end the single word has been replaced by a quantity with a direction and a magnitude on each axis.
 
-Emmanuel Theodore (35:00)
+Emmanuel Theodore (35:04)
 Which is the answer to where this whole series is going. The book opens by saying the definition is broken and closes by handing you a replacement you can compute with.
 
-Toussaint (35:09)
+Toussaint (35:13)
 Last thing, and it is a question about the book rather than the framework.
 
-Toussaint (35:15)
+Toussaint (35:19)
 This Preface defines the terms, lays out the architecture, states the methodology, and sets up all twenty nine chapters. Why is it a Preface. Why is it not Chapter One.
 
-Emmanuel Theodore (35:26)
+Emmanuel Theodore (35:30)
 Because Chapter One has to be falsifiable and this has to be readable.
 
-Emmanuel Theodore (35:30)
+Emmanuel Theodore (35:34)
 Everything in the Preface is a promise. Here is what the words mean, here is the shape of the argument, here is how to check me. Nothing in it is proved in it. The proofs are downstream, and every one of them is attached to a tier and a criterion.
 
-Emmanuel Theodore (35:45)
+Emmanuel Theodore (35:49)
 If I made this Chapter One, I would be asking you to accept a definition as a result. Keeping it a Preface keeps the contract honest. This is the specification. The chapters are the implementation, and the implementation is where you get to tell me I am wrong.
 
-Aisha (36:00)
+Aisha (36:04)
 Then my last one, and it is the one I have been holding all episode.
 
-Aisha (36:05)
+Aisha (36:10)
 You analyze the design of the system rather than the lives inside it. How do you keep the blood in view while you are drawing the blueprint.
 
-Emmanuel Theodore (36:15)
+Emmanuel Theodore (36:19)
 By remembering where the numbers came from.
 
-Emmanuel Theodore (36:18)
+Emmanuel Theodore (36:22)
 One hundred forty six anchor cases. Every one of those is an event, and every event is people, and I read the sources. John Punch is a name in a court record and a man who ran for it with two friends and got a sentence the others did not get.
 
-Emmanuel Theodore (36:33)
+Emmanuel Theodore (36:37)
 The blueprint is made of that. It is compressed testimony. When I write a coefficient, the coefficient is standing in for somebody's account of what was done to them, and the compression is the only reason the thing fits in one book.
 
-Emmanuel Theodore (36:46)
+Emmanuel Theodore (36:50)
 And the blueprint is what I have to offer. Other people write the account, and they write it better than I would. I can draw the machine that produced the account, and hand it to anybody who wants to take the machine apart.
 
-Emmanuel Theodore (36:59)
+Emmanuel Theodore (37:04)
 Next episode we open Chapter One. System Initialization. The five nodes, the three dimensional pyramid, the Tri-Modal Enclosure Model, and the optical illusion that hides the apex from the base. That is where the geometry starts.
 
-Emmanuel Theodore (37:11)
+Emmanuel Theodore (37:15)
 This has been Architecting the Operation, episode two, on the Preface of The Original Power. I am Emmanuel Theodore, and this is the Open Source Republic. Stay curious, stay skeptical, and go check my work.

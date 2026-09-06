@@ -437,18 +437,18 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 ## G-36 — Four parts
 
 - **Anchor:** `Toussaint (33:59)`
-- **Hold:** through 35:07
+- **Hold:** through 35:11
 - **Type:** the book laid out as a life cycle, four segments
-- **Content:** Specification and Origins · The Installation, 1619–1865 · Scaling and
-  Runtime, 1865–present · Diagnostics and Output.
-- **Note:** `[book]` `:277`. The Preface dates part one as 1440s–1787 and the part
-  declaration in the manuscript reads 1440s–1915. The script states no date range for
-  part one and neither should this card until that is settled.
+- **Content:** Specification and Origins, 1440s–1915 · The Installation, 1619–1865 ·
+  Scaling and Runtime, 1865–present · Diagnostics and Output.
+- **Note:** `[book]` `:277`. The ranges overlap by design and Part II opens inside
+  Part I's range. They are era anchors rather than a partition of the timeline, per the
+  convention in `AGENTS.md`, so do not draw them as adjacent non-overlapping bands.
 
 ## G-37 — Why a Preface
 
-- **Anchor:** `Emmanuel Theodore (35:26)`
-- **Hold:** through 35:58
+- **Anchor:** `Emmanuel Theodore (35:30)`
+- **Hold:** through 36:02
 - **Type:** two-column contract card
 - **Left, THE PREFACE:** the specification. Terms, architecture, methodology. Nothing
   proved here.
@@ -458,7 +458,7 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 
 ## G-38 — Next episode
 
-- **Anchor:** `Emmanuel Theodore (36:59)`
+- **Anchor:** `Emmanuel Theodore (37:04)`
 - **Hold:** through the end of the segment
 - **Type:** end card
 - **Content:** Episode 3, Chapter 1: System Initialization. The five nodes. The
@@ -483,9 +483,5 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 
 ## Open items
 
-- **G-36 date range.** The Preface writes part one as 1440s–1787; the `\part`
-  declaration writes 1440s–1915. Settle in the manuscript before this card is built.
-- **Episode 1 chapter number.** Episode 1 says *Redefining Racism* is Chapter One of
-  the book. It is Chapter 3, and there are 29 numbered chapters rather than 23. This
-  episode says Chapter Five for Bacon's Rebellion and twenty-nine chapters in total,
-  which is correct, so the two episodes currently disagree.
+None. Both items logged on the first draft are resolved: the Preface's Part I range now
+reads 1440s–1915 to match the part declaration, and Episode 1 now says Chapter Three.
