@@ -159,6 +159,33 @@ And then I read it back, and I shelved it. That manuscript is finished and it wi
 Emmanuel Theodore (14:23)
 So I applied the transform to my own project. I moved the whole thing to the racial axis, where the historical record is deep, the datasets are public, and the structure is documented across five centuries. Establish it where the evidence is strongest, then transpose.
 
+Aisha (14:41)
+Before you move off that, there is a second reason you chose the racial axis, and you have never said it on the record.
+
+Emmanuel Theodore (14:50)
+There is, and I should have led with it. The evidence argument is true, and it is the one I reach for in rooms where I want to be taken seriously. The other reason is about where I am standing.
+
+Emmanuel Theodore (15:06)
+I am a Black man. On the racial axis I am in the Out-group. On the gendered axis I sit in the layer above, and the system pays me to sit there. It pays in money and it pays in standing. Later in this episode that payment gets a name, a symbol, and an equation, and it turns out to be the center of the entire book.
+
+Emmanuel Theodore (15:30)
+Where I stand changes what I can detect. On race I do not reason my way to whether something is happening. I feel the machine run while it is running, and I trust my own hit rate, because I have spent a lifetime training against that set.
+
+Emmanuel Theodore (15:50)
+On gender I lose that instrument. However vigilant I am, I cannot catch every instance of the thing running inside my own head, because on that axis the machine is paying me to leave it running. I am still unlearning patriarchy. An allocation is much harder to unlearn than an absence.
+
+Emmanuel Theodore (16:11)
+And it gets harder when conditions move, because Out-group conditions do move. Standing outside that group on that axis, I feel none of the movement. I wait for somebody I trust to describe it to me, and I am running on a delay the whole time it goes undescribed.
+
+Emmanuel Theodore (16:31)
+So the transform is my instrument for that. Carry the structure onto the axis where I am the Out-group, run the detection where my sensor is clean, and carry the result back. Testimony still does work I cannot do for myself. This gives me something to check it against, and it gives me a way to arrive at the same conclusion under my own power.
+
+Toussaint (16:56)
+The limit on that is worth naming, and the appendix names it. A transform carries structure across the boundary. Whatever it is like to live on the other axis stays with the people living there.
+
+Emmanuel Theodore (17:11)
+Which is the reason the only empathy this book asks for is procedural. I will get to what that means when we walk the tiers.
+
 Emmanuel Theodore (14:45)
 And I want to be exact about the order here, because I have told it wrong before. Redefining Racism already existed when I made that decision. It had been running for years, on its own track, alongside everything else I am describing. Where it came from is its own story and I will get to it.
 
