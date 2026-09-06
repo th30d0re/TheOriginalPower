@@ -947,6 +947,16 @@ When a reform movement attempts to instantly break the oppressive current
 fascist backlash---a lethal voltage spike of stochastic violence fighting to keep
 the circuit closed.
 
+\begin{figure}[htbp]\centering\renewcommand{\thefigure}{0.\arabic{figure}}
+\begin{circuitikz}[american, line width=0.6pt, >=Latex]
+  \draw (-3,0) to[L] (3,0);
+  \node[font=\scriptsize, fill=white, inner sep=2pt] at (0,-0.48) {$L$: cultural inertia and institutional entrenchment};
+  \draw[->, line width=0.9pt] (-3,0.82) -- (3,0.82) node[midway, above=3pt, font=\scriptsize] {$i(t)\downarrow$: collapsing oppressive current};
+  \draw[<-, dashed, line width=0.9pt] (-3,-1.05) -- (3,-1.05) node[midway, below=3pt, font=\scriptsize] {$V_{\text{back-EMF}}=-L\,di/dt$: induced reactionary backlash};
+\end{circuitikz}
+\caption[Inductive kickback]{\textbf{Inductive Kickback.} This circuit renders the collapsing-current condition, reverse voltage, and social roles specified in Section~\ref{subsec:inductor} and introduces no new claim or calibration.}\label{fig:inductive_kickback}
+\end{figure}
+
 \subsection{The Diode --- Redlining and Segregation}
 
 When a high-conductivity Buffer Class neighborhood is placed adjacent to a
@@ -1074,6 +1084,16 @@ Kirchhoff's current law at the Elite node sums the per-axis currents:
 \begin{equation}\label{eq:0.11-elite-node-kirchhoff}
 I_E(t) \;=\; \sum_{k=1}^{N} \rho_k\,A_k\,\cos\!\bigl(\omega t + \phi_k\bigr).
 \end{equation}
+\begin{figure}[htbp]\centering\renewcommand{\thefigure}{0.\arabic{figure}}
+\begin{tikzpicture}[line width=0.6pt, >=Latex]
+  \draw[->] (0,-1.45) -- (7.25,-1.45) node[right, font=\scriptsize] {time};
+  \draw[blue!65!black, line width=1pt] plot[domain=0:6.5,samples=100] (\x,{0.62*sin(deg(1.55*\x))+0.55}) node[right, font=\scriptsize] {$i_j(t)$: coherence on axis $j$};
+  \draw[red!65!black, dashed, line width=1pt] plot[domain=0:6.5,samples=100] (\x,{-0.62*sin(deg(1.55*\x))+0.55}) node[right, font=\scriptsize] {$i_k(t)$: coherence on axis $k$, phase-shifted};
+  \draw[black, densely dotted, line width=1.2pt] (0,-0.65) -- (6.5,-0.65) node[right, font=\scriptsize] {$i_j+i_k\approx0$: high $\Phi_{\text{load}}$, kernel-safe};
+  \node[font=\scriptsize, fill=white, inner sep=2pt] at (3.25,1.55) {$\Delta\phi=\phi_2-\phi_1$ (symbolic; tuned for cancellation)};
+\end{tikzpicture}
+\caption[Destructive interference]{\textbf{Destructive Interference.} This schematic renders the interference engine's stated cancellation of lower-tier class-coherence signals and introduces no new calibration; the displayed antiphase traces are illustrative because the specified phase offset $\Delta\phi$ remains symbolic.}\label{fig:destructive_interference}
+\end{figure}
 Equation~\eqref{eq:0.11-elite-node-kirchhoff} formalizes the
 conservation law that underwrites the entire Polymorphic Interface
 Swap argument (Section~\ref{sec:interface_swap_typology}): the Elite's
@@ -2248,6 +2268,16 @@ The notebook computes the composite $\Sigma_{\text{sup}}(t)$ and its trajectory 
 
 \paragraph{Comparison to prediction.}
 Equations~\ref{eq:1.8-suppression-envelope}--\ref{eq:1.10-effective-coherence} predict that when a reform shock threatens to elevate $M(t)$ toward $\tau$, the kernel responds by expanding $\Sigma_{\text{sup}}(t)$ through alternative mechanisms---i.e., $\frac{d\Sigma_{\text{sup}}}{dt} > \frac{dM}{dt}$. The data confirm this prediction structurally: every component of the suppression envelope moved in the predicted direction simultaneously during the post-1965 period. The carceral system expanded precisely as union density contracted, maintaining the fragmentation of cross-racial class solidarity that the Civil Rights Act had briefly threatened to restore. The wealth concentration measure rose continuously, maintaining the material basis of the status wage. The pattern is the optimization signature of a kernel adjusting its interface strategy in response to a reform shock.
+\begin{figure}[htbp]\centering
+\begin{tikzpicture}[line width=0.6pt, >=Latex]
+  \draw[->] (0,0) -- (7.25,0) node[right, font=\scriptsize] {time}; \draw[->] (0,0) -- (0,3) node[above, font=\scriptsize] {schematic level};
+  \draw[black, densely dotted] (0,2.5) -- (6.6,2.5) node[right, font=\scriptsize] {threshold $\tau$};
+  \draw[blue!65!black, line width=1pt] plot[smooth] coordinates {(0,0.45) (1.2,0.55) (2.2,0.85) (3.4,1.4) (5,1.65) (6.6,1.8)} node[right, font=\scriptsize] {$M(t)$: class coherence};
+  \draw[red!65!black, dashed, line width=1pt] plot[smooth] coordinates {(0,0.3) (1.2,0.4) (2.2,0.65) (3.4,1.5) (5,1.9) (6.6,2.15)} node[right, font=\scriptsize] {$\Sigma_{\text{sup}}(t)$: suppression envelope};
+  \draw[gray!70, dash dot, ->] (2.2,0.05) -- (2.2,2.35); \node[font=\scriptsize, gray!70, fill=white, inner sep=2pt] at (1.15,2.05) {reform shock}; \node[font=\scriptsize, fill=white, inner sep=2pt] at (4.55,0.72) {$d\Sigma_{\text{sup}}/dt\ge dM/dt$; $M_{\text{eff}}<\tau$};
+\end{tikzpicture}
+\caption[The class-coherence threshold]{\textbf{The Class-Coherence Threshold.} This diagram renders the stated race between class coherence and the suppression envelope, with the kernel expanding $\Sigma_{\text{sup}}(t)$ to hold $M_{\text{eff}}(t)<\tau$, and introduces no new calibration; both curve shapes are illustrative and do not imply measured values.}\label{fig:coherence_threshold}
+\end{figure}
 
 \paragraph{Falsification criteria.}
 These equations would be falsified if the post-1965 period showed simultaneous increases in union density, decreases in incarceration rates, and narrowing of the wealth gap---i.e., if the suppression envelope contracted after the Civil Rights Act. The data show the opposite on all three dimensions: union density fell, incarceration rose, and wealth concentrated further. The one potential exception---the 2010--2020 partial decline in incarceration rates---was accompanied by \textit{no} corresponding decrease in wealth concentration or recovery of union density, and thus does not constitute a suppression envelope contraction.
