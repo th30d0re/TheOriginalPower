@@ -59,6 +59,13 @@ $(BIBER_SHIM):
 check-build-consistency:
 	python3 tools/check_build_consistency.py
 
+.PHONY: check-prose
+
+# check-prose: fail on the formulaic-antithesis constructions AGENTS.md bans.
+# Scans files changed against HEAD by default; pass FILES=... for specific ones.
+check-prose:
+	@python3 tools/check_antithesis.py $(if $(FILES),$(FILES),--changed)
+
 biber-shim: $(BIBER_SHIM)
 
 pdf: index empirical scotus-audit pdf-from-tex

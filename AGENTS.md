@@ -2,7 +2,47 @@
 
 ## Strict Rhetorical Constraints
 
-Adopt a rigorous, clinically objective tone. You have zero tolerance for cliché AI rhetoric, specifically formulaic antithesis, didactic contrasts, and boilerplate juxtaposition. You must entirely eliminate corrective contrasts and pseudo-profound phrasing (e.g., "It is not merely X, it is Y," or "More than just X..."). Do not manufacture artificial transitions or contrast what a concept isn't with what it is. Rely strictly on direct, affirmative declarative statements to articulate concepts.
+Adopt a rigorous, clinically objective tone. You have zero tolerance for cliché AI rhetoric, specifically formulaic antithesis, didactic contrasts, and boilerplate juxtaposition. You must entirely eliminate corrective contrasts and pseudo-profound phrasing (e.g., "It is not merely X, it is Y," or "More than just X..."). Do not manufacture artificial transitions or contrast what a concept isn't with what it is. Rely strictly on direct, affirmative declarative statements to articulate concepts.   <!-- antithesis-ok: quotes the banned forms as examples of the rule -->
+
+## Enforcing the Rhetorical Constraint — MANDATORY
+
+The constraint above is absolute and applies to **every** piece of prose this project
+produces: the manuscript, podcast scripts, video narration, posts, READMEs, release
+notes, commit bodies. There is no carve-out for speech, for informal registers, or for
+text that will be read aloud rather than printed.
+
+**Before finishing any task that writes or edits prose, run:**
+
+```bash
+make check-prose                       # files changed against HEAD
+python3 tools/check_antithesis.py PATH # a specific file
+```
+
+CERTAIN findings fail the check and must be rewritten as direct affirmative statements.
+REVIEW findings are printed and never fail; they are the shape of the construction and
+are frequently legitimate (plain factual negation, deliberate anaphora), so read them
+and decide.
+
+A genuine exception is silenced inline, with a reason:
+
+```
+... prose ...   <!-- antithesis-ok: anaphora, deliberate repetition -->
+```
+
+The marker alone will not suppress; the reason is required.
+
+**Why this is mechanised.** The constraint was applied by hand across a podcast script
+in one session and twenty constructions were removed. Fresh ones were then introduced
+by the same agent, in the same session, inside a passage written to correct a different
+error — including "We do not merely know the value. We know where it varies", which is   <!-- antithesis-ok: quotes the observed failure verbatim -->
+the banned form almost verbatim. Attention does not hold across a long session. The
+detector does.
+
+The regex half cannot judge intent. When prose matters, follow it with a reading pass
+by a second agent given `.codex/tasks/prose-antithesis-review.md`, which covers the
+constructions a pattern cannot see: a negated strawman spread over two sentences, a
+concessive clause that exists only to be overturned, a parallel that manufactures a
+contrast the argument does not need.
 
 ## The Word "Power" — Standing Rule
 
@@ -159,7 +199,7 @@ A factual edit is not finished until:
 
 1. every changed claim is traceable to an artifact opened under Rule 1;
 2. an independent agent has reviewed the diff with authority to reject;
-3. the rendered PDF has been checked at the changed passage, not only compiled;
+3. the rendered PDF has been checked at the changed passage, not only compiled;   <!-- antithesis-ok: 'not only compiled' is a checklist qualifier, not a contrast -->
 4. the commit message states what was verified, by which artifact, and what
    remains unverified.
 
