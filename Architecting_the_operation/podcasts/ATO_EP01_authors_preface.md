@@ -211,7 +211,7 @@ Emmanuel Theodore (13:22)
 That is a statement about the evidence, and it carries no claim about which matters more. Calibrate where measurement is possible, then transpose. Which is why I am going back to the domain I started in now that the Original power is complete. That one is called The Gender Wars, and is a return to where the machine was actually built.
 
 Emmanuel Theodore (13:40)
-Redefining Racism became The Mathematics of Oppression, and then it became The Original Power. Both of those renames have a reason and I will give you both later, because they are the same reason twice. Redefining Racism survives inside the book today as Chapter Three, the seed the other twenty eight chapters grew out of.
+Redefining Racism became The Mathematics of Oppression, and then it became The Original Power. Both of those renames have a reason and I will give you both later, because they are the same reason twice. Redefining Racism survives inside the book today as Chapter Two, the seed the other twenty one chapters grew out of.
 
 Emmanuel Theodore (13:58)
 There is one more piece, and it is the part that turned a long project into a finished one.
@@ -219,7 +219,7 @@ There is one more piece, and it is the part that turned a long project into a fi
 Emmanuel Theodore (14:03)
 The breakup was the opening of a very bad year. Tariffs landed on electronics, the industry I worked in contracted, and my job went with it. And in the same stretch, my grandmother died. Not long after that I wrecked my car. Inside a few months I lost the relationship, the income, the transportation, and my grandmother.
 
-Emmanuel Theodore (14:20)
+Emmanuel Theodore (14:21)
 I was out of work for more than a year. The severance ran out. I want to be plain about what that means. There was no money.
 
 Emmanuel Theodore (14:27)
@@ -289,7 +289,7 @@ Emmanuel Theodore (17:56)
 No set theory in it yet. No equations. Just the argument, hardened in public against people trying very hard to break it.
 
 Emmanuel Theodore (18:03)
-That post is the oldest thing in this entire project that is recognizably the book. It kept getting revised, eighty eight times, and by February of twenty twenty four it was a paper called Redefining Racism, a Mathematical and Historical Approach, with set theory named in its abstract. That is Chapter Three of the book you can read today.
+That post is the oldest thing in this entire project that is recognizably the book. It kept getting revised, eighty eight times, and by February of twenty twenty four it was a paper called Redefining Racism, a Mathematical and Historical Approach, with set theory named in its abstract. That is Chapter Two of the book you can read today.
 
 Emmanuel Theodore (18:22)
 The account it was published from is gone. It got banned, which is its own comment on how that argument was received.
@@ -334,7 +334,7 @@ Strip the morality out completely. Take racial animus out of the model entirely.
 Emmanuel Theodore (20:32)
 You still get the system. Every tier, every mechanism, the whole architecture, derived from economics with no moral input at any step.
 
-Emmanuel Theodore (20:39)
+Emmanuel Theodore (20:40)
 That result is stronger than the moral argument, because it means the machine requires nobody to hate anyone. It runs on incentives and produces the same output whether the operators are bigots or saints.
 
 Emmanuel Theodore (20:51)
@@ -361,7 +361,7 @@ That essay anchors on three specific things, and each one becomes a structural c
 Toussaint (21:50)
 Douglass served as United States Minister to Haiti from eighteen eighty nine to eighteen ninety one. The administration back home wanted a naval coaling station at Mole Saint Nicolas, a strategic port that would let the United States project naval power across the Caribbean.
 
-Aisha (22:06)
+Aisha (22:07)
 Douglass was expected to secure it. Diplomatic pressure, with the implicit weight of naval force sitting behind it, applied by the most prominent Black statesman in the country against the first free Black republic in the world.
 
 Toussaint (22:18)
@@ -373,7 +373,7 @@ The Preface has almost no interest in the drama of that resignation. It isolates
 Toussaint (22:40)
 Second anchor. Social Darwinism, which the Preface files as the ideological justification layer.
 
-Aisha (22:46)
+Aisha (22:47)
 Any system that extracts from a population needs that extraction to look acceptable to its own citizens. Brute theft is unstable, because it is legible as theft. Social Darwinism supplied a story dressed as science, in which certain groups were evolutionarily destined to dominate and extract from others.
 
 Toussaint (23:04)
@@ -391,7 +391,7 @@ Follow the money on that. Elites extract raw materials and labor from the coloni
 Toussaint (23:49)
 The domestic worker is still exploited by the elite above them. They are also elevated above the colonial subject, and they receive a dividend for that position. Their material interest now attaches to the arrangement.
 
-Aisha (24:02)
+Aisha (24:03)
 That produces a triangle. Elites at the top. Domestic workers in the middle, paid to stay there. Colonial subjects at the bottom, paying for all of it.
 
 Toussaint (24:11)
@@ -430,7 +430,7 @@ Du Bois described that in nineteen fifteen in economic language. I ended up desc
 Aisha (26:28)
 Step two. Build the blueprint.
 
-Toussaint (26:29)
+Toussaint (26:30)
 The formal program begins as a semester project proposal, and it carried two titles across its drafts. From Bias to Bytes, a Machine Learning Driven Analysis of Systemic Racism and Social Inequalities. And The Calculus of Discrimination, a Mathematical Model for Analyzing Systemic Racism and Social Policies.
 
 Aisha (26:48)
@@ -535,7 +535,7 @@ Zoom out to the annual payout structure of the whole building and the house wins
 Aisha (33:02)
 Incident only data is the camera over the table. It measures the physics of the roll. The per capita rate measures the payout structure of the building.
 
-Toussaint (33:09)
+Toussaint (33:10)
 Which relocates the question. What determines who enters the encounter pool in the first place. Housing policy, patrol allocation, which neighborhoods are saturated, which infractions get enforced. All of that runs upstream of the moment a camera would capture.
 
 Aisha (33:25)
@@ -574,7 +574,7 @@ Now the methodology, and this is the part of the episode I care about most.
 Toussaint (35:22)
 The aggregate marker category test was not statistically significant. Chi squared of two point five four seven, p of zero point nine eight zero. Run this as a standard aggregate audit and the model passes cleanly.
 
-Aisha (35:35)
+Aisha (35:36)
 The skew appears only after disaggregation by career level. That pattern has a name in statistics. Simpson's paradox, where a trend visible inside subgroups vanishes or reverses when the subgroups are pooled.
 
 Toussaint (35:50)
@@ -586,7 +586,7 @@ The stated reason is a confound. Resume qualifications differed across the racia
 Toussaint (36:15)
 A twenty twenty six replication was run to remove that confound. Matched pairs, resume qualifications held constant, varying only the candidate's name and one affiliation, tested against Claude, Gemini, and Kimi.
 
-Aisha (36:27)
+Aisha (36:28)
 The pooled Black share of advanced candidates came in at fifty to fifty one percent at every career level. The career level effect did not recur. Matched pair selections sat at parity across the racial conditions.
 
 Toussaint (36:40)
@@ -661,13 +661,13 @@ Divide and conquer, written as a closed loop proof. Systemic bias reads as an op
 Aisha (41:17)
 And then the geometry. The modified Venn diagrams from the proposal became partition theorems, directed spanning tree proofs, and an electrodynamic circuit formalism that unifies every equation in the book into a single coherent physical system.
 
-Toussaint (41:32)
+Toussaint (41:33)
 The spanning tree proofs are graph theory. Society is a network of nodes and directed edges. A directed spanning tree connects every node with a specified direction of flow and no closed loops, with all paths terminating at a root. Map wealth and power onto those edges and you have the geometry of extraction, routed from the margins upward to the root.
 
 Aisha (41:53)
 The circuit formalism maps that geometry onto electrodynamics. Voltage as the systemic pressure driving extraction. Current as the actual flow of extracted labor and capital. Resistance as the mechanisms that route the flow and keep it from returning downward.
 
-Toussaint (42:08)
+Toussaint (42:09)
 The framework treats that as a homology. The claim is that both systems are governed by equivalent equations once their state variables and constraints are operationalized.
 
 Emmanuel Theodore (42:17)
@@ -751,7 +751,7 @@ And that is what unified the book. Before that I had physics scattered across th
 Emmanuel Theodore (47:00)
 One word did that. Public. Du Bois put it in a sentence in nineteen thirty five, and it sat there for ninety years waiting for somebody to notice it was half of a complex number.
 
-Emmanuel Theodore (47:10)
+Emmanuel Theodore (47:11)
 That was a genuine eureka, and I got it from reading Du Bois more carefully than I had read him the first time.
 
 Emmanuel Theodore (47:16)

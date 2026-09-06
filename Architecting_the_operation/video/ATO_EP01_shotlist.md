@@ -355,7 +355,7 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-14 — The proposal, two titles
 
-- **Anchor:** `Toussaint (26:29)`
+- **Anchor:** `Toussaint (26:30)`
 - **Hold:** through 26:48
 - **Type:** document card
 - **Content:** the two draft titles, verbatim:
@@ -390,7 +390,7 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-17 — The agenda setter
 
-- **Anchor:** `Aisha (22:06)`
+- **Anchor:** `Aisha (22:07)`
 - **Hold:** through 18:32
 - **Type:** path animation over the G-16 beat 3 cycle
 - **Content:** a start node and a target node. Animate a legal sequence of pairwise
@@ -464,7 +464,7 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-23 — Upstream of the encounter
 
-- **Anchor:** `Toussaint (26:29)`
+- **Anchor:** `Toussaint (26:30)`
 - **Type:** left-to-right funnel
 - **Content:** housing policy → patrol allocation → neighborhood saturation →
   enforcement selection → THE ENCOUNTER. A dashed box around the final stage labeled
@@ -581,7 +581,7 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-33 — Geometry of extraction
 
-- **Anchor:** `Toussaint (33:09)`
+- **Anchor:** `Toussaint (33:10)`
 - **Type:** directed graph
 - **Content:** nodes across society, directed edges, no closed loops, all paths
   terminating at a root node. Animate flow from the margins upward.
@@ -637,7 +637,7 @@ same order, so graphics drop onto the video track above it at those offsets.
 
 ## G-37 — Method reprise
 
-- **Anchor:** `Aisha (36:27)`
+- **Anchor:** `Aisha (36:28)`
 - **Hold:** through 36:59
 - **Type:** G-05 full-screen, now with each stage labeled by its document
 - **Content:** Identify → the Spanish-American War essay. Detect → The Calculus of
