@@ -276,16 +276,6 @@ same order, so graphics drop onto the video track above it at those offsets.
   04:18, 16:15, 20:03 and 25:36 with the active stage lit. Reprise it full-screen at
   31:39.
 
-## G-06 — The astronomy analogy — ORPHANED
-
-- **Anchor:** none. The narration this cue illustrated was cut from the script during
-  Emmanuel's writing pass, and no current turn carries it.
-- **Type:** four small illustrations in a row, matching G-05's four stages
-- **Content:** look at the stars → build the telescope → catch the blurry shadow →
-  write the law of gravitation.
-- **Note:** `[design]`. Hold the design. Either restore a line of narration for it or
-  drop the cue. Do not re-anchor it to a turn that does not say this.
-
 ## G-07 — Douglass and Môle-Saint-Nicolas
 
 - **Anchor:** `Toussaint (21:51)`
