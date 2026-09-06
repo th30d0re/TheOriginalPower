@@ -51,9 +51,25 @@ Rules that the pipeline enforces, and what breaks when they are violated:
   bracketed tag falls through and is spoken verbatim.
 - **Text before the first header is skipped** with a warning, so a title line at the top
   is safe.
-- **Timestamps are source references.** Inter-turn gaps come from the `--default-gap-ms`
-  flag, not from these values. Keep them monotonic and plausible anyway; they are the
-  join key between a script and its shot list.
+- **Timestamps are derived, never hand-maintained.** Inter-turn gaps come from the
+  `--gap-ms` flag, so these values do not drive the render. They are the join key
+  between a script and its shot list, so they have to match where the audio actually
+  lands. `tools/retime_script.py` computes them: measured durations from the rendered
+  manifest for turns whose audio exists, and a words-per-second rate calibrated on that
+  same manifest for turns that are new or edited. `turn_id` is a hash of speaker and
+  text, so retiming changes no ids and forces no re-synthesis.
+
+  ```bash
+  python3 tools/retime_script.py Architecting_the_operation/podcasts/ATO_EP01_authors_preface.md \
+      --manifest outputs/ATO_EP01_local/episode_manifest.json \
+      --shotlist Architecting_the_operation/video/ATO_EP01_shotlist.md --apply
+  ```
+
+  The same pass remaps the shot list. An anchor is rewritten only when it resolves to a
+  real turn by that speaker within 30 seconds; anything further is reported as
+  UNRESOLVED and left alone, because a silent snap to the nearest turn is how a cue ends
+  up illustrating the wrong sentence. Run it after every render, then regenerate the
+  editor's lookup table with `tools/turn_index.py`.
 
 Validate a script before rendering:
 
