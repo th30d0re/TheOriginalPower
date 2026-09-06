@@ -1,0 +1,491 @@
+# ATO Episode 2 — Video Shot List
+
+Companion to `../podcasts/ATO_EP02_preface.md`.
+
+Graphics live here, never inside the script. The voice pipeline's markup tokenizer
+(`voice_pipeline/markup.py`) only recognizes `[pause:NNNms]`, `[beat]`, `[emphasis]`
+and `[tone]`. Any other bracketed tag falls through and gets spoken aloud by the TTS
+engine, and any non-tag line inside a speaker turn is spoken too. So the script stays
+pure speech and the video cues stay in this file.
+
+## Alignment procedure
+
+Cue anchors are the script's own header timestamps, and those are derived from measured
+audio by `tools/retime_script.py`. Episode 2 has not been rendered yet, so its
+timestamps come from speaker rates measured on Episode 1 and carried forward in
+`voice_pipeline/speaker_rates.json`. After the render, re-run:
+
+```bash
+python3 tools/retime_script.py Architecting_the_operation/podcasts/ATO_EP02_preface.md \
+    --manifest outputs/ATO_EP02_local/episode_manifest.json \
+    --shotlist Architecting_the_operation/video/ATO_EP02_shotlist.md --apply
+```
+
+That rewrites the script headers to the real offsets and moves every anchor and hold
+below with them. An anchor that stops resolving to a real turn is reported as
+UNRESOLVED rather than snapped to the nearest one; fix those by hand against the cue's
+content.
+
+## Provenance key
+
+- `[book]` — stated in `Paper/The_Original_Power.tex`, cited by line.
+- `[data]` — computed from a CSV in `Paper/data/`.
+- `[design]` — illustrative, no data claim. Must not carry axis numbers.
+
+## Continuity with Episode 1
+
+Reuse, do not redesign: the five-tier stack, the ψ phasor, the circuit vocabulary
+plate, and the lower-third name cards. Episode 1 built those and this episode is the
+payoff for several of them. New visual families introduced here: the software/wetware
+stack, the fractal zoom, the transistor schematic, and the phase diagram.
+
+---
+
+## G-01 — Title card
+
+- **Anchor:** `Toussaint (00:00)`
+- **Hold:** through 00:10
+- **Type:** static
+- **Content:** *Architecting the Operation* / Episode 2 / "The Preface" /
+  subtitle: What racism actually is.
+
+## G-02 — Ten definitions
+
+- **Anchor:** `Aisha (00:04)`
+- **Hold:** through 00:15
+- **Type:** text accumulation, then collision
+- **Content:** the seven definitions Aisha reads land one at a time as separate cards.
+  Prejudice plus power · Individual hatred · A system · Unconscious bias · A slur ·
+  A hiring gap · A neighborhood.
+- **Beat 2:** they slide toward one center point and overlap into an unreadable stack.
+- **Note:** `[design]`. The unreadability is the argument. Do not resolve it.
+
+## G-03 — Specification failure
+
+- **Anchor:** `Toussaint (00:28)`
+- **Hold:** through 00:38
+- **Type:** split panel
+- **Left:** an engineering spec sheet with a tolerance field left blank.
+- **Right:** the same part manufactured three different ways, all of them "passing".
+- **Note:** `[design]`.
+
+## G-04 — The definition, stated
+
+- **Anchor:** `Aisha (00:57)`
+- **Hold:** through 01:09
+- **Type:** the episode's thesis card. Hold it longer than feels comfortable.
+- **Content:** RACISM = PSYCHO-LEGAL SOCIAL SOFTWARE, with the four code types listed
+  beneath it (legal · institutional · cultural · affective) and a second line:
+  runs on human predictive cognition — WETWARE.
+- **Note:** `[book]` `Paper/The_Original_Power.tex:178`. Verbatim terms. Do not
+  paraphrase this card.
+
+## G-05 — Two projects
+
+- **Anchor:** `Aisha (01:09)`
+- **Hold:** through 01:33
+- **Type:** two columns, built in parallel
+- **Left, MORAL FAILING:** intervention is persuasion. Tools: education, awareness,
+  contact. Timescale: generations.
+- **Right, EXECUTING CODE:** intervention is a patch. Tools: statute, audit,
+  instrumentation. Timescale: a legislative session.
+- **Note:** `[design]`. Both columns get equal weight and equal type size. This card
+  poses the choice; it does not settle it.
+
+## G-06 — Baltimore
+
+- **Anchor:** `Toussaint (02:06)`
+- **Hold:** through 03:13
+- **Type:** the honesty beat of the cold open. Restrained. No dramatization.
+- **Beat 1:** a single word on black — *Tonight, nothing.*
+- **Beat 2:** the stop redrawn as a system output. One box labeled STOP with five
+  upstream inputs feeding it: budget · staffing model · legal authorization ·
+  political constituency · officer incentives.
+- **Beat 3:** the officer box is removed and the STOP output is unchanged.
+- **Note:** `[design]`. Show no faces, no uniforms, no vehicle, no city identifiers.
+  The abstraction is the point and it is also the safeguard.
+
+## G-07 — The four code types
+
+- **Anchor:** `Toussaint (03:28)`
+- **Hold:** through 03:55
+- **Type:** four stacked bands, each labeled as Toussaint and Aisha name it
+- **Legal:** statutes, ordinances, covenants, sentencing guidelines, zoning maps.
+- **Institutional:** underwriting rules, admissions criteria, risk models, dispatch
+  protocols.
+- **Cultural:** what a society treats as normal.
+- **Affective:** fear, disgust, loyalty, pride.
+- **Note:** `[book]` `:178`.
+
+## G-08 — What the code outputs
+
+- **Anchor:** `Aisha (03:55)`
+- **Hold:** through 04:12
+- **Type:** four words arriving one at a time, large, on black
+- **Content:** PERCEPTION · COMMON SENSE · THREAT DETECTION · SELECTIVE EMPATHY
+- **Note:** `[book]` `:178`, verbatim from the Preface. This is the card the episode
+  will be clipped from. Design it to stand alone.
+
+## G-09 — Wetware
+
+- **Anchor:** `Aisha (05:06)`
+- **Hold:** through 05:35
+- **Type:** the substrate card, paired visually with G-04
+- **Content:** a predictive, pattern-compressing neural network optimized for survival
+  under uncertainty. Beneath it, the tradeoff stated as a dial with two ends:
+  survival under uncertainty ←→ neutral truth-tracking under adversarial input.
+  The needle sits hard against survival.
+- **Note:** `[book]` `:215`.
+
+## G-10 — Borrowed terms
+
+- **Anchor:** `Aisha (05:55)`
+- **Hold:** through 06:22
+- **Type:** citation card, deliberately plain
+- **Content:** ingroup / outgroup / ingroup bias, with the APA Dictionary definitions,
+  then Tajfel and Turner 1979 and the five functions the sorting manages: trust,
+  threat, cooperation, belonging, self-concept.
+- **Note:** `[book]` `:215`. These are standard social-psychological terms before they
+  are variables. The card exists so nobody thinks the book invented them.
+
+## G-11 — Legacy code
+
+- **Anchor:** `Toussaint (06:03)`
+- **Hold:** through 06:49
+- **Type:** three-panel progression
+- **Panel 1:** small-group survival. The heuristic works.
+- **Panel 2:** the same heuristic, unchanged, in a legal environment.
+- **Panel 3:** an arrow labeled "malicious priors" feeding the heuristic from outside.
+- **Note:** `[book]` `:215`. Do not draw a brain with a virus in it. The exploit is
+  supplied input, and the graphic has to show the input arriving from elsewhere.
+
+## G-12 — Testimony and schematic
+
+- **Anchor:** `Emmanuel Theodore (07:13)`
+- **Hold:** through 07:53
+- **Type:** two documents side by side, equal size, neither one on top
+- **Left:** TESTIMONY — what happened, at full resolution. Source of record.
+- **Right:** SCHEMATIC — what produced it, compressed. Calibrated against the left.
+- **Beat 2:** an arrow from left to right labeled "every coefficient comes from here."
+- **Note:** `[design]`. Pays off at G-31. This is the episode's answer to its own
+  hardest objection and the design should not be clever.
+
+## G-13 — Where accountability sits
+
+- **Anchor:** `Emmanuel Theodore (08:23)`
+- **Hold:** through 09:14
+- **Type:** the stack from G-11, with a marker moving up it
+- **Content:** the marker starts on the reflex, then moves up to three labeled
+  artifacts: the 1640 ruling · the redlining map · the risk-model threshold. Caption
+  under each: authored, dated, signed.
+- **Note:** `[book]`. The redlining map must be a generic depiction, not a real
+  HOLC sheet for an identifiable neighborhood.
+
+## G-14 — Fractal
+
+- **Anchor:** `Toussaint (09:32)`
+- **Hold:** through 09:50
+- **Type:** continuous zoom, one unbroken move, no cuts
+- **Content:** the same partition shape recurring at each scale in the Preface's own
+  order. Empire → nation → city → school district → household → ballot line →
+  a single reflex of suspicion.
+- **Note:** `[book]` `:217`. The shape must be literally identical at every scale.
+  Scale invariance is the claim and the graphic is the proof of concept.
+
+## G-15 — Mind virus, and who hosts it
+
+- **Anchor:** `Emmanuel Theodore (10:46)`
+- **Hold:** through 11:35
+- **Type:** the tier stack from Episode 1, with the install point marked
+- **Content:** the virus payload lands on the Buffer Class band and is labeled "the
+  belief that the partition is real and natural." The Out-group band is labeled
+  "what the partition is executed against."
+- **Note:** `[book]` `:217`. This cue answers a misreading that will otherwise cost
+  the episode its audience. Build it so a viewer who watches with sound off still
+  reads the direction correctly.
+
+## G-16 — Two coupled runtimes
+
+- **Anchor:** `Aisha (11:41)`
+- **Hold:** through 12:10
+- **Type:** two loops sharing an axle
+- **Left loop, INSTITUTIONAL:** law, property, policing, finance.
+- **Right loop, COGNITIVE:** fear, status, disgust, loyalty, selective empathy.
+- **Beat 2:** arrows both ways between them. Law shapes the reflex, the reflex votes
+  for the law.
+- **Note:** `[book]` `:217`.
+
+## G-17 — Structural positions
+
+- **Anchor:** `Toussaint (12:32)`
+- **Hold:** through 13:11
+- **Type:** one figure, several axes
+- **Content:** a single unlabeled figure standing at the intersection of stacked axis
+  bars — race, gender, class — with its position on each bar marked independently.
+  On one it sits below the partition line, on another above.
+- **Note:** `[book]` `:219`. Ties directly to Emmanuel's own statement of position in
+  Episode 1 at 09:58. Consider a two-second recall of that episode's card.
+
+## G-18 — The five tiers (master graphic)
+
+- **Anchor:** `Toussaint (13:17)`
+- **Hold:** through 14:07
+- **Type:** the episode's spine. Builds one band at a time as each is named.
+- **Content:** E, extracts value · Puppet Class, translates extraction into law and
+  policy · Enforcement Class, actuates physically · Buffer Class, receives the
+  suppression allocation · Out-group, bears the compounding burden.
+- **Note:** `[book]` `:219`. Reuse Episode 1's stack geometry exactly. Every later cue
+  in this episode recalls this one, so build it to survive being shown small.
+
+## G-19 — Why five: three failures
+
+- **Anchor:** `Emmanuel Theodore (14:32)`
+- **Hold:** through 15:58
+- **Type:** the stack from G-18 assembling itself through three broken drafts
+- **Draft 1, two tiers:** Oppressor / Oppressed. Failure caption: predicts poor white
+  communities accumulate wealth. Record disagrees.
+- **Draft 2, three tiers:** Elite split from the In-group. Failure caption: nobody
+  writes the statute, nobody enforces it.
+- **Draft 3, five tiers:** Puppet and Enforcement added. Caption: minimum configuration
+  the mathematics required.
+- **Note:** `[book]` `:235`. The Appalachia claim is spoken as a directional structural
+  point and carries no number on screen. Do not add one.
+
+## G-20 — The four architectural components
+
+- **Anchor:** `Toussaint (16:04)`
+- **Hold:** through 16:24
+- **Type:** four numbered cards, held as each is read
+- **Content:** 1 asymmetric autonomy restriction · 2 selective empathy · 3 ideological
+  justification through spurious claims · 4 resistance to structural critique.
+- **Note:** `[book]` `:221`. Verbatim.
+
+## G-21 — John Punch, 1640
+
+- **Anchor:** `Emmanuel Theodore (16:33)`
+- **Hold:** through 17:26
+- **Type:** court-record card, three rows, built as the sentence is read
+- **Row 1:** the Scotsman — four additional years.
+- **Row 2:** the Dutchman — four additional years.
+- **Row 3:** John Punch — servitude for life.
+- **Beat 2:** components 1 and 2 from G-20 light up against the rows. Component 3
+  stays dark, with the caption: the court cited no theory, no scripture, no science.
+- **Note:** `[book]` `Paper/The_Original_Power.tex:3190`. Three men, one act, one
+  court, one day. No illustration of the men. The record is the graphic.
+
+## G-22 — Causal order
+
+- **Anchor:** `Emmanuel Theodore (17:42)`
+- **Hold:** through 18:14
+- **Type:** three-step arrow, the episode's most reusable card
+- **Content:** Elite economic interest → systemic racialization → interpersonal
+  prejudice. Beneath it, the dates: 1640 the ruling · 1662–1669 the statutes ·
+  1705 the codes.
+- **Note:** `[book]` `:3190`. The arrow runs left to right and never reverses. This
+  inverts the order most viewers hold, so give it room.
+
+## G-23 — The inversion
+
+- **Anchor:** `Aisha (19:31)`
+- **Hold:** through 20:00
+- **Type:** two diagrams, the second replacing the first
+- **Diagram 1, the intuitive picture:** power originating at the apex and flowing down.
+- **Diagram 2, the Preface's picture:** the supply rail at the base, labeled with the
+  kinetic labor, taxes, and physical output of the Out-group and Buffer Class, and the
+  apex drawn as a small control input.
+- **Note:** `[book]` `:183`. The most important cut in the episode. Make the swap
+  abrupt.
+
+## G-24 — The parasitic control layer
+
+- **Anchor:** `Aisha (19:51)`
+- **Hold:** through 20:50
+- **Type:** the book's own schematic, animated
+- **Content:** Figure P.1 from the manuscript. Transistor stage. Base current labeled
+  laws, algorithms, media narratives. Supply rail labeled V_cc, the kinetic labor of
+  O and I_buffer. Feedback path from the output back into the interference engine.
+- **Note:** `[book]` `fig:parasitic_transistor`, `Paper/The_Original_Power.tex:185`.
+  Redraw it for screen legibility, keep every label the figure uses. This is the first
+  time in the series that a figure from the book appears as itself.
+
+## G-25 — Self-exciting generator
+
+- **Anchor:** `Emmanuel Theodore (20:54)`
+- **Hold:** through 21:35
+- **Type:** loop animation over the G-24 schematic
+- **Content:** a fraction of the output splits off and feeds the field coils. Three
+  labels ride the loop: your labor is the supply · your taxes buy the enforcement ·
+  your attention feeds the narrative layer.
+- **Beat 2:** the compliance line is cut and the whole diagram goes dark.
+- **Note:** `[book]` `:183`. The dark frame is where the episode's title card for
+  clips should be pulled from.
+
+## G-26 — Dynamical homology
+
+- **Anchor:** `Aisha (21:56)`
+- **Hold:** through 23:14
+- **Type:** two systems, one equation
+- **Content:** an electrodynamic control architecture on the left, a socioeconomic one
+  on the right, and a single governing equation between them. Caption: the claim
+  concerns the equations. The units are irrelevant to the homology.
+- **Beat 2:** a pointer to Chapter 2 — augmented Lagrangian control system, with its
+  falsification tests in the same chapter.
+- **Note:** `[book]` `Paper/The_Original_Power.tex:181`, `ch:lagrangian`. This is the
+  joint the whole book hangs from. Label it as the place to attack.
+
+## G-27 — Inductive kickback
+
+- **Anchor:** `Aisha (23:24)`
+- **Hold:** through 23:46
+- **Type:** oscilloscope trace
+- **Content:** steady current, an abrupt interruption, and the voltage spike that
+  follows. Second label under the spike: backlash, predicted output.
+- **Note:** `[book]` `:178`.
+
+## G-28 — Destructive interference
+
+- **Anchor:** `Toussaint (24:17)`
+- **Hold:** through 25:10
+- **Type:** wave animation, the episode's most technical graphic
+- **Beat 1:** several waves of real amplitude, each labeled with an axis — race,
+  gender, class, religion, identity.
+- **Beat 2:** they arrive out of phase and the sum trace stays flat.
+- **Beat 3:** the same waves brought into phase and the sum rises sharply.
+- **Caption under beat 2:** politically hyperactive, structurally inert.
+- **Note:** `[book]` `:281`. Beat 3 is the encouraging half and Emmanuel says so on
+  mic. The amplitudes must be identical in both beats; only phase changes.
+
+## G-29 — The expansion principle
+
+- **Anchor:** `Aisha (26:32)`
+- **Hold:** through 27:20
+- **Type:** an animated boundary over a timeline
+- **Content:** the In-group boundary drawn across the span the script names —
+  Portuguese racialization, the invention of whiteness, the 13th Amendment loophole,
+  redlining, the War on Drugs, the present. The boundary contracts at each step and
+  the Out-group region grows.
+- **Beat 2:** the Elite subset stays a fixed small area throughout.
+- **Note:** `[book]` `:279`. Structural and directional. Carry no percentages, no
+  population figures, and no axis numbers on this card.
+
+## G-30 — Confidence tiers
+
+- **Anchor:** `Aisha (28:16)`
+- **Hold:** through 28:56
+- **Type:** three definition cards plus a count
+- **Tier 1:** directly reported or transparently derivable from a peer-reviewed source
+  or public dataset, with no undisclosed analytical step.
+- **Tier 2:** public dataset with disclosed author operationalisation.
+- **Tier 3:** ordinal or structural claim, no quantitative calibration attempted, basis
+  stated.
+- **Then:** 146 anchor cases · 146 historical events · every claim carries a
+  falsification criterion.
+- **Note:** `[book]` `Paper/The_Original_Power.tex:284`. Verbatim definitions.
+
+## G-31 — The loss
+
+- **Anchor:** `Emmanuel Theodore (29:05)`
+- **Hold:** through 29:38
+- **Type:** callback to Episode 1's hiring-study card
+- **Content:** the 2024 result, then the 2026 matched-pair replication at parity, then
+  the book page where both are printed.
+- **Note:** `[book]`. Episode 1 already stated both halves. Reuse that card exactly so
+  the viewer recognizes it.
+
+## G-32 — Two instruments, in order
+
+- **Anchor:** `Toussaint (30:01)`
+- **Hold:** through 30:56
+- **Type:** sequence diagram, and the order is the content
+- **Step 1, RADICAL EMPATHY (activation):** the viewer icon placed inside each of the
+  five tiers in turn, with what gets mapped listed — incentives, risks, fears, rewards,
+  constraints — and a second panel held alongside it: the full accounting of harm.
+- **Step 2, VEIL OF IGNORANCE (computation):** tier, phenotype, and accumulated
+  advantage strip away, and the architecture is judged on structure alone.
+- **Note:** `[book]` `:244`, Rawls. Step 1 must visibly carry both panels. The second
+  panel is what separates the instrument from excuse-making and Emmanuel says so.
+
+## G-33 — The install point
+
+- **Anchor:** `Toussaint (32:41)`
+- **Hold:** through 33:00
+- **Type:** the G-32 sequence with a friction meter running alongside it
+- **Content:** as the viewer icon moves through the tiers, a resistance reading rises.
+  Caption: feeling the resistance identifies the install point.
+- **Note:** `[book]` `:266`.
+
+## G-34 — The diagnostic question
+
+- **Anchor:** `Toussaint (33:06)`
+- **Hold:** through 33:22
+- **Type:** text on black, no motion
+- **Content:** *If you had no clue which tier you would wake up in, would you co-sign
+  this architecture?*
+- **Note:** `[book]` `:271`. Verbatim. Hold it in silence past the end of the line.
+
+## G-35 — Innocence structurally unavailable
+
+- **Anchor:** `Emmanuel Theodore (33:28)`
+- **Hold:** through 33:51
+- **Type:** the G-18 stack, every band marked
+- **Content:** each tier gets one line. Out-group, extracted from. Buffer Class, paid
+  to hold a line it did not draw. Enforcement, carries out policy it did not write.
+  Puppet Class, executes a preference from above it. Elite, gates the whole thing.
+- **Beat 2:** no band is left unmarked.
+- **Note:** `[book]` `:219`.
+
+## G-36 — Four parts
+
+- **Anchor:** `Toussaint (33:59)`
+- **Hold:** through 35:07
+- **Type:** the book laid out as a life cycle, four segments
+- **Content:** Specification and Origins · The Installation, 1619–1865 · Scaling and
+  Runtime, 1865–present · Diagnostics and Output.
+- **Note:** `[book]` `:277`. The Preface dates part one as 1440s–1787 and the part
+  declaration in the manuscript reads 1440s–1915. The script states no date range for
+  part one and neither should this card until that is settled.
+
+## G-37 — Why a Preface
+
+- **Anchor:** `Emmanuel Theodore (35:26)`
+- **Hold:** through 35:58
+- **Type:** two-column contract card
+- **Left, THE PREFACE:** the specification. Terms, architecture, methodology. Nothing
+  proved here.
+- **Right, THE CHAPTERS:** the implementation. Every claim attached to a tier and a
+  falsification criterion.
+- **Note:** `[design]`.
+
+## G-38 — Next episode
+
+- **Anchor:** `Emmanuel Theodore (36:59)`
+- **Hold:** through the end of the segment
+- **Type:** end card
+- **Content:** Episode 3, Chapter 1: System Initialization. The five nodes. The
+  three-dimensional pyramid. The Tri-Modal Enclosure Model. The optical illusion that
+  hides the apex from the base.
+- **Note:** `[book]` `ch:system_init`.
+
+---
+
+## Sensitivity notes
+
+- **G-06, Baltimore.** No faces, uniforms, vehicles, or city identifiers. The cue
+  exists to answer an objection about usefulness, and any documentary footage would
+  turn it into something else.
+- **G-13, the redlining map.** Generic depiction only. Do not reproduce a real HOLC
+  sheet for an identifiable neighborhood.
+- **G-15, the mind virus.** The install point is the Buffer Class. A viewer watching
+  with sound off must not be able to read this card as pointing at the Out-group.
+- **G-19, Appalachia.** Spoken as a structural, directional claim. No figures on screen.
+- **G-21, John Punch.** Court record only. Do not illustrate the three men.
+- **G-29, expansion.** Directional only. No percentages or population counts.
+
+## Open items
+
+- **G-36 date range.** The Preface writes part one as 1440s–1787; the `\part`
+  declaration writes 1440s–1915. Settle in the manuscript before this card is built.
+- **Episode 1 chapter number.** Episode 1 says *Redefining Racism* is Chapter One of
+  the book. It is Chapter 3, and there are 29 numbered chapters rather than 23. This
+  episode says Chapter Five for Bacon's Rebellion and twenty-nine chapters in total,
+  which is correct, so the two episodes currently disagree.

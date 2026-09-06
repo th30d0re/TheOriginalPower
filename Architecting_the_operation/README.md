@@ -13,12 +13,18 @@ notes/      Emmanuel's reading notes, raw input
 | Episode | Book section | Script | Shot list | Notes |
 |---|---|---|---|---|
 | 1 | Author's Preface | `podcasts/ATO_EP01_authors_preface.md` | `video/ATO_EP01_shotlist.md` | none |
-| 2 | Preface (framework) | not yet written; `podcasts/ATO_EP0.md` is an earlier interview-format draft, not pipeline-parseable | — | `notes/TOP_0_notes.txt` |
+| 2 | Preface (framework) | `podcasts/ATO_EP02_preface.md` | `video/ATO_EP02_shotlist.md` | `notes/TOP02_preface_overview_transcript.md` |
 
-`notes/TOP_0_notes.txt` records Emmanuel's thoughts while reading the **Preface**, not
-the Author's Preface, so it is input for Episode 2. Episode 1 was drafted from the
-manuscript and from Emmanuel's own interjections in the NotebookLM session on the
-Author's Preface.
+Episode 1 was drafted from the manuscript and from Emmanuel's own interjections in the
+NotebookLM session on the Author's Preface.
+
+Episode 2 was drafted from the Preface itself (`Paper/The_Original_Power.tex:174`),
+with its objections taken from `podcasts/ATO_EP0.md`. That file is an earlier
+interview-format draft on the same section: bold headers make it unparseable, and its
+twelve questions were written to be answered on mic. Episode 2 converts them into the
+teaching spine, so Toussaint and Aisha raise each objection and the answer follows.
+`notes/TOP02_preface_overview_transcript.md` supplied the ordering of topics and
+nothing else; its vernacular is the formulaic antithesis the project bans.
 
 The book has two front pieces and they cover different ground. The **Author's Preface**
 (`Paper/The_Original_Power.tex:141`) is the research lineage: four documents over five
