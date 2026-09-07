@@ -126,6 +126,32 @@ project-relative sample paths, so an old backup still opens and finds its audio 
 level down. Short clips cut for review go in `_previews/`; keep the episode root to the
 files above.
 
+## Checking a render
+
+Synthesis fails silently. MLX Chatterbox occasionally finishes a turn's text and
+keeps generating, and the result is a valid WAV, a consistent manifest, and a
+correct-looking Ableton set that a listener hears as gibberish. Run this after every
+render, before delivering anything:
+
+```bash
+python3 tools/check_render_outliers.py outputs/ATO_EP02_local \
+    --transcript Architecting_the_operation/podcasts/ATO_EP02_preface.md
+```
+
+It compares each turn's audio against what its own text predicts, using the per-speaker
+milliseconds-per-word and milliseconds-per-mark in `voice_pipeline/speaker_rates.json`.
+Turns shorter than 20 words are exempt, because fixed breath and pacing overhead does
+not scale with length. Re-synthesize whatever it flags with `--regenerate-turns`, then
+run `tools/relayout_episode.py` — a regenerated clip changes length and leaves a hole in
+the timeline where the old one sat.
+
+Punctuation is in the model deliberately. A comma-heavy list reads with a pause at every
+mark, and a words-only model calls that turn broken when it is being read correctly.
+The signal that does not work, so nobody adds it back: `speech_duration_ms` equalling
+`duration_ms` looks like a clip that was still talking when generation stopped, but the
+post-processor adds `--tail-ms` (150 by default) and clamps to the clip length, so the
+two match on most healthy clips.
+
 ## Sourcing rules
 
 Ground every claim in `Paper/The_Original_Power.tex`. The NotebookLM transcripts are
