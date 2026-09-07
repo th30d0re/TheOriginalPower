@@ -192,6 +192,29 @@ The signal that does not work, so nobody adds it back: `speech_duration_ms` equa
 post-processor adds `--tail-ms` (150 by default) and clamps to the clip length, so the
 two match on most healthy clips.
 
+## Reference audio for voice cloning
+
+A reference clip must be **a complete sentence whose exact text is known**, not the
+loudest N-second window. `tools/extract_reference_audio.py` cuts by loudness and slices
+mid-phrase, which is how the original Toussaint and Aisha clips ended on "or a culture"
+and "the magnitude of". Chatterbox tolerates that because it conditions on audio alone.
+OmniVoice conditions on the audio *and* its transcript together, so a truncated clip
+gives it two signals that disagree.
+
+Measured on eight passages chosen to stress the known failure modes, three runs each:
+
+| engine | reference | mean | worst | catastrophic |
+|---|---|---|---|---|
+| Chatterbox | loudness-cut | 0.93 | 0.26 | yes |
+| OmniVoice | loudness-cut | 0.93 | 0.00 | yes |
+| OmniVoice | full sentence, exact text | 0.997 | 0.96 | none in 24 runs |
+
+So the engine and the reference were both wrong, and fixing either alone leaves
+catastrophic failures. Build references with `tools/audition_voice.py` to score
+candidates before committing to one.
+
+Working references and their exact transcripts live in `voices/candidates/`.
+
 ## Sourcing rules
 
 Ground every claim in `Paper/The_Original_Power.tex`. The NotebookLM transcripts are
