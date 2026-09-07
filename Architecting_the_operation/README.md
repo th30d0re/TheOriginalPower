@@ -128,10 +128,50 @@ files above.
 
 ## Checking a render
 
-Synthesis fails silently. MLX Chatterbox occasionally finishes a turn's text and
-keeps generating, and the result is a valid WAV, a consistent manifest, and a
-correct-looking Ableton set that a listener hears as gibberish. Run this after every
-render, before delivering anything:
+Synthesis fails silently. MLX Chatterbox produces a valid WAV, a consistent manifest,
+and a correct-looking Ableton set while the audio says the wrong thing. Three failure
+modes seen on Episode 2, none of which any structural check can see:
+
+| mode | what the audio does | duration |
+|---|---|---|
+| truncation | stops partway through the line | short |
+| repetition | reads the line, then starts it again | long |
+| opening babble | first few words are noise, then it recovers | correct |
+
+Only the middle one has a duration signature, so **transcription is the check that
+matters.** Run it after every render, before delivering anything:
+
+```bash
+python3 tools/verify_render.py outputs/ATO_EP02_local \
+    --transcript Architecting_the_operation/podcasts/ATO_EP02_preface.md
+```
+
+It transcribes each segment with Whisper on device and scores it against the script.
+The default `tiny` model runs at roughly a quarter-second per segment; re-check anything
+it flags with `--model small` before regenerating, because tiny mishears proper nouns on
+its own. The score that matters is the longest run of consecutive mangled words rather
+than whole-turn similarity: Episode 2's opening rendered "Prejudice plus power" as
+something no model could read as "prejudice" and still scored 0.909 overall.
+
+To verify and repair in one step, which is the normal path:
+
+```bash
+python3 tools/repair_render.py outputs/ATO_EP02_local \
+    --transcript Architecting_the_operation/podcasts/ATO_EP02_preface.md \
+    --episode-id ATO_EP02_local --voices voice_pipeline/voices.local.yaml
+```
+
+That regenerates what fails, re-checks only those turns, repeats up to `--max-passes`,
+and relays the timeline at the end. A turn that fails every pass is reported and left
+alone, because repeated failure on the same text points at the text or the reference
+audio rather than at a bad sample.
+
+Chatterbox sampling is per-speaker config in `voices.yaml`. `temperature` defaults to
+0.6 and `cfg_weight` to 0.7, tighter than the upstream 0.8 and 0.5, because reading a
+fixed script wants faithfulness rather than expressive variation.
+
+The duration check is still worth running as a cheap first look, though it catches only
+the long-clip mode:
 
 ```bash
 python3 tools/check_render_outliers.py outputs/ATO_EP02_local \

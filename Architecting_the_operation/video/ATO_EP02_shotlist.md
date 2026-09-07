@@ -71,8 +71,8 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 
 ## G-04 — The definition, stated
 
-- **Anchor:** `Aisha (00:52)`
-- **Hold:** through 01:05
+- **Anchor:** `Aisha (00:51)`
+- **Hold:** through 01:04
 - **Type:** the episode's thesis card. Hold it longer than feels comfortable.
 - **Content:** RACISM = PSYCHO-LEGAL SOCIAL SOFTWARE, with the four code types listed
   beneath it (legal · institutional · cultural · affective) and a second line:
@@ -84,7 +84,7 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 ## G-04b — Three layers, and which way control runs
 
 - **Anchor:** `Toussaint (01:02)`
-- **Hold:** through 01:52
+- **Hold:** through 01:51
 - **Type:** three stacked bands, built top down, then a control arrow
 - **SOFTWARE:** statutes, ordinances, institutional procedure, and the cultural and
   affective material that carries them.
@@ -103,8 +103,8 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 
 ## G-04c — The psychological wage touches all three
 
-- **Anchor:** `Emmanuel Theodore (02:06)`
-- **Hold:** through 06:17
+- **Anchor:** `Emmanuel Theodore (01:59)`
+- **Hold:** through 06:10
 - **Type:** the G-04b stack with one quantity traced through it
 - **Beat 1:** ψ appears in the WETWARE band, where a listener expects it, labeled
   "what it feels like: status."
@@ -119,7 +119,7 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 
 ## G-05 — Two projects
 
-- **Anchor:** `Aisha (03:10)`
+- **Anchor:** `Aisha (03:03)`
 - **Hold:** through 01:20
 - **Type:** two columns, built in parallel
 - **Left, MORAL FAILING:** intervention is persuasion. Tools: education, awareness,
@@ -131,8 +131,8 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 
 ## G-06 — Baltimore
 
-- **Anchor:** `Toussaint (04:07)`
-- **Hold:** through 02:28
+- **Anchor:** `Toussaint (04:00)`
+- **Hold:** through 02:21
 - **Type:** the honesty beat of the cold open. Restrained. No dramatization.
 - **Beat 1:** a single word on black — *Tonight, nothing.*
 - **Beat 2:** the stop redrawn as a system output. One box labeled STOP with five
@@ -144,8 +144,8 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 
 ## G-07 — The four code types
 
-- **Anchor:** `Toussaint (05:21)`
-- **Hold:** through 02:53
+- **Anchor:** `Toussaint (05:15)`
+- **Hold:** through 02:46
 - **Type:** four stacked bands, each labeled as Toussaint and Aisha name it
 - **Legal:** statutes, ordinances, covenants, sentencing guidelines, zoning maps.
 - **Institutional:** underwriting rules, admissions criteria, risk models, dispatch
@@ -156,8 +156,8 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 
 ## G-08 — What the code outputs
 
-- **Anchor:** `Aisha (05:56)`
-- **Hold:** through 06:17
+- **Anchor:** `Aisha (05:49)`
+- **Hold:** through 06:10
 - **Type:** four words arriving one at a time, large, on black
 - **Content:** PERCEPTION · COMMON SENSE · THREAT DETECTION · SELECTIVE EMPATHY
 - **Note:** `[book]` `:178`, verbatim from the Preface. This is the card the episode
@@ -165,8 +165,8 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 
 ## G-09 — Wetware
 
-- **Anchor:** `Aisha (07:11)`
-- **Hold:** through 07:40
+- **Anchor:** `Aisha (07:05)`
+- **Hold:** through 07:33
 - **Type:** the substrate card, paired visually with G-04
 - **Content:** a predictive, pattern-compressing neural network optimized for survival
   under uncertainty. Beneath it, the tradeoff stated as a dial with two ends:
@@ -176,8 +176,8 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 
 ## G-10 — Borrowed terms
 
-- **Anchor:** `Aisha (08:03)`
-- **Hold:** through 08:34
+- **Anchor:** `Aisha (07:55)`
+- **Hold:** through 08:26
 - **Type:** citation card, deliberately plain
 - **Content:** ingroup / outgroup / ingroup bias, with the APA Dictionary definitions,
   then Tajfel and Turner 1979 and the five functions the sorting manages: trust,
@@ -187,8 +187,8 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 
 ## G-11 — Legacy code
 
-- **Anchor:** `Toussaint (08:12)`
-- **Hold:** through 09:03
+- **Anchor:** `Toussaint (08:04)`
+- **Hold:** through 08:55
 - **Type:** three-panel progression
 - **Panel 1:** small-group survival. The heuristic works.
 - **Panel 2:** the same heuristic, unchanged, in a legal environment.
@@ -198,8 +198,8 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 
 ## G-12 — Testimony and schematic
 
-- **Anchor:** `Emmanuel Theodore (09:22)`
-- **Hold:** through 09:59
+- **Anchor:** `Emmanuel Theodore (09:13)`
+- **Hold:** through 09:50
 - **Type:** two documents side by side, equal size, neither one on top
 - **Left:** TESTIMONY — what happened, at full resolution. Source of record.
 - **Right:** SCHEMATIC — what produced it, compressed. Calibrated against the left.
@@ -209,8 +209,8 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 
 ## G-13 — Where accountability sits
 
-- **Anchor:** `Emmanuel Theodore (10:26)`
-- **Hold:** through 11:18
+- **Anchor:** `Emmanuel Theodore (10:17)`
+- **Hold:** through 11:08
 - **Type:** the stack from G-11, with a marker moving up it
 - **Content:** the marker starts on the reflex, then moves up to three labeled
   artifacts: the 1640 ruling · the redlining map · the risk-model threshold. Caption
@@ -220,8 +220,8 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 
 ## G-14 — Fractal
 
-- **Anchor:** `Toussaint (11:32)`
-- **Hold:** through 11:49
+- **Anchor:** `Toussaint (11:23)`
+- **Hold:** through 11:40
 - **Type:** continuous zoom, one unbroken move, no cuts
 - **Content:** the same partition shape recurring at each scale in the Preface's own
   order. Empire → nation → city → school district → household → ballot line →
@@ -231,8 +231,8 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 
 ## G-15 — Mind virus, and who hosts it
 
-- **Anchor:** `Emmanuel Theodore (12:41)`
-- **Hold:** through 13:32
+- **Anchor:** `Emmanuel Theodore (12:31)`
+- **Hold:** through 13:23
 - **Type:** the tier stack from Episode 1, with the install point marked
 - **Content:** the virus payload lands on the Buffer Class band and is labeled "the
   belief that the partition is real and natural." The Out-group band is labeled
@@ -243,8 +243,8 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 
 ## G-16 — Two coupled runtimes
 
-- **Anchor:** `Aisha (13:38)`
-- **Hold:** through 14:10
+- **Anchor:** `Aisha (13:29)`
+- **Hold:** through 14:00
 - **Type:** two loops sharing an axle
 - **Left loop, INSTITUTIONAL:** law, property, policing, finance.
 - **Right loop, COGNITIVE:** fear, status, disgust, loyalty, selective empathy.
@@ -254,8 +254,8 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 
 ## G-17 — Structural positions
 
-- **Anchor:** `Toussaint (14:26)`
-- **Hold:** through 15:09
+- **Anchor:** `Toussaint (14:16)`
+- **Hold:** through 14:59
 - **Type:** one figure, several axes
 - **Content:** a single unlabeled figure standing at the intersection of stacked axis
   bars — race, gender, class — with its position on each bar marked independently.
@@ -265,8 +265,8 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 
 ## G-18 — The five tiers (master graphic)
 
-- **Anchor:** `Toussaint (15:13)`
-- **Hold:** through 16:07
+- **Anchor:** `Toussaint (15:03)`
+- **Hold:** through 15:57
 - **Type:** the episode's spine. Builds one band at a time as each is named.
 - **Content:** E, extracts value · Puppet Class, translates extraction into law and
   policy · Enforcement Class, actuates physically · Buffer Class, receives the
@@ -276,8 +276,8 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 
 ## G-19 — Why five: three failures
 
-- **Anchor:** `Emmanuel Theodore (16:30)`
-- **Hold:** through 18:03
+- **Anchor:** `Emmanuel Theodore (16:19)`
+- **Hold:** through 17:52
 - **Type:** the stack from G-18 assembling itself through three broken drafts
 - **Draft 1, two tiers:** Oppressor / Oppressed. Failure caption: predicts poor white
   communities accumulate wealth. Record disagrees.
@@ -290,8 +290,8 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 
 ## G-20 — The four architectural components
 
-- **Anchor:** `Toussaint (18:10)`
-- **Hold:** through 18:35
+- **Anchor:** `Toussaint (17:59)`
+- **Hold:** through 18:23
 - **Type:** four numbered cards, held as each is read
 - **Content:** 1 asymmetric autonomy restriction · 2 selective empathy · 3 ideological
   justification through spurious claims · 4 resistance to structural critique.
@@ -299,8 +299,8 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 
 ## G-21 — John Punch, 1640
 
-- **Anchor:** `Emmanuel Theodore (18:43)`
-- **Hold:** through 19:46
+- **Anchor:** `Emmanuel Theodore (18:31)`
+- **Hold:** through 19:34
 - **Type:** court-record card, three rows, built as the sentence is read
 - **Row 1:** the Scotsman — four additional years.
 - **Row 2:** the Dutchman — four additional years.
@@ -312,8 +312,8 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 
 ## G-22 — Causal order
 
-- **Anchor:** `Emmanuel Theodore (20:03)`
-- **Hold:** through 20:37
+- **Anchor:** `Emmanuel Theodore (19:51)`
+- **Hold:** through 20:25
 - **Type:** three-step arrow, the episode's most reusable card
 - **Content:** Elite economic interest → systemic racialization → interpersonal
   prejudice. Beneath it, the dates: 1640 the ruling · 1662–1669 the statutes ·
@@ -323,8 +323,8 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 
 ## G-23 — The inversion
 
-- **Anchor:** `Aisha (22:04)`
-- **Hold:** through 22:29
+- **Anchor:** `Aisha (21:53)`
+- **Hold:** through 22:17
 - **Type:** two diagrams, the second replacing the first
 - **Diagram 1, the intuitive picture:** power originating at the apex and flowing down.
 - **Diagram 2, the Preface's picture:** the supply rail at the base, labeled with the
@@ -335,8 +335,8 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 
 ## G-24 — The parasitic control layer
 
-- **Anchor:** `Aisha (22:22)`
-- **Hold:** through 23:19
+- **Anchor:** `Aisha (22:10)`
+- **Hold:** through 23:06
 - **Type:** the book's own schematic, animated
 - **Content:** Figure P.1 from the manuscript. Transistor stage. Base current labeled
   laws, algorithms, media narratives. Supply rail labeled V_cc, the kinetic labor of
@@ -347,8 +347,8 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 
 ## G-25 — Self-exciting generator
 
-- **Anchor:** `Emmanuel Theodore (23:24)`
-- **Hold:** through 24:03
+- **Anchor:** `Emmanuel Theodore (23:11)`
+- **Hold:** through 23:50
 - **Type:** loop animation over the G-24 schematic
 - **Content:** a fraction of the output splits off and feeds the field coils. Three
   labels ride the loop: your labor is the supply · your taxes buy the enforcement ·
@@ -359,8 +359,8 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 
 ## G-26 — Dynamical homology
 
-- **Anchor:** `Aisha (24:22)`
-- **Hold:** through 25:46
+- **Anchor:** `Aisha (24:09)`
+- **Hold:** through 25:33
 - **Type:** two systems, one equation
 - **Content:** an electrodynamic control architecture on the left, a socioeconomic one
   on the right, and a single governing equation between them. Caption: the claim
@@ -372,8 +372,8 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 
 ## G-27 — Inductive kickback
 
-- **Anchor:** `Aisha (25:55)`
-- **Hold:** through 26:14
+- **Anchor:** `Aisha (25:41)`
+- **Hold:** through 26:01
 - **Type:** oscilloscope trace
 - **Content:** steady current, an abrupt interruption, and the voltage spike that
   follows. Second label under the spike: backlash, predicted output.
@@ -381,8 +381,8 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 
 ## G-28 — Destructive interference
 
-- **Anchor:** `Toussaint (26:44)`
-- **Hold:** through 27:41
+- **Anchor:** `Toussaint (26:26)`
+- **Hold:** through 27:21
 - **Type:** wave animation, the episode's most technical graphic
 - **Beat 1:** several waves of real amplitude, each labeled with an axis — race,
   gender, class, religion, identity.
@@ -394,8 +394,8 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 
 ## G-29 — The expansion principle
 
-- **Anchor:** `Aisha (29:01)`
-- **Hold:** through 29:51
+- **Anchor:** `Aisha (28:41)`
+- **Hold:** through 29:32
 - **Type:** an animated boundary over a timeline
 - **Content:** the In-group boundary drawn across the span the script names —
   Portuguese racialization, the invention of whiteness, the 13th Amendment loophole,
@@ -407,8 +407,8 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 
 ## G-30 — Confidence tiers
 
-- **Anchor:** `Aisha (30:42)`
-- **Hold:** through 31:26
+- **Anchor:** `Aisha (30:22)`
+- **Hold:** through 31:04
 - **Type:** three definition cards plus a count
 - **Tier 1:** directly reported or transparently derivable from a peer-reviewed source
   or public dataset, with no undisclosed analytical step.
@@ -421,8 +421,8 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 
 ## G-31 — The loss
 
-- **Anchor:** `Emmanuel Theodore (31:34)`
-- **Hold:** through 32:04
+- **Anchor:** `Emmanuel Theodore (31:13)`
+- **Hold:** through 31:42
 - **Type:** callback to Episode 1's hiring-study card
 - **Content:** the 2024 result, then the 2026 matched-pair replication at parity, then
   the book page where both are printed.
@@ -431,8 +431,8 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 
 ## G-32 — Two instruments, in order
 
-- **Anchor:** `Toussaint (32:21)`
-- **Hold:** through 33:15
+- **Anchor:** `Toussaint (31:59)`
+- **Hold:** through 32:54
 - **Type:** sequence diagram, and the order is the content
 - **Step 1, RADICAL EMPATHY (activation):** the viewer icon placed inside each of the
   five tiers in turn, with what gets mapped listed — incentives, risks, fears, rewards,
@@ -444,8 +444,8 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 
 ## G-33 — The install point
 
-- **Anchor:** `Toussaint (34:54)`
-- **Hold:** through 35:14
+- **Anchor:** `Toussaint (34:32)`
+- **Hold:** through 34:52
 - **Type:** the G-32 sequence with a friction meter running alongside it
 - **Content:** as the viewer icon moves through the tiers, a resistance reading rises.
   Caption: feeling the resistance identifies the install point.
@@ -453,8 +453,8 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 
 ## G-34 — The diagnostic question
 
-- **Anchor:** `Toussaint (35:19)`
-- **Hold:** through 35:31
+- **Anchor:** `Toussaint (34:57)`
+- **Hold:** through 35:09
 - **Type:** text on black, no motion
 - **Content:** *If you had no clue which tier you would wake up in, would you co-sign
   this architecture?*
@@ -462,8 +462,8 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 
 ## G-35 — Innocence structurally unavailable
 
-- **Anchor:** `Emmanuel Theodore (35:38)`
-- **Hold:** through 36:01
+- **Anchor:** `Emmanuel Theodore (35:16)`
+- **Hold:** through 35:39
 - **Type:** the G-18 stack, every band marked
 - **Content:** each tier gets one line. Out-group, extracted from. Buffer Class, paid
   to hold a line it did not draw. Enforcement, carries out policy it did not write.
@@ -473,8 +473,8 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 
 ## G-36 — Four parts
 
-- **Anchor:** `Toussaint (36:07)`
-- **Hold:** through 37:24
+- **Anchor:** `Toussaint (35:46)`
+- **Hold:** through 37:00
 - **Type:** the book laid out as a life cycle, four segments
 - **Content:** Specification and Origins, 1440s–1915 · The Installation, 1619–1865 ·
   Scaling and Runtime, 1865–present · Diagnostics and Output.
@@ -484,8 +484,8 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 
 ## G-37 — Why a Preface
 
-- **Anchor:** `Emmanuel Theodore (37:41)`
-- **Hold:** through 38:10
+- **Anchor:** `Emmanuel Theodore (37:16)`
+- **Hold:** through 37:46
 - **Type:** two-column contract card
 - **Left, THE PREFACE:** the specification. Terms, architecture, methodology. Nothing
   proved here.
@@ -495,7 +495,7 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 
 ## G-38 — Next episode
 
-- **Anchor:** `Emmanuel Theodore (39:04)`
+- **Anchor:** `Emmanuel Theodore (38:39)`
 - **Hold:** through the end of the segment
 - **Type:** end card
 - **Content:** Episode 3, Chapter 0: System Initialization. The five nodes. The
