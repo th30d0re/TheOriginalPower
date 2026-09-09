@@ -40,6 +40,13 @@ CERTAIN = [
     (r"\bis not\s+\w[^.,;]{0,60},\s*(?:it is|it's|but)\b", "is not X, it is Y"),
     (r"\b(?:less|not so much) about\b[^.]{0,60}\bmore about\b", "less about X, more about Y"),
     (r"\bnot\b[^.]{0,60}\bbut rather\b", "not X but rather Y"),
+    # The same construction with a full stop where the comma was. Emmanuel
+    # caught "The count is not a property of people. It is a setting." in a
+    # draft this checker had passed, because the comma form was the only one
+    # banned. Requiring a copula on both sides keeps ordinary negation clear:
+    # "X is not ready. It will be tomorrow." has no second "is".
+    (r"\b(?:is|are|was|were)\s+not\s+\w[^.;]{0,70}\.\s+"
+     r"(?:It|They|That|This)\s+(?:is|are|was|were)\b", "is not X. It is Y"),
 ]
 
 # The shape of a corrective contrast: a negated predicate, a full stop, then a
@@ -54,6 +61,22 @@ REVIEW = [
 ]
 
 CERTAIN = [(re.compile(p, re.I), n) for p, n in CERTAIN]
+
+# Quoted material is somebody else's prose. Tench Coxe wrote "the unlimited
+# power of the sword is not in the hands of either the federal or state
+# governments, but ... in the hands of the people" in 1788, and a house style
+# rule has no business editing him. Blank the inside of quotations before
+# matching so a primary source can never trip the gate.
+_QUOTED = re.compile(
+    "``.*?''"                      # LaTeX quotes
+    "|\u201c.*?\u201d"              # curly quotes
+    "|\\\\enquote\\{[^}]*\\}",       # \\enquote{...}
+    re.S,
+)
+
+
+def _mask_quotes(line: str) -> str:
+    return _QUOTED.sub(lambda m: " " * len(m.group(0)), line)
 REVIEW = [(re.compile(p, re.I), n) for p, n in REVIEW]
 
 
@@ -62,7 +85,7 @@ def scan(path: Path) -> tuple[list, list]:
     for lineno, raw in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
         if not raw.strip() or ALLOW.search(raw):
             continue
-        line = ALLOW.sub("", raw)
+        line = _mask_quotes(ALLOW.sub("", raw))
         for rx, name in CERTAIN:
             for m in rx.finditer(line):
                 certain.append((lineno, name, excerpt(line, m)))
