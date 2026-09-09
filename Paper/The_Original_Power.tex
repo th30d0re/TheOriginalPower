@@ -207,7 +207,7 @@ A critical architectural clarification: the Elite ($E$) \textit{gate} the energy
   \node[font=\scriptsize, black!65, align=center, text width=5.2cm] at (-0.25,-1.65)
     {feedback: portion of output powers the interference engine};
 \end{circuitikz}
-\caption[The Elite as a parasitic control layer]{\textbf{The Elite as a Parasitic Control Layer.} This schematic renders the transistor-stage and self-exciting feedback mapping stated in the Preface and introduces no new calibration.}
+\caption[The Elite as a parasitic control layer]{\textbf{The Elite as a Parasitic Control Layer.} The transistor stage and self-exciting feedback described in the Preface.}
 \label{fig:parasitic_transistor}
 \end{figure}
 
@@ -414,6 +414,13 @@ class momentum without transferring material energy. The cross product
 $\vec{v} \times \vec{B}$ is the mathematical signature of the psychological
 wage: it is always orthogonal to velocity, so it does zero work.
 
+$\mathbf{Q}$ is the coupling among the three layers named in the Preface. The
+software writes the partition that assigns the charge. The wetware carries that
+charge as a predictive prior. The hardware is the field through which the
+charged host moves. The Mind Virus is the exploit that performs the assignment:
+legal code enters the person, and $\mathbf{Q}$ is the resulting charge on the
+host.
+
 \begin{figure}[htbp]
 \centering
 \renewcommand{\thefigure}{0.\arabic{figure}}
@@ -431,7 +438,7 @@ wage: it is always orthogonal to velocity, so it does zero work.
     node[midway, above left=7pt, font=\scriptsize, fill=white, inner sep=2pt]
     {$\vec F_{\mathrm{total}}$};
 \end{tikzpicture}
-\caption[The unified Lorentz-force decomposition]{\textbf{The Unified Lorentz-Force Decomposition.} This vector diagram renders the electric term, summed magnetic cross-product term, and resultant specified by Equation~\ref{eq:0.1-unified-lorentz-force} and introduces no new claim, measurement, or calibration.}
+\caption[The unified Lorentz-force decomposition]{\textbf{The Unified Lorentz-Force Decomposition.} The electric term, the summed magnetic cross-product term, and the resultant, as specified by Equation~\ref{eq:0.1-unified-lorentz-force}.}
 \label{fig:unified_lorentz}
 \end{figure}
 
@@ -545,7 +552,7 @@ directly. The lower layers occlude it.
   \draw[->] (apex) -- (0,5.35)
     node[above, font=\scriptsize] {$z$};
 \end{tikzpicture}
-\caption[The five-tier 3-D pyramid]{\textbf{The Five-Tier 3-D Pyramid.} This diagram renders the tier placement specified in Section~\ref{sec:system_init_nodes} and introduces no new claim, measurement, or calibration.}
+\caption[The five-tier 3-D pyramid]{\textbf{The Five-Tier 3-D Pyramid.} Tier placement follows Section~\ref{sec:system_init_nodes}.}
 \label{fig:tier_pyramid}
 \end{figure}
 
@@ -592,10 +599,10 @@ $O$ & Sink / Ground & All net current flows here. The population positioned as e
     {dielectric/insulator};
   \node[font=\scriptsize, align=left, anchor=west] at (8.1,1.25)
     {voltage\\source};
-  \node[font=\scriptsize, align=center, below=4pt] at (ground)
+  \node[font=\scriptsize, align=center, anchor=north] at ([yshift=-12pt]ground.south)
     {$O$\\sink/ground};
 \end{circuitikz}
-\caption[The five-tier extraction circuit]{\textbf{The Five-Tier Extraction Circuit.} This schematic renders the node-to-element mapping stated in Section~\ref{sec:hardware_mapping} and introduces no new calibration.}
+\caption[The five-tier extraction circuit]{\textbf{The Five-Tier Extraction Circuit.} The node-to-element mapping stated in Section~\ref{sec:hardware_mapping}.}
 \label{fig:extraction_circuit}
 \end{figure}
 
@@ -932,7 +939,7 @@ C = \frac{\epsilon A}{d}
     text width=4.0cm, inner xsep=6pt] at (3.65,-1.05)
     {$A,d$: geographic and social distance maintained by redlining, segregation, and $P_{\text{spatial}}$};
 \end{tikzpicture}
-\caption[The social capacitor]{\textbf{The Social Capacitor.} This formal schematic renders the capacitance equation and assigned social roles stated in Section~\ref{subsec:capacitor}; the correspondence is one of governing equations, not of substance, and it introduces no new claim, measurement, or calibration.}
+\caption[The social capacitor]{\textbf{The Social Capacitor.} The capacitance equation and the social roles assigned in Section~\ref{subsec:capacitor}. The correspondence holds at the level of the governing equations.}
 \label{fig:social_capacitor}
 \end{figure}
 
@@ -958,7 +965,7 @@ the circuit closed.
   \draw[->, line width=0.9pt] (-3,0.82) -- (3,0.82) node[midway, above=3pt, font=\scriptsize] {$i(t)\downarrow$: collapsing oppressive current};
   \draw[<-, dashed, line width=0.9pt] (-3,-1.05) -- (3,-1.05) node[midway, below=3pt, font=\scriptsize] {$V_{\text{back-EMF}}=-L\,di/dt$: induced reactionary backlash};
 \end{circuitikz}
-\caption[Inductive kickback]{\textbf{Inductive Kickback.} This circuit renders the collapsing-current condition, reverse voltage, and social roles specified in Section~\ref{subsec:inductor} and introduces no new claim or calibration.}\label{fig:inductive_kickback}
+\caption[Inductive kickback]{\textbf{Inductive Kickback.} The collapsing-current condition, the reverse voltage, and the social roles specified in Section~\ref{subsec:inductor}.}\label{fig:inductive_kickback}
 \end{figure}
 
 \subsection{The Diode --- Redlining and Segregation}
@@ -1096,7 +1103,7 @@ I_E(t) \;=\; \sum_{k=1}^{N} \rho_k\,A_k\,\cos\!\bigl(\omega t + \phi_k\bigr).
   \draw[black, densely dotted, line width=1.2pt] (0,-0.65) -- (6.5,-0.65) node[right, font=\scriptsize] {$i_j+i_k\approx0$: high $\Phi_{\text{load}}$, kernel-safe};
   \node[font=\scriptsize, fill=white, inner sep=2pt] at (3.25,1.55) {$\Delta\phi=\phi_2-\phi_1$ (symbolic; tuned for cancellation)};
 \end{tikzpicture}
-\caption[Destructive interference]{\textbf{Destructive Interference.} This schematic renders the interference engine's stated cancellation of lower-tier class-coherence signals and introduces no new calibration; the displayed antiphase traces are illustrative because the specified phase offset $\Delta\phi$ remains symbolic.}\label{fig:destructive_interference}
+\caption[Destructive interference]{\textbf{Destructive Interference.} The interference engine cancelling lower-tier class-coherence signals. The antiphase traces are illustrative, since the phase offset $\Delta\phi$ is symbolic.}\label{fig:destructive_interference}
 \end{figure}
 Equation~\eqref{eq:0.11-elite-node-kirchhoff} formalizes the
 conservation law that underwrites the entire Polymorphic Interface
@@ -1328,7 +1335,7 @@ mathematical definition of \textbf{historical reparations}: the time integral of
   \node[font=\scriptsize, blue!65!black, fill=white, inner sep=2pt] at (5.15,2.75)
     {illustrative real-power curve};
 \end{tikzpicture}
-\caption[The reparations integral]{\textbf{The Reparations Integral.} This diagram renders the definite integral specified by Equation~\ref{eq:0.16-reparations-integral} and introduces no new claim or calibration; the curve shape is illustrative and does not imply calibrated values.}
+\caption[The reparations integral]{\textbf{The Reparations Integral.} The definite integral specified by Equation~\ref{eq:0.16-reparations-integral}. The curve shape is illustrative and implies no calibrated values.}
 \label{fig:reparations_integral}
 \end{figure}
 
@@ -2144,7 +2151,7 @@ The baseline state of absolute extraction is circuit equilibrium ($q = 0$, zero 
   \node[font=\scriptsize, align=center, text width=2.0cm] at (6.0,1.35)
     {token-reform\\absorption capacity};
 \end{circuitikz}
-\caption[The series RLC topology]{\textbf{The Series RLC Topology.} This schematic renders the series topology and component roles stated in Sections~\ref{subsec:resistor}--\ref{subsec:inductor} and Equation~\ref{eq:1.7a-rlc-governing} and introduces no new calibration.}
+\caption[The series RLC topology]{\textbf{The Series RLC Topology.} The series topology and component roles stated in Sections~\ref{subsec:resistor}--\ref{subsec:inductor} and Equation~\ref{eq:1.7a-rlc-governing}.}
 \label{fig:rlc_topology}
 \end{figure}
 
@@ -2280,7 +2287,7 @@ Equations~\ref{eq:1.8-suppression-envelope}--\ref{eq:1.10-effective-coherence} p
   \draw[red!65!black, dashed, line width=1pt] plot[smooth] coordinates {(0,0.3) (1.2,0.4) (2.2,0.65) (3.4,1.5) (5,1.9) (6.6,2.15)} node[right, font=\scriptsize] {$\Sigma_{\text{sup}}(t)$: suppression envelope};
   \draw[gray!70, dash dot, ->] (2.2,0.05) -- (2.2,2.35); \node[font=\scriptsize, gray!70, fill=white, inner sep=2pt] at (1.15,2.05) {reform shock}; \node[font=\scriptsize, fill=white, inner sep=2pt] at (4.55,0.72) {$d\Sigma_{\text{sup}}/dt\ge dM/dt$; $M_{\text{eff}}<\tau$};
 \end{tikzpicture}
-\caption[The class-coherence threshold]{\textbf{The Class-Coherence Threshold.} This diagram renders the stated race between class coherence and the suppression envelope, with the kernel expanding $\Sigma_{\text{sup}}(t)$ to hold $M_{\text{eff}}(t)<\tau$, and introduces no new calibration; both curve shapes are illustrative and do not imply measured values.}\label{fig:coherence_threshold}
+\caption[The class-coherence threshold]{\textbf{The Class-Coherence Threshold.} The race between class coherence and the suppression envelope, with the kernel expanding $\Sigma_{\text{sup}}(t)$ to hold $M_{\text{eff}}(t)<\tau$. Both curve shapes are illustrative and imply no measured values.}\label{fig:coherence_threshold}
 \end{figure}
 
 \paragraph{Falsification criteria.}
@@ -2791,7 +2798,7 @@ W = \psi_m + j\psi_s
   \node[font=\scriptsize, align=left, right] at (4.8,3.25)
     {$\psi_s = Q_{\text{reactive}}$\\$= |V||I|\sin\theta$};
 \end{tikzpicture}
-\caption[The complex wage phasor]{\textbf{The Complex Wage Phasor.} This schematic renders the real/reactive decomposition stated in Equation~\ref{eq:2.2a-complex-suppression-allocation} and introduces no new calibration.}
+\caption[The complex wage phasor]{\textbf{The Complex Wage Phasor.} The real and reactive decomposition stated in Equation~\ref{eq:2.2a-complex-suppression-allocation}.}
 \label{fig:complex_wage_phasor}
 \end{figure}
 where $j = \sqrt{-1}$ signals that $\psi_s$ operates in a domain

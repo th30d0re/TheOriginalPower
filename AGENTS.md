@@ -240,6 +240,58 @@ there is no Makefile there and make exits immediately with "No rule to make
 target". Confirm afterwards that `Paper/The_Original_Power.pdf` exists and that
 the log reports no undefined references.
 
+### Confirming the build actually worked
+
+latexmk exits zero on builds that are wrong in ways that matter. A guarded figure
+falls back to a placeholder, a broken `\\ref` renders as `??`, and a build that
+never re-ran leaves the previous PDF sitting there looking correct. None of that
+changes the exit code, so **never treat a clean exit as a successful build**:
+
+```bash
+python3 tools/check_pdf_build.py --expect "a phrase you just added to the .tex"
+```
+
+`--expect` is the check that matters. It is the only one that proves the PDF in
+front of you was built from the sources in front of you; everything else passes
+just as happily on a stale PDF. Pass a distinctive phrase from your own edit.
+
+The current healthy baseline is 1151 pages, zero errors, zero undefined
+references, zero undefined citations, no literal `??`, and exactly one figure
+placeholder. That one placeholder is expected: the GDELT per-axis PSD figure in
+Chapter 14 waits on a BigQuery run via `gdelt_per_axis_query.py`. A second
+placeholder means a figure fell back silently and the build is wrong.
+
+### Building from an editor
+
+Cursor and VS Code build through LaTeX Workshop, which does not inherit the
+Makefile's environment. Two consequences:
+
+**Never put `PATH` in a tool's `env`.** The extension expands placeholders in
+`args` and does NOT expand them in `env`, so a value like
+`${workspaceFolder}/.tooling:${env:PATH}` is passed through literally. That
+replaces the real PATH with two directories that do not exist, and the build dies
+with `spawn latexmk ENOENT` before it starts. The biber shim therefore goes in as
+a latexmk override in `args`, mirroring the Makefile:
+
+```
+"-e", "$biber=q{%WORKSPACE_FOLDER%/.tooling/biber %O %S}"
+```
+
+The shim exists because the system biber fails on Apple Silicon with a lipo
+error, and without it the bibliography silently stops updating.
+
+**Pin the root file.** Left to itself the extension scans every `.tex` in the
+workspace, finds around three hundred across `.worktrees/`,
+`.claude/worktrees/` and `build/epub/tikz/`, and builds whichever sorts first —
+in practice a file in `Josh/`. `latex-workshop.latex.search.rootFiles.include`
+names the manuscript and the matching `exclude` list keeps the scan out of the
+worktrees.
+
+`.vscode/settings.json` carries both fixes and Cursor reads it. An editor build
+also sets the reproducibility variables there, so it stays byte-comparable with
+`make pdf-from-tex`. Even so, run `make pdf-from-tex` from the repository root
+before committing a regenerated PDF, then `make verify-pdf`.
+
 ### CI compiles; it does not byte-verify
 
 `make verify-pdf` (byte-identical rebuild vs the committed PDF) is a **local**
