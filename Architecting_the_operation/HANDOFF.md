@@ -1,48 +1,82 @@
 # Handoff — Architecting the Operation
 
-State as of 2026-09-11 (second pass, same day). Written for whoever picks this up next.
+State as of 2026-09-11 (third pass, same day). Written for whoever picks this up next.
 
-## What just happened
+## What just happened (this pass — re-architecture)
 
-Chapter 2, "Redefining Racism," is drafted: a factual brief (`notes/CH2_findings.md`,
-built directly against `Paper/The_Original_Power.tex:1567–2681`, following the
-`CH0_findings.md` pattern exactly — section map, every verbatim definition, every
-named citation, a ranked hardest-ideas list, a hazards audit) and, from that brief,
-`podcasts/ATO_EP03_redefining_racism.md` plus `video/ATO_EP03_shotlist.md`. This is
-the episode the previous handoff called "next task." It parses clean (352 turns,
-11,128 words, no unknown speakers, no bracket leaks) but is **unrendered** — no
-OmniVoice pass, no verification, no stitch. That is the very next task if you want
-this episode finished rather than drafted.
+Emmanuel reviewed the drafted Episode 3 and made two calls that changed its shape.
+First: Episode 3 ("Redefining Racism") is very likely the **first episode most new
+listeners will encounter**, because the Preface and Chapter 0 are notation- and
+logic-heavy and mostly reward readers already sold on the math, while Chapter 2
+states a claim a stranger already has an opinion about. Second: he wants every named
+mechanism in the chapter explained at **four escalating levels** — five-year-old,
+high schooler, college, PhD — rather than the single-register walkthrough the first
+draft used, and he explicitly chose to let the episode run long rather than trim
+scope to hit a target length.
 
-A delegate attempt at the brief (Codex, `gpt-5.6-sol`) correctly refused to write it:
-the working tree had unrelated uncommitted changes elsewhere in the repo
+`podcasts/ATO_EP03_redefining_racism.md` was rebuilt end to end around that device.
+Toussaint names the level ("Five year old." / "High schooler." / "College." /
+"PhD."), Aisha delivers the first two registers, Emmanuel Theodore delivers the last
+two — a consistent rhythm repeated across ten named mechanisms (the five-tier
+refinement, recursive local partition, the Du Bois "Propaganda of History" /
+gaslighting-variable result, the causal-arrow reversal, prejudice vs. racism, and
+the seven modules of the diagnostic model: biological embedding, the kernel/rootkit
+objective, the zero-day exploit, the Bayesian defense, polymorphic code, the RLC
+backlash circuit, fractal execution, the lexical fractal, the corrupted firewall,
+and the Δmax=0 invariant, plus the closing three-modes note). Almost all of the prior
+draft's researched substance — the antebellum cotton case study, the post-1965
+Backlash Wave numbers, the Jim Crow→War on Drugs cost-optimizer walkthrough, the
+master/slave lexical timeline, the Great Compression's three-part rebuttal — survives
+inside the PhD-level continuations rather than being cut; the rewrite is a
+restructuring of delivery, not a loss of research. The cold open was also rewritten
+to be genuinely self-contained: no "last time" or episode-order reference, since this
+script can no longer assume any prior episode has been heard.
+
+It parses clean (258 turns, 11,110 words, no unknown speakers, no bracket leaks) and
+passes `check_antithesis.py` with zero CERTAIN findings. Runtime by word count is
+**~74–77 minutes**, comparable to the original single-register draft despite covering
+roughly twice as many distinct explanatory passes — the four-level device is doing
+real compression work per minute of runtime. `video/ATO_EP03_shotlist.md`
+was rewritten to match: the old episode-spanning "SYSTEM SCAN" HUD is now scoped only
+to the diagnostic-model interior, and a new recurring "Level Card" badge (AGE 5 / HIGH
+SCHOOL / COLLEGE / PhD, color-shifting cooler as it climbs) is the episode's signature
+visual device. It is still **unrendered**.
+
+One technical note for whoever renders this: an early draft embedded literal LaTeX
+math (`$...$`, `\text{}`, subscripts) directly in spoken turns, and the markup
+tokenizer choked on stray `[0,1]`-style bracket pairs and silently dropped underscores/
+carets in a way that mangled prose (confirmed by a bracket-leak and word-count check
+against `voice_pipeline.parser`/`voice_pipeline.markup`). All formalism in this script
+is now spoken English ("the inverse square root of inductance times capacitance"),
+matching Episodes 1–2's convention. If a future rewrite is tempted to paste LaTeX into
+a script for precision, don't — verify with the parser/markup check in the pipeline
+section below first.
+
+A delegate attempt at the original brief (Codex, `gpt-5.6-sol`) correctly refused to
+write it: the working tree had unrelated uncommitted changes elsewhere in the repo
 (`.mcp.json`, `debate/police-origin.md`, several untracked directories) and the
 commit-before-destroy rule blocked it from creating a new file until those were
 committed. That refusal was correct per AGENTS.md and is not a bug to route around —
 either commit first, or do what happened here: write the brief yourself from a direct
 read of the chapter instead of delegating it.
 
-At 74 minutes by word count, this episode runs longer than Episodes 1–2 (59 and 40
-minutes). Chapter 2 is denser than either prior source: three sections, but the third
-(the fractal-computer-virus diagnostic model) is 62% of the chapter on its own, with
-ten subsections and two full case studies. It was drafted as one episode because the
-prior handoff said "that episode," singular — but it is a genuine candidate for the
-same split Chapter 0 got flagged for below (item 3). Consider splitting before
-rendering if 74 minutes feels wrong for the release cadence: the natural seam is after
-"Racism as Primary Example" ends and "The Diagnostic Model" begins (roughly the 12:40
-mark in the current script), which would produce a ~13-minute "the word, rebuilt"
-episode and a ~61-minute "the diagnostic model" episode.
+Given the length (~75 minutes) and that this is now expected to be the series' front
+door, the split question below is worth revisiting again before rendering: the
+four-level device gives cleaner seams than the old single-register draft did, since
+each of the ten named-mechanism blocks is now a self-contained seven-to-nine-minute
+unit. A natural split, if one is wanted, is Parts 1–2 (the binary refined, the word
+rebuilt — roughly the first 17 minutes) as a short primer, against Part 3 (the full
+diagnostic model — roughly 58 minutes) as its own episode. Not yet decided.
 
-Two passages needed explicit handling per the hazards audit and got it: the
-Thistlewood/Abba historical record gets a spoken content note before it airs (Toussaint,
-23:20) and a plain image-free video treatment (shot G-24); the 1662 Virginia
-`partus sequitur ventrem` law gets a citation-only, no-imagery treatment (shot G-46).
+Two passages needed explicit handling per the hazards audit and still get it: the
+Thistlewood/Abba historical record gets a spoken content note before it airs
+(Toussaint) and a plain image-free video treatment (shot G-20); the 1662 Virginia
+`partus sequitur ventrem` law gets a citation-only, no-imagery treatment (shot G-38).
 Three other hazards from the audit were deliberately preserved rather than smoothed
 over, because cutting them would have understated the chapter's own argument: the
-Ehrlichman quote's disputed status (script line ~32:03, shot G-32), the Anslinger quote
-the manuscript explicitly declines to use (script ~34:10, shot G-35), and the Great
-Compression counter-case getting its full three-part rebuttal rather than a wave-away
-(script ~59:14, shot G-65).
+Ehrlichman quote's disputed status (shot G-26), the Anslinger quote the manuscript
+explicitly declines to use (shot G-27), and the Great Compression counter-case getting
+its full three-part rebuttal rather than a wave-away (shot G-49).
 
 ## What this is
 
@@ -86,10 +120,12 @@ opinion about, where "System Initialization: The Geometry of Extraction" offers
 them nothing.
 
 **Next task: render Episode 3.** Decide the split question in "What just happened"
-above first (one 74-minute episode or two shorter ones); either way, the script
-content is drafted and only needs rendering, verification, stitching, and retiming
-per the pipeline below. After that, Chapter 0 (item 3 below) is the next unstarted
-chapter.
+above first (one ~75-minute episode or two shorter ones); either way, the
+four-level script and its matching shot list are drafted and only need rendering,
+verification, stitching, and retiming per the pipeline below. After that, Chapter 0
+(item 3 below) is the next unstarted chapter — and if the four-level device reads
+well in Episode 3, it's a candidate for adoption across the whole series going
+forward.
 
 ## Open items
 
