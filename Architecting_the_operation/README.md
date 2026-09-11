@@ -16,17 +16,32 @@ notes/      Emmanuel's reading notes, raw input
 | 2 | Preface (framework) | `podcasts/ATO_EP02_preface.md` | `video/ATO_EP02_shotlist.md` | `notes/TOP02_preface_overview_transcript.md` |
 | 3 | Chapter 2, Redefining Racism | `podcasts/ATO_EP03_redefining_racism.md` | `video/ATO_EP03_shotlist.md` | `notes/CH2_findings.md` |
 
-Episode 3 opens the public run on the manuscript proper. It was drafted from a full
-factual brief (`notes/CH2_findings.md`) built directly against `Paper/The_Original_Power.tex`
-lines 1567–2681, following the same pattern as `notes/CH0_findings.md`: a delegate-grade
-brief first (section map, every verbatim definition, every named citation, a ranked hardest-
-ideas list, and a hazards audit), then the script drafted by hand against that brief rather
-than against the manuscript directly. It is unrendered as of this commit — 352 turns, ~74
-minutes by word count, timestamps hand-estimated and not yet corrected by
-`tools/retime_script.py`. The hazards audit's two graphic-content passages (the Thistlewood/
-Abba record, and the 1662 Virginia `partus sequitur ventrem` law) are flagged verbally in the
-script itself and get a plain, image-free video treatment per the shot list's content-note
-handling.
+Episode 3 opens the public run on the manuscript proper, and is expected to be the
+first episode most new listeners encounter — the Preface and Chapter 0 run notation-
+and logic-heavy and reward readers already sold on the framework's math, where
+Chapter 2 states a claim a stranger already has an opinion about. It was drafted from
+a full factual brief (`notes/CH2_findings.md`) built directly against
+`Paper/The_Original_Power.tex` lines 1567–2681, following the same pattern as
+`notes/CH0_findings.md`: a delegate-grade brief first (section map, every verbatim
+definition, every named citation, a ranked hardest-ideas list, and a hazards audit),
+then the script drafted by hand against that brief rather than against the manuscript
+directly.
+
+The script was then rebuilt around a four-level explanatory device — every named
+mechanism in the chapter gets explained as if to a five-year-old, then a high
+schooler, then a college student, then defended at PhD level with full citations and
+falsification conditions — since this episode is the series' front door and needs to
+work for a listener with zero prior exposure to the framework, while still carrying
+the manuscript's actual rigor through to the fourth pass. Toussaint names the level,
+Aisha delivers the first two registers, Emmanuel Theodore delivers the last two,
+repeated across ten named mechanisms. It is unrendered as of this commit — 258 turns,
+~11,100 words, ~74–77 minutes by word count, timestamps computed from word count and
+not yet corrected by `tools/retime_script.py`. The hazards audit's two graphic-content
+passages (the Thistlewood/Abba record, and the 1662 Virginia `partus sequitur ventrem`
+law) are flagged verbally in the script itself and get a plain, image-free video
+treatment per the shot list's content-note handling, and the shot list's signature
+visual device is now a recurring "Level Card" badge tracking which of the four
+registers is currently playing.
 
 Episode 1 was drafted from the manuscript and from Emmanuel's own interjections in the
 NotebookLM session on the Author's Preface.
