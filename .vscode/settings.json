@@ -3,21 +3,45 @@
   "python.terminal.activateEnvironment": true,
   "jupyter.kernelSpec.notebookPythonInterpreterPath": "${workspaceFolder}/.venv/bin/python3",
   "jupyter.notebookFileRoot": "${workspaceFolder}",
-  "latex-workshop.latex.rootFile": "Paper/The_Original_Power.tex",
+
+  // Root detection: without this the extension scans every .tex in the
+  // workspace, finds ~300 of them across .worktrees/, .claude/worktrees/ and
+  // build/epub/tikz/, and builds whichever sorts first. Naming the manuscript
+  // makes it deterministic.
+  "latex-workshop.latex.search.rootFiles.include": ["Paper/The_Original_Power.tex"],
+  "latex-workshop.latex.search.rootFiles.exclude": [
+    "**/.worktrees/**",
+    "**/.claude/worktrees/**",
+    "build/**",
+    "Josh/**",
+    "ModernMisandry/**",
+    "supporting_material/**",
+    "rhetorical_patches/**",
+    "simulator/**"
+  ],
+
   "latex-workshop.latex.outDir": "%DIR%",
   "latex-workshop.latex.tools": [
     {
       "name": "latexmk",
       "command": "latexmk",
+      // The biber shim is passed as a latexmk -e override rather than through
+      // PATH. This extension does NOT expand ${workspaceFolder} or ${env:PATH}
+      // inside `env`, so setting PATH there replaces the real PATH with two
+      // literal strings and latexmk itself stops resolving. Placeholders like
+      // %WORKSPACE_FOLDER% ARE expanded in `args`, so the override goes here.
+      // Mirrors the Makefile's `-e '$biber=q{$(BIBER_SHIM) %O %S}'`.
       "args": [
         "-pdf",
         "-interaction=nonstopmode",
         "-halt-on-error",
         "-synctex=1",
+        "-e",
+        "$biber=q{%WORKSPACE_FOLDER%/.tooling/biber %O %S}",
         "%DOC%"
       ],
+      // Keeps an editor build byte-comparable with `make pdf-from-tex`.
       "env": {
-        "PATH": "${workspaceFolder}/.tooling:${env:PATH}",
         "SOURCE_DATE_EPOCH": "1704067200",
         "FORCE_SOURCE_DATE": "1",
         "TZ": "UTC"
