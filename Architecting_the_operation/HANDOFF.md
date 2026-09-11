@@ -40,7 +40,31 @@ real compression work per minute of runtime. `video/ATO_EP03_shotlist.md`
 was rewritten to match: the old episode-spanning "SYSTEM SCAN" HUD is now scoped only
 to the diagnostic-model interior, and a new recurring "Level Card" badge (AGE 5 / HIGH
 SCHOOL / COLLEGE / PhD, color-shifting cooler as it climbs) is the episode's signature
-visual device. It is still **unrendered**.
+visual device.
+
+**Update, same session — rendered.** Episode 3 went through the full pipeline:
+OmniVoice render (258 turns, 258/258 speakers resolved, 76:42 runtime) into
+`outputs/ATO_EP03_local/`, `verify_render.py` (whisper-tiny flagged 19 turns,
+mostly whisper-tiny mishearing short isolated Level-Card lines like "College."
+as "call it." — whisper-small cleared all but two), `repair_render.py`
+(whisper-small, threshold 0.90, 4 passes). One flagged turn was a real defect:
+turn 96 (Aisha) had ~900ms of dead air where "Module two." should have
+synthesized, confirmed directly by waveform inspection rather than the
+transcript diff alone — regenerated clean. Two other regenerated turns (178, 195) also cleared. One
+turn (93, Emmanuel Theodore, the antebellum cotton figures) stayed flagged at
+score 0.943 purely from Whisper's numeral normalization ("seventy four point
+one million dollars" heard back as "$74.1 million"); waveform-checked
+separately (66.6s, longest silent run 0.8s) and accepted as a false positive —
+`check_render_outliers.py` also finds zero duration outliers episode-wide.
+Stitched to `ATO_EP03_local.mp3` (76:42), then `retime_script.py --apply`
+rewrote 252 of 258 script header timestamps and remapped 60 shot-list anchors
+against the real manifest (drift up to 7s in a few places), recalibrating
+`voice_pipeline/speaker_rates.json` from this render's measured rates. The
+`.als` is at `outputs/ATO_EP03_local/ATO_EP03_local.als`. `outputs/` is
+gitignored; the retimed script, retimed shot list, and recalibrated speaker
+rates are committed. The split-vs-single-episode question below is still
+open — the render exists as one ~77-minute file either way, and splitting
+later is a shot-list/script edit, not a re-render.
 
 One technical note for whoever renders this: an early draft embedded literal LaTeX
 math (`$...$`, `\text{}`, subscripts) directly in spoken turns, and the markup
@@ -98,8 +122,13 @@ OmniVoice, verified, stitched, committed.
 verified, stitched, committed.
 
 Both are de-sequenced: no episode carries a number or says "last episode", so
-they can be released in any order. Episode 3 (see above) is drafted but not yet
-rendered, so it isn't in this de-sequenced rotation until it's finished.
+they can be released in any order.
+
+**Episode 3, Redefining Racism.** 258 turns, 76:42, rendered entirely on
+OmniVoice this session, verified and repaired, stitched, retimed. Not yet
+committed to the de-sequenced release rotation — the split question (one
+episode or two) is still open, and it hasn't had the human listen-through
+Episodes 1–2 got before their final commit.
 
 **Manuscript.** 1152 pages, builds clean. This session added Lenz's Law at the
 inductor definition, converted 716 paired em-dash asides to parentheses, cleared
@@ -119,13 +148,13 @@ Square Ceiling. And "Redefining Racism" states a claim a stranger already has an
 opinion about, where "System Initialization: The Geometry of Extraction" offers
 them nothing.
 
-**Next task: render Episode 3.** Decide the split question in "What just happened"
-above first (one ~75-minute episode or two shorter ones); either way, the
-four-level script and its matching shot list are drafted and only need rendering,
-verification, stitching, and retiming per the pipeline below. After that, Chapter 0
-(item 3 below) is the next unstarted chapter — and if the four-level device reads
-well in Episode 3, it's a candidate for adoption across the whole series going
-forward.
+**Next task: listen through the Episode 3 render, then decide the split question**
+(one ~77-minute episode or two shorter ones — see "What just happened" above) and
+cut the video against the retimed shot list. Episode 3 itself is rendered,
+verified, stitched, and retimed; it just hasn't had the human pass Episodes 1–2
+got before their final commit. After that, Chapter 0 (item 3 below) is the next
+unstarted chapter — and if the four-level device reads well in Episode 3, it's a
+candidate for adoption across the whole series going forward.
 
 ## Open items
 
