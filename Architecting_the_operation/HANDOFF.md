@@ -1,6 +1,48 @@
 # Handoff — Architecting the Operation
 
-State as of 2026-09-11. Written for whoever picks this up next.
+State as of 2026-09-11 (second pass, same day). Written for whoever picks this up next.
+
+## What just happened
+
+Chapter 2, "Redefining Racism," is drafted: a factual brief (`notes/CH2_findings.md`,
+built directly against `Paper/The_Original_Power.tex:1567–2681`, following the
+`CH0_findings.md` pattern exactly — section map, every verbatim definition, every
+named citation, a ranked hardest-ideas list, a hazards audit) and, from that brief,
+`podcasts/ATO_EP03_redefining_racism.md` plus `video/ATO_EP03_shotlist.md`. This is
+the episode the previous handoff called "next task." It parses clean (352 turns,
+11,128 words, no unknown speakers, no bracket leaks) but is **unrendered** — no
+OmniVoice pass, no verification, no stitch. That is the very next task if you want
+this episode finished rather than drafted.
+
+A delegate attempt at the brief (Codex, `gpt-5.6-sol`) correctly refused to write it:
+the working tree had unrelated uncommitted changes elsewhere in the repo
+(`.mcp.json`, `debate/police-origin.md`, several untracked directories) and the
+commit-before-destroy rule blocked it from creating a new file until those were
+committed. That refusal was correct per AGENTS.md and is not a bug to route around —
+either commit first, or do what happened here: write the brief yourself from a direct
+read of the chapter instead of delegating it.
+
+At 74 minutes by word count, this episode runs longer than Episodes 1–2 (59 and 40
+minutes). Chapter 2 is denser than either prior source: three sections, but the third
+(the fractal-computer-virus diagnostic model) is 62% of the chapter on its own, with
+ten subsections and two full case studies. It was drafted as one episode because the
+prior handoff said "that episode," singular — but it is a genuine candidate for the
+same split Chapter 0 got flagged for below (item 3). Consider splitting before
+rendering if 74 minutes feels wrong for the release cadence: the natural seam is after
+"Racism as Primary Example" ends and "The Diagnostic Model" begins (roughly the 12:40
+mark in the current script), which would produce a ~13-minute "the word, rebuilt"
+episode and a ~61-minute "the diagnostic model" episode.
+
+Two passages needed explicit handling per the hazards audit and got it: the
+Thistlewood/Abba historical record gets a spoken content note before it airs (Toussaint,
+23:20) and a plain image-free video treatment (shot G-24); the 1662 Virginia
+`partus sequitur ventrem` law gets a citation-only, no-imagery treatment (shot G-46).
+Three other hazards from the audit were deliberately preserved rather than smoothed
+over, because cutting them would have understated the chapter's own argument: the
+Ehrlichman quote's disputed status (script line ~32:03, shot G-32), the Anslinger quote
+the manuscript explicitly declines to use (script ~34:10, shot G-35), and the Great
+Compression counter-case getting its full three-part rebuttal rather than a wave-away
+(script ~59:14, shot G-65).
 
 ## What this is
 
@@ -19,18 +61,18 @@ commit-before-destroy.
 OmniVoice, verified, stitched, committed.
 
 **Episode 2, the Preface.** 271 turns, 40:24, rendered entirely on OmniVoice,
-verified, stitched. Script and shot list are uncommitted in the working tree
-(the last retime); commit them.
+verified, stitched, committed.
 
 Both are de-sequenced: no episode carries a number or says "last episode", so
-they can be released in any order.
+they can be released in any order. Episode 3 (see above) is drafted but not yet
+rendered, so it isn't in this de-sequenced rotation until it's finished.
 
 **Manuscript.** 1152 pages, builds clean. This session added Lenz's Law at the
 inductor definition, converted 716 paired em-dash asides to parentheses, cleared
 22 banned rhetorical constructions, and stripped auditor-facing language from 11
 figure captions.
 
-## The decision that was just made
+## The decision that was made last session
 
 Release order is divorced from manuscript order. Emmanuel wants the public run to
 **open on Chapter 2, "Redefining Racism"**, not Chapter 0.
@@ -43,8 +85,11 @@ Square Ceiling. And "Redefining Racism" states a claim a stranger already has an
 opinion about, where "System Initialization: The Geometry of Extraction" offers
 them nothing.
 
-**Next task: extract Chapter 2 and draft that episode.** Use the same pattern as
-`notes/CH0_findings.md` (brief a delegate for facts, write the script yourself).
+**Next task: render Episode 3.** Decide the split question in "What just happened"
+above first (one 74-minute episode or two shorter ones); either way, the script
+content is drafted and only needs rendering, verification, stitching, and retiming
+per the pipeline below. After that, Chapter 0 (item 3 below) is the next unstarted
+chapter.
 
 ## Open items
 

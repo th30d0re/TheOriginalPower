@@ -14,6 +14,19 @@ notes/      Emmanuel's reading notes, raw input
 |---|---|---|---|---|
 | 1 | Author's Preface | `podcasts/ATO_EP01_authors_preface.md` | `video/ATO_EP01_shotlist.md` | none |
 | 2 | Preface (framework) | `podcasts/ATO_EP02_preface.md` | `video/ATO_EP02_shotlist.md` | `notes/TOP02_preface_overview_transcript.md` |
+| 3 | Chapter 2, Redefining Racism | `podcasts/ATO_EP03_redefining_racism.md` | `video/ATO_EP03_shotlist.md` | `notes/CH2_findings.md` |
+
+Episode 3 opens the public run on the manuscript proper. It was drafted from a full
+factual brief (`notes/CH2_findings.md`) built directly against `Paper/The_Original_Power.tex`
+lines 1567–2681, following the same pattern as `notes/CH0_findings.md`: a delegate-grade
+brief first (section map, every verbatim definition, every named citation, a ranked hardest-
+ideas list, and a hazards audit), then the script drafted by hand against that brief rather
+than against the manuscript directly. It is unrendered as of this commit — 352 turns, ~74
+minutes by word count, timestamps hand-estimated and not yet corrected by
+`tools/retime_script.py`. The hazards audit's two graphic-content passages (the Thistlewood/
+Abba record, and the 1662 Virginia `partus sequitur ventrem` law) are flagged verbally in the
+script itself and get a plain, image-free video treatment per the shot list's content-note
+handling.
 
 Episode 1 was drafted from the manuscript and from Emmanuel's own interjections in the
 NotebookLM session on the Author's Preface.
