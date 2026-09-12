@@ -110,6 +110,36 @@
   boxrule=1pt, arc=3pt
 }
 
+% --- Equation color decoder (print analogue of website /equations) ---
+% xcolor is already loaded by tcolorbox. Slots are per-equation, never a
+% global per-symbol identity. The numeric marker is the non-color channel
+% so the pairing survives grayscale printing.
+\definecolor{eqc1}{HTML}{075985}
+\definecolor{eqc2}{HTML}{991b1b}
+\definecolor{eqc3}{HTML}{854d0e}
+\definecolor{eqc4}{HTML}{166534}
+\definecolor{eqc5}{HTML}{5b21b6}
+\definecolor{eqc6}{HTML}{9a3412}
+\definecolor{eqc7}{HTML}{9d174d}
+\definecolor{eqc8}{HTML}{155e75}
+\definecolor{eqc9}{HTML}{3f6212}
+\definecolor{eqc10}{HTML}{334155}
+% Marker rides as a subscript so a following math superscript (e.g. ^{2})
+% still attaches to the same nucleus.
+\newcommand{\eqsym}[2]{\textcolor{eqc#1}{#2}_{\scriptscriptstyle\textrm{#1}}}
+\newcommand{\eqphrase}[2]{\textcolor{eqc#1}{#2}\textsuperscript{\scriptsize #1}}
+\newtcolorbox{eqlegend}[1][]{%
+  colback=black!2, colframe=black!35,
+  boxrule=0.4pt, arc=1pt,
+  left=5pt, right=5pt, top=3pt, bottom=3pt,
+  fonttitle=\bfseries\scriptsize, title={Terms},
+  before skip=6pt, after skip=8pt,
+  #1
+}
+\newcommand{\eqlegrow}[3]{%
+  \textcolor{eqc#1}{\rule{0.65em}{0.65em}}\,\textsuperscript{\scriptsize #1} & $#2$ & #3 \\
+}
+
 \title{The Original Power:\\The Physics of Oppression and the Engineering of Control}
 \author{Emmanuel Theodore}
 \date{}
@@ -653,17 +683,41 @@ transferring material energy.
 
 Define the material and psychological composite scores:
 \begin{equation}\label{eq:0.4-mat-psych-composite}
-\mathcal{S}_{\text{mat}} = \frac{e_1 + e_2}{2}, \qquad \mathcal{S}_{\text{psych}} = e_3
+\eqsym{1}{\mathcal{S}_{\text{mat}}} = \frac{\eqsym{2}{e_1} + \eqsym{3}{e_2}}{2}, \qquad \eqsym{4}{\mathcal{S}_{\text{psych}}} = \eqsym{5}{e_3}
 \end{equation}
+
+\noindent\eqphrase{1}{Material enclosure} is the mean of \eqphrase{2}{communal-capacity obstruction} and \eqphrase{3}{mobility obstruction}. \eqphrase{4}{Psychological enclosure} is \eqphrase{5}{epistemic obstruction}.
+\begin{eqlegend}
+\small
+\begin{tabular}{@{}lll@{}}
+\eqlegrow{1}{\mathcal{S}_{\text{mat}}}{material enclosure}
+\eqlegrow{2}{e_1}{communal-capacity obstruction}
+\eqlegrow{3}{e_2}{mobility obstruction}
+\eqlegrow{4}{\mathcal{S}_{\text{psych}}}{psychological enclosure}
+\eqlegrow{5}{e_3}{epistemic obstruction}
+\end{tabular}
+\end{eqlegend}
 
 The composite Enclosure Score is the apparent-power magnitude of this
 decomposition---the electrodynamic analogue of total apparent power
 $S = \sqrt{P^2 + Q^2}$:
 \begin{equation}\label{eq:1.1-enclosure-score}
-\mathcal{S}_{\text{enc}} = \frac{1}{\sqrt{2}}\sqrt{\,\mathcal{S}_{\text{mat}}^{2} + \mathcal{S}_{\text{psych}}^{2}\,} = \frac{1}{\sqrt{2}}\sqrt{\left(\frac{e_1 + e_2}{2}\right)^{\!2} + e_3^{2}}
+\eqsym{1}{\mathcal{S}_{\text{enc}}} = \eqsym{2}{\frac{1}{\sqrt{2}}}\sqrt{\,\eqsym{3}{\mathcal{S}_{\text{mat}}}^{2} + \eqsym{4}{\mathcal{S}_{\text{psych}}}^{2}\,} = \eqsym{2}{\frac{1}{\sqrt{2}}}\sqrt{\left(\frac{\eqsym{5}{e_1} + \eqsym{6}{e_2}}{2}\right)^{\!2} + \eqsym{7}{e_3}^{2}}
 \end{equation}
 
-\noindent\textit{Electrodynamic weighting.}\footnote{This equation is classified as Tier~3 (ordinal/structural); the electrodynamic weighting derives from the AC power analogy (real power = material extraction, reactive power = psychological deflection). The normalization factor $1/\sqrt{2}$ ensures $\mathcal{S}_{\text{enc}} \in [0,1]$. See the Empirical Methodology chapter (p.~\pageref{ch:empirical_methodology}) and the \hyperref[app:empirical_index]{Empirical Validation Index} for the full per-equation index.} Material enclosure ($\mathcal{S}_{\text{mat}}$) is the ``real power'' channel: it performs direct economic work by destroying communal infrastructure and blocking mobility. Psychological enclosure ($\mathcal{S}_{\text{psych}}$) is the ``reactive power'' channel: it does zero direct work (the cross product $\vec{v} \times \vec{B}$ is always orthogonal to velocity), and it functions as the enabling condition for material enclosure. The formulation gives $e_3$ higher effective weight because $e_1$ and $e_2$ are averaged into a single material channel before squaring, while $e_3$ enters the norm at full amplitude. That weighting encodes a structural claim: without epistemic autonomy, a population cannot coordinate to escape enclosure, rendering $e_1$ and $e_2$ interventions structurally insufficient regardless of their magnitude.
+\noindent\textit{Electrodynamic weighting.}\footnote{This equation is classified as Tier~3 (ordinal/structural); the electrodynamic weighting derives from the AC power analogy (real power = material extraction, reactive power = psychological deflection). The normalization factor $1/\sqrt{2}$ ensures $\mathcal{S}_{\text{enc}} \in [0,1]$. See the Empirical Methodology chapter (p.~\pageref{ch:empirical_methodology}) and the \hyperref[app:empirical_index]{Empirical Validation Index} for the full per-equation index.} \eqphrase{3}{Material enclosure} ($\eqsym{3}{\mathcal{S}_{\text{mat}}}$) is the ``real power'' channel: it performs direct economic work by destroying communal infrastructure and blocking mobility. \eqphrase{4}{Psychological enclosure} ($\eqsym{4}{\mathcal{S}_{\text{psych}}}$) is the ``reactive power'' channel: it does zero direct work (the cross product $\vec{v} \times \vec{B}$ is always orthogonal to velocity), and it functions as the enabling condition for material enclosure. The formulation gives $\eqsym{7}{e_3}$ higher effective weight because $\eqsym{5}{e_1}$ and $\eqsym{6}{e_2}$ are averaged into a single material channel before squaring, while $\eqsym{7}{e_3}$ enters the norm at full amplitude. That weighting encodes a structural claim: without epistemic autonomy, a population cannot coordinate to escape enclosure, rendering $e_1$ and $e_2$ interventions structurally insufficient regardless of their magnitude.
+\begin{eqlegend}
+\small
+\begin{tabular}{@{}lll@{}}
+\eqlegrow{1}{\mathcal{S}_{\text{enc}}}{composite enclosure score}
+\eqlegrow{2}{1/\sqrt{2}}{normalization to the two-channel maximum}
+\eqlegrow{3}{\mathcal{S}_{\text{mat}}}{material enclosure}
+\eqlegrow{4}{\mathcal{S}_{\text{psych}}}{psychological enclosure}
+\eqlegrow{5}{e_1}{communal-capacity obstruction}
+\eqlegrow{6}{e_2}{mobility obstruction}
+\eqlegrow{7}{e_3}{epistemic obstruction}
+\end{tabular}
+\end{eqlegend}
 
 For a generalized Out-group $O$, domination loads \textit{all three} enclosure
 modes simultaneously:
