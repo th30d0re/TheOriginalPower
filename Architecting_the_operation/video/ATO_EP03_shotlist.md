@@ -194,7 +194,7 @@ beat (G-46) gets the same restrained treatment.
 ## G-13 — Hierarchy inversion
 
 - **Anchor:** `Emmanuel Theodore (15:28)`
-- **Hold:** through 16:36
+- **Hold:** through 16:35
 - **Type:** the manuscript's own two-column inverted-pyramid figure, redrawn
 - **Content:** Conventional (Individual Prejudice top, buried Systemic at bottom)
   next to Correct (Systemic Policies top, epiphenomenal Interpersonal Prejudice at
@@ -203,8 +203,8 @@ beat (G-46) gets the same restrained treatment.
 
 ## G-14 — Fractal virus properties
 
-- **Anchor:** `Emmanuel Theodore (17:24)`
-- **Hold:** through 18:09
+- **Anchor:** `Emmanuel Theodore (17:23)`
+- **Hold:** through 18:08
 - **Type:** four-item checklist, ticking in as named
 - **Content:** Hijacks resources · Replicates at every scale · Mutates its
   signature · Payload never changes.
@@ -212,8 +212,8 @@ beat (G-46) gets the same restrained treatment.
 
 ## G-15 — Biological Embedding, boxed definition
 
-- **Anchor:** `Emmanuel Theodore (19:25)`
-- **Hold:** through 21:01
+- **Anchor:** `Emmanuel Theodore (19:24)`
+- **Hold:** through 21:00
 - **Type:** the manuscript's own boxed-definition styling, verbatim, both sentences
   shown together
 - **Content:** full text of the Biological Embedding definition, the bounding
@@ -224,8 +224,8 @@ beat (G-46) gets the same restrained treatment.
 
 ## G-16 — Rootkit / kernel diagram
 
-- **Anchor:** `Emmanuel Theodore (21:43)`
-- **Hold:** through 22:23
+- **Anchor:** `Emmanuel Theodore (21:42)`
+- **Hold:** through 22:22
 - **Type:** OS-layer diagram, kernel space vs. user space
 - **Content:** kernel space labeled "extraction code (law, property, exception
   clauses)"; user space labeled "voting, protest, lawsuits — cannot reach the layer
@@ -235,8 +235,8 @@ beat (G-46) gets the same restrained treatment.
 
 ## G-17 — Antebellum cotton case study, chart
 
-- **Anchor:** `Emmanuel Theodore (23:33)`
-- **Hold:** through 25:56
+- **Anchor:** `Emmanuel Theodore (23:31)`
+- **Hold:** through 26:36
 - **Type:** dual-axis line chart, matches `figures/eq05_kernel_optimization.png`
 - **Content:** cotton revenue (1840/1850/1860: $74.1M / $102.5M / $247.0M) on one
   axis; suppression-budget ratio (2.70% / 2.88% / 2.75%) on the other, band
@@ -247,8 +247,8 @@ beat (G-46) gets the same restrained treatment.
 
 ## G-18 — Pigmentation cline map
 
-- **Anchor:** `Emmanuel Theodore (27:42)`
-- **Hold:** through 29:09
+- **Anchor:** `Emmanuel Theodore (28:22)`
+- **Hold:** through 29:49
 - **Type:** world map with a smooth gradient overlay by latitude, plus two
   ancient-DNA markers (La Braña, Spain; Cheddar Man, Britain)
 - **Content:** gradient bar labeled "UV exposure by latitude"; markers annotated
@@ -259,8 +259,8 @@ beat (G-46) gets the same restrained treatment.
 
 ## G-19 — Kernel HUD wrapper (scoped to diagnostic-model interior)
 
-- **Anchor:** `Toussaint (29:09)`
-- **Hold:** through the end of Module 9 (`Emmanuel Theodore (68:43)`)
+- **Anchor:** `Toussaint (29:49)`
+- **Hold:** through the end of Module 9 (`Emmanuel Theodore (69:06)`)
 - **Type:** thin HUD-style frame (green monospace corner brackets, faint scanline
   texture), low opacity, wrapping the video for the interior of the diagnostic-model
   section — starting at the content note, not at the section's own opening, so the
@@ -275,7 +275,7 @@ beat (G-46) gets the same restrained treatment.
 
 ## G-20 — Content note, plain frame
 
-- **Anchor:** `Toussaint (29:09)` (second beat, before Aisha's five-year-old line)
+- **Anchor:** `Toussaint (29:49)` (second beat, before Aisha's five-year-old line)
 - **Hold:** through `Emmanuel Theodore (30:xx)` (the Thistlewood/Abba turn)
 - **Type:** plain dark title-only card, no imagery, no animation
 - **Content:** small, quiet text: "The historical record referenced here is
@@ -318,7 +318,7 @@ beat (G-46) gets the same restrained treatment.
 
 ## G-24 — .exe recompile chains + gastronomic interface
 
-- **Anchor:** `Aisha (26:11)` region → `Emmanuel Theodore (26:44)` (Module 4, College
+- **Anchor:** `Aisha (26:51)` region → `Emmanuel Theodore (27:24)` (Module 4, College
   beat)
 - **Hold:** through the PhD beat's opening
 - **Type:** terminal/code-editor styled recompile animation, matching the G-19 HUD
@@ -368,7 +368,7 @@ beat (G-46) gets the same restrained treatment.
 
 ## G-28 — Texas Observer, 2024
 
-- **Anchor:** `Emmanuel Theodore (27:42)` region (Module 4 follow-up, Texas prison
+- **Anchor:** `Emmanuel Theodore (28:22)` region (Module 4 follow-up, Texas prison
   agribusiness beat)
 - **Hold:** 10 seconds
 - **Type:** single-fact card, present-tense framing
@@ -453,7 +453,7 @@ beat (G-46) gets the same restrained treatment.
 
 ## G-36 — Six-scale fractal zoom rail
 
-- **Anchor:** `Emmanuel Theodore (53:15)` ("Six named scales map the same five
+- **Anchor:** `Emmanuel Theodore (53:41)` ("Six named scales map the same five
   roles...")
 - **Hold:** through the end of Module 6, including the objection and phase-loading
   passages; persists as a side-rail, current level highlighted as narrated
@@ -465,7 +465,7 @@ beat (G-46) gets the same restrained treatment.
 
 ## G-37 — WAN/OS scale detail
 
-- **Anchor:** `Emmanuel Theodore (53:34)` / `(54:08)`
+- **Anchor:** `Emmanuel Theodore (53:58)` / `(54:08)`
 - **Hold:** through the national-level beat
 - **Type:** two-panel world map + national map overlay
 - **Content:** IMF/World Bank/comprador-government flows (global panel); redlining
@@ -474,7 +474,7 @@ beat (G-46) gets the same restrained treatment.
 
 ## G-38 — Subroutine scale, content-sensitive
 
-- **Anchor:** `Emmanuel Theodore (54:20)`
+- **Anchor:** `Emmanuel Theodore (54:44)`
 - **Hold:** through the end of that turn
 - **Type:** plain text citation card, no imagery
 - **Content:** "1662, Virginia: *partus sequitur ventrem* — child's status follows
@@ -484,7 +484,7 @@ beat (G-46) gets the same restrained treatment.
 
 ## G-39 — Application layer and auto-exec/colorism
 
-- **Anchor:** `Emmanuel Theodore (54:51)` / `(55:14)`
+- **Anchor:** `Emmanuel Theodore (55:13)` / `(55:14)`
 - **Hold:** through the end of the colorism passage
 - **Type:** overlapping-circles diagram, then a self-referencing loop diagram
 - **Content:** race/gender/sexuality/disability circles, overlap regions shaded
@@ -494,7 +494,7 @@ beat (G-46) gets the same restrained treatment.
 
 ## G-40 — Model minority objection + phase-loading operator
 
-- **Anchor:** `Emmanuel Theodore (56:18)`
+- **Anchor:** `Emmanuel Theodore (56:40)`
 - **Hold:** through the end of Module 6
 - **Type:** Q&A card, then timeline + rising line chart
 - **Content:** "Objection: outperformance despite partition." / "Answer: calibration
@@ -507,7 +507,7 @@ beat (G-46) gets the same restrained treatment.
 
 ## G-41 — Master/slave patent timeline
 
-- **Anchor:** `Emmanuel Theodore (58:50)`
+- **Anchor:** `Emmanuel Theodore (59:13)`
 - **Hold:** through the accuracy-audit passage
 - **Type:** timeline, 1904 → 2024, with a sharp step-change marked at 1976
 - **Content:** 1904 "slave clock" coinage → pre-WWII neutral hydraulic-patent
@@ -519,7 +519,7 @@ beat (G-46) gets the same restrained treatment.
 
 ## G-42 — Accuracy-audit quotes + Dartmouth 1964/1968
 
-- **Anchor:** `Emmanuel Theodore (58:50)` (accuracy-audit sentence) → `(59:07)`
+- **Anchor:** `Emmanuel Theodore (59:13)` (accuracy-audit sentence) → `(59:07)`
 - **Hold:** through the professor-testimony beat
 - **Type:** stacked quote cards, then archival terminal-text card
 - **Content:** IDE documentation quote; the Black electrical engineer's flip-flop
@@ -529,7 +529,7 @@ beat (G-46) gets the same restrained treatment.
 
 ## G-43 — Deprecation arc, 2003–2020
 
-- **Anchor:** `Emmanuel Theodore (60:58)`
+- **Anchor:** `Emmanuel Theodore (61:21)`
 - **Hold:** through the end of that turn
 - **Type:** timeline, three markers, ending on a gap callout
 - **Content:** Nov. 2003 (LA County memo) → 2014–2018 (Django/Drupal/Redis/CouchDB/
@@ -539,7 +539,7 @@ beat (G-46) gets the same restrained treatment.
 
 ## G-44 — Reflexive audit, the book on itself
 
-- **Anchor:** `Emmanuel Theodore (62:14)`
+- **Anchor:** `Emmanuel Theodore (62:37)`
 - **Hold:** through the end of Module 7
 - **Type:** text card, breaks the HUD frame briefly (drop the green scanline border
   for this one card)
@@ -549,7 +549,7 @@ beat (G-46) gets the same restrained treatment.
 
 ## G-45 — Corrupted firewall diagram
 
-- **Anchor:** `Emmanuel Theodore (63:41)`
+- **Anchor:** `Emmanuel Theodore (64:04)`
 - **Hold:** through the end of the College beat
 - **Type:** firewall/network-security diagram, inverted (the "firewall" node facing
   the wrong direction)
@@ -559,7 +559,7 @@ beat (G-46) gets the same restrained treatment.
 
 ## G-46 — Status wage vs. material wage + SDO/RWA + three buffer functions
 
-- **Anchor:** `Emmanuel Theodore (64:24)`
+- **Anchor:** `Emmanuel Theodore (64:46)`
 - **Hold:** through the end of Module 8
 - **Type:** two-column comparison with funding-source footnote, then equation-gloss
   dial diagram, then a three-item checklist
@@ -572,7 +572,7 @@ beat (G-46) gets the same restrained treatment.
 
 ## G-47 — Malcolm X quote
 
-- **Anchor:** `Emmanuel Theodore (66:25)`
+- **Anchor:** `Emmanuel Theodore (66:47)`
 - **Hold:** 9 seconds
 - **Type:** full-frame quote card, held
 - **Content:** "The white man will try to satisfy us with symbolic victories rather
@@ -581,7 +581,7 @@ beat (G-46) gets the same restrained treatment.
 
 ## G-48 — Top 0.1% wealth share, falsification condition
 
-- **Anchor:** `Emmanuel Theodore (66:58)`
+- **Anchor:** `Emmanuel Theodore (67:21)`
 - **Hold:** through the Great Compression setup
 - **Type:** long-run line chart, 1913–present, with a shaded "violation zone"
   overlay showing what a real falsification would look like
@@ -592,7 +592,7 @@ beat (G-46) gets the same restrained treatment.
 
 ## G-49 — Great Compression, three-part rebuttal
 
-- **Anchor:** `Emmanuel Theodore (67:44)` through `(67:44)`
+- **Anchor:** `Emmanuel Theodore (68:07)` through `(67:44)`
 - **Hold:** through the end of Module 9
 - **Type:** three sequential annotation cards over the G-48 chart, appearing as each
   reason is narrated
@@ -607,7 +607,7 @@ beat (G-46) gets the same restrained treatment.
 
 ## G-50 — Three modes diagram
 
-- **Anchor:** `Emmanuel Theodore (70:13)`
+- **Anchor:** `Emmanuel Theodore (70:36)`
 - **Hold:** through the end of Module 10
 - **Type:** three-panel diagram, stacked rather than side-by-side, showing the
   modes layering on top of each other over time
@@ -620,8 +620,8 @@ beat (G-46) gets the same restrained treatment.
 
 ## G-51 — Rapid-fire recap
 
-- **Anchor:** `Toussaint (72:21)`
-- **Hold:** through `Aisha (73:36)`
+- **Anchor:** `Toussaint (72:44)`
+- **Hold:** through `Aisha (73:59)`
 - **Type:** nine-item checklist, ticking in one per line as each host names it
 - **Content:** the nine module names in order, each with its five-year-old gloss
   shown as a small caption beneath.
@@ -630,7 +630,7 @@ beat (G-46) gets the same restrained treatment.
 
 ## G-52 — Closing card
 
-- **Anchor:** `Toussaint (76:31)`
+- **Anchor:** `Toussaint (76:53)`
 - **Hold:** through the end
 - **Type:** static
 - **Content:** *Architecting the Operation* — "Redefining Racism," from *The
