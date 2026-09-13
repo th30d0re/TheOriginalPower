@@ -40,6 +40,7 @@ make pdf-from-tex   # rebuild Paper/The_Original_Power.pdf from TeX (latexmk)
 make pdf            # full pipeline: index → empirical notebooks → SCOTUS audit → pdf-from-tex
 make verify-pdf     # rebuild and fail if committed PDF differs (enforced in CI)
 make empirical      # execute Paper/scripts notebooks (scotus → spectral → eq*) in order
+make formal         # Lean check of the manuscript's deductive core (see formal/README.md)
 make clean          # remove LaTeX aux files
 ```
 
@@ -90,6 +91,13 @@ Note: `find . -name 'test_*.py'` returns thousands of hits — almost all are in
 - **`website/`** — React + TypeScript + D3.js + Framer Motion interactive visualization of the framework.
 
 - **`app/`** — Swift iOS app (`decodingOppression`). Contains large vendored `mlx-swift` checkouts under derived-data — do not edit those.
+
+- **`formal/`** — Lean 4 + Mathlib project (`make formal`) that machine-checks the manuscript's
+  deductive core: the five-tier ordering, the node-to-circuit-element mapping, the complex wage
+  `W = ψ_m + jψ_s`, and the quaternion intersection model. It verifies internal consistency only;
+  `formal/README.md` states explicitly what it does not verify, and that distinction matters — do
+  not cite a green build as support for the framework's empirical claims. `formal/.lake/` holds a
+  ~7 GB Mathlib cache and is gitignored.
 
 - **`tools/`** — utilities: U.S. Code extraction/diffing (`usc_extract.py`, `usc_diff.sh`, run via `make usc-all`), trademark search, voice helpers.
 

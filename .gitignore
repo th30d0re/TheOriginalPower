@@ -134,3 +134,6 @@ OneDrive_txt/
 # EPUB build tree and output (regenerate with `make epub`)
 build/epub/
 dist/
+
+# Lean build tree and Mathlib cache (~7 GB; restore with `make formal`)
+formal/.lake/
