@@ -66,6 +66,18 @@ check-build-consistency:
 check-prose:
 	@python3 tools/check_antithesis.py $(if $(FILES),$(FILES),--changed)
 
+.PHONY: formal
+
+# formal: machine-check the manuscript's deductive core (Lean 4 + Mathlib).
+# Verifies that the formalism is internally consistent. It says nothing about
+# whether the definitions describe the world; see formal/README.md.
+# First run downloads a Mathlib build cache of roughly 7 GB into formal/.lake/.
+formal:
+	@command -v lake >/dev/null 2>&1 || { \
+	  echo "lake not found. Install with: brew install elan-init && elan default stable"; \
+	  exit 1; }
+	cd formal && lake exe cache get && lake build
+
 biber-shim: $(BIBER_SHIM)
 
 pdf: index empirical scotus-audit pdf-from-tex
