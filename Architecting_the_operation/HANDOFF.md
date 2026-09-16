@@ -205,6 +205,22 @@ python3 tools/turn_index.py outputs/<id> --transcript <script>.md
 
 `tools/repair_render.py` wraps verify-and-regenerate into a loop.
 
+**Heteronyms.** OmniVoice picks noun or verb stress on its own and often picks
+wrong ("the historical re-CORD"). Whisper cannot hear the difference, so
+`verify_render.py` also cuts every heteronym out of the audio and judges it with
+a phoneme recognizer against the reading misaki's part-of-speech tagging expects
+(`tools/stress_check.py`). "wrong" and "garbled" fail the turn and the repair
+loop re-renders it. Known limits: misaki occasionally mistags a word in a long
+sentence ("animus converts into" read as a noun), and pairs differing only in an
+unstressed vowel or a voicing ("deliberate", "use") are skipped. Words that keep
+failing get a respelling handed to the engine only, recorded in
+`voice_pipeline/pronunciations.yaml` after calibration:
+
+```bash
+python3 tools/calibrate_pronunciation.py record --reading default \
+  --candidates reckerd,wreck-urd --takes 6 --write
+```
+
 OmniVoice runs ~12s per turn, so a fresh episode is about an hour. It lives in
 its own `.venv-omnivoice` because it pins torch 2.8 against the voice venv's
 2.11; the pipeline talks to it through a persistent worker
