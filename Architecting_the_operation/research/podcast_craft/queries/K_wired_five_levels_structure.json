@@ -1,0 +1,90 @@
+{
+  "value": {
+    "answer": "Based on the sources and analysis of the WIRED *5 Levels* series, here is the exact breakdown of how an episode is structured:\n\n---\n\n### 1. Concept Scope: Single Concept Focus\nEach episode focuses on **a single, complex scientific or technical concept** rather than covering multiple topics [1, 2]. Examples include machine learning, gravity, memory, infinity, connectomes, nuclear fusion, CRISPR, and musical harmony [1-7]. \n\n* **Source Quote**: *\"In each episode, an expert explains a high-level subject or concept at five different levels of increasing complexity...\"* [1]\n\n---\n\n### 2. The Five Learners & Exact Sequential Order\nThe episode progresses sequentially through five distinct stages of learner expertise, moving strictly from least knowledgeable to peer expert [1, 3]:\n\n1. **Level 1**: Primary school child / 5- to 6-year-old child [1, 3]\n2. **Level 2**: Teenager / young high school student [1, 3]\n3. **Level 3**: College student / undergraduate majoring in the discipline [1, 3]\n4. **Level 4**: Graduate student in the topic discipline [1, 3]\n5. **Level 5**: Colleague / peer expert in the field [1, 3]\n\n* **Source Quote**: *\"The videos feature a different academic expert on a topic discussing it with users at five different levels of understanding: 1) primary school child 2) young high school student 3) college student 4) graduate student in the topic discipline 5) an expert in the topic.\"* [3]\n\n---\n\n### 3. Episode Opening & Closing\n\n* **Episode Opening**: Opens with a quick title card and premise framing (e.g., *\"WIRED has challenged [Expert] to explain [Concept] to 5 different people...\"*) [2, 6]. The expert briefly introduces themselves and the core topic before immediately transitioning into the Level 1 conversation with the child [1, 4, 6].\n* **Episode Closing**: The episode ends directly after the Level 5 peer conversation. Rather than returning to a solo wrap-up or summarizing all five levels, the episode concludes with the shared insights between the two experts and a brief sign-off [3].\n\n---\n\n### 4. Segment Structure & Opening Prompts\nEach of the five conversations is structured as a two-way dialogue rather than a solo lecture [3]:\n\n* **Assessing Baseline Knowledge**: In video observations, the expert almost always opens each conversation by **asking the learner what they already know, think, or associate with the concept** (e.g., asking the child what a brain or computer does, or asking the college student what they've learned in class) [3].\n* **Conversational Shift**: As noted in source analysis, each level is not a canned re-recitation of facts, but a distinct conversation adapted to that specific person [3].\n\n* **Source Quote**: *\"I do not find that it is a difference in explanation that is shown in the five levels. It is more a different conversation: speaking about the subject in different ways, perhaps gaining more insight as we go along...\"* [3]\n\n---\n\n### 5. Level Duration & Episode Pacing\n\n* **Overall Episode Duration**: Episodes typically run between **15 and 36 minutes** (averaging ~25 minutes) [88, 91, 207–209]. For example:\n  * *Machine Learning*: 26:08 minutes [6]\n  * *Astrophysicist Explains Gravity*: 36:32 minutes [7]\n  * *Musician Explains Harmony* (Jacob Collier): 15:42 minutes [8]\n  * *CRISPR*: 16:53 minutes [9]\n* **Per-Level Duration**: On average, each segment runs **3 to 7 minutes**. In video observations, early levels (child/teen) tend to be tighter and shorter (~3–4 minutes), while later levels (grad student/expert) expand (~6–8 minutes) as technical mechanics and open research questions are discussed.\n\n---\n\n### 6. Building Complexity vs. Re-Explaining\nThe expert does **not simply repeat the same basic explanation five times**. Instead, the narrative arc evolves [3, 10]:\n* **Levels 1–2**: Rely on physical analogies, visual props, and basic everyday metaphors (e.g., comparing connected neurons to wires or road maps) [3, 11].\n* **Levels 3–4**: Transition into formal discipline-specific terminology, mathematical or algorithmic frameworks, and specific mechanisms [1, 3].\n* Viewers can either watch continuously to see how a single idea scales up in complexity, or jump directly to the level that matches their current knowledge [10].\n\n* **Source Quote**: *\"You can drop in at a level of complexity perfectly suited to your current understanding of the problem... Or you can watch the video in its entirety to get a greater understanding.\"* [10]\n\n---\n\n### 7. How Level 5 (Peer Expert) Differs\nLevel 5 represents a fundamental shift in dynamic [1, 3, 12]:\n* **Instructional vs. Collaborative**: Levels 1–4 are pedagogical (an expert teaching a student) [3]. Level 5 is **a peer-to-peer professional dialogue between equals** (e.g., Jacob Collier discussing harmony with jazz legend Herbie Hancock) [12].\n* **Content Focus**: The expert no longer breaks down foundational concepts or uses simplifying analogies. Instead, the two peers trade high-level insights, debate theoretical edge cases, discuss current research frontiers, and speak in un-translated professional jargon [1, 3, 12].\n\n---\n\n💡 **Would you like to explore how this 5 Levels video format compares to audio-only podcasting constraints from a cognitive load perspective?**",
+    "conversation_id": "010d7602-fa56-4f97-89a1-ed8539e8ebe5",
+    "sources_used": [
+      "6e955ae6-1d34-41c5-958d-ed00a1315554",
+      "c4a779d5-a367-4015-a931-e0880760bbef",
+      "a2da6e27-a294-4f1b-8316-bb71e309dbd1",
+      "1969b942-91c9-42bf-9b1b-dd259566fef4",
+      "17f166db-88cd-47ce-afe1-da00d2381b13",
+      "4cddc89e-0397-4282-aea5-e341ffba9777"
+    ],
+    "citations": {
+      "1": "6e955ae6-1d34-41c5-958d-ed00a1315554",
+      "2": "c4a779d5-a367-4015-a931-e0880760bbef",
+      "3": "a2da6e27-a294-4f1b-8316-bb71e309dbd1",
+      "4": "a2da6e27-a294-4f1b-8316-bb71e309dbd1",
+      "5": "1969b942-91c9-42bf-9b1b-dd259566fef4",
+      "6": "17f166db-88cd-47ce-afe1-da00d2381b13",
+      "7": "c4a779d5-a367-4015-a931-e0880760bbef",
+      "8": "c4a779d5-a367-4015-a931-e0880760bbef",
+      "9": "c4a779d5-a367-4015-a931-e0880760bbef",
+      "10": "6e955ae6-1d34-41c5-958d-ed00a1315554",
+      "11": "4cddc89e-0397-4282-aea5-e341ffba9777",
+      "12": "6e955ae6-1d34-41c5-958d-ed00a1315554"
+    },
+    "references": [
+      {
+        "source_id": "6e955ae6-1d34-41c5-958d-ed00a1315554",
+        "citation_number": 1,
+        "cited_text": "Do you need help with audience research, content strategy, or production? Do you need creative ideas that capture attention, and brillant formats that hold attention? We should chat. Hit the button below. let's talk content formats! OK. On with the unpacking. This week I'm unpacking a content format that tackles complex issues in the most brilliant way. What's it called? 5 Levels (video series) What's the format? Albert Einstein once said, “If you can't explain something to a six-year-old, then you don't understand it yourself.” Explaining something to a child is where this Wired video series begins. In each episode, an expert explains a high-level subject or concept at five different levels of increasing complexity— first to a child, then a teenager, then an undergrad majoring in the same subject, a grad student and, finally, a colleague or peer."
+      },
+      {
+        "source_id": "c4a779d5-a367-4015-a931-e0880760bbef",
+        "citation_number": 2,
+        "cited_text": "Embed Send to a friend Send Channel: WIRED Categories: Biology | Psychology | Science Find Related Videos added 4 years ago 1,055 Views Description WIRED has challenged neuroscientist Daphna Shohamy, PhD, to explain memory to 5 different people; a child, teen, a college student, a grad student and an expert. Still havent subscribed to WIRED on YouTube? http://wrd.cm/15fP7B7 Listen to the Get WIRED podcast https://link.chtbl.com/wired-ytc-desc Want more WIRED? Get the magazine https://subscribe.wired.com/subscribe/splits/wired/WIR_YouTube?source=EDT_WIR_YouTube_0_Video_Description_ZZ"
+      },
+      {
+        "source_id": "a2da6e27-a294-4f1b-8316-bb71e309dbd1",
+        "citation_number": 3,
+        "cited_text": "Text: challenged to explain a topic to 5 people Five Levels is a site with a series of videos that helps helps us to get a better grip on a concept. The videos feature a different academic expert on a topic discussing it with users at five different levels of understanding: 1) primary school child 2) young high school student 3) college student 4) graduate student in the topic discipline 5) an expert in the topic. Neuroscientist Bobby Kashturi explaining the connectome to a 5 year old I do not find that it is a difference in explanation that is shown in the five levels. It is more a different conversation: speaking about the subject in different ways, perhaps gaining more insight as we go along, which is possibly the whole point of the different levels of explanation."
+      },
+      {
+        "source_id": "a2da6e27-a294-4f1b-8316-bb71e309dbd1",
+        "citation_number": 4,
+        "cited_text": "Although the series run is limited, with only six episodes thus far, the examples may give us ideas on how to approach scaffolding. Viewing them may give us insight on how to apply the techniques to our own examples, test and strengthen our arguments, break down themes into basic principles, convey an idea in more entertaining fashion to our students. Cutting edge topics that are covered (and appear in the screenshots on this post) include CRISPR and the Connectome. Image of Neville Sanjana with beginning his section on CRISPR"
+      },
+      {
+        "source_id": "1969b942-91c9-42bf-9b1b-dd259566fef4",
+        "citation_number": 5,
+        "cited_text": "School of Engineering School of Humanities, Arts, and Social Sciences Sloan School of Management School of Science MIT Schwarzman College of Computing View all news coverage of MIT in the media → Listen to audio content from MIT News → Subscribe to MIT newsletter → Close Breadcrumb MIT News In the Media News Clip In the Media Media Outlet: Wired Publication Date: July 19, 2023 Description: In this video for Wired , Prof. Anne White explains the nature of nuclear fusion in five levels of increasing difficulty to a child, a teen, a college student, a grad student, and an expert. “Fusion is so exciting because it is extraordinarily beautiful physics, which underpins some of the most basic processes in our universe,\" says White. “Nuclear processes have a tremendously valuable application for humankind, a virtually limitless, clean, safe, carbon-free form of energy.”"
+      },
+      {
+        "source_id": "17f166db-88cd-47ce-afe1-da00d2381b13",
+        "citation_number": 6,
+        "cited_text": "Computer Scientist Explains Machine Learning in 5 Levels of Difficulty February 27, 2025 Engaging Learning Videos No Comments Title : Computer Scientist Explains Machine Learning in 5 Levels of Difficulty Subject : Explaining Machine Learning Grade level : All ages Publisher : WIRED Year : 2021 Duration : 26:08 minutes Watch online : YouTube Description (from YouTube): WIRED has challenged computer scientist and Hidden Door cofounder and CEO Hilary Mason to explain machine learning to 5 different people; a child, teen, a college student, a grad student and an expert."
+      },
+      {
+        "source_id": "c4a779d5-a367-4015-a931-e0880760bbef",
+        "citation_number": 7,
+        "cited_text": "36:32 Astrophysicist Explains Gravity in 5 Levels of Difficulty | WIRED 1,617 Views 26:09 Computer Scientist Explains Machine Learning in 5 Levels of Difficulty | WIRED 1,054 Views 22:33 Computer Scientist Explains Fractals in 5 Levels of Difficulty | WIRED 520 Views 23:47 UMass Professor Explains the Internet in 5 Levels of Difficulty | WIRED 685 Views 25:47 Harvard Professor Explains Algorithms in 5 Levels of Difficulty | WIRED 520 Views 24:44 Mathematician Explains Infinity in 5 Levels of Difficulty | WIRED 584 Views"
+      },
+      {
+        "source_id": "c4a779d5-a367-4015-a931-e0880760bbef",
+        "citation_number": 8,
+        "cited_text": "25:24 Hacker Explains One Concept in 5 Levels of Difficulty | WIRED 645 Views 24:00 Nanotechnology Expert Explains One Concept in 5 Levels of Difficulty | WIRED 726 Views 22:36 Computer Scientist Explains One Concept in 5 Levels of Difficulty | WIRED 862 Views 15:42 Musician Explains One Concept in 5 Levels of Difficulty ft. Jacob Collier & Herbie Hancock | WIRED 1,532 Views 17:50 Blockchain Expert Explains One Concept in 5 Levels of Difficulty | WIRED 1,141 Views 19:35 Computer Scientist Explains One Concept in 5 Levels of Difficulty | WIRED 555 Views"
+      },
+      {
+        "source_id": "c4a779d5-a367-4015-a931-e0880760bbef",
+        "citation_number": 9,
+        "cited_text": "Show more Post your comment Submit comment Comments Be the first to comment Related / Popular 28:25 Physicist Explains One Concept in 5 Levels of Difficulty | WIRED 860 Views 19:27 Quantum Computing Expert Explains One Concept in 5 Levels of Difficulty | WIRED 1,043 Views 16:53 Biologist Explains One Concept in 5 Levels of Difficulty - CRISPR | WIRED 1,321 Views 23:40 Sleep Scientist Explains One Concept in 5 Levels of Difficulty | WIRED 905 Views 24:37 Laser Expert Explains One Concept in 5 Levels of Difficulty | WIRED 654 Views"
+      },
+      {
+        "source_id": "6e955ae6-1d34-41c5-958d-ed00a1315554",
+        "citation_number": 10,
+        "cited_text": "Tap to unmute Your browser can't play this video. Learn more What's the magic that makes it special? Have you ever clicked on an article about a subject you want to understand more, only to find that you get halfway through and realise you're more confused than when you started? Or have you ever sat through a long 'how-to' video on YouTube without ever finding out the exact solution to your problem? 5 Levels solves these problems brilliantly. You can drop in at a level of complexity perfectly suited to your current understanding of the problem. You may want to watch the level aimed at kids just to get the basics. Or you can watch the video in its entirety to get a greater understanding. Whatever your level of understanding, or your desire for learning about a specific complex subject, 5 Levels is designed in a way that guarantees will hit the spot for a large range of curious viewers. A little later I'm going to talk a bit about the art of a good explainer but first I want to talk about the length of these videos."
+      },
+      {
+        "source_id": "4cddc89e-0397-4282-aea5-e341ffba9777",
+        "citation_number": 11,
+        "cited_text": "4.5.2. Findings from the Interviews Interest Analysis of interview transcripts revealed two major themes pertaining to interest. The most common theme across all three conditions was the use of visuals within the educational video podcast. Every participant interviewed highlighted that visuals were a key element in generating interest. However, most referred to visuals as a design feature that helped maintain their interest and supported understanding of the content. S4 noted that the visuals directly supported her understanding: “The video explained it pretty well, I think, and the drawings really helped make it more understandable.” Likewise, S3 expressed a similar view: “It was good with the images and simple drawing, so it made it very easy to understand.” Other students suggested that visuals were a key aspect of their interest but expressed concerns that the visuals were not consistent or there were not enough visuals. S6 stated that while visuals were helpful, they could cause confusion: “The visuals were very helpful. That said, the images appeared and disappeared intermittently, only during certain parts. So it was a bit confusing to know when to focus.” S2 indicated that more visual aids should have been included: “For a six-minute video…there should be more visuals with it.” However, S1 in the control condition expressed that the entertainment value was limited by the constraints of the pictures themselves. S1 highlighted: “And it's showing like how it's working with just simple pictures… so this captured my attention well.” These comments highlight that design features and situational interest are linked. Specifically, the qualitative data suggest that while visuals serve as a powerful hook for interest, the intermittent appearance of visuals can create issues. For educational video podcasts, this provides support for the modality principle, suggesting that combining spoken words with visuals can increase attention and facilitate learning."
+      },
+      {
+        "source_id": "6e955ae6-1d34-41c5-958d-ed00a1315554",
+        "citation_number": 12,
+        "cited_text": "The protein Atkins speaks of is clearly outlined in his new book The Art of Explanation . It comes from asking these 10 questions . If you have complex stories to communicate to audiences with short consideration spans, you should read it. Better still, give us a call and we'll help you tell your complex stories with clarity and confidence. Favourite Episode In A Musician Explains One Concept in 5 Levels of Difficulty**, the wonderful Jacob Collier explains the concept of harmony to 5 different people; including jazz legend Herbie Hancock."
+      }
+    ]
+  }
+}
