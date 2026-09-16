@@ -1,0 +1,464 @@
+{
+ "answer": "Conveying complex equations, mathematical notation, graphs, and visual diagrams in an audio-only medium requires navigating the fundamental constraints of human working memory and transient speech. Below is an evidence-grounded analysis covering accessibility frameworks, audio journalism practices, and cognitive constraints.\n\n---\n\n### 1. Conveying Equations & Mathematical Notation in Audio Alone\n\n#### A. MathSpeak & Disambiguation Rules\n* **The Ambiguity Problem**: Everyday spoken language is inherently ambiguous when describing mathematical expressions [1, 2]. For example, the spoken phrase *\"the square root of a plus b\"* can be interpreted as either \\\\(\\sqrt{a}+b\\\\) or \\\\(\\sqrt{a+b}\\\\) [1].\n* **The MathSpeak Rule Set**: Developed by blind mathematician Dr. Abraham Nemeth (creator of Nemeth Braille) and refined by gh LLC and Purdue University, **MathSpeak** establishes a standardized, character-by-character rule set to speak mathematics without ambiguity [3-5]. It introduces explicit structural indicators:\n  * \\\\(\\sqrt{a}+b\\\\) is rendered as `\"start root a end root plus b\"` [1].\n  * \\\\(\\sqrt{a+b}\\\\) is rendered as `\"start root a plus b end root\"` [1].\n  * Fractions use structural anchors: `\"start fraction [numerator] over [denominator] end fraction\"` [6].\n* **ClearSpeak Alternative**: Texthelp's **ClearSpeak** speech engine provides a more natural, conversational phrasing (e.g., `\"the fraction with numerator a plus b and denominator c\"`) suitable for general audiences, whereas MathSpeak prioritizes strict structural precision for technical dictation [7].\n* **Evidentiary Basis & Specific Study**: **Isaacson, Schleppenbach, & Lloyd (2014)** conducted an automated **controlled laboratory experiment** (\\\\(N=52\\\\)) evaluating MathSpeak versus common spoken math [8, 9]. Participants scored **18.93 out of 20** correct with MathSpeak versus **8.07 out of 20** (chance level) without MathSpeak (\\\\(p < .001\\\\)), establishing that MathSpeak successfully disambiguates spoken math after just 4 minutes of instruction [9, 10].\n\n#### B. Accessible Description Guidelines for Notation\n* **Symbol Expansion Rules**: The National Center for Accessible Media (**NCAM** at GBH/WGBH) and the **DIAGRAM Center** specify that simple equations should be read by explicitly expanding symbols into full words (\"plus\", \"minus\", \"equals\", \"squared\", \"to the sixth power\", \"square root of\") [11, 12]. Nested or non-standard notation must be written out fully in spoken text rather than relying on concise visual shorthands [11].\n* **Evidentiary Basis**: **Practitioner experience and accessibility standards** (GBH/WGBH NCAM Guidelines [11-13]; DIAGRAM Center [14]).\n\n---\n\n### 2. Conveying Graphs & Visual Diagrams in Audio\n\n#### A. The Summary-First Principle & Table Conversion\n* **Trend Over Detail**: Guidelines from **NCAM and the DIAGRAM Center** mandate that when converting visual graphs (bar charts, line graphs, pie charts) into audio descriptions, producers must state the title, label the x- and y-axes, and provide a high-level conceptual summary of overall trends first (e.g., *\"In each state, coverage increases over time\"*) [15, 16].\n* **Elimination of Visual Clutter**: Visual attributes\u2014such as bar colors, solid vs. dashed lines, or pie slice shading\u2014should be omitted entirely unless strictly required to answer a specific question [15-17]. Data should be organized logically (e.g., listing pie chart categories from smallest to largest percentage) [17].\n* **Scatter Plots & Relational Diagrams**: Require defining axis scales, describing cluster density/direction, highlighting macro-correlations, and noting significant outliers [18].\n* **Evidentiary Basis**: **Practitioner experience and accessibility standards** (DIAGRAM Center [15-17]; NCAM / GBH Guidelines [13, 19]).\n\n---\n\n### 3. How Science Audio Journalists Handle Numbers & Data\n\n#### A. Rounding and Approximating Numbers\n* **Rule**: Spoken audio is strictly linear and transient; precise figures fly past the ear in an instant and cannot be processed or re-examined on a live broadcast [20-23]. Audio journalists round off exact numbers (e.g., turning \"1,987,452\" into \"nearly two million\") and use conversational approximations like \"about half\" or \"more than double\" [21, 23, 24].\n* **Evidentiary Basis**: **Practitioner experience** (**Jonathan Kern / NPR Guide** [23, 25]; **Journalism University / NBC News Academy** [21, 26]; **University of Dayton Style Guide** [21]).\n\n#### B. Limiting Figure Density & Sentence Length\n* **Rule**: Broadcast scripts enforce strict limits on data density, avoiding stacking multiple statistics within a single sentence or story segment [23, 26]. Audio writers enforce \"One Thought Per Sentence\" (OTPS) with sentence lengths kept to 15\u201320 words (\\\\(\\le 17\\\\) words) to match human breathing and listening capacity [22, 27, 28].\n* **Evidentiary Basis**: **Practitioner experience** (Journalism University [22, 26, 27]; NPR / Kern [23]; Dramarrator computational script analysis [28]).\n\n#### C. Concrete Analogies & Text Normalization\n* **Rule**: Abstract numbers must be translated into tangible physical comparisons (e.g., translating a \\$50 million budget cut into \"enough money to fund three new schools\") [26]. For text-to-speech (TTS) script preparation, technical guidelines require explicit pre-normalization of currency, dates, and units into full spoken words (e.g., \"\\$42.50\" \\\\(\\rightarrow\\\\) \"forty-two dollars and fifty cents\") [29-32].\n* **Evidentiary Basis**: **Practitioner experience & technical documentation** (AFTRS Media Lab [29]; ElevenLabs Documentation [30-32]; Journalism University [26]).\n\n---\n\n### 4. What Speech Must Carry When Visuals Are Absent\n\n#### A. Constructing Conceptual Mental Models\n* **Transience & Cognitive Load Constraints**: Spoken information is **transient**\u2014once uttered, it disappears immediately [33, 34]. Attempting to recite complex equations or spatial diagrams verbatim in audio transforms permanent visual representations into transient speech, causing rapid working memory overload and forgetting [33-35].\n* **Dual-Coding Offloading**: Paivio's **Dual-Coding Theory** establishes that learning relies on complementary verbal and visual channels [36, 37]. When no visual channel is present, audio cannot simply act as an exact verbal transcript of a page; speech must actively construct a mental model using spatial metaphors, physical analogies, and conceptual relationships [20, 38-40].\n* **Evidentiary Basis**: **Controlled laboratory experiments** (**Leahy & Sweller, 2003, 2016** [33, 41, 42]; **Davis et al., 2026** [38, 39, 43]) and **cognitive theory** (**Clark & Paivio, 1991** [36]).\n\n#### B. Essential Companion Materials\n* **Rule**: Because formal derivations and detailed statistical graphs cannot be fully comprehended through transient speech alone, professional producers provide companion text notes, transcripts, or video shot lists alongside the audio episode [38, 44, 45].\n* **Evidentiary Basis**: **Practitioner experience & observational data** (NPR.org / Ellen Weiss & Todd Holzman [44]; Amplify Manifesto [45]; Davis et al., 2026 interview data [38]).\n\n---\n\n### 5. Disagreements, Evidence Thinness, & Methodological Gaps\n\n1. **Accessibility Precision vs. Podcast Narrative Flow**:\n   * *The Tension*: Formal accessibility standards (**MathSpeak / Nemeth Code**) mandate character-by-character structural syntax (`\"start fraction... end fraction\"`) to ensure exact, non-ambiguous dictation for blind students [1, 4, 5]. Conversely, audio journalism coaches (**Kern / NPR**) and cognitive load researchers (**Leahy & Sweller**) demonstrate that reciting line-by-line syntax in general podcasts imposes extreme **transient cognitive load**, destroying narrative momentum and listener engagement [20, 23, 25, 35].\n2. **Thinness of Empirical Data on Long-Form Podcast Math**:\n   * *Evidence Gap*: While **Isaacson et al. (2014)** provides **controlled experimental evidence** for MathSpeak disambiguating short, isolated equations among print-disabled learners [8-10], there is **zero controlled experimental research** evaluating general audience retention or comprehension when complex mathematical notation or diagrams are delivered via MathSpeak versus conceptual analogies in long-form audio episodes.\n\n---\n\n\ud83d\udcca Would you like to draft a standardized style guide entry for your scriptwriters that defines how to translate mathematical equations into conceptual audio analogies versus companion text notes?",
+ "conversation_id": "010d7602-fa56-4f97-89a1-ed8539e8ebe5",
+ "sources_used": [
+  "58aebe1f-35f7-4f8b-9f2f-39f29835326e",
+  "12bc78dd-4024-4c73-afa7-c6f085daece4",
+  "77e80b7a-2a21-43aa-bd87-4f8c7d1d94b7",
+  "9a40cd31-a947-4cce-b8fa-92e3de1726d2",
+  "003046b6-f5d8-4c57-8f1f-0feedd722f35",
+  "be8864aa-7ac7-46c6-becc-74f9c786d670",
+  "09856d4b-d87e-4121-92dd-2a268caa490c",
+  "bdbdce58-e019-4861-b1f6-9abf961e7883",
+  "e67c8266-f4ac-4060-be78-ea296d80d93c",
+  "623f4562-d743-415e-ad5f-ea853c7e04d9",
+  "9dbc5a80-788a-46b4-8ec8-26b02e25c16c",
+  "a6ddf6c2-67e6-4ab0-817d-0e70e6212dd6",
+  "7bd4bc6f-5fef-4a83-8d71-0e951afd3274",
+  "8cf87c1a-94e0-4a43-8913-96f074487099",
+  "68cf1fe2-123f-42b2-84c1-b175013ffd19",
+  "e7454f90-0323-4451-9ce4-30190cb98e12",
+  "79b9a2a8-e3a2-4cc7-933b-391215351147",
+  "7c51dc4e-a259-4e73-a94c-072fc03537f5",
+  "422cc73b-8bd9-4571-96b5-0a812c80f4dd",
+  "0cbb71f2-be83-4a5a-a213-d2bb41c527c1",
+  "41703727-f7b6-45a4-8fd8-71cdcf8325f5"
+ ],
+ "citations": {
+  "1": "58aebe1f-35f7-4f8b-9f2f-39f29835326e",
+  "2": "12bc78dd-4024-4c73-afa7-c6f085daece4",
+  "3": "58aebe1f-35f7-4f8b-9f2f-39f29835326e",
+  "4": "58aebe1f-35f7-4f8b-9f2f-39f29835326e",
+  "5": "12bc78dd-4024-4c73-afa7-c6f085daece4",
+  "6": "77e80b7a-2a21-43aa-bd87-4f8c7d1d94b7",
+  "7": "77e80b7a-2a21-43aa-bd87-4f8c7d1d94b7",
+  "8": "58aebe1f-35f7-4f8b-9f2f-39f29835326e",
+  "9": "58aebe1f-35f7-4f8b-9f2f-39f29835326e",
+  "10": "58aebe1f-35f7-4f8b-9f2f-39f29835326e",
+  "11": "9a40cd31-a947-4cce-b8fa-92e3de1726d2",
+  "12": "9a40cd31-a947-4cce-b8fa-92e3de1726d2",
+  "13": "003046b6-f5d8-4c57-8f1f-0feedd722f35",
+  "14": "be8864aa-7ac7-46c6-becc-74f9c786d670",
+  "15": "be8864aa-7ac7-46c6-becc-74f9c786d670",
+  "16": "be8864aa-7ac7-46c6-becc-74f9c786d670",
+  "17": "be8864aa-7ac7-46c6-becc-74f9c786d670",
+  "18": "be8864aa-7ac7-46c6-becc-74f9c786d670",
+  "19": "003046b6-f5d8-4c57-8f1f-0feedd722f35",
+  "20": "09856d4b-d87e-4121-92dd-2a268caa490c",
+  "21": "bdbdce58-e019-4861-b1f6-9abf961e7883",
+  "22": "e67c8266-f4ac-4060-be78-ea296d80d93c",
+  "23": "e67c8266-f4ac-4060-be78-ea296d80d93c",
+  "24": "e67c8266-f4ac-4060-be78-ea296d80d93c",
+  "25": "623f4562-d743-415e-ad5f-ea853c7e04d9",
+  "26": "bdbdce58-e019-4861-b1f6-9abf961e7883",
+  "27": "bdbdce58-e019-4861-b1f6-9abf961e7883",
+  "28": "9dbc5a80-788a-46b4-8ec8-26b02e25c16c",
+  "29": "a6ddf6c2-67e6-4ab0-817d-0e70e6212dd6",
+  "30": "7bd4bc6f-5fef-4a83-8d71-0e951afd3274",
+  "31": "7bd4bc6f-5fef-4a83-8d71-0e951afd3274",
+  "32": "7bd4bc6f-5fef-4a83-8d71-0e951afd3274",
+  "33": "8cf87c1a-94e0-4a43-8913-96f074487099",
+  "34": "68cf1fe2-123f-42b2-84c1-b175013ffd19",
+  "35": "e7454f90-0323-4451-9ce4-30190cb98e12",
+  "36": "79b9a2a8-e3a2-4cc7-933b-391215351147",
+  "37": "7c51dc4e-a259-4e73-a94c-072fc03537f5",
+  "38": "422cc73b-8bd9-4571-96b5-0a812c80f4dd",
+  "39": "422cc73b-8bd9-4571-96b5-0a812c80f4dd",
+  "40": "79b9a2a8-e3a2-4cc7-933b-391215351147",
+  "41": "7c51dc4e-a259-4e73-a94c-072fc03537f5",
+  "42": "7c51dc4e-a259-4e73-a94c-072fc03537f5",
+  "43": "422cc73b-8bd9-4571-96b5-0a812c80f4dd",
+  "44": "0cbb71f2-be83-4a5a-a213-d2bb41c527c1",
+  "45": "41703727-f7b6-45a4-8fd8-71cdcf8325f5"
+ },
+ "references": [
+  {
+   "source_id": "58aebe1f-35f7-4f8b-9f2f-39f29835326e",
+   "citation_number": 1,
+   "cited_text": "MathSpeak is an essential tool for non-ambiguous communication of mathematics. A primary means through which individuals with print disabilities receive information is through speech. Spoken mathematics poses a problem because typical everyday language used to communicate mathematics contains ambiguity. For example, consider the utterance: \u201cThe square root of a plus b.\u201d This utterance is ambiguous because it can be interpreted as a + b or a + b The ambiguity arises due to lack of information demarcating the beginning and end of the square root. MathSpeak would render the first expression above as: \u201cstart root a end root plus b\u201d and the second as \u201cstart root a plus b end root.\u201d Although MathSpeak rules have undergone substantial development and are considered to be complete, efficacy testing to determine their capacity for disambiguation was not conducted during development. Hence, the present study examines the effectiveness of MathSpeak rules for reducing multiple interpretations of spoken mathematics."
+  },
+  {
+   "source_id": "12bc78dd-4024-4c73-afa7-c6f085daece4",
+   "citation_number": 2,
+   "cited_text": "What is MathSpeak? Date updated: 07/03/2025 For most of us, reading a web page containing mathematical calculations is simple. As we read, we automatically translate the mathematical expressions into operations and equations. Looking at a formula, we know which operations to perform and in what order. Now imagine, rather than viewing the equation, having it read to you character by character from left to right. Even a simple equation like \"One over one plus two plus two\" can be interpreted many ways with different results. In order to assure that mathematical notation is communicated without ambiguity, there must be precise rules for how notation must be verbalized. MathSpeak is one of several approaches to addressing this problem."
+  },
+  {
+   "source_id": "58aebe1f-35f7-4f8b-9f2f-39f29835326e",
+   "citation_number": 3,
+   "cited_text": "Increasing STEM Accessibility in Students with Print Disabilities through MathSpeak Increasing STEM Accessibility in Students with Print Disabilities through MathSpeak Mick Isaacson Purdue University Dave Schleppenbach Lyle L. Lloyd Purdue University Abstract Individuals with print disabilities have difficulty processing information through visual means and rely heavily on spoken input. Mathematics and fields that have a heavy emphasis on mathematics are difficult for these individuals because of ambiguity inherent in typical everyday spoken renderings of mathematical expressions. MathSpeak is a set of rules for speaking mathematical expressions in a non-ambiguous manner. The present study tested the efficacy of MathSpeak rules for disambiguation of auditory renderings of spoken mathematics. Findings suggest that MathSpeak is efficacious for disambiguating spoken mathematics."
+  },
+  {
+   "source_id": "58aebe1f-35f7-4f8b-9f2f-39f29835326e",
+   "citation_number": 4,
+   "cited_text": "Another aspect regarding increasing representation in STEM by individuals who have print disabilities involves development and provision of tools for increasing information accessibility. To illustrate, Dr. Abraham Nemeth, a blind professor of mathematics, developed a method to non-ambiguously receive spoken communication from sighted readers and for completing assignments through dictation during his education in mathematics. This was necessary because spoken mathematics (a principle means of communication for blind students of mathematic) is replete with ambiguity. As a consequence of his studies, he developed the Nemeth Braille Code for encoding mathematics into Braille and a set of rules, known as MathSpeak, for speaking mathematics in a non-ambiguous manner."
+  },
+  {
+   "source_id": "12bc78dd-4024-4c73-afa7-c6f085daece4",
+   "citation_number": 5,
+   "cited_text": "MathSpeak was developed by mathematician Abraham Nemeth, who is best known as the inventor of Nemeth Braille (a tactile system for communicating math and science notation). He developed the MathSpeak language because as a blind mathematician he needed a method for dictating his work so that others could transcribe it. MathSpeak continues to be a popular system for communicating math orally, and is used by many screen readers to read mathematical expressions, such as those written in MathML . For current information about tools and technologies that support MathSpeak, consult MathSpeak.com and The MathSpeak Initiative . There are also many relevant articles linked from the Design Science Reference page."
+  },
+  {
+   "source_id": "77e80b7a-2a21-43aa-bd87-4f8c7d1d94b7",
+   "citation_number": 6,
+   "cited_text": "Using the example below In Clearspeak, this would be read as \u201cthe fraction with numerator a plus b and denominator c\u201d In Mathspeak, this would be read as \u201cStart Fraction a plus b over c end Fraction\u201d By default the Speech engine is set to automatic. While we recommend using the Automatic setting, if users have a preference they would choose it under Options. For additional information, feel free to contact us at support@texthelp.com Related Articles None Was this article helpful? Thank you for your feedback! Still need help? Contact us here Copyright \u00a9 2025 Everway Ltd. All rights reserved."
+  },
+  {
+   "source_id": "77e80b7a-2a21-43aa-bd87-4f8c7d1d94b7",
+   "citation_number": 7,
+   "cited_text": "ClearSpeak And MathSpeak Speech Engines In Equatio Last Modified on Wednesday, 01-Jul-2026 14:42:34 BST Equatio utilizes 2 speech engines that can be used to speak Math. Clearspeak or Mathspeak. They can be found under the Math Options menu: What is the difference between them? Clearspeak is a more natural speech or normal way of speaking math terminology. Mathspeak is a more precise manner of speaking to help provide greater possibility of understanding the math for visually impaired users or blind users."
+  },
+  {
+   "source_id": "58aebe1f-35f7-4f8b-9f2f-39f29835326e",
+   "citation_number": 8,
+   "cited_text": "METHODS Overview Other than collection of basic demographic information and informed consent, the experimental protocol was automated in that an audio recording \u201cwalked\u201d the participants through the entire procedure. Participants were tested in groups during which they heard synthetic speech renderings of mathematical expressions with MathSpeak rules and without MathSpeak rules in a format typical of everyday spoken mathematics. Type of presentation was a within subject factor as each participant heard renderings with and without MathSpeak. After hearing an expression, the participant was instructed to circle, from among four choices, the expression displayed in mathematical notation that was just heard."
+  },
+  {
+   "source_id": "58aebe1f-35f7-4f8b-9f2f-39f29835326e",
+   "citation_number": 9,
+   "cited_text": "RESULTS All participants received perfect scores on the pre-test, hence, all were included for subsequent analysis. A mixed design analysis of variance was performed on the number of expressions correctly interpreted. Between subject factors were gender and test order. The within subject factor was the auditory rendering type (either with MathSpeak rules or without MathSpeak rules). Test order did not differ significantly. Main effects of auditory rendering type (F(1,48) = 197.689, p < .001) and gender (F(1,48) = 6.970, p = .011) were found (see figure 1). The main effect of auditory rendering type is evident in the much higher level of correctly interpreted expressions with MathSpeak compared to without MathSpeak. For the 20 item tests, mean number of correctly interpreted expression collapsed over gender for MathSpeak was 18.93 and was 8.07 without MathSpeak. The distribution of scores for correctly interpreted expressions with MathSpeak did not overlap with the distribution of scores without MathSpeak (range with MathSpeak: 16 to 20; without MathSpeak: 2 to 13). As expected, a t-test modified for differences between proportions revealed that performance without MathSpeak did not differ from chance. The main effect of gender is evident in a slightly lower number of correctly interpreted expressions for females compared to males. Mean scores collapsed over auditory rendering type were 13.17 for females and 15.00 for males."
+  },
+  {
+   "source_id": "58aebe1f-35f7-4f8b-9f2f-39f29835326e",
+   "citation_number": 10,
+   "cited_text": "Figure 1: Number of expressions correctly interpreted for the two types of terminology. DISCUSSION The findings of the present study demonstrate that MathSpeak is efficacious for reducing ambiguity in spoken mathematics. Significantly more mathematical expressions were correctly interpreted when MathSpeak terminology was used compared to expressions rendered with common terminology. In fact, performance with MathSpeak was close to perfect. Without MathSpeak, performance did not differ from chance. Furthermore, MathSpeak rules appear to be easy to learn. The instructional phase during which MathSpeak rules were taught lasted for only four minutes and even with this short instructional time, performance was almost perfect."
+  },
+  {
+   "source_id": "9a40cd31-a947-4cce-b8fa-92e3de1726d2",
+   "citation_number": 11,
+   "cited_text": "Math notation Generally, numbers one through ten are written as words. Anything over ten is written numerically. **Preferred:** I have here six coconuts. **Preferred:** I will count 12 oscillations once the clock is running. Decimals should always be rendered numerically. **Preferred:** The answer is 2.6. **To be avoided:** The answer is two point six. **Preferred:** The distance is 0.3 meters. **To be avoided:** The distance is zero point three meters. Avoid mixing words and numbers in equations. **Preferred:** 2 + 12 = 14 **To be avoided:** Two plus 12 = 14 **Also to be avoided:** Two + 12 equals 14 On the other hand, for the sake of clarity, in some cases it may be best to mix numbers and words. For example: **Preferred:** The square root of (2 + 3 x 10). **To be avoided:** The square root of two plus three times ten. Simple equations should be rendered with signs and numerals when possible, with spaces between characters. 2x + 15y = z (a + b) - c = d 2 x 3 = 6 Because support for math notation in captions is currently very limited, anything other than simple notation must be written out in words: two times the square root of five R equals delta T six squared 15 to the sixth power Always notate upper/lowercases in the captions as the speaker says or writes them. If an uppercase P is used in an equation, for example, use an uppercase P in the captions."
+  },
+  {
+   "source_id": "9a40cd31-a947-4cce-b8fa-92e3de1726d2",
+   "citation_number": 12,
+   "cited_text": "Watch the entire presentation before writing any audio descriptions. This will help you determine where descriptions are necessary, how much information must be added to the original presentation, and if extended descriptions will be necessary. You will also find it helpful to watch the presentation with the monitor turned off, or with your eyes closed, listening carefully to the audio. If you can't understand something the speaker is talking about, neither will a blind or visually impaired student. Identify the points in the presentation that need audio descriptions. If the speaker speaks aloud what he is writing on the board, or if he sufficiently describes a picture he has drawn, an audio description may not be necessary. However, if he fails to speak written information fully or describe a drawing completely, or if he makes a reference to location (e.g., \"up here,\" \"over there,\" \"look at this,\" etc.), you must supply a description. When writing descriptions, first determine if the additional information can be written to fit within an appropriate natural pause in the program's sound track. If no such pause exists, you must insert an extended description at that point. Extended descriptions may be of any length, but keep them as concise as possible while still conveying all necessary information. You may find it helpful to first write a full description and then edit it to an appropriate length, rather than writing and editing simultaneously. Use vocabulary appropriate to the subject matter and to the audience. When writing descriptions for a young audience, use age-appropriate descriptive language. Include complex concepts or vocabulary several times, within context, throughout the description. Write in short sentences for better comprehension. Insert each description, extended or not, at a natural point in the movie's timeline. Don't cut off the speaker in mid-word; instead, take advantage of any brief pause. Even a pause between words or sentences will suffice as long as the description is not out of context at its insertion point. You may \"predescribe\" (that is, insert the description slightly before the action occurs on screen) if it clarifies the situation. Use a specialized descriptive language, such as MathSpeak , for scientific and mathematical expressions. Use MAGpie , a free application available from NCAM, to write, edit, time and record descriptions for digital video. Be sure to record the descriptions in a quiet room, speaking naturally and clearly into the microphone. PREVIOUS | NEXT | CONTENTS Sitemap | About NCAM | Contact Us | Strategic Partners Program | WGBH NCAM is part of the Media Access Group at WGBH | \u00a9 2009"
+  },
+  {
+   "source_id": "003046b6-f5d8-4c57-8f1f-0feedd722f35",
+   "citation_number": 13,
+   "cited_text": "Digital Talking Books Guidelines for Describing STEM Images Bar Charts Line Graphs Venn Diagrams Scatter Plots Tables Pie Charts Basic Flow Chart Standard Diagrams and Illustrations Complex Diagrams and Illustrations Math Equations Resources Training Events Acknowledgements Support for GBH is provided by: Become a GBH sponsor Resources for Describing STEM Images General American Printing House for the Blind's Accessible Tests Department offers guidelines and other publications . Support for GBH is provided by: Become a GBH sponsor"
+  },
+  {
+   "source_id": "be8864aa-7ac7-46c6-becc-74f9c786d670",
+   "citation_number": 14,
+   "cited_text": "Specific Guidelines - Graphs - DIAGRAM Center Toggle High Contrast Toggle Font size Toggle navigation DIAGRAM Center Home About DIAGRAM Center + Goals Current Working Groups And Members Advisory Committee Our Work Image Description 3D Printing and Tactiles Accessible Math Born Accessible Publishing Research DIAGRAM Reports Webinars Blog Contact Us Search Specific Guidelines \u2013 Graphs << Previous section: Diagrams (Relational) | Main Table of Contents | Next: Section F (Maps) >> Table of Contents for Section E E. Graphs 1. Bar Graphs"
+  },
+  {
+   "source_id": "be8864aa-7ac7-46c6-becc-74f9c786d670",
+   "citation_number": 15,
+   "cited_text": "1a. Vertical 1b. Horizontal 1c. Double 2. Line Graphs 3. Pie Graphs 4. Scatter Plots Graphs 1. Bar Graphs 1a. Vertical Bar Graphs \u00a9 NCAM 2009 Guidelines: Bar graphs should be converted into accessible tables. Briefly describe the graph and give a summary if one is immediately apparent. Provide the title and axis labels. It is not necessary to describe the visual attributes of the bars, e.g. dark blue, light blue, unless there is an explicit need such as an exam question referring to the colors. Description: Figure 1 is a bar graph that measures percentage of vaccination coverage in five states over one year, from Q3 2006 to Q2 2007. In each state, the coverage increases over time. The data are summarized in the following table. All data are approximate."
+  },
+  {
+   "source_id": "be8864aa-7ac7-46c6-becc-74f9c786d670",
+   "citation_number": 16,
+   "cited_text": "2. Line Graphs \u00a9 NCAM 2009 Guidelines: Line graphs should be converted into accessible tables. Briefly describe the chart and give a summary if one is immediately apparent. Provide the title and axis labels. It is not necessary to describe the visual attributes of the lines, e.g. solid, dashed, unless there is an explicit need such as an exam question referring to these attributes. In this case, with just two lines, the added description is not a burden to the reader. Description: The figure is entitled \u201cFOREIGN TRADE OF COUNTRY X, 1968 through 1980, in United States dollars\u201d. There are two lines on the graph, a dashed line labeled \u201cExports\u201d and a solid line labeled \u201cImports\u201d.The vertical axis is labeled \u201cBillions of Dollars,\u201d beginning with zero to eighteen, in increments of 2. A note: one billion equals a one followed by 9 zeros.The horizontal axis is labeled \u201cYear\u201d and lists all the years from 1968 through 1980.In the graph, the Exports line begins in 1968 at 3 billion dollars, rises steeply to 14 billion in 1974, then drops to 9.5 billion in 1975 and 1976. In 1977, the Exports line shoots up to 15.5 billion, then trails off to 10 billion in 1980.In the graph, the Imports line begins in 1968 at 2 billion and rises steadily to 8.75 billion in 1980, except for minor dips in 1972 and 1979.The data are summarized in the following table. Figures are in billions of dollars. All data are approximate."
+  },
+  {
+   "source_id": "be8864aa-7ac7-46c6-becc-74f9c786d670",
+   "citation_number": 17,
+   "cited_text": "FOREIGN TRADE OF COUNTRY X <cited_table> Return to main table of contents | Return to top of page | Next 3. Pie Graphs \u00a9 NCAM 2009 Guidelines: Pie graphs should be converted into accessible tables. It is not necessary to describe the visual attributes of the charts, e.g., red wedge, blue lines, etc., unless there is an explicit need such as an exam question referring to these attributes. It is helpful to list the numbers from smallest to largest, regardless of how they are presented in the image.",
+   "cited_table": {
+    "num_columns": 3,
+    "rows": [
+     [
+      "Year",
+      "Exports",
+      "Imports"
+     ],
+     [
+      "1968",
+      "3",
+      "2"
+     ],
+     [
+      "1969",
+      "3",
+      "2.3"
+     ],
+     [
+      "1970",
+      "4",
+      "2.4"
+     ],
+     [
+      "1971",
+      "5",
+      "3.1"
+     ],
+     [
+      "1972",
+      "10",
+      "2.5"
+     ],
+     [
+      "1973",
+      "13",
+      "3.3"
+     ],
+     [
+      "1974",
+      "14.2",
+      "3.7"
+     ],
+     [
+      "1975",
+      "9.7",
+      "4"
+     ],
+     [
+      "1976",
+      "9.5",
+      "5"
+     ],
+     [
+      "1977",
+      "15.5",
+      "5.7"
+     ],
+     [
+      "1978",
+      "12.5",
+      "7"
+     ],
+     [
+      "1979",
+      "12",
+      "6.3"
+     ],
+     [
+      "1980",
+      "10.2",
+      "8.6"
+     ]
+    ]
+   }
+  },
+  {
+   "source_id": "be8864aa-7ac7-46c6-becc-74f9c786d670",
+   "citation_number": 18,
+   "cited_text": "Description: This figure is a pie graph that can be shown in the following table. Program Expenses <cited_table> Return to main table of contents | Return to top of page | Next 4. Scatter Plots \u00a9 NCAM 2009 Guidelines: Scatter plots are among the more difficult graphs to describe, especially if there is a need to make specific data point accessible.",
+   "cited_table": {
+    "num_columns": 3,
+    "rows": [
+     [
+      "Expense",
+      "Percent of Total",
+      "Dollar Amount"
+     ],
+     [
+      "Program Supplies and Expenses",
+      "2%",
+      "$3,939"
+     ],
+     [
+      "Registry Participation Initiatives",
+      "12%",
+      "$26,052"
+     ],
+     [
+      "Registry Operation and Enhancements",
+      "%28",
+      "$63,820"
+     ],
+     [
+      "Personnel",
+      "28%",
+      "$63,868"
+     ],
+     [
+      "Educational Initiatives",
+      "30%",
+      "$68,860"
+     ]
+    ]
+   }
+  },
+  {
+   "source_id": "003046b6-f5d8-4c57-8f1f-0feedd722f35",
+   "citation_number": 19,
+   "cited_text": "NCAM's Design Guidelines for Electronic Publications, Multimedia and the Web . The National Center for Blind Youth in Science has a portal for STEM resources. TEST ACCESS: Guidelines for Computer Administered Testing. For digital textbooks that include video clips, the Description Key for Educational Media offers guidelines for describing video. Charts and Graphs Support for GBH is provided by: Become a GBH sponsor Chart Explainer automatically generates textual summaries of charts and tables. Mathtrax is a graph describer developed by NASA."
+  },
+  {
+   "source_id": "09856d4b-d87e-4121-92dd-2a268caa490c",
+   "citation_number": 20,
+   "cited_text": "Confusing jargon, complicated methodologies, and nuances of statistical interpretation aren't the typical ingredients for a gripping story. But they are for science journalists, who often need to bring dense or esoteric topics to life for nonspecialist audiences. These challenges can be even greater for audio journalists, who can't rely on visuals to make difficult concepts clearer and who have to be sure listeners will understand their stories on a first pass, since rewinding is impossible (for radio) and unlikely (for podcasts). If things get too complex or boring, most listeners will simply turn off the show."
+  },
+  {
+   "source_id": "bdbdce58-e019-4861-b1f6-9abf961e7883",
+   "citation_number": 21,
+   "cited_text": "Handling numbers and data without overwhelming the viewer \ud83d\udd17 One of the trickiest challenges in anchor scriptwriting is presenting statistics, financial figures, and large numbers. In print, a reader can study a table or re-read a figure. On television, numbers fly past the ear in an instant \u2013 and they're hard to retain. Round off numbers \ud83d\udd17 Instead of saying \u201c1,987,452 people were affected,\u201d write \u201cnearly two million people.\u201d As the University of Dayton's broadcast style guide notes, scriptwriters should round numbers and use approximations like \u201cclose to,\u201d \u201cjust under,\u201d or \u201cnearly.\u201d Precision matters in journalism, but quick comprehension matters more in a spoken medium. The precise figure can always be displayed on screen through a graphic or lower third."
+  },
+  {
+   "source_id": "e67c8266-f4ac-4060-be78-ea296d80d93c",
+   "citation_number": 22,
+   "cited_text": "Radio works in real time. It moves forward in a straight line and never pauses. A listener who is driving, cooking, or exercising cannot hit \u201crewind\u201d on a live broadcast. If they zone out for even a few seconds, they lose that piece of information permanently. This is why broadcast journalism professors often teach the rule of OTPS \u2013 one thought per sentence . Every sentence in a radio script should carry a single, clear idea. No nested clauses, no stacked details, no multi-layered constructions that work beautifully on paper but collapse when spoken aloud."
+  },
+  {
+   "source_id": "e67c8266-f4ac-4060-be78-ea296d80d93c",
+   "citation_number": 23,
+   "cited_text": "On radio, numbers are extremely difficult to process. As NPR's training guide for transitioning journalists points out , statistics on radio can distract the listener, are easily misheard, and there's often not enough time to provide the context needed to make multiple numbers meaningful. A print journalist might write: \u201cThe company's quarterly profits were \u20b924,87,93,210, a 15.7% increase from the previous year's \u20b921,50,31,100.\u201d That sentence is perfectly functional in print. On radio, it's a disaster. The listener cannot remember or process those figures as they fly past. The radio writer would simplify this to something like: \u201cThe company's profits jumped by nearly 16 per cent this quarter \u2013 that's close to 25 crore rupees.\u201d"
+  },
+  {
+   "source_id": "e67c8266-f4ac-4060-be78-ea296d80d93c",
+   "citation_number": 24,
+   "cited_text": "The guiding principle is to round numbers off , use approximate terms like \u201cabout half,\u201d \u201cnearly a third,\u201d or \u201cmore than double,\u201d and never force the listener to do mental arithmetic while absorbing a news bulletin. Eliminating print-specific language \ud83d\udd17 Certain phrases that are completely standard in print have no place on radio. These are references that assume the audience can see the text. Phrases like \u201cas mentioned above,\u201d \u201cthe chart below shows,\u201d or \u201csee the accompanying photo\u201d are meaningless to a listener. There is no \u201cabove\u201d or \u201cbelow\u201d in a radio broadcast. There is only before and after \u2013 and \u201cbefore\u201d is already gone."
+  },
+  {
+   "source_id": "623f4562-d743-415e-ad5f-ea853c7e04d9",
+   "citation_number": 25,
+   "cited_text": "Jonathan Kern, who has trained NPR's on-air staff for years, is a gifted guide, able to narrate a day in the life of a host and lay out the nuts and bolts of production with equal wit and warmth. Along the way, he explains the importance of writing the way you speak, reveals how NPR books guests ranging from world leaders to neighborhood newsmakers, and gives sage advice on everything from proposing stories to editors to maintaining balance and objectivity. Best of all\u2014because NPR wouldn't be NPR without its array of distinctive voices\u2014lively examples from popular shows and colorful anecdotes from favorite personalities animate each chapter."
+  },
+  {
+   "source_id": "bdbdce58-e019-4861-b1f6-9abf961e7883",
+   "citation_number": 26,
+   "cited_text": "Use comparisons to add context \ud83d\udd17 Raw numbers rarely mean much on their own. A budget cut of fifty million dollars sounds abstract until you compare it to something tangible \u2013 \u201cenough money to fund three new schools\u201d or \u201croughly the cost of building two new hospitals.\u201d These analogies and comparisons help viewers immediately grasp the scale and significance of data. As NBC News journalists advise , the key is to present information in a way that's relatable to everyday people. Limit the number of figures \ud83d\udd17 A good rule of thumb: don't stack multiple statistics in a single story segment. Too many numbers overwhelm the listener. Pick the one or two most important figures, say them simply, and let on-screen graphics carry the rest. The eye processes numbers faster than the ear, so visuals like full-screen graphics (FSGs) and lower thirds are essential companions to any data-heavy story."
+  },
+  {
+   "source_id": "bdbdce58-e019-4861-b1f6-9abf961e7883",
+   "citation_number": 27,
+   "cited_text": "One idea per sentence \ud83d\udd17 Each sentence in an anchor script should communicate one clear thought . Stacking multiple ideas into a single sentence creates confusion when the words are spoken aloud. A good benchmark is to keep sentences at around 15 to 20 words. If you find yourself running out of breath while reading a sentence aloud, it needs to be split into two. Use active voice \ud83d\udd17 Active voice is shorter, more direct, and easier to process in real time. Instead of writing \u201cThe bill was passed by the legislature,\u201d write \u201cThe legislature passed the bill.\u201d The subject acts \u2013 the audience immediately understands who did what. Passive constructions force the listener to mentally reorganise the sentence, and by the time they do, the anchor has already moved on."
+  },
+  {
+   "source_id": "9dbc5a80-788a-46b4-8ec8-26b02e25c16c",
+   "citation_number": 28,
+   "cited_text": "Ambiguous scripts require verbal clarification between writers, directors, and sound designers, introducing inconsistencies and rework; a fully annotated script serves as a complete production specification that enables direct translation from script to audio. ( De Fossard, 2005 ; Media, 2026 ; Junkie, 2026 ) <cited_table>",
+   "cited_table": {
+    "num_columns": 2,
+    "rows": [
+     [
+      "Dimension",
+      "What is scored"
+     ],
+     [
+      "Dialogue efficiency",
+      "Lines are short ( \u2264 \\leq 17 words), natural, one thought per turn"
+     ],
+     [
+      "Narration discipline",
+      "Narrator used only when information cannot be conveyed using other sounds"
+     ],
+     [
+      "Exposition handling",
+      "Backstory scattered in dialogue, never front-loaded"
+     ],
+     [
+      "Narrative clarity",
+      "Zero-background listener can follow; each line responds to the prior one"
+     ],
+     [
+      "Scene propulsion",
+      "Every scene opens mid-action and ends on unresolved tension"
+     ],
+     [
+      "SFX specificity",
+      "Prompts name material and manner ( e.g., \u201cleather soles scraping bark\u201d)"
+     ],
+     [
+      "SFX discipline",
+      "SFX are spaced, not stacked; each is necessary"
+     ],
+     [
+      "Sound design coverage",
+      "Every scene has at least one SFX or music cue"
+     ],
+     [
+      "Music emotional precision",
+      "Cue prompts name the emotion; placement aligns with tonal shifts"
+     ],
+     [
+      "Adaptation fidelity",
+      "All key events preserved; internal thought externalized"
+     ],
+     [
+      "Cross-modal redundancy",
+      "No text restates what a co-located SFX already conveys"
+     ]
+    ]
+   }
+  },
+  {
+   "source_id": "a6ddf6c2-67e6-4ab0-817d-0e70e6212dd6",
+   "citation_number": 29,
+   "cited_text": "CLARITY In your script, you should write out potential stumbling blocks exactly as they are meant to be  read aloud. For example, write out the word \u2018dollars\u2019 instead of using a dollar sign. If you need to  give the full term represented by initials or an acronym \u2013 especially one that can be confused for another word or name, such as PETA (People for the Ethical Treatment of Animals) \u2013 write it clearly and in full in the script. When writing explanations or descriptions, use the \u2018phone a friend\u2019 test. How would you explain  or describe this particular subject or thing to a friend if you called them to talk about it? How  much technical jargon would you use? How much detail would you give? Your meaning needs to be conveyed clearly and instantly in a podcast."
+  },
+  {
+   "source_id": "7bd4bc6f-5fef-4a83-8d71-0e951afd3274",
+   "citation_number": 30,
+   "cited_text": "Normalization is enabled by default for all TTS models to help improve pronunciation of numbers, dates, and other complex text elements. Why do models read out inputs differently? Certain models are trained to read out numbers and phrases in a more human way. For instance, the phrase \u201c$1,000,000\u201d is correctly read out as \u201cone million dollars\u201d by the Eleven Multilingual v2 model. However, the same phrase is read out as \u201cone thousand thousand dollars\u201d by the Eleven Flash v2.5 model. The reason for this is that the Multilingual v2 model is a larger model and can better generalize the reading out of numbers in a way that is more natural for human listeners, whereas the Flash v2.5 model is a much smaller model and so cannot."
+  },
+  {
+   "source_id": "7bd4bc6f-5fef-4a83-8d71-0e951afd3274",
+   "citation_number": 31,
+   "cited_text": "Apply normalization in LLM prompts In the case of using an LLM to generate the text for TTS, you can add normalization instructions to the prompt. 1 Use clear and explicit prompts LLMs respond best to structured and explicit instructions. Your prompt should clearly specify that you want text converted into a readable format for speech. 2 Handle different number formats Not all numbers are read out in the same way. Consider how different number types should be spoken: Cardinal numbers: 123 \u2192 \u201cone hundred twenty-three\u201d Ordinal numbers: 2nd \u2192 \u201csecond\u201d Monetary values: $45.67 \u2192 \u201cforty-five dollars and sixty-seven cents\u201d Phone numbers: \u201c123-456-7890\u201d \u2192 \u201cone two three, four five six, seven eight nine zero\u201d Decimals & Fractions: \u201c3.5\u201d \u2192 \u201cthree point five\u201d, \u201c\u2154\u201d \u2192 \u201ctwo-thirds\u201d Roman numerals: \u201cXIV\u201d \u2192 \u201cfourteen\u201d (or \u201cthe fourteenth\u201d if a title)"
+  },
+  {
+   "source_id": "7bd4bc6f-5fef-4a83-8d71-0e951afd3274",
+   "citation_number": 32,
+   "cited_text": "5 Consider edge cases Different contexts might require different conversions: Dates: \u201c01/02/2023\u201d \u2192 \u201cJanuary second, twenty twenty-three\u201d or \u201cthe first of February, twenty twenty-three\u201d (depending on locale) Time: \u201c14:30\u201d \u2192 \u201ctwo thirty PM\u201d If you need a specific format, explicitly state it in the prompt. Putting it all together This prompt will act as a good starting point for most use cases:"
+  },
+  {
+   "source_id": "8cf87c1a-94e0-4a43-8913-96f074487099",
+   "citation_number": 33,
+   "cited_text": "Corresponding author for this work Research output: Contribution to journal \u203a Article \u203a peer-review 102 Link opens in a new tab Citations (Scopus) Overview Fingerprint Abstract Based on cognitive load theory and the transient information effect, this paper investigated the modality effect while interpreting a contour map. The length and complexity of auditory and visual text instructions were manipulated. Experiment 1 indicated that longer audio text information within a presentation was inferior to the equivalent longer visual text information demonstrating a reversal of the modality effect due to transient information imposing a heavy working memory load. However, the expected modality effect was not obtained from the equivalent shorter auditory text presentation compared to shorter visual text information. It was hypothesised that the shorter text still contained too much auditory information for working memory to readily process. Experiment 2 further decreased the shorter auditory text information which then resulted in a traditional modality effect including a modality by text length interaction in which shorter, audio-visual information was better than visual only information but longer, audio-visual information was worse than visual only information."
+  },
+  {
+   "source_id": "68cf1fe2-123f-42b2-84c1-b175013ffd19",
+   "citation_number": 34,
+   "cited_text": "Get access Share   Cite Summary Instructional information can be categorised as being either transient or permanent. Spoken information or videos provide examples of transient information, while written information or static graphics provide examples of permanent information. The major characteristic of transient information is that current information, once presented, disappears to be replaced by new information, with the old information difficult to access. Permanent information, once presented, remains available and accessible for the duration of the instructional episode. The transient information effect or principle can be demonstrated when the same information is presented in either transient form such as speech or permanent form such as identical, written text. The effect occurs when learning is facilitated by the permanent version of the information. Cognitive load theory can be used to explain such results."
+  },
+  {
+   "source_id": "e7454f90-0323-4451-9ce4-30190cb98e12",
+   "citation_number": 35,
+   "cited_text": "Teachers should consider the complexity and length of verbal information when deciding whether to use an audio-visual or visual-only format. For simple and short verbal instructions, an audio-visual format is likely beneficial. However, as the information becomes more complex and lengthy, a visual-only format with written text may be more effective. It's important to consider student expertise when designing instructional materials. Students with more experience and knowledge may be better able to process complex auditory information. Teachers should adjust the format and complexity of their presentations based on their students' abilities and prior knowledge. The transient information effect, which describes the challenges of processing transient information like audio, is a valuable concept for teachers to understand. By recognizing the limitations of working memory when processing spoken information, teachers can make informed decisions about how to present information effectively. Teachers should be cautious about using instructional technology solely to transform permanent information into transient information. While technology can enhance learning, it's essential to use it strategically and avoid overwhelming students with too much transient information. Sentence length can be used as an indicator of element interactivity. Element interactivity refers to the number of elements that need to be processed simultaneously in working memory. Longer sentences often indicate higher element interactivity, which can increase cognitive load. Teachers should aim for clear and concise language to minimize cognitive load, especially when presenting information verbally."
+  },
+  {
+   "source_id": "79b9a2a8-e3a2-4cc7-933b-391215351147",
+   "citation_number": 36,
+   "cited_text": "Dual coding means pairing words with a visual that represents the same idea or relationship. A labelled diagram can show how parts connect while a short explanation names the process. A timeline can show sequence while spoken words explain why one event led to another. What is this? Report Ad The two forms must work together. An attractive photograph beside unrelated text is not dual coding. A diagram on one slide and its labels on the next also makes learners search for the connection. The practical question is not, \u201cHave I added a picture?\u201d It is, \u201cDoes this visual make the important relationship easier to see and explain?\u201d Clark and Paivio (1991) provide the main educational account."
+  },
+  {
+   "source_id": "7c51dc4e-a259-4e73-a94c-072fc03537f5",
+   "citation_number": 37,
+   "cited_text": "Element count 3 3 7* 7 1 7 7 7* 2 3 3 2 8* 8* Ques. nos. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 Words/diagram 15 15 14 11 14 10 13 15 15 14 13 13 7 8 Words/diagram/audio 14 14 9 8 12 6 9 7 14 10 12 10 2 1 *Denotes significant difference according to Fisher Exact tests. Multimedia presentations 413 Copyright # 2003 John Wiley & Sons, Ltd. Appl. Cognit. Psychol. 17: 401\u2013418 (2003) information to derive meaning; the modality effect which ameliorates the consequences of split-attention by presenting written text in auditory form instead; and the redundancy"
+  },
+  {
+   "source_id": "422cc73b-8bd9-4571-96b5-0a812c80f4dd",
+   "citation_number": 38,
+   "cited_text": "Interview participants in the elaborative details condition displayed similar challenges, despite elaborative details being designed to facilitate comprehension. S5 stated that the explanation made difficult to follow and contributed to a sense of information overload. He stated: \u201cI think the podcast was interesting, but sometimes it had a lot of topics, making it a little bit complicated.\u201d This suggests the elaborative verbal information was at times overwhelming. Similarly, S6 expressed confusion about the formation and movement of positive and negative charges inside the cloud: \u201cI couldn't quite grasp how positive and negative charges are formed inside the cloud. Without images, I don't think I'd have understood anything.\u201d This indicates that elaborative content did not promote deeper understanding. S4's interview further reinforced this pattern: although she found the drawings helpful, she reported: \u201cI thought it was harder to follow when there wasn't a drawing. There should be more drawings or animations throughout the whole video,\u201d suggesting that pictures were more important than elaborative verbal explanations for recall."
+  },
+  {
+   "source_id": "422cc73b-8bd9-4571-96b5-0a812c80f4dd",
+   "citation_number": 39,
+   "cited_text": "The absence of differences in cognitive load between conditions reinforces this interpretation. Despite the inclusion of a seductive details condition, intrinsic, extraneous, and germane cognitive load did not differ significantly across conditions. From a cognitive load perspective, seductive details are expected to increase extraneous cognitive load by drawing attention and processing away from essential content ( Harp & Mayer, 1998 ; Mayer, 2020 ). However, the absence of significant differences in quantitative data warrants nuanced exploration based on qualitative data. Interview data revealed that students in the elaborative details and seductive details conditions felt overwhelmed at times with scientific terminology and additional information. Although quantitative and qualitative data appear contradictory, the qualitative data revealed that many students found visual supports key to understanding the information. Because working memory and cognitive load are intertwined, the design of the video podcast according to the modality principle and dual-channel processing may have prevented students from experiencing significant extraneous load, as offloading verbal narration to the auditory channel may have freed sufficient visual channel capacity to maintain coherent mental models despite the additive details ( Mayer & Moreno, 2003 ). Students routinely mentioned in interviews the need for visual information to understand the narration better, and as advanced-level second language users, students may have relied heavily on the visual channel to maintain coherent mental models. Future research may explore elaborative details and seductive details without illustrations to understand if these conditions affect working memory or cognitive load."
+  },
+  {
+   "source_id": "79b9a2a8-e3a2-4cc7-933b-391215351147",
+   "citation_number": 40,
+   "cited_text": "Build diagrams live. Draw and explain one relation at a time instead of revealing a finished poster. Label directly. Put the word beside the feature, not in a remote key. Signal the current point. Use a pointer, box or brief colour cue while speaking. Compare aligned examples. Keep corresponding parts in the same position so differences are visible. Turn prose into structure. Convert a causal paragraph into a labelled chain, then check it against the text. Turn structure back into prose. Ask learners to explain a diagram in complete subject language. Complete, then create. Let novices finish a partial diagram before asking for an independent one. Retrieve the visual. After a delay, ask learners to redraw the structure from memory and correct it in another colour. Use the checking sequence in our Retrieval Practice guide ."
+  },
+  {
+   "source_id": "7c51dc4e-a259-4e73-a94c-072fc03537f5",
+   "citation_number": 41,
+   "cited_text": "APPLIED COGNITIVE PSYCHOLOGY Appl. Cognit. Psychol. 17: 401\u2013418 (2003) Published online in Wiley InterScience 26 February 2003 (www.interscience.wiley.com) DOI: 10.1002/acp.877 When Auditory Presentations Should and Should not be a Component of Multimedia Instruction WAYNE LEAHY*, PAUL CHANDLER and JOHN SWELLER University of New South Wales, Australia SUMMARY Based on cognitive load theory, two experiments investigated the conditions under which audiovisual-based instruction may be an effective or an ineffective instructional technique. Results from Experiment 1 indicated that visual with audio presentations were superior to equivalent visual-only presentations. In this experiment, neither the auditory nor the visual material could be understood in isolation. Both sources of information were interrelated and were essential to render the material intelligible. In contrast, Experiment 2 demonstrated that a non-essential explanatory text, presented aurally with similar written text contained in a diagram, hindered learning. This result was obtained because when compared to a diagram only format, the aural material was unnecessary and therefore created a redundancy effect. Differences between groups were stronger when information was high in complexity. It was concluded that the effectiveness of multimedia instruction depends very much on how and when auditory information is used. Copyright # 2003 John Wiley & Sons, Ltd."
+  },
+  {
+   "source_id": "7c51dc4e-a259-4e73-a94c-072fc03537f5",
+   "citation_number": 42,
+   "cited_text": "Both were required for the instructional material to be rendered intelligible. Two instructional groups were used: a visual-only group (graph and written instructions presented in split-attention format) and an audio/visual group (graph and identical taped instructions). Results from this experiment confirmed the advantage of dual-mode presentations to overcome the problems associated with attending to multiple sources of information (the audio/visual group outperformed the visual-only group). This effect"
+  },
+  {
+   "source_id": "422cc73b-8bd9-4571-96b5-0a812c80f4dd",
+   "citation_number": 43,
+   "cited_text": "For more information on the journal statistics, click here . Multiple requests from the same IP address are counted as one view. Supplementary Material Supplementary File 1: ZIP-Document (ZIP, 48 KB) clear Zoom | Orient | As Lines | As Sticks | As Cartoon | As Surface | Previous Scene | Next Scene Cite Export citation file: BibTeX | EndNote | RIS MDPI and ACS Style Davis, R.O.; Lee, Y.-J.; Vincent, J.; Lee, J.H. Cognitive Load and Working Memory in Multimedia Video Podcasts: Effects of Elaborative and Seductive Details. J. Intell. 2026 , 14 , 74. https://doi.org/10.3390/jintelligence14050074"
+  },
+  {
+   "source_id": "0cbb71f2-be83-4a5a-a213-d2bb41c527c1",
+   "citation_number": 44,
+   "cited_text": "Provide text versions of the radio scripts\u2014and make sure they are adapted for the Web. Because some users come to NPR's Web site through search engines or via a news aggregator, they're not expecting to listen to a story\u2014they want to read it. At NPR.org, some of the online adaptations are only a few paragraphs long; others run 700 or 800 words. In general, more text is better. \u201cWhen I go to the Web, I love being able to read the text of the story,\u201d says Ellen Weiss, who has spent her whole career on the radio side of the business. \u201cThere's a huge difference between being able to read a story in two minutes and listen to it for eight.\u201d"
+  },
+  {
+   "source_id": "41703727-f7b6-45a4-8fd8-71cdcf8325f5",
+   "citation_number": 45,
+   "cited_text": "often inaccessible due to language and style choices, making them unapproachable for people not trained in academia or whose first language is not English. In Amplify's manifesto, accessible and understandable language is used, paired with editing choices, making it an engaging and clear way to share disseminated information. Additionally, the choice to make both a zine and a PDF transcript available increases the accessibility of this manifesto. These choices to increase accessibility hold up many of the reasons Amplify Podcast Network\u2019s podcasters, myself included, came"
+  }
+ ]
+}

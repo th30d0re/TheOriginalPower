@@ -1,0 +1,484 @@
+{
+ "answer": "### 1. Public Scholarship & Scholarly Podcasting Frameworks\n\nAdapting academic research and books into podcasting has evolved from informal science communication into a recognized subfield of digital scholarship. Scholars distinguish between **communicating *about* scholarship** (disseminating existing findings to external audiences) and **operating *within* scholarship** (using audio as a primary, dialogic mode of peer-reviewed knowledge production) [1, 2].\n\n#### A. Hannah McGregor, WLU Press, and the Amplify Podcast Network\n* **The *Secret Feminist Agenda* Peer-Review Experiment**:\n  * **Mechanism & Structure**: Assistant Professor Hannah McGregor (Simon Fraser University) and Senior Editor Siobhan McMenemy (Wilfrid Laurier University Press) launched the *Scholarly Podcasting in Canada* project [3, 4]. Using McGregor's podcast *Secret Feminist Agenda* as a pilot case, they designed an open, post-season peer-review model where external scholars evaluated full podcast seasons rather than individual pre-recorded text scripts [3-5]. Reviewers evaluated whether a podcast could serve as an equivalent to a university press monograph [5].\n  * **Evidentiary Basis**: **Qualitative Action Research & Practitioner Case Study** [4\u20138, 105].\n* **Architecture of the Amplify Podcast Network**:\n  * **Mechanism & Structure**: Developed by Hannah McGregor and Stacey Copeland with SSHRC funding, the Amplify Podcast Network establishes two operational streams for academic audio [6, 7]:\n    1. **Resonate Stream**: Peer-reviewed scholarly podcasts published under the Wilfrid Laurier University Press imprint (e.g., *Secret Feminist Agenda* and Brenna Clarke Gray's *Community of Praxis*) [6, 7].\n    2. **Sustain Stream**: A community of practice for ongoing, self-published scholarly podcasts that embody critical pedagogy and open scholarship without undergoing formal press peer review (e.g., *Keeping It 101: A Killjoy's Introduction to Religion*, *Critical and Curious*, and *Wrinkle Radio*) [6, 7].\n  * **Evidentiary Basis**: **Practitioner Case Study & Network Architecture Guidelines** [111, 118\u2013121, 227\u2013235].\n* **Core Theoretical Concepts**:\n  * **Layered Knowledge Ecologies**: Tenna Foustad Harbo (2026) conceptualizes scholarly podcasting as part of a \"layered knowledge ecology\" where audio files, transcripts, references, author bios, DOIs, and accompanying peer-reviewed short essays interact to form a multimodal research output [1, 8, 9].\n  * **Audio Academia & Embodied Scholarship**: Mack Hagood (2021) and Amber Sewell (2025) position scholarly podcasts within \"audio academia,\" highlighting that spoken audio allows researchers to **audibly embody their scholarship**, bringing tone, vulnerability, affect, and personhood into knowledge production [10-12].\n  * **Queer Feminist Ethics of Care (\"No One Is In Trouble\")**: McGregor, Burr, McMenemy, Rehak, & Sharman (2025) articulate a queer feminist production ethos centered on team well-being, collaborative dialogue, and relational knowledge generation rather than rigid institutional competition [6, 13, 14].\n  * **Evidentiary Basis**: **Qualitative Media Analysis & Critical Sound Studies** [1, 10, 11, 13, 15].\n\n---\n\n### 2. Empirical Evidence on Learning Outcomes from Educational Podcasts\n\nResearch on educational podcasting evaluates two distinct interventions: **student-generated creation** (active learning through podcast production) and **student consumption** (listening to instructional audio).\n\n#### A. Student-Generated Podcasts (Podcast Creation as Assessment)\n* **Academic Performance & Pass Rates**:\n  * **Hopkins (2012)**: Conducted a **controlled quantitative assessment study (ANOVA)** with undergraduate Education Studies students comparing performance across seven course assignments marked under identical criteria.\n    * *Findings*: Student achievement on the group podcast creation task was **statistically significantly higher** than on all six traditional assignments (\\\\(F = 5.378, p < .001\\\\)) [16, 17]. Content analysis of reflective journals (**qualitative data**) revealed that podcast creation drove deeper intellectual engagement, rigorous evidence selection, and collaborative problem-solving [17, 18].\n  * **Hern\u00e1ndez-L\u00f3pez & Mendoza-Jim\u00e9nez (2025)**: Surveyed 190 university students across Pedagogy and Tourism degree programs evaluating student-created podcasts.\n    * *Findings*: **80% of students** reported that podcast creation significantly enhanced subject comprehension, and **86.2%** reported it directly aided in passing the subject [19, 20]. Statistical testing confirmed that active content creation fostered constructivist learning, peer relationships, and self-regulated study [21, 22].\n* **Pedagogy & Law Assessment**:\n  * **Janssen & Van Toor (2023 / Utrecht University Guide)**: Evaluated law students creating podcasts as a formal assessment tool (**observational case data**), finding that translating formal legal doctrines into conversational audio forced students to operate at the highest level of Bloom's Taxonomy (\"Creation\") [23, 24].\n* **Evidentiary Basis**: **Controlled Quantitative Assessment Experiments (ANOVA)** [16, 17], **Quantitative Survey Evaluations** [141, 152\u2013157], and **Observational Classroom Studies** [23, 24].\n\n#### B. Student Consumption of Instructional Audio\n* **Direct Recall & Cognitive Load Constraints**:\n  * **Davis, Lee, Vincent, & Lee (2026)**: A **controlled laboratory experiment** (\\\\(N = 62\\\\)) evaluated video podcast instruction under control (narration + aligned visuals), elaborative details, and seductive details conditions.\n    * *Findings*: The control condition **statistically significantly outperformed** the seductive details condition in free recall (\\\\(p = .004, g = 1.03\\\\)) [25]. Qualitative interviews (**survey/qualitative data**) confirmed that non-essential elaborations overwhelmed working memory, whereas aligned visuals stabilized comprehension [25, 26].\n* **Attitudinal & Technology Acceptance Outcomes**:\n  * **Ecuadorian Higher Education TAM Study (Frontiers 2025)**: Executed **Structural Equation Modeling (SEM)** on university students.\n    * *Findings*: Confirmed that Perceived Usefulness (PU) and Perceived Ease of Use (PEOU) strongly drive student engagement, topic comprehension, and long-term intention to integrate podcasts into academic study routines [27-29].\n* **Lectures vs. Mobile Revisions**:\n  * Literature syntheses (**Hew 2009; McGarr 2009; Andersen & Dau 2021**) confirm that simply providing audio recordings of lectures serves a **substitutional function** with minimal direct impact on exam scores [30, 31]. However, targeted supplementary audio enhances student motivation, flexibility, and felt connection to faculty [31, 32].\n* **Evidentiary Basis**: **Controlled Laboratory Experiments** [25], **Structural Equation Modeling (SEM) Surveys** [27, 28], and **Literature Syntheses / Meta-Analyses** [30, 31].\n\n---\n\n### 3. Common Failures & Structural Challenges of Academic Podcasts\n\nLiterature across higher education, publishing studies, and media production identifies primary structural failure points when adapting academic books and research into audio:\n\n1. **Institutional Misalignment & Promotion Gatekeeping**:\n   * **The Failure**: Hiring, tenure, and promotion committees overwhelmingly privilege traditional print monographs and paywalled journal articles over audio scholarship [33, 34]. Consequently, scholars who produce podcasts face an institutional burden\u2014doing podcasting as uncompensated \"side hustle\" labor on top of standard publishing requirements, leading to high burnout [35-38].\n   * **Evidentiary Basis**: **Qualitative Survey & Interview Studies** [78, 124, 251\u2013255] and **Institutional Repository Analyses** [39, 40].\n2. **The \"Direct Translation\" Trap (Ruined by Academia)**:\n   * **The Failure**: Attempting to force written academic conventions\u2014such as reading dense prose verbatim, reciting complex citations/formulas, or enforcing multi-month peer-review delays before recording\u2014destroys the medium-specific audio logic of podcasting [41, 42]. When audio scripts sound like stiff lectures, listener retention collapses [41].\n   * **Evidentiary Basis**: **Practitioner Experience & Qualitative Media Analysis** [251\u2013255, 296, 302].\n3. **Elite Institutional \"Vanity Projects\"**:\n   * **The Failure**: Ian M. Cook (*Scholarly Podcasting: Why, What, How?*, 2023) highlights that university leadership and Rectors frequently misallocate research funding to create top-down \"vanity podcasts\" that ape commercial mainstream media [43]. These shows lack authentic community engagement, niche focus, or pedagogical structure, resulting in negligible listenership [43, 44].\n   * **Evidentiary Basis**: **Qualitative Field Interviews (\\\\(N = 101\\\\) Academic Podcasters)** [43, 45].\n4. **Information Overload & Seductive Detail Failures**:\n   * **The Failure**: Stacking complex jargon, un-moderated rabbit holes, or non-essential \"seductive\" anecdotes without structural signposting or visual companion support overloads listener working memory [25, 26].\n   * **Evidentiary Basis**: **Controlled Laboratory Experiment & Qualitative Interviews** [25, 26].\n\n---\n\n### 4. Disagreements, Thin Evidence, & Methodological Gaps\n\n1. **What Qualifies as \"Scholarly\"? (Science Communication vs. Scholarly Contribution)**:\n   * **The Conflict**: Tenna Foustad Harbo (2026) and Ian M. Cook (2023) critique the field for vague definitions, pointing out that many creators use \"scholarly podcasting\" merely as a branding label for basic science communication or promotional interviews [46, 47]. Harbo argues that true scholarly podcasting must operate *within* research practices (incorporating peer review, dialogic exchange, and open methodologies) rather than merely talking *about* research [2, 48].\n2. **Peer Review Models: Traditional Blind Review vs. Open Conversational Review**:\n   * **The Conflict**: Traditional academic publishing mandates double-blind, asynchronous written peer review. In contrast, the Amplify Podcast Network, WLU Press, and Lori Beckstead's *Open Peer Review Podcast* advocate **open, conversational peer review via podcast** [5, 49, 50]. In this format, reviewers and authors discuss the work openly on-mic, making review labor audible and collaborative [49, 50].\n3. **Complete Absence of Controlled Experiments on Scholarly Audio Retention**:\n   * **Evidence Gap**: While Cognitive Load Theory provides controlled experimental data on short instructional videos [25], **there are zero controlled or field experiments** evaluating public listener retention, comprehension, or long-term attitude shifts when consuming long-form, multi-episode scholarly podcast adaptations of academic books. Existing scholarship relies entirely on **qualitative case studies, observational platform analytics, action research, and survey data**.\n\n---\n\n\ud83d\udca1 **Next Step**: Would you like to outline an evidence-based peer-review protocol or metadata strategy for a podcast series based on the WLU Press / Amplify Network framework?",
+ "conversation_id": "010d7602-fa56-4f97-89a1-ed8539e8ebe5",
+ "sources_used": [
+  "b56e4cd9-5ee6-43ad-8575-8f665f92e51b",
+  "1850647d-2f48-4d5e-bfee-002fc6df6747",
+  "0b878013-4a70-414d-ae46-034ab1796a4b",
+  "5dba0f32-0b30-47cb-9d5e-f00d8a57026c",
+  "1fbf9c04-7400-482a-b2da-49a1dc418d54",
+  "4ca23da4-c952-4a07-b64e-97debf7f9062",
+  "41703727-f7b6-45a4-8fd8-71cdcf8325f5",
+  "a5dcc005-d661-4adb-ac56-858fae13be31",
+  "6f887d07-4600-4fb4-8ec5-29f40f815bda",
+  "60ad2d1d-c637-412b-8461-fd26dc9102be",
+  "422cc73b-8bd9-4571-96b5-0a812c80f4dd",
+  "f3692e29-66c2-43dd-ac88-a681a8c59655",
+  "911b6597-16ee-4f35-a769-f9c85ca9db04",
+  "e8ef81db-1553-4606-9b77-945bc88aa01b",
+  "8411495c-3b5f-4217-8b46-e36578e76d86",
+  "6bc4f7c3-d1cf-44c8-b09d-3a73def4369d",
+  "cb9f0888-42ef-4c3e-ad05-21ffd4484a2f",
+  "80b318d4-c49c-407d-bbe0-fb8b93ef51f0",
+  "ab701b54-76dd-4e33-93bd-b89ff82e7c0f"
+ ],
+ "citations": {
+  "1": "b56e4cd9-5ee6-43ad-8575-8f665f92e51b",
+  "2": "1850647d-2f48-4d5e-bfee-002fc6df6747",
+  "3": "0b878013-4a70-414d-ae46-034ab1796a4b",
+  "4": "5dba0f32-0b30-47cb-9d5e-f00d8a57026c",
+  "5": "0b878013-4a70-414d-ae46-034ab1796a4b",
+  "6": "5dba0f32-0b30-47cb-9d5e-f00d8a57026c",
+  "7": "1fbf9c04-7400-482a-b2da-49a1dc418d54",
+  "8": "b56e4cd9-5ee6-43ad-8575-8f665f92e51b",
+  "9": "1850647d-2f48-4d5e-bfee-002fc6df6747",
+  "10": "4ca23da4-c952-4a07-b64e-97debf7f9062",
+  "11": "4ca23da4-c952-4a07-b64e-97debf7f9062",
+  "12": "4ca23da4-c952-4a07-b64e-97debf7f9062",
+  "13": "5dba0f32-0b30-47cb-9d5e-f00d8a57026c",
+  "14": "5dba0f32-0b30-47cb-9d5e-f00d8a57026c",
+  "15": "41703727-f7b6-45a4-8fd8-71cdcf8325f5",
+  "16": "a5dcc005-d661-4adb-ac56-858fae13be31",
+  "17": "a5dcc005-d661-4adb-ac56-858fae13be31",
+  "18": "a5dcc005-d661-4adb-ac56-858fae13be31",
+  "19": "6f887d07-4600-4fb4-8ec5-29f40f815bda",
+  "20": "6f887d07-4600-4fb4-8ec5-29f40f815bda",
+  "21": "6f887d07-4600-4fb4-8ec5-29f40f815bda",
+  "22": "6f887d07-4600-4fb4-8ec5-29f40f815bda",
+  "23": "60ad2d1d-c637-412b-8461-fd26dc9102be",
+  "24": "60ad2d1d-c637-412b-8461-fd26dc9102be",
+  "25": "422cc73b-8bd9-4571-96b5-0a812c80f4dd",
+  "26": "422cc73b-8bd9-4571-96b5-0a812c80f4dd",
+  "27": "f3692e29-66c2-43dd-ac88-a681a8c59655",
+  "28": "f3692e29-66c2-43dd-ac88-a681a8c59655",
+  "29": "f3692e29-66c2-43dd-ac88-a681a8c59655",
+  "30": "911b6597-16ee-4f35-a769-f9c85ca9db04",
+  "31": "60ad2d1d-c637-412b-8461-fd26dc9102be",
+  "32": "60ad2d1d-c637-412b-8461-fd26dc9102be",
+  "33": "e8ef81db-1553-4606-9b77-945bc88aa01b",
+  "34": "41703727-f7b6-45a4-8fd8-71cdcf8325f5",
+  "35": "8411495c-3b5f-4217-8b46-e36578e76d86",
+  "36": "911b6597-16ee-4f35-a769-f9c85ca9db04",
+  "37": "6bc4f7c3-d1cf-44c8-b09d-3a73def4369d",
+  "38": "6bc4f7c3-d1cf-44c8-b09d-3a73def4369d",
+  "39": "cb9f0888-42ef-4c3e-ad05-21ffd4484a2f",
+  "40": "cb9f0888-42ef-4c3e-ad05-21ffd4484a2f",
+  "41": "6bc4f7c3-d1cf-44c8-b09d-3a73def4369d",
+  "42": "6bc4f7c3-d1cf-44c8-b09d-3a73def4369d",
+  "43": "80b318d4-c49c-407d-bbe0-fb8b93ef51f0",
+  "44": "80b318d4-c49c-407d-bbe0-fb8b93ef51f0",
+  "45": "80b318d4-c49c-407d-bbe0-fb8b93ef51f0",
+  "46": "1850647d-2f48-4d5e-bfee-002fc6df6747",
+  "47": "1850647d-2f48-4d5e-bfee-002fc6df6747",
+  "48": "1850647d-2f48-4d5e-bfee-002fc6df6747",
+  "49": "ab701b54-76dd-4e33-93bd-b89ff82e7c0f",
+  "50": "4ca23da4-c952-4a07-b64e-97debf7f9062"
+ },
+ "references": [
+  {
+   "source_id": "b56e4cd9-5ee6-43ad-8575-8f665f92e51b",
+   "citation_number": 1,
+   "cited_text": "Research output: Contribution to journal/newspaper \u203a Journal article \u203a Research \u203a peer-review Captures Readers: 2 Mentions News Mentions: 1 see details Overview Fingerprint Abstract Academic podcasting can function as scholarly contribution, not just science communication. This article introduces the concept of layered knowledge ecologies to show how audio, text, infrastructure, and metrics interact, enabling knowledge to emerge, circulate, and accrue impact. By distinguishing between communicating about scholarship and operating within it, the article positions podcasting as a dialogic, multimodal practice that supplements traditional outputs. Recognizing these ecologies challenges format-based hierarchies and invites evaluation models attuned to distributed, relational forms of scholarly value."
+  },
+  {
+   "source_id": "1850647d-2f48-4d5e-bfee-002fc6df6747",
+   "citation_number": 2,
+   "cited_text": "Across this literature, the dominant description of academic podcasting positions it primarily as a form of science communication. Most academic podcasts communicate about scholarship; fewer operate within scholarship. Podcasts that communicate about scholarship typically disseminate research by featuring recently published books or articles, highlighting ongoing research projects, or translating knowledge about timely topics of public interest. Many academically produced popular science podcasts explicitly target broader audiences, evoking a sense of social scholarship ( Singer, 2019 ), which aligns with Boyer's (2016) notion of a \u201cscholarship of engagement\u201d. This notion emphasizes exchange rather than one-way dissemination and situates podcasting within broader debates on the relationship between academic and civic cultures. With growing institutional expectations that scholars engage in public outreach, particularly in relation to funding, impact agendas, and the perceived social responsibility of universities ( Persohn and Branson, 2024 ), strengthening the social connection between universities and society has become both an ethical commitment and a strategic imperative."
+  },
+  {
+   "source_id": "0b878013-4a70-414d-ae46-034ab1796a4b",
+   "citation_number": 3,
+   "cited_text": "Dr. McGregor has interviewed 2 Comments In the past few years, universities and scholars have turned to podcasts as a research communication and pedagogical tool. Now, a researcher at Simon Fraser University has teamed up with Wilfrid Laurier University Press to take academic podcasting a step further. In this experiment, the podcast is the research, with peer review to back it up. The Scholarly Podcasting in Canada project is a collaboration between Hannah McGregor, an assistant professor of publishing at SFU, and Siobhan McMenemy, a senior editor at WLU Press. Their immediate goal has been to figure out a model of peer review that could be applied to a podcast, and they've been using Dr. McGregor's own show, Secret Feminist Agenda , as a test case."
+  },
+  {
+   "source_id": "5dba0f32-0b30-47cb-9d5e-f00d8a57026c",
+   "citation_number": 4,
+   "cited_text": "4 This experimentation in the early years of scholarly podcasting led to my position in the publishing program at Simon Fraser University (SFU), where the possibilities for using podcasting to create publicly engaged, accessible, and community-engaged scholarship became the focus of my research. With Siobhan McMenemy, senior editor at Wilfrid Laurier University Press, I got a Social Sciences and Humanities Research Council (SSHRC) of Canada Insight Development Grant to experiment with the possibility of creating a peer-reviewed scholarly podcast, which we did between 2017 and 2020 with Secret Feminist Agenda ."
+  },
+  {
+   "source_id": "0b878013-4a70-414d-ae46-034ab1796a4b",
+   "citation_number": 5,
+   "cited_text": "Secret Feminist Agenda launched in June 2017. The process looks something like this: Dr. McGregor records, edits and uploads the weekly show to the internet. As Ms. McMenemy listens along with the rest of the public, she might offer feedback on individual episodes or on the arc of a season. Her main task, however, comes at the end of a season when she administers an open peer review of several episodes. For the review of season one, Ms. McMenemy sought out scholars who are engaged in alternative forms of scholarly communication or who work in the digital humanities. \u201cThey understand \u2013 frankly, better than I could \u2013 what is at stake with respect to opening up, not setting aside, the conventions of scholarly publishing,\u201d she says. To those scholars, she asked: \u201cCould a podcast like this be considered scholarly?\u201d And, \u201cCould the reviewers find reasonable equivalencies between a podcast series of this kind and, say, a book publication with a university press imprint on it?\u201d"
+  },
+  {
+   "source_id": "5dba0f32-0b30-47cb-9d5e-f00d8a57026c",
+   "citation_number": 6,
+   "cited_text": "Notes Marcelle gave Coach this nickname at our very first meeting when she found out that Coach had played college volleyball and because having two Hannah's on the team would have been confusing. \u2bad Thanks to Zena for reminding me that this politicized division of labor and precarity needs to be named specifically. \u2bad Available at https://www.youtube.com/watch?v=0qLnxrLUs9I . \u2bad I describe this collaborative working relationship in much more detail in A Sentimental Education (2022). \u2bad You can find the peer review of Secret Feminist Agenda at https://www.wlupress.wlu.ca/Scholarly-Podcasting-Open-Peer-Review/Secret-Feminist-Agenda/ . \u2bad Stacey, Katherine, and I write about our collective experience of feminist podcasting in \u201cThe Kitchen Table Is Always Where We Are: Podcasting as Feminist Self-Reflexive Practice,\u201d in Podcast Studies: Practice into Theory (2025). \u2bad When we were ready to begin accepting applications to the Amplify Podcast Network, we made the decision to divide the network into two streams: the Resonate stream, which would consist of peer-reviewed podcasts published by Wilfrid Laurier University Press, and the Sustain stream, which would bring together existing and ongoing scholarly podcasts into a community of practice without subjecting them to peer review. The Resonate stream currently consists of Secret Feminist Agenda and Brenna Clarke Gray's forthcoming podcast Community of Praxis . The Sustain stream includes Keeping It 101: A Killjoy's Introduction to Religion , Critical and Curious , Wrinkle Radio , and Critical Technology\u2013A KDMI Podcast . See https://amplifypodcastnetwork.ca for more. \u2bad The second half of this passage also appears in The Amplify Manifesto , a sonic collage drawn together out of clips from the Amplified audioblog series. See https://amplifypodcastnetwork.ca/about/amplify-manifesto/ for more. \u2bad Available at https://spokenweb.ca/podcast/episodes/producing-queer-media/ . \u2bad \u201cBe gay, do crime\u201d is a queer activist slogan that, according to Kevin Maimann (2024) in Xtra Magazine , emerged in the early 2000s but became mainstream in 2018, when non-binary artist Io Asunder altered a historical Thomas Nast political cartoon from 1880 to depict a skeleton holding a scroll that reads \u201cBE GAY DO CRIME!\u201d Beneath the skeleton, the graphic reads, \u201cMany blame queers for the downfall of this society\u2014we take pride in this. Some believe that we intend to shred-to-bits this civilization and it's [ sic ] moral fabric\u2014they couldn't be more accurate. We're often described as depraved, decadent and revolting\u2014but oh, they ain't seen nothing yet.\u201d Thanks to Zena for reminding me that readers might interpret \u201cgay\u201d differently from \u201cqueer\u201d and offering me \u201cbe gay do crimes\u201d as a bridging concept to connect gay shit-disturbing to queering scholarly communication. \u2bad Most recently, for example, I sat down with Stacey Copeland to have a conversation about the future of the Amplify Podcast Network and how we can keep this work going in a way that is sustainable for both of us. Stacey outlined a model of queer feminist organizing in which different members of the collective take turns leading projects, with planning happening only a few months at a time and leadership passing to those who are showing up at that moment. This model at first glance seems profoundly at odds with the long-term deliverables and organizational charts that research grants often require, but I'm intrigued by the possibility of building sustainable lateral organizational models into research proposals. We need data management plans, but what about human well-being plans? \u2bad Coach expressed some shock at this boundary when they read this article, especially because, in their words, I have \u201cnine jobs.\u201d In light of my recent injury, I am trying very hard to have fewer than nine jobs. \u2bad Thanks to Zena for pointing me to these studies. \u2bad"
+  },
+  {
+   "source_id": "1fbf9c04-7400-482a-b2da-49a1dc418d54",
+   "citation_number": 7,
+   "cited_text": "Ready to hear more? Listen in on what we're up to in the Amplified audio blog series ! Our Mandate The Amplify Podcast Network consists of two streams: Resonate and Sustain . Both celebrate the boundary-pushing potential of scholarly podcasting, but have different approaches and relationships to peer review. Resonate podcasts published under the imprint of WLU Press, such as Secret Feminist Agenda and Community of Praxis , have undergone a formal Press peer review, conducted in the Amplify spirit of collaboration and experimentation. Sustain podcasts exemplify the same commitment to the principles of Amplify and to the contribution of new knowledge but do not undergo a formal peer review process. Podcasts are selected by the Amplify editorial board for inclusion based on our guiding values: commitment to critical pedagogy and open scholarship."
+  },
+  {
+   "source_id": "b56e4cd9-5ee6-43ad-8575-8f665f92e51b",
+   "citation_number": 8,
+   "cited_text": "From page to podcast: layered knowledge ecologies in scholarship. / Harbo, Tenna Foustad. In: Frontiers in Communication, Vol. 11, 1815693, 15.04.2026. Research output: Contribution to journal/newspaper \u203a Journal article \u203a Research \u203a peer-review TY - JOUR T1 - From page to podcast T2 - layered knowledge ecologies in scholarship AU - Harbo, Tenna Foustad PY - 2026/4/15 Y1 - 2026/4/15 N2 - Academic podcasting can function as scholarly contribution, not just science communication. This article introduces the concept of layered knowledge ecologies to show how audio, text, infrastructure, and metrics interact, enabling knowledge to emerge, circulate, and accrue impact. By distinguishing between communicating about scholarship and operating within it, the article positions podcasting as a dialogic, multimodal practice that supplements traditional outputs. Recognizing these ecologies challenges format-based hierarchies and invites evaluation models attuned to distributed, relational forms of scholarly value."
+  },
+  {
+   "source_id": "1850647d-2f48-4d5e-bfee-002fc6df6747",
+   "citation_number": 9,
+   "cited_text": "We publish the podcast online with Global Perspectives , a young journal under University of California Press, with whom we have made a formal publishing agreement. Our center plans, records, and produces the podcast for publication on their platform. This includes obtaining release forms and finalizing the accompanying materials: Each episode is published with author bios for each guest, references, transcript, abstract, keywords and a DOI number, and is thus part of a larger publication strategy. Since the journal does not yet work with a dedicated podcast category, episodes are published under the existing 'Discussion' classification and appear as standard publications. As part of the podcast series, we publish shorter, more poignant 2000-word essays that contribute to the overall theme. Some are written by podcast guests, who flesh out certain points or conundrums that arise during conversation, and other essays are by authors who expand the fan of disciplines, input and content. These accompanying essays undergo peer-review and are published as 'Research Articles'. Our work has prompted questions and reflections regarding the intersection between academic communication, dissemination and research output. When does academic communication become a scholarly contribution in its own right? Where, exactly, does scholarliness reside\u2014in form, in content, or in the relations between them? These questions anchor the following argument."
+  },
+  {
+   "source_id": "4ca23da4-c952-4a07-b64e-97debf7f9062",
+   "citation_number": 10,
+   "cited_text": "Sewell | Giving Voice to Community: Embodied Scholarship, Generative Discussion, and Other Affordances of Scholarly Podcasting | The Journal of Electronic Publishing Article Giving Voice to Community: Embodied Scholarship, Generative Discussion, and Other Affordances of Scholarly Podcasting Author: Amber Sewell (University of Nevada, Las Vegas) Abstract Scholarly publishing often focuses on the end product\u2014a journal article, a monograph\u2014with little homage paid to those who, formally and informally, helped shape the artifact. As open movements gain momentum and support, and the peer review process faces scrutiny, there is an opportunity to reevaluate the purpose of scholarly publishing and its artifacts, the ways in which our current publishing models shape our perspective of knowledge production as a largely individual endeavor. Scholarly podcasting can be one way in which we re-envision what publishing looks\u2014and sounds\u2014like. This article explores the affordances of podcasting as a medium in terms of its utility to allow scholars to audibly embody their work and facilitate gathering and community, bringing their personhood and identities into the expression of their research, as well as the four genres of podcasting that take greatest advantage of these affordances. Open peer review podcasting, a facet of scholarly podcasting, can bring to the forefront the ways in which a community of scholars ultimately shapes a final product, refocusing the purpose of peer review on supportive critique that yields a more meaningful and robust final artifact rather than the box-ticking or gatekeeping purposes it sometimes serves in the current publishing landscape. It also makes visible\u2014and audible\u2014the very real network of individuals that makes a solo authored artifact possible. By undergoing open peer review via podcast, distilling the conversation, and making visible the changes made to the article based on that conversation, this article both explores the theoretical possibilities of scholarly podcasting while modeling the process."
+  },
+  {
+   "source_id": "4ca23da4-c952-4a07-b64e-97debf7f9062",
+   "citation_number": 11,
+   "cited_text": "Scholarly podcasting is part of what Mack Hagood calls \u201caudio academia,\u201d which he describes as \u201ca diverse collection of initiatives aimed at producing and communicating scholarship through electronic audio in the form of podcasts, audiobooks, online lectures, and other genres\u201d ( 2021 , 181). Situated in that framework, scholarly podcasts are \u201cthe communication of scholarly knowledge through the digital medium of podcasting,\u201d which \u201ccan be a radical, open, and subversive way of creating publicly accessible and community engaged scholarship\u201d ( Copeland and McGregor 2021 , v). They can \u201cbring a re-orientation, sense of exploration, and renewed community building to the research experience\u201d ( Copeland 2022a ) as well as reinforce \u201cthe connection between the university and society at large,\u201d making research \u201caccessible to a far greater audience than written materials could ever reach\u201d ( Adams et al. 2021 ). Ian M. Cook goes even further in exploring the potential of scholarly podcasts, claiming \u201cthat for many scholars podcasting is an insurgency against academic structures that curb creativity, inhibit personal and collective transformations, and promote self-interest over generosity,\u201d instead creating \u201cthe conditions for scholars to be immersed in their curiosity\u201d ( 2023b , 1). Dario Llinares, Neil Fox, and Richard Berry situate podcasting as part of the open movement \u201cthat challenges the structures of traditional academic publishing\u201d ( 2018 , 3)."
+  },
+  {
+   "source_id": "4ca23da4-c952-4a07-b64e-97debf7f9062",
+   "citation_number": 12,
+   "cited_text": "A second affordance of podcasting as a medium that gives voice to community is embodied scholarship. The typical writing found in scholarly text reflects the western, masculine norms that have shaped academia and makes little to no space for knowledge created outside institutions of higher education. Any \u201cwriting that is playful, personal, narrative, emotive or non-linear\u201d is discouraged ( Jackson et al. 2018 ) through editorial guidelines, an opaque peer review process that requires the self to be removed from the work, and the opinions of peers that serve on tenure and promotion committees. Podcasting, as Lynn M. Harter explains, \u201cstretches the tendencies and capabilities of academics toward multi-sensorial forms of inquiry and \u2026 connects academics with broader publics\u201d ( 2019 , 126). Yves Rees, an Australian historian and podcaster, said that podcasting is about \u201cbeing fun and about it being collaborative and about it being embodied\u2026 . And I've come to really think about that mode of knowledge production as a feminist intervention\u201d (quoted in Cook 2023b , 30)."
+  },
+  {
+   "source_id": "5dba0f32-0b30-47cb-9d5e-f00d8a57026c",
+   "citation_number": 13,
+   "cited_text": "Article No One Is In Trouble: Queer Feminist Collaborations in the Amplify Podcast Network, The SpokenWeb Podcast , and Witch, Please Productions Authors Hannah McGregor (Simon Fraser University) Judith Burr (University of British Columbia) Siobhan McMenemy (Wilfrid Laurier University Press) Hannah Rehak (Second City New York) Zena Sharman Abstract At Witch, Please Productions\u2014the queer feminist media production company I co-founded with Marcelle Kosman and Hannah Rehak\u2014we have a motto that underpins and guides our collaborative ethos: \u201cno one is in trouble.\u201d Our insistence that no one is in trouble is rooted in our queer feminist ethics of care, one that prioritizes the well-being of our collaborative team and by extension our larger community of collaborators, interlocutors, and listeners. While stated overtly and frequently at Witch, Please Productions, this care-based ethos of collaborative media creation emerged gradually for me through various collaborative projects, including The SpokenWeb Podcast and the Amplify Podcast Network, both projects that were also, notably, built through queer feminist collaborations. By prioritizing care and well-being from the beginning, and building projects from the ground up with that ethos in place, we are collectively learning new ways to make things together. This article takes the form of a conversation with some of my key collaborators, modeling the playful collectivity of these projects, to match in form what I am articulating in content: that we create more radical, expansive, collaborative scholarship when we center care, relationships, and the well-being of the collective."
+  },
+  {
+   "source_id": "5dba0f32-0b30-47cb-9d5e-f00d8a57026c",
+   "citation_number": 14,
+   "cited_text": "One of Stacey's key solo contributions to the Amplify Podcast Network has been the Amplified audioblog series, in which she has interviewed first co-applicants and collaborators on the Amplify grant, then the wider community of scholarly podcasters and creators of sound-based scholarship, and most recently the inaugural cohort of our Sustain stream of the podcast network. 7 In January 2022, she posted an episode of Amplified titled \u201cBe Gay, Do Podcasts, How Amplify Got Its Start,\u201d an interview with Siobhan McMenemy and me about the origins of the Amplify Podcast Network. As we describe it in the interview, Siobhan and I began working together after a casual conversation at the Congress of the Humanities and Social Sciences in Calgary in 2016. We were both in transitional moments in our careers, with Siobhan having just moved from University of Toronto Press to Wilfrid Laurier University Press and me having just moved from the University of Alberta to SFU. We were in structurally similar positions, relocating to smaller and younger institutions where we had more institutional power and thus more latitude for experimental work. It was an ideal collaboration."
+  },
+  {
+   "source_id": "41703727-f7b6-45a4-8fd8-71cdcf8325f5",
+   "citation_number": 15,
+   "cited_text": "RadioDoc Review Volume 9 \u2022 Issue 1 \u2022 2024 2024-04-19 The Amplify Manifesto: Rewind, Replay, Reflect Stacey Copeland, University of Groningen Hannah McGregor, Simon Fraser University Natalie Dusek, Simon Fraser University Abstract We are the Amplify Podcast Network, a research project working to develop sustainablemodels for producing, peer-reviewing, and publishing scholarly podcasts. The Amplify Manifesto aims to capture the spirit of our network: playful, experimental, and multi-voiced. As a radically political written form, the manifesto provides a creative ground to communicate a set of ideals, goals, and intentions with purpose. In revisiting the manifesto for Radio Doc Review, we unpack the construction of the manifesto as sound-first multimodal scholarship."
+  },
+  {
+   "source_id": "a5dcc005-d661-4adb-ac56-858fae13be31",
+   "citation_number": 16,
+   "cited_text": "The potential value of student created podcasts as assessment tools in higher education Elizabeth A Hopkins, Bishop Grosseteste University College Lincoln Email: elizabeth.hopkins@bishopg.ac.uk Telephone: 01522 527347 extension 3773 This research received no specific grant from any funding agency in the public, commercial or not-for-profit sectors. Abstract Podcasts are seen by many educators as having significant pedagogical potential, especially in higher education. The benefits of students, working in groups, to create their own podcasts, have been described by a number of studies. The podcast creation process is seen as having significant knowledge-creation value and benefits linked to enhanced intellectual engagement with subject matter. This article describes how groups of second year undergraduate students, on an Education and Subject Studies honours degree course at a small university college in the UK, engaged in a podcast creation assignment. The students were able to demonstrate enhanced levels of academic competencies when the podcasts they created and the reflective journals they produced alongside them were assessed as part of their on-going assessment towards the award of the degree classification. The findings indicate that when compared with the marks achieved in six other assignments, marked using comparable criteria, the students\u2019 achievement in the podcast creation assignment was significantly better, ANOVA F=5.378 p< 0.001. Content analysis of the students\u2019 reflective journals was used to generate a list of the features of the podcast creation process which may have had an impact on this enhanced student performance and which could be incorporated into other assessment methods."
+  },
+  {
+   "source_id": "a5dcc005-d661-4adb-ac56-858fae13be31",
+   "citation_number": 17,
+   "cited_text": "not be discarded, the levels of achievement compared well. When comparing Module 5 with each of the other modules, however, the null hypothesis could be rejected with near certainty -  ANOVA F=5.378, p< 0.001 \u2013 indicating that students were generally achieving better on this module than the other six modules. The content analysis of the students\u2019 reflective journals revealed three key benefits of podcast creation tasks which the students considered as significant in enhancing their learning and achievement:"
+  },
+  {
+   "source_id": "a5dcc005-d661-4adb-ac56-858fae13be31",
+   "citation_number": 18,
+   "cited_text": "\uf0b7 Deeper intellectual engagement with a topic; \uf0b7 Recognition of the value of collaborative learning; \uf0b7 Recognition that practical activity can deepen intellectual understanding. The students reported that they were more deeply engaged with the topic they were focusing on than they recalled being with other assignments they had undertaken. The deeper engagement was seen as being due to the fact that the work was directed towards a product, the podcast, and that the product was being worked towards collaboratively as a group endeavour."
+  },
+  {
+   "source_id": "6f887d07-4600-4fb4-8ec5-29f40f815bda",
+   "citation_number": 19,
+   "cited_text": "Hypothesis 1 (H1). Podcasts help to understand the subject (P2). This first hypothesis asks whether the podcasting activity has helped students to understand the subject better. The frequency distribution of P2 indicates that creating podcasts has helped students understand the subject matter, given that 80% of the evaluations are concentrated in scores 4 to 7. Although P2 has a median value and mode value equal to 5, 54.8% of the students gave a score equal to or greater than 5 to P2. The findings of the investigation conducted on the median of P2 do not permit the rejection of the hypothesis that the median is greater than or equal to 5 at a 95% confidence level. However, the null hypothesis that the median is greater than or equal to 6 is rejected. Nevertheless, these results lend support to the proposition that the podcast assists students in comprehending the subject matter about which they created the podcast."
+  },
+  {
+   "source_id": "6f887d07-4600-4fb4-8ec5-29f40f815bda",
+   "citation_number": 20,
+   "cited_text": "Hypothesis 2 (H2). Podcasts help to pass subjects (P6). The second hypothesis posits the question of whether engagement in the creation of podcasts, a student-centered activity, contributes to successful academic performance in studies. It has been observed that the students place a high value on this component, with 86.2% of evaluations falling within the 4 to 7 range on a scale of 1 to 7. The median value of P6 is 5, and its mode value is equal to 5. The results of the test of the median of P6 do not allow us to reject that the median is greater than or equal to 6 at a 95% confidence level, a hypothesis that is supported by the observation that 49.4% of students rate this item with a score of 6 or 7."
+  },
+  {
+   "source_id": "6f887d07-4600-4fb4-8ec5-29f40f815bda",
+   "citation_number": 21,
+   "cited_text": "The findings provide compelling evidence that student-created podcasts serve as an effective pedagogical tool in higher education, simultaneously reinforcing subject-matter comprehension, enhancing academic performance, and fostering a more engaging and interactive classroom dynamic\u2014an increasingly recognized contributor to student success. These results align with existing literature, demonstrating that active student involvement in content creation promotes deeper learning in line with the observations made by Lazzari ( 2009 ), Carvalho and Aguiar ( 2009 ), and Fietze ( 2010 ). It also enhances academic performance, consistent with the claims put forward by S. A. Z. Ahmad et al. ( 2022 ), Kelly et al. ( 2022 ), and Gunderson and Cumming ( 2022 ), among others. There is greater critical engagement and essential academic skills, such as research, structured narrative development, and the articulation of complex ideas, echoing the insights provided by Alpay and Gulati ( 2010 ). Unlike teacher-produced instructional materials, student-generated podcasts encourage active participation, positioning learners as co-creators of knowledge rather than passive recipients. Moreover, the absence of significant differences in learning outcomes between disciplines underscores the adaptability of this approach, highlighting its potential as a versatile and scalable instructional strategy applicable across diverse academic programs."
+  },
+  {
+   "source_id": "6f887d07-4600-4fb4-8ec5-29f40f815bda",
+   "citation_number": 22,
+   "cited_text": "From a disciplinary perspective, no significant differences emerged between pedagogy and tourism students in their overall perceptions. However, pedagogy students identified a direct link between podcasting and academic success, a relationship not observed among tourism students. This divergence may reflect the pedagogical training of future educators, who are inherently more attuned to the instructional value of such tools. 5.1. Theoretical Implications The positive outcomes observed in this study align with active learning theory, which posits that interactive and participatory approaches enhance knowledge retention and comprehension. The process of constructing knowledge through podcast creation situates this activity within the framework of constructivist learning theories, particularly following the principles outlined by Funa and Talaue ( 2021 ). These include the teacher's role as a facilitator and students' self-regulation in the development of learning materials, both of which were evident in this study."
+  },
+  {
+   "source_id": "60ad2d1d-c637-412b-8461-fd26dc9102be",
+   "citation_number": 23,
+   "cited_text": "Having students make podcasts Podcasts are not only useful as a tool for transferring information from lecturer to student, but you can also have your students make their own podcast. This can be an effective method to familiarise students with their (future) field of work. If you have students make their own podcast, they function on the highest level of Bloom's Taxonomy (Krathwohl, 2002), namely 'creation'. Creating a podcast allows you to achieve deeper learning and reflection (Andersen & Dau, 2021)."
+  },
+  {
+   "source_id": "60ad2d1d-c637-412b-8461-fd26dc9102be",
+   "citation_number": 24,
+   "cited_text": "external link by UU-lecturers Willem Janssen and David van Toor you can read about their experiences with making podcasts as a form of assessment. They note that students responded very positively to making a podcast. The students found the making of a podcast fun, educational, and saw added value in their own development as well as their academic skills (both presenting and collaboration skills). One of the students described the experience as follows (Janssen and Van Toor, 2023, p. 11): \"A podcast is a really good way to informally inform an audience. You really have to switch (since you are used to a lot of academic writing). But this is a good thing because in the end you should master the knowledge in such a way that you can explain it in a fun/easy/understandable way.\""
+  },
+  {
+   "source_id": "422cc73b-8bd9-4571-96b5-0a812c80f4dd",
+   "citation_number": 25,
+   "cited_text": "Download XML Download Epub Download Supplementary Material Versions Notes Article Views Citations - Abstract Educational video podcasts are increasingly used in higher education, yet the cognitive mechanisms underlying their effectiveness remain underexplored. This experimental study examined how working memory capacity and additive contextual features influence situational interest, cognitive load, and learning from educational video podcasts. Sixty-two university students viewed video podcasts on lightning with standard narration with visuals (control), elaborative details, or seductive details. Working memory did not significantly predict learning outcomes or moderate the effects of additive features, and no differences were observed across conditions for cognitive load or situational interest. In free recall, the control condition outperformed the seductive details condition ( p = .004, g = 1.03), though this difference was not significant when controlling for working memory. Transfer did not differ across conditions. Follow-up interviews revealed that students across conditions emphasized visuals as critical for comprehension, while those in additive conditions reported feeling overwhelmed despite similar cognitive load ratings. These findings suggest that well-designed multimedia environments may stabilize learning outcomes across differences in working memory capacity, extending cognitive theory of multimedia learning. Designers of educational video podcasts should prioritize narration aligned with supportive visuals over additive contextual features."
+  },
+  {
+   "source_id": "422cc73b-8bd9-4571-96b5-0a812c80f4dd",
+   "citation_number": 26,
+   "cited_text": "Qualitative findings further informed these results by revealing how learners experienced the added details. Participants frequently described seductive details and elaborative details as increasing information density, alongside scientific language that affected their perceived ability to comprehend the materials. Across conditions, learners consistently emphasized the importance of visuals for understanding, highlighting the stabilizing role of core multimedia design features. Overall, this preliminary mixed-methods evidence suggests that in carefully designed educational video podcasts, instructional coherence and visual support may play a more central role than working memory capacity in shaping learning outcomes, though these findings should be interpreted cautiously and replicated with larger samples before broader conclusions are drawn. Based on these preliminary findings, designers of educational video podcasts may benefit from prioritizing narration aligned with supportive visuals, though further research is needed to confirm these recommendations. Future research should examine multimedia design features and use broader working memory measures to identify the conditions under which video podcasts best support learning."
+  },
+  {
+   "source_id": "f3692e29-66c2-43dd-ac88-a681a8c59655",
+   "citation_number": 27,
+   "cited_text": "Article metrics View details 1 Citations 1,6k Views 472 Downloads Abstract The integration of digital technologies has reshaped educational environments, positioning podcasts as an accessible and flexible resource that supports learning in asynchronous and multitasking contexts. In Ecuador, their adoption is challenged by the digital divide and socioeconomic inequalities, yet they also represent an opportunity to promote educational equity. This study examined the acceptance of podcasts in higher education through the Technology Acceptance Model and its relationship with student engagement. A Structural Equation Modeling approach was applied using data collected from university students, incorporating constructs such as perceived usefulness, ease of use, attitude, intention, and user experience. The model demonstrated a strong fit (CFI = 0.957; RMSEA = 0.065), confirming that perceived usefulness and ease of use significantly influence both attitude and intention to adopt. The findings suggest that podcasts constitute a strategic pedagogical tool to foster engagement, autonomy, and meaningful learning in digital higher education contexts."
+  },
+  {
+   "source_id": "f3692e29-66c2-43dd-ac88-a681a8c59655",
+   "citation_number": 28,
+   "cited_text": "4 Results The findings of the confirmatory factor analysis indicate that the construct Perceived Usefulness (PU) achieved very high standardized loadings (0.77\u20130.94), demonstrating strong convergent validity. In particular, the items related to content comprehension (0.93) and productive study (0.94) emerged as the most representative, suggesting that students recognize podcasts as an effective resource to optimize content assimilation and enhance academic performance. These results reinforce the relevance of TAM in educational contexts by confirming that perceived usefulness constitutes a key determinant of technology acceptance."
+  },
+  {
+   "source_id": "f3692e29-66c2-43dd-ac88-a681a8c59655",
+   "citation_number": 29,
+   "cited_text": "Figure 1 Conceptual model: graphical description with estimated parameters. Overall, the satisfactory fit indices and high standardized loadings provide strong evidence of construct validity and structural consistency within the proposed TAM-based model. 5 Discussion The results of this study provide robust empirical support for the Technology Acceptance Model (TAM) as an explanatory framework for understanding the adoption of educational podcasts in higher education, while also extending its explanatory scope through the inclusion of User Experience (UX). Consistent with TAM theory, perceived usefulness (PU) and perceived ease of use (PEOU) emerged as central determinants shaping students' attitudes and intentions to adopt podcasts. However, beyond confirming established relationships, the findings offer nuanced insights into how these constructs operate within asynchronous and multitasking learning environments."
+  },
+  {
+   "source_id": "911b6597-16ee-4f35-a769-f9c85ca9db04",
+   "citation_number": 30,
+   "cited_text": "Exploring podcasts as a means to support, enhance, and replace traditional lecturestyle teaching in higher education, McGarr (2009) found that the most common use of podcasts by professors was to provide recordings of past lectures, a use described as \u2018substitutional.\u2019 The second most common use of podcasts: \u2018supplementary,\u2019 aimed to provide additional materials such as review notes (McGarr, 2009). And the least common use of podcasts, coined \u2018creative,\u2019 employed podcasts as platforms for student knowledge production (McGarr, 2009). No longer exclusively a medium to simply transmit lectures, \u201cused appropriately, [podcasting assignments] can shift control to the"
+  },
+  {
+   "source_id": "60ad2d1d-c637-412b-8461-fd26dc9102be",
+   "citation_number": 31,
+   "cited_text": "Positive effects Even before 2009, dozens of studies were conducted into the efficacy of podcasts in education. At that time, no positive effects on learning were found. However, there were positive effects on student motivation (Hew, 2009). Since then, the quality of podcasts in education has significantly improved. Some researchers now do see positive effects on aspects of learning, students' reflective capabilities, and once again student motivation (Andersen & Dau, 2021). What is a podcast? A podcast is a spoken audio recording that can be played directly on a media device, such as a smartphone, computer, etc. (Drew, 2017). A podcast is online available and can cover a specific theme or be part of a series of podcasts (Andersen & Dau, 2021). A podcast can take the form of a monologue, a conversation or interview, a report, or a documentary."
+  },
+  {
+   "source_id": "60ad2d1d-c637-412b-8461-fd26dc9102be",
+   "citation_number": 32,
+   "cited_text": "Why use podcasts in your education? Using podcasts in education has several advantages*: Students appreciate the flexibility of podcasts, as you can study where and when you want (Evans, 2009; Merhi, 2015). Students feel more prepared for class (Andersen & Dau, 2021). Many students enjoy listening to podcasts (Merhi, 2015; Zacharis, 2012). Students come into contact with the language and jargon of their field. This not only helps them understand their field of study better, but also enables them to better discuss the subject matter. Students feel that they have more contact with their lecturer. This in turn results in higher motivation for learning (Fernandez, Simo, & Sallan, 2019). If you make good assignments with the podcasts, they can have a positive influence on students' motivation and their results for the course (Yilmaz & Keser, 2016). For examples of good assignments see paragraph 'Challenges' further down this page."
+  },
+  {
+   "source_id": "e8ef81db-1553-4606-9b77-945bc88aa01b",
+   "citation_number": 33,
+   "cited_text": "However, despite the potential affordances of publishing scholarship in a podcast, many institutions continue to privilege or even require conventional print publications as the preferred format for sharing scholarship with hiring, tenure, and promotion committees, raising questions for scholars about how their research will count, or be understood or received, if distributed in formats like podcasts. While the conversation around what counts as scholarship looks different at each institution, there are several ways in which the scholarly publishing community and university publishers are working to address this concern. One way of advancing the conversation around ensuring that scholarly podcasts are accepted/respected (and citable) as research is through establishing methods for evaluating podcasts, without compromising the unique affordances of the format, especially the space it provides for creativity."
+  },
+  {
+   "source_id": "41703727-f7b6-45a4-8fd8-71cdcf8325f5",
+   "citation_number": 34,
+   "cited_text": "Keywords academic publishing, podcast scholarship, open access, soundwork Recommended Citation Copeland, S., McGregor, H. & Dusek, N., (2024) \u201cThe Amplify Manifesto: Rewind, Replay, Reflect\u201d, RadioDoc Review 9(1). 1 Today, many universities are championing the cause of engaging the public and exploring alternative avenues for research dissemination, yet the conventional written text \u2013 especially when peer-reviewed and published in a prestigious (and often paywalled) journal \u2013 still overwhelmingly represents what is considered"
+  },
+  {
+   "source_id": "8411495c-3b5f-4217-8b46-e36578e76d86",
+   "citation_number": 35,
+   "cited_text": "Table 1 <cited_table>",
+   "cited_table": {
+    "num_columns": 3,
+    "rows": [
+     [
+      "Features of academic communities",
+      "Opportunities",
+      "Challenges"
+     ],
+     [
+      "Epistemic",
+      "-New, potentially more inclusive knowledge production method",
+      "- Justifying use of time and money"
+     ],
+     [
+      "^^",
+      "-Novel teaching and learning format",
+      "-Lack of evaluative criteria"
+     ],
+     [
+      "^^",
+      "-Supports existing research and teaching activities",
+      "-Quality"
+     ],
+     [
+      "^^",
+      "-The potential to be open about how academic knowledge is produced, the choices made along the way and the impact or lack of impact of that knowledge in society.",
+      "-Limited resources"
+     ],
+     [
+      "^^",
+      "",
+      "-Complementarity vs. openness"
+     ],
+     [
+      "^^",
+      "",
+      "-Professionalization"
+     ],
+     [
+      "^^",
+      "",
+      "-The risk associated with being open and vulnerable about academic knowledge production and how that could feed into the perception of science in society"
+     ],
+     [
+      "Social",
+      "-Humanizing research(ers)",
+      "- Embracing new format"
+     ],
+     [
+      "^^",
+      "- Sharing doubts and challenges",
+      "- Speaking openly and feeling vulnerable"
+     ],
+     [
+      "^^",
+      "- Broadening social networks",
+      "- Comfort being recorded"
+     ],
+     [
+      "^^",
+      "- Public, open conversations",
+      "- Community adoption and support"
+     ],
+     [
+      "^^",
+      "- Broader engagement potential",
+      "- Niche establishment"
+     ],
+     [
+      "^^",
+      "- A vehicle for self-reflection and personal growth",
+      "- Discomfort with being in the spotlight rather than presenting research itself."
+     ],
+     [
+      "Symbolic",
+      "- Often open access with low or no barrier production, listening, engagement",
+      "- Gaining institutional support"
+     ],
+     [
+      "^^",
+      "-Gatekeepers are self-appointed rather than appointed or elected on prestige or hierarchy",
+      "-Funding"
+     ],
+     [
+      "^^",
+      "-High potential for content freedom",
+      "-Competing with traditional activities"
+     ],
+     [
+      "^^",
+      "-High diversity and inclusion potential",
+      "-Potential lack of standardization, quality"
+     ],
+     [
+      "^^",
+      "-Easy access to science",
+      "-Potential lack of credibility, due to existing power dynamics/lack of gatekeepers"
+     ],
+     [
+      "^^",
+      "-Often led by early career scholars",
+      ""
+     ],
+     [
+      "^^",
+      "-Alternate way for early-career researchers to gain a symbolic voice and short-circuit often rigid academic hierarchies",
+      ""
+     ],
+     [
+      "Spatial",
+      "-Removes physical spatial barriers",
+      "-Listener engagement and feedback"
+     ],
+     [
+      "^^",
+      "-Audio medium",
+      "-May exclude those who are not familiar with the technologies"
+     ],
+     [
+      "^^",
+      "-Off computer engagement",
+      ""
+     ],
+     [
+      "^^",
+      "-Access",
+      ""
+     ],
+     [
+      "Temporal",
+      "-On-demand, quicker production, more regular engagement potential",
+      "-The patience required as a project builds an audience"
+     ],
+     [
+      "^^",
+      "-Episodes can be engaged with at different times than articles (e.g., while exercising, commuting)",
+      "-Skill development"
+     ],
+     [
+      "^^",
+      "-A distinct and limited time commitment can generate significant science communications/outreach impact that could be worthwhile for many academics.",
+      "-Regular outputs"
+     ],
+     [
+      "^^",
+      "",
+      "-The time it takes to create a podcast, do it well and the need for consistency over time which can place a lot of demands on both the individuals and the institution running the podcast."
+     ],
+     [
+      "^^",
+      "",
+      "-Yet another demand on the severely limited time of often overworked academics that is not incentivized within the academic system."
+     ]
+    ]
+   }
+  },
+  {
+   "source_id": "911b6597-16ee-4f35-a769-f9c85ca9db04",
+   "citation_number": 36,
+   "cited_text": "After the pilot season resulted in over 1,000 downloads in the first few months, the project was approved for a second season, and subsequently a third season, which was released in 2018. Data analytics collected through the podcast website indicated that the listenership reached across Canada and far beyond, into all English-speaking countries throughout the world, as well as nations where English is not an official language, such as China, Japan, Italy, and Saudi Arabia, to name a few (Blubrry Analytics, 2017). Qualitative feedback on the series informed us that some groups of faculty members were gathering to listen to episodes together, in order to then discuss the featured teaching approach (Email correspondence, 2017). Others reported that they were \u201cbinge\u201d listening to entire seasons at once (Email correspondence, 2017). Just weeks after the first episode of season three was released, the total number of downloads for the series had reached nearly 4,000 (Blubrry, Analytics, 2018). These outcomes surprised and pleased me. However, these statistical data and incidental anecdotes do not provide a complete picture; they suggest the need for systematic investigation of the impacts the podcast series has had on faculty development and teaching practices at the site of the podcast\u2019s origin and beyond, to the national and global reach it achieved. I discuss potential research questions for such inquiry in the conclusion of this paper."
+  },
+  {
+   "source_id": "6bc4f7c3-d1cf-44c8-b09d-3a73def4369d",
+   "citation_number": 37,
+   "cited_text": "Am Johal 8:23 Amazing. Hannah McGregor 8:23 Yeah. Yeah. So that's important, too. So I mean, you were referring to how many academics have podcasts and it's absolutely true that a ton of us do. Most of us still don't list them as our scholarship because they're not peer reviewed, they're often looked down on a lot of disciplines disdain publicly accessible knowledge mobilization, rather than valuing it. And so people do it like secretly as a side hustle, often just out of the passion of talking about their research interests to a wider audience, but they don't list it as scholarship. They don't submit it to their institutional repositories. They don't publish it anywhere that academics would be able to find it. And so while publishing a podcast as a podcast makes it more discoverable for podcast listeners, those of us who are interested in the phenomenon of the scholarly podcast, have a really hard time finding them. You basically just have to troll through Apple podcasts looking for something that looks like maybe a professor made it."
+  },
+  {
+   "source_id": "6bc4f7c3-d1cf-44c8-b09d-3a73def4369d",
+   "citation_number": 38,
+   "cited_text": "Am Johal 19:36 That's amazing. So I guess you're an assistant professor right now at some point you're going to go up for associate, the tenure review process. So does this go in a dossier like a couple of seasons of Secret Feminist Agenda with the peer reviewed like the how does that work even? Hannah McGregor 19:52 Burn them some CDs. [laughs] No, so I have already gone up for renewal and done two rounds of salary reviews. So I've already had a chance to get a sense of how the institution will respond to these kinds of initiatives and I will say my department in particular is extremely supportive of this work. And that is because it is a publishing department, right? It's not a traditional discipline, it's an interdiscipline. And the other scholars who work in my department are people who are really interested in open access, and publicly engaged scholarship. And so they see what the podcast is doing. They embrace the spirit of the podcast, it feels more meaningful to my colleagues than it would if I wrote some traditional, you know, scholarly book, that for them would be like, okay, cool, but like, you know, is that in keeping with the ethos of the department, but the podcast feels to them like work that is, you know, in keeping with what we're all doing. So that has been great. And I've gotten a lot of support for it. And that's part of why I'm interested in figuring out ways to share these methods for peer review, and for sort of legitimising scholarly podcasting, because I do have the privilege of being in a department where this work is supported, where I can do it, and it will count towards my tenure. But just because it counts towards my tenure doesn't mean it will count for anybody else. And there is something so vital about making community engaged scholarship count, because the people at universities who disproportionately take on community engaged scholarship are queer and racialized faculty who come into the university with a strong sense of preexisting community responsibilities. And so continue to do serious work engaging and speaking to communities. And when we don't legitimize that, it means that we are putting this extra burden on already minoritized faculty of saying, you have to do all of the regular work, and then keep doing this other work, which is like maybe kind of why we hired you in the first place for this other work, but we're not going to count any of it. So you also have to do all this other work too. You know, which leads to faculty burnout, leads to wide scale salary discrepancies, because people can't get the research grants they're supposed to be getting because we're doing this other work, blah, blah, blah. So like, it matters to take this wider range, particularly of community-engaged research and figure out ways to say like, yeah, actually, this counts and here's how we're going to figure out how to count it."
+  },
+  {
+   "source_id": "cb9f0888-42ef-4c3e-ad05-21ffd4484a2f",
+   "citation_number": 39,
+   "cited_text": "Description of Service: At the University of South Florida, episodes of faculty-created academic podcasts are posted to the institutional repository, allowing the dissemination of these podcasts permanently via open access. The open-access nature of these materials makes them freely available to faculty, students, and other scholars; additionally, it helps to improve metrics capturing while demonstrating international impact. In comparing the measures afforded to record statistics, as well as other geographic and various platforms used, the authors leaned on internal resources and concepts from the literature to examine existing measures and reporting related to podcasting efforts."
+  },
+  {
+   "source_id": "cb9f0888-42ef-4c3e-ad05-21ffd4484a2f",
+   "citation_number": 40,
+   "cited_text": "Next Steps: Through the study of both existing services at the University of South Florida and other universities, as well as the literature, what remains is to increasingly document and standardize methods of measuring the impact of academic podcasts and related types of open-access content. Keywords: academic podcasting, open access, impact, altmetrics, scholarly communication, tenure and promotion How to Cite: Symulevich, A., Torrence, M., Boczar, J. & Szempruch, J. (2025). Podcasting as Open Access: A Review and Discussion of Potential Impact on Scholarly Communication and Promotion. Journal of Librarianship and Scholarly Communication, 13 (1), eP18241. https://doi.org/10.31274/jlsc.18241"
+  },
+  {
+   "source_id": "6bc4f7c3-d1cf-44c8-b09d-3a73def4369d",
+   "citation_number": 41,
+   "cited_text": "Hannah McGregor 4:15 We're going to have a new thing to call knowledge mobilization, aren't we? It's gonna be like, like incentivization of information circulation. [laughs] Am Johal 4:22 The new Liberal language of the institution. Wondering how as you looked at things like peer review, and how to think through this as a scholarly contribution. I'm really fascinated by that. Just as a concept of how you've gone about it, the kinds of conversations you've had. Hannah McGregor 4:40 Yeah, so like I said, with Witch, Please, the first podcast that I made, that was the name of the Harry Potter podcast it was called Witch, Please. With that podcast, we sort of, you know, backed our way into thinking about it as scholarly. But once we'd established ourselves as people who were kind of experimenting in this work, people started to approach me with a sort of larger interest in, you know, conversations about podcasting and scholarship. And I ended up collaborating with Siobhan McMenemy, who is the managing editor at Wilfrid Laurier University Press, who was really interested in the question of how we could make scholarly podcasts. So we embarked on this project together, where I think both of us went into it thinking like, \"Okay, now we're making scholarly podcasts. So time to make something that sounds very NPR and serious because it is scholarly.\" And we knew that we wanted to experiment with peer reviewing the podcast, and we can talk about why that felt important to us. But we knew that that was going to be part of the project. And so we imagined that that would follow all of the traditional protocols of peer review, which is we would make an episode and then it would go out to peer reviewers, and then it would take six months, and then I would revise it and blah, blah, blah. And then a year and a half later, a podcast episode would come out. And then meanwhile, I just started making Secret Feminist Agenda for fun, because I felt like it. And then Siobhan was like, well, that's the podcast them like, that's the podcast we're doing this project on. I was like, no, no, this isn't scholarly, because I guess I never learned my lessons. Like just keep being, like, but surely this thing where I like, talk to feminists about their feminism, that's not scholarship. Alright. So people keep having to be like, yeah, no, it is, it is. And so then once we decided Secret Feminist Agenda was going to be the project. That's the point where we really started to try to figure out what does it mean, to take a podcast that is a podcast first, which means that it's sort of primary logic of production, publication, circulation is the logic of the podcast. So you have to come up with a regular release schedule and be true to that regular release schedule, you release via an RSS feed that goes out to all of the pod catchers, you engage with people on social media, you encourage people to rate and review on Apple podcasts and respond to those ratings and reviews. And so all of these sort of logics that are the publishing logics of podcasts, not the publishing logics of academia, I mean, we decided, you know, Secret Feminist Agenda was going to do all of those things. And then we would figure out how to peer review it after. We sort of stumbled backwards into that. I think that's been really vital for thinking about how you can use podcasting to engage publics outside of the university, is that you can't take stuff that's published according to the logics of the university, and try to make people engage with it, you have to actually go where people are engaging with ideas and share your ideas there. Which is the opposite logic from what I think we sometimes do in the university."
+  },
+  {
+   "source_id": "6bc4f7c3-d1cf-44c8-b09d-3a73def4369d",
+   "citation_number": 42,
+   "cited_text": "Hannah McGregor 12:30 Yeah, yeah, no, 100%, the university ruins almost everything it touches. It's absolutely incredible how good it is at that. And I think podcasting as a medium, we're sort of looking at this wider moment of the professionalization of podcasting right now, where it's like, there's tech startup money to be made in the podcast world because Spotify keeps buying the startups that white dudes are making. So everybody's like, \"Ooh, there's money in them hills.\" So everybody wants podcasting to turn into this, this startup model, right. But kind of the glory of podcasting as a medium is how weird and amateurish and non centralized it is and I think we're gonna see this professionalization moment come and go, and the medium is going to remain weird. And I think similarly, you know, as we think about how to use podcasts in the university, we could absolutely go in that super professionalized, you know, we want everything to look a certain way and sound a certain way and have the glossy professional veneer of the university on it. Or we can resist that and say, in fact, we're going to embrace how podcasting is always a little bit amateurish, a little bit informal, a little bit rough around the edges, and say, like, \"Let's lean into that direction of things.\" And think about how that lets us, like, knock the university off its pedestal a little bit and find different ways of communicating what we're talking about."
+  },
+  {
+   "source_id": "80b318d4-c49c-407d-bbe0-fb8b93ef51f0",
+   "citation_number": 43,
+   "cited_text": "[soundcloud url=\u201dhttps://api.soundcloud.com/tracks/1539560125\u2033 params=\u201dcolor=#ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true\u201d width=\u201d100%\u201d height=\u201d166\u2033 iframe=\u201dtrue\u201d /] Ian M. Cook \u00b7 Neil Fox \u2013 The Cinematologists The hope, meanwhile, lies in podcasting's DIY, low-tech, hyper-niche foundations This limitlessness gives me both hope and despair when I think about the future of scholarly podcasting. The despair comes from the ways in which some strands of scholarly podcasting are aping the 'mainstream': rather than ex-Presidents and ex-Royals scooping up millions from Spotify and topping the charts with their celebrity, we have Rectors and Vice Chancellors using their university's prestige and research funding for podcast vanity projects. The hope, meanwhile, lies in podcasting's DIY, low-tech, hyper-niche foundations: scholars are going to keep on podcasting as a creative means of doing scholarship in ways that exceed constrained notions of career advancement or impact, and that remake the form and delivery of research. Scholarly podcasting hasn't (yet) been consumed by the academic publishing machine of points and rankings and, as such, its future can be whatever we collectively want it to be."
+  },
+  {
+   "source_id": "80b318d4-c49c-407d-bbe0-fb8b93ef51f0",
+   "citation_number": 44,
+   "cited_text": "[soundcloud url=\u201dhttps://api.soundcloud.com/tracks/1539560140\u2033 params=\u201dcolor=#ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true\u201d width=\u201d100%\u201d height=\u201d166\u2033 iframe=\u201dtrue\u201d /] Ian M. Cook \u00b7 Marty Martin \u2013 Big Biology Not all scholarly podcasts will find massive audiences: some can have tens of thousands, most just a few hundred (though even an audience of a few hundred is more than most conference keynotes get). Nor do most academic podcasters advocate chasing numbers as making a scholarly podcast can have multiple purposes beyond speaking to publics, from working through ideas, to data collection, to creating an academic community. Rather, it's a recognition that in a world where managerial pressure seeps into our writing , mainstream media oversimplification and hostile anti-science discourse , that for many I spoke with for the book there is something wonderfully freeing and exciting about scholarly podcasting. As Neil Fox, co-host of the The Cinematologists puts it, \u201cOkay, let's be utopian. I think it can liberate academia. It can provide a space to do the things that academia says it wants to do. It's actively a way to reach outside the walls of academia in terms of where your content goes and where your knowledge goes. It's an active way to cultivate and welcome diverse voices, either through decolonising the curriculum or actively employing people from different backgrounds and celebrating and supporting their work and their voice and their perspective. I think it's limitless potentially.\u201d"
+  },
+  {
+   "source_id": "80b318d4-c49c-407d-bbe0-fb8b93ef51f0",
+   "citation_number": 45,
+   "cited_text": "17 Shares From esoteric passion projects to mainstream talk shows, academic podcasting, like the medium as a whole, has grown considerably over the past decade. Drawing on interviews with all kinds of academic podcasters as part of his new book, Ian M. Cook argues the future of the academic podcast is still undecided and that it continues to occupy an indie niche outside of mainstream scholarly communication. Scholarly podcasting is a thing. There lots of scholars doing it, but why are they doing it, how are they doing it, and what are they doing? Is anyone even listening to this form of scholarship, and is it even scholarship at all? These were some of the many questions I had when speaking to the 101 academic podcasters I interviewed for Scholarly Podcasting: Why, What, How?"
+  },
+  {
+   "source_id": "1850647d-2f48-4d5e-bfee-002fc6df6747",
+   "citation_number": 46,
+   "cited_text": "2 Academic podcasting What I prefer to term academic podcasting, has been defined in multiple, partially overlapping ways and under various headings. Some scholars adopt relatively narrow definitions, describing science podcasts as series covering topics in the natural sciences such as physics, biosciences, climate change, or mathematics ( Birch and Weitkamp, 2010 ; MacKenzie, 2019 ). Others employ broader and more inclusive categories, referring to popular science podcasts or academic podcasts that explore research through public dissemination and engagement ( Drew, 2017 ; Lundstr\u00f6m and Lundstr\u00f6m, 2021 ). Others still, refer to scholarly podcasts . This is similarly underdefined, but shared characteristics seem to suggest a type of knowledge dissemination by scholars, researchers and experts, although not exclusively, which can take more or less popularized form ( Persohn et al., 2024 ; Cook, 2023 ; Sewell, 2025 ; Densley et al., 2025 ). These definitional differences reflect varying emphases on content, audience, and purpose, but they also underscore the heterogeneity of academic podcasting practices."
+  },
+  {
+   "source_id": "1850647d-2f48-4d5e-bfee-002fc6df6747",
+   "citation_number": 47,
+   "cited_text": "In recent years, several articles have come out that refer inconsistently to scholarly podcasting with limited success in establishing tangible definitions by which to navigate the field. Some authors seem to assume that any podcast produced by or with a scholar qualifies as scholarly. 4 Others still refer to descriptions that ultimately boils down to dissemination of knowledge, and thus, to my mind, qualifies as science communication. 5 The imprecise and unclear definitions allow grey areas in which podcasters use the label 'scholarly' more as branding value than an accurate description of content."
+  },
+  {
+   "source_id": "1850647d-2f48-4d5e-bfee-002fc6df6747",
+   "citation_number": 48,
+   "cited_text": "6 This aestheticized epistemology risks watering down a key democratic concept. In this current political landscape where academia is under fire, it remains imperative to safeguard the structures and institutions of merit whose finest task it is to hone scholarship and knowledge. The distinction between communicating about scholarship and operating within scholarship matters because these approaches do fundamentally different things. They therefore call for different analytical lenses. Science communication and public outreach are well-established fields with their own literatures, methods, and evaluative criteria. Scholarly podcasting, by contrast, occupies a more ambiguous space between research practice, publishing, and media studies ( Persohn and Branson, 2025 ). Attending to this distinction opens up new perspectives on academic publishing itself, challenging the idea that scholarly output is a single, uniform container. Instead, academic podcasting invites us to explore publishing as a heterogenous and evolving ecology."
+  },
+  {
+   "source_id": "ab701b54-76dd-4e33-93bd-b89ff82e7c0f",
+   "citation_number": 49,
+   "cited_text": "HM : We suspected from early on that Kairos was the right home for this experimental work, but that suspicion was confirmed when the editorial board proposed an audio response to our audio scholarship. We've included that peer review, along with framing remarks from Kairos Managing Editor Erin Kathleen Bahl, as an Appendix that you can also think of as a fourth episode of sorts. The peer review conversation draws out the many interconnections between our work and the robust rhetoric and pedagogy research on podcasting and public scholarship. This approach to peer review models the kind of openness, generosity, and dialogue that academia needs right now, and that podcasting can help facilitate."
+  },
+  {
+   "source_id": "4ca23da4-c952-4a07-b64e-97debf7f9062",
+   "citation_number": 50,
+   "cited_text": "Podcasting, and its affordance of generating discussion, can also make visible the invisible labor of peer review. There are many critiques of the traditional closed peer review; open peer review, part of the open movement that encompasses open access journals and open educational resources, has emerged as one strategy to address these critiques. Conducting open peer review via podcast further addresses some of these critiques; not only are identities known to all parties, but conversational peer review via podcast affords participants the essential opportunity to ask clarifying questions and work together to co-create knowledge in the moment. Open Peer Review Podcast , produced by Lori Beckstead along with research assistants Valentina Passos Gastaldo and Anna Ashitey, demonstrates how a conversational open peer review podcast improves on the traditional peer review process by turning peer review into a discourse. It is a process I found so valuable that I began my own podcast for information professionals, The LibParlor Podcast , with the goal to create a space for open peer review via podcast. Not all open peer review podcasts utilize the affordance of generative discussion in the same way, however. For volume 27.1 of Kairos: A Journal of Rhetoric, Technology, and Pedagogy (2022), authors Hannah McGregor and Stacey Copeland submitted a three-part podcast as their webtext; the editorial team at Kairos decided to review the podcast series via podcast, as well, which is published as the appendix to the piece. In this open peer review podcast, the reviewers met without the authors to discuss their thoughts on the piece. While not fully taking advantage of this affordance by including the authors, the conversation between reviewers and editor still highlights the richness of discussion and critique made possible by conducting the review via podcast."
+  }
+ ]
+}

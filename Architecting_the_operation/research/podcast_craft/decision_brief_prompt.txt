@@ -1,0 +1,24 @@
+Write an evidence-based decision brief for a podcast team. Ground every recommendation in the sources and cite them. For each recommendation, label the strength of support as one of: controlled or field experimental evidence, observational or survey evidence, or practitioner experience. Say plainly where the sources disagree or where evidence is thin.
+
+The show: "Architecting the Operation" adapts a roughly 1,150-page academic book, The Original Power, which models systemic racism as an elite extraction algorithm using formal mathematics, circuit analogies, and electrodynamics. Listeners range from people at a very early stage of awareness about structural racism to technically trained readers.
+
+Current practice to evaluate:
+1. Fully scripted episodes of 40 to 75 minutes, around 240 to 290 dialogue turns each, one book chapter per episode.
+2. Three voices: the author as a host, plus two recurring co-hosts who alternate asking questions and explaining. The voices are synthetic, cloned text-to-speech rather than live recordings.
+3. The public series opens on the book's second chapter, a plain-language definition of racism, instead of the mathematical front matter. The opener explicitly tells new listeners they need no prior episodes.
+4. The latest episode explains each major idea four times at four depths: elementary school, high school, college, and dissertation level.
+5. Equations and formal notation are spoken aloud in the dialogue, with a companion video shot list planned.
+6. The house writing style bans formulaic contrast constructions such as "it is not X, it is Y" and prefers direct declarative sentences.
+
+Answer these decisions, each as its own section with a recommendation, the evidence, and the risk if we are wrong:
+A. Episode length and segmentation for dense material, including whether 60 to 75 minute episodes should be split.
+B. How to assign roles across three voices, including a surrogate learner, and how scripted dialogue avoids sounding staged.
+C. How often and how to use recaps, signposting, and repetition in audio-only learning, given transient information and cognitive load research.
+D. How to speak equations, notation, and diagrams without visuals, and what the audio must carry on its own when video is absent.
+E. Whether the four-level explanation device helps or harms, including expertise reversal and redundancy effects for advanced listeners.
+F. Season order and entry-point episodes for a serialized nonfiction show.
+G. How to present structural racism to skeptical or identity-threatened listeners, including what the evidence says about backfire, messengers, narrative, and nonjudgmental exchange.
+H. Any evidence on audience trust and synthetic or AI-generated voices.
+I. Writing-for-the-ear rules we should adopt as a checklist for script review.
+
+Close with a prioritized list of the five changes most likely to improve comprehension and retention, and a list of open questions the sources cannot answer that we would need to test with our own listeners.
