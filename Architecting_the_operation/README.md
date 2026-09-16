@@ -94,9 +94,28 @@ Expertise-reversal research is why the full pass is rationed. Guidance that help
 beginners slows down listeners who already know the material. See decision 6 of the
 brief.
 
-**Synthetic voice disclosure stays as it is for now.** Episodes 1 and 2 disclose in
-dialogue that Toussaint and Aisha are synthetic and that the research and words are
-Emmanuel's. Episode 2 promises the disclosure in every episode.
+**Each voice asks the question that pulls the next level up.** Toussaint asks the
+question Aisha answers at college level. Aisha asks the question Emmanuel answers at
+PhD level. The asker stands in for the listener at that moment, which gives the show
+the audience-surrogate role the research recommends without adding a fourth voice.
+
+**The feed is serial.** Apps show a serial feed's Episode 1 first to every new
+listener, so the public numbering puts the front door there.
+
+| Production file | Public release |
+|---|---|
+| `ATO_EP03_redefining_racism.md`, Chapter 2 | Episode 1 |
+| `ATO_EP01_authors_preface.md` | Bonus episode |
+| `ATO_EP02_preface.md` | Bonus episode |
+
+Production file numbers stay as they are. Chapters after Chapter 2 take public episode
+numbers in release order. Bonus episodes sit outside the numbered sequence.
+
+**Every episode discloses that all three voices are synthetic.** Emmanuel's voice is
+a clone made from his own recordings, the same as the other two. The disclosure credits
+the research and every word to Emmanuel, the framing the brief found costs the least
+trust. Episode 3 carries this version. Episodes 1 and 2 name only Toussaint and Aisha as
+synthetic, which is inaccurate, and they need correcting before release.
 
 ## Script format contract
 
