@@ -137,3 +137,7 @@ dist/
 
 # Lean build tree and Mathlib cache (~7 GB; restore with `make formal`)
 formal/.lake/
+
+# NotebookLM research audio (regenerate or download from the notebook)
+Architecting_the_operation/research/**/*.mp3
+Architecting_the_operation/research/**/*.m4a

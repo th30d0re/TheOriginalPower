@@ -1,0 +1,576 @@
+{
+ "answer": "Research across cognitive psychology, educational technology, human-agent interaction (HAI), and science communication provides rigorous empirical findings on how listeners evaluate synthetic and AI-cloned voices.\n\n---\n\n### 1. The Voice Principle and Social Cues in Multimedia Learning\n\n#### A. The Voice Principle & Social Agency Theory\n* **Core Phenomenon**: The **Voice Principle** in Cognitive Theory of Multimedia Learning (CTML) posits that learners achieve deeper understanding when instruction is delivered by a natural human voice rather than a machine-synthesized voice [1-4].\n* **Mechanism**: According to **Social Agency Theory**, a natural human voice provides nonverbal auditory cues that activate a \"social partnership\" schema in the learner's brain [1, 5, 6]. This social cue encourages learners to invest deeper cognitive effort into selecting, organizing, and integrating information [1, 5]. Early robotic or mechanical speech engines failed to activate social agency, leading to superficial processing [1].\n* **Evidentiary Basis & Specific Studies**:\n  * **Controlled Laboratory Experiments**: **Mayer, Sobko, & Mautone (2003)** and **Atkinson, Mayer, & Merrill (2005)** demonstrated that early machine voices produced significantly lower learning transfer and lower tutor ratings than human voices [6-8].\n* **Modern Qualification & Disagreements**:\n  * **The \"Live Question\" in the AI Era**: Educational design researchers emphasize that early studies predated modern Deep Neural Network (DNN) text-to-speech (TTS) [9-11]. **Devlin Peck (2026)** and **eduKate Asia (2026)** note that because early experiments compared human speech to grating, robotic concatenative TTS, the traditional Voice Principle is currently undergoing active re-examination [1, 10-12].\n  * **Controlled Experiment Data**: A **2025 study in *Education and Information Technologies*** evaluated AI- and human-generated voices/avatars, finding that learning engagement depends on the overall combination of design elements rather than a simple \"human good, AI bad\" binary [13, 14].\n\n---\n\n### 2. Text-to-Speech (TTS) in Education: Older vs. Modern Neural TTS\n\n#### A. Reconsidering the Voice Effect with Modern Neural TTS\n* **Surprising Findings on Modern TTS**:\n  * **Craig & Schroeder (2017)** conducted **controlled laboratory experiments** comparing virtual pedagogical agents using modern synthesized speech versus recorded human speech [6, 15, 16].\n  * *Findings*: Virtual agents powered by modern synthesized speech actually produced **statistically significantly better learning outcomes** than those using recorded human speech [15, 16].\n  * *Mechanism*: The authors hypothesized an **uncanny valley audio-visual mismatch**: pairing a synthetic virtual avatar with a biological human voice created cognitive dissonance, whereas pairing a synthetic avatar with modern TTS created audio-visual consistency, reducing extraneous cognitive load [15, 16].\n* **Parity in Learning & Trust**:\n  * **Chiou, Schroeder, & Craig (2020)** executed **controlled quantitative experiments** confirming that high-quality synthetic speech engines achieve learning outcomes, agent perceptions, and trust levels equivalent to human speech [7, 17, 18].\n* **Virtual Tutor Prosody & Enthusiasm**:\n  * **Alexa Virtual Tutor Study (PMC 2026)**: A **controlled laboratory experiment** evaluating enthusiasm in text-to-speech virtual tutors found that expressive prosody and vocal enthusiasm in synthetic voices significantly increased learner engagement and perceived presence [19].\n* **Reduced Listening Fatigue**:\n  * **Technical / Design Syntheses**: Microsoft (2018), AWS Polly (2019), and **Tiffany D. Do (2026 review)** highlight that Neural TTS (which uses deep neural network post-filtering) significantly reduces listening fatigue compared to older concatenative speech, preserving working memory capacity for information processing [9, 20, 21].\n\n---\n\n### 3. Perceived Trustworthiness of Voice Acoustics in AI & Human Voices\n\n#### A. Systematic Review Evidence\n* **Maltezou-Papastylianou, Scherer, & Paulmann (2025)** conducted a **systematic review / narrative synthesis** of 24 studies (13 on human speakers, 11 on voice-based Intelligent Agents/IAs) examining acoustic influences on perceived trustworthiness [22-30].\n* **Key Acoustic Cues for AI & Cloned Voices**:\n  * **Speech Rate / Pacing**: Higher articulation rates (4\u20136 syllables/sec) combined with higher pitch convey competence, passion, and credibility in informational or customer service scenarios, supported by Gussenhoven's **\"Effort Code\" theory** [31-34]. Conversely, in sensitive or telehealth advice, a slower, softer delivery conveys empathy [35, 36].\n  * **Pitch & Intonation**: Higher pitch and rising intonation at utterance boundaries generally increase perceived warmth and trustworthiness in English-speaking contexts [37-42].\n  * **Flanging & Time Delays**: **Muralidharan, de Visser, & Parasuraman (2014)** conducted a **controlled experiment** demonstrating that audio time delays exceeding 0.01 seconds (flanging) paired with flat pitch ranges make AI voices sound unnatural, triggering uncanny valley uneasiness and severely eroding trust [26, 43-46].\n\n---\n\n### 4. Emotion Perception, Expressiveness, and Epistemic Design\n\n#### A. Expressive Prosody Boosts Trust\n* **Happy & Expressive Synthetic Voices**:\n  * **Torre, Goslin, & White (2020)**: A **controlled laboratory experiment** demonstrated that listeners trust happy-sounding, prosodically expressive artificial agents significantly more than monotone agents [38, 40].\n  * **Kim et al. (2023)**: A **controlled experiment** showed that adding emotional urgency (higher pitch + variable intonation + faster speech rate) to AI voices during hazard simulations increased user trust and compliance [47-49].\n\n#### B. The Epistemic Design Risk (False Certainty)\n* **Mechanisms in Educational Design**:\n  * **eduKate Asia (2026) (Practitioner / Educational Design Analysis)**: Highlights that because synthetic AI voices naturally sound polished, fluent, and confident, they risk creating an **\"epistemic mismatch\"** [50, 51].\n  * *The Risk*: If a synthetic voice delivers a provisional scientific claim or tentative hypothesis with unyielding, confident prosody, it creates false certainty. Fluency is not evidence, and over-confident AI narration can lead learners to over-trust inaccurate or speculative explanations [50, 51].\n\n---\n\n### 5. Effects of Disclosing AI Use on Credibility and Trust\n\n#### A. The \"Disclosure Paradox\" & Systematic Review Data\n* **Systematic Review Syntheses**: A 2026 systematic review (**American Impact Review / Grigsby et al., 2025**) evaluated 9 empirical studies on AI disclosure [15, 52, 53].\n  * **Survey Data**: 75% of consumers favor mandatory AI disclosure in public communications [15].\n  * **The Penalty Pattern**: However, explicit \"AI-generated\" labels frequently activate Friestad & Wright's **Persuasion Knowledge Model** [15, 53, 54]. Labeling content as machine-made triggers consumer skepticism, counter-arguing, and lowered perceived credibility/trust (**Bui, 2025; Koning & Voorveld, 2025; Qiu et al., 2025; Toff & Simon, 2025**) [52-57].\n\n#### B. Boundary Conditions & Task Types\n* **Brand Strength Buffer**: **Kirkby et al. (2023)** (**Controlled Experiment**) found **no significant negative effect** of AI disclosure on brand attitudes or perceived authenticity when deployed by strong, established brands in non-emotional, informational domains [15, 52, 55, 58, 59].\n* **Task Type**: **Wu et al. (2024)** (**Controlled Experiment**) demonstrated that consumers penalize AI authorship heavily in tasks perceived to require human creativity and emotional investment, but penalize it far less in analytical, informational, or educational tasks [58].\n\n#### C. The \"Truth-Falsity Crossover Effect\" in Science Communication\n* **Lin & Zhang (2026, *Journal of Science Communication*)**:\n  * **Study Design**: Conducted a **within-subjects controlled experiment (\\\\(N = 433\\\\))** manipulating AI disclosure labels and information veracity across science communication texts [60].\n  * **Findings**: AI disclosure labels produced an unexpected **truth-falsity crossover interaction** [60-63]:\n    1. AI disclosure **significantly reduced perceived credibility for correct scientific information** (\\\\(\\beta = 0.209, p < .001\\\\)) [61].\n    2. Paradoxically, AI disclosure **significantly increased perceived credibility for scientific misinformation** (\\\\(\\beta = -0.922, p < .001\\\\)) [61].\n  * **Mechanism (Sundar's MAIN Model & ELM)**: AI disclosure signals machine agency, which activates the **\"Machine Heuristic\"**\u2014the belief that machines are objective, accurate, and unbiased [64, 65]. This heuristic lowers cognitive scrutiny, causing listeners to accept plausible-sounding misinformation while devaluing the subtle human expertise required for complex truths [64, 65].\n\n#### D. Disclosure Formatting (Bare Label vs. Brand-Voice Co-Creation Narrative)\n* **Systematic Review Synthesis**: A bare, isolated label (\"Generated by AI\") triggers maximum persuasion knowledge skepticism [66, 67]. In contrast, a **brand-voice co-creation narrative** (e.g., *\"Our research team wrote and edited this script, using AI voice tools for narration\"*) signals organizational honesty, preserves human editorial attribution, and avoids trust erosion [66-68].\n\n---\n\n### 6. Actionable Protocol for a Scripted Educational Podcast Using Cloned Voices\n\nBased on these empirical findings, an educational podcast using cloned synthetic voices should adopt the following **disclosure** and **delivery** rules:\n\n#### A. Disclosure Rules\n1. **Avoid Bare Warning Labels**: Never use a bare \"AI-Generated\" label or mechanical disclaimer, as this activates the \"machine heuristic trust trap\" (increasing credibility for errors while penalizing correct scientific nuance) [64, 66, 69].\n2. **Adopt a Co-Creation Narrative**: Disclose voice cloning in the show notes or intro using a human-in-the-loop frame: *\"This episode was researched, written, and fact-checked by human scholars, with narration produced using cloned voice technology under direct editorial oversight\"* [66-68].\n3. **Provide Dual-Labeling / Verification Anchors**: For complex academic topics, pair disclosure with an explicit verification cue (*\"All scientific claims are grounded in peer-reviewed sources linked in our show notes\"*) to prompt systematic evaluation [69, 70].\n\n#### B. Delivery & Acoustic Rules\n1. **Maintain Dynamic Pacing**: Set articulation rate to 4\u20136 syllables per second. Avoid slow, monotonous speech that sounds mechanical [31, 32, 34, 71].\n2. **Eliminate Flanging & Technical Artifacts**: Ensure speech processing delays remain under 0.01 seconds and master audio at 44.1 kHz+ to prevent flanging or metallic distortion that triggers uncanny valley aversion [44, 46, 72, 73].\n3. **Align Prosodic Certainty with Epistemic Status**: Program neural voice models to use softer, slightly variable intonation for provisional hypotheses or analogies, and firm, steady intonation for established scientific definitions, preventing false certainty [50].\n\n---\n\n### 7. Summary of Evidentiary Foundations, Thin Evidence, & Disagreements\n\n1. **Evolution of Technology Outdates Early Voice Experiments**:\n   * **The Conflict**: Early CTML experiments (**Mayer et al., 2003; Atkinson et al., 2005**) established the Voice Principle using old concatenative TTS [6-8]. Modern experiments (**Craig & Schroeder, 2017; Chiou et al., 2020; Do, 2026**) show modern Neural TTS eliminates this learning gap and can even outperform human recordings in specific avatar/agent environments [7, 9, 15, 16].\n2. **The Disclosure Paradox**:\n   * **The Conflict**: Survey data shows 75% of audiences demand AI disclosure [15], yet experimental research (**Bui, 2025; Lin & Zhang, 2026; Toff & Simon, 2025**) proves disclosure labels frequently penalize true content and trigger heuristic skepticism [52, 53, 56, 61].\n3. **Thin Evidence on Long-Form Audio Podcast Clones**:\n   * **Evidence Gap**: Nearly all TTS and voice trustworthiness studies evaluate short voice prompts (2 to 10 seconds) or brief e-learning modules (2 to 10 minutes) [15, 16, 44, 47, 60, 74]. **There are zero controlled experimental studies** evaluating listener trust, retention, or cognitive load over a 40 to 75 minute continuous audio-only podcast narrated by cloned synthetic voices.\n\n---\n\n\ud83c\udf99\ufe0f Would you like to draft an opening \"brand-voice\" disclosure script and acoustic style guide for your audio team based on these co-creation narrative rules?",
+ "conversation_id": "010d7602-fa56-4f97-89a1-ed8539e8ebe5",
+ "sources_used": [
+  "0e71a6d6-3952-4c92-a268-b4a51cca7c72",
+  "222260d9-2b2b-4d5c-83e9-1f9a35b6d48c",
+  "05f3b0e5-6da1-4036-b377-85dd6867a77d",
+  "257702c7-dfe2-4c24-99e0-8489bfaa1d65",
+  "97754911-f64c-4806-a564-5bb5dc0789af",
+  "f41f2d26-2df9-46d5-afa6-f48779bf11bc",
+  "c0612bb7-669f-422b-ae5f-c77a01dd08be",
+  "4a547f63-9cf2-4e8f-85b8-4467aa08f932",
+  "213fd6e1-ea00-47a1-b8bb-0a7c9e5a6837",
+  "0b48cd51-6fd1-42a5-a356-797f8f92102b",
+  "d787925d-8f23-4058-b486-6f1bea77142e",
+  "10dff2ff-783d-4882-9408-f5a97a78676b"
+ ],
+ "citations": {
+  "1": "0e71a6d6-3952-4c92-a268-b4a51cca7c72",
+  "2": "222260d9-2b2b-4d5c-83e9-1f9a35b6d48c",
+  "3": "05f3b0e5-6da1-4036-b377-85dd6867a77d",
+  "4": "257702c7-dfe2-4c24-99e0-8489bfaa1d65",
+  "5": "0e71a6d6-3952-4c92-a268-b4a51cca7c72",
+  "6": "97754911-f64c-4806-a564-5bb5dc0789af",
+  "7": "f41f2d26-2df9-46d5-afa6-f48779bf11bc",
+  "8": "f41f2d26-2df9-46d5-afa6-f48779bf11bc",
+  "9": "f41f2d26-2df9-46d5-afa6-f48779bf11bc",
+  "10": "0e71a6d6-3952-4c92-a268-b4a51cca7c72",
+  "11": "c0612bb7-669f-422b-ae5f-c77a01dd08be",
+  "12": "c0612bb7-669f-422b-ae5f-c77a01dd08be",
+  "13": "0e71a6d6-3952-4c92-a268-b4a51cca7c72",
+  "14": "0e71a6d6-3952-4c92-a268-b4a51cca7c72",
+  "15": "4a547f63-9cf2-4e8f-85b8-4467aa08f932",
+  "16": "f41f2d26-2df9-46d5-afa6-f48779bf11bc",
+  "17": "213fd6e1-ea00-47a1-b8bb-0a7c9e5a6837",
+  "18": "f41f2d26-2df9-46d5-afa6-f48779bf11bc",
+  "19": "0b48cd51-6fd1-42a5-a356-797f8f92102b",
+  "20": "f41f2d26-2df9-46d5-afa6-f48779bf11bc",
+  "21": "f41f2d26-2df9-46d5-afa6-f48779bf11bc",
+  "22": "d787925d-8f23-4058-b486-6f1bea77142e",
+  "23": "d787925d-8f23-4058-b486-6f1bea77142e",
+  "24": "d787925d-8f23-4058-b486-6f1bea77142e",
+  "25": "d787925d-8f23-4058-b486-6f1bea77142e",
+  "26": "d787925d-8f23-4058-b486-6f1bea77142e",
+  "27": "0b48cd51-6fd1-42a5-a356-797f8f92102b",
+  "28": "0b48cd51-6fd1-42a5-a356-797f8f92102b",
+  "29": "0b48cd51-6fd1-42a5-a356-797f8f92102b",
+  "30": "0b48cd51-6fd1-42a5-a356-797f8f92102b",
+  "31": "d787925d-8f23-4058-b486-6f1bea77142e",
+  "32": "d787925d-8f23-4058-b486-6f1bea77142e",
+  "33": "0b48cd51-6fd1-42a5-a356-797f8f92102b",
+  "34": "0b48cd51-6fd1-42a5-a356-797f8f92102b",
+  "35": "d787925d-8f23-4058-b486-6f1bea77142e",
+  "36": "0b48cd51-6fd1-42a5-a356-797f8f92102b",
+  "37": "d787925d-8f23-4058-b486-6f1bea77142e",
+  "38": "d787925d-8f23-4058-b486-6f1bea77142e",
+  "39": "d787925d-8f23-4058-b486-6f1bea77142e",
+  "40": "0b48cd51-6fd1-42a5-a356-797f8f92102b",
+  "41": "0b48cd51-6fd1-42a5-a356-797f8f92102b",
+  "42": "0b48cd51-6fd1-42a5-a356-797f8f92102b",
+  "43": "d787925d-8f23-4058-b486-6f1bea77142e",
+  "44": "d787925d-8f23-4058-b486-6f1bea77142e",
+  "45": "0b48cd51-6fd1-42a5-a356-797f8f92102b",
+  "46": "0b48cd51-6fd1-42a5-a356-797f8f92102b",
+  "47": "d787925d-8f23-4058-b486-6f1bea77142e",
+  "48": "d787925d-8f23-4058-b486-6f1bea77142e",
+  "49": "0b48cd51-6fd1-42a5-a356-797f8f92102b",
+  "50": "0e71a6d6-3952-4c92-a268-b4a51cca7c72",
+  "51": "0e71a6d6-3952-4c92-a268-b4a51cca7c72",
+  "52": "4a547f63-9cf2-4e8f-85b8-4467aa08f932",
+  "53": "4a547f63-9cf2-4e8f-85b8-4467aa08f932",
+  "54": "4a547f63-9cf2-4e8f-85b8-4467aa08f932",
+  "55": "4a547f63-9cf2-4e8f-85b8-4467aa08f932",
+  "56": "10dff2ff-783d-4882-9408-f5a97a78676b",
+  "57": "10dff2ff-783d-4882-9408-f5a97a78676b",
+  "58": "4a547f63-9cf2-4e8f-85b8-4467aa08f932",
+  "59": "10dff2ff-783d-4882-9408-f5a97a78676b",
+  "60": "10dff2ff-783d-4882-9408-f5a97a78676b",
+  "61": "10dff2ff-783d-4882-9408-f5a97a78676b",
+  "62": "10dff2ff-783d-4882-9408-f5a97a78676b",
+  "63": "10dff2ff-783d-4882-9408-f5a97a78676b",
+  "64": "10dff2ff-783d-4882-9408-f5a97a78676b",
+  "65": "10dff2ff-783d-4882-9408-f5a97a78676b",
+  "66": "4a547f63-9cf2-4e8f-85b8-4467aa08f932",
+  "67": "4a547f63-9cf2-4e8f-85b8-4467aa08f932",
+  "68": "4a547f63-9cf2-4e8f-85b8-4467aa08f932",
+  "69": "10dff2ff-783d-4882-9408-f5a97a78676b",
+  "70": "10dff2ff-783d-4882-9408-f5a97a78676b",
+  "71": "d787925d-8f23-4058-b486-6f1bea77142e",
+  "72": "0b48cd51-6fd1-42a5-a356-797f8f92102b",
+  "73": "0b48cd51-6fd1-42a5-a356-797f8f92102b",
+  "74": "0b48cd51-6fd1-42a5-a356-797f8f92102b"
+ },
+ "references": [
+  {
+   "source_id": "0e71a6d6-3952-4c92-a268-b4a51cca7c72",
+   "citation_number": 1,
+   "cited_text": "The old version of the question was simple: human voice or machine voice? In 2026, that distinction is no longer simple. Synthetic speech can be highly natural. Human recordings can be poor. AI-generated narration can scale across languages and accessibility needs while also introducing new questions about transparency, trust and the loss of real human relationship. The deeper principle is: the learner does not hear only words. The learner hears a speaking system. Quick Read: The Voice Principle Richard Mayer's 2026 Voice Principle chapter in Teaching with Instructional Video frames the design question around an appealing human-sounding off-screen voice. Earlier multimedia-learning research often found advantages for human or natural-sounding narration over clearly machine-like synthetic speech, interpreted partly through social-agency theory: speech that feels like communication from a partner may encourage learners to engage more deeply with the message."
+  },
+  {
+   "source_id": "222260d9-2b2b-4d5c-83e9-1f9a35b6d48c",
+   "citation_number": 2,
+   "cited_text": "11. The Voice Principle The Voice Principle states that humans learn best from a human voice than a computer voice. While Siri and Alexa are getting pretty close, there is no substitution for a human voice. It's important to note that the studies are still rather preliminary for the Voice Principle. But even so, it makes sense to use a human for your voiceover. How to use the Voice Principle: You can use this principle by recording your own professional narration, or hiring a professional to create an audio voiceover. Make sure your audio is high quality by using a professional microphone and mastering in audio editing software."
+  },
+  {
+   "source_id": "05f3b0e5-6da1-4036-b377-85dd6867a77d",
+   "citation_number": 3,
+   "cited_text": "\ud83d\udca1 Get members of your frontline workforce involved! Use images and videos that star your people - this will resonate with your learners. Guides on eduMe: a way to create more resonant training materials 11. Voice What is Mayer's Voice Principle? Mayer's Voice Principle dictates that people learn better when the narration in multimedia lessons is spoken in a friendly human voice rather than a machine voice. The human voice has a powerful impact on learning. Listening to a narrator provides a personal touch, establishes a connection, and enhances engagement."
+  },
+  {
+   "source_id": "257702c7-dfe2-4c24-99e0-8489bfaa1d65",
+   "citation_number": 4,
+   "cited_text": "How to apply the modality principle: Try to limit your use of text. Instead, rely on visuals, images and voice overs. During a narrated presentation with visuals, only use text to list steps or provide directions. 10. Voice Principle What it means: This principle is straightforward. People learn better when real presenters rather than machines make voice overs. Although we are all used to Siri and Alexa, it seems we still prefer a friendly, human touch. How to apply the voice principle: This one is simple. Narrate your own audio content or use a voiceover professional. If doing it yourself, ensure you have a high-quality microphone and use audio editing software."
+  },
+  {
+   "source_id": "0e71a6d6-3952-4c92-a268-b4a51cca7c72",
+   "citation_number": 5,
+   "cited_text": "Instructional narration can recruit some of these ordinary social-processing systems. A natural conversational voice may make the lesson feel like communication rather than data playback. That can increase the learner's willingness to treat the message as something worth making sense of. But social cues can also become distracting if exaggerated. Artificial enthusiasm, constant emotional emphasis or an overly intimate style can compete with the content. The goal is not maximum personality. It is credible communicative presence."
+  },
+  {
+   "source_id": "97754911-f64c-4806-a564-5bb5dc0789af",
+   "citation_number": 6,
+   "cited_text": "Atkinson ,  R. K.  ( 2002 ).  Optimizing learning from examples using animated pedagogical agents .  Journal of Educational Psychology , 94 ,  416 \u2013 427 . Google Scholar Atkinson ,  R. K. ,  Mayer ,  R. E. , &  Merrill ,  M. M.  ( 2005 ).  Fostering social agency in multimedia learning: Examining the impact of an animated agent\u2019s voice .  Contemporary Educational Psychology , 30 ,  117 \u2013 139 . Google Scholar Baylor ,  A. L. , &  Kim ,  S.  ( 2009 ).  Designing nonverbal communication for pedagogical agents: When less is more .  Computers in Human Behavior , 25 ,  450 \u2013 457 . Google Scholar Brom ,  C. ,  Bromov\u00e1 ,  E. ,  D\u011bcht\u011brenko ,  F. ,  Buchtov\u00e1 ,  M. , &  Pergel ,  M.  ( 2014 ).  Personalized messages in a brewery educational simulation: Is the personalization principle less robust than previously thought?   Computers & Education , 72 ,  339 \u2013 366 . Google Scholar Brom ,  C. ,  Hannemann ,  T. ,  St\u00e1rkov\u00e1 ,  T. ,  Bromov\u00e1 ,  E. , &  D\u011bcht\u011brenko ,  F.  ( 2017 ).  The role of cultural background in the personalization principle: Five experiments with Czech learners .  Computers & Education , 112 ,  37 \u2013 68 . Google Scholar Brown ,  P. , &  Levinson ,  S. C.  ( 1987 ).  Politeness: Some Universals in Language Usage .  New York :  Cambridge University Press . Google Scholar Chan ,  K. Y. ,  Lyons ,  C. ,  Kon ,  L. L. ,  Stine ,  K. ,  Manley ,  M. , &  Crossley ,  A.  ( 2020 ).  Effect of on-screen text on multimedia learning with native and foreign-accented narration .  Learning and Instruction , 67 ,  101305 . Google Scholar Colliot ,  T. , &  Jamet ,  E.  ( 2018 ).  Understanding the effects of a teacher video on learning from a multimedia document: An eye-tracking study .  Educational Technology Research and Development , 66 ( 6 ),  1415 \u2013 1433 . Google Scholar Craig ,  S. D. ,  Gholson ,  B. , &  Driscoll ,  D. M.  ( 2002 ).  Animated pedagogical agent in multimedia educational environments: Effects of agent properties, picture features, and redundancy .  Journal of Educational Psychology , 94 ,  428 \u2013 434 . Google Scholar Craig ,  S. D. , &  Schroeder ,  N. L.  ( 2017 ).  Reconsidering the voice effect when learning from a virtual human .  Computers & Education , 114 ,  193 \u2013 205 . Google Scholar Domagk ,  S.  ( 2010 ).  Do pedagogical agents facilitate learner motivation and learning outcomes? The role of the appeal of agent\u2019s appearance and voice .  Journal of Media Psychology , 22 ,  84 \u2013 97 . Google Scholar Dunsworth ,  Q. , &  Atkinson ,  R. K.  ( 2010 ).  Fostering multimedia learning of science: Explaining the role of an animated agent\u2019s image .  Computers & Education , 49 ,  677 \u2013 690 . Google Scholar Fiorella ,  L. ,  Stull ,  A. T. ,  Kuhlmann ,  S. , &  Mayer ,  R. E.  ( 2019 ).  Instructor presence in video lectures: The role of dynamic drawings, eye contact, and instructor visibility .  Journal of Educational Psychology , 111 ( 7 ),  1162 \u2013 1171 . Google Scholar Frechette ,  C. , &  Moreno ,  R.  ( 2010 ).  The roles of animated pedagogical agents\u2019 presence and nonverbal communication in multimedia learning environments .  Journal of Media Psychology , 22 ,  61 \u2013 72 . Google Scholar Ginns ,  P. , &  Fraser ,  J.  ( 2010 ).  Personalization enhances learning anatomy terms .  Medical Teacher , 32 ( 9 ),  776 \u2013 778 . Google Scholar Ginns ,  P. ,  Marin ,  A. J. , &  Marsh ,  H. M.  ( 2013 ).  Designing instructional text for conversational style: A meta-analysis .  Educational Psychology Review , 25 ( 4 ),  445 \u2013 472 . Google Scholar Grice ,  H. P.  ( 1975 ).  Logic and conversation . In  Cole ,  P. , &  Morgan ,  J.  (eds.),  Syntax and Semantics  (Vol. 3, pp.  41 \u2013 58 ).  New York :  Academic Press . Google Scholar Guo ,  Y. R. , &  Goh ,  D. H. L.  ( 2015 ).  Affect in embodied pedagogical agents: Meta-analytic review .  Journal of Educational Computing Research , 53 ( 1 ),  124 \u2013 149 . Google Scholar"
+  },
+  {
+   "source_id": "f41f2d26-2df9-46d5-afa6-f48779bf11bc",
+   "citation_number": 7,
+   "cited_text": "The use of machine-synthesized speech, such as text-to-speech (TTS), has seen considerable interest in the educational field (e.g., [1, 5, 8, 25]. Synthesized speech can be automatically generated from text and can be easier and quicker to record than hiring voice actors. However, early work found that TTS had negative effects on learning outcomes and instructor perception [1, 25]. More recent work suggested that this effect should be reconsidered due to the substantial advancements in synthetic speech technology [5, 8] and indicate that modern synthetic speech engines are an effective option for virtual pedagogical agents."
+  },
+  {
+   "source_id": "f41f2d26-2df9-46d5-afa6-f48779bf11bc",
+   "citation_number": 8,
+   "cited_text": "[25] R. E. Mayer, K. Sobko, and P. D. Mautone. Social cues in multimedia learning: Role of speaker\u2019s voice. Journal of Educational Psychology, 95(2):419\u2013425, 2003. doi: 10.1037/0022-0663.95.2.419 [26] R. P. McMahan and N. S. Herrera. AFFECT: Altered-fidelity framework for enhancing cognition and training. Frontiers in ICT, 3:1\u201315, 2016. doi: 10.3389/fict.2016.00029 [27] Z. Merchant, E. T. Goetz, L. Cifuentes, W. Keeney-Kennicutt, and T. J. Davis. Effectiveness of virtual reality-based instruction on students\u2019 learning outcomes in K-12 and higher education: A meta-analysis. Computers and Education, 70:29\u201340, 2014. doi: 10.1016/j.compedu. 2013.07.033"
+  },
+  {
+   "source_id": "f41f2d26-2df9-46d5-afa6-f48779bf11bc",
+   "citation_number": 9,
+   "cited_text": "3.1.2 Synthesized speech quality The advent of neural network TTS, which uses neural networks as a postfiltering step [6], has allowed for more natural sounding synthetic speech. Neural TTS has gained commercial popularity in recent years. Microsoft released their commercially available neural TTS voices in 2018 [15], while Amazon introduced neural TTS voices in AWS Polly in 2019 [36]. The rise in popularity of neural TTS may be attributed to its potential to improve user experience. For example, Microsoft claimed that their neural TTS voices reduce listening fatigue and sound more natural than standard synthetic voices [15]. In this project, we plan to investigate compare neural TTS to concatenative TTS and recorded human speech. We hypothesize that the reduced listening fatigue of neural TTS may improve learning by reducing cognitive load, while also maintaining the benefits of using TTS over human speech."
+  },
+  {
+   "source_id": "0e71a6d6-3952-4c92-a268-b4a51cca7c72",
+   "citation_number": 10,
+   "cited_text": "Voice is what makes that auditory channel usable. But the modality principle and voice principle are not the same. Modality asks whether words should be spoken or printed. Voice asks what properties of the spoken delivery affect the learning experience. A lesson can choose the right modality and still use a poor voice. The Human-versus-Synthetic Boundary Has Moved Early synthetic speech often sounded unmistakably mechanical. The machine category was audible. Modern neural text-to-speech systems can produce natural pacing, expressive prosody and highly human-like timbre. That changes the interpretation of older research."
+  },
+  {
+   "source_id": "c0612bb7-669f-422b-ae5f-c77a01dd08be",
+   "citation_number": 11,
+   "cited_text": "Voice principle People learn better when narration comes from a friendly human voice rather than a machine voice. That was the finding in the original studies, anyway, and it made obvious sense at the time: early text-to-speech sounded robotic and grating. Modern AI voices are a different story, and the original research predates them entirely. Per the 2022 systematic review, voice is also one of the two least-studied principles (along with pre-training), so the evidence base here was thin even before AI voices arrived. Treat this one as a live question. I'll give you my current read in the AI section below."
+  },
+  {
+   "source_id": "c0612bb7-669f-422b-ae5f-c77a01dd08be",
+   "citation_number": 12,
+   "cited_text": "Do Mayer's principles apply to AI-powered learning? Yes. The principles describe how human cognition processes words and pictures, not any particular delivery technology, so they apply to AI-generated and AI-driven experiences too. But some principles need re-examination, and the research is racing to catch up: the 2022 systematic review found studies in VR and AR environments still limited, so anything newer than that is extrapolation territory. Start with voice. The original voice principle compared human narration to early machine synthesis, and modern AI voices have closed most of that quality gap. My expectation is that updated studies will show the gap between human and AI-delivered voice on learning outcomes is very small. AI-generated faces are the more interesting question. My hypothesis is that learning suffers with AI avatars because of their uncanny quality, which is unfortunate given how popular they've become for rapid content creation in the corporate space. If I'm right, the embodiment principle cuts against the current avatar trend, not in favor of it. Watch for the studies; until then, I'd bet on AI voice and stay cautious with AI faces."
+  },
+  {
+   "source_id": "0e71a6d6-3952-4c92-a268-b4a51cca7c72",
+   "citation_number": 13,
+   "cited_text": "But technological change matters. A 2025 study in Education and Information Technologies compared AI- and human-generated voices and avatars and found that effects depended on the combination of design elements rather than a simple \u201cAI bad, human good\u201d split. The useful variable is increasingly not who generated the waveform, but what social, cognitive and communicative properties the learner actually experiences. The Transcript Fallacy Suppose two videos use the same script. If we evaluate only the transcript, the lessons appear identical. But the voice changes pacing, emphasis, prosody, pauses and perceived social presence."
+  },
+  {
+   "source_id": "0e71a6d6-3952-4c92-a268-b4a51cca7c72",
+   "citation_number": 14,
+   "cited_text": "Clear pronunciation, appropriate pacing and well-placed pauses reduce decoding effort. Poor audio quality, strange emphasis, unstable volume or background noise increase it. The 2025 study comparing AI and human-generated voices and avatars is useful because it treats engagement and extraneous cognitive load as outcomes influenced by combinations of design choices, not isolated labels. Instructional voice should be evaluated as part of the whole interface. The First Weak Link Test When a learner struggles with narrated material, diagnose before changing the content."
+  },
+  {
+   "source_id": "4a547f63-9cf2-4e8f-85b8-4467aa08f932",
+   "citation_number": 15,
+   "cited_text": "Yet the relationship between disclosure and trust is not uniformly negative. Kirkby et al. (2023) found that AI disclosure did not significantly affect brand attitudes or perceived authenticity, a result that may reflect boundary conditions related to brand strength or consumer familiarity with AI tools. This \u201ddisclosure paradox\u201d is further complicated by regulatory imperatives. The EU AI Act and evolving FTC guidance increasingly mandate transparency about AI-generated content, creating a tension between legal compliance and potential trust erosion (Grigsby et al., 2025). Survey data indicate that seventy-five percent of consumers favor AI disclosure in advertisements, yet the same disclosures reduce trust (Grigsby et al., 2025). Resolving this paradox requires attention to disclosure framing, content domain, and individual differences in AI literacy, themes that the present review examines in its results and discussion."
+  },
+  {
+   "source_id": "f41f2d26-2df9-46d5-afa6-f48779bf11bc",
+   "citation_number": 16,
+   "cited_text": "Interestingly, Craig and Schroeder [8] found that a modern synthesized speech engine produced even better learning than human speech, which provide compelling reasons to further investigate the influence of synthesized speech in XR learning platforms. Craig and Schroeder suggested that a pedagogical agent with modern TTS produces better learning than human speech due to the uncanny valley effect. In essence, they suggested that the dissonance between the visual of the virtual human and the human voice may have negatively impacted learning. In this project, we plan to investigate the effects of both synthesized speech accents and synthesized speech quality on agent perception and learning outcomes."
+  },
+  {
+   "source_id": "213fd6e1-ea00-47a1-b8bb-0a7c9e5a6837",
+   "citation_number": 17,
+   "cited_text": "Conclusion AI-powered audio content is no longer a thing of the future, but part of our everyday lives. Automated voices read books to us, summarise documents into podcasts, and expand the audio landscape with new formats. This development brings significant advantages: content can be created more quickly and tailored to individuals, making it accessible to more people. However, with these new possibilities come new challenges. It must be clear which content is created by humans and which by machines. Transparency is crucial to maintaining trust. Initial regulations \u2013 from platform guidelines to laws \u2013 are addressing this issue by tackling the risk of misuse, but we are still at the beginning."
+  },
+  {
+   "source_id": "f41f2d26-2df9-46d5-afa6-f48779bf11bc",
+   "citation_number": 18,
+   "cited_text": "[3] A. Baylor. Effects of Images and Animation on Agent Persona. Journal of Educational Computing Research, 28(4):373\u2013394, 2003. [4] A. L. Baylor and Y. Kim. The role of gender and ethnicity in pedagogical agent perception. In E-Learn: World Conference on E-Learning in Corporate, Government, Healthcare, and Higher Education. As-sociation for the Advancement of Computing in Education (AACE), 2003. [5] E. K. Chiou, N. L. Schroeder, and S. D. Craig. How we trust, perceive, and learn from virtual humans: The influence of voice quality. Computers and Education, 146, 2020. doi: 10.1016/j.compedu.2019. 103756"
+  },
+  {
+   "source_id": "0b48cd51-6fd1-42a5-a356-797f8f92102b",
+   "citation_number": 19,
+   "cited_text": "For practitioners (e.g., emergency system designers): For immediate hazard warnings (e.g., earthquake, road hazards), adopt higher pitch with a faster speech rate to convey urgency\u2014then reduce intensity once people start following instructions. Alternatively, offer tiered voice prompts, where the first alert is highly urgent, followed by calmer updates to sustain trust without alarm fatigue. Open in a new tab 4.1. The role of acoustic cues in the perceived trustworthiness of human speakers Thirteen of the 24 studies have focused on perceived trustworthiness of adult human voices. Six have solely assessed pitch-related measures ( Mileva et al., 2018 ; Tsantani et al., 2016 ; O'Connor and Barclay, 2018 ; Oleszkiewicz et al., 2017 ; Belin et al., 2019 ; Ponsot et al., 2018 ), four have combined pitch with HNR, jitter, shimmer, loudness, formant dispersion, or speech rate ( Baus et al., 2019 ; McAleer et al., 2014 ; Schirmer et al., 2020 ; Mileva et al., 2020 ), two have focused solely on speech duration ( Groyecka-Bernard et al., 2022 ; Mahrholz et al., 2018 ), and one on speaking rate ( Yokoyama and Daibo, 2012 )."
+  },
+  {
+   "source_id": "f41f2d26-2df9-46d5-afa6-f48779bf11bc",
+   "citation_number": 20,
+   "cited_text": "Feine et al. [12] presented a taxonomy of social cues for conversational agents, which classified social cues into four major categories (i.e., verbal, visual, auditory, invisible). We focus particularly on visual and auditory social cues of pedagogical agents that can be easily manipulated by a designer. Specifically, we plan to investigate the aspects of synthesized speech, considering previous work found that synthesized speech produces better learning outcomes than recorded human speech [8]. We also plan to investigate agent appearance and computer-mediated communication in the form of closed captions."
+  },
+  {
+   "source_id": "f41f2d26-2df9-46d5-afa6-f48779bf11bc",
+   "citation_number": 21,
+   "cited_text": "[6] M. Coto-Jim\u00e9nez and J. Goddard-Close. LSTM Deep Neural Networks Postfiltering for Enhancing Synthetic Voices. International Journal of Pattern Recognition and Artificial Intelligence, 32(1):1\u201324, 2018. doi: 10.1142/S021800141860008X [7] S. D. Craig, B. Gholson, and D. M. Driscoll. Animated pedagogical agents in multimedia educational environments: Effects of agent properties, picture features, and redundancy. Journal of Educational Psychology, 94(2):428\u2013434, 2002. doi: 10.1037/0022-0663.94.2.428"
+  },
+  {
+   "source_id": "d787925d-8f23-4058-b486-6f1bea77142e",
+   "citation_number": 22,
+   "cited_text": "Article metrics View details 16 Citations 13,3k Views 3,7k Downloads Abstract Trust is a multidimensional and dynamic social and cognitive construct, considered the glue of society. Gauging someone's perceived trustworthiness is essential for forming and maintaining healthy relationships across various domains. Humans have become adept at inferring such traits from speech for survival and sustainability. This skill has extended to the technological space, giving rise to humanlike voice technologies. The inclination to assign personality traits to these technologies suggests that machines may be processed along similar social and vocal dimensions as human voices. Given the increasing prevalence of voice technology in everyday tasks, this systematic review examines the factors in the psychology of voice acoustics that influence listeners' trustworthiness perception of speakers, be they human or machine. Overall, this systematic review has revealed that voice acoustics impact perceptions of trustworthiness in both humans and machines. Specifically, combining multiple acoustic features through multivariate methods enhances interpretability and yields more balanced findings compared to univariate approaches. Focusing solely on isolated features like pitch often yields inconclusive results when viewed collectively across studies without considering other factors. Crucially, situational, or contextual factors should be utilised for enhanced interpretation as they tend to offer more balanced findings across studies. Moreover, this review has highlighted the significance of cross-examining speaker-listener demographic diversity, such as ethnicity and age groups; yet, the scarcity of such efforts accentuates the need for increased attention in this area. Lastly, future work should involve listeners' own trust predispositions and personality traits with ratings of trustworthiness perceptions."
+  },
+  {
+   "source_id": "d787925d-8f23-4058-b486-6f1bea77142e",
+   "citation_number": 23,
+   "cited_text": "1 Introduction Digitisation is changing the way modern societies interact and communicate. The use of artificial intelligence and speech synthesis has entered many domains of our daily life, such as autonomous vehicles, automated customer support, telehealth and companion robots, and smart home assistants. Considering that trust is a key factor in the acceptance of technology ( Bryant et al., 2020 ; Large et al., 2019 ; Seaborn et al., 2022 ) as well as the healthy functioning of a flourishing society, it makes the multi-disciplinary research area of trustworthy voice acoustics of growing importance and relevance. Overall, existing literature suggests that speech acoustics influence first impressions of speakers' perceived trustworthiness ( Tsantani et al., 2016 ; Oleszkiewicz et al., 2017 ; Stewart and Ryan, 1982 ; Nass and Lee, 2000 ). Nonetheless, when biological, demographic, cultural, and situational factors are not adequately considered, the overall findings often remain inconclusive. To the best of our knowledge, this is the first systematic review that aims to understand the relationship between voice acoustics and attributions of trustworthiness in humans and machines."
+  },
+  {
+   "source_id": "d787925d-8f23-4058-b486-6f1bea77142e",
+   "citation_number": 24,
+   "cited_text": "1.5 Motivation Given the above, this systematic review attempts to consolidate the existing multi-disciplinary literature on voice trustworthiness in both human and synthesised voices. Specifically, this review aims to address the question of \u201chow do acoustic features affect the perceived trustworthiness of a speaker?,\u201d while also reviewing participant demographics, voice stimuli characteristics and task(s) involved. 2 Methods and analysis This systematic review followed the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) checklist ( Page et al., 2021a , b ). The search was performed on the 31 st of October 2022, and all studies were initially identified by electronic search. Searches were repeated on the 18 th January 2024 to identify any additional publications. A pre-registration protocol has been created for this review on the Open Science Framework (OSF"
+  },
+  {
+   "source_id": "d787925d-8f23-4058-b486-6f1bea77142e",
+   "citation_number": 25,
+   "cited_text": "Altogether, vocal cues in human voices seem to play a significant role in trustworthiness attributions, albeit influenced by contextual factors. It is further suggested that vocal cues may have stronger effects when voice acts as the sole or primary modality for drawing trustworthiness inferences. 4.2 The role of acoustic cues in the perceived trustworthiness of voice-based IAs The remaining 11 studies in this review focused on assessing the perceived trustworthiness of voice-based Intelligent Agents (IAs), whether using synthesised or pre-recorded human voices. Similar to human speakers, voice-based IAs are often evaluated with human behaviour in mind, with context also playing a significant role. Contextual themes and associated acoustic features for trustworthy speech are discussed further."
+  },
+  {
+   "source_id": "d787925d-8f23-4058-b486-6f1bea77142e",
+   "citation_number": 26,
+   "cited_text": "5 Conclusion This paper has systematically reviewed 24 studies to explore the impact of vocal acoustics on perceived trustworthiness in both human speakers and voice-based IAs, shedding light on human behaviour and attitudes toward vocal communication. In summary, acoustic features appear to correlate with trustworthiness judgments in both human and IA voices, albeit they may exert more pronounced effects when the voice serves as the sole or predominant modality for inferring trustworthiness. Moreover, their effects are best understood within their intended contexts for enhanced interpretability. Overall, pitch seems to be influential when assessed in combination with other acoustic features, while as a sole factor it appears to be less reliable. Additionally, HAI seems to draw social inferences from human-human interactions, listeners' trust propensity and personality traits. Hence, highlighting the importance of studying these factors side by side."
+  },
+  {
+   "source_id": "0b48cd51-6fd1-42a5-a356-797f8f92102b",
+   "citation_number": 27,
+   "cited_text": "PMC Copyright notice PMCID: PMC11931160 PMID: 40129499 Abstract Trust is a multidimensional and dynamic social and cognitive construct, considered the glue of society. Gauging someone's perceived trustworthiness is essential for forming and maintaining healthy relationships across various domains. Humans have become adept at inferring such traits from speech for survival and sustainability. This skill has extended to the technological space, giving rise to humanlike voice technologies. The inclination to assign personality traits to these technologies suggests that machines may be processed along similar social and vocal dimensions as human voices. Given the increasing prevalence of voice technology in everyday tasks, this systematic review examines the factors in the psychology of voice acoustics that influence listeners' trustworthiness perception of speakers, be they human or machine. Overall, this systematic review has revealed that voice acoustics impact perceptions of trustworthiness in both humans and machines. Specifically, combining multiple acoustic features through multivariate methods enhances interpretability and yields more balanced findings compared to univariate approaches. Focusing solely on isolated features like pitch often yields inconclusive results when viewed collectively across studies without considering other factors. Crucially, situational, or contextual factors should be utilised for enhanced interpretation as they tend to offer more balanced findings across studies. Moreover, this review has highlighted the significance of cross-examining speaker-listener demographic diversity, such as ethnicity and age groups; yet, the scarcity of such efforts accentuates the need for increased attention in this area. Lastly, future work should involve listeners' own trust predispositions and personality traits with ratings of trustworthiness perceptions."
+  },
+  {
+   "source_id": "0b48cd51-6fd1-42a5-a356-797f8f92102b",
+   "citation_number": 28,
+   "cited_text": "Keywords: trust, speech acoustics, trustworthy voice, human-robot interaction, voice assistants, intelligent agents 1. Introduction Digitisation is changing the way modern societies interact and communicate. The use of artificial intelligence and speech synthesis has entered many domains of our daily life, such as autonomous vehicles, automated customer support, telehealth and companion robots, and smart home assistants. Considering that trust is a key factor in the acceptance of technology ( Bryant et al., 2020 ; Large et al., 2019 ; Seaborn et al., 2022 ) as well as the healthy functioning of a flourishing society, it makes the multi-disciplinary research area of trustworthy voice acoustics of growing importance and relevance. Overall, existing literature suggests that speech acoustics influence first impressions of speakers' perceived trustworthiness ( Tsantani et al., 2016 ; Oleszkiewicz et al., 2017 ; Stewart and Ryan, 1982 ; Nass and Lee, 2000 ). Nonetheless, when biological, demographic, cultural, and situational factors are not adequately considered, the overall findings often remain inconclusive. To the best of our knowledge, this is the first systematic review that aims to understand the relationship between voice acoustics and attributions of trustworthiness in humans and machines."
+  },
+  {
+   "source_id": "0b48cd51-6fd1-42a5-a356-797f8f92102b",
+   "citation_number": 29,
+   "cited_text": "1 ) under the CC-by Attribution 4.0 International license. This review adopted a narrative synthesis approach, to consolidate findings across studies investigating vocal trustworthiness in human speakers and voice-based IAs. The decision to use narrative synthesis was informed by the research objective, which focused on identifying and summarising acoustic features, demographic characteristics, and task paradigms across studies, rather than deriving effect sizes or pooled estimates. This approach allowed for a comprehensive examination and categorisation of findings into themes to identify trends, gaps, and contextual nuances in the literature, and inform future research directions."
+  },
+  {
+   "source_id": "0b48cd51-6fd1-42a5-a356-797f8f92102b",
+   "citation_number": 30,
+   "cited_text": "5. Conclusion This paper has systematically reviewed 24 studies to explore the impact of vocal acoustics on perceived trustworthiness in both human speakers and voice-based IAs, shedding light on human behaviour and attitudes toward vocal communication. In summary, acoustic features appear to correlate with trustworthiness judgments in both human and IA voices, albeit they may exert more pronounced effects when the voice serves as the sole or predominant modality for inferring trustworthiness. Moreover, their effects are best understood within their intended contexts for enhanced interpretability. Overall, pitch seems to be influential when assessed in combination with other acoustic features, while as a sole factor it appears to be less reliable. Additionally, HAI seems to draw social inferences from human-human interactions, listeners' trust propensity and personality traits. Hence, highlighting the importance of studying these factors side by side."
+  },
+  {
+   "source_id": "d787925d-8f23-4058-b486-6f1bea77142e",
+   "citation_number": 31,
+   "cited_text": "Amplitude; perceived as loudness. Decibels (dB) Indicative of air pressure variations. Speech rate Syllables per second (syll/s) Typically estimated at about 4\u20136 syllables per second in English ( Reetz and Jongman, 2020 ). \u201cEffort code\u201d theory ( Gussenhoven, 2002 ): Faster speech rates shown to increase speakers' perceived competence, credibility, trustworthiness and willingness to help ( Yokoyama and Daibo, 2012 ; Smith and Shaffer, 1995 ; Rodero et al., 2014 ). HNR dB Lower HNR signifies more noise in a voice signal ( Fernandes et al., 2018 ; Ferrand, 2002 ). Noise in terms of voice, encompasses any component of the signal that interferes with the clarity, purity and overall quality of the intended speech signal. Typically, this noise is not harmonically related to the fundamental frequency of the voice, such as alterations in vocal fold tissue, muscle tension, respiratory patterns, or even ambient sounds and electronic interference ( Ferrand, 2002 ). Older adults typically show slower speech rates, lower HNR, and differences in pitch and voice quality compared to younger adults ( Lavan et al., 2019 ; Rojas et al., 2020 ; Heffernan, 2004 ; Ferrand, 2002 ; Baus et al., 2019 ; McAleer et al., 2014 )."
+  },
+  {
+   "source_id": "d787925d-8f23-4058-b486-6f1bea77142e",
+   "citation_number": 32,
+   "cited_text": "Furthermore, a louder voice with a faster speech rate and higher pitch tends to be perceived as more trustworthy, supporting theories linking trust formation with positive traits ( Lim et al., 2022 ). Faster speech rate tends to portray speakers' deeper understanding and passion for the subject. In combination with higher pitch it is usually associated with extroversion and openness ( Ohala, 1995 ; Lim et al., 2022 ; Maxim et al., 2023 ), further portraying speakers as competent, persuasive, and credible ( Yokoyama and Daibo, 2012 ; Smith and Shaffer, 1995 ; Rodero et al., 2014 ; Gussenhoven, 2002 ). Only one study has examined listeners' trust propensity, revealing positive and negative associations with trustworthiness attributions dependent on the scales used ( Lim et al., 2022 ). Overall findings under this theme seem to be appropriate if we interpret them as listeners being more accepting and trusting of speakers' assistance on a task. Nonetheless, more extensive research is needed in this area before these findings can be deemed as generalisable."
+  },
+  {
+   "source_id": "0b48cd51-6fd1-42a5-a356-797f8f92102b",
+   "citation_number": 33,
+   "cited_text": "Amplitude; perceived as loudness. Decibels (dB) Indicative of air pressure variations. Speech rate Syllables per second (syll/s) Typically estimated at about 4\u20136 syllables per second in English ( Reetz and Jongman, 2020 ). \u201cEffort code\u201d theory ( Gussenhoven, 2002 ): Faster speech rates shown to increase speakers' perceived competence, credibility, trustworthiness and willingness to help ( Yokoyama and Daibo, 2012 ; Smith and Shaffer, 1995 ; Rodero et al., 2014 ). HNR dB Lower HNR signifies more noise in a voice signal ( Fernandes et al., 2018 ; Ferrand, 2002 ). Noise in terms of voice, encompasses any component of the signal that interferes with the clarity, purity and overall quality of the intended speech signal. Typically, this noise is not harmonically related to the fundamental frequency of the voice, such as alterations in vocal fold tissue, muscle tension, respiratory patterns, or even ambient sounds and electronic interference ( Ferrand, 2002 ). Older adults typically show slower speech rates, lower HNR, and differences in pitch and voice quality compared to younger adults ( Lavan et al., 2019 ; Rojas et al., 2020 ; Heffernan, 2004 ; Ferrand, 2002 ; Baus et al., 2019 ; McAleer et al., 2014 )."
+  },
+  {
+   "source_id": "0b48cd51-6fd1-42a5-a356-797f8f92102b",
+   "citation_number": 34,
+   "cited_text": "Furthermore, a louder voice with a faster speech rate and higher pitch tends to be perceived as more trustworthy, supporting theories linking trust formation with positive traits ( Lim et al., 2022 ). Faster speech rate tends to portray speakers' deeper understanding and passion for the subject. In combination with higher pitch it is usually associated with extroversion and openness ( Ohala, 1995 ; Lim et al., 2022 ; Maxim et al., 2023 ), further portraying speakers as competent, persuasive, and credible ( Yokoyama and Daibo, 2012 ; Smith and Shaffer, 1995 ; Rodero et al., 2014 ; Gussenhoven, 2002 ). Only one study has examined listeners' trust propensity, revealing positive and negative associations with trustworthiness attributions dependent on the scales used ( Lim et al., 2022 ). Overall findings under this theme seem to be appropriate if we interpret them as listeners being more accepting and trusting of speakers' assistance on a task. Nonetheless, more extensive research is needed in this area before these findings can be deemed as generalisable."
+  },
+  {
+   "source_id": "d787925d-8f23-4058-b486-6f1bea77142e",
+   "citation_number": 35,
+   "cited_text": "Track conversation outcomes through real-time analytics (e.g., abandonment rates, user satisfaction). If trust declines, tweak pitch or speed gradually, then retest with A/B experiments. Telehealth advice Pitch, speech rate, loudness : A lower pitch, slower rate, and softer volume often convey empathy, especially in female voices. Listener traits : Extroverted listeners may trust IAs more regardless of acoustic settings, indicating individual differences may override vocal features. Typically, small samples and varied methodologies; some purely audio, others multimodal."
+  },
+  {
+   "source_id": "0b48cd51-6fd1-42a5-a356-797f8f92102b",
+   "citation_number": 36,
+   "cited_text": "Track conversation outcomes through real-time analytics (e.g., abandonment rates, user satisfaction). If trust declines, tweak pitch or speed gradually, then retest with A/B experiments. Telehealth advice Pitch, speech rate, loudness : A lower pitch, slower rate, and softer volume often convey empathy, especially in female voices. Listener traits : Extroverted listeners may trust IAs more regardless of acoustic settings, indicating individual differences may override vocal features. Typically, small samples and varied methodologies; some purely audio, others multimodal."
+  },
+  {
+   "source_id": "d787925d-8f23-4058-b486-6f1bea77142e",
+   "citation_number": 37,
+   "cited_text": "Limitations Recommendations and insights Studies: Perceived trustworthiness of human speakers. Generic first impressions Pitch : In English contexts, a higher pitch or rising intonation often seems to boost trustworthiness perceptions, albeit mixed findings in non-English settings. Voice quality : Native English listeners often favour lower HNR, while non-native listeners may prefer higher HNR for vocal clarity or precise enunciation. Speech duration : Longer segments (~2\u20133 s) allow more processing time, enhancing trustworthiness."
+  },
+  {
+   "source_id": "d787925d-8f23-4058-b486-6f1bea77142e",
+   "citation_number": 38,
+   "cited_text": "Limit flanging (i.e., avoid speech delays >0.01 s) and robotic intonations to ensure the voice sounds human and engaging. Track user metrics (satisfaction, conversation duration, etc.). If distrust arises, tweak acoustics gradually and retest. Financial services Pitch & speech rate : Higher pitch + faster articulation in female-sounding IAs often associated with perceived happiness, helpfulness, competence (humans ascribe personality traits to the voice). Mainly female British accents; potential cultural and demographic biases."
+  },
+  {
+   "source_id": "d787925d-8f23-4058-b486-6f1bea77142e",
+   "citation_number": 39,
+   "cited_text": "4.1.1.1 Vocal pitch and related features Current findings have primarily suggested a positive link between pitch, rising intonation at both ends of a stimulus and trustworthiness attributions in English-speaking contexts ( McAleer et al., 2014 ; Belin et al., 2019 ). Nevertheless, cultural differences seem to be prevalent, as mixed findings for pitch have been identified for non-English speaking studies ( Baus et al., 2019 ; Ponsot et al., 2018 ; Oleszkiewicz et al., 2017 ). Multimodal research (i.e., faces and voices) has also yielded inconclusive results regarding pitch's impact, noting that there may be a stronger influence of faces in such cases ( Mileva et al., 2018 ). Moreover, methodological differences seem to have played a role in the current findings: English-speaking studies using Likert scales have favoured higher pitch for trustworthiness, whereas research utilising a 2AFC task ( Tsantani et al., 2016 ) has deemed lower pitch as more trustworthy. Further research comparing these methodologies is necessary for a clearer understanding."
+  },
+  {
+   "source_id": "0b48cd51-6fd1-42a5-a356-797f8f92102b",
+   "citation_number": 40,
+   "cited_text": "Table 5. Participant characteristics of all included studies. Study Adjusted sample size Gender Mean age [range] Additional participant details <cited_table>",
+   "cited_table": {
+    "num_columns": 5,
+    "rows": [
+     [
+      "Studies: Perceived trustworthiness of human speakers.",
+      "",
+      "",
+      "",
+      ""
+     ],
+     [
+      "Groyecka-Bernard et al. (2022)",
+      "2,538",
+      "46% males; 54% females.",
+      "32.51",
+      "N/A"
+     ],
+     [
+      "Schirmer et al. (2020)",
+      "80",
+      "25% younger males; 25% younger females; 25% older males; 25% older females.",
+      "23.7 [20\u201332 years] (younger males); 21.1 [19\u201327 years] (younger females); 67.9 [60\u201391 years] (older males); 68 [60\u201377 years] (older females).",
+      "Older adults: 2 with normal hearing (<= 25 dB); 28 with slight hearing impairment (26\u201340 dB); 9 with moderate impairment (41\u201360 dB); 1 with severe impairment (61\u201380 dB) that was corrected with a hearing aid."
+     ],
+     [
+      "Mileva et al. (2020)",
+      "99",
+      "7% males; 93% females.",
+      "19 [18\u201350 years]",
+      "N/A"
+     ],
+     [
+      "Baus et al. (2019)",
+      "279 (study 1); 258 (study 2).",
+      "33% males (S1); 67% females (S1); 50% males (S2); 50% females (S2).",
+      "20.2 (S1); 22.03 (S2).",
+      "Spanish nationality."
+     ],
+     [
+      "Belin et al. (2019)",
+      "500",
+      "29% males; 71% females.",
+      "Median age = 24 [19\u201365 years]",
+      "N/A"
+     ],
+     [
+      "Ponsot et al. (2018)",
+      "44 (study 1; trust task = 23); 40 (study 2; trust task = 19).",
+      "52% males (S1 trust task); 48% females (S1 trust task); 47% males (S2 trust task); 53% females (S2 trust task).",
+      "22 (S1 trust task); 21 (S2 trust task).",
+      "N/A"
+     ],
+     [
+      "Mahrholz et al. (2018)",
+      "181",
+      "24% males; 76% females.",
+      "21.3 [18\u201327 years] (males); 20.1 [18\u201330 years] (females).",
+      "Scottish nationality."
+     ],
+     [
+      "O'Connor and Barclay (2018)",
+      "85 (study 1); 63 (study 2).",
+      "100% females (S1 & S2)",
+      "18.21 (S1); 18.9 (S2).",
+      "N/A"
+     ],
+     [
+      "Mileva et al. (2018)",
+      "40",
+      "20% males; 80% females.",
+      "20.1 [18\u201330 years]",
+      "N/A"
+     ],
+     [
+      "Oleszkiewicz et al. (2017)",
+      "50",
+      "20% blind males; 34% blind females; 16% sighted males; 30% sighted females.",
+      "37.9 [24\u201364 years] (healthy blind adults); 38.7 [24\u201365 years] (sighted adults).",
+      "N/A"
+     ],
+     [
+      "Tsantani et al. (2016)",
+      "40 (study 1); 240 (study 2).",
+      "33% males (S1); 67% females (S1); 24% males (S2); 76% females (S2).",
+      "24 (S1); 20 (S2).",
+      "N/A"
+     ],
+     [
+      "McAleer et al. (2014)",
+      "320",
+      "37% males; 63% females.",
+      "28.5",
+      "N/A"
+     ],
+     [
+      "Klofstad et al. (2012)",
+      "210",
+      "50% males; 50% females.",
+      "Undergraduate students",
+      "N/A"
+     ],
+     [
+      "Yokoyama and Daibo (2012)",
+      "466",
+      "53% males; 47% females.",
+      "19.6",
+      "N/A"
+     ]
+    ]
+   }
+  },
+  {
+   "source_id": "0b48cd51-6fd1-42a5-a356-797f8f92102b",
+   "citation_number": 41,
+   "cited_text": "Theme Trustworthy acoustic features Limitations Recommendations and insights Studies: Perceived trustworthiness of human speakers. Generic first impressions Pitch : In English contexts, a higher pitch or rising intonation often seems to boost trustworthiness perceptions, albeit mixed findings in non-English settings. Voice quality : Native English listeners often favour lower HNR, while non-native listeners may prefer higher HNR for vocal clarity or precise enunciation. Speech duration : Longer segments (~2\u20133 s) allow more processing time, enhancing trustworthiness."
+  },
+  {
+   "source_id": "0b48cd51-6fd1-42a5-a356-797f8f92102b",
+   "citation_number": 42,
+   "cited_text": "4.1.1.1. Vocal pitch and related features Current findings have primarily suggested a positive link between pitch, rising intonation at both ends of a stimulus and trustworthiness attributions in English-speaking contexts ( McAleer et al., 2014 ; Belin et al., 2019 ). Nevertheless, cultural differences seem to be prevalent, as mixed findings for pitch have been identified for non-English speaking studies ( Baus et al., 2019 ; Ponsot et al., 2018 ; Oleszkiewicz et al., 2017 ). Multimodal research (i.e., faces and voices) has also yielded inconclusive results regarding pitch's impact, noting that there may be a stronger influence of faces in such cases ( Mileva et al., 2018 ). Moreover, methodological differences seem to have played a role in the current findings: English-speaking studies using Likert scales have favoured higher pitch for trustworthiness, whereas research utilising a 2AFC task ( Tsantani et al., 2016 ) has deemed lower pitch as more trustworthy. Further research comparing these methodologies is necessary for a clearer understanding."
+  },
+  {
+   "source_id": "d787925d-8f23-4058-b486-6f1bea77142e",
+   "citation_number": 43,
+   "cited_text": "1.4 Voice technology and the rise of intelligent agents Humans naturally attribute social traits to others, including animals and even artificially intelligent entities (i.e., agents) like humanoid robots, virtual assistants, and chatbots. Consequently, research on human-agent interaction (HAI) emphasizes studying human behaviour for designing interactive intelligent agents (IAs), with voice playing a crucial role in attributing social traits, as seen in the \u201cComputers as Social Actors\u201d (CASA) paradigm ( Nass et al., 1994 ; Lee and Nass, 2010 ; Seaborn et al., 2022 ). The \u201cuncanny valley\u201d phenomenon further illustrates this, describing the uneasiness felt when an IA looks or sounds almost human but not quite ( Mori, 1970 ; Mori et al., 2012 )."
+  },
+  {
+   "source_id": "d787925d-8f23-4058-b486-6f1bea77142e",
+   "citation_number": 44,
+   "cited_text": "4.2.1.2 Vocal pitch in combination with other acoustic features Past research ( Muralidharan et al., 2014 ) has suggested that combining pitch and flanging (i.e., speech time delay manipulation) influences trustworthiness perceptions. They have found that a lower pitch range with greater time delay tends to be perceived as more machine-like and less trustworthy compared to natural human speech. They added that human speech typically has a natural time delay of about 0.01 s, and increasing this delay can make it sound less natural. This deviation, along with a less animated voice, may lead to uneasiness in listeners, supporting theories on social inferences from HAI ( Mori, 1970 ; Mori et al., 2012 ; Nass et al., 1994 ; Muralidharan et al., 2014 )."
+  },
+  {
+   "source_id": "0b48cd51-6fd1-42a5-a356-797f8f92102b",
+   "citation_number": 45,
+   "cited_text": "1.4. Voice technology and the rise of intelligent agents Humans naturally attribute social traits to others, including animals and even artificially intelligent entities (i.e., agents) like humanoid robots, virtual assistants, and chatbots. Consequently, research on human-agent interaction (HAI) emphasizes studying human behaviour for designing interactive intelligent agents (IAs), with voice playing a crucial role in attributing social traits, as seen in the \u201cComputers as Social Actors\u201d (CASA) paradigm ( Nass et al., 1994 ; Lee and Nass, 2010 ; Seaborn et al., 2022 ). The \u201cuncanny valley\u201d phenomenon further illustrates this, describing the uneasiness felt when an IA looks or sounds almost human but not quite ( Mori, 1970 ; Mori et al., 2012 )."
+  },
+  {
+   "source_id": "0b48cd51-6fd1-42a5-a356-797f8f92102b",
+   "citation_number": 46,
+   "cited_text": "4.2.1.2. Vocal pitch in combination with other acoustic features Past research ( Muralidharan et al., 2014 ) has suggested that combining pitch and flanging (i.e., speech time delay manipulation) influences trustworthiness perceptions. They have found that a lower pitch range with greater time delay tends to be perceived as more machine-like and less trustworthy compared to natural human speech. They added that human speech typically has a natural time delay of about 0.01 s, and increasing this delay can make it sound less natural. This deviation, along with a less animated voice, may lead to uneasiness in listeners, supporting theories on social inferences from HAI ( Mori, 1970 ; Mori et al., 2012 ; Nass et al., 1994 ; Muralidharan et al., 2014 )."
+  },
+  {
+   "source_id": "d787925d-8f23-4058-b486-6f1bea77142e",
+   "citation_number": 47,
+   "cited_text": "2 genders \u00d7 2 pitch conditions (higher / lower); Sampling rate = 44.1 kHz; Amplitude normalised; Mean pitch = 187 Hz females, 107 Hz males. 27 speakers; 37% males, 63% females; Mean age = 33 [20\u201355 years] (males), 31 [21\u201360 years] (females). Yokoyama and Daibo (2012) 4 audio-visual stimuli; 2 gaze states (high = 8% looking at the camera; low = 83%) \u00d7 2 speech rates (faster = 510 syllables per minute; slower = 330). 1 Japanese, female speaker; 23 years old. Studies: Perceived trustworthiness of voice-based IA."
+  },
+  {
+   "source_id": "d787925d-8f23-4058-b486-6f1bea77142e",
+   "citation_number": 48,
+   "cited_text": "4.2.4 \u201cSafety procedures\u201d theme The last three studies on voice-based IAs explored attributions of trustworthiness employing scenarios such as security screening ( Elkins et al., 2012 ), fire warden simulation ( Kim et al., 2023 ) and voice assistance during driving simulation ( Deng et al., 2024 ). 4.2.4.1 Vocal pitch in combination with other acoustic features All three studies have associated higher vocal pitch with increased trustworthiness in voice-based IAs, albeit varying in their methodology. Two of them have assessed trustworthiness through participants' verbal responses during HAI ( Elkins et al., 2012 ; Deng et al., 2024 ). They have reported that higher-pitched responses with greater pitch and MFCC variability, higher intensity, and longer response time may correspond to higher trustworthiness ratings. These findings may relate to participants developing more positive perceptions of the IA, in terms of dominance, authoritativeness and competence, and feeling more invested during HAIs as per the \u201ceffort code\u201d theory ( Ohala, 1983 ; Klofstad et al., 2012 ; Gussenhoven, 2002 ). However, these effects seem to diminish with prolonged HAI, possibly due to the accumulation of information and the opportunity to make further inferences over time ( Elkins et al., 2012 ). While these studies provide valuable insights, pre-assessing participants' trust propensity and personality traits could enhance conclusions. The final study ( Kim et al., 2023 ), which examined the acoustics of voice-based IAs instead, has similarly reported that higher pitch with faster speech rate and variable intonation has prompted higher trustworthiness ratings, labelling that combination of acoustics as an \u201curgent voice.\u201d"
+  },
+  {
+   "source_id": "0b48cd51-6fd1-42a5-a356-797f8f92102b",
+   "citation_number": 49,
+   "cited_text": "4.2.4. \u201cSafety procedures\u201d theme The last three studies on voice-based IAs explored attributions of trustworthiness employing scenarios such as security screening ( Elkins et al., 2012 ), fire warden simulation ( Kim et al., 2023 ) and voice assistance during driving simulation ( Deng et al., 2024 ). 4.2.4.1. Vocal pitch in combination with other acoustic features All three studies have associated higher vocal pitch with increased trustworthiness in voice-based IAs, albeit varying in their methodology. Two of them have assessed trustworthiness through participants' verbal responses during HAI ( Elkins et al., 2012 ; Deng et al., 2024 ). They have reported that higher-pitched responses with greater pitch and MFCC variability, higher intensity, and longer response time may correspond to higher trustworthiness ratings. These findings may relate to participants developing more positive perceptions of the IA, in terms of dominance, authoritativeness and competence, and feeling more invested during HAIs as per the \u201ceffort code\u201d theory ( Ohala, 1983 ; Klofstad et al., 2012 ; Gussenhoven, 2002 ). However, these effects seem to diminish with prolonged HAI, possibly due to the accumulation of information and the opportunity to make further inferences over time ( Elkins et al., 2012 ). While these studies provide valuable insights, pre-assessing participants' trust propensity and personality traits could enhance conclusions. The final study ( Kim et al., 2023 ), which examined the acoustics of voice-based IAs instead, has similarly reported that higher pitch with faster speech rate and variable intonation has prompted higher trustworthiness ratings, labelling that combination of acoustics as an \u201curgent voice.\u201d"
+  },
+  {
+   "source_id": "0e71a6d6-3952-4c92-a268-b4a51cca7c72",
+   "citation_number": 50,
+   "cited_text": "A narrator can make a tentative scientific claim sound absolute. A teacher can make a heuristic sound like a law. An AI voice can deliver a low-confidence answer with the smoothness of a weather announcement. This creates an epistemic design problem. Where uncertainty matters, language and delivery should agree. \u201cOne possible explanation is\u2026\u201d should sound appropriately provisional. \u201cThis definition is exact\u201d can sound firmer. The speaking system should not add false certainty to the knowledge system."
+  },
+  {
+   "source_id": "0e71a6d6-3952-4c92-a268-b4a51cca7c72",
+   "citation_number": 51,
+   "cited_text": "These are real benefits. But scale can amplify errors too. One mispronounced scientific term can be propagated through hundreds of generated lessons. One unnatural pacing rule can become an estate-wide design defect. Automation increases the value of quality control. The AI Voice Risk Because synthetic speech can sound confident and polished, learners may over-trust it. Fluency is not evidence. A generated narrator can speak an incorrect explanation with perfect prosody. Educational systems should therefore bind voice generation to verified content, provenance and correction routes. The voice layer should not become a truth layer."
+  },
+  {
+   "source_id": "4a547f63-9cf2-4e8f-85b8-4467aa08f932",
+   "citation_number": 52,
+   "cited_text": "Apparent contradictions within the existing evidence base heighten the need for such a synthesis. Several studies report that disclosing AI involvement in content creation activates persuasion knowledge and erodes credibility, trust, and purchase intentions (Bui, 2025; Qiu et al., 2025). Other findings challenge this pattern. Kirkby et al. (2023) observed no significant effect of AI disclosure on brand attitudes or perceived authenticity, suggesting that the relationship between transparency and trust may be more contingent than initially assumed. Reconciling these divergent results requires a structured integrative effort."
+  },
+  {
+   "source_id": "4a547f63-9cf2-4e8f-85b8-4467aa08f932",
+   "citation_number": 53,
+   "cited_text": "4.2 Theme 1: The Disclosure Dilemma AI disclosure \u2013 the explicit labeling of content as machine-generated \u2013 is the single most frequently examined antecedent in the corpus, investigated in nine of the included studies. The prevailing pattern is clear: disclosure activates consumer skepticism and erodes trust-related outcomes. Bui (2025) demonstrate that revealing AI involvement in prosocial advertising reduces ad credibility and purchase intentions through persuasion knowledge activation. Similarly, Koning and Voorveld (2025) find that disclosure diminishes trust in both advertisements and the organizations behind them, suggesting that the reputational cost extends beyond the individual message."
+  },
+  {
+   "source_id": "4a547f63-9cf2-4e8f-85b8-4467aa08f932",
+   "citation_number": 54,
+   "cited_text": "2.3 AI Disclosure and the Persuasion Knowledge Model The Persuasion Knowledge Model (Friestad & Wright, 1994) provides a well-established theoretical lens for understanding consumer responses to AI disclosure. The model posits that when consumers recognize a persuasion attempt, they activate coping mechanisms such as skepticism, counterarguing, and resistance. Labeling content as \u201dAI-generated\u201d may function as a disclosure cue that triggers persuasion knowledge activation, thereby reducing source credibility and downstream trust."
+  },
+  {
+   "source_id": "4a547f63-9cf2-4e8f-85b8-4467aa08f932",
+   "citation_number": 55,
+   "cited_text": "A second tension concerns the inconsistency between null and negative disclosure effects. Kirkby et al. (2023) find no significant impact of AI disclosure on brand attitudes or perceived authenticity, a result that contrasts with the majority of studies reporting negative effects (Bui, 2025; Qiu et al., 2025; Zhang & Hur, 2025). The divergence appears dependent on at least three factors operating simultaneously. Brand strength may serve as a buffer: established brands with pre-existing authenticity capital can absorb disclosure risk that would damage less familiar brands. Content type further conditions the effect, with negative results concentrated in emotional, prosocial, and cause-related contexts where expectations of human sincerity are highest. Disclosure format, as discussed above, adds a third layer. These factors likely interact, such that a strong brand disclosing AI assistance in informational content through a brand-voice frame may face negligible backlash, while an unfamiliar brand disclosing full AI authorship of emotional content faces compounding penalties. The corpus does not yet contain factorial designs that test these interactions jointly, but the pattern of available results is consistent with this multi-layered conditional account."
+  },
+  {
+   "source_id": "10dff2ff-783d-4882-9408-f5a97a78676b",
+   "citation_number": 56,
+   "cited_text": "Conversely, a significant body of research argues that AI disclosure often backfires. In journalism, it can paradoxically undermine public trust and reduce perceived accuracy [Toff & Simon, 2025 ; Altay & Gilardi, 2024 ]. This negative effect appears to be particularly pronounced in science communication, where disclosure has been shown to consistently lower audience evaluations on measures like perceived effectiveness, argument strength, and perceived quality across various science topics, including vaccines, vaping, and medical advice [ Karinshak et al., 2023 ; Lim & Schm\u00e4lzle, 2024 ; Beckmann et al., 2025 ; Reis et al., 2024 ]. Furthermore, AI disclosure may decrease audiences' perceptions of the reliability and persuasiveness of the content, their empathy and their willingness to follow health advice [Reis et al., 2024 ; Teigen et al., 2024 ]. While existing research shows that AI disclosure often dampens evaluations of scientific information, it has focused primarily on persuasive judgements rather than the more fundamental construct of perceived credibility."
+  },
+  {
+   "source_id": "10dff2ff-783d-4882-9408-f5a97a78676b",
+   "citation_number": 57,
+   "cited_text": "Acknowledgments As the study investigates how AI disclosure affects perceived credibility of AI-generated content in science communication, ChatGPT-4 was used to generate the experimental materials. Funding The authors received no specific funding for this work. References Altay, S., & Gilardi, F. (2024). People are skeptical of headlines labeled as AI-generated, even if true or human-made, because they assume full AI automation. PNAS Nexus , 3 (10), pgae403. https://doi.org/10.1093/pnasnexus/pgae403 Attaran, S., Notarantonio, E. M., & Quigley, C. J. (2015). Consumer perceptions of credibility and selling intent among advertisements, advertorials, and editorials: a persuasion knowledge model approach. Journal of Promotion Management , 21 (6), 703\u2013720. https://doi.org/10.1080/10496491.2015.1088919"
+  },
+  {
+   "source_id": "4a547f63-9cf2-4e8f-85b8-4467aa08f932",
+   "citation_number": 58,
+   "cited_text": "In contrast, the evidence is not uniformly negative. Kirkby et al. (2023) report that AI disclosure did not significantly affect brand attitudes or perceived authenticity, a finding that stands as a notable boundary condition. One possible explanation is that brand strength moderates the relationship: when established brands disclose AI involvement, consumers may perceive the disclosure as a signal of competence rather than deception. Wu et al. (2024) add further nuance, demonstrating that disclosure effects on word-of-mouth intentions vary depending on whether the AI was deployed for creative versus analytical tasks. Consumers penalize AI authorship more severely when the task is perceived as requiring human creativity and emotional investment."
+  },
+  {
+   "source_id": "10dff2ff-783d-4882-9408-f5a97a78676b",
+   "citation_number": 59,
+   "cited_text": "2 Literature review 2.1 Existing research on AI disclosure AI disclosure is commonly implemented in the form of visible warning labels and is intended to encourage audiences to more carefully scrutinise the content [ Wittenberg et al., 2024 ; Shoaib et al., 2023 ], but its effectiveness remains contested. On one hand, some research suggests it can be a useful evaluative cue. Studies in marketing and consumer contexts, for example, find that disclosure does not necessarily reduce authenticity and can even enhance credibility [Kirkby et al., 2023 ; Cheng et al., 2022 ]. Psychological studies similarly indicate that AIGC labels can prompt audiences to make more cautious judgements about information quality [Liu et al., 2023 ]."
+  },
+  {
+   "source_id": "10dff2ff-783d-4882-9408-f5a97a78676b",
+   "citation_number": 60,
+   "cited_text": "Search Category: Article Visible sources and invisible risks: exploring the impact of AI disclosure on perceived credibility of AI-generated content Teng Lin , Yiqing Zhang With the widespread use of AI-generated content (AIGC) on social media, its potential to spread misinformation poses threats to the public. Although AI disclosure is widely promoted as a transparency measure to prompt critical evaluation, its effectiveness in science communication remains controversial. This study conducted a within-subjects experiment (N = 433) to examine how AI disclosure affects perceived credibility of science communication texts and the moderating roles of readers' negative attitudes towards AI and audience involvement. The experiment manipulated AI disclosure labels and information veracity. The results revealed a truth-falsity crossover effect: AI disclosure significantly reduced the perceived credibility of correct information while unexpectedly increasing the perceived credibility of misinformation. Negative attitudes towards AI significantly moderated these effects, whereas audience involvement exerted only limited influence. These findings highlight the complex and sometimes counterproductive consequences of AI disclosure in science communication and suggest implications for cue-based processing, algorithm aversion, and the design of disclosure mechanisms."
+  },
+  {
+   "source_id": "10dff2ff-783d-4882-9408-f5a97a78676b",
+   "citation_number": 61,
+   "cited_text": "Table 2: Type III tests of fixed effects. Table 3: Estimates of fixed effects. The analysis revealed a significant interaction effect between AI disclosure and information type ( F = 213.91, p <.001), indicating that the effect of disclosure depended on whether the information was correct or not. The estimates of fixed effects are detailed in Table 3 , where correct information with AI disclosure specified as the reference group. Relative to this reference group, correct information without disclosure was perceived as significantly more credible ( \ud835\udefd = 0.209, p <.001). This finding indicates that AI disclosure reduced the credibility of correct information, leading to the rejection of H1b. For misinformation, the pattern of coefficients indicated higher perceived credibility when an AI disclosure label was present than when it was absent, relative to the reference condition ( \ud835\udefd = -0.922, p <.001), a finding that contradicts H1a."
+  },
+  {
+   "source_id": "10dff2ff-783d-4882-9408-f5a97a78676b",
+   "citation_number": 62,
+   "cited_text": "In summary, these findings address RQ1 by showing a crossover interaction contrary to our hypotheses: AI disclosure reduced the perceived credibility of correct information while increasing the perceived credibility of misinformation. Demographic covariates were not statistically significant. 4.2 Moderating effects: negative attitudes towards AI and involvement This section reports the analyses conducted to test whether negative attitudes towards AI (H2) and audience involvement (H3) moderate the effect of AI disclosure on perceived credibility. To analyse the within-subject repeated-measures design, we used Model 2 of the MEMORE macro (version 2.1) for SPSS [ Montoya, 2019 ]. In the model, negative attitudes towards AI and involvement were specified as moderators. The dependent variable was defined as the difference in perceived credibility between AI-disclosed and non-disclosed information within the same topic and information type. Accordingly, we conducted four tests."
+  },
+  {
+   "source_id": "10dff2ff-783d-4882-9408-f5a97a78676b",
+   "citation_number": 63,
+   "cited_text": "By contrast, in domains requiring multidimensional verification and adherence to social or ethical standards, credibility may need to be conceptualised along two dimensions: factual credibility, driven by technical accuracy, and interpretative credibility, driven by explanatory quality and contextual relevance. Future research could examine whether distinct disclosure cues for these dimensions help mitigate the credibility risks associated with AI-generated scientific content. 6 Conclusion This study examines how AI disclosure in science communication affects the perceived credibility of correct information and misinformation, with a particular focus on the moderating roles of audience attitudes and involvement. We found a truth-falsity crossover effect: disclosure increases the perceived credibility of misinformation while reducing that of correct information. This effect is significantly moderated by negative attitudes towards AI, whereas audience involvement showed no consistent moderating effect."
+  },
+  {
+   "source_id": "10dff2ff-783d-4882-9408-f5a97a78676b",
+   "citation_number": 64,
+   "cited_text": "In response to RQ1, our study identified a truth-falsity crossover effect. To our knowledge, it is a pattern of credibility redistribution not previously documented in the literature. Rather than eliciting simple heuristic scepticism or systematic verification, AI disclosure in science communication appears to function as an interpretive cue that reallocates credibility \u2014 enhancing it for false claims while diminishing it for true ones. Framed within the Elaboration Likelihood Model (ELM), this finding is consistent with a two-stage processing account [ Petty & Cacioppo, 1986 ]. At an initial stage, the AI label may act as a positive heuristic, reducing cognitive scrutiny and allowing misinformation to pass credibility checks. Subsequently, audiences with sufficient motivation may engage in more systematic evaluations of higher-order attributes like explanatory quality and contextual relevance, which ultimately shapes their final judgement and explains the credibility redistribution [ F\u00e4hnrich et al., 2023 ]."
+  },
+  {
+   "source_id": "10dff2ff-783d-4882-9408-f5a97a78676b",
+   "citation_number": 65,
+   "cited_text": "This credibility reallocation can be further interpreted through Sundar's [ 2008 ] MAIN model, which posits that technological affordances activate mental heuristics that shape users' credibility evaluations. One such affordance is agency. Specifically, human agency activates the authority heuristic, whereby users place trust in information provided by experts, authoritative institutions, or celebrities. Machine agency activates the machine heuristic, in which users perceive information as more objective, accurate, and unbiased. In this case, the AI disclosure signals machine agency, activating a heuristic that AI is objective and unbiased, which may enhance the credibility of seemingly factual misinformation. Simultaneously, it weakens the human agency cues of expertise and accountability, which can devalue the nuanced explanatory quality expected from correct scientific information."
+  },
+  {
+   "source_id": "4a547f63-9cf2-4e8f-85b8-4467aa08f932",
+   "citation_number": 66,
+   "cited_text": "Building on these findings, a synthesis across the corpus suggests that the disclosure-trust relationship follows a conditional pattern rather than a simple negativemain effect. The direction andmagnitude of the effect depend on content domain, product category, and disclosure framing, a set of moderating conditions explored further in Section 4.4. Notably, the evidence indicates that the format of disclosure itself matters. A bare label stating \u201dGenerated by AI\u201d may activate persuasion knowledge more readily than a brand-voice disclosure framing such as \u201dOur team used AI tools to enhance this content,\u201d which signals organizational honesty while preserving attributions of human oversight."
+  },
+  {
+   "source_id": "4a547f63-9cf2-4e8f-85b8-4467aa08f932",
+   "citation_number": 67,
+   "cited_text": "American Impact Review | https://doi.org/10.66308/air.e2026024 | March 17, 2026 | Page 17 the literature. On this basis, there is reason to expect that AI-generated visual content (images and video) will elicit stronger negative trust responses than AI-generated textual content, because visual modalities activate uncanny valley perceptions and carry higher authenticity expectations. Fourth, disclosure framing warrants systematic experimental investigation. The disclosure paradox documented across the corpus (consumers want transparency yet penalize brands that provide it) calls for research that moves beyond the binary of disclosure versus nondisclosure. Preliminary evidence that varying levels of AI involvement elicit different consumer reactions (Liu, Lian, & Osman, 2025a) suggests that the framing of \u201dAI-generated\u201d versus \u201dhuman-created\u201d may be insufficiently nuanced. Co-creation narratives that position AI as a tool under human editorial direction could preserve the transparency benefits of disclosure while maintaining attributions of human intentionality and oversight. Additionally, the emerging regulatory environment creates a natural distinction between mandatory and voluntary disclosure that has not been tested empirically. These considerations suggest that disclosure framing effects warrant direct experimental comparison, with the interaction between disclosure voluntariness (mandatory versus voluntary) and disclosure format (label-only versus brand-voice) representing a high-priority research design."
+  },
+  {
+   "source_id": "4a547f63-9cf2-4e8f-85b8-4467aa08f932",
+   "citation_number": 68,
+   "cited_text": "Anthropomorphism offers a partial buffer against trust erosion. Studies demonstrate that imbuing AI-generated content with human-like characteristics (personalized language, relatable tone, anthropomorphic visual cues) can enhance perceived authenticity and social presence, partially restoring consumer trust (Lee & Kim, 2024; Wang et al., 2025). However, practitioners must balance this strategy against ethical transparency requirements (Du Plessis, 2025), as excessive anthropomorphism of AI-generated content without disclosure could constitute a form of deception. The collaboration spectrum identified in Section 4.4 offers an additional mitigation pathway: positioning AI as a tool under human editorial direction, rather than as the autonomous author, may preserve both transparency and authenticity perceptions simultaneously."
+  },
+  {
+   "source_id": "10dff2ff-783d-4882-9408-f5a97a78676b",
+   "citation_number": 69,
+   "cited_text": "5.3 Practice optimisation and risk mitigation: dual-labelling mechanisms and tiered disclosure systems The findings suggest AI disclosure may create what may be described as a heuristic trust trap, whereby the label activates a schema of objectivity, leading audiences to assume that the information is factually sound by default, potentially diminishing the likelihood of thorough verification. This indicates a single disclosure label may be insufficient. A promising direction for future research and policy design is to test whether a dual-label system \u2014 combining AI disclosure with a risk-verification cue \u2014 can better balance efficiency and safety in audiences' cognitive processing. For instance, alongside an AI disclosure, a risk warning label such as \u201c This information has not been independently verified; please interpret with caution \u201d may prompt audiences to consider potential risks and engage in more systematic evaluation. While the present study did not test such mechanisms, future work could assess whether dual-label systems provide more comprehensive cognitive scaffolding for audiences."
+  },
+  {
+   "source_id": "10dff2ff-783d-4882-9408-f5a97a78676b",
+   "citation_number": 70,
+   "cited_text": "This study contributes to the AI disclosure literature in several ways. First, it provides empirical evidence of a dynamic redistribution of credibility between correct and misinformation, extending information-processing models such as ELM and MAIN by highlighting cue reweighting in credibility judgements. Second, the asymmetric moderating role of negative attitudes towards AI advances research on algorithm aversion, suggesting that its impact may depend on task characteristics and the information type [ Dietvorst et al., 2015 ]. Finally, this study offers practical implications by proposing dual-labelling and tiered disclosure systems to reduce misinformation risks while maintaining transparency [ Wittenberg et al., 2024 ]."
+  },
+  {
+   "source_id": "d787925d-8f23-4058-b486-6f1bea77142e",
+   "citation_number": 71,
+   "cited_text": "For researchers : Investigate how different acoustic cues interact globally (e.g., Western vs. Asian markets) to capture global variations and IA personas. Conduct A/B tests to see how minor pitch/rate tweaks affect warmth, competence, and trust. For practitioners (e.g., chatbot / voice-tech scientists and product managers) : Use a moderately faster speech rate and louder tone for high-stakes support scenarios (e.g., billing disputes or quick issue resolutions) to convey urgency and competence. For a personalised, friendly brand, adopt moderately higher pitch and faster speech for an enthusiastic tone\u2014or personalise based on users' mood and personality. Avoid lower pitch with steady cadence, as it risks sounding mechanical or impersonal."
+  },
+  {
+   "source_id": "0b48cd51-6fd1-42a5-a356-797f8f92102b",
+   "citation_number": 72,
+   "cited_text": "2 genders \u00d7 2 pitch conditions (higher / lower); Sampling rate = 44.1 kHz; Amplitude normalised; Mean pitch = 187 Hz females, 107 Hz males. 27 speakers; 37% males, 63% females; Mean age = 33 [20\u201355 years] (males), 31 [21\u201360 years] (females). Yokoyama and Daibo (2012) 4 audio-visual stimuli; 2 gaze states (high = 8% looking at the camera; low = 83%) \u00d7 2 speech rates (faster = 510 syllables per minute; slower = 330). 1 Japanese, female speaker; 23 years old. Studies: Perceived trustworthiness of voice-based IA."
+  },
+  {
+   "source_id": "0b48cd51-6fd1-42a5-a356-797f8f92102b",
+   "citation_number": 73,
+   "cited_text": "Limit flanging (i.e., avoid speech delays >0.01 s) and robotic intonations to ensure the voice sounds human and engaging. Track user metrics (satisfaction, conversation duration, etc.). If distrust arises, tweak acoustics gradually and retest. Financial services Pitch & speech rate : Higher pitch + faster articulation in female-sounding IAs often associated with perceived happiness, helpfulness, competence (humans ascribe personality traits to the voice). Mainly female British accents; potential cultural and demographic biases."
+  },
+  {
+   "source_id": "0b48cd51-6fd1-42a5-a356-797f8f92102b",
+   "citation_number": 74,
+   "cited_text": "Open in a new tab The \u201cadjusted sample size\u201d column notes the total number of participants after having excluded any individuals from the analyses. Table 6. Stimuli characteristics of all included studies. Study Stimuli Speaker demographics Studies: Perceived trustworthiness of human speakers. Groyecka-Bernard et al. (2022) 1,248 audio-only stimuli; 60 Polish-language WAV files per listener; Sampling rate = 96 kHz; Resolution = 16-bit. 208 Polish speakers; 52% males, 48% females; Mean age = 32.83. Schirmer et al. (2020)"
+  }
+ ]
+}

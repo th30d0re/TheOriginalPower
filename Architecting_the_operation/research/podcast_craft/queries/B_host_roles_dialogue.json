@@ -1,0 +1,491 @@
+{
+ "answer": "### 1. Dividing Roles Across Two or Three Voices\n\n#### A. Role Architectures for Co-Hosts\n* **Equal-Expertise / Intellectual Sparring Partners**:\n  * **Mechanics**: Two hosts with comparable knowledge in a shared domain trade insights, offer contrasting angles, and challenge each other's assumptions without performing deference [1, 2]. This setup creates dynamic tension and prevents the monotony of a monologue [1, 3].\n  * **Evidentiary Basis**: **Practitioner experience** and **qualitative industry case studies** (*Podcasting Authority* [1]; *Quill Podcasting / Tianna Marinucci* [2]).\n  * **Examples**: Programs like *Freakonomics Radio*, *Radiolab*, and *You're Wrong About* (co-hosted by Michael Hobbes and Sarah Marshall) [1, 4].\n* **Lead Anchor vs. Supporting / Reactive Partner**:\n  * **Mechanics**: One host serves as the primary anchor who manages time, introduces topics, and executes transitions, while the second host provides reactions, humor, or grounding commentary [5, 6].\n  * **Evidentiary Basis**: **Practitioner experience** (*Podcasting Authority* [5]; *Pacific Content / Geoff Siskind* [6]).\n\n#### B. The Audience Surrogate / Proxy Learner Role\n* **Mechanics & Function**:\n  * An audience surrogate (or proxy character) is a host who intentionally adopts the position of a curious, non-expert listener [1, 7, 8].\n  * The surrogate's core function is to anchor the expert, ask the questions that listeners are likely thinking, interrupt academic rabbit holes or jargon, and test plausibility [1, 7, 9-11].\n  * **Specific Examples & Authors**:\n    * **Michael Hobbes & Sarah Marshall** (*You're Wrong About*): Hobbes explained that keeping one host intentionally in the dark before recording prevents the expert from going down impenetrable rabbit holes or using unexplained acronyms, bringing the conversation back into reality [7, 12].\n    * **Brooke Gladstone** (*On the Media* / CJR interview): Gladstone describes her hosting style as \"the audience's surrogate,\" pressing guests for clarification and asking follow-up questions multiple times until a cogent explanation is delivered [11, 13, 14].\n    * **Latif Nasser & Lulu Miller** (*Radiolab* / MIT Science Policy interview): Nasser and Miller view their role as \"ambassadors for the listeners\" and \"generous, playful, yet skeptical conversational partners\" who meet detailed reporting with fresh eyes and ask the questions listeners would ask if they were in the studio [10, 15].\n    * **Geoff Siskind** (*Pacific Content*): Siskind described playing \"the rube\" on the cybersecurity podcast *Hackable*\u2014intentionally acting slightly less knowledgeable than in real life to make technical topics approachable [6, 16].\n    * **Kasie, Rex, & Hollie Whitener** (*WriteOnSC*): Note that an audience proxy is essential whenever a show introduces complex rules, historical eras, or unfamiliar theoretical systems [9, 17].\n  * **Evidentiary Basis**: **Practitioner experience** (Gladstone [13]; Nasser & Miller [10]; Siskind [6]; Whitener [17]) and **qualitative media analysis** (Hobbes & Marshall interview in *The Feminist Present* [7, 12, 18-21]).\n* **Critical Constraint: The \"Smart Non-Expert\" Standard**:\n  * **Mechanics**: The surrogate host **must be framed as smart, analytical, and relatable**, but simply uninitiated in that specific topic [9, 19].\n  * **Risk**: If the surrogate is spoken to like a child, treated as \"stupid,\" or rendered purely decorative, it damages both host credibility and audience trust [1, 18, 19].\n  * **Evidentiary Basis**: **Practitioner experience** (*You're Wrong About* transcript [18, 19]; *Podcasting Authority* [1]).\n\n#### C. Expanding to Three Voices\n* **Mechanics & Challenges**:\n  * Adding a third voice introduces significant conversational complexity. Research on group communication shows that three-person panels produce higher rates of crosstalk, interrupted pacing, and audio clutter than two-person formats [22].\n  * To succeed, a three-voice panel requires explicit, non-overlapping role definition (e.g., Lead Anchor/Pacing, Primary Subject Expert, and Audience Surrogate) combined with strict segment structuring [5, 22-24].\n* **Evidentiary Basis & Gaps**:\n  * **Evidentiary Basis**: **Controlled communication experiments** on small group conversation dynamics (Annenberg School for Communication [22]) combined with **practitioner experience** (*Podcasting Authority* [22]; *Quill Podcasting* [24]).\n  * **Evidence Thinness**: While small group communication research provides controlled data on crosstalk, direct **controlled experimental research evaluating student learning or retention across 2-host vs. 3-host educational podcasts is nonexistent**.\n\n---\n\n### 2. Scripted vs. Unscripted Dialogue: What Makes It Natural or Staged?\n\n#### A. What Makes Scripted Dialogue Sound Staged?\n* **Mechanics**:\n  * **Writing \"for the Eye\" Rather than \"for the Ear\"**: Text written for reading incorporates complex subordinate clauses, passive voice, formal vocabulary, and long, nested sentences [25-28]. When spoken, these force awkward breath pauses and sound like a stiff lecture rather than a human conversation [25-28].\n  * **Over-Scripting Flatness**: Reading word-for-word off a page flattens emotional resonance, alters vocal pacing, and eliminates the natural rhythm of spontaneous thought [29-31]. Listeners disengage as soon as speech reminds them of school or formal presentations [31, 32].\n* **Evidentiary Basis**: **Practitioner experience** (Tim Wohlberg / *Podcast Performance Coach* [29, 30]; Frankie Kemp [33]; *AFTRS Media Lab* [31]; *Journalism University* [25, 28]) and **qualitative content analysis** (V\u00eelceanu 2025 [34, 35]; Harbo 2026 [36]).\n\n#### B. Scriptwriting & Production Techniques for Natural Conversation\n* **1. The \"Oreo\" / Hybrid Scripting Framework**:\n  * **Technique**: Script the **intro** (top) and **outro** (bottom) word-for-word to ensure clarity, focus, and clear calls-to-action [37-40]. Leave the **middle body** unscripted, using structured bullet points or topic outlines so hosts can converse naturally [37-39, 41, 42].\n  * **Evidentiary Basis**: **Practitioner experience** (Tim Wohlberg [37, 38, 41]; *Media & Learning Association* [39, 40]; *Utrecht University / AU Educate* [42]; *Spotify for Creators* [43, 44]).\n* **2. Writing-for-the-Ear Rules**:\n  * **Short Sentence Constraint**: Enforce \"one thought per sentence\" (OTPS), keeping spoken lines to \\\\(\\le 17\\\\) words or a single breath of air [27, 45-47].\n  * **Mandatory Contractions**: Use \"don't,\" \"it's,\" \"they're\" instead of formal uncontracted forms to mirror natural human speech [28, 45, 48, 49].\n  * **Active Voice & Inclusive Pronouns**: Write in active voice and use \"we/our\" to build immediate rapport [26, 45, 48].\n  * **Spelling Out Stumbling Blocks**: Write out symbols and acronyms as full spoken words (e.g., \"dollars\" instead of \"\\$\") [50].\n  * **Evidentiary Basis**: **Computational script analysis** (*Dramarrator* / arXiv [46, 51]), **qualitative linguistic analysis** (Reddy et al., 2021 [52]), and **practitioner experience** (*Wikiversity* [26, 47, 48]; *Journalism University* [28, 49]; *AFTRS Media Lab* [45, 50, 53]).\n* **3. \"Drafting Out Loud\" and Brain Dumps**:\n  * **Technique**: *Radiolab* producers begin with an unscripted \"brain dump\" in the studio where a reporter explains their story to the host as if talking to a friend [54]. The team then riffs on metaphors out loud and builds the script directly from spoken recordings [54, 55].\n  * **Evidentiary Basis**: **Practitioner experience / Qualitative case study** (*Radiolab* production workflow in *The Open Notebook* [54, 55]).\n* **4. Scripting Silences, Interjections, and Non-Verbal Cues**:\n  * **Technique**: Include explicit script markings for short pauses, breathing moments, or brief interjections (\"hmmm,\" \"yeah\") to maintain dynamic conversational flow [48, 56, 57].\n  * **Evidentiary Basis**: **Practitioner experience** (*Utrecht University / Jip Leendertse* [57]; *Wikiversity* [48]; Frankie Kemp [56]).\n* **5. Post-Production Editing as the Illusion of Spontaneity**:\n  * **Technique**: Snappy, quippy host exchanges are rarely produced live on the mic; they are constructed in post-production by recording extensive flexible material and aggressively editing out tangents, pauses, and repetition [11, 58].\n  * **Evidentiary Basis**: **Practitioner experience** (Sarah Marshall / *Pacific Content* [58]; Brooke Gladstone / *On the Media* [11, 59]).\n* **6. AI Synthetic Voice Direction**:\n  * **Technique**: When scripting for text-to-speech AI voices, natural pacing requires writing in narrative style, adding explicit vocal direction tags, and generating speech in short segments before stitching in post-production [60-63].\n  * **Evidentiary Basis**: **Controlled experiment** (Davis et al., 2026 [63]) and **technical documentation** (*ElevenLabs Best Practices* [60-62]).\n\n---\n\n### 3. Disagreements, Thin Evidence, and Methodological Gaps\n\n1. **The Scripting Coverage Disagreement**:\n   * **The Contradiction**: Formal educational and broadcast training programs (*AFTRS Media Lab* [31]; *U-M LSA Sweetland Center* [64]) mandate full, word-for-word scripts before recording to ensure precise timing and complete message control [31, 64, 65]. In contrast, podcast performance coaches (Tim Wohlberg [29, 30]) and audio documentary producers (*Radiolab*, *You're Wrong About*, Media & Learning Association [40]) strongly advise *against* full scripting for middle sections, arguing verbatim reading inevitably sounds artificial and destroys listener rapport [29, 30, 40].\n2. **Empirical Evidence vs. Practitioner Consensus**:\n   * Virtually all recommendations regarding surrogate learners, co-host dynamics, and writing for the ear rest on **practitioner experience, case studies, and qualitative/observational research** (e.g., V\u00eelceanu 2025 [34]; Lindgren 2021 [66]; McHugh 2016 [67]).\n   * **Controlled experimental research** directly measuring learning comprehension, cognitive load, or retention across different host role configurations (e.g., Solo Expert vs. Dual Experts vs. Expert + Surrogate Learner) is **absent from the published literature**.\n\n---\n\n\ud83c\udf99\ufe0f Would you like to outline a role assignment matrix for your specific host roster to define who leads, who explains, and who acts as the audience proxy across upcoming episodes?",
+ "conversation_id": "010d7602-fa56-4f97-89a1-ed8539e8ebe5",
+ "sources_used": [
+  "0215cc7f-181d-4721-9a90-badb40141bba",
+  "0c241627-d378-4567-8e9d-62537eaf2e2e",
+  "81497148-4399-4de2-871c-437540e13078",
+  "050f0770-0d3c-4d5a-82d3-4bbb03a6a295",
+  "ca4165cf-d5fa-4e35-ae20-a3757914b8fa",
+  "0951d5f1-cb83-404f-90d5-aa25f9832b79",
+  "552b3b92-88d3-4080-bd11-e14df80bdca2",
+  "bdbdce58-e019-4861-b1f6-9abf961e7883",
+  "d325a4fa-4c2a-41e9-acc5-0d5598a47db2",
+  "e67c8266-f4ac-4060-be78-ea296d80d93c",
+  "3af6f9a1-95d3-4e7a-96ef-048a4a365a7e",
+  "a6ddf6c2-67e6-4ab0-817d-0e70e6212dd6",
+  "09856d4b-d87e-4121-92dd-2a268caa490c",
+  "5cb217c0-88de-446c-ac41-6c7a8099d255",
+  "9bb8e007-e3e0-43a3-9387-a4ef00f20fc1",
+  "1850647d-2f48-4d5e-bfee-002fc6df6747",
+  "31906a65-b5c7-442d-b97f-53ccd2a07084",
+  "911b6597-16ee-4f35-a769-f9c85ca9db04",
+  "8d98fa19-3cb5-462f-a70c-119a5e229ed8",
+  "a8d4fce3-c917-44a9-81a0-aaf323992bf9",
+  "9dbc5a80-788a-46b4-8ec8-26b02e25c16c",
+  "6fcc6cae-b3e1-4371-8c33-664648b671b4",
+  "60ad2d1d-c637-412b-8461-fd26dc9102be",
+  "7bd4bc6f-5fef-4a83-8d71-0e951afd3274",
+  "422cc73b-8bd9-4571-96b5-0a812c80f4dd",
+  "14da2302-2068-4d86-9092-0b5fee3ee797"
+ ],
+ "citations": {
+  "1": "0215cc7f-181d-4721-9a90-badb40141bba",
+  "2": "0c241627-d378-4567-8e9d-62537eaf2e2e",
+  "3": "0215cc7f-181d-4721-9a90-badb40141bba",
+  "4": "81497148-4399-4de2-871c-437540e13078",
+  "5": "0215cc7f-181d-4721-9a90-badb40141bba",
+  "6": "81497148-4399-4de2-871c-437540e13078",
+  "7": "050f0770-0d3c-4d5a-82d3-4bbb03a6a295",
+  "8": "81497148-4399-4de2-871c-437540e13078",
+  "9": "ca4165cf-d5fa-4e35-ae20-a3757914b8fa",
+  "10": "0951d5f1-cb83-404f-90d5-aa25f9832b79",
+  "11": "552b3b92-88d3-4080-bd11-e14df80bdca2",
+  "12": "050f0770-0d3c-4d5a-82d3-4bbb03a6a295",
+  "13": "552b3b92-88d3-4080-bd11-e14df80bdca2",
+  "14": "552b3b92-88d3-4080-bd11-e14df80bdca2",
+  "15": "0951d5f1-cb83-404f-90d5-aa25f9832b79",
+  "16": "81497148-4399-4de2-871c-437540e13078",
+  "17": "ca4165cf-d5fa-4e35-ae20-a3757914b8fa",
+  "18": "050f0770-0d3c-4d5a-82d3-4bbb03a6a295",
+  "19": "050f0770-0d3c-4d5a-82d3-4bbb03a6a295",
+  "20": "050f0770-0d3c-4d5a-82d3-4bbb03a6a295",
+  "21": "050f0770-0d3c-4d5a-82d3-4bbb03a6a295",
+  "22": "0215cc7f-181d-4721-9a90-badb40141bba",
+  "23": "0c241627-d378-4567-8e9d-62537eaf2e2e",
+  "24": "0c241627-d378-4567-8e9d-62537eaf2e2e",
+  "25": "bdbdce58-e019-4861-b1f6-9abf961e7883",
+  "26": "d325a4fa-4c2a-41e9-acc5-0d5598a47db2",
+  "27": "e67c8266-f4ac-4060-be78-ea296d80d93c",
+  "28": "e67c8266-f4ac-4060-be78-ea296d80d93c",
+  "29": "3af6f9a1-95d3-4e7a-96ef-048a4a365a7e",
+  "30": "3af6f9a1-95d3-4e7a-96ef-048a4a365a7e",
+  "31": "a6ddf6c2-67e6-4ab0-817d-0e70e6212dd6",
+  "32": "09856d4b-d87e-4121-92dd-2a268caa490c",
+  "33": "5cb217c0-88de-446c-ac41-6c7a8099d255",
+  "34": "9bb8e007-e3e0-43a3-9387-a4ef00f20fc1",
+  "35": "9bb8e007-e3e0-43a3-9387-a4ef00f20fc1",
+  "36": "1850647d-2f48-4d5e-bfee-002fc6df6747",
+  "37": "3af6f9a1-95d3-4e7a-96ef-048a4a365a7e",
+  "38": "3af6f9a1-95d3-4e7a-96ef-048a4a365a7e",
+  "39": "31906a65-b5c7-442d-b97f-53ccd2a07084",
+  "40": "911b6597-16ee-4f35-a769-f9c85ca9db04",
+  "41": "3af6f9a1-95d3-4e7a-96ef-048a4a365a7e",
+  "42": "8d98fa19-3cb5-462f-a70c-119a5e229ed8",
+  "43": "a8d4fce3-c917-44a9-81a0-aaf323992bf9",
+  "44": "a8d4fce3-c917-44a9-81a0-aaf323992bf9",
+  "45": "a6ddf6c2-67e6-4ab0-817d-0e70e6212dd6",
+  "46": "9dbc5a80-788a-46b4-8ec8-26b02e25c16c",
+  "47": "d325a4fa-4c2a-41e9-acc5-0d5598a47db2",
+  "48": "d325a4fa-4c2a-41e9-acc5-0d5598a47db2",
+  "49": "6fcc6cae-b3e1-4371-8c33-664648b671b4",
+  "50": "a6ddf6c2-67e6-4ab0-817d-0e70e6212dd6",
+  "51": "9dbc5a80-788a-46b4-8ec8-26b02e25c16c",
+  "52": "9bb8e007-e3e0-43a3-9387-a4ef00f20fc1",
+  "53": "a6ddf6c2-67e6-4ab0-817d-0e70e6212dd6",
+  "54": "09856d4b-d87e-4121-92dd-2a268caa490c",
+  "55": "09856d4b-d87e-4121-92dd-2a268caa490c",
+  "56": "5cb217c0-88de-446c-ac41-6c7a8099d255",
+  "57": "60ad2d1d-c637-412b-8461-fd26dc9102be",
+  "58": "81497148-4399-4de2-871c-437540e13078",
+  "59": "552b3b92-88d3-4080-bd11-e14df80bdca2",
+  "60": "7bd4bc6f-5fef-4a83-8d71-0e951afd3274",
+  "61": "7bd4bc6f-5fef-4a83-8d71-0e951afd3274",
+  "62": "7bd4bc6f-5fef-4a83-8d71-0e951afd3274",
+  "63": "422cc73b-8bd9-4571-96b5-0a812c80f4dd",
+  "64": "14da2302-2068-4d86-9092-0b5fee3ee797",
+  "65": "a6ddf6c2-67e6-4ab0-817d-0e70e6212dd6",
+  "66": "9bb8e007-e3e0-43a3-9387-a4ef00f20fc1",
+  "67": "9bb8e007-e3e0-43a3-9387-a4ef00f20fc1"
+ },
+ "references": [
+  {
+   "source_id": "0215cc7f-181d-4721-9a90-badb40141bba",
+   "citation_number": 1,
+   "cited_text": "Common scenarios Co-hosting takes recognizable shapes across different contexts. The equal-expertise pair \u2014 Two hosts with comparable knowledge in a shared field (finance, parenting, true crime) trade takes and push back on each other. The dynamic works because neither host is performing deference. Freakonomics Radio and Radiolab both use versions of this model, with co-hosts functioning as intellectual sparring partners rather than straight-man/expert duos. The expertise-and-audience-surrogate pair \u2014 One host is the specialized references; the other represents the curious non-expert listener. This is the format NPR has refined across decades: the informed questioner keeps the resource honest and gives listeners a proxy. The risk is that the \"surrogate\" host can drift into feeling decorative \u2014 a dynamic that damages both the show and that host's professional credibility."
+  },
+  {
+   "source_id": "0c241627-d378-4567-8e9d-62537eaf2e2e",
+   "citation_number": 2,
+   "cited_text": "Plus, the most compelling co-hosted shows thrive on contrast. Different perspectives, expertise, or experiences make conversations richer and more engaging. If both hosts agree on everything, you risk monotony or an echo chamber. For example, shows where one host is a journalist and the other an industry insider can explore the same topic from two distinct angles, creating insights listeners couldn't get from a single perspective. Variety in voice and thought keeps the listener curious and invested."
+  },
+  {
+   "source_id": "0215cc7f-181d-4721-9a90-badb40141bba",
+   "citation_number": 3,
+   "cited_text": "Decision boundaries Not every show benefits from a co-host, and not every co-hosting arrangement deserves to continue. Solo vs. co-hosted: A single host has full creative control, a simpler production chain, and no scheduling dependencies. A co-hosted show introduces complexity in exchange for something specific: dynamic tension, complementary expertise, or the natural back-and-forth that listeners find easier to follow than monologue. If the second host isn't adding one of those things, the format is a liability, not an asset. Podcast voice and delivery can compensate for a lot in solo format \u2014 a skilled solo host rarely sounds lonely."
+  },
+  {
+   "source_id": "81497148-4399-4de2-871c-437540e13078",
+   "citation_number": 4,
+   "cited_text": "Back Co-hosted podcasts, done well, have a certain magic to them. When I look at my own listening habits, I certainly gravitate towards podcasts with co-hosts. It's the rapport; the chemistry between two people who know each other well gives me that feeling of having company as I'm going about my day. A co-hosted podcast has the ability to make me smile to myself, laugh out loud while I'm home alone, or pull myself out of a funk. Sarah Marshall is a podcast co-host of two shows, You're Wrong About, with Michael Hobbes (who just announced he's leaving the show ), and You are Good, with Alex Steed , a self-described \u201cfeelings podcast about movies.\u201d And, she says the same \u2014 even when listening to rough cuts of her own shows: \u201cI will start smiling when I hear myself [\u2026] happily conversing with someone else. I am just being cued by my own emotional tones. That's how easy I am to scam as a mammal.\u201d"
+  },
+  {
+   "source_id": "0215cc7f-181d-4721-9a90-badb40141bba",
+   "citation_number": 5,
+   "cited_text": "What makes co-hosting structurally distinct is continuity. The second host is a recurring presence the audience bonds with \u2014 which means their absence, or a public falling-out, affects listener trust in a way a single missing guest does not. How it works A functional co-hosting arrangement rests on 3 operational pillars: role definition, communication infrastructure, and shared ownership agreements. Role definition Before the first episode records, the partnership needs explicit answers to: - Who is the lead host (controls pacing, transitions, closes segments)? - Who handles pre-show research and outlines? - Who manages post-production coordination and show notes ? - Who owns the public-facing communication channels?"
+  },
+  {
+   "source_id": "81497148-4399-4de2-871c-437540e13078",
+   "citation_number": 6,
+   "cited_text": "\u201cMy character was supposed to be the rube. The character I played on that show was 20% stupider than I was in real life. I needed to be perpetually surprised and somebody for Bruce to kind of point a finger at and laugh at.\u201d Geoff says that just like you need a focus statement for a story or an interview, you need a focus statement for a co-host. Why are you choosing to add another voice? And what is that person supposed to do? When casting a co-hosted show, ask yourself questions like: Who is the optimist here, and who is the skeptic? Who is the easy laugh, and who has the drier sense of humour? Who is the fount of energy, and who is the grounded, calming presence?"
+  },
+  {
+   "source_id": "050f0770-0d3c-4d5a-82d3-4bbb03a6a295",
+   "citation_number": 7,
+   "cited_text": "Copy link 00:27:10 And the other host has to be like, what the hell is that like? You need to start over. So you just need to have like a normal person who hasn't gone down these rabbit holes. Right. To bring the person back into reality and be like, sorry, explain this to me. Like, I don't know what you're talking about. Right. That was always something that we wanted to do. Copy link 00:27:24 And also, I guess that it's more fun. Like, to me, it is it's so much more fun to step into my closet knowing that I'm about to have a topic that I have intentionally kept myself in the dark about and the run up to the episode that like it's going to be explained to me, Rapid Fire for like two to three hours, which when I put it that way, it doesn't sound fun, but it is fun."
+  },
+  {
+   "source_id": "81497148-4399-4de2-871c-437540e13078",
+   "citation_number": 8,
+   "cited_text": "Alex Steed said in their dynamic, he sees Sarah and the guest's interaction as the most interesting part of the show, \u201cI think of myself as the listener of the show, asking the questions that I think a listener would ask.\u201d While Alex is most certainly doing more than listening, keeping that awareness of what a listener might be confused or curious about is essential. After all, your audience is really the silent partner in the conversation. 4. Time. Space. And Editing . The last piece of advice I got from our podcast co-hosts was to take your time \u2014 both in the recording and in your production schedule. Don't expect a seamless, snappy back and forth on your first try."
+  },
+  {
+   "source_id": "ca4165cf-d5fa-4e35-ae20-a3757914b8fa",
+   "citation_number": 9,
+   "cited_text": "The audience surrogate character should be relatable and should ask the questions your reader is likely to ask. Think Jim Halpert in The Office, he's observing the shenanigans of Michael and Dwight and breaking the fourth wall to raise an eyebrow and say, with the audience, \u201cisn't this ridiculous?\u201d If your story takes place in an unexpected place, or includes unexpected elements, you need a proxy. Examples: Animals who can speak Animals that don't exist in our world (i.e. dragons) Magic practiced by a specific set of characters, or by everyone War or violent conflict Space or some other planet (Dune, Star Trek) History or some bygone era (don't assume everyone knows what life before the internet was like) Post apocalyptic or alternate history (Man in the High Castle, The Hunger Games, Divergent) Deviations on existing myths (werewolves, vampires, fairies, etc)"
+  },
+  {
+   "source_id": "0951d5f1-cb83-404f-90d5-aa25f9832b79",
+   "citation_number": 10,
+   "cited_text": "SPR: What is your role as the hosts of Radiolab? Nasser: It's interesting because we serve as the \"middle people\" in this process. On one side, we're trying to bring the most honest and compelling story out of the reporter, but on the other side we are also the ambassadors for the listeners. We're the ones who get to ask the questions that listeners might be having at that moment, or perhaps even questions they didn't realize they wanted answered until we ask them. Our role is to advocate for the audience and bridge gaps between the reporter's detailed journey and the listener's curiosity and make information more accessible to people by asking the questions that they would ask if they had the opportunity to be there, too."
+  },
+  {
+   "source_id": "552b3b92-88d3-4080-bd11-e14df80bdca2",
+   "citation_number": 11,
+   "cited_text": "Jesse: Yeah, I do mean that I think there's also a built-in contentiousness on your program. It's not intense. It's not the kind of, you know, structured-for-drama thing that you get on cable television news, for example. But I think that part of you guys, you and Bob revealing yourselves more on the air, is that when you disagree with what someone is saying, you will press that disagreement a few times, especially when they give you a banal answer. Brooke: Right. Well, that's just really believing that we are our listeners surrogate, and that we're not just checking boxes. This is certainly not unique to us. You hear it on the BBC all the time. You know if you don't get the answer the first time, then you ask again and you ask again, and you cannot imagine, Jesse, how many times we ask the question, and it doesn't come on the air. I mean, the idea isn't to edit to win the argument. The idea is to edit so that people can get an accurate sense of the way an interview went without beating a dead horse. So we may ask the same question various ways six times and only leave one follow up or two on the air. And we do that because we know that the listener wants an answer. Hopefully we're asking the questions they want asked."
+  },
+  {
+   "source_id": "050f0770-0d3c-4d5a-82d3-4bbb03a6a295",
+   "citation_number": 12,
+   "cited_text": "Copy link 00:26:14 So the first reason for that structure is laziness, because if you do a podcast with two people and only one person has the research, then you can put out twice as many podcasts. Copy link 00:26:24 That was like you could call that laziness or you call that production savvy. I would say. I mean, it's I agree. Yeah. I'll take this, Laura. We have to think about the thing. Copy link 00:26:33 It's also I mean, this was always something that we had in mind that, first of all, one of my favorite podcasts ever, which is now unfortunately defunct, was called Trust Issues, where one person would research a particular conspiracy theory and then explain it to the other person. And it was by these two great journalists in Seattle. It was one of my favorite podcasts. I was obsessed with it and I basically stole the format from them. Are like the idea came from them that you need a sort of audience surrogate because otherwise one person will go too far down a rabbit hole and they'll be talking about like weird like conspiracy, like acronyms to be like it's like for trap or whatever."
+  },
+  {
+   "source_id": "552b3b92-88d3-4080-bd11-e14df80bdca2",
+   "citation_number": 13,
+   "cited_text": "Q&A: Brooke Gladstone on being the audience's surrogate - Columbia Journalism Review Close Window b Most Recent | Special Issues | The Kicker Podcast Search Recent Stories Local News Tech Business of News Special Issues The Kicker Podcast Tow Center About Memberships Donate Advertise Contact Search Recent Stories Local News Tech Business of News Special Issues The Kicker Podcast Tow Center About Memberships Donate Advertise Contact Q&A: Brooke Gladstone on being the audience's surrogate July 11, 2017 By The Editors b A great interview is one of the journalist's most powerful tools. It can be informative, entertaining, thoughtful. For the next five weeks, the Columbia Journalism Review and MaximumFun.org will broadcast conversations with some of the world's greatest interviewers. Hosted by NPR's Jesse Thorn, the podcast, called The Turnaround , will examine the science and art of journalism."
+  },
+  {
+   "source_id": "552b3b92-88d3-4080-bd11-e14df80bdca2",
+   "citation_number": 14,
+   "cited_text": "THE AUDIENCE'S SURROGATE Jesse: If you're representing yourself when you're talking to someone you know, and you're trying to be a whole, authentic person and have your cards on the table, and so on and so forth, while still being accurate and fair, how do you also serve as audience surrogate, when the audience is often in many ways very different from you, ideally? Brooke: OK, I don't think there's a real inconsistency there. Because I'm just talking about being real. Right? I'm still trying to ask the questions that I think need to be asked. Now, not everybody will agree with me, but not everybody would agree with me if I was pretending to be omniscient and had no view of my own. I'm still going to ask the same questions because I'll still believe that those are the most important questions to ask. And in the case of the program, and of course we're not the only show, the desire for real, honest information has just gone through the roof. I mean, the downloads have exploded, listenership has really gone up, contributions that we haven't even asked for\u2014which is good, because our show is still not quite self-supporting after all these years. Thank you, WNYC. But the thing is that it's the same questions, it's the same cogitation, it's the same analysis that doesn't change. It's just that I'm not hiding. So I think I'm still doing the best job I can for the listener. The listener simply knows who I am, and they can factor that in."
+  },
+  {
+   "source_id": "0951d5f1-cb83-404f-90d5-aa25f9832b79",
+   "citation_number": 15,
+   "cited_text": "Miller: We both are reporters at heart and so we like to dive into our own pieces. But as hosts, our main role is to be generous and playful\u2014yet skeptical\u2014conversational partners. Reporters go out, do extensive research, read numerous papers, and talk to people for hours, gathering all sorts of nuances and complex information. As hosts of a podcast, it is our responsibility to meet them with fresh eyes. We come in without much prior knowledge, almost like blank slates with excitement. It is as if these reporters, brimming with facts, complex information, and confusion, have come from an odyssey and are going to share their knowledge with us. I think we're a little more alive than just a sounding board; our job is to get the most gripping\u2014yet natural, authentic, and real\u2014narrative from the reporter. We avoid overly showy or fake-sounding tales and stay away from fake entertainment. We push the conversation towards authenticity, ensuring the story feels real and compelling. So I would describe our job as conversational partners."
+  },
+  {
+   "source_id": "81497148-4399-4de2-871c-437540e13078",
+   "citation_number": 16,
+   "cited_text": "Artwork by Abigail Swartz of Gray Day Studio We've all heard podcasts with hosts shouting over each other, ones where the two voices are indistinguishable, or others where the spark just isn't there. So how do you get it right? 1. Think about what role each podcast co-host plays. A few years back, our executive director of program development, Geoff Siskind , was on the team developing Hackable , a podcast about cybersecurity. Going in, they had one host locked: Bruce Snell, a security expert. But having an expert host talk to other experts might not make for the most dynamic or accessible show. Enter Geoff, as co-host."
+  },
+  {
+   "source_id": "ca4165cf-d5fa-4e35-ae20-a3757914b8fa",
+   "citation_number": 17,
+   "cited_text": "Episode 298: The Proxy Character \u2013 #WriteOnSC Radio Show and Craft School Skip to content #WriteOnSC Radio Show and Craft School Live! Every Saturday @ 9 a.m. on 100.7 The Point and makethepointradio.com Menu Podcast Contributors Contact Us Become a Patron Show Notes Featured Authors Behind the Scenes About Us Show Notes Episode 298: The Proxy Character Posted by writeonsc on February 8, 2025 April 30, 2025 listen to the podcast On February 8, 2025, Kasie and Rex had a special guest, Hollie Whitener, in the studio to discuss here suggested topic of the character that proxies for the audience. Here are the show notes:"
+  },
+  {
+   "source_id": "050f0770-0d3c-4d5a-82d3-4bbb03a6a295",
+   "citation_number": 18,
+   "cited_text": "Copy link 00:28:50 And I think that that's part of what makes the show compelling to the people to whom it is compelling. Yeah. Copy link 00:28:56 I mean, if I can also just be like self grandiose for another second before. I also think that when I listen to other podcasts, there have been podcasts I've had to stop listening to because they talk to me like I'm a child and they do this like now let's explain. The fifty states were founded like this really like way back to basics approach. And I think there's also something about the fact that when I'm doing all these shows, I really am doing it for Sarah."
+  },
+  {
+   "source_id": "050f0770-0d3c-4d5a-82d3-4bbb03a6a295",
+   "citation_number": 19,
+   "cited_text": "Copy link 00:29:19 I'm funny details that I think Sarah's going to react to. I'm telling Sarah things, knowing what her background is, what her knowledge is. And so I'm explaining it to someone who is smart and who's analytical but just doesn't know about this specific topic, which I think is very different than explaining it to someone who's like stupid, which seems like some podcasts are like we're just going to pretend that you don't have any idea how to live your life. Copy link 00:29:42 And we're going to tell you about like wheat futures or whatever."
+  },
+  {
+   "source_id": "050f0770-0d3c-4d5a-82d3-4bbb03a6a295",
+   "citation_number": 20,
+   "cited_text": "Copy link 00:29:45 But also, I feel like if you had any kind of audience proxy on the show, even if they were like just completely unschooled about like any aspect of what you're talking about, if you had to start from zero, like you still wouldn't explain it. The way shows to him that, you know, have this kind of like theoretical audience they're talking to, who they just aren't really talking to is if they're a person, because it's hard to do that if there's not a person there like that. Copy link"
+  },
+  {
+   "source_id": "050f0770-0d3c-4d5a-82d3-4bbb03a6a295",
+   "citation_number": 21,
+   "cited_text": "Copy link 00:30:38 You end up with a capable storyteller who is being responsible. And you guys are really great at unmasking these tropes. We're like something truly. Manipulative happens, and I do think that, like having an audience surrogate sort of in the podcast is extremely powerful, at least for me as a listener, because it sort of says, no, no, get to ask questions. This is going to be arranged in such a way that you can make sense of this. Copy link 00:31:00 You're not at the mercy of this story. And a lot of these tropes that you, I think, very reasonably make fun of in the podcast are ones that really are meant to deprive an audience of agency. Right. Like, well, this was what was really going on, but you'd never know. It was like, well, great. That's a great lesson to learn. They don't ask any questions. Everyone's lying all the time anyway, right?"
+  },
+  {
+   "source_id": "0215cc7f-181d-4721-9a90-badb40141bba",
+   "citation_number": 22,
+   "cited_text": "Continuing vs. restructuring: When 1 of 2 hosts wants to exit, the decision tree has clear branches. If the departing host has no ownership stake (no RSS control, no hosting credentials, no contractual equity), the show can continue under the remaining host. If ownership is split and undocumented, extraction is legally and logistically complicated \u2014 precisely the scenario podcast legal considerations resources exist to prevent. Scaling co-hosting: Shows occasionally expand to 3 hosts. Research on group conversation dynamics \u2014 including work published by the Annenberg School for Communication \u2014 consistently shows that 3-person panels produce more crosstalk and interrupted pacing than 2-person formats. A third host requires tighter segment structure to prevent the audio equivalent of everyone talking at once at a dinner party."
+  },
+  {
+   "source_id": "0c241627-d378-4567-8e9d-62537eaf2e2e",
+   "citation_number": 23,
+   "cited_text": "Pay attention to: Who naturally leads and who supports? Are ideas building on each other or just being repeated? Does the dynamic feel warm and inclusive, or competitive and jarring? These mini experiments can reveal potential friction points and help you understand each other's natural rhythms. Define roles early Every great co-hosting duo has some kind of structure, even if it's informal. Decide who handles transitions, who introduces topics, and who guides the flow. Clear roles keep episodes from feeling clunky, especially in complex formats with multiple segments, ad breaks, or listener questions. Roles can rotate from episode to episode, but knowing who's responsible for what keeps the conversation smooth and the listener engaged."
+  },
+  {
+   "source_id": "0c241627-d378-4567-8e9d-62537eaf2e2e",
+   "citation_number": 24,
+   "cited_text": "These mini experiments can reveal potential friction points and help you understand each other's natural rhythms. Define roles early Every great co-hosting duo has some kind of structure, even if it's informal. Decide who handles transitions, who introduces topics, and who guides the flow. Clear roles keep episodes from feeling clunky, especially in complex formats with multiple segments, ad breaks, or listener questions. Roles can rotate from episode to episode, but knowing who's responsible for what keeps the conversation smooth and the listener engaged."
+  },
+  {
+   "source_id": "bdbdce58-e019-4861-b1f6-9abf961e7883",
+   "citation_number": 25,
+   "cited_text": "This also means that many conventions of print journalism don't apply. Complex subordinate clauses, lengthy attributions before a quote, and dense paragraphs full of background information all become liabilities in a spoken script. Every sentence must earn its place. The golden rule: keep it simple \ud83d\udd17 Simplicity is the foundation of all good anchor scriptwriting. According to the New York Film Academy , broadcast writing should sound conversational \u2013 as though the anchor is speaking directly to the viewer, not reading from a formal document. If a word wouldn't naturally come up in professional conversation, it probably doesn't belong in the script."
+  },
+  {
+   "source_id": "d325a4fa-4c2a-41e9-acc5-0d5598a47db2",
+   "citation_number": 26,
+   "cited_text": "So what differentiates a text for the ears from a text for the eyes? We'll consider three key elements: Structure, Content and Audience Rapport: Duration: 30 seconds. 0:30 This is the audio recording of the first 30-second \"Intro\" section of the script above Structure A text written for the eyes can usually afford to be more formal and intricate, and can easily incorporate extended or complex speech\u2026 without loosing its audience. Even if it is not ideal, readers can obviously linger on each and every sentence and move onto the next one only after they are ready to do so. In a podcast, however, listeners do not have this luxury. They listen to what you say as you speak out each sentence, and although they can, most listeners do not (and generally need not) routinely pause your audio, rewind it and listen to it again and again. Accordingly, be sure to watch out for any words or syntax that is not easy to be said out loud: Using the active rather than passive voice, for instance, will usually result in shorter and clearer sentences, cutting your use of dependent clauses will make it easier for listeners to follow your main idea, avoiding long winded expressions and verb phrases will make your text shorter and simpler (e.g. 'on an everyday basis' vs. 'daily' and 'put the emphasis on' vs. 'emphasize')."
+  },
+  {
+   "source_id": "e67c8266-f4ac-4060-be78-ea296d80d93c",
+   "citation_number": 27,
+   "cited_text": "Radio works in real time. It moves forward in a straight line and never pauses. A listener who is driving, cooking, or exercising cannot hit \u201crewind\u201d on a live broadcast. If they zone out for even a few seconds, they lose that piece of information permanently. This is why broadcast journalism professors often teach the rule of OTPS \u2013 one thought per sentence . Every sentence in a radio script should carry a single, clear idea. No nested clauses, no stacked details, no multi-layered constructions that work beautifully on paper but collapse when spoken aloud."
+  },
+  {
+   "source_id": "e67c8266-f4ac-4060-be78-ea296d80d93c",
+   "citation_number": 28,
+   "cited_text": "The conversational tone \ud83d\udd17 Print journalism can be formal, detached, and impersonal. A newspaper article doesn't need to sound friendly \u2013 it needs to be accurate and well-structured. Radio, however, is an inherently intimate medium . The listener is often alone \u2013 driving a car, cooking in the kitchen, or wearing headphones on a morning walk. The experience feels like a one-to-one conversation. This is why radio writing must sound natural and spoken , not stiff and written. A good radio script sounds like a knowledgeable person simply talking to the listener about something important. Contractions are essential: use \u201cdon't\u201d instead of \u201cdo not,\u201d \u201cit's\u201d instead of \u201cit is,\u201d and \u201cthey're\u201d instead of \u201cthey are.\u201d These are the sounds of everyday human speech. Print often avoids contractions to maintain a formal register, but radio needs them to sound authentic."
+  },
+  {
+   "source_id": "3af6f9a1-95d3-4e7a-96ef-048a4a365a7e",
+   "citation_number": 29,
+   "cited_text": "As a podcast coach, I've seen hundreds of podcasters struggle with the question of whether to fully script their episodes or not. It usually plays out the same way. They start by winging it because it feels easy and natural. Then they listen back and realize they've wandered, repeated themselves, or lost the thread entirely. So they swing hard in the other direction, write everything out word-for-word, and suddenly their podcast sounds stiff and disconnected. The problem isn't scripting or not scripting. It's relying entirely on one or the other."
+  },
+  {
+   "source_id": "3af6f9a1-95d3-4e7a-96ef-048a4a365a7e",
+   "citation_number": 30,
+   "cited_text": "They write out every word of their episode, hit record, and read it back. Technically, it solves the rambling problem. But it introduces a new one. It no longer sounds like you. Instead of a conversation, it feels like a presentation. The pacing changes, the tone flattens out, and the natural rhythm of how you speak disappears. Listeners don't press play to be read to. They press play because they want to hear you think through something, explain something, or guide them through a problem. When everything is scripted, that connection gets lost."
+  },
+  {
+   "source_id": "a6ddf6c2-67e6-4ab0-817d-0e70e6212dd6",
+   "citation_number": 31,
+   "cited_text": "A drawback when it comes to fully scripting a podcast is that the script must be read clearly and naturally. It\u2019s important that the presenter not come across as stilted or too formal. As such, a script must be rehearsed and rehearsed to get the delivery just right. Whatever style of podcast you prefer and whatever type of episode you\u2019re interested in creating, for the purpose of completing your Major Work, you should thoroughly script the piece before recording it. It doesn\u2019t matter if you\u2019re making a narrative podcast or a non-fiction one; it needs to be scripted."
+  },
+  {
+   "source_id": "09856d4b-d87e-4121-92dd-2a268caa490c",
+   "citation_number": 32,
+   "cited_text": "\u201cWe put you inside the experience of the characters,\u201d Wheeler says. \u201cWe want the listener to feel like they're going through it and have close, intimate access.\u201d This type of writing out loud helps the team hear how certain lines \u201cmove and jive,\u201d Wheeler says\u2014a crucial element of audio stories. Building a script is a process of constant seduction, he explains, where you're convincing the listener every step of the way to keep the radio on and continue on the journey with you. An important aspect of that means keeping things conversational. The writing can't sound like a professor at a lectern. As soon as the script reminds people of school, they'll tune out. Instead, the team tries to share information throughout the listening experience so it feels like reading a book or watching a movie. \u201cWe put you inside the experience of the characters,\u201d Wheeler says. \u201cWe want the listener to feel like they're going through it and have close, intimate access.\u201d"
+  },
+  {
+   "source_id": "5cb217c0-88de-446c-ac41-6c7a8099d255",
+   "citation_number": 33,
+   "cited_text": "Click \"Enter\" to submit the form. How to sound natural when you've scripted the whole darn thing Frankie Kemp 3 April 2022 All Posts , Featured , Presentations \u201cIf it all goes to sh!t, at least you can read your presentation,\u201d remarked a client. And that's the problem. Because people want to safeguard against that, they're writing 'scripts' and in doing so lose their personality and all the value they bring. There's a balance between sounding too rehearsed and flying by the seat of your pants. Here I recommend nine ways to pump your talk with personality, even if you've been rehearsing for hours, (or given the same talk several times before)."
+  },
+  {
+   "source_id": "9bb8e007-e3e0-43a3-9387-a4ef00f20fc1",
+   "citation_number": 34,
+   "cited_text": "Moreover, podcast formats vary widely. Some podcasts\u2014such as daily news briefings or panel discussions\u2014rely less on narrative structure and more on straightforward information delivery or casual dialogue. These formats might eschew elaborate storytelling, focusing instead on breadth of coverage or expert analysis. As Bradshaw ( 2012 ) illustrated, a single-issue narrative podcast (e.g., Freakonomics) uses character development, setting, and plot movement to sustain interest, whereas a news roundup podcast (e.g., Guardian Media Talk) covers multiple topics and thus employs narrative elements more sparingly. In a recent research, V\u00eelceanu ( 2025 ) analyzed over 12,000 podcast listener reviews, finding that audiences often value storytelling not just for its informational function but for its ability to create emotional and nostalgic bonds. This emotional component is particularly evident in reviews referencing podcast hosts' personal anecdotes or recurring themes, which cultivate a form of narrative intimacy that traditional radio often lacked ( V\u00eelceanu, 2025 )."
+  },
+  {
+   "source_id": "9bb8e007-e3e0-43a3-9387-a4ef00f20fc1",
+   "citation_number": 35,
+   "cited_text": "Conversational tone and informal language: All podcasts used a conversational tone, even when dealing with formal topics. This is a narrative strategy in that it establishes the voice of the narrator as a friendly, familiar figure\u2014essentially a character the audience comes to know. The language used across these podcasts tends to be informal, often employing Romanian colloquialisms, humor, and even slang (especially in MCN Podcast and Vocea Na\u021biei). This informal speech style is part of what makes podcast storytelling distinct from traditional journalism; it creates a sense of intimacy and approachability. Listeners are addressed as peers. In terms of narrative, this voice invites the listener \u201cinto the story\u201d as if hearing it from a friend, which can heighten engagement."
+  },
+  {
+   "source_id": "1850647d-2f48-4d5e-bfee-002fc6df6747",
+   "citation_number": 36,
+   "cited_text": "Crucially, whether a podcast is scholarly is also not determined by its tone, its level of formality, or the size of its audience. Indeed, informality and conversational styles are among the affordances that make podcasting attractive as a medium, enabling alternative entry points into complex material and fostering different modes of engagement. While it may come across as informal or conversational, a scholarly podcast is purposefully curated. As Declercq et al. (2025) state \u201cpodcasting 'enshrines' conversation into digital artefacts that people can engage with in casual ways, but which are nonetheless accessible for scrutiny and analysis\u201d. These aesthetic or stylistic features are important, yet not decisive."
+  },
+  {
+   "source_id": "3af6f9a1-95d3-4e7a-96ef-048a4a365a7e",
+   "citation_number": 37,
+   "cited_text": "How to Structure a Podcast Episode so it Sounds Natural and Focused The solution isn't choosing between scripted and unscripted. It's all about choosing structure. A sweet, cookie-like structure. Think of your podcast like an Oreo cookie . You've got two solid pieces on the outside and a more flexible centre in the middle. That's what your listeners want from your podcast \u2013 structure on either end of the episode and something ooey-gooey in the middle. What Parts of Your Podcast Should Be Scripted? Your intro (top) and your outro (bottom) are where scripting really helps."
+  },
+  {
+   "source_id": "3af6f9a1-95d3-4e7a-96ef-048a4a365a7e",
+   "citation_number": 38,
+   "cited_text": "Scripting the intro and outro gives your episode a strong start and a clear finish. How to Keep the Middle of Your Podcast Conversational without Losing Direction The middle of your episode is where you want more flexibility \u2013 just like that creamy center. This is where your ideas live, where you explain, expand, share stories, and connect with your listener. Instead of scripting this section word for word, use simple bullet points or key ideas to guide you. That way, you stay on track, but still sound like yourself."
+  },
+  {
+   "source_id": "31906a65-b5c7-442d-b97f-53ccd2a07084",
+   "citation_number": 39,
+   "cited_text": "\u2713 \u201cIn this talk, we will explore\u2026\u201d \u2713 \u201cAre there any examples you could think of? <short silence> One example could be\u2026\u201d By addressing and engaging the learners directly the participation in the debate will greatly improve. LENGTH OF THE SCRIPT It is also important to consider the duration of your podcast. Most research into educational               podcasting advises to stick to 15 minutes maximum (Salmon, 2008 and Cosimini, 2017). Many              public podcasts are longer than 20 minutes, engaging the audience with interesting interviews             and stories \u2013 this keeps you listening. People are easily distracted so bring your content in                \u2018bricks\u2019 or \u2018chunks\u2019 if the story is long. To calculate the time of the podcast before recording use                  a word/time calculator online. Look at the amount of words you have in your script and calculate                 the length with: \u200bhttp://www.speechinminutes.com/ In general people use about 130 words per            minute when speaking so a podcast of 6 minutes would consist of about 700 to 800 words."
+  },
+  {
+   "source_id": "911b6597-16ee-4f35-a769-f9c85ca9db04",
+   "citation_number": 40,
+   "cited_text": "Figure 9. The black box of podcasting. There is an art to storytelling and an art to conversation. Consider who in your pool of potential feature guests has mastered these arts, or come close to mastery. They will likely help create the most engaging podcast episodes. Podcasts are made for conversations; as much as possible, avoid scripting the conversation. However, scripting the \u201cintro\u201d (introduction) and \u201coutro\u201d (closing remarks) provides signposts for the listener and, depending on how it is done, can develop into a signature for the series, which returning listeners may appreciate. Bloopers are bound to happen. Keep the recording rolling and enjoy them for a good laugh behind the scenes with your production team or departmental colleagues. Before engaging the record button, take a few deep breaths. It will calm your nerves and may help your guest to calm his/her nerves as well. Be yourself. Listeners will come to recognize your voice and your style. Those who like your voice and style will likely become return-listeners or subscribers. Those who don\u2019t will find the content they enjoy elsewhere, or they will create their own podcast to fill a gap in the community, which I encourage. If the idea of creating a podcast excites you, take the risk. Even if you decide not to publish your episodes, you will likely learn from the process, which may prepare you for producing something better, that you do wish to share."
+  },
+  {
+   "source_id": "3af6f9a1-95d3-4e7a-96ef-048a4a365a7e",
+   "citation_number": 41,
+   "cited_text": "Try this instead: Script your intro so your message is clear Script your outro so your next step is the obvious next step Use bullet points for the middle and let yourself talk It's a small shift, but it makes a big difference in how your podcast sounds and how it connects. Final Verdict: Structure Your Podcast Instead of Scripting It The goal isn't to sound perfect. It's to sound clear, helpful, and human. When you rely entirely on scripting, you lose your natural voice. When you rely entirely on improvising, you lose direction."
+  },
+  {
+   "source_id": "8d98fa19-3cb5-462f-a70c-119a5e229ed8",
+   "citation_number": 42,
+   "cited_text": "3. Writing a manuscript Writing a manuscript before recording can help you to structure your podcast. By preparing in this way you can avoid having to redo the entire podcast episode. The need for a manuscript, of course, depends on the format you choose; in some instances, following a script too closely will hinder a dynamic conversation. Instead, talking points may help you to structure a dialogue. If you are conducting an interview, the written questions will determine the structure of the recording. See the podcast manuscript template here."
+  },
+  {
+   "source_id": "a8d4fce3-c917-44a9-81a0-aaf323992bf9",
+   "citation_number": 43,
+   "cited_text": "No items found. A podcast script is an outline or sketch of what takes place during your episode. It's not like a movie script, where every word and scene are mapped out and strictly adhered to. Rather, it's a set of guardrails that keeps your show focused while also leaving room for spontaneity. Podcast scripts can be as minimal or as detailed as you want, depending on the type of show you have, your experience level, and how much structure you prefer. Podcast scripts can put your mind at ease while recording since you know in advance what you'll talk about. They also give your show structure, which helps you maintain a consistent style that listeners and viewers will grow to love. Sticking to a script can even shorten your editing time because you won't be straying into off-topic conversations, which you might then remove."
+  },
+  {
+   "source_id": "a8d4fce3-c917-44a9-81a0-aaf323992bf9",
+   "citation_number": 44,
+   "cited_text": "How to write a podcast script: Co-hosted show If your podcast has multiple hosts, loosely scripting your episodes is a great way to make sure your talking points are distributed evenly and that you don't interrupt or talk over each other. The key is mapping out the main segments while leaving room for free-flowing conversation. Think of it as a crossover between a solo podcast script and an interview podcast script. Perhaps you co-host a movie-review podcast, and you have an upcoming episode about a (fictional) movie called Penelope in Paris."
+  },
+  {
+   "source_id": "a6ddf6c2-67e6-4ab0-817d-0e70e6212dd6",
+   "citation_number": 45,
+   "cited_text": "The party at Miko\u2019s place with all his stunt driver friends was a raucous one. SENTENCE LENGTH As a general rule, a sentence in a podcast should not take more than a single breath to say. Also, one sentence should cover only one idea. Always split sentences where you can in a podcast. SOME LANGUAGE FEATURES TO INCLUDE Contractions \u2013 These keep your tone friendly, familiar and informal. e.g. \u2018don\u2019t\u2019 instead of \u2018does not\u2019; \u2018I\u2019d\u2019 instead of \u2018I would\u2019. Active voice \u2013 This gives statements more impact, authority and interest than those written in the passive voice. e.g. \u2018The Tree Lovers Action Group egged the politician\u2019s car\u2019 is more effective than \u2018The politician\u2019s car was egged by The Tree Lovers Action Group\u2019."
+  },
+  {
+   "source_id": "9dbc5a80-788a-46b4-8ec8-26b02e25c16c",
+   "citation_number": 46,
+   "cited_text": "Audio is a passive medium; listeners can disengage effortlessly. The opening hook secures their commitment; the closing hook drives return engagement across episodes. ( De Fossard, 2005 ; Writers, 2026a ; Writers, 2026b ) Dialogue Craft Write tight, natural, conversational lines Enforce the right-margin rule : each spoken line should be no longer than \u2248 \\approx 17 words. Avoid multiple consecutive sentences in one character's turn. Read every line aloud\u2014if it sounds unnatural when spoken, rewrite it. Cut filler phrases, pleasantries, and any line that neither advances the plot nor reveals character. Avoid literary constructions that work on the page but confuse listeners when heard."
+  },
+  {
+   "source_id": "d325a4fa-4c2a-41e9-acc5-0d5598a47db2",
+   "citation_number": 47,
+   "cited_text": "So the first step in writing for the ear is to use simple short sentences and words, and to make each sentence, paragraph and even the overall podcast as short as possible. Skip any unnecessary flair and get to your point. Your litmus test for achieving this goal: Try reading your script out loud - Do you need to stop for air midway through one of your sentences? If the answer is yes, that sentence might be good for the eyes but not for the ears; it is too long or complex. As a general rule of thumb, you shouldn't need more than one breath of air to utter any one single sentence."
+  },
+  {
+   "source_id": "d325a4fa-4c2a-41e9-acc5-0d5598a47db2",
+   "citation_number": 48,
+   "cited_text": "Talk 'with' your listeners not 'to' them. Use inclusive language such as 'we' and 'our' rather than 'you' and 'your.' Do not shy away from contractions and informal language (e.g. it's, let's, there's\u2026). Avoid clustering together a series of sentences that all have the same length and structure. This will make you sound like a mechanical and indifferent lecturer rather than a friendly and spontaneous partner. Decide beforehand and clearly mark in your script, specific places for pauses (short moments of silence), which we naturally incorporate in our spoken language. This will both help you keep your learners engage, and give them some valuable time to 'digest' what you are saying."
+  },
+  {
+   "source_id": "6fcc6cae-b3e1-4371-8c33-664648b671b4",
+   "citation_number": 49,
+   "cited_text": "Use contractions \ud83d\udd17 People say \u201cdon't,\u201d \u201cit's,\u201d and \u201cthey're\u201d in everyday conversation. Using contractions in a radio script makes it sound natural. As the University of Dayton's broadcast writing guide points out, contractions sound conversational and are well-suited for broadcast journalism. Skipping them makes a script sound stiff and robotic. Read your script out loud \ud83d\udd17 This is perhaps the most practical tip for any radio reporter. If a sentence trips you up while reading it aloud, it will trip up the presenter on air. Reading aloud reveals awkward phrasing, sentences that are too long, and words that don't flow naturally. If it doesn't sound like something a real person would say, rewrite it."
+  },
+  {
+   "source_id": "a6ddf6c2-67e6-4ab0-817d-0e70e6212dd6",
+   "citation_number": 50,
+   "cited_text": "CLARITY In your script, you should write out potential stumbling blocks exactly as they are meant to be  read aloud. For example, write out the word \u2018dollars\u2019 instead of using a dollar sign. If you need to  give the full term represented by initials or an acronym \u2013 especially one that can be confused for another word or name, such as PETA (People for the Ethical Treatment of Animals) \u2013 write it clearly and in full in the script. When writing explanations or descriptions, use the \u2018phone a friend\u2019 test. How would you explain  or describe this particular subject or thing to a friend if you called them to talk about it? How  much technical jargon would you use? How much detail would you give? Your meaning needs to be conveyed clearly and instantly in a podcast."
+  },
+  {
+   "source_id": "9dbc5a80-788a-46b4-8ec8-26b02e25c16c",
+   "citation_number": 51,
+   "cited_text": "Ambiguous scripts require verbal clarification between writers, directors, and sound designers, introducing inconsistencies and rework; a fully annotated script serves as a complete production specification that enables direct translation from script to audio. ( De Fossard, 2005 ; Media, 2026 ; Junkie, 2026 ) <cited_table>",
+   "cited_table": {
+    "num_columns": 2,
+    "rows": [
+     [
+      "Dimension",
+      "What is scored"
+     ],
+     [
+      "Dialogue efficiency",
+      "Lines are short ( \u2264 \\leq 17 words), natural, one thought per turn"
+     ],
+     [
+      "Narration discipline",
+      "Narrator used only when information cannot be conveyed using other sounds"
+     ],
+     [
+      "Exposition handling",
+      "Backstory scattered in dialogue, never front-loaded"
+     ],
+     [
+      "Narrative clarity",
+      "Zero-background listener can follow; each line responds to the prior one"
+     ],
+     [
+      "Scene propulsion",
+      "Every scene opens mid-action and ends on unresolved tension"
+     ],
+     [
+      "SFX specificity",
+      "Prompts name material and manner ( e.g., \u201cleather soles scraping bark\u201d)"
+     ],
+     [
+      "SFX discipline",
+      "SFX are spaced, not stacked; each is necessary"
+     ],
+     [
+      "Sound design coverage",
+      "Every scene has at least one SFX or music cue"
+     ],
+     [
+      "Music emotional precision",
+      "Cue prompts name the emotion; placement aligns with tonal shifts"
+     ],
+     [
+      "Adaptation fidelity",
+      "All key events preserved; internal thought externalized"
+     ],
+     [
+      "Cross-modal redundancy",
+      "No text restates what a co-located SFX already conveys"
+     ]
+    ]
+   }
+  },
+  {
+   "source_id": "9bb8e007-e3e0-43a3-9387-a4ef00f20fc1",
+   "citation_number": 52,
+   "cited_text": "A defining feature of modern podcasts is their extensive use of storytelling techniques. Unlike traditional radio broadcasts or printed journalism, podcasts often leverage episodic narratives, personal anecdotes, and serial structures to captivate audiences ( McHugh, 2016a ). McHugh notes how podcast storytelling has evolved beyond audio-only format, with some narrative podcasts adapting their content across multiple media formats, demonstrating the versatility and appeal of podcast narrative structures. ( McHugh, 2016a ) Many successful podcasts intentionally integrate narrative elements usually associated with fiction\u2014such as suspenseful build-ups, character development, and dramatic arcs\u2014into non-fiction content ( Berry, 2015 ; Spinelli & Dann, 2019 ). This storytelling-focused format cultivates a deep level of listener involvement, comparable to the immersive experience of binge-watching TV dramas. The concept of binge-listening has even emerged to describe how audiences devour multi-part podcast series with the same fervor once reserved for on-demand television ( Llinares et al., 2018 ). Research suggests that this phenomenon stems from the medium's ability to produce immersive and emotionally engaging narratives that foster parasocial relationships and repeated listening behavior ( Bottomley, 2015 ; Meserko, 2014 ). Computational analysis by Reddy et al. ( 2021 ) has identified specific linguistic patterns that correlate with listener engagement, providing empirical support for the relationship between language choices and audience retention in podcasts. The goal of any podcast is to build trust and loyalty with listeners, and \u201cstorytelling is an excellent avenue to make that happen\u201d ( Spinelli & Dann, 2019, p. 132 )."
+  },
+  {
+   "source_id": "a6ddf6c2-67e6-4ab0-817d-0e70e6212dd6",
+   "citation_number": 53,
+   "cited_text": "If this is a non-fiction podcast, write like you speak. Be careful not to write in too formal a style, or you may lose your audience. This point does not apply to fictional podcasts, except perhaps for the Introduction. LAZY EXPRESSION AND TOO MANY WORDS Avoid over-used expressions and lazy conjunctive phrases like \u2018and then\u2019. Eliminate redundancies (unnecessary words) in your sentences, such as \u2018that was\u2019 and \u2018who were\u2019. Look at this example: The party that was held at Miko\u2019s place with all of the stunt drivers who were his friends was a raucous one."
+  },
+  {
+   "source_id": "09856d4b-d87e-4121-92dd-2a268caa490c",
+   "citation_number": 54,
+   "cited_text": "The process begins with what the team calls a brain dump. A reporter and host will go into a studio and simply talk about everything the reporter has learned. There's no script; it's an exploratory conversation. The idea is to get the reporter to tell parts of the story the way they would to a friend. Dylan Keefe, director of sound design, mixing audio for Radiolab . Becca Bressler \u201cIt sounds more conversational and relaxed,\u201d Wheeler says. That helps the team determine the broad strokes of the story. Then comes the hard part: writing out the details, explaining theories, and pulling together the big discoveries."
+  },
+  {
+   "source_id": "09856d4b-d87e-4121-92dd-2a268caa490c",
+   "citation_number": 55,
+   "cited_text": "The team of hosts, producers, and editors will sit together and trade phrases, concepts, and explanations back and forth, Wheeler says. Someone will offer, say, a metaphor, and someone else will disagree about it or build off of it. That's done repeatedly until something sounds right. So what airs as a 30-second explanation of epigenetics may actually come from hosts Jad Abumrad and Robert Krulwich having riffed for several minutes, and Wheeler adding in his two cents from the back of the studio."
+  },
+  {
+   "source_id": "5cb217c0-88de-446c-ac41-6c7a8099d255",
+   "citation_number": 56,
+   "cited_text": "Nine techniques to sound more real when you've rehearsed: Involve your audience by using their names: this keeps your audience alert virtually and in-person creates a personal connection with your audience, adding a sense of spontaneity. Here are 4 times to be using names . Use question tags: use question tags as you might when you chat. For example, instead of: \u201cWouldn't you want your functions to be smarter?\u201d say \u201cThere are functions you'd want smarter, aren't there?\u201d Pause: here's an exercise to help you get comfortable with silence. Don't sustain eye contact: looking up or away during pauses as if considering what you'll say next. Then you don't look too slick. Use gesture \u2013 lifts the voice and makes you look dynamic and invested in what you're saying, as opposed to regurgitating lines. If you're unsure how to move, watch this video."
+  },
+  {
+   "source_id": "60ad2d1d-c637-412b-8461-fd26dc9102be",
+   "citation_number": 57,
+   "cited_text": "Tips from a UU-lecturer UU-lecturer Jip Leendertse also has a lot of experience with podcasts. Together with colleagues, he made a podcasts series external link as a replacement for lectures. His tips: If you do it, do it well: don't read out the same old story, but make a new one. Make sure to continuously keep the same distance to the microphone. Don't speak monotonously. You can record several audio tracks in the Utrecht University podcast studios. This, for instance, enables you to increase the volume of softer voices and lower it for loud voices. Are you making a discussion type podcast? Ensure regular interaction between the conversational partners \u2013 this can be a simple 'hmmm', 'yes', etc. This makes the podcast a more dynamic listening experience."
+  },
+  {
+   "source_id": "81497148-4399-4de2-871c-437540e13078",
+   "citation_number": 58,
+   "cited_text": "\u201cRecording a lot of material and editing it down really can't be overestimated. I think we all like to fantasize that there is some world adjacent to ours where people converse very quippily and efficiently, like in The West Wing, but it's all editing.\u201d \u2013Sarah Marshall Sign up for the Pacific Content Newsletter: audio strategy, analysis, and insight in your inbox. Next The mysterious case of the overlapping Apple Podcasts categories \u00a9 2026 Pacific Content. All rights reserved. Privacy Policy Linkedin Instagram Twitter Search for: Search Blog Podcasts Contact Services Podcast Launch Services Podcast Promotion Services Video Podcast Production Services Podcast Editing & Mastering Services #7833 (no title) Podcast Transcription Services Podcast Intro & Outro Services"
+  },
+  {
+   "source_id": "552b3b92-88d3-4080-bd11-e14df80bdca2",
+   "citation_number": 59,
+   "cited_text": "This episode features Brooke Gladstone, co-host of On the Media . An edited transcript is below. THE POWER OF EDITING Brooke Gladstone: I think more like an editor I believe than a host. And I interview more like an editor than as a host. The host part, the presence part, the part of you that should be authentic is [there] but it's also divided because part of me says, \u201cWill this link to that thing he said earlier or do I need to circle around?\u201d Jesse Thorn: That is interesting to me because your show has always been so tightly edited. I mean it's like the worst you could say about it probably would be that it would be too tightly edited sometimes."
+  },
+  {
+   "source_id": "7bd4bc6f-5fef-4a83-8d71-0e951afd3274",
+   "citation_number": 60,
+   "cited_text": "Example Explicit dialogue tags yield more predictable results than relying solely on context, however the model will still speak out the emotional delivery guides. These can be removed in post-production using an audio editor if unwanted. Pace The pacing of the audio is highly influenced by the audio used to create the voice. When creating your voice, we recommend using longer, continuous samples to avoid pacing issues like unnaturally fast speech."
+  },
+  {
+   "source_id": "7bd4bc6f-5fef-4a83-8d71-0e951afd3274",
+   "citation_number": 61,
+   "cited_text": "Pacing can also be controlled by writing in a natural, narrative style. Example Tips Common Issues Inconsistent pauses: Ensure <break time=\u201cx.xs\u201d /> syntax is used for pauses. Pronunciation errors: Use CMU Arpabet or IPA phoneme tags for precise pronunciation. Emotion mismatch: Add narrative context or explicit tags to guide emotion. Remember to remove any emotional guidance text in post-production. Tips for Improving Output Experiment with alternative phrasing to achieve desired pacing or emotion. For complex sound effects, break prompts into smaller, sequential elements and combine results manually."
+  },
+  {
+   "source_id": "7bd4bc6f-5fef-4a83-8d71-0e951afd3274",
+   "citation_number": 62,
+   "cited_text": "Creative control While we are actively developing a \u201cDirector's Mode\u201d to give users even greater control over outputs, here are some interim techniques to maximize creativity and precision: 1 Narrative styling Write prompts in a narrative style, similar to scriptwriting, to guide tone and pacing effectively. 2 Layered outputs Generate sound effects or speech in segments and layer them together using audio editing software for more complex compositions. 3 Phonetic experimentation If pronunciation isn't perfect, experiment with alternate spellings or phonetic approximations to achieve desired results."
+  },
+  {
+   "source_id": "422cc73b-8bd9-4571-96b5-0a812c80f4dd",
+   "citation_number": 63,
+   "cited_text": "After finalizing the scripts, AI voices from elevenlabs.io were used to present the information. The voice of Jane (British English, professional audiobook reader) was used for the host, while Corey (American English, friendly, clear, and approachable) voiced the co-host. Audio was recorded according to the scripted turn-taking structure. To maintain recording stability and voice consistency, longer dialogue turns were split into two or more segments and merged into a single utterance during post-production using Camtasia 2024. Similarly, 15 static images depicting lightning formation were created in Adobe Illustrator 25.3 ( Davis et al., 2024 ) based on Mayer and Moreno ( 2002 ). In all conditions, each static illustration appeared with its corresponding information and disappeared upon completion of that information. Since all conditions contained the same core language from the original script, each condition was exposed to the visual aids for the same duration to maintain balance across conditions. Each condition included a 5 s title card with the logo and title of the podcast \u201cWeather Wonders\u201d with thunder and rain sounds fading in the background. The control condition video was 3:51 min in length, the elaborative condition was 5:50 min, and the seductive details condition was 6:23 min."
+  },
+  {
+   "source_id": "14da2302-2068-4d86-9092-0b5fee3ee797",
+   "citation_number": 64,
+   "cited_text": "This proposal could be formally written, and you could provide feedback in writing, in class, or in face-to-face conferences. Alternately, you could have students \u201cpitch\u201d their projects to the class for on-the-spot feedback. Step 5: Have students script their podcasts: Scripting allows students to seek and incorporate feedback before they go through the painstaking process of recording and editing their material. (As an early rough draft, writing a script is the podcaster's equivalent of a mock-up or storyboard for a visually-based multimodal project, such as a poster or TV ad.)"
+  },
+  {
+   "source_id": "a6ddf6c2-67e6-4ab0-817d-0e70e6212dd6",
+   "citation_number": 65,
+   "cited_text": "2 OUTLINE \u2013 a basic plan and structure are prepared, leaving some room for spontaneity 3 AD LIB \u2013 presenters speak spontaneously and without any particular plan or direction While some podcasts are recordings of spontaneous conversations, most are not. They\u2019re  scripted. Even the ones that seem to be ad lib. It might surprise you to learn how many media and entertainment programs fit the same description. Scripting guarantees that you will convey your intended message and say everything you want  to say. It also ensures precise timing. Fully scripted podcast content is particularly effective in short form (10 minutes max)."
+  },
+  {
+   "source_id": "9bb8e007-e3e0-43a3-9387-a4ef00f20fc1",
+   "citation_number": 66,
+   "cited_text": "The relationship between narrative technique and audience intimacy has received particular attention in recent years. Lindgren ( 2021 ) analyzed award-winning podcasts to identify how emotional disclosure, conversational interviewing styles, and vulnerability create intimate connections between hosts and listeners, finding that these elements are not merely stylistic choices but strategic narrative techniques that enhance journalistic impact. Garc\u00eda de Torres et al. ( 2025 ) examine the ethical dimensions of this intimacy in news podcasts, noting both its potential to deepen engagement with complex issues and its risks of blurring boundaries between journalism and entertainment. Bird and Lindgren ( 2024 ) position podcast journalism as a site of \u201cstorytelling experimentation\u201d where traditional journalistic conventions are being reimagined through narrative innovation, while Dowling ( 2024 ) provides a critical assessment of both the promise and perils of this evolution, cautioning that narrative emphasis must be balanced with journalistic rigor. Dowling and Miller ( 2019 ) specifically analyze \u201cimmersive audio storytelling\u201d in documentary podcasts, identifying techniques such as scene-setting, sound design, and serialized revelation that create deeply engaging listening experiences comparable to prestige television."
+  },
+  {
+   "source_id": "9bb8e007-e3e0-43a3-9387-a4ef00f20fc1",
+   "citation_number": 67,
+   "cited_text": "For example, Drago\u0219 P\u0103traru in Vocea Na\u021biei and Micutzu in MCN Podcast cultivate a persona through repeated storytelling\u2014listeners come to know their quirks, values, and humor as if they were characters in a long-running story. This persona-driven narrative aligns with what Siobhan McHugh ( 2016a ) observed: that podcasting encourages a \u201cnew, more informal\u201d audio narrative centered on personal connection. Our study shows this is true not only in the U.S. or Western European context, but also in Romania. Even when dealing with journalistic content, Romanian podcasters tend to eschew the impersonal tone of traditional media in favor of an accessible, first-person approach. This suggests a broader shift in digital journalism\u2014one in which authentic voice and personal storytelling are increasingly valued as tools to engage an audience that may be skeptical of overly formal or institutional media tones."
+  }
+ ]
+}

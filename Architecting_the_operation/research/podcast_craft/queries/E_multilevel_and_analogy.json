@@ -1,0 +1,551 @@
+{
+ "answer": "Grounding instructional design in Cognitive Load Theory (CLT), Cognitive Theory of Multimedia Learning (CTML), and analogical reasoning research provides clear, evidence-based guidance regarding multi-level explanations and analogy design.\n\n---\n\n### Section 1: Explaining Concepts at Multiple Difficulty Levels (e.g., WIRED *5 Levels* Format)\n\n#### 1. Educational Value vs. Cognitive Risks\nThe WIRED *5 Levels* format (where an expert explains a single concept sequentially to five individuals: a child, a teenager, an undergraduate, a graduate student, and a peer expert) is popular in science communication [1-3]. However, cognitive science research reveals that presenting multi-level explanations in a single continuous stream carries severe instructional trade-offs:\n\n* **For Novice / Intermediate Listeners (Information Overload & Seductive Redundancy)**:\n  * *Mechanism*: Progressing into graduate- or expert-level explanations imposes extreme **intrinsic cognitive load** on non-experts because they lack the long-term memory schemas required to process high element interactivity material [4-7].\n  * *Evidentiary Basis & Specific Studies*: \n    * **Controlled Experiment & Qualitative Interview Data**: Davis, Lee, Vincent, & Lee (2026) conducted a controlled experiment (\\\\(N=62\\\\)) evaluating educational video podcasts [8, 9]. Qualitative interviews revealed that adding advanced elaborations or non-essential details overwhelmed students, causing information overload and confusion rather than deeper understanding [10, 11].\n    * **Controlled Experiments**: Mayer, Heiser, & Lonn (2001) [12-14] and Leahy, Chandler, & Sweller (2003) [15, 16] demonstrate that adding unneeded or complex details to instruction increases extraneous load and impairs learning outcomes.\n\n* **For Advanced / Expert Listeners (The Expertise Reversal Effect)**:\n  * *Mechanism*: Instructional support and simplified explanations designed for novices become redundant and counter-productive as learner expertise increases [5, 17-19]. When knowledgeable listeners are exposed to elementary explanations or basic analogies, they cannot simply ignore them; they are forced to mentally cross-reference and reconcile the external simplified guidance with their existing, highly integrated internal schemas [5, 19]. This cross-checking wastes working memory capacity and creates extraneous cognitive load [5, 18, 19].\n  * *Evidentiary Basis & Specific Studies*:\n    * **Controlled Experiments**: Kalyuga, Ayres, Chandler, & Sweller (2003) [5, 20, 21], Kalyuga & Sweller (2004) [22], and Oksa, Kalyuga, & Chandler (2010) [22, 23]. Oksa et al. demonstrated that expert readers suffered higher subjective cognitive load and lower performance when provided with simplified explanatory notes alongside Shakespearean text, whereas novices benefited [23].\n    * **Controlled Experiments on Segmentation**: Spanjers, Wouters, van Gog, & van Merri\u00ebnboer (2011) [24, 25] found an expertise reversal effect where low-knowledge learners benefited from segmented instruction, but high-knowledge learners experienced higher mental effort under segmentation compared to continuous presentation.\n\n#### 2. Disagreements & Thin Evidence Areas\n* **Practitioner Experience vs. Cognitive Science**:\n  * *Practitioner / Media View*: Media producers (e.g., Storythings / *Formats Unpacked*, 2023) highlight observational platform data showing that multi-level videos garner millions of views [26, 27]. They argue the format acts as a structural \"scaffolding\" or dropping-in mechanism where diverse audiences can find an entry point or appreciate the progression of an idea [2, 28-30]. Popular lore often cites the \"Feynman Technique\" or Albert Einstein quotes (\"If you can't explain it simply, you don't understand it\") as justification for multi-level simplification [1, 31, 32].\n  * *Cognitive Science View*: Cognitive load theorists (Sweller, Kalyuga, Mayer) argue that presenting four or five difficulty levels in a non-adaptive, single continuous stream creates an **Aptitude-by-Treatment Interaction (ATI)** where no single audience segment receives optimal instruction\u2014novices are overloaded by the dissertation-level material, and experts are distracted and slowed down by the elementary-level material [33-36].\n* **Thinness of Evidence**: **Direct controlled experimental research evaluating the WIRED *5 Levels* format as a unified audio podcasting technique is nonexistent.** Existing evidence consists of media analytics (observational) and individual cognitive load experiments on isolated expertise levels (controlled laboratory studies).\n\n---\n\n### Section 2: Designing Analogies (Structure-Mapping & Teaching-With-Analogies)\n\n#### 1. Structure-Mapping Theory (Dedre Gentner)\n* **Mechanism**:\n  * Structural alignment involves mapping a well-understood **base/analog domain** onto an unfamiliar **target domain** [37-39].\n  * **Relational Commonalities over Surface Attributes**: Gentner (1983, 1997, 2003) established that effective analogies map **systems of interconnected relationships** (higher-order causal structures) rather than superficial object features [38, 40-42]. For example, in comparing an electric circuit to a water circuit, what maps are the relational dynamics (voltage/pressure driving current/flow through resistance/narrow pipes), not physical properties like color, shape, or material [37, 38, 41, 43].\n  * **The Systematicity Principle**: Relations that belong to an interconnected system of mutually binding relationships are far more likely to be successfully imported into the target domain than isolated surface facts [40, 44, 45].\n  * **Analogical Encoding**: Explicitly asking learners to compare two analogous cases fosters the abstraction of a common relational schema, facilitating transfer to new problems [46, 47].\n* **Evidentiary Basis & Specific Studies**:\n  * **Controlled Experiments**: Gentner (1983) [48], Gentner & Toupin (1986) [49, 50], Gentner & Markman (1997) [51, 52], and Gentner, Loewenstein, & Thompson (2003) [47, 53]. Gentner et al. (2003) showed in a controlled study that management students who explicitly compared two analogical cases were nearly three times more likely to transfer the underlying strategy than those who analyzed the cases separately [47].\n\n#### 2. The Teaching-With-Analogies (TWA) Model (Shawn M. Glynn)\n* **Mechanism & The 6-Step Model**:\n  * Developed by Shawn M. Glynn (1991, 1998, 2004, 2007) to provide a systematic, six-step framework for introducing instructional analogies in science and multimedia [54-57]:\n    1. **Introduce the target concept** [56, 58].\n    2. **Review/cue retrieval of the analog concept** [56, 58].\n    3. **Identify relevant features** of both target and analog [56, 58].\n    4. **Map similarities** between target and analog [56, 58].\n    5. **Indicate explicitly where the analogy breaks down (limitations)** [58, 59].\n    6. **Draw conclusions** about the target concept [58, 59].\n* **Why Stating Breakdown Points Is Essential**:\n  * Analogies are \"double-edged swords\" (Duit et al., 2001) [60]. Because analogies map relationships, unaddressed differences can lead learners to incorrectly map non-analogous base features onto the target concept, creating persistent misconceptions [60-62].\n  * *Specific Examples from Research*:\n    * **Glynn (2004/2008)** illustrates TWA using Newton's law of gravity (analog) and Coulomb's law of electrical force (target) [59, 63]. The teacher explicitly warns where the analogy breaks down: gravitational force only attracts, whereas electrical force can attract or repel; additionally, the gravitational constant \\\\(G\\\\) is tiny, while the electrical constant \\\\(k\\\\) is huge [59, 61, 63].\n    * **Taber (2013)** (*Upper secondary students' understanding of analogous atomic and solar systems*): Demonstrated that using the solar system as an analog for the atom led students to mistakenly believe electrostatic forces decay or operate identically to gravity or that electrons follow literal rigid orbits, unless teachers explicitly instruct where the physical model breaks down [64-67].\n* **Evidentiary Basis & Specific Studies**:\n  * **Controlled Experiments & Cognitive Task Analyses**: Glynn & Takahashi (1998) [68] and Paris & Glynn (2004) [69, 70] conducted controlled evaluations showing that elaborate analogies following the TWA model significantly increased conceptual retention and student interest compared to simple, unmapped assertions (e.g., \"a cell is like a factory\") [69, 70].\n  * **Observational & Diagnostic Science Education Studies**: Duit (1991) [71], Duit et al. (2001) [60, 72], Harrison & Treagust (1994) [73], Thiele & Treagust (1994, 1995) [74, 75], and Taber (2013) [64, 76] document how analogies are used in textbooks and classrooms, confirming that omitting breakdown points frequently generates erroneous mental models.\n\n#### 3. Evidence Thinness, Disagreements, & Methodological Caveats\n* **The \"Analog Familiarity\" Assumption**:\n  * *Constraint*: Both Gentner's Structure-Mapping Theory and Glynn's TWA model assume the learner thoroughly understands the base/analog concept [40, 77]. \n  * *Evidence Gap / Disagreement*: **Taber (2013) (Observational/Diagnostic Study)** demonstrated empirically that students often hold deep alternative conceptions about the *analog itself* (e.g., holding non-canonical physics beliefs about how gravity works in the solar system) [77, 78]. When the analog is misunderstood, mapping it onto a new target concept compounds misconceptions rather than resolving them [67, 77].\n* **Audio-Only Modality Limitations**:\n  * *Evidence Gap*: Most TWA and Gentner studies evaluate printed text, visual diagrams, or interactive computer simulations [47, 79-81]. In **audio-only formats**, analogies rely entirely on verbal descriptions without visual support. As **Davis et al. (2026) (Controlled Experiment)** observed, complex verbal elaborations without visual diagrams can overload working memory [10, 51].\n\n---\n\n\ud83d\udca1 **Next Steps**: Would you like to draft a script review checklist that operationalizes the 6-step Teaching-With-Analogies (TWA) framework and cognitive load boundaries for your upcoming episode drafts?",
+ "conversation_id": "010d7602-fa56-4f97-89a1-ed8539e8ebe5",
+ "sources_used": [
+  "a2da6e27-a294-4f1b-8316-bb71e309dbd1",
+  "79b9a2a8-e3a2-4cc7-933b-391215351147",
+  "422cc73b-8bd9-4571-96b5-0a812c80f4dd",
+  "d986a0e4-e813-42cc-8bec-957290a4cb3a",
+  "7c51dc4e-a259-4e73-a94c-072fc03537f5",
+  "3157c6e0-4666-4633-8b22-17bdc0dcb44e",
+  "05f3b0e5-6da1-4036-b377-85dd6867a77d",
+  "9078c444-93c4-476c-b9e0-5f26c232861f",
+  "32e3ad88-50f0-42ec-8ab1-dcfa04be8f4c",
+  "a052abd3-9824-4eea-9845-f13a2048df3c",
+  "7da7eed0-3995-4771-a522-e7dca0992971",
+  "6e955ae6-1d34-41c5-958d-ed00a1315554",
+  "c862bcd1-f812-4330-83ec-e79619de3905",
+  "7ecd7c43-8dc6-4279-a6d7-df82984fa59b",
+  "217867e3-21bd-4789-96f3-6ce2ad538489",
+  "5406482d-27dc-4c84-b3e3-fab4a9bd2963",
+  "81d88c79-52df-41c5-a0c1-2a30fd080a6b",
+  "1c1dbe1e-73a0-4a43-a114-09d75f3b9ab2",
+  "69aa7314-3c7a-4768-89d5-6272f4a2b528",
+  "e2aced3c-9d54-44ce-96da-56acc7fe42bc",
+  "c3cc522f-0d9a-4bc6-bcef-f7e62cbd5f2f"
+ ],
+ "citations": {
+  "1": "a2da6e27-a294-4f1b-8316-bb71e309dbd1",
+  "2": "a2da6e27-a294-4f1b-8316-bb71e309dbd1",
+  "3": "79b9a2a8-e3a2-4cc7-933b-391215351147",
+  "4": "422cc73b-8bd9-4571-96b5-0a812c80f4dd",
+  "5": "d986a0e4-e813-42cc-8bec-957290a4cb3a",
+  "6": "7c51dc4e-a259-4e73-a94c-072fc03537f5",
+  "7": "7c51dc4e-a259-4e73-a94c-072fc03537f5",
+  "8": "422cc73b-8bd9-4571-96b5-0a812c80f4dd",
+  "9": "422cc73b-8bd9-4571-96b5-0a812c80f4dd",
+  "10": "422cc73b-8bd9-4571-96b5-0a812c80f4dd",
+  "11": "422cc73b-8bd9-4571-96b5-0a812c80f4dd",
+  "12": "3157c6e0-4666-4633-8b22-17bdc0dcb44e",
+  "13": "05f3b0e5-6da1-4036-b377-85dd6867a77d",
+  "14": "9078c444-93c4-476c-b9e0-5f26c232861f",
+  "15": "7c51dc4e-a259-4e73-a94c-072fc03537f5",
+  "16": "7c51dc4e-a259-4e73-a94c-072fc03537f5",
+  "17": "32e3ad88-50f0-42ec-8ab1-dcfa04be8f4c",
+  "18": "3157c6e0-4666-4633-8b22-17bdc0dcb44e",
+  "19": "3157c6e0-4666-4633-8b22-17bdc0dcb44e",
+  "20": "3157c6e0-4666-4633-8b22-17bdc0dcb44e",
+  "21": "a052abd3-9824-4eea-9845-f13a2048df3c",
+  "22": "7da7eed0-3995-4771-a522-e7dca0992971",
+  "23": "3157c6e0-4666-4633-8b22-17bdc0dcb44e",
+  "24": "7da7eed0-3995-4771-a522-e7dca0992971",
+  "25": "d986a0e4-e813-42cc-8bec-957290a4cb3a",
+  "26": "6e955ae6-1d34-41c5-958d-ed00a1315554",
+  "27": "6e955ae6-1d34-41c5-958d-ed00a1315554",
+  "28": "a2da6e27-a294-4f1b-8316-bb71e309dbd1",
+  "29": "6e955ae6-1d34-41c5-958d-ed00a1315554",
+  "30": "6e955ae6-1d34-41c5-958d-ed00a1315554",
+  "31": "c862bcd1-f812-4330-83ec-e79619de3905",
+  "32": "6e955ae6-1d34-41c5-958d-ed00a1315554",
+  "33": "3157c6e0-4666-4633-8b22-17bdc0dcb44e",
+  "34": "d986a0e4-e813-42cc-8bec-957290a4cb3a",
+  "35": "7ecd7c43-8dc6-4279-a6d7-df82984fa59b",
+  "36": "7c51dc4e-a259-4e73-a94c-072fc03537f5",
+  "37": "217867e3-21bd-4789-96f3-6ce2ad538489",
+  "38": "217867e3-21bd-4789-96f3-6ce2ad538489",
+  "39": "5406482d-27dc-4c84-b3e3-fab4a9bd2963",
+  "40": "217867e3-21bd-4789-96f3-6ce2ad538489",
+  "41": "5406482d-27dc-4c84-b3e3-fab4a9bd2963",
+  "42": "5406482d-27dc-4c84-b3e3-fab4a9bd2963",
+  "43": "5406482d-27dc-4c84-b3e3-fab4a9bd2963",
+  "44": "5406482d-27dc-4c84-b3e3-fab4a9bd2963",
+  "45": "5406482d-27dc-4c84-b3e3-fab4a9bd2963",
+  "46": "217867e3-21bd-4789-96f3-6ce2ad538489",
+  "47": "217867e3-21bd-4789-96f3-6ce2ad538489",
+  "48": "5406482d-27dc-4c84-b3e3-fab4a9bd2963",
+  "49": "217867e3-21bd-4789-96f3-6ce2ad538489",
+  "50": "217867e3-21bd-4789-96f3-6ce2ad538489",
+  "51": "422cc73b-8bd9-4571-96b5-0a812c80f4dd",
+  "52": "81d88c79-52df-41c5-a0c1-2a30fd080a6b",
+  "53": "a052abd3-9824-4eea-9845-f13a2048df3c",
+  "54": "1c1dbe1e-73a0-4a43-a114-09d75f3b9ab2",
+  "55": "1c1dbe1e-73a0-4a43-a114-09d75f3b9ab2",
+  "56": "1c1dbe1e-73a0-4a43-a114-09d75f3b9ab2",
+  "57": "69aa7314-3c7a-4768-89d5-6272f4a2b528",
+  "58": "69aa7314-3c7a-4768-89d5-6272f4a2b528",
+  "59": "1c1dbe1e-73a0-4a43-a114-09d75f3b9ab2",
+  "60": "1c1dbe1e-73a0-4a43-a114-09d75f3b9ab2",
+  "61": "1c1dbe1e-73a0-4a43-a114-09d75f3b9ab2",
+  "62": "e2aced3c-9d54-44ce-96da-56acc7fe42bc",
+  "63": "1c1dbe1e-73a0-4a43-a114-09d75f3b9ab2",
+  "64": "c3cc522f-0d9a-4bc6-bcef-f7e62cbd5f2f",
+  "65": "c3cc522f-0d9a-4bc6-bcef-f7e62cbd5f2f",
+  "66": "c3cc522f-0d9a-4bc6-bcef-f7e62cbd5f2f",
+  "67": "c3cc522f-0d9a-4bc6-bcef-f7e62cbd5f2f",
+  "68": "1c1dbe1e-73a0-4a43-a114-09d75f3b9ab2",
+  "69": "1c1dbe1e-73a0-4a43-a114-09d75f3b9ab2",
+  "70": "1c1dbe1e-73a0-4a43-a114-09d75f3b9ab2",
+  "71": "1c1dbe1e-73a0-4a43-a114-09d75f3b9ab2",
+  "72": "1c1dbe1e-73a0-4a43-a114-09d75f3b9ab2",
+  "73": "e2aced3c-9d54-44ce-96da-56acc7fe42bc",
+  "74": "e2aced3c-9d54-44ce-96da-56acc7fe42bc",
+  "75": "e2aced3c-9d54-44ce-96da-56acc7fe42bc",
+  "76": "c3cc522f-0d9a-4bc6-bcef-f7e62cbd5f2f",
+  "77": "c3cc522f-0d9a-4bc6-bcef-f7e62cbd5f2f",
+  "78": "c3cc522f-0d9a-4bc6-bcef-f7e62cbd5f2f",
+  "79": "1c1dbe1e-73a0-4a43-a114-09d75f3b9ab2",
+  "80": "1c1dbe1e-73a0-4a43-a114-09d75f3b9ab2",
+  "81": "1c1dbe1e-73a0-4a43-a114-09d75f3b9ab2"
+ },
+ "references": [
+  {
+   "source_id": "a2da6e27-a294-4f1b-8316-bb71e309dbd1",
+   "citation_number": 1,
+   "cited_text": "5 Levels of Science Communication by Wired \u2013 Inside Science Resources Skip to content HOME ABOUT CONTRIBUTORS ALA CONNECT CONTACT US Login/Logout X/TWITTER CONTACT US ALA CONNECT Inside Science Resources ACRL/STS STEMM Librarianship Resources Committee Primary Menu Artificial Intelligence Data Science DEI Information Literacy Open Access Publishing Reader's Advisory Tools & Resources Search Search for: Search STEMM 5 Levels of Science Communication by Wired Wired: Five Levels Home Page Most of us can use help understanding a scientific concept at some point. There are popular quotes attributed to Albert Einstein and Richard Feynman espousing the opinion that if you cannot explain something simply, or to a six year old, you do not really understand it. Even if the words were not uttered by the eminent physicists, I imagine the logic behind them, the value of being able to chunk down a topic into bite sized bits that can be stitched together to form a complete pattern, would not produce much disagreement."
+  },
+  {
+   "source_id": "a2da6e27-a294-4f1b-8316-bb71e309dbd1",
+   "citation_number": 2,
+   "cited_text": "Text: challenged to explain a topic to 5 people Five Levels is a site with a series of videos that helps helps us to get a better grip on a concept. The videos feature a different academic expert on a topic discussing it with users at five different levels of understanding: 1) primary school child 2) young high school student 3) college student 4) graduate student in the topic discipline 5) an expert in the topic. Neuroscientist Bobby Kashturi explaining the connectome to a 5 year old I do not find that it is a difference in explanation that is shown in the five levels. It is more a different conversation: speaking about the subject in different ways, perhaps gaining more insight as we go along, which is possibly the whole point of the different levels of explanation."
+  },
+  {
+   "source_id": "79b9a2a8-e3a2-4cc7-933b-391215351147",
+   "citation_number": 3,
+   "cited_text": "The picture is not a second copy of the paragraph. It holds the system in view while the words explain the relations. What is this? Report Ad Practical dual coding strategies Useful strategies make the connection visible and ask learners to use it. Build representations in stages, label them directly, align comparisons and move between a visual and subject-specific prose. Retrieval can then test whether the relationship is remembered. This is the same evidence-to-classroom test used in our guide to Rosenshine's principles ."
+  },
+  {
+   "source_id": "422cc73b-8bd9-4571-96b5-0a812c80f4dd",
+   "citation_number": 4,
+   "cited_text": "Since working memory capacity is typically treated as an individual-difference measure, cognitive load theory (CLT) provides a framework guiding material design under these constraints. In the CLT framework, cognitive processing comprises three types: intrinsic, extraneous, and germane ( Sweller, 2010 ). Intrinsic cognitive load reflects the inherent difficulty of information, which varies individually due to prior knowledge, whereas extraneous cognitive load results from poorly designed environments that hinder schema construction or automation ( Paas et al., 2004 ; Kalyuga, 2011 ; Mayer, 2011 ). Germane cognitive load allows working memory to activate schemas and integrate information into long-term memory ( Sweller, 2010 ). The relationship between cognitive load and mental processing is not straightforward, as working memory operates under strict limitations and different forms of cognitive load interact dynamically. Because intrinsic and extraneous cognitive load are additive, changes in task complexity or instructional design can shift total load imposed on learners ( Leppink et al., 2015 )."
+  },
+  {
+   "source_id": "d986a0e4-e813-42cc-8bec-957290a4cb3a",
+   "citation_number": 5,
+   "cited_text": "Low-knowledge learners lack schema-based knowledge in the target domain and so this guidance comes from instructional supports, which help reduce the cognitive load associated with novel tasks. If the instruction fails to provide guidance, low-knowledge learners often resort to inefficient problem-solving strategies that overwhelm working memory and increase cognitive load. Thus, low-knowledge learners benefit more from well-guided instruction than from reduced guidance. [1] In contrast, higher-knowledge learners enter the situation with schema-based knowledge, which provides internal guidance. If additional instructional guidance is provided it can result in the processing of redundant information and increased cognitive load. \"Learners would have to relate and reconcile the related components of available long-term memory base and externally provided guidance. Such integration processes may impose an additional working memory load and reduce resources available for learning new knowledge.\" [1] In this case, the external guidance becomes redundant relative to the learner's internal schemas and is less beneficial than a reduced-guidance technique."
+  },
+  {
+   "source_id": "7c51dc4e-a259-4e73-a94c-072fc03537f5",
+   "citation_number": 6,
+   "cited_text": "reliant on the learner\u2019s prior exposure and experience in the learning domain. If the student has well-established schemas for the problem\u2019s solution, those schemas will incorporate high element interactivity material within them, reducing intrinsic cognitive load. As a consequence of the overall reduction in cognitive load, presentation of the problem in a way that decreases extraneous cognitive load may make no noticeable difference to understanding. However, when a person is inexperienced in a domain, and therefore many"
+  },
+  {
+   "source_id": "7c51dc4e-a259-4e73-a94c-072fc03537f5",
+   "citation_number": 7,
+   "cited_text": "tested in Experiment 2. Since both the modality and redundancy effects are cognitive load phenomena, it was further predicted that the effects would be more pronounced using high rather than low element interactivity material. The instructional material used in the experiments involved the interpreting of a simultaneous (two-day line) temperature graph. While the various effects tested in these experiments are all well established, the critical interactions between the effects are not. These interactions provide the major rationale for"
+  },
+  {
+   "source_id": "422cc73b-8bd9-4571-96b5-0a812c80f4dd",
+   "citation_number": 8,
+   "cited_text": "\uf034 \uf034 \uf034 Column Width: \uf035 \uf035 \uf035 Background: Open Access Article Cognitive Load and Working Memory in Multimedia Video Podcasts: Effects of Elaborative and Seductive Details by Robert O. Davis Robert O. Davis SciProfiles Scilit Preprints.org Google Scholar 1 , Yong-Jik Lee Yong-Jik Lee SciProfiles Scilit Preprints.org Google Scholar 2,* , Joseph Vincent Joseph Vincent SciProfiles Scilit Preprints.org Google Scholar 3 and Ji Hae Lee Ji Hae Lee SciProfiles Scilit Preprints.org Google Scholar 1 1 Department of Education, Chonnam National University, Gwangju 61186, Republic of Korea 2"
+  },
+  {
+   "source_id": "422cc73b-8bd9-4571-96b5-0a812c80f4dd",
+   "citation_number": 9,
+   "cited_text": "\u00a9 2026 by the authors. Licensee MDPI, Basel, Switzerland. This article is an open access article distributed under the terms and conditions of the Creative Commons Attribution (CC BY) license . Share and Cite MDPI and ACS Style Davis, R.O.; Lee, Y.-J.; Vincent, J.; Lee, J.H. Cognitive Load and Working Memory in Multimedia Video Podcasts: Effects of Elaborative and Seductive Details. J. Intell. 2026 , 14 , 74. https://doi.org/10.3390/jintelligence14050074 AMA Style Davis RO, Lee Y-J, Vincent J, Lee JH. Cognitive Load and Working Memory in Multimedia Video Podcasts: Effects of Elaborative and Seductive Details. Journal of Intelligence . 2026; 14(5):74. https://doi.org/10.3390/jintelligence14050074"
+  },
+  {
+   "source_id": "422cc73b-8bd9-4571-96b5-0a812c80f4dd",
+   "citation_number": 10,
+   "cited_text": "Interview participants in the elaborative details condition displayed similar challenges, despite elaborative details being designed to facilitate comprehension. S5 stated that the explanation made difficult to follow and contributed to a sense of information overload. He stated: \u201cI think the podcast was interesting, but sometimes it had a lot of topics, making it a little bit complicated.\u201d This suggests the elaborative verbal information was at times overwhelming. Similarly, S6 expressed confusion about the formation and movement of positive and negative charges inside the cloud: \u201cI couldn't quite grasp how positive and negative charges are formed inside the cloud. Without images, I don't think I'd have understood anything.\u201d This indicates that elaborative content did not promote deeper understanding. S4's interview further reinforced this pattern: although she found the drawings helpful, she reported: \u201cI thought it was harder to follow when there wasn't a drawing. There should be more drawings or animations throughout the whole video,\u201d suggesting that pictures were more important than elaborative verbal explanations for recall."
+  },
+  {
+   "source_id": "422cc73b-8bd9-4571-96b5-0a812c80f4dd",
+   "citation_number": 11,
+   "cited_text": "The absence of differences in cognitive load between conditions reinforces this interpretation. Despite the inclusion of a seductive details condition, intrinsic, extraneous, and germane cognitive load did not differ significantly across conditions. From a cognitive load perspective, seductive details are expected to increase extraneous cognitive load by drawing attention and processing away from essential content ( Harp & Mayer, 1998 ; Mayer, 2020 ). However, the absence of significant differences in quantitative data warrants nuanced exploration based on qualitative data. Interview data revealed that students in the elaborative details and seductive details conditions felt overwhelmed at times with scientific terminology and additional information. Although quantitative and qualitative data appear contradictory, the qualitative data revealed that many students found visual supports key to understanding the information. Because working memory and cognitive load are intertwined, the design of the video podcast according to the modality principle and dual-channel processing may have prevented students from experiencing significant extraneous load, as offloading verbal narration to the auditory channel may have freed sufficient visual channel capacity to maintain coherent mental models despite the additive details ( Mayer & Moreno, 2003 ). Students routinely mentioned in interviews the need for visual information to understand the narration better, and as advanced-level second language users, students may have relied heavily on the visual channel to maintain coherent mental models. Future research may explore elaborative details and seductive details without illustrations to understand if these conditions affect working memory or cognitive load."
+  },
+  {
+   "source_id": "3157c6e0-4666-4633-8b22-17bdc0dcb44e",
+   "citation_number": 12,
+   "cited_text": "Kirschner PA, Sweller J and Clark RE (2006) Why minimal guidance during instruction does not work: An analysis of the failure of constructivist, discovery, problem-based, experiential, and inquiry-based teaching. Educational Psychologist 41(2): 75\u201386. Mayer RE, Heiser J and Lonn S (2001) Cognitive constraints on multimedia learning: When presenting more material results in less understanding. Journal of Educational Psychology 93: 187\u2013198. N\u00fcckles M, H\u00fcbner S, D\u00fcmer S et al. (2010) Expertise reversal effects in writing-to-learn. Instructional Science 38(3): 237\u2013258."
+  },
+  {
+   "source_id": "05f3b0e5-6da1-4036-b377-85dd6867a77d",
+   "citation_number": 13,
+   "cited_text": "Signaling emphasizes key points can aid in knowledge retention for frontline employees who might need to access information rapidly during their day-to-day tasks. By clearly indicating what is crucial to focus on, learners can process and retain the material more effectively. 4. Redundancy What is Mayer's Redundancy principle? Mayer's redundancy principle dictates that people learn better from graphics + narration than from graphics + narration + text. Redundancy refers to the repetition of information where it's unnecessary, through both auditory and visual channels. While some redundancy can be beneficial, an excessive amount can lead to cognitive overload which negatively impacts learning."
+  },
+  {
+   "source_id": "9078c444-93c4-476c-b9e0-5f26c232861f",
+   "citation_number": 14,
+   "cited_text": "Get access Share   Cite Summary Extraneous processing occurs when suboptimal instructional design causes learners to engage in cognitive processing irrelevant to the instructional goal. This chapter explores five principles for reducing extraneous processing in multimedia learning: coherence, signaling, redundancy, spatial contiguity, and temporal contiguity. The coherence principle is that people learn better when extraneous information is excluded from multimedia lessons. The signaling principle is that people learn better when cues are added to highlight the organization of the essential information. The redundancy principle is that people learn better when multimedia lessons include graphics and spoken text rather than graphics, spoken text, and printed text. The spatial contiguity principle is that people learn better when words and corresponding graphics are physically integrated rather than separated. The temporal contiguity principle is that people learn better when words and corresponding graphics are presented simultaneously rather than sequentially."
+  },
+  {
+   "source_id": "7c51dc4e-a259-4e73-a94c-072fc03537f5",
+   "citation_number": 15,
+   "cited_text": "material. If both auditory and visual sections are essential for understanding, then an audio with visual presentation should be superior to a visual-only presentation. This hypothesis was tested in Experiment 1. Alternatively, if the auditory and visual components conformed to a redundancy paradigm with the auditory component merely recapitulating and adding no new information to that provided in the visual component, the audio-visual presentation should be inferior to a visual-only presentation. The second hypothesis was"
+  },
+  {
+   "source_id": "7c51dc4e-a259-4e73-a94c-072fc03537f5",
+   "citation_number": 16,
+   "cited_text": "essential for understanding and therefore redundant. The first group, despite spending less than half the time studying the instructions than the second group, performed at a superior level demonstrating a clear redundancy effect. GENERAL DISCUSSION The two experiments conducted for this paper were generated by some of the hypotheses that flow from cognitive load theory. The theory proposes that instructional consequences originate from the limitations of human cognitive capacity. We can only process a very"
+  },
+  {
+   "source_id": "32e3ad88-50f0-42ec-8ab1-dcfa04be8f4c",
+   "citation_number": 17,
+   "cited_text": "The \u2018expertise reversal effect\u2019 The \u2018expertise reversal effect\u2019 is an important exception to the worked example effect. According to the expertise reversal effect, the heavy use of worked examples becomes less and less effective as learners\u2019 expertise increases, eventually becoming redundant7 or even counter-productive to learning outcomes (Leslie et al. 2012; Pachman, Sweller & Kalyuga 2013; Yeung, Jin & Sweller 1998). This means that some instructional procedures such as worked examples, which assist learning for novices because they reduce cognitive load, are not effective for teaching more expert learners. While cognitive load theory supports fully guided instruction for novice learners, it also supports the gradual incorporation of more independent problem-solving tasks as learners gain expertise."
+  },
+  {
+   "source_id": "3157c6e0-4666-4633-8b22-17bdc0dcb44e",
+   "citation_number": 18,
+   "cited_text": "You are here: Home > Impact Articles > Expertise Reversal Effect and its Instructional Implications No products in the basket. \u00a3 0.00 0 Basket Expertise Reversal Effect and its Instructional Implications Perspective Article Written by: Slava Kalyuga Published on: September 12, 2018 Cognitive science 9 min read Cognitive load theory Abbreviated to CLT, the idea that working memory is limited and that overloading it can have a negative impact on learning, and that instruction should be designed to take this into account has led to the development of many instructional techniques for enhancing learning that are designed to prevent learners from overloading their working memory by eliminating wasteful cognitive load that is not essential for learning. However, the effectiveness of a particular teaching technique depends on the relationship between the characteristics of learners' cognitive processes and their domain-specific knowledge base. As such, a technique that reduces working memory load for low-knowledge learners (e.g. by providing strong instructional support) might lose its effectiveness and may even bring negative consequences for more knowledgeable learners; they may learn better in an environment with minimal guidance. This is known as the expertise reversal effect, and is explained by the cognitive overload that learners may experience with a particular technique at a specific expertise level."
+  },
+  {
+   "source_id": "3157c6e0-4666-4633-8b22-17bdc0dcb44e",
+   "citation_number": 19,
+   "cited_text": "Accordingly, the level of cognitive load and its classification as intrinsic or extraneous load are relative to the learner's expertise level. Therefore, the effectiveness of the same learning materials will vary as a result of different levels of prior knowledge. For instance, when experts deal with a familiar type of problem, relevant schemas and routine problem-solving procedures are activated for working out the solution. This generates intrinsic load, which is essential for solving the problem. Studying worked examples may require experts to cross-reference external support materials with already-learned procedures. They could therefore be distracted from fluent cognitive processing that takes full advantage of their existing knowledge structures and could have working memory overloaded by additional, extraneous activities. In contrast, learning may be more effective for novices when they are provided with direct and complete instructional support \u2013 for example, in the form of worked examples with detailed solution steps (Renkl, 2005). This may prevent extraneous search-based activities and generate productive intrinsic load, essential for constructing missing schemas."
+  },
+  {
+   "source_id": "3157c6e0-4666-4633-8b22-17bdc0dcb44e",
+   "citation_number": 20,
+   "cited_text": "These two types of load compete for working memory resources during learning activities. Cognitive resources consumed by extraneous load might leave insufficient working memory capacity for dealing with the intrinsic load that is essential for learning. Therefore, efficient instructional design should prevent extraneous load and leave as much working memory resource as possible for maximising intrinsic load. The expertise reversal effect The expertise reversal effect occurs when the relative effectiveness of different learning conditions reverses with changes in the level of learner expertise. It should be noted that the term 'expertise', in this context, refers to narrow, task-specific expertise rather than genuine high-level professional expertise. In cognitive load theory, the term typically indicates relative standing in the low\u2013high knowledge continuum when referring to learners with more advanced knowledge in a specific area (Kalyuga, 2007)."
+  },
+  {
+   "source_id": "a052abd3-9824-4eea-9845-f13a2048df3c",
+   "citation_number": 21,
+   "cited_text": "Kalyuga ,  S. ,  Ayres ,  P. ,  Chandler ,  P. , &  Sweller ,  J.  ( 2003 ).  The expertise reversal effect .  Educational Psychologist , 38 ,  23 \u2013 31 . Google Scholar Kalyuga ,  S. ,  Chandler ,  P. , &  Sweller ,  J.  ( 1998 ).  Levels of expertise and instructional design .  Human Factors , 40 ,  1 \u2013 17 . Google Scholar Kalyuga ,  S. ,  Chandler ,  P. , &  Sweller ,  J.  ( 1999 ).  Managing split-attention and redundancy in multimedia instruction .  Applied Cognitive Psychology , 13 ,  351 \u2013 371 . Google Scholar Kirschner ,  P. A. ,  Ayres ,  P. , &  Chandler ,  P.  ( 2011 ).  Contemporary cognitive load theory research: The good, the bad and the ugly .  Computers in Human Behavior , 27 ( 1 ),  99 \u2013 105 . Google Scholar Leahy ,  W. , &  Sweller ,  J.  ( 2008 ).  The imagination effect increases with an increased intrinsic cognitive load .  Applied Cognitive Psychology , 22 ,  273 \u2013 283 . Google Scholar Leahy ,  W. , &  Sweller ,  J.  ( 2019 ).  The centrality of element interactivity to cognitive load theory . In  Tindall-Ford ,  S. ,  Agostinho ,  S. , &  Sweller ,  J.  (eds.),  Advances in Cognitive Load Theory: Rethinking Teaching  (pp.  221 \u2013 232 ).  Abingdon :  Routledge . Google Scholar Lee ,  C. H. , &  Kalyuga ,  S.  ( 2011 ).  Effectiveness of different pinyin presentation formats in learning Chinese characters: A cognitive load perspective .  Language Learning , 61 ,  1099 \u2013 1118 . Google Scholar Leppink ,  J. ,  Paas ,  F. ,  van der Vleuten ,  C. P. M. ,  van Gog ,  T. , &  van Merri\u00ebnboer ,  J. J. G.  ( 2013 ).  Development of an instrument for measuring different types of cognitive load .  Behavior Research Methods , 45 ,  1058 \u2013 1072 . Google Scholar Lin ,  J. J. H. ,  Lee ,  Y. H. ,  Wang ,  D. Y. , &  Lin ,  S. S. J.  ( 2016 ).  Reading subtitles and taking Enotes while learning scientific materials in a multimedia environment: Cognitive load perspectives on EFL students .  Educational Technology & Society , 19 ( 4 ),  47 \u2013 58 . Google Scholar Macken ,  L. , &  Ginns ,  P.  ( 2014 ).  Pointing and tracing gestures may enhance anatomy and physiology learning .  Medical Teacher , 36 ,  596 \u2013 601 . Google Scholar Makransky ,  G. ,  Terkildsen ,  T. S. , &  Mayer ,  R. E.  ( 2019 ).  Role of subjective and objective measures of cognitive processing during learning in explaining the spatial contiguity effect .  Learning and Instruction , 61 ,  23 \u2013 34 . Google Scholar Mayer ,  R. E.  ( 1989 ).  Systematic thinking fostered by illustrations in scientific text .  Journal of Educational Psychology , 81 ,  240 \u2013 246 . CrossRef Google Scholar Mayer ,  R. E.  ( 2001 ).  Multimedia Learning .  New York :  Cambridge University Press . Google Scholar Mayer ,  R. E.  ( 2020 a).  Multimedia Learning  ( 3rd  ed.).  New York :  Cambridge University Press . Google Scholar Mayer ,  R. E.  ( 2020 b).  Designing multimedia instruction in anatomy: An evidence-based approach .  Clinical Anatomy , 33 ,  2 \u2013 11 . Google Scholar Mayer ,  R. , &  Anderson ,  R.  ( 1991 ).  Animations need narrations: An experimental test of a dual-coding hypothesis .  Journal of Educational Psychology , 83 ,  484 \u2013 490 . Google Scholar Mayer ,  R. , &  Anderson ,  R.  ( 1992 ).  The instructive animation: Helping students build connections between words and pictures in multimedia learning .  Journal of Educational Psychology , 84 ,  444 \u2013 452 . Google Scholar Mayer ,  R. E. , &  Sims ,  V. K.  ( 1994 ).  For whom is a picture worth a thousand words? Extensions of a dual-coding theory of multimedia learning .  Journal of Educational Psychology , 86 ,  389 \u2013 401 . Google Scholar Mayer ,  R. E. ,  Steinhoff ,  K. ,  Bower ,  G. , &  Mars ,  R.  ( 1995 ).  A generative theory of textbook design: Using annotated illustrations to foster meaningful learning of science text .  Educational Technology Research, & Development , 43 ,  31 \u2013 43 . Google Scholar"
+  },
+  {
+   "source_id": "7da7eed0-3995-4771-a522-e7dca0992971",
+   "citation_number": 22,
+   "cited_text": "Kalyuga ,  S. , &  Renkl ,  A.  ( 2010 ).  Expertise reversal effect and its instructional implications .  Instructional Science ,  38 ,  209 \u2013 215 . 10.1007/s11251-009-9102-0 CrossRef Google Scholar Kalyuga ,  S. ,  Rikers ,  R. , &  Paas ,  F.  ( 2012 ).  Educational implications of expertise reversal effects in learning and performance of complex cognitive and sensorimotor skills .  Educational Psychology Review ,  24 ,  313 \u2013 337 . 10.1007/s10648-012-9195-x CrossRef Google Scholar Kalyuga ,  S. , &  Sweller ,  J.  ( 2004 ).  Measuring knowledge to optimize cognitive load factors during instruction .  Journal of Educational Psychology ,  96 ,  558 \u2013 568 . 10.1037/0022-0663.96.3.558 CrossRef Google Scholar Kalyuga ,  S. , &  Sweller ,  J.  ( 2005 ).  Rapid dynamic assessment of expertise to improve the efficiency of adaptive e-learning .  Educational Technology Research and Development ,  53 ,  83 \u2013 93 . 10.1007/BF02504800 CrossRef Google Scholar Koedinger ,  K. , &  Aleven ,  V.  ( 2007 ).  Exploring the assistance dilemma in experiments with cognitive tutors .  Educational Psychology Review ,  19 ,  239 \u2013 264 . 10.1007/s10648-007-9049-0 CrossRef Google Scholar Krause ,  U.-M. ,  Stark ,  R. , &  Mandl ,  H.  ( 2009 ).  The effects of cooperative learning and feedback on e-learning in statistics .  Learning and Instruction ,  19 ,  158 \u2013 170 . 10.1016/j.learninstruc.2008.03.003 CrossRef Google Scholar Kyun ,  S. A. ,  Kalyuga ,  S. , &  Sweller ,  J.  ( 2013 ).  The effect of worked examples when learning to write essays in English literature .  Journal of Experimental Education ,  81 ,  385 \u2013 408 . 10.1080/00220973.2012.727884 CrossRef Google Scholar Lee ,  H. ,  Plass ,  J. L. , &  Homer ,  B. D.  ( 2006 ).  Optimizing cognitive load for learning from computer-based science simulations .  Journal of Educational Psychology ,  98 ,  902 \u2013 913 . 10.1037/0022-0663.98.4.902 CrossRef Google Scholar Leppink ,  J. ,  Broers ,  N. J. ,  Imbos ,  T. ,  van der Vleuten ,  C. P. M. , &  Berger ,  M. P. F.  ( 2012 ).  Self-explanation in the domain of statistics: An expertise reversal effect .  Higher Education ,  63 ,  771 \u2013 785 . 10.1007/s10734-011-9476-1 CrossRef Google Scholar Miller ,  G. A.  ( 1956 ).  The magical number seven, plus or minus two: Some limits on our capacity for processing information .  Psychological Review ,  63 ,  81 \u2013 97 . 10.1037/h0043158 CrossRef Google Scholar PubMed Nihalani ,  P. K. ,  Mayrath ,  M. , &  Robinson ,  D. H.  ( 2011 ).  When feedback harms and collaboration helps in computer simulation environments: An expertise reversal effect .  Journal of Educational Psychology ,  103 ,  776 \u2013 785 . 10.1037/a0025276 CrossRef Google Scholar N\u00fcckles ,  M. ,  H\u00fcbner ,  S. ,  D\u00fcmer ,  S. , &  Renkl ,  A.  ( 2010 ).  Expertise reversal effects in writing-to-learn .  Instructional Science ,  38 ,  237 \u2013 258 . 10.1007/s11251-009-9106-9 CrossRef Google Scholar Oksa ,  A. ,  Kalyuga ,  S. , &  Chandler ,  P.  ( 2010 ).  Expertise reversal effect in using explanatory notes for readers of Shakespearean text .  Instructional Science ,  38 ,  217 \u2013 236 . 10.1007/s11251-009-9109-6 CrossRef Google Scholar Paas ,  F. ,  Tuovinen ,  J. E. ,  Van Merri\u00ebnboer ,  J. J. G. , &  Darabi ,  A. A.  ( 2005 ).  A motivational perspective on the relation between mental effort and performance .  Educational Technology Research and Development ,  53 ,  25 \u2013 34 . 10.1007/BF02504795 CrossRef Google Scholar Pachman ,  M. ,  Kalyuga ,  S. , &  Sweller ,  J.  ( 2013 ).  Levels of knowledge and deliberate practice .  Journal of Experimental Psychology: Applied ,  1 ,  108 \u2013 119 . Google Scholar Pachman ,  M. ,  Kalyuga ,  S. , &  Sweller ,  J.  ( 2014 ).  Effectiveness of combining worked examples and deliberate practice for high school geometry .  Applied Cognitive Psychology ,  28 ,  685 \u2013 692 . 10.1002/acp.3054 CrossRef Google Scholar"
+  },
+  {
+   "source_id": "3157c6e0-4666-4633-8b22-17bdc0dcb44e",
+   "citation_number": 23,
+   "cited_text": "For example, Oksa et al. (2010) found an expertise reversal effect caused by co-referring text with another piece of text when comprehending a complex literary text. Novices learned better in a condition that provided original Shakespearean play extracts with embedded line-by-line modern English translation and explanatory interpretations than they did in a condition that provided the original text only. However, the relative effectiveness of the two conditions reversed with highly skilled Shakespearean experts. The Shakespearean experts in the group with integrated explanatory notes reported higher subjective ratings of cognitive load. They were unable to avoid cross-checking the accuracy and validity In assessment, the degree to which a particular assessment measures what it is intended to measure, and the extent to which proposed interpretations and uses are justified of the explanations with their own interpretations, distracting them from directly analysing the original text. This example shows that the positive effect of using integrated formats for novices may reverse for more advanced learners, demonstrating an expertise reversal effect. If a single representation of information is sufficient for more knowledgeable learners, the additional information should be removed."
+  },
+  {
+   "source_id": "7da7eed0-3995-4771-a522-e7dca0992971",
+   "citation_number": 24,
+   "cited_text": "Spanjers ,  I. A. E. ,  Wouters ,  P. ,  Van Gog ,  T. , &  Van Merri\u00ebnboer ,  J. J. G.  ( 2011 ).  An expertise reversal effect of segmentation in learning from animated worked-out examples .  Computers in Human Behavior ,  27 ,  46 \u2013 52 . 10.1016/j.chb.2010.05.011 CrossRef Google Scholar Sweller ,  J.  ( 1988 ).  Cognitive load during problem solving: Effects on learning .  Cognitive Science ,  12 ,  257 \u2013 285 . 10.1207/s15516709cog1202_4 CrossRef Google Scholar Sweller ,  J.  ( 2009 ).  Cognitive bases of human creativity .  Educational Psychology Review ,  21 ,  11 \u2013 19 . 10.1007/s10648-008-9091-6 CrossRef Google Scholar Sweller ,  J. ,  Ayres ,  P. , &  Kalyuga ,  S.  ( 2011 ).  Cognitive load theory .  New York :  Springer . 10.1007/978-1-4419-8126-4 CrossRef Google Scholar Sweller ,  J. , &  Sweller ,  S.  ( 2006 ).  Natural information processing systems .  Evolutionary Psychology ,  4 ,  434 \u2013 458 . 10.1177/147470490600400135 CrossRef Google Scholar Tobias ,  S.  ( 1976 ).  Achievement treatment interactions .  Review of Educational Research ,  46 ,  61 \u2013 74 . 10.3102/00346543046001061 CrossRef Google Scholar Tobias ,  S.  ( 1989 ).  Another look at research on the adaptation of instruction to student characteristics .  Educational Psychologist ,  24 ,  213 \u2013 227 . 10.1207/s15326985ep2403_1 CrossRef Google Scholar Tricot ,  A. , &  Sweller ,  J.  ( 2014 ).  Domain-specific knowledge and why teaching generic skills does not work .  Educational Psychology Review ,  26 ,  265 \u2013 283 . 10.1007/s10648-013-9243-1 CrossRef Google Scholar Van de Wiel ,  M. W. J. ,  Boshuizen ,  H. P. A. , &  Schmidt ,  H. G.  ( 2000 ).  Knowledge restructuring in expertise development: Evidence from pathophysiological representations of clinical cases by students and physicians .  European Journal of Cognitive Psychology ,  12 ,  323 \u2013 355 . 10.1080/09541440050114543 CrossRef Google Scholar Van Gog ,  T. ,  Paas ,  F. , &  Van Merri\u00ebnboer ,  J. J. G.  ( 2008 ).  Effects of studying sequences of process-oriented and product-oriented worked examples on troubleshooting transfer efficiency .  Learning and Instruction ,  18 ,  211 \u2013 222 . 10.1016/j.learninstruc.2007.03.003 CrossRef Google Scholar Van Merri\u00ebnboer ,  J. J. G.  ( 1990 ).  Strategies for programming instruction in high school: Program completion vs. program generation .  Journal of Educational Computing Research ,  6 ,  265 \u2013 287 . 10.2190/4NK5-17L7-TWQV-1EHL CrossRef Google Scholar Van Merri\u00ebnboer ,  J. J. G. , &  Kirschner ,  P. A.  ( 2013 ).  Ten steps to complex learning  ( 2nd  revised edn.).  New York :  Routledge . Google Scholar Van Merri\u00ebnboer ,  J. J. G. , &  Sluijsmans ,  D. A.  ( 2009 ).  Toward a synthesis of cognitive load theory, four-component instructional design, and self-directed learning .  Educational Psychology Review ,  21 ,  55 \u2013 66 . 10.1007/s10648-008-9092-5 CrossRef Google Scholar Van Merri\u00ebnboer ,  J. J. G. , &  Sweller ,  J.  ( 2005 ).  Cognitive load theory and complex learning: Recent developments and future directions .  Educational Psychology Review ,  17 ,  147 \u2013 177 . 10.1007/s10648-005-3951-0 CrossRef Google Scholar Vink ,  S. C. ,  Van Tartwijk ,  J. ,  Verloop ,  N. ,  Gosselink ,  M. J. ,  Driessen ,  E. , &  Bolk ,  J. H.  ( 2016 ).  The articulation of integration of clinical and basic sciences in concept maps: Differences between experienced and resident groups .  Advances in Health Sciences Education ,  21 ,  643 \u2013 657 . 10.1007/s10459-015-9657-2 CrossRef Google Scholar PubMed Whitehead ,  A. E. ,  Taylor ,  J. A. , &  Polman ,  R. C.  ( 2016 ).  Evidence for skill level differences in the thought processes of golfers during high and low pressure situations .  Frontiers in Psychology ,  6 . http://dx.doi.org/10.3389/fpsyg.2015.01974 . CrossRef Google Scholar PubMed"
+  },
+  {
+   "source_id": "d986a0e4-e813-42cc-8bec-957290a4cb3a",
+   "citation_number": 25,
+   "cited_text": "Interactions between levels of knowledge and segmentation in multimedia learning : Segmentation is a strategy used to manage cognitive load, particularly with multimedia learning. By creating breaks in the instructional material (for example, dividing animations into several videos), segmentation reduces cognitive load by giving the learner time to process and reflect on the information. [20] In addition, segments indicate what information is important by chunking information. Research conducted by Spanjers et al. (2011) suggests an expertise reversal effect when using segmentation in animations. While low knowledge learners benefited from learning from animated material that was segmented, high-knowledge learners did not. While there was no difference in performance in this study, participants indicated a difference in mental effort and efficiency between low knowledge learners and high prior knowledge learners. The authors recommend that segmentation of animation be used for low prior knowledge learners, and using continuous animation for high prior knowledge learners. [21]"
+  },
+  {
+   "source_id": "6e955ae6-1d34-41c5-958d-ed00a1315554",
+   "citation_number": 26,
+   "cited_text": "Formats Unpacked: Wired's 5 Levels Formats Unpacked logo Formats Unpacked Storythings \u2197 Services Case Studies Who We Are Ideas Contact Login Subscribe 0 0 Formats Unpacked Posts Formats Unpacked: Wired's 5 Levels Formats Unpacked: Wired's 5 Levels Why a video series about complex subjects has millions of fans September 21, 2023 Hi all, A couple of things from us before we jump into today's unpacking: Do you want to hang out with Storythings and a bunch of creatives from around the world? Do you like to chat, or just listen to people chat about brilliant creative projects they've stumbled across recently? Proper Fancy is our agency show and tell that we open up to everyone. It's a chance to get to know us and us to know you. People who attend occasionally end up working with is. So join us next Thursday, 28th September . It's totally free and a lot of fun."
+  },
+  {
+   "source_id": "6e955ae6-1d34-41c5-958d-ed00a1315554",
+   "citation_number": 27,
+   "cited_text": "In the world of content, where \u201cmake it shorter\u201d is a mantra, these videos are long. The average is 25 minutes. They have titles like A Mathematician Explains Infinity in 5 Levels of Difficulty, A Computer Scientist Explains Machine Learning in 5 Levels of Difficulty, and * A Physicist Teaches Origami in 5 Levels of Difficulty.* This is Wired after all so niche and complex is what they often do. How many views do these videos get? Tens of thousands? Hundreds of thousands? Well, the video titled A Musician Explains One Concept in 5 Levels of Difficulty currently has 14 million views and the others aren't far behind. So why are these long videos capturing so much attention in an age of short attention spans and \u201cmake it shorter\u201d mantras?"
+  },
+  {
+   "source_id": "a2da6e27-a294-4f1b-8316-bb71e309dbd1",
+   "citation_number": 28,
+   "cited_text": "Although the series run is limited, with only six episodes thus far, the examples may give us ideas on how to approach scaffolding. Viewing them may give us insight on how to apply the techniques to our own examples, test and strengthen our arguments, break down themes into basic principles, convey an idea in more entertaining fashion to our students. Cutting edge topics that are covered (and appear in the screenshots on this post) include CRISPR and the Connectome. Image of Neville Sanjana with beginning his section on CRISPR"
+  },
+  {
+   "source_id": "6e955ae6-1d34-41c5-958d-ed00a1315554",
+   "citation_number": 29,
+   "cited_text": "Tap to unmute Your browser can't play this video. Learn more What's the magic that makes it special? Have you ever clicked on an article about a subject you want to understand more, only to find that you get halfway through and realise you're more confused than when you started? Or have you ever sat through a long 'how-to' video on YouTube without ever finding out the exact solution to your problem? 5 Levels solves these problems brilliantly. You can drop in at a level of complexity perfectly suited to your current understanding of the problem. You may want to watch the level aimed at kids just to get the basics. Or you can watch the video in its entirety to get a greater understanding. Whatever your level of understanding, or your desire for learning about a specific complex subject, 5 Levels is designed in a way that guarantees will hit the spot for a large range of curious viewers. A little later I'm going to talk a bit about the art of a good explainer but first I want to talk about the length of these videos."
+  },
+  {
+   "source_id": "6e955ae6-1d34-41c5-958d-ed00a1315554",
+   "citation_number": 30,
+   "cited_text": "At Storythings, we believe that \u201caudiences don't have short attention spans. But they do have short consideration spans .\u201d So you don't always have to make things short. If you make it easier for audiences to make decisions at the point of consideration they will engage with long content. We stole that quote from Category Pirates , a newsletter that publishes 4000-8000 word mini-books on Substack twice a month. They have over 20,000 subscribers, many paying \u00a316/month for access to these books on category design. It's a niche audience, paying a monthly fee for long content. So they're doing something smart to solve the short consideration span problem. As is Wired with 5 Levels. The very title itself does a lot to help. The combination of a niche subject and the level of difficulty signals clearly to the audience whether the click is for them or not."
+  },
+  {
+   "source_id": "c862bcd1-f812-4330-83ec-e79619de3905",
+   "citation_number": 31,
+   "cited_text": "Some theorists consider this technique to be a pillar for accelerated learning and long-term retention of knowledge. Its benefits are not only for students who consolidate their learning, but also for teachers who perfect the act of teaching in a simpler way. This model owes its development to Richard Feynman (1918-1988), an American physicist recognized for his contribution to quantum electrodynamics, together with Julian Schwinger and Shinichiro Tomonaga. As you have just seen, the Feynman technique can be a practical application of the phrase attributed to Albert Einstein: \u201cIf you can't explain it to a six-year-old, you don't understand it yourself\u201d."
+  },
+  {
+   "source_id": "6e955ae6-1d34-41c5-958d-ed00a1315554",
+   "citation_number": 32,
+   "cited_text": "Do you need help with audience research, content strategy, or production? Do you need creative ideas that capture attention, and brillant formats that hold attention? We should chat. Hit the button below. let's talk content formats! OK. On with the unpacking. This week I'm unpacking a content format that tackles complex issues in the most brilliant way. What's it called? 5 Levels (video series) What's the format? Albert Einstein once said, \u201cIf you can't explain something to a six-year-old, then you don't understand it yourself.\u201d Explaining something to a child is where this Wired video series begins. In each episode, an expert explains a high-level subject or concept at five different levels of increasing complexity\u2014 first to a child, then a teenager, then an undergrad majoring in the same subject, a grad student and, finally, a colleague or peer."
+  },
+  {
+   "source_id": "3157c6e0-4666-4633-8b22-17bdc0dcb44e",
+   "citation_number": 33,
+   "cited_text": "Educational implications of the expertise reversal effect The expertise reversal effect suggests that learning materials and tasks should not be considered in a one-for-all fashion. Designs that provide additional guidance for novices may not be suitable for advanced learners. Plenty of available instructional materials have been designed without taking into account learners' cognitive characteristics based on their prior knowledge. Of course, in many real-world situations, the effect may not necessarily reverse entirely, especially if the novice\u2013expert differences are not wide: some techniques that are beneficial for novices may not harm more knowledgeable learners (e.g. Kalyuga et al., 2013). However, in a number of cases, techniques that enhanced learning for novices had real negative learning impacts on more knowledgeable learners."
+  },
+  {
+   "source_id": "d986a0e4-e813-42cc-8bec-957290a4cb3a",
+   "citation_number": 34,
+   "cited_text": "The expertise reversal effect is a specific example of an aptitude by treatment interaction (ATI), which is a more general phenomenon in which learning environments that have positive effects for one type of person have neutral or even negative effects for another type of person. [4] Cognitive load theory [ edit ] The expertise reversal effect is typically explained within a cognitive load framework. [3] [5] Cognitive load theory assumes that a learner's existing cognitive resources can influence the effectiveness of instructional techniques. [6] The goal of any learning task is to construct integrated mental representations of the relevant information, which requires considerable working memory resources. To accomplish the task without overwhelming working memory, some form of guidance is needed."
+  },
+  {
+   "source_id": "7ecd7c43-8dc6-4279-a6d7-df82984fa59b",
+   "citation_number": 35,
+   "cited_text": "You are here: Home / Cognition / Novice Versus Expert Design Strategies Novice Versus Expert Design Strategies The Expertise Reversal Effect by Connie Malamed Share 8 Tweet 63 Share Pin 1 72 Shares Common sense tells us that we should design differently for novices than for experts. Wouldn't you expect a novice swimmer to learn new strokes differently than an advanced swimmer? What might not be as obvious, is that learning experiences designed for the novice may have negative effects when used on experts. This is due to a phenomenon known as the expertise reversal effect, also called the prior knowledge principle ."
+  },
+  {
+   "source_id": "7c51dc4e-a259-4e73-a94c-072fc03537f5",
+   "citation_number": 36,
+   "cited_text": "features of the area are likely to be high in element interactivity because the interacting elements are not embedded in schemas, the structure of the material may require careful consideration. This analysis has resonance with studies on aptitude\u2013treatment interactions (e.g. Cronbach and Snow, 1977; Mayer, 1997; Mayer and Gallini, 1990; Mayer et al., 1975; Peterson, 1977; Snow et al., 1980; Snow and Lohman, 1984) in which the structure of material interacts with learner aptitude. Aptitude\u2013treatment interactions (ATIs) develop when diverse instructional treatments"
+  },
+  {
+   "source_id": "217867e3-21bd-4789-96f3-6ce2ad538489",
+   "citation_number": 37,
+   "cited_text": "directly perceivable. For example, the circulatory system is often explained as being like a plumbing system, with the heart as pump. The analogical reasoning process Analogical reasoning involves several sub-processes: (1) retrieval of one case given another; (2) mapping between two cases in working memory; (3) evaluating the analogy and its inferences; and sometimes, (4) abstracting the common structure. The core process in analogical reasoning is mapping. According to structure-mapping theory, developed by D. Gentner in 1982, an analogy is a mapping of knowledge from"
+  },
+  {
+   "source_id": "217867e3-21bd-4789-96f3-6ce2ad538489",
+   "citation_number": 38,
+   "cited_text": "one domain (the base or source) into another (the target) such that a system of relations that holds among the base objects also holds among the target objects. In interpreting an analogy, people seek to put the objects of the base in one-to-one correspondence with the objects of the target so as to obtain the maximal structural match. The corresponding objects in the base and target need not resemble each other; what is important is that they hold like roles in the matching relational structures. Thus, analogy"
+  },
+  {
+   "source_id": "5406482d-27dc-4c84-b3e3-fab4a9bd2963",
+   "citation_number": 39,
+   "cited_text": "Structure mapping theory [ edit ] Structure mapping, originally proposed by Dedre Gentner , is a theory in psychology that describes the psychological processes involved in reasoning through and learning from analogies. [3] More specifically, this theory aims to describe how familiar knowledge, or knowledge about a base domain, can be used to inform an individual's understanding of a less familiar idea, or a target domain. [4] According to this theory, individuals view their knowledge of domains as interconnected structures. [5] In other words, a domain is viewed as consisting of objects, their properties, and the relationships that characterize the interactions between them. [6] The process of analogy then involves:"
+  },
+  {
+   "source_id": "217867e3-21bd-4789-96f3-6ce2ad538489",
+   "citation_number": 40,
+   "cited_text": "influencing the quality of an analogy is systematicity: analogies that convey an interconnected system of relations, such as the circulation/pumping analogy, are more useful than those that convey only a single isolated fact, such as \u201cThe brain looks like a walnut.\u201d Further, as K. J. Holyoak and P. R. Thagard argued in 1995, an analogy should be goal-relevant in the current context. In addition to the above general qualities, several further factors influence the success of an explanatory analogy, including base specificity, transparency, and scope. Base specificity is the degree to which the"
+  },
+  {
+   "source_id": "5406482d-27dc-4c84-b3e3-fab4a9bd2963",
+   "citation_number": 41,
+   "cited_text": "Distinguishing analogy from other comparisons [ edit ] Structure-mapping theory aims to improve upon previous theories of analogy, by distinguishing analogy from literal similarity. Previous theories, like Amos Tversky 's contrast theory, assumed that an analogy is stronger, the more attributes the base and target have in common. Instead, structure-mapping theory recognizes that there can be differences between base and target domains which make no difference to the strength of the analogy. For example, we can see a battery as being like a reservoir despite them being different in shape, size , color and substance."
+  },
+  {
+   "source_id": "5406482d-27dc-4c84-b3e3-fab4a9bd2963",
+   "citation_number": 42,
+   "cited_text": "Structure-mapping theory responds by arguing that it is not object attributes which are mapped in an analogy. Instead the theory contends that an analogy alerts the hearer to a similarity in the relationships between objects in a domain. The distinction is made in terms of the arity of predicates - attributes are predicates with one argument, while relationships are predicates which take two or more arguments. So the proposition \"x is large\" asserts an attribute, while \"x revolves around y\" asserts a relationship. (Higher order predicates assert relationships between propositions)"
+  },
+  {
+   "source_id": "5406482d-27dc-4c84-b3e3-fab4a9bd2963",
+   "citation_number": 43,
+   "cited_text": "An example that has been used to illustrate structure mapping theory comes from Gentner and Gentner (1983) and uses the base domain of flowing water and the target domain of electricity. [7] In a system of flowing water, the water is carried through pipes and the rate of water flow is determined by the pressure of the water towers or hills. This relationship corresponds to that of electricity flowing through a circuit. In a circuit, the electricity is carried through wires and the current, or rate of flow of electricity, is determined by the voltage, or electrical pressure. Given the similarity in structure, or structural alignment , between these domains, structure mapping theory would predict that relationships from one of these domains would be inferred in the other via analogy. [6]"
+  },
+  {
+   "source_id": "5406482d-27dc-4c84-b3e3-fab4a9bd2963",
+   "citation_number": 44,
+   "cited_text": "Summary table [ edit ] Gentner provides the following table to summarize the different types of domain comparison above: <cited_table> Systematicity principle [ edit ] Part of our understanding about analogy is that it conveys a system of connected knowledge, not a mere assortment of independent facts. Such a system can be represented by an interconnected predicate structure in which higher-order predicates enforce connections among lower-order predicates. reflect this tacit preference for coherence in analogy, I propose the systematicity principle: A predicate that belongs to a mappable system of mutually interconnecting relationships is more likely to be imported into the target than is an isolated predicate.",
+   "cited_table": {
+    "num_columns": 4,
+    "rows": [
+     [
+      "",
+      "No. attributes mapped",
+      "No. relations mapped",
+      "Example"
+     ],
+     [
+      "Literal similarity",
+      "Many",
+      "Many",
+      "The K5 planetary system is like the Solar System"
+     ],
+     [
+      "Analogy",
+      "Few",
+      "Many",
+      "The atom is like the Solar System"
+     ],
+     [
+      "Abstraction",
+      "Few*",
+      "Many",
+      "The atom is a central force system"
+     ],
+     [
+      "Anomaly",
+      "Few",
+      "Few",
+      "Coffee is like the Solar System"
+     ]
+    ]
+   }
+  },
+  {
+   "source_id": "5406482d-27dc-4c84-b3e3-fab4a9bd2963",
+   "citation_number": 45,
+   "cited_text": "Recognising similar structures between the base and target domains. Finding deeper similarities by mapping other relationships of a base domain to the target domain. Checking those findings against existing knowledge of the target domain. [4] [6] In general, it has been found that people prefer analogies where the two systems correspond highly with each other (e.g. have similar relationships across the domains as opposed to just having similar objects across domains) when these people try to compare and contrast the systems. This is also known as the systematicity principle. [5]"
+  },
+  {
+   "source_id": "217867e3-21bd-4789-96f3-6ce2ad538489",
+   "citation_number": 46,
+   "cited_text": "even experts retrieve some examples that are similar only on the surface. However, as demonstrated by Novick in 1988, experts reject spurious remindings more quickly than do novices. Thus, especially for novices, there is an unfortunate dissociation: while accuracy of transfer depends critically on the degree of structural match, memory retrieval depends largely on surface similarity between objects and contexts. Analogical encoding in learning In the late twentieth century, researchers began exploring a new technique, called analogical encoding,"
+  },
+  {
+   "source_id": "217867e3-21bd-4789-96f3-6ce2ad538489",
+   "citation_number": 47,
+   "cited_text": "that can help overcome the inert knowledge problem. Instead of studying cases separately, learners are asked to compare analogous cases and describe their similarities. This fosters the formation of a common schema, which in turn facilitates transfer to a further problem. For example, in 1999 J. Loewenstein, L. Thompson & D. Gentner found that graduate management students who compared two analogical cases were nearly three times more likely to transfer the common strategy into a subsequent negotiation task than were students who analyzed the same two cases separately."
+  },
+  {
+   "source_id": "5406482d-27dc-4c84-b3e3-fab4a9bd2963",
+   "citation_number": 48,
+   "cited_text": "Find sources: \"Structure-mapping theory\" \u2013 news \u00b7 newspapers \u00b7 books \u00b7 scholar \u00b7 JSTOR ( September 2017) ( Learn how and when to remove this message) This article may be too technical for most readers to understand . Please help improve it to make it understandable to non-experts , without removing the technical details. ( September 2017) ( Learn how and when to remove this message) ( Learn how and when to remove this message) Structure-mapping theory is a theory of analogical reasoning , developed by Dedre Gentner , [1] and for which she was awarded the 2016 David E. Rumelhart Prize for Contributions to the Theoretical Foundations of Human Cognition. [2]"
+  },
+  {
+   "source_id": "217867e3-21bd-4789-96f3-6ce2ad538489",
+   "citation_number": 49,
+   "cited_text": "structure of the base domain is clearly understood. Transparency is the ease with which the correspondences can be seen. Transparency is increased by similarities between corresponding objects and is decreased by similarities between non-corresponding objects. For example, in 1986 D. Gentner and C. Toupin found that four-to six-year-old children succeeded in transferring a story to new characters when similar characters occupied similar roles (e.g., squirrel(chipmunk; trout(salmon), but they failed when the match was cross-mapped, with similar characters in different roles (e.g. squirrel("
+  },
+  {
+   "source_id": "217867e3-21bd-4789-96f3-6ce2ad538489",
+   "citation_number": 50,
+   "cited_text": "Gentner, D., and Toupin, C. 1986. Systematicity and surface similarity in the development of analogy. Cognitive Science 10:277-300. Gentner, D., and Wolff, P. 2000. \u201cMetaphor and knowledge change.\u201d Pages 295-342 in E. Dietrich and A. Markman eds., Cognitive dynamics: Conceptual change in humans and machines. Mahwah, NJ: Lawrence Erlbaum Associates. Gick, M. L., and Holyoak, K. J. 1980. Analogical problem solving. Cognitive Psychology 12:306\u2013355. Gick, M. L., and Holyoak, K. J. 1983. Schema induction and analogical transfer. Cognitive Psychology"
+  },
+  {
+   "source_id": "422cc73b-8bd9-4571-96b5-0a812c80f4dd",
+   "citation_number": 51,
+   "cited_text": "Analogies are another type of elaborative encoding supporting generative processing by helping learners map new ideas onto familiar knowledge structures. Analogical explanations help learners identify structural correspondences between something known (e.g., water flow in pipes) and information being learned (e.g., electric current), thereby encouraging relational thinking and integration with prior knowledge rather than pure memorization ( Glynn, 2008 ). When clearly mapped and aligned with core concepts, analogies can make abstract processes more concrete and improve conceptual understanding ( Gentner & Markman, 1997 ). However, poorly designed or overly complex analogies may increase extraneous cognitive load or foster misconceptions by introducing irrelevant relationships or excessive relational demands ( Harrison & Coll, 2008 ). Effective multimedia analogies should be carefully selected, visually supported, and accompanied by explicit clarification of their limitations to harness their generative potential without overloading working memory ( Petchey et al., 2023 )."
+  },
+  {
+   "source_id": "81d88c79-52df-41c5-a0c1-2a30fd080a6b",
+   "citation_number": 52
+  },
+  {
+   "source_id": "a052abd3-9824-4eea-9845-f13a2048df3c",
+   "citation_number": 53,
+   "cited_text": "Atkinson ,  R. K. ,  Renkl ,  A. , &  Merrill ,  M. M.  ( 2003 ).  Transitioning from studying examples to solving problems: Combining fading with prompting fosters learning .  Journal of Educational Psychology , 95 ,  774 \u2013 783 . Google Scholar Barbieri ,  C. A. , &  Booth ,  J. L.  ( 2020 ).  Mistakes on display: Incorrect examples refine equation solving and algebraic feature knowledge .  Applied Cognitive Psychology , 34 ,  862 \u2013 878 . Google Scholar Bentley ,  B. , &  Yates ,  G. C. R.  ( 2017 ).  Facilitating proportional reasoning through worked examples: Two classroom-based experiments .  Cogent Education , 4 ,  1297213 . Google Scholar Berthold ,  K. , &  Renkl ,  A.  ( 2009 ).  Instructional aids to support a conceptual understanding of multiple representations .  Journal of Educational Psychology , 101 ,  70 \u2013 87 . Google Scholar Catrambone ,  R.  ( 1996 ).  Generalizing solution procedures learned from examples .  Journal of Experimental Psychology: Learning, Memory, & Cognition , 22 ,  1020 \u2013 1031 . Google Scholar Cooper ,  G. ,  Tindall-Ford ,  S. ,  Chandler ,  P. , &  Sweller ,  J.  ( 2001 ).  Learning by imagining procedures and concepts .  Journal of Experimental Psychology: Applied , 7 ,  68 \u2013 82 . Google Scholar Eitel ,  A. ,  Endres ,  T. , &  Renkl ,  A.  ( 2020 ).  Self-management as a bridge between cognitive load and self-regulated learning: The illustrative case of seductive details .  Educational Psychology Review , 32 ,  1073 \u2013 1087 . Google Scholar Fiorella ,  L. , &  Mayer ,  R. E.  ( 2016 ).  Eight ways to promote generative learning .  Educational Psychology Review , 28 ,  717 \u2013 741 . Google Scholar Gentner ,  D. ,  Loewenstein ,  J. , &  Thompson ,  L.  ( 2003 ).  Learning and transfer: A general role for analogical encoding .  Journal of Educational Psychology , 95 ,  393 \u2013 408 . Google Scholar Ginns ,  P. ,  Chandler ,  P. , &  Sweller ,  J.  ( 2003 ).  When imagining information is effective .  Contemporary Educational Psychology , 28 ,  229 \u2013 251 . Google Scholar Ginns ,  P. ,  Hu ,  F.-T. , &  Bobis ,  J.  ( 2020 ).  Tracing enhances problem\u2010solving transfer, but without effects on intrinsic or extraneous cognitive load .  Applied Cognitive Psychology , 34 ,  1522 \u2013 1529 . Google Scholar Glogger-Frey ,  I. ,  Fleischer ,  C. ,  Gr\u00fcny ,  L. ,  Kappich ,  J. , &  Renkl ,  A.  ( 2015 ).  Inventing a solution and studying a worked solution prepare differently for learning from direct instruction .  Learning & Instruction , 39 ,  72 \u2013 87 . Google Scholar Glogger-Frey ,  I. ,  Gaus ,  K. , &  Renkl ,  A.  ( 2017 ).  Learning from direct instruction: Best prepared by several self-regulated or guided invention activities?   Learning & Instruction , 51 ,  26 \u2013 35 . Google Scholar Gro\u00dfe ,  C. S. , &  Renkl ,  A.  ( 2007 ).  Finding and fixing errors in worked examples: Can this foster learning outcomes?   Learning & Instruction , 17 ,  612 \u2013 634 . Google Scholar Hallinen ,  N. R. , &  Booth ,  J. L.  ( 2018 ).  Don\u2019t just do it, explain it: A 5th grade worked examples curriculum supports transfer to algebra content .  Proceedings of International Conference of the Learning Sciences  (pp.  1647 \u2013 1648 ).  London :  ICLS . Google Scholar Hartmann ,  C. ,  van Gog ,  T. , &  Rummel ,  N.  ( 2020 ).  Do examples of failure effectively prepare students for learning from subsequent instruction?   Applied Cognitive Psychology , 34 ,  879 \u2013 889 . Google Scholar Hattie ,  J. A. C.  ( 2009 ).  Visible Learning: A Synthesis of over 800 Meta-Analyses Relating to Achievement .  London :  Routledge . Google Scholar Hefter ,  M. H. ,  Renkl ,  A. ,  Riess ,  W. ,  Schmid ,  S. ,  Fries ,  S. , &  Berthold ,  K.  ( 2018 ).  Training interventions to foster skill and will of argumentative thinking .  Journal of Experimental Education , 86 ,  325 \u2013 343 . Google Scholar"
+  },
+  {
+   "source_id": "1c1dbe1e-73a0-4a43-a114-09d75f3b9ab2",
+   "citation_number": 54,
+   "cited_text": "113 5.1  Making science concepts meaningful to students:  teaching with analogies Shawn M. Glynn 1  Introduction Science-education research studies and science teachers\u2019 classroom experiences have shown that analogies, when used properly, can help make science concepts meaningful to students. This chapter explains what analogies are, how analogies foster learning and interest, and what form analogies should take to be effective. A research-based model for teaching with analogies is described: It provides guidelines for the use of analogies in science classrooms, textbooks, and web-based science instruction."
+  },
+  {
+   "source_id": "1c1dbe1e-73a0-4a43-a114-09d75f3b9ab2",
+   "citation_number": 55,
+   "cited_text": "In the preceding lesson, Ms. Stein was using the Teaching-With-Analogies Model (Glynn, 2004), which she had learned in a professional-development workshop conducted for the teachers in her school system. Before she learned the Model, she used analogies, but not strategically, and she was frequently unaware that she was even using analogies. Reflect-ing on her pre-workshop use of analogies, she said: \u201cI guess I used analogies, but I didn\u2019t think much about them. I guess I did it automatically, especially when students weren\u2019t catching on.\u201d"
+  },
+  {
+   "source_id": "1c1dbe1e-73a0-4a43-a114-09d75f3b9ab2",
+   "citation_number": 56,
+   "cited_text": "The Teaching-With-Analogies Model (Glynn, 2004, 2007) is based on cognitive task analyses of lessons, textbooks, and websites. In both formal experiments and classroom settings, the use of the model has been found to increase students\u2019 learning and interest in science concepts (Glynn, Duit, & Thiele, 1995; Paris & Glynn, 2004). When Ms. Stein used the analogy between Newton\u2019s law of gravitational force and Coulomb\u2019s law of electrical force, she followed the six steps in the model: 1. Introduce the target concept, Coulomb\u2019s law of electrical force, to students. 2.  Remind students of what they know of the analog concept, Newton\u2019s law of"
+  },
+  {
+   "source_id": "69aa7314-3c7a-4768-89d5-6272f4a2b528",
+   "citation_number": 57,
+   "cited_text": "To maximize the benefit of analogies while minimizing the dangers, we suggest that educators employ the Teaching with Analogies (TWA) strategy introduced by Glynn, Duit, & Thiele . This strategy models what expert teachers and authors employ when using analogies. In the TWA strategy, shared attributes between the analogue and target are known as mappings . The goal is to transfer ideas from a familiar concept (the analogue) to an unfamiliar one (the target) by mapping their relationship. The TWA model consists of the following six operations:"
+  },
+  {
+   "source_id": "69aa7314-3c7a-4768-89d5-6272f4a2b528",
+   "citation_number": 58,
+   "cited_text": "1. Introduce the target concept 2. Review the analogue concept 3. Identify the relevant features of target and analogue 4. Map similarities between the target and analogue 5. Indicate the limitations of the analogy 6. Draw conclusions Example The following example illustrates the use of the TWA strategy when introducing the concept of a pulsar by analogizing it to the rotating lamp in a lighthouse. 1. Introduce target concept: A pulsar is a rotating neutron start that emits radio waves in a narrow beam at regular intervals."
+  },
+  {
+   "source_id": "1c1dbe1e-73a0-4a43-a114-09d75f3b9ab2",
+   "citation_number": 59,
+   "cited_text": "gravitational force. 3. Identify relevant features of Coulomb\u2019s and Newton\u2019s laws. 4. Connect (map) the similar features of the laws. 5. Indicate where the analogy between the laws breaks down. 6. Draw conclusions about the laws. 119 To help her students think about the analogy, Ms. Stein showed them Figure 4. She also warned her students, \u201cThis analogy between Coulomb\u2019s and Newton\u2019s laws, like all analogies, breaks down in a lot of places,\u201d and pointed out how the analogy breaks down, such as gravitational force only attracts, while electrical force attracts or repels."
+  },
+  {
+   "source_id": "1c1dbe1e-73a0-4a43-a114-09d75f3b9ab2",
+   "citation_number": 60,
+   "cited_text": "114 Science teachers, like scientists, frequently use analogies to explain concepts to students (James & Scharmann, 2007). The analogies serve as initial models, or simple representations, of science concepts. The teachers frequently preface their explanations with expressions, such as, \u201cIt\u2019s just like,\u201d \u201cJust as,\u201d \u201cSimilarly,\u201d and \u201cLikewise.\u201d These expressions are all ways of saying to students, \u201cLet me give you an analogy.\u201d Analogies are double-edged swords: They can foster understanding, but they can also lead to misconceptions. As Duit, Roth, Komorek, and Wilbers (2001) explain: A growing body of research shows that analogies may be powerful tools for guiding students from their pre-instructional conceptions towards science concepts. But it has also become apparent that analogies may deeply mislead students\u2019 learning processes. Con-ceptual change, to put it into other words, may be both supported and hampered by the same analogy. (p. 283)"
+  },
+  {
+   "source_id": "1c1dbe1e-73a0-4a43-a114-09d75f3b9ab2",
+   "citation_number": 61,
+   "cited_text": "One implication of the Teaching-With-Analogies Model is that teachers should try to select analogs that share many similar features with the target concept. In general, the more features shared, the better the analogy. Another implication is that teachers should verify that students have not formed misconceptions. One way to do this is to ask focused questions about features that are not shared between the analog and the target concept. Ms. Stein helped her students draw important conclusions about Coulomb\u2019s law of electrical force and Newton\u2019s law of gravitational force. For example, to help them understand that the constant, G, in Newton\u2019s law was a small number and the constant, k, in Coulomb\u2019s law was a large number, she explained \u201cThis means that the gravitational force between two 1-kilogram masses would be tiny, whereas the electrical force between two 1-coulomb charges would be large.\u201d She also explained \u201cThe primary force between the planets and the sun is gravity, which attracts only \u2013 any electrical forces between them are balanced out because objects usually have equal numbers of electrons and protons. When we are talking about atoms and molecules, however, that is not always the case. Electrical forces play a much more important role than gravity at atomic and molecular levels.\u201d"
+  },
+  {
+   "source_id": "e2aced3c-9d54-44ce-96da-56acc7fe42bc",
+   "citation_number": 62,
+   "cited_text": "Figure 1. The relationship between analogue and target domains in an analogy (Glynn, 1991). Analogies are effective teaching tools, helping the students convey new information to the available information structure, providing meaninful learning motivation and giving a new point of view on the subject (Glynn & Takahashi, 1998; Heywood, 2002). Analogies help to remove misconceptions and play an important role in conceptual exchange (Stavy, 1991; Venville & Treagust, 1996). Analogies make abstract concepts concrete (Thiele & Treagust, 1994). There are some disadvantages when they are not used well (Duit, 1991). Not all analogies are good analogies, and neither are all good analogies useful for all students (Orgill & Bodner, 2004). In an analogy, if the analogue and target concepts do not fully overlap with each other, they can lead students to form erroneous concepts and make mistakes (Clement, 1993; Geban et al., 1999; Duit et al., 2001). Analogies in textbooks are usually used randomly and are inadequate for students (Gilbert, 1989), which causes them to make mistakes (Thiele & Treagust, 1994). This teaching method makes complicated issues easier to understand with the help of analogy. While using analogy, it makes associations with real life, thus, it helps students visualize them by turning abstract concepts into more concrete ones. Analogies should therefore be chosen carefully and used in accordance with certain rules. Some teaching models aiming to use analogies effectively in science education have been developed."
+  },
+  {
+   "source_id": "1c1dbe1e-73a0-4a43-a114-09d75f3b9ab2",
+   "citation_number": 63,
+   "cited_text": "118 It is risky to use analogies without thinking about them. If used effectively, they can enhance learning by building conceptual bridges between old and new knowledge; if used ineffectively, they can hinder learning by causing misconceptions. Knowing how to use analogies effectively is an important part of teachers\u2019 pedagogical content knowledge (Gess-Newsome, 1999). Figure 4: An analogy between two inverse-square laws: Newton\u2019s law of gravitation and Coulomb\u2019s law of electrical force. 7  Teaching-With-Analogies Model"
+  },
+  {
+   "source_id": "c3cc522f-0d9a-4bc6-bcef-f7e62cbd5f2f",
+   "citation_number": 64,
+   "cited_text": "Upper secondary students\u2019 understanding of the forces acting in analogous atomic and solar systems Introduction A key aspect of teaching is \u2018making the unfamiliar familiar\u2019, that is helping learners to understand novel material by finding ways to link to their existing personal knowledge of the world (Ausubel, 2000). Indeed, Piaget\u2019s (1972) model of development suggests that we must understand learning in terms of an iterative process that starts with the interaction between innate mental structures and the"
+  },
+  {
+   "source_id": "c3cc522f-0d9a-4bc6-bcef-f7e62cbd5f2f",
+   "citation_number": 65,
+   "cited_text": "indices to be akin to a vehicle or marching band passing from a tarmacadam surface to a graveled area (Samaras, 2010; Sj\u00f8berg, 2000). One such common teaching analogy takes the form that \u2018an atom is like a tiny solar system\u2019 (Rutledge & Warden, 2000; Spitz, 1993; Stake, 2000), and it is that comparison that motivated the work reported in this paper. The analogy was actually used by Rutherford, who \u201cadvanced atomic physics by drawing an analogy between the structure of the solar system and the structure of an atom\u201d (Spector & Gibson,"
+  },
+  {
+   "source_id": "c3cc522f-0d9a-4bc6-bcef-f7e62cbd5f2f",
+   "citation_number": 66,
+   "cited_text": "(Stake, 1995, p. 159) Learners\u2019 notions about the analogous systems The motivation for exploring students\u2019 perceptions of the similarities of atomic and solar systems derived from consideration of the teaching analogy in the light of research into student thinking about these areas of science. Thagard has suggested that \u201cbeginning physics students are taught the Bohr model of the atom by analogy to the solar system, but the model of orbits that is acquired gets in the way of later acquisition of quantum-mechanical notions\u201d (Southerland, Abrams, Cummins, &"
+  },
+  {
+   "source_id": "c3cc522f-0d9a-4bc6-bcef-f7e62cbd5f2f",
+   "citation_number": 67,
+   "cited_text": "knowledge elements (diSessa, 1993), then it would seem likely that broadly similar findings would be obtained in other national contexts. It is not suggested here that the teaching analogy should necessarily be avoided. The teaching analogy may well be useful where students already have a good appreciation of the physical interactions in the solar system, and teaching is explicit about how these features map onto the \u2018planetary\u2019 model of the atom (including focusing on the differences between the systems). The diagnostic instrument discussed in this paper"
+  },
+  {
+   "source_id": "1c1dbe1e-73a0-4a43-a114-09d75f3b9ab2",
+   "citation_number": 68,
+   "cited_text": "Glynn, S. M., Duit, R., & Thiele, R. B. (1995). Teaching science with analogies: A strategy for constructing knowledge. In S. M. Glynn & R. Duit (Eds.), Learning science in the schools: Research reforming practice (pp. 247-273). Mahwah, NJ: Erlbaum. Glynn, S. M., & Takahashi, T. (1998). Learning from analogy-enhanced science text. Journal of Research in Science Teaching, 35, 1129-1149. Hamilton, R. J. (1997). Effects of three types of elaboration on learning concepts from text. Contemporary Educational Psychology, 22, 299-318."
+  },
+  {
+   "source_id": "1c1dbe1e-73a0-4a43-a114-09d75f3b9ab2",
+   "citation_number": 69,
+   "cited_text": "Instructional analogies are sometimes limited to simple assertions, such as \u201cA cell is like a factory,\u201d without explaining the analogy. These assertions, or simple analogies, do not provide the instructional scaffolding that many learners need, particularly in the initial stages of learning a concept. A much better mechanism for providing instructional scaffolding is an elaborate analogy: \u201cIn an elaborate analogy, analog features are systematically mapped onto target features, verbal and imagery processes are active, and these processes mutually support one another\u201d (Glynn & Takahashi, 1998, p. 1130). Elaborate analogies provide a rich, situated context for learning. By systematically mapping verbal and visual features of analog concepts onto those of target concepts, analogies can facilitate the cognitive process of elaboration. Elaborate analogies have been found to increase students\u2019 learning of target concepts and their interest in the concepts (Paris & Glynn, 2004)."
+  },
+  {
+   "source_id": "1c1dbe1e-73a0-4a43-a114-09d75f3b9ab2",
+   "citation_number": 70,
+   "cited_text": "Paris, N. A., & Glynn, S. M. (2004). Elaborate analogies in science text: Tools for enhanc- ing preservice teachers\u2019 knowledge and attitudes. Contemporary Educational Psychol-ogy, 29, 230-247. Ploetzner, R., & Loweb, R. (2004). Dynamic visualisations and learning. Learning and Instruction, 14(3), 235-240. Riffell, S., & Sibley, D. (2005). Using web-based instruction to improve large undergradu- ate biology courses: An evaluation of a hybrid course format. Computers & Education, 44 (3), 217-35. Vickers, B. (1984). Analogy versus identity: The rejection of occult symbolism, 1580-1680. In B. Vickers (Ed.), Occult and scientific mentalities in the Renaissance (pp. 95-163). Cambridge, England: Cambridge University Press."
+  },
+  {
+   "source_id": "1c1dbe1e-73a0-4a43-a114-09d75f3b9ab2",
+   "citation_number": 71,
+   "cited_text": "Bodzin, A., & Cates, W. (2002). Inquiry dot com: Web-based activities promote scientific inquiry learning. The Science Teacher, 69(9), 48-52. Bodemer, D., Ploetzner, R., Feuerlein, I., & Spada, H. (2004). The active integration of information during learning with dynamic and interactive visualisations. Learning and Instruction, 14, 325-341. Duit, R. (1991). On the role of analogies and metaphors in learning science. Science Education, 75, 649\u2013672. Duit, R., & Glynn, S. M. (1992). Analogien und Metaphern, Br\u00fccken zum Verst\u00e4ndnis im sch\u00fclergerechten Physikunterricht. (Analogies and metaphors, bridges to understand- ing in student-oriented physics instruction.) In P. H\u00e4u\u00dfler (Ed.), Physikunterricht und Menschenbildung (pp. 223-250). Kiel, Germany: Institute for Science Education."
+  },
+  {
+   "source_id": "1c1dbe1e-73a0-4a43-a114-09d75f3b9ab2",
+   "citation_number": 72,
+   "cited_text": "Duit, R., & Glynn, S. M. (1995). Analogien \u2013 Br\u00fccken zum Verst\u00e4ndnis. (Analogies \u2013 Bridges to understanding). Naturwissenschaften im Unterricht \u2013 Physik, 27(6), 4-10. Duit, R., Roth, W.-M., Komorek M., & Wilbers J. (2001). Fostering conceptual change by analogies \u2013 between Scylla and Carybdis. Learning and Instruction, 11(4), 283-303. Gess-Newsome, J. (1999). Pedagogical content knowledge: An introduction and orienta- tion. In J. Gess-Newsome & N. G. Lederman (Eds.), Examining pedagogical knowledge: The construct and its implication for science education. Dordrecht: Kluwer Academic Publishers."
+  },
+  {
+   "source_id": "e2aced3c-9d54-44ce-96da-56acc7fe42bc",
+   "citation_number": 73,
+   "cited_text": "Analogy is mostly used for understanding abstract concepts and complicated issues. An analogy is an explanation that compares a fact that is unknown and unfamiliar with another known and familiar one. The unknown fact is the target while the known fact is the analogue. The analogy compares the similar characteristics of the target and analogue and then a transition from the known information area to the unknown information area is made (Duit, 1991; Harrison & Treagust, 1994). The analogue is known information while the target is a less known or unknown information. An analogy is an application of features in the analogue to the target concept (Figure 1). The more closely the analogue matches the target, the more effective and powerful the analogy is (Glynn, 1991; Harrison & Treagust, 1994)."
+  },
+  {
+   "source_id": "e2aced3c-9d54-44ce-96da-56acc7fe42bc",
+   "citation_number": 74,
+   "cited_text": "When educational analogies are used in texts, some of them may not be suitable for all learners. Therefore, teachers and authors of books need to have and develop an available and useful analogy repertoire (Shulman, 1986; Thiele & Treagust, 1994). At present, analogies are frequently found in science textbooks (Iding, 1997). It is especially difficult for learners to understand and explain most science concepts, which they are not able to test directly and observe clearly (Thiele & Treagust, 1995). Analogies help theoretical concepts of this kind to be stimulated in the mind and make them clear (Lawson, 1993)."
+  },
+  {
+   "source_id": "e2aced3c-9d54-44ce-96da-56acc7fe42bc",
+   "citation_number": 75,
+   "cited_text": "Of these, the one which is used most is the Teaching with Analogies Model (TWA). The TWA model explains the rules that teachers need to follow during analogy-based teaching. These rules comprise the following six steps (Glynn, 1991): Introduce the target concept Cue retrieval of the analogue concept Identify relevant features of the target and analogue Map similarities Indicate where the analogy breaks down Draw conclusions Analogies serve as initial models to promote scientific concepts and are used frequently in science textbooks (Iding, 1997). When they looked at the international science education literature, Curtis and Reigeluth (1984) found an average of 8.3 analogies for each science textbook in the United States. Thiele and Treagust (1994) expanded Curtis and Reigeluth's (1984) classifying system and categorized analogies in high school chemistry textbooks in Australia in a systematic way and found a total of 93 analogies in 10 books. Thiele, Venville and Treagust (1995) compared high school chemistry and biology textbooks for their use of analogies and found that analogies were used more in biology textbooks. Newton (2003) compared elementary school science textbooks with high school science textbooks in terms of their use of analogies."
+  },
+  {
+   "source_id": "c3cc522f-0d9a-4bc6-bcef-f7e62cbd5f2f",
+   "citation_number": 76,
+   "cited_text": "alternative conceptions in one of these systems and then use the analogy both as a starting point for addressing the second system, and reinforcing conceptual change in the original context. Acknowledgements: The work reported here is based upon materials developed during the Royal Society of Chemistry\u2019s Teacher Fellowship project on Challenging Chemical Misconceptions in the Classroom https://science-education-research.com/ projects/challenging-misconceptions-in-the-classroom/). Thanks are due to the"
+  },
+  {
+   "source_id": "c3cc522f-0d9a-4bc6-bcef-f7e62cbd5f2f",
+   "citation_number": 77,
+   "cited_text": "could be compromised where students hold non-canonical ideas about the solar system. It follows from the pedagogical rationale for using teaching analogies discussed above that in deciding whether to use such an analogy with a particular group of students, the teacher should be informed by the students\u2019 current level of understanding of both the target concept and the analogue to be used. The hypothesis underpinning the present study is that given the findings of previous research into students\u2019 ideas in both the topics of forces and atomic structure, many"
+  },
+  {
+   "source_id": "c3cc522f-0d9a-4bc6-bcef-f7e62cbd5f2f",
+   "citation_number": 78,
+   "cited_text": "orbiting body moving round\u201d. \u2018Alice\u2019 defined \u201cacceleration as a change in speed [i.e., not velocity], and so did not seem to consider a change of direction alone as sufficient criterion for an acceleration\u201d (Taber, 2008). It seems quite possible that where the solar system is offered as an analogue to introduce the atomic structure model, it may not be that well understood in physical terms by many of the learners exposed to the teaching analogy. Moreover, research into student thinking about chemistry at the submicroscopic level"
+  },
+  {
+   "source_id": "1c1dbe1e-73a0-4a43-a114-09d75f3b9ab2",
+   "citation_number": 79,
+   "cited_text": "Analogies play an important role in science instruction in all forms of media, such as textbooks and web-based science instruction. The role of analogies in textbook instruction has been examined in many studies (for reviews, see Duit, 1991; Paris & Glynn, 2004), but the role of analogies in web-based science instruction has been studied little because this medium is so new. Because web-based science instruction is growing exponentially, and because its developers want to make it as effective as possible, the strategic use of analogies is receiving increased attention. For example, The Guiding Principles for Distance Teaching and Learning (American Distance Education Consortium, 2007), which are used to evaluate web-based instruction, emphasize the role of analogies: \u201cLearning by doing, analogy, and assimilation are increasingly important pedagogical forms. Where possible, learning outcomes should relate to real-life experiences through simulation and application.\u201d"
+  },
+  {
+   "source_id": "1c1dbe1e-73a0-4a43-a114-09d75f3b9ab2",
+   "citation_number": 80,
+   "cited_text": "When web-based science instruction has features such as audio, video, animated GIF images, interactivity, and hyperlinks, it is roughly analogous to the instruction of a science teacher, such as Karen Stein. But this analogy, like any analogy, breaks down in places. Karen is more adaptive and intuitive than contemporary web-based science instruction, yet her interactivity is slower than that of a fast web connection. Elaborate analogies are often used on science education websites to explain concepts, using various combinations of text, audio, video, animation, interactivity, and hyperlinks. For example, the website of the Genetic Science Learning Center of the University of Utah (http://learn.genetics.utah.edu/units/stemcells/whatissc/) includes a unit on stem cells, a complicated and controversial topic. An analogy compares a stem cell with a \u201cstem cell guy,\u201d an animated cartoon-like actor who dances on a stage and divides into two cells. Learners are informed:"
+  },
+  {
+   "source_id": "1c1dbe1e-73a0-4a43-a114-09d75f3b9ab2",
+   "citation_number": 81,
+   "cited_text": "122 9  Guidelines for designing analogies in web-based science instruction Six guidelines should be kept in mind when designing elaborate science analogies. These guidelines are discussed here with a focus on web-based science instruction, but they also apply to other forms of media. (1) Designers should take into account the characteristics of the target concept. If the concept is relatively simple and straightforward, an elaborate analogy might be unnecessary. Elaborate analogies have been found to enhance learning when the target concepts are complex and represent hard-to-visualize systems with interacting parts (Glynn & Takahashi, 1998). In combination with web-based animation, interactivity, and hyperlinks \u2013 features that have also been found to enhance learning \u2013 elaborate analogies have the potential to strongly enhance learning, provided that the features interact without increasing cognitive load (Bodemer, Ploetzner, Feuerlein, & Spada, 2004; Ploetzner & Loweb, 2004)."
+  }
+ ]
+}

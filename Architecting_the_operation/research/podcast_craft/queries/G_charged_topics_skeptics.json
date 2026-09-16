@@ -1,0 +1,577 @@
+{
+ "answer": "Presenting structural racism or other identity-threatening concepts to skeptical or resistant audiences requires navigating the psychological dynamics of belief defense, threat response, and narrative persuasion. Controlled experimental research, field experiments, and media framing studies provide concrete insights into what works, what fails, and what can be adapted for audio media.\n\n---\n\n### 1. The Backfire Effect & Its Replication Failures\n\n#### A. Original Claims & Mechanisms\n* **Worldview Backfire Effect**: The hypothesis that when a factual correction challenges an individual's political or cultural worldview, they engage in intense mental counter-arguing, resulting in *stronger* belief in the original misconception than if no correction had been offered [1-3].\n  * *Original Study*: **Nyhan & Reifler (2010)** reported a worldview backfire effect in **controlled survey experiments** where conservative participants exposed to a factual correction regarding weapons of mass destruction (WMDs) in Iraq reported higher belief in WMD stockpiles than those in a control group [4-6].\n* **Familiarity Backfire Effect**: The hypothesis that repeating a misconception within a correction increases its processing fluency, making the myth feel more familiar and thus more true over time [1, 7, 8].\n  * *Original Sources*: Frequently attributed to an unpublished manuscript (**Skurnik, Yoon, & Schwarz, 2007**) [9-11] and small-scale studies (e.g., **Pluviano, Watt, & Della Sala, 2017**) [12-14].\n\n#### B. Mass Replication Failures & Scientific Consensus\n* **The Replicability Crisis of Backfire**: Subsequent large-scale direct replications have demonstrated that **backfire effects are extremely rare, non-robust, and not the norm** [15-19].\n  * **Wood & Porter (2019)**: Executed **five controlled survey experiments** involving over **10,000 participants across 52 political issues** (including the exact Nyhan & Reifler WMD text) [16, 19, 20]. They found **zero backfire effects**\u2014factual corrections consistently moved attitudes toward factual accuracy regardless of political ideology [21-23].\n  * **Swire-Thompson, DeGutis, & Lazer (2020)**: A comprehensive methodological review of backfire literature concluded that backfire effects are **not a robust empirical phenomenon** [15, 24]. The authors demonstrated that earlier positive findings often resulted from measurement error, un-reliable single-item scales, and statistical regression to the mean [25-27].\n  * **Author Walk-Backs**: Brendan Nyhan, Ethan Porter, Jason Reifler, and Thomas Wood (**Nyhan et al., 2020**) as well as Ulrich Ecker (**The Debunking Handbook 2020**) updated their stance, stating that early evidence was overstated and that backfire is \"stubbornly difficult to induce\" or nonexistent at the population level [16, 21, 23, 28, 29].\n* **Evidentiary Basis**: **Controlled laboratory and survey experiments** (Wood & Porter, 2019; Nyhan et al., 2020; Swire-Thompson et al., 2020) and **observational research syntheses** (Sippitt / Full Fact, 2020) [16, 17, 20, 30].\n\n---\n\n### 2. Identity-Protective Cognition & Racist Stereotype Threat (RST)\n\nWhen presenting concepts like structural racism, resistance is driven less by factual disagreement than by emotional and identity-protective self-defense.\n\n#### A. Identity-Protective Cognition Thesis (ICT)\n* **Mechanism**: **Dan Kahan (2013, 2017)** formulated the Identity-Protective Cognition Thesis, demonstrating that individuals selectively process empirical data to protect their standing within a valued affinity group [31, 32]. Group identity acts as a cognitive filter: when presented with facts that threaten group norms, individuals decrease their analytical accuracy and generate arguments to preserve moral coherence [31, 33, 34].\n* **Evidentiary Basis**: **Controlled survey experiments** (Kahan et al., 2013; Kahan, 2017; Khandaker, 2025) [31, 32, 34].\n\n#### B. Racist Stereotype Threat (RST)\n* **Mechanism**: Developed by **Claude Steele & Joshua Aronson (1995)** and applied to legal and social interactions by **Phillip Atiba Goff, Paul Davies, & Claude Steele (2008)** and **L. Song Richardson & Rachel Godsil (2020)** [35-38]. When white or dominant-group individuals fear being judged as racist, they experience an acute evaluative threat [36, 39, 40].\n  * *Psychological & Behavioral Manifestations*: RST triggers conscious anxiety and cortisol stress spikes [41-43]. Unconsciously, this discomfort produces ego-defensive behaviors\u2014such as physical and conversational distancing, facial rigidity, closed body posture, or accusatory claims of feeling \"attacked\" or \"blamed\" [37, 43, 44].\n* **Mitigation Strategies**:\n  * **Self-Affirmation**: **Sherman & Cohen (2006)** and **Steele (1988)** demonstrated in **controlled experiments** that encouraging individuals to affirm a core personal value prior to receiving counter-attitudinal information significantly reduces defensiveness and increases acceptance of threatening topics [45-47].\n  * **Incremental Learning Framing**: **Goff et al. (2008)** showed in **controlled experiments** that framing cross-racial or sensitive conversations as **incremental opportunities to learn** (rather than moments of moral evaluation) eliminated ego-defensive distancing behaviors [45, 48].\n* **Evidentiary Basis**: **Controlled laboratory experiments** (Steele & Aronson, 1995; Goff et al., 2008; Trawalter et al., 2012; Sherman & Cohen, 2006) and **legal social science synthesis** (Godsil, 2020) [35-37, 42, 46].\n\n---\n\n### 3. Deep Canvassing & Nonjudgmental Exchange of Narratives\n\n#### A. Core Findings & Persuasion Dynamics\n* **Mechanism**: Developed by the Los Angeles LGBT Center and evaluated by **David Broockman & Joshua Kalla (2016, 2020)**, **deep canvassing** replaces standard campaign scripts with two-way, non-judgmental conversations focused on exchanging personal narratives and engaging in **analogic perspective-taking** (asking voters to recall a time they felt treated unfairly for being different) [49-52].\n* **Specific Studies**:\n  * **Broockman & Kalla (2016 Science)**: Conducted a **pre-registered randomized field experiment** in Miami, FL [53, 54]. A 10-minute deep canvass conversation durably reduced transphobia in 1 in 10 voters for at least three months, resisting aggressive counter-argument political ads [55-57].\n  * **Kalla & Broockman (2020 APSR)**: Executed **three pre-registered field experiments** involving **230 canvassers and 6,869 voters across 7 US locations** targeting transphobia and exclusionary attitudes toward unauthorized immigrants [58-60].\n    * *Findings*: Nonjudgmentally exchanging narratives produced large, durable reductions in prejudice and increased policy support (\\\\(d = 0.04\\\\) to \\\\(0.08\\\\)) that persisted for at least four months [58, 61].\n    * *Crucial Control Condition*: In contrast, conversations that relied solely on **talking points, statistics, or \"call-outs\" produced zero change in attitudes** [62, 63].\n* **Evidentiary Basis**: **Pre-registered randomized field experiments** (Broockman & Kalla, 2016; Kalla & Broockman, 2020) [54, 57, 58].\n\n---\n\n### 4. Messenger Effects & Host Credibility\n\n* **Demographic Identity vs. Conversational Skill**:\n  * **Broockman & Kalla (2016 Science)** found that both affected group members (transgender canvassers) and non-affected allies (cisgender canvassers) were **equally effective** at durably reducing prejudice through deep canvassing [50, 64].\n  * **Evidentiary Basis**: **Randomized field experiment** [50].\n* **Host Authenticity & Parasocial Trust in Audio**:\n  * Media studies on podcasting (**Dowling, 2024, 2025; Powers, 2024; Florini, 2019**) demonstrate that listener trust relies on **authentic vocal delivery, lived experience, unvarnished vernacular, and self-reflexive disclosure** (disclosing reporting struggles or personal mistakes) rather than \"performance neutrality\" or detached academic authority [65-68].\n  * **Evidentiary Basis**: **Qualitative and computational media analysis** [65, 67, 68].\n\n---\n\n### 5. FrameWorks Institute Framing Research\n\nThe **FrameWorks Institute (2024)** playbook (*Reframing Health Disparities in Rural America*) provides empirical guidance for communicating structural inequities to skeptical or conservative audiences [69, 70]:\n\n1. **Lead with Inherent Human Dignity**: Open communications with the shared value that every person has inherent dignity and worth [71, 72]. Testing shows this value opens minds before introducing targeted interventions [72].\n2. **Define Health as Broad Well-Being**: Frame health as overall physical, mental, and social well-being, moving audiences away from \"health reductionism\" (equating health merely with the absence of illness) [73-75].\n3. **Speak to Concrete Historical Mechanisms**: To prevent \"unconnected dots\" (the public's struggle to connect systemic racism to physical outcomes) and eliminate \"health otherism\" (blaming marginalized groups for their own outcomes), communicators must explain **concrete past decisions and policies**\u2014such as redlining, closing historically Black medical schools, or highway investments over sidewalks\u2014and connect their lingering mechanisms to present conditions [73, 76-80].\n4. **Use the \"Analyze - Bridge - Pivot\" Formula**: When conversations get derailed by individualistic claims (\"health is just personal choice\"), bridge acknowledged concerns and pivot to structural context [81-84].\n* **Evidentiary Basis**: **Multi-method framing research, focus groups, and experimental message testing** (FrameWorks Institute, 2024) [70, 85, 86].\n\n---\n\n### 6. Transfer to a One-Way Audio Medium vs. Live Conversation\n\n| Concept / Finding | Requires Live Conversation? | Transfers to One-Way Audio? | Implementation Strategy in Audio |\n| :--- | :--- | :--- | :--- |\n| **Active Listening & Real-Time Mirroring** | **Yes** | No | Requires live, reciprocal two-way interaction to ask open-ended questions about the listener's personal life [52, 87]. |\n| **Modeled Narrative & Perspective-Taking** | No | **Yes** | Co-hosts or an **audience surrogate** can model deep canvassing on mic\u2014sharing personal, vulnerable stories and exploring structural connections without calling out the listener [88-90]. |\n| **Value-First Dignity Framing (FrameWorks)** | No | **Yes** | Open episodes with shared human values (inherent dignity) before introducing contentious topics [71, 72]. |\n| **Concrete Policy Mechanisms (FrameWorks)** | No | **Yes** | Explain structural racism through specific historical decisions (redlining, transit, zoning) rather than abstract moral buzzwords [77, 78, 80]. |\n| **Mitigating Racist Stereotype Threat** | No | **Yes** | Establish an **identity-safe, non-evaluative environment** by framing the episode as a collaborative exploration and incorporating self-affirmation prompts [45, 46, 48]. |\n\n---\n\n### 7. Disagreements, Thin Evidence, & Methodological Gaps\n\n1. **The Transferability Gap**:\n   * **Evidence Gap**: While **Broockman & Kalla (2016, 2020)** provide **gold-standard field experimental evidence** for deep canvassing in live door-to-door and phone settings, **there are zero controlled experimental studies** evaluating whether modeling deep canvassing narratives inside a one-way audio podcast produces equivalent long-term attitude shifts [54, 58].\n2. **Concrete Structural Explanations vs. Abstract Falsifiability**:\n   * **The Conflict**: Psychological studies on motivated reasoning (**Kunda, 1990; Kahan, 2013**) note that shifting explanations from specific factual claims to broad, abstract concepts like \"systemic\" or \"institutional\" racism can lead skeptical listeners to view the language as unfalsifiable or performative [33, 91, 92]. FrameWorks Institute (2024) resolves this by emphasizing that structural communications **must focus on concrete, historical policy decisions and their causal mechanisms** rather than abstract moral assertions [73, 76, 77].\n\n---\n\n\ud83c\udfa7 Would you like to draft an opening \"billboard\" script for your next episode that incorporates FrameWorks' dignity value frame and an identity-safe learning invitation?",
+ "conversation_id": "010d7602-fa56-4f97-89a1-ed8539e8ebe5",
+ "sources_used": [
+  "9f32427b-a820-4f26-a7e3-6caca148a403",
+  "8ab530d2-6f79-479e-a2c2-ed3e508bb0b7",
+  "5c8a22ab-82c5-4d73-b5e4-690585fd327c",
+  "342c07c3-6b5f-46da-a4d1-feee24402ada",
+  "ebd608d9-3502-4b70-89bd-9e7aa66ad6d5",
+  "ebe64083-3e0a-489f-9d4e-ceb0546d892a",
+  "97e339bd-8922-4db1-be01-1b1a4451cab9",
+  "2643859f-68cb-4360-8c7a-bf141d95fd01",
+  "690415cc-750a-4ef1-88ea-937ed07f61a6",
+  "e633cba9-b8d5-491a-9d51-6376099bc495",
+  "9cc96f1b-2977-4951-af58-23c7ca1dcb11",
+  "ba5bab17-7fe7-4ebc-9466-d75748eb6fc8",
+  "fe7465f8-cfbe-4efc-8413-b2a0f5423438",
+  "5e336e24-75f2-44c0-8cf2-5d683c5b6e95",
+  "050f0770-0d3c-4d5a-82d3-4bbb03a6a295"
+ ],
+ "citations": {
+  "1": "9f32427b-a820-4f26-a7e3-6caca148a403",
+  "2": "9f32427b-a820-4f26-a7e3-6caca148a403",
+  "3": "8ab530d2-6f79-479e-a2c2-ed3e508bb0b7",
+  "4": "9f32427b-a820-4f26-a7e3-6caca148a403",
+  "5": "5c8a22ab-82c5-4d73-b5e4-690585fd327c",
+  "6": "5c8a22ab-82c5-4d73-b5e4-690585fd327c",
+  "7": "9f32427b-a820-4f26-a7e3-6caca148a403",
+  "8": "9f32427b-a820-4f26-a7e3-6caca148a403",
+  "9": "9f32427b-a820-4f26-a7e3-6caca148a403",
+  "10": "9f32427b-a820-4f26-a7e3-6caca148a403",
+  "11": "8ab530d2-6f79-479e-a2c2-ed3e508bb0b7",
+  "12": "9f32427b-a820-4f26-a7e3-6caca148a403",
+  "13": "8ab530d2-6f79-479e-a2c2-ed3e508bb0b7",
+  "14": "8ab530d2-6f79-479e-a2c2-ed3e508bb0b7",
+  "15": "9f32427b-a820-4f26-a7e3-6caca148a403",
+  "16": "9f32427b-a820-4f26-a7e3-6caca148a403",
+  "17": "9f32427b-a820-4f26-a7e3-6caca148a403",
+  "18": "5c8a22ab-82c5-4d73-b5e4-690585fd327c",
+  "19": "5c8a22ab-82c5-4d73-b5e4-690585fd327c",
+  "20": "8ab530d2-6f79-479e-a2c2-ed3e508bb0b7",
+  "21": "9f32427b-a820-4f26-a7e3-6caca148a403",
+  "22": "8ab530d2-6f79-479e-a2c2-ed3e508bb0b7",
+  "23": "5c8a22ab-82c5-4d73-b5e4-690585fd327c",
+  "24": "9f32427b-a820-4f26-a7e3-6caca148a403",
+  "25": "9f32427b-a820-4f26-a7e3-6caca148a403",
+  "26": "9f32427b-a820-4f26-a7e3-6caca148a403",
+  "27": "9f32427b-a820-4f26-a7e3-6caca148a403",
+  "28": "8ab530d2-6f79-479e-a2c2-ed3e508bb0b7",
+  "29": "8ab530d2-6f79-479e-a2c2-ed3e508bb0b7",
+  "30": "5c8a22ab-82c5-4d73-b5e4-690585fd327c",
+  "31": "342c07c3-6b5f-46da-a4d1-feee24402ada",
+  "32": "342c07c3-6b5f-46da-a4d1-feee24402ada",
+  "33": "ebd608d9-3502-4b70-89bd-9e7aa66ad6d5",
+  "34": "342c07c3-6b5f-46da-a4d1-feee24402ada",
+  "35": "ebe64083-3e0a-489f-9d4e-ceb0546d892a",
+  "36": "ebe64083-3e0a-489f-9d4e-ceb0546d892a",
+  "37": "ebe64083-3e0a-489f-9d4e-ceb0546d892a",
+  "38": "ebe64083-3e0a-489f-9d4e-ceb0546d892a",
+  "39": "ebe64083-3e0a-489f-9d4e-ceb0546d892a",
+  "40": "ebe64083-3e0a-489f-9d4e-ceb0546d892a",
+  "41": "ebe64083-3e0a-489f-9d4e-ceb0546d892a",
+  "42": "ebe64083-3e0a-489f-9d4e-ceb0546d892a",
+  "43": "ebe64083-3e0a-489f-9d4e-ceb0546d892a",
+  "44": "ebe64083-3e0a-489f-9d4e-ceb0546d892a",
+  "45": "ebe64083-3e0a-489f-9d4e-ceb0546d892a",
+  "46": "ebe64083-3e0a-489f-9d4e-ceb0546d892a",
+  "47": "ebe64083-3e0a-489f-9d4e-ceb0546d892a",
+  "48": "ebe64083-3e0a-489f-9d4e-ceb0546d892a",
+  "49": "97e339bd-8922-4db1-be01-1b1a4451cab9",
+  "50": "2643859f-68cb-4360-8c7a-bf141d95fd01",
+  "51": "2643859f-68cb-4360-8c7a-bf141d95fd01",
+  "52": "690415cc-750a-4ef1-88ea-937ed07f61a6",
+  "53": "97e339bd-8922-4db1-be01-1b1a4451cab9",
+  "54": "2643859f-68cb-4360-8c7a-bf141d95fd01",
+  "55": "97e339bd-8922-4db1-be01-1b1a4451cab9",
+  "56": "97e339bd-8922-4db1-be01-1b1a4451cab9",
+  "57": "2643859f-68cb-4360-8c7a-bf141d95fd01",
+  "58": "e633cba9-b8d5-491a-9d51-6376099bc495",
+  "59": "9cc96f1b-2977-4951-af58-23c7ca1dcb11",
+  "60": "9cc96f1b-2977-4951-af58-23c7ca1dcb11",
+  "61": "9cc96f1b-2977-4951-af58-23c7ca1dcb11",
+  "62": "9cc96f1b-2977-4951-af58-23c7ca1dcb11",
+  "63": "9cc96f1b-2977-4951-af58-23c7ca1dcb11",
+  "64": "97e339bd-8922-4db1-be01-1b1a4451cab9",
+  "65": "ba5bab17-7fe7-4ebc-9466-d75748eb6fc8",
+  "66": "fe7465f8-cfbe-4efc-8413-b2a0f5423438",
+  "67": "fe7465f8-cfbe-4efc-8413-b2a0f5423438",
+  "68": "fe7465f8-cfbe-4efc-8413-b2a0f5423438",
+  "69": "5e336e24-75f2-44c0-8cf2-5d683c5b6e95",
+  "70": "5e336e24-75f2-44c0-8cf2-5d683c5b6e95",
+  "71": "5e336e24-75f2-44c0-8cf2-5d683c5b6e95",
+  "72": "5e336e24-75f2-44c0-8cf2-5d683c5b6e95",
+  "73": "5e336e24-75f2-44c0-8cf2-5d683c5b6e95",
+  "74": "5e336e24-75f2-44c0-8cf2-5d683c5b6e95",
+  "75": "5e336e24-75f2-44c0-8cf2-5d683c5b6e95",
+  "76": "5e336e24-75f2-44c0-8cf2-5d683c5b6e95",
+  "77": "5e336e24-75f2-44c0-8cf2-5d683c5b6e95",
+  "78": "5e336e24-75f2-44c0-8cf2-5d683c5b6e95",
+  "79": "5e336e24-75f2-44c0-8cf2-5d683c5b6e95",
+  "80": "5e336e24-75f2-44c0-8cf2-5d683c5b6e95",
+  "81": "5e336e24-75f2-44c0-8cf2-5d683c5b6e95",
+  "82": "5e336e24-75f2-44c0-8cf2-5d683c5b6e95",
+  "83": "5e336e24-75f2-44c0-8cf2-5d683c5b6e95",
+  "84": "5e336e24-75f2-44c0-8cf2-5d683c5b6e95",
+  "85": "5e336e24-75f2-44c0-8cf2-5d683c5b6e95",
+  "86": "5e336e24-75f2-44c0-8cf2-5d683c5b6e95",
+  "87": "9cc96f1b-2977-4951-af58-23c7ca1dcb11",
+  "88": "050f0770-0d3c-4d5a-82d3-4bbb03a6a295",
+  "89": "9cc96f1b-2977-4951-af58-23c7ca1dcb11",
+  "90": "690415cc-750a-4ef1-88ea-937ed07f61a6",
+  "91": "ebd608d9-3502-4b70-89bd-9e7aa66ad6d5",
+  "92": "ebd608d9-3502-4b70-89bd-9e7aa66ad6d5"
+ },
+ "references": [
+  {
+   "source_id": "9f32427b-a820-4f26-a7e3-6caca148a403",
+   "citation_number": 1,
+   "cited_text": "General  Audience  Summary A backfire effect is when people report believing even more in misinformation after they have seen an evidence-based correction aiming to rectify it. This review discusses the current state of the backfire literature, examines barriers to measuring this phenomenon, and concludes with recommendations for fact-checkers. Two backfire effects have gained popularity in the literature: the worldview backfire effect and the familiarity backfire effect. While these both result in increased belief after a correction, they occur due to different psychological mechanisms. The worldview backfire effect is said to occur when a person is motivated to defend their worldview"
+  },
+  {
+   "source_id": "9f32427b-a820-4f26-a7e3-6caca148a403",
+   "citation_number": 2,
+   "cited_text": "Two backfire effects have gained popularity in the literaure: the worldview backfire effect and the familiarity backfire ffect. These both result in increased belief after a correction et are thought to have different psychological mechanisms. he worldview backfire effect is said to occur when people are otivated to defend their worldview because a correction chal- enges their belief system (Cook & Lewandowsky, 2012). It is ore likely to occur with items that are important to the indi- idual, such as politicized \u201chot-button\u201d issues or information hat the individual believes in strongly (Flynn, Nyhan, & Reifler,"
+  },
+  {
+   "source_id": "8ab530d2-6f79-479e-a2c2-ed3e508bb0b7",
+   "citation_number": 3,
+   "cited_text": "[Kristin] (2:49 - 3:29) \n Our brains often confuse familiarity with truth. So even if you originally heard, this is a myth or this is false, just hearing that myth repeated multiple times might make it feel credible later. Interesting. [Regina]  And the worldview backfire? [Kristin] \n That's when a correction threatens someone's core beliefs, political, cultural, or religious. The theory is that when people feel their worldview is under attack, they start mentally counter-arguing. They push back in their minds, defending their position so forcefully that they end up believing the false claim even more as a way to protect their identity."
+  },
+  {
+   "source_id": "9f32427b-a820-4f26-a7e3-6caca148a403",
+   "citation_number": 4,
+   "cited_text": "The landmark paper regarding the worldview backfire effect s Nyhan and Reifler (2010). Their first experiment corrected he misconception that weapons of mass destruction were found n Iraq during the 2003 invasion. Liberal individuals, whose orldview aligned with the correction, were able to success- ully update their belief, whereas conservatives increased their elief in the misconception. Although Nyhan and Reifler\u2019s secnd experiment failed to replicate the backfire effect for this tem with the conservative group as a whole, they did find the henomenon in a subset of conservative respondents who rated raq as the most important problem facing the country at that oint in time. The authors suggested that backfire effects may nly occur when a belief is strong, and the issue is currently onnected with an individual\u2019s political identity. This sugges-"
+  },
+  {
+   "source_id": "5c8a22ab-82c5-4d73-b5e4-690585fd327c",
+   "citation_number": 5,
+   "cited_text": "They conducted two studies, one in autumn 2005 and one in spring 2006, testing five claims in total among samples of less than 200 US undergraduates. They found evidence of backfire in response to two claims they defined as inaccurate, both made by ex-US President George W. Bush. The first and most well-known claim, tested in the first study, was about whether Iraq had weapons of mass destruction (WMD) that were destroyed or hidden before US forces arrived in the US invasion. Participants were shown a news article about comments made by George Bush defending the decision to invade Iraq and were then asked the extent to which they"
+  },
+  {
+   "source_id": "5c8a22ab-82c5-4d73-b5e4-690585fd327c",
+   "citation_number": 6,
+   "cited_text": "\u201cWhen corrections fail: the persistence of political misperceptions\u201d            Brendan Nyhan and Jason Reifler (published in Political Behavior, 2010) agreed with the statement \u201cImmediately before the U.S. invasion, Iraq had an active weapons of mass destruction program, the ability to produce these weapons, and large stockpiles of WMD, but Saddam Hussein was able to hide or destroy these weapons right before U.S. forces arrived\u201d. Some had been shown the news article on its own, and some saw the news article with a debunk within the article saying that the Central Intelligence Agency had released a report to say no weapons had been stockpiled. Conservatives who saw the news article with the debunk ended up agreeing with the statement more strongly than those who saw the news article without the debunking element\u2014a \u201cbackfire effect\u201d."
+  },
+  {
+   "source_id": "9f32427b-a820-4f26-a7e3-6caca148a403",
+   "citation_number": 7,
+   "cited_text": "017; Lewandowsky et al., 2012). In contrast to the mechanisms f the worldview backfire effect, the familiarity backfire effect s presumed to occur when misinformation is repeated within 2 d b , Continued influence effect, Reliability he correction (Schwarz, Sanna, Skurnik, & Yoon, 2007).1 For xample, if one were to try to correct a misconception and stated hat \u201ceating apricot seeds does NOT cure cancer,\u201d the correction epeats both \u201capricot seeds\u201d and \u201ccuring cancer,\u201d thus makng the original misinformation more familiar. This increased amiliarity is problematic because people are more likely to ssume that familiar information is true\u2014a phenomenon called he illusory  truth  effect (Begg, Anas, & Farinacci, 1992). In other ords, this boost in familiarity when correcting misinforma-"
+  },
+  {
+   "source_id": "9f32427b-a820-4f26-a7e3-6caca148a403",
+   "citation_number": 8,
+   "cited_text": "worldview backfire effect, which did not, and the dependent ariable(s) used in each. Familiarity  Backfire  Effect In contrast to the ideological mechanisms behind the worldiew backfire effect, familiarity backfire effects are often resumed to occur due to the correction increasing the misin- ormation\u2019s processing fluency. In other words, the correction f \u201capricot seeds do NOT cure cancer\u201d increases the ease in hich \u201capricot seeds\u201d and \u201ccancer\u201d are retrieved and processed Schwarz, Newman, & Leach, 2016). However, the specific"
+  },
+  {
+   "source_id": "9f32427b-a820-4f26-a7e3-6caca148a403",
+   "citation_number": 9,
+   "cited_text": "The original notion of the familiarity backfire effect stems rom an unpublished manuscript (Skurnik, Yoon, & Schwarz, 007), as cited in Schwarz et al., 2007) where participants who iewed a flyer with \u201cmyth vs. fact\u201d information regarding the u vaccine reported less favorable attitudes toward vaccination han those who did not view the flyer. Although this paper is ighly cited (e.g., Berinsky, 2017; Cook, Bedford, & Mandia, 014; Gemberling & Cramer, 2014; Lilienfeld, Marshall, Todd, Shane, 2014; Peter & Koch, 2016; Pluviano, Watt, Ragazzini,  Della Sala, 2019; Swire, Ecker et al., 2017), it is diffi-"
+  },
+  {
+   "source_id": "9f32427b-a820-4f26-a7e3-6caca148a403",
+   "citation_number": 10,
+   "cited_text": "s t i c SEARCHING FOR THE BACKFIRE EFFECT: MEASUREMENT AND DESIGN CONSIDERATIONS 296 Appendix  C.  Familiarity  backfire  effect  literature Article Topic Sample Dependent variable(s) Number of items in DV Did a backfire occur? / In what subgroup Skurnik et al. (unpublished manuscript, 2007)a Vaccines Unknown Intent to vaccinate Appears to be 1 item (although exact details unavailable). Yes: 30-minute delay after corrections presented Cameron et al. (2013) Vaccines 105 community sample Knowledge 15 items (composite) No Accuracy of veracity recall 8 items (composite) No"
+  },
+  {
+   "source_id": "8ab530d2-6f79-479e-a2c2-ed3e508bb0b7",
+   "citation_number": 11,
+   "cited_text": "Fact-checkers were even warned to not repeat misinformation when correcting it. We are going to dissect that 2010 paper in just a minute here, but before we do that, Regina, I want to talk about an earlier paper from 2007. It's sort of a ghost or phantom paper. [Regina] \n A ghost paper? What is a ghost paper? [Kristin] \n It's this unpublished study that everyone cites as evidence of the familiarity backfire effect, but no one ever seems to have actually got their hands on this study. It's a ghost."
+  },
+  {
+   "source_id": "9f32427b-a820-4f26-a7e3-6caca148a403",
+   "citation_number": 12,
+   "cited_text": "ult to evaluate given that it remains unpublished. There have een failures to directly replicate this study (Cameron et al., 013), and the phenomenon has not been elicited under theoretcally conducive circumstances, including a three-week delay etween corrections being presented and belief being measured Swire, Ecker et al., 2017). Furthermore, since worldview backre effects have been demonstrated using vaccine stimuli (e.g., yhan et al., 2014), it is unclear whether the Skurnik et al. 2007) backfire effect was due to worldview or familiarity mechnisms. This potential misattribution also applies to Pluviano, att, and Della Sala (2017), Pluviano et al. (2019), and Berinsky"
+  },
+  {
+   "source_id": "8ab530d2-6f79-479e-a2c2-ed3e508bb0b7",
+   "citation_number": 13,
+   "cited_text": "Statistical topics Computational replication Replication Block randomization Problems in randomization Bad citing Interactions in regression Unpublished \"Ghost Paper\" PDF retrieved from the Wayback Machine Citations Nyhan B, Reifler J. When corrections fail: The persistence of political misperceptions . Political Behavior . 2010;32:303\u2013330. Skurnik I, Yoon C, Schwarz N. \u201cMyths & Facts\u201d about the flu: Health education campaigns can reduce vaccination intentions. Unpublished manuscript, PDF posted separately. Schwarz N, Sanna LJ, Skurnik I, et al. Metacognitive experiences and the intricacies of setting people straight: Implications for debiasing and public information campaigns . Advances in Experimental Social Psychology . 2007;39:127\u201361. Lewandowsky S, Ecker UKH, Seifert CM, et al. Misinformation and its correction: Continued influence and successful debiasing . Psychological Science in the Public Interest . 2012;13:106\u2013131. Pluviano S, Watt C, Della Sala S. Misinformation lingers in memory: Failure of three pro-vaccination strategies . PLOS ONE . 2017;12:e0181640. Pluviano S, Watt C, Ragazzini G, et al. Parents\u2019 beliefs in misinformation about vaccines are strengthened by pro\u2011vaccine campaigns . Cognitive Processing . 2019;20:325\u201331. Wood T, Porter E. The elusive backfire effect: Mass attitudes\u2019 steadfast factual adherence . Political Behavior . 2019;41:135\u201363. Nyhan B, Porter E, Reifler J, Wood TJ. Taking fact-checks literally but not seriously? The effects of journalistic fact-checking on factual beliefs and candidate favorability . Political Behavior . 2020;42:939\u201360. Ecker UKH, Hogan JL, Lewandowsky S. Reminders and repetition of misinformation: Helping or hindering its retraction? Journal of Applied Research in Memory and Cognition . 2017;6:185\u201392. Swire B, Ecker UKH, Lewandowsky S. The role of familiarity in correcting inaccurate information . Journal of Experimental Psychology: Learning, Memory, and Cognition . 2017;43:1948\u201361. Ecker UKH, O\u2019Donnell M, Ang LC, et al. The effectiveness of short- and long-format retractions on misinformation belief and recall . British Journal of Psychology . 2020;111:36\u201354. Ecker UKH, Sharkey CXM, Swire-Thompson B. Correcting vaccine misinformation: A failure to replicate familiarity or fear-driven backfire effects . PLOS ONE . 2023;18:e0281140. Cook J, Lewandowsky S. The Debunking Handbook . University of Queensland. 2011. Lewandowsky S, Cook J, Ecker UKH, et al. The Debunking Handbook 2020 . Available at https://sks.to/db2020."
+  },
+  {
+   "source_id": "8ab530d2-6f79-479e-a2c2-ed3e508bb0b7",
+   "citation_number": 14,
+   "cited_text": "[Kristin] (41:06 - 41:33) \n This paper was published in PLOS One. The first author was a PhD student and this paper got a lot of attention because it claimed to have found this elusive familiarity backfire effect. Up until now, there was really no evidence for that effect other than that ghost paper. And in a lot of ways, the familiarity backfire effect is actually harder to find because with a familiarity backfire effect, the correction makes everybody backfire, not just the people who are super invested in the issue."
+  },
+  {
+   "source_id": "9f32427b-a820-4f26-a7e3-6caca148a403",
+   "citation_number": 15,
+   "cited_text": "Department of Psychiatry, Harvard Medical School, Boston, MA, USA David Lazer Network Science Institute, Northeastern University, Boston, USA Institute of Quantitative Social Science, Harvard University, Cambridge, USA One of the most concerning notions for science communicators, fact-checkers, and advocates of truth, is the backfire effect; this is when a correction leads to an individual increasing their belief in the very misconception the correction is aiming to rectify. There is currently a debate in the literature as to whether backfire effects exist at all, as recent studies have failed to find the phenomenon, even under theoretically favorable conditions. In this review, we summarize the current state of the worldview and familiarity backfire effect literatures. We subsequently examine barriers to measuring the backfire phenomenon, discuss approaches to improving measurement and design, and conclude with recommendations for fact-checkers. We suggest that backfire effects are not a robust empirical phenomenon, and more reliable measures, powerful designs, and stronger links between experimental design and theory could greatly help move the field ahead."
+  },
+  {
+   "source_id": "9f32427b-a820-4f26-a7e3-6caca148a403",
+   "citation_number": 16,
+   "cited_text": "ation when answering inference questions (e.g., Ecker & Ang, 019). Regardless of the dependent variable used, failures to find r replicate previously observed backfire effects have been idespread (e.g., Garrett, Nisbet, & Lynch, 2013; Nyhan, orter, Reifler, & Wood, 2019; Schmid & Betsch, 2019; Swire, erinsky, Lewandowsky, & Ecker, 2017; Swire-Thompson, cker, Lewandowsky, & Berinsky, 2019; Weeks, 2015; Weeks Garrett, 2014), even when using identical items that previusly elicited the phenomenon. For example, Haglin (2017) sed identical methods and vaccine-related items to those from yhan and Reifler (2015) and failed to find any evidence of a ackfire effect. The largest failure to replicate to-date was by ood and Porter (2019), conducting five experiments with over"
+  },
+  {
+   "source_id": "9f32427b-a820-4f26-a7e3-6caca148a403",
+   "citation_number": 17,
+   "cited_text": "Practical  Recommendations Regarding the worldview backfire effect, fact-checkers can est assured that it is extremely  unlikely that, at the broader group evel, their fact-checks will lead to increased belief in the misnformation. Meta-analyses have clearly shown that corrections re generally effective and backfire effects are not the norm e.g., Chan, Jones, Hall Jamieson, & Albarrac\u00edn, 2017; Walter Murphy, 2018). Furthermore, given that research has yet to ystematically show backfire effects in the same subgroups, ractitioners should not avoid giving corrections to any specific ubgroups of people. Fact-checkers can therefore focus on other nown issues such as getting the fact-checks to the individuals ho are most likely to be misinformed. Regarding the familiarity backfire effect, avoiding the repeti-"
+  },
+  {
+   "source_id": "5c8a22ab-82c5-4d73-b5e4-690585fd327c",
+   "citation_number": 18,
+   "cited_text": "This supposed effect is often interpreted as meaning that factchecking is ineffective, or even counterproductive. This briefing looks at seven major experimental studies that have examined supposed backfire effects, mostly in the United States. It finds that while backfire may occur in some cases, the the evidence now suggests it is rare rather than the norm, and that generally debunking can make people\u2019s beliefs in specific claims more accurate. Two studies, from 2010 and 2012, found some evidence of a backfire effect in certain circumstances. None of the five more recent studies looked at (from 2015, 2017, 2018 and 2019) have found any evidence of the effect. The cases where backfire effects were found tended to be particularly contentious topics, or where the factual claim being asked about was ambiguous. Our worldview may still affect the extent to which a debunk might be effective. The impact of debunks on our behaviour is more complicated. This briefing does not look at this in detail; it focuses on how debunks affect belief in the accuracy of the claim in question. This review suggests factchecking does help to inform citizens and backfire effects are rare rather than the norm. We still need more evidence to understand how factchecking content can be most effective."
+  },
+  {
+   "source_id": "5c8a22ab-82c5-4d73-b5e4-690585fd327c",
+   "citation_number": 19,
+   "cited_text": "Recent attempts to replicate have found no backfire Recent attempts to directly test for the backfire effect, generally among much larger samples than previously used, have found little evidence of the effect. These studies have tested claims and debunks appearing on their own, as well as claims and debunks appearing in a mock news article. A recent study by Thomas Wood and Ethan Porter conducted five studies testing 52 claims with more than 10,100 people in the US. They selected prominent issues, ranging from the incidence of gun violence through to undocumented immigrants\u2019 criminal activities. They tested claims and debunks both as separate pieces of text, and within mock news articles."
+  },
+  {
+   "source_id": "8ab530d2-6f79-479e-a2c2-ed3e508bb0b7",
+   "citation_number": 20,
+   "cited_text": "I'm going to start with the one that had the biggest splash. There was a huge replication study published in 2019 in the journal Political Behavior, the same journal that published the original Nyhan and Reifler study. The title is The Elusive Backfire Effect, and it was done by two PhD students. They ran five large experiments with a total of over 10,000 participants, and they set out specifically to replicate Nyhan and Reifler's 2010 study on the Iraq WMD myth. But they didn't just stop there. They tested that correction, and then they tested factual corrections across 52 different political issues covering claims from both the left and the right."
+  },
+  {
+   "source_id": "9f32427b-a820-4f26-a7e3-6caca148a403",
+   "citation_number": 21,
+   "cited_text": "0,000 participants. The items were specifically chosen to be mportant ideological issues that would be theoretically conucive to a worldview backfire effect. The authors found that ut of 52 issues corrected, no items triggered a backfire effect. uch of the literature has interpreted these failures to replicate o indicate that either (a) the backfire effect is difficult to elicit n the larger group level, (b) it is extremely item-, situation-, r individual-specific, or (c) the phenomenon does not exist at ll. See Appendix B for details regarding which studies found"
+  },
+  {
+   "source_id": "8ab530d2-6f79-479e-a2c2-ed3e508bb0b7",
+   "citation_number": 22,
+   "cited_text": "And they were specifically looking for worldview backfire effects. They used a similar statistical approach as Nyhan and Reifler. [Regina] (50:16 - 50:27) \n Okay, so over 10,000 participants and 53 political issues. That is huge. I hope they found something. [Kristin] (50:28 - 50:40) \n No, they found no backfire effects, none. Across all five experiments, factual corrections consistently reduced belief in false claims regardless of political ideology. [Regina] (50:41 - 50:50) \n So nobody doubling down. That is amazing. But this is so different than the initial studies."
+  },
+  {
+   "source_id": "5c8a22ab-82c5-4d73-b5e4-690585fd327c",
+   "citation_number": 23,
+   "cited_text": "They conclude that backfire is \u201cstubbornly difficult to induce\u201d and found: \u201cThe average subject exposed to the correction subsequently expressed attitudes more in line with the facts.\u201d This includes with Nyhan and Reifler\u2019s WMD text, where they found no backfire. That\u2019s not to say there was no effect of partisanship\u2014in the majority of cases they still found that people were more or less likely to believe a claim was true or false depending on their political beliefs. But they found that debunking did move individuals towards being more accurate on average, including among both liberals and conservatives."
+  },
+  {
+   "source_id": "9f32427b-a820-4f26-a7e3-6caca148a403",
+   "citation_number": 24,
+   "cited_text": "Conclusion In today\u2019s fast-paced information society it is extremely mportant to understand the efficacy of corrections, the exact cirumstances under which they have no impact, or even backfire. he current state of the literature calls into question the notion of he backfire effect and more rigorous studies are needed to deterine if there are circumstances when these effects reliably occur. ndeed, given the current coronavirus pandemic and the ramant misinformation that has accompanied it, understanding the arameters of misinformation correction is particularly crucial. n sum, the current review suggests that backfire effects are not a obust empirical phenomenon, and more reliable measures, powrful designs, and stronger links between experimental design nd theory could greatly help move the field ahead."
+  },
+  {
+   "source_id": "9f32427b-a820-4f26-a7e3-6caca148a403",
+   "citation_number": 25,
+   "cited_text": "Measurement  and  Design  Considerations The above review suggests that backfire effects are not a obust empirical phenomenon and it could be the case that hey represent an artifact of measurement error. Misinforma-ion is still a relatively new field and more reliable measures nd more powerful designs are needed to move the field ahead nd determine the fate of backfire effects. Here we suggest some xperimental and theoretical steps that could improve the qualty of the evidence. In particular, we suggest that future studies"
+  },
+  {
+   "source_id": "9f32427b-a820-4f26-a7e3-6caca148a403",
+   "citation_number": 26,
+   "cited_text": "A final measurement issue that could influence backfire ffects is that unreliable measures have more random error and re more susceptible to regression to the mean, where extreme alues at baseline testing become less extreme at follow-up esting (Bland, 2017). A regression-to-the-mean effect may be articularly problematic for individuals or subgroups in pre-post esign studies who report low pre-correction belief, given that he effect could increase post-correction belief. Thus, this pheomenon could potentially result in spurious backfire effects. In igure 1 we plot simulated data to illustrate this point. Panel A hows test-retest data for an item with poor reliability (Pearson\u2019s"
+  },
+  {
+   "source_id": "9f32427b-a820-4f26-a7e3-6caca148a403",
+   "citation_number": 27,
+   "cited_text": "eliable (Panel D). Though this is an oversimplified example, it hows how poor reliability and regression to the mean can give ise to spurious backfire effects in individuals and subgroups. t should be noted that effects of regression to the mean can be b f t i UREMENT AND DESIGN CONSIDERATIONS 290 ubstantially mitigated by limiting exploratory subgroup analses as well as including a well-matched test-retest or placebo roup for comparison. xperimental  Design In terms of design, studies of the backfire effect have varied idely, with most examining between-groups differences of cor-"
+  },
+  {
+   "source_id": "8ab530d2-6f79-479e-a2c2-ed3e508bb0b7",
+   "citation_number": 28,
+   "cited_text": "[Kristin] (53:21 - 54:38) \n There was no backfire. The results completely did not replicate. This actually doesn't surprise me all that much, given the problems we talked about earlier with that plus one paper. And, you know, Regina, at this point, I think Ecker sees the backfire effect as more myth than reality. Like Nyhan, he's completely walked it back. Oh, good for them. Yeah, you know, some of his colleagues had published a guidebook in 2011 called The Debunking Handbook. And this was supposed to be a resource for science communicators and journalists. In the original version in 2011, they explicitly warned about backfire effects, and they treated them as real risks."
+  },
+  {
+   "source_id": "8ab530d2-6f79-479e-a2c2-ed3e508bb0b7",
+   "citation_number": 29,
+   "cited_text": "But they updated that handbook in 2020 with Ecker as a co-author. And in that update, they completely backpedaled. On the familiarity backfire, they write, early evidence was supportive of this idea. I think that's referring to the ghost paper. But more recently, exhaustive experimental attempts to induce a backfire effect through familiarity alone have come up empty. And then on the worldview backfire, they say, while there was initially some evidence for the worldview backfire effect, I think that's referring to the Nyhan and Reifler paper, recent research indicates that it is not a pervasive and robust empirical phenomenon."
+  },
+  {
+   "source_id": "5c8a22ab-82c5-4d73-b5e4-690585fd327c",
+   "citation_number": 30,
+   "cited_text": "Does it exist? And does it matter for factcheckers? The backfire effect Full Fact is the UK\u2019s independent factchecking charity. About this paper Full Fact\u2019s Research Manager, Amy Sippitt, studies what existing academic evidence tells factcheckers about how our work can be most effective. This briefing looks at the common question posed to factcheckers of whether there is a backfire effect. We would like to extend our warmest thanks to Brendan Nyhan, Ethan Porter and Briony Swire-Thompson for their comments."
+  },
+  {
+   "source_id": "342c07c3-6b5f-46da-a4d1-feee24402ada",
+   "citation_number": 31,
+   "cited_text": "1974; Sniderman & Theriault, 2004; Scheufele & Tewksbury, 2006; Chong & Druckman, 2007; Lindgren et al., 2022). These frameworks support the idea that the presentation of racism as \u2018logic\u2019 is neither accidental nor neutral \u2014 it is discursively constructed and strategically framed. This view is further reinforced by Kahan\u2019s (2017) identity-protective cognition thesis which explains how individuals reject threatening information to preserve their group-based sense of moral coherence \u2014 a dynamic crucial for understanding why"
+  },
+  {
+   "source_id": "342c07c3-6b5f-46da-a4d1-feee24402ada",
+   "citation_number": 32,
+   "cited_text": "Similarly, Lindgren et al. (2022) discussed the effects of positive and negative framing of statistical statements on perceived truth and public opinions. In an experiment conducted by Kahan et al. (2013), the authors tested partici- pants\u2019 ability to draw valid causal inferences from empirical data. The results from the experiment supported their Identity-protective Cognition Thesis (ICT). ICT suggests that \u201cCulture\u201d is cognitively prior to \u201cfact\u201d, in apprehension of social risks. (Kahan, 2017) Culture in this context is perhaps best understood as different group member-"
+  },
+  {
+   "source_id": "ebd608d9-3502-4b70-89bd-9e7aa66ad6d5",
+   "citation_number": 33,
+   "cited_text": "Psychologists Henri Tajfel and John Turner, who developed Social Identity Theory, showed that people internalize the values and beliefs of the groups they belong to, treating them as extensions of the self. When those beliefs are questioned, the threat is processed much like a threat to your status or belonging. The reaction is often defensive rather than reflective. More recent work on motivated reasoning helps explain why such a reaction is so persistent. In the 1990s, psychologist Ziva Kunda demonstrated that people selectively evaluate evidence in ways that protect conclusions they are already motivated to believe. When a belief supports your identity or social standing, the mind unconsciously applies stricter standards to disconfirming evidence and looser standards to supporting evidence."
+  },
+  {
+   "source_id": "342c07c3-6b5f-46da-a4d1-feee24402ada",
+   "citation_number": 34,
+   "cited_text": "ity to decide the numerically correct answer decreased. While the following is not a scholarly or peer-reviewed reproduction of the experiment, a social experiment based on the original research can be viewed on the YouTube channel named Veritasium (2023). This social reproduction of the experiment supported the claims by Kahan et al (2013) but what seemed more intriguing to me was the fact that when presented with facts that did not correspond to salient values of the groups with which the par-"
+  },
+  {
+   "source_id": "ebe64083-3e0a-489f-9d4e-ceb0546d892a",
+   "citation_number": 35,
+   "cited_text": "14. The concept of stereotype threat was pioneered by Claude Steele and colleagues in the 1990s.  See Claude M. Steele & Joshua Aronson, Stereotype Threat and the Intellectual Test Performance of African Americans, 60 J. PERSONALITY & SOC. PSYCHOL. 797 (1995); Steven J. Spencer et al., Stereotype Threat and Women\u2019s Math Performance, 35 J.  EXPERIMENTAL SOC. PSYCHOL. 4 (1999); Claude M. Steele, Race and the Schooling of Black Americans, ATLANTIC MONTHLY, Apr. 1992, at 67. Racist Stereotype Threat in Civil Rights Law 321"
+  },
+  {
+   "source_id": "ebe64083-3e0a-489f-9d4e-ceb0546d892a",
+   "citation_number": 36,
+   "cited_text": "I. RACIST STEREOTYPE THREAT: THE SOCIAL SCIENCE In the early 1990s, social psychologist Claude Steele pioneered the concept of \u201cstereotype threat\u201d: When a person fears being judged in accordance with a negative stereotype about some important aspect of their group identity, they can experience concern that their features or behavior will be taken to confirm the stereotype in the eyes of others, or even in their own.34  Stereotype threats, including racist stereotype threat (RST), operate as evaluative threats.35  Just as excessive anxiety about being evaluated can diminish performance on a difficult test or public speaking assignment,36 stereotype threats can also interfere with performance of difficult tasks, often"
+  },
+  {
+   "source_id": "ebe64083-3e0a-489f-9d4e-ceb0546d892a",
+   "citation_number": 37,
+   "cited_text": "RST.  Concern about being perceived as biased\u2014that is, RST\u2014has been shown to increase both implicit racial bias51 and racially disparate behaviors.52  A 2011 study of white female university students found that those who expressed a great deal of concern that others might judge them racist engaged in distancing behaviors such as \u201cclosed body posture, averted eye gaze, facial rigidity, and the like[, which] can make interracial contact awkward and even negative.\u201d53  Similarly, in 2008, Phillip Atiba Goff, Claude Steele, and Paul Davies found that white male university students who feared being seen as racist engaged in interracial distancing by placing their chairs further away from African-American conversation partners.  In particular, they placed their chairs further from black male interaction partners when they anticipated discussing a topic which was racially fraught (racial profiling) compared to one that was not (love and relationships).54"
+  },
+  {
+   "source_id": "ebe64083-3e0a-489f-9d4e-ceb0546d892a",
+   "citation_number": 38,
+   "cited_text": "The unique role of judges, however, poses challenges to interventions that could mitigate RST.  For example, intergroup contact is one powerful way to reduce RST and other forms of identity threats.290  But, in their professional role, most judges experience few interracial encounters that could fit the criteria for equitable intergroup interaction identified by Gordon Allport\u2019s \u201ccontact hypothesis\u201d: \u201cequal status between the groups in the situation; common goals; intergroup cooperation; and the support of authorities, law, or custom.\u201d291"
+  },
+  {
+   "source_id": "ebe64083-3e0a-489f-9d4e-ceb0546d892a",
+   "citation_number": 39,
+   "cited_text": "people are racist.  Because white people are more likely to anticipate being stereotyped as racist\u2014or to see ingroup members face allegations of racism15\u2014they are especially susceptible to RST.  Nonwhite people can also experience RST, though, if they possess a group identity (e.g., as a police officer) that may be stereotyped as racist.16 The perception that one is being judged racist can be acutely stressful.17  Moreover, allegations of racism, if believed and taken seriously, can cause real damage to a person\u2019s career or reputation.18  But the experience of RST is not limited to allegations of racism that are demonstrably exaggerated or false.  \u201cUnfortunately, legitimate claims of racism also antagonize and alienate those who are accused.\u201d19  RST has been observed in people who score both high and low in measures of implicit and explicit racial bias.20  Thus a person\u2019s sincere concern, outrage, or dismay at being called racist offers no indication of whether the person experiencing it is (or is not) a racist.  It provides no information about whether the interaction that produced the discomfort is fair."
+  },
+  {
+   "source_id": "ebe64083-3e0a-489f-9d4e-ceb0546d892a",
+   "citation_number": 40,
+   "cited_text": "A. The Social Psychology of RST Many white people experience discomfort while interacting with nonwhite people,41 in part because they are concerned that the nonwhite person may 37. See, e.g., Steele & Aronson, supra note 34, at 805, 808 (finding that black research participants, who presumably are aware of the notorious stereotype that black people are less intelligent than others, tend to perform worse on academic challenges when those challenges are presented as diagnostic of intellectual ability); infra note 60 and accompanying text."
+  },
+  {
+   "source_id": "ebe64083-3e0a-489f-9d4e-ceb0546d892a",
+   "citation_number": 41,
+   "cited_text": "It is normal, though uncomfortable, to fear being judged racist.  The discomfort caused by racist stereotype threat can be considerable: White Americans who express great concern about appearing racist experience spikes in cortisol, the \u201cstress hormone,\u201d during interracial encounters.45  Unlike implicit racial bias, RST is often experienced as a conscious stressor. People are often aware of their concern that others may think they are racist, interaction (with a Black confederate) suppressed the performance of whites who had scored high in measures of implicit anti-black bias on a cognitive test of working memory).  This effect was not found among whites who scored low in implicit bias nor in whites who had interacted with a white confederate.  Id.  The authors attributed this effect to cognitive depletion: For highly prejudiced whites, interracial interaction taxed executive function by requiring effortful self-regulation.  See id."
+  },
+  {
+   "source_id": "ebe64083-3e0a-489f-9d4e-ceb0546d892a",
+   "citation_number": 42,
+   "cited_text": "43. See supra notes 7\u20139 and accompanying text. 44. GOFF ET AL., supra note 16. 45. Sophie Trawalter et al., Concerns About Appearing Prejudiced Get Under the Skin: Stress Responses to Interracial Contact in the Moment and Across Time, 48 J. EXPERIMENTAL SOC. PSYCHOL. 682 (2012).  See also Wendy Berry Mendes et al., Why Egalitarianism Might Be Good for Your Health: Physiological Thriving During Stressful Intergroup Encounters, 18 PSYCHOL. SCI. 991, 996\u201397 (2007); Richeson & Shelton, supra note 20, at 290."
+  },
+  {
+   "source_id": "ebe64083-3e0a-489f-9d4e-ceb0546d892a",
+   "citation_number": 43,
+   "cited_text": "53. Trawalter et al., supra note 45, at 690. 54. GOFF ET AL., supra note 16, at 104.  This distancing behavior was unrelated to the amount of implicit or explicit racial prejudice that white participants expressed.  Id. 55. Id. at 11. 56. Id. at 5.  See also Rick Trinkner & Phillip A. Goff, The Force of Fear: Police Stereotype Threat, Self-Legitimacy, and Support for the Use of Force 5\u20136 (Oct. 30, 2017) (unpublished 330 67 UCLA L. REV. 316 (2020) RST is generally a conscious experience: People typically know that they are concerned about being seen as racist.57  The behavioral consequences of RST, though, tend to be unconscious: People tend not to be aware when they are acting upon that feeling.58  They are unlikely, for example, to realize that they are engaged in racial distancing behaviors or greater use of force, and they are unlikely to realize that their behavior is related to their concern about others\u2019 negative evaluation of them."
+  },
+  {
+   "source_id": "ebe64083-3e0a-489f-9d4e-ceb0546d892a",
+   "citation_number": 44,
+   "cited_text": "328 67 UCLA L. REV. 316 (2020) even if they are not always aware of how their discomfort influences their subsequent behaviors.46 Concern about being judged racist can feel extremely urgent.  Some white people engaged in difficult interracial conversations (such as antiracist educational workshops) describe the experience as traumatic. They report feeling that they \u201cdon\u2019t feel safe,\u201d are \u201cunder attack,\u201d are being \u201cslammed,\u201d \u201cvictimized, slammed, blamed, attacked, and being used as \u2018punching bag[s].\u2019\u201d47  Robin DiAngelo notes that physical danger is absent from the antiracism workshops in which these feelings can arise: \u201cWhites who describe interactions in this way are responding to the articulation of counter narratives; nothing physically out of the ordinary has ever occurred in any inter-racial discussion that I am aware of.\u201d48  She observes that the \u201clanguage of violence\u201d used by white people to describe their feelings about difficult racial conversations tends to reinscribe stereotypes of people of color as \u201cdangerous and violent,\u201d49 and inverts the direction of the harms caused by racial subordination.50  Nonetheless, this language may capture the intensity of the subjective experience of RST."
+  },
+  {
+   "source_id": "ebe64083-3e0a-489f-9d4e-ceb0546d892a",
+   "citation_number": 45,
+   "cited_text": "296. David K. Sherman & Geoffrey L. Cohen, The Psychology of Self-Defense: Self-Affirmation Theory, 38 ADVANCES EXPERIMENTAL PSYCHOL. 183, 184\u201385, 212\u201313 (2006). Racist Stereotype Threat in Civil Rights Law 373 interracial interaction such as judging a race-salient case can help to reduce defensiveness.  RST is not engaged where the self is not threatened. To the extent that judges can be helped to understand the experience of RST as an opportunity to learn, such concerns could be mitigated and its effects reduced.  When interracial encounters are framed as opportunities to learn to be at ease in such settings, experimental subjects do not behave in the racially disparate manner typically provoked by RST.297"
+  },
+  {
+   "source_id": "ebe64083-3e0a-489f-9d4e-ceb0546d892a",
+   "citation_number": 46,
+   "cited_text": "A final intervention that could help mitigate the judicial experience of RST or vicarious RST is the practice of \u201cself-affirmation\u201d:  deliberately affirming an important value one holds or contemplating an important attribute of the self.305  Self-affirmation has been shown to reduce the anxiety associated with identity threats and the likelihood that such anxiety will result in ego-defensive adaptations such as racially disparate behavior.306  Thus judicial education programs might leverage core normative commitments of the judicial role\u2014fairness, impartiality, objectivity, equal treatment, and rule-based decisionmaking\u2014to mitigate judges\u2019 experience of RST and reduce the likelihood that judges will frame the experience of RST as an injustice to white litigants.  In preparation for hearing a race case where feelings of racial discomfort might be expected, judges of all backgrounds could be encouraged to engage in intentional contemplation of these values, helping to avert the self-threat that can otherwise arise during difficult interracial interactions."
+  },
+  {
+   "source_id": "ebe64083-3e0a-489f-9d4e-ceb0546d892a",
+   "citation_number": 47,
+   "cited_text": "A judge in a civil rights case may well be correct to sense that a white litigant may be concerned about being perceived racist, but selective 305. See generally Claude M. Steele, The Psychology of Self\u2010Affirmation: Sustaining the Integrity of the Self, 21 ADVANCES EXPERIMENTAL SOC. PSYCHOL. 261 (1988) (pioneering the theory of self-affirmation, which is predicated on the idea that individuals rationalize circumstances and events in ways that maintain their self-image as a good and culturally appropriate person in the face of identity threats, including stereotype threats); David K. Sherman & Geoffrey L. Cohen, The Psychology of Self-Defense: Self-Affirmation Theory, 38 ADVANCES EXPERIMENTAL PSYCHOL. 183, 184\u201385, 212\u201313 (2006) (summarizing contemporary literature on self-affirmation theory)."
+  },
+  {
+   "source_id": "ebe64083-3e0a-489f-9d4e-ceb0546d892a",
+   "citation_number": 48,
+   "cited_text": "297. See, e.g., GOFF ET AL., supra note 16, at 101 (finding that participants distanced themselves less when interracial encounters were framed as incremental opportunities to learn rather than as moments in which the self would be evaluated as racist or not). 298. Id. 299. CAROL S. DWECK, MINDSET: THE NEW PSYCHOLOGY OF SUCCESS (2008); E. Tory Higgins et al., Ideal Versus Ought Predilections for Approach and Avoidance Distinct Self-Regulatory Systems, 66 J. PERSONALITY & SOC. PSYCHOL. 276, 285 (1994) (noting that individuals adopted different strategies for social interaction depending on whether they focused on their identity or their moral values)."
+  },
+  {
+   "source_id": "97e339bd-8922-4db1-be01-1b1a4451cab9",
+   "citation_number": 49,
+   "cited_text": "The LaCour dilemma The saga started in December 2014, when Michael LaCour , a graduate student at UCLA and Donald Green , a political science professor at Columbia University, published a study in Science that tested whether the Los Angeles LGBT Center's canvassing techniques could shift opinions on gay marriage. LaCour and Green reported yes -- that canvassers significantly changed views in a panel of 952 California voters by using \"active processing.\" To implement this persuasion technique, a canvasser encourages the voter to assume the perceptions of the gay community, in this case by recounting stories about real characters that involved prejudice against same-sex marriage."
+  },
+  {
+   "source_id": "2643859f-68cb-4360-8c7a-bf141d95fd01",
+   "citation_number": 50,
+   "cited_text": "\u201cOur new study's findings differ from the retracted one's in an important way,\u201d Kalla said. \u201cUnlike the original claim that only gay canvassers could lastingly reduce prejudice, we find both transgender and non-transgender allies were effective canvassers. Canvassers do not need to be members of an affected group to lastingly reduce prejudice against that group.\u201d However, the study does find that experienced canvassers appear especially effective. The research measured the impact of the \u201cdeep canvassing\u201d approach developed by the Los Angeles LGBT Center. It differs from a conventional canvass conversation in both length and reciprocity, with canvassers taking 10 to 15 minutes as they listen to voters' experiences and respond conversationally rather than reciting a script or talking points. These conversations involve voters engaging in deep reflection on their experiences and views, a process involving so-called \u201cactive processing\u201d of their ideas."
+  },
+  {
+   "source_id": "2643859f-68cb-4360-8c7a-bf141d95fd01",
+   "citation_number": 51,
+   "cited_text": "In the conversations, canvassers asked voters to reflect on experiences when they had been treated differently, and with LGBT people. Psychologists call this exercise \u201canalogic perspective-taking,\u201d as it involves considering what another's experience is like by likening it to one's own. From January through June 2015, the Los Angeles LGBT Center partnered with Miami-based SAVE, South Florida's largest and longest-serving LGBT organization . Together, they canvassed voters in conservative neighborhoods in Miami six months after the Miami-Dade County Commission voted to include transgender people in the county's human rights ordinance. The study of these efforts took place in June 2015."
+  },
+  {
+   "source_id": "690415cc-750a-4ef1-88ea-937ed07f61a6",
+   "citation_number": 52,
+   "cited_text": "Expressing such frustration may provide emotional relief, but it's not likely to persuade. In fact, it can make people harden their existing views. For a 2016 study published in Science , Broockman and Kalla worked with the Los Angeles LGBT Center and SAVE, a South Florida LGBT organization, on a field assessment of voter attitudes toward a new Miami-area law protecting transgender people. One group of door-to-door canvassers, a control group, said nothing to residents about transphobia. But another group engaged in \u201cdeep canvassing,\u201d a process based on asking sensitive questions, listening to the answers with sincere interest and then asking more questions. If residents expressed bias toward transgender people, the canvasser might ask them to recall a time when they were treated unfairly for being different and what that felt like."
+  },
+  {
+   "source_id": "97e339bd-8922-4db1-be01-1b1a4451cab9",
+   "citation_number": 53,
+   "cited_text": "Soon after, Broockman, Kalla and Yale University biostatistics professor Peter Aronow released a report citing several irregularities, and Green ultimately stated that LaCour had faked the research. LaCour denied these claims, but said he lacked proof because the original data were destroyed . Science Magazine retracted LaCour and Green's study on May 28, 2015 . Should we trust this new study on transphobia? But despite the controversy, Broockman and Kalla carried on with their experiment that targeted voters in Miami. According to their new report, they chose South Florida because of a unique opening:"
+  },
+  {
+   "source_id": "2643859f-68cb-4360-8c7a-bf141d95fd01",
+   "citation_number": 54,
+   "cited_text": "By Kathleen Maclay April 7, 2016 Researchers from Stanford University and UC Berkeley report in today's edition of Science that door-to-door canvassing by volunteers \u2014 both transgender and not \u2014 reduced voters' prejudice against transgender people. Researchers say their work on reducing bias could prove relevant in the 2016 presidential election. (Creative Commons photo) Last year, the study's authors set off a firestorm of debate about the need for transparency in social science research when they raised doubts about a now-retracted study of the Los Angeles LGBT Center's door-to-door canvassing on marriage for gay and lesbian couples by other researchers that had appeared in Science . They discovered irregularities in that study's data in the process of conducting this follow-up study of the center's canvassing on anti-transgender prejudice."
+  },
+  {
+   "source_id": "97e339bd-8922-4db1-be01-1b1a4451cab9",
+   "citation_number": 55,
+   "cited_text": "Close Menu PBS News Menu Notifications Get news alerts from PBS News Turn on desktop notifications? Yes Not now Full Episodes Podcasts Newsletters Live By \u2014 Nsikan Akpan Nsikan Akpan Leave your feedback Share Copy URL https://www.pbs.org/newshour/science/face-to-face-canvassing-reduces-transgender-prejudice-study-says Email Facebook Twitter LinkedIn Pinterest Tumblr Share on Facebook Share on Twitter Brief, face-to-face canvassing reduces transgender prejudice, study says Science Apr 7, 2016 6:39 PM EDT A 10-minute, face-to-face conversation can reduce transphobia, according to researchers at Stanford University and the University of California Berkeley. The study provides hard validation for canvassing procedures developed by the Los Angeles LGBT Center , which crafted these methods by conducting more than 13,000 door-to-door interviews over the last half century. One in 10 voters shifted their attitudes toward the transgender community after these deep, one-on-one conversations, and those new feelings held firm for up to three months."
+  },
+  {
+   "source_id": "97e339bd-8922-4db1-be01-1b1a4451cab9",
+   "citation_number": 56,
+   "cited_text": "Broockman and Kalla tested the resilience of these newly acquired attitudes by having canvassers show anti-transgender political attack ads to voters six weeks into the project. At first, both treatment and placebo groups became less supportive of Miami's anti-discrimination ordinance, but in the end, shifts toward the acceptance of transgender rights withstood the test. The effect of attack ads wore away over time, and the groups returned to their pre-ad states. This finding suggests the millions of dollars spent on attack ads each election cycle may fail to hit the mark, but this study doesn't specifically confirm if deep canvassing can turn heads at the ballot box."
+  },
+  {
+   "source_id": "2643859f-68cb-4360-8c7a-bf141d95fd01",
+   "citation_number": 57,
+   "cited_text": "A decade of change in 10 minutes The result: With a rigorous randomized trial \u2014 like a clinical drug trial \u2014 Broockman and Kalla found that the deep-canvass conversations changed approximately one in 10 voters' attitudes about transgender people. The researchers also found an impact on feelings toward transgender people comparable to the decline in prejudice against gay and lesbian people seen between 1998 and 2012. David Broockman. (Stanford University photo) In repeated re-measurement, this impact remained intact for at least the three months studied to date. This enduring effect stands in contrast to other published measurements of conventional attempts at voter persuasion and prejudice reduction through TV ads or mail, or in standard phone or canvass conversations."
+  },
+  {
+   "source_id": "e633cba9-b8d5-491a-9d51-6376099bc495",
+   "citation_number": 58,
+   "cited_text": "Get access Share   Cite Rights & Permissions  [Opens in a new window] Abstract Exclusionary attitudes\u2014prejudice toward outgroups and opposition to policies that promote their well-being\u2014are presenting challenges to democratic societies worldwide. Drawing on insights from psychology, we argue that non-judgmentally exchanging narratives in interpersonal conversations can facilitate durable reductions in exclusionary attitudes. We support this argument with evidence from three pre-registered field experiments targeting exclusionary attitudes toward unauthorized immigrants and transgender people. In these experiments, 230 canvassers conversed with 6,869 voters across 7 US locations. In Experiment 1, face-to-face conversations deploying arguments alone had no effects on voters\u2019 exclusionary immigration policy or prejudicial attitudes, but otherwise identical conversations also including the non-judgmental exchange of narratives durably reduced exclusionary attitudes for at least four months (d = 0.08). Experiments 2 and 3, targeting transphobia, replicate these findings and support the scalability of this strategy (ds = 0.08, 0.04). Non-judgmentally exchanging narratives can help overcome the resistance to persuasion often encountered in discussions of these contentious topics."
+  },
+  {
+   "source_id": "9cc96f1b-2977-4951-af58-23c7ca1dcb11",
+   "citation_number": 59,
+   "cited_text": "In three field experiments, Kalla and co-author David Broockman, an associate professor of political science at the University of California-Berkeley, showed that a respectful, conversational approach, in which door-to-door canvassers commit to listening and sharing stories, produced significant and lasting change in people's attitudes toward undocumented immigrants and transgender people. We found that simply listening and sharing a relevant personal story successfully lessened people's resistance and increased their openness to change."
+  },
+  {
+   "source_id": "9cc96f1b-2977-4951-af58-23c7ca1dcb11",
+   "citation_number": 60,
+   "cited_text": "In the fall and summer of 2018, the researchers teamed with immigration advocacy organizations in Nashville, Tennessee, and Fresno and Orange counties in California to see if using the non-judgmental narrative strategy in door-to-door canvassing could help build support for policies intended to protect immigrants, such as creating a pathway to citizenship for undocumented immigrants. In the summer of 2016, they had partnered with LGBT rights organizations to test whether the same strategy \u2014 used in door-to-door canvassing and telephone calls \u2014 could reduce trans-phobia and increase support for transgender-inclusive anti-discrimination laws in Atlanta, Cleveland, Jacksonville, Florida, and Scottsdale, Arizona."
+  },
+  {
+   "source_id": "9cc96f1b-2977-4951-af58-23c7ca1dcb11",
+   "citation_number": 61,
+   "cited_text": "Across the board, they found a large and persistent increase in support for policies that protect minority groups and persistent reductions in prejudice toward undocumented immigrants and transgender people. In the immigrant-focused experiment, they found a 6% increase in the number of people who strongly oppose deporting all undocumented immigrants. In the trans-phobia experiments, they found an 8% increase in strong support for the proposed anti-discrimination laws. The effects persisted months after the conversation, the political scientists report."
+  },
+  {
+   "source_id": "9cc96f1b-2977-4951-af58-23c7ca1dcb11",
+   "citation_number": 62,
+   "cited_text": "\u201cEngaging in a non-judgmental exchange of narratives might seem like an obvious strategy, but it's not how advocacy organizations generally try to persuade people,\u201d said Kalla, an assistant professor of political science with a secondary appointment in statistics and data science. \u201cAdvocates often call out unacceptable views, which can intensify people's resistance, or they make their case through talking points and related facts, which our work shows has little effect. We found that simply listening and sharing a relevant personal story successfully lessened people's resistance and increased their openness to change.\u201d"
+  },
+  {
+   "source_id": "9cc96f1b-2977-4951-af58-23c7ca1dcb11",
+   "citation_number": 63,
+   "cited_text": "The use of non-judgmental exchange of narratives was key to making this advocacy effective. It's an effective way to persuade people. The researchers randomly assigned some voters to receive an abbreviated intervention in which they engaged in conversations with advocates that relied solely on talking points and related facts. They found no increase in support for policies protecting undocumented immigrants and transgender people among those voters. \u201cThe use of non-judgmental exchange of narratives was key to making this advocacy effective,\u201d Kalla said. \u201cIt's an effective way to persuade people to reconsider their views. We even found positive effects among conservative voters in 2018 when President Trump made fears about a caravan of migrants approaching the southern U.S. border to seek asylum a focus of the mid-term election campaign.\u201d"
+  },
+  {
+   "source_id": "97e339bd-8922-4db1-be01-1b1a4451cab9",
+   "citation_number": 64,
+   "cited_text": "The positive trend held regardless of political affiliation (Democrat/Republican) and whether or not a voter had a more supportive or less supportive view of the transgender community prior to meeting the canvasser. Transgender or non-transgender canvassers had the same influence on changing opinions. \"Our ability to change voters' hearts and minds has been measured, this time for real,\" Dave Fleischer of the Los Angeles LGBT Center said in a statement . The funders of the study, according to Science Magazine , asked University of California Berkeley political scientist Gabriel Lenz to play watchdog and make sure the data were actually collected."
+  },
+  {
+   "source_id": "ba5bab17-7fe7-4ebc-9466-d75748eb6fc8",
+   "citation_number": 65,
+   "cited_text": "). In progressive shows, intimacy and reflexivity are coextensive, as exhibited by the 2024 Pulitzer Prize-winning podcast  You Didn\u2019t See Nothing  about a racially motivated assault on the South Side of Chicago in the 1990s. Yohance Lacour achieves intimacy with listeners through authentic and informal self-presentation expressed in a richly textured Black vernacular. His confessions to the listener abet such intimacy, especially when he admits to his initial urge to physically retaliate in response to the vicious assault. The story of his decision to instead investigate the circumstance of the crime serves as Lacour\u2019s self-reflexive disclosure of his calling as an advocacy journalist. The birth of his professional identity as an activist reporter refers to the process of his own production of the very story we are hearing ( Dowling, 2025 ). Lacour\u2019s authority derives from his authentic connection to the South Side community, one signified through the cadences and figures of speech that would be entirely lost if he were to attempt to code switch to a standard broadcast radio dialect. Lacour\u2019s subjectivity is packaged to invite the listener to join him in the process of solving the crime, which is mired in a byzantine maze of graft, paradoxical alliances, and corruption endemic to Chicago city politics of the 1990s as it is today. Intimacy thus directly serves reflexivity and authentic self-presentation. Lacour\u2019s authority comes precisely from the disclosure of his situationality\u2014delivered via personal narrative\u2014that moves oppositely from performance neutrality ( Powers, 2024 ) to bridge the gap of subjectivity between host and listener. That Lacour is gifted with a velvety rich vocal range of low notes reminiscent of Barry White adds to his appeal and charisma. The pivot to his professional origin story also achieves what Euritt ( 2023 ) describes as the improvised, informal delivery that makes podcasts feel/sound like the process of intellectual discovery, a signature feature of podcasts that trace back to Sarah Koenig\u2019s infectious inquiry into an unsolved murder in  Serial . The disarming and confessional nature of the asides and premonitions regarding sources and their potential accuracy typically excised from traditional journalism become central to the parasocial appeal of  Serial , conventions of metajournalistic podcast narrativity raised to an art form in Brian Reed\u2019s  S-Town , a work lauded for its literary prowess by the Peabody Award committee ( McHugh, 2021 ; Waldmann, 2020 )."
+  },
+  {
+   "source_id": "fe7465f8-cfbe-4efc-8413-b2a0f5423438",
+   "citation_number": 66,
+   "cited_text": "Intimacy refers to production and narrative strategies (personal narrative, informal tone, cadence, and delivery), listening modalities (headphones, private or semi-private listening, asynchronous), and affective rationality (parasocial relations, trust) (Lacey, 2025; Lindgren, 2023; Euritt, 2023). These features produce what one might call \u201cear-voice intimacy,\u201d a closeness distinct from what many radio programs achieve (Llinares et al., 2018). Podcast journalism often makes its own process visible, particularly when hosts disclose reporting challenges, ethical trade-offs, source verification, and uncertain evidence. Narra-tive structure in this vein often includes meta-commentary about what is left untold and questions about the authorial role. Theories of reflexivity and subjectivity in journalism (Coward, 2013; Hanitzsch et al., 2011; Zelizer, 2004) and narrative nonfiction (Eakin, 1999) provide important conceptual scaffolding here."
+  },
+  {
+   "source_id": "fe7465f8-cfbe-4efc-8413-b2a0f5423438",
+   "citation_number": 67,
+   "cited_text": "The fourth affordance of the podcast medium delivering an intimate listener experience is the convention of emotive vocal performance (D. Bird, 2025; Lindgren, 2023). Although the dramas of radio\u2019s Golden Age established performative audio narrative (Bottomley, 2020), it was less prevalent in nonfictional content, particularly in news and news-related shows apart from short-form live eyewitness coverage (as in the wrenching anguish of Herbert Morrison\u2019s 1937 report of the Hindenburg disaster). Podcasting\u2019s highly personalized delivery directly counters what Powers (2024) calls performance neutrality characterizing the reportorial tenor of daily news. Podcasts are anathema to this \u201cself-presentation that is deemed unobjectionable, reveals little about journalists\u2019 social identity, and supposedly does not detract from their message\u201d (p. 34). Like Wallace\u2019s (2019) The View from Somewhere, Powers (2024) notes that performance neutrality \u201cis a myth that reinforces the status quo, limits on-air diversity, and hinders efforts to make newsrooms more inclusive\u201d (p. 34). Podcasts epitomize the alternative of honoring diverse forms of self-presentation. Journalists who have agency over how they present themselves publicly, and who operate relatively free of pressure to conform and assimilate to an industry standard for vocal delivery, are more likely to achieve lasting and fruitful careers, particularly by producing a distinctive news product for underserved audiences. Such diverse, authentic self-presentation can help newsrooms attract more diverse candidates to future positions, accommodate and normalize diverse voices on the news, and evolve public perception toward more inclusive understandings of what sounds authoritative (Powers, 2024, p. 34)."
+  },
+  {
+   "source_id": "fe7465f8-cfbe-4efc-8413-b2a0f5423438",
+   "citation_number": 68,
+   "cited_text": "7 of 19 cially when he admits to his initial urge to physically retaliate in response to the vicious assault. The story of his decision to instead investigate the circumstance of the crime serves as Lacour\u2019s self-reflexive disclosure of his calling as an advocacy journalist. The birth of his professional identity as an activist reporter refers to the process of his own production of the very story we are hearing (Dowling, 2025). Lacour\u2019s authority derives from his authentic connection to the South Side community, one signified through the cadences and figures of speech that would be entirely lost if he were to attempt to code switch to a standard broadcast radio dialect. Lacour\u2019s subjectivity is packaged to invite the listener to join him in the process of solving the crime, which is mired in a byzantine maze of graft, paradoxical alliances, and corruption endemic to Chicago city politics of the 1990s as it is today. Intimacy thus directly serves reflexivity and authentic self-presentation. Lacour\u2019s authority comes precisely from the disclosure of his situationality\u2014delivered via personal narrative\u2014that moves oppositely from performance neutrality (Powers, 2024) to bridge the gap of subjectivity between host and listener. That Lacour is gifted with a velvety rich vocal range of low notes reminiscent of Barry White adds to his appeal and charisma. The pivot to his professional origin story also achieves what Euritt (2023) describes as the improvised, informal delivery that makes podcasts feel/sound like the process of intellectual discovery, a signature feature of podcasts that trace back to Sarah Koenig\u2019s infectious inquiry into an unsolved murder in Serial. The disarming and confessional nature of the asides and premonitions regarding sources and their potential accuracy typically excised from traditional journalism become central to the parasocial appeal of Serial, conventions of metajournalistic podcast narrativity raised to an art form in Brian Reed\u2019s S-Town, a work lauded for its literary prowess by the Peabody Award committee (McHugh, 2021; Waldmann, 2020)."
+  },
+  {
+   "source_id": "5e336e24-75f2-44c0-8cf2-5d683c5b6e95",
+   "citation_number": 69,
+   "cited_text": "Reframing Health Disparities in  Rural America A Communications Toolkit J U LY  2 0 2 4 Contents Introduction 4 What Are We Framing?  5 Quick Start Guide to Reframing Health Disparities  6 Mindsets to Move  7 Grab-and-Go Starter Language  9 Keeping Conversations on Track  11 \u201cDignity\"  13 Connecting History to Health  14 Depicting the Diversity of Rural Communities  21 Sample Letter to the Editor 22 Sample Social Media Posts 23 Related Resources 25 About This Toolkit 26 About FrameWorks 27 Introduction"
+  },
+  {
+   "source_id": "5e336e24-75f2-44c0-8cf2-5d683c5b6e95",
+   "citation_number": 70,
+   "cited_text": "Talking Health: A New Way to Communicate About Public Health provides practical tools to improve communication through framing, messaging, and storytelling. CDC\u2019s Guiding Principles to Promote an Equity-Centered Approach to Public Health Communication offer guidance and recommendations for public health practice. The CDC\u2019s Office of Health Equity offers recommendations, based on 2022 message testing, for shifting the frame from health disparities to health equity. About This Toolkit This toolkit was designed and written by the FrameWorks Institute,  a nonprofit that takes a scientific approach to understand and solve  important communications challenges. FrameWorks\u2019 analysis of reframing  health disparities was conducted in partnership with the National Network  of Public Health Institutes. This resource was supported with funds made available through a cooperative agreement between the National Network of Public Health Institutes (NNPHI) and CDC\u2019s National Center for State, Tribal, Local and Territorial Public Health Infrastructure and Workforce. (Cooperative Agreement OT18-1802, Strengthening Public Health Systems and Services Through National Partnerships to Improve and Protect the Nation\u2019s Health, Award #NU38OT000303-04-02.) In this resource, our goal is to support local public health professionals in communicating to the general public more effectively about eliminating health disparities, especially in rural areas or other contexts where these efforts may be met with skepticism or opposition."
+  },
+  {
+   "source_id": "5e336e24-75f2-44c0-8cf2-5d683c5b6e95",
+   "citation_number": 71,
+   "cited_text": "There are steps we can take to remove barriers or reverse decisions that get in the way of healthy community conditions. It's important that voices for public health can communicate effectively  about them. To lead more productive conversations about eliminating the underlying inequities that cause  health disparities, it\u2019s essential to establish a strong frame step-by-step. Keep the steps top-of-mind  with this summary. 1. Lead with the idea of dignity. To open people\u2019s minds to promoting health in marginalized communities, lead by expressing the ideal that every person has inherent dignity\u2013and that we all have a responsibility to honor people\u2019s dignity by promoting and protecting health and wellbeing."
+  },
+  {
+   "source_id": "5e336e24-75f2-44c0-8cf2-5d683c5b6e95",
+   "citation_number": 72,
+   "cited_text": "The basic message: \u201cEach and every person has inherent dignity and worth. Our public health policies, practices, and programs should reflect and demonstrate respect for the dignity of people and communities.\u201d When to use this values message:  \u2014 Use this value early in a communication about health disparities\u2014before mentioning a particular community or health topic. It helps people think about the shared humanity and inherent worth of all people. \u2014 Return to this value when mentioning a specific group that lacks access to a building block of health or faces negative health environments or outcomes."
+  },
+  {
+   "source_id": "5e336e24-75f2-44c0-8cf2-5d683c5b6e95",
+   "citation_number": 73,
+   "cited_text": "2. Paint a broad, rich picture of \u201chealth.\u201d Talk about \u201coverall physical, mental, and emotional wellbeing across our community.\u201d This gets people ready to see why social context, community conditions, and public policy are connected to health. 3. Speak to history. Build motivation for change by giving examples of how past injustices have harmed the health of specific groups. To reach rural audiences, offer examples of policies or practices that have contributed to rural health disparities before examples that affect racialized, minoritized, or other underserved groups."
+  },
+  {
+   "source_id": "5e336e24-75f2-44c0-8cf2-5d683c5b6e95",
+   "citation_number": 74,
+   "cited_text": "Some patterns in public thinking can get in the way of understanding the complexity of health disparities. Others make it hard for people to see how systemic changes would make a difference.  As you prepare to communicate, check to make sure you aren\u2019t using images, vocabulary, or arguments that reinforce unproductive understandings like the ones below. Health Reductionism equates health with the absence of illness. If we leave people with their pre-existing assumption that \u201chealthy\u201d simply means \u201cnot sick,\u201d we\u2019ll also be left with oversimplified, downstream policies and preferences."
+  },
+  {
+   "source_id": "5e336e24-75f2-44c0-8cf2-5d683c5b6e95",
+   "citation_number": 75,
+   "cited_text": "Grab-and-Go  Starter Language Are you about to communicate publicly about health disparities?  Adapt the relevant talking points to your topic or audience. Health as Wellbeing \u201cHealth is a state of full physical, mental, and social wellbeing. Health involves our bodies, our minds, our relationships, and our spirits. When we experience this state of overall wellbeing, we are poised to realize our potential, contribute to the world around us, and cope with everyday difficulties.\u201d Dignity \u201cFor our communities to truly experience wellbeing, we have to remember that each of us has inherent dignity and treat each other accordingly. Respecting different communities' health needs is part of honoring people\u2019s dignity.\u201d"
+  },
+  {
+   "source_id": "5e336e24-75f2-44c0-8cf2-5d683c5b6e95",
+   "citation_number": 76,
+   "cited_text": "M I N D S E T S  TO  M O V E If your description says who experiences a health disparity but stays silent on why it exists, it\u2019s vital to add more explanation. Unless our communications highlight the processes that cause health disparities, we leave the door open for audiences to blame the people who face the health burden. Unconnected Dots are the missing mental models of how racism is connected to health. While people have ways to think about how poverty can lead to poorer health outcomes, this isn\u2019t the case for systemic racism. Most people struggle to explain how racism might affect wellbeing. When people do think of ways to connect the two, individual-level stories typically come to mind, such as instances of face-to-face instances of discrimination in health care."
+  },
+  {
+   "source_id": "5e336e24-75f2-44c0-8cf2-5d683c5b6e95",
+   "citation_number": 77,
+   "cited_text": "Connecting History  to Health Don\u2019t just name injustices of the past. Explain them. By offering and explaining examples of past injustices that undermined the health and wellbeing of specific groups, communicators build motivation for change. The most effective explanations point  to a concrete policy or practice that had uneven and unfair effects, and then spell out the connection  to health. The resource starts with \u201credlining\u201d because it is an example that is simultaneously powerful, wellknown, and effective in orienting people to how policies of the past have cascading consequences into today. It continues with additional examples that connect the dots between an unjust policy of the past, how it affects health, and how the legacy of the policy lingers today."
+  },
+  {
+   "source_id": "5e336e24-75f2-44c0-8cf2-5d683c5b6e95",
+   "citation_number": 78,
+   "cited_text": "C O N N E CT I N G  H I STO R Y  TO  H E A LT H EXAMPLE #1 Discriminatory housing policies of the past affect health in Black communities today Under legislation passed in the 1930s, residential neighborhoods were graded based on their mortgage risk, with higher risk neighborhoods marked in red.1 Officials \u201credlined\u201d Black neighborhoods based on race and racism, making it nearly impossible for people living in and near Black neighborhoods to get mortgages. At the same time, Black families were blocked from buying homes in newly developing suburbs.2 By the time housing discrimination was outlawed in the 1960s, many Black families had been priced out of suburban neighborhoods, establishing residential segregation patterns that persist today. Because home ownership is one of the keys to building wealth that can be passed down to the next generation, redlining helps to explain why now, for every $100 in wealth held by white households, Black households hold only $15.3.3"
+  },
+  {
+   "source_id": "5e336e24-75f2-44c0-8cf2-5d683c5b6e95",
+   "citation_number": 79,
+   "cited_text": "3. Benda, N. C., Veinot, T. C., Sieck, C. J., & Ancker, J. S. (2020). Broadband internet access is a social determinant of health!. American journal of public health, 110(8), 1123-1125. C O N N E CT I N G  H I STO R Y  TO  H E A LT H EXAMPLE #5 Over a century ago, America closed most of the nation\u2019s historically Black medical schools. The decision still affects health and health care today. Health care isn\u2019t the only factor that affects people\u2019s health, but it is an important one, and the quality of care matters. People tend to get better care and experience better health outcomes when they trust their health care providers.1 A shared cultural heritage is one factor that can promote better communication, comfort, and understanding between patients and providers. That\u2019s why it matters that Black physicians are underrepresented in the health care workforce today.2 It\u2019s important that we understand how it happened, and how our policies today may be making the problem worse."
+  },
+  {
+   "source_id": "5e336e24-75f2-44c0-8cf2-5d683c5b6e95",
+   "citation_number": 80,
+   "cited_text": "The sample letter below illustrates many of the framing strategies suggested in this toolkit. To the editor: As a county public health official I spend a lot of time looking at data, and as I do, I am often thinking about people\u2019s dignity. Protecting public health is my way of demonstrating respect for each person and our community as a whole. To me, respecting people\u2019s health and dignity means providing access to resources people need for good health: clean air to breathe, stable homes to live in, relationships to feed our spirits, nutritious food to fuel our bodies.  That\u2019s why I\u2019m often troubled by the health disparities between our county and others, and between social groups in our own county. Like many other rural counties, our residents tend to have high rates of health problems like diabetes and high blood pressure. Although people often wax poetic about the fresh air \u201cout in the country,\u201d the reality is that in our county, we are more exposed to some types of contaminants than our urban counterparts, including agricultural chemicals and secondhand smoke. The data show time and again that community health problems that affect the county as a whole tend to weigh even heavier on our neighbors who are people of color, people with lower incomes, or people who moved here from another country.  These disparities flow from collective decisions about housing, transportation, employment, community planning, and more. When we, as a nation, invested in highways but not sidewalks, we set up environments where it\u2019s more convenient to drive than walk, and where it\u2019s easy to become isolated. As a result, most of us get less everyday physical activity than recommended and have too few spirit-boosting interactions with friends and loved ones. Recently, despite local objections, the state gave dollar stores permission to sell harmful tobacco products\u2013even though there is no safe level of exposure to secondhand smoke.   There is much we can do to promote the health, wellbeing, and human dignity of all of us who live, work, and play in our beautiful county. I do it by looking at data, spotting problems, and working with others to figure out solutions. Can I count on you to join me and others in County Health?"
+  },
+  {
+   "source_id": "5e336e24-75f2-44c0-8cf2-5d683c5b6e95",
+   "citation_number": 81,
+   "cited_text": "Look for ways you might be reinforcing narrow or oversimplified images of health\u2014like giving communicable or chronic diseases so much attention that injury, isolation, or adversity seem like afterthoughts. Reframe to depict health as an overall state of wellbeing that includes physical, mental, social, and relational aspects of life. Emphasize quality of life as a shared aspiration. Health Individualism assumes that ultimately, health is a matter of choice. When people assume that poor health is due primarily to poor personal choices, they struggle to grasp the importance of efforts to improve the conditions that shape everyone\u2019s health."
+  },
+  {
+   "source_id": "5e336e24-75f2-44c0-8cf2-5d683c5b6e95",
+   "citation_number": 82,
+   "cited_text": "Community Agency \"Working together to improve community health means working closely with people in that community who know what\u2019s needed to thrive. When people have a voice and role in shaping decisions that affect their own community, the resulting policies, programs, and decisions are more likely to make sense and work for everyone involved.\u201d Keeping Conversations  on Track Use the \u201cbridge and pivot\u201d technique to keep conversations from going off track. If a conversation focused on health disparities starts getting derailed, don\u2019t worry\u2014you can steer it back on track by following a simple three-step formula to bridge from an unproductive topic and pivot to a more effective frame."
+  },
+  {
+   "source_id": "5e336e24-75f2-44c0-8cf2-5d683c5b6e95",
+   "citation_number": 83,
+   "cited_text": "STEP #1 Analyze Figure out what you\u2019re responding to. Pushback against health equity efforts tends to rely on patterned, predictable mental models. The most common of these are: \u2014 Health reductionism. (\u201cHealth is only the absence of physical illness.\u201d) \u2014 Health individualism. (\u201cHealth is primarily the result of people\u2019s personal choices.\u201d) \u2014 Health otherism.  (\u201cPoor values and norms are to blame for a community\u2019s health burdens.\u201d) \u2014 Unconnected dots. (Lack of ways to link systemic racism to physical and mental wellbeing.)"
+  },
+  {
+   "source_id": "5e336e24-75f2-44c0-8cf2-5d683c5b6e95",
+   "citation_number": 84,
+   "cited_text": "K E E P I N G  C O N V E R S AT I O N S  O N  T R A C K STEP #3 Pivot Introduce the framing strategy that will get the conversation back on track. When You Encounter This Mental Model Pivot To This Framing Strategy Health Reductionism Paint a full picture of health. Health Individualism Explain external influences on health. Health Otherism Lift up the principle of shared dignity. Unconnected Dots Speak to history and connect it to today. \u201cDignity\u201d A tested values message can help overcome resistance to targeted public  health approaches"
+  },
+  {
+   "source_id": "5e336e24-75f2-44c0-8cf2-5d683c5b6e95",
+   "citation_number": 85,
+   "cited_text": "The resources may also prove useful for others working toward better public health\u2013a broad field that includes professionals in local, state, and federal agencies, public health associations, community-based organizations, academic researchers, and more. Our suggested strategies draw from the general science of framing and recent in-depth analysis of public health practitioners\u2019 current challenges in outreach, education, and advocacy communications about health equity. You can learn more about the data, evidence, and rationale behind these strategies in the companion resource, \u201cTalking about Health Disparities in Rural Contexts.\u201d"
+  },
+  {
+   "source_id": "5e336e24-75f2-44c0-8cf2-5d683c5b6e95",
+   "citation_number": 86,
+   "cited_text": "The content of this toolkit is the responsibility of the FrameWorks Institute and does not necessarily reflect the views of the U.S. Department of Health and Human Services, the Centers for Disease Control and Prevention, or NNPHI. If you incorporate ideas from this toolkit into your communications, we\u2019d love to hear from you!  Send us a link and tell us about your experience. About FrameWorks The FrameWorks Institute is a nonprofit think tank that advances the mission-driven sector\u2019s capacity to frame the public discourse about social and scientific issues. The organization\u2019s signature approach, Strategic Frame Analysis\u00ae, offers empirical guidance on what to say, how to say it, and what to leave unsaid. FrameWorks designs, conducts, and publishes multi-method, multidisciplinary framing research to prepare experts and advocates to expand their constituencies, to build public will, and to further public understanding. To make sure this research drives social change, FrameWorks supports partners in reframing, through strategic consultation, campaign design, FrameChecks\u00ae, toolkits, online courses, and in-depth learning engagements known as FrameLabs. In 2015, FrameWorks was named one of nine organizations worldwide to receive the MacArthur Award for Creative and Effective Institutions."
+  },
+  {
+   "source_id": "9cc96f1b-2977-4951-af58-23c7ca1dcb11",
+   "citation_number": 87,
+   "cited_text": "Feb 7, 2020 5 min read By Mike Cummings (Illustration by Michael S. Helfenbein) (Illustration by Michael S. Helfenbein) Anyone who has tried to change another person's prejudiced views knows it is a daunting task. Even advocacy organizations armed with dedicated volunteers, punchy talking points, and slick campaign literature struggle to reduce negative attitudes toward minority groups. A new study co-authored by Yale political scientist Joshua Kalla in the journal American Political Science Review suggests an effective way to combat prejudice and build support for policies that protect minorities: engage people in non-judgmental, two-way conversations based on personal stories."
+  },
+  {
+   "source_id": "050f0770-0d3c-4d5a-82d3-4bbb03a6a295",
+   "citation_number": 88,
+   "cited_text": "Copy link 00:29:45 But also, I feel like if you had any kind of audience proxy on the show, even if they were like just completely unschooled about like any aspect of what you're talking about, if you had to start from zero, like you still wouldn't explain it. The way shows to him that, you know, have this kind of like theoretical audience they're talking to, who they just aren't really talking to is if they're a person, because it's hard to do that if there's not a person there like that. Copy link"
+  },
+  {
+   "source_id": "9cc96f1b-2977-4951-af58-23c7ca1dcb11",
+   "citation_number": 89,
+   "cited_text": "Kalla '14 B.A. '14 M.A. and Broockman '11 B.A. conducted three randomized experiments during these two advocacy campaigns \u2014 one concerning immigration advocacy and one each for the door-to-door canvassing and telephone campaign for transgender rights. In each experiment, they randomly assigned real-world voters to receive a visit or a phone call from an advocate. Control groups received calls or visits on unrelated topics. The advocates shared stories about family members who were undocumented immigrants or personal stories that emphasized treating others with compassion. Voters were encouraged to share their own stories, such as discussing an undocumented coworker, or an LGBT friend or family member."
+  },
+  {
+   "source_id": "690415cc-750a-4ef1-88ea-937ed07f61a6",
+   "citation_number": 90,
+   "cited_text": "\u201cPeople don't like to be told they're wrong,\u201d he explained. \u201cSo when people hear something that contrasts with their self-image, they immediately start generating counter-arguments.\u201d Deep canvassing short-circuits that dynamic. Instead of presenting facts and data, or value judgments, he said, \u201cyou ask questions, dig in, make it a kind of collaborative dialogue where you're genuinely open-minded. And then you might find that the other person is more able to be open-minded.\u201d That's where sharing stories becomes important. \u201cPeople want to listen to stories,\u201d Broockman continued. \u201cThey kind of suspend their disbelief. They say, 'Alright, I'm hearing a story, I want to get into it. I'm not going to treat this like an argument where I need to counterpunch. This is just someone sharing their authentic experience with me. And then, I'm going to kind of reach my own conclusions.'\u201d"
+  },
+  {
+   "source_id": "ebd608d9-3502-4b70-89bd-9e7aa66ad6d5",
+   "citation_number": 91,
+   "cited_text": "Consider policing. It is often treated as a settled fact that racial bias is the primary driver of police shootings. But when Harvard economist Roland Fryer examined multiple large national datasets on police use of force, he found that there were no racial differences in officer-involved shootings once relevant contextual factors\u2014such as crime rates, encounter circumstances, and suspect behavior\u2014were taken into account. What followed was not a broad reevaluation of the claim, but a shift in how it was framed. Rather than direct bias operating at the level of individual officers, explanations moved toward less specific and harder-to-measure forces: institutional culture, historical legacy, or diffuse forms of \u201cstructural\u201d racism. These explanations may or may not be true, but they function differently from the original claim. Because they are more abstract and less tightly specified, they are also far more difficult to test or falsify."
+  },
+  {
+   "source_id": "ebd608d9-3502-4b70-89bd-9e7aa66ad6d5",
+   "citation_number": 92,
+   "cited_text": "Under those conditions, reasoning becomes performative. Skepticism is adopted when it flatters the self and abandoned when it threatens a moral narrative. That is why debates on these topics so often drift toward unfalsifiable language and moral imperatives. A fair question follows: How does anyone know they are not doing the same thing? I think the real danger we should try to internalize is not that other people do this. It is that all of us do. Share This Article: Think a friend would enjoy this? Send it their way!"
+  }
+ ]
+}
