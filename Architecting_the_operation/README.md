@@ -60,6 +60,44 @@ years. The **Preface** (`:164`) defines the framework itself: psycho-legal socia
 software, wetware, the fractal mind virus, the five-tier hierarchy. `ATO_EP0.md` was
 written against the second one.
 
+## Format decisions
+
+Decided by Emmanuel on 2026-09-16, after the research brief in
+`research/podcast_craft/BRIEF.md`. They apply to every script drafted from here on.
+Episodes 1 to 3 predate them.
+
+**One chapter per episode.** Episodes stay bound to a book chapter at whatever length
+the chapter needs. Splitting a long chapter into parts stays available later, and
+nothing is split now.
+
+**Each voice owns explanation levels.**
+
+| Voice | Owns |
+|---|---|
+| Emmanuel Theodore | PhD level |
+| Aisha | College level |
+| Toussaint | Elementary school and high school levels |
+
+Episode 3 used a different split, with Aisha on the first two levels and Emmanuel on
+the last two. The table above replaces it.
+
+**The four-level device is used strategically.** The default register is high school
+and college. A script expands from there when the material calls for it.
+
+- **Central concepts** get the full pass, from elementary school through PhD.
+- **Ideas every listener must understand** expand downward to elementary school.
+- **Material that only exists at PhD level** gets said at PhD level, without being
+  forced down the ladder.
+- **Everything else** stays at high school and college.
+
+Expertise-reversal research is why the full pass is rationed. Guidance that helps
+beginners slows down listeners who already know the material. See decision 6 of the
+brief.
+
+**Synthetic voice disclosure stays as it is for now.** Episodes 1 and 2 disclose in
+dialogue that Toussaint and Aisha are synthetic and that the research and words are
+Emmanuel's. Episode 2 promises the disclosure in every episode.
+
 ## Script format contract
 
 `voice_pipeline/parser.py` accepts exactly one header shape:
