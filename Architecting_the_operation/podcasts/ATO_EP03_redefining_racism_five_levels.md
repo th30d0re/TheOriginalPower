@@ -129,6 +129,33 @@ So someone could hold no prejudice at all and still benefit.
 Aisha (04:10)
 Yes. And someone could hold plenty of prejudice with no system behind it. That's prejudice, and it does harm. The machine is the bigger thing.
 
+Toussaint (04:10)
+Wait. Hold on. Doesn't that settle the reverse racism argument?
+
+Aisha (04:10)
+Go on.
+
+Toussaint (04:10)
+People fight about this constantly. Can Black people be racist? One side says of course, anyone can be racist toward anyone. The other side says racism needs power behind it.
+
+Aisha (04:10)
+And each side thinks the other one is dodging.
+
+Toussaint (04:10)
+Because they're using one word for two different things. The first side means prejudice. The second side means the system.
+
+Aisha (04:10)
+So on the book's definitions, each side is right about its own meaning. Anyone can hold prejudice. Anti-white prejudice is real, and so is anti-Black prejudice. Racism is the system that carries one direction of prejudice into law, policing, and money.
+
+Toussaint (04:10)
+So a Black person with anti-white prejudice holds a prejudice.
+
+Aisha (04:10)
+With no system carrying it downward. There's also a real way Black people can be racist. Explaining it takes the tiers and the Buffer Class. So let's put a pin in it.
+
+Toussaint (04:10)
+Pin in it. We'll pull it after idea four.
+
 Aisha (04:19)
 Here's the part people skip. Prejudice feeds back into the system. A hiring manager's bias costs someone a job. A jury's bias lengthens a sentence. A voter's resentment elects people who build more prisons. The book says those arrows are real.
 
@@ -678,6 +705,66 @@ And that recovery after 1973 had cover.
 Emmanuel Theodore (28:40)
 The swap from Jim Crow to the drug war supplied it. Race-neutral language covered the rebuild. That's where idea two and idea four meet.
 
+Toussaint (28:40)
+Time to pull that pin. Reverse racism.
+
+Aisha (28:40)
+At high school level, we had two meanings. Prejudice, which anyone can hold. Racism, the system. Emmanuel, level four. Why does the book treat this as settled?
+
+Emmanuel Theodore (28:40)
+Start with the book's physics. Prejudice is a scalar. It has size and no direction. Racism is a vector. It has size, and it points down the hierarchy through institutions.
+
+Emmanuel Theodore (28:40)
+A Black man's resentment toward white people is real, and it has size. It can't redline a neighborhood. It can't deploy a police force or write a sentencing guideline.
+
+Emmanuel Theodore (28:40)
+Then check the direction against history, using idea four. The status wage and the material wage together make up what the book calls the complex wage. It's the system's payoff.
+
+Emmanuel Theodore (28:40)
+Follow that payoff through the record. Deference from courts and police. Land. GI Bill loans. Social Security. Neighborhoods lenders would finance. It flows to the white Buffer Class, funded by extraction from the racialized out-group. Across the whole book, that direction never reverses.
+
+Emmanuel Theodore (28:40)
+That payoff also explains the confusion. People see white people collecting the wage and conclude the in-group line is the whole system. That's the coarse projection. Zoom in, and most white people get a thin slice, while the Elite collect the rest.
+
+Toussaint (28:40)
+Level five.
+
+Aisha (28:40)
+Two specialist objections. First, this sounds true by definition. You defined racism so that Black people can't commit it.
+
+Emmanuel Theodore (28:40)
+The definition is structural, and the book rates that equation tier three. The weight sits on what it connects to. Who received the material wage is documented. The New Deal exclusions are documented. The backlash data are tier one. The definition names a direction the record keeps showing.
+
+Emmanuel Theodore (28:40)
+And it could fail. Picture a group whose prejudice has its own police, lawmaking, and capital behind it. If that force flowed steadily down onto white Americans, the claim would fail. The record shows no such case.
+
+Aisha (28:40)
+Second objection. Black police officers, Black judges, Black executives. They hold institutional power.
+
+Emmanuel Theodore (28:40)
+Here the book treats the tiers as positions. A person occupies the Enforcement Class for the length of an act. A Black officer enforcing the partition carries the vector during that act, and it still points at the racialized out-group.
+
+Aisha (28:40)
+So that's a real way Black people can be racist.
+
+Emmanuel Theodore (28:40)
+Yes. Scholars call it internalized racism. The book's clearest case is colorism, the out-group running the sorting function on itself. It harms Black people, and its payoff still flows up to the same Elite. A Black person can carry racism that way. The direction of the vector stays the same.
+
+Aisha (28:40)
+And the same logic runs on other axes.
+
+Emmanuel Theodore (28:40)
+It runs on gender. Misogyny and misandry are both prejudices, and anyone can hold either one. Patriarchy is the system. The book calls it prerequisite software for extraction.
+
+Emmanuel Theodore (28:40)
+Women can carry internalized misogyny, and it can sound exactly like a man's misogyny. Its payoff still flows to the same structure, and women don't collect from patriarchy the way men do.
+
+Emmanuel Theodore (28:40)
+Misandry is real too. It's a prejudice with no patriarchy behind it, carrying it downward. So the argument over which one is worse sets a prejudice against a system. People blur misogyny, misandry, and patriarchy the same way they blur anti-white prejudice, anti-Black prejudice, and racism.
+
+Toussaint (28:40)
+High school recap. Anyone can be prejudiced. Racism and patriarchy are systems with a direction. People in a targeted group can carry the system's sorting against their own group. Nobody at the bottom can flip the direction.
+
 Toussaint (28:49)
 One question hangs over all of this. Is it a conspiracy? Let's start at level one, because everyone asks.
 
@@ -722,6 +809,9 @@ Three. Every big reform gets a backlash that overshoots, and each wave dies out 
 
 Toussaint (30:50)
 Four. The Buffer Class gets paid mostly in status to guard a line that holds them down too. When real money moves, the racialized out-group pays for it.
+
+Aisha (30:50)
+And the reverse racism argument comes apart once you separate prejudice from the system.
 
 Emmanuel Theodore (30:57)
 And the whole thing runs on deliberate design, everyday habit, and the occasional deliberate repair.
