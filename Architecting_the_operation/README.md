@@ -117,6 +117,13 @@ the research and every word to Emmanuel, the framing the brief found costs the l
 trust. Episode 3 carries this version. Episodes 1 and 2 name only Toussaint and Aisha as
 synthetic, which is inaccurate, and they need correcting before release.
 
+**Every episode pulls real audio where it exists.** Before drafting, run
+`python3 tools/chapter_audio_sources.py "<chapter title>"`. It lists every source
+the chapter cites and flags the ones likely to have a recording, plus quotations
+attributed to a speaker without a citation. Confirm each recording and its exact
+words, cut the excerpt with `tools/make_clip.py`, and play it in the script as
+an archive turn. The hosts then discuss what the listener just heard.
+
 ## Script format contract
 
 `voice_pipeline/parser.py` accepts exactly one header shape:
