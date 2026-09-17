@@ -156,14 +156,36 @@ The scenes that most need to put a listener in the moment, in episode order:
 Rule for this pass: every sensory or narrative detail must come from the
 manuscript or a cited source. A scene can be vivid and still be sourced.
 
-## Decisions for Emmanuel
+## Decisions for Emmanuel — all five settled 2026-09-17, applied
 
-1. **Opener.** Adopt the proposed shape: the precision hook, the ten
-   definitions, the answer, then the promise?
-2. **Interjections.** Which of the eight above go in?
-3. **Restorations.** Which rows of "in the original only" come back? The episode
-   is 38 minutes now.
-4. **Atwater audio.** Approve downloading the 1981 interview from The Nation's
-   2012 publication, and decide how to handle the slur.
-5. **Closing.** End on the 500-year journey into Portugal, with the original
-   sign-off restored?
+1. **Opener.** Adopted as proposed. The episode now opens on the precision
+   contrast, lands on "you cannot write a physics equation for human bias / but
+   what if you could", then the ten definitions, then the claim in one sentence,
+   then the promise. The Texas prison farms follow as the concrete beat, and the
+   synthetic-voice disclosure follows the hook.
+2. **Interjections.** All eight ported. Three registers and the ladder rationale
+   sit in the format section; falsifiable specificity follows the five tiers;
+   holding the metaphor closes the virus loop-back; Propaganda of History and
+   removability sit in the prior-installation section; the design test and the
+   sign-off close the episode.
+3. **Restorations.** Every row of "in the original only" came back, including the
+   1966 LSD protocol and the coil gun. Runtime went from 38:07 to an estimated
+   57:21, 276 turns to 358.
+4. **Atwater audio.** Approved and registered as `atwater_1981` in
+   `archive/clips.yaml`; the script plays it uncensored at turn 184 behind a
+   spoken content note, with the provenance read on air.
+5. **Closing.** Portugal teaser kept, original sign-off restored.
+
+## Open after this pass
+
+- **The clip's preamble clause.** The cut starts where The Nation's published
+  excerpt starts, because two Whisper passes disagreed on the clause before it.
+  Perlstein's article body supplies that wording directly ("Now, y'all aren't
+  quoting me on this?"), so the script now speaks it as attributed narration.
+  Extending the cut to include Atwater saying it is a re-cut plus re-verify, and
+  it is available whenever it is wanted.
+- **The shot list.** `video/ATO_EP03_shotlist.md` is anchored to the original
+  242-turn draft. It does not describe this script, and it has not been touched.
+- **Runtime.** 57 minutes is long for a front door. The trims that would recover
+  the most time are the LSD protocol, the coil gun, and the vocabulary
+  deprecation arc, in that order.
