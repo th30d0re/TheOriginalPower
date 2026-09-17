@@ -9,7 +9,7 @@
 # pronunciation.py reports it for any sentence.
 #
 # Add an entry only after calibrating it:
-#   python3 tools/calibrate_pronunciation.py record --reading default \
+#   scriptcast-calibrate record --reading default \
 #       --candidates reckerd,RECK-erd --takes 6
 # The script, captions and verification always keep the real word.
 

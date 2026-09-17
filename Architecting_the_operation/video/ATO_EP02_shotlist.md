@@ -2,8 +2,8 @@
 
 Companion to `../podcasts/ATO_EP02_preface.md`.
 
-Graphics live here, never inside the script. The voice pipeline's markup tokenizer
-(`voice_pipeline/markup.py`) only recognizes `[pause:NNNms]`, `[beat]`, `[emphasis]`
+Graphics live here, never inside the script. scriptCast's markup tokenizer
+(`scriptcast/markup.py`) only recognizes `[pause:NNNms]`, `[beat]`, `[emphasis]`
 and `[tone]`. Any other bracketed tag falls through and gets spoken aloud by the TTS
 engine, and any non-tag line inside a speaker turn is spoken too. So the script stays
 pure speech and the video cues stay in this file.
@@ -11,12 +11,12 @@ pure speech and the video cues stay in this file.
 ## Alignment procedure
 
 Cue anchors are the script's own header timestamps, and those are derived from measured
-audio by `tools/retime_script.py`. Episode 2 has not been rendered yet, so its
+audio by `scriptcast-retime`. Episode 2 has not been rendered yet, so its
 timestamps come from speaker rates measured on Episode 1 and carried forward in
-`voice_pipeline/speaker_rates.json`. After the render, re-run:
+`Architecting_the_operation/scriptcast/speaker_rates.json`. After the render, re-run:
 
 ```bash
-python3 tools/retime_script.py Architecting_the_operation/podcasts/ATO_EP02_preface.md \
+scriptcast-retime Architecting_the_operation/podcasts/ATO_EP02_preface.md \
     --manifest outputs/ATO_EP02_local/episode_manifest.json \
     --shotlist Architecting_the_operation/video/ATO_EP02_shotlist.md --apply
 ```

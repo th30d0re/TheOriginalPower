@@ -128,6 +128,7 @@ VENV_JUPYTER      := $(VENV)/bin/jupyter
 VENV_VOICE        := .venv-voice
 VENV_VOICE_PYTHON := $(VENV_VOICE)/bin/python3
 VENV_VOICE_PIP    := $(VENV_VOICE)/bin/pip
+SCRIPTCAST        ?= ../scriptCast
 VENV_HARNESS        := .venv-harness
 VENV_HARNESS_PYTHON := $(VENV_HARNESS)/bin/python3
 VENV_HARNESS_PIP    := $(VENV_HARNESS)/bin/pip
@@ -154,15 +155,20 @@ venv:
 
 venv-voice:
 	@set -e; \
-	$(SYSTEM_PYTHON) -m voice_pipeline.platform_check; \
+	if [ ! -d "$(SCRIPTCAST)" ]; then \
+	  echo "scriptCast not found at $(SCRIPTCAST). Clone or point SCRIPTCAST at it."; \
+	  exit 1; \
+	fi; \
+	PYTHONPATH=$(SCRIPTCAST) $(SYSTEM_PYTHON) -m scriptcast.platform_check; \
 	if [ ! -x "$(VENV_VOICE_PYTHON)" ]; then \
 	  echo "Creating virtual environment at $(VENV_VOICE)/..."; \
 	  $(SYSTEM_PYTHON) -m venv $(VENV_VOICE); \
 	  $(VENV_VOICE_PIP) install --upgrade pip -q; \
-	  $(VENV_VOICE_PIP) install -r voice_pipeline/requirements.txt -q; \
+	  $(VENV_VOICE_PIP) install -q -e "$(SCRIPTCAST)[verify,elevenlabs]"; \
 	  echo "✓ venv-voice ready. Activate with: source $(VENV_VOICE)/bin/activate"; \
 	else \
 	  echo "✓ venv-voice already exists at $(VENV_VOICE)/"; \
+	  $(VENV_VOICE_PIP) install -q -e "$(SCRIPTCAST)[verify,elevenlabs]"; \
 	fi
 
 venv-harness:

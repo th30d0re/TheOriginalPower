@@ -44,9 +44,9 @@ visual device.
 
 **Update, same session — rendered.** Episode 3 went through the full pipeline:
 OmniVoice render (258 turns, 258/258 speakers resolved, 76:42 runtime) into
-`outputs/ATO_EP03_local/`, `verify_render.py` (whisper-tiny flagged 19 turns,
+`outputs/ATO_EP03_local/`, `scriptcast-verify` (whisper-tiny flagged 19 turns,
 mostly whisper-tiny mishearing short isolated Level-Card lines like "College."
-as "call it." — whisper-small cleared all but two), `repair_render.py`
+as "call it." — whisper-small cleared all but two), `scriptcast-repair`
 (whisper-small, threshold 0.90, 4 passes). One flagged turn was a real defect:
 turn 96 (Aisha) had ~900ms of dead air where "Module two." should have
 synthesized, confirmed directly by waveform inspection rather than the
@@ -55,11 +55,11 @@ turn (93, Emmanuel Theodore, the antebellum cotton figures) stayed flagged at
 score 0.943 purely from Whisper's numeral normalization ("seventy four point
 one million dollars" heard back as "$74.1 million"); waveform-checked
 separately (66.6s, longest silent run 0.8s) and accepted as a false positive —
-`check_render_outliers.py` also finds zero duration outliers episode-wide.
-Stitched to `ATO_EP03_local.mp3` (76:42), then `retime_script.py --apply`
+`scriptcast-outliers` also finds zero duration outliers episode-wide.
+Stitched to `ATO_EP03_local.mp3` (76:42), then `scriptcast-retime --apply`
 rewrote 252 of 258 script header timestamps and remapped 60 shot-list anchors
 against the real manifest (drift up to 7s in a few places), recalibrating
-`voice_pipeline/speaker_rates.json` from this render's measured rates. The
+`Architecting_the_operation/scriptcast/speaker_rates.json` from this render's measured rates. The
 `.als` is at `outputs/ATO_EP03_local/ATO_EP03_local.als`. `outputs/` is
 gitignored; the retimed script, retimed shot list, and recalibrated speaker
 rates are committed. The split-vs-single-episode question below is still
@@ -70,7 +70,7 @@ One technical note for whoever renders this: an early draft embedded literal LaT
 math (`$...$`, `\text{}`, subscripts) directly in spoken turns, and the markup
 tokenizer choked on stray `[0,1]`-style bracket pairs and silently dropped underscores/
 carets in a way that mangled prose (confirmed by a bracket-leak and word-count check
-against `voice_pipeline.parser`/`voice_pipeline.markup`). All formalism in this script
+against `scriptcast.parser`/`scriptcast.markup`). All formalism in this script
 is now spoken English ("the inverse square root of inductance times capacitance"),
 matching Episodes 1–2's convention. If a future rewrite is tempted to paste LaTeX into
 a script for precision, don't — verify with the parser/markup check in the pipeline
@@ -187,27 +187,27 @@ candidate for adoption across the whole series going forward.
 source .venv-voice/bin/activate
 
 # render (full)
-python -m voice_pipeline --transcript <script>.md --episode-id <id> \
-  --out-dir ./outputs --voices voice_pipeline/voices.omnivoice.yaml --gap-ms 350
+scriptcast --transcript <script>.md --episode-id <id> \
+  --out-dir ./outputs --gap-ms 350
 
 # render (changed turns only)
 ... --precision-insert
 ... --regenerate-turns 3,38
 
 # then, in this order
-python3 tools/verify_render.py outputs/<id> --transcript <script>.md --model small
-python3 tools/relayout_episode.py outputs/<id> --gap-ms 350
-python3 tools/stitch_episode.py outputs/<id> --pad-ms 350
-python3 tools/retime_script.py <script>.md --manifest outputs/<id>/episode_manifest.json \
+scriptcast-verify outputs/<id> --transcript <script>.md --model small
+scriptcast-relayout outputs/<id> --gap-ms 350
+scriptcast-stitch outputs/<id> --pad-ms 350
+scriptcast-retime <script>.md --manifest outputs/<id>/episode_manifest.json \
   --shotlist <shotlist>.md --apply
-python3 tools/turn_index.py outputs/<id> --transcript <script>.md
+scriptcast-turn-index outputs/<id> --transcript <script>.md
 ```
 
-`tools/repair_render.py` wraps verify-and-regenerate into a loop.
+`scriptcast-repair` wraps verify-and-regenerate into a loop.
 
 **Archival clips.** A turn can play a real recording instead of a synthetic
 voice. Give the speaker `engine: archive` in the voices file, register the
-excerpt with `tools/make_clip.py` (it finds the start and end phrases by
+excerpt with `scriptcast-clip` (it finds the start and end phrases by
 Whisper word timing), and write the turn as `[clip:id]` followed by the
 verbatim transcript. The transcript is what verification checks the clip
 against. Clips are loudness-matched to the voices. Sources live in
@@ -216,24 +216,24 @@ against. Clips are loudness-matched to the voices. Sources live in
 
 **Heteronyms.** OmniVoice picks noun or verb stress on its own and often picks
 wrong ("the historical re-CORD"). Whisper cannot hear the difference, so
-`verify_render.py` also cuts every heteronym out of the audio and judges it with
+`scriptcast-verify` also cuts every heteronym out of the audio and judges it with
 a phoneme recognizer against the reading misaki's part-of-speech tagging expects
-(`tools/stress_check.py`). "wrong" and "garbled" fail the turn and the repair
+(`scriptcast-stress`). "wrong" and "garbled" fail the turn and the repair
 loop re-renders it. Known limits: misaki occasionally mistags a word in a long
 sentence ("animus converts into" read as a noun), and pairs differing only in an
 unstressed vowel or a voicing ("deliberate", "use") are skipped. Words that keep
 failing get a respelling handed to the engine only, recorded in
-`voice_pipeline/pronunciations.yaml` after calibration:
+`Architecting_the_operation/scriptcast/pronunciations.yaml` after calibration:
 
 ```bash
-python3 tools/calibrate_pronunciation.py record --reading default \
+scriptcast-calibrate record --reading default \
   --candidates reckerd,wreck-urd --takes 6 --write
 ```
 
 OmniVoice runs ~12s per turn, so a fresh episode is about an hour. It lives in
 its own `.venv-omnivoice` because it pins torch 2.8 against the voice venv's
 2.11; the pipeline talks to it through a persistent worker
-(`voice_pipeline/omnivoice_worker.py`).
+(`scriptcast/omnivoice_worker.py`).
 
 ## Things that cost time to learn
 
@@ -244,7 +244,7 @@ separate checks in this project reported clean on defective output.
   modes exist — truncation, repetition, opening babble — and only one has a
   duration signature.
 - *Whisper repairs disfluencies.* Splice a 220ms stutter into a clip,
-  re-transcribe, and it returns the original sentence. `verify_render.py` scored
+  re-transcribe, and it returns the original sentence. `scriptcast-verify` scored
   that 1.000. Emmanuel heard stutters the check had passed for days.
 - *A similarity threshold is the wrong shape for a repetition.* The stutter he
   found scored 0.940 with a worst run of 2, under both limits. Repetition now

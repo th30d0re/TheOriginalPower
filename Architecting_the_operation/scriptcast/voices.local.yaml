@@ -1,5 +1,5 @@
 # On-device preview voices. No network, no ElevenLabs credits.
-# Use with: python -m voice_pipeline --voices voice_pipeline/voices.local.yaml ...
+# Use with: scriptcast --voices Architecting_the_operation/scriptcast/voices.local.yaml ...
 # The committed voices.yaml stays the ElevenLabs configuration for final renders.
 #
 # Toussaint and Aisha use Emmanuel's own cloned references in voices/ via

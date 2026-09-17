@@ -15,7 +15,7 @@ in Paper/references.bib, and sorts them into:
   * print: everything else.
 
 A flag is a lead, not a finding. Confirm the recording exists, and check the
-exact words, before a clip goes in a script (tools/make_clip.py).
+exact words, before a clip goes in a script (scriptcast-clip).
 """
 from __future__ import annotations
 
