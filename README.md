@@ -115,7 +115,7 @@ passage in the rendered PDF before the edit lands.
 | [`Paper/`](Paper/) | Canonical LaTeX manuscript, bibliography, statutory-source material, empirical notebooks, processed data, and the tracked PDF. |
 | [`training/`](training/) | MLX LoRA dataset construction, local-model fine-tuning, evaluation scripts, and a separate Rust chat-group TUI. |
 | [`harness/`](harness/) | Python server for dataset curation, scoring, and training-job coordination. |
-| [`voice_pipeline/`](voice_pipeline/) | Tested TTS and audio-production package with Logic, Ableton, and FCPXML export paths. |
+| `scriptCast` | External audio-production tool in the sibling checkout `../scriptCast`, configured by `scriptcast.toml` with Logic, Ableton, and FCPXML export paths. |
 | [`website/`](website/) | React and TypeScript interactive presentation using D3 and Framer Motion. |
 | [`app/`](app/) | Swift iOS application, `decodingOppression`. |
 | [`tools/`](tools/) | U.S. Code extraction and diffing, EPUB preparation, trademark search, and voice utilities. |

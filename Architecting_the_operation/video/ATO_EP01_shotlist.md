@@ -2,8 +2,8 @@
 
 Companion to `../podcasts/ATO_EP01_authors_preface.md`.
 
-Graphics live here, never inside the script. The voice pipeline's markup tokenizer
-(`voice_pipeline/markup.py`) only recognizes `[pause:NNNms]`, `[beat]`, `[emphasis]`
+Graphics live here, never inside the script. scriptCast's markup tokenizer
+(`scriptcast/markup.py`) only recognizes `[pause:NNNms]`, `[beat]`, `[emphasis]`
 and `[tone]`. Any other bracketed tag falls through and gets spoken aloud by the TTS
 engine, and any non-tag line inside a speaker turn is spoken too. So the script stays
 pure speech and the video cues stay in this file.
@@ -14,7 +14,7 @@ Cue times below are the script's source timestamps. They are approximate. After 
 audio renders, take the real times from the manifest:
 
 ```bash
-python -m voice_pipeline --transcript Architecting_the_operation/podcasts/ATO_EP01_authors_preface.md --episode-id ATO_EP01 --out-dir ./outputs
+scriptcast --transcript Architecting_the_operation/podcasts/ATO_EP01_authors_preface.md --episode-id ATO_EP01 --out-dir ./outputs
 ```
 
 The manifest carries `turn_index`, `speaker_id`, `source_timestamp`, `start_ms`, and

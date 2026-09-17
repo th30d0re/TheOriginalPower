@@ -1,5 +1,5 @@
 # On-device voices using OmniVoice with real reference audio.
-# Use with: python -m voice_pipeline --voices voice_pipeline/voices.omnivoice.yaml ...
+# The project default (see scriptcast.toml): scriptcast uses it without --voices.
 #
 # OmniVoice conditions on the reference clip AND its transcript together, so
 # reference_text must match the clip word for word. A truncated or approximate

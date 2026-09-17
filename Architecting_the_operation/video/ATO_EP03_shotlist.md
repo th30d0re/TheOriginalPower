@@ -2,8 +2,8 @@
 
 Companion to `../podcasts/ATO_EP03_redefining_racism.md`.
 
-Graphics live here, never inside the script. The voice pipeline's markup tokenizer
-(`voice_pipeline/markup.py`) only recognizes `[pause:NNNms]`, `[beat]`, `[emphasis]`
+Graphics live here, never inside the script. scriptCast's markup tokenizer
+(`scriptcast/markup.py`) only recognizes `[pause:NNNms]`, `[beat]`, `[emphasis]`
 and `[tone]`. Any other bracketed tag falls through and gets spoken aloud by the TTS
 engine, and any non-tag line inside a speaker turn is spoken too. So the script stays
 pure speech and the video cues stay in this file.
@@ -21,12 +21,12 @@ revision in full; anchors and cue content below do not correspond to the earlier
 ## Alignment procedure
 
 Cue anchors are the script's own header timestamps, and those are derived from measured
-audio by `tools/retime_script.py`. Episode 3 has not been rendered yet, so its
+audio by `scriptcast-retime`. Episode 3 has not been rendered yet, so its
 timestamps in the script are computed from word count at a fixed words-per-second rate,
 not measured. After the render, re-run:
 
 ```bash
-python3 tools/retime_script.py Architecting_the_operation/podcasts/ATO_EP03_redefining_racism.md \
+scriptcast-retime Architecting_the_operation/podcasts/ATO_EP03_redefining_racism.md \
     --manifest outputs/ATO_EP03_local/episode_manifest.json \
     --shotlist Architecting_the_operation/video/ATO_EP03_shotlist.md --apply
 ```

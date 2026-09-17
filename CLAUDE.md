@@ -54,7 +54,7 @@ Each subsystem has its own venv, all bootstrapped via `make`:
 | venv | target | purpose |
 |------|--------|---------|
 | `.venv` | `make venv` | empirical notebooks (`Paper/scripts/requirements.txt`) |
-| `.venv-voice` | `make venv-voice` | audio/voice pipeline + MLX training (`voice_pipeline/requirements.txt`) |
+| `.venv-voice` | `make venv-voice` | scriptCast editable install (`../scriptCast[verify,elevenlabs]`) |
 | `.venv-harness` | `make venv-harness` | training/data harness (`harness/requirements.txt`) |
 | `.venv-notebooklm` | — | NotebookLM batch scripts at repo root |
 
@@ -62,18 +62,16 @@ Each subsystem has its own venv, all bootstrapped via `make`:
 
 ### Tests
 
-The maintained test suite is in `voice_pipeline/` (pytest). Run with the voice venv:
+The voice-pipeline suite lives in scriptCast and runs there:
 
 ```bash
-source .venv-voice/bin/activate
-python -m pytest voice_pipeline/                 # all voice-pipeline tests
-python -m pytest voice_pipeline/test_parser.py   # a single module
-python -m pytest voice_pipeline/test_parser.py::test_name   # a single test
+cd ../scriptCast && python -m pytest tests
 ```
 
-Note: `find . -name 'test_*.py'` returns thousands of hits — almost all are inside `.venv*/` and
-`app/.../mlx-swift/` checkouts. Ignore those; the real tests are `voice_pipeline/test_*.py` and the
-`training/test_*.py` evaluation scripts (run directly, not via pytest).
+Tests maintained in this repository are:
+- `tests/` — repository-level unit and regression tests (run via `pytest`).
+- `videolab/tests/` — videolab worker and pipeline tests.
+- `training/test_*.py` — evaluation scripts run directly with Python.
 
 ## Subsystem map
 
@@ -86,7 +84,7 @@ Note: `find . -name 'test_*.py'` returns thousands of hits — almost all are in
 
 - **`harness/`** — Python server (`server.py`) coordinating dataset curation (`curator.py`), scoring (`scorer.py`), and training jobs (`train_worker.py`, `job_runner.py`). Runtime artifacts under `harness/data/` are gitignored.
 
-- **`voice_pipeline/`** — TTS / audio production package (run as `python -m voice_pipeline`). Parses marked-up scripts and exports to Logic/Ableton/FCPXML. Fully unit-tested.
+- **`scriptCast`** — audio production pipeline maintained in sibling repository `../scriptCast`. Configured by `scriptcast.toml` at repository root, with show voices, pronunciations, and speaker rates in `Architecting_the_operation/scriptcast/`.
 
 - **`website/`** — React + TypeScript + D3.js + Framer Motion interactive visualization of the framework.
 

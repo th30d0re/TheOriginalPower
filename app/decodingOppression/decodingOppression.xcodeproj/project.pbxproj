@@ -11,7 +11,7 @@
 		1487ADC32F47B281009460B8 /* MLXEmbedders in Frameworks */ = {isa = PBXBuildFile; productRef = 1487ADC62F47B281009460B8 /* MLXEmbedders */; };
 		1487ADC42F47B281009460B8 /* MLXLMCommon in Frameworks */ = {isa = PBXBuildFile; productRef = 1487ADC72F47B281009460B8 /* MLXLMCommon */; };
 		1487ADED2F47B27E009460BA /* decodingOppressionTests/historical_clauses.jsonl in Resources */ = {isa = PBXBuildFile; fileRef = 1487ADED2F47B27E009460B9 /* decodingOppressionTests/historical_clauses.jsonl */; };
-		B04D07D06C7E4B939E8B1002 /* ../../voice_pipeline/swift/EpisodeManifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04D07D06C7E4B939E8B1001 /* ../../voice_pipeline/swift/EpisodeManifest.swift */; };
+		B04D07D06C7E4B939E8B1002 /* ../../../scriptCast/swift/EpisodeManifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04D07D06C7E4B939E8B1001 /* ../../../scriptCast/swift/EpisodeManifest.swift */; };
 		FF60718293A1B2C3D4E5F609 /* decodingOppressionTests/HistoricalPolicyValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF60718293A1B2C3D4E5F608 /* decodingOppressionTests/HistoricalPolicyValidationTests.swift */; };
 		FF60718293A1B2C3D4E5F610 /* decodingOppressionTests/validation_clauses.jsonl in Resources */ = {isa = PBXBuildFile; fileRef = 1487ADED2F47B27E009460BB /* decodingOppressionTests/validation_clauses.jsonl */; };
 /* End PBXBuildFile section */
@@ -66,7 +66,7 @@
 		3F905F1B71EC4592BA52F524 /* Tier3Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tier3Error.swift; sourceTree = "<group>"; };
 		6B540AA359285FE6BE364309 /* decodingOppression/Models/PolicyScorer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/Models/PolicyScorer.swift; sourceTree = "<group>"; };
 		8F51FB8F8538602BCE6DEF6E /* decodingOppression/NLP/AnalysisPipeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/NLP/AnalysisPipeline.swift; sourceTree = "<group>"; };
-		B04D07D06C7E4B939E8B1001 /* ../../voice_pipeline/swift/EpisodeManifest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ../../voice_pipeline/swift/EpisodeManifest.swift; sourceTree = SOURCE_ROOT; };
+		B04D07D06C7E4B939E8B1001 /* ../../../scriptCast/swift/EpisodeManifest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ../../../scriptCast/swift/EpisodeManifest.swift; sourceTree = SOURCE_ROOT; };
 		C6B4706C099C4852B2B1E2BB /* Tier3Engine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tier3Engine.swift; sourceTree = "<group>"; };
 		C89BE94DE48144EC3AFE8A14 /* decodingOppression/NLP/TierResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = decodingOppression/NLP/TierResolver.swift; sourceTree = "<group>"; };
 		DCB26A02D5DC4B6F91076977 /* HistoricalBaselineTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalBaselineTool.swift; sourceTree = "<group>"; };
@@ -172,7 +172,7 @@
 				1487ADE72F47B27E009460B8 /* decodingOppression/Models/AnalyzedClause.swift */,
 				1487ADE82F47B27E009460B8 /* decodingOppression/Models/GenerableTypes.swift */,
 				1487ADE92F47B27E009460B8 /* decodingOppression/Models/PipelineContracts.swift */,
-				B04D07D06C7E4B939E8B1001 /* ../../voice_pipeline/swift/EpisodeManifest.swift */,
+				B04D07D06C7E4B939E8B1001 /* ../../../scriptCast/swift/EpisodeManifest.swift */,
 				1487ADEA2F47B27E009460B8 /* decodingOppression/Models/Policy.swift */,
 				1487ADEB2F47B27E009460B8 /* decodingOppression/Models/PolicyAnalysis.swift */,
 				1487ADEC2F47B27E009460B8 /* decodingOppression/Models/ScoreResult.swift */,
@@ -379,7 +379,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B04D07D06C7E4B939E8B1002 /* ../../voice_pipeline/swift/EpisodeManifest.swift in Sources */,
+				B04D07D06C7E4B939E8B1002 /* ../../../scriptCast/swift/EpisodeManifest.swift in Sources */,
 				FF60718293A1B2C3D4E5F609 /* decodingOppressionTests/HistoricalPolicyValidationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

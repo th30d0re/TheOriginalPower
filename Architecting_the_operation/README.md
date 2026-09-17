@@ -36,7 +36,7 @@ the manuscript's actual rigor through to the fourth pass. Toussaint names the le
 Aisha delivers the first two registers, Emmanuel Theodore delivers the last two,
 repeated across ten named mechanisms. It is unrendered as of this commit — 258 turns,
 ~11,100 words, ~74–77 minutes by word count, timestamps computed from word count and
-not yet corrected by `tools/retime_script.py`. The hazards audit's two graphic-content
+not yet corrected by `scriptcast-retime`. The hazards audit's two graphic-content
 passages (the Thistlewood/Abba record, and the 1662 Virginia `partus sequitur ventrem`
 law) are flagged verbally in the script itself and get a plain, image-free video
 treatment per the shot list's content-note handling, and the shot list's signature
@@ -121,12 +121,12 @@ synthetic, which is inaccurate, and they need correcting before release.
 `python3 tools/chapter_audio_sources.py "<chapter title>"`. It lists every source
 the chapter cites and flags the ones likely to have a recording, plus quotations
 attributed to a speaker without a citation. Confirm each recording and its exact
-words, cut the excerpt with `tools/make_clip.py`, and play it in the script as
+words, cut the excerpt with `scriptcast-clip`, and play it in the script as
 an archive turn. The hosts then discuss what the listener just heard.
 
 ## Script format contract
 
-`voice_pipeline/parser.py` accepts exactly one header shape:
+`scriptcast/parser.py` in scriptCast accepts exactly one header shape:
 
 ```
 Display Name (MM:SS)
@@ -138,13 +138,13 @@ Rules that the pipeline enforces, and what breaks when they are violated:
 - **No markdown bold on the header line.** The regex anchors on the closing paren at
   end of line, so `**Name (00:01)**` matches nothing and the whole file yields zero
   turns. This is why `ATO_EP0.md` currently fails to parse.
-- **Speaker names must resolve to ids in `voice_pipeline/voices.yaml`.** The id is the
+- **Speaker names must resolve to ids in `Architecting_the_operation/scriptcast/voices.omnivoice.yaml` (or the file passed via `--voices`).** The id is the
   lowercased name with spaces as underscores. Currently configured: `emmanuel_theodore`,
   `toussaint`, `aisha`.
 - **Every line inside a turn is spoken.** Stage directions, graphic cues, and
   `[RECORD ANSWER HERE]` placeholders get read aloud by the TTS engine. Graphics belong
   in `video/`.
-- **Only four inline tags are recognized**, per `voice_pipeline/markup.py`:
+- **Only four inline tags are recognized**, per `scriptcast/markup.py` in scriptCast:
   `[pause:800ms]`, `[beat]` (400ms), `[emphasis]` and `[tone]` (no-ops in v1). Any other
   bracketed tag falls through and is spoken verbatim.
 - **Text before the first header is skipped** with a warning, so a title line at the top
@@ -152,13 +152,13 @@ Rules that the pipeline enforces, and what breaks when they are violated:
 - **Timestamps are derived, never hand-maintained.** Inter-turn gaps come from the
   `--gap-ms` flag, so these values do not drive the render. They are the join key
   between a script and its shot list, so they have to match where the audio actually
-  lands. `tools/retime_script.py` computes them: measured durations from the rendered
+  lands. `scriptcast-retime` computes them: measured durations from the rendered
   manifest for turns whose audio exists, and a words-per-second rate calibrated on that
   same manifest for turns that are new or edited. `turn_id` is a hash of speaker and
   text, so retiming changes no ids and forces no re-synthesis.
 
   ```bash
-  python3 tools/retime_script.py Architecting_the_operation/podcasts/ATO_EP01_authors_preface.md \
+  scriptcast-retime Architecting_the_operation/podcasts/ATO_EP01_authors_preface.md \
       --manifest outputs/ATO_EP01_local/episode_manifest.json \
       --shotlist Architecting_the_operation/video/ATO_EP01_shotlist.md --apply
   ```
@@ -167,19 +167,19 @@ Rules that the pipeline enforces, and what breaks when they are violated:
   real turn by that speaker within 30 seconds; anything further is reported as
   UNRESOLVED and left alone, because a silent snap to the nearest turn is how a cue ends
   up illustrating the wrong sentence. Run it after every render, then regenerate the
-  editor's lookup table with `tools/turn_index.py`.
+  editor's lookup table with `scriptcast-turn-index`.
 
 Validate a script before rendering:
 
 ```bash
 source .venv-voice/bin/activate && python3 -c "
 from pathlib import Path
-from voice_pipeline.parser import parse_transcript
-from voice_pipeline.markup import tokenize_markup
-from voice_pipeline.voices import load_voices
+from scriptcast.parser import parse_transcript
+from scriptcast.markup import tokenize_markup
+from scriptcast.voices import load_voices
 import sys
 turns = tokenize_markup(parse_transcript(Path(sys.argv[1])))
-known = set(load_voices(Path('voice_pipeline/voices.yaml')))
+known = set(load_voices(Path('Architecting_the_operation/scriptcast/voices.omnivoice.yaml')))
 unknown = {t.speaker_id for t in turns} - known
 leaks = [c.text for t in turns for c in t.markup_chunks if c.kind=='speech' and '[' in (c.text or '')]
 words = sum(len((c.text or '').split()) for t in turns for c in t.markup_chunks if c.kind=='speech')
@@ -192,7 +192,7 @@ print('bracket leaks:', leaks or 'none')
 Render:
 
 ```bash
-source .venv-voice/bin/activate && python -m voice_pipeline --transcript Architecting_the_operation/podcasts/ATO_EP01_authors_preface.md --episode-id ATO_EP01 --out-dir ./outputs
+source .venv-voice/bin/activate && scriptcast --transcript Architecting_the_operation/podcasts/ATO_EP01_authors_preface.md --episode-id ATO_EP01 --out-dir ./outputs
 ```
 
 ## Rendered episode layout
@@ -207,13 +207,13 @@ outputs/<episode_id>/
   <episode_id>.mp3          the stitched preview of the whole episode
   episode_manifest.json     per-turn ids, durations, positions
   render_state.json         fingerprints that drive incremental re-render
-  TURN_INDEX.csv            editor's lookup table (tools/turn_index.py)
+  TURN_INDEX.csv            editor's lookup table (scriptcast-turn-index)
   Samples/                  the rendered audio
   _backups/                 timestamped .als copies, written automatically
   _previews/                short audition clips cut from the stitched mp3
 ```
 
-`voice_pipeline/als_generator.py` writes backups to `_backups/` and reparents their
+`scriptcast/als_generator.py` writes backups to `_backups/` and reparents their
 project-relative sample paths, so an old backup still opens and finds its audio from one
 level down. Short clips cut for review go in `_previews/`; keep the episode root to the
 files above.
@@ -234,7 +234,7 @@ Only the middle one has a duration signature, so **transcription is the check th
 matters.** Run it after every render, before delivering anything:
 
 ```bash
-python3 tools/verify_render.py outputs/ATO_EP02_local \
+scriptcast-verify outputs/ATO_EP02_local \
     --transcript Architecting_the_operation/podcasts/ATO_EP02_preface.md
 ```
 
@@ -248,9 +248,9 @@ something no model could read as "prejudice" and still scored 0.909 overall.
 To verify and repair in one step, which is the normal path:
 
 ```bash
-python3 tools/repair_render.py outputs/ATO_EP02_local \
+scriptcast-repair outputs/ATO_EP02_local \
     --transcript Architecting_the_operation/podcasts/ATO_EP02_preface.md \
-    --episode-id ATO_EP02_local --voices voice_pipeline/voices.local.yaml
+    --episode-id ATO_EP02_local --voices Architecting_the_operation/scriptcast/voices.local.yaml
 ```
 
 That regenerates what fails, re-checks only those turns, repeats up to `--max-passes`,
@@ -266,15 +266,15 @@ The duration check is still worth running as a cheap first look, though it catch
 the long-clip mode:
 
 ```bash
-python3 tools/check_render_outliers.py outputs/ATO_EP02_local \
+scriptcast-outliers outputs/ATO_EP02_local \
     --transcript Architecting_the_operation/podcasts/ATO_EP02_preface.md
 ```
 
 It compares each turn's audio against what its own text predicts, using the per-speaker
-milliseconds-per-word and milliseconds-per-mark in `voice_pipeline/speaker_rates.json`.
+milliseconds-per-word and milliseconds-per-mark in `Architecting_the_operation/scriptcast/speaker_rates.json`.
 Turns shorter than 20 words are exempt, because fixed breath and pacing overhead does
 not scale with length. Re-synthesize whatever it flags with `--regenerate-turns`, then
-run `tools/relayout_episode.py` — a regenerated clip changes length and leaves a hole in
+run `scriptcast-relayout` — a regenerated clip changes length and leaves a hole in
 the timeline where the old one sat.
 
 Punctuation is in the model deliberately. A comma-heavy list reads with a pause at every
@@ -302,7 +302,7 @@ Measured on eight passages chosen to stress the known failure modes, three runs 
 | OmniVoice | full sentence, exact text | 0.997 | 0.96 | none in 24 runs |
 
 So the engine and the reference were both wrong, and fixing either alone leaves
-catastrophic failures. Build references with `tools/audition_voice.py` to score
+catastrophic failures. Build references with `scriptcast-audition` to score
 candidates before committing to one.
 
 Working references and their exact transcripts live in `voices/candidates/`.
