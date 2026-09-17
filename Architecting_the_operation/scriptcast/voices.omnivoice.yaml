@@ -37,3 +37,11 @@ speakers:
     reference_audio: "voices/candidates/aisha_sentence_ref.wav"
     reference_text: "Elite Obscuration, and the Square Ceiling, which together make the apex invisible from the base."
     character_profile: "Co-narrator, mathematical and empirical throughline"
+
+  lee_atwater:
+    name: "Lee Atwater"
+    # Not a voice. The archive engine plays the registered recording in
+    # Architecting_the_operation/archive/clips.yaml, and the text after the
+    # [clip:...] tag is the caption and what verification checks it against.
+    engine: "archive"
+    character_profile: "Archival recording, 1981"

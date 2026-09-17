@@ -1,0 +1,19 @@
+# Archival excerpts played in the episodes. Sources live beside this file in
+# sources/ and stay out of git; re-download them from origin_url.
+clips:
+  atwater_1981:
+    source: Architecting_the_operation/archive/sources/atwater_1981.mp3
+    start: 997.95
+    end: 1049.85
+    speaker: Lee Atwater
+    citation: >-
+      Perlstein, R. (2012, November 13). Exclusive: Lee Atwater's infamous 1981
+      interview on the Southern Strategy. The Nation. Interview conducted by
+      Alexander P. Lamis, 1981; audio released by Renee Lamis and James Carter IV.
+    transcript_source: >-
+      The caption follows the wording The Nation published with the audio.
+      The clip begins where that published excerpt begins.
+    origin_url: https://www.thenation.com/article/archive/exclusive-lee-atwaters-infamous-1981-interview-southern-strategy/
+    content_note: >-
+      Contains a racial slur, spoken four times. Played uncensored: the record of
+      how the language was used is the evidence.
