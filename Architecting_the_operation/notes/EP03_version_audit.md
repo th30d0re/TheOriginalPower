@@ -189,3 +189,63 @@ manuscript or a cited source. A scene can be vivid and still be sourced.
 - **Runtime.** 57 minutes is long for a front door. The trims that would recover
   the most time are the LSD protocol, the coil gun, and the vocabulary
   deprecation arc, in that order.
+
+## Second pass: reordered to the chapter's order of introduction (2026-09-17)
+
+The restored script followed the original draft's order, and the original draft
+did not follow the chapter's. Chapter 2 opens on §2.1, "The In-Group/Out-Group
+Binary as a Coarse Projection," and earns the framework in four equations before
+it argues anything: the population partitions into an in-group and an out-group
+(eq. 2.1), the in-group refines into Elite, Puppet, Enforcement, and Buffer
+(eq. 2.2), the out-group fractures by proximity to capital, phenotype, gender,
+and legal status (eq. 2.3), and the operation generalises to any class on any
+axis (eq. 2.4). §2.2, "Racism as Primary Example," reverses the causal arrow
+afterwards, and it can, because "Elite economic interests" now names a tier the
+reader has met.
+
+The episode had inverted that. Idea one was §2.2 material and ran all five
+levels; the five tiers arrived nine minutes later as eight turns of travel prose.
+The concept anyone can understand — us and them — was the throwaway, and the
+argument that depends on it stood in front of it.
+
+### What changed
+
+1. **Idea one is now the coarse projection**, at all five levels. Level one is a
+   classroom with five kinds of kid instead of two. Level two is the org chart
+   inside the "us" side. Level three names the projection and both refinements.
+   Level four states eq. 2.1 and 2.2 in plain language — a partition, then a
+   refinement that adds resolution without contradicting the cut underneath, so
+   everything true at two boxes stays true at five — then the recursive operator.
+   Level five carries the note on formalism (precision-forcing devices, formal
+   diagnostic modeling) and the chapter's four-part architecture of control,
+   which no draft had ever stated on air.
+2. **Five ideas, not four.** The map and the closing recap were rewritten. Order:
+   the projection, racism as a system, the disguise, the backlash, the wage.
+3. **§2.2 keeps its own internal order** — dictionary hierarchy, causal reversal,
+   maintenance loop, the -ism evidence, prejudice against racism, the corrected
+   hierarchy — and now sits second.
+4. **The diagnostic model opens the way §2.3 opens.** The virus frame and the
+   biological-embedding boundary moved to the head of the model, ahead of the
+   modules, where the chapter puts them.
+5. **Core payload before zero-day.** The chapter establishes what the machine is
+   for (§2.3.2) before how race was built into a lock (§2.3.3). The episode had
+   them the other way round.
+6. **Diagnosis before the three modes**, matching §2.3.11 then §2.3.12.
+7. **The reverse-racism pin is split.** Scalar against vector is settled inside
+   idea two, because the tiers are on the table by then. Only the payoff half —
+   who collects, and internalized racism as a tier position — waits for the wage,
+   and the pin now says idea five.
+
+### Cost
+
+392 turns, estimated 63:21. Of 358 previous turns, 332 carried byte-exact and 26
+were edited (signposts, the map, the recap, four bridges). 247 rendered turns are
+reusable; 145 need synthesis, of which 90 were the never-rendered restorations
+from the first pass. Reordering itself cost almost no audio, because `turn_id`
+hashes speaker and text rather than position.
+
+### Still open
+
+- The shot list is now two drafts stale.
+- 63 minutes. The trim candidates are unchanged: the LSD protocol, the coil gun,
+  the vocabulary deprecation arc.
