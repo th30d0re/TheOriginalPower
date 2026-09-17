@@ -205,6 +205,15 @@ python3 tools/turn_index.py outputs/<id> --transcript <script>.md
 
 `tools/repair_render.py` wraps verify-and-regenerate into a loop.
 
+**Archival clips.** A turn can play a real recording instead of a synthetic
+voice. Give the speaker `engine: archive` in the voices file, register the
+excerpt with `tools/make_clip.py` (it finds the start and end phrases by
+Whisper word timing), and write the turn as `[clip:id]` followed by the
+verbatim transcript. The transcript is what verification checks the clip
+against. Clips are loudness-matched to the voices. Sources live in
+`Architecting_the_operation/archive/sources/`, gitignored; the registry is
+`Architecting_the_operation/archive/clips.yaml`.
+
 **Heteronyms.** OmniVoice picks noun or verb stress on its own and often picks
 wrong ("the historical re-CORD"). Whisper cannot hear the difference, so
 `verify_render.py` also cuts every heteronym out of the audio and judges it with

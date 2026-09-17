@@ -141,3 +141,6 @@ formal/.lake/
 # NotebookLM research audio (regenerate or download from the notebook)
 Architecting_the_operation/research/**/*.mp3
 Architecting_the_operation/research/**/*.m4a
+
+# Archival source recordings (third-party audio; registry is clips.yaml)
+Architecting_the_operation/archive/sources/

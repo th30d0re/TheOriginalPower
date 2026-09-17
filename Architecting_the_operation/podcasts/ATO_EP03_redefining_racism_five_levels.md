@@ -712,7 +712,10 @@ Aisha (31:43)
 At high school level, we had two meanings. Prejudice, which anyone can hold. Racism, the system. Emmanuel, level four. Why does the book treat this as settled?
 
 Emmanuel Theodore (31:53)
-Start with the book's physics. Prejudice is a scalar. It has size and no direction. Racism is a vector. It has size, and it points down the hierarchy through institutions.
+Start with where the idea came from. The Palestinian-American author and activist Susan Abulhawa framed racism as a force with a direction, in an interview on the Bad Faith podcast. The book builds its math on her framing.
+
+Emmanuel Theodore (31:53)
+In that math, prejudice is a scalar. It has size and no direction. Racism is a vector. It has size, and it points down the hierarchy through institutions.
 
 Emmanuel Theodore (32:03)
 A Black man's resentment toward white people is real, and it has size. It can't redline a neighborhood. It can't deploy a police force or write a sentencing guideline.
