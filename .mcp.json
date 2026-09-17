@@ -3,12 +3,24 @@
     "videolab": {
       "type": "stdio",
       "command": ".venv-voice/bin/python",
-      "args": ["-m", "videolab.mcp_server"],
-      "env": { "PYTHONPATH": "videolab/src" }
+      "args": [
+        "-m",
+        "videolab.mcp_server"
+      ],
+      "env": {
+        "PYTHONPATH": "videolab/src"
+      }
     },
     "goodnotes": {
       "type": "http",
       "url": "https://claude-mcp-api.ml.goodnotes.com/mcp"
+    },
+    "argent": {
+      "type": "stdio",
+      "command": "argent",
+      "args": [
+        "mcp"
+      ]
     }
   }
 }
