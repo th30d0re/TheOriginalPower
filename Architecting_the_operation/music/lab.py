@@ -82,6 +82,17 @@ def _max_target_id(root: ET.Element) -> int:
     return max(ids) if ids else 0
 
 
+def _bump_next_pointee(root: ET.Element) -> None:
+    """Live refuses to load a set whose NextPointeeId is not above every id it
+    hands out. Cloning tracks mints new automation targets, so the counter has
+    to follow them up: without this Live reports the file as corrupt and names
+    both numbers in the dialog."""
+    highest = _max_target_id(root)
+    for element in root.iter():
+        if element.tag == "NextPointeeId":
+            element.attrib["Value"] = str(highest + 1)
+
+
 def build(stems_dir: Path, output: Path) -> Path:
     stems = sorted(stems_dir.glob("*.wav"))
     if not stems:
@@ -121,6 +132,8 @@ def build(stems_dir: Path, output: Path) -> Path:
         events.clear()
         events.append(clip)
         tracks_el.append(track)
+
+    _bump_next_pointee(root)
 
     ET.indent(root)
     xml = '<?xml version="1.0" encoding="UTF-8"?>\n' + ET.tostring(root, encoding="unicode")
