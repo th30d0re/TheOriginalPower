@@ -131,3 +131,47 @@ and the eleventh will sound wrong against a tempered pad, which is the point.
 
 Renders land in `music/out/`, which is gitignored. The audio is a sketch to
 build on in Ableton, not a finished cue.
+
+## The lab, and how music reaches an episode
+
+Sounds get made in one place and used in many. Three steps, and only the
+middle one is yours.
+
+**1. Render the palette.** `soundmap.py palette` writes sixteen stems into
+`music/lab/stems/`: each tier on its own, both groove rectifiers, the swell
+with its induced answer, the Faraday collapse, all four backlash envelopes,
+and the opener and closer as they stand.
+
+**2. Open the lab.** `lab.py` builds `music/lab/ATO_Sound_Lab.als` with one
+named track per stem, each clip at bar 1 and the derivation written into the
+track's annotation. This is the workbench: load the stems into samplers,
+resample them, run them through whatever you want. The set is rebuilt from
+scratch on every run, so save anything worth keeping under a new name.
+
+**3. Bounce cues.** A finished sound goes to `music/cues/` as a plain WAV.
+`cues.yaml` then says which episode uses it and where:
+
+    episodes:
+      ATO_EP03_five_levels:
+        opener: opener.wav
+        closer: closer.wav
+        beds:
+          - cue: bed_unnotated.wav
+            from_turn: 120
+            to_turn: 124
+            gain_db: -26
+          - cue: collapse_faraday.wav
+            at_turn: 180
+
+`python music/cues.py outputs/<episode_id>` mixes it: the opener runs first
+with the first line starting before it ends, the closer comes up under the
+sign-off, and beds sit under the turn ranges they name, looped and faded to
+fit. It writes `<episode>_music.wav` alongside the stitched voices and a
+`cues_applied.json` recording every placement and how far the speech moved.
+
+Positions are named by turn, never by timestamp. Re-render a turn, change its
+length, and its cue follows it. Nothing in the music step touches the voices,
+so it can be re-run as often as the sounds change.
+
+The stems, the lab set and the bounced cues are all gitignored. What is
+tracked is the thing that generates them and the plan that places them.
