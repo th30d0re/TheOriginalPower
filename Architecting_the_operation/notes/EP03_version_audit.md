@@ -249,3 +249,51 @@ hashes speaker and text rather than position.
 - The shot list is now two drafts stale.
 - 63 minutes. The trim candidates are unchanged: the LSD protocol, the coil gun,
   the vocabulary deprecation arc.
+
+## Third pass: the content note was censoring the segment (2026-09-17)
+
+The fractal tour's content note announced sexual violence under slavery and then
+promised "We won't describe it," and the Thistlewood turn closed with "We'll
+leave it at that record." Both are withholding moves, and the episode had already
+stated the opposite standard forty seconds earlier, in the note before the
+Atwater tape: "We play it uncensored. The way the word was used is the thing
+being documented, and bleeping it would hide the evidence." Announcing a subject
+and refusing to name it fails that standard in the one place the manuscript is
+most explicit.
+
+Three turns rewritten from the manuscript's own sourced material:
+
+- **The content note** now says what the segment contains and why, and applies
+  the tape's standard by name. Its skip instruction was also wrong after the
+  reorder — it pointed at "idea four," which is now the backlash the listener has
+  just heard. It now gives ninety seconds, matching the Middle Passage note.
+- **The 1662 statute.** The turn had "that law turned rape into a way to produce
+  capital." It now carries the mechanism the manuscript documents at §4477: English
+  common law ran patrilineally, Virginia deliberately reversed it, and the
+  reversal closed the route by which children of enslaver rape could claim
+  freedom through the father. The manuscript's own sentence carries the point --
+  "the rapist's crime became the owner's profit."
+- **Thistlewood.** The withholding clause is gone, replaced with the framing from
+  §4494: the diary reads as an operational log, because sexual violence was a
+  production input.
+
+### Sourcing gap found while doing this — unresolved
+
+Two claims in this segment have no citation in the manuscript:
+
+1. **Thistlewood's diary and the count of 155 rapes of Abba.** "Thistlewood"
+   appears three times in `The_Original_Power.tex` with no `\cite{}` on any of
+   them, and `references.bib` has no Thistlewood entry. The scholarly literature
+   for this diary is Douglas Hall's *In Miserable Slavery* (1989) and Trevor
+   Burnard's *Mastery, Tyranny, and Desire* (2004); neither is cited here, and
+   the specific figure of 155 for Abba has not been checked against either.
+2. **"Bucking."** Named once, at §2429, as "the public sexual humiliation and
+   torture documented as bucking," with no source. It was deliberately kept out
+   of the audio on that basis, which is why the rewritten content note names
+   women only rather than promising coverage of sexual terror against men.
+
+Under the Factual Claims protocol this is a Rule 1 failure: the episode currently
+speaks a specific quantitative claim about a named victim on the strength of an
+uncited manuscript sentence. Rule 3 says removal is safe and addition is not.
+Deciding this needs artifact contact with Hall or Burnard, or the figure comes
+out of both the manuscript and the audio.
