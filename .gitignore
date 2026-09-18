@@ -144,3 +144,6 @@ Architecting_the_operation/research/**/*.m4a
 
 # Archival source recordings (third-party audio; registry is clips.yaml)
 Architecting_the_operation/archive/sources/
+
+# Music sketches; the system that generates them is tracked.
+Architecting_the_operation/music/out/
