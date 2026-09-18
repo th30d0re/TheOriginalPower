@@ -259,6 +259,73 @@ def closer(dur: float = 20.0, shock: str = "2020") -> numpy.ndarray:
     return master(bed)
 
 
+# --- the palette -----------------------------------------------------------
+
+# Every stem the sound lab opens with. The name is the contract: the lab set
+# builds one track per entry, and a cue bounced back out keeps the stem name
+# as its prefix so cues.py can tell what it was made from.
+PALETTE: list[tuple[str, str]] = [
+    ("implied_fundamental", "Upper partials alone. The bass you hear is not there."),
+    ("tier_puppet", "Partial 2. The octave that gets mistaken for the power."),
+    ("tier_buffer", "Partials 3 and 4. Enters the chord at Bacon's Rebellion."),
+    ("tier_enforcement", "Partials 5 and 6."),
+    ("tier_outgroup", "The dense top. Defines the pitch, carries the least amplitude."),
+    ("tier_unnotated", "Partials 7, 11, 13, 14. Off the grid by 31 to 49 cents."),
+    ("groove_dc_halfwave", "Pre-1965 interface. Current one way; the rhythm limps."),
+    ("groove_ac_fullwave", "Post-1965 interface. Symmetric, and extracts the same."),
+    ("swell_lenz", "A swell and the answer it induces, reversed and inverted."),
+    ("collapse_faraday", "The transient that belongs to the cut."),
+    ("backlash_1865", "zeta 0.17. Twenty-one year natural period; it breathes."),
+    ("backlash_1964", "zeta 0.59."),
+    ("backlash_2008", "zeta 0.70."),
+    ("backlash_2020", "zeta 0.97. Rises and saturates inside a year."),
+    ("theme_opener", "The full opener."),
+    ("theme_closer", "The theme unbuilt."),
+]
+
+
+def render_palette(out: Path) -> list[tuple[str, Path]]:
+    """Write every stem in PALETTE. Tier and groove stems are one length so
+    they stack and loop against each other without trimming."""
+    out.mkdir(parents=True, exist_ok=True)
+    bed = 24.0
+    made: dict[str, numpy.ndarray] = {}
+
+    made["implied_fundamental"] = fade(stack([6, 8, 10, 12, 16], bed) * 1.3, 3.0, 3.0)
+    made["tier_puppet"] = fade(stack(TIERS["puppet"], bed) * 2.4, 1.5, 2.5)
+    made["tier_buffer"] = fade(stack(TIERS["buffer"], bed) * 1.1, 2.0, 2.5)
+    made["tier_enforcement"] = fade(stack(TIERS["enforcement"], bed) * 1.0, 2.0, 2.5)
+    made["tier_outgroup"] = fade(stack(TIERS["outgroup"], bed) * 1.35, 3.0, 3.0)
+    made["tier_unnotated"] = fade(stack(TIERS["unnotated"], bed) * 1.2, 2.5, 3.0)
+
+    voices = TIERS["enforcement"] + TIERS["outgroup"]
+    for name, full in (("groove_dc_halfwave", False), ("groove_ac_fullwave", True)):
+        gate = rectified(bed, 1.55, full)[:, None]
+        made[name] = fade(stack(voices, bed) * 0.9 * gate, 0.3, 1.5)
+
+    swell_len = 3.2
+    zeta, wn = SHOCKS["1964"]
+    swell = stack([2, 3, 4, 6, 8, 12], swell_len) * 1.4
+    swell *= numpy.abs(damped(zeta, wn, swell_len, 6.0))[:, None]
+    made["swell_lenz"] = numpy.concatenate([swell, lenz(swell)], axis=0)
+
+    made["collapse_faraday"] = collapse([2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 16], 7.0) * 1.9
+
+    for year, (z, w) in SHOCKS.items():
+        env = numpy.abs(damped(z, w, 8.0, 10.0))
+        made[f"backlash_{year}"] = stack([4, 6, 8, 9, 12, 16], 8.0) * env[:, None]
+
+    made["theme_opener"] = opener()
+    made["theme_closer"] = closer()
+
+    written: list[tuple[str, Path]] = []
+    for index, (name, _) in enumerate(PALETTE, start=1):
+        path = out / f"{index:02d}_{name}.wav"
+        soundfile.write(str(path), master(made[name]), SR)
+        written.append((name, path))
+    return written
+
+
 # --- MIDI ------------------------------------------------------------------
 
 def _vlq(value: int) -> bytes:
@@ -309,7 +376,7 @@ def _table() -> str:
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("command", choices=["partials", "theme", "shocks", "midi"])
+    ap.add_argument("command", choices=["partials", "theme", "shocks", "midi", "palette"])
     ap.add_argument("--out", type=Path, default=Path("Architecting_the_operation/music/out"))
     ap.add_argument("--shock", choices=sorted(SHOCKS), default="1964")
     ap.add_argument("--full-wave", action="store_true", help="the post-1965 AC interface")
@@ -339,6 +406,11 @@ def main() -> int:
             sig = stack([4, 6, 8, 9, 12, 16], 8.0) * env[:, None]
             soundfile.write(str(args.out / f"backlash_{name}.wav"), master(sig), SR)
         print(f"wrote four backlash envelopes to {args.out}")
+    elif args.command == "palette":
+        written = render_palette(args.out)
+        for name, path in written:
+            print(f"  {path.name}")
+        print(f"wrote {len(written)} stems to {args.out}")
     elif args.command == "midi":
         for tier, ns in TIERS.items():
             if tier == "elite":

@@ -1,0 +1,27 @@
+# Which finished cue each episode uses, and where it sits.
+#
+# Cue files live in music/cues/ and are bounced out of the lab set. Positions
+# are named by turn index, so a re-render that changes a turn's length carries
+# its cue along. Run: python Architecting_the_operation/music/cues.py outputs/<id>
+
+defaults:
+  opener: opener.wav
+  closer: closer.wav
+  # The first line starts before the opener has finished.
+  opener_overlap_ms: 2000
+  # The closer starts under the sign-off.
+  closer_lead_ms: 1500
+  bed_gain_db: -22
+
+episodes:
+  ATO_EP03_five_levels:
+    opener: opener.wav
+    closer: closer.wav
+    beds: []
+    # Worked examples, to fill in once the sounds exist:
+    #   - cue: bed_unnotated.wav     # under the Atwater clip
+    #     from_turn: 120
+    #     to_turn: 124
+    #     gain_db: -26
+    #   - cue: collapse_faraday.wav  # on the Faraday line
+    #     at_turn: 180

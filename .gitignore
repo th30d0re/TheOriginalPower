@@ -147,3 +147,8 @@ Architecting_the_operation/archive/sources/
 
 # Music sketches; the system that generates them is tracked.
 Architecting_the_operation/music/out/
+Architecting_the_operation/music/lab/stems/
+Architecting_the_operation/music/lab/*.als
+Architecting_the_operation/music/lab/*.als.bak
+# Bounced cues are Emmanuel's; cues.yaml tracks how they are used.
+Architecting_the_operation/music/cues/*.wav
