@@ -102,6 +102,54 @@ but j·i = −k. Two motifs, A then B, give a third; B then A gives that third
 inverted. Same material, opposite polarity, and the order is the only
 difference. That is the chapter's argument with no words in it.
 
+## The complex wage is mid and side
+
+W = ψ_m + jψ_s has a magnitude and a phase, so it renders as a stereo field
+rather than as a pair of sounds. The material wage is the mid channel. The
+status wage is the side.
+
+That is the claim rather than a picture of it. Side content cancels when the
+two channels are summed, so the status wage performs no work in mono the way
+the reactive component performs none along the extraction current. Fold the
+stem down and check it. Measured on the generated angles:
+
+| θ | material | status | folded to mono |
+|---|---|---|---|
+| 0° | 1.00 | 0.00 | 0.0 dB |
+| 30° | 0.87 | 0.50 | −1.2 dB |
+| 45° | 0.71 | 0.71 | −3.0 dB |
+| 60° | 0.50 | 0.87 | −6.0 dB |
+| 90° | 0.00 | 1.00 | −169 dB |
+| 135° | 0.71 | 0.71 | −3.0 dB |
+
+At 0° the whole wage is material and the stem is mono. At 90° it is entirely
+reactive: wide, unplaceable, and gone the moment anything sums it. Past 90° is
+quadrant II, where the mid inverts — a material wage running backwards while
+the status wage is at its loudest.
+
+The gain envelope is the instantaneous power of an AC circuit at that angle,
+cos θ + cos(2ωt + θ). It is allowed to go negative, and when it does the bed
+flips polarity: energy returned instead of delivered.
+
+    python .../soundmap.py wage     # eight angles, with the fold measured
+
+## Two axes, and the order they are applied in
+
+Quaternion multiplication does not commute: i·j = k and j·i = −k. Three
+identity axes carry three motifs as the imaginary parts of a quaternion
+signal, and the generator rotates about the first axis then the second, and
+about the second then the first.
+
+Nothing is added or removed between the two versions. Same material, same two
+operations, different result — which is the argument the intersectional
+chapters make, with no words in it.
+
+The null stem is the proof rather than a sound. Left-multiplying by i then j
+against j then i differs by exactly a sign, so summing them cancels. The
+generated file measures zero, not nearly zero, and it is silent on purpose.
+
+    python .../soundmap.py intersect
+
 ## Conventions, marked as conventions
 
 Not everything here is derived, and the distinction should survive contact
@@ -111,10 +159,14 @@ with an audience the way the manuscript's tiers do.
   one so every episode is the same machine.
 - Tempo, entry times, and the length of the opener are arranged by feel.
 - Ten years to the second is a convenient scale factor, not a finding.
+- The motifs and rotation angles in the intersection generator are
+  arbitrary. The non-commutativity is not.
 
 Derived, and defensible in public: the missing fundamental, the octave as the
 Puppet Class, 1/n amplitude, the cents offsets of partials 7/11/13/14, the four
-backlash fits, half-wave rectification, and the Lenz and Faraday gestures.
+backlash fits, half-wave rectification, the Lenz and Faraday gestures, the
+mid/side reading of the complex wage, and the order dependence of the two
+identity axes.
 
 ## Running it
 
