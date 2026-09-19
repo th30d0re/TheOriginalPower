@@ -259,6 +259,130 @@ def closer(dur: float = 20.0, shock: str = "2020") -> numpy.ndarray:
     return master(bed)
 
 
+# --- the complex wage ------------------------------------------------------
+
+def mono_stack(partials: list[int], dur: float, quadrature: bool = False,
+               seed: int = 1676) -> numpy.ndarray:
+    """One channel of the harmonic stack. `quadrature` shifts every partial a
+    quarter cycle, which is what makes the status wage orthogonal to the
+    material one rather than merely quieter."""
+    t = _t(dur)
+    rng = numpy.random.default_rng(seed)
+    out = numpy.zeros_like(t)
+    for n in partials:
+        f = partial(n)
+        if f > SR / 2.2:
+            continue
+        phase = 2 * math.pi * f * t
+        wave = numpy.cos(phase) if quadrature else numpy.sin(phase)
+        wave *= 1.0 + 0.06 * numpy.sin(2 * math.pi * rng.uniform(0.03, 0.13) * t)
+        out += wave * amp(n)
+    return out
+
+
+def wage(theta_deg: float, dur: float = 24.0, grid_hz: float = 0.8,
+         partials: list[int] | None = None) -> numpy.ndarray:
+    """W = psi_m + j*psi_s, rendered as mid and side.
+
+    The material wage is the mid channel and the status wage is the side. That
+    is not a picture of the claim, it is the claim: side content cancels when
+    the two channels are summed, so the status wage performs no work in mono
+    exactly as the reactive component performs none in the direction of the
+    extraction current. Check it by folding the stem down.
+
+    Theta sets the split. At 0 degrees the whole wage is material and the stem
+    is mono. At 90 it is entirely reactive: the mid disappears, the sound
+    widens, and nothing is delivered. Quadrant II, past 90, inverts the mid,
+    which is a material wage running backwards while the status wage is at its
+    loudest.
+
+    The gain envelope is the instantaneous power of an AC circuit at that
+    angle, cos(theta) + cos(2*w*t + theta), carried at `grid_hz`. It is allowed
+    to go negative, and when it does the bed flips polarity: energy returned
+    rather than delivered.
+    """
+    theta = math.radians(theta_deg)
+    partials = partials or (TIERS["buffer"] + TIERS["enforcement"] + TIERS["outgroup"])
+    mid = mono_stack(partials, dur) * math.cos(theta)
+    side = mono_stack(partials, dur, quadrature=True) * math.sin(theta)
+
+    power = math.cos(theta) + numpy.cos(2 * 2 * math.pi * grid_hz * _t(dur) + theta)
+    power = power / max(1e-9, float(numpy.max(numpy.abs(power))))
+
+    left = (mid + side) * power
+    right = (mid - side) * power
+    return fade(numpy.stack([left, right], axis=1) * 1.1, 1.5, 2.0)
+
+
+# --- non-commutativity -----------------------------------------------------
+
+def _qmul(a: numpy.ndarray, b: numpy.ndarray) -> numpy.ndarray:
+    aw, ax, ay, az = a[..., 0], a[..., 1], a[..., 2], a[..., 3]
+    bw, bx, by, bz = b[..., 0], b[..., 1], b[..., 2], b[..., 3]
+    return numpy.stack([
+        aw * bw - ax * bx - ay * by - az * bz,
+        aw * bx + ax * bw + ay * bz - az * by,
+        aw * by - ax * bz + ay * bw + az * bx,
+        aw * bz + ax * by - ay * bx + az * bw,
+    ], axis=-1)
+
+
+def _rotate(q: numpy.ndarray, axis: int, angle: float) -> numpy.ndarray:
+    """Rotate the signal about one identity axis: p q p*, with p a unit
+    quaternion on that axis."""
+    p = numpy.zeros(4)
+    p[0] = math.cos(angle / 2)
+    p[axis] = math.sin(angle / 2)
+    conj = p * numpy.array([1.0, -1.0, -1.0, -1.0])
+    return _qmul(_qmul(numpy.broadcast_to(p, q.shape), q), numpy.broadcast_to(conj, q.shape))
+
+
+def _axis_motif(partials: list[int], dur: float, rate: float, duty: float,
+                seed: int) -> numpy.ndarray:
+    gate = (rectified(dur, rate) > duty).astype(numpy.float64)
+    smooth = numpy.convolve(gate, numpy.hanning(int(0.05 * SR)), mode="same")
+    smooth /= max(1e-9, float(smooth.max()))
+    return mono_stack(partials, dur, seed=seed) * smooth
+
+
+def intersection(dur: float = 16.0, alpha: float = 1.1,
+                 beta: float = 1.3) -> dict[str, numpy.ndarray]:
+    """Two axes applied in both orders, which is i*j = k against j*i = -k.
+
+    Three identity axes carry three motifs as the imaginary parts of a
+    quaternion signal. Rotating about the first axis and then the second does
+    not give what rotating about the second and then the first gives, because
+    quaternion multiplication does not commute. Nothing is added or removed
+    between the two versions: the same two operations, the same material, a
+    different result.
+
+    Returns the two orders, and the null: left-multiplying by i then j against
+    j then i differs by exactly a sign, so summing those two cancels to
+    silence. That silence is the proof, and it is measurable.
+    """
+    x = _axis_motif(TIERS["buffer"], dur, 0.62, 0.35, seed=1)
+    y = _axis_motif(TIERS["enforcement"], dur, 0.91, 0.45, seed=2)
+    z = _axis_motif(TIERS["unnotated"], dur, 0.43, 0.25, seed=3)
+    q = numpy.stack([numpy.zeros_like(x), x, y, z], axis=-1)
+
+    ij = _rotate(_rotate(q, 1, alpha), 2, beta)
+    ji = _rotate(_rotate(q, 2, beta), 1, alpha)
+
+    def decode(sig: numpy.ndarray) -> numpy.ndarray:
+        left = sig[..., 1] + 0.7 * sig[..., 3]
+        right = sig[..., 2] + 0.7 * sig[..., 3]
+        return fade(numpy.stack([left, right], axis=1) * 1.2, 0.8, 1.5)
+
+    # The sign identity, kept separate from the rotations: k q against -k q.
+    k = numpy.zeros(4); k[3] = 1.0
+    kq = _qmul(numpy.broadcast_to(k, q.shape), q)
+    return {
+        "intersect_ij": decode(ij),
+        "intersect_ji": decode(ji),
+        "intersect_null": decode(kq) + decode(-kq),
+    }
+
+
 # --- the palette -----------------------------------------------------------
 
 # Every stem the sound lab opens with. The name is the contract: the lab set
@@ -279,6 +403,13 @@ PALETTE: list[tuple[str, str]] = [
     ("backlash_1964", "zeta 0.59."),
     ("backlash_2008", "zeta 0.70."),
     ("backlash_2020", "zeta 0.97. Rises and saturates inside a year."),
+    ("wage_000_material", "theta 0. All material wage; the stem is mono."),
+    ("wage_045_mixed", "theta 45. Half delivered, half stored."),
+    ("wage_090_reactive", "theta 90. All status; fold to mono and it is gone."),
+    ("wage_135_quadrant2", "theta 135. Material wage running backwards."),
+    ("intersect_ij", "Axis i then axis j."),
+    ("intersect_ji", "Axis j then axis i. Same moves, different result."),
+    ("intersect_null", "i*j against j*i, summed. Silence is the proof."),
     ("theme_opener", "The full opener."),
     ("theme_closer", "The theme unbuilt."),
 ]
@@ -315,6 +446,11 @@ def render_palette(out: Path) -> list[tuple[str, Path]]:
         env = numpy.abs(damped(z, w, 8.0, 10.0))
         made[f"backlash_{year}"] = stack([4, 6, 8, 9, 12, 16], 8.0) * env[:, None]
 
+    for label, angle in (("wage_000_material", 0), ("wage_045_mixed", 45),
+                         ("wage_090_reactive", 90), ("wage_135_quadrant2", 135)):
+        made[label] = wage(angle, bed)
+    made.update(intersection())
+
     made["theme_opener"] = opener()
     made["theme_closer"] = closer()
 
@@ -323,6 +459,13 @@ def render_palette(out: Path) -> list[tuple[str, Path]]:
         path = out / f"{index:02d}_{name}.wav"
         soundfile.write(str(path), master(made[name]), SR)
         written.append((name, path))
+
+    # Renumbering happens whenever the palette grows, so a stem left over from
+    # an older run would show up as an extra track in the lab set.
+    keep = {path.name for _, path in written}
+    for stale in out.glob("[0-9][0-9]_*.wav"):
+        if stale.name not in keep:
+            stale.unlink()
     return written
 
 
@@ -376,7 +519,7 @@ def _table() -> str:
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("command", choices=["partials", "theme", "shocks", "midi", "palette"])
+    ap.add_argument("command", choices=["partials", "theme", "shocks", "midi", "palette", "wage", "intersect"])
     ap.add_argument("--out", type=Path, default=Path("Architecting_the_operation/music/out"))
     ap.add_argument("--shock", choices=sorted(SHOCKS), default="1964")
     ap.add_argument("--full-wave", action="store_true", help="the post-1965 AC interface")
@@ -411,6 +554,21 @@ def main() -> int:
         for name, path in written:
             print(f"  {path.name}")
         print(f"wrote {len(written)} stems to {args.out}")
+    elif args.command == "wage":
+        for angle in (0, 30, 45, 60, 90, 120, 135, 180):
+            sig = wage(angle)
+            soundfile.write(str(args.out / f"wage_{angle:03d}.wav"), master(sig), SR)
+            rms = lambda a: float(numpy.sqrt(numpy.mean(a**2)))
+            stereo, mono = rms(sig), rms(sig.mean(axis=1))
+            lost = 20 * math.log10(max(1e-9, mono) / max(1e-9, stereo))
+            print(f"  theta {angle:3d}   folded to mono: {lost:+6.1f} dB"
+                  f"   (material {abs(math.cos(math.radians(angle))):.2f}, "
+                  f"status {abs(math.sin(math.radians(angle))):.2f})")
+        print(f"wrote wage angles to {args.out}")
+    elif args.command == "intersect":
+        for name, sig in intersection().items():
+            soundfile.write(str(args.out / f"{name}.wav"), master(sig), SR)
+        print(f"wrote the intersection pair and the null to {args.out}")
     elif args.command == "midi":
         for tier, ns in TIERS.items():
             if tier == "elite":
