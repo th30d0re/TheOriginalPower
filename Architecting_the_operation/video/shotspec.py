@@ -34,6 +34,13 @@ _ANCHOR = re.compile(r"`?(?P<speaker>[A-Za-z][A-Za-z .'-]*?)\s*\((?P<ts>\d{1,2}:
 _THROUGH = re.compile(r"(?P<ts>\d{1,2}:\d{2})")
 _TAG = re.compile(r"\[(book|data|design)\]")
 _CITE = re.compile(r"`?((?:Paper|chapters|figures)/[\w./-]+?\.(?:tex|csv|json|ipynb))((?::\d+)(?:,\s*\d+)*)?`?")
+# The provenance key each list declares: "[book] — stated in
+# Paper/The_Original_Power.tex, cited by line". So a bare `:149` is a complete
+# citation against that file, and a note that has already named a path can go
+# on with `:164` for a second line in the same one.
+BOOK = "Paper/The_Original_Power.tex"
+_BARE_LINE = re.compile(r"`:(\d+)`")
+_LABEL = re.compile(r"`((?:ch|sec|subsec|eq|fig|tab|app):[\w:.\-]+)`")
 _SPEAKER_ONLY = re.compile(r"`(?P<speaker>[A-Za-z][A-Za-z .'-]*?)`\s*(?P<cue>.*)")
 
 # Shots that depict a real event or person want licensed material, not a model.
@@ -132,6 +139,19 @@ def spec_for(shot: Shot, names: dict | None = None, turns: dict | None = None) -
             if entry not in citations:
                 citations.append(entry)
 
+    # Bare line numbers attach to the path the note already named, or to the
+    # manuscript when it named none.
+    default = next((c["path"] for c in citations if c["path"].endswith(".tex")), BOOK)
+    for match in _BARE_LINE.finditer(shot.text):
+        entry = {"path": default, "line": int(match.group(1))}
+        if entry not in citations:
+            citations.append(entry)
+
+    labels = []
+    for match in _LABEL.finditer(shot.text):
+        if match.group(1) not in labels:
+            labels.append(match.group(1))
+
     anchor: dict = {}
     raw_anchor = shot.fields.get("Anchor", "")
     found = _ANCHOR.search(raw_anchor)
@@ -177,7 +197,7 @@ def spec_for(shot: Shot, names: dict | None = None, turns: dict | None = None) -
         "type": shot.fields.get("Type", ""),
         "described": described,
         "note": shot.fields.get("Note", ""),
-        "provenance": {"tags": tags, "citations": citations},
+        "provenance": {"tags": tags, "citations": citations, "labels": labels},
         "suggested_track": "archival" if _ARCHIVAL.search(shot.text) else "vector",
         # Assembled from `described`, not authored. A prompt-writing pass with
         # the chapter's own text should replace it before anything is rendered.
@@ -207,8 +227,13 @@ def validate(specs: list[dict], repo: Path = REPO) -> list[tuple[str, str, str]]
         if not tags:
             problems.append(("warn", sid, "no provenance tag"))
 
-        if "book" in tags and not any(c["path"].endswith(".tex") for c in cites):
-            problems.append(("error", sid, "tagged [book] with no .tex citation"))
+        labels = spec["provenance"].get("labels", [])
+        if "book" in tags and not any(c["path"].endswith(".tex") for c in cites) and not labels:
+            problems.append(("error", sid, "tagged [book] with no line or label"))
+        for label in labels:
+            manuscript = repo / BOOK
+            if manuscript.exists() and f"\\label{{{label}}}" not in manuscript.read_text():
+                problems.append(("error", sid, f"cited label does not exist: {label}"))
         if "data" in tags and not any("/data/" in c["path"] for c in cites):
             problems.append(("error", sid, "tagged [data] with no file under Paper/data/"))
 

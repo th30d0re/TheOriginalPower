@@ -271,7 +271,7 @@ same order, so graphics drop onto the video track above it at those offsets.
 - **Type:** horizontal four-stage pipeline, builds one stage at a time
 - **Stages:** 1 Identify a structure · 2 Detect its empirical shadow · 3 Build the
   instrument that measures it · 4 Derive the mechanism that produces all three
-- **Note:** `[book]` `Paper/The_Original_Power.tex:157`. This is the spine of the
+- **Note:** `[book]` `Paper/The_Original_Power.tex:197`. This is the spine of the
   episode. Build it once here, then recall it as a small persistent corner marker at
   04:18, 16:15, 20:03 and 25:36 with the active stage lit. Reprise it full-screen at
   31:39.
@@ -285,7 +285,7 @@ same order, so graphics drop onto the video track above it at those offsets.
   Arrow from Washington to the pin labeled "diplomatic pressure, naval force behind
   it." Then a struck-through arrow with the date, July 1891, resignation.
 - **Caption strip:** Frederick Douglass, U.S. Minister to Haiti, 1889–1891.
-- **Note:** `[book]` `Paper/The_Original_Power.tex:145`.
+- **Note:** `[book]` `Paper/The_Original_Power.tex:12950`.
 
 ## G-08 — Extraction, isolated
 
@@ -362,7 +362,7 @@ same order, so graphics drop onto the video track above it at those offsets.
   *From Bias to Bytes: A Machine Learning-Driven Analysis of Systemic Racism and Social
   Inequalities* and *The Calculus of Discrimination: A Mathematical Model for Analyzing
   Systemic Racism and Social Policies*.
-- **Note:** `[book]` `Paper/The_Original_Power.tex:149`. Spell "Bytes" correctly. Every
+- **Note:** `[book]` `Paper/The_Original_Power.tex:187`. Spell "Bytes" correctly. Every
   AI transcript of this project has mangled it.
 
 ## G-15 — Four ingredients
@@ -371,7 +371,7 @@ same order, so graphics drop onto the video track above it at those offsets.
 - **Type:** 2×2 grid
 - **Content:** Critical Race Theory · Cognitive bias research · McKelvey–Schofield
   Chaos Theorem · Set-theoretic mathematics.
-- **Note:** `[book]` `:149`. Dim the two on the left at 12:01 when narration moves to
+- **Note:** `[book]` `:187`. Dim the two on the left at 12:01 when narration moves to
   the two that get unpacked.
 
 ## G-16 — Why multidimensional voting has no center
@@ -385,7 +385,7 @@ same order, so graphics drop onto the video track above it at those offsets.
   median point visibly fails to exist.
 - **Beat 3:** three options A, B, C in a cycle, arrows A→B→C→A, captioned "rock, paper,
   scissors, inside a legislature."
-- **Note:** `[book]` `:149`, `:155`. Beat 2 is the load-bearing one. If a viewer only
+- **Note:** `[book]` `:187`, `:193`. Beat 2 is the load-bearing one. If a viewer only
   understands that adding dimensions destroys the median, the segment worked.
 
 ## G-17 — The agenda setter
@@ -404,7 +404,7 @@ same order, so graphics drop onto the video track above it at those offsets.
 - **Anchor:** `Aisha (25:24)`
 - **Type:** full-screen pull quote
 - **Content:** "The mathematics it promised was absent from its pages."
-- **Note:** `[book]` `Paper/The_Original_Power.tex:149`, verbatim. Let it sit in
+- **Note:** `[book]` `Paper/The_Original_Power.tex:187`, verbatim. Let it sit in
   silence against the `[beat]` in the script.
 
 ## G-19 — Lost document, found
@@ -436,7 +436,7 @@ same order, so graphics drop onto the video track above it at those offsets.
 - **Caption the Preface claim exactly:** "more than twice the White per-capita rate."
   The 3.01 figure is the book's own 2013–2024 chapter series and is a wider window than
   the Preface sentence describes, so label the chart with its years and source.
-- **Note:** `[data]` + `[book]` `Paper/The_Original_Power.tex:151` and `:4631`. Cite the
+- **Note:** `[data]` + `[book]` `Paper/The_Original_Power.tex:189` and `:189`. Cite the
   Mapping Police Violence dataset and ACS denominators from the CSV header comments.
 
 ## G-21 — The null result
@@ -446,7 +446,7 @@ same order, so graphics drop onto the video track above it at those offsets.
 - **Content:** left, the G-20 bars, labeled "macro: large, stable disparity." Right, a
   classifier-performance panel at chance, labeled "incident features: little
   group-identifying signal, cross-validated."
-- **Note:** `[book]` `:151`. Do not dramatize the right panel. The honesty is the point.
+- **Note:** `[book]` `:189`. Do not dramatize the right panel. The honesty is the point.
 
 ## G-22 — The casino
 
@@ -469,7 +469,7 @@ same order, so graphics drop onto the video track above it at those offsets.
 - **Content:** housing policy → patrol allocation → neighborhood saturation →
   enforcement selection → THE ENCOUNTER. A dashed box around the final stage labeled
   "the only stage incident-only data can see."
-- **Note:** `[book]` `:151`.
+- **Note:** `[book]` `:189`.
 
 ## G-24 — The mirror
 
@@ -486,7 +486,7 @@ same order, so graphics drop onto the video track above it at those offsets.
 - **Type:** three-bar chart, White-marked share of selections by career stage
 - **Data:** Entry 53.33% · Mid 68.33% · Executive 53.33%. GPT-4o, synthetic résumés,
   explicit and inferred racial markers, no racial instruction in the prompt.
-- **Note:** `[book]` `Paper/The_Original_Power.tex:13083`. Draw a 50% parity reference
+- **Note:** `[book]` `Paper/The_Original_Power.tex:13405`. Draw a 50% parity reference
   line. Career-level percentages are GPT-4o only; the paper's four-model framing covers
   the wider study, so do not attribute these three numbers to four models.
 
@@ -506,7 +506,7 @@ same order, so graphics drop onto the video track above it at those offsets.
 - **State 1:** AGGREGATE AUDIT. χ² = 2.547, p = 0.980. Stamp: NOT SIGNIFICANT.
 - **State 2:** the same data split by career level, revealing the G-25 bars.
   Caption: Simpson's paradox.
-- **Note:** `[book]` `:13083`, `:153`.
+- **Note:** `[book]` `:191`, `:153`.
 
 ## G-28 — What the replication found
 
@@ -518,7 +518,7 @@ same order, so graphics drop onto the video track above it at those offsets.
 - **2026 replication:** matched pairs, qualifications held constant, only name and one
   affiliation varied. Claude, Gemini, Kimi. Pooled Black share of advanced candidates
   50–51% at every career level. Career-level effect did not recur.
-- **Note:** `[book]` `Paper/The_Original_Power.tex:13083`. The Kimi sweep ended before
+- **Note:** `[book]` `Paper/The_Original_Power.tex:13405`. The Kimi sweep ended before
   the executive level; say so in small type if the card has room. Never show G-25
   without G-28 available in the same cut.
 
@@ -541,7 +541,7 @@ same order, so graphics drop onto the video track above it at those offsets.
 - **Hold:** through 28:48
 - **Type:** set diagram with notation
 - **Content:** E, the Elite. O_racialized, the Out-group. I_buffer, the Buffer Class.
-- **Note:** `[book]` `:155`. Use the manuscript's exact subscripts. Episode 2 expands
+- **Note:** `[book]` `:193`. Use the manuscript's exact subscripts. Episode 2 expands
   these into the five-tier hierarchy, so build this diagram to be extended rather than
   replaced.
 
@@ -554,7 +554,7 @@ same order, so graphics drop onto the video track above it at those offsets.
 - **Beat 2:** I_buffer and O_racialized are outlined together, labeled "numerical
   majority. Coordination is the optimal strategy."
 - **Beat 3:** a question mark over the coordination link. Caption: so why is it rare.
-- **Note:** `[book]` `:155`, Tweedism chapter.
+- **Note:** `[book]` `:193`, Tweedism chapter.
 
 ## G-32 — Psi, the complex suppression allocation
 
@@ -572,7 +572,7 @@ same order, so graphics drop onto the video track above it at those offsets.
   the horizontal and reactive power on the vertical, with |W| and θ marked. Then show
   ψ_m shrinking while ψ_s grows to hold |W| roughly constant.
 - **Beat 5:** the coordination link between I_buffer and O_racialized breaks.
-- **Note:** `[book]` `Paper/The_Original_Power.tex:482`, `:845-848`, `:894-895`, and
+- **Note:** `[book]` `Paper/The_Original_Power.tex:2837`, `:845-848`, `:894-895`, and
   eq. 2.2a. **ψ is not the psychological wage.** ψ is the complex suppression
   allocation; the psychological wage is its imaginary component alone. A card that
   labels the whole variable "psychological wage" states the book's own equation wrongly.
@@ -642,7 +642,7 @@ same order, so graphics drop onto the video track above it at those offsets.
 - **Type:** G-05 full-screen, now with each stage labeled by its document
 - **Content:** Identify → the Spanish-American War essay. Detect → The Calculus of
   Injustice. Build the instrument → the hiring paper. Derive → *The Original Power*.
-- **Note:** `[book]` `:157`.
+- **Note:** `[book]` `:197`.
 
 ## G-38 — Next episode
 
@@ -652,7 +652,7 @@ same order, so graphics drop onto the video track above it at those offsets.
 - **Content:** Episode 2, the Preface. Psycho-legal social software. Wetware. The
   fractal mind virus. The five-tier hierarchy. Second card: The Gender Wars, in
   progress, the transform running in the other direction.
-- **Note:** `[book]` `Paper/The_Original_Power.tex:166` onward.
+- **Note:** `[book]` `Paper/The_Original_Power.tex:2757` onward.
 
 ---
 
