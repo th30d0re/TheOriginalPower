@@ -168,7 +168,7 @@ beat (G-46) gets the same restrained treatment.
 - **Hold:** through 12:22
 - **Type:** three-box flow diagram, red, struck through on the reveal
 - **Content:** Individual Prejudice → Discriminatory Actions → Systemic Outcomes.
-- **Note:** `[book]` `Paper/The_Original_Power.tex:1732` (Eq. 1.3).
+- **Note:** `[book]` `Paper/The_Original_Power.tex:1789` (Eq. 1.3).
 
 ## G-11 — Reversed causal arrow + Zurara/Fields
 
@@ -243,7 +243,7 @@ beat (G-46) gets the same restrained treatment.
   highlighted to show the < 0.2-point range. Nat Turner (1831) marked as an
   independent threshold-response event.
 - **Note:** `[data]` `Paper/data/eq05_antebellum_cotton.csv`;
-  `Paper/The_Original_Power.tex:2027` (Fig. eq05_kernel).
+  `Paper/The_Original_Power.tex:2077` (Fig. eq05_kernel).
 
 ## G-18 — Pigmentation cline map
 
@@ -349,7 +349,7 @@ beat (G-46) gets the same restrained treatment.
 - **Type:** quote card with a visible "disputed" annotation
 - **Content:** the quote, attributed "reported by Dan Baum," with a small secondary
   line: "Ehrlichman's family and some Nixon-era defenders dispute this."
-- **Note:** `[book]` `Paper/The_Original_Power.tex:2101`. Mandatory dispute
+- **Note:** `[book]` `Paper/The_Original_Power.tex:2173`. Mandatory dispute
   annotation.
 
 ## G-27 — Drug incarceration, sentencing disparity, Broward, Anslinger not-used
@@ -417,7 +417,7 @@ beat (G-46) gets the same restrained treatment.
   one beat
 - **Content:** Black Wall Street · NAACP litigation → *Brown v. Board* · Civil
   Rights Act victories · post-1965 Black professional middle class.
-- **Note:** `[book]` `Paper/The_Original_Power.tex:2192`. Mandatory inclusion; do not
+- **Note:** `[book]` `Paper/The_Original_Power.tex:2313`. Mandatory inclusion; do not
   cut for time.
 
 ## G-33 — Post-1965 Backlash Wave, three-track chart
@@ -430,7 +430,7 @@ beat (G-46) gets the same restrained treatment.
   incarceration rate (108→358/100k; Black incarceration peak 3,074/100k in 2010),
   1965–2020.
 - **Note:** `[data]` `Paper/data/eq08_10_backlash_wave.csv`;
-  `Paper/The_Original_Power.tex:2265` (Fig. eq08_backlash).
+  `Paper/The_Original_Power.tex:2331` (Fig. eq08_backlash).
 
 ## G-34 — Complex wage / reactive power
 
@@ -577,7 +577,7 @@ beat (G-46) gets the same restrained treatment.
 - **Type:** full-frame quote card, held
 - **Content:** "The white man will try to satisfy us with symbolic victories rather
   than economic equity and real Justice." — Malcolm X.
-- **Note:** `[book]` `Paper/The_Original_Power.tex:2680`.
+- **Note:** `[book]` `Paper/The_Original_Power.tex:2593`.
 
 ## G-48 — Top 0.1% wealth share, falsification condition
 
