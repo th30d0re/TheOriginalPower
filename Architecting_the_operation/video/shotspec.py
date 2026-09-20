@@ -40,6 +40,9 @@ _CITE = re.compile(r"`?((?:Paper|chapters|figures)/[\w./-]+?\.(?:tex|csv|json|ip
 # on with `:164` for a second line in the same one.
 BOOK = "Paper/The_Original_Power.tex"
 _BARE_LINE = re.compile(r"`:(\d+)`")
+# The durable form: a phrase quoted from the manuscript, which survives editing
+# the way a line number does not. The spec resolves it to a current line.
+_QUOTE = re.compile(r'`"([^"]{12,})"`')
 _LABEL = re.compile(r"`((?:ch|sec|subsec|eq|fig|tab|app):[\w:.\-]+)`")
 _SPEAKER_ONLY = re.compile(r"`(?P<speaker>[A-Za-z][A-Za-z .'-]*?)`\s*(?P<cue>.*)")
 
@@ -147,6 +150,8 @@ def spec_for(shot: Shot, names: dict | None = None, turns: dict | None = None) -
         if entry not in citations:
             citations.append(entry)
 
+    quotes = [m.group(1) for m in _QUOTE.finditer(shot.text)]
+
     labels = []
     for match in _LABEL.finditer(shot.text):
         if match.group(1) not in labels:
@@ -197,12 +202,38 @@ def spec_for(shot: Shot, names: dict | None = None, turns: dict | None = None) -
         "type": shot.fields.get("Type", ""),
         "described": described,
         "note": shot.fields.get("Note", ""),
-        "provenance": {"tags": tags, "citations": citations, "labels": labels},
+        "provenance": {"tags": tags, "citations": citations,
+                        "labels": labels, "quotes": quotes},
         "suggested_track": "archival" if _ARCHIVAL.search(shot.text) else "vector",
         # Assembled from `described`, not authored. A prompt-writing pass with
         # the chapter's own text should replace it before anything is rendered.
         "prompt_seed": f"{shot.title}. {seed}".strip(),
     }
+
+
+def _normalize(text: str) -> str:
+    return re.sub(r"\s+", " ", re.sub(r"[^a-z0-9 ]", " ", text.lower())).strip()
+
+
+def resolve_quotes(specs: list[dict], repo: Path = REPO) -> None:
+    """Turn each quoted phrase into the line it currently sits on.
+
+    The markdown holds the quote because a quote does not drift; the spec holds
+    the line because that is what an editor wants to jump to. Regenerating the
+    spec is what keeps the two in agreement.
+    """
+    manuscript = repo / BOOK
+    if not manuscript.exists():
+        return
+    flat = [_normalize(line) for line in manuscript.read_text(errors="replace").splitlines()]
+    for spec in specs:
+        resolved = []
+        for quote in spec["provenance"].get("quotes", []):
+            needle = _normalize(quote)
+            line = next((n for n, text in enumerate(flat, start=1) if needle in text), None)
+            resolved.append({"quote": quote, "path": BOOK, "line": line})
+        if resolved:
+            spec["provenance"]["resolved_quotes"] = resolved
 
 
 def validate(specs: list[dict], repo: Path = REPO) -> list[tuple[str, str, str]]:
@@ -228,7 +259,13 @@ def validate(specs: list[dict], repo: Path = REPO) -> list[tuple[str, str, str]]
             problems.append(("warn", sid, "no provenance tag"))
 
         labels = spec["provenance"].get("labels", [])
-        if "book" in tags and not any(c["path"].endswith(".tex") for c in cites) and not labels:
+        quotes = spec["provenance"].get("resolved_quotes", [])
+        for entry in quotes:
+            if entry["line"] is None:
+                problems.append(("error", sid,
+                                 f"quoted phrase is not in the manuscript: {entry['quote'][:50]!r}"))
+        if ("book" in tags and not any(c["path"].endswith(".tex") for c in cites)
+                and not labels and not quotes):
             problems.append(("error", sid, "tagged [book] with no line or label"))
         for label in labels:
             manuscript = repo / BOOK
@@ -279,6 +316,7 @@ def main() -> int:
     args = ap.parse_args()
 
     document = build(args.shotlist, args.manifest, args.script)
+    resolve_quotes(document["shots"])
     problems = validate(document["shots"])
     document["validation"] = [{"level": lvl, "shot": sid, "message": msg}
                               for lvl, sid, msg in problems]

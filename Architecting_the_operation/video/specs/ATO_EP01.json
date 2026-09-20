@@ -29,7 +29,8 @@
       "provenance": {
         "tags": [],
         "citations": [],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Title card. Type: static; Content: *Architecting the Operation* / Episode 1 / \"The Author's Preface\" / subtitle: How a history essay became an equation."
@@ -60,7 +61,8 @@
       "provenance": {
         "tags": [],
         "citations": [],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "The electron question. Type: the episode's cold open. Three beats, and this is the most important graphic in the cut.; Beat 1: a video call. Two faces, two continents, a line between them.; Beat 2: zoom through the phone to silicon. Charge moving through gates in exact patterns. Counter running into the billions per second.; Beat 3: hold on the precision, then cut hard to black and the question in text: *So why can we not do this with systemic oppression?*"
@@ -91,7 +93,8 @@
       "provenance": {
         "tags": [],
         "citations": [],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Meet the voices. Type: name cards, one per speaker, held while each one speaks; Toussaint: the historical and structural throughline. Where a structure came from, who built it, what it did on a given date.; Aisha: the mathematics and the evidence. Sets, equations, datasets, and what would have to be true for a claim to be wrong.; Emmanuel Theodore: author. Writes it, and steps in when the sentence is his."
@@ -123,7 +126,8 @@
           "design"
         ],
         "citations": [],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "The loop we are stuck in. Type: closed cycle, then a comparison; Cycle: the system is broken \u2192 reform it \u2192 the system is broken \u2192 reform it. A second arrow labeled \"human nature, therefore inevitable\" exits to \"change hearts and minds, one person at a time, forever.\"; Cut to: a processor die shot. Caption: tens of billions of transistors. Specified, simulated, fabricated, tested."
@@ -149,7 +153,8 @@
       "provenance": {
         "tags": [],
         "citations": [],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Sociopolitical engineering. Type: three-row build, one row per line of narration; Rows: Social science \u2192 observes the trend. Political science \u2192 argues the cause. Sociopolitical engineering \u2192 derives the mechanism, predicts the next state."
@@ -190,7 +195,8 @@
             "line": 164
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Two front pieces. Type: book-spread diagram, two facing pages; Left page: AUTHOR'S PREFACE \u2192 the build log. Four documents, five years. Marked THIS EPISODE.; Right page: PREFACE \u2192 the framework. Software, wetware, five tiers. Marked EPISODE 2."
@@ -219,7 +225,8 @@
       "provenance": {
         "tags": [],
         "citations": [],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "New tool, same target. Type: repeating pattern; Content: a row of course-assignment cards, each labeled with a different method, every one of them with an arrow pointing at the same target: systemic oppression. Caption: no plan, a standing habit."
@@ -248,7 +255,8 @@
       "provenance": {
         "tags": [],
         "citations": [],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "The domain break. Type: two-axis diagram, abstract, no people depicted; Content: RACIAL AXIS, two figures, shared vocabulary, communication succeeds. GENDERED AXIS, the same two figures, the same structure present, communication fails."
@@ -283,7 +291,8 @@
             "path": "Paper/apx_theodore_transform.tex"
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "The Theodore Transform. Type: transform diagram, matching the Laplace framing in the narration; Content: a structure established on the racial axis, an operator box labeled with the transform, the same structure re-expressed on the gendered axis. Caption: the representation changes, the structure it carries stays fixed."
@@ -320,7 +329,8 @@
             "line": 1350
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Title lineage. Type: left-to-right progression with one branch; Content: an unpublished manuscript on the gendered axis, shelved, drawn greyed and set aside. Arrow via the transform to REDEFINING RACISM \u2192 THE MATHEMATICS OF OPPRESSION \u2192 THE ORIGINAL POWER, with \"electrodynamic formalism\" annotating the last step. A dotted forward arrow to THE GENDER WARS, marked in progress.; Content, second row: Redefining Racism shown collapsing into Chapter 1 of the finished book, with the other chapters growing out from it."
@@ -349,7 +359,8 @@
       "provenance": {
         "tags": [],
         "citations": [],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "The bad year. Type: three losses on a short timeline, stated plainly; Content: a compressed calendar. Relationship ends. Tariffs land on electronics, the industry contracts, the job goes. The car is wrecked. Then a flat bar running more than a year, labeled: no work, severance exhausted."
@@ -382,7 +393,8 @@
           "design"
         ],
         "citations": [],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "The floor. Type: the hardest card in the episode to get right; Content: a warehouse aisle at night, abstract or silhouetted. Overlay a single line: master's degree in engineering, overnight shift, 3 a.m.; Then: headphones appear, and go unused. Caption: he spent the shifts inside the framework.; Do not: show recognizable faces, coworkers, teenagers, or Amazon branding. The narration explicitly refuses to make the people on that floor the point, and the visual must refuse it too. A card that reads as \"look how far he fell\" contradicts the line he actually says."
@@ -417,7 +429,8 @@
             "line": 9735
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "I see you. Type: the turn from subject to author; Content: the extraction diagram from G-10 fades up, and a single marker lands on the buffer band, labeled \"reclassified.\" Then the whole diagram redraws itself as a schematic under a drafting hand.; Caption: the mechanism ran on him, and he drew it."
@@ -448,7 +461,8 @@
       "provenance": {
         "tags": [],
         "citations": [],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "The constraint. Type: two-panel, and it is the episode's ethical hinge; Left: MOTIVE. I want this to be true.; Right: CONSTRAINT. Every claim carries a confidence tier and a falsification criterion.; Caption: built so the motive cannot decide the result."
@@ -478,7 +492,8 @@
       "provenance": {
         "tags": [],
         "citations": [],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "The rooms. Type: stylized live-audio room, abstract; Content: a circle of anonymous speaker bubbles, one of them his. Then a counter of rooms entered, climbing. Then a running list captioned \"defect reports,\" each entry a gap an opponent found in a standard argument.; Do not: name, depict, or identify any opponent. See the editorial note below on the Arbery reference."
@@ -536,7 +551,8 @@
             "line": 2497
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Removal from the moral community. Type: boundary diagram, three beats. This is the conceptual core of the segment.; Beat 1: a closed boundary labeled THE MORAL COMMUNITY, with figures inside it and a caption: inside this line a person registers as fully human and receives the protections that follow.; Beat 2: the boundary redraws, and a group is now outside it. Nothing about the figures changed. The line moved.; Beat 3: an arrow labeled \"your morality\" bounces off the boundary and fails to reach the excluded group. Caption: the morality still functions and stops applying."
@@ -573,7 +589,8 @@
             "line": 205
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "The Veil of Ignorance. Type: five-position rotation; Content: the five tiers arranged around a ring, Elite, Puppet Class, Enforcement Class, Buffer Class, Out-group. A viewpoint marker moves into each in turn. Then the labels black out and the marker's position becomes unknown.; Caption: if you did not know which tier you would wake up in, would you co-sign this architecture."
@@ -605,7 +622,8 @@
       "provenance": {
         "tags": [],
         "citations": [],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Derive it from economics alone. Type: the strongest analytical card in the episode; Beat 1: the objection, in quotation marks: \"This is not racism, this is economics.\"; Beat 2: a model diagram with a component labeled RACIAL ANIMUS visibly removed from it, leaving only capital, agenda control, the boundary-defense payment, and the cost of coordination.; Beat 3: run the model. The full tier architecture reassembles anyway.; Caption: the machine requires nobody to hate anyone."
@@ -630,18 +648,23 @@
         "Type": "horizontal four-stage pipeline, builds one stage at a time",
         "Stages": "1 Identify a structure \u00b7 2 Detect its empirical shadow \u00b7 3 Build the instrument that measures it \u00b7 4 Derive the mechanism that produces all three"
       },
-      "note": "`[book]` `Paper/The_Original_Power.tex:197`. This is the spine of the episode. Build it once here, then recall it as a small persistent corner marker at 04:18, 16:15, 20:03 and 25:36 with the active stage lit. Reprise it full-screen at 31:39.",
+      "note": "`[book]` `\"derive the mechanism that produces all three\"`. This is the spine of the episode. Build it once here, then recall it as a small persistent corner marker at 04:18, 16:15, 20:03 and 25:36 with the active stage lit. Reprise it full-screen at 31:39.",
       "provenance": {
         "tags": [
           "book"
         ],
-        "citations": [
+        "citations": [],
+        "labels": [],
+        "quotes": [
+          "derive the mechanism that produces all three"
+        ],
+        "resolved_quotes": [
           {
+            "quote": "derive the mechanism that produces all three",
             "path": "Paper/The_Original_Power.tex",
             "line": 197
           }
-        ],
-        "labels": []
+        ]
       },
       "suggested_track": "vector",
       "prompt_seed": "The four-step method (master graphic). Type: horizontal four-stage pipeline, builds one stage at a time; Stages: 1 Identify a structure \u00b7 2 Detect its empirical shadow \u00b7 3 Build the instrument that measures it \u00b7 4 Derive the mechanism that produces all three"
@@ -678,7 +701,8 @@
             "line": 12950
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Douglass and M\u00f4le-Saint-Nicolas. Type: map, animated in three beats; Content: Caribbean map. Pin M\u00f4le-Saint-Nicolas on Haiti's northwest peninsula. Arrow from Washington to the pin labeled \"diplomatic pressure, naval force behind it.\" Then a struck-through arrow with the date, July 1891, resignation.; Caption strip: Frederick Douglass, U.S. Minister to Haiti, 1889\u20131891."
@@ -709,7 +733,8 @@
           "book"
         ],
         "citations": [],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Extraction, isolated. Type: reduction animation. The map from G-07 dissolves into three labeled boxes.; Content: RESOURCE: the port. INSTRUMENT: racial hierarchy, national origin. GOAL: geopolitical extraction."
@@ -740,7 +765,8 @@
           "book"
         ],
         "citations": [],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "The justification layer. Type: two-layer stack diagram; Content: Lower layer, HARDWARE: extraction. Upper layer, SOFTWARE: ideological justification, with Social Darwinism named inside it."
@@ -779,7 +805,8 @@
             "line": 145
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "The Du Bois triangle. Type: animated triangle, three beats; Beat 1: Elite at apex. Colonial subjects at base. A thick arrow of extracted wealth running base to apex.; Beat 2: Domestic workers appear as a band across the middle.; Beat 3: A thin branch splits off the main arrow and terminates in the middle band. Label it \"the dividend.\"; Caption strip: W. E. B. Du Bois, \"The African Roots of War,\" 1915."
@@ -809,7 +836,8 @@
       "provenance": {
         "tags": [],
         "citations": [],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Variance and invariant. Type: side-by-side; Left: 1891 Haiti and 1915 colonial Africa as two dissimilar scenes, tagged \"the historian studies this: the variance.\"; Right: both scenes collapsed to the identical G-10 triangle, tagged \"the engineer studies this: the invariant.\""
@@ -840,7 +868,8 @@
           "book"
         ],
         "citations": [],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "One algorithm, three dialects. Type: three inputs, one output; Content: Theology / Pseudoscience / Bureaucratic statute all feed one box, and one arrow leaves it: systematic transfer of wealth and power upward."
@@ -872,7 +901,8 @@
           "book"
         ],
         "citations": [],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Power obfuscation. Type: before/after, animated; Before: apex extracts directly from base. Pressure arrows from the base point straight up at a clearly visible apex.; After: an intermediary band is inserted and paid a share. Base pressure arrows bend sideways into that band. The apex fades toward invisibility."
@@ -897,18 +927,23 @@
         "Type": "document card",
         "Content": "the two draft titles, verbatim: *From Bias to Bytes: A Machine Learning-Driven Analysis of Systemic Racism and Social Inequalities* and *The Calculus of Discrimination: A Mathematical Model for Analyzing Systemic Racism and Social Policies*."
       },
-      "note": "`[book]` `Paper/The_Original_Power.tex:187`. Spell \"Bytes\" correctly. Every AI transcript of this project has mangled it.",
+      "note": "`[book]` `\"From Bias to Bytes: A Machine Learning\"`. Spell \"Bytes\" correctly. Every AI transcript of this project has mangled it.",
       "provenance": {
         "tags": [
           "book"
         ],
-        "citations": [
+        "citations": [],
+        "labels": [],
+        "quotes": [
+          "From Bias to Bytes: A Machine Learning"
+        ],
+        "resolved_quotes": [
           {
+            "quote": "From Bias to Bytes: A Machine Learning",
             "path": "Paper/The_Original_Power.tex",
             "line": 187
           }
-        ],
-        "labels": []
+        ]
       },
       "suggested_track": "vector",
       "prompt_seed": "The proposal, two titles. Type: document card; Content: the two draft titles, verbatim: *From Bias to Bytes: A Machine Learning-Driven Analysis of Systemic Racism and Social Inequalities* and *The Calculus of Discrimination: A Mathematical Model for Analyzing Systemic Racism and Social Policies*."
@@ -930,18 +965,23 @@
         "Type": "2\u00d72 grid",
         "Content": "Critical Race Theory \u00b7 Cognitive bias research \u00b7 McKelvey\u2013Schofield Chaos Theorem \u00b7 Set-theoretic mathematics."
       },
-      "note": "`[book]` `:187`. Dim the two on the left at 12:01 when narration moves to the two that get unpacked.",
+      "note": "`[book]` `\"Critical Race Theory, cognitive bias research\"`. Dim the two on the left at 12:01 when narration moves to the two that get unpacked.",
       "provenance": {
         "tags": [
           "book"
         ],
-        "citations": [
+        "citations": [],
+        "labels": [],
+        "quotes": [
+          "Critical Race Theory, cognitive bias research"
+        ],
+        "resolved_quotes": [
           {
+            "quote": "Critical Race Theory, cognitive bias research",
             "path": "Paper/The_Original_Power.tex",
             "line": 187
           }
-        ],
-        "labels": []
+        ]
       },
       "suggested_track": "vector",
       "prompt_seed": "Four ingredients. Type: 2\u00d72 grid; Content: Critical Race Theory \u00b7 Cognitive bias research \u00b7 McKelvey\u2013Schofield Chaos Theorem \u00b7 Set-theoretic mathematics."
@@ -968,7 +1008,7 @@
         "Beat 2": "a second and third axis appear (timeline, geographic allocation). The median point visibly fails to exist.",
         "Beat 3": "three options A, B, C in a cycle, arrows A\u2192B\u2192C\u2192A, captioned \"rock, paper, scissors, inside a legislature.\""
       },
-      "note": "`[book]` `:187`, `:193`. Beat 2 is the load-bearing one. If a viewer only understands that adding dimensions destroys the median, the segment worked.",
+      "note": "`[book]` `:149`, `:155`. Beat 2 is the load-bearing one. If a viewer only understands that adding dimensions destroys the median, the segment worked.",
       "provenance": {
         "tags": [
           "book"
@@ -976,14 +1016,15 @@
         "citations": [
           {
             "path": "Paper/The_Original_Power.tex",
-            "line": 187
+            "line": 149
           },
           {
             "path": "Paper/The_Original_Power.tex",
-            "line": 193
+            "line": 155
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Why multidimensional voting has no center. Type: the episode's most demanding build. Three beats.; Beat 1: a single axis, budget from $10M to $1B, with a median voter marked and a stable outcome at the center.; Beat 2: a second and third axis appear (timeline, geographic allocation). The median point visibly fails to exist.; Beat 3: three options A, B, C in a cycle, arrows A\u2192B\u2192C\u2192A, captioned \"rock, paper, scissors, inside a legislature.\""
@@ -1014,7 +1055,8 @@
           "book"
         ],
         "citations": [],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "The agenda setter. Type: path animation over the G-16 beat 3 cycle; Content: a start node and a target node. Animate a legal sequence of pairwise majority votes that walks from start to target. Tick each step \"majority rule \u2713\". End card: every step legitimate, destination chosen in advance."
@@ -1036,18 +1078,23 @@
         "Type": "full-screen pull quote",
         "Content": "\"The mathematics it promised was absent from its pages.\""
       },
-      "note": "`[book]` `Paper/The_Original_Power.tex:187`, verbatim. Let it sit in silence against the `[beat]` in the script.",
+      "note": "`[book]` `\"The mathematics it promised was absent from\"`, verbatim. Let it sit in silence against the `[beat]` in the script.",
       "provenance": {
         "tags": [
           "book"
         ],
-        "citations": [
+        "citations": [],
+        "labels": [],
+        "quotes": [
+          "The mathematics it promised was absent from"
+        ],
+        "resolved_quotes": [
           {
+            "quote": "The mathematics it promised was absent from",
             "path": "Paper/The_Original_Power.tex",
             "line": 187
           }
-        ],
-        "labels": []
+        ]
       },
       "suggested_track": "vector",
       "prompt_seed": "The admission. Type: full-screen pull quote; Content: \"The mathematics it promised was absent from its pages.\""
@@ -1077,7 +1124,8 @@
       "provenance": {
         "tags": [],
         "citations": [],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "archival",
       "prompt_seed": "Lost document, found. Type: archive inventory list, in two states; State 1: rows with check marks \u2014 The Calculus of Injustice (v1 2023, v2 2026) \u00b7 Exploring Bias and Fairness in Language Models Applied to Hiring (2024) \u00b7 datasets, notebooks, slides, recording. Final row greyed with a missing-file mark: From Bias to Bytes \u2014 no surviving source.; State 2: on the narration turn where he says he went looking one more time, the greyed row fills in: **From Bias to Bytes \u2014 6 October 2023, 3 revisions**, check mark, and the whole list reads complete."
@@ -1103,7 +1151,7 @@
         "Data": "`Paper/data/eq27_police_killings.csv`, 2013\u20132024 means, deaths per million: Black 7.00 \u00b7 Native American 6.55 \u00b7 Hispanic 2.89 \u00b7 White 2.32 \u00b7 Asian 0.91. Black-to-White ratio of means, 3.01.",
         "Caption the Preface claim exactly": "\"more than twice the White per-capita rate.\" The 3.01 figure is the book's own 2013\u20132024 chapter series and is a wider window than the Preface sentence describes, so label the chart with its years and source."
       },
-      "note": "`[data]` + `[book]` `Paper/The_Original_Power.tex:189` and `:189`. Cite the Mapping Police Violence dataset and ACS denominators from the CSV header comments.",
+      "note": "`[data]` + `[book]` `\"Black, 7.00; Native American, 6.55\"` and `:4953`. Cite the Mapping Police Violence dataset and ACS denominators from the CSV header comments.",
       "provenance": {
         "tags": [
           "book",
@@ -1115,10 +1163,20 @@
           },
           {
             "path": "Paper/The_Original_Power.tex",
-            "line": 189
+            "line": 4953
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": [
+          "Black, 7.00; Native American, 6.55"
+        ],
+        "resolved_quotes": [
+          {
+            "quote": "Black, 7.00; Native American, 6.55",
+            "path": "Paper/The_Original_Power.tex",
+            "line": 4953
+          }
+        ]
       },
       "suggested_track": "vector",
       "prompt_seed": "The empirical shadow. Type: bar chart, per-capita fatal police shootings; Data: `Paper/data/eq27_police_killings.csv`, 2013\u20132024 means, deaths per million: Black 7.00 \u00b7 Native American 6.55 \u00b7 Hispanic 2.89 \u00b7 White 2.32 \u00b7 Asian 0.91. Black-to-White ratio of means, 3.01.; Caption the Preface claim exactly: \"more than twice the White per-capita rate.\" The 3.01 figure is the book's own 2013\u20132024 chapter series and is a wider window than the Preface sentence describes, so label the chart with its years and source."
@@ -1140,18 +1198,23 @@
         "Type": "contrast card, deliberately anticlimactic",
         "Content": "left, the G-20 bars, labeled \"macro: large, stable disparity.\" Right, a classifier-performance panel at chance, labeled \"incident features: little group-identifying signal, cross-validated.\""
       },
-      "note": "`[book]` `:189`. Do not dramatize the right panel. The honesty is the point.",
+      "note": "`[book]` `\"little group-identifying signal\"`. Do not dramatize the right panel. The honesty is the point.",
       "provenance": {
         "tags": [
           "book"
         ],
-        "citations": [
+        "citations": [],
+        "labels": [],
+        "quotes": [
+          "little group-identifying signal"
+        ],
+        "resolved_quotes": [
           {
+            "quote": "little group-identifying signal",
             "path": "Paper/The_Original_Power.tex",
             "line": 189
           }
-        ],
-        "labels": []
+        ]
       },
       "suggested_track": "vector",
       "prompt_seed": "The null result. Type: contrast card, deliberately anticlimactic; Content: left, the G-20 bars, labeled \"macro: large, stable disparity.\" Right, a classifier-performance panel at chance, labeled \"incident features: little group-identifying signal, cross-validated.\""
@@ -1184,7 +1247,8 @@
           "design"
         ],
         "citations": [],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "The casino. Type: two-scale animation; Scale 1: a high-speed camera over one craps table. Physics readouts all normal. Verdict stamp: THE ROLL IS FAIR.; Scale 2: pull back to the whole floor and a year of payouts. Verdict stamp: THE HOUSE WINS.; Closing frame: the advantage sits in the rules, the odds, and who is at the table."
@@ -1206,18 +1270,23 @@
         "Type": "left-to-right funnel",
         "Content": "housing policy \u2192 patrol allocation \u2192 neighborhood saturation \u2192 enforcement selection \u2192 THE ENCOUNTER. A dashed box around the final stage labeled \"the only stage incident-only data can see.\""
       },
-      "note": "`[book]` `:189`.",
+      "note": "`[book]` `\"incident-only data can\"`.",
       "provenance": {
         "tags": [
           "book"
         ],
-        "citations": [
+        "citations": [],
+        "labels": [],
+        "quotes": [
+          "incident-only data can"
+        ],
+        "resolved_quotes": [
           {
+            "quote": "incident-only data can",
             "path": "Paper/The_Original_Power.tex",
             "line": 189
           }
-        ],
-        "labels": []
+        ]
       },
       "suggested_track": "vector",
       "prompt_seed": "Upstream of the encounter. Type: left-to-right funnel; Content: housing policy \u2192 patrol allocation \u2192 neighborhood saturation \u2192 enforcement selection \u2192 THE ENCOUNTER. A dashed box around the final stage labeled \"the only stage incident-only data can see.\""
@@ -1243,7 +1312,8 @@
       "provenance": {
         "tags": [],
         "citations": [],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "The mirror. Type: simple flow; Content: human archive (internet text, corporate documents, historical records) \u2192 training \u2192 model \u2192 measured behavior. Caption: the model is a mirror held to the archive, not a witness with an opinion."
@@ -1268,18 +1338,23 @@
         "Type": "three-bar chart, White-marked share of selections by career stage",
         "Data": "Entry 53.33% \u00b7 Mid 68.33% \u00b7 Executive 53.33%. GPT-4o, synthetic r\u00e9sum\u00e9s, explicit and inferred racial markers, no racial instruction in the prompt."
       },
-      "note": "`[book]` `Paper/The_Original_Power.tex:13405`. Draw a 50% parity reference line. Career-level percentages are GPT-4o only; the paper's four-model framing covers the wider study, so do not attribute these three numbers to four models.",
+      "note": "`[book]` `\"explicit and inferred racial markers\"`. Draw a 50% parity reference line. Career-level percentages are GPT-4o only; the paper's four-model framing covers the wider study, so do not attribute these three numbers to four models.",
       "provenance": {
         "tags": [
           "book"
         ],
-        "citations": [
-          {
-            "path": "Paper/The_Original_Power.tex",
-            "line": 13405
-          }
+        "citations": [],
+        "labels": [],
+        "quotes": [
+          "explicit and inferred racial markers"
         ],
-        "labels": []
+        "resolved_quotes": [
+          {
+            "quote": "explicit and inferred racial markers",
+            "path": "Paper/The_Original_Power.tex",
+            "line": 191
+          }
+        ]
       },
       "suggested_track": "vector",
       "prompt_seed": "Career-level results. Type: three-bar chart, White-marked share of selections by career stage; Data: Entry 53.33% \u00b7 Mid 68.33% \u00b7 Executive 53.33%. GPT-4o, synthetic r\u00e9sum\u00e9s, explicit and inferred racial markers, no racial instruction in the prompt."
@@ -1312,7 +1387,8 @@
             "line": 153
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Where advancement compounds. Type: career ladder, three rungs annotated; Content: Entry \u2014 the system takes in labor. Mid \u2014 equity, network access, authority over others' work, advantage compounds. Executive \u2014 small, already filtered. Highlight the middle rung."
@@ -1335,7 +1411,7 @@
         "State 1": "AGGREGATE AUDIT. \u03c7\u00b2 = 2.547, p = 0.980. Stamp: NOT SIGNIFICANT.",
         "State 2": "the same data split by career level, revealing the G-25 bars. Caption: Simpson's paradox."
       },
-      "note": "`[book]` `:191`, `:153`.",
+      "note": "`[book]` `:13083`, `:153`.",
       "provenance": {
         "tags": [
           "book"
@@ -1343,14 +1419,15 @@
         "citations": [
           {
             "path": "Paper/The_Original_Power.tex",
-            "line": 191
+            "line": 13083
           },
           {
             "path": "Paper/The_Original_Power.tex",
             "line": 153
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "The aggregate test passes. Type: two-state card; State 1: AGGREGATE AUDIT. \u03c7\u00b2 = 2.547, p = 0.980. Stamp: NOT SIGNIFICANT.; State 2: the same data split by career level, revealing the G-25 bars. Caption: Simpson's paradox."
@@ -1376,18 +1453,23 @@
         "2024 study": "career-level skew present. Confound: r\u00e9sum\u00e9 qualifications differed across racial conditions. Confidence: Tier 3.",
         "2026 replication": "matched pairs, qualifications held constant, only name and one affiliation varied. Claude, Gemini, Kimi. Pooled Black share of advanced candidates 50\u201351% at every career level. Career-level effect did not recur."
       },
-      "note": "`[book]` `Paper/The_Original_Power.tex:13405`. The Kimi sweep ended before the executive level; say so in small type if the card has room. Never show G-25 without G-28 available in the same cut.",
+      "note": "`[book]` `\"pooled Black share of advanced candidates\"`. The Kimi sweep ended before the executive level; say so in small type if the card has room. Never show G-25 without G-28 available in the same cut.",
       "provenance": {
         "tags": [
           "book"
         ],
-        "citations": [
+        "citations": [],
+        "labels": [],
+        "quotes": [
+          "pooled Black share of advanced candidates"
+        ],
+        "resolved_quotes": [
           {
+            "quote": "pooled Black share of advanced candidates",
             "path": "Paper/The_Original_Power.tex",
             "line": 13405
           }
-        ],
-        "labels": []
+        ]
       },
       "suggested_track": "vector",
       "prompt_seed": "What the replication found. Type: before/after comparison, and this card must be as prominent as G-25; 2024 study: career-level skew present. Confound: r\u00e9sum\u00e9 qualifications differed across racial conditions. Confidence: Tier 3.; 2026 replication: matched pairs, qualifications held constant, only name and one affiliation varied. Claude, Gemini, Kimi. Pooled Black share of advanced candidates 50\u201351% at every career level. Career-level effect did not recur."
@@ -1420,7 +1502,8 @@
             "line": 245
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Falsifiability. Type: index-row mock, three sample rows; Content: columns for Equation \u00b7 Confidence tier \u00b7 Primary data source \u00b7 Falsification criterion. Populate from the Empirical Validation Index."
@@ -1445,7 +1528,7 @@
         "Type": "set diagram with notation",
         "Content": "E, the Elite. O_racialized, the Out-group. I_buffer, the Buffer Class."
       },
-      "note": "`[book]` `:193`. Use the manuscript's exact subscripts. Episode 2 expands these into the five-tier hierarchy, so build this diagram to be extended rather than replaced.",
+      "note": "`[book]` `:155`. Use the manuscript's exact subscripts. Episode 2 expands these into the five-tier hierarchy, so build this diagram to be extended rather than replaced.",
       "provenance": {
         "tags": [
           "book"
@@ -1453,10 +1536,11 @@
         "citations": [
           {
             "path": "Paper/The_Original_Power.tex",
-            "line": 193
+            "line": 155
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "The three sets. Type: set diagram with notation; Content: E, the Elite. O_racialized, the Out-group. I_buffer, the Buffer Class."
@@ -1483,18 +1567,23 @@
         "Beat 2": "I_buffer and O_racialized are outlined together, labeled \"numerical majority. Coordination is the optimal strategy.\"",
         "Beat 3": "a question mark over the coordination link. Caption: so why is it rare."
       },
-      "note": "`[book]` `:193`, Tweedism chapter.",
+      "note": "`[book]` `\"the Agenda-Setter Trap\"`, Tweedism chapter.",
       "provenance": {
         "tags": [
           "book"
         ],
-        "citations": [
+        "citations": [],
+        "labels": [],
+        "quotes": [
+          "the Agenda-Setter Trap"
+        ],
+        "resolved_quotes": [
           {
+            "quote": "the Agenda-Setter Trap",
             "path": "Paper/The_Original_Power.tex",
             "line": 193
           }
-        ],
-        "labels": []
+        ]
       },
       "suggested_track": "vector",
       "prompt_seed": "The Agenda-Setter Trap. Type: three beats over the G-30 diagram; Beat 1: the agenda setter from G-17 reappears at E.; Beat 2: I_buffer and O_racialized are outlined together, labeled \"numerical majority. Coordination is the optimal strategy.\"; Beat 3: a question mark over the coordination link. Caption: so why is it rare."
@@ -1520,18 +1609,23 @@
         "Beat 4": "the same quantity drawn as a phasor on the complex plane, real power on the horizontal and reactive power on the vertical, with |W| and \u03b8 marked. Then show \u03c8_m shrinking while \u03c8_s grows to hold |W| roughly constant.",
         "Beat 5": "the coordination link between I_buffer and O_racialized breaks."
       },
-      "note": "`[book]` `Paper/The_Original_Power.tex:2837`, `:845-848`, `:894-895`, and eq. 2.2a. **\u03c8 is not the psychological wage.** \u03c8 is the complex suppression allocation; the psychological wage is its imaginary component alone. A card that labels the whole variable \"psychological wage\" states the book's own equation wrongly. The Du Bois phrase is from *Black Reconstruction* (1935); the 1915 essay used earlier in this episode is a different work, so do not merge the two citations.",
+      "note": "`[book]` `\"Black Reconstruction in America* (1935\"`, `:845-848`, `:894-895`, and eq. 2.2a. **\u03c8 is not the psychological wage.** \u03c8 is the complex suppression allocation; the psychological wage is its imaginary component alone. A card that labels the whole variable \"psychological wage\" states the book's own equation wrongly. The Du Bois phrase is from *Black Reconstruction* (1935); the 1915 essay used earlier in this episode is a different work, so do not merge the two citations.",
       "provenance": {
         "tags": [
           "book"
         ],
-        "citations": [
+        "citations": [],
+        "labels": [],
+        "quotes": [
+          "Black Reconstruction in America* (1935"
+        ],
+        "resolved_quotes": [
           {
+            "quote": "Black Reconstruction in America* (1935",
             "path": "Paper/The_Original_Power.tex",
             "line": 2837
           }
-        ],
-        "labels": []
+        ]
       },
       "suggested_track": "vector",
       "prompt_seed": "Psi, the complex suppression allocation. Type: the payoff of the whole episode. Recall G-10 exactly, then formalize it.; Beat 1: the Du Bois triangle fades in and the \"dividend\" branch relabels to \u03c8.; Beat 2: the quotation, set plainly, attributed: *\"a sort of public and psychological wage\"* \u2014 W. E. B. Du Bois, *Black Reconstruction in America*, 1935. Underline **public** and **psychological** separately. Two modes, one sentence.; Beat 3: the equation, built term by term: **W = \u03c8_m + j\u03c8_s**. \u03c8_m real, labelled material wage, money and property and infrastructure. \u03c8_s imaginary, carried on j, labelled psychological wage, status and standing.; Beat 4: the same quantity drawn as a phasor on the complex plane, real power on the horizontal and reactive power on the vertical, with |W| and \u03b8 marked. Then show \u03c8_m shrinking while \u03c8_s grows to hold |W| roughly constant.; Beat 5: the coordination link between I_buffer and O_racialized breaks."
@@ -1564,7 +1658,8 @@
             "line": 155
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Geometry of extraction. Type: directed graph; Content: nodes across society, directed edges, no closed loops, all paths terminating at a root node. Animate flow from the margins upward."
@@ -1600,7 +1695,8 @@
             "line": 384
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "The circuit. Type: circuit schematic mapped onto the G-33 graph; Content: Voltage, the systemic pressure driving extraction. Current, the flow of extracted labor and capital. Resistance, the mechanisms that route the flow and stop it returning downward."
@@ -1638,7 +1734,8 @@
             "line": 384
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "The analogy was never an analogy. Type: direct callback to G-02, and the emotional peak of the episode; Beat 1: replay the closing frame of G-02, the question on black.; Beat 2: the circuit schematic from G-34 fades up behind the question and the two register as the same diagram.; Beat 3: a word list, each term shown moving from the social column to the physics column: current, resistance, potential, field, force, power, conductor, ground, charge. Caption: physics borrowed these from social power, and not the other way round."
@@ -1667,7 +1764,8 @@
       "provenance": {
         "tags": [],
         "citations": [],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "The linchpin. Type: timeline with a single connecting arc; Content: 1915, Du Bois, the dividend. \u2192 2020, the observation layer. \u2192 the \u03c8 term. \u2192 the electrodynamic formalism. One arc from the first point to the last."
@@ -1711,7 +1809,8 @@
             "line": 1365
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "146 anchor cases. Type: dense grid, 146 cells across a five-century timeline; Content: highlight the fatal-shooting case as one cell. Each cell carries a confidence tier, a data source, and a falsification criterion."
@@ -1736,7 +1835,7 @@
         "Type": "G-05 full-screen, now with each stage labeled by its document",
         "Content": "Identify \u2192 the Spanish-American War essay. Detect \u2192 The Calculus of Injustice. Build the instrument \u2192 the hiring paper. Derive \u2192 *The Original Power*."
       },
-      "note": "`[book]` `:197`.",
+      "note": "`[book]` `:157`.",
       "provenance": {
         "tags": [
           "book"
@@ -1744,10 +1843,11 @@
         "citations": [
           {
             "path": "Paper/The_Original_Power.tex",
-            "line": 197
+            "line": 157
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Method reprise. Type: G-05 full-screen, now with each stage labeled by its document; Content: Identify \u2192 the Spanish-American War essay. Detect \u2192 The Calculus of Injustice. Build the instrument \u2192 the hiring paper. Derive \u2192 *The Original Power*."
@@ -1772,19 +1872,24 @@
         "Type": "end card",
         "Content": "Episode 2, the Preface. Psycho-legal social software. Wetware. The fractal mind virus. The five-tier hierarchy. Second card: The Gender Wars, in progress, the transform running in the other direction."
       },
-      "note": "`[book]` `Paper/The_Original_Power.tex:2757` onward.",
+      "note": "`[book]` `\"the fractal mind virus. The\"` onward.",
       "provenance": {
         "tags": [
           "book",
           "data"
         ],
-        "citations": [
+        "citations": [],
+        "labels": [],
+        "quotes": [
+          "the fractal mind virus. The"
+        ],
+        "resolved_quotes": [
           {
+            "quote": "the fractal mind virus. The",
             "path": "Paper/The_Original_Power.tex",
             "line": 2757
           }
-        ],
-        "labels": []
+        ]
       },
       "suggested_track": "vector",
       "prompt_seed": "Next episode. Type: end card; Content: Episode 2, the Preface. Psycho-legal social software. Wetware. The fractal mind virus. The five-tier hierarchy. Second card: The Gender Wars, in progress, the transform running in the other direction."

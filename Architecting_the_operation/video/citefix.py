@@ -102,6 +102,53 @@ class Manuscript:
         return None
 
 
+
+_SHOT_HEADING = re.compile(r"^##\s+(?P<id>[A-Za-z0-9\-]+)\s+[—-]", re.M)
+
+
+def _shot_block(text: str, shot_id: str) -> tuple[int, int] | None:
+    """Where one shot's section starts and ends in the markdown.
+
+    Edits have to be scoped to a shot. Several shots cite the same line, so a
+    document-wide replace of the first match rewrites whichever shot happens
+    to come first, which is not usually the one being repaired.
+    """
+    spans = [(m.group("id"), m.start()) for m in _SHOT_HEADING.finditer(text)]
+    for index, (found, start) in enumerate(spans):
+        if found == shot_id:
+            end = spans[index + 1][1] if index + 1 < len(spans) else len(text)
+            return start, end
+    return None
+
+
+def _replace_in_shot(text: str, shot_id: str, before: str, after: str) -> tuple[str, bool]:
+    span = _shot_block(text, shot_id)
+    if not span:
+        return text, False
+    start, end = span
+    block = text[start:end]
+    if before not in block:
+        return text, False
+    return text[:start] + block.replace(before, after, 1) + text[end:], True
+
+
+def original_phrase(book: "Manuscript", line_number: int, normalized: str) -> str | None:
+    """Recover a located phrase in the manuscript's own words.
+
+    `locate` works on normalized text, and a citation written in lowercase
+    with the punctuation stripped would be unreadable. Match the same words
+    against the real line and take what is actually written there.
+    """
+    line = book.lines[line_number - 1]
+    pattern = r"\W+".join(re.escape(w) for w in normalized.split())
+    found = re.search(pattern, line, re.IGNORECASE)
+    if not found:
+        return None
+    text = found.group(0).strip()
+    # A phrase carrying markup would not survive being quoted back.
+    return None if ("\\" in text or "{" in text or '"' in text) else text
+
+
 def _shot_text(shot: dict) -> str:
     return " ".join([shot["title"], shot.get("type", ""),
                      *shot.get("described", {}).values()])
@@ -129,6 +176,41 @@ def review(spec_path: Path, book: Manuscript, stale_below: float) -> list[dict]:
     return findings
 
 
+def migrate(shotlist: Path, spec_path: Path, book: "Manuscript") -> tuple[int, int]:
+    """Replace line-number citations with quoted phrases from the manuscript.
+
+    Only where a distinctive phrase is found, and only where it can be written
+    out in the book's own words. A shot that cannot be anchored keeps its line
+    number and shows up in the count that still needs a person.
+    """
+    document = json.loads(spec_path.read_text())
+    text = shotlist.read_text()
+    migrated = skipped = 0
+    for shot in document["shots"]:
+        if "book" not in shot["provenance"]["tags"]:
+            continue
+        cites = [c for c in shot["provenance"]["citations"]
+                 if "line" in c and c["path"] == BOOK_PATH]
+        if not cites or shot["provenance"].get("quotes"):
+            continue
+        located = book.locate(_shot_text(shot))
+        phrase = original_phrase(book, *located) if located else None
+        if not phrase:
+            skipped += 1
+            continue
+        first = cites[0]["line"]
+        for before in (f"`:{first}`", f"`{BOOK_PATH}:{first}`"):
+            text, done = _replace_in_shot(text, shot["id"], before, f'`"{phrase}"`')
+            if done:
+                migrated += 1
+                break
+        else:
+            skipped += 1
+    if migrated:
+        shotlist.write_text(text)
+    return migrated, skipped
+
+
 def apply(shotlist: Path, findings: list[dict]) -> int:
     text = shotlist.read_text()
     changed = 0
@@ -140,8 +222,8 @@ def apply(shotlist: Path, findings: list[dict]) -> int:
             continue
         for before, after in ((f"`:{old}`", f"`:{new}`"),
                               (f"The_Original_Power.tex:{old}`", f"The_Original_Power.tex:{new}`")):
-            if before in text:
-                text = text.replace(before, after, 1)
+            text, done = _replace_in_shot(text, finding["shot"], before, after)
+            if done:
                 changed += 1
                 break
     if changed:
@@ -154,9 +236,25 @@ def main() -> int:
     ap.add_argument("specs", nargs="+", type=Path)
     ap.add_argument("--stale-below", type=float, default=0.12)
     ap.add_argument("--apply", action="store_true")
+    ap.add_argument("--migrate", action="store_true",
+                    help="replace line numbers with quoted phrases")
     ap.add_argument("--quiet", action="store_true")
     args = ap.parse_args()
     book = Manuscript()
+
+    if args.migrate:
+        done = left = 0
+        for spec in args.specs:
+            shotlist = spec.parent.parent / spec.name.replace(".json", "_shotlist.md")
+            if not shotlist.exists():
+                continue
+            moved, stuck = migrate(shotlist, spec, book)
+            print(f"{shotlist.name}: {moved} citation(s) now quote the manuscript, "
+                  f"{stuck} could not be anchored")
+            done += moved
+            left += stuck
+        print(f"\n{done} migrated, {left} still cited by line.")
+        return 0
 
     grand_total = grand_fixed = 0
     for spec in args.specs:

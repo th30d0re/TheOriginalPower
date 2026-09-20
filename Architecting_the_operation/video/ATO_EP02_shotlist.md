@@ -28,7 +28,12 @@ content.
 
 ## Provenance key
 
-- `[book]` — stated in `Paper/The_Original_Power.tex`, cited by line.
+- `[book]` — stated in `Paper/The_Original_Power.tex`, cited by a phrase
+  quoted from it: `"runs on human predictive cognition"`. The quote is the
+  anchor because it survives editing the manuscript, and `shotspec.py`
+  resolves it to a current line number in the generated spec. A bare line
+  number (`:208`) still parses, and still goes stale the next time the
+  chapter above it grows.
 - `[data]` — computed from a CSV in `Paper/data/`.
 - `[design]` — illustrative, no data claim. Must not carry axis numbers.
 
@@ -77,7 +82,7 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 - **Content:** RACISM = PSYCHO-LEGAL SOCIAL SOFTWARE, with the four code types listed
   beneath it (legal · institutional · cultural · affective) and a second line:
   runs on human predictive cognition — WETWARE.
-- **Note:** `[book]` `Paper/The_Original_Power.tex:208`. Verbatim terms. Do not
+- **Note:** `[book]` `"runs on human predictive cognition"`. Verbatim terms. Do not
   paraphrase this card. It states two of the three layers; G-04b supplies the third
   and the direction of control between them, so the two cues are a pair.
 
@@ -152,7 +157,7 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
   protocols.
 - **Cultural:** what a society treats as normal.
 - **Affective:** fear, disgust, loyalty, pride.
-- **Note:** `[book]` `:208`.
+- **Note:** `[book]` `:178`.
 
 ## G-08 — What the code outputs
 
@@ -160,7 +165,7 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 - **Hold:** through 06:15
 - **Type:** four words arriving one at a time, large, on black
 - **Content:** PERCEPTION · COMMON SENSE · THREAT DETECTION · SELECTIVE EMPATHY
-- **Note:** `[book]` `:208`, verbatim from the Preface. This is the card the episode
+- **Note:** `[book]` `"perception, common sense, threat detection"`, verbatim from the Preface. This is the card the episode
   will be clipped from. Design it to stand alone.
 
 ## G-09 — Wetware
@@ -172,7 +177,7 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
   under uncertainty. Beneath it, the tradeoff stated as a dial with two ends:
   survival under uncertainty ←→ neutral truth-tracking under adversarial input.
   The needle sits hard against survival.
-- **Note:** `[book]` `:245`.
+- **Note:** `[book]` `"a predictive, pattern-compressing neural network optimized"`.
 
 ## G-10 — Borrowed terms
 
@@ -182,7 +187,7 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 - **Content:** ingroup / outgroup / ingroup bias, with the APA Dictionary definitions,
   then Tajfel and Turner 1979 and the five functions the sorting manages: trust,
   threat, cooperation, belonging, self-concept.
-- **Note:** `[book]` `:245`. These are standard social-psychological terms before they
+- **Note:** `[book]` `"trust, threat, cooperation, belonging"`. These are standard social-psychological terms before they
   are variables. The card exists so nobody thinks the book invented them.
 
 ## G-11 — Legacy code
@@ -226,7 +231,7 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 - **Content:** the same partition shape recurring at each scale in the Preface's own
   order. Empire → nation → city → school district → household → ballot line →
   a single reflex of suspicion.
-- **Note:** `[book]` `:247`. The shape must be literally identical at every scale.
+- **Note:** `[book]` `:217`. The shape must be literally identical at every scale.
   Scale invariance is the claim and the graphic is the proof of concept.
 
 ## G-15 — Mind virus, and who hosts it
@@ -237,7 +242,7 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 - **Content:** the virus payload lands on the Buffer Class band and is labeled "the
   belief that the partition is real and natural." The Out-group band is labeled
   "what the partition is executed against."
-- **Note:** `[book]` `:247`. This cue answers a misreading that will otherwise cost
+- **Note:** `[book]` `:217`. This cue answers a misreading that will otherwise cost
   the episode its audience. Build it so a viewer who watches with sound off still
   reads the direction correctly.
 
@@ -250,7 +255,7 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 - **Right loop, COGNITIVE:** fear, status, disgust, loyalty, selective empathy.
 - **Beat 2:** arrows both ways between them. Law shapes the reflex, the reflex votes
   for the law.
-- **Note:** `[book]` `:247`.
+- **Note:** `[book]` `"fear, status, disgust, loyalty"`.
 
 ## G-17 — Structural positions
 
@@ -260,7 +265,7 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 - **Content:** a single unlabeled figure standing at the intersection of stacked axis
   bars — race, gender, class — with its position on each bar marked independently.
   On one it sits below the partition line, on another above.
-- **Note:** `[book]` `:251`. Ties directly to Emmanuel's own statement of position in
+- **Note:** `[book]` `:219`. Ties directly to Emmanuel's own statement of position in
   Episode 1 at 09:58. Consider a two-second recall of that episode's card.
 
 ## G-18 — The five tiers (master graphic)
@@ -271,7 +276,7 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 - **Content:** E, extracts value · Puppet Class, translates extraction into law and
   policy · Enforcement Class, actuates physically · Buffer Class, receives the
   suppression allocation · Out-group, bears the compounding burden.
-- **Note:** `[book]` `:251`. Reuse Episode 1's stack geometry exactly. Every later cue
+- **Note:** `[book]` `"translates extraction into law and policy"`. Reuse Episode 1's stack geometry exactly. Every later cue
   in this episode recalls this one, so build it to survive being shown small.
 
 ## G-19 — Why five: three failures
@@ -285,7 +290,7 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
   writes the statute, nobody enforces it.
 - **Draft 3, five tiers:** Puppet and Enforcement added. Caption: minimum configuration
   the mathematics required.
-- **Note:** `[book]` `:301`. The Appalachia claim is spoken as a directional structural
+- **Note:** `[book]` `"minimum configuration the mathematics required"`. The Appalachia claim is spoken as a directional structural
   point and carries no number on screen. Do not add one.
 
 ## G-20 — The four architectural components
@@ -295,7 +300,7 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 - **Type:** four numbered cards, held as each is read
 - **Content:** 1 asymmetric autonomy restriction · 2 selective empathy · 3 ideological
   justification through spurious claims · 4 resistance to structural critique.
-- **Note:** `[book]` `:251`. Verbatim.
+- **Note:** `[book]` `"3) ideological justification through spurious claims"`. Verbatim.
 
 ## G-21 — John Punch, 1640
 
@@ -330,7 +335,7 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 - **Diagram 2, the Preface's picture:** the supply rail at the base, labeled with the
   kinetic labor, taxes, and physical output of the Out-group and Buffer Class, and the
   apex drawn as a small control input.
-- **Note:** `[book]` `:213`. The most important cut in the episode. Make the swap
+- **Note:** `[book]` `"The kinetic labor, taxes, and physical output"`. The most important cut in the episode. Make the swap
   abrupt.
 
 ## G-24 — The parasitic control layer
@@ -341,7 +346,7 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 - **Content:** Figure P.1 from the manuscript. Transistor stage. Base current labeled
   laws, algorithms, media narratives. Supply rail labeled V_cc, the kinetic labor of
   O and I_buffer. Feedback path from the output back into the interference engine.
-- **Note:** `[book]` `fig:parasitic_transistor`, `Paper/The_Original_Power.tex:240`.
+- **Note:** `[book]` `fig:parasitic_transistor`, `"Parasitic Control Layer.} The"`.
   Redraw it for screen legibility, keep every label the figure uses. This is the first
   time in the series that a figure from the book appears as itself.
 
@@ -367,7 +372,7 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
   concerns the equations. The units are irrelevant to the homology.
 - **Beat 2:** a pointer to Chapter 2 — augmented Lagrangian control system, with its
   falsification tests in the same chapter.
-- **Note:** `[book]` `Paper/The_Original_Power.tex:211`, `ch:lagrangian`. This is the
+- **Note:** `[book]` `"The claim concerns the equations; the"`, `ch:lagrangian`. This is the
   joint the whole book hangs from. Label it as the place to attack.
 
 ## G-27 — Inductive kickback
@@ -377,7 +382,7 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 - **Type:** oscilloscope trace
 - **Content:** steady current, an abrupt interruption, and the voltage spike that
   follows. Second label under the spike: backlash, predicted output.
-- **Note:** `[book]` `:208`.
+- **Note:** `[book]` `:178`.
 
 ## G-28 — Destructive interference
 
@@ -389,7 +394,7 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 - **Beat 2:** they arrive out of phase and the sum trace stays flat.
 - **Beat 3:** the same waves brought into phase and the sum rises sharply.
 - **Caption under beat 2:** politically hyperactive, structurally inert.
-- **Note:** `[book]` `:311`. Beat 3 is the encouraging half and Emmanuel says so on
+- **Note:** `[book]` `"race, gender, class, religion, identity"`. Beat 3 is the encouraging half and Emmanuel says so on
   mic. The amplitudes must be identical in both beats; only phase changes.
 
 ## G-29 — The expansion principle
@@ -402,7 +407,7 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
   redlining, the War on Drugs, the present. The boundary contracts at each step and
   the Out-group region grows.
 - **Beat 2:** the Elite subset stays a fixed small area throughout.
-- **Note:** `[book]` `:309`. Structural and directional. Carry no percentages, no
+- **Note:** `[book]` `"the invention of whiteness, the 13th Amendment"`. Structural and directional. Carry no percentages, no
   population figures, and no axis numbers on this card.
 
 ## G-30 — Confidence tiers
@@ -417,7 +422,7 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
   stated.
 - **Then:** 146 anchor cases · 146 historical events · every claim carries a
   falsification criterion.
-- **Note:** `[book]` `Paper/The_Original_Power.tex:314`. Verbatim definitions.
+- **Note:** `[book]` `"directly reported or transparently derivable from a"`. Verbatim definitions.
 
 ## G-31 — The loss
 
@@ -439,7 +444,7 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
   constraints — and a second panel held alongside it: the full accounting of harm.
 - **Step 2, VEIL OF IGNORANCE (computation):** tier, phenotype, and accumulated
   advantage strip away, and the architecture is judged on structure alone.
-- **Note:** `[book]` `:286`, Rawls. Step 1 must visibly carry both panels. The second
+- **Note:** `[book]` `"the full accounting of harm"`, Rawls. Step 1 must visibly carry both panels. The second
   panel is what separates the instrument from excuse-making and Emmanuel says so.
 
 ## G-33 — The install point
@@ -449,7 +454,7 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 - **Type:** the G-32 sequence with a friction meter running alongside it
 - **Content:** as the viewer icon moves through the tiers, a resistance reading rises.
   Caption: feeling the resistance identifies the install point.
-- **Note:** `[book]` `:299`.
+- **Note:** `[book]` `"Feeling the resistance identifies the install point"`.
 
 ## G-34 — The diagnostic question
 
@@ -458,7 +463,7 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 - **Type:** text on black, no motion
 - **Content:** *If you had no clue which tier you would wake up in, would you co-sign
   this architecture?*
-- **Note:** `[book]` `:271`. Verbatim. Hold it in silence past the end of the line.
+- **Note:** `[book]` `"no clue which tier you would wake"`. Verbatim. Hold it in silence past the end of the line.
 
 ## G-35 — Innocence structurally unavailable
 
@@ -478,7 +483,7 @@ stack, the fractal zoom, the transistor schematic, and the phase diagram.
 - **Type:** the book laid out as a life cycle, four segments
 - **Content:** Specification and Origins, 1440s–1915 · The Installation, 1619–1865 ·
   Scaling and Runtime, 1865–present · Diagnostics and Output.
-- **Note:** `[book]` `:307`. The ranges overlap by design and Part II opens inside
+- **Note:** `[book]` `"Scaling and Runtime, 1865--Present"`. The ranges overlap by design and Part II opens inside
   Part I's range. They are era anchors rather than a partition of the timeline, per the
   convention in `AGENTS.md`, so do not draw them as adjacent non-overlapping bands.
 

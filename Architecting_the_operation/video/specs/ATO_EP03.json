@@ -29,7 +29,8 @@
       "provenance": {
         "tags": [],
         "citations": [],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Title card. Type: static; Content: *Architecting the Operation* / Episode 3 / \"Redefining Racism\" / subtitle: Four ways to understand the machine."
@@ -60,7 +61,8 @@
           "design"
         ],
         "citations": [],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Cold-open framing: three registers. Type: three-word stack, revealing one at a time; Content: The claim. / The mechanism. / The proof."
@@ -91,7 +93,8 @@
           "design"
         ],
         "citations": [],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Level Card, first appearance (explainer beat). Type: the Level Card animates through all four states once, slowly, as Toussaint names them, before it starts flipping fast for the rest of the episode; Content: ELEMENTARY \u2192 HIGH SCHOOL \u2192 COLLEGE \u2192 PhD, each with a one-line gloss (\"truth minus prerequisites\" / \"the everyday version\" / \"the structural claim\" / \"the citations and the falsification condition\")."
@@ -122,7 +125,8 @@
           "design"
         ],
         "citations": [],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Three-part episode map. Type: three-panel roadmap; Content: 1. Binary \u2192 five-tier refinement \u00b7 2. The word rebuilt \u00b7 3. The diagnostic model (fractal computer virus)."
@@ -166,7 +170,8 @@
             "line": 1656
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Coarse binary \u2192 five-tier refinement. Type: the five-tier pyramid stack, Episode 1's continuity asset, triggered here for the first time this episode; Content: two-box coarse partition (in-group/out-group) resolving into Elite / Puppet / Enforcement / Buffer inside the in-group box, and a fan of adjacent out-group subgroups on the other side."
@@ -203,7 +208,8 @@
             "line": 1673
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Recursive local partition. Type: single figure, one silhouette, split by two overlapping colored fields; Content: a blue field labeled \"race axis: in-group\" and a red field labeled \"class axis: out-group\" overlap on the same figure."
@@ -239,7 +245,8 @@
             "line": 1675
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Set-Resolution Ladder. Type: four-rung ladder table, matches the manuscript table; Content: Coarse binary \u2192 In-group refinement \u2192 Out-group refinement \u2192 Recursive projection."
@@ -275,7 +282,8 @@
             "line": 1690
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Du Bois pull-quotes. Type: two sequential text cards, plain, book-page styled, held through both the College and PhD beats on this concept; Content: \"the public and psychological wage\" / \"the Propaganda of History\" \u2014 both attributed on-card to Du Bois, *Black Reconstruction* (1935)."
@@ -311,7 +319,8 @@
             "line": 1700
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Architecture vs. phenomenology note. Type: small disclaimer card, understated; Content: \"Comparing architecture \u2260 comparing suffering.\""
@@ -336,18 +345,23 @@
         "Type": "three-box flow diagram, red, struck through on the reveal",
         "Content": "Individual Prejudice \u2192 Discriminatory Actions \u2192 Systemic Outcomes."
       },
-      "note": "`[book]` `Paper/The_Original_Power.tex:1789` (Eq. 1.3).",
+      "note": "`[book]` `\"individual prejudice, discriminatory actions\"` (Eq. 1.3).",
       "provenance": {
         "tags": [
           "book"
         ],
-        "citations": [
+        "citations": [],
+        "labels": [],
+        "quotes": [
+          "individual prejudice, discriminatory actions"
+        ],
+        "resolved_quotes": [
           {
+            "quote": "individual prejudice, discriminatory actions",
             "path": "Paper/The_Original_Power.tex",
             "line": 1789
           }
-        ],
-        "labels": []
+        ]
       },
       "suggested_track": "vector",
       "prompt_seed": "Conventional causal arrow (struck through). Type: three-box flow diagram, red, struck through on the reveal; Content: Individual Prejudice \u2192 Discriminatory Actions \u2192 Systemic Outcomes."
@@ -387,7 +401,8 @@
             "line": 1738
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "archival",
       "prompt_seed": "Reversed causal arrow + Zurara/Fields. Type: three-box flow diagram, green, replacing G-10; archival-styled quote card follows in the same hold; Content: Elite Economic Interests \u2192 Systemic Racialization \u2192 Interpersonal Prejudice; then \"Gomes Eanes de Zurara, 1453 \u2014 commissioned chronicle\" with the Fields quote beneath: \"People are more readily perceived as inferior by nature when they are already seen as oppressed.\""
@@ -423,7 +438,8 @@
             "line": 1809
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "The -ism family. Type: four-word list, one word highlighted per beat; Content: Capitalism \u00b7 Feudalism \u00b7 Colonialism \u00b7 Racism \u2014 first three glossed \"system,\" fourth corrected from \"???\" to \"system.\""
@@ -459,7 +475,8 @@
             "line": 1839
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Hierarchy inversion. Type: the manuscript's own two-column inverted-pyramid figure, redrawn; Content: Conventional (Individual Prejudice top, buried Systemic at bottom) next to Correct (Systemic Policies top, epiphenomenal Interpersonal Prejudice at bottom)."
@@ -495,7 +512,8 @@
             "line": 1864
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Fractal virus properties. Type: four-item checklist, ticking in as named; Content: Hijacks resources \u00b7 Replicates at every scale \u00b7 Mutates its signature \u00b7 Payload never changes."
@@ -531,7 +549,8 @@
             "line": 1872
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Biological Embedding, boxed definition. Type: the manuscript's own boxed-definition styling, verbatim, both sentences shown together; Content: full text of the Biological Embedding definition, the bounding sentence (\"race is not genetic...\") visually distinct but present in the same frame."
@@ -568,7 +587,8 @@
             "line": 1900
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Rootkit / kernel diagram. Type: OS-layer diagram, kernel space vs. user space; Content: kernel space labeled \"extraction code (law, property, exception clauses)\"; user space labeled \"voting, protest, lawsuits \u2014 cannot reach the layer below.\""
@@ -607,7 +627,8 @@
             "line": 2077
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Antebellum cotton case study, chart. Type: dual-axis line chart, matches `figures/eq05_kernel_optimization.png`; Content: cotton revenue (1840/1850/1860: $74.1M / $102.5M / $247.0M) on one axis; suppression-budget ratio (2.70% / 2.88% / 2.75%) on the other, band highlighted to show the < 0.2-point range. Nat Turner (1831) marked as an independent threshold-response event."
@@ -643,7 +664,8 @@
             "line": 2038
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Pigmentation cline map. Type: world map with a smooth gradient overlay by latitude, plus two ancient-DNA markers (La Bra\u00f1a, Spain; Cheddar Man, Britain); Content: gradient bar labeled \"UV exposure by latitude\"; markers annotated with the dark-skin/light-eye finding at each site; the Seti I tomb referenced as a citation card (dynasty, one descriptive line), not a rendered image of human figures."
@@ -674,7 +696,8 @@
           "design"
         ],
         "citations": [],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Kernel HUD wrapper (scoped to diagnostic-model interior). Type: thin HUD-style frame (green monospace corner brackets, faint scanline texture), low opacity, wrapping the video for the interior of the diagnostic-model section \u2014 starting at the content note, not at the section's own opening, so the frame's first appearance is deliberately timed to the register shift; Content: corner label \"SYSTEM SCAN: REDEFINING_RACISM.CH2\"; module names swap into the label as each one begins (ROOTKIT already passed; ZERO-DAY, BAYESIAN DEFENSE, POLYMORPHIC CODE, RLC BACKLASH, FRACTAL EXEC, LEXICAL FRACTAL, FIREWALL, \u0394max=0)."
@@ -700,7 +723,8 @@
       "provenance": {
         "tags": [],
         "citations": [],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Content note, plain frame. Type: plain dark title-only card, no imagery, no animation; Content: small, quiet text: \"The historical record referenced here is graphic. Described, not shown.\" No further detail on screen."
@@ -731,7 +755,8 @@
             "line": 2043
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Botnet / node map. Type: node-and-edge network diagram; Content: plantation nodes feeding lines into hub cities (Lisbon, London, Amsterdam, Wall Street), styled as a botnet C2 diagram."
@@ -765,7 +790,8 @@
             "line": 2054
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Bayesian prior + Tajfel result. Type: equation-gloss card, then simple bar-choice diagram; Content: gloss: \"installed prior overrides raw evidence\"; three allocation options (max joint profit / max in-group profit / max difference), \"max difference\" highlighted as the one chosen even at a loss; team-jersey coalition-tracking result shown as a second, smaller panel."
@@ -795,7 +821,8 @@
             "line": 2056
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "LSD/DMN, flagged open question. Type: timeline strip, 1966 \u2192 1970, ending on a \"?\" icon rather than a conclusion; Content: 1966 protocol (91%) \u2192 CA criminalization \u2192 federal amendments \u2192 1970 Controlled Substances Act; final card: \"Deliberate or emergent? Flagged, not resolved.\""
@@ -828,7 +855,8 @@
             "line": 2071
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": ".exe recompile chains + gastronomic interface. Type: terminal/code-editor styled recompile animation, matching the G-19 HUD aesthetic; Content: `Gastronomic_Interface` (Cartwright's \"childlike Negro\") as the founding version, then: `Chattel_Slavery.exe` \u2192 `Convict_Leasing.exe` / `Black_Codes.exe`; `Jim_Crow.exe` \u2192 `War_on_Drugs.exe` / `Mass_Incarceration.exe`; `Explicit_Discrimination.exe` \u2192 `Redlining.exe` / `Predatory_Lending.exe` / `Algorithmic_Bias.exe`."
@@ -858,7 +886,8 @@
             "line": 2082
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Interface-strategy optimizer + three cost tracks. Type: equation-gloss card, then three small trend arrows (coercive, legitimacy, economic); Content: four strategies (partition / integration / direct repression / externalization); all three costs rising through the mid-1950s\u201360s, then dropping sharply at the interface-swap point, labeled with named triggers (NAACP litigation, Brown v. Board, Birmingham, Cold War optics)."
@@ -877,18 +906,23 @@
         "Type": "quote card with a visible \"disputed\" annotation",
         "Content": "the quote, attributed \"reported by Dan Baum,\" with a small secondary line: \"Ehrlichman's family and some Nixon-era defenders dispute this.\""
       },
-      "note": "`[book]` `Paper/The_Original_Power.tex:2173`. Mandatory dispute annotation.",
+      "note": "`[book]` `\"Ehrlichman's family and some Nixon-era\"`. Mandatory dispute annotation.",
       "provenance": {
         "tags": [
           "book"
         ],
-        "citations": [
+        "citations": [],
+        "labels": [],
+        "quotes": [
+          "Ehrlichman's family and some Nixon-era"
+        ],
+        "resolved_quotes": [
           {
+            "quote": "Ehrlichman's family and some Nixon-era",
             "path": "Paper/The_Original_Power.tex",
             "line": 2173
           }
-        ],
-        "labels": []
+        ]
       },
       "suggested_track": "vector",
       "prompt_seed": "Ehrlichman quote, contested. Type: quote card with a visible \"disputed\" annotation; Content: the quote, attributed \"reported by Dan Baum,\" with a small secondary line: \"Ehrlichman's family and some Nixon-era defenders dispute this.\""
@@ -927,7 +961,8 @@
             "line": 2106
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Drug incarceration, sentencing disparity, Broward, Anslinger not-used. Type: bar chart + ratio callout, then two-date case card, then a quote card visibly failing a \"verified\" stamp; Content: 38,680 (1972) \u2192 480,519 (2002) drug-incarceration count; 100:1 crack/powder ratio; *State v. Williams* \u2192 ~2,600 records sought vacated; Anslinger attribution stamped \"UNVERIFIED \u2014 Penn State Special Collections,\" supportable narrower claim shown beneath."
@@ -955,7 +990,8 @@
           "data"
         ],
         "citations": [],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Texas Observer, 2024. Type: single-fact card, present-tense framing; Content: \"24 Texas prison units still run agribusiness operations \u2014 9 on former plantation land (2024).\""
@@ -985,7 +1021,8 @@
             "line": 2161
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "RLC circuit diagram. Type: the manuscript's own series-RLC circuit schematic, redrawn cleanly; Content: voltage source \u2192 resistor (\"bureaucratic/carceral friction\") \u2192 inductor (\"cultural inertia\") \u2192 capacitor (\"token-reform absorption\")."
@@ -1019,7 +1056,8 @@
             "line": 2226
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Damped oscillation trace, Shock 1 and Shock 2. Type: the manuscript's own damped-sine oscillator plot, animated to draw left to right as narrated; Content: baseline at $q=0$; Shock 1 (1865, large amplitude, overshoot labeled \"Black Codes / Convict Leasing\"); Shock 2 (1964, smaller amplitude, overshoot labeled \"War on Drugs / Mass Incarceration\"); damping-ratio tags (0.17 / 0.59 / 0.97) at each event marker."
@@ -1049,7 +1087,8 @@
             "line": 2189
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Resonance / solidarity escape condition. Type: two side-by-side traces \u2014 a single damped pulse (\"isolated reform\") vs. a sustained matched-frequency drive climbing without bound (\"sustained, frequency-matched solidarity\")"
@@ -1068,18 +1107,23 @@
         "Type": "text list, warm tone \u2014 deliberately breaks the HUD aesthetic for this one beat",
         "Content": "Black Wall Street \u00b7 NAACP litigation \u2192 *Brown v. Board* \u00b7 Civil Rights Act victories \u00b7 post-1965 Black professional middle class."
       },
-      "note": "`[book]` `Paper/The_Original_Power.tex:2313`. Mandatory inclusion; do not cut for time.",
+      "note": "`[book]` `\"post-1965 Black professional middle class\"`. Mandatory inclusion; do not cut for time.",
       "provenance": {
         "tags": [
           "book"
         ],
-        "citations": [
+        "citations": [],
+        "labels": [],
+        "quotes": [
+          "post-1965 Black professional middle class"
+        ],
+        "resolved_quotes": [
           {
+            "quote": "post-1965 Black professional middle class",
             "path": "Paper/The_Original_Power.tex",
             "line": 2313
           }
-        ],
-        "labels": []
+        ]
       },
       "suggested_track": "vector",
       "prompt_seed": "Agency disclaimer. Type: text list, warm tone \u2014 deliberately breaks the HUD aesthetic for this one beat; Content: Black Wall Street \u00b7 NAACP litigation \u2192 *Brown v. Board* \u00b7 Civil Rights Act victories \u00b7 post-1965 Black professional middle class."
@@ -1112,7 +1156,8 @@
             "line": 2331
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Post-1965 Backlash Wave, three-track chart. Type: three-line chart, matches `figures/eq08_10_backlash_wave.png`; Content: union density (28.4%\u219210.8%), top-decile wealth share (67.5%\u219276.5%), incarceration rate (108\u2192358/100k; Black incarceration peak 3,074/100k in 2010), 1965\u20132020."
@@ -1142,7 +1187,8 @@
             "line": 2274
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Complex wage / reactive power. Type: vector diagram, reusing the \u03c8 phasor asset from Episode 1; Content: a force vector and a velocity vector drawn perpendicular, labeled material (does work) and status (deflects only, zero material work)."
@@ -1172,7 +1218,8 @@
             "line": 2301
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Coil gun / energy recovery. Type: multi-stage linear-accelerator schematic; Content: labeled coils in sequence (Jim Crow \u2192 Southern Strategy \u2192 War on Drugs), with an energy-arrow flowing from each collapsing coil into the next one's charge."
@@ -1205,7 +1252,8 @@
             "line": 2474
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Six-scale fractal zoom rail. Type: vertical zoom rail, six labeled levels; Content: WAN (global) \u2192 OS (national) \u2192 Subroutine (biological) \u2192 Application (intersectional) \u2192 Auto-exec (colorism) \u2192 [Lexical, added later at G-40]."
@@ -1242,7 +1290,8 @@
             "line": 2482
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "WAN/OS scale detail. Type: two-panel world map + national map overlay; Content: IMF/World Bank/comprador-government flows (global panel); redlining map + gerrymander district outline (national panel)."
@@ -1275,7 +1324,8 @@
             "line": 2492
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Subroutine scale, content-sensitive. Type: plain text citation card, no imagery; Content: \"1662, Virginia: *partus sequitur ventrem* \u2014 child's status follows the mother's.\""
@@ -1312,7 +1362,8 @@
             "line": 2500
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Application layer and auto-exec/colorism. Type: overlapping-circles diagram, then a self-referencing loop diagram; Content: race/gender/sexuality/disability circles, overlap regions shaded darker; a single out-group circle with an arrow looping back into itself, labeled \"self-executing code.\""
@@ -1345,7 +1396,8 @@
             "line": 2530
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Model minority objection + phase-loading operator. Type: Q&A card, then timeline + rising line chart; Content: \"Objection: outperformance despite partition.\" / \"Answer: calibration by insertion point, 1965 Immigration and Nationality Act.\" Then ERA (~1972) / Moral Majority (~1979) / Anita Bryant campaign (1977\u201379) markers; \u03a6_load line rising 0.078 \u2192 0.214 (approx.) \u2192 0.403."
@@ -1378,7 +1430,8 @@
             "line": 2570
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Master/slave patent timeline. Type: timeline, 1904 \u2192 2024, with a sharp step-change marked at 1976; Content: 1904 \"slave clock\" coinage \u2192 pre-WWII neutral hydraulic-patent vocabulary \u2192 1959 scare-quoted patent \u2192 1976+ patent-search count (19,708 documents) \u2192 deployment across named domains. Sixth scale label (\"Lexical\") slots into the G-36 rail here."
@@ -1419,7 +1472,8 @@
             "line": 2585
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "archival",
       "prompt_seed": "Accuracy-audit quotes + Dartmouth 1964/1968. Type: stacked quote cards, then archival terminal-text card; Content: IDE documentation quote; the Black electrical engineer's flip-flop quote; the \"runaway user program\" quote (1964/1968) tagged \"Mode 2: autonomous propagation\"; the 1992 classroom testimony."
@@ -1452,7 +1506,8 @@
             "line": 2601
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Deprecation arc, 2003\u20132020. Type: timeline, three markers, ending on a gap callout; Content: Nov. 2003 (LA County memo) \u2192 2014\u20132018 (Django/Drupal/Redis/CouchDB/ Python) \u2192 June\u2013Oct. 2020 (GitHub `main`, Linux kernel, I\u00b2C v7). Gap callout: \"17 years from complaint to institutional shift.\""
@@ -1485,7 +1540,8 @@
             "line": 2632
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Reflexive audit, the book on itself. Type: text card, breaks the HUD frame briefly (drop the green scanline border for this one card); Content: \"This book uses 'Elite,' not 'master class' \u2014 deliberately.\""
@@ -1519,7 +1575,8 @@
             "line": 2644
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Corrupted firewall diagram. Type: firewall/network-security diagram, inverted (the \"firewall\" node facing the wrong direction); Content: the Buffer Class node positioned as if defending the perimeter, with a dashed arrow showing it is itself inside the extraction flow."
@@ -1552,7 +1609,8 @@
             "line": 2655
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Status wage vs. material wage + SDO/RWA + three buffer functions. Type: two-column comparison with funding-source footnote, then equation-gloss dial diagram, then a three-item checklist; Content: Status wage (deference, courtesy titles, leniency \u2014 no material transfer) / Material wage (land grants, Social Security, GI Bill \u2014 funded by deeper out-group extraction, never by the Elite's own share); SDO and RWA shown as dials scaling the wage's effective value; Threat absorption \u00b7 Perimeter defense \u00b7 Antivirus misdirection."
@@ -1574,18 +1632,23 @@
         "Type": "full-frame quote card, held",
         "Content": "\"The white man will try to satisfy us with symbolic victories rather than economic equity and real Justice.\" \u2014 Malcolm X."
       },
-      "note": "`[book]` `Paper/The_Original_Power.tex:2593`.",
+      "note": "`[book]` `\"try to satisfy us with symbolic victories\"`.",
       "provenance": {
         "tags": [
           "book"
         ],
-        "citations": [
+        "citations": [],
+        "labels": [],
+        "quotes": [
+          "try to satisfy us with symbolic victories"
+        ],
+        "resolved_quotes": [
           {
+            "quote": "try to satisfy us with symbolic victories",
             "path": "Paper/The_Original_Power.tex",
             "line": 2593
           }
-        ],
-        "labels": []
+        ]
       },
       "suggested_track": "vector",
       "prompt_seed": "Malcolm X quote. Type: full-frame quote card, held; Content: \"The white man will try to satisfy us with symbolic victories rather than economic equity and real Justice.\" \u2014 Malcolm X."
@@ -1618,7 +1681,8 @@
             "line": 2700
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Top 0.1% wealth share, falsification condition. Type: long-run line chart, 1913\u2013present, with a shaded \"violation zone\" overlay showing what a real falsification would look like; Content: top 0.1% wealth share since 1913; the New Deal/Great Compression dip (1935\u20131973, 25%\u2192under 10%) highlighted as the candidate case, not yet resolved."
@@ -1646,7 +1710,8 @@
           "book"
         ],
         "citations": [],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Great Compression, three-part rebuttal. Type: three sequential annotation cards over the G-48 chart, appearing as each reason is narrated; Content: 1. \"Forced by convergent threats\" (labor militancy, socialist option, Soviet alternative, anti-colonial movements). 2. \"Every concession still ran through the racial partition\" (GI Bill segregated locally, FHA built redlining, Social Security excluded agricultural/domestic work). 3. \"Recovered on schedule after 1973\" \u2014 the chart's post-1973 line climbing back toward the 1929 peak."
@@ -1679,7 +1744,8 @@
             "line": 2750
           }
         ],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Three modes diagram. Type: three-panel diagram, stacked rather than side-by-side, showing the modes layering on top of each other over time; Content: Intentional Design (Zurara 1453, 1705 Virginia Slave Codes, Three-Fifths Compromise) \u00b7 Autonomous Propagation (1960s real-estate steering, no personal animus required) \u00b7 Conscious Intervention (Ehrlichman, Atwater, reasoning on the record)."
@@ -1710,7 +1776,8 @@
           "design"
         ],
         "citations": [],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Rapid-fire recap. Type: nine-item checklist, ticking in one per line as each host names it; Content: the nine module names in order, each with its elementary-school gloss shown as a small caption beneath."
@@ -1736,7 +1803,8 @@
       "provenance": {
         "tags": [],
         "citations": [],
-        "labels": []
+        "labels": [],
+        "quotes": []
       },
       "suggested_track": "vector",
       "prompt_seed": "Closing card. Type: static; Content: *Architecting the Operation* \u2014 \"Redefining Racism,\" from *The Original Power*. Host card: Toussaint \u00b7 Aisha \u00b7 Emmanuel Theodore."
