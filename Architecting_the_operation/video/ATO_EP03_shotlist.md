@@ -38,7 +38,12 @@ content.
 
 ## Provenance key
 
-- `[book]` — stated in `Paper/The_Original_Power.tex`, cited by line. Line numbers
+- `[book]` — stated in `Paper/The_Original_Power.tex`, cited by a phrase
+  quoted from it: `"runs on human predictive cognition"`. The quote is the
+  anchor because it survives editing the manuscript, and `shotspec.py`
+  resolves it to a current line number in the generated spec. A bare line
+  number (`:208`) still parses, and still goes stale the next time the
+  chapter above it grows. Line numbers
   below are current as of the Chapter 2 factual brief (`notes/CH2_findings.md`,
   audited against lines 1567–2681) and will drift with any upstream manuscript edit.
 - `[data]` — computed from a CSV in `Paper/data/`, or a number stated in-text and
@@ -168,7 +173,7 @@ beat (G-46) gets the same restrained treatment.
 - **Hold:** through 12:22
 - **Type:** three-box flow diagram, red, struck through on the reveal
 - **Content:** Individual Prejudice → Discriminatory Actions → Systemic Outcomes.
-- **Note:** `[book]` `Paper/The_Original_Power.tex:1789` (Eq. 1.3).
+- **Note:** `[book]` `"individual prejudice, discriminatory actions"` (Eq. 1.3).
 
 ## G-11 — Reversed causal arrow + Zurara/Fields
 
@@ -349,7 +354,7 @@ beat (G-46) gets the same restrained treatment.
 - **Type:** quote card with a visible "disputed" annotation
 - **Content:** the quote, attributed "reported by Dan Baum," with a small secondary
   line: "Ehrlichman's family and some Nixon-era defenders dispute this."
-- **Note:** `[book]` `Paper/The_Original_Power.tex:2173`. Mandatory dispute
+- **Note:** `[book]` `"Ehrlichman's family and some Nixon-era"`. Mandatory dispute
   annotation.
 
 ## G-27 — Drug incarceration, sentencing disparity, Broward, Anslinger not-used
@@ -417,7 +422,7 @@ beat (G-46) gets the same restrained treatment.
   one beat
 - **Content:** Black Wall Street · NAACP litigation → *Brown v. Board* · Civil
   Rights Act victories · post-1965 Black professional middle class.
-- **Note:** `[book]` `Paper/The_Original_Power.tex:2313`. Mandatory inclusion; do not
+- **Note:** `[book]` `"post-1965 Black professional middle class"`. Mandatory inclusion; do not
   cut for time.
 
 ## G-33 — Post-1965 Backlash Wave, three-track chart
@@ -577,7 +582,7 @@ beat (G-46) gets the same restrained treatment.
 - **Type:** full-frame quote card, held
 - **Content:** "The white man will try to satisfy us with symbolic victories rather
   than economic equity and real Justice." — Malcolm X.
-- **Note:** `[book]` `Paper/The_Original_Power.tex:2593`.
+- **Note:** `[book]` `"try to satisfy us with symbolic victories"`.
 
 ## G-48 — Top 0.1% wealth share, falsification condition
 
