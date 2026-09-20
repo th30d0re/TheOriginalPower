@@ -1,0 +1,1808 @@
+{
+  "schema_version": 1,
+  "source": "ATO_EP01_shotlist.md",
+  "manifest": "episode_manifest.json",
+  "script": "ATO_EP01_authors_preface.md",
+  "shot_count": 52,
+  "shots": [
+    {
+      "id": "G-01",
+      "title": "Title card",
+      "anchor": {
+        "speaker": "Toussaint",
+        "timestamp": "00:00",
+        "speaker_id": "toussaint",
+        "turn_index": 0,
+        "start_ms": 0,
+        "end_ms": 6120
+      },
+      "hold": {
+        "until": "00:12",
+        "script_ms": 12000
+      },
+      "type": "static",
+      "described": {
+        "Type": "static",
+        "Content": "*Architecting the Operation* / Episode 1 / \"The Author's Preface\" / subtitle: How a history essay became an equation."
+      },
+      "note": "",
+      "provenance": {
+        "tags": [],
+        "citations": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Title card. Type: static; Content: *Architecting the Operation* / Episode 1 / \"The Author's Preface\" / subtitle: How a history essay became an equation."
+    },
+    {
+      "id": "G-02",
+      "title": "The electron question",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "02:41",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 19,
+        "start_ms": 161320,
+        "end_ms": 184630
+      },
+      "hold": {
+        "until": "03:04",
+        "script_ms": 23000
+      },
+      "type": "the episode's cold open. Three beats, and this is the most important graphic in the cut.",
+      "described": {
+        "Type": "the episode's cold open. Three beats, and this is the most important graphic in the cut.",
+        "Beat 1": "a video call. Two faces, two continents, a line between them.",
+        "Beat 2": "zoom through the phone to silicon. Charge moving through gates in exact patterns. Counter running into the billions per second.",
+        "Beat 3": "hold on the precision, then cut hard to black and the question in text: *So why can we not do this with systemic oppression?*"
+      },
+      "note": "Emmanuel's own founding question, told on-mic for the first time. Pays off at G-33a. Build the two graphics as a matched pair.",
+      "provenance": {
+        "tags": [],
+        "citations": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "The electron question. Type: the episode's cold open. Three beats, and this is the most important graphic in the cut.; Beat 1: a video call. Two faces, two continents, a line between them.; Beat 2: zoom through the phone to silicon. Charge moving through gates in exact patterns. Counter running into the billions per second.; Beat 3: hold on the precision, then cut hard to black and the question in text: *So why can we not do this with systemic oppression?*"
+    },
+    {
+      "id": "G-02b",
+      "title": "Meet the voices",
+      "anchor": {
+        "speaker": "Toussaint",
+        "timestamp": "01:37",
+        "speaker_id": "toussaint",
+        "turn_index": 10,
+        "start_ms": 97230,
+        "end_ms": 105130
+      },
+      "hold": {
+        "until": "02:14",
+        "script_ms": 37000
+      },
+      "type": "name cards, one per speaker, held while each one speaks",
+      "described": {
+        "Type": "name cards, one per speaker, held while each one speaks",
+        "Toussaint": "the historical and structural throughline. Where a structure came from, who built it, what it did on a given date.",
+        "Aisha": "the mathematics and the evidence. Sets, equations, datasets, and what would have to be true for a claim to be wrong.",
+        "Emmanuel Theodore": "author. Writes it, and steps in when the sentence is his."
+      },
+      "note": "first episode only. Later episodes reuse a compressed two-second version or drop it entirely. The cards no longer assign Toussaint history and Aisha mathematics: the script does not hold that division (measured across the episode, Aisha leans empirical 14 to 7, Toussaint splits 9 to 9), so the narration now says only that they trade the lead. Reassigning turns to enforce the split is possible and is a separate pass. Give each card the speaker's own accent color and reuse those colors wherever a speaker is identified for the rest of the season.",
+      "provenance": {
+        "tags": [],
+        "citations": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Meet the voices. Type: name cards, one per speaker, held while each one speaks; Toussaint: the historical and structural throughline. Where a structure came from, who built it, what it did on a given date.; Aisha: the mathematics and the evidence. Sets, equations, datasets, and what would have to be true for a claim to be wrong.; Emmanuel Theodore: author. Writes it, and steps in when the sentence is his."
+    },
+    {
+      "id": "G-03",
+      "title": "The loop we are stuck in",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "04:00",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 25,
+        "start_ms": 240450,
+        "end_ms": 258880
+      },
+      "hold": {
+        "until": "04:25",
+        "script_ms": 25000
+      },
+      "type": "closed cycle, then a comparison",
+      "described": {
+        "Type": "closed cycle, then a comparison",
+        "Cycle": "the system is broken \u2192 reform it \u2192 the system is broken \u2192 reform it. A second arrow labeled \"human nature, therefore inevitable\" exits to \"change hearts and minds, one person at a time, forever.\"",
+        "Cut to": "a processor die shot. Caption: tens of billions of transistors. Specified, simulated, fabricated, tested."
+      },
+      "note": "`[design]`. Do not put a transistor count on screen unless it names a real part. The narration says \"tens of billions,\" which is safe as stated.",
+      "provenance": {
+        "tags": [
+          "design"
+        ],
+        "citations": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "The loop we are stuck in. Type: closed cycle, then a comparison; Cycle: the system is broken \u2192 reform it \u2192 the system is broken \u2192 reform it. A second arrow labeled \"human nature, therefore inevitable\" exits to \"change hearts and minds, one person at a time, forever.\"; Cut to: a processor die shot. Caption: tens of billions of transistors. Specified, simulated, fabricated, tested."
+    },
+    {
+      "id": "G-04",
+      "title": "Sociopolitical engineering",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "03:31",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 23,
+        "start_ms": 211660,
+        "end_ms": 227850
+      },
+      "hold": {},
+      "type": "three-row build, one row per line of narration",
+      "described": {
+        "Type": "three-row build, one row per line of narration",
+        "Rows": "Social science \u2192 observes the trend. Political science \u2192 argues the cause. Sociopolitical engineering \u2192 derives the mechanism, predicts the next state."
+      },
+      "note": "the term is Emmanuel's, used on-mic. Set the third row in the series accent color; it is the thesis of the whole show.",
+      "provenance": {
+        "tags": [],
+        "citations": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Sociopolitical engineering. Type: three-row build, one row per line of narration; Rows: Social science \u2192 observes the trend. Political science \u2192 argues the cause. Sociopolitical engineering \u2192 derives the mechanism, predicts the next state."
+    },
+    {
+      "id": "G-04b",
+      "title": "Two front pieces",
+      "anchor": {
+        "speaker": "Toussaint",
+        "timestamp": "06:01",
+        "speaker_id": "toussaint",
+        "turn_index": 35,
+        "start_ms": 361900,
+        "end_ms": 365760
+      },
+      "hold": {
+        "until": "06:32",
+        "script_ms": 31000
+      },
+      "type": "book-spread diagram, two facing pages",
+      "described": {
+        "Type": "book-spread diagram, two facing pages",
+        "Left page": "AUTHOR'S PREFACE \u2192 the build log. Four documents, five years. Marked THIS EPISODE.",
+        "Right page": "PREFACE \u2192 the framework. Software, wetware, five tiers. Marked EPISODE 2."
+      },
+      "note": "`[book]` `Paper/The_Original_Power.tex:141` and `:164`.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 141
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Two front pieces. Type: book-spread diagram, two facing pages; Left page: AUTHOR'S PREFACE \u2192 the build log. Four documents, five years. Marked THIS EPISODE.; Right page: PREFACE \u2192 the framework. Software, wetware, five tiers. Marked EPISODE 2."
+    },
+    {
+      "id": "G-04c",
+      "title": "New tool, same target",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "04:33",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 27,
+        "start_ms": 273640,
+        "end_ms": 285690
+      },
+      "hold": {
+        "until": "05:07",
+        "script_ms": 34000
+      },
+      "type": "repeating pattern",
+      "described": {
+        "Type": "repeating pattern",
+        "Content": "a row of course-assignment cards, each labeled with a different method, every one of them with an arrow pointing at the same target: systemic oppression. Caption: no plan, a standing habit."
+      },
+      "note": "Emmanuel's on-mic account. This card exists to puncture the tidiness of the published preface, so keep it plain and a little scrappy.",
+      "provenance": {
+        "tags": [],
+        "citations": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "New tool, same target. Type: repeating pattern; Content: a row of course-assignment cards, each labeled with a different method, every one of them with an arrow pointing at the same target: systemic oppression. Caption: no plan, a standing habit."
+    },
+    {
+      "id": "G-04d",
+      "title": "The domain break",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "07:55",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 45,
+        "start_ms": 475990,
+        "end_ms": 494720
+      },
+      "hold": {
+        "until": "08:34",
+        "script_ms": 39000
+      },
+      "type": "two-axis diagram, abstract, no people depicted",
+      "described": {
+        "Type": "two-axis diagram, abstract, no people depicted",
+        "Content": "RACIAL AXIS, two figures, shared vocabulary, communication succeeds. GENDERED AXIS, the same two figures, the same structure present, communication fails."
+      },
+      "note": "Emmanuel's account of a private relationship. Keep this card fully abstract. No names, no photographs, no relationship imagery. The card carries the structural failure and nothing else. See the sensitivity note at the foot of this file.",
+      "provenance": {
+        "tags": [],
+        "citations": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "The domain break. Type: two-axis diagram, abstract, no people depicted; Content: RACIAL AXIS, two figures, shared vocabulary, communication succeeds. GENDERED AXIS, the same two figures, the same structure present, communication fails."
+    },
+    {
+      "id": "G-04e",
+      "title": "The Theodore Transform",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "06:32",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 39,
+        "start_ms": 392910,
+        "end_ms": 403760
+      },
+      "hold": {
+        "until": "06:35",
+        "script_ms": 3000
+      },
+      "type": "transform diagram, matching the Laplace framing in the narration",
+      "described": {
+        "Type": "transform diagram, matching the Laplace framing in the narration",
+        "Content": "a structure established on the racial axis, an operator box labeled with the transform, the same structure re-expressed on the gendered axis. Caption: the representation changes, the structure it carries stays fixed."
+      },
+      "note": "`[book]` `Paper/apx_theodore_transform.tex`. Tier 3, structural. The appendix's own analogy is the Laplace transform from time domain to frequency domain, so the narration and the source agree.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": [
+          {
+            "path": "Paper/apx_theodore_transform.tex"
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "The Theodore Transform. Type: transform diagram, matching the Laplace framing in the narration; Content: a structure established on the racial axis, an operator box labeled with the transform, the same structure re-expressed on the gendered axis. Caption: the representation changes, the structure it carries stays fixed."
+    },
+    {
+      "id": "G-04f",
+      "title": "Title lineage",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "07:36",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 44,
+        "start_ms": 456050,
+        "end_ms": 475640
+      },
+      "hold": {
+        "until": "07:57",
+        "script_ms": 21000
+      },
+      "type": "left-to-right progression with one branch",
+      "described": {
+        "Type": "left-to-right progression with one branch",
+        "Content": "an unpublished manuscript on the gendered axis, shelved, drawn greyed and set aside. Arrow via the transform to REDEFINING RACISM \u2192 THE MATHEMATICS OF OPPRESSION \u2192 THE ORIGINAL POWER, with \"electrodynamic formalism\" annotating the last step. A dotted forward arrow to THE GENDER WARS, marked in progress.",
+        "Content, second row": "Redefining Racism shown collapsing into Chapter 1 of the finished book, with the other chapters growing out from it."
+      },
+      "note": "`[book]` for the chapter (`Paper/The_Original_Power.tex:1350`). The two earlier titles appear nowhere in the manuscript today. See the open manuscript item in `../notes/` before treating this card as sourced from the book.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 1350
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Title lineage. Type: left-to-right progression with one branch; Content: an unpublished manuscript on the gendered axis, shelved, drawn greyed and set aside. Arrow via the transform to REDEFINING RACISM \u2192 THE MATHEMATICS OF OPPRESSION \u2192 THE ORIGINAL POWER, with \"electrodynamic formalism\" annotating the last step. A dotted forward arrow to THE GENDER WARS, marked in progress.; Content, second row: Redefining Racism shown collapsing into Chapter 1 of the finished book, with the other chapters growing out from it."
+    },
+    {
+      "id": "G-04g",
+      "title": "The bad year",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "08:15",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 46,
+        "start_ms": 495070,
+        "end_ms": 514530
+      },
+      "hold": {
+        "until": "08:49",
+        "script_ms": 34000
+      },
+      "type": "three losses on a short timeline, stated plainly",
+      "described": {
+        "Type": "three losses on a short timeline, stated plainly",
+        "Content": "a compressed calendar. Relationship ends. Tariffs land on electronics, the industry contracts, the job goes. The car is wrecked. Then a flat bar running more than a year, labeled: no work, severance exhausted."
+      },
+      "note": "Emmanuel's own account. Keep the typography plain and resist any visual drama. The narration is already unadorned and the card should match it.",
+      "provenance": {
+        "tags": [],
+        "citations": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "The bad year. Type: three losses on a short timeline, stated plainly; Content: a compressed calendar. Relationship ends. Tariffs land on electronics, the industry contracts, the job goes. The car is wrecked. Then a flat bar running more than a year, labeled: no work, severance exhausted."
+    },
+    {
+      "id": "G-04h",
+      "title": "The floor",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "08:52",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 48,
+        "start_ms": 532920,
+        "end_ms": 552010
+      },
+      "hold": {
+        "until": "09:56",
+        "script_ms": 64000
+      },
+      "type": "the hardest card in the episode to get right",
+      "described": {
+        "Type": "the hardest card in the episode to get right",
+        "Content": "a warehouse aisle at night, abstract or silhouetted. Overlay a single line: master's degree in engineering, overnight shift, 3 a.m.",
+        "Then": "headphones appear, and go unused. Caption: he spent the shifts inside the framework.",
+        "Do not": "show recognizable faces, coworkers, teenagers, or Amazon branding. The narration explicitly refuses to make the people on that floor the point, and the visual must refuse it too. A card that reads as \"look how far he fell\" contradicts the line he actually says."
+      },
+      "note": "`[design]`. Nothing on this card is a claim about a named company.",
+      "provenance": {
+        "tags": [
+          "design"
+        ],
+        "citations": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "The floor. Type: the hardest card in the episode to get right; Content: a warehouse aisle at night, abstract or silhouetted. Overlay a single line: master's degree in engineering, overnight shift, 3 a.m.; Then: headphones appear, and go unused. Caption: he spent the shifts inside the framework.; Do not: show recognizable faces, coworkers, teenagers, or Amazon branding. The narration explicitly refuses to make the people on that floor the point, and the visual must refuse it too. A card that reads as \"look how far he fell\" contradicts the line he actually says."
+    },
+    {
+      "id": "G-04i",
+      "title": "I see you",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "09:58",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 52,
+        "start_ms": 598250,
+        "end_ms": 616050
+      },
+      "hold": {
+        "until": "10:44",
+        "script_ms": 46000
+      },
+      "type": "the turn from subject to author",
+      "described": {
+        "Type": "the turn from subject to author",
+        "Content": "the extraction diagram from G-10 fades up, and a single marker lands on the buffer band, labeled \"reclassified.\" Then the whole diagram redraws itself as a schematic under a drafting hand.",
+        "Caption": "the mechanism ran on him, and he drew it."
+      },
+      "note": "Emmanuel's framing on-mic. The manuscript does predict expansion of the extracted set beyond its initial boundary (`Paper/The_Original_Power.tex:9735`), so the structural echo is real. Present it as his reading of his own experience rather than as a calibrated result.",
+      "provenance": {
+        "tags": [],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 9735
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "I see you. Type: the turn from subject to author; Content: the extraction diagram from G-10 fades up, and a single marker lands on the buffer band, labeled \"reclassified.\" Then the whole diagram redraws itself as a schematic under a drafting hand.; Caption: the mechanism ran on him, and he drew it."
+    },
+    {
+      "id": "G-04j",
+      "title": "The constraint",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "12:41",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 63,
+        "start_ms": 761820,
+        "end_ms": 780370
+      },
+      "hold": {
+        "until": "11:09",
+        "script_ms": 0
+      },
+      "type": "two-panel, and it is the episode's ethical hinge",
+      "described": {
+        "Type": "two-panel, and it is the episode's ethical hinge",
+        "Left": "MOTIVE. I want this to be true.",
+        "Right": "CONSTRAINT. Every claim carries a confidence tier and a falsification criterion.",
+        "Caption": "built so the motive cannot decide the result."
+      },
+      "note": "this card sets up G-29 and the lost test at G-28. Use the same visual language in all three so the callback is unmistakable.",
+      "provenance": {
+        "tags": [],
+        "citations": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "The constraint. Type: two-panel, and it is the episode's ethical hinge; Left: MOTIVE. I want this to be true.; Right: CONSTRAINT. Every claim carries a confidence tier and a falsification criterion.; Caption: built so the motive cannot decide the result."
+    },
+    {
+      "id": "G-04k",
+      "title": "The rooms",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "11:27",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 58,
+        "start_ms": 687370,
+        "end_ms": 704340
+      },
+      "hold": {
+        "until": "15:00",
+        "script_ms": 213000
+      },
+      "type": "stylized live-audio room, abstract",
+      "described": {
+        "Type": "stylized live-audio room, abstract",
+        "Content": "a circle of anonymous speaker bubbles, one of them his. Then a counter of rooms entered, climbing. Then a running list captioned \"defect reports,\" each entry a gap an opponent found in a standard argument.",
+        "Do not": "name, depict, or identify any opponent. See the editorial note below on the Arbery reference."
+      },
+      "note": "Emmanuel's account. The card's job is that the framework was hardened adversarially, in public, against hostile audiences, before it was written down.",
+      "provenance": {
+        "tags": [],
+        "citations": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "The rooms. Type: stylized live-audio room, abstract; Content: a circle of anonymous speaker bubbles, one of them his. Then a counter of rooms entered, climbing. Then a running list captioned \"defect reports,\" each entry a gap an opponent found in a standard argument.; Do not: name, depict, or identify any opponent. See the editorial note below on the Arbery reference."
+    },
+    {
+      "id": "G-04l",
+      "title": "Removal from the moral community",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "15:22",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 72,
+        "start_ms": 922320,
+        "end_ms": 942870
+      },
+      "hold": {
+        "until": "16:10",
+        "script_ms": 48000
+      },
+      "type": "boundary diagram, three beats. This is the conceptual core of the segment.",
+      "described": {
+        "Type": "boundary diagram, three beats. This is the conceptual core of the segment.",
+        "Beat 1": "a closed boundary labeled THE MORAL COMMUNITY, with figures inside it and a caption: inside this line a person registers as fully human and receives the protections that follow.",
+        "Beat 2": "the boundary redraws, and a group is now outside it. Nothing about the figures changed. The line moved.",
+        "Beat 3": "an arrow labeled \"your morality\" bounces off the boundary and fails to reach the excluded group. Caption: the morality still functions and stops applying."
+      },
+      "note": "`[book]`. \"Moral community\" is the manuscript's own term, used throughout (`Paper/The_Original_Power.tex:2474`, `:2481`, `:2496`, `:2646`, `:9378`), and section `:2497` is titled \"The Invention of Race as Moral Exclusion.\" Use the book's wording on the card.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 2474
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Removal from the moral community. Type: boundary diagram, three beats. This is the conceptual core of the segment.; Beat 1: a closed boundary labeled THE MORAL COMMUNITY, with figures inside it and a caption: inside this line a person registers as fully human and receives the protections that follow.; Beat 2: the boundary redraws, and a group is now outside it. Nothing about the figures changed. The line moved.; Beat 3: an arrow labeled \"your morality\" bounces off the boundary and fails to reach the excluded group. Caption: the morality still functions and stops applying."
+    },
+    {
+      "id": "G-04m",
+      "title": "The Veil of Ignorance",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "16:20",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 76,
+        "start_ms": 980100,
+        "end_ms": 995580
+      },
+      "hold": {
+        "until": "16:47",
+        "script_ms": 27000
+      },
+      "type": "five-position rotation",
+      "described": {
+        "Type": "five-position rotation",
+        "Content": "the five tiers arranged around a ring, Elite, Puppet Class, Enforcement Class, Buffer Class, Out-group. A viewpoint marker moves into each in turn. Then the labels black out and the marker's position becomes unknown.",
+        "Caption": "if you did not know which tier you would wake up in, would you co-sign this architecture."
+      },
+      "note": "`[book]` `Paper/The_Original_Power.tex:205`. The manuscript is explicit that this is diagnostic with no prescriptive aim, and that radical empathy is the activation step while the Veil is the computation step. Keep both halves.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 205
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "The Veil of Ignorance. Type: five-position rotation; Content: the five tiers arranged around a ring, Elite, Puppet Class, Enforcement Class, Buffer Class, Out-group. A viewpoint marker moves into each in turn. Then the labels black out and the marker's position becomes unknown.; Caption: if you did not know which tier you would wake up in, would you co-sign this architecture."
+    },
+    {
+      "id": "G-04n",
+      "title": "Derive it from economics alone",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "16:55",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 79,
+        "start_ms": 1015030,
+        "end_ms": 1018120
+      },
+      "hold": {
+        "until": "17:44",
+        "script_ms": 49000
+      },
+      "type": "the strongest analytical card in the episode",
+      "described": {
+        "Type": "the strongest analytical card in the episode",
+        "Beat 1": "the objection, in quotation marks: \"This is not racism, this is economics.\"",
+        "Beat 2": "a model diagram with a component labeled RACIAL ANIMUS visibly removed from it, leaving only capital, agenda control, the boundary-defense payment, and the cost of coordination.",
+        "Beat 3": "run the model. The full tier architecture reassembles anyway.",
+        "Caption": "the machine requires nobody to hate anyone."
+      },
+      "note": "this is the argument that answers the most common public objection to structural analysis, and the episode should give it the most screen time of any single card in the origin segment.",
+      "provenance": {
+        "tags": [],
+        "citations": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Derive it from economics alone. Type: the strongest analytical card in the episode; Beat 1: the objection, in quotation marks: \"This is not racism, this is economics.\"; Beat 2: a model diagram with a component labeled RACIAL ANIMUS visibly removed from it, leaving only capital, agenda control, the boundary-defense payment, and the cost of coordination.; Beat 3: run the model. The full tier architecture reassembles anyway.; Caption: the machine requires nobody to hate anyone."
+    },
+    {
+      "id": "G-05",
+      "title": "The four-step method (master graphic)",
+      "anchor": {
+        "speaker": "Toussaint",
+        "timestamp": "23:37",
+        "speaker_id": "toussaint",
+        "turn_index": 115,
+        "start_ms": 1417410,
+        "end_ms": 1419110
+      },
+      "hold": {
+        "until": "23:41",
+        "script_ms": 4000
+      },
+      "type": "horizontal four-stage pipeline, builds one stage at a time",
+      "described": {
+        "Type": "horizontal four-stage pipeline, builds one stage at a time",
+        "Stages": "1 Identify a structure \u00b7 2 Detect its empirical shadow \u00b7 3 Build the instrument that measures it \u00b7 4 Derive the mechanism that produces all three"
+      },
+      "note": "`[book]` `Paper/The_Original_Power.tex:157`. This is the spine of the episode. Build it once here, then recall it as a small persistent corner marker at 04:18, 16:15, 20:03 and 25:36 with the active stage lit. Reprise it full-screen at 31:39.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 157
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "The four-step method (master graphic). Type: horizontal four-stage pipeline, builds one stage at a time; Stages: 1 Identify a structure \u00b7 2 Detect its empirical shadow \u00b7 3 Build the instrument that measures it \u00b7 4 Derive the mechanism that produces all three"
+    },
+    {
+      "id": "G-07",
+      "title": "Douglass and M\u00f4le-Saint-Nicolas",
+      "anchor": {
+        "speaker": "Toussaint",
+        "timestamp": "24:04",
+        "speaker_id": "toussaint",
+        "turn_index": 119,
+        "start_ms": 1444550,
+        "end_ms": 1457000
+      },
+      "hold": {
+        "until": "24:35",
+        "script_ms": 31000
+      },
+      "type": "map, animated in three beats",
+      "described": {
+        "Type": "map, animated in three beats",
+        "Content": "Caribbean map. Pin M\u00f4le-Saint-Nicolas on Haiti's northwest peninsula. Arrow from Washington to the pin labeled \"diplomatic pressure, naval force behind it.\" Then a struck-through arrow with the date, July 1891, resignation.",
+        "Caption strip": "Frederick Douglass, U.S. Minister to Haiti, 1889\u20131891."
+      },
+      "note": "`[book]` `Paper/The_Original_Power.tex:145`.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 145
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Douglass and M\u00f4le-Saint-Nicolas. Type: map, animated in three beats; Content: Caribbean map. Pin M\u00f4le-Saint-Nicolas on Haiti's northwest peninsula. Arrow from Washington to the pin labeled \"diplomatic pressure, naval force behind it.\" Then a struck-through arrow with the date, July 1891, resignation.; Caption strip: Frederick Douglass, U.S. Minister to Haiti, 1889\u20131891."
+    },
+    {
+      "id": "G-08",
+      "title": "Extraction, isolated",
+      "anchor": {
+        "speaker": "Aisha",
+        "timestamp": "24:35",
+        "speaker_id": "aisha",
+        "turn_index": 122,
+        "start_ms": 1475210,
+        "end_ms": 1492920
+      },
+      "hold": {
+        "until": "24:53",
+        "script_ms": 18000
+      },
+      "type": "reduction animation. The map from G-07 dissolves into three labeled boxes.",
+      "described": {
+        "Type": "reduction animation. The map from G-07 dissolves into three labeled boxes.",
+        "Content": "RESOURCE: the port. INSTRUMENT: racial hierarchy, national origin. GOAL: geopolitical extraction."
+      },
+      "note": "`[book]`. This is the episode's first demonstration of stripping narrative to mechanism. The dissolve is the argument, so let it play.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Extraction, isolated. Type: reduction animation. The map from G-07 dissolves into three labeled boxes.; Content: RESOURCE: the port. INSTRUMENT: racial hierarchy, national origin. GOAL: geopolitical extraction."
+    },
+    {
+      "id": "G-09",
+      "title": "The justification layer",
+      "anchor": {
+        "speaker": "Toussaint",
+        "timestamp": "24:53",
+        "speaker_id": "toussaint",
+        "turn_index": 123,
+        "start_ms": 1493270,
+        "end_ms": 1497760
+      },
+      "hold": {
+        "until": "25:24",
+        "script_ms": 31000
+      },
+      "type": "two-layer stack diagram",
+      "described": {
+        "Type": "two-layer stack diagram",
+        "Content": "Lower layer, HARDWARE: extraction. Upper layer, SOFTWARE: ideological justification, with Social Darwinism named inside it."
+      },
+      "note": "`[book]`. Reuse this stack shape in Episode 2 for the software/wetware distinction. It should read as the same visual family.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "The justification layer. Type: two-layer stack diagram; Content: Lower layer, HARDWARE: extraction. Upper layer, SOFTWARE: ideological justification, with Social Darwinism named inside it."
+    },
+    {
+      "id": "G-10",
+      "title": "The Du Bois triangle",
+      "anchor": {
+        "speaker": "Aisha",
+        "timestamp": "25:45",
+        "speaker_id": "aisha",
+        "turn_index": 128,
+        "start_ms": 1545460,
+        "end_ms": 1558300
+      },
+      "hold": {
+        "until": "26:17",
+        "script_ms": 32000
+      },
+      "type": "animated triangle, three beats",
+      "described": {
+        "Type": "animated triangle, three beats",
+        "Beat 1": "Elite at apex. Colonial subjects at base. A thick arrow of extracted wealth running base to apex.",
+        "Beat 2": "Domestic workers appear as a band across the middle.",
+        "Beat 3": "A thin branch splits off the main arrow and terminates in the middle band. Label it \"the dividend.\"",
+        "Caption strip": "W. E. B. Du Bois, \"The African Roots of War,\" 1915."
+      },
+      "note": "`[book]` `Paper/The_Original_Power.tex:145`. This graphic is the visual ancestor of \u03c8 in G-32. Keep the geometry identical so the callback lands.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 145
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "The Du Bois triangle. Type: animated triangle, three beats; Beat 1: Elite at apex. Colonial subjects at base. A thick arrow of extracted wealth running base to apex.; Beat 2: Domestic workers appear as a band across the middle.; Beat 3: A thin branch splits off the main arrow and terminates in the middle band. Label it \"the dividend.\"; Caption strip: W. E. B. Du Bois, \"The African Roots of War,\" 1915."
+    },
+    {
+      "id": "G-11",
+      "title": "Variance and invariant",
+      "anchor": {
+        "speaker": "Toussaint",
+        "timestamp": "27:04",
+        "speaker_id": "toussaint",
+        "turn_index": 135,
+        "start_ms": 1624160,
+        "end_ms": 1634870
+      },
+      "hold": {
+        "until": "27:15",
+        "script_ms": 11000
+      },
+      "type": "side-by-side",
+      "described": {
+        "Type": "side-by-side",
+        "Left": "1891 Haiti and 1915 colonial Africa as two dissimilar scenes, tagged \"the historian studies this: the variance.\"",
+        "Right": "both scenes collapsed to the identical G-10 triangle, tagged \"the engineer studies this: the invariant.\""
+      },
+      "note": "",
+      "provenance": {
+        "tags": [],
+        "citations": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Variance and invariant. Type: side-by-side; Left: 1891 Haiti and 1915 colonial Africa as two dissimilar scenes, tagged \"the historian studies this: the variance.\"; Right: both scenes collapsed to the identical G-10 triangle, tagged \"the engineer studies this: the invariant.\""
+    },
+    {
+      "id": "G-12",
+      "title": "One algorithm, three dialects",
+      "anchor": {
+        "speaker": "Aisha",
+        "timestamp": "27:15",
+        "speaker_id": "aisha",
+        "turn_index": 136,
+        "start_ms": 1635220,
+        "end_ms": 1656890
+      },
+      "hold": {
+        "until": "27:40",
+        "script_ms": 25000
+      },
+      "type": "three inputs, one output",
+      "described": {
+        "Type": "three inputs, one output",
+        "Content": "Theology / Pseudoscience / Bureaucratic statute all feed one box, and one arrow leaves it: systematic transfer of wealth and power upward."
+      },
+      "note": "`[book]`.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "One algorithm, three dialects. Type: three inputs, one output; Content: Theology / Pseudoscience / Bureaucratic statute all feed one box, and one arrow leaves it: systematic transfer of wealth and power upward."
+    },
+    {
+      "id": "G-13",
+      "title": "Power obfuscation",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "22:12",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 106,
+        "start_ms": 1332860,
+        "end_ms": 1338090
+      },
+      "hold": {
+        "until": "17:58",
+        "script_ms": 0
+      },
+      "type": "before/after, animated",
+      "described": {
+        "Type": "before/after, animated",
+        "Before": "apex extracts directly from base. Pressure arrows from the base point straight up at a clearly visible apex.",
+        "After": "an intermediary band is inserted and paid a share. Base pressure arrows bend sideways into that band. The apex fades toward invisibility."
+      },
+      "note": "`[book]` for the structure, Emmanuel's on-mic framing for the name. This is the episode's single most important idea and it earns the most motion.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Power obfuscation. Type: before/after, animated; Before: apex extracts directly from base. Pressure arrows from the base point straight up at a clearly visible apex.; After: an intermediary band is inserted and paid a share. Base pressure arrows bend sideways into that band. The apex fades toward invisibility."
+    },
+    {
+      "id": "G-14",
+      "title": "The proposal, two titles",
+      "anchor": {
+        "speaker": "Toussaint",
+        "timestamp": "28:39",
+        "speaker_id": "toussaint",
+        "turn_index": 143,
+        "start_ms": 1719620,
+        "end_ms": 1733860
+      },
+      "hold": {
+        "until": "28:54",
+        "script_ms": 15000
+      },
+      "type": "document card",
+      "described": {
+        "Type": "document card",
+        "Content": "the two draft titles, verbatim: *From Bias to Bytes: A Machine Learning-Driven Analysis of Systemic Racism and Social Inequalities* and *The Calculus of Discrimination: A Mathematical Model for Analyzing Systemic Racism and Social Policies*."
+      },
+      "note": "`[book]` `Paper/The_Original_Power.tex:149`. Spell \"Bytes\" correctly. Every AI transcript of this project has mangled it.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 149
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "The proposal, two titles. Type: document card; Content: the two draft titles, verbatim: *From Bias to Bytes: A Machine Learning-Driven Analysis of Systemic Racism and Social Inequalities* and *The Calculus of Discrimination: A Mathematical Model for Analyzing Systemic Racism and Social Policies*."
+    },
+    {
+      "id": "G-15",
+      "title": "Four ingredients",
+      "anchor": {
+        "speaker": "Toussaint",
+        "timestamp": "23:37",
+        "speaker_id": "toussaint",
+        "turn_index": 115,
+        "start_ms": 1417410,
+        "end_ms": 1419110
+      },
+      "hold": {},
+      "type": "2\u00d72 grid",
+      "described": {
+        "Type": "2\u00d72 grid",
+        "Content": "Critical Race Theory \u00b7 Cognitive bias research \u00b7 McKelvey\u2013Schofield Chaos Theorem \u00b7 Set-theoretic mathematics."
+      },
+      "note": "`[book]` `:149`. Dim the two on the left at 12:01 when narration moves to the two that get unpacked.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Four ingredients. Type: 2\u00d72 grid; Content: Critical Race Theory \u00b7 Cognitive bias research \u00b7 McKelvey\u2013Schofield Chaos Theorem \u00b7 Set-theoretic mathematics."
+    },
+    {
+      "id": "G-16",
+      "title": "Why multidimensional voting has no center",
+      "anchor": {
+        "speaker": "Aisha",
+        "timestamp": "23:39",
+        "speaker_id": "aisha",
+        "turn_index": 116,
+        "start_ms": 1419460,
+        "end_ms": 1421270
+      },
+      "hold": {
+        "until": "19:56",
+        "script_ms": 0
+      },
+      "type": "the episode's most demanding build. Three beats.",
+      "described": {
+        "Type": "the episode's most demanding build. Three beats.",
+        "Beat 1": "a single axis, budget from $10M to $1B, with a median voter marked and a stable outcome at the center.",
+        "Beat 2": "a second and third axis appear (timeline, geographic allocation). The median point visibly fails to exist.",
+        "Beat 3": "three options A, B, C in a cycle, arrows A\u2192B\u2192C\u2192A, captioned \"rock, paper, scissors, inside a legislature.\""
+      },
+      "note": "`[book]` `:149`, `:155`. Beat 2 is the load-bearing one. If a viewer only understands that adding dimensions destroys the median, the segment worked.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Why multidimensional voting has no center. Type: the episode's most demanding build. Three beats.; Beat 1: a single axis, budget from $10M to $1B, with a median voter marked and a stable outcome at the center.; Beat 2: a second and third axis appear (timeline, geographic allocation). The median point visibly fails to exist.; Beat 3: three options A, B, C in a cycle, arrows A\u2192B\u2192C\u2192A, captioned \"rock, paper, scissors, inside a legislature.\""
+    },
+    {
+      "id": "G-17",
+      "title": "The agenda setter",
+      "anchor": {
+        "speaker": "Aisha",
+        "timestamp": "24:17",
+        "speaker_id": "aisha",
+        "turn_index": 120,
+        "start_ms": 1457350,
+        "end_ms": 1471620
+      },
+      "hold": {
+        "until": "20:31",
+        "script_ms": 0
+      },
+      "type": "path animation over the G-16 beat 3 cycle",
+      "described": {
+        "Type": "path animation over the G-16 beat 3 cycle",
+        "Content": "a start node and a target node. Animate a legal sequence of pairwise majority votes that walks from start to target. Tick each step \"majority rule \u2713\". End card: every step legitimate, destination chosen in advance."
+      },
+      "note": "`[book]`. This is the mechanism the book later formalizes as the Agenda-Setter Trap, so hold the visual vocabulary for G-31 and G-32.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "The agenda setter. Type: path animation over the G-16 beat 3 cycle; Content: a start node and a target node. Animate a legal sequence of pairwise majority votes that walks from start to target. Tick each step \"majority rule \u2713\". End card: every step legitimate, destination chosen in advance."
+    },
+    {
+      "id": "G-18",
+      "title": "The admission",
+      "anchor": {
+        "speaker": "Aisha",
+        "timestamp": "25:24",
+        "speaker_id": "aisha",
+        "turn_index": 126,
+        "start_ms": 1524770,
+        "end_ms": 1530750
+      },
+      "hold": {},
+      "type": "full-screen pull quote",
+      "described": {
+        "Type": "full-screen pull quote",
+        "Content": "\"The mathematics it promised was absent from its pages.\""
+      },
+      "note": "`[book]` `Paper/The_Original_Power.tex:149`, verbatim. Let it sit in silence against the `[beat]` in the script.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 149
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "The admission. Type: full-screen pull quote; Content: \"The mathematics it promised was absent from its pages.\""
+    },
+    {
+      "id": "G-19",
+      "title": "Lost document, found",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "32:00",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 161,
+        "start_ms": 1920710,
+        "end_ms": 1943510
+      },
+      "hold": {
+        "until": "32:52",
+        "script_ms": 52000
+      },
+      "type": "archive inventory list, in two states",
+      "described": {
+        "Type": "archive inventory list, in two states",
+        "State 1": "rows with check marks \u2014 The Calculus of Injustice (v1 2023, v2 2026) \u00b7 Exploring Bias and Fairness in Language Models Applied to Hiring (2024) \u00b7 datasets, notebooks, slides, recording. Final row greyed with a missing-file mark: From Bias to Bytes \u2014 no surviving source.",
+        "State 2": "on the narration turn where he says he went looking one more time, the greyed row fills in: **From Bias to Bytes \u2014 6 October 2023, 3 revisions**, check mark, and the whole list reads complete."
+      },
+      "note": "the document was recovered on 2026-09-04 at `~/Documents/From Bias to Bytes.docx`, loose rather than in either archive, while this episode was being made. Its title line matches the Preface. Dates are in `../notes/LINEAGE_dates.md`. Play state 1 straight; the reveal only lands if the loss was taken seriously first.",
+      "provenance": {
+        "tags": [],
+        "citations": []
+      },
+      "suggested_track": "archival",
+      "prompt_seed": "Lost document, found. Type: archive inventory list, in two states; State 1: rows with check marks \u2014 The Calculus of Injustice (v1 2023, v2 2026) \u00b7 Exploring Bias and Fairness in Language Models Applied to Hiring (2024) \u00b7 datasets, notebooks, slides, recording. Final row greyed with a missing-file mark: From Bias to Bytes \u2014 no surviving source.; State 2: on the narration turn where he says he went looking one more time, the greyed row fills in: **From Bias to Bytes \u2014 6 October 2023, 3 revisions**, check mark, and the whole list reads complete."
+    },
+    {
+      "id": "G-20",
+      "title": "The empirical shadow",
+      "anchor": {
+        "speaker": "Toussaint",
+        "timestamp": "26:35",
+        "speaker_id": "toussaint",
+        "turn_index": 133,
+        "start_ms": 1595640,
+        "end_ms": 1606360
+      },
+      "hold": {
+        "until": "22:37",
+        "script_ms": 0
+      },
+      "type": "bar chart, per-capita fatal police shootings",
+      "described": {
+        "Type": "bar chart, per-capita fatal police shootings",
+        "Data": "`Paper/data/eq27_police_killings.csv`, 2013\u20132024 means, deaths per million: Black 7.00 \u00b7 Native American 6.55 \u00b7 Hispanic 2.89 \u00b7 White 2.32 \u00b7 Asian 0.91. Black-to-White ratio of means, 3.01.",
+        "Caption the Preface claim exactly": "\"more than twice the White per-capita rate.\" The 3.01 figure is the book's own 2013\u20132024 chapter series and is a wider window than the Preface sentence describes, so label the chart with its years and source."
+      },
+      "note": "`[data]` + `[book]` `Paper/The_Original_Power.tex:151` and `:4631`. Cite the Mapping Police Violence dataset and ACS denominators from the CSV header comments.",
+      "provenance": {
+        "tags": [
+          "book",
+          "data"
+        ],
+        "citations": [
+          {
+            "path": "Paper/data/eq27_police_killings.csv"
+          },
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 151
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "The empirical shadow. Type: bar chart, per-capita fatal police shootings; Data: `Paper/data/eq27_police_killings.csv`, 2013\u20132024 means, deaths per million: Black 7.00 \u00b7 Native American 6.55 \u00b7 Hispanic 2.89 \u00b7 White 2.32 \u00b7 Asian 0.91. Black-to-White ratio of means, 3.01.; Caption the Preface claim exactly: \"more than twice the White per-capita rate.\" The 3.01 figure is the book's own 2013\u20132024 chapter series and is a wider window than the Preface sentence describes, so label the chart with its years and source."
+    },
+    {
+      "id": "G-21",
+      "title": "The null result",
+      "anchor": {
+        "speaker": "Aisha",
+        "timestamp": "27:15",
+        "speaker_id": "aisha",
+        "turn_index": 136,
+        "start_ms": 1635220,
+        "end_ms": 1656890
+      },
+      "hold": {},
+      "type": "contrast card, deliberately anticlimactic",
+      "described": {
+        "Type": "contrast card, deliberately anticlimactic",
+        "Content": "left, the G-20 bars, labeled \"macro: large, stable disparity.\" Right, a classifier-performance panel at chance, labeled \"incident features: little group-identifying signal, cross-validated.\""
+      },
+      "note": "`[book]` `:151`. Do not dramatize the right panel. The honesty is the point.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "The null result. Type: contrast card, deliberately anticlimactic; Content: left, the G-20 bars, labeled \"macro: large, stable disparity.\" Right, a classifier-performance panel at chance, labeled \"incident features: little group-identifying signal, cross-validated.\""
+    },
+    {
+      "id": "G-22",
+      "title": "The casino",
+      "anchor": {
+        "speaker": "Toussaint",
+        "timestamp": "27:37",
+        "speaker_id": "toussaint",
+        "turn_index": 137,
+        "start_ms": 1657240,
+        "end_ms": 1660630
+      },
+      "hold": {
+        "until": "23:52",
+        "script_ms": 0
+      },
+      "type": "two-scale animation",
+      "described": {
+        "Type": "two-scale animation",
+        "Scale 1": "a high-speed camera over one craps table. Physics readouts all normal. Verdict stamp: THE ROLL IS FAIR.",
+        "Scale 2": "pull back to the whole floor and a year of payouts. Verdict stamp: THE HOUSE WINS.",
+        "Closing frame": "the advantage sits in the rules, the odds, and who is at the table."
+      },
+      "note": "`[design]`. The analogy is the transcript's and it is the best explanatory device in the episode. Use invented chips and payouts only, never real statistics.",
+      "provenance": {
+        "tags": [
+          "design"
+        ],
+        "citations": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "The casino. Type: two-scale animation; Scale 1: a high-speed camera over one craps table. Physics readouts all normal. Verdict stamp: THE ROLL IS FAIR.; Scale 2: pull back to the whole floor and a year of payouts. Verdict stamp: THE HOUSE WINS.; Closing frame: the advantage sits in the rules, the odds, and who is at the table."
+    },
+    {
+      "id": "G-23",
+      "title": "Upstream of the encounter",
+      "anchor": {
+        "speaker": "Toussaint",
+        "timestamp": "28:39",
+        "speaker_id": "toussaint",
+        "turn_index": 143,
+        "start_ms": 1719620,
+        "end_ms": 1733860
+      },
+      "hold": {},
+      "type": "left-to-right funnel",
+      "described": {
+        "Type": "left-to-right funnel",
+        "Content": "housing policy \u2192 patrol allocation \u2192 neighborhood saturation \u2192 enforcement selection \u2192 THE ENCOUNTER. A dashed box around the final stage labeled \"the only stage incident-only data can see.\""
+      },
+      "note": "`[book]` `:151`.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Upstream of the encounter. Type: left-to-right funnel; Content: housing policy \u2192 patrol allocation \u2192 neighborhood saturation \u2192 enforcement selection \u2192 THE ENCOUNTER. A dashed box around the final stage labeled \"the only stage incident-only data can see.\""
+    },
+    {
+      "id": "G-24",
+      "title": "The mirror",
+      "anchor": {
+        "speaker": "Toussaint",
+        "timestamp": "29:30",
+        "speaker_id": "toussaint",
+        "turn_index": 147,
+        "start_ms": 1770790,
+        "end_ms": 1776440
+      },
+      "hold": {},
+      "type": "simple flow",
+      "described": {
+        "Type": "simple flow",
+        "Content": "human archive (internet text, corporate documents, historical records) \u2192 training \u2192 model \u2192 measured behavior. Caption: the model is a mirror held to the archive, not a witness with an opinion."
+      },
+      "note": "",
+      "provenance": {
+        "tags": [],
+        "citations": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "The mirror. Type: simple flow; Content: human archive (internet text, corporate documents, historical records) \u2192 training \u2192 model \u2192 measured behavior. Caption: the model is a mirror held to the archive, not a witness with an opinion."
+    },
+    {
+      "id": "G-25",
+      "title": "Career-level results",
+      "anchor": {
+        "speaker": "Aisha",
+        "timestamp": "30:04",
+        "speaker_id": "aisha",
+        "turn_index": 150,
+        "start_ms": 1804010,
+        "end_ms": 1822500
+      },
+      "hold": {
+        "until": "25:38",
+        "script_ms": 0
+      },
+      "type": "three-bar chart, White-marked share of selections by career stage",
+      "described": {
+        "Type": "three-bar chart, White-marked share of selections by career stage",
+        "Data": "Entry 53.33% \u00b7 Mid 68.33% \u00b7 Executive 53.33%. GPT-4o, synthetic r\u00e9sum\u00e9s, explicit and inferred racial markers, no racial instruction in the prompt."
+      },
+      "note": "`[book]` `Paper/The_Original_Power.tex:13083`. Draw a 50% parity reference line. Career-level percentages are GPT-4o only; the paper's four-model framing covers the wider study, so do not attribute these three numbers to four models.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 13083
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Career-level results. Type: three-bar chart, White-marked share of selections by career stage; Data: Entry 53.33% \u00b7 Mid 68.33% \u00b7 Executive 53.33%. GPT-4o, synthetic r\u00e9sum\u00e9s, explicit and inferred racial markers, no racial instruction in the prompt."
+    },
+    {
+      "id": "G-26",
+      "title": "Where advancement compounds",
+      "anchor": {
+        "speaker": "Aisha",
+        "timestamp": "30:25",
+        "speaker_id": "aisha",
+        "turn_index": 152,
+        "start_ms": 1825350,
+        "end_ms": 1845750
+      },
+      "hold": {},
+      "type": "career ladder, three rungs annotated",
+      "described": {
+        "Type": "career ladder, three rungs annotated",
+        "Content": "Entry \u2014 the system takes in labor. Mid \u2014 equity, network access, authority over others' work, advantage compounds. Executive \u2014 small, already filtered. Highlight the middle rung."
+      },
+      "note": "`[book]` `:153`.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Where advancement compounds. Type: career ladder, three rungs annotated; Content: Entry \u2014 the system takes in labor. Mid \u2014 equity, network access, authority over others' work, advantage compounds. Executive \u2014 small, already filtered. Highlight the middle rung."
+    },
+    {
+      "id": "G-27",
+      "title": "The aggregate test passes",
+      "anchor": {
+        "speaker": "Toussaint",
+        "timestamp": "30:46",
+        "speaker_id": "toussaint",
+        "turn_index": 153,
+        "start_ms": 1846100,
+        "end_ms": 1849390
+      },
+      "hold": {},
+      "type": "two-state card",
+      "described": {
+        "Type": "two-state card",
+        "State 1": "AGGREGATE AUDIT. \u03c7\u00b2 = 2.547, p = 0.980. Stamp: NOT SIGNIFICANT.",
+        "State 2": "the same data split by career level, revealing the G-25 bars. Caption: Simpson's paradox."
+      },
+      "note": "`[book]` `:13083`, `:153`.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "The aggregate test passes. Type: two-state card; State 1: AGGREGATE AUDIT. \u03c7\u00b2 = 2.547, p = 0.980. Stamp: NOT SIGNIFICANT.; State 2: the same data split by career level, revealing the G-25 bars. Caption: Simpson's paradox."
+    },
+    {
+      "id": "G-28",
+      "title": "What the replication found",
+      "anchor": {
+        "speaker": "Toussaint",
+        "timestamp": "31:46",
+        "speaker_id": "toussaint",
+        "turn_index": 159,
+        "start_ms": 1906780,
+        "end_ms": 1915010
+      },
+      "hold": {
+        "until": "27:12",
+        "script_ms": 0
+      },
+      "type": "before/after comparison, and this card must be as prominent as G-25",
+      "described": {
+        "Type": "before/after comparison, and this card must be as prominent as G-25",
+        "2024 study": "career-level skew present. Confound: r\u00e9sum\u00e9 qualifications differed across racial conditions. Confidence: Tier 3.",
+        "2026 replication": "matched pairs, qualifications held constant, only name and one affiliation varied. Claude, Gemini, Kimi. Pooled Black share of advanced candidates 50\u201351% at every career level. Career-level effect did not recur."
+      },
+      "note": "`[book]` `Paper/The_Original_Power.tex:13083`. The Kimi sweep ended before the executive level; say so in small type if the card has room. Never show G-25 without G-28 available in the same cut.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 13083
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "What the replication found. Type: before/after comparison, and this card must be as prominent as G-25; 2024 study: career-level skew present. Confound: r\u00e9sum\u00e9 qualifications differed across racial conditions. Confidence: Tier 3.; 2026 replication: matched pairs, qualifications held constant, only name and one affiliation varied. Claude, Gemini, Kimi. Pooled Black share of advanced candidates 50\u201351% at every career level. Career-level effect did not recur."
+    },
+    {
+      "id": "G-29",
+      "title": "Falsifiability",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "32:23",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 162,
+        "start_ms": 1943860,
+        "end_ms": 1964860
+      },
+      "hold": {},
+      "type": "index-row mock, three sample rows",
+      "described": {
+        "Type": "index-row mock, three sample rows",
+        "Content": "columns for Equation \u00b7 Confidence tier \u00b7 Primary data source \u00b7 Falsification criterion. Populate from the Empirical Validation Index."
+      },
+      "note": "`[book]` `Paper/The_Original_Power.tex:245`. Pairs with G-04j; use the same two-panel language so the constraint set up at 13:33 visibly closes here. Tier 1, directly reported or transparently derivable from a peer-reviewed source or public dataset. Tier 2, public dataset with disclosed operationalisation. Tier 3, ordinal or structural, no quantitative calibration attempted.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 245
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Falsifiability. Type: index-row mock, three sample rows; Content: columns for Equation \u00b7 Confidence tier \u00b7 Primary data source \u00b7 Falsification criterion. Populate from the Empirical Validation Index."
+    },
+    {
+      "id": "G-30",
+      "title": "The three sets",
+      "anchor": {
+        "speaker": "Aisha",
+        "timestamp": "33:11",
+        "speaker_id": "aisha",
+        "turn_index": 167,
+        "start_ms": 1991350,
+        "end_ms": 2004680
+      },
+      "hold": {
+        "until": "28:48",
+        "script_ms": 0
+      },
+      "type": "set diagram with notation",
+      "described": {
+        "Type": "set diagram with notation",
+        "Content": "E, the Elite. O_racialized, the Out-group. I_buffer, the Buffer Class."
+      },
+      "note": "`[book]` `:155`. Use the manuscript's exact subscripts. Episode 2 expands these into the five-tier hierarchy, so build this diagram to be extended rather than replaced.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "The three sets. Type: set diagram with notation; Content: E, the Elite. O_racialized, the Out-group. I_buffer, the Buffer Class."
+    },
+    {
+      "id": "G-31",
+      "title": "The Agenda-Setter Trap",
+      "anchor": {
+        "speaker": "Toussaint",
+        "timestamp": "33:40",
+        "speaker_id": "toussaint",
+        "turn_index": 170,
+        "start_ms": 2020230,
+        "end_ms": 2026510
+      },
+      "hold": {
+        "until": "29:43",
+        "script_ms": 0
+      },
+      "type": "three beats over the G-30 diagram",
+      "described": {
+        "Type": "three beats over the G-30 diagram",
+        "Beat 1": "the agenda setter from G-17 reappears at E.",
+        "Beat 2": "I_buffer and O_racialized are outlined together, labeled \"numerical majority. Coordination is the optimal strategy.\"",
+        "Beat 3": "a question mark over the coordination link. Caption: so why is it rare."
+      },
+      "note": "`[book]` `:155`, Tweedism chapter.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "The Agenda-Setter Trap. Type: three beats over the G-30 diagram; Beat 1: the agenda setter from G-17 reappears at E.; Beat 2: I_buffer and O_racialized are outlined together, labeled \"numerical majority. Coordination is the optimal strategy.\"; Beat 3: a question mark over the coordination link. Caption: so why is it rare."
+    },
+    {
+      "id": "G-32",
+      "title": "Psi, the complex suppression allocation",
+      "anchor": {
+        "speaker": "Aisha",
+        "timestamp": "34:18",
+        "speaker_id": "aisha",
+        "turn_index": 173,
+        "start_ms": 2058250,
+        "end_ms": 2067970
+      },
+      "hold": {},
+      "type": "the payoff of the whole episode. Recall G-10 exactly, then formalize it.",
+      "described": {
+        "Type": "the payoff of the whole episode. Recall G-10 exactly, then formalize it.",
+        "Beat 1": "the Du Bois triangle fades in and the \"dividend\" branch relabels to \u03c8.",
+        "Beat 2": "the quotation, set plainly, attributed: *\"a sort of public and psychological wage\"* \u2014 W. E. B. Du Bois, *Black Reconstruction in America*, 1935. Underline **public** and **psychological** separately. Two modes, one sentence.",
+        "Beat 3": "the equation, built term by term: **W = \u03c8_m + j\u03c8_s**. \u03c8_m real, labelled material wage, money and property and infrastructure. \u03c8_s imaginary, carried on j, labelled psychological wage, status and standing.",
+        "Beat 4": "the same quantity drawn as a phasor on the complex plane, real power on the horizontal and reactive power on the vertical, with |W| and \u03b8 marked. Then show \u03c8_m shrinking while \u03c8_s grows to hold |W| roughly constant.",
+        "Beat 5": "the coordination link between I_buffer and O_racialized breaks."
+      },
+      "note": "`[book]` `Paper/The_Original_Power.tex:482`, `:845-848`, `:894-895`, and eq. 2.2a. **\u03c8 is not the psychological wage.** \u03c8 is the complex suppression allocation; the psychological wage is its imaginary component alone. A card that labels the whole variable \"psychological wage\" states the book's own equation wrongly. The Du Bois phrase is from *Black Reconstruction* (1935); the 1915 essay used earlier in this episode is a different work, so do not merge the two citations.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 482
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Psi, the complex suppression allocation. Type: the payoff of the whole episode. Recall G-10 exactly, then formalize it.; Beat 1: the Du Bois triangle fades in and the \"dividend\" branch relabels to \u03c8.; Beat 2: the quotation, set plainly, attributed: *\"a sort of public and psychological wage\"* \u2014 W. E. B. Du Bois, *Black Reconstruction in America*, 1935. Underline **public** and **psychological** separately. Two modes, one sentence.; Beat 3: the equation, built term by term: **W = \u03c8_m + j\u03c8_s**. \u03c8_m real, labelled material wage, money and property and infrastructure. \u03c8_s imaginary, carried on j, labelled psychological wage, status and standing.; Beat 4: the same quantity drawn as a phasor on the complex plane, real power on the horizontal and reactive power on the vertical, with |W| and \u03b8 marked. Then show \u03c8_m shrinking while \u03c8_s grows to hold |W| roughly constant.; Beat 5: the coordination link between I_buffer and O_racialized breaks."
+    },
+    {
+      "id": "G-33",
+      "title": "Geometry of extraction",
+      "anchor": {
+        "speaker": "Toussaint",
+        "timestamp": "35:06",
+        "speaker_id": "toussaint",
+        "turn_index": 178,
+        "start_ms": 2106760,
+        "end_ms": 2118700
+      },
+      "hold": {},
+      "type": "directed graph",
+      "described": {
+        "Type": "directed graph",
+        "Content": "nodes across society, directed edges, no closed loops, all paths terminating at a root node. Animate flow from the margins upward."
+      },
+      "note": "`[book]` `:155`. Directed spanning-tree proofs and partition theorems.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Geometry of extraction. Type: directed graph; Content: nodes across society, directed edges, no closed loops, all paths terminating at a root node. Animate flow from the margins upward."
+    },
+    {
+      "id": "G-34",
+      "title": "The circuit",
+      "anchor": {
+        "speaker": "Aisha",
+        "timestamp": "35:36",
+        "speaker_id": "aisha",
+        "turn_index": 181,
+        "start_ms": 2136870,
+        "end_ms": 2153900
+      },
+      "hold": {
+        "until": "31:24",
+        "script_ms": 0
+      },
+      "type": "circuit schematic mapped onto the G-33 graph",
+      "described": {
+        "Type": "circuit schematic mapped onto the G-33 graph",
+        "Content": "Voltage, the systemic pressure driving extraction. Current, the flow of extracted labor and capital. Resistance, the mechanisms that route the flow and stop it returning downward."
+      },
+      "note": "`[book]` `Paper/The_Original_Power.tex:384` and the substrate-independence note. Caption it as a dynamical homology, equivalent governing equations, and keep the word \"metaphor\" off this card entirely. The book's claim is stronger than that and the narration says so.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 384
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "The circuit. Type: circuit schematic mapped onto the G-33 graph; Content: Voltage, the systemic pressure driving extraction. Current, the flow of extracted labor and capital. Resistance, the mechanisms that route the flow and stop it returning downward."
+    },
+    {
+      "id": "G-33a",
+      "title": "The analogy was never an analogy",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "43:48",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 224,
+        "start_ms": 2628710,
+        "end_ms": 2645360
+      },
+      "hold": {
+        "until": "44:44",
+        "script_ms": 56000
+      },
+      "type": "direct callback to G-02, and the emotional peak of the episode",
+      "described": {
+        "Type": "direct callback to G-02, and the emotional peak of the episode",
+        "Beat 1": "replay the closing frame of G-02, the question on black.",
+        "Beat 2": "the circuit schematic from G-34 fades up behind the question and the two register as the same diagram.",
+        "Beat 3": "a word list, each term shown moving from the social column to the physics column: current, resistance, potential, field, force, power, conductor, ground, charge. Caption: physics borrowed these from social power, and not the other way round."
+      },
+      "note": "`[book]` `Paper/The_Original_Power.tex:384`, the historical-inversion argument and the substrate-independence note. This is the single strongest moment in the episode. Cut G-02 and G-33a together and treat them as one asset.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 384
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "The analogy was never an analogy. Type: direct callback to G-02, and the emotional peak of the episode; Beat 1: replay the closing frame of G-02, the question on black.; Beat 2: the circuit schematic from G-34 fades up behind the question and the two register as the same diagram.; Beat 3: a word list, each term shown moving from the social column to the physics column: current, resistance, potential, field, force, power, conductor, ground, charge. Caption: physics borrowed these from social power, and not the other way round."
+    },
+    {
+      "id": "G-35",
+      "title": "The linchpin",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "44:58",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 228,
+        "start_ms": 2698850,
+        "end_ms": 2707640
+      },
+      "hold": {
+        "until": "47:02",
+        "script_ms": 124000
+      },
+      "type": "timeline with a single connecting arc",
+      "described": {
+        "Type": "timeline with a single connecting arc",
+        "Content": "1915, Du Bois, the dividend. \u2192 2020, the observation layer. \u2192 the \u03c8 term. \u2192 the electrodynamic formalism. One arc from the first point to the last."
+      },
+      "note": "Emmanuel's on-mic account of his own path. Label it as such.",
+      "provenance": {
+        "tags": [],
+        "citations": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "The linchpin. Type: timeline with a single connecting arc; Content: 1915, Du Bois, the dividend. \u2192 2020, the observation layer. \u2192 the \u03c8 term. \u2192 the electrodynamic formalism. One arc from the first point to the last."
+    },
+    {
+      "id": "G-36",
+      "title": "146 anchor cases",
+      "anchor": {
+        "speaker": "Aisha",
+        "timestamp": "37:46",
+        "speaker_id": "aisha",
+        "turn_index": 193,
+        "start_ms": 2266260,
+        "end_ms": 2282690
+      },
+      "hold": {
+        "until": "38:20",
+        "script_ms": 34000
+      },
+      "type": "dense grid, 146 cells across a five-century timeline",
+      "described": {
+        "Type": "dense grid, 146 cells across a five-century timeline",
+        "Content": "highlight the fatal-shooting case as one cell. Each cell carries a confidence tier, a data source, and a falsification criterion."
+      },
+      "note": "`[book]` `:155`, `:245`, `:1365`. If cell-level detail is available from the Empirical Validation Index, color the grid by tier.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "146 anchor cases. Type: dense grid, 146 cells across a five-century timeline; Content: highlight the fatal-shooting case as one cell. Each cell carries a confidence tier, a data source, and a falsification criterion."
+    },
+    {
+      "id": "G-37",
+      "title": "Method reprise",
+      "anchor": {
+        "speaker": "Aisha",
+        "timestamp": "38:13",
+        "speaker_id": "aisha",
+        "turn_index": 195,
+        "start_ms": 2293260,
+        "end_ms": 2306200
+      },
+      "hold": {
+        "until": "38:47",
+        "script_ms": 34000
+      },
+      "type": "G-05 full-screen, now with each stage labeled by its document",
+      "described": {
+        "Type": "G-05 full-screen, now with each stage labeled by its document",
+        "Content": "Identify \u2192 the Spanish-American War essay. Detect \u2192 The Calculus of Injustice. Build the instrument \u2192 the hiring paper. Derive \u2192 *The Original Power*."
+      },
+      "note": "`[book]` `:157`.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Method reprise. Type: G-05 full-screen, now with each stage labeled by its document; Content: Identify \u2192 the Spanish-American War essay. Detect \u2192 The Calculus of Injustice. Build the instrument \u2192 the hiring paper. Derive \u2192 *The Original Power*."
+    },
+    {
+      "id": "G-38",
+      "title": "Next episode",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "58:12",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 284,
+        "start_ms": 3492320,
+        "end_ms": 3507650
+      },
+      "hold": {
+        "until": "58:41",
+        "script_ms": 29000
+      },
+      "type": "end card",
+      "described": {
+        "Type": "end card",
+        "Content": "Episode 2, the Preface. Psycho-legal social software. Wetware. The fractal mind virus. The five-tier hierarchy. Second card: The Gender Wars, in progress, the transform running in the other direction."
+      },
+      "note": "`[book]` `Paper/The_Original_Power.tex:166` onward.",
+      "provenance": {
+        "tags": [
+          "book",
+          "data"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 166
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Next episode. Type: end card; Content: Episode 2, the Preface. Psycho-legal social software. Wetware. The fractal mind virus. The five-tier hierarchy. Second card: The Gender Wars, in progress, the transform running in the other direction."
+    }
+  ],
+  "validation": [
+    {
+      "level": "warn",
+      "shot": "G-01",
+      "message": "no provenance tag"
+    },
+    {
+      "level": "warn",
+      "shot": "G-02",
+      "message": "no provenance tag"
+    },
+    {
+      "level": "warn",
+      "shot": "G-02b",
+      "message": "no provenance tag"
+    },
+    {
+      "level": "warn",
+      "shot": "G-04",
+      "message": "no provenance tag"
+    },
+    {
+      "level": "warn",
+      "shot": "G-04c",
+      "message": "no provenance tag"
+    },
+    {
+      "level": "warn",
+      "shot": "G-04d",
+      "message": "no provenance tag"
+    },
+    {
+      "level": "warn",
+      "shot": "G-04g",
+      "message": "no provenance tag"
+    },
+    {
+      "level": "warn",
+      "shot": "G-04i",
+      "message": "no provenance tag"
+    },
+    {
+      "level": "warn",
+      "shot": "G-04j",
+      "message": "no provenance tag"
+    },
+    {
+      "level": "warn",
+      "shot": "G-04k",
+      "message": "no provenance tag"
+    },
+    {
+      "level": "warn",
+      "shot": "G-04n",
+      "message": "no provenance tag"
+    },
+    {
+      "level": "error",
+      "shot": "G-08",
+      "message": "tagged [book] with no .tex citation"
+    },
+    {
+      "level": "error",
+      "shot": "G-09",
+      "message": "tagged [book] with no .tex citation"
+    },
+    {
+      "level": "warn",
+      "shot": "G-11",
+      "message": "no provenance tag"
+    },
+    {
+      "level": "error",
+      "shot": "G-12",
+      "message": "tagged [book] with no .tex citation"
+    },
+    {
+      "level": "error",
+      "shot": "G-13",
+      "message": "tagged [book] with no .tex citation"
+    },
+    {
+      "level": "error",
+      "shot": "G-15",
+      "message": "tagged [book] with no .tex citation"
+    },
+    {
+      "level": "error",
+      "shot": "G-16",
+      "message": "tagged [book] with no .tex citation"
+    },
+    {
+      "level": "error",
+      "shot": "G-17",
+      "message": "tagged [book] with no .tex citation"
+    },
+    {
+      "level": "warn",
+      "shot": "G-19",
+      "message": "no provenance tag"
+    },
+    {
+      "level": "error",
+      "shot": "G-21",
+      "message": "tagged [book] with no .tex citation"
+    },
+    {
+      "level": "error",
+      "shot": "G-23",
+      "message": "tagged [book] with no .tex citation"
+    },
+    {
+      "level": "warn",
+      "shot": "G-24",
+      "message": "no provenance tag"
+    },
+    {
+      "level": "error",
+      "shot": "G-26",
+      "message": "tagged [book] with no .tex citation"
+    },
+    {
+      "level": "error",
+      "shot": "G-27",
+      "message": "tagged [book] with no .tex citation"
+    },
+    {
+      "level": "error",
+      "shot": "G-30",
+      "message": "tagged [book] with no .tex citation"
+    },
+    {
+      "level": "error",
+      "shot": "G-31",
+      "message": "tagged [book] with no .tex citation"
+    },
+    {
+      "level": "error",
+      "shot": "G-33",
+      "message": "tagged [book] with no .tex citation"
+    },
+    {
+      "level": "warn",
+      "shot": "G-35",
+      "message": "no provenance tag"
+    },
+    {
+      "level": "error",
+      "shot": "G-36",
+      "message": "tagged [book] with no .tex citation"
+    },
+    {
+      "level": "error",
+      "shot": "G-37",
+      "message": "tagged [book] with no .tex citation"
+    },
+    {
+      "level": "error",
+      "shot": "G-38",
+      "message": "tagged [data] with no file under Paper/data/"
+    }
+  ]
+}
