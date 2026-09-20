@@ -1,0 +1,1795 @@
+{
+  "schema_version": 1,
+  "source": "ATO_EP03_shotlist.md",
+  "manifest": "episode_manifest.json",
+  "script": "ATO_EP03_redefining_racism.md",
+  "shot_count": 52,
+  "shots": [
+    {
+      "id": "G-01",
+      "title": "Title card",
+      "anchor": {
+        "speaker": "Toussaint",
+        "timestamp": "00:00",
+        "speaker_id": "toussaint",
+        "turn_index": 0,
+        "start_ms": 0,
+        "end_ms": 3660
+      },
+      "hold": {
+        "until": "00:04",
+        "script_ms": 4000
+      },
+      "type": "static",
+      "described": {
+        "Type": "static",
+        "Content": "*Architecting the Operation* / Episode 3 / \"Redefining Racism\" / subtitle: Four ways to understand the machine."
+      },
+      "note": "",
+      "provenance": {
+        "tags": [],
+        "citations": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Title card. Type: static; Content: *Architecting the Operation* / Episode 3 / \"Redefining Racism\" / subtitle: Four ways to understand the machine."
+    },
+    {
+      "id": "G-02",
+      "title": "Cold-open framing: three registers",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "00:59",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 6,
+        "start_ms": 59020,
+        "end_ms": 77520
+      },
+      "hold": {
+        "until": "01:17",
+        "script_ms": 18000
+      },
+      "type": "three-word stack, revealing one at a time",
+      "described": {
+        "Type": "three-word stack, revealing one at a time",
+        "Content": "The claim. / The mechanism. / The proof."
+      },
+      "note": "`[design]`.",
+      "provenance": {
+        "tags": [
+          "design"
+        ],
+        "citations": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Cold-open framing: three registers. Type: three-word stack, revealing one at a time; Content: The claim. / The mechanism. / The proof."
+    },
+    {
+      "id": "G-03",
+      "title": "Level Card, first appearance (explainer beat)",
+      "anchor": {
+        "speaker": "Aisha",
+        "timestamp": "01:21",
+        "speaker_id": "aisha",
+        "turn_index": 8,
+        "start_ms": 81950,
+        "end_ms": 94850
+      },
+      "hold": {
+        "until": "01:59",
+        "script_ms": 38000
+      },
+      "type": "the Level Card animates through all four states once, slowly, as Toussaint names them, before it starts flipping fast for the rest of the episode",
+      "described": {
+        "Type": "the Level Card animates through all four states once, slowly, as Toussaint names them, before it starts flipping fast for the rest of the episode",
+        "Content": "ELEMENTARY \u2192 HIGH SCHOOL \u2192 COLLEGE \u2192 PhD, each with a one-line gloss (\"truth minus prerequisites\" / \"the everyday version\" / \"the structural claim\" / \"the citations and the falsification condition\")."
+      },
+      "note": "`[design]`. This is the only slow, explained pass; every later flip is fast and wordless.",
+      "provenance": {
+        "tags": [
+          "design"
+        ],
+        "citations": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Level Card, first appearance (explainer beat). Type: the Level Card animates through all four states once, slowly, as Toussaint names them, before it starts flipping fast for the rest of the episode; Content: ELEMENTARY \u2192 HIGH SCHOOL \u2192 COLLEGE \u2192 PhD, each with a one-line gloss (\"truth minus prerequisites\" / \"the everyday version\" / \"the structural claim\" / \"the citations and the falsification condition\")."
+    },
+    {
+      "id": "G-04",
+      "title": "Three-part episode map",
+      "anchor": {
+        "speaker": "Aisha",
+        "timestamp": "02:03",
+        "speaker_id": "aisha",
+        "turn_index": 12,
+        "start_ms": 123680,
+        "end_ms": 135180
+      },
+      "hold": {
+        "until": "02:30",
+        "script_ms": 27000
+      },
+      "type": "three-panel roadmap",
+      "described": {
+        "Type": "three-panel roadmap",
+        "Content": "1. Binary \u2192 five-tier refinement \u00b7 2. The word rebuilt \u00b7 3. The diagnostic model (fractal computer virus)."
+      },
+      "note": "`[design]`.",
+      "provenance": {
+        "tags": [
+          "design"
+        ],
+        "citations": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Three-part episode map. Type: three-panel roadmap; Content: 1. Binary \u2192 five-tier refinement \u00b7 2. The word rebuilt \u00b7 3. The diagnostic model (fractal computer virus)."
+    },
+    {
+      "id": "G-05",
+      "title": "Coarse binary \u2192 five-tier refinement",
+      "anchor": {
+        "speaker": "Aisha",
+        "timestamp": "03:47",
+        "speaker_id": "aisha",
+        "turn_index": 22,
+        "start_ms": 227890,
+        "end_ms": 268460
+      },
+      "hold": {
+        "until": "05:20",
+        "script_ms": 93000
+      },
+      "type": "the five-tier pyramid stack, Episode 1's continuity asset, triggered here for the first time this episode",
+      "described": {
+        "Type": "the five-tier pyramid stack, Episode 1's continuity asset, triggered here for the first time this episode",
+        "Content": "two-box coarse partition (in-group/out-group) resolving into Elite / Puppet / Enforcement / Buffer inside the in-group box, and a fan of adjacent out-group subgroups on the other side."
+      },
+      "note": "`[book]` continuity asset from Episode 1; `Paper/The_Original_Power.tex:1596, 1633, 1656`.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 1596
+          },
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 1633
+          },
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 1656
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Coarse binary \u2192 five-tier refinement. Type: the five-tier pyramid stack, Episode 1's continuity asset, triggered here for the first time this episode; Content: two-box coarse partition (in-group/out-group) resolving into Elite / Puppet / Enforcement / Buffer inside the in-group box, and a fan of adjacent out-group subgroups on the other side."
+    },
+    {
+      "id": "G-06",
+      "title": "Recursive local partition",
+      "anchor": {
+        "speaker": "Aisha",
+        "timestamp": "05:58",
+        "speaker_id": "aisha",
+        "turn_index": 30,
+        "start_ms": 358780,
+        "end_ms": 402290
+      },
+      "hold": {
+        "until": "06:42",
+        "script_ms": 44000
+      },
+      "type": "single figure, one silhouette, split by two overlapping colored fields",
+      "described": {
+        "Type": "single figure, one silhouette, split by two overlapping colored fields",
+        "Content": "a blue field labeled \"race axis: in-group\" and a red field labeled \"class axis: out-group\" overlap on the same figure."
+      },
+      "note": "`[design]`, illustrating `[book]` `Paper/The_Original_Power.tex:1673`.",
+      "provenance": {
+        "tags": [
+          "book",
+          "design"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 1673
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Recursive local partition. Type: single figure, one silhouette, split by two overlapping colored fields; Content: a blue field labeled \"race axis: in-group\" and a red field labeled \"class axis: out-group\" overlap on the same figure."
+    },
+    {
+      "id": "G-07",
+      "title": "Set-Resolution Ladder",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "06:43",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 32,
+        "start_ms": 403530,
+        "end_ms": 477200
+      },
+      "hold": {
+        "until": "07:57",
+        "script_ms": 74000
+      },
+      "type": "four-rung ladder table, matches the manuscript table",
+      "described": {
+        "Type": "four-rung ladder table, matches the manuscript table",
+        "Content": "Coarse binary \u2192 In-group refinement \u2192 Out-group refinement \u2192 Recursive projection."
+      },
+      "note": "`[book]` `Paper/The_Original_Power.tex:1675`.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 1675
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Set-Resolution Ladder. Type: four-rung ladder table, matches the manuscript table; Content: Coarse binary \u2192 In-group refinement \u2192 Out-group refinement \u2192 Recursive projection."
+    },
+    {
+      "id": "G-08",
+      "title": "Du Bois pull-quotes",
+      "anchor": {
+        "speaker": "Aisha",
+        "timestamp": "08:18",
+        "speaker_id": "aisha",
+        "turn_index": 36,
+        "start_ms": 498480,
+        "end_ms": 524860
+      },
+      "hold": {
+        "until": "10:07",
+        "script_ms": 109000
+      },
+      "type": "two sequential text cards, plain, book-page styled, held through both the College and PhD beats on this concept",
+      "described": {
+        "Type": "two sequential text cards, plain, book-page styled, held through both the College and PhD beats on this concept",
+        "Content": "\"the public and psychological wage\" / \"the Propaganda of History\" \u2014 both attributed on-card to Du Bois, *Black Reconstruction* (1935)."
+      },
+      "note": "`[book]` `Paper/The_Original_Power.tex:1690\u20131699`.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 1690
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Du Bois pull-quotes. Type: two sequential text cards, plain, book-page styled, held through both the College and PhD beats on this concept; Content: \"the public and psychological wage\" / \"the Propaganda of History\" \u2014 both attributed on-card to Du Bois, *Black Reconstruction* (1935)."
+    },
+    {
+      "id": "G-09",
+      "title": "Architecture vs. phenomenology note",
+      "anchor": {
+        "speaker": "Toussaint",
+        "timestamp": "10:07",
+        "speaker_id": "toussaint",
+        "turn_index": 41,
+        "start_ms": 607900,
+        "end_ms": 623320
+      },
+      "hold": {
+        "until": "10:23",
+        "script_ms": 16000
+      },
+      "type": "small disclaimer card, understated",
+      "described": {
+        "Type": "small disclaimer card, understated",
+        "Content": "\"Comparing architecture \u2260 comparing suffering.\""
+      },
+      "note": "`[book]` `Paper/The_Original_Power.tex:1700`.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 1700
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Architecture vs. phenomenology note. Type: small disclaimer card, understated; Content: \"Comparing architecture \u2260 comparing suffering.\""
+    },
+    {
+      "id": "G-10",
+      "title": "Conventional causal arrow (struck through)",
+      "anchor": {
+        "speaker": "Aisha",
+        "timestamp": "11:31",
+        "speaker_id": "aisha",
+        "turn_index": 49,
+        "start_ms": 691030,
+        "end_ms": 741890
+      },
+      "hold": {
+        "until": "12:22",
+        "script_ms": 51000
+      },
+      "type": "three-box flow diagram, red, struck through on the reveal",
+      "described": {
+        "Type": "three-box flow diagram, red, struck through on the reveal",
+        "Content": "Individual Prejudice \u2192 Discriminatory Actions \u2192 Systemic Outcomes."
+      },
+      "note": "`[book]` `Paper/The_Original_Power.tex:1732` (Eq. 1.3).",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 1732
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Conventional causal arrow (struck through). Type: three-box flow diagram, red, struck through on the reveal; Content: Individual Prejudice \u2192 Discriminatory Actions \u2192 Systemic Outcomes."
+    },
+    {
+      "id": "G-11",
+      "title": "Reversed causal arrow + Zurara/Fields",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "12:26",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 51,
+        "start_ms": 746350,
+        "end_ms": 829510
+      },
+      "hold": {
+        "until": "13:49",
+        "script_ms": 83000
+      },
+      "type": "three-box flow diagram, green, replacing G-10; archival-styled quote card follows in the same hold",
+      "described": {
+        "Type": "three-box flow diagram, green, replacing G-10; archival-styled quote card follows in the same hold",
+        "Content": "Elite Economic Interests \u2192 Systemic Racialization \u2192 Interpersonal Prejudice; then \"Gomes Eanes de Zurara, 1453 \u2014 commissioned chronicle\" with the Fields quote beneath: \"People are more readily perceived as inferior by nature when they are already seen as oppressed.\""
+      },
+      "note": "`[book]` `Paper/The_Original_Power.tex:1736, 1738` (Eq. 1.4).",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 1736
+          },
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 1738
+          }
+        ]
+      },
+      "suggested_track": "archival",
+      "prompt_seed": "Reversed causal arrow + Zurara/Fields. Type: three-box flow diagram, green, replacing G-10; archival-styled quote card follows in the same hold; Content: Elite Economic Interests \u2192 Systemic Racialization \u2192 Interpersonal Prejudice; then \"Gomes Eanes de Zurara, 1453 \u2014 commissioned chronicle\" with the Fields quote beneath: \"People are more readily perceived as inferior by nature when they are already seen as oppressed.\""
+    },
+    {
+      "id": "G-12",
+      "title": "The -ism family",
+      "anchor": {
+        "speaker": "Aisha",
+        "timestamp": "14:06",
+        "speaker_id": "aisha",
+        "turn_index": 55,
+        "start_ms": 846930,
+        "end_ms": 873750
+      },
+      "hold": {
+        "until": "14:34",
+        "script_ms": 28000
+      },
+      "type": "four-word list, one word highlighted per beat",
+      "described": {
+        "Type": "four-word list, one word highlighted per beat",
+        "Content": "Capitalism \u00b7 Feudalism \u00b7 Colonialism \u00b7 Racism \u2014 first three glossed \"system,\" fourth corrected from \"???\" to \"system.\""
+      },
+      "note": "`[book]` `Paper/The_Original_Power.tex:1809`.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 1809
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "The -ism family. Type: four-word list, one word highlighted per beat; Content: Capitalism \u00b7 Feudalism \u00b7 Colonialism \u00b7 Racism \u2014 first three glossed \"system,\" fourth corrected from \"???\" to \"system.\""
+    },
+    {
+      "id": "G-13",
+      "title": "Hierarchy inversion",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "15:19",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 59,
+        "start_ms": 919980,
+        "end_ms": 986210
+      },
+      "hold": {
+        "until": "16:26",
+        "script_ms": 67000
+      },
+      "type": "the manuscript's own two-column inverted-pyramid figure, redrawn",
+      "described": {
+        "Type": "the manuscript's own two-column inverted-pyramid figure, redrawn",
+        "Content": "Conventional (Individual Prejudice top, buried Systemic at bottom) next to Correct (Systemic Policies top, epiphenomenal Interpersonal Prejudice at bottom)."
+      },
+      "note": "`[book]` `Paper/The_Original_Power.tex:1839`.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 1839
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Hierarchy inversion. Type: the manuscript's own two-column inverted-pyramid figure, redrawn; Content: Conventional (Individual Prejudice top, buried Systemic at bottom) next to Correct (Systemic Policies top, epiphenomenal Interpersonal Prejudice at bottom)."
+    },
+    {
+      "id": "G-14",
+      "title": "Fractal virus properties",
+      "anchor": {
+        "speaker": "Aisha",
+        "timestamp": "17:11",
+        "speaker_id": "aisha",
+        "turn_index": 66,
+        "start_ms": 1031120,
+        "end_ms": 1072540
+      },
+      "hold": {
+        "until": "17:53",
+        "script_ms": 42000
+      },
+      "type": "four-item checklist, ticking in as named",
+      "described": {
+        "Type": "four-item checklist, ticking in as named",
+        "Content": "Hijacks resources \u00b7 Replicates at every scale \u00b7 Mutates its signature \u00b7 Payload never changes."
+      },
+      "note": "`[book]` `Paper/The_Original_Power.tex:1864`.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 1864
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Fractal virus properties. Type: four-item checklist, ticking in as named; Content: Hijacks resources \u00b7 Replicates at every scale \u00b7 Mutates its signature \u00b7 Payload never changes."
+    },
+    {
+      "id": "G-15",
+      "title": "Biological Embedding, boxed definition",
+      "anchor": {
+        "speaker": "Aisha",
+        "timestamp": "19:06",
+        "speaker_id": "aisha",
+        "turn_index": 75,
+        "start_ms": 1146560,
+        "end_ms": 1181930
+      },
+      "hold": {
+        "until": "20:40",
+        "script_ms": 94000
+      },
+      "type": "the manuscript's own boxed-definition styling, verbatim, both sentences shown together",
+      "described": {
+        "Type": "the manuscript's own boxed-definition styling, verbatim, both sentences shown together",
+        "Content": "full text of the Biological Embedding definition, the bounding sentence (\"race is not genetic...\") visually distinct but present in the same frame."
+      },
+      "note": "`[book]` `Paper/The_Original_Power.tex:1872\u20131880`. Never show the first half without the second, per the hazards audit.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 1872
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Biological Embedding, boxed definition. Type: the manuscript's own boxed-definition styling, verbatim, both sentences shown together; Content: full text of the Biological Embedding definition, the bounding sentence (\"race is not genetic...\") visually distinct but present in the same frame."
+    },
+    {
+      "id": "G-16",
+      "title": "Rootkit / kernel diagram",
+      "anchor": {
+        "speaker": "Aisha",
+        "timestamp": "21:20",
+        "speaker_id": "aisha",
+        "turn_index": 83,
+        "start_ms": 1280250,
+        "end_ms": 1317030
+      },
+      "hold": {
+        "until": "21:57",
+        "script_ms": 37000
+      },
+      "type": "OS-layer diagram, kernel space vs. user space",
+      "described": {
+        "Type": "OS-layer diagram, kernel space vs. user space",
+        "Content": "kernel space labeled \"extraction code (law, property, exception clauses)\"; user space labeled \"voting, protest, lawsuits \u2014 cannot reach the layer below.\""
+      },
+      "note": "`[design]`, illustrating `[book]` `Paper/The_Original_Power.tex:1900s` (kernel objective).",
+      "provenance": {
+        "tags": [
+          "book",
+          "design"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 1900
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Rootkit / kernel diagram. Type: OS-layer diagram, kernel space vs. user space; Content: kernel space labeled \"extraction code (law, property, exception clauses)\"; user space labeled \"voting, protest, lawsuits \u2014 cannot reach the layer below.\""
+    },
+    {
+      "id": "G-17",
+      "title": "Antebellum cotton case study, chart",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "23:06",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 87,
+        "start_ms": 1386820,
+        "end_ms": 1453240
+      },
+      "hold": {
+        "until": "26:11",
+        "script_ms": 185000
+      },
+      "type": "dual-axis line chart, matches `figures/eq05_kernel_optimization.png`",
+      "described": {
+        "Type": "dual-axis line chart, matches `figures/eq05_kernel_optimization.png`",
+        "Content": "cotton revenue (1840/1850/1860: $74.1M / $102.5M / $247.0M) on one axis; suppression-budget ratio (2.70% / 2.88% / 2.75%) on the other, band highlighted to show the < 0.2-point range. Nat Turner (1831) marked as an independent threshold-response event."
+      },
+      "note": "`[data]` `Paper/data/eq05_antebellum_cotton.csv`; `Paper/The_Original_Power.tex:2027` (Fig. eq05_kernel).",
+      "provenance": {
+        "tags": [
+          "data"
+        ],
+        "citations": [
+          {
+            "path": "Paper/data/eq05_antebellum_cotton.csv"
+          },
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 2027
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Antebellum cotton case study, chart. Type: dual-axis line chart, matches `figures/eq05_kernel_optimization.png`; Content: cotton revenue (1840/1850/1860: $74.1M / $102.5M / $247.0M) on one axis; suppression-budget ratio (2.70% / 2.88% / 2.75%) on the other, band highlighted to show the < 0.2-point range. Nat Turner (1831) marked as an independent threshold-response event."
+    },
+    {
+      "id": "G-18",
+      "title": "Pigmentation cline map",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "27:52",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 97,
+        "start_ms": 1672190,
+        "end_ms": 1758820
+      },
+      "hold": {
+        "until": "29:19",
+        "script_ms": 87000
+      },
+      "type": "world map with a smooth gradient overlay by latitude, plus two ancient-DNA markers (La Bra\u00f1a, Spain; Cheddar Man, Britain)",
+      "described": {
+        "Type": "world map with a smooth gradient overlay by latitude, plus two ancient-DNA markers (La Bra\u00f1a, Spain; Cheddar Man, Britain)",
+        "Content": "gradient bar labeled \"UV exposure by latitude\"; markers annotated with the dark-skin/light-eye finding at each site; the Seti I tomb referenced as a citation card (dynasty, one descriptive line), not a rendered image of human figures."
+      },
+      "note": "`[book]` `Paper/The_Original_Power.tex:2038\u20132040`.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 2038
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Pigmentation cline map. Type: world map with a smooth gradient overlay by latitude, plus two ancient-DNA markers (La Bra\u00f1a, Spain; Cheddar Man, Britain); Content: gradient bar labeled \"UV exposure by latitude\"; markers annotated with the dark-skin/light-eye finding at each site; the Seti I tomb referenced as a citation card (dynasty, one descriptive line), not a rendered image of human figures."
+    },
+    {
+      "id": "G-19",
+      "title": "Kernel HUD wrapper (scoped to diagnostic-model interior)",
+      "anchor": {
+        "speaker": "Toussaint",
+        "timestamp": "29:19",
+        "speaker_id": "toussaint",
+        "turn_index": 98,
+        "start_ms": 1759170,
+        "end_ms": 1766010
+      },
+      "hold": {
+        "until": "67:56",
+        "script_ms": 2317000
+      },
+      "type": "thin HUD-style frame (green monospace corner brackets, faint scanline texture), low opacity, wrapping the video for the interior of the diagnostic-model section \u2014 starting at the content note, not at the section's own opening, so the frame's first appearance is deliberately timed to the register shift",
+      "described": {
+        "Type": "thin HUD-style frame (green monospace corner brackets, faint scanline texture), low opacity, wrapping the video for the interior of the diagnostic-model section \u2014 starting at the content note, not at the section's own opening, so the frame's first appearance is deliberately timed to the register shift",
+        "Content": "corner label \"SYSTEM SCAN: REDEFINING_RACISM.CH2\"; module names swap into the label as each one begins (ROOTKIT already passed; ZERO-DAY, BAYESIAN DEFENSE, POLYMORPHIC CODE, RLC BACKLASH, FRACTAL EXEC, LEXICAL FRACTAL, FIREWALL, \u0394max=0)."
+      },
+      "note": "`[design]`. Narrower in scope than the prior revision's HUD, which wrapped the whole diagnostic-model half; here it explicitly excludes the Level Card beats so the two devices never visually compete.",
+      "provenance": {
+        "tags": [
+          "design"
+        ],
+        "citations": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Kernel HUD wrapper (scoped to diagnostic-model interior). Type: thin HUD-style frame (green monospace corner brackets, faint scanline texture), low opacity, wrapping the video for the interior of the diagnostic-model section \u2014 starting at the content note, not at the section's own opening, so the frame's first appearance is deliberately timed to the register shift; Content: corner label \"SYSTEM SCAN: REDEFINING_RACISM.CH2\"; module names swap into the label as each one begins (ROOTKIT already passed; ZERO-DAY, BAYESIAN DEFENSE, POLYMORPHIC CODE, RLC BACKLASH, FRACTAL EXEC, LEXICAL FRACTAL, FIREWALL, \u0394max=0)."
+    },
+    {
+      "id": "G-20",
+      "title": "Content note, plain frame",
+      "anchor": {
+        "speaker": "Toussaint",
+        "timestamp": "29:19",
+        "speaker_id": "toussaint",
+        "turn_index": 98,
+        "start_ms": 1759170,
+        "end_ms": 1766010
+      },
+      "hold": {},
+      "type": "plain dark title-only card, no imagery, no animation",
+      "described": {
+        "Type": "plain dark title-only card, no imagery, no animation",
+        "Content": "small, quiet text: \"The historical record referenced here is graphic. Described, not shown.\" No further detail on screen."
+      },
+      "note": "hazards-audit item. Do not add a second visual description on top of the spoken one; do not resume the Level Card badge for this turn.",
+      "provenance": {
+        "tags": [],
+        "citations": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Content note, plain frame. Type: plain dark title-only card, no imagery, no animation; Content: small, quiet text: \"The historical record referenced here is graphic. Described, not shown.\" No further detail on screen."
+    },
+    {
+      "id": "G-21",
+      "title": "Botnet / node map",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "cue": "(final turn of Module 2, routing line: \"Every plantation, a compromised node...\")",
+        "unresolved": true
+      },
+      "hold": {},
+      "type": "node-and-edge network diagram",
+      "described": {
+        "Type": "node-and-edge network diagram",
+        "Content": "plantation nodes feeding lines into hub cities (Lisbon, London, Amsterdam, Wall Street), styled as a botnet C2 diagram."
+      },
+      "note": "`[design]`, illustrating `[book]` `Paper/The_Original_Power.tex:2043`.",
+      "provenance": {
+        "tags": [
+          "book",
+          "design"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 2043
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Botnet / node map. Type: node-and-edge network diagram; Content: plantation nodes feeding lines into hub cities (Lisbon, London, Amsterdam, Wall Street), styled as a botnet C2 diagram."
+    },
+    {
+      "id": "G-22",
+      "title": "Bayesian prior + Tajfel result",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "cue": "(Module 3, PhD beat)",
+        "unresolved": true
+      },
+      "hold": {},
+      "type": "equation-gloss card, then simple bar-choice diagram",
+      "described": {
+        "Type": "equation-gloss card, then simple bar-choice diagram",
+        "Content": "gloss: \"installed prior overrides raw evidence\"; three allocation options (max joint profit / max in-group profit / max difference), \"max difference\" highlighted as the one chosen even at a loss; team-jersey coalition-tracking result shown as a second, smaller panel."
+      },
+      "note": "`[book]` `Paper/The_Original_Power.tex:2049, 2054`.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 2049
+          },
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 2054
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Bayesian prior + Tajfel result. Type: equation-gloss card, then simple bar-choice diagram; Content: gloss: \"installed prior overrides raw evidence\"; three allocation options (max joint profit / max in-group profit / max difference), \"max difference\" highlighted as the one chosen even at a loss; team-jersey coalition-tracking result shown as a second, smaller panel."
+    },
+    {
+      "id": "G-23",
+      "title": "LSD/DMN, flagged open question",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "cue": "(Module 3, LSD passage)",
+        "unresolved": true
+      },
+      "hold": {},
+      "type": "timeline strip, 1966 \u2192 1970, ending on a \"?\" icon rather than a conclusion",
+      "described": {
+        "Type": "timeline strip, 1966 \u2192 1970, ending on a \"?\" icon rather than a conclusion",
+        "Content": "1966 protocol (91%) \u2192 CA criminalization \u2192 federal amendments \u2192 1970 Controlled Substances Act; final card: \"Deliberate or emergent? Flagged, not resolved.\""
+      },
+      "note": "`[book]` `Paper/The_Original_Power.tex:2056\u20132058`. Mandatory \"flagged, not resolved\" card per the hazards audit.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 2056
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "LSD/DMN, flagged open question. Type: timeline strip, 1966 \u2192 1970, ending on a \"?\" icon rather than a conclusion; Content: 1966 protocol (91%) \u2192 CA criminalization \u2192 federal amendments \u2192 1970 Controlled Substances Act; final card: \"Deliberate or emergent? Flagged, not resolved.\""
+    },
+    {
+      "id": "G-24",
+      "title": ".exe recompile chains + gastronomic interface",
+      "anchor": {
+        "speaker": "Aisha",
+        "timestamp": "26:24",
+        "speaker_id": "aisha",
+        "turn_index": 93,
+        "start_ms": 1584080,
+        "end_ms": 1615390
+      },
+      "hold": {},
+      "type": "terminal/code-editor styled recompile animation, matching the G-19 HUD aesthetic",
+      "described": {
+        "Type": "terminal/code-editor styled recompile animation, matching the G-19 HUD aesthetic",
+        "Content": "`Gastronomic_Interface` (Cartwright's \"childlike Negro\") as the founding version, then: `Chattel_Slavery.exe` \u2192 `Convict_Leasing.exe` / `Black_Codes.exe`; `Jim_Crow.exe` \u2192 `War_on_Drugs.exe` / `Mass_Incarceration.exe`; `Explicit_Discrimination.exe` \u2192 `Redlining.exe` / `Predatory_Lending.exe` / `Algorithmic_Bias.exe`."
+      },
+      "note": "`[book]` `Paper/The_Original_Power.tex:2071\u20132076`, verbatim file names.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 2071
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": ".exe recompile chains + gastronomic interface. Type: terminal/code-editor styled recompile animation, matching the G-19 HUD aesthetic; Content: `Gastronomic_Interface` (Cartwright's \"childlike Negro\") as the founding version, then: `Chattel_Slavery.exe` \u2192 `Convict_Leasing.exe` / `Black_Codes.exe`; `Jim_Crow.exe` \u2192 `War_on_Drugs.exe` / `Mass_Incarceration.exe`; `Explicit_Discrimination.exe` \u2192 `Redlining.exe` / `Predatory_Lending.exe` / `Algorithmic_Bias.exe`."
+    },
+    {
+      "id": "G-25",
+      "title": "Interface-strategy optimizer + three cost tracks",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "cue": "(Module 4, PhD)",
+        "unresolved": true
+      },
+      "hold": {},
+      "type": "equation-gloss card, then three small trend arrows (coercive, legitimacy, economic)",
+      "described": {
+        "Type": "equation-gloss card, then three small trend arrows (coercive, legitimacy, economic)",
+        "Content": "four strategies (partition / integration / direct repression / externalization); all three costs rising through the mid-1950s\u201360s, then dropping sharply at the interface-swap point, labeled with named triggers (NAACP litigation, Brown v. Board, Birmingham, Cold War optics)."
+      },
+      "note": "`[book]` `Paper/The_Original_Power.tex:2082\u20132098`.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 2082
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Interface-strategy optimizer + three cost tracks. Type: equation-gloss card, then three small trend arrows (coercive, legitimacy, economic); Content: four strategies (partition / integration / direct repression / externalization); all three costs rising through the mid-1950s\u201360s, then dropping sharply at the interface-swap point, labeled with named triggers (NAACP litigation, Brown v. Board, Birmingham, Cold War optics)."
+    },
+    {
+      "id": "G-26",
+      "title": "Ehrlichman quote, contested",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "cue": "(Module 4, PhD, Ehrlichman sentence)",
+        "unresolved": true
+      },
+      "hold": {},
+      "type": "quote card with a visible \"disputed\" annotation",
+      "described": {
+        "Type": "quote card with a visible \"disputed\" annotation",
+        "Content": "the quote, attributed \"reported by Dan Baum,\" with a small secondary line: \"Ehrlichman's family and some Nixon-era defenders dispute this.\""
+      },
+      "note": "`[book]` `Paper/The_Original_Power.tex:2101`. Mandatory dispute annotation.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 2101
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Ehrlichman quote, contested. Type: quote card with a visible \"disputed\" annotation; Content: the quote, attributed \"reported by Dan Baum,\" with a small secondary line: \"Ehrlichman's family and some Nixon-era defenders dispute this.\""
+    },
+    {
+      "id": "G-27",
+      "title": "Drug incarceration, sentencing disparity, Broward, Anslinger not-used",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "cue": "(Module 4, PhD, remainder)",
+        "unresolved": true
+      },
+      "hold": {},
+      "type": "bar chart + ratio callout, then two-date case card, then a quote card visibly failing a \"verified\" stamp",
+      "described": {
+        "Type": "bar chart + ratio callout, then two-date case card, then a quote card visibly failing a \"verified\" stamp",
+        "Content": "38,680 (1972) \u2192 480,519 (2002) drug-incarceration count; 100:1 crack/powder ratio; *State v. Williams* \u2192 ~2,600 records sought vacated; Anslinger attribution stamped \"UNVERIFIED \u2014 Penn State Special Collections,\" supportable narrower claim shown beneath."
+      },
+      "note": "`[data]` Caulkins & Chandler; USSC 2011 retroactivity report; `[book]` `Paper/The_Original_Power.tex:2103, 2105, 2106`. The Anslinger card exists to model the discipline being demonstrated \u2014 keep it explicit, do not quietly cut it.",
+      "provenance": {
+        "tags": [
+          "book",
+          "data"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 2103
+          },
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 2105
+          },
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 2106
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Drug incarceration, sentencing disparity, Broward, Anslinger not-used. Type: bar chart + ratio callout, then two-date case card, then a quote card visibly failing a \"verified\" stamp; Content: 38,680 (1972) \u2192 480,519 (2002) drug-incarceration count; 100:1 crack/powder ratio; *State v. Williams* \u2192 ~2,600 records sought vacated; Anslinger attribution stamped \"UNVERIFIED \u2014 Penn State Special Collections,\" supportable narrower claim shown beneath."
+    },
+    {
+      "id": "G-28",
+      "title": "Texas Observer, 2024",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "27:52",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 97,
+        "start_ms": 1672190,
+        "end_ms": 1758820
+      },
+      "hold": {},
+      "type": "single-fact card, present-tense framing",
+      "described": {
+        "Type": "single-fact card, present-tense framing",
+        "Content": "\"24 Texas prison units still run agribusiness operations \u2014 9 on former plantation land (2024).\""
+      },
+      "note": "`[data]` Texas Observer, 2024.",
+      "provenance": {
+        "tags": [
+          "data"
+        ],
+        "citations": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Texas Observer, 2024. Type: single-fact card, present-tense framing; Content: \"24 Texas prison units still run agribusiness operations \u2014 9 on former plantation land (2024).\""
+    },
+    {
+      "id": "G-29",
+      "title": "RLC circuit diagram",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "cue": "(Module 5, \"no equation yet, just the picture\")",
+        "unresolved": true
+      },
+      "hold": {},
+      "type": "the manuscript's own series-RLC circuit schematic, redrawn cleanly",
+      "described": {
+        "Type": "the manuscript's own series-RLC circuit schematic, redrawn cleanly",
+        "Content": "voltage source \u2192 resistor (\"bureaucratic/carceral friction\") \u2192 inductor (\"cultural inertia\") \u2192 capacitor (\"token-reform absorption\")."
+      },
+      "note": "`[book]` `Paper/The_Original_Power.tex:2161\u20132172` (Fig. rlc_topology).",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 2161
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "RLC circuit diagram. Type: the manuscript's own series-RLC circuit schematic, redrawn cleanly; Content: voltage source \u2192 resistor (\"bureaucratic/carceral friction\") \u2192 inductor (\"cultural inertia\") \u2192 capacitor (\"token-reform absorption\")."
+    },
+    {
+      "id": "G-30",
+      "title": "Damped oscillation trace, Shock 1 and Shock 2",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "cue": "(Module 5, \"Walk shock one\" / \"Walk shock two\")",
+        "unresolved": true
+      },
+      "hold": {},
+      "type": "the manuscript's own damped-sine oscillator plot, animated to draw left to right as narrated",
+      "described": {
+        "Type": "the manuscript's own damped-sine oscillator plot, animated to draw left to right as narrated",
+        "Content": "baseline at $q=0$; Shock 1 (1865, large amplitude, overshoot labeled \"Black Codes / Convict Leasing\"); Shock 2 (1964, smaller amplitude, overshoot labeled \"War on Drugs / Mass Incarceration\"); damping-ratio tags (0.17 / 0.59 / 0.97) at each event marker."
+      },
+      "note": "`[book]` `Paper/The_Original_Power.tex:2163, 2226` (Fig. backlash_oscillator; \u03b6 values).",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 2163
+          },
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 2226
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Damped oscillation trace, Shock 1 and Shock 2. Type: the manuscript's own damped-sine oscillator plot, animated to draw left to right as narrated; Content: baseline at $q=0$; Shock 1 (1865, large amplitude, overshoot labeled \"Black Codes / Convict Leasing\"); Shock 2 (1964, smaller amplitude, overshoot labeled \"War on Drugs / Mass Incarceration\"); damping-ratio tags (0.17 / 0.59 / 0.97) at each event marker."
+    },
+    {
+      "id": "G-31",
+      "title": "Resonance / solidarity escape condition",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "cue": "(Module 5, escape-condition passage)",
+        "unresolved": true
+      },
+      "hold": {},
+      "type": "two side-by-side traces \u2014 a single damped pulse (\"isolated reform\") vs. a sustained matched-frequency drive climbing without bound (\"sustained, frequency-matched solidarity\")",
+      "described": {
+        "Type": "two side-by-side traces \u2014 a single damped pulse (\"isolated reform\") vs. a sustained matched-frequency drive climbing without bound (\"sustained, frequency-matched solidarity\")"
+      },
+      "note": "`[design]`, illustrating `[book]` `Paper/The_Original_Power.tex:2189\u20132190`.",
+      "provenance": {
+        "tags": [
+          "book",
+          "design"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 2189
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Resonance / solidarity escape condition. Type: two side-by-side traces \u2014 a single damped pulse (\"isolated reform\") vs. a sustained matched-frequency drive climbing without bound (\"sustained, frequency-matched solidarity\")"
+    },
+    {
+      "id": "G-32",
+      "title": "Agency disclaimer",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "cue": "(Module 5, \"This invariant is a claim about the Elite's proportional share...\")",
+        "unresolved": true
+      },
+      "hold": {},
+      "type": "text list, warm tone \u2014 deliberately breaks the HUD aesthetic for this one beat",
+      "described": {
+        "Type": "text list, warm tone \u2014 deliberately breaks the HUD aesthetic for this one beat",
+        "Content": "Black Wall Street \u00b7 NAACP litigation \u2192 *Brown v. Board* \u00b7 Civil Rights Act victories \u00b7 post-1965 Black professional middle class."
+      },
+      "note": "`[book]` `Paper/The_Original_Power.tex:2192`. Mandatory inclusion; do not cut for time.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 2192
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Agency disclaimer. Type: text list, warm tone \u2014 deliberately breaks the HUD aesthetic for this one beat; Content: Black Wall Street \u00b7 NAACP litigation \u2192 *Brown v. Board* \u00b7 Civil Rights Act victories \u00b7 post-1965 Black professional middle class."
+    },
+    {
+      "id": "G-33",
+      "title": "Post-1965 Backlash Wave, three-track chart",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "cue": "(Module 5, \"The post-1965 Backlash Wave, fifty five years of data\")",
+        "unresolved": true
+      },
+      "hold": {},
+      "type": "three-line chart, matches `figures/eq08_10_backlash_wave.png`",
+      "described": {
+        "Type": "three-line chart, matches `figures/eq08_10_backlash_wave.png`",
+        "Content": "union density (28.4%\u219210.8%), top-decile wealth share (67.5%\u219276.5%), incarceration rate (108\u2192358/100k; Black incarceration peak 3,074/100k in 2010), 1965\u20132020."
+      },
+      "note": "`[data]` `Paper/data/eq08_10_backlash_wave.csv`; `Paper/The_Original_Power.tex:2265` (Fig. eq08_backlash).",
+      "provenance": {
+        "tags": [
+          "data"
+        ],
+        "citations": [
+          {
+            "path": "Paper/data/eq08_10_backlash_wave.csv"
+          },
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 2265
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Post-1965 Backlash Wave, three-track chart. Type: three-line chart, matches `figures/eq08_10_backlash_wave.png`; Content: union density (28.4%\u219210.8%), top-decile wealth share (67.5%\u219276.5%), incarceration rate (108\u2192358/100k; Black incarceration peak 3,074/100k in 2010), 1965\u20132020."
+    },
+    {
+      "id": "G-34",
+      "title": "Complex wage / reactive power",
+      "anchor": {
+        "speaker": "Aisha",
+        "cue": "(Module 5 extension, College beat)",
+        "unresolved": true
+      },
+      "hold": {},
+      "type": "vector diagram, reusing the \u03c8 phasor asset from Episode 1",
+      "described": {
+        "Type": "vector diagram, reusing the \u03c8 phasor asset from Episode 1",
+        "Content": "a force vector and a velocity vector drawn perpendicular, labeled material (does work) and status (deflects only, zero material work)."
+      },
+      "note": "`[book]` `Paper/The_Original_Power.tex:2274\u20132286`.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 2274
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Complex wage / reactive power. Type: vector diagram, reusing the \u03c8 phasor asset from Episode 1; Content: a force vector and a velocity vector drawn perpendicular, labeled material (does work) and status (deflects only, zero material work)."
+    },
+    {
+      "id": "G-35",
+      "title": "Coil gun / energy recovery",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "cue": "(Module 5 extension, PhD, coil-gun sentence)",
+        "unresolved": true
+      },
+      "hold": {},
+      "type": "multi-stage linear-accelerator schematic",
+      "described": {
+        "Type": "multi-stage linear-accelerator schematic",
+        "Content": "labeled coils in sequence (Jim Crow \u2192 Southern Strategy \u2192 War on Drugs), with an energy-arrow flowing from each collapsing coil into the next one's charge."
+      },
+      "note": "`[book]` `Paper/The_Original_Power.tex:2301\u20132318`.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 2301
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Coil gun / energy recovery. Type: multi-stage linear-accelerator schematic; Content: labeled coils in sequence (Jim Crow \u2192 Southern Strategy \u2192 War on Drugs), with an energy-arrow flowing from each collapsing coil into the next one's charge."
+    },
+    {
+      "id": "G-36",
+      "title": "Six-scale fractal zoom rail",
+      "anchor": {
+        "speaker": "Aisha",
+        "timestamp": "52:43",
+        "speaker_id": "aisha",
+        "turn_index": 160,
+        "start_ms": 3163980,
+        "end_ms": 3177470
+      },
+      "hold": {},
+      "type": "vertical zoom rail, six labeled levels",
+      "described": {
+        "Type": "vertical zoom rail, six labeled levels",
+        "Content": "WAN (global) \u2192 OS (national) \u2192 Subroutine (biological) \u2192 Application (intersectional) \u2192 Auto-exec (colorism) \u2192 [Lexical, added later at G-40]."
+      },
+      "note": "`[book]` `Paper/The_Original_Power.tex:2474\u20132565` (isomorphism table).",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 2474
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Six-scale fractal zoom rail. Type: vertical zoom rail, six labeled levels; Content: WAN (global) \u2192 OS (national) \u2192 Subroutine (biological) \u2192 Application (intersectional) \u2192 Auto-exec (colorism) \u2192 [Lexical, added later at G-40]."
+    },
+    {
+      "id": "G-37",
+      "title": "WAN/OS scale detail",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "53:00",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 162,
+        "start_ms": 3180720,
+        "end_ms": 3211560
+      },
+      "hold": {},
+      "type": "two-panel world map + national map overlay",
+      "described": {
+        "Type": "two-panel world map + national map overlay",
+        "Content": "IMF/World Bank/comprador-government flows (global panel); redlining map + gerrymander district outline (national panel)."
+      },
+      "note": "`[book]` `Paper/The_Original_Power.tex:2478, 2482`.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 2478
+          },
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 2482
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "WAN/OS scale detail. Type: two-panel world map + national map overlay; Content: IMF/World Bank/comprador-government flows (global panel); redlining map + gerrymander district outline (national panel)."
+    },
+    {
+      "id": "G-38",
+      "title": "Subroutine scale, content-sensitive",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "53:46",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 166,
+        "start_ms": 3226540,
+        "end_ms": 3251900
+      },
+      "hold": {},
+      "type": "plain text citation card, no imagery",
+      "described": {
+        "Type": "plain text citation card, no imagery",
+        "Content": "\"1662, Virginia: *partus sequitur ventrem* \u2014 child's status follows the mother's.\""
+      },
+      "note": "`[book]` `Paper/The_Original_Power.tex:2492`. Do not illustrate the named acts of sexual violence; text citation only.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 2492
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Subroutine scale, content-sensitive. Type: plain text citation card, no imagery; Content: \"1662, Virginia: *partus sequitur ventrem* \u2014 child's status follows the mother's.\""
+    },
+    {
+      "id": "G-39",
+      "title": "Application layer and auto-exec/colorism",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "54:15",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 168,
+        "start_ms": 3255730,
+        "end_ms": 3282400
+      },
+      "hold": {},
+      "type": "overlapping-circles diagram, then a self-referencing loop diagram",
+      "described": {
+        "Type": "overlapping-circles diagram, then a self-referencing loop diagram",
+        "Content": "race/gender/sexuality/disability circles, overlap regions shaded darker; a single out-group circle with an arrow looping back into itself, labeled \"self-executing code.\""
+      },
+      "note": "`[book]` `Paper/The_Original_Power.tex:2497, 2500\u20132501`.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 2497
+          },
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 2500
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Application layer and auto-exec/colorism. Type: overlapping-circles diagram, then a self-referencing loop diagram; Content: race/gender/sexuality/disability circles, overlap regions shaded darker; a single out-group circle with an arrow looping back into itself, labeled \"self-executing code.\""
+    },
+    {
+      "id": "G-40",
+      "title": "Model minority objection + phase-loading operator",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "55:42",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 172,
+        "start_ms": 3342560,
+        "end_ms": 3451670
+      },
+      "hold": {},
+      "type": "Q&A card, then timeline + rising line chart",
+      "described": {
+        "Type": "Q&A card, then timeline + rising line chart",
+        "Content": "\"Objection: outperformance despite partition.\" / \"Answer: calibration by insertion point, 1965 Immigration and Nationality Act.\" Then ERA (~1972) / Moral Majority (~1979) / Anita Bryant campaign (1977\u201379) markers; \u03a6_load line rising 0.078 \u2192 0.214 (approx.) \u2192 0.403."
+      },
+      "note": "`[book]` `Paper/The_Original_Power.tex:2530\u20132537, 2554, 2557` (Tier 2, ordinal phase values \u2014 label the chart \"ordinal index,\" not raw percentages). Mandatory inclusion of the objection card per the hazards audit.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 2530
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Model minority objection + phase-loading operator. Type: Q&A card, then timeline + rising line chart; Content: \"Objection: outperformance despite partition.\" / \"Answer: calibration by insertion point, 1965 Immigration and Nationality Act.\" Then ERA (~1972) / Moral Majority (~1979) / Anita Bryant campaign (1977\u201379) markers; \u03a6_load line rising 0.078 \u2192 0.214 (approx.) \u2192 0.403."
+    },
+    {
+      "id": "G-41",
+      "title": "Master/slave patent timeline",
+      "anchor": {
+        "speaker": "Aisha",
+        "timestamp": "58:12",
+        "speaker_id": "aisha",
+        "turn_index": 178,
+        "start_ms": 3492720,
+        "end_ms": 3541880
+      },
+      "hold": {},
+      "type": "timeline, 1904 \u2192 2024, with a sharp step-change marked at 1976",
+      "described": {
+        "Type": "timeline, 1904 \u2192 2024, with a sharp step-change marked at 1976",
+        "Content": "1904 \"slave clock\" coinage \u2192 pre-WWII neutral hydraulic-patent vocabulary \u2192 1959 scare-quoted patent \u2192 1976+ patent-search count (19,708 documents) \u2192 deployment across named domains. Sixth scale label (\"Lexical\") slots into the G-36 rail here."
+      },
+      "note": "`[book]` `Paper/The_Original_Power.tex:2570\u20132578`, citing `eglash_broken`.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 2570
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Master/slave patent timeline. Type: timeline, 1904 \u2192 2024, with a sharp step-change marked at 1976; Content: 1904 \"slave clock\" coinage \u2192 pre-WWII neutral hydraulic-patent vocabulary \u2192 1959 scare-quoted patent \u2192 1976+ patent-search count (19,708 documents) \u2192 deployment across named domains. Sixth scale label (\"Lexical\") slots into the G-36 rail here."
+    },
+    {
+      "id": "G-42",
+      "title": "Accuracy-audit quotes + Dartmouth 1964/1968",
+      "anchor": {
+        "speaker": "Aisha",
+        "timestamp": "58:12",
+        "speaker_id": "aisha",
+        "turn_index": 178,
+        "start_ms": 3492720,
+        "end_ms": 3541880
+      },
+      "hold": {},
+      "type": "stacked quote cards, then archival terminal-text card",
+      "described": {
+        "Type": "stacked quote cards, then archival terminal-text card",
+        "Content": "IDE documentation quote; the Black electrical engineer's flip-flop quote; the \"runaway user program\" quote (1964/1968) tagged \"Mode 2: autonomous propagation\"; the 1992 classroom testimony."
+      },
+      "note": "`[book]` `Paper/The_Original_Power.tex:2580, 2582, 2585\u20132587, 2591\u20132592`.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 2580
+          },
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 2582
+          },
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 2585
+          }
+        ]
+      },
+      "suggested_track": "archival",
+      "prompt_seed": "Accuracy-audit quotes + Dartmouth 1964/1968. Type: stacked quote cards, then archival terminal-text card; Content: IDE documentation quote; the Black electrical engineer's flip-flop quote; the \"runaway user program\" quote (1964/1968) tagged \"Mode 2: autonomous propagation\"; the 1992 classroom testimony."
+    },
+    {
+      "id": "G-43",
+      "title": "Deprecation arc, 2003\u20132020",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "60:18",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 182,
+        "start_ms": 3618420,
+        "end_ms": 3690090
+      },
+      "hold": {},
+      "type": "timeline, three markers, ending on a gap callout",
+      "described": {
+        "Type": "timeline, three markers, ending on a gap callout",
+        "Content": "Nov. 2003 (LA County memo) \u2192 2014\u20132018 (Django/Drupal/Redis/CouchDB/ Python) \u2192 June\u2013Oct. 2020 (GitHub `main`, Linux kernel, I\u00b2C v7). Gap callout: \"17 years from complaint to institutional shift.\""
+      },
+      "note": "`[book]` `Paper/The_Original_Power.tex:2601\u20132608`.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 2601
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Deprecation arc, 2003\u20132020. Type: timeline, three markers, ending on a gap callout; Content: Nov. 2003 (LA County memo) \u2192 2014\u20132018 (Django/Drupal/Redis/CouchDB/ Python) \u2192 June\u2013Oct. 2020 (GitHub `main`, Linux kernel, I\u00b2C v7). Gap callout: \"17 years from complaint to institutional shift.\""
+    },
+    {
+      "id": "G-44",
+      "title": "Reflexive audit, the book on itself",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "61:34",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 184,
+        "start_ms": 3694060,
+        "end_ms": 3750730
+      },
+      "hold": {},
+      "type": "text card, breaks the HUD frame briefly (drop the green scanline border for this one card)",
+      "described": {
+        "Type": "text card, breaks the HUD frame briefly (drop the green scanline border for this one card)",
+        "Content": "\"This book uses 'Elite,' not 'master class' \u2014 deliberately.\""
+      },
+      "note": "`[book]` `Paper/The_Original_Power.tex:2632\u20132642`. Intentional visual break, not a rendering error.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 2632
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Reflexive audit, the book on itself. Type: text card, breaks the HUD frame briefly (drop the green scanline border for this one card); Content: \"This book uses 'Elite,' not 'master class' \u2014 deliberately.\""
+    },
+    {
+      "id": "G-45",
+      "title": "Corrupted firewall diagram",
+      "anchor": {
+        "speaker": "Aisha",
+        "timestamp": "62:59",
+        "speaker_id": "aisha",
+        "turn_index": 190,
+        "start_ms": 3779180,
+        "end_ms": 3817210
+      },
+      "hold": {},
+      "type": "firewall/network-security diagram, inverted (the \"firewall\" node facing the wrong direction)",
+      "described": {
+        "Type": "firewall/network-security diagram, inverted (the \"firewall\" node facing the wrong direction)",
+        "Content": "the Buffer Class node positioned as if defending the perimeter, with a dashed arrow showing it is itself inside the extraction flow."
+      },
+      "note": "`[design]`, illustrating `[book]` `Paper/The_Original_Power.tex:2644\u20132652`.",
+      "provenance": {
+        "tags": [
+          "book",
+          "design"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 2644
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Corrupted firewall diagram. Type: firewall/network-security diagram, inverted (the \"firewall\" node facing the wrong direction); Content: the Buffer Class node positioned as if defending the perimeter, with a dashed arrow showing it is itself inside the extraction flow."
+    },
+    {
+      "id": "G-46",
+      "title": "Status wage vs. material wage + SDO/RWA + three buffer functions",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "63:38",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 192,
+        "start_ms": 3818450,
+        "end_ms": 3906840
+      },
+      "hold": {},
+      "type": "two-column comparison with funding-source footnote, then equation-gloss dial diagram, then a three-item checklist",
+      "described": {
+        "Type": "two-column comparison with funding-source footnote, then equation-gloss dial diagram, then a three-item checklist",
+        "Content": "Status wage (deference, courtesy titles, leniency \u2014 no material transfer) / Material wage (land grants, Social Security, GI Bill \u2014 funded by deeper out-group extraction, never by the Elite's own share); SDO and RWA shown as dials scaling the wage's effective value; Threat absorption \u00b7 Perimeter defense \u00b7 Antivirus misdirection."
+      },
+      "note": "`[book]` `Paper/The_Original_Power.tex:2655\u20132677`.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 2655
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Status wage vs. material wage + SDO/RWA + three buffer functions. Type: two-column comparison with funding-source footnote, then equation-gloss dial diagram, then a three-item checklist; Content: Status wage (deference, courtesy titles, leniency \u2014 no material transfer) / Material wage (land grants, Social Security, GI Bill \u2014 funded by deeper out-group extraction, never by the Elite's own share); SDO and RWA shown as dials scaling the wage's effective value; Threat absorption \u00b7 Perimeter defense \u00b7 Antivirus misdirection."
+    },
+    {
+      "id": "G-47",
+      "title": "Malcolm X quote",
+      "anchor": {
+        "speaker": "Aisha",
+        "timestamp": "65:37",
+        "speaker_id": "aisha",
+        "turn_index": 198,
+        "start_ms": 3937900,
+        "end_ms": 3964750
+      },
+      "hold": {},
+      "type": "full-frame quote card, held",
+      "described": {
+        "Type": "full-frame quote card, held",
+        "Content": "\"The white man will try to satisfy us with symbolic victories rather than economic equity and real Justice.\" \u2014 Malcolm X."
+      },
+      "note": "`[book]` `Paper/The_Original_Power.tex:2680`.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 2680
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Malcolm X quote. Type: full-frame quote card, held; Content: \"The white man will try to satisfy us with symbolic victories rather than economic equity and real Justice.\" \u2014 Malcolm X."
+    },
+    {
+      "id": "G-48",
+      "title": "Top 0.1% wealth share, falsification condition",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "66:11",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 200,
+        "start_ms": 3971110,
+        "end_ms": 3993160
+      },
+      "hold": {},
+      "type": "long-run line chart, 1913\u2013present, with a shaded \"violation zone\" overlay showing what a real falsification would look like",
+      "described": {
+        "Type": "long-run line chart, 1913\u2013present, with a shaded \"violation zone\" overlay showing what a real falsification would look like",
+        "Content": "top 0.1% wealth share since 1913; the New Deal/Great Compression dip (1935\u20131973, 25%\u2192under 10%) highlighted as the candidate case, not yet resolved."
+      },
+      "note": "`[data]` `Paper/The_Original_Power.tex:2700s` (\u0394max=0 falsifiability passage); Piketty-Saez-Zucman/WID series.",
+      "provenance": {
+        "tags": [
+          "data"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 2700
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Top 0.1% wealth share, falsification condition. Type: long-run line chart, 1913\u2013present, with a shaded \"violation zone\" overlay showing what a real falsification would look like; Content: top 0.1% wealth share since 1913; the New Deal/Great Compression dip (1935\u20131973, 25%\u2192under 10%) highlighted as the candidate case, not yet resolved."
+    },
+    {
+      "id": "G-49",
+      "title": "Great Compression, three-part rebuttal",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "66:56",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 204,
+        "start_ms": 4016580,
+        "end_ms": 4040340
+      },
+      "hold": {},
+      "type": "three sequential annotation cards over the G-48 chart, appearing as each reason is narrated",
+      "described": {
+        "Type": "three sequential annotation cards over the G-48 chart, appearing as each reason is narrated",
+        "Content": "1. \"Forced by convergent threats\" (labor militancy, socialist option, Soviet alternative, anti-colonial movements). 2. \"Every concession still ran through the racial partition\" (GI Bill segregated locally, FHA built redlining, Social Security excluded agricultural/domestic work). 3. \"Recovered on schedule after 1973\" \u2014 the chart's post-1973 line climbing back toward the 1929 peak."
+      },
+      "note": "`[book]` \u0394max=0 falsifiability passage; GI Bill/FHA/Social Security exclusion citations per `notes/CH2_findings.md`.",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Great Compression, three-part rebuttal. Type: three sequential annotation cards over the G-48 chart, appearing as each reason is narrated; Content: 1. \"Forced by convergent threats\" (labor militancy, socialist option, Soviet alternative, anti-colonial movements). 2. \"Every concession still ran through the racial partition\" (GI Bill segregated locally, FHA built redlining, Social Security excluded agricultural/domestic work). 3. \"Recovered on schedule after 1973\" \u2014 the chart's post-1973 line climbing back toward the 1929 peak."
+    },
+    {
+      "id": "G-50",
+      "title": "Three modes diagram",
+      "anchor": {
+        "speaker": "Aisha",
+        "timestamp": "69:21",
+        "speaker_id": "aisha",
+        "turn_index": 213,
+        "start_ms": 4161110,
+        "end_ms": 4213380
+      },
+      "hold": {},
+      "type": "three-panel diagram, stacked rather than side-by-side, showing the modes layering on top of each other over time",
+      "described": {
+        "Type": "three-panel diagram, stacked rather than side-by-side, showing the modes layering on top of each other over time",
+        "Content": "Intentional Design (Zurara 1453, 1705 Virginia Slave Codes, Three-Fifths Compromise) \u00b7 Autonomous Propagation (1960s real-estate steering, no personal animus required) \u00b7 Conscious Intervention (Ehrlichman, Atwater, reasoning on the record)."
+      },
+      "note": "`[book]` `Paper/The_Original_Power.tex:2750s` (three-modes methodological note).",
+      "provenance": {
+        "tags": [
+          "book"
+        ],
+        "citations": [
+          {
+            "path": "Paper/The_Original_Power.tex",
+            "line": 2750
+          }
+        ]
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Three modes diagram. Type: three-panel diagram, stacked rather than side-by-side, showing the modes layering on top of each other over time; Content: Intentional Design (Zurara 1453, 1705 Virginia Slave Codes, Three-Fifths Compromise) \u00b7 Autonomous Propagation (1960s real-estate steering, no personal animus required) \u00b7 Conscious Intervention (Ehrlichman, Atwater, reasoning on the record)."
+    },
+    {
+      "id": "G-51",
+      "title": "Rapid-fire recap",
+      "anchor": {
+        "speaker": "Toussaint",
+        "timestamp": "71:24",
+        "speaker_id": "toussaint",
+        "turn_index": 216,
+        "start_ms": 4284910,
+        "end_ms": 4296760
+      },
+      "hold": {
+        "until": "72:40",
+        "script_ms": 76000
+      },
+      "type": "nine-item checklist, ticking in one per line as each host names it",
+      "described": {
+        "Type": "nine-item checklist, ticking in one per line as each host names it",
+        "Content": "the nine module names in order, each with its elementary-school gloss shown as a small caption beneath."
+      },
+      "note": "`[design]`. This is the only cue that references every module by name in one frame; keep it legible at a glance rather than dense.",
+      "provenance": {
+        "tags": [
+          "design"
+        ],
+        "citations": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Rapid-fire recap. Type: nine-item checklist, ticking in one per line as each host names it; Content: the nine module names in order, each with its elementary-school gloss shown as a small caption beneath."
+    },
+    {
+      "id": "G-52",
+      "title": "Closing card",
+      "anchor": {
+        "speaker": "Toussaint",
+        "timestamp": "75:36",
+        "speaker_id": "toussaint",
+        "turn_index": 240,
+        "start_ms": 4536560,
+        "end_ms": 4540590
+      },
+      "hold": {},
+      "type": "static",
+      "described": {
+        "Type": "static",
+        "Content": "*Architecting the Operation* \u2014 \"Redefining Racism,\" from *The Original Power*. Host card: Toussaint \u00b7 Aisha \u00b7 Emmanuel Theodore."
+      },
+      "note": "",
+      "provenance": {
+        "tags": [],
+        "citations": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Closing card. Type: static; Content: *Architecting the Operation* \u2014 \"Redefining Racism,\" from *The Original Power*. Host card: Toussaint \u00b7 Aisha \u00b7 Emmanuel Theodore."
+    }
+  ],
+  "validation": [
+    {
+      "level": "warn",
+      "shot": "G-01",
+      "message": "no provenance tag"
+    },
+    {
+      "level": "warn",
+      "shot": "G-20",
+      "message": "no provenance tag"
+    },
+    {
+      "level": "warn",
+      "shot": "G-21",
+      "message": "anchor is prose, not a timestamp: (final turn of Module 2, routing line: \"Every plantation, a "
+    },
+    {
+      "level": "warn",
+      "shot": "G-22",
+      "message": "anchor is prose, not a timestamp: (Module 3, PhD beat)"
+    },
+    {
+      "level": "warn",
+      "shot": "G-23",
+      "message": "anchor is prose, not a timestamp: (Module 3, LSD passage)"
+    },
+    {
+      "level": "warn",
+      "shot": "G-25",
+      "message": "anchor is prose, not a timestamp: (Module 4, PhD)"
+    },
+    {
+      "level": "warn",
+      "shot": "G-26",
+      "message": "anchor is prose, not a timestamp: (Module 4, PhD, Ehrlichman sentence)"
+    },
+    {
+      "level": "warn",
+      "shot": "G-27",
+      "message": "anchor is prose, not a timestamp: (Module 4, PhD, remainder)"
+    },
+    {
+      "level": "error",
+      "shot": "G-27",
+      "message": "tagged [data] with no file under Paper/data/"
+    },
+    {
+      "level": "error",
+      "shot": "G-28",
+      "message": "tagged [data] with no file under Paper/data/"
+    },
+    {
+      "level": "warn",
+      "shot": "G-29",
+      "message": "anchor is prose, not a timestamp: (Module 5, \"no equation yet, just the picture\")"
+    },
+    {
+      "level": "warn",
+      "shot": "G-30",
+      "message": "anchor is prose, not a timestamp: (Module 5, \"Walk shock one\" / \"Walk shock two\")"
+    },
+    {
+      "level": "warn",
+      "shot": "G-31",
+      "message": "anchor is prose, not a timestamp: (Module 5, escape-condition passage)"
+    },
+    {
+      "level": "warn",
+      "shot": "G-32",
+      "message": "anchor is prose, not a timestamp: (Module 5, \"This invariant is a claim about the Elite's prop"
+    },
+    {
+      "level": "warn",
+      "shot": "G-33",
+      "message": "anchor is prose, not a timestamp: (Module 5, \"The post-1965 Backlash Wave, fifty five years of"
+    },
+    {
+      "level": "warn",
+      "shot": "G-34",
+      "message": "anchor is prose, not a timestamp: (Module 5 extension, College beat)"
+    },
+    {
+      "level": "warn",
+      "shot": "G-35",
+      "message": "anchor is prose, not a timestamp: (Module 5 extension, PhD, coil-gun sentence)"
+    },
+    {
+      "level": "error",
+      "shot": "G-48",
+      "message": "tagged [data] with no file under Paper/data/"
+    },
+    {
+      "level": "error",
+      "shot": "G-49",
+      "message": "tagged [book] with no .tex citation"
+    },
+    {
+      "level": "warn",
+      "shot": "G-52",
+      "message": "no provenance tag"
+    }
+  ]
+}
