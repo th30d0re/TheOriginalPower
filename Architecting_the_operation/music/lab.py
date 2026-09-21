@@ -56,6 +56,42 @@ def _stem_info(path: Path) -> _Stem:
     return _Stem(path, int(round(info.duration * 1000)), int(info.samplerate))
 
 
+def _clear_devices(track: ET.Element) -> str | None:
+    """Strip the template's voice processing off a sample track.
+
+    The Podcast & Radio template hangs a "Speech Enhancer" rack on every voice
+    track. It is tuned for narration and has no business on a drone, a
+    rectified groove, or an archival cut.
+    """
+    devices = track.find("./DeviceChain/DeviceChain/Devices")
+    if devices is None:
+        return None
+    names = []
+    for device in list(devices):
+        label = device.find("./UserName")
+        names.append((label.attrib.get("Value") if label is not None else "") or device.tag)
+        devices.remove(device)
+    return ", ".join(n for n in names if n) or None
+
+
+def _session_slot(track: ET.Element, clip: ET.Element) -> None:
+    """Put the clip in the first Session slot instead of the timeline.
+
+    Nothing here has a tempo or a position yet. A clip in a slot is something
+    to trigger and audition against the others; a clip on the timeline is a
+    decision about when it happens, and that decision has not been made.
+    """
+    slots = track.find("./DeviceChain/MainSequencer/ClipSlotList")
+    if slots is None or len(slots) == 0:
+        raise RuntimeError("Ableton template audio track has no ClipSlotList")
+    value = slots[0].find("./ClipSlot/Value")
+    if value is None:
+        raise RuntimeError("Ableton template clip slot is missing ClipSlot/Value")
+    for existing in list(value):
+        value.remove(existing)
+    value.append(clip)
+
+
 def _fresh_target_ids(track: ET.Element, start: int) -> int:
     """Automation and modulation targets are referenced by id across the whole
     document, so a cloned track needs its own. Everything else inside a track
@@ -125,12 +161,15 @@ def build(stems_dir: Path, output: Path) -> Path:
             annotation = ET.SubElement(track.find("./Name"), "Annotation")
         annotation.attrib["Value"] = descriptions.get(name, "")
 
+        stripped = _clear_devices(track)
+        if stripped and index == 1:
+            print(f"removed from every track: {stripped}")
+
         stem = _stem_info(wav)
         beats = als._ms_to_beats(stem.duration_ms)
         clip = als._build_audio_clip(index, 0.0, beats, beats, stem, output.parent)
-        events = als._arrangement_events(track)
-        events.clear()
-        events.append(clip)
+        als._arrangement_events(track).clear()
+        _session_slot(track, clip)
         tracks_el.append(track)
 
     _bump_next_pointee(root)
