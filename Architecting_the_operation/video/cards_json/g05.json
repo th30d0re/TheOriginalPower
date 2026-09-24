@@ -6,17 +6,22 @@
     {
       "label": "High- vs. low-disadvantage neighborhoods",
       "period": "",
-      "values": [50],
+      "values": [
+        50
+      ],
       "delta": "~50-point gap",
       "color": "teal"
     },
     {
       "label": "Household poverty alone",
       "period": "",
-      "values": [10],
+      "values": [
+        10
+      ],
       "delta": "5–10 points",
       "color": "gold"
     }
   ],
-  "sources": "Sources: PMC 9172977 (2022)"
+  "sources": "Sources: PMC 9172977 (2022)",
+  "qrUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9172977/"
 }
