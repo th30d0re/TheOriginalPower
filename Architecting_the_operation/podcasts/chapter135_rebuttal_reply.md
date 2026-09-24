@@ -70,7 +70,7 @@ Emmanuel Theodore (02:53)
 Hold onto that, because we're coming back to a word later that's the opposite of empty: grandfather clause.
 
 The Reel (02:59)
-[clip:reel_close] shout out to the governor. Thank you for your time. Thank you for helping us.
+[clip:reel_close] shout out to the governor. Thank you for your time. Thank you for helping us. Make sure you guys vote yes on nine.
 
 Emmanuel Theodore (03:02)
 That's the reel. Here's the rest of it.
