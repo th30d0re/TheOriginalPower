@@ -1,0 +1,14 @@
+{
+  "component": "FreezeCallout",
+  "headline": "Filmed at a Yes-on-9 press event",
+  "image": "assets/frames/g01_wall.png",
+  "aspect": 1.0588,
+  "callouts": [
+    {"shape": "rect", "x": 0.014, "y": 0.182, "w": 0.278, "h": 0.303},
+    {"shape": "rect", "x": 0.306, "y": 0.0, "w": 0.217, "h": 0.265},
+    {"shape": "rect", "x": 0.542, "y": 0.259, "w": 0.278, "h": 0.212},
+    {"shape": "rect", "x": 0.536, "y": 0.735, "w": 0.2, "h": 0.213}
+  ],
+  "caption": "Every frame shows the campaign's YES on 9 signage.",
+  "sources": "Sources: @harvardseye Instagram reel · direct frame review"
+}
