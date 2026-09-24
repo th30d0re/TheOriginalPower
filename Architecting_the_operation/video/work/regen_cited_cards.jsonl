@@ -1,0 +1,12 @@
+{"card": "g05", "status": "done", "stage": "download", "source_id": "6e3e561d-2081-4410-bb2a-e47a9448f6e4", "artifact_id": "7600dd95-791c-4b02-a419-bf2486c2ea3b"}
+{"card": "g06", "status": "done", "stage": "download", "source_id": "dd74effa-3822-41ce-8520-29f7230d600c", "artifact_id": "4a82d454-d72d-4e2d-b7d5-bf4dc5dfc920"}
+{"card": "g07", "status": "done", "stage": "download", "source_id": "fa8dda55-1653-419a-a351-c0adeb2cacc4", "artifact_id": "2e464e38-e30d-40bf-9c57-c630cb9d0626"}
+{"card": "g08", "status": "done", "stage": "download", "source_id": "a3b8090c-9dba-4c93-ab47-3928508ddf6e", "artifact_id": "ddafc53c-f51e-4579-8bb8-e74f05e5eb68"}
+{"card": "g09", "status": "done", "stage": "download", "source_id": "7b65a82a-3033-4295-b897-3f732fefbe7b", "artifact_id": "53df045e-f098-41b8-8d33-7cb8ca227024"}
+{"card": "g10", "status": "done", "stage": "download", "source_id": "69a8e8f5-7257-4c4b-9d9e-1e8d3fad641a", "artifact_id": "f2c08a24-3c36-4799-b8c0-7b83db93b876"}
+{"card": "g11", "status": "done", "stage": "download", "source_id": "24898f52-e9eb-407e-b3f1-bc985ac3ecdb", "artifact_id": "6487a8bf-ff5e-41b3-af22-c02b7a61572a"}
+{"card": "g12", "status": "done", "stage": "download", "source_id": "cf665e9e-79d3-4fdf-82a8-47b2bbd14392", "artifact_id": "091ce463-3762-45df-bab4-d9b2066829ae"}
+{"card": "g13", "status": "done", "stage": "download", "source_id": "a84bf466-3345-464a-8657-aaf8d777ea5f", "artifact_id": "65ddc85f-11ac-48d6-9eec-dee6a43e9174"}
+{"card": "g14", "status": "done", "stage": "download", "source_id": "1626d3bd-0ce4-4300-a290-94f7fe50aaa7", "artifact_id": "acadf3b5-508c-4cce-b2fd-09a35e956059"}
+{"card": "g15", "status": "done", "stage": "download", "source_id": "4a4b04f1-13a1-4710-9ccf-bbc137f2ac47", "artifact_id": "85bc4e5d-a58a-4321-a419-c1f06c043070"}
+{"card": "g10", "status": "failed", "stage": "generate", "source_id": "70a0a407-4e6d-47f3-a5b8-0e5ddf34b4e9", "artifact_id": "87858a3b-a284-4450-bd2b-a2ba5972f243"}

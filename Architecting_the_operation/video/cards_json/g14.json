@@ -1,0 +1,22 @@
+{
+  "component": "TitleCard",
+  "headline": "What a Massachusetts handgun license costs",
+  "items": [
+    {
+      "title": "Application fee",
+      "emphasis": "$100",
+      "detail": "Non-refundable, paid to the state"
+    },
+    {
+      "title": "Live-fire safety course",
+      "emphasis": "$100–$150",
+      "detail": "Required of new applicants since Aug 1, 2024; price varies by provider"
+    },
+    {
+      "title": "Before you own anything",
+      "emphasis": "$200–$250",
+      "detail": "Fee plus course"
+    }
+  ],
+  "sources": "Sources: mass.gov · Local MA training providers"
+}

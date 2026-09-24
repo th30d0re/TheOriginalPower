@@ -1,0 +1,24 @@
+{
+  "component": "CompareCard",
+  "headline": "Same gun. Only the date differs.",
+  "items": [
+    {
+      "title": "Owned before Aug 1, 2024",
+      "points": [
+        "Grandfathered: you keep it",
+        "Register by Oct 28, 2026"
+      ]
+    },
+    {
+      "title": "Acquired after",
+      "points": [
+        "Cannot be legally acquired"
+      ]
+    }
+  ],
+  "sources": "Sources: Acts of 2024, Ch. 135",
+  "art": {
+    "src": "assets/quiver/g12_identical_rifles.svg",
+    "size": "hero"
+  }
+}

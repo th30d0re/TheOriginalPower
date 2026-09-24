@@ -1,0 +1,11 @@
+{
+  "component": "TitleCard",
+  "headline": "NYC: what actually worked",
+  "items": [
+    {
+      "title": "Shootings down 3 years running",
+      "detail": "NYPD credits hot-spot policing and targeted enforcement against illegal guns."
+    }
+  ],
+  "sources": "Sources: NYPD/NYC.gov (Jan. 2025)"
+}

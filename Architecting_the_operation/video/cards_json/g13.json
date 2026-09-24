@@ -1,0 +1,29 @@
+{
+  "component": "TimelineCard",
+  "headline": "A two-year lag behind a national trend",
+  "items": [
+    {
+      "date": "2020",
+      "title": "Black gun buyers +58%",
+      "detail": "National surge begins."
+    },
+    {
+      "date": "2021",
+      "title": "Black women gun owners +87%",
+      "detail": "NSSF survey data."
+    },
+    {
+      "date": "GAP",
+      "title": "Massachusetts: still 'may issue'",
+      "detail": "A handgun (LTC) required a police chief's personal sign-off.",
+      "highlight": true
+    },
+    {
+      "date": "JUN\n2022",
+      "title": "Bruen forces MA to 'shall issue'",
+      "detail": "U.S. Supreme Court strikes down discretionary licensing."
+    }
+  ],
+  "note": "Rifles (FID) were already close to automatic; the bottleneck was handgun-specific.",
+  "sources": "Sources: NSSF/CNN · NAAGA · NYSRPA v. Bruen (2022)"
+}

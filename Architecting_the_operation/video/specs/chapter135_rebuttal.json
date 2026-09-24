@@ -1,0 +1,600 @@
+{
+  "schema_version": 1,
+  "source": "chapter135_rebuttal_shotlist.md",
+  "manifest": "episode_manifest.json",
+  "script": "chapter135_rebuttal_reply.md",
+  "shot_count": 16,
+  "shots": [
+    {
+      "id": "G-01",
+      "title": "The wall behind them",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "00:15",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 1,
+        "start_ms": 15160,
+        "end_ms": 18020
+      },
+      "hold": {
+        "until": "00:27",
+        "script_ms": 12000
+      },
+      "type": "freeze-frame callout, drawn on the paused reel frame itself",
+      "described": {
+        "Type": "freeze-frame callout, drawn on the paused reel frame itself",
+        "Content": "Circle or highlight the \"YES on 9 / FOR A SAFE MA\" posters visible behind Healey and the interviewer. Caption: \"Filmed at a Yes-on-9 press event.\""
+      },
+      "note": "`[source]` citations.md Card 9. This is the strongest single visual in the piece \u2014 it was confirmed by direct frame inspection, not inference. Don't undersell it with a small caption; this deserves the full freeze-frame treatment.",
+      "provenance": {
+        "tags": [
+          "source"
+        ],
+        "citations": [
+          {
+            "card": "Card 9"
+          }
+        ],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "The wall behind them. Type: freeze-frame callout, drawn on the paused reel frame itself; Content: Circle or highlight the \"YES on 9 / FOR A SAFE MA\" posters visible behind Healey and the interviewer. Caption: \"Filmed at a Yes-on-9 press event.\""
+    },
+    {
+      "id": "G-02",
+      "title": "What a yes/no vote actually does",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "01:25",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 11,
+        "start_ms": 85930,
+        "end_ms": 92680
+      },
+      "hold": {
+        "until": "01:37",
+        "script_ms": 12000
+      },
+      "type": "title card, headline + three impact beats + citation footer (v3)",
+      "described": {
+        "Type": "title card, headline + three impact beats + citation footer (v3)",
+        "Content": "Headline: \"A YES vote keeps Chapter 135 \u2014 including the expanded assault-weapons definition.\" Then three beats: 1. The cutoff: \"Owned before Aug 1, 2024? You keep your AR-15. Buying after? Banned outright.\" 2. Who sits on which side: \"Who already owns: white men 48%, nonwhite women 16% (Pew 2017). Who's buying next: 56% of Black non-owners see themselves owning a gun \u2014 the highest of any group (Pew 2023).\" 3. What the locked-out buyer gets: \"The legal alternative fires the same round. The banned 'features' are the adjustability \u2014 the stock and grip geometry that lets a smaller shooter fit the rifle.\" Footer: \"Sources: Pew Research 2017/2023 \u00b7 Acts of 2024, Ch. 135 \u00b7 mass.gov\" plus a QR placeholder (QR composited in the edit, bottom-center, clear of the Reels button stack)."
+      },
+      "note": "`[source]` citations.md Cards 2, 4, 17, 21, and 23. v3 (2026-09-23) replaces the procedural two-column layout \u2014 the systemic-impact version. Full generation brief for NotebookLM / ChatGPT / Arrow 2.0: `Architecting_the_operation/video/g02_v3_source.md`.",
+      "provenance": {
+        "tags": [
+          "source"
+        ],
+        "citations": [
+          {
+            "card": "Card 2"
+          },
+          {
+            "card": "Card 4"
+          },
+          {
+            "card": "Card 17"
+          },
+          {
+            "card": "Card 21"
+          },
+          {
+            "card": "Card 23"
+          }
+        ],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "What a yes/no vote actually does. Type: title card, headline + three impact beats + citation footer (v3); Content: Headline: \"A YES vote keeps Chapter 135 \u2014 including the expanded assault-weapons definition.\" Then three beats: 1. The cutoff: \"Owned before Aug 1, 2024? You keep your AR-15. Buying after? Banned outright.\" 2. Who sits on which side: \"Who already owns: white men 48%, nonwhite women 16% (Pew 2017). Who's buying next: 56% of Black non-owners see themselves owning a gun \u2014 the highest of any group (Pew 2023).\" 3. What the locked-out buyer gets: \"The legal alternative fires the same round. The banned 'features' are the adjustability \u2014 the stock and grip geometry that lets a smaller shooter fit the rifle.\" Footer: \"Sources: Pew Research 2017/2023 \u00b7 Acts of 2024, Ch. 135 \u00b7 mass.gov\" plus a QR placeholder (QR composited in the edit, bottom-center, clear of the Reels button stack)."
+    },
+    {
+      "id": "G-03",
+      "title": "The question that wasn't asked",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "02:03",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 17,
+        "start_ms": 128690,
+        "end_ms": 133330
+      },
+      "hold": {
+        "until": "02:07",
+        "script_ms": 4000
+      },
+      "type": "build, contrast",
+      "described": {
+        "Type": "build, contrast",
+        "Content": "Left: \"What should schools/communities/mental health do?\" (asked). Right, greyed out or with a strike-through until the reveal: \"What should the *government* do?\" (never asked)."
+      },
+      "note": "`[source]` citations.md Card 9 (the reel itself, https://www.instagram.com/reel/DdoZBRXIbK5/). This is a close read of the reel's own transcript, not an external claim.",
+      "provenance": {
+        "tags": [
+          "source"
+        ],
+        "citations": [
+          {
+            "url": "https://www.instagram.com/reel/DdoZBRXIbK5/"
+          },
+          {
+            "card": "Card 9"
+          }
+        ],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "The question that wasn't asked. Type: build, contrast; Content: Left: \"What should schools/communities/mental health do?\" (asked). Right, greyed out or with a strike-through until the reveal: \"What should the *government* do?\" (never asked)."
+    },
+    {
+      "id": "G-04",
+      "title": "Grandfather clause, teased",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "02:53",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 22,
+        "start_ms": 178360,
+        "end_ms": 184090
+      },
+      "hold": {
+        "until": "02:59",
+        "script_ms": 6000
+      },
+      "type": "text callout, no elaboration yet",
+      "described": {
+        "Type": "text callout, no elaboration yet",
+        "Content": "\"Grandfather clause.\" Hold it plain \u2014 the payoff comes at G-12/G-13."
+      },
+      "note": "`[design]` \u2014 a teaser, not a claim; nothing to cite. The claim it sets up is sourced at G-11 and G-12.",
+      "provenance": {
+        "tags": [
+          "design"
+        ],
+        "citations": [],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Grandfather clause, teased. Type: text callout, no elaboration yet; Content: \"Grandfather clause.\" Hold it plain \u2014 the payoff comes at G-12/G-13."
+    },
+    {
+      "id": "G-05",
+      "title": "Neighborhood disadvantage vs. poverty",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "04:07",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 33,
+        "start_ms": 255250,
+        "end_ms": 268900
+      },
+      "hold": {
+        "until": "04:18",
+        "script_ms": 11000
+      },
+      "type": "bar comparison",
+      "described": {
+        "Type": "bar comparison",
+        "Content": "\"~50-point gap in gun-violence exposure: high- vs. low-disadvantage neighborhoods\" next to a much smaller bar: \"5\u201310 points: household poverty alone.\""
+      },
+      "note": "`[source]` citations.md Card 10.",
+      "provenance": {
+        "tags": [
+          "source"
+        ],
+        "citations": [
+          {
+            "card": "Card 10"
+          }
+        ],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Neighborhood disadvantage vs. poverty. Type: bar comparison; Content: \"~50-point gap in gun-violence exposure: high- vs. low-disadvantage neighborhoods\" next to a much smaller bar: \"5\u201310 points: household poverty alone.\""
+    },
+    {
+      "id": "G-06",
+      "title": "Lead, redlining, and the timeline they share",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "04:18",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 34,
+        "start_ms": 269200,
+        "end_ms": 277860
+      },
+      "hold": {
+        "until": "04:40",
+        "script_ms": 22000
+      },
+      "type": "two-part card",
+      "described": {
+        "Type": "two-part card",
+        "Content": "\"Reyes (2007): leaded-gasoline phase-out tied to a generation-later drop in violent crime.\" Paired with a Boston HOLC redlining map excerpt (Roxbury/ Dorchester graded lower)."
+      },
+      "note": "`[source]` citations.md Card 11 \u2014 \u26a0 **cleared 2026-09-23**: the actual 1938 Boston HOLC scan is pulled and verified (`images/holc_boston_1938_scan.jpg`, composite crop `images/holc_boston_1938_roxbury_dorchester.jpg`). Roxbury corridor graded D (red, zones D8/D9), Dorchester C (yellow, C8\u2013C13), read directly off the scan. Composite the crop into this card in the edit with a \"Mapping Inequality, University of Richmond\" credit. Standing caveat holds: the redlining\u2192lead\u2192crime connection is the video's own argument; don't caption it as a proven Boston-specific study.",
+      "provenance": {
+        "tags": [
+          "source"
+        ],
+        "citations": [
+          {
+            "card": "Card 11"
+          }
+        ],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Lead, redlining, and the timeline they share. Type: two-part card; Content: \"Reyes (2007): leaded-gasoline phase-out tied to a generation-later drop in violent crime.\" Paired with a Boston HOLC redlining map excerpt (Roxbury/ Dorchester graded lower)."
+    },
+    {
+      "id": "G-07",
+      "title": "Baltimore: what actually worked",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "04:47",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 38,
+        "start_ms": 300400,
+        "end_ms": 306700
+      },
+      "hold": {
+        "until": "04:55",
+        "script_ms": 8000
+      },
+      "type": "stat card",
+      "described": {
+        "Type": "stat card",
+        "Content": "\"Baltimore homicides: 261 (2023) \u2192 201 (2024), \u221223%. Credited to the Group Violence Reduction Strategy.\""
+      },
+      "note": "`[source]` citations.md Card 12.",
+      "provenance": {
+        "tags": [
+          "source"
+        ],
+        "citations": [
+          {
+            "card": "Card 12"
+          }
+        ],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Baltimore: what actually worked. Type: stat card; Content: \"Baltimore homicides: 261 (2023) \u2192 201 (2024), \u221223%. Credited to the Group Violence Reduction Strategy.\""
+    },
+    {
+      "id": "G-08",
+      "title": "NYC: what actually worked",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "05:04",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 40,
+        "start_ms": 319310,
+        "end_ms": 325750
+      },
+      "hold": {
+        "until": "05:12",
+        "script_ms": 8000
+      },
+      "type": "stat card",
+      "described": {
+        "Type": "stat card",
+        "Content": "\"NYC shootings down 3 years running. NYPD credits hot-spot policing and targeted enforcement against illegal guns.\""
+      },
+      "note": "`[source]` citations.md Card 13.",
+      "provenance": {
+        "tags": [
+          "source"
+        ],
+        "citations": [
+          {
+            "card": "Card 13"
+          }
+        ],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "NYC: what actually worked. Type: stat card; Content: \"NYC shootings down 3 years running. NYPD credits hot-spot policing and targeted enforcement against illegal guns.\""
+    },
+    {
+      "id": "G-09",
+      "title": "Article 48: how a referendum is supposed to work",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "06:00",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 48,
+        "start_ms": 372189,
+        "end_ms": 382659
+      },
+      "hold": {
+        "until": "06:15",
+        "script_ms": 15000
+      },
+      "type": "flow diagram, three steps",
+      "described": {
+        "Type": "flow diagram, three steps",
+        "Content": "Law passes \u2192 90-day clock starts \u2192 certified referendum petition stays the law until voters decide. Then a fourth box, in a different color: \"UNLESS: emergency preamble.\""
+      },
+      "note": "`[source]` citations.md Card 14.",
+      "provenance": {
+        "tags": [
+          "source"
+        ],
+        "citations": [
+          {
+            "card": "Card 14"
+          }
+        ],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Article 48: how a referendum is supposed to work. Type: flow diagram, three steps; Content: Law passes \u2192 90-day clock starts \u2192 certified referendum petition stays the law until voters decide. Then a fourth box, in a different color: \"UNLESS: emergency preamble.\""
+    },
+    {
+      "id": "G-10",
+      "title": "The timeline",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "06:23",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 51,
+        "start_ms": 398129,
+        "end_ms": 404879
+      },
+      "hold": {
+        "until": "06:56",
+        "script_ms": 33000
+      },
+      "type": "vertical timeline, this is the richest graphic in the cut",
+      "described": {
+        "Type": "vertical timeline, this is the richest graphic in the cut",
+        "Content": "Jul 25, 2024 (signed) \u2192 Oct 2, 2024 (emergency preamble, \"69 days later\"; stated reasons \"without delay\" and time for agencies to prepare) \u2192 Oct 23, 2024 (law's own original effective date) \u2192 Oct 2024 (93,229 signatures submitted) \u2192 Nov 22, 2024 (78,707 verified). Footer note on Article 48's stay."
+      },
+      "note": "`[source]` citations.md Card 15. Give this the longest hold of any graphic in the video if time allows \u2014 it's the evidentiary core of the \"manufactured emergency\" argument, and it's the one a hostile viewer will fact-check first. **Built as HTML, not AI-generated** (`cards_html/g10.html`, rendered with headless Chrome to `images/g10.png`): the NotebookLM generator failed four times in a row on 2026-09-24, and the AI v2 render still said \"71 days\" and \"public convenience\". The stale render is kept as `images/g10_v2_stale_71days.png`.",
+      "provenance": {
+        "tags": [
+          "source"
+        ],
+        "citations": [
+          {
+            "card": "Card 15"
+          }
+        ],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "The timeline. Type: vertical timeline, this is the richest graphic in the cut; Content: Jul 25, 2024 (signed) \u2192 Oct 2, 2024 (emergency preamble, \"69 days later\"; stated reasons \"without delay\" and time for agencies to prepare) \u2192 Oct 23, 2024 (law's own original effective date) \u2192 Oct 2024 (93,229 signatures submitted) \u2192 Nov 22, 2024 (78,707 verified). Footer note on Article 48's stay."
+    },
+    {
+      "id": "G-11",
+      "title": "Grandfather clauses, then",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "07:11",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 58,
+        "start_ms": 455319,
+        "end_ms": 460359
+      },
+      "hold": {
+        "until": "07:35",
+        "script_ms": 24000
+      },
+      "type": "stat card with a quote",
+      "described": {
+        "Type": "stat card with a quote",
+        "Content": "Louisiana, 1898: cutoff Jan. 1, 1867. Black registration 130,344 \u2192 5,320 (three years). White registration: down ~24% (164,088 to 125,437, 1897 to 1900). Quote: *\"racially neutral on its face\"* \u2014 Guinn v. United States (1915)."
+      },
+      "note": "`[source]` citations.md Card 16.",
+      "provenance": {
+        "tags": [
+          "source"
+        ],
+        "citations": [
+          {
+            "card": "Card 16"
+          }
+        ],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Grandfather clauses, then. Type: stat card with a quote; Content: Louisiana, 1898: cutoff Jan. 1, 1867. Black registration 130,344 \u2192 5,320 (three years). White registration: down ~24% (164,088 to 125,437, 1897 to 1900). Quote: *\"racially neutral on its face\"* \u2014 Guinn v. United States (1915)."
+    },
+    {
+      "id": "G-12",
+      "title": "Grandfather clauses, now",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "07:46",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 63,
+        "start_ms": 500289,
+        "end_ms": 502419
+      },
+      "hold": {
+        "until": "08:20",
+        "script_ms": 34000
+      },
+      "type": "side-by-side, two identical rifles",
+      "described": {
+        "Type": "side-by-side, two identical rifles",
+        "Content": "Two identical rifle icons. Left, dated \"Owned before Aug 1, 2024\": green check, \"Keeps it.\" Right, dated \"Acquired after Aug 1, 2024\": red X, \"Prison.\" Caption: same gun, same caliber \u2014 the only variable is a date."
+      },
+      "note": "`[source]` citations.md Card 17. This is the equal-protection argument in one image; keep it uncluttered, no extra text beyond the two dates and outcomes.",
+      "provenance": {
+        "tags": [
+          "source"
+        ],
+        "citations": [
+          {
+            "card": "Card 17"
+          }
+        ],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Grandfather clauses, now. Type: side-by-side, two identical rifles; Content: Two identical rifle icons. Left, dated \"Owned before Aug 1, 2024\": green check, \"Keeps it.\" Right, dated \"Acquired after Aug 1, 2024\": red X, \"Prison.\" Caption: same gun, same caliber \u2014 the only variable is a date."
+    },
+    {
+      "id": "G-13",
+      "title": "Who had guns, who's getting them, and the two-year lag",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "08:33",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 71,
+        "start_ms": 544939,
+        "end_ms": 564379
+      },
+      "hold": {
+        "until": "09:47",
+        "script_ms": 74000
+      },
+      "type": "timeline build, this is the second-richest graphic in the cut",
+      "described": {
+        "Type": "timeline build, this is the second-richest graphic in the cut",
+        "Content": "\"2020: Black gun buyers +58%. 2021: Black women gun owners +87% (NSSF).\" Then a gap on the timeline labeled \"Massachusetts: still 'may issue' for handguns.\" Then \"June 2022: Bruen forces MA to 'shall issue.'\" Caption underneath: rifles (FID card) were already close to automatic; a handgun (LTC) needed a police chief's personal sign-off until Bruen \u2014 a two-year state-specific lag behind a national trend."
+      },
+      "note": "`[source]` citations.md Cards 18, 19, and 22. The two-year gap between the 2020 national surge and the June 2022 Bruen ruling is the point of this graphic \u2014 don't compress it into a single beat, the gap itself is the evidence.",
+      "provenance": {
+        "tags": [
+          "source"
+        ],
+        "citations": [
+          {
+            "card": "Card 18"
+          },
+          {
+            "card": "Card 19"
+          },
+          {
+            "card": "Card 22"
+          }
+        ],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Who had guns, who's getting them, and the two-year lag. Type: timeline build, this is the second-richest graphic in the cut; Content: \"2020: Black gun buyers +58%. 2021: Black women gun owners +87% (NSSF).\" Then a gap on the timeline labeled \"Massachusetts: still 'may issue' for handguns.\" Then \"June 2022: Bruen forces MA to 'shall issue.'\" Caption underneath: rifles (FID card) were already close to automatic; a handgun (LTC) needed a police chief's personal sign-off until Bruen \u2014 a two-year state-specific lag behind a national trend."
+    },
+    {
+      "id": "G-14",
+      "title": "What it costs to get one",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "09:56",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 79,
+        "start_ms": 650379,
+        "end_ms": 660839
+      },
+      "hold": {
+        "until": "10:17",
+        "script_ms": 21000
+      },
+      "type": "receipt-style card",
+      "described": {
+        "Type": "receipt-style card",
+        "Content": "\"$100 state application fee + $100\u2013150 mandatory live-fire course.\""
+      },
+      "note": "`[source]` citations.md Card 20.",
+      "provenance": {
+        "tags": [
+          "source"
+        ],
+        "citations": [
+          {
+            "card": "Card 20"
+          }
+        ],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "What it costs to get one. Type: receipt-style card; Content: \"$100 state application fee + $100\u2013150 mandatory live-fire course.\""
+    },
+    {
+      "id": "G-15",
+      "title": "AR-15 vs. Mini-14",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "10:17",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 81,
+        "start_ms": 672579,
+        "end_ms": 675539
+      },
+      "hold": {
+        "until": "10:58",
+        "script_ms": 41000
+      },
+      "type": "side-by-side comparison",
+      "described": {
+        "Type": "side-by-side comparison",
+        "Content": "Two rifle silhouettes, same caliber label (5.56/.223) on both. Left: \"AR-15 \u2014 BANNED.\" Right: \"Ruger Mini-14 \u2014 not covered (named by the MA AG).\" Caption: the difference is a feature list, not lethality."
+      },
+      "note": "`[source]` citations.md Card 21.",
+      "provenance": {
+        "tags": [
+          "source"
+        ],
+        "citations": [
+          {
+            "card": "Card 21"
+          }
+        ],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "AR-15 vs. Mini-14. Type: side-by-side comparison; Content: Two rifle silhouettes, same caliber label (5.56/.223) on both. Left: \"AR-15 \u2014 BANNED.\" Right: \"Ruger Mini-14 \u2014 not covered (named by the MA AG).\" Caption: the difference is a feature list, not lethality."
+    },
+    {
+      "id": "G-16",
+      "title": "Close card",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "11:22",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 91,
+        "start_ms": 748839,
+        "end_ms": 751309
+      },
+      "hold": {},
+      "type": "title + sources card",
+      "described": {
+        "Type": "title + sources card",
+        "Content": "\"Question 9, Nov. 3, 2026 \u2014 YES keeps Chapter 135. NO repeals it.\" Then: \"Sources for everything in this video: [link to published citations deck].\""
+      },
+      "note": "`[source]` citations.md Card 2 (Question 9 yes/no mechanics) \u2014 the \"check my work\" card. Same requirement as v1: don't ship without this resolving to something the audience can actually open.",
+      "provenance": {
+        "tags": [
+          "source"
+        ],
+        "citations": [
+          {
+            "card": "Card 2"
+          }
+        ],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Close card. Type: title + sources card; Content: \"Question 9, Nov. 3, 2026 \u2014 YES keeps Chapter 135. NO repeals it.\" Then: \"Sources for everything in this video: [link to published citations deck].\""
+    }
+  ],
+  "validation": []
+}

@@ -1,0 +1,19 @@
+{
+  "component": "CompareCard",
+  "headline": "The question that wasn't asked",
+  "items": [
+    {
+      "title": "Asked",
+      "points": [
+        "What should schools/communities/mental health do?"
+      ]
+    },
+    {
+      "title": "Never asked",
+      "points": [
+        "What should the government do?"
+      ]
+    }
+  ],
+  "sources": "Sources: Instagram — @harvardseye reel"
+}

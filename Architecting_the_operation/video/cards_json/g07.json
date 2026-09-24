@@ -1,0 +1,15 @@
+{
+  "component": "StatBarsCard",
+  "headline": "Baltimore: what actually worked",
+  "lead": "Credited to the Group Violence Reduction Strategy — a focused-deterrence partnership.",
+  "items": [
+    {
+      "label": "Baltimore homicides",
+      "period": "2023 to 2024",
+      "values": [261, 201],
+      "delta": "−23%",
+      "color": "teal"
+    }
+  ],
+  "sources": "Sources: Baltimore City · The Trace"
+}

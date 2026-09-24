@@ -1,0 +1,22 @@
+{
+  "component": "StatBarsCard",
+  "headline": "Neighborhood disadvantage vs. poverty",
+  "lead": "Gun-violence exposure gap among youth in large US cities.",
+  "items": [
+    {
+      "label": "High- vs. low-disadvantage neighborhoods",
+      "period": "",
+      "values": [50],
+      "delta": "~50-point gap",
+      "color": "teal"
+    },
+    {
+      "label": "Household poverty alone",
+      "period": "",
+      "values": [10],
+      "delta": "5–10 points",
+      "color": "gold"
+    }
+  ],
+  "sources": "Sources: PMC 9172977 (2022)"
+}

@@ -45,3 +45,11 @@ speakers:
     # [clip:...] tag is the caption and what verification checks it against.
     engine: "archive"
     character_profile: "Archival recording, 1981"
+
+  the_reel:
+    name: "The Reel"
+    # Source clip for the Chapter 135 / Question 9 reaction video: the
+    # @harvardseye Instagram interview with Gov. Healey, spliced in between
+    # Emmanuel's reaction turns. Same archive mechanism as lee_atwater.
+    engine: "archive"
+    character_profile: "Source clip, @harvardseye x Gov. Healey, Yes-on-9 press event"
