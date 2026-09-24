@@ -1,0 +1,29 @@
+{
+  "component": "TimelineCard",
+  "headline": "Article 48: how a referendum is supposed to work",
+  "items": [
+    {
+      "date": "STEP\n1",
+      "title": "Law passes",
+      "detail": ""
+    },
+    {
+      "date": "STEP\n2",
+      "title": "90-day clock starts",
+      "detail": "Normal delay before a law takes effect."
+    },
+    {
+      "date": "STEP\n3",
+      "title": "Certified petition stays the law",
+      "detail": "The law is suspended until voters decide."
+    },
+    {
+      "date": "BUT",
+      "title": "UNLESS: Emergency Preamble",
+      "detail": "Law takes effect immediately and cannot be stayed by a referendum petition.",
+      "highlight": true
+    }
+  ],
+  "note": "Under the Massachusetts Constitution, Article 48.",
+  "sources": "Sources: Ballotpedia · mass.gov"
+}

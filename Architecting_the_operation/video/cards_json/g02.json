@@ -1,0 +1,19 @@
+{
+  "component": "TitleCard",
+  "headline": "A YES vote keeps Chapter 135 — including the expanded assault-weapons definition.",
+  "items": [
+    {
+      "title": "Owned before Aug 1, 2024? You keep your AR-15.",
+      "detail": "Buying after? Banned outright."
+    },
+    {
+      "title": "Who already owns: white men 48%, nonwhite women 16% (Pew 2017).",
+      "detail": "Who's buying next: 56% of Black non-owners see themselves owning a gun — the highest of any group (Pew 2023)."
+    },
+    {
+      "title": "The legal alternative fires the same round.",
+      "detail": "The banned 'features' are the adjustability — the stock and grip geometry that lets a smaller shooter fit the rifle."
+    }
+  ],
+  "sources": "Sources: Pew Research 2017/2023 · Acts of 2024, Ch. 135 · mass.gov"
+}

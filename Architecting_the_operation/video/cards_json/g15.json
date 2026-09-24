@@ -1,0 +1,25 @@
+{
+  "component": "CompareCard",
+  "headline": "Same round, different features",
+  "items": [
+    {
+      "title": "AR-15",
+      "points": [
+        "Fires 5.56/.223",
+        "BANNED by name"
+      ]
+    },
+    {
+      "title": "Ruger Mini-14",
+      "points": [
+        "Fires 5.56/.223",
+        "Named by the MA AG as NOT covered"
+      ]
+    }
+  ],
+  "sources": "Sources: mass.gov (AG Enforcement Guidance)",
+  "art": {
+    "src": "assets/quiver/g15_ar15_mini14.svg",
+    "size": "hero"
+  }
+}

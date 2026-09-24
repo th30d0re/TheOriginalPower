@@ -1,0 +1,20 @@
+{
+  "component": "TitleCard",
+  "headline": "Lead and redlining",
+  "items": [
+    {
+      "title": "Reyes (2007)",
+      "detail": "Leaded-gasoline phase-out tied to a later drop in violent crime."
+    },
+    {
+      "title": "Boston, 1938 HOLC map",
+      "detail": "Roxbury graded Hazardous (D)."
+    }
+  ],
+  "sources": "Sources: NBER (Reyes 2007) · Mapping Inequality, University of Richmond",
+  "art": {
+    "src": "assets/quiver/g06_redlining_motif.svg",
+    "size": "hero",
+    "caption": "Illustration of a redlining-style map"
+  }
+}

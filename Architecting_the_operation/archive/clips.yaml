@@ -1,19 +1,54 @@
-# Archival excerpts played in the episodes. Sources live beside this file in
-# sources/ and stay out of git; re-download them from origin_url.
 clips:
   atwater_1981:
-    source: Architecting_the_operation/archive/sources/atwater_1981.mp3
-    start: 997.95
+    citation: 'Perlstein, R. (2012, November 13). Exclusive: Lee Atwater''s infamous
+      1981 interview on the Southern Strategy. The Nation. Interview conducted by
+      Alexander P. Lamis, 1981; audio released by Renee Lamis and James Carter IV.'
+    content_note: 'Contains a racial slur, spoken four times. Played uncensored: the
+      record of how the language was used is the evidence.'
     end: 1049.85
-    speaker: Lee Atwater
-    citation: >-
-      Perlstein, R. (2012, November 13). Exclusive: Lee Atwater's infamous 1981
-      interview on the Southern Strategy. The Nation. Interview conducted by
-      Alexander P. Lamis, 1981; audio released by Renee Lamis and James Carter IV.
-    transcript_source: >-
-      The caption follows the wording The Nation published with the audio.
-      The clip begins where that published excerpt begins.
     origin_url: https://www.thenation.com/article/archive/exclusive-lee-atwaters-infamous-1981-interview-southern-strategy/
-    content_note: >-
-      Contains a racial slur, spoken four times. Played uncensored: the record of
-      how the language was used is the evidence.
+    source: Architecting_the_operation/archive/sources/atwater_1981.mp3
+    speaker: Lee Atwater
+    start: 997.95
+    transcript_source: The caption follows the wording The Nation published with the
+      audio. The clip begins where that published excerpt begins.
+  reel_a1:
+    citation: '@harvardseye, Instagram reel, Gov. Maura Healey interview, Yes-on-9
+      press event'
+    content_note: ''
+    end: 41.52
+    origin_url: https://www.instagram.com/reel/DdoZBRXIbK5/
+    source: Architecting_the_operation/archive/sources/reel_a1.mp4
+    start: 14.84
+  reel_a2:
+    citation: '@harvardseye, Instagram reel, Gov. Maura Healey interview, Yes-on-9
+      press event'
+    content_note: ''
+    end: 77.5
+    origin_url: https://www.instagram.com/reel/DdoZBRXIbK5/
+    source: Architecting_the_operation/archive/sources/reel_a2.mp4
+    start: 49.2
+  reel_close:
+    citation: '@harvardseye, Instagram reel, Gov. Maura Healey interview, Yes-on-9
+      press event'
+    content_note: ''
+    end: 87.6
+    origin_url: https://www.instagram.com/reel/DdoZBRXIbK5/
+    source: Architecting_the_operation/archive/sources/reel_close.mp4
+    start: 84.7
+  reel_q1:
+    citation: '@harvardseye, Instagram reel, Gov. Maura Healey interview, Yes-on-9
+      press event'
+    content_note: ''
+    end: 14.86
+    origin_url: https://www.instagram.com/reel/DdoZBRXIbK5/
+    source: Architecting_the_operation/archive/sources/reel_q1.mp4
+    start: 0.0
+  reel_q2:
+    citation: '@harvardseye, Instagram reel, Gov. Maura Healey interview, Yes-on-9
+      press event'
+    content_note: ''
+    end: 48.94
+    origin_url: https://www.instagram.com/reel/DdoZBRXIbK5/
+    source: Architecting_the_operation/archive/sources/reel_q2.mp4
+    start: 43.14
