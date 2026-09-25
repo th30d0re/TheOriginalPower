@@ -3,7 +3,7 @@
   "source": "chapter135_rebuttal_shotlist.md",
   "manifest": "episode_manifest.json",
   "script": "chapter135_rebuttal_reply.md",
-  "shot_count": 32,
+  "shot_count": 33,
   "shots": [
     {
       "id": "G-01",
@@ -419,6 +419,38 @@
       },
       "suggested_track": "vector",
       "prompt_seed": "Lead exposure in Boston. Type: title card, four items; Content: 90% of Boston housing built before 1978; about 3,000 known lead service lines; 2016 fountains at four schools over the limit (about 90 schools on bottled water since the late 1980s); about 400 homes used the free replacement program in year one."
+    },
+    {
+      "id": "G-33",
+      "title": "Guinn v. United States (1915)",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "07:35",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 79,
+        "start_ms": 717698,
+        "end_ms": 729898
+      },
+      "hold": {
+        "until": "07:46",
+        "script_ms": 11000
+      },
+      "type": "title card with animated art (gavel strikes the block, courthouse still)",
+      "described": {
+        "Type": "title card with animated art (gavel strikes the block, courthouse still)",
+        "Content": "The Supreme Court strikes down grandfather clauses, 238 U.S. 347 (1915)."
+      },
+      "note": "`[source]` citations.md Section 11. Art drawn with Arrow 2 from a NotebookLM reference and animated with the Arrow animation endpoint.",
+      "provenance": {
+        "tags": [
+          "source"
+        ],
+        "citations": [],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Guinn v. United States (1915). Type: title card with animated art (gavel strikes the block, courthouse still); Content: The Supreme Court strikes down grandfather clauses, 238 U.S. 347 (1915)."
     },
     {
       "id": "G-05",
@@ -1083,6 +1115,11 @@
     {
       "level": "error",
       "shot": "G-32",
+      "message": "tagged [source] with no URL or card reference"
+    },
+    {
+      "level": "error",
+      "shot": "G-33",
       "message": "tagged [source] with no URL or card reference"
     },
     {

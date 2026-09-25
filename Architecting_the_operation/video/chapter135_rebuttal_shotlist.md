@@ -256,6 +256,14 @@ portrait).
 - **Content:** 90% of Boston housing built before 1978; about 3,000 known lead service lines; 2016 fountains at four schools over the limit (about 90 schools on bottled water since the late 1980s); about 400 homes used the free replacement program in year one.
 - **Note:** `[source]` citations.md Section 6 (Lead exposure in Boston).
 
+## G-33 — Guinn v. United States (1915)
+
+- **Anchor:** `Emmanuel Theodore (07:35)`
+- **Hold:** through 07:46
+- **Type:** title card with animated art (gavel strikes the block, courthouse still)
+- **Content:** The Supreme Court strikes down grandfather clauses, 238 U.S. 347 (1915).
+- **Note:** `[source]` citations.md Section 11. Art drawn with Arrow 2 from a NotebookLM reference and animated with the Arrow animation endpoint.
+
 ## G-05 — Neighborhood disadvantage vs. poverty
 
 - **Anchor:** `Emmanuel Theodore (04:07)`
