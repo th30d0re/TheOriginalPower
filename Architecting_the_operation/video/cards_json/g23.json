@@ -1,0 +1,64 @@
+{
+  "component": "StatBarsCard",
+  "headline": "Firearm homicide in New England, 2024",
+  "lead": "Deaths per 100,000 people, with each state's Giffords gun-law grade and poverty rate.",
+  "items": [
+    {
+      "label": "New Hampshire",
+      "sublabel": "Giffords F",
+      "period": "poverty 7.3%",
+      "values": [
+        0.8
+      ],
+      "color": "teal"
+    },
+    {
+      "label": "Maine",
+      "sublabel": "C+",
+      "period": "poverty 10.6%",
+      "values": [
+        1.1
+      ],
+      "color": "teal"
+    },
+    {
+      "label": "Rhode Island",
+      "sublabel": "A-",
+      "period": "poverty 12.0%",
+      "values": [
+        1.1
+      ],
+      "color": "teal"
+    },
+    {
+      "label": "Massachusetts",
+      "sublabel": "A",
+      "period": "poverty 9.8%",
+      "values": [
+        1.4
+      ],
+      "color": "teal"
+    },
+    {
+      "label": "Connecticut",
+      "sublabel": "A",
+      "period": "poverty 10.1%",
+      "values": [
+        1.9
+      ],
+      "color": "gold"
+    },
+    {
+      "label": "Vermont",
+      "sublabel": "B-",
+      "period": "poverty 9.3%",
+      "values": [
+        1.9
+      ],
+      "color": "gold"
+    }
+  ],
+  "sources": "Sources: CDC NCIPC (crude rates) · Giffords · Census SAIPE 2024",
+  "qrUrl": "https://data.cdc.gov/d/fpsi-y8tj",
+  "sharedScale": true
+}

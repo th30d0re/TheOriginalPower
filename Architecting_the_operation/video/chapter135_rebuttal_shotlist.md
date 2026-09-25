@@ -191,6 +191,20 @@ portrait).
 - **Note:** `[design]` — a teaser, not a claim; nothing to cite. The claim it sets up
   is sourced at G-11 and G-12.
 
+## G-23 — New England firearm homicide
+
+- **Anchor:** `Emmanuel Theodore (04:41)`
+- **Type:** stat bars, six states
+- **Content:** Firearm homicide per 100,000, 2024 (crude): NH 0.8 (Giffords F), ME 1.1 (C+), RI 1.1 (A-), MA 1.4 (A), CT 1.9 (A), VT 1.9 (B-), each with its poverty rate.
+- **Note:** `[data]` Paper/data/gun_laws_new_england/ (RESULTS.md, states.csv). NH and VT counts are 11 and 12 deaths; rates are crude, not age-adjusted.
+
+## G-24 — Poverty tracks firearm homicide
+
+- **Anchor:** `Emmanuel Theodore (04:43)`
+- **Type:** scatter plot with the two coefficients
+- **Content:** All 50 states + DC: poverty vs firearm homicide r = +0.72; Giffords law rank vs firearm homicide r = +0.29, and about zero after controlling for poverty and inequality.
+- **Note:** `[data]` Paper/data/gun_laws_new_england/RESULTS.md and Paper/figures/gunlaws_ne_scatter_poverty.png.
+
 ## G-05 — Neighborhood disadvantage vs. poverty
 
 - **Anchor:** `Emmanuel Theodore (04:07)`

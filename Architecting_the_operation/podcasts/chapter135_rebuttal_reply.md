@@ -117,6 +117,15 @@ Boston was redlined. That's public record, on the government's own maps. Redline
 Emmanuel Theodore (04:40)
 If you want the actual root cause of violence in this state, start there.
 
+Emmanuel Theodore (04:41)
+In New England, firearm homicide runs from point eight per hundred thousand in New Hampshire, which gets an F from Giffords, to one point nine in Connecticut, which gets an A, and in Vermont, which gets a B-minus.
+
+Emmanuel Theodore (04:42)
+That's firearm homicide. Total gun deaths in those states are mostly suicide.
+
+Emmanuel Theodore (04:43)
+Across all fifty states and D.C., poverty tracks firearm homicide at about point seven. Gun-law strength shows a weak link, about point three, and that link disappears once you account for poverty.
+
 Emmanuel Theodore (04:47)
 And to be clear about what does work: Baltimore's homicide rate dropped twenty-three percent in a single year.
 

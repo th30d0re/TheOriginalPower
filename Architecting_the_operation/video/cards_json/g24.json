@@ -1,0 +1,11 @@
+{
+  "component": "FreezeCallout",
+  "headline": "Poverty tracks firearm homicide",
+  "image": "assets/frames/gunlaws_poverty.png",
+  "aspect": 1.4286,
+  "callouts": [],
+  "caption": "50 states + DC: poverty r = +0.72. Gun-law rank r = +0.29 alone, about zero once poverty and inequality are controlled.",
+  "sources": "Sources: CDC NCIPC · Census SAIPE and ACS · Giffords (n = 50–51)",
+  "qr": true,
+  "qrUrl": "https://data.cdc.gov/d/fpsi-y8tj"
+}
