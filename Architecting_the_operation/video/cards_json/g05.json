@@ -23,5 +23,6 @@
     }
   ],
   "sources": "Sources: PMC 9172977 (2022)",
-  "qrUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9172977/"
+  "qrUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9172977/",
+  "sharedScale": true
 }
