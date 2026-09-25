@@ -22,5 +22,6 @@
     "src": "assets/quiver/g12_identical_rifles.svg",
     "size": "hero"
   },
-  "qrUrl": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXX/Chapter140/Section131M"
+  "qrUrl": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXX/Chapter140/Section131M",
+  "highlight": "date"
 }

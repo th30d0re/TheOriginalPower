@@ -76,7 +76,7 @@ Emmanuel Theodore (02:47)
 She reached for the word because it sounds like she knows something, and it's empty in that sentence.
 
 Emmanuel Theodore (02:53)
-Hold onto that, because we're coming back to a word later that's the opposite of empty: grandfather clause.
+Hold onto that, because we're coming back to a phrase later that's the opposite of empty: grandfather clause.
 
 The Reel (02:59)
 [clip:reel_close] shout out to the governor. Thank you for your time. Thank you for helping us. Make sure you guys vote yes on nine.
@@ -151,7 +151,7 @@ Emmanuel Theodore (04:46)
 I don't have kids. Chapter 140, section 131L still says my firearm has to sit in a locked container or carry a tamper-resistant lock whenever it isn't on me, and a violation carries a fine of one to seven thousand five hundred dollars or up to a year and a half in jail. A gun locked away is slower to reach in an emergency, and an emergency at night is when I would need it.
 
 Emmanuel Theodore (04:47)
-And background checks: every time you buy from a dealer, you fill out a Form 4473 and the federal background check runs. The sale it skips is the private one. In Massachusetts, a private transfer already has to go to someone holding a license, through the state's electronic registration system, and that license came with its own background check. A second state check would repeat the ones already there.
+And background checks: every time you buy from a dealer, you fill out a Form 4473 and the federal background check runs. The sale it skips is the private one. In Massachusetts, a private transfer has to go to someone holding a license, through the state's electronic registration system, and that license came with its own background check. A second state check would repeat the ones already there.
 
 Emmanuel Theodore (04:48)
 And to be clear about what does work: Baltimore's homicide rate dropped twenty-three percent in a single year.
@@ -199,7 +199,7 @@ Emmanuel Theodore (06:28)
 She didn't invoke the emergency preamble at signing.
 
 Emmanuel Theodore (06:31)
-She invoked it on October 2nd, sixty-nine days after she'd already signed the bill, right as it became public that the repeal campaign had the signatures to trigger that stay.
+She invoked it on October 2nd, sixty-nine days after she signed the bill, right as it became public that the repeal campaign had the signatures to trigger that stay.
 
 Emmanuel Theodore (06:41)
 Her stated reasons were that the measures needed to go into effect "without delay," and that agencies and municipalities needed time to prepare for "implementation on Day One."
@@ -211,7 +211,7 @@ Emmanuel Theodore (06:56)
 I'll let you draw your own conclusion. Mine is that she manufactured an emergency to cancel a stay the people had already earned, and that's not how a democracy is supposed to work.
 
 Emmanuel Theodore (07:06)
-And that gets me to the word I told you to hold onto. Grandfather clauses.
+And that gets me to the phrase I told you to hold onto. Grandfather clauses.
 
 Emmanuel Theodore (07:11)
 After the Civil War, several Southern states put grandfather clauses into their voting laws.

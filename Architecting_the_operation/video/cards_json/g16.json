@@ -4,7 +4,11 @@
   "items": [
     {
       "title": "YES keeps Chapter 135.",
-      "detail": "NO repeals it."
+      "color": "red"
+    },
+    {
+      "title": "NO repeals it.",
+      "color": "green"
     },
     {
       "title": "Every source, on one page:",

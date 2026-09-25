@@ -2,7 +2,7 @@
 overlays:
   # Emmanuel, very quietly under "sixty-nine days".
   - file: Architecting_the_operation/archive/sources/nice.wav
-    turn_contains: "sixty-nine days after she'd already signed"
+    turn_contains: "sixty-nine days after she signed"
     after_word: "^(69|sixtynine)$"
     delay_ms: 80
     gain_db: -20
