@@ -3,7 +3,7 @@
   "source": "chapter135_rebuttal_shotlist.md",
   "manifest": "episode_manifest.json",
   "script": "chapter135_rebuttal_reply.md",
-  "shot_count": 22,
+  "shot_count": 24,
   "shots": [
     {
       "id": "G-01",
@@ -161,6 +161,64 @@
       "prompt_seed": "Grandfather clause, teased. Type: text callout, no elaboration yet; Content: \"Grandfather clause.\" Hold it plain \u2014 the payoff comes at G-12/G-13."
     },
     {
+      "id": "G-23",
+      "title": "New England firearm homicide",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "04:41",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 39,
+        "start_ms": 311860,
+        "end_ms": 324790
+      },
+      "hold": {},
+      "type": "stat bars, six states",
+      "described": {
+        "Type": "stat bars, six states",
+        "Content": "Firearm homicide per 100,000, 2024 (crude): NH 0.8 (Giffords F), ME 1.1 (C+), RI 1.1 (A-), MA 1.4 (A), CT 1.9 (A), VT 1.9 (B-), each with its poverty rate."
+      },
+      "note": "`[data]` Paper/data/gun_laws_new_england/ (RESULTS.md, states.csv). NH and VT counts are 11 and 12 deaths; rates are crude, not age-adjusted.",
+      "provenance": {
+        "tags": [
+          "data"
+        ],
+        "citations": [],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "New England firearm homicide. Type: stat bars, six states; Content: Firearm homicide per 100,000, 2024 (crude): NH 0.8 (Giffords F), ME 1.1 (C+), RI 1.1 (A-), MA 1.4 (A), CT 1.9 (A), VT 1.9 (B-), each with its poverty rate."
+    },
+    {
+      "id": "G-24",
+      "title": "Poverty tracks firearm homicide",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "04:43",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 41,
+        "start_ms": 330200,
+        "end_ms": 342330
+      },
+      "hold": {},
+      "type": "scatter plot with the two coefficients",
+      "described": {
+        "Type": "scatter plot with the two coefficients",
+        "Content": "All 50 states + DC: poverty vs firearm homicide r = +0.72; Giffords law rank vs firearm homicide r = +0.29, and about zero after controlling for poverty and inequality."
+      },
+      "note": "`[data]` Paper/data/gun_laws_new_england/RESULTS.md and Paper/figures/gunlaws_ne_scatter_poverty.png.",
+      "provenance": {
+        "tags": [
+          "data"
+        ],
+        "citations": [],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Poverty tracks firearm homicide. Type: scatter plot with the two coefficients; Content: All 50 states + DC: poverty vs firearm homicide r = +0.72; Giffords law rank vs firearm homicide r = +0.29, and about zero after controlling for poverty and inequality."
+    },
+    {
       "id": "G-05",
       "title": "Neighborhood disadvantage vs. poverty",
       "anchor": {
@@ -239,9 +297,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "04:47",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 39,
-        "start_ms": 311860,
-        "end_ms": 318160
+        "turn_index": 42,
+        "start_ms": 342630,
+        "end_ms": 348930
       },
       "hold": {
         "until": "04:55",
@@ -275,9 +333,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "05:04",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 41,
-        "start_ms": 330770,
-        "end_ms": 337210
+        "turn_index": 44,
+        "start_ms": 361540,
+        "end_ms": 367980
       },
       "hold": {
         "until": "05:12",
@@ -311,9 +369,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "05:51",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 48,
-        "start_ms": 372649,
-        "end_ms": 383349
+        "turn_index": 51,
+        "start_ms": 403419,
+        "end_ms": 414119
       },
       "hold": {
         "until": "06:15",
@@ -347,9 +405,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "06:23",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 52,
-        "start_ms": 409589,
-        "end_ms": 416339
+        "turn_index": 55,
+        "start_ms": 440359,
+        "end_ms": 447109
       },
       "hold": {
         "until": "06:56",
@@ -383,9 +441,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "07:11",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 59,
-        "start_ms": 466779,
-        "end_ms": 471819
+        "turn_index": 62,
+        "start_ms": 497549,
+        "end_ms": 502589
       },
       "hold": {
         "until": "07:35",
@@ -419,9 +477,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "07:46",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 64,
-        "start_ms": 511749,
-        "end_ms": 513879
+        "turn_index": 67,
+        "start_ms": 542519,
+        "end_ms": 544649
       },
       "hold": {
         "until": "08:20",
@@ -458,9 +516,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "08:33",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 72,
-        "start_ms": 559729,
-        "end_ms": 578999
+        "turn_index": 75,
+        "start_ms": 590499,
+        "end_ms": 609769
       },
       "hold": {
         "until": "09:47",
@@ -500,9 +558,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "09:56",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 80,
-        "start_ms": 664999,
-        "end_ms": 675459
+        "turn_index": 83,
+        "start_ms": 695769,
+        "end_ms": 706229
       },
       "hold": {
         "until": "10:17",
@@ -536,9 +594,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "10:17",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 82,
-        "start_ms": 687199,
-        "end_ms": 690159
+        "turn_index": 85,
+        "start_ms": 717969,
+        "end_ms": 720929
       },
       "hold": {
         "until": "10:58",
@@ -673,9 +731,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "05:29",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 45,
-        "start_ms": 349339,
-        "end_ms": 359229
+        "turn_index": 48,
+        "start_ms": 380109,
+        "end_ms": 389999
       },
       "hold": {
         "until": "05:51",
@@ -712,9 +770,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "09:37",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 78,
-        "start_ms": 643889,
-        "end_ms": 655369
+        "turn_index": 81,
+        "start_ms": 674659,
+        "end_ms": 686139
       },
       "hold": {
         "until": "09:56",
@@ -751,9 +809,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "10:50",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 87,
-        "start_ms": 728669,
-        "end_ms": 738459
+        "turn_index": 90,
+        "start_ms": 759439,
+        "end_ms": 769229
       },
       "hold": {
         "until": "11:22",
@@ -790,9 +848,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "11:22",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 92,
-        "start_ms": 763389,
-        "end_ms": 765859
+        "turn_index": 95,
+        "start_ms": 794159,
+        "end_ms": 796629
       },
       "hold": {},
       "type": "title + sources card",
