@@ -133,7 +133,13 @@ Emmanuel Theodore (04:32)
 Boston is full of that exposure. Ninety percent of its housing was built before lead paint was banned, the water utility knows of about three thousand lead service lines, and in 2016 fountains at four schools tested over the limit, in a district where about ninety schools had used bottled water since the late 1980s.
 
 Emmanuel Theodore (04:33)
-Researchers still argue over how much lead explains, and no one has isolated its effect on firearm homicide alone. The highest-risk neighborhoods include Roxbury and Dorchester, which the 1938 map graded D and C. The free pipe-replacement program reached about four hundred homes in its first year, against three thousand known lines, and that falls short of the scale this demands.
+Researchers still argue over how much lead explains, and no one has isolated its effect on firearm homicide alone.
+
+Emmanuel Theodore (04:33)
+Roxbury is graded D on the 1938 map, and Dorchester is graded C. Both are among the highest-risk neighborhoods for lead.
+
+Emmanuel Theodore (04:33)
+The free pipe-replacement program reached about four hundred homes in its first year, against three thousand known lines, and that falls short of the scale this demands.
 
 Emmanuel Theodore (04:34)
 And that map still tracks where people get shot. In Boston from twenty nineteen to twenty twenty-five, the areas graded C and D in nineteen thirty-eight have about seven times the shooting rate of the areas graded A and B.
@@ -277,13 +283,13 @@ Emmanuel Theodore (09:00)
 Because in Massachusetts specifically, a rifle only ever needed an FID card, which was already close to automatic. A handgun needed something else: a License to Carry, and that license was "may issue." The local licensing authority, usually the police chief or a designee, could just say no, with no reason required.
 
 Emmanuel Theodore (09:14)
-So for two years, while Black gun buyers everywhere else in the country were already surging, anyone in this state who wanted the thing most people actually buy first, a handgun, still needed the sign-off of a local licensing authority, usually the police chief or a designee.
+So for two years, while Black gun buyers everywhere else in the country were already surging, anyone in this state who wanted the thing most people actually buy first, a handgun, still needed the licensing authority's sign-off.
 
 Emmanuel Theodore (09:27)
-Bruen struck that down. It's the 2022 Supreme Court case that killed Massachusetts's "may issue" system, the one where the local licensing authority, usually the police chief or a designee, had discretion over whether you, specifically, deserved a license.
+Bruen struck that down. It's the 2022 Supreme Court case that killed Massachusetts's "may issue" system, the one where the licensing authority had discretion over whether you, specifically, deserved a license.
 
 Emmanuel Theodore (09:37)
-Before Bruen, getting a license to carry here meant asking your local licensing authority, usually the police chief's office, for permission and hoping the answer was yes. After Bruen, the state has to issue it unless you're legally disqualified.
+Before Bruen, getting a license to carry here meant asking the licensing authority for permission and hoping the answer was yes. After Bruen, the state has to issue it unless you're legally disqualified.
 
 Emmanuel Theodore (09:47)
 That's the only reason handgun ownership in this state was ever able to catch up to a surge that had already been running for two years everywhere else.

@@ -13,3 +13,6 @@ gains:
   # "the opposite of empty: grandfather clause" was too soft.
   - turn_contains: "the opposite of empty"
     gain_db: 4
+  # "and it's empty in that sentence" was too soft.
+  - turn_contains: "it's empty in that sentence"
+    gain_db: 5
