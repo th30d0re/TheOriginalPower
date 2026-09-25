@@ -21,5 +21,14 @@
   ],
   "sources": "Sources: Ballotpedia · commonwealthbeacon.org · serpalaw.com",
   "qr": true,
-  "qrUrl": "https://github.com/th30d0re/TheOriginalPower/blob/main/Paper/chapter135_rebuttal_video/citations.md"
+  "qrs": [
+    {
+      "url": "https://github.com/th30d0re/TheOriginalPower/blob/main/Paper/chapter135_rebuttal_video/citations.md",
+      "label": "Sources"
+    },
+    {
+      "url": "https://github.com/th30d0re/TheOriginalPower/releases",
+      "label": "The book"
+    }
+  ]
 }
