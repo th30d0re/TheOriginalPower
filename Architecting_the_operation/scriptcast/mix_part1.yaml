@@ -1,0 +1,7 @@
+# Post-mix for the three-minute Part 1 cut.
+overlays:
+  - file: Architecting_the_operation/archive/sources/nice.wav
+    turn_contains: "sixty-nine days after she signed"
+    after_word: "^(69|sixtynine)$"
+    delay_ms: 80
+    gain_db: -11
