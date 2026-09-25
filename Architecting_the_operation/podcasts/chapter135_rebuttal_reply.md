@@ -126,6 +126,9 @@ That's firearm homicide. Total gun deaths in those states are mostly suicide.
 Emmanuel Theodore (04:43)
 Across all fifty states and D.C., poverty tracks firearm homicide at about point seven. Gun-law strength shows a weak link, about point three, and that link disappears once you account for poverty.
 
+Emmanuel Theodore (04:44)
+RAND's reviews find evidence for specific laws, like child-access prevention and background checks. A state's overall ranking blends many laws into one score.
+
 Emmanuel Theodore (04:47)
 And to be clear about what does work: Baltimore's homicide rate dropped twenty-three percent in a single year.
 

@@ -3,7 +3,7 @@
   "source": "chapter135_rebuttal_shotlist.md",
   "manifest": "episode_manifest.json",
   "script": "chapter135_rebuttal_reply.md",
-  "shot_count": 24,
+  "shot_count": 25,
   "shots": [
     {
       "id": "G-01",
@@ -219,6 +219,39 @@
       "prompt_seed": "Poverty tracks firearm homicide. Type: scatter plot with the two coefficients; Content: All 50 states + DC: poverty vs firearm homicide r = +0.72; Giffords law rank vs firearm homicide r = +0.29, and about zero after controlling for poverty and inequality."
     },
     {
+      "id": "G-25",
+      "title": "What RAND's reviews find",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "04:44",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 42,
+        "start_ms": 342630,
+        "end_ms": 352270
+      },
+      "hold": {},
+      "type": "title card, two items",
+      "described": {
+        "Type": "title card, two items",
+        "Content": "Child-access prevention laws: supportive evidence they reduce firearm homicides and self-injuries among youth. Background checks: moderate evidence they reduce firearm and total homicides."
+      },
+      "note": "`[source]` citations.md Card 26.",
+      "provenance": {
+        "tags": [
+          "source"
+        ],
+        "citations": [
+          {
+            "card": "Card 26"
+          }
+        ],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "What RAND's reviews find. Type: title card, two items; Content: Child-access prevention laws: supportive evidence they reduce firearm homicides and self-injuries among youth. Background checks: moderate evidence they reduce firearm and total homicides."
+    },
+    {
       "id": "G-05",
       "title": "Neighborhood disadvantage vs. poverty",
       "anchor": {
@@ -297,9 +330,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "04:47",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 42,
-        "start_ms": 342630,
-        "end_ms": 348930
+        "turn_index": 43,
+        "start_ms": 352570,
+        "end_ms": 358870
       },
       "hold": {
         "until": "04:55",
@@ -333,9 +366,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "05:04",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 44,
-        "start_ms": 361540,
-        "end_ms": 367980
+        "turn_index": 45,
+        "start_ms": 371480,
+        "end_ms": 377920
       },
       "hold": {
         "until": "05:12",
@@ -369,9 +402,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "05:51",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 51,
-        "start_ms": 403419,
-        "end_ms": 414119
+        "turn_index": 52,
+        "start_ms": 413359,
+        "end_ms": 424059
       },
       "hold": {
         "until": "06:15",
@@ -405,9 +438,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "06:23",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 55,
-        "start_ms": 440359,
-        "end_ms": 447109
+        "turn_index": 56,
+        "start_ms": 450299,
+        "end_ms": 457049
       },
       "hold": {
         "until": "06:56",
@@ -441,9 +474,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "07:11",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 62,
-        "start_ms": 497549,
-        "end_ms": 502589
+        "turn_index": 63,
+        "start_ms": 507489,
+        "end_ms": 512529
       },
       "hold": {
         "until": "07:35",
@@ -477,9 +510,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "07:46",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 67,
-        "start_ms": 542519,
-        "end_ms": 544649
+        "turn_index": 68,
+        "start_ms": 552459,
+        "end_ms": 554589
       },
       "hold": {
         "until": "08:20",
@@ -516,9 +549,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "08:33",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 75,
-        "start_ms": 590499,
-        "end_ms": 609769
+        "turn_index": 76,
+        "start_ms": 600439,
+        "end_ms": 619709
       },
       "hold": {
         "until": "09:47",
@@ -558,9 +591,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "09:56",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 83,
-        "start_ms": 695769,
-        "end_ms": 706229
+        "turn_index": 84,
+        "start_ms": 705709,
+        "end_ms": 716169
       },
       "hold": {
         "until": "10:17",
@@ -594,9 +627,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "10:17",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 85,
-        "start_ms": 717969,
-        "end_ms": 720929
+        "turn_index": 86,
+        "start_ms": 727909,
+        "end_ms": 730869
       },
       "hold": {
         "until": "10:58",
@@ -731,9 +764,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "05:29",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 48,
-        "start_ms": 380109,
-        "end_ms": 389999
+        "turn_index": 49,
+        "start_ms": 390049,
+        "end_ms": 399939
       },
       "hold": {
         "until": "05:51",
@@ -770,9 +803,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "09:37",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 81,
-        "start_ms": 674659,
-        "end_ms": 686139
+        "turn_index": 82,
+        "start_ms": 684599,
+        "end_ms": 696079
       },
       "hold": {
         "until": "09:56",
@@ -809,9 +842,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "10:50",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 90,
-        "start_ms": 759439,
-        "end_ms": 769229
+        "turn_index": 91,
+        "start_ms": 769379,
+        "end_ms": 779169
       },
       "hold": {
         "until": "11:22",
@@ -848,9 +881,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "11:22",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 95,
-        "start_ms": 794159,
-        "end_ms": 796629
+        "turn_index": 96,
+        "start_ms": 804099,
+        "end_ms": 806569
       },
       "hold": {},
       "type": "title + sources card",
