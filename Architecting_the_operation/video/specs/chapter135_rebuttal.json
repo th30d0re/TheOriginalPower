@@ -3,7 +3,7 @@
   "source": "chapter135_rebuttal_shotlist.md",
   "manifest": "episode_manifest.json",
   "script": "chapter135_rebuttal_reply.md",
-  "shot_count": 16,
+  "shot_count": 21,
   "shots": [
     {
       "id": "G-01",
@@ -309,15 +309,15 @@
       "title": "Article 48: how a referendum is supposed to work",
       "anchor": {
         "speaker": "Emmanuel Theodore",
-        "timestamp": "06:00",
+        "timestamp": "05:51",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 48,
-        "start_ms": 374489,
-        "end_ms": 384959
+        "turn_index": 47,
+        "start_ms": 363489,
+        "end_ms": 374189
       },
       "hold": {
         "until": "06:15",
-        "script_ms": 15000
+        "script_ms": 24000
       },
       "type": "flow diagram, three steps",
       "described": {
@@ -561,6 +561,195 @@
       },
       "suggested_track": "vector",
       "prompt_seed": "AR-15 vs. Mini-14. Type: side-by-side comparison; Content: Two rifle silhouettes, same caliber label (5.56/.223) on both. Left: \"AR-15 \u2014 BANNED.\" Right: \"Ruger Mini-14 \u2014 not covered (named by the MA AG).\" Caption: the difference is a feature list, not lethality."
+    },
+    {
+      "id": "G-17",
+      "title": "The law she never names",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "03:04",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 25,
+        "start_ms": 192190,
+        "end_ms": 200240
+      },
+      "hold": {
+        "until": "03:50",
+        "script_ms": 46000
+      },
+      "type": "title card",
+      "described": {
+        "Type": "title card",
+        "Content": "\"Chapter 135 of the Acts of 2024 \u2014 An Act Modernizing Firearm Laws (House Bill 4885). Signed July 25, 2024. In effect immediately by emergency preamble.\""
+      },
+      "note": "`[source]` citations.md Card 1.",
+      "provenance": {
+        "tags": [
+          "source"
+        ],
+        "citations": [
+          {
+            "card": "Card 1"
+          }
+        ],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "The law she never names. Type: title card; Content: \"Chapter 135 of the Acts of 2024 \u2014 An Act Modernizing Firearm Laws (House Bill 4885). Signed July 25, 2024. In effect immediately by emergency preamble.\""
+    },
+    {
+      "id": "G-18",
+      "title": "Boston is gentrifying",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "03:50",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 31,
+        "start_ms": 239260,
+        "end_ms": 250320
+      },
+      "hold": {
+        "until": "04:00",
+        "script_ms": 10000
+      },
+      "type": "stat card",
+      "described": {
+        "Type": "stat card",
+        "Content": "\"Boston: 3rd most intensely gentrified city in the U.S. (NCRC, 2013-2017). Gentrifying tracts average 77% people of color. Roxbury and Dorchester are among the neighborhoods affected.\""
+      },
+      "note": "`[source]` citations.md Card 24. States the study's findings only; the \"priced out\" framing is the speaker's own.",
+      "provenance": {
+        "tags": [
+          "source"
+        ],
+        "citations": [
+          {
+            "card": "Card 24"
+          }
+        ],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Boston is gentrifying. Type: stat card; Content: \"Boston: 3rd most intensely gentrified city in the U.S. (NCRC, 2013-2017). Gentrifying tracts average 77% people of color. Roxbury and Dorchester are among the neighborhoods affected.\""
+    },
+    {
+      "id": "G-19",
+      "title": "What the research points to",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "05:29",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 44,
+        "start_ms": 340179,
+        "end_ms": 350069
+      },
+      "hold": {
+        "until": "05:51",
+        "script_ms": 22000
+      },
+      "type": "title card, three items",
+      "described": {
+        "Type": "title card, three items",
+        "Content": "Neighborhood disadvantage (about a 50-point gap in exposure, versus 5 to 10 points for household poverty); lead exposure (Reyes 2007); redlining (Boston's HOLC map, Roxbury graded Hazardous)."
+      },
+      "note": "`[source]` citations.md Cards 10 and 11. Starts after the opinion line about reparations (05:24), which takes no citation card.",
+      "provenance": {
+        "tags": [
+          "source"
+        ],
+        "citations": [
+          {
+            "card": "Card 10"
+          },
+          {
+            "card": "Card 11"
+          }
+        ],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "What the research points to. Type: title card, three items; Content: Neighborhood disadvantage (about a 50-point gap in exposure, versus 5 to 10 points for household poverty); lead exposure (Reyes 2007); redlining (Boston's HOLC map, Roxbury graded Hazardous)."
+    },
+    {
+      "id": "G-20",
+      "title": "Before and after Bruen",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "09:37",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 77,
+        "start_ms": 631569,
+        "end_ms": 643049
+      },
+      "hold": {
+        "until": "09:56",
+        "script_ms": 19000
+      },
+      "type": "compare card",
+      "described": {
+        "Type": "compare card",
+        "Content": "Before Bruen (to June 23, 2022): a handgun license (LTC) needed the police chief's approval and a \"good reason\"; rifles and shotguns (FID) had no such test. After Bruen: the LTC is issued unless the applicant is disqualified; the FID is unchanged."
+      },
+      "note": "`[source]` citations.md Card 22 (also Card 19).",
+      "provenance": {
+        "tags": [
+          "source"
+        ],
+        "citations": [
+          {
+            "card": "Card 22"
+          },
+          {
+            "card": "Card 19"
+          }
+        ],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Before and after Bruen. Type: compare card; Content: Before Bruen (to June 23, 2022): a handgun license (LTC) needed the police chief's approval and a \"good reason\"; rifles and shotguns (FID) had no such test. After Bruen: the LTC is issued unless the applicant is disqualified; the FID is unchanged."
+    },
+    {
+      "id": "G-21",
+      "title": "Black women among the fastest-growing owners",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "10:50",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 86,
+        "start_ms": 716349,
+        "end_ms": 725309
+      },
+      "hold": {
+        "until": "11:22",
+        "script_ms": 32000
+      },
+      "type": "title card, two figures",
+      "described": {
+        "Type": "title card, two figures",
+        "Content": "\"+87% gun ownership among Black women (NSSF, 2021).\" \"+58% Black gun buyers in 2020 (NSSF/CNN).\""
+      },
+      "note": "`[source]` citations.md Cards 18 and 22. Card 18's caveat applies: one of the fastest-growing segments, not verified as the single fastest.",
+      "provenance": {
+        "tags": [
+          "source"
+        ],
+        "citations": [
+          {
+            "card": "Card 18"
+          },
+          {
+            "card": "Card 22"
+          }
+        ],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Black women among the fastest-growing owners. Type: title card, two figures; Content: \"+87% gun ownership among Black women (NSSF, 2021).\" \"+58% Black gun buyers in 2020 (NSSF/CNN).\""
     },
     {
       "id": "G-16",

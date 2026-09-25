@@ -1,0 +1,18 @@
+{
+  "component": "TitleCard",
+  "headline": "Gentrification in Boston, 2013–2017",
+  "items": [
+    {
+      "title": "Most intensely gentrified city in the U.S.",
+      "emphasis": "3rd",
+      "detail": "NCRC study of 940 metro areas"
+    },
+    {
+      "title": "People of color in gentrifying tracts",
+      "emphasis": "77%",
+      "detail": "Roxbury and Dorchester are among the neighborhoods affected"
+    }
+  ],
+  "sources": "Sources: NCRC via Boston Globe (Jul 10, 2020)",
+  "qrUrl": "https://www.bostonglobe.com/2020/07/10/metro/boston-is-third-most-intensely-gentrified-city-united-states-study-says/"
+}

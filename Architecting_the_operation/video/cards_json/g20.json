@@ -1,0 +1,22 @@
+{
+  "component": "CompareCard",
+  "headline": "Bruen: June 23, 2022",
+  "items": [
+    {
+      "title": "Before",
+      "points": [
+        "Handgun license (LTC): the police chief decides, and \"good reason\" is required",
+        "Rifles and shotguns (FID): no \"good reason\" test"
+      ]
+    },
+    {
+      "title": "After",
+      "points": [
+        "LTC is issued unless the applicant is disqualified",
+        "FID process unchanged"
+      ]
+    }
+  ],
+  "sources": "Sources: NYSRPA v. Bruen (2022) · MVSLLP",
+  "qrUrl": "https://mvsllp.com/criminal-defense/gun-charges/possession-firearm-without-fid/"
+}
