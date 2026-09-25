@@ -205,6 +205,13 @@ portrait).
 - **Content:** All 50 states + DC: poverty vs firearm homicide r = +0.72; Giffords law rank vs firearm homicide r = +0.29, and about zero after controlling for poverty and inequality.
 - **Note:** `[data]` Paper/data/gun_laws_new_england/RESULTS.md and Paper/figures/gunlaws_ne_scatter_poverty.png.
 
+## G-25 — What RAND's reviews find
+
+- **Anchor:** `Emmanuel Theodore (04:44)`
+- **Type:** title card, two items
+- **Content:** Child-access prevention laws: supportive evidence they reduce firearm homicides and self-injuries among youth. Background checks: moderate evidence they reduce firearm and total homicides.
+- **Note:** `[source]` citations.md Card 26.
+
 ## G-05 — Neighborhood disadvantage vs. poverty
 
 - **Anchor:** `Emmanuel Theodore (04:07)`

@@ -1,0 +1,16 @@
+{
+  "component": "TitleCard",
+  "headline": "What RAND's reviews find",
+  "items": [
+    {
+      "title": "Child-access prevention laws",
+      "detail": "Supportive evidence they reduce firearm homicides and self-injuries among youth"
+    },
+    {
+      "title": "Background checks",
+      "detail": "Moderate evidence they reduce firearm and total homicides"
+    }
+  ],
+  "sources": "Sources: RAND Gun Policy in America (accessed Sep 24, 2026)",
+  "qrUrl": "https://www.rand.org/research/gun-policy/analysis.html"
+}

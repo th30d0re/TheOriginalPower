@@ -359,6 +359,21 @@ line states the range, not that prison is mandatory. Read from the statute page 
 malegislature.gov through a page fetch, not from a printed copy.
 **Source:** [malegislature.gov — G.L. c. 140, § 131M](https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXX/Chapter140/Section131M)
 
+### Card 26 — What RAND's gun-policy reviews find
+**On screen:** "RAND: supportive evidence that child-access prevention laws reduce firearm homicides and self-injuries among youth; moderate evidence that background checks reduce firearm and total homicides."
+**Claim:** RAND's Gun Policy in America review rates the evidence law by law. It finds
+moderate evidence that background checks decrease firearm and total homicides, limited
+evidence that licensing and permitting requirements decrease firearm and total
+homicides, and moderate evidence that waiting periods decrease total homicides. Its
+2023 update reports supportive evidence, RAND's strongest designation, that
+child-access-prevention laws reduce firearm homicides and self-injuries among youth.
+**Caveats:** read from RAND's analysis page and 2023 press release as summarized in
+Paper/data/gun_laws_new_england/RESULTS.md; the ratings are per policy and per outcome.
+The spoken line makes only the two claims above.
+**Sources:**
+- [RAND — Gun Policy in America: analysis](https://www.rand.org/research/gun-policy/analysis.html)
+- [RAND — 2023 update press release (Jan. 10, 2023)](https://www.rand.org/news/press/2023/01/10.html)
+
 ---
 
 ## Notes for whoever builds the on-screen cards
