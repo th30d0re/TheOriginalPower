@@ -25,16 +25,12 @@
         "Type": "freeze-frame callout, drawn on the paused reel frame itself",
         "Content": "Circle or highlight the \"YES on 9 / FOR A SAFE MA\" posters visible behind Healey and the interviewer. Caption: \"Filmed at a Yes-on-9 press event.\""
       },
-      "note": "`[source]` citations.md Card 9. This is the strongest single visual in the piece \u2014 it was confirmed by direct frame inspection, not inference. Don't undersell it with a small caption; this deserves the full freeze-frame treatment.",
+      "note": "`[source]` citations.md Section 4. This is the strongest single visual in the piece \u2014 it was confirmed by direct frame inspection, not inference. Don't undersell it with a small caption; this deserves the full freeze-frame treatment.",
       "provenance": {
         "tags": [
           "source"
         ],
-        "citations": [
-          {
-            "card": "Card 9"
-          }
-        ],
+        "citations": [],
         "labels": [],
         "quotes": []
       },
@@ -109,7 +105,7 @@
         "Type": "build, contrast",
         "Content": "Left: \"What should schools/communities/mental health do?\" (asked). Right, greyed out or with a strike-through until the reveal: \"What should the *government* do?\" (never asked)."
       },
-      "note": "`[source]` citations.md Card 9 (the reel itself, https://www.instagram.com/reel/DdoZBRXIbK5/). This is a close read of the reel's own transcript, not an external claim.",
+      "note": "`[source]` citations.md Section 4 (the reel itself, https://www.instagram.com/reel/DdoZBRXIbK5/). This is a close read of the reel's own transcript, not an external claim.",
       "provenance": {
         "tags": [
           "source"
@@ -117,9 +113,6 @@
         "citations": [
           {
             "url": "https://www.instagram.com/reel/DdoZBRXIbK5/"
-          },
-          {
-            "card": "Card 9"
           }
         ],
         "labels": [],
@@ -145,16 +138,12 @@
         "Type": "title card, two items",
         "Content": "Coined by Kimberl\u00e9 Crenshaw in 1989 (\"Demarginalizing the Intersection of Race and Sex,\" University of Chicago Legal Forum); DeGraffenreid v. General Motors (E.D. Mo. 1976): Black women challenged layoffs and the court allowed a race claim or a sex claim, not a combination."
       },
-      "note": "`[source]` citations.md Card 28. Sets up the later intersectional-harm line at 11:11.",
+      "note": "`[source]` citations.md Section 27. Sets up the later intersectional-harm line at 11:11.",
       "provenance": {
         "tags": [
           "source"
         ],
-        "citations": [
-          {
-            "card": "Card 28"
-          }
-        ],
+        "citations": [],
         "labels": [],
         "quotes": []
       },
@@ -268,16 +257,12 @@
         "Type": "title card, two items",
         "Content": "Child-access prevention laws: supportive evidence they reduce firearm homicides and self-injuries among youth. Background checks: moderate evidence they reduce firearm and total homicides."
       },
-      "note": "`[source]` citations.md Card 26.",
+      "note": "`[source]` citations.md Section 23.",
       "provenance": {
         "tags": [
           "source"
         ],
-        "citations": [
-          {
-            "card": "Card 26"
-          }
-        ],
+        "citations": [],
         "labels": [],
         "quotes": []
       },
@@ -301,16 +286,12 @@
         "Type": "title card, three items",
         "Content": "G.L. c.140 s.131L: firearm in a locked container or with a tamper-resistant lock unless under the owner's control; applies with or without minors in the home; standard-firearm penalty $1,000 to $7,500 or up to 1.5 years in jail."
       },
-      "note": "`[source]` citations.md Card 30.",
+      "note": "`[source]` citations.md Section 24.",
       "provenance": {
         "tags": [
           "source"
         ],
-        "citations": [
-          {
-            "card": "Card 30"
-          }
-        ],
+        "citations": [],
         "labels": [],
         "quotes": []
       },
@@ -334,16 +315,12 @@
         "Type": "title card, two items",
         "Content": "Dealer sales: Form 4473 and a federal NICS check. Massachusetts private sales: only to a license holder, through the state's electronic registration system."
       },
-      "note": "`[source]` citations.md Card 31.",
+      "note": "`[source]` citations.md Section 25.",
       "provenance": {
         "tags": [
           "source"
         ],
-        "citations": [
-          {
-            "card": "Card 31"
-          }
-        ],
+        "citations": [],
         "labels": [],
         "quotes": []
       },
@@ -367,16 +344,12 @@
         "Type": "title card, two items",
         "Content": "G.L. c.140 s.121 assault-style firearm (rifle): semiautomatic, centerfire, detachable magazine, and at least 2 of five features; the shroud clause quoted verbatim."
       },
-      "note": "`[source]` citations.md Card 32.",
+      "note": "`[source]` citations.md Section 18.",
       "provenance": {
         "tags": [
           "source"
         ],
-        "citations": [
-          {
-            "card": "Card 32"
-          }
-        ],
+        "citations": [],
         "labels": [],
         "quotes": []
       },
@@ -403,16 +376,12 @@
         "Type": "parts card, five rows (photoreal cut-outs generated with Codex image generation)",
         "Content": "adjustable stock (length of pull), pistol grip (control, ergonomics), forward grip (steadies the support hand), threaded barrel (accepts a flash suppressor or muzzle brake), shroud (shields the hand from heat)."
       },
-      "note": "`[source]` parts list is the statute (citations.md Card 32); the function descriptions are the script's own. Assets: `scriptCast/video/public/assets/parts/`.",
+      "note": "`[source]` parts list is the statute (citations.md Section 18); the function descriptions are the script's own. Assets: `scriptCast/video/public/assets/parts/`.",
       "provenance": {
         "tags": [
           "source"
         ],
-        "citations": [
-          {
-            "card": "Card 32"
-          }
-        ],
+        "citations": [],
         "labels": [],
         "quotes": []
       },
@@ -439,16 +408,12 @@
         "Type": "bar comparison",
         "Content": "\"~50-point gap in gun-violence exposure: high- vs. low-disadvantage neighborhoods\" next to a much smaller bar: \"5\u201310 points: household poverty alone.\""
       },
-      "note": "`[source]` citations.md Card 10.",
+      "note": "`[source]` citations.md Section 5.",
       "provenance": {
         "tags": [
           "source"
         ],
-        "citations": [
-          {
-            "card": "Card 10"
-          }
-        ],
+        "citations": [],
         "labels": [],
         "quotes": []
       },
@@ -472,16 +437,12 @@
         "Type": "map with the rates by grade in the caption",
         "Content": "Boston's 1938 HOLC grades with 2019-2025 shooting victimizations plotted; D 3.14, C 3.12, A and B 0.43 per 10,000 residents per year."
       },
-      "note": "`[data]` citations.md Card 27; Paper/data/spatial/boston/RESULTS.md. Rate ratio C and D against A and B about 7 (95% intervals 4.07 to 14.86). The tract-level model does not separate the 1938 grade from later poverty and racial composition; the second spoken line states that limit.",
+      "note": "`[data]` citations.md Section 26; Paper/data/spatial/boston/RESULTS.md. Rate ratio C and D against A and B about 7 (95% intervals 4.07 to 14.86). The tract-level model does not separate the 1938 grade from later poverty and racial composition; the second spoken line states that limit.",
       "provenance": {
         "tags": [
           "data"
         ],
-        "citations": [
-          {
-            "card": "Card 27"
-          }
-        ],
+        "citations": [],
         "labels": [],
         "quotes": []
       },
@@ -508,16 +469,12 @@
         "Type": "two-part card",
         "Content": "\"Reyes (2007): leaded-gasoline phase-out tied to a generation-later drop in violent crime.\" Paired with a Boston HOLC redlining map excerpt (Roxbury/ Dorchester graded lower)."
       },
-      "note": "`[source]` citations.md Card 11 \u2014 \u26a0 **cleared 2026-09-23**: the actual 1938 Boston HOLC scan is pulled and verified (`images/holc_boston_1938_scan.jpg`, composite crop `images/holc_boston_1938_roxbury_dorchester.jpg`). Roxbury corridor graded D (red, zones D8/D9), Dorchester C (yellow, C8\u2013C13), read directly off the scan. Composite the crop into this card in the edit with a \"Mapping Inequality, University of Richmond\" credit. Standing caveat holds: the redlining\u2192lead\u2192crime connection is the video's own argument; don't caption it as a proven Boston-specific study.",
+      "note": "`[source]` citations.md Section 6 \u2014 \u26a0 **cleared 2026-09-23**: the actual 1938 Boston HOLC scan is pulled and verified (`images/holc_boston_1938_scan.jpg`, composite crop `images/holc_boston_1938_roxbury_dorchester.jpg`). Roxbury corridor graded D (red, zones D8/D9), Dorchester C (yellow, C8\u2013C13), read directly off the scan. Composite the crop into this card in the edit with a \"Mapping Inequality, University of Richmond\" credit. Standing caveat holds: the redlining\u2192lead\u2192crime connection is the video's own argument; don't caption it as a proven Boston-specific study.",
       "provenance": {
         "tags": [
           "source"
         ],
-        "citations": [
-          {
-            "card": "Card 11"
-          }
-        ],
+        "citations": [],
         "labels": [],
         "quotes": []
       },
@@ -544,16 +501,12 @@
         "Type": "stat card",
         "Content": "\"Baltimore homicides: 261 (2023) \u2192 201 (2024), \u221223%. Credited to the Group Violence Reduction Strategy.\""
       },
-      "note": "`[source]` citations.md Card 12.",
+      "note": "`[source]` citations.md Section 7.",
       "provenance": {
         "tags": [
           "source"
         ],
-        "citations": [
-          {
-            "card": "Card 12"
-          }
-        ],
+        "citations": [],
         "labels": [],
         "quotes": []
       },
@@ -580,16 +533,12 @@
         "Type": "stat card",
         "Content": "\"NYC shootings down 3 years running. NYPD credits hot-spot policing and targeted enforcement against illegal guns.\""
       },
-      "note": "`[source]` citations.md Card 13.",
+      "note": "`[source]` citations.md Section 8.",
       "provenance": {
         "tags": [
           "source"
         ],
-        "citations": [
-          {
-            "card": "Card 13"
-          }
-        ],
+        "citations": [],
         "labels": [],
         "quotes": []
       },
@@ -616,16 +565,12 @@
         "Type": "flow diagram, three steps",
         "Content": "Law passes \u2192 90-day clock starts \u2192 certified referendum petition stays the law until voters decide. Then a fourth box, in a different color: \"UNLESS: emergency preamble.\""
       },
-      "note": "`[source]` citations.md Card 14.",
+      "note": "`[source]` citations.md Section 9.",
       "provenance": {
         "tags": [
           "source"
         ],
-        "citations": [
-          {
-            "card": "Card 14"
-          }
-        ],
+        "citations": [],
         "labels": [],
         "quotes": []
       },
@@ -652,16 +597,12 @@
         "Type": "vertical timeline, this is the richest graphic in the cut",
         "Content": "Jul 25, 2024 (signed) \u2192 Oct 2, 2024 (emergency preamble, \"69 days later\"; stated reasons \"without delay\" and time for agencies to prepare) \u2192 Oct 23, 2024 (law's own original effective date) \u2192 Oct 2024 (93,229 signatures submitted) \u2192 Nov 22, 2024 (78,707 verified). Footer note on Article 48's stay."
       },
-      "note": "`[source]` citations.md Card 15. Give this the longest hold of any graphic in the video if time allows \u2014 it's the evidentiary core of the \"manufactured emergency\" argument, and it's the one a hostile viewer will fact-check first. **Built as HTML, not AI-generated** (`cards_html/g10.html`, rendered with headless Chrome to `images/g10.png`): the NotebookLM generator failed four times in a row on 2026-09-24, and the AI v2 render still said \"71 days\" and \"public convenience\". The stale render is kept as `images/g10_v2_stale_71days.png`.",
+      "note": "`[source]` citations.md Section 10. Give this the longest hold of any graphic in the video if time allows \u2014 it's the evidentiary core of the \"manufactured emergency\" argument, and it's the one a hostile viewer will fact-check first. **Built as HTML, not AI-generated** (`cards_html/g10.html`, rendered with headless Chrome to `images/g10.png`): the NotebookLM generator failed four times in a row on 2026-09-24, and the AI v2 render still said \"71 days\" and \"public convenience\". The stale render is kept as `images/g10_v2_stale_71days.png`.",
       "provenance": {
         "tags": [
           "source"
         ],
-        "citations": [
-          {
-            "card": "Card 15"
-          }
-        ],
+        "citations": [],
         "labels": [],
         "quotes": []
       },
@@ -688,16 +629,12 @@
         "Type": "stat card with a quote",
         "Content": "Louisiana, 1898: cutoff Jan. 1, 1867. Black registration 130,344 \u2192 5,320 (three years). White registration: down ~24% (164,088 to 125,437, 1897 to 1900). Quote: *\"racially neutral on its face\"* \u2014 Guinn v. United States (1915)."
       },
-      "note": "`[source]` citations.md Card 16.",
+      "note": "`[source]` citations.md Section 11.",
       "provenance": {
         "tags": [
           "source"
         ],
-        "citations": [
-          {
-            "card": "Card 16"
-          }
-        ],
+        "citations": [],
         "labels": [],
         "quotes": []
       },
@@ -805,16 +742,12 @@
         "Type": "receipt-style card",
         "Content": "\"$100 state application fee + $100\u2013150 mandatory live-fire course.\""
       },
-      "note": "`[source]` citations.md Card 20.",
+      "note": "`[source]` citations.md Section 16.",
       "provenance": {
         "tags": [
           "source"
         ],
-        "citations": [
-          {
-            "card": "Card 20"
-          }
-        ],
+        "citations": [],
         "labels": [],
         "quotes": []
       },
@@ -841,16 +774,12 @@
         "Type": "side-by-side comparison",
         "Content": "Two rifle silhouettes, same caliber label (5.56/.223) on both. Left: \"AR-15 \u2014 BANNED.\" Right: \"Ruger Mini-14 \u2014 not covered (named by the MA AG).\" Caption: the difference is a feature list, not lethality."
       },
-      "note": "`[source]` citations.md Card 21.",
+      "note": "`[source]` citations.md Section 17.",
       "provenance": {
         "tags": [
           "source"
         ],
-        "citations": [
-          {
-            "card": "Card 21"
-          }
-        ],
+        "citations": [],
         "labels": [],
         "quotes": []
       },
@@ -906,16 +835,12 @@
         "Type": "title card",
         "Content": "\"Chapter 135 of the Acts of 2024 \u2014 An Act Modernizing Firearm Laws (House Bill 4885). Signed July 25, 2024. In effect immediately by emergency preamble.\""
       },
-      "note": "`[source]` citations.md Card 1.",
+      "note": "`[source]` citations.md Section 1.",
       "provenance": {
         "tags": [
           "source"
         ],
-        "citations": [
-          {
-            "card": "Card 1"
-          }
-        ],
+        "citations": [],
         "labels": [],
         "quotes": []
       },
@@ -942,16 +867,12 @@
         "Type": "stat card",
         "Content": "\"Boston: 3rd most intensely gentrified city in the U.S. (NCRC, 2013-2017). Gentrifying tracts average 77% people of color. Roxbury and Dorchester are among the neighborhoods affected.\""
       },
-      "note": "`[source]` citations.md Card 24. States the study's findings only; the \"priced out\" framing is the speaker's own.",
+      "note": "`[source]` citations.md Section 20. States the study's findings only; the \"priced out\" framing is the speaker's own.",
       "provenance": {
         "tags": [
           "source"
         ],
-        "citations": [
-          {
-            "card": "Card 24"
-          }
-        ],
+        "citations": [],
         "labels": [],
         "quotes": []
       },
@@ -1017,19 +938,12 @@
         "Type": "compare card",
         "Content": "Before Bruen (to June 23, 2022): a handgun license (LTC) needed the police chief's approval and a \"good reason\"; rifles and shotguns (FID) had no such test. After Bruen: the LTC is issued unless the applicant is disqualified; the FID is unchanged."
       },
-      "note": "`[source]` citations.md Card 22 (also Card 19).",
+      "note": "`[source]` citations.md Section 14 (also Section 15).",
       "provenance": {
         "tags": [
           "source"
         ],
-        "citations": [
-          {
-            "card": "Card 22"
-          },
-          {
-            "card": "Card 19"
-          }
-        ],
+        "citations": [],
         "labels": [],
         "quotes": []
       },
@@ -1056,19 +970,12 @@
         "Type": "title card, two figures",
         "Content": "\"+87% gun ownership among Black women (NSSF, 2021).\" \"+58% Black gun buyers in 2020 (NSSF/CNN).\""
       },
-      "note": "`[source]` citations.md Cards 18 and 22. Card 18's caveat applies: one of the fastest-growing segments, not verified as the single fastest.",
+      "note": "`[source]` citations.md Section 14. Its caveat applies: one of the fastest-growing segments, not verified as the single fastest.",
       "provenance": {
         "tags": [
           "source"
         ],
-        "citations": [
-          {
-            "card": "Card 18"
-          },
-          {
-            "card": "Card 22"
-          }
-        ],
+        "citations": [],
         "labels": [],
         "quotes": []
       },
@@ -1092,16 +999,12 @@
         "Type": "title + sources card",
         "Content": "\"Question 9, Nov. 3, 2026 \u2014 YES keeps Chapter 135. NO repeals it.\" Then: \"Sources for everything in this video: [link to published citations deck].\""
       },
-      "note": "`[source]` citations.md Card 2 (Question 9 yes/no mechanics) \u2014 the \"check my work\" card. Same requirement as v1: don't ship without this resolving to something the audience can actually open.",
+      "note": "`[source]` citations.md Section 2 (Question 9 yes/no mechanics) \u2014 the \"check my work\" card. Same requirement as v1: don't ship without this resolving to something the audience can actually open.",
       "provenance": {
         "tags": [
           "source"
         ],
-        "citations": [
-          {
-            "card": "Card 2"
-          }
-        ],
+        "citations": [],
         "labels": [],
         "quotes": []
       },
@@ -1109,5 +1012,111 @@
       "prompt_seed": "Close card. Type: title + sources card; Content: \"Question 9, Nov. 3, 2026 \u2014 YES keeps Chapter 135. NO repeals it.\" Then: \"Sources for everything in this video: [link to published citations deck].\""
     }
   ],
-  "validation": []
+  "validation": [
+    {
+      "level": "error",
+      "shot": "G-01",
+      "message": "tagged [source] with no URL or card reference"
+    },
+    {
+      "level": "error",
+      "shot": "G-27",
+      "message": "tagged [source] with no URL or card reference"
+    },
+    {
+      "level": "error",
+      "shot": "G-25",
+      "message": "tagged [source] with no URL or card reference"
+    },
+    {
+      "level": "error",
+      "shot": "G-28",
+      "message": "tagged [source] with no URL or card reference"
+    },
+    {
+      "level": "error",
+      "shot": "G-29",
+      "message": "tagged [source] with no URL or card reference"
+    },
+    {
+      "level": "error",
+      "shot": "G-30",
+      "message": "tagged [source] with no URL or card reference"
+    },
+    {
+      "level": "error",
+      "shot": "G-31",
+      "message": "tagged [source] with no URL or card reference"
+    },
+    {
+      "level": "error",
+      "shot": "G-05",
+      "message": "tagged [source] with no URL or card reference"
+    },
+    {
+      "level": "error",
+      "shot": "G-06",
+      "message": "tagged [source] with no URL or card reference"
+    },
+    {
+      "level": "error",
+      "shot": "G-07",
+      "message": "tagged [source] with no URL or card reference"
+    },
+    {
+      "level": "error",
+      "shot": "G-08",
+      "message": "tagged [source] with no URL or card reference"
+    },
+    {
+      "level": "error",
+      "shot": "G-09",
+      "message": "tagged [source] with no URL or card reference"
+    },
+    {
+      "level": "error",
+      "shot": "G-10",
+      "message": "tagged [source] with no URL or card reference"
+    },
+    {
+      "level": "error",
+      "shot": "G-11",
+      "message": "tagged [source] with no URL or card reference"
+    },
+    {
+      "level": "error",
+      "shot": "G-14",
+      "message": "tagged [source] with no URL or card reference"
+    },
+    {
+      "level": "error",
+      "shot": "G-15",
+      "message": "tagged [source] with no URL or card reference"
+    },
+    {
+      "level": "error",
+      "shot": "G-17",
+      "message": "tagged [source] with no URL or card reference"
+    },
+    {
+      "level": "error",
+      "shot": "G-18",
+      "message": "tagged [source] with no URL or card reference"
+    },
+    {
+      "level": "error",
+      "shot": "G-20",
+      "message": "tagged [source] with no URL or card reference"
+    },
+    {
+      "level": "error",
+      "shot": "G-21",
+      "message": "tagged [source] with no URL or card reference"
+    },
+    {
+      "level": "error",
+      "shot": "G-16",
+      "message": "tagged [source] with no URL or card reference"
+    }
+  ]
 }

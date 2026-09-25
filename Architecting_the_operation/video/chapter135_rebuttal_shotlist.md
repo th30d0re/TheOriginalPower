@@ -107,10 +107,10 @@ composited into this card in the edit.
 conflict):**
 - "71 days" is **69 days** (Jul 25 to Oct 2). "Public convenience" was dropped as a
   stated reason; the reported reasons are "without delay" (AP) and time for agencies
-  and municipalities to prepare (NBC Boston). Audio, script, Card 15 and G-10 all
+  and municipalities to prepare (NBC Boston). Audio, script, Section 10 and G-10 all
   updated.
 - "White registration barely moved" (Louisiana) was wrong: 164,088 (1897) to 125,437
-  (1900), about -24%, after dipping to 74,133 in 1898. Script line, Card 16 and G-11
+  (1900), about -24%, after dipping to 74,133 in 1898. Script line, Section 11 and G-11
   corrected. Also fixed G-11's mislabeled years (1897 to 1900, not 1898 to 1901).
 - **G-10 and G-11 are HTML-built cards** (`cards_html/`, headless Chrome to 1080x1920
   PNG), because NotebookLM's infographic generator failed four consecutive times on
@@ -143,7 +143,7 @@ portrait).
 - **Type:** freeze-frame callout, drawn on the paused reel frame itself
 - **Content:** Circle or highlight the "YES on 9 / FOR A SAFE MA" posters visible
   behind Healey and the interviewer. Caption: "Filmed at a Yes-on-9 press event."
-- **Note:** `[source]` citations.md Card 9. This is the strongest single visual in
+- **Note:** `[source]` citations.md Section 4. This is the strongest single visual in
   the piece — it was confirmed by direct frame inspection, not inference. Don't
   undersell it with a small caption; this deserves the full freeze-frame treatment.
 
@@ -178,7 +178,7 @@ portrait).
 - **Content:** Left: "What should schools/communities/mental health do?" (asked).
   Right, greyed out or with a strike-through until the reveal: "What should the
   *government* do?" (never asked).
-- **Note:** `[source]` citations.md Card 9 (the reel itself,
+- **Note:** `[source]` citations.md Section 4 (the reel itself,
   https://www.instagram.com/reel/DdoZBRXIbK5/). This is a close read of the reel's own
   transcript, not an external claim.
 
@@ -187,7 +187,7 @@ portrait).
 - **Anchor:** `Emmanuel Theodore (02:42)`
 - **Type:** title card, two items
 - **Content:** Coined by Kimberlé Crenshaw in 1989 ("Demarginalizing the Intersection of Race and Sex," University of Chicago Legal Forum); DeGraffenreid v. General Motors (E.D. Mo. 1976): Black women challenged layoffs and the court allowed a race claim or a sex claim, not a combination.
-- **Note:** `[source]` citations.md Card 28. Sets up the later intersectional-harm line at 11:11.
+- **Note:** `[source]` citations.md Section 27. Sets up the later intersectional-harm line at 11:11.
 
 ## G-04 — Grandfather clause, teased
 
@@ -217,28 +217,28 @@ portrait).
 - **Anchor:** `Emmanuel Theodore (04:44)`
 - **Type:** title card, two items
 - **Content:** Child-access prevention laws: supportive evidence they reduce firearm homicides and self-injuries among youth. Background checks: moderate evidence they reduce firearm and total homicides.
-- **Note:** `[source]` citations.md Card 26.
+- **Note:** `[source]` citations.md Section 23.
 
 ## G-28 — Safe storage covers every owner
 
 - **Anchor:** `Emmanuel Theodore (04:46)`
 - **Type:** title card, three items
 - **Content:** G.L. c.140 s.131L: firearm in a locked container or with a tamper-resistant lock unless under the owner's control; applies with or without minors in the home; standard-firearm penalty $1,000 to $7,500 or up to 1.5 years in jail.
-- **Note:** `[source]` citations.md Card 30.
+- **Note:** `[source]` citations.md Section 24.
 
 ## G-29 — Background checks already run
 
 - **Anchor:** `Emmanuel Theodore (04:47)`
 - **Type:** title card, two items
 - **Content:** Dealer sales: Form 4473 and a federal NICS check. Massachusetts private sales: only to a license holder, through the state's electronic registration system.
-- **Note:** `[source]` citations.md Card 31.
+- **Note:** `[source]` citations.md Section 25.
 
 ## G-30 — What the statute bans
 
 - **Anchor:** `Emmanuel Theodore (10:36)`
 - **Type:** title card, two items
 - **Content:** G.L. c.140 s.121 assault-style firearm (rifle): semiautomatic, centerfire, detachable magazine, and at least 2 of five features; the shroud clause quoted verbatim.
-- **Note:** `[source]` citations.md Card 32.
+- **Note:** `[source]` citations.md Section 18.
 
 ## G-31 — What each listed part does
 
@@ -246,7 +246,7 @@ portrait).
 - **Hold:** through 11:08
 - **Type:** parts card, five rows (photoreal cut-outs generated with Codex image generation)
 - **Content:** adjustable stock (length of pull), pistol grip (control, ergonomics), forward grip (steadies the support hand), threaded barrel (accepts a flash suppressor or muzzle brake), shroud (shields the hand from heat).
-- **Note:** `[source]` parts list is the statute (citations.md Card 32); the function descriptions are the script's own. Assets: `scriptCast/video/public/assets/parts/`.
+- **Note:** `[source]` parts list is the statute (citations.md Section 18); the function descriptions are the script's own. Assets: `scriptCast/video/public/assets/parts/`.
 
 ## G-05 — Neighborhood disadvantage vs. poverty
 
@@ -255,14 +255,14 @@ portrait).
 - **Type:** bar comparison
 - **Content:** "~50-point gap in gun-violence exposure: high- vs. low-disadvantage
   neighborhoods" next to a much smaller bar: "5–10 points: household poverty alone."
-- **Note:** `[source]` citations.md Card 10.
+- **Note:** `[source]` citations.md Section 5.
 
 ## G-26 — The 1938 redlining map and today's shootings
 
 - **Anchor:** `Emmanuel Theodore (04:34)`
 - **Type:** map with the rates by grade in the caption
 - **Content:** Boston's 1938 HOLC grades with 2019-2025 shooting victimizations plotted; D 3.14, C 3.12, A and B 0.43 per 10,000 residents per year.
-- **Note:** `[data]` citations.md Card 27; Paper/data/spatial/boston/RESULTS.md. Rate ratio C and D against A and B about 7 (95% intervals 4.07 to 14.86). The tract-level model does not separate the 1938 grade from later poverty and racial composition; the second spoken line states that limit.
+- **Note:** `[data]` citations.md Section 26; Paper/data/spatial/boston/RESULTS.md. Rate ratio C and D against A and B about 7 (95% intervals 4.07 to 14.86). The tract-level model does not separate the 1938 grade from later poverty and racial composition; the second spoken line states that limit.
 
 ## G-06 — Lead, redlining, and the timeline they share
 
@@ -272,7 +272,7 @@ portrait).
 - **Content:** "Reyes (2007): leaded-gasoline phase-out tied to a generation-later
   drop in violent crime." Paired with a Boston HOLC redlining map excerpt (Roxbury/
   Dorchester graded lower).
-- **Note:** `[source]` citations.md Card 11 — ⚠ **cleared 2026-09-23**: the actual
+- **Note:** `[source]` citations.md Section 6 — ⚠ **cleared 2026-09-23**: the actual
   1938 Boston HOLC scan is pulled and verified (`images/holc_boston_1938_scan.jpg`,
   composite crop `images/holc_boston_1938_roxbury_dorchester.jpg`). Roxbury corridor
   graded D (red, zones D8/D9), Dorchester C (yellow, C8–C13), read directly off the
@@ -288,7 +288,7 @@ portrait).
 - **Type:** stat card
 - **Content:** "Baltimore homicides: 261 (2023) → 201 (2024), −23%. Credited to the
   Group Violence Reduction Strategy."
-- **Note:** `[source]` citations.md Card 12.
+- **Note:** `[source]` citations.md Section 7.
 
 ## G-08 — NYC: what actually worked
 
@@ -297,7 +297,7 @@ portrait).
 - **Type:** stat card
 - **Content:** "NYC shootings down 3 years running. NYPD credits hot-spot policing
   and targeted enforcement against illegal guns."
-- **Note:** `[source]` citations.md Card 13.
+- **Note:** `[source]` citations.md Section 8.
 
 ## G-09 — Article 48: how a referendum is supposed to work
 
@@ -307,7 +307,7 @@ portrait).
 - **Content:** Law passes → 90-day clock starts → certified referendum petition
   stays the law until voters decide. Then a fourth box, in a different color:
   "UNLESS: emergency preamble."
-- **Note:** `[source]` citations.md Card 14.
+- **Note:** `[source]` citations.md Section 9.
 
 ## G-10 — The timeline
 
@@ -318,7 +318,7 @@ portrait).
   later"; stated reasons "without delay" and time for agencies to prepare) → Oct 23,
   2024 (law's own original effective date) → Oct 2024 (93,229 signatures submitted)
   → Nov 22, 2024 (78,707 verified). Footer note on Article 48's stay.
-- **Note:** `[source]` citations.md Card 15. Give this the longest hold of any
+- **Note:** `[source]` citations.md Section 10. Give this the longest hold of any
   graphic in the video if time allows — it's the evidentiary core of the "manufactured
   emergency" argument, and it's the one a hostile viewer will fact-check first.
   **Built as HTML, not AI-generated** (`cards_html/g10.html`, rendered with headless
@@ -334,7 +334,7 @@ portrait).
 - **Content:** Louisiana, 1898: cutoff Jan. 1, 1867. Black registration 130,344 →
   5,320 (three years). White registration: down ~24% (164,088 to 125,437, 1897 to 1900). Quote: *"racially neutral on
   its face"* — Guinn v. United States (1915).
-- **Note:** `[source]` citations.md Card 16.
+- **Note:** `[source]` citations.md Section 11.
 
 ## G-12 — Grandfather clauses, now
 
@@ -369,7 +369,7 @@ portrait).
 - **Hold:** through 10:17
 - **Type:** receipt-style card
 - **Content:** "$100 state application fee + $100–150 mandatory live-fire course."
-- **Note:** `[source]` citations.md Card 20.
+- **Note:** `[source]` citations.md Section 16.
 
 ## G-15 — AR-15 vs. Mini-14
 
@@ -379,7 +379,7 @@ portrait).
 - **Content:** Two rifle silhouettes, same caliber label (5.56/.223) on both.
   Left: "AR-15 — BANNED." Right: "Ruger Mini-14 — not covered (named by the MA AG)."
   Caption: the difference is a feature list, not lethality.
-- **Note:** `[source]` citations.md Card 21.
+- **Note:** `[source]` citations.md Section 17.
 
 ## G-22 — The roadmap
 
@@ -394,7 +394,7 @@ portrait).
 - **Hold:** through 03:50
 - **Type:** title card
 - **Content:** "Chapter 135 of the Acts of 2024 — An Act Modernizing Firearm Laws (House Bill 4885). Signed July 25, 2024. In effect immediately by emergency preamble."
-- **Note:** `[source]` citations.md Card 1.
+- **Note:** `[source]` citations.md Section 1.
 
 ## G-18 — Boston is gentrifying
 
@@ -402,7 +402,7 @@ portrait).
 - **Hold:** through 04:00
 - **Type:** stat card
 - **Content:** "Boston: 3rd most intensely gentrified city in the U.S. (NCRC, 2013-2017). Gentrifying tracts average 77% people of color. Roxbury and Dorchester are among the neighborhoods affected."
-- **Note:** `[source]` citations.md Card 24. States the study's findings only; the "priced out" framing is the speaker's own.
+- **Note:** `[source]` citations.md Section 20. States the study's findings only; the "priced out" framing is the speaker's own.
 
 ## G-19 — What the research points to
 
@@ -418,7 +418,7 @@ portrait).
 - **Hold:** through 09:56
 - **Type:** compare card
 - **Content:** Before Bruen (to June 23, 2022): a handgun license (LTC) needed the police chief's approval and a "good reason"; rifles and shotguns (FID) had no such test. After Bruen: the LTC is issued unless the applicant is disqualified; the FID is unchanged.
-- **Note:** `[source]` citations.md Card 22 (also Card 19).
+- **Note:** `[source]` citations.md Section 14 (also Section 15).
 
 ## G-21 — Black women among the fastest-growing owners
 
@@ -426,7 +426,7 @@ portrait).
 - **Hold:** through 11:22
 - **Type:** title card, two figures
 - **Content:** "+87% gun ownership among Black women (NSSF, 2021)." "+58% Black gun buyers in 2020 (NSSF/CNN)."
-- **Note:** `[source]` citations.md Cards 18 and 22. Card 18's caveat applies: one of the fastest-growing segments, not verified as the single fastest.
+- **Note:** `[source]` citations.md Section 14. Its caveat applies: one of the fastest-growing segments, not verified as the single fastest.
 
 ## G-16 — Close card
 
@@ -435,7 +435,7 @@ portrait).
 - **Type:** title + sources card
 - **Content:** "Question 9, Nov. 3, 2026 — YES keeps Chapter 135. NO repeals it."
   Then: "Sources for everything in this video: [link to published citations deck]."
-- **Note:** `[source]` citations.md Card 2 (Question 9 yes/no mechanics) — the "check my work" card. Same requirement as v1: don't ship
+- **Note:** `[source]` citations.md Section 2 (Question 9 yes/no mechanics) — the "check my work" card. Same requirement as v1: don't ship
   without this resolving to something the audience can actually open.
 
 ---
