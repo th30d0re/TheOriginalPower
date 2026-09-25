@@ -23,11 +23,20 @@ clips:
   reel_a2:
     citation: '@harvardseye, Instagram reel, Gov. Maura Healey interview, Yes-on-9
       press event'
-    content_note: ''
-    end: 77.5
+    end: 29.3
+    linger: next
     origin_url: https://www.instagram.com/reel/DdoZBRXIbK5/
-    source: Architecting_the_operation/archive/sources/reel_a2.mp4
-    start: 49.2
+    source: Architecting_the_operation/archive/sources/reel_a2_tapestop.mp4
+    start: 0.0
+    content_note: 'Excerpt of reel 49.2 to 77.5 s with a tape-stop effect on the last 1.2 s (scriptcast-tapefx).'
+  reel_rewind_kids:
+    citation: '@harvardseye, Instagram reel, Gov. Maura Healey interview, Yes-on-9
+      press event'
+    content_note: 'Tape rewind from reel 77.5 s back to 67.5 s at 6x, then the phrase at 67.96 to 69.30 s (scriptcast-tapefx).'
+    end: 3.05
+    origin_url: https://www.instagram.com/reel/DdoZBRXIbK5/
+    source: Architecting_the_operation/archive/sources/reel_rewind_replay.mp4
+    start: 0.0
   reel_close:
     citation: '@harvardseye, Instagram reel, Gov. Maura Healey interview, Yes-on-9
       press event'

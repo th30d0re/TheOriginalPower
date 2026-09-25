@@ -182,6 +182,13 @@ portrait).
   https://www.instagram.com/reel/DdoZBRXIbK5/). This is a close read of the reel's own
   transcript, not an external claim.
 
+## G-27 — Intersectionality, defined
+
+- **Anchor:** `Emmanuel Theodore (02:42)`
+- **Type:** title card, two items
+- **Content:** Coined by Kimberlé Crenshaw in 1989 ("Demarginalizing the Intersection of Race and Sex," University of Chicago Legal Forum); DeGraffenreid v. General Motors (E.D. Mo. 1976): Black women challenged layoffs and the court allowed a race claim or a sex claim, not a combination.
+- **Note:** `[source]` citations.md Card 28. Sets up the later intersectional-harm line at 11:11.
+
 ## G-04 — Grandfather clause, teased
 
 - **Anchor:** `Emmanuel Theodore (02:53)`

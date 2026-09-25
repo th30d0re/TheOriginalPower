@@ -1,0 +1,16 @@
+{
+  "component": "TitleCard",
+  "headline": "Intersectionality",
+  "items": [
+    {
+      "title": "Coined by Kimberlé Crenshaw, 1989",
+      "detail": "\"Demarginalizing the Intersection of Race and Sex,\" University of Chicago Legal Forum"
+    },
+    {
+      "title": "DeGraffenreid v. General Motors (1976)",
+      "detail": "Black women challenged layoffs; the court allowed a race claim or a sex claim, not a combination"
+    }
+  ],
+  "sources": "Sources: Crenshaw (1989) · 413 F. Supp. 142 (E.D. Mo. 1976)",
+  "qrUrl": "https://chicagounbound.uchicago.edu/uclf/vol1989/iss1/8/"
+}
