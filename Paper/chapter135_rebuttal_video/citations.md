@@ -344,6 +344,21 @@ card states only the study's findings. The NCRC report itself was read through t
 Boston Globe's coverage, not the primary PDF.
 **Source:** [Boston Globe — "Boston is the third most 'intensely gentrified' city in the United States, study says" (Jul. 10, 2020)](https://www.bostonglobe.com/2020/07/10/metro/boston-is-third-most-intensely-gentrified-city-united-states-study-says/)
 
+### Card 25 — The penalty for possessing a banned assault-style firearm
+**On screen:** "First offense: $1,000-$10,000 fine or 1-10 years' imprisonment (G.L. c. 140, § 131M)."
+**Claim:** Massachusetts General Laws c. 140, § 131M, as amended by St. 2024, c. 135,
+prohibits possessing, owning, selling or transferring an assault-style firearm. The
+penalty text for a first offense reads: "fine of not less than $1,000 nor more than
+$10,000 or by imprisonment for not less than 1 year nor more than 10 years." A second
+offense carries a fine of $5,000 to $15,000 or imprisonment of 5 to 15 years. An
+assault-style firearm lawfully possessed in the Commonwealth on August 1, 2024 is
+exempt when the owner holds a valid license to carry or license to sell and the weapon
+is registered and serialized.
+**Caveats:** the statute frames the penalty as a fine or imprisonment; the spoken
+line states the range, not that prison is mandatory. Read from the statute page at
+malegislature.gov through a page fetch, not from a printed copy.
+**Source:** [malegislature.gov — G.L. c. 140, § 131M](https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXX/Chapter140/Section131M)
+
 ---
 
 ## Notes for whoever builds the on-screen cards

@@ -278,10 +278,11 @@ portrait).
 - **Hold:** through 08:20
 - **Type:** side-by-side, two identical rifles
 - **Content:** Two identical rifle icons. Left, dated "Owned before Aug 1, 2024":
-  green check, "Keeps it." Right, dated "Acquired after Aug 1, 2024": red X,
-  "Prison." Caption: same gun, same caliber — the only variable is a date.
-- **Note:** `[source]` citations.md Card 17. This is the equal-protection argument in
-  one image; keep it uncluttered, no extra text beyond the two dates and outcomes.
+  "Grandfathered: you keep it." Right, "Acquired after": cannot be legally
+  acquired; first offense carries a $1,000 to $10,000 fine or 1 to 10 years'
+  imprisonment (G.L. c. 140, § 131M). Caption: same gun, only the date differs.
+- **Note:** `[source]` citations.md Cards 17 and 25 (penalty). This is the equal-protection argument in
+  one image; keep it uncluttered.
 
 ## G-13 — Who had guns, who's getting them, and the two-year lag
 

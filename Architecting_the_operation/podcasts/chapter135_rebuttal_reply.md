@@ -94,7 +94,7 @@ Emmanuel Theodore (03:44)
 My framework, in The Original Power, says the root issue is poverty. Look at what's happening in Boston right now.
 
 Emmanuel Theodore (03:50)
-Roxbury and Dorchester are gentrifying, the cost of living is climbing, and my generation of Black people who grew up in this state are getting priced out of the neighborhoods we're from.
+Roxbury and Dorchester are gentrifying, the cost of living is climbing, and in my own circle, people who grew up here are getting priced out of the neighborhoods we're from.
 
 Emmanuel Theodore (04:00)
 Neighborhood disadvantage is one of the strongest predictors of gun violence exposure in the actual research literature.
@@ -199,13 +199,13 @@ Emmanuel Theodore (07:57)
 I own an AR-15. I bought it before this law. I get to keep mine.
 
 Emmanuel Theodore (08:01)
-If you want the same rifle today, you cannot legally get it, and if you're caught with one, you're looking at real prison time.
+If you want the same rifle today, you cannot legally get it, and a first offense carries a fine of one to ten thousand dollars or one to ten years in prison.
 
 Emmanuel Theodore (08:09)
 Picture two identical rifles in two identical car trunks. I bought mine before August 1st. You bought yours after. Same gun, same caliber, same everything.
 
 Emmanuel Theodore (08:17)
-I go home. You go to prison for years.
+I go home. You face one to ten years in prison.
 
 Emmanuel Theodore (08:20)
 That's what the statute does, based on nothing but a date.
@@ -214,7 +214,7 @@ Emmanuel Theodore (08:25)
 And the date matters because of who was already holding a gun in this state, and who's in the middle of trying to get one.
 
 Emmanuel Theodore (08:33)
-Nationally, the fastest-growing group of new gun owners is Black people, and Black women specifically. Black gun buyers were up fifty-eight percent in 2020 over the year before, and the NSSF recorded another eighty-seven percent jump in gun ownership among Black women in 2021.
+Nationally, Black people are among the fastest-growing groups of new gun owners, and Black women specifically. Black gun buyers were up fifty-eight percent in 2020 over the year before, and the NSSF recorded another eighty-seven percent jump in gun ownership among Black women in 2021.
 
 Emmanuel Theodore (08:46)
 Historically in this state, the people who already owned guns, going back before 2010, were overwhelmingly white.
@@ -259,7 +259,7 @@ Emmanuel Theodore (10:42)
 What it changes is who can comfortably operate the gun. An adjustable stock exists so a shooter with a shorter frame can get the right fit.
 
 Emmanuel Theodore (10:50)
-Guess who benefits most from that adjustment. And guess who's the fastest-growing group of new gun owners in this exact demographic. Black women.
+Guess who benefits most from that adjustment. And guess who's among the fastest-growing groups of new gun owners in this exact demographic. Black women.
 
 Emmanuel Theodore (10:58)
 So this law doesn't just draw its line at a date that locks out the people who are only just now getting in.
