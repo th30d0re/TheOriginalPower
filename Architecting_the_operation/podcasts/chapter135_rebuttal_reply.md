@@ -322,7 +322,10 @@ Emmanuel Theodore (11:11)
 Black women stand where those two lines cross, and Black women are the group that gave intersectionality its meaning. She dropped the word into a campaign video while promoting a law that causes exactly that harm.
 
 Emmanuel Theodore (11:16)
-Maybe it was a slip. Either way, that word was the only one in the whole video that described what this law does.
+Maybe it was a slip. Maybe it was a guilty conscience. I can't prove what she was thinking, so I'm speculating, and I'll say so. But I don't give government the benefit of the doubt. She invoked that emergency preamble on purpose, and everything about this law reads as calculated.
+
+Emmanuel Theodore (11:18)
+Either way, that word was the only one in the whole video that described what this law does.
 
 Emmanuel Theodore (11:21)
 Interesting.

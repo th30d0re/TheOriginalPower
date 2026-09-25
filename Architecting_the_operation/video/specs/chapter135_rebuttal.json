@@ -1082,9 +1082,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "11:22",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 109,
-        "start_ms": 996808,
-        "end_ms": 999278
+        "turn_index": 110,
+        "start_ms": 1012908,
+        "end_ms": 1015378
       },
       "hold": {},
       "type": "title + sources card",
