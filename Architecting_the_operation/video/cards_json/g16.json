@@ -7,9 +7,15 @@
       "detail": "NO repeals it."
     },
     {
-      "title": "Sources for everything in this video:",
-      "detail": "[link to published citations deck]"
+      "title": "Every source, on one page:",
+      "detail": "Scan the code."
+    },
+    {
+      "title": "The book, The Original Power:",
+      "detail": "github.com/th30d0re/TheOriginalPower/releases"
     }
   ],
-  "sources": "Sources: Ballotpedia · commonwealthbeacon.org · serpalaw.com"
+  "sources": "Sources: Ballotpedia · commonwealthbeacon.org · serpalaw.com",
+  "qr": true,
+  "qrUrl": "https://github.com/th30d0re/TheOriginalPower/blob/main/Paper/chapter135_rebuttal_video/citations.md"
 }

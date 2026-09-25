@@ -1,0 +1,16 @@
+{
+  "component": "TitleCard",
+  "headline": "Background checks already run",
+  "items": [
+    {
+      "title": "Dealer sales",
+      "detail": "Form 4473 and a federal NICS check on every purchase."
+    },
+    {
+      "title": "Private sales in Massachusetts",
+      "detail": "Only to a person holding a license, through the state's electronic registration system."
+    }
+  ],
+  "sources": "Sources: G.L. c.140, s.128A · 18 U.S.C. 922(t) (accessed Sep 25, 2026)",
+  "qrUrl": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXX/Chapter140/Section128A"
+}

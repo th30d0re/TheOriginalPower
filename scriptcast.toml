@@ -11,3 +11,4 @@ references       = "voices/candidates"
 scripts          = "Architecting_the_operation/podcasts"
 outputs          = "outputs"
 omnivoice_python = ".venv-omnivoice/bin/python"
+tail_ms          = 800   # keep the decay of each turn's last word (was clipping "now", "clause")

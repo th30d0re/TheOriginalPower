@@ -16,3 +16,8 @@
 record:
   default: reckerd   # the noun, REC-ord
   verb: ree-CORD
+
+# The metal. Misaki's lexicon lists "lead" only as LEED, so no reading key
+# reaches it; "always" respells it in every context (this script never uses the verb).
+lead:
+  always: led

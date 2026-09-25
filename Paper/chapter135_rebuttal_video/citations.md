@@ -444,3 +444,25 @@ group that gave the word its meaning rests on Crenshaw's article being about Bla
   directly to the clip's specific claims rather than reopening that broader argument.
   If you want a version that also carries that history, say so and I'll fold it in
   as a longer cut or a second card set.
+
+### Card 29 — Young Bostonians and leaving
+**On screen:** none (spoken line at 03:50).
+**Claim:** A Greater Boston Chamber of Commerce survey of 600 residents aged 20 to 30 in Essex, Middlesex, Norfolk, Plymouth and Suffolk counties, fielded February to March 2026, found about a quarter (26%) plan to leave Greater Boston within five years, most citing housing costs.
+**Caveats:** an intent survey of Greater Boston, not a measure of who left; reported by boston.com on 2026-04-28 (fetched 2026-09-25). The chamber's own release was not read.
+**Sources:**
+- [boston.com, Apr. 28, 2026](https://www.boston.com/news/local-news/2026/04/28/survey-says-young-people-are-leaving-the-state-in-distressing-numbers/)
+
+### Card 30 — Safe storage, G.L. c.140 s.131L
+**On screen:** G-28.
+**Claim:** Section 131L makes it unlawful to store or keep any firearm unless it is secured in a locked container or has a tamper-resistant mechanical lock, and it is not "stored or kept" while carried by or under the control of the owner or an authorized user. Penalties for standard firearms are a fine of $1,000 to $7,500 or up to 1.5 years' imprisonment; enhanced penalties apply when a minor can access the firearm.
+**Caveats:** read on malegislature.gov 2026-09-25. Section 131L itself contains no license-suspension clause. The spoken line does not claim license consequences. Whether a conviction affects a license runs through the licensing statutes (c.140 s.131) and has not been checked.
+**Sources:**
+- [G.L. c.140 s.131L](https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXX/Chapter140/Section131L)
+
+### Card 31 — Background checks and private transfers; licensing authority
+**On screen:** G-29 (and the chief-of-police wording at 12:00 to 12:20).
+**Claim:** Federal background checks (NICS) attach to sales by licensed dealers. G.L. c.140 s.128A limits private sales to license holders and requires the sale to run through the electronic firearms registration system (s.121B). G.L. c.140 s.121 defines the licensing authority as "the chief of police or the board or officer having control of the police in a city or town, or persons authorized by them", which is why the script says "usually the police chief or a designee."
+**Caveats:** the federal half (18 U.S.C. 922(t), Form 4473) is stated from general knowledge and was not re-fetched today. The claim that the license "came with its own background check" rests on the licensing process and was not quoted from a statute.
+**Sources:**
+- [G.L. c.140 s.128A](https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXX/Chapter140/Section128A)
+- [G.L. c.140 s.121](https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXX/Chapter140/Section121)

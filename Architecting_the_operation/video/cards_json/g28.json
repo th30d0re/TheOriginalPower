@@ -1,0 +1,20 @@
+{
+  "component": "TitleCard",
+  "headline": "Safe storage covers every owner",
+  "items": [
+    {
+      "title": "G.L. c.140, s.131L",
+      "detail": "A firearm must be in a locked container or have a tamper-resistant lock unless it is under the owner's control."
+    },
+    {
+      "title": "No children required",
+      "detail": "The requirement applies to owners and authorized users, with or without minors in the home."
+    },
+    {
+      "title": "Penalty",
+      "detail": "Standard firearms: a fine of $1,000 to $7,500 or up to 1.5 years in jail."
+    }
+  ],
+  "sources": "Sources: malegislature.gov (G.L. c.140, s.131L; accessed Sep 25, 2026)",
+  "qrUrl": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXX/Chapter140/Section131L"
+}
