@@ -61,7 +61,16 @@ The Reel (02:12)
 [clip:reel_a2] I think connect with these kids. Like, give them the activities, give them the sports, give them the dance, give them the programs. Give them the mentorship, you know, and you mentioned something about mental health. You know, we see trauma, you know, trauma begets trauma. So, if you don't deal with trauma, then you're going to see trauma happen. Like, intersecting with kids who've experienced trauma is really, really important. And that's why, as governor, I'm advocating for and trying to increase services for mental health,
 
 Emmanuel Theodore (02:41)
-Did you catch that? "Intersecting with kids." That's not what intersectionality means. That's not what any of that means.
+Did you catch that?
+
+The Reel (02:42)
+[clip:reel_rewind_kids] Like, intersecting with kids
+
+Emmanuel Theodore (02:42)
+Intersectionality is a term Kimberlé Crenshaw coined in 1989. She wrote it about Black women.
+
+Emmanuel Theodore (02:43)
+In DeGraffenreid versus General Motors, Black women challenged a layoff policy, and the court held that they could claim race discrimination or sex discrimination, but not both at once. Crenshaw named that gap. Where race and gender overlap, the harm compounds, and the law reads each one alone.
 
 Emmanuel Theodore (02:47)
 She reached for the word because it sounds like she knows something, and it's empty in that sentence.
@@ -214,13 +223,13 @@ Emmanuel Theodore (07:46)
 This law has its own grandfather clause.
 
 Emmanuel Theodore (07:49)
-If you already owned and registered a rifle before August 1st, 2024, you keep it. If you didn't, you can't get the same rifle now.
+If you lawfully possessed a rifle on August 1st, 2024, with a license, and you register and serialize it, you keep it. If you didn't, you can't get the same rifle now.
 
 Emmanuel Theodore (07:57)
 I own an AR-15. I bought it before this law. I get to keep mine.
 
 Emmanuel Theodore (08:01)
-If you want the same rifle today, you cannot legally get it, and a first offense carries a fine of one to ten thousand dollars or one to ten years in prison.
+If you want the same rifle today, you cannot legally get it, and a first offense carries a fine of one to ten thousand dollars, one to ten years in prison, or both.
 
 Emmanuel Theodore (08:09)
 Picture two identical rifles in two identical car trunks. I bought mine before August 1st. You bought yours after. Same gun, same caliber, same everything.
@@ -289,7 +298,7 @@ Emmanuel Theodore (11:05)
 It draws a second line at a feature that mainly helps women shoot safely, and bans that feature specifically.
 
 Emmanuel Theodore (11:11)
-That's the actual intersectional harm sitting inside a law she promoted by talking about dance classes and flashing a buzzword she couldn't even use in a real sentence.
+Black women stand where those two lines cross, and Black women are the group that gave intersectionality its meaning. She dropped the word into a campaign video while promoting a law that causes exactly that harm.
 
 Emmanuel Theodore (11:21)
 Interesting.

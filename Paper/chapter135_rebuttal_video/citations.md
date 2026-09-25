@@ -241,9 +241,10 @@ Oklahoma's) in *Guinn v. United States* (1915), explicitly despite their being
 
 ### Card 17 — Chapter 135's own grandfather clause
 **On screen:** "Owned and registered before Aug 1, 2024? You keep it. Everyone else: banned outright."
-**Claim:** Firearms lawfully possessed and registered/serialized before August 1,
-2024 are grandfathered under Chapter 135; the exemption is conditioned on
-registering and serializing them by the October 28, 2026 deadline. A newly classified
+**Claim:** An assault-style firearm lawfully possessed in the Commonwealth on August 1,
+2024 is exempt from the ban when the owner holds a license to carry or a license to sell
+and the firearm is registered and serialized (G.L. c. 140, § 131M(b), read directly on
+2026-09-25); the registration deadline is October 28, 2026. A newly classified
 "assault weapon" acquired after that date cannot legally be acquired at all.
 **Source:** [masslegalresources.com — "The October 2026 Gun Registration Deadline in Massachusetts"](https://masslegalresources.com/2026/08/23/massachusetts-gun-registration-deadline/)
 
@@ -335,9 +336,14 @@ Boston third among "intensely gentrified" cities, behind San Francisco and Denve
 More than 21% of at-risk census tracts in Greater Boston gentrified in the period.
 Gentrification occurred in Mission Hill, Jamaica Plain, Fenway-Kenmore, Roxbury, East
 Boston, Hyde Park, and pockets of South Boston and Dorchester, particularly along the
-Interstate 93 corridor. Gentrifying neighborhoods were "overwhelmingly populated by
+Interstate 93 corridor (this neighborhood list is the Boston Globe's reporting on the NCRC
+data; NCRC's own report names no Boston neighborhoods and shows Boston on a metro-area map). Gentrifying neighborhoods were "overwhelmingly populated by
 people of color," averaging 77% of residents in those tracts.
-**Caveats:** this supports the claim that Roxbury and Dorchester are gentrifying. It
+**Caveats:** the 77% is NCRC's national average for the minority share of gentrifying
+neighborhoods across the whole study (50% across all neighborhoods studied), not a Boston
+figure. Kimi verified the ranking, the 77%, the years and the scope against NCRC's
+"Gentrification and Disinvestment 2020" on 2026-09-25 (Paper/chapter135_rebuttal_video/
+SOURCE_CHECK.md). This supports the claim that Roxbury and Dorchester are gentrifying. It
 does not measure how many Black residents from a given generation have left; the
 spoken "priced out" line is the speaker's experience and framing, and the on-screen
 card states only the study's findings. The NCRC report itself was read through the
@@ -354,9 +360,10 @@ offense carries a fine of $5,000 to $15,000 or imprisonment of 5 to 15 years. An
 assault-style firearm lawfully possessed in the Commonwealth on August 1, 2024 is
 exempt when the owner holds a valid license to carry or license to sell and the weapon
 is registered and serialized.
-**Caveats:** the statute frames the penalty as a fine or imprisonment; the spoken
-line states the range, not that prison is mandatory. Read from the statute page at
-malegislature.gov through a page fetch, not from a printed copy.
+**Caveats:** the statute authorizes the fine, the imprisonment, or both together. It names
+neither state prison nor the house of correction and never uses the word felony. Text
+re-read directly on the malegislature.gov page on 2026-09-25 (SOURCE_CHECK.md); the
+pre-amendment text carried the same dollar and year ranges.
 **Source:** [malegislature.gov — G.L. c. 140, § 131M](https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXX/Chapter140/Section131M)
 
 ### Card 26 — What RAND's gun-policy reviews find
@@ -367,8 +374,9 @@ evidence that licensing and permitting requirements decrease firearm and total
 homicides, and moderate evidence that waiting periods decrease total homicides. Its
 2023 update reports supportive evidence, RAND's strongest designation, that
 child-access-prevention laws reduce firearm homicides and self-injuries among youth.
-**Caveats:** read from RAND's analysis page and 2023 press release as summarized in
-Paper/data/gun_laws_new_england/RESULTS.md; the ratings are per policy and per outcome.
+**Caveats:** verified against RAND's policy pages (updated January 29, 2026) and the
+January 10, 2023 press release on 2026-09-25 (SOURCE_CHECK.md); the ratings are per policy
+and per outcome, and RAND's scale runs inconclusive, limited, moderate, supportive.
 The spoken line makes only the two claims above.
 **Sources:**
 - [RAND — Gun Policy in America: analysis](https://www.rand.org/research/gun-policy/analysis.html)
@@ -394,6 +402,26 @@ unmapped territory.
 - [Mapping Inequality, University of Richmond — Boston](https://dsl.richmond.edu/panorama/redlining/map/MA/Boston/context)
 - Analyze Boston (data.boston.gov), Crime Incident Reports and the Shootings dataset
 - Method for every number: Paper/data/spatial/boston/RESULTS.md
+
+### Card 28 — Intersectionality: Crenshaw (1989) and DeGraffenreid v. General Motors
+**On screen:** "Intersectionality: coined by Kimberlé Crenshaw, 1989. DeGraffenreid v. General Motors (E.D. Mo. 1976): Black women challenged layoffs; the court allowed a race claim or a sex claim, not a combination."
+**Claim:** Kimberlé Crenshaw introduced the term intersectionality in "Demarginalizing the
+Intersection of Race and Sex: A Black Feminist Critique of Antidiscrimination Doctrine,
+Feminist Theory and Antiracist Politics," University of Chicago Legal Forum, vol. 1989.
+The article analyzes DeGraffenreid v. General Motors Assembly Division, 413 F. Supp. 142
+(E.D. Mo. 1976), in which plaintiffs challenged "last hired-first fired" layoffs as
+discriminating against them as Black women. The court held that a complaint of that kind
+might state a cause of action for race discrimination, sex discrimination, or
+alternatively either, but not a combination of both. The manuscript treats the case as
+the legal proof that a single-axis reading cannot see a harm that sits at the
+intersection (Paper/The_Original_Power.tex, near line 4296).
+**Caveats:** the case description is from the court's opinion as quoted in case reporters
+and summaries (Justia, vLex, Wikipedia); the Chicago Unbound page gives the citation but
+the article PDF was not read in this session. The spoken claim that Black women are the
+group that gave the word its meaning rests on Crenshaw's article being about Black women.
+**Sources:**
+- [Crenshaw (1989), Chicago Unbound](https://chicagounbound.uchicago.edu/uclf/vol1989/iss1/8/)
+- [DeGraffenreid v. General Motors Assembly Div., 413 F. Supp. 142 (E.D. Mo. 1976), Justia](https://law.justia.com/cases/federal/district-courts/FSupp/413/142/1660699)
 
 ---
 
