@@ -130,7 +130,7 @@ Emmanuel Theodore (04:31)
 Boston was redlined. That's public record, on the government's own maps. Redlined neighborhoods got the older housing stock, the highway exposure, the industrial lead.
 
 Emmanuel Theodore (04:32)
-Boston is full of that exposure. Ninety percent of its housing was built before lead paint was banned, the water utility knows of about three thousand lead service lines, and in 2016 fountains at four schools tested over the limit, in a district where about ninety schools had used bottled water since the late 1980s.
+That exposure is all over Boston. Ninety percent of its housing was built before lead paint was banned, the water utility knows of about three thousand lead service lines, and in 2016 fountains at four schools tested over the limit, in a district where about ninety schools had used bottled water since the late 1980s.
 
 Emmanuel Theodore (04:33)
 Researchers still argue over how much lead explains, and no one has isolated its effect on firearm homicide alone.
