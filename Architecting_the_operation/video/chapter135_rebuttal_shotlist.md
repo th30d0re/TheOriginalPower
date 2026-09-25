@@ -240,6 +240,14 @@ portrait).
 - **Content:** G.L. c.140 s.121 assault-style firearm (rifle): semiautomatic, centerfire, detachable magazine, and at least 2 of five features; the shroud clause quoted verbatim.
 - **Note:** `[source]` citations.md Card 32.
 
+## G-31 — What each listed part does
+
+- **Anchor:** `Emmanuel Theodore (10:39)`
+- **Hold:** through 11:08
+- **Type:** parts card, five rows (photoreal cut-outs generated with Codex image generation)
+- **Content:** adjustable stock (length of pull), pistol grip (control, ergonomics), forward grip (steadies the support hand), threaded barrel (accepts a flash suppressor or muzzle brake), shroud (shields the hand from heat).
+- **Note:** `[source]` parts list is the statute (citations.md Card 32); the function descriptions are the script's own. Assets: `scriptCast/video/public/assets/parts/`.
+
 ## G-05 — Neighborhood disadvantage vs. poverty
 
 - **Anchor:** `Emmanuel Theodore (04:07)`
@@ -366,7 +374,7 @@ portrait).
 ## G-15 — AR-15 vs. Mini-14
 
 - **Anchor:** `Emmanuel Theodore (10:17)`
-- **Hold:** through 10:58
+- **Hold:** through 10:36
 - **Type:** side-by-side comparison
 - **Content:** Two rifle silhouettes, same caliber label (5.56/.223) on both.
   Left: "AR-15 — BANNED." Right: "Ruger Mini-14 — not covered (named by the MA AG)."

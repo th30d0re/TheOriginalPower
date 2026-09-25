@@ -3,7 +3,7 @@
   "source": "chapter135_rebuttal_shotlist.md",
   "manifest": "episode_manifest.json",
   "script": "chapter135_rebuttal_reply.md",
-  "shot_count": 30,
+  "shot_count": 31,
   "shots": [
     {
       "id": "G-01",
@@ -326,7 +326,7 @@
         "speaker_id": "emmanuel_theodore",
         "turn_index": 50,
         "start_ms": 440199,
-        "end_ms": 466679
+        "end_ms": 467099
       },
       "hold": {},
       "type": "title card, two items",
@@ -358,8 +358,8 @@
         "timestamp": "10:36",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 97,
-        "start_ms": 883868,
-        "end_ms": 907638
+        "start_ms": 884288,
+        "end_ms": 908058
       },
       "hold": {},
       "type": "title card, two items",
@@ -382,6 +382,42 @@
       },
       "suggested_track": "vector",
       "prompt_seed": "What the statute bans. Type: title card, two items; Content: G.L. c.140 s.121 assault-style firearm (rifle): semiautomatic, centerfire, detachable magazine, and at least 2 of five features; the shroud clause quoted verbatim."
+    },
+    {
+      "id": "G-31",
+      "title": "What each listed part does",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "10:39",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 98,
+        "start_ms": 908358,
+        "end_ms": 914788
+      },
+      "hold": {
+        "until": "11:08",
+        "script_ms": 29000
+      },
+      "type": "parts card, five rows (photoreal cut-outs generated with Codex image generation)",
+      "described": {
+        "Type": "parts card, five rows (photoreal cut-outs generated with Codex image generation)",
+        "Content": "adjustable stock (length of pull), pistol grip (control, ergonomics), forward grip (steadies the support hand), threaded barrel (accepts a flash suppressor or muzzle brake), shroud (shields the hand from heat)."
+      },
+      "note": "`[source]` parts list is the statute (citations.md Card 32); the function descriptions are the script's own. Assets: `scriptCast/video/public/assets/parts/`.",
+      "provenance": {
+        "tags": [
+          "source"
+        ],
+        "citations": [
+          {
+            "card": "Card 32"
+          }
+        ],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "What each listed part does. Type: parts card, five rows (photoreal cut-outs generated with Codex image generation); Content: adjustable stock (length of pull), pistol grip (control, ergonomics), forward grip (steadies the support hand), threaded barrel (accepts a flash suppressor or muzzle brake), shroud (shields the hand from heat)."
     },
     {
       "id": "G-05",
@@ -496,8 +532,8 @@
         "timestamp": "04:48",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 51,
-        "start_ms": 466979,
-        "end_ms": 473279
+        "start_ms": 467399,
+        "end_ms": 473699
       },
       "hold": {
         "until": "04:55",
@@ -532,8 +568,8 @@
         "timestamp": "05:04",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 53,
-        "start_ms": 485889,
-        "end_ms": 492329
+        "start_ms": 486309,
+        "end_ms": 492749
       },
       "hold": {
         "until": "05:12",
@@ -568,8 +604,8 @@
         "timestamp": "05:51",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 60,
-        "start_ms": 528118,
-        "end_ms": 538818
+        "start_ms": 528538,
+        "end_ms": 539238
       },
       "hold": {
         "until": "06:15",
@@ -604,8 +640,8 @@
         "timestamp": "06:23",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 64,
-        "start_ms": 565058,
-        "end_ms": 571808
+        "start_ms": 565478,
+        "end_ms": 572228
       },
       "hold": {
         "until": "06:56",
@@ -640,8 +676,8 @@
         "timestamp": "07:11",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 71,
-        "start_ms": 622488,
-        "end_ms": 627528
+        "start_ms": 622908,
+        "end_ms": 627948
       },
       "hold": {
         "until": "07:35",
@@ -676,8 +712,8 @@
         "timestamp": "07:46",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 76,
-        "start_ms": 667458,
-        "end_ms": 669848
+        "start_ms": 667878,
+        "end_ms": 670268
       },
       "hold": {
         "until": "08:20",
@@ -715,8 +751,8 @@
         "timestamp": "08:33",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 84,
-        "start_ms": 718558,
-        "end_ms": 737828
+        "start_ms": 718978,
+        "end_ms": 738248
       },
       "hold": {
         "until": "09:47",
@@ -757,8 +793,8 @@
         "timestamp": "09:56",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 92,
-        "start_ms": 836838,
-        "end_ms": 847298
+        "start_ms": 837258,
+        "end_ms": 847718
       },
       "hold": {
         "until": "10:17",
@@ -793,12 +829,12 @@
         "timestamp": "10:17",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 94,
-        "start_ms": 859038,
-        "end_ms": 861998
+        "start_ms": 859458,
+        "end_ms": 862418
       },
       "hold": {
-        "until": "10:58",
-        "script_ms": 41000
+        "until": "10:36",
+        "script_ms": 19000
       },
       "type": "side-by-side comparison",
       "described": {
@@ -930,8 +966,8 @@
         "timestamp": "05:29",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 57,
-        "start_ms": 504458,
-        "end_ms": 514248
+        "start_ms": 504878,
+        "end_ms": 514668
       },
       "hold": {
         "until": "05:51",
@@ -969,8 +1005,8 @@
         "timestamp": "09:37",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 90,
-        "start_ms": 812428,
-        "end_ms": 827208
+        "start_ms": 812848,
+        "end_ms": 827628
       },
       "hold": {
         "until": "09:56",
@@ -1007,9 +1043,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "10:50",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 100,
-        "start_ms": 927258,
-        "end_ms": 937048
+        "turn_index": 102,
+        "start_ms": 947498,
+        "end_ms": 956978
       },
       "hold": {
         "until": "11:22",
@@ -1046,9 +1082,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "11:22",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 105,
-        "start_ms": 962498,
-        "end_ms": 964968
+        "turn_index": 109,
+        "start_ms": 996808,
+        "end_ms": 999278
       },
       "hold": {},
       "type": "title + sources card",

@@ -298,19 +298,31 @@ Emmanuel Theodore (10:39)
 A shroud is a shield around the barrel that keeps you from burning your hand. None of that changes what the bullet does.
 
 Emmanuel Theodore (10:42)
-What it changes is who can comfortably operate the gun. An adjustable stock, the piece at the back of the rifle that sits against your shoulder, exists so a shooter with a shorter frame can get the right fit.
+What it changes is who can comfortably operate the gun. An adjustable stock changes the length of pull, the distance from the trigger to the back of the stock, so a shooter with a smaller frame gets a proper fit.
+
+Emmanuel Theodore (10:46)
+A pistol grip makes a rifle easier to control. It is more ergonomic, because it puts your hand and wrist in a natural position.
+
+Emmanuel Theodore (10:48)
+So look at that list. Every part on it helps someone outside the shooter the AR was first designed around: the stock for a smaller frame, the grip for control, the shroud for your hand.
 
 Emmanuel Theodore (10:50)
-Guess who benefits most from that adjustment. And guess who's among the fastest-growing groups of new gun owners in this exact demographic. Black women.
+Guess who benefits most from those parts. And guess who's among the fastest-growing groups of new gun owners in this exact demographic. Black women.
 
 Emmanuel Theodore (10:58)
 So this law draws one line at a date that locks out the people who are only just now getting in.
 
 Emmanuel Theodore (11:05)
-It draws a second line at a feature that mainly helps women shoot safely, and bans it.
+It draws a second line at the parts that help women and smaller shooters control a rifle, and bans them.
+
+Emmanuel Theodore (11:08)
+That is what my framework predicts: one law that works as racism, sexism, and ableism at the same time.
 
 Emmanuel Theodore (11:11)
 Black women stand where those two lines cross, and Black women are the group that gave intersectionality its meaning. She dropped the word into a campaign video while promoting a law that causes exactly that harm.
+
+Emmanuel Theodore (11:16)
+Maybe it was a slip. Either way, that word was the only one in the whole video that described what this law does.
 
 Emmanuel Theodore (11:21)
 Interesting.

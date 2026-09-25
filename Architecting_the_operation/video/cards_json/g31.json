@@ -1,0 +1,33 @@
+{
+  "component": "PartsCard",
+  "headline": "What each listed part does",
+  "parts": [
+    {
+      "image": "assets/parts/stock.png",
+      "title": "Adjustable stock",
+      "detail": "Changes the length of pull, so a smaller frame gets a proper fit"
+    },
+    {
+      "image": "assets/parts/pistol_grip.png",
+      "title": "Pistol grip",
+      "detail": "Easier to control, with a natural hand and wrist position"
+    },
+    {
+      "image": "assets/parts/forward_grip.png",
+      "title": "Forward grip",
+      "detail": "Gives the support hand a place to steady the rifle"
+    },
+    {
+      "image": "assets/parts/threaded_barrel.png",
+      "title": "Threaded barrel",
+      "detail": "Accepts a flash suppressor or muzzle brake"
+    },
+    {
+      "image": "assets/parts/shroud.png",
+      "title": "Shroud",
+      "detail": "Shields the bearer's hand from heat"
+    }
+  ],
+  "sources": "Sources: G.L. c.140, s.121 (the five features)",
+  "qrUrl": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXX/Chapter140/Section121"
+}

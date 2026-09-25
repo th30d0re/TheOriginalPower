@@ -21,3 +21,7 @@ record:
 # reaches it; "always" respells it in every context (this script never uses the verb).
 lead:
   always: led
+
+# ATF Form 4473, said "forty-four seventy-three".
+"4473":
+  always: forty-four seventy-three
