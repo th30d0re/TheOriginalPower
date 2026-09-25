@@ -120,8 +120,20 @@ And then factor in that a lot of the crime spike this country lived through for 
 Emmanuel Theodore (04:26)
 A 2007 study found that the phase-out of leaded gasoline explains a huge share of the crime decline a generation later.
 
-Emmanuel Theodore (04:33)
+Emmanuel Theodore (04:27)
+A study of American cities in the 1920s and thirties found homicide rates about twenty-four percent higher in cities that piped their water through lead.
+
+Emmanuel Theodore (04:28)
+In St. Louis, neighborhoods where more children tested high for lead had more gun crime and more homicide.
+
+Emmanuel Theodore (04:31)
 Boston was redlined. That's public record, on the government's own maps. Redlined neighborhoods got the older housing stock, the highway exposure, the industrial lead.
+
+Emmanuel Theodore (04:32)
+Boston is full of that exposure. Ninety percent of its housing was built before lead paint was banned, the water utility knows of about three thousand lead service lines, and in 2016 fountains at four schools tested over the limit, in a district where about ninety schools had used bottled water since the late 1980s.
+
+Emmanuel Theodore (04:33)
+Researchers still argue over how much lead explains, and no one has isolated its effect on firearm homicide alone. The highest-risk neighborhoods include Roxbury and Dorchester, which the 1938 map graded D and C. The free pipe-replacement program reached about four hundred homes in its first year, against three thousand known lines, and that falls short of the scale this demands.
 
 Emmanuel Theodore (04:34)
 And that map still tracks where people get shot. In Boston from twenty nineteen to twenty twenty-five, the areas graded C and D in nineteen thirty-eight have about seven times the shooting rate of the areas graded A and B.

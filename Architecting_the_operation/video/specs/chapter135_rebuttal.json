@@ -3,7 +3,7 @@
   "source": "chapter135_rebuttal_shotlist.md",
   "manifest": "episode_manifest.json",
   "script": "chapter135_rebuttal_reply.md",
-  "shot_count": 31,
+  "shot_count": 32,
   "shots": [
     {
       "id": "G-01",
@@ -189,9 +189,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "04:41",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 44,
-        "start_ms": 363199,
-        "end_ms": 376129
+        "turn_index": 48,
+        "start_ms": 426509,
+        "end_ms": 439439
       },
       "hold": {},
       "type": "stat bars, six states",
@@ -218,9 +218,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "04:43",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 46,
-        "start_ms": 381539,
-        "end_ms": 393669
+        "turn_index": 50,
+        "start_ms": 444849,
+        "end_ms": 456979
       },
       "hold": {},
       "type": "scatter plot with the two coefficients",
@@ -247,9 +247,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "04:44",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 47,
-        "start_ms": 393969,
-        "end_ms": 403609
+        "turn_index": 51,
+        "start_ms": 457279,
+        "end_ms": 466919
       },
       "hold": {},
       "type": "title card, two items",
@@ -276,9 +276,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "04:46",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 49,
-        "start_ms": 415399,
-        "end_ms": 439799
+        "turn_index": 53,
+        "start_ms": 478709,
+        "end_ms": 503109
       },
       "hold": {},
       "type": "title card, three items",
@@ -305,9 +305,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "04:47",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 50,
-        "start_ms": 440099,
-        "end_ms": 466249
+        "turn_index": 54,
+        "start_ms": 503409,
+        "end_ms": 529559
       },
       "hold": {},
       "type": "title card, two items",
@@ -334,9 +334,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "10:36",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 97,
-        "start_ms": 883518,
-        "end_ms": 907288
+        "turn_index": 101,
+        "start_ms": 946828,
+        "end_ms": 970598
       },
       "hold": {},
       "type": "title card, two items",
@@ -363,9 +363,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "10:39",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 98,
-        "start_ms": 907588,
-        "end_ms": 914018
+        "turn_index": 102,
+        "start_ms": 970898,
+        "end_ms": 977328
       },
       "hold": {
         "until": "11:08",
@@ -387,6 +387,38 @@
       },
       "suggested_track": "vector",
       "prompt_seed": "What each listed part does. Type: parts card, five rows (photoreal cut-outs generated with Codex image generation); Content: adjustable stock (length of pull), pistol grip (control, ergonomics), forward grip (steadies the support hand), threaded barrel (accepts a flash suppressor or muzzle brake), shroud (shields the hand from heat)."
+    },
+    {
+      "id": "G-32",
+      "title": "Lead exposure in Boston",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "04:32",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 43,
+        "start_ms": 355239,
+        "end_ms": 376519
+      },
+      "hold": {
+        "until": "04:34",
+        "script_ms": 2000
+      },
+      "type": "title card, four items",
+      "described": {
+        "Type": "title card, four items",
+        "Content": "90% of Boston housing built before 1978; about 3,000 known lead service lines; 2016 fountains at four schools over the limit (about 90 schools on bottled water since the late 1980s); about 400 homes used the free replacement program in year one."
+      },
+      "note": "`[source]` citations.md Section 6 (Lead exposure in Boston).",
+      "provenance": {
+        "tags": [
+          "source"
+        ],
+        "citations": [],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Lead exposure in Boston. Type: title card, four items; Content: 90% of Boston housing built before 1978; about 3,000 known lead service lines; 2016 fountains at four schools over the limit (about 90 schools on bottled water since the late 1980s); about 400 homes used the free replacement program in year one."
     },
     {
       "id": "G-05",
@@ -427,9 +459,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "04:34",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 41,
-        "start_ms": 338849,
-        "end_ms": 352339
+        "turn_index": 45,
+        "start_ms": 402159,
+        "end_ms": 415649
       },
       "hold": {},
       "type": "map with the rates by grade in the caption",
@@ -461,8 +493,8 @@
         "end_ms": 320339
       },
       "hold": {
-        "until": "04:40",
-        "script_ms": 22000
+        "until": "04:32",
+        "script_ms": 14000
       },
       "type": "two-part card",
       "described": {
@@ -488,9 +520,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "04:48",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 51,
-        "start_ms": 466549,
-        "end_ms": 472849
+        "turn_index": 55,
+        "start_ms": 529859,
+        "end_ms": 536159
       },
       "hold": {
         "until": "04:55",
@@ -520,9 +552,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "05:04",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 53,
-        "start_ms": 485459,
-        "end_ms": 491899
+        "turn_index": 57,
+        "start_ms": 548769,
+        "end_ms": 555209
       },
       "hold": {
         "until": "05:12",
@@ -552,9 +584,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "05:51",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 60,
-        "start_ms": 527688,
-        "end_ms": 538388
+        "turn_index": 64,
+        "start_ms": 590998,
+        "end_ms": 601698
       },
       "hold": {
         "until": "06:15",
@@ -584,9 +616,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "06:23",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 64,
-        "start_ms": 564628,
-        "end_ms": 571378
+        "turn_index": 68,
+        "start_ms": 627938,
+        "end_ms": 634688
       },
       "hold": {
         "until": "06:56",
@@ -616,9 +648,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "07:11",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 71,
-        "start_ms": 621918,
-        "end_ms": 626958
+        "turn_index": 75,
+        "start_ms": 685228,
+        "end_ms": 690268
       },
       "hold": {
         "until": "07:35",
@@ -648,9 +680,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "07:46",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 76,
-        "start_ms": 666888,
-        "end_ms": 669278
+        "turn_index": 80,
+        "start_ms": 730198,
+        "end_ms": 732588
       },
       "hold": {
         "until": "08:20",
@@ -687,9 +719,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "08:33",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 84,
-        "start_ms": 717988,
-        "end_ms": 737258
+        "turn_index": 88,
+        "start_ms": 781298,
+        "end_ms": 800568
       },
       "hold": {
         "until": "09:47",
@@ -729,9 +761,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "09:56",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 92,
-        "start_ms": 836488,
-        "end_ms": 846948
+        "turn_index": 96,
+        "start_ms": 899798,
+        "end_ms": 910258
       },
       "hold": {
         "until": "10:17",
@@ -761,9 +793,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "10:17",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 94,
-        "start_ms": 858688,
-        "end_ms": 861648
+        "turn_index": 98,
+        "start_ms": 921998,
+        "end_ms": 924958
       },
       "hold": {
         "until": "10:36",
@@ -886,9 +918,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "05:29",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 57,
-        "start_ms": 504028,
-        "end_ms": 513818
+        "turn_index": 61,
+        "start_ms": 567338,
+        "end_ms": 577128
       },
       "hold": {
         "until": "05:51",
@@ -925,9 +957,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "09:37",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 90,
-        "start_ms": 812078,
-        "end_ms": 826858
+        "turn_index": 94,
+        "start_ms": 875388,
+        "end_ms": 890168
       },
       "hold": {
         "until": "09:56",
@@ -957,9 +989,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "10:50",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 102,
-        "start_ms": 946728,
-        "end_ms": 956208
+        "turn_index": 106,
+        "start_ms": 1010038,
+        "end_ms": 1019518
       },
       "hold": {
         "until": "11:22",
@@ -989,9 +1021,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "11:22",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 110,
-        "start_ms": 1012138,
-        "end_ms": 1014608
+        "turn_index": 114,
+        "start_ms": 1075448,
+        "end_ms": 1077918
       },
       "hold": {},
       "type": "title + sources card",
@@ -1046,6 +1078,11 @@
     {
       "level": "error",
       "shot": "G-31",
+      "message": "tagged [source] with no URL or card reference"
+    },
+    {
+      "level": "error",
+      "shot": "G-32",
       "message": "tagged [source] with no URL or card reference"
     },
     {

@@ -248,6 +248,14 @@ portrait).
 - **Content:** adjustable stock (length of pull), pistol grip (control, ergonomics), forward grip (steadies the support hand), threaded barrel (accepts a flash suppressor or muzzle brake), shroud (shields the hand from heat).
 - **Note:** `[source]` parts list is the statute (citations.md Section 18); the function descriptions are the script's own. Assets: `scriptCast/video/public/assets/parts/`.
 
+## G-32 — Lead exposure in Boston
+
+- **Anchor:** `Emmanuel Theodore (04:32)`
+- **Hold:** through 04:34
+- **Type:** title card, four items
+- **Content:** 90% of Boston housing built before 1978; about 3,000 known lead service lines; 2016 fountains at four schools over the limit (about 90 schools on bottled water since the late 1980s); about 400 homes used the free replacement program in year one.
+- **Note:** `[source]` citations.md Section 6 (Lead exposure in Boston).
+
 ## G-05 — Neighborhood disadvantage vs. poverty
 
 - **Anchor:** `Emmanuel Theodore (04:07)`
@@ -267,7 +275,7 @@ portrait).
 ## G-06 — Lead, redlining, and the timeline they share
 
 - **Anchor:** `Emmanuel Theodore (04:18)`
-- **Hold:** through 04:40
+- **Hold:** through 04:32
 - **Type:** two-part card
 - **Content:** "Reyes (2007): leaded-gasoline phase-out tied to a generation-later
   drop in violent crime." Paired with a Boston HOLC redlining map excerpt (Roxbury/
