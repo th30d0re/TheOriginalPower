@@ -1,0 +1,20 @@
+{
+  "component": "TitleCard",
+  "headline": "What the research points to",
+  "items": [
+    {
+      "title": "Neighborhood disadvantage",
+      "detail": "About a 50-point gap in exposure, versus 5–10 points for household poverty"
+    },
+    {
+      "title": "Lead exposure",
+      "detail": "Reyes (2007): the leaded-gasoline phase-out tied to a later drop in violent crime"
+    },
+    {
+      "title": "Redlining",
+      "detail": "Boston's 1938 HOLC map graded Roxbury Hazardous (D)"
+    }
+  ],
+  "sources": "Sources: PMC (2022) · NBER (Reyes 2007) · Mapping Inequality",
+  "qrUrl": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9172977/"
+}

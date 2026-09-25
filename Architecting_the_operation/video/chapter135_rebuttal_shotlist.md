@@ -237,7 +237,7 @@ portrait).
 
 ## G-09 — Article 48: how a referendum is supposed to work
 
-- **Anchor:** `Emmanuel Theodore (06:00)`
+- **Anchor:** `Emmanuel Theodore (05:51)`
 - **Hold:** through 06:15
 - **Type:** flow diagram, three steps
 - **Content:** Law passes → 90-day clock starts → certified referendum petition
@@ -315,6 +315,46 @@ portrait).
   Left: "AR-15 — BANNED." Right: "Ruger Mini-14 — not covered (named by the MA AG)."
   Caption: the difference is a feature list, not lethality.
 - **Note:** `[source]` citations.md Card 21.
+
+## G-17 — The law she never names
+
+- **Anchor:** `Emmanuel Theodore (03:04)`
+- **Hold:** through 03:50
+- **Type:** title card
+- **Content:** "Chapter 135 of the Acts of 2024 — An Act Modernizing Firearm Laws (House Bill 4885). Signed July 25, 2024. In effect immediately by emergency preamble."
+- **Note:** `[source]` citations.md Card 1.
+
+## G-18 — Boston is gentrifying
+
+- **Anchor:** `Emmanuel Theodore (03:50)`
+- **Hold:** through 04:00
+- **Type:** stat card
+- **Content:** "Boston: 3rd most intensely gentrified city in the U.S. (NCRC, 2013-2017). Gentrifying tracts average 77% people of color. Roxbury and Dorchester are among the neighborhoods affected."
+- **Note:** `[source]` citations.md Card 24. States the study's findings only; the "priced out" framing is the speaker's own.
+
+## G-19 — What the research points to
+
+- **Anchor:** `Emmanuel Theodore (05:29)`
+- **Hold:** through 05:51
+- **Type:** title card, three items
+- **Content:** Neighborhood disadvantage (about a 50-point gap in exposure, versus 5 to 10 points for household poverty); lead exposure (Reyes 2007); redlining (Boston's HOLC map, Roxbury graded Hazardous).
+- **Note:** `[source]` citations.md Cards 10 and 11. Starts after the opinion line about reparations (05:24), which takes no citation card.
+
+## G-20 — Before and after Bruen
+
+- **Anchor:** `Emmanuel Theodore (09:37)`
+- **Hold:** through 09:56
+- **Type:** compare card
+- **Content:** Before Bruen (to June 23, 2022): a handgun license (LTC) needed the police chief's approval and a "good reason"; rifles and shotguns (FID) had no such test. After Bruen: the LTC is issued unless the applicant is disqualified; the FID is unchanged.
+- **Note:** `[source]` citations.md Card 22 (also Card 19).
+
+## G-21 — Black women among the fastest-growing owners
+
+- **Anchor:** `Emmanuel Theodore (10:50)`
+- **Hold:** through 11:22
+- **Type:** title card, two figures
+- **Content:** "+87% gun ownership among Black women (NSSF, 2021)." "+58% Black gun buyers in 2020 (NSSF/CNN)."
+- **Note:** `[source]` citations.md Cards 18 and 22. Card 18's caveat applies: one of the fastest-growing segments, not verified as the single fastest.
 
 ## G-16 — Close card
 

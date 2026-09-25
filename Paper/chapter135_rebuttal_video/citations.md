@@ -327,6 +327,23 @@ national, not Massachusetts-specific.
 - [Pew Research Center — "For Most U.S. Gun Owners, Protection Is the Main Reason They Own a Gun" (Aug 2023)](https://www.pewresearch.org/politics/2023/08/16/for-most-u-s-gun-owners-protection-is-the-main-reason-they-own-a-gun/)
 - Verification: all three pages opened directly and figures read off the page text, 2026-09-23.
 
+### Card 24 — Gentrification and displacement in Roxbury and Dorchester
+**On screen:** "Boston: 3rd most intensely gentrified city in the U.S. (NCRC, 2013-2017). Gentrifying tracts average 77% people of color."
+**Claim:** The National Community Reinvestment Coalition (NCRC) examined census data
+for 2013-2017 across more than 72,000 neighborhoods in 940 metro areas and ranked
+Boston third among "intensely gentrified" cities, behind San Francisco and Denver.
+More than 21% of at-risk census tracts in Greater Boston gentrified in the period.
+Gentrification occurred in Mission Hill, Jamaica Plain, Fenway-Kenmore, Roxbury, East
+Boston, Hyde Park, and pockets of South Boston and Dorchester, particularly along the
+Interstate 93 corridor. Gentrifying neighborhoods were "overwhelmingly populated by
+people of color," averaging 77% of residents in those tracts.
+**Caveats:** this supports the claim that Roxbury and Dorchester are gentrifying. It
+does not measure how many Black residents from a given generation have left; the
+spoken "priced out" line is the speaker's experience and framing, and the on-screen
+card states only the study's findings. The NCRC report itself was read through the
+Boston Globe's coverage, not the primary PDF.
+**Source:** [Boston Globe — "Boston is the third most 'intensely gentrified' city in the United States, study says" (Jul. 10, 2020)](https://www.bostonglobe.com/2020/07/10/metro/boston-is-third-most-intensely-gentrified-city-united-states-study-says/)
+
 ---
 
 ## Notes for whoever builds the on-screen cards

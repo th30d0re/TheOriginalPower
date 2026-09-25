@@ -1,0 +1,18 @@
+{
+  "component": "TitleCard",
+  "headline": "Black women among the fastest-growing new owners",
+  "items": [
+    {
+      "title": "Gun ownership among Black women, 2021",
+      "emphasis": "+87%",
+      "detail": "NSSF survey"
+    },
+    {
+      "title": "Black gun buyers, 2020",
+      "emphasis": "+58%",
+      "detail": "NSSF, reported by CNN"
+    }
+  ],
+  "sources": "Sources: NSSF via KRON4 · CNN Business",
+  "qrUrl": "https://www.kron4.com/hidden-history/black-history-month/gun-ownership-increasing-among-black-women/"
+}
