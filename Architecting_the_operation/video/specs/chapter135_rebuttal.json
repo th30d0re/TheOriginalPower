@@ -168,8 +168,8 @@
         "timestamp": "04:07",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 33,
-        "start_ms": 257550,
-        "end_ms": 271200
+        "start_ms": 256420,
+        "end_ms": 270070
       },
       "hold": {
         "until": "04:18",
@@ -204,8 +204,8 @@
         "timestamp": "04:18",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 34,
-        "start_ms": 271500,
-        "end_ms": 280160
+        "start_ms": 270370,
+        "end_ms": 279030
       },
       "hold": {
         "until": "04:40",
@@ -240,8 +240,8 @@
         "timestamp": "04:47",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 38,
-        "start_ms": 302700,
-        "end_ms": 309000
+        "start_ms": 301570,
+        "end_ms": 307870
       },
       "hold": {
         "until": "04:55",
@@ -276,8 +276,8 @@
         "timestamp": "05:04",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 40,
-        "start_ms": 321610,
-        "end_ms": 328050
+        "start_ms": 320480,
+        "end_ms": 326920
       },
       "hold": {
         "until": "05:12",
@@ -312,8 +312,8 @@
         "timestamp": "05:51",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 47,
-        "start_ms": 363489,
-        "end_ms": 374189
+        "start_ms": 362359,
+        "end_ms": 373059
       },
       "hold": {
         "until": "06:15",
@@ -348,8 +348,8 @@
         "timestamp": "06:23",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 51,
-        "start_ms": 400429,
-        "end_ms": 407179
+        "start_ms": 399299,
+        "end_ms": 406049
       },
       "hold": {
         "until": "06:56",
@@ -384,8 +384,8 @@
         "timestamp": "07:11",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 58,
-        "start_ms": 457619,
-        "end_ms": 462659
+        "start_ms": 456489,
+        "end_ms": 461529
       },
       "hold": {
         "until": "07:35",
@@ -420,8 +420,8 @@
         "timestamp": "07:46",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 63,
-        "start_ms": 502589,
-        "end_ms": 504719
+        "start_ms": 501459,
+        "end_ms": 503589
       },
       "hold": {
         "until": "08:20",
@@ -430,9 +430,9 @@
       "type": "side-by-side, two identical rifles",
       "described": {
         "Type": "side-by-side, two identical rifles",
-        "Content": "Two identical rifle icons. Left, dated \"Owned before Aug 1, 2024\": green check, \"Keeps it.\" Right, dated \"Acquired after Aug 1, 2024\": red X, \"Prison.\" Caption: same gun, same caliber \u2014 the only variable is a date."
+        "Content": "Two identical rifle icons. Left, dated \"Owned before Aug 1, 2024\": \"Grandfathered: you keep it.\" Right, \"Acquired after\": cannot be legally acquired; first offense carries a $1,000 to $10,000 fine or 1 to 10 years' imprisonment (G.L. c. 140, \u00a7 131M). Caption: same gun, only the date differs."
       },
-      "note": "`[source]` citations.md Card 17. This is the equal-protection argument in one image; keep it uncluttered, no extra text beyond the two dates and outcomes.",
+      "note": "`[source]` citations.md Cards 17 and 25 (penalty). This is the equal-protection argument in one image; keep it uncluttered.",
       "provenance": {
         "tags": [
           "source"
@@ -440,13 +440,16 @@
         "citations": [
           {
             "card": "Card 17"
+          },
+          {
+            "card": "Card 25"
           }
         ],
         "labels": [],
         "quotes": []
       },
       "suggested_track": "vector",
-      "prompt_seed": "Grandfather clauses, now. Type: side-by-side, two identical rifles; Content: Two identical rifle icons. Left, dated \"Owned before Aug 1, 2024\": green check, \"Keeps it.\" Right, dated \"Acquired after Aug 1, 2024\": red X, \"Prison.\" Caption: same gun, same caliber \u2014 the only variable is a date."
+      "prompt_seed": "Grandfather clauses, now. Type: side-by-side, two identical rifles; Content: Two identical rifle icons. Left, dated \"Owned before Aug 1, 2024\": \"Grandfathered: you keep it.\" Right, \"Acquired after\": cannot be legally acquired; first offense carries a $1,000 to $10,000 fine or 1 to 10 years' imprisonment (G.L. c. 140, \u00a7 131M). Caption: same gun, only the date differs."
     },
     {
       "id": "G-13",
@@ -456,8 +459,8 @@
         "timestamp": "08:33",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 71,
-        "start_ms": 547239,
-        "end_ms": 566679
+        "start_ms": 549439,
+        "end_ms": 568709
       },
       "hold": {
         "until": "09:47",
@@ -498,8 +501,8 @@
         "timestamp": "09:56",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 79,
-        "start_ms": 652679,
-        "end_ms": 663139
+        "start_ms": 654709,
+        "end_ms": 665169
       },
       "hold": {
         "until": "10:17",
@@ -534,8 +537,8 @@
         "timestamp": "10:17",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 81,
-        "start_ms": 674879,
-        "end_ms": 677839
+        "start_ms": 676909,
+        "end_ms": 679869
       },
       "hold": {
         "until": "10:58",
@@ -607,7 +610,7 @@
         "speaker_id": "emmanuel_theodore",
         "turn_index": 31,
         "start_ms": 239260,
-        "end_ms": 250320
+        "end_ms": 249190
       },
       "hold": {
         "until": "04:00",
@@ -642,8 +645,8 @@
         "timestamp": "05:29",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 44,
-        "start_ms": 340179,
-        "end_ms": 350069
+        "start_ms": 339049,
+        "end_ms": 348939
       },
       "hold": {
         "until": "05:51",
@@ -681,8 +684,8 @@
         "timestamp": "09:37",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 77,
-        "start_ms": 631569,
-        "end_ms": 643049
+        "start_ms": 633599,
+        "end_ms": 645079
       },
       "hold": {
         "until": "09:56",
@@ -720,8 +723,8 @@
         "timestamp": "10:50",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 86,
-        "start_ms": 716349,
-        "end_ms": 725309
+        "start_ms": 718379,
+        "end_ms": 728169
       },
       "hold": {
         "until": "11:22",
@@ -759,8 +762,8 @@
         "timestamp": "11:22",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 91,
-        "start_ms": 751139,
-        "end_ms": 753609
+        "start_ms": 753999,
+        "end_ms": 756469
       },
       "hold": {},
       "type": "title + sources card",
