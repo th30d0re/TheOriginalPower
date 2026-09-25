@@ -5,7 +5,7 @@ overlays:
     turn_contains: "sixty-nine days after she signed"
     after_word: "^(69|sixtynine)$"
     delay_ms: 80
-    gain_db: -20
+    gain_db: -11
 gains:
   # The reel-closing "Interesting." should land louder.
   - turn_equals: "Interesting."
