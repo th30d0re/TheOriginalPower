@@ -75,6 +75,9 @@ The Reel (02:59)
 Emmanuel Theodore (03:02)
 That's the reel. Here's the rest of it.
 
+Emmanuel Theodore (03:03)
+Here's what the reel skipped, in order: what drives violence, what works, the emergency preamble, the grandfather clause, who this law locks out, and the feature ban.
+
 Emmanuel Theodore (03:04)
 I think it's absolutely insane that the actual legislation never gets named in that video. Not once. And this is aimed at a Black audience.
 

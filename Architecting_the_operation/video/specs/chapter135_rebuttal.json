@@ -3,7 +3,7 @@
   "source": "chapter135_rebuttal_shotlist.md",
   "manifest": "episode_manifest.json",
   "script": "chapter135_rebuttal_reply.md",
-  "shot_count": 21,
+  "shot_count": 22,
   "shots": [
     {
       "id": "G-01",
@@ -167,9 +167,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "04:07",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 33,
-        "start_ms": 256420,
-        "end_ms": 270070
+        "turn_index": 34,
+        "start_ms": 266800,
+        "end_ms": 280450
       },
       "hold": {
         "until": "04:18",
@@ -203,9 +203,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "04:18",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 34,
-        "start_ms": 270370,
-        "end_ms": 279030
+        "turn_index": 35,
+        "start_ms": 280750,
+        "end_ms": 289410
       },
       "hold": {
         "until": "04:40",
@@ -239,9 +239,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "04:47",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 38,
-        "start_ms": 301570,
-        "end_ms": 307870
+        "turn_index": 39,
+        "start_ms": 311950,
+        "end_ms": 318250
       },
       "hold": {
         "until": "04:55",
@@ -275,9 +275,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "05:04",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 40,
-        "start_ms": 320480,
-        "end_ms": 326920
+        "turn_index": 41,
+        "start_ms": 330860,
+        "end_ms": 337300
       },
       "hold": {
         "until": "05:12",
@@ -311,9 +311,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "05:51",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 47,
-        "start_ms": 362359,
-        "end_ms": 373059
+        "turn_index": 48,
+        "start_ms": 372739,
+        "end_ms": 383439
       },
       "hold": {
         "until": "06:15",
@@ -347,9 +347,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "06:23",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 51,
-        "start_ms": 399299,
-        "end_ms": 406049
+        "turn_index": 52,
+        "start_ms": 409679,
+        "end_ms": 416429
       },
       "hold": {
         "until": "06:56",
@@ -383,9 +383,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "07:11",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 58,
-        "start_ms": 456489,
-        "end_ms": 461529
+        "turn_index": 59,
+        "start_ms": 466869,
+        "end_ms": 471909
       },
       "hold": {
         "until": "07:35",
@@ -419,9 +419,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "07:46",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 63,
-        "start_ms": 501459,
-        "end_ms": 503589
+        "turn_index": 64,
+        "start_ms": 511839,
+        "end_ms": 513969
       },
       "hold": {
         "until": "08:20",
@@ -458,9 +458,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "08:33",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 71,
-        "start_ms": 549439,
-        "end_ms": 568709
+        "turn_index": 72,
+        "start_ms": 559819,
+        "end_ms": 579089
       },
       "hold": {
         "until": "09:47",
@@ -500,9 +500,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "09:56",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 79,
-        "start_ms": 654709,
-        "end_ms": 665169
+        "turn_index": 80,
+        "start_ms": 665089,
+        "end_ms": 675549
       },
       "hold": {
         "until": "10:17",
@@ -536,9 +536,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "10:17",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 81,
-        "start_ms": 676909,
-        "end_ms": 679869
+        "turn_index": 82,
+        "start_ms": 687289,
+        "end_ms": 690249
       },
       "hold": {
         "until": "10:58",
@@ -566,15 +566,44 @@
       "prompt_seed": "AR-15 vs. Mini-14. Type: side-by-side comparison; Content: Two rifle silhouettes, same caliber label (5.56/.223) on both. Left: \"AR-15 \u2014 BANNED.\" Right: \"Ruger Mini-14 \u2014 not covered (named by the MA AG).\" Caption: the difference is a feature list, not lethality."
     },
     {
+      "id": "G-22",
+      "title": "The roadmap",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "03:03",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 25,
+        "start_ms": 192190,
+        "end_ms": 202270
+      },
+      "hold": {},
+      "type": "title card, six numbered items",
+      "described": {
+        "Type": "title card, six numbered items",
+        "Content": "\"What the reel skipped\": what drives violence; what works; the emergency preamble; the grandfather clause; who this law locks out; the feature ban."
+      },
+      "note": "`[design]` orientation card for the spoken roadmap line; states no facts, so no citation card. Each later card carries its own source and QR.",
+      "provenance": {
+        "tags": [
+          "design"
+        ],
+        "citations": [],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "The roadmap. Type: title card, six numbered items; Content: \"What the reel skipped\": what drives violence; what works; the emergency preamble; the grandfather clause; who this law locks out; the feature ban."
+    },
+    {
       "id": "G-17",
       "title": "The law she never names",
       "anchor": {
         "speaker": "Emmanuel Theodore",
         "timestamp": "03:04",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 25,
-        "start_ms": 192190,
-        "end_ms": 200240
+        "turn_index": 26,
+        "start_ms": 202570,
+        "end_ms": 210620
       },
       "hold": {
         "until": "03:50",
@@ -608,9 +637,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "03:50",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 31,
-        "start_ms": 239260,
-        "end_ms": 249190
+        "turn_index": 32,
+        "start_ms": 249640,
+        "end_ms": 259570
       },
       "hold": {
         "until": "04:00",
@@ -644,9 +673,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "05:29",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 44,
-        "start_ms": 339049,
-        "end_ms": 348939
+        "turn_index": 45,
+        "start_ms": 349429,
+        "end_ms": 359319
       },
       "hold": {
         "until": "05:51",
@@ -683,9 +712,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "09:37",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 77,
-        "start_ms": 633599,
-        "end_ms": 645079
+        "turn_index": 78,
+        "start_ms": 643979,
+        "end_ms": 655459
       },
       "hold": {
         "until": "09:56",
@@ -722,9 +751,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "10:50",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 86,
-        "start_ms": 718379,
-        "end_ms": 728169
+        "turn_index": 87,
+        "start_ms": 728759,
+        "end_ms": 738549
       },
       "hold": {
         "until": "11:22",
@@ -761,9 +790,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "11:22",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 91,
-        "start_ms": 753999,
-        "end_ms": 756469
+        "turn_index": 92,
+        "start_ms": 764379,
+        "end_ms": 766849
       },
       "hold": {},
       "type": "title + sources card",
