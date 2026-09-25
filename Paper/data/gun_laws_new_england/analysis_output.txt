@@ -1,0 +1,119 @@
+==============================================================================
+STAGE 2 ANALYSIS - New England firearm homicide, gun-law strength, poverty
+All CDC rates are CRUDE per 100,000 (not age-adjusted; see DATA_LOG.md).
+Gun-law ranks: 1 = strongest laws (Giffords and Everytown). A negative
+correlation with homicide means stronger laws associate with less homicide.
+==============================================================================
+
+## 1. NEW ENGLAND TABLE (sorted by firearm homicide rate)
+
+State          FA hom (src)          FA hom 2024 FA deaths 2024 FA deaths pooled Giffords    Everytown Poverty 2024 Poverty 5yr
+New Hampshire   0.80 (2024 only)        0.8          10.8           10.07  F/#34       #43              7.3%       7.28%
+Maine           1.41 (pooled 2020-2024)        1.1          13.0           12.84  C+/#21      #21             10.6%      10.76%
+Massachusetts   1.57 (pooled 2020-2024)        1.4           4.1            3.79  A/#5        #3               9.8%      10.10%
+Rhode Island    1.69 (pooled 2020-2024)        1.1           5.0            4.86  A-/#12      #13             12.0%      11.46%
+Vermont         1.90 (2024 only)        1.9          11.7           12.42  B-/#18      #17              9.3%       9.80%
+Connecticut     2.78 (pooled 2020-2024)        1.9           6.2            6.45  A/#3        #5              10.1%       9.98%
+
+Note: total firearm death rates are dominated by suicide in the
+low-homicide states; homicide and total-death rates rank the six states
+differently. Maine has the second-lowest homicide rate and the highest
+total firearm death rate in New England; Massachusetts has the lowest
+total rate and a middle homicide rate.
+
+## 2. ALL-STATES CORRELATIONS (50 states + DC where available)
+
+--- Homicide measure: 2024 ---
+Giffords law-strength rank vs firearm homicide
+  Pearson  r = +0.310  95% CI [+0.035, +0.542]  n = 50  p = 0.02838
+  Spearman rho = +0.297  95% CI [+0.010, +0.544]  n = 50  p = 0.03632
+Everytown gun-law rank vs firearm homicide
+  Pearson  r = +0.254  95% CI [-0.026, +0.497]  n = 50  p = 0.07507
+  Spearman rho = +0.212  95% CI [-0.096, +0.495]  n = 50  p = 0.1399
+SAIPE poverty rate vs firearm homicide
+  Pearson  r = +0.737  95% CI [+0.579, +0.842]  n = 51  p = 7.011e-10
+  Spearman rho = +0.653  95% CI [+0.432, +0.814]  n = 51  p = 2.043e-07
+(states with a 2024 homicide rate: 51)
+
+--- Homicide measure: pooled 2020-2024 ---
+Giffords law-strength rank vs firearm homicide
+  Pearson  r = +0.304  95% CI [+0.022, +0.542]  n = 48  p = 0.03539
+  Spearman rho = +0.272  95% CI [-0.024, +0.533]  n = 48  p = 0.06165
+Everytown gun-law rank vs firearm homicide
+  Pearson  r = +0.265  95% CI [-0.021, +0.511]  n = 48  p = 0.06869
+  Spearman rho = +0.215  95% CI [-0.096, +0.498]  n = 48  p = 0.142
+SAIPE poverty rate vs firearm homicide
+  Pearson  r = +0.708  95% CI [+0.534, +0.825]  n = 49  p = 1.233e-08
+  Spearman rho = +0.693  95% CI [+0.493, +0.825]  n = 49  p = 3.421e-08
+(states with a pooled 2020-2024 homicide rate: 49)
+
+--- Homicide measure: primary (pooled else 2024) ---
+Giffords law-strength rank vs firearm homicide
+  Pearson  r = +0.289  95% CI [+0.012, +0.525]  n = 50  p = 0.0418
+  Spearman rho = +0.251  95% CI [-0.031, +0.510]  n = 50  p = 0.07915
+Everytown gun-law rank vs firearm homicide
+  Pearson  r = +0.233  95% CI [-0.048, +0.480]  n = 50  p = 0.103
+  Spearman rho = +0.172  95% CI [-0.125, +0.460]  n = 50  p = 0.2323
+SAIPE poverty rate vs firearm homicide
+  Pearson  r = +0.721  95% CI [+0.556, +0.831]  n = 51  p = 2.45e-09
+  Spearman rho = +0.716  95% CI [+0.527, +0.842]  n = 51  p = 3.478e-09
+(states with a primary (pooled else 2024) homicide rate: 51)
+
+
+## 3. OLS: FIREARM HOMICIDE ON LAW RANK, WITHOUT AND WITH CONTROLS
+Controls available in Stage 1 files: SAIPE poverty rate, ACS Gini index.
+Percent urban: NOT in Stage 1 files - reported as a gap.
+
+[2024] fa_homicide_rate_2024 ~ giffords_law_strength_rank  (n = 50, R^2 = 0.096)
+  giffords_law_strength_rank: coef = +0.0670  SE = 0.0296  p = 0.02838
+[2024] fa_homicide_rate_2024 ~ giffords_law_strength_rank + poverty + Gini  (n = 50, R^2 = 0.554)
+  giffords_law_strength_rank: coef = +0.0110  SE = 0.0274  p = 0.6891
+  poverty_rate_saipe_2024: coef = +0.9689  SE = 0.1927  p = 8.004e-06
+  gini_acs2024_5yr: coef = -6.6203  SE = 26.1784  p = 0.8015
+  -> Giffords coefficient +0.0670 alone vs +0.0110 with controls
+
+[2024] fa_homicide_rate_2024 ~ everytown_law_rank  (n = 50, R^2 = 0.065)
+  everytown_law_rank: coef = +0.0544  SE = 0.0299  p = 0.07507
+[2024] fa_homicide_rate_2024 ~ everytown_law_rank + poverty + Gini  (n = 50, R^2 = 0.555)
+  everytown_law_rank: coef = +0.0108  SE = 0.0263  p = 0.6829
+  poverty_rate_saipe_2024: coef = +0.9744  SE = 0.1837  p = 3.137e-06
+  gini_acs2024_5yr: coef = -6.6434  SE = 25.9705  p = 0.7992
+  -> Everytown coefficient +0.0544 alone vs +0.0108 with controls
+
+[pooled 2020-2024] fa_homicide_rate_2020_2024_pooled ~ giffords_law_strength_rank  (n = 48, R^2 = 0.093)
+  giffords_law_strength_rank: coef = +0.0735  SE = 0.0339  p = 0.03539
+[pooled 2020-2024] fa_homicide_rate_2020_2024_pooled ~ giffords_law_strength_rank + poverty + Gini  (n = 48, R^2 = 0.574)
+  giffords_law_strength_rank: coef = -0.0077  SE = 0.0326  p = 0.8153
+  poverty_rate_saipe_2020_2024_mean: coef = +1.1507  SE = 0.2220  p = 5.247e-06
+  gini_acs2024_5yr: coef = -10.0165  SE = 29.9405  p = 0.7396
+  -> Giffords coefficient +0.0735 alone vs -0.0077 with controls
+
+[pooled 2020-2024] fa_homicide_rate_2020_2024_pooled ~ everytown_law_rank  (n = 48, R^2 = 0.070)
+  everytown_law_rank: coef = +0.0642  SE = 0.0345  p = 0.06869
+[pooled 2020-2024] fa_homicide_rate_2020_2024_pooled ~ everytown_law_rank + poverty + Gini  (n = 48, R^2 = 0.574)
+  everytown_law_rank: coef = -0.0068  SE = 0.0319  p = 0.8323
+  poverty_rate_saipe_2020_2024_mean: coef = +1.1447  SE = 0.2137  p = 2.943e-06
+  gini_acs2024_5yr: coef = -9.5865  SE = 29.8483  p = 0.7496
+  -> Everytown coefficient +0.0642 alone vs -0.0068 with controls
+
+[primary (pooled else 2024)] hom_primary ~ giffords_law_strength_rank  (n = 50, R^2 = 0.084)
+  giffords_law_strength_rank: coef = +0.0712  SE = 0.0340  p = 0.0418
+[primary (pooled else 2024)] hom_primary ~ giffords_law_strength_rank + poverty + Gini  (n = 50, R^2 = 0.593)
+  giffords_law_strength_rank: coef = -0.0042  SE = 0.0311  p = 0.8934
+  poverty_rate_saipe_2020_2024_mean: coef = +1.1284  SE = 0.2073  p = 1.962e-06
+  gini_acs2024_5yr: coef = -8.0283  SE = 29.1347  p = 0.7841
+  -> Giffords coefficient +0.0712 alone vs -0.0042 with controls
+
+[primary (pooled else 2024)] hom_primary ~ everytown_law_rank  (n = 50, R^2 = 0.054)
+  everytown_law_rank: coef = +0.0570  SE = 0.0343  p = 0.103
+[primary (pooled else 2024)] hom_primary ~ everytown_law_rank + poverty + Gini  (n = 50, R^2 = 0.593)
+  everytown_law_rank: coef = -0.0022  SE = 0.0297  p = 0.9414
+  poverty_rate_saipe_2020_2024_mean: coef = +1.1190  SE = 0.1964  p = 8.237e-07
+  gini_acs2024_5yr: coef = -6.9326  SE = 28.8391  p = 0.8111
+  -> Everytown coefficient +0.0570 alone vs -0.0022 with controls
+
+Scatter plots written to:
+  Paper/figures/gunlaws_ne_scatter_giffords.png
+  Paper/figures/gunlaws_ne_scatter_everytown.png
+  Paper/figures/gunlaws_ne_scatter_poverty.png
+  Paper/figures/gunlaws_ne_card.png (1080x1920)
