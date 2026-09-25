@@ -1,0 +1,24 @@
+{
+  "component": "TitleCard",
+  "headline": "Lead exposure in Boston",
+  "items": [
+    {
+      "title": "90% of housing built before 1978",
+      "detail": "Lead paint was banned in 1978."
+    },
+    {
+      "title": "About 3,000 known lead service lines",
+      "detail": "The water utility says there may be thousands more."
+    },
+    {
+      "title": "2016: fountains at 4 schools over the limit",
+      "detail": "About 90 schools had used bottled water since the late 1980s."
+    },
+    {
+      "title": "About 400 homes used free replacement in year one",
+      "detail": "Against roughly 3,000 known lines."
+    }
+  ],
+  "sources": "Sources: Boston Public Health Commission · Boston Water and Sewer Commission · WCVB (2016)",
+  "qrUrl": "https://hsph.harvard.edu/news/lead-pipe-replacement-free-in-boston-but-uptake-slow/"
+}
