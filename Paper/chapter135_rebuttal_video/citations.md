@@ -466,3 +466,10 @@ group that gave the word its meaning rests on Crenshaw's article being about Bla
 **Sources:**
 - [G.L. c.140 s.128A](https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXX/Chapter140/Section128A)
 - [G.L. c.140 s.121](https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXX/Chapter140/Section121)
+
+### Card 32 — The rifle feature list, G.L. c.140 s.121
+**On screen:** G-30.
+**Claim:** The statute defines an "assault-style firearm" as, for rifles, "a semiautomatic, centerfire rifle with the capacity to accept a detachable feeding device and includes at least 2 of the following features: (i) a folding or telescopic stock; (ii) a thumbhole stock or pistol grip; (iii) a forward grip or second handgrip or protruding grip that can be held by the non-trigger hand; (iv) a threaded barrel designed to accommodate a flash suppressor or muzzle break or similar feature; or (v) a shroud that encircles either all or part of the barrel designed to shield the bearer's hand from heat, excluding a slide that encloses the barrel."
+**Caveats:** text read on malegislature.gov 2026-09-25 and matched against the raw page. The spoken quote omits the trailing exclusion for slides, which applies to pistols' slides. The explanation of a stock's purpose ("so a shorter shooter can get the right fit") is the script's own description, not statute text. The line that these features mainly help women is the script's argument and rests on the earlier cards.
+**Sources:**
+- [G.L. c.140 s.121](https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXX/Chapter140/Section121)

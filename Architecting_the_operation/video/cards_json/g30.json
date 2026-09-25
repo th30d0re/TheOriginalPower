@@ -1,0 +1,16 @@
+{
+  "component": "TitleCard",
+  "headline": "What the statute bans",
+  "items": [
+    {
+      "title": "A semiautomatic, centerfire rifle with a detachable magazine and at least 2 of:",
+      "detail": "folding or telescopic stock · thumbhole stock or pistol grip · forward or second grip · threaded barrel · shroud"
+    },
+    {
+      "title": "The shroud clause, verbatim",
+      "detail": "\"a shroud that encircles either all or part of the barrel designed to shield the bearer's hand from heat\""
+    }
+  ],
+  "sources": "Sources: G.L. c.140, s.121, \"Assault-style firearm\" (accessed Sep 25, 2026)",
+  "qrUrl": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXX/Chapter140/Section121"
+}

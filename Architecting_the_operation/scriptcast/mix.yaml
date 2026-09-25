@@ -10,3 +10,6 @@ gains:
   # The reel-closing "Interesting." should land louder.
   - turn_equals: "Interesting."
     gain_db: 6
+  # "the opposite of empty: grandfather clause" was too soft.
+  - turn_contains: "the opposite of empty"
+    gain_db: 4
