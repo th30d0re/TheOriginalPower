@@ -55,7 +55,7 @@ Emmanuel Theodore (02:03)
 Stop perpetuating systemic oppression. Remediate the harm. Pay reparations.
 
 Emmanuel Theodore (02:07)
-That's not on the list of options he gave her, and it's not an accident that it isn't.
+That answer is missing from the options he gave her, and the omission is deliberate.
 
 The Reel (02:12)
 [clip:reel_a2] I think connect with these kids. Like, give them the activities, give them the sports, give them the dance, give them the programs. Give them the mentorship, you know, and you mentioned something about mental health. You know, we see trauma, you know, trauma begets trauma. So, if you don't deal with trauma, then you're going to see trauma happen. Like, intersecting with kids who've experienced trauma is really, really important. And that's why, as governor, I'm advocating for and trying to increase services for mental health,
@@ -265,10 +265,10 @@ Emmanuel Theodore (10:50)
 Guess who benefits most from that adjustment. And guess who's among the fastest-growing groups of new gun owners in this exact demographic. Black women.
 
 Emmanuel Theodore (10:58)
-So this law doesn't just draw its line at a date that locks out the people who are only just now getting in.
+So this law draws one line at a date that locks out the people who are only just now getting in.
 
 Emmanuel Theodore (11:05)
-It draws its second line at a feature that mainly helps women shoot safely, and bans that feature specifically.
+It draws a second line at a feature that mainly helps women shoot safely, and bans that feature specifically.
 
 Emmanuel Theodore (11:11)
 That's the actual intersectional harm sitting inside a law she promoted by talking about dance classes and flashing a buzzword she couldn't even use in a real sentence.
