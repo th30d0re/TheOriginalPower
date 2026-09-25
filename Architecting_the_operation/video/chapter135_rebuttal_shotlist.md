@@ -317,6 +317,13 @@ portrait).
   Caption: the difference is a feature list, not lethality.
 - **Note:** `[source]` citations.md Card 21.
 
+## G-22 — The roadmap
+
+- **Anchor:** `Emmanuel Theodore (03:03)`
+- **Type:** title card, six numbered items
+- **Content:** "What the reel skipped": what drives violence; what works; the emergency preamble; the grandfather clause; who this law locks out; the feature ban.
+- **Note:** `[design]` orientation card for the spoken roadmap line; states no facts, so no citation card. Each later card carries its own source and QR.
+
 ## G-17 — The law she never names
 
 - **Anchor:** `Emmanuel Theodore (03:04)`

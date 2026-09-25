@@ -1,0 +1,26 @@
+{
+  "component": "TitleCard",
+  "headline": "What the reel skipped",
+  "items": [
+    {
+      "title": "1  What drives violence"
+    },
+    {
+      "title": "2  What works"
+    },
+    {
+      "title": "3  The emergency preamble"
+    },
+    {
+      "title": "4  The grandfather clause"
+    },
+    {
+      "title": "5  Who this law locks out"
+    },
+    {
+      "title": "6  The feature ban"
+    }
+  ],
+  "sources": "Each card that follows carries its source and a QR code",
+  "qr": false
+}
