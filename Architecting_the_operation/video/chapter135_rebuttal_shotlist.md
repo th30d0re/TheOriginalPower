@@ -233,6 +233,13 @@ portrait).
 - **Content:** Dealer sales: Form 4473 and a federal NICS check. Massachusetts private sales: only to a license holder, through the state's electronic registration system.
 - **Note:** `[source]` citations.md Card 31.
 
+## G-30 — What the statute bans
+
+- **Anchor:** `Emmanuel Theodore (10:36)`
+- **Type:** title card, two items
+- **Content:** G.L. c.140 s.121 assault-style firearm (rifle): semiautomatic, centerfire, detachable magazine, and at least 2 of five features; the shroud clause quoted verbatim.
+- **Note:** `[source]` citations.md Card 32.
+
 ## G-05 — Neighborhood disadvantage vs. poverty
 
 - **Anchor:** `Emmanuel Theodore (04:07)`

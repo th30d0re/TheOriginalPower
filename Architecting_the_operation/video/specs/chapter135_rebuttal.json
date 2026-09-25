@@ -3,7 +3,7 @@
   "source": "chapter135_rebuttal_shotlist.md",
   "manifest": "episode_manifest.json",
   "script": "chapter135_rebuttal_reply.md",
-  "shot_count": 29,
+  "shot_count": 30,
   "shots": [
     {
       "id": "G-01",
@@ -170,7 +170,7 @@
         "speaker_id": "emmanuel_theodore",
         "turn_index": 25,
         "start_ms": 203729,
-        "end_ms": 209459
+        "end_ms": 210109
       },
       "hold": {
         "until": "02:59",
@@ -201,8 +201,8 @@
         "timestamp": "04:41",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 44,
-        "start_ms": 362549,
-        "end_ms": 375479
+        "start_ms": 363299,
+        "end_ms": 376229
       },
       "hold": {},
       "type": "stat bars, six states",
@@ -230,8 +230,8 @@
         "timestamp": "04:43",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 46,
-        "start_ms": 380889,
-        "end_ms": 393019
+        "start_ms": 381639,
+        "end_ms": 393769
       },
       "hold": {},
       "type": "scatter plot with the two coefficients",
@@ -259,8 +259,8 @@
         "timestamp": "04:44",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 47,
-        "start_ms": 393319,
-        "end_ms": 402959
+        "start_ms": 394069,
+        "end_ms": 403709
       },
       "hold": {},
       "type": "title card, two items",
@@ -292,8 +292,8 @@
         "timestamp": "04:46",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 49,
-        "start_ms": 414749,
-        "end_ms": 439149
+        "start_ms": 415499,
+        "end_ms": 439899
       },
       "hold": {},
       "type": "title card, three items",
@@ -325,8 +325,8 @@
         "timestamp": "04:47",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 50,
-        "start_ms": 439449,
-        "end_ms": 466129
+        "start_ms": 440199,
+        "end_ms": 466679
       },
       "hold": {},
       "type": "title card, two items",
@@ -351,6 +351,39 @@
       "prompt_seed": "Background checks already run. Type: title card, two items; Content: Dealer sales: Form 4473 and a federal NICS check. Massachusetts private sales: only to a license holder, through the state's electronic registration system."
     },
     {
+      "id": "G-30",
+      "title": "What the statute bans",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "10:36",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 97,
+        "start_ms": 883868,
+        "end_ms": 907638
+      },
+      "hold": {},
+      "type": "title card, two items",
+      "described": {
+        "Type": "title card, two items",
+        "Content": "G.L. c.140 s.121 assault-style firearm (rifle): semiautomatic, centerfire, detachable magazine, and at least 2 of five features; the shroud clause quoted verbatim."
+      },
+      "note": "`[source]` citations.md Card 32.",
+      "provenance": {
+        "tags": [
+          "source"
+        ],
+        "citations": [
+          {
+            "card": "Card 32"
+          }
+        ],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "What the statute bans. Type: title card, two items; Content: G.L. c.140 s.121 assault-style firearm (rifle): semiautomatic, centerfire, detachable magazine, and at least 2 of five features; the shroud clause quoted verbatim."
+    },
+    {
       "id": "G-05",
       "title": "Neighborhood disadvantage vs. poverty",
       "anchor": {
@@ -358,8 +391,8 @@
         "timestamp": "04:07",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 37,
-        "start_ms": 296679,
-        "end_ms": 310329
+        "start_ms": 297429,
+        "end_ms": 311079
       },
       "hold": {
         "until": "04:18",
@@ -394,8 +427,8 @@
         "timestamp": "04:34",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 41,
-        "start_ms": 338199,
-        "end_ms": 351689
+        "start_ms": 338949,
+        "end_ms": 352439
       },
       "hold": {},
       "type": "map with the rates by grade in the caption",
@@ -427,8 +460,8 @@
         "timestamp": "04:18",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 38,
-        "start_ms": 310629,
-        "end_ms": 319689
+        "start_ms": 311379,
+        "end_ms": 320439
       },
       "hold": {
         "until": "04:40",
@@ -463,8 +496,8 @@
         "timestamp": "04:48",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 51,
-        "start_ms": 466429,
-        "end_ms": 472729
+        "start_ms": 466979,
+        "end_ms": 473279
       },
       "hold": {
         "until": "04:55",
@@ -499,8 +532,8 @@
         "timestamp": "05:04",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 53,
-        "start_ms": 485339,
-        "end_ms": 491779
+        "start_ms": 485889,
+        "end_ms": 492329
       },
       "hold": {
         "until": "05:12",
@@ -535,8 +568,8 @@
         "timestamp": "05:51",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 60,
-        "start_ms": 527128,
-        "end_ms": 537828
+        "start_ms": 528118,
+        "end_ms": 538818
       },
       "hold": {
         "until": "06:15",
@@ -571,8 +604,8 @@
         "timestamp": "06:23",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 64,
-        "start_ms": 564068,
-        "end_ms": 570818
+        "start_ms": 565058,
+        "end_ms": 571808
       },
       "hold": {
         "until": "06:56",
@@ -607,8 +640,8 @@
         "timestamp": "07:11",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 71,
-        "start_ms": 621498,
-        "end_ms": 626538
+        "start_ms": 622488,
+        "end_ms": 627528
       },
       "hold": {
         "until": "07:35",
@@ -643,8 +676,8 @@
         "timestamp": "07:46",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 76,
-        "start_ms": 666468,
-        "end_ms": 668858
+        "start_ms": 667458,
+        "end_ms": 669848
       },
       "hold": {
         "until": "08:20",
@@ -682,8 +715,8 @@
         "timestamp": "08:33",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 84,
-        "start_ms": 717568,
-        "end_ms": 736838
+        "start_ms": 718558,
+        "end_ms": 737828
       },
       "hold": {
         "until": "09:47",
@@ -724,8 +757,8 @@
         "timestamp": "09:56",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 92,
-        "start_ms": 835848,
-        "end_ms": 846308
+        "start_ms": 836838,
+        "end_ms": 847298
       },
       "hold": {
         "until": "10:17",
@@ -760,8 +793,8 @@
         "timestamp": "10:17",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 94,
-        "start_ms": 858048,
-        "end_ms": 861008
+        "start_ms": 859038,
+        "end_ms": 861998
       },
       "hold": {
         "until": "10:58",
@@ -796,8 +829,8 @@
         "timestamp": "03:03",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 28,
-        "start_ms": 217559,
-        "end_ms": 227749
+        "start_ms": 218209,
+        "end_ms": 228499
       },
       "hold": {},
       "type": "title card, six numbered items",
@@ -825,8 +858,8 @@
         "timestamp": "03:04",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 29,
-        "start_ms": 228049,
-        "end_ms": 236099
+        "start_ms": 228799,
+        "end_ms": 236849
       },
       "hold": {
         "until": "03:50",
@@ -861,8 +894,8 @@
         "timestamp": "03:50",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 35,
-        "start_ms": 275329,
-        "end_ms": 289449
+        "start_ms": 276079,
+        "end_ms": 290199
       },
       "hold": {
         "until": "04:00",
@@ -897,8 +930,8 @@
         "timestamp": "05:29",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 57,
-        "start_ms": 503908,
-        "end_ms": 513698
+        "start_ms": 504458,
+        "end_ms": 514248
       },
       "hold": {
         "until": "05:51",
@@ -936,8 +969,8 @@
         "timestamp": "09:37",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 90,
-        "start_ms": 811438,
-        "end_ms": 826218
+        "start_ms": 812428,
+        "end_ms": 827208
       },
       "hold": {
         "until": "09:56",
@@ -974,9 +1007,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "10:50",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 99,
-        "start_ms": 899518,
-        "end_ms": 909308
+        "turn_index": 100,
+        "start_ms": 927258,
+        "end_ms": 937048
       },
       "hold": {
         "until": "11:22",
@@ -1013,9 +1046,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "11:22",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 104,
-        "start_ms": 936668,
-        "end_ms": 939138
+        "turn_index": 105,
+        "start_ms": 962498,
+        "end_ms": 964968
       },
       "hold": {},
       "type": "title + sources card",

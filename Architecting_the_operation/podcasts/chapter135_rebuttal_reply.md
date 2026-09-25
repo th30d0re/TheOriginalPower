@@ -85,7 +85,7 @@ Emmanuel Theodore (03:02)
 That's the reel. Here's the rest of it.
 
 Emmanuel Theodore (03:03)
-Here's what the reel skipped, in order: what drives violence, what works, the emergency preamble, the grandfather clause, who this law locks out, and the feature ban.
+Here's what the reel skipped, in order: what drives violence, what works, the emergency preamble, the grandfather clause, who this law locks out, and the ban on rifle parts.
 
 Emmanuel Theodore (03:04)
 I think it's absolutely insane that the actual legislation never gets named in that video. Not once. And this is aimed at a Black audience.
@@ -175,7 +175,7 @@ Emmanuel Theodore (05:29)
 Address the poverty. Address the lead exposure this state's own housing policy caused. Remediate the specific harm redlining did to specific neighborhoods.
 
 Emmanuel Theodore (05:36)
-That is what the research says moves the number. A features ban on a rifle stock was never going to touch it.
+That is what the research says moves the number. A ban on a piece of plastic on a rifle was never going to touch it.
 
 Emmanuel Theodore (05:43)
 And I think a lot of people watching this don't actually know how we got to a ballot question in the first place.
@@ -292,10 +292,13 @@ Emmanuel Theodore (10:30)
 They fire the same round: five-five-six, two-two-three. Comparable barrel lengths, comparable range, comparable everything that actually determines lethality.
 
 Emmanuel Theodore (10:36)
-What's different is a feature list: adjustable stock, certain grips, certain attachments. None of that changes what the bullet does.
+What's different is a list of parts. The statute bans a semiautomatic rifle with a detachable magazine and at least two of five things: a folding or telescopic stock, a thumbhole stock or pistol grip, a forward grip, a threaded barrel, or, in the statute's own words, "a shroud that encircles either all or part of the barrel designed to shield the bearer's hand from heat."
+
+Emmanuel Theodore (10:39)
+A shroud is a shield around the barrel that keeps you from burning your hand. None of that changes what the bullet does.
 
 Emmanuel Theodore (10:42)
-What it changes is who can comfortably operate the gun. An adjustable stock exists so a shooter with a shorter frame can get the right fit.
+What it changes is who can comfortably operate the gun. An adjustable stock, the piece at the back of the rifle that sits against your shoulder, exists so a shooter with a shorter frame can get the right fit.
 
 Emmanuel Theodore (10:50)
 Guess who benefits most from that adjustment. And guess who's among the fastest-growing groups of new gun owners in this exact demographic. Black women.
@@ -304,7 +307,7 @@ Emmanuel Theodore (10:58)
 So this law draws one line at a date that locks out the people who are only just now getting in.
 
 Emmanuel Theodore (11:05)
-It draws a second line at a feature that mainly helps women shoot safely, and bans that feature specifically.
+It draws a second line at a feature that mainly helps women shoot safely, and bans it.
 
 Emmanuel Theodore (11:11)
 Black women stand where those two lines cross, and Black women are the group that gave intersectionality its meaning. She dropped the word into a campaign video while promoting a law that causes exactly that harm.
