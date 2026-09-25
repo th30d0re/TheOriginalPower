@@ -374,6 +374,27 @@ The spoken line makes only the two claims above.
 - [RAND — Gun Policy in America: analysis](https://www.rand.org/research/gun-policy/analysis.html)
 - [RAND — 2023 update press release (Jan. 10, 2023)](https://www.rand.org/news/press/2023/01/10.html)
 
+### Card 27 — Boston: 1938 redlining grades and 2019-2025 shooting victimizations
+**On screen:** "2019-2025 shooting victimizations per 10,000 residents per year: D 3.14, C 3.12, A and B 0.43."
+**Claim:** Boston Police records show 1,197 shooting victimizations with coordinates in
+2019-2025 (aggravated assault and murder incidents flagged as shootings; the count is
+within 10% of the department's victim dataset in each of those years). Placing them on
+the 1938 HOLC polygons and dividing by area-weighted 2024 ACS population gives 3.14 per
+10,000 residents per year in grade D, 3.12 in grade C, and 0.43 in grades A and B
+combined. Rate ratios against A and B combined are 7.36 (95% CI 4.07 to 14.86) for D
+and 7.33 (4.07 to 14.75) for C. The pattern holds in the pooled 2016-2025 window, in
+2021-2025, in both sub-periods, and with the densest tract cluster removed.
+**Caveats:** grades A and B hold only 11 of the 1,197 shootings, so the baseline is
+small. With poverty rate and percent Black controlled and overdispersion modeled, the
+tract-level HOLC coefficient is null (IRR 1.00, 95% CI 0.68 to 1.46), so the data
+describe persistence of concentration and do not separate the 1938 grade from the
+poverty and disinvestment that followed it. About 8% of shootings fall in ungraded or
+unmapped territory.
+**Sources:**
+- [Mapping Inequality, University of Richmond — Boston](https://dsl.richmond.edu/panorama/redlining/map/MA/Boston/context)
+- Analyze Boston (data.boston.gov), Crime Incident Reports and the Shootings dataset
+- Method for every number: Paper/data/spatial/boston/RESULTS.md
+
 ---
 
 ## Notes for whoever builds the on-screen cards

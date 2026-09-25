@@ -114,6 +114,12 @@ A 2007 study found that the phase-out of leaded gasoline explains a huge share o
 Emmanuel Theodore (04:33)
 Boston was redlined. That's public record, on the government's own maps. Redlined neighborhoods got the older housing stock, the highway exposure, the industrial lead.
 
+Emmanuel Theodore (04:34)
+And that map still tracks where people get shot. In Boston from twenty nineteen to twenty twenty-five, the areas graded C and D in nineteen thirty-eight have about seven times the shooting rate of the areas graded A and B.
+
+Emmanuel Theodore (04:35)
+The data can't separate the map from the poverty and disinvestment that followed it. That's the mechanism.
+
 Emmanuel Theodore (04:40)
 If you want the actual root cause of violence in this state, start there.
 

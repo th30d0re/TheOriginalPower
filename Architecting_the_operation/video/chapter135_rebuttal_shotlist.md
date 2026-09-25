@@ -221,6 +221,13 @@ portrait).
   neighborhoods" next to a much smaller bar: "5–10 points: household poverty alone."
 - **Note:** `[source]` citations.md Card 10.
 
+## G-26 — The 1938 redlining map and today's shootings
+
+- **Anchor:** `Emmanuel Theodore (04:34)`
+- **Type:** map with the rates by grade in the caption
+- **Content:** Boston's 1938 HOLC grades with 2019-2025 shooting victimizations plotted; D 3.14, C 3.12, A and B 0.43 per 10,000 residents per year.
+- **Note:** `[data]` citations.md Card 27; Paper/data/spatial/boston/RESULTS.md. Rate ratio C and D against A and B about 7 (95% intervals 4.07 to 14.86). The tract-level model does not separate the 1938 grade from later poverty and racial composition; the second spoken line states that limit.
+
 ## G-06 — Lead, redlining, and the timeline they share
 
 - **Anchor:** `Emmanuel Theodore (04:18)`

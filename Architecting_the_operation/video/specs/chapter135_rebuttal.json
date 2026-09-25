@@ -3,7 +3,7 @@
   "source": "chapter135_rebuttal_shotlist.md",
   "manifest": "episode_manifest.json",
   "script": "chapter135_rebuttal_reply.md",
-  "shot_count": 25,
+  "shot_count": 26,
   "shots": [
     {
       "id": "G-01",
@@ -167,9 +167,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "04:41",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 39,
-        "start_ms": 311860,
-        "end_ms": 324790
+        "turn_index": 41,
+        "start_ms": 331840,
+        "end_ms": 344770
       },
       "hold": {},
       "type": "stat bars, six states",
@@ -196,9 +196,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "04:43",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 41,
-        "start_ms": 330200,
-        "end_ms": 342330
+        "turn_index": 43,
+        "start_ms": 350180,
+        "end_ms": 362310
       },
       "hold": {},
       "type": "scatter plot with the two coefficients",
@@ -225,9 +225,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "04:44",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 42,
-        "start_ms": 342630,
-        "end_ms": 352270
+        "turn_index": 44,
+        "start_ms": 362610,
+        "end_ms": 372250
       },
       "hold": {},
       "type": "title card, two items",
@@ -288,6 +288,39 @@
       "prompt_seed": "Neighborhood disadvantage vs. poverty. Type: bar comparison; Content: \"~50-point gap in gun-violence exposure: high- vs. low-disadvantage neighborhoods\" next to a much smaller bar: \"5\u201310 points: household poverty alone.\""
     },
     {
+      "id": "G-26",
+      "title": "The 1938 redlining map and today's shootings",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "04:34",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 38,
+        "start_ms": 307490,
+        "end_ms": 320980
+      },
+      "hold": {},
+      "type": "map with the rates by grade in the caption",
+      "described": {
+        "Type": "map with the rates by grade in the caption",
+        "Content": "Boston's 1938 HOLC grades with 2019-2025 shooting victimizations plotted; D 3.14, C 3.12, A and B 0.43 per 10,000 residents per year."
+      },
+      "note": "`[data]` citations.md Card 27; Paper/data/spatial/boston/RESULTS.md. Rate ratio C and D against A and B about 7 (95% intervals 4.07 to 14.86). The tract-level model does not separate the 1938 grade from later poverty and racial composition; the second spoken line states that limit.",
+      "provenance": {
+        "tags": [
+          "data"
+        ],
+        "citations": [
+          {
+            "card": "Card 27"
+          }
+        ],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "The 1938 redlining map and today's shootings. Type: map with the rates by grade in the caption; Content: Boston's 1938 HOLC grades with 2019-2025 shooting victimizations plotted; D 3.14, C 3.12, A and B 0.43 per 10,000 residents per year."
+    },
+    {
       "id": "G-06",
       "title": "Lead, redlining, and the timeline they share",
       "anchor": {
@@ -330,9 +363,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "04:47",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 43,
-        "start_ms": 352570,
-        "end_ms": 358870
+        "turn_index": 45,
+        "start_ms": 372550,
+        "end_ms": 378850
       },
       "hold": {
         "until": "04:55",
@@ -366,9 +399,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "05:04",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 45,
-        "start_ms": 371480,
-        "end_ms": 377920
+        "turn_index": 47,
+        "start_ms": 391460,
+        "end_ms": 397900
       },
       "hold": {
         "until": "05:12",
@@ -402,9 +435,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "05:51",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 52,
-        "start_ms": 413359,
-        "end_ms": 424059
+        "turn_index": 54,
+        "start_ms": 433339,
+        "end_ms": 444039
       },
       "hold": {
         "until": "06:15",
@@ -438,9 +471,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "06:23",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 56,
-        "start_ms": 450299,
-        "end_ms": 457049
+        "turn_index": 58,
+        "start_ms": 470279,
+        "end_ms": 477029
       },
       "hold": {
         "until": "06:56",
@@ -474,9 +507,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "07:11",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 63,
-        "start_ms": 507489,
-        "end_ms": 512529
+        "turn_index": 65,
+        "start_ms": 527469,
+        "end_ms": 532509
       },
       "hold": {
         "until": "07:35",
@@ -510,9 +543,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "07:46",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 68,
-        "start_ms": 552459,
-        "end_ms": 554589
+        "turn_index": 70,
+        "start_ms": 572439,
+        "end_ms": 574569
       },
       "hold": {
         "until": "08:20",
@@ -549,9 +582,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "08:33",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 76,
-        "start_ms": 600439,
-        "end_ms": 619709
+        "turn_index": 78,
+        "start_ms": 620419,
+        "end_ms": 639689
       },
       "hold": {
         "until": "09:47",
@@ -591,9 +624,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "09:56",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 84,
-        "start_ms": 705709,
-        "end_ms": 716169
+        "turn_index": 86,
+        "start_ms": 725689,
+        "end_ms": 736149
       },
       "hold": {
         "until": "10:17",
@@ -627,9 +660,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "10:17",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 86,
-        "start_ms": 727909,
-        "end_ms": 730869
+        "turn_index": 88,
+        "start_ms": 747889,
+        "end_ms": 750849
       },
       "hold": {
         "until": "10:58",
@@ -764,9 +797,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "05:29",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 49,
-        "start_ms": 390049,
-        "end_ms": 399939
+        "turn_index": 51,
+        "start_ms": 410029,
+        "end_ms": 419919
       },
       "hold": {
         "until": "05:51",
@@ -803,9 +836,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "09:37",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 82,
-        "start_ms": 684599,
-        "end_ms": 696079
+        "turn_index": 84,
+        "start_ms": 704579,
+        "end_ms": 716059
       },
       "hold": {
         "until": "09:56",
@@ -842,9 +875,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "10:50",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 91,
-        "start_ms": 769379,
-        "end_ms": 779169
+        "turn_index": 93,
+        "start_ms": 789359,
+        "end_ms": 799149
       },
       "hold": {
         "until": "11:22",
@@ -881,9 +914,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "11:22",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 96,
-        "start_ms": 804099,
-        "end_ms": 806569
+        "turn_index": 98,
+        "start_ms": 824079,
+        "end_ms": 826549
       },
       "hold": {},
       "type": "title + sources card",
