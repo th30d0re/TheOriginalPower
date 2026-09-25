@@ -136,8 +136,8 @@
         "timestamp": "02:53",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 22,
-        "start_ms": 178360,
-        "end_ms": 184090
+        "start_ms": 178270,
+        "end_ms": 184000
       },
       "hold": {
         "until": "02:59",
@@ -168,8 +168,8 @@
         "timestamp": "04:07",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 34,
-        "start_ms": 266800,
-        "end_ms": 280450
+        "start_ms": 266710,
+        "end_ms": 280360
       },
       "hold": {
         "until": "04:18",
@@ -204,8 +204,8 @@
         "timestamp": "04:18",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 35,
-        "start_ms": 280750,
-        "end_ms": 289410
+        "start_ms": 280660,
+        "end_ms": 289320
       },
       "hold": {
         "until": "04:40",
@@ -240,8 +240,8 @@
         "timestamp": "04:47",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 39,
-        "start_ms": 311950,
-        "end_ms": 318250
+        "start_ms": 311860,
+        "end_ms": 318160
       },
       "hold": {
         "until": "04:55",
@@ -276,8 +276,8 @@
         "timestamp": "05:04",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 41,
-        "start_ms": 330860,
-        "end_ms": 337300
+        "start_ms": 330770,
+        "end_ms": 337210
       },
       "hold": {
         "until": "05:12",
@@ -312,8 +312,8 @@
         "timestamp": "05:51",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 48,
-        "start_ms": 372739,
-        "end_ms": 383439
+        "start_ms": 372649,
+        "end_ms": 383349
       },
       "hold": {
         "until": "06:15",
@@ -348,8 +348,8 @@
         "timestamp": "06:23",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 52,
-        "start_ms": 409679,
-        "end_ms": 416429
+        "start_ms": 409589,
+        "end_ms": 416339
       },
       "hold": {
         "until": "06:56",
@@ -384,8 +384,8 @@
         "timestamp": "07:11",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 59,
-        "start_ms": 466869,
-        "end_ms": 471909
+        "start_ms": 466779,
+        "end_ms": 471819
       },
       "hold": {
         "until": "07:35",
@@ -420,8 +420,8 @@
         "timestamp": "07:46",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 64,
-        "start_ms": 511839,
-        "end_ms": 513969
+        "start_ms": 511749,
+        "end_ms": 513879
       },
       "hold": {
         "until": "08:20",
@@ -459,8 +459,8 @@
         "timestamp": "08:33",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 72,
-        "start_ms": 559819,
-        "end_ms": 579089
+        "start_ms": 559729,
+        "end_ms": 578999
       },
       "hold": {
         "until": "09:47",
@@ -501,8 +501,8 @@
         "timestamp": "09:56",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 80,
-        "start_ms": 665089,
-        "end_ms": 675549
+        "start_ms": 664999,
+        "end_ms": 675459
       },
       "hold": {
         "until": "10:17",
@@ -537,8 +537,8 @@
         "timestamp": "10:17",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 82,
-        "start_ms": 687289,
-        "end_ms": 690249
+        "start_ms": 687199,
+        "end_ms": 690159
       },
       "hold": {
         "until": "10:58",
@@ -573,8 +573,8 @@
         "timestamp": "03:03",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 25,
-        "start_ms": 192190,
-        "end_ms": 202270
+        "start_ms": 192100,
+        "end_ms": 202180
       },
       "hold": {},
       "type": "title card, six numbered items",
@@ -602,8 +602,8 @@
         "timestamp": "03:04",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 26,
-        "start_ms": 202570,
-        "end_ms": 210620
+        "start_ms": 202480,
+        "end_ms": 210530
       },
       "hold": {
         "until": "03:50",
@@ -638,8 +638,8 @@
         "timestamp": "03:50",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 32,
-        "start_ms": 249640,
-        "end_ms": 259570
+        "start_ms": 249550,
+        "end_ms": 259480
       },
       "hold": {
         "until": "04:00",
@@ -674,8 +674,8 @@
         "timestamp": "05:29",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 45,
-        "start_ms": 349429,
-        "end_ms": 359319
+        "start_ms": 349339,
+        "end_ms": 359229
       },
       "hold": {
         "until": "05:51",
@@ -713,8 +713,8 @@
         "timestamp": "09:37",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 78,
-        "start_ms": 643979,
-        "end_ms": 655459
+        "start_ms": 643889,
+        "end_ms": 655369
       },
       "hold": {
         "until": "09:56",
@@ -752,8 +752,8 @@
         "timestamp": "10:50",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 87,
-        "start_ms": 728759,
-        "end_ms": 738549
+        "start_ms": 728669,
+        "end_ms": 738459
       },
       "hold": {
         "until": "11:22",
@@ -791,8 +791,8 @@
         "timestamp": "11:22",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 92,
-        "start_ms": 764379,
-        "end_ms": 766849
+        "start_ms": 763389,
+        "end_ms": 765859
       },
       "hold": {},
       "type": "title + sources card",
