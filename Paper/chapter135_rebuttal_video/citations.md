@@ -473,3 +473,10 @@ group that gave the word its meaning rests on Crenshaw's article being about Bla
 **Caveats:** text read on malegislature.gov 2026-09-25 and matched against the raw page. The spoken quote omits the trailing exclusion for slides, which applies to pistols' slides. The explanation of a stock's purpose ("so a shorter shooter can get the right fit") is the script's own description, not statute text. The line that these features mainly help women is the script's argument and rests on the earlier cards.
 **Sources:**
 - [G.L. c.140 s.121](https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXX/Chapter140/Section121)
+
+### Card 33 — What each listed part does (G-31)
+**On screen:** G-31, five rows.
+**Claim:** The five features come from G.L. c.140 s.121 (Card 32). The one-line functions are the script's own descriptions. The shroud description tracks the statute's words ("designed to shield the bearer's hand from heat"). Length of pull is the distance from the trigger to the back of the stock. That a pistol grip and forward grip make a rifle easier to control, and that muzzle brakes reduce recoil, are common firearms-instruction knowledge and have no citation yet.
+**Caveats:** the pictures are AI-generated product-style illustrations, not photographs of a specific product. The argument that these parts help women, smaller shooters, and shooters with disabilities, and that the law therefore works as racism, sexism, and ableism together, is the author's framework claim and no source here establishes it. Add a citation (for example a firearms-instruction text on grips, or NSSF/Pew data on new owners) before publishing if the claim should carry evidence.
+**Sources:**
+- [G.L. c.140 s.121](https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXX/Chapter140/Section121)
