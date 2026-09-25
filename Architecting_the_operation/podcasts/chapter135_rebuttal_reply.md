@@ -106,7 +106,7 @@ Emmanuel Theodore (03:44)
 My framework, in The Original Power, says the root issue is poverty. Look at what's happening in Boston right now.
 
 Emmanuel Theodore (03:50)
-Roxbury and Dorchester are gentrifying, the cost of living is climbing, and in my own circle, people who grew up here are getting priced out of the neighborhoods we're from.
+Roxbury and Dorchester are gentrifying, the cost of living is climbing, and a Greater Boston Chamber of Commerce survey this year found that a quarter of residents aged twenty to thirty plan to leave the area within five years.
 
 Emmanuel Theodore (04:00)
 Neighborhood disadvantage is one of the strongest predictors of gun violence exposure in the actual research literature.
@@ -144,7 +144,16 @@ Across all fifty states and D.C., poverty tracks firearm homicide at about point
 Emmanuel Theodore (04:44)
 RAND's reviews find evidence for specific laws, like child-access prevention and background checks. A state's overall ranking blends many laws into one score.
 
+Emmanuel Theodore (04:45)
+Look at how those laws work in practice, though. In Massachusetts, child-access prevention is a safe-storage law, and it covers every gun owner, including people who have no children.
+
+Emmanuel Theodore (04:46)
+I don't have kids. Chapter 140, section 131L still says my firearm has to sit in a locked container or carry a tamper-resistant lock whenever it isn't on me, and a violation carries a fine of one to seven thousand five hundred dollars or up to a year and a half in jail. A gun locked away is slower to reach in an emergency, and an emergency at night is when I would need it.
+
 Emmanuel Theodore (04:47)
+And background checks: every time you buy from a dealer, you fill out a Form 4473 and the federal background check runs. The sale it skips is the private one. In Massachusetts, a private transfer already has to go to someone holding a license, through the state's electronic registration system, and that license came with its own background check. A second state check would repeat the ones already there.
+
+Emmanuel Theodore (04:48)
 And to be clear about what does work: Baltimore's homicide rate dropped twenty-three percent in a single year.
 
 Emmanuel Theodore (04:55)
@@ -253,16 +262,16 @@ Emmanuel Theodore (08:52)
 And here's the part that matters: that national surge started in 2020. The Supreme Court's Bruen decision didn't come down until June of 2022, two years later.
 
 Emmanuel Theodore (09:00)
-Because in Massachusetts specifically, a rifle only ever needed an FID card, which was already close to automatic. A handgun needed something else: a License to Carry, and that license was "may issue." A local police chief could just say no, with no reason required.
+Because in Massachusetts specifically, a rifle only ever needed an FID card, which was already close to automatic. A handgun needed something else: a License to Carry, and that license was "may issue." The local licensing authority, usually the police chief or a designee, could just say no, with no reason required.
 
 Emmanuel Theodore (09:14)
-So for two years, while Black gun buyers everywhere else in the country were already surging, anyone in this state who wanted the thing most people actually buy first, a handgun, still needed a chief of police's personal permission.
+So for two years, while Black gun buyers everywhere else in the country were already surging, anyone in this state who wanted the thing most people actually buy first, a handgun, still needed the sign-off of a local licensing authority, usually the police chief or a designee.
 
 Emmanuel Theodore (09:27)
-Bruen struck that down. It's the 2022 Supreme Court case that killed Massachusetts's "may issue" system, the one where a local police chief had personal discretion over whether you, specifically, deserved a license.
+Bruen struck that down. It's the 2022 Supreme Court case that killed Massachusetts's "may issue" system, the one where the local licensing authority, usually the police chief or a designee, had discretion over whether you, specifically, deserved a license.
 
 Emmanuel Theodore (09:37)
-Before Bruen, getting a license to carry here meant asking your police chief's permission and hoping he said yes. After Bruen, the state has to issue it unless you're legally disqualified.
+Before Bruen, getting a license to carry here meant asking your local licensing authority, usually the police chief's office, for permission and hoping the answer was yes. After Bruen, the state has to issue it unless you're legally disqualified.
 
 Emmanuel Theodore (09:47)
 That's the only reason handgun ownership in this state was ever able to catch up to a surge that had already been running for two years everywhere else.
@@ -314,3 +323,6 @@ I'm voting no. Violence is real, and its causes are poverty, disconnection, and 
 
 Emmanuel Theodore (11:37)
 Check what I cited. Don't take my word for it, and don't take hers either.
+
+Emmanuel Theodore (11:41)
+Every source is on one page, linked below. And if you want to read the book this argument comes from, The Original Power, the releases page is linked there too.

@@ -219,6 +219,20 @@ portrait).
 - **Content:** Child-access prevention laws: supportive evidence they reduce firearm homicides and self-injuries among youth. Background checks: moderate evidence they reduce firearm and total homicides.
 - **Note:** `[source]` citations.md Card 26.
 
+## G-28 — Safe storage covers every owner
+
+- **Anchor:** `Emmanuel Theodore (04:46)`
+- **Type:** title card, three items
+- **Content:** G.L. c.140 s.131L: firearm in a locked container or with a tamper-resistant lock unless under the owner's control; applies with or without minors in the home; standard-firearm penalty $1,000 to $7,500 or up to 1.5 years in jail.
+- **Note:** `[source]` citations.md Card 30.
+
+## G-29 — Background checks already run
+
+- **Anchor:** `Emmanuel Theodore (04:47)`
+- **Type:** title card, two items
+- **Content:** Dealer sales: Form 4473 and a federal NICS check. Massachusetts private sales: only to a license holder, through the state's electronic registration system.
+- **Note:** `[source]` citations.md Card 31.
+
 ## G-05 — Neighborhood disadvantage vs. poverty
 
 - **Anchor:** `Emmanuel Theodore (04:07)`
@@ -254,7 +268,7 @@ portrait).
 
 ## G-07 — Baltimore: what actually worked
 
-- **Anchor:** `Emmanuel Theodore (04:47)`
+- **Anchor:** `Emmanuel Theodore (04:48)`
 - **Hold:** through 04:55
 - **Type:** stat card
 - **Content:** "Baltimore homicides: 261 (2023) → 201 (2024), −23%. Credited to the

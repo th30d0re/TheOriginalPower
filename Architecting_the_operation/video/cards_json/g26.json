@@ -1,11 +1,13 @@
 {
   "component": "FreezeCallout",
   "headline": "The 1938 redlining map and today's shootings",
-  "image": "assets/frames/boston_holc_map.png",
+  "image": "assets/frames/boston_holc_map_navy.png",
   "aspect": 0.8496,
   "callouts": [],
   "caption": "2019–2025 shooting victimizations per 10,000 residents per year: D 3.14, C 3.12, A and B 0.43. Red: graded D in 1938. Yellow: C. Dots: shootings.",
   "sources": "Sources: Mapping Inequality · Analyze Boston · ACS 2024",
   "qr": false,
-  "qrUrl": "https://dsl.richmond.edu/panorama/redlining/map/MA/Boston/context"
+  "qrUrl": "https://dsl.richmond.edu/panorama/redlining/map/MA/Boston/context",
+  "fullBleed": true,
+  "imageTop": 505
 }
