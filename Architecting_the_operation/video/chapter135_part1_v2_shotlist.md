@@ -5,7 +5,7 @@ Borrowed from chapter135_rebuttal_shotlist.md with anchors moved to the turns th
 ## G-01 — The wall behind them
 
 - **Anchor:** `Emmanuel Theodore (00:15)`
-- **Hold:** through 01:25
+- **Hold:** through 00:20
 - **Type:** freeze-frame callout, drawn on the paused reel frame itself
 - **Content:** Circle or highlight the "YES on 9 / FOR A SAFE MA" posters visible
   behind Healey and the interviewer. Caption: "Filmed at a Yes-on-9 press event."

@@ -17,8 +17,8 @@
         "end_ms": 8509
       },
       "hold": {
-        "until": "01:25",
-        "script_ms": 70000
+        "until": "00:20",
+        "script_ms": 5000
       },
       "type": "freeze-frame callout, drawn on the paused reel frame itself",
       "described": {
@@ -44,9 +44,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "01:25",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 3,
-        "start_ms": 12039,
-        "end_ms": 18789
+        "turn_index": 4,
+        "start_ms": 27089,
+        "end_ms": 33839
       },
       "hold": {
         "until": "01:37",
@@ -92,9 +92,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "06:23",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 5,
-        "start_ms": 24509,
-        "end_ms": 31259
+        "turn_index": 6,
+        "start_ms": 39559,
+        "end_ms": 46309
       },
       "hold": {
         "until": "06:56",
@@ -124,9 +124,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "07:46",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 9,
-        "start_ms": 56049,
-        "end_ms": 58439
+        "turn_index": 10,
+        "start_ms": 71099,
+        "end_ms": 73489
       },
       "hold": {
         "until": "08:20",
@@ -163,9 +163,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "08:25",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 14,
-        "start_ms": 86859,
-        "end_ms": 93749
+        "turn_index": 13,
+        "start_ms": 88849,
+        "end_ms": 95739
       },
       "hold": {
         "until": "10:20",
@@ -195,9 +195,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "10:20",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 16,
-        "start_ms": 105489,
-        "end_ms": 116349
+        "turn_index": 15,
+        "start_ms": 107479,
+        "end_ms": 118339
       },
       "hold": {
         "until": "10:48",
@@ -227,9 +227,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "10:48",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 17,
-        "start_ms": 116649,
-        "end_ms": 127819
+        "turn_index": 16,
+        "start_ms": 118639,
+        "end_ms": 129809
       },
       "hold": {
         "until": "11:22",
@@ -259,9 +259,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "11:22",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 21,
-        "start_ms": 146739,
-        "end_ms": 149209
+        "turn_index": 20,
+        "start_ms": 148729,
+        "end_ms": 151199
       },
       "hold": {},
       "type": "title + sources card",
