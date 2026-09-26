@@ -33,7 +33,7 @@ Some lines in the video are the speaker's own arguments and opinions: that the l
 
 ## 4. The reel
 
-**In the video:** The @harvardseye reel with Gov. Healey was filmed in front of a wall of "Yes on 9" signage. One shot shows a podium with a "Yes on 9" placard.
+**In the video:** The reel is a joint Instagram post, published by @harvardseye with collaborators that include Gov. Maura Healey, Team Healey-Driscoll, and Yes on 9 campaign accounts. It was filmed in front of a wall of "Yes on 9" signage. One shot shows a podium with a "Yes on 9" placard.
 
 - [The reel on Instagram](https://www.instagram.com/reel/DdoZBRXIbK5/) (the video file was reviewed frame by frame)
 
