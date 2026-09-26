@@ -1,0 +1,317 @@
+{
+  "schema_version": 1,
+  "source": "chapter135_part1_v2_shotlist.md",
+  "manifest": "episode_manifest.json",
+  "script": "chapter135_part1_v2.md",
+  "shot_count": 8,
+  "shots": [
+    {
+      "id": "G-01",
+      "title": "The wall behind them",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "00:15",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 1,
+        "start_ms": 5649,
+        "end_ms": 8509
+      },
+      "hold": {
+        "until": "01:25",
+        "script_ms": 70000
+      },
+      "type": "freeze-frame callout, drawn on the paused reel frame itself",
+      "described": {
+        "Type": "freeze-frame callout, drawn on the paused reel frame itself",
+        "Content": "Circle or highlight the \"YES on 9 / FOR A SAFE MA\" posters visible behind Healey and the interviewer. Caption: \"Filmed at a Yes-on-9 press event.\""
+      },
+      "note": "`[source]` citations.md Section 4. This is the strongest single visual in the piece \u2014 it was confirmed by direct frame inspection, not inference. Don't undersell it with a small caption; this deserves the full freeze-frame treatment.",
+      "provenance": {
+        "tags": [
+          "source"
+        ],
+        "citations": [],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "The wall behind them. Type: freeze-frame callout, drawn on the paused reel frame itself; Content: Circle or highlight the \"YES on 9 / FOR A SAFE MA\" posters visible behind Healey and the interviewer. Caption: \"Filmed at a Yes-on-9 press event.\""
+    },
+    {
+      "id": "G-02",
+      "title": "What a yes/no vote actually does",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "01:25",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 3,
+        "start_ms": 12039,
+        "end_ms": 18789
+      },
+      "hold": {
+        "until": "01:37",
+        "script_ms": 12000
+      },
+      "type": "title card, headline + three impact beats + citation footer (v3)",
+      "described": {
+        "Type": "title card, headline + three impact beats + citation footer (v3)",
+        "Content": "Headline: \"A YES vote keeps Chapter 135 \u2014 including the expanded assault-weapons definition.\" Then three beats: 1. The cutoff: \"Owned before Aug 1, 2024? You keep your AR-15. Buying after? Banned outright.\" 2. Who sits on which side: \"Who already owns: white men 48%, nonwhite women 16% (Pew 2017). Who's buying next: 56% of Black non-owners see themselves owning a gun \u2014 the highest of any group (Pew 2023).\" 3. What the locked-out buyer gets: \"The legal alternative fires the same round. The banned 'features' are the adjustability \u2014 the stock and grip geometry that lets a smaller shooter fit the rifle.\" Footer: \"Sources: Pew Research 2017/2023 \u00b7 Acts of 2024, Ch. 135 \u00b7 mass.gov\" plus a QR placeholder (QR composited in the edit, bottom-center, clear of the Reels button stack)."
+      },
+      "note": "`[source]` citations.md Cards 2, 4, 17, 21, and 23. v3 (2026-09-23) replaces the procedural two-column layout \u2014 the systemic-impact version. Full generation brief for NotebookLM / ChatGPT / Arrow 2.0: `Architecting_the_operation/video/g02_v3_source.md`.",
+      "provenance": {
+        "tags": [
+          "source"
+        ],
+        "citations": [
+          {
+            "card": "Card 2"
+          },
+          {
+            "card": "Card 4"
+          },
+          {
+            "card": "Card 17"
+          },
+          {
+            "card": "Card 21"
+          },
+          {
+            "card": "Card 23"
+          }
+        ],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "What a yes/no vote actually does. Type: title card, headline + three impact beats + citation footer (v3); Content: Headline: \"A YES vote keeps Chapter 135 \u2014 including the expanded assault-weapons definition.\" Then three beats: 1. The cutoff: \"Owned before Aug 1, 2024? You keep your AR-15. Buying after? Banned outright.\" 2. Who sits on which side: \"Who already owns: white men 48%, nonwhite women 16% (Pew 2017). Who's buying next: 56% of Black non-owners see themselves owning a gun \u2014 the highest of any group (Pew 2023).\" 3. What the locked-out buyer gets: \"The legal alternative fires the same round. The banned 'features' are the adjustability \u2014 the stock and grip geometry that lets a smaller shooter fit the rifle.\" Footer: \"Sources: Pew Research 2017/2023 \u00b7 Acts of 2024, Ch. 135 \u00b7 mass.gov\" plus a QR placeholder (QR composited in the edit, bottom-center, clear of the Reels button stack)."
+    },
+    {
+      "id": "G-10",
+      "title": "The timeline",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "06:23",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 5,
+        "start_ms": 24509,
+        "end_ms": 31259
+      },
+      "hold": {
+        "until": "06:56",
+        "script_ms": 33000
+      },
+      "type": "vertical timeline, this is the richest graphic in the cut",
+      "described": {
+        "Type": "vertical timeline, this is the richest graphic in the cut",
+        "Content": "Jul 25, 2024 (signed) \u2192 Oct 2, 2024 (emergency preamble, \"69 days later\"; stated reasons \"without delay\" and time for agencies to prepare) \u2192 Oct 23, 2024 (law's own original effective date) \u2192 Oct 2024 (93,229 signatures submitted) \u2192 Nov 22, 2024 (78,707 verified). Footer note on Article 48's stay."
+      },
+      "note": "`[source]` citations.md Section 10. Give this the longest hold of any graphic in the video if time allows \u2014 it's the evidentiary core of the \"manufactured emergency\" argument, and it's the one a hostile viewer will fact-check first. **Built as HTML, not AI-generated** (`cards_html/g10.html`, rendered with headless Chrome to `images/g10.png`): the NotebookLM generator failed four times in a row on 2026-09-24, and the AI v2 render still said \"71 days\" and \"public convenience\". The stale render is kept as `images/g10_v2_stale_71days.png`.",
+      "provenance": {
+        "tags": [
+          "source"
+        ],
+        "citations": [],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "The timeline. Type: vertical timeline, this is the richest graphic in the cut; Content: Jul 25, 2024 (signed) \u2192 Oct 2, 2024 (emergency preamble, \"69 days later\"; stated reasons \"without delay\" and time for agencies to prepare) \u2192 Oct 23, 2024 (law's own original effective date) \u2192 Oct 2024 (93,229 signatures submitted) \u2192 Nov 22, 2024 (78,707 verified). Footer note on Article 48's stay."
+    },
+    {
+      "id": "G-12",
+      "title": "Grandfather clauses, now",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "07:46",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 9,
+        "start_ms": 56049,
+        "end_ms": 58439
+      },
+      "hold": {
+        "until": "08:20",
+        "script_ms": 34000
+      },
+      "type": "side-by-side, two identical rifles",
+      "described": {
+        "Type": "side-by-side, two identical rifles",
+        "Content": "Two identical rifle icons. Left, dated \"Owned before Aug 1, 2024\": \"Grandfathered: you keep it.\" Right, \"Acquired after\": cannot be legally acquired; first offense carries a $1,000 to $10,000 fine or 1 to 10 years' imprisonment (G.L. c. 140, \u00a7 131M). Caption: same gun, only the date differs."
+      },
+      "note": "`[source]` citations.md Cards 17 and 25 (penalty). This is the equal-protection argument in one image; keep it uncluttered.",
+      "provenance": {
+        "tags": [
+          "source"
+        ],
+        "citations": [
+          {
+            "card": "Card 17"
+          },
+          {
+            "card": "Card 25"
+          }
+        ],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Grandfather clauses, now. Type: side-by-side, two identical rifles; Content: Two identical rifle icons. Left, dated \"Owned before Aug 1, 2024\": \"Grandfathered: you keep it.\" Right, \"Acquired after\": cannot be legally acquired; first offense carries a $1,000 to $10,000 fine or 1 to 10 years' imprisonment (G.L. c. 140, \u00a7 131M). Caption: same gun, only the date differs."
+    },
+    {
+      "id": "G-21",
+      "title": "Black women among the fastest-growing owners",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "08:25",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 14,
+        "start_ms": 86859,
+        "end_ms": 93749
+      },
+      "hold": {
+        "until": "10:20",
+        "script_ms": 115000
+      },
+      "type": "title card, two figures",
+      "described": {
+        "Type": "title card, two figures",
+        "Content": "\"+87% gun ownership among Black women (NSSF, 2021).\" \"+58% Black gun buyers in 2020 (NSSF/CNN).\""
+      },
+      "note": "`[source]` citations.md Section 14. Its caveat applies: one of the fastest-growing segments, not verified as the single fastest.",
+      "provenance": {
+        "tags": [
+          "source"
+        ],
+        "citations": [],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Black women among the fastest-growing owners. Type: title card, two figures; Content: \"+87% gun ownership among Black women (NSSF, 2021).\" \"+58% Black gun buyers in 2020 (NSSF/CNN).\""
+    },
+    {
+      "id": "G-15",
+      "title": "AR-15 vs. Mini-14",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "10:20",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 16,
+        "start_ms": 105489,
+        "end_ms": 116349
+      },
+      "hold": {
+        "until": "10:48",
+        "script_ms": 28000
+      },
+      "type": "side-by-side comparison",
+      "described": {
+        "Type": "side-by-side comparison",
+        "Content": "Two rifle silhouettes, same caliber label (5.56/.223) on both. Left: \"AR-15 \u2014 BANNED.\" Right: \"Ruger Mini-14 \u2014 not covered (named by the MA AG).\" Caption: the difference is a feature list, not lethality."
+      },
+      "note": "`[source]` citations.md Section 17.",
+      "provenance": {
+        "tags": [
+          "source"
+        ],
+        "citations": [],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "AR-15 vs. Mini-14. Type: side-by-side comparison; Content: Two rifle silhouettes, same caliber label (5.56/.223) on both. Left: \"AR-15 \u2014 BANNED.\" Right: \"Ruger Mini-14 \u2014 not covered (named by the MA AG).\" Caption: the difference is a feature list, not lethality."
+    },
+    {
+      "id": "G-31",
+      "title": "What each listed part does",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "10:48",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 17,
+        "start_ms": 116649,
+        "end_ms": 127819
+      },
+      "hold": {
+        "until": "11:22",
+        "script_ms": 34000
+      },
+      "type": "parts card, five rows (photoreal cut-outs generated with Codex image generation)",
+      "described": {
+        "Type": "parts card, five rows (photoreal cut-outs generated with Codex image generation)",
+        "Content": "adjustable stock (length of pull), pistol grip (control, ergonomics), forward grip (steadies the support hand), threaded barrel (accepts a flash suppressor or muzzle brake), shroud (shields the hand from heat)."
+      },
+      "note": "`[source]` parts list is the statute (citations.md Section 18); the function descriptions are the script's own. Assets: `scriptCast/video/public/assets/parts/`.",
+      "provenance": {
+        "tags": [
+          "source"
+        ],
+        "citations": [],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "What each listed part does. Type: parts card, five rows (photoreal cut-outs generated with Codex image generation); Content: adjustable stock (length of pull), pistol grip (control, ergonomics), forward grip (steadies the support hand), threaded barrel (accepts a flash suppressor or muzzle brake), shroud (shields the hand from heat)."
+    },
+    {
+      "id": "G-16",
+      "title": "Close card",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "11:22",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 21,
+        "start_ms": 146739,
+        "end_ms": 149209
+      },
+      "hold": {},
+      "type": "title + sources card",
+      "described": {
+        "Type": "title + sources card",
+        "Content": "\"Question 9, Nov. 3, 2026 \u2014 YES keeps Chapter 135. NO repeals it.\" Then: \"Sources for everything in this video: [link to published citations deck].\""
+      },
+      "note": "`[source]` citations.md Section 2 (Question 9 yes/no mechanics) \u2014 the \"check my work\" card. Same requirement as v1: don't ship without this resolving to something the audience can actually open.",
+      "provenance": {
+        "tags": [
+          "source"
+        ],
+        "citations": [],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Close card. Type: title + sources card; Content: \"Question 9, Nov. 3, 2026 \u2014 YES keeps Chapter 135. NO repeals it.\" Then: \"Sources for everything in this video: [link to published citations deck].\""
+    }
+  ],
+  "validation": [
+    {
+      "level": "error",
+      "shot": "G-01",
+      "message": "tagged [source] with no URL or card reference"
+    },
+    {
+      "level": "error",
+      "shot": "G-10",
+      "message": "tagged [source] with no URL or card reference"
+    },
+    {
+      "level": "error",
+      "shot": "G-21",
+      "message": "tagged [source] with no URL or card reference"
+    },
+    {
+      "level": "error",
+      "shot": "G-15",
+      "message": "tagged [source] with no URL or card reference"
+    },
+    {
+      "level": "error",
+      "shot": "G-31",
+      "message": "tagged [source] with no URL or card reference"
+    },
+    {
+      "level": "error",
+      "shot": "G-16",
+      "message": "tagged [source] with no URL or card reference"
+    }
+  ]
+}
