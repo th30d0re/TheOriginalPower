@@ -91,7 +91,7 @@ Borrowed from chapter135_rebuttal_shotlist.md with anchors moved to the turns th
 - **Content:** adjustable stock (length of pull), pistol grip (control, ergonomics), forward grip (steadies the support hand), threaded barrel (accepts a flash suppressor or muzzle brake), shroud (shields the hand from heat).
 - **Note:** `[source]` parts list is the statute (citations.md Section 18); the function descriptions are the script's own. Assets: `scriptCast/video/public/assets/parts/`.
 
-## G-16 — Close card
+## G-16B — Close card, cliff-notes version
 
 - **Anchor:** `Emmanuel Theodore (11:22)`
 - **Type:** title + sources card
