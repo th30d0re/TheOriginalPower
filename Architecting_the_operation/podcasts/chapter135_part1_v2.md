@@ -10,6 +10,9 @@ Pause it right there. Look at the wall behind them.
 Emmanuel Theodore (00:18)
 Every single poster in that room says "Yes on 9."
 
+The Reel (00:20)
+[clip:reel_a1_short] And I think it's really important that we invest in after school programs, all the sports, the theater, the arts, the dance activities, right? The key people, kids in healthy, safe environments. I think that's the number one thing, to be honest.
+
 Emmanuel Theodore (01:25)
 But watch what just happened: she called that the number one thing, and Question 9 has nothing to do with any of it.
 
@@ -36,12 +39,6 @@ If you lawfully possessed a rifle on August 1st, 2024, with a license, and you r
 
 Emmanuel Theodore (07:57)
 I own an AR-15. I bought it before this law. I get to keep mine.
-
-Emmanuel Theodore (08:09)
-Picture two identical rifles in two identical car trunks. I bought mine before August 1st. You bought yours after. Same gun, same caliber, same everything.
-
-Emmanuel Theodore (08:17)
-I go home. You face one to ten years in prison.
 
 Emmanuel Theodore (08:25)
 And the date matters because of who was already holding a gun in this state, and who's in the middle of trying to get one.
