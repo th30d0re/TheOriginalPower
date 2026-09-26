@@ -53,6 +53,14 @@ clips:
     origin_url: https://www.instagram.com/reel/DdoZBRXIbK5/
     source: Architecting_the_operation/archive/sources/reel_q1.mp4
     start: 0.0
+  reel_q1_short:
+    citation: '@harvardseye, Instagram reel, Gov. Maura Healey interview, Yes-on-9
+      press event'
+    content_note: opening line only, for the three-minute Part 1
+    end: 5.35
+    origin_url: https://www.instagram.com/reel/DdoZBRXIbK5/
+    source: Architecting_the_operation/archive/sources/reel_q1.mp4
+    start: 0.0
   reel_q2:
     citation: '@harvardseye, Instagram reel, Gov. Maura Healey interview, Yes-on-9
       press event'
