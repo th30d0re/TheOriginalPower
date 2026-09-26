@@ -1054,8 +1054,8 @@
         "timestamp": "11:22",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 118,
-        "start_ms": 1065738,
-        "end_ms": 1068208
+        "start_ms": 1065248,
+        "end_ms": 1067718
       },
       "hold": {},
       "type": "title + sources card",
