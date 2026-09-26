@@ -42,15 +42,15 @@
       "title": "What a yes/no vote actually does",
       "anchor": {
         "speaker": "Emmanuel Theodore",
-        "timestamp": "01:25",
+        "timestamp": "01:20",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 11,
-        "start_ms": 86040,
-        "end_ms": 92790
+        "turn_index": 10,
+        "start_ms": 80240,
+        "end_ms": 85740
       },
       "hold": {
         "until": "01:37",
-        "script_ms": 12000
+        "script_ms": 17000
       },
       "type": "title card, headline + three impact beats + citation footer (v3)",
       "described": {
@@ -90,15 +90,15 @@
       "title": "The question that wasn't asked",
       "anchor": {
         "speaker": "Emmanuel Theodore",
-        "timestamp": "02:03",
+        "timestamp": "01:54",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 17,
-        "start_ms": 129120,
-        "end_ms": 133850
+        "turn_index": 15,
+        "start_ms": 117930,
+        "end_ms": 125390
       },
       "hold": {
         "until": "02:07",
-        "script_ms": 4000
+        "script_ms": 13000
       },
       "type": "build, contrast",
       "described": {
@@ -855,11 +855,11 @@
       "title": "The roadmap",
       "anchor": {
         "speaker": "Emmanuel Theodore",
-        "timestamp": "03:03",
+        "timestamp": "03:02",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 28,
-        "start_ms": 218829,
-        "end_ms": 229119
+        "turn_index": 27,
+        "start_ms": 216529,
+        "end_ms": 218529
       },
       "hold": {},
       "type": "title card, six numbered items",
@@ -1054,8 +1054,8 @@
         "timestamp": "11:22",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 118,
-        "start_ms": 1065178,
-        "end_ms": 1067648
+        "start_ms": 1065738,
+        "end_ms": 1068208
       },
       "hold": {},
       "type": "title + sources card",
