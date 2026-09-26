@@ -253,8 +253,8 @@
       "prompt_seed": "What each listed part does. Type: parts card, five rows (photoreal cut-outs generated with Codex image generation); Content: adjustable stock (length of pull), pistol grip (control, ergonomics), forward grip (steadies the support hand), threaded barrel (accepts a flash suppressor or muzzle brake), shroud (shields the hand from heat)."
     },
     {
-      "id": "G-16",
-      "title": "Close card",
+      "id": "G-16B",
+      "title": "Close card, cliff-notes version",
       "anchor": {
         "speaker": "Emmanuel Theodore",
         "timestamp": "11:22",
@@ -279,7 +279,7 @@
         "quotes": []
       },
       "suggested_track": "vector",
-      "prompt_seed": "Close card. Type: title + sources card; Content: \"Question 9, Nov. 3, 2026 \u2014 YES keeps Chapter 135. NO repeals it.\" Then: \"Sources for everything in this video: [link to published citations deck].\""
+      "prompt_seed": "Close card, cliff-notes version. Type: title + sources card; Content: \"Question 9, Nov. 3, 2026 \u2014 YES keeps Chapter 135. NO repeals it.\" Then: \"Sources for everything in this video: [link to published citations deck].\""
     }
   ],
   "validation": [
@@ -310,7 +310,7 @@
     },
     {
       "level": "error",
-      "shot": "G-16",
+      "shot": "G-16B",
       "message": "tagged [source] with no URL or card reference"
     }
   ]

@@ -74,4 +74,4 @@ Emmanuel Theodore (11:29)
 I'm voting no. Violence is real, and its causes are poverty, disconnection, and the government's own policy choices. This bill was never the answer to it, and she just told you that herself.
 
 Emmanuel Theodore (11:33)
-Every source is on one page, linked below. That's the short version. Part two is the full breakdown, and it starts with the one word she said that describes this law.
+Every source is on one page, linked below. That's the short version. The full breakdown starts in part one, with the reel, one line at a time.

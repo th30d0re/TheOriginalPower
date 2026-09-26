@@ -1,0 +1,38 @@
+{
+  "component": "TitleCard",
+  "headline": "Question 9, Nov. 3, 2026",
+  "items": [
+    {
+      "title": "YES keeps Chapter 135.",
+      "color": "red"
+    },
+    {
+      "title": "NO repeals it.",
+      "color": "green"
+    },
+    {
+      "title": "Every source, on one page:",
+      "detail": "Scan the code."
+    },
+    {
+      "title": "The book, The Original Power:",
+      "detail": "github.com/th30d0re/TheOriginalPower/releases"
+    },
+    {
+      "title": "The full breakdown starts in Part 1",
+      "detail": "Every claim, one line at a time."
+    }
+  ],
+  "sources": "Sources: Ballotpedia · commonwealthbeacon.org · serpalaw.com",
+  "qr": true,
+  "qrs": [
+    {
+      "url": "https://github.com/th30d0re/TheOriginalPower/blob/main/Paper/chapter135_rebuttal_video/citations.md",
+      "label": "Sources"
+    },
+    {
+      "url": "https://github.com/th30d0re/TheOriginalPower/releases",
+      "label": "The book"
+    }
+  ]
+}
