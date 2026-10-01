@@ -14,12 +14,24 @@ notes/      Emmanuel's reading notes, raw input
 |---|---|---|---|---|
 | 1 | Author's Preface | `podcasts/ATO_EP01_authors_preface.md` | `video/ATO_EP01_shotlist.md` | none |
 | 2 | Preface (framework) | `podcasts/ATO_EP02_preface.md` | `video/ATO_EP02_shotlist.md` | `notes/TOP02_preface_overview_transcript.md` |
-| 3 | Chapter 2, Redefining Racism | `podcasts/ATO_EP03_redefining_racism.md` | `video/ATO_EP03_shotlist.md` | `notes/CH2_findings.md` |
+| 3 | Chapter 2, Redefining Racism | `podcasts/ATO_EP03_redefining_racism_five_levels.md` | `video/ATO_EP03_shotlist.md` | `notes/CH2_findings.md` |
+| 4 | Architecture hour (title note + Preface) | `podcasts/ATO_EP04_what_power_is.md` | none yet | public Episode 1 |
 
-Episode 3 opens the public run on the manuscript proper, and is expected to be the
-first episode most new listeners encounter — the Preface and Chapter 0 run notation-
-and logic-heavy and reward readers already sold on the framework's math, where
-Chapter 2 states a claim a stranger already has an opinion about. It was drafted from
+Public Episode 1 is the architecture hour (`podcasts/ATO_EP04_what_power_is.md`):
+a straight before/after argument on what power is, drawn from the title note and
+the Preface. The listener's current picture (attitudes, two teams, a visible
+office, a signature that ends a wrong) is taken seriously, broken against the
+record, and replaced with the extraction circuit and its three questions. The
+five-level racism script (`podcasts/ATO_EP03_redefining_racism_five_levels.md`)
+is public Episode 2, and the five-level device starts there; Episode 1 does not
+use it. Episode 3 as a production file still holds Chapter 2; the
+public numbering puts the architecture hour first so a new listener gets the
+machine before the word. The Preface and Chapter 0 run notation- and logic-heavy
+and reward readers already sold on the framework's math. Chapter 2 states a claim
+a stranger already has an opinion about, which is why it follows the architecture
+hour.
+
+The Chapter 2 script was drafted from
 a full factual brief (`notes/CH2_findings.md`) built directly against
 `Paper/The_Original_Power.tex` lines 1567–2681, following the same pattern as
 `notes/CH0_findings.md`: a delegate-grade brief first (section map, every verbatim
@@ -30,9 +42,7 @@ directly.
 The script was then rebuilt around a four-level explanatory device — every named
 mechanism in the chapter gets explained as if to a five-year-old, then a high
 schooler, then a college student, then defended at PhD level with full citations and
-falsification conditions — since this episode is the series' front door and needs to
-work for a listener with zero prior exposure to the framework, while still carrying
-the manuscript's actual rigor through to the fourth pass. Toussaint names the level,
+falsification conditions. Toussaint names the level,
 Aisha delivers the first two registers, Emmanuel Theodore delivers the last two,
 repeated across ten named mechanisms. It is unrendered as of this commit — 258 turns,
 ~11,100 words, ~74–77 minutes by word count, timestamps computed from word count and
@@ -64,7 +74,10 @@ written against the second one.
 
 Decided by Emmanuel on 2026-09-16, after the research brief in
 `research/podcast_craft/BRIEF.md`. They apply to every script drafted from here on.
-Episodes 1 to 3 predate them.
+Episodes 1 to 3 predate them. The 2026-09-30 rebuild of the architecture hour
+(`ATO_EP04_what_power_is.md`, public Episode 1) is a deliberate exception: a
+before/after discovery conversation with no levels, per the retention findings in
+the Podcast Craft research. The level device starts at public Episode 2.
 
 **One chapter per episode.** Episodes stay bound to a book chapter at whatever length
 the chapter needs. Splitting a long chapter into parts stays available later, and
@@ -104,7 +117,8 @@ listener, so the public numbering puts the front door there.
 
 | Production file | Public release |
 |---|---|
-| `ATO_EP03_redefining_racism.md`, Chapter 2 | Episode 1 |
+| `ATO_EP04_what_power_is.md`, title note + Preface | Episode 1 |
+| `ATO_EP03_redefining_racism_five_levels.md`, Chapter 2 | Episode 2 |
 | `ATO_EP01_authors_preface.md` | Bonus episode |
 | `ATO_EP02_preface.md` | Bonus episode |
 
