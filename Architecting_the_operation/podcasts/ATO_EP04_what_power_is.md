@@ -40,7 +40,7 @@ Aisha (02:12)
 He tried to stop it in his own chapter, and the chapter pushed him out. Belonging is a wage. The house pays it every night, and the price is silence.
 
 Toussaint (02:22)
-Camp three answers all of this with three words. Not all men. <!-- antithesis-ok: quoting the slogan -->
+Camp three answers all of this with three words. Not all men.
 
 Aisha (02:27)
 And on the count, camp three is right. Most men collect nothing from what happened in that house. The sharpest version of camp three's point came from inside feminism.
@@ -58,13 +58,13 @@ Toussaint (03:20)
 Camp four found a part.
 
 mamwa (03:23)
-[clip:amandathegateman_2026] Who set that system up? Not individual actors, not men. Billionaires set that system up. Modern day patriarchy is deeply intertwined with class struggle and capitalism. Right now, who set that system up is the billionaires, is the political class, is the bourgeoisie. Not Jackson down the street. <!-- antithesis-ok: verbatim clip caption -->
+[clip:amandathegateman_2026] Who set that system up? Not individual actors, not men. Billionaires set that system up. Modern day patriarchy is deeply intertwined with class struggle and capitalism. Right now, who set that system up? Is the billionaires, is the political class, is the bourgeoisie, okay? Not Jackson down the street.
 
 Aisha (03:46)
 Now go back to camp one, and listen to where his own evidence ends.
 
 Blake Johnson (03:50)
-[clip:eugenesquad_2026b] When you look at our society and the fact that we not only tend to let these people off, but to elevate them to positions of power. <!-- antithesis-ok: verbatim clip caption -->
+[clip:eugenesquad_2026b] And when you look at our society and the fact that we not only tend to let these people off, but to elevate them to positions of power.
 
 Toussaint (03:57)
 Let them off. Elevate them. Those are things institutions do.

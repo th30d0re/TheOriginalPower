@@ -85,6 +85,11 @@ def scan(path: Path) -> tuple[list, list]:
     for lineno, raw in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
         if not raw.strip() or ALLOW.search(raw):
             continue
+        # A [clip:...] caption is the verbatim transcript of someone else's
+        # recording. The rhetorical rule governs this project's prose, and a
+        # caption has to match the audio, so it is never rewritten.
+        if raw.lstrip().startswith("[clip:"):
+            continue
         line = _mask_quotes(ALLOW.sub("", raw))
         for rx, name in CERTAIN:
             for m in rx.finditer(line):
