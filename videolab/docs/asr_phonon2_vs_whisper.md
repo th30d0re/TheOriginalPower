@@ -99,3 +99,20 @@ configuration tried. Phonon-1-Big alone is not safe either (it skipped 43 words 
 timing). In the built ensemble, Phonon-1-Big is a coverage check that warns when it holds 8 or more words
 the merged transcript lacks. It does not insert text, because its segments are about 29 s long and cannot
 place a missing sentence in time.
+
+## Effect on the Gender Wars reel notes (checked 2026-10-01, notes not changed)
+
+The ensemble recovered missing words in two reels only (`instagram-DcPPit0vy6I`, 30 words, and
+`instagram-DcLvlJaD8qa`, 8 words). Neither has a note in `ModernMisandry/the gender wars/social media
+research/`. Eleven notes cite a `file-*` job and a twelfth (`reel_Dd110O6pMRz.md`) maps by shortcode.
+For those twelve, the ensemble text differs from the note's Whisper text by 0 to 30 words each, and the
+differences run in both directions:
+
+- Ensemble improves: "Wholes" to "Holes" (`reel_Dd9AT1wReaS.md`), "bio essentialist" to "bioessentialist".
+- Ensemble worsens: "exploited" to "floited" and "Men are shamed" to "and are shamed"
+  (`reel_Dd4EXExhU4m.md`), "Hoosiers" to "Hoosier's" (`reel_DdwapUUg6mc.md`).
+- Style only: "going to" to "gonna", "it's" to "is", numbers spelled out ("ninety plus percent").
+
+No ground truth exists, so the ensemble cannot be called more accurate. It guarantees coverage. It does
+not guarantee wording. Replacing the notes' transcripts wholesale would swap some correct words for
+errors. A note should change only after someone listens to the disputed words.
