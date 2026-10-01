@@ -17,7 +17,7 @@ A1  fetch    container, network on, cookies ro   yt-dlp             → V2 (code
 A2  dm       HOST, instagram-cli @ejtheodore     --download         → V3 (codex)
 A3  file     no fetch                            local .mp4         → V2 (codex)
 B   derive   container, --no-dns, no creds       ffmpeg + tesseract → V1 (kimi)
-C   asr      HOST, .venv-voice, MLX/Metal        mlx-whisper        → V2 (codex)
+C   asr      HOST, .venv-voice, MLX/Metal        mlx-whisper | ensemble → V2 (codex)
 D   report   HOST, pure Python                   md + json          → V1 (kimi)
 ```
 
@@ -116,7 +116,7 @@ Written by the CLI at job creation; each stage rewrites its own block only.
   "stages": {
     "fetch":  {"status": "ok", "engine": "yt-dlp",     "detail": {}, "started_at": "…", "ended_at": "…", "error": null},
     "derive": {"status": "ok", "engine": "ffmpeg+tesseract", "detail": {"frames": 12, "ocr_rows": 12, "ocr_kept": 4}, "…": null},
-    "asr":    {"status": "ok", "engine": "mlx-whisper", "detail": {"model": "mlx-community/whisper-large-v3-turbo", "language": "en"}, "…": null},
+    "asr":    {"status": "ok", "engine": "mlx-whisper", "detail": {"model": "mlx-community/whisper-large-v3-turbo", "language": "en", "dropped_segments": 0}, "…": null},
     "report": {"status": "ok", "engine": "videolab.report", "detail": {}, "…": null}
   }
 }
@@ -124,6 +124,12 @@ Written by the CLI at job creation; each stage rewrites its own block only.
 
 `status` ∈ `pending | ok | skipped | error`. Timestamps are UTC ISO-8601 with a trailing `Z`.
 `skipped` is a success state — A3 file-drop legitimately skips `fetch`.
+
+Ensemble jobs set `stages.asr.engine` to `ensemble`. Their `detail` block may additionally contain
+the optional keys `phonon_model`, `filled_gaps`, `unfilled_gaps`, `backfilled_segments`, and
+`coverage_warnings`. A coverage warning contains `words` and an `excerpt` of at most 120 characters.
+The optional failure keys are `ensemble_error` and `coverage_check_error`. Existing Whisper jobs may
+omit every ensemble field.
 
 ---
 
@@ -196,8 +202,11 @@ Every row is written regardless — dedupe marks, it does not drop. Consumers re
 
 ## 7. Stage C outputs — V2 owns
 
-`transcript.txt` (plain), `.srt`, `.vtt`, `.json` (segments with `start`, `end`, `text`) — the
-same file set already in `Paper/research/video_transcripts/transcripts/`.
+`transcript.txt` (plain), `.srt`, `.vtt`, `.json` (segments with `start`, `end`, `text`, and optional
+`engine`) — the same file set already in `Paper/research/video_transcripts/transcripts/`.
+`transcript.json` may also contain the optional top-level `engine` and `words` fields. `words` is the
+merged Phonon-2 word list with `word`, `start`, and `end` values. These additions are optional so
+existing Whisper jobs retain their current schema and output bytes.
 
 ---
 
