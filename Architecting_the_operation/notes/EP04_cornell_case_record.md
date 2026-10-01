@@ -2,6 +2,7 @@
 
 Compiled 2026-10-01. The case is moving daily; re-check before render.
 Status as of this date: **civil allegations, no criminal charges, grand jury review pending.**
+Case is in New York State Supreme Court, New York County (a state trial court). Fact-check: `kimi/EP04_factcheck_FINDINGS.md`.
 
 ---
 
@@ -15,8 +16,8 @@ Status as of this date: **civil allegations, no criminal charges, grand jury rev
 | Title IX investigation; hearing panel issued "a range of sanctions, which included expulsions and suspensions." Chapter closed, still barred | Confirmed by Cornell (VP Kyle Kimball) | Cornell Daily Sun; PBS |
 | Lawsuit says defendants could "mitigate their conduct by submitting essays." Cornell: none were offered essays "as a sole consequence" | **Disputed** | Cornell Daily Sun; PBS |
 | 2024: DA Matthew Van Houten declined charges. Doe's initial sworn statement did not allege gang rape or drugging. The Cornell Police statement described the encounter as "voluntary, conscious, and consensual" | Confirmed (DA's account) | PBS; Ithaca Voice |
-| Cornell says it gave the DA all investigative information, "specifically naming the Snapchat screenshot." DA says his office "never received" it | **Contradiction between institutions** | Cornell Daily Sun (FAQ article) |
-| Sept 14/16, 2026: lawsuit filed (outlets differ on date). Sept 26: Daily Sun publishes the defendants' names. Sept 28: DA reopens, will go to grand jury | Confirmed | Wikipedia timeline; PBS; Ithaca Voice |
+| Cornell says it gave the DA all investigative information, "specifically naming the Snapchat screenshot." DA says his office "never received" it | **Disputed.** DA later told CNN the screenshot reached his team in Nov 2024 but was "not part of our initial analysis" (C17) | Cornell Daily Sun (FAQ article) |
+| Sept 14/16, 2026: lawsuit filed (outlets differ on date). Sept 21: Daily Sun editorial publishes the defendants' names (Wikipedia's Sept 26 is wrong; C19). Sept 28: DA reopens, will go to grand jury | Confirmed | Wikipedia timeline; PBS; Ithaca Voice |
 | Oct 1, 2026: Gov. Hochul says Cornell agreed to an independent review. AG Letitia James's office is separately reviewing Cornell's response | Confirmed | Cornell Daily Sun |
 | At least one defendant publicly denies the allegations | Confirmed | TMZ (secondary) |
 

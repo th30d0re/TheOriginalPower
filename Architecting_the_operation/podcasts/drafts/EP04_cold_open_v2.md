@@ -4,7 +4,7 @@ Replaces `ATO_EP04_what_power_is.md` from 00:00 through Toussaint (01:22). Every
 Aisha (01:32) "That is what this hour hands you" onward stays as written.
 Timestamps are placeholders; `scriptcast-retime` rewrites them after render.
 
-`[VERIFY Cn]` = waiting on the Kimi fact-check (`notes/kimi/EP04_factcheck_FINDINGS.md`).
+Facts checked against `notes/kimi/EP04_factcheck_FINDINGS.md` (Codex run, 2026-10-01; Kimi hit its quota). Re-check C17, C18 and C20 before render; they move daily.
 `[clip:…]` turns play the real recording; slices are proposed in the table at the bottom and are
 not registered in `archive/clips.yaml` yet.
 
@@ -17,7 +17,7 @@ Design, from the persuasion diagnostic and Emmanuel's notes:
 ---
 
 Toussaint (00:00)
-In September a former Cornell student filed a lawsuit. [VERIFY C14] She says that in October 2024, seven members of the Chi Phi fraternity drugged her and raped her at the chapter house. The seven men are accused. None of them has been charged with a crime. [VERIFY C20] Two years after the night in question, the case reached the public, and inside a week the feed had sorted itself into camps.
+In September a former Cornell student sued in New York state court. She says that in October 2024, seven members of the Chi Phi fraternity drugged her and raped her at the chapter house. The seven men are accused. As of this recording, none of them has been charged with a crime, and the one defendant who has spoken through a lawyer says he is innocent. Two years after the night in question, the case reached the public, and inside a week the feed had sorted itself into camps.
 
 Aisha (00:22)
 Camp one.
@@ -32,7 +32,7 @@ Jaylin Hertz (00:39)
 [clip:jesusreigns_2026] You can't say all men is the safest position for women to hold because men make up 90 percent of rapes. You have to look at what percent of men are rapists. And do you know what percent of men are rapists based on the 2024 FBI stats? I want you to guess. Take a second to guess. It is 0.065%. So less than 1% of men are rapists.
 
 Aisha (00:59)
-Two men, one FBI table. [VERIFY C1, C7] The first divided the crimes by the men who committed them and got ninety percent. The second divided all men by the crimes and got a fraction of one percent. Both numbers measure the size of the category. Neither man asks who decided what happened after that night.
+Two men, one kind of table. The first divided the crimes by the men who committed them and got ninety percent, which is close to what the national estimates show. The second divided all men by one year of offenders the police recorded, which makes his number a floor. Surveys of college men put self-reported rape or attempted rape near six percent. Both numbers measure the size of the category. Neither man asks who decided what happened after that night.
 
 Toussaint (01:16)
 Camp two asked something sharper.
@@ -41,7 +41,7 @@ jaeden (01:19)
 [clip:jaeserv_2026] Because, yeah, you don't match the identity of the seven boys who do this vile act. But those seven boys were part of a larger 50 boys. And those 50 boys were trauma-bounded in a way where they won't hold their own brothers accountable.
 
 Aisha (01:29)
-That is the strongest observation anyone made in the whole thread. The lawsuit says the silence was written down. It alleges a group chat where members were invited upstairs while she was in the house. [VERIFY C17] So the question is why. Why would that many men stay quiet.
+That is the strongest observation anyone made in the whole thread. The lawsuit says the silence was written down. It alleges a group chat where members were invited upstairs while she was in the house. So the question is why. Why would that many men stay quiet.
 
 Toussaint (01:46)
 A man who stood inside one of those houses answered it.
@@ -86,7 +86,7 @@ Toussaint (03:57)
 Let them off. Elevate them. Those are things institutions do.
 
 Aisha (04:01)
-His evidence lands on the people who let men off and the positions that lift them up. His conclusion lands on every man alive. In this case the institutions left paper. Cornell Police wrote the encounter up as voluntary, conscious, and consensual. [VERIFY C16] The district attorney declined to charge on that account. Cornell ran its own case through a student conduct process, and federal privacy law seals what it decided. [VERIFY C15] Now Cornell says it handed the prosecutor the group-chat screenshot, and the prosecutor says his office never received it. [VERIFY C17] The governor has asked for an independent review, and the attorney general's office is reviewing Cornell's response. [VERIFY C18]
+His evidence lands on the people who let men off and the positions that lift them up. His conclusion lands on every man alive. In this case the institutions left paper. In November 2024 the district attorney declined to charge. He says the sworn statement in front of him described no force, no incapacity, and no drug given without consent, and the campus police account he relied on called the encounter voluntary, conscious, and consensual. Cornell ran its own case through Title IX, expelled and suspended students, and closed the chapter, and federal privacy law seals the details. Cornell says it gave the prosecutor the group-chat screenshot in 2024. The prosecutor first said his office never received it. Now he says it reached his team after the decision. The governor called for an independent review, and Cornell agreed to one. The attorney general's office is reviewing Cornell's response on its own.
 
 Toussaint (04:36)
 Three institutions, and each one points at another. None of the four camps is arguing about any of them.
@@ -123,8 +123,22 @@ Where you aim the anger matters. Aim it at a category, and the category absorbs 
 | jalachantelle_2026b | same | same | ~62.5–74.02 | "a choice to be bad" |
 | amandathegateman_2026 | mamwa, @amandathegateman, instagram.com/reel/Dcvy9nJNmQe | igexport-Dcvy9nJNmQe.mp4 | 11.92–35.12 | "Who set that system up? … Not Jackson down the street" |
 
-Opening Blake slice: if C1 fails, use Jaylin's stitch (f1e45a82…, 3.24–14.48), which carries Blake's
-own audio, or trim to 0.00–3.92 ("Yes, all men is the safest position…") and drop the figures.
+Blake's 2025 figures could not be matched to a published 2025 table (C1). The 2022 BJS national
+estimate is close: 89.6% of rape victims female, 93.6% of victimizations involving a male offender.
+His clip plays as his claim; Aisha's line says "close to what the national estimates show" and does
+not cite a year. Jaylin's 0.065% could not be reproduced (C7); Aisha calls it a floor, which holds
+whatever the exact cell. The ~6% survey figure is Lisak & Miller 2002 (6.4%) and Anderson et al.
+(6.1% completed rape, five universities) (C8).
+
+Not used in the open, and their failures if they are used later:
+- @krystaltantricyogi: "the system that killed Nolan Wells" is contradicted. Wells's death is
+  undetermined and a grand jury found no criminal wrongdoing (C10). Cut that line.
+- @uplandsandy: "Poopgate" feces claim unsupported; AEPi arrests were tentative (C11). The IU
+  Phi Kappa Psi rhabdomyolysis case and the obstruction charge are real (C12). Drop the 85% graphic (C13).
+- @eugenesquad's other claims: "aggravated assault is the only violent crime more common than
+  rape" is false; robbery is too (C5). "Four out of five unreported" is a college-women figure
+  from 1995–2013; the current all-ages figure is about three in four (C4). Carroll: liable for
+  sexual abuse; the Supreme Court denied review on June 29, 2026, and did not rule on the merits (C6).
 
 Credits: name each creator in the show notes and as a lower third in the video. On air, the
 speaker label carries the name.
