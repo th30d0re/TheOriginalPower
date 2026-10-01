@@ -128,6 +128,7 @@ Written by the CLI at job creation; each stage rewrites its own block only.
 Ensemble jobs set `stages.asr.engine` to `ensemble`. Their `detail` block may additionally contain
 the optional keys `phonon_model`, `filled_gaps`, `unfilled_gaps`, `backfilled_segments`, and
 `coverage_warnings`. A coverage warning contains `words` and an `excerpt` of at most 120 characters.
+The ensemble engine looks for Fermion in the repository-root `.venv-fermion/bin/fermion` after checking `VIDEOLAB_FERMION`.
 The optional failure keys are `ensemble_error` and `coverage_check_error`. Existing Whisper jobs may
 omit every ensemble field.
 
