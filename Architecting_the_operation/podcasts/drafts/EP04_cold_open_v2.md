@@ -1,4 +1,4 @@
-# EP04 cold open — v2 draft
+# EP04 cold open — v2 draft (merged into the script 2026-10-01)
 
 Replaces `ATO_EP04_what_power_is.md` from 00:00 through Toussaint (01:22). Everything from
 Aisha (01:32) "That is what this hour hands you" onward stays as written.

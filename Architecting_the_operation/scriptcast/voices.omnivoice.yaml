@@ -53,3 +53,35 @@ speakers:
     # Emmanuel's reaction turns. Same archive mechanism as lee_atwater.
     engine: "archive"
     character_profile: "Source clip, @harvardseye x Gov. Healey, Yes-on-9 press event"
+
+  # EP04 cold open: real voices from the Cornell Chi Phi discourse, Sept-Oct 2026.
+  # Archive engine; each plays a registered clip from archive/clips.yaml.
+  blake_johnson:
+    name: "Blake Johnson"
+    engine: "archive"
+    character_profile: "Instagram reel, @eugenesquad, 2026"
+
+  jaylin_hertz:
+    name: "Jaylin Hertz"
+    engine: "archive"
+    character_profile: "Instagram reel, @jesus.reigns23, 2026"
+
+  jaeden:
+    name: "jaeden"
+    engine: "archive"
+    character_profile: "Instagram reel, @jaeserv, 2026"
+
+  the_mutual_man:
+    name: "The Mutual Man"
+    engine: "archive"
+    character_profile: "Instagram reel, @themutualman, 2026"
+
+  jala_chantelle:
+    name: "Jala Chantelle"
+    engine: "archive"
+    character_profile: "Instagram reel, @jalachantelle, 2026"
+
+  mamwa:
+    name: "mamwa"
+    engine: "archive"
+    character_profile: "Instagram reel, @amandathegateman, 2026"
