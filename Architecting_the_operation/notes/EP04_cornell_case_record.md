@@ -1,0 +1,88 @@
+# EP04 Cold Open — The Cornell Case Record
+
+Compiled 2026-10-01. The case is moving daily; re-check before render.
+Status as of this date: **civil allegations, no criminal charges, grand jury review pending.**
+
+---
+
+## What the record supports
+
+| Fact | Status | Source |
+|---|---|---|
+| Jane Doe, then 20, a Cornell student, alleges she was drugged and raped by seven Chi Phi members at the fraternity house, night of Oct 19–20, 2024 | **Alleged** (101-page civil complaint) | Ithaca Voice; PBS |
+| Complaint alleges a Snapchat group, "Chi Phi Actives," was used to invite other members during the assault | **Alleged** | Wikipedia summary of complaint; CNN |
+| Reported Nov 8, 2024. Same day, Cornell placed the chapter and the members on temporary suspension | Confirmed | Cornell statement, Nov 26, 2024 |
+| Title IX investigation; hearing panel issued "a range of sanctions, which included expulsions and suspensions." Chapter closed, still barred | Confirmed by Cornell (VP Kyle Kimball) | Cornell Daily Sun; PBS |
+| Lawsuit says defendants could "mitigate their conduct by submitting essays." Cornell: none were offered essays "as a sole consequence" | **Disputed** | Cornell Daily Sun; PBS |
+| 2024: DA Matthew Van Houten declined charges. Doe's initial sworn statement did not allege gang rape or drugging. The Cornell Police statement described the encounter as "voluntary, conscious, and consensual" | Confirmed (DA's account) | PBS; Ithaca Voice |
+| Cornell says it gave the DA all investigative information, "specifically naming the Snapchat screenshot." DA says his office "never received" it | **Contradiction between institutions** | Cornell Daily Sun (FAQ article) |
+| Sept 14/16, 2026: lawsuit filed (outlets differ on date). Sept 26: Daily Sun publishes the defendants' names. Sept 28: DA reopens, will go to grand jury | Confirmed | Wikipedia timeline; PBS; Ithaca Voice |
+| Oct 1, 2026: Gov. Hochul says Cornell agreed to an independent review. AG Letitia James's office is separately reviewing Cornell's response | Confirmed | Cornell Daily Sun |
+| At least one defendant publicly denies the allegations | Confirmed | TMZ (secondary) |
+
+## What the record does not support yet
+
+- **"Cover-up."** Documented so far: Cornell disciplined (suspension, expulsions, chapter closed), kept the sanctions confidential under federal privacy law, and now disputes with the DA who had which evidence. Whether that was concealment is exactly what the Hochul and AG reviews are for. The current script line *"bury a report"* (00:46) is ahead of the record.
+- **Guilt.** Seven men are civil defendants. None charged. On air they are *accused*.
+
+---
+
+## The name
+
+"Cornell 7" is widespread (a site at cornellseven.com, the Wikipedia title, Ithaca Voice headline).
+The hosts should not adopt it. The Central Park Five were Black and Latino teenagers convicted in a
+racialized panic and later exonerated. A parallel name either implies these men were wrongly
+accused or imports a racial echo, and EP05 is the racism hour. **Hosts say "the Chi Phi case at
+Cornell."** Clips that use the other name can keep it; that is the discourse being documented.
+
+## Don't name the men
+
+The Sun published the names. The show shouldn't, and the episode's own argument is the reason:
+the cold open sets up that seven individuals are not the structure. Naming them hands the listener
+a photographable villain, which the script itself calls the failure mode at 62:08 — *"The failure
+mode is a new villain."*
+
+---
+
+## The record is better for the episode than the script's version
+
+The three questions run on this case without inventing anything:
+
+- **Who carried the enforcement decision.** Cornell Police wrote the encounter as consensual; the
+  DA declined on that statement; each institution now points at the other. That is the documented
+  hand-off.
+- **Who wrote the rule that made the silence cheap.** The adjudication ran through the Student Code
+  of Conduct and Title IX, with sanctions confidential by law. One outlet's framing: Cornell
+  "labeled gang rape a code of conduct violation." The route ran through a disciplinary channel
+  instead of a criminal one, and the details are sealed.
+- **Who is paid in standing.** The group chat, if the complaint holds, is camp two's "thick
+  complicity" sitting in a document: many men who knew and did not act. That is the buffer tier on
+  the record, and it is the strongest version of camp two's argument.
+- **Who collects.** Leave blank. The framework says a missing name is information.
+
+## The four camps are on the record
+
+- **Camp one / two:** Florence Pugh — "How can you expect us to trust that it's 'not all men' when
+  in moments like this, many of you stay quiet?" This is camp two's translation, nearly word for
+  word. Boston Globe opinion (Sept 29): it is "too many men and too much silence."
+- **Camp three:** the "not all men" chorus the Globe piece is answering.
+- **Camp four:** not yet sourced. Needed from the reels.
+- Also on record: AOC at an Ithaca town hall — "culture of rape" at Cornell (institutional framing);
+  Mayor Cantelmo proposed a moratorium on student events.
+
+---
+
+## Sources
+
+- https://en.wikipedia.org/wiki/Cornell_7
+- https://www.pbs.org/newshour/nation/prosecutor-reopens-probe-into-cornell-gang-rape-allegations-after-accuser-files-lawsuit
+- https://ithacavoice.org/2026/09/cornell-7-district-attorney-to-reopen-investigation-in-fraternity-rape-allegations/
+- https://statements.cornell.edu/2024/20241126-update.cfm
+- https://www.cornellsun.com/article/2026/09/cornell-releases-faq-on-alleged-chi-phi-gang-rape-contradicts-d-a
+- https://www.cornellsun.com/article/2026/10/cornell-agrees-to-independent-review-alleged-chi-phi-gang-rape
+- https://www.cornellsun.com/article/2026/09/cornell-denies-that-defendants-in-alleged-chi-phi-gang-rape-only-wrote-essays-confirms-expulsions
+- https://www.cornellsun.com/article/2026/09/aoc-denounces-culture-of-rape-chi-phi
+- https://www.bostonglobe.com/2026/09/29/opinion/cornell-frat-rape-lawsuit/
+- https://yahoo.com/news/us/articles/celebrities-speaking-cornell-7-now-163402548.html
+- https://www.tmz.com/2026/09/30/cornell-university-student-gillio-lopes-denies-gang-rape-allegations/
+- CNN (Sept 28 – Oct 1) returned HTTP 451 to fetch; headlines only, not used for facts.
