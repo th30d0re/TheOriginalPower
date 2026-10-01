@@ -679,7 +679,22 @@ Toussaint (42:59)
 So left-handed is real friction, a partition schools once enforced, and no collector.
 
 Aisha (43:04)
-That is the reading. The instrument can sort what the punchline could only laugh at. Short, you can run yourself. Same questions.
+That is the reading. And the partition left a picture behind. A survey of over a million Americans found about three percent left-handed among people born around 1900, and about eleven and a half percent among people born after 1945. Then the line goes flat. Take the punishment away, and the rate climbs to the real number and stops.
+
+Emmanuel Theodore (40:28)
+That curve gets pulled out every time more people start naming an identity. Look at where it flattens. That is the real rate, showing up once nobody gets punished for it.
+
+Toussaint (40:38)
+And short.
+
+Aisha (40:40)
+Height gets the same test. Taller workers earn more, about one to two percent per inch in American and British samples, and a lot of that runs through childhood conditions, schooling, and the jobs people sort into. Taller presidential candidates draw more votes, and the taller one has still won about as often as a coin flip. Crash tests started from a midsize male dummy, and safety gear that fits badly costs women and shorter workers. The advantage runs stronger for men, so height mostly rides the gender line. The idea that tall women get penalized for crowding a masculine role is out there, and the research does not show it yet. And who collects. Nobody the research can find.
+
+Toussaint (41:22)
+So the instrument sorts the whole joke.
+
+Aisha (41:24)
+It sorts what the punchline could only laugh at.
 
 Toussaint (43:12)
 Fine. Now do the math on the rest of the joke.
