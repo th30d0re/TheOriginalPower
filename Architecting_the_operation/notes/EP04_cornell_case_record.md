@@ -86,3 +86,19 @@ The three questions run on this case without inventing anything:
 - https://yahoo.com/news/us/articles/celebrities-speaking-cornell-7-now-163402548.html
 - https://www.tmz.com/2026/09/30/cornell-university-student-gillio-lopes-denies-gang-rape-allegations/
 - CNN (Sept 28 – Oct 1) returned HTTP 451 to fetch; headlines only, not used for facts.
+
+---
+
+## Reels ingested (videolab, 2026-10-01)
+
+Sources are in ~/Downloads (not copied into the repo). Creator handles still needed for
+every reel before anything is registered in `archive/clips.yaml`.
+
+| Slug | File | Length | Creator | Camp | Use |
+|---|---|---|---|---|---|
+| file-a956da0105e2 | 8d63818c….MP4 | 1:21 | @JAESERV (on-screen) | **Two, at full strength — and an attack on four** | Steelman. "Those seven boys were part of a larger 50 boys… they won't hold their own brothers accountable." "You're trying to hide accountability behind nuance and discourse." |
+| file-81f8752e71f1 | 6a0cf9a2….MP4 | 2:11 | unknown | **Four, on the racial axis** | "Separate the individual from the system." "I'm not asking for collective guilt. What we need is collective honesty." Bridge to "the same cut fails on the racial axis" and to EP05. |
+| file-a5b3738c54c0 | e63d7f78….MP4 | 1:21 | unknown | None — multi-axis | "Women are not property and men are not disposable." Not about the case. Fits 37:42 (one person, two positions). ASR likely swapped "women"/"men" in "Men are shamed for having a lot of sex"; check the audio before captioning. |
+| — | Dd110O6pMRz | — | — | — | Not downloaded: Instagram requires login. |
+
+Still missing in a real voice: **camp one** (flat "all men") and **camp three** (flat "not all men").
