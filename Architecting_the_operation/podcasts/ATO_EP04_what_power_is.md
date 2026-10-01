@@ -309,6 +309,21 @@ The machine hands out a picture of itself.
 Emmanuel Theodore (18:59)
 The weather picture has one property the machine needs. It makes the machine unanswerable. You cannot sue a climate.
 
+Toussaint (15:50)
+It hands it out in classrooms too.
+
+Emmanuel Theodore (15:53)
+With credentials. The two-box picture has a formal lineage. Social psychology calls the categories in-group and out-group, and Social Identity Theory, from Tajfel and Turner in nineteen seventy-nine, explains how group membership organizes trust, threat, belonging, and self-concept. That was the framework I received in my own sociology and social psychology coursework. I learned in-group bias, prejudice, cognitive bias, and the rapid mental sorting of us and them. The account ended at cognition. I was given a description of the partition inside the mind. I was looking for the mechanism that installs the partition, finances it, and converts it into law.
+
+Aisha (16:30)
+The book begins with Social Identity Theory as the cognitive substrate. Ordinary predictive cognition sorts patterns under uncertainty. Legal and social systems feed it malicious priors. The partition then feels like perception. That is the move from a theory of group cognition to a theory of institutional installation.
+
+Toussaint (16:52)
+So the mind supplies a vulnerability. The institution supplies the input.
+
+Emmanuel Theodore (16:58)
+And the system runs on two coupled runtimes. Institutional code executes through law, property, policing, and finance. Cognitive code executes through fear, status, disgust, loyalty, and selective empathy. The book calls the installed exploit the fractal mind virus, because the same partition-and-extraction logic recurs from empire and nation down to the school district, the household, the ballot line, and the private reflex of suspicion.
+
 Toussaint (19:06)
 So what broke it for you.
 
