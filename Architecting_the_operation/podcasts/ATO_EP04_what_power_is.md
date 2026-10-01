@@ -661,7 +661,49 @@ Toussaint (40:30)
 So a white factory worker.
 
 Aisha (40:31)
-Sits inside the in-group on race. On money and power, he sits outside it. Both facts are true at the same instant, about the same man. The book calls each axis-line a projection. Two-box thinking looks at that man and has to pick one team for him. The five-job picture lets him hold both of his positions, and it predicts something the two-box picture cannot. He will defend the line he is inside of, because standing is the wage he is paid, even while the other line is extracting from him.
+Sits inside the in-group on race. Inside the in-group on gender too, because he is a man. On money and power, he sits outside it. All three facts are true at the same instant, about the same man. The book calls each axis-line a projection. Two-box thinking looks at that man and has to pick one team for him. The five-job picture lets him hold all of his positions, and it predicts something the two-box picture cannot. He will defend the lines he is inside of, because standing is the wage he is paid, even while the other line is extracting from him.
+
+Toussaint (38:19)
+Okay, then I have to ask the question everybody makes fun of. If every person sits on six lines at once, who wins. A Black, nonbinary, disabled, neurodivergent, left-handed, short person, or a white trans man with severe anxiety. Somebody hand out the medals.
+
+Aisha (38:36)
+That joke has been a punchline for twenty years, and it lands because the people telling it are right about one thing. The room has no instrument. It is adding up feelings. So here is the instrument. The book uses six lines. Race, gender, religion, sexuality, nationality, ability. Left-handed and short get no line, because a line needs a documented mechanism. A statute, a payroll, a policy that routes extraction through it.
+
+Toussaint (38:58)
+Fine. Then do the math.
+
+Aisha (39:00)
+The book does it with pay, because pay is on paper. Black men earn about eighty cents on the white man's dollar. White women earn about eighty-three. If the two gaps added, a Black woman would land at sixty-three cents. If they multiply, she lands at sixty-six. The measured number is sixty-seven.
+
+Toussaint (39:18)
+Multiplies.
+
+Aisha (39:19)
+Multiplies. The book calls that an illustrative fit, and it points the same direction Kimberlé Crenshaw wrote about in 1989. In a 1976 case, a court told Black women at General Motors they could sue as Black or as women, and it had no box for both. That is intersectionality as Crenshaw wrote it. A claim about where the law goes blind.
+
+Emmanuel Theodore (39:37)
+Crenshaw pointed at the law, something you can read and change. The version that shows up online scores feelings in a room, live, with no ledger. That version is the one conservatives turned into a punchline, and the punchline works on it.
+
+Toussaint (39:52)
+Give me a room.
+
+Aisha (39:54)
+Greenfield, Massachusetts, this September. A small queer bar had required KN-95 masks since the day it opened. It was losing money, so it made Saturday nights mask-optional. The Boston Globe covered the community meeting that followed. People called the change ableist, eugenicist, and racist. One of the owners said she had lived in her truck for six months and worked four jobs to keep the place open. A critic answered that her tears were racist and deflecting.
+
+Toussaint (40:24)
+So who won.
+
+Aisha (40:26)
+Run the instrument. The disability claim is real. Ability is one of the six lines, and a mask policy routes risk through it. The owner's claim is real. She sits outside the line on money, and on gender and sexuality too. Everybody in that room sits outside at least one line. Then ask the hour's question. Who collects. The bar owed thirty-nine hundred dollars in back rent.
+
+Toussaint (40:49)
+The landlord.
+
+Aisha (40:51)
+A location, and the only party in the story with money coming in. The ranking fight was about everybody else in the room.
+
+Emmanuel Theodore (40:58)
+The oppression Olympics is a targeting error with a scoreboard.
 
 Toussaint (41:02)
 Run the same cut on the gendered axis. The feed we opened on. All men.
