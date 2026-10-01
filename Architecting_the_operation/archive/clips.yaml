@@ -1,4 +1,11 @@
 clips:
+  amandathegateman_2026:
+    citation: mamwa (@amandathegateman), Instagram reel, 2026
+    content_note: ''
+    end: 34.86
+    origin_url: https://www.instagram.com/reel/Dcvy9nJNmQe/
+    source: Architecting_the_operation/archive/sources/amandathegateman_2026.mp4
+    start: 11.8
   atwater_1981:
     citation: 'Perlstein, R. (2012, November 13). Exclusive: Lee Atwater''s infamous
       1981 interview on the Southern Strategy. The Nation. Interview conducted by
@@ -12,6 +19,69 @@ clips:
     start: 997.95
     transcript_source: The caption follows the wording The Nation published with the
       audio. The clip begins where that published excerpt begins.
+  eugenesquad_2026:
+    citation: Blake Johnson (@eugenesquad), Instagram reel, 'Yes, all men', 2026-09-29
+    content_note: His figures are his claim; see notes/kimi/EP04_factcheck_FINDINGS.md
+      C1.
+    end: 16.74
+    origin_url: https://www.instagram.com/reel/Dd4LvfSR2Xx/
+    source: Architecting_the_operation/archive/sources/eugenesquad_2026.mp4
+    start: 0.0
+  eugenesquad_2026b:
+    citation: Blake Johnson (@eugenesquad), Instagram reel, 'Yes, all men', 2026-09-29
+    content_note: ''
+    end: 137.32
+    origin_url: https://www.instagram.com/reel/Dd4LvfSR2Xx/
+    source: Architecting_the_operation/archive/sources/eugenesquad_2026b.mp4
+    start: 131.32
+  jaeserv_2026:
+    citation: jaeden (@jaeserv), Instagram reel, 'What if it's all of our problem?',
+      2026
+    content_note: ''
+    end: 38.24
+    origin_url: https://www.instagram.com/reel/Dd7NnycS4cV/
+    source: Architecting_the_operation/archive/sources/jaeserv_2026.mp4
+    start: 29.98
+  jalachantelle_2026a:
+    citation: Jala Chantelle (@jalachantelle), Instagram reel, 'Not all men are bad',
+      2026-09-30
+    content_note: ''
+    end: 31.7
+    origin_url: https://www.instagram.com/reel/Dd7W6WMStQ1/
+    source: Architecting_the_operation/archive/sources/jalachantelle_2026a.mp4
+    start: 19.16
+  jalachantelle_2026b:
+    citation: Jala Chantelle (@jalachantelle), Instagram reel, 'Not all men are bad',
+      2026-09-30
+    content_note: ''
+    end: 74.16
+    origin_url: https://www.instagram.com/reel/Dd7W6WMStQ1/
+    source: Architecting_the_operation/archive/sources/jalachantelle_2026b.mp4
+    start: 63.58
+  jesusreigns_2026:
+    citation: Jaylin Hertz (@jesus.reigns23), Instagram reel replying to @eugenesquad,
+      2026-10-01
+    content_note: His 0.065% could not be reproduced; see FINDINGS C7.
+    end: 39.7
+    origin_url: https://www.instagram.com/reel/Dd7mYMqR5rr/
+    source: Architecting_the_operation/archive/sources/jesusreigns_2026.mp4
+    start: 18.96
+  mutualman_2026a:
+    citation: The Mutual Man (@themutualman), Instagram reel, 'How my fraternity systematically
+      silenced me', 2026-10-01
+    content_note: Personal testimony; his school is unnamed and his account is unverified.
+    end: 29.06
+    origin_url: https://www.instagram.com/reel/Dd9VWGRBu6G/
+    source: Architecting_the_operation/archive/sources/mutualman_2026a.mp4
+    start: 11.52
+  mutualman_2026b:
+    citation: The Mutual Man (@themutualman), Instagram reel, 'How my fraternity systematically
+      silenced me', 2026-10-01
+    content_note: Personal testimony; his school is unnamed and his account is unverified.
+    end: 46.92
+    origin_url: https://www.instagram.com/reel/Dd9VWGRBu6G/
+    source: Architecting_the_operation/archive/sources/mutualman_2026b.mp4
+    start: 43.72
   reel_a1:
     citation: '@harvardseye, Instagram reel, Gov. Maura Healey interview, Yes-on-9
       press event'
@@ -31,19 +101,12 @@ clips:
   reel_a2:
     citation: '@harvardseye, Instagram reel, Gov. Maura Healey interview, Yes-on-9
       press event'
+    content_note: Excerpt of reel 49.2 to 77.5 s with a tape-stop effect on the last
+      1.2 s (scriptcast-tapefx).
     end: 29.3
     linger: next
     origin_url: https://www.instagram.com/reel/DdoZBRXIbK5/
     source: Architecting_the_operation/archive/sources/reel_a2_tapestop.mp4
-    start: 0.0
-    content_note: 'Excerpt of reel 49.2 to 77.5 s with a tape-stop effect on the last 1.2 s (scriptcast-tapefx).'
-  reel_rewind_kids:
-    citation: '@harvardseye, Instagram reel, Gov. Maura Healey interview, Yes-on-9
-      press event'
-    content_note: 'Tape rewind from reel 77.5 s back to 67.5 s at 6x, then the phrase at 67.96 to 69.30 s (scriptcast-tapefx).'
-    end: 3.05
-    origin_url: https://www.instagram.com/reel/DdoZBRXIbK5/
-    source: Architecting_the_operation/archive/sources/reel_rewind_replay.mp4
     start: 0.0
   reel_close:
     citation: '@harvardseye, Instagram reel, Gov. Maura Healey interview, Yes-on-9
@@ -77,3 +140,12 @@ clips:
     origin_url: https://www.instagram.com/reel/DdoZBRXIbK5/
     source: Architecting_the_operation/archive/sources/reel_q2.mp4
     start: 43.14
+  reel_rewind_kids:
+    citation: '@harvardseye, Instagram reel, Gov. Maura Healey interview, Yes-on-9
+      press event'
+    content_note: Tape rewind from reel 77.5 s back to 67.5 s at 6x, then the phrase
+      at 67.96 to 69.30 s (scriptcast-tapefx).
+    end: 3.05
+    origin_url: https://www.instagram.com/reel/DdoZBRXIbK5/
+    source: Architecting_the_operation/archive/sources/reel_rewind_replay.mp4
+    start: 0.0

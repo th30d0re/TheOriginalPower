@@ -1,25 +1,79 @@
 Architecting the Operation. What power is.
 
 Toussaint (00:00)
-A campus assault story hits the feed. Comments open in under an hour. Watch the room sort itself into camps.
+In September a former Cornell student sued in New York state court. She says that in October 2024, seven members of the Chi Phi fraternity drugged her and raped her at the chapter house. The seven men are accused. As of this recording, none of them has been charged with a crime, and the one defendant who has spoken through a lawyer says he is innocent. Two years after the night in question, the case reached the public, and inside a week the feed had sorted itself into camps.
 
-Aisha (00:08)
-Camp one says all men. Flat. The category is the crime, and the anger lands on every face that matches the category.
+Aisha (00:22)
+Camp one.
 
-Toussaint (00:17)
-Camp two translates that for the room. The phrase names a thick complicity. Enough men look away, enough men stay quiet, that caution starts to feel like a category. The translator is doing real work. The category is still the landing pad.
+Blake Johnson (00:24)
+[clip:eugenesquad_2026] Yes, all men is the safest position for a woman to hold numerically. We know that men typically commit most rapes, but let's look at last year's FBI crime data. If we look at rapes from 2025, 90 plus percent were committed by men, shocker, and more than 90 percent of the victims were women.
 
-Aisha (00:34)
-Camp three answers with a photograph of a good man. Most men. My brother. Me. The category is the insult, and the fight becomes a fight about the size of the category.
+Toussaint (00:36)
+And the reply came stitched to the same video.
 
-Toussaint (00:46)
-Camp four looks past the category. The people who write the silence into policy, bury a report, and collect from the arrangement are a thinner set than the word men. Anger aimed at the whole category is anger aimed at a ceiling.
+Jaylin Hertz (00:39)
+[clip:jesusreigns_2026] You can't say all men is the safest position for women to hold because men make up 90 percent of rapes. You have to look at what percent of men are rapists. And do you know what percent of men are rapists based on the 2024 FBI stats? I want you to guess. Take a second to guess. It is 0.065%. So less than 1% of men are rapists.
 
-Aisha (01:03)
-Four camps. One low-resolution picture. Every camp is answering a two-box question as if the two boxes were the whole building. Men and not-men. Us and them. Oppressor and oppressed. The argument burns hot, and the chair the arrangement is built for never enters the thread.
+Aisha (00:59)
+Two men, one kind of table. The first divided the crimes by the men who committed them and got ninety percent, which is close to what the national estimates show. The second divided all men by one year of offenders the police recorded, which makes his number a floor. Surveys of college men put self-reported rape or attempted rape near six percent. Both numbers measure the size of the category. Neither man asks who decided what happened after that night.
 
-Toussaint (01:22)
-Where you aim the anger matters. Aim it at a category, and the category absorbs it. Aim it at a structure, and a structure can be located.
+Toussaint (01:16)
+Camp two asked something sharper.
+
+jaeden (01:19)
+[clip:jaeserv_2026] You don't match the identity of the seven boys who do this vile act, but those seven boys were part of a larger 50 boys. And those 50 boys were trauma-bonded in a way where they won't hold their own brothers accountable.
+
+Aisha (01:29)
+That is the strongest observation anyone made in the whole thread. The lawsuit says the silence was written down. It alleges a group chat where members were invited upstairs while she was in the house. So the question is why. Why would that many men stay quiet.
+
+Toussaint (01:46)
+A man who stood inside one of those houses answered it.
+
+The Mutual Man (01:50)
+[clip:mutualman_2026a] Establish a power hierarchy through humiliation. You must enforce the hierarchy or else the system will turn against you. They have implicit rules to belong, such as don't snitch, seek approval, keep it in-house, protect the bros, and keep tradition. They frame these things as brotherhood.
+
+The Mutual Man (02:08)
+[clip:mutualman_2026b] But really, it's filtering for submission to the system.
+
+Aisha (02:12)
+He tried to stop it in his own chapter, and the chapter pushed him out. Belonging is a wage. The house pays it every night, and the price is silence.
+
+Toussaint (02:22)
+Camp three answers all of this with three words. Not all men. <!-- antithesis-ok: quoting the slogan -->
+
+Aisha (02:27)
+And on the count, camp three is right. Most men collect nothing from what happened in that house. The sharpest version of camp three's point came from inside feminism.
+
+Jala Chantelle (02:36)
+[clip:jalachantelle_2026a] It is very similar as saying boys will be boys, right? It's a bio-essentialist way of generalizing boys and men as just people who do bad things and it just gives them a pass to continue to do those bad things.
+
+Jala Chantelle (02:50)
+[clip:jalachantelle_2026b] If we understand that it is a choice to be bad and it isn't just a biological gender specific preset, then we are actually encouraging people to do the work to dismantle the harmful systems that they have been existing under.
+
+Emmanuel Theodore (03:01)
+That is the reason I started this series here. Blame the whole category, and you describe the behavior as nature. Nature can't be changed. All that is left to do with it is hate it. A behavior that a structure produces can be changed, because the structure has parts, and parts can be found.
+
+Toussaint (03:20)
+Camp four found a part.
+
+mamwa (03:23)
+[clip:amandathegateman_2026] Who set that system up? Not individual actors, not men. Billionaires set that system up. Modern day patriarchy is deeply intertwined with class struggle and capitalism. Right now, who set that system up is the billionaires, is the political class, is the bourgeoisie. Not Jackson down the street. <!-- antithesis-ok: verbatim clip caption -->
+
+Aisha (03:46)
+Now go back to camp one, and listen to where his own evidence ends.
+
+Blake Johnson (03:50)
+[clip:eugenesquad_2026b] When you look at our society and the fact that we not only tend to let these people off, but to elevate them to positions of power. <!-- antithesis-ok: verbatim clip caption -->
+
+Toussaint (03:57)
+Let them off. Elevate them. Those are things institutions do.
+
+Aisha (04:01)
+His evidence lands on the people who let men off and the positions that lift them up. His conclusion lands on every man alive. In this case the institutions left paper. In November 2024 the district attorney declined to charge. He says the sworn statement in front of him described no force, no incapacity, and no drug given without consent, and the campus police account he relied on called the encounter voluntary, conscious, and consensual. Cornell ran its own case through Title IX, expelled and suspended students, and closed the chapter, and federal privacy law seals the details. Cornell says it gave the prosecutor the group-chat screenshot in 2024. The prosecutor first said his office never received it. Now he says it reached his team but was not part of his first analysis. The governor called for an independent review, and Cornell agreed to one. The attorney general's office is reviewing Cornell's response on its own.
+
+Toussaint (04:36)
+Three institutions, and each one points at another. None of the four camps is arguing about any of them. Where you aim the anger matters. Aim it at a category, and the category absorbs it. Aim it at a structure, and a structure can be located.
 
 Aisha (01:32)
 That is what this hour hands you. A book that treats the two-box picture as a coarse projection of a taller machine. An extraction circuit with five jobs, a fixed order of operations, and a test you can run yourself, on a statute, on a payroll, on an outcome. The same cut that fails on the gendered axis fails on the racial axis. The geometry is the same.
@@ -556,7 +610,7 @@ Toussaint (39:00)
 And camp one, hearing that, hears a defense of men.
 
 Aisha (39:04)
-Camp four is doing a different job. It keeps the harm on the table. It refuses the claim that every man collects from that harm. Blame the whole category and you write the category as natural. You tell the room the behavior is the species. A located structure has a mechanism that can be altered. A natural category has no mechanism and accumulates anger aimed at the wrong object. That is why the aim of the anger is the whole hour.
+Camp four is doing a different job. It keeps the harm on the table. It refuses the claim that every man collects from that harm. That is the argument Emmanuel opened the hour with. A located structure has a mechanism that can be altered, and the five jobs are where the mechanism lives. That is why the aim of the anger is the whole hour.
 
 Toussaint (39:32)
 The writer and the hands. Those are never the same person.
