@@ -36,14 +36,19 @@
     },
     "asr": {
       "status": "ok",
-      "engine": "mlx-whisper",
+      "engine": "ensemble",
       "detail": {
         "model": "mlx-community/whisper-large-v3-turbo",
         "language": "en",
-        "dropped_segments": 0
+        "dropped_segments": 0,
+        "phonon_model": "FermionResearch/Phonon-2",
+        "filled_gaps": 0,
+        "unfilled_gaps": 0,
+        "backfilled_segments": 0,
+        "coverage_warnings": []
       },
-      "started_at": "2026-08-02T14:40:38Z",
-      "ended_at": "2026-08-02T14:40:44Z",
+      "started_at": "2026-10-01T21:03:43Z",
+      "ended_at": "2026-10-01T21:04:43Z",
       "error": null
     },
     "report": {
