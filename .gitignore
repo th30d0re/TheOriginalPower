@@ -38,6 +38,7 @@ __pycache__/
 outputs/
 website/public/videolab/
 .venv-voice/
+.venv-fermion/
 .venv-harness/
 
 # Harness daemon runtime artefacts

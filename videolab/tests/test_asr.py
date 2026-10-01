@@ -316,3 +316,30 @@ def test_ensemble_backfill_replaces_overlapping_phonon_words(tmp_path: Path) -> 
         not (38.5 <= (float(word["start"]) + float(word["end"])) / 2.0 < 42.6)
         for word in transcript["words"]
     )
+
+
+def test_fermion_executable_prefers_environment(monkeypatch) -> None:
+    monkeypatch.setenv("VIDEOLAB_FERMION", "/custom/bin/fermion")
+    monkeypatch.setattr(asr, "_repo_root", lambda: Path("/unused"))
+    monkeypatch.setattr(asr.shutil, "which", lambda _name: "/path/bin/fermion")
+
+    assert asr._fermion_executable() == "/custom/bin/fermion"
+
+
+def test_fermion_executable_uses_dedicated_venv(tmp_path: Path, monkeypatch) -> None:
+    monkeypatch.delenv("VIDEOLAB_FERMION", raising=False)
+    executable = tmp_path / ".venv-fermion" / "bin" / "fermion"
+    executable.parent.mkdir(parents=True)
+    executable.touch()
+    monkeypatch.setattr(asr, "_repo_root", lambda: tmp_path)
+    monkeypatch.setattr(asr.shutil, "which", lambda _name: "/path/bin/fermion")
+
+    assert asr._fermion_executable() == str(executable)
+
+
+def test_fermion_executable_falls_back_to_path(tmp_path: Path, monkeypatch) -> None:
+    monkeypatch.delenv("VIDEOLAB_FERMION", raising=False)
+    monkeypatch.setattr(asr, "_repo_root", lambda: tmp_path)
+    monkeypatch.setattr(asr.shutil, "which", lambda name: f"/path/bin/{name}")
+
+    assert asr._fermion_executable() == "/path/bin/fermion"

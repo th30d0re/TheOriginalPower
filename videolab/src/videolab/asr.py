@@ -206,8 +206,20 @@ def _free_port() -> int:
         return int(listener.getsockname()[1])
 
 
+def _repo_root() -> Path:
+    return Path(__file__).resolve().parents[3]
+
+
 def _fermion_executable() -> str:
-    executable = os.environ.get("VIDEOLAB_FERMION") or shutil.which("fermion")
+    executable = os.environ.get("VIDEOLAB_FERMION")
+    if executable:
+        return executable
+
+    dedicated_executable = _repo_root() / ".venv-fermion" / "bin" / "fermion"
+    if dedicated_executable.is_file():
+        return str(dedicated_executable)
+
+    executable = shutil.which("fermion")
     if not executable:
         raise RuntimeError("fermion is unavailable; set VIDEOLAB_FERMION or add it to PATH")
     return executable
