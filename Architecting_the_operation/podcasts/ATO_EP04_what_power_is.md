@@ -76,13 +76,13 @@ Toussaint (05:35)
 Three institutions, and each one points at another. None of the four camps is arguing about any of them. Where you aim the anger matters. Aim it at a category, and the category absorbs it. Aim it at a structure, and a structure can be located.
 
 Aisha (05:50)
-That is what this hour hands you. A book that treats the two-box picture as a coarse projection of a taller machine. An extraction circuit with five jobs, a fixed order of operations, and a test you can run yourself, on a statute, on a payroll, on an outcome. The same cut that fails on the gendered axis fails on the racial axis. The geometry is the same.
+That is what this episode hands you. A book that treats the two-box picture as a coarse projection of a taller machine. An extraction circuit with five jobs, a fixed order of operations, and a test you can run yourself, on a statute, on a payroll, on an outcome. The same cut that fails on the gendered axis fails on the racial axis. The geometry is the same.
 
 Emmanuel Theodore (06:12)
 I wrote the book. It is called The Original Power, and it is a finished specification. The machine in it has named parts. Every claim about those parts carries its evidence underneath, and its test for breaking.
 
 Toussaint (06:25)
-By the end of this hour you can pick up any fight in your feed and locate three things. Who collects. Who wrote the rule that made the silence cheap. Who is paid in standing to defend the line. The answers are checkable. You will leave knowing why the coarse binary keeps missing the chair.
+By the end of this episode you can pick up any fight in your feed and locate three things. Who collects. Who wrote the rule that made the silence cheap. Who is paid in standing to defend the line. The answers are checkable. You will leave knowing why the coarse binary keeps missing the chair.
 
 Aisha (06:43)
 This is Architecting the Operation, a show built on The Original Power.
@@ -175,7 +175,7 @@ Toussaint (11:44)
 That is the targeting error. And the two-box picture is a real tool, so give it its credit. People who had nothing organized themselves with us and them, and some of them won. It is a map for gathering people. Finding the collector takes a second map, and the people who collect are happy to let the first map do both jobs.
 
 Emmanuel Theodore (12:03)
-Some of you are going to feel accused by this hour. Keep the anger. It is earned. Change the aim.
+Some of you are going to feel accused by this episode. Keep the anger. It is earned. Change the aim.
 
 Toussaint (12:09)
 So where did everybody get the two-box picture. It came bundled with three other pieces, and they arrived together. School, work, family, the news. The picture got there honestly, and it fails in specific places.
@@ -214,7 +214,7 @@ Toussaint (13:52)
 Maybe the answer is that all ten answers are right at once. The president and the banks and the courts. Power is distributed.
 
 Aisha (13:59)
-Distributed is the weather word for it. Spread around, like humidity. And notice what distributed does for you. It spreads responsibility until no account can be named. We will test the distributed answer against a single question tonight. Who collects. The ten answers scatter under it.
+Distributed is the weather word for it. Spread around, like humidity. And notice what distributed does for you. It spreads responsibility until no account can be named. We will test the distributed answer against a single question. Who collects. The ten answers scatter under it.
 
 Toussaint (14:17)
 Term limits. Rotation. The face changes and the machine keeps the deposit.
@@ -244,13 +244,13 @@ Toussaint (15:32)
 If the trainings are hosing smoke, what does hosing the fire look like.
 
 Aisha (15:36)
-That question is the hour. Hold it. First the picture gets its full hearing.
+That question is the whole point. Hold it. First the picture gets its full hearing.
 
 Toussaint (15:41)
 You say that like the order is up for debate.
 
 Aisha (15:43)
-The order is the claim this hour tests. Hold your version for now, because yours is the version everyone was handed. Feelings cause laws.
+The order is the claim we are testing. Hold your version for now, because yours is the version everyone was handed. Feelings cause laws.
 
 Toussaint (15:52)
 And the book says.
@@ -277,13 +277,13 @@ Toussaint (16:55)
 The dates are real, though. 1865 is a real date. The pen happened.
 
 Aisha (16:59)
-The dates are real, and the machine keeps a calendar too. The machine's calendar is the one thing this hour asks you to read. Every era on it carries the same entry, written in different ink. Who collects, and from whom. Hold the fourth piece until you can read that entry.
+The dates are real, and the machine keeps a calendar too. The machine's calendar is the one thing we are asking you to read. Every era on it carries the same entry, written in different ink. Who collects, and from whom. Hold the fourth piece until you can read that entry.
 
 Toussaint (17:16)
 So that is my picture. Power has a face. There are two teams. Hatred writes the rules. A signature ends a wrong. Four pieces, and they fit. They have fit my whole life.
 
 Aisha (17:26)
-They fit because they were fitted. A picture installed early wears the feel of eyesight. That is job three's subject, later in the hour.
+They fit because they were fitted. A picture installed early wears the feel of eyesight. That is job three's subject, later on.
 
 Aisha (17:35)
 They also fit because they are one picture, and the picture is weather. Attitudes form a climate. The climate has two fronts. The pressure systems have names and faces. A big enough storm passes a law and clears the air. Every word of that is meteorology.
@@ -448,7 +448,7 @@ Toussaint (27:07)
 The feeling comes first. Somebody hates, the hate becomes custom, the custom becomes law. I have family history that says exactly this.
 
 Aisha (27:16)
-And here is the book's answer, stated flat, because it is the load-bearing sentence of the hour. The extraction comes first. A group with something to take builds a partition around the taking. The story about the people inside the partition gets manufactured afterward, and its job is to protect the flow. Prejudice is the product. The product has a factory.
+And here is the book's answer, stated flat, because it is the load-bearing sentence of the whole argument. The extraction comes first. A group with something to take builds a partition around the taking. The story about the people inside the partition gets manufactured afterward, and its job is to protect the flow. Prejudice is the product. The product has a factory.
 
 Toussaint (27:38)
 Why would anyone manufacture hatred. Hatred is expensive. It makes miserable streets and burned cities. Who wants that on the books.
@@ -475,7 +475,7 @@ Toussaint (29:02)
 Where. Where is it printed.
 
 Emmanuel Theodore (29:04)
-The book builds its documented record beginning in fifteenth-century Portugal, and it runs the record forward from there. That record is the next hour's material, and it deserves its own hour. Tonight needs the order of operations, stated once. Extraction first. Manufactured prejudice second. The story is the invoice's cover letter.
+The book builds its documented record beginning in fifteenth-century Portugal, and it runs the record forward from there. That record is the next episode's material, and it deserves its own. Here we need the order of operations, stated once. Extraction first. Manufactured prejudice second. The story is the invoice's cover letter.
 
 Toussaint (29:26)
 You are telling me the hatred in my family history has a date of manufacture.
@@ -505,7 +505,7 @@ Toussaint (30:33)
 The direction of the wealth.
 
 Aisha (30:35)
-One number, asked across every era. Who is collecting, and from whom. If the signature retired the machine, that number moves. If the costume changed, the number holds. The book tracks the number. Tonight we give you the instrument for tracking it yourself.
+One number, asked across every era. Who is collecting, and from whom. If the signature retired the machine, that number moves. If the costume changed, the number holds. The book tracks the number. Here we give you the instrument for tracking it yourself.
 
 Toussaint (30:51)
 Four pieces. Face, teams, hatred, signature. Weather, all of it. And you have cracked every one of them in fifteen minutes, which I should tell you feels awful.
@@ -610,13 +610,13 @@ Emmanuel Theodore (36:14)
 The book's sentence is blunt. The architecture is powered by compliance, and it dies when that compliance is withdrawn. Hear that as an energy budget, and hear what it is silent about. It is silent about a calendar. Withdraw the labor, the tax, the physical output, and the control current has nothing to steer. A gate with no river is a sculpture.
 
 Aisha (36:36)
-And the claim has a failure condition, like everything else in this hour.
+And the claim has a failure condition, like everything else here.
 
 Emmanuel Theodore (36:41)
 Find the enforcement apparatus funded independently of extraction from the populations it patrols. Find the Elite supplying the energy they route. Either discovery breaks the transistor account. That is what a real claim looks like. It tells you what would kill it.
 
 Toussaint (36:57)
-Before we go further, I want the word. The title of the book has been sitting on the table all hour. The Original Power. What is the title claiming.
+Before we go further, I want the word. The title of the book has been sitting on the table this whole time. The Original Power. What is the title claiming.
 
 Emmanuel Theodore (37:06)
 The title takes power in the older sense, and the English word carries that sense in its own history. English power descends through Anglo-Norman poeir and Old French povoir, from a Vulgar Latin potere, which displaced Latin posse, to be able. Posse itself contracts from potis esse. And potis descends from a reconstructed Proto-Indo-European root, poti, glossed lord, master. The same root gives Sanskrit pati, master, owner, husband. Greek posis, husband. Lithuanian pats, master of the house.
@@ -706,7 +706,7 @@ Toussaint (44:44)
 So who won.
 
 Aisha (44:45)
-Run the instrument. The disability claim is real. Ability is one of the six lines, and a mask policy routes risk through it. The owner's claim is real. She sits outside the line on money, and on gender and sexuality too. Everybody in that room sits outside at least one line. Then ask the hour's question. Who collects. The bar owed thirty-nine hundred dollars in back rent.
+Run the instrument. The disability claim is real. Ability is one of the six lines, and a mask policy routes risk through it. The owner's claim is real. She sits outside the line on money, and on gender and sexuality too. Everybody in that room sits outside at least one line. Then ask the question we keep asking. Who collects. The bar owed thirty-nine hundred dollars in back rent.
 
 Toussaint (45:08)
 The landlord.
@@ -721,13 +721,13 @@ Toussaint (45:21)
 Run the same cut on the gendered axis. The feed we opened on. All men.
 
 Aisha (45:25)
-Same coarse photograph we ran at the top of the hour on the Chi Phi case. The Elite, the paper, the enforcers, the fifty, and the woman upstairs. Five jobs again. The word men names the first cut. It cannot locate the chair.
+Same coarse photograph we ran at the start, on the Chi Phi case. The Elite, the paper, the enforcers, the fifty, and the woman upstairs. Five jobs again. The word men names the first cut. It cannot locate the chair.
 
 Toussaint (45:38)
 And camp one, hearing that, hears a defense of men.
 
 Aisha (45:42)
-Camp four is doing a different job. It keeps the harm on the table. It refuses the claim that every man collects from that harm. That is the argument Emmanuel opened the hour with. A located structure has a mechanism that can be altered, and the five jobs are where the mechanism lives. That is why the aim of the anger is the whole hour.
+Camp four is doing a different job. It keeps the harm on the table. It refuses the claim that every man collects from that harm. That is the argument Emmanuel opened the episode with. A located structure has a mechanism that can be altered, and the five jobs are where the mechanism lives. That is why the aim of the anger is the whole hour.
 
 Toussaint (46:02)
 The writer and the hands. Those are never the same person.
@@ -901,7 +901,7 @@ Toussaint (57:13)
 Then my fourth piece was the most expensive one. I believed a signature ended a wrong, and the belief itself was part of the costume change. The celebration does the machine's work. The room goes home.
 
 Emmanuel Theodore (57:25)
-And the claim still carries its failure condition. A reform that removed the extraction and produced no replacement form, no overshoot, a new stable non-extractive equilibrium. Find that in the record and the kickback account is wrong for that case. The later chapters document the overshoots, era by era. This hour needs the mechanism and the test.
+And the claim still carries its failure condition. A reform that removed the extraction and produced no replacement form, no overshoot, a new stable non-extractive equilibrium. Find that in the record and the kickback account is wrong for that case. The later chapters document the overshoots, era by era. Here we need the mechanism and the test.
 
 Toussaint (57:48)
 So a movement can win the name and lose the current.
@@ -1009,7 +1009,7 @@ Toussaint (64:22)
 I ran it. A scheduling rule, and I got a margin with an owner, a letterhead, a payroll, a believer, and a turnover column. None of that is weather. Nobody's heart appears anywhere in it.
 
 Aisha (64:33)
-The hearts are still there. They are downstream. That is the whole relocation this hour is asking of you.
+The hearts are still there. They are downstream. That is the whole relocation we are asking of you.
 
 Toussaint (64:40)
 Let me push on one thing, because the break room will. My manager is kind. Genuinely kind. Covers shifts, remembers birthdays. Does the instrument call him the enemy.
@@ -1063,7 +1063,7 @@ Aisha (67:11)
 Then the instrument did the hardest thing it does. It located the listener inside the machine. Everyone is inside it somewhere. Weather's last gift was exempting you. The circuit takes the exemption back and hands you a position instead, and a position is something you can act from.
 
 Emmanuel Theodore (67:29)
-And keep the limit with the instrument. Three questions locate a structure. They leave the naming of names to the documents. A missed collector is a blank, and a blank is honest work. And run the questions more than once. One rule proves little. A month of rules with the same three answers is a pattern, and a pattern is a structure. The pointing problem is the one I checked hardest in the book, because a simple version that hands you a photographable villain teaches the opposite lesson from the one the architecture makes. If you leave this hour with three questions and the discipline to leave blanks blank, you have the whole thing.
+And keep the limit with the instrument. Three questions locate a structure. They leave the naming of names to the documents. A missed collector is a blank, and a blank is honest work. And run the questions more than once. One rule proves little. A month of rules with the same three answers is a pattern, and a pattern is a structure. The pointing problem is the one I checked hardest in the book, because a simple version that hands you a photographable villain teaches the opposite lesson from the one the architecture makes. If you leave with three questions and the discipline to leave blanks blank, you have the whole thing.
 
 Toussaint (68:10)
 So come back to where we started. The feed. The campus story. The four camps. All men. Complicity thick enough to feel like a category. Most men. Look up, the chair is thinner than the word.
@@ -1075,19 +1075,19 @@ Toussaint (68:46)
 That is the before and after of this book, in one thread. Before, the fight about the size of the category is the only object on the screen. After, the category is a coarse projection. The object is the structure inside it, and the argument on the screen is one of its outputs.
 
 Aisha (69:03)
-The circuit asks three questions and shows its work. That is the trade this hour offered. You can make it tonight, on the next fight that lands in your feed.
+The circuit asks three questions and shows its work. That is the trade on offer. You can make it tonight, on the next fight that lands in your feed.
 
 Toussaint (69:12)
-One last object before we go, because it is the door to the next hour. Right now, in Texas, prisoners grow crops on land that used to be plantations.
+One last object before we go, because it is the door to the next episode. Right now, in Texas, prisoners grow crops on land that used to be plantations.
 
 Aisha (69:21)
 Nine prison units sit on former plantation land, according to a 2024 report in the Texas Observer. The people working those fields are not paid.
 
 Toussaint (69:31)
-Slavery ended in 1865. The weather picture says that file is closed. The instrument says check the direction of the wealth, and the word that file was closed under is the word the next hour takes apart.
+Slavery ended in 1865. The weather picture says that file is closed. The instrument says check the direction of the wealth, and the word that file was closed under is the word the next episode takes apart.
 
 Aisha (69:44)
-Racism. The next hour puts this machine under that word. The record for it starts in fifteenth-century Portugal, and the calibration is public, slow, and checkable. You already have the questions. That hour is where they meet a word a stranger already has an opinion about.
+Racism. The next episode puts this machine under that word. The record for it starts in fifteenth-century Portugal, and the calibration is public, slow, and checkable. You already have the questions. That episode is where they meet a word a stranger already has an opinion about.
 
 Emmanuel Theodore (70:01)
 I am Emmanuel Theodore, and this is the Open Source Republic. Stay curious, stay skeptical, and go check my work. The three questions travel. Take them with you. Who collects. Who writes the rule. Who is paid to defend the line. Go look at a statute. Go look at a payroll. Go look at an outcome. Then come back and tell me what you found. I mean it.
