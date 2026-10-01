@@ -1,0 +1,351 @@
+# EP04 Register Pass Notes
+
+## Scope
+
+The pass retargets the episode to a college and graduate audience. It preserves the cold open through Toussaint's “Where you aim the anger matters” turn, the case record, all nineteen clip turns, the four-camp persuasion structure, camp three's valid count, the three diagnostic questions, the Texas bridge, and the closing. It removes level-by-level scaffolding, immediate re-explanations, lay definitions, and analogies that displaced manuscript constructs.
+
+## Changed and cut source turns
+
+Each line names the original source header.
+
+- Toussaint (12:09) — Rewritten; the low-register weather scaffold and repeated restatement were consolidated into the four inherited propositions and the Social Identity Theory substrate.
+- Aisha (12:22) — Cut; the low-register weather scaffold and repeated restatement were consolidated into the four inherited propositions and the Social Identity Theory substrate.
+- Toussaint (12:28) — Cut; the low-register weather scaffold and repeated restatement were consolidated into the four inherited propositions and the Social Identity Theory substrate.
+- Aisha (12:30) — Cut; the low-register weather scaffold and repeated restatement were consolidated into the four inherited propositions and the Social Identity Theory substrate.
+- Toussaint (12:31) — Cut; the low-register weather scaffold and repeated restatement were consolidated into the four inherited propositions and the Social Identity Theory substrate.
+- Aisha (12:44) — Cut; the low-register weather scaffold and repeated restatement were consolidated into the four inherited propositions and the Social Identity Theory substrate.
+- Toussaint (12:50) — Cut; the low-register weather scaffold and repeated restatement were consolidated into the four inherited propositions and the Social Identity Theory substrate.
+- Aisha (13:04) — Cut; the low-register weather scaffold and repeated restatement were consolidated into the four inherited propositions and the Social Identity Theory substrate.
+- Toussaint (13:11) — Cut; the low-register weather scaffold and repeated restatement were consolidated into the four inherited propositions and the Social Identity Theory substrate.
+- Aisha (13:29) — Cut; the low-register weather scaffold and repeated restatement were consolidated into the four inherited propositions and the Social Identity Theory substrate.
+- Aisha (13:36) — Cut; the low-register weather scaffold and repeated restatement were consolidated into the four inherited propositions and the Social Identity Theory substrate.
+- Toussaint (13:52) — Cut; the low-register weather scaffold and repeated restatement were consolidated into the four inherited propositions and the Social Identity Theory substrate.
+- Aisha (14:00) — Cut; the low-register weather scaffold and repeated restatement were consolidated into the four inherited propositions and the Social Identity Theory substrate.
+- Toussaint (14:17) — Cut; the low-register weather scaffold and repeated restatement were consolidated into the four inherited propositions and the Social Identity Theory substrate.
+- Aisha (14:22) — Cut; the low-register weather scaffold and repeated restatement were consolidated into the four inherited propositions and the Social Identity Theory substrate.
+- Toussaint (14:23) — Cut; the low-register weather scaffold and repeated restatement were consolidated into the four inherited propositions and the Social Identity Theory substrate.
+- Aisha (14:27) — Cut; the low-register weather scaffold and repeated restatement were consolidated into the four inherited propositions and the Social Identity Theory substrate.
+- Toussaint (14:41) — Cut; the low-register weather scaffold and repeated restatement were consolidated into the four inherited propositions and the Social Identity Theory substrate.
+- Aisha (14:52) — Cut; the low-register weather scaffold and repeated restatement were consolidated into the four inherited propositions and the Social Identity Theory substrate.
+- Toussaint (15:07) — Cut; the low-register weather scaffold and repeated restatement were consolidated into the four inherited propositions and the Social Identity Theory substrate.
+- Aisha (15:18) — Cut; the low-register weather scaffold and repeated restatement were consolidated into the four inherited propositions and the Social Identity Theory substrate.
+- Toussaint (15:31) — Cut; the low-register weather scaffold and repeated restatement were consolidated into the four inherited propositions and the Social Identity Theory substrate.
+- Aisha (15:36) — Cut; the low-register weather scaffold and repeated restatement were consolidated into the four inherited propositions and the Social Identity Theory substrate.
+- Toussaint (15:41) — Cut; the low-register weather scaffold and repeated restatement were consolidated into the four inherited propositions and the Social Identity Theory substrate.
+- Aisha (15:43) — Cut; the low-register weather scaffold and repeated restatement were consolidated into the four inherited propositions and the Social Identity Theory substrate.
+- Toussaint (15:52) — Cut; the low-register weather scaffold and repeated restatement were consolidated into the four inherited propositions and the Social Identity Theory substrate.
+- Aisha (15:53) — Cut; the low-register weather scaffold and repeated restatement were consolidated into the four inherited propositions and the Social Identity Theory substrate.
+- Toussaint (15:58) — Cut; the low-register weather scaffold and repeated restatement were consolidated into the four inherited propositions and the Social Identity Theory substrate.
+- Toussaint (16:15) — Cut; the low-register weather scaffold and repeated restatement were consolidated into the four inherited propositions and the Social Identity Theory substrate.
+- Aisha (16:27) — Cut; the low-register weather scaffold and repeated restatement were consolidated into the four inherited propositions and the Social Identity Theory substrate.
+- Toussaint (16:41) — Cut; the low-register weather scaffold and repeated restatement were consolidated into the four inherited propositions and the Social Identity Theory substrate.
+- Aisha (16:44) — Cut; the low-register weather scaffold and repeated restatement were consolidated into the four inherited propositions and the Social Identity Theory substrate.
+- Toussaint (16:55) — Cut; the low-register weather scaffold and repeated restatement were consolidated into the four inherited propositions and the Social Identity Theory substrate.
+- Aisha (16:59) — Cut; the low-register weather scaffold and repeated restatement were consolidated into the four inherited propositions and the Social Identity Theory substrate.
+- Toussaint (17:16) — Cut; the low-register weather scaffold and repeated restatement were consolidated into the four inherited propositions and the Social Identity Theory substrate.
+- Aisha (17:26) — Cut; the low-register weather scaffold and repeated restatement were consolidated into the four inherited propositions and the Social Identity Theory substrate.
+- Aisha (17:34) — Rewritten; the low-register weather scaffold and repeated restatement were consolidated into the four inherited propositions and the Social Identity Theory substrate.
+- Toussaint (17:50) — Cut; the low-register weather scaffold and repeated restatement were consolidated into the four inherited propositions and the Social Identity Theory substrate.
+- Aisha (18:03) — Cut; the low-register weather scaffold and repeated restatement were consolidated into the four inherited propositions and the Social Identity Theory substrate.
+- Toussaint (18:10) — Cut; the low-register weather scaffold and repeated restatement were consolidated into the four inherited propositions and the Social Identity Theory substrate.
+- Aisha (18:15) — Cut; the low-register weather scaffold and repeated restatement were consolidated into the four inherited propositions and the Social Identity Theory substrate.
+- Emmanuel Theodore (18:33) — Cut; the discovery-paced model genesis was consolidated into the five named tiers, functional signatures, and explicit failure conditions.
+- Toussaint (18:56) — Cut; the discovery-paced model genesis was consolidated into the five named tiers, functional signatures, and explicit failure conditions.
+- Emmanuel Theodore (18:59) — Cut; the discovery-paced model genesis was consolidated into the five named tiers, functional signatures, and explicit failure conditions.
+- Toussaint (19:06) — Cut; the discovery-paced model genesis was consolidated into the five named tiers, functional signatures, and explicit failure conditions.
+- Emmanuel Theodore (19:07) — Cut; the discovery-paced model genesis was consolidated into the five named tiers, functional signatures, and explicit failure conditions.
+- Aisha (19:16) — Cut; the discovery-paced model genesis was consolidated into the five named tiers, functional signatures, and explicit failure conditions.
+- Emmanuel Theodore (19:20) — Cut; the discovery-paced model genesis was consolidated into the five named tiers, functional signatures, and explicit failure conditions.
+- Toussaint (19:47) — Cut; the discovery-paced model genesis was consolidated into the five named tiers, functional signatures, and explicit failure conditions.
+- Emmanuel Theodore (19:54) — Cut; the discovery-paced model genesis was consolidated into the five named tiers, functional signatures, and explicit failure conditions.
+- Aisha (20:20) — Cut; the discovery-paced model genesis was consolidated into the five named tiers, functional signatures, and explicit failure conditions.
+- Emmanuel Theodore (20:23) — Cut; the discovery-paced model genesis was consolidated into the five named tiers, functional signatures, and explicit failure conditions.
+- Toussaint (20:56) — Cut; the discovery-paced model genesis was consolidated into the five named tiers, functional signatures, and explicit failure conditions.
+- Emmanuel Theodore (21:00) — Cut; the discovery-paced model genesis was consolidated into the five named tiers, functional signatures, and explicit failure conditions.
+- Toussaint (21:19) — Cut; the discovery-paced model genesis was consolidated into the five named tiers, functional signatures, and explicit failure conditions.
+- Emmanuel Theodore (21:21) — Cut; the discovery-paced model genesis was consolidated into the five named tiers, functional signatures, and explicit failure conditions.
+- Toussaint (21:42) — Cut; the discovery-paced model genesis was consolidated into the five named tiers, functional signatures, and explicit failure conditions.
+- Emmanuel Theodore (21:55) — Cut; the discovery-paced model genesis was consolidated into the five named tiers, functional signatures, and explicit failure conditions.
+- Toussaint (22:24) — Cut; the discovery-paced model genesis was consolidated into the five named tiers, functional signatures, and explicit failure conditions.
+- Emmanuel Theodore (22:29) — Cut; the discovery-paced model genesis was consolidated into the five named tiers, functional signatures, and explicit failure conditions.
+- Aisha (22:36) — Cut; the discovery-paced model genesis was consolidated into the five named tiers, functional signatures, and explicit failure conditions.
+- Toussaint (22:45) — Cut; the discovery-paced model genesis was consolidated into the five named tiers, functional signatures, and explicit failure conditions.
+- Aisha (22:55) — Cut; the discovery-paced model genesis was consolidated into the five named tiers, functional signatures, and explicit failure conditions.
+- Toussaint (23:16) — Cut; the classroom and empty-chair analogy was removed in favor of the suppression allocation, complex wage, and Elite Obscuration.
+- Aisha (23:24) — Cut; the classroom and empty-chair analogy was removed in favor of the suppression allocation, complex wage, and Elite Obscuration.
+- Toussaint (23:41) — Cut; the classroom and empty-chair analogy was removed in favor of the suppression allocation, complex wage, and Elite Obscuration.
+- Aisha (23:49) — Cut; the classroom and empty-chair analogy was removed in favor of the suppression allocation, complex wage, and Elite Obscuration.
+- Toussaint (23:56) — Cut; the classroom and empty-chair analogy was removed in favor of the suppression allocation, complex wage, and Elite Obscuration.
+- Aisha (24:00) — Cut; the classroom and empty-chair analogy was removed in favor of the suppression allocation, complex wage, and Elite Obscuration.
+- Toussaint (24:31) — Cut; the classroom and empty-chair analogy was removed in favor of the suppression allocation, complex wage, and Elite Obscuration.
+- Aisha (24:33) — Cut; the classroom and empty-chair analogy was removed in favor of the suppression allocation, complex wage, and Elite Obscuration.
+- Toussaint (24:34) — Cut; the classroom and empty-chair analogy was removed in favor of the suppression allocation, complex wage, and Elite Obscuration.
+- Aisha (24:40) — Cut; the classroom and empty-chair analogy was removed in favor of the suppression allocation, complex wage, and Elite Obscuration.
+- Toussaint (24:54) — Cut; the classroom and empty-chair analogy was removed in favor of the suppression allocation, complex wage, and Elite Obscuration.
+- Aisha (24:57) — Rewritten; the classroom and empty-chair analogy was removed in favor of the suppression allocation, complex wage, and Elite Obscuration.
+- Toussaint (25:04) — Cut; the classroom and empty-chair analogy was removed in favor of the suppression allocation, complex wage, and Elite Obscuration.
+- Aisha (25:06) — Cut; the classroom and empty-chair analogy was removed in favor of the suppression allocation, complex wage, and Elite Obscuration.
+- Toussaint (25:15) — Cut; the classroom and empty-chair analogy was removed in favor of the suppression allocation, complex wage, and Elite Obscuration.
+- Aisha (25:26) — Cut; the classroom and empty-chair analogy was removed in favor of the suppression allocation, complex wage, and Elite Obscuration.
+- Toussaint (25:36) — Cut; the classroom and empty-chair analogy was removed in favor of the suppression allocation, complex wage, and Elite Obscuration.
+- Aisha (25:41) — Cut; the classroom and empty-chair analogy was removed in favor of the suppression allocation, complex wage, and Elite Obscuration.
+- Toussaint (25:59) — Cut; the classroom and empty-chair analogy was removed in favor of the suppression allocation, complex wage, and Elite Obscuration.
+- Aisha (26:03) — Cut; the classroom and empty-chair analogy was removed in favor of the suppression allocation, complex wage, and Elite Obscuration.
+- Toussaint (26:24) — Cut; the classroom and empty-chair analogy was removed in favor of the suppression allocation, complex wage, and Elite Obscuration.
+- Emmanuel Theodore (26:32) — Cut; the classroom and empty-chair analogy was removed in favor of the suppression allocation, complex wage, and Elite Obscuration.
+- Toussaint (26:41) — Cut; the classroom and empty-chair analogy was removed in favor of the suppression allocation, complex wage, and Elite Obscuration.
+- Emmanuel Theodore (26:45) — Cut; the classroom and empty-chair analogy was removed in favor of the suppression allocation, complex wage, and Elite Obscuration.
+- Toussaint (26:51) — Cut; the stepwise feelings-first exchange was consolidated into causal order, malicious priors, policy sequence, and documentary falsification.
+- Aisha (27:02) — Cut; the stepwise feelings-first exchange was consolidated into causal order, malicious priors, policy sequence, and documentary falsification.
+- Toussaint (27:07) — Cut; the stepwise feelings-first exchange was consolidated into causal order, malicious priors, policy sequence, and documentary falsification.
+- Aisha (27:15) — Cut; the stepwise feelings-first exchange was consolidated into causal order, malicious priors, policy sequence, and documentary falsification.
+- Toussaint (27:38) — Cut; the stepwise feelings-first exchange was consolidated into causal order, malicious priors, policy sequence, and documentary falsification.
+- Aisha (27:46) — Cut; the stepwise feelings-first exchange was consolidated into causal order, malicious priors, policy sequence, and documentary falsification.
+- Toussaint (28:04) — Cut; the stepwise feelings-first exchange was consolidated into causal order, malicious priors, policy sequence, and documentary falsification.
+- Aisha (28:11) — Cut; the stepwise feelings-first exchange was consolidated into causal order, malicious priors, policy sequence, and documentary falsification.
+- Emmanuel Theodore (28:25) — Rewritten; the stepwise feelings-first exchange was consolidated into causal order, malicious priors, policy sequence, and documentary falsification.
+- Toussaint (28:49) — Rewritten; the stepwise feelings-first exchange was consolidated into causal order, malicious priors, policy sequence, and documentary falsification.
+- Emmanuel Theodore (28:52) — Cut; the stepwise feelings-first exchange was consolidated into causal order, malicious priors, policy sequence, and documentary falsification.
+- Toussaint (29:02) — Cut; the stepwise feelings-first exchange was consolidated into causal order, malicious priors, policy sequence, and documentary falsification.
+- Emmanuel Theodore (29:04) — Cut; the stepwise feelings-first exchange was consolidated into causal order, malicious priors, policy sequence, and documentary falsification.
+- Toussaint (29:26) — Cut; the stepwise feelings-first exchange was consolidated into causal order, malicious priors, policy sequence, and documentary falsification.
+- Aisha (29:30) — Cut; the stepwise feelings-first exchange was consolidated into causal order, malicious priors, policy sequence, and documentary falsification.
+- Toussaint (29:42) — Cut; the stepwise feelings-first exchange was consolidated into causal order, malicious priors, policy sequence, and documentary falsification.
+- Aisha (29:48) — Cut; the stepwise feelings-first exchange was consolidated into causal order, malicious priors, policy sequence, and documentary falsification.
+- Toussaint (30:03) — Cut; the stepwise feelings-first exchange was consolidated into causal order, malicious priors, policy sequence, and documentary falsification.
+- Aisha (30:07) — Cut; the stepwise feelings-first exchange was consolidated into causal order, malicious priors, policy sequence, and documentary falsification.
+- Toussaint (30:13) — Cut; the lay transistor, phone, and repeated circuit scaffolding was replaced with the self-exciting circuit, Drude variables, and substrate limits.
+- Aisha (30:21) — Cut; the lay transistor, phone, and repeated circuit scaffolding was replaced with the self-exciting circuit, Drude variables, and substrate limits.
+- Toussaint (30:33) — Rewritten; the lay transistor, phone, and repeated circuit scaffolding was replaced with the self-exciting circuit, Drude variables, and substrate limits.
+- Aisha (30:35) — Cut; the lay transistor, phone, and repeated circuit scaffolding was replaced with the self-exciting circuit, Drude variables, and substrate limits.
+- Toussaint (30:50) — Cut; the lay transistor, phone, and repeated circuit scaffolding was replaced with the self-exciting circuit, Drude variables, and substrate limits.
+- Aisha (31:00) — Cut; the lay transistor, phone, and repeated circuit scaffolding was replaced with the self-exciting circuit, Drude variables, and substrate limits.
+- Emmanuel Theodore (31:18) — Cut; the lay transistor, phone, and repeated circuit scaffolding was replaced with the self-exciting circuit, Drude variables, and substrate limits.
+- Toussaint (31:40) — Cut; the lay transistor, phone, and repeated circuit scaffolding was replaced with the self-exciting circuit, Drude variables, and substrate limits.
+- Aisha (31:41) — Cut; the lay transistor, phone, and repeated circuit scaffolding was replaced with the self-exciting circuit, Drude variables, and substrate limits.
+- Toussaint (32:02) — Cut; the lay transistor, phone, and repeated circuit scaffolding was replaced with the self-exciting circuit, Drude variables, and substrate limits.
+- Aisha (32:04) — Cut; the lay transistor, phone, and repeated circuit scaffolding was replaced with the self-exciting circuit, Drude variables, and substrate limits.
+- Toussaint (32:09) — Cut; the lay transistor, phone, and repeated circuit scaffolding was replaced with the self-exciting circuit, Drude variables, and substrate limits.
+- Aisha (32:10) — Cut; the lay transistor, phone, and repeated circuit scaffolding was replaced with the self-exciting circuit, Drude variables, and substrate limits.
+- Aisha (32:16) — Cut; the lay transistor, phone, and repeated circuit scaffolding was replaced with the self-exciting circuit, Drude variables, and substrate limits.
+- Toussaint (32:28) — Cut; the lay transistor, phone, and repeated circuit scaffolding was replaced with the self-exciting circuit, Drude variables, and substrate limits.
+- Aisha (32:29) — Cut; the lay transistor, phone, and repeated circuit scaffolding was replaced with the self-exciting circuit, Drude variables, and substrate limits.
+- Toussaint (32:48) — Cut; the lay transistor, phone, and repeated circuit scaffolding was replaced with the self-exciting circuit, Drude variables, and substrate limits.
+- Aisha (32:51) — Cut; the lay transistor, phone, and repeated circuit scaffolding was replaced with the self-exciting circuit, Drude variables, and substrate limits.
+- Toussaint (33:04) — Cut; the lay transistor, phone, and repeated circuit scaffolding was replaced with the self-exciting circuit, Drude variables, and substrate limits.
+- Aisha (33:06) — Cut; the lay transistor, phone, and repeated circuit scaffolding was replaced with the self-exciting circuit, Drude variables, and substrate limits.
+- Toussaint (33:19) — Cut; the lay transistor, phone, and repeated circuit scaffolding was replaced with the self-exciting circuit, Drude variables, and substrate limits.
+- Aisha (33:22) — Cut; the lay transistor, phone, and repeated circuit scaffolding was replaced with the self-exciting circuit, Drude variables, and substrate limits.
+- Aisha (33:31) — Cut; the lay transistor, phone, and repeated circuit scaffolding was replaced with the self-exciting circuit, Drude variables, and substrate limits.
+- Toussaint (33:41) — Cut; the lay transistor, phone, and repeated circuit scaffolding was replaced with the self-exciting circuit, Drude variables, and substrate limits.
+- Aisha (33:48) — Cut; the lay transistor, phone, and repeated circuit scaffolding was replaced with the self-exciting circuit, Drude variables, and substrate limits.
+- Toussaint (34:04) — Cut; the lay transistor, phone, and repeated circuit scaffolding was replaced with the self-exciting circuit, Drude variables, and substrate limits.
+- Aisha (34:10) — Cut; the lay transistor, phone, and repeated circuit scaffolding was replaced with the self-exciting circuit, Drude variables, and substrate limits.
+- Toussaint (34:33) — Cut; the lay transistor, phone, and repeated circuit scaffolding was replaced with the self-exciting circuit, Drude variables, and substrate limits.
+- Aisha (34:35) — Cut; the lay transistor, phone, and repeated circuit scaffolding was replaced with the self-exciting circuit, Drude variables, and substrate limits.
+- Emmanuel Theodore (34:43) — Cut; the lay transistor, phone, and repeated circuit scaffolding was replaced with the self-exciting circuit, Drude variables, and substrate limits.
+- Toussaint (35:03) — Cut; the lay transistor, phone, and repeated circuit scaffolding was replaced with the self-exciting circuit, Drude variables, and substrate limits.
+- Aisha (35:05) — Cut; the lay transistor, phone, and repeated circuit scaffolding was replaced with the self-exciting circuit, Drude variables, and substrate limits.
+- Toussaint (35:26) — Cut; the lay transistor, phone, and repeated circuit scaffolding was replaced with the self-exciting circuit, Drude variables, and substrate limits.
+- Aisha (35:28) — Cut; the lay transistor, phone, and repeated circuit scaffolding was replaced with the self-exciting circuit, Drude variables, and substrate limits.
+- Toussaint (35:43) — Cut; the lay transistor, phone, and repeated circuit scaffolding was replaced with the self-exciting circuit, Drude variables, and substrate limits.
+- Aisha (35:46) — Cut; the lay transistor, phone, and repeated circuit scaffolding was replaced with the self-exciting circuit, Drude variables, and substrate limits.
+- Toussaint (36:08) — Rewritten; the lay transistor, phone, and repeated circuit scaffolding was replaced with the self-exciting circuit, Drude variables, and substrate limits.
+- Emmanuel Theodore (36:14) — Cut; the lay transistor, phone, and repeated circuit scaffolding was replaced with the self-exciting circuit, Drude variables, and substrate limits.
+- Aisha (36:36) — Cut; the lay transistor, phone, and repeated circuit scaffolding was replaced with the self-exciting circuit, Drude variables, and substrate limits.
+- Emmanuel Theodore (36:40) — Cut; the lay transistor, phone, and repeated circuit scaffolding was replaced with the self-exciting circuit, Drude variables, and substrate limits.
+- Toussaint (36:56) — Cut; the etymology was compressed to the load-bearing derivation and its evidentiary limit.
+- Emmanuel Theodore (37:05) — Cut; the etymology was compressed to the load-bearing derivation and its evidentiary limit.
+- Toussaint (37:38) — Cut; the etymology was compressed to the load-bearing derivation and its evidentiary limit.
+- Emmanuel Theodore (37:41) — Cut; the etymology was compressed to the load-bearing derivation and its evidentiary limit.
+- Aisha (38:07) — Cut; the etymology was compressed to the load-bearing derivation and its evidentiary limit.
+- Emmanuel Theodore (38:12) — Cut; the etymology was compressed to the load-bearing derivation and its evidentiary limit.
+- Toussaint (38:40) — Cut; the tier and intersection walkthrough was rebuilt around simultaneous positions, non-commutative sequence, multiplicative compounding, and direct tests.
+- Aisha (38:43) — Cut; the tier and intersection walkthrough was rebuilt around simultaneous positions, non-commutative sequence, multiplicative compounding, and direct tests.
+- Toussaint (39:03) — Cut; the tier and intersection walkthrough was rebuilt around simultaneous positions, non-commutative sequence, multiplicative compounding, and direct tests.
+- Emmanuel Theodore (39:08) — Cut; the tier and intersection walkthrough was rebuilt around simultaneous positions, non-commutative sequence, multiplicative compounding, and direct tests.
+- Toussaint (39:35) — Cut; the tier and intersection walkthrough was rebuilt around simultaneous positions, non-commutative sequence, multiplicative compounding, and direct tests.
+- Aisha (39:37) — Cut; the tier and intersection walkthrough was rebuilt around simultaneous positions, non-commutative sequence, multiplicative compounding, and direct tests.
+- Toussaint (40:03) — Cut; the tier and intersection walkthrough was rebuilt around simultaneous positions, non-commutative sequence, multiplicative compounding, and direct tests.
+- Aisha (40:11) — Cut; the tier and intersection walkthrough was rebuilt around simultaneous positions, non-commutative sequence, multiplicative compounding, and direct tests.
+- Toussaint (40:29) — Cut; the tier and intersection walkthrough was rebuilt around simultaneous positions, non-commutative sequence, multiplicative compounding, and direct tests.
+- Aisha (40:31) — Cut; the tier and intersection walkthrough was rebuilt around simultaneous positions, non-commutative sequence, multiplicative compounding, and direct tests.
+- Toussaint (41:05) — Cut; the tier and intersection walkthrough was rebuilt around simultaneous positions, non-commutative sequence, multiplicative compounding, and direct tests.
+- Aisha (41:21) — Cut; the tier and intersection walkthrough was rebuilt around simultaneous positions, non-commutative sequence, multiplicative compounding, and direct tests.
+- Emmanuel Theodore (41:45) — Cut; the tier and intersection walkthrough was rebuilt around simultaneous positions, non-commutative sequence, multiplicative compounding, and direct tests.
+- Aisha (42:11) — Cut; the tier and intersection walkthrough was rebuilt around simultaneous positions, non-commutative sequence, multiplicative compounding, and direct tests.
+- Toussaint (42:58) — Cut; the tier and intersection walkthrough was rebuilt around simultaneous positions, non-commutative sequence, multiplicative compounding, and direct tests.
+- Aisha (43:03) — Cut; the tier and intersection walkthrough was rebuilt around simultaneous positions, non-commutative sequence, multiplicative compounding, and direct tests.
+- Emmanuel Theodore (43:26) — Cut; the tier and intersection walkthrough was rebuilt around simultaneous positions, non-commutative sequence, multiplicative compounding, and direct tests.
+- Toussaint (43:36) — Cut; the tier and intersection walkthrough was rebuilt around simultaneous positions, non-commutative sequence, multiplicative compounding, and direct tests.
+- Aisha (43:37) — Cut; the tier and intersection walkthrough was rebuilt around simultaneous positions, non-commutative sequence, multiplicative compounding, and direct tests.
+- Toussaint (44:20) — Cut; the tier and intersection walkthrough was rebuilt around simultaneous positions, non-commutative sequence, multiplicative compounding, and direct tests.
+- Aisha (44:22) — Cut; the tier and intersection walkthrough was rebuilt around simultaneous positions, non-commutative sequence, multiplicative compounding, and direct tests.
+- Toussaint (44:25) — Cut; the tier and intersection walkthrough was rebuilt around simultaneous positions, non-commutative sequence, multiplicative compounding, and direct tests.
+- Aisha (44:28) — Rewritten; the tier and intersection walkthrough was rebuilt around simultaneous positions, non-commutative sequence, multiplicative compounding, and direct tests.
+- Toussaint (44:46) — Cut; the tier and intersection walkthrough was rebuilt around simultaneous positions, non-commutative sequence, multiplicative compounding, and direct tests.
+- Aisha (44:48) — Rewritten; the tier and intersection walkthrough was rebuilt around simultaneous positions, non-commutative sequence, multiplicative compounding, and direct tests.
+- Emmanuel Theodore (45:10) — Cut; the tier and intersection walkthrough was rebuilt around simultaneous positions, non-commutative sequence, multiplicative compounding, and direct tests.
+- Toussaint (45:26) — Cut; the tier and intersection walkthrough was rebuilt around simultaneous positions, non-commutative sequence, multiplicative compounding, and direct tests.
+- Aisha (45:27) — Cut; the tier and intersection walkthrough was rebuilt around simultaneous positions, non-commutative sequence, multiplicative compounding, and direct tests.
+- Toussaint (45:57) — Cut; the tier and intersection walkthrough was rebuilt around simultaneous positions, non-commutative sequence, multiplicative compounding, and direct tests.
+- Aisha (45:58) — Cut; the tier and intersection walkthrough was rebuilt around simultaneous positions, non-commutative sequence, multiplicative compounding, and direct tests.
+- Toussaint (46:22) — Cut; the tier and intersection walkthrough was rebuilt around simultaneous positions, non-commutative sequence, multiplicative compounding, and direct tests.
+- Aisha (46:23) — Cut; the tier and intersection walkthrough was rebuilt around simultaneous positions, non-commutative sequence, multiplicative compounding, and direct tests.
+- Emmanuel Theodore (46:31) — Cut; the tier and intersection walkthrough was rebuilt around simultaneous positions, non-commutative sequence, multiplicative compounding, and direct tests.
+- Toussaint (46:34) — Cut; the tier and intersection walkthrough was rebuilt around simultaneous positions, non-commutative sequence, multiplicative compounding, and direct tests.
+- Aisha (46:38) — Cut; the tier and intersection walkthrough was rebuilt around simultaneous positions, non-commutative sequence, multiplicative compounding, and direct tests.
+- Toussaint (46:52) — Cut; the tier and intersection walkthrough was rebuilt around simultaneous positions, non-commutative sequence, multiplicative compounding, and direct tests.
+- Aisha (46:55) — Cut; the tier and intersection walkthrough was rebuilt around simultaneous positions, non-commutative sequence, multiplicative compounding, and direct tests.
+- Toussaint (47:16) — Cut; the tier and intersection walkthrough was rebuilt around simultaneous positions, non-commutative sequence, multiplicative compounding, and direct tests.
+- Aisha (47:19) — Cut; the tier and intersection walkthrough was rebuilt around simultaneous positions, non-commutative sequence, multiplicative compounding, and direct tests.
+- Toussaint (47:30) — Cut; the tier and intersection walkthrough was rebuilt around simultaneous positions, non-commutative sequence, multiplicative compounding, and direct tests.
+- Aisha (47:37) — Cut; the tier and intersection walkthrough was rebuilt around simultaneous positions, non-commutative sequence, multiplicative compounding, and direct tests.
+- Toussaint (47:52) — Cut; the tier and intersection walkthrough was rebuilt around simultaneous positions, non-commutative sequence, multiplicative compounding, and direct tests.
+- Aisha (48:01) — Cut; the tier and intersection walkthrough was rebuilt around simultaneous positions, non-commutative sequence, multiplicative compounding, and direct tests.
+- Toussaint (48:15) — Cut; the tier and intersection walkthrough was rebuilt around simultaneous positions, non-commutative sequence, multiplicative compounding, and direct tests.
+- Aisha (48:18) — Cut; the tier and intersection walkthrough was rebuilt around simultaneous positions, non-commutative sequence, multiplicative compounding, and direct tests.
+- Toussaint (48:23) — Cut; the classroom optics were compressed into the Square Ceiling, Elite Obscuration, selection mechanism, and failure condition.
+- Aisha (48:25) — Cut; the classroom optics were compressed into the Square Ceiling, Elite Obscuration, selection mechanism, and failure condition.
+- Toussaint (49:00) — Cut; the classroom optics were compressed into the Square Ceiling, Elite Obscuration, selection mechanism, and failure condition.
+- Aisha (49:01) — Cut; the classroom optics were compressed into the Square Ceiling, Elite Obscuration, selection mechanism, and failure condition.
+- Toussaint (49:38) — Cut; the classroom optics were compressed into the Square Ceiling, Elite Obscuration, selection mechanism, and failure condition.
+- Aisha (49:44) — Cut; the classroom optics were compressed into the Square Ceiling, Elite Obscuration, selection mechanism, and failure condition.
+- Toussaint (50:02) — Cut; the classroom optics were compressed into the Square Ceiling, Elite Obscuration, selection mechanism, and failure condition.
+- Emmanuel Theodore (50:08) — Cut; the classroom optics were compressed into the Square Ceiling, Elite Obscuration, selection mechanism, and failure condition.
+- Aisha (50:39) — Cut; the classroom optics were compressed into the Square Ceiling, Elite Obscuration, selection mechanism, and failure condition.
+- Emmanuel Theodore (50:43) — Cut; the classroom optics were compressed into the Square Ceiling, Elite Obscuration, selection mechanism, and failure condition.
+- Toussaint (51:02) — Cut; the runtime prompts were replaced with coupled institutional and cognitive execution, four observable components, and falsification.
+- Aisha (51:11) — Cut; the runtime prompts were replaced with coupled institutional and cognitive execution, four observable components, and falsification.
+- Toussaint (51:15) — Cut; the runtime prompts were replaced with coupled institutional and cognitive execution, four observable components, and falsification.
+- Aisha (51:18) — Cut; the runtime prompts were replaced with coupled institutional and cognitive execution, four observable components, and falsification.
+- Toussaint (51:45) — Cut; the runtime prompts were replaced with coupled institutional and cognitive execution, four observable components, and falsification.
+- Aisha (51:47) — Cut; the runtime prompts were replaced with coupled institutional and cognitive execution, four observable components, and falsification.
+- Toussaint (52:05) — Cut; the runtime prompts were replaced with coupled institutional and cognitive execution, four observable components, and falsification.
+- Aisha (52:07) — Cut; the runtime prompts were replaced with coupled institutional and cognitive execution, four observable components, and falsification.
+- Toussaint (52:32) — Cut; the runtime prompts were replaced with coupled institutional and cognitive execution, four observable components, and falsification.
+- Aisha (52:35) — Cut; the runtime prompts were replaced with coupled institutional and cognitive execution, four observable components, and falsification.
+- Toussaint (52:54) — Cut; the runtime prompts were replaced with coupled institutional and cognitive execution, four observable components, and falsification.
+- Emmanuel Theodore (53:02) — Cut; the runtime prompts were replaced with coupled institutional and cognitive execution, four observable components, and falsification.
+- Toussaint (53:27) — Cut; the runtime prompts were replaced with coupled institutional and cognitive execution, four observable components, and falsification.
+- Emmanuel Theodore (53:34) — Cut; the runtime prompts were replaced with coupled institutional and cognitive execution, four observable components, and falsification.
+- Aisha (53:47) — Cut; the runtime prompts were replaced with coupled institutional and cognitive execution, four observable components, and falsification.
+- Toussaint (54:06) — Cut; the runtime prompts were replaced with coupled institutional and cognitive execution, four observable components, and falsification.
+- Aisha (54:07) — Cut; the runtime prompts were replaced with coupled institutional and cognitive execution, four observable components, and falsification.
+- Toussaint (54:21) — Cut; the runtime prompts were replaced with coupled institutional and cognitive execution, four observable components, and falsification.
+- Aisha (54:21) — Cut; the runtime prompts were replaced with coupled institutional and cognitive execution, four observable components, and falsification.
+- Toussaint (54:41) — Cut; the runtime prompts were replaced with coupled institutional and cognitive execution, four observable components, and falsification.
+- Aisha (54:43) — Cut; the runtime prompts were replaced with coupled institutional and cognitive execution, four observable components, and falsification.
+- Toussaint (55:02) — Cut; the runtime prompts were replaced with coupled institutional and cognitive execution, four observable components, and falsification.
+- Aisha (55:05) — Cut; the runtime prompts were replaced with coupled institutional and cognitive execution, four observable components, and falsification.
+- Toussaint (55:22) — Cut; the runtime prompts were replaced with coupled institutional and cognitive execution, four observable components, and falsification.
+- Aisha (55:24) — Cut; the runtime prompts were replaced with coupled institutional and cognitive execution, four observable components, and falsification.
+- Emmanuel Theodore (55:34) — Cut; the runtime prompts were replaced with coupled institutional and cognitive execution, four observable components, and falsification.
+- Toussaint (56:08) — Cut; the playground and costume scaffold was replaced with Lenz's Law, inductive kickback, and the Concession Theorem.
+- Aisha (56:14) — Cut; the playground and costume scaffold was replaced with Lenz's Law, inductive kickback, and the Concession Theorem.
+- Toussaint (56:17) — Cut; the playground and costume scaffold was replaced with Lenz's Law, inductive kickback, and the Concession Theorem.
+- Aisha (56:20) — Cut; the playground and costume scaffold was replaced with Lenz's Law, inductive kickback, and the Concession Theorem.
+- Toussaint (56:52) — Cut; the playground and costume scaffold was replaced with Lenz's Law, inductive kickback, and the Concession Theorem.
+- Aisha (57:01) — Cut; the playground and costume scaffold was replaced with Lenz's Law, inductive kickback, and the Concession Theorem.
+- Toussaint (57:24) — Cut; the playground and costume scaffold was replaced with Lenz's Law, inductive kickback, and the Concession Theorem.
+- Aisha (57:27) — Cut; the playground and costume scaffold was replaced with Lenz's Law, inductive kickback, and the Concession Theorem.
+- Toussaint (57:52) — Cut; the playground and costume scaffold was replaced with Lenz's Law, inductive kickback, and the Concession Theorem.
+- Aisha (57:56) — Cut; the playground and costume scaffold was replaced with Lenz's Law, inductive kickback, and the Concession Theorem.
+- Toussaint (57:59) — Cut; the playground and costume scaffold was replaced with Lenz's Law, inductive kickback, and the Concession Theorem.
+- Aisha (58:05) — Cut; the playground and costume scaffold was replaced with Lenz's Law, inductive kickback, and the Concession Theorem.
+- Toussaint (58:26) — Cut; the playground and costume scaffold was replaced with Lenz's Law, inductive kickback, and the Concession Theorem.
+- Emmanuel Theodore (58:38) — Cut; the playground and costume scaffold was replaced with Lenz's Law, inductive kickback, and the Concession Theorem.
+- Toussaint (59:01) — Cut; the playground and costume scaffold was replaced with Lenz's Law, inductive kickback, and the Concession Theorem.
+- Emmanuel Theodore (59:04) — Cut; the playground and costume scaffold was replaced with Lenz's Law, inductive kickback, and the Concession Theorem.
+- Toussaint (59:07) — Cut; the repeated three-question walkthroughs were consolidated into a documentary protocol, workplace and zoning tests, coalition analysis, and honest blanks.
+- Aisha (59:17) — Cut; the repeated three-question walkthroughs were consolidated into a documentary protocol, workplace and zoning tests, coalition analysis, and honest blanks.
+- Toussaint (59:33) — Cut; the repeated three-question walkthroughs were consolidated into a documentary protocol, workplace and zoning tests, coalition analysis, and honest blanks.
+- Aisha (59:41) — Cut; the repeated three-question walkthroughs were consolidated into a documentary protocol, workplace and zoning tests, coalition analysis, and honest blanks.
+- Toussaint (59:50) — Cut; the repeated three-question walkthroughs were consolidated into a documentary protocol, workplace and zoning tests, coalition analysis, and honest blanks.
+- Aisha (59:52) — Cut; the repeated three-question walkthroughs were consolidated into a documentary protocol, workplace and zoning tests, coalition analysis, and honest blanks.
+- Toussaint (60:05) — Cut; the repeated three-question walkthroughs were consolidated into a documentary protocol, workplace and zoning tests, coalition analysis, and honest blanks.
+- Aisha (60:07) — Cut; the repeated three-question walkthroughs were consolidated into a documentary protocol, workplace and zoning tests, coalition analysis, and honest blanks.
+- Emmanuel Theodore (60:16) — Cut; the repeated three-question walkthroughs were consolidated into a documentary protocol, workplace and zoning tests, coalition analysis, and honest blanks.
+- Toussaint (60:39) — Cut; the repeated three-question walkthroughs were consolidated into a documentary protocol, workplace and zoning tests, coalition analysis, and honest blanks.
+- Emmanuel Theodore (60:42) — Cut; the repeated three-question walkthroughs were consolidated into a documentary protocol, workplace and zoning tests, coalition analysis, and honest blanks.
+- Toussaint (60:54) — Cut; the repeated three-question walkthroughs were consolidated into a documentary protocol, workplace and zoning tests, coalition analysis, and honest blanks.
+- Aisha (60:59) — Cut; the repeated three-question walkthroughs were consolidated into a documentary protocol, workplace and zoning tests, coalition analysis, and honest blanks.
+- Toussaint (61:19) — Cut; the repeated three-question walkthroughs were consolidated into a documentary protocol, workplace and zoning tests, coalition analysis, and honest blanks.
+- Aisha (61:40) — Cut; the repeated three-question walkthroughs were consolidated into a documentary protocol, workplace and zoning tests, coalition analysis, and honest blanks.
+- Aisha (61:54) — Cut; the repeated three-question walkthroughs were consolidated into a documentary protocol, workplace and zoning tests, coalition analysis, and honest blanks.
+- Toussaint (62:15) — Cut; the repeated three-question walkthroughs were consolidated into a documentary protocol, workplace and zoning tests, coalition analysis, and honest blanks.
+- Aisha (62:18) — Cut; the repeated three-question walkthroughs were consolidated into a documentary protocol, workplace and zoning tests, coalition analysis, and honest blanks.
+- Toussaint (62:42) — Cut; the repeated three-question walkthroughs were consolidated into a documentary protocol, workplace and zoning tests, coalition analysis, and honest blanks.
+- Aisha (62:45) — Cut; the repeated three-question walkthroughs were consolidated into a documentary protocol, workplace and zoning tests, coalition analysis, and honest blanks.
+- Toussaint (63:05) — Cut; the repeated three-question walkthroughs were consolidated into a documentary protocol, workplace and zoning tests, coalition analysis, and honest blanks.
+- Aisha (63:06) — Cut; the repeated three-question walkthroughs were consolidated into a documentary protocol, workplace and zoning tests, coalition analysis, and honest blanks.
+- Toussaint (63:29) — Cut; the repeated three-question walkthroughs were consolidated into a documentary protocol, workplace and zoning tests, coalition analysis, and honest blanks.
+- Aisha (63:38) — Cut; the repeated three-question walkthroughs were consolidated into a documentary protocol, workplace and zoning tests, coalition analysis, and honest blanks.
+- Toussaint (63:53) — Cut; the repeated three-question walkthroughs were consolidated into a documentary protocol, workplace and zoning tests, coalition analysis, and honest blanks.
+- Aisha (63:55) — Cut; the repeated three-question walkthroughs were consolidated into a documentary protocol, workplace and zoning tests, coalition analysis, and honest blanks.
+- Toussaint (64:22) — Cut; the repeated three-question walkthroughs were consolidated into a documentary protocol, workplace and zoning tests, coalition analysis, and honest blanks.
+- Aisha (64:27) — Cut; the repeated three-question walkthroughs were consolidated into a documentary protocol, workplace and zoning tests, coalition analysis, and honest blanks.
+- Toussaint (64:54) — Cut; the repeated three-question walkthroughs were consolidated into a documentary protocol, workplace and zoning tests, coalition analysis, and honest blanks.
+- Aisha (64:56) — Cut; the repeated three-question walkthroughs were consolidated into a documentary protocol, workplace and zoning tests, coalition analysis, and honest blanks.
+- Toussaint (65:12) — Cut; the repeated three-question walkthroughs were consolidated into a documentary protocol, workplace and zoning tests, coalition analysis, and honest blanks.
+- Aisha (65:16) — Cut; the repeated three-question walkthroughs were consolidated into a documentary protocol, workplace and zoning tests, coalition analysis, and honest blanks.
+- Toussaint (65:35) — Cut; the repeated three-question walkthroughs were consolidated into a documentary protocol, workplace and zoning tests, coalition analysis, and honest blanks.
+- Aisha (65:46) — Cut; the repeated three-question walkthroughs were consolidated into a documentary protocol, workplace and zoning tests, coalition analysis, and honest blanks.
+- Toussaint (65:52) — Cut; the repeated three-question walkthroughs were consolidated into a documentary protocol, workplace and zoning tests, coalition analysis, and honest blanks.
+- Emmanuel Theodore (66:02) — Cut; the repeated three-question walkthroughs were consolidated into a documentary protocol, workplace and zoning tests, coalition analysis, and honest blanks.
+- Aisha (66:19) — Cut; the repeated three-question walkthroughs were consolidated into a documentary protocol, workplace and zoning tests, coalition analysis, and honest blanks.
+- Toussaint (66:41) — Cut; the repeated three-question walkthroughs were consolidated into a documentary protocol, workplace and zoning tests, coalition analysis, and honest blanks.
+- Aisha (66:44) — Cut; the repeated three-question walkthroughs were consolidated into a documentary protocol, workplace and zoning tests, coalition analysis, and honest blanks.
+- Toussaint (66:59) — Cut; the repeated three-question walkthroughs were consolidated into a documentary protocol, workplace and zoning tests, coalition analysis, and honest blanks.
+- Aisha (67:02) — Cut; the repeated three-question walkthroughs were consolidated into a documentary protocol, workplace and zoning tests, coalition analysis, and honest blanks.
+- Toussaint (67:06) — Cut; the repeated three-question walkthroughs were consolidated into a documentary protocol, workplace and zoning tests, coalition analysis, and honest blanks.
+- Aisha (67:07) — Cut; the repeated three-question walkthroughs were consolidated into a documentary protocol, workplace and zoning tests, coalition analysis, and honest blanks.
+- Toussaint (67:16) — Cut; the repeated three-question walkthroughs were consolidated into a documentary protocol, workplace and zoning tests, coalition analysis, and honest blanks.
+- Aisha (67:22) — Cut; the repeated three-question walkthroughs were consolidated into a documentary protocol, workplace and zoning tests, coalition analysis, and honest blanks.
+- Toussaint (67:48) — Cut; the repeated three-question walkthroughs were consolidated into a documentary protocol, workplace and zoning tests, coalition analysis, and honest blanks.
+- Aisha (67:51) — Cut; the repeated three-question walkthroughs were consolidated into a documentary protocol, workplace and zoning tests, coalition analysis, and honest blanks.
+- Toussaint (68:02) — Cut; the repeated three-question walkthroughs were consolidated into a documentary protocol, workplace and zoning tests, coalition analysis, and honest blanks.
+- Aisha (68:04) — Cut; the repeated three-question walkthroughs were consolidated into a documentary protocol, workplace and zoning tests, coalition analysis, and honest blanks.
+- Toussaint (68:18) — Cut; the repeated three-question walkthroughs were consolidated into a documentary protocol, workplace and zoning tests, coalition analysis, and honest blanks.
+- Aisha (68:24) — Cut; the repeated three-question walkthroughs were consolidated into a documentary protocol, workplace and zoning tests, coalition analysis, and honest blanks.
+- Emmanuel Theodore (68:42) — Cut; the repeated three-question walkthroughs were consolidated into a documentary protocol, workplace and zoning tests, coalition analysis, and honest blanks.
+- Toussaint (69:22) — Cut; the repeated three-question walkthroughs were consolidated into a documentary protocol, workplace and zoning tests, coalition analysis, and honest blanks.
+- Aisha (69:34) — Cut; the closing was tightened around the three questions, the Texas bridge, and a single achievable action.
+- Toussaint (69:58) — Cut; the closing was tightened around the three questions, the Texas bridge, and a single achievable action.
+- Aisha (70:15) — Cut; the closing was tightened around the three questions, the Texas bridge, and a single achievable action.
+- Toussaint (70:24) — Cut; the closing was tightened around the three questions, the Texas bridge, and a single achievable action.
+- Aisha (70:33) — Cut; the closing was tightened around the three questions, the Texas bridge, and a single achievable action.
+- Toussaint (70:43) — Cut; the closing was tightened around the three questions, the Texas bridge, and a single achievable action.
+- Aisha (70:56) — Cut; the closing was tightened around the three questions, the Texas bridge, and a single achievable action.
+- Emmanuel Theodore (71:14) — Cut; the closing was tightened around the three questions, the Texas bridge, and a single achievable action.
+
+
+## New technical claims and manuscript provenance
+
+- The four inherited propositions are reframed as incomplete causal models; the five-node refinement and the distinction between structural positions and persons rest on `Paper/The_Original_Power.tex:488-524`.
+- Social Identity Theory, Tajfel and Turner, host wetware, malicious priors, the fractal mind virus, and the two coupled runtimes rest on `Paper/The_Original_Power.tex:245-247`.
+- The four observable architectural components and the tier functions rest on `Paper/The_Original_Power.tex:249-251`.
+- The Elite, Puppet Class, Enforcement Class, Buffer Class, and Out-group definitions and their distinct functions rest on `Paper/The_Original_Power.tex:497-524`.
+- The self-exciting extraction circuit and feedback funding of the interference field rest on `Paper/The_Original_Power.tex:475-479`; the source-versus-gate distinction rests on `Paper/The_Original_Power.tex:208-213`.
+- Du Bois's public and psychological wage, the complex wage spoken as “W equals psi-m plus j psi-s,” and the zero-material-work status component rest on `Paper/The_Original_Power.tex:606`, `Paper/The_Original_Power.tex:1310-1357`, and `Paper/The_Original_Power.tex:2377`.
+- Bacon's Rebellion, the seventeen-oh-five Virginia Slave Codes, the legal partition, and the Buffer Class installation rest on `Paper/The_Original_Power.tex:3322-3342`.
+- The Drude model, mean free time between collisions, bureaucratic friction, and dissipative heat rest on `Paper/The_Original_Power.tex:932-952`.
+- The etymological derivation from power through posse and potis to the reconstructed root poti, with the evidentiary limit, rests on `Paper/The_Original_Power.tex:169`.
+- The non-commutative historical policy sequence and path dependence rest on `Paper/The_Original_Power.tex:5268-5287`.
+- Multiplicative intersection compounding and the illustrative pay-ratio fit rest on `Paper/The_Original_Power.tex:12680-12692`.
+- The three-dimensional pyramid, Square Ceiling, and Elite Obscuration rest on `Paper/The_Original_Power.tex:551-556` and `Paper/The_Original_Power.tex:762-789`.
+- Model C, the class carrier, identity-mode spectrum, broadband noise, and the band-power prediction rest on `Paper/The_Original_Power.tex:6768-6825`.
+- Parseval conservation and redistribution from the class band into identity bands and noise rest on `Paper/The_Original_Power.tex:6955-6962`.
+- Model C's bandwidth saturation, compound phase opposition, fragmentation, and scope limit rest on `Paper/The_Original_Power.tex:7047-7056`.
+- Lenz's Law, targeted inductive kickback, and rate-dependent backlash rest on `Paper/The_Original_Power.tex:1002-1025`.
+- The Concession Theorem, its “delta-max equals zero” invariant, durability objection, and falsification logic rest on `Paper/The_Original_Power.tex:11579-11646`.
+- The documentary protocol in the closing synthesizes the manuscript's recurring evidence classes: rule text, payroll or budget, and outcome distribution; it adds no external factual claim.
+
+## Validation
+
+- All nineteen `[clip:...]` turns match the source exactly in label, timestamp, tag, text, and order.
+- Parser result: 287 turns; known speakers only; no bracket leaks.
+- Host words before: 11,590.
+- Host words after: 8,929.
+- Reduction: 2,661 host words, or about 23.0 percent.
+- The draft remains below the 10,000-host-word ceiling.
