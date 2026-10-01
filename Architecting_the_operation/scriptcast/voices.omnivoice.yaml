@@ -85,3 +85,23 @@ speakers:
     name: "mamwa"
     engine: "archive"
     character_profile: "Instagram reel, @amandathegateman, 2026"
+
+  ilyas_abdulin:
+    name: "Ilyas Abdulin"
+    engine: "archive"
+    character_profile: "Instagram reel, @ilyas.abdulin_ig, 2026"
+
+  krystal:
+    name: "Krystal"
+    engine: "archive"
+    character_profile: "Instagram reel, @krystaltantricyogi, 2026"
+
+  eivin_sandstrom:
+    name: "Eivin Sandstrom"
+    engine: "archive"
+    character_profile: "Instagram reel, @uplandsandy, 2026"
+
+  may:
+    name: "May"
+    engine: "archive"
+    character_profile: "Instagram reel, @mayson_yaps, 2026"
