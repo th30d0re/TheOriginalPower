@@ -1,2 +1,4 @@
 yt-dlp>=2025.6.30
 Pillow>=12.0.0
+# Phonon-2 / Phonon-1-Big ASR for the ensemble engine (host only; needs mlx-audio on Apple silicon)
+fermion-research>=0.2.7

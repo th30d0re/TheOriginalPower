@@ -152,3 +152,45 @@ The isolated speech tests and the complete `make videolab-test` target use
 temporary home directories and injected launchctl runners. The final suite
 passes 124 tests with one third-party deprecation warning. No real launchd agent
 was installed, loaded, bootstrapped, unloaded, or modified during V16c.
+
+## V16 ASR ensemble merge
+
+The ensemble mode runs the existing filtered Whisper pass before starting either
+Phonon server. A Phonon-2 failure writes the normalized Whisper result through the
+existing output renderer and records `ensemble_error`. A Phonon-1-Big failure
+preserves the merged result and records `coverage_check_error`.
+
+The missing-span functions pass reference tokens as the first
+`SequenceMatcher` sequence and merged tokens as the second. This orientation
+makes a `delete` opcode represent reference material absent from the merge, which
+matches the specified opcode rule.
+
+The fill-window implementation uses a 13-second stride for 15-second windows.
+This produces the specified two-second overlap. Each pass begins at 0, 5, or 10
+seconds. Midpoint ownership uses `[start + 1, start + 14)`, with the stated first-
+and last-window boundary exceptions.
+
+The brief names `FermionResearch/Phonon-2` for job metadata and specifies
+`fermion serve phonon-2` for process launch. The implementation preserves both
+spellings in their respective interfaces. Phonon-1-Big is launched only after the
+Phonon-2 server cleanup completes.
+
+The pre-existing V16 findings file documents the speech daemon work. This ASR
+section was appended to preserve that history.
+
+The implementation contains no intentional behavioral deviations from the V16
+brief.
+
+## V17 backfill dedup
+
+Whisper backfill now replaces Phonon words whose midpoints fall within each
+inserted segment's half-open time span. The ensemble pipeline identifies the
+inserted Whisper segments, filters the merged Phonon word list across every
+replacement span, regroups the surviving Phonon words, adds the Whisper
+segments, and sorts the combined segments by start time. The transcript word
+list therefore matches the filtered Phonon content. Existing gap-fill and
+backfill counters retain their prior meanings.
+
+The pure span filter has explicit boundary coverage. A pipeline regression test
+reproduces the measured overlap at 38.5--42.6 seconds and checks the rendered
+text and JSON word list.
