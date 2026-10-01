@@ -667,10 +667,22 @@ Toussaint (41:06)
 Okay, then I have to ask the question everybody makes fun of. If every person sits on six lines at once, who wins. A Black, nonbinary, disabled, neurodivergent, left-handed, short person, or a white trans man with severe anxiety. Somebody hand out the medals.
 
 Aisha (41:21)
-That joke has been a punchline for twenty years, and it lands because the people telling it are right about one thing. The room has no instrument. It is adding up feelings. So here is the instrument. The book uses six lines. Race, gender, religion, sexuality, nationality, ability. Left-handed and short get no line, because a line needs a documented mechanism. A statute, a payroll, a policy that routes extraction through it.
+That joke has been a punchline for twenty years, and it lands because the people telling it are right about one thing. The room has no instrument. It is adding up feelings. So here is the instrument. The book uses six lines. Race, gender, religion, sexuality, nationality, ability. Left-handed is a good test, because the book never mentions it. Run it through the same questions.
 
-Toussaint (41:48)
-Fine. Then do the math.
+Emmanuel Theodore (38:58)
+I'm left-handed, so I'll take this one. Scissors. Tools. Half the things you pick up only work the way they were designed to work in the other hand. Even the new iPhone Duo. 9to5Mac says it is clearly designed for right-handed use, with the dock on the right side of the screen. I already hold my iPhones in my right hand and my Androids in my left, so maybe I'm fine. You will hear about it when I get one.
+
+Aisha (39:22)
+In the book's terms, that is resistance. The book models friction with the time between collisions, and every tool built for the other hand is a collision. Part of the record backs that. Universal design guidance tells designers outright to accommodate right- or left-handed use. The injury evidence is mixed, and the best recent workplace study found no extra accidents among left-handed workers. The second question is partition, and there the record is strong. In Germany, about nine in ten left-handers born around 1950 were made to write with the right hand, and almost none by 1990. Then the third question. Who collects. Studies of left-handed earnings point down, up, and nowhere, and nobody has found a collector.
+
+Toussaint (39:58)
+So left-handed is real friction, a partition schools once enforced, and no collector.
+
+Aisha (40:04)
+That is the reading. The instrument can sort what the punchline could only laugh at. Short, you can run yourself. Same questions.
+
+Toussaint (40:12)
+Fine. Now do the math on the rest of the joke.
 
 Aisha (41:51)
 The book does it with pay, because pay is on paper. Black men earn about eighty cents on the white man's dollar. White women earn about eighty-three. If the two gaps added, a Black woman would land at sixty-three cents. If they multiply, she lands at sixty-six. The measured number is sixty-seven.
