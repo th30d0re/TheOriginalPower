@@ -94,7 +94,91 @@ Emmanuel Theodore (06:53)
 Mine too. My voice was cloned from recordings of me. I wrote every line you will hear, and I checked every one. The research is mine. Software speaks it.
 
 Toussaint (07:03)
-Hold the four camps. We will come back to them. First we take the picture those camps are fighting inside, because the picture got there honestly. School, work, family, the news. It fails in specific places, and the specific failures are the hour.
+So let's name what the feed is doing, because it has a name. It is a targeting error. Some of us are angry about the right thing and firing at the wrong target. Some of us cannot tell where to put the anger at all. And some of you listening fired that shot this week.
+
+Aisha (07:16)
+The man who answered the bully analogy described the error better than we can.
+
+Ilyas Abdulin (07:20)
+[clip:ilyas_2026] You are taking the actions of one person or even a number of people and applying that hatred to millions of completely unrelated people because they share the same sex or skin color.
+
+Toussaint (07:30)
+And the error has a beneficiary. A woman who posted about the case the morning it broke said so directly.
+
+Krystal (07:35)
+[clip:krystal_2026b] And instead of us focusing on the system, we have a whole bunch of people in videos and influencers talking about all men and patriarchy being the problem and associating with that just with just men. And that's a distraction. Not only that, you're dehumanizing a whole group of people, which just makes them more violent and makes and supports the system as a whole when you do that.
+
+Aisha (07:58)
+A distraction serves whoever it distracts from. So here is the correction. The two-box picture, in-group and out-group, men and everyone else, hands you one target the size of half the planet. The record of a case like this hands you jobs. Five of them, and each one has an address. We will run all five on the Chi Phi case, and you have already heard most of the evidence.
+
+Toussaint (08:20)
+Start at the top. Who collects.
+
+Krystal (08:23)
+[clip:krystal_2026a] Patriarchy was not built by men for men. I don't know who told you that but that is false. Patriarchy was built by wealthy people for wealthy people. It's a wealth inheritance mechanism. Patriarchy shows up right along private property because you cannot pass down wealth if you don't know whose kid is whose. So women's bodies get treated like inheritance infrastructure. That's not a men hating women problem. That's a controlling reproduction to protect a fortune problem.
+
+Aisha (08:45)
+The book calls that position the Elite. A thin layer that owns the arrangement and collects from it. Most men are nowhere near it, and some women sit inside it.
+
+Toussaint (08:55)
+Second job. Who writes the rules, and who decides which rules count.
+
+Aisha (08:59)
+In this case, the paper. A conduct process that seals what it decides. A prosecutor who declined on one sworn statement. And a creator who covers Greek life says the universities have their own reason to look away.
+
+Eivin Sandstrom (09:11)
+[clip:uplandsandy_2026c] The universities know exactly what's going on, they're just being led by former brothers and sisters too who are also in the club, so they look the other way in hopes that the brothers and sisters will donate down the line.
+
+Aisha (09:23)
+That is his read, and the independent review the governor asked for is where it gets tested. The book calls this tier the Puppet Class. It turns the arrangement into rules and decisions, and it answers upward.
+
+Toussaint (09:35)
+Third job. Enforcement. Somebody has to make the rules stick on actual people.
+
+The Mutual Man (09:40)
+[clip:mutualman_2026c] They made a public statement as if they handled things, but within the system they protected the abusers. They even threatened the victims with legal action in order to silence them.
+
+Aisha (09:50)
+That is his account of his own chapter. Enforcement inside a house looks like that. A statement for the public, and pressure on the people who talked.
+
+Toussaint (09:58)
+Fourth job. The biggest one. The fifty.
+
+Eivin Sandstrom (10:01)
+[clip:uplandsandy_2026a] a humiliation ritual like this plays a very specific function, and that's to mold these young men into the future holders of power, the kind of guy that will do anything to be a part of the club.
+
+Eivin Sandstrom (10:12)
+[clip:uplandsandy_2026b] And if you can't hold the line, or you tell an outsider about what happened, you're gone, you're dropped, you lose your bid, you're out of the club,
+
+The Mutual Man (10:20)
+[clip:mutualman_2026d] When you challenge a closed unhealthy system, it will prioritize belonging and survival first, above morals.
+
+Aisha (10:26)
+The book calls that the Buffer Class, and it is the largest workforce the arrangement has. Most of the people inside the line collect nothing from what happened upstairs. They get belonging. They get standing. They get told they are better than the people on the other side of the line, and they defend the line for that wage. And the buffer includes women.
+
+mamwa (10:48)
+[clip:amandathegateman_2026b] We all enforce patriarchy. Women, men, everyone enforces patriarchy albeit at varying levels.
+
+Toussaint (10:54)
+Fifth job. The out-group. The people the arrangement collects from.
+
+Aisha (10:58)
+On this axis, that is the woman upstairs, and she carries the compounding load. And the lines cross. On another axis, plenty of the men in that house sit outside the line too.
+
+May (11:09)
+[clip:mayson_2026] Women's bodies have been historically treated as property. Men's bodies have been historically treated as expendable. Both deny bodily autonomy and human value.
+
+Aisha (11:17)
+Five jobs, and every one of them has an address. A tier, a payroll, a policy, a house. The word men has no address. Aim at it, and you hit the fifty and the thin layer at the same rate, which means you mostly hit the fifty. The thin layer goes home.
+
+Toussaint (11:35)
+That is the targeting error. And the two-box picture is a real tool, so give it its credit. People who had nothing organized themselves with us and them, and some of them won. It is a map for gathering people. Finding the collector takes a second map, and the people who collect are happy to let the first map do both jobs.
+
+Emmanuel Theodore (11:55)
+Some of you are going to feel accused by this hour. Keep the anger. It is earned. Change the aim.
+
+Toussaint (12:02)
+So where did everybody get the two-box picture. It came bundled with three other pieces, and they arrived together. School, work, family, the news. The picture got there honestly, and it fails in specific places.
 
 Aisha (07:18)
 Start with the first piece. The one nobody says out loud, because it feels like common sense.
@@ -138,32 +222,11 @@ Term limits. Rotation. The face changes and the machine keeps the deposit.
 Aisha (09:19)
 Hold the thought.
 
-Toussaint (09:20)
-Second piece. This one is older than the first, and it is the piece the four camps were already fighting inside. There is an us, and there is a them. You learned it in a lunchroom before anyone taught it to you, and you were right to learn it. The world sorts.
+Toussaint (13:20)
+Second piece. Us and them. We just took it apart.
 
-Aisha (09:35)
-Take that seriously, because it is the strongest piece of the four, and it is the takeaway of this hour. Two teams. Oppressors and oppressed. Men and not-men. The picture says the line between them is the whole map.
-
-Toussaint (09:48)
-And most days the map works. I know which side of a line I am standing on. I can feel it. And I want to defend this one too, because the two-team picture built things. Strikes. Marches. Solidarity. People who had nothing else organized themselves with us and them, and some of them won.
-
-Aisha (10:05)
-They did, and the picture deserves the credit. Two teams is a proven organizing tool with a long record. Here is the distinction the hour rests on. A map for gathering people and a map for finding the collector serve different functions, and the two-team picture is built for the first one.
-
-Toussaint (10:23)
-Then what was solidarity for. The marches were organized on a blur.
-
-Aisha (10:27)
-For the gathering. The blur assembled people who had nothing else, and assemblies moved laws. The hour's claim is about the second map. March on the blob and the blob absorbs the march. You will see why when we get to the costume.
-
-Aisha (10:42)
-The line is real. We will keep the line. Here is what the two-team map cannot show you. Watch any actual fight over a rule, and the in side does not move like one team. Parts of it write. Parts of it enforce. Parts of it cheer. Parts of it quietly collect. Two boxes flatten four different jobs into one blob, and the blob is exactly where the interesting things hide. Camp one and camp three are both living inside that blur. They disagree about the size of the category. They agree that the category is the object.
-
-Toussaint (11:14)
-You are asking me to give up the one thing I was sure about.
-
-Aisha (11:17)
-I am asking you to zoom in on it. The map keeps its border. You are about to get resolution inside the border.
+Aisha (13:23)
+We did, and the line stays. The two-team picture flattens five jobs into one blob, and camp one and camp three both live inside that blur. They disagree about the size of the category. They agree that the category is the object.
 
 Toussaint (11:24)
 Third piece. Bad rules come from bad feelings. Somebody hates, and the hatred becomes a policy. So the fix is education. Better people. Kinder bosses. Change enough hearts and the laws follow.
@@ -604,7 +667,7 @@ Toussaint (37:45)
 Run the same cut on the gendered axis. The feed we opened on. All men.
 
 Aisha (37:49)
-Same coarse photograph. Mark every man as the in-group on that axis, and the photograph hides the stratification inside the mark. Most of the people inside that mark collect nothing from the assault, the cover-up, or the silence. A thinner set writes the policy that makes the silence cheap. Another set carries the enforcement. A larger set gets paid in standing for defending the line. The out-group on that axis carries the compounding load. Five jobs again. The word men names the first cut. It cannot locate the chair.
+Same coarse photograph we ran at the top of the hour on the Chi Phi case. The Elite, the paper, the enforcers, the fifty, and the woman upstairs. Five jobs again. The word men names the first cut. It cannot locate the chair.
 
 Toussaint (38:22)
 And camp one, hearing that, hears a defense of men.
