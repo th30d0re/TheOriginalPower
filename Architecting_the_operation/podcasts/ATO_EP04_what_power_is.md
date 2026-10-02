@@ -520,13 +520,19 @@ Aisha (32:26)
 Stated. Valves do not compare pay stubs, tire on purpose, or withdraw. People do all three. People also collide with the system. In the Drude model, shortening the mean free time between collisions raises resistance. Administrative stops, audits, reviews, and denials dissipate motion as delay, stress, and cognitive load. What survives the analogy is the routing. The routing holds on material that can carry a current, and people carry this one.
 
 Toussaint (32:53)
-Which sounds like it should cut both ways. If people are the current, people can stop flowing.
+Here is the objection every engineer raises when they read this. You are saying the equations for electrons and the equations for people in a society are the same. We are not electrons. We have free will. Where does that go in your model.
 
 Emmanuel Theodore (32:58)
-The architecture is powered by compliance, and it dies when that compliance is withdrawn. Hear that as an energy budget, and hear what it is silent about. It is silent about a calendar. Withdraw the labor, the tax, the physical output, and the control current has nothing to steer. A gate with no river is a sculpture.
+You're right. We are not electrons. Picture two circuits side by side, one made of electrons and one made of people. Every person in the second circuit has agency, and every person in it is using that agency to comply. Show up, pay in, follow the rule, defend the line. A circuit of people who choose to comply behaves like a circuit of electrons, and the same equations govern it. That is where free will goes. It goes into compliance. The architecture is powered by compliance, and it dies when that compliance is withdrawn.
+
+Toussaint (33:30)
+And the difference.
+
+Emmanuel Theodore (33:32)
+An electron cannot leave the wire. We can. We can walk away and turn the routing devices into sculptures. A gate with no river is a sculpture. And it has happened. W. E. B. Du Bois called it the general strike. Starting in 1861, roughly half a million enslaved people walked off the plantations. The Confederacy's war machine ran on their labor. They had been feeding the war that kept them enslaved, and when they walked, its productive capacity collapsed. The schoolbook version of the Civil War leaves that out. So yes, you're right. We are not electrons. We can walk away at any moment, and we choose to comply. Sit with that.
 
 Aisha (33:18)
-And the claim has a failure condition, like everything else here.
+And the claim has a failure condition, like everything else here. It is also silent about a calendar. It says what withdrawal does, and nothing about when.
 
 Emmanuel Theodore (33:22)
 Find the enforcement apparatus funded independently of extraction from the populations it patrols. Find the Elite supplying the energy they route. Either discovery breaks the transistor account.
