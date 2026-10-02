@@ -85,7 +85,7 @@ Emmanuel Theodore (06:44)
 I wrote the book. It is called The Original Power, and it is a finished specification. The machine in it has named parts. Every claim about those parts carries its evidence underneath, and its test for breaking.
 
 Toussaint (06:57)
-By the end of this episode you can pick up any fight in your feed and locate three things. Who collects. Who wrote the rule that made the silence cheap. Who is paid in standing to defend the line. The answers are checkable. You will leave knowing why the coarse binary keeps missing the chair.
+By the end of this episode you can pick up any fight in your feed and run three checks. Follow the money. Find who wrote the rule that made the silence cheap. Find who is paid in standing to defend the line. The answers are checkable. You will leave knowing why the coarse binary keeps missing the chair.
 
 Aisha (07:15)
 This is Architecting the Operation, a show built on The Original Power.
@@ -115,7 +115,7 @@ Aisha (08:28)
 A distraction serves whoever it distracts from. So here is the correction. The two-box picture, in-group and out-group, men and everyone else, hands you one target the size of half the planet. The record of a case like this hands you jobs. Five of them, and each one has an address. We will run all five on the Chi Phi case, and you have already heard most of the evidence.
 
 Toussaint (08:51)
-Start at the top. Who collects.
+Start at the top. Follow the money.
 
 Krystal (08:53)
 [clip:krystal_2026a] Patriarchy was not built by men for men. I don't know who told you that but that is false. Patriarchy was built by wealthy people for wealthy people. It's a wealth inheritance mechanism. Patriarchy shows up right along private property because you cannot pass down wealth if you don't know whose kid is whose. So women's bodies get treated like inheritance infrastructure. That's not a men hating women problem. That's a controlling reproduction to protect a fortune problem.
@@ -199,7 +199,7 @@ Toussaint (13:33)
 Maybe the answer is that power is distributed.
 
 Aisha (13:36)
-Distributed is the weather word for it. It spreads responsibility until no account can be named. We will test the distributed answer against a single question. Who collects. The ten answers scatter under it.
+Distributed is the weather word for it. It spreads responsibility until no account can be named. We will test the distributed answer against a single instruction. Follow the money. The ten answers scatter under it.
 
 Toussaint (13:48)
 Second piece. Us and them. We just took it apart.
@@ -238,7 +238,7 @@ Toussaint (15:32)
 The dates are real, though. 1865 is a real date. The pen happened.
 
 Aisha (15:36)
-The dates are real, and the machine keeps a calendar too. The machine's calendar is the one thing we are asking you to read. Every era on it carries the same entry, written in different ink. Who collects, and from whom. Hold the fourth piece until you can read that entry.
+The dates are real, and the machine keeps a calendar too. The machine's calendar is the one thing we are asking you to read. Every era on it carries the same entry, written in different ink. Follow the money, from where it starts to where it lands. Hold the fourth piece until you can read that entry.
 
 Toussaint (15:52)
 So that is my picture. Power has a face. There are two teams. Hatred writes the rules. A signature ends a wrong. Four pieces, and they fit.
@@ -331,7 +331,7 @@ Toussaint (21:29)
 I want to sit on two boxes one more second, because two boxes feels like solidarity. Us against them. You are telling me solidarity is a low-resolution photograph.
 
 Aisha (21:38)
-The photograph has low resolution. The people who benefit most from the arrangement stand very still for the two-team picture, because it makes them invisible. Inside the blob marked us, nobody is counting who collects.
+The photograph has low resolution. The people who benefit most from the arrangement stand very still for the two-team picture, because it makes them invisible. Inside the blob marked us, nobody is following the money.
 
 Toussaint (21:52)
 Okay. That is the officials, the budgets, the blob. Now show me the person the record kept pointing at. The one above the officials.
@@ -583,7 +583,7 @@ Emmanuel Theodore (37:24)
 I'm left-handed, so I'll take this one. Scissors. Tools. Half the things you pick up only work the way they were designed to work in the other hand. Even the new iPhone Duo. 9to5Mac says it is clearly designed for right-handed use, with the dock on the right side of the screen. I already hold my iPhones in my right hand and my Androids in my left, so maybe I'm fine. You will hear about it when I get one.
 
 Aisha (37:50)
-In the book's terms, that is resistance. The book models friction with the time between collisions, and every tool built for the other hand is a collision. Part of the record backs that. Universal design guidance tells designers outright to accommodate right- or left-handed use. The injury evidence is mixed, and the best recent workplace study found no extra accidents among left-handed workers. The second question is partition, and there the record is strong. In Germany, about nine in ten left-handers born around 1950 were made to write with the right hand, and almost none by 1990. Then the third question. Who collects. Studies of left-handed earnings point down, up, and nowhere, and nobody has found a collector.
+In the book's terms, that is resistance. The book models friction with the time between collisions, and every tool built for the other hand is a collision. Part of the record backs that. Universal design guidance tells designers outright to accommodate right- or left-handed use. The injury evidence is mixed, and the best recent workplace study found no extra accidents among left-handed workers. The second question is partition, and there the record is strong. In Germany, about nine in ten left-handers born around 1950 were made to write with the right hand, and almost none by 1990. Then the third test. Follow the money. Studies of left-handed earnings point down, up, and nowhere, and nobody has found a collector.
 
 Toussaint (38:37)
 So left-handed is real friction, a partition schools once enforced, and no collector.
@@ -598,7 +598,7 @@ Toussaint (39:14)
 And short.
 
 Aisha (39:14)
-Height gets the same test. Taller workers earn more, about one to two percent per inch in American and British samples, and a lot of that runs through childhood conditions, schooling, and the jobs people sort into. Taller presidential candidates draw more votes, and the taller one has still won about as often as a coin flip. Crash tests started from a midsize male dummy, and safety gear that fits badly costs women and shorter workers. The advantage runs stronger for men, so height mostly rides the gender line. The idea that tall women get penalized for crowding a masculine role is out there, and the research does not show it yet. And who collects. Nobody the research can find.
+Height gets the same test. Taller workers earn more, about one to two percent per inch in American and British samples, and a lot of that runs through childhood conditions, schooling, and the jobs people sort into. Taller presidential candidates draw more votes, and the taller one has still won about as often as a coin flip. Crash tests started from a midsize male dummy, and safety gear that fits badly costs women and shorter workers. The advantage runs stronger for men, so height mostly rides the gender line. The idea that tall women get penalized for crowding a masculine role is out there, and the research does not show it yet. And follow the money. It leads nowhere the research can find.
 
 Toussaint (39:57)
 So the instrument sorts the whole joke.
@@ -631,7 +631,7 @@ Toussaint (41:31)
 So who won.
 
 Aisha (41:32)
-Run the instrument. The disability claim is real. Ability is one of the six lines, and a mask policy routes risk through it. The owner's claim is real. She sits outside the line on money, and on gender and sexuality too. Everybody in that room sits outside at least one line. Then ask the question we keep asking. Who collects. The bar owed thirty-nine hundred dollars in back rent.
+Run the instrument. The disability claim is real. Ability is one of the six lines, and a mask policy routes risk through it. The owner's claim is real. She sits outside the line on money, and on gender and sexuality too. Everybody in that room sits outside at least one line. Then do what we keep doing. Follow the money. The bar owed thirty-nine hundred dollars in back rent.
 
 Toussaint (41:55)
 The landlord.
@@ -832,10 +832,10 @@ Toussaint (53:58)
 Gate. Write. Carry. Defend. Replace. Five jobs, one order of operations, one direction of wealth. You promised me an instrument. This is where it arrives.
 
 Aisha (54:07)
-Three questions. That is the whole instrument. Of any rule, any policy, any arrangement: who collects. Who turned that into a rule. Who is paid to defend the line. Three answers, and each one has a document attached. The statute. The payroll. The outcome data.
+Three questions. That is the whole instrument. Of any rule, any policy, any arrangement: follow the money. Who turned that into a rule. Who is paid to defend the line. Three answers, and each one has a document attached. The statute. The payroll. The outcome data.
 
 Toussaint (54:23)
-Who collects is the Elite question. Who writes is the Puppet question. Who is paid to defend the line is the Buffer question.
+Following the money is the Elite question. Who writes is the Puppet question. Who is paid to defend the line is the Buffer question.
 
 Aisha (54:30)
 And Enforcement is the hands, and the out-group is who the outcome data is taken from. Five jobs, three questions. The questions locate the jobs.
@@ -853,7 +853,7 @@ Aisha (54:55)
 The believer pays in two directions. Standing comes in. Extraction goes out, along the other axes. The wage is real, and so is the bill.
 
 Emmanuel Theodore (55:04)
-One limit on the instrument, and I want it heard. The three questions diagnose a structure. They do not, by themselves, convict a named office. Elite is the subset that actually collects, and the check is the flow of wealth. Plenty of officials write rules that cost them too. The loudest person in the room can be a buffer with a microphone. Keep asking who collects.
+One limit on the instrument, and I want it heard. The three questions diagnose a structure. They do not, by themselves, convict a named office. Elite is the subset that actually collects, and the check is the flow of wealth. Plenty of officials write rules that cost them too. The loudest person in the room can be a buffer with a microphone. Keep following the money.
 
 Toussaint (55:27)
 And when I cannot find the collector.
@@ -865,7 +865,7 @@ Toussaint (55:41)
 So tonight. A policy hits the news. I have ten minutes and a phone. Walk me through it.
 
 Aisha (55:46)
-Write the rule in one sentence. Name the wealth that moves if the rule holds. Name the office that can change the sentence. Name the payroll that will make bodies comply. Name who collects standing for defending it. Three questions, five names, ten minutes. And where a name will not come, the missing name is information.
+Write the rule in one sentence. Name the wealth that moves if the rule holds. Name the office that can change the sentence. Name the payroll that will make bodies comply. Name who is paid in standing for defending it. Three questions, five names, ten minutes. And where a name will not come, the missing name is information.
 
 Toussaint (56:05)
 Then run it. Monday morning. One ordinary object, no history degree required. A workplace posts a new scheduling rule. The shift that pays now goes by a points system, and the points live in software, and nobody on the floor has seen the formula. This is the kind of rule that lands every week, everywhere. Run the three questions on it.
@@ -874,7 +874,7 @@ Aisha (56:26)
 Slowly first. The rule arrives on a flyer and in a meeting. Someone reads it out loud. There is a Q and A where no answer contains the formula. Everyone nods. The nod is the sound of a runtime executing. Now the three questions.
 
 Aisha (56:40)
-Write the rule in one sentence first. Points decide who gets the shift that pays. Now, who collects if the rule holds. Start with what moves. Payroll drops on one side. Output holds. The difference collects somewhere, and the somewhere is a margin. A margin has an owner. The owner is rarely the person who posted the notice.
+Write the rule in one sentence first. Points decide who gets the shift that pays. Now, follow the money if the rule holds. Start with what moves. Payroll drops on one side. Output holds. The difference collects somewhere, and the somewhere is a margin. A margin has an owner. The owner is rarely the person who posted the notice.
 
 Toussaint (57:00)
 And if the owner is a fund. A name on a quarterly statement.
@@ -961,7 +961,7 @@ Toussaint (61:48)
 One more Monday, fast, to prove the instrument travels. A city council item. A zoning change.
 
 Aisha (61:53)
-Same three questions. Who collects if the zoning holds. Land values have owners, and the owners are findable. Who wrote the text. Council staff, a named vote, a letterhead. Who will knock on the door. And who will tell the neighbors it is for safety. Statute, payroll, outcome. You can run it on a school board, a family rule, a platform's terms of service. The instrument does not care about the size of the room.
+Same three questions. Follow the money if the zoning holds. Land values have owners, and the owners are findable. Who wrote the text. Council staff, a named vote, a letterhead. Who will knock on the door. And who will tell the neighbors it is for safety. Statute, payroll, outcome. You can run it on a school board, a family rule, a platform's terms of service. The instrument does not care about the size of the room.
 
 Toussaint (62:18)
 Safety. The neighbors will say safety.
@@ -1009,4 +1009,4 @@ Aisha (65:12)
 Racism. The next episode puts this machine under that word. The record for it starts in fifteenth-century Portugal, and the calibration is public, slow, and checkable. You already have the questions. That episode is where they meet a word a stranger already has an opinion about.
 
 Emmanuel Theodore (65:29)
-I am Emmanuel Theodore, and this is the Open Source Republic. Stay curious, stay skeptical, and go check my work. The three questions travel. Take them with you. Who collects. Who writes the rule. Who is paid to defend the line. Go look at a statute. Go look at a payroll. Go look at an outcome. Then come back and tell me what you found. I mean it.
+I am Emmanuel Theodore, and this is the Open Source Republic. Stay curious, stay skeptical, and go check my work. The three questions travel. Take them with you. Follow the money. Who writes the rule. Who is paid to defend the line. Go look at a statute. Go look at a payroll. Go look at an outcome. Then come back and tell me what you found. I mean it.
