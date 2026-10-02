@@ -26,7 +26,7 @@
 
 ## Transcript
 
-It even said like this, but this is directed at a certain part of my audience. Wholes can be raped too. Wholes can be taken advantage of. As a matter of fact, your ability to call a woman a hoe is a very slippery slope. All she got to do is to reject you or say something you don't like and she become a hoe-ified. So when you start talking about this woman at Cornell because she wants to have two threesomes, it's not justified going to a group message and telling another 50 men we got some free cooch. You see what I'm saying? Like I think a lot of us are Seeing that many people Don't understand consent And you believe that if a woman is promiscuous Or she's loose or she's agreed To do some things that you believe is freaky Then ain't no fun unless we all get some This is how we get into Great culture So as long as you believe that if you can Prescribe being a whole Owns to a woman that then this justifies You doing whatever you want to do to her You are part of the problem Not only are you a part of the problem I want to talk to the women of your past and I want to see how consensual has your relationships been in the history of it. You feel me?
+It even said like this, but this is directed at a certain part of my audience. Hoes can be raped too. Hoes can be taken advantage of. As a matter of fact, your ability to call a woman a hoe is a very slippery slope. All she got to do is to reject you or say something you don't like and she become a hoe-ified. So when you start talking about this woman at Cornell because she wants to have two threesomes, it's not justified going to a group message and telling other 50 men we got some free cooch. You see what I'm saying? Like I think a lot of us are Seeing that many people Don't understand consent And you believe that if a woman is promiscuous Or she's loose or she's agreed To do some things that you believe is freaky Then ain't no fun unless we all get some This is how we get into [rape] culture So as long as you believe that if you can Prescribe being a whole Owns to a woman that then this justifies You doing whatever you want to do to her You are part of the problem Not only are you a part of the problem I want to talk to the women of your past and I want to see how consensual has your relationships been in the history of it. You feel me?
 
 (Transcribed with mlx-whisper via videolab, job `file-3ae132e72fd1`. Verify against the audio before quoting.)
 
@@ -60,5 +60,9 @@ It even said like this, but this is directed at a certain part of my audience. W
 - Useful as evidence that the in-group is not monolithic. Not clipped in EP04.
 
 ### Manual Revision Notes
+
+- 2026-10-01 disputed-word pass, entry 24: 'hoes' per the note's own ASR-error annotation and context.
+- 2026-10-01 disputed-word pass, entry 24: Whisper and Phonon-2 both hear 'other'.
+- 2026-10-01 disputed-word pass, entry 26: per the note's own annotation; audible word unclear.
 
 - TODO: Add your corrections, clarifications, or first-person response here.

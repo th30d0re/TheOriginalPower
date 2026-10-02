@@ -26,7 +26,7 @@
 
 ## Transcript
 
-It's not all men. And that's the entire point. We're saying that all men are bad. What we are actually doing is we are not valuing the men who are actually choosing to do the very hard work of dismantling the patriarchy while simultaneously giving the men who do harmful things to women and giving men who do exist under patriarchal ideals and mindsets a pass. It is very similar as saying boys will be boys, right? It's a bio-essentialist way of generalizing boys and men as just people who do bad things and it just gives them a pass to continue to do those bad things. Feminism is about creating equality through dismantling the patriarchal system that we live in, meaning our enemy is patriarchy and men are not the only people that uphold patriarchy and not all men are upholding patriarchy. And so by understanding that patriarchy is what we are dismantling, not hating men, we are actually able to do the work of feminism that much better. It is not progressive to hate on men because unfortunately men exist in our society and because men exist in our society that means we need men to do better not all men are like this and that is the entire point if we understand that it is a choice to be bad and it isn't just a biological gender specific preset then we are actually encouraging people to do the work to dismantle the harmful systems that they have been existing under
+It's not all men. And that's the entire point. We're saying that all men are bad. What we are actually doing is we are not valuing the men who are actually choosing to do the very hard work of dismantling the patriarchy while simultaneously giving the men who do harmful things to women and giving men who do exist under patriarchal ideals and mindsets a pass. It is very similar as saying boys will be boys, right? It's a bio-essentialist way of generalizing boys and men as just people who do bad things and it just gives them a pass to continue to do those bad things. Feminism is about creating equality through dismantling the patriarchal system that we live in, meaning our enemy is patriarchy and men are not the only people that uphold patriarchy and not all men are upholding patriarchy. And so by understanding that patriarchy is what we are dismantling, not hating men, we are actually able to do the work of feminism that much better. It is not progressive to hate all men because unfortunately men exist in our society and because men exist in our society that means we need men to do better not all men are like this and that is the entire point if we understand that it is a choice to be bad and it isn't just a biological gender specific preset then we are actually encouraging people to do the work to dismantle the harmful systems that they have been existing under
 
 (Transcribed with mlx-whisper via videolab, job `file-15ccb284da49`. Verify against the audio before quoting.)
 
@@ -60,5 +60,7 @@ It's not all men. And that's the entire point. We're saying that all men are bad
 - Used in EP04 cold open (clips jalachantelle_2026a and _2026b). Caption's transphobia aside is not in the reel.
 
 ### Manual Revision Notes
+
+- 2026-10-01 disputed-word pass, entry 21: all three engines hear 'all'.
 
 - TODO: Add your corrections, clarifications, or first-person response here.
