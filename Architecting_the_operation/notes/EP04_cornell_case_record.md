@@ -1,7 +1,7 @@
 # EP04 Cold Open — The Cornell Case Record
 
 Compiled 2026-10-01. The case is moving daily; re-check before render.
-Status as of this date: **civil allegations, no criminal charges, grand jury review pending.**
+Status as of 2026-10-01 (evening): **civil allegations, no criminal charges; AG Letitia James is special prosecutor (DA removed).**
 Case is in New York State Supreme Court, New York County (a state trial court). Fact-check: `kimi/EP04_factcheck_FINDINGS.md`.
 
 ---
@@ -19,6 +19,7 @@ Case is in New York State Supreme Court, New York County (a state trial court). 
 | Cornell says it gave the DA all investigative information, "specifically naming the Snapchat screenshot." DA says his office "never received" it | **Disputed.** DA later told CNN the screenshot reached his team in Nov 2024 but was "not part of our initial analysis" (C17) | Cornell Daily Sun (FAQ article) |
 | Sept 14/16, 2026: lawsuit filed (outlets differ on date). Sept 21: Daily Sun editorial publishes the defendants' names (Wikipedia's Sept 26 is wrong; C19). Sept 28: DA reopens, will go to grand jury | Confirmed | Wikipedia timeline; PBS; Ithaca Voice |
 | Oct 1, 2026: Gov. Hochul says Cornell agreed to an independent review. AG Letitia James's office is separately reviewing Cornell's response | Confirmed | Cornell Daily Sun |
+| Oct 1, 2026: Gov. Hochul issues an executive order naming AG Letitia James special prosecutor, removing DA Van Houten from the case; James may investigate, present to a grand jury, and prosecute. Hochul cites "newly released information" raising "serious questions" about the CUPD investigation and the 2024 decision. No charges filed | Confirmed | 13WHAM; ABC News; Spectrum; Gothamist |
 | At least one defendant publicly denies the allegations | Confirmed | TMZ (secondary) |
 
 ## What the record does not support yet
@@ -120,3 +121,7 @@ decision, or who collects. That is the script's 00:34 line, "the fight becomes a
 size of the category," happening in real voices.
 
 Every camp now has a real voice.
+
+- https://13wham.com/news/local/ny-attorney-general-letitia-james-appointed-special-prosecutor-in-cornell-gang-rape-case-governor-kathy-hochul
+- https://abcnews.com/US/attorney-general-letitia-james-appointed-special-prosecutor-cornell/story?id=136937149
+- https://spectrumlocalnews.com/nys/central-ny/news/2026/10/02/hochul-names-ag-james-as-special-prosecutor-in-cornell-case
