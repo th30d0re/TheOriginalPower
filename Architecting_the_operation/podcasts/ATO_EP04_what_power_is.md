@@ -72,6 +72,9 @@ Let them off. Elevate them. Those are things institutions do.
 Aisha (04:27)
 His evidence lands on the people who let men off and the positions that lift them up. His conclusion lands on every man alive. In this case the institutions left paper. In November 2024 the district attorney declined to charge. He says the sworn statement in front of him described no force, no incapacity, and no drug given without consent, and the campus police account he relied on called the encounter voluntary, conscious, and consensual. Cornell ran its own case through Title IX, expelled and suspended students, and closed the chapter, and federal privacy law seals the details. Cornell says it gave the prosecutor the group-chat screenshot in 2024. The prosecutor first said his office never received it. Now he says it reached his team but was not part of his first analysis. The governor called for an independent review, and Cornell agreed to one. Then, on October first, the governor took the case away from the district attorney and named the attorney general special prosecutor.
 
+Emmanuel Theodore (05:20)
+Sit on one phrase. Asked when his office got the group-chat screenshot, the district attorney said it was not part of our initial analysis, and that Cornell sent it to his team. Cornell says that was November 2024, the same month he declined to charge. An initial analysis implies a second one. He has not said whether anyone in his office looked at that screenshot in the twenty-two months between that November and the day he reopened the case. That gap is now a question for the special prosecutor, and the documents can answer it.
+
 Toussaint (05:31)
 Three institutions, each one pointing at another, until the state stepped over one of them. None of the four camps is arguing about any of them. Where you aim the anger matters. Aim it at a category, and the category absorbs it. Aim it at a structure, and a structure can be located.
 
