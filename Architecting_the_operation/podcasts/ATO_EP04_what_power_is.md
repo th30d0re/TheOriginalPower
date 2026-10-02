@@ -568,7 +568,7 @@ Toussaint (42:10)
 So a white factory worker.
 
 Aisha (42:12)
-Sits inside the in-group on race. Inside the in-group on gender too, because he is a man. On money and power, he sits outside it. All three facts are true at the same instant, about the same man. The book calls each axis-line a projection. When axes cross, it models their joint effect as multiplicative intersection. Two-box thinking has to pick one team for him. The five-job picture holds all of his positions and predicts that he will defend the lines he is inside of, because standing is the wage he is paid, even while another line extracts from him.
+Sits inside the in-group on race. Inside the in-group on gender too, because he is a man. On money and power, he sits outside it. All three facts are true at the same instant, about the same man. The book calls each axis-line a projection. When axes cross, it models their joint effect as multiplicative intersection. Two-box thinking has to pick one team for him. The five-job picture holds all of his positions and predicts that he will defend the lines he is inside of, because standing is the wage he is paid, even while another line is extracting from him.
 
 Toussaint (42:46)
 Okay, then I have to ask the question everybody makes fun of. If every person sits on six lines at once, who wins. A Black, nonbinary, disabled, neurodivergent, left-handed, short person, or a white trans man with severe anxiety. Somebody hand out the medals.
@@ -793,7 +793,7 @@ Toussaint (57:58)
 Job four. The costume.
 
 Aisha (58:01)
-A rule gets named. The naming becomes a movement. The movement becomes a law. The Concession Theorem names the invariant across the full reform cycle. Durable gains can remain while Elite extraction capacity returns to baseline. Spoken aloud, delta-max equals zero. Inductive kickback describes a different part of the response. The system has inertia, built from law, property, payroll, and installed reflex. Reform arrives as a shock. Push a current hard and the circuit pushes back, and the response can carry the system past where it started. The backlash arrives on a delay, and the newspaper calls the delay a new era.
+A rule gets named. The naming becomes a movement. The movement becomes a law. The Concession Theorem names the invariant across the full reform cycle. Durable gains can remain while Elite extraction capacity returns to baseline. Spoken aloud, delta-max equals zero. Inductive kickback describes a different part of the response. The system has inertia, built from law, property, payroll, and installed reflex. Reform arrives as a shock. When a current is pushed hard, the circuit pushes back, and the response can carry the system past where it started. The backlash arrives on a delay, and the newspaper calls the delay a new era.
 
 Toussaint (58:33)
 Then nothing works. I want to say what a listener is thinking right now. Reform is costume, progress is theater, why march, why vote, why bother.
