@@ -26,7 +26,7 @@
 
 ## Transcript
 
-Women's bodies have been historically treated as property. Men's bodies have been historically treated as expendable. Both deny bodily autonomy and human value. Female bodies have been controlled, sexualized, exploited, and used against us throughout history. Male bodies have been devalued in a different way that I feel like we don't talk about near enough. Men historically and to this day are sent to die in wars. We're raised with the expectation that if someone has to put their body in between danger and another person, that it should be them. Connecting your family, I understand. I'd do the same. For men, we extend that expectation to complete strangers. I think you can see the same attitude when we talk about male and female sexuality, too. Men are shamed for having a lot of sex. Sex is treated as something that a man takes from a woman, as if it decreases her value. Meanwhile, men are praised for having a lot of sex, because we act like there was nothing of value for him to lose in the first place. Genuinely disturbing when a little boy becomes the victim of an adult woman. Disgusting men will call him lucky. Lucky? He was violated. Something was taken from him. His innocence mattered. his body mattered believe it all stems from the same ideas men are property nothing to be conquered weak needing protection men are shields bullet bags only valuable for what they can provide their one is equality women are not property and men are not disposable thank you for listening have a good day
+Women's bodies have been historically treated as property. Men's bodies have been historically treated as expendable. Both deny bodily autonomy and human value. Female bodies have been controlled, sexualized, floited [exploited], and used against us throughout history. Male bodies have been devalued in a different way that I feel like we don't talk about near enough. [Men] historically and to this day are sent to die in wars. We're raised with the expectation that if someone has to put their body in between danger and another person, that it should be them. Acting [Connecting] your family, I understand. I'd do the same. For men, we extend that expectation to complete strangers. I think you can see the same attitude when we talk about male and female sexuality, too. Men are shamed for having a lot of sex. Sex is treated as something that a man takes from a woman, as if it decreases her value. Meanwhile, men are praised for having a lot of sex, because we act like there was nothing of value for him to lose in the first place. Genuinely disturbing when a little boy becomes the victim of an adult woman. Disgusting men will call him lucky. Lucky? He was violated. Something was taken from him. His innocence mattered. his body mattered believe it all stems from the same ideas Women are property something to be conquered weak needing protection men are shields bullet bags only valuable for what they can provide their one is equality women are not property and men are not disposable thank you for listening have a good day
 
 (Transcribed with mlx-whisper via videolab, job `file-a5b3738c54c0`. Verify against the audio before quoting.)
 
@@ -60,5 +60,10 @@ Women's bodies have been historically treated as property. Men's bodies have bee
 - Candidate for the EP04 multi-axis section. Check the audio before captioning.
 
 ### Manual Revision Notes
+
+- 2026-10-01 disputed-word pass, entry 7: speaker self-censored; verbatim kept, intended word bracketed.
+- 2026-10-01 disputed-word pass, entry 8: word cut off in the audio; intended word bracketed.
+- 2026-10-01 disputed-word pass, entry 9: clip cut; verbatim kept, intended word bracketed.
+- 2026-10-01 disputed-word pass, entry 11: all three engines hear 'something'; 'Women' by context and ensemble reading.
 
 - TODO: Add your corrections, clarifications, or first-person response here.
