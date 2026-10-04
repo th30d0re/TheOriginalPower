@@ -177,3 +177,24 @@ Every camp now has a real voice.
 - Aisha's case-paper turn (~04:30): add the transcript vs six-page statement hand-off; it is the best new
   fact for the episode's thesis.
 - Cold open "none of them has been charged": still true as of Oct 4.
+
+## Source check: @romaarmyy (Chloe Sunderland) reels, Oct 2 and Oct 4, 2026
+
+Files: ~/Downloads/Video-99690.mp4 = DeDge1usUXQ (Oct 4, 488K plays; videolab file-07731d62205d);
+Video-75388.mp4 = DeAj3A1h5ab (Oct 2, 603K plays; file-0795bf9db66a).
+
+**Her sources:** the New York Times "Conflicting accounts emerge in Cornell case" (Oct 1-2; investigative
+records; her on-screen screenshots), and Title IX text messages obtained by NBC, ABC and TMZ.
+
+| Her claim | Check |
+|---|---|
+| Texts: Oct 23, 2024 "my reputation is destroyed and I'm utterly ashamed"; Nov 7 "people are changing the narrative because... the woman was probably the victim" | **Confirmed** (NBC, ABC, TMZ from Title IX records). She omits the same Oct 23 thread's "this many people shouldn't know... the rats in the room" and the Nov 3 text "90% of what happened that night was not consensual." |
+| A man told Doe "we can call it a night"; she replied "We're all consenting adults here"; another recalled "normal in the medieval times" | **Confirmed as the accused men's statements to investigators** (NYT via TMZ). They are their accounts, not findings. |
+| "She was snorting drugs off of his body" | **Reversed.** The record: Winston Lee "admitted to snorting a line of ketamine off her body" (NYT/TMZ; her own on-screen NYT text: "He said he snorted a line of ketamine off her body"). |
+| A man "was insulted by her and then forcefully grabbed and kissed" | **Reversed.** Her own on-screen NYT text: "Jane Doe said at one point he insulted her before grabbing her and kissing her." |
+| "Six men can tell essentially the exact same story" / "their story doesn't change" | **Not supported.** Accounts differ: five acknowledged sexual contact and said it was consensual; Kretzschmar's lawyer says he did not participate; Doe described two men as voyeurs. Consistency over time is not documented. |
+| "Jane Doe was actually one of the perpetrators of sexual violence" | Her conclusion, resting partly on the two reversed claims. |
+
+Usable on air: her trauma argument (Oct 2 reel, ~1:35 onward) is the strongest public statement of the
+skeptical camp and is a fair argument on its own terms. Do not air the Oct 4 reel's account of the night
+without correcting the two reversals.
