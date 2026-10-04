@@ -4,19 +4,19 @@ Toussaint (00:00)
 In September a former Cornell student sued in New York state court. She says that in October 2024, seven members of the Chi Phi fraternity drugged her and raped her at the chapter house. The seven men are accused. As of this recording, none of them has been charged with a crime, and the one defendant who has spoken through a lawyer says he is innocent. Two years after the night in question, the case reached the public, and inside a week the feed had sorted itself into camps.
 
 Aisha (00:29)
-Camp one.
+Camp one and camp three met in a single video. A man answered "all men" with a box of Whoppers.
 
-Blake Johnson (00:30)
-[clip:eugenesquad_2026] Yes, all men is the safest position for a woman to hold numerically. We know that men typically commit most rapes, but let's look at last year's FBI crime data. If we look at rapes from 2025, 90 plus percent were committed by men, shocker, and more than 90 percent of the victims were women.
+Ilyas Abdulin (00:35)
+[clip:ilyas_2026b] Let's say I did get a box of ten whoppers and one of them is a piece of sh** dipped in chocolate. Thing is, I'm not just going to start eating them one by one and hope for the best. I would check first. Probably get the gloves, put ten whoppers on a table, cut them in half, take a look. And once I find the sh**ty one, I throw it away. Now I have nine normal whoppers. And I'm not going to treat those nine like they are also contaminated.
 
-Toussaint (00:47)
+Toussaint (00:58)
 And the reply came stitched to the same video.
 
-Jaylin Hertz (00:49)
-[clip:jesusreigns_2026] You can't say all men is the safest position for women to hold because men make up 90 percent of rapes. You have to look at what percent of men are rapists. And do you know what percent of men are rapists based on the 2024 FBI stats? I want you to guess. Take a second to guess. It is 0.065%. So less than 1% of men are rapists.
+Nick Powers (01:00)
+[clip:nickpowers_2026] All men isn't accusing every single man of being sh**. It's saying that all of them could be and you need to take precautions. And since women don't know which men are sh**, they have to assume that all of them could be.
 
-Aisha (01:11)
-Two men, one kind of table. The first divided the crimes by the men who committed them and got ninety percent, which is close to what the national estimates show. The second divided all men by one year of offenders the police recorded, which makes his number a floor. Surveys of college men put self-reported rape or attempted rape near six percent. Both numbers measure the size of the category. Neither man asks who decided what happened after that night.
+Aisha (01:15)
+Both men are inspecting Whoppers. Neither one asks who runs the factory, or why the bad one keeps turning up in the same kind of box. In this case the box has an address, a chapter house, and the question that matters is who decided what happened after that night.
 
 Toussaint (01:39)
 Camp two asked something sharper.
@@ -39,11 +39,20 @@ The Mutual Man (02:27)
 Aisha (02:31)
 He tried to stop it in his own chapter, and the chapter pushed him out. Belonging is a wage. The house pays it every night, and the price is silence.
 
+Toussaint (02:38)
+Camp two has an academic version too.
+
+The Speech Prof (02:40)
+[clip:thespeechprof_2026] There's a term for it, complicit masculinity, for men who don't embody the aggressive ideal, but still collect the benefits. Most men fall into that category. The dividend doesn't require participation. It simply requires presence.
+
+Aisha (02:53)
+Raewyn Connell named it in 1995, in Masculinities: the patriarchal dividend. The book calls it a status wage. A wage has a payroll, and a payroll has an employer. Her term names the payment. This episode goes looking for the employer.
+
 Toussaint (02:40)
-Camp three answers all of this with three words. Not all men.
+Back to camp three, and the man with the Whoppers.
 
 Aisha (02:43)
-And on the count, camp three is right. Most men collect nothing from what happened in that house. The sharpest version of camp three's point came from inside feminism.
+On the count, he is right. Most men collect nothing from what happened in that house. The sharpest version of camp three's point came from inside feminism.
 
 Jala Chantelle (02:54)
 [clip:jalachantelle_2026a] It is very similar as saying boys will be boys, right? It's a bio-essentialist way of generalizing boys and men as just people who do bad things and it just gives them a pass to continue to do those bad things.
@@ -61,7 +70,7 @@ mamwa (03:57)
 [clip:amandathegateman_2026] Who set that system up? Not individual actors, not men. Billionaires set that system up. Modern day patriarchy is deeply intertwined with class struggle and capitalism. Right now, who set that system up? Is the billionaires, is the political class, is the bourgeoisie, okay? Not Jackson down the street.
 
 Aisha (04:20)
-Now go back to camp one, and listen to where his own evidence ends.
+Another camp-one voice ran the FBI numbers to defend all men. Listen to where his own evidence ends.
 
 Blake Johnson (04:24)
 [clip:eugenesquad_2026b] And when you look at our society and the fact that we not only tend to let these people off, but to elevate them to positions of power.
@@ -70,12 +79,24 @@ Toussaint (04:31)
 Let them off. Elevate them. Those are things institutions do.
 
 Aisha (04:35)
-His evidence lands on the people who let men off and the positions that lift them up. His conclusion lands on every man alive. In this case the institutions left paper. In November 2024 the district attorney declined to charge. He says the sworn statement in front of him described no force, no incapacity, and no drug given without consent, and the campus police account he relied on called the encounter voluntary, conscious, and consensual. Cornell ran its own case through Title IX, expelled and suspended students, and closed the chapter, and federal privacy law seals the details. Cornell says it gave the prosecutor the group-chat screenshot in 2024. The prosecutor first said his office never received it. Now he says it reached his team but was not part of his first analysis. The governor called for an independent review, and Cornell agreed to one. Then, on October first, the governor took the case away from the district attorney and named the attorney general special prosecutor.
+His evidence lands on the people who let men off and the positions that lift them up. His conclusion lands on every man alive. In this case the institutions left paper. In November 2024 the district attorney declined to charge. He says the sworn statement in front of him described no force, no incapacity, and no drug given without consent, and the campus police account he relied on called the encounter voluntary, conscious, and consensual. The campus police had more than that. In their full interview transcript from November 2024 she says, I can say with one hundred percent confidence I was raped. The district attorney says his office received the six-page statement and never the transcript. Shown it this fall, he said it changes the landscape. Cornell ran its own case through Title IX, expelled two students, suspended two, found two not responsible, and closed the chapter, and federal privacy law seals the details. Cornell says it gave the prosecutor the group-chat screenshot in 2024. The prosecutor first said his office never received it. Now he says it reached his team but was not part of his first analysis. The governor called for an independent review, and Cornell agreed to one. Then, on October first, the governor took the case away from the district attorney and named the attorney general special prosecutor.
 
 Emmanuel Theodore (05:39)
 Sit on one phrase. Asked when his office got the group-chat screenshot, the district attorney said it was not part of our initial analysis, and that Cornell sent it to his team. Cornell says that was November 2024, the same month he declined to charge. An initial analysis implies a second one. He has not said whether anyone in his office looked at that screenshot in the twenty-two months between that November and the day he reopened the case. That gap is now a question for the special prosecutor, and the documents can answer it.
 
-Toussaint (06:14)
+Aisha (06:14)
+The record cuts both ways, and the strongest skeptic in the feed builds on the part that cuts against her. In texts four days after the night, she wrote that her reputation was destroyed and she was utterly ashamed. The same thread says this many people should not know. A text two weeks later says ninety percent of what happened that night was not consensual. The skeptic reads the first set and skips the second.
+
+Toussaint (06:36)
+Her best argument is about how to read texts like those.
+
+Chloe Sunderland (06:39)
+[clip:romaarmyy_2026] Does it automatically prove that she's lying? No, it doesn't. But you also don't get to throw all of those statements in a furnace and yell trauma every time something like doesn't match your narrative and the allegation. Trauma psychology itself explains why somebody might interpret an experience differently over time, but it does not establish that that particular person was incapacitated. It does not establish coercion. And it doesn't mean that every contemporary statement that cuts against the allegation becomes irrelevant.
+
+Emmanuel Theodore (07:06)
+That is a fair standard, and it runs in both directions. Every statement counts, including the ones she leaves out. On one side sit the early texts and the six-page statement. On the other sit the police transcript, the group chat, and the later texts. Weighing them is the special prosecutor's job, and then a grand jury's. This show weighs the institutions. Three of them handled one report, and the record shows where each one dropped it. That finding holds whichever way the evidence breaks.
+
+Toussaint (07:36)
 Three institutions, each one pointing at another, until the state stepped over one of them. None of the four camps is arguing about any of them. Where you aim the anger matters. Aim it at a category, and the category absorbs it. Aim it at a structure, and a structure can be located.
 
 Aisha (06:31)
