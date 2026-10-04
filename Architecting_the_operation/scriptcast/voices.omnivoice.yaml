@@ -66,6 +66,21 @@ speakers:
     engine: "archive"
     character_profile: "Instagram reel, @jesus.reigns23, 2026"
 
+  nick_powers:
+    name: "Nick Powers"
+    engine: "archive"
+    character_profile: "Instagram reel, @thatnickpowersguy, 2026"
+
+  chloe_sunderland:
+    name: "Chloe Sunderland"
+    engine: "archive"
+    character_profile: "Instagram reel, @romaarmyy, 2026"
+
+  the_speech_prof:
+    name: "The Speech Prof"
+    engine: "archive"
+    character_profile: "Instagram reel, @thespeechprof, 2026"
+
   jaeden:
     name: "jaeden"
     engine: "archive"
