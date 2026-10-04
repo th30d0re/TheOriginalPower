@@ -126,3 +126,54 @@ Every camp now has a real voice.
 - https://13wham.com/news/local/ny-attorney-general-letitia-james-appointed-special-prosecutor-in-cornell-gang-rape-case-governor-kathy-hochul
 - https://abcnews.com/US/attorney-general-letitia-james-appointed-special-prosecutor-cornell/story?id=136937149
 - https://spectrumlocalnews.com/nys/central-ny/news/2026/10/02/hochul-names-ag-james-as-special-prosecutor-in-cornell-case
+
+---
+
+## Update, 2026-10-04: the transcript, and what it changes
+
+### New facts (two or more sources each)
+- **The "newly released information" is the full Nov 14-15, 2024 Cornell Police interview transcript**, first
+  reported by CBS. In it Doe says "I can say with 100% confidence I was raped" and "it was the most
+  intoxicated I've ever been in my life." (CBS; NBC via her lawyer Thomas Giuffra.)
+- **The DA says he got only the six-page signed statement, never the transcript.** Shown it by CBS:
+  "I never saw it, never heard it until tonight"; it "changes the landscape for me"; it should be
+  "fully investigated by someone outside of Cornell." Friday release: he was "not provided the full
+  picture by the University." (CBS; Fox; Cornell Daily Sun.)
+- **The six-page statement** (as the DA summarizes it) says she agreed to an initial threesome and
+  was "pretty ok" with it and took ketamine voluntarily. The transcript distinguishes that from what
+  came after, which she called coercive. (Fox; CBS.)
+- **Cornell's discipline, per President Kotlikoff (Sept 29):** two expelled; two suspended at least two
+  semesters; one had graduated; two found not responsible. Cornell supports the AG appointment and
+  says the university "must do better." (CBS; Fox.)
+- **Oct 2: AG James opened an "active criminal investigation."** Earlier, on X: "What this young woman
+  has been forced to endure is horrific and unacceptable." Critics argue that statement prejudges the
+  case (Yahoo opinion). (Fox; Cornell Daily Sun; Yahoo.)
+- **Defense:** Oct 20, 2024 texts in which Doe wrote "none of the sexual stuff was illegal"; her lawyer
+  attributes them to trauma and intoxication. Saland (Kretzschmar): "an ugly Snapchat... But that
+  doesn't make my client a rapist." Miltenberg (Lopes): "accusations are not proof." (CBS.)
+- **Roommate accounts and the timeline of her description** (Oct 20 to Nov 15, 2024) are reported in
+  detail by Fox from case documents. Single-source; do not air without a second.
+- **Unverified:** "35% of female undergraduates reported nonconsensual contact in 2025 (23% in 2023)" (Fox).
+
+### What it changes, in the framework's terms
+1. **The failure now has an address.** The open says the institutions left paper. The new fact is which
+   paper moved: campus police recorded "100% confidence I was raped" and "most intoxicated I've ever
+   been," and the prosecutor decided on a six-page statement that, as he summarizes it, describes
+   consent. The decisive event is a transfer between two institutions. That is the Enforcement-to-Puppet
+   hand-off the episode's tiers predict, and it is exactly the kind of fact the four camps were not
+   arguing about.
+2. **"Initial analysis" (Emmanuel's 05:31 turn) still stands**, and the new DA line sharpens it: he now
+   says the university did not give him the full picture, while Cornell says it gave him the Snapchat
+   image in November 2024. Two institutions, two accounts of the same file.
+3. **The record is now genuinely two-sided**, which the persuasion diagnostic says to state at full
+   strength: her contemporaneous texts and the six-page statement on one side; the transcript, the group
+   chat, and her later account on the other. The show's position is unchanged and stronger: the
+   instrument locates where institutions mishandled a report. Guilt is for the special prosecutor and a
+   grand jury.
+4. **The special prosecutor's credibility is itself contested** (her earlier X post). Worth one line if
+   the episode names James; it is the same structural question one level up.
+
+### Script lines affected
+- Aisha's case-paper turn (~04:30): add the transcript vs six-page statement hand-off; it is the best new
+  fact for the episode's thesis.
+- Cold open "none of them has been charged": still true as of Oct 4.
