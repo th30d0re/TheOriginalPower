@@ -474,12 +474,6 @@ Fourth piece. A signature ends a wrong. If the rules are the machine, then rewri
 Aisha (28:53)
 Now you are holding the last piece of weather. A law changes the name on the costume. The question is what happens to the direction of the wealth. One number, asked across every era. Who is collecting, and from whom. If the signature retired the machine, that number moves. If the costume changed, the number holds.
 
-Toussaint (29:13)
-Four pieces. Face, teams, hatred, signature. Weather, all of it. And you have cracked every one of them in fifteen minutes, which I should tell you feels awful.
-
-Aisha (29:23)
-It should. The weather picture asked nothing checkable of you. You could fight about attitudes forever, and the fight itself was the proof you were engaged. The machine loves that fight. It is friction between the people supplying the current.
-
 Emmanuel Theodore (29:38)
 The object in front of you is an extraction circuit. It has five jobs, a fixed order of operations, and an energy budget. Every part of it leaves a paper trail, a payroll, or a body count, and that is what makes it a better object than weather. You can check it.
 
@@ -576,12 +570,6 @@ You recorded the derivation as an observation made after the argument was finish
 Emmanuel Theodore (36:44)
 After. The derivation is true as linguistics. What was noticed after the argument was complete is the convergence: the oldest recoverable sense of the word names a position in a household, and a later chapter argues on independent evidence that the first extraction ran through a household. The book records that convergence as an observation. It carries no argumentative weight. Every structural claim stands on the record.
 
-Toussaint (37:12)
-The gate. The trickle. The river. That is job one.
-
-Aisha (37:15)
-Job two. The five positions, said as jobs. The Elite collects. The Puppet Class writes. The Enforcement Class puts hands on people. The Buffer Class defends the line for a smaller reward, usually standing. The out-group carries the compounding load.
-
 Toussaint (37:31)
 And the sharpening is the part I am still chewing. You keep the border. Us and them stays.
 
@@ -674,12 +662,6 @@ Run the same cut on the gendered axis. The feed we opened on. All men.
 
 Aisha (44:39)
 Same coarse photograph we ran at the start, on the Chi Phi case. The Elite, the paper, the enforcers, the fifty, and the woman upstairs. Five jobs again. The word men names the first cut. It cannot locate the chair.
-
-Toussaint (44:52)
-And camp one, hearing that, hears a defense of men.
-
-Aisha (44:55)
-Camp four is doing a different job. It keeps the harm on the table. It refuses the claim that every man collects from that harm. That is the argument Emmanuel opened the episode with. A located structure has a mechanism that can be altered, and the five jobs are where the mechanism lives. That is why the aim of the anger is the whole hour.
 
 Toussaint (45:16)
 The writer and the hands. Those are never the same person.
@@ -861,12 +843,6 @@ Gate. Write. Carry. Defend. Replace. Five jobs, one order of operations, one dir
 Aisha (56:57)
 Three questions. That is the whole instrument. Of any rule, any policy, any arrangement: follow the money. Who turned that into a rule. Who is paid to defend the line. Three answers, and each one has a document attached. The statute. The payroll. The outcome data.
 
-Toussaint (57:14)
-Following the money is the Elite question. Who writes is the Puppet question. Who is paid to defend the line is the Buffer question.
-
-Aisha (57:21)
-And Enforcement is the hands, and the out-group is who the outcome data is taken from. Five jobs, three questions. The questions locate the jobs.
-
 Toussaint (57:30)
 Why three questions for five jobs.
 
@@ -971,18 +947,6 @@ And me. Where am I in your five jobs.
 
 Aisha (64:24)
 The instrument locates you inside the rules that cost you. Run the three questions on those rules. Locate yourself. The book's wager is that a located reader is harder to bill.
-
-Toussaint (64:36)
-Harder to bill. I can carry that sentence to work.
-
-Aisha (64:39)
-Carry it. The billing depends on you never learning the route.
-
-Toussaint (64:43)
-Locate.
-
-Aisha (64:43)
-Locate. The photograph of a person you already hated is the two-box picture coming back for its deposit. The failure mode is a new villain. Map the flow.
 
 Toussaint (64:53)
 One more Monday, fast, to prove the instrument travels. A city council item. A zoning change.
