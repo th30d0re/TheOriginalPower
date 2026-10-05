@@ -301,7 +301,7 @@ Toussaint (21:54)
 The machine hands out a picture of itself.
 
 Emmanuel Theodore (21:56)
-The weather picture has one property the machine needs. It makes the machine unanswerable. You cannot sue a climate.
+The weather picture has one property the machine needs. It puts the machine beyond answer. You cannot sue a climate.
 
 Toussaint (22:03)
 It hands it out in classrooms too.
@@ -312,10 +312,10 @@ With credentials. The two-box picture has a formal lineage. Social psychology ca
 Aisha (22:49)
 The book begins with Social Identity Theory as the cognitive substrate. Ordinary predictive cognition sorts patterns under uncertainty. Legal and social systems feed it malicious priors. The partition then feels like perception. That is the move from a theory of group cognition to a theory of institutional installation.
 
-Toussaint (23:10)
+Toussaint (23:09)
 So the mind supplies a vulnerability. The institution supplies the input.
 
-Emmanuel Theodore (23:15)
+Emmanuel Theodore (23:14)
 And the system runs on two coupled runtimes. Institutional code executes through law, property, policing, and finance. Cognitive code executes through fear, status, disgust, loyalty, and selective empathy. The book calls the installed exploit the fractal mind virus, because the same partition-and-extraction logic recurs from empire and nation down to the school district, the household, the ballot line, and the private reflex of suspicion.
 
 Toussaint (23:44)
@@ -336,19 +336,19 @@ The Elite separating from the broader in-group.
 Emmanuel Theodore (24:44)
 That gave three tiers. Three tiers broke almost immediately. Somebody has to turn a preference into a statute, and that is a distinct job. Somebody else has to put hands on people, and that is another job. The carceral state runs on payroll. And then the largest piece fell out. Most of the people inside the in-group collect nothing worth collecting.
 
-Toussaint (25:07)
+Toussaint (25:06)
 The in-group itself splits.
 
-Emmanuel Theodore (25:09)
+Emmanuel Theodore (25:08)
 The in-group is where the machine hides its largest workforce. The majority inside the line work, pay, and comply, and their compensation is a story about the people outside the line. When the numbers refused to balance, that tier was the missing mass.
 
 Toussaint (25:24)
 Paid in standing.
 
-Emmanuel Theodore (25:26)
+Emmanuel Theodore (25:25)
 Paid in standing. So the model went to five. Elite. Puppet Class. Enforcement Class. Buffer Class. Out-group. The five-tier architecture is the minimum configuration the mathematics could keep consistent with the historical record.
 
-Toussaint (25:41)
+Toussaint (25:40)
 Here is my objection. You can add boxes to anything. Five boxes, fifty boxes. How is five the answer and not the disease.
 
 Emmanuel Theodore (25:48)
@@ -360,43 +360,43 @@ And if the record moves tomorrow.
 Emmanuel Theodore (26:12)
 Then the model breaks again, and I publish the break.
 
-Aisha (26:16)
+Aisha (26:15)
 And the direction of fit matters. The record was fixed. The model moved. When the two could not meet, the model broke, and the record kept its shape.
 
-Toussaint (26:25)
+Toussaint (26:24)
 I want to sit on two boxes one more second, because two boxes feels like solidarity. Us against them. You are telling me solidarity is a low-resolution photograph.
 
-Aisha (26:35)
+Aisha (26:34)
 The photograph has low resolution. The people who benefit most from the arrangement stand very still for the two-team picture, because it makes them invisible. Inside the blob marked us, nobody is following the money.
 
 Toussaint (26:48)
 Okay. That is the officials, the budgets, the blob. Now show me the person the record kept pointing at. The one above the officials.
 
-Aisha (26:57)
+Aisha (26:56)
 I will show you the chair. Picture a classroom. The teacher's favorites occupy distinct roles. There is one kid she actually loves. A couple of kids get to make the rules for her. A couple more spend their time telling on anyone who breaks them.
 
-Toussaint (27:12)
+Toussaint (27:11)
 Then a big group of kids who never get anything real, and who get told, constantly, that they are better than the kids in the corner.
 
-Aisha (27:20)
+Aisha (27:19)
 Count the kinds. Five. The lunchroom picture had two.
 
 Toussaint (27:23)
 The kid she actually loves. That is the one above the officials.
 
-Aisha (27:27)
+Aisha (27:26)
 Now here is what the classroom is for. You can see the teacher. You can see the hall monitor. You can see the kid who tells. You can see the kids in the corner, and the kids who get told they are better than the kids in the corner. The one you cannot see is the one the whole arrangement is built for. The chair at the front of that classroom is empty, and the class will insist it is occupied. They will name the substitute. They will name the principal. They will name anyone standing in the room.
 
-Toussaint (27:58)
+Toussaint (27:57)
 And the kid the chair belongs to.
 
-Aisha (28:00)
+Aisha (27:59)
 Already in the car.
 
 Toussaint (28:01)
 Wait. The class knows whose chair it is.
 
-Aisha (28:04)
+Aisha (28:03)
 They know everything except the name. And watch what the room does to the kid who asks for the name. The room polices the question. Every kid enforces the rule on every other kid, free of charge. The room maintains itself. That is the cheapest maintenance the chair receives, and the chair collects it.
 
 Toussaint (28:22)
@@ -405,28 +405,28 @@ Free of charge is doing a lot of work in that sentence.
 Toussaint (28:25)
 And the teacher. Where is she in the five.
 
-Aisha (28:28)
+Aisha (28:27)
 The teacher writes the room's rules and carries them out. She is staff. Her wage comes from the building, and the building answers to the chair.
 
-Toussaint (28:37)
+Toussaint (28:36)
 Hold on, though, because somebody owns the school. A person signed for it. This invisible kid sounds like a conspiracy with better manners.
 
 Aisha (28:45)
 Then do the exercise. Name the person whose account received the benefit from the last rule that cost you money. You have names for everyone on the payroll and no name for the beneficiary. The book has a term for it, Elite Obscuration. For now, hold the shape. A chair that everyone orbits and nobody photographs.
 
-Toussaint (29:05)
+Toussaint (29:04)
 The CEO is a beneficiary, though. He collects.
 
-Aisha (29:08)
+Aisha (29:07)
 He collects a wage, even a giant one. Now watch what he cannot do. He cannot change the arrangement, and he can be fired by it. Boards remove CEOs. Markets remove CEOs. The chair cannot be fired by the arrangement, because the chair is the position the arrangement is built around. A salaried face is still a face.
 
 Toussaint (29:27)
 That is the first crack in my picture. Power was supposed to have a face, and the one face that matters is the one the room cannot produce.
 
-Emmanuel Theodore (29:36)
+Emmanuel Theodore (29:35)
 An arrangement can intentionally hide its beneficiary. The missing face is evidence to investigate.
 
-Toussaint (29:42)
+Toussaint (29:41)
 An arrangement can hide on purpose. That is a claim with teeth.
 
 Emmanuel Theodore (29:45)
@@ -435,13 +435,13 @@ Hiding is a behavior. Behavior has an energy budget and a paper trail, and both 
 Toussaint (29:51)
 Second crack, then. Two teams. You sharpened the photograph and got five tiers. Give me the third piece. Hatred writes the rules. That one I have watched happen. The feeling comes first. Somebody hates, the hate becomes custom, the custom becomes law.
 
-Aisha (30:07)
+Aisha (30:06)
 The book's answer is the load-bearing sentence of the whole argument. The extraction comes first. A group with something to take builds a partition around the taking. The story about the people inside the partition gets manufactured afterward, and its job is to protect the flow. Prejudice is the product. The product has a factory.
 
-Toussaint (30:28)
+Toussaint (30:27)
 Why would anyone manufacture hatred. Hatred is expensive. It makes miserable streets and burned cities. Who wants that on the books.
 
-Aisha (30:36)
+Aisha (30:35)
 Hatred is cheaper than the alternative. The alternative is paying. A story about why the people in the corner deserve the corner costs less than a wage, less than land, less than an apology with a number attached. The factory runs because the product undercuts every alternative.
 
 Toussaint (30:53)
@@ -450,16 +450,16 @@ No. Listen. People feel this. My grandmother's fear was real. Nobody manufacture
 Aisha (31:00)
 Her fear was real. Manufactured describes the order of operations, and a manufactured fire still burns. You can be burned by a fire that somebody else set, on a schedule, for a reason.
 
-Emmanuel Theodore (31:12)
+Emmanuel Theodore (31:11)
 And the claim is checkable. If prejudice produces the arrangement, then eras of warmer feeling should show thinner extraction. The record shows the reverse relationship. The book calls historical policy sequence non-commutative. Each policy acts on a population whose capacity earlier policies already changed. Reverse the order and the trajectory changes. Here the dated order is law first, justification after. Laws dated before the slurs that defend them. Payrolls dated before the posters. The sequence is printed.
 
 Toussaint (31:46)
 And if the dates argue the other way somewhere.
 
-Emmanuel Theodore (31:49)
+Emmanuel Theodore (31:48)
 Then that case breaks the model, and the break gets published. The claim lives or dies on the sequence, era by era.
 
-Toussaint (31:56)
+Toussaint (31:55)
 Where. Where is it printed.
 
 Emmanuel Theodore (31:58)
@@ -468,10 +468,10 @@ The book builds its documented record beginning in fifteenth-century Portugal, a
 Toussaint (32:13)
 You are telling me the hatred in my family history has a date of manufacture.
 
-Aisha (32:18)
+Aisha (32:17)
 The hatred has a date of installation. What people did with it afterward was theirs, and it was real, and the record honors the reality by being specific about the installation.
 
-Toussaint (32:29)
+Toussaint (32:28)
 My grandmother's fear kept her alive. You are telling me the thing that kept her alive was somebody's product.
 
 Aisha (32:35)
@@ -480,10 +480,10 @@ Her fear kept her alive inside an arrangement somebody else built. The fear was 
 Toussaint (32:50)
 Third crack. The rules need the feeling, so the feeling gets produced.
 
-Aisha (32:55)
+Aisha (32:54)
 Produced, maintained, budgeted. Keep going. You are doing the fourth one yourself.
 
-Toussaint (33:00)
+Toussaint (32:59)
 Fourth piece. A signature ends a wrong. If the rules are the machine, then rewriting the rules stops the machine. That is what the signatures were for.
 
 Aisha (33:08)
@@ -492,7 +492,7 @@ Now you are holding the last piece of weather. A law changes the name on the cos
 Emmanuel Theodore (33:28)
 The object in front of you is an extraction circuit. It has five tiers, a fixed order of operations, and an energy budget. Every part of it leaves a paper trail, a payroll, or a body count, and that is what makes it a better object than weather. You can check it.
 
-Aisha (33:45)
+Aisha (33:44)
 A small group gates the labor of everyone else. Other people write that arrangement into rules. Other people carry the rules out. A much larger group is paid in standing to defend the line. And when a costume gets a name, the costume changes, and the wealth keeps moving in the same direction. Gate. Write. Carry. Defend. Replace.
 
 Toussaint (34:05)
@@ -501,19 +501,19 @@ And when the five are on the table.
 Aisha (34:07)
 Then you get the instrument. Step one. The gate. The people being taken from are the power supply. Their labor, their taxes, their physical output. That is the current. Everything else in this machine is plumbing.
 
-Toussaint (34:21)
+Toussaint (34:20)
 And the small group.
 
 Aisha (34:22)
 The Elite supply a trickle. Laws. Stories. Algorithms. They decide how the large current gets routed, and they take a cut of what they route. Then a share of the take pays for the taking. Police. Courts. Prisons. Billed to the populations those institutions patrol. The patrol car is an invoice.
 
-Toussaint (34:41)
+Toussaint (34:40)
 The people being policed are buying the police.
 
 Aisha (34:43)
 With their labor and their taxes. The machine runs a portion of its own output back into keeping the output coming. Engineers call it self-exciting. It feeds itself. And once you see the loop, you see why the machine needs no daily orders from the chair. The routing is installed. The floor pays for the supervision of the floor.
 
-Toussaint (35:04)
+Toussaint (35:03)
 So the chair's power lies in permission.
 
 Aisha (35:06)
@@ -522,7 +522,7 @@ Exactly. A small set of permissive decisions routes a much larger current, and p
 Aisha (35:13)
 The permitting is the work. Which laws get written. Which stories get funded. Which algorithms ship. A trickle of decisions, repeated daily, routing a river.
 
-Toussaint (35:24)
+Toussaint (35:23)
 And the noise. The arguments, the scandals, the team sports of it all. Where does that sit in the circuit.
 
 Aisha (35:30)
@@ -531,25 +531,25 @@ Part of the extracted output gets spent keeping the people who supply the curren
 Toussaint (35:58)
 I need a picture for the gate itself. A small group routes a current it does not generate. How.
 
-Aisha (36:04)
+Aisha (36:03)
 A transistor. A small control current at the base gates a much larger current through the other two terminals. The Elite sit at the base of the circuit. Laws, stories, and algorithms supply the control current. Labor supplies the larger current. In this circuit, the powerful position is the gate.
 
-Emmanuel Theodore (36:23)
+Emmanuel Theodore (36:22)
 The book states the homology directly, because the homology is the claim. Distinct systems exhibit equivalent governing equations once their state variables and constraints are operationalized. The units change. The equations hold. The hardware language is in the book because the equations carry the claim.
 
-Toussaint (36:43)
+Toussaint (36:42)
 And the material for this circuit. What is the silicon.
 
 Aisha (36:46)
 Hold your phone. The software on it runs on silicon, on electrons pushed through gates. Now imagine the same phone built out of pressurized steam valves. Tiny valves, opening and closing. The software would still execute. The material changes. The logic keeps running. Law, payroll, and force are a substrate the same way silicon is. The logic of the extraction circuit executes on them. People are the material the equations run on.
 
-Toussaint (37:14)
+Toussaint (37:13)
 And the break in that picture. There is always a break.
 
-Aisha (37:17)
+Aisha (37:16)
 Stated. Valves do not compare pay stubs, tire on purpose, or withdraw. People do all three. People also collide with the system. In the Drude model, shortening the mean free time between collisions raises resistance. Administrative stops, audits, reviews, and denials dissipate motion as delay, stress, and cognitive load. What survives the analogy is the routing. The routing holds on material that can carry a current, and people carry this one.
 
-Toussaint (37:45)
+Toussaint (37:44)
 Here is the objection every engineer raises when they read this. You are saying the equations for electrons and the equations for people in a society are the same. We are not electrons. We have free will. Where does that go in your model.
 
 Emmanuel Theodore (37:59)
@@ -567,10 +567,10 @@ And the claim has a failure condition, like everything else here. It is also sil
 Emmanuel Theodore (39:25)
 Find the enforcement apparatus funded independently of extraction from the populations it patrols. Find the Elite supplying the energy they route. Either discovery breaks the transistor account.
 
-Toussaint (39:38)
+Toussaint (39:37)
 Before we go further, I want the word. The title of the book has been sitting on the table this whole time. The Original Power. What is the title claiming.
 
-Emmanuel Theodore (39:47)
+Emmanuel Theodore (39:46)
 The title takes power in the older sense, and the English word carries that sense in its own history. English power descends through Anglo-Norman poeir and Old French povoir, from a Vulgar Latin potere, which displaced Latin posse, to be able. Posse itself contracts from potis esse. And potis descends from a reconstructed Proto-Indo-European root, poti, glossed lord, master. The same root gives Sanskrit pati, master, owner, husband. Greek posis, husband. Lithuanian pats, master of the house.
 
 Toussaint (40:19)
@@ -582,10 +582,10 @@ The capacity sense is derived from the mastery sense. To be able meant, at the r
 Aisha (40:29)
 You recorded the derivation as an observation made after the argument was finished.
 
-Emmanuel Theodore (40:35)
+Emmanuel Theodore (40:34)
 After. The derivation is true as linguistics. What was noticed after the argument was complete is the convergence: the oldest recoverable sense of the word names a position in a household, and a later chapter argues on independent evidence that the first extraction ran through a household. The book records that convergence as an observation. It carries no argumentative weight. Every structural claim stands on the record.
 
-Toussaint (41:03)
+Toussaint (41:02)
 And the sharpening is the part I am still chewing. You keep the border. Us and them stays.
 
 Emmanuel Theodore (41:08)
@@ -594,7 +594,7 @@ The border stays. In the book's notation, the first equation is a partition. Tak
 Toussaint (41:34)
 Five boxes still sounds like astrology for inequality. People move. People are complicated. A person does not have a box printed on them.
 
-Aisha (41:43)
+Aisha (41:42)
 These are tiers. A box in this framework is a position in a flow, the way a pin is a position in a circuit. And the flow runs along more than one axis. Race is an axis. Money is an axis. Credential, geography, legal status, gender. Each axis draws its own line through the same crowd.
 
 Toussaint (42:00)
@@ -618,10 +618,10 @@ In the book's terms, that is resistance. The book models friction with the time 
 Toussaint (44:30)
 So left-handed is real friction, a partition schools once enforced, and no collector.
 
-Aisha (44:36)
+Aisha (44:35)
 That is the reading. And the partition left a picture behind. A survey of over a million Americans found about three percent left-handed among people born around 1900, and about eleven and a half percent among people born after 1945. Then the line goes flat. Take the punishment away, and the rate climbs to the real number and stops.
 
-Emmanuel Theodore (44:58)
+Emmanuel Theodore (44:57)
 That curve gets pulled out every time more people start naming an identity. Look at where it flattens. That is the real rate, showing up once nobody gets punished for it.
 
 Toussaint (45:08)
@@ -633,7 +633,7 @@ Height gets the same test. Taller workers earn more, about one to two percent pe
 Toussaint (45:53)
 So the instrument sorts the whole joke.
 
-Aisha (45:56)
+Aisha (45:55)
 It sorts what the punchline could only laugh at.
 
 Toussaint (45:58)
@@ -642,13 +642,13 @@ Fine. Now do the math on the rest of the joke.
 Aisha (46:01)
 The book does it with pay, because pay is on paper. Black men earn about eighty cents on the white man's dollar. White women earn about eighty-three. If the two gaps added, a Black woman would land at sixty-three cents. If they multiply, she lands at sixty-six. The measured number is sixty-seven.
 
-Toussaint (46:20)
+Toussaint (46:19)
 Multiplies.
 
-Aisha (46:21)
+Aisha (46:20)
 Multiplies. The book calls that an illustrative fit, and it points the same direction Kimberlé Crenshaw wrote about in 1989. In a 1976 case, a court told Black women at General Motors they could sue as Black or as women, and it had no box for both. That is intersectionality as Crenshaw wrote it. A claim about where the law goes blind.
 
-Emmanuel Theodore (46:44)
+Emmanuel Theodore (46:43)
 Crenshaw pointed at the law, something you can read and change. The version that shows up online scores feelings in a room, live, with no ledger. That version is the one conservatives turned into a punchline, and the punchline works on it.
 
 Toussaint (46:59)
@@ -657,22 +657,22 @@ Give me a room.
 Aisha (47:00)
 Greenfield, Massachusetts, this September. A small queer bar had required KN-95 masks since the day it opened. It was losing money, so it made Saturday nights mask-optional. The Boston Globe covered the community meeting that followed. People called the change ableist, eugenicist, and racist. One of the owners said she had lived in her truck for six months and worked four jobs to keep the place open. A critic answered that her tears were racist and deflecting.
 
-Toussaint (47:30)
+Toussaint (47:29)
 So who won.
 
 Aisha (47:31)
 Run the instrument. The disability claim is real. Ability is one of the six lines, and a mask policy routes risk through it. The owner's claim is real. She sits outside the line on money, and on gender and sexuality too. Everybody in that room sits outside at least one line. Then do what we keep doing. Follow the money. The bar owed thirty-nine hundred dollars in back rent.
 
-Toussaint (47:55)
+Toussaint (47:54)
 The landlord.
 
-Aisha (47:56)
+Aisha (47:55)
 A location, and the only party in the story with money coming in. The ranking fight was about everybody else in the room.
 
 Emmanuel Theodore (48:03)
 The oppression Olympics is a targeting error with a scoreboard.
 
-Toussaint (48:07)
+Toussaint (48:06)
 Run the same cut on the gendered axis. The feed we opened on. All men.
 
 Aisha (48:11)
@@ -696,19 +696,19 @@ The chairs are always someone else's furniture, though. The listener is about to
 Aisha (49:09)
 Fair. Everyone in this room sits somewhere in the five. The tiers are positions in a flow, and the flow does not exempt the people describing it. The only difference the book offers anyone is that a located position can be acted from.
 
-Toussaint (49:24)
+Toussaint (49:23)
 Paid in standing to guard a machine that bills him.
 
-Aisha (49:27)
+Aisha (49:26)
 The buffer wage, exactly. Now the optics. You already met the optics in the classroom.
 
 Toussaint (49:32)
 The empty chair.
 
-Aisha (49:34)
+Aisha (49:33)
 From the base of the structure, the apex drops out of the picture. The book calls it Elite Obscuration, and it has a geometry. Engineers have a name for the collapse. Orthographic projection. A three-dimensional object, viewed from one line of sight, flattens into a plane. The drawing most people carry is that plane: a flat triangle, powerful at the top, powerless at the bottom. The actual structure is a three-dimensional pyramid, and the flat drawing misses the height. Miss the height and you miss the chair. From inside, the ceiling reads as the sky.
 
-Toussaint (50:09)
+Toussaint (50:08)
 The square ceiling.
 
 Aisha (50:10)
@@ -717,19 +717,19 @@ The square ceiling. That is the name the book gives the illusion. Society looks 
 Toussaint (50:46)
 Why does the third dimension matter. Plainly. Every protest poster I have ever seen is a flat triangle.
 
-Aisha (50:53)
+Aisha (50:52)
 A flat triangle has a visible top. Everyone standing under it can see the apex and chant at it. A pyramid viewed from inside shows you a ceiling, and a ceiling is a floor viewed from below. The people on the floor above you read as the sky. The chant goes to the ceiling. The apex collects the echo.
 
-Toussaint (51:11)
+Toussaint (51:10)
 You keep saying arranged. Arranged implies an arranger. That is my invisible-kid objection again.
 
-Emmanuel Theodore (51:17)
+Emmanuel Theodore (51:16)
 The arranger is selection, and it does not need a meeting. A structure that hides its beneficiary survives scrutiny longer than a structure that exposes him. Over centuries, the visible arrangements get challenged and the invisible ones get copied. You are looking at the survivor of that filtering, the way you are looking at the survivor when an animal's camouflage works. Nobody designed the moth. Nobody has to. The record of what got copied is the design document.
 
-Aisha (51:48)
+Aisha (51:47)
 And the obscuration claim carries its failure condition too.
 
-Emmanuel Theodore (51:52)
+Emmanuel Theodore (51:51)
 A stable public picture in which the beneficiary class is as visible, as named, and as accountable as the enforcement class, and in which that visibility survives contact with the extraction. If the chair photographs as easily as the hall monitor, the claim is wrong. Go try to take the photograph. That is the test.
 
 Toussaint (52:11)
@@ -747,22 +747,22 @@ Posters are the small version. The book tracks two runtimes, and I want to say t
 Toussaint (52:54)
 The flinch.
 
-Aisha (52:56)
+Aisha (52:55)
 The flinch. Here is the machinery underneath it. A human mind is a prediction engine. It compresses patterns to survive uncertainty, and it already sorts us and them. That sorting is old. It managed trust and threat in small groups long before anyone wrote a statute. Useful legacy code.
 
-Toussaint (53:14)
+Toussaint (53:13)
 Legacy code that somebody feeds.
 
 Aisha (53:16)
 That is the whole mechanism. Law and custom hand the sorting a script. The script installs a partition. The partition repeats until it stops feeling installed and starts feeling like perception. You look at a person and the line is already there, and you would swear you were born seeing it. Somebody drew the line. The drawing happened early enough that the memory of it is gone. The job remains.
 
-Toussaint (53:41)
+Toussaint (53:40)
 And if I stand up in the room and say somebody drew the line.
 
 Aisha (53:44)
 The room defends the line. You will be told you are imagining things, or that you are the one obsessed with lines. That defense is installed too, and it is the cheapest maintenance there is. The copies keep each other in place. The house, the school, the city, the flinch. Each copy guards the others.
 
-Toussaint (54:03)
+Toussaint (54:02)
 I want to resist this one hardest, so let me. You are describing human nature and calling it malware. People sort. People fear. That is us.
 
 Emmanuel Theodore (54:11)
@@ -771,16 +771,16 @@ The host is us. Every person carries the same host into the room, and I am descr
 Toussaint (54:36)
 Everyone carries the host. You three too. This show. How do you know your own partition is not installed.
 
-Emmanuel Theodore (54:43)
+Emmanuel Theodore (54:42)
 I do not trust my perception of a partition. That is the discipline, and it is why every claim in the book carries a failure condition in writing. My eyes are the wetware. The dated document is the check.
 
-Aisha (54:56)
+Aisha (54:55)
 And the installed partition has a signature. Four components, and they travel together. First, asymmetric autonomy. Rules constrain one side's movement, economic agency, and say over a body, while the other side keeps all three. You can measure this. Who may go. Who may stay. Who may keep the money they made.
 
 Toussaint (55:15)
 Second.
 
-Aisha (55:16)
+Aisha (55:15)
 Selective empathy. In-group suffering gets validated. Out-group harm gets dismissed or pathologized. The same injury draws two different receipts, and you can watch the receipts print in real time on any news day.
 
 Toussaint (55:29)
@@ -789,25 +789,25 @@ Third.
 Aisha (55:30)
 A story that calls the arrangement natural, deserved, or too complicated to touch. And fourth, a reflex. Any analysis of the system gets treated as an attack on a person. Watch for that one. You ask about a rule, and the room answers as if you insulted a neighbor. That deflection is component four doing its job.
 
-Toussaint (55:50)
+Toussaint (55:49)
 And if I find all four running together.
 
 Aisha (55:52)
 You are looking at this architecture, whatever it calls itself, wherever it is installed. Empire. Nation. City. School district. Household. The same partition logic reproduces at every scale. The ballot line and the private reflex of suspicion run the same script in different-sized rooms.
 
-Toussaint (56:11)
+Toussaint (56:10)
 Walk one. The school district.
 
-Aisha (56:14)
+Aisha (56:13)
 A line about whose kids are trouble. A rule that makes the line feel like safety. A story that says the line was always there. And a flinch in a hallway that does the rule's job while the dean is at lunch. Institution and cognition, coupled, before anyone says the word software.
 
-Toussaint (56:31)
+Toussaint (56:30)
 And at the empire scale.
 
-Aisha (56:33)
+Aisha (56:32)
 Same script, bigger room. The line, the rule, the story, and the reflex, drawn along borders. The scale changes the casualty count. The wiring stays the wiring.
 
-Emmanuel Theodore (56:43)
+Emmanuel Theodore (56:42)
 The book's name for the installed script is the fractal mind virus, and I will defend the name once, briefly. Fractal, because the same logic recurs at every scale. Virus, because legal code enters a person and executes. And here is the limit, because the name can be over-read. Virus is a picture for how the code copies. Partition is the claim. Extraction is the claim. The four components are the claim, and they are the empirical signature. If the picture ever does work the claims have not earned, drop the picture and keep the signature.
 
 Toussaint (57:17)
@@ -831,43 +831,43 @@ Plenty changes, and the changes matter. Names change. Language changes. Laws on 
 Toussaint (58:39)
 So the signature is real and the file stays open.
 
-Aisha (58:43)
+Aisha (58:42)
 The signature is real, and the celebration is real, and the structure underneath the celebration keeps its shape. The surface signature changes. The payload stays. The book's computing picture for this is polymorphic code. The same underlying structure presents a new face. Learn to recognize only the banned costume and you will miss the next one. The constant is the direction of the wealth.
 
 Toussaint (59:07)
 The direction of the wealth. That is the one number you keep coming back to.
 
-Aisha (59:12)
+Aisha (59:11)
 It is the number the costume is worn to hide.
 
-Toussaint (59:15)
+Toussaint (59:14)
 Then my fourth piece was the most expensive one. I believed a signature ended a wrong, and the belief itself was part of the costume change. The celebration does the machine's work. The room goes home.
 
-Emmanuel Theodore (59:27)
+Emmanuel Theodore (59:26)
 And the claim still carries its failure condition. A reform that removed the extraction and produced no replacement form, no overshoot, a new stable non-extractive equilibrium. Find that in the record and the kickback account is wrong for that case. The later chapters document the overshoots, era by era. Here we need the mechanism and the test.
 
-Toussaint (59:50)
+Toussaint (59:49)
 So a movement can win the name and lose the current.
 
-Emmanuel Theodore (59:53)
+Emmanuel Theodore (59:52)
 Yes. The name is winnable. Measure the current.
 
-Toussaint (59:56)
+Toussaint (59:55)
 Gate. Write. Carry. Defend. Replace. Five steps, one order of operations, one direction of wealth. You promised me an instrument. This is where it arrives.
 
 Aisha (60:05)
 Three questions. That is the whole instrument. Of any rule, any policy, any arrangement: follow the money. Who turned that into a rule. Who is paid to defend the line. Three answers, and each one has a document attached. The statute. The payroll. The outcome data.
 
-Toussaint (60:22)
+Toussaint (60:21)
 Why three questions for five tiers.
 
 Aisha (60:24)
 Because two of the tiers are already visible. The hands are on camera. The cost is in the data. The three questions exist for the three tiers the picture hides. The collector, the writer, and the believer.
 
-Toussaint (60:37)
+Toussaint (60:36)
 The believer is the one I did not expect to pay.
 
-Aisha (60:40)
+Aisha (60:39)
 The believer pays in two directions. Standing comes in. Extraction goes out, along the other axes. The wage is real, and so is the bill.
 
 Emmanuel Theodore (60:48)
@@ -876,7 +876,7 @@ One limit on the instrument, and I want it heard. The three questions diagnose a
 Toussaint (61:11)
 And when I cannot find the collector.
 
-Emmanuel Theodore (61:14)
+Emmanuel Theodore (61:13)
 Leave the blank. A blank is an honest gap. Filling it with a villain you already disliked is two-box thinking sneaking back through the side door. Look at the money. The blank is very often the chair.
 
 Toussaint (61:26)
@@ -885,7 +885,7 @@ So tonight. A policy hits the news. I have ten minutes and a phone. Walk me thro
 Aisha (61:31)
 Write the rule in one sentence. Name the wealth that moves if the rule holds. Name the office that can change the sentence. Name the payroll that will make bodies comply. Name who is paid in standing for defending it. Three questions, five names, ten minutes. And where a name will not come, the missing name is information.
 
-Toussaint (61:52)
+Toussaint (61:51)
 Then run it. Monday morning. One ordinary object, no history degree required. A workplace posts a new scheduling rule. The shift that pays now goes by a points system, and the points live in software, and nobody on the floor has seen the formula. This is the kind of rule that lands every week, everywhere. Run the three questions on it.
 
 Aisha (62:12)
@@ -894,34 +894,34 @@ Slowly first. The rule arrives on a flyer and in a meeting. Someone reads it out
 Aisha (62:26)
 Write the rule in one sentence first. Points decide who gets the shift that pays. Now, follow the money if the rule holds. Start with what moves. Payroll drops on one side. Output holds. The difference collects somewhere, and the somewhere is a margin. A margin has an owner. The owner is rarely the person who posted the notice.
 
-Toussaint (62:47)
+Toussaint (62:46)
 And if the owner is a fund. A name on a quarterly statement.
 
 Aisha (62:50)
 Funds have beneficiaries, and beneficiaries have a flow. Follow the distribution. You may hit a structure designed so the flow disperses before it lands on a name. That dispersal is engineering, and it tells you something the weather picture cannot. Somebody paid to make the beneficiary hard to name. The difficulty is a cost center. Cost centers exist to protect revenue.
 
-Toussaint (63:15)
+Toussaint (63:14)
 The person who posted the notice is who.
 
-Aisha (63:17)
+Aisha (63:16)
 The Puppet Class in miniature. A human resources office, a regional director, a general counsel. Look at the letterhead, and then look at who can change the rule without asking the floor. That second answer is the tell. The writer translates a preference they did not originate into a sentence you can be fired for missing.
 
 Toussaint (63:37)
 Who carries it out.
 
-Aisha (63:39)
+Aisha (63:38)
 A manager, and a piece of software that flags the badge. Enforcement, or enforcement's cousin. Paid to make bodies comply. And note the funding loop, because step one is still running. The manager's wage comes out of the same floor's output. The floor is billed for its own supervision. The invoice arrives with a smiley face. Thank you for helping keep us safe.
 
-Toussaint (64:01)
+Toussaint (64:00)
 The announcement meeting is part of it too. I have sat in that meeting. The rule gets presented as neutral. Points are math. Math does not have a mood.
 
-Aisha (64:10)
+Aisha (64:09)
 The formula is the costume. A points system presents a human decision as a compliance requirement. Watch for that move. The more a rule sounds like weather, the more somebody paid to make it sound like weather.
 
-Toussaint (64:23)
+Toussaint (64:22)
 Who is paid to defend the line.
 
-Aisha (64:25)
+Aisha (64:24)
 There is one on every floor. The person with a title, a little flexibility, and a speech about how we are a family here. They explain the points system to the people it costs. Their suppression allocation can include selective protection or an occasional material concession. Its cheap, default component is the status wage: standing without a material transfer. In street clothes, it is the shift lead who genuinely believes the points are fair, because believing it is part of how the wage pays.
 
 Toussaint (64:56)
@@ -933,16 +933,16 @@ Meaning it is part of how the lock stays paid for. Now the third document. The o
 Toussaint (65:28)
 And if the numbers are sealed.
 
-Aisha (65:30)
+Aisha (65:29)
 Some are. Then your answers come back uneven, and uneven is information. A rule whose outcome data is sealed is a rule whose outcome data somebody chose to seal, and that choice is itself a document. Ask who chose. You are back at the three questions.
 
-Toussaint (65:46)
+Toussaint (65:45)
 There is a grievance process. The employee handbook has a whole chapter.
 
 Aisha (65:50)
 It does, and watch where the chapter reports. A grievance process that answers to the letterhead is a pressure valve with a form attached. It lets the steam speak, and it routes the speech back into the plumbing. The test is the same test. What changed in the outcome data after the last grievance that won.
 
-Toussaint (66:09)
+Toussaint (66:08)
 I ran it. A scheduling rule, and I got a margin with an owner, a letterhead, a payroll, a believer, and a turnover column. None of that is weather. Nobody's heart appears anywhere in it.
 
 Aisha (66:20)
@@ -951,25 +951,25 @@ The hearts are still there. They are downstream. That is the whole relocation we
 Toussaint (66:26)
 Let me push on one thing, because the break room will. My manager is kind. Genuinely kind. Covers shifts, remembers birthdays. Does the instrument call him the enemy.
 
-Emmanuel Theodore (66:37)
+Emmanuel Theodore (66:36)
 The instrument maps positions and flows. Your kind manager carries out a rule and draws a wage from the same floor he supervises. His kindness is real, and it leaves the flow unchanged. The check is the flow. The face can wait.
 
-Aisha (66:51)
+Aisha (66:50)
 And the same mercy runs the other direction. A person can hold a buffer position and be extractable on another axis at the same time. The shift lead defending the points system goes home to a landlord, a loan, a medical bill. His line defends one partition and his bank account sits on the wrong side of another. The instrument asks you to locate him.
 
-Toussaint (67:13)
+Toussaint (67:12)
 And me. Where am I in your five tiers.
 
-Aisha (67:16)
+Aisha (67:15)
 The instrument locates you inside the rules that cost you. Run the three questions on those rules. Locate yourself. The book's wager is that a located reader is harder to bill.
 
-Toussaint (67:27)
+Toussaint (67:26)
 One more Monday, fast, to prove the instrument travels. A city council item. A zoning change.
 
 Aisha (67:32)
 Same three questions. Follow the money if the zoning holds. Land values have owners, and the owners are findable. Who wrote the text. Council staff, a named vote, a letterhead. Who will knock on the door. And who will tell the neighbors it is for safety. Statute, payroll, outcome. You can run it on a school board, a family rule, a platform's terms of service. The instrument does not care about the size of the room.
 
-Toussaint (67:59)
+Toussaint (67:58)
 Safety. The neighbors will say safety.
 
 Aisha (68:01)
@@ -978,7 +978,7 @@ Safety, property values, the character of the neighborhood. The buffer vocabular
 Toussaint (68:13)
 A family rule.
 
-Aisha (68:15)
+Aisha (68:14)
 Who decided it. Who enforces it at the table. Who gets praised for keeping it. Who pays when it holds. Same three questions, smaller room. The fractal property said the small rooms would rhyme with the large ones. Test it at dinner.
 
 Toussaint (68:29)
@@ -990,28 +990,28 @@ Then the instrument did the hardest thing it does. It located the listener insid
 Emmanuel Theodore (68:47)
 And keep the limit with the instrument. Three questions locate a structure. They leave the naming of names to the documents. A missed collector is a blank, and a blank is honest work. And run the questions more than once. One rule proves little. A month of rules with the same three answers is a pattern, and a pattern is a structure. The pointing problem is the one I checked hardest in the book, because a simple version that hands you a photographable villain teaches the opposite lesson from the one the architecture makes. If you leave with three questions and the discipline to leave blanks blank, you have the whole thing.
 
-Toussaint (69:28)
+Toussaint (69:27)
 So come back to where we started. The feed. The campus story. The four camps. All men. Complicity thick enough to feel like a category. Most men. Look up, the chair is thinner than the word.
 
 Aisha (69:39)
 And you are standing in that thread holding a second reading of it. The coarse binary is a real first cut, and it is a low-resolution photograph of a taller machine. Five tiers. An order of operations. Three questions with documents attached. The thread is describing weather and teams. You are looking at a circuit, and you can see why anger aimed at the ceiling never finds an account number.
 
-Toussaint (70:04)
+Toussaint (70:03)
 That is the before and after of this book, in one thread. The category becomes a coarse projection of the structure inside it. The fight about category size becomes one output of that structure.
 
-Aisha (70:16)
+Aisha (70:15)
 The circuit asks three questions and shows its work. That is the trade on offer. You can make it tonight, on the next fight that lands in your feed.
 
-Toussaint (70:25)
+Toussaint (70:24)
 One last object before we go, because it is the door to the next episode. Right now, in Texas, prisoners grow crops on land that used to be plantations.
 
 Aisha (70:34)
 Nine prison units sit on former plantation land, according to a 2024 report in the Texas Observer. The people working those fields are not paid.
 
-Toussaint (70:44)
+Toussaint (70:43)
 Slavery ended in 1865. The weather picture says that file is closed. The instrument says check the direction of the wealth, and the word that file was closed under is the word the next episode takes apart.
 
-Aisha (70:57)
+Aisha (70:56)
 Racism. The next episode puts this machine under that word. The record for it starts in fifteenth-century Portugal, and the calibration is public, slow, and checkable. You already have the questions. That episode is where they meet a word a stranger already has an opinion about.
 
 Emmanuel Theodore (71:14)
