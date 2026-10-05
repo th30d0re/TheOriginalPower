@@ -4,13 +4,13 @@ Toussaint (00:00)
 In September a former Cornell student sued in New York state court. She says that in October 2024, seven members of the Chi Phi fraternity drugged her and raped her at the chapter house. The seven men are accused. As of this recording, none of them has been charged with a crime, and the one defendant who has spoken through a lawyer says he is innocent. Two years after the night in question, the case reached the public, and inside a week the feed had sorted itself into camps.
 
 Aisha (00:29)
-Camp one and camp three met in a single video. A man answered "all men" with a box of Whoppers.
+Camp one and camp three met in a single video. In 2026, Ilyas Abdulin, at ilyas dot abdulin on Instagram, answered a woman's video that said to be wary of all Whoppers if one in ten is bad.
 
 Ilyas Abdulin (00:34)
 [clip:ilyas_2026b] Let's say I did get a box of ten whoppers and one of them is a piece of sh** dipped in chocolate. Thing is, I'm not just going to start eating them one by one and hope for the best. I would check first. Probably get the gloves, put ten whoppers on a table, cut them in half, take a look. And once I find the sh**ty one, I throw it away. Now I have nine normal whoppers. And I'm not going to treat those nine like they are also contaminated.
 
 Toussaint (00:57)
-And the reply came stitched to the same video.
+And the reply came stitched to that same video in 2026. Nick Powers, at that nick powers guy on Instagram, replied to Ilyas.
 
 Nick Powers (01:00)
 [clip:nickpowers_2026] All men isn't accusing every single man of being sh**. It's saying that all of them could be and you need to take precautions. And since women don't know which men are sh**, they have to assume that all of them could be.
@@ -19,7 +19,7 @@ Aisha (01:15)
 Both men are inspecting Whoppers. Neither one asks who runs the factory, or why the bad one keeps turning up in the same kind of box. In this case the box has an address, a chapter house, and the question that matters is who decided what happened after that night.
 
 Toussaint (01:32)
-Camp two asked something sharper.
+Camp two asked something sharper. In fall 2026, jaeden, at jay serv on Instagram, posted a reel on the Cornell case called "What if it's all of our problem?".
 
 jaeden (01:34)
 [clip:jaeserv_2026] You don't match the identity of the seven boys who do this vile act, but those seven boys were part of a larger 50 boys. And those 50 boys were trauma-bonded in a way where they won't hold their own brothers accountable.
@@ -28,10 +28,13 @@ Aisha (01:42)
 That is the strongest observation anyone made in the whole thread. The lawsuit says the silence was written down. It alleges a group chat where members were invited upstairs while she was in the house. So the question is why. Why would that many men stay quiet.
 
 Toussaint (01:58)
-A man who stood inside one of those houses answered it.
+A man who stood inside one of those houses answered it. The Mutual Man, at the mutual man on Instagram, posted a reel on October 1, 2026, called "How my fraternity systematically silenced me." This is his personal, unverified testimony about his own unnamed chapter.
 
 The Mutual Man (02:01)
 [clip:mutualman_2026a] Establish a power hierarchy through humiliation. You must enforce the hierarchy or else the system will turn against you. They have implicit rules to belong, such as don't snitch, seek approval, keep it in-house, protect the bros, and keep tradition. They frame these things as brotherhood.
+
+Toussaint (02:19)
+The Mutual Man again, same video.
 
 The Mutual Man (02:19)
 [clip:mutualman_2026b] But really, it's filtering for submission to the system.
@@ -40,7 +43,7 @@ Aisha (02:23)
 He tried to stop it in his own chapter, and the chapter pushed him out. Belonging is a wage. The house pays it every night, and the price is silence.
 
 Toussaint (02:32)
-Camp two has an academic version too.
+Camp two has an academic version too. In 2026, a professor who goes by at the speech prof on Instagram posted a reel replying to another academic who said there is no evidence men benefit from other men's violence.
 
 The Speech Prof (02:34)
 [clip:thespeechprof_2026] There's a term for it, complicit masculinity, for men who don't embody the aggressive ideal, but still collect the benefits. Most men fall into that category. The dividend doesn't require participation. It simply requires presence.
@@ -52,10 +55,13 @@ Toussaint (03:03)
 Back to camp three, and the man with the Whoppers.
 
 Aisha (03:06)
-On the count, he is right. Most men collect nothing from what happened in that house. The sharpest version of camp three's point came from inside feminism.
+On the count, he is right. Most men collect nothing from what happened in that house. The sharpest version of camp three's point came from inside feminism. Jala Chantelle, at jala chantelle on Instagram, posted a reel called "Not all men are bad" on September 30, 2026.
 
 Jala Chantelle (03:16)
 [clip:jalachantelle_2026a] It is very similar as saying boys will be boys, right? It's a bio-essentialist way of generalizing boys and men as just people who do bad things and it just gives them a pass to continue to do those bad things.
+
+Aisha (03:28)
+Jala Chantelle again, same video.
 
 Jala Chantelle (03:28)
 [clip:jalachantelle_2026b] If we understand that it is a choice to be bad and it isn't just a biological gender specific preset, then we are actually encouraging people to do the work to dismantle the harmful systems that they have been existing under.
@@ -64,13 +70,13 @@ Emmanuel Theodore (03:39)
 That is the reason I started this series here. Blame the whole category, and you describe the behavior as nature. And nature looks fixed right up until somebody learns how it works. We learned how electrons move, and then we made them do our bidding. Society runs the same way. The people who understand how it is engineered have been steering it for a long time, and they keep the manual to themselves. Arthur C Clarke said any sufficiently advanced technology is indistinguishable from magic. A machine you cannot read looks like nature, or like magic. This show is the manual.
 
 Toussaint (04:16)
-Camp four found a part.
+Camp four found a part. In 2026, mamwa, at amanda the gate man on Instagram, posted a reel on who built patriarchy.
 
 mamwa (04:18)
 [clip:amandathegateman_2026] Who set that system up? Not individual actors, not men. Billionaires set that system up. Modern day patriarchy is deeply intertwined with class struggle and capitalism. Right now, who set that system up? Is the billionaires, is the political class, is the bourgeoisie, okay? Not Jackson down the street.
 
 Aisha (04:41)
-Another camp-one voice ran the FBI numbers to defend all men. Listen to where his own evidence ends.
+Another camp-one voice ran the FBI numbers to defend all men. Blake Johnson, at eugene squad on Instagram, posted a reel called "Yes, all men" on September 29, 2026. Listen to where his own evidence ends.
 
 Blake Johnson (04:48)
 [clip:eugenesquad_2026b] And when you look at our society and the fact that we not only tend to let these people off, but to elevate them to positions of power.
@@ -88,7 +94,7 @@ Aisha (07:00)
 The record cuts both ways, and the strongest skeptic in the feed builds on the part that cuts against her. In texts four days after the night, she wrote that her reputation was destroyed and she was utterly ashamed. The same thread says this many people should not know. A text two weeks later says ninety percent of what happened that night was not consensual. The skeptic reads the first set and skips the second.
 
 Toussaint (07:26)
-Her best argument is about how to read texts like those.
+Her best argument is about how to read texts like those. Chloe Sunderland, at roma army on Instagram, posted a reel on October 2, 2026. She is a skeptic of the accuser's account. We air her argument about trauma. We omit her account of the night.
 
 Chloe Sunderland (07:29)
 [clip:romaarmyy_2026] Does it automatically prove that she's lying? No, it doesn't. But you also don't get to throw all of those statements in a furnace and yell trauma every time something like doesn't match your narrative and the allegation. Trauma psychology itself explains why somebody might interpret an experience differently over time, but it does not establish that that particular person was incapacitated. It does not establish coercion. And it doesn't mean that every contemporary statement that cuts against the allegation becomes irrelevant.
@@ -100,7 +106,7 @@ Toussaint (08:30)
 Three institutions, each one pointing at another, until the state stepped over one of them. None of the four camps is arguing about any of them. Where you aim the anger matters. Aim it at a category, and the category absorbs it. Aim it at a structure, and a structure can be located.
 
 Aisha (08:47)
-That is what this episode hands you. A book that treats the two-box picture as a coarse projection of a taller machine. An extraction circuit with five jobs, a fixed order of operations, and a test you can run yourself, on a statute, on a payroll, on an outcome. The same cut that fails on the gendered axis fails on the racial axis. The geometry is the same.
+That is what this episode hands you. A book that treats the two-box picture as a coarse projection of a taller machine. An extraction circuit with five tiers, a fixed order of operations, and a test you can run yourself, on a statute, on a payroll, on an outcome. The same cut that fails on the gendered axis fails on the racial axis. The geometry is the same.
 
 Emmanuel Theodore (09:09)
 I wrote the book. It is called The Original Power, and it is a finished specification. The machine in it has named parts. Every claim about those parts carries its evidence underneath, and its test for breaking.
@@ -121,22 +127,22 @@ Toussaint (10:01)
 So let's name what the feed is doing, because it has a name. It is a targeting error. Some of us are angry about the right thing and firing at the wrong target. Some of us cannot tell where to put the anger at all. And some of you listening fired that shot this week.
 
 Aisha (10:16)
-The man who answered the bully analogy described the error better than we can.
+Ilyas Abdulin again. In September 2026, he posted an Instagram reel called "Prejudice Is Okay When It's Against Men?". He described the error better than we can.
 
 Ilyas Abdulin (10:22)
 [clip:ilyas_2026] You are taking the actions of one person or even a number of people and applying that hatred to millions of completely unrelated people because they share the same sex or skin color.
 
 Toussaint (10:31)
-And the error has a beneficiary. A woman who posted about the case the morning it broke said so directly.
+And the error has a beneficiary. Krystal, at krystal tantric yogi on Instagram, said so directly. She posted a reel on the Cornell case on September 28, 2026, the morning the story broke.
 
 Krystal (10:37)
 [clip:krystal_2026b] And instead of us focusing on the system, we have a whole bunch of people and videos and influencers talking about all men and patriarchy being the problem and associating with just men, and that's a distraction. Not only that, you're dehumanizing a whole group of people, which just makes them more violent and makes and supports the system as a whole when you do that.
 
 Aisha (10:57)
-A distraction serves whoever it distracts from. So here is the correction. The two-box picture, in-group and out-group, men and everyone else, hands you one target the size of half the planet. The record of a case like this hands you jobs. Five of them, and each one has an address. We will run all five on the Chi Phi case, and you have already heard most of the evidence.
+A distraction serves whoever it distracts from. So here is the correction. The two-box picture, in-group and out-group, men and everyone else, hands you one target the size of half the planet. The record of a case like this hands you tiers. Five of them, and each one has an address. We will run all five on the Chi Phi case, and you have already heard most of the evidence.
 
 Toussaint (11:20)
-Start at the top. Follow the money.
+Start at the top. Follow the money. Krystal again, same video.
 
 Krystal (11:23)
 [clip:krystal_2026a] Patriarchy was not built by men for men. I don't know who told you that but that is false. Patriarchy was built by wealthy people for wealthy people. It's a wealth inheritance mechanism. Patriarchy shows up right along private property because you cannot pass down wealth if you don't know whose kid is whose. So women's bodies get treated like inheritance infrastructure. That's not a men hating women problem. That's a controlling reproduction to protect a fortune problem.
@@ -145,10 +151,10 @@ Aisha (11:45)
 The book calls that position the Elite. A thin layer that owns the arrangement and collects from it. Most men are nowhere near it, and some women sit inside it.
 
 Toussaint (11:55)
-Second job. Who writes the rules, and who decides which rules count.
+Second tier. Who writes the rules, and who decides which rules count.
 
 Aisha (11:59)
-In this case, the paper. A conduct process that seals what it decides. A prosecutor who declined on one sworn statement. And a creator who covers Greek life says the universities have their own reason to look away.
+In this case, the paper. A conduct process that seals what it decides. A prosecutor who declined on one sworn statement. Eivin Sandstrom, at upland sandy on Instagram, posted a reel on fraternity hazing on September 27, 2026. He covers Greek life, and he says the universities have their own reason to look away.
 
 Eivin Sandstrom (12:13)
 [clip:uplandsandy_2026c] The universities know exactly what's going on, they're just being led by former brothers and sisters too who are also in the club, so they look the other way in hopes that the brothers and sisters will donate down the line.
@@ -157,7 +163,7 @@ Aisha (12:25)
 That is his read, and the independent review the governor asked for is where it gets tested. The book calls this tier the Puppet Class. It turns the arrangement into rules and decisions, and it answers upward.
 
 Toussaint (12:38)
-Third job. Enforcement. Somebody has to make the rules stick on actual people.
+Third tier. Enforcement. Somebody has to make the rules stick on actual people. The Mutual Man again, same video.
 
 The Mutual Man (12:43)
 [clip:mutualman_2026c] They made a public statement as if they handled things, but within the system they protected the abusers. They even threatened the victims with legal action in order to silence them.
@@ -166,13 +172,19 @@ Aisha (12:53)
 That is his account of his own chapter. Enforcement inside a house looks like that. A statement for the public, and pressure on the people who talked.
 
 Toussaint (13:02)
-Fourth job. The biggest one. The fifty.
+Fourth tier. The biggest one. The fifty. Eivin Sandstrom again, same video.
 
 Eivin Sandstrom (13:05)
 [clip:uplandsandy_2026a] a humiliation ritual like this plays a very specific function, and that's to mold these young men into the future holders of power, the kind of guy that will do anything to be a part of the club.
 
+Toussaint (13:15)
+Eivin Sandstrom again, same video.
+
 Eivin Sandstrom (13:15)
 [clip:uplandsandy_2026b] And if you can't hold the line, or you tell an outsider about what happened, you're gone, you're dropped, you lose your bid, you're out of the club,
+
+Aisha (13:24)
+The Mutual Man again, same video.
 
 The Mutual Man (13:24)
 [clip:mutualman_2026d] When you challenge a closed unhealthy system, it will prioritize belonging and survival first, above morals.
@@ -180,20 +192,23 @@ The Mutual Man (13:24)
 Aisha (13:31)
 The book calls that the Buffer Class, and it is the largest workforce the arrangement has. Most of the people inside the line collect nothing from what happened upstairs. They get belonging. They get standing. They get told they are better than the people on the other side of the line, and they defend the line for that wage. And the buffer includes women.
 
+Aisha (13:54)
+mamwa again, same video.
+
 mamwa (13:54)
 [clip:amandathegateman_2026b] We all enforce patriarchy. Women, men, everyone enforces patriarchy albeit at varying levels.
 
 Toussaint (14:03)
-Fifth job. The out-group. The people the arrangement collects from.
+Fifth tier. The out-group. The people the arrangement collects from.
 
 Aisha (14:07)
-On this axis, that is the woman upstairs, and she carries the compounding load. And the lines cross. On another axis, plenty of the men in that house sit outside the line too.
+On this axis, that is the woman upstairs, and she carries the compounding load. And the lines cross. On another axis, plenty of the men in that house sit outside the line too. May, at mayson yaps on Instagram, posted a reel on September 28, 2026.
 
 May (14:18)
 [clip:mayson_2026] Women's bodies have been historically treated as property. Men's bodies have been historically treated as expendable. Both deny bodily autonomy and human value.
 
 Aisha (14:27)
-Five jobs, and every one of them has an address. A tier, a payroll, a policy, a house. The word men has no address. Aim at it, and you hit the fifty and the thin layer at the same rate, which means you mostly hit the fifty. The thin layer goes home.
+Five tiers, and every one of them has an address. A tier, a payroll, a policy, a house. The word men has no address. Aim at it, and you hit the fifty and the thin layer at the same rate, which means you mostly hit the fifty. The thin layer goes home.
 
 Toussaint (14:42)
 That is the targeting error. And the two-box picture is a real tool, so give it its credit. People who had nothing organized themselves with us and them, and some of them won. It is a map for gathering people. Finding the collector takes a second map, and the people who collect are happy to let the first map do both jobs.
@@ -226,7 +241,7 @@ Toussaint (16:28)
 Second piece. Us and them. We just took it apart.
 
 Aisha (16:32)
-The two-team picture flattens five jobs into one blob. Camp one and camp three both live inside that blur. They disagree about the size of the category, but they agree the category is the object.
+The two-team picture flattens five tiers into one blob. Camp one and camp three both live inside that blur. They disagree about the size of the category, but they agree the category is the object.
 
 Toussaint (16:44)
 Third piece. Bad rules come from bad feelings. Somebody hates, and the hatred becomes a policy. So the fix is education. Change enough hearts and the laws follow.
@@ -265,7 +280,7 @@ Toussaint (18:38)
 So that is my picture. Power has a face. There are two teams. Hatred writes the rules. A signature ends a wrong. Four pieces, and they fit.
 
 Aisha (18:47)
-They fit because they were fitted. A picture installed early wears the feel of eyesight. That is job three's subject, later on.
+They fit because they were fitted. A picture installed early wears the feel of eyesight. That is step three's subject, later on.
 
 Aisha (18:55)
 They fit because they are one picture, and the picture is meteorology. Attitudes form a climate, pressure systems have faces, and a big enough storm clears the air.
@@ -418,7 +433,7 @@ Emmanuel Theodore (27:46)
 Hiding is a behavior. Behavior has an energy budget and a paper trail, and both are checkable.
 
 Toussaint (27:52)
-Second crack, then. Two teams. You sharpened the photograph and got five jobs. Give me the third piece. Hatred writes the rules. That one I have watched happen. The feeling comes first. Somebody hates, the hate becomes custom, the custom becomes law.
+Second crack, then. Two teams. You sharpened the photograph and got five tiers. Give me the third piece. Hatred writes the rules. That one I have watched happen. The feeling comes first. Somebody hates, the hate becomes custom, the custom becomes law.
 
 Aisha (28:07)
 The book's answer is the load-bearing sentence of the whole argument. The extraction comes first. A group with something to take builds a partition around the taking. The story about the people inside the partition gets manufactured afterward, and its job is to protect the flow. Prejudice is the product. The product has a factory.
@@ -475,7 +490,7 @@ Aisha (31:09)
 Now you are holding the last piece of weather. A law changes the name on the costume. The question is what happens to the direction of the wealth. One number, asked across every era. Who is collecting, and from whom. If the signature retired the machine, that number moves. If the costume changed, the number holds.
 
 Emmanuel Theodore (31:29)
-The object in front of you is an extraction circuit. It has five jobs, a fixed order of operations, and an energy budget. Every part of it leaves a paper trail, a payroll, or a body count, and that is what makes it a better object than weather. You can check it.
+The object in front of you is an extraction circuit. It has five tiers, a fixed order of operations, and an energy budget. Every part of it leaves a paper trail, a payroll, or a body count, and that is what makes it a better object than weather. You can check it.
 
 Aisha (31:44)
 A small group gates the labor of everyone else. Other people write that arrangement into rules. Other people carry the rules out. A much larger group is paid in standing to defend the line. And when a costume gets a name, the costume changes, and the wealth keeps moving in the same direction. Gate. Write. Carry. Defend. Replace.
@@ -484,7 +499,7 @@ Toussaint (32:05)
 And when the five are on the table.
 
 Aisha (32:07)
-Then you get the instrument. Job one. The gate. The people being taken from are the power supply. Their labor, their taxes, their physical output. That is the current. Everything else in this machine is plumbing.
+Then you get the instrument. Step one. The gate. The people being taken from are the power supply. Their labor, their taxes, their physical output. That is the current. Everything else in this machine is plumbing.
 
 Toussaint (32:20)
 And the small group.
@@ -580,13 +595,13 @@ Toussaint (39:34)
 Five boxes still sounds like astrology for inequality. People move. People are complicated. A person does not have a box printed on them.
 
 Aisha (39:42)
-These are jobs. A box in this framework is a position in a flow, the way a pin is a position in a circuit. And the flow runs along more than one axis. Race is an axis. Money is an axis. Credential, geography, legal status, gender. Each axis draws its own line through the same crowd.
+These are tiers. A box in this framework is a position in a flow, the way a pin is a position in a circuit. And the flow runs along more than one axis. Race is an axis. Money is an axis. Credential, geography, legal status, gender. Each axis draws its own line through the same crowd.
 
 Toussaint (40:00)
 So a white factory worker.
 
 Aisha (40:02)
-Sits inside the in-group on race. Inside the in-group on gender too, because he is a man. On money and power, he sits outside it. All three facts are true at the same instant, about the same man. The book calls each axis-line a projection. When axes cross, it models their joint effect as multiplicative intersection. Two-box thinking has to pick one team for him. The five-job picture holds all of his positions and predicts that he will defend the lines he is inside of, because standing is the wage he is paid, even while another line is extracting from him.
+Sits inside the in-group on race. Inside the in-group on gender too, because he is a man. On money and power, he sits outside it. All three facts are true at the same instant, about the same man. The book calls each axis-line a projection. When axes cross, it models their joint effect as multiplicative intersection. Two-box thinking has to pick one team for him. The five-tier picture holds all of his positions and predicts that he will defend the lines he is inside of, because standing is the wage he is paid, even while another line is extracting from him.
 
 Toussaint (40:37)
 Okay, then I have to ask the question everybody makes fun of. If every person sits on six lines at once, who wins. A Black, nonbinary, disabled, neurodivergent, left-handed, short person, or a white trans man with severe anxiety. Somebody hand out the medals.
@@ -661,7 +676,7 @@ Toussaint (46:06)
 Run the same cut on the gendered axis. The feed we opened on. All men.
 
 Aisha (46:10)
-Same coarse photograph we ran at the start, on the Chi Phi case. The Elite, the paper, the enforcers, the fifty, and the woman upstairs. Five jobs again. The word men names the first cut. It cannot locate the chair.
+Same coarse photograph we ran at the start, on the Chi Phi case. The Elite, the paper, the enforcers, the fifty, and the woman upstairs. Five tiers again. The word men names the first cut. It cannot locate the chair.
 
 Toussaint (46:24)
 The writer and the hands. Those are never the same person.
@@ -670,16 +685,16 @@ Aisha (46:27)
 Almost never, and the separation is the point. The writer needs clean hands. The hands need a written order. Each one can point at the other, and both point away from the chair.
 
 Toussaint (46:38)
-This is turning into a taxonomy. Five jobs, many axes, projections. Does a listener need the whole key to the map.
+This is turning into a taxonomy. Five tiers, many axes, projections. Does a listener need the whole key to the map.
 
 Aisha (46:45)
-No. The key is three questions, and they are coming. The five jobs exist so the questions have somewhere to land. You will never need to say the word projection at dinner. You will need to know that the person yelling at the buffer is missing the chair.
+No. The key is three questions, and they are coming. The five tiers exist so the questions have somewhere to land. You will never need to say the word projection at dinner. You will need to know that the person yelling at the buffer is missing the chair.
 
 Toussaint (47:00)
-The chairs are always someone else's furniture, though. The listener is about to ask where you and I sit. Show me the humility of the five jobs.
+The chairs are always someone else's furniture, though. The listener is about to ask where you and I sit. Show me the humility of the five tiers.
 
 Aisha (47:09)
-Fair. Everyone in this room sits somewhere in the five. The jobs are positions in a flow, and the flow does not exempt the people describing it. The only difference the book offers anyone is that a located position can be acted from.
+Fair. Everyone in this room sits somewhere in the five. The tiers are positions in a flow, and the flow does not exempt the people describing it. The only difference the book offers anyone is that a located position can be acted from.
 
 Toussaint (47:23)
 Paid in standing to guard a machine that bills him.
@@ -718,10 +733,10 @@ Emmanuel Theodore (49:51)
 A stable public picture in which the beneficiary class is as visible, as named, and as accountable as the enforcement class, and in which that visibility survives contact with the extraction. If the chair photographs as easily as the hall monitor, the claim is wrong. Go try to take the photograph. That is the test.
 
 Toussaint (50:10)
-Five jobs. Gate, write, carry, defend, carry the load. The collecting chair is the one the drawing leaves out. What is job three.
+Five steps. Gate, write, carry, defend, carry the load. The collecting chair is the one the drawing leaves out. What is step three.
 
 Aisha (50:18)
-Job three is the one that will follow you home. The rules get inside the person.
+Step three is the one that will follow you home. The rules get inside the person.
 
 Toussaint (50:23)
 Meaning propaganda. Posters. Schools.
@@ -799,10 +814,10 @@ Toussaint (55:16)
 The statute and the flinch. Two runtimes. And the weather picture had words for neither.
 
 Aisha (55:21)
-Weather has no runtime. That is its function. Job four.
+Weather has no runtime. That is its function. Step four.
 
 Toussaint (55:25)
-Job four. The costume.
+Step four. The costume.
 
 Aisha (55:28)
 A rule gets named. The naming becomes a movement. The movement becomes a law. The Concession Theorem names the invariant across the full reform cycle. Durable gains can remain while Elite extraction capacity returns to baseline. Spoken aloud, delta-max equals zero. Inductive kickback describes a different part of the response. The system has inertia, built from law, property, payroll, and installed reflex. Reform arrives as a shock. When a current is pushed hard, the circuit pushes back, and the response can carry the system past where it started. The backlash arrives on a delay, and the newspaper calls the delay a new era.
@@ -838,16 +853,16 @@ Emmanuel Theodore (57:52)
 Yes. The name is winnable. Measure the current.
 
 Toussaint (57:55)
-Gate. Write. Carry. Defend. Replace. Five jobs, one order of operations, one direction of wealth. You promised me an instrument. This is where it arrives.
+Gate. Write. Carry. Defend. Replace. Five steps, one order of operations, one direction of wealth. You promised me an instrument. This is where it arrives.
 
 Aisha (58:05)
 Three questions. That is the whole instrument. Of any rule, any policy, any arrangement: follow the money. Who turned that into a rule. Who is paid to defend the line. Three answers, and each one has a document attached. The statute. The payroll. The outcome data.
 
 Toussaint (58:21)
-Why three questions for five jobs.
+Why three questions for five tiers.
 
 Aisha (58:23)
-Because two of the jobs are already visible. The hands are on camera. The cost is in the data. The three questions exist for the three jobs the picture hides. The collector, the writer, and the believer.
+Because two of the tiers are already visible. The hands are on camera. The cost is in the data. The three questions exist for the three tiers the picture hides. The collector, the writer, and the believer.
 
 Toussaint (58:36)
 The believer is the one I did not expect to pay.
@@ -895,7 +910,7 @@ Toussaint (61:36)
 Who carries it out.
 
 Aisha (61:38)
-A manager, and a piece of software that flags the badge. Enforcement, or enforcement's cousin. Paid to make bodies comply. And note the funding loop, because job one is still running. The manager's wage comes out of the same floor's output. The floor is billed for its own supervision. The invoice arrives with a smiley face. Thank you for helping keep us safe.
+A manager, and a piece of software that flags the badge. Enforcement, or enforcement's cousin. Paid to make bodies comply. And note the funding loop, because step one is still running. The manager's wage comes out of the same floor's output. The floor is billed for its own supervision. The invoice arrives with a smiley face. Thank you for helping keep us safe.
 
 Toussaint (62:00)
 The announcement meeting is part of it too. I have sat in that meeting. The rule gets presented as neutral. Points are math. Math does not have a mood.
@@ -943,7 +958,7 @@ Aisha (64:50)
 And the same mercy runs the other direction. A person can hold a buffer position and be extractable on another axis at the same time. The shift lead defending the points system goes home to a landlord, a loan, a medical bill. His line defends one partition and his bank account sits on the wrong side of another. The instrument asks you to locate him.
 
 Toussaint (65:12)
-And me. Where am I in your five jobs.
+And me. Where am I in your five tiers.
 
 Aisha (65:15)
 The instrument locates you inside the rules that cost you. Run the three questions on those rules. Locate yourself. The book's wager is that a located reader is harder to bill.
@@ -979,7 +994,7 @@ Toussaint (67:27)
 So come back to where we started. The feed. The campus story. The four camps. All men. Complicity thick enough to feel like a category. Most men. Look up, the chair is thinner than the word.
 
 Aisha (67:39)
-And you are standing in that thread holding a second reading of it. The coarse binary is a real first cut, and it is a low-resolution photograph of a taller machine. Five jobs. An order of operations. Three questions with documents attached. The thread is describing weather and teams. You are looking at a circuit, and you can see why anger aimed at the ceiling never finds an account number.
+And you are standing in that thread holding a second reading of it. The coarse binary is a real first cut, and it is a low-resolution photograph of a taller machine. Five tiers. An order of operations. Three questions with documents attached. The thread is describing weather and teams. You are looking at a circuit, and you can see why anger aimed at the ceiling never finds an account number.
 
 Toussaint (68:03)
 That is the before and after of this book, in one thread. The category becomes a coarse projection of the structure inside it. The fight about category size becomes one output of that structure.
