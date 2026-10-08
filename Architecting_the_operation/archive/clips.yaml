@@ -57,6 +57,14 @@ clips:
     origin_url: https://www.instagram.com/reel/DX-W4R0RiR4/
     source: Architecting_the_operation/archive/sources/ilyas_2026b.mp4
     start: 14.0
+  ilyas_race_2026:
+    citation: Ilyas Abdulin, Instagram reel race-swap excerpt, replayed in Nick Powers'
+      reply, 2026
+    content_note: ''
+    end: 8.92
+    origin_url: https://www.instagram.com/reel/DYQeix8RQzk/
+    source: Architecting_the_operation/archive/sources/ilyas_race_2026.mp4
+    start: 0.0
   jaeserv_2026:
     citation: jaeden (@jaeserv), Instagram reel, 'What if it's all of our problem?',
       2026
@@ -186,6 +194,13 @@ clips:
     origin_url: https://www.instagram.com/reel/DX-W4R0RiR4/
     source: Architecting_the_operation/archive/sources/nickpowers_2026.mp4
     start: 56.16
+  nickpowers_race_2026:
+    citation: Nick Powers (@thatnickpowersguy), Instagram reel reply, 2026
+    content_note: ''
+    end: 33.18
+    origin_url: https://www.instagram.com/reel/DYQeix8RQzk/
+    source: Architecting_the_operation/archive/sources/nickpowers_race_2026.mp4
+    start: 18.72
   reel_a1:
     citation: '@harvardseye, Instagram reel, Gov. Maura Healey interview, Yes-on-9
       press event'
