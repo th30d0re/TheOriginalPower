@@ -301,7 +301,7 @@ Toussaint (40:05)
 The discipline produced data. Somebody inside the discipline must have run an audit on that data. A fabricated scientific consensus requires continuous maintenance. A defector will inevitably point out the mathematical errors.
 
 Aisha (40:19)
-The defector arrived in eighteen eighty-five. A Haitian lawyer and anthropologist named Antenor Firmin published a book titled De l'egalite des races humaines. It was the world's first sustained, empirically grounded refutation of scientific racism. Firmin audited the discipline using its own published data. He copied the published tables from Paul Topinard to evaluate the existing record. He took no measurements of his own.
+The defector arrived in eighteen eighty-five. A Haitian lawyer and anthropologist named Antenor Firmin published a book titled On the Equality of Human Races. It was the world's first sustained, empirically grounded refutation of scientific racism. Firmin audited the discipline using its own published data. He copied the published tables from Paul Topinard to evaluate the existing record. He took no measurements of his own.
 
 Emmanuel Theodore (40:47)
 The findings demolished the hierarchy. The European populations showed massive variations in cranial capacity. Four European populations spanned forty-one cubic centimeters. Firmin wrote that the mind finds itself in uncertainty when it must judge the relative value of these results. Firmin stripped the ideological noise from the data and isolated the signal. The signal confirmed human equality. Firmin named the legitimation apparatus. He wrote that the scholars of the American school saw anthropology only as a means of legitimating the system of slavery. He identified the precise mathematical mechanism. The Elite's institutions ran confirmation-biased pattern-matching on pre-labeled data.
@@ -591,7 +591,7 @@ That is housing and infrastructure. What belongs in the environmental layer?
 Aisha (80:17)
 Lead belongs there as one cause in a larger stack. Tetraethyl lead remained in American gasoline until the final phaseout for on-road vehicles on January first, nineteen ninety-six. Its toxicity had been documented since refinery workers died in nineteen twenty-four. Lead exposure damages cognition, impulse control, and health. Poor and segregated neighborhoods carried concentrated exposure from traffic, aging housing, and industrial hazards.
 
-Emmanuel Theodore (80:46)
+Emmanuel Theodore (80:45)
 The evidentiary caveat matters. Early studies assigned lead a large role in the crime decline of the nineteen nineties. A two thousand twenty-two meta-analysis by Higney and his coauthors found evidence of publication bias and estimated a smaller effect. Lead remains one cause in the stack. The stack also includes wealth exclusion, neighborhood destruction, labor-market withdrawal, school inequality, family separation through incarceration, exposure to violence, and intensive enforcement.
 
 Aisha (81:18)
