@@ -81,6 +81,17 @@ speakers:
     engine: "archive"
     character_profile: "Instagram reel, @thespeechprof, 2026"
 
+  # EP05 cold open: race-and-crime reels.
+  kaizen_asiedu:
+    name: "Kaizen Asiedu"
+    engine: "archive"
+    character_profile: "Instagram reel, @thatskaizen, 2025"
+
+  brianna_riddick:
+    name: "Brianna Riddick"
+    engine: "archive"
+    character_profile: "Instagram reel, @blackcarddeclined, 2025"
+
   jaeden:
     name: "jaeden"
     engine: "archive"
