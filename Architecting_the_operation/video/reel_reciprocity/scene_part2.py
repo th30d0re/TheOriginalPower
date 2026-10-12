@@ -55,7 +55,7 @@ class Part2(m.Scene):
         tag = T("PART 2", 34, DIM).to_edge(m.UP, buff=1.4)
         line = m.VGroup(T("TAKE SEX OFF", 54), T("THE CHORE CHART", 54, GOLD)).arrange(m.DOWN, buff=0.2)
         self.play(m.FadeIn(tag), m.FadeIn(line, shift=m.UP * 0.2), run_time=0.8)
-        self.until(t0 + 4.6)
+        self.until(t0 + 3.1)
         reply = m.VGroup(T("FOR A LOT OF WOMEN,", 40), T("IT ALREADY IS A CHORE", 40, HER)).arrange(m.DOWN, buff=0.2)
         reply.shift(m.DOWN * 2.8)
         self.play(m.FadeIn(reply, shift=m.UP * 0.2))
@@ -104,12 +104,9 @@ class Part2(m.Scene):
         for x, y in hoop_xy + [(2.4, 1.3)]:
             self.play(m.MoveAlongPath(runner, m.ArcBetweenPoints(runner.get_center(), np.array([x, y + 0.2, 0]), angle=-1.6)),
                       run_time=0.6)
-        self.until(t0 + 6.0)
+        self.until(t0 + 6.6)
         chore = T("ANOTHER\nCHORE", 30, HER).move_to(goal)
         self.play(m.Transform(gl, chore), goal.animate.set_color(HER), run_time=0.6)
-        self.until(t0 + 10.0)
-        dense = T("ARE WE DENSE?", 52, GOLD).shift(m.DOWN * 3.4)
-        self.play(m.Write(dense), run_time=0.6)
 
     def service(self, t0, t1):
         head = T("THE PHYSICS OF IT", 44, GOLD).to_edge(m.UP, buff=0.8)
@@ -130,21 +127,30 @@ class Part2(m.Scene):
         self.play(m.FadeIn(head), run_time=0.5)
         self.add(him, her, tot)
         self.play(m.FadeIn(lab_him, lab_her, lab_sum), ph.animate.set_value(3), run_time=1.5, rate_func=m.linear)
-        self.play(ph.animate.set_value(3 + 2.5 * (t0 + 6.6 - self.time)), run_time=max(0.1, t0 + 6.6 - self.time),
+        self.play(ph.animate.set_value(3 + 2.5 * (t0 + 7.0 - self.time)), run_time=max(0.1, t0 + 7.0 - self.time),
                   rate_func=m.linear)
         oop = T("OUT OF PHASE", 40, HER).shift(m.DOWN * 3.2)
         self.play(m.FadeIn(oop), ph.animate.increment_value(1.5), run_time=0.6, rate_func=m.linear)
-        self.play(ph.animate.increment_value(2.5 * (t0 + 10.9 - self.time)), run_time=max(0.1, t0 + 10.9 - self.time),
+        self.play(ph.animate.increment_value(2.5 * (t0 + 11.1 - self.time)), run_time=max(0.1, t0 + 11.1 - self.time),
                   rate_func=m.linear)
         both = T("A CHORE FOR BOTH", 34, HER).next_to(oop, m.DOWN, buff=0.2)
         self.play(m.FadeIn(both), ph.animate.increment_value(1.5), run_time=0.6, rate_func=m.linear)
-        self.play(ph.animate.increment_value(2.5 * (t0 + 12.8 - self.time)), run_time=max(0.1, t0 + 12.8 - self.time),
+        self.play(ph.animate.increment_value(2.5 * (t0 + 12.4 - self.time)), run_time=max(0.1, t0 + 12.4 - self.time),
                   rate_func=m.linear)
-        self.play(off.animate.set_value(0), ph.animate.increment_value(5), m.FadeOut(oop), m.FadeOut(both),
+        wait = T("EACH WAITS FOR THE\nOTHER TO GO FIRST", 32, INK).next_to(both, m.DOWN, buff=0.25)
+        self.play(m.FadeIn(wait), ph.animate.increment_value(1.5), run_time=0.6, rate_func=m.linear)
+        self.play(ph.animate.increment_value(2.5 * (t0 + 15.5 - self.time)), run_time=max(0.1, t0 + 15.5 - self.time),
+                  rate_func=m.linear)
+        dense = T("ARE WE DENSE?", 48, GOLD).move_to(oop)
+        self.play(m.FadeOut(oop), m.FadeOut(both), m.FadeOut(wait), m.FadeIn(dense), ph.animate.increment_value(1.2),
+                  run_time=0.5, rate_func=m.linear)
+        self.play(ph.animate.increment_value(2.5 * (t0 + 17.0 - self.time)), run_time=max(0.1, t0 + 17.0 - self.time),
+                  rate_func=m.linear)
+        self.play(off.animate.set_value(0), ph.animate.increment_value(5), m.FadeOut(dense),
                   run_time=2.0, rate_func=m.smooth)
         locked = T("PHASE-LOCKED", 40, OK).shift(m.DOWN * 3.2)
         self.play(m.FadeIn(locked), ph.animate.increment_value(1.5), run_time=0.6, rate_func=m.linear)
-        self.play(ph.animate.increment_value(2.5 * (t0 + 19.6 - self.time)), run_time=max(0.1, t0 + 19.6 - self.time),
+        self.play(ph.animate.increment_value(2.5 * (t0 + 23.0 - self.time)), run_time=max(0.1, t0 + 23.0 - self.time),
                   rate_func=m.linear)
         adds = T("THE CHORE CANCELS OUT,\nTHE SIGNAL ADDS UP", 32, GOLD).next_to(locked, m.DOWN, buff=0.25)
         self.play(m.FadeIn(adds), ph.animate.increment_value(1.5), run_time=0.6, rate_func=m.linear)
@@ -152,23 +158,29 @@ class Part2(m.Scene):
                   rate_func=m.linear)
 
     def spill(self, t0, t1):
-        rings = m.VGroup(*[m.Circle(radius=0.8 + 0.75 * k, stroke_color=DIM, stroke_width=5) for k in range(4)]).shift(m.UP * 0.9)
-        core = T("SEX", 34, INK).move_to(rings)
-        out = T("EVERYTHING ELSE", 28, DIM).next_to(rings, m.DOWN, buff=0.25)
+        rings = m.VGroup(*[m.Circle(radius=0.6 + 0.6 * k, stroke_color=DIM, stroke_width=5) for k in range(4)]).shift(m.UP * 1.6)
+        core = T("SEX", 30, INK).move_to(rings)
+        out = T("EVERYTHING ELSE", 26, DIM).next_to(rings, m.DOWN, buff=0.2)
         self.play(m.Create(rings), m.FadeIn(core, out), run_time=0.8)
         self.play(m.LaggedStart(*[r.animate.set_stroke(OK) for r in rings], lag_ratio=0.35), run_time=1.6)
-        self.until(t0 + 4.6)
-        top = T("THE MOST PHYSICALLY INTIMATE\nTHING TWO PEOPLE CAN DO", 30, INK).to_edge(m.UP, buff=0.9)
+        self.until(t0 + 4.3)
+        top = T("THE MOST PHYSICALLY INTIMATE\nTHING TWO PEOPLE CAN DO", 30, INK).to_edge(m.UP, buff=0.7)
         self.play(m.FadeIn(top))
-        self.until(t0 + 8.3)
-        q = T("CAN'T SHOW UP HERE?\nWHERE ARE THEY SHOWING UP?", 30, GOLD).shift(m.DOWN * 3.6)
+        self.until(t0 + 8.6)
+        q = T("CAN'T SHOW UP HERE?\nWHERE ARE THEY SHOWING UP?", 30, GOLD).shift(m.DOWN * 2.4)
         self.play(m.FadeIn(q))
-        self.until(t0 + 13.5)
-        self.play(m.FadeOut(q), run_time=0.3)
-        acts = T("ACTIONS > WORDS", 44, GOLD).shift(m.DOWN * 3.4)
-        self.play(m.Write(acts), run_time=0.6)
-        self.until(t0 + 15.8)
-        end = T("RELATIONSHIP-ENDING PROBLEM", 34, HER).next_to(acts, m.DOWN, buff=0.25)
+        self.until(t0 + 13.8)
+        aff = m.VGroup(T("PEOPLE SEEKING AFFAIRS:", 28, DIM), T("#1 MOTIVE = SEXUAL DISSATISFACTION", 30, HER)).arrange(m.DOWN, buff=0.1)
+        aff.move_to(q)
+        src = cite("Selterman, Joel & Dale (2023), Ashley\nMadison users, mostly married men", "https://doi.org/10.1007/s10508-023-02573-y")
+        self.play(m.FadeOut(q), m.FadeIn(aff), m.FadeIn(src), run_time=0.5)
+        self.until(t0 + 19.6)
+        div = m.VGroup(T("DIVORCE INTERVIEWS:", 28, DIM), T("#1 FINAL STRAW = INFIDELITY", 30, HER)).arrange(m.DOWN, buff=0.1)
+        div.next_to(aff, m.DOWN, buff=0.35)
+        src2 = cite("Scott et al. (2013), 52 divorced\nindividuals (small sample)", "https://doi.org/10.1037/a0032025")
+        self.play(m.FadeIn(div), m.FadeOut(src), m.FadeIn(src2), run_time=0.5)
+        self.until(t0 + 24.4)
+        end = T("RELATIONSHIP-ENDING", 44, HER).next_to(div, m.DOWN, buff=0.4)
         self.play(m.LaggedStart(*[r.animate.set_stroke(HER) for r in rings], lag_ratio=0.25), m.FadeIn(end), run_time=1.4)
 
     def calibrate(self, t0, t1):
@@ -212,7 +224,7 @@ class Part2(m.Scene):
             row[1].move_to(row[0])
         wl = T("WAITING LIST", 30, DIM).next_to(q, m.UP, buff=0.3)
         self.play(m.FadeIn(head), m.FadeIn(wl), m.LaggedStart(*[m.FadeIn(r) for r in q], lag_ratio=0.4), run_time=1.6)
-        self.until(t0 + 10.6)
+        self.until(t0 + 8.7)
         end = m.VGroup(T("AT THE SAME TIME,", 40, OK), T("OR IT RUNS OUT", 40, GOLD)).arrange(m.DOWN, buff=0.15).shift(m.DOWN * 3.0)
         self.play(m.FadeIn(end, shift=m.UP * 0.2))
 
@@ -224,8 +236,8 @@ class Part2(m.Scene):
         now = m.Dot([-3.0, 0, 0], radius=0.16, color=INK)
         self.play(m.FadeIn(head), m.Create(bar), m.FadeIn(tick, dl, now), run_time=0.8)
         self.play(now.animate.move_to([1.6, 0, 0]), run_time=4.0, rate_func=m.linear)
-        self.until(t0 + 12.3)
-        tail = T("FOREVER-MOVING GOALPOSTS\nARE EXTRACTION TOO", 32, HER).shift(m.DOWN * 2.6)
+        self.until(t0 + 8.1)
+        tail = T("GET BACK TO WANTING THEM,\nOR BE HONEST THAT YOU CAN'T", 32, INK).shift(m.DOWN * 2.6)
         self.play(m.FadeIn(tail))
 
     def forcing(self, t0, t1):
