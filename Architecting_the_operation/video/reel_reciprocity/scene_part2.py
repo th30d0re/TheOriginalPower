@@ -140,10 +140,10 @@ class Part2(m.Scene):
         bot = m.CurvedArrow([2.0, -0.1, 0], [-2.0, -0.1, 0], angle=-0.8, color=HER)
         self.play(m.FadeIn(head), m.FadeIn(a, b), run_time=0.6)
         self.play(m.Create(top), m.Create(bot), run_time=1.2)
-        self.until(t0 + 9.2)
+        self.until(t0 + 7.7)
         cancel = T("THE LABOR CANCELS OUT", 40, GOLD).shift(m.DOWN * 2.0)
         self.play(m.Write(cancel), run_time=0.8)
-        self.until(t0 + 17.8)
+        self.until(t0 + 16.0)
         ph = m.ValueTracker(0.0)
         wave1 = m.always_redraw(lambda: m.FunctionGraph(lambda x: 0.3 * np.sin(3 * x - ph.get_value()),
                                                         x_range=[-2.4, 2.4], color=HIM).shift(m.DOWN * 3.4))
@@ -211,13 +211,20 @@ class Part2(m.Scene):
         self.play(m.FadeIn(tail))
 
     def forcing(self, t0, t1):
-        lines = m.VGroup(T("FORCING IT", 46, HER), T("SHOWS.", 46, HER)).arrange(m.DOWN, buff=0.15).shift(m.UP * 1.4)
+        lines = m.VGroup(T("FORCING IT", 46, HER), T("SHOWS.", 46, HER)).arrange(m.DOWN, buff=0.15).to_edge(m.UP, buff=1.4)
         self.play(m.FadeIn(lines, shift=m.UP * 0.2))
-        self.until(t0 + 8.6)
-        gen = T("SAME EXPERIENCE, TWO GENERATIONS", 32, DIM).shift(m.DOWN * 0.8)
-        self.play(m.FadeIn(gen))
-        self.until(t0 + 10.8)
-        tell = T("MEN CAN TELL", 56, GOLD).shift(m.DOWN * 2.6)
+        self.until(t0 + 6.2)
+        study = m.VGroup(T("121 COUPLES · 21 DAYS", 34, DIM),
+                         T("partners read each other's", 34, INK, "NORMAL"),
+                         T("reasons for sex accurately", 34, INK, "NORMAL")).arrange(m.DOWN, buff=0.15).shift(m.UP * 0.9)
+        src = cite("Elsaadawy et al. (2022)\nJ. Social & Personal Relationships", "https://doi.org/10.1177/02654075211051788")
+        self.play(m.FadeIn(study), m.FadeIn(src), run_time=0.6)
+        self.until(t0 + 13.1)
+        both = T("“GET IT OVER WITH” SEX\nLOWERS SATISFACTION FOR BOTH", 30, HER).shift(m.DOWN * 0.9)
+        src2 = cite("Muise, Impett & Desmarais (2013)\nPers. & Social Psych. Bulletin", "https://doi.org/10.1177/0146167213490963")
+        self.play(m.FadeIn(both), m.FadeOut(src), m.FadeIn(src2), run_time=0.6)
+        self.until(t0 + 17.2)
+        tell = m.VGroup(T("MEN CAN TELL.", 48, GOLD), T("WOMEN CAN TOO.", 40, OK)).arrange(m.DOWN, buff=0.15).shift(m.DOWN * 2.3)
         self.play(m.Write(tell), run_time=0.8)
 
     def close(self, t0, t1):
@@ -237,4 +244,4 @@ class Part2(m.Scene):
         cards.arrange(m.DOWN, buff=0.8)
         foot = T("Voice is AI-generated (a clone of mine)", 28, DIM, "NORMAL").to_edge(m.DOWN, buff=0.8)
         self.play(m.FadeIn(cards), m.FadeIn(foot), run_time=0.5)
-        self.wait(4.0)
+        self.wait(3.0)
