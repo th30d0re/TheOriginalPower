@@ -53,3 +53,26 @@ Everyone has a grace period before resentment sets in, so talk about yours out l
 ---
 
 **Before posting:** put the GitHub sources page (or a link page holding both `citations.md` and `citations_part2.md`) in your bio, since Instagram won't link URLs in captions.
+
+---
+
+## Part 3: "Who Goes First?"
+
+```
+Part 3. Who goes first: sex, or commitment?
+
+Sex first, and she carries the risk. In one friends-with-benefits study, 47 people hoped it would become a relationship. About a year later, 7 had.
+
+Commitment first, and he carries the risk. He invests while sex waits, without knowing if they’re compatible.
+
+Either order, one person carries the whole risk alone. That’s the setup extraction needs.
+
+So commit to both at the same time, like an escrow: start the relationship and the sex in the same step. And if that’s too big an ask, start smaller. Name your grace period out loud, so your partner doesn’t have to guess where the line is.
+
+📊 Sources: scan the QR codes at the end, or link in bio.
+
+🎙️ The voice is AI-generated: a clone of my own voice.
+
+#reciprocity #relationships #communication #datingadvice #modernrelationships #sexualhealth
+```
+

@@ -16,7 +16,7 @@ Emmanuel Theodore (00:45)
 So look at an arrangement that usually runs without the dating script. Friends with benefits. In one study of four hundred seventy-five people, friends with benefits rated their sex about as satisfying as married couples did. Another study found it lower than romance. The research mixes very different arrangements together.
 
 Emmanuel Theodore (01:08)
-Here's the pattern underneath. Women's orgasm rates climb with every repeat encounter with the same partner. Familiarity and feedback do the work. And in that friends with benefits data, the women most comfortable saying what they want finished the most.
+Here's the pattern underneath. Women's orgasm rates rise with experience with the same partner. Familiarity and feedback do the work. And in that friends with benefits data, the women most comfortable saying what they want finished the most.
 
 Emmanuel Theodore (01:25)
 So reciprocity runs on practice and honesty. Commitment helps when it buys you both.
