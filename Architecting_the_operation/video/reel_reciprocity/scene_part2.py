@@ -73,9 +73,9 @@ class Part2(m.Scene):
 
     def data(self, t0, t1):
         head = T("IF IT DOESN'T PLEASE HER, IT'S LABOR", 32, HER).to_edge(m.UP, buff=1.4)
-        self.until(t0 + 3.1)
+        self.until(t0 + 1.2)
         self.play(m.FadeIn(head))
-        self.until(t0 + 10.3)
+        self.until(t0 + 5.2)
         axis = m.Line([-2.6, -2.2, 0], [2.6, -2.2, 0], stroke_color=DIM)
         bars = m.VGroup()
         for k, (lab, v, col) in enumerate([("STRAIGHT\nMEN", 95, HIM), ("STRAIGHT\nWOMEN", 65, HER)]):
@@ -88,6 +88,9 @@ class Part2(m.Scene):
         self.play(m.Create(axis), m.FadeIn(sub), m.FadeIn(src), run_time=0.6)
         self.play(m.LaggedStart(*[m.FadeIn(b[0], shift=m.UP * 0.3) for b in bars], lag_ratio=0.4), run_time=1.0)
         self.play(*[m.FadeIn(b[1:]) for b in bars], run_time=0.5)
+        self.until(t0 + 10.7)
+        third = T("1 IN 3 WOMEN DON'T USUALLY FINISH", 32, HER).move_to(head)
+        self.play(m.Transform(head, third), m.FadeOut(sub), bars[1][0].animate.set_fill(opacity=0.55), run_time=0.6)
 
     def valid(self, t0, t1):
         items = ["DISHES", "LAUNDRY", "KIDS", "SCHEDULE", "SEX"]
