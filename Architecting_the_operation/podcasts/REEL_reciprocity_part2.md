@@ -19,7 +19,7 @@ Emmanuel Theodore (01:10)
 So both people are standing in the same bedroom, each one clocked in, each one doing a job. Two chores in one bed.
 
 Emmanuel Theodore (01:20)
-Here's the part people miss. Sex is supposed to be an act of service. Both of you serve. At the same time. And when you're both serving, the labor cancels out, because each of you is receiving the other one's effort as pleasure. That's the only version of sex that stops being a chore. In my framework, that's two antennas phase-locked. Each one transmitting, each one receiving, in the same moment.
+Sex is supposed to be an act of service. Both of you serve. At the same time. And when you're both serving, the labor cancels out, because each of you is receiving the other one's effort as pleasure. That's the only version of sex that stops being a chore. In my framework, that's two antennas phase-locked. Each one transmitting, each one receiving, in the same moment.
 
 Emmanuel Theodore (01:42)
 And it runs on communication. Tell your partner what works. Most women have faked it at least once, and every fake teaches him the wrong thing. In a study of women in friends with benefits, the ones most comfortable saying what they want finished the most. Tell me, so I can calibrate.
@@ -31,7 +31,7 @@ Emmanuel Theodore (02:03)
 Which brings up the hard part. If you can't see yourself being physical with your partner anymore, set a timeline. A real one. Get back to wanting this person, or be honest that you can't. Holding the goalposts out there forever is its own kind of extraction.
 
 Emmanuel Theodore (02:21)
-Because forcing it won't work. If you're out of your own body during sex, he can tell. My dad said this to me almost word for word, about his own marriage. Same experience, two generations. Men can tell.
+Because forcing it won't work. If you're having sex just to get it over with, your partner picks up on it. In a three-week study of a hundred and twenty-one couples, people read their partner's reasons for sex accurately. And sex to get it over with lowers satisfaction for both of you. Men can tell. Women can too.
 
 Emmanuel Theodore (02:37)
 So catch it early. Before the resentment sets. Past that point, parting ways is the fair move for both of you. And if you're starting fresh, look for someone who reciprocates in bed from day one. That's the whole relationship, in miniature.
