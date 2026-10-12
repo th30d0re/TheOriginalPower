@@ -52,7 +52,7 @@ class Part2(m.Scene):
         self.end_card()
 
     def pickup(self, t0, t1):
-        tag = T("PART 2", 34, DIM).to_edge(m.UP, buff=1.4)
+        tag = T("PART 2 OF 2", 34, DIM).to_edge(m.UP, buff=1.4)
         line = m.VGroup(T("TAKE SEX OFF", 54), T("THE CHORE CHART", 54, GOLD)).arrange(m.DOWN, buff=0.2)
         self.play(m.FadeIn(tag), m.FadeIn(line, shift=m.UP * 0.2), run_time=0.8)
         self.until(t0 + 3.1)
