@@ -22,7 +22,7 @@ from scene import BG, DIM, GOLD, HER, HIM, INK, OK, ROOT, T, cite, qr  # noqa: E
 AUDIO = ROOT / "outputs/REEL_reciprocity_p2/REEL_reciprocity_p2.mp3"
 _turns = json.loads((ROOT / "outputs/REEL_reciprocity_p2/episode_manifest.json").read_text())["turns"]
 BEATS = [t["start_ms"] / 1000 for t in _turns]
-END = _turns[-1]["end_ms"] / 1000 + 0.5
+END = _turns[-1]["end_ms"] / 1000
 
 SOURCES = ("https://github.com/th30d0re/TheOriginalPower/blob/main/"
            "Architecting_the_operation/video/reel_reciprocity/citations_part2.md")
@@ -228,14 +228,22 @@ class Part2(m.Scene):
         self.play(m.Write(tell), run_time=0.8)
 
     def close(self, t0, t1):
-        a = T("CATCH IT EARLY", 50, GOLD).shift(m.UP * 2.4)
+        a = T("CATCH IT EARLY", 50, GOLD).shift(m.UP * 3.4)
         self.play(m.FadeIn(a, shift=m.UP * 0.2))
-        self.until(t0 + 3.4)
-        b = T("PAST RESENTMENT: PART FAIRLY", 34, DIM).shift(m.UP * 0.8)
+        self.until(t0 + 3.2)
+        b = T("PAST RESENTMENT: PART FAIRLY", 34, DIM).shift(m.UP * 2.2)
         self.play(m.FadeIn(b))
-        self.until(t0 + 9.2)
-        c = m.VGroup(T("RECIPROCITY", 56, OK), T("FROM DAY ONE", 56, OK)).arrange(m.DOWN, buff=0.15).shift(m.DOWN * 1.6)
-        self.play(m.Write(c), run_time=1.0)
+        self.until(t0 + 8.3)
+        c = m.VGroup(T("RECIPROCITY", 56, OK), T("FROM DAY ONE", 56, OK)).arrange(m.DOWN, buff=0.15).shift(m.UP * 0.2)
+        self.play(m.Write(c), run_time=0.9)
+        self.until(t0 + 10.8)
+        him = m.Dot([-1.2, -2.0, 0], radius=0.3, color=HIM)
+        her = m.Dot([1.2, -2.0, 0], radius=0.3, color=HER)
+        both = T("START BOTH TOGETHER", 36, GOLD).shift(m.DOWN * 3.0)
+        self.play(m.FadeIn(him, her), m.FadeIn(both), run_time=0.5)
+        self.until(t0 + 13.0)
+        alone = T("NOBODY CARRIES THE RISK ALONE", 32, INK).shift(m.DOWN * 3.7)
+        self.play(him.animate.move_to([-0.35, -2.0, 0]), her.animate.move_to([0.35, -2.0, 0]), m.FadeIn(alone), run_time=0.8)
 
     def end_card(self):
         cards = m.VGroup()
@@ -244,4 +252,4 @@ class Part2(m.Scene):
         cards.arrange(m.DOWN, buff=0.8)
         foot = T("Voice is AI-generated (a clone of mine)", 28, DIM, "NORMAL").to_edge(m.DOWN, buff=0.8)
         self.play(m.FadeIn(cards), m.FadeIn(foot), run_time=0.5)
-        self.wait(3.0)
+        self.wait(2.2)

@@ -1,7 +1,7 @@
 When sex becomes a chore. Reciprocity reel, part two.
 
 Emmanuel Theodore (00:00)
-Part one ended on a line. Take sex off the chore chart. Some of you answered me straight. For a lot of women, sex already is a chore. So let's go there.
+Part one ended on a line. Take sex off the chore chart. Some of you answered me straight. For a lot of women, sex already is a chore.
 
 Emmanuel Theodore (00:12)
 I've heard it to my face. Sex is a chore. And for years my answer was simple. You think people wash the dishes because it's fun? At least this chore feels good.
@@ -34,4 +34,4 @@ Emmanuel Theodore (02:21)
 Because forcing it won't work. If you're having sex just to get it over with, your partner picks up on it. In a three-week study of a hundred and twenty-one couples, people read their partner's reasons for sex accurately. And sex to get it over with lowers satisfaction for both of you. Men can tell. Women can too.
 
 Emmanuel Theodore (02:37)
-So catch it early. Before the resentment sets. Past that point, parting ways is the fair move for both of you. And if you're starting fresh, look for someone who reciprocates in bed from day one. That's the whole relationship, in miniature.
+So catch it early. Before the resentment sets. Past that point, parting ways is the fair move. And if you're starting fresh, find someone who reciprocates from day one. Start the relationship and the sex together, so nobody carries the risk alone. That's the whole relationship, in miniature.
