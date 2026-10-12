@@ -1,0 +1,37 @@
+When sex becomes a chore. Reciprocity reel, part two.
+
+Emmanuel Theodore (00:00)
+Part one ended on a line. Take sex off the chore chart. Some of you answered me straight. For a lot of women, sex already is a chore. So let's go there.
+
+Emmanuel Theodore (00:12)
+I've heard it to my face. Sex is a chore. And for years my answer was simple. You think people wash the dishes because it's fun? At least this chore feels good.
+
+Emmanuel Theodore (00:24)
+Then I ran it through this model, and that answer falls apart. If she isn't getting pleased in bed, it's labor. And the data backs her up. In one survey of fifty thousand people, ninety-five percent of straight men usually finish. For straight women, it's sixty-five. So for her, it really is one more chore on the list.
+
+Emmanuel Theodore (00:44)
+That's valid. And it's why taking chores off her plate helps. A lighter load makes this one feel lighter too.
+
+Emmanuel Theodore (00:53)
+Now look at it from his side. He did the dishes. He planned the date. He cleared every hoop. And his reward is another chore. Serve her, center her, and expect nothing back. Are we dense? In a lifelong marriage?
+
+Emmanuel Theodore (01:10)
+So both people are standing in the same bedroom, each one clocked in, each one doing a job. Two chores in one bed.
+
+Emmanuel Theodore (01:20)
+Here's the part people miss. Sex is supposed to be an act of service. Both of you serve. At the same time. And when you're both serving, the labor cancels out, because each of you is receiving the other one's effort as pleasure. That's the only version of sex that stops being a chore. In my framework, that's two antennas phase-locked. Each one transmitting, each one receiving, in the same moment.
+
+Emmanuel Theodore (01:42)
+And it runs on communication. Tell your partner what works. Most women have faked it at least once, and every fake teaches him the wrong thing. In a study of women in friends with benefits, the ones most comfortable saying what they want finished the most. Tell me, so I can calibrate.
+
+Emmanuel Theodore (01:45)
+And that's why sequence kills it. You fix the chores first, then I'll fix the bedroom. Or I'll do this and this, and then we can do that. Every one of those puts someone on a waiting list. Reciprocity runs at the same time, or it runs out.
+
+Emmanuel Theodore (02:03)
+Which brings up the hard part. If you can't see yourself being physical with your partner anymore, set a timeline. A real one. Get back to wanting this person, or be honest that you can't. Holding the goalposts out there forever is its own kind of extraction.
+
+Emmanuel Theodore (02:21)
+Because forcing it won't work. If you're out of your own body during sex, he can tell. My dad said this to me almost word for word, about his own marriage. Same experience, two generations. Men can tell.
+
+Emmanuel Theodore (02:37)
+So catch it early. Before the resentment sets. Past that point, parting ways is the fair move for both of you. And if you're starting fresh, look for someone who reciprocates in bed from day one. That's the whole relationship, in miniature.
