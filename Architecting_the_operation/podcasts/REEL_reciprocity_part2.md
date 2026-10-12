@@ -7,7 +7,7 @@ Emmanuel Theodore (00:12)
 I've heard it to my face. Sex is a chore. And for years my answer was simple. You think people wash the dishes because it's fun? At least this chore feels good.
 
 Emmanuel Theodore (00:24)
-Then I ran it through this model, and that answer falls apart. If she isn't getting pleased in bed, it's labor. And the data backs her up. In one survey of fifty thousand people, ninety-five percent of straight men usually finish. For straight women, it's sixty-five. So for her, it really is one more chore on the list.
+Then I ran it through this model, and my old answer broke. When sex doesn't please her, it's labor. And the data backs her up. In one survey of fifty thousand people, ninety-five percent of straight men usually finish. For straight women, it's sixty-five. So for her, it really is one more chore on the list.
 
 Emmanuel Theodore (00:44)
 That's valid. And it's why taking chores off her plate helps. A lighter load makes this one feel lighter too.

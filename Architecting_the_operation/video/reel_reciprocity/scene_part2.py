@@ -73,7 +73,7 @@ class Part2(m.Scene):
 
     def data(self, t0, t1):
         head = T("IF IT DOESN'T PLEASE HER, IT'S LABOR", 32, HER).to_edge(m.UP, buff=1.4)
-        self.until(t0 + 3.4)
+        self.until(t0 + 3.1)
         self.play(m.FadeIn(head))
         self.until(t0 + 10.3)
         axis = m.Line([-2.6, -2.2, 0], [2.6, -2.2, 0], stroke_color=DIM)
