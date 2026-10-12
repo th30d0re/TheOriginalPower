@@ -35,7 +35,7 @@ Part 2. For a lot of women, sex already is a chore. One big survey shows the gap
 
 Now his side. He cleared every hoop, and his reward is another chore.
 
-Here’s the physics. When only one of you shows up, you’re out of phase, and it feels like a chore to both of you. So each of you waits for the other to go first. Are we dense? Show up at the same time and you phase-lock: each of you receives the other’s effort as pleasure. The chore cancels out and the signal adds up, and that reciprocity leaks into the rest of the relationship. If your partner can’t show up for you in bed, where are they showing up? Among people seeking affairs, sexual dissatisfaction was the top motive (Selterman et al. 2023, Ashley Madison users). In one small study of divorced people, infidelity was the most common final straw (Scott et al. 2013).
+Here’s the physics. When only one of you shows up, you’re out of phase, and it feels like a chore to both of you. So each of you waits for the other to go first. Are we dense? Show up at the same time and you phase-lock: each of you receives the other’s effort as pleasure. The chore cancels out and the signal adds up, and that reciprocity leaks into the rest of the relationship. If your partner can’t show up for you in bed, where are they showing up? And in a monogamous relationship, they’re your only outlet. Among people seeking affairs, sexual dissatisfaction was the top motive (Selterman et al. 2023, Ashley Madison users). In one small study of divorced people, infidelity was the most common final straw (Scott et al. 2013).
 
 It runs on communication. Most women have faked it at least once, and every fake teaches your partner the wrong thing. Tell them, so they can calibrate.
 

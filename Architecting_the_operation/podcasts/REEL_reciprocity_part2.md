@@ -16,7 +16,7 @@ Emmanuel Theodore (01:20)
 Here's the physics of it. In the bedroom, both of you carry some of the work. If only one of you shows up for it, you're out of phase. That effort lands on nobody, and it feels like a chore to both of you. So each of you waits for the other to go first. Are we dense? When you both show up at the same time, you phase-lock. Each of you receives the other's effort as pleasure. The chore cancels out, and the signal adds up.
 
 Emmanuel Theodore (01:32)
-And that reciprocity leaks out of the bedroom into everything else. Sex is the most physically intimate thing two people can do. If your partner can't show up for you there, how are they showing up anywhere else? In one study of people seeking affairs, sexual dissatisfaction was the top motive. And in divorce interviews, infidelity was the most common final straw. When the biggest physical act of affection is broken, that's a relationship-ending problem.
+And that reciprocity leaks out of the bedroom into everything else. Sex is the most physically intimate thing two people can do. If your partner can't show up for you there, how are they showing up anywhere else? And in a monogamous relationship, they're your only outlet. In one study of people seeking affairs, sexual dissatisfaction was the top motive. And in divorce interviews, infidelity was the most common final straw. When the biggest physical act of affection is broken, that's a relationship-ending problem.
 
 Emmanuel Theodore (01:42)
 And it runs on communication. Tell your partner what works. Most women have faked it at least once, and every fake teaches him the wrong thing. In a study of women in friends with benefits, the ones most comfortable saying what they want finished the most. Tell them, so they can calibrate.
