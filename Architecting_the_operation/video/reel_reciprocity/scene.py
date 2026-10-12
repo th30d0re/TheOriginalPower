@@ -100,7 +100,8 @@ class Reel(m.Scene):
     def hook(self):
         point = m.Arrow(m.DOWN * 0.2, m.UP * 1.3, color=GOLD, buff=0, stroke_width=8)
         note = T("SHE SAID THIS", 30, GOLD).next_to(point, m.DOWN, buff=0.2)
-        self.play(m.GrowArrow(point), m.FadeIn(note), run_time=0.6)
+        part = T("PART 1 OF 2", 30, DIM).to_edge(m.DOWN, buff=0.9)
+        self.play(m.GrowArrow(point), m.FadeIn(note), m.FadeIn(part), run_time=0.6)
         self.play(point.animate.shift(m.UP * 0.25), rate_func=m.there_and_back, run_time=0.8)
         self.until(5.2)
         q = m.VGroup(T("DO YOU THINK", 60), T("MEN ARE", 60), T("STUPID?", 72, HER)).arrange(m.DOWN, buff=0.2)
@@ -484,6 +485,9 @@ class Reel(m.Scene):
             cards.add(m.VGroup(qr(url, side=2.6), T(label, 34, GOLD)).arrange(m.DOWN, buff=0.3))
         cards.arrange(m.DOWN, buff=0.8)
         foot = T("Voice is AI-generated (a clone of mine)", 28, DIM, "NORMAL").to_edge(m.DOWN, buff=0.8)
-        self.play(m.FadeIn(cards), m.FadeIn(foot), run_time=0.5)
+        nxt = m.VGroup(T("PART 2:", 30, DIM), T("WHEN SEX BECOMES A CHORE", 32, OK)).arrange(m.DOWN, buff=0.1)
+        cards.shift(m.UP * 0.5)
+        nxt.next_to(cards, m.DOWN, buff=0.5)
+        self.play(m.FadeIn(cards), m.FadeIn(nxt), m.FadeIn(foot), run_time=0.5)
         self.wait(4.0)
 
