@@ -33,15 +33,15 @@ Part 2 drops next: what happens when sex becomes a chore.
 ```
 Part 2. Some of you told me sex already is a chore for a lot of women. One big survey shows the gap: 95% of straight men usually finish. For straight women, it’s 65%. For the one in three women who don’t usually finish, sex can easily become a chore.
 
-Now his side. He cleared every hoop, and his reward is another chore. Two chores in one bed.
+Now his side. He cleared every hoop, and his reward is another chore.
 
-Sex stops being a chore when both people serve at the same time. Each of you receives the other’s effort as pleasure, and the labor cancels out.
+Here’s the physics. When only one of you shows up, you’re out of phase, and it feels like a chore to both of you. Show up at the same time and you phase-lock: each of you receives the other’s effort as pleasure. The chore cancels out and the signal adds up, and that reciprocity leaks into the rest of the relationship. If your partner can’t show up for you in bed, where are they showing up?
 
 It runs on communication. Most women have faked it at least once, and every fake teaches your partner the wrong thing. Tell them, so they can calibrate.
 
 Forcing it shows. Partners read each other’s reasons for sex accurately, and “get it over with” sex lowers satisfaction for both.
 
-Find someone who reciprocates from day one. Start the relationship and the sex together, so nobody carries the risk alone.
+Everyone has a grace period before resentment sets in, so talk about yours out loud. If it’s failing, restart it together. If it’s new, start the relationship and the sex together, so nobody carries the risk alone.
 
 📊 Sources: scan the QR codes at the end, or link in bio.
 

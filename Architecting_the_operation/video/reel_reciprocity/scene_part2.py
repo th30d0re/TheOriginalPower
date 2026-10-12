@@ -42,8 +42,8 @@ class Part2(m.Scene):
         self.camera.background_color = BG
         if AUDIO.exists():
             self.add_sound(str(AUDIO))
-        beats = [self.pickup, self.dishes, self.data, self.valid, self.his_side, self.two_chores,
-                 self.service, self.calibrate, self.sequence, self.timeline, self.forcing, self.close]
+        beats = [self.pickup, self.data, self.valid, self.his_side, self.service, self.spill,
+                 self.calibrate, self.sequence, self.timeline, self.forcing, self.close]
         for i, beat in enumerate(beats):
             self.until(BEATS[i])
             beat(BEATS[i], BEATS[i + 1] if i + 1 < len(BEATS) else END)
@@ -59,17 +59,6 @@ class Part2(m.Scene):
         reply = m.VGroup(T("FOR A LOT OF WOMEN,", 40), T("IT ALREADY IS A CHORE", 40, HER)).arrange(m.DOWN, buff=0.2)
         reply.shift(m.DOWN * 2.8)
         self.play(m.FadeIn(reply, shift=m.UP * 0.2))
-
-    def dishes(self, t0, t1):
-        plates = m.VGroup(*[m.Ellipse(width=2.6, height=0.6, color=INK, stroke_width=5).move_to([0, 0.2 + 0.32 * k, 0])
-                            for k in range(6)])
-        sink = m.RoundedRectangle(width=3.4, height=1.4, corner_radius=0.2, color=DIM).move_to([0, -0.4, 0])
-        plates = m.VGroup(sink, plates)
-        q = T("NOBODY WASHES DISHES FOR FUN", 34, DIM).to_edge(m.UP, buff=1.6)
-        self.play(m.LaggedStart(*[m.FadeIn(p) for p in plates], lag_ratio=0.2), m.FadeIn(q), run_time=1.2)
-        self.until(t0 + 7.2)
-        a = T("“AT LEAST THIS ONE FEELS GOOD”", 36, GOLD).shift(m.DOWN * 2.6)
-        self.play(m.Write(a), run_time=1.0)
 
     def data(self, t0, t1):
         head = T("IF IT DOESN'T PLEASE HER, IT'S LABOR", 32, HER).to_edge(m.UP, buff=1.4)
@@ -98,13 +87,10 @@ class Part2(m.Scene):
         boxes = m.VGroup(*[m.Square(0.45, color=DIM).next_to(r, m.LEFT, buff=0.3) for r in rows])
         g = m.VGroup(boxes, rows).move_to(m.UP * 0.6)
         head = T("THAT'S VALID", 44, OK).to_edge(m.UP, buff=1.4)
-        self.play(m.FadeIn(head), m.FadeIn(g), run_time=0.8)
         checks = [m.Line(b.get_corner(m.DL) + m.UR * 0.1, b.get_corner(m.UR) + m.DL * 0.1, color=OK, stroke_width=6)
                   for b in boxes[:4]]
-        self.play(m.LaggedStart(*[m.Create(c) for c in checks], lag_ratio=0.3), run_time=1.4)
-        self.until(t0 + 4.0)
-        lighter = T("A LIGHTER LOAD MAKES\nTHIS ONE LIGHTER", 34, OK).shift(m.DOWN * 3.2)
-        self.play(m.FadeIn(lighter))
+        self.play(m.FadeIn(head), m.FadeIn(g), run_time=0.5)
+        self.play(m.LaggedStart(*[m.Create(c) for c in checks], lag_ratio=0.3), run_time=1.0)
 
     def his_side(self, t0, t1):
         hoop_xy = [(-2.4, -1.6), (-1.0, -0.9), (0.4, -0.2)]
@@ -125,36 +111,65 @@ class Part2(m.Scene):
         dense = T("ARE WE DENSE?", 52, GOLD).shift(m.DOWN * 3.4)
         self.play(m.Write(dense), run_time=0.6)
 
-    def two_chores(self, t0, t1):
-        bed = m.RoundedRectangle(width=6.2, height=2.6, corner_radius=0.3, color=DIM).shift(m.DOWN * 0.2)
-        cards = m.VGroup(*[m.VGroup(m.RoundedRectangle(width=2.4, height=1.2, corner_radius=0.15, color=c),
-                                    T("CLOCKED IN", 26, c)) for c in (HIM, HER)]).arrange(m.RIGHT, buff=0.8).move_to(bed)
-        for cd in cards:
-            cd[1].move_to(cd[0])
-        head = T("TWO CHORES, ONE BED", 44, HER).to_edge(m.UP, buff=1.6)
-        self.play(m.Create(bed), m.FadeIn(head), run_time=0.8)
-        self.play(m.LaggedStart(*[m.FadeIn(cd, shift=m.DOWN * 0.3) for cd in cards], lag_ratio=0.5), run_time=1.2)
-
     def service(self, t0, t1):
-        head = T("BOTH SERVE, AT THE SAME TIME", 38, OK).to_edge(m.UP, buff=1.4)
-        a = m.Dot([-2.4, 0.4, 0], radius=0.35, color=HIM)
-        b = m.Dot([2.4, 0.4, 0], radius=0.35, color=HER)
-        top = m.CurvedArrow([-2.0, 0.9, 0], [2.0, 0.9, 0], angle=-0.8, color=HIM)
-        bot = m.CurvedArrow([2.0, -0.1, 0], [-2.0, -0.1, 0], angle=-0.8, color=HER)
-        self.play(m.FadeIn(head), m.FadeIn(a, b), run_time=0.6)
-        self.play(m.Create(top), m.Create(bot), run_time=1.2)
-        self.until(t0 + 7.7)
-        cancel = T("THE LABOR CANCELS OUT", 40, GOLD).shift(m.DOWN * 2.0)
-        self.play(m.Write(cancel), run_time=0.8)
-        self.until(t0 + 16.0)
+        head = T("THE PHYSICS OF IT", 44, GOLD).to_edge(m.UP, buff=0.8)
+        off = m.ValueTracker(np.pi)  # her phase offset: pi = out of phase, 0 = locked
         ph = m.ValueTracker(0.0)
-        wave1 = m.always_redraw(lambda: m.FunctionGraph(lambda x: 0.3 * np.sin(3 * x - ph.get_value()),
-                                                        x_range=[-2.4, 2.4], color=HIM).shift(m.DOWN * 3.4))
-        wave2 = m.always_redraw(lambda: m.FunctionGraph(lambda x: 0.3 * np.sin(3 * x - ph.get_value()),
-                                                        x_range=[-2.4, 2.4], color=HER).shift(m.DOWN * 3.45))
-        lock = T("PHASE-LOCKED", 30, DIM).shift(m.DOWN * 4.3)
-        self.add(wave1, wave2)
-        self.play(ph.animate.set_value(10), m.FadeIn(lock), run_time=max(1.0, t1 - 0.6 - self.time), rate_func=m.linear)
+
+        def wave(f, color, y, width=5):
+            return m.FunctionGraph(f, x_range=[-3.0, 3.0], color=color, stroke_width=width).shift(m.UP * y)
+
+        him = m.always_redraw(lambda: wave(lambda x: 0.45 * np.sin(3 * x - ph.get_value()), HIM, 2.2))
+        her = m.always_redraw(lambda: wave(lambda x: 0.45 * np.sin(3 * x - ph.get_value() + off.get_value()), HER, 0.6))
+        tot = m.always_redraw(lambda: wave(lambda x: 0.45 * (np.sin(3 * x - ph.get_value())
+                                                             + np.sin(3 * x - ph.get_value() + off.get_value())),
+                                           GOLD, -1.5, 7))
+        lab_him = T("HIM", 30, HIM).move_to([-2.6, 3.0, 0])
+        lab_her = T("HER", 30, HER).move_to([-2.6, 1.4, 0])
+        lab_sum = T("WHAT EACH OF YOU RECEIVES", 28, GOLD).move_to([0, -0.3, 0])
+        self.play(m.FadeIn(head), run_time=0.5)
+        self.add(him, her, tot)
+        self.play(m.FadeIn(lab_him, lab_her, lab_sum), ph.animate.set_value(3), run_time=1.5, rate_func=m.linear)
+        self.play(ph.animate.set_value(3 + 2.5 * (t0 + 6.6 - self.time)), run_time=max(0.1, t0 + 6.6 - self.time),
+                  rate_func=m.linear)
+        oop = T("OUT OF PHASE", 40, HER).shift(m.DOWN * 3.2)
+        self.play(m.FadeIn(oop), ph.animate.increment_value(1.5), run_time=0.6, rate_func=m.linear)
+        self.play(ph.animate.increment_value(2.5 * (t0 + 10.9 - self.time)), run_time=max(0.1, t0 + 10.9 - self.time),
+                  rate_func=m.linear)
+        both = T("A CHORE FOR BOTH", 34, HER).next_to(oop, m.DOWN, buff=0.2)
+        self.play(m.FadeIn(both), ph.animate.increment_value(1.5), run_time=0.6, rate_func=m.linear)
+        self.play(ph.animate.increment_value(2.5 * (t0 + 12.8 - self.time)), run_time=max(0.1, t0 + 12.8 - self.time),
+                  rate_func=m.linear)
+        self.play(off.animate.set_value(0), ph.animate.increment_value(5), m.FadeOut(oop), m.FadeOut(both),
+                  run_time=2.0, rate_func=m.smooth)
+        locked = T("PHASE-LOCKED", 40, OK).shift(m.DOWN * 3.2)
+        self.play(m.FadeIn(locked), ph.animate.increment_value(1.5), run_time=0.6, rate_func=m.linear)
+        self.play(ph.animate.increment_value(2.5 * (t0 + 19.6 - self.time)), run_time=max(0.1, t0 + 19.6 - self.time),
+                  rate_func=m.linear)
+        adds = T("THE CHORE CANCELS OUT,\nTHE SIGNAL ADDS UP", 32, GOLD).next_to(locked, m.DOWN, buff=0.25)
+        self.play(m.FadeIn(adds), ph.animate.increment_value(1.5), run_time=0.6, rate_func=m.linear)
+        self.play(ph.animate.increment_value(2.5 * max(0.1, t1 - 0.5 - self.time)), run_time=max(0.1, t1 - 0.5 - self.time),
+                  rate_func=m.linear)
+
+    def spill(self, t0, t1):
+        rings = m.VGroup(*[m.Circle(radius=0.8 + 0.75 * k, stroke_color=DIM, stroke_width=5) for k in range(4)]).shift(m.UP * 0.9)
+        core = T("SEX", 34, INK).move_to(rings)
+        out = T("EVERYTHING ELSE", 28, DIM).next_to(rings, m.DOWN, buff=0.25)
+        self.play(m.Create(rings), m.FadeIn(core, out), run_time=0.8)
+        self.play(m.LaggedStart(*[r.animate.set_stroke(OK) for r in rings], lag_ratio=0.35), run_time=1.6)
+        self.until(t0 + 4.6)
+        top = T("THE MOST PHYSICALLY INTIMATE\nTHING TWO PEOPLE CAN DO", 30, INK).to_edge(m.UP, buff=0.9)
+        self.play(m.FadeIn(top))
+        self.until(t0 + 8.3)
+        q = T("CAN'T SHOW UP HERE?\nWHERE ARE THEY SHOWING UP?", 30, GOLD).shift(m.DOWN * 3.6)
+        self.play(m.FadeIn(q))
+        self.until(t0 + 13.5)
+        self.play(m.FadeOut(q), run_time=0.3)
+        acts = T("ACTIONS > WORDS", 44, GOLD).shift(m.DOWN * 3.4)
+        self.play(m.Write(acts), run_time=0.6)
+        self.until(t0 + 15.8)
+        end = T("RELATIONSHIP-ENDING PROBLEM", 34, HER).next_to(acts, m.DOWN, buff=0.25)
+        self.play(m.LaggedStart(*[r.animate.set_stroke(HER) for r in rings], lag_ratio=0.25), m.FadeIn(end), run_time=1.4)
 
     def calibrate(self, t0, t1):
         head = T("IT RUNS ON COMMUNICATION", 38, GOLD).to_edge(m.UP, buff=1.0)
@@ -231,21 +246,29 @@ class Part2(m.Scene):
         self.play(m.Write(tell), run_time=0.8)
 
     def close(self, t0, t1):
-        a = T("CATCH IT EARLY", 50, GOLD).shift(m.UP * 3.4)
-        self.play(m.FadeIn(a, shift=m.UP * 0.2))
-        self.until(t0 + 3.2)
-        b = T("PAST RESENTMENT: PART FAIRLY", 34, DIM).shift(m.UP * 2.2)
-        self.play(m.FadeIn(b))
-        self.until(t0 + 8.3)
-        c = m.VGroup(T("RECIPROCITY", 56, OK), T("FROM DAY ONE", 56, OK)).arrange(m.DOWN, buff=0.15).shift(m.UP * 0.2)
-        self.play(m.Write(c), run_time=0.9)
-        self.until(t0 + 10.8)
+        a = T("CATCH IT EARLY", 50, GOLD).shift(m.UP * 3.6)
+        self.play(m.FadeIn(a, shift=m.UP * 0.2), run_time=0.5)
+        self.until(t0 + 2.0)
+        bar = m.Line([-3.0, 2.2, 0], [3.0, 2.2, 0], color=DIM, stroke_width=8)
+        grace = m.Line([-3.0, 2.2, 0], [0.6, 2.2, 0], color=OK, stroke_width=12)
+        res = m.Line([0.6, 2.2, 0], [3.0, 2.2, 0], color=HER, stroke_width=12)
+        gl = T("GRACE PERIOD", 26, OK).move_to([-1.2, 2.7, 0])
+        rl = T("RESENTMENT", 26, HER).move_to([1.8, 2.7, 0])
+        self.play(m.Create(bar), m.Create(grace), m.FadeIn(gl), run_time=0.8)
+        self.play(m.Create(res), m.FadeIn(rl), run_time=0.6)
+        self.until(t0 + 5.1)
+        talk = T("TALK ABOUT YOURS OUT LOUD", 32, INK).shift(m.UP * 1.2)
+        self.play(m.FadeIn(talk))
+        self.until(t0 + 6.9)
+        restart = m.VGroup(T("FAILING?", 38, HER), T("RESTART IT TOGETHER", 40, OK)).arrange(m.DOWN, buff=0.1).shift(m.DOWN * 0.3)
+        self.play(m.FadeIn(restart, shift=m.UP * 0.2), run_time=0.6)
+        self.until(t0 + 9.2)
         him = m.Dot([-1.2, -2.0, 0], radius=0.3, color=HIM)
         her = m.Dot([1.2, -2.0, 0], radius=0.3, color=HER)
-        both = T("START BOTH TOGETHER", 36, GOLD).shift(m.DOWN * 3.0)
+        both = T("NEW? START BOTH TOGETHER", 34, GOLD).shift(m.DOWN * 2.9)
         self.play(m.FadeIn(him, her), m.FadeIn(both), run_time=0.5)
-        self.until(t0 + 13.0)
-        alone = T("NOBODY CARRIES THE RISK ALONE", 32, INK).shift(m.DOWN * 3.7)
+        self.until(t0 + 13.3)
+        alone = T("NOBODY CARRIES THE RISK ALONE", 30, INK).shift(m.DOWN * 3.6)
         self.play(him.animate.move_to([-0.35, -2.0, 0]), her.animate.move_to([0.35, -2.0, 0]), m.FadeIn(alone), run_time=0.8)
 
     def end_card(self):
