@@ -31,9 +31,9 @@ Part 2 drops next: what happens when sex becomes a chore.
 ## Part 2: "When Sex Becomes a Chore"
 
 ```
-Part 2. Some of you told me sex already is a chore for a lot of women. You’re right, and the data backs it up: 95% of straight men usually finish. For straight women, it’s 65%.
+Part 2. Some of you told me sex already is a chore for a lot of women. One big survey shows the gap: 95% of straight men usually finish. For straight women, it’s 65%. For the one in three women who don’t usually finish, sex can easily become a chore.
 
-So she’s doing a chore. He cleared every hoop, and his reward is another chore. Two chores in one bed.
+Now his side. He cleared every hoop, and his reward is another chore. Two chores in one bed.
 
 Sex stops being a chore when both people serve at the same time. Each of you receives the other’s effort as pleasure, and the labor cancels out.
 
