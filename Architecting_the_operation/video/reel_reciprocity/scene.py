@@ -249,20 +249,23 @@ class Reel(m.Scene):
     # 5 ── the loop, then the data
     def loop(self):
         t0 = BEATS[6]
-        labels = ["RAISED ON\n“CONQUEST”", "SHE CHARGES\nFOR IT", "HE\nSELF-CENTERS", "SHE DOESN'T\nFINISH"]
+        # Nodes in spoken order, lit on the words (turn word timings, large-v3).
+        labels = ["SHE ISN'T\nSERVED IN BED", "SO SHE\nCHARGES", "HE\nSELF-CENTERS", "SHE\nGETS LESS"]
+        cues = [2.4, 4.3, 7.4, 9.0]
         r = 2.5
         c = m.UP * 1.6
         angles = [np.pi / 2, 0, -np.pi / 2, np.pi]
         nodes = m.VGroup()
         for lab, a in zip(labels, angles):
             p = c + r * np.array([np.cos(a), np.sin(a), 0])
-            t = T(lab, 28, INK, width=2.6)
+            t = T(lab, 28, INK, width=2.8)
             plate = m.BackgroundRectangle(t, color=BG, fill_opacity=1, buff=0.12)
             nodes.add(m.VGroup(plate, t).move_to(p))
         ring = m.Circle(radius=r, stroke_color=DIM, stroke_width=3).move_to(c)
         title = T("THE LOOP", 46, GOLD).to_edge(m.UP, buff=0.9)
-        self.play(m.Create(ring), m.Write(title), run_time=1.0)
-        self.play(m.LaggedStart(*[m.FadeIn(n) for n in nodes], lag_ratio=0.5), run_time=2.4)
+        start = T("IT CAN START ANYWHERE", 30, DIM, "NORMAL").next_to(ring, m.DOWN, buff=1.1)
+        self.play(m.Create(ring), m.Write(title), m.FadeIn(nodes), run_time=0.9)
+        self.play(m.FadeIn(start), run_time=0.4)
         prog = m.ValueTracker(0.0)
 
         def ang():
@@ -271,17 +274,16 @@ class Reel(m.Scene):
         trail = m.always_redraw(lambda: m.Arc(radius=r, start_angle=np.pi / 2, angle=-2 * np.pi * max(prog.get_value(), 1e-3),
                                               stroke_color=HER, stroke_width=9).move_arc_center_to(c))
         pulse = m.always_redraw(lambda: m.Dot(c + r * np.array([np.cos(ang()), np.sin(ang()), 0]), color=GOLD, radius=0.16))
-
-        for k, n in enumerate(nodes):
-            n[1].add_updater(lambda mob, k=k: mob.set_color(HER if prog.get_value() >= k / 4 - 1e-6 else INK))
-        self.add(trail, pulse); self.bring_to_front(nodes)
-        start = T("IT CAN START ANYWHERE", 30, DIM, "NORMAL")
-        start.next_to(ring, m.DOWN, buff=1.1)
-        self.play(m.FadeIn(start))
-        self.play(prog.animate.set_value(1.0), run_time=6.0, rate_func=m.linear)
-        for n in nodes:
-            n[1].clear_updaters()
-        self.until(t0 + 10.4)
+        self.until(t0 + cues[0])
+        self.add(trail, pulse)
+        self.bring_to_front(nodes)
+        self.play(nodes[0][1].animate.set_color(HER), m.Indicate(nodes[0][1], color=HER), run_time=0.5)
+        for k in range(1, 4):
+            self.play(prog.animate.set_value(k / 4), run_time=max(0.2, t0 + cues[k] - self.time), rate_func=m.linear)
+            self.play(nodes[k][1].animate.set_color(HER), m.Indicate(nodes[k][1], color=HER), run_time=0.4)
+        self.play(prog.animate.set_value(1.0), run_time=0.9, rate_func=m.linear)
+        self.play(m.Indicate(nodes[0][1], color=GOLD), run_time=0.4)
+        self.until(t0 + 10.5)
         self.clear_all(0.3)
         # Armstrong, England & Fogarty (2012): women's orgasm at last sex.
         head = T("WOMEN'S ORGASM AT LAST SEX", 36).to_edge(m.UP, buff=1.6)
