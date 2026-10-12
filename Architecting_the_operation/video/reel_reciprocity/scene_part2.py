@@ -156,14 +156,14 @@ class Part2(m.Scene):
     def calibrate(self, t0, t1):
         head = T("IT RUNS ON COMMUNICATION", 38, GOLD).to_edge(m.UP, buff=1.0)
         self.play(m.FadeIn(head), run_time=0.5)
-        self.until(t0 + 3.3)
+        self.until(t0 + 4.0)
         fake = m.VGroup(T("58.8%", 72, HER), T("of women have faked it at least once", 30, INK, "NORMAL")).arrange(m.DOWN, buff=0.15)
         fake.shift(m.UP * 1.2)
         src = cite("Herbenick et al. (2019)\nArchives of Sexual Behavior", "https://doi.org/10.1007/s10508-019-01493-0")
         self.play(m.FadeIn(fake), m.FadeIn(src), run_time=0.6)
         bad = T("EVERY FAKE TRAINS HIM WRONG", 32, HER).next_to(fake, m.DOWN, buff=0.4)
         self.play(m.FadeIn(bad))
-        self.until(t0 + 8.4)
+        self.until(t0 + 9.2)
         self.play(m.FadeOut(fake), m.FadeOut(bad), m.FadeOut(src), run_time=0.3)
         pts = json.loads((Path(__file__).resolve().parent / "fwb_comm_orgasm_points.json").read_text())["points"]
         jit = np.random.default_rng(7)  # jitter only, so overlapping 1-9 ratings stay visible
@@ -182,8 +182,8 @@ class Part2(m.Scene):
         src2 = cite("Women in FWB, re-analysis of\nosf.io/pazmy (n = 100)", "https://osf.io/pazmy")
         self.play(m.LaggedStart(*[m.FadeIn(d) for d in dots], lag_ratio=0.03), m.FadeIn(xl, yl, src2), run_time=1.2)
         self.play(m.Create(line), m.FadeIn(r), run_time=0.6)
-        self.until(t0 + 15.1)
-        cal = T("TELL ME, SO I CAN CALIBRATE", 38, OK).shift(m.DOWN * 2.6)
+        self.until(t0 + 16.1)
+        cal = T("TELL THEM, SO THEY CAN CALIBRATE", 34, OK).shift(m.DOWN * 2.6)
         self.play(m.Write(cal), run_time=0.8)
 
     def sequence(self, t0, t1):
@@ -252,4 +252,4 @@ class Part2(m.Scene):
         cards.arrange(m.DOWN, buff=0.8)
         foot = T("Voice is AI-generated (a clone of mine)", 28, DIM, "NORMAL").to_edge(m.DOWN, buff=0.8)
         self.play(m.FadeIn(cards), m.FadeIn(foot), run_time=0.5)
-        self.wait(2.2)
+        self.wait(1.8)

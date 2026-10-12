@@ -22,7 +22,7 @@ Emmanuel Theodore (01:20)
 Sex is supposed to be an act of service. Both of you serve. At the same time. And when you're both serving, the labor cancels out, because each of you is receiving the other one's effort as pleasure. That's the only version of sex that stops being a chore. In my framework, that's two antennas phase-locked. Each one transmitting, each one receiving, in the same moment.
 
 Emmanuel Theodore (01:42)
-And it runs on communication. Tell your partner what works. Most women have faked it at least once, and every fake teaches him the wrong thing. In a study of women in friends with benefits, the ones most comfortable saying what they want finished the most. Tell me, so I can calibrate.
+And it runs on communication. Tell your partner what works. Most women have faked it at least once, and every fake teaches him the wrong thing. In a study of women in friends with benefits, the ones most comfortable saying what they want finished the most. Tell them, so they can calibrate.
 
 Emmanuel Theodore (01:45)
 And that's why sequence kills it. You fix the chores first, then I'll fix the bedroom. Or I'll do this and this, and then we can do that. Every one of those puts someone on a waiting list. Reciprocity runs at the same time, or it runs out.
