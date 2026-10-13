@@ -47,6 +47,8 @@ Everyone has a grace period before resentment sets in, so talk about yours out l
 
 🎙️ The voice is AI-generated: a clone of my own voice.
 
+Part 3 next: who goes first, sex or commitment?
+
 #reciprocity #relationships #orgasmgap #communication #sexualhealth #datingadvice #modernrelationships
 ```
 
