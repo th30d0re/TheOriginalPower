@@ -115,32 +115,101 @@ class LorentzForce(UEFReel):
         self.until(B[6] - 0.3)
         self.play(*[m.FadeOut(x) for x in (ext, fld, tap, tl, items, cut)], run_time=0.3)
 
-        # 6 ── E -> 0, B up: cyclotron motion, endless circles in place
-        c = np.array([0.0, -1.0, 0])
-        r = 1.6
-        ang = m.ValueTracker(0.0)
-        self.until(self.cue(6, "Turn"))
-        cond = M(r"\vec{\mathcal{E}}_{\text{mat}} \to 0,\quad \sum \rho_k \vec B_k \uparrow", 52).move_to([0, 1.8, 0])
-        self.play(m.FadeIn(cond), run_time=0.5)
-        self.until(self.cue(6, "cyclotron"))
-        trail = m.always_redraw(lambda: m.Arc(radius=r, start_angle=-np.pi / 2, angle=min(ang.get_value(), 2 * np.pi - 1e-3) + 1e-3,
-                                              color=STAT, stroke_width=5).move_arc_center_to(c))
-        dot = m.always_redraw(lambda: m.Dot(c + r * np.array([np.cos(-np.pi / 2 + ang.get_value()), np.sin(-np.pi / 2 + ang.get_value()), 0]),
-                                            radius=0.2, color=GOLD))
-        center = m.Cross(stroke_color=DIM, stroke_width=4).scale(0.15).move_to(c)
-        self.add(trail, dot, center)
-        self.play(ang.animate.set_value(2 * np.pi), run_time=1.6, rate_func=m.linear)
-        self.until(self.cue(6, "Endless"))
-        loop = T("ENDLESS CIRCLES · HUGE ENERGY\nZERO FORWARD PROGRESS", 34, INK).move_to([0, -3.8, 0])
-        self.play(m.FadeIn(loop), ang.animate.set_value(4 * np.pi), run_time=1.6, rate_func=m.linear)
-        self.play(ang.animate.set_value(6 * np.pi), run_time=max(0.3, B[7] - 0.4 - self.time), rate_func=m.linear)
+        # 6 ── the complex wage plane: material up (toward the Elite), status across
+        PC = np.array([0.0, 2.55, 0])
+        H = 1.25
+        plane = m.VGroup(
+            m.Arrow(PC + m.DOWN * H, PC + m.UP * H, buff=0, color=OK, stroke_width=4, max_tip_length_to_length_ratio=0.08),
+            m.Arrow(PC + m.LEFT * H, PC + m.RIGHT * H, buff=0, color=STAT, stroke_width=4, max_tip_length_to_length_ratio=0.08))
+        pl = m.VGroup(M(r"\psi_m", 40, OK).next_to(plane[0], m.UP, buff=0.05),
+                      M(r"j\psi_s", 40, STAT).next_to(plane[1], m.RIGHT, buff=0.08))
+        qpos = {1: (1, 1), 2: (1, -1), 3: (-1, -1), 4: (-1, 1)}   # (status sign, material sign)
+        qlab = {k: T(["I", "II", "III", "IV"][k - 1], 30, DIM).move_to(PC + H * np.array([0.82 * sx, 0.3 * sy, 0]))
+                for k, (sx, sy) in qpos.items()}
+        self.until(self.cue(6, "complex"))
+        self.play(m.GrowArrow(plane[0]), m.GrowArrow(plane[1]), m.FadeIn(pl), run_time=0.8)
+        self.until(self.cue(6, "Four"))
+        self.play(*[m.FadeIn(q) for q in qlab.values()], run_time=0.5)
 
-        # 7 ── Quadrant II
-        self.until(self.cue(7, "Quadrant"))
-        q2 = T("QUADRANT II: FASCISM", 52, HER).move_to([0, 3.0, 0])
-        self.play(m.FadeOut(cond), m.FadeIn(q2), ang.animate.set_value(7 * np.pi), run_time=0.8, rate_func=m.linear)
-        self.until(self.cue(7, "motion"))
-        amnm = T("ALL MOTION, NO MOVEMENT", 46, GOLD).move_to(loop)
-        self.play(m.Transform(loop, amnm), ang.animate.set_value(8 * np.pi), run_time=1.0, rate_func=m.linear)
-        self.play(ang.animate.set_value(10 * np.pi), run_time=max(0.3, self.END - self.time), rate_func=m.linear)
+        AY = -1.7   # trajectory arena center
+        SC = 0.7
+
+        def traj(Ev, Bv, T_end, v0=(0.0, 0.0), p0=(0.0, 0.0)):
+            dt = 0.002
+            p = np.array(p0, float)
+            v = np.array(v0, float)
+            pts = [p.copy()]
+            for _ in range(int(T_end / dt)):
+                a = np.array([v[1] * Bv, Ev - v[0] * Bv])
+                v = v + a * dt
+                p = p + v * dt
+                pts.append(p.copy())
+            return np.array(pts)[::10]
+
+        def show(k, Ev, Bv, T_end, run_t, origin, color, v0=(0.0, 0.0)):
+            pts = traj(Ev, Bv, T_end, v0)
+            scr = [np.array([origin[0] + SC * x, origin[1] + SC * y, 0]) for x, y in pts]
+            u = m.ValueTracker(1)
+            path = m.always_redraw(lambda: m.VMobject(stroke_color=color, stroke_width=6).set_points_as_corners(scr[:max(2, int(u.get_value()))]))
+            dot = m.always_redraw(lambda: m.Dot(scr[max(1, int(u.get_value())) - 1], radius=0.17, color=GOLD))
+            sx, sy = qpos[k]
+            wv = m.Arrow(PC, PC + 0.95 * H * np.array([sx, sy, 0]) / np.sqrt(2), buff=0, color=GOLD, stroke_width=7)
+            hl = m.Square(side_length=H, stroke_width=0, fill_color=color, fill_opacity=0.18).move_to(PC + H / 2 * np.array([sx, sy, 0]))
+            self.play(m.FadeIn(hl), m.GrowArrow(wv), qlab[k].animate.set_color(color), run_time=0.4)
+            self.add(path, dot)
+            self.play(u.animate.set_value(len(scr)), run_time=run_t, rate_func=m.linear)
+            return m.VGroup(hl, wv), path, dot
+
+        def drop(*mobs):
+            self.play(*[m.FadeOut(x) for x in mobs], run_time=0.3)
+
+        # 7 ── QI: both positive; the climb bends into horizontal drift
+        self.until(self.cue(7, "quadrant"))
+        q1, p1, d1 = show(1, 1.0, 1.2, 9.0, 4.0, (-3.2, AY - 1.2), OK)
+        self.until(self.cue(7, "sideways"))
+        c1 = m.VGroup(T("QUADRANT I", 44, OK), T("AIM UP, DRIFT SIDEWAYS", 34, OK)).arrange(m.DOWN, buff=0.1).move_to([0, -4.8, 0])
+        self.play(m.FadeIn(c1), run_time=0.4)
+        self.until(self.cue(7, "horizontal"))
+        c1b = T("INTO THE PEOPLE NEXT TO YOU", 32, INK).next_to(c1, m.DOWN, buff=0.15)
+        self.play(m.FadeIn(c1b), run_time=0.4)
+        self.until(B[8] - 0.3)
+        drop(q1, p1, d1, c1, c1b)
+
+        # 8 ── QII: material negative, status swells: cyclotron in place
+        self.until(self.cue(8, "Quadrant"))
+        q2, p2, d2 = show(2, -0.25, 3.2, 10.0, max(1.5, self.cue(8, "spins") - self.time), (0.0, AY + 0.6), HER, v0=(3.0, 0.0))
+        c2 = T("QUADRANT II · FASCISM", 44, HER).move_to([0, -4.9, 0])
+        self.play(m.FadeIn(c2), run_time=0.4)
+        c2b = T("ENDLESS CIRCLES\nZERO FORWARD PROGRESS", 34, INK).next_to(c2, m.DOWN, buff=0.15)
+        self.play(m.FadeIn(c2b), run_time=0.4)
+        self.until(B[9] - 0.3)
+        drop(q2, p2, d2, c2, c2b)
+
+        # 9 ── QIII: both negative: pushed down and degraded
+        self.until(self.cue(9, "Quadrant"))
+        q3, p3, d3 = show(3, -1.0, -1.2, 9.0, 3.5, (-3.2, AY + 1.4), "#B04A3A")
+        self.until(self.cue(9, "Out"))
+        c3 = T("QUADRANT III · OUT-GROUP", 40, "#E0907F").move_to([0, -4.9, 0])
+        c3b = T("EXTRACTED AND DEGRADED\nWHERE RECLASSIFICATION SENDS YOU", 32, INK).next_to(c3, m.DOWN, buff=0.15)
+        self.play(m.FadeIn(c3), m.FadeIn(c3b), run_time=0.4)
+        self.until(B[10] - 0.3)
+        drop(q3, p3, d3, c3, c3b)
+
+        # 10 ── QIV: the conjugate; add it to QI and the deflection cancels
+        self.until(self.cue(10, "Quadrant"))
+        q4, p4, d4 = show(4, 1.0, -1.2, 9.0, 3.0, (3.2, AY - 1.2), HIM)
+        self.until(self.cue(10, "conjugate"))
+        c4 = M(r"W^{*} = \psi_m - j\psi_s", 52, HIM).move_to([0, -4.9, 0])
+        self.play(m.FadeIn(c4), run_time=0.4)
+        self.until(self.cue(10, "cancel"))
+        c4b = M(r"W + W^{*} = 2\psi_m", 56, GOLD).move_to(c4)
+        sumv = m.Arrow(PC, PC + 0.95 * H * m.UP, buff=0, color=GOLD, stroke_width=9)
+        self.play(m.FadeOut(p4), m.FadeOut(d4), m.FadeOut(q4[1]), m.Transform(c4, c4b), m.GrowArrow(sumv), run_time=0.6)
+        self.until(self.cue(10, "straight"))
+        up = m.Arrow([0, AY - 2.0, 0], [0, AY + 2.4, 0], buff=0, color=GOLD, stroke_width=10)
+        top = T("THE TOP", 30, GOLD).next_to(up, m.UP, buff=0.1)
+        self.play(m.GrowArrow(up), run_time=1.0, rate_func=m.rush_into)
+        self.play(m.FadeIn(top), run_time=0.3)
+        sol = T("QUADRANT IV · SOLIDARITY", 40, HIM).next_to(c4, m.DOWN, buff=0.2)
+        self.play(m.FadeIn(sol), run_time=0.4)
         self.end_card()
