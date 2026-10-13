@@ -52,7 +52,7 @@ class Part2(m.Scene):
         self.end_card()
 
     def pickup(self, t0, t1):
-        tag = T("PART 2 OF 2", 34, DIM).to_edge(m.UP, buff=1.4)
+        tag = T("PART 2 OF 3", 34, DIM).to_edge(m.UP, buff=1.4)
         line = m.VGroup(T("TAKE SEX OFF", 54), T("THE CHORE CHART", 54, GOLD)).arrange(m.DOWN, buff=0.2)
         self.play(m.FadeIn(tag), m.FadeIn(line, shift=m.UP * 0.2), run_time=0.8)
         self.until(t0 + 3.1)
@@ -292,5 +292,8 @@ class Part2(m.Scene):
             cards.add(m.VGroup(qr(url, side=2.6), T(label, 34, GOLD)).arrange(m.DOWN, buff=0.3))
         cards.arrange(m.DOWN, buff=0.8)
         foot = T("Voice is AI-generated (a clone of mine)", 28, DIM, "NORMAL").to_edge(m.DOWN, buff=0.8)
-        self.play(m.FadeIn(cards), m.FadeIn(foot), run_time=0.5)
+        nxt = m.VGroup(T("PART 3:", 30, DIM), T("WHO GOES FIRST?", 32, OK)).arrange(m.DOWN, buff=0.1)
+        cards.shift(m.UP * 0.5)
+        nxt.next_to(cards, m.DOWN, buff=0.5)
+        self.play(m.FadeIn(cards), m.FadeIn(nxt), m.FadeIn(foot), run_time=0.5)
         self.wait(1.5)

@@ -100,7 +100,7 @@ class Reel(m.Scene):
     def hook(self):
         point = m.Arrow(m.DOWN * 0.2, m.UP * 1.3, color=GOLD, buff=0, stroke_width=8)
         note = T("SHE SAID THIS", 30, GOLD).next_to(point, m.DOWN, buff=0.2)
-        part = T("PART 1 OF 2", 30, DIM).to_edge(m.DOWN, buff=0.9)
+        part = T("PART 1 OF 3", 30, DIM).to_edge(m.DOWN, buff=0.9)
         self.play(m.GrowArrow(point), m.FadeIn(note), m.FadeIn(part), run_time=0.6)
         self.play(point.animate.shift(m.UP * 0.25), rate_func=m.there_and_back, run_time=0.8)
         self.until(5.2)

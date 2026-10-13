@@ -60,7 +60,7 @@ class Part3(m.Scene):
         self.end_card()
 
     def question(self, t0, t1):
-        tag = T("PART 3", 34, DIM).to_edge(m.UP, buff=1.4)
+        tag = T("PART 3 OF 3", 34, DIM).to_edge(m.UP, buff=1.4)
         self.play(m.FadeIn(tag), run_time=0.4)
         self.until(t0 + 1.8)
         q = T("WHO GOES FIRST?", 72, GOLD).shift(m.UP * 1.6)
