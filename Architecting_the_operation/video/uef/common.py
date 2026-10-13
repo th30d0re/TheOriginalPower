@@ -70,3 +70,30 @@ class UEFReel(m.Scene):
         foot = T("Voice is AI-generated (a clone of mine)", 28, DIM, "NORMAL").to_edge(m.DOWN, buff=0.8)
         self.play(m.FadeIn(card), m.FadeIn(src), m.FadeIn(foot), run_time=0.5)
         self.wait(2.5)
+
+
+class UEFReel3D(m.ThreeDScene):
+    """UEFReel timing on a 3-D scene. Flat overlays go through `flat()`, which pins them to the frame."""
+    EP = ""
+    SOURCE = ""
+    setup_timing = UEFReel.setup_timing
+    cue = UEFReel.cue
+    until = UEFReel.until
+    clear_all = UEFReel.clear_all
+    begin = UEFReel.begin
+
+    def flat(self, *mobs):
+        self.add_fixed_in_frame_mobjects(*mobs)
+        return mobs[0] if len(mobs) == 1 else mobs
+
+    def end_card(self):
+        self.until(self.END)
+        self.clear_all()
+        card = m.VGroup(qr(BOOK, side=3.0), T("THE BOOK", 36, GOLD)).arrange(m.DOWN, buff=0.3).shift(m.UP * 0.6)
+        src = T(self.SOURCE, 30, DIM, "NORMAL").next_to(card, m.DOWN, buff=0.6)
+        foot = T("Voice is AI-generated (a clone of mine)", 28, DIM, "NORMAL").to_edge(m.DOWN, buff=0.8)
+        self.flat(card, src, foot)
+        for x in (card, src, foot):
+            x.set_opacity(0)
+        self.play(card.animate.set_opacity(1), src.animate.set_opacity(1), foot.animate.set_opacity(1), run_time=0.5)
+        self.wait(2.5)
