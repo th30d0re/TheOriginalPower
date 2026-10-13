@@ -219,29 +219,30 @@ class InterferenceEngine(UEFReel3D):
         sc = RP / 4.0
         ax = m.VGroup(m.Line(PC + m.LEFT * RP, PC + m.RIGHT * RP, color="#334155", stroke_width=3),
                       m.Line(PC + m.DOWN * RP, PC + m.UP * RP, color="#334155", stroke_width=3))
-        lab = m.VGroup(T("Re ψₘ", 26, CYAN, "NORMAL").next_to(PC + m.RIGHT * RP, m.DOWN, buff=0.1),
-                       T("Im ψₛ", 26, "#A855F7", "NORMAL").next_to(PC + m.UP * RP, m.RIGHT, buff=0.1))
+        # material on the vertical (the engine's E axis: up = life/wealth, down = extraction), status across
+        lab = m.VGroup(T("ψₘ", 30, CYAN, "NORMAL").next_to(PC + m.UP * RP, m.RIGHT, buff=0.1),
+                       T("jψₛ", 30, "#A855F7", "NORMAL").next_to(PC + m.RIGHT * RP, m.DOWN, buff=0.1))
 
         def quad():
             return int(((self.theta.get_value() % 360) // 90)) % 4
 
         def shade_q():
             q = quad()
-            sx = 1 if q in (0, 3) else -1
-            sy = 1 if q in (0, 1) else -1
+            sx = 1 if q in (0, 1) else -1   # status sign
+            sy = 1 if q in (0, 3) else -1   # material sign
             return m.Square(side_length=RP, stroke_width=0, fill_color=QUADS[q][1], fill_opacity=0.16).move_to(PC + RP / 2 * np.array([sx, sy, 0]))
 
         def vec():
             th = self.theta.get_value() * D
-            tip = PC + sc * self.R.get_value() * np.array([np.cos(th), np.sin(th), 0])
+            tip = PC + sc * self.R.get_value() * np.array([np.sin(th), np.cos(th), 0])
             return m.VGroup(m.Line(PC, tip, color=QUADS[quad()][1], stroke_width=7), m.Dot(tip, radius=0.09, color=QUADS[quad()][1]))
 
         sh = m.always_redraw(shade_q)
         v = m.always_redraw(vec)
         circ = m.always_redraw(lambda: m.Circle(radius=sc * self.R.get_value(), color="#1E293B", stroke_width=2).move_to(PC))
-        RX = 1.75
+        RX = 2.0
         w_eq = M(r"W = \psi_m + j\psi_s", 44, INK).move_to([RX, -3.7, 0])
-        qtxt = m.always_redraw(lambda: T(QUADS[quad()][0], 30, QUADS[quad()][1], width=4.0).move_to([RX, -4.55, 0]))
+        qtxt = m.always_redraw(lambda: T(QUADS[quad()][0], 30, QUADS[quad()][1], width=3.7).move_to([RX, -4.55, 0]))
         tt = m.always_redraw(lambda: T(f"θ = {self.theta.get_value() % 360:.0f}°", 30, INK, "NORMAL").move_to([RX, -5.2, 0]))
         pm = m.always_redraw(lambda: T(f"ψₘ = {self.psiM():+.2f}" + ("  extraction" if self.psiM() < 0 else ""), 28,
                                        RED if self.psiM() < 0 else CYAN, "NORMAL").move_to([RX, -5.75, 0]))
