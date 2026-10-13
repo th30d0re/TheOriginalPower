@@ -114,9 +114,9 @@ class Orthographic(UEFReel3D):
         self.until(self.cue(5, "directly") - 0.3)
         self.move_camera(phi=179.9 * D, theta=-90 * D, zoom=1.45, focal_distance=200, run_time=3.0)
 
-        # 6 ── the apex disappears: the square ceiling
-        self.until(self.cue(6, "Square"))
-        sq = T("THE SQUARE CEILING", 54, INK).move_to([0, -4.7, 0])
+        # 6 ── the apex disappears: the ceiling
+        self.until(self.cue(6, "ceiling", nth=1))
+        sq = T("THE CEILING", 60, INK).move_to([0, -4.7, 0])
         two = T("SOCIETY LOOKS LIKE TWO GROUPS", 34, DIM).move_to([0, -5.5, 0])
         self.flat(sq, two)
         sq.set_opacity(0)

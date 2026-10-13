@@ -19,7 +19,7 @@ Emmanuel Theodore (00:26)
 Orthographic projection is the rule for flattening a 3-D object onto a 2-D plane along one line of sight. From directly below, every tier stacks behind the one beneath it.
 
 Emmanuel Theodore (00:37)
-The apex disappears. All you can see is the flat ceiling of the Buffer Class pressing down. The book calls it the Square Ceiling. It's why society looks like two groups.
+The apex disappears. All you can see is the flat ceiling of the Buffer Class pressing down. The book calls it the ceiling. It's why society looks like two groups.
 
 Emmanuel Theodore (00:48)
 That's Elite Obscuration. Theta of the Elite equals theta of the Puppet equals theta of Enforcement equals theta of the Buffer. Four tiers on one line of sight, and they read as one block.
