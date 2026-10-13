@@ -19,7 +19,16 @@ Emmanuel Theodore (00:45)
 And those magnetic fields are self-excited. They're funded by a tap on the extraction itself. Culture-war media, campaigns, militarized policing. Cut the extraction, and the field decays.
 
 Emmanuel Theodore (00:59)
-Now push it to the limit. Turn the material field to zero, and crank the magnetic fields up. The charge goes into cyclotron motion. Endless circles, huge energy, zero forward progress.
+Now map the force onto the complex wage. Material wage on the vertical axis, pointing up at the Elite. Status wage on the horizontal. Four quadrants, four kinds of motion.
 
-Emmanuel Theodore (01:12)
-In the framework, that's Quadrant Two. Fascism. All motion, no movement. The Original Power.
+Emmanuel Theodore (01:10)
+Quadrant One. Both wages positive. The material push is real, but the status field bends it sideways. Energy aimed up at the Elite turns into horizontal drift, into the people next to you.
+
+Emmanuel Theodore (01:23)
+Quadrant Two. The material wage goes negative while the status wage swells. Crank the field up and the charge spins in place. Endless circles, zero forward progress. That's fascism.
+
+Emmanuel Theodore (01:36)
+Quadrant Three. Both wages negative. Extracted materially and degraded in status. That's where the Out-group sits, and where the system sends anyone it reclassifies.
+
+Emmanuel Theodore (01:47)
+Quadrant Four. A positive material wage, and the status wage rejected. That's the conjugate. Add it to the original, and the status terms cancel. The deflection disappears, and the push points straight at the top. The Original Power.
