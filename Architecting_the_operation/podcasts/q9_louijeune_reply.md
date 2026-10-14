@@ -5,7 +5,7 @@ Emmanuel Theodore (00:00)
 Boston City Councilor Ruthzee Louijeune posted the official summary of Question 9. Everything on that slide is accurate.
 
 Emmanuel Theodore (00:06)
-Here's what it leaves out: where gun violence comes from, and what this law does about it.
+Here's what it leaves out.
 
 Emmanuel Theodore (00:10)
 In the 1930s, the federal government graded neighborhoods for mortgage risk. Black neighborhoods were graded D, outlined in red, and cut off from lending.
@@ -27,6 +27,9 @@ That's because of what the state left there. Redlining locked in concentrated po
 
 Emmanuel Theodore (00:48)
 Once you account for poverty and inequality, the link between gun laws and gun homicide is essentially zero.
+
+Emmanuel Theodore (00:51)
+Massachusetts already has the gun laws RAND finds work best: safe storage and background checks. What's left is poverty, and this law never touches it.
 
 Emmanuel Theodore (00:53)
 And lead. Childhood lead exposure has been tied to violent crime for decades.
@@ -59,7 +62,7 @@ Emmanuel Theodore (02:12)
 So the state built these conditions, leaves them in place, and then points to the violence they produce to restrict the rights of the people living in them.
 
 Emmanuel Theodore (02:20)
-That cycle runs until the state repairs what it broke.
+This law is performative. That cycle runs until the state repairs what it broke.
 
 Emmanuel Theodore (02:24)
 Yes keeps this law. No repeals it. Every source is on one page, linked below.

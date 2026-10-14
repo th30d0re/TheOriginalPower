@@ -1,0 +1,20 @@
+{
+  "component": "TitleCard",
+  "headline": "Massachusetts already has what works",
+  "items": [
+    {
+      "title": "Safe storage, for every owner",
+      "detail": "RAND: its strongest rating, for child-access prevention laws · G.L. c. 140, § 131L"
+    },
+    {
+      "title": "Background checks, private sales included",
+      "detail": "RAND: moderate evidence · G.L. c. 140, § 128A"
+    },
+    {
+      "title": "What's left: poverty",
+      "detail": "Chapter 135 never touches it"
+    }
+  ],
+  "sources": "Sources: RAND, Gun Policy in America · malegislature.gov",
+  "qrUrl": "https://www.rand.org/research/gun-policy/analysis.html"
+}

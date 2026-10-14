@@ -274,7 +274,7 @@ The sources for the practical claims are in section 18. Further evidence on who 
 
 # Reply to a Boston city councilor's ballot guide (October 2026)
 
-The sections below cover a second video: a reply to a Boston city councilor's Question 9 ballot guide, which reproduced the Secretary of State's official summary. Claims already sourced above point to their sections: the grandfather clauses of Louisiana and Oklahoma (section 11), the August 1, 2024 date and the October 28, 2026 registration deadline (section 12), gun ownership among Black women (section 14), license costs (section 16), poverty and firearm homicide across the states (section 22), Boston's 1938 map and today's shootings (section 26), and the banned features and who they serve (sections 18 and 28). The closing claim, that the state leaves the conditions it built in place and then cites the violence they produce to restrict rights, is the video's argument, drawn from *The Original Power*.
+The sections below cover a second video: a reply to a Boston city councilor's Question 9 ballot guide, which reproduced the Secretary of State's official summary. Claims already sourced above point to their sections: the grandfather clauses of Louisiana and Oklahoma (section 11), the August 1, 2024 date and the October 28, 2026 registration deadline (section 12), gun ownership among Black women (section 14), license costs (section 16), poverty and firearm homicide across the states (section 22), Boston's 1938 map and today's shootings (section 26), and the banned features and who they serve (sections 18 and 28). The closing claim, that the state leaves the conditions it built in place and then cites the violence they produce to restrict rights, is the video's argument, drawn from *The Original Power*. The video calls the law performative; the card names two established terms for policy that reassures without changing the conditions: "security theater" (Bruce Schneier, *Beyond Fear*, 2003), adapted here as safety theater, and "symbolic politics" (Murray Edelman, *The Symbolic Uses of Politics*, 1964).
 
 ## 29. Redlining and firearm deaths across U.S. cities
 
@@ -289,8 +289,9 @@ The sections below cover a second video: a reply to a Boston city councilor's Qu
 
 ## 30. What the state left there: poverty
 
-**In the video:** The map the government drew in 1938 still predicts where the shooting concentrates. Redlining locked in concentrated poverty, and across the fifty states, poverty tracks gun homicide at about 0.7. Once you account for poverty and inequality, the link between gun laws and gun homicide is essentially zero.
+**In the video:** The map the government drew in 1938 still predicts where the shooting concentrates. Redlining locked in concentrated poverty, and across the fifty states, poverty tracks gun homicide at about 0.7. Once you account for poverty and inequality, the link between gun laws and gun homicide is essentially zero. Massachusetts already has the gun laws RAND finds work best, safe storage and background checks, and what is left is poverty, which this law never touches.
 
+- What RAND finds and what Massachusetts already requires: sections 23 (RAND), 24 (safe storage, G.L. c. 140, § 131L) and 25 (background checks and private transfers, G.L. c. 140, § 128A).
 - Redlining and poverty: Dholakia et al. (section 29) describe redlining as a practice that "limited mortgage availability and reinforced concentrated poverty that still exists today."
 - Boston's map and today's shootings: section 26.
 - The states: section 22. Poverty correlates with firearm homicide at +0.72; gun-law rank correlates at +0.29 on its own, and its coefficient is about zero (−0.004, p = 0.89) once poverty and inequality are controlled.

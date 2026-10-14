@@ -3,7 +3,7 @@
   "source": "q9_louijeune_reply_shotlist.md",
   "manifest": "episode_manifest.json",
   "script": "q9_louijeune_reply.md",
-  "shot_count": 16,
+  "shot_count": 17,
   "shots": [
     {
       "id": "C-01",
@@ -14,7 +14,7 @@
         "speaker_id": "emmanuel_theodore",
         "turn_index": 0,
         "start_ms": 0,
-        "end_ms": 7190
+        "end_ms": 7520
       },
       "hold": {},
       "type": "card",
@@ -39,8 +39,8 @@
         "timestamp": "00:10",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 2,
-        "start_ms": 12430,
-        "end_ms": 22510
+        "start_ms": 9150,
+        "end_ms": 19230
       },
       "hold": {},
       "type": "card",
@@ -65,8 +65,8 @@
         "timestamp": "00:19",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 3,
-        "start_ms": 22760,
-        "end_ms": 27210
+        "start_ms": 19480,
+        "end_ms": 23930
       },
       "hold": {},
       "type": "card",
@@ -91,8 +91,8 @@
         "timestamp": "00:30",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 5,
-        "start_ms": 35120,
-        "end_ms": 40590
+        "start_ms": 31840,
+        "end_ms": 37310
       },
       "hold": {},
       "type": "card",
@@ -117,8 +117,8 @@
         "timestamp": "00:41",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 7,
-        "start_ms": 46340,
-        "end_ms": 57030
+        "start_ms": 43060,
+        "end_ms": 53750
       },
       "hold": {},
       "type": "card",
@@ -136,15 +136,41 @@
       "prompt_seed": "What the state left there: poverty. Type: card"
     },
     {
+      "id": "C-05B",
+      "title": "Massachusetts already has what works",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "00:51",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 9,
+        "start_ms": 60360,
+        "end_ms": 69580
+      },
+      "hold": {},
+      "type": "card",
+      "described": {
+        "Type": "card"
+      },
+      "note": "citations.md Sections 23, 24, 25",
+      "provenance": {
+        "tags": [],
+        "citations": [],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Massachusetts already has what works. Type: card"
+    },
+    {
       "id": "C-06",
       "title": "What the state left there: lead",
       "anchor": {
         "speaker": "Emmanuel Theodore",
         "timestamp": "00:53",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 9,
-        "start_ms": 63640,
-        "end_ms": 68110
+        "turn_index": 10,
+        "start_ms": 69830,
+        "end_ms": 74300
       },
       "hold": {},
       "type": "card",
@@ -168,9 +194,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "00:57",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 10,
-        "start_ms": 68360,
-        "end_ms": 81080
+        "turn_index": 11,
+        "start_ms": 74550,
+        "end_ms": 87270
       },
       "hold": {},
       "type": "card",
@@ -194,9 +220,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "01:08",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 11,
-        "start_ms": 81330,
-        "end_ms": 90730
+        "turn_index": 12,
+        "start_ms": 87520,
+        "end_ms": 96920
       },
       "hold": {},
       "type": "card",
@@ -220,9 +246,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "01:17",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 12,
-        "start_ms": 90980,
-        "end_ms": 101020
+        "turn_index": 13,
+        "start_ms": 97170,
+        "end_ms": 107210
       },
       "hold": {},
       "type": "card",
@@ -246,9 +272,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "01:26",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 13,
-        "start_ms": 101270,
-        "end_ms": 112440
+        "turn_index": 14,
+        "start_ms": 107460,
+        "end_ms": 118630
       },
       "hold": {},
       "type": "card",
@@ -272,9 +298,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "01:35",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 14,
-        "start_ms": 112690,
-        "end_ms": 122110
+        "turn_index": 15,
+        "start_ms": 118880,
+        "end_ms": 128300
       },
       "hold": {},
       "type": "card",
@@ -298,9 +324,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "01:43",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 15,
-        "start_ms": 122360,
-        "end_ms": 135060
+        "turn_index": 16,
+        "start_ms": 128550,
+        "end_ms": 141250
       },
       "hold": {},
       "type": "card",
@@ -324,9 +350,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "01:54",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 16,
-        "start_ms": 135310,
-        "end_ms": 141610
+        "turn_index": 17,
+        "start_ms": 141500,
+        "end_ms": 147800
       },
       "hold": {},
       "type": "card",
@@ -350,9 +376,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "02:01",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 17,
-        "start_ms": 141860,
-        "end_ms": 153510
+        "turn_index": 18,
+        "start_ms": 148050,
+        "end_ms": 159700
       },
       "hold": {},
       "type": "card",
@@ -376,9 +402,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "02:12",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 18,
-        "start_ms": 153760,
-        "end_ms": 162790
+        "turn_index": 19,
+        "start_ms": 159950,
+        "end_ms": 168980
       },
       "hold": {},
       "type": "card",
@@ -402,9 +428,9 @@
         "speaker": "Emmanuel Theodore",
         "timestamp": "02:24",
         "speaker_id": "emmanuel_theodore",
-        "turn_index": 20,
-        "start_ms": 166500,
-        "end_ms": 171000
+        "turn_index": 21,
+        "start_ms": 174310,
+        "end_ms": 178810
       },
       "hold": {},
       "type": "card",
@@ -446,6 +472,11 @@
     {
       "level": "warn",
       "shot": "C-05",
+      "message": "no provenance tag"
+    },
+    {
+      "level": "warn",
+      "shot": "C-05B",
       "message": "no provenance tag"
     },
     {

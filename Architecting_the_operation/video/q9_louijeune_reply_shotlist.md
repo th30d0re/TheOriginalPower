@@ -32,6 +32,12 @@ Every card starts on its own script turn and holds until the next card.
 - **Type:** card
 - **Note:** citations.md
 
+## C-05B — Massachusetts already has what works
+
+- **Anchor:** `Emmanuel Theodore (00:51)`
+- **Type:** card
+- **Note:** citations.md Sections 23, 24, 25
+
 ## C-06 — What the state left there: lead
 
 - **Anchor:** `Emmanuel Theodore (00:53)`
