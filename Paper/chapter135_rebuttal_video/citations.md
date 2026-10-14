@@ -272,6 +272,58 @@ The sources for the practical claims are in section 18. Further evidence on who 
 
 ---
 
+# Reply to a Boston city councilor's ballot guide (October 2026)
+
+The sections below cover a second video: a reply to a Boston city councilor's Question 9 ballot guide, which reproduced the Secretary of State's official summary. Claims already sourced above point to their sections: the grandfather clauses of Louisiana and Oklahoma (section 11), the August 1, 2024 date and the October 28, 2026 registration deadline (section 12), gun ownership among Black women (section 14), license costs (section 16), poverty and firearm homicide across the states (section 22), and Boston's 1938 map and today's shootings (section 26).
+
+## 29. Redlining and firearm deaths across U.S. cities
+
+**In the video:** A 2024 study in the *Annals of Internal Medicine* laid the 1930s redlining maps over gun deaths in 202 cities. The death rate climbs at every step from A to D, and D neighborhoods had five and a half times the rate of A. A 21-city study found the same staircase.
+
+- [Dholakia et al. (2024), "Historical Redlining and Present-Day Nonsuicide Firearm Fatalities," *Annals of Internal Medicine* 177(5):592-597](https://doi.org/10.7326/M23-2496): 41,428 nonsuicide firearm deaths from 2014 to 2022 in the 8,597 areas the HOLC graded, across 202 cities. Rates per 100,000 a year: 3.78 in A areas, 7.43 in B, 11.24 in C, 16.26 in D. The rate ratio for D against A is 5.51 (95% CI 5.05 to 6.02).
+- [Mehranbod et al. (2022), "Historical redlining and the epidemiology of present-day firearm violence in the United States: A multi-city analysis," *Preventive Medicine*](https://pmc.ncbi.nlm.nih.gov/articles/PMC10155117/): ZIP codes in 21 cities, firearm deaths in 2019. It finds a dose-responsive relationship between HOLC grade and present-day firearm deaths, stronger in Baltimore and weaker in Los Angeles.
+- [Benns et al. (2020), "The impact of historical racism on modern gun violence: Redlining in the city of Louisville, KY," *Injury*](https://doi.org/10.1016/j.injury.2020.06.042): red-graded neighborhoods had five times as many gunshot victims as green-graded ones.
+- [Jacoby et al. (2018), "The enduring impact of historical and structural racism on urban violence in Philadelphia," *Social Science & Medicine*](https://doi.org/10.1016/j.socscimed.2017.05.038)
+
+**Limits:** these studies measure association. After adjusting for year, area demographics and state factors, the Annals study's rate ratio for D against A is 2.07 (95% CI 1.90 to 2.25); the video uses the unadjusted 5.5. Its death counts come from the Gun Violence Archive, which relies on media coverage and police reports.
+
+## 30. The map, poverty, and shootings in Boston
+
+**In the video:** The 1938 map still predicts where the shooting concentrates. The map predicts the poverty, and the poverty predicts the shooting. In Boston, once today's poverty and who lives there are accounted for, the map adds nothing on its own. Across the fifty states, poverty tracks firearm homicide at about 0.7, gun-law strength tracks it more weakly, and that link disappears once poverty and inequality are in the model.
+
+- Boston: section 26. With poverty and the share of Black residents controlled, the tract-level rate ratio for the 1938 grade is 1.00 (95% CI 0.68 to 1.46).
+- The states: section 22.
+
+**Limit:** "predicts" here means a statistical association. The 1938 grade forecasts where shootings concentrate today, and the Boston model shows that it does so through today's poverty and residential makeup. It does not establish that the map, or poverty, causes any particular shooting.
+
+## 31. Lead
+
+**In the video:** In the 1920s and 30s, cities with lead water pipes had homicide rates about a quarter higher. In Boston, 90 percent of housing was built before lead paint was banned, the highest-risk neighborhoods are Dorchester, Roxbury, Mattapan, and Hyde Park, the city has about three thousand known lead service lines, and in 2016 four schools shut off drinking fountains that tested over the limit. The law never mentions lead.
+
+- The research, its limits, and every Boston figure: section 6 (Feigenbaum and Muller for the pipes; the Boston Public Health Commission, the Boston Water and Sewer Commission, and the 2016 school testing for Boston).
+- [Chapter 135 of the Acts of 2024, full text](https://malegislature.gov/Laws/SessionLaws/Acts/2024/Chapter135): the word "lead" appears once, as a verb ("warrants ... that lead to the seizure of firearms"). The act contains no provision on lead exposure, lead pipes, or lead paint.
+
+## 32. The racial wealth gap in Massachusetts
+
+**In the video:** The Boston Fed puts median net wealth in Massachusetts at about $550,000 for white families and $7,800 for Black families. Nearly a third of Black families have zero or less.
+
+- [Federal Reserve Bank of Boston, "Boston Fed report offers detailed picture of family wealth in Massachusetts" (Aug. 12, 2026)](https://www.bostonfed.org/news-and-events/news/2026/08/mass-echos-wealth-survey-median-family-net-wealth-economic-disparities.aspx)
+- [Full report: "Family wealth in Massachusetts: Findings from the 2025 Massachusetts Economic Conditions and Household Opportunity Survey (Mass ECHOS)," Report 2026-1, revised September 2026](https://www.bostonfed.org/-/media/Documents/one-time-pubs/2026/Massechos_full_report.pdf): 5,018 respondents surveyed from March to December 2025. Median net wealth: white families $549,200 (95% CI $469,900 to $628,500), Black families $7,800 (−$7,600 to $23,300), Hispanic families $1,200 (−$1,400 to $3,800). Zero or negative net wealth: 31.4% of Black families, 40.5% of Hispanic families, 11.1% of white families.
+
+**Limits:** the figures by race are statewide. The report gives Greater Boston results overall (median $373,400) and says they largely mirror the state. The estimate for Black families has a wide interval. The Boston Fed's 2015 study, "The Color of Wealth in Boston," reported a median of $8 for U.S.-born Black households in Greater Boston; the 2026 report says the two are not directly comparable, because the 2015 study used a small sample and different questions.
+
+## 33. Poll taxes and license fees
+
+**In the video:** A fee you pay before you can use a right is how a poll tax works. Virginia charged $1.50 to vote, and in 1966 the Supreme Court struck it down. *Bruen* warned that exorbitant fees can deny people a right.
+
+- [*Harper v. Virginia State Board of Elections*, 383 U.S. 663 (1966)](https://supreme.justia.com/cases/federal/us/383/663/): struck down Virginia's $1.50 poll tax in state elections under the Equal Protection Clause. The Twenty-Fourth Amendment (1964) had already barred poll taxes in federal elections.
+- [*New York State Rifle & Pistol Ass'n v. Bruen*, 597 U.S. 1 (2022), footnote 9](https://www.supremecourt.gov/opinions/21pdf/20-843_7j80.pdf): the Court does not rule out challenges to shall-issue licensing where "lengthy wait times in processing license applications or exorbitant fees deny ordinary citizens their right to public carry."
+- [The Reload, on how courts have read footnote 9](https://thereload.com/members-newsletter-when-does-gun-permitting-turn-abusive/)
+
+**Limit:** the poll-tax comparison is the video's argument. No court has held a Massachusetts license fee exorbitant under footnote 9, and appeals courts have upheld other states' fees and training requirements, including Maryland's $50 fee with four hours of training.
+
+---
+
 > **The framework behind this video is *The Original Power*.**
 > **[Read or download the book: github.com/th30d0re/TheOriginalPower/releases](https://github.com/th30d0re/TheOriginalPower/releases)**
 > The book sets out the framework this video applies, and this repository holds the manuscript, the data, and the code for every figure shown.
