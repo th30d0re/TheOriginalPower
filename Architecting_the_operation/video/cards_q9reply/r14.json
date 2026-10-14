@@ -3,15 +3,20 @@
   "headline": "A fee before a right",
   "items": [
     {
-      "title": "Harper v. Virginia (1966)",
+      "title": "Virginia's poll tax, struck down in Harper v. Virginia (1966)",
       "emphasis": "$1.50",
-      "detail": "The Supreme Court struck down Virginia's poll tax"
+      "detail": "About $15.60 a year in 2026 dollars (BLS CPI)"
+    },
+    {
+      "title": "A first Massachusetts license",
+      "emphasis": "$200–$250",
+      "detail": "$100 state fee every six years, plus the required course"
     },
     {
       "title": "Bruen (2022), footnote 9",
       "detail": "\"exorbitant fees deny ordinary citizens their right\""
     }
   ],
-  "sources": "Sources: Harper v. Virginia State Bd. of Elections, 383 U.S. 663 · NYSRPA v. Bruen, 597 U.S. 1",
+  "sources": "Sources: Harper v. Virginia State Bd. of Elections, 383 U.S. 663 · BLS CPI-U (1966 avg 32.4; Sept. 2026 336.94) · mass.gov · NYSRPA v. Bruen, 597 U.S. 1",
   "qrUrl": "https://www.supremecourt.gov/opinions/21pdf/20-843_7j80.pdf"
 }

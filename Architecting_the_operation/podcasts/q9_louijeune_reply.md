@@ -41,7 +41,7 @@ Emmanuel Theodore (02:04)
 Then the price. A new license costs a hundred-dollar fee plus a required live-fire course, another hundred to a hundred fifty. In Massachusetts, median net wealth is about five hundred fifty thousand dollars for white families and seventy-eight hundred for Black families.
 
 Emmanuel Theodore (02:18)
-A fee you pay before you can use a right is how a poll tax works. The Supreme Court struck down Virginia's dollar-fifty poll tax in 1966, and even Bruen warned that exorbitant fees can deny a right.
+A fee you pay before you can use a right is how a poll tax works. In 1966, the Supreme Court struck down Virginia's dollar-fifty poll tax, about fifteen dollars a year today. A first license here costs two hundred or more. Even Bruen warned that exorbitant fees can deny a right.
 
 Emmanuel Theodore (02:29)
 Yes keeps this law. No repeals it. Every source is on one page, linked below.

@@ -352,7 +352,7 @@
         "speaker_id": "emmanuel_theodore",
         "turn_index": 13,
         "start_ms": 156540,
-        "end_ms": 168380
+        "end_ms": 174510
       },
       "hold": {},
       "type": "card",
@@ -377,8 +377,8 @@
         "timestamp": "02:29",
         "speaker_id": "emmanuel_theodore",
         "turn_index": 14,
-        "start_ms": 168680,
-        "end_ms": 173180
+        "start_ms": 174810,
+        "end_ms": 179310
       },
       "hold": {},
       "type": "card",
