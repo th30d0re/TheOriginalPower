@@ -1,0 +1,44 @@
+{
+  "component": "StatBarsCard",
+  "headline": "Gun deaths climb with every grade",
+  "sharedScale": true,
+  "lead": "Nonsuicide firearm deaths per 100,000 a year, 2014–2022, in 202 cities, by 1930s HOLC grade.",
+  "items": [
+    {
+      "label": "Graded A",
+      "period": "",
+      "values": [
+        3.78
+      ],
+      "color": "#76a865"
+    },
+    {
+      "label": "Graded B",
+      "period": "",
+      "values": [
+        7.43
+      ],
+      "color": "#7cb9e8"
+    },
+    {
+      "label": "Graded C",
+      "period": "",
+      "values": [
+        11.24
+      ],
+      "color": "#e8d44d"
+    },
+    {
+      "label": "Graded D",
+      "period": "",
+      "values": [
+        16.26
+      ],
+      "delta": "5.5× the A rate",
+      "color": "#d9534f"
+    }
+  ],
+  "attribution": "After adjusting for demographics and state factors: about 2×.",
+  "sources": "Source: Dholakia et al., Annals of Internal Medicine (2024)",
+  "qrUrl": "https://doi.org/10.7326/M23-2496"
+}

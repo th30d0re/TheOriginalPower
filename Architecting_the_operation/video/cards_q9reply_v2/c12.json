@@ -1,0 +1,27 @@
+{
+  "component": "StatBarsCard",
+  "headline": "Second, a price: $200–$250",
+  "sharedScale": true,
+  "lead": "Fee $100 plus a required live-fire course, $100–$150. Median family net wealth in Massachusetts, 2025, in dollars:",
+  "items": [
+    {
+      "label": "White families",
+      "period": "",
+      "values": [
+        549200
+      ],
+      "color": "gold"
+    },
+    {
+      "label": "Black families",
+      "period": "",
+      "values": [
+        7800
+      ],
+      "delta": "31% have zero or less",
+      "color": "red"
+    }
+  ],
+  "sources": "Sources: Federal Reserve Bank of Boston, Mass ECHOS (2026) · mass.gov",
+  "qrUrl": "https://www.bostonfed.org/news-and-events/news/2026/08/mass-echos-wealth-survey-median-family-net-wealth-economic-disparities.aspx"
+}

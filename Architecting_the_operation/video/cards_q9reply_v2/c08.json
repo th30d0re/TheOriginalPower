@@ -1,0 +1,21 @@
+{
+  "component": "TitleCard",
+  "headline": "What this law does about it",
+  "items": [
+    {
+      "title": "Creates commissions",
+      "detail": "On violence prevention and firearm technology"
+    },
+    {
+      "title": "Lead",
+      "emphasis": "0",
+      "detail": "Never mentioned in Chapter 135"
+    },
+    {
+      "title": "Adds three barriers",
+      "detail": "A date · a price · a features ban"
+    }
+  ],
+  "sources": "Source: Acts of 2024, Chapter 135 (full text)",
+  "qrUrl": "https://malegislature.gov/Laws/SessionLaws/Acts/2024/Chapter135"
+}
