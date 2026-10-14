@@ -2,7 +2,7 @@ Question 9 — Reply to a Boston city councilor's ballot guide.
 
 
 Emmanuel Theodore (00:00)
-A Boston city councilor posted the official summary of Question 9. Everything on that slide is accurate. Here's what it leaves out.
+Boston City Councilor Ruthzee Louijeune posted the official summary of Question 9. Everything on that slide is accurate. Here's what it leaves out.
 
 Emmanuel Theodore (00:07)
 In the 1930s, the federal government graded neighborhoods for mortgage risk, and Black neighborhoods were graded D and outlined in red. That's redlining.

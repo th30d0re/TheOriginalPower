@@ -29,3 +29,14 @@ lead:
 # The FID card is spelled out: F, I, D.
 fid:
   always: eff eye dee
+
+# Greek rho, the demographic weight. The lexicon reading is the English word "row".
+rho:
+  always: roe
+
+# Boston City Councilor Ruthzee Louijeune (Haitian, French-derived surname).
+# Chosen by ear against her own pronunciation (2026-10-14, round 1 take 4).
+ruthzee:
+  always: Roothzee
+louijeune:
+  always: Lweezhun
