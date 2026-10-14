@@ -2,46 +2,64 @@ Question 9 — Reply to a Boston city councilor's ballot guide.
 
 
 Emmanuel Theodore (00:00)
-Boston City Councilor Ruthzee Louijeune posted the official summary of Question 9. Everything on that slide is accurate. Here's what it leaves out.
+Boston City Councilor Ruthzee Louijeune posted the official summary of Question 9. Everything on that slide is accurate.
 
-Emmanuel Theodore (00:07)
-In the 1930s, the federal government graded neighborhoods for mortgage risk, and Black neighborhoods were graded D and outlined in red. That's redlining.
+Emmanuel Theodore (00:06)
+Here's what it leaves out: where gun violence comes from, and what this law does about it.
 
-Emmanuel Theodore (00:17)
-A 2024 study laid those maps over gun deaths in 202 cities. The death rate climbs at every grade, and the redlined neighborhoods had five and a half times the rate of the best-graded ones.
+Emmanuel Theodore (00:10)
+In the 1930s, the federal government graded neighborhoods for mortgage risk. Black neighborhoods were graded D, outlined in red, and cut off from lending.
 
-Emmanuel Theodore (00:28)
-Here in Boston, the areas graded C and D have about seven times the shooting rate of A and B. The 1938 map still predicts where the shooting concentrates.
+Emmanuel Theodore (00:19)
+A 2024 study laid those maps over gun deaths in 202 cities.
 
-Emmanuel Theodore (00:39)
-The map predicts the poverty, and the poverty predicts the shooting. In Boston, once you account for today's poverty and who lives there, the map adds nothing on its own.
+Emmanuel Theodore (00:23)
+The death rate climbs at every grade, and the redlined neighborhoods had five and a half times the rate of the best-graded ones.
 
-Emmanuel Theodore (00:50)
-Across the fifty states, poverty tracks firearm homicide at about point seven. Gun-law strength barely tracks it once poverty is counted.
+Emmanuel Theodore (00:30)
+Here in Boston, the areas graded C and D have about seven times the shooting rate of A and B.
 
-Emmanuel Theodore (00:58)
-Then lead. Childhood lead exposure has been tied to violent crime for decades. In the 1920s and 30s, cities with lead water pipes had about a quarter more homicide. And in Boston, the lead sits in the same neighborhoods.
+Emmanuel Theodore (00:36)
+The map the government drew in 1938 still predicts where the shooting concentrates.
 
-Emmanuel Theodore (01:10)
-Ninety percent of Boston's housing was built before lead paint was banned. The highest risk is in Dorchester, Roxbury, Mattapan, and Hyde Park, and Boston still has about three thousand known lead service lines. This law never mentions lead.
+Emmanuel Theodore (00:41)
+That's because of what the state left there. Redlining locked in concentrated poverty, and across the fifty states, poverty tracks gun homicide at about point seven.
 
-Emmanuel Theodore (01:23)
-Now the date. If you legally held one of these rifles on August 1st, 2024, you can register it by October 28th and keep it. Anyone after that date can't buy the same rifle. Same gun. Only the date differs.
+Emmanuel Theodore (00:48)
+Once you account for poverty and inequality, the link between gun laws and gun homicide is essentially zero.
+
+Emmanuel Theodore (00:53)
+And lead. Childhood lead exposure has been tied to violent crime for decades.
+
+Emmanuel Theodore (00:57)
+Ninety percent of Boston's housing was built before lead paint was banned, the highest risk is in Dorchester, Roxbury, Mattapan, and Hyde Park, and Boston still has about three thousand known lead service lines.
+
+Emmanuel Theodore (01:08)
+Those are the state's own failures, and they're still in the ground. This law creates commissions. It never mentions lead. Instead, it adds three new barriers.
+
+Emmanuel Theodore (01:17)
+First, a date. If you legally held one of these rifles on August 1st, 2024, you can register it and keep it. Anyone after that can't buy the same rifle.
+
+Emmanuel Theodore (01:26)
+That's a grandfather clause. In 1915, the Supreme Court struck one down in Guinn v. United States, because a neutral-looking date did the work of keeping Black people out.
 
 Emmanuel Theodore (01:35)
-That's a grandfather clause. In 1898, Louisiana exempted anyone whose grandfather could vote before 1867 from its voting tests, and Black registration fell from about a hundred thirty thousand to about five thousand.
+The people on the wrong side of this date are the ones just getting in. Gun ownership among Black women jumped eighty-seven percent in 2021.
 
-Emmanuel Theodore (01:47)
-When Oklahoma tried it, the Supreme Court struck it down in 1915, in Guinn v. United States. The clause was neutral on its face. The date did the work.
+Emmanuel Theodore (01:43)
+Second, a price: two hundred dollars or more for a first license. In Massachusetts, median net wealth is about five hundred fifty thousand dollars for white families and seventy-eight hundred for Black families.
 
-Emmanuel Theodore (01:56)
-The people this date shuts out are the ones just getting in. Gun ownership among Black women jumped eighty-seven percent in 2021.
+Emmanuel Theodore (01:54)
+Virginia's poll tax was about fifteen dollars a year in today's money, and the Supreme Court struck it down.
 
-Emmanuel Theodore (02:04)
-Then the price. A new license costs a hundred-dollar fee plus a required live-fire course, another hundred to a hundred fifty. In Massachusetts, median net wealth is about five hundred fifty thousand dollars for white families and seventy-eight hundred for Black families.
+Emmanuel Theodore (02:01)
+Third, the features. It bans the adjustable stocks and grips that let a smaller or disabled shooter fit and control a rifle, so it lands hardest on women and disabled people protecting themselves.
 
-Emmanuel Theodore (02:18)
-A fee you pay before you can use a right is how a poll tax works. In 1966, the Supreme Court struck down Virginia's dollar-fifty poll tax, about fifteen dollars a year today. A first license here costs two hundred or more. Even Bruen warned that exorbitant fees can deny a right.
+Emmanuel Theodore (02:12)
+So the state built these conditions, leaves them in place, and then points to the violence they produce to restrict the rights of the people living in them.
 
-Emmanuel Theodore (02:29)
+Emmanuel Theodore (02:20)
+That cycle runs until the state repairs what it broke.
+
+Emmanuel Theodore (02:24)
 Yes keeps this law. No repeals it. Every source is on one page, linked below.

@@ -1,0 +1,27 @@
+{
+  "component": "CompareCard",
+  "headline": "First, a date. Same gun, only the date differs.",
+  "items": [
+    {
+      "title": "Owned before Aug 1, 2024",
+      "points": [
+        "Licensed owners keep it once it is registered and serialized",
+        "Register by Oct 28, 2026"
+      ]
+    },
+    {
+      "title": "Acquired after",
+      "points": [
+        "Cannot be legally acquired",
+        "First offense: $1,000–$10,000 fine, 1–10 years' imprisonment, or both"
+      ]
+    }
+  ],
+  "sources": "Sources: Acts of 2024, Ch. 135 · G.L. c. 140, § 131M",
+  "qrUrl": "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXX/Chapter140/Section131M",
+  "highlight": "date",
+  "art": {
+    "src": "assets/quiver/g12_identical_rifles.svg",
+    "size": "hero"
+  }
+}

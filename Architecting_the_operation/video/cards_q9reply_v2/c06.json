@@ -1,0 +1,21 @@
+{
+  "component": "TitleCard",
+  "headline": "What the state left there: lead",
+  "items": [
+    {
+      "title": "Cities with lead water pipes, 1921–1936",
+      "emphasis": "+24%",
+      "detail": "Higher homicide rates (Feigenbaum and Muller)"
+    },
+    {
+      "title": "Leaded-gasoline phase-out",
+      "detail": "Tied to a later drop in violent crime (Reyes 2007)"
+    },
+    {
+      "title": "The size of the effect is debated",
+      "detail": "A 2022 meta-analysis finds a positive, modest link"
+    }
+  ],
+  "sources": "Sources: Explorations in Economic History (2016) · NBER (Reyes 2007) · Higney et al. (2022)",
+  "qrUrl": "https://jamesfeigenbaum.github.io/research/pdf/lead-crime.pdf"
+}

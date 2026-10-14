@@ -274,7 +274,7 @@ The sources for the practical claims are in section 18. Further evidence on who 
 
 # Reply to a Boston city councilor's ballot guide (October 2026)
 
-The sections below cover a second video: a reply to a Boston city councilor's Question 9 ballot guide, which reproduced the Secretary of State's official summary. Claims already sourced above point to their sections: the grandfather clauses of Louisiana and Oklahoma (section 11), the August 1, 2024 date and the October 28, 2026 registration deadline (section 12), gun ownership among Black women (section 14), license costs (section 16), poverty and firearm homicide across the states (section 22), and Boston's 1938 map and today's shootings (section 26).
+The sections below cover a second video: a reply to a Boston city councilor's Question 9 ballot guide, which reproduced the Secretary of State's official summary. Claims already sourced above point to their sections: the grandfather clauses of Louisiana and Oklahoma (section 11), the August 1, 2024 date and the October 28, 2026 registration deadline (section 12), gun ownership among Black women (section 14), license costs (section 16), poverty and firearm homicide across the states (section 22), Boston's 1938 map and today's shootings (section 26), and the banned features and who they serve (sections 18 and 28). The closing claim, that the state leaves the conditions it built in place and then cites the violence they produce to restrict rights, is the video's argument, drawn from *The Original Power*.
 
 ## 29. Redlining and firearm deaths across U.S. cities
 
@@ -287,21 +287,22 @@ The sections below cover a second video: a reply to a Boston city councilor's Qu
 
 **Limits:** these studies measure association. After adjusting for year, area demographics and state factors, the Annals study's rate ratio for D against A is 2.07 (95% CI 1.90 to 2.25); the video uses the unadjusted 5.5. Its death counts come from the Gun Violence Archive, which relies on media coverage and police reports.
 
-## 30. The map, poverty, and shootings in Boston
+## 30. What the state left there: poverty
 
-**In the video:** The 1938 map still predicts where the shooting concentrates. The map predicts the poverty, and the poverty predicts the shooting. In Boston, once today's poverty and who lives there are accounted for, the map adds nothing on its own. Across the fifty states, poverty tracks firearm homicide at about 0.7, and gun-law strength barely tracks it once poverty is counted.
+**In the video:** The map the government drew in 1938 still predicts where the shooting concentrates. Redlining locked in concentrated poverty, and across the fifty states, poverty tracks gun homicide at about 0.7. Once you account for poverty and inequality, the link between gun laws and gun homicide is essentially zero.
 
-- Boston: section 26. With poverty and the share of Black residents controlled, the tract-level rate ratio for the 1938 grade is 1.00 (95% CI 0.68 to 1.46).
-- The states: section 22.
+- Redlining and poverty: Dholakia et al. (section 29) describe redlining as a practice that "limited mortgage availability and reinforced concentrated poverty that still exists today."
+- Boston's map and today's shootings: section 26.
+- The states: section 22. Poverty correlates with firearm homicide at +0.72; gun-law rank correlates at +0.29 on its own, and its coefficient is about zero (−0.004, p = 0.89) once poverty and inequality are controlled.
 
-**Limit:** "predicts" here means a statistical association. The 1938 grade forecasts where shootings concentrate today, and the Boston model shows that it does so through today's poverty and residential makeup. It does not establish that the map, or poverty, causes any particular shooting.
+**Limit:** "predicts" means a statistical association. The 1938 grade forecasts where shootings concentrate today; it does not establish that any particular shooting was caused by the map or by poverty. The state comparison is a cross-section of 50 states and D.C. and cannot establish cause.
 
 ## 31. Lead
 
-**In the video:** Childhood lead exposure has been tied to violent crime for decades. In the 1920s and 30s, cities with lead water pipes had about a quarter more homicide. In Boston, 90 percent of housing was built before lead paint was banned, the highest-risk neighborhoods are Dorchester, Roxbury, Mattapan, and Hyde Park, and the city has about three thousand known lead service lines. The law never mentions lead.
+**In the video:** Childhood lead exposure has been tied to violent crime for decades. In Boston, 90 percent of housing was built before lead paint was banned, the highest-risk neighborhoods are Dorchester, Roxbury, Mattapan, and Hyde Park, and the city has about three thousand known lead service lines. Those are the state's own failures, and they are still in the ground. The law creates commissions and never mentions lead.
 
 - The research, its limits, and every Boston figure: section 6 (Feigenbaum and Muller for the pipes; the Boston Public Health Commission and the Boston Water and Sewer Commission for Boston).
-- [Chapter 135 of the Acts of 2024, full text](https://malegislature.gov/Laws/SessionLaws/Acts/2024/Chapter135): the word "lead" appears once, as a verb ("warrants ... that lead to the seizure of firearms"). The act contains no provision on lead exposure, lead pipes, or lead paint.
+- [Chapter 135 of the Acts of 2024, full text](https://malegislature.gov/Laws/SessionLaws/Acts/2024/Chapter135): the word "lead" appears once, as a verb ("warrants ... that lead to the seizure of firearms"). The act contains no provision on lead exposure, lead pipes, or lead paint. It does establish commissions, including one on violence prevention and one on firearm technology (the official summary lists them).
 
 ## 32. The racial wealth gap in Massachusetts
 
@@ -314,7 +315,7 @@ The sections below cover a second video: a reply to a Boston city councilor's Qu
 
 ## 33. Poll taxes and license fees
 
-**In the video:** A fee you pay before you can use a right is how a poll tax works. The Supreme Court struck down Virginia's $1.50 poll tax in 1966, about $15.60 a year in today's money, and a first Massachusetts license costs $200 or more. *Bruen* warned that exorbitant fees can deny people a right.
+**In the video:** A first Massachusetts license costs $200 or more. Virginia's poll tax was about $15.60 a year in today's money, and the Supreme Court struck it down (1966). *Bruen* warned that exorbitant fees can deny people a right.
 
 - [*Harper v. Virginia State Board of Elections*, 383 U.S. 663 (1966)](https://supreme.justia.com/cases/federal/us/383/663/): struck down Virginia's $1.50 poll tax in state elections under the Equal Protection Clause. The Twenty-Fourth Amendment (1964) had already barred poll taxes in federal elections.
 - [*New York State Rifle & Pistol Ass'n v. Bruen*, 597 U.S. 1 (2022), footnote 9](https://www.supremecourt.gov/opinions/21pdf/20-843_7j80.pdf): the Court does not rule out challenges to shall-issue licensing where "lengthy wait times in processing license applications or exorbitant fees deny ordinary citizens their right to public carry."

@@ -1,0 +1,20 @@
+{
+  "component": "TitleCard",
+  "headline": "Lead in Boston",
+  "items": [
+    {
+      "title": "90% of Boston housing built before 1978",
+      "detail": "The year lead paint was banned"
+    },
+    {
+      "title": "Highest risk",
+      "detail": "Dorchester, Roxbury, Mattapan, Hyde Park"
+    },
+    {
+      "title": "About 3,000 known lead service lines",
+      "detail": "Possibly thousands more"
+    }
+  ],
+  "sources": "Sources: Boston Public Health Commission · Boston Water and Sewer Commission",
+  "qrUrl": "https://hsph.harvard.edu/news/lead-pipe-replacement-free-in-boston-but-uptake-slow/"
+}

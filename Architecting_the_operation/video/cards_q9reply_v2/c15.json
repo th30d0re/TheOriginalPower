@@ -1,0 +1,20 @@
+{
+  "component": "TitleCard",
+  "headline": "Repair what the state broke",
+  "items": [
+    {
+      "title": "The state built the conditions",
+      "detail": "The 1938 map, the disinvestment, the lead"
+    },
+    {
+      "title": "It leaves them in place",
+      "detail": "Chapter 135 repairs none of them"
+    },
+    {
+      "title": "Then uses the violence to restrict rights",
+      "detail": "Of the people living in those conditions"
+    }
+  ],
+  "sources": "Sources: every claim on one page (scan the code)",
+  "qrUrl": "https://github.com/th30d0re/TheOriginalPower/blob/main/Paper/chapter135_rebuttal_video/citations.md"
+}
