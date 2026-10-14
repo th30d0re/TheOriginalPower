@@ -1,0 +1,25 @@
+{
+  "component": "TitleCard",
+  "headline": "Lead exposure in Boston",
+  "items": [
+    {
+      "title": "90% of housing built before 1978",
+      "detail": "The year lead paint was banned"
+    },
+    {
+      "title": "Highest risk",
+      "detail": "Dorchester, Roxbury, Mattapan, Hyde Park"
+    },
+    {
+      "title": "About 3,000 known lead service lines",
+      "detail": "Possibly thousands more"
+    },
+    {
+      "title": "Chapter 135 on lead",
+      "emphasis": "0",
+      "detail": "No provision on lead pipes, paint, or exposure"
+    }
+  ],
+  "sources": "Sources: Boston Public Health Commission · Boston Water and Sewer Commission · Acts of 2024, Ch. 135",
+  "qrUrl": "https://malegislature.gov/Laws/SessionLaws/Acts/2024/Chapter135"
+}

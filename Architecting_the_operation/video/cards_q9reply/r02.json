@@ -1,0 +1,21 @@
+{
+  "component": "TitleCard",
+  "headline": "Redlining, 1930s",
+  "items": [
+    {
+      "title": "The federal government graded neighborhoods A to D",
+      "detail": "Home Owners' Loan Corporation maps, by mortgage risk"
+    },
+    {
+      "title": "Black neighborhoods: graded D, outlined in red",
+      "detail": "\"Hazardous\""
+    }
+  ],
+  "sources": "Source: Mapping Inequality, University of Richmond",
+  "qrUrl": "https://dsl.richmond.edu/panorama/redlining/",
+  "art": {
+    "src": "assets/quiver/g06_redlining_motif.svg",
+    "size": "hero",
+    "caption": "Illustration of a redlining-style map"
+  }
+}

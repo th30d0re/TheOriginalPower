@@ -1,0 +1,18 @@
+{
+  "component": "TitleCard",
+  "headline": "The map predicts the poverty",
+  "items": [
+    {
+      "title": "Boston, 1938 grade alone",
+      "emphasis": "~7×",
+      "detail": "Shooting rate, C and D against A and B"
+    },
+    {
+      "title": "With today’s poverty and racial makeup counted",
+      "emphasis": "1.00",
+      "detail": "The 1938 grade adds nothing on its own"
+    }
+  ],
+  "sources": "Source: this repository's Boston analysis (Analyze Boston, ACS, Mapping Inequality)",
+  "qrUrl": "https://github.com/th30d0re/TheOriginalPower/blob/main/Paper/data/spatial/boston/RESULTS.md"
+}

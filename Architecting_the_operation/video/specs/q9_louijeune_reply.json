@@ -1,0 +1,476 @@
+{
+  "schema_version": 1,
+  "source": "q9_louijeune_reply_shotlist.md",
+  "manifest": "episode_manifest.json",
+  "script": "q9_louijeune_reply.md",
+  "shot_count": 15,
+  "shots": [
+    {
+      "id": "R-01",
+      "title": "Her slide",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "00:00",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 0,
+        "start_ms": 0,
+        "end_ms": 9060
+      },
+      "hold": {},
+      "type": "card",
+      "described": {
+        "Type": "card"
+      },
+      "note": "citations.md Section 29 heading (the reply)",
+      "provenance": {
+        "tags": [],
+        "citations": [],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Her slide. Type: card"
+    },
+    {
+      "id": "R-02",
+      "title": "Redlining",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "00:07",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 1,
+        "start_ms": 9360,
+        "end_ms": 19450
+      },
+      "hold": {},
+      "type": "card",
+      "described": {
+        "Type": "card"
+      },
+      "note": "citations.md Section 26",
+      "provenance": {
+        "tags": [],
+        "citations": [],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Redlining. Type: card"
+    },
+    {
+      "id": "R-03",
+      "title": "202 cities",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "00:17",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 2,
+        "start_ms": 19750,
+        "end_ms": 32400
+      },
+      "hold": {},
+      "type": "card",
+      "described": {
+        "Type": "card"
+      },
+      "note": "citations.md Section 29",
+      "provenance": {
+        "tags": [],
+        "citations": [],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "202 cities. Type: card"
+    },
+    {
+      "id": "R-04",
+      "title": "Boston's map",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "00:28",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 3,
+        "start_ms": 32700,
+        "end_ms": 42780
+      },
+      "hold": {},
+      "type": "card",
+      "described": {
+        "Type": "card"
+      },
+      "note": "citations.md Section 26",
+      "provenance": {
+        "tags": [],
+        "citations": [],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Boston's map. Type: card"
+    },
+    {
+      "id": "R-05",
+      "title": "The map predicts the poverty",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "00:39",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 4,
+        "start_ms": 43080,
+        "end_ms": 53350
+      },
+      "hold": {},
+      "type": "card",
+      "described": {
+        "Type": "card"
+      },
+      "note": "citations.md Section 30",
+      "provenance": {
+        "tags": [],
+        "citations": [],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "The map predicts the poverty. Type: card"
+    },
+    {
+      "id": "R-06",
+      "title": "Poverty and the states",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "00:50",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 5,
+        "start_ms": 53650,
+        "end_ms": 61990
+      },
+      "hold": {},
+      "type": "card",
+      "described": {
+        "Type": "card"
+      },
+      "note": "citations.md Section 22",
+      "provenance": {
+        "tags": [],
+        "citations": [],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Poverty and the states. Type: card"
+    },
+    {
+      "id": "R-07",
+      "title": "Lead research",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "00:58",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 6,
+        "start_ms": 62290,
+        "end_ms": 76630
+      },
+      "hold": {},
+      "type": "card",
+      "described": {
+        "Type": "card"
+      },
+      "note": "citations.md Section 6",
+      "provenance": {
+        "tags": [],
+        "citations": [],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Lead research. Type: card"
+    },
+    {
+      "id": "R-08",
+      "title": "Lead in Boston",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "01:10",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 7,
+        "start_ms": 76930,
+        "end_ms": 91300
+      },
+      "hold": {},
+      "type": "card",
+      "described": {
+        "Type": "card"
+      },
+      "note": "citations.md Sections 6 and 31",
+      "provenance": {
+        "tags": [],
+        "citations": [],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Lead in Boston. Type: card"
+    },
+    {
+      "id": "R-09",
+      "title": "The date",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "01:23",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 8,
+        "start_ms": 91600,
+        "end_ms": 105010
+      },
+      "hold": {},
+      "type": "card",
+      "described": {
+        "Type": "card"
+      },
+      "note": "citations.md Section 12",
+      "provenance": {
+        "tags": [],
+        "citations": [],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "The date. Type: card"
+    },
+    {
+      "id": "R-10",
+      "title": "Louisiana, 1898",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "01:35",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 9,
+        "start_ms": 105310,
+        "end_ms": 120240
+      },
+      "hold": {},
+      "type": "card",
+      "described": {
+        "Type": "card"
+      },
+      "note": "citations.md Section 11",
+      "provenance": {
+        "tags": [],
+        "citations": [],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Louisiana, 1898. Type: card"
+    },
+    {
+      "id": "R-11",
+      "title": "Guinn",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "01:47",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 10,
+        "start_ms": 120540,
+        "end_ms": 130350
+      },
+      "hold": {},
+      "type": "card",
+      "described": {
+        "Type": "card"
+      },
+      "note": "citations.md Section 11",
+      "provenance": {
+        "tags": [],
+        "citations": [],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Guinn. Type: card"
+    },
+    {
+      "id": "R-12",
+      "title": "Who is just getting in",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "01:56",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 11,
+        "start_ms": 130650,
+        "end_ms": 139080
+      },
+      "hold": {},
+      "type": "card",
+      "described": {
+        "Type": "card"
+      },
+      "note": "citations.md Section 14",
+      "provenance": {
+        "tags": [],
+        "citations": [],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Who is just getting in. Type: card"
+    },
+    {
+      "id": "R-13",
+      "title": "The price and the wealth gap",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "02:04",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 12,
+        "start_ms": 139380,
+        "end_ms": 156240
+      },
+      "hold": {},
+      "type": "card",
+      "described": {
+        "Type": "card"
+      },
+      "note": "citations.md Sections 16 and 32",
+      "provenance": {
+        "tags": [],
+        "citations": [],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "The price and the wealth gap. Type: card"
+    },
+    {
+      "id": "R-14",
+      "title": "Poll tax",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "02:18",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 13,
+        "start_ms": 156540,
+        "end_ms": 168380
+      },
+      "hold": {},
+      "type": "card",
+      "described": {
+        "Type": "card"
+      },
+      "note": "citations.md Section 33",
+      "provenance": {
+        "tags": [],
+        "citations": [],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Poll tax. Type: card"
+    },
+    {
+      "id": "R-15",
+      "title": "Close",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "02:29",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 14,
+        "start_ms": 168680,
+        "end_ms": 173180
+      },
+      "hold": {},
+      "type": "card",
+      "described": {
+        "Type": "card"
+      },
+      "note": "citations.md",
+      "provenance": {
+        "tags": [],
+        "citations": [],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Close. Type: card"
+    }
+  ],
+  "validation": [
+    {
+      "level": "warn",
+      "shot": "R-01",
+      "message": "no provenance tag"
+    },
+    {
+      "level": "warn",
+      "shot": "R-02",
+      "message": "no provenance tag"
+    },
+    {
+      "level": "warn",
+      "shot": "R-03",
+      "message": "no provenance tag"
+    },
+    {
+      "level": "warn",
+      "shot": "R-04",
+      "message": "no provenance tag"
+    },
+    {
+      "level": "warn",
+      "shot": "R-05",
+      "message": "no provenance tag"
+    },
+    {
+      "level": "warn",
+      "shot": "R-06",
+      "message": "no provenance tag"
+    },
+    {
+      "level": "warn",
+      "shot": "R-07",
+      "message": "no provenance tag"
+    },
+    {
+      "level": "warn",
+      "shot": "R-08",
+      "message": "no provenance tag"
+    },
+    {
+      "level": "warn",
+      "shot": "R-09",
+      "message": "no provenance tag"
+    },
+    {
+      "level": "warn",
+      "shot": "R-10",
+      "message": "no provenance tag"
+    },
+    {
+      "level": "warn",
+      "shot": "R-11",
+      "message": "no provenance tag"
+    },
+    {
+      "level": "warn",
+      "shot": "R-12",
+      "message": "no provenance tag"
+    },
+    {
+      "level": "warn",
+      "shot": "R-13",
+      "message": "no provenance tag"
+    },
+    {
+      "level": "warn",
+      "shot": "R-14",
+      "message": "no provenance tag"
+    },
+    {
+      "level": "warn",
+      "shot": "R-15",
+      "message": "no provenance tag"
+    }
+  ]
+}
