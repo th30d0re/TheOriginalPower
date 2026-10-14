@@ -278,7 +278,7 @@ The sections below cover a second video: a reply to a Boston city councilor's Qu
 
 ## 29. Redlining and firearm deaths across U.S. cities
 
-**In the video:** A 2024 study in the *Annals of Internal Medicine* laid the 1930s redlining maps over gun deaths in 202 cities. The death rate climbs at every step from A to D, and D neighborhoods had five and a half times the rate of A. A 21-city study found the same staircase.
+**In the video:** A 2024 study laid the 1930s redlining maps over gun deaths in 202 cities. The death rate climbs at every grade, and the redlined (D) neighborhoods had five and a half times the rate of the best-graded (A) ones.
 
 - [Dholakia et al. (2024), "Historical Redlining and Present-Day Nonsuicide Firearm Fatalities," *Annals of Internal Medicine* 177(5):592-597](https://doi.org/10.7326/M23-2496): 41,428 nonsuicide firearm deaths from 2014 to 2022 in the 8,597 areas the HOLC graded, across 202 cities. Rates per 100,000 a year: 3.78 in A areas, 7.43 in B, 11.24 in C, 16.26 in D. The rate ratio for D against A is 5.51 (95% CI 5.05 to 6.02).
 - [Mehranbod et al. (2022), "Historical redlining and the epidemiology of present-day firearm violence in the United States: A multi-city analysis," *Preventive Medicine*](https://pmc.ncbi.nlm.nih.gov/articles/PMC10155117/): ZIP codes in 21 cities, firearm deaths in 2019. It finds a dose-responsive relationship between HOLC grade and present-day firearm deaths, stronger in Baltimore and weaker in Los Angeles.
@@ -289,7 +289,7 @@ The sections below cover a second video: a reply to a Boston city councilor's Qu
 
 ## 30. The map, poverty, and shootings in Boston
 
-**In the video:** The 1938 map still predicts where the shooting concentrates. The map predicts the poverty, and the poverty predicts the shooting. In Boston, once today's poverty and who lives there are accounted for, the map adds nothing on its own. Across the fifty states, poverty tracks firearm homicide at about 0.7, gun-law strength tracks it more weakly, and that link disappears once poverty and inequality are in the model.
+**In the video:** The 1938 map still predicts where the shooting concentrates. The map predicts the poverty, and the poverty predicts the shooting. In Boston, once today's poverty and who lives there are accounted for, the map adds nothing on its own. Across the fifty states, poverty tracks firearm homicide at about 0.7, and gun-law strength barely tracks it once poverty is counted.
 
 - Boston: section 26. With poverty and the share of Black residents controlled, the tract-level rate ratio for the 1938 grade is 1.00 (95% CI 0.68 to 1.46).
 - The states: section 22.
@@ -298,14 +298,14 @@ The sections below cover a second video: a reply to a Boston city councilor's Qu
 
 ## 31. Lead
 
-**In the video:** In the 1920s and 30s, cities with lead water pipes had homicide rates about a quarter higher. In Boston, 90 percent of housing was built before lead paint was banned, the highest-risk neighborhoods are Dorchester, Roxbury, Mattapan, and Hyde Park, the city has about three thousand known lead service lines, and in 2016 four schools shut off drinking fountains that tested over the limit. The law never mentions lead.
+**In the video:** Childhood lead exposure has been tied to violent crime for decades. In the 1920s and 30s, cities with lead water pipes had about a quarter more homicide. In Boston, 90 percent of housing was built before lead paint was banned, the highest-risk neighborhoods are Dorchester, Roxbury, Mattapan, and Hyde Park, and the city has about three thousand known lead service lines. The law never mentions lead.
 
-- The research, its limits, and every Boston figure: section 6 (Feigenbaum and Muller for the pipes; the Boston Public Health Commission, the Boston Water and Sewer Commission, and the 2016 school testing for Boston).
+- The research, its limits, and every Boston figure: section 6 (Feigenbaum and Muller for the pipes; the Boston Public Health Commission and the Boston Water and Sewer Commission for Boston).
 - [Chapter 135 of the Acts of 2024, full text](https://malegislature.gov/Laws/SessionLaws/Acts/2024/Chapter135): the word "lead" appears once, as a verb ("warrants ... that lead to the seizure of firearms"). The act contains no provision on lead exposure, lead pipes, or lead paint.
 
 ## 32. The racial wealth gap in Massachusetts
 
-**In the video:** The Boston Fed puts median net wealth in Massachusetts at about $550,000 for white families and $7,800 for Black families. Nearly a third of Black families have zero or less.
+**In the video:** The Boston Fed puts median net wealth in Massachusetts at about $550,000 for white families and $7,800 for Black families.
 
 - [Federal Reserve Bank of Boston, "Boston Fed report offers detailed picture of family wealth in Massachusetts" (Aug. 12, 2026)](https://www.bostonfed.org/news-and-events/news/2026/08/mass-echos-wealth-survey-median-family-net-wealth-economic-disparities.aspx)
 - [Full report: "Family wealth in Massachusetts: Findings from the 2025 Massachusetts Economic Conditions and Household Opportunity Survey (Mass ECHOS)," Report 2026-1, revised September 2026](https://www.bostonfed.org/-/media/Documents/one-time-pubs/2026/Massechos_full_report.pdf): 5,018 respondents surveyed from March to December 2025. Median net wealth: white families $549,200 (95% CI $469,900 to $628,500), Black families $7,800 (−$7,600 to $23,300), Hispanic families $1,200 (−$1,400 to $3,800). Zero or negative net wealth: 31.4% of Black families, 40.5% of Hispanic families, 11.1% of white families.
@@ -314,7 +314,7 @@ The sections below cover a second video: a reply to a Boston city councilor's Qu
 
 ## 33. Poll taxes and license fees
 
-**In the video:** A fee you pay before you can use a right is how a poll tax works. Virginia charged $1.50 to vote, and in 1966 the Supreme Court struck it down. *Bruen* warned that exorbitant fees can deny people a right.
+**In the video:** A fee you pay before you can use a right is how a poll tax works. The Supreme Court struck down Virginia's $1.50 poll tax in 1966. *Bruen* warned that exorbitant fees can deny people a right.
 
 - [*Harper v. Virginia State Board of Elections*, 383 U.S. 663 (1966)](https://supreme.justia.com/cases/federal/us/383/663/): struck down Virginia's $1.50 poll tax in state elections under the Equal Protection Clause. The Twenty-Fourth Amendment (1964) had already barred poll taxes in federal elections.
 - [*New York State Rifle & Pistol Ass'n v. Bruen*, 597 U.S. 1 (2022), footnote 9](https://www.supremecourt.gov/opinions/21pdf/20-843_7j80.pdf): the Court does not rule out challenges to shall-issue licensing where "lengthy wait times in processing license applications or exorbitant fees deny ordinary citizens their right to public carry."
