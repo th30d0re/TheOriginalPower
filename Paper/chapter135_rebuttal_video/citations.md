@@ -314,10 +314,12 @@ The sections below cover a second video: a reply to a Boston city councilor's Qu
 
 ## 33. Poll taxes and license fees
 
-**In the video:** A fee you pay before you can use a right is how a poll tax works. The Supreme Court struck down Virginia's $1.50 poll tax in 1966. *Bruen* warned that exorbitant fees can deny people a right.
+**In the video:** A fee you pay before you can use a right is how a poll tax works. The Supreme Court struck down Virginia's $1.50 poll tax in 1966, about $15.60 a year in today's money, and a first Massachusetts license costs $200 or more. *Bruen* warned that exorbitant fees can deny people a right.
 
 - [*Harper v. Virginia State Board of Elections*, 383 U.S. 663 (1966)](https://supreme.justia.com/cases/federal/us/383/663/): struck down Virginia's $1.50 poll tax in state elections under the Equal Protection Clause. The Twenty-Fourth Amendment (1964) had already barred poll taxes in federal elections.
 - [*New York State Rifle & Pistol Ass'n v. Bruen*, 597 U.S. 1 (2022), footnote 9](https://www.supremecourt.gov/opinions/21pdf/20-843_7j80.pdf): the Court does not rule out challenges to shall-issue licensing where "lengthy wait times in processing license applications or exorbitant fees deny ordinary citizens their right to public carry."
+- [Bureau of Labor Statistics, CPI-U, U.S. city average, all items (series CUUR0000SA0)](https://data.bls.gov/timeseries/CUUR0000SA0): 1966 annual average 32.4; September 2026, 336.94. $1.50 × 336.94 / 32.4 ≈ $15.60.
+- License term: a Massachusetts License to Carry is valid for six years, and the $100 state fee is charged on each application and renewal (town police licensing pages, e.g. [Dracut](https://dracutma.gov/596/Firearms-Licensing), [Cohasset](https://www.cohassetma.gov/1200/Firearms-Licensing)). Over six years, Virginia's poll tax would come to about $94 in today's money; a first Massachusetts license costs $200 to $250 (section 16).
 - [The Reload, on how courts have read footnote 9](https://thereload.com/members-newsletter-when-does-gun-permitting-turn-abusive/)
 
 **Limit:** the poll-tax comparison is the video's argument. No court has held a Massachusetts license fee exorbitant under footnote 9, and appeals courts have upheld other states' fees and training requirements, including Maryland's $50 fee with four hours of training.
