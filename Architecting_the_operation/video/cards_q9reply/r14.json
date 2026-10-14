@@ -1,0 +1,17 @@
+{
+  "component": "TitleCard",
+  "headline": "A fee before a right",
+  "items": [
+    {
+      "title": "Harper v. Virginia (1966)",
+      "emphasis": "$1.50",
+      "detail": "The Supreme Court struck down Virginia's poll tax"
+    },
+    {
+      "title": "Bruen (2022), footnote 9",
+      "detail": "\"exorbitant fees deny ordinary citizens their right\""
+    }
+  ],
+  "sources": "Sources: Harper v. Virginia State Bd. of Elections, 383 U.S. 663 · NYSRPA v. Bruen, 597 U.S. 1",
+  "qrUrl": "https://www.supremecourt.gov/opinions/21pdf/20-843_7j80.pdf"
+}

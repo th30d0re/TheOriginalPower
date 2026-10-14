@@ -1,0 +1,17 @@
+{
+  "component": "TitleCard",
+  "headline": "Guinn v. United States (1915)",
+  "items": [
+    {
+      "title": "The Supreme Court strikes down grandfather clauses",
+      "detail": "238 U.S. 347 (1915)"
+    }
+  ],
+  "sources": "Sources: Guinn v. United States, 238 U.S. 347 (1915)",
+  "qrUrl": "https://www.law.cornell.edu/supremecourt/text/238/347",
+  "art": {
+    "src": "assets/quiver/g33_gavel_court_anim.svg",
+    "size": "hero",
+    "animate": true
+  }
+}
