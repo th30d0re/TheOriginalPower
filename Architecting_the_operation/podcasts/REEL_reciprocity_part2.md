@@ -16,13 +16,13 @@ Emmanuel Theodore (01:20)
 Here's the physics of it. In the bedroom, both of you carry some of the work. If only one of you shows up for it, you're out of phase. That effort lands on nobody, and it feels like a chore to both of you. So each of you waits for the other to go first. Are we dense? When you both show up at the same time, you phase-lock. Each of you receives the other's effort as pleasure. The chore cancels out, and the signal adds up.
 
 Emmanuel Theodore (01:32)
-And that reciprocity leaks out of the bedroom into everything else. Sex is the most physically intimate thing two people can do. If your partner can't show up for you there, how are they showing up anywhere else? And in a monogamous relationship, you're their only ethical outlet. In one study of people seeking affairs, sexual dissatisfaction was the top motive. And in divorce interviews, infidelity was the most common final straw. When the biggest physical act of affection is broken, that's a relationship-ending problem.
+And that reciprocity leaks out of the bedroom into everything else. If your partner can't show up for you there, how are they showing up anywhere else? And in a monogamous relationship, you're their only ethical outlet. In one study of people seeking affairs, sexual dissatisfaction was the top motive. And in divorce interviews, infidelity was the most common final straw. When the biggest physical act of affection is broken, that's a relationship-ending problem.
 
 Emmanuel Theodore (01:42)
 And it runs on communication. Tell your partner what works. Most women have faked it at least once, and every fake teaches him the wrong thing. In a study of women in friends with benefits, the ones most comfortable saying what they want finished the most. Tell them, so they can calibrate.
 
 Emmanuel Theodore (01:45)
-And that's why sequence kills it. You fix the chores first, then I'll fix the bedroom. Every one of those puts someone on a waiting list. Reciprocity runs at the same time, or it runs out.
+And that's why sequence kills it. Fix the chores first, then I'll fix the bedroom. In a two-year study of a hundred and thirteen couples, satisfying sex predicted a more satisfying relationship later. The reverse didn't show up. Reciprocity runs at the same time, or it runs out.
 
 Emmanuel Theodore (02:03)
 Which brings up the hard part. If you can't see yourself being physical with your partner anymore, set a timeline. A real one. Get back to wanting this person, or be honest that you can't.
