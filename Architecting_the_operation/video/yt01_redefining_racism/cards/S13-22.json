@@ -20,7 +20,7 @@
     },
     {
       "title": "Parameters",
-      "detail": "Q₀, α, ω_d illustrative — not empirically calibrated"
+      "detail": "Q₀, α, ω_d illustrative: chosen to make the two cycles legible"
     }
   ],
   "sources": "Source: The Original Power, Figure 2.6",
