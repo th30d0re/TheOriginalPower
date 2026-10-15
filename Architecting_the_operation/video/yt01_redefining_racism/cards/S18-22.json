@@ -1,9 +1,20 @@
 {
-  "kind": "quote",
+  "kind": "source",
   "headline": "1992 digital logic class",
-  "quote": "Mumbling master-slave terms before sixty students; term has to go.",
-  "attribution": "Professor via Eglash (2007)",
-  "items": [],
+  "items": [
+    {
+      "title": "1992 digital logic",
+      "detail": "When I first taught digital logic, around 1992, I did not recognize the awkwardness of the term until I was standing in front of a class of sixty students"
+    },
+    {
+      "title": "Gatekeeping signal",
+      "detail": "The vocabulary functions as a gatekeeping signal: entering the field requires accepting that the relationship between two autonomous computational agents is most naturally described using the vocabulary of chattel enslavement"
+    },
+    {
+      "title": "Cost of the gate",
+      "detail": "For students whose recent family history is constituted by that institution, the cost of passing through that gate is not zero"
+    }
+  ],
   "sources": "Eglash, Broken Metaphor (2007)",
   "qrUrl": null
 }

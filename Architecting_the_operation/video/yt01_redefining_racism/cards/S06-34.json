@@ -1,18 +1,16 @@
 {
-  "kind": "quote",
+  "kind": "source",
   "headline": "A systemic definition",
   "items": [
     {
-      "title": "Architecture",
-      "detail": "Historical practices and policies categorize perceived racial differences"
+      "title": "System of oppression",
+      "detail": "This definition emphasizes racism as a system of oppression, deeply rooted in historical practices and policies that categorize individuals based on perceived racial differences"
     },
     {
-      "title": "Purpose",
-      "detail": "Break class solidarity and maintain exploitable labor"
+      "title": "Elites and labor",
+      "detail": "A system deliberately created by Elites to break class solidarity and maintain exploitable labor"
     }
   ],
   "sources": "Source: The Original Power, Chapter 2",
-  "qrUrl": null,
-  "quote": "Racism is a system of oppression.",
-  "attribution": "The Original Power · Chapter 2"
+  "qrUrl": null
 }

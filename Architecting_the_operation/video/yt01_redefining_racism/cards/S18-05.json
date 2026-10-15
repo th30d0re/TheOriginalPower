@@ -1,9 +1,16 @@
 {
-  "kind": "quote",
-  "headline": "1904 \u00b7 Gill sidereal clock",
-  "quote": "Gill described the auxiliary timekeeping device as the slave clock.",
-  "attribution": "Eglash (2007)",
-  "items": [],
+  "kind": "source",
+  "headline": "1904 · Gill sidereal clock",
+  "items": [
+    {
+      "title": "1904 · Gill",
+      "detail": "David Gill described the auxiliary timekeeping device in his Cape Town sidereal clock as the slave clock"
+    },
+    {
+      "title": "Before World War II",
+      "detail": "The terminology was not yet common in engineering before World War II"
+    }
+  ],
   "sources": "Eglash, Broken Metaphor (2007)",
   "qrUrl": null
 }
