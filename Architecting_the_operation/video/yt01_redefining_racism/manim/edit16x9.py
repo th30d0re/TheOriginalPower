@@ -10,6 +10,9 @@ A run is a primary shot and its holds (see common16x9). Each run renders once, s
 outputs/YT01/video/runs/<WxH>@<fps>/<primary>.mp4, starting at the primary's turn start on the
 frame grid. Shot i occupies frames [F(i), F(i+1)) of the episode, F(i) = round(start_i * fps),
 so a cut never drifts against the voiceover. Renders need Metal: run this outside the sandbox.
+
+A shot whose Render is ``ext:<path.mp4>`` (repo-relative) conforms that file with ffmpeg instead
+of manimgx: scale, fps, pad or trim to the run's manifest frame count, silent h264 (veryfast, crf 23).
 """
 import argparse
 import ast
@@ -56,6 +59,39 @@ def seg_shots(shots, segs):
 
 def run_path(primary, res, fps):
     return EP / "video" / "runs" / f"{res}@{fps}" / f"{primary}.mp4"
+
+
+def is_ext(shot):
+    return shot.file == "ext"
+
+
+def ext_source(shot):
+    return ROOT / shot.scene
+
+
+def run_frame_count(shots, primary, fps):
+    starts, end = beats()
+    F = [frame(t, fps) for t in starts] + [frame(end + 1.0, fps)]
+    run = runs_of(shots)[primary]
+    return F[run[-1].index + 1] - F[run[0].index]
+
+
+def conform_ext(src, out, res, fps, n_frames):
+    """Scale, resample, pad or trim to n_frames; silent x264 matching manimgx defaults."""
+    w, h = res.split("x")
+    vf = (f"fps={fps},scale={w}:{h},tpad=stop_mode=clone:stop={n_frames},"
+          f"trim=end_frame={n_frames},setpts=PTS-STARTPTS")
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(src),
+                    "-vf", vf, "-frames:v", str(n_frames), "-an",
+                    "-c:v", "libx264", "-preset", "veryfast", "-crf", "23", "-pix_fmt", "yuv420p",
+                    str(out)], check=True)
+
+
+def stale_ext(out, shot):
+    if not out.exists():
+        return True
+    deps = [ext_source(shot), EP / "episode_manifest.json"]
+    return any(d.exists() and d.stat().st_mtime > out.stat().st_mtime for d in deps)
 
 
 def stale(out, shot):
@@ -130,11 +166,15 @@ def cmd_check(args):
     bad = []
     for primary, run in runs_of(seg_shots(shots, args.segs)).items():
         s = run[0]
-        f = HERE / s.file
-        if not f.exists():
-            bad.append(f"{primary}: missing file {s.file}")
-        elif s.scene not in classes(f):
-            bad.append(f"{primary}: {s.file} defines no class {s.scene}")
+        if is_ext(s):
+            if not ext_source(s).exists():
+                bad.append(f"{primary}: missing external {s.scene}")
+        else:
+            f = HERE / s.file
+            if not f.exists():
+                bad.append(f"{primary}: missing file {s.file}")
+            elif s.scene not in classes(f):
+                bad.append(f"{primary}: {s.file} defines no class {s.scene}")
         if s.card and not (YT / s.card).exists():
             bad.append(f"{primary}: missing card {s.card}")
         if any(r.file != s.file or r.scene != s.scene for r in run):
@@ -144,11 +184,23 @@ def cmd_check(args):
     return 1 if bad else 0
 
 
-def render_one(primary, shot, args):
+def render_one(item):
+    primary, shot, args, shots = item
     out = run_path(primary, args.res, args.fps)
-    if not args.force and not stale(out, shot):
+    stale_fn = stale_ext if is_ext(shot) else stale
+    if not args.force and not stale_fn(out, shot):
         return primary, "fresh", ""
     out.parent.mkdir(parents=True, exist_ok=True)
+    if is_ext(shot):
+        src = ext_source(shot)
+        n = run_frame_count(shots, primary, args.fps)
+        try:
+            conform_ext(src, out, args.res, args.fps, n)
+        except subprocess.CalledProcessError as e:
+            return primary, f"FAILED ({e.returncode})", str(e)
+        log = out.with_suffix(".log")
+        log.write_text(f"ext:{src}\nframes={n}\n")
+        return primary, "ok", ""
     env = dict(os.environ, YT01_SHOT=primary)
     cmd = [str(MANIMGX), "render", str(HERE / shot.file), shot.scene, "-r", args.res, "--fps", str(args.fps),
            "--preset", "veryfast", "-o", str(out)]
@@ -165,13 +217,17 @@ def cmd_render(args):
         if args.only and primary not in args.only:
             continue
         s = run[0]
-        if not (HERE / s.file).exists() or s.scene not in classes(HERE / s.file):
+        if is_ext(s):
+            if not ext_source(s).exists():
+                print(f"{primary}: skipped, ext:{s.scene} missing")
+                continue
+        elif not (HERE / s.file).exists() or s.scene not in classes(HERE / s.file):
             print(f"{primary}: skipped, {s.file}:{s.scene} not built")
             continue
-        todo.append((primary, s))
+        todo.append((primary, s, args, shots))
     failed = 0
     with ThreadPoolExecutor(args.jobs) as pool:
-        for primary, status, err in pool.map(lambda x: render_one(*x, args), todo):
+        for primary, status, err in pool.map(render_one, todo):
             print(f"{primary}: {status}", flush=True)
             if err:
                 failed += 1
