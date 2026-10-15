@@ -722,13 +722,13 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 ## S03-50 — Orthographic illusion
 - **Anchor:** `Emmanuel Theodore (15:28)`
 - **Type:** diagram
-- **Render:** `manim:orthographic16x9.py:Orthographic16x9`
+- **Render:** `ext:animations/yt01_ortho/yt01_ortho.mp4`
 - **Note:** The refined tiers stack in depth and the camera travels below the Buffer Class. [book] “a low-resolution projection for the full architecture”
 
 ## S03-51 — Binary from below
 - **Anchor:** `Emmanuel Theodore (15:39)`
 - **Type:** hold
-- **Render:** `manim:orthographic16x9.py:Orthographic16x9`
+- **Render:** `ext:animations/yt01_ortho/yt01_ortho.mp4`
 - **Holds:** `S03-50`
 - **Note:** Higher tiers align behind the Buffer plane; an angle change separates the hidden architecture. [book] “The deeper architecture appears only after the binary is recursively resolved”
 
