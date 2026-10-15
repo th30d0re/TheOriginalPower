@@ -14,15 +14,15 @@ CLINE_COLORS = ["#3d2314", "#5c3a24", "#7a5238", "#9a7050", "#b88868", "#d4a888"
 def cline_bar():
     segments = m.VGroup()
     for col in CLINE_COLORS:
-        segments.add(m.Rectangle(width=1.45, height=0.85, fill_color=col, fill_opacity=1, stroke_width=0))
+        segments.add(m.Rectangle(width=1.72, height=1.05, fill_color=col, fill_opacity=1, stroke_width=0))
     segments.arrange(m.RIGHT, buff=0)
-    rail = m.Line(segments.get_left() + m.LEFT * 0.2, segments.get_right() + m.RIGHT * 0.2, color=DIM, stroke_width=3)
-    rail.next_to(segments, m.DOWN, buff=0.38)
-    left = T("LATITUDE", 34, DIM, "NORMAL").next_to(rail, m.LEFT, buff=0.18)
-    right = T("GRADIENT", 34, DIM, "NORMAL").next_to(rail, m.RIGHT, buff=0.18)
+    rail = m.Line(segments.get_left() + m.LEFT * 0.15, segments.get_right() + m.RIGHT * 0.15, color=DIM, stroke_width=3)
+    rail.next_to(segments, m.DOWN, buff=0.42)
+    left = T("LATITUDE", 34, DIM, "NORMAL").next_to(rail, m.LEFT, buff=0.22)
+    right = T("GRADIENT", 34, DIM, "NORMAL").next_to(rail, m.RIGHT, buff=0.22)
     group = m.VGroup(segments, rail, left, right)
-    if group.width > 12.6:
-        group.scale_to_fit_width(12.6)
+    if group.width > 13.0:
+        group.scale_to_fit_width(13.0)
     return group
 
 
@@ -31,8 +31,8 @@ class ClineGradient(YTScene):
 
     def shot_S10_05(self):
         head = T("CONTINUOUS CLINE", 44, GOLD).to_edge(m.UP, buff=0.42)
-        cline = cline_bar().shift(m.DOWN * 0.15)
-        hux = T("HUXLEY 1938", 34, DIM, "NORMAL").next_to(cline, m.DOWN, buff=0.65)
+        cline = cline_bar().shift(m.DOWN * 0.05)
+        hux = T("HUXLEY 1938", 34, DIM, "NORMAL").next_to(cline[1], m.DOWN, buff=0.95)
         geo = T("SKIN COLOR · GEOGRAPHY", 34, INK).next_to(head, m.DOWN, buff=0.2)
         self.add(head, geo)
         self.play(m.FadeIn(cline), run_time=1.0)
@@ -42,13 +42,15 @@ class ClineGradient(YTScene):
 
         # 1 — hold returns after card shots; ancient DNA timeline on cline
         self.until(self.at(1, "Ancient"))
+        self.play(m.FadeOut(hux), run_time=0.25)
         timeline = cline[1].copy().set_color(GOLD).set_stroke(width=4)
+        rail_y = timeline.get_bottom()[1] - 0.55
         marks = m.VGroup(
-            T("7 ka", 34, GOLD).move_to(timeline.point_from_proportion(0.22) + m.DOWN * 0.55),
-            T("10 ka", 34, GOLD).move_to(timeline.point_from_proportion(0.55) + m.DOWN * 0.55),
-            T("aDNA", 34, GOLD).move_to(timeline.point_from_proportion(0.78) + m.DOWN * 0.72),
+            T("7 ka", 34, GOLD).move_to(timeline.point_from_proportion(0.2) + m.DOWN * 0.62),
+            T("10 ka", 34, GOLD).move_to(timeline.point_from_proportion(0.48) + m.DOWN * 0.62),
+            T("aDNA", 34, GOLD).move_to([timeline.point_from_proportion(0.78)[0], rail_y - 0.55, 0]),
         )
-        dna = T("ANCIENT DNA TIMELINE", 36, GOLD).to_edge(m.DOWN, buff=0.4)
+        dna = T("ANCIENT DNA TIMELINE", 36, GOLD).to_edge(m.DOWN, buff=0.48)
         self.play(m.FadeIn(timeline), m.FadeIn(marks), m.FadeIn(dna), run_time=0.8)
         self.until(self.at(1, "timeline"))
         self.until(self.beat_end(1) - 0.3)

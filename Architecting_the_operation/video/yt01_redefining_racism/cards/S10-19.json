@@ -1,18 +1,16 @@
 {
-  "kind": "quote",
+  "kind": "source",
   "headline": "Documented plantation terror",
   "items": [
     {
-      "title": "Thistlewood diary",
-      "detail": "14,000 pages of plantation records"
+      "title": "Thomas Thistlewood diary",
+      "detail": "14,000 pages of plantation records — the primary record cited in §2.3.3"
     },
     {
-      "title": "Darby's dose",
-      "detail": "Named torture regimen in the diary"
+      "title": "Autonomy restriction and terror",
+      "detail": "Infant killing and Darby's dose, documented as routine management technique"
     }
   ],
   "sources": "Source: The Original Power, §2.3.3",
-  "qrUrl": null,
-  "quote": "The chapter records infant killing and Darby's dose as documented autonomy restriction and terror used as management technique.",
-  "attribution": "Thomas Thistlewood diary · cited in The Original Power"
+  "qrUrl": null
 }
