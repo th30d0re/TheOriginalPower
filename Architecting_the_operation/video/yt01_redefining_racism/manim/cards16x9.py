@@ -98,10 +98,8 @@ class CardScene(YTScene):
 
     # ── timing ────────────────────────────────────────────────────────────
 
-    def schedule(self, labels, fallbacks=None):
-        """Absolute reveal time per label: the first spoken word in the run that names it,
-        searched forward from the previous label's word (monotonic). Unnamed labels are
-        spaced between their named neighbours."""
+    def _schedule_found(self, labels, fallbacks=None):
+        """Per-item (turn index, word index, absolute time) when a label first names itself."""
         n_shots, n = len(self.run_turns), len(labels)
         fallbacks = fallbacks or [None] * n
         found, pos = [None] * n, (0, -1)
@@ -126,6 +124,15 @@ class CardScene(YTScene):
                 if found[i]:
                     pos = found[i][:2]
                     break
+        return found
+
+    def schedule(self, labels, fallbacks=None):
+        """Absolute reveal time per label: the first spoken word in the run that names it,
+        searched forward from the previous label's word (monotonic). Unnamed labels are
+        spaced between their named neighbours."""
+        n_shots, n = len(self.run_turns), len(labels)
+        fallbacks = fallbacks or [None] * n
+        found = self._schedule_found(labels, fallbacks)
         t0 = self.beat(0) + 0.9
         times = [f[2] if f else None for f in found]
         if n == n_shots and n > 1:  # unnamed rows of a one-row-per-turn card land on their turn
@@ -179,17 +186,157 @@ class CardScene(YTScene):
         floor = max(BODY_BOTTOM, self.foot_top + 0.2)
         return max(floor, FOOT + QR_SIDE + 0.1) if self.qr_used else floor
 
-    def reveal(self, groups, labels, fallbacks=None, focus=None):
-        """Fade groups in on their scheduled words; `focus(i)` returns animations that move the
-        gold accent to item i."""
-        times = self.schedule(labels, fallbacks)
-        for i, (g, t) in enumerate(zip(groups, times)):
-            self.until(t)
-            anims = [m.FadeIn(g, shift=m.RIGHT * 0.15)]
-            if focus:
-                anims += focus(i)
-            self.play(*anims, run_time=0.45)
-        return times
+    def _match_time_on_turn(self, k, label, fallback=None):
+        for toks in (tokens(label), tokens(fallback or "")):
+            if not toks:
+                continue
+            words = self.WORDS[self.run_turns[k]]["words"]
+            for wd in words:
+                w = _norm(wd["w"])
+                if any(w == t or (len(t) >= 5 and len(w) >= 5 and w[:5] == t[:5]) for t in toks):
+                    return self.beat(k) + max(0.0, wd["t"] - 0.15)
+        return None
+
+    def _item_shots(self, labels, fallbacks=None):
+        found = self._schedule_found(labels, fallbacks)
+        n_shots, n = len(self.run_turns), len(labels)
+        shots = []
+        for i, hit in enumerate(found):
+            if hit:
+                shots.append(hit[0])
+            elif n == n_shots and n > 1:
+                shots.append(min(i, n_shots - 1))
+            else:
+                shots.append(0)
+        return shots
+
+    def _turn_cue(self, k, labels, fallbacks, shots, revealed):
+        fallbacks = fallbacks or [None] * len(labels)
+        for i, lab in enumerate(labels):
+            if shots[i] == k and i not in revealed:
+                hit = self._match_time_on_turn(k, lab, fallbacks[i])
+                if hit is not None:
+                    return hit
+        for i, lab in enumerate(labels):
+            hit = self._match_time_on_turn(k, lab, fallbacks[i])
+            if hit is not None:
+                return hit
+        return self.beat(k) + (0.9 if k == 0 else 0.35)
+
+    def _match_score_turn(self, k, label, fallback=None):
+        said = {_norm(w["w"]) for w in self.WORDS[self.run_turns[k]]["words"]}
+        score = 0
+        for t in tokens(label) + tokens(fallback or ""):
+            if t in said or any(len(t) >= 5 and len(s) >= 5 and s[:5] == t[:5] for s in said):
+                score += 1
+        return score
+
+    def _best_item_on_turn(self, k, labels, fallbacks=None):
+        fallbacks = fallbacks or [None] * len(labels)
+        best_i, best = None, 0
+        for i, lab in enumerate(labels):
+            s = self._match_score_turn(k, lab, fallbacks[i])
+            if s > best:
+                best, best_i = s, i
+        return best_i
+
+    def key_phrase(self, k, max_words=8):
+        picked = []
+        for word in self.say(k).split():
+            if not picked and _norm(word) in STOP:
+                continue
+            picked.append(word)
+            if len(picked) >= max_words:
+                break
+        return " ".join(picked)
+
+    def _callout_anims(self, phrase, anchor=None):
+        phrase = " ".join(str(phrase).split())
+        if not phrase:
+            return []
+        mob = para(phrase, XR - XL - 0.5, 28, GOLD, "BOLD", max_lines=1)
+        if anchor is not None:
+            mob.next_to(anchor, m.DOWN, buff=0.28, aligned_edge=m.LEFT)
+            if mob.get_bottom()[1] < self.foot_top + 0.05:
+                mob.shift(m.UP * (self.foot_top + 0.05 - mob.get_bottom()[1]))
+        elif self.data.get("sources"):
+            y = self.foot_top - 0.14 - mob.height / 2
+            mob.move_to([(XL + XR) / 2, y, 0])
+        else:
+            y = max(FOOT + 0.55, self.bottom() - 0.12)
+            mob.move_to([(XL + XR) / 2, y, 0])
+        out = []
+        if getattr(self, "_callout_mob", None) is not None:
+            out.append(m.FadeOut(self._callout_mob))
+        out.append(m.FadeIn(mob, shift=m.UP * 0.08))
+        self._callout_mob = mob
+        return out
+
+    def _default_hold(self, k, labels, fallbacks, focus, revealed, state):
+        """Focus ring or lower-third when a turn would otherwise repeat the frame."""
+        if not revealed:
+            return []
+        kind = self.data.get("kind")
+        i = self._best_item_on_turn(k, labels, fallbacks)
+        if focus and kind in ("table", "stat_bars", "compare", "timeline", "source", "figure"):
+            pool = sorted(revealed)
+            if not pool:
+                return []
+            if i is None or state.get("focus") == i:
+                i = pool[(k + 1) % len(pool)] if len(pool) > 1 else pool[0]
+            state["focus"] = i
+            return focus(i)
+        elif i is not None and focus and state.get("focus") != i:
+            state["focus"] = i
+            return focus(i)
+        phrase = self.data.get("reading") or self.key_phrase(k)
+        if phrase and state.get("callout") != phrase:
+            state["callout"] = phrase
+            return self._callout_anims(phrase)
+        alt = self.key_phrase(k, max_words=6)
+        if alt and alt != phrase and state.get("callout") != alt:
+            state["callout"] = alt
+            return self._callout_anims(alt)
+        return []
+
+    def play_run(self, groups, labels, fallbacks=None, focus=None, turn=None, reveal_item=None):
+        """One visible beat per run turn: item reveals plus hold accents on extra turns."""
+        labels = list(labels)
+        fallbacks = fallbacks or [None] * len(labels)
+        shots = self._item_shots(labels, fallbacks)
+        revealed, state = set(), {"focus": None, "callout": None}
+        self._callout_mob = None
+        for k in range(len(self.run_turns)):
+            self.until(self._turn_cue(k, labels, fallbacks, shots, revealed))
+            anims, new_on_turn = [], False
+            for i, g in enumerate(groups):
+                if shots[i] == k and i not in revealed:
+                    anims += reveal_item(i, g) if reveal_item else [m.FadeIn(g, shift=m.RIGHT * 0.15)]
+                    if focus:
+                        anims += focus(i)
+                    revealed.add(i)
+                    state["focus"] = i
+                    new_on_turn = True
+            if turn and not new_on_turn:
+                anims += turn(k, revealed, state) or []
+            elif not turn and not new_on_turn:
+                anims += self._default_hold(k, labels, fallbacks, focus, revealed, state)
+            if anims:
+                self.play(*anims, run_time=0.45)
+        return shots
+
+    def reveal(self, groups, labels, fallbacks=None, focus=None, turn=None):
+        """Fade groups in on their scheduled words; optional per-turn hold accents."""
+        return self.play_run(groups, labels, fallbacks, focus, turn)
+
+    def play_hold_turns(self, turn, start_k=1):
+        """Hold accents from turn ``start_k`` through the run end (after main content is on screen)."""
+        state = {"focus": None, "callout": None, "ul": None}
+        for k in range(start_k, len(self.run_turns)):
+            self.until(self._turn_cue(k, [], [], [], set()))
+            anims = turn(k, set(), state) or []
+            if anims:
+                self.play(*anims, run_time=0.45)
 
     # ── kinds ─────────────────────────────────────────────────────────────
 
@@ -372,15 +519,26 @@ class CardScene(YTScene):
         groups.arrange(m.DOWN, buff=0.38, aligned_edge=m.LEFT)
         groups = self.fit_body(groups)
         bars = {i: groups[i] for i in numeric}
-        times = self.schedule([it.get("title", "") for it in items], [it.get("detail") for it in items])
-        for i, (g, t) in enumerate(zip(groups, times)):
-            self.until(t)
+
+        def focus_bar(i):
+            anims = []
+            for j, g in enumerate(groups):
+                if j not in bars:
+                    continue
+                lab, full, bar, num, note = g
+                on = j == i
+                anims += [lab.animate.set_color(GOLD if on else INK),
+                          full.animate.set_stroke(GOLD if on else NAVY2, 4 if on else 0)]
+            return anims
+
+        def reveal_bar(i, g):
             if i in bars:
                 lab, full, bar, num, note = g
-                self.play(m.FadeIn(lab), m.FadeIn(full), m.GrowFromEdge(bar, m.LEFT), run_time=0.7)
-                self.play(m.FadeIn(num), m.FadeIn(note), run_time=0.3)
-            else:
-                self.play(m.FadeIn(g, shift=m.RIGHT * 0.15), run_time=0.45)
+                return [m.FadeIn(lab), m.FadeIn(full), m.GrowFromEdge(bar, m.LEFT), m.FadeIn(num), m.FadeIn(note)]
+            return [m.FadeIn(g, shift=m.RIGHT * 0.15)]
+
+        self.play_run(groups, [it.get("title", "") for it in items], [it.get("detail") for it in items],
+                      focus_bar, reveal_item=reveal_bar)
 
     def kind_quote(self):
         d = self.data
@@ -403,6 +561,48 @@ class CardScene(YTScene):
             self.play(m.FadeIn(attrib), run_time=0.4)
         if len(notes):
             self.reveal(list(notes), [it.get("title", "") for it in d["items"]], [it.get("detail") for it in d["items"]])
+        self._quote_underlines = []
+
+        def quote_turn(k, revealed, state):
+            if k == 0 and not len(notes):
+                return []
+            phrase = self.key_phrase(k, max_words=6)
+            if not phrase:
+                return []
+            ul = self._quote_underline(body, phrase, state)
+            return ul or self._callout_anims(phrase)
+
+        self.play_hold_turns(quote_turn, start_k=1)
+
+    def _quote_underline(self, body, phrase, state):
+        phrase_norm = [_norm(w) for w in phrase.split()]
+        if not phrase_norm:
+            return []
+        lines = list(body)
+        for ln in lines:
+            line_words = re.findall(r"\S+", ln.text)
+            norms = [_norm(w) for w in line_words]
+            for start in range(len(norms)):
+                if norms[start:start + len(phrase_norm)] == phrase_norm:
+                    key = (ln.text, start)
+                    if state.get("ul") == key:
+                        return []
+                    state["ul"] = key
+                    # approximate underline from character width
+                    pre = " ".join(line_words[:start])
+                    hit = " ".join(line_words[start:start + len(phrase_norm)])
+                    x0 = ln.get_left()[0] + (text(pre + " ", ln.font_size).width if pre else 0)
+                    x1 = x0 + text(hit, ln.font_size).width
+                    y = ln.get_bottom()[1] - 0.04
+                    line = m.Line([x0, y, 0], [x1, y, 0], color=GOLD, stroke_width=4)
+                    out = []
+                    if self._quote_underlines:
+                        out.append(m.FadeOut(m.VGroup(*self._quote_underlines)))
+                        self._quote_underlines.clear()
+                    out.append(m.GrowFromCenter(line))
+                    self._quote_underlines.append(line)
+                    return out
+        return []
 
     def kind_equation(self):
         d = self.data
@@ -459,56 +659,196 @@ class CardScene(YTScene):
         marks = [m.Line([p.get_left()[0], y_mark, 0], [p.get_right()[0], y_mark, 0], color=GOLD,
                         stroke_width=5) if p is not None else None for p in parts]
         live = []
+        eq_state = {"mode": None}
 
-        def focus(i):
+        def _clear_eq_marks():
             anims = [eq.animate.set_color(INK)]
             for b in live:
                 anims.append(m.FadeOut(b))
             live.clear()
+            return anims
+
+        def focus(i):
+            anims = _clear_eq_marks()
             if parts[i] is not None:
                 anims.append(parts[i].animate.set_color(GOLD))
                 anims.append(m.GrowFromCenter(marks[i]))
                 live.append(marks[i])
-            for j, r in enumerate(rows[: i + 1]):
+            for j, r in enumerate(rows):
                 anims.append(r[1].animate.set_color(INK if j == i else DIM))
+            eq_state["mode"] = ("term", i)
             return anims
-        self.reveal(list(rows), [t["gloss"] for t in terms], None, focus)
+
+        def _full_equation():
+            anims = _clear_eq_marks()
+            anims.append(eq.animate.set_color(GOLD))
+            for r in rows:
+                anims.append(r[1].animate.set_color(DIM))
+            eq_state["mode"] = "full"
+            return anims
+
+        read_anchor = rows if len(rows) else eq
+
+        def equation_turn(k, revealed, state):
+            if eq_state["mode"] == "full" and d.get("reading"):
+                phrase = d["reading"]
+            elif any(w in self.say(k).lower() for w in ("predict", "induces", "generates", "opposes", "force", "charge")):
+                phrase = d.get("reading") or self.key_phrase(k)
+            else:
+                phrase = None
+            if phrase and state.get("callout") != phrase:
+                state["callout"] = phrase
+                return _clear_eq_marks() + self._callout_anims(phrase, anchor=read_anchor)
+            i = self._best_item_on_turn(k, [t["gloss"] for t in terms], [t["latex"] for t in terms])
+            if i is not None and eq_state["mode"] != ("term", i):
+                return focus(i)
+            said = self.say(k).lower()
+            if any(tok in said for tok in ("nabla", "equation", "faraday", "induction", "times")) or (
+                    len(terms) >= 2 and self._match_score_turn(k, " ".join(t["gloss"] for t in terms)) >= 2
+            ):
+                if eq_state["mode"] != "full":
+                    return _full_equation()
+            if i is not None:
+                return focus(i)
+            phrase = self.key_phrase(k)
+            if phrase and state.get("callout") != phrase:
+                state["callout"] = phrase
+                return _clear_eq_marks() + self._callout_anims(phrase, anchor=read_anchor)
+            return []
+
+        self.play_run(list(rows), [t["gloss"] for t in terms], [t["latex"] for t in terms], focus, equation_turn)
         self.until(self.T1 - 1.0)
         if live:
             self.play(*[m.FadeOut(b) for b in live], eq.animate.set_color(INK), run_time=0.5)
 
+    def _figure_callouts(self, items, col_w, room_h, buff=0.22):
+        """Gold-bar callout column for figure cards; stays at 34 px until height forces shrink."""
+        call = m.VGroup()
+        text_w = col_w - 0.35
+        for it in items:
+            bar = m.Rectangle(width=0.08, height=0.5, fill_color=GOLD, fill_opacity=1, stroke_width=0)
+            body = m.VGroup(
+                para(it.get("title", ""), text_w, 34, GOLD, "BOLD", max_lines=2),
+                para(it.get("detail", ""), text_w, 34, INK, max_lines=3),
+            ).arrange(m.DOWN, buff=0.08, aligned_edge=m.LEFT)
+            bar.stretch_to_fit_height(body.height)
+            call.add(m.VGroup(bar, body).arrange(m.RIGHT, buff=0.18, aligned_edge=m.UP))
+        call.arrange(m.DOWN, buff=buff, aligned_edge=m.LEFT)
+        if call.height > room_h and buff > 0.12:
+            return self._figure_callouts(items, col_w, room_h, buff=buff - 0.04)
+        if call.height > room_h:
+            call.scale_to_fit_height(room_h)
+        return call
+
+    def _figure_caption(self, s, width, size=32):
+        """Two-line figure caption; shrinks below the global 28px para floor when needed."""
+        s = " ".join(str(s).split())
+        if not s:
+            return m.VGroup()
+        for try_sz in range(size, 17, -1):
+            lines, cur = [], ""
+            for word in s.split(" "):
+                trial = f"{cur} {word}".strip()
+                if cur and text(trial, try_sz).width > width:
+                    lines.append(cur)
+                    cur = word
+                else:
+                    cur = trial
+            if cur:
+                lines.append(cur)
+            if len(lines) <= 2:
+                group = m.VGroup(*[text(line, try_sz, DIM) for line in lines[:2]])
+                group.arrange(m.DOWN, buff=0.13 * try_sz / 36, aligned_edge=m.LEFT)
+                if group.width > width:
+                    group.scale_to_fit_width(width)
+                return group
+        lines = lines[:2]
+        group = m.VGroup(*[text(line, 18, DIM) for line in lines])
+        group.arrange(m.DOWN, buff=0.08, aligned_edge=m.LEFT)
+        if group.width > width:
+            group.scale_to_fit_width(width)
+        return group
+
+    def _figure_fit_image(self, img, slot_w, slot_h, min_w, min_h):
+        """Scale to target chart width, then uniform clamp to the image-height slot."""
+        if img.width <= 0 or img.height <= 0:
+            return img
+        tgt_w = min(slot_w, min_w) if min_w > 0 else slot_w
+        img.scale(tgt_w / img.width)
+        if slot_h > 0 and img.height > slot_h:
+            img.scale(slot_h / img.height)
+        if img.width > slot_w:
+            img.scale_to_fit_width(slot_w)
+        return img
+
     def kind_figure(self):
         d = self.data
-        items = d["items"]
+        items = d.get("items") or []
+        room_top = self.body_top
+        floor = self.bottom()
+        body_h = max(0.5, room_top - floor)
+        body_w = XR - XL
+        frame_w = m.config.frame_width
+        min_img_w = max(8.5, 0.60 * frame_w)
+        gutter = 0.38
+        cap_buff = 0.08
+
         img = m.ImageMobject(str(YT / d["image"]))
-        side_w = 4.4 if items else 0
-        max_w = XR - XL - side_w - (0.35 if items else 0)
-        room_top, room_bottom = self.body_top, self.bottom() + 0.55
-        cap_h = para(d.get("caption", ""), max_w, 28, DIM, max_lines=2).height + 0.2 if d.get("caption") else 0
-        img.scale_to_fit_height(room_top - room_bottom - cap_h + 0.55)
-        if img.width > max_w:
-            img.scale_to_fit_width(max_w)
-        img.move_to([XL + img.width / 2, room_top - img.height / 2, 0])
-        frame = m.SurroundingRectangle(img, color=NAVY2, buff=0.0, stroke_width=3)
-        cap = para(d.get("caption", ""), max(img.width, max_w), 28, DIM, max_lines=2) if d.get("caption") else m.VGroup()
+        call = m.VGroup()
+        if items:
+            for try_w in (3.75, 3.45, 3.15, 2.85):
+                call = self._figure_callouts(items, try_w, body_h - 0.1)
+                slot_w = body_w - call.width - gutter
+                if slot_w >= min_img_w * 0.92:
+                    break
+            slot_w = max(0.5, body_w - call.width - gutter)
+        else:
+            slot_w = body_w
+
+        y_top = self.rule.get_bottom()[1]
+        cap_anchor = self.foot_top + 0.03
+        cap = self._figure_caption(d.get("caption", ""), slot_w) if d.get("caption") else m.VGroup()
         if len(cap):
-            cap.next_to(img, m.DOWN, buff=0.15, aligned_edge=m.LEFT)
+            cap.move_to([XL, cap_anchor, 0], aligned_edge=m.DL)
+            img_h_max = max(0.5, y_top - cap.get_top()[1] - cap_buff)
+        else:
+            img_h_max = max(0.5, y_top - floor)
+        slot_h = img_h_max
+        self._figure_fit_image(img, slot_w, slot_h, min(min_img_w, slot_w), 0.0)
+        if len(cap):
+            cap = self._figure_caption(d.get("caption", ""), img.width)
+            cap.move_to([XL, cap_anchor, 0], aligned_edge=m.DL)
+            img.next_to(cap, m.UP, buff=cap_buff, aligned_edge=m.LEFT)
+            if img.get_top()[1] > y_top + 0.01:
+                avail = max(0.1, y_top - cap.get_top()[1] - cap_buff)
+                s = min(1.0, avail / img.height)
+                img.scale(s, about_point=[img.get_center()[0], cap.get_top()[1] + cap_buff, 0])
+                cap = self._figure_caption(d.get("caption", ""), img.width)
+                cap.move_to([XL, cap_anchor, 0], aligned_edge=m.DL)
+                img.next_to(cap, m.UP, buff=cap_buff, aligned_edge=m.LEFT)
+        else:
+            img.move_to([XL + (slot_w if items else body_w) / 2, floor + img_h_max / 2, 0])
+            img.align_to([XL, 0, 0], m.LEFT)
+            if img.get_top()[1] > y_top + 0.02:
+                img.scale_to_fit_height(y_top - floor)
+                img.move_to([XL + img.width / 2, floor + (y_top - floor) / 2, 0])
+                img.align_to([XL, 0, 0], m.LEFT)
+
+        frame = m.SurroundingRectangle(img, color=NAVY2, buff=0.0, stroke_width=3)
         self.play(m.FadeIn(img), m.FadeIn(frame), m.FadeIn(cap), run_time=0.8)
         if not items:
             return
-        call = m.VGroup()
-        for it in items:
-            bar = m.Rectangle(width=0.08, height=0.5, fill_color=GOLD, fill_opacity=1, stroke_width=0)
-            body = m.VGroup(para(it.get("title", ""), side_w - 0.35, 34, GOLD, "BOLD", max_lines=2),
-                            para(it.get("detail", ""), side_w - 0.35, 30, INK, max_lines=4)
-                            ).arrange(m.DOWN, buff=0.08, aligned_edge=m.LEFT)
-            bar.stretch_to_fit_height(body.height)
-            call.add(m.VGroup(bar, body).arrange(m.RIGHT, buff=0.2, aligned_edge=m.UP))
-        call.arrange(m.DOWN, buff=0.3, aligned_edge=m.LEFT)
-        if call.height > room_top - room_bottom + 0.4:
-            call.scale_to_fit_height(room_top - room_bottom + 0.4)
-        call.move_to([XR - side_w / 2, room_top - call.height / 2, 0])
-        call.align_to([XR - side_w, 0, 0], m.LEFT)
+
+        cy = (room_top + self.bottom()) / 2
+        half = min(call.height / 2, (room_top - floor) / 2 - 0.05)
+        call.move_to([img.get_right()[0] + gutter + call.width / 2, cy, 0])
+        call.align_to([img.get_right()[0] + gutter, 0, 0], m.LEFT)
+        if call.get_top()[1] > room_top - 0.05:
+            call.shift(m.DOWN * (call.get_top()[1] - room_top + 0.05))
+        if call.get_bottom()[1] < floor + 0.05:
+            call.shift(m.UP * (floor + 0.05 - call.get_bottom()[1]))
+        if call.get_right()[0] > XR - 0.05:
+            call.shift(m.LEFT * (call.get_right()[0] - XR + 0.05))
 
         def focus(i):
             return [c[1][0].animate.set_color(GOLD if j == i else INK) for j, c in enumerate(call[: i + 1])] + \
