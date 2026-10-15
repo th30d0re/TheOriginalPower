@@ -804,7 +804,7 @@ Emmanuel Theodore (42:18)
 The ratio tracks suppression expenditure as a fraction of cotton revenue. The kernel expands extraction while purchasing enough enforcement capacity to stay below the crash threshold.
 
 Emmanuel Theodore (42:29)
-In 1840, cotton revenue was approximately 74.1 million dollars. Militia and patrol expenditure was approximately 2.0 million dollars. The resulting suppression ratio was two point seven zero percent.
+In 1840, cotton revenue was approximately 74.1 million dollars. Militia and patrol expenditure was approximately two point zero million dollars. The resulting suppression ratio was two point seven zero percent.
 
 Emmanuel Theodore (42:41)
 By 1850, revenue had grown to approximately 102.5 million dollars. Suppression expenditure rose to approximately 2.95 million dollars. The suppression ratio was two point eight eight percent.
