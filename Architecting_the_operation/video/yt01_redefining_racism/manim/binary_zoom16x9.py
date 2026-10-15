@@ -53,9 +53,14 @@ class ZoomingBinary(YTScene):
         fig = m.VGroup(i_blk, o_blk).arrange(m.RIGHT, buff=0.32).move_to([0, -0.05, 0])
         if fig.width > 12.8:
             fig.scale_to_fit_width(12.8)
-        bound_y = (i_blk[1].get_bottom()[1] + i_blk[0].get_top()[1]) / 2
-        bound = m.DashedLine([-5.4, bound_y, 0], [5.4, bound_y, 0], color=GOLD, dash_length=0.12)
-        bound_lab = T("BOUNDARY PROJECTION", 30, GOLD, "NORMAL").move_to([0, bound_y + 0.42, 0])
+        bound_start = i_blk[1].get_right() + m.RIGHT * 0.08
+        bound_end = o_blk[1].get_left() + m.LEFT * 0.08
+        bound = m.Arrow(
+            bound_start, bound_end, color=GOLD, stroke_width=2.5, buff=0,
+            max_tip_length_to_length_ratio=0.14, tip_length=0.14,
+        )
+        bound = m.DashedVMobject(bound, num_segments=40, dashed_ratio=0.55)
+        bound_lab = T("boundary projection", 28, GOLD, "NORMAL").next_to(bound, m.UP, buff=0.1)
         self.add(head)
         self.until(self.at(0, "tiers"))
         self.play(m.FadeIn(fig), m.FadeIn(bound), m.FadeIn(bound_lab), run_time=0.75)
@@ -72,10 +77,17 @@ class ZoomingBinary(YTScene):
 
         self.until(self.at(2, "Adjacent"))
         self.play(m.Indicate(o_blk[2][1]), m.Indicate(o_blk[2][2]), run_time=0.7)
-        arc = m.CurvedArrow(fig.get_bottom() + m.DOWN * 0.05, fig.get_bottom() + m.DOWN * 0.05 + m.RIGHT * 0.01,
-                            angle=-m.PI / 2.2, color=DIM, stroke_width=4)
-        arc.scale(1.25).shift(m.DOWN * 0.22)
-        rec = T("RECURSIVE PARTITIONS", 30, DIM, "NORMAL").move_to([0, -3.48, 0])
+        arc_start = i_blk[0].get_bottom() + m.DOWN * 0.28 + m.RIGHT * 0.55
+        arc_end = o_blk[0].get_bottom() + m.DOWN * 0.28 + m.LEFT * 0.55
+        arc = m.Arrow(
+            arc_start, arc_end, path_arc=-0.72, color=DIM, stroke_width=2.2, buff=0,
+            max_tip_length_to_length_ratio=0.1, tip_length=0.14,
+        )
+        rec = m.VGroup(
+            T("recursive partitions", 28, DIM, "NORMAL"),
+            T("inside every tier", 28, DIM, "NORMAL"),
+        ).arrange(m.DOWN, buff=0.05)
+        rec.next_to(arc, m.DOWN, buff=0.08).shift(m.UP * 0.12)
         self.play(m.Create(arc), run_time=0.55)
         self.play(m.FadeIn(rec), run_time=0.35)
         self.until(self.beat_end(2) - 0.25)

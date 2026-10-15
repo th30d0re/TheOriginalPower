@@ -100,3 +100,14 @@ Resolved at render time (prefix match on `words.json`):
 | Pyramid fill | Stack left of legend; base span ≥ 7.5 fu with `S=1.38` | Matches S03-50 |
 
 **Cues:** unchanged.
+
+---
+
+## Round 4: set primer ∪/∩ and Figure 2.1 arrows (reviewer preview defects)
+
+| Run | Status | Changes |
+|-----|--------|---------|
+| S02-01 | rendered · layout ok · sheet `/tmp/S02-01.png` | Shots 7–9: `clear()` drops **U**, **I**, **O**, and **E** before teaching **A ∪ B** / **A ∩ B** alone (large centred ellipses, gold union fill then intersection lens, OR/AND); shot 10 restores **U** with disjoint **I** \| **O** plus ∅; heading stays title-only after the clear |
+| S03-46 | rendered · layout ok · sheet `/tmp/S03-46.png` | **boundary projection**: short dashed `Arrow` between **I** and **O** titles (book `fig:binary-refinement`); **recursive partitions**: thin `Arrow` with `path_arc` below the blocks and two-line label |
+
+**Acceptance:** `.venv-manimgx/bin/python Architecting_the_operation/video/yt01_redefining_racism/manim/edit16x9.py render 02 03 --only S02-01 S03-46 -j 2 --force` → both `ok`, logs `layout: no problems`.
