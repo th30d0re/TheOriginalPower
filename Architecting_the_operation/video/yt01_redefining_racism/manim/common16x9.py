@@ -3,19 +3,43 @@
 Turn indices are zero-based. ``cue(seg="03", turn=2, word="partition")``
 resolves the third turn after the SEG 03 marker. ``cue(2, "partition")``
 retains the global-turn API. Preview turns last six seconds.
+
+Runs (the render unit). Every shot in ``YT01_shotlist.md`` is one script turn, in
+order. A *run* is a primary shot plus every hold that points at it (``Holds:``),
+including holds that return after other shots. One render covers one run, from the
+primary's turn start to the start of the turn after its last hold; the editor
+(``edit16x9.py``) cuts each shot's window out of it. A scene picks its run from the
+``YT01_SHOT`` environment variable (a primary shot id), else the first run in the
+shot list for this file and class, and calls ``shot_<id>`` (``shot_S03_08``), or
+``build()`` when no such method exists. Inside a run:
+
+    self.beat(k)            # absolute start of the run's k-th shot (0 = primary)
+    self.at(k, "word")      # absolute time of a word in the run's k-th shot's turn
+    self.until(t)           # wait until absolute time t (render time is t - T0)
+    self.say(k)             # the k-th shot's spoken text, for reading cues
+
+Times stay absolute (episode seconds), so cues read the live manifest at render time.
 """
 
 import json
 import logging
+import math
+import os
 import re
+from dataclasses import dataclass
 from pathlib import Path
 
 import manimgx as m
 
 ROOT = Path(__file__).resolve().parents[4]
 SCRIPT = ROOT / "Architecting_the_operation/podcasts/YT01_what_racism_really_is.md"
-INK, DIM, GOLD = "#F2EEE6", "#8A867F", "#E9C46A"
-HIM, HER, OK, BG = "#5FA8D3", "#E07A5F", "#81B29A", "#121212"
+SHOTLIST = ROOT / "Architecting_the_operation/video/YT01_shotlist.md"
+HERE = Path(__file__).resolve().parent
+YT = HERE.parent  # yt01_redefining_racism/: cards/ and figures/ resolve against it
+# Palette of the ScriptCast cards (video/src/theme.ts): navy ground, cream type, gold accent.
+INK, DIM, GOLD = "#F4EAD2", "#9FB0CF", "#D9A441"
+HIM, HER, OK, BG = "#5FA8D3", "#E2573F", "#5FC27E", "#0F1B33"
+NAVY2, TEAL = "#16264A", "#6EC3C0"
 BOOK = "https://github.com/th30d0re/TheOriginalPower/releases"
 LOG = logging.getLogger(__name__)
 m.config.pixel_width, m.config.pixel_height = 1920, 1080
@@ -55,6 +79,53 @@ def qr(url, side=1.5):
     plate = m.Rectangle(width=side, height=side, fill_color="#FFFFFF", fill_opacity=1, stroke_width=0)
     plate.move_to([side / 2, -side / 2, 0])
     return m.VGroup(plate, code)
+
+
+@dataclass
+class Shot:
+    id: str
+    seg: str
+    index: int  # global turn index (shot order)
+    type: str
+    file: str
+    scene: str
+    card: str | None
+    holds: str | None
+    title: str
+    note: str
+
+    @property
+    def primary(self):
+        return self.holds or self.id
+
+
+def load_shots(path=SHOTLIST):
+    """Every shot in the shot list, in turn order."""
+    text = Path(path).read_text()
+    shots = []
+    for b in re.finditer(r"(?ms)^## (S(\d\d)-\d\d)(?: — (.*?))?\n(.*?)(?=^## |\Z)", text):
+        sid, seg, title, body = b.groups()
+
+        def field(name):
+            hit = re.search(rf"\*\*{name}:\*\* (.*)", body)
+            return hit.group(1).strip() if hit else ""
+
+        render = field("Render").strip("`").removeprefix("manim:")
+        parts = render.split()
+        file, _, scene = parts[0].partition(":") if parts else ("", "", "")
+        shots.append(Shot(sid, seg, len(shots), field("Type"), file, scene,
+                          parts[1] if len(parts) > 1 else None, field("Holds").strip("`") or None,
+                          (title or "").strip(), field("Note")))
+    return shots
+
+
+def runs_of(shots, file=None, scene=None):
+    """{primary id: [shots]} in shot-list order, optionally for one file and class."""
+    out = {}
+    for shot in shots:
+        if (file is None or shot.file == file) and (scene is None or shot.scene == scene):
+            out.setdefault(shot.primary, []).append(shot)
+    return out
 
 
 def _norm(word):
@@ -123,7 +194,11 @@ class Timing:
         if word_file.exists() and not self.placeholder:
             self.words = json.loads(word_file.read_text())
             if len(self.words) != len(turns):
-                raise ValueError(f"{ep}: words.json and manifest turn counts differ")
+                raise ValueError(f"{ep}: words.json and manifest turn counts differ; rerun make_words.py")
+            stale = [i for i, (w, t) in enumerate(zip(self.words, turns))
+                     if w.get("turn_id") and t.get("turn_id") and w["turn_id"] != t["turn_id"]]
+            if stale:
+                raise ValueError(f"{ep}: words.json is stale for turns {stale[:8]}; rerun make_words.py")
         else:
             if not self.placeholder:
                 LOG.warning("%s: words.json missing; evenly spacing words within manifest turns", ep)
@@ -163,13 +238,14 @@ class Timing:
 
 
 class _YTMethods:
-    EP = "YT01_what_racism_really_is"
+    EP = "YT01"
     SOURCE = ""
     SCRIPT = SCRIPT
     PLACEHOLDER_TURNS = ()
     SEGMENT = "03"
     FORCE_PLACEHOLDER = False
     AUDIO_ENABLED = True
+    END_CARD = False
 
     def setup_timing(self):
         self.timing = Timing(self.EP, script=self.SCRIPT, placeholder_turns=self.PLACEHOLDER_TURNS,
@@ -184,8 +260,72 @@ class _YTMethods:
         return [self.BEATS[index] for index in self.timing.segments[str(seg).zfill(2)]]
 
     def until(self, time):
-        if time > self.time:
-            self.wait(time - self.time)
+        """Wait until absolute episode time `time` (seconds)."""
+        target = time - self.T0
+        if target > self.time + 1e-9:
+            self.wait(target - self.time)
+
+    # ── runs ──────────────────────────────────────────────────────────────
+    T0 = 0.0
+    SHOT = None  # default primary shot id when YT01_SHOT is unset
+
+    def setup_run(self):
+        """Resolve this render's run and its window [T0, T1] on the frame grid."""
+        fps = float(m.config.frame_rate)
+        self.fps = fps
+        try:
+            shots = load_shots()
+        except FileNotFoundError:
+            shots = []
+        mine = runs_of(shots, Path(__import__("inspect").getfile(type(self))).name, type(self).__name__)
+        want = os.environ.get("YT01_SHOT") or self.SHOT
+        if want and want not in mine:
+            hit = next((s for s in shots if s.id == want), None)
+            if hit is None or hit.primary not in mine:
+                raise KeyError(f"{type(self).__name__}: no run {want!r} in the shot list for this scene")
+            want = hit.primary
+        self.primary = want or next(iter(mine), None)
+        self.run = mine.get(self.primary, [])
+        self.all_shots = shots
+        if not self.run or self.timing.placeholder or len(shots) != len(self.BEATS):
+            self.T0, self.T1, self.run_turns = 0.0, self.END, list(range(len(self.BEATS)))
+            return
+        frame = lambda t: math.floor(t * fps + 0.5)  # noqa: E731
+        first, last = self.run[0].index, self.run[-1].index
+        self.T0 = frame(self.BEATS[first]) / fps
+        stop = self.BEATS[last + 1] if last + 1 < len(self.BEATS) else self.END + 1.0
+        self.T1 = frame(stop) / fps
+        self.run_turns = [s.index for s in self.run]
+
+    def beat(self, k=0):
+        return self.BEATS[self.run_turns[k]]
+
+    def beat_end(self, k=0):
+        i = self.run_turns[k]
+        return self.BEATS[i + 1] if i + 1 < len(self.BEATS) else self.END
+
+    def at(self, k, word, nth=0, lead=0.1):
+        return self.timing.cue(self.run_turns[k], word, nth=nth, lead=lead)
+
+    def say(self, k=0):
+        return self.WORDS[self.run_turns[k]]["text"]
+
+    def card(self, k=0):
+        """The card JSON named by the run's k-th shot (the primary's by default)."""
+        name = self.run[k].card if self.run else None
+        return json.loads((YT / name).read_text()) if name else None
+
+    def construct(self):
+        self.begin()
+        name = "shot_" + (self.primary or "").replace("-", "_")
+        getattr(self, name, self.build)()
+        self.finish()
+
+    def build(self):
+        raise NotImplementedError(f"{type(self).__name__} has no shot_{self.primary} or build()")
+
+    def finish(self):
+        self.until(self.T1)
 
     def clear_all(self, rt=0.4):
         if self.mobjects:
@@ -193,9 +333,12 @@ class _YTMethods:
 
     def begin(self):
         self.setup_timing()
+        self.setup_run()
         self.camera.background_color = BG
-        if self.AUDIO_ENABLED and not self.timing.placeholder and self.AUDIO.exists():
-            self.add_sound(str(self.AUDIO))
+        # Run renders are silent; edit16x9.py lays the voiceover under the cut.
+        if self.AUDIO_ENABLED and os.environ.get("YT01_AUDIO") and not self.timing.placeholder and self.AUDIO.exists():
+            from manimgx.audio.sound import Sound
+            self.add_sound(Sound(str(self.AUDIO)).trim(self.T0, self.T1))
 
     def flat(self, *mobs):
         self.add(*mobs)
