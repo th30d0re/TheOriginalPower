@@ -43,3 +43,20 @@ All cues resolved via `edit16x9.py turns` / `words.json` for revised runs.
 
 - S13-01: layout inspector still reports tier/loop proximity (14 samples); geometry separated but wire+tier co-presence triggers overlap checks.
 - S13-28, S14-07, S14-16, S15-10/11: minor layout notes remain on some samples; sheets checked; no Metal failures.
+
+## Round 3 revision (SEG 13)
+
+| id | class | file | status | what changed |
+|---|---|---|---|---|
+| S13-01 | RLCTopology | `rlc_topology16x9.py` | rendered · layout ok | Dropped five-tier legend on loop beat; loop scaled/centered; KINETIC SUPPLY below loop; mapping caption + V(t) pulse. Sheet `/tmp/S13-01.png`. |
+| S13-06 | RLCTopology | `rlc_topology16x9.py` | rendered · layout ok | Shared `rlc_loop()` centering/scale (1.16×, +0.72 right). |
+| S13-14 | BacklashOscillator | `backlash_oscillator16x9.py` | rendered · layout ok | `sin(np.radians(110*x))`; stroked q(t) (no fill); dashed ±Q₀e^{-αt} envelope behind curve. Eight distinct sheet tiles (impulses, kickback, discharge, overshoots, interface). Sheet `/tmp/S13-14.png`. |
+| S13-22 | BacklashOscillator | `backlash_oscillator16x9.py` | rendered · layout ok | Same degree-based wave + dashed envelope from frame 0; draw-on-cue; per-hold captions/envelope beats unchanged. Sheet `/tmp/S13-22.png`. |
+
+### Contract (unchanged by E)
+
+- **S13-04 / S13-05** (holds on `cards16x9.py` / `S13-02.json`): equality-surplus q(t) callout still overlaps term list — not editable by Group E; needs cards owner to move callout below terms.
+
+### Wave fix (book pgfplots)
+
+- Figure 2.6 expression `1.6*exp(-0.35*x)*sin(110*x)` uses pgfplots default **degrees**; implementation now `np.sin(np.radians(WD * t))` with `WD=110`.

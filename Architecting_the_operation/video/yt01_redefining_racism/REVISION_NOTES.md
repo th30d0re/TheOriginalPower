@@ -96,3 +96,52 @@ Every standard above applies. Run `sheet` on **every** segment you own, fix, re-
 - S13-27/28/29 (resonance): small; make the response curve large, sweep omega toward omega_0 on its
   word, show q_res and Q_f large.
 - Judge SEG 14 and SEG 15 (envelope, Figure 2.8 race, backlash-wave panels) the same way.
+
+---
+
+## Round 3 (reviewer sheets of SEG 02 and SEG 13 after round 2)
+
+### Group A: S02-01 primer
+- **Mathematical error:** from S02-11 on, the I and O boxes overlap with a gold band, and the
+  overlap stays on screen while the narration says "I intersection O equals the empty set" and
+  "disjoint union". Show intersection on a separate generic example (two overlapping sets A and B)
+  when the turn defines ∩; for I and O, slide the boxes apart on the empty-set turn so they share
+  nothing, and keep them apart through the disjoint-union and partition turns.
+- Headers collide: "NOTATION KEY" sits on top of `x \in E,\ E \subset I` and "ELEMENT OF · SUBSET OF"
+  (S02-07 to S02-10); "OR · AND" floats unattached. One heading line, one symbol line under it.
+- S02-04 and S02-05 are still identical; S02-13 and S02-14 nearly so.
+- S02-18: the grid lines cross the gold band and the dots; clean them.
+- S02-19 (end of the run): Equation 2.1 is small on an empty frame. Make it the hero: ≥ 72 px,
+  centered, the symbols each tinted the colour the primer gave them.
+
+### Group E: SEG 13
+- **Wave bug:** S13-14 to S13-26 draw the damped oscillation as a solid red slab. The book's pgfplots
+  expression `1.6 * exp(-0.35 * x) * sin(110 * x)` is in **degrees** (pgfplots' default), so the
+  angular frequency is 110° per unit ≈ 1.92 rad per unit, about 3.4 cycles over x ∈ [0, 10]. You
+  used 110 rad. Use `sin(np.radians(110 * x))`, draw a stroked curve (no fill), and let the
+  envelope ±1.6 e^{-0.35x} sit dashed behind it.
+- S13-01: the five-tier legend overlaps the circuit and "KINETIC SUPPLY". Drop the legend or move it
+  clear; the circuit fills the frame.
+- S13-04 / S13-05: the "Lowercase q of t represents the equality-surplus charge" callout runs over
+  the term list. Give it its own line below the terms.
+- S13-15 to S13-21: once the wave is a line, each turn's beat must still differ (the impulse, the
+  overshoot into q < 0 with its label, the second smaller impulse, its overshoot).
+
+### Group D (round 3; you may also edit the card JSON named here: cards/S10-12.json, cards/S10-19.json)
+- **Misattribution, highest priority:** the S10-19 quote card presents the chapter's own sentence
+  ("The chapter records infant killing and Darby's dose…") as a quote attributed to "Thomas
+  Thistlewood diary". It is the book's summary, not Thistlewood's words. Make it a `source`-style
+  card (no quote marks) attributed to *The Original Power*, §2.3.3, stating the documented facts in
+  the chapter's terms; the 14,000-page diary is the record the book cites. Also fix the S10-20 tile,
+  where footer lines overlap the source line.
+- S10-12 (Yurco, Seti I Book of Gates) renders as a title over an empty frame: give it its body from
+  the chapter (four peoples, Egyptians, Nubians, Asiatics, Libyans, arrayed by skin color in one
+  procession; distinguished, none ranked).
+- S10-05 / S10-10 (cline): "7 ka", "10 ka", "HUXLEY 1938" and "aDNA" collide; space them on the axis
+  and make the gradient bar span the frame.
+- S10-15 to S10-23 (botnet): small dots with no routes, and the "PACKING GEOMETRY" box sits on the
+  city labels. Draw the network large (Africa to the Caribbean and the American plantations, output
+  routed to Lisbon, London, Amsterdam, Wall Street) with routes animating on their words; put
+  labels clear of each other.
+- S09-16 (Nat Turner): the tau label is tiny and "…-MANAGEMENT RESPONSE" is clipped at the bottom.
+- S10-01 (zero-day): the schematic crowds the left; fill the frame.

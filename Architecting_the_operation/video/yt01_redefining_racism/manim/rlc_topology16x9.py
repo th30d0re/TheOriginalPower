@@ -69,7 +69,7 @@ def rlc_loop(fig25=False):
     v_g = m.VGroup(bat, v_sym)
 
     wires = m.VGroup(wire_top, wire_r, wire_bot, wire_l)
-    loop = m.VGroup(wires, r_g, l_g, c_g, v_g).shift(m.RIGHT * 0.55 + m.DOWN * 0.35)
+    loop = m.VGroup(wires, r_g, l_g, c_g, v_g).scale(1.16).shift(m.RIGHT * 0.72 + m.DOWN * 0.18)
 
     inst = {}
     if fig25:
@@ -85,16 +85,15 @@ class RLCTopology(YTScene):
 
     def shot_S13_01(self):
         head = T("SERIES RLC TOPOLOGY", 44, GOLD).to_edge(m.UP, buff=0.5)
-        tiers = tier_row()
-        loop, _, _ = rlc_loop()
-        supply = T("KINETIC SUPPLY", 34, GOLD, "NORMAL").next_to(loop[-1][0], m.DOWN, buff=0.55)
-        self.add(head)
-        self.play(m.FadeIn(tiers), run_time=0.7)
+        loop, parts, _ = rlc_loop()
+        supply = T("KINETIC SUPPLY", 34, GOLD, "NORMAL").next_to(loop, m.DOWN, buff=0.42)
+        map_lab = T("EXTRACTION SYSTEM → SERIES RLC", 34, DIM, "NORMAL", width=11.0).next_to(head, m.DOWN, buff=0.22)
+        self.add(head, map_lab)
         self.until(self.at(0, "maps"))
         self.play(m.FadeIn(loop), m.FadeIn(supply), run_time=0.9)
         self.until(self.at(0, "backlash"))
-        wire = m.CurvedArrow(tiers.get_right(), loop.get_left() + m.LEFT * 0.15, angle=-0.35, color=DIM, stroke_width=5)
-        self.play(m.GrowArrow(wire), run_time=0.6)
+        pulse = m.SurroundingRectangle(parts["V"], color=GOLD, buff=0.12, stroke_width=5)
+        self.play(m.Create(pulse), run_time=0.55)
         self.until(self.beat_end(0) - 0.3)
 
     def shot_S13_06(self):
