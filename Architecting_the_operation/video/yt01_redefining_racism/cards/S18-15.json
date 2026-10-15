@@ -1,9 +1,16 @@
 {
-  "kind": "quote",
+  "kind": "source",
   "headline": "Flip-flop audit",
-  "quote": "No amplification; master latch is input-driven like the slave.",
-  "attribution": "Engineer via Eglash (2007)",
-  "items": [],
+  "items": [
+    {
+      "title": "Flip-flop terminology",
+      "detail": "For flip-flops, the terminology makes little sense, since there is no amplification taking place. The master is commanded by the inputs just as much as the slave is"
+    },
+    {
+      "title": "Peer-to-peer hardware",
+      "detail": "The partition metaphor imposes a relational schema on hardware whose actual behavior is peer-to-peer or input-driven"
+    }
+  ],
   "sources": "Eglash, Broken Metaphor (2007)",
   "qrUrl": null
 }

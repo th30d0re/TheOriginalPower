@@ -1,9 +1,16 @@
 {
-  "kind": "quote",
+  "kind": "source",
   "headline": "IDE audit",
-  "quote": "Master and slave are poorly chosen; drives are equals in most respects.",
-  "attribution": "PC Guide via Eglash (2007)",
-  "items": [],
+  "items": [
+    {
+      "title": "IDE drive jumpering",
+      "detail": "The PC Guide states the master drive does not have any special status compared to the slave one; they are really equals in most respects"
+    },
+    {
+      "title": "Peer devices",
+      "detail": "The slave drive does not rely on the master drive for its operation or anything like that"
+    }
+  ],
   "sources": "Eglash, Broken Metaphor (2007)",
   "qrUrl": null
 }

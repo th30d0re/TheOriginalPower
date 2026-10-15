@@ -1,9 +1,20 @@
 {
-  "kind": "quote",
+  "kind": "source",
   "headline": "Mode 2 · Local rationality",
-  "items": [],
+  "items": [
+    {
+      "title": "1960 steering",
+      "detail": "A real estate agent who steers Black families away from white neighborhoods in 1960 may harbor no personal racial animus; they are responding to FHA lending criteria, neighborhood price signals, and professional incentive structures"
+    },
+    {
+      "title": "Incentive gradients",
+      "detail": "The extraction kernel requires only that the incentive gradients point in the correct direction"
+    },
+    {
+      "title": "Mode 2 runtime",
+      "detail": "Millions of locally rational decisions that collectively reproduce the hierarchy without centralized coordination"
+    }
+  ],
   "sources": "Source: The Original Power, §2.3.11",
-  "qrUrl": null,
-  "quote": "Millions of locally rational decisions reproduce the hierarchy without centralized coordination.",
-  "attribution": "The Original Power · §2.3.11"
+  "qrUrl": null
 }

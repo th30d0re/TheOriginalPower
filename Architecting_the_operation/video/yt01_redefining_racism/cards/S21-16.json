@@ -1,9 +1,16 @@
 {
-  "kind": "quote",
+  "kind": "source",
   "headline": "Interface Swap optimization",
-  "items": [],
+  "items": [
+    {
+      "title": "Interface Swap",
+      "detail": "Lee Atwater's description of the transition from explicit racial slurs to abstract economic policy is a deliberate Interface Swap optimization, articulated in real time"
+    },
+    {
+      "title": "Target geometry",
+      "detail": "The label changes from race to criminality, while the target geometry remains legible in outcomes"
+    }
+  ],
   "sources": "Source: Perlstein 2012 (The Nation); The Original Power, §2.3.11",
-  "qrUrl": null,
-  "quote": "Lee Atwater's description of the transition from explicit racial slurs to abstract economic policy",
-  "attribution": "Lee Atwater · via Perlstein 2012"
+  "qrUrl": null
 }

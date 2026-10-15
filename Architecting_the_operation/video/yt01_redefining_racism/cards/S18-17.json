@@ -1,8 +1,8 @@
 {
   "kind": "quote",
   "headline": "Dartmouth Timesharing (1964)",
-  "quote": "A runaway user program in the slave computer cannot damage the executive.",
-  "attribution": "Kemeny & Kurtz; Eglash (2007)",
+  "quote": "it is thus impossible for an erroneous or runaway user program in the slave computer to `damage' the executive program and thereby bring the whole system to a halt. \\cite{kemeny_kurtz}. The system's designers almost certainly had no conscious intention of evoking antebellum discourse on runaway enslaved persons.",
+  "attribution": "Kemeny & Kurtz · cited in Eglash (2007)",
   "items": [],
   "sources": "Kemeny & Kurtz; Eglash (2007)",
   "qrUrl": null
