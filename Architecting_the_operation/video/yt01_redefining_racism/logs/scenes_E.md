@@ -44,6 +44,17 @@ All cues resolved via `edit16x9.py turns` / `words.json` for revised runs.
 - S13-01: layout inspector still reports tier/loop proximity (14 samples); geometry separated but wire+tier co-presence triggers overlap checks.
 - S13-28, S14-07, S14-16, S15-10/11: minor layout notes remain on some samples; sheets checked; no Metal failures.
 
+## SEG 16 polish
+
+| id | class | file | status | what changed |
+|---|---|---|---|---|
+| S16-01 | ComplexWage | `complex_wage16x9.py` | rendered · layout ok | Full-width τ coherence ceiling; large threat-level bar with beat on “kernel”. |
+| S16-08 | ComplexWage | `complex_wage16x9.py` | rendered · layout ok | Scaled phasor plane; W deflection + perpendicular cue on “reactive”; extraction-current arrow and steady-state caption on hold S16-09. |
+| S16-15 | ComplexWage | `complex_wage16x9.py` | rendered · layout ok | Frame-filling solenoid L with ideological B-field ellipses; trickle on S16-15; nine quanta one-by-one on “quantum” (S16-16); massive field on “massive”; di/dt on “kinetic” (S16-17); collapse on “collapse” (S16-18). |
+| S16-31 | CoilGunInterface | `coil_gun16x9.py` | rendered · layout ok | Wide multi-stage coil gun, wealth ↑ axis, example list on opening shot, per-hold beats (Interface Swap, era coils, projectile, jψ_s saturation, Jim Crow cut/collapse, flyback, energy routing, suppression transfer). |
+
+Sheets: `/tmp/S16-01.png`, `S16-08.png`, `S16-15.png`, `S16-31.png` after `edit16x9.py render 16 --only … --force`. All four runs report `layout: no problems` in logs.
+
 ## Round 3 revision (SEG 13)
 
 | id | class | file | status | what changed |
