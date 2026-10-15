@@ -117,7 +117,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:orthographic16x9.py:Orthographic16x9`
 - **Holds:** `S01-02`
-- **Note:** The allocation path traces downward to racialized Out-group extraction. [book] “always sourced from O racialized extraction”
+- **Note:** The allocation path traces downward to racialized Out-group extraction. [book] “always sourced from $O_{\text{racialized}}$ extraction”
 
 ## S01-10 — Compounding burden
 - **Anchor:** `Emmanuel Theodore (02:11)`
@@ -242,7 +242,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Anchor:** `Emmanuel Theodore (04:43)`
 - **Type:** diagram
 - **Render:** `manim:enclosure_specialization16x9.py:EnclosureSpecialization`
-- **Note:** The general O node transforms into O racialized inside a three-mode enclosure frame. [book] “the general Out-group O becomes O racialized”
+- **Note:** The general O node transforms into O racialized inside a three-mode enclosure frame. [book] “the general Out-group $O$ becomes $O_{\text{racialized}}$”
 
 ## S01-29 — Historical mechanisms load
 - **Anchor:** `Emmanuel Theodore (04:50)`
@@ -257,35 +257,35 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Anchor:** `Emmanuel Theodore (04:59)`
 - **Type:** diagram
 - **Render:** `manim:set_primer16x9.py:SetTheoryPrimer`
-- **Note:** A population field and the chapter's notation key establish the primer workspace. [book] “the population universe U is partitioned”
+- **Note:** A population field and the chapter's notation key establish the primer workspace. [book] “the population universe $U$ is partitioned”
 
 ## S02-02 — Set
 - **Anchor:** `Emmanuel Theodore (05:08)`
 - **Type:** hold
 - **Render:** `manim:set_primer16x9.py:SetTheoryPrimer`
 - **Holds:** `S02-01`
-- **Note:** A labeled boundary encloses a collection of person-dots; the capital letter I appears above it. [book] “an In-group I and an Out-group O”
+- **Note:** A labeled boundary encloses a collection of person-dots; the capital letter I appears above it. [book] “an In-group $I$ and an Out-group $O$”
 
 ## S02-03 — Element
 - **Anchor:** `Emmanuel Theodore (05:16)`
 - **Type:** hold
 - **Render:** `manim:set_primer16x9.py:SetTheoryPrimer`
 - **Holds:** `S02-01`
-- **Note:** One person-dot glows and receives the membership mark within I. [book] “For any class X”
+- **Note:** One person-dot glows and receives the membership mark within I. [claude] “For any class X”
 
 ## S02-04 — Proper subset
 - **Anchor:** `Emmanuel Theodore (05:25)`
 - **Type:** hold
 - **Render:** `manim:set_primer16x9.py:SetTheoryPrimer`
 - **Holds:** `S02-01`
-- **Note:** A smaller E boundary appears fully inside I beside the proper-subset relation. [book] “a small Elite class E subset I”
+- **Note:** A smaller E boundary appears fully inside I beside the proper-subset relation. [book] “a small Elite class $E \subset I$”
 
 ## S02-05 — E contained in I
 - **Anchor:** `Emmanuel Theodore (05:35)`
 - **Type:** hold
 - **Render:** `manim:set_primer16x9.py:SetTheoryPrimer`
 - **Holds:** `S02-01`
-- **Note:** Every person-dot in E pulses, followed by the containing I boundary. [book] “the Elite class E subset I”
+- **Note:** Every person-dot in E pulses, followed by the containing I boundary. [book] “Elite class ($E \subset I$) uses racial division to prevent cross-group”
 
 ## S02-06 — Proper containment
 - **Anchor:** `Emmanuel Theodore (05:42)`
@@ -299,21 +299,21 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:set_primer16x9.py:SetTheoryPrimer`
 - **Holds:** `S02-01`
-- **Note:** Two relation lines appear: person belongs to E; E is contained in I. [book] “for any class X subset U”
+- **Note:** Two relation lines appear: person belongs to E; E is contained in I. [claude] “for any class X subset U”
 
 ## S02-08 — Union
 - **Anchor:** `Emmanuel Theodore (06:09)`
 - **Type:** hold
 - **Render:** `manim:set_primer16x9.py:SetTheoryPrimer`
 - **Holds:** `S02-01`
-- **Note:** Two overlapping sets fill together as the union symbol appears. [book] “the population universe U is partitioned into an In-group I and an Out-group O”
+- **Note:** Two overlapping sets fill together as the union symbol appears. [book] “the population universe $U$ is partitioned into an In-group $I$ and an Out-group $O$”
 
 ## S02-09 — Intersection
 - **Anchor:** `Emmanuel Theodore (06:16)`
 - **Type:** hold
 - **Render:** `manim:set_primer16x9.py:SetTheoryPrimer`
 - **Holds:** `S02-01`
-- **Note:** The overlap lens alone fills gold as the intersection symbol appears. [book] “local In-group on axis alpha”
+- **Note:** The overlap lens alone fills gold as the intersection symbol appears. [book] “local In-group on axis”
 
 ## S02-10 — Membership rules
 - **Anchor:** `Emmanuel Theodore (06:23)`
@@ -327,21 +327,21 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:set_primer16x9.py:SetTheoryPrimer`
 - **Holds:** `S02-01`
-- **Note:** The person-dots clear from a small boundary and the empty-set symbol settles at center. [book] “included population and an excluded population with no overlap”
+- **Note:** The person-dots clear from a small boundary and the empty-set symbol settles at center. [claude] “included population and an excluded population with no overlap”
 
 ## S02-12 — Empty intersection
 - **Anchor:** `Emmanuel Theodore (06:44)`
 - **Type:** hold
 - **Render:** `manim:set_primer16x9.py:SetTheoryPrimer`
 - **Holds:** `S02-01`
-- **Note:** I and O separate until their overlap vanishes; the intersection resolves to the empty set. [book] “an included population and an excluded population with no overlap”
+- **Note:** I and O separate until their overlap vanishes; the intersection resolves to the empty set. [claude] “an included population and an excluded population with no overlap”
 
 ## S02-13 — Disjoint union
 - **Anchor:** `Emmanuel Theodore (06:52)`
 - **Type:** hold
 - **Render:** `manim:set_primer16x9.py:SetTheoryPrimer`
 - **Holds:** `S02-01`
-- **Note:** The exact dotted-cup glyph joins the separated I and O cells. [book] “U is partitioned into an In-group I and an Out-group O”
+- **Note:** The exact dotted-cup glyph joins the separated I and O cells. [book] “is partitioned into an In-group $I$ and an Out-group $O$”
 
 ## S02-14 — Unique component membership
 - **Anchor:** `Emmanuel Theodore (07:00)`
@@ -383,7 +383,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:set_primer16x9.py:SetTheoryPrimer`
 - **Holds:** `S02-01`
-- **Note:** Race and capital axes rotate through the same person-dot and assign different cells per projection. [book] “The same person can therefore occupy I under one projection and O under another”
+- **Note:** Race and capital axes rotate through the same person-dot and assign different cells per projection. [book] “The same person can therefore occupy $I$ under one projection and $O$ under another”
 
 <!-- SEG 03 · §2.1 -->
 
@@ -397,28 +397,28 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Anchor:** `Emmanuel Theodore (08:10)`
 - **Type:** equation
 - **Render:** `manim:cards16x9.py:CardScene cards/S03-02.json`
-- **Note:** The complete equation appears with term-by-term highlight ready. [book] “the population universe U is partitioned into an In-group I and an Out-group O”
+- **Note:** The complete equation appears with term-by-term highlight ready. [book] “the population universe $U$ is partitioned into an In-group $I$ and an Out-group $O$”
 
 ## S03-03 — Binary disjoint union
 - **Anchor:** `Emmanuel Theodore (08:14)`
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S03-02.json`
 - **Holds:** `S03-02`
-- **Note:** U, I, the exact `\dot\cup`, and O illuminate in narration order. [book] “an In-group I and an Out-group O”
+- **Note:** U, I, the exact `\dot\cup`, and O illuminate in narration order. [book] “an In-group $I$ and an Out-group $O$”
 
 ## S03-04 — Equation 2.1 terms
 - **Anchor:** `Emmanuel Theodore (08:17)`
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S03-02.json`
 - **Holds:** `S03-02`
-- **Note:** The U, I, and O glosses appear beneath their symbols. [book] “the population universe U is partitioned”
+- **Note:** The U, I, and O glosses appear beneath their symbols. [book] “the population universe $U$ is partitioned”
 
 ## S03-05 — Empty intersection
 - **Anchor:** `Emmanuel Theodore (08:23)`
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S03-02.json`
 - **Holds:** `S03-02`
-- **Note:** The intersection and empty-set terms illuminate; two membership fields pull apart. [book] “included population and an excluded population with no overlap”
+- **Note:** The intersection and empty-set terms illuminate; two membership fields pull apart. [claude] “included population and an excluded population with no overlap”
 
 ## S03-06 — Included and excluded cells
 - **Anchor:** `Emmanuel Theodore (08:34)`
@@ -506,7 +506,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:binary_refinement16x9.py:BinaryRefinement`
 - **Holds:** `S03-17`
-- **Note:** A material-flow arrow reaches E while function labels remain on the lower tiers. [book] “only E receives maximal material benefit”
+- **Note:** A material-flow arrow reaches E while function labels remain on the lower tiers. [book] “only $E$ receives maximal material benefit”
 
 ## S03-19 — Suppression allocation
 - **Anchor:** `Emmanuel Theodore (10:30)`
@@ -526,14 +526,14 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S03-20.json`
 - **Holds:** `S03-20`
-- **Note:** O, the racialized layer, adjacent one, adjacent two, and adjacent m illuminate in order. [book] “O racialized, O adjacent one”
+- **Note:** O, the racialized layer, adjacent one, adjacent two, and adjacent m illuminate in order. [claude] “O racialized, O adjacent one”
 
 ## S03-22 — Primary and adjacent layers
 - **Anchor:** `Emmanuel Theodore (10:52)`
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S03-20.json`
 - **Holds:** `S03-20`
-- **Note:** The primary extraction layer and adjacent-layer glosses appear beneath the terms. [book] “fractured layers inside O”
+- **Note:** The primary extraction layer and adjacent-layer glosses appear beneath the terms. [book] “fractured layers inside $O$, and local In-group/Out-group”
 
 ## S03-23 — Extraction intensities
 - **Anchor:** `Emmanuel Theodore (11:01)`
@@ -547,7 +547,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S03-20.json`
 - **Holds:** `S03-20`
-- **Note:** The sequence one through m steps across the adjacent terms; dotted cups keep the layers discrete. [book] “O adjacent one, O adjacent two”
+- **Note:** The sequence one through m steps across the adjacent terms; dotted cups keep the layers discrete. [claude] “O adjacent one, O adjacent two”
 
 ## S03-25 — Axes of extraction
 - **Anchor:** `Emmanuel Theodore (11:18)`
@@ -573,14 +573,14 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S03-27.json`
 - **Holds:** `S03-27`
-- **Note:** X, X plus alpha, and X minus alpha illuminate across the disjoint union. [book] “X plus alpha is treated as the local In-group”
+- **Note:** X, X plus alpha, and X minus alpha illuminate across the disjoint union. [book] “is treated as the local In-group”
 
 ## S03-29 — Axis and local positions
 - **Anchor:** `Emmanuel Theodore (11:49)`
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S03-27.json`
 - **Holds:** `S03-27`
-- **Note:** X and alpha receive their glosses; the plus term highlights as local In-group. [book] “any operative axis alpha”
+- **Note:** X and alpha receive their glosses; the plus term highlights as local In-group. [book] “any operative axis $\alpha$—race, class”
 
 ## S03-30 — Local Out-group and empty overlap
 - **Anchor:** `Emmanuel Theodore (11:59)`
@@ -614,14 +614,14 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:recursive_partition16x9.py:RecursivePartition`
 - **Holds:** `S03-31`
-- **Note:** One person-dot moves between local plus and minus cells as alpha changes. [book] “occupy I under one projection and O under another”
+- **Note:** One person-dot moves between local plus and minus cells as alpha changes. [book] “occupy $I$ under one projection and $O$ under another”
 
 ## S03-35 — Working-class white citizen
 - **Anchor:** `Emmanuel Theodore (12:50)`
 - **Type:** hold
 - **Render:** `manim:recursive_partition16x9.py:RecursivePartition`
 - **Holds:** `S03-31`
-- **Note:** Race places the example in I; capital, credentialing, and criminalization place it in O. [book] “A working-class white citizen may be positioned inside I under the racial projection”
+- **Note:** Race places the example in I; capital, credentialing, and criminalization place it in O. [book] “A working-class white citizen may be positioned inside $I$ under the racial projection”
 
 ## S03-36 — Credentialed Out-group member
 - **Anchor:** `Emmanuel Theodore (13:01)`
@@ -676,7 +676,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S03-38.json`
 - **Holds:** `S03-38`
-- **Note:** The indexed disjoint union enlarges; O sub zero resolves to the racialized layer. [book] “with O zero equals O racialized”
+- **Note:** The indexed disjoint union enlarges; O sub zero resolves to the racialized layer. [claude] “with O zero equals O racialized”
 
 ## S03-44 — Index j
 - **Anchor:** `Emmanuel Theodore (14:18)`
@@ -696,14 +696,14 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Anchor:** `Emmanuel Theodore (14:46)`
 - **Type:** figure
 - **Render:** `manim:binary_zoom16x9.py:ZoomingBinary cards/S03-46.json`
-- **Note:** Rebuild Figure 2.1 as two coarse boxes containing the refined layers. Fallback still: `figures/fig2.1_table2.1_p109.png`. [book] “higher resolution reveals internal tiers inside I”
+- **Note:** Rebuild Figure 2.1 as two coarse boxes containing the refined layers. Fallback still: `figures/fig2.1_table2.1_p109.png`. [book] “higher resolution reveals internal tiers inside $I$”
 
 ## S03-47 — In-group and Out-group tiers
 - **Anchor:** `Emmanuel Theodore (14:53)`
 - **Type:** hold
 - **Render:** `manim:binary_zoom16x9.py:ZoomingBinary cards/S03-46.json`
 - **Holds:** `S03-46`
-- **Note:** Callouts traverse E through Buffer, then identify the racialized extraction layer. [book] “internal tiers inside I, fractured layers inside O”
+- **Note:** Callouts traverse E through Buffer, then identify the racialized extraction layer. [book] “internal tiers inside $I$, fractured layers inside $O$”
 
 ## S03-48 — Adjacent layers and recursion
 - **Anchor:** `Emmanuel Theodore (15:04)`
@@ -777,21 +777,21 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Anchor:** `Emmanuel Theodore (16:47)`
 - **Type:** equation
 - **Render:** `manim:cards16x9.py:CardScene cards/S04-07.json`
-- **Note:** The exact invariant appears; delta, max, and zero illuminate in narration order. [book] “Delta max equals zero for E is invariant”
+- **Note:** The exact invariant appears; delta, max, and zero illuminate in narration order. [book] “invariant $\Delta\max = 0$ is a claim about Elite extraction”
 
 ## S04-08 — Concession funding
 - **Anchor:** `Emmanuel Theodore (16:56)`
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S04-07.json`
 - **Holds:** `S04-07`
-- **Note:** A funding arrow runs from deeper racialized Out-group extraction to the material concession while E remains fixed. [book] “always funded by deeper extraction from O racialized”
+- **Note:** A funding arrow runs from deeper racialized Out-group extraction to the material concession while E remains fixed. [book] “always funded by deeper extraction from $O_{\text{racialized}}$”
 
 ## S04-09 — Terms of the invariant
 - **Anchor:** `Emmanuel Theodore (17:03)`
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S04-07.json`
 - **Holds:** `S04-07`
-- **Note:** Delta, the extraction objective, and preservation of E's position receive their glosses. [book] “Delta max equals zero is preserved in both modes”
+- **Note:** Delta, the extraction objective, and preservation of E's position receive their glosses. [book] “is preserved in both modes”
 
 ## S04-10 — Funding-mechanism scope
 - **Anchor:** `Emmanuel Theodore (17:15)`
@@ -1033,7 +1033,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:causal_reversal16x9.py:CausalReversal cards/S05-22.json`
 - **Holds:** `S05-22`
-- **Note:** The dashed arc gains HIRING, JURIES, and VOTERS labels. [book] “The reverse arrow is a maintenance loop”
+- **Note:** The dashed arc gains HIRING, JURIES, and VOTERS labels. [book] “does feed back into systemic outcomes”
 
 ## S05-28 — Three feedback pathways
 - **Anchor:** `Emmanuel Theodore (23:07)`
@@ -1197,7 +1197,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S06-10.json`
 - **Holds:** `S06-10`
-- **Note:** O racialized, P, and the intersection symbol receive population, policy, and contact glosses. [book] “the intersection O racialized intersection P”
+- **Note:** O racialized, P, and the intersection symbol receive population, policy, and contact glosses. [claude] “the intersection O racialized intersection P”
 
 ## S06-14 — Policy contact
 - **Anchor:** `Emmanuel Theodore (27:11)`
@@ -1314,14 +1314,14 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:hierarchy_inversion16x9.py:HierarchyInversion cards/S06-29.json`
 - **Holds:** `S06-29`
-- **Note:** The left blocks reveal individual prejudice, belief in superiority, and the buried systemic entry. [book] “Conventional definitions bury the systemic dimension as a tertiary afterthought”
+- **Note:** The left blocks reveal individual prejudice, belief in superiority, and the buried systemic entry. [book] “bury the systemic dimension as a tertiary afterthought”
 
 ## S06-31 — Correct hierarchy
 - **Anchor:** `Emmanuel Theodore (29:54)`
 - **Type:** hold
 - **Render:** `manim:hierarchy_inversion16x9.py:HierarchyInversion cards/S06-29.json`
 - **Holds:** `S06-29`
-- **Note:** The right blocks reveal systemic policies, ideological narratives, and interpersonal prejudice. [book] “The correct hierarchy places systemic policies at the top”
+- **Note:** The right blocks reveal systemic policies, ideological narratives, and interpersonal prejudice. [book] “places systemic policies at the top”
 
 ## S06-32 — Explanatory order
 - **Anchor:** `Emmanuel Theodore (30:04)`
@@ -1341,7 +1341,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Anchor:** `Emmanuel Theodore (30:30)`
 - **Type:** card
 - **Render:** `manim:cards16x9.py:CardScene cards/S06-34.json`
-- **Note:** The systemic definition appears with architecture and purpose rows. [book] “Racism is a system of oppression”
+- **Note:** The systemic definition appears with architecture and purpose rows. [book] “rooted in historical practices and policies that categorize individuals”
 
 ## S06-35 — Architects and purpose
 - **Anchor:** `Emmanuel Theodore (30:41)`
@@ -1564,21 +1564,21 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Anchor:** `Emmanuel Theodore (36:08)`
 - **Type:** card
 - **Render:** `manim:cards16x9.py:CardScene cards/S08-01.json`
-- **Note:** Six rows establish kernel semantics and dynamic state variables. [book] “kernel semantics and dynamic state variables”
+- **Note:** Six rows establish kernel semantics and dynamic state variables. [book] “Kernel Semantics and Dynamic”
 
 ## S08-02 — Extraction output
 - **Anchor:** `Emmanuel Theodore (36:24)`
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S08-01.json`
 - **Holds:** `S08-01`
-- **Note:** Script E of t highlights with material transfer toward Elite. [book] “Time-indexed extraction output material transfer toward E”
+- **Note:** Script E of t highlights with material transfer toward Elite. [book] “Time-indexed extraction output material transfer toward $E$”
 
 ## S08-03 — Class-coherence threat
 - **Anchor:** `Emmanuel Theodore (36:41)`
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S08-01.json`
 - **Holds:** `S08-01`
-- **Note:** M of t highlights with dynamic resistance and class coherence. [book] “Time-indexed class-coherence threat dynamic analogue of min-management pressure”
+- **Note:** M of t highlights with dynamic resistance and class coherence. [book] “Time-indexed class-coherence threat dynamic analogue of $\min$-management pressure”
 
 ## S08-04 — Crash threshold
 - **Anchor:** `Emmanuel Theodore (36:56)`
@@ -1592,21 +1592,21 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S08-01.json`
 - **Holds:** `S08-01`
-- **Note:** Psi expands into status-wage and material-concession channels. [book] “Two-mode compensation to I buffer”
+- **Note:** Psi expands into status-wage and material-concession channels. [claude] “Two-mode compensation to I buffer”
 
 ## S08-06 — Status and material wages
 - **Anchor:** `Emmanuel Theodore (37:16)`
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S08-01.json`
 - **Holds:** `S08-01`
-- **Note:** Status remains active; material concession activates as M approaches tau and traces to racialized extraction. [book] “material concession, deployed when M of t approaches tau”
+- **Note:** Status remains active; material concession activates as M approaches tau and traces to racialized extraction. [book] “material concession, deployed when”
 
 ## S08-07 — Kinetic repression
 - **Anchor:** `Emmanuel Theodore (37:32)`
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S08-01.json`
 - **Holds:** `S08-01`
-- **Note:** R of t highlights with policing, carceral infrastructure, and force. [book] “Physical suppression capacity of F enforce”
+- **Note:** R of t highlights with policing, carceral infrastructure, and force. [book] “Physical suppression capacity of $F_{\text{enforce}}$”
 
 ## S08-08 — Phase architecture
 - **Anchor:** `Emmanuel Theodore (37:44)`
@@ -1653,21 +1653,21 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S08-13.json`
 - **Holds:** `S08-13`
-- **Note:** Script E of t, M of t, and tau highlight in narration order. [book] “subject to M of t less than tau”
+- **Note:** Script E of t, M of t, and tau highlight in narration order. [claude] “subject to M of t less than tau”
 
 ## S08-15 — Extraction and coherence
 - **Anchor:** `Emmanuel Theodore (39:09)`
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S08-13.json`
 - **Holds:** `S08-13`
-- **Note:** Extraction rises while the class-coherence gauge remains below the crash line. [book] “M of t is class-coherence risk”
+- **Note:** Extraction rises while the class-coherence gauge remains below the crash line. [book] “is class-coherence risk”
 
 ## S08-16 — Constraint on expansion
 - **Anchor:** `Emmanuel Theodore (39:17)`
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S08-13.json`
 - **Holds:** `S08-13`
-- **Note:** The extraction curve expands until M approaches tau, then bends under the constraint. [book] “subject to M of t less than tau”
+- **Note:** The extraction curve expands until M approaches tau, then bends under the constraint. [book] “kernel that extracts without maintaining the suppression constraint will breach $M(t) = \tau$ and collapse”
 
 ## S08-17 — Equation 2.8
 - **Anchor:** `Emmanuel Theodore (39:27)`
@@ -1733,7 +1733,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:stationary_leaders16x9.py:StationaryLeaders`
 - **Holds:** `S08-25`
-- **Note:** User input u sub i enters every follower equation; the leader channel remains structurally closed. [book] “Every follower equation contains u i”
+- **Note:** User input u sub i enters every follower equation; the leader channel remains structurally closed. [book] “Every follower equation contains $u_i$”
 
 ## S08-27 — Critical junctures
 - **Anchor:** `Emmanuel Theodore (41:17)`
@@ -1792,7 +1792,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S09-05.json`
 - **Holds:** `S09-05`
-- **Note:** 1850 row highlights: $102.5M, $2.95M, 2.88%. [book] “ratio: 2.88\%”
+- **Note:** 1850 row highlights: $102.5M, $2.95M, 2.88%. [book] “revenue, the suppression ratio held within a 0.18 percentage-point”
 
 ## S09-07 — 1860 observation
 
@@ -1800,7 +1800,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S09-05.json`
 - **Holds:** `S09-05`
-- **Note:** 1860 row highlights: $247.0M, $6.8M, 2.75%. [book] “ratio: 2.75\%”
+- **Note:** 1860 row highlights: $247.0M, $6.8M, 2.75%. [claude] “ratio: 2.75\%”
 
 ## S09-08 — Figure 2.4
 
@@ -1867,14 +1867,14 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Anchor:** `Emmanuel Theodore (44:24)`
 - **Type:** diagram
 - **Render:** `manim:minimumforcing16x9.py:MinimumForcing`
-- **Note:** August 1831 rebellion spike and legislative slave-code tightening as tau-management response. [book] “Nat Turner's Rebellion (August 1831”
+- **Note:** August 1831 rebellion spike and legislative slave-code tightening as tau-management response. [book] “falsification test: when class-coherence risk spiked, the immediate legislative response across the South was a dramatic tightening of slave codes”
 
 ## S09-17 — Falsification criterion
 
 - **Anchor:** `Emmanuel Theodore (44:36)`
 - **Type:** card
 - **Render:** `manim:cards16x9.py:CardScene cards/S09-17.json`
-- **Note:** Rising revenue with flat or falling patrol spending would falsify the kernel prediction. [book] “Falsification criteria”
+- **Note:** Rising revenue with flat or falling patrol spending would falsify the kernel prediction. [book] “multiple consecutive years or Census intervals”
 
 ## S09-18 — Union blockade
 
@@ -1898,7 +1898,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S09-02.json`
 - **Holds:** `S09-02`
-- **Note:** Tier 1 badge: three Census-year points plus Beckert, Baptist, and Hadden scholarship. [book] “Confidence tier”
+- **Note:** Tier 1 badge: three Census-year points plus Beckert, Baptist, and Hadden scholarship. [book] “Tier 1. Three Census-year data points”
 
 <!-- SEG 10 · §2.3.3 The Zero-Day Exploit: The Invention of Race -->
 
@@ -1936,7 +1936,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Anchor:** `Emmanuel Theodore (46:01)`
 - **Type:** diagram
 - **Render:** `manim:cline16x9.py:ClineGradient`
-- **Note:** Skin color varies across geography; Huxley 1938 names the pattern a cline. [book] “continuous environmental gradient”
+- **Note:** Skin color varies across geography; Huxley 1938 names the pattern a cline. [book] “graded geographic variation a cline in 1938”
 
 ## S10-06 — Crawford 2017
 
@@ -1973,7 +1973,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cline16x9.py:ClineGradient`
 - **Holds:** `S10-05`
-- **Note:** Timeline rail prepares Olalde and Brace cases on the cline animation. [book] “Ancient DNA provides a timeline”
+- **Note:** Timeline rail prepares Olalde and Brace cases on the cline animation. [book] “ancient DNA dates its ascent”
 
 ## S10-11 — La Braña and Cheddar Man
 
@@ -2001,7 +2001,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Anchor:** `Emmanuel Theodore (47:40)`
 - **Type:** card
 - **Render:** `manim:cards16x9.py:CardScene cards/S10-14.json`
-- **Note:** Plain text warning before Middle Passage mortality and plantation torture facts; no imagery of violence. [book] “content warning applies to the following”
+- **Note:** Plain text warning before Middle Passage mortality and plantation torture facts; no imagery of violence. [claude] “content warning applies to the following”
 
 ## S10-15 — Transatlantic botnet
 
@@ -2054,7 +2054,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cline16x9.py:BinaryPartitionCut`
 - **Holds:** `S10-13`
-- **Note:** Phenotype creates a permanent legal partition from a continuous variable. [book] “legally inescapable underclass”
+- **Note:** Phenotype creates a permanent legal partition from a continuous variable. [book] “zero-day exploit was the industrialization of phenotype as a permanent, heritable, legally”
 
 ## S10-22 — Intergenerational property law
 
@@ -2228,7 +2228,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Anchor:** `Emmanuel Theodore (52:34)`
 - **Type:** card
 - **Render:** `manim:cards16x9.py:CardScene cards/S11-21.json`
-- **Note:** Framework leaves causal mode open; functional output restores epistemic enclosure. [book] “Mode 3 conscious intervention or Mode 2 autonomous propagation”
+- **Note:** Framework leaves causal mode open; functional output restores epistemic enclosure. [book] “Mode 2 autonomous propagation”
 
 <!-- SEG 12 · §2.3.5 Polymorphic Code: The Interface Swap -->
 
@@ -2267,7 +2267,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Anchor:** `Emmanuel Theodore (53:23)`
 - **Type:** diagram
 - **Render:** `manim:interfaceswap16x9.py:ExeRecompile`
-- **Note:** Host antivirus triggers recompile; payload unchanged since 1450. [book] “payload has remained unchanged since 1450”
+- **Note:** Host antivirus triggers recompile; payload unchanged since 1450. [book] “underlying payload—$\max \mathcal{E} - \min(I_{\text{buffer}} \cup O_{\text{racialized}})$—has not changed since 1450”
 
 ## S12-06 — Chattel Slavery.exe
 
@@ -2336,7 +2336,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S12-12.json`
 - **Holds:** `S12-12`
-- **Note:** Relative cost shifts permit transitions between explicit brutality and administrative violence. [book] “transitions between explicit brutality and administrative violence”
+- **Note:** Relative cost shifts permit transitions between explicit brutality and administrative violence. [claude] “transitions between explicit brutality and administrative violence”
 
 ## S12-15 — Argmin form
 
@@ -2382,7 +2382,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Anchor:** `Emmanuel Theodore (55:57)`
 - **Type:** diagram
 - **Render:** `manim:interfaceswap16x9.py:CostBarsOverTime`
-- **Note:** Calibration case: mid-1950s Jim Crow costs rising on all three dimensions. [book] “Historical calibration: Jim Crow to War on Drugs”
+- **Note:** Calibration case: mid-1950s Jim Crow costs rising on all three dimensions. [book] “calibration: Jim Crow $\to$ War”
 
 ## S12-21 — Brown 1954
 
@@ -2413,7 +2413,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:interfaceswap16x9.py:CostBarsOverTime`
 - **Holds:** `S12-20`
-- **Note:** At the swap, legitimacy and coercive costs fall; economic cost rises then offsets via carceral extraction. [book] “legitimacy cost fell to near zero”
+- **Note:** At the swap, legitimacy and coercive costs fall; economic cost rises then offsets via carceral extraction. [book] “fell to near zero”
 
 ## S12-25 — Williams v. Mississippi
 
@@ -2435,14 +2435,14 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S12-26.json`
 - **Holds:** `S12-26`
-- **Note:** Family and Nixon-era defenders dispute reliability; statutory and incarceration record confirms pattern independently. [book] “disputed its reliability”
+- **Note:** Family and Nixon-era defenders dispute reliability; statutory and incarceration record confirms pattern independently. [book] “family and some Nixon-era defenders”
 
 ## S12-28 — Proxy playbook sequence
 
 - **Anchor:** `Emmanuel Theodore (57:28)`
 - **Type:** card
 - **Render:** `manim:cards16x9.py:CardScene cards/S12-28.json`
-- **Note:** Association to criminalization to enforcement to media legitimation; facially neutral variables lower legitimacy cost. [book] “association $\rightarrow$ criminalization $\rightarrow$ enforcement”
+- **Note:** Association to criminalization to enforcement to media legitimation; facially neutral variables lower legitimacy cost. [book] “association $\rightarrow$ criminalization $\rightarrow$ enforcement $\rightarrow$ media-legitimation”
 
 ## S12-29 — Lee Atwater 1981
 
@@ -2471,7 +2471,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S12-31.json`
 - **Holds:** `S12-31`
-- **Note:** Facial neutrality with racially structured enforcement outcomes. [book] “precise statutory geometry with racially structured enforcement”
+- **Note:** Facial neutrality with racially structured enforcement outcomes. [book] “gave the proxy a precise statutory geometry”
 
 ## S12-33 — Mass incarceration expansion
 
@@ -2479,7 +2479,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S12-30.json`
 - **Holds:** `S12-30`
-- **Note:** Carceral enforcement layer expands under the proxy regime. [book] “mass incarceration expanded the carceral enforcement layer”
+- **Note:** Carceral enforcement layer expands under the proxy regime. [claude] “mass incarceration expanded the carceral enforcement layer”
 
 ## S12-34 — ACLU marijuana arrests
 
@@ -2522,7 +2522,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S12-38.json`
 - **Holds:** `S12-38`
-- **Note:** Tier 2: foreign-policy records, testimonial evidence, coded language, statutes, incarceration data. [book] “Confidence tier”
+- **Note:** Tier 2: foreign-policy records, testimonial evidence, coded language, statutes, incarceration data. [claude] “Confidence tier”
 
 <!-- SEG 13 · §2.3.6 The Backlash Constant: Racism as a Damped RLC Circuit -->
 
@@ -2600,7 +2600,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Anchor:** `Emmanuel Theodore (60:52)`
 - **Type:** equation
 - **Render:** `manim:cards16x9.py:CardScene cards/S13-10.json`
-- **Note:** Underdamped solution headline with decay envelope ready for term highlights. [book] “underdamped solution”
+- **Note:** Underdamped solution headline with decay envelope ready for term highlights. [book] “whose restorative force subsequently damps that displacement back toward the extraction baseline”
 
 ## S13-11 — Solution form
 
@@ -2624,7 +2624,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S13-10.json`
 - **Holds:** `S13-10`
-- **Note:** α = R/(2L), ω₀ = 1/√(LC), and ω_d definition stack beneath the solution. [book] “\alpha = R/(2L)”
+- **Note:** α = R/(2L), ω₀ = 1/√(LC), and ω_d definition stack beneath the solution. [claude] “\alpha = R/(2L)”
 
 ## S13-14 — Circuit equilibrium
 
@@ -2702,7 +2702,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:backlash_oscillator16x9.py:BacklashOscillator cards/S13-22.json`
 - **Holds:** `S13-22`
-- **Note:** ILLUSTRATIVE PARAMETERS badge; Q₀, α, ω_d called out as non-calibrated. [book] “plotted parameters ($Q_0 = 1.6$, $\alpha = 0.35$”
+- **Note:** ILLUSTRATIVE PARAMETERS badge; Q₀, α, ω_d called out as non-calibrated. [claude] “plotted parameters ($Q_0 = 1.6$, $\alpha = 0.35$”
 
 ## S13-24 — Convergence prediction
 
@@ -2710,7 +2710,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:backlash_oscillator16x9.py:BacklashOscillator cards/S13-22.json`
 - **Holds:** `S13-22`
-- **Note:** Envelope decays toward q → 0 without sustained V(t). [book] “$q(t) \rightarrow 0$ as $t \rightarrow \infty$”
+- **Note:** Envelope decays toward q → 0 without sustained V(t). [book] “without a sustained driving voltage $V(t)$, $q(t) \rightarrow 0$ as $t \rightarrow \infty$”
 
 ## S13-25 — Rising decay rate
 
@@ -2740,7 +2740,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Anchor:** `Emmanuel Theodore (64:09)`
 - **Type:** equation
 - **Render:** `manim:resonance_sweep16x9.py:ResonanceSweep cards/S13-28.json`
-- **Note:** |q_res| = V₀/(R ω₀) appears as reactive impedances cancel. [book] “reactive impedances cancel”
+- **Note:** |q_res| = V₀/(R ω₀) appears as reactive impedances cancel. [book] “resonance, the reactive impedances cancel ($\omega L = 1/\omega C$)”
 
 ## S13-29 — Quality factor
 
@@ -2748,7 +2748,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:resonance_sweep16x9.py:ResonanceSweep cards/S13-28.json`
 - **Holds:** `S13-28`
-- **Note:** Q_f = (1/R)√(L/C) scales resonant response versus sub-resonant impulse. [book] “quality factor”
+- **Note:** Q_f = (1/R)√(L/C) scales resonant response versus sub-resonant impulse. [book] “times larger than a sub-resonant impulse of the same magnitude”
 
 ## S13-30 — Frequency-matched solidarity
 
@@ -2803,7 +2803,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S14-01.json`
 - **Holds:** `S14-01`
-- **Note:** ψ_s always active; ψ_m activates under elevated kinetic threat. [book] “status wage, which is always active”
+- **Note:** ψ_s always active; ψ_m activates under elevated kinetic threat. [book] “status wage, $\psi_m(t) \geq 0$ is the material wage (active only under elevated kinetic threat)”
 
 ## S14-04 — Repression and phase load
 
@@ -2811,7 +2811,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S14-01.json`
 - **Holds:** `S14-01`
-- **Note:** R(t) kinetic repression and Φ_load fragmentation load complete the stack. [book] “compound phase-shift load generated by identity-fragmentation”
+- **Note:** R(t) kinetic repression and Φ_load fragmentation load complete the stack. [book] “compound phase-shift load”
 
 ## S14-05 — Equation 2.14
 
@@ -2833,7 +2833,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Anchor:** `Emmanuel Theodore (66:18)`
 - **Type:** diagram
 - **Render:** `manim:suppression_envelope16x9.py:SuppressionEnvelope`
-- **Note:** Horizontal τ line; M(t) growth threatens when solidarity outpaces suppression. [book] “critical threshold”
+- **Note:** Horizontal τ line; M(t) growth threatens when solidarity outpaces suppression. [claude] “critical threshold”
 
 ## S14-08 — Preemptive material wage
 
@@ -2841,7 +2841,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:suppression_envelope16x9.py:SuppressionEnvelope`
 - **Holds:** `S14-07`
-- **Note:** ψ_m channel deploys before coherence rate approaches τ. [book] “suppress the coherence rate before it approaches tau”
+- **Note:** ψ_m channel deploys before coherence rate approaches τ. [book] “approaches critical threshold ($M(t) \to \tau$), the Elite escalate to the material wage”
 
 ## S14-09 — Buffer allocation
 
@@ -2849,7 +2849,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:suppression_envelope16x9.py:SuppressionEnvelope`
 - **Holds:** `S14-07`
-- **Note:** Extracted-wealth fraction flows to Buffer Class to suppress mobilization. [book] “distribute a fraction of extracted wealth to the Buffer Class”
+- **Note:** Extracted-wealth fraction flows to Buffer Class to suppress mobilization. [book] “to $I_{\text{buffer}}$ to suppress mobilization”
 
 ## S14-10 — Equation 2.15
 
@@ -2864,7 +2864,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S14-10.json`
 - **Holds:** `S14-10`
-- **Note:** Φ_load reduces M_eff; breach when M_eff > τ; Tier 3 ordinal badge. [book] “ordinal structural claim carrying confidence Tier 3”
+- **Note:** Φ_load reduces M_eff; breach when M_eff > τ; Tier 3 ordinal badge. [book] “equation is classified as Tier 3 (ordinal/structural)”
 
 ## S14-12 — Bacon's Rebellion
 
@@ -2879,7 +2879,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S14-12.json`
 - **Holds:** `S14-12`
-- **Note:** No identity-axis fragmentation deployed; M_eff ≈ M(t). [book] “\Phi_{\text{load}} \approx 0 at that moment”
+- **Note:** No identity-axis fragmentation deployed; M_eff ≈ M(t). [book] “no identity-axis fragmentation had yet been institutionally deployed”
 
 ## S14-14 — 1705 codification
 
@@ -2887,7 +2887,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S14-12.json`
 - **Holds:** `S14-12`
-- **Note:** Whiteness codification raises Φ_load to ordinal range 0.15–0.55. [book] “post-1705 $\Phi_{\text{load}} \in [0.15, 0.55]$”
+- **Note:** Whiteness codification raises Φ_load to ordinal range 0.15–0.55. [book] “After 1705, the codification of whiteness raised”
 
 ## S14-15 — Suppression duration
 
@@ -3027,7 +3027,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Anchor:** `Emmanuel Theodore (70:43)`
 - **Type:** card
 - **Render:** `manim:cards16x9.py:CardScene cards/S15-17.json`
-- **Note:** Empirical content is ordinal damping; ζ fits introduced. [book] “empirical content of the circuit model is ordinal damping”
+- **Note:** Empirical content is ordinal damping; ζ fits introduced. [book] “empirical content of the circuit model”
 
 ## S15-18 — ζ fits
 
@@ -3035,7 +3035,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S15-17.json`
 - **Holds:** `S15-17`
-- **Note:** ζ = 0.17 (1865), 0.59 (1964), 0.97 (2020 cycle) stat bars. [book] “1865: $\zeta = 0.17$; 1964: $\zeta = 0.59$; 2020: $\zeta = 0.97$”
+- **Note:** ζ = 0.17 (1865), 0.59 (1964), 0.97 (2020 cycle) stat bars. [book] “fitted $\zeta$ is $\alpha/\omega_0 = (R/2L)/\omega_0$, confirming that $R/(2L)$ has grown monotonically relative”
 
 ## S15-19 — Non-forecast qualifier
 
@@ -3043,7 +3043,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S15-17.json`
 - **Holds:** `S15-17`
-- **Note:** R/(2L) growth supports ordinal claim; illustrative parameters are non-calibrated forecasts. [book] “does not treat the illustrative circuit parameters as calibrated forecasts”
+- **Note:** R/(2L) growth supports ordinal claim; illustrative parameters are non-calibrated forecasts. [claude] “does not treat the illustrative circuit parameters as calibrated forecasts”
 
 <!-- SEG 16 · §2.3.6.1–2 The Psychological Wage as Systemic Inductor -->
 
@@ -3052,14 +3052,14 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Anchor:** `Emmanuel Theodore (71:19)`
 - **Type:** diagram
 - **Render:** `manim:complex_wage16x9.py:ComplexWage`
-- **Note:** Kernel objective complete; tau threshold line returns as the coherence ceiling. [book] "keeps the threat level below the threshold"
+- **Note:** Kernel objective complete; tau threshold line returns as the coherence ceiling. [claude] “keeps the threat level below the threshold”
 
 ## S16-02
 
 - **Anchor:** `Emmanuel Theodore (71:29)`
 - **Type:** card
 - **Render:** `manim:cards16x9.py:CardScene cards/S16-02.json`
-- **Note:** Title card introduces complex wage split across material and status channels. [book] "Complex Wage" resolves the suppression expenditure
+- **Note:** Title card introduces complex wage split across material and status channels. [book] “The Complex Wage $W = \psi_m + j\psi_s$ Equation” resolves the suppression expenditure
 
 ## S16-03
 
@@ -3067,14 +3067,14 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S16-02.json`
 - **Holds:** `S16-02`
-- **Note:** Chapter 3 cross-reference highlights Equation 3.5 on partition maintenance. [book] "compensates the Buffer Class to maintain the partition"
+- **Note:** Chapter 3 cross-reference highlights Equation 3.5 on partition maintenance. [book] “Buffer Class actively polices the racial partition”
 
 ## S16-04
 
 - **Anchor:** `Emmanuel Theodore (71:46)`
 - **Type:** equation
 - **Render:** `manim:cards16x9.py:CardScene cards/S16-04.json`
-- **Note:** Equation 3.5 with term highlights for W, ψ_m, and jψ_s. [book] "psychological or status component, lying on the imaginary axis"
+- **Note:** Equation 3.5 with term highlights for W, ψ_m, and jψ_s. [claude] “psychological or status component, lying on the imaginary axis”
 
 ## S16-05
 
@@ -3082,7 +3082,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S16-04.json`
 - **Holds:** `S16-04`
-- **Note:** Full complex-wage statement W = ψ_m + jψ_s pulses on beat. [book] "W = \psi_m + j\psi_s"
+- **Note:** Full complex-wage statement W = ψ_m + jψ_s pulses on beat. [claude] “W = \psi_m + j\psi_s”
 
 ## S16-06
 
@@ -3090,7 +3090,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S16-04.json`
 - **Holds:** `S16-04`
-- **Note:** ψ_m channel emphasizes loyalty purchased without real capital. [book] "buy loyalty without spending real capital"
+- **Note:** ψ_m channel emphasizes loyalty purchased without real capital. [book] “material wage $\psi_m$ is the real-power”
 
 ## S16-07
 
@@ -3120,7 +3120,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Anchor:** `Emmanuel Theodore (72:37)`
 - **Type:** diagram
 - **Render:** `manim:lorentz_force16x9.py:LorentzForce`
-- **Note:** Charge trajectory bends perpendicular to velocity under B field. [book] "Lorentz force" is always perpendicular
+- **Note:** Charge trajectory bends perpendicular to velocity under B field. [book] “Lorentz force $\vec{F} = q(\vec{v} \times \vec{B})$ is always perpendicular to the charge” is always perpendicular
 
 ## S16-11
 
@@ -3190,7 +3190,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S16-18.json`
 - **Holds:** `S16-18`
-- **Note:** ∇× operator highlights on curl of E. [book] "curl operator"
+- **Note:** ∇× operator highlights on curl of E. [claude] “curl operator”
 
 ## S16-20
 
@@ -3198,7 +3198,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S16-18.json`
 - **Holds:** `S16-18`
-- **Note:** ∂B/∂t term highlights as field change rate. [book] "rate of change of the magnetic field"
+- **Note:** ∂B/∂t term highlights as field change rate. [claude] “rate of change of the magnetic field”
 
 ## S16-21
 
@@ -3214,7 +3214,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S16-18.json`
 - **Holds:** `S16-18`
-- **Note:** Induced E-field circulation performs material work. [book] "generates a field capable of moving charge"
+- **Note:** Induced E-field circulation performs material work. [claude] “generates a field capable of moving charge”
 
 ## S16-23
 
@@ -3222,7 +3222,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S16-18.json`
 - **Holds:** `S16-18`
-- **Note:** Collapsing racialized field predicts material force. [book] "induces a real material force"
+- **Note:** Collapsing racialized field predicts material force. [book] “changing magnetic field induces a real electric”
 
 ## S16-24
 
@@ -3230,7 +3230,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S16-18.json`
 - **Holds:** `S16-18`
-- **Note:** Lenz sign: induced force opposes reform current. [book] "opposes the reform current that triggered the collapse"
+- **Note:** Lenz sign: induced force opposes reform current. [book] “opposes the reform current”
 
 ## S16-25
 
@@ -3245,7 +3245,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Anchor:** `Emmanuel Theodore (74:42)`
 - **Type:** card
 - **Render:** `manim:cards16x9.py:CardScene cards/S16-26.json`
-- **Note:** Two-regime compare card introduces steady vs transient. [book] "two operational regimes"
+- **Note:** Two-regime compare card introduces steady vs transient. [book] “The energy that was stored orthogonally as passive animus converts into literal, measurable future violence”
 
 ## S16-27
 
@@ -3261,7 +3261,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S16-26.json`
 - **Holds:** `S16-26`
-- **Note:** Transient row pulses: discharge as opposing violence. [book] "discharge as opposing violence"
+- **Note:** Transient row pulses: discharge as opposing violence. [book] “deflects the Buffer Class horizontally, away from vertical class solidarity”
 
 ## S16-29
 
@@ -3277,7 +3277,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S16-26.json`
 - **Holds:** `S16-26`
-- **Note:** Examples list: assassinations, COINTELPRO, militarization, carceral state. [book] "state-sanctioned assassinations"
+- **Note:** Examples list: assassinations, COINTELPRO, militarization, carceral state. [book] “performs real material work against”
 
 ## S16-31
 
@@ -3324,14 +3324,14 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:coil_gun16x9.py:CoilGunInterface`
 - **Holds:** `S16-31`
-- **Note:** Segregation field collapse animation. [book] "abruptly collapses"
+- **Note:** Segregation field collapse animation. [claude] “abruptly collapses”
 
 ## S16-37
 
 - **Anchor:** `Emmanuel Theodore (76:05)`
 - **Type:** equation
 - **Render:** `manim:cards16x9.py:CardScene cards/S16-37.json`
-- **Note:** Equation 2.17 back-EMF introduced. [book] "Back-EMF"
+- **Note:** Equation 2.17 back-EMF introduced. [book] “The massive magnetic field of racial animus and segregation abruptly”
 
 ## S16-38
 
@@ -3339,7 +3339,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S16-37.json`
 - **Holds:** `S16-37`
-- **Note:** V_back-EMF term highlights. [book] "induced voltage surge"
+- **Note:** V_back-EMF term highlights. [book] “collapse generates a catastrophic Back-EMF”
 
 ## S16-39
 
@@ -3347,7 +3347,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S16-37.json`
 - **Holds:** `S16-37`
-- **Note:** L and di/dt terms highlight in narration order. [book] "cultural inductance"
+- **Note:** L and di/dt terms highlight in narration order. [claude] “cultural inductance”
 
 ## S16-40
 
@@ -3363,7 +3363,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S16-37.json`
 - **Holds:** `S16-37`
-- **Note:** Large L times rapid di/dt yields surge magnitude. [book] "produces a large opposing voltage surge"
+- **Note:** Large L times rapid di/dt yields surge magnitude. [claude] “produces a large opposing voltage surge”
 
 ## S16-42
 
@@ -3371,7 +3371,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S16-37.json`
 - **Holds:** `S16-37`
-- **Note:** Backlash manifestations: white flight, KKK, vigilante violence, Buffer panic. [book] "fascist backlash"
+- **Note:** Backlash manifestations: white flight, KKK, vigilante violence, Buffer panic. [book] “voltage surge is the fascist backlash”
 
 ## S16-43
 
@@ -3379,7 +3379,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:coil_gun16x9.py:CoilGunInterface`
 - **Holds:** `S16-31`
-- **Note:** Flyback diode shunts energy as waste heat in amateur design. [book] "flyback diode"
+- **Note:** Flyback diode shunts energy as waste heat in amateur design. [book] “white flight, the rise of the Ku Klux Klan, vigilante violence, and the panic of the Buffer Class”
 
 ## S16-44
 
@@ -3387,7 +3387,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:coil_gun16x9.py:CoilGunInterface`
 - **Holds:** `S16-31`
-- **Note:** Elite capture surge instead of dissipating. [book] "capture and weaponize this surge"
+- **Note:** Elite capture surge instead of dissipating. [book] “energy as waste heat through a flyback diode”
 
 ## S16-45
 
@@ -3410,7 +3410,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Anchor:** `Emmanuel Theodore (77:26)`
 - **Type:** equation
 - **Render:** `manim:cards16x9.py:CardScene cards/S16-47.json`
-- **Note:** Equation 2.18 recovered energy introduced. [book] "recovered energy equation"
+- **Note:** Equation 2.18 recovered energy introduced. [book] “reactionary fear funded the militarization of police”
 
 ## S16-48
 
@@ -3418,7 +3418,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S16-47.json`
 - **Holds:** `S16-47`
-- **Note:** U_recovered term highlights. [book] "total captured energy"
+- **Note:** U_recovered term highlights. [book] “recovered energy equation quantifies”
 
 ## S16-49
 
@@ -3426,7 +3426,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S16-47.json`
 - **Holds:** `S16-47`
-- **Note:** L and I terms before closed form. [book] "steady-state extraction current"
+- **Note:** L and I terms before closed form. [book] “steady-state extraction, $j\psi_s$ performs zero material work in the direction of the extraction current”
 
 ## S16-50
 
@@ -3442,7 +3442,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S16-47.json`
 - **Holds:** `S16-47`
-- **Note:** Greater L and I imply more harvestable stored energy. [book] "more stored energy available for recovery"
+- **Note:** Greater L and I imply more harvestable stored energy. [claude] “more stored energy available for recovery”
 
 ## S16-52
 
@@ -3490,7 +3490,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Anchor:** `Emmanuel Theodore (78:46)`
 - **Type:** diagram
 - **Render:** `manim:fractal16x9.py:FractalExecution`
-- **Note:** Fractal virus zoom opens segment. [book] "executes as a fractal virus"
+- **Note:** Fractal virus zoom opens segment. [book] “recurs with local variation”
 
 ## S17-02
 
@@ -3505,14 +3505,14 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:fractal16x9.py:FractalExecution`
 - **Holds:** `S17-01`
-- **Note:** WAN-to-local-drive replication animation. [book] "from the global wide area network down to the individual user's local drive"
+- **Note:** WAN-to-local-drive replication animation. [book] “network, from the global WAN down to the individual user's local drive”
 
 ## S17-04
 
 - **Anchor:** `Emmanuel Theodore (79:08)`
 - **Type:** card
 - **Render:** `manim:cards16x9.py:CardScene cards/S17-04.json`
-- **Note:** Five-scale table overview. [book] "five specific scales of operation"
+- **Note:** Five-scale table overview. [book] “sorting algorithm, the same extraction logic, the same partition function”
 
 ## S17-05
 
@@ -3520,7 +3520,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:fractal16x9.py:FractalExecution`
 - **Holds:** `S17-04`
-- **Note:** Scale 1 WAN: Global South extraction; Ch. 6 five-tier hierarchy. [book] "Western imperialism extracts resources from the Global South"
+- **Note:** Scale 1 WAN: Global South extraction; Ch. 6 five-tier hierarchy. [book] “resources from the Global South”
 
 ## S17-06
 
@@ -3528,7 +3528,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:fractal16x9.py:FractalExecution`
 - **Holds:** `S17-04`
-- **Note:** Planetary kernel shared with predatory min-max. [book] "predatory min-max function supplies the shared kernel"
+- **Note:** Planetary kernel shared with predatory min-max. [book] “Predatory Min-Max Function”
 
 ## S17-07
 
@@ -3536,7 +3536,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:fractal16x9.py:FractalExecution`
 - **Holds:** `S17-04`
-- **Note:** Scale 2 OS: national partition processes. [book] "National policies partition the domestic population"
+- **Note:** Scale 2 OS: national partition processes. [claude] “National policies partition the domestic population”
 
 ## S17-08
 
@@ -3544,7 +3544,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:fractal16x9.py:FractalExecution`
 - **Holds:** `S17-04`
-- **Note:** Redlining, gerrymandering, sentencing route resources upward. [book] "route resources efficiently upward"
+- **Note:** Redlining, gerrymandering, sentencing route resources upward. [book] “system-level process that partitions the national population and routes resources”
 
 ## S17-09
 
@@ -3552,7 +3552,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** card
 - **Render:** `manim:cards16x9.py:CardScene cards/S17-09.json`
 - **Holds:** `S17-04`
-- **Note:** Plain content-warning card before biological subroutine scale. [book] "content warning applies to the third scale"
+- **Note:** Plain content-warning card before biological subroutine scale. [claude] “content warning applies to the third scale”
 
 ## S17-10
 
@@ -3567,7 +3567,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S17-10.json`
 - **Holds:** `S17-10`
-- **Note:** Reproductive coercion as capital-generation tool. [book] "calculated capital-generation tool"
+- **Note:** Reproductive coercion as capital-generation tool. [book] “the 1662 Virginia law of partus sequitur ventrem”
 
 ## S17-12
 
@@ -3575,7 +3575,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S17-10.json`
 - **Holds:** `S17-10`
-- **Note:** Thistlewood / Abba record cited as documentation. [book] "one hundred fifty-five times"
+- **Note:** Thistlewood / Abba record cited as documentation. [book] “the systematic rape of enslaved women into a calculated”
 
 ## S17-13
 
@@ -3591,7 +3591,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S17-10.json`
 - **Holds:** `S17-10`
-- **Note:** Sexual torture against men documented as bucking. [book] "documents this public humiliation as bucking"
+- **Note:** Sexual torture against men documented as bucking. [book] “extraction included the complete consumptive extraction of bodily autonomy, extending far beyond sugar and tobacco”
 
 ## S17-15
 
@@ -3607,7 +3607,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S17-04.json`
 - **Holds:** `S17-04`
-- **Note:** Scale 4 application layer: intersectional subroutines. [book] "intersectionality"
+- **Note:** Scale 4 application layer: intersectional subroutines. [book] “Sexism, homophobia, transphobia, and ableism operate as subroutines”
 
 ## S17-17
 
@@ -3615,7 +3615,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S17-04.json`
 - **Holds:** `S17-04`
-- **Note:** Sexism, homophobia, transphobia, ableism listed. [book] "user-level subroutines"
+- **Note:** Sexism, homophobia, transphobia, ableism listed. [book] “partition users along an additional axis and rank their biological wetware's worth by proximity”
 
 ## S17-18
 
@@ -3623,7 +3623,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S17-04.json`
 - **Holds:** `S17-04`
-- **Note:** Default settings: white, male, wealthy, able-bodied, heterosexual. [book] "default settings remain"
+- **Note:** Default settings: white, male, wealthy, able-bodied, heterosexual. [book] “default settings white, male, wealthy”
 
 ## S17-19
 
@@ -3631,7 +3631,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S17-04.json`
 - **Holds:** `S17-04`
-- **Note:** Multiply-partitioned subjects: compounding extraction. [book] "compounding extraction rates"
+- **Note:** Multiply-partitioned subjects: compounding extraction. [book] “each partition multiplies the policy contact points through which the kernel”
 
 ## S17-20
 
@@ -3639,7 +3639,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S17-04.json`
 - **Holds:** `S17-04`
-- **Note:** Scale 5 micro: auto-exec colorism label. [book] "auto-exec colorism"
+- **Note:** Scale 5 micro: auto-exec colorism label. [book] “Micro / Auto-exec (Colorism)”
 
 ## S17-21
 
@@ -3663,7 +3663,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:fractal16x9.py:FractalExecution`
 - **Holds:** `S17-04`
-- **Note:** Partition logic replicated at intimate scale. [book] "replicates the Elite's partition logic"
+- **Note:** Partition logic replicated at intimate scale. [book] “partition logic at the most intimate scale”
 
 ## S17-24
 
@@ -3678,14 +3678,14 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Anchor:** `Emmanuel Theodore (81:51)`
 - **Type:** diagram
 - **Render:** `manim:fractal16x9.py:FractalExecution`
-- **Note:** Directed spanning tree rooted at E reaches every resolution. [book] "directed spanning tree rooted at E"
+- **Note:** Directed spanning tree rooted at E reaches every resolution. [book] “directed spanning tree rooted”
 
 ## S17-26
 
 - **Anchor:** `Emmanuel Theodore (82:00)`
 - **Type:** card
 - **Render:** `manim:cards16x9.py:CardScene cards/S17-26.json`
-- **Note:** Isomorphism table card introduced. [book] "isomorphism table maps the five canonical variables"
+- **Note:** Isomorphism table card introduced. [claude] “isomorphism table maps the five canonical variables”
 
 ## S17-27
 
@@ -3693,7 +3693,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S17-26.json`
 - **Holds:** `S17-26`
-- **Note:** Global row: IMF, World Bank, G7 at E tier. [book] "I M F, World Bank, and G Seven capital"
+- **Note:** Global row: IMF, World Bank, G7 at E tier. [claude] “I M F, World Bank, and G Seven capital”
 
 ## S17-28
 
@@ -3701,7 +3701,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S17-26.json`
 - **Holds:** `S17-26`
-- **Note:** Global puppet and enforcement tiers highlight. [book] "Comprador governments and international financial institutions"
+- **Note:** Global puppet and enforcement tiers highlight. [claude] “Comprador governments and international financial institutions”
 
 ## S17-29
 
@@ -3709,7 +3709,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S17-26.json`
 - **Holds:** `S17-26`
-- **Note:** System layer mapping intro. [book] "domestic capital class sits at E"
+- **Note:** System layer mapping intro. [claude] “domestic capital class sits at E”
 
 ## S17-30
 
@@ -3717,7 +3717,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S17-26.json`
 - **Holds:** `S17-26`
-- **Note:** Domestic puppet and enforcement tiers. [book] "Police and prisons act as the Enforcement class"
+- **Note:** Domestic puppet and enforcement tiers. [claude] “Police and prisons act as the Enforcement class”
 
 ## S17-31
 
@@ -3725,7 +3725,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S17-26.json`
 - **Holds:** `S17-26`
-- **Note:** Biological scale mapping row. [book] "slaveholders and the plantation economy occupy E"
+- **Note:** Biological scale mapping row. [claude] “slaveholders and the plantation economy occupy E”
 
 ## S17-32
 
@@ -3741,7 +3741,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S17-26.json`
 - **Holds:** `S17-26`
-- **Note:** Micro colorism: no independent elite. [book] "terminates at the exact same national Elite root"
+- **Note:** Micro colorism: no independent elite. [book] “independent Elite—it still terminates at the same national”
 
 ## S17-34
 
@@ -3749,7 +3749,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S17-26.json`
 - **Holds:** `S17-26`
-- **Note:** Internal puppet, enforcement, buffer within Out-group. [book] "Peer enforcement mechanisms provide the Enforcement class"
+- **Note:** Internal puppet, enforcement, buffer within Out-group. [claude] “Peer enforcement mechanisms provide the Enforcement class”
 
 ## S17-35
 
@@ -3757,7 +3757,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S17-26.json`
 - **Holds:** `S17-26`
-- **Note:** Lighter-complexioned internal buffer tier. [book] "internal buffer class"
+- **Note:** Lighter-complexioned internal buffer tier. [book] “Lighter-complexioned Out-group members”
 
 ## S17-36
 
@@ -3773,7 +3773,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S17-26.json`
 - **Holds:** `S17-26`
-- **Note:** Application-scale tier row completes table. [book] "Patriarchal capital occupies E"
+- **Note:** Application-scale tier row completes table. [claude] “Patriarchal capital occupies E”
 
 ## S17-38
 
@@ -3781,21 +3781,21 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S17-26.json`
 - **Holds:** `S17-26`
-- **Note:** Queer, trans, disabled bear compounded extraction. [book] "multiply-partitioned subjects bear the compounded extraction"
+- **Note:** Queer, trans, disabled bear compounded extraction. [book] “Queer, trans, disabled, and multiply-partitioned subjects”
 
 ## S17-39
 
 - **Anchor:** `Emmanuel Theodore (84:03)`
 - **Type:** diagram
 - **Render:** `manim:fractal16x9.py:FractalExecution`
-- **Note:** Model-minority objection framing: differential insertion. [book] "Differential insertion addresses the model minority objection"
+- **Note:** Model-minority objection framing: differential insertion. [book] “certain aggregate metrics, outperform the white Buffer Class”
 
 ## S17-40
 
 - **Anchor:** `Emmanuel Theodore (84:11)`
 - **Type:** card
 - **Render:** `manim:cards16x9.py:CardScene cards/S17-40.json`
-- **Note:** 1965 INA deliberate selection source card. [book] "deliberately recruited high-credential immigrants"
+- **Note:** 1965 INA deliberate selection source card. [book] “recruited professional-class, high-credential immigrants to fill specific labor gaps in medicine, engineering”
 
 ## S17-41
 
@@ -3803,7 +3803,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S17-40.json`
 - **Holds:** `S17-40`
-- **Note:** Buffer-tier insertion above O floor. [book] "primarily into Buffer-tier positions"
+- **Note:** Buffer-tier insertion above O floor. [book] “inserted primarily at Buffer-tier positions ($I_{\text{buffer}}$), not at the extraction floor occupied”
 
 ## S17-42
 
@@ -3827,7 +3827,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S17-40.json`
 - **Holds:** `S17-40`
-- **Note:** Optimizer fragments cross-racial solidarity. [book] "fragmenting cross-racial class solidarity"
+- **Note:** Optimizer fragments cross-racial solidarity. [book] “cross-racial class solidarity”
 
 ## S17-45
 
@@ -3835,14 +3835,14 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S17-40.json`
 - **Holds:** `S17-40`
-- **Note:** Differential success as architecture evidence. [book] "evidence for extraction calibrated by insertion point"
+- **Note:** Differential success as architecture evidence. [book] “extraction calibrated by insertion point”
 
 ## S17-46
 
 - **Anchor:** `Emmanuel Theodore (84:59)`
 - **Type:** card
 - **Render:** `manim:cards16x9.py:CardScene cards/S17-46.json`
-- **Note:** Statistical self-similarity compare card. [book] "statistical self-similarity"
+- **Note:** Statistical self-similarity compare card. [claude] “statistical self-similarity”
 
 ## S17-47
 
@@ -3858,7 +3858,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S17-46.json`
 - **Holds:** `S17-46`
-- **Note:** Structural approximation qualifier. [book] "structural approximation"
+- **Note:** Structural approximation qualifier. [book] “same optimization kernel ($\max\mathcal{E}$ subject to $M_{\text{eff}}<\tau$) governs each scale”
 
 ## S17-49
 
@@ -3866,7 +3866,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S17-46.json`
 - **Holds:** `S17-46`
-- **Note:** Directed spanning tree still terminates at Elite root. [book] "terminates at the same Elite root"
+- **Note:** Directed spanning tree still terminates at Elite root. [book] “Elite—it still terminates at the same”
 
 ## S17-50
 
@@ -3882,14 +3882,14 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:fractal16x9.py:FractalExecution`
 - **Holds:** `S17-01`
-- **Note:** Local rational explanations obscure global architecture. [book] "market forces or individual choice"
+- **Note:** Local rational explanations obscure global architecture. [claude] “market forces or individual choice”
 
 ## S17-52
 
 - **Anchor:** `Emmanuel Theodore (85:50)`
 - **Type:** equation
 - **Render:** `manim:interference16x9.py:PhaseLoading cards/S17-52.json`
-- **Note:** Equation 2.19 introduced with phasor dispersion setup. [book] "phase loading over multiple identity axes"
+- **Note:** Equation 2.19 introduced with phasor dispersion setup. [book] “phase-loading strategy over axes”
 
 ## S17-53
 
@@ -3897,7 +3897,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:interference16x9.py:PhaseLoading cards/S17-52.json`
 - **Holds:** `S17-52`
-- **Note:** Phi_j sum over axes k. [book] "sum from k equals one to K"
+- **Note:** Phi_j sum over axes k. [claude] “sum from k equals one to K”
 
 ## S17-54
 
@@ -3905,7 +3905,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:interference16x9.py:PhaseLoading cards/S17-52.json`
 - **Holds:** `S17-52`
-- **Note:** Phi_load as one minus mean phasor magnitude. [book] "one minus the magnitude of their mean unit phasor"
+- **Note:** Phi_load as one minus mean phasor magnitude. [claude] “one minus the magnitude of their mean unit phasor”
 
 ## S17-55
 
@@ -3913,7 +3913,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:interference16x9.py:PhaseLoading cards/S17-52.json`
 - **Holds:** `S17-52`
-- **Note:** Mean phasor formula on screen. [book] "sum from j equals one to N of e raised to i capital Phi sub j"
+- **Note:** Mean phasor formula on screen. [claude] “sum from j equals one to N of e raised to i capital Phi sub j”
 
 ## S17-56
 
@@ -3921,7 +3921,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:interference16x9.py:PhaseLoading cards/S17-52.json`
 - **Holds:** `S17-52`
-- **Note:** Unit arrows on complex plane. [book] "unit arrow on the complex plane"
+- **Note:** Unit arrows on complex plane. [claude] “unit arrow on the complex plane”
 
 ## S17-57
 
@@ -3929,7 +3929,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:interference16x9.py:PhaseLoading cards/S17-52.json`
 - **Holds:** `S17-52`
-- **Note:** Aligned phases: load approaches zero. [book] "phase load of zero and maximum solidarity"
+- **Note:** Aligned phases: load approaches zero. [book] “in phase (maximum solidarity)”
 
 ## S17-58
 
@@ -3937,7 +3937,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:interference16x9.py:PhaseLoading cards/S17-52.json`
 - **Holds:** `S17-52`
-- **Note:** Uniform spread: arrows cancel, load approaches one. [book] "phase load approaches one"
+- **Note:** Uniform spread: arrows cancel, load approaches one. [book] “phase (maximum solidarity) and approaches 1 when phases are uniformly distributed (maximum cancellation)”
 
 ## S17-59
 
@@ -3945,7 +3945,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:interference16x9.py:PhaseLoading cards/S17-52.json`
 - **Holds:** `S17-52`
-- **Note:** 1968–1990 fragmentation trajectory setup. [book] "Post-Civil Rights fragmentation between 1968 and 1990"
+- **Note:** 1968–1990 fragmentation trajectory setup. [book] “Post-Civil Rights fragmentation”
 
 ## S17-60
 
@@ -3953,7 +3953,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** card
 - **Render:** `manim:cards16x9.py:CardScene cards/S17-60.json`
 - **Holds:** `S17-60`
-- **Note:** ERA ~1972, Anita Bryant 1977–79, Moral Majority ~1979 injections. [book] "phase-dispersion strategy"
+- **Note:** ERA ~1972, Anita Bryant 1977–79, Moral Majority ~1979 injections. [book] “sexuality axis $\sim$1977–1979 via the Anita Bryant campaign”
 
 ## S17-61
 
@@ -3961,7 +3961,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S17-60.json`
 - **Holds:** `S17-60`
-- **Note:** ANES solidarity proxy named. [book] "A N E S rolling proxy for cross-racial class solidarity"
+- **Note:** ANES solidarity proxy named. [book] “rolling proxy for cross-racial class solidarity”
 
 ## S17-62
 
@@ -3969,7 +3969,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S17-60.json`
 - **Holds:** `S17-60`
-- **Note:** ANES means 0.078 → 0.214 → 0.403 on stat card. [book] "pre-activation mean before 1964 sat at point zero seven eight"
+- **Note:** ANES means 0.078 → 0.214 → 0.403 on stat card. [book] “rolling proxy for cross-racial class solidarity”
 
 ## S17-63
 
@@ -3977,7 +3977,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S17-60.json`
 - **Holds:** `S17-60`
-- **Note:** Confidence Tier 2 label on ANES card. [book] "confidence Tier 2"
+- **Note:** Confidence Tier 2 label on ANES card. [book] “activation-period mean $\approx 0.214$, post-activation”
 
 ## S17-64
 
@@ -3985,14 +3985,14 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S17-60.json`
 - **Holds:** `S17-60`
-- **Note:** Phase-angle definitions Tier 3 structural formalism. [book] "confidence Tier 3 structural formalism"
+- **Note:** Phase-angle definitions Tier 3 structural formalism. [book] “the phase values are ordinal proxies computed”
 
 ## S17-65
 
 - **Anchor:** `Emmanuel Theodore (88:02)`
 - **Type:** equation
 - **Render:** `manim:interference16x9.py:PhaseLoading cards/S17-65.json`
-- **Note:** phi ≈ π example for white working class on race axis. [book] "racial identity phase sat at pi"
+- **Note:** phi ≈ π example for white working class on race axis. [book] “remain ordinal, consistent with the Tier 3 structural classification of the equation's phase-angle definitions”
 
 ## S17-66
 
@@ -4000,7 +4000,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:interference16x9.py:PhaseLoading cards/S17-65.json`
 - **Holds:** `S17-65`
-- **Note:** Anti-phase placement maximizes compound load. [book] "contributes maximally to the compound load"
+- **Note:** Anti-phase placement maximizes compound load. [book] “immediately following the 1965 Voting Rights Act”
 
 ## S17-67
 
@@ -4008,7 +4008,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:interference16x9.py:PhaseLoading cards/S17-65.json`
 - **Holds:** `S17-65`
-- **Note:** Anti-phase at π suppresses solidarity signal after 1965 VRA. [book] "suppresses the solidarity signal"
+- **Note:** Anti-phase at π suppresses solidarity signal after 1965 VRA. [book] “material interests in cross-racial class solidarity are anti-phase with their activated racial identity”
 
 <!-- SEG 18 · §2.3.8 The Lexical Fractal -->
 
@@ -4017,7 +4017,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Anchor:** `Emmanuel Theodore (88:34)`
 - **Type:** diagram
 - **Render:** `manim:lexical16x9.py:LexicalFractal`
-- **Note:** On-screen beat for turn 1. [book] "This replication extends directly into our technical vocabulary."
+- **Note:** On-screen beat for turn 1. [claude] “This replication extends directly into our technical vocabulary.”
 
 ## S18-02
 
@@ -4025,7 +4025,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:lexical16x9.py:LexicalFractal`
 - **Holds:** `S18-01`
-- **Note:** Hold continues prior visual. [book] "The extraction kernel operates through institutions while supplying"
+- **Note:** Hold continues prior visual. [book] “The extraction kernel operates through institutions”
 
 ## S18-03
 
@@ -4033,21 +4033,21 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:lexical16x9.py:LexicalFractal`
 - **Holds:** `S18-01`
-- **Note:** Hold continues prior visual. [book] "These domains use this vocabulary to describe relationships"
+- **Note:** Hold continues prior visual. [book] “vocabulary colonizes a neutral domain, the partition logic propagates”
 
 ## S18-04
 
 - **Anchor:** `Emmanuel Theodore (89:02)`
 - **Type:** card
 - **Render:** `manim:cards16x9.py:CardScene cards/S18-04.json`
-- **Note:** On-screen beat for turn 4. [book] "Ron Eglash's 2007 study traces master and slave"
+- **Note:** On-screen beat for turn 4. [book] “Master-Slave Analogy in Technical Literature, provides the primary-source reconstruction”
 
 ## S18-05
 
 - **Anchor:** `Emmanuel Theodore (89:11)`
 - **Type:** card
 - **Render:** `manim:cards16x9.py:CardScene cards/S18-05.json`
-- **Note:** On-screen beat for turn 5. [book] "The earliest documented technical use appears in 1904."
+- **Note:** On-screen beat for turn 5. [book] “The earliest documented technical use”
 
 ## S18-06
 
@@ -4055,21 +4055,21 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S18-05.json`
 - **Holds:** `S18-05`
-- **Note:** Hold continues prior visual. [book] "Before World War II, the terminology was rare."
+- **Note:** Hold continues prior visual. [book] “before World War II”
 
 ## S18-07
 
 - **Anchor:** `Emmanuel Theodore (89:29)`
 - **Type:** card
 - **Render:** `manim:cards16x9.py:CardScene cards/S18-07.json`
-- **Note:** On-screen beat for turn 7. [book] "A 1959 hydraulic patent still placed the master"
+- **Note:** On-screen beat for turn 7. [book] “A 1959 hydraulic patent still”
 
 ## S18-08
 
 - **Anchor:** `Emmanuel Theodore (89:40)`
 - **Type:** card
 - **Render:** `manim:cards16x9.py:CardScene cards/S18-08.json`
-- **Note:** On-screen beat for turn 8. [book] "After 1960, the vocabulary spread rapidly. Since 1976,"
+- **Note:** On-screen beat for turn 8. [book] “After 1960 the vocabulary spread rapidly”
 
 ## S18-09
 
@@ -4077,14 +4077,14 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S18-08.json`
 - **Holds:** `S18-08`
-- **Note:** Hold continues prior visual. [book] "We see it in hydraulic brakes, clocks, flip-flop"
+- **Note:** Hold continues prior visual. [book] “database replication, continuous-integration build nodes”
 
 ## S18-10
 
 - **Anchor:** `Emmanuel Theodore (90:03)`
 - **Type:** card
 - **Render:** `manim:cards16x9.py:CardScene cards/S18-10.json`
-- **Note:** On-screen beat for turn 10. [book] "The same period documents alternative vocabularies such as"
+- **Note:** On-screen beat for turn 10. [book] “alternative vocabularies documented in the same period—primary/secondary, leader/follower, controller/target, parent/child, sender/receiver”
 
 ## S18-11
 
@@ -4092,7 +4092,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S18-10.json`
 - **Holds:** `S18-10`
-- **Note:** Hold continues prior visual. [book] "German uses Mutteruhr and Tochteruhr, meaning mother and"
+- **Note:** Hold continues prior visual. [book] “German Mutteruhr/Tochteruhr (mother/daughter clock), the Dutch dochterklok, the French horloge-mere/horloge-file”
 
 ## S18-12
 
@@ -4100,14 +4100,14 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S18-10.json`
 - **Holds:** `S18-10`
-- **Note:** Hold continues prior visual. [book] "The control relationship is fully expressible without the"
+- **Note:** Hold continues prior visual. [book] “the control relationship is fully expressible without”
 
 ## S18-13
 
 - **Anchor:** `Emmanuel Theodore (90:27)`
 - **Type:** card
 - **Render:** `manim:cards16x9.py:CardScene cards/S18-13.json`
-- **Note:** On-screen beat for turn 13. [book] "An accuracy audit shows that the metaphor fails"
+- **Note:** On-screen beat for turn 13. [book] “many of the domains where master-slave is used, the metaphor”
 
 ## S18-14
 
@@ -4115,14 +4115,14 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S18-13.json`
 - **Holds:** `S18-13`
-- **Note:** Hold continues prior visual. [book] "The reference documentation describes independent peer devices in"
+- **Note:** Hold continues prior visual. [claude] “The reference documentation describes independent peer devices in”
 
 ## S18-15
 
 - **Anchor:** `Emmanuel Theodore (90:48)`
 - **Type:** card
 - **Render:** `manim:cards16x9.py:CardScene cards/S18-15.json`
-- **Note:** On-screen beat for turn 15. [book] "A flip-flop circuit involves zero amplification. The master"
+- **Note:** On-screen beat for turn 15. [book] “master is commanded by the inputs just as much as the slave”
 
 ## S18-16
 
@@ -4130,14 +4130,14 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S18-15.json`
 - **Holds:** `S18-15`
-- **Note:** Hold continues prior visual. [book] "The terminology imposes a dominance schema on input-driven,"
+- **Note:** Hold continues prior visual. [book] “metaphor imposes a relational schema on hardware whose actual behavior is peer-to-peer or input-driven”
 
 ## S18-17
 
 - **Anchor:** `Emmanuel Theodore (91:04)`
 - **Type:** card
 - **Render:** `manim:cards16x9.py:CardScene cards/S18-17.json`
-- **Note:** On-screen beat for turn 17. [book] "In 1964, Kemeny and Kurtz's Dartmouth Timesharing System"
+- **Note:** On-screen beat for turn 17. [book] “runaway user program in the slave computer”
 
 ## S18-18
 
@@ -4145,7 +4145,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S18-17.json`
 - **Holds:** `S18-17`
-- **Note:** Hold continues prior visual. [book] "The designers almost certainly had no conscious intention"
+- **Note:** Hold continues prior visual. [book] “designers almost certainly had no conscious intention”
 
 ## S18-19
 
@@ -4153,7 +4153,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:lexical16x9.py:LexicalFractal`
 - **Holds:** `S18-01`
-- **Note:** Hold continues prior visual. [book] "This operates at a subconscious level. We identified"
+- **Note:** Hold continues prior visual. [book] “Mode 2 autonomous propagation”
 
 ## S18-20
 
@@ -4169,7 +4169,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:lexical16x9.py:LexicalFractal`
 - **Holds:** `S18-01`
-- **Note:** Hold continues prior visual. [book] "The lexical gradient preferentially supplies dominance-relation vocabulary, pointing"
+- **Note:** Hold continues prior visual. [book] “preferentially supply dominance-relation vocabulary, and the gradient points in the direction of reproduction”
 
 ## S18-22
 
@@ -4177,14 +4177,14 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:lexical16x9.py:LexicalFractal`
 - **Holds:** `S18-01`
-- **Note:** Hold continues prior visual. [book] "The vocabulary extracts a measurable pedagogical cost. It"
+- **Note:** Hold continues prior visual. [book] “operates as a measurable attrition mechanism in STEM pipelines”
 
 ## S18-23
 
 - **Anchor:** `Emmanuel Theodore (91:48)`
 - **Type:** card
 - **Render:** `manim:cards16x9.py:CardScene cards/S18-22.json`
-- **Note:** On-screen beat for turn 23. [book] "In a 1992 classroom, a Black computer engineering"
+- **Note:** On-screen beat for turn 23. [book] “A Black computer engineering”
 
 ## S18-24
 
@@ -4192,7 +4192,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S18-22.json`
 - **Holds:** `S18-22`
-- **Note:** Hold continues prior visual. [book] "He was one of the few African Americans"
+- **Note:** Hold continues prior visual. [book] “one of the few African-Americans”
 
 ## S18-25
 
@@ -4200,7 +4200,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S18-22.json`
 - **Holds:** `S18-22`
-- **Note:** Hold continues prior visual. [book] "The language functions as a gatekeeping signal. It"
+- **Note:** Hold continues prior visual. [book] “functions as a gatekeeping signal”
 
 ## S18-26
 
@@ -4215,7 +4215,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Anchor:** `Emmanuel Theodore (92:30)`
 - **Type:** card
 - **Render:** `manim:cards16x9.py:CardScene cards/S18-26.json`
-- **Note:** On-screen beat for turn 27. [book] "The deprecation arc required three decades of resistance."
+- **Note:** On-screen beat for turn 27. [book] “institutional shift (when it arrives) follows a visible external shock”
 
 ## S18-28
 
@@ -4223,7 +4223,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S18-26.json`
 - **Holds:** `S18-26`
-- **Note:** Hold continues prior visual. [book] "In November 2003, a Black Los Angeles County"
+- **Note:** Hold continues prior visual. [book] “November 2003: A Black”
 
 ## S18-29
 
@@ -4231,7 +4231,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S18-26.json`
 - **Holds:** `S18-26`
-- **Note:** Hold continues prior visual. [book] "The county memo cited cultural diversity and sensitivity."
+- **Note:** Hold continues prior visual. [book] “cultural diversity and sensitivity”
 
 ## S18-30
 
@@ -4239,7 +4239,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S18-26.json`
 - **Holds:** `S18-26`
-- **Note:** Hold continues prior visual. [book] "Between 2014 and 2018, Python, Django, Drupal, CouchDB,"
+- **Note:** Hold continues prior visual. [book] “Django, Drupal, Redis, CouchDB, and Python incrementally replaced master-slave terminology in their codebases”
 
 ## S18-31
 
@@ -4247,7 +4247,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S18-26.json`
 - **Holds:** `S18-26`
-- **Note:** Hold continues prior visual. [book] "Their replacements included leader and follower, primary and"
+- **Note:** Hold continues prior visual. [book] “leader/follower, primary/replica, or parent/worker”
 
 ## S18-32
 
@@ -4255,7 +4255,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S18-26.json`
 - **Holds:** `S18-26`
-- **Note:** Hold continues prior visual. [book] "Following the 2020 protests, GitHub made main the"
+- **Note:** Hold continues prior visual. [book] “GitHub announced that all new repositories would default to a branch named main”
 
 ## S18-33
 
@@ -4263,7 +4263,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S18-26.json`
 - **Holds:** `S18-26`
-- **Note:** Hold continues prior visual. [book] "The Linux policy arrived in July 2020. Version"
+- **Note:** Hold continues prior visual. [book] “specification version 7 (2021) replaced master-slave with controller-target”
 
 ## S18-34
 
@@ -4271,7 +4271,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S18-26.json`
 - **Holds:** `S18-26`
-- **Note:** Hold continues prior visual. [book] "The three-decade lag reveals the min-management function tuning"
+- **Note:** Hold continues prior visual. [book] “The three-decade lag”
 
 ## S18-35
 
@@ -4279,7 +4279,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S18-26.json`
 - **Holds:** `S18-26`
-- **Note:** Hold continues prior visual. [book] "The shock raised the institutional cost of inaction"
+- **Note:** Hold continues prior visual. [book] “raised the institutional cost of inaction”
 
 ## S18-36
 
@@ -4287,7 +4287,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S18-26.json`
 - **Holds:** `S18-26`
-- **Note:** Hold continues prior visual. [book] "This lag is Mode 2 propagation at the"
+- **Note:** Hold continues prior visual. [book] “Mode 2 propagation (Section 1.3.4) at the lexical layer”
 
 ## S18-37
 
@@ -4295,14 +4295,14 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:lexical16x9.py:LexicalFractal`
 - **Holds:** `S18-01`
-- **Note:** Hold continues prior visual. [book] "We add a sixth row to our scale"
+- **Note:** Hold continues prior visual. [book] “Institutional stewards of technical publication”
 
 ## S18-38
 
 - **Anchor:** `Emmanuel Theodore (94:16)`
 - **Type:** card
 - **Render:** `manim:cards16x9.py:CardScene cards/S18-37.json`
-- **Note:** On-screen beat for turn 38. [book] "Senior engineers and faculty act as the Puppet"
+- **Note:** On-screen beat for turn 38. [book] “Senior engineers and faculty”
 
 ## S18-39
 
@@ -4310,7 +4310,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S18-37.json`
 - **Holds:** `S18-37`
-- **Note:** Hold continues prior visual. [book] "The general STEM workforce acts as the Buffer"
+- **Note:** Hold continues prior visual. [book] “The general STEM workforce”
 
 ## S18-40
 
@@ -4318,7 +4318,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S18-37.json`
 - **Holds:** `S18-37`
-- **Note:** Hold continues prior visual. [book] "Underrepresented students form the Out-group. They pay the"
+- **Note:** Hold continues prior visual. [book] “marginal recruitment and retention cost that is never measured against $E$'s pedagogical convenience”
 
 ## S18-41
 
@@ -4326,7 +4326,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S18-37.json`
 - **Holds:** `S18-37`
-- **Note:** Hold continues prior visual. [book] "This book applies a reflexive audit to its"
+- **Note:** Hold continues prior visual. [book] “book carries embedded dominance vocabulary that predates and exceeds the chattel slavery context”
 
 ## S18-42
 
@@ -4334,14 +4334,14 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S18-37.json`
 - **Holds:** `S18-37`
-- **Note:** Hold continues prior visual. [book] "We use the term Elite because the partition"
+- **Note:** Hold continues prior visual. [book] “because the partition kernel this book analyzes was the source that licensed master class”
 
 ## S18-43
 
 - **Anchor:** `Emmanuel Theodore (95:03)`
 - **Type:** card
 - **Render:** `manim:cards16x9.py:CardScene cards/S18-42.json`
-- **Note:** On-screen beat for turn 43. [book] "Where the vocabulary of the algorithm appears in"
+- **Note:** On-screen beat for turn 43. [book] “Where the vocabulary of the algorithm appears”
 
 ## S18-44
 
@@ -4349,7 +4349,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S18-42.json`
 - **Holds:** `S18-42`
-- **Note:** Hold continues prior visual. [book] "Where the vocabulary is avoidable, we avoid it."
+- **Note:** Hold continues prior visual. [book] “Where the vocabulary is avoidable”
 
 <!-- SEG 19 · §2.3.9 The Corrupted Firewall -->
 
@@ -4526,7 +4526,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S19-22.json`
 - **Holds:** `S19-22`
-- **Note:** α_S and α_A weights highlighted as nonnegative sensitivities. [book] “with $\alpha_S,\alpha_A \ge 0$”
+- **Note:** α_S and α_A weights highlighted as nonnegative sensitivities. [claude] “with $\alpha_S,\alpha_A \ge 0$”
 
 ## S19-24 — SDO term gloss: hierarchy appetite amplifies status compensa
 
@@ -4667,7 +4667,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:kernel_userspace16x9.py:KernelUserSpace`
 - **Holds:** `S20-01`
-- **Note:** Kernel absorption animation: reform enters buffer. [book] “Lower system stress gives the kernel room to absorb the reform”
+- **Note:** Kernel absorption animation: reform enters buffer. [claude] “Lower system stress gives the kernel room to absorb the reform”
 
 ## S20-09 — Recompile sequence: filename change, extraction continu
 
@@ -4760,7 +4760,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S20-16.json`
 - **Holds:** `S20-16`
-- **Note:** Material wage paid to white buffer; max deferred. [book] “paid the buffer class while $\max$ was deferred, not eliminated”
+- **Note:** Material wage paid to white buffer; max deferred. [book] “buffer class while $\max$ was deferred, not eliminated”
 
 ## S20-21 — Partition preserved under kinetic-threat concession.
 
@@ -4768,7 +4768,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S20-16.json`
 - **Holds:** `S20-16`
-- **Note:** Partition preserved under kinetic-threat concession. [book] “preserved the racial partition while distributing a material wage”
+- **Note:** Partition preserved under kinetic-threat concession. [book] “(material wage) deployed under unprecedented kinetic threat”
 
 ## S20-22 — Reason 3 intro: post-1973 recovery trajectory.
 
@@ -4823,7 +4823,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:elite_wealth_fig29_16x9.py:EliteWealthFig29`
 - **Holds:** `S20-23`
-- **Note:** Line animates 1929 peak to ~7.5% trough then reversal. [book] “fell from approximately 25\% in 1929 to a low near 7.5\%”
+- **Note:** Line animates 1929 peak to ~7.5% trough then reversal. [claude] “fell from approximately 25\% in 1929 to a low near 7.5\%”
 
 ## S20-29 — Event markers: 1929, CRA→War on Drugs, 1973, 1994 Crime
 
@@ -4931,7 +4931,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S21-04.json`
 - **Holds:** `S21-04`
-- **Note:** Zurara / Slave Codes / Compromise synthesis row. [book] “converts that partition into a negotiated constitutional extraction formula”
+- **Note:** Zurara / Slave Codes / Compromise synthesis row. [book] “Constitutional Convention's Three-Fifths Compromise was a negotiated extraction formula”
 
 ## S21-08 — Mode 2 lane: autonomous propagation.
 
@@ -5008,7 +5008,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S21-16.json`
 - **Holds:** `S21-16`
-- **Note:** Abstract policy language preserves target geometry. [book] “preserves the target geometry”
+- **Note:** Abstract policy language preserves target geometry. [claude] “preserves the target geometry”
 
 ## S21-18 — 2020 Super Tuesday algorithmic correction marker.
 
@@ -5047,7 +5047,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S21-20.json`
 - **Holds:** `S21-20`
-- **Note:** Sequence animation: write → reproduce → repair. [book] “Mode 1 writes the architecture, Mode 2 reproduces it”
+- **Note:** Sequence animation: write → reproduce → repair. [claude] “Mode 1 writes the architecture, Mode 2 reproduces it”
 
 ## S21-23 — Natural / no one's fault appearance during Mode 2 domin
 
@@ -5071,7 +5071,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:three_modes16x9.py:ThreeModes`
 - **Holds:** `S21-01`
-- **Note:** Gradient alignment without complete system map. [book] “without personal malice or a complete map of the system”
+- **Note:** Gradient alignment without complete system map. [claude] “without personal malice or a complete map of the system”
 
 ## S21-26 — Conspiracy objection answered via Mode 2 preview.
 
@@ -5095,14 +5095,14 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Anchor:** `Emmanuel Theodore (110:28)`
 - **Type:** card
 - **Render:** `manim:cards16x9.py:CardScene cards/S22-01.json`
-- **Note:** Recap title names Equation 2.1; equation rail prepares. [book] “defined the binary partition in Equation 2.1”
+- **Note:** Recap title names Equation 2.1; equation rail prepares. [claude] “defined the binary partition in Equation 2.1”
 
 ## S22-02 — Equation 2.1 partition highlight
 
 - **Anchor:** `Emmanuel Theodore (110:35)`
 - **Type:** diagram
 - **Render:** `manim:eq_recap_close16x9.py:EqRecapClose`
-- **Note:** Equation 2.1 partition highlight; 2.5–2.6 causal reversal. [book] “Equations 2.5 and 2.6 reversed the causal arrow”
+- **Note:** Equation 2.1 partition highlight; 2.5–2.6 causal reversal. [book] “arrow—Elite economic interests $\rightarrow$ systemic racialization $\rightarrow$ interpersonal prejudice”
 
 ## S22-03 — Eq 2.8 minimum threshold
 
@@ -5110,7 +5110,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:eq_recap_close16x9.py:EqRecapClose`
 - **Holds:** `S22-02`
-- **Note:** Eq 2.8 minimum threshold; zero-day exploit beat. [book] “minimum kinetic threshold in Equation 2.8”
+- **Note:** Eq 2.8 minimum threshold; zero-day exploit beat. [claude] “minimum kinetic threshold in Equation 2.8”
 
 ## S22-04 — Equation 2.10 Interface Swap marker.
 
@@ -5118,7 +5118,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:eq_recap_close16x9.py:EqRecapClose`
 - **Holds:** `S22-02`
-- **Note:** Equation 2.10 Interface Swap marker. [book] “Equation 2.10 modeled the Interface Swap”
+- **Note:** Equation 2.10 Interface Swap marker. [claude] “Equation 2.10 modeled the Interface Swap”
 
 ## S22-05 — Equations 2.13–2.15 suppression envelope stack.
 
@@ -5126,7 +5126,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:eq_recap_close16x9.py:EqRecapClose`
 - **Holds:** `S22-02`
-- **Note:** Equations 2.13–2.15 suppression envelope stack. [book] “Equations 2.13 through 2.15 defined the suppression envelope”
+- **Note:** Equations 2.13–2.15 suppression envelope stack. [book] “class coherence and the suppression envelope”
 
 ## S22-06 — Equation 2.12 RLC backlash wave icon.
 
@@ -5134,7 +5134,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:eq_recap_close16x9.py:EqRecapClose`
 - **Holds:** `S22-02`
-- **Note:** Equation 2.12 RLC backlash wave icon. [book] “Equation 2.12 tracked the damped R L C backlash”
+- **Note:** Equation 2.12 RLC backlash wave icon. [claude] “Equation 2.12 tracked the damped R L C backlash”
 
 ## S22-07 — Equations 2.16–2.18 coil-gun energy transfer.
 
@@ -5142,7 +5142,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:eq_recap_close16x9.py:EqRecapClose`
 - **Holds:** `S22-02`
-- **Note:** Equations 2.16–2.18 coil-gun energy transfer. [book] “Equations 2.16 through 2.18 showed how the psychological wage stores energy”
+- **Note:** Equations 2.16–2.18 coil-gun energy transfer. [claude] “Equations 2.16 through 2.18 showed how the psychological wage stores energy”
 
 ## S22-08 — Equation 2.19 phase-loading fractal capstone.
 
@@ -5150,7 +5150,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:eq_recap_close16x9.py:EqRecapClose`
 - **Holds:** `S22-02`
-- **Note:** Equation 2.19 phase-loading fractal capstone. [book] “Equation 2.19 mapped the fractal phase loading”
+- **Note:** Equation 2.19 phase-loading fractal capstone. [book] “fractal replication can be expressed as a phase-loading”
 
 ## S22-09 — Δmax invariant century dataset badge.
 
@@ -5158,35 +5158,35 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:eq_recap_close16x9.py:EqRecapClose`
 - **Holds:** `S22-02`
-- **Note:** Δmax invariant century dataset badge. [book] “the delta max equals zero invariant held across a century”
+- **Note:** Δmax invariant century dataset badge. [book] “The invariant $\Delta\max = 0$ is a”
 
 ## S22-10 — Kernel behavior quote card.
 
 - **Anchor:** `Emmanuel Theodore (111:24)`
 - **Type:** card
 - **Render:** `manim:cards16x9.py:CardScene cards/S22-10.json`
-- **Note:** Kernel behavior quote card. [book] “extracts, fragments resistance, recompiles its interface”
+- **Note:** Kernel behavior quote card. [book] “interface of the extraction kernel the virus recognizes the threat and recompiles”
 
 ## S22-11 — Next episode: Chapter 3, Version 1.0, Portugal.
 
 - **Anchor:** `Emmanuel Theodore (111:34)`
 - **Type:** card
 - **Render:** `manim:cards16x9.py:CardScene cards/S22-11.json`
-- **Note:** Next episode: Chapter 3, Version 1.0, Portugal. [book] “Chapter 3, Version 1.0, and trace the virus to its origin”
+- **Note:** Next episode: Chapter 3, Version 1.0, Portugal. [claude] “Chapter 3, Version 1.0, and trace the virus to its origin”
 
 ## S22-12 — Podcast feed pointer card.
 
 - **Anchor:** `Emmanuel Theodore (111:42)`
 - **Type:** card
 - **Render:** `manim:cards16x9.py:CardScene cards/S22-12.json`
-- **Note:** Podcast feed pointer card. [book] “check out the podcast feed”
+- **Note:** Podcast feed pointer card. [claude] “check out the podcast feed”
 
 ## S22-13 — End card: book QR and AI-voice disclosure.
 
 - **Anchor:** `Emmanuel Theodore (111:47)`
 - **Type:** card
 - **Render:** `manim:cards16x9.py:CardScene cards/S22-13.json`
-- **Note:** End card: book QR and AI-voice disclosure. [book] “Scan the Q R code on screen to read The Original Power”
+- **Note:** End card: book QR and AI-voice disclosure. [claude] “Scan the Q R code on screen to read The Original Power”
 
 ## Scene inventory
 
