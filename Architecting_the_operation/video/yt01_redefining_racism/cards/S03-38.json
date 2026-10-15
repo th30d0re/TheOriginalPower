@@ -1,22 +1,39 @@
 {
   "kind": "table",
   "headline": "Table 2.1 · Set-Resolution Ladder",
+  "columns": [
+    "Resolution level",
+    "Set relationship",
+    "What becomes visible"
+  ],
   "items": [
     {
-      "title": "Coarse binary · U = I \\dot\\cup O",
-      "detail": "Primary boundary between included and excluded populations"
+      "cells": [
+        "Coarse binary",
+        "$U = I \\,\\dot\\cup\\, O$",
+        "The primary boundary of inclusion"
+      ]
     },
     {
-      "title": "In-group refinement · I = E \\dot\\cup P \\dot\\cup F \\dot\\cup I_buffer",
-      "detail": "Material benefit, interface, enforcement, and buffer tiers"
+      "cells": [
+        "In-group refinement",
+        "$I = E \\,\\dot\\cup\\, P_{\\text{uppet}} \\,\\dot\\cup\\, F_{\\text{enforce}} \\,\\dot\\cup\\, I_{\\text{buffer}}$",
+        "Only the Elite receives maximal benefit"
+      ]
     },
     {
-      "title": "Out-group refinement · O = \\dot\\bigcup_{j=0}^{m} O_j",
-      "detail": "Subgroups experience different extraction intensities"
+      "cells": [
+        "Out-group refinement",
+        "$O = \\dot\\bigcup_{j=0}^{m} O_j,\\quad O_0 = O_{\\text{racialized}}$",
+        "Subgroups at different extraction intensities"
+      ]
     },
     {
-      "title": "Recursive projection · X = X^+_alpha \\dot\\cup X^-_alpha",
-      "detail": "Local partitions under a narrower axis"
+      "cells": [
+        "Recursive projection",
+        "$X = X^{+}_{\\alpha} \\,\\dot\\cup\\, X^{-}_{\\alpha}\\ \\text{for}\\ X \\subseteq U$",
+        "Local In-groups and Out-groups on axis α"
+      ]
     }
   ],
   "sources": "Source: The Original Power, Table 2.1",

@@ -24,8 +24,12 @@ from common16x9 import BG, DIM, GOLD, INK, NAVY2, YT, YTScene, _norm, qr  # noqa
 
 FONT = "Noto Sans"
 XL, XR, TOP, FOOT = -6.55, 6.55, 3.55, -3.55  # safe box on the 14.2 x 8 frame
+FRAME_W = 1920 / 1080 * 8.0  # manim frame width (≈14.2)
+TABLE_GRID_W = max(12.8, FRAME_W * 0.90)
 BODY_TOP, BODY_BOTTOM = 2.25, -2.95
 QR_SIDE = 1.25
+_INLINE_MATH = re.compile(r"\$([^$]+)\$")
+
 STOP = set("""the a an of and or to in on is are was were be by for with as at that this it its from which into
 their his her they them who what when than then also has have had not no one two three four five six
 same each every these those there here over under between through within about after before during
@@ -35,28 +39,121 @@ should will shall must does did been being can may might""".split())
 
 # ── text ──────────────────────────────────────────────────────────────────
 
+def _math_spans(s):
+    """Split on $...$; return None when the string has no math delimiters."""
+    s = str(s)
+    if "$" not in s:
+        return None
+    spans, pos = [], 0
+    for hit in _INLINE_MATH.finditer(s):
+        if hit.start() > pos:
+            spans.append(("text", s[pos:hit.start()]))
+        spans.append(("math", hit.group(1).strip()))
+        pos = hit.end()
+    if pos < len(s):
+        spans.append(("text", s[pos:]))
+    return spans or None
+
+
+def _mathtex(tex, size, color):
+    tex = " ".join(str(tex).split())
+    try:
+        return m.MathTex(tex, font_size=max(size, 28), color=color)
+    except Exception:
+        return text(tex.replace("\\", ""), size, color)
+
+
+def inline(s, size=36, color=INK, weight="NORMAL", slant="NORMAL"):
+    """One line: Text spans plus MathTex for each $...$ segment, baseline-aligned."""
+    spans = _math_spans(s)
+    if spans is None:
+        return text(s, size, color, weight, slant)
+    pieces = []
+    for kind, chunk in spans:
+        if kind == "text" and chunk:
+            pieces.append(text(chunk, size, color, weight, slant))
+        elif kind == "math" and chunk:
+            pieces.append(_mathtex(chunk, size, color))
+    if not pieces:
+        return m.VGroup()
+    row = m.VGroup(*pieces)
+    row.arrange(m.RIGHT, buff=0.05, aligned_edge=m.DOWN)
+    return row
+
+
+def _mixed_tokens(s):
+    spans = _math_spans(s) or [("text", str(s))]
+    tokens = []
+    for kind, chunk in spans:
+        if kind == "math":
+            tokens.append(("math", chunk))
+        else:
+            chunk = " ".join(chunk.split())
+            for word in chunk.split(" ") if chunk else []:
+                tokens.append(("text", word))
+    return tokens
+
+
+def _inline_from_tokens(toks, size, color, weight, slant):
+    out = ""
+    for kind, chunk in toks:
+        if kind == "math":
+            out += f"${chunk}$"
+        else:
+            out += (" " if out and not out.endswith("$") else "") + chunk
+    return inline(out, size, color, weight, slant)
+
+
+def _line_width_tokens(toks, width, size, color, weight, slant):
+    mob = _inline_from_tokens(toks, size, color, weight, slant)
+    if mob.width > width:
+        mob.scale_to_fit_width(width)
+    return mob.width
+
+
 def text(s, size=36, color=INK, weight="NORMAL", slant="NORMAL"):
+    if _math_spans(s) is not None:
+        return inline(s, size, color, weight, slant)
     return m.Text(s, font=FONT, font_size=max(size, 28), color=color, weight=weight, slant=slant)
 
 
-def para(s, width, size=36, color=INK, weight="NORMAL", max_lines=4, slant="NORMAL", center=False):
+def para(s, width, size=36, color=INK, weight="NORMAL", max_lines=4, slant="NORMAL", center=False, min_size=28):
     """Greedy word wrap measured on the real glyphs; shrinks the size until it fits max_lines."""
     s = " ".join(str(s).split())
-    while True:
-        lines, cur = [], ""
-        for word in s.split(" "):
-            trial = f"{cur} {word}".strip()
-            if cur and text(trial, size, weight=weight, slant=slant).width > width:
+    floor = max(28, min_size)
+    if _math_spans(s) is None:
+        while True:
+            lines, cur = [], ""
+            for word in s.split(" "):
+                trial = f"{cur} {word}".strip()
+                if cur and text(trial, size, weight=weight, slant=slant).width > width:
+                    lines.append(cur)
+                    cur = word
+                else:
+                    cur = trial
+            if cur:
                 lines.append(cur)
-                cur = word
-            else:
-                cur = trial
-        if cur:
-            lines.append(cur)
-        if len(lines) <= max_lines or size <= 28:
-            break
-        size = max(28, int(size * 0.9))
-    group = m.VGroup(*[text(line, size, color, weight, slant) for line in lines])
+            if len(lines) <= max_lines or size <= floor:
+                break
+            size = max(floor, int(size * 0.9))
+        group = m.VGroup(*[text(line, size, color, weight, slant) for line in lines])
+    else:
+        while True:
+            lines, cur = [], []
+            for tok in _mixed_tokens(s):
+                trial = cur + [tok]
+                if cur and _line_width_tokens(trial, width, size, color, weight, slant) > width:
+                    lines.append(cur)
+                    cur = [tok]
+                else:
+                    cur = trial
+            if cur:
+                lines.append(cur)
+            if len(lines) <= max_lines or size <= floor:
+                break
+            size = max(floor, int(size * 0.9))
+        rendered = [_inline_from_tokens(toks, size, color, weight, slant) for toks in lines]
+        group = m.VGroup(*rendered)
     group.arrange(m.DOWN, buff=0.13 * size / 36, aligned_edge=m.ORIGIN if center else m.LEFT)
     if group.width > width:
         group.scale_to_fit_width(width)
@@ -401,16 +498,146 @@ class CardScene(YTScene):
             anims = []
             for j, r in enumerate(rows[: i + 1]):
                 on = j == i
-                anims += [r[0].animate.set_stroke(GOLD if on else NAVY2, 4 if on else 2),
-                          r[1].animate.set_color(GOLD if on else INK)]
+                anims += [r[0].animate.set_stroke(GOLD if on else NAVY2, 4 if on else 2)]
+                for k in range(1, len(r)):
+                    anims += [r[k].animate.set_color(GOLD if on else INK)]
             return anims
         return focus
 
+    def _table_col_widths(self, ncols, total_w):
+        if ncols == 3:
+            return [total_w * 0.14, total_w * 0.48, total_w * 0.38]
+        return [total_w / ncols] * ncols
+
+    def _table_math_cell(self, cell, width, min_font=40):
+        """Set-relationship column: MathTex ≥ min_font; width-fit scales the mob, not a parent group."""
+        s = str(cell).strip()
+        spans = _math_spans(s)
+        min_h = min_font / (m.config.pixel_height / m.config.frame_height)
+        if spans and not any(kind == "text" and chunk.strip() for kind, chunk in spans):
+            tex = " ".join(chunk for kind, chunk in spans if kind == "math")
+            mob = _mathtex(tex, min_font, INK)
+            if mob.width > width:
+                scale = width / mob.width
+                if mob.height * scale >= min_h * 0.98:
+                    mob.scale(scale)
+            return mob
+        mob = inline(s, min_font, INK)
+        if mob.width > width:
+            scale = width / mob.width
+            if mob.height * scale >= min_h * 0.98:
+                mob.scale(scale)
+        return mob
+
+    def _table_text_cell(self, cell, width, size, weight="NORMAL", max_lines=2):
+        size = max(size, 32)
+        mob = para(cell, width, size, INK, weight, max_lines=max_lines, min_size=32)
+        if len(mob) > max_lines:
+            mob = m.VGroup(*mob[:max_lines])
+        return mob
+
+    def _table_grid_row(self, cells, col_ws, label_size=32, math_min=40, header=False, row_h=None):
+        width = sum(col_ws)
+        ncols = len(col_ws)
+        mobs = []
+        for i, cell in enumerate(cells[:ncols]):
+            pad = 0.20
+            w = col_ws[i] - pad
+            if header:
+                weight = "BOLD"
+                if i == 1 and _math_spans(str(cell)):
+                    mobs.append(self._table_math_cell(cell, w, min_font=32))
+                else:
+                    mobs.append(self._table_text_cell(cell, w, label_size, weight, max_lines=2))
+            elif i == 1:
+                mobs.append(self._table_math_cell(cell, w, min_font=math_min))
+            else:
+                weight = "BOLD" if i == 0 else "NORMAL"
+                mobs.append(self._table_text_cell(cell, w, label_size, weight, max_lines=2))
+        while len(mobs) < ncols:
+            mobs.append(m.VGroup())
+        pad_v, pad_h = 0.18, 0.14
+        content_h = max((m.height for m in mobs if len(m)), default=0) + pad_v
+        h = max(row_h or 0, content_h)
+        panel = m.RoundedRectangle(width=width, height=h, corner_radius=0.1, fill_color=NAVY2, fill_opacity=1,
+                                   stroke_color=NAVY2, stroke_width=2)
+        for i, mob in enumerate(mobs):
+            if not len(mob):
+                continue
+            x = panel.get_left()[0] + pad_h + sum(col_ws[:i])
+            y_top = panel.get_top()[1] - (h - mob.height) / 2
+            mob.move_to([x, y_top, 0], aligned_edge=m.UL)
+        return m.VGroup(panel, *mobs)
+
+    def _build_table_grid(self, columns, items):
+        width = TABLE_GRID_W
+        ncols = len(columns) if columns else max(len(it.get("cells") or []) for it in items)
+        col_ws = self._table_col_widths(ncols, width)
+        header = self._table_grid_row(columns, col_ws, label_size=32, math_min=32, header=True) if columns else m.VGroup()
+        rows = m.VGroup()
+        for it in items:
+            cells = it.get("cells")
+            if not cells:
+                cells = [it.get("title", ""), it.get("detail", "")]
+            rows.add(self._table_grid_row(cells, col_ws, label_size=32, math_min=40))
+        rows.arrange(m.DOWN, buff=0.10)
+        return header, rows, col_ws
+
+    def _fit_table_grid_vertical(self, header, body, col_ws, columns, items, room):
+        gap_hdr, row_gap = 0.08, 0.06
+        n = len(items)
+        if not n:
+            return m.VGroup(header, body).arrange(m.DOWN, buff=gap_hdr) if len(header) else body
+        if columns:
+            header = self._table_grid_row(columns, col_ws, label_size=28, math_min=28, header=True)
+        hdr_h = header[0].height if len(header) else 0
+        min_heights = []
+        for it in items:
+            cells = it.get("cells")
+            if not cells:
+                cells = [it.get("title", ""), it.get("detail", "")]
+            row = self._table_grid_row(cells, col_ws, label_size=32, math_min=40)
+            min_heights.append(row[0].height)
+        min_body = sum(min_heights) + row_gap * max(0, n - 1)
+        foot_pad = 0.20
+        slack = room - foot_pad - hdr_h - gap_hdr - min_body
+        extra = slack / n if slack > 0 and n else 0
+        new_rows = m.VGroup()
+        for it, mh in zip(items, min_heights):
+            cells = it.get("cells")
+            if not cells:
+                cells = [it.get("title", ""), it.get("detail", "")]
+            new_rows.add(self._table_grid_row(cells, col_ws, label_size=32, math_min=40, row_h=mh + extra))
+        new_rows.arrange(m.DOWN, buff=row_gap)
+        block = m.VGroup(header, new_rows).arrange(m.DOWN, buff=gap_hdr) if len(header) else new_rows
+        block.align_to([XL, self.bottom() + foot_pad, 0], m.DOWN)
+        block.align_to([XL, 0, 0], m.LEFT)
+        return block
+
     def kind_table(self):
-        items = self.data["items"]
+        d = self.data
+        items = d["items"]
+        columns = d.get("columns")
+        grid = columns or any(isinstance(it.get("cells"), list) for it in items)
         room = self.body_top - self.bottom()
+        if grid:
+            header, body, col_ws = self._build_table_grid(columns or [], items)
+            block = self._fit_table_grid_vertical(header, body, col_ws, columns or [], items, room)
+            if columns:
+                self.play(m.FadeIn(block[0]), run_time=0.35)
+                body_out = block[1]
+            else:
+                body_out = block
+            labels = []
+            fallbacks = []
+            for it in items:
+                cells = it.get("cells") or [it.get("title", ""), it.get("detail", "")]
+                labels.append(cells[0])
+                fallbacks.append(cells[1] if len(cells) > 1 else it.get("detail"))
+            self.reveal(list(body_out), labels, fallbacks, self.focus_rows(body_out))
+            return
         for size, stacked in ((36, False), (33, False), (30, False), (28, False), (30, True), (28, True)):
-            tw = min(4.6, max(2.4, max(text(it.get("title", ""), size, weight="BOLD").width for it in items) + 0.6))
+            tw = min(4.6, max(2.4, max(inline(it.get("title", ""), size, INK, "BOLD").width for it in items) + 0.6))
             rows = self.rows(items, title_w=tw, size=size, stacked=stacked)
             if rows.height <= room:
                 break
