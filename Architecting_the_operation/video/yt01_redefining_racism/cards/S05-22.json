@@ -1,0 +1,22 @@
+{
+  "kind": "figure",
+  "headline": "Figure 2.2 · Causal reversal",
+  "items": [
+    {
+      "title": "Conventional",
+      "detail": "Individual prejudice → discriminatory actions → systemic outcomes"
+    },
+    {
+      "title": "Historical",
+      "detail": "Elite economic interests → systemic racialization → interpersonal prejudice"
+    },
+    {
+      "title": "Maintenance",
+      "detail": "Cultivated prejudice feeds back into systemic racialization"
+    }
+  ],
+  "sources": "Source: The Original Power, Figure 2.2",
+  "qrUrl": null,
+  "image": "figures/fig2.2_p112.png",
+  "caption": "The solid arrows show the generative sequence; the dashed arc shows reinforcing feedback."
+}

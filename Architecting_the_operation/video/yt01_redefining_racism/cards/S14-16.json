@@ -1,0 +1,26 @@
+{
+  "kind": "figure",
+  "headline": "Figure 2.8 · Coherence vs suppression",
+  "items": [
+    {
+      "title": "M(t)",
+      "detail": "Class coherence (solid blue)"
+    },
+    {
+      "title": "Σ_sup(t)",
+      "detail": "Suppression envelope (dashed red)"
+    },
+    {
+      "title": "τ",
+      "detail": "Critical threshold (dotted)"
+    },
+    {
+      "title": "Qualifier",
+      "detail": "Curve shapes illustrative — no measured values implied"
+    }
+  ],
+  "sources": "Source: The Original Power, Figure 2.8",
+  "qrUrl": null,
+  "image": "figures/fig2.8_p140.png",
+  "caption": "Kernel expands Σ_sup(t) to hold M_eff(t) below τ after the reform-shock marker."
+}

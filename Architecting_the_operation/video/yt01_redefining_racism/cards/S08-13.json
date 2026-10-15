@@ -1,0 +1,23 @@
+{
+  "kind": "equation",
+  "headline": "Equation 2.7 · Kernel objective",
+  "items": [],
+  "sources": "Source: The Original Power, Equation 2.7",
+  "qrUrl": null,
+  "latex": "\\max \\mathcal{E}(t) \\quad \\text{subject to} \\quad M(t) < \\tau",
+  "number": "2.7",
+  "terms": [
+    {
+      "latex": "\\mathcal{E}(t)",
+      "gloss": "time-indexed extraction output"
+    },
+    {
+      "latex": "M(t)",
+      "gloss": "class-coherence risk"
+    },
+    {
+      "latex": "\\tau",
+      "gloss": "crash threshold"
+    }
+  ]
+}

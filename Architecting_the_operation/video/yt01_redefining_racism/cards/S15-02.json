@@ -1,0 +1,23 @@
+{
+  "kind": "source",
+  "headline": "Case-study data sources",
+  "items": [
+    {
+      "title": "Union density",
+      "detail": "U.S. Bureau of Labor Statistics; Troy & Sheflin historical series",
+      "qrUrl": "https://www.bls.gov/news.release/union2.toc.htm"
+    },
+    {
+      "title": "Top-decile wealth",
+      "detail": "World Inequality Database · Piketty, Saez, Zucman",
+      "qrUrl": "https://wid.world"
+    },
+    {
+      "title": "Incarceration",
+      "detail": "Bureau of Justice Statistics; Sentencing Project compilations",
+      "qrUrl": "https://bjs.ojp.gov/data-collection/national-prisoner-statistics-nps-program"
+    }
+  ],
+  "sources": "Sources: bls_union_membership; piketty; bjs_prisoners; sentencing_project",
+  "qrUrl": null
+}

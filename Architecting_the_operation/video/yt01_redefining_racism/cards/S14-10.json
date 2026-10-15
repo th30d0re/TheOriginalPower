@@ -1,0 +1,27 @@
+{
+  "kind": "equation",
+  "headline": "Equation 2.15 · Effective coherence",
+  "items": [],
+  "sources": "Source: The Original Power, Equation 2.15 · Confidence Tier 3 (ordinal)",
+  "qrUrl": null,
+  "latex": "M_{\\text{eff}}(t) = M(t) - \\lambda \\Phi_{\\text{load}}(t), \\quad M_{\\text{eff}}(t) > \\tau",
+  "number": "2.15",
+  "terms": [
+    {
+      "latex": "M(t)",
+      "gloss": "raw class coherence"
+    },
+    {
+      "latex": "\\lambda \\Phi_{\\text{load}}(t)",
+      "gloss": "phase-shift loading penalty"
+    },
+    {
+      "latex": "M_{\\text{eff}}(t)",
+      "gloss": "effective coherence after fragmentation load"
+    },
+    {
+      "latex": "\\tau",
+      "gloss": "crash threshold"
+    }
+  ]
+}

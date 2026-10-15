@@ -1,0 +1,23 @@
+{
+  "kind": "equation",
+  "headline": "Equation 2.6 · Elite causal arrow",
+  "items": [],
+  "sources": "Source: The Original Power, Equation 2.6",
+  "qrUrl": null,
+  "latex": "\\text{Elite Economic Interests} \\rightarrow \\text{Systemic Racialization} \\rightarrow \\text{Interpersonal Prejudice}",
+  "number": "2.6",
+  "terms": [
+    {
+      "latex": "\\text{Elite Economic Interests}",
+      "gloss": "interests served by extraction"
+    },
+    {
+      "latex": "\\text{Systemic Racialization}",
+      "gloss": "legal and institutional racial partition"
+    },
+    {
+      "latex": "\\text{Interpersonal Prejudice}",
+      "gloss": "cultivated maintenance attitude"
+    }
+  ]
+}

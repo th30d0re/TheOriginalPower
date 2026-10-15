@@ -1,0 +1,31 @@
+{
+  "kind": "equation",
+  "headline": "Equation 2.1 · Initial binary model",
+  "items": [],
+  "sources": "Source: The Original Power, Equation 2.1",
+  "qrUrl": null,
+  "latex": "U = I \\,\\dot\\cup\\, O,\n\\qquad\nI \\cap O = \\varnothing .",
+  "number": "2.1",
+  "terms": [
+    {
+      "latex": "U",
+      "gloss": "population universe"
+    },
+    {
+      "latex": "I",
+      "gloss": "In-group"
+    },
+    {
+      "latex": "O",
+      "gloss": "Out-group"
+    },
+    {
+      "latex": "I \\cap O",
+      "gloss": "members shared by both sets"
+    },
+    {
+      "latex": "\\varnothing",
+      "gloss": "empty set"
+    }
+  ]
+}

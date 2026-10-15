@@ -1,0 +1,24 @@
+{
+  "kind": "timeline",
+  "headline": "Proxy playbook sequence",
+  "items": [
+    {
+      "title": "1 · Association",
+      "detail": "Link targets to stigmatized categories"
+    },
+    {
+      "title": "2 · Criminalization",
+      "detail": "Statutes encode proxy variables"
+    },
+    {
+      "title": "3 · Enforcement",
+      "detail": "Carceral infrastructure processes populations"
+    },
+    {
+      "title": "4 · Media legitimation",
+      "detail": "Narrative normalizes the enforcement layer"
+    }
+  ],
+  "sources": "Source: The Original Power, §2.3.5",
+  "qrUrl": null
+}

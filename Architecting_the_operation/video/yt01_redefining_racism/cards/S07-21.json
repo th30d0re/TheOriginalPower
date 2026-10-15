@@ -1,0 +1,28 @@
+{
+  "kind": "table",
+  "headline": "Runtime-layer anchors",
+  "items": [
+    {
+      "title": "Spatial infrastructure",
+      "detail": "P_spatial · Σ_sup"
+    },
+    {
+      "title": "Judicial software",
+      "detail": "P_jud"
+    },
+    {
+      "title": "Carceral firewall",
+      "detail": "P_carceral"
+    },
+    {
+      "title": "Physical output",
+      "detail": "P_lead · Σ_sup · τ"
+    },
+    {
+      "title": "Embodied runtime",
+      "detail": "Δ(t) · Π_race · O_racialized"
+    }
+  ],
+  "sources": "Source: The Original Power, Chapter 2 runtime-layer anchor table",
+  "qrUrl": null
+}

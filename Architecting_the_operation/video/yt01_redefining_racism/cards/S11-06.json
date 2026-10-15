@@ -1,0 +1,20 @@
+{
+  "kind": "table",
+  "headline": "Tajfel · Bristol minimal groups",
+  "items": [
+    {
+      "title": "Assignment",
+      "detail": "Random nominal groups (dot estimation or Klee/Kandinsky labels)"
+    },
+    {
+      "title": "Task",
+      "detail": "Allocate money between anonymous in-group and out-group members"
+    },
+    {
+      "title": "Result",
+      "detail": "Maximum difference beats maximum joint profit and in-group profit"
+    }
+  ],
+  "sources": "Source: Tajfel 1970, Scientific American",
+  "qrUrl": "https://doi.org/10.1038/scientificamerican1170-96"
+}

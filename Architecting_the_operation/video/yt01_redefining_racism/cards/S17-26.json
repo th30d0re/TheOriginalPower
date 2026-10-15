@@ -1,0 +1,28 @@
+{
+  "kind": "table",
+  "headline": "Isomorphism table \u00b7 tier variables by scale",
+  "items": [
+    {
+      "title": "Macro / WAN",
+      "detail": "E: IMF, World Bank, G7 \u00b7 P: comprador IFIs \u00b7 F: NATO, PMCs \u00b7 I: Global North working class \u00b7 O: Global South debtors"
+    },
+    {
+      "title": "System / OS",
+      "detail": "E: domestic capital \u00b7 P: Congress, judiciary \u00b7 F: police, prisons \u00b7 I: white working class \u00b7 O: racialized minorities"
+    },
+    {
+      "title": "Biological / .exe",
+      "detail": "E: slaveholders \u00b7 P: church + partus law \u00b7 F: overseers \u00b7 I: poor white yeoman \u00b7 O: enslaved reproductive capacity"
+    },
+    {
+      "title": "Application",
+      "detail": "E: patriarchal capital \u00b7 P: mainstream gatekeepers \u00b7 F: gender/sexuality enforcement \u00b7 I: normative straight/able working class \u00b7 O: queer, trans, disabled, multiply-partitioned"
+    },
+    {
+      "title": "Micro / colorism",
+      "detail": "Terminates at national E \u00b7 internal puppet/enforcement/buffer within Out-group"
+    }
+  ],
+  "sources": "Source: The Original Power, \u00a72.3.7 formal isomorphism mapping",
+  "qrUrl": null
+}

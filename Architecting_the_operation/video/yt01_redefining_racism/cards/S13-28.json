@@ -1,0 +1,23 @@
+{
+  "kind": "equation",
+  "headline": "Resonance escape · steady-state amplitude",
+  "items": [],
+  "sources": "Source: The Original Power, §2.3.6 resonance condition",
+  "qrUrl": null,
+  "latex": "\\omega = \\omega_0 = \\frac{1}{\\sqrt{LC}} \\quad ; \\quad |q_{\\text{res}}| = \\frac{V_0}{R\\,\\omega_0} \\quad ; \\quad Q_f = \\frac{1}{R}\\sqrt{\\frac{L}{C}}",
+  "number": null,
+  "terms": [
+    {
+      "latex": "\\omega = \\omega_0",
+      "gloss": "driving frequency matches natural frequency"
+    },
+    {
+      "latex": "|q_{\\text{res}}|",
+      "gloss": "steady-state charge amplitude at resonance"
+    },
+    {
+      "latex": "Q_f",
+      "gloss": "circuit quality factor"
+    }
+  ]
+}

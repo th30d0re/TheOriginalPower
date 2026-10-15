@@ -1,0 +1,23 @@
+{
+  "kind": "equation",
+  "headline": "Equation 2.5 · Conventional causal arrow",
+  "items": [],
+  "sources": "Source: The Original Power, Equation 2.5",
+  "qrUrl": null,
+  "latex": "\\text{Individual Prejudice} \\rightarrow \\text{Discriminatory Actions} \\rightarrow \\text{Systemic Outcomes}",
+  "number": "2.5",
+  "terms": [
+    {
+      "latex": "\\text{Individual Prejudice}",
+      "gloss": "proposed first cause"
+    },
+    {
+      "latex": "\\text{Discriminatory Actions}",
+      "gloss": "proposed intermediate mechanism"
+    },
+    {
+      "latex": "\\text{Systemic Outcomes}",
+      "gloss": "proposed final product"
+    }
+  ]
+}

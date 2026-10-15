@@ -1,0 +1,27 @@
+{
+  "kind": "equation",
+  "headline": "Equation 2.10 · Interface optimizer",
+  "items": [],
+  "sources": "Source: The Original Power, Equation 2.10",
+  "qrUrl": null,
+  "latex": "S^\\ast(t) = \\arg\\min_{S} \\left[C_{\\text{coercive}}(S,t) + C_{\\text{legitimacy}}(S,t) + C_{\\text{economic}}(S,t)\\right]",
+  "number": "2.10",
+  "terms": [
+    {
+      "latex": "S^\\ast(t)",
+      "gloss": "selected interface strategy at time t"
+    },
+    {
+      "latex": "C_{\\text{coercive}}(S,t)",
+      "gloss": "enforcement labor, solidarity risk, kinetic blowback"
+    },
+    {
+      "latex": "C_{\\text{legitimacy}}(S,t)",
+      "gloss": "ideological exposure to audiences and courts"
+    },
+    {
+      "latex": "C_{\\text{economic}}(S,t)",
+      "gloss": "direct expense and opportunity cost of strategy S"
+    }
+  ]
+}

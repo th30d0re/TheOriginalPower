@@ -1,0 +1,16 @@
+{
+  "kind": "source",
+  "headline": "Crawford et al. · pigmentation loci",
+  "items": [
+    {
+      "title": "Cohort",
+      "detail": "2,092 Africans measured for skin pigmentation"
+    },
+    {
+      "title": "Loci",
+      "detail": "SLC24A5, MFSD12, DDB1/TMEM138, OCA2/HERC2"
+    }
+  ],
+  "sources": "Source: Crawford et al. 2017, Science",
+  "qrUrl": "https://doi.org/10.1126/science.aan8433"
+}

@@ -1,0 +1,20 @@
+{
+  "kind": "table",
+  "headline": "Confidence tiers",
+  "items": [
+    {
+      "title": "Tier 1",
+      "detail": "Directly reported or transparently derived"
+    },
+    {
+      "title": "Tier 2",
+      "detail": "Public data with disclosed operationalization"
+    },
+    {
+      "title": "Tier 3",
+      "detail": "Ordinal or structural claim with stated basis"
+    }
+  ],
+  "sources": "Source: The Original Power, Empirical Methodology",
+  "qrUrl": null
+}

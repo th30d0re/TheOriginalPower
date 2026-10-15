@@ -1,0 +1,24 @@
+{
+  "kind": "stat_bars",
+  "headline": "Ordinal damping · ζ fits",
+  "items": [
+    {
+      "title": "1865 cycle",
+      "detail": "ζ = 0.17"
+    },
+    {
+      "title": "1964 cycle",
+      "detail": "ζ = 0.59"
+    },
+    {
+      "title": "2020 cycle",
+      "detail": "ζ = 0.97"
+    },
+    {
+      "title": "Interpretation",
+      "detail": "R/(2L) grows relative to ω₀ — illustrative parameters, not calibrated forecasts"
+    }
+  ],
+  "sources": "Source: The Original Power, precision qualifier · Section Laplace transfer",
+  "qrUrl": null
+}

@@ -1,0 +1,16 @@
+{
+  "kind": "compare",
+  "headline": "Statistical self-similarity",
+  "items": [
+    {
+      "title": "Claim",
+      "detail": "Same optimization kernel and five-tier recurrence across scales"
+    },
+    {
+      "title": "Limit",
+      "detail": "Structural approximation; local form varies; tree terminates at Elite root"
+    }
+  ],
+  "sources": "Source: The Original Power, \u00a72.3.7",
+  "qrUrl": null
+}

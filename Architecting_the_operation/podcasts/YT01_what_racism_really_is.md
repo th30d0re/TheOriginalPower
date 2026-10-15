@@ -394,7 +394,7 @@ Emmanuel Theodore (18:59)
 Equation 2.5 is the conventional arrow of prejudice.
 
 Emmanuel Theodore (19:02)
-Individual prejudice leads to discriminatory actions, which lead to systemic outcomes.
+Individual prejudice leads to discriminatory actions, which produce systemic outcomes.
 
 Emmanuel Theodore (19:07)
 Read the first arrow as a proposed causal link from attitudes to actions. Read the second as a proposed causal link from those actions to systemic outcomes.
@@ -415,7 +415,7 @@ Emmanuel Theodore (20:03)
 Equation 2.6 is the elite arrow.
 
 Emmanuel Theodore (20:06)
-Elite economic interests lead to systemic racialization, which leads to interpersonal prejudice.
+Elite economic interests produce systemic racialization, which leads to interpersonal prejudice.
 
 Emmanuel Theodore (20:11)
 The first term identifies the interests served by extraction. The first arrow connects those interests to systemic racialization: the legal and institutional organization of the racial partition.

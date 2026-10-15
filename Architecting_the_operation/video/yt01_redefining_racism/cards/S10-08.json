@@ -1,0 +1,16 @@
+{
+  "kind": "source",
+  "headline": "Jablonski & Chaplin · skin coloration",
+  "items": [
+    {
+      "title": "Gradient",
+      "detail": "Skin reflectance tracks ultraviolet radiation by latitude"
+    },
+    {
+      "title": "Trade-off",
+      "detail": "Folate protection versus vitamin D synthesis"
+    }
+  ],
+  "sources": "Source: Jablonski & Chaplin 2000, Journal of Human Evolution",
+  "qrUrl": "https://doi.org/10.1006/jhev.2000.0403"
+}

@@ -1,0 +1,23 @@
+{
+  "kind": "equation",
+  "headline": "Equation 2.19 \u00b7 Phase loading",
+  "items": [],
+  "sources": "Source: The Original Power, Equation 2.19",
+  "qrUrl": null,
+  "latex": "\\Phi_j = \\sum_{k=1}^{K} \\phi_{k,j}, \\qquad \\Phi_{\\text{load}}(t) = 1 - \\left|\\frac{1}{N}\\sum_{j=1}^{N} e^{i\\Phi_j}\\right|",
+  "number": "2.19",
+  "terms": [
+    {
+      "latex": "\\Phi_j",
+      "gloss": "compound phase for subgroup j"
+    },
+    {
+      "latex": "\\phi_{k,j}",
+      "gloss": "ordinal phase on identity axis k"
+    },
+    {
+      "latex": "\\Phi_{\\text{load}}(t)",
+      "gloss": "dispersion of subgroup phases (0 = aligned, 1 = cancelled)"
+    }
+  ]
+}

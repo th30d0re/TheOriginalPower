@@ -1,0 +1,16 @@
+{
+  "kind": "compare",
+  "headline": "Falsification condition",
+  "items": [
+    {
+      "title": "Violation",
+      "detail": "Sustained multi-decade top-0.1% decline without Interface Swap recovery"
+    },
+    {
+      "title": "Dataset outcome",
+      "detail": "Δmax = 0 holds across the full 1913–2020 arc"
+    }
+  ],
+  "sources": "Source: The Original Power, §2.3.10",
+  "qrUrl": null
+}

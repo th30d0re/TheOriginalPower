@@ -1,0 +1,28 @@
+{
+  "kind": "source",
+  "headline": "Intergenerational evidence · cautious inference",
+  "items": [
+    {
+      "title": "Heijmans et al. · 2008",
+      "detail": "Prenatal famine exposure and persistent methylation differences",
+      "qrUrl": "https://doi.org/10.1073/pnas.0806560105"
+    },
+    {
+      "title": "Yehuda et al. · 2016",
+      "detail": "Holocaust exposure and FKBP5 methylation",
+      "qrUrl": "https://doi.org/10.1016/j.biopsych.2015.08.005"
+    },
+    {
+      "title": "Costa et al. · 2018",
+      "detail": "Paternal Civil War prisoner-of-war trauma and sons' mortality",
+      "qrUrl": "https://doi.org/10.1073/pnas.1803630115"
+    },
+    {
+      "title": "Zhou and Ryan · 2023",
+      "detail": "Scoping review of human intergenerational stress transmission",
+      "qrUrl": "https://doi.org/10.3390/genes14081639"
+    }
+  ],
+  "sources": "Sources: Heijmans et al. 2008; Yehuda et al. 2016; Costa et al. 2018; Zhou and Ryan 2023",
+  "qrUrl": null
+}

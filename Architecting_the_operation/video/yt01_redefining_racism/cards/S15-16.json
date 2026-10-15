@@ -1,0 +1,20 @@
+{
+  "kind": "stat_bars",
+  "headline": "Confidence Tier 1",
+  "items": [
+    {
+      "title": "Span",
+      "detail": "55 years · annual resolution"
+    },
+    {
+      "title": "Components",
+      "detail": "Three independently sourced suppression proxies"
+    },
+    {
+      "title": "Direction",
+      "detail": "All three moved framework-predicted way"
+    }
+  ],
+  "sources": "Source: The Original Power, Post-1965 confidence tier",
+  "qrUrl": null
+}

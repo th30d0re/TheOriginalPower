@@ -1,0 +1,31 @@
+{
+  "kind": "equation",
+  "headline": "Equation 2.12 · Underdamped solution",
+  "items": [],
+  "sources": "Source: The Original Power, Equation 2.12",
+  "qrUrl": null,
+  "latex": "q(t) = Q_0\\,e^{-\\alpha t}\\!\\left[\\cos(\\omega_d t) + \\frac{\\alpha}{\\omega_d}\\sin(\\omega_d t)\\right]",
+  "number": "2.12",
+  "terms": [
+    {
+      "latex": "Q_0",
+      "gloss": "initial reform displacement amplitude"
+    },
+    {
+      "latex": "e^{-\\alpha t}",
+      "gloss": "exponential decay envelope"
+    },
+    {
+      "latex": "\\alpha",
+      "gloss": "decay rate R/(2L)"
+    },
+    {
+      "latex": "\\omega_d",
+      "gloss": "damped oscillation frequency"
+    },
+    {
+      "latex": "\\omega_0",
+      "gloss": "natural frequency 1/√(LC)"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "kind": "equation",
+  "headline": "Equation 2.11 · RLC governing equation",
+  "items": [],
+  "sources": "Source: The Original Power, Equation 2.11",
+  "qrUrl": null,
+  "latex": "L\\,\\ddot{q} + R\\,\\dot{q} + \\frac{1}{C}\\,q = V(t)",
+  "number": "2.11",
+  "terms": [
+    {
+      "latex": "L\\,\\ddot{q}",
+      "gloss": "inductive opposition to sudden current change"
+    },
+    {
+      "latex": "R\\,\\dot{q}",
+      "gloss": "bureaucratic and carceral dissipation"
+    },
+    {
+      "latex": "\\frac{1}{C}\\,q",
+      "gloss": "token-reform storage term"
+    },
+    {
+      "latex": "V(t)",
+      "gloss": "reform-shock driving voltage"
+    },
+    {
+      "latex": "q(t)",
+      "gloss": "equality-surplus charge; zero is extraction baseline"
+    }
+  ]
+}

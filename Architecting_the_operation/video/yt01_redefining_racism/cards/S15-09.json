@@ -1,0 +1,18 @@
+{
+  "kind": "figure",
+  "headline": "Figure 2.7d · Composite Σ_sup(t)",
+  "items": [
+    {
+      "title": "Period expansion",
+      "detail": ">23% composite index growth 1965–2020"
+    },
+    {
+      "title": "1994 benchmark",
+      "detail": "More than doubled 1965 baseline by 1994 Crime Bill era"
+    }
+  ],
+  "sources": "Source: Paper/data/eq08_10_backlash_wave.csv",
+  "qrUrl": null,
+  "image": "figures/eq08_10_backlash_wave_panel_d.png",
+  "caption": "Normalized composite suppression envelope Σ_sup = ψ_s + R + Φ_load."
+}

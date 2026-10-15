@@ -1,0 +1,25 @@
+{
+  "kind": "source",
+  "headline": "Cotton gin · Jevons Paradox",
+  "items": [
+    {
+      "title": "Jevons · 1865",
+      "detail": "Efficiency can induce higher total resource use"
+    },
+    {
+      "title": "Flachs et al. · 2025",
+      "detail": "Jevons Paradox and induced systemic effects",
+      "qrUrl": "https://doi.org/10.1111/joac.70006"
+    },
+    {
+      "title": "Baptist · 2014",
+      "detail": "Plantation slavery and American capitalism"
+    },
+    {
+      "title": "Lakwete · 2005",
+      "detail": "History of the cotton gin"
+    }
+  ],
+  "sources": "Sources: Jevons 1865; Flachs et al. 2025; Baptist 2014; Lakwete 2005",
+  "qrUrl": null
+}

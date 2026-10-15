@@ -1,0 +1,30 @@
+{
+  "kind": "figure",
+  "headline": "Figure 2.6 · Damped backlash wave",
+  "items": [
+    {
+      "title": "Shock 1",
+      "detail": "1865 Abolition impulse"
+    },
+    {
+      "title": "Overshoot 1",
+      "detail": "Black Codes and Convict Leasing (q < 0)"
+    },
+    {
+      "title": "Shock 2",
+      "detail": "1964 Civil Rights Act impulse"
+    },
+    {
+      "title": "Overshoot 2",
+      "detail": "Mass Incarceration era (q < 0)"
+    },
+    {
+      "title": "Parameters",
+      "detail": "Q₀, α, ω_d illustrative — not empirically calibrated"
+    }
+  ],
+  "sources": "Source: The Original Power, Figure 2.6",
+  "qrUrl": null,
+  "image": "figures/fig2.6_p135.png",
+  "caption": "Equality zone (q > 0) and extraction zone (q < 0) with two documented shock-and-overshoot cycles."
+}

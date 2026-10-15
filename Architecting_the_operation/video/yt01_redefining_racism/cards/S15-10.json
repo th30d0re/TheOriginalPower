@@ -1,0 +1,26 @@
+{
+  "kind": "figure",
+  "headline": "Figure 2.7 · Post-1965 backlash wave",
+  "items": [
+    {
+      "title": "(a)",
+      "detail": "Union density — Φ_load proxy"
+    },
+    {
+      "title": "(b)",
+      "detail": "Top-10% wealth — ψ_s proxy"
+    },
+    {
+      "title": "(c)",
+      "detail": "Incarceration — R(t) proxy"
+    },
+    {
+      "title": "(d)",
+      "detail": "Composite Σ_sup(t)"
+    }
+  ],
+  "sources": "Source: The Original Power, Figure 2.7 · eq08_10_backlash_wave notebook",
+  "qrUrl": null,
+  "image": "figures/eq08_10_backlash_wave.png",
+  "caption": "Carceral expansion as union density contracted; wealth concentration rose across the reform window."
+}

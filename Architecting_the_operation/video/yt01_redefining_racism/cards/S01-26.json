@@ -1,0 +1,16 @@
+{
+  "kind": "compare",
+  "headline": "Keep the qualifier attached",
+  "items": [
+    {
+      "title": "Ordinal",
+      "detail": "Read the relative ordering"
+    },
+    {
+      "title": "Illustrative",
+      "detail": "Read the representation as a legibility device"
+    }
+  ],
+  "sources": "Source: The Original Power, A note on formalism",
+  "qrUrl": null
+}

@@ -1,0 +1,18 @@
+{
+  "kind": "source",
+  "headline": "Judicial software anchors",
+  "items": [
+    {
+      "title": "Truscott and Romano · 2026",
+      "detail": "Measuring judicial ideology through text",
+      "qrUrl": "https://doi.org/10.1017/jlc.2025.10004"
+    },
+    {
+      "title": "Cope · 2025",
+      "detail": "Expert-sourced measure of judicial ideology",
+      "qrUrl": "https://doi.org/10.1017/pan.2025.10009"
+    }
+  ],
+  "sources": "Sources: Truscott and Romano 2026; Cope 2025",
+  "qrUrl": null
+}

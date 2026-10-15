@@ -1,0 +1,19 @@
+{
+  "kind": "equation",
+  "headline": "Equation 2.14 · Crash condition",
+  "items": [],
+  "sources": "Source: The Original Power, Equation 2.14 · Confidence Tier 3 (ordinal)",
+  "qrUrl": null,
+  "latex": "\\frac{dM}{dt} > \\frac{d\\Sigma_{\\text{sup}}}{dt}",
+  "number": "2.14",
+  "terms": [
+    {
+      "latex": "\\frac{dM}{dt}",
+      "gloss": "class-coherence growth rate"
+    },
+    {
+      "latex": "\\frac{d\\Sigma_{\\text{sup}}}{dt}",
+      "gloss": "suppression-envelope growth rate"
+    }
+  ]
+}

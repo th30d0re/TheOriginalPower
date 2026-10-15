@@ -1,0 +1,16 @@
+{
+  "kind": "stat_bars",
+  "headline": "Empirical calibration",
+  "items": [
+    {
+      "title": "Anchor cases",
+      "detail": "146"
+    },
+    {
+      "title": "Historical events",
+      "detail": "146"
+    }
+  ],
+  "sources": "Source: The Original Power, Empirical Validation Index",
+  "qrUrl": null
+}

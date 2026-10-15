@@ -1,0 +1,16 @@
+{
+  "kind": "source",
+  "headline": "The Original Power",
+  "items": [
+    {
+      "title": "Read the book",
+      "detail": "Scan for the latest release PDF and EPUB"
+    },
+    {
+      "title": "Voice disclosure",
+      "detail": "This video uses an AI-generated clone of the author's voice"
+    }
+  ],
+  "sources": "Source: github.com/th30d0re/TheOriginalPower/releases",
+  "qrUrl": "https://github.com/th30d0re/TheOriginalPower/releases"
+}

@@ -1,0 +1,19 @@
+{
+  "kind": "equation",
+  "headline": "Equation 2.16 \u00b7 Faraday induction",
+  "items": [],
+  "sources": "Source: The Original Power, Equation 2.16",
+  "qrUrl": null,
+  "latex": "\\nabla \\times \\vec{E} = -\\frac{\\partial \\vec{B}}{\\partial t}",
+  "number": "2.16",
+  "terms": [
+    {
+      "latex": "\\nabla \\times \\vec{E}",
+      "gloss": "curl of the induced electric field"
+    },
+    {
+      "latex": "\\frac{\\partial \\vec{B}}{\\partial t}",
+      "gloss": "rate of change of the magnetic field"
+    }
+  ]
+}

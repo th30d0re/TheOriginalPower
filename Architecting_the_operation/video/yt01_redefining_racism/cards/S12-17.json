@@ -1,0 +1,20 @@
+{
+  "kind": "table",
+  "headline": "Three optimizer costs",
+  "items": [
+    {
+      "title": "C_coercive(S,t)",
+      "detail": "Enforcement labor and infrastructure; solidarity risk; kinetic blowback against τ"
+    },
+    {
+      "title": "C_legitimacy(S,t)",
+      "detail": "Exposure to domestic, international, and judicial audiences"
+    },
+    {
+      "title": "C_economic(S,t)",
+      "detail": "Direct expense, opportunity cost, infrastructure, disruption, maintenance"
+    }
+  ],
+  "sources": "Source: The Original Power, §2.3.5 cost definitions",
+  "qrUrl": null
+}

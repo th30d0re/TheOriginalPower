@@ -1,0 +1,22 @@
+{
+  "kind": "figure",
+  "headline": "Figure 2.9 · Elite wealth accumulation",
+  "items": [
+    {
+      "title": "Blue band",
+      "detail": "Great Compression 1935–1973"
+    },
+    {
+      "title": "Red band",
+      "detail": "Kernel Recompile 1973–2020"
+    },
+    {
+      "title": "Reference",
+      "detail": "1929 Gilded Age peak ≈25%"
+    }
+  ],
+  "sources": "Source: Piketty, Saez & Zucman · Figure 2.9",
+  "qrUrl": "https://wid.world",
+  "image": "figures/fig2.9_p158.png",
+  "caption": "Top 0.1% wealth share, 1913–2020; data approximate; ordinal trajectory is analytically relevant."
+}
