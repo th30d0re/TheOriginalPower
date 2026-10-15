@@ -54,3 +54,49 @@ Resolved at render time (prefix match on `words.json`):
 |-----|--------|---------|
 | S02-01 | rendered · layout ok · sheet judged | ∩ taught on generic **A ∩ B** ellipses; **I** and **O** separate on the empty-set turn and stay disjoint through partition; membership header is one title line plus one math line (drops second line before ∪); S02-04 dims **I** and pulses **E** only, S02-05 highlights **I \\ E** with ⊂; S02-12 large **\\dot\\cup** glyph, S02-13 lone dots travel with **×1**; partition seam only between **I**\\|**O**; refine grid inset inside **I**; finale **Eq. 2.1** at 76 px with primer colors |
 | S01-02, S03-50, S01-19, S01-28, S03-01, S03-08, S03-17, S03-25, S03-31, S03-46 | unchanged this round | Round 3 brief scoped to S02-01 primer fixes only |
+
+---
+
+## Orthographic rebuild
+
+| Run | Status | What changed |
+|-----|--------|----------------|
+| S01-02 | rendered · 3D | Full L/R `#F5F3F0` / `#030304` split from frame 0; rotate on `mathematically`, bottom-up prism stack (`S=1.38`, unlit slabs, no ground plane); tier names on fixed side legend (36 px + leaders). Shot 5 status/kinetic/concessions panels sit in the Buffer row right of the stack (`panel_x`), not in the corner. Shots 1–9 beats unchanged. |
+| S03-50 | rendered · 3D | Split visible frame 0 (no navy hold); unlit L/R prisms through `orthographic` rotation, then fixed-frame horizontal split until `looking`; fullscreen flat fills + single bottom caption keyed to `looking` / `below` (hold lengths follow those cues, not a fixed 5:1); pure black pan at `below`; `deeper` pyramid matches S01-02 scale/legend + DEEPER ARCHITECTURE. |
+
+**Acceptance:** `.venv-manimgx/bin/python Architecting_the_operation/video/yt01_redefining_racism/manim/edit16x9.py render 01 03 --only S01-02 S03-50 -j 2 --force` → both `ok` (2026-10-15). `layout: not checked (a 3D scene)`.
+
+**Frame review** (`ffmpeg -ss … -frames:v 1` on `outputs/YT01/video/runs/960x540@15/*.mp4`):
+
+| Check | S03-50 | S01-02 |
+|-------|--------|--------|
+| Frame 0 | 50% paper / 50% night pixels, no navy (`S03-50_f0`) | Same split at `t=0` (`S01-02_f0`) |
+| White beat (`t≈12`) | Center ~`(230,229,228)`, caption only at bottom | — |
+| Black beat (`t≈13`) | ~99% night pixels, center `(2,2,2)`, white caption | — |
+| Pyramid width | ~75% of frame on midline at `t≈17` | Same stack/legend at `t≈40` (Buffer beat) |
+| Labels on faces | None; side legend only | Same |
+
+**Cues:** S03-50 — `orthographic`, `looking`, `below`, `deeper`; S01-02 — `mathematically` / `hierarchy`.
+
+---
+
+## Orthographic layout (round 3, reviewer frames)
+
+| Run | Status | What changed |
+|-----|--------|----------------|
+| S01-02 | rendered · 3D | Pyramid shifted to `PYRAMID_X = -2` with camera `frame_center` matched; legend column `LEADER_X0 = 2.6`, labels right-aligned at `6.35` with `width = 3.55` (36 px floor); Buffer/Elite legend type uses cream `INK` on navy. Split opens before tiers are added (same order as S03-50, zoom `1.48`); `shown` primed + `wait(0.05)` so the run opens on the L/R prisms. Shot 5 STATUS / MATERIAL / kinetic gauge sit in `STATUS_PANEL_Y` below the legend, not on the Buffer row. |
+| S03-50 | rendered · 3D | Same pyramid offset and legend geometry as S01-02. |
+
+**Acceptance:** `.venv-manimgx/bin/python Architecting_the_operation/video/yt01_redefining_racism/manim/edit16x9.py render 01 03 --only S01-02 S03-50 -j 2 --force` → both `ok` (2026-10-15).
+
+**Frame review** (`edit16x9.py sheet 01 03 --only S01-02 S03-50 -r 960x540 --fps 15` → 12 tiles; plus `ffmpeg -ss … -frames:v 1` on `outputs/YT01/video/runs/960x540@15/*.mp4`):
+
+| Check | S03-50 | S01-02 |
+|-------|--------|--------|
+| Open split | L/R prisms at `t≈1.5s` in run time (`top≈(230,229,225)`, `bot≈(53,53,52)`) | Same at `t≈1.5s`; storyboard `#0` at `t=0.45s` shows vertical split before rotation |
+| Five legend labels | All five rows show text in column `x∈[2.5,6.45]`; max glyph extent ≈ `6.34–6.36` fu (≤ `6.4`) | Same on pyramid (`t≈35s` run) and shot 5 (`t≈34.7s` run) |
+| Elite / Buffer text | Cream labels readable (no missing strings) | Same |
+| STATUS / MATERIAL panel | — | Panel center `y≈-3.35` / `-3.85` fu (`py≈496` vs Buffer legend `py≈361`) |
+| Pyramid fill | Stack left of legend; base span ≥ 7.5 fu with `S=1.38` | Matches S03-50 |
+
+**Cues:** unchanged.
