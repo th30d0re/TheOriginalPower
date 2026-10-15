@@ -45,3 +45,12 @@ Resolved at render time (prefix match on `words.json`):
 | S01-02 | rendered · 3D | Camera zoom `0.82` → `0.92` for frame fill |
 | S03-50 | rendered · 3D | Same cone scale path as S01-02 (inherits `SCALE=1.3`) |
 | S01-19, S01-28, S03-01, S03-08, S03-17, S03-25, S03-31 | fresh / prior pass | Re-rendered; no code changes this round |
+
+---
+
+## Round 3 revision (Group A)
+
+| Run | Status | Changes |
+|-----|--------|---------|
+| S02-01 | rendered · layout ok · sheet judged | ∩ taught on generic **A ∩ B** ellipses; **I** and **O** separate on the empty-set turn and stay disjoint through partition; membership header is one title line plus one math line (drops second line before ∪); S02-04 dims **I** and pulses **E** only, S02-05 highlights **I \\ E** with ⊂; S02-12 large **\\dot\\cup** glyph, S02-13 lone dots travel with **×1**; partition seam only between **I**\\|**O**; refine grid inset inside **I**; finale **Eq. 2.1** at 76 px with primer colors |
+| S01-02, S03-50, S01-19, S01-28, S03-01, S03-08, S03-17, S03-25, S03-31, S03-46 | unchanged this round | Round 3 brief scoped to S02-01 primer fixes only |
