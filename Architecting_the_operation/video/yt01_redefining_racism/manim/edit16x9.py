@@ -222,14 +222,15 @@ def cmd_cut(args):
             else:
                 missing.append(s.id)
                 placeholder(s, n, fps, args.res, clip)
-            listing.append(f"file '{clip}'")
+            listing.append(f"file '{clip}'\nduration {n / fps:.6f}")
         lst = work / f"SEG{seg}.txt"
         lst.write_text("\n".join(listing) + "\n")
         a0, a1 = F[mine[0].index] / fps, F[mine[-1].index + 1] / fps
         out = outdir / f"SEG{seg}.mp4"
         subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", str(lst),
                         "-ss", f"{a0:.6f}", "-t", f"{a1 - a0:.6f}", "-i", str(EP / "YT01.mp3"),
-                        "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-c:a", "aac", "-b:a", "160k", "-shortest",
+                        "-map", "0:v", "-map", "1:a", "-vf", f"fps={fps}", "-c:v", "libx264", "-preset", "veryfast",
+                        "-crf", "18", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "160k",
                         str(out)], check=True)
         print(f"SEG {seg}: {out} ({a1 - a0:.1f} s, {len(mine)} shots"
               + (f"; placeholders: {', '.join(missing)}" if missing else "") + ")")

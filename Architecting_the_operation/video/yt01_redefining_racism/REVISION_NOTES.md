@@ -51,3 +51,48 @@ and judge your runs by it, after every change.
 - S22-02: the equation panel's math is small; make the current equation large.
 
 Update your findings file `logs/scenes_<letter>.md` with what changed per run.
+
+---
+
+## Round 2: groups A, D, E (reviewer: sheets of SEG 02, 09, 13; judge your other segments the same way)
+
+Every standard above applies. Run `sheet` on **every** segment you own, fix, re-render, re-sheet.
+
+### Group A
+- S02-01 (set primer, 19 shots): the box sits in a small central strip with the symbols (∪, ∩, ∅, the
+  dotted cup) at ~30 px floating unlabeled. Make the universe box fill the frame, and give each symbol
+  a large `MathTex` with its name beside it on its own turn. S02-04/05 and S02-13/14 are identical
+  tiles: each needs its beat. From S02-15 on, translucent rectangles pile up across the I/E labels;
+  replace them with one clean partition picture. The run must end on Equation 2.1 itself,
+  `U = I \,\dot\cup\, O` and `I \cap O = \varnothing`, large, assembled from the symbols the
+  primer just taught, so the viewer can read it aloud. Use `\dot\cup` (not a floating dot over U).
+- Check S01-02 and S03-50 (orthographic cone, scale ~1.3x) and S03-46 (Figure 2.1 rebuild) against
+  the standards; Figure 2.1 is two large side-by-side boxes (I with four tiers, O with three layers)
+  filling the frame.
+
+### Group D
+- S09-13 / S09-14 are the same picture (GIN box and acreage grid, small, in the middle of the frame).
+  S09-13 shows the gin lowering processing cost; S09-14 grows acreage and the enslaved-labor demand
+  bar on its own word. Fill the frame. S09-16 (Nat Turner): the chart is small and the response label
+  sits on top of the title; make the coherence-risk line large, the spike and the slave-code response
+  on their words, labels clear of each other.
+- Judge S10-01 to S12-20 the same way (zero-day, cline, botnet, Bayes, recompile, cost bars).
+
+### Group E (your SEG 16 files are owned by another worker right now: touch only
+`rlc_topology16x9.py`, `backlash_oscillator16x9.py`, `resonance_sweep16x9.py`,
+`suppression_envelope16x9.py`, `coherence_threshold16x9.py`, `backlash_wave16x9.py`)
+- S13-01 / S13-06 (Figure 2.5): the circuit is a small box; draw the series loop across the frame
+  with the source, R, L and C large and their institutional labels (bureaucratic and carceral
+  friction, cultural inertia and institutional entrenchment, token-reform absorption capacity)
+  beside each part on its turn.
+- S13-14 to S13-21: eight near-identical tiles of a static envelope. Each turn moves the charge:
+  the 1865 impulse drives q up, the back-EMF overshoots into q < 0 (Black Codes, Convict Leasing
+  labelled in the extraction zone), the 1964 smaller impulse, the second overshoot (War on Drugs,
+  Mass Incarceration). Draw the curve as it happens, on the words.
+- S13-22 to S13-26 (Figure 2.6): five identical tiles. Build the book's figure: the damped wave
+  across the full width with the q = 0 extraction baseline, the decay envelope, the two shock and
+  overshoot cycles labelled, "illustrative parameters" on screen; each turn adds or highlights one
+  element (envelope, alpha rising as R expands, convergence to baseline).
+- S13-27/28/29 (resonance): small; make the response curve large, sweep omega toward omega_0 on its
+  word, show q_res and Q_f large.
+- Judge SEG 14 and SEG 15 (envelope, Figure 2.8 race, backlash-wave panels) the same way.
