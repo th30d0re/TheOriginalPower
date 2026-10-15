@@ -15,7 +15,7 @@ T_SHOCK1, T_SHOCK2 = 0.8, 4.0
 
 
 def q_curve(t):
-    return Q0 * np.exp(-ALPHA * t) * np.sin(WD * t)
+    return Q0 * np.exp(-ALPHA * t) * np.sin(np.radians(WD * t))
 
 
 def backlash_axes():
@@ -35,13 +35,31 @@ def backlash_axes():
 
 def partial_curve(ax, t_max):
     t_max = max(0.05, min(t_max, 9.95))
-    return ax.plot(lambda t: q_curve(t), x_range=[0, t_max, 0.015], color=HER, stroke_width=6)
+    return ax.plot(
+        lambda t: q_curve(t),
+        x_range=[0, t_max, 0.02],
+        color=HER,
+        stroke_width=5,
+        use_smoothing=False,
+    )
 
 
 def envelope(ax, scale=1.0):
-    ep = ax.plot(lambda t: scale * Q0 * np.exp(-ALPHA * t), x_range=[0, 9.8, 0.04], color=GOLD, stroke_width=4)
-    en = ax.plot(lambda t: -scale * Q0 * np.exp(-ALPHA * t), x_range=[0, 9.8, 0.04], color=GOLD, stroke_width=4)
-    return ep, en
+    ep = ax.plot(
+        lambda t: scale * Q0 * np.exp(-ALPHA * t),
+        x_range=[0, 9.8, 0.04],
+        color=GOLD,
+        stroke_width=3,
+        use_smoothing=True,
+    )
+    en = ax.plot(
+        lambda t: -scale * Q0 * np.exp(-ALPHA * t),
+        x_range=[0, 9.8, 0.04],
+        color=GOLD,
+        stroke_width=3,
+        use_smoothing=True,
+    )
+    return m.DashedVMobject(ep, num_segments=80), m.DashedVMobject(en, num_segments=80)
 
 
 class BacklashOscillator(YTScene):
@@ -51,8 +69,9 @@ class BacklashOscillator(YTScene):
         head = T("CIRCUIT EQUILIBRIUM", 44, GOLD).to_edge(m.UP, buff=0.48)
         ax, base, eq_lab, tlab, ylab, eq_zone, ex_zone = backlash_axes()
         t_end = m.ValueTracker(0.05)
+        ep, en = envelope(ax, 1.0)
         curve = m.always_redraw(lambda: partial_curve(ax, t_end.get_value()))
-        self.add(head, ax, base, eq_lab, tlab, ylab, curve)
+        self.add(head, ax, base, eq_lab, tlab, ylab, ep, en, curve)
 
         self.until(self.at(0, "equilibrium"))
         self.play(m.FadeIn(eq_zone, ex_zone), run_time=0.5)
@@ -114,15 +133,15 @@ class BacklashOscillator(YTScene):
         ax, base, eq_lab, tlab, ylab, eq_zone, ex_zone = backlash_axes()
         elite = T("ELITE EXTRACTION INVARIANT · Δmax = 0", 34, GOLD).to_edge(m.UP, buff=1.05)
         t_end = m.ValueTracker(0.05)
-        full = m.always_redraw(lambda: partial_curve(ax, t_end.get_value()))
         ep, en = envelope(ax, 1.0)
+        full = m.always_redraw(lambda: partial_curve(ax, t_end.get_value()))
         shock1 = m.Arrow(ax.c2p(T_SHOCK1, 0), ax.c2p(T_SHOCK1, 1.28), color=HER, stroke_width=7, buff=0)
         s1 = T("SHOCK 1 (1865)", 34, HER).next_to(ax.c2p(T_SHOCK1, 1.28), m.RIGHT, buff=0.15)
         shock2 = m.Arrow(ax.c2p(T_SHOCK2, 0), ax.c2p(T_SHOCK2, 0.52), color=HER, stroke_width=6, buff=0)
         s2 = T("SHOCK 2 (1964)", 34, HER).next_to(ax.c2p(T_SHOCK2, 0.52), m.RIGHT, buff=0.15)
         os1 = T("OVERSHOOT 1", 34, HER).next_to(ax.c2p(2.4, -0.78), m.RIGHT, buff=0.35)
         os2 = T("OVERSHOOT 2", 34, HER).next_to(ax.c2p(5.6, -0.38), m.RIGHT, buff=0.35)
-        plot_core = m.VGroup(ax, base, eq_lab, tlab, ylab, full).shift(m.DOWN * 0.15)
+        plot_core = m.VGroup(ax, base, eq_lab, tlab, ylab, ep, en, full).shift(m.DOWN * 0.15)
         ann = m.VGroup(shock1, s1, shock2, s2, os1, os2)
         for mob in ann:
             mob.shift(m.DOWN * 0.15)
@@ -139,7 +158,7 @@ class BacklashOscillator(YTScene):
         self.until(self.beat_end(1) - 0.25)
 
         self.until(self.at(2, "sustained"))
-        self.play(m.FadeIn(ep, en), m.FadeOut(badge, params), run_time=0.5)
+        self.play(m.FadeOut(badge, params), m.Indicate(ep, color=OK), m.Indicate(en, color=OK), run_time=0.5)
         foot = T("q(t) → 0 WITHOUT SUSTAINED V(t)", 36, OK, width=11.0).to_edge(m.DOWN, buff=0.38)
         self.play(m.FadeIn(foot), run_time=0.45)
         self.until(self.beat_end(2) - 0.25)
