@@ -50,15 +50,15 @@ class SetTheoryPrimer(YTScene):
         o_pos = u.get_center() + m.RIGHT * (UW * 0.24 + gap * 0.5)
         return i_pos, o_pos
 
-    def _ab_example(self):
-        a = m.Ellipse(width=3.4, height=2.5, stroke_color=HIM, stroke_width=4,
-                      fill_color=HIM, fill_opacity=0.28)
-        b = m.Ellipse(width=3.4, height=2.5, stroke_color=HER, stroke_width=4,
-                      fill_color=HER, fill_opacity=0.28)
-        a.move_to(m.LEFT * 0.75)
-        b.move_to(m.RIGHT * 0.75)
-        a_lab = M(r"A", 40, HIM).next_to(a, m.UP, buff=0.1)
-        b_lab = M(r"B", 40, HER).next_to(b, m.UP, buff=0.1)
+    def _ab_example(self, center=(0, -0.2, 0)):
+        a = m.Ellipse(width=5.0, height=3.6, stroke_color=HIM, stroke_width=4,
+                      fill_color=HIM, fill_opacity=0.22)
+        b = m.Ellipse(width=5.0, height=3.6, stroke_color=HER, stroke_width=4,
+                      fill_color=HER, fill_opacity=0.22)
+        a.move_to([center[0] - 1.05, center[1], 0])
+        b.move_to([center[0] + 1.05, center[1], 0])
+        a_lab = M(r"A", 44, HIM).next_to(a, m.UP, buff=0.12)
+        b_lab = M(r"B", 44, HER).next_to(b, m.UP, buff=0.12)
         return m.VGroup(a, b, a_lab, b_lab)
 
     def _hero_eq21(self):
@@ -149,72 +149,75 @@ class SetTheoryPrimer(YTScene):
         key = key2
         self.until(self.beat_end(6) - 0.2)
 
-        sym_y = 2.15
-        ab_demo = None
-        ab_lens = None
+        sym_y = 2.45
+        ab_center = (0, -1.05, 0)
+        o_rect = o_lab = o_pop = None
+        union_fill = None
 
-        # 7 — union (I and O overlap for ∪ only)
+        # 7 — union on generic A ∪ B only (U and I/O off screen)
         self.until(self.at(7, "union"))
         if len(key) > 1:
             self.play(m.FadeOut(key[1]), run_time=0.15)
-        self.play(m.FadeOut(e_rect), m.FadeOut(e_lab), m.FadeOut(e_pop), m.FadeOut(outside), run_time=0.25)
-        o_rect = m.RoundedRectangle(width=UW * 0.46, height=UH * 0.78, corner_radius=0.14,
-                                    stroke_color=HER, stroke_width=4, fill_color=NAVY2, fill_opacity=0.45)
-        overlap_center = u.get_center() + m.DOWN * 0.05
-        o_rect.move_to(overlap_center + m.RIGHT * UW * 0.14)
-        i_rect.move_to(overlap_center + m.LEFT * UW * 0.14)
-        o_lab = M(r"O", 44, HER).next_to(o_rect, m.UP, buff=0.2)
-        o_pop = person_field(8, HER).scale(0.9).move_to(o_rect)
         self.play(
-            m.FadeIn(o_rect), m.FadeIn(o_lab), m.FadeIn(o_pop),
-            i_rect.animate.set_fill(GOLD, opacity=0.2),
-            o_rect.animate.set_fill(GOLD, opacity=0.2),
-            run_time=0.55,
+            m.FadeOut(u), m.FadeOut(u_lab), m.FadeOut(i_rect), m.FadeOut(i_lab), m.FadeOut(pop),
+            m.FadeOut(e_rect), m.FadeOut(e_lab), m.FadeOut(e_pop), m.FadeOut(outside),
+            run_time=0.4,
         )
+        self.clear()
+        key = self._heading("NOTATION KEY")
+        self.add(key)
+        i_rect = m.RoundedRectangle(width=UW * 0.46, height=UH * 0.78, corner_radius=0.14,
+                                    stroke_color=HIM, stroke_width=4, fill_color=NAVY2, fill_opacity=0.45)
+        i_lab = M(r"I", 44, HIM)
+        ab_demo = self._ab_example(ab_center)
+        a_shape, b_shape = ab_demo[0], ab_demo[1]
+        union_fill = m.Union(a_shape, b_shape, color=GOLD, fill_opacity=0.48, stroke_width=0)
         union_row, _ = sym_name(r"\cup", "UNION")
         union_row.move_to([0, sym_y, 0])
-        self.play(m.FadeIn(union_row), run_time=0.45)
+        self.play(m.FadeIn(ab_demo), m.FadeIn(union_fill), m.FadeIn(union_row), run_time=0.7)
         self.until(self.beat_end(7) - 0.2)
 
-        # 8 — intersection on generic A ∩ B (not I ∩ O)
+        # 8 — intersection lens on the same A ∩ B example
         self.until(self.at(8, "intersection"))
-        self.play(
-            m.FadeOut(union_row),
-            m.FadeOut(pop),
-            m.FadeOut(o_pop),
-            i_rect.animate.set_fill(NAVY2, opacity=0.45),
-            o_rect.animate.set_fill(NAVY2, opacity=0.45),
-            run_time=0.25,
-        )
-        ab_demo = self._ab_example().move_to(u.get_center() + m.DOWN * 0.55)
-        a_shape, b_shape = ab_demo[0], ab_demo[1]
-        ab_lens = m.Intersection(a_shape, b_shape, color=GOLD, fill_opacity=0.7, stroke_color=GOLD, stroke_width=3)
+        ab_lens = m.Intersection(a_shape, b_shape, color=GOLD, fill_opacity=0.72, stroke_color=GOLD, stroke_width=3)
         inter_row, _ = sym_name(r"\cap", "INTERSECTION")
         inter_row.move_to([0, sym_y, 0])
-        self.play(m.FadeIn(ab_demo), m.FadeIn(ab_lens), m.FadeIn(inter_row), run_time=0.65)
+        self.play(
+            m.FadeOut(union_row), m.FadeOut(union_fill),
+            m.FadeIn(ab_lens), m.FadeIn(inter_row),
+            run_time=0.65,
+        )
         self.until(self.beat_end(8) - 0.2)
 
         # 9 — OR / AND on A ∪ B example
         self.until(self.at(9, "intersection"))
-        or_lab = T("OR", 34, HIM).move_to(a_shape.get_center() + m.LEFT * 1.05 + m.UP * 0.15)
-        and_lab = T("AND", 34, GOLD).move_to(ab_lens.get_center() + m.UP * 0.35)
-        self.play(m.FadeIn(or_lab), m.FadeIn(and_lab), run_time=0.55)
+        union_ghost = m.Union(a_shape, b_shape, color=HIM, fill_opacity=0.18, stroke_width=0)
+        or_lab = T("OR", 36, HIM).move_to(union_ghost.get_center() + m.LEFT * 0.55)
+        and_lab = T("AND", 36, GOLD).move_to(ab_lens.get_center() + m.UP * 0.35)
+        self.play(m.FadeIn(union_ghost), m.FadeIn(or_lab), m.FadeIn(and_lab), run_time=0.55)
         self.until(self.beat_end(9) - 0.2)
-        self.play(m.FadeOut(or_lab), m.FadeOut(and_lab),
-                  m.FadeOut(inter_row), m.FadeOut(ab_lens), m.FadeOut(ab_demo), run_time=0.3)
-        ab_demo = None
-        ab_lens = None
+        self.play(
+            m.FadeOut(or_lab), m.FadeOut(and_lab), m.FadeOut(union_ghost),
+            m.FadeOut(inter_row), m.FadeOut(ab_lens), m.FadeOut(ab_demo),
+            run_time=0.35,
+        )
 
-        # 10 — empty set; I and O separate with no overlap
+        # 10 — empty set; restore U with disjoint I and O
         self.until(self.at(10, "empty"))
         i_pos, o_pos = self._io_partition_pos(u)
+        o_rect = m.RoundedRectangle(width=UW * 0.46, height=UH * 0.78, corner_radius=0.14,
+                                    stroke_color=HER, stroke_width=4, fill_color=NAVY2, fill_opacity=0.45)
+        o_rect.move_to(o_pos)
+        o_lab = M(r"O", 44, HER).next_to(o_rect, m.UP, buff=0.2)
+        i_rect.move_to(i_pos)
+        i_lab.next_to(i_rect, m.UP, buff=0.2)
+        pop = person_field(12, INK).move_to(i_rect)
+        o_pop = person_field(8, HER).scale(0.9).move_to(o_rect)
         empty_row, _ = sym_name(r"\varnothing", "EMPTY SET", math_size=72, color=DIM)
         empty_row.move_to([0, sym_y, 0])
         self.play(
-            m.FadeOut(pop), m.FadeOut(o_pop),
-            i_rect.animate.move_to(i_pos), o_rect.animate.move_to(o_pos),
-            i_lab.animate.next_to(i_rect, m.UP, buff=0.2),
-            o_lab.animate.next_to(o_rect, m.UP, buff=0.2),
+            m.FadeIn(u), m.FadeIn(u_lab), m.FadeIn(i_rect), m.FadeIn(i_lab),
+            m.FadeIn(o_rect), m.FadeIn(o_lab), m.FadeIn(pop), m.FadeIn(o_pop),
             m.FadeIn(empty_row),
             run_time=0.75,
         )
