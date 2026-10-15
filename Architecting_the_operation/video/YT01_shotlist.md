@@ -3149,103 +3149,102 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 
 - **Anchor:** `Emmanuel Theodore (73:07)`
 - **Type:** hold
-- **Render:** `manim:complex_wage16x9.py:ComplexWage`
+- **Render:** `manim:cards16x9.py:CardScene cards/S16-13.json`
 - **Holds:** `S16-13`
-- **Note:** Microaggression trickle-charge animation into field storage. [book] "trickle-charging of this systemic inductor"
+- **Note:** Hold on S16-13 equation card; pulse L and I term glosses (cultural inertia; field current). [book] "Here, L is cultural inertia"
 
 ## S16-15
 
 - **Anchor:** `Emmanuel Theodore (73:18)`
-- **Type:** hold
+- **Type:** diagram
 - **Render:** `manim:complex_wage16x9.py:ComplexWage`
-- **Holds:** `S16-13`
-- **Note:** Individual quanta negligible; accumulated field massive. [book] "The individual impact is negligible; the accumulated field is massive"
+- **Note:** Microaggression trickle-charge animation into field storage. [book] "trickle-charging of this systemic inductor"
 
 ## S16-16
 
 - **Anchor:** `Emmanuel Theodore (73:24)`
 - **Type:** hold
 - **Render:** `manim:complex_wage16x9.py:ComplexWage`
-- **Holds:** `S16-13`
-- **Note:** Kinetic mobilization forces rapid di/dt. [book] "forces a rapid change in the systemic current"
+- **Holds:** `S16-15`
+- **Note:** Individual quanta negligible; accumulated field massive. [book] "The individual impact is negligible; the accumulated field is massive"
 
 ## S16-17
 
 - **Anchor:** `Emmanuel Theodore (73:33)`
 - **Type:** hold
 - **Render:** `manim:complex_wage16x9.py:ComplexWage`
-- **Holds:** `S16-13`
-- **Note:** Field collapse beat; energy cannot vanish. [book] "the stored field is compelled to collapse"
+- **Holds:** `S16-15`
+- **Note:** Kinetic mobilization forces rapid di/dt. [book] "forces a rapid change in the systemic current"
 
 ## S16-18
 
 - **Anchor:** `Emmanuel Theodore (73:40)`
-- **Type:** equation
-- **Render:** `manim:cards16x9.py:CardScene cards/S16-18.json`
-- **Note:** Equation 2.16 headline before term walkthrough. [book] "Faraday's Law of Induction"
+- **Type:** hold
+- **Holds:** `S16-15`
+- **Render:** `manim:complex_wage16x9.py:ComplexWage`
+- **Note:** Field collapse beat; energy cannot vanish. [book] "the stored field is compelled to collapse"
 
 ## S16-19
 
 - **Anchor:** `Emmanuel Theodore (73:47)`
-- **Type:** hold
-- **Render:** `manim:cards16x9.py:CardScene cards/S16-18.json`
-- **Holds:** `S16-18`
-- **Note:** ∇× operator highlights on curl of E. [claude] “curl operator”
+- **Type:** equation
+- **Render:** `manim:cards16x9.py:CardScene cards/S16-19.json`
+- **Note:** Equation 2.16 headline before term walkthrough. [book] "Faraday's Law of Induction"
 
 ## S16-20
 
 - **Anchor:** `Emmanuel Theodore (73:54)`
 - **Type:** hold
-- **Render:** `manim:cards16x9.py:CardScene cards/S16-18.json`
-- **Holds:** `S16-18`
-- **Note:** ∂B/∂t term highlights as field change rate. [claude] “rate of change of the magnetic field”
+- **Render:** `manim:cards16x9.py:CardScene cards/S16-19.json`
+- **Holds:** `S16-19`
+- **Note:** ∇× operator highlights on curl of E. [claude] “curl operator”
 
 ## S16-21
 
 - **Anchor:** `Emmanuel Theodore (74:01)`
 - **Type:** hold
-- **Render:** `manim:cards16x9.py:CardScene cards/S16-18.json`
-- **Holds:** `S16-18`
-- **Note:** Full Faraday equation displayed. [book] "\nabla \times \vec{E} = -\frac{\partial \vec{B}}{\partial t}"
+- **Render:** `manim:cards16x9.py:CardScene cards/S16-19.json`
+- **Holds:** `S16-19`
+- **Note:** ∂B/∂t term highlights as field change rate. [claude] “rate of change of the magnetic field”
 
 ## S16-22
 
 - **Anchor:** `Emmanuel Theodore (74:09)`
 - **Type:** hold
-- **Render:** `manim:cards16x9.py:CardScene cards/S16-18.json`
-- **Holds:** `S16-18`
-- **Note:** Induced E-field circulation performs material work. [claude] “generates a field capable of moving charge”
+- **Render:** `manim:cards16x9.py:CardScene cards/S16-19.json`
+- **Holds:** `S16-19`
+- **Note:** Full Faraday equation displayed. [book] "\nabla \times \vec{E} = -\frac{\partial \vec{B}}{\partial t}"
 
 ## S16-23
 
 - **Anchor:** `Emmanuel Theodore (74:18)`
 - **Type:** hold
-- **Render:** `manim:cards16x9.py:CardScene cards/S16-18.json`
-- **Holds:** `S16-18`
-- **Note:** Collapsing racialized field predicts material force. [book] “changing magnetic field induces a real electric”
+- **Render:** `manim:cards16x9.py:CardScene cards/S16-19.json`
+- **Holds:** `S16-19`
+- **Note:** Induced E-field circulation performs material work. [claude] “generates a field capable of moving charge”
 
 ## S16-24
 
 - **Anchor:** `Emmanuel Theodore (74:29)`
 - **Type:** hold
-- **Render:** `manim:cards16x9.py:CardScene cards/S16-18.json`
-- **Holds:** `S16-18`
-- **Note:** Lenz sign: induced force opposes reform current. [book] “opposes the reform current”
+- **Render:** `manim:cards16x9.py:CardScene cards/S16-19.json`
+- **Holds:** `S16-19`
+- **Note:** Collapsing racialized field predicts material force. [book] “changing magnetic field induces a real electric”
 
 ## S16-25
 
 - **Anchor:** `Emmanuel Theodore (74:35)`
 - **Type:** hold
-- **Render:** `manim:cards16x9.py:CardScene cards/S16-18.json`
-- **Holds:** `S16-18`
-- **Note:** Passive animus converts to measurable violence. [book] "converts into literal, measurable future violence"
+- **Render:** `manim:cards16x9.py:CardScene cards/S16-19.json`
+- **Holds:** `S16-19`
+- **Note:** Lenz sign: induced force opposes reform current. [book] “opposes the reform current”
 
 ## S16-26
 
 - **Anchor:** `Emmanuel Theodore (74:42)`
 - **Type:** card
 - **Render:** `manim:cards16x9.py:CardScene cards/S16-26.json`
-- **Note:** Two-regime compare card introduces steady vs transient. [book] “The energy that was stored orthogonally as passive animus converts into literal, measurable future violence”
+- **Note:** Passive animus converts to measurable violence. [book] "converts into literal, measurable future violence"
 
 ## S16-27
 
@@ -3253,7 +3252,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S16-26.json`
 - **Holds:** `S16-26`
-- **Note:** Steady-state row pulses: horizontal deflection. [book] "deflects the Buffer Class horizontally"
+- **Note:** Two-regime compare card introduces steady vs transient. [book] “The energy that was stored orthogonally as passive animus converts into literal, measurable future violence”
 
 ## S16-28
 
@@ -3261,7 +3260,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S16-26.json`
 - **Holds:** `S16-26`
-- **Note:** Transient row pulses: discharge as opposing violence. [book] “deflects the Buffer Class horizontally, away from vertical class solidarity”
+- **Note:** Steady-state row pulses: horizontal deflection. [book] "deflects the Buffer Class horizontally"
 
 ## S16-29
 
@@ -3269,7 +3268,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S16-26.json`
 - **Holds:** `S16-26`
-- **Note:** Material work against Out-group mobilization. [book] "performs real material work against the Out-group"
+- **Note:** Transient row pulses: discharge as opposing violence. [book] “deflects the Buffer Class horizontally, away from vertical class solidarity”
 
 ## S16-30
 
@@ -3277,14 +3276,14 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S16-26.json`
 - **Holds:** `S16-26`
-- **Note:** Examples list: assassinations, COINTELPRO, militarization, carceral state. [book] “performs real material work against”
+- **Note:** Material work against Out-group mobilization. [book] "performs real material work against the Out-group"
 
 ## S16-31
 
 - **Anchor:** `Emmanuel Theodore (75:16)`
 - **Type:** diagram
 - **Render:** `manim:coil_gun16x9.py:CoilGunInterface`
-- **Note:** Multi-stage coil gun schematic labels Interface Swap. [book] "topology of a multi-stage linear accelerator"
+- **Note:** Examples list: assassinations, COINTELPRO, militarization, carceral state. [book] “performs real material work against”
 
 ## S16-32
 
@@ -3292,7 +3291,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:coil_gun16x9.py:CoilGunInterface`
 - **Holds:** `S16-31`
-- **Note:** Era coils: chattel slavery → Jim Crow → incarceration → gig economy. [book] "distinct historical eras, each pulsed in sequence"
+- **Note:** Multi-stage coil gun schematic labels Interface Swap. [book] "topology of a multi-stage linear accelerator"
 
 ## S16-33
 
@@ -3300,7 +3299,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:coil_gun16x9.py:CoilGunInterface`
 - **Holds:** `S16-31`
-- **Note:** Projectile vector: wealth extraction along vertical z-axis. [book] "continuous upward extraction of wealth to the Elite"
+- **Note:** Era coils: chattel slavery → Jim Crow → incarceration → gig economy. [book] "distinct historical eras, each pulsed in sequence"
 
 ## S16-34
 
@@ -3308,7 +3307,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:coil_gun16x9.py:CoilGunInterface`
 - **Holds:** `S16-31`
-- **Note:** Orthogonal jψ_s field saturates Buffer alignment. [book] "saturating the Buffer Class"
+- **Note:** Projectile vector: wealth extraction along vertical z-axis. [book] "continuous upward extraction of wealth to the Elite"
 
 ## S16-35
 
@@ -3316,7 +3315,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:coil_gun16x9.py:CoilGunInterface`
 - **Holds:** `S16-31`
-- **Note:** Civil Rights Act cuts Jim Crow coil power. [book] "cut the power to the current historical coil"
+- **Note:** Orthogonal jψ_s field saturates Buffer alignment. [book] "saturating the Buffer Class"
 
 ## S16-36
 
@@ -3324,54 +3323,54 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:coil_gun16x9.py:CoilGunInterface`
 - **Holds:** `S16-31`
-- **Note:** Segregation field collapse animation. [claude] “abruptly collapses”
+- **Note:** Civil Rights Act cuts Jim Crow coil power. [book] "cut the power to the current historical coil"
 
 ## S16-37
 
 - **Anchor:** `Emmanuel Theodore (76:05)`
-- **Type:** equation
-- **Render:** `manim:cards16x9.py:CardScene cards/S16-37.json`
-- **Note:** Equation 2.17 back-EMF introduced. [book] “The massive magnetic field of racial animus and segregation abruptly”
+- **Type:** hold
+- **Holds:** `S16-31`
+- **Render:** `manim:coil_gun16x9.py:CoilGunInterface`
+- **Note:** Segregation field collapse animation. [claude] “abruptly collapses”
 
 ## S16-38
 
 - **Anchor:** `Emmanuel Theodore (76:10)`
-- **Type:** hold
-- **Render:** `manim:cards16x9.py:CardScene cards/S16-37.json`
-- **Holds:** `S16-37`
-- **Note:** V_back-EMF term highlights. [book] “collapse generates a catastrophic Back-EMF”
+- **Type:** equation
+- **Render:** `manim:cards16x9.py:CardScene cards/S16-38.json`
+- **Note:** Equation 2.17 back-EMF introduced. [book] “The massive magnetic field of racial animus and segregation abruptly”
 
 ## S16-39
 
 - **Anchor:** `Emmanuel Theodore (76:18)`
 - **Type:** hold
-- **Render:** `manim:cards16x9.py:CardScene cards/S16-37.json`
-- **Holds:** `S16-37`
-- **Note:** L and di/dt terms highlight in narration order. [claude] “cultural inductance”
+- **Render:** `manim:cards16x9.py:CardScene cards/S16-38.json`
+- **Holds:** `S16-38`
+- **Note:** V_back-EMF term highlights. [book] “collapse generates a catastrophic Back-EMF”
 
 ## S16-40
 
 - **Anchor:** `Emmanuel Theodore (76:26)`
 - **Type:** hold
-- **Render:** `manim:cards16x9.py:CardScene cards/S16-37.json`
-- **Holds:** `S16-37`
-- **Note:** Full Eq 2.17 displayed. [book] "V_{\text{back-EMF}} = -L\,\frac{di}{dt}"
+- **Render:** `manim:cards16x9.py:CardScene cards/S16-38.json`
+- **Holds:** `S16-38`
+- **Note:** L and di/dt terms highlight in narration order. [claude] “cultural inductance”
 
 ## S16-41
 
 - **Anchor:** `Emmanuel Theodore (76:35)`
 - **Type:** hold
-- **Render:** `manim:cards16x9.py:CardScene cards/S16-37.json`
-- **Holds:** `S16-37`
-- **Note:** Large L times rapid di/dt yields surge magnitude. [claude] “produces a large opposing voltage surge”
+- **Render:** `manim:cards16x9.py:CardScene cards/S16-38.json`
+- **Holds:** `S16-38`
+- **Note:** Full Eq 2.17 displayed. [book] "V_{\text{back-EMF}} = -L\,\frac{di}{dt}"
 
 ## S16-42
 
 - **Anchor:** `Emmanuel Theodore (76:44)`
 - **Type:** hold
-- **Render:** `manim:cards16x9.py:CardScene cards/S16-37.json`
-- **Holds:** `S16-37`
-- **Note:** Backlash manifestations: white flight, KKK, vigilante violence, Buffer panic. [book] “voltage surge is the fascist backlash”
+- **Render:** `manim:cards16x9.py:CardScene cards/S16-38.json`
+- **Holds:** `S16-38`
+- **Note:** Large L times rapid di/dt yields surge magnitude. [claude] “produces a large opposing voltage surge”
 
 ## S16-43
 
@@ -3379,7 +3378,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:coil_gun16x9.py:CoilGunInterface`
 - **Holds:** `S16-31`
-- **Note:** Flyback diode shunts energy as waste heat in amateur design. [book] “white flight, the rise of the Ku Klux Klan, vigilante violence, and the panic of the Buffer Class”
+- **Note:** Backlash manifestations: white flight, KKK, vigilante violence, Buffer panic. [book] “voltage surge is the fascist backlash”
 
 ## S16-44
 
@@ -3387,7 +3386,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:coil_gun16x9.py:CoilGunInterface`
 - **Holds:** `S16-31`
-- **Note:** Elite capture surge instead of dissipating. [book] “energy as waste heat through a flyback diode”
+- **Note:** Flyback diode shunts energy as waste heat in amateur design. [book] “white flight, the rise of the Ku Klux Klan, vigilante violence, and the panic of the Buffer Class”
 
 ## S16-45
 
@@ -3395,7 +3394,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:coil_gun16x9.py:CoilGunInterface`
 - **Holds:** `S16-31`
-- **Note:** Energy routed into next coil capacitors. [book] "routed it directly into the capacitors"
+- **Note:** Elite capture surge instead of dissipating. [book] “energy as waste heat through a flyback diode”
 
 ## S16-46
 
@@ -3403,46 +3402,46 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:coil_gun16x9.py:CoilGunInterface`
 - **Holds:** `S16-31`
-- **Note:** Southern Strategy and police militarization labels. [book] "Nixon's Southern Strategy"
+- **Note:** Energy routed into next coil capacitors. [book] "routed it directly into the capacitors"
 
 ## S16-47
 
 - **Anchor:** `Emmanuel Theodore (77:26)`
-- **Type:** equation
-- **Render:** `manim:cards16x9.py:CardScene cards/S16-47.json`
-- **Note:** Equation 2.18 recovered energy introduced. [book] “reactionary fear funded the militarization of police”
+- **Type:** hold
+- **Holds:** `S16-31`
+- **Render:** `manim:coil_gun16x9.py:CoilGunInterface`
+- **Note:** Southern Strategy and police militarization labels. [book] "Nixon's Southern Strategy"
 
 ## S16-48
 
 - **Anchor:** `Emmanuel Theodore (77:32)`
-- **Type:** hold
-- **Render:** `manim:cards16x9.py:CardScene cards/S16-47.json`
-- **Holds:** `S16-47`
-- **Note:** U_recovered term highlights. [book] “recovered energy equation quantifies”
+- **Type:** equation
+- **Render:** `manim:cards16x9.py:CardScene cards/S16-48.json`
+- **Note:** Equation 2.18 recovered energy introduced. [book] “reactionary fear funded the militarization of police”
 
 ## S16-49
 
 - **Anchor:** `Emmanuel Theodore (77:41)`
 - **Type:** hold
-- **Render:** `manim:cards16x9.py:CardScene cards/S16-47.json`
-- **Holds:** `S16-47`
-- **Note:** L and I terms before closed form. [book] “steady-state extraction, $j\psi_s$ performs zero material work in the direction of the extraction current”
+- **Render:** `manim:cards16x9.py:CardScene cards/S16-48.json`
+- **Holds:** `S16-48`
+- **Note:** U_recovered term highlights. [book] “recovered energy equation quantifies”
 
 ## S16-50
 
 - **Anchor:** `Emmanuel Theodore (77:47)`
 - **Type:** hold
-- **Render:** `manim:cards16x9.py:CardScene cards/S16-47.json`
-- **Holds:** `S16-47`
-- **Note:** U_recovered = ½LI² displayed. [book] "U_{\text{recovered}} = \frac{1}{2}LI^2"
+- **Render:** `manim:cards16x9.py:CardScene cards/S16-48.json`
+- **Holds:** `S16-48`
+- **Note:** L and I terms before closed form. [book] “steady-state extraction, $j\psi_s$ performs zero material work in the direction of the extraction current”
 
 ## S16-51
 
 - **Anchor:** `Emmanuel Theodore (77:53)`
 - **Type:** hold
-- **Render:** `manim:cards16x9.py:CardScene cards/S16-47.json`
-- **Holds:** `S16-47`
-- **Note:** Greater L and I imply more harvestable stored energy. [claude] “more stored energy available for recovery”
+- **Render:** `manim:cards16x9.py:CardScene cards/S16-48.json`
+- **Holds:** `S16-48`
+- **Note:** U_recovered = ½LI² displayed. [book] "U_{\text{recovered}} = \frac{1}{2}LI^2"
 
 ## S16-52
 
@@ -3450,7 +3449,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:coil_gun16x9.py:CoilGunInterface`
 - **Holds:** `S16-31`
-- **Note:** Energy-efficient transfer between historical stages. [book] "energy-efficient transfer of suppression capital"
+- **Note:** Greater L and I imply more harvestable stored energy. [claude] “more stored energy available for recovery”
 
 ## S16-53
 
@@ -3458,14 +3457,14 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:coil_gun16x9.py:CoilGunInterface`
 - **Holds:** `S16-31`
-- **Note:** Jim Crow energy recycled into carceral state and War on Drugs. [book] "charge the capacitors for its next iteration"
+- **Note:** Energy-efficient transfer between historical stages. [book] "energy-efficient transfer of suppression capital"
 
 ## S16-54
 
 - **Anchor:** `Emmanuel Theodore (78:20)`
 - **Type:** card
 - **Render:** `manim:cards16x9.py:CardScene cards/S16-54.json`
-- **Note:** Stat bars: >23% Σ_sup expansion after 1965. [book] "expanded by more than 23%"
+- **Note:** Jim Crow energy recycled into carceral state and War on Drugs. [book] "charge the capacitors for its next iteration"
 
 ## S16-55
 
@@ -3473,7 +3472,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S16-54.json`
 - **Holds:** `S16-54`
-- **Note:** Extraction rate constant; channel swapped via recovery circuit. [book] "The extraction rate remained constant"
+- **Note:** Stat bars: >23% Σ_sup expansion after 1965. [book] "expanded by more than 23%" Extraction rate constant; channel swapped via recovery circuit. [book] "The extraction rate remained constant"
 
 ## S16-56
 
@@ -3518,7 +3517,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 
 - **Anchor:** `Emmanuel Theodore (79:15)`
 - **Type:** hold
-- **Render:** `manim:fractal16x9.py:FractalExecution`
+- **Render:** `manim:cards16x9.py:CardScene cards/S17-04.json`
 - **Holds:** `S17-04`
 - **Note:** Scale 1 WAN: Global South extraction; Ch. 6 five-tier hierarchy. [book] “resources from the Global South”
 
@@ -3526,7 +3525,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 
 - **Anchor:** `Emmanuel Theodore (79:23)`
 - **Type:** hold
-- **Render:** `manim:fractal16x9.py:FractalExecution`
+- **Render:** `manim:cards16x9.py:CardScene cards/S17-04.json`
 - **Holds:** `S17-04`
 - **Note:** Planetary kernel shared with predatory min-max. [book] “Predatory Min-Max Function”
 
@@ -3534,72 +3533,71 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 
 - **Anchor:** `Emmanuel Theodore (79:30)`
 - **Type:** hold
-- **Render:** `manim:fractal16x9.py:FractalExecution`
+- **Render:** `manim:cards16x9.py:CardScene cards/S17-04.json`
 - **Holds:** `S17-04`
-- **Note:** Scale 2 OS: national partition processes. [claude] “National policies partition the domestic population”
+- **Note:** Planetary kernel shared with predatory min-max. [book] “Predatory Min-Max Function”
 
 ## S17-08
 
 - **Anchor:** `Emmanuel Theodore (79:43)`
 - **Type:** hold
-- **Render:** `manim:fractal16x9.py:FractalExecution`
+- **Render:** `manim:cards16x9.py:CardScene cards/S17-04.json`
 - **Holds:** `S17-04`
-- **Note:** Redlining, gerrymandering, sentencing route resources upward. [book] “system-level process that partitions the national population and routes resources”
+- **Note:** Scale 2 OS: national partition processes. [claude] “National policies partition the domestic population”
 
 ## S17-09
 
 - **Anchor:** `Emmanuel Theodore (79:50)`
-- **Type:** card
-- **Render:** `manim:cards16x9.py:CardScene cards/S17-09.json`
+- **Type:** hold
+- **Render:** `manim:cards16x9.py:CardScene cards/S17-04.json`
 - **Holds:** `S17-04`
-- **Note:** Plain content-warning card before biological subroutine scale. [claude] “content warning applies to the third scale”
+- **Note:** Redlining, gerrymandering, sentencing route resources upward. [book] “system-level process that partitions the national population and routes resources”
 
 ## S17-10
 
 - **Anchor:** `Emmanuel Theodore (80:00)`
 - **Type:** card
 - **Render:** `manim:cards16x9.py:CardScene cards/S17-10.json`
-- **Note:** 1662 partus sequitur ventrem law on card. [book] "status followed the mother"
+- **Note:** Plain content-warning card during third-scale intro. [claude] "content warning applies to the third scale"
 
 ## S17-11
 
 - **Anchor:** `Emmanuel Theodore (80:09)`
-- **Type:** hold
-- **Render:** `manim:cards16x9.py:CardScene cards/S17-10.json`
-- **Holds:** `S17-10`
-- **Note:** Reproductive coercion as capital-generation tool. [book] “the 1662 Virginia law of partus sequitur ventrem”
+- **Type:** card
+- **Render:** `manim:cards16x9.py:CardScene cards/S17-11.json`
+- **Note:** 1662 partus sequitur ventrem law on card. [book] "status followed the mother"
 
 ## S17-12
 
 - **Anchor:** `Emmanuel Theodore (80:16)`
 - **Type:** hold
-- **Render:** `manim:cards16x9.py:CardScene cards/S17-10.json`
-- **Holds:** `S17-10`
-- **Note:** Thistlewood / Abba record cited as documentation. [book] “the systematic rape of enslaved women into a calculated”
+- **Render:** `manim:cards16x9.py:CardScene cards/S17-11.json`
+- **Holds:** `S17-11`
+- **Note:** Reproductive coercion as capital-generation tool. [book] “the 1662 Virginia law of partus sequitur ventrem”
 
 ## S17-13
 
 - **Anchor:** `Emmanuel Theodore (80:24)`
 - **Type:** hold
-- **Render:** `manim:cards16x9.py:CardScene cards/S17-10.json`
-- **Holds:** `S17-10`
-- **Note:** Consumptive extraction of bodily autonomy. [book] "complete consumptive extraction of bodily autonomy"
+- **Render:** `manim:cards16x9.py:CardScene cards/S17-11.json`
+- **Holds:** `S17-11`
+- **Note:** Thistlewood / Abba record cited as documentation. [book] “the systematic rape of enslaved women into a calculated”
 
 ## S17-14
 
 - **Anchor:** `Emmanuel Theodore (80:30)`
 - **Type:** hold
-- **Render:** `manim:cards16x9.py:CardScene cards/S17-10.json`
-- **Holds:** `S17-10`
-- **Note:** Sexual torture against men documented as bucking. [book] “extraction included the complete consumptive extraction of bodily autonomy, extending far beyond sugar and tobacco”
+- **Render:** `manim:cards16x9.py:CardScene cards/S17-11.json`
+- **Holds:** `S17-11`
+- **Note:** Consumptive extraction of bodily autonomy. [book] "complete consumptive extraction of bodily autonomy"
 
 ## S17-15
 
 - **Anchor:** `Emmanuel Theodore (80:37)`
 - **Type:** hold
-- **Render:** `manim:cards16x9.py:CardScene cards/S17-10.json`
-- **Holds:** `S17-10`
-- **Note:** Hold on documented-facts card; no imagery. [book] "fundamentally break kinetic and psychological resistance"
+- **Render:** `manim:cards16x9.py:CardScene cards/S17-11.json`
+- **Holds:** `S17-11`
+- **Note:** Sexual torture against men documented as bucking. [book] “extraction included the complete consumptive extraction of bodily autonomy, extending far beyond sugar and tobacco”. Hold on documented-facts card; no imagery. [book] "fundamentally break kinetic and psychological resistance"
 
 ## S17-16
 
@@ -3653,7 +3651,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 
 - **Anchor:** `Emmanuel Theodore (81:30)`
 - **Type:** hold
-- **Render:** `manim:fractal16x9.py:FractalExecution`
+- **Render:** `manim:cards16x9.py:CardScene cards/S17-04.json`
 - **Holds:** `S17-04`
 - **Note:** Preferential treatment markers within Out-group. [book] "receive preferential treatment within the Out-group"
 
@@ -3661,7 +3659,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 
 - **Anchor:** `Emmanuel Theodore (81:36)`
 - **Type:** hold
-- **Render:** `manim:fractal16x9.py:FractalExecution`
+- **Render:** `manim:cards16x9.py:CardScene cards/S17-04.json`
 - **Holds:** `S17-04`
 - **Note:** Partition logic replicated at intimate scale. [book] “partition logic at the most intimate scale”
 
@@ -3669,7 +3667,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 
 - **Anchor:** `Emmanuel Theodore (81:43)`
 - **Type:** hold
-- **Render:** `manim:fractal16x9.py:FractalExecution`
+- **Render:** `manim:cards16x9.py:CardScene cards/S17-04.json`
 - **Holds:** `S17-04`
 - **Note:** Self-executing code without external enforcement. [book] "self-executing code within the target population"
 
