@@ -1,0 +1,27 @@
+{
+  "kind": "equation",
+  "headline": "Equation 2.9 · Strategy set",
+  "items": [],
+  "sources": "Source: The Original Power, Equation 2.9 (confidence Tier 3)",
+  "qrUrl": null,
+  "latex": "S \\in \\{\\text{partition},\\text{integration},\\text{direct repression},\\text{externalization}\\}",
+  "number": "2.9",
+  "terms": [
+    {
+      "latex": "\\text{partition}",
+      "gloss": "hard phenotypic or legal separation"
+    },
+    {
+      "latex": "\\text{integration}",
+      "gloss": "surface inclusion offers that preserve extraction"
+    },
+    {
+      "latex": "\\text{direct repression}",
+      "gloss": "explicit enforcement and terror"
+    },
+    {
+      "latex": "\\text{externalization}",
+      "gloss": "proxy variables and outsourced harm"
+    }
+  ]
+}

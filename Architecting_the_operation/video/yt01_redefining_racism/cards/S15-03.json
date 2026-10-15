@@ -1,0 +1,20 @@
+{
+  "kind": "table",
+  "headline": "Operationalization · Σ_sup components",
+  "items": [
+    {
+      "title": "ψ_s(t)",
+      "detail": "Top-decile wealth share — status wage / Elite resource concentration"
+    },
+    {
+      "title": "R(t)",
+      "detail": "Overall and Black incarceration rates per 100,000"
+    },
+    {
+      "title": "Φ_load(t)",
+      "detail": "Inverse union density — cross-racial solidarity atomization"
+    }
+  ],
+  "sources": "Source: The Original Power, Post-1965 operationalization",
+  "qrUrl": null
+}

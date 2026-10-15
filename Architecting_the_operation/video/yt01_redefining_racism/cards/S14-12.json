@@ -1,0 +1,20 @@
+{
+  "kind": "timeline",
+  "headline": "Φ_load and effective coherence",
+  "items": [
+    {
+      "title": "1676",
+      "detail": "Bacon's Rebellion — cross-racial solidarity; Φ_load ≈ 0; M_eff > τ"
+    },
+    {
+      "title": "1705",
+      "detail": "Whiteness codified — Φ_load ordinal range 0.15–0.55"
+    },
+    {
+      "title": "~150 years",
+      "detail": "M_eff suppressed below τ (Tier 2 estimate; pre-1705 ordinal)"
+    }
+  ],
+  "sources": "Sources: Morgan 1975; ANES cumulative file",
+  "qrUrl": "https://electionstudies.org/data-tools/anes-time-series-cumulative-data-file/"
+}

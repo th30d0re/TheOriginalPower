@@ -1,0 +1,20 @@
+{
+  "kind": "stat_bars",
+  "headline": "Extraction rises · suppression ratio holds",
+  "items": [
+    {
+      "title": "1840",
+      "detail": "$74.1M revenue · $2.0M suppression · 2.70%"
+    },
+    {
+      "title": "1850",
+      "detail": "$102.5M revenue · $2.95M suppression · 2.88%"
+    },
+    {
+      "title": "1860",
+      "detail": "$247.0M revenue · $6.8M suppression · 2.75%"
+    }
+  ],
+  "sources": "Sources: U.S. Census Bureau 1975; Hadden 2001; Beckert 2014; Baptist 2014",
+  "qrUrl": null
+}

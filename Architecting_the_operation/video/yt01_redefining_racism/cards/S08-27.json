@@ -1,0 +1,16 @@
+{
+  "kind": "source",
+  "headline": "Critical junctures",
+  "items": [
+    {
+      "title": "Institutional power shifts",
+      "detail": "New trajectories become available"
+    },
+    {
+      "title": "Version update",
+      "detail": "The extraction kernel recompiles with a new interface"
+    }
+  ],
+  "sources": "Source: Acemoglu and Robinson 2012",
+  "qrUrl": null
+}

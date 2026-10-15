@@ -1,0 +1,16 @@
+{
+  "kind": "table",
+  "headline": "Alternative vocabularies",
+  "items": [
+    {
+      "title": "English",
+      "detail": "primary/secondary; leader/follower; parent/child"
+    },
+    {
+      "title": "German / Dutch / French",
+      "detail": "Mutteruhr\u2013Tochteruhr; dochterklok; horloge-m\u00e8re/file"
+    }
+  ],
+  "sources": "Eglash, Broken Metaphor (2007)",
+  "qrUrl": null
+}

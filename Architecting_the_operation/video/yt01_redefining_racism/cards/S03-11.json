@@ -1,0 +1,35 @@
+{
+  "kind": "equation",
+  "headline": "Equation 2.2 · Refine the In-group",
+  "items": [],
+  "sources": "Source: The Original Power, Equation 2.2",
+  "qrUrl": null,
+  "latex": "\\operatorname{Refine}(I)\n=\nE \\,\\dot\\cup\\, P_{\\text{uppet}} \\,\\dot\\cup\\, F_{\\text{enforce}}\n\\,\\dot\\cup\\, I_{\\text{buffer}},\n\\qquad\nE, P_{\\text{uppet}}, F_{\\text{enforce}}, I_{\\text{buffer}} \\subset I .",
+  "number": "2.2",
+  "terms": [
+    {
+      "latex": "\\operatorname{Refine}(I)",
+      "gloss": "refinement of the In-group"
+    },
+    {
+      "latex": "E",
+      "gloss": "Elite"
+    },
+    {
+      "latex": "P_{\\text{uppet}}",
+      "gloss": "Puppet Class"
+    },
+    {
+      "latex": "F_{\\text{enforce}}",
+      "gloss": "Enforcement Class"
+    },
+    {
+      "latex": "I_{\\text{buffer}}",
+      "gloss": "Buffer Class"
+    },
+    {
+      "latex": "\\subset I",
+      "gloss": "each tier is contained in the In-group"
+    }
+  ]
+}

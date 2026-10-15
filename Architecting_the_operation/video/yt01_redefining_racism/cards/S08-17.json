@@ -1,0 +1,27 @@
+{
+  "kind": "equation",
+  "headline": "Equation 2.8 · Minimum forcing threshold",
+  "items": [],
+  "sources": "Source: The Original Power, Equation 2.8",
+  "qrUrl": null,
+  "latex": "\\mathcal{A}_{\\text{abuse}}(t)\n=\n\\int_{0}^{t} \\mathcal{E}_{\\max}(s)\\,ds\n\\quad \\text{and breach occurs when} \\quad\n\\mathcal{A}_{\\text{abuse}}(t) \\geq \\tau_{\\text{MFT}} .",
+  "number": "2.8",
+  "terms": [
+    {
+      "latex": "\\mathcal{A}_{\\text{abuse}}(t)",
+      "gloss": "accumulated abuse at time t"
+    },
+    {
+      "latex": "\\int_{0}^{t}",
+      "gloss": "accumulation from zero to time t"
+    },
+    {
+      "latex": "\\mathcal{E}_{\\max}(s)",
+      "gloss": "maximum extraction at time s"
+    },
+    {
+      "latex": "\\tau_{\\text{MFT}}",
+      "gloss": "minimum forcing threshold"
+    }
+  ]
+}

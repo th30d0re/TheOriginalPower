@@ -1,0 +1,20 @@
+{
+  "kind": "table",
+  "headline": "Selective empathy mechanism",
+  "items": [
+    {
+      "title": "Prior",
+      "detail": "Racial partition assigned high precision"
+    },
+    {
+      "title": "Sensory input",
+      "detail": "Direct evidence of Out-group harm"
+    },
+    {
+      "title": "Output",
+      "detail": "Harm filtered as natural or irrelevant"
+    }
+  ],
+  "sources": "Source: The Original Power, §2.3.4",
+  "qrUrl": null
+}

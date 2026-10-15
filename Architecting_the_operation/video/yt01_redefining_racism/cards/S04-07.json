@@ -1,0 +1,23 @@
+{
+  "kind": "equation",
+  "headline": "Elite extraction invariant",
+  "items": [],
+  "sources": "Source: The Original Power, Chapter 2",
+  "qrUrl": null,
+  "latex": "\\Delta\\max = 0",
+  "number": "unnumbered",
+  "terms": [
+    {
+      "latex": "\\Delta",
+      "gloss": "change"
+    },
+    {
+      "latex": "\\max",
+      "gloss": "Elite extraction objective"
+    },
+    {
+      "latex": "0",
+      "gloss": "the concession preserves the extraction position"
+    }
+  ]
+}

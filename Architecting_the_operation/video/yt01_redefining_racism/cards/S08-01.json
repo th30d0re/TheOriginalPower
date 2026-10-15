@@ -1,0 +1,32 @@
+{
+  "kind": "table",
+  "headline": "Canonical variable map",
+  "items": [
+    {
+      "title": "𝓔(t) · Extraction objective",
+      "detail": "Time-indexed material transfer toward E"
+    },
+    {
+      "title": "M(t) · Resistance control",
+      "detail": "Time-indexed class-coherence threat"
+    },
+    {
+      "title": "τ · Collapse threshold",
+      "detail": "Critical coherence threshold"
+    },
+    {
+      "title": "ψ(t) = ψ_s(t) + ψ_m(t) · Suppression allocation",
+      "detail": "Status wage plus material concession"
+    },
+    {
+      "title": "R(t) · Kinetic repression",
+      "detail": "Physical suppression capacity"
+    },
+    {
+      "title": "φ_k,j and Φ_j · Phase architecture",
+      "detail": "Axis-level and compound phase shifts"
+    }
+  ],
+  "sources": "Source: The Original Power, Canonical Variable Map",
+  "qrUrl": null
+}

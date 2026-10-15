@@ -1,0 +1,18 @@
+{
+  "kind": "source",
+  "headline": "Predictive coding accounts",
+  "items": [
+    {
+      "title": "Friston · 2010",
+      "detail": "Free-energy principle and unified brain theory",
+      "qrUrl": "https://doi.org/10.1038/nrn2787"
+    },
+    {
+      "title": "Clark · 2013",
+      "detail": "Predictive brains and situated agents",
+      "qrUrl": "https://doi.org/10.1017/S0140525X12000477"
+    }
+  ],
+  "sources": "Sources: Friston 2010; Clark 2013",
+  "qrUrl": null
+}

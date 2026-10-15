@@ -1,0 +1,35 @@
+{
+  "kind": "equation",
+  "headline": "Equation 2.4 · Recursive local partition",
+  "items": [],
+  "sources": "Source: The Original Power, Equation 2.4",
+  "qrUrl": null,
+  "latex": "X = X^{+}_{\\alpha} \\,\\dot\\cup\\, X^{-}_{\\alpha},\n\\qquad\nX^{+}_{\\alpha} \\cap X^{-}_{\\alpha} = \\varnothing ,",
+  "number": "2.4",
+  "terms": [
+    {
+      "latex": "X",
+      "gloss": "any class contained in the population universe"
+    },
+    {
+      "latex": "\\alpha",
+      "gloss": "operative axis"
+    },
+    {
+      "latex": "X^{+}_{\\alpha}",
+      "gloss": "local In-group on the axis"
+    },
+    {
+      "latex": "X^{-}_{\\alpha}",
+      "gloss": "local Out-group on the axis"
+    },
+    {
+      "latex": "X^{+}_{\\alpha} \\cap X^{-}_{\\alpha}",
+      "gloss": "shared membership under the axis"
+    },
+    {
+      "latex": "\\varnothing",
+      "gloss": "empty set"
+    }
+  ]
+}

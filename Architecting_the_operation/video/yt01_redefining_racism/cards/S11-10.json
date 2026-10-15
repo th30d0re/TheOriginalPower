@@ -1,0 +1,23 @@
+{
+  "kind": "equation",
+  "headline": "Racial prior (unnumbered)",
+  "items": [],
+  "sources": "Source: The Original Power, §2.3.4 Bayesian defense",
+  "qrUrl": null,
+  "latex": "P_i(T \\mid X, \\Pi_{\\text{race}}) \\propto P(X \\mid T)\\,P_i(T \\mid \\Pi_{\\text{race}})",
+  "number": "prior",
+  "terms": [
+    {
+      "latex": "P_i(T \\mid X, \\Pi_{\\text{race}})",
+      "gloss": "posterior threat or status interpretation for individual i"
+    },
+    {
+      "latex": "P(X \\mid T)",
+      "gloss": "likelihood of sensory input given interpretation"
+    },
+    {
+      "latex": "P_i(T \\mid \\Pi_{\\text{race}})",
+      "gloss": "racial prior installed by legal and social reinforcement"
+    }
+  ]
+}

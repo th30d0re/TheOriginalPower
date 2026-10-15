@@ -1,0 +1,12 @@
+{
+  "kind": "stat_bars",
+  "headline": "Patent corpus",
+  "items": [
+    {
+      "title": "1976\u2013present",
+      "detail": "19,708 U.S. patents containing both terms"
+    }
+  ],
+  "sources": "Eglash, Broken Metaphor (2007)",
+  "qrUrl": null
+}

@@ -1,0 +1,18 @@
+{
+  "kind": "source",
+  "headline": "Ancient DNA · pigmentation timeline",
+  "items": [
+    {
+      "title": "Olalde et al. · 2014",
+      "detail": "La Braña ~7,000 BP: dark-skin alleles, blue-eye haplotype",
+      "qrUrl": "https://doi.org/10.1038/nature12960"
+    },
+    {
+      "title": "Brace et al. · 2019",
+      "detail": "Cheddar Man: dark skin, blue or green eyes",
+      "qrUrl": "https://doi.org/10.1038/s41559-019-0871-9"
+    }
+  ],
+  "sources": "Sources: Olalde et al. 2014; Brace et al. 2019",
+  "qrUrl": null
+}

@@ -1,0 +1,23 @@
+{
+  "kind": "source",
+  "headline": "Host-state dispositions",
+  "items": [
+    {
+      "title": "Pratto et al. · 1994",
+      "detail": "Social Dominance Orientation",
+      "qrUrl": "https://doi.org/10.1037/0022-3514.67.4.741"
+    },
+    {
+      "title": "Altemeyer · 1998",
+      "detail": "Right-Wing Authoritarianism",
+      "qrUrl": "https://doi.org/10.1016/S0065-2601(08)60382-2"
+    },
+    {
+      "title": "Duckitt · 2001",
+      "detail": "Dual-process ideology model",
+      "qrUrl": "https://doi.org/10.1016/S0065-2601(01)80004-6"
+    }
+  ],
+  "sources": "Sources: Pratto et al. 1994; Altemeyer 1998; Duckitt 2001",
+  "qrUrl": null
+}

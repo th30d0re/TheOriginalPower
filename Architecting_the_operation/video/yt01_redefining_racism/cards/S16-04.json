@@ -1,0 +1,23 @@
+{
+  "kind": "equation",
+  "headline": "Equation 3.5 \u00b7 Complex wage (Chapter 3 cross-reference)",
+  "items": [],
+  "sources": "Source: The Original Power, Definition 2.3 / Equation 3.5 (Chapter 3)",
+  "qrUrl": null,
+  "latex": "W = \\psi_m + j\\psi_s",
+  "number": "3.5",
+  "terms": [
+    {
+      "latex": "W",
+      "gloss": "total complex wage"
+    },
+    {
+      "latex": "\\psi_m",
+      "gloss": "material wage (real axis)"
+    },
+    {
+      "latex": "j\\psi_s",
+      "gloss": "psychological or status wage (imaginary axis)"
+    }
+  ]
+}

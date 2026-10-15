@@ -1,0 +1,27 @@
+{
+  "kind": "equation",
+  "headline": "Equation 2.13 · Suppression envelope",
+  "items": [],
+  "sources": "Source: The Original Power, Equation 2.13",
+  "qrUrl": null,
+  "latex": "\\Sigma_{\\text{sup}}(t) = \\psi_s(t) + \\psi_m(t) + R(t) + \\Phi_{\\text{load}}(t)",
+  "number": "2.13",
+  "terms": [
+    {
+      "latex": "\\psi_s(t)",
+      "gloss": "status wage — always active"
+    },
+    {
+      "latex": "\\psi_m(t)",
+      "gloss": "material wage — active under elevated kinetic threat"
+    },
+    {
+      "latex": "R(t)",
+      "gloss": "kinetic repression"
+    },
+    {
+      "latex": "\\Phi_{\\text{load}}(t)",
+      "gloss": "compound phase-shift load from identity fragmentation"
+    }
+  ]
+}

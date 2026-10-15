@@ -1,0 +1,16 @@
+{
+  "kind": "stat_bars",
+  "headline": "Middle Passage mortality",
+  "items": [
+    {
+      "title": "Mortality rate",
+      "detail": "15% during transport"
+    },
+    {
+      "title": "Deaths",
+      "detail": "Nearly 2 million during the Middle Passage"
+    }
+  ],
+  "sources": "Source: The Original Power, §2.3.3 (transatlantic slave trade mortality)",
+  "qrUrl": null
+}

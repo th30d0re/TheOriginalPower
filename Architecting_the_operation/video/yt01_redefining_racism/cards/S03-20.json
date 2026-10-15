@@ -1,0 +1,31 @@
+{
+  "kind": "equation",
+  "headline": "Equation 2.3 · Fracture the Out-group",
+  "items": [],
+  "sources": "Source: The Original Power, Equation 2.3",
+  "qrUrl": null,
+  "latex": "O\n=\nO_{\\text{racialized}} \\,\\dot\\cup\\, O_{\\text{adjacent},1}\n\\,\\dot\\cup\\, O_{\\text{adjacent},2}\n\\,\\dot\\cup\\, \\cdots \\,\\dot\\cup\\, O_{\\text{adjacent},m}.",
+  "number": "2.3",
+  "terms": [
+    {
+      "latex": "O",
+      "gloss": "Out-group"
+    },
+    {
+      "latex": "O_{\\text{racialized}}",
+      "gloss": "primary extraction layer"
+    },
+    {
+      "latex": "O_{\\text{adjacent},1}",
+      "gloss": "first adjacent or reclassified layer"
+    },
+    {
+      "latex": "O_{\\text{adjacent},2}",
+      "gloss": "second adjacent or reclassified layer"
+    },
+    {
+      "latex": "O_{\\text{adjacent},m}",
+      "gloss": "indexed adjacent layer"
+    }
+  ]
+}

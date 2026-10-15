@@ -1,0 +1,16 @@
+{
+  "kind": "compare",
+  "headline": "Two regimes of j\u03c8\u209b",
+  "items": [
+    {
+      "title": "Steady state",
+      "detail": "Orthogonal deflection; stores energy; zero extraction-direction work"
+    },
+    {
+      "title": "Transient collapse",
+      "detail": "Forced di/dt discharges field as opposing violence (Lenz)"
+    }
+  ],
+  "sources": "Source: The Original Power, \u00a72.3.6.1\u20132",
+  "qrUrl": null
+}

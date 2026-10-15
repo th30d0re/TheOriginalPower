@@ -1,0 +1,20 @@
+{
+  "kind": "timeline",
+  "headline": "Mode 1 · Founding engineering",
+  "items": [
+    {
+      "title": "1453 · Zurara chronicle",
+      "detail": "Commissioned ideological source code"
+    },
+    {
+      "title": "1705 · Virginia Slave Codes",
+      "detail": "Conscious kernel rewrite"
+    },
+    {
+      "title": "1787 · Three-Fifths Compromise",
+      "detail": "Negotiated extraction formula"
+    }
+  ],
+  "sources": "Sources: Zurara 1841 ed.; The Original Power, §2.3.11",
+  "qrUrl": null
+}

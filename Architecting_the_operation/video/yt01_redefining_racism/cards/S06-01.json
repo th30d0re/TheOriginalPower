@@ -1,0 +1,24 @@
+{
+  "kind": "table",
+  "headline": "The suffix -ism names a system",
+  "items": [
+    {
+      "title": "Capitalism",
+      "detail": "System of economic organization"
+    },
+    {
+      "title": "Feudalism",
+      "detail": "System of social hierarchy"
+    },
+    {
+      "title": "Colonialism",
+      "detail": "System of territorial exploitation"
+    },
+    {
+      "title": "Racism",
+      "detail": "System of oppression"
+    }
+  ],
+  "sources": "Source: The Original Power, Chapter 2",
+  "qrUrl": null
+}

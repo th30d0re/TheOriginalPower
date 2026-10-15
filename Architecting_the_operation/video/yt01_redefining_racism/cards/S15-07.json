@@ -1,0 +1,30 @@
+{
+  "kind": "figure",
+  "headline": "Figure 2.7c · Incarceration rates",
+  "items": [
+    {
+      "title": "All · 1965",
+      "detail": "108 per 100,000"
+    },
+    {
+      "title": "All · 2020",
+      "detail": "358 per 100,000 (+231%)"
+    },
+    {
+      "title": "Black · 1965",
+      "detail": "588 per 100,000"
+    },
+    {
+      "title": "Black · peak 2010",
+      "detail": "3,074 per 100,000"
+    },
+    {
+      "title": "Black · 2020",
+      "detail": "1,821 per 100,000"
+    }
+  ],
+  "sources": "Sources: bjs_prisoners; sentencing_project",
+  "qrUrl": "https://bjs.ojp.gov/data-collection/national-prisoner-statistics-nps-program",
+  "image": "figures/eq08_10_backlash_wave_panel_c.png",
+  "caption": "Carceral expansion proxies kinetic repression R(t)."
+}

@@ -1,0 +1,28 @@
+{
+  "kind": "table",
+  "headline": "User-space applications",
+  "items": [
+    {
+      "title": "Diversity initiatives",
+      "detail": "Runs inside virus-granted permissions"
+    },
+    {
+      "title": "Representation campaigns",
+      "detail": "Desktop-level interface change"
+    },
+    {
+      "title": "Implicit bias training",
+      "detail": "Stress reduction without kernel access"
+    },
+    {
+      "title": "Corporate equity statements",
+      "detail": "Splash-screen updates"
+    },
+    {
+      "title": "Symbolic legislation",
+      "detail": "No extraction-code modification"
+    }
+  ],
+  "sources": "Source: The Original Power, §2.3.10",
+  "qrUrl": null
+}

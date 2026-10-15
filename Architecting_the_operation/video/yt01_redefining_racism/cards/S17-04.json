@@ -1,0 +1,28 @@
+{
+  "kind": "table",
+  "headline": "Five fractal scales",
+  "items": [
+    {
+      "title": "1 \u00b7 WAN / macro",
+      "detail": "Western imperialism; planetary five-tier hierarchy (Ch. 6)"
+    },
+    {
+      "title": "2 \u00b7 OS / national",
+      "detail": "Redlining, gerrymandering, sentencing disparities"
+    },
+    {
+      "title": "3 \u00b7 biological subroutine",
+      "detail": "partus sequitur ventrem; reproductive coercion as capital input"
+    },
+    {
+      "title": "4 \u00b7 application / intersectional",
+      "detail": "Sexism, homophobia, transphobia, ableism as subroutines"
+    },
+    {
+      "title": "5 \u00b7 micro / auto-exec",
+      "detail": "Colorism; Out-group runs Elite sorting internally"
+    }
+  ],
+  "sources": "Source: The Original Power, \u00a72.3.7",
+  "qrUrl": null
+}

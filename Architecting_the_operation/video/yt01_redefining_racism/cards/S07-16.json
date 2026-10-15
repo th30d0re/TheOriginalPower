@@ -1,0 +1,28 @@
+{
+  "kind": "source",
+  "headline": "Race-specific biological-embedding evidence",
+  "items": [
+    {
+      "title": "Geronimus et al. · 2006",
+      "detail": "Weathering and allostatic load",
+      "qrUrl": "https://doi.org/10.2105/AJPH.2004.060749"
+    },
+    {
+      "title": "Duru et al. · 2012",
+      "detail": "Allostatic load and mortality disparities",
+      "qrUrl": "https://doi.org/10.1016/S0027-9684(15)30120-6"
+    },
+    {
+      "title": "Ruiz-Narváez et al. · 2025",
+      "detail": "Racism, DNA methylation, and epigenetic aging",
+      "qrUrl": "https://doi.org/10.1007/s40615-024-01915-3"
+    },
+    {
+      "title": "Spears et al. · 2026",
+      "detail": "Lifespan stress, inflammation, and mortality disparities",
+      "qrUrl": "https://doi.org/10.1001/jamanetworkopen.2025.54701"
+    }
+  ],
+  "sources": "Sources: Geronimus et al. 2006; Duru et al. 2012; Ruiz-Narváez et al. 2025; Spears et al. 2026",
+  "qrUrl": null
+}

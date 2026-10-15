@@ -1,0 +1,35 @@
+{
+  "kind": "equation",
+  "headline": "Effective suppression wage",
+  "items": [],
+  "sources": "Source: The Original Power, §2.3.9",
+  "qrUrl": null,
+  "latex": "\\psi_i^{\\mathrm{eff}}(t) = \\psi(t)\\left[1 + \\alpha_S \\mathrm{SDO}_i(t) + \\alpha_A \\mathrm{RWA}_i(t)\\right]",
+  "number": "unnumbered",
+  "terms": [
+    {
+      "latex": "\\psi_i^{\\mathrm{eff}}(t)",
+      "gloss": "perceived wage for individual i"
+    },
+    {
+      "latex": "\\psi(t)",
+      "gloss": "baseline suppression allocation"
+    },
+    {
+      "latex": "\\alpha_S",
+      "gloss": "SDO sensitivity weight"
+    },
+    {
+      "latex": "\\mathrm{SDO}_i(t)",
+      "gloss": "hierarchy preference"
+    },
+    {
+      "latex": "\\alpha_A",
+      "gloss": "RWA sensitivity weight"
+    },
+    {
+      "latex": "\\mathrm{RWA}_i(t)",
+      "gloss": "authoritarian threat response"
+    }
+  ]
+}

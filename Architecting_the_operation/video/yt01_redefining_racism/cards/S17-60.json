@@ -1,0 +1,24 @@
+{
+  "kind": "stat_bars",
+  "headline": "ANES cross-racial solidarity proxy (\u03a6_load)",
+  "items": [
+    {
+      "title": "Pre-1964 mean",
+      "detail": "0.078"
+    },
+    {
+      "title": "Activation period",
+      "detail": "0.214"
+    },
+    {
+      "title": "Post-activation",
+      "detail": "0.403"
+    },
+    {
+      "title": "Confidence",
+      "detail": "Tier 2 (ordinal phase proxies)"
+    }
+  ],
+  "sources": "Source: ANES Cumulative File; The Original Power, \u00a72.3.7",
+  "qrUrl": "https://electionstudies.org/data-tools/anes-time-series-cumulative-data-file/"
+}

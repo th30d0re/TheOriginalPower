@@ -1,0 +1,16 @@
+{
+  "kind": "source",
+  "headline": "Empirical Validation Index",
+  "items": [
+    {
+      "title": "Confidence tier",
+      "detail": "Records the provenance strength"
+    },
+    {
+      "title": "Falsification criterion",
+      "detail": "States the condition that would defeat the calibration"
+    }
+  ],
+  "sources": "Source: The Original Power, Empirical Validation Index",
+  "qrUrl": null
+}

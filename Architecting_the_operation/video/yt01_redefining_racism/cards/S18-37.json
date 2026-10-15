@@ -1,0 +1,28 @@
+{
+  "kind": "table",
+  "headline": "Sixth row \u00b7 lexical scale",
+  "items": [
+    {
+      "title": "E",
+      "detail": "Publication stewards, standards bodies"
+    },
+    {
+      "title": "P",
+      "detail": "Senior engineers and faculty"
+    },
+    {
+      "title": "F",
+      "detail": "Peer review; PC enforcement"
+    },
+    {
+      "title": "I",
+      "detail": "STEM workforce identity defense"
+    },
+    {
+      "title": "O",
+      "detail": "Underrepresented students pay retention cost"
+    }
+  ],
+  "sources": "Source: The Original Power, \u00a72.3.8",
+  "qrUrl": null
+}

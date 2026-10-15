@@ -1,0 +1,16 @@
+{
+  "kind": "compare",
+  "headline": "Falsification criterion",
+  "items": [
+    {
+      "title": "Extraction",
+      "detail": "Cotton revenue rises across multiple consecutive years or Census intervals"
+    },
+    {
+      "title": "Suppression",
+      "detail": "Militia and patrol expenditure falls or remains flat"
+    }
+  ],
+  "sources": "Source: The Original Power, Antebellum case study",
+  "qrUrl": null
+}

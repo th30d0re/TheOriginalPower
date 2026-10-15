@@ -1,0 +1,26 @@
+{
+  "kind": "figure",
+  "headline": "Figure 2.5 · Series RLC topology",
+  "items": [
+    {
+      "title": "R",
+      "detail": "Bureaucratic and carceral friction"
+    },
+    {
+      "title": "L",
+      "detail": "Cultural inertia and institutional entrenchment"
+    },
+    {
+      "title": "C",
+      "detail": "Token-reform absorption capacity"
+    },
+    {
+      "title": "V(t)",
+      "detail": "Kinetic supply and reform-shock voltage"
+    }
+  ],
+  "sources": "Source: The Original Power, Figure 2.5",
+  "qrUrl": null,
+  "image": "figures/fig2.5_p134.png",
+  "caption": "Series RLC loop wired to the kinetic supply; passive elements carry institutional meanings from Equation 2.11."
+}

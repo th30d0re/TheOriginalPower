@@ -1,0 +1,24 @@
+{
+  "kind": "table",
+  "headline": "Table 2.1 · Set-Resolution Ladder",
+  "items": [
+    {
+      "title": "Coarse binary · U = I \\dot\\cup O",
+      "detail": "Primary boundary between included and excluded populations"
+    },
+    {
+      "title": "In-group refinement · I = E \\dot\\cup P \\dot\\cup F \\dot\\cup I_buffer",
+      "detail": "Material benefit, interface, enforcement, and buffer tiers"
+    },
+    {
+      "title": "Out-group refinement · O = \\dot\\bigcup_{j=0}^{m} O_j",
+      "detail": "Subgroups experience different extraction intensities"
+    },
+    {
+      "title": "Recursive projection · X = X^+_alpha \\dot\\cup X^-_alpha",
+      "detail": "Local partitions under a narrower axis"
+    }
+  ],
+  "sources": "Source: The Original Power, Table 2.1",
+  "qrUrl": null
+}

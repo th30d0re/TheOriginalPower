@@ -1,0 +1,23 @@
+{
+  "kind": "equation",
+  "headline": "Stored magnetic potential energy",
+  "items": [],
+  "sources": "Source: The Original Power, \u00a72.3.6.1\u20132",
+  "qrUrl": null,
+  "latex": "U = \\frac{1}{2}LI^2",
+  "number": "",
+  "terms": [
+    {
+      "latex": "U",
+      "gloss": "stored field energy"
+    },
+    {
+      "latex": "L",
+      "gloss": "cultural inertia and institutional entrenchment"
+    },
+    {
+      "latex": "I",
+      "gloss": "current through the ideological field"
+    }
+  ]
+}

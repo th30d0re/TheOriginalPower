@@ -1,0 +1,22 @@
+{
+  "kind": "figure",
+  "headline": "Figure 2.4 · Kernel Optimization, 1840–1860",
+  "items": [
+    {
+      "title": "1840 Census",
+      "detail": "$74.1M revenue · suppression ratio 2.70%"
+    },
+    {
+      "title": "1850 Census",
+      "detail": "$102.5M revenue · suppression ratio 2.88%"
+    },
+    {
+      "title": "1860 Census",
+      "detail": "$247.0M revenue · suppression ratio 2.75%"
+    }
+  ],
+  "sources": "Sources: U.S. Census Bureau 1975; Hadden 2001; Beckert 2014; Baptist 2014",
+  "qrUrl": null,
+  "image": "figures/eq05_kernel_optimization.png",
+  "caption": "Extraction revenue increased 233% while the suppression ratio remained within a 0.18 percentage-point band (CV < 0.04)."
+}

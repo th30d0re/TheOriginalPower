@@ -1,0 +1,12 @@
+{
+  "kind": "source",
+  "headline": "Architecting the Operation podcast",
+  "items": [
+    {
+      "title": "Multi-voice deep dive",
+      "detail": "Long-form conversation on the framework"
+    }
+  ],
+  "sources": "Source: Architecting the Operation podcast feed",
+  "qrUrl": null
+}

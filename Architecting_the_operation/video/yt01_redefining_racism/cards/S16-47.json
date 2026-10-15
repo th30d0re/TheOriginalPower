@@ -1,0 +1,23 @@
+{
+  "kind": "equation",
+  "headline": "Equation 2.18 \u00b7 Recovered suppression energy",
+  "items": [],
+  "sources": "Source: The Original Power, Equation 2.18",
+  "qrUrl": null,
+  "latex": "U_{\\text{recovered}} = \\frac{1}{2}LI^2",
+  "number": "2.18",
+  "terms": [
+    {
+      "latex": "U_{\\text{recovered}}",
+      "gloss": "harvested energy from field collapse"
+    },
+    {
+      "latex": "L",
+      "gloss": "cultural inductance"
+    },
+    {
+      "latex": "I",
+      "gloss": "steady-state extraction current before collapse"
+    }
+  ]
+}

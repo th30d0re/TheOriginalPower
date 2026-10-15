@@ -1,0 +1,23 @@
+{
+  "kind": "equation",
+  "headline": "Equation 2.17 \u00b7 Back-EMF",
+  "items": [],
+  "sources": "Source: The Original Power, Equation 2.17",
+  "qrUrl": null,
+  "latex": "V_{\\text{back-EMF}} = -L\\,\\frac{di}{dt}",
+  "number": "2.17",
+  "terms": [
+    {
+      "latex": "V_{\\text{back-EMF}}",
+      "gloss": "induced voltage surge"
+    },
+    {
+      "latex": "L",
+      "gloss": "cultural inductance"
+    },
+    {
+      "latex": "\\frac{di}{dt}",
+      "gloss": "rapid change in extraction current"
+    }
+  ]
+}

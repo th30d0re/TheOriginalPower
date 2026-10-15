@@ -1,0 +1,16 @@
+{
+  "kind": "stat_bars",
+  "headline": "Drug-law incarcerations",
+  "items": [
+    {
+      "title": "1972",
+      "detail": "38,680 people incarcerated for drug-law violations"
+    },
+    {
+      "title": "2002",
+      "detail": "480,519 — more than twelvefold increase"
+    }
+  ],
+  "sources": "Source: Caulkins & Chandler 2006, Crime & Delinquency",
+  "qrUrl": "https://www.ojp.gov/ncjrs/virtual-library/abstracts/long-run-trends-incarceration-drug-offenders-united-states"
+}

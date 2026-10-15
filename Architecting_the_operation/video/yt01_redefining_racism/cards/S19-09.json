@@ -1,0 +1,24 @@
+{
+  "kind": "table",
+  "headline": "Material wage channels",
+  "items": [
+    {
+      "title": "Land grants",
+      "detail": "Territorial and credit access"
+    },
+    {
+      "title": "Social Security",
+      "detail": "Federal retirement infrastructure"
+    },
+    {
+      "title": "GI Bill",
+      "detail": "Subsidized homeownership and education"
+    },
+    {
+      "title": "Infrastructure",
+      "detail": "Federally subsidized public works"
+    }
+  ],
+  "sources": "Source: The Original Power, §2.3.9",
+  "qrUrl": null
+}

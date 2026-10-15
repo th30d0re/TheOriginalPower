@@ -1,0 +1,22 @@
+{
+  "kind": "figure",
+  "headline": "Figure 2.7a · Union density",
+  "items": [
+    {
+      "title": "1965",
+      "detail": "28.4%"
+    },
+    {
+      "title": "2020",
+      "detail": "10.8%"
+    },
+    {
+      "title": "Change",
+      "detail": "−17.6 percentage points (Φ_load proxy)"
+    }
+  ],
+  "sources": "Source: BLS; Troy & Sheflin · eq08_10_backlash_wave.csv",
+  "qrUrl": "https://www.bls.gov/news.release/union2.toc.htm",
+  "image": "figures/eq08_10_backlash_wave_panel_a.png",
+  "caption": "Union density decline proxies phase-shift load from working-class atomization."
+}
