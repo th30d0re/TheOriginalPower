@@ -3,6 +3,7 @@
     .venv-manimgx/bin/python edit16x9.py turns 03 --only S03-08   # a run's spoken words and notes
     .venv-manimgx/bin/python edit16x9.py check                       # every Render target exists and defines its class
     .venv-manimgx/bin/python edit16x9.py render 00 01 -r 960x540 --fps 15 -j 3
+    .venv-manimgx/bin/python edit16x9.py sheet 05 --only S05-22    # one frame per shot, as the viewer sees it
     .venv-manimgx/bin/python edit16x9.py cut 00 01 -r 960x540 --fps 15   # outputs/YT01/video/preview/<WxH>/SEG00.mp4
 
 A run is a primary shot and its holds (see common16x9). Each run renders once, silent, to
@@ -81,6 +82,46 @@ def cmd_turns(args):
         for k, r in enumerate(run):
             print(f"  [{k}] {r.id} {r.type} @{starts[r.index]:.2f}s  {words[r.index]['text']}")
             print(f"       note: {r.note}")
+    return 0
+
+
+def cmd_sheet(args):
+    """One tile per shot: the frame at 85% of the shot's window, cut from its run render."""
+    import tempfile
+    from PIL import Image, ImageDraw
+    shots = load_shots()
+    starts, end = beats()
+    fps = args.fps
+    F = [frame(t, fps) for t in starts] + [frame(end + 1.0, fps)]
+    runs = runs_of(seg_shots(shots, args.segs))
+    tiles = []
+    for primary, run in runs.items():
+        if args.only and primary not in args.only:
+            continue
+        src = run_path(primary, args.res, fps)
+        if not src.exists():
+            print(f"{primary}: no render")
+            continue
+        f0 = F[run[0].index]
+        picks = [(s.id, F[s.index] - f0 + int(0.85 * (F[s.index + 1] - F[s.index]))) for s in run]
+        tmp = Path(tempfile.mkdtemp())
+        sel = "+".join(f"eq(n\\,{n})" for _, n in picks)
+        subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(src), "-vf",
+                        f"fps={fps},tpad=stop_mode=clone:stop=100000,select={sel}", "-fps_mode", "passthrough",
+                        str(tmp / "f_%03d.png")], check=True)
+        for (sid, _), png in zip(picks, sorted(tmp.glob("f_*.png"))):
+            im = Image.open(png).convert("RGB").resize((640, 360))
+            ImageDraw.Draw(im).text((6, 4), f"{sid} (run {primary})", fill=(255, 90, 90))
+            tiles.append(im)
+    if not tiles:
+        return 1
+    cols = 3
+    sheet = Image.new("RGB", (640 * cols, 360 * ((len(tiles) + cols - 1) // cols)), (40, 40, 40))
+    for k, t in enumerate(tiles):
+        sheet.paste(t, ((k % cols) * 640, (k // cols) * 360))
+    out = Path(args.out or f"/tmp/yt01_sheet_{'_'.join(args.segs) or 'all'}.png")
+    sheet.save(out)
+    print(f"{out}: {len(tiles)} shots")
     return 0
 
 
@@ -169,9 +210,13 @@ def cmd_cut(args):
             clip = work / f"{s.id}.mp4"
             src = run_path(s.primary, args.res, fps)
             if src.exists():
-                offset = (F[s.index] - F[first_of[s.primary]]) / fps
-                subprocess.run(["ffmpeg", "-v", "error", "-y", "-ss", f"{offset:.6f}", "-i", str(src),
-                                "-vf", f"tpad=stop_mode=clone:stop={n},fps={fps}", "-frames:v", str(n), "-an",
+                # Runs are variable frame rate (a still is one long packet), so make the stream
+                # constant-rate first and trim by frame index; seeking could skip a held frame.
+                a = F[s.index] - F[first_of[s.primary]]
+                vf = (f"fps={fps},tpad=stop_mode=clone:stop={n},"
+                      f"trim=start_frame={a}:end_frame={a + n},setpts=PTS-STARTPTS")
+                subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(src),
+                                "-vf", vf, "-frames:v", str(n), "-an",
                                 "-c:v", "libx264", "-preset", "veryfast", "-crf", "18", "-pix_fmt", "yuv420p",
                                 str(clip)], check=True)
             else:
@@ -195,16 +240,17 @@ def cmd_cut(args):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("action", choices=["check", "turns", "render", "cut"])
+    ap.add_argument("action", choices=["check", "turns", "render", "cut", "sheet"])
     ap.add_argument("segs", nargs="*", help="segment numbers (default: all)")
     ap.add_argument("-r", "--res", default="960x540")
     ap.add_argument("--fps", type=int, default=15)
     ap.add_argument("-j", "--jobs", type=int, default=3)
     ap.add_argument("--only", nargs="*", help="render only these primary shot ids")
     ap.add_argument("--force", action="store_true")
+    ap.add_argument("-o", "--out", help="sheet: output PNG (default /tmp/yt01_sheet_<segs>.png)")
     ap.add_argument("--keep", action="store_true", help="keep the per-shot clips")
     args = ap.parse_args()
-    return {"check": cmd_check, "turns": cmd_turns, "render": cmd_render, "cut": cmd_cut}[args.action](args)
+    return {"check": cmd_check, "turns": cmd_turns, "sheet": cmd_sheet, "render": cmd_render, "cut": cmd_cut}[args.action](args)
 
 
 if __name__ == "__main__":

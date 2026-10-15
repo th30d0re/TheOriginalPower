@@ -16,7 +16,7 @@
     },
     {
       "title": "Interpretation",
-      "detail": "R/(2L) grows relative to ω₀ — illustrative parameters, not calibrated forecasts"
+      "detail": "R/(2L) grows relative to ω₀; circuit parameters are illustrative"
     }
   ],
   "sources": "Source: The Original Power, precision qualifier · Section Laplace transfer",
