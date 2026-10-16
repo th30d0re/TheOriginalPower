@@ -7,12 +7,13 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
-TEX = "\n".join((ROOT / "Paper/The_Original_Power.tex").read_text().splitlines()[1620:2735])
+TEX = (ROOT / "Paper/The_Original_Power.tex").read_text()  # the whole manuscript
 
 
 def norm(s):
+    s = s.replace("\\$", " ").replace("\\%", "%")
     s = re.sub(r"\\(textbf|textit|emph|texttt)\{([^}]*)\}", r"\2", s)
-    s = re.sub(r"\$[^$]*\$", " ", s)
+    s = re.sub(r"\$[^$\n]*\$", " ", s)
     s = s.replace("---", " ").replace("--", " ").replace("``", '"').replace("''", '"')
     s = re.sub(r"[^a-z0-9 ]", " ", s.lower())
     return re.sub(r"\s+", " ", s).strip()
@@ -27,5 +28,5 @@ for f in sys.argv[1:]:
         if len(q.split()) < 4 or q not in tex:
             bad += 1
             print(f"{Path(f).name}: {m.group(1)[:90]}")
-print(f"{bad} of {total} [book] quotes not found verbatim in Chapter 2")
+print(f"{bad} of {total} [book] quotes not found verbatim in the manuscript")
 sys.exit(1 if bad else 0)

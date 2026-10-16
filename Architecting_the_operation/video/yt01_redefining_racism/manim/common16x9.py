@@ -103,7 +103,7 @@ def load_shots(path=SHOTLIST):
     """Every shot in the shot list, in turn order."""
     text = Path(path).read_text()
     shots = []
-    for b in re.finditer(r"(?ms)^## (S(\d\d)-\d\d)(?: — (.*?))?\n(.*?)(?=^## |\Z)", text):
+    for b in re.finditer(r"(?ms)^## (S(\d\d)-\d\d[a-z]?)(?: — (.*?))?\n(.*?)(?=^## |\Z)", text):
         sid, seg, title, body = b.groups()
 
         def field(name):

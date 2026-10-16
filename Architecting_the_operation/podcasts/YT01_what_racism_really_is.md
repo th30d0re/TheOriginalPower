@@ -281,6 +281,9 @@ The same person can occupy the In-group under one projection and the Out-group u
 Emmanuel Theodore (12:21)
 A working-class white citizen may occupy the In-group under the racial projection. That same citizen may occupy the Out-group under the capital, credentialing, or criminalization projection.
 
+Emmanuel Theodore (12:22)
+Gender runs the same way. A white woman sits inside the In-group under the racial projection and inside the Out-group under the gender projection, the axis Chapter 8 formalizes as O sub gendered.
+
 Emmanuel Theodore (12:33)
 A credentialed member of the racialized Out-group holds local advantage without exiting the primary Out-group. They occupy a local advantaged position.
 
@@ -1642,7 +1645,7 @@ Emmanuel Theodore (89:34)
 It feels like nowhere because each scale presents a locally rational explanation, such as market forces or individual choice, which obscures the global architecture.
 
 Emmanuel Theodore (89:45)
-Equation 2.19 models this fragmentation as phase loading over multiple identity axes. It measures the suppression of coherent class solidarity.
+Equation 2.19 models this fragmentation as phase loading over identity axes: race, gender, orientation, ability, religion and nationality. It measures the suppression of coherent class solidarity.
 
 Emmanuel Theodore (89:54)
 For subgroup j, capital Phi sub j equals the sum from k equals one to K of phi sub k comma j. Each term records that subgroup's ordinal phase on one identity axis.
@@ -1839,6 +1842,30 @@ They successfully burned the colonial capital to the ground. The system required
 
 Emmanuel Theodore (100:01)
 The 1705 Virginia Slave Codes delivered a kernel-level rewrite. The system programmed the white working class to identify as the antivirus software.
+
+Emmanuel Theodore (100:02)
+Here the set notation from the start of this video earns its keep. Go back to Equation 2.1, the first partition.
+
+Emmanuel Theodore (100:03)
+Chapter 4 names the two halves of the colony's labor force. L sub white is the indentured Europeans. L sub black is the enslaved Africans. They shared the fields, the hunger and the same enemy.
+
+Emmanuel Theodore (100:04)
+Together they formed one Labor Class, and Bacon's Rebellion showed what that union could do. In 1676 it burned Jamestown.
+
+Emmanuel Theodore (100:05)
+So the Elite redrew the partition itself. They assigned L sub white to a new category, White, and moved it across the boundary into the In-group.
+
+Emmanuel Theodore (100:06)
+In the notation of Equation 2.2, L sub white now sits inside I sub buffer, and L sub black is the Out-group, O sub racialized. One Labor Class became two sides of a guarded border.
+
+Emmanuel Theodore (100:07)
+The price of membership was cheap. The Elite paid in status: immunity from chattel slavery and a guaranteed rank above the enslaved. That is the status wage, psi sub s, and it costs the Elite nothing to issue.
+
+Emmanuel Theodore (100:08)
+Then they armed it. The bribe included the right to bear arms and the right to police the Black population. The new members of the In-group now held the boundary they had just been moved across.
+
+Emmanuel Theodore (100:09)
+Chapter 4 writes the result as Equation 4.3: the poor In-group becomes a defender of the Elite. The coalition that burned Jamestown was split by a line drawn through its middle.
 
 Emmanuel Theodore (100:11)
 This programming masked their status as the system's second-most-exploited resource. The Elite maintain this firewall by paying the suppression allocation of whiteness.

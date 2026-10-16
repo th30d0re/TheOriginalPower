@@ -623,6 +623,13 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Holds:** `S03-31`
 - **Note:** Race places the example in I; capital, credentialing, and criminalization place it in O. [book] “A working-class white citizen may be positioned inside $I$ under the racial projection”
 
+## S03-35a — Gender projection
+- **Anchor:** `Emmanuel Theodore (12:22)`
+- **Type:** hold
+- **Render:** `manim:recursive_partition16x9.py:RecursivePartition`
+- **Holds:** `S03-31`
+- **Note:** The same person-dot sits in I under the race projection and moves into O under the gender projection, labelled O_gendered (Chapter 8). [book] "race, class, gender, immigration status"
+
 ## S03-36 — Credentialed Out-group member
 - **Anchor:** `Emmanuel Theodore (13:01)`
 - **Type:** hold
@@ -2569,7 +2576,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Anchor:** `Emmanuel Theodore (60:20)`
 - **Type:** figure
 - **Render:** `manim:rlc_topology16x9.py:RLCTopology cards/S13-06.json`
-- **Note:** Series RLC rebuild with R, L, C labels; fallback still `figures/fig2.5_p134.png`. [book] “The Series RLC Topology”
+- **Note:** Series RLC rebuild with R, L, C labels; fallback still `figures/fig2.5_p134.png`. [book] "The series topology and component roles"
 
 ## S13-07 — Resistor R
 
@@ -3151,7 +3158,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** hold
 - **Render:** `manim:cards16x9.py:CardScene cards/S16-13.json`
 - **Holds:** `S16-13`
-- **Note:** Hold on S16-13 equation card; pulse L and I term glosses (cultural inertia; field current). [book] "Here, L is cultural inertia"
+- **Note:** Hold on S16-13 equation card; pulse L and I term glosses (cultural inertia; field current). [book] "cultural inertia and white supremacist social organization"
 
 ## S16-15
 
@@ -4388,6 +4395,61 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Type:** card
 - **Render:** `manim:cards16x9.py:CardScene cards/S19-05.json`
 - **Note:** 1705 Slave Codes title card; kernel rewrite badge. [book] “the 1705 Virginia Slave Codes were the \textbf{kernel-level rewrite}”
+
+## S19-05a — Back to the first partition
+- **Anchor:** `Emmanuel Theodore (100:02)`
+- **Type:** diagram
+- **Render:** `manim:partition_redraw16x9.py:PartitionRedraw`
+- **Note:** The universe box returns with Equation 2.1, U = I ⊔̇ O, written above it. [book] "the population universe $U$ is partitioned"
+
+## S19-05b — Two halves of the labor force
+- **Anchor:** `Emmanuel Theodore (100:03)`
+- **Type:** hold
+- **Render:** `manim:partition_redraw16x9.py:PartitionRedraw`
+- **Holds:** `S19-05a`
+- **Note:** Inside O, one Labor Class block splits into two labelled halves: L_white (indentured Europeans) and L_black (enslaved Africans), sharing one field. [book] "a mix of European indentured servants"
+
+## S19-05c — The Labor Class in 1676
+- **Anchor:** `Emmanuel Theodore (100:04)`
+- **Type:** hold
+- **Render:** `manim:partition_redraw16x9.py:PartitionRedraw`
+- **Holds:** `S19-05a`
+- **Note:** The two halves glow together as one Labor Class; 1676 · Jamestown burns as a small flame on the block. [book] "The united Labor Class"
+
+## S19-05d — The partition is redrawn
+- **Anchor:** `Emmanuel Theodore (100:05)`
+- **Type:** hold
+- **Render:** `manim:partition_redraw16x9.py:PartitionRedraw`
+- **Holds:** `S19-05a`
+- **Note:** The boundary line between I and O bends and redraws itself; L_white slides across into I, labelled White. [book] "They assigned $L_{white}$ to a new category"
+
+## S19-05e — Two sides of a guarded border
+- **Anchor:** `Emmanuel Theodore (100:06)`
+- **Type:** hold
+- **Render:** `manim:partition_redraw16x9.py:PartitionRedraw`
+- **Holds:** `S19-05a`
+- **Note:** L_white settles inside I as I_buffer (Equation 2.2 tiers shown in I); L_black alone is O_racialized on the other side. [claude] maps Chapter 4's L_white/L_black onto Equation 2.2's I_buffer and O_racialized
+
+## S19-05f — Paid in status
+- **Anchor:** `Emmanuel Theodore (100:07)`
+- **Type:** hold
+- **Render:** `manim:partition_redraw16x9.py:PartitionRedraw`
+- **Holds:** `S19-05a`
+- **Note:** A ψ_s badge pins onto I_buffer: immunity from chattel slavery, rank above the enslaved; caption 'costs E nothing'. [book] "Costs $E$ nothing to dispense"
+
+## S19-05g — Armed to hold the line
+- **Anchor:** `Emmanuel Theodore (100:08)`
+- **Type:** hold
+- **Render:** `manim:partition_redraw16x9.py:PartitionRedraw`
+- **Holds:** `S19-05a`
+- **Note:** The I_buffer edge facing O becomes a guarded wall with arms and patrol marks; the right to bear arms, the right to police. [book] "the right to police the Black population, the right to bear arms"
+
+## S19-05h — Equation 4.3
+- **Anchor:** `Emmanuel Theodore (100:09)`
+- **Type:** hold
+- **Render:** `manim:partition_redraw16x9.py:PartitionRedraw`
+- **Holds:** `S19-05a`
+- **Note:** Equation 4.3 assembles: Buffer Created: I_poor → Defender of E; the line through the old Labor Class stays drawn. [book] "the structural transition from poor white laborer to Elite defender"
 
 ## S19-06 — Antivirus mask peels to reveal second-most-exploited resourc
 
