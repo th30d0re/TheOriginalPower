@@ -8,6 +8,8 @@ import manimgx as m
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from common16x9 import DIM, GOLD, HER, INK, NAVY2, OK, T, YTScene  # noqa: E402
 
+ORANGE_FB = "#B85C2A"
+
 
 def chain_node(label, color=INK, w=3.8):
     r = m.RoundedRectangle(width=w, height=1.15, corner_radius=0.12, stroke_color=color, stroke_width=3,
@@ -16,7 +18,7 @@ def chain_node(label, color=INK, w=3.8):
     return m.VGroup(r, t)
 
 
-def causal_row(labels, colors, y, strike=False, widths=None, arrows_visible=True):
+def causal_row(labels, colors, y, widths=None, arrows_visible=True):
     widths = widths or [3.8] * len(labels)
     nodes = m.VGroup(*[chain_node(lab, col, w) for lab, col, w in zip(labels, colors, widths)])
     nodes.arrange(m.RIGHT, buff=0.45).shift(m.UP * y)
@@ -24,12 +26,30 @@ def causal_row(labels, colors, y, strike=False, widths=None, arrows_visible=True
                         for i, (a, b) in enumerate(zip(nodes, nodes[1:]))])
     if not arrows_visible:
         arrows.set_opacity(0)
-    grp = m.VGroup(nodes, arrows)
-    if strike:
-        y_strike = nodes.get_bottom()[1] - 0.4
-        line = m.Line([nodes.get_left()[0], y_strike, 0], [nodes.get_right()[0], y_strike, 0], color=HER, stroke_width=7)
-        grp.add(line)
-    return grp
+    return m.VGroup(nodes, arrows)
+
+
+def row_strike_line(row_grp, color=HER, stroke_width=10):
+    """Thick strike through the row centre (book Figure 2.2), drawn above boxes and arrows."""
+    row = m.VGroup(row_grp[0], row_grp[1])
+    y = row.get_center()[1]
+    x0, x1 = row.get_left()[0] - 0.3, row.get_right()[0] + 0.3
+    line = m.Line([x0, y, 0], [x1, y, 0], color=color, stroke_width=stroke_width)
+    line.set_z_index(10)
+    return line
+
+
+def dashed_feedback_arc(start, end, color=ORANGE_FB):
+    """Thin dashed orange curved arrow, stroke only (no filled band under the arc)."""
+    from manimgx.mobjects.shapes import dash_pattern
+
+    bend = -0.58
+    arc = m.ArcBetweenPoints(start, end, angle=bend, color=color, stroke_width=3, fill_opacity=0)
+    arc.set_fill(opacity=0)
+    arc.paint = arc.paint.but(dash=dash_pattern(26, 0.55, 0, False))
+    arc.add_tip(tip_shape=m.ArrowTriangleTip, tip_length=0.18, tip_width=0.14)
+    arc.set_fill(opacity=0)
+    return arc
 
 
 class CausalReversal(YTScene):
@@ -76,11 +96,12 @@ class CausalReversal(YTScene):
             ["INDIVIDUAL PREJUDICE", "DISCRIMINATION", "SYSTEMIC OUTCOMES"],
             [HER, HER, HER],
             2.05,
-            strike=True,
             widths=[3.7, 3.5, 3.7],
         )
         conv_lab = T("Conventional (incorrect)", 34, HER, "NORMAL")
         conv_block = m.VGroup(conv_lab, conv).arrange(m.DOWN, buff=0.22).to_edge(m.UP, buff=1.28)
+        strike_line = row_strike_line(conv)
+        strike_line.set_opacity(0)
         hist = causal_row(
             ["ELITE INTERESTS", "SYSTEMIC RACIALIZATION", "INTERPERSONAL PREJUDICE"],
             [OK, OK, OK],
@@ -95,16 +116,21 @@ class CausalReversal(YTScene):
         rev = m.Arrow(gap_top, gap_bot, color=DIM, stroke_width=7, buff=0.1, max_tip_length_to_length_ratio=0.14)
         rev_lab = T("Causal reversal", 34, DIM, "NORMAL").move_to(m.LEFT * 5.4 + m.UP * 0.15)
         hist_nodes = hist[0]
-        feedback = m.CurvedArrow(
-            hist_nodes[2].get_bottom() + m.DOWN * 0.15,
-            hist_nodes[1].get_bottom() + m.DOWN * 0.15,
-            angle=-m.PI / 2.6,
-            color=GOLD,
-            stroke_width=5,
-            dashed_ratio=0.5,
+        fb_drop = 0.32
+        fb_start = hist_nodes[2].get_bottom() + m.DOWN * fb_drop
+        fb_end = hist_nodes[1].get_bottom() + m.DOWN * fb_drop
+        feedback = dashed_feedback_arc(fb_start, fb_end)
+        feedback.set_stroke(opacity=0)  # stroke only: set_opacity would also raise the fill
+        fb_lab = m.Text(
+            "reinforcing feedback (cultivated)",
+            font="Noto Sans",
+            font_size=30,
+            color=ORANGE_FB,
+            slant=m.ITALIC,
         )
-        feedback.set_opacity(0)
-        fb_lab = T("reinforcing feedback", 34, GOLD, "NORMAL").next_to(feedback, m.DOWN, buff=0.14)
+        if fb_lab.width > 11.0:
+            fb_lab.scale_to_fit_width(11.0)
+        fb_lab.next_to(feedback, m.DOWN, buff=0.12)
         fb_lab.set_opacity(0)
         bias_in = m.Arrow(hist_nodes[0].get_bottom() + m.DOWN * 0.55, hist_nodes[0].get_bottom(),
                           color=DIM, stroke_width=5)
@@ -124,15 +150,17 @@ class CausalReversal(YTScene):
             for i in range(3)
         ])
         dots.set_opacity(0)
-        self.add(head, conv_block, rev, rev_lab, hist_block, feedback, fb_lab, bias_in, bias_lab, path_labels, dots, ab)
+        self.add(head, conv_block, rev, rev_lab, hist_block, feedback, fb_lab, bias_in, bias_lab, path_labels, dots, ab, strike_line)
         self.until(self.at(0, "crossed"))
+        self.play(strike_line.animate.set_opacity(1), m.Create(strike_line), run_time=0.65)
 
         self.until(self.at(1, "bottom"))
         self.play(m.LaggedStart(*[a.animate.set_opacity(1) for a in hist[1]], lag_ratio=0.35), run_time=1.0)
         self.play(m.LaggedStart(*[m.GrowArrow(a) for a in hist[1]], lag_ratio=0.35), run_time=0.9)
 
         self.until(self.at(2, "dashed"))
-        self.play(feedback.animate.set_opacity(1), fb_lab.animate.set_opacity(1), m.Create(feedback), run_time=0.85)
+        feedback.set_stroke(opacity=1)
+        self.play(m.Create(feedback), fb_lab.animate.set_opacity(1), run_time=0.85)
         self.play(
             m.Indicate(hist_nodes[0], color=OK, scale_factor=1.04),
             m.Indicate(hist_nodes[1], color=OK, scale_factor=1.04),
@@ -140,7 +168,7 @@ class CausalReversal(YTScene):
         )
 
         self.until(self.at(3, "input"))
-        self.play(m.Indicate(feedback, color=GOLD, scale_factor=1.08), run_time=0.75)
+        self.play(m.Indicate(feedback, color=ORANGE_FB, scale_factor=1.08), run_time=0.75)
 
         self.until(self.at(4, "recruits"))
         self.play(bias_in.animate.set_opacity(1), bias_lab.animate.set_opacity(1), m.GrowArrow(bias_in), run_time=0.75)
@@ -157,7 +185,7 @@ class CausalReversal(YTScene):
 
         self.until(self.at(7, "antibodies"))
         self.play(
-            m.FadeOut(conv_block, feedback, fb_lab),
+            m.FadeOut(conv_block, strike_line, feedback, fb_lab),
             dots.animate.set_opacity(1),
             ab.animate.set_opacity(1),
             target[0].animate.set_stroke(OK, 6),

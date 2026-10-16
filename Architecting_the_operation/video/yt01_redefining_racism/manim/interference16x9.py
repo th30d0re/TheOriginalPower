@@ -9,8 +9,22 @@ import numpy as np
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from common16x9 import DIM, GOLD, HER, HIM, INK, M, OK, T, YTScene  # noqa: E402
 
-PLANE_CENTER = np.array([3.85, -0.15, 0.0])
-PLANE_R = 2.35
+PLANE_CENTER = np.array([3.45, 0.05, 0.0])
+PLANE_R = 2.15
+
+AXIS_NAMES = ["race", "gender", "orientation", "ability", "religion", "nationality"]
+
+
+def axis_label_panel(names):
+    def col(chunk):
+        rows = m.VGroup()
+        for name in chunk:
+            tip = m.Arrow(m.LEFT * 0.22, m.ORIGIN, buff=0, color=HIM, stroke_width=4, max_tip_length_to_length_ratio=0.22)
+            rows.add(m.VGroup(tip, T(name, 30, INK)).arrange(m.RIGHT, buff=0.1))
+        rows.arrange(m.DOWN, buff=0.12, aligned_edge=m.LEFT)
+        return rows
+
+    return m.VGroup(col(names[:3]), col(names[3:])).arrange(m.RIGHT, buff=0.35, aligned_edge=m.UP)
 
 
 def phasor_group(n, spread, radius=PLANE_R * 0.88, color=OK):
@@ -65,13 +79,19 @@ class PhaseLoading(YTScene):
     def shot_S17_52(self):
         head, eq = equation_column(self, 0)
         plane = m.Circle(radius=PLANE_R, stroke_color=DIM, stroke_width=4).move_to(PLANE_CENTER)
-        plab = T("UNIT PHASORS", 34, DIM).next_to(plane, m.UP, buff=0.22)
-        self.add(head, eq, plane, plab)
-        self.until(self.at(0, "Equation"))
+        plab = T("IDENTITY AXES", 34, DIM).next_to(plane, m.UP, buff=0.38)
+        axis_phasors = axis_label_panel(AXIS_NAMES).scale(0.68).move_to(PLANE_CENTER)
+        axis_phasors.set_opacity(0)
+        self.add(head, eq, plane, plab, axis_phasors)
+        self.until(self.at(0, "race"))
+        self.play(axis_phasors.animate.set_opacity(1), run_time=0.55)
+        for word in ("gender", "orientation", "ability", "religion", "nationality"):
+            self.until(self.at(0, word))
+        self.until(self.at(0, "solidarity"))
 
         phi_j = M(r"\Phi_j=\sum_{k=1}^{K}\varphi_{k,j}", 40, INK).next_to(eq, m.DOWN, buff=0.45, aligned_edge=m.LEFT)
-        self.play(m.FadeIn(phi_j), run_time=0.45)
         self.until(self.at(1, "subgroup"))
+        self.play(m.FadeOut(axis_phasors), m.FadeIn(phi_j), run_time=0.45)
 
         phi_load = M(
             r"\Phi_{\text{load}}(t)=1-\left|\frac{1}{N}\sum_{j=1}^{N}e^{i\Phi_j}\right|",
