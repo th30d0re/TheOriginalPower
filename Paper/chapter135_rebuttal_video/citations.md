@@ -328,6 +328,48 @@ The sections below cover a second video: a reply to a Boston city councilor's Qu
 
 ---
 
+# Youth jobs: "the number one thing" (October 2026)
+
+The governor's quote is from the reel itself (section 4). The law's date, price and features are covered in sections 12, 16 and 18.
+
+## 34. State summer youth jobs (YouthWorks)
+
+**In the video:** In 2025, the state's summer jobs program had about $23 million and about 6,500 jobs. In 2026 it had about $15 million and about 3,800 jobs. One-time money ran out, and the governor's own budget did not replace it. In March, teens asked for $10 million to restore it; the governor's budget for next year proposed about the same $15 million.
+
+- [State House News Service, via Worcester Business Journal, "Summer jobs for young people riding on budget decisions"](https://wbjournal.com/article/summer-jobs-for-young-people-riding-on-budget-decisions/): fiscal 2025 funding of about $23 million, of which $16.24 million was appropriated and the rest came from prior-year balances and unspent federal ARPA funds, for about 6,500 jobs; fiscal 2026 line item 7002-0012 at $15.24 million for about 3,800 jobs; for fiscal 2027, the governor's proposal and the Senate's at about $15.4 million and the House's at about $17.6 million.
+- [Commonwealth Corporation, 2025 YouthWorks grants: $22 million for over 6,500 youth](https://commcorp.org/press-releases/22-million-in-youthworks-grants-awarded-to-hire-over-6500-youth) and [2026 grants: $14.4 million for over 3,500 youth](https://commcorp.org/press-releases/14.4-million-in-youthworks-grants-awarded-to-hire-over-3500-youth)
+- [Governor's fiscal 2026 budget filing](https://www.mass.gov/news/governor-healey-and-lieutenant-governor-driscoll-file-596-billion-fiscal-year-2026-budget): $15.7 million for the summer jobs line.
+- The March 2026 State House rally: [Hoodline](https://hoodline.com/2026/03/beacon-hill-showdown-as-boston-teens-pack-state-house-over-youth-jobs-cuts/), [Boston Globe](https://www.bostonglobe.com/2026/03/25/metro/massachusetts-youth-demand-jobs/).
+
+**Limits:** no single act cut the program; the drop came from one-time money that was not replaced. The final fiscal 2027 YouthWorks amount was not confirmed for this page. No report was found that the requested $10 million was restored.
+
+## 35. Boston's year-round youth jobs and the police budget
+
+**In the video:** The mayor's budget zeroed out the year-round youth jobs program, about $6 million and 1,700 jobs; private partners picked up part of it. The same budget raised the police department's by $7 million. Police overtime was expected to top $100 million last year, against about $55 million budgeted.
+
+- [Dorchester Reporter, Apr. 16, 2026](https://www.dotnews.com/2026/04/16/teen-activists-press-for-wu-to-restore-jobs-funding-in-latest-budget-proposal/): the proposal "defunds entirely the year-round jobs program," $5.9 million in the prior budget; a $7 million increase to the $477 million police budget.
+- [Dorchester Reporter, Apr. 24, 2026](https://www.dotnews.com/2026/04/24/wu-partners-will-help-fund-youth-jobs/): the mayor says partners will cover the roughly $6 million school-year gap; police overtime budgeted at about $55 million in recent years and expected to cost over $100 million that year.
+- [Boston Globe, May 13, 2026](https://www.bostonglobe.com/2026/05/13/metro/boston-teen-jobs-cuts-budget/) and [June 1, 2026](https://www.bostonglobe.com/2026/06/01/metro/wu-boston-500-school-year-jobs-private-partnership/) on the jobs cut and the private partnership; [Boston.com, June 25, 2026](https://www.boston.com/news/local-news/2026/06/25/after-a-tense-process-city-council-accepts-wus-amended-budget-heres-what-to-know/) on the final budget.
+
+**Limits:** reports put the eliminated school-year positions at about 1,700 to 1,800. The summer jobs program stayed funded.
+
+## 36. Boston police officers join a Dorchester protest walk
+
+**In the video:** This month, Boston police officers joined a protest walk in Dorchester against cuts to youth jobs.
+
+- [NBC Boston, "Boston police officers join Dorchester protest walk against cuts to youth jobs" (October 2026)](https://www.nbcboston.com/video/on-air/as-seen-on/boston-police-officers-join-dorchester-protest-walk-against-cuts-to-youth-jobs/4029957/)
+
+## 37. Summer jobs and violence: the evidence
+
+**In the video:** A randomized trial in Chicago offered teens from high-violence neighborhoods a summer job, and their violent-crime arrests fell by 43 percent. Boston's own summer jobs program showed about 35 percent fewer arraignments for violent crime.
+
+- [Heller (2014), *Science*: One Summer Plus, a randomized trial of 1,634 Chicago teens](https://penntoday.upenn.edu/news/penn-researcher-finds-summer-jobs-decrease-youth-violence-and-crime); summary at [J-PAL](https://www.povertyactionlab.org/evaluation/summer-jobs-reduce-violence-among-disadvantaged-youth-united-states).
+- [Modestino (2019), *Journal of Policy Analysis and Management*: Boston's Summer Youth Employment Program](https://www.povertyactionlab.org/evaluation/how-bostons-summer-employment-program-affects-youth-criminal-justice-outcomes): 35 percent fewer violent-crime arraignments over 17 months.
+
+**Limits:** the Chicago decline appeared mostly after the program ended and applies to violent-crime arrests, not all offenses. The Boston author calls the results suggestive.
+
+---
+
 > **The framework behind this video is *The Original Power*.**
 > **[Read or download the book: github.com/th30d0re/TheOriginalPower/releases](https://github.com/th30d0re/TheOriginalPower/releases)**
 > The book sets out the framework this video applies, and this repository holds the manuscript, the data, and the code for every figure shown.

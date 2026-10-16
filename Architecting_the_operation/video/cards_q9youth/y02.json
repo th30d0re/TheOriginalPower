@@ -1,0 +1,29 @@
+{
+  "component": "StatBarsCard",
+  "headline": "State summer youth jobs",
+  "lead": "YouthWorks, 2025 to 2026. One-time money ran out; the governor's budget did not replace it.",
+  "items": [
+    {
+      "label": "Jobs",
+      "period": "2025 to 2026",
+      "values": [
+        6500,
+        3800
+      ],
+      "delta": "(−42%)",
+      "color": "red"
+    },
+    {
+      "label": "Funding, $ millions",
+      "period": "2025 to 2026",
+      "values": [
+        23,
+        15.24
+      ],
+      "delta": "(−34%)",
+      "color": "gold"
+    }
+  ],
+  "sources": "Sources: State House News Service · Commonwealth Corporation",
+  "qrUrl": "https://wbjournal.com/article/summer-jobs-for-young-people-riding-on-budget-decisions/"
+}

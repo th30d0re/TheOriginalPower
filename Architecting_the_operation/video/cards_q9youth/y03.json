@@ -1,0 +1,18 @@
+{
+  "component": "TitleCard",
+  "headline": "March 2026: teens at the State House",
+  "items": [
+    {
+      "title": "The ask",
+      "emphasis": "$10M",
+      "detail": "To restore this summer's jobs"
+    },
+    {
+      "title": "Governor's budget for next year",
+      "emphasis": "~$15.4M",
+      "detail": "About the same as the cut level (House: ~$17.6M)"
+    }
+  ],
+  "sources": "Sources: Hoodline · Boston Globe · State House News Service",
+  "qrUrl": "https://hoodline.com/2026/03/beacon-hill-showdown-as-boston-teens-pack-state-house-over-youth-jobs-cuts/"
+}
