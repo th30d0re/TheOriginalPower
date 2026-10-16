@@ -1,0 +1,18 @@
+{
+  "component": "TitleCard",
+  "headline": "The same budget, for police",
+  "items": [
+    {
+      "title": "Police department budget",
+      "emphasis": "+$7M",
+      "detail": "On a $477 million base"
+    },
+    {
+      "title": "Police overtime, last year",
+      "emphasis": "$100M+",
+      "detail": "Expected, against about $55 million budgeted"
+    }
+  ],
+  "sources": "Source: Dorchester Reporter (Apr. 16 and 24, 2026)",
+  "qrUrl": "https://www.dotnews.com/2026/04/24/wu-partners-will-help-fund-youth-jobs/"
+}

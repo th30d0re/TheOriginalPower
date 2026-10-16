@@ -1,0 +1,24 @@
+{
+  "component": "TitleCard",
+  "headline": "What a yes vote keeps",
+  "items": [
+    {
+      "title": "A date",
+      "detail": "Own it before Aug. 1, 2024, or you can't get it"
+    },
+    {
+      "title": "A price",
+      "detail": "$200–$250 before a first license"
+    },
+    {
+      "title": "A features ban",
+      "detail": "Adjustable stocks, grips, and more"
+    },
+    {
+      "title": "Youth jobs funded",
+      "emphasis": "0"
+    }
+  ],
+  "sources": "Source: Acts of 2024, Chapter 135",
+  "qrUrl": "https://malegislature.gov/Laws/SessionLaws/Acts/2024/Chapter135"
+}

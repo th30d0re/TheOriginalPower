@@ -1,0 +1,16 @@
+{
+  "component": "TitleCard",
+  "headline": "\"The number one thing\"",
+  "items": [
+    {
+      "title": "After-school programs, sports, theater, the arts",
+      "detail": "Gov. Maura Healey, in a Yes-on-9 video"
+    },
+    {
+      "title": "\"Kids in healthy, safe environments\"",
+      "detail": "Her answer to how communities stay safe"
+    }
+  ],
+  "sources": "Source: @harvardseye collab reel with Gov. Healey (Instagram)",
+  "qrUrl": "https://www.instagram.com/reel/DdoZBRXIbK5/"
+}

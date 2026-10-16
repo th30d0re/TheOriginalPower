@@ -1,0 +1,321 @@
+{
+  "schema_version": 1,
+  "source": "q9_youth_jobs_shotlist.md",
+  "manifest": "episode_manifest.json",
+  "script": "q9_youth_jobs.md",
+  "shot_count": 10,
+  "shots": [
+    {
+      "id": "Y-01",
+      "title": "The number one thing",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "00:15",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 1,
+        "start_ms": 15000,
+        "end_ms": 22460
+      },
+      "hold": {},
+      "type": "card",
+      "described": {
+        "Type": "card"
+      },
+      "note": "citations.md Sections 34-37",
+      "provenance": {
+        "tags": [],
+        "citations": [],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "The number one thing. Type: card"
+    },
+    {
+      "id": "Y-02",
+      "title": "State summer youth jobs",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "00:24",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 3,
+        "start_ms": 25330,
+        "end_ms": 32960
+      },
+      "hold": {},
+      "type": "card",
+      "described": {
+        "Type": "card"
+      },
+      "note": "citations.md Sections 34-37",
+      "provenance": {
+        "tags": [],
+        "citations": [],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "State summer youth jobs. Type: card"
+    },
+    {
+      "id": "Y-03",
+      "title": "Teens at the State House",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "00:40",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 5,
+        "start_ms": 42720,
+        "end_ms": 52340
+      },
+      "hold": {},
+      "type": "card",
+      "described": {
+        "Type": "card"
+      },
+      "note": "citations.md Sections 34-37",
+      "provenance": {
+        "tags": [],
+        "citations": [],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Teens at the State House. Type: card"
+    },
+    {
+      "id": "Y-04",
+      "title": "Boston year-round jobs",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "00:50",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 6,
+        "start_ms": 52590,
+        "end_ms": 62590
+      },
+      "hold": {},
+      "type": "card",
+      "described": {
+        "Type": "card"
+      },
+      "note": "citations.md Sections 34-37",
+      "provenance": {
+        "tags": [],
+        "citations": [],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Boston year-round jobs. Type: card"
+    },
+    {
+      "id": "Y-05",
+      "title": "Police budget and overtime",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "01:01",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 7,
+        "start_ms": 62840,
+        "end_ms": 66590
+      },
+      "hold": {},
+      "type": "card",
+      "described": {
+        "Type": "card"
+      },
+      "note": "citations.md Sections 34-37",
+      "provenance": {
+        "tags": [],
+        "citations": [],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Police budget and overtime. Type: card"
+    },
+    {
+      "id": "Y-06",
+      "title": "Police joined the walk",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "01:05",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 9,
+        "start_ms": 74270,
+        "end_ms": 80330
+      },
+      "hold": {},
+      "type": "card",
+      "described": {
+        "Type": "card"
+      },
+      "note": "citations.md Sections 34-37",
+      "provenance": {
+        "tags": [],
+        "citations": [],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Police joined the walk. Type: card"
+    },
+    {
+      "id": "Y-07",
+      "title": "Summer jobs reduce violence",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "01:11",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 10,
+        "start_ms": 80580,
+        "end_ms": 91180
+      },
+      "hold": {},
+      "type": "card",
+      "described": {
+        "Type": "card"
+      },
+      "note": "citations.md Sections 34-37",
+      "provenance": {
+        "tags": [],
+        "citations": [],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Summer jobs reduce violence. Type: card"
+    },
+    {
+      "id": "Y-08",
+      "title": "What a yes vote keeps",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "01:33",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 13,
+        "start_ms": 103910,
+        "end_ms": 111910
+      },
+      "hold": {},
+      "type": "card",
+      "described": {
+        "Type": "card"
+      },
+      "note": "citations.md Sections 34-37",
+      "provenance": {
+        "tags": [],
+        "citations": [],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "What a yes vote keeps. Type: card"
+    },
+    {
+      "id": "Y-09",
+      "title": "She named it",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "01:42",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 14,
+        "start_ms": 112160,
+        "end_ms": 116810
+      },
+      "hold": {},
+      "type": "card",
+      "described": {
+        "Type": "card"
+      },
+      "note": "citations.md Sections 34-37",
+      "provenance": {
+        "tags": [],
+        "citations": [],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "She named it. Type: card"
+    },
+    {
+      "id": "Y-10",
+      "title": "Close",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "01:48",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 15,
+        "start_ms": 117060,
+        "end_ms": 121780
+      },
+      "hold": {},
+      "type": "card",
+      "described": {
+        "Type": "card"
+      },
+      "note": "citations.md Sections 34-37",
+      "provenance": {
+        "tags": [],
+        "citations": [],
+        "labels": [],
+        "quotes": []
+      },
+      "suggested_track": "vector",
+      "prompt_seed": "Close. Type: card"
+    }
+  ],
+  "validation": [
+    {
+      "level": "warn",
+      "shot": "Y-01",
+      "message": "no provenance tag"
+    },
+    {
+      "level": "warn",
+      "shot": "Y-02",
+      "message": "no provenance tag"
+    },
+    {
+      "level": "warn",
+      "shot": "Y-03",
+      "message": "no provenance tag"
+    },
+    {
+      "level": "warn",
+      "shot": "Y-04",
+      "message": "no provenance tag"
+    },
+    {
+      "level": "warn",
+      "shot": "Y-05",
+      "message": "no provenance tag"
+    },
+    {
+      "level": "warn",
+      "shot": "Y-06",
+      "message": "no provenance tag"
+    },
+    {
+      "level": "warn",
+      "shot": "Y-07",
+      "message": "no provenance tag"
+    },
+    {
+      "level": "warn",
+      "shot": "Y-08",
+      "message": "no provenance tag"
+    },
+    {
+      "level": "warn",
+      "shot": "Y-09",
+      "message": "no provenance tag"
+    },
+    {
+      "level": "warn",
+      "shot": "Y-10",
+      "message": "no provenance tag"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "component": "TitleCard",
+  "headline": "Summer jobs reduce violence",
+  "items": [
+    {
+      "title": "Chicago, randomized trial",
+      "emphasis": "−43%",
+      "detail": "Violent-crime arrests among teens offered a summer job (Heller, Science)"
+    },
+    {
+      "title": "Boston's own summer jobs program",
+      "emphasis": "−35%",
+      "detail": "Violent-crime arraignments over 17 months (Modestino, 2019)"
+    }
+  ],
+  "sources": "Sources: Science (Heller) · Journal of Policy Analysis and Management (Modestino) · J-PAL",
+  "qrUrl": "https://www.povertyactionlab.org/evaluation/summer-jobs-reduce-violence-among-disadvantaged-youth-united-states"
+}

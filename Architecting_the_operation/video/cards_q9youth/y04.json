@@ -1,0 +1,17 @@
+{
+  "component": "TitleCard",
+  "headline": "Boston: year-round youth jobs zeroed out",
+  "items": [
+    {
+      "title": "Cut from the mayor's FY27 budget",
+      "emphasis": "$5.9M",
+      "detail": "About 1,700 school-year jobs"
+    },
+    {
+      "title": "Private partners",
+      "detail": "Picked up part of it · summer jobs stayed funded"
+    }
+  ],
+  "sources": "Sources: Dorchester Reporter (Apr. 16 and 24, 2026) · Boston Globe",
+  "qrUrl": "https://www.dotnews.com/2026/04/16/teen-activists-press-for-wu-to-restore-jobs-funding-in-latest-budget-proposal/"
+}
