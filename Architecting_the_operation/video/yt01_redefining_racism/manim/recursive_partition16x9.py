@@ -1,4 +1,12 @@
-"""S03-31: recursive local partition X = X^+_α ⊔ X^-_α."""
+"""S03-31 to S03-37: Equation 2.4, the local partition inside any class X.
+
+One class X split into its local In-group and Out-group on an axis alpha. The axis panel
+on the right changes with the narration; a person moves between the cells as the
+projection changes (race, then capital; race, then gender), so the same person lands in
+I under one projection and in O under another.
+
+    YT01_SHOT=S03-31 .venv-manimgx/bin/manimgx render <this file> RecursivePartition -r 960x540 --fps 15
+"""
 
 import sys
 from pathlib import Path
@@ -6,73 +14,150 @@ from pathlib import Path
 import manimgx as m
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from common16x9 import DIM, GOLD, HIM, HER, INK, M, NAVY2, OK, T, YTScene  # noqa: E402
+from common16x9 import DIM, GOLD, HER, HIM, INK, NAVY2, OK, M, T, YTScene  # noqa: E402
 
-AXES = ["RACE", "CLASS", "GENDER", "IMMIGRATION", "CRIMINALIZED", "GEOGRAPHY", "CREDENTIALING", "POWER"]
+CELL_W, CELL_H, GAP = 4.15, 4.3, 0.22
+CX = -1.85                       # centre of the class box; the axis panel sits to its right
+CY = -0.35
+
+
+def cell(color, tex, caption):
+    box = m.RoundedRectangle(width=CELL_W, height=CELL_H, corner_radius=0.14, stroke_color=color,
+                             stroke_width=4, fill_color=NAVY2, fill_opacity=1)
+    sym = M(tex, 50, color)
+    cap = T(caption, 30, color, "NORMAL")
+    head = m.VGroup(sym, cap).arrange(m.DOWN, buff=0.08).move_to(box.get_top() + m.DOWN * 0.72)
+    return box, head
 
 
 class RecursivePartition(YTScene):
     SHOT = "S03-31"
-    SOURCE = "Source: The Original Power, Eq. recursive-local-partition"
 
-    def _local_split(self):
-        outer = m.RoundedRectangle(width=5.5, height=3.8, corner_radius=0.12, stroke_color=DIM, stroke_width=3,
-                                   fill_color=NAVY2, fill_opacity=0.3)
-        plus = m.RoundedRectangle(width=2.3, height=3.2, corner_radius=0.1, stroke_color=HIM, stroke_width=3,
-                                  fill_color=NAVY2, fill_opacity=0.5)
-        minus = m.RoundedRectangle(width=2.3, height=3.2, corner_radius=0.1, stroke_color=HER, stroke_width=3,
-                                   fill_color=NAVY2, fill_opacity=0.5)
-        split = m.VGroup(plus, minus).arrange(m.RIGHT, buff=0.2).move_to(outer)
-        plab = M(r"X^{+}_{\alpha}", 36, HIM).move_to(plus)
-        mlab = M(r"X^{-}_{\alpha}", 36, HER).move_to(minus)
-        xlab = M(r"X", 44, INK).next_to(outer, m.UP, buff=0.15)
-        return m.VGroup(outer, split, plab, mlab, xlab)
+    def person(self, label):
+        dot = m.Dot(radius=0.2, color=GOLD)
+        tag = T(label, 30, INK, "NORMAL", width=CELL_W - 0.5)
+        return m.VGroup(dot, tag.next_to(dot, m.DOWN, buff=0.14))
+
+    def place(self, who, box, run_time=0.9):
+        return who.animate(run_time=run_time).move_to(box.get_center() + m.DOWN * 0.45)
+
+    def set_axis(self, value, color=GOLD):
+        new = T(value, 40 if "\n" not in value else 34, color, width=3.7)
+        new.next_to(self.axis_head, m.DOWN, buff=0.25)
+        self.play(m.Transform(self.axis_value, new), run_time=0.45)
 
     def shot_S03_31(self):
-        fig = self._local_split().move_to([0, 0.2, 0])
-        head = T("LOCAL PARTITION INSIDE X", 32, GOLD).to_edge(m.UP, buff=0.5)
-        self.add(head, fig)
-        self.until(self.at(0, "contain"))
-        self.play(fig[1].animate.set_opacity(1), run_time=0.5)
-        self.until(self.beat_end(0) - 0.3)
+        eq = M(r"X = X^{+}_{\alpha} \,\dot\cup\, X^{-}_{\alpha}, \qquad X^{+}_{\alpha} \cap X^{-}_{\alpha} = \varnothing", 54)
+        eq.to_edge(m.UP, buff=0.42)
+        num = T("Equation 2.4", 30, DIM, "NORMAL").next_to(eq, m.DOWN, buff=0.12)
+        outer = m.RoundedRectangle(width=2 * CELL_W + GAP + 0.5, height=CELL_H + 0.5, corner_radius=0.2,
+                                   stroke_color=INK, stroke_width=3).move_to([CX, CY, 0])
+        x_lab = M("X", 56, INK).next_to(outer, m.LEFT, buff=0.22)
+        plus_box, plus_head = cell(HIM, r"X^{+}_{\alpha}", "local In-group")
+        minus_box, minus_head = cell(HER, r"X^{-}_{\alpha}", "local Out-group")
+        plus_box.move_to([CX - (CELL_W + GAP) / 2, CY, 0])
+        minus_box.move_to([CX + (CELL_W + GAP) / 2, CY, 0])
+        plus_head.move_to(plus_box.get_top() + m.DOWN * 0.72)
+        minus_head.move_to(minus_box.get_top() + m.DOWN * 0.72)
+        self.plus_box, self.minus_box, self.minus_head = plus_box, minus_box, minus_head
 
+        panel_x = outer.get_right()[0] + 2.05
+        axis_head = self.axis_head = T("axis α", 34, DIM).move_to([panel_x, CY + 1.2, 0])
+        self.axis_value = T("any axis", 40, GOLD, width=3.7).next_to(axis_head, m.DOWN, buff=0.25)
+
+        # 0 -- any class X can be split on a narrower axis
+        self.add(eq, num)
+        self.until(self.at(0, "class"))
+        self.play(m.Create(outer), m.FadeIn(x_lab), run_time=0.8)
+        self.until(self.at(0, "local"))
+        self.play(m.FadeIn(plus_box), m.FadeIn(minus_box), m.FadeIn(plus_head), m.FadeIn(minus_head),
+                  run_time=0.9)
+        self.until(self.at(0, "axis"))
+        self.play(m.FadeIn(axis_head), m.FadeIn(self.axis_value), run_time=0.6)
+
+        # 1 -- plus and minus, empty intersection, the union rebuilds X
+        self.until(self.at(1, "plus"))
+        self.play(m.Indicate(plus_head, color=HIM, scale_factor=1.1), run_time=0.7)
+        self.until(self.at(1, "minus"))
+        self.play(m.Indicate(minus_head, color=HER, scale_factor=1.1), run_time=0.7)
         self.until(self.at(1, "intersection"))
-        self.until(self.at(1, "reconstruct"))
-        self.play(fig[1][0].animate.shift(m.LEFT * 0.12), fig[1][1].animate.shift(m.RIGHT * 0.12), run_time=0.5)
-        self.play(fig[1][0].animate.shift(m.RIGHT * 0.12), fig[1][1].animate.shift(m.LEFT * 0.12), run_time=0.5)
-        self.until(self.beat_end(1) - 0.25)
+        seam = m.Line(plus_box.get_corner(m.UR) + m.RIGHT * GAP / 2, plus_box.get_corner(m.DR) + m.RIGHT * GAP / 2,
+                      color=GOLD, stroke_width=6)
+        empty = M(r"\cap = \varnothing", 46, GOLD).next_to(outer, m.DOWN, buff=0.22)
+        self.play(m.Create(seam), m.FadeIn(empty), run_time=0.7)
+        self.until(self.at(1, "union"))
+        whole = m.SurroundingRectangle(outer, color=GOLD, buff=0.08, stroke_width=4)
+        self.play(m.FadeOut(seam), m.Create(whole), run_time=0.7)
+        self.until(self.at(1, "whole"))
+        self.play(m.FadeOut(whole), m.FadeOut(empty), run_time=0.5)
 
-        self.until(self.at(2, "include"))
-        side = m.VGroup(T("α", 40, GOLD), T(AXES[0], 28, INK)).arrange(m.DOWN, buff=0.18)
-        side.next_to(head, m.DOWN, buff=0.12)
-        alpha, axis = side[0], side[1]
-        self.play(m.FadeIn(side), run_time=0.4)
-        self.until(self.at(2, "power"))
-        self.play(axis.animate.become(T("INSTITUTIONAL POWER", 20, INK).move_to(axis)), run_time=0.35)
-        self.until(self.beat_end(2) - 0.3)
+        # 2 -- the axes the chapter lists
+        for word, value in (("race", "race"), ("class", "class"), ("gender", "gender"),
+                            ("immigration", "immigration status"), ("criminalized", "criminalized status"),
+                            ("geography", "geography"), ("credentialing", "credentialing"),
+                            ("institutional", "proximity to\ninstitutional power")):
+            self.until(self.at(2, word))
+            self.set_axis(value)
 
-        person = m.Dot(radius=0.07, color=GOLD).move_to(fig[1][0].get_corner(m.DL) + m.RIGHT * 0.35 + m.UP * 0.2)
-        self.add(person)
-        self.until(self.at(3, "projection"))
-        self.play(person.animate.move_to(fig[1][1].get_corner(m.DL) + m.RIGHT * 0.35 + m.UP * 0.2), run_time=0.7)
-        self.until(self.beat_end(3) - 0.25)
+        # 3 -- the same person, different projections
+        self.until(self.at(3, "same"))
+        someone = self.person("one person")
+        someone.move_to([CX, outer.get_top()[1] - 0.05, 0]).shift(m.UP * 0.01)
+        self.play(m.FadeIn(someone, scale=0.6), run_time=0.5)
+        self.until(self.at(3, "ingroup"))
+        self.set_axis("projection A")
+        self.play(self.place(someone, plus_box))
+        self.until(self.at(3, "outgroup"))
+        self.set_axis("projection B")
+        self.play(self.place(someone, minus_box))
 
+        # 4 -- the working-class white citizen: In-group by race, Out-group by capital
         self.until(self.at(4, "working"))
-        race_i = T("RACE → I", 24, HIM).to_edge(m.DOWN, buff=0.42)
-        self.play(m.FadeIn(race_i), person.animate.move_to(fig[1][0].get_corner(m.DL) + m.RIGHT * 0.35 + m.UP * 0.2), run_time=0.6)
+        citizen = self.person("working-class white citizen").move_to(someone)
+        self.play(m.ReplacementTransform(someone, citizen), run_time=0.5)
+        self.until(self.at(4, "racial"))
+        self.set_axis("race")
+        self.play(self.place(citizen, plus_box))
         self.until(self.at(4, "capital"))
-        cap_o = T("CAPITAL → O", 24, HER).to_edge(m.DOWN, buff=0.42)
-        self.play(m.Transform(race_i, cap_o),
-                  person.animate.move_to(fig[1][1].get_corner(m.DL) + m.RIGHT * 0.35 + m.UP * 0.2), run_time=0.6)
-        self.until(self.beat_end(4) - 0.25)
+        self.set_axis("capital\ncredentialing\ncriminalization")
+        self.play(self.place(citizen, minus_box))
 
-        self.until(self.at(5, "credentialed"))
-        adv = m.Star(5, outer_radius=0.18, inner_radius=0.08, color=OK, fill_opacity=1).move_to(fig[1][0].get_corner(m.UR) + m.LEFT * 0.15)
-        self.play(m.FadeIn(adv), run_time=0.5)
-        self.until(self.beat_end(5) - 0.25)
+        # 5 -- the white woman: In-group by race, Out-group by gender (O_gendered)
+        self.until(self.at(5, "gender"))
+        woman = self.person("white woman").move_to(citizen)
+        self.play(m.ReplacementTransform(citizen, woman), run_time=0.5)
+        self.until(self.at(5, "racial"))
+        self.set_axis("race")
+        self.play(self.place(woman, plus_box))
+        self.until(self.at(5, "gender", nth=1))
+        self.set_axis("gender")
+        gendered = M(r"O_{\text{gendered}}", 50, HER).move_to(self.minus_head)
+        self.play(self.place(woman, minus_box), m.Transform(self.minus_head, gendered), run_time=0.9)
+        self.until(self.at(5, "chapter"))
+        ch8 = T("Chapter 8", 30, DIM, "NORMAL").next_to(self.minus_head, m.DOWN, buff=0.1)
+        self.play(m.FadeIn(ch8), run_time=0.4)
 
-        self.until(self.at(6, "flattening"))
-        self.play(m.FadeOut(race_i), run_time=0.2)
-        keep = T("INTERNAL PARTITIONS REMAIN", 28, GOLD).to_edge(m.DOWN, buff=0.42)
-        self.play(m.FadeIn(keep), run_time=0.4)
-        self.until(self.beat_end(6) - 0.3)
+        # 6 -- a credentialed member of the racialized Out-group, locally advantaged
+        self.until(self.at(6, "credentialed"))
+        self.set_axis("race")
+        racialized = M(r"O_{\text{racialized}}", 50, HER).move_to(self.minus_head)
+        member = self.person("credentialed member").move_to(woman)
+        self.play(m.Transform(self.minus_head, racialized), m.FadeOut(ch8),
+                  m.ReplacementTransform(woman, member), run_time=0.6)
+        self.play(self.place(member, minus_box), run_time=0.7)
+        self.until(self.at(6, "advantage"))
+        perch = m.RoundedRectangle(width=CELL_W - 0.9, height=0.55, corner_radius=0.1, stroke_color=OK,
+                                   stroke_width=3).move_to(minus_box.get_center() + m.UP * 0.55)
+        perch_lab = T("local advantage", 30, OK, "NORMAL").move_to(perch)
+        self.play(m.Create(perch), m.FadeIn(perch_lab), member.animate.next_to(perch, m.DOWN, buff=0.1),
+                  run_time=0.8)
+
+        # 7 -- both flattening errors resolved
+        self.until(self.at(7, "flattening"))
+        self.play(m.FadeOut(member), m.FadeOut(perch), m.FadeOut(perch_lab), run_time=0.4)
+        self.until(self.at(7, "stratification"))
+        strat = T("I is stratified", 36, HIM).next_to(outer, m.DOWN, buff=0.25).align_to(outer, m.LEFT)
+        self.play(m.FadeIn(strat, shift=m.UP * 0.15), run_time=0.5)
+        self.until(self.at(7, "heterogeneity"))
+        hetero = T("O is heterogeneous", 36, HER).next_to(outer, m.DOWN, buff=0.25).align_to(outer, m.RIGHT)
+        self.play(m.FadeIn(hetero, shift=m.UP * 0.15), run_time=0.5)
