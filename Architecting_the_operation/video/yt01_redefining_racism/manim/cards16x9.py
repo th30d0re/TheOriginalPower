@@ -397,29 +397,36 @@ class CardScene(YTScene):
         return []
 
     def play_run(self, groups, labels, fallbacks=None, focus=None, turn=None, reveal_item=None):
-        """One visible beat per run turn: item reveals plus hold accents on extra turns."""
+        """One visible beat per run turn: item reveals plus hold accents on extra turns.
+        Several items may share one turn; each gets its own until() on the matched word."""
         labels = list(labels)
         fallbacks = fallbacks or [None] * len(labels)
         shots = self._item_shots(labels, fallbacks)
         revealed, state = set(), {"focus": None, "callout": None}
         self._callout_mob = None
         for k in range(len(self.run_turns)):
-            self.until(self._turn_cue(k, labels, fallbacks, shots, revealed))
-            anims, new_on_turn = [], False
+            new_on_turn = False
             for i, g in enumerate(groups):
                 if shots[i] == k and i not in revealed:
-                    anims += reveal_item(i, g) if reveal_item else [m.FadeIn(g, shift=m.RIGHT * 0.15)]
+                    self.until(self._turn_cue(k, labels, fallbacks, shots, revealed))
+                    anims = reveal_item(i, g) if reveal_item else [m.FadeIn(g, shift=m.RIGHT * 0.15)]
                     if focus:
                         anims += focus(i)
+                    if anims:
+                        self.play(*anims, run_time=0.45)
                     revealed.add(i)
                     state["focus"] = i
                     new_on_turn = True
             if turn and not new_on_turn:
-                anims += turn(k, revealed, state) or []
+                self.until(self._turn_cue(k, labels, fallbacks, shots, revealed))
+                anims = turn(k, revealed, state) or []
+                if anims:
+                    self.play(*anims, run_time=0.45)
             elif not turn and not new_on_turn:
-                anims += self._default_hold(k, labels, fallbacks, focus, revealed, state)
-            if anims:
-                self.play(*anims, run_time=0.45)
+                self.until(self._turn_cue(k, labels, fallbacks, shots, revealed))
+                anims = self._default_hold(k, labels, fallbacks, focus, revealed, state)
+                if anims:
+                    self.play(*anims, run_time=0.45)
         return shots
 
     def reveal(self, groups, labels, fallbacks=None, focus=None, turn=None):

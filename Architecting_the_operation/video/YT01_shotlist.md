@@ -2458,6 +2458,36 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Render:** `manim:cards16x9.py:CardScene cards/S12-29.json`
 - **Note:** Southern Strategy language layer: explicit appeals become coded policy terms. [source] `atwater`, `lopez`
 
+## S12-29a — Who is speaking
+- **Anchor:** `Emmanuel Theodore (60:5x)`
+- **Type:** card
+- **Render:** `manim:cards16x9.py:CardScene cards/S12-29a.json`
+- **Note:** Speaker and interviewer identified before the tape, with the Nation QR. [source] `atwater`
+
+## S12-29b — Content note
+- **Anchor:** `Emmanuel Theodore (60:5x)`
+- **Type:** card
+- **Render:** `manim:cards16x9.py:CardScene cards/S12-29b.json`
+- **Note:** Plain content note card; no slur on screen. [claude] clip registry content_note
+
+## S12-29c — The tape: abstraction ladder
+- **Anchor:** `Lee Atwater (60:5x)`
+- **Type:** card
+- **Render:** `manim:cards16x9.py:CardScene cards/S12-29c.json`
+- **Note:** The archival audio plays; the ladder steps 1954 → 1968 → 1981 on his words; the slur never appears as text. [source] `atwater`
+
+## S12-29d — Provenance of the tape
+- **Anchor:** `Emmanuel Theodore (60:5x)`
+- **Type:** card
+- **Render:** `manim:cards16x9.py:CardScene cards/S12-29d.json`
+- **Note:** Provenance timeline: 1984 anonymous publication, 2012 audio release; Nation QR. [source] `atwater`
+
+## S12-29e — The interface swap, narrated
+- **Anchor:** `Emmanuel Theodore (60:5x)`
+- **Type:** card
+- **Render:** `manim:cards16x9.py:CardScene cards/S12-29e.json`
+- **Note:** Label moves slur → busing → tax cuts; the target stays. [book] "a deliberate Interface Swap optimization"
+
 ## S12-30 — Caulkins and Chandler
 
 - **Anchor:** `Emmanuel Theodore (57:47)`
@@ -2488,7 +2518,7 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Holds:** `S12-30`
 - **Note:** Carceral enforcement layer expands under the proxy regime. [claude] “mass incarceration expanded the carceral enforcement layer”
 
-## S12-34 — ACLU marijuana arrests
+## S12-34 — ACLU cannabis arrests
 
 - **Anchor:** `Emmanuel Theodore (58:21)`
 - **Type:** card

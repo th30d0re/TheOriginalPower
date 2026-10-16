@@ -8,7 +8,7 @@ import re
 import sys
 from pathlib import Path
 
-HEADER = re.compile(r"^Emmanuel Theodore \((\d{1,3}):(\d{2})\)\s*$")
+HEADER = re.compile(r"^(?:Emmanuel Theodore|Lee Atwater) \((\d{1,3}):(\d{2})\)\s*$")
 SEG = re.compile(r"^<!-- SEG (\d{2}) ")
 CONTRAST = re.compile(
     r"isn't|is not|not a |not the |not just|instead of|rather than|more than just|"
@@ -48,6 +48,8 @@ def main(path):
         w = len(t["text"].split())
         if w > MAX_WORDS:
             warns.append(f"line {t['line']} (SEG {t['seg']}): {w} words")
+        if t["text"].lstrip().startswith("[clip:"):
+            continue  # archival recording: verbatim, not synthesized
         if UNSPEAKABLE.search(t["text"]):
             errors.append(f"line {t['line']}: unspeakable symbol: {t['text'][:80]}")
         for m in CONTRAST.finditer(t["text"]):

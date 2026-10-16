@@ -1,0 +1,16 @@
+{
+  "kind": "timeline",
+  "headline": "The tape's provenance",
+  "items": [
+    {
+      "title": "1984",
+      "detail": "Lamis publishes the interview without naming Atwater"
+    },
+    {
+      "title": "2012",
+      "detail": "Renée Lamis releases the audio; Perlstein publishes it in The Nation"
+    }
+  ],
+  "sources": "Source: Lee Atwater, interviewed by Alexander P. Lamis, 1981; audio released 2012, Perlstein, The Nation",
+  "qrUrl": "https://www.thenation.com/article/archive/exclusive-lee-atwaters-infamous-1981-interview-southern-strategy/"
+}

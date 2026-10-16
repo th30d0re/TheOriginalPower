@@ -155,7 +155,7 @@ def script_turns(path):
             body = None
             segment = marker.group(1).zfill(2)
             segments.setdefault(segment, [])
-        elif re.match(r"^Emmanuel Theodore\s+\(\d+:\d{2}(?::\d{2})?\)\s*$", line):
+        elif re.match(r"^(?:Emmanuel Theodore|Lee Atwater)\s+\(\d+:\d{2}(?::\d{2})?\)\s*$", line):
             finish()
             body = []
         elif body is not None and line.strip():

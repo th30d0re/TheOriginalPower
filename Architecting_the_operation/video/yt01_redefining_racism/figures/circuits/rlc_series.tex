@@ -1,0 +1,13 @@
+\documentclass[border=4pt]{standalone}
+\usepackage[american]{circuitikz}
+\begin{document}
+\begin{circuitikz}[american, line width=1.4pt, color={rgb,255:red,244;green,234;blue,210}]
+  \ctikzset{bipoles/thickness=1.6}
+  \draw (0,0)
+    to[sV] (0,2.5)
+    to[R] (2.4,2.5)
+    to[L] (4.8,2.5)
+    to[C] (7.2,2.5)
+    -- (7.2,0) -- (0,0);
+\end{circuitikz}
+\end{document}

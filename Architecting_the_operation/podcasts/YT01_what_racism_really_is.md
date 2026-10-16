@@ -1079,6 +1079,21 @@ The proxy playbook runs from association to criminalization, enforcement, and me
 Emmanuel Theodore (60:53)
 Lee Atwater's 1981 account supplies the political-language layer: explicit racial appeals become coded policy terms and apparently neutral economic or public-order language.
 
+Emmanuel Theodore (60:54)
+Hear it in his own voice. Lee Atwater was a Republican campaign strategist working in Reagan's White House. The political scientist Alexander Lamis interviewed him in 1981.
+
+Emmanuel Theodore (60:55)
+A content note: he uses a racial slur four times. The tape plays unedited, because the record of how that language was used is the evidence.
+
+Lee Atwater (60:56)
+[clip:atwater_1981] You start out in 1954 by saying, nigger, nigger, nigger. By 1968 you can't say nigger, that hurts you, backfires. So you say stuff like, uh, forced busing, states' rights, and all that stuff, and you're getting so abstract. Now, you're talking about cutting taxes, and all these things you're talking about are totally economic things and a byproduct of them is, blacks get hurt worse than whites. We want to cut this, is much more abstract than even the busing thing, uh, and a hell of a lot more abstract than nigger, nigger.
+
+Emmanuel Theodore (60:57)
+Lamis published the interview in 1984 without naming Atwater. In 2012 his widow, Renée Lamis, released the audio, and Rick Perlstein published it in The Nation.
+
+Emmanuel Theodore (60:58)
+That is the interface swap described by one of its engineers, in real time. The label moves from the slur to busing to tax cuts while the target stays the same.
+
 Emmanuel Theodore (61:05)
 Caulkins and Chandler estimate that people incarcerated for drug-law violations rose from 38,680 in 1972 to 480,519 in 2002, an increase of more than twelvefold.
 
@@ -1092,7 +1107,7 @@ Emmanuel Theodore (61:39)
 The resulting mass incarceration expanded the carceral enforcement layer.
 
 Emmanuel Theodore (61:43)
-ACLU analyses from 2013 and 2020 find comparable marijuana use rates across Black and white populations alongside sharply disparate arrest exposure.
+ACLU analyses from 2013 and 2020 find comparable cannabis use rates across Black and white populations alongside sharply disparate arrest exposure.
 
 Emmanuel Theodore (61:54)
 In the 1993 State versus Williams case, the Broward Sheriff's Office illegally manufactured crack cocaine from seized powder cocaine, packaged it for reverse stings, and charged the buyers caught in those operations.

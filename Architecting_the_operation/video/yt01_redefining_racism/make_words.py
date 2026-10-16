@@ -20,15 +20,35 @@ manifest = json.loads(manifest_path.read_text())["turns"]
 timings = json.loads((EP / "word_timings.json").read_text())
 if timings.get("manifest_sha256") != hashlib.sha256(manifest_path.read_bytes()).hexdigest():
     print("warning: word_timings.json was made from a different manifest; rerun scriptcast-word-timings", file=sys.stderr)
-out, missing = [], []
+# Script text per turn, in manifest order, for turns Whisper cannot read (archival tape).
+import re
+_script = (ROOT / "Architecting_the_operation/podcasts/YT01_what_racism_really_is.md").read_text()
+_texts = [re.sub(r"\[clip:[^\]]*\]\s*", "", b).strip() for b in
+          re.findall(r"(?ms)^(?:Emmanuel Theodore|Lee Atwater) \(\d+:\d{2}\)\n(.*?)(?=^\S[^\n]* \(\d+:\d{2}\)\n|^<!--|\Z)", _script)]
+
+
+def estimated(turn):
+    """Spread the turn's script words over its duration by character position."""
+    text = _texts[turn["turn_index"]] if turn["turn_index"] < len(_texts) else ""
+    dur = turn["end_ms"] - turn["start_ms"]
+    total = max(1, len(text))
+    words, pos = [], 0
+    for w in text.split():
+        pos = text.index(w, pos)
+        words.append({"text": w, "start_ms": int(dur * pos / total)})
+        pos += len(w)
+    return words
+
+
+out, missing, estimated_turns = [], [], []
 for turn in manifest:
     words = timings["turns"].get(turn["turn_id"])
     if not words:
-        missing.append(turn["turn_index"])
-        words = []
+        words = estimated(turn)
+        (estimated_turns if words else missing).append(turn["turn_index"])
     out.append({"turn": turn["turn_index"], "turn_id": turn["turn_id"],
                 "text": " ".join(w["text"] for w in words),
                 "words": [{"w": w["text"], "t": round(w["start_ms"] / 1000, 3)} for w in words]})
 (EP / "words.json").write_text(json.dumps(out, indent=1))
-print(f"wrote {len(out)} turns to {EP / 'words.json'}" + (f"; no words for turns {missing}" if missing else ""))
+print(f"wrote {len(out)} turns to {EP / 'words.json'}" + (f"; estimated from the script for turns {estimated_turns}" if estimated_turns else "") + (f"; no words for turns {missing}" if missing else ""))
 sys.exit(1 if missing else 0)

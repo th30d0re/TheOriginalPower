@@ -71,3 +71,12 @@ Sheets: `/tmp/S16-01.png`, `S16-08.png`, `S16-15.png`, `S16-31.png` after `edit1
 ### Wave fix (book pgfplots)
 
 - Figure 2.6 expression `1.6*exp(-0.35*x)*sin(110*x)` uses pgfplots default **degrees**; implementation now `np.sin(np.radians(WD * t))` with `WD=110`.
+
+## Circuit from circuitikz
+
+| id | status | implementation | sheet |
+|---|---|---|---|
+| S13-01 | rendered · layout ok | `figures/circuits/rlc_series.svg` via `m.SVGMobject`, width 11.5, `m.Create` on “maps”; `V(t) · kinetic supply` under source (repositioned to clear left edge); gold glow on source at “backlash”. Primitives removed. | `/tmp/S13-01.png` — single tile, full-width book loop, no tier legend. |
+| S13-06 | rendered · layout ok | Same SVG asset; `m.Create` on “topology”; holds on “resistor” / “inductor” / “capacitor” each add one glow + one institutional label (`R · …`, `L · …`, `C · …` at 34 px); prior label/glow fades before next. | `/tmp/S13-06.png` — four distinct tiles (bare loop, R, L, C highlights). |
+
+Render: `edit16x9.py render 13 --only S13-01 S13-06 -j 2 --force` after `words.json` mtime > `episode_manifest.json` (re-time completed ~17:47). Cues unchanged (`maps`, `backlash`, `Figure`, `topology`, `resistor`, `inductor`, `capacitor`).
