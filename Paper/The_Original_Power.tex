@@ -218,26 +218,24 @@ A critical architectural clarification: the Elite ($E$) \textit{gate} the energy
 \renewcommand{\theHfigure}{P.\arabic{figure}}
 \begin{circuitikz}[american, line width=0.6pt]
   \draw (0,0) node[npn, anchor=E] (gate) {};
-  \draw[->] (-2.8,0) -- (gate.B);
-  \node[font=\scriptsize, align=center, text width=2.2cm, anchor=south] at (-2.0,0.62)
-    {$I_b$\\(control current)};
-  \node[font=\scriptsize, align=center, text width=2.2cm] at (-2.0,-0.6)
-    {laws, algorithms,\\media narratives};
-  \node[font=\scriptsize, align=left, anchor=west] at (0.95,0.2)
+  \node[font=\scriptsize, align=left, anchor=west] at (1.05,0.7)
     {$E$: parasitic control layer};
-  \draw (gate.C) -- ++(0,1.1) coordinate (supply)
+  \draw (gate.C) -- ++(0,1.05) coordinate (supply)
     node[vcc, font=\scriptsize] {$V_{cc}$};
-  \node[font=\scriptsize, align=center, right=6pt] at (supply)
+  \node[font=\scriptsize, align=left, anchor=west] at ([xshift=6pt]supply)
     {kinetic labor of $O$ and $I_{\text{buffer}}$};
-  \draw (gate.E) -- ++(0,-1.0) coordinate (out)
-    node[above right, font=\scriptsize] {extracted output};
-  \draw[->, rounded corners=5pt, black!65]
-    (out) -- ++(2.0,0) -- ++(0,-1.2) -- ++(-5.9,0)
-    -- ++(0,1.1) -- ++(0.3,0);
-  \node[font=\scriptsize, black!65, align=center, text width=5.2cm] at (-0.25,-1.65)
-    {feedback: portion of output powers the interference engine};
+  \draw (gate.E) -- ++(0,-0.85) coordinate (div) node[circ] {};
+  \node[font=\scriptsize, anchor=south west] at ([xshift=5pt, yshift=1pt]div)
+    {current divider};
+  \draw (div) to[R, l={\scriptsize extracted output}] ++(0,-1.9)
+    node[ground] {};
+  \draw (div) to[R, l_={\scriptsize interference engine}] ++(-2.8,0)
+    coordinate (fbleft);
+  \draw (fbleft) |- (gate.B);
+  \node[font=\scriptsize, align=right, anchor=east] at (-2.98,-0.05)
+    {$I_b$\\laws, algorithms,\\media narratives};
 \end{circuitikz}
-\caption[The Elite as a parasitic control layer]{\textbf{The Elite as a Parasitic Control Layer.} The transistor stage and self-exciting feedback described in the Preface.}
+\caption[The Elite as a parasitic control layer]{\textbf{The Elite as a Parasitic Control Layer.} Emitter current enters a current divider. The output branch leaves as extracted output. The feedback branch attaches to the base and powers the interference engine.}
 \label{fig:parasitic_transistor}
 \end{figure}
 
@@ -617,22 +615,24 @@ $O$ & Sink / Ground & All net current flows here. The population positioned as e
     to[I, l_={\scriptsize $F_{\text{enforce}}$}, a^={\scriptsize current source}] (0,2.5)
     -- (0.6,2.5) to[R] (2.1,2.5) coordinate (policytap)
     to[R] (3.6,2.5) -- (4.2,2.5)
-    to[C, l^={\scriptsize $I_{\text{buffer}}$}] (6.4,2.5) -- (7.1,2.5)
-    to[V, l^={\scriptsize $E$}] (7.1,0)
-    -- (ground);
-  \draw (policytap) -- ++(0,-0.35) node[circ] {};
-  \node[font=\scriptsize, align=center] at (2.1,3.0)
+    to[C, l^={\scriptsize $I_{\text{buffer}}$}] (6.2,2.5);
+  \node[npn, anchor=C] (gate) at (7.15,1.55) {};
+  \draw (6.2,2.5) -- (7.15,2.5) -- (gate.C);
+  \draw (gate.E) -- (gate.E |- ground.north) -- (ground);
+  \draw (policytap) |- (gate.B);
+  \coordinate (tapmid) at ($(policytap |- gate.B)!0.42!(gate.B)$);
+  \node[font=\scriptsize, align=center] at (2.1,3.05)
     {$P_{\text{uppet}}$ potential divider};
-  \node[font=\scriptsize, align=center] at (2.1,1.75)
+  \node[font=\scriptsize, align=center, anchor=north] at ([yshift=-11pt]tapmid)
     {policy-level output tap};
-  \node[font=\scriptsize, align=center] at (5.3,1.95)
+  \node[font=\scriptsize, align=center, anchor=north] at (5.2,2.32)
     {dielectric/insulator};
-  \node[font=\scriptsize, align=left, anchor=west] at (8.1,1.25)
-    {voltage\\source};
+  \node[font=\scriptsize, anchor=west] at ([xshift=12pt]gate.center)
+    {$E$};
   \node[font=\scriptsize, align=center, anchor=north] at (0,-1.05)
     {$O$\\sink/ground};
 \end{circuitikz}
-\caption[The five-tier extraction circuit]{\textbf{The Five-Tier Extraction Circuit.} The node-to-element mapping stated in Section~\ref{sec:hardware_mapping}.}
+\caption[The five-tier extraction circuit]{\textbf{The Five-Tier Extraction Circuit.} The node-to-element mapping stated in Section~\ref{sec:hardware_mapping}. The policy-level output tap connects to the transistor base.}
 \label{fig:extraction_circuit}
 \end{figure}
 
@@ -1461,11 +1461,11 @@ W_Q = a + bi + cj + dk, \quad i^2 = j^2 = k^2 = ijk = -1
 \]
 where $bi$ = racial status wage, $cj$ = gendered status wage, $dk$ = sexuality status wage. Because $i \times j = k$ and $j \times i = -k$, intersectional oppression is \emph{multiplicative}. A Black woman's oppression is a distinct third vector $k$---formalizing Kimberl\'e Crenshaw's intersectionality as a quaternion multiplication law.
 
-For $N$ axes, Geometric Algebra (Clifford Algebra $\mathcal{G}_N$) generalizes this to:
+For $N$ axes, Geometric Algebra (Clifford Algebra $\mathcal{G}_N$) gives each axis its own material and psychological wage and sums the weighted pairs:
 \begin{equation}\label{eq:0.ga-ndim}
-W = \psi_m + \sum_{k=1}^{N} j_k \left(\rho_k \cdot \psi_{s,k}\right)
+W = \sum_{k=1}^{N} \rho_k \left(\psi_{m,k} + j_k \psi_{s,k}\right)
 \end{equation}
-where $\rho_k$ is the demographic weight coefficient on axis $k$. The bivector $e_1 \wedge e_4$ describes the unique extraction plane of a Black disabled person---a qualitatively distinct geometric zone where extraction is multiplicatively intensified. See Appendix~\ref{apx:geometric_algebra} for the full derivation.
+where $\rho_k$ is the demographic weight coefficient on axis $k$, $\psi_{m,k}$ is the material wage on that axis, and $\psi_{s,k}$ is the psychological wage on that axis. The bivector $e_1 \wedge e_4$ describes the unique extraction plane of a Black disabled person---a qualitatively distinct geometric zone where extraction is multiplicatively intensified. See Appendix~\ref{apx:geometric_algebra} for the full derivation.
 \end{keyinsight}
 
 \begin{keyinsight}[The Five Zoom Levels: Fractal Scale Hierarchy]
@@ -2172,11 +2172,11 @@ The transition from explicit racial segregation to the carceral proxy system pro
 
 The optimizer selected \texttt{War\_on\_Drugs.exe}---this is $S^*(t)$ from Equation~\ref{eq:1.7-interface-optimizer} executing in real time---because all three costs dropped simultaneously at the point of swap. $C_{\text{legitimacy}}$ fell to near zero: facially neutral language (``criminal,'' ``drug offender'') carried no explicit racial classification and had already been validated by the \textit{Williams v.\ Mississippi} (1898) architecture. $C_{\text{coercive}}$ fell: the proxy variable $P_{\text{criminal}}$ allowed the existing carceral infrastructure to process pre-criminalized populations with bureaucratic efficiency, eliminating the need for constant active enforcement theater---what Dan Baum reports John Ehrlichman described in a 1994 interview as the ability to ``arrest their leaders, raid their homes, break up their meetings, and vilify them night after night on the evening news'' without the political cost of explicit racial targeting \cite{baum}. The quote is treated here as testimonial evidence, not as a formal policy memorandum: Ehrlichman's family and some Nixon-era defenders have disputed its reliability, while the downstream policy pattern is independently confirmed by the statutory and incarceration record. $C_{\text{economic}}$ rose temporarily (prison construction) but was offset by the creation of a carceral industry that itself became an extraction mechanism.
 
-The operational sequence is the proxy playbook: association $\rightarrow$ criminalization $\rightarrow$ enforcement $\rightarrow$ media-legitimation. Lee Atwater's 1981 description of Southern Strategy abstraction supplies the political-language layer: explicit racial appeals become coded policy terms, then apparently neutral economic or public-order language whose effects remain racially structured \cite{atwater, lopez}. Drug policy supplied the enforcement layer. Caulkins and Chandler estimate that people incarcerated for drug-law violations rose from 38,680 in 1972 to 480,519 in 2002---a more than twelvefold increase \cite{caulkins_chandler_drug_incarceration}. The crack/powder cocaine regime then gave the proxy a precise statutory geometry: pre-Fair Sentencing Act federal thresholds assigned comparable mandatory-minimum exposure to five grams of crack cocaine and 500 grams of powder cocaine, encoding a 100:1 disparity into federal sentencing practice \cite{ussc_crack_retroactivity_2011}. The racialized enforcement pattern is likewise documented in the drug-arrest record: ACLU analyses find comparable marijuana use rates across Black and white populations but sharply disparate arrest exposure \cite{aclu2013, aclu2020}. This is exactly the variable swap predicted by the optimizer: the label changes from race to criminality, while the target geometry remains legible in outcomes.
+The operational sequence is the proxy playbook: association $\rightarrow$ criminalization $\rightarrow$ enforcement $\rightarrow$ media-legitimation. Lee Atwater's 1981 description of Southern Strategy abstraction supplies the political-language layer: explicit racial appeals become coded policy terms, then apparently neutral economic or public-order language whose effects remain racially structured \cite{atwater, lopez}. Drug policy supplied the enforcement layer. Caulkins and Chandler estimate that people incarcerated for drug-law violations rose from 38,680 in 1972 to 480,519 in 2002---a more than twelvefold increase \cite{caulkins_chandler_drug_incarceration}. The crack/powder cocaine regime then gave the proxy a precise statutory geometry: pre-Fair Sentencing Act federal thresholds assigned comparable mandatory-minimum exposure to five grams of crack cocaine and 500 grams of powder cocaine, encoding a 100:1 disparity into federal sentencing practice \cite{ussc_crack_retroactivity_2011}. The racialized enforcement pattern is likewise documented in the drug-arrest record: ACLU analyses find comparable cannabis use rates across Black and white populations but sharply disparate arrest exposure \cite{aclu2013, aclu2020}. This is exactly the variable swap predicted by the optimizer: the label changes from race to criminality, while the target geometry remains legible in outcomes.
 
 The Broward County reverse-sting cases supply the extreme boundary condition. In \textit{State v.\ Williams}, the Florida Supreme Court held that the Broward Sheriff's Office illegally manufactured crack cocaine from seized powder cocaine, packaged it for reverse-sting use, and thereby violated due process when prosecutors charged buyers caught in the resulting operations \cite{state_v_williams_1993}. Three decades later, Broward prosecutors sought to clear as many as 2,600 records tied to the same police-made-crack operations \cite{ap_broward_crack_vacatur_2024}. This case collapses any comforting distinction between ``crime control'' and crime production: under the proxy regime, $P_{\text{criminal}}$ can be manufactured by the enforcement apparatus itself and then routed back through the court system as if it were organic community pathology.
 
-One evidentiary caution follows. The common quotation attributed to Harry Anslinger about marijuana, Black people, immigrants, and ``satanic'' jazz is too unstable to use as a clean primary quote: Penn State Special Collections has been unable to verify it in the cited Anslinger papers or 1937 testimony \cite{penn_state_anslinger_quote}. The manuscript therefore does not rely on that quotation. The narrower and supportable claim is that early federal drug-control rhetoric repeatedly linked narcotics and marijuana to racialized and cultural threat narratives, providing the pre-Nixon template for the later proxy interface.
+One evidentiary caution follows. The common quotation attributed to Harry Anslinger about cannabis, Black people, immigrants, and ``satanic'' jazz is too unstable to use as a clean primary quote: Penn State Special Collections has been unable to verify it in the cited Anslinger papers or 1937 testimony \cite{penn_state_anslinger_quote}. The manuscript therefore does not rely on that quotation. The narrower and supportable claim is that early federal drug-control rhetoric repeatedly linked narcotics and cannabis to racialized and cultural threat narratives, providing the pre-Nixon template for the later proxy interface.
 
 \paragraph{Precision qualifier.}
 These comparisons are \textbf{ordinal}; they do not supply cardinal magnitudes. The framework identifies \textit{which} strategy is less costly across the three dimensions, not \textit{exactly how much} less costly. The cost functions are not currently measurable with precision; what the historical record demonstrates is consistent directional movement---when one strategy's costs rise across multiple dimensions simultaneously, the optimizer selects the lower-cost substitute. This ordinal claim is sufficient to make the equation meaningful: $\arg\min$ requires only a consistent ordering across the solution space, not exact numerical values.
@@ -2859,16 +2859,19 @@ W = \psi_m + j\psi_s
 \begin{figure}[htbp]
 \centering
 \begin{tikzpicture}[line width=0.6pt]
-  \draw[->] (-0.25,0) -- (6.4,0)
-    node[right, font=\scriptsize] {$\psi_m = P_{\text{real}} = |V||I|\cos\theta$};
-  \draw[->] (0,-0.25) -- (0,4.2)
-    node[above, font=\scriptsize] {$j\psi_s$};
-  \draw[dashed, gray!65] (4.8,0) -- (4.8,3.25) -- (0,3.25);
-  \draw[->, blue!65!black, line width=1.0pt] (0,0) -- (4.8,3.25)
-    node[midway, above left, font=\scriptsize] {$W=\psi_m+j\psi_s$};
-  \draw[->] (1.15,0) arc[start angle=0,end angle=34.1,radius=1.15];
-  \node[font=\scriptsize] at (1.42,0.47) {$\theta$};
-  \node[font=\scriptsize, align=left, right] at (4.8,3.25)
+  % Material (real) is vertical. Psychological (imaginary) is horizontal.
+  % θ opens from the material axis toward the psychological axis.
+  \draw[->] (-0.25,0) -- (4.55,0)
+    node[right, font=\scriptsize] {$j\psi_s$};
+  \draw[->] (0,-0.25) -- (0,6.15)
+    node[right, font=\scriptsize, align=left]
+      {$\psi_m = P_{\text{real}}$\\$= |V||I|\cos\theta$};
+  \draw[dashed, gray!65] (3.25,0) -- (3.25,4.8) -- (0,4.8);
+  \draw[->, blue!65!black, line width=1.0pt] (0,0) -- (3.25,4.8);
+  \node[font=\scriptsize, anchor=west] at (3.45,2.55) {$W=\psi_m+j\psi_s$};
+  \draw[->] (0,1.15) arc[start angle=90,end angle=55.9,radius=1.15];
+  \node[font=\scriptsize] at (0.52,1.42) {$\theta$};
+  \node[font=\scriptsize, align=center, below] at (3.25,0)
     {$\psi_s = Q_{\text{reactive}}$\\$= |V||I|\sin\theta$};
 \end{tikzpicture}
 \caption[The complex wage phasor]{\textbf{The Complex Wage Phasor.} The real and reactive decomposition stated in Equation~\ref{eq:2.2a-complex-suppression-allocation}.}
@@ -7991,7 +7994,7 @@ The runtime log's warning that $\rho_{\tau} \to 0.95$ functions as the operation
 
 The Variable Swap had a prototype, and that prototype must be understood first. The transposition of substance use from the medical domain into the carceral domain did not begin with Richard Nixon; it was a strategic project with roots decades earlier, and its template reveals the algorithmic logic with crystalline clarity.
 
-The opening salvo was the \textbf{Marihuana Tax Act of 1937}, orchestrated by Federal Bureau of Narcotics Commissioner Harry J.\ Anslinger. Cannabis had resided in the United States Pharmacopeia as a recognized medical tincture since 1850; Anslinger exploited anti-Mexican and anti-Black sentiment to reclassify it from medicine into contraband \cite{bonnie}. His rhetoric was explicitly racialized: he associated marijuana with Mexican immigrants and Black jazz musicians, fabricating lurid narratives of drug-induced violence to manufacture the public consent necessary for criminalization. Following the 1937 Act, cannabis was not officially removed from the Pharmacopeia until 1941---the deliberate lag illustrating the large institutional effort required to strip a substance of its medical legitimacy in order to activate its carceral utility.
+The opening salvo was the \textbf{Marihuana Tax Act of 1937}, orchestrated by Federal Bureau of Narcotics Commissioner Harry J.\ Anslinger. Cannabis had resided in the United States Pharmacopeia as a recognized medical tincture since 1850; Anslinger exploited anti-Mexican and anti-Black sentiment to reclassify it from medicine into contraband \cite{bonnie}. His rhetoric was explicitly racialized: he associated cannabis with Mexican immigrants and Black jazz musicians, fabricating lurid narratives of drug-induced violence to manufacture the public consent necessary for criminalization. Following the 1937 Act, cannabis was not officially removed from the Pharmacopeia until 1941---the deliberate lag illustrating the large institutional effort required to strip a substance of its medical legitimacy in order to activate its carceral utility.
 
 The template Anslinger established is the precise logic the extraction kernel requires: criminalize a substance for reasons unrelated to scientific evidence, in order to enable the surveillance and disruption of specific demographic groups within $O_{\text{racialized}}$. This template was refined and scaled by every subsequent administration. When the civil rights attorneys breached the kernel (see Section~6.1), the system already possessed a proven mechanism for recriminalizing the Out-group without naming race.
 
