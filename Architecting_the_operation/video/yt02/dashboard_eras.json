@@ -1,0 +1,377 @@
+[
+  {
+    "log": 2,
+    "title": "1486 (LISBON, PORTUGAL)",
+    "chapter_label": "ch:portugal",
+    "fields": {
+      "system_stress": {
+        "level": "HIGH",
+        "reason": "Domestic labor shortage threatening agricultural capital. Existing moral framework constrains exploitation of Christians."
+      },
+      "capital": {
+        "level": "STAGNANT",
+        "reason": "Sugar trade demands labor the current moral economy cannot supply."
+      },
+      "interference_state": {
+        "text": "LOW axis count; phenotype partition initializing. Estimated Φ_load ∈ [0.10, 0.20], ρ_τ=M(t)/τ ∈ [0.70, 0.85].",
+        "phi_load": [
+          0.1,
+          0.2
+        ],
+        "rho_tau": [
+          0.7,
+          0.85
+        ],
+        "rho_tau_crash": null
+      },
+      "active_patch": "Compiling Version 1.0…",
+      "variables_loaded": [],
+      "variables_deployed": [
+        "The Elite Class (E)",
+        "The Out-group (O_racialized)",
+        "The In-group (I)"
+      ],
+      "executing_function": "The Implicit Contract (Issuing the Psychological Wage).",
+      "results": [
+        "Extraction Algorithm initialized.",
+        "[POLICY] Dum Diversas (1452) and Romanus Pontifex (1455) authorize unlimited exploitation.",
+        "[POLICY] Casa dos Escravos (1486) institutionalizes state-managed extraction. Vector established."
+      ]
+    },
+    "raw_fields": {
+      "System Stress": "(min: class resistance): HIGH — Domestic labor shortage threatening agricultural capital. Existing moral framework constrains exploitation of Christians.",
+      "Capital": "(max: extraction output): STAGNANT — Sugar trade demands labor the current moral economy cannot supply.",
+      "Interference State": "(Φ_load, proximity to τ): LOW axis count; phenotype partition initializing. Estimated Φ_load ∈ [0.10, 0.20], ρ_(τ)=M(t)/τ ∈ [0.70, 0.85].",
+      "Active Patch": "Compiling Version 1.0…",
+      "Variables Deployed": "The Elite Class (E), The Out-group (O_racialized), The In-group (I).",
+      "Executing Function": "The Implicit Contract (Issuing the Psychological Wage).",
+      "Result": "Extraction Algorithm initialized. [POLICY] Dum Diversas (1452) and Romanus Pontifex (1455) authorize unlimited exploitation. [POLICY] Casa dos Escravos (1486) institutionalizes state-managed extraction. Vector established."
+    }
+  },
+  {
+    "log": 3,
+    "title": "1676–1787 (VIRGINIA COLONY → PHILADELPHIA)",
+    "chapter_label": "ch:bacon",
+    "fields": {
+      "system_stress": {
+        "level": "CRITICAL",
+        "reason": "Cross-racial labor solidarity detected. Jamestown burning."
+      },
+      "capital": {
+        "level": "AT RISK",
+        "reason": "Plantation economy destabilized by unified revolt."
+      },
+      "interference_state": {
+        "text": "TRANSITIONING — coherence breach pre-patch, then rapid phase-loading via codified racial partition. Estimated Φ_load ∈ [0.15, 0.55]; ρ_τ>1.00 at crash, then ρ_τ ∈ [0.60, 0.75] post-patch.",
+        "phi_load": [
+          0.15,
+          0.55
+        ],
+        "rho_tau": [
+          0.6,
+          0.75
+        ],
+        "rho_tau_crash": 1.0
+      },
+      "active_patch": "Emergency recompile. Partitioning the poor…",
+      "variables_loaded": [
+        "E",
+        "O_racialized",
+        "I"
+      ],
+      "variables_deployed": [
+        "I_buffer (Buffer Class)",
+        "F_enforce^proto (Proto-Enforcement Class—I_buffer deputized to police racial boundary)",
+        "P_uppet^v1.0 (Puppet Class—prototype)",
+        "W = jψ_s (formalized)"
+      ],
+      "executing_function": "Codify “Whiteness.” Weaponize the Implicit Contract into explicit law. Draft constitutional front-end.",
+      "results": [
+        "[POLICY] Virginia Slave Codes (1705) partition the working class and deputize I_buffer as racial enforcers.",
+        "[POLICY] Three-Fifths Compromise (1787) embeds extraction into federal architecture.",
+        "[POLICY] Constitutional front-end/back-end separation prototypes P_uppet. min variable temporarily stabilized."
+      ]
+    },
+    "raw_fields": {
+      "System Stress": "(min: class resistance): CRITICAL — Cross-racial labor solidarity detected. Jamestown burning.",
+      "Capital": "(max: extraction output): AT RISK — Plantation economy destabilized by unified revolt.",
+      "Interference State": "(Φ_load, proximity to τ): TRANSITIONING — coherence breach pre-patch, then rapid phase-loading via codified racial partition. Estimated Φ_load ∈ [0.15, 0.55]; ρ_(τ)>1.00 at crash, then ρ_(τ) ∈ [0.60, 0.75] post-patch.",
+      "Active Patch": "Emergency recompile. Partitioning the poor…",
+      "Variables Loaded": "E, O_racialized, I.",
+      "Variables Deployed This Cycle": "I_buffer (Buffer Class), F_enforce^proto (Proto-Enforcement Class—I_buffer deputized to police racial boundary), P_uppet^v1.0 (Puppet Class—prototype), W = jψ_s (formalized).",
+      "Executing Function": "Codify “Whiteness.” Weaponize the Implicit Contract into explicit law. Draft constitutional front-end.",
+      "Result": "[POLICY] Virginia Slave Codes (1705) partition the working class and deputize I_buffer as racial enforcers. [POLICY] Three-Fifths Compromise (1787) embeds extraction into federal architecture. [POLICY] Constitutional front-end/back-end separation prototypes P_uppet. min variable temporarily stabilized."
+    }
+  },
+  {
+    "log": 5,
+    "title": "1704–1865 (AMERICAN SOUTH)",
+    "chapter_label": "ch:enforcement",
+    "fields": {
+      "system_stress": {
+        "level": "MODERATE",
+        "reason": "Buffer Class pacified by jψ_s. Racial partition holding. But physical enforcement of extraction requires dedicated apparatus."
+      },
+      "capital": {
+        "level": "EXPANDING",
+        "reason": "Slave capitalism scaling. Human bodies classified as mortgageable assets. Cotton economy driving global markets."
+      },
+      "interference_state": {
+        "text": "STABLE — race-dominant phase management with low dimensionality. Estimated Φ_load ∈ [0.45, 0.60], ρ_τ ∈ [0.45, 0.65].",
+        "phi_load": [
+          0.45,
+          0.6
+        ],
+        "rho_tau": [
+          0.45,
+          0.65
+        ],
+        "rho_tau_crash": null
+      },
+      "active_patch": null,
+      "variables_loaded": [
+        "E",
+        "O_racialized",
+        "I",
+        "I_buffer",
+        "P_uppet (prototype)"
+      ],
+      "variables_deployed": [
+        "F_enforce (Enforcement Class)",
+        "QI (Qualified Immunity—latent)"
+      ],
+      "executing_function": "Deploy physical enforcement tier. Convert slave patrols into permanent state apparatus. Embed extraction loophole into 13th Amendment.",
+      "results": [
+        "Four-tier hierarchy operational.",
+        "[POLICY] Fugitive Slave Act (1850) merges enforcement tracks.",
+        "[POLICY] 13th Amendment (1865) loophole (O_incarcerated → forced labor) ensures extraction survives abolition. max secured indefinitely."
+      ]
+    },
+    "raw_fields": {
+      "System Stress": "(min: class resistance): MODERATE — Buffer Class pacified by jψ_s. Racial partition holding. But physical enforcement of extraction requires dedicated apparatus.",
+      "Capital": "(max: extraction output): EXPANDING — Slave capitalism scaling. Human bodies classified as mortgageable assets. Cotton economy driving global markets.",
+      "Interference State": "(Φ_load, proximity to τ): STABLE — race-dominant phase management with low dimensionality. Estimated Φ_load ∈ [0.45, 0.60], ρ_(τ) ∈ [0.45, 0.65].",
+      "Variables Loaded": "E, O_racialized, I, I_buffer, P_uppet (prototype).",
+      "Variables Deployed This Cycle": "F_enforce (Enforcement Class), QI (Qualified Immunity—latent).",
+      "Executing Function": "Deploy physical enforcement tier. Convert slave patrols into permanent state apparatus. Embed extraction loophole into 13th Amendment.",
+      "Result": "Four-tier hierarchy operational. [POLICY] Fugitive Slave Act (1850) merges enforcement tracks. [POLICY] 13th Amendment (1865) loophole (O_incarcerated → forced labor) ensures extraction survives abolition. max secured indefinitely."
+    }
+  },
+  {
+    "log": 9,
+    "title": "1894–1965 (POST-EMANCIPATION CONTAINMENT)",
+    "chapter_label": "ch:containment",
+    "fields": {
+      "system_stress": {
+        "level": "HIGH",
+        "reason": "13th Amendment reclassified O_racialized as citizens with voting rights. Parallel Out-group economy emerging. Civil Rights Movement breaching the legal interface."
+      },
+      "capital": {
+        "level": "RESTRUCTURING",
+        "reason": "Direct slavery terminated. System transitioning to indirect extraction via convict leasing, sharecropping, and spatial containment."
+      },
+      "interference_state": {
+        "text": "Φ_load ∈ [0.55, 0.72]; ρ_τ ∈ [0.50, 0.68].",
+        "phi_load": [
+          0.55,
+          0.72
+        ],
+        "rho_tau": [
+          0.5,
+          0.68
+        ],
+        "rho_tau_crash": null
+      },
+      "active_patch": null,
+      "variables_loaded": [
+        "E",
+        "O_racialized",
+        "I",
+        "I_buffer",
+        "F_enforce"
+      ],
+      "variables_deployed": [
+        "W (Complex Wage, weaponized)",
+        "P_spatial (Redlining)",
+        "Capture Variable"
+      ],
+      "executing_function": "Terminate the Out-group's parallel economy (Tulsa 1921, East St.\\ Louis 1917). Build the containment field P_spatial (National Housing Act 1934). Absorb the Civil Rights Movement's legal victories into two-party loyalty without dismantling the extraction kernel.",
+      "results": [
+        "[POLICY] HOLC Redlining (1934) concentrates O_racialized for targeted extraction.",
+        "[POLICY] Civil Rights Act (1964) and Voting Rights Act (1965) dismantle the legal interface but leave the kernel untouched. Capture Variable absorbs O_racialized into the two-party system. min restored through spatial and political containment. The Puppet Class upgrade that coordinates these moves is deployed in Chapter ch:tweedism."
+      ]
+    },
+    "raw_fields": {
+      "System Stress": "(min: class resistance): HIGH — 13th Amendment reclassified O_racialized as citizens with voting rights. Parallel Out-group economy emerging. Civil Rights Movement breaching the legal interface.",
+      "Capital": "(max: extraction output): RESTRUCTURING — Direct slavery terminated. System transitioning to indirect extraction via convict leasing, sharecropping, and spatial containment.",
+      "Interference State": "(Φ_load, proximity to τ): Φ_load ∈ [0.55, 0.72]; ρ_(τ) ∈ [0.50, 0.68].",
+      "Variables Loaded": "E, O_racialized, I, I_buffer, F_enforce.",
+      "Variables Deployed This Cycle": "W (Complex Wage, weaponized), P_spatial (Redlining), Capture Variable.",
+      "Executing Function": "Terminate the Out-group's parallel economy (Tulsa 1921, East St.\\ Louis 1917). Build the containment field P_spatial (National Housing Act 1934). Absorb the Civil Rights Movement's legal victories into two-party loyalty without dismantling the extraction kernel.",
+      "Result": "[POLICY] HOLC Redlining (1934) concentrates O_racialized for targeted extraction. [POLICY] Civil Rights Act (1964) and Voting Rights Act (1965) dismantle the legal interface but leave the kernel untouched. Capture Variable absorbs O_racialized into the two-party system. min restored through spatial and political containment. The Puppet Class upgrade that coordinates these moves is deployed in Chapter ch:tweedism."
+    }
+  },
+  {
+    "log": 14,
+    "title": "1968–1994 (THE RECOMPILE)",
+    "chapter_label": "ch:recompile",
+    "fields": {
+      "system_stress": {
+        "level": "CRITICAL",
+        "reason": "Civil Rights Movement breached the legal interface. Demographic Paradox emerging: O shrinking, extraction demand unchanged."
+      },
+      "capital": {
+        "level": "PEAK",
+        "reason": "Carceral state fully industrialized. 13th Amendment loophole generating maximum throughput. War on Drugs providing unlimited proxy criminalization."
+      },
+      "interference_state": {
+        "text": "HIGH-DIMENSIONAL — fractal identity routing active across multiple axes. Estimated Φ_load ∈ [0.75, 0.92], ρ_τ ∈ [0.80, 0.98].",
+        "phi_load": [
+          0.75,
+          0.92
+        ],
+        "rho_tau": [
+          0.8,
+          0.98
+        ],
+        "rho_tau_crash": null
+      },
+      "active_patch": null,
+      "variables_loaded": [
+        "ALL 5 TIERS — E",
+        "P_uppet",
+        "F_enforce",
+        "I_buffer",
+        "O_racialized"
+      ],
+      "variables_deployed": [
+        "P_criminal (Variable Swap)",
+        "P_lead (Environmental Pre-Processing)",
+        "P_deindustrial (Economic Void)",
+        "P_BrokenWindows (Selective Enforcement)",
+        "P_retroactive",
+        "P_spatial (Gun-Free Zones)",
+        "Universal Latent Criminality"
+      ],
+      "executing_function": "Full algorithm running. Variable Swap masks racial targeting. Demographic deficit forcing cannibalization of I_buffer.",
+      "results": [
+        "[POLICY] Anti-Drug Abuse Act (1986) — 100:1 crack/powder ratio.",
+        "[POLICY] Three Strikes laws.",
+        "[POLICY] Assault Weapon Bans / Sensitive Place expansions.",
+        "[POLICY] NFA tax increases / ex post facto serialization mandates."
+      ]
+    },
+    "raw_fields": {
+      "System Stress": "(min: class resistance): CRITICAL — Civil Rights Movement breached the legal interface. Demographic Paradox emerging: O shrinking, extraction demand unchanged.",
+      "Capital": "(max: extraction output): PEAK — Carceral state fully industrialized. 13th Amendment loophole generating maximum throughput. War on Drugs providing unlimited proxy criminalization.",
+      "Interference State": "(Φ_load, proximity to τ): HIGH-DIMENSIONAL — fractal identity routing active across multiple axes. Estimated Φ_load ∈ [0.75, 0.92], ρ_(τ) ∈ [0.80, 0.98].",
+      "Variables Loaded": "ALL 5 TIERS — E, P_uppet, F_enforce, I_buffer, O_racialized.",
+      "Variables Deployed This Cycle": "P_criminal (Variable Swap), P_lead (Environmental Pre-Processing), P_deindustrial (Economic Void), P_BrokenWindows (Selective Enforcement), P_retroactive, P_spatial (Gun-Free Zones), Universal Latent Criminality.",
+      "Executing Function": "Full algorithm running. Variable Swap masks racial targeting. Demographic deficit forcing cannibalization of I_buffer.",
+      "Policies Executed": "[POLICY] Anti-Drug Abuse Act (1986) — 100:1 crack/powder ratio. [POLICY] Three Strikes laws. [POLICY] Assault Weapon Bans / Sensitive Place expansions. [POLICY] NFA tax increases / ex post facto serialization mandates.",
+      "WARNING": "min VARIABLE FAILING. Buffer Class detecting contract breach. Kinetic calculus unfavorable. System entering terminal phase."
+    }
+  },
+  {
+    "log": 15,
+    "title": "1994–PRESENT (TERMINAL RUNTIME)",
+    "chapter_label": "ch:full_algo",
+    "fields": {
+      "system_stress": {
+        "level": "CRITICAL",
+        "reason": "Out-group demographic deficit engineered. Buffer Class detecting contract breach."
+      },
+      "capital": {
+        "level": "PEAK",
+        "reason": "Carceral industry, private prisons, and financialized debt instruments running at design throughput."
+      },
+      "interference_state": {
+        "text": "[0.82, 0.95]; ρ_τ ∈ [0.92, 1.05].",
+        "phi_load": [
+          0.82,
+          0.95
+        ],
+        "rho_tau": [
+          0.92,
+          1.05
+        ],
+        "rho_tau_crash": null
+      },
+      "active_patch": null,
+      "variables_loaded": [
+        "ALL 5 TIERS OPERATING VISIBLY — E",
+        "P_uppet",
+        "F_enforce",
+        "I_buffer",
+        "O_racialized"
+      ],
+      "variables_deployed": [
+        "P_spatial (Sensitive Places)",
+        "P_gaslight (kernel denial)",
+        "P_toxin (biological degradation)",
+        "Universal Latent Criminality",
+        "P_fetal_personhood"
+      ],
+      "executing_function": "Cannibalization subroutine active. Extraction zone expanding into I_buffer as O_racialized supply contracts.",
+      "results": []
+    },
+    "raw_fields": {
+      "System Stress": "(min: class resistance): CRITICAL — Out-group demographic deficit engineered. Buffer Class detecting contract breach.",
+      "Capital": "(max: extraction output): PEAK — Carceral industry, private prisons, and financialized debt instruments running at design throughput.",
+      "Interference State": "(Φ_load, proximity to τ): [0.82, 0.95]; ρ_(τ) ∈ [0.92, 1.05].",
+      "Variables Loaded": "ALL 5 TIERS OPERATING VISIBLY — E, P_uppet, F_enforce, I_buffer, O_racialized.",
+      "Variables Deployed This Cycle": "P_spatial (Sensitive Places), P_gaslight (kernel denial), P_toxin (biological degradation), Universal Latent Criminality, P_fetal_personhood.",
+      "Executing Function": "Cannibalization subroutine active. Extraction zone expanding into I_buffer as O_racialized supply contracts.",
+      "WARNING": "min VARIABLE FAILING. System entering terminal phase. Geopolitical override routines on standby."
+    }
+  },
+  {
+    "log": 17,
+    "title": "ALGORITHMIC EPOCH (TERMINAL RACE, 2010s–PRESENT)",
+    "chapter_label": "ch:algorithmic_epoch",
+    "fields": {
+      "system_stress": {
+        "level": null,
+        "reason": "Real-time graph monitoring deployed. E now computes proximity to τ continuously; response latency collapsing from decades to milliseconds."
+      },
+      "capital": {
+        "level": null,
+        "reason": "Automated targeting operative across lending, sentencing, housing, and labor-matching algorithms. Historical extraction priors hard-wired into training data."
+      },
+      "interference_state": {
+        "text": "SATURATED — Orthogonal Vector Injections (E) deploying at machine speed; cross-class coalitions severed before reaching coherence. Estimated Φ_load ∈ [0.88, 0.98], ρ_τ ∈ [0.95, 1.08].",
+        "phi_load": [
+          0.88,
+          0.98
+        ],
+        "rho_tau": [
+          0.95,
+          1.08
+        ],
+        "rho_tau_crash": null
+      },
+      "active_patch": null,
+      "variables_loaded": [
+        "Full domestic + global hierarchy + ψ",
+        "Φ_load",
+        "τ",
+        "new: E (orthogonal injection operator)",
+        "Γ (F_enforce bandwidth ceiling)",
+        "V/R (extraction-value / friction-risk ratio)",
+        "N (noise-spectrum index)",
+        "B (agnostic-swarm botnet payload)"
+      ],
+      "variables_deployed": [],
+      "executing_function": "Porting the Predatory Min-Max Function onto algorithmic hardware. Testing terminal condition: does the automation threshold arrive before the kinetic threshold?",
+      "results": []
+    },
+    "raw_fields": {
+      "System Stress": "(min: class resistance): Real-time graph monitoring deployed. E now computes proximity to τ continuously; response latency collapsing from decades to milliseconds.",
+      "Capital": "(max: extraction output): Automated targeting operative across lending, sentencing, housing, and labor-matching algorithms. Historical extraction priors hard-wired into training data.",
+      "Interference State": "(Φ_load, proximity to τ): SATURATED — Orthogonal Vector Injections (E) deploying at machine speed; cross-class coalitions severed before reaching coherence. Estimated Φ_load ∈ [0.88, 0.98], ρ_(τ) ∈ [0.95, 1.08].",
+      "Variables Loaded": "Full domestic + global hierarchy + ψ, Φ_load, τ, new: E (orthogonal injection operator), Γ (F_enforce bandwidth ceiling), V/R (extraction-value / friction-risk ratio), N (noise-spectrum index), B (agnostic-swarm botnet payload).",
+      "Executing Function": "Porting the Predatory Min-Max Function onto algorithmic hardware. Testing terminal condition: does the automation threshold arrive before the kinetic threshold?",
+      "CRITICAL WARNING": "Human-speed resistance is now structurally obsolete. Any liberation architecture that cannot operate at algorithmic latency and decentralized scale will be absorbed before it coheres."
+    }
+  }
+]
