@@ -297,6 +297,17 @@ extracts from it? Teach the complex wage with phasor animation. Leave the Unifie
   on Drugs, redlining 2.0, algorithmic credit scoring, subprime lending [book Ch 0].
 - Status costs the Elite nothing, which is why θ drifts toward 90° and past it.
 
+**Axes (author decision, 2026-10-17).** Draw **material (ψ_m) on the vertical axis and
+psychological (ψ_s) on the horizontal axis**. The math is unchanged (W = ψ_m + jψ_s, ψ_m = |W| cos θ,
+ψ_s = |W| sin θ); θ is measured from the material axis, so θ = 0 points straight up (purely
+material), θ = 90° lies along the psychological axis (pure status), and θ > 90° drops below the
+horizontal (Quadrant II: material flows out of the Buffer Class while ψ_s stays inflated). Narrate
+the axes this way; do not say "real axis is horizontal".
+Why: the five-tier pyramid and the Interference Engine show extraction flowing **upward**, so
+material on the vertical axis keeps every YT02 visual on one orientation (wealth moves up the y
+axis in the pyramid, the phasor and the dashboard alike). This is a video convention; the book's
+figures stay as they are.
+
 **Equations/figures.** Equation 3.5 and the AC-mode relations, rendered in manimgx: an animated
 phasor on the complex plane with its cos and sin projections live, θ sweeping through the regimes,
 then stopping at each historical implementation.

@@ -13,7 +13,7 @@ and its "Decisions" item 7 lists what was added. Restructure the draft to the cu
 renumber the SEG markers, and write the new material in Gemini's register:
 SEG 04 (orthographic illusion), SEG 09 (the wage as a phasor: explain complex numbers from zero and
 narrate the rotating phasor through θ = 0, 90° and Quadrant II, then each historical implementation;
-leave out the Unified Lorentz Force), the zero-day block in SEG 07, the biological-embedding block
+leave out the Unified Lorentz Force; material on the vertical axis, psychological on the horizontal, as the outline's SEG 09 'Axes' note says), the zero-day block in SEG 07, the biological-embedding block
 in SEG 10, the Concession Theorem in SEG 14, and SEG 11 narrated over the runtime dashboard
 (`video/yt02/DASHBOARD_SPEC.md`), naming each era's fields as the logs state them. The outline wins
 wherever it and the draft disagree.
