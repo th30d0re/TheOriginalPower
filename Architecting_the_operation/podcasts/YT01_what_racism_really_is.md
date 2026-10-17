@@ -1106,6 +1106,18 @@ The disparity gave the facially neutral proxy a precise statutory geometry with 
 Emmanuel Theodore (61:39)
 The resulting mass incarceration expanded the carceral enforcement layer.
 
+Emmanuel Theodore (61:40)
+A note on one word. This video says cannabis, the botanical name, and uses marihuana only inside a quoted statute or record.
+
+Emmanuel Theodore (61:41)
+The reason sits in the federal record. At the 1937 House hearings on the Marihuana Tax Act, Harry Anslinger submitted a newspaper editor's letter that tied the drug to disparaging claims about Spanish-speaking residents.
+
+Emmanuel Theodore (61:41)
+The Bureau's own correspondence attributed violent crime in Mexican and Black districts to the drug. That vocabulary carried the campaign into federal law.
+
+Emmanuel Theodore (61:42)
+Any honest account of drug policy and racial animus starts with that word, because the word was part of the instrument.
+
 Emmanuel Theodore (61:43)
 ACLU analyses from 2013 and 2020 find comparable cannabis use rates across Black and white populations alongside sharply disparate arrest exposure.
 

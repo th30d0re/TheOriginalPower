@@ -2518,6 +2518,34 @@ One shot is assigned to every script turn. Every shot renders in manimgx; card s
 - **Holds:** `S12-30`
 - **Note:** Carceral enforcement layer expands under the proxy regime. [claude] “mass incarceration expanded the carceral enforcement layer”
 
+## S12-33a — Why this video says cannabis
+
+- **Anchor:** `Emmanuel Theodore (61:4x)`
+- **Type:** card
+- **Render:** `manim:cards16x9.py:CardScene cards/S12-33a.json`
+- **Note:** Terminology note: cannabis throughout; marihuana only in quoted statutes and records. [claude] editorial note
+
+## S12-33b — The 1937 House hearing
+
+- **Anchor:** `Emmanuel Theodore (61:4x)`
+- **Type:** card
+- **Render:** `manim:cards16x9.py:CardScene cards/S12-33b.json`
+- **Note:** Anslinger submitted Baskette's 1936 letter to the House hearing. [source] House Ways and Means hearing 1937, pp. 29, 32
+
+## S12-33c — Bureau correspondence into federal law
+
+- **Anchor:** `Emmanuel Theodore (61:4x)`
+- **Type:** card
+- **Render:** `manim:cards16x9.py:CardScene cards/S12-33c.json`
+- **Note:** Bureau correspondence blamed violent crime in Mexican and Black districts on the drug. [source] `bonnie` pp. 100, 149, 319 n. 22
+
+## S12-33d — The word was part of the instrument
+
+- **Anchor:** `Emmanuel Theodore (61:4x)`
+- **Type:** card
+- **Render:** `manim:cards16x9.py:CardScene cards/S12-33d.json`
+- **Note:** Drug policy and racial animus start with the vocabulary. [claude] editorial note
+
 ## S12-34 — ACLU cannabis arrests
 
 - **Anchor:** `Emmanuel Theodore (58:21)`
