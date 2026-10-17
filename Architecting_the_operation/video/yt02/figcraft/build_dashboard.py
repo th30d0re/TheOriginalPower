@@ -205,15 +205,207 @@ def extract_range_str(text, prefix):
     return ""
 
 
-def rect_cmd(parent, name, x, y, w, h, *, fill=None, stroke=None, stroke_w=1, radius=0, opacity=1.0, rotation=0.0):
-    props = {"opacity": opacity}
-    if fill is not None:
+def rgba(hex_str, alpha=1.0):
+    """Convert `#RRGGBB` hex string and alpha float into a FigCraft RGBA dict."""
+    h = hex_str.lstrip("#")
+    return {
+        "r": round(int(h[0:2], 16) / 255.0, 4),
+        "g": round(int(h[2:4], 16) / 255.0, 4),
+        "b": round(int(h[4:6], 16) / 255.0, 4),
+        "a": round(float(alpha), 4),
+    }
+
+
+def linear_gradient_paint(top_hex, bottom_hex, *, mid_hex=None, mid_pos=0.5, opacity=1.0):
+    """Build a vertical linear gradient paint object for FigCraft `fills`."""
+    stops = [{"position": 0.0, "color": top_hex}]
+    if mid_hex is not None:
+        stops.append({"position": float(mid_pos), "color": mid_hex})
+    stops.append({"position": 1.0, "color": bottom_hex})
+    return {
+        "type": "gradient",
+        "kind": "linear",
+        "from": [0.5, 0.0],
+        "to": [0.5, 1.0],
+        "width": [1.0, 0.0],
+        "opacity": float(opacity),
+        "blend": "normal",
+        "visible": True,
+        "stops": stops,
+    }
+
+
+def radial_vignette_paint(center_hex="#182B52", mid_hex=BG, edge_hex="#060C18"):
+    """Build a subtle radial vignette paint object for the 1920x1080 era frame (Level 0)."""
+    return {
+        "type": "gradient",
+        "kind": "radial",
+        "from": [0.5, 0.5],
+        "to": [0.96, 0.5],
+        "width": [0.5, 0.96],
+        "opacity": 1.0,
+        "blend": "normal",
+        "visible": True,
+        "stops": [
+            {"position": 0.0, "color": center_hex},
+            {"position": 0.55, "color": mid_hex},
+            {"position": 1.0, "color": edge_hex},
+        ],
+    }
+
+
+def drop_shadow(color_hex="#000000", alpha=0.35, ox=0.0, oy=2.0, blur=4.0, spread=0.0):
+    """Build a FigCraft `dropShadow` effect dict."""
+    return {
+        "type": "dropShadow",
+        "color": rgba(color_hex, alpha),
+        "offset": [float(ox), float(oy)],
+        "radius": float(blur),
+        "spread": float(spread),
+        "showBehind": False,
+        "blend": "normal",
+        "visible": True,
+    }
+
+
+def inner_shadow(color_hex="#000000", alpha=0.45, ox=0.0, oy=2.0, blur=6.0, spread=0.0):
+    """Build a FigCraft `innerShadow` effect dict."""
+    return {
+        "type": "innerShadow",
+        "color": rgba(color_hex, alpha),
+        "offset": [float(ox), float(oy)],
+        "radius": float(blur),
+        "spread": float(spread),
+        "showBehind": False,
+        "blend": "normal",
+        "visible": True,
+    }
+
+
+def noise_effect(alpha=0.03, density=0.20, size=0.5):
+    """Build a subtle mono `noise` effect dict in navy hue to prevent banding without speckling."""
+    return {
+        "type": "noise",
+        "mode": "mono",
+        "color": rgba("#1E3460", alpha),
+        "secondary": rgba("#060C18", alpha),
+        "density": float(density),
+        "size": float(size),
+        "opacity": float(alpha),
+        "blend": "normal",
+        "visible": True,
+    }
+
+
+def panel_fill():
+    """Soft vertical gradient for Level 1 panels (top a touch lighter than bottom)."""
+    return [linear_gradient_paint("#1B2E58", "#111E3B", mid_hex=PANEL, mid_pos=0.48)]
+
+
+def panel_effects():
+    """Level 1 panel depth: contact shadow, wide ambient shadow, and 1 px top inner highlight."""
+    return [
+        drop_shadow("#000000", alpha=0.30, ox=0.0, oy=16.0, blur=40.0),
+        drop_shadow("#000000", alpha=0.35, ox=0.0, oy=2.0, blur=4.0),
+        inner_shadow(INK, alpha=0.06, ox=0.0, oy=1.0, blur=0.5),
+    ]
+
+
+def raised_effects(glow_hex, *, glow_alpha=0.35, glow_blur=20.0, top_highlight=0.10):
+    """Level 2 raised element depth: stronger dual drop shadow, outer accent glow, and top highlight."""
+    return [
+        drop_shadow("#000000", alpha=0.46, ox=0.0, oy=6.0, blur=14.0),
+        drop_shadow("#000000", alpha=0.38, ox=0.0, oy=2.0, blur=4.0),
+        drop_shadow(glow_hex, alpha=glow_alpha, ox=0.0, oy=0.0, blur=glow_blur),
+        inner_shadow("#FFFFFF", alpha=top_highlight, ox=0.0, oy=1.0, blur=0.5),
+    ]
+
+
+def well_fill():
+    """Recessed darker vertical gradient for inset wells."""
+    return [linear_gradient_paint("#070E1C", PANEL_DARK)]
+
+
+def well_effects():
+    """Inset well depth: top inner shadow (y 2, blur 6, black ~45%) + faint bottom rim light."""
+    return [
+        inner_shadow("#000000", alpha=0.45, ox=0.0, oy=2.0, blur=6.0),
+        drop_shadow(INK, alpha=0.04, ox=0.0, oy=1.0, blur=0.0),
+    ]
+
+
+def data_glow_effects(glow_hex, *, outer_alpha=0.42, outer_blur=18.0, core_alpha=0.28, core_blur=6.0):
+    """Luminous glow for live data readings (Φ_load fill, ρ_τ sector/needle, crash marker)."""
+    return [
+        drop_shadow(glow_hex, alpha=outer_alpha, ox=0.0, oy=0.0, blur=outer_blur),
+        drop_shadow(glow_hex, alpha=core_alpha, ox=0.0, oy=0.0, blur=core_blur),
+    ]
+
+
+def badge_gradient(fill_hex):
+    """Return a soft vertical gradient fill list matching a badge's semantic color."""
+    if fill_hex == RED:
+        return [linear_gradient_paint("#EB624A", "#CF4932")]
+    if fill_hex == GOLD:
+        return [linear_gradient_paint("#E5B350", "#C6902E")]
+    if fill_hex == BLUE:
+        return [linear_gradient_paint("#6EB6E0", "#4D93BD")]
+    return [linear_gradient_paint("#12203D", PANEL_DARK)]
+
+
+def _apply_paint_and_effects(props, *, fill=None, fills=None, stroke=None, stroke_w=1, stroke_opacity=1.0, effects=None):
+    if fills is not None:
+        props["fills"] = fills
+    elif fill is not None:
         props["fill"] = fill
     else:
         props["fills"] = []
     if stroke is not None:
-        props["stroke"] = stroke
+        if stroke_opacity < 1.0:
+            props["strokes"] = [
+                {
+                    "type": "solid",
+                    "color": stroke,
+                    "opacity": round(float(stroke_opacity), 3),
+                    "visible": True,
+                    "blend": "normal",
+                }
+            ]
+        else:
+            props["stroke"] = stroke
         props["strokeWeight"] = stroke_w
+    if effects:
+        props["effects"] = effects
+
+
+def rect_cmd(
+    parent,
+    name,
+    x,
+    y,
+    w,
+    h,
+    *,
+    fill=None,
+    fills=None,
+    stroke=None,
+    stroke_w=1,
+    stroke_opacity=1.0,
+    radius=0,
+    opacity=1.0,
+    rotation=0.0,
+    effects=None,
+):
+    props = {"opacity": opacity}
+    _apply_paint_and_effects(
+        props,
+        fill=fill,
+        fills=fills,
+        stroke=stroke,
+        stroke_w=stroke_w,
+        stroke_opacity=stroke_opacity,
+        effects=effects,
+    )
     if radius:
         props["cornerRadius"] = radius
     if rotation:
@@ -243,21 +435,26 @@ def ellipse_cmd(
     h,
     *,
     fill=None,
+    fills=None,
     stroke=None,
     stroke_w=1,
+    stroke_opacity=1.0,
     arc_start=None,
     arc_sweep=None,
     arc_inner=None,
     opacity=1.0,
+    effects=None,
 ):
     props = {"opacity": opacity}
-    if fill is not None:
-        props["fill"] = fill
-    else:
-        props["fills"] = []
-    if stroke is not None:
-        props["stroke"] = stroke
-        props["strokeWeight"] = stroke_w
+    _apply_paint_and_effects(
+        props,
+        fill=fill,
+        fills=fills,
+        stroke=stroke,
+        stroke_w=stroke_w,
+        stroke_opacity=stroke_opacity,
+        effects=effects,
+    )
     if arc_start is not None:
         props["arcStart"] = round(arc_start, 2)
     if arc_sweep is not None:
@@ -280,15 +477,28 @@ def ellipse_cmd(
     }
 
 
-def vector_cmd(parent, name, path_d, *, fill=None, stroke=None, stroke_w=2, opacity=1.0, stroke_cap="round"):
+def vector_cmd(
+    parent,
+    name,
+    path_d,
+    *,
+    fill=None,
+    stroke=None,
+    stroke_w=2,
+    stroke_opacity=1.0,
+    opacity=1.0,
+    stroke_cap="round",
+    effects=None,
+):
     props = {"opacity": opacity, "strokeCap": stroke_cap, "strokeJoin": "round"}
-    if fill is not None:
-        props["fill"] = fill
-    else:
-        props["fills"] = []
-    if stroke is not None:
-        props["stroke"] = stroke
-        props["strokeWeight"] = stroke_w
+    _apply_paint_and_effects(
+        props,
+        fill=fill,
+        stroke=stroke,
+        stroke_w=stroke_w,
+        stroke_opacity=stroke_opacity,
+        effects=effects,
+    )
     return {
         "command": "node.create",
         "params": {
@@ -317,6 +527,7 @@ def text_cmd(
     line_height="135%",
     letter_spacing="0%",
     opacity=1.0,
+    effects=None,
 ):
     props = {
         "fontFamily": FONT,
@@ -328,6 +539,8 @@ def text_cmd(
         "letterSpacing": letter_spacing,
         "opacity": opacity,
     }
+    if effects:
+        props["effects"] = effects
     params = {
         "type": "text",
         "parent": parent,
@@ -354,10 +567,23 @@ def create_chip_group(cmds, parent, items, *, x_start, y_start, is_deployed=True
         cname = canonical_chip_name(raw_item)
         highlight = is_deployed or raw_item.strip().startswith("new:")
         font_sz = 13 if len(raw_item) <= 48 else 12
-        fill_col = GOLD_BG if highlight else PANEL_DARK
+        chip_fills = (
+            [linear_gradient_paint("#323035", "#202024", mid_hex=GOLD_BG, mid_pos=0.5)]
+            if highlight
+            else [linear_gradient_paint("#070E1C", "#0C172C")]
+        )
         stroke_col = GOLD if highlight else DIM
         text_col = GOLD if highlight else DIM
-        stroke_w = 1.8 if highlight else 1.0
+        stroke_w = 1.6 if highlight else 1.0
+        stroke_op = 0.76 if highlight else 0.34
+        chip_fx = (
+            raised_effects(GOLD, glow_alpha=0.35, glow_blur=18.0, top_highlight=0.09)
+            if highlight
+            else [
+                inner_shadow("#000000", alpha=0.40, ox=0.0, oy=2.0, blur=4.0),
+                drop_shadow("#000000", alpha=0.24, ox=0.0, oy=2.0, blur=4.0),
+            ]
+        )
         est_w = max(56, int(len(raw_item) * 8.2 + (42 if highlight else 28)))
 
         cmds.append(
@@ -368,10 +594,12 @@ def create_chip_group(cmds, parent, items, *, x_start, y_start, is_deployed=True
                 cy,
                 est_w,
                 row_h,
-                fill=fill_col,
+                fills=chip_fills,
                 stroke=stroke_col,
                 stroke_w=stroke_w,
+                stroke_opacity=stroke_op,
                 radius=16,
+                effects=chip_fx,
             )
         )
         dot_name = f"{cname} dot"
@@ -385,6 +613,7 @@ def create_chip_group(cmds, parent, items, *, x_start, y_start, is_deployed=True
                     8,
                     8,
                     fill=GOLD,
+                    effects=[drop_shadow(GOLD, alpha=0.55, ox=0.0, oy=0.0, blur=6.0)],
                 )
             )
         lbl_name = f"{cname} label"
@@ -435,10 +664,12 @@ def build_era_commands(frame_id, era_idx, era, all_eras):
             tl_y,
             tl_w,
             tl_h,
-            fill=PANEL,
+            fills=panel_fill(),
             stroke=BLUE,
             stroke_w=1,
+            stroke_opacity=0.42,
             radius=8,
+            effects=panel_effects(),
         )
     )
     seg_w = tl_w / len(all_eras)
@@ -453,7 +684,7 @@ def build_era_commands(frame_id, era_idx, era, all_eras):
             tl_h,
             fill=GOLD,
             radius=8,
-            opacity=0.14,
+            opacity=0.12,
         )
     )
     cmds.append(
@@ -466,6 +697,7 @@ def build_era_commands(frame_id, era_idx, era, all_eras):
             6,
             fill=GOLD,
             radius=3,
+            effects=[drop_shadow(GOLD, alpha=0.35, ox=0.0, oy=0.0, blur=10.0)],
         )
     )
     cmds.append(
@@ -476,10 +708,12 @@ def build_era_commands(frame_id, era_idx, era, all_eras):
             tl_y + 3,
             seg_w - 6,
             tl_h - 10,
-            fill=PANEL_DARK,
+            fills=[linear_gradient_paint("#1D315C", "#0D182E")],
             stroke=GOLD,
             stroke_w=1.5,
+            stroke_opacity=0.82,
             radius=6,
+            effects=raised_effects(GOLD, glow_alpha=0.35, glow_blur=18.0, top_highlight=0.10),
         )
     )
     for i, other in enumerate(all_eras):
@@ -516,10 +750,12 @@ def build_era_commands(frame_id, era_idx, era, all_eras):
             hdr_y,
             hdr_w,
             hdr_h,
-            fill=PANEL,
+            fills=panel_fill(),
             stroke=BLUE,
             stroke_w=1,
+            stroke_opacity=0.42,
             radius=10,
+            effects=panel_effects(),
         )
     )
     cmds.append(
@@ -532,6 +768,7 @@ def build_era_commands(frame_id, era_idx, era, all_eras):
             hdr_h,
             fill=GOLD,
             radius=3,
+            effects=[drop_shadow(GOLD, alpha=0.30, ox=0.0, oy=0.0, blur=10.0)],
         )
     )
     cmds.append(
@@ -542,10 +779,12 @@ def build_era_commands(frame_id, era_idx, era, all_eras):
             hdr_y + 14,
             274,
             28,
-            fill=PANEL_DARK,
+            fills=[linear_gradient_paint("#132342", "#0A1324")],
             stroke=GOLD,
             stroke_w=1,
+            stroke_opacity=0.60,
             radius=6,
+            effects=raised_effects(GOLD, glow_alpha=0.22, glow_blur=14.0, top_highlight=0.08),
         )
     )
     cmds.append(
@@ -575,6 +814,7 @@ def build_era_commands(frame_id, era_idx, era, all_eras):
             color=INK,
             width=820,
             line_height="110%",
+            effects=[drop_shadow("#000000", alpha=0.24, ox=0.0, oy=2.0, blur=4.0)],
         )
     )
     cmds.append(
@@ -604,10 +844,12 @@ def build_era_commands(frame_id, era_idx, era, all_eras):
             ap_y,
             ap_w,
             ap_h,
-            fill=PANEL,
+            fills=panel_fill(),
             stroke=GOLD if has_patch else BLUE,
             stroke_w=1.5 if has_patch else 1,
+            stroke_opacity=0.62 if has_patch else 0.42,
             radius=10,
+            effects=panel_effects(),
         )
     )
     cmds.append(
@@ -631,10 +873,12 @@ def build_era_commands(frame_id, era_idx, era, all_eras):
             ap_y + 36,
             ap_w - 36,
             54,
-            fill=PANEL_DARK,
+            fills=well_fill(),
             stroke=GOLD if has_patch else DIM,
-            stroke_w=1.2 if has_patch else 0.6,
+            stroke_w=1.2 if has_patch else 0.8,
+            stroke_opacity=0.55 if has_patch else 0.28,
             radius=6,
+            effects=well_effects(),
         )
     )
     cmds.append(
@@ -685,9 +929,11 @@ def build_era_commands(frame_id, era_idx, era, all_eras):
             st_h + 6,
             fill=None,
             stroke=RED,
-            stroke_w=3,
+            stroke_w=2.5,
+            stroke_opacity=0.55,
             radius=12,
             opacity=0.85 if is_crit else 0.0,
+            effects=[drop_shadow(RED, alpha=0.30, ox=0.0, oy=0.0, blur=24.0)] if is_crit else None,
         )
     )
     cmds.append(
@@ -698,10 +944,12 @@ def build_era_commands(frame_id, era_idx, era, all_eras):
             st_y,
             st_w,
             st_h,
-            fill=PANEL,
+            fills=panel_fill(),
             stroke=RED if is_crit else BLUE,
             stroke_w=2 if is_crit else 1,
+            stroke_opacity=0.72 if is_crit else 0.42,
             radius=10,
+            effects=panel_effects(),
         )
     )
     cmds.append(
@@ -726,9 +974,10 @@ def build_era_commands(frame_id, era_idx, era, all_eras):
             38,
             fill=RED,
             stroke=RED,
-            stroke_w=2,
+            stroke_w=1.5,
+            stroke_opacity=0.35,
             radius=8,
-            opacity=0.28 if is_crit else 0.0,
+            opacity=0.10 if is_crit else 0.0,
         )
     )
     cmds.append(
@@ -739,11 +988,20 @@ def build_era_commands(frame_id, era_idx, era, all_eras):
             st_y + 44,
             148,
             32,
-            fill=st_fill,
+            fills=badge_gradient(st_fill),
             stroke=st_border,
             stroke_w=1.5,
+            stroke_opacity=0.78,
             radius=6,
             opacity=1.0 if stress_lvl else 0.0,
+            effects=raised_effects(
+                st_fill,
+                glow_alpha=0.38 if st_fill in (RED, GOLD) else 0.30,
+                glow_blur=20.0,
+                top_highlight=0.18,
+            )
+            if stress_lvl
+            else None,
         )
     )
     cmds.append(
@@ -795,10 +1053,12 @@ def build_era_commands(frame_id, era_idx, era, all_eras):
             cap_y,
             cap_w,
             cap_h,
-            fill=PANEL,
+            fills=panel_fill(),
             stroke=BLUE,
             stroke_w=1,
+            stroke_opacity=0.42,
             radius=10,
+            effects=panel_effects(),
         )
     )
     cmds.append(
@@ -821,11 +1081,20 @@ def build_era_commands(frame_id, era_idx, era, all_eras):
             cap_y + 44,
             172,
             32,
-            fill=cap_fill,
+            fills=badge_gradient(cap_fill),
             stroke=cap_border,
             stroke_w=1.5,
+            stroke_opacity=0.78,
             radius=6,
             opacity=1.0 if cap_lvl else 0.0,
+            effects=raised_effects(
+                cap_fill,
+                glow_alpha=0.38 if cap_fill in (RED, GOLD) else 0.30,
+                glow_blur=20.0,
+                top_highlight=0.18,
+            )
+            if cap_lvl
+            else None,
         )
     )
     cmds.append(
@@ -872,10 +1141,12 @@ def build_era_commands(frame_id, era_idx, era, all_eras):
             var_y,
             var_w,
             var_h,
-            fill=PANEL,
+            fills=panel_fill(),
             stroke=BLUE,
             stroke_w=1,
+            stroke_opacity=0.42,
             radius=10,
+            effects=panel_effects(),
         )
     )
     cmds.append(
@@ -891,7 +1162,16 @@ def build_era_commands(frame_id, era_idx, era, all_eras):
         )
     )
     cmds.append(
-        ellipse_cmd(frame_id, "legend deployed dot", var_x + var_w - 330, var_y + 18, 10, 10, fill=GOLD)
+        ellipse_cmd(
+            frame_id,
+            "legend deployed dot",
+            var_x + var_w - 330,
+            var_y + 18,
+            10,
+            10,
+            fill=GOLD,
+            effects=[drop_shadow(GOLD, alpha=0.50, ox=0.0, oy=0.0, blur=6.0)],
+        )
     )
     cmds.append(
         text_cmd(
@@ -986,10 +1266,12 @@ def build_era_commands(frame_id, era_idx, era, all_eras):
             ef_y,
             ef_w,
             ef_h,
-            fill=PANEL,
+            fills=panel_fill(),
             stroke=BLUE,
             stroke_w=1,
+            stroke_opacity=0.42,
             radius=10,
+            effects=panel_effects(),
         )
     )
     cmds.append(
@@ -1002,6 +1284,7 @@ def build_era_commands(frame_id, era_idx, era, all_eras):
             ef_h,
             fill=BLUE,
             radius=2,
+            effects=[drop_shadow(BLUE, alpha=0.30, ox=0.0, oy=0.0, blur=10.0)],
         )
     )
     cmds.append(
@@ -1049,10 +1332,12 @@ def build_era_commands(frame_id, era_idx, era, all_eras):
             ip_y,
             ip_w,
             ip_h,
-            fill=PANEL,
+            fills=panel_fill(),
             stroke=BLUE,
             stroke_w=1,
+            stroke_opacity=0.42,
             radius=10,
+            effects=panel_effects(),
         )
     )
     cmds.append(
@@ -1110,10 +1395,12 @@ def build_era_commands(frame_id, era_idx, era, all_eras):
             bar_y,
             bar_w,
             bar_h,
-            fill=PANEL_DARK,
+            fills=well_fill(),
             stroke=DIM,
             stroke_w=1,
+            stroke_opacity=0.32,
             radius=11,
+            effects=well_effects(),
         )
     )
     fill_x = bar_x + phi_low * bar_w
@@ -1126,10 +1413,13 @@ def build_era_commands(frame_id, era_idx, era, all_eras):
             bar_y,
             fill_w,
             bar_h,
-            fill=GOLD,
+            fills=[linear_gradient_paint("#ECC05E", "#D19A36", mid_hex=GOLD, mid_pos=0.5)],
             stroke=INK,
             stroke_w=1,
+            stroke_opacity=0.80,
             radius=11,
+            effects=data_glow_effects(GOLD, outer_alpha=0.42, outer_blur=18.0, core_alpha=0.30, core_blur=6.0)
+            + [inner_shadow("#FFFFFF", alpha=0.22, ox=0.0, oy=1.0, blur=0.5)],
         )
     )
     cmds.append(
@@ -1185,6 +1475,7 @@ def build_era_commands(frame_id, era_idx, era, all_eras):
     rho_low, rho_high = float(rho_range[0]), float(rho_range[1])
     rho_mid = 0.5 * (rho_low + rho_high)
     rho_str = extract_range_str(ist_text, "rho") or f"ρ_τ ∈ [{rho_low:.2f}, {rho_high:.2f}]"
+    dial_col = RED if rho_high >= 1.0 else GOLD
 
     cmds.append(
         text_cmd(
@@ -1224,12 +1515,14 @@ def build_era_commands(frame_id, era_idx, era, all_eras):
             dial_y,
             dial_d,
             dial_d,
-            fill=PANEL_DARK,
+            fill="#081121",
             stroke=DIM,
             stroke_w=1.5,
+            stroke_opacity=0.35,
             arc_start=135.0,
             arc_sweep=270.0,
             arc_inner=0.76,
+            effects=well_effects(),
         )
     )
     cmds.append(
@@ -1257,12 +1550,14 @@ def build_era_commands(frame_id, era_idx, era, all_eras):
             dial_y,
             dial_d,
             dial_d,
-            fill=RED if rho_high >= 1.0 else GOLD,
+            fill=dial_col,
             stroke=INK,
             stroke_w=1.0,
+            stroke_opacity=0.82,
             arc_start=rho_start_deg,
             arc_sweep=rho_sweep_deg,
             arc_inner=0.70,
+            effects=data_glow_effects(dial_col, outer_alpha=0.44, outer_blur=20.0, core_alpha=0.30, core_blur=6.0),
         )
     )
 
@@ -1276,6 +1571,7 @@ def build_era_commands(frame_id, era_idx, era, all_eras):
             6,
             fill=RED,
             radius=3,
+            effects=data_glow_effects(RED, outer_alpha=0.44, outer_blur=14.0, core_alpha=0.30, core_blur=4.0),
         )
     )
     cmds.append(
@@ -1303,6 +1599,10 @@ def build_era_commands(frame_id, era_idx, era, all_eras):
             needle_path,
             stroke=INK,
             stroke_w=3.5,
+            effects=[
+                drop_shadow("#000000", alpha=0.45, ox=0.0, oy=2.0, blur=4.0),
+                drop_shadow(dial_col, alpha=0.45, ox=0.0, oy=0.0, blur=14.0),
+            ],
         )
     )
     cmds.append(
@@ -1313,9 +1613,11 @@ def build_era_commands(frame_id, era_idx, era, all_eras):
             tip_y - 7,
             14,
             14,
-            fill=RED if rho_high >= 1.0 else GOLD,
+            fill=dial_col,
             stroke=INK,
             stroke_w=2,
+            stroke_opacity=0.88,
+            effects=data_glow_effects(dial_col, outer_alpha=0.48, outer_blur=16.0, core_alpha=0.32, core_blur=5.0),
         )
     )
 
@@ -1333,6 +1635,9 @@ def build_era_commands(frame_id, era_idx, era, all_eras):
             stroke=RED,
             stroke_w=3.0,
             opacity=1.0 if has_crash else 0.0,
+            effects=data_glow_effects(RED, outer_alpha=0.48, outer_blur=16.0, core_alpha=0.32, core_blur=5.0)
+            if has_crash
+            else None,
         )
     )
     cmds.append(
@@ -1346,7 +1651,11 @@ def build_era_commands(frame_id, era_idx, era, all_eras):
             fill=RED,
             stroke=INK,
             stroke_w=2,
+            stroke_opacity=0.88,
             opacity=1.0 if has_crash else 0.0,
+            effects=data_glow_effects(RED, outer_alpha=0.52, outer_blur=18.0, core_alpha=0.35, core_blur=6.0)
+            if has_crash
+            else None,
         )
     )
     cmds.append(
@@ -1357,11 +1666,13 @@ def build_era_commands(frame_id, era_idx, era, all_eras):
             dial_cy + 26,
             168,
             28,
-            fill=RED_BG,
+            fills=[linear_gradient_paint("#381C2D", "#23111C")],
             stroke=RED,
             stroke_w=1.5,
+            stroke_opacity=0.75,
             radius=6,
             opacity=1.0 if has_crash else 0.0,
+            effects=raised_effects(RED, glow_alpha=0.35, glow_blur=18.0, top_highlight=0.10) if has_crash else None,
         )
     )
     cmds.append(
@@ -1387,11 +1698,13 @@ def build_era_commands(frame_id, era_idx, era, all_eras):
             dial_cy - 18,
             156,
             44,
-            fill=PANEL_DARK,
+            fills=[linear_gradient_paint("#142444", "#0A1324")],
             stroke=GOLD,
             stroke_w=1.2,
+            stroke_opacity=0.65,
             radius=6,
             opacity=1.0 if has_crash else 0.0,
+            effects=raised_effects(GOLD, glow_alpha=0.28, glow_blur=16.0, top_highlight=0.08) if has_crash else None,
         )
     )
     cmds.append(
@@ -1419,9 +1732,11 @@ def build_era_commands(frame_id, era_idx, era, all_eras):
             dial_cy - 10,
             20,
             20,
-            fill=GOLD,
+            fills=[linear_gradient_paint("#ECC05E", "#C68F2C", mid_hex=GOLD, mid_pos=0.5)],
             stroke=INK,
             stroke_w=2,
+            stroke_opacity=0.88,
+            effects=raised_effects(GOLD, glow_alpha=0.38, glow_blur=20.0, top_highlight=0.20),
         )
     )
     cmds.append(
@@ -1452,10 +1767,12 @@ def build_era_commands(frame_id, era_idx, era, all_eras):
             it_y,
             it_w,
             it_h,
-            fill=PANEL_DARK,
+            fills=well_fill(),
             stroke=BLUE,
             stroke_w=1,
+            stroke_opacity=0.35,
             radius=8,
+            effects=well_effects(),
         )
     )
     cmds.append(
@@ -1494,10 +1811,12 @@ def build_era_commands(frame_id, era_idx, era, all_eras):
             rp_y,
             rp_w,
             rp_h,
-            fill=PANEL,
+            fills=panel_fill(),
             stroke=RED if warning_val else GOLD,
             stroke_w=1.5,
+            stroke_opacity=0.72 if warning_val else 0.62,
             radius=10,
+            effects=panel_effects(),
         )
     )
     cmds.append(
@@ -1538,11 +1857,13 @@ def build_era_commands(frame_id, era_idx, era, all_eras):
                 ty,
                 rp_w - 40,
                 slot_h,
-                fill=PANEL_DARK,
+                fills=well_fill(),
                 stroke=accent_col,
                 stroke_w=1,
+                stroke_opacity=0.38,
                 radius=6,
                 opacity=1.0 if has_t else 0.0,
+                effects=well_effects() if has_t else None,
             )
         )
         cmds.append(
@@ -1556,6 +1877,7 @@ def build_era_commands(frame_id, era_idx, era, all_eras):
                 fill=accent_col,
                 radius=2,
                 opacity=1.0 if has_t else 0.0,
+                effects=[drop_shadow(accent_col, alpha=0.30, ox=0.0, oy=0.0, blur=8.0)] if has_t else None,
             )
         )
         cmds.append(
@@ -1584,11 +1906,13 @@ def build_era_commands(frame_id, era_idx, era, all_eras):
             warn_y,
             rp_w - 40,
             warn_h,
-            fill=RED_BG,
+            fills=[linear_gradient_paint("#381B2C", "#24111D")],
             stroke=RED,
-            stroke_w=1.8,
+            stroke_w=1.6,
+            stroke_opacity=0.75,
             radius=6,
             opacity=1.0 if warning_val else 0.0,
+            effects=raised_effects(RED, glow_alpha=0.34, glow_blur=18.0, top_highlight=0.10) if warning_val else None,
         )
     )
     cmds.append(
@@ -1736,11 +2060,25 @@ def main():
                 "width": 1920,
                 "height": 1080,
                 "select": False,
-                "props": {"fill": BG, "clip": True},
+                "props": {
+                    "fills": [radial_vignette_paint()],
+                    "clip": True,
+                },
             },
         )
         fid = res["id"]
         frame_ids.append(fid)
+
+        # Level 0 subtle anti-banding noise via effect.add + effect.set
+        client.execute("effect.add", {"ids": [fid], "type": "noise"})
+        client.execute(
+            "effect.set",
+            {
+                "ids": [fid],
+                "index": 0,
+                "effect": noise_effect(alpha=0.02, density=0.22, size=0.5),
+            },
+        )
 
         cmds, chip_groups = build_era_commands(fid, idx, era, eras)
         client.batch(f"Build {meta['frame']}", cmds)
@@ -1779,12 +2117,14 @@ def main():
 
     client.execute("view.zoomFit", {})
 
-    # Save native .figcraft file and experimental .fig export
+    # Save native .figcraft files (both yt02_dashboard_depth.figcraft and yt02_dashboard.figcraft) and .fig export
+    depth_figcraft_path = str(HERE / "yt02_dashboard_depth.figcraft")
     figcraft_path = str(HERE / "yt02_dashboard.figcraft")
     fig_path = str(HERE / "yt02_dashboard.fig")
-    client.execute("file.saveAs", {"path": figcraft_path})
+    client.execute("file.saveAs", {"path": depth_figcraft_path})
+    shutil.copy2(depth_figcraft_path, figcraft_path)
     fig_export = client.execute("file.export", {"format": "fig", "path": fig_path})
-    print(f"Saved {figcraft_path} and {fig_path} (fig export: {fig_export})")
+    print(f"Saved {depth_figcraft_path}, {figcraft_path}, and {fig_path} (fig export: {fig_export})")
 
     # Export 1920x1080 PNG for each era frame
     for idx, fid in enumerate(frame_ids):
@@ -1814,3 +2154,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

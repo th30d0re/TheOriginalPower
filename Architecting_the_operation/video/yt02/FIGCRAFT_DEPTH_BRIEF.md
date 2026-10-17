@@ -10,6 +10,14 @@ look stays reproducible.
 FigCraft supports `effect.add {ids?, type: dropShadow|innerShadow|layerBlur|backgroundBlur|noise|texture|glass, effect?}`,
 `effect.set`, and gradient paints in `fills`. Read each command's params with `engine.commands` first.
 
+**Find the effect and gradient formats empirically, never from the binary.** Do not run objdump,
+strings, or any disassembler on FigCraft (a previous attempt spent 25 minutes doing that and produced
+nothing). Instead: create a scratch rectangle, call `effect.add {ids: [id], type: "dropShadow"}` with no
+`effect`, then `node.get {id}` and read the effect object FigCraft wrote; edit that shape and write it
+back with `effect.set` or `node.set {effects: [...]}`. Do the same for a gradient: set
+`fills: [{type: "linearGradient", ...}]` variations and read back with `node.get` until one sticks.
+Delete the scratch node afterwards.
+
 ## Depth system (apply consistently, three elevation levels)
 
 1. **Background (level 0).** A subtle radial vignette on the frame: slightly lighter navy at the centre,
