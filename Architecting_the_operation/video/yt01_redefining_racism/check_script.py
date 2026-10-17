@@ -4,6 +4,7 @@
 
 Exits non-zero on any error. Warnings are printed for a person to judge.
 """
+import argparse
 import re
 import sys
 from pathlib import Path
@@ -19,7 +20,7 @@ REQUIRED = ([f"Equation 2.{i}" for i in range(1, 20)]
 MAX_WORDS = 45
 
 
-def main(path):
+def main(path, n_segments=23, required=REQUIRED):
     text = Path(path).read_text()
     body = re.sub(r"<!--\s*NOTES.*?-->", "", text, flags=re.S)
     lines = body.splitlines()
@@ -34,14 +35,14 @@ def main(path):
             turns.append(cur)
         elif cur is not None and line.strip() and not line.startswith("<!--"):
             cur["text"] += " " + line.strip()
-    expected = [f"{i:02d}" for i in range(23)]
+    expected = [f"{i:02d}" for i in range(n_segments)]
     if segs != expected:
-        errors.append(f"segments {segs} != 00..22 in order")
+        errors.append(f"segments {segs} != 00..{n_segments - 1:02d} in order")
     for a, b in zip(turns, turns[1:]):
         if b["t"] < a["t"]:
             errors.append(f"line {b['line']}: timestamp goes backwards")
     spoken = " ".join(t["text"] for t in turns)
-    for req in REQUIRED:
+    for req in required:
         if not re.search(re.escape(req) + r"\b", spoken):
             errors.append(f"missing reference: {req}")
     for t in turns:
@@ -64,4 +65,11 @@ def main(path):
 
 
 if __name__ == "__main__":
-    sys.exit(main(sys.argv[1]))
+    ap = argparse.ArgumentParser()
+    ap.add_argument("path")
+    ap.add_argument("--segments", type=int, default=23)
+    ap.add_argument("--require", type=str, default=None)
+    args = ap.parse_args()
+    req = REQUIRED if args.require is None else [r.strip() for r in args.require.split(",") if r.strip()]
+    sys.exit(main(args.path, n_segments=args.segments, required=req))
+
