@@ -473,3 +473,12 @@ Chapter 2 linearly. YT02 duplicates only the equations the causal-order argument
    with per-row on-screen provenance?
 7. Should SEG 06 carry the Roman and religious-wars control cases at full length, or hold
    them to the budgeted 60–90 second sidebar?
+
+## Decisions (author, 2026-10-17)
+
+1. Allport 1954, Fiske 1998 and Greenwald & Banaji 1995 are now in the book: Preface "A note
+   on terms" and Chapter 2 (commit 863ee714). Cite them as [book Preface] / [book §2.2].
+5. Length: about 62 minutes, as budgeted. YT02 runs shorter than YT01 by design.
+6. SEG 02's system checklist stays as editorial framing for the video. Each row carries
+   on-screen provenance, tagged [editorial] for the checklist itself and [book …] for the
+   evidence that racism has that characteristic.
