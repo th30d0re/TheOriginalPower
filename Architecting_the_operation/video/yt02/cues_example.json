@@ -1,0 +1,16 @@
+{
+  "words": "outputs/YT01/words.json",
+  "manifest": "outputs/YT01/episode_manifest.json",
+  "scenes": [
+    {
+      "frame": "02 · Dictionary order",
+      "turns": [0, 1, 2],
+      "beats": [
+        {"node": "bar 1", "turn": 0, "word": "prejudice"},
+        {"node": "bar 2", "turn": 1, "word": "superiority", "nth": 0, "lead": 0.1},
+        {"node": "bar 3", "turn": 2, "word": "systemic", "lead": 0.15},
+        {"node": "tag 3", "turn": 2, "word": "appears"}
+      ]
+    }
+  ]
+}

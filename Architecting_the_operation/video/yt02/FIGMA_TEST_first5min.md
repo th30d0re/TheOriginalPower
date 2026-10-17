@@ -42,3 +42,36 @@ placeholder timings; the real cut would cue each beat from `words.json`).
 - **Workflow.** All 8 scenes built in two scripted calls; edits are visual in Figma afterwards,
   which manimgx cannot offer. Timing is in seconds, so a small converter from `words.json`
   would be needed to cue beats on spoken words.
+
+## Cueing frames from `words.json` (`figma_cues.py`)
+
+`figma_cues.py` is that converter. It reads a cue spec — one entry per Figma frame, naming the
+global turns the scene covers and one beat per node — and emits the scene timings plus a
+retiming script per scene:
+
+```bash
+python3 Architecting_the_operation/video/yt02/figma_cues.py \
+    Architecting_the_operation/video/yt02/cues_example.json \
+    --json /tmp/cues.json --js /tmp/cues.js
+```
+
+- Beat rules match manimgx (`self.at(k, "word", nth=, lead=)`): `turn` indexes the scene's
+  `turns` list, the word matches by normalized prefix, `nth` picks the occurrence (default 0),
+  and `lead` (default 0.1 s) pulls the motion ahead of the word, floored at the turn start.
+  Beat times come out relative to the scene start; scene duration runs to the next turn's start
+  (the last turn's own end when the scene closes the episode).
+- `--json` records each scene's absolute start, duration, and every beat's `node` and `at` in
+  seconds.
+- `--js` writes one Plugin API script per scene, for the `use_figma` tool. Run it on the page
+  that holds the frame: it finds each beat node by name, shifts the node's motion so its
+  earliest start lands on `at`, and sets the scene duration on the first beat node's timeline.
+  Missing nodes come back in `missing`; the script never throws for them.
+- Animation styles store their start twice, as `timelineOffset` and `props.delay`, and Figma
+  keeps `props.delay`. The scripts shift both, falling back to `timelineOffset` when `delay`
+  is absent; CUSTOM entries (no `props`) shift on `timelineOffset` alone.
+- A cue word that the turn does not contain is a hard error naming the scene, the node, the
+  turn, and the words that turn has.
+
+`cues_example.json` times the `02 · Dictionary order` frame against YT01 turns 0–2 (bar 1 on
+"prejudice", bar 2 on "superiority", bar 3 on "systemic", tag 3 on "appears"). Tests live in
+`tests/test_figma_cues.py` (`python3 -m pytest tests/test_figma_cues.py`).
