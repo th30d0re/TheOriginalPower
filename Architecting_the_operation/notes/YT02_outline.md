@@ -23,7 +23,7 @@ positions are tiers: Elite, Puppet Class, Enforcement Class, Buffer Class, Out-g
 Provenance tags: [book §/eq/fig] for manuscript material, [external: citation] for sources
 outside the manuscript. No invented axes, figures, or equation numbers.
 
-**Target length:** ≈ 62 minutes (sum of segment estimates below).
+**Target length:** ≈ 72 minutes (sum of segment estimates below; SEG 09–10 added 2026-10-17).
 
 ---
 
@@ -287,7 +287,60 @@ maintaining itself through cultivated prejudice across the 19th–21st centuries
 
 ---
 
-### SEG 09 — The definition, rebuilt (est. 5 min)
+### SEG 09 — Five centuries in versions (est. 5 min)
+
+**Purpose.** A brief overview of how the algorithm evolves across the book's timeline (Chapter 3
+onward), so the viewer sees the three tests as moments in one continuous system. Brief: one or two
+turns per era, no case-study depth.
+
+**Key claims.** Follow the Preface's map of the book [book Preface, "That sequence matters…"]:
+
+- **Part I, Specification and Origins (1440s–1915):** the racial vector invented in Zurara's 1453
+  *Crónica* (Ch 3, Version 1.0); the Buffer Class formalized after Bacon's Rebellion and the Puppet
+  Class prototyped at the Constitutional Convention (Ch 4); the constitutional kernel (Ch 5); the
+  Haitian export and the Firmin Protocol (Ch 6).
+- **Part II, The Installation (1619–1865):** the colonial extraction of African kinship (Ch 7); the
+  gendered reproductive kernel of coverture and eugenics (Ch 8); the slave-patrol genealogy that
+  compounds into the 13th Amendment loophole (Ch 9).
+- **Part III, Scaling and Runtime (1865–present):** spatial containment and the Capture Variable
+  (Ch 10); the industrialized Puppet Class and the Tweedism Filter (Ch 11); the post-*Brown*
+  Variable Swap and the 1968–1994 recompile, Version 2.0 (Ch 12); cannibalization and the 5-Tier
+  Reveal (Ch 13); the kinetic guarantee (Ch 14).
+- **Part IV, Diagnostics and Output:** the Concession Theorem (Ch 15), the global containment
+  field (Ch 16), and the vector-valued definition that closes the book (Ch 21).
+- The through-line the Preface states: expansion. The algorithm keeps its objective and changes its
+  interface [book Preface, "The through-line is expansion…"].
+
+**Equations/figures.** A horizontal timeline graphic (Figma), eras as bands; no new equations.
+
+---
+
+### SEG 10 — The Interference Engine (est. 5 min)
+
+**Purpose.** Explain how the partition holds when the Buffer Class and the Out-group share a
+material interest: the Interference Engine keeps their class coherence from adding up.
+
+**Key claims.**
+
+- Specification: Madison's *Federalist No. 10* manages factions by extending the sphere, so a
+  class majority scatters into non-coherent components [book Ch 5, "Federalist No. 10: The
+  Interference Engine Specification"].
+- Mechanism: a phased-array signal jammer that monitors the class-coherence threat M(t) and shifts
+  the weights of the identity axes so lower-tier coherence signals cancel by destructive
+  interference [book Ch 11, Tweedism; Ch 0 "Destructive Interference" figure; the N-weighted phase
+  current].
+- Validation: the Spectral Carrier chapter tests for electoral-cycle periodicity in identity-band
+  discourse, with confidence tiers and falsification criteria [book Ch 18, "The Spectral Carrier"].
+  State its tier on air; do not overstate it.
+- Tie back to SEG 03: this is why the multi-axis partition from Equation 2.4 matters; each extra
+  axis is another channel for phase-shifting.
+
+**Equations/figures.** The Ch 0 destructive-interference figure (two antiphase coherence traces
+summing to near zero), rebuilt in manimgx. Name equations only by printed number; check the PDF.
+
+---
+
+### SEG 11 — The definition, rebuilt (est. 5 min)
 
 **Purpose.** Deliver the compressed answer to the opening question. Restate the definition
 with the hierarchy inverted, run the five weaponization steps, and settle the
@@ -324,7 +377,7 @@ prejudice/racism relation with the scalar/vector distinction.
 
 ---
 
-### SEG 10 — Close (est. 2 min)
+### SEG 12 — Close (est. 2 min)
 
 **Purpose.** Recap and route.
 
@@ -379,7 +432,7 @@ racialization, and systemic racialization cultivates interpersonal prejudice." [
 
 **Where each test lands.** SEG 06 carries P1. SEG 07 carries P2. SEG 08 carries P2 (second
 instance), P3, and P4, and runs the R2 checks explicitly. R1 and R3 are stated in SEG 05 and
-answered in SEG 09's synthesis.
+answered in SEG 11's synthesis.
 
 ---
 
@@ -402,7 +455,7 @@ answered in SEG 09's synthesis.
 - The antebellum numbers and the post-1965 series (SEG 08): the two Tier 1 quantitative
   case studies, plus the interface-swap highlights.
 - Fig 2.3, the L1867 definition, the five weaponization steps, and the Ch 21 scalar/vector
-  settlement (SEG 09): the answer, plus the pre-empted counter-question.
+  settlement (SEG 11): the answer, plus the pre-empted counter-question.
 
 **Cut or deferred — and why.**
 
@@ -459,7 +512,7 @@ Chapter 2 linearly. YT02 duplicates only the equations the causal-order argument
 1. Allport 1954, Fiske 1998, and Greenwald & Banaji 1995 are absent from
    `Paper/references.bib`. Add them so the video's citations and the book's bibliography
    agree, or keep them as video-only citations in the description and on-screen cards?
-2. SEG 09's reverse-racism settlement rests on Ch 21 and the GAP note's stated failure
+2. SEG 11's reverse-racism settlement rests on Ch 21 and the GAP note's stated failure
    condition (R3), which the note flags as needing confirmation or replacement. Confirm the
    condition as written, or revise it before scripting?
 3. R1 is the outline's own operationalization of the Eq 2.5/Eq 2.6 contest. Approve it as
@@ -478,7 +531,7 @@ Chapter 2 linearly. YT02 duplicates only the equations the causal-order argument
 
 1. Allport 1954, Fiske 1998 and Greenwald & Banaji 1995 are now in the book: Preface "A note
    on terms" and Chapter 2 (commit 863ee714). Cite them as [book Preface] / [book §2.2].
-5. Length: about 62 minutes, as budgeted. YT02 runs shorter than YT01 by design.
+5. Length: about 72 minutes after adding SEG 09 (timeline overview) and SEG 10 (Interference Engine), both requested by the author on 2026-10-17.
 6. SEG 02's system checklist stays as editorial framing for the video. Each row carries
    on-screen provenance, tagged [editorial] for the checklist itself and [book …] for the
    evidence that racism has that characteristic.
