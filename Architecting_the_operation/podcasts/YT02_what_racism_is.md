@@ -1625,459 +1625,511 @@ Test 3 supports Predictions 2, 3, and 4. Refutation Standard 2's defeat conditio
 <!-- SEG 11 · Five centuries in versions -->
 
 Emmanuel Theodore (69:07)
-The three tests now enter a single live readout. Segment 11 runs over the runtime dashboard specified for this episode, advancing through seven compiled logs.
-<!-- [book Preface; Compiled Runtime Log; video/yt02/DASHBOARD_SPEC.md] -->
+The three historical tests now enter one live readout built from the book's RUNTIME LOG boxes. We will assemble the dashboard one instrument at a time.
+<!-- [book Compiled Runtime Log, lines 15202-15205] -->
 
 Emmanuel Theodore (69:17)
-Every state uses the log's own fields: System Stress, Capital, Interference State, Active Patch, Variables Loaded or Deployed, Executing Function, and the Result or warning line.
-<!-- [book Compiled Runtime Log; video/yt02/DASHBOARD_SPEC.md] -->
+Each instrument tracks one state of the extraction system. Once the panel is complete, seven compiled logs will carry the same readout across five centuries.
+<!-- [book Compiled Runtime Log, lines 15202-15205] -->
 
-Emmanuel Theodore (69:28)
-Numbers appear only where the log supplies them. The timeline band advances, ranges cross-fade, the threshold dial sweeps, variable chips illuminate, and policy lines enter the ticker.
-<!-- [book Compiled Runtime Log; video/yt02/DASHBOARD_SPEC.md] -->
+Emmanuel Theodore (69:27)
+System Stress occupies the minimum side of the objective function. It tracks class resistance, so higher stress means greater pressure against the system's extraction architecture.
+<!-- [book Compiled Runtime Log, lines 15222, 15233, 15256] -->
 
-Emmanuel Theodore (69:38)
-Log 2 opens in Lisbon in 1486. System Stress is HIGH from domestic labor shortage and Christian moral constraints. Capital is STAGNANT because sugar demands labor the current moral economy cannot supply.
-<!-- [book Compiled Runtime Log 2, lines 15220-15229] -->
+Emmanuel Theodore (69:37)
+On screen, the System Stress instrument displays the log's categorical reading, from minimal through moderate and high to critical, followed by the condition generating that pressure.
+<!-- [book Compiled Runtime Log, lines 15211, 15222, 15233, 15256] -->
 
-Emmanuel Theodore (69:51)
-Interference State shows low axis count, phase load from point ten to point twenty, and threshold proximity from point seventy to point eighty-five. Active Patch reads, Compiling Version 1.0.
-<!-- [book Compiled Runtime Log 2, lines 15220-15229] -->
+Emmanuel Theodore (69:48)
+Capital occupies the maximum side. It tracks extraction output, displaying conditions such as stagnant, expanding, restructuring, at risk, threatened, or peak.
+<!-- [book Compiled Runtime Log, lines 15223, 15234, 15257, 15301, 15354] -->
 
-Emmanuel Theodore (70:03)
-Variables Deployed are Elite, racialized Out-group, and In-group. Executing Function is the Implicit Contract. The Result ticker names Dum Diversas, Romanus Pontifex, and the Casa dos Escravos.
-<!-- [book Compiled Runtime Log 2, lines 15220-15229] -->
+Emmanuel Theodore (69:56)
+Phi-load measures interference loading. Its range bar runs from zero, where class pressure is synchronized, to one, where destructive phase dispersion approaches saturation.
+<!-- [book Ch 22, Eq 22.2; Compiled Runtime Log] -->
 
-Emmanuel Theodore (70:14)
-Log 3 moves from Virginia in 1676 to Philadelphia in 1787. System Stress is CRITICAL: cross-racial labor solidarity and Jamestown burning. Capital is AT RISK from unified revolt.
-<!-- [book Compiled Runtime Log 3, lines 15231-15241] -->
+Emmanuel Theodore (70:05)
+The threshold dial reads rho-tau, equal to M of t divided by tau. Tau equals one point zero, the crash line where mobilized resistance reaches the system threshold.
+<!-- [book Compiled Runtime Log, lines 15224, 15235, 15345] -->
 
-Emmanuel Theodore (70:25)
-Interference State is TRANSITIONING. Threshold proximity exceeds one at the crash, then falls between point sixty and point seventy-five post-patch. Active Patch reads, Emergency recompile. Partitioning the poor.
-<!-- [book Compiled Runtime Log 3, lines 15231-15241] -->
+Emmanuel Theodore (70:17)
+Active Patch names the recompile currently running. Its screen field shows the institutional update being deployed when existing controls stop stabilizing the minimum variable.
+<!-- [book Compiled Runtime Log, lines 15225, 15236, 15346] -->
 
-Emmanuel Theodore (70:36)
-Loaded variables are Elite, racialized Out-group, and In-group. New chips illuminate for Buffer Class, proto-Enforcement Class, Puppet Class prototype, and W equals j psi-sub-s, formalized.
-<!-- [book Compiled Runtime Log 3, lines 15231-15241] -->
+Emmanuel Theodore (70:26)
+Variables appear as chips. Dim chips were loaded from earlier cycles; lit chips mark the variables newly deployed during the current cycle.
+<!-- [book Compiled Runtime Log, lines 15237-15238, 15356-15357] -->
+
+Emmanuel Theodore (70:35)
+Executing Function states what the algorithm does during that cycle: codifying a partition, building containment, masking a target, expanding extraction, or porting the function onto new hardware.
+<!-- [book Compiled Runtime Log, lines 15239, 15305, 15358, 15370, 15391] -->
 
 Emmanuel Theodore (70:46)
-Executing Function codifies whiteness and drafts the constitutional front-end. The Result ticker names the 1705 Virginia Slave Codes and the 1787 Three-Fifths Compromise.
+The wage instrument returns to the complex-wage phasor from Segment 09: W equals psi-m plus j psi-s, Equation 3.5.
+<!-- [book Ch 3, Eq 3.5; lines 2892-2911] -->
+
+Emmanuel Theodore (70:53)
+Material wage rises on the vertical axis, and psychological status extends across the horizontal axis. Theta at ninety degrees is pure status; Quadrant Two begins past ninety.
+<!-- [book Ch 3, Eq 3.5; lines 2914-2925; SEG 09] -->
+
+Emmanuel Theodore (71:04)
+The book calls that crossing the fascism threshold. The era readings are Tier 3 ordinal claims, so the phasor shows direction and operating mode without claiming measured magnitudes.
+<!-- [book Ch 3, lines 2914-2925; Empirical Methodology] -->
+
+Emmanuel Theodore (71:15)
+Result is the output surface. It prints the policy lines produced by the cycle, or the warning line when the terminal logs detect a failing minimum variable.
+<!-- [book Compiled Runtime Log, lines 15228, 15240, 15359-15360, 15371] -->
+
+Emmanuel Theodore (71:26)
+The instruments now lock into their slots. The complete dashboard can trace stress, extraction, interference, threshold proximity, recompilation, variables, function, wage, and output together.
+<!-- [book Compiled Runtime Log] -->
+
+Emmanuel Theodore (71:36)
+Log 2 opens in Lisbon in 1486. System Stress is HIGH from labor shortage and moral constraints. Capital is STAGNANT because sugar demands labor the existing moral economy cannot supply.
+<!-- [book Compiled Runtime Log 2, lines 15220-15229] -->
+
+Emmanuel Theodore (71:48)
+Phi-load ranges from point ten to point twenty. Rho-tau ranges from point seventy to point eighty-five. Active Patch reads, Compiling Version 1.0.
+<!-- [book Compiled Runtime Log 2, lines 15224-15225] -->
+
+Emmanuel Theodore (71:57)
+Elite, racialized Out-group, and In-group chips illuminate. The Implicit Contract executes by issuing the psychological wage, placing the phasor at ninety degrees, pure status.
+<!-- [book Compiled Runtime Log 2, lines 15226-15227; Ch 3, lines 2918-2920] -->
+
+Emmanuel Theodore (72:06)
+The Result names Dum Diversas, Romanus Pontifex, and the Casa dos Escravos. The extraction algorithm now has a state-managed institutional vector.
+<!-- [book Compiled Runtime Log 2, line 15228] -->
+
+Emmanuel Theodore (72:15)
+Log 3 moves from Virginia in 1676 to Philadelphia in 1787. System Stress is CRITICAL after cross-racial solidarity burns Jamestown. Capital is AT RISK from unified revolt.
 <!-- [book Compiled Runtime Log 3, lines 15231-15241] -->
 
-Emmanuel Theodore (70:55)
+Emmanuel Theodore (72:25)
+Rho-tau crosses one at the crash, then falls between point sixty and point seventy-five after the emergency recompile partitions the poor.
+<!-- [book Compiled Runtime Log 3, lines 15235-15236] -->
+
+Emmanuel Theodore (72:34)
+New chips deploy the Buffer Class, proto-Enforcement Class, Puppet Class prototype, and W equals j psi-s. The log formalizes the pure-status wage at ninety degrees.
+<!-- [book Compiled Runtime Log 3, lines 15237-15238; Ch 3, lines 2918-2920] -->
+
+Emmanuel Theodore (72:44)
+The function codifies whiteness and drafts the constitutional front-end. The Result prints the 1705 Virginia Slave Codes and the 1787 Three-Fifths Compromise.
+<!-- [book Compiled Runtime Log 3, lines 15239-15240] -->
+
+Emmanuel Theodore (72:53)
 Log 5 covers the American South from 1704 through 1865. System Stress is MODERATE because the Buffer Class is pacified while physical extraction requires dedicated enforcement. Capital is EXPANDING.
 <!-- [book Compiled Runtime Log 5, lines 15254-15263] -->
 
-Emmanuel Theodore (71:07)
-Interference State is STABLE, with phase load from point forty-five to point sixty and threshold proximity from point forty-five to point sixty-five.
-<!-- [book Compiled Runtime Log 5, lines 15254-15263] -->
+Emmanuel Theodore (73:04)
+Phi-load ranges from point forty-five to point sixty, while rho-tau ranges from point forty-five to point sixty-five. The interference state reads STABLE.
+<!-- [book Compiled Runtime Log 5, line 15258] -->
 
-Emmanuel Theodore (71:16)
-Loaded variables include the Puppet Class prototype. This cycle deploys the Enforcement Class and latent Qualified Immunity. Executing Function converts slave patrols into permanent state apparatus and embeds the Thirteenth Amendment loophole.
-<!-- [book Compiled Runtime Log 5, lines 15254-15263] -->
+Emmanuel Theodore (73:13)
+The wage remains j psi-s, with theta at ninety degrees. Psychological status pacifies the Buffer Class while the Enforcement Class and latent Qualified Immunity deploy.
+<!-- [book Compiled Runtime Log 5, lines 15256, 15259-15260; Ch 3, lines 2918-2920] -->
 
-Emmanuel Theodore (71:28)
-The Result reports a four-tier hierarchy operational and names the 1850 Fugitive Slave Act and the 1865 forced-labor exception as policy outputs.
-<!-- [book Compiled Runtime Log 5, lines 15254-15263] -->
+Emmanuel Theodore (73:23)
+The function converts slave patrols into permanent state apparatus and embeds the Thirteenth Amendment loophole. The Result reports a four-tier hierarchy operating through those policies.
+<!-- [book Compiled Runtime Log 5, lines 15261-15262] -->
 
-Emmanuel Theodore (71:37)
-Log 9 spans post-emancipation containment from 1894 through 1965. System Stress is HIGH as citizenship, voting rights, a parallel Out-group economy, and the Civil Rights Movement breach the interface.
+Emmanuel Theodore (73:33)
+Log 9 spans post-emancipation containment from 1894 through 1965. System Stress is HIGH as citizenship, voting rights, parallel economies, and the Civil Rights Movement breach the interface.
 <!-- [book Compiled Runtime Log 9, lines 15298-15306] -->
 
-Emmanuel Theodore (71:49)
-Capital is RESTRUCTURING from direct slavery into convict leasing, sharecropping, and spatial containment. Interference ranges run from point fifty-five to point seventy-two, with threshold proximity from point fifty to point sixty-eight.
-<!-- [book Compiled Runtime Log 9, lines 15298-15306] -->
+Emmanuel Theodore (73:44)
+Capital is RESTRUCTURING through convict leasing, sharecropping, and spatial containment. Phi-load reaches point seventy-two, while rho-tau reaches point sixty-eight.
+<!-- [book Compiled Runtime Log 9, lines 15301-15302] -->
 
-Emmanuel Theodore (72:01)
-The cycle deploys the Complex Wage, spatial redlining, and the Capture Variable. Executing Function targets parallel economies, builds spatial containment, and absorbs civil-rights victories into two-party loyalty.
-<!-- [book Compiled Runtime Log 9, lines 15298-15306] -->
+Emmanuel Theodore (73:51)
+This cycle deploys the Complex Wage as a weapon. Chapter 10's Pullman Corollary gives its material direction: j psi-s squared equals negative psi-s squared.
+<!-- [book Ch 10, Pullman Corollary, lines 5808-5818; Compiled Runtime Log 9, line 15304] -->
 
-Emmanuel Theodore (72:12)
-The Result ticker names HOLC redlining, the Civil Rights Act, and the Voting Rights Act, then reports restored containment through spatial and political channels.
-<!-- [book Compiled Runtime Log 9, lines 15298-15306] -->
+Emmanuel Theodore (74:01)
+Compounded status destroys material standing. The phasor records the mechanism while redlining and the Capture Variable build spatial and political containment.
+<!-- [book Ch 10, lines 5812-5818; Compiled Runtime Log 9, lines 15304-15306] -->
 
-Emmanuel Theodore (72:22)
-Log 14 covers the 1968-to-1994 recompile. System Stress is CRITICAL because civil rights breached the legal interface. Capital is PEAK through industrialized carcerality and the Thirteenth Amendment loophole.
+Emmanuel Theodore (74:09)
+The Result names HOLC redlining, the Civil Rights Act, and the Voting Rights Act, followed by restored containment through spatial and political channels.
+<!-- [book Compiled Runtime Log 9, line 15306] -->
+
+Emmanuel Theodore (74:19)
+Log 14 covers the 1968-to-1994 recompile. System Stress is CRITICAL after civil rights breaches the legal interface. Capital is PEAK through industrialized carcerality.
 <!-- [book Compiled Runtime Log 14, lines 15351-15361] -->
 
-Emmanuel Theodore (72:33)
-Interference State is HIGH-DIMENSIONAL: phase load spans point seventy-five to point ninety-two, and threshold proximity spans point eighty to point ninety-eight. All five tiers are loaded.
-<!-- [book Compiled Runtime Log 14, lines 15351-15361] -->
+Emmanuel Theodore (74:28)
+Phi-load reaches point ninety-two, and rho-tau reaches point ninety-eight. All five tiers are loaded as the criminal Variable Swap and related proxy controls deploy.
+<!-- [book Compiled Runtime Log 14, lines 15355-15357] -->
 
-Emmanuel Theodore (72:43)
-This cycle deploys the criminal Variable Swap, lead exposure, deindustrialization, Broken Windows enforcement, retroactive restriction, spatial gun-free zones, and Universal Latent Criminality.
-<!-- [book Compiled Runtime Log 14, lines 15351-15361] -->
+Emmanuel Theodore (74:37)
+Theta crosses ninety degrees into Quadrant Two. Chapter 0 identifies post-1965 mass incarceration and the War on Drugs as examples of this AC operating mode.
+<!-- [book Ch 0, lines 1130-1149] -->
 
-Emmanuel Theodore (72:52)
-Executing Function masks racial targeting and begins Buffer Class cannibalization. Policies Executed names the 1986 Anti-Drug Abuse Act, Three Strikes laws, assault-weapon restrictions, and retroactive serialization mandates.
-<!-- [book Compiled Runtime Log 14, lines 15351-15361] -->
+Emmanuel Theodore (74:47)
+The function masks racial targeting and begins Buffer Class cannibalization. The Result prints the Anti-Drug Abuse Act, Three Strikes laws, assault-weapon restrictions, and retroactive serialization mandates.
+<!-- [book Compiled Runtime Log 14, lines 15358-15360] -->
 
-Emmanuel Theodore (73:03)
+Emmanuel Theodore (74:58)
 Log 15 enters the terminal runtime from 1994 to the present. System Stress is CRITICAL as the Buffer Class detects the contract breach. Capital remains PEAK.
 <!-- [book Compiled Runtime Log 15, lines 15363-15372] -->
 
-Emmanuel Theodore (73:13)
-Interference ranges from point eighty-two to point ninety-five, while threshold proximity ranges from point ninety-two through one point zero five. All five tiers now operate visibly.
-<!-- [book Compiled Runtime Log 15, lines 15363-15372] -->
+Emmanuel Theodore (75:08)
+Phi-load reaches point ninety-five, while rho-tau passes the crash line and reaches one point zero five. All five tiers now operate visibly.
+<!-- [book Compiled Runtime Log 15, lines 15367-15368] -->
 
-Emmanuel Theodore (73:24)
-Deployed variables are spatial sensitive places, kernel-denial gaslighting, biological degradation, Universal Latent Criminality, and fetal personhood. Executing Function expands extraction into the Buffer Class.
-<!-- [book Compiled Runtime Log 15, lines 15363-15372] -->
+Emmanuel Theodore (75:17)
+The phasor moves deeper into Quadrant Two. The cannibalization subroutine extracts material wealth from the Buffer Class itself while status loading continues.
+<!-- [book Ch 3, lines 2921-2924; Compiled Runtime Log 15, line 15370] -->
 
-Emmanuel Theodore (73:33)
-The warning field reports the minimum variable failing and the system entering its terminal phase, with geopolitical override routines on standby.
-<!-- [book Compiled Runtime Log 15, lines 15363-15372] -->
+Emmanuel Theodore (75:26)
+The warning field reports the minimum variable failing and the system entering its terminal phase, with geopolitical override routines standing by.
+<!-- [book Compiled Runtime Log 15, line 15371] -->
 
-Emmanuel Theodore (73:42)
-Log 17 opens the algorithmic epoch from the 2010s to the present. System Stress reports real-time graph monitoring and response latency collapsing from decades to milliseconds.
+Emmanuel Theodore (75:34)
+Log 17 opens the algorithmic epoch from the 2010s to the present. System Stress tracks continuous graph monitoring as response latency collapses from decades to milliseconds.
 <!-- [book Compiled Runtime Log 17, lines 15385-15393] -->
 
-Emmanuel Theodore (73:52)
-Capital reports automated targeting across lending, sentencing, housing, and labor matching, with historical extraction priors embedded in training data.
-<!-- [book Compiled Runtime Log 17, lines 15385-15393] -->
+Emmanuel Theodore (75:45)
+Capital reports automated targeting across lending, sentencing, housing, and labor matching. Phi-load approaches point ninety-eight, and rho-tau reaches one point zero eight.
+<!-- [book Compiled Runtime Log 17, lines 15388-15389] -->
 
-Emmanuel Theodore (74:00)
-Interference State is SATURATED. Phase load runs from point eighty-eight to point ninety-eight, and threshold proximity runs from point ninety-five through one point zero eight.
-<!-- [book Compiled Runtime Log 17, lines 15385-15393] -->
+Emmanuel Theodore (75:53)
+Quadrant Two now runs on algorithmic hardware. Chapter 0 includes algorithmic credit scoring and subprime lending among the framework's AC-mode examples.
+<!-- [book Ch 0, lines 1135-1149] -->
 
-Emmanuel Theodore (74:10)
-The Variables Loaded field adds the orthogonal injection operator, enforcement bandwidth ceiling, extraction-value-to-friction ratio, noise-spectrum index, and agnostic-swarm botnet payload.
-<!-- [book Compiled Runtime Log 17, lines 15385-15393] -->
+Emmanuel Theodore (76:02)
+The function ports the Predatory Min-Max Function onto machine-speed systems. The warning states that human-speed resistance becomes structurally obsolete under machine-speed absorption.
+<!-- [book Compiled Runtime Log 17, lines 15390-15392] -->
 
-Emmanuel Theodore (74:18)
-Executing Function ports the Predatory Min-Max Function onto algorithmic hardware. The CRITICAL WARNING says human-speed resistance becomes structurally obsolete under machine-speed absorption.
-<!-- [book Compiled Runtime Log 17, lines 15385-15393] -->
-
-Emmanuel Theodore (74:26)
+Emmanuel Theodore (76:11)
 Across these seven states, the objective remains stable while interfaces, variables, enforcement channels, and response latency change. The dashboard displays that continuity as a running system trace.
 <!-- [book Preface; Compiled Runtime Log] -->
 
 <!-- SEG 12 · The Interference Engine -->
 
-Emmanuel Theodore (74:37)
+Emmanuel Theodore (76:21)
 A central engineering question remains from our walk of the five tiers: given that the Buffer Class I-sub-buffer and the racialized Out-group O-sub-racialized both lose material wealth to the Elite E, what stops them from synchronizing their grievances today?
 <!-- [book Ch 0; Ch 11; Ch 18] -->
 
-Emmanuel Theodore (74:53)
+Emmanuel Theodore (76:37)
 The book's answer is the Interference Engine, introduced in the hardware specification of Chapter 0, derived in Chapter 14 on Tweedism, and tested empirically in Chapter 22, titled The Spectral Carrier.
 <!-- [book Ch 0; Ch 14; Ch 22] -->
 
-Emmanuel Theodore (75:05)
+Emmanuel Theodore (76:49)
 The political specification dates directly to November 1787, when James Madison published Federalist No. 10 to defend the new constitutional architecture.
 <!-- [book Ch 5, citing Madison 1787] -->
 
-Emmanuel Theodore (75:14)
+Emmanuel Theodore (76:58)
 Madison stated candidly that the most common and durable source of political factions is the various and unequal distribution of property, placing creditors and landed proprietors in permanent structural tension with debtors and propertyless laborers.
 <!-- [book Ch 5, citing Madison 1787] -->
 
-Emmanuel Theodore (75:28)
+Emmanuel Theodore (77:12)
 To prevent a propertyless numerical majority from concerting its plans and discovering its shared strength, Madison proposed extending the sphere of the republic across a vast multiplicity of competing religious, regional, commercial, and factional axes.
 <!-- [book Ch 5, citing Madison 1787] -->
 
-Emmanuel Theodore (75:42)
+Emmanuel Theodore (77:26)
 In the signal-processing formalism of Chapter 0 and Chapter 14, Madison's constitutional design operates as an active phased-array signal jammer.
 <!-- [book Ch 0; Ch 5; Ch 14] -->
 
-Emmanuel Theodore (75:50)
+Emmanuel Theodore (77:34)
 Equation 0.15 models each social cleavage axis k as an alternating grievance current i-sub-k of t equal to salience weight rho-sub-k times amplitude A-sub-k times the cosine of omega-t plus phase angle phi-sub-k.
 <!-- [book Ch 0, Eq 0.15] -->
 
-Emmanuel Theodore (76:03)
+Emmanuel Theodore (77:47)
 Equation 0.16 applies Kirchhoff's current law at the Elite node: the net coherent pressure reaching the Elite I-sub-E of t equals the sum across all N axes of those individual phase currents.
 <!-- [book Ch 0, Eq 0.16] -->
 
-Emmanuel Theodore (76:16)
+Emmanuel Theodore (78:00)
 Figure 0.6 in Chapter 0, titled Destructive Interference, plots how the jammer protects the extraction kernel across time.
 <!-- [book Ch 0, Fig 0.6] -->
 
-Emmanuel Theodore (76:23)
+Emmanuel Theodore (78:07)
 When two grievance currents i-sub-j of t and i-sub-k of t are driven 180 degrees out of phase, their peaks align with each other's troughs and their vector sum collapses near zero.
 <!-- [book Ch 0, Fig 0.6] -->
 
-Emmanuel Theodore (76:36)
+Emmanuel Theodore (78:20)
 That is why the recursive local partition of Equation 2.4 in Segment 03 is essential to the machine's survival: every additional identity axis alpha provides another phase channel that the Puppet Class media and campaign apparatus can modulate.
 <!-- [book §2.1, Eq 2.4; Ch 11] -->
 
-Emmanuel Theodore (76:51)
+Emmanuel Theodore (78:35)
 Chapter 22 formalizes this frequency-domain redistribution in Equation 22.1: total public political discourse power decomposes into an economic class signal and an identity-wedge signal.
 <!-- [book Ch 22, Eq 22.1] -->
 
-Emmanuel Theodore (77:00)
+Emmanuel Theodore (78:44)
 Equation 22.2 defines the resulting circular phase dispersion Phi-sub-load of t as one minus the magnitude of the mean unit phase vector across all N axes.
 <!-- [book Ch 22, Eq 22.2] -->
 
-Emmanuel Theodore (77:11)
+Emmanuel Theodore (78:55)
 That dispersion metric Phi-sub-load of t is bounded between zero at perfect class synchronization and one at complete destructive cancellation.
 <!-- [book Ch 11, Eq 11.22; Ch 18, Eq 18.2] -->
 
-Emmanuel Theodore (77:19)
+Emmanuel Theodore (79:03)
 Chapter 22 subjects this Interference Engine model to an explicit Confidence Tier 2 empirical test using two public time-series datasets and disclosed spectral scripts.
 <!-- [book Ch 22; Empirical Methodology] -->
 
-Emmanuel Theodore (77:28)
+Emmanuel Theodore (79:12)
 We state the Confidence Tier 2 classification and the falsification criteria out loud: the spectral carrier hypothesis predicts sharp power peaks in identity-wedge vocabulary relative to class vocabulary at fixed United States electoral frequencies.
 <!-- [book Ch 22, P1-P6] -->
 
-Emmanuel Theodore (77:42)
+Emmanuel Theodore (79:26)
 The spectral carrier hypothesis would be falsified if the four-year identity peak were absent, if its ratio stayed at or below one point two, or if class power showed a comparable peak.
 <!-- [book Ch 22, P1-P6] -->
 
-Emmanuel Theodore (77:55)
+Emmanuel Theodore (79:39)
 Dataset one analyzes the United States Congressional Record from 1965 through 2024, spanning N equals 60 annual observations, presented in Table 22.1 and Figure 22.2.
 <!-- [book Ch 22, Table 22.1, Fig 22.2] -->
 
-Emmanuel Theodore (78:05)
+Emmanuel Theodore (79:49)
 Table 22.1 reports the discrete Fourier transform power ratios comparing identity-wedge power to class-band power: at the four-year presidential frequency of point two five cycles per year, the ratio reaches 24.06.
 <!-- [book Ch 22, Table 22.1, Fig 22.2] -->
 
-Emmanuel Theodore (78:17)
+Emmanuel Theodore (80:01)
 At the six-year Senate cycle, Table 22.1 records a power ratio of 21.02, and at the eight-year two-term presidential cycle, the ratio stands at 12.86.
 <!-- [book Ch 22, Table 22.1] -->
 
-Emmanuel Theodore (78:27)
+Emmanuel Theodore (80:11)
 Across the spectrum, Parseval energy conservation between the time domain and the frequency domain is verified to 0.9996, within four-hundredths of one percent.
 <!-- [book Ch 22, Table 22.1] -->
 
-Emmanuel Theodore (78:36)
+Emmanuel Theodore (80:20)
 Chapter 22 also reports its negative control transparently: a time-domain t-test comparing raw mean word counts in election years versus other years yields t equals 0.479 and p equals 0.634.
 <!-- [book Ch 22, Time-Domain Election-Year Test] -->
 
-Emmanuel Theodore (78:48)
+Emmanuel Theodore (80:32)
 That time-domain mean test is unconfirmed because multi-decade baseline volume shifts across eras, whereas phase-locked four-year periodicity isolates cleanly in the Fourier frequency spectrum.
 <!-- [book Ch 22, Time-Domain Election-Year Test] -->
 
-Emmanuel Theodore (78:58)
+Emmanuel Theodore (80:42)
 In annual data, the two-year midterm cycle sits on the Nyquist boundary at point five zero cycles per year, where Table 22.1 records an indeterminate ratio of point five eight.
 <!-- [book Ch 22, Table 22.1] -->
 
-Emmanuel Theodore (79:10)
+Emmanuel Theodore (80:54)
 To resolve that cycle below a higher Nyquist limit, Dataset two in Table 22.2 analyzes weekly Google Trends search series from 2004 to 2024.
 <!-- [book Ch 22, Table 22.2] -->
 
-Emmanuel Theodore (79:20)
+Emmanuel Theodore (81:04)
 Sampled at fifty-two observations per year, Table 22.2 resolves the two-year midterm election carrier at an identity-to-class power ratio of 12.82.
 <!-- [book Ch 22, Table 22.2] -->
 
-Emmanuel Theodore (79:28)
+Emmanuel Theodore (81:12)
 Those Tier 2 results match the predicted phase-locked carrier pattern across institutional discourse and public search behavior.
 <!-- [book Ch 22, Table 22.1, Table 22.2] -->
 
 <!-- SEG 13 · The definition, rebuilt -->
 
-Emmanuel Theodore (79:35)
+Emmanuel Theodore (81:19)
 With the set partitions walked and all three historical and spectral tests completed, we return to Figure 2.3 in Chapter 2 and rebuild the definition of racism from the ground up.
 <!-- [book §2.2, Fig 2.3] -->
 
-Emmanuel Theodore (79:47)
+Emmanuel Theodore (81:31)
 The right-hand column of Figure 2.3, titled Inverting the Definitional Hierarchy, places the causal layers in their empirically verified order.
 <!-- [book §2.2, Fig 2.3] -->
 
-Emmanuel Theodore (79:55)
+Emmanuel Theodore (81:39)
 At the top of the rebuilt hierarchy sit systemic policies, legal codes, and institutional structures: the primary generative engine designed to serve Elite economic extraction.
 <!-- [book §2.2, Fig 2.3] -->
 
-Emmanuel Theodore (80:05)
+Emmanuel Theodore (81:49)
 In the middle sit ideological narratives, media tropes, and racial doctrines: the legitimating layer commissioned and broadcast to naturalize the legal partition.
 <!-- [book §2.2, Fig 2.3] -->
 
-Emmanuel Theodore (80:14)
+Emmanuel Theodore (81:58)
 At the base sit interpersonal prejudice, implicit bias, and individual discriminatory acts: the downstream psychological products cultivated by living inside the racialized structure and feeding back to maintain it.
 <!-- [book §2.2, Fig 2.3] -->
 
-Emmanuel Theodore (80:26)
+Emmanuel Theodore (82:10)
 Section 2.2 states the book's formal definition: racism is a system of oppression that weaponizes interpersonal bias, prejudice, and discrimination into structural mechanisms of exploitation and control.
 <!-- [book §2.2; Ch 21] -->
 
-Emmanuel Theodore (80:36)
+Emmanuel Theodore (82:20)
 Through formal institutionalization, that system transforms private attitudes into a self-perpetuating apparatus that serves Elite economic interests.
 <!-- [book §2.2; Ch 21] -->
 
-Emmanuel Theodore (80:43)
+Emmanuel Theodore (82:27)
 In the book's systems vocabulary, racism operates as psycho-legal social software, a fractal mind virus that runs on biological host wetware across all five tiers.
 <!-- [book Preface; §2.2] -->
 
-Emmanuel Theodore (80:53)
+Emmanuel Theodore (82:37)
 Section 2.2 specifies the five operational steps through which the system weaponizes individual psychology into structural extraction.
 <!-- [book §2.2] -->
 
-Emmanuel Theodore (81:00)
+Emmanuel Theodore (82:44)
 Step one: the system institutionalizes bias and prejudice by compiling them into formal statutes, administrative rules, credit algorithms, and policing protocols denoted P.
 <!-- [book §2.2] -->
 
-Emmanuel Theodore (81:09)
+Emmanuel Theodore (82:53)
 Step two: the system concentrates material harm at the formal intersection of the racialized Out-group O-sub-racialized and the policy set P, ensuring that even facially neutral rules strike the target population disproportionately.
 <!-- [book §2.2] -->
 
-Emmanuel Theodore (81:22)
+Emmanuel Theodore (83:06)
 Step three: the system naturalizes the resulting wealth, health, and carceral disparities through ideological narratives that blame the harmed population's culture or biology.
 <!-- [book §2.2] -->
 
-Emmanuel Theodore (81:31)
+Emmanuel Theodore (83:15)
 Step four: the system compounds disadvantage intergenerationally across housing, schooling, credit, and criminal records so that past extraction becomes the baseline for present extraction.
 <!-- [book §2.2] -->
 
-Emmanuel Theodore (81:41)
+Emmanuel Theodore (83:25)
 Step five: the system protects Elite economic extraction by elevating phase dispersion Phi-sub-load between the white Buffer Class and the racialized Out-group, preventing working-class solidarity.
 <!-- [book §2.2] -->
 
-Emmanuel Theodore (81:51)
+Emmanuel Theodore (83:35)
 This structural definition settles the recurring public debate over scalar prejudice versus vector racism through two linked equations in Chapter 3 and Chapter 25.
 <!-- [book Ch 3, Eq 3.1; Ch 25, Eq 25.1; MANUSCRIPT_GAP §1] -->
 
-Emmanuel Theodore (82:00)
+Emmanuel Theodore (83:44)
 In physics and linear algebra, a scalar is a quantity possessing magnitude alone, such as temperature or speed, whereas a vector possesses both magnitude and a specific spatial direction, such as force or velocity.
 <!-- [book Ch 3, Eq 3.1; Ch 21, Eq 21.1] -->
 
-Emmanuel Theodore (82:14)
+Emmanuel Theodore (83:58)
 Drawing on the writer Susan Abulhawa's formulation of institutional power, Equation 3.1 in Chapter 3 writes the conceptual racism vector: R-sub-acism equals emotional and material magnitude M-sub-agnitude multiplied by the unit direction vector of state and institutional enforcement d-hat-sub-state.
 <!-- [book Ch 3, Eq 3.1, citing Abulhawa] -->
 
-Emmanuel Theodore (82:30)
+Emmanuel Theodore (84:14)
 Chapter 25 completes that formulation in Equation 25.1, a Confidence Tier 3 synthesis backed by the Tier 1 post-1965 backlash series, New Deal statutory exclusions, and Martin Gilens and Benjamin Page's 2014 multivariate study of United States policy outcomes.
 <!-- [book Ch 25, Eq 25.1, citing Gilens & Page 2014] -->
 
-Emmanuel Theodore (82:45)
+Emmanuel Theodore (84:29)
 Equation 25.1 states that the systemic racism vector R-vec-sub-systemic equals the norm of institutional force F-sub-institutional directed along the hierarchy unit vector d-hat-sub-hierarchy, and is structurally distinct from the scalar magnitude of individual prejudice.
 <!-- [book Ch 25, Eq 25.1] -->
 
-Emmanuel Theodore (82:59)
+Emmanuel Theodore (84:43)
 Apply Equation 3.1 and Equation 25.1 to the question of reverse racism and Refutation Standard 3.
 <!-- [book Ch 3, Eq 3.1; Ch 25, Eq 25.1; MANUSCRIPT_GAP §1; YT02_outline R3] -->
 
-Emmanuel Theodore (83:05)
+Emmanuel Theodore (84:49)
 When a member of the racialized Out-group expresses racial hostility or commits a discriminatory act against a member of the white In-group, that act has real interpersonal magnitude.
 <!-- [book Preface; Ch 21; MANUSCRIPT_GAP §1] -->
 
-Emmanuel Theodore (83:16)
+Emmanuel Theodore (85:00)
 In the book's taxonomy, that act is scalar prejudice or scalar discrimination, and civil society, ethics, and law address it directly at the interpersonal level.
 <!-- [book Preface; Ch 21; MANUSCRIPT_GAP §1] -->
 
-Emmanuel Theodore (83:26)
+Emmanuel Theodore (85:10)
 What that interpersonal act lacks is the institutional unit vector d-hat-sub-state: there is zero state-backed legislature, appellate judiciary, policing network, or capital monopoly directing systemic extraction downward onto white Americans as a racial class.
 <!-- [book Ch 3, Eq 3.1; Ch 21, Eq 21.1; MANUSCRIPT_GAP §1] -->
 
-Emmanuel Theodore (83:40)
+Emmanuel Theodore (85:24)
 Furthermore, the five tiers are structural positions defined by their relation to extraction and enforcement.
 <!-- [book Ch 0; Ch 21; MANUSCRIPT_GAP §1] -->
 
-Emmanuel Theodore (83:46)
+Emmanuel Theodore (85:30)
 When a Black police officer, prosecutor, or elected official enforces a carceral or fiscal rule that harms O-sub-racialized, that actor occupies the Enforcement Class F-sub-enforce or the Puppet Class P-sub-uppet during that act.
 <!-- [book Ch 0; Ch 21; MANUSCRIPT_GAP §1] -->
 
-Emmanuel Theodore (83:59)
+Emmanuel Theodore (85:43)
 Regardless of the individual official's phenotype, the institutional force vector R-vec-sub-systemic in Equation 25.1 continues pointing downward at the racialized Out-group.
 <!-- [book Ch 0; Ch 25, Eq 25.1; MANUSCRIPT_GAP §1] -->
 
-Emmanuel Theodore (84:08)
+Emmanuel Theodore (85:52)
 Section 2.3.7 applies the same precision inside the Out-group by distinguishing internalized racism, where subordinated actors absorb the dominant system's beliefs about their group's inferiority, from colorism, where intra-group stratification favors lighter skin tones closer to the In-group phenotypic norm.
 <!-- [book §2.3.7; MANUSCRIPT_GAP §2] -->
 
-Emmanuel Theodore (84:24)
+Emmanuel Theodore (86:08)
 Finally, the rebuilt definition explains where intervention succeeds and where it stalls. In Figure 2.2, interpersonal prejudice is epiphenomenal to the generative arrow: it sits on the dashed maintenance feedback loop.
 <!-- [book §2.2, Fig 2.2] -->
 
-Emmanuel Theodore (84:36)
+Emmanuel Theodore (86:20)
 Corporate implicit-bias seminars, symbolic representation, and vocabulary policing operate on the dashed maintenance feedback loop.
 <!-- [book §2.2, Fig 2.2] -->
 
-Emmanuel Theodore (84:42)
+Emmanuel Theodore (86:26)
 Durable transformation alters the generative material and legal architecture represented by Equation 2.7.
 <!-- [book §2.2, Fig 2.2, Eq 2.7] -->
 
 <!-- SEG 14 · Close -->
 
-Emmanuel Theodore (84:50)
+Emmanuel Theodore (86:34)
 Let us review the complete analytical arc we have walked from the dictionary opening to the rebuilt definition.
 <!-- [editorial] -->
 
-Emmanuel Theodore (84:58)
+Emmanuel Theodore (86:42)
 We began with the standard dictionary entry for racism and showed that its numbered order encodes an untested causal assumption placing private prejudice ahead of institutional structure.
 <!-- [book §2.2, Fig 2.3] -->
 
-Emmanuel Theodore (85:08)
+Emmanuel Theodore (86:52)
 We grounded bias in Greenwald and Banaji, prejudice in Allport, and discrimination in Fiske's tripartite model, assigning all three to the interpersonal class of human psychology.
 <!-- [book Preface; §2.2] -->
 
-Emmanuel Theodore (85:19)
+Emmanuel Theodore (87:03)
 We audited the American racial order against the five-part engineering definition of a system and walked the set-theoretic partitions from Equation 2.1 through Equation 2.4 in Table 2.1 and Figure 2.1.
 <!-- [book §2.1, Eq 2.1-2.4, Table 2.1, Fig 2.1] -->
 
-Emmanuel Theodore (85:31)
+Emmanuel Theodore (87:15)
 The orthographic illusion showed how five tiers project into a binary, and Equation 3.5 showed how the Buffer Class wage rotates between material provision and psychological status.
 <!-- [book Ch 0; Ch 3, Eq 3.5] -->
 
-Emmanuel Theodore (85:42)
+Emmanuel Theodore (87:26)
 The zero-day analysis traced race as a discrete legal variable carved from continuous phenotype, while Definition 2.3 traced the system's chronic exposures back into human physiology.
 <!-- [book §2.3, The Zero-Day Exploit; Definition 2.3] -->
 
-Emmanuel Theodore (85:52)
+Emmanuel Theodore (87:36)
 The runtime dashboard followed seven system states across five centuries, and the Interference Engine explained how multiple identity channels suppress coherent class pressure.
 <!-- [book Compiled Runtime Log; Ch 11; Ch 18] -->
 
-Emmanuel Theodore (86:02)
+Emmanuel Theodore (87:46)
 The rebuilt definition then placed policy, ideology, and interpersonal prejudice in causal order before the Concession Theorem specified how the kernel absorbs reform.
 <!-- [book §2.2, Fig 2.3; Ch 15] -->
 
-Emmanuel Theodore (86:11)
+Emmanuel Theodore (87:55)
 We stated the book's causal reversal in Equation 2.6 as an explicit hypothesis with four predictions and three refutation standards, and tested it across fifteenth-century Portugal, colonial Virginia, the 1840-to-2020 quantitative record, and the electoral spectral carrier in Chapter 22.
 <!-- [book §2.2, Eq 2.6; Ch 3; Ch 4; Ch 22] -->
 
-Emmanuel Theodore (86:27)
+Emmanuel Theodore (88:11)
 In every test, commercial extraction and solidarity management preceded and shaped the racial code, and the system recompiled its interface whenever legitimacy costs rose.
 <!-- [book §2.2; §2.3.5] -->
 
-Emmanuel Theodore (86:36)
+Emmanuel Theodore (88:20)
 One methodological rule from Section 2.3.11 closes our analysis: the framework distinguishes Mode 1 Intentional Design, Mode 2 Autonomous Propagation along institutional incentive gradients, and Mode 3 Conscious Intervention.
 <!-- [book §2.3.11] -->
 
-Emmanuel Theodore (86:48)
+Emmanuel Theodore (88:32)
 That three-mode taxonomy leaves open case by case whether a specific historical update required conscious coordination or propagated autonomously on inherited institutional firmware.
 <!-- [book §2.3.11] -->
 
-Emmanuel Theodore (86:57)
+Emmanuel Theodore (88:41)
 The definition closes with the Concession Theorem from Chapter 19, which states how reform behaves inside the extraction algorithm's own objective function.
 <!-- [book Ch 19, Concession Theorem] -->
 
-Emmanuel Theodore (87:06)
+Emmanuel Theodore (88:50)
 Equation 19.2 states the theorem: the Elite permits or initiates policy reform at a rate proportional to the rising threat from class resistance.
 <!-- [book Ch 19, lines 11645-11653] -->
 
-Emmanuel Theodore (87:15)
+Emmanuel Theodore (88:59)
 Each concession is calibrated to keep resistance below the kinetic threshold while preserving the extraction kernel. The invariant is delta max equals zero.
 <!-- [book Ch 19, Concession Theorem, Eq 19.2] -->
 
-Emmanuel Theodore (87:24)
+Emmanuel Theodore (89:08)
 Across the book's 1450-to-2026 dataset, the theorem claims that no non-kinetic reform permanently reduced the Elite's extraction share at the system apex.
 <!-- [book Appendix, Falsifiability Conditions for the Two Terminal Theorems] -->
 
-Emmanuel Theodore (87:33)
+Emmanuel Theodore (89:17)
 That claim carries three simultaneous falsification conditions. First, a reform must produce an absolute decline in the top decile's national wealth share sustained for at least three decades.
 <!-- [book Appendix, lines 15442-15448] -->
 
-Emmanuel Theodore (87:44)
+Emmanuel Theodore (89:28)
 Second, aggregate apex extraction must decline in real terms across all channels, including offshore capital, newly targeted populations, and substitutions between labor and financial extraction.
 <!-- [book Appendix, lines 15449-15451] -->
 
-Emmanuel Theodore (87:54)
+Emmanuel Theodore (89:38)
 Third, the reduction must survive later periods of low kinetic threat, demonstrating a durable alteration of the extraction kernel after the pressure that produced the reform recedes.
 <!-- [book Appendix, lines 15452-15454] -->
 
-Emmanuel Theodore (88:05)
+Emmanuel Theodore (89:49)
 A reform satisfying all three conditions would falsify the theorem regardless of the threat environment present when that reform was adopted.
 <!-- [book Appendix, lines 15454-15458] -->
 
-Emmanuel Theodore (88:14)
+Emmanuel Theodore (89:58)
 The manuscript reports no qualifying counterexample in its current dataset. It therefore presents the Concession Theorem as unfalsified and specifies the evidence that would force revision.
 <!-- [book Appendix, lines 15454-15458] -->
 
-Emmanuel Theodore (88:24)
+Emmanuel Theodore (90:08)
 For the complete clause-by-clause walkthrough of Chapter 2, including the Bayesian defense and the full RLC electrodynamic derivations, watch Episode 1 of this series, What Racism Really Is.
 <!-- [editorial] -->
 
-Emmanuel Theodore (88:35)
+Emmanuel Theodore (90:19)
 For the full architecture and all 146 calibrated historical anchor cases, read the open-access manuscript of The Original Power.
 <!-- [book Empirical Methodology] -->
 
-Emmanuel Theodore (88:43)
+Emmanuel Theodore (90:27)
 Thank you for listening to Episode 2 of Architecting the Operation, What Racism Is.
 <!-- [editorial] -->

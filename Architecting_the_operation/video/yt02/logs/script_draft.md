@@ -261,3 +261,94 @@ The repository-wide `make check-prose` command exits `2` because the current wor
 4. Add an auxiliary-label resolver that translates manuscript labels into current printed numbers before a script draft begins.
 5. Produce a shot list connecting each spoken equation, figure, table, and definition reference to its visual asset.
 6. Run a paced voice-clone proof on one dense mathematical segment and use the measured delivery rate to refine production timestamps.
+---
+
+## SEG 11 rewrite — 2026-10-17
+
+Model: GPT-5 Codex
+
+### Request and work completed
+
+`video/yt02/SEG11_BRIEF.md` required a one-instrument-at-a-time dashboard introduction, a streamlined seven-era walk, one complex-wage phasor reading per era, preservation of the continuity close, and consistent timestamp shifts through SEG 14. The narration now follows that structure. The manuscript remained read-only throughout verification.
+
+### New turn list
+
+1. `69:07` — Route the three historical tests into one RUNTIME LOG dashboard.
+2. `69:17` — Establish the one-instrument-at-a-time assembly and seven-log walk.
+3. `69:27` — Define System Stress as the minimum side tracking class resistance.
+4. `69:37` — Explain the categorical System Stress display.
+5. `69:48` — Define Capital as the maximum side tracking extraction output.
+6. `69:56` — Define Phi-load and its zero-to-one range bar.
+7. `70:05` — Define rho-tau, the threshold dial, and the one-point-zero crash line.
+8. `70:17` — Define Active Patch as the current recompile.
+9. `70:26` — Define dim loaded-variable chips and lit current-cycle chips.
+10. `70:35` — Define Executing Function as the cycle's operation.
+11. `70:46` — Recall Equation 3.5 and the complex-wage phasor from SEG 09.
+12. `70:53` — Recall the material and psychological axes and the ninety-degree boundary.
+13. `71:04` — Name the fascism threshold and classify the era readings as Tier 3 ordinal.
+14. `71:15` — Define Result as policy output or terminal warning.
+15. `71:26` — Lock the instruments into the complete dashboard.
+16. `71:36` — Open the 1486 Lisbon log with stress and capital.
+17. `71:48` — Read 1486 Phi-load, rho-tau, and Active Patch.
+18. `71:57` — Read the 1486 variables, function, and pure-status wage.
+19. `72:06` — Read the 1486 policy results.
+20. `72:15` — Open the 1676–1787 log with stress and capital.
+21. `72:25` — Read the crash and post-patch threshold states.
+22. `72:34` — Read the deployed tiers and formalized pure-status wage.
+23. `72:44` — Read the codification function and policy results.
+24. `72:53` — Open the 1704–1865 log with stress and capital.
+25. `73:04` — Read its stable interference ranges.
+26. `73:13` — Read its psychological wage and deployed enforcement variables.
+27. `73:23` — Read its executing function and policy result.
+28. `73:33` — Open the 1894–1965 containment log with stress.
+29. `73:44` — Read its capital and interference ranges.
+30. `73:51` — Introduce the weaponized Complex Wage and Pullman algebra.
+31. `74:01` — State the material consequence and containment variables.
+32. `74:09` — Read the 1894–1965 policy results.
+33. `74:19` — Open the 1968–1994 recompile with stress and capital.
+34. `74:28` — Read its interference ranges and deployed proxies.
+35. `74:37` — Move the phasor into Quadrant II with the AC-mode exemplars.
+36. `74:47` — Read the executing function and policies.
+37. `74:58` — Open the 1994–present terminal log with stress and capital.
+38. `75:08` — Read the threshold crossing and five visible tiers.
+39. `75:17` — Move deeper into Quadrant II under Buffer Class cannibalization.
+40. `75:26` — Read the terminal warning.
+41. `75:34` — Open the algorithmic epoch with machine-speed monitoring.
+42. `75:45` — Read automated extraction and saturated interference.
+43. `75:53` — Place the Quadrant II wage on algorithmic hardware.
+44. `76:02` — Read the ported function and critical warning.
+45. `76:11` — Preserve the continuity line across all seven states.
+
+### Wage-claim source map
+
+| Era | Narration claim | Opened manuscript artifact |
+| :--- | :--- | :--- |
+| 1486 | The Implicit Contract issues the psychological wage; the phasor reads pure status at ninety degrees. | `Paper/The_Original_Power.tex:15226–15227` names the deployed tiers and function; `:2914–2920` defines ninety degrees as a fully psychological wage. |
+| 1676–1787 | The log formalizes `W = j psi-s`; theta is ninety degrees. | `Paper/The_Original_Power.tex:15237–15238` records the formalized wage; `:2914–2920` defines the corresponding phase state. |
+| 1704–1865 | The Buffer Class is pacified by `j psi-s`; theta remains ninety degrees. | `Paper/The_Original_Power.tex:15256` states the pacification mechanism; `:2914–2920` defines the pure-imaginary wage as the ninety-degree state. |
+| 1894–1965 | The Complex Wage is weaponized; squaring `j psi-s` produces negative material output. | `Paper/The_Original_Power.tex:15303–15304` records the deployment; `:5808–5818` states the Pullman Corollary and the negative-real square. |
+| 1968–1994 | Theta crosses ninety degrees into Quadrant II; post-1965 mass incarceration and the War on Drugs exemplify AC mode. | `Paper/The_Original_Power.tex:1130–1149` defines the crossing and lists both exemplars; `:15353–15360` records the carceral recompile and Buffer Class cannibalization. |
+| 1994–present | The phasor moves deeper into Quadrant II as the system extracts from the Buffer Class. | `Paper/The_Original_Power.tex:2921–2924` defines Quadrant II as extraction from the Buffer Class; `:15365–15371` records the active cannibalization subroutine. |
+| 2010s–present | Quadrant II runs on algorithmic hardware; algorithmic credit scoring and subprime lending are AC-mode exemplars. | `Paper/The_Original_Power.tex:1135–1149` lists the exemplars; `:15385–15392` records automated targeting and the ported algorithmic function. |
+
+### Timing and validation results
+
+The rewritten segment contains 45 turns and 1,086 spoken words, yielding approximately 7.24 minutes at 150 words per minute. Every SEG 11 turn contains 19–30 words. SEG 12 through SEG 14 moved forward by 1 minute 44 seconds, with zero timestamp reversals.
+
+The required `check_script.py` command passed with 526 turns, 15 segments, 13,555 spoken words, and zero warnings or errors. The required narration antithesis scan reported no banned constructions. The focused log scan reported no banned constructions; its four REVIEW notices predate this section. The independent reading reported 0 CERTAIN, 0 arguable, and 8 candidates considered and cleared.
+
+### Challenges encountered
+
+1. The component introductions had to establish nine instruments before the era walk while keeping the segment near seven minutes.
+2. The phasor claims combine runtime-log states with the manuscript's phase definitions, requiring explicit line-level provenance for each synthesis.
+3. The later narration had to remain textually intact while every timestamp moved by the same 104-second delta.
+4. The configured Obsidian session-log directory lies outside the writable workspace, so the environment rejected creation of the separate session log.
+
+### Next ideas (6)
+
+1. Add an executable timestamp-delta audit to `check_script.py`.
+2. Add segment-specific minimum and maximum turn-length options.
+3. Export the 45-turn list as a visual timing manifest.
+4. Link each dashboard instrument to its animation asset and entrance cue.
+5. Add source-line metadata to the production storyboard.
+6. Measure the recorded delivery rate and retime visual holds from the final voice track.
