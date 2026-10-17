@@ -23,7 +23,7 @@ positions are tiers: Elite, Puppet Class, Enforcement Class, Buffer Class, Out-g
 Provenance tags: [book §/eq/fig] for manuscript material, [external: citation] for sources
 outside the manuscript. No invented axes, figures, or equation numbers.
 
-**Target length:** ≈ 72 minutes (sum of segment estimates below; SEG 09–10 added 2026-10-17).
+**Target length:** ≈ 72 minutes (sum of segment estimates below; SEG 11–10 added 2026-10-17).
 
 ---
 
@@ -141,7 +141,20 @@ states the notation once and spends its time on what each equation makes visible
 
 ---
 
-### SEG 04 — Where the agreement ends (est. 3 min)
+### SEG 04 — The orthographic illusion (est. 3 min)
+
+**Purpose.** Show why the binary of SEG 03 is what everyone sees: viewed head-on, the five-tier
+pyramid projects onto two groups. Reuse YT01's EffectCraft shot
+(`animations/yt01_ortho/yt01_ortho.mp4`): white In-group left, black Out-group right, rotate to the
+tiers, pan up (the In-group as the Out-group sees it), pan down (the Out-group as the In-group sees
+it), zoom out to the pyramid.
+
+**Key claims.** The binary is a coarse projection of the five-tier structure [book Ch 0, "Elite
+Obscuration and the Orthographic Illusion"; §2.1]. The Elite is obscured by the projection.
+
+---
+
+### SEG 05 — Where the agreement ends (est. 3 min)
 
 **Purpose.** Mark the point of departure. Everything up to here is standard apparatus:
 dictionary entries, social-psychology definitions, systems vocabulary, set notation. A careful
@@ -161,7 +174,7 @@ viewer can accept all of it. The framework departs on the causal order.
 
 ---
 
-### SEG 05 — The hypothesis (est. 4 min)
+### SEG 06 — The hypothesis (est. 4 min)
 
 **Purpose.** State the reversed arrow as a testable claim, announce the evidence standard
 before presenting evidence, and preview the three tests.
@@ -186,7 +199,7 @@ before presenting evidence, and preview the three tests.
 
 ---
 
-### SEG 06 — Test 1: Portugal, 1441–1486 (est. 9 min)
+### SEG 07 — Test 1: Portugal, 1441–1486 (est. 12 min)
 
 **Purpose.** The book's own validation case for the causal reversal [book §2.2 footnote block
 at L1798–1803; Ch 3].
@@ -214,9 +227,17 @@ at L1798–1803; Ch 3].
 **Equations/figures.** No book figure. New map and timeline motion graphics as production
 assets (flagged as non-manuscript material).
 
+
+**Added (2026-10-17): race as an invented variable, the zero-day (≈3 min).** Before the Portugal
+sequence closes, state that race is the system's own variable: phenotype varies continuously
+(clines), and the category is written into law here, as the first recorded O_racialized =
+f(phenotype). Ground it in the book's zero-day section and its genetics sources (Jablonski &
+Chaplin 2000 and the others the book cites in §2.3) [book §2.3, zero-day exploit; Ch 3]. Brief;
+YT01 carries the long version.
+
 ---
 
-### SEG 07 — Test 2: Virginia, 1640–1705 (est. 9 min)
+### SEG 08 — Test 2: Virginia, 1640–1705 (est. 9 min)
 
 **Purpose.** The American codification case [book Ch 4; instantiated in §2.3.6 at Eq 2.15].
 
@@ -252,7 +273,37 @@ assets (flagged as non-manuscript material).
 
 ---
 
-### SEG 08 — Test 3: The American backlash record, 1840–2020 (est. 8 min)
+### SEG 09 — The wage: the suppression allocation as a phasor (est. 7 min)
+
+**Purpose.** Answer the question SEG 08 raises: why does the Buffer Class defend a system that also
+extracts from it? Teach the complex wage with phasor animation. Leave the Unified Lorentz Force out.
+
+**Key claims.**
+
+- The suppression allocation is a two-mode payment to the Buffer Class: material (ψ_m) and status
+  (ψ_s), Du Bois's psychological wage [book §2.3 variable table; Ch 0 tier table "Receives the
+  suppression allocation W = ψ_m + jψ_s"]. Name Equation 3.5 (the complex wage) by its printed number.
+- Complex numbers from zero, briefly: a real axis and an imaginary axis; j marks the second
+  direction. The wage is one arrow (a phasor) whose angle θ sets the mix: ψ_m = |W| cos θ,
+  ψ_s = |W| sin θ [book Ch 0, AC mode: S = |V||I|e^{jθ}, P_real = ψ_m, Q_reactive = ψ_s].
+- Rotate the phasor through the book's regimes: θ = 0, purely material; θ = 90°, purely
+  psychological, zero net work transfer, "pure reactive power, i.e., culture war"; θ > 90°,
+  Quadrant II, the Elite extracts material wealth from the Buffer Class while feeding inflated ψ_s
+  [book Ch 0, "the phase angle θ becomes the system's primary tuning knob"].
+- Implementations, each as a phasor position (all from the book; verify each before use):
+  Bacon's Rebellion and the 1705 codes, where the runtime log records W = jψ_s formalized
+  [book Runtime Log 3; Ch 4]; the wages of whiteness in the containment era, 1894–1965 [book Ch 10;
+  Runtime Log 9]; and the AC-mode exemplars the book lists: post-1965 mass incarceration, the War
+  on Drugs, redlining 2.0, algorithmic credit scoring, subprime lending [book Ch 0].
+- Status costs the Elite nothing, which is why θ drifts toward 90° and past it.
+
+**Equations/figures.** Equation 3.5 and the AC-mode relations, rendered in manimgx: an animated
+phasor on the complex plane with its cos and sin projections live, θ sweeping through the regimes,
+then stopping at each historical implementation.
+
+---
+
+### SEG 10 — Test 3: The American backlash record, 1840–2020 (est. 11 min)
 
 **Purpose.** Show the reversed arrow operating where the data are densest: the system
 maintaining itself through cultivated prejudice across the 19th–21st centuries.
@@ -285,9 +336,16 @@ maintaining itself through cultivated prejudice across the 19th–21st centuries
 
 **Equations/figures.** Fig 2.4; Fig 2.7; Eqs 2.9–2.10 named.
 
+
+**Added (2026-10-17): biological embedding, Definition 2.3 (≈3 min).** The system's outputs land
+in bodies. State Definition 2.3 and the weathering and stress-biology findings the book cites
+(Geronimus and the epigenetics cluster), with the evidence limits the book states for each
+[book §2.3, Definition 2.3]. Name it as an output of the system, measured in the disparities this
+segment already tracks.
+
 ---
 
-### SEG 09 — Five centuries in versions (est. 5 min)
+### SEG 11 — Five centuries in versions (est. 5 min)
 
 **Purpose.** A brief overview of how the algorithm evolves across the book's timeline (Chapter 3
 onward), so the viewer sees the three tests as moments in one continuous system. Brief: one or two
@@ -311,11 +369,21 @@ turns per era, no case-study depth.
 - The through-line the Preface states: expansion. The algorithm keeps its objective and changes its
   interface [book Preface, "The through-line is expansion…"].
 
-**Equations/figures.** A horizontal timeline graphic (Figma), eras as bands; no new equations.
+**Equations/figures.** The runtime dashboard below (Figma); no new equations.
+**Dashboard (author request, 2026-10-17).** SEG 11 runs as a Figma dashboard that turns the
+book's RUNTIME LOG boxes into a live readout, one state per era, the way the Compiled Runtime Log
+appendix strings them together. Panels: System Stress, Capital, Interference State (Φ_load range
+bar and a ρ_τ dial with the crash threshold τ at 1.0, numbers only where the log gives them),
+Active Patch, Variables Deployed (chips that light up as the cycle adds them), Executing Function,
+and a Result ticker of the [POLICY] lines. Eras: Log 2 (1486 Lisbon), 3 (1676–1787 Virginia →
+Philadelphia), 5 (1704–1865 American South), 9 (1894–1965 containment), 14 (1968–1994 recompile),
+15 (1994–present terminal runtime), 17 (algorithmic epoch). Field values verbatim from the logs.
+Spec: `video/yt02/DASHBOARD_SPEC.md`.
+
 
 ---
 
-### SEG 10 — The Interference Engine (est. 5 min)
+### SEG 12 — The Interference Engine (est. 5 min)
 
 **Purpose.** Explain how the partition holds when the Buffer Class and the Out-group share a
 material interest: the Interference Engine keeps their class coherence from adding up.
@@ -340,7 +408,7 @@ summing to near zero), rebuilt in manimgx. Name equations only by printed number
 
 ---
 
-### SEG 11 — The definition, rebuilt (est. 5 min)
+### SEG 13 — The definition, rebuilt (est. 5 min)
 
 **Purpose.** Deliver the compressed answer to the opening question. Restate the definition
 with the hierarchy inverted, run the five weaponization steps, and settle the
@@ -377,7 +445,7 @@ prejudice/racism relation with the scalar/vector distinction.
 
 ---
 
-### SEG 12 — Close (est. 2 min)
+### SEG 14 — Close (est. 4 min)
 
 **Purpose.** Recap and route.
 
@@ -394,29 +462,36 @@ prejudice/racism relation with the scalar/vector distinction.
 
 ---
 
+
+**Added (2026-10-17): the Concession Theorem (≈2 min).** Close on what the definition implies:
+reform inside the algorithm's own logic is absorbed and serves it [book Ch 15, "The Contradiction:
+Why Reform Serves the Algorithm", the Concession Theorem]. State the theorem as the book states it,
+with its falsifiability conditions [book appendix "Falsifiability Conditions for the Two Terminal
+Theorems"], and route viewers to the book for the full argument.
+
 ## Hypothesis and test
 
-**The hypothesis, as stated on air (SEG 05).** "Elite economic interests produce systemic
+**The hypothesis, as stated on air (SEG 06).** "Elite economic interests produce systemic
 racialization, and systemic racialization cultivates interpersonal prejudice." [book Eq 2.6]
 
 **Predictions.**
 
 - **P1 — Institutional production.** Racial ideology appears after or alongside the extraction
   arrangement, produced by identifiable institutions acting for the arrangement's
-  beneficiaries. Tested in SEG 06 (the Zurara commission, 1453; the Casa dos Escravos, 1486;
+  beneficiaries. Tested in SEG 07 (the Zurara commission, 1453; the Casa dos Escravos, 1486;
   the papal bulls, 1452/1455).
 - **P2 — Codification follows solidarity threats.** Law hardens the racial partition after
-  cross-racial labor coherence spikes. Tested in SEG 07 (the 1640 → 1662 → 1676 → 1691 → 1705
-  sequence) and SEG 08 (Nat Turner 1831 → the legislative tightening).
+  cross-racial labor coherence spikes. Tested in SEG 08 (the 1640 → 1662 → 1676 → 1691 → 1705
+  sequence) and SEG 10 (Nat Turner 1831 → the legislative tightening).
 - **P3 — Maintenance by cultivation.** Once codified, the system manufactures and refreshes
   interpersonal prejudice through its update channels, and public political language tracks
-  the cost of explicit appeal. Tested in SEG 08 (the interface swap; Atwater; the coded-policy
+  the cost of explicit appeal. Tested in SEG 10 (the interface swap; Atwater; the coded-policy
   record).
 - **P4 — Suppression scales with extraction.** Enforcement expenditure tracks extraction
-  output. Tested in SEG 08 (the antebellum suppression ratio, 2.70/2.88/2.75% across a 233%
+  output. Tested in SEG 10 (the antebellum suppression ratio, 2.70/2.88/2.75% across a 233%
   revenue expansion).
 
-**Refutation standards, announced on air in SEG 05.**
+**Refutation standards, announced on air in SEG 06.**
 
 - **R1.** A durable phenotype-keyed caste system arising without elite sponsorship, or
   preceding the extraction arrangement it serves, would damage the hypothesis. [Outline-level
@@ -430,9 +505,9 @@ racialization, and systemic racialization cultivates interpersonal prejudice." [
   that group's own control of police, lawmaking, and capital, flowing steadily down onto white
   Americans [MANUSCRIPT_GAP §1 — flagged there as needing author confirmation or replacement].
 
-**Where each test lands.** SEG 06 carries P1. SEG 07 carries P2. SEG 08 carries P2 (second
-instance), P3, and P4, and runs the R2 checks explicitly. R1 and R3 are stated in SEG 05 and
-answered in SEG 11's synthesis.
+**Where each test lands.** SEG 07 carries P1. SEG 08 carries P2. SEG 10 carries P2 (second
+instance), P3, and P4, and runs the R2 checks explicitly. R1 and R3 are stated in SEG 06 and
+answered in SEG 13's synthesis.
 
 ---
 
@@ -449,13 +524,13 @@ answered in SEG 11's synthesis.
   one auditable frame — the structural core of the definitional argument.
 - Eqs 2.1–2.4, Table 2.1, Fig 2.1 (SEG 03): the set apparatus the causal argument stands on,
   compressed because YT01 carries the slow primer.
-- Eqs 2.5/2.6 and Fig 2.2 (SEGs 04–05): the departure and the hypothesis — the video's spine.
-- The Portugal sequence (SEG 06) and the Virginia sequence (SEG 07): the book's own validation
+- Eqs 2.5/2.6 and Fig 2.2 (SEGs 05–06): the departure and the hypothesis — the video's spine.
+- The Portugal sequence (SEG 07) and the Virginia sequence (SEG 08): the book's own validation
   case for the reversal and its American codification case.
-- The antebellum numbers and the post-1965 series (SEG 08): the two Tier 1 quantitative
+- The antebellum numbers and the post-1965 series (SEG 10): the two Tier 1 quantitative
   case studies, plus the interface-swap highlights.
 - Fig 2.3, the L1867 definition, the five weaponization steps, and the Ch 21 scalar/vector
-  settlement (SEG 11): the answer, plus the pre-empted counter-question.
+  settlement (SEG 13): the answer, plus the pre-empted counter-question.
 
 **Cut or deferred — and why.**
 
@@ -463,7 +538,7 @@ answered in SEG 11's synthesis.
   Duru, Ruiz-Narváez, Spears; Heijmans, Yehuda, Costa, Zhou & Ryan) — deferred. The evidence
   boundary needs episode-length care.
 - The zero-day genetics deep dive (Huxley's cline; Crawford 2017; Jablonski & Chaplin 2000;
-  Lamason 2005; Olalde 2014; Brace 2019; Yurco 1989) — deferred. SEG 06 keeps one line on
+  Lamason 2005; Olalde 2014; Brace 2019; Yurco 1989) — deferred. SEG 07 keeps one line on
   phenotype as a continuous gradient.
 - The Bayesian defense and predictive coding (Friston 2010; Clark 2013; the prior equation;
   the IFAS/LSD sequence) — deferred. The cognition material wants its own episode.
@@ -482,8 +557,8 @@ answered in SEG 11's synthesis.
 - Du Bois's Propaganda of History and P_gaslight — deferred. The historiography mechanism
   deserves dedicated treatment.
 - Eq 2.8 (minimum forcing threshold; Jefferson's "long train of abuses") — optional one line
-  in SEG 07. Eq 2.19 (phase-loading ANES calibration) — reduced to the ordinal 0.15–0.55 range
-  in SEG 07.
+  in SEG 08. Eq 2.19 (phase-loading ANES calibration) — reduced to the ordinal 0.15–0.55 range
+  in SEG 08.
 
 **Why this compression profile.** YT02 is a definitional and evidential argument. The
 dynamical and cognitive apparatus each need episode-length treatment, and YT01 already walks
@@ -494,12 +569,12 @@ Chapter 2 linearly. YT02 duplicates only the equations the causal-order argument
 - YT01 SEG 00 (dictionary hook) → YT02 SEG 00 reuses the image at half length with a different
   assignment: the definitional question for the whole book.
 - YT01 SEG 02 (set-theory primer) → YT02 SEG 03 states the notation once; no slow primer.
-- YT01 SEG 05–06 (causal arrows, the -ism argument, weaponization, the five protective
-  functions of conflation, Fig 2.3) → YT02 SEGs 04–05 and 09 compress; the five protective
+- YT01 SEG 06–06 (causal arrows, the -ism argument, weaponization, the five protective
+  functions of conflation, Fig 2.3) → YT02 SEGs 05–06 and 09 compress; the five protective
   functions are cut here and remain available in YT01.
 - YT01 SEGs 07–16 (virus model, variable map, antebellum case, zero-day, Bayesian defense,
   interface swap, RLC circuit, suppression envelope, backlash wave, the inductor material) →
-  YT02 SEG 08 extracts the two Tier 1 datasets and the interface-swap highlight only.
+  YT02 SEG 10 extracts the two Tier 1 datasets and the interface-swap highlight only.
 - YT01 SEGs 17–21 (fractal execution, lexical fractal, corrupted firewall, diagnostic
   implication, methodology) → YT02 defers them, with one methodological line in the close.
 - YT02 SEGs 01–02 (the external definitions and the system checklist) have no YT01
@@ -512,26 +587,32 @@ Chapter 2 linearly. YT02 duplicates only the equations the causal-order argument
 1. Allport 1954, Fiske 1998, and Greenwald & Banaji 1995 are absent from
    `Paper/references.bib`. Add them so the video's citations and the book's bibliography
    agree, or keep them as video-only citations in the description and on-screen cards?
-2. SEG 11's reverse-racism settlement rests on Ch 21 and the GAP note's stated failure
+2. SEG 13's reverse-racism settlement rests on Ch 21 and the GAP note's stated failure
    condition (R3), which the note flags as needing confirmation or replacement. Confirm the
    condition as written, or revise it before scripting?
 3. R1 is the outline's own operationalization of the Eq 2.5/Eq 2.6 contest. Approve it as
    the on-air refutation standard, or substitute a book-verbatim falsification condition?
-4. Reuse the Atwater tape in SEG 08 as YT01 played it — unedited, with the content note — or
+4. Reuse the Atwater tape in SEG 10 as YT01 played it — unedited, with the content note — or
    cite it in narration only?
 5. The outline budgets ≈ 62 minutes. Confirm the intended ceiling for "long-form" relative to
    YT01's ~90 minutes.
 6. The system-characteristics frame in SEG 02 is an editorial scaffold; the manuscript never
    lists the five characteristics as a checklist. Acceptable as original framing for video,
    with per-row on-screen provenance?
-7. Should SEG 06 carry the Roman and religious-wars control cases at full length, or hold
+7. Should SEG 07 carry the Roman and religious-wars control cases at full length, or hold
    them to the budgeted 60–90 second sidebar?
 
 ## Decisions (author, 2026-10-17)
 
 1. Allport 1954, Fiske 1998 and Greenwald & Banaji 1995 are now in the book: Preface "A note
    on terms" and Chapter 2 (commit 863ee714). Cite them as [book Preface] / [book §2.2].
-5. Length: about 72 minutes after adding SEG 09 (timeline overview) and SEG 10 (Interference Engine), both requested by the author on 2026-10-17.
+5. Length: about 72 minutes after adding SEG 11 (timeline overview) and SEG 12 (Interference Engine), both requested by the author on 2026-10-17.
 6. SEG 02's system checklist stays as editorial framing for the video. Each row carries
    on-screen provenance, tagged [editorial] for the checklist itself and [book …] for the
    evidence that racism has that characteristic.
+7. Additions (author, 2026-10-17): all five gaps from the book review go in. The psychological wage
+   as SEG 09 with the complex wage shown as a rotating phasor (Unified Lorentz Force left out as too
+   advanced); the orthographic illusion as SEG 04; the zero-day in SEG 07; biological embedding in
+   SEG 10; the Concession Theorem in SEG 14. SEG 11's timeline runs as a Figma dashboard built from
+   the book's RUNTIME LOG boxes. These override the corresponding "cut or deferred" lines in the
+   Compression section. New total about 90 minutes.
