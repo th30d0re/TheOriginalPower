@@ -42,8 +42,8 @@ should will shall must does did been being can may might""".split())
 def _math_spans(s):
     """Split on $...$; return None when the string has no math delimiters."""
     s = str(s)
-    if "$" not in s:
-        return None
+    if not _INLINE_MATH.search(s):
+        return None  # no $...$ pair; a lone "$" is currency
     spans, pos = [], 0
     for hit in _INLINE_MATH.finditer(s):
         if hit.start() > pos:
