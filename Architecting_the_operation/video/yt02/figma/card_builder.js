@@ -1,0 +1,101 @@
+// Figma card builder for YT02. Stored as the text of the "builder source" layer on the assets page and run with
+// new AsyncFunction("figma", "CARDS", "PAGE_ID", "ORIGIN", source). Assets (math, QR, figures) are layers on the
+// assets page named "<cardId>.latex", ".term<n>", ".qr", ".fig", uploaded by upload_assets from card_prep.py output.
+const page = await figma.getNodeByIdAsync(PAGE_ID);
+await figma.setCurrentPageAsync(page);
+const V = async id => figma.variables.getVariableByIdAsync(id);
+const C = { field: await V("VariableID:1:18"), chart: await V("VariableID:1:20"), accent: await V("VariableID:1:21"), text: await V("VariableID:1:22"),
+  textAccent: await V("VariableID:1:23"), textDim: await V("VariableID:1:24"), fillAccent: await V("VariableID:1:25"), gold: await V("VariableID:1:26"),
+  red: await V("VariableID:1:27"), accentWash: await V("VariableID:4:421"), s1: await V("VariableID:9:490"), s2: await V("VariableID:9:491"), well: await V("VariableID:9:493") };
+const bp = v => [figma.variables.setBoundVariableForPaint({ type: "SOLID", color: { r: 0, g: 0, b: 0 } }, "color", v)];
+const TS = Object.fromEntries((await figma.getLocalTextStylesAsync()).map(s => [s.name, s]));
+for (const s of Object.values(TS)) await figma.loadFontAsync(s.fontName);
+await figma.loadFontAsync({ family: "Inter", style: "Italic" });
+const ES = Object.fromEntries((await figma.getLocalEffectStylesAsync()).map(s => [s.name, s.id]));
+const ST = Object.fromEntries(figma.motion.figmaAnimationStyles().map(s => [s.styleId, s.styleId]));
+const border = await figma.getNodeByIdAsync("3:119");
+const X0 = 190, X1 = 1730, W = X1 - X0;                      // content area inside the rails
+const assetsPage = figma.root.children.find(p => p.name === "YT02 · Assets");
+const ASSET = Object.fromEntries(assetsPage.children.map(n => [n.name, n]));
+async function txt(parent, name, s, style, color, x, y, w, align = "LEFT") {
+  const t = figma.createText(); parent.appendChild(t); t.name = name; await t.setTextStyleIdAsync(TS[style].id); t.characters = String(s ?? ""); t.fills = bp(color); t.textAlignHorizontal = align;
+  if (w) { t.resize(w, t.height); t.textAutoResize = "HEIGHT"; } t.x = x; t.y = y; return t; }
+function panel(parent, name, x, y, w, h, { fill = C.s1, stroke = C.chart, effect = "Elevation/1 Panel", radius = 14 } = {}) {
+  const f = figma.createFrame(); parent.appendChild(f); f.name = name; f.resize(w, h); f.x = x; f.y = y; f.fills = fill ? bp(fill) : []; f.cornerRadius = radius; f.clipsContent = false;
+  if (stroke) { f.strokes = bp(stroke); f.strokeWeight = 1; } else f.strokes = []; if (effect) f.setEffectStyleIdAsync(ES[effect]); return f; }
+function svgNode(parent, name, key, maxW, maxH) { const a = ASSET[key]; if (!a) throw new Error("missing asset " + key); const n = a.clone(); parent.appendChild(n); n.name = name; n.visible = true; const s = Math.min(maxW / n.width, maxH / n.height); n.rescale(s); return n; }
+const fadeUp = (n, at, d = 0.5, dist = 20) => { n.applyAnimationStyle(ST.Opacity, { duration: d, timelineOffset: at, props: { type: "fadeIn", easing: { type: "EASE_OUT" } } }); if (dist) n.applyAnimationStyle(ST.Position, { duration: d + 0.1, timelineOffset: at, props: { type: "slide_in", direction: "bottom", distance: dist, easing: { type: "EASE_OUT" } } }); };
+const fit = (t, maxH, min = 18) => { let s = t.fontSize; while (t.height > maxH && s > min) { s -= 1; t.fontSize = s; } return t; };
+const num = s => { const m = String(s).replace(/,/g, "").match(/-?\d+(\.\d+)?/); return m ? parseFloat(m[0]) : null; };
+
+async function build(card, idx) {
+  const F = figma.createFrame(); F.name = `card ${card.id}`; F.resize(1920, 1080); F.x = (ORIGIN + idx) % 6 * 2120; F.y = Math.floor((ORIGIN + idx) / 6) * 1400; F.fills = bp(C.field); F.clipsContent = true;
+  const b = border.createInstance(); F.appendChild(b); b.name = "border";
+  const head = await txt(F, "headline", card.headline, "Heading/H1", C.text, X0, 168, W - (card.hasQr ? 0 : 0)); fit(head, 160, 40);
+  const rule = figma.createRectangle(); F.appendChild(rule); rule.name = "rule"; rule.resize(220, 4); rule.x = X0; rule.y = head.y + head.height + 14; rule.fills = bp(C.fillAccent); rule.cornerRadius = 2; rule.setEffectStyleIdAsync(ES["Glow/Accent"]);
+  const top = rule.y + 44, bottom = 860;
+  const items = card.items || [];
+  const reveal = [];
+  const kind = card.kind;
+  if (kind === "title") {
+    head.textAlignHorizontal = "CENTER"; head.y = 330; rule.x = 960 - 110; rule.y = head.y + head.height + 18;
+    let y = rule.y + 50;
+    for (let i = 0; i < items.length; i++) { const g = figma.createFrame(); F.appendChild(g); g.name = `item ${i + 1}`; g.fills = []; g.resize(W, 10); g.x = X0; g.y = y;
+      const a = await txt(g, "title", items[i].title, "Display/Kicker", C.textAccent, 0, 0, W, "CENTER"); const d = await txt(g, "detail", items[i].detail, "Body/Large", C.text, 0, a.height + 8, W, "CENTER"); g.resize(W, d.y + d.height); y += g.height + 28; reveal.push(g); }
+  } else if (kind === "quote") {
+    const q = panel(F, "item 1", X0, top, W, bottom - top - 20); const bar = figma.createRectangle(); q.appendChild(bar); bar.resize(6, q.height - 40); bar.x = 30; bar.y = 20; bar.fills = bp(C.gold); bar.cornerRadius = 3;
+    const t = await txt(q, "quote", `“${card.quote || (items[0] && items[0].detail) || ""}”`, "Body/Large", C.text, 70, 40, W - 120); t.fontName = { family: "Inter", style: "Italic" }; t.fontSize = 48; fit(t, q.height - 140, 26);
+    await txt(q, "attribution", card.attribution || (items[0] && items[0].title) || "", "Label/Mono", C.textAccent, 70, Math.min(q.height - 70, t.y + t.height + 30), W - 120);
+    reveal.push(q);
+  } else if (kind === "equation") {
+    const shell = panel(F, "equation", X0, top, W, 300); const eq = svgNode(shell, "math", card.id + ".latex", W - 120, 220); eq.x = (W - eq.width) / 2; eq.y = (300 - eq.height) / 2; reveal.push(shell);
+    const terms = card.terms || []; const cols = Math.min(terms.length, 3), cw = (W - (cols - 1) * 24) / Math.max(cols, 1);
+    for (let i = 0; i < terms.length; i++) { const r = Math.floor(i / cols), c = i % cols; const p = panel(F, `term ${i + 1}`, X0 + c * (cw + 24), top + 330 + r * 118, cw, 100, { fill: C.well, stroke: null, effect: "Inset/Well", radius: 10 });
+      const m = svgNode(p, "symbol", card.id + ".term" + (i + 1), 150, 56); m.x = 22; m.y = (100 - m.height) / 2; await txt(p, "gloss", terms[i].gloss, "Body/Default", C.text, 190, 30, cw - 210).then(t => fit(t, 80, 18)); reveal.push(p); }
+  } else if (kind === "timeline") {
+    const y = top + 150; const ln = figma.createRectangle(); F.appendChild(ln); ln.name = "track"; ln.resize(W, 4); ln.x = X0; ln.y = y; ln.fills = bp(C.chart); ln.cornerRadius = 2;
+    const n = items.length, step = W / n;
+    for (let i = 0; i < n; i++) { const g = figma.createFrame(); F.appendChild(g); g.name = `item ${i + 1}`; g.fills = []; g.resize(step - 20, 10); g.x = X0 + i * step + 10; g.y = top;
+      const t = await txt(g, "title", items[i].title, "Heading/H2", C.textAccent, 0, 0, step - 20, "CENTER"); fit(t, 130, 26);
+      const dot = figma.createEllipse(); g.appendChild(dot); dot.resize(22, 22); dot.x = (step - 20) / 2 - 11; dot.y = 150 - 9; dot.fills = bp(C.fillAccent); dot.setEffectStyleIdAsync(ES["Glow/Accent"]);
+      const d = await txt(g, "detail", items[i].detail, "Body/Default", C.text, 0, 190, step - 20, "CENTER"); fit(d, bottom - top - 200, 18); g.resize(step - 20, d.y + d.height); reveal.push(g); }
+  } else if (kind === "table" && card.columns) {
+    const cols = card.columns.length, cw = W / cols; let y = top;
+    const hdr = panel(F, "header row", X0, y, W, 60, { fill: C.s2, effect: "Elevation/2 Raised", radius: 10 });
+    for (let c = 0; c < cols; c++) await txt(hdr, "col", card.columns[c], "Label/Mono", C.textAccent, c * cw + 20, 16, cw - 40);
+    y += 76; const rh = Math.min(120, (bottom - y) / Math.max(items.length, 1) - 10);
+    for (let i = 0; i < items.length; i++) { const row = panel(F, `item ${i + 1}`, X0, y, W, rh, { fill: C.s1, radius: 10 }); const cells = items[i].cells || [items[i].title, items[i].detail];
+      for (let c = 0; c < cols; c++) { const t = await txt(row, "cell", cells[c] ?? "", c === 0 ? "Heading/H2" : "Body/Default", c === 0 ? C.text : C.text, c * cw + 20, 14, cw - 40); t.fontSize = Math.min(t.fontSize, 30); fit(t, rh - 24, 16); }
+      y += rh + 10; reveal.push(row); }
+  } else if (kind === "stat_bars") {
+    const vals = items.map(it => num(it.detail) ?? num(it.title) ?? 0), max = Math.max(...vals, 1); let y = top; const rh = Math.min(150, (bottom - top) / Math.max(items.length, 1) - 16);
+    for (let i = 0; i < items.length; i++) { const row = figma.createFrame(); F.appendChild(row); row.name = `item ${i + 1}`; row.fills = []; row.resize(W, rh); row.x = X0; row.y = y;
+      await txt(row, "title", items[i].title, "Heading/H2", C.textAccent, 0, 0, 300);
+      const tr = panel(row, "track", 320, 8, W - 320, 34, { fill: C.well, stroke: null, effect: "Inset/Well", radius: 17 });
+      const bar = figma.createRectangle(); row.appendChild(bar); bar.name = "bar"; bar.x = 320; bar.y = 8; bar.resize(Math.max(12, (W - 320) * vals[i] / max), 34); bar.cornerRadius = 17; bar.fills = bp(C.fillAccent); bar.setEffectStyleIdAsync(ES["Glow/Accent"]);
+      const d = await txt(row, "detail", items[i].detail, "Body/Default", C.text, 320, 56, W - 320); fit(d, rh - 60, 18);
+      bar.applyManualKeyframeTrack({ type: "PROPERTY", name: "WIDTH" }, { keyframes: [{ timelinePosition: 1.2 + i * 1.2, value: { type: "FLOAT", value: 12 } }, { timelinePosition: 2.0 + i * 1.2, value: { type: "FLOAT", value: bar.width }, easing: { type: "EASE_OUT" } }] });
+      y += rh + 16; reveal.push(row); }
+  } else if (kind === "figure" && card.hasFigure) {
+    const img = svgNode(F, "item 1", card.id + ".fig", W, bottom - top - 60); img.x = X0 + (W - img.width) / 2; img.y = top; reveal.push(img);
+    const cap = await txt(F, "caption", card.caption || "", "Body/Default", C.text, X0, img.y + img.height + 14, W, "CENTER"); fit(cap, 60, 18);
+  } else {   // source, compare, table without columns, figure fallback: one panel per item
+    const n = Math.max(items.length, 1), horizontal = kind === "compare" && n <= 3;
+    const gap = 24, pw = horizontal ? (W - gap * (n - 1)) / n : W, ph = horizontal ? bottom - top - 10 : Math.min(190, (bottom - top - gap * (n - 1)) / n);
+    for (let i = 0; i < items.length; i++) { const p = panel(F, `item ${i + 1}`, horizontal ? X0 + i * (pw + gap) : X0, horizontal ? top : top + i * (ph + gap), pw, ph);
+      const t = await txt(p, "title", items[i].title, "Heading/H2", C.textAccent, 28, 22, pw - 56); fit(t, horizontal ? 160 : 60, 24);
+      const d = await txt(p, "detail", items[i].detail, horizontal ? "Body/Large" : "Body/Default", C.text, 28, t.y + t.height + 12, pw - 56); fit(d, ph - (t.y + t.height + 30), 18); reveal.push(p); }
+    if (kind === "figure") { const cap = await txt(F, "caption", card.caption || "", "Body/Default", C.textDim, X0, bottom - 40, W); }
+  }
+  // sources strip and QR
+  const src = await txt(F, "source", card.sources || "", "Source/Citation", C.textDim, X0, 890, card.hasQr ? W - 190 : W); fit(src, 60, 16);
+  if (card.hasQr) { const q = svgNode(F, "qr", card.id + ".qr", 150, 150); q.x = X1 - 150; q.y = 760; const qp = await txt(F, "qr label", "scan for the source", "Label/Mono Small", C.textDim, X1 - 190, 916, 190, "RIGHT"); }
+  // motion (placeholder seconds; figma_cues.py retimes "item N" / "term N" on their words)
+  fadeUp(head, 0.2, 0.5, 16); rule.applyAnimationStyle(ST.Opacity, { duration: 0.5, timelineOffset: 0.5, props: { type: "fadeIn", easing: { type: "EASE_OUT" } } });
+  reveal.forEach((n, i) => fadeUp(n, 1.0 + i * 1.2));
+  const tl = head.timelines[0]; head.setTimelineDuration(tl.id, Math.max(8, 2.5 + reveal.length * 1.2));
+  return { id: F.id, name: F.name, items: reveal.length };
+}
+const out = [];
+for (let i = 0; i < CARDS.length; i++) { const old = page.findOne(n => n.name === `card ${CARDS[i].id}` && n.parent === page); if (old) old.remove(); out.push(await build(CARDS[i], i)); }
+return out;
