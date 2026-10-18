@@ -35,6 +35,36 @@ def tier_stack():
 class BinaryRefinement(YTScene):
     SOURCE = "Source: The Original Power, §2.1 Set-Resolution Ladder"
 
+    def shot_S03_19(self):
+        i_cell = m.RoundedRectangle(width=6.0, height=5.25, corner_radius=0.12, stroke_color=HIM, stroke_width=4,
+                                    fill_color=NAVY2, fill_opacity=0.4).shift(m.LEFT * 2.7)
+        o_cell = m.RoundedRectangle(width=4.3, height=5.25, corner_radius=0.12, stroke_color=HER, stroke_width=4,
+                                    fill_color=NAVY2, fill_opacity=0.4).shift(m.RIGHT * 3.8)
+        stack = tier_stack().scale(1.08).move_to(i_cell)
+        o_lab = M(r"O", 56, HER).move_to(o_cell)
+        i_lab = M(r"I", 48, HIM).next_to(i_cell, m.UP, buff=0.12)
+        head = T("STRUCTURAL POSITIONS IN THE EXTRACTION CIRCUIT", 34, GOLD).to_edge(m.UP, buff=0.4)
+        self.add(head, i_cell, o_cell, i_lab, o_lab)
+        self.until(self.at(0, "structural"))
+        self.play(m.LaggedStart(*[m.FadeIn(row) for row in stack], lag_ratio=0.12), run_time=0.85)
+
+        self.until(self.at(1, "Elite"))
+        self.play(m.Indicate(stack[0], color=GOLD), m.Indicate(stack[1], color=DIM), run_time=0.65)
+
+        self.until(self.at(2, "Enforcement"))
+        self.play(m.Indicate(stack[2], color=INK), m.Indicate(stack[3], color=OK), run_time=0.65)
+
+        self.until(self.at(3, "decomposition"))
+        bracket = m.Brace(stack, m.LEFT, color=HIM)
+        payoffs = m.VGroup(*[
+            m.Rectangle(width=w, height=0.18, fill_color=c, fill_opacity=0.9, stroke_width=0)
+            for w, c in ((2.2, GOLD), (1.6, DIM), (1.15, INK), (0.75, OK))
+        ])
+        for bar, row in zip(payoffs, stack):
+            bar.next_to(row, m.RIGHT, buff=0.18)
+        self.play(m.GrowFromCenter(bracket), m.FadeIn(payoffs), run_time=0.65)
+        self.until(self.beat_end(3) - 0.2)
+
     def shot_S03_01(self):
         field = io_cells().scale(0.95).move_to([0, 0.1, 0])
         head = T("COARSE PROJECTION", 34, DIM).to_edge(m.UP, buff=0.55)

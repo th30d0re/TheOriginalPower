@@ -67,6 +67,19 @@ class ThreeModes(YTScene):
             anims.append(lane[1].animate.set_opacity(op))
         return anims
 
+    def shot_S14_11(self):
+        head, lanes, example = self._lanes()
+        self.add(head, lanes, example)
+        self.until(self.at(0, "Mode"))
+        labels = T("DESIGN      →      PROPAGATION      →      INTERVENTION", 31, GOLD, width=12.0).move_to(example)
+        self.play(m.Transform(example, labels), m.LaggedStart(*[m.Indicate(l) for l in lanes], lag_ratio=0.2), run_time=0.85)
+
+        self.until(self.at(1, "case"))
+        handoff = m.Arrow(lanes[0].get_right(), lanes[1].get_left(), color=GOLD, stroke_width=6)
+        note = T("INHERITED INSTITUTIONAL FIRMWARE · CASE-BY-CASE MODE", 30, INK, width=11.5).move_to(example)
+        self.play(*self._focus(lanes, 1), m.GrowArrow(handoff), m.Transform(example, note), run_time=0.7)
+        self.until(self.beat_end(1) - 0.2)
+
     def shot_S21_01(self):
         head, lanes, example = self._lanes()
         self.add(head, lanes, example)

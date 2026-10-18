@@ -29,6 +29,38 @@ def cline_bar():
 class ClineGradient(YTScene):
     SHOT = "S10-05"
 
+    def shot_S07_43(self):
+        head = T("CONTINUOUS HUMAN PIGMENTATION CLINE", 40, GOLD).to_edge(m.UP, buff=0.4)
+        cline = cline_bar().shift(m.UP * 0.25)
+        uv = T("HIGH UV / LOW LATITUDE                                      LOW UV / HIGH LATITUDE", 28, DIM, width=12.3)
+        uv.next_to(cline, m.DOWN, buff=0.55)
+        self.add(head)
+        self.until(self.at(0, "cline"))
+        self.play(m.FadeIn(cline), m.FadeIn(uv), run_time=0.75)
+
+        self.until(self.at(1, "folate"))
+        folate = T("FOLATE PROTECTION", 30, HER).next_to(cline, m.DOWN, buff=1.15).shift(m.LEFT * 3.0)
+        vitamin = T("VITAMIN D SYNTHESIS", 30, GOLD).next_to(cline, m.DOWN, buff=1.15).shift(m.RIGHT * 3.0)
+        folate_curve = m.ArcBetweenPoints(cline.get_left(), cline.get_center(), angle=-0.55, color=HER, stroke_width=5)
+        vitamin_curve = m.ArcBetweenPoints(cline.get_center(), cline.get_right(), angle=0.55, color=GOLD, stroke_width=5)
+        self.play(m.FadeIn(folate), m.FadeIn(vitamin), m.Create(folate_curve), m.Create(vitamin_curve), run_time=0.65)
+
+        self.until(self.at(2, "four"))
+        loci = m.VGroup(*[m.Dot(radius=0.13, color=GOLD) for _ in range(4)])
+        for dot, p in zip(loci, (0.16, 0.38, 0.62, 0.84)):
+            dot.move_to(cline[1].point_from_proportion(p))
+        stats = T("N = 2,092 · FOUR LOCI · ~29% VARIANCE", 29, GOLD).to_edge(m.DOWN, buff=0.35)
+        self.play(m.LaggedStart(*[m.FadeIn(d) for d in loci], lag_ratio=0.15), m.FadeIn(stats), run_time=0.65)
+
+        self.until(self.at(3, "Braña"))
+        brana = T("LA BRAÑA · 7,000 YEARS · DARK-SKIN ALLELES + BLUE EYES", 28, INK, width=12.0).move_to(stats)
+        self.play(m.Transform(stats, brana), run_time=0.55)
+
+        self.until(self.at(4, "Cheddar"))
+        cheddar = T("CHEDDAR MAN · DARK-TO-BLACK SKIN + BLUE/GREEN EYES", 28, INK, width=12.0).move_to(stats)
+        self.play(m.Transform(stats, cheddar), m.Indicate(cline, color=GOLD), run_time=0.6)
+        self.until(self.beat_end(4) - 0.2)
+
     def shot_S10_05(self):
         head = T("CONTINUOUS CLINE", 44, GOLD).to_edge(m.UP, buff=0.42)
         cline = cline_bar().shift(m.DOWN * 0.05)
@@ -58,6 +90,40 @@ class ClineGradient(YTScene):
 
 class BinaryPartitionCut(YTScene):
     SHOT = "S10-13"
+
+    def shot_S07_48(self):
+        cline = cline_bar().shift(m.UP * 0.45)
+        head = T("STATUTORY BINARY CUT", 42, GOLD).to_edge(m.UP, buff=0.4)
+        self.add(head, cline)
+        self.until(self.at(0, "binary"))
+        blade = m.Line(cline[0].get_top() + m.UP * 0.55, cline[0].get_bottom() + m.DOWN * 0.55,
+                       color=HER, stroke_width=9).move_to(cline[0])
+        walls = m.VGroup(
+            m.RoundedRectangle(width=5.7, height=2.25, corner_radius=0.08, stroke_color=INK, stroke_width=4),
+            m.RoundedRectangle(width=5.7, height=2.25, corner_radius=0.08, stroke_color=INK, stroke_width=4),
+        ).arrange(m.RIGHT, buff=0.2).move_to(cline)
+        self.play(m.Create(blade), m.FadeIn(walls), run_time=0.75)
+
+        self.until(self.at(1, "surveillance"))
+        costs = T("CONVERSION / CONCEALMENT / INTERMARRIAGE → SURVEILLANCE COST", 29, DIM, width=12.2)
+        costs.next_to(cline, m.DOWN, buff=0.65)
+        marker = T("VISIBLE PHENOTYPE → PERSISTENT ASSIGNMENT", 30, GOLD).next_to(costs, m.DOWN, buff=0.28)
+        self.play(m.FadeIn(costs), m.FadeIn(marker), run_time=0.6)
+
+        self.until(self.at(2, "1449"))
+        inherit = m.Arrow(walls[0].get_bottom(), walls[1].get_bottom(), path_arc=-0.7, color=GOLD, stroke_width=5)
+        tag = T("1449 DESCENT LOGIC → ATLANTIC PLANTATION BONDAGE", 28, GOLD, width=11.5).to_edge(m.DOWN, buff=0.3)
+        self.play(m.GrowArrow(inherit), m.Transform(marker, tag), run_time=0.65)
+
+        self.until(self.at(3, "1441"))
+        dates = T("1441 → 1444 → 1452/1455 → 1453 → 1486", 34, GOLD).move_to(marker)
+        self.play(m.Transform(marker, dates), run_time=0.55)
+
+        self.until(self.at(4, "continuous"))
+        final = T("CONTINUOUS BODY · ADMINISTRATIVE CATEGORY + BOUNDARY + INHERITANCE + ENFORCEMENT", 28, INK, width=12.4)
+        final.move_to(marker)
+        self.play(m.Transform(marker, final), walls.animate.set_stroke(HER, 6), run_time=0.65)
+        self.until(self.beat_end(4) - 0.2)
 
     def shot_S10_13(self):
         cline = cline_bar().shift(m.UP * 0.2)

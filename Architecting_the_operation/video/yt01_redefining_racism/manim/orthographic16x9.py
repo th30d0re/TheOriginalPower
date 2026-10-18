@@ -184,6 +184,40 @@ class Orthographic16x9(YTScene3D):
         anims.extend(self._legend_opacity(focus_idx=idx))
         self.play(*anims, run_time=0.5)
 
+    def shot_S02_05(self):
+        """YT02: assemble Figure 0.2, then walk the five structural tiers."""
+        self._lights()
+        tiers, slabs = _build_pyramid()
+        for slab in slabs:
+            slab.set_opacity(0)
+        self.add(tiers)
+        self._add_legend()
+        self._pyramid_camera(zoom=0.98)
+
+        self.until(self.at(0, "Requirement"))
+        self.play(
+            m.LaggedStart(*[slab.animate.set_opacity(1) for slab in slabs], lag_ratio=0.16),
+            *self._legend_opacity(all_on=True),
+            run_time=1.25,
+        )
+
+        focus = (
+            (1, "apex", 4, ELITE),
+            (2, "Puppet", 3, PUPPET),
+            (3, "Enforcement", 2, FORCE),
+            (4, "Buffer", 1, PAPER),
+            (5, "base", 0, NIGHT),
+        )
+        for k, cue, idx, color in focus:
+            self.until(self.at(k, cue))
+            self._focus_tier(slabs, idx, color)
+
+        adjacent = T("O_racialized  +  adjacent Out-groups", 30, HER, width=5.5)
+        adjacent.move_to([4.45, -3.25, 0])
+        self.flat(adjacent)
+        self.play(m.FadeIn(adjacent), run_time=0.4)
+        self.until(self.beat_end(5) - 0.2)
+
     def shot_S01_02(self):
         self._lights()
         tiers, slabs = _build_pyramid()

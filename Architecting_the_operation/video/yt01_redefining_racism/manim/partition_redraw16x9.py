@@ -158,6 +158,42 @@ class PartitionRedraw(YTScene):
     SHOT = "S19-05a"
     SOURCE = "Source: The Original Power, Ch. 4 · partition redraw"
 
+    def shot_S08_42(self):
+        head = T("VIRGINIA · OCTOBER 1705", 40, GOLD).to_edge(m.UP, buff=0.38)
+        elite = m.RoundedRectangle(width=2.4, height=1.0, corner_radius=0.1, stroke_color=GOLD, stroke_width=4,
+                                   fill_color=NAVY2, fill_opacity=0.8).shift(m.UP * 1.7)
+        elite_lab = M(r"E", 46, GOLD).move_to(elite)
+        labor = m.RoundedRectangle(width=10.8, height=2.0, corner_radius=0.12, stroke_color=INK, stroke_width=4,
+                                   fill_color=NAVY2, fill_opacity=0.55).shift(m.DOWN * 0.65)
+        lw = M(r"L_{\mathrm{white}}", 42, HIM).move_to(labor.get_center() + m.LEFT * 2.5)
+        lb = M(r"L_{\mathrm{black}}", 42, HER).move_to(labor.get_center() + m.RIGHT * 2.5)
+        plus = M(r"+", 48, INK).move_to(labor)
+        self.add(head, elite, elite_lab, labor, lw, lb, plus)
+        self.until(self.at(0, "1705"))
+        code = T("AN ACT CONCERNING SERVANTS AND SLAVES", 29, GOLD, width=11.0).next_to(head, m.DOWN, buff=0.16)
+        self.play(m.FadeIn(code), run_time=0.5)
+
+        self.until(self.at(1, "elevating"))
+        boundary = m.Line(labor.get_top(), labor.get_bottom(), color=GOLD, stroke_width=8).move_to(labor)
+        i_box = m.RoundedRectangle(width=5.25, height=2.0, corner_radius=0.1, stroke_color=HIM, stroke_width=5).move_to(lw)
+        o_box = m.RoundedRectangle(width=5.25, height=2.0, corner_radius=0.1, stroke_color=HER, stroke_width=5).move_to(lb)
+        self.play(m.Create(boundary), m.Create(i_box), m.Create(o_box), m.FadeOut(plus), run_time=0.7)
+
+        self.until(self.at(2, "freedom"))
+        badges = m.VGroup(*[T(x, 25, OK) for x in ("WHIPPING BAN", "CORN", "CASH", "MUSKET")])
+        badges.arrange(m.RIGHT, buff=0.24).next_to(i_box, m.DOWN, buff=0.35)
+        self.play(m.LaggedStart(*[m.FadeIn(b) for b in badges], lag_ratio=0.12), run_time=0.65)
+
+        self.until(self.at(3, "testifying"))
+        enforce = m.VGroup(*[
+            m.Arrow(i_box.get_bottom() + m.RIGHT * dx, o_box.get_bottom() + m.RIGHT * dx,
+                    path_arc=-0.45, color=HER, stroke_width=5)
+            for dx in (-1.3, 1.3)
+        ])
+        law = T("TESTIMONY BAN · FUGITIVE-PATROL DEPUTIZATION", 28, HER, width=11.0).to_edge(m.DOWN, buff=0.3)
+        self.play(m.LaggedStart(*[m.GrowArrow(a) for a in enforce], lag_ratio=0.2), m.FadeIn(law), run_time=0.7)
+        self.until(self.beat_end(3) - 0.2)
+
     def shot_S19_05a(self):
         fig = universe_frame()
         u, eq, i_box, o_box, i_lab, o_lab, boundary = fig

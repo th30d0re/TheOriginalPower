@@ -1,0 +1,261 @@
+{
+  "words": "outputs/YT02/words.json",
+  "manifest": "outputs/YT02/episode_manifest.json",
+  "scenes": [
+    {
+      "frame": "Scene · Orthographic illusion",
+      "turns": [128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144],
+      "beats": [
+        {"node": "camera", "turn": 2, "word": "Orthographic", "until": {"turn": 16, "word": "corrected"}},
+        {"node": "label in-group", "turn": 3, "word": "In-group"},
+        {"node": "label out-group", "turn": 3, "word": "Out-group"},
+        {"node": "caption white", "turn": 3, "word": "white"},
+        {"node": "caption black", "turn": 3, "word": "Black"},
+        {"node": "title", "turn": 1, "word": "five-tier"},
+        {"node": "tier label E · Elite", "turn": 1, "word": "Elite"},
+        {"node": "tier label P · Puppet Class", "turn": 1, "word": "Puppet"},
+        {"node": "tier label F · Enforcement Class", "turn": 1, "word": "Enforcement"},
+        {"node": "tier label I_buffer · Buffer Class", "turn": 1, "word": "Buffer"},
+        {"node": "tier label O · Out-group", "turn": 1, "word": "Out-group"},
+        {"node": "border", "after": "tier label O · Out-group", "gap": 0.6}
+      ]
+    },
+    {
+      "frame": "intro 1 · System Stress", "turns": [400, 401, 402, 403],
+      "beats": [
+        {"node": "description", "turn": 0, "word": "readout"},
+        {"node": "instrument", "turn": 2, "word": "System"},
+        {"node": "level MINIMAL", "turn": 3, "word": "minimal"},
+        {"node": "level MODERATE", "turn": 3, "word": "moderate"},
+        {"node": "level HIGH", "turn": 3, "word": "high"},
+        {"node": "level CRITICAL", "turn": 3, "word": "critical"}
+      ]
+    },
+    {
+      "frame": "intro 2 · Capital", "turns": [404],
+      "beats": [
+        {"node": "description", "turn": 0, "word": "maximum"},
+        {"node": "instrument", "turn": 0, "word": "Capital"},
+        {"node": "level BLOCKED", "after": "instrument", "gap": 0.6},
+        {"node": "level STAGNANT", "turn": 0, "word": "stagnant"},
+        {"node": "level EXPANDING", "turn": 0, "word": "expanding"},
+        {"node": "level AT RISK", "turn": 0, "word": "risk"}
+      ]
+    },
+    {
+      "frame": "intro 3 · Interference State", "turns": [405],
+      "beats": [
+        {"node": "description", "turn": 0, "word": "measures"},
+        {"node": "instrument", "turn": 0, "word": "Phi-load"},
+        {"node": "phi bar", "turn": 0, "word": "range"}
+      ]
+    },
+    {
+      "frame": "intro 4 · Threshold Dial", "turns": [406],
+      "beats": [
+        {"node": "description", "turn": 0, "word": "equal"},
+        {"node": "instrument", "turn": 0, "word": "threshold"},
+        {"node": "rho needle", "turn": 0, "word": "rho-tau", "until": {"turn": 0, "word": "crash"}},
+        {"node": "crash reading", "turn": 0, "word": "one", "nth": 0},
+        {"node": "crash dot", "after": "crash reading", "gap": 0.2},
+        {"node": "crash box", "turn": 0, "word": "crash"},
+        {"node": "post-patch box", "after": "crash box", "gap": 0.6}
+      ]
+    },
+    {
+      "frame": "intro 5 · Active Patch", "turns": [407],
+      "beats": [
+        {"node": "description", "turn": 0, "word": "recompile"},
+        {"node": "instrument", "turn": 0, "word": "Active"},
+        {"node": "patch", "turn": 0, "word": "update"}
+      ]
+    },
+    {
+      "frame": "intro 6 · Variables Deployed", "turns": [408],
+      "beats": [
+        {"node": "description", "turn": 0, "word": "chips"},
+        {"node": "instrument", "turn": 0, "word": "Variables"},
+        {"node": "chip I_buffer", "turn": 0, "word": "chips", "nth": 1},
+        {"node": "chip F_enforce^proto", "after": "chip I_buffer", "gap": 0.35},
+        {"node": "chip P_uppet^v1.0", "after": "chip F_enforce^proto", "gap": 0.35},
+        {"node": "chip W", "after": "chip P_uppet^v1.0", "gap": 0.35},
+        {"node": "chip E", "after": "chip W", "gap": 0.35},
+        {"node": "chip O_racialized", "after": "chip E", "gap": 0.35},
+        {"node": "chip I", "after": "chip O_racialized", "gap": 0.35}
+      ]
+    },
+    {
+      "frame": "intro 7 · Executing Function", "turns": [409],
+      "beats": [
+        {"node": "description", "turn": 0, "word": "algorithm"},
+        {"node": "instrument", "turn": 0, "word": "Executing"},
+        {"node": "function", "turn": 0, "word": "codifying"}
+      ]
+    },
+    {
+      "frame": "intro 8 · Wage Phasor", "turns": [410, 411, 412],
+      "beats": [
+        {"node": "description", "turn": 0, "word": "complex-wage"},
+        {"node": "instrument", "turn": 0, "word": "wage"},
+        {"node": "wage phasor", "turn": 0, "word": "phasor", "until": {"turn": 1, "word": "Quadrant"}},
+        {"node": "projection material", "turn": 1, "word": "Material"},
+        {"node": "projection psych", "turn": 1, "word": "psychological"},
+        {"node": "readout all material", "after": "projection material", "gap": 0.4},
+        {"node": "readout pure status", "turn": 1, "word": "pure"},
+        {"node": "readout Quadrant II", "turn": 1, "word": "Quadrant"}
+      ]
+    },
+    {
+      "frame": "intro 9 · Result", "turns": [413],
+      "beats": [
+        {"node": "description", "turn": 0, "word": "output"},
+        {"node": "instrument", "turn": 0, "word": "Result"},
+        {"node": "ticker 1", "turn": 0, "word": "policy"},
+        {"node": "ticker 2", "after": "ticker 1", "gap": 0.6},
+        {"node": "ticker 3", "turn": 0, "word": "warning"}
+      ]
+    },
+    {
+      "frame": "assembly", "turns": [414],
+      "beats": [
+        {"node": "era band", "turn": 0, "word": "instruments"},
+        {"node": "panel header", "turn": 0, "word": "dashboard"},
+        {"node": "panel stress", "turn": 0, "word": "stress"},
+        {"node": "panel capital", "turn": 0, "word": "extraction"},
+        {"node": "panel interference", "turn": 0, "word": "interference"},
+        {"node": "panel patch", "turn": 0, "word": "recompilation"},
+        {"node": "panel variables", "turn": 0, "word": "variables"},
+        {"node": "panel function", "turn": 0, "word": "function"},
+        {"node": "panel wage", "turn": 0, "word": "wage"},
+        {"node": "panel result", "turn": 0, "word": "output"},
+        {"node": "era progress", "after": "panel result", "gap": 0.5}
+      ]
+    },
+    {
+      "frame": "era 1486", "turns": [415, 416, 417, 418],
+      "beats": [
+        {"node": "era band", "turn": 0, "word": "1486"},
+        {"node": "panel header", "turn": 0, "word": "Log", "subtree": true},
+        {"node": "panel stress", "turn": 0, "word": "Stress", "subtree": true},
+        {"node": "panel capital", "turn": 0, "word": "Capital", "subtree": true},
+        {"node": "panel interference", "turn": 1, "word": "Phi-load", "subtree": true},
+        {"node": "rho needle", "turn": 1, "word": "Rho-tau", "until": {"turn": 1, "word": "eighty-five"}},
+        {"node": "panel patch", "turn": 1, "word": "Patch", "subtree": true},
+        {"node": "panel variables", "turn": 2, "word": "chips", "subtree": true},
+        {"node": "panel function", "turn": 2, "word": "Contract", "subtree": true},
+        {"node": "panel wage", "turn": 2, "word": "wage", "subtree": true},
+        {"node": "wage phasor", "turn": 2, "word": "phasor", "until": {"turn": 2, "word": "status"}},
+        {"node": "panel result", "turn": 3, "word": "Result", "subtree": true},
+        {"node": "era progress", "after": "panel result", "gap": 0.5}
+      ]
+    },
+    {
+      "frame": "era 1676", "turns": [419, 420, 421, 422],
+      "beats": [
+        {"node": "era band", "turn": 0, "word": "1676"},
+        {"node": "panel header", "turn": 0, "word": "Log", "subtree": true},
+        {"node": "panel stress", "turn": 0, "word": "Stress", "subtree": true},
+        {"node": "panel capital", "turn": 0, "word": "Capital", "subtree": true},
+        {"node": "panel interference", "turn": 1, "word": "Rho-tau", "subtree": true},
+        {"node": "rho needle", "turn": 1, "word": "Rho-tau", "until": {"turn": 1, "word": "seventy-five"}},
+        {"node": "panel patch", "turn": 1, "word": "recompile", "subtree": true},
+        {"node": "panel variables", "turn": 2, "word": "chips", "subtree": true},
+        {"node": "panel wage", "turn": 2, "word": "wage", "subtree": true},
+        {"node": "wage phasor", "turn": 2, "word": "wage", "until": {"turn": 2, "word": "degrees"}},
+        {"node": "panel function", "turn": 3, "word": "function", "subtree": true},
+        {"node": "panel result", "turn": 3, "word": "Result", "subtree": true},
+        {"node": "era progress", "after": "panel result", "gap": 0.5}
+      ]
+    },
+    {
+      "frame": "era 1704", "turns": [423, 424, 425, 426],
+      "beats": [
+        {"node": "era band", "turn": 0, "word": "1704"},
+        {"node": "panel header", "turn": 0, "word": "Log", "subtree": true},
+        {"node": "panel stress", "turn": 0, "word": "Stress", "subtree": true},
+        {"node": "panel capital", "turn": 0, "word": "Capital", "subtree": true},
+        {"node": "panel interference", "turn": 1, "word": "Phi-load", "subtree": true},
+        {"node": "rho needle", "turn": 1, "word": "rho-tau", "until": {"turn": 1, "word": "sixty-five"}},
+        {"node": "panel patch", "after": "panel interference", "gap": 0.6, "subtree": true},
+        {"node": "panel wage", "turn": 2, "word": "wage", "subtree": true},
+        {"node": "wage phasor", "turn": 2, "word": "wage", "until": {"turn": 2, "word": "degrees"}},
+        {"node": "panel variables", "turn": 2, "word": "Enforcement", "subtree": true},
+        {"node": "panel function", "turn": 3, "word": "function", "subtree": true},
+        {"node": "panel result", "turn": 3, "word": "Result", "subtree": true},
+        {"node": "era progress", "after": "panel result", "gap": 0.5}
+      ]
+    },
+    {
+      "frame": "era 1894", "turns": [427, 428, 429, 430, 431],
+      "beats": [
+        {"node": "era band", "turn": 0, "word": "1894"},
+        {"node": "panel header", "turn": 0, "word": "Log", "subtree": true},
+        {"node": "panel stress", "turn": 0, "word": "Stress", "subtree": true},
+        {"node": "panel capital", "turn": 1, "word": "Capital", "subtree": true},
+        {"node": "panel interference", "turn": 1, "word": "Phi-load", "subtree": true},
+        {"node": "rho needle", "turn": 1, "word": "rho-tau", "until": {"turn": 1, "word": "sixty-eight"}},
+        {"node": "panel patch", "after": "panel interference", "gap": 0.6, "subtree": true},
+        {"node": "panel wage", "turn": 2, "word": "Wage", "subtree": true},
+        {"node": "wage phasor", "turn": 2, "word": "Wage", "until": {"turn": 3, "word": "mechanism"}},
+        {"node": "panel variables", "turn": 3, "word": "redlining", "subtree": true},
+        {"node": "panel function", "turn": 3, "word": "containment", "subtree": true},
+        {"node": "panel result", "turn": 4, "word": "Result", "subtree": true},
+        {"node": "era progress", "after": "panel result", "gap": 0.5}
+      ]
+    },
+    {
+      "frame": "era 1968", "turns": [432, 433, 434, 435],
+      "beats": [
+        {"node": "era band", "turn": 0, "word": "1968-to-1994"},
+        {"node": "panel header", "turn": 0, "word": "Log", "subtree": true},
+        {"node": "panel stress", "turn": 0, "word": "Stress", "subtree": true},
+        {"node": "panel capital", "turn": 0, "word": "Capital", "subtree": true},
+        {"node": "panel interference", "turn": 1, "word": "Phi-load", "subtree": true},
+        {"node": "rho needle", "turn": 1, "word": "rho-tau", "until": {"turn": 1, "word": "ninety-eight"}},
+        {"node": "panel patch", "after": "panel interference", "gap": 0.6, "subtree": true},
+        {"node": "panel variables", "turn": 1, "word": "tiers", "subtree": true},
+        {"node": "panel wage", "turn": 2, "word": "Theta", "subtree": true},
+        {"node": "wage phasor", "turn": 2, "word": "Theta", "until": {"turn": 2, "word": "Quadrant"}},
+        {"node": "panel function", "turn": 3, "word": "function", "subtree": true},
+        {"node": "panel result", "turn": 3, "word": "Result", "subtree": true},
+        {"node": "era progress", "after": "panel result", "gap": 0.5}
+      ]
+    },
+    {
+      "frame": "era 1994", "turns": [436, 437, 438, 439],
+      "beats": [
+        {"node": "era band", "turn": 0, "word": "1994"},
+        {"node": "panel header", "turn": 0, "word": "Log", "subtree": true},
+        {"node": "panel stress", "turn": 0, "word": "Stress", "subtree": true},
+        {"node": "panel capital", "turn": 0, "word": "Capital", "subtree": true},
+        {"node": "panel interference", "turn": 1, "word": "Phi-load", "subtree": true},
+        {"node": "rho needle", "turn": 1, "word": "rho-tau", "until": {"turn": 1, "word": "five"}},
+        {"node": "panel patch", "after": "panel interference", "gap": 0.6, "subtree": true},
+        {"node": "panel variables", "turn": 1, "word": "tiers", "subtree": true},
+        {"node": "panel wage", "turn": 2, "word": "phasor", "subtree": true},
+        {"node": "wage phasor", "turn": 2, "word": "phasor", "until": {"turn": 2, "word": "material"}},
+        {"node": "panel function", "turn": 2, "word": "subroutine", "subtree": true},
+        {"node": "panel result", "turn": 3, "word": "warning", "subtree": true},
+        {"node": "era progress", "after": "panel result", "gap": 0.5}
+      ]
+    },
+    {
+      "frame": "era 2010", "turns": [440, 441, 442, 443, 444],
+      "beats": [
+        {"node": "era band", "turn": 0, "word": "2010s"},
+        {"node": "panel header", "turn": 0, "word": "Log", "subtree": true},
+        {"node": "panel stress", "turn": 0, "word": "Stress", "subtree": true},
+        {"node": "panel capital", "turn": 1, "word": "Capital", "subtree": true},
+        {"node": "panel interference", "turn": 1, "word": "Phi-load", "subtree": true},
+        {"node": "rho needle", "turn": 1, "word": "rho-tau", "until": {"turn": 1, "word": "eight"}},
+        {"node": "panel patch", "after": "panel interference", "gap": 0.6, "subtree": true},
+        {"node": "panel variables", "turn": 1, "word": "targeting", "subtree": true},
+        {"node": "panel wage", "turn": 2, "word": "Quadrant", "subtree": true},
+        {"node": "wage phasor", "turn": 2, "word": "Quadrant", "until": {"turn": 2, "word": "hardware"}},
+        {"node": "panel function", "turn": 3, "word": "function", "subtree": true},
+        {"node": "panel result", "turn": 3, "word": "warning", "subtree": true},
+        {"node": "era progress", "turn": 4, "word": "Across"}
+      ]
+    }
+  ]
+}

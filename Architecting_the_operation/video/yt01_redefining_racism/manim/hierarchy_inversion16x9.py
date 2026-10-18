@@ -24,6 +24,35 @@ def stack_block(labels, colors, x, widths=None):
 class HierarchyInversion(YTScene):
     SHOT = "S06-29"
 
+    def shot_S13_01(self):
+        head = T("FIGURE 2.3 · INVERTING THE DEFINITIONAL HIERARCHY", 36, GOLD, width=12.5).to_edge(m.UP, buff=0.4)
+        left = stack_block(
+            ["INDIVIDUAL PREJUDICE", "IDEOLOGY", "SYSTEMIC STRUCTURE"], [HER, HER, DIM], -3.75
+        )
+        right = stack_block(
+            ["SYSTEMIC POLICIES + STRUCTURES", "IDEOLOGICAL NARRATIVES", "INTERPERSONAL PREJUDICE"],
+            [OK, GOLD, HER], 3.75,
+        )
+        arrow = m.CurvedArrow(left.get_right(), right.get_left(), angle=-m.PI / 2, color=GOLD, stroke_width=6)
+        self.add(head, left, right)
+        self.until(self.at(0, "return"))
+        self.play(m.FadeIn(arrow), run_time=0.5)
+
+        self.until(self.at(1, "Inverting"))
+        self.play(m.Rotate(arrow, m.PI, about_point=m.ORIGIN), right.animate.set_opacity(1), run_time=0.65)
+
+        self.until(self.at(2, "systemic"))
+        self.play(m.Indicate(right[0], color=OK), left.animate.set_opacity(0.35), run_time=0.6)
+
+        self.until(self.at(3, "ideological"))
+        self.play(m.Indicate(right[1], color=GOLD), run_time=0.55)
+
+        self.until(self.at(4, "interpersonal"))
+        feedback = m.CurvedArrow(right[2].get_left(), right[0].get_left(), angle=-m.PI / 2, color=GOLD,
+                                 stroke_width=4, dashed_ratio=0.45)
+        self.play(m.Indicate(right[2], color=HER), m.Create(feedback), run_time=0.7)
+        self.until(self.beat_end(4) - 0.2)
+
     def shot_S06_29(self):
         card = self.card(0)
         head = T(card["headline"], 40, GOLD, width=12.5).to_edge(m.UP, buff=0.42)

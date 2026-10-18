@@ -45,6 +45,24 @@ class ZoomingBinary(YTScene):
     SHOT = "S03-46"
     SOURCE = "Source: The Original Power, Figure 2.1"
 
+    def shot_S03_42(self):
+        head = T("FIGURE 2.1 · ZOOMING THE BINARY", 40, GOLD, width=12.4).to_edge(m.UP, buff=0.38)
+        coarse_i = chain_i = m.RoundedRectangle(width=5.4, height=4.8, corner_radius=0.14,
+                                                stroke_color=HIM, stroke_width=5, fill_color=NAVY2, fill_opacity=0.5)
+        coarse_o = m.RoundedRectangle(width=5.4, height=4.8, corner_radius=0.14,
+                                      stroke_color=HER, stroke_width=5, fill_color=NAVY2, fill_opacity=0.5)
+        coarse = m.VGroup(coarse_i, coarse_o).arrange(m.RIGHT, buff=0.35).shift(m.DOWN * 0.25)
+        labels = m.VGroup(M(r"I", 64, HIM).move_to(coarse_i), M(r"O", 64, HER).move_to(coarse_o))
+        self.add(head, coarse, labels)
+        self.until(self.at(0, "Figure"))
+        i_rows = tier_rows(I_TIERS, HIM).scale(0.78).move_to(coarse_i)
+        o_rows = tier_rows(O_TIERS, HER).scale(0.78).move_to(coarse_o)
+        self.play(m.FadeOut(labels), m.LaggedStart(*[m.FadeIn(r) for r in i_rows], lag_ratio=0.1),
+                  m.LaggedStart(*[m.FadeIn(r) for r in o_rows], lag_ratio=0.1), run_time=0.9)
+        alpha = M(r"X\rightarrow X^{+}_{\alpha}\dot\cup X^{-}_{\alpha}", 46, GOLD).to_edge(m.DOWN, buff=0.28)
+        self.play(m.FadeIn(alpha), run_time=0.5)
+        self.until(self.beat_end(0) - 0.2)
+
     def shot_S03_46(self):
         card = self.card(0)
         head = T(card["headline"], 40, GOLD, width=12.4).to_edge(m.UP, buff=0.38)

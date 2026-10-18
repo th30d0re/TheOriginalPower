@@ -46,6 +46,48 @@ class RecursivePartition(YTScene):
         new.next_to(self.axis_head, m.DOWN, buff=0.25)
         self.play(m.Transform(self.axis_value, new), run_time=0.45)
 
+    def shot_S03_33(self):
+        eq = M(r"X=X^{+}_{\alpha}\,\dot\cup\,X^{-}_{\alpha}", 58, GOLD).to_edge(m.UP, buff=0.42)
+        outer = m.RoundedRectangle(width=8.8, height=4.8, corner_radius=0.15, stroke_color=INK, stroke_width=3,
+                                   fill_color=NAVY2, fill_opacity=0.2).shift(m.LEFT * 1.5 + m.DOWN * 0.35)
+        plus_box, plus_head = cell(HIM, r"X^{+}_{\alpha}", "locally advantaged")
+        minus_box, minus_head = cell(HER, r"X^{-}_{\alpha}", "locally subordinated")
+        plus_box.move_to(outer.get_center() + m.LEFT * 2.15)
+        minus_box.move_to(outer.get_center() + m.RIGHT * 2.15)
+        plus_head.move_to(plus_box.get_top() + m.DOWN * 0.72)
+        minus_head.move_to(minus_box.get_top() + m.DOWN * 0.72)
+        rail = m.VGroup(*[T(v, 25, DIM) for v in ("GENDER", "WEALTH", "CREDENTIALS", "RELIGION", "RECORD")])
+        rail.arrange(m.DOWN, buff=0.18).next_to(outer, m.RIGHT, buff=0.35)
+        self.add(eq, outer)
+        self.until(self.at(0, "alpha"))
+        self.play(m.LaggedStart(*[m.FadeIn(v) for v in rail], lag_ratio=0.12), run_time=0.65)
+
+        self.until(self.at(1, "advantaged"))
+        cut = m.Line(outer.get_top(), outer.get_bottom(), color=GOLD, stroke_width=6).move_to(outer)
+        self.play(m.Create(cut), m.FadeIn(plus_box), m.FadeIn(minus_box), m.FadeIn(plus_head), m.FadeIn(minus_head), run_time=0.75)
+
+        self.until(self.at(2, "gender"))
+        target = T("I_buffer · α = GENDER", 30, GOLD).next_to(eq, m.DOWN, buff=0.15)
+        self.play(m.FadeIn(target), rail[0].animate.set_color(GOLD), run_time=0.55)
+
+        self.until(self.at(3, "men"))
+        male = T("HEAD-OF-HOUSEHOLD AUTHORITY", 27, HIM, width=3.7).move_to(plus_box).shift(m.DOWN * 0.5)
+        female = T("PROPERTY + REPRODUCTIVE SUBORDINATION", 27, HER, width=3.7).move_to(minus_box).shift(m.DOWN * 0.5)
+        self.play(m.FadeIn(male), m.FadeIn(female), run_time=0.6)
+
+        self.until(self.at(4, "property"))
+        hcuts = m.VGroup(
+            m.Line(plus_box.get_left(), plus_box.get_right(), color=DIM, stroke_width=4),
+            m.Line(minus_box.get_left(), minus_box.get_right(), color=DIM, stroke_width=4),
+        )
+        self.play(m.Create(hcuts), rail[1].animate.set_color(GOLD), rail[-1].animate.set_color(GOLD), run_time=0.65)
+
+        self.until(self.at(5, "credentialing"))
+        target2 = T("O_racialized · α = CREDENTIALS / SKIN TONE", 30, GOLD, width=7.5).move_to(target)
+        incorporated = m.SurroundingRectangle(plus_head, color=OK, buff=0.12, stroke_width=4)
+        self.play(m.Transform(target, target2), m.Create(incorporated), rail[2].animate.set_color(GOLD), run_time=0.65)
+        self.until(self.beat_end(5) - 0.2)
+
     def shot_S03_31(self):
         eq = M(r"X = X^{+}_{\alpha} \,\dot\cup\, X^{-}_{\alpha}, \qquad X^{+}_{\alpha} \cap X^{-}_{\alpha} = \varnothing", 54)
         eq.to_edge(m.UP, buff=0.42)

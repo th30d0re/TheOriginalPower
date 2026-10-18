@@ -55,6 +55,54 @@ def dashed_feedback_arc(start, end, color=ORANGE_FB):
 class CausalReversal(YTScene):
     SHOT = "S05-01"
 
+    def shot_S05_10(self):
+        head = T("EQUATION 2.5 · BOTTOM-UP AGGREGATION", 38, HER).to_edge(m.UP, buff=0.45)
+        row = causal_row(
+            ["INDIVIDUAL PREJUDICE", "DISCRIMINATORY ACTIONS", "SYSTEMIC OUTCOMES"],
+            [HER, HER, HER], 0, widths=[3.8, 4.0, 3.8], arrows_visible=False,
+        )
+        self.add(head, row)
+        self.until(self.at(0, "individuals"))
+        self.play(m.LaggedStart(*[a.animate.set_opacity(1) for a in row[1]], lag_ratio=0.25), run_time=0.7)
+        self.play(m.LaggedStart(*[m.GrowArrow(a) for a in row[1]], lag_ratio=0.25), run_time=0.7)
+
+        self.until(self.at(1, "intent"))
+        court = T("EQUAL PROTECTION · INTENT TEST", 32, GOLD).next_to(row[0][0], m.DOWN, buff=0.55)
+        bracket = m.SurroundingRectangle(row[0][0], color=GOLD, buff=0.12, stroke_width=5)
+        self.play(m.Create(bracket), m.FadeIn(court), run_time=0.6)
+
+        self.until(self.at(2, "policy"))
+        spot = m.SurroundingRectangle(row[0][0], color=HER, buff=0.22, stroke_width=8)
+        self.play(m.Transform(bracket, spot), row[0][1:].animate.set_opacity(0.35), run_time=0.55)
+
+        self.until(self.at(3, "persuasion"))
+        cure = T("MORAL PERSUASION · DIVERSITY WORKSHOPS · ATTITUDE ADJUSTMENT", 30, INK, width=12.0)
+        cure.to_edge(m.DOWN, buff=0.38)
+        self.play(m.FadeOut(court), m.FadeIn(cure), run_time=0.55)
+        self.until(self.beat_end(3) - 0.2)
+
+    def shot_S06_04(self):
+        head = T("FIGURE 2.2 · GENERATIVE CHAIN", 40, GOLD).to_edge(m.UP, buff=0.42)
+        row = causal_row(
+            ["ELITE ECONOMIC INTERESTS", "SYSTEMIC RACIALIZATION", "INTERPERSONAL PREJUDICE"],
+            [OK, OK, OK], 0.25, widths=[3.9, 4.2, 4.1], arrows_visible=False,
+        )
+        self.add(head, row)
+        self.until(self.at(0, "solid"))
+        self.play(m.LaggedStart(*[a.animate.set_opacity(1) for a in row[1]], lag_ratio=0.25), run_time=0.65)
+        self.play(m.LaggedStart(*[m.GrowArrow(a) for a in row[1]], lag_ratio=0.25), run_time=0.75)
+
+        self.until(self.at(1, "dashed"))
+        nodes = row[0]
+        feedback = dashed_feedback_arc(nodes[2].get_bottom() + m.DOWN * 0.3, nodes[1].get_bottom() + m.DOWN * 0.3)
+        label = T("REINFORCING FEEDBACK LOOP", 30, ORANGE_FB).next_to(feedback, m.DOWN, buff=0.12)
+        self.play(m.Create(feedback), m.FadeIn(label), run_time=0.7)
+
+        self.until(self.at(2, "feeds"))
+        self.play(m.Indicate(row[1], color=OK), m.Indicate(nodes[1], color=GOLD),
+                  m.Indicate(nodes[2], color=ORANGE_FB), m.Indicate(feedback, color=ORANGE_FB), run_time=0.75)
+        self.until(self.beat_end(2) - 0.2)
+
     def shot_S05_01(self):
         rows = m.VGroup(
             chain_node("INDIVIDUAL PREJUDICE", HER, 7.2),

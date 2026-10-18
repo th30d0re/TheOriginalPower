@@ -27,6 +27,29 @@ class FourComponentLoop(YTScene):
     SHOT = "S01-19"
     SOURCE = "Source: The Original Power, Ch. 2 · architecture of control"
 
+    def shot_S02_11(self):
+        nodes = m.VGroup(*[comp_node(c, col) for c, col in zip(COMPONENTS, (HER, INK, GOLD, DIM))])
+        nodes.arrange(m.RIGHT, buff=0.18).scale_to_fit_width(12.4).move_to([0, 0.55, 0])
+        head = T("FOUR OPERATIONAL MODULES", 36, GOLD).to_edge(m.UP, buff=0.5)
+        arrows = m.VGroup(*[
+            m.Arrow(a.get_right(), b.get_left(), buff=0.06, color=GOLD, stroke_width=4)
+            for a, b in zip(nodes, nodes[1:])
+        ])
+        loop = m.CurvedArrow(
+            nodes[-1].get_bottom(), nodes[0].get_bottom(), angle=-m.PI / 2.5, color=GOLD, stroke_width=4
+        ).shift(m.DOWN * 0.55)
+        self.add(head)
+        self.until(self.at(0, "four"))
+        self.play(m.LaggedStart(*[m.FadeIn(n) for n in nodes], lag_ratio=0.12), run_time=0.8)
+        self.play(m.LaggedStart(*[m.GrowArrow(a) for a in arrows], lag_ratio=0.15), m.Create(loop), run_time=0.8)
+
+        self.until(self.at(1, "movement"))
+        pair = m.SurroundingRectangle(m.VGroup(nodes[0], nodes[1]), color=HER, buff=0.12, stroke_width=5)
+        detail = T("MOVEMENT · PROPERTY · REPRODUCTION   /   SELECTIVE EMPATHY", 30, INK, width=12.0)
+        detail.to_edge(m.DOWN, buff=0.45)
+        self.play(m.Create(pair), m.FadeIn(detail), run_time=0.65)
+        self.until(self.beat_end(1) - 0.2)
+
     def shot_S01_19(self):
         nodes = m.VGroup(*[comp_node(c, col) for c, col in zip(COMPONENTS, (HER, INK, GOLD, DIM))])
         nodes.arrange(m.RIGHT, buff=0.18).scale_to_fit_width(12.4).move_to([0, 0.55, 0])

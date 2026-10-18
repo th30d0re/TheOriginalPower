@@ -78,6 +78,38 @@ class SetTheoryPrimer(YTScene):
         ).arrange(m.RIGHT, buff=0.28)
         return m.VGroup(row1, row2).arrange(m.DOWN, buff=0.65).move_to([0, 0.15, 0])
 
+    def shot_S03_08(self):
+        head = self._heading("ELEMENTARY SET OPERATIONS")
+        u, u_lab = self._universe()
+        self.add(head, u, u_lab)
+        self.until(self.at(0, "operations"))
+        notation = M(r"A \subset U\qquad A\cup B\qquad A\cap B\qquad A\dot\cup B", 48, GOLD)
+        notation.next_to(head, m.DOWN, buff=0.2)
+        self.play(m.FadeIn(notation), run_time=0.5)
+
+        self.until(self.at(1, "set"))
+        a = m.Circle(radius=1.55, stroke_color=HIM, stroke_width=4, fill_color=HIM, fill_opacity=0.2)
+        a.move_to(u.get_center() + m.LEFT * 2.1)
+        a_lab = M(r"A\subset U", 44, HIM).move_to(a)
+        self.play(m.Create(a), m.FadeIn(a_lab), run_time=0.65)
+
+        self.until(self.at(2, "union"))
+        b = m.Circle(radius=1.55, stroke_color=HER, stroke_width=4, fill_color=HER, fill_opacity=0.2)
+        b.move_to(u.get_center() + m.RIGHT * 0.1)
+        b_lab = M(r"B", 44, HER).move_to(b.get_center() + m.RIGHT * 0.65)
+        union = M(r"A\cup B", 48, GOLD).next_to(u, m.DOWN, buff=0.2).shift(m.LEFT * 2.0)
+        self.play(m.Create(b), m.FadeIn(b_lab), m.FadeIn(union), run_time=0.6)
+        self.until(self.at(2, "intersection"))
+        lens = m.Intersection(a, b, color=GOLD, fill_opacity=0.7, stroke_color=GOLD, stroke_width=3)
+        inter = M(r"A\cap B", 48, GOLD).next_to(u, m.DOWN, buff=0.2).shift(m.RIGHT * 2.0)
+        self.play(m.FadeIn(lens), m.FadeIn(inter), run_time=0.55)
+
+        self.until(self.at(3, "zero"))
+        self.play(b.animate.shift(m.RIGHT * 2.1), b_lab.animate.shift(m.RIGHT * 2.1), m.FadeOut(lens), run_time=0.7)
+        partition = M(r"A\cap B=\varnothing\qquad A\dot\cup B", 52, GOLD).move_to(m.VGroup(union, inter))
+        self.play(m.FadeOut(union), m.FadeOut(inter), m.FadeIn(partition), run_time=0.5)
+        self.until(self.beat_end(3) - 0.2)
+
     def shot_S02_01(self):
         key = self._heading("NOTATION KEY")
         u, u_lab = self._universe()

@@ -101,6 +101,29 @@ class CostBarsOverTime(YTScene):
         group.arrange(m.RIGHT, buff=0.75, aligned_edge=m.DOWN)
         return group
 
+    def shot_S10_17(self):
+        head = T("1954–1965 · JIM CROW COST SPIKE", 40, GOLD).to_edge(m.UP, buff=0.42)
+        bars = self._bars(1.15, 1.25, 1.05).shift(m.DOWN * 0.35)
+        ceiling = m.DashedLine([-5.1, 1.4, 0], [5.1, 1.4, 0], color=HER, stroke_width=4, dash_length=0.14)
+        ceiling_l = T("UNSUSTAINABLE", 27, HER).next_to(ceiling, m.RIGHT, buff=0.15)
+        self.add(head, ceiling, ceiling_l)
+        self.until(self.at(0, "spiked"))
+        self.play(m.FadeIn(bars), *[bar[0].animate.stretch_to_fit_height(2.1) for bar in bars], run_time=0.8)
+
+        self.until(self.at(1, "Birmingham"))
+        events = T("BIRMINGHAM · SELMA · COLD WAR LEGITIMACY", 30, GOLD).to_edge(m.DOWN, buff=0.42)
+        self.play(bars[1][0].animate.stretch_to_fit_height(3.1), m.FadeIn(events), run_time=0.65)
+
+        self.until(self.at(2, "boycotts"))
+        self.play(bars[0][0].animate.stretch_to_fit_height(2.8), bars[2][0].animate.stretch_to_fit_height(2.65),
+                  m.Indicate(ceiling, color=HER), run_time=0.7)
+
+        self.until(self.at(3, "Interface"))
+        swapped = self._bars(0.8, 0.55, 2.6).move_to(bars)
+        label = T("EXPLICIT PARTITION → CRIMINAL / FISCAL PROXY", 32, GOLD, width=11.5).move_to(events)
+        self.play(m.Transform(bars, swapped), m.Transform(events, label), run_time=0.8)
+        self.until(self.beat_end(3) - 0.2)
+
     def shot_S12_20(self):
         head = T("JIM CROW → WAR ON DRUGS", 44, GOLD).to_edge(m.UP, buff=0.42)
         era = T("MID-1950s COSTS RISING", 36, DIM, "NORMAL").next_to(head, m.DOWN, buff=0.16)

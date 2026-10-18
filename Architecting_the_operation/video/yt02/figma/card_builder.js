@@ -33,25 +33,30 @@ async function build(card, idx) {
   const b = border.createInstance(); F.appendChild(b); b.name = "border";
   const head = await txt(F, "headline", card.headline, "Heading/H1", C.text, X0, 168, W - (card.hasQr ? 0 : 0)); fit(head, 160, 40);
   const rule = figma.createRectangle(); F.appendChild(rule); rule.name = "rule"; rule.resize(220, 4); rule.x = X0; rule.y = head.y + head.height + 14; rule.fills = bp(C.fillAccent); rule.cornerRadius = 2; rule.setEffectStyleIdAsync(ES["Glow/Accent"]);
-  const top = rule.y + 44, bottom = 860;
+  const top = rule.y + 44, bottom = card.hasQr ? 740 : 860;
   const items = card.items || [];
   const reveal = [];
   const kind = card.kind;
   if (kind === "title") {
-    head.textAlignHorizontal = "CENTER"; head.y = 330; rule.x = 960 - 110; rule.y = head.y + head.height + 18;
-    let y = rule.y + 50;
-    for (let i = 0; i < items.length; i++) { const g = figma.createFrame(); F.appendChild(g); g.name = `item ${i + 1}`; g.fills = []; g.resize(W, 10); g.x = X0; g.y = y;
-      const a = await txt(g, "title", items[i].title, "Display/Kicker", C.textAccent, 0, 0, W, "CENTER"); const d = await txt(g, "detail", items[i].detail, "Body/Large", C.text, 0, a.height + 8, W, "CENTER"); g.resize(W, d.y + d.height); y += g.height + 28; reveal.push(g); }
+    head.textAlignHorizontal = "CENTER"; const gs = [];
+    for (let i = 0; i < items.length; i++) { const g = figma.createFrame(); F.appendChild(g); g.name = `item ${i + 1}`; g.fills = []; g.resize(W, 10); g.x = X0;
+      const a = await txt(g, "title", items[i].title, "Display/Kicker", C.textAccent, 0, 0, W, "CENTER"); const d = await txt(g, "detail", items[i].detail, "Body/Large", C.text, 0, a.height + 8, W, "CENTER"); g.resize(W, d.y + d.height); gs.push(g); reveal.push(g); }
+    const lay = () => head.height + 68 + gs.reduce((h, g) => h + g.height + 28, 0) - 28;
+    let ds = gs.length ? gs[0].findOne(n => n.name === "detail").fontSize : 0;
+    while (lay() > 700 && ds > 22) { ds -= 2; for (const g of gs) { const a = g.findOne(n => n.name === "title"), d = g.findOne(n => n.name === "detail"); d.fontSize = ds; d.y = a.height + 8; g.resize(W, d.y + d.height); } }
+    head.y = Math.round(Math.min(330, Math.max(150, (1010 - lay()) / 2))); rule.x = 960 - 110; rule.y = head.y + head.height + 18;
+    let y = rule.y + 50; for (const g of gs) { g.y = y; y += g.height + 28; }
   } else if (kind === "quote") {
     const q = panel(F, "item 1", X0, top, W, bottom - top - 20); const bar = figma.createRectangle(); q.appendChild(bar); bar.resize(6, q.height - 40); bar.x = 30; bar.y = 20; bar.fills = bp(C.gold); bar.cornerRadius = 3;
     const t = await txt(q, "quote", `“${card.quote || (items[0] && items[0].detail) || ""}”`, "Body/Large", C.text, 70, 40, W - 120); t.fontName = { family: "Inter", style: "Italic" }; t.fontSize = 48; fit(t, q.height - 140, 26);
     await txt(q, "attribution", card.attribution || (items[0] && items[0].title) || "", "Label/Mono", C.textAccent, 70, Math.min(q.height - 70, t.y + t.height + 30), W - 120);
     reveal.push(q);
   } else if (kind === "equation") {
-    const shell = panel(F, "equation", X0, top, W, 300); const eq = svgNode(shell, "math", card.id + ".latex", W - 120, 220); eq.x = (W - eq.width) / 2; eq.y = (300 - eq.height) / 2; reveal.push(shell);
-    const terms = card.terms || []; const cols = Math.min(terms.length, 3), cw = (W - (cols - 1) * 24) / Math.max(cols, 1);
-    for (let i = 0; i < terms.length; i++) { const r = Math.floor(i / cols), c = i % cols; const p = panel(F, `term ${i + 1}`, X0 + c * (cw + 24), top + 330 + r * 118, cw, 100, { fill: C.well, stroke: null, effect: "Inset/Well", radius: 10 });
-      const m = svgNode(p, "symbol", card.id + ".term" + (i + 1), 150, 56); m.x = 22; m.y = (100 - m.height) / 2; await txt(p, "gloss", terms[i].gloss, "Body/Default", C.text, 190, 30, cw - 210).then(t => fit(t, 80, 18)); reveal.push(p); }
+    const terms = card.terms || []; const cols = Math.min(terms.length, 3), cw = (W - (cols - 1) * 24) / Math.max(cols, 1), rows = Math.ceil(terms.length / Math.max(cols, 1)), th = 124;
+    const sh = Math.round(Math.max(180, Math.min(300, bottom - top - rows * (th + 18) - 12)));
+    const shell = panel(F, "equation", X0, top, W, sh); const eq = svgNode(shell, "math", card.id + ".latex", W - 120, sh - 70); eq.x = (W - eq.width) / 2; eq.y = (sh - eq.height) / 2; reveal.push(shell);
+    for (let i = 0; i < terms.length; i++) { const r = Math.floor(i / cols), c = i % cols; const p = panel(F, `term ${i + 1}`, X0 + c * (cw + 24), top + sh + 30 + r * (th + 18), cw, th, { fill: C.well, stroke: null, effect: "Inset/Well", radius: 10 });
+      const m = svgNode(p, "symbol", card.id + ".term" + (i + 1), cw * 0.36, 60); m.x = 22; m.y = (th - m.height) / 2; const gt = await txt(p, "gloss", terms[i].gloss, "Body/Default", C.text, m.width + 44, 14, cw - m.width - 62); fit(gt, th - 24, 16); gt.y = Math.round((th - gt.height) / 2); reveal.push(p); }
   } else if (kind === "timeline") {
     const y = top + 150; const ln = figma.createRectangle(); F.appendChild(ln); ln.name = "track"; ln.resize(W, 4); ln.x = X0; ln.y = y; ln.fills = bp(C.chart); ln.cornerRadius = 2;
     const n = items.length, step = W / n;
@@ -67,15 +72,14 @@ async function build(card, idx) {
     for (let i = 0; i < items.length; i++) { const row = panel(F, `item ${i + 1}`, X0, y, W, rh, { fill: C.s1, radius: 10 }); const cells = items[i].cells || [items[i].title, items[i].detail];
       for (let c = 0; c < cols; c++) { const t = await txt(row, "cell", cells[c] ?? "", c === 0 ? "Heading/H2" : "Body/Default", c === 0 ? C.text : C.text, c * cw + 20, 14, cw - 40); t.fontSize = Math.min(t.fontSize, 30); fit(t, rh - 24, 16); }
       y += rh + 10; reveal.push(row); }
-  } else if (kind === "stat_bars") {
-    const vals = items.map(it => num(it.detail) ?? num(it.title) ?? 0), max = Math.max(...vals, 1); let y = top; const rh = Math.min(150, (bottom - top) / Math.max(items.length, 1) - 16);
-    for (let i = 0; i < items.length; i++) { const row = figma.createFrame(); F.appendChild(row); row.name = `item ${i + 1}`; row.fills = []; row.resize(W, rh); row.x = X0; row.y = y;
-      await txt(row, "title", items[i].title, "Heading/H2", C.textAccent, 0, 0, 300);
-      const tr = panel(row, "track", 320, 8, W - 320, 34, { fill: C.well, stroke: null, effect: "Inset/Well", radius: 17 });
-      const bar = figma.createRectangle(); row.appendChild(bar); bar.name = "bar"; bar.x = 320; bar.y = 8; bar.resize(Math.max(12, (W - 320) * vals[i] / max), 34); bar.cornerRadius = 17; bar.fills = bp(C.fillAccent); bar.setEffectStyleIdAsync(ES["Glow/Accent"]);
-      const d = await txt(row, "detail", items[i].detail, "Body/Default", C.text, 320, 56, W - 320); fit(d, rh - 60, 18);
-      const bt = (card.beats && card.beats[Math.min(i, card.beats.length - 1)]) || (1.2 + i * 1.2); bar.applyManualKeyframeTrack({ type: "PROPERTY", name: "WIDTH" }, { keyframes: [{ timelinePosition: bt + 0.2, value: { type: "FLOAT", value: 12 } }, { timelinePosition: bt + 1.0, value: { type: "FLOAT", value: bar.width }, easing: { type: "EASE_OUT" } }] });
-      y += rh + 16; reveal.push(row); }
+  } else if (kind === "stat_bars") {   // one big figure per row: the book's numbers carry different units, so no shared bar scale
+    const n = Math.max(items.length, 1), gap = 14, rh = Math.min(150, (bottom - top - gap * (n - 1)) / n); let y = top;
+    for (let i = 0; i < items.length; i++) { const row = panel(F, `item ${i + 1}`, X0, y, W, rh, { radius: 10 });
+      const m = String(items[i].detail).match(/\d[\d,.]*(\s?(%|x|to 1))?/) || String(items[i].title).match(/\d[\d,.]*%?/);
+      const v = await txt(row, "stat", m ? m[0] : "", "Heading/H1", C.gold, 24, 0, 300, "RIGHT"); fit(v, rh - 16, 28); v.y = Math.round((rh - v.height) / 2);
+      const t = await txt(row, "title", items[i].title, "Heading/H2", C.textAccent, 360, 0, W - 390); fit(t, 44, 22);
+      const d = await txt(row, "detail", items[i].detail, "Body/Default", C.text, 360, 0, W - 390); fit(d, rh - t.height - 22, 18);
+      t.y = Math.round((rh - t.height - d.height - 6) / 2); d.y = t.y + t.height + 6; y += rh + gap; reveal.push(row); }
   } else if (kind === "figure" && card.hasFigure) {
     const img = svgNode(F, "item 1", card.id + ".fig", W, bottom - top - 60); img.x = X0 + (W - img.width) / 2; img.y = top; reveal.push(img);
     const cap = await txt(F, "caption", card.caption || "", "Body/Default", C.text, X0, img.y + img.height + 14, W, "CENTER"); fit(cap, 60, 18);
@@ -83,8 +87,11 @@ async function build(card, idx) {
     const n = Math.max(items.length, 1), horizontal = kind === "compare" && n <= 3;
     const gap = 24, pw = horizontal ? (W - gap * (n - 1)) / n : W, ph = horizontal ? bottom - top - 10 : Math.min(190, (bottom - top - gap * (n - 1)) / n);
     for (let i = 0; i < items.length; i++) { const p = panel(F, `item ${i + 1}`, horizontal ? X0 + i * (pw + gap) : X0, horizontal ? top : top + i * (ph + gap), pw, ph);
-      const t = await txt(p, "title", items[i].title, "Heading/H2", C.textAccent, 28, 22, pw - 56); fit(t, horizontal ? 160 : 60, 24);
-      const d = await txt(p, "detail", items[i].detail, horizontal ? "Body/Large" : "Body/Default", C.text, 28, t.y + t.height + 12, pw - 56); fit(d, ph - (t.y + t.height + 30), 18); reveal.push(p); }
+      if (horizontal) { const t = await txt(p, "title", items[i].title, "Heading/H2", C.textAccent, 28, 22, pw - 56); fit(t, 160, 24);
+        const d = await txt(p, "detail", items[i].detail, "Body/Large", C.text, 28, t.y + t.height + 12, pw - 56); fit(d, ph - (t.y + t.height + 30), 18); }
+      else { const tw = Math.round(pw * 0.36); const t = await txt(p, "title", items[i].title, "Heading/H2", C.textAccent, 28, 0, tw - 28); fit(t, ph - 20, 22); t.y = Math.round((ph - t.height) / 2);
+        const d = await txt(p, "detail", items[i].detail, "Body/Large", C.text, tw + 24, 0, pw - tw - 52); fit(d, ph - 20, 20); d.y = Math.round((ph - d.height) / 2); }
+      reveal.push(p); }
     if (kind === "figure") { const cap = await txt(F, "caption", card.caption || "", "Body/Default", C.textDim, X0, bottom - 40, W); }
   }
   // sources strip and QR

@@ -23,6 +23,32 @@ def bar_group(labels, heights, colors, width=1.75, label_size=34):
 class KernelOptimizationCase(YTScene):
     SHOT = "S09-01"
 
+    def shot_S10_06(self):
+        title = T("FIGURE 2.4 · EXTRACTION / ENFORCEMENT", 40, GOLD).to_edge(m.UP, buff=0.4)
+        rev = bar_group(("1840", "1850", "1860"), (1.1, 1.52, 3.65), (OK, OK, OK), width=1.5, label_size=30)
+        sup = bar_group(("2.70%", "2.88%", "2.75%"), (1.0, 1.07, 1.02), (HER, HER, HER), width=1.5, label_size=30)
+        rev.move_to([-3.3, -0.45, 0])
+        sup.move_to([3.5, -1.2, 0])
+        rev_l = T("COTTON REVENUE ($M)", 30, OK).next_to(rev, m.UP, buff=0.25)
+        sup_l = T("PATROL / MILITIA RATIO", 30, HER).next_to(sup, m.UP, buff=0.25)
+        self.add(title, rev_l, sup_l)
+        self.until(self.at(0, "1840"))
+        self.play(m.FadeIn(rev[0]), run_time=0.45)
+        self.until(self.at(1, "same"))
+        self.play(m.FadeIn(sup[0]), run_time=0.45)
+        self.until(self.at(2, "1850"))
+        self.play(m.FadeIn(rev[1]), m.FadeIn(sup[1]), run_time=0.5)
+        self.until(self.at(3, "1860"))
+        self.play(m.FadeIn(rev[2]), m.FadeIn(sup[2]), run_time=0.5)
+        values = T("$74.1M / $2.0M     $102.5M / $2.95M     $247.0M / $6.8M", 28, INK, width=12.0)
+        values.to_edge(m.DOWN, buff=0.75)
+        self.play(m.FadeIn(values), run_time=0.45)
+        self.until(self.at(4, "233"))
+        stable = T("2.70%–2.88% · CV < 0.04 · ENSLAVED POPULATION 2,487,455 → 3,953,761", 28, GOLD, width=12.3)
+        stable.to_edge(m.DOWN, buff=0.28)
+        self.play(m.FadeIn(stable), m.Indicate(sup, color=GOLD), run_time=0.65)
+        self.until(self.beat_end(4) - 0.2)
+
     def shot_S09_01(self):
         title = T("ANTEBELLUM KERNEL CASE", 44, GOLD).to_edge(m.UP, buff=0.42)
         span = T("1840–1860 · COTTON ECONOMY", 34, DIM, "NORMAL").next_to(title, m.DOWN, buff=0.2)
@@ -49,6 +75,30 @@ class KernelOptimizationCase(YTScene):
 
 class CottonGinConfound(YTScene):
     SHOT = "S09-13"
+
+    def shot_S10_11(self):
+        head = T("HISTORICAL CONFOUND CHECKS", 40, GOLD).to_edge(m.UP, buff=0.42)
+        gin = exe = m.RoundedRectangle(width=4.5, height=2.7, corner_radius=0.12, stroke_color=INK, stroke_width=4,
+                                       fill_color=NAVY2, fill_opacity=0.8).shift(m.LEFT * 3.6)
+        gin_l = T("1793 COTTON GIN\n50× PROCESSING", 32, INK, width=4.1).move_to(gin)
+        acreage = m.VGroup(*[m.Rectangle(width=0.7, height=0.5, fill_color=OK, fill_opacity=0.7, stroke_width=0)
+                             for _ in range(20)]).arrange_in_grid(4, 5, buff=0.11).shift(m.RIGHT * 3.4)
+        self.add(head)
+        self.until(self.at(0, "gin"))
+        flow = m.Arrow(gin.get_right(), acreage.get_left(), color=GOLD, stroke_width=6)
+        demand = T("ACREAGE ↑ · ENSLAVED LABOR DEMAND ↑", 29, HER).to_edge(m.DOWN, buff=0.48)
+        self.play(m.FadeIn(gin), m.FadeIn(gin_l), m.GrowArrow(flow), m.FadeIn(acreage), m.FadeIn(demand), run_time=0.8)
+
+        self.until(self.at(1, "1831"))
+        lock = T("1831–1832 · LITERACY BAN · ASSEMBLY BAN · COMPULSORY WHITE PATROLS", 29, HER, width=12.2)
+        lock.move_to(demand)
+        self.play(m.Transform(demand, lock), acreage.animate.set_color(HER), run_time=0.65)
+
+        self.until(self.at(2, "supports"))
+        result = T("PREDICTIONS 4 + 2 SUPPORTED · OVERHEAD 2.7%–2.9%", 32, GOLD, width=11.5)
+        result.move_to(demand)
+        self.play(m.Transform(demand, result), m.Indicate(gin, color=GOLD), run_time=0.6)
+        self.until(self.beat_end(2) - 0.2)
 
     def shot_S09_13(self):
         head = T("COTTON GIN CONFOUND", 44, GOLD).to_edge(m.UP, buff=0.42)
