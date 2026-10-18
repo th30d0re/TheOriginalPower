@@ -132,3 +132,28 @@ One continuous manimgx scene that builds the plane on screen. Every beat lands o
 
 Style: 1080p30, the YT02 palette, smooth `rate_func`s, no static text walls. Captions go in a reserved lower band
 that never overlaps the plane. This is the episode's "showing off the math" moment, so build it to look like it.
+
+## H. Primary-source imagery (author request, 2026-10-18)
+
+When the narration quotes a law, opinion or dataset, show the actual page. Use public-domain scans only, and keep the
+provenance (source URL, volume, page, access date) in `video/yt02/archive/SOURCES.md`.
+
+Shot pattern (manimgx): the scanned page fades in, a slow push-in moves toward the clause, and a gold highlight sweeps
+across the exact line as it is read, with the citation in a lower-left tag. Hold for at least 3 s. Never crop out the
+page header or the page number, because they are the receipt.
+
+Already on disk (`Paper/research/kimi_sources/`):
+- Hening vol. 1 p. 226, Act X of 1639/40: "ALL persons except negroes to be provided with arms" (page images).
+- FBI Expanded Homicide Table 8, 2021–2025 (render as a table, with the rifle row highlighted).
+
+To gather (public domain):
+- Hening vol. 3: the 1705 Servants and Slaves act, §XXXV.
+- Hening vol. 5: the 1738 militia act, §V.
+- *Dred Scott* 60 U.S. 393, pp. 416–417 (the "keep and carry arms" passage).
+- *Cruikshank* 92 U.S. 542 (scan already in `Paper/research/ia_scotus_pdfs/`).
+- The Zurara chronicle, Dum Diversas, the 1662 *partus* act, and the 1691/1705 codes.
+- Federalist No. 10 (first printing).
+- Library of Congress photos for Jim Crow, Birmingham and Selma (check the rights field on each item).
+- The Atwater/Lamis tape (audio).
+
+Look for an image for every primary source the script cites; a document on screen persuades more than a paraphrase.
