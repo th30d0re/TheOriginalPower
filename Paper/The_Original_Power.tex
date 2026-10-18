@@ -2392,7 +2392,7 @@ The induced electric field performs real material work, and Lenz's Law (Section~
 
 The framework therefore distinguishes two operational regimes of $j\psi_s$:
 \begin{itemize}
-    \item \textbf{Steady state (orthogonal deflection):} $j\psi_s$ stores energy and deflects the Buffer Class horizontally, away from vertical class solidarity. It performs zero work in the extraction direction and zero work against the Elite.
+    \item \textbf{Steady state (orthogonal deflection):} $j\psi_s$ stores energy and deflects the Buffer Class rightward, away from class solidarity along the material axis. It performs zero work in the extraction direction and zero work against the Elite.
     \item \textbf{Transient collapse (opposing violence):} A forced change in systemic current ($di/dt$) triggers field collapse. The induced force opposes the reform current (Lenz's Law) and performs real material work against the Out-group's kinetic mobilization.
 \end{itemize}
 
@@ -2862,25 +2862,35 @@ scalar sum but a \textbf{complex number}:
 W = \psi_m + j\psi_s
 \end{equation}
 
+The diagrams display this complex wage on the standard Argand plane rotated one
+quarter turn clockwise: screen coordinates are $(x,y)=(\psi_s,-\psi_m)$, the
+mapping produced by multiplication by $-j$. The rotation preserves every
+magnitude, angle, and orientation. The definition $W=\psi_m+j\psi_s$ and every
+cosine and sine projection therefore remain unchanged. Positive material value
+delivered to the governed tier points down; material extraction points up toward
+the Elite; positive psychological value points right. The phase angle $\theta$
+opens from the downward $+\psi_m$ direction toward $+\psi_s$.
+Quadrant~II consequently occupies the upper-right region after $\theta$ passes $90°$.
+
 \begin{figure}[htbp]
 \centering
 \begin{tikzpicture}[line width=0.6pt]
-  % Material (real) is vertical. Psychological (imaginary) is horizontal.
-  % θ opens from the material axis toward the psychological axis.
+  % Screen coordinates: (x,y)=(psi_s,-psi_m), a clockwise quarter-turn.
+  % θ opens from downward +psi_m toward rightward +psi_s.
   \draw[->] (-0.25,0) -- (4.55,0)
     node[right, font=\scriptsize] {$j\psi_s$};
-  \draw[->] (0,-0.25) -- (0,6.15)
+  \draw[->] (0,0.25) -- (0,-6.15)
     node[right, font=\scriptsize, align=left]
       {$\psi_m = P_{\text{real}}$\\$= |V||I|\cos\theta$};
-  \draw[dashed, gray!65] (3.25,0) -- (3.25,4.8) -- (0,4.8);
-  \draw[->, blue!65!black, line width=1.0pt] (0,0) -- (3.25,4.8);
-  \node[font=\scriptsize, anchor=west] at (3.45,2.55) {$W=\psi_m+j\psi_s$};
-  \draw[->] (0,1.15) arc[start angle=90,end angle=55.9,radius=1.15];
-  \node[font=\scriptsize] at (0.52,1.42) {$\theta$};
-  \node[font=\scriptsize, align=center, below] at (3.25,0)
+  \draw[dashed, gray!65] (3.25,0) -- (3.25,-4.8) -- (0,-4.8);
+  \draw[->, blue!65!black, line width=1.0pt] (0,0) -- (3.25,-4.8);
+  \node[font=\scriptsize, anchor=west] at (3.45,-2.55) {$W=\psi_m+j\psi_s$};
+  \draw[->] (0,-1.15) arc[start angle=-90,end angle=-55.9,radius=1.15];
+  \node[font=\scriptsize] at (0.52,-1.42) {$\theta$};
+  \node[font=\scriptsize, align=center, above] at (3.25,0)
     {$\psi_s = Q_{\text{reactive}}$\\$= |V||I|\sin\theta$};
 \end{tikzpicture}
-\caption[The complex wage phasor]{\textbf{The Complex Wage Phasor.} The real and reactive decomposition stated in Equation~\ref{eq:2.2a-complex-suppression-allocation}.}
+\caption[The complex wage phasor]{\textbf{The Complex Wage Phasor.} Positive $\psi_m$ points down toward the governed tier, positive $\psi_s$ points right, and $\theta$ opens from $+\psi_m$ toward $+\psi_s$. The real and reactive decomposition remains Equation~\ref{eq:2.2a-complex-suppression-allocation}.}
 \label{fig:complex_wage_phasor}
 \end{figure}
 where $j = \sqrt{-1}$ signals that $\psi_s$ operates in a domain
@@ -2948,8 +2958,8 @@ Out-group:
 W + W^* = (\psi_m + j\psi_s) + (\psi_m - j\psi_s) = 2\psi_m
 \end{equation}
 The imaginary status wage cancels entirely. Real material power doubles. The
-horizontal deflection collapses; combined class momentum is now purely vertical,
-directed at the Elite.
+rightward status deflection collapses; combined class momentum follows the
+material axis toward the Elite.
 \end{theorem}
 
 These theorems explain why the Elite is existentially threatened by cross-group
@@ -3335,7 +3345,7 @@ To prevent a recurrence of the cross-racial solidarity that had nearly toppled t
 
 \begin{enumerate}
     \item \textbf{The Partition:} They assigned $L_{white}$ to a new category: "White."
-    \item \textbf{The Bribe:} They gave the poor whites the psychological wage $\psi$ (Chapter~\ref{ch:portugal})---the right to police the Black population, the right to bear arms, and immunity from chattel slavery.
+    \item \textbf{The Bribe:} They gave poor whites immunity from chattel slavery and a joint wage: arms in the material channel $\psi_m$, coupled with deputized authority to police the Black population in the status channel $\psi_s$ (Chapter~\ref{ch:portugal}; Section~\ref{subsec:arms_joint_wage}).
 \end{enumerate}
 
 This was the definitive move of the American algorithm: It used "Race" to destroy "Class." It recruited the poor white population to act as the \textbf{Buffer Class}, protecting the Elite from the very people they should have been allied with.\footnote{Equation~\ref{eq:3.3-race-destroys-class} is classified as Tier~3 (ordinal/structural); the structural transition from poor white laborer to Elite defender is an ordinal claim validated by the documented sequence from Bacon's Rebellion (1676) to the Virginia Slave Codes (1705). See the anchor case study on p.~\pageref{cs:bacons_rebellion} and the Empirical Methodology chapter (p.~\pageref{ch:empirical_methodology}).}
@@ -5090,6 +5100,89 @@ The Second Amendment, particularly when philosophically paired with the Declarat
 The guarantee derived its force from proximity. The Buffer Class's alignment with the Second Amendment was underwritten by direct, daily knowledge of exactly what they were being guaranteed against. The plantation was visible. The horror was documented, witnessed, and understood---across the fence line, in the fields, in the quarters. When the 1705 contract promised $I_{\text{buffer}}$ that they would never be subjected to the extraction kernel, it pointed at something specific---something $I_{\text{buffer}}$ could see from the road. The consequence is that the Buffer Class's constitutional alignment was a terror-anchored commitment: they would protect the system that produced those horrors because the system's continued operation was proof that those horrors would bypass them. Any threat to the system was experienced as a threat to that guarantee. This explains the intensity that the framework's kinetic analysis must account for: a population defending a witnessed boundary between themselves and what they knew was on the other side of it.
 
 The Necessary Condition Theorem (Section~\ref{sec:necessary_condition}) reveals the structural inversion beneath this arrangement. The Second Amendment is framed as $E$ protecting $I_{\text{buffer}}$: the Elite gifting the Buffer Class the tools to resist tyranny. The demographic mathematics of the antebellum system invert this framing. The Elite could not maintain $M(t) < \tau$ without $K_B$. The weapons were a \textit{payment} to the Buffer Class for the service the Elite desperately required: the daily enforcement of a system that would have collapsed the moment the numerically superior, armed buffer class turned those weapons toward liberation and away from suppression. The Second Amendment was the Elite purchasing the necessary condition of their own survival---and constructing a narrative in which the Buffer Class believed the transaction ran the other way.
+
+\subsection{Arms as a Joint Material and Psychological Wage}
+\label{subsec:arms_joint_wage}
+
+Arms occupy the material channel of the complex wage. Among the classes of
+property named in the Bill of Rights, arms alone receive an express guarantee
+of the right to ``keep'' them. The Second Amendment recognizes a right held by
+``the people'' and bars government infringement. \textit{United States v.\ Cruikshank}
+described this right as prior to the Constitution and held that the
+Second Amendment restricted federal power while leaving state interference
+beyond federal protection at that time \cite{cruikshank1876}.
+
+The guarantee attached to ``the people,'' a category that the governing legal
+order compiled as white. Taney's \textit{Dred Scott} opinion exposed the
+boundary by treating Black citizenship as a route to the right ``to keep and
+carry arms wherever they went'' \cite{dredscott}. Arms therefore functioned as
+property and as proof of recognized membership. The 1705 contract joined the
+material possession of arms, $\psi_m>0$, to deputized authority over the racial
+boundary, $\psi_s>0$. This joint wage occupies Quadrant~I. Figure~\ref{fig:arms-joint-wage}
+places it illustratively near $45^\circ$; the position is Tier~3 ordinal and asserts
+no historical value for $\theta$.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[line width=0.6pt]
+  \draw[->] (0,0) -- (4.0,0) node[right,font=\scriptsize] {$+\psi_s$ (deputized status)};
+  \draw[->] (0,0) -- (0,-4.0) node[below,font=\scriptsize] {$+\psi_m$ (arms)};
+  \draw[->,very thick,blue!65!black] (0,0) -- (2.7,-2.7) node[right,font=\scriptsize] {1705 joint wage};
+  \draw[->] (0,-0.85) arc (-90:-45:0.85);
+  \node[font=\scriptsize,anchor=west] at (0.95,-0.45) {$\theta\approx45^\circ$};
+  \node[font=\scriptsize] at (2.7,-3.15) {Quadrant I; Tier 3 illustration};
+\end{tikzpicture}
+\caption{\textbf{Arms as a Joint Wage.} Material possession and deputized status are positive components of one 1705 collateral package.}
+\label{fig:arms-joint-wage}
+\end{figure}
+
+Compulsory militia and slave-patrol service placed the same institution in
+Quadrant~II. The Buffer Class supplied unpaid labor, exposure, and physical risk
+through the negative material component $\psi_m<0$, while deputized command over
+the Out-group supplied the positive status component $\psi_s>0$
+\cite{hadden_slave_patrols}. The patrol-expenditure series in
+Section~2.3.2 and Figure~\ref{fig:eq05_kernel} records the Elite's budget for
+maintaining that deputized system as extraction expanded. The joint wage and the
+compulsory service burden therefore coexist inside a single enforcement
+institution.
+
+\paragraph{The people as the linchpin.}
+Gun control that survives constitutional challenge operates through the legal
+boundary around ``the people.'' The felon-in-possession bar in
+18~U.S.C.~\S~922(g)(1), enacted through the Gun Control Act of 1968, combines
+with the War on Drugs' racially disparate felony-conviction pipeline
+\cite{gca1968,alexander}. The resulting felony-disqualification architecture
+preserves a quasi-boundary around the Out-group's capacity to accumulate arms.
+The proxy is criminal status; its distribution carries the racial partition
+forward after explicit racial disarmament became legally vulnerable.
+
+\paragraph{Dual erosion in the present.}
+The status component $\psi_s$ is eroding as the arms boundary between the
+Buffer Class and the Out-group loses definition. Black women form the
+fastest-growing cohort of new owners documented in
+Section~\ref{subsubsec:awb_gendered} \cite{nssf_black_gun_owners_2021,nih_covid_guns_2022}.
+Parity in arms makes the shared structural position visible. The material
+component $\psi_m$ is also eroding: current bans target rifles such as the
+AR-15, whose kinetic utility includes resistance to state force, while rifles
+constitute a small share of interpersonal homicide.
+
+Both components of the 1705 collateral consequently decay at once. Under the
+Necessary Condition Theorem (Section~\ref{sec:necessary_condition}), the Elite
+depends on the Buffer Class's continued enforcement labor and its separation
+from the Out-group. The visible shared position supplies the precondition for
+cross-class coherence. Erosion in $\psi_m$ weakens the collateral; erosion in
+$\psi_s$ weakens the partition that directs kinetic capacity away from the
+kernel.
+
+\paragraph{Kinetic-channel calibration.}
+A two-series anchor can calibrate the enforcement/kinetic channel of the complex
+wage. The $\psi_m$ series measures the Buffer Class's legal access to classes of
+arms over time. The $\psi_s$ series measures the access differential between the
+Buffer Class and the Out-group, preserving the relational definition of status.
+The anchor's scope excludes land, wages, and schooling; those channels require
+their own observables. The statutory access series is Tier~2 where enacted law
+and dated classifications supply direct measurements. The historical tier
+differential and its phase interpretation remain Tier~3 ordinal.
 
 \subsection{The General Strike of the Enslaved: Du Bois's Proof of Out-Group Kinetic Agency}
 \label{sec:general_strike_sub}
@@ -14202,7 +14295,7 @@ A systemic Feynman diagram models the interaction between two individuals when t
 \item \textbf{External legs (incoming):} The $+q$ Buffer Class node and the $-q$ Out-group node approaching each other in spacetime (e.g., a job interview, a traffic stop, a retail interaction).
 \item \textbf{The vertex:} The interaction point. Charges interact by the exchange of force-carrying particles rather than by physical collision.
 \item \textbf{The virtual photon (internal line):} The systemic photon exchanged at the vertex. This is a microaggression, an assertion of the psychological wage $j\psi_s$, a discriminatory evaluation criterion---a discrete package of ideological force transmitted from the $+q$ node to the $-q$ node. It is ``virtual'' in the QED sense; its effect on the trajectories of both particles is precisely calculable.
-\item \textbf{External legs (outgoing):} The post-interaction trajectories. The $-q$ Out-group node exits with reduced kinetic momentum (loss of $\tau$, increased resistance $R$ in their subsequent path through the circuit). The $+q$ Buffer Class node exits with their status reinforced---their internal psychological wage $j\psi_s$ has been renewed; they have gained no real power $\psi_m$. They are orthogonally deflected away from vertical class solidarity and returned to horizontal cyclotron motion.
+\item \textbf{External legs (outgoing):} The post-interaction trajectories. The $-q$ Out-group node exits with reduced kinetic momentum (loss of $\tau$, increased resistance $R$ in their subsequent path through the circuit). The $+q$ Buffer Class node exits with their status reinforced---their internal psychological wage $j\psi_s$ has been renewed; they have gained no real power $\psi_m$. They are orthogonally deflected away from class solidarity along the material axis and returned to rightward cyclotron motion.
 \end{itemize}
 \end{definition}
 

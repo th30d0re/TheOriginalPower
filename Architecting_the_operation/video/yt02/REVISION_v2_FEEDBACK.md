@@ -92,3 +92,43 @@ Script: `Architecting_the_operation/podcasts/YT02_what_racism_is.md` (19,120 wor
    gender domain?
 
 See the chat reply of 2026-10-18 for the analysis of each one. Record the decisions here before script v2 starts.
+
+## F. Author decisions (2026-10-18)
+
+- **Axis: reversed, in both the book and the video.** Positive ψ_m (value delivered down to the governed) points down;
+  extraction points up toward the Elite; ψ_s points right. This is the standard plane turned a quarter turn clockwise
+  (screen (x, y) = (ψ_s, −ψ_m), i.e. ×(−j)), so magnitudes, angles and orientation are all preserved. That sentence is
+  the on-air disclaimer, replacing L1248–1253. Quadrant II now sits upper-right. Redraw every phasor shot
+  (SEG 09 manimgx, dashboard intro 8, era wage panels). Book edit: `Paper/MS_REVISION_axis_arms_BRIEF.md`.
+- **Arms are a joint material + status wage.** Arms are the only class of property the Bill of Rights guarantees
+  the right to keep by name. The Second Amendment bars the government and protects "the people", and the fight is
+  over who counts as "the people" (Dred Scott; § 922(g)(1) plus War on Drugs felony disparities).
+  - At 1705 the wage sits in the first quadrant, drawn near 45° and labelled illustrative (no invented θ).
+  - Compulsory militia and patrol service is Quadrant II inside one institution.
+  - Today both components erode together: the arms boundary with the Out-group fails (ψ_s), and rifle bans target
+    anti-state capacity (ψ_m).
+  - The kinetic channel is a two-series calibration anchor.
+  Replace L1336 accordingly. The video follows the book text once Codex's revision is verified.
+- **Symbols:** introduce each set symbol on screen the first time it appears; disjoint union is ∪ with a dot.
+
+## G. Hero shot: building the complex-wage plane (manimgx, replaces the static axis cards in SEG 09)
+
+One continuous manimgx scene that builds the plane on screen. Every beat lands on its narration word.
+1. **Number line.** A `NumberLine` fades in with ticks −3…3. A dot slides to +2, then to −2: "one dimension, two directions".
+2. **Second dimension.** A vertical line grows out of 0, and the line becomes a `ComplexPlane` with the standard textbook
+   layout (real axis horizontal, imaginary axis vertical, labels Re and Im). The j label pops in as "j = √−1".
+3. **A number becomes a vector.** Plot z = a + jb as a dot, then an arrow from 0 to it. The dashed projections onto both
+   axes draw in, |z| and θ are measured from Re, and cosθ / sinθ highlight in the formula as each projection lights.
+4. **Assign the variables.** `TransformMatchingTex`: z → W, a → ψ_m, b → ψ_s. The axis labels morph Re → "material ψ_m"
+   (green) and Im → "psychological ψ_s" (gold), with each term of W = ψ_m + jψ_s highlighted as it is named.
+5. **The quarter turn.** The whole plane, with arrow, labels and projections attached, rotates 90° clockwise
+   (`Rotate(plane_group, -PI/2)`) on "we turn the plane a quarter turn". While it rotates, show "× (−j)" multiplying W,
+   and a ghost copy of the old arrow fades out. Then hold: extraction now points up toward an Elite marker at the top
+   edge, value delivered points down, and status points right.
+6. **Invariants check.** Flash |W| and θ before and after with equal signs: "every length, every angle, same
+   handedness". The quadrant labels slide into their new screen positions, and Quadrant II settles upper-right.
+7. **Payoff.** Sweep θ from 0° to past 90°: the arrow swings from down, through right, to up-right, with the
+   projections tracking live (`always_redraw`). Land on "Quadrant II: material extracted upward, paid in status".
+
+Style: 1080p30, the YT02 palette, smooth `rate_func`s, no static text walls. Captions go in a reserved lower band
+that never overlaps the plane. This is the episode's "showing off the math" moment, so build it to look like it.
