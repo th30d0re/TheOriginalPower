@@ -29,7 +29,7 @@ This narration uses an artificial intelligence voice clone trained on my speech 
 <!-- [editorial: AI voice disclosure] -->
 
 Emmanuel Theodore (01:06)
-Open a conventional dictionary entry for racism. Its numbered senses usually begin with individual prejudice or discrimination and place systemic racism later, when the entry includes it.
+So why does the dictionary list individual prejudice first? Open a conventional dictionary entry for racism. Its numbered senses usually begin with individual prejudice or discrimination and place systemic racism later, when the entry includes it.
 <!-- [book §2.2] -->
 
 Emmanuel Theodore (00:11)
@@ -73,7 +73,7 @@ The Original Power treats that causal ordering as an empirical proposition that 
 
 
 Emmanuel Theodore (02:00)
-Clear analysis requires exact vocabulary before any formal modeling begins. Everyday conversation blends four distinct terms into a single undifferentiated synonym cluster: bias, prejudice, discrimination, and racism.
+Why separate bias, prejudice, and discrimination before we name racism? Clear analysis requires exact vocabulary before any formal modeling begins. Everyday conversation blends four distinct terms into a single undifferentiated synonym cluster: bias, prejudice, discrimination, and racism.
 <!-- [book Preface; §2.2] -->
 
 Emmanuel Theodore (02:11)
@@ -194,7 +194,7 @@ Whether measured through response latencies or field audits, bias names a cognit
 <!-- [book Preface; §2.2] -->
 
 Emmanuel Theodore (05:12)
-The second construct is prejudice. Gordon Allport provided the classic definition in his 1954 treatise The Nature of Prejudice, at page nine.
+Why does prejudice need its own label once bias is defined? The second construct is prejudice. Gordon Allport provided the classic definition in his 1954 treatise The Nature of Prejudice, at page nine.
 <!-- [book Preface; §2.2, citing Allport 1954, p. 9] -->
 
 Emmanuel Theodore (05:21)
@@ -218,7 +218,7 @@ When encountered with an individual who contradicts the group stereotype, the pr
 <!-- [book Preface; §2.2, citing Allport 1954] -->
 
 Emmanuel Theodore (06:09)
-The third construct is discrimination. Discrimination moves from internal cognition and internal affect into observable outward conduct.
+Why does Fiske treat discrimination as its own modality beside stereotyping and prejudice? The third construct is discrimination. Discrimination moves from internal cognition and internal affect into observable outward conduct.
 <!-- [book Preface; §2.2, citing Fiske 1998] -->
 
 Emmanuel Theodore (06:16)
@@ -320,7 +320,7 @@ The book reserves the word racism for a phenomenon in a separate structural clas
 
 
 Emmanuel Theodore (24:03)
-Pause here and take stock of the analytical apparatus assembled so far.
+Why pause before stating the causal arrow? Pause here and take stock of the analytical apparatus assembled so far.
 <!-- [editorial] -->
 
 Emmanuel Theodore (24:08)
@@ -352,7 +352,7 @@ Read Equation two point five from left to right: Individual Prejudice leads to D
 <!-- [book §2.2, Eq 2.5] -->
 
 Emmanuel Theodore (25:19)
-Under Equation two point five, the causal engine sits on the left-hand side inside private human psychology.
+Where does Equation two point five place the causal engine? Under Equation two point five, the causal engine sits on the left-hand side inside private human psychology.
 <!-- [book §2.2, Eq 2.5] -->
 
 Emmanuel Theodore (25:25)
@@ -397,7 +397,7 @@ Treating downstream interpersonal attitudes as the primary cause leaves the extr
 
 
 Emmanuel Theodore (27:00)
-Section two point two replaces the conventional arrow with Equation two point six, the causal reversal that governs the entire manuscript.
+Why replace Equation two point five instead of patching it? Section two point two replaces the conventional arrow with Equation two point six, the causal reversal that governs the entire manuscript.
 <!-- [book §2.2, Eq 2.6] -->
 
 Emmanuel Theodore (27:07)
@@ -405,7 +405,7 @@ Like Equation two point five, Equation two point six is a Confidence Tier 3 stru
 <!-- [book Empirical Methodology; §2.2, Eq 2.6] -->
 
 Emmanuel Theodore (27:15)
-Here is the hypothesis stated in full from Equation two point six: Elite Economic Interests produce Systemic Racialization, and Systemic Racialization cultivates Interpersonal Prejudice.
+What causal sequence does Equation two point six assert? Here is the hypothesis stated in full from Equation two point six: Elite Economic Interests produce Systemic Racialization, and Systemic Racialization cultivates Interpersonal Prejudice.
 <!-- [book §2.2, Eq 2.6] -->
 
 Emmanuel Theodore (27:24)
@@ -484,7 +484,7 @@ In Segments eight, nine, and eleven we test Predictions one through four and Ref
 <!-- SEG 05 · What makes a system a system -->
 
 Emmanuel Theodore (08:42)
-Calling racism a system requires demonstrating that it possesses the formal anatomy of a system in engineering and systems theory.
+Why insist on a systems checklist before we name the tiers? Calling racism a system requires demonstrating that it possesses the formal anatomy of a system in engineering and systems theory.
 <!-- [editorial] -->
 
 Emmanuel Theodore (08:50)
@@ -500,7 +500,7 @@ We can audit the American racial hierarchy against each of those five requiremen
 <!-- [book Ch 0; Ch 2; Ch 4] -->
 
 Emmanuel Theodore (09:17)
-Requirement one is a set of differentiated components with specialized roles. Chapter 0 and Equation two point two define five structural tiers arranged in a three-dimensional pyramid in Figure zero point two and an extraction circuit in Figure zero point three.
+What makes racism count as a system at all? Requirement one is a set of differentiated components with specialized roles. Chapter 0 and Equation two point two define five structural tiers arranged in a three-dimensional pyramid in Figure zero point two and an extraction circuit in Figure zero point three.
 <!-- [book Ch 0, Fig 0.2, Fig 0.3; §2.1, Eq 2.2] -->
 
 Emmanuel Theodore (09:31)
@@ -532,7 +532,7 @@ Asymmetric autonomy restriction constrains movement, property, and bodily reprod
 <!-- [book Preface; Ch 2] -->
 
 Emmanuel Theodore (10:45)
-Requirement two is a policed boundary. A system maintains its internal gradient by defining who stands inside the protected partition and who stands outside it.
+Why does a system need a policed boundary? Requirement two is a policed boundary. A system maintains its internal gradient by defining who stands inside the protected partition and who stands outside it.
 <!-- [book §2.1, Eq 2.1] -->
 
 Emmanuel Theodore (10:55)
@@ -560,7 +560,7 @@ Under the Concession Theorem in Chapter 19, non-kinetic allocations obey the con
 <!-- [book §2.3.1; Ch 19] -->
 
 Emmanuel Theodore (12:14)
-Requirement four is an explicit objective function or purpose. Systems theory evaluates a machine's purpose from its stable runtime behavior.
+How do we read a system's purpose from its behavior? Requirement four is an explicit objective function or purpose. Systems theory evaluates a machine's purpose from its stable runtime behavior.
 <!-- [book §2.3.2] -->
 
 Emmanuel Theodore (12:22)
@@ -591,11 +591,11 @@ All five requirements of the systems checklist are satisfied with explicit mathe
 <!-- SEG 06 · The two sets -->
 
 Emmanuel Theodore (13:26)
-To see how the five-tier machine hides inside everyday racial language, we walk the set-theoretic ladder developed in Section two point one of Chapter 2.
+Why walk a set ladder after naming the tiers? To see how the five-tier machine hides inside everyday racial language, we walk the set-theoretic ladder developed in Section two point one of Chapter 2.
 <!-- [book §2.1] -->
 
 Emmanuel Theodore (13:35)
-We begin with the experimental baseline of group categorization. In the early 1970s, Henri Tajfel conducted the minimal-group experiments that anchored Social Identity Theory.
+Why start the ladder with Tajfel's minimal groups? We begin with the experimental baseline of group categorization. In the early 1970s, Henri Tajfel conducted the minimal-group experiments that anchored Social Identity Theory.
 <!-- [book Preface; §2.3.4, citing Tajfel & Turner 1979] -->
 
 Emmanuel Theodore (13:44)
@@ -659,35 +659,23 @@ Equation two point two restores that vertical elevation by applying the refineme
 <!-- [book §2.1, Eq 2.2] -->
 
 Emmanuel Theodore (15:58)
-Equation two point two states that Refine of I equals the disjoint union of four functional tiers: the Elite E, the Puppet Class P-sub-uppet, the Enforcement Class F-sub-enforce, and the Buffer Class I-sub-buffer, each a subset of I.
+Why refine the In-group at all? Equation two point two applies the refinement operator to I, yielding the disjoint union of the four functional tiers Segment five already named: Elite E, Puppet Class P-sub-uppet, Enforcement Class F-sub-enforce, and Buffer Class I-sub-buffer.
 <!-- [book §2.1, Eq 2.2] -->
 
 Emmanuel Theodore (16:12)
-These tier labels describe structural positions in the extraction circuit. They identify who designs, administers, enforces, and defends the partition at a given operating point.
+Those labels mark structural positions in the extraction circuit, not personal identities. Equation two point two maps who designs, administers, enforces, or defends the partition at a given operating point.
 <!-- [book Ch 0; §2.1, Eq 2.2] -->
 
 Emmanuel Theodore (16:22)
-The Elite sets the boundary conditions and captures the net surplus. The Puppet Class translates those priorities into policy, adjudication, administration, and public narrative.
-<!-- [book Ch 0; §2.1] -->
-
-Emmanuel Theodore (16:32)
-The Enforcement Class converts policy into physical coercion. The Buffer Class absorbs social friction, polices the partition, and receives the suppression allocation.
-<!-- [book Ch 0; §2.1] -->
-
-Emmanuel Theodore (16:41)
-The decomposition therefore preserves the racial In-group as a set while exposing the unequal functions and payoffs carried by its internal subsets.
-<!-- [book §2.1, Eq 2.2] -->
-
-Emmanuel Theodore (16:50)
-Every one of those four subsets sits inside the racial In-group I, yet their material payoffs obey the strict inequality of Equation zero point three: the benefit of E vastly exceeds the benefit of P-sub-uppet, which exceeds F-sub-enforce, which exceeds I-sub-buffer.
+Their material payoffs follow Equation zero point three from Chapter zero: benefit of E vastly exceeds benefit of P-sub-uppet, which exceeds F-sub-enforce, which exceeds I-sub-buffer.
 <!-- [book Ch 0, Eq 0.3; §2.1, Eq 2.2] -->
 
-Emmanuel Theodore (17:05)
-The Puppet Class holds delegated governing authority, the Enforcement Class wields licensed state violence, and the Buffer Class receives psychological status and conditional material concessions.
-<!-- [book Ch 0; §2.1, Eq 2.2] -->
+Emmanuel Theodore (16:32)
+The decomposition preserves the racial In-group as a set while exposing the unequal functions and payoffs inside its subsets.
+<!-- [book §2.1, Eq 2.2] -->
 
 Emmanuel Theodore (17:15)
-Next, Equation two point three applies the same resolution lens to the Out-group O so that the base of the pyramid is analyzed with equal precision.
+Why resolve the Out-group after refining the In-group? Next, Equation two point three applies the same resolution lens to the Out-group O so that the base of the pyramid is analyzed with equal precision.
 <!-- [book §2.1, Eq 2.3] -->
 
 Emmanuel Theodore (17:25)
@@ -777,15 +765,15 @@ Holding all four equations simultaneously prevents both analytical errors and pr
 <!-- SEG 07 · The orthographic illusion -->
 
 Emmanuel Theodore (21:06)
-The set ladder gives us the mathematical decomposition. A geometric illusion explains why the coarse binary remains the dominant public picture even when five tiers are operating.
+Why does public debate still sound binary after the set ladder exposed five tiers? A geometric illusion explains why the coarse partition remains the dominant public picture.
 <!-- [book Ch 0, Elite Obscuration and the Orthographic Illusion] -->
 
 Emmanuel Theodore (21:16)
-Picture the five-tier hierarchy as a three-dimensional pyramid. The Elite occupies the apex, with the Puppet Class, Enforcement Class, Buffer Class, and racialized Out-group descending beneath it.
+Picture the Segment five hierarchy as a three-dimensional pyramid. The Elite occupies the apex, with the Puppet, Enforcement, and Buffer tiers and the racialized Out-group descending beneath it.
 <!-- [book Ch 0, Fig 0.2] -->
 
 Emmanuel Theodore (21:27)
-Orthographic projection collapses a three-dimensional structure onto a two-dimensional plane along a fixed line of sight. Depth disappears, and layers aligned with that line overlap.
+Why does depth vanish in a head-on view of the pyramid? Orthographic projection collapses a three-dimensional structure onto a two-dimensional plane along a fixed line of sight. Depth disappears, and layers aligned with that line overlap.
 <!-- [book Ch 0, lines 762-769] -->
 
 Emmanuel Theodore (21:37)
@@ -849,7 +837,7 @@ With the projection corrected, we can ask the decisive causal question: which ti
 
 
 Emmanuel Theodore (30:52)
-Our first historical test examines fifteenth-century Portugal between 1441 and 1486, drawn from Chapter 3 of The Original Power, titled Version 1.0: Initializing the Vector.
+Why open the archive in Portugal before Virginia? Our first historical test examines fifteenth-century Portugal between 1441 and 1486, drawn from Chapter 3 of The Original Power, titled Version 1.0: Initializing the Vector.
 <!-- [book Ch 3] -->
 
 Emmanuel Theodore (31:02)
@@ -857,7 +845,7 @@ This case tests Prediction 1, Institutional production, and checks Refutation St
 <!-- [book Ch 3; YT02_outline P1, R1] -->
 
 Emmanuel Theodore (31:14)
-Begin with the material optimization problem confronting the Portuguese Crown and nobility in the early 1400s.
+Why did the Crown need a new labor supply in the fourteen forties? Begin with the material optimization problem confronting the Portuguese Crown and nobility in the early 1400s.
 <!-- [book Ch 3] -->
 
 Emmanuel Theodore (31:21)
@@ -889,7 +877,7 @@ Now track the chronological sequence of the Portuguese maritime pivot on the Wes
 <!-- [book Ch 3] -->
 
 Emmanuel Theodore (32:36)
-In 1441, a young Portuguese captain named Antao Goncalves sailed to the Rio d'Ouro coast under orders from Prince Henry the Navigator to procure cargoes of sea-wolf skins and oil.
+Why does Prediction one hinge on a single night raid in fourteen forty-one? In 1441, a young Portuguese captain named Antao Goncalves sailed to the Rio d'Ouro coast under orders from Prince Henry the Navigator to procure cargoes of sea-wolf skins and oil.
 <!-- [book Ch 3, citing Zurara] -->
 
 Emmanuel Theodore (32:48)
@@ -941,7 +929,7 @@ With the fiscal pipeline operating and the royal fifth flowing into Lisbon, the 
 <!-- [book Ch 3] -->
 
 Emmanuel Theodore (35:00)
-The legal apparatus arrived through papal diplomacy. On June 18, 1452, Pope Nicholas V issued the bull Dum Diversas to King Afonso V of Portugal.
+Why did Lisbon need papal bulls after the Lagos auction? The legal apparatus arrived through papal diplomacy. On June 18, 1452, Pope Nicholas V issued the bull Dum Diversas to King Afonso V of Portugal.
 <!-- [book Ch 3] -->
 
 Emmanuel Theodore (35:10)
@@ -1118,7 +1106,7 @@ The boldest claim the Portugal archive licenses is chronological: extraction and
 
 
 Emmanuel Theodore (42:33)
-Our second historical test moves from fifteenth-century Lisbon to seventeenth-century Virginia between 1619 and 1705, drawn from Chapter 4 of The Original Power.
+Why does Virginia test Prediction two after Portugal tests Prediction one? Our second historical test moves from fifteenth-century Lisbon to seventeenth-century Virginia between 1619 and 1705, drawn from Chapter 4 of The Original Power.
 <!-- [book Ch 4] -->
 
 Emmanuel Theodore (42:42)
@@ -1130,7 +1118,7 @@ The Virginia record opens in late August 1619 at Point Comfort, when the private
 <!-- [book Ch 3; Ch 4] -->
 
 Emmanuel Theodore (43:07)
-For the first several decades of the Chesapeake tobacco economy, English statute law contained zero comprehensive slave codes and zero statutory definition of a white racial tier.
+Why was there no statutory white tier in early Virginia? For the first several decades of the Chesapeake tobacco economy, English statute law contained zero comprehensive slave codes and zero statutory definition of a white racial tier.
 <!-- [book Ch 4] -->
 
 Emmanuel Theodore (43:18)
@@ -1178,7 +1166,7 @@ To break that natural solidarity among field laborers, the Virginia planter Elit
 <!-- [book Ch 4] -->
 
 Emmanuel Theodore (45:10)
-Step one arrived in July 1640 in the case of John Punch, adjudicated by the Virginia Governor's Council.
+Why does the compilation begin with three runaways in sixteen forty? Step one arrived in July 1640 in the case of John Punch, adjudicated by the Virginia Governor's Council.
 <!-- [book Ch 4] -->
 
 Emmanuel Theodore (45:17)
@@ -1222,7 +1210,7 @@ Despite those early statutes, poor white freemen, white indentured servants, and
 <!-- [book Ch 4] -->
 
 Emmanuel Theodore (47:10)
-In 1676, that shared grievance ignited in Bacon's Rebellion across the Virginia colony.
+Why did cross-racial solidarity peak in sixteen seventy-six? In 1676, that shared grievance ignited in Bacon's Rebellion across the Virginia colony.
 <!-- [book Ch 4, Eq 4.1] -->
 
 Emmanuel Theodore (47:15)
@@ -1266,7 +1254,6 @@ The 1691 statute outlawed all intermarriage between English or other white perso
 <!-- [book Ch 4, Eq 4.2] -->
 
 Emmanuel Theodore (49:15)
-Emmanuel Theodore (49:15)
 Any white woman who bore a mixed-race child faced five additional years of forced servitude, while her child was bound into thirty years of indenture.
 <!-- [book Ch 4, Eq 4.2] -->
 
@@ -1307,11 +1294,10 @@ Equation four point three writes the state transition achieved in 1705: Buffer C
 <!-- [book Ch 4, Eq 4.3] -->
 
 Emmanuel Theodore (50:49)
-Emmanuel Theodore (50:39)
 Virginia's slave codes did not stay local. Colonies and later states copied statutory language the way legislatures copy gun and abortion templates today: a law passes elsewhere, then your state passes an almost identical one. The diffusion is policy packaging for the same extraction kernel.
 <!-- [book Ch 4] -->
 
-Emmanuel Theodore (50:49)
+Emmanuel Theodore (50:55)
 Equation four point four writes the resulting three-tier payoff ordering: the benefit of the Elite E vastly exceeds the benefit of the Buffer Class I-sub-buffer, which exceeds the benefit of the racialized Out-group O-sub-racialized.
 <!-- [book Ch 4, Eq 4.4] -->
 
@@ -1455,7 +1441,7 @@ Past ninety degrees, the manuscript names Quadrant II as its fascism threshold: 
 <!-- [book Ch 3, Eq 3.5, phase-angle regimes] -->
 
 Emmanuel Theodore (56:16)
-Firearms supply a discrete calibration anchor for the kinetic channel of the complex wage. The statutory record names who may carry arms, who must appear without them, and what object closes an indenture.
+Why use arms statutes to anchor psi-sub-m? Firearms supply a discrete calibration anchor for the kinetic channel of the complex wage. The statutory record names who may carry arms, who must appear without them, and what object closes an indenture.
 <!-- [book subsec:arms_joint_wage] -->
 
 Emmanuel Theodore (56:26)
@@ -1580,7 +1566,7 @@ Equation three point five makes that contract visible as one rotating quantity. 
 
 
 Emmanuel Theodore (58:30)
-Our third historical test audits the quantitative American record from 1840 to 2020 in Chapter 2 of The Original Power.
+Why does the American series test Predictions three and four together? Our third historical test audits the quantitative American record from 1840 to 2020 in Chapter 2 of The Original Power.
 <!-- [book §2.3.2; §2.3.5; §2.3.6] -->
 
 Emmanuel Theodore (58:38)
@@ -1592,7 +1578,7 @@ Part A examines antebellum kernel optimization between 1840 and 1860, a Confiden
 <!-- [book §2.3.2, Eq 2.7, Fig 2.4] -->
 
 Emmanuel Theodore (59:00)
-Recall that Equation two point seven specifies the system's kernel objective: maximize extraction E of t subject to keeping solidarity mobilization M of t below the critical threshold tau.
+Why should patrol spending track cotton revenue? Recall that Equation two point seven specifies the system's kernel objective: maximize extraction E of t subject to keeping solidarity mobilization M of t below the critical threshold tau.
 <!-- [book §2.3.2, Eq 2.7] -->
 
 Emmanuel Theodore (59:11)
@@ -1636,7 +1622,7 @@ Part B examines the twentieth-century Interface Swap formalized in Section two p
 <!-- [book §2.3.5, Eq 2.9, Eq 2.10] -->
 
 Emmanuel Theodore (61:11)
-Equation two point nine defines the set of available control interfaces S: explicit partition, assimilationist integration, direct repression, and externalization.
+What menu does Equation two point nine give the Elite optimizer? Equation two point nine defines the set of available control interfaces S: explicit partition, assimilationist integration, direct repression, and externalization.
 <!-- [book §2.3.5, Eq 2.9] -->
 
 Emmanuel Theodore (61:18)
@@ -1644,7 +1630,7 @@ Equation two point ten defines the Elite interface optimizer: at each moment t, 
 <!-- [book §2.3.5, Eq 2.10] -->
 
 Emmanuel Theodore (61:32)
-Between 1954 and 1965, the cost of maintaining explicit Jim Crow statutory partition spiked across all three terms.
+Why swap interfaces when Jim Crow's legitimacy cost spikes? Between 1954 and 1965, the cost of maintaining explicit Jim Crow statutory partition spiked across all three terms.
 <!-- [book §2.3.5] -->
 
 Emmanuel Theodore (61:40)
@@ -1712,7 +1698,7 @@ Broward deputies used that police-manufactured crack to run reverse-sting arrest
 <!-- [book §2.3.5, citing State v. Williams 1993] -->
 
 Emmanuel Theodore (64:39)
-Part C tests the macroscopic Post-1965 Backlash Wave from 1965 to 2020 in Section two point three point six, Equations two point thirteen, two point fourteen, and two point fifteen, and Figure two point seven, a Confidence Tier 1 empirical series.
+Why does backlash show up in union density and incarceration together? Part C tests the macroscopic Post-1965 Backlash Wave from 1965 to 2020 in Section two point three point six, Equations two point thirteen, two point fourteen, and two point fifteen, and Figure two point seven, a Confidence Tier 1 empirical series.
 <!-- [book §2.3.6, Eq 2.13, Eq 2.14, Eq 2.15, Fig 2.7] -->
 
 Emmanuel Theodore (64:51)
@@ -1829,7 +1815,7 @@ The boldest claim the quantitative American record licenses is structural: coerc
 
 
 Emmanuel Theodore (69:07)
-The three historical tests now enter one live readout built from the book's RUNTIME LOG boxes. We will assemble the dashboard one instrument at a time.
+Why compress five centuries into one runtime dashboard? The three historical tests now enter one live readout built from the book's RUNTIME LOG boxes. We will assemble the dashboard one instrument at a time.
 <!-- [book Compiled Runtime Log, lines 15202-15205] -->
 
 Emmanuel Theodore (69:17)
@@ -1837,7 +1823,7 @@ Each instrument tracks one state of the extraction system. Once the panel is com
 <!-- [book Compiled Runtime Log, lines 15202-15205] -->
 
 Emmanuel Theodore (69:27)
-System Stress occupies the minimum side of the objective function. It tracks class resistance, so higher stress means greater pressure against the system's extraction architecture.
+What does System Stress measure on the dashboard? System Stress occupies the minimum side of the objective function. It tracks class resistance, so higher stress means greater pressure against the system's extraction architecture.
 <!-- [book Compiled Runtime Log, lines 15222, 15233, 15256] -->
 
 Emmanuel Theodore (69:37)
@@ -2026,7 +2012,7 @@ The political specification dates directly to November 1787, when James Madison 
 <!-- [book Ch 5, citing Madison 1787] -->
 
 Emmanuel Theodore (76:58)
-Madison stated candidly that the most common and durable source of political factions is the various and unequal distribution of property, placing creditors and landed proprietors in permanent structural tension with debtors and propertyless laborers.
+Why did Madison treat property inequality as the core faction problem? Madison stated candidly that the most common and durable source of political factions is the various and unequal distribution of property, placing creditors and landed proprietors in permanent structural tension with debtors and propertyless laborers.
 <!-- [book Ch 5, citing Madison 1787] -->
 
 Emmanuel Theodore (77:12)
@@ -2054,7 +2040,7 @@ When two grievance currents i-sub-j of t and i-sub-k of t are driven 180 degrees
 <!-- [book Ch 0, Fig 0.6] -->
 
 Emmanuel Theodore (78:20)
-That is why the recursive local partition of Equation two point four in Segment 03 is essential to the machine's survival: every additional identity axis alpha provides another phase channel that the Puppet Class media and campaign apparatus can modulate.
+That is why the recursive local partition of Equation two point four in Segment six is essential to the machine's survival: every additional identity axis alpha provides another phase channel that the Puppet Class media and campaign apparatus can modulate.
 <!-- [book §2.1, Eq 2.4; Ch 11] -->
 
 Emmanuel Theodore (78:35)
@@ -2082,7 +2068,7 @@ The spectral carrier hypothesis would be falsified if the four-year identity pea
 <!-- [book Ch 22, P1-P6] -->
 
 Emmanuel Theodore (79:39)
-Dataset one analyzes the United States Congressional Record from 1965 through 2024, spanning N equals 60 annual observations, presented in Table twenty-two point one and Figure twenty-two point two.
+Why search congressional text for a four-year spectral peak? Dataset one analyzes the United States Congressional Record from 1965 through 2024, spanning N equals 60 annual observations, presented in Table twenty-two point one and Figure twenty-two point two.
 <!-- [book Ch 22, Table 22.1, Fig 22.2] -->
 
 Emmanuel Theodore (79:49)
@@ -2127,7 +2113,7 @@ Those Tier 2 results match the predicted phase-locked carrier pattern across ins
 
 
 Emmanuel Theodore (81:19)
-With the set partitions walked and all three historical and spectral tests completed, we return to Figure two point three in Chapter 2 and rebuild the definition of racism from the ground up.
+Why rebuild the dictionary hierarchy only after the tests? With the set partitions walked and all three historical and spectral tests completed, we return to Figure two point three in Chapter 2 and rebuild the definition of racism from the ground up.
 <!-- [book §2.2, Fig 2.3] -->
 
 Emmanuel Theodore (81:31)
@@ -2163,7 +2149,7 @@ Section two point two specifies the five operational steps through which the sys
 <!-- [book §2.2] -->
 
 Emmanuel Theodore (82:44)
-Step one: the system institutionalizes bias and prejudice by compiling them into formal statutes, administrative rules, credit algorithms, and policing protocols denoted P.
+How does the rebuilt definition weaponize psychology into structure? Step one: the system institutionalizes bias and prejudice by compiling them into formal statutes, administrative rules, credit algorithms, and policing protocols denoted P.
 <!-- [book §2.2] -->
 
 Emmanuel Theodore (82:53)
@@ -2203,7 +2189,7 @@ What that interpersonal act lacks is the institutional unit vector d-hat-sub-sta
 <!-- [book Ch 3, Eq 3.1; Ch 21, Eq 21.1; MANUSCRIPT_GAP §1] -->
 
 Emmanuel Theodore (85:24)
-Furthermore, the five tiers are structural positions defined by their relation to extraction and enforcement.
+Why can phenotype alone not flip the force vector? The five tiers from Segment five are structural positions defined by relation to extraction and enforcement.
 <!-- [book Ch 0; Ch 21; MANUSCRIPT_GAP §1] -->
 
 Emmanuel Theodore (85:30)
@@ -2236,7 +2222,7 @@ Durable transformation alters the generative material and legal architecture rep
 
 
 Emmanuel Theodore (86:34)
-Let us review the complete analytical arc we have walked from the dictionary opening to the rebuilt definition.
+Why restate the through-line before the Concession Theorem? Let us review the complete analytical arc we have walked from the dictionary opening to the rebuilt definition.
 <!-- [editorial] -->
 
 Emmanuel Theodore (86:42)
@@ -2326,6 +2312,10 @@ For the clause-by-clause walkthrough of Chapter two, including the full Bayesian
 Emmanuel Theodore (90:19)
 For the full architecture and all 146 calibrated historical anchor cases, read the open-access manuscript of The Original Power.
 <!-- [book Empirical Methodology] -->
+
+Emmanuel Theodore (90:20)
+When extraction moves, ask why. When a boundary hardens, ask why. When reform triggers backlash, ask why. That question is the through-line of The Original Power and of this episode.
+<!-- [editorial] -->
 
 Emmanuel Theodore (90:27)
 Thank you for listening to Episode one, What Racism Is, from The Original Power.
