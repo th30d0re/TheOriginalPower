@@ -44,7 +44,7 @@ Script: `Architecting_the_operation/podcasts/YT02_what_racism_is.md` (19,120 wor
     functioning as designed.
 13. **Jim Crow cost spike (L1462, Dudziak):** name the role of newly independent African nations on the world stage
     in threatening U.S. legitimacy. It is an instance of global Black solidarity.
-14. **Atwater:** use the 1981 Lamis quote verbatim, with the tape audio, as in YT01 (L1482–1486 currently paraphrase).
+14. **Atwater:** replace the paraphrase at L1482–1486 with `[clip:atwater_1981]` (archive/clips.yaml, 997.95–1049.85 s, already on disk), introduced on air exactly as YT01 does (YT01 script L1083–1092: who he was, who interviewed him, the 1984 and 2012 publication history).
 15. **Case studies: say what the data licenses.** After each result, state plainly the boldest claim the data supports.
 16. **Jevons Paradox (L1434):** add an on-screen definition card. Do not narrate it.
 17. **Compulsory militia service** after the Buffer Class received the right to bear arms is a psychological wage
