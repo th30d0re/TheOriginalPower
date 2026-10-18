@@ -1,0 +1,41 @@
+{
+  "kind": "table",
+  "headline": "Historical Scope Qualification · Pre-1450 vs. Post-1450",
+  "columns": [
+    "Period",
+    "Form of Attitude / Rule",
+    "Institutional Status"
+  ],
+  "items": [
+    {
+      "cells": [
+        "Scope Boundary (§2.2)",
+        "Distinguishes fluid attitudes from state law",
+        "Prevents historical overstatement"
+      ]
+    },
+    {
+      "cells": [
+        "Pre-1450 Mediterranean",
+        "Color-coded somatic prejudices (Sweet; Bethencourt)",
+        "Circulated in medieval and Islamic worlds"
+      ]
+    },
+    {
+      "cells": [
+        "Pre-1450 Scalar Mode",
+        "Negotiable cultural and religious attitudes",
+        "No unified state chattel-phenotype lock"
+      ]
+    },
+    {
+      "cells": [
+        "Post-1450 Atlantic Compile",
+        "Heritable state-enforced legal partition",
+        "Recruited attitudes into chattel law"
+      ]
+    }
+  ],
+  "sources": "Sweet (1997); Bethencourt (2013); The Original Power, Ch. 2, §2.2 & Ch. 3",
+  "qrUrl": ""
+}

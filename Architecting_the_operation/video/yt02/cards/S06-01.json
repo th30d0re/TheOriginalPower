@@ -1,0 +1,23 @@
+{
+  "kind": "equation",
+  "headline": "The Causal Reversal · Equation 2.6",
+  "number": "Equation 2.6",
+  "latex": "\\mathrm{Elite\\ Economic\\ Interests} \\longrightarrow \\mathrm{Systemic\\ Racialization} \\longrightarrow \\mathrm{Interpersonal\\ Prejudice}",
+  "terms": [
+    {
+      "latex": "\\mathrm{Elite\\ Economic\\ Interests}",
+      "gloss": "Generative engine: labor control, surplus extraction, and solidarity suppression"
+    },
+    {
+      "latex": "\\mathrm{Systemic\\ Racialization}",
+      "gloss": "Legal codes, property partitions, and state enforcement machinery"
+    },
+    {
+      "latex": "\\mathrm{Interpersonal\\ Prejudice}",
+      "gloss": "Cultivated public attitudes that feed back to stabilize the hierarchy"
+    }
+  ],
+  "items": [],
+  "sources": "The Original Power, Ch. 2, §2.2, Eq. 2.6 (Confidence Tier 3)",
+  "qrUrl": ""
+}

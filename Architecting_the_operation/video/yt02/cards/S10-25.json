@@ -1,0 +1,24 @@
+{
+  "kind": "stat_bars",
+  "headline": "War on Drugs · Quantitative Proxy Series",
+  "items": [
+    {
+      "title": "2002 Drug Prisoners (12.4x)",
+      "detail": "480,519 inmates in 2002 up from 38,680 in 1972 (Caulkins & Chandler)."
+    },
+    {
+      "title": "1986 Crack/Powder Ratio",
+      "detail": "100 to 1 federal sentencing quantity disparity under the Anti-Drug Abuse Act (USSC 2011)."
+    },
+    {
+      "title": "5-Year Mandatory Trigger",
+      "detail": "500 grams powder cocaine versus 5 grams crack cocaine for five-year federal minimum."
+    },
+    {
+      "title": "Cannabis Arrest Disparity",
+      "detail": "3.73 times higher Black arrest rate nationwide despite comparable usage (ACLU 2013, 2020)."
+    }
+  ],
+  "sources": "Caulkins & Chandler (2006); USSC (2011); ACLU (2013, 2020); The Original Power, §2.3.5",
+  "qrUrl": ""
+}

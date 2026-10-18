@@ -1,0 +1,23 @@
+{
+  "kind": "equation",
+  "headline": "Requirement 2 · Policed System Boundary",
+  "number": "Equations 2.1 & 4.2",
+  "latex": "U = I \\sqcup O, \\quad I \\cap O = \\emptyset, \\quad I_{\\mathrm{buffer}} \\cap O_{\\mathrm{racialized}} = \\emptyset",
+  "terms": [
+    {
+      "latex": "U = I \\sqcup O",
+      "gloss": "Total population partitioned into dominant In-group and marginalized Out-group"
+    },
+    {
+      "latex": "I \\cap O = \\emptyset",
+      "gloss": "Strict statutory disjointness separating protected and subordinated tiers"
+    },
+    {
+      "latex": "I_{\\mathrm{buffer}} \\cap O_{\\mathrm{racialized}} = \\emptyset",
+      "gloss": "1691 Virginia Boundary Enforcement Act criminalizing cross-tier union"
+    }
+  ],
+  "items": [],
+  "sources": "The Original Power, Ch. 2, §2.1 (Eq. 2.1); Ch. 4 (Eq. 4.2)",
+  "qrUrl": ""
+}

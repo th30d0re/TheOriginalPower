@@ -1,29 +1,20 @@
 {
   "kind": "title",
-  "headline": "Bias, prejudice, discrimination · 02:00",
+  "headline": "Segment 01 · Bias, Prejudice, Discrimination",
   "items": [
     {
-      "title": "02:00 · Clear analysis requires exact vocabulary before any",
-      "detail": "Clear analysis requires exact vocabulary before any formal modeling begins."
+      "title": "Four Conflated Terms",
+      "detail": "Colloquial speech merges bias, prejudice, discrimination, and racism into one cluster."
     },
     {
-      "title": "02:11 · In the social sciences the first three",
-      "detail": "In the social sciences, the first three terms carry distinct technical definitions developed across experimental and social-psychological literature."
+      "title": "Social-Science Taxonomy",
+      "detail": "Experimental psychology assigns distinct operational boundaries to the first three constructs."
     },
     {
-      "title": "02:18 · The Preface and Chapter 2 of The",
-      "detail": "The Preface and Chapter 2 of The Original Power adopt those established definitions directly so that each construct carries a distinct analytical assignment."
-    },
-    {
-      "title": "02:28 · The baseline begins with group partitioning in",
-      "detail": "The baseline begins with group partitioning in human cognition."
-    },
-    {
-      "title": "02:40 · The same reference defines an outgroup as",
-      "detail": "The same reference defines an outgroup as any social unit outside one's own group membership or identification, toward which an individual feels detachment, competition, or opposition."
+      "title": "Analytical Assignment",
+      "detail": "Preface and Chapter 2 preserve each psychological term for its exact interpersonal scope."
     }
   ],
-  "sources": "Source locators: book Preface; §2.2; book Preface, citing APA Dictionary of Psychology",
-  "qrUrl": null
+  "sources": "The Original Power, Preface & Ch. 2, §2.2",
+  "qrUrl": ""
 }
-

@@ -1,0 +1,41 @@
+{
+  "kind": "table",
+  "headline": "Refutation Standard 3 · Reverse Racism Vector Audit",
+  "columns": [
+    "Analytical Dimension",
+    "Interpersonal Act (Out-Group → In-Group)",
+    "Systemic Vector Requirement"
+  ],
+  "items": [
+    {
+      "cells": [
+        "Audit Question (R3)",
+        "Apply Equations 3.1 and 25.1",
+        "Test scalar magnitude vs. state direction"
+      ]
+    },
+    {
+      "cells": [
+        "Interpersonal Magnitude",
+        "Real hostility or discriminatory conduct",
+        "M_agnitude > 0 at person-to-person level"
+      ]
+    },
+    {
+      "cells": [
+        "Taxonomy Assignment",
+        "Scalar racial prejudice or discrimination",
+        "Addressed by ethics, civil norms, and law"
+      ]
+    },
+    {
+      "cells": [
+        "Institutional Direction (d̂_state)",
+        "Zero state-backed apparatus targeting whites as class",
+        "d̂_state = 0; R3 undefeated"
+      ]
+    }
+  ],
+  "sources": "The Original Power, Preface, Ch. 3 (Eq. 3.1), Ch. 21, & Ch. 25 (Eq. 25.1)",
+  "qrUrl": ""
+}

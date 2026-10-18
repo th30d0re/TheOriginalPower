@@ -1,0 +1,19 @@
+{
+  "kind": "equation",
+  "headline": "Control Case 2 · Religious Partition (Equation 3.11)",
+  "number": "Equation 3.11",
+  "latex": "O_{\\mathrm{religious}} = f(\\mathrm{Doctrine},\\, \\mathrm{Sect},\\, \\mathrm{Heresy})",
+  "terms": [
+    {
+      "latex": "\\mathrm{3M\\ +\\ 8M\\ Dead}",
+      "gloss": "French Wars of Religion (1562–1598) and Thirty Years' War (1618–1648)"
+    },
+    {
+      "latex": "\\mathrm{Inquisitorial\\ Cost}",
+      "gloss": "Internal belief could be concealed or recanted, requiring costly surveillance"
+    }
+  ],
+  "items": [],
+  "sources": "The Original Power, Ch. 3, Eq. 3.11",
+  "qrUrl": ""
+}

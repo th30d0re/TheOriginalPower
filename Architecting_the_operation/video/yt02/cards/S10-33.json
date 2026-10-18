@@ -1,0 +1,19 @@
+{
+  "kind": "equation",
+  "headline": "Part C · Suppression Envelope (Equations 2.13–2.14)",
+  "number": "Equations 2.13 & 2.14",
+  "latex": "\\Sigma_{\\mathrm{sup}}(t) = \\psi_s(t) + \\psi_m(t) + R(t) + \\Phi_{\\mathrm{load}}(t), \\quad \\frac{dM}{dt} > \\frac{d\\Sigma_{\\mathrm{sup}}}{dt}",
+  "terms": [
+    {
+      "latex": "\\Sigma_{\\mathrm{sup}}(t)",
+      "gloss": "Eq. 2.13 total suppression envelope summing status, material, coercion, and phase load"
+    },
+    {
+      "latex": "\\frac{dM}{dt} > \\frac{d\\Sigma_{\\mathrm{sup}}}{dt}",
+      "gloss": "Eq. 2.14 crash condition when solidarity growth outpaces suppression expansion"
+    }
+  ],
+  "items": [],
+  "sources": "The Original Power, Ch. 2, §2.3.6, Eq. 2.13 & Eq. 2.14 (Confidence Tier 1)",
+  "qrUrl": ""
+}

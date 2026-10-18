@@ -1,0 +1,16 @@
+{
+  "kind": "compare",
+  "headline": "Construct 1 · Evaluative Bias",
+  "items": [
+    {
+      "title": "Explicit Bias",
+      "detail": "Consciously endorsed evaluative tilt favoring or disfavoring individuals by group membership."
+    },
+    {
+      "title": "Implicit Bias",
+      "detail": "Automatic associative weighting operating prior to deliberative endorsement."
+    }
+  ],
+  "sources": "Greenwald & Banaji (1995); The Original Power, Preface & §2.2",
+  "qrUrl": "https://doi.org/10.1037/0033-295X.102.1.4"
+}

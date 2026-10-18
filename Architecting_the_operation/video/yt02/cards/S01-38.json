@@ -1,0 +1,41 @@
+{
+  "kind": "table",
+  "headline": "Morphological Boundary · The -ism Suffix",
+  "columns": [
+    "Term",
+    "Analytical Tier",
+    "Governing Domain"
+  ],
+  "items": [
+    {
+      "cells": [
+        "Racism",
+        "Macro-structural system",
+        "Multi-tier group extraction and legal control"
+      ]
+    },
+    {
+      "cells": [
+        "-ism Suffix",
+        "English morphological marker",
+        "Designates macro-level institutional orders"
+      ]
+    },
+    {
+      "cells": [
+        "Capitalism / Feudalism",
+        "Political-economic regime",
+        "Property law, labor allocation, state enforcement"
+      ]
+    },
+    {
+      "cells": [
+        "Lexical Precision",
+        "Preserves distinct tier labels",
+        "Prevents collapsing structure into private attitude"
+      ]
+    }
+  ],
+  "sources": "The Original Power, Preface & Ch. 2, §2.2",
+  "qrUrl": ""
+}

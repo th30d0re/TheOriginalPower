@@ -1,0 +1,41 @@
+{
+  "kind": "table",
+  "headline": "Structural Tier Position vs. Intra-Group Stratification",
+  "columns": [
+    "Construct / Role",
+    "Structural Mechanism",
+    "Vector Orientation"
+  ],
+  "items": [
+    {
+      "cells": [
+        "Five Structural Tiers",
+        "Defined by relation to extraction and coercion",
+        "Independent of individual actor's phenotype"
+      ]
+    },
+    {
+      "cells": [
+        "Minority State Officials",
+        "Occupy F_enforce or P_uppet during enforcement",
+        "Executes existing carceral or fiscal code"
+      ]
+    },
+    {
+      "cells": [
+        "Systemic Force Vector",
+        "R_systemic (Equation 25.1)",
+        "Continues pointing downward at O_racialized"
+      ]
+    },
+    {
+      "cells": [
+        "Internalized Racism & Colorism",
+        "Absorbed inferiority belief vs. light-skin stratification",
+        "Intra-group fractures inside O_racialized (§2.3.7)"
+      ]
+    }
+  ],
+  "sources": "The Original Power, Ch. 0, Ch. 2 (§2.3.7), Ch. 21, & Ch. 25 (Eq. 25.1)",
+  "qrUrl": ""
+}

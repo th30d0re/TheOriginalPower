@@ -1,0 +1,19 @@
+{
+  "kind": "equation",
+  "headline": "Level 3 · Out-Group Decomposition",
+  "number": "Equation 2.3",
+  "latex": "O = O_{\\mathrm{racialized}} \\sqcup O_{\\mathrm{adjacent},1} \\sqcup \\cdots \\sqcup O_{\\mathrm{adjacent},m}",
+  "terms": [
+    {
+      "latex": "O_{\\mathrm{racialized}}",
+      "gloss": "Primary racialized target bearing anchor extraction and carceral containment"
+    },
+    {
+      "latex": "O_{\\mathrm{adjacent},1\\dots m}",
+      "gloss": "Adjacent Out-group subsets sorted across distinct legal and labor regimes"
+    }
+  ],
+  "items": [],
+  "sources": "The Original Power, Ch. 2, §2.1, Eq. 2.3",
+  "qrUrl": ""
+}

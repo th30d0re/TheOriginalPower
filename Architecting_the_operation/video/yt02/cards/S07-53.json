@@ -1,0 +1,19 @@
+{
+  "kind": "equation",
+  "headline": "Control Case 1 · Roman Slavery (Equation 3.9)",
+  "number": "Equation 3.9",
+  "latex": "O_{\\mathrm{slave}} = f(\\mathrm{Conquest},\\, \\mathrm{Debt},\\, \\mathrm{Crime},\\, \\mathrm{Birth})",
+  "terms": [
+    {
+      "latex": "\\mathrm{Conquest,\\, Debt,\\, Crime}",
+      "gloss": "Multi-ethnic Mediterranean, Gallic, Germanic, Syrian, and North African captives"
+    },
+    {
+      "latex": "\\mathrm{Peculium\\ \\&\\ Manumission}",
+      "gloss": "Keith Bradley: absence of visual marker allowed assimilation within 1–2 generations"
+    }
+  ],
+  "items": [],
+  "sources": "Bradley (1994); The Original Power, Ch. 3, Eq. 3.9",
+  "qrUrl": ""
+}

@@ -1,29 +1,24 @@
 {
-  "kind": "compare",
-  "headline": "The dictionary order · 00:47",
+  "kind": "source",
+  "headline": "Dictionary Order as Implicit Causal Theory",
   "items": [
     {
-      "title": "00:47 · That numbered sequence performs analytical work before",
-      "detail": "That numbered sequence performs analytical work before any argument begins."
+      "title": "Numbered Sense Sequence",
+      "detail": "Lexical ranking encodes an unstated theory of causation before empirical inquiry starts."
     },
     {
-      "title": "00:57 · Placing interpersonal animus in the primary slot",
-      "detail": "Placing interpersonal animus in the primary slot tells the reader that private hostility is the root phenomenon and institutional patterns are secondary extensions."
+      "title": "Slot 1 Priority Effect",
+      "detail": "Assigning interpersonal hostility to Sense 1 frames institutional patterns as derivative byproducts."
     },
     {
-      "title": "01:06 · Under that ordering public debate turns automatically",
-      "detail": "Under that ordering, public debate turns automatically into an audit of individual hearts, private vocabulary, and personal moral intentions."
+      "title": "Moral-Psychologizing Audit",
+      "detail": "Public controversy narrows to inspecting private hearts, personal phrasing, and subjective intent."
     },
     {
-      "title": "01:14 · When a public figure a court or",
-      "detail": "When a public figure, a court, or a workplace confronts a racial disparity, the lexical default asks who held malice inside their private thoughts."
-    },
-    {
-      "title": "01:23 · The Original Power treats that causal ordering",
-      "detail": "The Original Power treats that causal ordering as an empirical proposition that can be stated formally and tested against five centuries of primary historical records."
+      "title": "Malice Inquiry Default",
+      "detail": "Courts and workplaces search for individual animus when confronted with structural disparity."
     }
   ],
-  "sources": "Source locators: book §2.2; book Preface; §2.2",
-  "qrUrl": null
+  "sources": "The Original Power, Ch. 2, §2.2",
+  "qrUrl": ""
 }
-

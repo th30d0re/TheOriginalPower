@@ -1,0 +1,41 @@
+{
+  "kind": "table",
+  "headline": "Diagnostic Application · Public Debate Stall Points",
+  "columns": [
+    "Public Fallacy",
+    "Focused Level",
+    "Omitted Equation"
+  ],
+  "items": [
+    {
+      "cells": [
+        "Resolution Audit",
+        "Table 2.1 diagnostic lookup",
+        "Identifies which equation a stalled argument omits"
+      ]
+    },
+    {
+      "cells": [
+        "Denial of Systemic Privilege",
+        "Stares only at depressed cell X⁻_α in I_buffer",
+        "Omits Level 1 boundary (Eq. 2.1)"
+      ]
+    },
+    {
+      "cells": [
+        "Uniform In-Group Beneficiary Claim",
+        "Stares only at coarse block I in Level 1",
+        "Omits E ≫ I_buffer gradient (Eq. 2.2)"
+      ]
+    },
+    {
+      "cells": [
+        "Four-Level Simultaneous Hold",
+        "Integrates Equations 2.1 through 2.4",
+        "Prepares empirical test of the causal arrow"
+      ]
+    }
+  ],
+  "sources": "The Original Power, Ch. 2, §2.1, Table 2.1",
+  "qrUrl": ""
+}

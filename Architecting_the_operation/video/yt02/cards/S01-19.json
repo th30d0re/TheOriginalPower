@@ -1,0 +1,20 @@
+{
+  "kind": "source",
+  "headline": "Implicit Association Test · Greenwald et al. 1998",
+  "items": [
+    {
+      "title": "Greenwald, McGhee & Schwartz",
+      "detail": "Published the Implicit Association Test in Journal of Personality and Social Psychology (1998)."
+    },
+    {
+      "title": "Response-Latency Metric",
+      "detail": "Quantifies associative strength via millisecond pairing differentials in categorization tasks."
+    },
+    {
+      "title": "Individual Cognitive Weight",
+      "detail": "Captures an evaluative inclination inside an individual's perceptual apparatus."
+    }
+  ],
+  "sources": "Greenwald, McGhee, & Schwartz (1998), JPSP 74(6), 1464–1480",
+  "qrUrl": "https://doi.org/10.1037/0022-3514.74.6.1464"
+}

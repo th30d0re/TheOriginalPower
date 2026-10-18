@@ -1,0 +1,19 @@
+{
+  "kind": "equation",
+  "headline": "Level 1 · Coarse Binary Partition",
+  "number": "Equation 2.1",
+  "latex": "U = I \\sqcup O, \\quad I \\cap O = \\emptyset",
+  "terms": [
+    {
+      "latex": "I,\\; O",
+      "gloss": "Dominant racial In-group I and marginalized Out-group O"
+    },
+    {
+      "latex": "I \\cap O = \\emptyset",
+      "gloss": "Disjointness enforced by census rules, slave codes, and blood-quantum law"
+    }
+  ],
+  "items": [],
+  "sources": "The Original Power, Ch. 2, §2.1, Eq. 2.1",
+  "qrUrl": ""
+}

@@ -1,0 +1,34 @@
+{
+  "kind": "table",
+  "headline": "Group Partitioning · APA Dictionary of Psychology",
+  "columns": [
+    "Construct",
+    "Cognitive Boundary",
+    "Evaluative Orientation"
+  ],
+  "items": [
+    {
+      "cells": [
+        "Ingroup",
+        "Shared membership and identity",
+        "Affiliation and trust"
+      ]
+    },
+    {
+      "cells": [
+        "Outgroup",
+        "External to group boundary",
+        "Detachment or competition"
+      ]
+    },
+    {
+      "cells": [
+        "Ingroup Bias",
+        "Preferential resource and trait allocation",
+        "Systematic ingroup favoritism"
+      ]
+    }
+  ],
+  "sources": "APA Dictionary of Psychology; The Original Power, Preface",
+  "qrUrl": "https://dictionary.apa.org/ingroup-bias"
+}

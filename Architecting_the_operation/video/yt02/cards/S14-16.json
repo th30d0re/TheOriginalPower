@@ -1,29 +1,55 @@
 {
   "kind": "table",
-  "headline": "Close · 89:08",
+  "headline": "Concession Theorem · Appendix Falsification Protocol",
+  "columns": [
+    "Gate",
+    "Required Empirical Condition",
+    "1450–2026 Status"
+  ],
   "items": [
     {
-      "title": "89:08 · Across the book s 1450-to-2026 dataset the",
-      "detail": "Across the book's 1450-to-2026 dataset, the theorem claims that no non-kinetic reform permanently reduced the Elite's extraction share at the system apex."
+      "cells": [
+        "Dataset Claim",
+        "No non-kinetic reform permanently cut apex share",
+        "1450–2026 historical archive"
+      ]
     },
     {
-      "title": "89:17 · That claim carries three simultaneous falsification conditions",
-      "detail": "That claim carries three simultaneous falsification conditions."
+      "cells": [
+        "Condition 1 · Duration",
+        "Absolute decline in top-decile wealth share ≥ 30 years",
+        "Required simultaneously"
+      ]
     },
     {
-      "title": "89:28 · Second aggregate apex extraction must decline in",
-      "detail": "Second, aggregate apex extraction must decline in real terms across all channels, including offshore capital, newly targeted populations, and substitutions between labor and financial extraction."
+      "cells": [
+        "Condition 2 · All Channels",
+        "Real decline across offshore, new targets, and finance",
+        "Blocks channel-shift evasion"
+      ]
     },
     {
-      "title": "89:38 · Third the reduction must survive later periods",
-      "detail": "Third, the reduction must survive later periods of low kinetic threat, demonstrating a durable alteration of the extraction kernel after the pressure that produced the reform recedes."
+      "cells": [
+        "Condition 3 · Low-Threat Survival",
+        "Reduction persists after kinetic resistance recedes",
+        "Proves durable kernel change"
+      ]
     },
     {
-      "title": "89:49 · A reform satisfying all three conditions would",
-      "detail": "A reform satisfying all three conditions would falsify the theorem regardless of the threat environment present when that reform was adopted."
+      "cells": [
+        "Joint Falsification Rule",
+        "Any reform meeting Conditions 1–3 refutes theorem",
+        "Independent of adoption threat"
+      ]
+    },
+    {
+      "cells": [
+        "Current Audit Result",
+        "Zero qualifying counterexamples in 1450–2026 dataset",
+        "Theorem stands unfalsified"
+      ]
     }
   ],
-  "sources": "Source locators: book Appendix, Falsifiability Conditions for the Two Terminal Theorems; book Appendix, lines 15442-15448; book Appendix, lines 15449-15451; book Appendix, lines 15452-15454; book Appendix, lines 15454-15458",
-  "qrUrl": null
+  "sources": "The Original Power, Appendix (Falsifiability Conditions for the Two Terminal Theorems)",
+  "qrUrl": ""
 }
-

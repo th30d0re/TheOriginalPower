@@ -1,0 +1,48 @@
+{
+  "kind": "table",
+  "headline": "Biological Embedding · Causal Direction & Scope Limits",
+  "columns": [
+    "Analytical Dimension",
+    "Empirical Finding",
+    "Methodological Boundary"
+  ],
+  "items": [
+    {
+      "cells": [
+        "Causal Direction",
+        "Manufactured hierarchy → exposure → physiology",
+        "Social policy drives biological state"
+      ]
+    },
+    {
+      "cells": [
+        "Excluded Construct",
+        "Zero genetic race or moral essence",
+        "Architecture writes history via exposure"
+      ]
+    },
+    {
+      "cells": [
+        "Intergenerational Studies",
+        "Famine, Holocaust, Civil War POWs",
+        "Plausible marks (Heijmans; Yehuda; Costa)"
+      ]
+    },
+    {
+      "cells": [
+        "Confounding Limits",
+        "Small samples & shared environment",
+        "Germline vs. prenatal/social unseparated (Zhou & Ryan 2023)"
+      ]
+    },
+    {
+      "cells": [
+        "Strongest Race-Specific Data",
+        "Weathering, allostatic load, methylation",
+        "Within-lifespan cumulative exposure (§2.3)"
+      ]
+    }
+  ],
+  "sources": "Heijmans et al. (2008); Yehuda et al. (2016); Costa et al. (2018); Zhou & Ryan (2023); §2.3",
+  "qrUrl": ""
+}

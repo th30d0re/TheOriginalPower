@@ -1,0 +1,23 @@
+{
+  "kind": "equation",
+  "headline": "Step 3 · 1691 Boundary Act (Equation 4.2)",
+  "number": "Equation 4.2",
+  "latex": "I_{\\mathrm{buffer}} \\cap O_{\\mathrm{racialized}} = \\emptyset",
+  "terms": [
+    {
+      "latex": "\\mathrm{April\\ 1691\\ Statute}",
+      "gloss": "Outlawed intermarriage with Black, mulatto, or Indigenous partners under banishment"
+    },
+    {
+      "latex": "\\mathrm{5\\ yr\\ /\\ 30\\ yr\\ Penalty}",
+      "gloss": "Five years extra servitude for white mothers; thirty years indenture for mixed-race children"
+    },
+    {
+      "latex": "\\mathrm{276\\text{-}Year\\ Runtime}",
+      "gloss": "Enforced through 1924 Racial Integrity Act and Bazile (1965) until Loving v. Virginia (1967)"
+    }
+  ],
+  "items": [],
+  "sources": "Hening's Statutes at Large, Vol. 3 (1691); Loving v. Virginia, 388 U.S. 1 (1967); Ch. 4",
+  "qrUrl": ""
+}

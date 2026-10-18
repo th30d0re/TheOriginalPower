@@ -1,0 +1,23 @@
+{
+  "kind": "equation",
+  "headline": "Scalar Prejudice vs. Vector Racism · Equations 3.1 & 25.1",
+  "number": "Equations 3.1 & 25.1",
+  "latex": "\\vec{R}_{\\mathrm{systemic}} = \\lVert F_{\\mathrm{institutional}} \\rVert \\cdot \\hat{d}_{\\mathrm{hierarchy}} \\neq \\lvert \\mathrm{Prejudice}_{\\mathrm{individual}} \\rvert",
+  "terms": [
+    {
+      "latex": "M_{\\mathrm{agnitude}} \\cdot \\hat{d}_{\\mathrm{state}}",
+      "gloss": "Eq. 3.1 (citing Abulhawa): magnitude multiplied by state enforcement unit vector"
+    },
+    {
+      "latex": "\\lVert F_{\\mathrm{institutional}} \\rVert \\cdot \\hat{d}_{\\mathrm{hierarchy}}",
+      "gloss": "Eq. 25.1 (citing Gilens & Page 2014): institutional force directed along hierarchy"
+    },
+    {
+      "latex": "\\lvert \\mathrm{Prejudice}_{\\mathrm{individual}} \\rvert",
+      "gloss": "Scalar interpersonal animus possessing magnitude without state direction vector"
+    }
+  ],
+  "items": [],
+  "sources": "Abulhawa; Gilens & Page (2014); The Original Power, Ch. 3 (Eq. 3.1), Ch. 21, & Ch. 25 (Eq. 25.1)",
+  "qrUrl": "https://doi.org/10.1017/S1537592714001595"
+}

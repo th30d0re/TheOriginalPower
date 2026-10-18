@@ -1,0 +1,19 @@
+{
+  "kind": "equation",
+  "headline": "Internal Payoff Gradient · Equation 0.3",
+  "number": "Equation 0.3",
+  "latex": "\\mathrm{Benefit}(E) \\gg \\mathrm{Benefit}(P_{\\mathrm{uppet}}) > \\mathrm{Benefit}(F_{\\mathrm{enforce}}) > \\mathrm{Benefit}(I_{\\mathrm{buffer}})",
+  "terms": [
+    {
+      "latex": "\\mathrm{Benefit}(E)",
+      "gloss": "Net capital surplus captured at the Elite apex"
+    },
+    {
+      "latex": "P_{\\mathrm{uppet}},\\; F_{\\mathrm{enforce}},\\; I_{\\mathrm{buffer}}",
+      "gloss": "Delegated governance, licensed violence, and status-plus-concession buffer wage"
+    }
+  ],
+  "items": [],
+  "sources": "The Original Power, Ch. 0, Eq. 0.3; Ch. 2, §2.1, Eq. 2.2",
+  "qrUrl": ""
+}

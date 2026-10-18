@@ -1,21 +1,34 @@
 {
-  "kind": "stat_bars",
-  "headline": "Test 3: The American backlash record, 1840–2020 · 68:37",
+  "kind": "table",
+  "headline": "Test 3 Verdict · American Backlash Record (1840–2020)",
+  "columns": [
+    "Test Component",
+    "Empirical Series (1840–2020)",
+    "Evaluation"
+  ],
   "items": [
     {
-      "title": "68:37 · The evidence supports embodiment within lives and",
-      "detail": "The evidence supports embodiment within lives and cautious intergenerational effects through several pathways."
+      "cells": [
+        "Embodiment Scope",
+        "Within-life weathering verified; germline bounded",
+        "Methodological discipline"
+      ]
     },
     {
-      "title": "68:46 · Biological embedding therefore belongs inside this backlash",
-      "detail": "Biological embedding therefore belongs inside this backlash record as a system output measured in bodily capacity, illness burden, and accelerated aging."
+      "cells": [
+        "Physiological Output",
+        "Illness burden and accelerated aging",
+        "Integrated into backlash record"
+      ]
     },
     {
-      "title": "68:55 · Test 3 supports Predictions 2 3 and",
-      "detail": "Test 3 supports Predictions 2, 3, and 4."
+      "cells": [
+        "Predictions 2, 3, 4 & R2",
+        "2.8% patrol ratio; post-1965 union drop & prison/wealth surge",
+        "Supported; R2 undefeated"
+      ]
     }
   ],
-  "sources": "Source locators: book §2.3, lines 1986-1997; book §2.3, Definition 2.3; book §2.3.5; §2.3.6; YT02_outline P3, P4, R2",
-  "qrUrl": null
+  "sources": "The Original Power, Ch. 2, §2.3.2, §2.3.5, §2.3.6",
+  "qrUrl": ""
 }
-

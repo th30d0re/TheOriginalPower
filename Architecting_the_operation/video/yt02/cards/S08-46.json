@@ -1,0 +1,19 @@
+{
+  "kind": "equation",
+  "headline": "1705 State Transition · Equations 4.3 & 4.4",
+  "number": "Equations 4.3 & 4.4",
+  "latex": "\\mathrm{Benefit}(E) \\gg \\mathrm{Benefit}(I_{\\mathrm{buffer}}) > \\mathrm{Benefit}(O_{\\mathrm{racialized}})",
+  "terms": [
+    {
+      "latex": "I_{\\mathrm{poor}} \\longrightarrow I_{\\mathrm{buffer}}",
+      "gloss": "Equation 4.3: Buffer Created, converting poor Europeans into armed defenders of Elite E"
+    },
+    {
+      "latex": "\\mathrm{Benefit}(E) \\gg \\mathrm{Benefit}(I_{\\mathrm{buffer}})",
+      "gloss": "Equation 4.4: three-tier payoff ordering securing Elite surplus above buffer wages"
+    }
+  ],
+  "items": [],
+  "sources": "The Original Power, Ch. 4, Eq. 4.3 & Eq. 4.4",
+  "qrUrl": ""
+}

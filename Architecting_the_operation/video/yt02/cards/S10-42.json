@@ -1,0 +1,28 @@
+{
+  "kind": "source",
+  "headline": "Definition 2.3 · Biological Embedding",
+  "items": [
+    {
+      "title": "Definition 2.3 · Embodiment",
+      "detail": "Chronic social and institutional exposure converted into physiological system state."
+    },
+    {
+      "title": "Chronic Stress Pathways",
+      "detail": "Policing, poverty, spatial containment, and threat activate stress axes across years."
+    },
+    {
+      "title": "Measured Biomarkers",
+      "detail": "Allostatic load, inflammation, telomere attrition, DNA methylation, and epigenetic aging."
+    },
+    {
+      "title": "Geronimus et al. (2006)",
+      "detail": "Weathering framework: accelerated biological aging under cumulative socioeconomic adversity."
+    },
+    {
+      "title": "Duru (2012) & Spears (2026)",
+      "detail": "Allostatic load linked to mortality; discrimination-associated methylation and aging."
+    }
+  ],
+  "sources": "Geronimus et al. (2006); Duru et al. (2012); Ruiz-Narváez et al. (2024); Spears et al. (2026); §2.3",
+  "qrUrl": "https://doi.org/10.2105/AJPH.2004.060749"
+}

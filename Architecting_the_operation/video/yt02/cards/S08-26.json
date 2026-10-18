@@ -1,0 +1,23 @@
+{
+  "kind": "equation",
+  "headline": "1676 Solidarity Crisis · Equations 4.1 & 2.15",
+  "number": "Equations 4.1, 2.8 & 2.15",
+  "latex": "L_{\\mathrm{white}} + L_{\\mathrm{black}} > E \\implies \\mathrm{Revolution}, \\quad M_{\\mathrm{eff}}(t) = M(t) - \\lambda\\Phi_{\\mathrm{load}}(t)",
+  "terms": [
+    {
+      "latex": "L_{\\mathrm{white}} + L_{\\mathrm{black}} > E",
+      "gloss": "Equation 4.1: joint white and Black labor coalition exceeding Elite containment"
+    },
+    {
+      "latex": "\\int E(\\tau)\\,d\\tau > \\tau_{\\mathrm{MFT}}",
+      "gloss": "Equation 2.8: cumulative extraction crossing the minimum forcing threshold in 1676"
+    },
+    {
+      "latex": "\\Phi_{\\mathrm{load}} \\approx 0 \\implies M_{\\mathrm{eff}} > \\tau",
+      "gloss": "Equation 2.15: pre-1705 low phase dispersion allowed effective coherence to breach τ"
+    }
+  ],
+  "items": [],
+  "sources": "The Original Power, Ch. 2 (§2.3.2, §2.3.6) & Ch. 4 (Eq. 4.1)",
+  "qrUrl": ""
+}

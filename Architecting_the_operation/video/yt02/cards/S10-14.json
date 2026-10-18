@@ -1,0 +1,19 @@
+{
+  "kind": "equation",
+  "headline": "Part B · Interface Optimizer (Equations 2.9–2.10)",
+  "number": "Equations 2.9 & 2.10",
+  "latex": "S^*(t) = \\arg\\min_{S \\in \\mathcal{S}} \\bigl(C_{\\mathrm{coercive}} + C_{\\mathrm{legitimacy}} + C_{\\mathrm{economic}}\\bigr)",
+  "terms": [
+    {
+      "latex": "\\mathcal{S}",
+      "gloss": "Eq. 2.9 control set: Partition, Integration, Repression, Externalization"
+    },
+    {
+      "latex": "C_{\\mathrm{coercive}} + C_{\\mathrm{legitimacy}} + C_{\\mathrm{economic}}",
+      "gloss": "Eq. 2.10 total regime maintenance cost minimized at each moment t"
+    }
+  ],
+  "items": [],
+  "sources": "The Original Power, Ch. 2, §2.3.5, Eq. 2.9 & Eq. 2.10 (Confidence Tier 2)",
+  "qrUrl": ""
+}

@@ -1,0 +1,19 @@
+{
+  "kind": "equation",
+  "headline": "Level 4 · Recursive Local Partition",
+  "number": "Equation 2.4",
+  "latex": "X = X^{+}_{\\alpha} \\sqcup X^{-}_{\\alpha}, \\quad X^{+}_{\\alpha} \\cap X^{-}_{\\alpha} = \\emptyset",
+  "terms": [
+    {
+      "latex": "\\alpha",
+      "gloss": "Secondary sorting axis: gender, wealth, credentials, religion, citizenship, record"
+    },
+    {
+      "latex": "X^{+}_{\\alpha},\\; X^{-}_{\\alpha}",
+      "gloss": "Locally advantaged sub-cell X+_α and locally subordinated sub-cell X−_α"
+    }
+  ],
+  "items": [],
+  "sources": "The Original Power, Ch. 2, §2.1, Eq. 2.4",
+  "qrUrl": ""
+}

@@ -1,0 +1,34 @@
+{
+  "kind": "table",
+  "headline": "Table 2.1 · The Set-Resolution Ladder",
+  "columns": [
+    "Resolution Level",
+    "Governing Equation",
+    "Analytical Scope"
+  ],
+  "items": [
+    {
+      "cells": [
+        "Diagnostic Matrix",
+        "Table 2.1 & Figure 2.1",
+        "Four nested equations read simultaneously as one instrument"
+      ]
+    },
+    {
+      "cells": [
+        "Levels 1 & 2",
+        "Eq. 2.1 (U = I ⊔ O) · Eq. 2.2 (Refine(I))",
+        "Primary color line and four internal In-group tiers"
+      ]
+    },
+    {
+      "cells": [
+        "Levels 3 & 4",
+        "Eq. 2.3 (Refine(O)) · Eq. 2.4 (X = X⁺_α ⊔ X⁻_α)",
+        "Target/adjacent Out-groups and secondary α-axis fractures"
+      ]
+    }
+  ],
+  "sources": "The Original Power, Ch. 2, §2.1, Table 2.1 & Fig. 2.1",
+  "qrUrl": ""
+}

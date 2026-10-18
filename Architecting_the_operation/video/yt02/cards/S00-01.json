@@ -1,29 +1,48 @@
 {
-  "kind": "title",
-  "headline": "The dictionary order · 00:00",
+  "kind": "table",
+  "headline": "Lexical Hierarchy · Standard Dictionary Entry",
+  "columns": [
+    "Slot",
+    "Dictionary Sense",
+    "Implied Causal Weight"
+  ],
   "items": [
     {
-      "title": "00:00 · Open a conventional dictionary entry for racism",
-      "detail": "Open a conventional dictionary entry for racism."
+      "cells": [
+        "Entry Order",
+        "Individual animus precedes systemic structure",
+        "Lexical priority"
+      ]
     },
     {
-      "title": "00:11 · Sense one defines racism as individual prejudice",
-      "detail": "Sense one defines racism as individual prejudice, hostility, or discrimination directed against another person on the basis of race or ethnicity."
+      "cells": [
+        "Sense 1",
+        "Interpersonal hostility or racial antipathy",
+        "Primary root"
+      ]
     },
     {
-      "title": "00:19 · Sense two defines racism as an ideological",
-      "detail": "Sense two defines racism as an ideological belief or doctrine holding that inherent biological differences among human racial groups determine cultural or intellectual achievement."
+      "cells": [
+        "Sense 2",
+        "Doctrine of biological group hierarchy",
+        "Ideological belief"
+      ]
     },
     {
-      "title": "00:29 · Sense three when the dictionary includes a",
-      "detail": "Sense three, when the dictionary includes a third sense at all, mentions institutional or systemic practices that produce unequal outcomes across racial categories."
+      "cells": [
+        "Sense 3",
+        "Institutional practices yielding unequal outcomes",
+        "Secondary extension"
+      ]
     },
     {
-      "title": "00:38 · Figure 2 3 in Chapter 2 of",
-      "detail": "Figure 2.3 in Chapter 2 of The Original Power displays this conventional lexical hierarchy in its left-hand column as an inverted pyramid."
+      "cells": [
+        "Figure 2.3 (Left)",
+        "Inverted pyramid resting on private attitude",
+        "Conventional baseline"
+      ]
     }
   ],
-  "sources": "Source locators: book §2.2; book §2.2, Fig 2.3",
-  "qrUrl": null
+  "sources": "The Original Power, Ch. 2, §2.2, Fig. 2.3",
+  "qrUrl": ""
 }
-

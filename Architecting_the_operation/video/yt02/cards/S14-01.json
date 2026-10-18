@@ -1,29 +1,24 @@
 {
   "kind": "title",
-  "headline": "Close · 86:34",
+  "headline": "Segment 14 · Complete Analytical Arc",
   "items": [
     {
-      "title": "86:34 · Let us review the complete analytical arc",
-      "detail": "Let us review the complete analytical arc we have walked from the dictionary opening to the rebuilt definition."
+      "title": "Arc Review",
+      "detail": "Synthesizing the full trajectory from lexical entry to structural theorem."
     },
     {
-      "title": "86:42 · We began with the standard dictionary entry",
-      "detail": "We began with the standard dictionary entry for racism and showed that its numbered order encodes an untested causal assumption placing private prejudice ahead of institutional structure."
+      "title": "Lexical & Causal Inversion",
+      "detail": "Exposing the untested causal assumption inside conventional dictionary sense ordering."
     },
     {
-      "title": "86:52 · We grounded bias in Greenwald and Banaji",
-      "detail": "We grounded bias in Greenwald and Banaji, prejudice in Allport, and discrimination in Fiske's tripartite model, assigning all three to the interpersonal class of human psychology."
+      "title": "Interpersonal Psychology",
+      "detail": "Greenwald and Banaji (bias), Allport (prejudice), and Fiske (tripartite discrimination)."
     },
     {
-      "title": "87:03 · We audited the American racial order against",
-      "detail": "We audited the American racial order against the five-part engineering definition of a system and walked the set-theoretic partitions from Equation 2.1 through Equation 2.4 in Table 2.1 and Figure 2.1."
-    },
-    {
-      "title": "87:15 · The orthographic illusion showed how five tiers",
-      "detail": "The orthographic illusion showed how five tiers project into a binary, and Equation 3.5 showed how the Buffer Class wage rotates between material provision and psychological status."
+      "title": "Systems & Set Ladder",
+      "detail": "Five-part system checklist paired with the four-level set decomposition."
     }
   ],
-  "sources": "Source locators: editorial; book §2.2, Fig 2.3; book Preface; §2.2; book §2.1, Eq 2.1-2.4, Table 2.1, Fig 2.1; book Ch 0; Ch 3, Eq 3.5",
-  "qrUrl": null
+  "sources": "The Original Power, Preface & Ch. 2, §2.1–2.2",
+  "qrUrl": ""
 }
-

@@ -1,0 +1,23 @@
+{
+  "kind": "equation",
+  "headline": "Requirement 5 · Feedback & RLC Damping",
+  "number": "Equation 2.11",
+  "latex": "L\\frac{d^2 q}{dt^2} + R\\frac{dq}{dt} + \\frac{1}{C}q = F_{\\mathrm{shock}}(t)",
+  "terms": [
+    {
+      "latex": "L",
+      "gloss": "State institutional inertia resisting rapid structural change"
+    },
+    {
+      "latex": "R",
+      "gloss": "Coercive and administrative resistance dissipating mobilization energy"
+    },
+    {
+      "latex": "C",
+      "gloss": "Legal and symbolic buffering capacitance absorbing statutory shocks"
+    }
+  ],
+  "items": [],
+  "sources": "The Original Power, Ch. 2, §2.2 (Fig. 2.2) & §2.3.6 (Eq. 2.11)",
+  "qrUrl": ""
+}

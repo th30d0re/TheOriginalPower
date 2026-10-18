@@ -1,0 +1,19 @@
+{
+  "kind": "equation",
+  "headline": "Requirement 4 · Kernel Objective Function",
+  "number": "Equation 2.7",
+  "latex": "\\max E(t) \\quad \\text{subject to} \\quad M(t) < \\tau",
+  "terms": [
+    {
+      "latex": "E(t)",
+      "gloss": "Upward economic extraction rate captured by the Elite tier"
+    },
+    {
+      "latex": "M(t) < \\tau",
+      "gloss": "Cross-group class mobilization held below critical revolutionary threshold τ"
+    }
+  ],
+  "items": [],
+  "sources": "The Original Power, Ch. 2, §2.3.2, Eq. 2.7",
+  "qrUrl": ""
+}

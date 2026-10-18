@@ -1,29 +1,32 @@
 {
-  "kind": "timeline",
-  "headline": "Test 2: Virginia, 1640–1705 · 43:28",
+  "kind": "stat_bars",
+  "headline": "Chesapeake Indenture · Jordan & Walsh 2008",
   "items": [
     {
-      "title": "43:28 · In their 2008 historical study White Cargo",
-      "detail": "In their 2008 historical study White Cargo, Don Jordan and Michael Walsh document the scale and brutality of that early European servant pipeline."
+      "title": "White Cargo (2008) Audit",
+      "detail": "150 years of British colonial servant transportation documented by Jordan and Walsh."
     },
     {
-      "title": "43:37 · Between 300 000 and 500 000 English",
-      "detail": "Between 300,000 and 500,000 English, Scottish, and Irish men, women, and children were shipped to the American colonies under indenture across roughly a century and a half."
+      "title": "European Servants Shipped",
+      "detail": "500,000 maximum estimate (300,000–500,000 English, Scottish, and Irish servants)."
     },
     {
-      "title": "43:48 · Mortality on the Atlantic crossing reached up",
-      "detail": "Mortality on the Atlantic crossing reached up to thirty percent on severe voyages, and roughly forty percent of indentured arrivals died before completing their multi-year terms of Chesapeake field labor."
+      "title": "Chesapeake Term Mortality",
+      "detail": "40% died before completing indenture terms (up to 30% voyage mortality)."
     },
     {
-      "title": "44:00 · In a single year the London spirit-merchant",
-      "detail": "In a single year, the London spirit-merchant William Thiene abducted 840 children from British streets for shipment to colonial plantations."
+      "title": "London Child Abductions",
+      "detail": "840 children kidnapped from British streets in one year by spirit-merchant William Thiene."
     },
     {
-      "title": "44:08 · Court records preserve cases such as Elizabeth",
-      "detail": "Court records preserve cases such as Elizabeth Abbott, an indentured servant beaten to death with five hundred lashes while the planter class shielded her master from capital punishment."
+      "title": "Elizabeth Abbott Case",
+      "detail": "500 lashes inflicted in fatal beating while planter court shielded the master."
+    },
+    {
+      "title": "First 5,000 Land Survival",
+      "detail": "241 servants out of 5,000 survived indenture to acquire colonial land (4.8%)."
     }
   ],
-  "sources": "Source locators: book Ch 4, citing Jordan & Walsh 2008",
-  "qrUrl": null
+  "sources": "Jordan & Walsh (2008), White Cargo; The Original Power, Ch. 4",
+  "qrUrl": ""
 }
-

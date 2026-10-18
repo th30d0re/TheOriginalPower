@@ -1,0 +1,34 @@
+{
+  "kind": "table",
+  "headline": "Test 1 Verdict · Portugal, 1441–1486",
+  "columns": [
+    "Criterion",
+    "Archival Finding",
+    "Evaluation"
+  ],
+  "items": [
+    {
+      "cells": [
+        "Prediction 1",
+        "1441 raid & 1444 syndicate precede 1453 Zurara chronicle",
+        "Supported"
+      ]
+    },
+    {
+      "cells": [
+        "Sponsoring Apparatus",
+        "Crown, papacy, Order of Christ, Lagos syndicate, Casa dos Escravos",
+        "Verified"
+      ]
+    },
+    {
+      "cells": [
+        "Refutation Standard 1",
+        "Zero unsponsored or pre-extraction phenotype caste found",
+        "No counterexample"
+      ]
+    }
+  ],
+  "sources": "The Original Power, Ch. 2, §2.2 & Ch. 3",
+  "qrUrl": ""
+}

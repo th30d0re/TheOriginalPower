@@ -1,0 +1,19 @@
+{
+  "kind": "equation",
+  "headline": "The Concession Theorem · Equation 19.2",
+  "number": "Equation 19.2",
+  "latex": "\\frac{d\\,\\mathrm{Concession}}{dt} \\propto \\mathrm{Threat}\\bigl(M(t)\\bigr), \\quad \\Delta_{\\max} = 0",
+  "terms": [
+    {
+      "latex": "\\mathrm{Threat}\\bigl(M(t)\\bigr)",
+      "gloss": "Policy reform permitted at a rate proportional to rising class resistance"
+    },
+    {
+      "latex": "\\Delta_{\\max} = 0",
+      "gloss": "Concession invariant: resistance held below τ while preserving apex extraction"
+    }
+  ],
+  "items": [],
+  "sources": "The Original Power, Ch. 19, Concession Theorem, Eq. 19.2",
+  "qrUrl": ""
+}

@@ -1,25 +1,24 @@
 {
   "kind": "title",
-  "headline": "What makes a system a system · 08:42",
+  "headline": "Segment 02 · What Makes a System a System",
   "items": [
     {
-      "title": "08:42 · Calling racism a system requires demonstrating that",
-      "detail": "Calling racism a system requires demonstrating that it possesses the formal anatomy of a system in engineering and systems theory."
+      "title": "Formal Systems Criterion",
+      "detail": "Demonstrating that racism satisfies the engineering anatomy of a regulated machine."
     },
     {
-      "title": "08:50 · In rigorous analytical usage the word system",
-      "detail": "In rigorous analytical usage, the word system designates a bounded, feedback-regulated machine with measurable state variables and governing equations."
+      "title": "State Variables & Equations",
+      "detail": "Bounded feedback-controlled architecture with measurable flows and governing laws."
     },
     {
-      "title": "08:57 · A formal system satisfies a five-part engineering",
-      "detail": "A formal system satisfies a five-part engineering checklist: identifiable components, a policed boundary, defined inputs and outputs, an objective function or purpose, and stabilizing feedback loops."
+      "title": "Five-Part Engineering Audit",
+      "detail": "Components, policed boundary, inputs/outputs, objective function, and feedback loops."
     },
     {
-      "title": "09:08 · We can audit the American racial hierarchy",
-      "detail": "We can audit the American racial hierarchy against each of those five requirements using the equations and diagrams in Chapters 0, 2, and 4."
+      "title": "Chapters 0, 2, and 4",
+      "detail": "Auditing the American racial order against each engineering requirement."
     }
   ],
-  "sources": "Source locators: editorial; book Ch 0; Ch 2; Ch 4",
-  "qrUrl": null
+  "sources": "The Original Power, Ch. 0, Ch. 2, Ch. 4",
+  "qrUrl": ""
 }
-

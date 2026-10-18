@@ -1,0 +1,19 @@
+{
+  "kind": "equation",
+  "headline": "Level 2 · In-Group Tier Decomposition",
+  "number": "Equation 2.2",
+  "latex": "\\mathrm{Refine}(I) = E \\sqcup P_{\\mathrm{uppet}} \\sqcup F_{\\mathrm{enforce}} \\sqcup I_{\\mathrm{buffer}}",
+  "terms": [
+    {
+      "latex": "E,\\; P_{\\mathrm{uppet}}",
+      "gloss": "Elite architects E and Puppet Class administrators P_uppet"
+    },
+    {
+      "latex": "F_{\\mathrm{enforce}},\\; I_{\\mathrm{buffer}}",
+      "gloss": "Enforcement Class F_enforce and non-elite Buffer Class I_buffer"
+    }
+  ],
+  "items": [],
+  "sources": "The Original Power, Ch. 2, §2.1, Eq. 2.2",
+  "qrUrl": ""
+}

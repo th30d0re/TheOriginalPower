@@ -1,25 +1,41 @@
 {
   "kind": "table",
-  "headline": "What makes a system a system · 11:23",
+  "headline": "Requirement 3 · Circuit Inputs and Outputs",
+  "columns": [
+    "Circuit Element",
+    "Formal Variable",
+    "Operational Role"
+  ],
   "items": [
     {
-      "title": "11:23 · Requirement three is a defined flow of",
-      "detail": "Requirement three is a defined flow of inputs and outputs."
+      "cells": [
+        "Driving Energy Input",
+        "Kinetic labor of O and I_buffer",
+        "Productive capacity powering the Figure 0.3 circuit"
+      ]
     },
     {
-      "title": "11:38 · The Elite tier operates as a parasitic",
-      "detail": "The Elite tier operates as a parasitic control gate that directs the high-current labor flow while drawing a small control current through the intermediate tiers."
+      "cells": [
+        "Parasitic Control Gate",
+        "Elite apex E",
+        "Directs high-current labor via small intermediate control current"
+      ]
     },
     {
-      "title": "11:48 · The primary output is upward economic extraction",
-      "detail": "The primary output is upward economic extraction E of t captured by the Elite, paired with a downward suppression allocation psi of t, split into psychological status wage psi-sub-s and material concessions psi-sub-m paid to the Buffer Class."
+      "cells": [
+        "Primary System Outputs",
+        "E(t) upward; ψ(t) = ψ_s + ψ_m downward",
+        "Surplus to Elite; status and material wage to Buffer Class"
+      ]
     },
     {
-      "title": "12:03 · Under the Concession Theorem in Chapter 19",
-      "detail": "Under the Concession Theorem in Chapter 19, non-kinetic allocations obey the constraint delta max equals zero: they redistribute status and minor concessions without altering the maximum extraction ceiling."
+      "cells": [
+        "Concession Constraint",
+        "Δ_max = 0 (Chapter 19)",
+        "Non-kinetic concessions preserve maximum Elite extraction ceiling"
+      ]
     }
   ],
-  "sources": "Source locators: book Preface; Ch 0, Fig 0.3; book Preface; Ch 0; book §2.3.1; Ch 3, Eq 3.2; book §2.3.1; Ch 19",
-  "qrUrl": null
+  "sources": "The Original Power, Ch. 0, Fig. 0.3; Ch. 2, §2.3.1; Ch. 3, Eq. 3.2; Ch. 19",
+  "qrUrl": ""
 }
-

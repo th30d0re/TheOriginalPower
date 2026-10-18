@@ -1,0 +1,48 @@
+{
+  "kind": "table",
+  "headline": "Tripartite Intergroup Model · Fiske 1998",
+  "columns": [
+    "Modality",
+    "Psychological Construct",
+    "Operational Expression"
+  ],
+  "items": [
+    {
+      "cells": [
+        "Outward Conduct",
+        "Discrimination",
+        "Observable behavioral treatment across group lines"
+      ]
+    },
+    {
+      "cells": [
+        "Synthesis Source",
+        "Fiske (1998), Handbook Vol. 2",
+        "Standard social-psychological taxonomy (pp. 357–411)"
+      ]
+    },
+    {
+      "cells": [
+        "Thinking / Feeling / Action",
+        "Stereotype · Prejudice · Discrimination",
+        "Cognitive belief, affective tone, behavioral act"
+      ]
+    },
+    {
+      "cells": [
+        "Functional Division",
+        "Category tag → Valence → Action",
+        "Internal appraisal converted into external conduct"
+      ]
+    },
+    {
+      "cells": [
+        "Interpersonal Cases",
+        "Exclusion, grading, service, rental refusal",
+        "Person-to-person differential treatment"
+      ]
+    }
+  ],
+  "sources": "Fiske (1998), Handbook of Social Psychology, 4th ed., Vol. 2, pp. 357–411",
+  "qrUrl": ""
+}

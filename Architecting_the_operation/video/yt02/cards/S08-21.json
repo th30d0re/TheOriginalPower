@@ -1,25 +1,28 @@
 {
   "kind": "timeline",
-  "headline": "Test 2: Virginia, 1640–1705 · 46:01",
+  "headline": "Step 2 · Hereditary & Lethal Force Statutes (1662–1669)",
   "items": [
     {
-      "title": "46:01 · Step two arrived in December 1662 when",
-      "detail": "Step two arrived in December 1662, when the Virginia House of Burgesses enacted the hereditary slave statute of partus sequitur ventrem."
+      "title": "Dec 1662 · Act XII",
+      "detail": "Virginia House of Burgesses enacts partus sequitur ventrem."
     },
     {
-      "title": "46:09 · That 1662 statute decreed that all children",
-      "detail": "That 1662 statute decreed that all children born in the colony would be held bond or free solely according to the legal condition of the mother."
+      "title": "Maternal Condition Rule",
+      "detail": "Children held bond or free strictly according to the legal status of the mother."
     },
     {
-      "title": "46:20 · By reversing several centuries of English common-law",
-      "detail": "By reversing several centuries of English common-law paternity rules, the 1662 statute converted the reproductive capacity of enslaved Black women into a self-replenishing capital asset and insulated white planters who fathered children with enslaved women."
+      "title": "Capital & Paternity Shield",
+      "detail": "Reversed English common law, converting Black reproduction into self-replenishing capital."
     },
     {
-      "title": "46:34 · In 1664 neighboring Maryland enacted its lifelong",
-      "detail": "In 1664, neighboring Maryland enacted its lifelong servitude statute, and in October 1669 Virginia passed An Act About the Casual Killing of Slaves."
+      "title": "1664 MD & Oct 1669 VA",
+      "detail": "Maryland lifelong servitude statute followed by Virginia's Casual Killing Act."
+    },
+    {
+      "title": "1669 · Felony Exemption",
+      "detail": "Declared killing a resisting enslaved person during correction free of felony."
     }
   ],
-  "sources": "Source locators: book Ch 4; Ch 8; book Ch 4",
-  "qrUrl": null
+  "sources": "Hening's Statutes at Large, Vol. 2 (1662, 1669); The Original Power, Ch. 4 & Ch. 8",
+  "qrUrl": ""
 }
-
