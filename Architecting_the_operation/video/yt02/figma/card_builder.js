@@ -74,7 +74,7 @@ async function build(card, idx) {
       const tr = panel(row, "track", 320, 8, W - 320, 34, { fill: C.well, stroke: null, effect: "Inset/Well", radius: 17 });
       const bar = figma.createRectangle(); row.appendChild(bar); bar.name = "bar"; bar.x = 320; bar.y = 8; bar.resize(Math.max(12, (W - 320) * vals[i] / max), 34); bar.cornerRadius = 17; bar.fills = bp(C.fillAccent); bar.setEffectStyleIdAsync(ES["Glow/Accent"]);
       const d = await txt(row, "detail", items[i].detail, "Body/Default", C.text, 320, 56, W - 320); fit(d, rh - 60, 18);
-      bar.applyManualKeyframeTrack({ type: "PROPERTY", name: "WIDTH" }, { keyframes: [{ timelinePosition: 1.2 + i * 1.2, value: { type: "FLOAT", value: 12 } }, { timelinePosition: 2.0 + i * 1.2, value: { type: "FLOAT", value: bar.width }, easing: { type: "EASE_OUT" } }] });
+      const bt = (card.beats && card.beats[Math.min(i, card.beats.length - 1)]) || (1.2 + i * 1.2); bar.applyManualKeyframeTrack({ type: "PROPERTY", name: "WIDTH" }, { keyframes: [{ timelinePosition: bt + 0.2, value: { type: "FLOAT", value: 12 } }, { timelinePosition: bt + 1.0, value: { type: "FLOAT", value: bar.width }, easing: { type: "EASE_OUT" } }] });
       y += rh + 16; reveal.push(row); }
   } else if (kind === "figure" && card.hasFigure) {
     const img = svgNode(F, "item 1", card.id + ".fig", W, bottom - top - 60); img.x = X0 + (W - img.width) / 2; img.y = top; reveal.push(img);
@@ -92,8 +92,22 @@ async function build(card, idx) {
   if (card.hasQr) { const q = svgNode(F, "qr", card.id + ".qr", 150, 150); q.x = X1 - 150; q.y = 760; const qp = await txt(F, "qr label", "scan for the source", "Label/Mono Small", C.textDim, X1 - 190, 916, 190, "RIGHT"); }
   // motion (placeholder seconds; figma_cues.py retimes "item N" / "term N" on their words)
   fadeUp(head, 0.2, 0.5, 16); rule.applyAnimationStyle(ST.Opacity, { duration: 0.5, timelineOffset: 0.5, props: { type: "fadeIn", easing: { type: "EASE_OUT" } } });
-  reveal.forEach((n, i) => fadeUp(n, 1.0 + i * 1.2));
-  const tl = head.timelines[0]; head.setTimelineDuration(tl.id, Math.max(8, 2.5 + reveal.length * 1.2));
+  // card.beats: seconds from the run start at which each turn begins (card_beats.py); card.duration: run length
+  const beats = card.beats && card.beats.length ? card.beats : reveal.map((_, i) => 1.0 + i * 1.2);
+  const at = i => beats[Math.min(i, beats.length - 1)];
+  reveal.forEach((n, i) => fadeUp(n, Math.max(0.6, at(i)), 0.5, 20));
+  // focus ring: a panel's stroke warms to the accent on its beat and cools on the next item's beat
+  const hex = h => ({ r: parseInt(h.slice(1, 3), 16) / 255, g: parseInt(h.slice(3, 5), 16) / 255, b: parseInt(h.slice(5, 7), 16) / 255, a: 1 });
+  reveal.forEach((n, i) => { if (!("strokes" in n) || !n.strokes || !n.strokes.length || reveal.length < 2) return;
+    const on = Math.max(0.6, at(i)), off = i + 1 < reveal.length ? at(i + 1) : null;
+    const kf = [{ timelinePosition: on, value: { type: "COLOR", value: hex("#8a6a45") } }, { timelinePosition: on + 0.35, value: { type: "COLOR", value: hex("#e08a3c") }, easing: { type: "EASE_OUT" } }];
+    if (off) kf.push({ timelinePosition: off, value: { type: "COLOR", value: hex("#e08a3c") } }, { timelinePosition: off + 0.35, value: { type: "COLOR", value: hex("#8a6a45") }, easing: { type: "EASE_OUT" } });
+    n.manualKeyframeTracks = { ...(n.manualKeyframeTracks || {}), strokes: { 0: { keyframes: kf } } }; });
+  // turns beyond the item count: a gentle pulse on the last item, one visible change per turn
+  const last = reveal[reveal.length - 1];
+  if (last && beats.length > reveal.length) { const kf = []; for (let j = reveal.length; j < beats.length; j++) { kf.push({ timelinePosition: beats[j], value: { type: "VECTOR", value: { x: 1, y: 1 } } }, { timelinePosition: beats[j] + 0.3, value: { type: "VECTOR", value: { x: 1.03, y: 1.03 } }, easing: { type: "EASE_OUT" } }, { timelinePosition: beats[j] + 0.7, value: { type: "VECTOR", value: { x: 1, y: 1 } }, easing: { type: "EASE_IN_AND_OUT" } }); }
+    last.applyManualKeyframeTrack({ type: "PROPERTY", name: "SCALE_XY" }, { keyframes: kf }); }
+  const tl = head.timelines[0]; head.setTimelineDuration(tl.id, card.duration || Math.max(8, 2.5 + reveal.length * 1.2));
   return { id: F.id, name: F.name, items: reveal.length };
 }
 const out = [];

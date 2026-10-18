@@ -1,4 +1,4 @@
-"""Write outputs/YT01/words.json, the per-turn word timings common16x9 reads.
+"""Write outputs/<YT_EP>/words.json, the per-turn word timings common16x9 reads.
 
 The UEF reels' words.json held Whisper word times per turn, seconds from the turn's
 start. ScriptCast's read-along job (`scriptcast-word-timings <episode> --script <md>`,
@@ -10,11 +10,18 @@ in milliseconds; this converts it. Rerun both after a turn is re-rendered:
 """
 import hashlib
 import json
+import os
 import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
-EP = ROOT / "outputs" / (sys.argv[1] if len(sys.argv) > 1 else "YT01")
+EP_NAME = os.environ.get("YT_EP", sys.argv[1] if len(sys.argv) > 1 else "YT01").upper()
+if EP_NAME not in {"YT01", "YT02"}:
+    sys.exit(f"YT_EP must be YT01 or YT02, got {EP_NAME!r}")
+EP = ROOT / "outputs" / EP_NAME
+SCRIPT = ROOT / "Architecting_the_operation/podcasts" / (
+    "YT02_what_racism_is.md" if EP_NAME == "YT02" else "YT01_what_racism_really_is.md"
+)
 manifest_path = EP / "episode_manifest.json"
 manifest = json.loads(manifest_path.read_text())["turns"]
 timings = json.loads((EP / "word_timings.json").read_text())
@@ -22,7 +29,7 @@ if timings.get("manifest_sha256") != hashlib.sha256(manifest_path.read_bytes()).
     print("warning: word_timings.json was made from a different manifest; rerun scriptcast-word-timings", file=sys.stderr)
 # Script text per turn, in manifest order, for turns Whisper cannot read (archival tape).
 import re
-_script = (ROOT / "Architecting_the_operation/podcasts/YT01_what_racism_really_is.md").read_text()
+_script = SCRIPT.read_text()
 _texts = [re.sub(r"\[clip:[^\]]*\]\s*", "", b).strip() for b in
           re.findall(r"(?ms)^(?:Emmanuel Theodore|Lee Atwater) \(\d+:\d{2}\)\n(.*?)(?=^\S[^\n]* \(\d+:\d{2}\)\n|^<!--|\Z)", _script)]
 

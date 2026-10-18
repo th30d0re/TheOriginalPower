@@ -4,12 +4,12 @@ Turn indices are zero-based. ``cue(seg="03", turn=2, word="partition")``
 resolves the third turn after the SEG 03 marker. ``cue(2, "partition")``
 retains the global-turn API. Preview turns last six seconds.
 
-Runs (the render unit). Every shot in ``YT01_shotlist.md`` is one script turn, in
+Runs (the render unit). Every shot in the selected episode's shot list is one script turn, in
 order. A *run* is a primary shot plus every hold that points at it (``Holds:``),
 including holds that return after other shots. One render covers one run, from the
 primary's turn start to the start of the turn after its last hold; the editor
 (``edit16x9.py``) cuts each shot's window out of it. A scene picks its run from the
-``YT01_SHOT`` environment variable (a primary shot id), else the first run in the
+episode-specific shot environment variable (a primary shot id), else the first run in the
 shot list for this file and class, and calls ``shot_<id>`` (``shot_S03_08``), or
 ``build()`` when no such method exists. Inside a run:
 
@@ -32,10 +32,16 @@ from pathlib import Path
 import manimgx as m
 
 ROOT = Path(__file__).resolve().parents[4]
-SCRIPT = ROOT / "Architecting_the_operation/podcasts/YT01_what_racism_really_is.md"
-SHOTLIST = ROOT / "Architecting_the_operation/video/YT01_shotlist.md"
+VIDEO_ROOT = ROOT / "Architecting_the_operation/video"
+EP_NAME = os.environ.get("YT_EP", "YT01").upper()
+if EP_NAME not in {"YT01", "YT02"}:
+    raise ValueError(f"YT_EP must be YT01 or YT02, got {EP_NAME!r}")
+SCRIPT = ROOT / "Architecting_the_operation/podcasts" / (
+    "YT02_what_racism_is.md" if EP_NAME == "YT02" else "YT01_what_racism_really_is.md"
+)
+SHOTLIST = VIDEO_ROOT / ("YT02_shotlist.md" if EP_NAME == "YT02" else "YT01_shotlist.md")
 HERE = Path(__file__).resolve().parent
-YT = HERE.parent  # yt01_redefining_racism/: cards/ and figures/ resolve against it
+YT = VIDEO_ROOT / ("yt02" if EP_NAME == "YT02" else "yt01_redefining_racism")
 # Palette of the ScriptCast cards (video/src/theme.ts): navy ground, cream type, gold accent.
 INK, DIM, GOLD = "#F4EAD2", "#9FB0CF", "#D9A441"
 HIM, HER, OK, BG = "#5FA8D3", "#E2573F", "#5FC27E", "#0F1B33"
@@ -110,11 +116,16 @@ def load_shots(path=SHOTLIST):
             hit = re.search(rf"\*\*{name}:\*\* (.*)", body)
             return hit.group(1).strip() if hit else ""
 
-        render = field("Render").strip("`").removeprefix("manim:")
-        parts = render.split()
-        file, _, scene = parts[0].partition(":") if parts else ("", "", "")
+        render = field("Render").strip("`")
+        card = None
+        if render.startswith("manim:"):
+            parts = render.removeprefix("manim:").split()
+            file, _, scene = parts[0].partition(":") if parts else ("", "", "")
+            card = parts[1] if len(parts) > 1 else None
+        else:
+            file, _, scene = render.partition(":")
         shots.append(Shot(sid, seg, len(shots), field("Type"), file, scene,
-                          parts[1] if len(parts) > 1 else None, field("Holds").strip("`") or None,
+                          card, field("Holds").strip("`") or None,
                           (title or "").strip(), field("Note")))
     return shots
 
@@ -238,7 +249,7 @@ class Timing:
 
 
 class _YTMethods:
-    EP = "YT01"
+    EP = EP_NAME
     SOURCE = ""
     SCRIPT = SCRIPT
     PLACEHOLDER_TURNS = ()
@@ -267,7 +278,7 @@ class _YTMethods:
 
     # ── runs ──────────────────────────────────────────────────────────────
     T0 = 0.0
-    SHOT = None  # default primary shot id when YT01_SHOT is unset
+    SHOT = None  # default primary shot id when the episode shot variable is unset
 
     def setup_run(self):
         """Resolve this render's run and its window [T0, T1] on the frame grid."""
@@ -277,8 +288,14 @@ class _YTMethods:
             shots = load_shots()
         except FileNotFoundError:
             shots = []
-        mine = runs_of(shots, Path(__import__("inspect").getfile(type(self))).name, type(self).__name__)
-        want = os.environ.get("YT01_SHOT") or self.SHOT
+        scene_path = Path(__import__("inspect").getfile(type(self))).resolve()
+        try:
+            relative = scene_path.relative_to(VIDEO_ROOT)
+            scene_file = relative.name if self.EP == "YT01" and relative.parent == Path("yt01_redefining_racism/manim") else relative.as_posix()
+        except ValueError:
+            scene_file = scene_path.name
+        mine = runs_of(shots, scene_file, type(self).__name__)
+        want = os.environ.get(f"{self.EP}_SHOT") or os.environ.get("YT_SHOT") or self.SHOT
         if want and want not in mine:
             hit = next((s for s in shots if s.id == want), None)
             if hit is None or hit.primary not in mine:
@@ -336,7 +353,7 @@ class _YTMethods:
         self.setup_run()
         self.camera.background_color = BG
         # Run renders are silent; edit16x9.py lays the voiceover under the cut.
-        if self.AUDIO_ENABLED and os.environ.get("YT01_AUDIO") and not self.timing.placeholder and self.AUDIO.exists():
+        if self.AUDIO_ENABLED and os.environ.get(f"{self.EP}_AUDIO") and not self.timing.placeholder and self.AUDIO.exists():
             from manimgx.audio.sound import Sound
             self.add_sound(Sound(str(self.AUDIO)).trim(self.T0, self.T1))
 

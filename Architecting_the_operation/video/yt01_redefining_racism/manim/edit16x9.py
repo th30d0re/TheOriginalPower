@@ -1,4 +1,4 @@
-"""YT01 editor: render runs, cut each shot's window out of its run, lay the voiceover under it.
+"""Episode-aware editor: render runs, cut shot windows, and add the voiceover.
 
     .venv-manimgx/bin/python edit16x9.py turns 03 --only S03-08   # a run's spoken words and notes
     .venv-manimgx/bin/python edit16x9.py check                       # every Render target exists and defines its class
@@ -19,6 +19,7 @@ import ast
 import json
 import math
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -27,9 +28,9 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
-from common16x9 import ROOT, YT, load_shots, runs_of  # noqa: E402
+from common16x9 import EP_NAME, ROOT, VIDEO_ROOT, YT, load_shots, runs_of  # noqa: E402
 
-EP = ROOT / "outputs" / "YT01"
+EP = ROOT / "outputs" / EP_NAME
 MANIMGX = ROOT / ".venv-manimgx/bin/manimgx"
 FONT = next((ROOT / ".venv-manimgx/lib").glob("python*/site-packages/manimgx_fonts/NotoSans[[]wdth,wght[]].ttf"), None) \
     or next((ROOT / ".venv-manimgx/lib").glob("python*/site-packages/manimgx_fonts/NotoSans*.ttf"))
@@ -61,12 +62,29 @@ def run_path(primary, res, fps):
     return EP / "video" / "runs" / f"{res}@{fps}" / f"{primary}.mp4"
 
 
-def is_ext(shot):
-    return shot.file == "ext"
+def is_external(shot):
+    return shot.file in {"ext", "figma", "figma-card"}
 
 
-def ext_source(shot):
-    return ROOT / shot.scene
+def figma_slug(shot):
+    if shot.file == "figma-card":
+        return f"card-{Path(shot.scene).stem.lower()}"
+    return re.sub(r"[\s·]+", "-", shot.scene.strip().lower())
+
+
+def external_source(shot):
+    if shot.file == "ext":
+        return ROOT / shot.scene
+    return EP / "video" / "figma" / f"{figma_slug(shot)}.mp4"
+
+
+def manim_source(shot):
+    path = Path(shot.file)
+    if path.is_absolute():
+        return path
+    if EP_NAME == "YT01" and len(path.parts) == 1:
+        return HERE / path
+    return VIDEO_ROOT / path
 
 
 def run_frame_count(shots, primary, fps):
@@ -87,17 +105,17 @@ def conform_ext(src, out, res, fps, n_frames):
                     str(out)], check=True)
 
 
-def stale_ext(out, shot):
+def stale_external(out, shot):
     if not out.exists():
         return True
-    deps = [ext_source(shot), EP / "episode_manifest.json"]
+    deps = [external_source(shot), EP / "episode_manifest.json"]
     return any(d.exists() and d.stat().st_mtime > out.stat().st_mtime for d in deps)
 
 
 def stale(out, shot):
     if not out.exists():
         return True
-    deps = [HERE / shot.file, HERE / "common16x9.py", EP / "words.json", EP / "episode_manifest.json"]
+    deps = [manim_source(shot), HERE / "common16x9.py", EP / "words.json", EP / "episode_manifest.json"]
     if shot.file == "cards16x9.py" or shot.card:
         deps.append(HERE / "cards16x9.py")
     if shot.card:
@@ -155,7 +173,7 @@ def cmd_sheet(args):
     sheet = Image.new("RGB", (640 * cols, 360 * ((len(tiles) + cols - 1) // cols)), (40, 40, 40))
     for k, t in enumerate(tiles):
         sheet.paste(t, ((k % cols) * 640, (k // cols) * 360))
-    out = Path(args.out or f"/tmp/yt01_sheet_{'_'.join(args.segs) or 'all'}.png")
+    out = Path(args.out or f"/tmp/{EP_NAME.lower()}_sheet_{'_'.join(args.segs) or 'all'}.png")
     sheet.save(out)
     print(f"{out}: {len(tiles)} shots")
     return 0
@@ -166,11 +184,13 @@ def cmd_check(args):
     bad = []
     for primary, run in runs_of(seg_shots(shots, args.segs)).items():
         s = run[0]
-        if is_ext(s):
-            if not ext_source(s).exists():
-                bad.append(f"{primary}: missing external {s.scene}")
+        if is_external(s):
+            source = external_source(s)
+            if not source.exists():
+                kind = "Figma clip" if s.file.startswith("figma") else "external"
+                bad.append(f"{primary}: missing {kind} {source.relative_to(ROOT)}")
         else:
-            f = HERE / s.file
+            f = manim_source(s)
             if not f.exists():
                 bad.append(f"{primary}: missing file {s.file}")
             elif s.scene not in classes(f):
@@ -187,12 +207,12 @@ def cmd_check(args):
 def render_one(item):
     primary, shot, args, shots = item
     out = run_path(primary, args.res, args.fps)
-    stale_fn = stale_ext if is_ext(shot) else stale
+    stale_fn = stale_external if is_external(shot) else stale
     if not args.force and not stale_fn(out, shot):
         return primary, "fresh", ""
     out.parent.mkdir(parents=True, exist_ok=True)
-    if is_ext(shot):
-        src = ext_source(shot)
+    if is_external(shot):
+        src = external_source(shot)
         n = run_frame_count(shots, primary, args.fps)
         try:
             conform_ext(src, out, args.res, args.fps, n)
@@ -201,8 +221,8 @@ def render_one(item):
         log = out.with_suffix(".log")
         log.write_text(f"ext:{src}\nframes={n}\n")
         return primary, "ok", ""
-    env = dict(os.environ, YT01_SHOT=primary)
-    cmd = [str(MANIMGX), "render", str(HERE / shot.file), shot.scene, "-r", args.res, "--fps", str(args.fps),
+    env = dict(os.environ, YT_EP=EP_NAME, **{f"{EP_NAME}_SHOT": primary})
+    cmd = [str(MANIMGX), "render", str(manim_source(shot)), shot.scene, "-r", args.res, "--fps", str(args.fps),
            "--preset", "veryfast", "-o", str(out)]
     p = subprocess.run(cmd, env=env, capture_output=True, text=True, cwd=ROOT)
     log = out.with_suffix(".log")
@@ -217,11 +237,12 @@ def cmd_render(args):
         if args.only and primary not in args.only:
             continue
         s = run[0]
-        if is_ext(s):
-            if not ext_source(s).exists():
-                print(f"{primary}: skipped, ext:{s.scene} missing")
+        if is_external(s):
+            source = external_source(s)
+            if not source.exists():
+                print(f"{primary}: skipped, {s.file}:{s.scene} missing ({source.relative_to(ROOT)})")
                 continue
-        elif not (HERE / s.file).exists() or s.scene not in classes(HERE / s.file):
+        elif not manim_source(s).exists() or s.scene not in classes(manim_source(s)):
             print(f"{primary}: skipped, {s.file}:{s.scene} not built")
             continue
         todo.append((primary, s, args, shots))
@@ -284,7 +305,7 @@ def cmd_cut(args):
         a0, a1 = F[mine[0].index] / fps, F[mine[-1].index + 1] / fps
         out = outdir / f"SEG{seg}.mp4"
         subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", str(lst),
-                        "-ss", f"{a0:.6f}", "-t", f"{a1 - a0:.6f}", "-i", str(EP / "YT01.mp3"),
+                        "-ss", f"{a0:.6f}", "-t", f"{a1 - a0:.6f}", "-i", str(EP / f"{EP_NAME}.mp3"),
                         "-map", "0:v", "-map", "1:a", "-vf", f"fps={fps}", "-c:v", "libx264", "-preset", "veryfast",
                         "-crf", "18", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "160k",
                         str(out)], check=True)
