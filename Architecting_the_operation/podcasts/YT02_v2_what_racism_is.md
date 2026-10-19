@@ -1702,7 +1702,7 @@ Why does backlash show up in union density and incarceration together? Part C te
 <!-- [book §2.3.6, Eq 2.13, Eq 2.14, Eq 2.15, Fig 2.7] -->
 
 Emmanuel Theodore (64:51)
-Equation two point thirteen defines the total suppression envelope Sigma-sub-sup of t as the sum of psychological status allocation psi-sub-s, material allocation psi-sub-m, coercive resistance R of t, and phase-loading dispersion Phi-sub-load of t.
+Equation two point thirteen defines the total suppression envelope Sigma-suppression of t as the sum of psychological status allocation psi-sub-s, material allocation psi-sub-m, coercive resistance R of t, and phase-loading dispersion Phi-sub-load of t.
 <!-- [book §2.3.6, Eq 2.13] -->
 
 Emmanuel Theodore (65:04)
@@ -1730,7 +1730,7 @@ The Black incarceration rate climbed from 588 per 100,000 in 1965 to a peak of 3
 <!-- [book §2.3.6; MANUSCRIPT_GAP §5] -->
 
 Emmanuel Theodore (66:16)
-Across the full 1965-to-2020 series, the composite suppression envelope Sigma-sub-sup of t expanded by more than 23 percent while elite wealth concentration gained nine full percentage points.
+Across the full 1965-to-2020 series, the composite suppression envelope Sigma-suppression of t expanded by more than 23 percent while elite wealth concentration gained nine full percentage points.
 <!-- [book §2.3.6, Fig 2.7] -->
 
 Emmanuel Theodore (66:27)

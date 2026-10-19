@@ -40,3 +40,13 @@ ruthzee:
   always: Roothzee
 louijeune:
   always: Loo-wee-zhen
+
+# Arline Geronimus (weathering research): jer-AH-nih-mus. Added 2026-10-18 for YT02v2 turn 422 ("gyranomus").
+geronimus:
+  always: jer-AH-nih-mus
+
+# "decile" was coming out as "decel" (YT02v2 turn 415).
+decile:
+  always: DESS-ile
+geronimus's:
+  always: jer-AH-nih-mus's
