@@ -473,7 +473,7 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 ## S02-06 — Autonomy restriction and selective empathy coupling
 - **Anchor:** `Emmanuel Theodore (13:14)`
 - **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/four_components16x9.py:FourComponentLoop`
+- **Render:** `manim:yt01_redefining_racism/manim/four_components16x9.py:FourComponentLoop as=S02-11`
 - **Note:** Directional arrows circulate around the four nodes, highlighting reproductive/movement restriction paired with selective empathy. [book Preface; Ch 2]
 
 ## S02-07 — Equation 4.2 Virginia 1691 boundary enforcement
@@ -535,7 +535,7 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 ## S03-04 — Set and subset definitions
 - **Anchor:** `Emmanuel Theodore (14:58)`
 - **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/set_primer16x9.py:SetTheoryPrimer`
+- **Render:** `manim:yt01_redefining_racism/manim/set_primer16x9.py:SetTheoryPrimer as=S02-01`
 - **Note:** A bounded circle A draws inside the population rectangle U, illustrating a set and a proper subset (A ⊂ U). [book §2.1]
 
 ## S03-05 — Equation 2.1: coarse binary partition of U
@@ -560,13 +560,13 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 ## S03-08 — Elite (E) and Puppet Class (P_uppet) roles
 - **Anchor:** `Emmanuel Theodore (15:45)`
 - **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/binary_refinement16x9.py:BinaryRefinement`
+- **Render:** `manim:yt01_redefining_racism/manim/binary_refinement16x9.py:BinaryRefinement as=S03-19`
 - **Note:** The top two bands E (surplus capture and boundary design) and P_uppet (policy, courts, narrative) highlight in sequence. [book Ch 0; §2.1]
 
 ## S03-09 — Preserving set I while exposing internal inequality
 - **Anchor:** `Emmanuel Theodore (15:56)`
 - **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/binary_refinement16x9.py:BinaryRefinement`
+- **Render:** `manim:yt01_redefining_racism/manim/binary_refinement16x9.py:BinaryRefinement as=S03-19`
 - **Note:** A bracket spans all four bands to mark set I while payoff bars along the right margin display their unequal shares. [book §2.1, Eq 2.2]
 
 ## S03-10 — Equation 2.3: resolving the Out-group O
@@ -578,7 +578,7 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 ## S03-11 — O_racialized in the American historical record
 - **Anchor:** `Emmanuel Theodore (16:23)`
 - **Type:** diagram
-- **Render:** `manim:yt01_redefining_racism/manim/outgroup_axes16x9.py:OutgroupAxes`
+- **Render:** `manim:yt01_redefining_racism/manim/outgroup_axes16x9.py:OutgroupAxes as=S03-27`
 - **Note:** The Out-group base block partitions into O_racialized (chattel slavery, Jim Crow, mass carcerality) and adjacent bands. [book §2.1, Eq 2.3]
 
 ## S03-12 — Internal fractures along secondary social axes
@@ -590,7 +590,7 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 ## S03-13 — Secondary axes α: gender, wealth, credentials, record
 - **Anchor:** `Emmanuel Theodore (16:44)`
 - **Type:** diagram
-- **Render:** `manim:yt01_redefining_racism/manim/recursive_partition16x9.py:RecursivePartition`
+- **Render:** `manim:yt01_redefining_racism/manim/recursive_partition16x9.py:RecursivePartition as=S03-33`
 - **Note:** The RecursivePartition diagram opens on subset X with the α-axis selector rail listing gender, wealth, credentials, religion, and record. [book §2.1, Eq 2.4]
 
 ## S03-14 — Applying α = gender inside I_buffer (Chapter 8)
@@ -867,7 +867,7 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 ## S05-14 — Bottom-up accumulation across isolated transactions
 - **Anchor:** `Emmanuel Theodore (25:30)`
 - **Type:** diagram
-- **Render:** `manim:yt01_redefining_racism/manim/causal_reversal16x9.py:CausalReversal`
+- **Render:** `manim:yt01_redefining_racism/manim/causal_reversal16x9.py:CausalReversal as=S05-10`
 - **Note:** The top chain of CausalReversal draws left to right: Individual Prejudice → Discriminatory Actions → Systemic Outcomes. [book §2.2, Eq 2.5]
 
 ## S05-15 — Equal-protection requirement of individual intent
@@ -939,7 +939,7 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 ## S05-25 — Damped reform-shock waveform
 - **Anchor:** `Emmanuel Theodore (27:57)`
 - **Type:** diagram
-- **Render:** `manim:yt01_redefining_racism/manim/backlash_oscillator16x9.py:BacklashOscillator`
+- **Render:** `manim:yt01_redefining_racism/manim/backlash_oscillator16x9.py:BacklashOscillator as=S13-22`
 - **Note:** Oscilloscope underdamped trace restores extraction equilibrium. [book §2.3.6, Fig 2.6]
 
 ## S05-26 — Extraction kernel untouched by maintenance-layer reform
@@ -994,13 +994,13 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 ## S06-07 — Figure 2.2: two solid forward generative arrows
 - **Anchor:** `Emmanuel Theodore (29:18)`
 - **Type:** diagram
-- **Render:** `manim:yt01_redefining_racism/manim/causal_reversal16x9.py:CausalReversal`
+- **Render:** `manim:yt01_redefining_racism/manim/causal_reversal16x9.py:CausalReversal as=S05-22`
 - **Note:** Figure 2.2 builds on screen: two solid forward arrows run from Elite Economic Interests to Systemic Racialization to Interpersonal Prejudice. [book §2.2, Fig 2.2]
 
 ## S06-08 — Figure 2.2: two solid forward generative arrows
 - **Anchor:** `Emmanuel Theodore (29:28)`
 - **Type:** diagram
-- **Render:** `manim:yt01_redefining_racism/manim/causal_reversal16x9.py:CausalReversal`
+- **Render:** `manim:yt01_redefining_racism/manim/causal_reversal16x9.py:CausalReversal as=S05-22`
 - **Note:** Figure 2.2 builds on screen: two solid forward arrows run from Elite Economic Interests to Systemic Racialization to Interpersonal Prejudice. [book §2.2, Fig 2.2]
 
 ## S06-09 — Dashed Reinforcing Feedback Loop arc
@@ -1311,13 +1311,13 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 ## S07-12 — Crawford et al. (2017) African pigmentation genomic diversity
 - **Anchor:** `Emmanuel Theodore (38:18)`
 - **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/cline16x9.py:ClineGradient`
+- **Render:** `manim:yt01_redefining_racism/manim/cline16x9.py:ClineGradient as=S07-43`
 - **Note:** Four genomic locus markers highlight along the African reflectance distribution (N = 2,092; ~29% variance explained). [book §2.3, citing Crawford et al. 2017]
 
 ## S07-13 — Phenotype as low-cost surveillance marker versus religion
 - **Anchor:** `Emmanuel Theodore (38:32)`
 - **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/cline16x9.py:BinaryPartitionCut`
+- **Render:** `manim:yt01_redefining_racism/manim/cline16x9.py:BinaryPartitionCut as=S10-13`
 - **Note:** Surveillance-cost callouts contrast porous religious conversion with the persistent visibility of the phenotypic cut. [book §2.3; Ch 3]
 
 ## S07-14 — Comparative sidebar: three historical control cases
@@ -1707,7 +1707,7 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 ## S08-54 — Step 4: October 1705 Virginia Slave Codes
 - **Anchor:** `Emmanuel Theodore (50:18)`
 - **Type:** diagram
-- **Render:** `manim:yt01_redefining_racism/manim/partition_redraw16x9.py:PartitionRedraw`
+- **Render:** `manim:yt01_redefining_racism/manim/partition_redraw16x9.py:PartitionRedraw as=S08-42`
 - **Note:** The PartitionRedraw diagram opens on the 1676 joint labor block (L_white + L_black) facing the small Elite block E. [book Ch 4, Eq 4.3, Eq 4.4]
 
 ## S08-55 — Degrading enslaved Africans to real estate while elevating poor whites
@@ -1796,13 +1796,13 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 ## S09-01 — Buffer Class puzzle: defending a system that extracts from it
 - **Anchor:** `Emmanuel Theodore (53:10)`
 - **Type:** diagram
-- **Render:** `manim:yt02/wage_phasor.py:WagePhasor`
+- **Render:** `manim:yt02/wage_phasor.py:WagePhasor as=S09-01`
 - **Note:** The WagePhasor complex plane opens with vertical material axis (+1) and horizontal psychological status axis (+j); the phasor arrow W starts at θ = 25°. [book Ch 0; §2.3; Ch 4]
 
 ## S09-02 — The Complex Wage in Chapter 3, Equation 3.5
 - **Anchor:** `Emmanuel Theodore (53:26)`
 - **Type:** hold
-- **Render:** `manim:yt02/wage_phasor.py:WagePhasor`
+- **Render:** `manim:yt02/wage_phasor.py:WagePhasor as=S09-01`
 - **Holds:** `S09-01`
 - **Note:** The header badge highlights Equation 3.5 in the upper-right rail while the phasor holds at θ = 25° in Quadrant I. [book §2.3, canonical variable map]
 
@@ -2364,7 +2364,7 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 ## S10-29 — Arms-calibrated wage phasor
 - **Anchor:** `Emmanuel Theodore (69:25)`
 - **Type:** diagram
-- **Render:** `manim:yt02/wage_phasor.py:WagePhasor`
+- **Render:** `manim:yt02/wage_phasor.py:WagePhasor as=S09-01`
 - **Note:** Illustrative θ only; ψ_m anchored on arms statutes. [book subsec:arms_joint_wage]
 
 ## S10-30 — Primary source scan
@@ -2455,7 +2455,7 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 ## S10-43 — Arms-calibrated wage phasor
 - **Anchor:** `Emmanuel Theodore (72:29)`
 - **Type:** diagram
-- **Render:** `manim:yt02/wage_phasor.py:WagePhasor`
+- **Render:** `manim:yt02/wage_phasor.py:WagePhasor as=S09-01`
 - **Note:** Illustrative θ only; ψ_m anchored on arms statutes. [book subsec:arms_joint_wage]
 
 ## S10-44 — Duru et al. (2012), Ruiz-Narváez et al. (2024), and Spears et al. (2026)
@@ -3529,13 +3529,13 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 ## S14-12 — Section 2.3.11: Mode 1 Design, Mode 2 Propagation, Mode 3 Intervention
 - **Anchor:** `Emmanuel Theodore (106:05)`
 - **Type:** diagram
-- **Render:** `manim:yt01_redefining_racism/manim/three_modes16x9.py:ThreeModes`
+- **Render:** `manim:yt01_redefining_racism/manim/three_modes16x9.py:ThreeModes as=S14-11`
 - **Note:** The ThreeModes diagram displays the three operational lanes: Mode 1 Intentional Design, Mode 2 Autonomous Propagation, and Mode 3 Conscious Intervention. [book §2.3.11]
 
 ## S14-13 — Case-by-case distinction between coordination and firmware propagation
 - **Anchor:** `Emmanuel Theodore (106:15)`
 - **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/three_modes16x9.py:ThreeModes`
+- **Render:** `manim:yt01_redefining_racism/manim/three_modes16x9.py:ThreeModes as=S14-11`
 - **Holds:** `S15-11`
 - **Note:** Focus highlights the handoff between Mode 1 architectural design and Mode 2 incentive-gradient propagation on inherited firmware. [book §2.3.11]
 
@@ -3700,7 +3700,7 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 ## S15-11 — Section 2.3.11: Mode 1 Design, Mode 2 Propagation, Mode 3 Intervention
 - **Anchor:** `Emmanuel Theodore (111:06)`
 - **Type:** diagram
-- **Render:** `manim:yt01_redefining_racism/manim/three_modes16x9.py:ThreeModes`
+- **Render:** `manim:yt01_redefining_racism/manim/three_modes16x9.py:ThreeModes as=S14-11`
 - **Note:** The ThreeModes diagram displays the three operational lanes: Mode 1 Intentional Design, Mode 2 Autonomous Propagation, and Mode 3 Conscious Intervention. [book §2.3.11]
 
 ## S15-12 — Case-by-case distinction between coordination and firmware propagation

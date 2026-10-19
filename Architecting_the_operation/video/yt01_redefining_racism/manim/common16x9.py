@@ -104,6 +104,7 @@ class Shot:
     holds: str | None
     title: str
     note: str
+    method: str | None = None  # Render token `as=<id>`: play that shot's method (a reused scene)
 
     @property
     def primary(self):
@@ -126,12 +127,15 @@ def load_shots(path=SHOTLIST):
         if render.startswith("manim:"):
             parts = render.removeprefix("manim:").split()
             file, _, scene = parts[0].partition(":") if parts else ("", "", "")
-            card = parts[1] if len(parts) > 1 else None
+            method = next((t[3:] for t in parts[1:] if t.startswith("as=")), None)
+            rest = [t for t in parts[1:] if not t.startswith("as=")]
+            card = rest[0] if rest else None
         else:
+            method = None
             file, _, scene = render.partition(":")
         shots.append(Shot(sid, seg, len(shots), field("Type"), file, scene,
                           card, field("Holds").strip("`") or None,
-                          (title or "").strip(), field("Note")))
+                          (title or "").strip(), field("Note"), method))
     return shots
 
 
@@ -246,7 +250,7 @@ class Timing:
         index = self.index(turn, seg)
         hits = [w["t"] for w in self.words[index]["words"] if _norm(w["w"]).startswith(_norm(word))]
         if len(hits) <= nth:
-            if index in self.synthetic_words:
+            if index in self.synthetic_words or os.environ.get("YT_LENIENT_CUES"):
                 LOG.warning("%s: preview cue %r #%d missing in turn %d; using turn midpoint", self.ep, word, nth, index)
                 return self.beats[index] + max(0, (self.ends[index] - self.beats[index]) / 2 - lead)
             raise KeyError(f"{self.ep}: {word!r} #{nth} absent from turn {index}")
@@ -339,7 +343,8 @@ class _YTMethods:
 
     def construct(self):
         self.begin()
-        name = "shot_" + (self.primary or "").replace("-", "_")
+        alias = next((s.method for s in self.run if s.id == self.primary and s.method), None)
+        name = "shot_" + (alias or self.primary or "").replace("-", "_")
         getattr(self, name, self.build)()
         self.finish()
 
