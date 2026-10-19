@@ -8,8 +8,11 @@ import numpy as np
 import manimgx as m
 
 COMMON = Path(__file__).resolve().parents[1] / "yt01_redefining_racism/manim"
+YT02 = Path(__file__).resolve().parent
 sys.path.insert(0, str(COMMON))
+sys.path.insert(0, str(YT02))
 from common16x9 import DIM, GOLD, HER, HIM, INK, M, NAVY2, OK, T, YTScene  # noqa: E402
+from layout_v2 import clamp_above_caption  # noqa: E402
 
 CYAN = "#5FA8D3"
 STAT = "#B28DFF"
@@ -63,7 +66,7 @@ class InterferenceEngine(YTScene):
             lambda: m.VGroup(
                 M(rf"\Delta\phi={phase.get_value() / np.pi:.2f}\pi", 34, HER),
                 T("COHERENT SUM" if phase.get_value() < 0.8 * np.pi else "SUM ≈ 0", 26, GOLD),
-            ).arrange(m.RIGHT, buff=0.3).move_to([-2.45, -2.05, 0])
+            ).arrange(m.RIGHT, buff=0.3).move_to([-2.45, -1.75, 0])
         )
 
         eq15 = M(r"i_k(t)=\rho_k A_k\cos(\omega t+\phi_k)", 38, INK).move_to([-2.5, 2.75, 0])
@@ -96,22 +99,25 @@ class InterferenceEngine(YTScene):
             T(label, 22, color) for label, color in (
                 ("CH 0 · HARDWARE", GOLD), ("CH 14 · TWEEDISM", CYAN), ("CH 22 · SPECTRAL CARRIER", HER),
             )
-        ]).arrange(m.DOWN, buff=0.1).move_to([4.25, -0.15, 0])
+        ]).arrange(m.DOWN, buff=0.1, aligned_edge=m.LEFT).move_to([5.55, 0.55, 0])
         chapter_badges.set_opacity(0)
-        madison = T("NOVEMBER 1787 · MADISON · FEDERALIST No. 10", 23, INK, width=4.6).move_to([4.25, -0.2, 0])
+        madison = T("NOVEMBER 1787 · MADISON · FEDERALIST No. 10", 22, INK, width=4.5)
+        madison.move_to([5.55, -0.35, 0])
         madison.set_opacity(0)
         madison_axes = m.VGroup(
             *[T(name, 22, color, "NORMAL") for name, color in (
                 ("RELIGION", STAT), ("REGION", CYAN), ("COMMERCE", GOLD), ("IDENTITY", HER),
             )]
-        ).arrange(m.DOWN, buff=0.11).move_to([4.25, -1.25, 0])
+        ).arrange(m.DOWN, buff=0.11, aligned_edge=m.LEFT).move_to([5.55, -1.35, 0])
         madison_axes.set_opacity(0)
         recursive_axes = m.VGroup(
             *[T(name, 22, color, "NORMAL") for name, color in (
                 ("RACE", CYAN), ("GENDER", HER), ("RELIGION", STAT), ("NATIVITY", GOLD),
             )]
-        ).arrange(m.DOWN, buff=0.11).move_to([4.25, -1.25, 0])
+        ).arrange(m.DOWN, buff=0.11, aligned_edge=m.LEFT).move_to([5.55, -1.35, 0])
         recursive_axes.set_opacity(0)
+        for mob in (chapter_badges, madison, madison_axes, recursive_axes):
+            clamp_above_caption(mob)
         gate = m.RoundedRectangle(
             width=4.7,
             height=1.05,
@@ -133,12 +139,12 @@ class InterferenceEngine(YTScene):
             stroke_width=3,
             fill_color=NAVY2,
             fill_opacity=0.95,
-        ).to_edge(m.DOWN, buff=0.28)
+        ).move_to([0, -2.55, 0])
         rail_text = T("SPECTRAL EVIDENCE · CHAPTER 22", 25, DIM, width=11.6).move_to(rail)
         rail.set_opacity(0)
         rail_text.set_opacity(0)
-        beat = T("S12-01", 23, GOLD).to_edge(m.DOWN, buff=0.08).to_edge(m.RIGHT, buff=0.25)
-        status = T("SHARED MATERIAL LOSS", 26, INK, width=7.2).move_to([-2.5, -2.55, 0])
+        beat = T("S12-01", 23, GOLD).move_to([5.9, -2.62, 0])
+        status = T("SHARED MATERIAL LOSS", 26, INK, width=7.2).move_to([-2.5, -2.35, 0])
 
         spectral_panel = m.RoundedRectangle(
             width=4.8, height=4.35, corner_radius=0.12, stroke_color=DIM, stroke_width=3,
@@ -174,10 +180,10 @@ class InterferenceEngine(YTScene):
         self.add(spectral_panel, dataset, threshold, threshold_label, bars, evidence_badge, frequencies)
 
         cues = [
-            "central", "answer", "political", "Madison", "prevent", "signal", "Equation", "Kirchhoff", "Figure",
-            "grievance", "recursive", "frequency", "dispersion", "bounded", "Confidence", "falsification",
-            "falsified", "Dataset", "ratios", "six-year", "Parseval", "negative", "unconfirmed", "annual",
-            "resolve", "fifty-two", "results",
+            "dashboard", "instrument", "Stress", "Stress", "Capital", "Phi-load", "threshold",
+            "Patch", "Variables", "Function", "wage", "Material", "fascism", "Result",
+            "dashboard", "Log", "Phi-load", "Elite,", "Result", "Log", "Rho-tau",
+            "Buffer", "function", "Log", "Phi-load", "wage", "function",
         ]
         states = [
             "SHARED MATERIAL LOSS", "INTERFERENCE ENGINE", "POLITICAL SPECIFICATION · 1787",
@@ -200,14 +206,20 @@ class InterferenceEngine(YTScene):
             if k == 1:
                 animations.append(chapter_badges.animate.set_opacity(1))
             if k == 2:
-                animations.append(madison.animate.set_opacity(1))
+                animations.extend([
+                    chapter_badges.animate.set_opacity(0),
+                    madison.animate.set_opacity(1),
+                ])
             if k == 3:
                 animations.extend([
                     m.Indicate(sources[0], color=CYAN), m.Indicate(sources[1], color=HER),
                     property_labels.animate.set_opacity(1),
                 ])
             if k == 4:
-                animations.append(madison_axes.animate.set_opacity(1))
+                animations.extend([
+                    madison.animate.set_opacity(0),
+                    madison_axes.animate.set_opacity(1),
+                ])
             if k == 5:
                 animations.append(phase.animate.set_value(0.55 * np.pi))
             if k == 6:
@@ -281,6 +293,5 @@ class InterferenceEngine(YTScene):
                 next_rail = T(label, 25, GOLD if k != 22 else DIM, width=11.6).move_to(rail_text)
                 animations.append(m.Transform(rail_text, next_rail))
             self.play(*animations, run_time=0.45)
-
         self.play(m.Indicate(wave_sum, color=GOLD), run_time=0.5)
         self.until(self.beat_end(26) - 0.2)

@@ -16,12 +16,15 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
 EP_NAME = os.environ.get("YT_EP", sys.argv[1] if len(sys.argv) > 1 else "YT01").upper()
-if EP_NAME not in {"YT01", "YT02"}:
-    sys.exit(f"YT_EP must be YT01 or YT02, got {EP_NAME!r}")
+_SCRIPTS = {
+    "YT01": "YT01_what_racism_really_is.md",
+    "YT02": "YT02_what_racism_is.md",
+    "YT02V2": "YT02_v2_what_racism_is.md",
+}
+if EP_NAME not in _SCRIPTS:
+    sys.exit(f"YT_EP must be one of {sorted(_SCRIPTS)}, got {EP_NAME!r}")
 EP = ROOT / "outputs" / EP_NAME
-SCRIPT = ROOT / "Architecting_the_operation/podcasts" / (
-    "YT02_what_racism_is.md" if EP_NAME == "YT02" else "YT01_what_racism_really_is.md"
-)
+SCRIPT = ROOT / "Architecting_the_operation/podcasts" / _SCRIPTS[EP_NAME]
 manifest_path = EP / "episode_manifest.json"
 manifest = json.loads(manifest_path.read_text())["turns"]
 timings = json.loads((EP / "word_timings.json").read_text())

@@ -455,19 +455,19 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 ## S02-03 — Apex tier: the Elite (E)
 - **Anchor:** `Emmanuel Theodore (12:23)`
 - **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/orthographic16x9.py:Orthographic16x9`
+- **Render:** `manim:yt02/tier_pyramid.py:TierPyramid`
 - **Note:** The top gold cap lights and its legend tag E (Elite: capital owners and architects) highlights while lower tiers dim. [book Ch 0; §2.1, Eq 2.2, Fig 2.1] Single pyramid asset; camera keeps the adjacent Out-group inside the frame. [book Ch 0, Fig 0.2]
 
 ## S02-04 — Third tier: the Enforcement Class (F_enforce)
 - **Anchor:** `Emmanuel Theodore (12:43)`
 - **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/orthographic16x9.py:Orthographic16x9`
+- **Render:** `manim:yt02/tier_pyramid.py:TierPyramid`
 - **Note:** Focus steps down to the third tier F_enforce (slave patrols, militias, police, carceral agencies). [book Ch 0; §2.1, Eq 2.2, Fig 2.1] Single pyramid asset; camera keeps the adjacent Out-group inside the frame. [book Ch 0, Fig 0.2]
 
 ## S02-05 — Base tier: the racialized Out-group (O_racialized)
 - **Anchor:** `Emmanuel Theodore (12:59)`
 - **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/orthographic16x9.py:Orthographic16x9`
+- **Render:** `manim:yt02/tier_pyramid.py:TierPyramid`
 - **Note:** Focus reaches the broad base tier O_racialized and adjacent Out-groups bearing primary labor extraction and containment. [book Ch 0; §2.1, Eq 2.2, Eq 2.3, Fig 2.1]
 
 ## S02-06 — Autonomy restriction and selective empathy coupling
@@ -933,7 +933,7 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 ## S05-24 — RLC components R, L, C
 - **Anchor:** `Emmanuel Theodore (27:43)`
 - **Type:** diagram
-- **Render:** `manim:yt01_redefining_racism/manim/rlc_topology16x9.py:RLCTopology cards/S13-06.json`
+- **Render:** `manim:yt02/rlc_teach.py:RLCTeach`
 - **Note:** R, L, and C institutional glosses light in order; series loop assembles. [book §2.3.6, Eq 2.11]
 
 ## S05-25 — Damped reform-shock waveform
@@ -945,7 +945,7 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 ## S05-26 — Extraction kernel untouched by maintenance-layer reform
 - **Anchor:** `Emmanuel Theodore (28:07)`
 - **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/rlc_topology16x9.py:RLCTopology cards/S13-06.json`
+- **Render:** `manim:yt02/rlc_teach.py:RLCTeach`
 - **Holds:** `S05-24`
 - **Note:** Equation 2.11 terms L, R, and C pulse together on the held circuit. [book §2.3.6, Eq 2.11]
 
