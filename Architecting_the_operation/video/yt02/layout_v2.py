@@ -13,7 +13,9 @@ def _iter_text_mobs(mob):
             yield from _iter_text_mobs(sub)
         return
     if isinstance(mob, (m.Text, m.Tex, m.MathTex, m.SingleStringMathTex)):
-        yield mob
+        opacity = mob.get_opacity() if hasattr(mob, "get_opacity") else 1.0
+        if opacity > 0.01:
+            yield mob
 
 
 def _extents(mob):

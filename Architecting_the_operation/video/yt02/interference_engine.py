@@ -26,22 +26,22 @@ class InterferenceEngine(YTScene):
         subtitle = T("ANTIPHASE COHERENCE CURRENTS", 27, DIM).next_to(title, m.DOWN, buff=0.1)
         phase = m.ValueTracker(0.2 * np.pi)
 
-        x0, x1 = -6.15, 1.1
-        yj, yk, ys = 1.7, 0.25, -1.2
+        x0, x1 = -6.15, 0.75
+        yj, yk, ys = 1.35, 0.15, -1.05
         baselines = m.VGroup(
             m.Line([x0, yj, 0], [x1, yj, 0], color="#334766", stroke_width=2),
             m.Line([x0, yk, 0], [x1, yk, 0], color="#334766", stroke_width=2),
             m.Line([x0, ys, 0], [x1, ys, 0], color="#334766", stroke_width=2),
         )
         labels = m.VGroup(
-            M(r"i_j(t)", 34, OK).move_to([x0 + 0.55, yj + 0.48, 0]),
-            M(r"i_k(t)", 34, HER).move_to([x0 + 0.55, yk + 0.48, 0]),
-            M(r"I_E(t)", 34, GOLD).move_to([x0 + 0.65, ys + 0.42, 0]),
+            M(r"i_j(t)", 34, OK).move_to([x0 + 0.55, yj + 0.72, 0]),
+            M(r"i_k(t)", 34, HER).move_to([x0 + 0.55, yk + 0.72, 0]),
+            M(r"I_E(t)", 34, GOLD).move_to([-6.62, ys, 0]),
         )
         property_labels = m.VGroup(
-            T("CREDITORS / PROPRIETORS", 20, OK).move_to([-2.25, yj + 0.5, 0]),
-            T("DEBTORS / PROPERTYLESS LABOR", 20, HER).move_to([-2.25, yk + 0.5, 0]),
-        )
+            T("CREDITORS / PROPRIETORS", 22, OK),
+            T("DEBTORS / PROPERTYLESS LABOR", 22, HER),
+        ).arrange(m.DOWN, buff=0.28).move_to([4.0, 0.45, 0])
         property_labels.set_opacity(0)
         wave_j = m.always_redraw(
             lambda: m.FunctionGraph(
@@ -66,16 +66,17 @@ class InterferenceEngine(YTScene):
             lambda: m.VGroup(
                 M(rf"\Delta\phi={phase.get_value() / np.pi:.2f}\pi", 34, HER),
                 T("COHERENT SUM" if phase.get_value() < 0.8 * np.pi else "SUM ≈ 0", 26, GOLD),
-            ).arrange(m.RIGHT, buff=0.3).move_to([-2.45, -1.75, 0])
+                M(r"\Phi_{\mathrm{load}}=0.92", 30, STAT),
+            ).arrange(m.RIGHT, buff=0.28).move_to([-2.7, -2.12, 0])
         )
 
-        eq15 = M(r"i_k(t)=\rho_k A_k\cos(\omega t+\phi_k)", 38, INK).move_to([-2.5, 2.75, 0])
-        eq16 = M(r"I_E(t)=\sum_{k=1}^{N} i_k(t)", 40, GOLD).move_to([-2.5, 2.75, 0])
+        eq15 = M(r"i_k(t)=\rho_k A_k\cos(\omega t+\phi_k)", 32, INK).move_to([-2.7, 2.25, 0])
+        eq16 = M(r"I_E(t)=\sum_{k=1}^{N} i_k(t)", 34, GOLD).move_to([-2.7, 2.25, 0])
         phi_eq = M(
             r"\Phi_{\mathrm{load}}(t)=1-\left|\frac{1}{N}\sum_{j=1}^{N}e^{i\Phi_j}\right|",
-            38,
+            30,
             STAT,
-        ).move_to([-2.5, 2.75, 0])
+        ).move_to([-2.7, 2.25, 0])
 
         elite = m.RoundedRectangle(
             width=3.9,
@@ -85,12 +86,12 @@ class InterferenceEngine(YTScene):
             fill_opacity=1,
             stroke_color=GOLD,
             stroke_width=4,
-        ).move_to([4.25, 1.9, 0])
+        ).move_to([4.15, 1.65, 0])
         elite_text = T("ELITE NODE  E", 30, GOLD).move_to(elite)
         sources = m.VGroup(
             T("BUFFER CLASS", 25, CYAN),
             T("OUT-GROUP", 25, HER),
-        ).arrange(m.RIGHT, buff=0.5).move_to([4.25, 0.65, 0])
+        ).arrange(m.RIGHT, buff=0.5).move_to([4.15, 0.3, 0])
         source_arrows = m.VGroup(
             m.Arrow(sources[0].get_top(), elite.get_bottom() + m.LEFT * 0.65, color=CYAN, stroke_width=4),
             m.Arrow(sources[1].get_top(), elite.get_bottom() + m.RIGHT * 0.65, color=HER, stroke_width=4),
@@ -99,22 +100,22 @@ class InterferenceEngine(YTScene):
             T(label, 22, color) for label, color in (
                 ("CH 0 · HARDWARE", GOLD), ("CH 14 · TWEEDISM", CYAN), ("CH 22 · SPECTRAL CARRIER", HER),
             )
-        ]).arrange(m.DOWN, buff=0.1, aligned_edge=m.LEFT).move_to([5.55, 0.55, 0])
+        ]).arrange(m.DOWN, buff=0.18, aligned_edge=m.LEFT).move_to([4.15, 0.75, 0])
         chapter_badges.set_opacity(0)
-        madison = T("NOVEMBER 1787 · MADISON · FEDERALIST No. 10", 22, INK, width=4.5)
-        madison.move_to([5.55, -0.35, 0])
+        madison = T("NOVEMBER 1787 · MADISON\nFEDERALIST No. 10", 24, INK, width=4.5)
+        madison.move_to([4.15, 0.75, 0])
         madison.set_opacity(0)
         madison_axes = m.VGroup(
             *[T(name, 22, color, "NORMAL") for name, color in (
                 ("RELIGION", STAT), ("REGION", CYAN), ("COMMERCE", GOLD), ("IDENTITY", HER),
             )]
-        ).arrange(m.DOWN, buff=0.11, aligned_edge=m.LEFT).move_to([5.55, -1.35, 0])
+        ).arrange(m.DOWN, buff=0.16, aligned_edge=m.LEFT).move_to([4.15, 0.1, 0])
         madison_axes.set_opacity(0)
         recursive_axes = m.VGroup(
             *[T(name, 22, color, "NORMAL") for name, color in (
                 ("RACE", CYAN), ("GENDER", HER), ("RELIGION", STAT), ("NATIVITY", GOLD),
             )]
-        ).arrange(m.DOWN, buff=0.11, aligned_edge=m.LEFT).move_to([5.55, -1.35, 0])
+        ).arrange(m.DOWN, buff=0.16, aligned_edge=m.LEFT).move_to([4.15, 0.1, 0])
         recursive_axes.set_opacity(0)
         for mob in (chapter_badges, madison, madison_axes, recursive_axes):
             clamp_above_caption(mob)
@@ -126,58 +127,60 @@ class InterferenceEngine(YTScene):
             stroke_width=4,
             fill_color=NAVY2,
             fill_opacity=0.95,
-        ).move_to([4.25, -2.35, 0])
+        ).move_to([4.15, -1.75, 0])
         gate_text = T("FALSIFICATION GATE\n4-YEAR RATIO > 1.2", 25, HER, width=4.3).move_to(gate)
         gate.set_opacity(0)
         gate_text.set_opacity(0)
 
         rail = m.RoundedRectangle(
-            width=12.2,
-            height=0.72,
+            width=4.9,
+            height=0.7,
             corner_radius=0.1,
             stroke_color=DIM,
             stroke_width=3,
             fill_color=NAVY2,
             fill_opacity=0.95,
-        ).move_to([0, -2.55, 0])
-        rail_text = T("SPECTRAL EVIDENCE · CHAPTER 22", 25, DIM, width=11.6).move_to(rail)
+        ).move_to([4.15, 2.05, 0])
+        rail_text = T("SPECTRAL EVIDENCE · CHAPTER 22", 22, DIM, width=4.5).move_to(rail)
         rail.set_opacity(0)
         rail_text.set_opacity(0)
-        beat = T("S12-01", 23, GOLD).move_to([5.9, -2.62, 0])
-        status = T("SHARED MATERIAL LOSS", 26, INK, width=7.2).move_to([-2.5, -2.35, 0])
+        beat = T("S12-01", 20, GOLD).move_to([6.15, -2.62, 0])
+        status = T("SHARED MATERIAL LOSS", 24, INK, width=10.8).move_to([-0.4, -2.58, 0])
 
         spectral_panel = m.RoundedRectangle(
-            width=4.8, height=4.35, corner_radius=0.12, stroke_color=DIM, stroke_width=3,
+            width=4.9, height=3.5, corner_radius=0.12, stroke_color=DIM, stroke_width=3,
             fill_color=NAVY2, fill_opacity=0.96,
-        ).move_to([4.15, -0.15, 0])
+        ).move_to([4.15, -0.05, 0])
         spectral_panel.set_opacity(0)
-        dataset = T("CONGRESSIONAL RECORD · 1965–2024 · N=60", 20, INK, width=4.35)
-        dataset.next_to(spectral_panel, m.UP, buff=-0.34)
+        dataset = T("CONGRESSIONAL RECORD · 1965–2024\nN = 60", 23, INK, width=4.35)
+        dataset.move_to([4.15, 0.68, 0])
         dataset.set_opacity(0)
-        threshold = m.DashedLine([2.15, -0.15, 0], [6.1, -0.15, 0], color=HER, stroke_width=3, dash_length=0.1)
+        threshold = m.DashedLine([2.25, -0.2, 0], [5.95, -0.2, 0], color=HER, stroke_width=3, dash_length=0.1)
         threshold_label = T("1.20", 20, HER).next_to(threshold, m.RIGHT, buff=0.06)
         threshold.set_opacity(0)
         threshold_label.set_opacity(0)
         bars = m.VGroup()
         bar_labels = ("4Y", "6Y", "8Y", "2Y-A", "2Y-W")
-        bar_heights = (2.45, 2.2, 1.55, 0.22, 1.55)
+        bar_heights = (1.65, 1.48, 1.05, 0.18, 1.05)
         for i, (label, height) in enumerate(zip(bar_labels, bar_heights)):
             bar = m.Rectangle(width=0.52, height=height, fill_color=GOLD, fill_opacity=0.9, stroke_width=0)
-            bar.move_to([2.65 + 0.76 * i, -1.55 + height / 2, 0])
-            cap = T(label, 18, INK).next_to(bar, m.DOWN, buff=0.08)
+            bar.move_to([2.45 + 0.88 * i, -1.5 + height / 2, 0])
+            cap = T(label, 22, INK).next_to(bar, m.DOWN, buff=0.08)
             group = m.VGroup(bar, cap)
             group.set_opacity(0)
             bars.add(group)
-        evidence_badge = T("CONFIDENCE TIER 2", 23, STAT).move_to([4.15, 1.45, 0])
+        evidence_badge = T("CONFIDENCE TIER 2", 23, STAT).move_to([4.15, 1.35, 0])
         evidence_badge.set_opacity(0)
         frequencies = T("4Y · 0.25     6Y · 0.167     8Y · 0.125     2Y · 0.50", 19, GOLD, width=4.35)
-        frequencies.move_to([4.15, 1.05, 0])
+        frequencies.move_to([4.15, 0.82, 0])
         frequencies.set_opacity(0)
 
         self.add(title, subtitle, baselines, labels, property_labels, wave_j, wave_k, wave_sum, phase_tag)
         self.add(elite, elite_text, sources, source_arrows, chapter_badges, madison, madison_axes, recursive_axes)
         self.add(status, beat, gate, gate_text, rail, rail_text)
         self.add(spectral_panel, dataset, threshold, threshold_label, bars, evidence_badge, frequencies)
+
+        node_group = m.VGroup(elite, elite_text, sources, source_arrows)
 
         cues = [
             "dashboard", "instrument", "Stress", "Stress", "Capital", "Phi-load", "threshold",
@@ -204,7 +207,10 @@ class InterferenceEngine(YTScene):
             self.until(self.at(k, cue))
             animations = []
             if k == 1:
-                animations.append(chapter_badges.animate.set_opacity(1))
+                animations.extend([
+                    node_group.animate.set_opacity(0),
+                    chapter_badges.animate.set_opacity(1),
+                ])
             if k == 2:
                 animations.extend([
                     chapter_badges.animate.set_opacity(0),
@@ -212,12 +218,12 @@ class InterferenceEngine(YTScene):
                 ])
             if k == 3:
                 animations.extend([
-                    m.Indicate(sources[0], color=CYAN), m.Indicate(sources[1], color=HER),
+                    madison.animate.set_opacity(0),
                     property_labels.animate.set_opacity(1),
                 ])
             if k == 4:
                 animations.extend([
-                    madison.animate.set_opacity(0),
+                    property_labels.animate.set_opacity(0),
                     madison_axes.animate.set_opacity(1),
                 ])
             if k == 5:
@@ -240,30 +246,26 @@ class InterferenceEngine(YTScene):
             if k == 12 and current_eq is not None:
                 animations.append(m.Transform(current_eq, phi_eq))
             if k == 13:
-                bounds = T("0.00 · CLASS LOCK                 1.00 · CANCELLATION", 21, STAT, width=6.8)
-                bounds.move_to(status.get_center() + m.DOWN * 0.45)
-                animations.append(m.FadeIn(bounds))
+                animations.append(m.Indicate(phase_tag, color=STAT))
             if k == 14:
                 animations.extend([
-                    evidence_badge.animate.set_opacity(1), spectral_panel.animate.set_opacity(1),
-                    rail.animate.set_opacity(1), rail_text.animate.set_opacity(1),
+                    recursive_axes.animate.set_opacity(0), property_labels.animate.set_opacity(0),
+                    evidence_badge.animate.set_opacity(1), rail_text.animate.set_opacity(1),
                 ])
                 rail_visible = True
             if k == 15:
                 animations.extend([
-                    gate.animate.set_opacity(1), gate_text.animate.set_opacity(1),
                     frequencies.animate.set_opacity(1),
                 ])
             if k == 16:
                 animations.extend([
-                    m.Indicate(gate, color=HER), threshold.animate.set_opacity(1),
+                    m.Indicate(evidence_badge, color=HER), threshold.animate.set_opacity(1),
                     threshold_label.animate.set_opacity(1),
                 ])
             if k == 17:
                 animations.extend([
-                    dataset.animate.set_opacity(1),
-                    elite.animate.set_opacity(0), elite_text.animate.set_opacity(0),
-                    sources.animate.set_opacity(0), source_arrows.animate.set_opacity(0),
+                    frequencies.animate.set_opacity(0), dataset.animate.set_opacity(1),
+                    node_group.animate.set_opacity(0),
                     recursive_axes.animate.set_opacity(0), madison.animate.set_opacity(0),
                 ])
             if k == 18:
@@ -279,7 +281,7 @@ class InterferenceEngine(YTScene):
             if k == 23:
                 animations.append(bars[3].animate.set_opacity(1))
             if k == 24:
-                dataset2 = T("GOOGLE TRENDS WEEKLY · 2004–2024 · 52 OBS/YR", 20, INK, width=4.35)
+                dataset2 = T("GOOGLE TRENDS WEEKLY · 2004–2024\n52 OBS/YR", 23, INK, width=4.35)
                 dataset2.move_to(dataset)
                 animations.append(m.Transform(dataset, dataset2))
             if k == 25:
@@ -290,7 +292,7 @@ class InterferenceEngine(YTScene):
             next_beat = T(f"S12-{k + 1:02d}", 23, GOLD).move_to(beat)
             animations.extend([m.Transform(status, next_status), m.Transform(beat, next_beat)])
             if rail_visible and k >= 18:
-                next_rail = T(label, 25, GOLD if k != 22 else DIM, width=11.6).move_to(rail_text)
+                next_rail = T(label, 20, GOLD if k != 22 else DIM, width=4.5).move_to(rail_text)
                 animations.append(m.Transform(rail_text, next_rail))
             self.play(*animations, run_time=0.45)
         self.play(m.Indicate(wave_sum, color=GOLD), run_time=0.5)

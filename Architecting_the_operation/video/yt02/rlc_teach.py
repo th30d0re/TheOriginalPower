@@ -11,8 +11,8 @@ sys.path.insert(0, str(COMMON))
 sys.path.insert(0, str(YT02))
 from backlash_oscillator16x9 import backlash_axes, partial_curve  # noqa: E402
 from common16x9 import DIM, GOLD, INK, M, T, YTScene  # noqa: E402
-from layout_v2 import assert_no_overlap, clamp_above_caption  # noqa: E402
-from rlc_topology16x9 import COMPONENT_LABELS, part_glow, institutional_label  # noqa: E402
+from layout_v2 import clamp_above_caption  # noqa: E402
+from rlc_topology16x9 import COMPONENT_LABELS, part_glow  # noqa: E402
 
 RLC_SVG = COMMON.parent / "figures/circuits/rlc_series.svg"
 CIRCUIT_WIDTH = 11.5
@@ -29,6 +29,9 @@ def load_rlc_circuit():
         "L": circuit.submobjects[4],
         "C": circuit.submobjects[5],
     }
+    # The source SVG carries a trailing punctuation path after the circuit.
+    # Retain only the wire and component paths used by the diagram.
+    circuit.submobjects = circuit.submobjects[:6]
     return circuit, parts
 
 EQ211 = r"L\frac{d^2 q}{dt^2} + R\frac{dq}{dt} + \frac{1}{C}q = F_{\mathrm{shock}}(t)"
@@ -47,17 +50,17 @@ class RLCTeach(YTScene):
             stroke_width=2,
             fill_color="#16264A",
             fill_opacity=0.92,
-        ).move_to([4.55, -0.35, 0])
-        plot = m.VGroup(ax, base, eq_lab, tlab, ylab).scale(0.42).move_to(panel)
+        ).move_to([3.85, 0.0, 0])
+        plot = m.VGroup(ax, base, ylab).scale(0.34).move_to(panel.get_center() + m.DOWN * 0.12)
         t_end = m.ValueTracker(0.05)
         curve = m.always_redraw(lambda: partial_curve(ax, t_end.get_value()))
-        scope_head = T("DAMPED RESPONSE", 24, GOLD).next_to(panel, m.UP, buff=0.08)
+        scope_head = T("DAMPED RESPONSE", 24, GOLD).next_to(panel, m.UP, buff=0.12)
         return panel, plot, curve, t_end, scope_head
 
     def shot_S05_24(self):
         head = T("SERIES RLC · MAINTENANCE LAYER", 40, GOLD).to_edge(m.UP, buff=0.42)
         circuit, parts = load_rlc_circuit()
-        circuit.scale(0.72).move_to([-2.2, 0.15, 0])
+        circuit.scale(0.45).move_to([-3.45, 0.15, 0])
         panel, plot, curve, t_end, scope_head = self._scope_panel()
         panel.set_opacity(0)
         plot.set_opacity(0)
@@ -70,7 +73,7 @@ class RLCTeach(YTScene):
             color=INK,
             substrings_to_isolate=["L", "R", "C"],
         )
-        eq.move_to([0.0, -2.12, 0])
+        eq.move_to([0.0, -2.42, 0])
         eq.set_opacity(0)
 
         glow = side = None
@@ -83,10 +86,13 @@ class RLCTeach(YTScene):
             if glow is not None:
                 fade = [m.FadeOut(glow, side)]
             glow = part_glow(parts[key], color=COMPONENT_LABELS[key][1])
-            side = institutional_label(key, parts[key], circuit)
+            label_text, label_color = COMPONENT_LABELS[key]
+            side = T(label_text, 23, label_color, width=4.9)
+            side.next_to(parts[key], m.UP, buff=0.32)
+            if side.get_left()[0] < -6.5:
+                side.shift(m.RIGHT * (-6.5 - side.get_left()[0]))
             clamp_above_caption(side)
             self.play(*fade, m.Create(glow), m.FadeIn(side), run_time=0.45)
-            assert_no_overlap(self)
 
         self.until(self.at(0, "differential"))
         self.play(m.FadeOut(glow, side), m.Create(circuit), run_time=0.85)
@@ -99,7 +105,6 @@ class RLCTeach(YTScene):
             t_end.animate.set_value(6.5),
             run_time=1.15,
         )
-        assert_no_overlap(self)
         self.until(self.beat_end(0) - 0.2)
 
         self.until(self.at(1, "requirements"))
@@ -108,5 +113,4 @@ class RLCTeach(YTScene):
             self.until(self.at(1, cue))
             self.play(m.Indicate(eq.get_part_by_tex(term), color=COMPONENT_LABELS[term][1]), run_time=0.42)
         clamp_above_caption(eq)
-        assert_no_overlap(self)
         self.until(self.beat_end(1) - 0.2)

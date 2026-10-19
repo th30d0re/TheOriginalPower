@@ -16,8 +16,8 @@ from layout_v2 import clamp_above_caption  # noqa: E402
 
 MAT = OK
 STAT = GOLD
-ORIGIN = np.array([-2.05, 0.15, 0.0])
-LENGTH = 3.05
+ORIGIN = np.array([-3.45, 0.05, 0.0])
+LENGTH = 2.25
 
 
 def phasor_tip(theta_deg, origin=ORIGIN, length=LENGTH):
@@ -35,24 +35,23 @@ class WagePhasor(YTScene):
         length = LENGTH
         theta = m.ValueTracker(25.0)
 
-        title = T("THE WAGE PHASOR", 42, GOLD).to_edge(m.UP, buff=0.35)
-        equation = M(r"W = \psi_m + j\psi_s", 58, INK).next_to(title, m.DOWN, buff=0.14)
-        y_axis = m.Arrow(origin + m.UP * 2.35, origin + m.DOWN * 2.75, buff=0, color=MAT, stroke_width=6)
-        x_axis = m.Arrow(origin + m.LEFT * 0.35, origin + m.RIGHT * 4.35, buff=0, color=STAT, stroke_width=6)
-        y_label = T("MATERIAL ψₘ (+)\nINCOME · LAND · HEALTHCARE", 22, MAT, width=3.8)
-        y_label.next_to(y_axis.get_end(), m.LEFT, buff=0.16)
-        x_label = T("PSYCHOLOGICAL STATUS ψₛ (+)\nDEFERENCE · BADGE · RANK", 22, STAT, width=4.2)
-        x_label.next_to(x_axis.get_end(), m.UP, buff=0.22)
-        elite = T("ELITE · EXTRACTION ↑", 24, GOLD).move_to(origin + m.UP * 2.55)
+        title = T("THE WAGE PHASOR", 42, GOLD).move_to([-2.6, 3.45, 0])
+        equation_badge = T("EQUATION 3.5", 25, GOLD).move_to([4.15, 3.5, 0])
+        equation = M(r"W = \psi_m + j\psi_s", 42, INK).move_to([4.15, 2.92, 0])
+        y_axis = m.Arrow(origin + m.UP * 2.25, origin + m.DOWN * 2.25, buff=0, color=MAT, stroke_width=6)
+        x_axis = m.Arrow(origin + m.LEFT * 0.2, origin + m.RIGHT * 3.35, buff=0, color=STAT, stroke_width=6)
+        y_label = T("MATERIAL ψₘ (+)", 20, MAT).move_to([-5.25, -2.12, 0])
+        x_label = T("ψₛ (+)", 23, STAT).move_to([-0.35, -0.42, 0])
+        elite = T("ELITE · EXTRACTION ↑", 22, GOLD).move_to(origin + m.UP * 2.62)
         q2 = m.Rectangle(
-            width=3.35,
-            height=1.45,
+            width=2.75,
+            height=1.55,
             fill_color=HER,
             fill_opacity=0.09,
             stroke_color=HER,
             stroke_width=2,
-        ).move_to(origin + m.RIGHT * 1.68 + m.UP * 0.72)
-        q2_label = T("QUADRANT II", 23, HER).move_to(q2.get_center() + m.UP * 0.22)
+        ).move_to(origin + m.RIGHT * 1.55 + m.UP * 1.18)
+        q2_label = T("QUADRANT II", 20, HER).next_to(q2, m.UP, buff=0.08).align_to(q2, m.RIGHT)
 
         def mat_pt():
             t = np.radians(theta.get_value())
@@ -87,26 +86,25 @@ class WagePhasor(YTScene):
                 stroke_width=5,
             ).shift(origin)
         )
-        theta_label = M(r"\theta", 38, GOLD).move_to(origin + np.array([0.55, -0.55, 0]))
+        theta_label = M(r"\theta", 30, GOLD).move_to([3.2, 0.15, 0]).set_opacity(0)
         formulas = m.VGroup(
             m.MathTex(r"\psi_m", r"=", r"|W|", r"\cos\theta", font_size=38, color=MAT),
             m.MathTex(r"\psi_s", r"=", r"|W|", r"\sin\theta", font_size=38, color=STAT),
-        ).arrange(m.DOWN, aligned_edge=m.LEFT, buff=0.22).move_to([4.45, 1.05, 0])
-        regime = T("θ = 25° · QUADRANT I", 28, GOLD, width=5.0).move_to([4.45, 0.15, 0])
-        history = T("VIRGINIA · MECHANICAL QUESTION", 26, DIM, width=5.2).move_to([4.45, -0.55, 0])
-        equation_badge = T("EQUATION 3.5", 25, GOLD).to_edge(m.UP, buff=0.42).to_edge(m.RIGHT, buff=0.35)
+        ).arrange(m.DOWN, aligned_edge=m.LEFT, buff=0.2).move_to([4.15, 1.85, 0])
+        regime = T("θ = 25° · QUADRANT I", 25, GOLD, width=4.5).move_to([4.15, 0.75, 0])
+        history = T("VIRGINIA · MECHANICAL QUESTION", 24, DIM, width=11.8).move_to([0.0, -2.58, 0])
 
-        historical_rail = m.Line([-5.4, -2.58, 0], [4.2, -2.58, 0], color=DIM, stroke_width=3)
+        historical_rail = m.Line([-5.8, -1.82, 0], [-0.45, -1.82, 0], color=DIM, stroke_width=3)
         pins = m.VGroup()
-        for x, label in ((-3.8, "1705"), (0.0, "1894–1965"), (3.4, "POST-1965")):
-            stem = m.Line([x, -2.68, 0], [x, -2.52, 0], color=GOLD, stroke_width=4)
+        for x, label in ((-5.0, "1705"), (-3.25, "1894–1965"), (-1.15, "POST-1965")):
+            stem = m.Line([x, -1.92, 0], [x, -1.76, 0], color=GOLD, stroke_width=4)
             tag = T(label, 19, GOLD).next_to(stem, m.UP, buff=0.04)
             pins.add(m.VGroup(stem, tag))
-        telemetry = T("Φ_load = 0.72   ·   ρ_τ = 0.68", 23, STAT).move_to([-0.15, -2.42, 0])
-        algebra = M(r"j\psi_s\cdot j\psi_s=-\psi_s^2", 32, HER).move_to([4.35, -1.45, 0])
-        proxy_tags = T("SOUTHERN STRATEGY · WAR ON DRUGS · 1994 CRIME BILL", 20, INK, width=10.2)
-        proxy_tags.move_to([0.0, -2.42, 0])
-        tier_badge = T("CONFIDENCE TIER 3 · ORDINAL REGIMES", 22, DIM).move_to([4.45, -1.35, 0])
+        telemetry = T("Φ_load = 0.72   ·   ρ_τ = 0.68", 21, STAT).move_to([4.15, -0.05, 0])
+        algebra = M(r"j\psi_s\cdot j\psi_s=-\psi_s^2", 28, HER).move_to([4.15, -0.75, 0])
+        proxy_tags = T("SOUTHERN STRATEGY\nWAR ON DRUGS · 1994 CRIME BILL", 24, INK, width=4.7)
+        proxy_tags.move_to([4.15, -1.35, 0])
+        tier_badge = T("CONFIDENCE TIER 3 · ORDINAL REGIMES", 20, DIM, width=4.7).move_to([4.15, -1.35, 0])
         for mob in (historical_rail, pins, telemetry, algebra, proxy_tags, tier_badge):
             mob.set_opacity(0)
         for mob in (y_label, x_label, q2_label, regime, history, formulas, telemetry, elite):
@@ -185,7 +183,7 @@ class WagePhasor(YTScene):
             if k == 15:
                 emphasis.append(tier_badge.animate.set_opacity(0))
             if k == 29:
-                emphasis.extend([historical_rail.animate.set_opacity(1), pins.animate.set_opacity(1)])
+                emphasis.append(m.Indicate(equation_badge, color=GOLD))
             if k in {30, 32}:
                 emphasis.append(m.Indicate(pins[0], color=GOLD))
             if k == 33:
