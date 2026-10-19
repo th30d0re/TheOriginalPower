@@ -150,38 +150,54 @@ American Rifleman article via web fetch, 2026-09-25; English report PDF pages
 
 ## Item 5 — Published critique that feature bans fall on accessibility features / women / disabled shooters
 
-**VERIFIED.** Such critiques exist in filed litigation and in a law-review article.
-They come from Second Amendment advocates; no neutral or academic treatment making
-the accessibility argument was found.
+**VERIFIED.** Such critiques exist in a published law-review article and in filed
+litigation. Both come from Second Amendment advocates; no neutral or academic
+treatment making the accessibility argument was found.
 
 Sources:
 
-1. [FFL-IL et al. v. Pritzker, No. 3:23-cv-00215-SPM (S.D. Ill.), Motion for Leave to File Second Amended Complaint, filed Sept 13, 2024](https://michellawyers.com/wp-content/uploads/2024/09/2024-09-13-Unopposed-Mtn-to-File-SAC.pdf) — challenges Illinois's feature-based ban.
-   - Quote (24 words, complaint ¶4): the ban reaches "various attachments with ergonomic
-     features, such as those designed to aid the physically disabled and/or smaller
-     stature individuals in protecting themselves, their families and/or their homes."
-   - Complaint ¶21: plaintiff Chris Moore "wants his wife to be able to use the AR-15
-     for the self-defense of her family and herself, because she is of shorter stature
-     with a weaker grip and the AR-15 is easier, and, thus, safer for her."
-   - Complaint ¶72: "Women have increasingly taken Oakley's advice, opting for the
-     AR-15, because its modular design that's easily fitted with accessories make the
-     firearm ideal for users of all sizes."
-   - Shows: a filed, public critique arguing a state feature ban falls on ergonomic
-     features serving disabled and smaller-statured shooters and women.
-   - Does not show: an adjudicated finding; these are plaintiffs' allegations, and the
-     case concerns Illinois, not Massachusetts.
+1. David B. Kopel, "Rational Basis Analysis of 'Assault Weapon' Prohibition," 20
+   Journal of Contemporary Law 381–417 (1994) — [full text at guncite.com](https://guncite.com/journals/rational.html).
+   - Quote (24 words): "People without a great deal of upper body strength may find a low-recoil gun to be the only kind they can successfully use for self-defense."
+   - Quote (22 words): "With a pistol grip, a rifle can be held with one hand while the other hand dials 911 or opens a door."
+   - Shows: a published scholarly critique of feature-test bans. The article
+     opens with Sharon Deatherage, a Denver woman who, "[b]ecause of an injury
+     to her wrist, ... was unable to use a handgun," bought an M-1 carbine, and
+     was criminalized by Denver's ordinance. It treats the pistol grip, the
+     muzzle brake on a threaded barrel, and low recoil as functional aids to
+     control, accuracy, and self-defense, and it names shooters lacking upper
+     body strength as a class that depends on low-recoil guns.
+   - Does not show: it does not use the vocabulary of accessibility or
+     disability rights; it predates the Massachusetts 2024 statute by thirty
+     years; its author is a gun-rights scholar, so it is advocacy scholarship
+     rather than a neutral treatment.
 
-2. David B. Kopel, "Rational Basis Analysis of 'Assault Weapon' Prohibition," 20
-   Journal of Contemporary Law — cited in the [Brief for the Petitioners, Nos. 25-238 & 25-566 (U.S. Supreme Court, filed Aug 28, 2026)](https://www.supremecourt.gov/DocketPDF/25/25-238/422409/20260828162156469_25-238%2025-566%20Brief%20of%20the%20Petitioners.pdf) (snippet level; brief not opened in full).
-   - Quote (search-result snippet, 6 words): "The pistol grip solves that problem."
-   - Shows: a published scholarly critique of feature-test bans, invoked at the
-     Supreme Court level, treating the pistol grip as a functional aid.
-   - Does not show: the article itself was not opened; its full argument on fit,
-     women, or disabled shooters is unconfirmed.
+2. [FFL-IL et al. v. Pritzker, No. 3:23-cv-00215-SPM (S.D. Ill.), Motion for Leave to File Second Amended Complaint, filed Sept 13, 2024](https://michellawyers.com/wp-content/uploads/2024/09/2024-09-13-Unopposed-Mtn-to-File-SAC.pdf) — challenges Illinois's feature-based ban.
+   - Quote (24 words, complaint ¶4): the ban reaches "various attachments with
+     ergonomic features, such as those designed to aid the physically disabled
+     and/or smaller stature individuals in protecting themselves, their families
+     and/or their homes."
+   - Complaint ¶21: plaintiff Chris Moore "wants his wife to be able to use the
+     AR-15 for the self-defense of her family and herself, because she is of
+     shorter stature with a weaker grip and the AR-15 is easier, and, thus,
+     safer for her."
+   - Complaint ¶72: "Women have increasingly taken Oakley's advice, opting for
+     the AR-15, because its modular design that's easily fitted with accessories
+     make the firearm ideal for users of all sizes."
+   - Shows: a filed, public critique arguing a state feature ban falls on
+     ergonomic features serving disabled and smaller-statured shooters and
+     women.
+   - Does not show: an adjudicated finding; these are plaintiffs' allegations,
+     and the case concerns Illinois, not Massachusetts.
 
-Provenance tier: primary litigation documents (public court record) and scholarly
-secondary (Kopel). Artifact opened: pages 1–21 of 106 of the SAC motion PDF via web
-fetch, 2026-09-25.
+Provenance tier: scholarly secondary (Kopel, full article text opened via web
+fetch, 2026-09-25) and primary litigation document (public court record; pages
+1–21 of 106 of the SAC motion PDF opened via web fetch, 2026-09-25). The ¶4,
+¶21, and ¶72 quotes above were confirmed verbatim against the opened PDF. An
+earlier draft of this entry cited a Supreme Court brief snippet ("The pistol
+grip solves that problem") attributed to the Kopel article; the phrase was not
+found in the opened article text and the attribution was removed per the
+removal-is-safe rule.
 
 ## Not found
 

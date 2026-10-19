@@ -1,0 +1,80 @@
+{
+  "censusreporter_acs_25025.json": {
+    "bytes": 619653,
+    "fetched_utc": "2026-09-25T02:58:01+00:00",
+    "sha256": "ed0584c65b43de9a5f1d12c9a7f8524b290c097334dcb365aca9f1694661b30f",
+    "url": "https://api.censusreporter.org/1.0/data/show/latest?table_ids=B01003,B17001,B02001&geo_ids=140%7C05000US25025"
+  },
+  "cir_2015.csv": {
+    "bytes": 9677368,
+    "fetched_utc": "2026-09-25T02:57:27+00:00",
+    "sha256": "b36176fb45195df2d488d5b311e67e0e9f90e81cdca76e3178a8c3fb5b5a090c",
+    "url": "https://data.boston.gov/dataset/6220d948-eae2-4e4b-8723-2dc8e67722a3/resource/792031bf-b9bb-467c-b118-fe795befdf00/download/tmpzr3l5bxw.csv"
+  },
+  "cir_2016.csv": {
+    "bytes": 17704002,
+    "fetched_utc": "2026-09-25T02:57:29+00:00",
+    "sha256": "0eaa3d216c6642b41754b32c4bf81d6e99c3a58b0796bc143bc54147e6f5a568",
+    "url": "https://data.boston.gov/dataset/6220d948-eae2-4e4b-8723-2dc8e67722a3/resource/b6c4e2c3-7b1e-4f4a-b019-bef8c6a0e882/download/tmp3ochjtdc.csv"
+  },
+  "cir_2017.csv": {
+    "bytes": 18056131,
+    "fetched_utc": "2026-09-25T02:57:31+00:00",
+    "sha256": "739edaacd43c8b87e8b7f4e693f57f97334fd4ad570759653675f27ae2918ba2",
+    "url": "https://data.boston.gov/dataset/6220d948-eae2-4e4b-8723-2dc8e67722a3/resource/64ad0053-842c-459b-9833-ff53d568f2e3/download/tmp3apxsafn.csv"
+  },
+  "cir_2018.csv": {
+    "bytes": 17694727,
+    "fetched_utc": "2026-09-25T02:57:37+00:00",
+    "sha256": "dcfe8337c736b38eb6b6e3bba63b78de1352eddada467dac98c16d774c966658",
+    "url": "https://data.boston.gov/dataset/6220d948-eae2-4e4b-8723-2dc8e67722a3/resource/e86f8e38-a23c-4c1a-8455-c8f94210a8f1/download/tmpf_uzkqpk.csv"
+  },
+  "cir_2019.csv": {
+    "bytes": 14055279,
+    "fetched_utc": "2026-09-25T02:57:38+00:00",
+    "sha256": "78ca9758785b5200f61cafebc8c381651dfa6645879bfc4fd3d13539b31aa2fc",
+    "url": "https://data.boston.gov/dataset/6220d948-eae2-4e4b-8723-2dc8e67722a3/resource/34e0ae6b-8c94-4998-ae9e-1b51551fe9ba/download/tmp6w6ts2d7.csv"
+  },
+  "cir_2020.csv": {
+    "bytes": 12626067,
+    "fetched_utc": "2026-09-25T02:57:40+00:00",
+    "sha256": "25a54ca00b8513f526e02e97c5b05ce7db0638603d2d77cbcb9b3757aa0abac4",
+    "url": "https://data.boston.gov/dataset/6220d948-eae2-4e4b-8723-2dc8e67722a3/resource/be047094-85fe-4104-a480-4fa3d03f9623/download/tmpkd_w64k_.csv"
+  },
+  "cir_2021.csv": {
+    "bytes": 12941444,
+    "fetched_utc": "2026-09-25T02:57:42+00:00",
+    "sha256": "04b50b4876d746d49683ab22e8c35e9241839d12268fdb0405597094d3e0d8ed",
+    "url": "https://data.boston.gov/dataset/6220d948-eae2-4e4b-8723-2dc8e67722a3/resource/f4495ee9-c42c-4019-82c1-d067f07e45d2/download/tmpfap3hfze.csv"
+  },
+  "cir_2022.csv": {
+    "bytes": 13201623,
+    "fetched_utc": "2026-09-25T02:57:44+00:00",
+    "sha256": "7027effcee653265154d6758b1a5867f69659e34b8301549fe718ba389e41bd6",
+    "url": "https://data.boston.gov/dataset/6220d948-eae2-4e4b-8723-2dc8e67722a3/resource/313e56df-6d77-49d2-9c49-ee411f10cf58/download/tmpdfeo3qy2.csv"
+  },
+  "cir_2023_to_present.csv": {
+    "bytes": 55290195,
+    "fetched_utc": "2026-09-25T02:57:59+00:00",
+    "sha256": "0ef05f01aed1ef54ba1551d12e6ffd5d3ffa65c616b78f853f74c317ec7a98d8",
+    "url": "https://data.boston.gov/dataset/6220d948-eae2-4e4b-8723-2dc8e67722a3/resource/b973d8cb-eeb2-4e7e-99da-c92938efc9c0/download/tmphb5d5pd6.csv"
+  },
+  "holc_boston_1938.geojson": {
+    "bytes": 55203,
+    "fetched_utc": "2026-09-25T02:57:22+00:00",
+    "sha256": "bed46ffd3c312a73a3e58a681d5a351994084fbd2fe95e6c4be48495cdfc8390",
+    "url": "https://dsl.richmond.edu/panorama/redlining/static/citiesData/MABoston1938/geojson.json"
+  },
+  "shootings_victimizations_no_coordinates.csv": {
+    "bytes": 215851,
+    "fetched_utc": "2026-09-25T02:57:23+00:00",
+    "sha256": "1a068d8e8715b8a3d58a8789e2eb10cab6cf07a485bd6ea115321ebfbaa69e73",
+    "url": "https://data.boston.gov/dataset/e63a37e1-be79-4722-89e6-9e7e2a3da6d1/resource/73c7e069-701f-4910-986d-b950f46c91a1/download/tmpubomdjxf.csv"
+  },
+  "tl_2020_25_tract.zip": {
+    "bytes": 4402386,
+    "fetched_utc": "2026-09-25T02:58:00+00:00",
+    "sha256": "81bb635fdee68b7f3b96117c74ae0313cc510a1c2a7f94107d382b2487f44876",
+    "url": "https://www2.census.gov/geo/tiger/TIGER2020/TRACT/tl_2020_25_tract.zip"
+  }
+}
