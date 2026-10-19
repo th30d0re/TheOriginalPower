@@ -1,0 +1,92 @@
+{
+  "id": 1,
+  "ok": true,
+  "result": {
+    "comp": 1,
+    "compName": "YT01_Ortho",
+    "extraOutputs": [],
+    "frames": 543,
+    "height": 1080,
+    "id": 1,
+    "index": 1,
+    "item": 1,
+    "last_output": null,
+    "logLabel": "Errors Only",
+    "logPath": "/Users/emmanuel/Documents/Theory/TheOriginalPower/animations/yt01_ortho/yt01_ortho_RenderLog.txt",
+    "output": {
+      "alpha_mode": "Straight",
+      "audio": "Auto",
+      "audio_channels": 2,
+      "audio_format": "S16",
+      "audio_sample_rate": 48000,
+      "bitrate_kbps": 15000,
+      "channels": "Rgb",
+      "codec": {
+        "level": null,
+        "profile": "Main",
+        "quality": 70,
+        "rate_control": "Bitrate"
+      },
+      "crop": {
+        "bottom": 0,
+        "enabled": false,
+        "left": 0,
+        "right": 0,
+        "roi": null,
+        "top": 0,
+        "use_roi": false
+      },
+      "format": "H264",
+      "gif_loop": true,
+      "include_project_link": true,
+      "keyframe_interval": 0,
+      "name": "H.264 - Match Render Settings - 15 Mbps",
+      "opus_application": "Audio",
+      "opus_bitrate_kbps": 192,
+      "output": "/Users/emmanuel/Documents/Theory/TheOriginalPower/animations/yt01_ortho/yt01_ortho.mp4",
+      "prores_profile": "Hq",
+      "quality": 90,
+      "resize": {
+        "enabled": false,
+        "height": 1080,
+        "lock_aspect": true,
+        "quality": "High",
+        "width": 1920
+      },
+      "webm_bitrate": false,
+      "webm_codec": "Vp9"
+    },
+    "outputModuleSummary": "H.264 - Match Render Settings - 15 Mbps",
+    "outputModules": 1,
+    "outputPath": "/Users/emmanuel/Documents/Theory/TheOriginalPower/animations/yt01_ortho/yt01_ortho.mp4",
+    "postRenderAction": "None",
+    "render": true,
+    "renderSettingsSummary": "Custom",
+    "render_time": null,
+    "settings": {
+      "color_depth": "Current",
+      "effects": "Current",
+      "field_render": "Off",
+      "frame_blending": "OnForChecked",
+      "frame_rate": null,
+      "guide_layers": "AllOff",
+      "motion_blur": true,
+      "motion_blur_mode": "OnForChecked",
+      "name": "Custom",
+      "proxy_use": "UseNone",
+      "pulldown": "Off",
+      "quality": "Best",
+      "resolution": 1.0,
+      "skip_existing": false,
+      "solo": "Current",
+      "storage_overflow": true,
+      "time_span": {
+        "kind": "LengthOfComp"
+      }
+    },
+    "started": null,
+    "status": "Queued",
+    "statusLabel": "Queued",
+    "width": 1920
+  }
+}

@@ -4,7 +4,10 @@
     {
       "name": "Website (React + Vite)",
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "dev"],
+      "runtimeArgs": [
+        "run",
+        "dev"
+      ],
       "port": 5199,
       "autoPort": true,
       "cwd": "website"
@@ -12,8 +15,23 @@
     {
       "name": "Harness (Python Flask)",
       "runtimeExecutable": ".venv-harness/bin/python",
-      "runtimeArgs": ["-m", "harness.server"],
+      "runtimeArgs": [
+        "-m",
+        "harness.server"
+      ],
       "port": 7331
+    },
+    {
+      "name": "motioncanvas",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "vite",
+        "--port",
+        "9000",
+        "--strictPort"
+      ],
+      "port": 9000,
+      "cwd": "Architecting_the_operation/video/motioncanvas"
     }
   ]
 }

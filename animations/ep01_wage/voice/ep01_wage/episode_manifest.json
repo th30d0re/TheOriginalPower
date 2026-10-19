@@ -1,0 +1,521 @@
+{
+  "schema_version": "1.0.0",
+  "episode_id": "ep01_wage",
+  "source_file": "animations/ep01_wage/narration.md",
+  "model_id": "prince-canuma/Kokoro-82M",
+  "engine": "omnivoice",
+  "sample_rate": 48000,
+  "created_at": "2026-10-08T01:15:25.564311Z",
+  "speakers": [
+    {
+      "speaker_id": "emmanuel_theodore",
+      "display_name": "Emmanuel Theodore",
+      "voice": "unknown",
+      "turn_count": 25,
+      "engine": "omnivoice",
+      "character_profile": "Host and author of The Original Power"
+    }
+  ],
+  "turns": [
+    {
+      "turn_index": 0,
+      "turn_id": "6f4580645584060e",
+      "speaker_id": "emmanuel_theodore",
+      "source_timestamp": "00:00",
+      "segments": [
+        {
+          "chunk_index": 0,
+          "segment_wav": "Samples/Processed/emmanuel_theodore/6f4580645584060e_chunk_0000.wav",
+          "duration_ms": 4470,
+          "speech_duration_ms": 4470,
+          "start_ms": 0,
+          "end_ms": 4470,
+          "gap_after_ms": 280,
+          "checksum": "6bc679fcd6774e41557cf8b5e0785a98637352e381f0a6076cc9ec24822db4da"
+        }
+      ],
+      "start_ms": 0,
+      "end_ms": 4470
+    },
+    {
+      "turn_index": 1,
+      "turn_id": "7d684993164ae76b",
+      "speaker_id": "emmanuel_theodore",
+      "source_timestamp": "00:06",
+      "segments": [
+        {
+          "chunk_index": 0,
+          "segment_wav": "Samples/Processed/emmanuel_theodore/7d684993164ae76b_chunk_0000.wav",
+          "duration_ms": 4370,
+          "speech_duration_ms": 4370,
+          "start_ms": 4750,
+          "end_ms": 9120,
+          "gap_after_ms": 280,
+          "checksum": "6d1b5eeef893c578f9d0a3b1149aba1aaaca4eb1773e86deb65077abd65b1367"
+        }
+      ],
+      "start_ms": 4750,
+      "end_ms": 9120
+    },
+    {
+      "turn_index": 2,
+      "turn_id": "e4dd33f596581219",
+      "speaker_id": "emmanuel_theodore",
+      "source_timestamp": "00:12",
+      "segments": [
+        {
+          "chunk_index": 0,
+          "segment_wav": "Samples/Processed/emmanuel_theodore/e4dd33f596581219_chunk_0000.wav",
+          "duration_ms": 6160,
+          "speech_duration_ms": 6160,
+          "start_ms": 9400,
+          "end_ms": 15560,
+          "gap_after_ms": 280,
+          "checksum": "dead1abc0d9c4c08568d213f90fa97a30596db7899317d8277a0caea93a01423"
+        }
+      ],
+      "start_ms": 9400,
+      "end_ms": 15560
+    },
+    {
+      "turn_index": 3,
+      "turn_id": "d2bf95274604a53a",
+      "speaker_id": "emmanuel_theodore",
+      "source_timestamp": "00:20",
+      "segments": [
+        {
+          "chunk_index": 0,
+          "segment_wav": "Samples/Processed/emmanuel_theodore/d2bf95274604a53a_chunk_0000.wav",
+          "duration_ms": 3510,
+          "speech_duration_ms": 3510,
+          "start_ms": 15840,
+          "end_ms": 19350,
+          "gap_after_ms": 280,
+          "checksum": "17d1dab63720b857499b779a4076a2bf545bf2f9923d94a2cff9ba1f97d77a05"
+        }
+      ],
+      "start_ms": 15840,
+      "end_ms": 19350
+    },
+    {
+      "turn_index": 4,
+      "turn_id": "0f00cf34bfb865e7",
+      "speaker_id": "emmanuel_theodore",
+      "source_timestamp": "00:26",
+      "segments": [
+        {
+          "chunk_index": 0,
+          "segment_wav": "Samples/Processed/emmanuel_theodore/0f00cf34bfb865e7_chunk_0000.wav",
+          "duration_ms": 5610,
+          "speech_duration_ms": 5610,
+          "start_ms": 19630,
+          "end_ms": 25240,
+          "gap_after_ms": 280,
+          "checksum": "b367b1e6f2c0e0b52ab0bc4bd43a4372c0ef3827e6353260841b9619da1c76c1"
+        }
+      ],
+      "start_ms": 19630,
+      "end_ms": 25240
+    },
+    {
+      "turn_index": 5,
+      "turn_id": "c148fe8dcb24b31b",
+      "speaker_id": "emmanuel_theodore",
+      "source_timestamp": "00:34",
+      "segments": [
+        {
+          "chunk_index": 0,
+          "segment_wav": "Samples/Processed/emmanuel_theodore/c148fe8dcb24b31b_chunk_0000.wav",
+          "duration_ms": 5990,
+          "speech_duration_ms": 5990,
+          "start_ms": 25520,
+          "end_ms": 31510,
+          "gap_after_ms": 280,
+          "checksum": "5897def7856ccee8dff2b6e16c30799c8e6e93ac0caac5c02cc11d08e271a3a1"
+        }
+      ],
+      "start_ms": 25520,
+      "end_ms": 31510
+    },
+    {
+      "turn_index": 6,
+      "turn_id": "9c5d2bc7ff6ba0fa",
+      "speaker_id": "emmanuel_theodore",
+      "source_timestamp": "00:42",
+      "segments": [
+        {
+          "chunk_index": 0,
+          "segment_wav": "Samples/Processed/emmanuel_theodore/9c5d2bc7ff6ba0fa_chunk_0000.wav",
+          "duration_ms": 9590,
+          "speech_duration_ms": 9590,
+          "start_ms": 31790,
+          "end_ms": 41380,
+          "gap_after_ms": 280,
+          "checksum": "f41cc71b61d9d90aa2b290bcd8b48173572cc5adb7ecb3dd6d4aa304958673fa"
+        }
+      ],
+      "start_ms": 31790,
+      "end_ms": 41380
+    },
+    {
+      "turn_index": 7,
+      "turn_id": "1e3e3f105ab755a7",
+      "speaker_id": "emmanuel_theodore",
+      "source_timestamp": "00:52",
+      "segments": [
+        {
+          "chunk_index": 0,
+          "segment_wav": "Samples/Processed/emmanuel_theodore/1e3e3f105ab755a7_chunk_0000.wav",
+          "duration_ms": 8490,
+          "speech_duration_ms": 8490,
+          "start_ms": 41660,
+          "end_ms": 50150,
+          "gap_after_ms": 280,
+          "checksum": "e867046918f59c2975909bceaf696bb910e4f59b82176eb57373769f5faa06c9"
+        }
+      ],
+      "start_ms": 41660,
+      "end_ms": 50150
+    },
+    {
+      "turn_index": 8,
+      "turn_id": "e183cbd1d1ee35b5",
+      "speaker_id": "emmanuel_theodore",
+      "source_timestamp": "01:02",
+      "segments": [
+        {
+          "chunk_index": 0,
+          "segment_wav": "Samples/Processed/emmanuel_theodore/e183cbd1d1ee35b5_chunk_0000.wav",
+          "duration_ms": 8130,
+          "speech_duration_ms": 8130,
+          "start_ms": 50430,
+          "end_ms": 58560,
+          "gap_after_ms": 280,
+          "checksum": "9139cc3413f8c9438ee087fb7e332b981d9ace589aa6f7d7fe2fefd3fa49b550"
+        }
+      ],
+      "start_ms": 50430,
+      "end_ms": 58560
+    },
+    {
+      "turn_index": 9,
+      "turn_id": "e083358756fb4d62",
+      "speaker_id": "emmanuel_theodore",
+      "source_timestamp": "01:12",
+      "segments": [
+        {
+          "chunk_index": 0,
+          "segment_wav": "Samples/Processed/emmanuel_theodore/e083358756fb4d62_chunk_0000.wav",
+          "duration_ms": 5000,
+          "speech_duration_ms": 5000,
+          "start_ms": 58840,
+          "end_ms": 63840,
+          "gap_after_ms": 280,
+          "checksum": "9701e4a23cfe3f9e52475dd456a210e33d9221a48dfe153099fbbf3c554548c0"
+        }
+      ],
+      "start_ms": 58840,
+      "end_ms": 63840
+    },
+    {
+      "turn_index": 10,
+      "turn_id": "d74ce7629cf005c5",
+      "speaker_id": "emmanuel_theodore",
+      "source_timestamp": "01:18",
+      "segments": [
+        {
+          "chunk_index": 0,
+          "segment_wav": "Samples/Processed/emmanuel_theodore/d74ce7629cf005c5_chunk_0000.wav",
+          "duration_ms": 7250,
+          "speech_duration_ms": 7250,
+          "start_ms": 64120,
+          "end_ms": 71370,
+          "gap_after_ms": 280,
+          "checksum": "58e593bd57f603a68976f2cd07f7502e6ea2e69d9c3c9d4cfdbc86e932243e53"
+        }
+      ],
+      "start_ms": 64120,
+      "end_ms": 71370
+    },
+    {
+      "turn_index": 11,
+      "turn_id": "4182e60a80e745b6",
+      "speaker_id": "emmanuel_theodore",
+      "source_timestamp": "01:26",
+      "segments": [
+        {
+          "chunk_index": 0,
+          "segment_wav": "Samples/Processed/emmanuel_theodore/4182e60a80e745b6_chunk_0000.wav",
+          "duration_ms": 3670,
+          "speech_duration_ms": 3670,
+          "start_ms": 71650,
+          "end_ms": 75320,
+          "gap_after_ms": 280,
+          "checksum": "252c3aae4473a8c954d40d4d4d7a88d2a4fffa7854bbd9bdfbe13cec8f21c807"
+        }
+      ],
+      "start_ms": 71650,
+      "end_ms": 75320
+    },
+    {
+      "turn_index": 12,
+      "turn_id": "8376ce0b4788d410",
+      "speaker_id": "emmanuel_theodore",
+      "source_timestamp": "01:32",
+      "segments": [
+        {
+          "chunk_index": 0,
+          "segment_wav": "Samples/Processed/emmanuel_theodore/8376ce0b4788d410_chunk_0000.wav",
+          "duration_ms": 10200,
+          "speech_duration_ms": 10200,
+          "start_ms": 75600,
+          "end_ms": 85800,
+          "gap_after_ms": 280,
+          "checksum": "5a4db1f0772475cd83db7c868a8f436c23b291f1745c49c9ac9aa282b6bca9af"
+        }
+      ],
+      "start_ms": 75600,
+      "end_ms": 85800
+    },
+    {
+      "turn_index": 13,
+      "turn_id": "e28729b7854d3ce7",
+      "speaker_id": "emmanuel_theodore",
+      "source_timestamp": "01:42",
+      "segments": [
+        {
+          "chunk_index": 0,
+          "segment_wav": "Samples/Processed/emmanuel_theodore/e28729b7854d3ce7_chunk_0000.wav",
+          "duration_ms": 9750,
+          "speech_duration_ms": 9750,
+          "start_ms": 86080,
+          "end_ms": 95830,
+          "gap_after_ms": 280,
+          "checksum": "477d1758b8234ad9ad76f5c74b225c3cb1d8ddaf405ab9f05fca3fbb3ce67f20"
+        }
+      ],
+      "start_ms": 86080,
+      "end_ms": 95830
+    },
+    {
+      "turn_index": 14,
+      "turn_id": "31f6dff2f0cc405a",
+      "speaker_id": "emmanuel_theodore",
+      "source_timestamp": "01:54",
+      "segments": [
+        {
+          "chunk_index": 0,
+          "segment_wav": "Samples/Processed/emmanuel_theodore/31f6dff2f0cc405a_chunk_0000.wav",
+          "duration_ms": 9240,
+          "speech_duration_ms": 9240,
+          "start_ms": 96110,
+          "end_ms": 105350,
+          "gap_after_ms": 280,
+          "checksum": "bdbf7953676570beef710dd480e780d5ac004a521704231d344e3a386b1a5e19"
+        }
+      ],
+      "start_ms": 96110,
+      "end_ms": 105350
+    },
+    {
+      "turn_index": 15,
+      "turn_id": "e5dbbb9473b5f38a",
+      "speaker_id": "emmanuel_theodore",
+      "source_timestamp": "02:04",
+      "segments": [
+        {
+          "chunk_index": 0,
+          "segment_wav": "Samples/Processed/emmanuel_theodore/e5dbbb9473b5f38a_chunk_0000.wav",
+          "duration_ms": 9470,
+          "speech_duration_ms": 9470,
+          "start_ms": 105630,
+          "end_ms": 115100,
+          "gap_after_ms": 280,
+          "checksum": "2d87c8a12231e86f8a93066571278ddec9bcb1364327e1f228f105724e7605b3"
+        }
+      ],
+      "start_ms": 105630,
+      "end_ms": 115100
+    },
+    {
+      "turn_index": 16,
+      "turn_id": "fa5cca8b7092a9c5",
+      "speaker_id": "emmanuel_theodore",
+      "source_timestamp": "02:16",
+      "segments": [
+        {
+          "chunk_index": 0,
+          "segment_wav": "Samples/Processed/emmanuel_theodore/fa5cca8b7092a9c5_chunk_0000.wav",
+          "duration_ms": 13320,
+          "speech_duration_ms": 13320,
+          "start_ms": 115380,
+          "end_ms": 128700,
+          "gap_after_ms": 280,
+          "checksum": "2a52eaf337d8575cfc69b928dbfd8b6ea6adf7b657bb213437d9ef855dd24b04"
+        }
+      ],
+      "start_ms": 115380,
+      "end_ms": 128700
+    },
+    {
+      "turn_index": 17,
+      "turn_id": "14580d5f19671ce8",
+      "speaker_id": "emmanuel_theodore",
+      "source_timestamp": "02:28",
+      "segments": [
+        {
+          "chunk_index": 0,
+          "segment_wav": "Samples/Processed/emmanuel_theodore/14580d5f19671ce8_chunk_0000.wav",
+          "duration_ms": 9350,
+          "speech_duration_ms": 9350,
+          "start_ms": 128980,
+          "end_ms": 138330,
+          "gap_after_ms": 280,
+          "checksum": "1bcc49724c46ed5c024266538676230809323a08a430aab9140ca08b10bf8bdc"
+        }
+      ],
+      "start_ms": 128980,
+      "end_ms": 138330
+    },
+    {
+      "turn_index": 18,
+      "turn_id": "09c4a25c7040521d",
+      "speaker_id": "emmanuel_theodore",
+      "source_timestamp": "02:40",
+      "segments": [
+        {
+          "chunk_index": 0,
+          "segment_wav": "Samples/Processed/emmanuel_theodore/09c4a25c7040521d_chunk_0000.wav",
+          "duration_ms": 5810,
+          "speech_duration_ms": 5810,
+          "start_ms": 138610,
+          "end_ms": 144420,
+          "gap_after_ms": 280,
+          "checksum": "ec54d7f76c0a175cc278096a023a1d13851c34f48bbaf073b34f815986cdab40"
+        }
+      ],
+      "start_ms": 138610,
+      "end_ms": 144420
+    },
+    {
+      "turn_index": 19,
+      "turn_id": "9a08a4a93bc7c324",
+      "speaker_id": "emmanuel_theodore",
+      "source_timestamp": "02:50",
+      "segments": [
+        {
+          "chunk_index": 0,
+          "segment_wav": "Samples/Processed/emmanuel_theodore/9a08a4a93bc7c324_chunk_0000.wav",
+          "duration_ms": 8420,
+          "speech_duration_ms": 8420,
+          "start_ms": 144700,
+          "end_ms": 153120,
+          "gap_after_ms": 280,
+          "checksum": "6471e56daecb0ee3b06b9e07b40c7cb5f2753655b6fa95c3a426ea5e251a9be3"
+        }
+      ],
+      "start_ms": 144700,
+      "end_ms": 153120
+    },
+    {
+      "turn_index": 20,
+      "turn_id": "7076b6c1113e26c2",
+      "speaker_id": "emmanuel_theodore",
+      "source_timestamp": "03:02",
+      "segments": [
+        {
+          "chunk_index": 0,
+          "segment_wav": "Samples/Processed/emmanuel_theodore/7076b6c1113e26c2_chunk_0000.wav",
+          "duration_ms": 5130,
+          "speech_duration_ms": 5130,
+          "start_ms": 153400,
+          "end_ms": 158530,
+          "gap_after_ms": 280,
+          "checksum": "a2eacef437987521d243c007228860d4d3909087f9382bfbab89f33e30f920ad"
+        }
+      ],
+      "start_ms": 153400,
+      "end_ms": 158530
+    },
+    {
+      "turn_index": 21,
+      "turn_id": "a8c180d05eedbc43",
+      "speaker_id": "emmanuel_theodore",
+      "source_timestamp": "03:10",
+      "segments": [
+        {
+          "chunk_index": 0,
+          "segment_wav": "Samples/Processed/emmanuel_theodore/a8c180d05eedbc43_chunk_0000.wav",
+          "duration_ms": 10020,
+          "speech_duration_ms": 10020,
+          "start_ms": 158810,
+          "end_ms": 168830,
+          "gap_after_ms": 280,
+          "checksum": "88850b8441ad32ad502eb9135afd94bce4df25437468e52d58f498c21bfa9608"
+        }
+      ],
+      "start_ms": 158810,
+      "end_ms": 168830
+    },
+    {
+      "turn_index": 22,
+      "turn_id": "fed252daf7e2fa6f",
+      "speaker_id": "emmanuel_theodore",
+      "source_timestamp": "03:24",
+      "segments": [
+        {
+          "chunk_index": 0,
+          "segment_wav": "Samples/Processed/emmanuel_theodore/fed252daf7e2fa6f_chunk_0000.wav",
+          "duration_ms": 5340,
+          "speech_duration_ms": 5340,
+          "start_ms": 169110,
+          "end_ms": 174450,
+          "gap_after_ms": 280,
+          "checksum": "479eafcef5f2fda9430ee80c705563abcd860f6aa8aeb90e1c5e6b5e5ffa0e40"
+        }
+      ],
+      "start_ms": 169110,
+      "end_ms": 174450
+    },
+    {
+      "turn_index": 23,
+      "turn_id": "023300587aaa76be",
+      "speaker_id": "emmanuel_theodore",
+      "source_timestamp": "03:32",
+      "segments": [
+        {
+          "chunk_index": 0,
+          "segment_wav": "Samples/Processed/emmanuel_theodore/023300587aaa76be_chunk_0000.wav",
+          "duration_ms": 9240,
+          "speech_duration_ms": 9240,
+          "start_ms": 174730,
+          "end_ms": 183970,
+          "gap_after_ms": 280,
+          "checksum": "0474909bed48ab14b126c0aa6e930a6f9eb1208e8701e4fdef8c4cfda98b7a2e"
+        }
+      ],
+      "start_ms": 174730,
+      "end_ms": 183970
+    },
+    {
+      "turn_index": 24,
+      "turn_id": "5a631a4c602c94cc",
+      "speaker_id": "emmanuel_theodore",
+      "source_timestamp": "03:44",
+      "segments": [
+        {
+          "chunk_index": 0,
+          "segment_wav": "Samples/Processed/emmanuel_theodore/5a631a4c602c94cc_chunk_0000.wav",
+          "duration_ms": 12050,
+          "speech_duration_ms": 12050,
+          "start_ms": 184250,
+          "end_ms": 196300,
+          "gap_after_ms": 280,
+          "checksum": "12c803c53eb094161b245374276cc1f5aa34999972ccebc3f778cb3e1872a43c"
+        }
+      ],
+      "start_ms": 184250,
+      "end_ms": 196300
+    }
+  ]
+}

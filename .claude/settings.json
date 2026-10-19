@@ -3,6 +3,7 @@
     "defaultMode": "acceptEdits",
     "allow": [
       "mcp__argent",
+      "Bash(~/.local/bin/agy:*)",
       "Read",
       "Glob",
       "Grep",

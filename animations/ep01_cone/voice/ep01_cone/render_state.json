@@ -1,0 +1,78 @@
+{
+  "schema_version": "2.0",
+  "source_file": "/Users/emmanuel/Documents/Theory/TheOriginalPower/animations/ep01_cone/narration.md",
+  "source_hash": "699ea1348686a9405d9ea93866c82c9b21d3a3f92a3e6082d46e474b14b7d2b1",
+  "rendered_at": "2026-10-07T18:17:55.260847Z",
+  "turns": [
+    {
+      "turn_id": "d45b98530ad31055",
+      "speaker_id": "emmanuel_theodore",
+      "text_hash": "0febb4fcf86d98aa0d4b11208c33b9b66291b6c6e1e255ee73d0cfb00287bd98",
+      "segment_count": 1,
+      "voice_hash": "f591d427160f7b72",
+      "speech_text_hash": ""
+    },
+    {
+      "turn_id": "713c0d0864c939a2",
+      "speaker_id": "emmanuel_theodore",
+      "text_hash": "9b1be3e1623321b421f80851e6c8a524ab089ac088f5be9b2a3e01868ef1f4fc",
+      "segment_count": 1,
+      "voice_hash": "f591d427160f7b72",
+      "speech_text_hash": ""
+    },
+    {
+      "turn_id": "6febae2d3429a59d",
+      "speaker_id": "emmanuel_theodore",
+      "text_hash": "6872395493c6c4a8944c796aefe1ee645508c70ac5269d8c737a36e1fcf668cd",
+      "segment_count": 1,
+      "voice_hash": "f591d427160f7b72",
+      "speech_text_hash": ""
+    },
+    {
+      "turn_id": "b903c8bf890a47c8",
+      "speaker_id": "emmanuel_theodore",
+      "text_hash": "008a9a419b88db4eeed6cc8fa5745c56f0be96cb757dcf356f9a908deef7d323",
+      "segment_count": 1,
+      "voice_hash": "f591d427160f7b72",
+      "speech_text_hash": ""
+    }
+  ],
+  "segments": [
+    {
+      "turn_id": "d45b98530ad31055",
+      "chunk_index": 0,
+      "start_ms": 0,
+      "duration_ms": 4390,
+      "speech_duration_ms": 4390,
+      "gap_after_ms": 200
+    },
+    {
+      "turn_id": "713c0d0864c939a2",
+      "chunk_index": 0,
+      "start_ms": 4590,
+      "duration_ms": 1750,
+      "speech_duration_ms": 1750,
+      "gap_after_ms": 200
+    },
+    {
+      "turn_id": "6febae2d3429a59d",
+      "chunk_index": 0,
+      "start_ms": 6540,
+      "duration_ms": 2720,
+      "speech_duration_ms": 2720,
+      "gap_after_ms": 200
+    },
+    {
+      "turn_id": "b903c8bf890a47c8",
+      "chunk_index": 0,
+      "start_ms": 9460,
+      "duration_ms": 3330,
+      "speech_duration_ms": 3330,
+      "gap_after_ms": 200
+    }
+  ],
+  "als_path": null,
+  "fcpxml_path": null,
+  "ableton_project_als_path": null,
+  "refit_settings": null
+}

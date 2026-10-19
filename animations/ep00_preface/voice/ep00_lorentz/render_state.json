@@ -1,0 +1,254 @@
+{
+  "schema_version": "2.0",
+  "source_file": "/Users/emmanuel/Documents/Theory/TheOriginalPower/animations/ep00_preface/narration_lorentz.md",
+  "source_hash": "67a290da88cf4cc7be77f3c0e0d69bb2009c43d74fc208e3641b83d6969493fb",
+  "rendered_at": "2026-10-08T03:30:27.442000Z",
+  "turns": [
+    {
+      "turn_id": "9703ce57bb5b0515",
+      "speaker_id": "emmanuel_theodore",
+      "text_hash": "aaa73074dd6d534a15649596812be70c0bc1ddf07df66e0c443c8c7d537d49da",
+      "segment_count": 1,
+      "voice_hash": "f591d427160f7b72",
+      "speech_text_hash": ""
+    },
+    {
+      "turn_id": "45877e332c35ac16",
+      "speaker_id": "emmanuel_theodore",
+      "text_hash": "0b2e5ac4c3a0835cc0c36906cb35ac35f2008139e868ec80662b72242dca91ff",
+      "segment_count": 1,
+      "voice_hash": "f591d427160f7b72",
+      "speech_text_hash": ""
+    },
+    {
+      "turn_id": "6a74237eed8f820a",
+      "speaker_id": "emmanuel_theodore",
+      "text_hash": "5dbb6b67b3d05ce1bde8d8443db3e19ad111978b2b87e775f50776c9015fc9d2",
+      "segment_count": 1,
+      "voice_hash": "f591d427160f7b72",
+      "speech_text_hash": ""
+    },
+    {
+      "turn_id": "ff520728fac37598",
+      "speaker_id": "emmanuel_theodore",
+      "text_hash": "6299e186064db335b88f615c54a8cf9f5dba51e3a0d6aba86d8dc965d8f87453",
+      "segment_count": 1,
+      "voice_hash": "f591d427160f7b72",
+      "speech_text_hash": ""
+    },
+    {
+      "turn_id": "68c61b6afb33ebdc",
+      "speaker_id": "emmanuel_theodore",
+      "text_hash": "d13d519919dfbc5d906dcda63cbc932866dca770c300c07bf056a251843c1f53",
+      "segment_count": 1,
+      "voice_hash": "f591d427160f7b72",
+      "speech_text_hash": ""
+    },
+    {
+      "turn_id": "d5b7e5cc4c7a7b40",
+      "speaker_id": "emmanuel_theodore",
+      "text_hash": "e07701adf67bfecec38469eb3d5ee80ca1cd12c92119ff5233fc96e864065c15",
+      "segment_count": 1,
+      "voice_hash": "f591d427160f7b72",
+      "speech_text_hash": ""
+    },
+    {
+      "turn_id": "2c7e25b2a76f9600",
+      "speaker_id": "emmanuel_theodore",
+      "text_hash": "1fc8c68211b1e4927e56c8ffa65719e2d8c6d934ecf0d7cb0e6da797de814b90",
+      "segment_count": 1,
+      "voice_hash": "f591d427160f7b72",
+      "speech_text_hash": ""
+    },
+    {
+      "turn_id": "e1a13ec9b7641777",
+      "speaker_id": "emmanuel_theodore",
+      "text_hash": "3b5e8feb3ab3c75e8e640e4df2af76906c477568cbf7d9c051db836965adb844",
+      "segment_count": 1,
+      "voice_hash": "f591d427160f7b72",
+      "speech_text_hash": ""
+    },
+    {
+      "turn_id": "ff502e084c347200",
+      "speaker_id": "emmanuel_theodore",
+      "text_hash": "dc9040962b30d2492d88c8422a92e73610f3e0dc9ab064d929dacab512ecd109",
+      "segment_count": 1,
+      "voice_hash": "f591d427160f7b72",
+      "speech_text_hash": "01fb20af39a5be0c"
+    },
+    {
+      "turn_id": "31f532ab45e05678",
+      "speaker_id": "emmanuel_theodore",
+      "text_hash": "bfb788da76d36827f628659e2f20de5b334f324686a5650cf0622929de4f5190",
+      "segment_count": 1,
+      "voice_hash": "f591d427160f7b72",
+      "speech_text_hash": ""
+    },
+    {
+      "turn_id": "6143d5fbfe7e5d6d",
+      "speaker_id": "emmanuel_theodore",
+      "text_hash": "f2b58f730dcfaef3747f65092d48be443a097ad28dcc42bf6a0ede5d19af324a",
+      "segment_count": 1,
+      "voice_hash": "f591d427160f7b72",
+      "speech_text_hash": ""
+    },
+    {
+      "turn_id": "aa7eb9cbec8f0a13",
+      "speaker_id": "emmanuel_theodore",
+      "text_hash": "9e645a3bacfdf7e303bd610051bae3176545c710b1fca1dde8ee01a5ca9fe60a",
+      "segment_count": 1,
+      "voice_hash": "f591d427160f7b72",
+      "speech_text_hash": ""
+    },
+    {
+      "turn_id": "c709e7a8e1bb5355",
+      "speaker_id": "emmanuel_theodore",
+      "text_hash": "fa918ac2ee4ea2a3184ac068a5d63dc1d4e4c820dabde1afabe1cb1347984a61",
+      "segment_count": 1,
+      "voice_hash": "f591d427160f7b72",
+      "speech_text_hash": ""
+    },
+    {
+      "turn_id": "5360bc56b7dbeeec",
+      "speaker_id": "emmanuel_theodore",
+      "text_hash": "5580c54abcf4090fa77630df30a30e110d8df50d928e09db74cba80467ec9668",
+      "segment_count": 1,
+      "voice_hash": "f591d427160f7b72",
+      "speech_text_hash": ""
+    },
+    {
+      "turn_id": "33ef2107c7ce36b7",
+      "speaker_id": "emmanuel_theodore",
+      "text_hash": "bae807068e96f0a7eabd324f5a414697a5d54f32241b1255d1b84ca1056ecddf",
+      "segment_count": 1,
+      "voice_hash": "f591d427160f7b72",
+      "speech_text_hash": ""
+    }
+  ],
+  "segments": [
+    {
+      "turn_id": "9703ce57bb5b0515",
+      "chunk_index": 0,
+      "start_ms": 0,
+      "duration_ms": 5540,
+      "speech_duration_ms": 5540,
+      "gap_after_ms": 280
+    },
+    {
+      "turn_id": "45877e332c35ac16",
+      "chunk_index": 0,
+      "start_ms": 5820,
+      "duration_ms": 2800,
+      "speech_duration_ms": 2800,
+      "gap_after_ms": 280
+    },
+    {
+      "turn_id": "6a74237eed8f820a",
+      "chunk_index": 0,
+      "start_ms": 8900,
+      "duration_ms": 3170,
+      "speech_duration_ms": 3170,
+      "gap_after_ms": 280
+    },
+    {
+      "turn_id": "ff520728fac37598",
+      "chunk_index": 0,
+      "start_ms": 12350,
+      "duration_ms": 7330,
+      "speech_duration_ms": 7330,
+      "gap_after_ms": 280
+    },
+    {
+      "turn_id": "68c61b6afb33ebdc",
+      "chunk_index": 0,
+      "start_ms": 19960,
+      "duration_ms": 3380,
+      "speech_duration_ms": 3380,
+      "gap_after_ms": 280
+    },
+    {
+      "turn_id": "d5b7e5cc4c7a7b40",
+      "chunk_index": 0,
+      "start_ms": 23620,
+      "duration_ms": 3370,
+      "speech_duration_ms": 3370,
+      "gap_after_ms": 280
+    },
+    {
+      "turn_id": "2c7e25b2a76f9600",
+      "chunk_index": 0,
+      "start_ms": 27270,
+      "duration_ms": 10050,
+      "speech_duration_ms": 10050,
+      "gap_after_ms": 280
+    },
+    {
+      "turn_id": "e1a13ec9b7641777",
+      "chunk_index": 0,
+      "start_ms": 37600,
+      "duration_ms": 6470,
+      "speech_duration_ms": 6470,
+      "gap_after_ms": 280
+    },
+    {
+      "turn_id": "ff502e084c347200",
+      "chunk_index": 0,
+      "start_ms": 44350,
+      "duration_ms": 13620,
+      "speech_duration_ms": 13620,
+      "gap_after_ms": 280
+    },
+    {
+      "turn_id": "31f532ab45e05678",
+      "chunk_index": 0,
+      "start_ms": 58250,
+      "duration_ms": 9980,
+      "speech_duration_ms": 9980,
+      "gap_after_ms": 280
+    },
+    {
+      "turn_id": "6143d5fbfe7e5d6d",
+      "chunk_index": 0,
+      "start_ms": 68510,
+      "duration_ms": 8480,
+      "speech_duration_ms": 8480,
+      "gap_after_ms": 280
+    },
+    {
+      "turn_id": "aa7eb9cbec8f0a13",
+      "chunk_index": 0,
+      "start_ms": 77270,
+      "duration_ms": 6890,
+      "speech_duration_ms": 6890,
+      "gap_after_ms": 280
+    },
+    {
+      "turn_id": "c709e7a8e1bb5355",
+      "chunk_index": 0,
+      "start_ms": 84440,
+      "duration_ms": 10730,
+      "speech_duration_ms": 10730,
+      "gap_after_ms": 280
+    },
+    {
+      "turn_id": "5360bc56b7dbeeec",
+      "chunk_index": 0,
+      "start_ms": 95450,
+      "duration_ms": 8970,
+      "speech_duration_ms": 8970,
+      "gap_after_ms": 280
+    },
+    {
+      "turn_id": "33ef2107c7ce36b7",
+      "chunk_index": 0,
+      "start_ms": 104700,
+      "duration_ms": 5110,
+      "speech_duration_ms": 5110,
+      "gap_after_ms": 280
+    }
+  ],
+  "als_path": null,
+  "fcpxml_path": null,
+  "ableton_project_als_path": null,
+  "refit_settings": null
+}

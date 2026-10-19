@@ -1,0 +1,11 @@
+# This file records the segment order used by Manim.
+file 'file:/Users/emmanuel/Documents/Theory/TheOriginalPower/animations/ep00_preface/media/videos/explainers/1080p30/partial_movie_files/WhyFive/66e64cf83eb140f0d8960f1237a7c0c12c92f10501fdc9232ea0f3a574e7b49f.mp4'
+file 'file:/Users/emmanuel/Documents/Theory/TheOriginalPower/animations/ep00_preface/media/videos/explainers/1080p30/partial_movie_files/WhyFive/e2ea81d7312bfc9bd4d5bafd2e54ff1be5fa553061fd69f5f2534c010013d86b.mp4'
+file 'file:/Users/emmanuel/Documents/Theory/TheOriginalPower/animations/ep00_preface/media/videos/explainers/1080p30/partial_movie_files/WhyFive/5f5dd6f33748232d600db69f3f3932ff3866d9e6de79ddd8e91ac26567634a6f.mp4'
+file 'file:/Users/emmanuel/Documents/Theory/TheOriginalPower/animations/ep00_preface/media/videos/explainers/1080p30/partial_movie_files/WhyFive/289bff611b3a54c15669e7280e0d39583fca0a6941fb3ec17bd7e06f579dfd49.mp4'
+file 'file:/Users/emmanuel/Documents/Theory/TheOriginalPower/animations/ep00_preface/media/videos/explainers/1080p30/partial_movie_files/WhyFive/60a67be412a38c72fa56dbb0e7398983ee13ccf2f703d2678f8e6fca70acd215.mp4'
+file 'file:/Users/emmanuel/Documents/Theory/TheOriginalPower/animations/ep00_preface/media/videos/explainers/1080p30/partial_movie_files/WhyFive/d028c0a5978930c33ebf584d40dd6449bda868fc60f97c233ffddb1d1f159d34.mp4'
+file 'file:/Users/emmanuel/Documents/Theory/TheOriginalPower/animations/ep00_preface/media/videos/explainers/1080p30/partial_movie_files/WhyFive/7716efde024df78d6323637b6f16c21b0ff0b3210d034e80ff4d06ef5f7616b3.mp4'
+file 'file:/Users/emmanuel/Documents/Theory/TheOriginalPower/animations/ep00_preface/media/videos/explainers/1080p30/partial_movie_files/WhyFive/7cac9b6e13b00569ac34e977ea5c33afead11adf890c6b6cafb849511078f87a.mp4'
+file 'file:/Users/emmanuel/Documents/Theory/TheOriginalPower/animations/ep00_preface/media/videos/explainers/1080p30/partial_movie_files/WhyFive/fd532b66abb7dbe3d5674c1894aede36d751616feb84d58b07eb30eca11949f0.mp4'
+file 'file:/Users/emmanuel/Documents/Theory/TheOriginalPower/animations/ep00_preface/media/videos/explainers/1080p30/partial_movie_files/WhyFive/8f3c5d8a454ec39d6e6fd14f8e684404f90f6070de1d6b9ad83645b8723db176.mp4'

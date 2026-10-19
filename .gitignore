@@ -113,6 +113,8 @@ website/public/cover-preview.*
 simulator/3b1b_manim/
 simulator/3b1b_videos/
 simulator/manim_community/
+tools/manim/
+.venv-manim/
 
 # NotebookLM chapter deep-dive PDF splits (derived from Paper/The_Original_Power.pdf)
 Paper/research/chapter_deep_dives/pdf/
@@ -153,3 +155,41 @@ Architecting_the_operation/music/lab/*.als
 Architecting_the_operation/music/lab/*.als.bak
 # Bounced cues are Emmanuel's; cues.yaml tracks how they are used.
 Architecting_the_operation/music/cues/*.wav
+
+# ── Repo cleanup 2026-10-19: generated media, envs, downloads ──────────────
+.venv-omnivoice/
+.opencode/
+tools/manimgx/
+*.lot
+_jobs/
+videolab/jobs-whisper-backup-*/
+Sources/*.pdf
+# animation renders (scripts, .tex, .svg, notes stay tracked)
+animations/**/*.mp4
+animations/**/*.wav
+animations/**/*.png
+animations/**/*.log
+animations/yt01_ortho/EffectCraft Auto-Save/
+Architecting_the_operation/video/images/
+Architecting_the_operation/video/work/*.mp4
+Architecting_the_operation/video/avatar_rig/**/*.png
+Architecting_the_operation/video/avatar_rig/**/*.log
+Architecting_the_operation/video/manim/**/*.mp4
+Architecting_the_operation/video/manim/**/*.png
+# YT02 primary-source archive: images/PDFs regenerate from archive/_tools (SOURCES.md is the record)
+Architecting_the_operation/video/yt02/archive/**/*.png
+Architecting_the_operation/video/yt02/archive/**/*.jpg
+Architecting_the_operation/video/yt02/archive/**/*.pdf
+Architecting_the_operation/video/yt02/archive/**/*.htm
+Architecting_the_operation/video/yt02/archive/**/*.txt
+Architecting_the_operation/video/yt02/archive/*.out
+Architecting_the_operation/video/yt02/logs/stills_v2/
+Architecting_the_operation/video/yt02/logs/*.out
+# downloaded research artifacts
+Paper/research/kimi_sources/
+Paper/data/gun_laws_new_england/sources/
+Paper/data/spatial/boston/cir_*.csv
+Paper/data/spatial/boston/tiger_25/
+Paper/data/spatial/boston/*.zip
+.zed/
+animations/**/*.mp3
