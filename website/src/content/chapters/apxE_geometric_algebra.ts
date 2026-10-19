@@ -42,7 +42,7 @@ const apxE: ChapterContent = {
       id: 'quaternion-stage',
       title: 'The Quaternion Stage',
       prose: [
-        'Three primary imaginary axes—race, gender, and sexuality—extend the standard complex number into a quaternion. Its real component represents the Material Wage, while three imaginary components represent racial, gendered, and cisnormative or sexuality status wages.',
+        'Three primary axes—race, gender, and sexuality—extend the standard complex number into a quaternion. Each axis carries a material wage and a psychological wage. The real component is the sum of the three material wages. The imaginary components are the psychological wages on race, gender, and sexuality.',
         'The distinct imaginary units supply orthogonal directions. Their multiplication encodes an intersection as a distinct vector with its own direction.',
       ],
       blocks: [
@@ -82,31 +82,31 @@ const apxE: ChapterContent = {
       id: 'weighted-summation',
       title: 'The N-Dimensional Weighted Summation',
       prose: [
-        'Beyond three axes, Geometric Algebra uses N orthogonal imaginary bases. The full Complex Wage combines the Real Material Wage with psychological wages distributed across those bases.',
-        'Each axis receives a Demographic Weight Coefficient. The coefficient represents the proportion of the population for whom the axis is a primary axis of marginalization, scaled by the institutional bandwidth devoted to that axis.',
+        'Beyond three axes, Geometric Algebra uses N orthogonal imaginary bases. Each axis carries a material wage and a psychological wage. The full Complex Wage is the weighted sum of those pairs.',
+        'The Demographic Weight Coefficient on an axis scales that axis’s pair. The coefficient is the proportion of the population for whom the axis is a primary axis of marginalization, scaled by the institutional bandwidth devoted to that axis. The material wages add on the real line. Each psychological wage lies on its own imaginary basis.',
       ],
       visual: {
         kind: 'equation',
-        latex: 'W = \\psi_m + \\sum_{k=1}^{N} j_k \\left(\\rho_k \\cdot \\psi_{s,k}\\right)',
-        caption: 'The N-dimensional Complex Wage.',
+        latex: 'W = \\sum_{k=1}^{N} \\rho_k \\left(\\psi_{m,k} + j_k \\psi_{s,k}\\right)',
+        caption: 'The N-dimensional Complex Wage. Each axis contributes a material and psychological pair.',
       },
       keyConcepts: [
         {
-          term: 'ψₘ',
-          definition: 'The Real Material Wage.',
+          term: 'ψₘ,ₖ',
+          definition: 'The material wage on axis k, the real component of that axis’s pair.',
         },
         {
           term: 'jₖ',
           definition:
-            'The kth imaginary basis axis, including race, gender, ability, sexuality, neurology, and height or physicality.',
+            'The kth imaginary basis, including race, gender, ability, sexuality, neurology, and height or physicality. It holds the psychological wage of axis k orthogonal to that axis’s material wage.',
         },
         {
           term: 'ψₛ,ₖ',
-          definition: 'The baseline psychological wage on axis k.',
+          definition: 'The psychological wage on axis k.',
         },
         {
           term: 'ρₖ',
-          definition: 'The Demographic Weight Coefficient for axis k.',
+          definition: 'The Demographic Weight Coefficient for axis k. It scales the material and psychological pair on that axis.',
         },
       ],
     },
