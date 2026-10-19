@@ -28,7 +28,7 @@ Aisha (02:02)
 That is the strongest observation anyone made in the whole thread. The lawsuit says the silence was written down. It alleges a group chat where members were invited upstairs while she was in the house. So the question is why. Why would that many men stay quiet.
 
 Toussaint (02:18)
-A man who stood inside one of those houses answered it. The Mutual Man, at the mutual man on Instagram, posted a reel on October 1, 2026, called "How my fraternity systematically silenced me." This is his personal, unverified testimony about his own unnamed chapter.
+A man who stood inside one of those houses answered it. The Mutual Man, at the mutual man on Instagram, posted a reel on October first, 2026, called "How my fraternity systematically silenced me." This is his personal, unverified testimony about his own unnamed chapter.
 
 The Mutual Man (02:35)
 [clip:mutualman_2026a] Establish a power hierarchy through humiliation. You must enforce the hierarchy or else the system will turn against you. They have implicit rules to belong, such as don't snitch, seek approval, keep it in-house, protect the bros, and keep tradition. They frame these things as brotherhood.
@@ -307,7 +307,7 @@ Toussaint (22:03)
 It hands it out in classrooms too.
 
 Emmanuel Theodore (22:05)
-With credentials. The two-box picture has a formal lineage. Social psychology calls the categories in-group and out-group, and Social Identity Theory, from Tajfel and Turner in nineteen seventy-nine, explains how group membership organizes trust, threat, belonging, and self-concept. That was the framework I received in my own sociology and social psychology coursework. I learned in-group bias, prejudice, cognitive bias, and the rapid mental sorting of us and them. The account ended at cognition. I was given a description of the partition inside the mind. I was looking for the mechanism that installs the partition, finances it, and converts it into law.
+With credentials. The two-tier picture has a formal lineage. Social psychology calls the categories in-group and out-group, and Social Identity Theory, from Tajfel and Turner in nineteen seventy-nine, explains how group membership organizes trust, threat, belonging, and self-concept. That was the framework I received in my own sociology and social psychology coursework. I learned in-group bias, prejudice, cognitive bias, and the rapid mental sorting of us and them. The account ended at cognition. I was given a description of the partition inside the mind. I was looking for the mechanism that installs the partition, finances it, and converts it into law.
 
 Aisha (22:49)
 The book begins with Social Identity Theory as the cognitive substrate. Ordinary predictive cognition sorts patterns under uncertainty. Legal and social systems feed it malicious priors. The partition then feels like perception. That is the move from a theory of group cognition to a theory of institutional installation.

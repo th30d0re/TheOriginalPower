@@ -1,0 +1,20 @@
+{
+  "kind": "table",
+  "headline": "Historical operationalization",
+  "items": [
+    {
+      "title": "𝓔(t)",
+      "detail": "Total annual cotton revenue"
+    },
+    {
+      "title": "M(t)",
+      "detail": "Militia and slave-patrol expenditure ÷ cotton revenue"
+    },
+    {
+      "title": "τ",
+      "detail": "Crash threshold for containment capacity"
+    }
+  ],
+  "sources": "Source: The Original Power, Antebellum case study",
+  "qrUrl": null
+}

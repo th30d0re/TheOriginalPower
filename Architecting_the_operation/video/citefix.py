@@ -231,16 +231,99 @@ def apply(shotlist: Path, findings: list[dict]) -> int:
     return changed
 
 
+# A word this rare in the manuscript points at one passage rather than a theme.
+RARE_TERM_LINES = 15
+
+
+def _rare_term_lines(book: Manuscript, terms: set[str], per_term: int = 3) -> set[int]:
+    """Lines carrying a term that barely occurs in the book.
+
+    Overlap scoring rewards a line for sharing many ordinary words, which
+    buries the passage that shares one decisive one. A shot about the
+    McKelvey--Schofield theorem needs the line that says McKelvey, and that
+    line loses on overlap to any paragraph with the same general vocabulary.
+    """
+    found: set[int] = set()
+    for term in terms:
+        frequency = book.frequency.get(term, 0)
+        if not 0 < frequency <= RARE_TERM_LINES:
+            continue
+        hits = [n for n, line in enumerate(book.lines, start=1)
+                if len(line) >= 120 and term in _terms(line)]
+        found.update(sorted(hits, key=lambda n: -book.score(terms, n))[:per_term])
+    return found
+
+
+def candidates(spec_path: Path, book: Manuscript, limit: int = 8,
+               only: set[str] | None = None) -> list[dict]:
+    """For each shot still cited by line, the passages most likely to support it.
+
+    Retrieval is deterministic and cheap, so it stays here. Choosing which
+    passage a shot actually rests on is judgment, and that is what gets handed
+    out: a shot, what it puts on screen, and a short list to choose from.
+    """
+    document = json.loads(spec_path.read_text())
+    tasks: list[dict] = []
+    for shot in document["shots"]:
+        if "book" not in shot["provenance"]["tags"]:
+            continue
+        if only is not None and shot["id"] not in only:
+            continue
+        if only is None and shot["provenance"].get("quotes"):
+            continue
+        cited = [c["line"] for c in shot["provenance"]["citations"]
+                 if "line" in c and c["path"] == BOOK_PATH]
+        if not cited:
+            continue
+        terms = _terms(_shot_text(shot))
+        ranked = sorted(
+            ((book.score(terms, n), n) for n, line in enumerate(book.lines, start=1)
+             if len(line) >= 120),
+            reverse=True)[:limit]
+        chosen = {n for _, n in ranked}
+        for number in _rare_term_lines(book, terms):
+            if number not in chosen:
+                ranked.append((book.score(terms, number), number))
+                chosen.add(number)
+        ranked.sort(reverse=True)
+        tasks.append({
+            "spec": spec_path.name,
+            "shot": shot["id"],
+            "title": shot["title"],
+            "on_screen": shot.get("described", {}),
+            "note": shot.get("note", ""),
+            "currently_cited": cited,
+            "candidates": [{"line": n, "score": round(s, 3),
+                            "text": book.lines[n - 1].strip()[:700]}
+                           for s, n in ranked if s > 0],
+        })
+    return tasks
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("specs", nargs="+", type=Path)
     ap.add_argument("--stale-below", type=float, default=0.12)
     ap.add_argument("--apply", action="store_true")
+    ap.add_argument("--only", type=Path, default=None,
+                    help="a file of shot ids, one per line, to rebuild tasks for")
+    ap.add_argument("--tasks", type=Path, default=None,
+                    help="write a JSONL work file of shots needing a human decision")
     ap.add_argument("--migrate", action="store_true",
                     help="replace line numbers with quoted phrases")
     ap.add_argument("--quiet", action="store_true")
     args = ap.parse_args()
     book = Manuscript()
+
+    if args.tasks:
+        only = None
+        if args.only:
+            only = {l.strip() for l in args.only.read_text().splitlines() if l.strip()}
+        rows = [row for spec in args.specs for row in candidates(spec, book, only=only)]
+        args.tasks.parent.mkdir(parents=True, exist_ok=True)
+        args.tasks.write_text("".join(json.dumps(r) + "\n" for r in rows))
+        print(f"wrote {len(rows)} task(s) to {args.tasks}")
+        return 0
 
     if args.migrate:
         done = left = 0

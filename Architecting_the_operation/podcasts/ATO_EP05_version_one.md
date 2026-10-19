@@ -76,7 +76,7 @@ Emmanuel Theodore (06:05)
 Brianna is correct that a home without a father correlates with a higher risk of incarceration. The sociological research from two thousand four found that young men from father-absent homes face roughly double the risk of ending up in jail. The gap shrinks significantly once income and family stability are accounted for. The conditions have a longer institutional history.
 
 Aisha (06:30)
-Brianna says crime draws police. The data for drug enforcement tests that claim directly. A two thousand twenty ACLU report found Black people are arrested three point six times more often for marijuana possession than white people, despite similar usage rates across groups. The police are drawn to the population, regardless of the usage rate.
+Brianna says crime draws police. The data for drug enforcement tests that claim directly. A two thousand twenty ACLU report found Black people are arrested three point six times more often for cannabis possession than white people, despite similar usage rates across groups. The police are drawn to the population, regardless of the usage rate.
 
 Emmanuel Theodore (06:51)
 Known policies produced predictable pressures on Black family stability. The Elite architect the containment, and the system points to the outcome as justification for the containment. This is resistance to structural critique, the fourth component of the oppressive architecture. The system deflects analysis onto individual behavior and away from the policies that shaped the conditions.

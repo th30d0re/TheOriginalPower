@@ -1,14 +1,78 @@
 {
  "aisha": {
-  "ms_per_mark": 219.32,
-  "ms_per_word": 321.91
+  "ms_per_mark": 368.46,
+  "ms_per_word": 393.36
+ },
+ "blake_johnson": {
+  "ms_per_mark": 0.0,
+  "ms_per_word": 214.29
+ },
+ "brianna_riddick": {
+  "ms_per_mark": 0.0,
+  "ms_per_word": 441.51
+ },
+ "chloe_sunderland": {
+  "ms_per_mark": 0.0,
+  "ms_per_word": 344.15
+ },
+ "eivin_sandstrom": {
+  "ms_per_mark": 0.0,
+  "ms_per_word": 277.38
  },
  "emmanuel_theodore": {
-  "ms_per_mark": 504.54,
-  "ms_per_word": 296.32
+  "ms_per_mark": 293.1,
+  "ms_per_word": 392.22
+ },
+ "ilyas_abdulin": {
+  "ms_per_mark": 0.0,
+  "ms_per_word": 234.74
+ },
+ "jaeden": {
+  "ms_per_mark": 0.0,
+  "ms_per_word": 194.05
+ },
+ "jala_chantelle": {
+  "ms_per_mark": 0.0,
+  "ms_per_word": 281.59
+ },
+ "jaylin_hertz": {
+  "ms_per_mark": 0.0,
+  "ms_per_word": 300.58
+ },
+ "kaizen_asiedu": {
+  "ms_per_mark": 0.0,
+  "ms_per_word": 466.39
+ },
+ "krystal": {
+  "ms_per_mark": 0.0,
+  "ms_per_word": 289.99
+ },
+ "lee_atwater": {
+  "ms_per_mark": 0.0,
+  "ms_per_word": 552.02
+ },
+ "mamwa": {
+  "ms_per_mark": 0.0,
+  "ms_per_word": 513.06
+ },
+ "may": {
+  "ms_per_mark": 0.0,
+  "ms_per_word": 357.39
+ },
+ "nick_powers": {
+  "ms_per_mark": 0.0,
+  "ms_per_word": 321.33
+ },
+ "the_mutual_man": {
+  "ms_per_mark": 0.0,
+  "ms_per_word": 352.18
+ },
+ "the_speech_prof": {
+  "ms_per_mark": 0.0,
+  "ms_per_word": 369.71
  },
  "toussaint": {
-  "ms_per_mark": 224.34,
-  "ms_per_word": 285.22
+  "ms_per_mark": 286.31,
+  "ms_per_word": 356.83
  }
 }

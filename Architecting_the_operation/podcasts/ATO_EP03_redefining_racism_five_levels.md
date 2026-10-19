@@ -46,7 +46,7 @@ Toussaint (01:47)
 This is Architecting the Operation. We're working through a book called The Original Power, written by Emmanuel Theodore.
 
 Aisha (01:54)
-If this is your first episode, you're in the right place. You don't need anything we've made before this one.
+If you found us here, you can start here. The hour before this one is the architecture. This hour is what that architecture does to the word racism.
 
 Toussaint (02:00)
 One thing you should know before we go further. Every voice on this show is synthetic. Mine, Aisha's, all of them.
@@ -840,338 +840,338 @@ Cutting power to the Jim Crow coil released a large field. The law and order bac
 Toussaint (44:16)
 Quick signpost. Four ideas down, one to go. First, a short tour of how far the pattern reaches.
 
-Aisha (44:22)
-A content note before we start. In about a minute we describe the rape of enslaved women as an instrument of the system, and we name what it produced. Same standard as the tape: the mechanism is the evidence, and softening it would hide how the thing worked. Skip ahead ninety seconds if you would rather not carry it today.
-
-Toussaint (44:42)
+Toussaint (44:22)
 The book says this virus is fractal. A fractal repeats the same shape at every zoom level. A coastline looks jagged from a plane, and it looks jagged from the beach.
 
-Aisha (44:51)
+Aisha (44:31)
 The repeating rule is simple. Your value depends on how close you sit to the top.
 
-Toussaint (44:56)
+Toussaint (44:36)
 Zoom out to the planet. The book puts lenders like the IMF and the World Bank near the top. Debtor nations of the Global South sit near the bottom.
 
-Aisha (45:05)
+Aisha (44:45)
 Zoom in to the country. Redlining, gerrymandering, and gaps in sentencing.
 
-Toussaint (45:10)
-Zoom in to the body. Under English common law a child took the father's status. Virginia reversed that in 1662 and made the child follow the mother. Enslavers were raping enslaved women, and under the old rule those children could claim freedom through the father. The reversal closed that door and made every one of those children property. The rapist's crime became the owner's profit.
+Aisha (44:50)
+A content note. What follows is the rape of enslaved women used to grow the capital stock, and sexual terror against men used to break resistance. Same standard as the tape: the mechanism is the evidence, and softening it would hide how the thing worked. Skip ahead about a minute if you would rather not carry it today.
 
-Aisha (45:34)
+Toussaint (45:09)
+Zoom in to the body. Under English common law a child took the father's status. Virginia reversed that in 1662 and named the rule partus sequitur ventrem: the child follows the mother. Enslavers were raping enslaved women, and under the old rule those children could claim freedom through the father. The reversal closed that door and made every one of those children property. The rapist's crime became the owner's profit. The same subroutine used sexual terror against men to break kinetic and psychological resistance. Extraction ran through the body on both sides of that line.
+
+Aisha (45:46)
 The book cites the diary of Thomas Thistlewood, an overseer in Jamaica. He recorded raping an enslaved woman named Abba a hundred fifty five times. The book reads that diary as an operational log, because in that system sexual violence was a production input, tracked like any other.
 
-Toussaint (45:52)
-Zoom in to identity. Sexism, homophobia, transphobia, and ableism run as parallel sorting programs. People sorted on several axes get extracted from at several points.
+Toussaint (46:03)
+The content note is over. Zoom in to identity. Sexism, homophobia, transphobia, and ableism run as parallel sorting programs. People sorted on several axes get extracted from at several points.
 
-Aisha (46:03)
+Aisha (46:15)
 And zoom inside the out-group itself. Colorism. Communities ranking their own members by lighter skin and straighter hair. The book calls it self-executing code. At that layer, the system no longer needs anyone from outside to enforce it.
 
-Toussaint (46:18)
-That's the tour, and the content note is over.
+Toussaint (46:30)
+That's the tour.
 
-Emmanuel Theodore (46:20)
+Emmanuel Theodore (46:32)
 Two precision points for specialists. First, the fractal is statistical. A coastline repeats with variation at every scale, and so does this. The book treats the IMF as a variation on an overseer's function, running at a different layer.
 
-Emmanuel Theodore (46:35)
+Emmanuel Theodore (46:47)
 Second, the model minority objection. Some Asian American groups outperform white Americans on certain averages. The book answers with insertion point. The 1965 immigration law recruited doctors, engineers, and programmers, and those groups entered at the Buffer layer. Internment, housing discrimination, and the forever-foreigner label still apply. The extraction is calibrated to where a group was inserted.
 
-Aisha (47:03)
+Aisha (47:14)
 Third, and this is the one I want on the record, because it shows the same circuit running on a different axis.
 
-Emmanuel Theodore (47:10)
+Emmanuel Theodore (47:21)
 The book models identity axes as phase loading. Every axis a group sits on adds a phase shift, and a solidarity signal cancels once those phases scatter far enough apart. Same arithmetic that cancels two waves meeting out of step.
 
-Emmanuel Theodore (47:24)
+Emmanuel Theodore (47:36)
 The sequence is dated, and it is short. The gender axis activated around 1972, through the fight over the Equal Rights Amendment. Sexuality, 1977, through Anita Bryant's Save Our Children campaign in Dade County. Religion, 1979, with the Moral Majority.
 
-Emmanuel Theodore (47:43)
+Emmanuel Theodore (47:54)
 A survey-based proxy for cross-racial class solidarity moves with that sequence, from about zero point zero seven eight before 1964 to about zero point four zero three after 1980. Three axes switched on inside eight years, and the coalition arithmetic changed underneath them.
 
-Aisha (48:01)
+Aisha (48:13)
 And what is that proxy worth, as evidence?
 
-Emmanuel Theodore (48:04)
+Emmanuel Theodore (48:15)
 The phase values are ordinal proxies I computed from a public survey series, so the book rates this one tier two. The ordering is the claim. The magnitudes are not, and I would not defend them as measurements.
 
-Aisha (48:16)
+Aisha (48:28)
 The book finds the pattern in one more place. Vocabulary.
 
-Toussaint (48:20)
+Toussaint (48:31)
 If you've worked with hard drives or databases, you've seen the words master and slave.
 
-Aisha (48:24)
+Aisha (48:36)
 The earliest technical use the book cites is from 1904, when an astronomer named a slave clock. After 1960, the terms spread through engineering and computing.
 
-Emmanuel Theodore (48:36)
+Emmanuel Theodore (48:47)
 One artifact from that spread deserves to be read as written. The 1964 Dartmouth Timesharing System, documented in Science in 1968, explains that it is impossible for an erroneous or runaway user program in the slave computer to damage the executive program and bring the whole system to a halt.
 
-Emmanuel Theodore (48:56)
+Emmanuel Theodore (49:08)
 Runaway. In the slave computer. Eglash's reading is that there was almost certainly no conscious intention to echo antebellum discourse about runaway enslaved people, which leaves a metaphor operating below the level of choice.
 
-Emmanuel Theodore (49:09)
+Emmanuel Theodore (49:21)
 That is mode two propagation in one sentence. No central command, no animus required, only the vocabulary a technical culture built inside a former slaveholding society had lying around.
 
-Aisha (49:21)
+Aisha (49:33)
 And the metaphor often fails on its own terms. The PC Guide notes that so-called master and slave drives are basically equals. A Black electrical engineer told the historian Ron Eglash the same thing about flip-flop circuits.
 
-Toussaint (49:35)
+Toussaint (49:47)
 And it had a cost.
 
-Aisha (49:36)
+Aisha (49:48)
 A Black engineering professor recalled teaching the term around 1992. He was one of the few Black people in a room of sixty students. He remembered mumbling through it.
 
-Toussaint (49:48)
+Toussaint (49:59)
 So what actually changed, and when?
 
-Emmanuel Theodore (49:50)
+Emmanuel Theodore (50:01)
 Slowly, and then all at once, three decades later. November 2003: a Black employee of the Los Angeles County Probation Department filed a compliance complaint after seeing a master-slave label on a videotape deck. The county's internal services department wrote to its equipment vendors that, given the cultural diversity and sensitivity of Los Angeles County, that was not an acceptable identification label.
 
-Emmanuel Theodore (50:17)
+Emmanuel Theodore (50:29)
 The response online was dominated by accusations of political correctness. One label, on one deck, in one county office.
 
-Emmanuel Theodore (50:24)
+Emmanuel Theodore (50:36)
 Then 2014 through 2018, with no shock attached: Django, Drupal, Redis, CouchDB, and Python replaced the terms in their codebases with leader and follower, primary and replica, parent and worker. Python's 2018 revision cleared them out of the standard library and the documentation.
 
-Emmanuel Theodore (50:44)
+Emmanuel Theodore (50:56)
 Then June 2020, after the police murder of George Floyd: GitHub made main the default branch for every new repository and deprecated the old default that October. The Linux kernel adopted an inclusive-terminology policy in July. The I squared C bus specification replaced master and slave with controller and target in its version seven, in 2021.
 
-Toussaint (51:08)
+Toussaint (51:19)
 Three decades between one professor mumbling through the word in front of sixty students and the institutions moving.
 
-Emmanuel Theodore (51:14)
+Emmanuel Theodore (51:26)
 The signal was available the entire time, and it was legible to the people closest to the hardware. Skipping it stayed cheap until a shock made skipping it expensive. That is the deprecation arc for a word, and the same arc governs the deprecation of an interface.
 
-Aisha (51:30)
+Aisha (51:41)
 The book turns the same audit on itself. It says Elite where many writers would say master class. And it asks readers to flag the words it missed.
 
-Toussaint (51:39)
+Toussaint (51:50)
 Idea five. The guard who gets paid in badges.
 
-Aisha (51:41)
+Aisha (51:53)
 Level one.
 
-Toussaint (51:43)
+Toussaint (51:54)
 Here's a question. Would you guard a cookie jar you're never allowed to eat from?
 
-Aisha (51:47)
+Aisha (51:59)
 Probably not.
 
-Toussaint (51:48)
+Toussaint (52:00)
 Now imagine a kid gets a shiny hall monitor badge. The badge lets him boss the other kids around. He gets zero cookies. He guards the jar anyway, because the badge makes him feel above everybody else.
 
-Aisha (52:00)
+Aisha (52:12)
 And if the other kids start getting really angry?
 
-Toussaint (52:03)
+Toussaint (52:14)
 Then the grownups toss him a cookie. They take it from another kid's lunch. Here's where my story breaks. A badge is just plastic. The real rewards had laws, jobs, and houses behind them.
 
-Aisha (52:14)
+Aisha (52:25)
 Level two.
 
-Toussaint (52:15)
+Toussaint (52:27)
 In 1676, in colonial Virginia, poor white servants and enslaved Black workers rebelled together. It is called Bacon's Rebellion. They took up arms, they marched on Jamestown, and they burned the colonial capital to the ground.
 
-Toussaint (52:30)
+Toussaint (52:42)
 The united labor force burned it to the ground. For the planters watching, poor whites and Black workers on the same side was the worst case, and it had just happened.
 
-Toussaint (52:40)
+Toussaint (52:51)
 So Virginia wrote new laws. The 1705 slave codes drew a hard line between white and Black, and handed poor whites privileges over Black people.
 
-Toussaint (52:48)
+Toussaint (53:00)
 Decades later, W. E. B. Du Bois named that reward. He called it a public and psychological wage. Status, paid instead of money.
 
-Emmanuel Theodore (52:56)
+Emmanuel Theodore (53:08)
 The book calls 1676 the system's first crash, and the phase loading we walked through earlier is why it reads as one. In 1676 no identity axis had been institutionally deployed to scatter that coalition. The load sat near zero, so the coalition breached the threshold.
 
-Emmanuel Theodore (53:15)
+Emmanuel Theodore (53:26)
 The 1705 codes are the patch. Codifying whiteness raised the load and held cross-racial coalitions under the threshold for roughly a hundred and fifty years. The ERA, Bryant, and the Moral Majority are the same operation, run again, on axes that had not been invented yet in 1705.
 
-Toussaint (53:34)
+Toussaint (53:45)
 Aisha, level three. What did that wage actually buy?
 
-Aisha (53:37)
+Aisha (53:49)
 The book splits it in two. The status wage is the default, because it's cheap. Deference, courtesy titles, better public institutions, and lighter treatment from courts and police. No real money moves.
 
-Aisha (53:50)
+Aisha (54:01)
 The material wage is real money and property. Land grants, Social Security, and GI Bill home loans. The book says it shows up when resistance gets close to the breaking point.
 
-Aisha (54:00)
+Aisha (54:12)
 And the book gives the Buffer Class three jobs. The first is absorbing the collision. When the out-group pushes back, it runs into the Buffer Class, and the Elite stay out of the fight.
 
-Aisha (54:12)
+Aisha (54:24)
 The second is guarding the line. Reporting, voting for law and order, defending the arrangement.
 
-Aisha (54:18)
+Aisha (54:29)
 The third is subtle. Treating critics of the system as the threat. The book's image is a corrupted firewall that flags the antivirus as the virus.
 
-Aisha (54:27)
+Aisha (54:38)
 Emmanuel, level four. When the material wage does show up, who pays for it?
 
-Emmanuel Theodore (54:31)
+Emmanuel Theodore (54:43)
 That's the book's central invariant. The Elite's position never drops because of a concession. Whatever goes to the Buffer Class gets funded by deeper extraction from the racialized out-group.
 
-Emmanuel Theodore (54:43)
+Emmanuel Theodore (54:55)
 The New Deal shows the structure. Social Security first left out agricultural and domestic workers. The GI Bill ran through segregated local institutions. Federal housing lending came with redlining. The material wage went overwhelmingly to white workers.
 
-Emmanuel Theodore (55:00)
+Emmanuel Theodore (55:11)
 Precision matters here. The invariant covers how concessions get funded. Elite wealth itself can grow a great deal, and it does. What stays fixed is that the Elite never pays for peace out of its own share.
 
-Emmanuel Theodore (55:12)
+Emmanuel Theodore (55:24)
 The book adds psychology as an amplifier. Two measured traits, social dominance orientation and right-wing authoritarianism, make the status wage feel more valuable. The book treats both as cultivated. The system grows the appetite it pays.
 
-Toussaint (55:27)
+Toussaint (55:39)
 Level five.
 
-Aisha (55:28)
+Aisha (55:40)
 Here's the counter-case an economist would raise. Look at the top tenth of one percent. From the mid 1930s to the early 1970s, their share of wealth fell from about a quarter to under a tenth. That looks like the Elite paying.
 
-Emmanuel Theodore (55:44)
+Emmanuel Theodore (55:55)
 It's the strongest candidate, and the book meets it with three points. First, the threat was extraordinary. Militant labor, socialists winning votes, the Soviet alternative, anticolonial movements, and cross-racial organizing by the Communist Party.
 
-Emmanuel Theodore (55:59)
+Emmanuel Theodore (56:11)
 Second, the programs kept the racial line, as we just walked through. Third, the drop reversed. Once the threat faded after 1973, the top share climbed back to about twenty four percent by 2020. The 1929 peak was about twenty five.
 
-Aisha (56:16)
+Aisha (56:27)
 Then what would falsify the invariant?
 
-Emmanuel Theodore (56:18)
+Emmanuel Theodore (56:29)
 The book defines that. The top tenth of one percent's wealth share would have to fall and stay down for decades. There would be no interface swap. And it would still be down two or three decades after the threat is gone. The book finds no such case in the historical record.
 
-Aisha (56:35)
+Aisha (56:46)
 And that recovery after 1973 had cover.
 
-Emmanuel Theodore (56:38)
+Emmanuel Theodore (56:49)
 The swap from Jim Crow to the drug war supplied it. Race-neutral language covered the rebuild. That's where idea two and idea four meet.
 
-Toussaint (56:46)
+Toussaint (56:58)
 Time to pull that pin. Reverse racism, the half that needed the wage.
 
-Aisha (56:51)
+Aisha (57:02)
 We settled the words back in idea two. Prejudice is a scalar, racism is a vector. What was left is the direction, checked against who actually collects. Emmanuel, level four.
 
-Emmanuel Theodore (57:01)
+Emmanuel Theodore (57:13)
 The direction is fixed by who collects, and idea five just showed us who. The status wage and the material wage together are what the book calls the complex wage. That's the system's payoff.
 
-Emmanuel Theodore (57:13)
+Emmanuel Theodore (57:25)
 Follow that payoff through the record. Deference from courts and police. Land. GI Bill loans. Social Security. Neighborhoods lenders would finance. It flows to the white Buffer Class, funded by extraction from the racialized out-group. Across the whole book, that direction never reverses.
 
-Emmanuel Theodore (57:32)
+Emmanuel Theodore (57:43)
 That payoff also explains the confusion. People see white people collecting the wage and conclude the in-group line is the whole system. That's the coarse projection. Zoom in, and most white people get a thin slice, while the Elite collect the rest.
 
-Toussaint (57:47)
+Toussaint (57:59)
 Level five.
 
-Aisha (57:48)
+Aisha (58:00)
 Two specialist objections. First, this sounds true by definition. You defined racism so that Black people can't commit it.
 
-Emmanuel Theodore (57:56)
+Emmanuel Theodore (58:07)
 The definition is structural, and the book rates that equation tier three. The weight sits on what it connects to. Who received the material wage is documented. The New Deal exclusions are documented. The backlash data are tier one. The definition names a direction the record keeps showing.
 
-Emmanuel Theodore (58:14)
+Emmanuel Theodore (58:26)
 And it could fail. Picture a group whose prejudice has its own police, lawmaking, and capital behind it. If that force flowed steadily down onto white Americans, the claim would fail. The record shows no such case.
 
-Aisha (58:27)
+Aisha (58:39)
 Second objection. Black police officers, Black judges, Black executives. They hold institutional power.
 
-Emmanuel Theodore (58:34)
+Emmanuel Theodore (58:46)
 Here the book treats the tiers as positions. A person occupies the Enforcement Class for the length of an act. A Black officer enforcing the partition carries the vector during that act, and it still points at the racialized out-group.
 
-Aisha (58:49)
+Aisha (59:00)
 So that's a real way Black people can be racist.
 
-Emmanuel Theodore (58:51)
+Emmanuel Theodore (59:03)
 Yes. Scholars call it internalized racism. A Black person absorbs the system's beliefs about Black people and acts on them, against other Black people or against themselves. Colorism is a separate, narrower pattern, ranking people inside the out-group by skin shade. In both, the harm lands on Black people, and the payoff flows up to the same Elite. The direction of the vector stays the same.
 
-Aisha (59:17)
+Aisha (59:28)
 And the same logic runs on other axes.
 
-Emmanuel Theodore (59:19)
+Emmanuel Theodore (59:31)
 It runs on gender. Misogyny and misandry are both prejudices, and anyone can hold either one. Patriarchy is the system. The book calls it prerequisite software for extraction.
 
-Emmanuel Theodore (59:30)
+Emmanuel Theodore (59:42)
 Women can carry internalized misogyny, and it can sound exactly like a man's misogyny. Its payoff still flows to the same structure, and women don't collect from patriarchy the way men do.
 
-Emmanuel Theodore (59:42)
+Emmanuel Theodore (59:53)
 Misandry is real too. It's a prejudice with no patriarchy behind it, carrying it downward. So the argument over which one is worse sets a prejudice against a system. People blur misogyny, misandry, and patriarchy the same way they blur anti-white prejudice, anti-Black prejudice, and racism.
 
-Toussaint (60:00)
+Toussaint (60:12)
 High school recap. Anyone can be prejudiced. Racism and patriarchy are systems with a direction. People in a targeted group can carry the system's sorting against their own group. Nobody at the bottom can flip the direction.
 
-Toussaint (60:14)
+Toussaint (60:26)
 So where does that leave us?
 
-Aisha (60:15)
+Aisha (60:27)
 With the book's diagnosis. You can't patch a kernel-level infection with user-level tools.
 
-Emmanuel Theodore (60:21)
+Emmanuel Theodore (60:32)
 Malcolm X said it more directly. The white man will try to satisfy us with symbolic victories rather than economic equity and real justice.
 
-Emmanuel Theodore (60:29)
+Emmanuel Theodore (60:40)
 Diversity trainings, representation campaigns, equity statements. In the model, those are programs running on a compromised system. They can change the wallpaper. The extraction code underneath keeps running. The book's conclusion is that the source code itself has to be rewritten.
 
-Toussaint (60:47)
+Toussaint (60:59)
 One question hangs over all of this. Is it a conspiracy? Let's start at level one, because everyone asks.
 
-Toussaint (60:53)
+Toussaint (61:05)
 Think of a family recipe. Somebody wrote it down once, on purpose. Then people cook it for generations without reading the card. And when a dish starts to burn, someone steps in and saves it.
 
-Aisha (61:05)
+Aisha (61:16)
 The book names those three modes. Intentional design is writing the recipe. Zurara's chronicle, the 1705 Virginia codes, the Three-Fifths Compromise. Named people, documented decisions.
 
-Aisha (61:17)
+Aisha (61:29)
 Autonomous propagation is cooking it without reading. Picture a real estate agent in 1960 steering Black families away from white neighborhoods. He may feel no personal animus. He's following lending rules and price signals built to produce exactly that.
 
-Aisha (61:34)
+Aisha (61:45)
 Conscious intervention is saving the dish. Atwater describing the move to coded language is one example. The book cites the Ehrlichman account here too, and that account is disputed.
 
-Emmanuel Theodore (61:45)
+Emmanuel Theodore (61:57)
 The three modes answer both common objections. If you hear a secret cabal, most of the system runs on incentives with no central command. If you hear that nobody chose this, the design and the repairs have names attached.
 
-Toussaint (61:58)
+Toussaint (62:10)
 The whole episode, at high school level. Five ideas.
 
-Aisha (62:02)
+Aisha (62:13)
 One. Us and them is real and low resolution. Sharpen it and you get five roles: Elite, Puppet, Enforcement, Buffer, and the out-group underneath all four.
 
-Aisha (62:11)
+Aisha (62:23)
 Two. The system came first. Prejudice grew from it, and now it helps maintain the system.
 
-Toussaint (62:17)
+Toussaint (62:28)
 Three. When a disguise gets caught, the system switches to a cheaper one.
 
-Aisha (62:20)
+Aisha (62:32)
 Four. Every big reform gets a backlash that overshoots, and each wave dies out faster. A sustained, coordinated push is what changes that.
 
-Toussaint (62:29)
+Toussaint (62:40)
 Five. The Buffer Class gets paid mostly in status to guard a line that holds them down too. When real money moves, the racialized out-group pays for it.
 
-Aisha (62:37)
+Aisha (62:49)
 And the reverse racism argument comes apart once you separate prejudice from the system.
 
-Emmanuel Theodore (62:43)
+Emmanuel Theodore (62:54)
 And the whole thing runs on deliberate design, everyday habit, and the occasional deliberate repair.
 
-Toussaint (62:49)
+Toussaint (63:01)
 Last thing, and it is a question about the format we just ran. Five ideas, five levels each. Was there a point where the level-one version threatened to come out wrong instead of simple?
 
-Emmanuel Theodore (63:00)
+Emmanuel Theodore (63:11)
 A few times, and it is the right thing to worry about. The swing is the one I checked hardest. A level-one version that drops the part where the swing comes back worse would teach the opposite lesson from the one the chapter makes.
 
-Emmanuel Theodore (63:14)
+Emmanuel Theodore (63:25)
 So here is the test I used throughout. Does the simple version make a false prediction that the complicated version then has to correct. If it does, the simple version is wrong. If it does not, it is missing prerequisites, and prerequisites are what the next four levels are for.
 
-Toussaint (63:31)
+Toussaint (63:43)
 So level one and level five are making the same bet. One of them shows its work.
 
-Emmanuel Theodore (63:36)
-That is it exactly, and it is the reason this chapter opens the show. It is the one place in the book where the claim survives being said in one sentence to a child, and still has a hundred pages of proof waiting underneath it for anyone who wants to go check.
+Emmanuel Theodore (63:47)
+That is it exactly, and it is the reason this chapter follows the architecture hour. It is the one place in the book where the claim survives being said in one sentence to a child, and still has a hundred pages of proof waiting underneath it for anyone who wants to go check.
 
-Toussaint (63:51)
+Toussaint (64:03)
 Next time, the book goes back to where it says the code was first written. Portugal, in the 1400s.
 
-Aisha (63:57)
+Aisha (64:09)
 This has been Architecting the Operation, on Redefining Racism, from The Original Power.
 
-Emmanuel Theodore (64:03)
+Emmanuel Theodore (64:14)
 I am Emmanuel Theodore, and this is the Open Source Republic. Stay curious, stay skeptical, and go check my work.

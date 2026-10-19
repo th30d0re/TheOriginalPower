@@ -297,3 +297,23 @@ speaks a specific quantitative claim about a named victim on the strength of an
 uncited manuscript sentence. Rule 3 says removal is safe and addition is not.
 Deciding this needs artifact contact with Hall or Burnard, or the figure comes
 out of both the manuscript and the audio.
+
+## Fourth pass: put the note on the violence (2026-09-18)
+
+The 10:08 rewrite named rape, but the content note still sat fifty seconds
+upstream of it — on the fractal intro, the IMF, and redlining. In Ableton that
+read as the old withholding clip (`12b54a024cd23297`): a warning, then no
+violence. The user called that censorship.
+
+Moved the note to sit immediately before the 1662 turn and closed it before the
+identity zoom, so a skip no longer drops the rest of the tour. The note now
+states what follows: the rape of enslaved women used to grow the capital stock,
+and sexual terror against men used to break resistance. The 1662 turn now carries
+the statute's name (*partus sequitur ventrem*) and the men's clause from §2429
+and the original draft, without the uncited term "bucking." Thistlewood is
+unchanged. Four turns re-synthesized; verify median 0.999, nothing flagged.
+Timeline 64:21.
+
+Ableton Live was open on the previous set during the rewrite. The on-disk ALS is
+new; a save from the running session would overwrite it. Close without saving,
+then reopen `outputs/ATO_EP03_five_levels/ATO_EP03_five_levels.als`.

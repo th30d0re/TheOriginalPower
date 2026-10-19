@@ -149,7 +149,7 @@ portrait).
 
 ## G-02 — What a yes/no vote actually does
 
-- **Anchor:** `Emmanuel Theodore (01:25)`
+- **Anchor:** `Emmanuel Theodore (01:20)`
 - **Hold:** through 01:37
 - **Type:** title card, headline + three impact beats + citation footer (v3)
 - **Content:** Headline: "A YES vote keeps Chapter 135 — including the expanded
@@ -172,7 +172,7 @@ portrait).
 
 ## G-03 — The question that wasn't asked
 
-- **Anchor:** `Emmanuel Theodore (02:03)`
+- **Anchor:** `Emmanuel Theodore (01:54)`
 - **Hold:** through 02:07
 - **Type:** build, contrast
 - **Content:** Left: "What should schools/communities/mental health do?" (asked).
@@ -399,7 +399,7 @@ portrait).
 
 ## G-22 — The roadmap
 
-- **Anchor:** `Emmanuel Theodore (03:03)`
+- **Anchor:** `Emmanuel Theodore (03:02)`
 - **Type:** title card, six numbered items
 - **Content:** "What the reel skipped": what drives violence; what works; the emergency preamble; the grandfather clause; who this law locks out; the feature ban.
 - **Note:** `[design]` orientation card for the spoken roadmap line; states no facts, so no citation card. Each later card carries its own source and QR.

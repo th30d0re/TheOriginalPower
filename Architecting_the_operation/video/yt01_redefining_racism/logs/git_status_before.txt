@@ -1,0 +1,83 @@
+ M .claude/launch.json
+ M .claude/settings.json
+ M .gitignore
+ M Architecting_the_operation/README.md
+ M Architecting_the_operation/notes/EP03_version_audit.md
+ M Architecting_the_operation/podcasts/ATO_EP03_redefining_racism_five_levels.md
+ M Architecting_the_operation/podcasts/ATO_EP04_what_power_is.md
+ M Architecting_the_operation/podcasts/ATO_EP05_version_one.md
+ M Architecting_the_operation/scriptcast/speaker_rates.json
+ M Architecting_the_operation/video/chapter135_rebuttal_shotlist.md
+ M Architecting_the_operation/video/citefix.py
+ M ModernMisandry/pseudo_hybrid_asymmetric_monogamy_analysis/Pseudo_Hybrid_Asymmetric_Monogamy.tex
+ M "ModernMisandry/the gender wars/social media research/reel_DU2D54MAaH_.md"
+ M "ModernMisandry/the gender wars/social media research/reel_DWeMUp1iL7d.md"
+ M Paper/The_Original_Power.pdf
+ M Paper/The_Original_Power.tex
+ M Paper/chapter135_rebuttal_video/SOURCE_CHECK_3.md
+ M website/src/content/chapters/apxE_geometric_algebra.ts
+?? .claude/agents/
+?? .claude/rules/
+?? .opencode/
+?? .venv-omnivoice/
+?? .vscode/mcp.json
+?? .zed/
+?? Architecting_the_operation/scriptcast/accepted_hearings.yaml
+?? Architecting_the_operation/scriptcast/review_log.jsonl
+?? Architecting_the_operation/video/avatar_rig/
+?? Architecting_the_operation/video/images/
+?? Architecting_the_operation/video/manim/
+?? Architecting_the_operation/video/reel_reciprocity/qr/
+?? Architecting_the_operation/video/work/notebooklm_video_overview.mp4
+?? Architecting_the_operation/video/work/notebooklm_video_overview.transcript.txt
+?? Architecting_the_operation/video/yt01_redefining_racism/
+?? Paper/The_Original_Power.lot
+?? Paper/chapter135_rebuttal_video/SOURCE_CHECK_2A.md
+?? Paper/chapter135_rebuttal_video/SOURCE_CHECK_2B.md
+?? Paper/data/gun_laws_new_england/sources/
+?? Paper/data/spatial/boston/DATA_LOG.md
+?? Paper/data/spatial/boston/RESULTS.md
+?? Paper/data/spatial/boston/acs_2024_5yr_25025.csv
+?? Paper/data/spatial/boston/censusreporter_acs_25025.json
+?? Paper/data/spatial/boston/cir_2015.csv
+?? Paper/data/spatial/boston/cir_2016.csv
+?? Paper/data/spatial/boston/cir_2017.csv
+?? Paper/data/spatial/boston/cir_2018.csv
+?? Paper/data/spatial/boston/cir_2019.csv
+?? Paper/data/spatial/boston/cir_2020.csv
+?? Paper/data/spatial/boston/cir_2021.csv
+?? Paper/data/spatial/boston/cir_2022.csv
+?? Paper/data/spatial/boston/cir_2023_to_present.csv
+?? Paper/data/spatial/boston/fetch_manifest.json
+?? Paper/data/spatial/boston/holc_boston_1938.geojson
+?? Paper/data/spatial/boston/shootings_clean.csv
+?? Paper/data/spatial/boston/shootings_per_year_coverage.csv
+?? Paper/data/spatial/boston/shootings_raw.csv
+?? Paper/data/spatial/boston/shootings_victimizations_no_coordinates.csv
+?? Paper/data/spatial/boston/tiger_25/
+?? Paper/data/spatial/boston/tiger_tracts_25025.parquet
+?? Paper/data/spatial/boston/tl_2020_25_tract.zip
+?? Paper/scripts/boston_holc_shootings.py
+?? Paper/scripts/boston_holc_shootings_analysis.py
+?? Sources/4_Exploring_Bias_and_Fairness_.pdf
+?? Sources/gap-ch2-control-case-genetics.md
+?? Sources/gap-ch2-independent-review.md
+?? Sources/gap-ch2-small-items.md
+?? Sources/gap-ch2-wetware-ingroup.md
+?? Sources/gap-ch3-cluster-b-redo.md
+?? Sources/gap-ch3-cluster-c-taxonomy.md
+?? Sources/interseconality_and_gender_equality.md
+?? _jobs/
+?? animations/
+?? counter_signal/SCRIPTS-REPORT.md
+?? debate/live/
+?? formal/.github/
+?? formal/.gitignore
+?? opencode.json
+?? outreach/
+?? rosenberg.pdf
+?? tab_test.pdf
+?? tools/manimgx/
+?? training/benchmarks/12axes/
+?? videolab/docs/ANALYSIS-REPORT.md
+?? videolab/jobs-whisper-backup-2026-10-01/

@@ -1,0 +1,16 @@
+{
+  "kind": "stat_bars",
+  "headline": "The extraction base expands",
+  "items": [
+    {
+      "title": "1840 enslaved population",
+      "detail": "2,487,455"
+    },
+    {
+      "title": "1860 enslaved population",
+      "detail": "3,953,761"
+    }
+  ],
+  "sources": "Source: U.S. Census Bureau, 1840–1860 decennial Census schedules",
+  "qrUrl": "https://www.census.gov/library/publications/1864/dec/1860a.html"
+}

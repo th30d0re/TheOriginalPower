@@ -1,0 +1,5 @@
+Saved all six in [avatar_rig/parts/mouths](/Users/emmanuel/Documents/Theory/TheOriginalPower/Architecting_the_operation/video/avatar_rig/parts/mouths): `m.png`, `ee.png`, `ah.png`, `oh.png`, `fv.png`, `blink.png`.
+
+Used six separate built-in image_gen calls with your expression instructions and preservation constraints. All files are 1254×1254 RGBA PNGs with transparency.
+
+No commits or prompt-file edits. Session log staged in `/tmp/avatar-expression-session` because the vault is outside writable access.

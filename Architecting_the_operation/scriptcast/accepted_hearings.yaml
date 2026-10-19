@@ -1,0 +1,10 @@
+# Accepted hearings: treat these Whisper hearings as matching the script word.
+# Comments under each word cite the review timestamp that added the hearing.
+
+bonded:
+  # review 2026-10-05T01:33:56Z
+  - about
+
+trauma:
+  # review 2026-10-05T01:33:56Z
+  - traumatizing

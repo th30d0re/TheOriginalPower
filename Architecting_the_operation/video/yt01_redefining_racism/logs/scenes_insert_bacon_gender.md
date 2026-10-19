@@ -41,6 +41,20 @@ Sheets: `/tmp/S19-05a.png`, `/tmp/S03-31.png`, `/tmp/S17-52.png` (8 tiles each; 
 
 All `self.at(...)` targets resolve under `edit16x9.py check`. No edits outside owned manim files.
 
+---
+
+## Round 4 — S03-31 rebuild (2026-10-16)
+
+**`recursive_partition16x9.py` rewritten** for reviewer sheet pass: full-width class `X` (8.6 u, ~60% frame), Eq. 2.4 (`eq:recursive-local-partition`) verbatim at top, gold split between `X^{+}_{\alpha}` / `X^{-}_{\alpha}`, axis readout `axis α = …` on the lower right (never stacked on `X`), per-shot beats (separate/reassemble with `\dot\cup` marker, eight-axis cycle, person swap, working-class white citizen race→capital/credentialing/criminalization, **S03-35a** white woman + `O_{\text{gendered}}`, credentialed `O_{\text{racialized}}` local advantage in minus cell, flattening lines “I is not uniformly powerful” / “O is not homogeneous” with internal partition marks).
+
+```
+.venv-manimgx/bin/python Architecting_the_operation/video/yt01_redefining_racism/manim/edit16x9.py render 03 --only S03-31 -j 1 --force
+→ ok · layout: no problems in 59 samples
+
+.venv-manimgx/bin/python .../edit16x9.py sheet 03 --only S03-31 -o /tmp/S03-31.png
+→ 8 tiles (S03-31 … S03-37 incl. S03-35a)
+```
+
 ## S19-05a layout pass (2026-10-16, reviewer sheet)
 
 **Owned file:** `manim/partition_redraw16x9.py` only.

@@ -1,0 +1,10 @@
+Saved four separate built-in image_gen outputs in `avatar_rig/parts/`:
+
+- `head.png`
+- `coat.png`
+- `turtleneck.png`
+- `chains.png`
+
+All are 1254 × 1254 RGBA PNGs with verified transparency. Prompts specified individual extraction, reference perspective, painted detail, and lighting.
+
+No commits or prompt-file edits were made.

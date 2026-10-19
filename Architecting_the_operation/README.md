@@ -19,14 +19,16 @@ notes/      Emmanuel's reading notes, raw input
 
 Public Episode 1 is the architecture hour (`podcasts/ATO_EP04_what_power_is.md`):
 a straight before/after argument on what power is, drawn from the title note and
-the Preface. The listener's current picture (attitudes, two teams, a visible
-office, a signature that ends a wrong) is taken seriously, broken against the
-record, and replaced with the extraction circuit and its three questions. The
-five-level racism script (`podcasts/ATO_EP03_redefining_racism_five_levels.md`)
-is public Episode 2, and the five-level device starts there; Episode 1 does not
-use it. Episode 3 as a production file still holds Chapter 2; the
-public numbering puts the architecture hour first so a new listener gets the
-machine before the word. The Preface and Chapter 0 run notation- and logic-heavy
+the Preface. It opens on the coarse in-group/out-group binary as a low-resolution
+photograph — four camps fighting inside a gendered two-box frame — then installs
+the taller machine: five jobs, Elite Obscuration and the Square Ceiling, causal
+order, costume replacement, and three checkable questions. The takeaway is where
+anger lands. Aim it at a category and the category absorbs it; aim it at a
+structure and the structure can be located. The five-level racism script
+(`podcasts/ATO_EP03_redefining_racism_five_levels.md`) is public Episode 2, and
+the five-level device starts there; Episode 1 does not use it. Episode 3 as a
+production file still holds Chapter 2; the public numbering puts the architecture
+hour first so a new listener gets the machine before the word. The Preface and Chapter 0 run notation- and logic-heavy
 and reward readers already sold on the framework's math. Chapter 2 states a claim
 a stranger already has an opinion about, which is why it follows the architecture
 hour.
@@ -74,10 +76,11 @@ written against the second one.
 
 Decided by Emmanuel on 2026-09-16, after the research brief in
 `research/podcast_craft/BRIEF.md`. They apply to every script drafted from here on.
-Episodes 1 to 3 predate them. The 2026-09-30 rebuild of the architecture hour
+Episodes 1 to 3 predate them. The 2026-10-01 rebuild of the architecture hour
 (`ATO_EP04_what_power_is.md`, public Episode 1) is a deliberate exception: a
-before/after discovery conversation with no levels, per the retention findings in
-the Podcast Craft research. The level device starts at public Episode 2.
+before/after discovery conversation with no levels, hooked on the coarse
+in-group/out-group binary, per the retention findings in the Podcast Craft
+research. The level device starts at public Episode 2.
 
 **One chapter per episode.** Episodes stay bound to a book chapter at whatever length
 the chapter needs. Splitting a long chapter into parts stays available later, and
