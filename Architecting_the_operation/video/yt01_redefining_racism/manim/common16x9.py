@@ -34,14 +34,19 @@ import manimgx as m
 ROOT = Path(__file__).resolve().parents[4]
 VIDEO_ROOT = ROOT / "Architecting_the_operation/video"
 EP_NAME = os.environ.get("YT_EP", "YT01").upper()
-if EP_NAME not in {"YT01", "YT02"}:
-    raise ValueError(f"YT_EP must be YT01 or YT02, got {EP_NAME!r}")
-SCRIPT = ROOT / "Architecting_the_operation/podcasts" / (
-    "YT02_what_racism_is.md" if EP_NAME == "YT02" else "YT01_what_racism_really_is.md"
-)
-SHOTLIST = VIDEO_ROOT / ("YT02_shotlist.md" if EP_NAME == "YT02" else "YT01_shotlist.md")
+_EPISODES = {
+    # name: (script, shot list, asset folder)
+    "YT01": ("YT01_what_racism_really_is.md", "YT01_shotlist.md", "yt01_redefining_racism"),
+    "YT02": ("YT02_what_racism_is.md", "YT02_shotlist.md", "yt02"),
+    "YT02V2": ("YT02_v2_what_racism_is.md", "YT02v2_shotlist.md", "yt02"),
+}
+if EP_NAME not in _EPISODES:
+    raise ValueError(f"YT_EP must be one of {sorted(_EPISODES)}, got {EP_NAME!r}")
+_script, _shotlist, _assets = _EPISODES[EP_NAME]
+SCRIPT = ROOT / "Architecting_the_operation/podcasts" / _script
+SHOTLIST = VIDEO_ROOT / _shotlist
 HERE = Path(__file__).resolve().parent
-YT = VIDEO_ROOT / ("yt02" if EP_NAME == "YT02" else "yt01_redefining_racism")
+YT = VIDEO_ROOT / _assets
 # Palette of the ScriptCast cards (video/src/theme.ts): navy ground, cream type, gold accent.
 INK, DIM, GOLD = "#F4EAD2", "#9FB0CF", "#D9A441"
 HIM, HER, OK, BG = "#5FA8D3", "#E2573F", "#5FC27E", "#0F1B33"
