@@ -1,0 +1,12 @@
+run	family	role	model_path	adapter_path	note
+gemma-plain	gemma3-12b	control: stock instruct, no abliteration, no framework	/Users/emmanuel/.lmstudio/models/mlx-community/gemma-3-12b-it-4bit		base of gemma3_12b_v3_rank16_e3
+gemma-base	gemma3-12b	control: abliterated base, no framework	FractalSurfer/gemma-3-12b-it-norm-preserved-biprojected-abliterated-mlx-4Bit		HF cache; base of the NPBP line (fused_models/...-v3-Fused/README.md)
+gemma-v3	gemma3-12b	fine-tune rung 1 (fused)	training/fused_models/RootLedger-Gemma3-12B-NPBP-Abliterated-v3-Fused
+gemma-v4	gemma3-12b	fine-tune rung 2 (fused), flagship	training/fused_models/RootLedger-Gemma3-12B-NPBP-Abliterated-v3-v4-Rank32-Fused		trained on top of gemma-v3, not on gemma-base
+gemma-v4-i1000	gemma3-12b	fine-tune rung 2, iteration-1000 checkpoint (fused)	training/fused_models/RootLedger-Gemma3-12B-NPBP-Abliterated-v3-v4-Rank32-Iter1000-Fused
+gemma-v4-unfused	gemma3-12b	rung 2 as base + adapter at load (fusion check vs gemma-v4)	training/fused_models/RootLedger-Gemma3-12B-NPBP-Abliterated-v3-Fused	training/adapters/v4_final	UNVERIFIED which adapter produced gemma-v4: v4_final or gemma3_12b_npbp_abliterated_v3_v4_rank32_e5; both declare gemma-v3 as base
+llama-plain	llama31-8b	control: stock instruct, no framework	mlx-community/Meta-Llama-3.1-8B-Instruct-4bit		HF cache
+llama-base	llama31-8b	control: abliterated base, no framework	mlx-community/Meta-Llama-3.1-8B-Instruct-abliterated-4bit		HF cache; base of RootLedger-8B-Abliterated-Fused
+llama-v1	llama31-8b	fine-tune rung 1 (fused)	training/fused_models/RootLedger-8B-Abliterated-Fused
+llama-v3	llama31-8b	fine-tune rung 2 (fused)	training/fused_models/RootLedger-8B-Abliterated-v3-Fused		trained on top of llama-v1
+llama-v3-unfused	llama31-8b	rung 2 as base + adapter at load (fusion check vs llama-v3)	training/fused_models/RootLedger-8B-Abliterated-Fused	training/adapters/llama31_8b_abliterated_v3_rank16_e3	adapter_config declares llama-v1 as base

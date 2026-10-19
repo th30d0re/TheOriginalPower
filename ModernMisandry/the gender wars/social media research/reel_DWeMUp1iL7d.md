@@ -33,7 +33,7 @@ Women created the manosphere too, but not in the way that you think. When a grou
 
 - Empirical claims: mainstream gender discourse treats young men primarily as perpetrators or advantaged; the manosphere fills an unmet emotional/social vacuum for young men; gender conflict distracts from economic structures that benefit from division.
 - Status: directionally plausible but broad. The claims need support from data on male loneliness, young men's trust in institutions, manosphere audience behavior, and platform monetization before being treated as empirical conclusions.
-- Theoretical relevance: very strong fit with the paper's Redefining Racism layer. The reel explicitly frames the gender war as destructive interference that keeps people looking sideways instead of upward.
+- Theoretical relevance: very strong fit with the paper's The Original Power layer. The reel explicitly frames the gender war as destructive interference that keeps people looking sideways instead of upward.
 
 ### Sentiment / Tone
 

@@ -33,7 +33,7 @@ If you're a man who hates women or if you're a woman who hates man, congratulati
 
 - Empirical claims: gender hate is encouraged by powerful actors as a divide-and-manipulate strategy; social media companies profit from male loneliness, red-pill/rage-bait engagement, hustle culture, female insecurity, beauty consumption, and gendered rage.
 - Status: directionally plausible as a platform-incentive argument, but not quantified in the reel. The claims would need sources on engagement-based ranking, loneliness/digital consumption, beauty-market advertising, manosphere monetization, and algorithmic amplification before formal empirical use.
-- Theoretical relevance: very strong fit with the paper's Redefining Racism layer. The clip explicitly identifies the gender war as scapegoating that routes male and female grievance into monetizable platform behavior.
+- Theoretical relevance: very strong fit with the paper's The Original Power layer. The clip explicitly identifies the gender war as scapegoating that routes male and female grievance into monetizable platform behavior.
 
 ### Sentiment / Tone
 
@@ -55,7 +55,7 @@ If you're a man who hates women or if you're a woman who hates man, congratulati
 
 ### Anticipated Author Response
 
-- Your response can treat this as one of the clearest runtime confirmations of Redefining Racism on the gender axis: male rage is monetized, female rage is commodified, and the system captures the spend while the sexes blame each other.
+- Your response can treat this as one of the clearest runtime confirmations of The Original Power on the gender axis: male rage is monetized, female rage is commodified, and the system captures the spend while the sexes blame each other.
 
 ### Manual Revision Notes
 

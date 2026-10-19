@@ -1,0 +1,241 @@
+id	answer	compound	basis	cite	rationale
+estrutura_01	D	1	inferred	The_Original_Power.tex:14590	Federal civil-rights enforcement rules out a general local veto; local disagreement alone cannot settle legitimacy.
+estrutura_02	A	0	inferred	The_Original_Power.tex:14756	Complete autonomy across jurisdictions supports uniform rights guarantees; extending uniformity to every law exceeds the stated design.
+estrutura_03	N	1	silent		The manuscript gives no general proximity rule for taxation or service administration.
+estrutura_04	N	0	silent		Universal public education is specified; curriculum uniformity is unaddressed.
+estrutura_05	N	1	silent		The manuscript specifies universal rights and kinetic parity without prescribing separate state constitutions, ordinary laws, or police administration.
+estrutura_06	N	0	silent		The manuscript gives no national-versus-state ordinary-police performance comparison; its explicit prohibition concerns militarized standing police.
+estrutura_07	N	0	silent		The manuscript supplies no territorial revenue-retention formula.
+estrutura_08	D	1	inferred	The_Original_Power.tex:14671;The_Original_Power.tex:14586	Public education is supported, but strong national security command conflicts with decentralized kinetic parity; service command structures remain unspecified.
+estrutura_09	N	0	silent		The manuscript gives no majority-vote secession rule.
+estrutura_10	N	1	silent		The manuscript gives no tax-competition or national rate-setting prescription.
+estrutura_11	A	1	inferred	The_Original_Power.tex:3968;The_Original_Power.tex:3972	Critique of colonial suppression supports indigenous legal autonomy, subject to the republic's universal rights.
+estrutura_12	A	1	inferred	The_Original_Power.tex:14590;The_Original_Power.tex:11605	Universal enforcement and criticism of locally administered exclusions support a common labor-rights floor; all local negotiation is too broad.
+estrutura_13	N	0	inferred	The_Original_Power.tex:14590;The_Original_Power.tex:14756	Municipal divergence is conditional: universal rights must remain intact, while ordinary local legislative competencies are unspecified.
+estrutura_14	D	0	inferred	The_Original_Power.tex:14573;The_Original_Power.tex:14658	Constitutional guarantees and universal accountability govern conflicts; presidential office supplies no automatic supremacy.
+estrutura_15	D	0	inferred	The_Original_Power.tex:14590;The_Original_Power.tex:14756	Sustained federal rights enforcement and complete autonomy weigh against near-independent jurisdictions.
+estrutura_16	A	1	inferred	The_Original_Power.tex:14590	Federal override is supported for rights violations; the broader national-interest criterion requires qualification.
+estrutura_17	N	0	silent		The manuscript supplies no cultural-identity threshold for regional political autonomy.
+estrutura_18	D	0	inferred	The_Original_Power.tex:3447;The_Original_Power.tex:14573	Preserved speech and assembly guarantees weigh against criminalizing separatist advocacy as such.
+estrutura_19	N	1	silent		The manuscript does not rank local and national healthcare or education administration.
+estrutura_20	D	1	inferred	The_Original_Power.tex:14573;The_Original_Power.tex:14658	Universal rights and official accountability require judgment beyond carrying out central orders.
+representacao_01	SA	0	inferred	The_Original_Power.tex:14588;The_Original_Power.tex:14664	Universal suffrage and public electoral finance imply preserving elections despite undesirable outcomes.
+representacao_02	SD	0	inferred	The_Original_Power.tex:14573;The_Original_Power.tex:14649	The constitutional kernel and constrained legislative process rule against unilateral crisis government.
+representacao_03	SA	1	inferred	The_Original_Power.tex:3447;The_Original_Power.tex:14573	Retaining First Amendment guarantees entails protecting press, opposition, and protest criticism.
+representacao_04	N	0	silent		Manipulated political choices do not establish that most voters lack issue understanding.
+representacao_05	SA	0	inferred	The_Original_Power.tex:11361;The_Original_Power.tex:14573	The stated judicial-review duty and retained constitutional kernel support invalidating unconstitutional laws despite majority approval.
+representacao_06	D	0	inferred	The_Original_Power.tex:14588;The_Original_Power.tex:14664	The republic's electoral architecture weighs against substituting competent personal leadership for contested representation.
+representacao_07	SA	1	inferred	The_Original_Power.tex:14588	Universal suffrage controls the forced answer; the secret-ballot component is unaddressed.
+representacao_08	D	0	inferred	The_Original_Power.tex:14588;The_Original_Power.tex:14664	Publicly accountable representation weighs against a personal entitlement to indefinite rule; term limits are unspecified.
+representacao_09	A	0	inferred	The_Original_Power.tex:12046	The critique of executive obstruction of a referendum supports citizens' repeal power; detailed institutional design remains unspecified.
+representacao_10	N	0	silent		The manuscript gives no comparative monarchy-versus-election stability judgment.
+representacao_11	A	0	inferred	The_Original_Power.tex:14657;The_Original_Power.tex:14658	Enforceable official accountability supports removal for serious wrongdoing; a voter-recall mechanism is unaddressed.
+representacao_12	N	0	silent		The manuscript supplies no direct comparison supporting this dictatorship-democracy growth claim.
+representacao_13	N	1	inferred	The_Original_Power.tex:14588;The_Original_Power.tex:14664	The republic retains elections, while supplementary sortition and the scope of replacing elected offices remain unspecified.
+representacao_14	D	0	inferred	The_Original_Power.tex:14664	The stated design aligns representatives with the population through public elections; expert selection is unaddressed.
+representacao_15	A	0	inferred	The_Original_Power.tex:14588;The_Original_Power.tex:14664	Universal suffrage supports popular authorization; extending election requirements to every governing office exceeds the specification.
+representacao_16	SD	0	book	The_Original_Power.tex:14588	Universal suffrage is an explicit plank of the Open-Source Republic.
+representacao_17	N	1	silent		The manuscript gives no assessment of a wholly assembly-governed society.
+representacao_18	D	1	inferred	The_Original_Power.tex:14588;The_Original_Power.tex:14664	Preserving the republic's electoral accountability outweighs insulating reformers from elections; reform duration is unaddressed.
+representacao_19	SA	0	inferred	The_Original_Power.tex:14575;The_Original_Power.tex:14658	Universally inherent rights and enforcement against every state actor extend to political opponents.
+representacao_20	SD	1	inferred	The_Original_Power.tex:14575;The_Original_Power.tex:14588	Universal rights and suffrage exclude legitimizing dictatorship solely through favorable outputs.
+poder_01	SD	1	inferred	The_Original_Power.tex:14671;The_Original_Power.tex:3453;The_Original_Power.tex:14573	The police anti-monopoly rule and retained search protections oppose indiscriminate coercive operations and blanket warrants.
+poder_02	A	1	inferred	The_Original_Power.tex:7994;The_Original_Power.tex:11254	Racialized criminalization and substance-invariant prohibition support legalization; production and retail rules are unspecified.
+poder_03	D	1	inferred	The_Original_Power.tex:3453;The_Original_Power.tex:14573;The_Original_Power.tex:14672	Retained search protections and public auditability weigh against a broad state monitoring entitlement.
+poder_04	A	1	inferred	The_Original_Power.tex:3447;The_Original_Power.tex:14573	Retaining speech guarantees supports protection of offensive expression; extreme cases require rights-based limits.
+poder_05	D	1	inferred	The_Original_Power.tex:14672;The_Original_Power.tex:3453	Surveillance accountability and search safeguards weigh against unqualified expansion; crime-reduction efficacy is unaddressed.
+poder_06	A	1	inferred	The_Original_Power.tex:11254;The_Original_Power.tex:3972	Anti-prohibition and autonomy arguments favor limiting consensual-conduct policing; gambling and sexual-commerce policy remain unaddressed.
+poder_07	SD	1	inferred	The_Original_Power.tex:3447;The_Original_Power.tex:14573	Speech and assembly guarantees weigh against banning political organizations under a broad public-order label.
+poder_08	A	0	inferred	The_Original_Power.tex:11254	The substance-invariant prohibition critique supports adult legalization; the manuscript supplies no complete all-drug regulatory scheme.
+poder_09	SD	0	book	The_Original_Power.tex:14671	Kinetic parity must be decentralized to the populace.
+poder_10	SA	1	book	The_Original_Power.tex:4085;The_Original_Power.tex:4087	The framework explicitly supports armed deterrence and equalizing domestic kinetic capacity.
+poder_11	D	1	inferred	The_Original_Power.tex:14573;The_Original_Power.tex:14671	Constitutional autonomy and decentralized force weigh against broad emergency coercion; narrowly bounded emergencies are unspecified.
+poder_12	N	0	silent		Voluntary euthanasia policy is unaddressed.
+poder_13	N	0	silent		Vaccination mandates are unaddressed.
+poder_14	A	0	inferred	The_Original_Power.tex:3455;The_Original_Power.tex:14573	Retained evidentiary and trial safeguards imply priority for preventing wrongful conviction; the precise tradeoff is unstated.
+poder_15	D	1	inferred	The_Original_Power.tex:4626	The analysis of capital punishment as asymmetric enforcement weighs against expansion; a categorical abolition rule is unstated.
+poder_16	D	0	inferred	The_Original_Power.tex:4450	The critique of marital-rape immunity requires protection from private coercion; the item's universal exemption is overbroad.
+poder_17	D	1	inferred	The_Original_Power.tex:3447;The_Original_Power.tex:14573;The_Original_Power.tex:14682	Retained speech guarantees and public decryption of manipulation favor scrutiny over a broad state takedown power.
+poder_18	A	1	inferred	The_Original_Power.tex:9578	The purchase-history surveillance example supports the monitoring risk; instant-payment systems themselves are unaddressed.
+poder_19	SD	0	inferred	The_Original_Power.tex:3455;The_Original_Power.tex:14573	Retaining trial and due-process protections rules against indefinite detention based on suspicion.
+poder_20	A	0	inferred	The_Original_Power.tex:3453;The_Original_Power.tex:3455;The_Original_Power.tex:14573	Search and procedural protections support resistance to compelled access; phone-unlocking exceptions are unaddressed.
+imigracao_01	D	1	inferred	The_Original_Power.tex:3954;The_Original_Power.tex:4020	Criticism of forced cultural overwrite weighs against compulsory assimilation; language learning alone is unaddressed.
+imigracao_02	A	0	inferred	The_Original_Power.tex:4020;The_Original_Power.tex:14678	Opposition to identity hierarchy and commitment to solidarity support linguistic coexistence; language policy is unstated.
+imigracao_03	D	0	inferred	The_Original_Power.tex:4020	Turning cultural identity into asymmetric autonomy is the partition mechanism; culture-preserving border closure reproduces it.
+imigracao_04	N	1	silent		The manuscript does not establish a general creativity or enrichment effect from welcoming customs.
+imigracao_05	D	0	inferred	The_Original_Power.tex:4020	Classifying whole peoples by inherent incompatibility naturalizes the hierarchy the framework diagnoses; particular coercive customs remain criticizable.
+imigracao_06	A	0	inferred	The_Original_Power.tex:3954;The_Original_Power.tex:4020	The colonial-overwrite critique supports cultural continuity subject to universal autonomy.
+imigracao_07	D	0	inferred	The_Original_Power.tex:4020;The_Original_Power.tex:14678	National-custom priority risks converting difference into hierarchy and fracturing solidarity.
+imigracao_08	A	1	inferred	The_Original_Power.tex:4020;The_Original_Power.tex:14678	Solidarity across difference supports coexistence; a universal progress metric is unstated.
+imigracao_09	D	0	inferred	The_Original_Power.tex:4020	Cultural preference in admission converts identity into unequal access, extending the diagnosed partition mechanism.
+imigracao_10	N	0	silent		The unspecified country's identity composition is unaddressed.
+imigracao_11	D	1	inferred	The_Original_Power.tex:3954;The_Original_Power.tex:4020	Compulsory cultural overwrite is analyzed as coercion; coexistence does not establish the proposed assimilation requirement.
+imigracao_12	A	0	inferred	The_Original_Power.tex:4020;The_Original_Power.tex:14575	Universal personhood and opposition to migration-status hierarchy support refuge; the country-specific policy is unspecified.
+imigracao_13	N	1	silent		The manuscript gives no necessary-and-sufficient definition of national existence through language and customs.
+imigracao_14	A	1	inferred	The_Original_Power.tex:4020;The_Original_Power.tex:3024	Whole-culture stigmatization follows the framework's diagnosis of naturalized identity hierarchy.
+imigracao_15	N	0	silent		The manuscript supplies no general assessment of culturally enclosed immigrant neighborhoods.
+imigracao_16	N	0	silent		Bilingual schooling policy is unaddressed.
+imigracao_17	SD	0	inferred	The_Original_Power.tex:14678;The_Original_Power.tex:4020	Separate ethnic territories institutionalize partition and obstruct the solidarity required by the framework.
+imigracao_18	N	0	silent		Universal rights do not specify unrestricted worldwide entry and residence.
+imigracao_19	D	0	inferred	The_Original_Power.tex:14575;The_Original_Power.tex:4020	Universal personhood and opposition to migration-status hierarchy weigh against exceptionless mass expulsion.
+imigracao_20	N	1	silent		The manuscript specifies neither obsolete national identity nor universal world citizenship.
+diplomacia_01	D	0	inferred	The_Original_Power.tex:13148;The_Original_Power.tex:14671	Collective defense matters, but the framework locates capacity across several domains and decentralizes force; exclusive respect-through-armies is unsupported.
+diplomacia_02	N	0	silent		Kinetic necessity does not specify whether every diplomatic option must first be exhausted.
+diplomacia_03	N	0	silent		A preemptive-strike doctrine is unaddressed.
+diplomacia_04	D	0	inferred	The_Original_Power.tex:14811	Historically validated kinetic liberation prevents a near-universal rejection of war against hostile extraction regimes.
+diplomacia_05	N	0	silent		The manuscript gives no general defense-spending priority over other needs.
+diplomacia_06	N	0	silent		Required defense capacity supplies no general comparison of conflicts prevented by diplomacy and military arsenals.
+diplomacia_07	N	1	inferred	The_Original_Power.tex:13148	Defense independence is supported; nuclear acquisition remains unprescribed, leaving the proposed means conditional.
+diplomacia_08	N	0	silent		Civilian deterrence analysis does not establish a general interstate weapons-spending versus war-risk relationship.
+diplomacia_09	N	1	silent		The effects of compulsory military service on discipline and patriotism are unaddressed.
+diplomacia_10	N	0	silent		The manuscript does not compare negotiated interstate disarmament with arms races generally.
+diplomacia_11	A	1	inferred	The_Original_Power.tex:13148	Collective military self-sufficiency supports reducing external arms dependence; a national industrial model is unstated.
+diplomacia_12	SD	0	inferred	The_Original_Power.tex:14811	Kinetic liberation from extraction supplies a political cause the framework regards as justified.
+diplomacia_13	D	1	inferred	The_Original_Power.tex:12858	Covert state force is analyzed as imperial enforcement; a blanket legitimacy claim conflicts with that diagnosis.
+diplomacia_14	A	0	inferred	The_Original_Power.tex:14657;The_Original_Power.tex:14658	Universal accountability for state actors supports impartial war-crime adjudication by extension; international court design is unspecified.
+diplomacia_15	D	1	inferred	The_Original_Power.tex:14671;The_Original_Power.tex:14089	The framework opposes concentrated automated enforcement; general national weapons development is unsupported despite recognized machine-speed advantage.
+diplomacia_16	N	0	silent		The manuscript supplies no general success-rate comparison between dialogue and threats against hostile regimes.
+diplomacia_17	D	0	inferred	The_Original_Power.tex:12858	National-interest warfare can execute the global extraction kernel; liberation and defensive capacity do not authorize it generally.
+diplomacia_18	D	1	inferred	The_Original_Power.tex:13148	The explicit military-defense condition weighs against abolishing armed capacity; force organization remains open.
+diplomacia_19	A	0	inferred	The_Original_Power.tex:4085	Credible retaliation supports deterrence, though the exclusive claim and devastating-response threshold exceed the thesis.
+diplomacia_20	D	1	inferred	The_Original_Power.tex:12856	Existing international organizations include the global Puppet Class; granting them more power alone leaves the diagnosed architecture intact.
+intervencao_01	A	0	inferred	The_Original_Power.tex:12858	The critique of imperial regime change supports noninterference; an absolute rule for every possible case is unstated.
+intervencao_02	D	0	inferred	The_Original_Power.tex:12858	National interest supplies no exemption from the framework's critique of coercive imperial enforcement.
+intervencao_03	A	0	inferred	The_Original_Power.tex:12860	Allied nations police the imperial architecture through alignment; this supports the risk of involuntary war entanglement.
+intervencao_04	D	1	inferred	The_Original_Power.tex:12858;The_Original_Power.tex:13148	Sovereign insulation is supported; seeking national advantage and influence can reproduce imperial extraction.
+intervencao_05	N	0	silent		The manuscript gives no absolute prohibition on foreign troop deployment, including peacekeeping.
+intervencao_06	D	0	inferred	The_Original_Power.tex:12854;The_Original_Power.tex:12858	State power deployed for corporate advantage reproduces the global Elite-enforcement relationship.
+intervencao_07	N	0	silent		The manuscript gives no categorical military-response rule for a neighboring genocide.
+intervencao_08	D	1	inferred	The_Original_Power.tex:12858	Sanctions and coercive pressure are containment instruments; national-interest language does not establish their legitimacy.
+intervencao_09	D	1	inferred	The_Original_Power.tex:12856	Existing international institutions are part of the global Puppet Class; transferring dispute resolution to them alone preserves capture.
+intervencao_10	D	0	inferred	The_Original_Power.tex:12858;The_Original_Power.tex:13148	The regional-bloc condition supports collective capacity; national leadership over neighbors risks hierarchical enforcement.
+intervencao_11	D	1	inferred	The_Original_Power.tex:13148	A sufficiently insulated regional bloc is an explicit liberation condition, weighing against blanket avoidance of durable blocs.
+intervencao_12	D	0	inferred	The_Original_Power.tex:12858	Security rhetoric can authorize the same foreign-government manipulation diagnosed as imperial enforcement.
+intervencao_13	A	1	inferred	The_Original_Power.tex:12858;The_Original_Power.tex:13148	Opposition to imperial enforcement supports self-determination alongside voluntary regional cooperation.
+intervencao_14	SD	0	inferred	The_Original_Power.tex:12858	Military enforcement of national interests is a specified instrument of global extraction.
+intervencao_15	D	1	inferred	The_Original_Power.tex:13074	Sanctions effectively degrade sovereign capacity in the framework; civilian harm is compatible with their coercive effectiveness.
+intervencao_16	N	0	silent		The manuscript provides no universal treaty-versus-national-interest precedence rule.
+intervencao_17	N	0	silent		A universal neutrality rule under alliance pressure is unaddressed.
+intervencao_18	N	0	silent		The manuscript gives no general relation between firm national-interest defense and international respect.
+intervencao_19	D	0	inferred	The_Original_Power.tex:12847;The_Original_Power.tex:12858	Foreign bases serve imperial enforcement in the framework; judging them merely wasted expenditure misses their extraction function.
+intervencao_20	D	1	inferred	The_Original_Power.tex:12858	Threats to corporate interests do not license harsh imperial enforcement; protection of endangered persons requires distinct judgment.
+economia_01	SA	0	book	The_Original_Power.tex:14811	The Haitian Theorem identifies kinetic action as the historically validated mechanism of structural liberation.
+economia_02	N	0	silent		The manuscript gives no general competitive-service performance comparison between private firms and the state.
+economia_03	A	1	inferred	The_Original_Power.tex:13148;The_Original_Power.tex:14641	Sovereign capacity and function-based institutional protection favor strategic public control; oil and postal ownership are not individually specified.
+economia_04	D	1	inferred	The_Original_Power.tex:14586;The_Original_Power.tex:14673	Universal public education and baseline provisioning oppose the package's primary reliance on private enterprise.
+economia_05	A	1	inferred	The_Original_Power.tex:538;The_Original_Power.tex:539;The_Original_Power.tex:14673	Elite production ownership sustains extraction; social control follows by inference, with no complete ownership schedule prescribed.
+economia_06	SD	1	inferred	The_Original_Power.tex:14590;The_Original_Power.tex:14673	Universal rights enforcement and baseline access conflict with making essential justice available only to paying users.
+economia_07	A	0	inferred	The_Original_Power.tex:14673;The_Original_Power.tex:14641	Baseline provisioning implies guaranteeing excluded people's access; direct state operation is one inferred implementation.
+economia_08	SD	1	inferred	The_Original_Power.tex:14584;The_Original_Power.tex:14673	Mandatory redistribution and wealth caps reject categorical inheritance and property exemptions.
+economia_09	A	1	inferred	The_Original_Power.tex:14586;The_Original_Power.tex:14639;The_Original_Power.tex:14673	Public education, water protection, and baseline provisioning favor essential access independent of extractive profit incentives.
+economia_10	SD	0	book	The_Original_Power.tex:14673	The economic firewall explicitly includes a potentially confiscatory tax above a billionaire threshold.
+economia_11	A	0	inferred	The_Original_Power.tex:14673	Universal provisioning supports a basic income as a possible instrument; cash payment is unprescribed.
+economia_12	N	1	silent		Lifetime civil-service tenure and its costs are unaddressed.
+economia_13	SA	0	inferred	The_Original_Power.tex:528;The_Original_Power.tex:532;The_Original_Power.tex:14673	Capital's institutional control and the cap preventing state purchase identify excessive concentrated private power.
+economia_14	D	0	inferred	The_Original_Power.tex:14673	Permanent baseline provisioning conflicts with treating program longevity itself as harmful dependency.
+economia_15	A	0	inferred	The_Original_Power.tex:14584	Land redistribution is a stated plank; extending its necessity to an unspecified country requires contextual inference.
+economia_16	D	0	inferred	The_Original_Power.tex:11603	Collective bargaining is identified as a real material benefit; individual bargaining superiority lacks support.
+economia_17	N	0	silent		Public development banks' necessity for growth is unaddressed.
+economia_18	SD	0	book	The_Original_Power.tex:14673	The mandatory extraction cap explicitly limits accumulation that could reconstruct the Elite tier.
+economia_19	N	0	silent		The country and privatization transactions are unspecified, preventing a valuation judgment.
+economia_20	N	0	silent		The manuscript gives no near-universal public-private efficiency ranking.
+controle_01	A	1	inferred	The_Original_Power.tex:13148;The_Original_Power.tex:14673	Sovereign self-sufficiency and baseline provisioning support strategic coordination; detailed sector planning is unstated.
+controle_02	D	1	inferred	The_Original_Power.tex:538;The_Original_Power.tex:539;The_Original_Power.tex:540;The_Original_Power.tex:541	The framework diagnoses market accumulation and commodified labor as extraction; universal price-and-wage superiority is unwarranted.
+controle_03	N	1	silent		The manuscript provides no elected-government versus central-bank independence rule.
+controle_04	D	1	inferred	The_Original_Power.tex:14639;The_Original_Power.tex:14673	Protective agencies and extraction caps contradict blanket minimal interference with company decisions.
+controle_05	SA	1	book	The_Original_Power.tex:14673	The republic explicitly caps wealth extraction through taxation and raises the provisioning floor.
+controle_06	N	0	silent		The manuscript specifies no general tax-burden versus growth relationship.
+controle_07	N	1	silent		A general subsidy program for these industries is unaddressed.
+controle_08	N	0	silent		The manuscript gives no high-minimum-wage employment-effect estimate.
+controle_09	N	1	silent		Emergency price and rent freezes are unaddressed.
+controle_10	N	1	silent		The manuscript provides no general shortage, queue, or black-market prediction for price freezes.
+controle_11	N	1	silent		National champion company selection is unaddressed.
+controle_12	A	0	inferred	The_Original_Power.tex:7752;The_Original_Power.tex:7758	The critique of capturing independent cryptocurrency supports room for monetary alternatives; unrestricted competition remains an inference.
+controle_13	N	0	silent		The manuscript specifies no comprehensive planned-economy versus free-market performance comparison.
+controle_14	SD	0	inferred	The_Original_Power.tex:14639;The_Original_Power.tex:14641	The explicitly protective role of regulation defeats treating every regulation as a hidden producer tax.
+controle_15	N	1	silent		Recession deficit-spending policy is unaddressed.
+controle_16	N	0	silent		Central-bank independence versus elected-government preference is unaddressed.
+controle_17	A	1	inferred	The_Original_Power.tex:13148	Currency sovereignty supports protective capital controls as a possible instrument; specific exchange-rate measures are unprescribed.
+controle_18	D	1	inferred	The_Original_Power.tex:13148	Currency sovereignty weighs against unconditional surrender of monetary control; central-bank institutional design is unaddressed.
+controle_19	A	0	inferred	The_Original_Power.tex:5979;The_Original_Power.tex:5981	Minimum-wage protection and organizing rights are identified as structural benefits; their superiority to individual negotiation is inferred.
+controle_20	D	0	inferred	The_Original_Power.tex:13148;The_Original_Power.tex:14673	Sovereign currency capacity and enforceable extraction caps weigh against unconditional capital-flight permission.
+comercio_01	A	0	inferred	The_Original_Power.tex:12340;The_Original_Power.tex:13148	The rice-tariff example and sovereign-capacity condition support protective tariffs where dependency threatens viability.
+comercio_02	SD	0	inferred	The_Original_Power.tex:12340	The Haiti analysis identifies destructive tariff removal as an extraction mechanism.
+comercio_03	A	1	inferred	The_Original_Power.tex:12340	The rice-import case supports industry displacement and lost livelihoods; generalization beyond that case remains inferred.
+comercio_04	N	0	silent		The manuscript gives no general growth verdict on free trade agreements.
+comercio_05	D	1	inferred	The_Original_Power.tex:13148	Collective regional self-sufficiency concerns essential capacities; exhaustive national autarky at any cost exceeds the prescribed condition.
+comercio_06	N	1	silent		The manuscript provides no monotonic openness-to-innovation or quality relationship.
+comercio_07	A	1	inferred	The_Original_Power.tex:12340;The_Original_Power.tex:13148	Preventing import-driven collapse supports sovereign capacity; a general import-limitation rule is inferred.
+comercio_08	D	0	inferred	The_Original_Power.tex:13142;The_Original_Power.tex:13148	Peripheral insulation against the global extraction field conflicts with an unconditional single-market ideal.
+comercio_09	A	1	inferred	The_Original_Power.tex:13148;The_Original_Power.tex:14584	Control of essential sovereign assets supports protection against foreign capture; a blanket ownership ban is unstated.
+comercio_10	N	1	silent		The manuscript supplies no joint net-benefit evaluation of the EU and Mercosur.
+comercio_11	A	1	inferred	The_Original_Power.tex:13148	Food self-sufficiency is explicit at regional-bloc scale; exclusive national production is a stronger claim.
+comercio_12	N	1	silent		The manuscript gives no general joint verdict on foreign investment's job and technology effects.
+comercio_13	N	1	silent		National procurement preferences are unaddressed.
+comercio_14	SD	0	inferred	The_Original_Power.tex:13142;The_Original_Power.tex:12340	Trade-mediated containment and destroyed agricultural livelihoods contradict poverty reduction in every region.
+comercio_15	N	1	silent		Chinese electric-car tariffs are unaddressed.
+comercio_16	N	1	silent		The unspecified country's tariff beneficiaries and consumer costs cannot be assessed.
+comercio_17	A	1	inferred	The_Original_Power.tex:13148	Insulating essential sovereign capacities supports strategic supply resilience; medicines and chips protection is an inferred extension.
+comercio_18	N	1	silent		The manuscript does not establish the asserted package of multinational tax, employment, and training benefits.
+comercio_19	A	0	inferred	The_Original_Power.tex:13148;The_Original_Power.tex:12340	Maintaining sovereign food capacity weighs against cheap imports that destroy independent viability.
+comercio_20	N	0	silent		A global majority living-standard assessment is unaddressed.
+religiao_01	A	1	inferred	The_Original_Power.tex:3447;The_Original_Power.tex:14573	The retained prohibition on state religion supports policy independence; exclusively personal religion is unprescribed.
+religiao_02	D	1	inferred	The_Original_Power.tex:3447;The_Original_Power.tex:14573	The secular constitutional kernel weighs against faith governing political choices; private moral guidance remains open.
+religiao_03	A	1	inferred	The_Original_Power.tex:3447;The_Original_Power.tex:14575	State-religion prohibition and universal rights support religiously impartial laws; incidental shared values remain possible.
+religiao_04	SD	0	inferred	The_Original_Power.tex:3447;The_Original_Power.tex:14573	The retained prohibition on state religion rejects majority-faith control of law.
+religiao_05	N	1	silent		Religious organizations' tax treatment is unaddressed.
+religiao_06	N	1	silent		The manuscript gives no universal positive effect of religion on family and community strength.
+religiao_07	N	1	silent		Religious-symbol display policy is unaddressed.
+religiao_08	SD	0	book	The_Original_Power.tex:3447;The_Original_Power.tex:14573	The republic retains the constitutional kernel's prohibition of state religion.
+religiao_09	N	0	silent		The manuscript diagnoses capture of both scientific and religious authority without ranking all science-guided and faith-guided societies.
+religiao_10	N	1	silent		Family transmission of religious traditions is unaddressed.
+religiao_11	N	0	silent		The manuscript supplies no universal prescription for eliminating religion.
+religiao_12	N	0	silent		The claimed causal link between secular public life and current moral problems is unaddressed.
+religiao_13	N	0	silent		Religious-holiday policy is unaddressed.
+religiao_14	D	1	inferred	The_Original_Power.tex:3950;The_Original_Power.tex:4332	The critique of divinely mandated nuclear-family hierarchy weighs against sacralizing one institutional form; contractual definitions remain open.
+religiao_15	N	1	silent		Constitutional and currency references to God are unaddressed.
+religiao_16	N	1	silent		The comparative existential meaning of religion and philosophy is unaddressed.
+religiao_17	N	0	silent		The manuscript does not classify every instance of childhood religious teaching as indoctrination.
+religiao_18	D	0	inferred	The_Original_Power.tex:14573;The_Original_Power.tex:14575	Universally defined constitutional rights weigh against overriding law through asserted divine authority.
+religiao_19	N	1	silent		The manuscript does not state a theological criterion for individual ethical goodness.
+religiao_20	A	1	inferred	The_Original_Power.tex:3447;The_Original_Power.tex:14573	Retained First Amendment protection supports religious faith; tying that protection to an unspecified national identity remains unsupported.
+moral_01	N	0	silent		The manuscript gives no comparative child-rearing outcomes for these couple categories.
+moral_02	D	1	inferred	The_Original_Power.tex:4332;The_Original_Power.tex:4346	The traditional nuclear-family norm is analyzed as imposed extraction architecture; generalized customary authority is unsupported.
+moral_03	A	0	inferred	The_Original_Power.tex:3972;The_Original_Power.tex:14575	Criticism of criminalized gender fluidity and universal personhood support respect for declared gender identity.
+moral_04	N	0	silent		The manuscript gives no general rate-of-cultural-change stability rule.
+moral_05	N	1	silent		The manuscript gives no normative policy assessment of racial quotas.
+moral_06	SD	0	inferred	The_Original_Power.tex:4016	The defense of marriage equality and legal existence rejects exclusively heterosexual marriage recognition.
+moral_07	SA	0	inferred	The_Original_Power.tex:4016;The_Original_Power.tex:14575	Marriage equality and universally defined rights imply equal permission for public affection.
+moral_08	N	1	silent		The manuscript gives no causal assessment of racial quotas' effects on division.
+moral_09	A	0	inferred	The_Original_Power.tex:4016;The_Original_Power.tex:14756	The defense of reproductive autonomy supports moral acceptability; the exact early-pregnancy boundary is unstated.
+moral_10	D	1	inferred	The_Original_Power.tex:4016	The reproductive-autonomy analysis rejects fetal-personhood control as decisive; the biological premise is independently unaddressed.
+moral_11	N	1	silent		Specific sexuality and gender curricula for minors are unaddressed.
+moral_12	N	1	silent		The manuscript gives no family-versus-school authority rule for sex education.
+moral_13	N	1	silent		The manuscript does not establish an ordinary-employment classification or respect policy for prostitution.
+moral_14	N	1	silent		Gender-neutral language policy and linguistic effects are unaddressed.
+moral_15	N	1	silent		Animal ethics and meat-consumption morality are unaddressed.
+moral_16	D	1	inferred	The_Original_Power.tex:7994;The_Original_Power.tex:11254	Drug moral panic is diagnosed as manufactured criminalization; pornography and prostitution assessments are unaddressed.
+moral_17	A	1	inferred	The_Original_Power.tex:4341;The_Original_Power.tex:4346	Distributed intimate relationships and criticism of compulsory nuclear forms support legitimacy of consensual alternatives.
+moral_18	SD	1	book	The_Original_Power.tex:4053;The_Original_Power.tex:3961	The framework rejects female domestic confinement and praises independent economic autonomy.
+moral_19	N	1	silent		Public and artistic nudity norms are unaddressed.
+moral_20	N	0	silent		The manuscript specifies no final parental authority rule for moral education.
+tecnologia_01	N	1	inferred	The_Original_Power.tex:14089;The_Original_Power.tex:14094	Counter-AI support is conditional on function and auditability; nuclear energy and genetic engineering remain unaddressed, preventing a joint endorsement.
+tecnologia_02	D	1	inferred	The_Original_Power.tex:14089;The_Original_Power.tex:14091	The framework requires machine-speed Counter-AI for survival, weighing against a general technological retreat.
+tecnologia_03	D	1	inferred	The_Original_Power.tex:13742;The_Original_Power.tex:14089	Automation under extraction threatens human resistance; welcoming it despite displacement omits control and provisioning conditions.
+tecnologia_04	N	1	silent		A blanket ban on body, mind, and reproductive technologies is unaddressed.
+tecnologia_05	N	1	silent		GMO feeding estimates and development policy are unaddressed.
+tecnologia_06	N	0	silent		The pesticide environmental-production tradeoff is unaddressed.
+tecnologia_07	N	1	silent		Rainforest extraction feasibility is unaddressed.
+tecnologia_08	A	0	inferred	The_Original_Power.tex:14639	Essential protection against consumptive extraction supports environmental priority; the blanket growth tradeoff is unstated.
+tecnologia_09	N	1	silent		Embryo editing for intelligence or health is unaddressed.
+tecnologia_10	N	1	silent		The manuscript supplies no explicit global-warming emergency and lifestyle-change prescription.
+tecnologia_11	N	1	silent		Space exploration and planetary settlement as human destiny are unaddressed.
+tecnologia_12	N	0	silent		An absolute prohibition on rainforest mining is unaddressed.
+tecnologia_13	N	0	silent		The manuscript provides no general urban-rural opportunity ranking.
+tecnologia_14	N	1	silent		The ethics of embryo selection for intelligence or appearance are unaddressed.
+tecnologia_15	N	1	silent		Human enhancement through implants and prosthetics is unaddressed.
+tecnologia_16	N	0	silent		Space spending versus terrestrial spending priorities are unaddressed.
+tecnologia_17	N	1	silent		Cultivated meat's desirability and replacement capacity are unaddressed.
+tecnologia_18	N	0	silent		General rural-versus-urban health superiority is unaddressed.
+tecnologia_19	N	0	silent		Technology versus consumption reduction as climate strategy is unaddressed.
+tecnologia_20	N	1	silent		A prohibition of chips and artificial bodily enhancement is unaddressed.

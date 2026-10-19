@@ -1,0 +1,337 @@
+{
+  "topics": {
+    "police": "Police / status quo",
+    "wealth": "Wealth cap / billionaires",
+    "any": "Universal"
+  },
+  "cards": [
+    {
+      "id": "open-1704",
+      "topic": "police",
+      "kind": "opener",
+      "trigger": "OPENER — the who-pays arc",
+      "say": "Officers save lives. That's real. The motion is about the institution.\n\nSouth Carolina, 1704: slave patrols written into law. Patrol duty compulsory for white men who owned no slaves. Poor men conscripted to guard rich men's property.\n\nThen Pennsylvania: coal companies paid their own police to break strikes. Then the state took that job over, on the public's bill.\n\nConscripted, privately paid, publicly funded. The job never changed. Only who pays.",
+      "sec": 22
+    },
+    {
+      "id": "origin-short",
+      "topic": "police",
+      "kind": "opener",
+      "trigger": "compressed origin — use when you go second",
+      "say": "South Carolina, 1704. Slave patrols written into law. Patrol duty compulsory for white men who owned no slaves — poor men conscripted to guard rich men's property.",
+      "sec": 12
+    },
+    {
+      "id": "no-duty",
+      "topic": "police",
+      "kind": "kill",
+      "trigger": "\"mandate\" / \"obligation\" / \"duty to protect\"",
+      "say": "Mandate is a legal word. Point to it. There is no legal duty for police to protect anyone in this country.",
+      "sec": 7
+    },
+    {
+      "id": "gonzales",
+      "topic": "police",
+      "kind": "kill",
+      "trigger": "THE STORY — say it slow, never say the case name",
+      "say": "In 2005 a woman named Jessica Gonzales had a restraining order. She called the police over and over. They wouldn't enforce it. He murdered all three of her daughters. The Supreme Court ruled she had no right to have that order enforced.\n\nIf protection were the purpose, that ruling would be impossible.",
+      "sec": 18
+    },
+    {
+      "id": "bridge",
+      "topic": "police",
+      "kind": "bridge",
+      "trigger": "\"anomalies\" / \"isolated\" / \"specific abuses\"",
+      "say": "You can call 1704 a dark chapter. You cannot call the absence of a duty to protect an anomaly. It's the law right now, in every state.",
+      "sec": 8
+    },
+    {
+      "id": "intent",
+      "topic": "police",
+      "kind": "kill",
+      "trigger": "\"malicious intent\" / \"you can't prove they meant it\"",
+      "say": "I never argued intent. I argued a statute. A law doesn't have a motive — it has a text.",
+      "sec": 6
+    },
+    {
+      "id": "oversight",
+      "topic": "police",
+      "kind": "counter",
+      "trigger": "\"democratic oversight\" / \"reform\" / \"review boards\"",
+      "say": "Oversight changes who watches. It doesn't change what's owed — and what's owed is still nothing.",
+      "sec": 6
+    },
+    {
+      "id": "contract",
+      "topic": "police",
+      "kind": "counter",
+      "trigger": "\"social contract\" / \"delegate force to the state\"",
+      "say": "A contract binds both parties. Name their obligation. You can't delegate force to someone who owes you nothing back.",
+      "sec": 8
+    },
+    {
+      "id": "monopoly",
+      "topic": "police",
+      "kind": "counter",
+      "trigger": "\"legal monopoly on force\"",
+      "say": "That's my motion. A monopoly on force maintaining an existing arrangement is the status quo upheld by force. They just conceded the mechanism and renamed it.",
+      "sec": 10
+    },
+    {
+      "id": "specs",
+      "topic": "police",
+      "kind": "counter",
+      "trigger": "\"failure\" / \"mistake\" / \"dark chapter\" / \"imperfect execution\"",
+      "say": "That wasn't a failure, it was a statute. Laws aren't failures — they're specifications. The patrols were the rule of law.",
+      "sec": 9
+    },
+    {
+      "id": "gonzales-not-failure",
+      "topic": "police",
+      "kind": "counter",
+      "trigger": "\"failures don't define purpose\"",
+      "say": "Gonzales wasn't a failure. The Court ruled the police acted within their obligations. That's not imperfect execution — that's the rule working as written.",
+      "sec": 10
+    },
+    {
+      "id": "conflation",
+      "topic": "police",
+      "kind": "counter",
+      "trigger": "\"officers save lives\" / \"ask a victim\"",
+      "say": "That's a swap. I conceded the people — I said it first. They're using that to make a claim about the institution. Soldiers are brave too; that tells you nothing about why an army exists.",
+      "sec": 12
+    },
+    {
+      "id": "modern",
+      "topic": "police",
+      "kind": "counter",
+      "trigger": "\"that's the past\" / \"colonial\" / \"archaic\" / \"modern policing\"",
+      "say": "The ruling I'm citing is 2005. And read the Thirteenth Amendment — slavery is abolished except as punishment for crime. That exception is in the Constitution today.",
+      "sec": 11
+    },
+    {
+      "id": "ferguson",
+      "topic": "police",
+      "kind": "evidence",
+      "trigger": "\"regardless of social standing\" / \"protects everyone\"",
+      "say": "Ferguson, 2015. The Justice Department found the department run as a revenue engine, not a safety service. A federal finding. Standing was the business model.",
+      "sec": 11
+    },
+    {
+      "id": "process",
+      "topic": "police",
+      "kind": "counter",
+      "trigger": "\"emergency response\" / \"crime prevention\"",
+      "say": "Emergency response is arriving after. About half of murders go unsolved. Police don't prevent crime — they process it. And processing is what maintaining an order looks like.",
+      "sec": 12
+    },
+    {
+      "id": "lead",
+      "topic": "police",
+      "kind": "evidence",
+      "trigger": "\"police reduced crime\" / \"the 1990s crime drop\"",
+      "say": "Violent crime fell steeply in the nineties and police took credit for it. But the peer-reviewed estimate puts more than half of that drop on taking lead out of gasoline. Not a policing decision. An environmental regulation, twenty years earlier, showing up on a delay.",
+      "sec": 16
+    },
+    {
+      "id": "lead-who-paid",
+      "topic": "police",
+      "kind": "evidence",
+      "trigger": "follow the lead argument with this — it is the whole framework in one arc",
+      "say": "And follow who paid. Industry put the lead in and kept the profit. The public absorbed it — in poor neighborhoods first. Then the public paid a second time, for the police to manage the result. The damage went down. The money stayed up.",
+      "sec": 16
+    },
+    {
+      "id": "lead-defense",
+      "topic": "police",
+      "kind": "counter",
+      "trigger": "if they attack the lead study",
+      "say": "Argue the size of the effect if you want. The point holds either way. The biggest lever anyone has measured on violent crime came out of the EPA, not a police department. If prevention were the purpose, that's where the budget would be.",
+      "sec": 14
+    },
+    {
+      "id": "prevention",
+      "topic": "police",
+      "kind": "constructive",
+      "trigger": "if you need a positive case",
+      "say": "We know what reduces violent crime. Summer jobs programs. Street lighting. Lead abatement. Stable housing. None of it is policing. If prevention were the purpose, that's where the money would be.",
+      "sec": 13
+    },
+    {
+      "id": "anarchy",
+      "topic": "police",
+      "kind": "hard",
+      "trigger": "HARD MODE — \"order prevents anarchy\"",
+      "say": "Preventing anarchy for whom? Anarchy means no binding rules. One senior banker went to prison over the 2008 crash. One. Meanwhile the most heavily policed neighborhoods are the poorest ones.\n\nThe police don't prevent anarchy. They distribute it. Anarchy at the top, law at the bottom.",
+      "sec": 18
+    },
+    {
+      "id": "whose-order",
+      "topic": "police",
+      "kind": "hard",
+      "trigger": "\"order is a precondition for safety\"",
+      "say": "In 1704 there was order. Slavery was legal, the patrols enforced it, the streets were orderly. Order isn't safety — it's the arrangement that exists. That's my motion, not a counter to it.",
+      "sec": 13
+    },
+    {
+      "id": "precondition-trap",
+      "topic": "police",
+      "kind": "hard",
+      "trigger": "they press the precondition line",
+      "say": "Then order is the product and safety is the hoped-for byproduct. That's what I said. Whether safety follows depends on who the order is for.",
+      "sec": 9
+    },
+    {
+      "id": "only-south",
+      "topic": "police",
+      "kind": "preempt",
+      "trigger": "\"that's only Southern history\" / \"Robert Peel\"",
+      "say": "Look at what the North built. Boston 1838, New York 1845. Not created during a crime wave — created during strikes and labor unrest, because property owners wanted a standing force. South: control labor by race. North: control labor by class.",
+      "sec": 15
+    },
+    {
+      "id": "coal-iron",
+      "topic": "police",
+      "kind": "evidence",
+      "trigger": "cleanest single fact in the deck",
+      "say": "Pennsylvania commissioned private police, paid directly by the coal and railroad companies, to break strikes. Public authority, corporate payroll, written into law.",
+      "sec": 10
+    },
+    {
+      "id": "property",
+      "topic": "police",
+      "kind": "counter",
+      "trigger": "\"they protect property, which helps everyone\"",
+      "say": "Now we agree. Protecting property is upholding the status quo. That's the motion. You've just conceded what the institution is for.",
+      "sec": 9
+    },
+    {
+      "id": "trafficking",
+      "topic": "police",
+      "kind": "counter",
+      "trigger": "\"trafficking units challenge powerful illicit networks\"",
+      "say": "An illicit network is a competitor to the sanctioned order, not a challenge to it. Breaking one up defends the arrangement that exists. That's my motion, not a counter to it.",
+      "sec": 11
+    },
+    {
+      "id": "trafficking-direction",
+      "topic": "police",
+      "kind": "counter",
+      "trigger": "if they press the trafficking example",
+      "say": "And look which end of it gets arrested. The trafficked get charged. The buyers, and the companies with forced labor in their supply chains, mostly don't. Enforcement runs down the chain, never up.",
+      "sec": 13
+    },
+    {
+      "id": "chaos",
+      "topic": "police",
+      "kind": "counter",
+      "trigger": "\"without police there's chaos\" / \"you want abolition\"",
+      "say": "I haven't proposed removing them. I've made a claim about what they were built for. They'd rather debate abolition than the founding, because the founding is written down.",
+      "sec": 11
+    },
+    {
+      "id": "rhetoric",
+      "topic": "police",
+      "kind": "counter",
+      "trigger": "\"this is anti-cop rhetoric\"",
+      "say": "It's a claim about an institution, supported by statutes and Supreme Court rulings. If describing what a law says is rhetoric, take it up with the Court.",
+      "sec": 10
+    },
+    {
+      "id": "uvalde",
+      "topic": "police",
+      "kind": "counter",
+      "trigger": "\"Uvalde was one failure\"",
+      "say": "Three hundred seventy-six officers. Seventy-seven minutes. And no one was legally required to go in — that's the point. Not cowardice. Structure.",
+      "sec": 10
+    },
+    {
+      "id": "no-citations",
+      "topic": "any",
+      "kind": "counter",
+      "trigger": "they assert without evidence",
+      "say": "They've spoken four times and cited nothing. I gave them a statute and a Supreme Court case.",
+      "sec": 7
+    },
+    {
+      "id": "weigh",
+      "topic": "police",
+      "kind": "closing",
+      "trigger": "CLOSING beat 1 — weigh",
+      "say": "Even if their story about reform is true, it doesn't reach the obligation — and they never answered that there isn't one. An institution is defined by what it owes you.",
+      "sec": 11
+    },
+    {
+      "id": "thesis",
+      "topic": "police",
+      "kind": "closing",
+      "trigger": "CLOSING beat 2 — land slow",
+      "say": "The police have always protected something. It just hasn't been people. It's been capital.",
+      "sec": 7
+    },
+    {
+      "id": "ten-second",
+      "topic": "police",
+      "kind": "closing",
+      "trigger": "if you only have 10 seconds",
+      "say": "Police have no legal duty to protect you. The Supreme Court has said so twice. An institution built to protect people would have that duty.",
+      "sec": 10
+    },
+    {
+      "id": "risk-trap",
+      "topic": "wealth",
+      "kind": "opener",
+      "trigger": "OPENER — the risk trap",
+      "say": "Risk deserves reward. I'm not disputing that. So the only question is who actually carried the risk. The public funded DARPA. The public paid for the bailouts. Whoever carries the risk owns the upside.\n\nMy opponent is about to tell you the billionaires carried it. Ask them to name one who lost everything.",
+      "sec": 22
+    },
+    {
+      "id": "invoice",
+      "topic": "wealth",
+      "kind": "bridge",
+      "trigger": "the bridge — say once per turn",
+      "say": "A cap is the equity payment. The public carried the risk, so the public owns the upside past a threshold. That isn't confiscation. It's an invoice.",
+      "sec": 10
+    },
+    {
+      "id": "suitcase",
+      "topic": "wealth",
+      "kind": "counter",
+      "trigger": "\"capital flight\" / \"they'll leave\"",
+      "say": "Take what with them? Not the consumer base, the roads, the courts, the workforce. And the US taxes citizenship, not residence — leaving means renouncing.",
+      "sec": 11
+    },
+    {
+      "id": "slavery-property",
+      "topic": "wealth",
+      "kind": "counter",
+      "trigger": "\"property rights\" / \"theft\"",
+      "say": "People were property here. We removed it without compensating the owners. Property is statutory — it's whatever the law says it is.",
+      "sec": 9
+    },
+    {
+      "id": "parking",
+      "topic": "any",
+      "kind": "counter",
+      "trigger": "\"everyone's equal under the law\"",
+      "say": "If the fine doesn't hinder you, you weren't fined — you bought a permit. Equal treatment requires unequal amounts. Finland has calculated fines from income since 1921.",
+      "sec": 12
+    },
+    {
+      "id": "ambition",
+      "topic": "wealth",
+      "kind": "counter",
+      "trigger": "\"ceiling on ambition\"",
+      "say": "Ambition isn't accumulation. You can still build the rocket — you just can't own the launchpad, the airspace, and the senator. One person's unlimited accumulation is ten thousand people's ceiling.",
+      "sec": 13
+    },
+    {
+      "id": "clash",
+      "topic": "any",
+      "kind": "note",
+      "trigger": "⚠ THE ONE THAT LOSES ROUNDS",
+      "say": "Answer the clash they are actually running. If they say innovation, you say innovation. Redefining terms is scored as a dropped argument.",
+      "sec": 0
+    }
+  ]
+}

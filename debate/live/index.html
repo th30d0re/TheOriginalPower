@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Live Debate Deck</title>
+<style>
+  @font-face {
+    font-family: "OpenDyslexic";
+    src: url("/fonts/OpenDyslexic-Regular.woff2") format("woff2");
+    font-weight: 400; font-style: normal; font-display: swap;
+  }
+  @font-face {
+    font-family: "OpenDyslexic";
+    src: url("/fonts/OpenDyslexic-Bold.woff2") format("woff2");
+    font-weight: 700; font-style: normal; font-display: swap;
+  }
+
+  :root {
+    --paper: #f6f1e7;
+    --ink: #23201c;
+    --muted: #6d6558;
+    --rule: #ddd3c2;
+    --say: #a8231c;
+    --say-bg: #fdf3f1;
+    --live: #1f6f4a;
+    --chip: #ece4d5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #16140f;
+      --ink: #ece5d7;
+      --muted: #9b917f;
+      --rule: #322c22;
+      --say: #ff8a7a;
+      --say-bg: #241713;
+      --live: #67d29b;
+      --chip: #262117;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: "OpenDyslexic", Georgia, serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.75;
+    letter-spacing: 0.012em;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ---------- NOW pane ---------- */
+  #now {
+    position: sticky; top: 0; z-index: 20;
+    background: var(--paper);
+    border-bottom: 3px solid var(--rule);
+    padding: 18px 24px 20px;
+    box-shadow: 0 8px 20px -14px rgba(0,0,0,.6);
+    max-height: 68vh; overflow-y: auto;
+  }
+  #nowhead {
+    display: flex; align-items: baseline; gap: 14px;
+    font-size: 13px; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 10px;
+  }
+  #dot {
+    width: 10px; height: 10px; border-radius: 50%;
+    background: var(--live); display: inline-block;
+    animation: pulse 1.6s ease-in-out infinite;
+  }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.25} }
+
+  #timerwrap { flex: 1; height: 6px; background: var(--chip); border-radius: 3px; overflow: hidden; }
+  #timerbar { height: 100%; width: 0%; background: var(--live); transition: width .25s linear; }
+  #clock { font-variant-numeric: tabular-nums; min-width: 3.5em; text-align: right; }
+
+  #nownote {
+    font-size: 15px; color: var(--muted); margin: 0 0 10px;
+  }
+  .nowcard { margin: 0 0 16px; }
+  .nowcard:last-child { margin-bottom: 0; }
+  .nowtrig {
+    font-size: 14px; letter-spacing: .04em; color: var(--muted);
+    margin-bottom: 4px;
+  }
+  .nowsay {
+    font-size: clamp(22px, 2.6vw, 32px);
+    font-weight: 700;
+    color: var(--say);
+    background: var(--say-bg);
+    border-left: 6px solid var(--say);
+    padding: 12px 18px;
+    white-space: pre-wrap;
+    max-width: 34ch;
+    line-height: 1.6;
+  }
+  .nowsec { font-size: 13px; color: var(--muted); margin-top: 4px; }
+  #empty { font-size: 20px; color: var(--muted); }
+
+  /* ---------- deck ---------- */
+  #deckhead {
+    display: flex; gap: 12px; align-items: center; flex-wrap: wrap;
+    padding: 18px 24px 6px;
+  }
+  #q {
+    font-family: inherit; font-size: 17px; padding: 9px 13px;
+    border: 2px solid var(--rule); border-radius: 8px;
+    background: var(--paper); color: var(--ink); min-width: 240px; flex: 1;
+  }
+  .tabs { display: flex; gap: 8px; }
+  .tab {
+    font-family: inherit; font-size: 15px; padding: 7px 14px; cursor: pointer;
+    border: 2px solid var(--rule); border-radius: 999px;
+    background: transparent; color: var(--muted);
+  }
+  .tab[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+
+  #deck { padding: 8px 24px 60px; }
+  .card {
+    border-top: 1px solid var(--rule);
+    padding: 14px 0 14px 14px;
+    border-left: 4px solid transparent;
+    transition: background .3s, border-color .3s;
+    scroll-margin-top: 46vh;
+  }
+  .card.hit { border-left-color: var(--live); background: var(--chip); }
+  @keyframes flash { 0%{background:var(--live)} 100%{background:var(--chip)} }
+  .card.flash { animation: flash 1.1s ease-out; }
+  .trig { font-size: 15px; color: var(--muted); }
+  .say  { font-size: 19px; margin-top: 5px; white-space: pre-wrap; max-width: 60ch; }
+  .meta { font-size: 12px; color: var(--muted); margin-top: 5px; letter-spacing: .06em; text-transform: uppercase; }
+  .card.dim { display: none; }
+</style>
+</head>
+<body>
+
+<div id="now">
+  <div id="nowhead">
+    <span><span id="dot"></span> &nbsp;Say this</span>
+    <div id="timerwrap"><div id="timerbar"></div></div>
+    <span id="clock">0.0s</span>
+  </div>
+  <p id="nownote" hidden></p>
+  <div id="nowbody"><div id="empty">Waiting for the next turn…</div></div>
+</div>
+
+<div id="deckhead">
+  <input id="q" type="search" placeholder="search the deck…" autocomplete="off">
+  <div class="tabs" id="tabs"></div>
+</div>
+<div id="deck"></div>
+
+<script>
+let CARDS = [], BYID = {}, TOPICS = {}, lastTs = -1, timerStart = 0, budget = 0, raf = null;
+
+const el  = (s) => document.querySelector(s);
+const esc = (s) => s.replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+
+async function loadCards() {
+  const r = await fetch('/cards.json?_=' + Date.now());
+  const j = await r.json();
+  CARDS = j.cards; TOPICS = j.topics || {};
+  BYID = Object.fromEntries(CARDS.map(c => [c.id, c]));
+  renderTabs();
+  renderDeck();
+}
+
+let filterTopic = 'all';
+function renderTabs() {
+  const keys = ['all', ...Object.keys(TOPICS)];
+  el('#tabs').innerHTML = keys.map(k =>
+    `<button class="tab" data-t="${k}" aria-pressed="${k === filterTopic}">${k === 'all' ? 'all' : esc(TOPICS[k])}</button>`
+  ).join('');
+  el('#tabs').querySelectorAll('.tab').forEach(b => b.onclick = () => {
+    filterTopic = b.dataset.t; renderTabs(); applyFilter();
+  });
+}
+
+function renderDeck() {
+  el('#deck').innerHTML = CARDS.map(c => `
+    <div class="card" id="card-${c.id}" data-hay="${esc((c.trigger + ' ' + c.say + ' ' + c.kind).toLowerCase())}" data-topic="${c.topic}">
+      <div class="trig">${esc(c.trigger)}</div>
+      <div class="say">${esc(c.say)}</div>
+      <div class="meta">${esc(c.kind)}${c.sec ? ' · ~' + c.sec + 's' : ''} · ${esc(c.id)}</div>
+    </div>`).join('');
+  applyFilter();
+}
+
+function applyFilter() {
+  const q = el('#q').value.trim().toLowerCase();
+  document.querySelectorAll('.card').forEach(n => {
+    const okT = filterTopic === 'all' || n.dataset.topic === filterTopic || n.dataset.topic === 'any';
+    const okQ = !q || n.dataset.hay.includes(q);
+    n.classList.toggle('dim', !(okT && okQ));
+  });
+}
+el('#q').addEventListener('input', applyFilter);
+
+function tick() {
+  const t = (Date.now() - timerStart) / 1000;
+  el('#clock').textContent = t.toFixed(1) + 's';
+  const pct = budget ? Math.min(100, (t / budget) * 100) : 0;
+  el('#timerbar').style.width = pct + '%';
+  el('#timerbar').style.background = t > budget && budget ? 'var(--say)' : 'var(--live)';
+  raf = requestAnimationFrame(tick);
+}
+
+function show(state) {
+  const ids = state.active || [];
+  const cards = ids.map(id => BYID[id]).filter(Boolean);
+
+  el('#nownote').hidden = !state.note;
+  el('#nownote').textContent = state.note || '';
+
+  if (!cards.length) {
+    el('#nowbody').innerHTML = '<div id="empty">Waiting for the next turn…</div>';
+  } else {
+    el('#nowbody').innerHTML = cards.map(c => `
+      <div class="nowcard">
+        <div class="nowtrig">${esc(c.trigger)}</div>
+        <div class="nowsay">${esc(c.say)}</div>
+        <div class="nowsec">~${c.sec}s</div>
+      </div>`).join('');
+  }
+
+  budget = cards.reduce((a, c) => a + (c.sec || 0), 0);
+  timerStart = Date.now();
+  if (raf) cancelAnimationFrame(raf);
+  tick();
+
+  document.querySelectorAll('.card').forEach(n => n.classList.remove('hit', 'flash'));
+  cards.forEach((c, i) => {
+    const n = el('#card-' + CSS.escape(c.id));
+    if (!n) return;
+    n.classList.add('hit', 'flash');
+    if (i === 0) n.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+}
+
+async function poll() {
+  try {
+    const r = await fetch('/state.json?_=' + Date.now(), { cache: 'no-store' });
+    const s = await r.json();
+    if (s.ts !== lastTs) {
+      lastTs = s.ts;
+      await loadCards();   // picks up any card added mid-round
+      show(s);
+    }
+  } catch (e) { /* server restarting — keep polling */ }
+}
+
+loadCards().then(() => { poll(); setInterval(poll, 500); });
+</script>
+</body>
+</html>

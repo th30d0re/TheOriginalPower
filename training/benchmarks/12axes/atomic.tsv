@@ -1,0 +1,394 @@
+atomic_id	parent_id	axis	agree_pole	text
+estrutura_01_a	estrutura_01	estrutura	LEFT	States should be able to defy federal government decisions when the local population disagrees.
+estrutura_01_b	estrutura_01	estrutura	LEFT	Cities should be able to defy federal government decisions when the local population disagrees.
+estrutura_02_a	estrutura_02	estrutura	RIGHT	The whole country should follow the same laws, even against the preferences of each state.
+estrutura_03_a	estrutura_03	estrutura	LEFT	Taxes should be decided as close to the local population as possible.
+estrutura_03_b	estrutura_03	estrutura	LEFT	Public services should be decided as close to the local population as possible.
+estrutura_04_a	estrutura_04	estrutura	RIGHT	A single national school curriculum is better than each state teaching its own way.
+estrutura_05_a	estrutura_05	estrutura	LEFT	Each state should have its own constitution.
+estrutura_05_b	estrutura_05	estrutura	LEFT	Each state should have its own laws.
+estrutura_05_c	estrutura_05	estrutura	LEFT	Each state should have its own police.
+estrutura_06_a	estrutura_06	estrutura	RIGHT	A single national police force would work better than several autonomous state police forces.
+estrutura_07_a	estrutura_07	estrutura	LEFT	Most taxes should stay in the state or city where they were collected.
+estrutura_08_a	estrutura_08	estrutura	RIGHT	Healthcare should follow strong national command.
+estrutura_08_b	estrutura_08	estrutura	RIGHT	Education should follow strong national command.
+estrutura_08_c	estrutura_08	estrutura	RIGHT	Security should follow strong national command.
+estrutura_09_a	estrutura_09	estrutura	LEFT	States should have the right to secede from the country if the local majority votes for it.
+estrutura_10_a	estrutura_10	estrutura	RIGHT	States compete with each other on taxes.
+estrutura_10_b	estrutura_10	estrutura	RIGHT	Taxes should be set at the national level.
+estrutura_11_a	estrutura_11	estrutura	LEFT	Indigenous communities should be able to live under their own rules within their territories.
+estrutura_11_b	estrutura_11	estrutura	LEFT	Traditional communities should be able to live under their own rules within their territories.
+estrutura_12_a	estrutura_12	estrutura	RIGHT	Labor laws should be the same across the whole country.
+estrutura_12_b	estrutura_12	estrutura	RIGHT	Labor laws should exclude local negotiations.
+estrutura_13_a	estrutura_13	estrutura	LEFT	Cities should be able to create their own laws, even ones different from national laws.
+estrutura_14_a	estrutura_14	estrutura	RIGHT	When a governor and the president clash, the final word should belong to the president.
+estrutura_15_a	estrutura_15	estrutura	LEFT	My country would work better as a union of nearly independent states.
+estrutura_16_a	estrutura_16	estrutura	RIGHT	The federal government should be able to overturn state laws that go against the national interest.
+estrutura_16_b	estrutura_16	estrutura	RIGHT	The federal government should be able to overturn local laws that go against the national interest.
+estrutura_17_a	estrutura_17	estrutura	LEFT	Regions with a strong cultural identity should have more political autonomy.
+estrutura_18_a	estrutura_18	estrutura	RIGHT	Separatist movements should be treated as a crime against the unity of the country.
+estrutura_19_a	estrutura_19	estrutura	LEFT	Education works better when run by local governments than by the national capital.
+estrutura_19_b	estrutura_19	estrutura	LEFT	Healthcare works better when run by local governments than by the national capital.
+estrutura_20_a	estrutura_20	estrutura	RIGHT	Governors should simply carry out the central government's orders.
+estrutura_20_b	estrutura_20	estrutura	RIGHT	Mayors should simply carry out the central government's orders.
+representacao_01_a	representacao_01	representacao	LEFT	Free elections must be kept even when they elect bad governments.
+representacao_02_a	representacao_02	representacao	RIGHT	In serious crises, a strong leader should be able to govern without depending on the legislature.
+representacao_03_a	representacao_03	representacao	LEFT	The press must be able to harshly criticize any government.
+representacao_03_b	representacao_03	representacao	LEFT	The opposition must be able to harshly criticize any government.
+representacao_03_c	representacao_03	representacao	LEFT	Protests must be able to harshly criticize any government.
+representacao_04_a	representacao_04	representacao	RIGHT	Most voters vote without understanding the issues that are at stake.
+representacao_05_a	representacao_05	representacao	LEFT	Constitutional courts, such as a supreme court, should be able to strike down majority-backed laws that violate the constitution.
+representacao_06_a	representacao_06	representacao	RIGHT	A country advances more with a competent leader than with hotly contested elections all the time.
+representacao_07_a	representacao_07	representacao	LEFT	Secret suffrage is non-negotiable, even for poorly informed voters.
+representacao_07_b	representacao_07	representacao	LEFT	Universal suffrage is non-negotiable, even for poorly informed voters.
+representacao_08_a	representacao_08	representacao	RIGHT	A ruler who delivers results deserves to stay in power for as long as they are capable.
+representacao_09_a	representacao_09	representacao	LEFT	The people should be able to overturn laws by referendum, without depending on the legislature.
+representacao_10_a	representacao_10	representacao	RIGHT	A monarchy can give a country more stability than constant elections.
+representacao_11_a	representacao_11	representacao	LEFT	Voters should be able to remove a bad politician from office before the end of the term.
+representacao_12_a	representacao_12	representacao	RIGHT	Some dictatorships developed their countries faster than many democracies.
+representacao_13_a	representacao_13	representacao	LEFT	Public offices could be assigned by lottery among ordinary citizens, like a jury.
+representacao_13_b	representacao_13	representacao	RIGHT	Public offices should cease to be assigned through elections.
+representacao_14_a	representacao_14	representacao	RIGHT	A government of experts chosen by merit would be better than elected politicians.
+representacao_15_a	representacao_15	representacao	LEFT	No one should govern without having gone through the popular vote.
+representacao_16_a	representacao_16	representacao	RIGHT	The right to vote should be restricted; not every adult should be allowed to vote.
+representacao_17_a	representacao_17	representacao	LEFT	A society organized by assemblies could work.
+representacao_17_b	representacao_17	representacao	LEFT	A society without professional rulers could work.
+representacao_18_a	representacao_18	representacao	RIGHT	Deep reforms take time.
+representacao_18_b	representacao_18	representacao	RIGHT	Deep reforms should not be interrupted by frequent elections.
+representacao_19_a	representacao_19	representacao	LEFT	Even a government elected by a huge majority must respect all the rights of the opposition.
+representacao_20_a	representacao_20	representacao	RIGHT	A dictatorship can be legitimate if it guarantees order.
+representacao_20_b	representacao_20	representacao	RIGHT	A dictatorship can be legitimate if it guarantees security.
+representacao_20_c	representacao_20	representacao	RIGHT	A dictatorship can be legitimate if it guarantees prosperity.
+poder_01_a	poder_01	poder	LEFT	In areas dominated by crime, tough police operations are acceptable.
+poder_01_b	poder_01	poder	LEFT	In areas dominated by crime, neighborhood-wide search warrants are acceptable.
+poder_02_a	poder_02	poder	RIGHT	Marijuana should be legalized for production among adults.
+poder_02_b	poder_02	poder	RIGHT	Marijuana should be legalized for sale among adults.
+poder_02_c	poder_02	poder	RIGHT	Marijuana should be legalized for use among adults.
+poder_03_a	poder_03	poder	LEFT	The state should be able to monitor digital conversations to prevent terrorism.
+poder_03_b	poder_03	poder	LEFT	The state should be able to monitor digital conversations to prevent organized crime.
+poder_04_a	poder_04	poder	RIGHT	Freedom of speech must apply even to extremist ideas.
+poder_04_b	poder_04	poder	RIGHT	Freedom of speech must apply even to offensive ideas.
+poder_05_a	poder_05	poder	LEFT	Facial recognition cameras in the streets reduce crime.
+poder_05_b	poder_05	poder	LEFT	Facial recognition cameras in the streets should be expanded.
+poder_06_a	poder_06	poder	RIGHT	Adult consensual drug use should not be a police matter.
+poder_06_b	poder_06	poder	RIGHT	Adult consensual gambling should not be a police matter.
+poder_06_c	poder_06	poder	RIGHT	Adult consensual prostitution should not be a police matter.
+poder_07_a	poder_07	poder	LEFT	The state should be able to ban parties that threaten public order.
+poder_07_b	poder_07	poder	LEFT	The state should be able to ban groups that threaten public order.
+poder_08_a	poder_08	poder	RIGHT	All drugs, including cocaine, should be legalized for adults.
+poder_09_a	poder_09	poder	LEFT	Civilian access to firearms should be severely restricted by law.
+poder_10_a	poder_10	poder	RIGHT	Law-abiding citizens should be able to use guns to defend their home.
+poder_10_b	poder_10	poder	RIGHT	Law-abiding citizens should be able to use guns to defend their family.
+poder_11_a	poder_11	poder	LEFT	In serious situations, curfews are legitimate tools.
+poder_11_b	poder_11	poder	LEFT	In serious situations, states of emergency are legitimate tools.
+poder_12_a	poder_12	poder	RIGHT	Voluntary euthanasia should be legalized for people suffering from terminal illnesses.
+poder_13_a	poder_13	poder	LEFT	Vaccination should be mandatory, even against the will of those who refuse.
+poder_14_a	poder_14	poder	RIGHT	It is better to let a guilty person go free than to convict an innocent one.
+poder_15_a	poder_15	poder	LEFT	The death penalty should be adopted for rape.
+poder_15_b	poder_15	poder	LEFT	The death penalty should be adopted for murder.
+poder_16_a	poder_16	poder	RIGHT	Any law that bans what adults do in private is an abuse by the state.
+poder_17_a	poder_17	poder	LEFT	The government should be able to take down websites that spread fake news.
+poder_17_b	poder_17	poder	LEFT	The government should be able to take down profiles that spread fake news.
+poder_18_a	poder_18	poder	RIGHT	Instant digital payment systems give the government power to monitor every purchase.
+poder_18_b	poder_18	poder	RIGHT	Government power to monitor every purchase is dangerous.
+poder_19_a	poder_19	poder	LEFT	Terrorism suspects should be held without trial until the threat has passed.
+poder_20_a	poder_20	poder	RIGHT	No one should be forced to unlock their phone for the police.
+imigracao_01_a	imigracao_01	imigracao	LEFT	Those who immigrate to a country should learn the local language.
+imigracao_01_b	imigracao_01	imigracao	LEFT	Those who immigrate to a country should adopt local customs.
+imigracao_02_a	imigracao_02	imigracao	RIGHT	A multicultural society should live with several languages in everyday life.
+imigracao_03_a	imigracao_03	imigracao	LEFT	Closing the borders may be necessary to preserve a country's cultural identity.
+imigracao_04_a	imigracao_04	imigracao	RIGHT	A society that welcomes different customs becomes richer.
+imigracao_04_b	imigracao_04	imigracao	RIGHT	A society that welcomes different customs becomes more creative.
+imigracao_05_a	imigracao_05	imigracao	LEFT	Some cultures and peoples have customs incompatible with a free society.
+imigracao_06_a	imigracao_06	imigracao	RIGHT	Immigrants should not have to abandon their customs to live well in the country.
+imigracao_07_a	imigracao_07	imigracao	LEFT	Preserving national traditions matters more than accommodating foreign customs.
+imigracao_08_a	imigracao_08	imigracao	RIGHT	The mix of languages in the same territory is a sign of progress.
+imigracao_08_b	imigracao_08	imigracao	RIGHT	The mix of cultures in the same territory is a sign of progress.
+imigracao_08_c	imigracao_08	imigracao	LEFT	The mix of languages and cultures in the same territory is a sign of crisis.
+imigracao_09_a	imigracao_09	imigracao	LEFT	Countries have the right to prefer immigrants from cultures similar to their own.
+imigracao_10_a	imigracao_10	imigracao	RIGHT	The cultures brought by peoples from other continents are part of my country's identity.
+imigracao_11_a	imigracao_11	imigracao	LEFT	Requiring immigrants to adapt to the local culture is free of prejudice.
+imigracao_11_b	imigracao_11	imigracao	LEFT	Requiring immigrants to adapt to the local culture is a necessary condition for living together.
+imigracao_12_a	imigracao_12	imigracao	RIGHT	My country does the right thing by taking in refugees from neighboring countries in crisis.
+imigracao_13_a	imigracao_13	imigracao	LEFT	A people that loses its language ceases to exist as a nation.
+imigracao_13_b	imigracao_13	imigracao	LEFT	A people that loses its customs ceases to exist as a nation.
+imigracao_14_a	imigracao_14	imigracao	RIGHT	Judging an entire culture as backward is prejudice.
+imigracao_14_b	imigracao_14	imigracao	RIGHT	Judging an entire culture as dangerous is prejudice.
+imigracao_14_c	imigracao_14	imigracao	LEFT	Judging an entire culture as backward or dangerous supplies a valid argument.
+imigracao_15_a	imigracao_15	imigracao	LEFT	Immigrant neighborhoods that live closed off in their own culture create problems for the country.
+imigracao_16_a	imigracao_16	imigracao	RIGHT	Children of immigrants should also be able to study in their parents' language, in bilingual schools.
+imigracao_17_a	imigracao_17	imigracao	LEFT	Ideally, each people would live separately in its own territory, without mixing cultures.
+imigracao_18_a	imigracao_18	imigracao	RIGHT	Borders should be open: any peaceful person could live in any country.
+imigracao_19_a	imigracao_19	imigracao	LEFT	Illegal immigrants should face mass deportation, with no exceptions.
+imigracao_20_a	imigracao_20	imigracao	RIGHT	The idea of national identity is outdated.
+imigracao_20_b	imigracao_20	imigracao	RIGHT	We are all citizens of the world.
+diplomacia_01_a	diplomacia_01	diplomacia	LEFT	A country is only respected in the world if it has strong armed forces.
+diplomacia_02_a	diplomacia_02	diplomacia	RIGHT	Negotiation and diplomacy must be exhausted before any military action.
+diplomacia_03_a	diplomacia_03	diplomacia	LEFT	Preemptive strikes are acceptable against enemies preparing to attack.
+diplomacia_04_a	diplomacia_04	diplomacia	RIGHT	Wars are almost never worth it, even against hostile regimes.
+diplomacia_05_a	diplomacia_05	diplomacia	LEFT	Heavy defense spending is necessary, even with other areas needing the money.
+diplomacia_06_a	diplomacia_06	diplomacia	RIGHT	Smart diplomacy prevents more conflicts than a heavy military arsenal.
+diplomacia_07_a	diplomacia_07	diplomacia	LEFT	My country should pursue nuclear weapons.
+diplomacia_07_b	diplomacia_07	diplomacia	LEFT	My country should be independent of a foreign power's military protection.
+diplomacia_08_a	diplomacia_08	diplomacia	RIGHT	The more countries spend on weapons, the greater the risk of war for everyone.
+diplomacia_09_a	diplomacia_09	diplomacia	LEFT	Mandatory military service makes citizens more disciplined.
+diplomacia_09_b	diplomacia_09	diplomacia	LEFT	Mandatory military service makes citizens more patriotic.
+diplomacia_10_a	diplomacia_10	diplomacia	RIGHT	Disarmament agreements do more for peace than arms races.
+diplomacia_11_a	diplomacia_11	diplomacia	LEFT	The country should have its own arms industry.
+diplomacia_11_b	diplomacia_11	diplomacia	LEFT	The country should avoid dependence on buying arms from abroad.
+diplomacia_12_a	diplomacia_12	diplomacia	RIGHT	No political or ideological cause justifies starting a war.
+diplomacia_13_a	diplomacia_13	diplomacia	LEFT	Espionage is a legitimate tool of a state.
+diplomacia_13_b	diplomacia_13	diplomacia	LEFT	Covert military operations are legitimate tools of a state.
+diplomacia_14_a	diplomacia_14	diplomacia	RIGHT	International courts should judge war crimes, including those of allied countries.
+diplomacia_15_a	diplomacia_15	diplomacia	LEFT	Drones provide a decisive military advantage.
+diplomacia_15_b	diplomacia_15	diplomacia	LEFT	Autonomous weapons provide a decisive military advantage.
+diplomacia_15_c	diplomacia_15	diplomacia	LEFT	My country should develop drones as weapons.
+diplomacia_15_d	diplomacia_15	diplomacia	LEFT	My country should develop autonomous weapons.
+diplomacia_16_a	diplomacia_16	diplomacia	RIGHT	Even with hostile regimes, dialogue usually works better than threats.
+diplomacia_17_a	diplomacia_17	diplomacia	LEFT	My country should be ready to start a war if that secures its vital interests.
+diplomacia_18_a	diplomacia_18	diplomacia	RIGHT	My country should abolish its armed forces.
+diplomacia_18_b	diplomacia_18	diplomacia	RIGHT	Costa Rica abolished its armed forces.
+diplomacia_19_a	diplomacia_19	diplomacia	LEFT	Peace only exists when the enemy knows the response to an attack will be devastating.
+diplomacia_20_a	diplomacia_20	diplomacia	RIGHT	The UN should have more power to prevent wars.
+diplomacia_20_b	diplomacia_20	diplomacia	RIGHT	International organizations should have more power to prevent wars.
+intervencao_01_a	intervencao_01	intervencao	LEFT	No country has the right to try to change another country's government.
+intervencao_02_a	intervencao_02	intervencao	RIGHT	Pressuring other countries is legitimate when the national interest is at stake.
+intervencao_03_a	intervencao_03	intervencao	LEFT	Military alliances end up dragging countries into wars that are not their own.
+intervencao_04_a	intervencao_04	intervencao	RIGHT	Foreign policy should pursue national advantage.
+intervencao_04_b	intervencao_04	intervencao	RIGHT	Foreign policy should pursue sovereignty.
+intervencao_04_c	intervencao_04	intervencao	RIGHT	Foreign policy should pursue influence.
+intervencao_04_d	intervencao_04	intervencao	RIGHT	Foreign policy should disregard international applause.
+intervencao_05_a	intervencao_05	intervencao	LEFT	My country should not send soldiers abroad, not even on peacekeeping missions.
+intervencao_06_a	intervencao_06	intervencao	RIGHT	My country should use its weight to defend its companies abroad.
+intervencao_07_a	intervencao_07	intervencao	LEFT	Even in the face of a genocide in a neighboring country, my country should not get involved militarily.
+intervencao_08_a	intervencao_08	intervencao	RIGHT	Sanctions are legitimate when my country's interests are threatened.
+intervencao_08_b	intervencao_08	intervencao	RIGHT	Diplomatic pressure is legitimate when my country's interests are threatened.
+intervencao_09_a	intervencao_09	intervencao	LEFT	Conflicts between countries should be resolved by international organizations.
+intervencao_09_b	intervencao_09	intervencao	RIGHT	Conflicts between countries should be resolved by great powers.
+intervencao_10_a	intervencao_10	intervencao	RIGHT	My country should exercise political leadership over its region.
+intervencao_11_a	intervencao_11	intervencao	LEFT	My country should avoid closed geopolitical blocs.
+intervencao_11_b	intervencao_11	intervencao	LEFT	My country should avoid permanent alliances.
+intervencao_12_a	intervencao_12	intervencao	RIGHT	Influencing neighboring governments is acceptable when it increases my country's security.
+intervencao_13_a	intervencao_13	intervencao	LEFT	Each people should solve its own problems.
+intervencao_13_b	intervencao_13	intervencao	LEFT	Each people should be free from outside interference.
+intervencao_14_a	intervencao_14	intervencao	RIGHT	My country should use even military force to secure its interests in its region.
+intervencao_15_a	intervencao_15	intervencao	LEFT	Embargoes almost never work.
+intervencao_15_b	intervencao_15	intervencao	LEFT	Sanctions almost never work.
+intervencao_15_c	intervencao_15	intervencao	LEFT	Embargoes end up punishing innocent civilians.
+intervencao_15_d	intervencao_15	intervencao	LEFT	Sanctions end up punishing innocent civilians.
+intervencao_16_a	intervencao_16	intervencao	RIGHT	No international treaty should count for more than the national interest.
+intervencao_17_a	intervencao_17	intervencao	LEFT	My country should remain neutral in wars, even under pressure from allies.
+intervencao_18_a	intervencao_18	intervencao	RIGHT	Countries that defend their interests firmly are more respected.
+intervencao_19_a	intervencao_19	intervencao	LEFT	Keeping military bases in other countries is a waste of money.
+intervencao_20_a	intervencao_20	intervencao	RIGHT	If a neighboring country threatens its citizens, my country should react harshly.
+intervencao_20_b	intervencao_20	intervencao	RIGHT	If a neighboring country threatens its companies, my country should react harshly.
+economia_01_a	economia_01	economia	LEFT	A revolution may be necessary to take economic power out of the hands of the few.
+economia_02_a	economia_02	economia	RIGHT	With competition, private companies provide better services than the state.
+economia_03_a	economia_03	economia	LEFT	A strategic national oil company should remain under public control.
+economia_03_b	economia_03	economia	LEFT	A national postal service should remain under public control.
+economia_04_a	economia_04	economia	RIGHT	Healthcare should run mainly through private enterprise.
+economia_04_b	economia_04	economia	RIGHT	Education should run mainly through private enterprise.
+economia_04_c	economia_04	economia	RIGHT	Pensions should run mainly through private enterprise.
+economia_05_a	economia_05	economia	LEFT	Factories should belong to the workers or to society.
+economia_05_b	economia_05	economia	LEFT	Banks should belong to the workers or to society.
+economia_05_c	economia_05	economia	LEFT	Large companies should belong to the workers or to society.
+economia_05_d	economia_05	economia	RIGHT	Factories, banks, and large companies should belong to private owners.
+economia_06_a	economia_06	economia	RIGHT	Roads could be private services, paid for by those who use them.
+economia_06_b	economia_06	economia	RIGHT	Police could be private services, paid for by those who use them.
+economia_06_c	economia_06	economia	RIGHT	Courts could be private services, paid for by those who use them.
+economia_07_a	economia_07	economia	LEFT	When the market excludes the poor, the state should take over the service directly.
+economia_08_a	economia_08	economia	RIGHT	Inheritance must be protected from any redistribution project.
+economia_08_b	economia_08	economia	RIGHT	Family property must be protected from any redistribution project.
+economia_09_a	economia_09	economia	LEFT	Healthcare should not operate under the logic of profit.
+economia_09_b	economia_09	economia	LEFT	Education should not operate under the logic of profit.
+economia_09_c	economia_09	economia	LEFT	Water should not operate under the logic of profit.
+economia_10_a	economia_10	economia	RIGHT	Collecting taxes is, in the end, a form of theft.
+economia_11_a	economia_11	economia	LEFT	A basic income paid to all citizens would be a civilizational advance.
+economia_12_a	economia_12	economia	RIGHT	Lifetime job security for civil servants makes the state rigid.
+economia_12_b	economia_12	economia	RIGHT	Lifetime job security for civil servants makes the state expensive.
+economia_13_a	economia_13	economia	LEFT	Large private companies concentrate too much power over people's lives.
+economia_14_a	economia_14	economia	RIGHT	Welfare programs create dependency when they last too long.
+economia_15_a	economia_15	economia	LEFT	Land reform is still a necessary measure in my country.
+economia_16_a	economia_16	economia	RIGHT	Workers gain more by negotiating directly with their employer than through unions.
+economia_17_a	economia_17	economia	LEFT	Public development banks are essential for the country's growth.
+economia_18_a	economia_18	economia	RIGHT	Private property must be respected even when it generates great inequality.
+economia_19_a	economia_19	economia	LEFT	My country's privatizations sold public assets for far less than they were worth.
+economia_20_a	economia_20	economia	RIGHT	The state is almost always less efficient than the private sector.
+controle_01_a	controle_01	controle	LEFT	The government should plan energy as a strategic sector.
+controle_01_b	controle_01	controle	LEFT	The government should plan housing as a strategic sector.
+controle_01_c	controle_01	controle	LEFT	The government should plan industry as a strategic sector.
+controle_02_a	controle_02	controle	RIGHT	The free market sets prices better than any politician.
+controle_02_b	controle_02	controle	RIGHT	The free market sets wages better than any politician.
+controle_03_a	controle_03	controle	LEFT	The central bank should obey the elected government.
+controle_03_b	controle_03	controle	RIGHT	The central bank should act with total independence.
+controle_04_a	controle_04	controle	RIGHT	Companies should be able to hire with minimal interference.
+controle_04_b	controle_04	controle	RIGHT	Companies should be able to fire with minimal interference.
+controle_04_c	controle_04	controle	RIGHT	Companies should be able to set prices with minimal interference.
+controle_05_a	controle_05	controle	LEFT	Great fortunes should pay more taxes.
+controle_05_b	controle_05	controle	LEFT	Taxes on great fortunes should fund public policies.
+controle_06_a	controle_06	controle	RIGHT	The lower the tax burden, the more the economy grows.
+controle_07_a	controle_07	controle	LEFT	The state should subsidize the semiconductor industry.
+controle_07_b	controle_07	controle	LEFT	The state should subsidize the steel industry.
+controle_07_c	controle_07	controle	LEFT	The state should subsidize the defense industry.
+controle_08_a	controle_08	controle	RIGHT	A minimum wage that is too high destroys jobs for the poorest.
+controle_09_a	controle_09	controle	LEFT	In serious crises, the government should be able to freeze prices.
+controle_09_b	controle_09	controle	LEFT	In serious crises, the government should be able to freeze rents.
+controle_10_a	controle_10	controle	RIGHT	Freezing prices by law causes shortages.
+controle_10_b	controle_10	controle	RIGHT	Freezing prices by law causes queues.
+controle_10_c	controle_10	controle	RIGHT	Freezing prices by law causes black markets.
+controle_11_a	controle_11	controle	LEFT	The government should choose national champion companies to compete abroad.
+controle_11_b	controle_11	controle	LEFT	The government should support national champion companies to compete abroad.
+controle_12_a	controle_12	controle	RIGHT	Cryptocurrencies like Bitcoin should be able to compete freely with government money.
+controle_13_a	controle_13	controle	LEFT	An economy fully planned by the state would work better than the free market.
+controle_14_a	controle_14	controle	RIGHT	Every new regulation is, in the end, a hidden tax on those who produce.
+controle_15_a	controle_15	controle	LEFT	In a recession, the government should spend more to restart the economy.
+controle_15_b	controle_15	controle	LEFT	In a recession, increased public debt is an acceptable cost of spending to restart the economy.
+controle_16_a	controle_16	controle	RIGHT	An independent central bank is worth more than the current government's political wishes.
+controle_17_a	controle_17	controle	LEFT	The government should be able to control exchange rates to protect itself.
+controle_17_b	controle_17	controle	LEFT	The government should be able to control money leaving the country to protect itself.
+controle_18_a	controle_18	controle	RIGHT	The central bank should be abolished.
+controle_18_b	controle_18	controle	RIGHT	Money should be left to the market.
+controle_18_c	controle_18	controle	RIGHT	Interest rates should be left to the market.
+controle_19_a	controle_19	controle	LEFT	A minimum wage set by law protects workers more than free negotiation does.
+controle_20_a	controle_20	controle	RIGHT	Those who have money should be able to send it abroad without asking the government's permission.
+comercio_01_a	comercio_01	comercio	LEFT	National industry should be protected with tariffs whenever necessary.
+comercio_02_a	comercio_02	comercio	RIGHT	Tariffs should be cut to almost zero, even if some national industries go bankrupt.
+comercio_03_a	comercio_03	comercio	LEFT	Too many imports destroy national industry.
+comercio_03_b	comercio_03	comercio	LEFT	Too many imports create unemployment.
+comercio_04_a	comercio_04	comercio	RIGHT	Free trade agreements with other countries make the economy grow.
+comercio_05_a	comercio_05	comercio	LEFT	My country should produce domestically everything it consumes.
+comercio_05_b	comercio_05	comercio	LEFT	Paying much more is acceptable to produce everything domestically.
+comercio_06_a	comercio_06	comercio	RIGHT	The more open to the world, the more innovation reaches the consumer.
+comercio_06_b	comercio_06	comercio	RIGHT	The more open to the world, the more quality reaches the consumer.
+comercio_07_a	comercio_07	comercio	LEFT	The government should limit imports that threaten local industry.
+comercio_07_b	comercio_07	comercio	LEFT	The government should limit imports that threaten local jobs.
+comercio_08_a	comercio_08	comercio	RIGHT	The world would be better off without economic borders, working as a single global market.
+comercio_09_a	comercio_09	comercio	LEFT	Foreign companies should be banned from buying my country's strategic land.
+comercio_09_b	comercio_09	comercio	LEFT	Foreign companies should be banned from buying my country's strategic companies.
+comercio_10_a	comercio_10	comercio	RIGHT	The European Union brings more gains than losses as a trade bloc.
+comercio_10_b	comercio_10	comercio	RIGHT	Mercosur brings more gains than losses as a trade bloc.
+comercio_11_a	comercio_11	comercio	LEFT	Food security means producing food in your own country.
+comercio_11_b	comercio_11	comercio	RIGHT	Food security means depending on cheap imports.
+comercio_12_a	comercio_12	comercio	RIGHT	Foreign investment creates jobs.
+comercio_12_b	comercio_12	comercio	RIGHT	Foreign investment brings technology to the country.
+comercio_13_a	comercio_13	comercio	LEFT	Purchases by the government should give priority to national companies.
+comercio_13_b	comercio_13	comercio	LEFT	Purchases by state companies should give priority to national companies.
+comercio_14_a	comercio_14	comercio	RIGHT	International trade helps reduce poverty in every part of the world.
+comercio_15_a	comercio_15	comercio	LEFT	Cheap Chinese electric cars threaten local factories.
+comercio_15_b	comercio_15	comercio	LEFT	Cheap Chinese electric cars should pay tariffs to protect local factories.
+comercio_16_a	comercio_16	comercio	RIGHT	Import tariffs in my country benefit a few business owners.
+comercio_16_b	comercio_16	comercio	RIGHT	Import tariffs in my country make life more expensive for everyone.
+comercio_17_a	comercio_17	comercio	LEFT	Medicine supply chains should be protected from foreign competition.
+comercio_17_b	comercio_17	comercio	LEFT	Chip supply chains should be protected from foreign competition.
+comercio_18_a	comercio_18	comercio	RIGHT	Multinationals pay taxes.
+comercio_18_b	comercio_18	comercio	RIGHT	Multinationals create jobs.
+comercio_18_c	comercio_18	comercio	RIGHT	Multinationals train local workers.
+comercio_19_a	comercio_19	comercio	LEFT	Economic sovereignty is worth more than low prices at the supermarket.
+comercio_20_a	comercio_20	comercio	RIGHT	Globalization has raised the standard of living of most of humanity.
+religiao_01_a	religiao_01	religiao	LEFT	Religion is a personal matter.
+religiao_01_b	religiao_01	religiao	LEFT	Religion should not influence public policy.
+religiao_02_a	religiao_02	religiao	RIGHT	Faith should guide my moral choices.
+religiao_02_b	religiao_02	religiao	RIGHT	Faith should guide my political choices.
+religiao_03_a	religiao_03	religiao	LEFT	Laws should be neutral among religions.
+religiao_03_b	religiao_03	religiao	LEFT	Laws should not follow the values of any religion.
+religiao_04_a	religiao_04	religiao	RIGHT	The country's laws should reflect the values of the majority religion.
+religiao_05_a	religiao_05	religiao	LEFT	Churches should pay taxes like any other organization.
+religiao_05_b	religiao_05	religiao	LEFT	Temples should pay taxes like any other organization.
+religiao_06_a	religiao_06	religiao	RIGHT	Religion makes family life stronger.
+religiao_06_b	religiao_06	religiao	RIGHT	Religion makes life in the community stronger.
+religiao_07_a	religiao_07	religiao	LEFT	Public schools should not display religious symbols.
+religiao_07_b	religiao_07	religiao	LEFT	Public courts should not display religious symbols.
+religiao_08_a	religiao_08	religiao	RIGHT	The state in my country should officially adopt a religious identity.
+religiao_09_a	religiao_09	religiao	LEFT	A society guided by science works better than one guided by faith.
+religiao_10_a	religiao_10	religiao	RIGHT	Religious traditions should be preserved in the family.
+religiao_10_b	religiao_10	religiao	RIGHT	Religious traditions should be passed on to children.
+religiao_11_a	religiao_11	religiao	LEFT	In the end, humanity would be better off without any religion.
+religiao_12_a	religiao_12	religiao	RIGHT	Pushing God out of public life caused part of today's moral problems.
+religiao_13_a	religiao_13	religiao	LEFT	Religious holidays should not be official in a secular state.
+religiao_14_a	religiao_14	religiao	RIGHT	Marriage is a sacred institution.
+religiao_14_b	religiao_14	religiao	RIGHT	Family is a sacred institution.
+religiao_14_c	religiao_14	religiao	LEFT	Marriage is adequately understood as a contract.
+religiao_14_d	religiao_14	religiao	LEFT	Family is adequately understood as a contract.
+religiao_15_a	religiao_15	religiao	LEFT	The word God should not appear in the constitution.
+religiao_15_b	religiao_15	religiao	LEFT	The word God should not appear on the currency.
+religiao_16_a	religiao_16	religiao	RIGHT	Religion gives life meaning.
+religiao_16_b	religiao_16	religiao	RIGHT	No philosophy can provide the meaning that religion provides.
+religiao_17_a	religiao_17	religiao	LEFT	Teaching religion to young children is a form of indoctrination.
+religiao_18_a	religiao_18	religiao	RIGHT	When the law of men contradicts the law of God, the law of God comes first.
+religiao_19_a	religiao_19	religiao	LEFT	You do not need to believe in God to be ethical.
+religiao_19_b	religiao_19	religiao	LEFT	You do not need to believe in God to be a good person.
+religiao_20_a	religiao_20	religiao	RIGHT	Religious faith is part of the national identity.
+religiao_20_b	religiao_20	religiao	RIGHT	Religious faith deserves protection.
+moral_01_a	moral_01	moral	LEFT	Same-sex couples raise children just as well as couples of a man and a woman.
+moral_02_a	moral_02	moral	RIGHT	The traditional family should still guide society.
+moral_02_b	moral_02	moral	RIGHT	Good customs should still guide society.
+moral_03_a	moral_03	moral	LEFT	The gender identity declared by each person must be respected.
+moral_04_a	moral_04	moral	RIGHT	Cultural changes that come too fast end up destabilizing the whole of society.
+moral_05_a	moral_05	moral	LEFT	Racial quotas correct a historical injustice.
+moral_05_b	moral_05	moral	LEFT	Racial quotas are still necessary.
+moral_06_a	moral_06	moral	RIGHT	Real marriage is between a man and a woman.
+moral_07_a	moral_07	moral	LEFT	LGBT couples should be able to show affection in public like any other couple.
+moral_08_a	moral_08	moral	RIGHT	Racial quotas deepen division by color.
+moral_08_b	moral_08	moral	LEFT	Racial quotas overcome division by color.
+moral_09_a	moral_09	moral	LEFT	Abortion early in pregnancy can be a morally acceptable choice.
+moral_10_a	moral_10	moral	RIGHT	Abortion is wrong.
+moral_10_b	moral_10	moral	RIGHT	Abortion ends a human life.
+moral_11_a	moral_11	moral	LEFT	Children should learn about sexuality without taboos.
+moral_11_b	moral_11	moral	LEFT	Children should learn about gender without taboos.
+moral_11_c	moral_11	moral	LEFT	Teenagers should learn about sexuality without taboos.
+moral_11_d	moral_11	moral	LEFT	Teenagers should learn about gender without taboos.
+moral_12_a	moral_12	moral	RIGHT	Children's sex education should follow the family's values.
+moral_12_b	moral_12	moral	LEFT	Children's sex education should follow the school's values.
+moral_13_a	moral_13	moral	LEFT	Prostitution is a job like any other.
+moral_13_b	moral_13	moral	LEFT	Prostitution deserves the same respect as other jobs.
+moral_14_a	moral_14	moral	RIGHT	Gender-neutral language is an ideological imposition.
+moral_14_b	moral_14	moral	RIGHT	Gender-neutral language distorts the language.
+moral_15_a	moral_15	moral	LEFT	Reducing meat consumption expresses respect for animals.
+moral_15_b	moral_15	moral	LEFT	Reducing meat consumption out of respect for animals is a moral advance.
+moral_16_a	moral_16	moral	RIGHT	Pornography is a sign of moral decay.
+moral_16_b	moral_16	moral	RIGHT	Prostitution is a sign of moral decay.
+moral_16_c	moral_16	moral	RIGHT	Drugs are a sign of moral decay.
+moral_17_a	moral_17	moral	LEFT	Open relationships are choices as legitimate as traditional marriage.
+moral_17_b	moral_17	moral	LEFT	Polyamory is a choice as legitimate as traditional marriage.
+moral_18_a	moral_18	moral	RIGHT	A woman's most important role is caring for the family.
+moral_18_b	moral_18	moral	RIGHT	A woman's most important role is caring for the home.
+moral_19_a	moral_19	moral	LEFT	Nudity in film should not scandalize anyone.
+moral_19_b	moral_19	moral	LEFT	Nudity in art should not scandalize anyone.
+moral_19_c	moral_19	moral	LEFT	Nudity on beaches should not scandalize anyone.
+moral_20_a	moral_20	moral	RIGHT	Parents should be the final authority in their children's moral education.
+tecnologia_01_a	tecnologia_01	tecnologia	LEFT	Nuclear energy should be embraced without excessive fear.
+tecnologia_01_b	tecnologia_01	tecnologia	LEFT	AI should be embraced without excessive fear.
+tecnologia_01_c	tecnologia_01	tecnologia	LEFT	Genetic engineering should be embraced without excessive fear.
+tecnologia_02_a	tecnologia_02	tecnologia	RIGHT	Humanity would live better with less technology.
+tecnologia_02_b	tecnologia_02	tecnologia	RIGHT	Humanity would live better in a simpler, more natural way of life.
+tecnologia_03_a	tecnologia_03	tecnologia	LEFT	AI is welcome.
+tecnologia_03_b	tecnologia_03	tecnologia	LEFT	Automation is welcome.
+tecnologia_03_c	tecnologia_03	tecnologia	LEFT	Eliminating many current professions is an acceptable cost of AI and automation.
+tecnologia_04_a	tecnologia_04	tecnologia	RIGHT	Technologies that alter the human body should be blocked.
+tecnologia_04_b	tecnologia_04	tecnologia	RIGHT	Technologies that alter the human mind should be blocked.
+tecnologia_04_c	tecnologia_04	tecnologia	RIGHT	Technologies that alter human reproduction should be blocked.
+tecnologia_05_a	tecnologia_05	tecnologia	LEFT	GMO crops have fed billions of people.
+tecnologia_05_b	tecnologia_05	tecnologia	LEFT	GMO crops should keep being developed.
+tecnologia_06_a	tecnologia_06	tecnologia	RIGHT	Pesticides do more damage to the environment than they add to production.
+tecnologia_07_a	tecnologia_07	tecnologia	LEFT	It is possible to mine in rainforests while keeping the forest standing.
+tecnologia_07_b	tecnologia_07	tecnologia	LEFT	It is possible to extract other resources from rainforests while keeping the forest standing.
+tecnologia_08_a	tecnologia_08	tecnologia	RIGHT	Preserved nature is worth more than accelerated industrial growth.
+tecnologia_09_a	tecnologia_09	tecnologia	LEFT	Editing embryos' genes to create smarter people is a legitimate advance.
+tecnologia_09_b	tecnologia_09	tecnologia	LEFT	Editing embryos' genes to create healthier people is a legitimate advance.
+tecnologia_10_a	tecnologia_10	tecnologia	RIGHT	Global warming is an emergency.
+tecnologia_10_b	tecnologia_10	tecnologia	RIGHT	Global warming demands immediate changes in our way of life.
+tecnologia_11_a	tecnologia_11	tecnologia	LEFT	Exploring space is a natural destiny for humanity.
+tecnologia_11_b	tecnologia_11	tecnologia	LEFT	Colonizing other planets is a natural destiny for humanity.
+tecnologia_12_a	tecnologia_12	tecnologia	RIGHT	Even clean mining in untouched rainforests crosses a line that should not be crossed.
+tecnologia_13_a	tecnologia_13	tecnologia	LEFT	Life in big cities offers more opportunities than life in the countryside.
+tecnologia_14_a	tecnologia_14	tecnologia	RIGHT	Editing embryos to choose intelligence crosses an ethical line.
+tecnologia_14_b	tecnologia_14	tecnologia	RIGHT	Editing embryos to choose looks crosses an ethical line.
+tecnologia_15_a	tecnologia_15	tecnologia	LEFT	Brain implants to expand human capacities are a legitimate path.
+tecnologia_15_b	tecnologia_15	tecnologia	LEFT	Prosthetics to expand human capacities are a legitimate path.
+tecnologia_16_a	tecnologia_16	tecnologia	RIGHT	Solving Earth's problems comes before spending billions on space.
+tecnologia_17_a	tecnologia_17	tecnologia	LEFT	Lab-grown meat is an advance.
+tecnologia_17_b	tecnologia_17	tecnologia	LEFT	Lab-grown meat can replace livestock farming.
+tecnologia_18_a	tecnologia_18	tecnologia	RIGHT	The simple life of the countryside is healthier than life in big cities.
+tecnologia_19_a	tecnologia_19	tecnologia	LEFT	Against global warming, relying on technology makes more sense than cutting consumption.
+tecnologia_20_a	tecnologia_20	tecnologia	RIGHT	The human body should not be enhanced with chips.
+tecnologia_20_b	tecnologia_20	tecnologia	RIGHT	The human body should not be enhanced with other artificial modifications.

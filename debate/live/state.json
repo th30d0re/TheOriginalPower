@@ -1,0 +1,6 @@
+{
+  "ts": 7,
+  "topic": "police",
+  "note": "New: the lead argument. Say \"more than half\", never a number. Then the who-paid turn — that is what makes it yours.",
+  "active": ["lead", "lead-who-paid"]
+}
