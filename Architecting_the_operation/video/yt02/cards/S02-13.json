@@ -2,10 +2,10 @@
   "kind": "equation",
   "headline": "Requirement 2 · Policed System Boundary",
   "number": "Equations 2.1 & 4.2",
-  "latex": "U = I \\sqcup O, \\quad I \\cap O = \\emptyset, \\quad I_{\\mathrm{buffer}} \\cap O_{\\mathrm{racialized}} = \\emptyset",
+  "latex": "U = I \\dot{\\cup} O, \\quad I \\cap O = \\emptyset, \\quad I_{\\mathrm{buffer}} \\cap O_{\\mathrm{racialized}} = \\emptyset",
   "terms": [
     {
-      "latex": "U = I \\sqcup O",
+      "latex": "U = I \\dot{\\cup} O",
       "gloss": "Total population partitioned into dominant In-group and marginalized Out-group"
     },
     {

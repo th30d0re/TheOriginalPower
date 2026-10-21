@@ -2,7 +2,7 @@
   "kind": "equation",
   "headline": "Level 1 · Coarse Binary Partition",
   "number": "Equation 2.1",
-  "latex": "U = I \\sqcup O, \\quad I \\cap O = \\emptyset",
+  "latex": "U = I \\dot{\\cup} O, \\quad I \\cap O = \\emptyset",
   "terms": [
     {
       "latex": "I,\\; O",

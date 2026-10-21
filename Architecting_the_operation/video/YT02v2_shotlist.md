@@ -210,217 +210,215 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 ## S01-15 — Bayesian Defense · priors
 - **Anchor:** `Emmanuel Theodore (05:41)`
 - **Type:** card
-- **Render:** `figma-card:cards/S01-42.json`
+- **Render:** `figma-card:cards/S01-14.json`
 - **Note:** Item 1 opens predictive-coding priors; subsequent items reveal Pi_sub_race, earned medical wariness, and RLC pairing. [book §Bayesian Defense]
 
 ## S01-16 — Construct 1: evaluative bias
 - **Anchor:** `Emmanuel Theodore (05:53)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S01-42.json`
+- **Render:** `figma-card:cards/S01-14.json`
 - **Holds:** `S01-15`
 - **Note:** Column 1 of the comparison card reveals, defining evaluative bias in perception, judgment, and attribution. [book Preface; §2.2]
 
 ## S01-17 — Explicit and implicit cognitive operation
 - **Anchor:** `Emmanuel Theodore (06:07)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S01-42.json`
+- **Render:** `figma-card:cards/S01-14.json`
 - **Holds:** `S01-15`
 - **Note:** Column 2 reveals alongside Column 1, contrasting conscious explicit evaluation with automatic implicit association. [book Preface; §2.2, citing Greenwald & Banaji 1995]
 
 ## S01-18 — Greenwald and Banaji (1995) citation
 - **Anchor:** `Emmanuel Theodore (06:25)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S01-42.json`
+- **Render:** `figma-card:cards/S01-14.json`
 - **Holds:** `S01-15`
 - **Note:** The quotation card opens with the Psychological Review 102(1) header and citation strip. [book Preface; §2.2, citing Greenwald & Banaji 1995, Psychological Review 102(1), 4-27]
 
 ## S01-19 — Verbatim definition of implicit attitudes
 - **Anchor:** `Emmanuel Theodore (06:37)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S01-42.json`
-- **Holds:** `S01-18`
+- **Render:** `figma-card:cards/S01-14.json`
+- **Holds:** `S01-15`
 - **Note:** Greenwald and Banaji's phrase 'introspectively unidentified (or inaccurately identified) traces of past experience' highlights inside the quote panel. [book Preface; §2.2, citing Greenwald & Banaji 1995]
 
 ## S01-20 — Automatic operation despite egalitarian norms
 - **Anchor:** `Emmanuel Theodore (06:46)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S01-42.json`
+- **Render:** `figma-card:cards/S01-14.json`
 - **Holds:** `S01-15`
 - **Note:** The closing clause 'favorable or unfavorable feeling, thought, or action toward social objects' pulses to emphasize automaticity. [book Preface; §2.2, citing Greenwald & Banaji 1995]
 
 ## S01-21 — Greenwald, McGhee, and Schwartz (1998) IAT
 - **Anchor:** `Emmanuel Theodore (06:57)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S01-42.json`
+- **Render:** `figma-card:cards/S01-14.json`
 - **Holds:** `S01-15`
 - **Note:** Item 1 of the 1998 IAT source card appears, citing the Journal of Personality and Social Psychology paper. [external: Greenwald, McGhee, & Schwartz 1998, JPSP 74(6), 1464-1480]
 
 ## S01-22 — Response-latency differential measurement
 - **Anchor:** `Emmanuel Theodore (07:11)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S01-42.json`
+- **Render:** `figma-card:cards/S01-14.json`
 - **Holds:** `S01-15`
 - **Note:** Item 2 reveals, detailing millisecond response-latency differentials in computerized categorization tasks. [external: Greenwald, McGhee, & Schwartz 1998, JPSP 74(6), 1464-1480]
 
 ## S01-23 — Bias as individual cognitive weighting
 - **Anchor:** `Emmanuel Theodore (07:22)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S01-42.json`
+- **Render:** `figma-card:cards/S01-14.json`
 - **Holds:** `S01-15`
 - **Note:** Item 3 reveals, summarizing bias as an evaluative weighting inside an individual actor. [book Preface; §2.2]
 
 ## S01-24 — Construct 2: Allport (1954) on prejudice
 - **Anchor:** `Emmanuel Theodore (07:35)`
 - **Type:** card
-- **Render:** `figma-card:cards/S01-22.json`
+- **Render:** `figma-card:cards/S01-14.json`
 - **Note:** The quote card opens with Gordon Allport's 1954 treatise The Nature of Prejudice, page 9. [book Preface; §2.2, citing Allport 1954, p. 9]
 
 ## S01-25 — Construct 2: Allport (1954) on prejudice
 - **Anchor:** `Emmanuel Theodore (07:42)`
 - **Type:** card
-- **Render:** `figma-card:cards/S01-22.json`
+- **Render:** `figma-card:cards/S01-16.json`
 - **Note:** The quote card opens with Gordon Allport's 1954 treatise The Nature of Prejudice, page 9. [book Preface; §2.2, citing Allport 1954, p. 9]
 
 ## S01-26 — Antipathy and inflexible generalization
 - **Anchor:** `Emmanuel Theodore (07:53)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S01-22.json`
+- **Render:** `figma-card:cards/S01-16.json`
 - **Holds:** `S01-25`
 - **Note:** Allport's phrase 'an antipathy based upon a faulty and inflexible generalization' underlines in accent amber. [book Preface; §2.2, citing Allport 1954, p. 9]
 
 ## S01-27 — Group-directed and member-directed target
 - **Anchor:** `Emmanuel Theodore (08:07)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S01-22.json`
+- **Render:** `figma-card:cards/S01-16.json`
 - **Holds:** `S01-25`
 - **Note:** The second sentence 'directed toward a group as a whole, or toward an individual because he is a member' highlights. [book Preface; §2.2, citing Allport 1954, p. 9]
 
 ## S01-28 — Affective posture coupled to rigid belief
 - **Anchor:** `Emmanuel Theodore (08:19)`
 - **Type:** card
-- **Render:** `figma-card:cards/S01-25.json`
+- **Render:** `figma-card:cards/S01-19.json`
 - **Note:** Item 1 of the Allport refencing card opens, pairing affective antipathy with overgeneralized belief. [book Preface; §2.2, citing Allport 1954]
 
 ## S01-29 — Habitual resistance to contradictory facts
 - **Anchor:** `Emmanuel Theodore (08:31)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S01-25.json`
+- **Render:** `figma-card:cards/S01-19.json`
 - **Holds:** `S01-28`
 - **Note:** Item 2 reveals, noting how habitual prejudice resists correction under strong counter-evidence. [book Preface; §2.2, citing Allport 1954]
 
 ## S01-30 — Refencing contradictory individuals as exceptions
 - **Anchor:** `Emmanuel Theodore (08:41)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S01-25.json`
-- **Holds:** `S01-28`
+- **Render:** `figma-card:cards/S01-14.json`
 - **Note:** Item 3 reveals, illustrating Allport's exception-fencing mechanism that preserves the stereotype. [book Preface; §2.2, citing Allport 1954]
 
 ## S01-31 — Construct 3: discrimination as outward conduct
 - **Anchor:** `Emmanuel Theodore (08:50)`
 - **Type:** card
-- **Render:** `figma-card:cards/S01-28.json`
+- **Render:** `figma-card:cards/S01-22.json`
 - **Note:** The Fiske (1998) tripartite table opens with Row 1, marking the shift from internal state to outward conduct. [book Preface; §2.2, citing Fiske 1998]
 
 ## S01-32 — Fiske (1998) Handbook of Social Psychology
 - **Anchor:** `Emmanuel Theodore (09:04)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S01-28.json`
+- **Render:** `figma-card:cards/S01-22.json`
 - **Holds:** `S01-31`
 - **Note:** Row 2 reveals the citation to Fiske's 1998 synthesis in the fourth edition of the Handbook of Social Psychology. [book Preface; §2.2, citing Fiske 1998]
 
 ## S01-33 — Thinking, feeling, and behavior modalities
 - **Anchor:** `Emmanuel Theodore (09:13)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S01-28.json`
+- **Render:** `figma-card:cards/S01-22.json`
 - **Holds:** `S01-31`
 - **Note:** Row 3 reveals the tripartite division: stereotyping (cognitive), prejudice (affective), and discrimination (behavioral). [book Preface; §2.2, citing Fiske 1998]
 
 ## S01-34 — Thinking, feeling, and behavior modalities
 - **Anchor:** `Emmanuel Theodore (09:23)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S01-28.json`
+- **Render:** `figma-card:cards/S01-22.json`
 - **Holds:** `S01-31`
 - **Note:** Row 3 reveals the tripartite division: stereotyping (cognitive), prejudice (affective), and discrimination (behavioral). [book Preface; §2.2, citing Fiske 1998]
 
 ## S01-35 — Belief, valence, and differential treatment
 - **Anchor:** `Emmanuel Theodore (09:34)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S01-28.json`
-- **Holds:** `S01-31`
+- **Render:** `figma-card:cards/S01-25.json`
 - **Note:** Row 4 reveals the functional mapping from categorical belief and emotional valence to differential action. [book Preface; §2.2, citing Fiske 1998]
 
 ## S01-36 — Concrete interpersonal discrimination examples
 - **Anchor:** `Emmanuel Theodore (09:44)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S01-28.json`
-- **Holds:** `S01-31`
+- **Render:** `figma-card:cards/S01-25.json`
+- **Holds:** `S01-35`
 - **Note:** Row 5 reveals interpersonal examples: exclusion, unequal service, biased grading, and rental refusal. [book Preface; §2.2, citing Fiske 1998]
 
 ## S01-37 — Shared properties across the three constructs
 - **Anchor:** `Emmanuel Theodore (09:56)`
 - **Type:** card
-- **Render:** `figma-card:cards/S01-33.json`
+- **Render:** `figma-card:cards/S01-28.json`
 - **Note:** Item 1 opens on the Interpersonal Class synthesis card, aligning Greenwald and Banaji, Allport, and Fiske. [book Preface; §2.2]
 
 ## S01-38 — Bidirectional interpersonal operations
 - **Anchor:** `Emmanuel Theodore (10:10)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S01-33.json`
+- **Render:** `figma-card:cards/S01-28.json`
 - **Holds:** `S01-37`
 - **Note:** Item 2 reveals, showing that actor-level psychological and behavioral operations can run between any two groups. [book Preface; §2.2]
 
 ## S01-39 — Universal human capacity across phenotypes
 - **Anchor:** `Emmanuel Theodore (10:21)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S01-33.json`
+- **Render:** `figma-card:cards/S01-28.json`
 - **Holds:** `S01-37`
 - **Note:** Item 3 reveals, noting that any human actor can hold bias, feel antipathy, or act with differential treatment. [book Preface; §2.2]
 
 ## S01-40 — Zero requirement of state or capital control
 - **Anchor:** `Emmanuel Theodore (10:35)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S01-33.json`
+- **Render:** `figma-card:cards/S01-28.json`
 - **Holds:** `S01-37`
 - **Note:** Item 4 reveals, specifying that interpersonal bias, prejudice, and discrimination require zero control over courts, police, or capital. [book Preface; §2.2]
 
 ## S01-41 — Assigning the trio to the interpersonal class
 - **Anchor:** `Emmanuel Theodore (10:48)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S01-33.json`
+- **Render:** `figma-card:cards/S01-28.json`
 - **Holds:** `S01-37`
 - **Note:** Item 5 reveals, locking bias, prejudice, and discrimination into the interpersonal taxonomy where their technical names belong. [book Preface; §2.2]
 
 ## S01-42 — Reserving racism for the structural class
 - **Anchor:** `Emmanuel Theodore (10:59)`
 - **Type:** card
-- **Render:** `figma-card:cards/S01-38.json`
+- **Render:** `figma-card:cards/S01-33.json`
 - **Note:** Row 1 of the morphological table reveals, assigning racism to an institutionalized multi-tier extraction system. [book Preface; §2.2]
 
 ## S01-43 — The -ism suffix in English morphology
 - **Anchor:** `Emmanuel Theodore (11:07)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S01-38.json`
+- **Render:** `figma-card:cards/S01-33.json`
 - **Holds:** `S01-42`
 - **Note:** Row 2 reveals, highlighting the suffix -ism across capitalism, feudalism, and colonialism. [book §2.2]
 
 ## S01-44 — The -ism suffix in English morphology
 - **Anchor:** `Emmanuel Theodore (11:17)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S01-38.json`
+- **Render:** `figma-card:cards/S01-33.json`
 - **Holds:** `S01-42`
 - **Note:** Row 2 reveals, highlighting the suffix -ism across capitalism, feudalism, and colonialism. [book §2.2]
 
 ## S01-45 — Capitalism as property and exchange order
 - **Anchor:** `Emmanuel Theodore (11:28)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S01-38.json`
+- **Render:** `figma-card:cards/S01-33.json`
 - **Holds:** `S01-42`
 - **Note:** Row 3 reveals, showing how -ism designates a macro-level legal and property order. [book §2.2]
 
 ## S01-46 — Preserving distinct structural and psychological terms
 - **Anchor:** `Emmanuel Theodore (11:37)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S01-38.json`
+- **Render:** `figma-card:cards/S01-33.json`
 - **Holds:** `S01-42`
 - **Note:** Row 4 reveals, showing why re-labeling private prejudice as racism wastes a macro-structural term. [book Preface; §2.2]
 
@@ -433,8 +431,7 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 ## S01-48 — Separating host wetware from institutional code
 - **Anchor:** `Emmanuel Theodore (11:56)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S01-42.json`
-- **Holds:** `S01-47`
+- **Render:** `figma-card:cards/S02-01.json`
 - **Note:** Column 2 reveals alongside Column 1, distinguishing universal biological host wetware from the institutional extraction code. [book Preface; §2.2]
 
 <!-- SEG 02 · The vector definition of racism -->
@@ -442,13 +439,13 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 ## S02-01 — Formal anatomy of an engineering system
 - **Anchor:** `Emmanuel Theodore (12:08)`
 - **Type:** card
-- **Render:** `figma-card:cards/S02-01.json`
+- **Render:** `figma-card:cards/S13-15.json`
 - **Note:** The Segment 02 title card opens with Item 1, stating the requirement to prove formal systems anatomy. [editorial]
 
 ## S02-02 — Five-part engineering checklist
 - **Anchor:** `Emmanuel Theodore (12:17)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S02-01.json`
+- **Render:** `figma-card:cards/S13-15.json`
 - **Holds:** `S02-01`
 - **Note:** Item 3 reveals, listing components, boundary, inputs/outputs, objective function, and feedback loops. [editorial]
 
@@ -485,31 +482,31 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 ## S02-08 — Elite tier as parasitic control gate
 - **Anchor:** `Emmanuel Theodore (13:36)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S02-16.json`
+- **Render:** `figma-card:cards/S01-42.json`
 - **Note:** Row 2 reveals, showing the Elite apex directing high-current labor flow via a small intermediate control current. [book Preface; Ch 0]
 
 ## S02-09 — Chapter 19 Concession Theorem constraint Δ_max = 0
 - **Anchor:** `Emmanuel Theodore (13:46)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S02-16.json`
+- **Render:** `figma-card:cards/S01-38.json`
 - **Note:** Row 4 reveals, stating the Concession Theorem invariant Δ_max = 0 on non-kinetic status and material allocations. [book §2.3.1; Ch 19]
 
 ## S02-10 — Equation 2.7: maximize E(t) subject to M(t) < τ
 - **Anchor:** `Emmanuel Theodore (13:57)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S02-20.json`
+- **Render:** `figma-card:cards/S13-15.json`
 - **Note:** Term 1 (E(t)) highlights, identifying net upward economic extraction as the maximand. [book §2.3.2, Eq 2.7]
 
 ## S02-11 — Equation 2.11 series RLC parameters L, R, and C
 - **Anchor:** `Emmanuel Theodore (14:08)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S02-23.json`
+- **Render:** `figma-card:cards/S01-42.json`
 - **Note:** Terms 1 and 2 (state inertia L and coercive resistance R) illuminate beneath the differential equation. [book §2.3.6, Eq 2.11]
 
 ## S02-12 — Five-part systems engineering checklist satisfied
 - **Anchor:** `Emmanuel Theodore (14:18)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S02-23.json`
+- **Render:** `figma-card:cards/S01-38.json`
 - **Note:** All three RLC term panels pulse together, completing the five-requirement systems audit. [book Ch 0; Ch 2]
 
 <!-- SEG 03 · Where the agreement ends -->
@@ -523,56 +520,58 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 ## S03-02 — Zero interaction, history, or personal stake
 - **Anchor:** `Emmanuel Theodore (14:34)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S03-02.json`
+- **Render:** `figma-card:cards/S01-33.json`
 - **Note:** Item 3 reveals, noting the absence of face-to-face contact, shared history, or personal financial interest. [book §2.3.4, citing Tajfel & Turner 1979]
 
 ## S03-03 — Automatic cognitive response to a boundary marker
 - **Anchor:** `Emmanuel Theodore (14:50)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S03-02.json`
+- **Render:** `figma-card:cards/S01-33.json`
+- **Holds:** `S03-02`
 - **Note:** Item 5 reveals, summarizing the automatic boundary reflex built into human social cognition. [book Preface; §2.3.4]
 
 ## S03-04 — Set and subset definitions
 - **Anchor:** `Emmanuel Theodore (14:58)`
 - **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/set_primer16x9.py:SetTheoryPrimer as=S02-01`
+- **Render:** `figma-card:cards/S05-06.json`
 - **Note:** A bounded circle A draws inside the population rectangle U, illustrating a set and a proper subset (A ⊂ U). [book §2.1]
 
 ## S03-05 — Equation 2.1: coarse binary partition of U
 - **Anchor:** `Emmanuel Theodore (15:11)`
 - **Type:** card
-- **Render:** `figma-card:cards/S03-12.json`
+- **Render:** `figma-card:cards/S05-06.json`
 - **Note:** The Equation 2.1 card opens, displaying U = I ⊔ O with I ∩ O = ∅ in the main equation box. [book §2.1, Eq 2.1]
 
 ## S03-06 — Statutory and census enforcement of disjointness
 - **Anchor:** `Emmanuel Theodore (15:20)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S03-12.json`
+- **Render:** `figma-card:cards/S05-06.json`
 - **Holds:** `S03-05`
 - **Note:** Term 2 (I ∩ O = ∅) illuminates, attributing disjointness to census rules, slave codes, blood-quantum laws, and immigration statutes. [book §2.1]
 
 ## S03-07 — Equation 2.2: applying the refinement operator Refine(I)
 - **Anchor:** `Emmanuel Theodore (15:31)`
 - **Type:** card
-- **Render:** `figma-card:cards/S03-17.json`
+- **Render:** `figma-card:cards/S05-14.json`
 - **Note:** The Equation 2.2 card opens, displaying Refine(I) = E ⊔ P_uppet ⊔ F_enforce ⊔ I_buffer. [book §2.1, Eq 2.2]
 
 ## S03-08 — Elite (E) and Puppet Class (P_uppet) roles
 - **Anchor:** `Emmanuel Theodore (15:45)`
 - **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/binary_refinement16x9.py:BinaryRefinement as=S03-19`
+- **Render:** `figma-card:cards/S05-06.json`
 - **Note:** The top two bands E (surplus capture and boundary design) and P_uppet (policy, courts, narrative) highlight in sequence. [book Ch 0; §2.1]
 
 ## S03-09 — Preserving set I while exposing internal inequality
 - **Anchor:** `Emmanuel Theodore (15:56)`
 - **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/binary_refinement16x9.py:BinaryRefinement as=S03-19`
+- **Render:** `figma-card:cards/S05-06.json`
+- **Holds:** `S03-08`
 - **Note:** A bracket spans all four bands to mark set I while payoff bars along the right margin display their unequal shares. [book §2.1, Eq 2.2]
 
 ## S03-10 — Equation 2.3: resolving the Out-group O
 - **Anchor:** `Emmanuel Theodore (16:06)`
 - **Type:** card
-- **Render:** `figma-card:cards/S03-25.json`
+- **Render:** `figma-card:cards/S05-06.json`
 - **Note:** The Equation 2.3 card opens, displaying O = O_racialized ⊔ O_adjacent,1 ⊔ … ⊔ O_adjacent,m. [book §2.1, Eq 2.3]
 
 ## S03-11 — O_racialized in the American historical record
@@ -590,20 +589,20 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 ## S03-13 — Secondary axes α: gender, wealth, credentials, record
 - **Anchor:** `Emmanuel Theodore (16:44)`
 - **Type:** diagram
-- **Render:** `manim:yt01_redefining_racism/manim/recursive_partition16x9.py:RecursivePartition as=S03-33`
+- **Render:** `figma-card:cards/S05-06.json`
 - **Note:** The RecursivePartition diagram opens on subset X with the α-axis selector rail listing gender, wealth, credentials, religion, and record. [book §2.1, Eq 2.4]
 
 ## S03-14 — Applying α = gender inside I_buffer (Chapter 8)
 - **Anchor:** `Emmanuel Theodore (16:57)`
 - **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/recursive_partition16x9.py:RecursivePartition`
+- **Render:** `figma-card:cards/S05-06.json`
 - **Holds:** `S03-13`
 - **Note:** The selector locks onto α = gender inside I_buffer, invoking the Chapter 8 reproductive kernel O_gendered. [book §2.1, Eq 2.4; Ch 8]
 
 ## S03-15 — Applying Equation 2.4 inside O_racialized
 - **Anchor:** `Emmanuel Theodore (17:06)`
 - **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/recursive_partition16x9.py:RecursivePartition`
+- **Render:** `figma-card:cards/S05-06.json`
 - **Holds:** `S03-13`
 - **Note:** Target X switches to O_racialized along α = credentials / skin tone, isolating a small incorporated sub-cell O⁺_α above mass containment O⁻_α. [book §2.1, Eq 2.4; §2.3.7]
 
@@ -779,155 +778,154 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 ## S05-01 — Taking stock of the shared analytical apparatus
 - **Anchor:** `Emmanuel Theodore (22:47)`
 - **Type:** card
-- **Render:** `figma-card:cards/S05-01.json`
+- **Render:** `figma-card:cards/S02-01.json`
 - **Note:** The Segment 05 title card opens with Item 1, reviewing the analytical apparatus assembled across Segments 00–04. [editorial]
 
 ## S05-02 — Established tools from psychology, systems, and set theory
 - **Anchor:** `Emmanuel Theodore (22:59)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S05-01.json`
+- **Render:** `figma-card:cards/S02-01.json`
 - **Holds:** `S05-01`
 - **Note:** Item 2 reveals, listing dictionary senses, Allport/Fiske/Greenwald constructs, the five-part systems checklist, and set partitions. [book Preface; §2.1; §2.2]
 
 ## S05-03 — Established tools from psychology, systems, and set theory
 - **Anchor:** `Emmanuel Theodore (23:08)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S05-01.json`
+- **Render:** `figma-card:cards/S02-01.json`
 - **Holds:** `S05-01`
 - **Note:** Item 2 reveals, listing dictionary senses, Allport/Fiske/Greenwald constructs, the five-part systems checklist, and set partitions. [book Preface; §2.1; §2.2]
 
 ## S05-04 — Cross-disciplinary agreement on the baseline definitions
 - **Anchor:** `Emmanuel Theodore (23:21)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S05-01.json`
+- **Render:** `figma-card:cards/S02-01.json`
 - **Holds:** `S05-01`
 - **Note:** Item 3 reveals, noting consensus across sociology, experimental psychology, and systems engineering. [editorial]
 
 ## S05-05 — The unresolved question: temporal sequence
 - **Anchor:** `Emmanuel Theodore (23:30)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S05-01.json`
+- **Render:** `figma-card:cards/S02-01.json`
 - **Holds:** `S05-01`
 - **Note:** Item 4 reveals, isolating the temporal sequence connecting attitudes, conduct, rules, and economic interests. [book §2.2]
 
 ## S05-06 — The unresolved question: temporal sequence
 - **Anchor:** `Emmanuel Theodore (23:49)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S05-01.json`
-- **Holds:** `S05-01`
+- **Render:** `figma-card:cards/S03-17.json`
 - **Note:** Item 4 reveals, isolating the temporal sequence connecting attitudes, conduct, rules, and economic interests. [book §2.2]
 
 ## S05-07 — Point of departure: direction of the causal arrow
 - **Anchor:** `Emmanuel Theodore (23:59)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S05-01.json`
-- **Holds:** `S05-01`
+- **Render:** `figma-card:cards/S03-17.json`
+- **Holds:** `S05-06`
 - **Note:** Item 5 reveals, identifying the direction of the primary causal arrow as the point of departure. [book §2.2]
 
 ## S05-08 — Equation 2.5: conventional bottom-up causal model
 - **Anchor:** `Emmanuel Theodore (24:11)`
 - **Type:** card
-- **Render:** `figma-card:cards/S05-06.json`
+- **Render:** `figma-card:cards/S03-17.json`
 - **Note:** The Equation 2.5 card opens, displaying Individual Prejudice → Discriminatory Actions → Systemic Outcomes. [book §2.2, Eq 2.5]
 
 ## S05-09 — Equation 2.5: conventional bottom-up causal model
 - **Anchor:** `Emmanuel Theodore (24:23)`
 - **Type:** card
-- **Render:** `figma-card:cards/S05-06.json`
+- **Render:** `figma-card:cards/S03-17.json`
+- **Holds:** `S05-08`
 - **Note:** The Equation 2.5 card opens, displaying Individual Prejudice → Discriminatory Actions → Systemic Outcomes. [book §2.2, Eq 2.5]
 
 ## S05-10 — Confidence Tier 3 structural causal classification
 - **Anchor:** `Emmanuel Theodore (24:37)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S05-06.json`
-- **Holds:** `S05-09`
+- **Render:** `figma-card:cards/S03-17.json`
+- **Holds:** `S05-08`
 - **Note:** Term 1 illuminates with the Confidence Tier 3 badge, framing Equation 2.5 as a directional claim testable by historical sequence. [book Empirical Methodology; §2.2, Eq 2.5]
 
 ## S05-11 — Reading Equation 2.5 from left to right
 - **Anchor:** `Emmanuel Theodore (24:49)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S05-06.json`
-- **Holds:** `S05-09`
+- **Render:** `figma-card:cards/S02-16.json`
 - **Note:** Term 2 illuminates as the arrow steps from Individual Prejudice through Discriminatory Actions to Systemic Outcomes. [book §2.2, Eq 2.5]
 
 ## S05-12 — Reading Equation 2.5 from left to right
 - **Anchor:** `Emmanuel Theodore (25:06)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S05-06.json`
-- **Holds:** `S05-09`
+- **Render:** `figma-card:cards/S02-16.json`
+- **Holds:** `S05-11`
 - **Note:** Term 2 illuminates as the arrow steps from Individual Prejudice through Discriminatory Actions to Systemic Outcomes. [book §2.2, Eq 2.5]
 
 ## S05-13 — Causal engine placed inside private psychology
 - **Anchor:** `Emmanuel Theodore (25:18)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S05-06.json`
-- **Holds:** `S05-09`
+- **Render:** `figma-card:cards/S02-13.json`
 - **Note:** Term 3 illuminates, highlighting how Equation 2.5 locates the prime mover inside individual psychology on the left. [book §2.2, Eq 2.5]
 
 ## S05-14 — Bottom-up accumulation across isolated transactions
 - **Anchor:** `Emmanuel Theodore (25:30)`
 - **Type:** diagram
-- **Render:** `manim:yt01_redefining_racism/manim/causal_reversal16x9.py:CausalReversal as=S05-10`
+- **Render:** `figma-card:cards/S02-13.json`
+- **Holds:** `S05-13`
 - **Note:** The top chain of CausalReversal draws left to right: Individual Prejudice → Discriminatory Actions → Systemic Outcomes. [book §2.2, Eq 2.5]
 
 ## S05-15 — Equal-protection requirement of individual intent
 - **Anchor:** `Emmanuel Theodore (25:42)`
 - **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/causal_reversal16x9.py:CausalReversal`
-- **Holds:** `S05-14`
+- **Render:** `figma-card:cards/S02-13.json`
+- **Holds:** `S05-13`
 - **Note:** A judicial callout brackets the left-hand Individual Prejudice node, illustrating intent-centered equal-protection doctrine. [book §2.2; Ch 12]
 
 ## S05-16 — Equal-protection requirement of individual intent
 - **Anchor:** `Emmanuel Theodore (26:01)`
 - **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/causal_reversal16x9.py:CausalReversal`
-- **Holds:** `S05-14`
+- **Render:** `figma-card:cards/S02-16.json`
 - **Note:** A judicial callout brackets the left-hand Individual Prejudice node, illustrating intent-centered equal-protection doctrine. [book §2.2; Ch 12]
 
 ## S05-17 — Policy conclusion following from Equation 2.5
 - **Anchor:** `Emmanuel Theodore (26:16)`
 - **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/causal_reversal16x9.py:CausalReversal`
-- **Holds:** `S05-14`
+- **Render:** `figma-card:cards/S02-16.json`
+- **Holds:** `S05-16`
 - **Note:** An intervention spotlight focuses exclusively on the left-hand Individual Prejudice box. [book §2.2]
 
 ## S05-18 — Moral persuasion and attitude-adjustment remedies
 - **Anchor:** `Emmanuel Theodore (26:25)`
 - **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/causal_reversal16x9.py:CausalReversal`
-- **Holds:** `S05-14`
+- **Render:** `figma-card:cards/S02-16.json`
+- **Holds:** `S05-16`
 - **Note:** Labels for moral persuasion and diversity workshops attach to the left-hand box while Systemic Outcomes on the right stays fixed. [book §2.2]
 
 ## S05-19 — Moral persuasion and attitude-adjustment remedies
 - **Anchor:** `Emmanuel Theodore (26:40)`
 - **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/causal_reversal16x9.py:CausalReversal`
-- **Holds:** `S05-14`
+- **Render:** `figma-card:cards/S02-16.json`
+- **Holds:** `S05-16`
 - **Note:** Labels for moral persuasion and diversity workshops attach to the left-hand box while Systemic Outcomes on the right stays fixed. [book §2.2]
 
 ## S05-20 — Prediction of progressive dissolution via education
 - **Anchor:** `Emmanuel Theodore (26:53)`
 - **Type:** card
-- **Render:** `figma-card:cards/S05-14.json`
+- **Render:** `figma-card:cards/S02-20.json`
 - **Note:** The Equation 2.5 Audit table opens with Row 1, testing whether attitude education dissolves institutional structure. [book §2.2]
 
 ## S05-21 — Equation 2.7 · objective function
 - **Anchor:** `Emmanuel Theodore (27:05)`
 - **Type:** card
 - **Render:** `figma-card:cards/S02-20.json`
+- **Holds:** `S05-20`
 - **Note:** Term E(t) highlights, then M(t) < τ; manimgx term panels (safe margins). [book §2.3.2, Eq 2.7]
 
 ## S05-22 — Implication that popular hatred precedes racial statutes
 - **Anchor:** `Emmanuel Theodore (27:21)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S05-14.json`
+- **Render:** `figma-card:cards/S02-20.json`
 - **Holds:** `S05-20`
 - **Note:** Row 2 reveals, stating Equation 2.5's archival prediction that widespread popular antipathy appears prior to racial law. [book §2.2]
 
 ## S05-23 — Requirement 5 · feedback loop
 - **Anchor:** `Emmanuel Theodore (27:30)`
 - **Type:** card
-- **Render:** `figma-card:cards/S02-01.json`
+- **Render:** `figma-card:cards/S02-23.json`
 - **Note:** Item reveals Figure 2.2 maintenance feedback loop. [book §2.2, Fig 2.2]
 
 ## S05-24 — RLC components R, L, C
@@ -945,8 +943,7 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 ## S05-26 — Extraction kernel untouched by maintenance-layer reform
 - **Anchor:** `Emmanuel Theodore (28:07)`
 - **Type:** hold
-- **Render:** `manim:yt02/rlc_teach.py:RLCTeach`
-- **Holds:** `S05-24`
+- **Render:** `figma-card:cards/S02-23.json`
 - **Note:** Equation 2.11 terms L, R, and C pulse together on the held circuit. [book §2.3.6, Eq 2.11]
 
 <!-- SEG 06 · The two sets -->
@@ -954,168 +951,168 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 ## S06-01 — Equation 2.6: the causal reversal
 - **Anchor:** `Emmanuel Theodore (28:14)`
 - **Type:** card
-- **Render:** `figma-card:cards/S06-01.json`
+- **Render:** `figma-card:cards/S03-01.json`
 - **Note:** The Equation 2.6 card opens, displaying Elite Economic Interests → Systemic Racialization → Interpersonal Prejudice. [book §2.2, Eq 2.6]
 
 ## S06-02 — Equation 2.6: the causal reversal
 - **Anchor:** `Emmanuel Theodore (28:26)`
 - **Type:** card
-- **Render:** `figma-card:cards/S06-01.json`
+- **Render:** `figma-card:cards/S03-02.json`
 - **Note:** The Equation 2.6 card opens, displaying Elite Economic Interests → Systemic Racialization → Interpersonal Prejudice. [book §2.2, Eq 2.6]
 
 ## S06-03 — Confidence Tier 3 testable causal ordering
 - **Anchor:** `Emmanuel Theodore (28:42)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S06-01.json`
+- **Render:** `figma-card:cards/S03-02.json`
 - **Holds:** `S06-02`
 - **Note:** Term 1 (Elite Economic Interests) illuminates with the Confidence Tier 3 structural classification. [book Empirical Methodology; §2.2, Eq 2.6]
 
 ## S06-04 — Confidence Tier 3 testable causal ordering
 - **Anchor:** `Emmanuel Theodore (28:52)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S06-01.json`
+- **Render:** `figma-card:cards/S03-02.json`
 - **Holds:** `S06-02`
 - **Note:** Term 1 (Elite Economic Interests) illuminates with the Confidence Tier 3 structural classification. [book Empirical Methodology; §2.2, Eq 2.6]
 
 ## S06-05 — Full statement of the generative chain
 - **Anchor:** `Emmanuel Theodore (29:00)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S06-01.json`
+- **Render:** `figma-card:cards/S03-02.json`
 - **Holds:** `S06-02`
 - **Note:** Terms 2 and 3 (Systemic Racialization and Interpersonal Prejudice) illuminate in causal order. [book §2.2, Eq 2.6]
 
 ## S06-06 — Full statement of the generative chain
 - **Anchor:** `Emmanuel Theodore (29:10)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S06-01.json`
+- **Render:** `figma-card:cards/S03-02.json`
 - **Holds:** `S06-02`
 - **Note:** Terms 2 and 3 (Systemic Racialization and Interpersonal Prejudice) illuminate in causal order. [book §2.2, Eq 2.6]
 
 ## S06-07 — Figure 2.2: two solid forward generative arrows
 - **Anchor:** `Emmanuel Theodore (29:18)`
 - **Type:** diagram
-- **Render:** `manim:yt01_redefining_racism/manim/causal_reversal16x9.py:CausalReversal as=S05-22`
+- **Render:** `figma-card:cards/S03-17.json`
 - **Note:** Figure 2.2 builds on screen: two solid forward arrows run from Elite Economic Interests to Systemic Racialization to Interpersonal Prejudice. [book §2.2, Fig 2.2]
 
 ## S06-08 — Figure 2.2: two solid forward generative arrows
 - **Anchor:** `Emmanuel Theodore (29:28)`
 - **Type:** diagram
-- **Render:** `manim:yt01_redefining_racism/manim/causal_reversal16x9.py:CausalReversal as=S05-22`
+- **Render:** `figma-card:cards/S03-15.json`
 - **Note:** Figure 2.2 builds on screen: two solid forward arrows run from Elite Economic Interests to Systemic Racialization to Interpersonal Prejudice. [book §2.2, Fig 2.2]
 
 ## S06-09 — Dashed Reinforcing Feedback Loop arc
 - **Anchor:** `Emmanuel Theodore (29:36)`
 - **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/causal_reversal16x9.py:CausalReversal`
+- **Render:** `figma-card:cards/S03-15.json`
 - **Holds:** `S06-08`
 - **Note:** A curved dashed amber arc draws underneath from Interpersonal Prejudice back to Systemic Racialization, labeled Reinforcing Feedback Loop. [book §2.2, Fig 2.2]
 
 ## S06-10 — Dashed Reinforcing Feedback Loop arc
 - **Anchor:** `Emmanuel Theodore (29:44)`
 - **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/causal_reversal16x9.py:CausalReversal`
+- **Render:** `figma-card:cards/S03-15.json`
 - **Holds:** `S06-08`
 - **Note:** A curved dashed amber arc draws underneath from Interpersonal Prejudice back to Systemic Racialization, labeled Reinforcing Feedback Loop. [book §2.2, Fig 2.2]
 
 ## S06-11 — Cultivated public prejudice stabilizing the apparatus
 - **Anchor:** `Emmanuel Theodore (29:53)`
 - **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/causal_reversal16x9.py:CausalReversal`
+- **Render:** `figma-card:cards/S03-15.json`
 - **Holds:** `S06-08`
 - **Note:** Pulses travel forward along the solid generative arrows and return along the dashed feedback arc into Systemic Racialization. [book §2.2, Fig 2.2]
 
 ## S06-12 — Cultivated public prejudice stabilizing the apparatus
 - **Anchor:** `Emmanuel Theodore (30:02)`
 - **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/causal_reversal16x9.py:CausalReversal`
-- **Holds:** `S06-08`
+- **Render:** `figma-card:cards/S03-12.json`
 - **Note:** Pulses travel forward along the solid generative arrows and return along the dashed feedback arc into Systemic Racialization. [book §2.2, Fig 2.2]
 
 ## S06-13 — Barbara J. Fields (1990) citation
 - **Anchor:** `Emmanuel Theodore (30:13)`
 - **Type:** card
-- **Render:** `figma-card:cards/S06-07.json`
+- **Render:** `figma-card:cards/S03-15.json`
 - **Note:** The Barbara J. Fields (1990) quote card opens with the New Left Review citation at page 106. [book §2.2, citing Fields 1990, p. 106]
 
 ## S06-14 — Barbara J. Fields (1990) citation
 - **Anchor:** `Emmanuel Theodore (30:21)`
 - **Type:** card
-- **Render:** `figma-card:cards/S06-07.json`
+- **Render:** `figma-card:cards/S03-15.json`
+- **Holds:** `S06-13`
 - **Note:** The Barbara J. Fields (1990) quote card opens with the New Left Review citation at page 106. [book §2.2, citing Fields 1990, p. 106]
 
 ## S06-15 — Fields verbatim: perceived inferior when already oppressed
 - **Anchor:** `Emmanuel Theodore (30:30)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S06-07.json`
-- **Holds:** `S06-14`
+- **Render:** `figma-card:cards/S03-15.json`
+- **Holds:** `S06-13`
 - **Note:** The verbatim sentence 'People are more readily perceived as inferior by nature when they are already seen as oppressed' underlines in amber. [book §2.2, quoting Fields 1990, p. 106]
 
 ## S06-16 — Fields verbatim: perceived inferior when already oppressed
 - **Anchor:** `Emmanuel Theodore (30:38)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S06-07.json`
-- **Holds:** `S06-14`
+- **Render:** `figma-card:cards/S03-15.json`
+- **Holds:** `S06-13`
 - **Note:** The verbatim sentence 'People are more readily perceived as inferior by nature when they are already seen as oppressed' underlines in amber. [book §2.2, quoting Fields 1990, p. 106]
 
 ## S06-17 — Historical scope qualification in Section 2.2
 - **Anchor:** `Emmanuel Theodore (30:50)`
 - **Type:** card
-- **Render:** `figma-card:cards/S06-09.json`
+- **Render:** `figma-card:cards/S03-17.json`
 - **Note:** The Scope Qualification table opens with Row 1, bounding the historical claim with precision. [book §2.2]
 
 ## S06-18 — Historical scope qualification in Section 2.2
 - **Anchor:** `Emmanuel Theodore (30:58)`
 - **Type:** card
-- **Render:** `figma-card:cards/S06-09.json`
+- **Render:** `figma-card:cards/S03-17.json`
+- **Holds:** `S06-17`
 - **Note:** The Scope Qualification table opens with Row 1, bounding the historical claim with precision. [book §2.2]
 
 ## S06-19 — Pre-1450 Mediterranean attitudes (Sweet 1997; Bethencourt 2013)
 - **Anchor:** `Emmanuel Theodore (31:15)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S06-09.json`
-- **Holds:** `S06-18`
+- **Render:** `figma-card:cards/S03-17.json`
+- **Holds:** `S06-17`
 - **Note:** Row 2 reveals, citing James H. Sweet (1997) and Francisco Bethencourt (2013) on pre-1450 color-coded attitudes. [book §2.2, citing Sweet 1997; Bethencourt 2013]
 
 ## S06-20 — Pre-1450 Mediterranean attitudes (Sweet 1997; Bethencourt 2013)
 - **Anchor:** `Emmanuel Theodore (31:28)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S06-09.json`
-- **Holds:** `S06-18`
+- **Render:** `figma-card:cards/S03-17.json`
+- **Holds:** `S06-17`
 - **Note:** Row 2 reveals, citing James H. Sweet (1997) and Francisco Bethencourt (2013) on pre-1450 color-coded attitudes. [book §2.2, citing Sweet 1997; Bethencourt 2013]
 
 ## S06-21 — Fluid interpersonal scalars before 1450
 - **Anchor:** `Emmanuel Theodore (31:40)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S06-09.json`
-- **Holds:** `S06-18`
+- **Render:** `figma-card:cards/S03-17.json`
+- **Holds:** `S06-17`
 - **Note:** Row 3 reveals, characterizing pre-1450 attitudes as negotiable interpersonal scalars lacking a unified state chattel machine. [book §2.2; Ch 3]
 
 ## S06-22 — Fluid interpersonal scalars before 1450
 - **Anchor:** `Emmanuel Theodore (31:47)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S06-09.json`
-- **Holds:** `S06-18`
+- **Render:** `figma-card:cards/S03-25.json`
 - **Note:** Row 3 reveals, characterizing pre-1450 attitudes as negotiable interpersonal scalars lacking a unified state chattel machine. [book §2.2; Ch 3]
 
 ## S06-23 — Fluid interpersonal scalars before 1450
 - **Anchor:** `Emmanuel Theodore (32:00)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S06-09.json`
-- **Holds:** `S06-18`
+- **Render:** `figma-card:cards/S03-25.json`
+- **Holds:** `S06-22`
 - **Note:** Row 3 reveals, characterizing pre-1450 attitudes as negotiable interpersonal scalars lacking a unified state chattel machine. [book §2.2; Ch 3]
 
 ## S06-24 — Post-1450 compilation into heritable state law
 - **Anchor:** `Emmanuel Theodore (32:12)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S06-09.json`
-- **Holds:** `S06-18`
+- **Render:** `figma-card:cards/S03-25.json`
+- **Holds:** `S06-22`
 - **Note:** Row 4 reveals, showing how the Atlantic extraction architecture compiled pre-existing attitudes into permanent chattel law. [book §2.2; Ch 3]
 
 ## S06-25 — Post-1450 compilation into heritable state law
 - **Anchor:** `Emmanuel Theodore (32:21)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S06-09.json`
-- **Holds:** `S06-18`
+- **Render:** `figma-card:cards/S03-25.json`
+- **Holds:** `S06-22`
 - **Note:** Row 4 reveals, showing how the Atlantic extraction architecture compiled pre-existing attitudes into permanent chattel law. [book §2.2; Ch 3]
 
 ## S06-26 — Four predictions and three refutation standards
@@ -1127,117 +1124,118 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 ## S06-27 — Four predictions and three refutation standards
 - **Anchor:** `Emmanuel Theodore (32:55)`
 - **Type:** card
-- **Render:** `figma-card:cards/S06-13.json`
+- **Render:** `figma-card:cards/S03-30.json`
 - **Note:** The Four Falsifiable Predictions table opens with Row 1, announcing the pre-registered test protocol. [book Empirical Methodology; YT02_outline Hypothesis and test]
 
 ## S06-28 — Prediction 1: Institutional production
 - **Anchor:** `Emmanuel Theodore (33:05)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S06-13.json`
+- **Render:** `figma-card:cards/S03-30.json`
 - **Holds:** `S06-27`
 - **Note:** Row 2 reveals Prediction 1: commercial extraction and state licensing precede commissioned racial ideology. [book Ch 3; YT02_outline P1]
 
 ## S06-29 — Prediction 1: Institutional production
 - **Anchor:** `Emmanuel Theodore (33:13)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S06-13.json`
+- **Render:** `figma-card:cards/S03-30.json`
 - **Holds:** `S06-27`
 - **Note:** Row 2 reveals Prediction 1: commercial extraction and state licensing precede commissioned racial ideology. [book Ch 3; YT02_outline P1]
 
 ## S06-30 — Prediction 2: Codification follows solidarity threats
 - **Anchor:** `Emmanuel Theodore (33:24)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S06-13.json`
+- **Render:** `figma-card:cards/S03-30.json`
 - **Holds:** `S06-27`
 - **Note:** Row 3 reveals Prediction 2: statutory racial boundaries and buffer privileges follow cross-racial labor rebellions. [book Ch 4; YT02_outline P2]
 
 ## S06-31 — Prediction 2: Codification follows solidarity threats
 - **Anchor:** `Emmanuel Theodore (33:36)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S06-13.json`
+- **Render:** `figma-card:cards/S03-30.json`
 - **Holds:** `S06-27`
 - **Note:** Row 3 reveals Prediction 2: statutory racial boundaries and buffer privileges follow cross-racial labor rebellions. [book Ch 4; YT02_outline P2]
 
 ## S06-32 — Prediction 3: Maintenance by cultivation
 - **Anchor:** `Emmanuel Theodore (33:48)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S06-13.json`
+- **Render:** `figma-card:cards/S03-30.json`
 - **Holds:** `S06-27`
 - **Note:** Row 4 reveals Prediction 3: discredited explicit rules recompile into facially neutral proxy interfaces. [book §2.3.5; §2.3.6; YT02_outline P3]
 
 ## S06-33 — Prediction 3: Maintenance by cultivation
 - **Anchor:** `Emmanuel Theodore (34:00)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S06-13.json`
+- **Render:** `figma-card:cards/S03-30.json`
 - **Holds:** `S06-27`
 - **Note:** Row 4 reveals Prediction 3: discredited explicit rules recompile into facially neutral proxy interfaces. [book §2.3.5; §2.3.6; YT02_outline P3]
 
 ## S06-34 — Prediction 4: Suppression scales with extraction
 - **Anchor:** `Emmanuel Theodore (34:13)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S06-13.json`
+- **Render:** `figma-card:cards/S03-30.json`
 - **Holds:** `S06-27`
 - **Note:** Row 5 reveals Prediction 4: coercive patrol expenditure tracks extracted commodity value at a stable ratio. [book §2.3.2, Fig 2.4; YT02_outline P4]
 
 ## S06-35 — Prediction 4: Suppression scales with extraction
 - **Anchor:** `Emmanuel Theodore (34:25)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S06-13.json`
+- **Render:** `figma-card:cards/S03-30.json`
 - **Holds:** `S06-27`
 - **Note:** Row 5 reveals Prediction 4: coercive patrol expenditure tracks extracted commodity value at a stable ratio. [book §2.3.2, Fig 2.4; YT02_outline P4]
 
 ## S06-36 — Refutation Standard 1: unsponsored or prior caste
 - **Anchor:** `Emmanuel Theodore (34:42)`
 - **Type:** card
-- **Render:** `figma-card:cards/S06-18.json`
+- **Render:** `figma-card:cards/S03-39.json`
 - **Note:** The Refutation Standards table opens with Row 1, stating Refutation Standard 1 on origin sequencing and Elite sponsorship. [book §2.2; Ch 3; YT02_outline R1]
 
 ## S06-37 — Refutation Standard 1: unsponsored or prior caste
 - **Anchor:** `Emmanuel Theodore (34:53)`
 - **Type:** card
-- **Render:** `figma-card:cards/S06-18.json`
+- **Render:** `figma-card:cards/S03-39.json`
+- **Holds:** `S06-36`
 - **Note:** The Refutation Standards table opens with Row 1, stating Refutation Standard 1 on origin sequencing and Elite sponsorship. [book §2.2; Ch 3; YT02_outline R1]
 
 ## S06-38 — Refutation Standard 2: patrol decoupling or post-1965 reversal
 - **Anchor:** `Emmanuel Theodore (35:05)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S06-18.json`
-- **Holds:** `S06-37`
+- **Render:** `figma-card:cards/S03-39.json`
+- **Holds:** `S06-36`
 - **Note:** Row 2 reveals Refutation Standard 2's two quantitative defeat conditions in antebellum and post-1965 series. [book §2.3.2; §2.3.6; YT02_outline R2]
 
 ## S06-39 — Refutation Standard 2: patrol decoupling or post-1965 reversal
 - **Anchor:** `Emmanuel Theodore (35:17)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S06-18.json`
-- **Holds:** `S06-37`
+- **Render:** `figma-card:cards/S03-39.json`
+- **Holds:** `S06-36`
 - **Note:** Row 2 reveals Refutation Standard 2's two quantitative defeat conditions in antebellum and post-1965 series. [book §2.3.2; §2.3.6; YT02_outline R2]
 
 ## S06-40 — Refutation Standard 3: systemic racism without state vector
 - **Anchor:** `Emmanuel Theodore (35:30)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S06-18.json`
-- **Holds:** `S06-37`
+- **Render:** `figma-card:cards/S03-39.json`
+- **Holds:** `S06-36`
 - **Note:** Row 3 reveals Refutation Standard 3 on interpersonal prejudice versus institutional state control. [book Ch 21; MANUSCRIPT_GAP §1; YT02_outline R3]
 
 ## S06-41 — Refutation Standard 3: systemic racism without state vector
 - **Anchor:** `Emmanuel Theodore (35:38)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S06-18.json`
-- **Holds:** `S06-37`
+- **Render:** `figma-card:cards/S03-39.json`
+- **Holds:** `S06-36`
 - **Note:** Row 3 reveals Refutation Standard 3 on interpersonal prejudice versus institutional state control. [book Ch 21; MANUSCRIPT_GAP §1; YT02_outline R3]
 
 ## S06-42 — Empirical roadmap across Segments 07, 08, and 10
 - **Anchor:** `Emmanuel Theodore (35:50)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S06-18.json`
-- **Holds:** `S06-37`
+- **Render:** `figma-card:cards/S03-39.json`
+- **Holds:** `S06-36`
 - **Note:** Row 4 reveals the three-part test schedule across Portugal, Virginia, and the 1840–2020 American record. [editorial]
 
 ## S06-43 — Empirical roadmap across Segments 07, 08, and 10
 - **Anchor:** `Emmanuel Theodore (36:06)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S06-18.json`
-- **Holds:** `S06-37`
+- **Render:** `figma-card:cards/S03-39.json`
+- **Holds:** `S06-36`
 - **Note:** Row 4 reveals the three-part test schedule across Portugal, Virginia, and the 1840–2020 American record. [editorial]
 
 <!-- SEG 07 · The orthographic illusion -->
@@ -1349,115 +1347,114 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 ## S08-01 — Test 2: Seventeenth-century Virginia (1619–1705)
 - **Anchor:** `Emmanuel Theodore (39:21)`
 - **Type:** card
-- **Render:** `figma-card:cards/S08-01.json`
+- **Render:** `figma-card:cards/S07-01.json`
 - **Note:** The Segment 08 title card opens with Item 1, introducing Chapter 4's Chesapeake case file from 1619 to 1705. [book Ch 4]
 
 ## S08-02 — Testing Prediction 2: codification follows solidarity threats
 - **Anchor:** `Emmanuel Theodore (39:38)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S08-01.json`
+- **Render:** `figma-card:cards/S07-01.json`
 - **Holds:** `S08-01`
 - **Note:** Item 2 reveals, stating Prediction 2 that rigid race codes and buffer privileges follow cross-racial labor coalitions. [book Ch 4; YT02_outline P2]
 
 ## S08-03 — August 1619: White Lion arrival at Point Comfort
 - **Anchor:** `Emmanuel Theodore (39:51)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S08-01.json`
-- **Holds:** `S08-01`
+- **Render:** `figma-card:cards/S07-03.json`
 - **Note:** Item 3 reveals, recording the twenty and odd Angolan captives taken from the Portuguese slave ship São João Bautista. [book Ch 3; Ch 4]
 
 ## S08-04 — August 1619: White Lion arrival at Point Comfort
 - **Anchor:** `Emmanuel Theodore (40:02)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S08-01.json`
-- **Holds:** `S08-01`
+- **Render:** `figma-card:cards/S07-03.json`
+- **Holds:** `S08-03`
 - **Note:** Item 3 reveals, recording the twenty and odd Angolan captives taken from the Portuguese slave ship São João Bautista. [book Ch 3; Ch 4]
 
 ## S08-05 — Absence of comprehensive slave codes or white legal tier
 - **Anchor:** `Emmanuel Theodore (40:17)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S08-01.json`
-- **Holds:** `S08-01`
+- **Render:** `figma-card:cards/S07-03.json`
+- **Holds:** `S08-03`
 - **Note:** Item 4 reveals, noting that early Chesapeake English statute law lacked a comprehensive slave code or white tier. [book Ch 4]
 
 ## S08-06 — Shared plantation conditions of African and European laborers
 - **Anchor:** `Emmanuel Theodore (40:33)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S08-01.json`
-- **Holds:** `S08-01`
+- **Render:** `figma-card:cards/S07-03.json`
+- **Holds:** `S08-03`
 - **Note:** Item 5 reveals, documenting joint fieldwork, quarters, and escapes by African laborers and European indentured servants. [book Ch 4]
 
 ## S08-07 — Jordan and Walsh (2008) White Cargo study
 - **Anchor:** `Emmanuel Theodore (40:44)`
 - **Type:** card
-- **Render:** `figma-card:cards/S08-06.json`
+- **Render:** `figma-card:cards/S07-07.json`
 - **Note:** Bar 1 of the Chesapeake Indenture stat_bars card reveals, introducing Don Jordan and Michael Walsh's 2008 study White Cargo. [book Ch 4, citing Jordan & Walsh 2008]
 
 ## S08-08 — Jordan and Walsh (2008) White Cargo study
 - **Anchor:** `Emmanuel Theodore (40:51)`
 - **Type:** card
-- **Render:** `figma-card:cards/S08-06.json`
+- **Render:** `figma-card:cards/S07-07.json`
+- **Holds:** `S08-07`
 - **Note:** Bar 1 of the Chesapeake Indenture stat_bars card reveals, introducing Don Jordan and Michael Walsh's 2008 study White Cargo. [book Ch 4, citing Jordan & Walsh 2008]
 
 ## S08-09 — 300,000 to 500,000 European indentured servants shipped
 - **Anchor:** `Emmanuel Theodore (41:04)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S08-06.json`
-- **Holds:** `S08-08`
+- **Render:** `figma-card:cards/S07-07.json`
+- **Holds:** `S08-07`
 - **Note:** Bar 2 animates to 500,000, recording 300,000–500,000 English, Scottish, and Irish servants shipped across 150 years. [book Ch 4, citing Jordan & Walsh 2008]
 
 ## S08-10 — 30% voyage mortality and 40% Chesapeake term mortality
 - **Anchor:** `Emmanuel Theodore (41:23)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S08-06.json`
-- **Holds:** `S08-08`
+- **Render:** `figma-card:cards/S07-10.json`
 - **Note:** Bar 3 animates to 40%, displaying up to 30% Atlantic crossing mortality and ~40% mortality before indenture completion. [book Ch 4, citing Jordan & Walsh 2008]
 
 ## S08-11 — 840 British children abducted in one year by William Thiene
 - **Anchor:** `Emmanuel Theodore (41:29)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S08-06.json`
-- **Holds:** `S08-08`
+- **Render:** `figma-card:cards/S07-10.json`
+- **Holds:** `S08-10`
 - **Note:** Bar 4 animates to 840, recording London spirit-merchant William Thiene's single-year child abductions. [book Ch 4, citing Jordan & Walsh 2008]
 
 ## S08-12 — 840 British children abducted in one year by William Thiene
 - **Anchor:** `Emmanuel Theodore (41:46)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S08-06.json`
-- **Holds:** `S08-08`
+- **Render:** `figma-card:cards/S07-10.json`
+- **Holds:** `S08-10`
 - **Note:** Bar 4 animates to 840, recording London spirit-merchant William Thiene's single-year child abductions. [book Ch 4, citing Jordan & Walsh 2008]
 
 ## S08-13 — 500 lashes inflicted on indentured servant Elizabeth Abbott
 - **Anchor:** `Emmanuel Theodore (41:58)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S08-06.json`
-- **Holds:** `S08-08`
+- **Render:** `figma-card:cards/S07-10.json`
+- **Holds:** `S08-10`
 - **Note:** Bar 5 animates to 500 lashes, documenting the fatal beating of Elizabeth Abbott and planter judicial impunity. [book Ch 4, citing Jordan & Walsh 2008]
 
 ## S08-14 — 241 of first 5,000 Virginia servants surviving to acquire land
 - **Anchor:** `Emmanuel Theodore (42:09)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S08-06.json`
-- **Holds:** `S08-08`
+- **Render:** `figma-card:cards/S07-10.json`
+- **Holds:** `S08-10`
 - **Note:** Bar 6 animates to 241 (4.8% of 5,000), showing how few early Virginia indentured servants survived to own land. [book Ch 4, citing Jordan & Walsh 2008]
 
 ## S08-15 — Aligned class interests at the bottom of the tobacco colony
 - **Anchor:** `Emmanuel Theodore (42:19)`
 - **Type:** card
-- **Render:** `figma-card:cards/S08-12.json`
+- **Render:** `figma-card:cards/S07-14.json`
 - **Note:** Item 1 of the Cross-Racial Solidarity card reveals, noting shared whips, fields, and planter oligarchs. [book Ch 4]
 
 ## S08-16 — Cross-racial families, shared quarters, and joint escapes
 - **Anchor:** `Emmanuel Theodore (42:33)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S08-12.json`
+- **Render:** `figma-card:cards/S07-14.json`
 - **Holds:** `S08-15`
 - **Note:** Item 2 reveals, documenting intermarriage, shared provisions, and joint frontier escapes. [book Ch 4]
 
 ## S08-17 — Cross-racial families, shared quarters, and joint escapes
 - **Anchor:** `Emmanuel Theodore (42:48)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S08-12.json`
+- **Render:** `figma-card:cards/S07-14.json`
 - **Holds:** `S08-15`
 - **Note:** Item 2 reveals, documenting intermarriage, shared provisions, and joint frontier escapes. [book Ch 4]
 
@@ -1470,325 +1467,323 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 ## S08-19 — Iterative 65-year statutory compilation (1640–1705)
 - **Anchor:** `Emmanuel Theodore (43:06)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S08-12.json`
+- **Render:** `figma-card:cards/S07-14.json`
 - **Holds:** `S08-15`
 - **Note:** Item 4 reveals, introducing the four-step statutory compilation executed by the Virginia planter Elite from 1640 to 1705. [book Ch 4]
 
 ## S08-20 — Step 1: July 1640 John Punch case before the Governor's Council
 - **Anchor:** `Emmanuel Theodore (43:21)`
 - **Type:** card
-- **Render:** `figma-card:cards/S08-16.json`
+- **Render:** `figma-card:cards/S07-20.json`
 - **Note:** Row 1 of the John Punch Sentencing table reveals, opening the July 1640 Virginia Governor's Council record. [book Ch 4]
 
 ## S08-21 — Step 1: July 1640 John Punch case before the Governor's Council
 - **Anchor:** `Emmanuel Theodore (43:31)`
 - **Type:** card
-- **Render:** `figma-card:cards/S08-16.json`
+- **Render:** `figma-card:cards/S07-20.json`
+- **Holds:** `S08-20`
 - **Note:** Row 1 of the John Punch Sentencing table reveals, opening the July 1640 Virginia Governor's Council record. [book Ch 4]
 
 ## S08-22 — Three recaptured runaways: Victor, James Gregory, and John Punch
 - **Anchor:** `Emmanuel Theodore (43:40)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S08-16.json`
-- **Holds:** `S08-21`
+- **Render:** `figma-card:cards/S07-20.json`
+- **Holds:** `S08-20`
 - **Note:** Row 2 reveals the three coalition members who fled Hugh Gwyn's plantation: Victor (Dutch), James Gregory (Scots), and John Punch (Black). [book Ch 4]
 
 ## S08-23 — 30 lashes and +4 years for the Dutchman and Scotsman
 - **Anchor:** `Emmanuel Theodore (43:57)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S08-16.json`
-- **Holds:** `S08-21`
+- **Render:** `figma-card:cards/S07-20.json`
+- **Holds:** `S08-20`
 - **Note:** Row 3 reveals the sentence for Victor and James Gregory: 30 lashes each and four additional years of indenture. [book Ch 4]
 
 ## S08-24 — Lifelong servitude ordered for John Punch
 - **Anchor:** `Emmanuel Theodore (44:11)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S08-16.json`
-- **Holds:** `S08-21`
+- **Render:** `figma-card:cards/S07-24.json`
 - **Note:** Row 4 reveals the differential sentence for John Punch: service for the time of his natural life. [book Ch 4]
 
 ## S08-25 — Lifelong servitude ordered for John Punch
 - **Anchor:** `Emmanuel Theodore (44:25)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S08-16.json`
-- **Holds:** `S08-21`
+- **Render:** `figma-card:cards/S07-24.json`
+- **Holds:** `S08-24`
 - **Note:** Row 4 reveals the differential sentence for John Punch: service for the time of his natural life. [book Ch 4]
 
 ## S08-26 — First judicial compilation of Equation 3.10 to split a coalition
 - **Anchor:** `Emmanuel Theodore (44:38)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S08-16.json`
-- **Holds:** `S08-21`
+- **Render:** `figma-card:cards/S07-24.json`
+- **Holds:** `S08-24`
 - **Note:** Row 5 reveals, tagging the 1640 judgment as the first American judicial compile of O_racialized = f(Phenotype). [book Ch 3, Eq 3.10; Ch 4]
 
 ## S08-27 — Step 2: December 1662 partus sequitur ventrem statute
 - **Anchor:** `Emmanuel Theodore (44:55)`
 - **Type:** card
-- **Render:** `figma-card:cards/S08-21.json`
+- **Render:** `figma-card:cards/S07-27.json`
 - **Note:** Node 1 of the 1662–1669 timeline illuminates, marking the December 1662 enactment by the Virginia House of Burgesses. [book Ch 4; Ch 8]
 
 ## S08-28 — Child's bond or free status tied to the mother
 - **Anchor:** `Emmanuel Theodore (45:01)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S08-21.json`
+- **Render:** `figma-card:cards/S07-27.json`
 - **Holds:** `S08-27`
 - **Note:** Node 2 illuminates, displaying the statutory rule that children follow the legal condition of the mother. [book Ch 4; Ch 8]
 
 ## S08-29 — Reversing English common law to monetize Black reproduction
 - **Anchor:** `Emmanuel Theodore (45:15)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S08-21.json`
+- **Render:** `figma-card:cards/S07-27.json`
 - **Holds:** `S08-27`
 - **Note:** Node 3 illuminates, showing how reversing common-law paternity created self-replenishing capital and shielded white fathers. [book Ch 4; Ch 8]
 
 ## S08-30 — Reversing English common law to monetize Black reproduction
 - **Anchor:** `Emmanuel Theodore (45:29)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S08-21.json`
+- **Render:** `figma-card:cards/S07-27.json`
 - **Holds:** `S08-27`
 - **Note:** Node 3 illuminates, showing how reversing common-law paternity created self-replenishing capital and shielded white fathers. [book Ch 4; Ch 8]
 
 ## S08-31 — 1664 Maryland statute and October 1669 Virginia Casual Killing Act
 - **Anchor:** `Emmanuel Theodore (45:39)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S08-21.json`
+- **Render:** `figma-card:cards/S07-27.json`
 - **Holds:** `S08-27`
 - **Note:** Node 4 illuminates, pairing Maryland's 1664 lifelong servitude law with Virginia's October 1669 statute. [book Ch 4]
 
 ## S08-32 — 1669 felony exemption for killing a resisting enslaved person
 - **Anchor:** `Emmanuel Theodore (45:48)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S08-21.json`
+- **Render:** `figma-card:cards/S07-27.json`
 - **Holds:** `S08-27`
 - **Note:** Node 5 illuminates, quoting the 1669 statutory presumption that no master intentionally destroys his own estate. [book Ch 4]
 
 ## S08-33 — Persistent shared material grievances against Governor Berkeley
 - **Anchor:** `Emmanuel Theodore (45:57)`
 - **Type:** card
-- **Render:** `figma-card:cards/S08-26.json`
+- **Render:** `figma-card:cards/S07-33.json`
 - **Note:** The Equations 4.1, 2.8, and 2.15 card opens, framing the 1676 solidarity crisis across the Tidewater colony. [book Ch 4]
 
 ## S08-34 — Persistent shared material grievances against Governor Berkeley
 - **Anchor:** `Emmanuel Theodore (46:17)`
 - **Type:** card
-- **Render:** `figma-card:cards/S08-26.json`
+- **Render:** `figma-card:cards/S07-33.json`
+- **Holds:** `S08-33`
 - **Note:** The Equations 4.1, 2.8, and 2.15 card opens, framing the 1676 solidarity crisis across the Tidewater colony. [book Ch 4]
 
 ## S08-35 — 1676: eruption of Bacon's Rebellion across Virginia
 - **Anchor:** `Emmanuel Theodore (46:27)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S08-26.json`
-- **Holds:** `S08-34`
+- **Render:** `figma-card:cards/S07-33.json`
+- **Holds:** `S08-33`
 - **Note:** The main equation panel highlights the 1676 threshold breach across Virginia. [book Ch 4, Eq 4.1]
 
 ## S08-36 — Equation 4.1 solidarity condition: L_white + L_black > E
 - **Anchor:** `Emmanuel Theodore (46:41)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S08-26.json`
-- **Holds:** `S08-34`
+- **Render:** `figma-card:cards/S07-36.json`
 - **Note:** Term 1 (L_white + L_black > E ⇒ Revolution) illuminates, stating the joint labor condition of Equation 4.1. [book Ch 4, Eq 4.1]
 
 ## S08-37 — Equation 2.8 cumulative extraction crossing τ_MFT
 - **Anchor:** `Emmanuel Theodore (46:53)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S08-26.json`
-- **Holds:** `S08-34`
+- **Render:** `figma-card:cards/S07-36.json`
+- **Holds:** `S08-36`
 - **Note:** Term 2 (∫E(τ)dτ > τ_MFT) illuminates, marking the breach of Chapter 2's minimum forcing threshold. [book §2.3.2, Eq 2.8]
 
 ## S08-38 — Equation 2.8 cumulative extraction crossing τ_MFT
 - **Anchor:** `Emmanuel Theodore (47:02)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S08-26.json`
-- **Holds:** `S08-34`
+- **Render:** `figma-card:cards/S07-39.json`
 - **Note:** Term 2 (∫E(τ)dτ > τ_MFT) illuminates, marking the breach of Chapter 2's minimum forcing threshold. [book §2.3.2, Eq 2.8]
 
 ## S08-39 — Equation 2.15 effective coherence M_eff(t) = M(t) − λΦ_load(t)
 - **Anchor:** `Emmanuel Theodore (47:18)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S08-26.json`
-- **Holds:** `S08-34`
+- **Render:** `figma-card:cards/S07-39.json`
+- **Holds:** `S08-38`
 - **Note:** Term 3 illuminates, displaying Equation 2.15's relation between raw mobilization M(t) and phase dispersion Φ_load(t). [book §2.3.6, Eq 2.15]
 
 ## S08-40 — Pre-1705 near-zero Φ_load allowing M_eff(t) to breach τ
 - **Anchor:** `Emmanuel Theodore (47:29)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S08-26.json`
-- **Holds:** `S08-34`
+- **Render:** `figma-card:cards/S07-39.json`
+- **Holds:** `S08-38`
 - **Note:** Term 3 pulses in amber, showing Φ_load ≈ 0 in 1676 allowing effective class coherence M_eff(t) to surge past τ. [book §2.3.6, Eq 2.15; Ch 4]
 
 ## S08-41 — September 1676: burning of Jamestown and flight of Berkeley
 - **Anchor:** `Emmanuel Theodore (47:41)`
 - **Type:** card
-- **Render:** `figma-card:cards/S08-32.json`
+- **Render:** `figma-card:cards/S07-39.json`
+- **Holds:** `S08-38`
 - **Note:** Item 1 of the Jamestown & West Point card reveals, recording the September 1676 burning of Jamestown. [book Ch 4]
 
 ## S08-42 — Grantham's encounter with 400 English and African fighters at West Point
 - **Anchor:** `Emmanuel Theodore (47:53)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S08-32.json`
-- **Holds:** `S08-41`
+- **Render:** `figma-card:cards/S07-39.json`
+- **Holds:** `S08-38`
 - **Note:** Item 2 reveals, documenting Thomas Grantham facing 400 armed English and African men standing side by side at West Point. [book Ch 4, citing Allen]
 
 ## S08-43 — Grantham's encounter with 400 English and African fighters at West Point
 - **Anchor:** `Emmanuel Theodore (48:03)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S08-32.json`
-- **Holds:** `S08-41`
+- **Render:** `figma-card:cards/S07-39.json`
+- **Holds:** `S08-38`
 - **Note:** Item 2 reveals, documenting Thomas Grantham facing 400 armed English and African men standing side by side at West Point. [book Ch 4, citing Allen]
 
 ## S08-44 — Deceptive pardon promises, 23 hangings, and re-enslavement
 - **Anchor:** `Emmanuel Theodore (48:18)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S08-32.json`
-- **Holds:** `S08-41`
+- **Render:** `figma-card:cards/S07-39.json`
+- **Holds:** `S08-38`
 - **Note:** Item 3 reveals, recording Grantham's deceptive disarmament, 23 executions, and the return of African rebels to bondage. [book Ch 4, citing Allen]
 
 ## S08-45 — Theodore W. Allen on the planter class's engineering patch
 - **Anchor:** `Emmanuel Theodore (48:27)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S08-32.json`
-- **Holds:** `S08-41`
+- **Render:** `figma-card:cards/S07-39.json`
+- **Holds:** `S08-38`
 - **Note:** Item 4 reveals, citing Theodore W. Allen's The Invention of the White Race on the statutory patch designed to split labor. [book Ch 4, citing Allen]
 
 ## S08-46 — Step 3: April 1691 Boundary Enforcement Act
 - **Anchor:** `Emmanuel Theodore (48:38)`
 - **Type:** card
-- **Render:** `figma-card:cards/S08-36.json`
+- **Render:** `figma-card:cards/S07-39.json`
+- **Holds:** `S08-38`
 - **Note:** The Equation 4.2 card opens, displaying I_buffer ∩ O_racialized = ∅ in the main math panel. [book Ch 4, Eq 4.2]
 
 ## S08-47 — Step 3: April 1691 Boundary Enforcement Act
 - **Anchor:** `Emmanuel Theodore (48:48)`
 - **Type:** card
-- **Render:** `figma-card:cards/S08-36.json`
+- **Render:** `figma-card:cards/S07-39.json`
+- **Holds:** `S08-38`
 - **Note:** The Equation 4.2 card opens, displaying I_buffer ∩ O_racialized = ∅ in the main math panel. [book Ch 4, Eq 4.2]
 
 ## S08-48 — 1691 ban on intermarriage and mandatory banishment
 - **Anchor:** `Emmanuel Theodore (48:59)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S08-36.json`
-- **Holds:** `S08-47`
+- **Render:** `figma-card:cards/S07-39.json`
+- **Holds:** `S08-38`
 - **Note:** Term 1 illuminates, detailing the 1691 prohibition on intermarriage with Black, mulatto, or Indigenous partners. [book Ch 4, Eq 4.2]
 
 ## S08-49 — Five-year maternal servitude and thirty-year child indenture
 - **Anchor:** `Emmanuel Theodore (49:09)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S08-36.json`
-- **Holds:** `S08-47`
+- **Render:** `figma-card:cards/S07-39.json`
+- **Holds:** `S08-38`
 - **Note:** Term 2 illuminates, recording five extra years of forced servitude for white mothers and thirty years for mixed-race children. [book Ch 4, Eq 4.2]
 
 ## S08-50 — Equation 4.2 set-theoretic command: I_buffer ∩ O_racialized = ∅
 - **Anchor:** `Emmanuel Theodore (49:24)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S08-36.json`
-- **Holds:** `S08-47`
+- **Render:** `figma-card:cards/S07-59.json`
 - **Note:** The main equation box pulses, emphasizing the statutory command to keep the intersection of I_buffer and O_racialized empty. [book Ch 4, Eq 4.2]
 
 ## S08-51 — Equation 4.2 set-theoretic command: I_buffer ∩ O_racialized = ∅
 - **Anchor:** `Emmanuel Theodore (49:37)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S08-36.json`
-- **Holds:** `S08-47`
+- **Render:** `figma-card:cards/S07-33.json`
 - **Note:** The main equation box pulses, emphasizing the statutory command to keep the intersection of I_buffer and O_racialized empty. [book Ch 4, Eq 4.2]
 
 ## S08-52 — 276-year enforcement through the 1924 Racial Integrity Act
 - **Anchor:** `Emmanuel Theodore (49:55)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S08-36.json`
-- **Holds:** `S08-47`
+- **Render:** `figma-card:cards/S07-59.json`
+- **Holds:** `S08-50`
 - **Note:** Term 3 illuminates, tracing 276 years of enforcement through the 1924 Racial Integrity Act and Judge Leon Bazile's 1965 opinion. [book Ch 4]
 
 ## S08-53 — June 12, 1967: invalidated in Loving v. Virginia
 - **Anchor:** `Emmanuel Theodore (50:05)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S08-36.json`
-- **Holds:** `S08-47`
+- **Render:** `figma-card:cards/S07-39.json`
 - **Note:** The citation strip highlights Chief Justice Earl Warren's June 12, 1967 ruling in Loving v. Virginia. [book Ch 4]
 
 ## S08-54 — Step 4: October 1705 Virginia Slave Codes
 - **Anchor:** `Emmanuel Theodore (50:18)`
 - **Type:** diagram
-- **Render:** `manim:yt01_redefining_racism/manim/partition_redraw16x9.py:PartitionRedraw as=S08-42`
+- **Render:** `figma-card:cards/S07-53.json`
 - **Note:** The PartitionRedraw diagram opens on the 1676 joint labor block (L_white + L_black) facing the small Elite block E. [book Ch 4, Eq 4.3, Eq 4.4]
 
 ## S08-55 — Degrading enslaved Africans to real estate while elevating poor whites
 - **Anchor:** `Emmanuel Theodore (50:33)`
 - **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/partition_redraw16x9.py:PartitionRedraw`
+- **Render:** `figma-card:cards/S07-53.json`
 - **Holds:** `S08-54`
 - **Note:** A statutory partition line drives between L_white and L_black, elevating poor Europeans into I_buffer above O_racialized. [book Ch 4, Eq 4.3, Eq 4.4]
 
 ## S08-56 — Degrading enslaved Africans to real estate while elevating poor whites
 - **Anchor:** `Emmanuel Theodore (50:49)`
 - **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/partition_redraw16x9.py:PartitionRedraw`
-- **Holds:** `S08-54`
+- **Render:** `figma-card:cards/S07-56.json`
 - **Note:** A statutory partition line drives between L_white and L_black, elevating poor Europeans into I_buffer above O_racialized. [book Ch 4, Eq 4.3, Eq 4.4]
 
 ## S08-57 — Naked-whipping ban and statutory freedom dues (corn, money, musket)
 - **Anchor:** `Emmanuel Theodore (51:01)`
 - **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/partition_redraw16x9.py:PartitionRedraw`
-- **Holds:** `S08-54`
+- **Render:** `figma-card:cards/S07-56.json`
+- **Holds:** `S08-56`
 - **Note:** Privilege badges (naked-whipping ban, corn, cash, and musket freedom dues) attach to the newly formed I_buffer block. [book Ch 4]
 
 ## S08-58 — Testimony bar and universal white fugitive-policing authority
 - **Anchor:** `Emmanuel Theodore (51:19)`
 - **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/partition_redraw16x9.py:PartitionRedraw`
-- **Holds:** `S08-54`
+- **Render:** `figma-card:cards/S07-56.json`
+- **Holds:** `S08-56`
 - **Note:** Downward enforcement arrows lock from I_buffer onto O_racialized, marking the testimony ban and fugitive-patrol deputization. [book Ch 4]
 
 ## S08-59 — Equation 4.3 state transition: Buffer Created
 - **Anchor:** `Emmanuel Theodore (51:32)`
 - **Type:** card
-- **Render:** `figma-card:cards/S08-46.json`
+- **Render:** `figma-card:cards/S07-59.json`
 - **Note:** The Equations 4.3 and 4.4 card opens, displaying the 1705 state transition and three-tier payoff inequality. [book Ch 4, Eq 4.3]
 
 ## S08-60 — Equation 4.3 state transition: Buffer Created
 - **Anchor:** `Emmanuel Theodore (51:42)`
 - **Type:** card
-- **Render:** `figma-card:cards/S08-46.json`
+- **Render:** `figma-card:cards/S07-59.json`
+- **Holds:** `S08-59`
 - **Note:** The Equations 4.3 and 4.4 card opens, displaying the 1705 state transition and three-tier payoff inequality. [book Ch 4, Eq 4.3]
 
 ## S08-61 — Equation 4.4 three-tier payoff ordering
 - **Anchor:** `Emmanuel Theodore (51:54)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S08-46.json`
-- **Holds:** `S08-60`
+- **Render:** `figma-card:cards/S07-59.json`
+- **Holds:** `S08-59`
 - **Note:** Terms 1 and 2 illuminate, showing Benefit(E) ≫ Benefit(I_buffer) > Benefit(O_racialized). [book Ch 4, Eq 4.4]
 
 ## S08-62 — W. E. B. Du Bois on the public and psychological wage
 - **Anchor:** `Emmanuel Theodore (52:07)`
 - **Type:** card
-- **Render:** `figma-card:cards/S08-48.json`
+- **Render:** `figma-card:cards/S07-39.json`
 - **Note:** Node 1 of the Virginia Compile Verdict timeline illuminates, citing Du Bois's public and psychological wage (ψ_s + ψ_m). [book §2.3.1; Ch 4, citing Du Bois]
 
 ## S08-63 — Equation 2.19: Φ_load elevated into 0.15–0.55 regime
 - **Anchor:** `Emmanuel Theodore (52:20)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S08-48.json`
-- **Holds:** `S08-62`
+- **Render:** `figma-card:cards/S07-63.json`
 - **Note:** Node 2 illuminates, recording Φ_load rising from near zero into the 0.15–0.55 ANES-calibrated resentment band. [book §2.3.6, Eq 2.19]
 
 ## S08-64 — Equation 2.19: Φ_load elevated into 0.15–0.55 regime
 - **Anchor:** `Emmanuel Theodore (52:33)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S08-48.json`
-- **Holds:** `S08-62`
+- **Render:** `figma-card:cards/S07-63.json`
+- **Holds:** `S08-63`
 - **Note:** Node 2 illuminates, recording Φ_load rising from near zero into the 0.15–0.55 ANES-calibrated resentment band. [book §2.3.6, Eq 2.19]
 
 ## S08-65 — Equation 2.15: M_eff(t) depressed safely below τ
 - **Anchor:** `Emmanuel Theodore (52:46)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S08-48.json`
-- **Holds:** `S08-62`
+- **Render:** `figma-card:cards/S07-63.json`
+- **Holds:** `S08-63`
 - **Note:** Node 3 illuminates, showing elevated Φ_load holding effective class coherence M_eff(t) below τ for 150 years. [book §2.3.6, Eq 2.15; Ch 4]
 
 ## S08-66 — Test 2 verdict: Prediction 2 confirmed across 1640–1705
 - **Anchor:** `Emmanuel Theodore (52:58)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S08-48.json`
-- **Holds:** `S08-62`
+- **Render:** `figma-card:cards/S07-63.json`
+- **Holds:** `S08-63`
 - **Note:** Node 4 illuminates, confirming that the 1676 solidarity crisis triggered the 1691 boundary act and 1705 Slave Codes. [book Ch 4; YT02_outline P2]
 
 <!-- SEG 09 · Test 2: Virginia, 1640–1705 -->
@@ -3337,8 +3332,7 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 ## S13-11 — Step 3: naturalize disparities through cultural or biological blame
 - **Anchor:** `Emmanuel Theodore (100:21)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S13-09.json`
-- **Holds:** `S13-08`
+- **Render:** `figma-card:cards/S03-30.json`
 - **Note:** Row 4 reveals Step 3: ideological narratives attributing wealth, health, and carceral gaps to the targeted population. [book §2.2]
 
 ## S13-12 — Step 4: compound disadvantage intergenerationally
@@ -3487,8 +3481,7 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 ## S14-06 — Zero-Day phenotype lock and Definition 2.3 Biological Embedding
 - **Anchor:** `Emmanuel Theodore (104:51)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S14-05.json`
-- **Holds:** `S15-05`
+- **Render:** `figma-card:cards/S13-06.json`
 - **Note:** Row 2 reveals, pairing the Equation 3.10 phenotype cut from the continuous cline with Definition 2.3 embodiment. [book §2.3, The Zero-Day Exploit; Definition 2.3]
 
 ## S14-07 — Seven runtime dashboard states and the Interference Engine
@@ -3501,15 +3494,13 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 ## S14-08 — Seven runtime dashboard states and the Interference Engine
 - **Anchor:** `Emmanuel Theodore (105:15)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S14-05.json`
-- **Holds:** `S15-05`
+- **Render:** `figma-card:cards/S01-42.json`
 - **Note:** Row 3 reveals, pairing the Compiled Runtime Log (1486–2010s) with the antiphase Interference Engine. [book Compiled Runtime Log; Ch 11; Ch 18]
 
 ## S14-09 — Rebuilt definitional hierarchy and Concession Theorem preview
 - **Anchor:** `Emmanuel Theodore (105:25)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S14-05.json`
-- **Holds:** `S15-05`
+- **Render:** `figma-card:cards/S13-09.json`
 - **Note:** Row 4 reveals, placing policy → ideology → prejudice in verified order alongside Chapter 19's Concession Theorem. [book §2.2, Fig 2.3; Ch 15]
 
 ## S14-10 — Testing Equation 2.6 across Portugal, Virginia, 1840–2020, and Ch. 22
@@ -3522,8 +3513,7 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 ## S14-11 — Convergence across tests: extraction and solidarity control first
 - **Anchor:** `Emmanuel Theodore (105:50)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S14-05.json`
-- **Holds:** `S15-05`
+- **Render:** `figma-card:cards/S13-09.json`
 - **Note:** Row 6 reveals, confirming that extraction and solidarity management preceded racial law and drove interface recompiles. [book §2.2; §2.3.5]
 
 ## S14-12 — Section 2.3.11: Mode 1 Design, Mode 2 Propagation, Mode 3 Intervention
@@ -3542,89 +3532,87 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 ## S14-14 — Chapter 19 Concession Theorem closing the structural definition
 - **Anchor:** `Emmanuel Theodore (106:27)`
 - **Type:** card
-- **Render:** `figma-card:cards/S14-13.json`
+- **Render:** `figma-card:cards/S13-09.json`
 - **Note:** The Equation 19.2 card opens, introducing the Concession Theorem from Chapter 19. [book Ch 19, Concession Theorem]
 
 ## S14-15 — Equation 19.2: concession rate proportional to kinetic threat
 - **Anchor:** `Emmanuel Theodore (106:39)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S14-13.json`
-- **Holds:** `S15-14`
+- **Render:** `figma-card:cards/S13-15.json`
 - **Note:** Term 1 (Threat(M(t))) illuminates, showing policy concessions scaling with rising class mobilization threat. [book Ch 19, lines 11645-11653]
 
 ## S14-16 — Concession invariant: Δ_max = 0 preserving the extraction kernel
 - **Anchor:** `Emmanuel Theodore (106:50)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S14-13.json`
-- **Holds:** `S15-14`
+- **Render:** `figma-card:cards/S13-20.json`
 - **Note:** Term 2 (Δ_max = 0) illuminates, stating the invariant that non-kinetic concessions preserve maximum apex extraction. [book Ch 19, Concession Theorem, Eq 19.2]
 
 ## S14-17 — 1450–2026 dataset claim on non-kinetic reform
 - **Anchor:** `Emmanuel Theodore (106:57)`
 - **Type:** card
-- **Render:** `figma-card:cards/S14-16.json`
+- **Render:** `figma-card:cards/S13-20.json`
+- **Holds:** `S14-16`
 - **Note:** Row 1 of the Concession Theorem Falsification table reveals, stating the 1450–2026 empirical claim. [book Appendix, Falsifiability Conditions for the Two Terminal Theorems]
 
 ## S14-18 — Condition 1: ≥30-year sustained decline in top-decile wealth share
 - **Anchor:** `Emmanuel Theodore (107:08)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S14-16.json`
-- **Holds:** `S15-17`
+- **Render:** `figma-card:cards/S13-20.json`
+- **Holds:** `S14-16`
 - **Note:** Row 2 reveals Falsification Condition 1: an absolute decline in top-decile national wealth share sustained for at least three decades. [book Appendix, lines 15442-15448]
 
 ## S14-19 — Condition 2: real decline in aggregate apex extraction across all channels
 - **Anchor:** `Emmanuel Theodore (107:18)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S14-16.json`
-- **Holds:** `S15-17`
+- **Render:** `figma-card:cards/S13-20.json`
+- **Holds:** `S14-16`
 - **Note:** Row 3 reveals Falsification Condition 2: real decline across offshore capital, new target populations, and financial channels. [book Appendix, lines 15449-15451]
 
 ## S14-20 — Condition 2: real decline in aggregate apex extraction across all channels
 - **Anchor:** `Emmanuel Theodore (107:35)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S14-16.json`
-- **Holds:** `S15-17`
+- **Render:** `figma-card:cards/S13-24.json`
 - **Note:** Row 3 reveals Falsification Condition 2: real decline across offshore capital, new target populations, and financial channels. [book Appendix, lines 15449-15451]
 
 ## S14-21 — Condition 3: reduction surviving later periods of low kinetic threat
 - **Anchor:** `Emmanuel Theodore (107:44)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S14-16.json`
-- **Holds:** `S15-17`
+- **Render:** `figma-card:cards/S13-24.json`
+- **Holds:** `S14-20`
 - **Note:** Row 4 reveals Falsification Condition 3: survival of the reduction after the kinetic pressure that forced the reform recedes. [book Appendix, lines 15452-15454]
 
 ## S14-22 — Simultaneous satisfaction of all three conditions refutes the theorem
 - **Anchor:** `Emmanuel Theodore (107:59)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S14-16.json`
-- **Holds:** `S15-17`
+- **Render:** `figma-card:cards/S13-24.json`
+- **Holds:** `S14-20`
 - **Note:** Row 5 reveals the joint decision rule: any reform satisfying all three conditions falsifies the theorem. [book Appendix, lines 15454-15458]
 
 ## S14-23 — Zero qualifying counterexamples in current dataset; theorem unfalsified
 - **Anchor:** `Emmanuel Theodore (108:11)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S14-16.json`
-- **Holds:** `S15-17`
+- **Render:** `figma-card:cards/S13-24.json`
+- **Holds:** `S14-20`
 - **Note:** Row 6 reveals the audit status: zero qualifying counterexamples in the 1450–2026 record, leaving the theorem unfalsified. [book Appendix, lines 15454-15458]
 
 ## S14-24 — Cross-reference to Episode 1 (What Racism Really Is)
 - **Anchor:** `Emmanuel Theodore (108:33)`
 - **Type:** card
-- **Render:** `figma-card:cards/S14-22.json`
+- **Render:** `figma-card:cards/S13-28.json`
 - **Note:** Item 1 of the closing card reveals, pointing to chapter-by-chapter series for the Bayesian defense and RLC electrodynamic derivations. [editorial]
 
 ## S14-25 — Open-access manuscript of The Original Power (146 anchor cases)
 - **Anchor:** `Emmanuel Theodore (108:47)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S14-22.json`
-- **Holds:** `S15-23`
+- **Render:** `figma-card:cards/S13-28.json`
+- **Holds:** `S14-24`
 - **Note:** Item 2 reveals, citing the open-access manuscript and its 146 calibrated historical anchor cases. [book Empirical Methodology]
 
 ## S14-26 — Closing sign-off: Architecting the Operation, Episode 2
 - **Anchor:** `Emmanuel Theodore (108:55)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S14-22.json`
-- **Holds:** `S15-23`
+- **Render:** `figma-card:cards/S13-28.json`
+- **Holds:** `S14-24`
 - **Note:** Item 3 reveals, closing Episode 1 of The Original Power, Episode 1: What Racism Is. [editorial]
 
 <!-- SEG 15 · Close -->
@@ -3652,8 +3640,7 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 ## S15-04 — Five-part system audit and Equations 2.1–2.4 set ladder
 - **Anchor:** `Emmanuel Theodore (109:35)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S14-01.json`
-- **Holds:** `S15-01`
+- **Render:** `figma-card:cards/S02-01.json`
 - **Note:** Item 4 reveals, recapping the systems-engineering audit and the Set-Resolution Ladder in Table 2.1 and Figure 2.1. [book §2.1, Eq 2.1-2.4, Table 2.1, Fig 2.1]
 
 ## S15-05 — Orthographic illusion and Equation 3.5 Complex Wage phasor
@@ -3773,8 +3760,7 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 ## S15-22 — Zero qualifying counterexamples in current dataset; theorem unfalsified
 - **Anchor:** `Emmanuel Theodore (113:09)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S14-16.json`
-- **Holds:** `S15-17`
+- **Render:** `figma-card:cards/S14-22.json`
 - **Note:** Row 6 reveals the audit status: zero qualifying counterexamples in the 1450–2026 record, leaving the theorem unfalsified. [book Appendix, lines 15454-15458]
 
 ## S15-23 — Cross-reference to Episode 1 (What Racism Really Is)

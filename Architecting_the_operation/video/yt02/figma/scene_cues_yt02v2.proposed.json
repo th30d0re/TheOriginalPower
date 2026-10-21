@@ -1,0 +1,3177 @@
+{
+  "words": "outputs/YT02V2/words.json",
+  "manifest": "outputs/YT02V2/episode_manifest.json",
+  "scenes": [
+    {
+      "frame": "Episode 02 · What Racism Is",
+      "turns": [
+        0
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "episode"
+        }
+      ]
+    },
+    {
+      "frame": "Dictionary Order as Implicit Causal Theory",
+      "turns": [
+        1,
+        2
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "Dictionary"
+        },
+        {
+          "node": "item 1",
+          "turn": 1,
+          "word": "episode"
+        }
+      ]
+    },
+    {
+      "frame": "Segment 01 · Bias, Prejudice, Discrimination",
+      "turns": [
+        3
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "bias"
+        }
+      ]
+    },
+    {
+      "frame": "Episode 02 · What Racism Is",
+      "turns": [
+        4,
+        5
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "Then"
+        },
+        {
+          "node": "item 4",
+          "turn": 1,
+          "word": "narration"
+        }
+      ]
+    },
+    {
+      "frame": "Lexical Hierarchy · Standard Dictionary Entry",
+      "turns": [
+        11,
+        12
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "dictionary"
+        },
+        {
+          "node": "item 1",
+          "turn": 1,
+          "word": "Placing"
+        }
+      ]
+    },
+    {
+      "frame": "Episode 02 · What Racism Is",
+      "turns": [
+        13,
+        14,
+        15
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "ordering"
+        },
+        {
+          "node": "item 1",
+          "turn": 1,
+          "word": "racial"
+        },
+        {
+          "node": "item 1",
+          "turn": 2,
+          "word": "causal"
+        }
+      ]
+    },
+    {
+      "frame": "Group Partitioning · APA Dictionary of Psychology",
+      "turns": [
+        19,
+        20,
+        21,
+        22
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "group"
+        },
+        {
+          "node": "item 1",
+          "turn": 1,
+          "word": "same"
+        },
+        {
+          "node": "item 2",
+          "turn": 2,
+          "word": "American"
+        },
+        {
+          "node": "item 3",
+          "turn": 3,
+          "word": "Henri"
+        }
+      ]
+    },
+    {
+      "frame": "Construct 1 · Evaluative Bias",
+      "turns": [
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "bias"
+        },
+        {
+          "node": "item 1",
+          "turn": 1,
+          "word": "bias"
+        },
+        {
+          "node": "item 1",
+          "turn": 2,
+          "word": "bias"
+        },
+        {
+          "node": "item 2",
+          "turn": 3,
+          "word": "prior"
+        },
+        {
+          "node": "item 1",
+          "turn": 4,
+          "word": "Bias"
+        },
+        {
+          "node": "item 2",
+          "turn": 5,
+          "word": "bias"
+        },
+        {
+          "node": "item 2",
+          "turn": 6,
+          "word": "prior"
+        },
+        {
+          "node": "item 2",
+          "turn": 7,
+          "word": "prior"
+        },
+        {
+          "node": "item 2",
+          "turn": 8,
+          "word": "Bayesian"
+        }
+      ]
+    },
+    {
+      "frame": "Construct 1 · Evaluative Bias",
+      "turns": [
+        39
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "Bias"
+        }
+      ]
+    },
+    {
+      "frame": "Implicit Association Test · Greenwald et al. 1998",
+      "turns": [
+        43,
+        44
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "Greenwald"
+        },
+        {
+          "node": "item 2",
+          "turn": 1,
+          "word": "associative"
+        }
+      ]
+    },
+    {
+      "frame": "Construct 1 · Evaluative Bias",
+      "turns": [
+        45
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "bias"
+        }
+      ]
+    },
+    {
+      "frame": "Prejudice · Allport 1954",
+      "turns": [
+        46,
+        47,
+        48,
+        49
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "prejudice"
+        },
+        {
+          "node": "headline",
+          "turn": 1,
+          "word": "Allport"
+        },
+        {
+          "node": "headline",
+          "turn": 2,
+          "word": "Allport"
+        },
+        {
+          "node": "headline",
+          "turn": 3,
+          "word": "prejudice"
+        }
+      ]
+    },
+    {
+      "frame": "Refencing & Rigidity · Allport 1954",
+      "turns": [
+        50,
+        51
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "Allport"
+        },
+        {
+          "node": "item 2",
+          "turn": 1,
+          "word": "group"
+        }
+      ]
+    },
+    {
+      "frame": "Host Wetware vs. Psycho-Legal Software",
+      "turns": [
+        62
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "established"
+        }
+      ]
+    },
+    {
+      "frame": "Segment 02 · What Makes a System a System",
+      "turns": [
+        63
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "Everything"
+        }
+      ]
+    },
+    {
+      "frame": "Scalar Prejudice vs. Vector Racism · Equations 3.1 & 25.1",
+      "turns": [
+        64,
+        65
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "racism"
+        },
+        {
+          "node": "headline",
+          "turn": 1,
+          "word": "scalar"
+        }
+      ]
+    },
+    {
+      "frame": "Requirement 2 · Policed System Boundary",
+      "turns": [
+        70
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "system"
+        }
+      ]
+    },
+    {
+      "frame": "Host Wetware vs. Psycho-Legal Software",
+      "turns": [
+        71
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "software"
+        }
+      ]
+    },
+    {
+      "frame": "Morphological Boundary · The -ism Suffix",
+      "turns": [
+        72
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "suffix"
+        }
+      ]
+    },
+    {
+      "frame": "Scalar Prejudice vs. Vector Racism · Equations 3.1 & 25.1",
+      "turns": [
+        73
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "racism"
+        }
+      ]
+    },
+    {
+      "frame": "Host Wetware vs. Psycho-Legal Software",
+      "turns": [
+        74
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "host"
+        }
+      ]
+    },
+    {
+      "frame": "Morphological Boundary · The -ism Suffix",
+      "turns": [
+        75
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "book"
+        }
+      ]
+    },
+    {
+      "frame": "Segment 03 · The Set-Theoretic Ladder",
+      "turns": [
+        76
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "pause"
+        }
+      ]
+    },
+    {
+      "frame": "Interpersonal Class · Shared Structural Limits",
+      "turns": [
+        77,
+        78
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "Everything"
+        },
+        {
+          "node": "item 1",
+          "turn": 1,
+          "word": "conventional"
+        }
+      ]
+    },
+    {
+      "frame": "Conventional Causal Model · Equation 2.5",
+      "turns": [
+        79
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "Agreement"
+        }
+      ]
+    },
+    {
+      "frame": "Conventional Causal Model · Equation 2.5",
+      "turns": [
+        80,
+        81
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "conventional"
+        },
+        {
+          "node": "headline",
+          "turn": 1,
+          "word": "Equation"
+        }
+      ]
+    },
+    {
+      "frame": "Equation 2.5 Audit · Predictions vs. Archival Record",
+      "turns": [
+        82
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "Equation"
+        }
+      ]
+    },
+    {
+      "frame": "Conventional Causal Model · Equation 2.5",
+      "turns": [
+        83,
+        84
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "Equation"
+        },
+        {
+          "node": "headline",
+          "turn": 1,
+          "word": "Equation"
+        }
+      ]
+    },
+    {
+      "frame": "Conventional Causal Model · Equation 2.5",
+      "turns": [
+        85
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "conventional"
+        }
+      ]
+    },
+    {
+      "frame": "Level 4 · Recursive Local Partition",
+      "turns": [
+        87
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "Look"
+        }
+      ]
+    },
+    {
+      "frame": "Conventional Causal Model · Equation 2.5",
+      "turns": [
+        88,
+        89,
+        90
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "individual"
+        },
+        {
+          "node": "headline",
+          "turn": 1,
+          "word": "Equation"
+        },
+        {
+          "node": "headline",
+          "turn": 2,
+          "word": "Equation"
+        }
+      ]
+    },
+    {
+      "frame": "Table 2.1 · The Set-Resolution Ladder",
+      "turns": [
+        91
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "Section"
+        }
+      ]
+    },
+    {
+      "frame": "Diagnostic Application · Public Debate Stall Points",
+      "turns": [
+        92,
+        93
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "Even"
+        },
+        {
+          "node": "item 1",
+          "turn": 1,
+          "word": "Treating"
+        }
+      ]
+    },
+    {
+      "frame": "Segment 02 · What Makes a System a System",
+      "turns": [
+        115,
+        116,
+        117,
+        118,
+        119
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "system"
+        },
+        {
+          "node": "item 2",
+          "turn": 1,
+          "word": "bounded"
+        },
+        {
+          "node": "item 3",
+          "turn": 2,
+          "word": "engineering"
+        },
+        {
+          "node": "item 4",
+          "turn": 3,
+          "word": "American"
+        },
+        {
+          "node": "item 1",
+          "turn": 4,
+          "word": "racism"
+        }
+      ]
+    },
+    {
+      "frame": "Level 2 · In-Group Tier Decomposition",
+      "turns": [
+        122,
+        123,
+        124
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "Next"
+        },
+        {
+          "node": "headline",
+          "turn": 1,
+          "word": "Beneath"
+        },
+        {
+          "node": "headline",
+          "turn": 2,
+          "word": "base"
+        }
+      ]
+    },
+    {
+      "frame": "Requirement 3 · Circuit Inputs and Outputs",
+      "turns": [
+        125,
+        126
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "Alongside"
+        },
+        {
+          "node": "item 1",
+          "turn": 1,
+          "word": "Asymmetric"
+        }
+      ]
+    },
+    {
+      "frame": "Requirement 5 · Feedback & RLC Damping",
+      "turns": [
+        137
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "Requirement"
+        }
+      ]
+    },
+    {
+      "frame": "Requirement 5 · Feedback & RLC Damping",
+      "turns": [
+        140
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "requirements"
+        }
+      ]
+    },
+    {
+      "frame": "Segment 03 · The Set-Theoretic Ladder",
+      "turns": [
+        141
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "set"
+        }
+      ]
+    },
+    {
+      "frame": "Level 2 · In-Group Tier Decomposition",
+      "turns": [
+        147
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "Section"
+        }
+      ]
+    },
+    {
+      "frame": "Equation 2.1 · Revealed vs. Flattened",
+      "turns": [
+        148,
+        149,
+        150,
+        151
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "introduce"
+        },
+        {
+          "node": "item 1",
+          "turn": 1,
+          "word": "well-defined"
+        },
+        {
+          "node": "item 2",
+          "turn": 2,
+          "word": "union"
+        },
+        {
+          "node": "item 1",
+          "turn": 3,
+          "word": "sets"
+        }
+      ]
+    },
+    {
+      "frame": "Level 1 · Coarse Binary Partition",
+      "turns": [
+        152
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "coarse"
+        }
+      ]
+    },
+    {
+      "frame": "Equation 2.1 · Revealed vs. Flattened",
+      "turns": [
+        153,
+        154,
+        155,
+        156
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "Equation"
+        },
+        {
+          "node": "item 1",
+          "turn": 1,
+          "word": "legal"
+        },
+        {
+          "node": "item 1",
+          "turn": 2,
+          "word": "primary"
+        },
+        {
+          "node": "item 2",
+          "turn": 3,
+          "word": "flattens"
+        }
+      ]
+    },
+    {
+      "frame": "Level 2 · In-Group Tier Decomposition",
+      "turns": [
+        157,
+        158,
+        159,
+        160,
+        161
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "Equation"
+        },
+        {
+          "node": "headline",
+          "turn": 1,
+          "word": "refine"
+        },
+        {
+          "node": "headline",
+          "turn": 2,
+          "word": "Those"
+        },
+        {
+          "node": "headline",
+          "turn": 3,
+          "word": "Their"
+        },
+        {
+          "node": "headline",
+          "turn": 4,
+          "word": "decomposition"
+        }
+      ]
+    },
+    {
+      "frame": "Level 3 · Out-Group Decomposition",
+      "turns": [
+        162,
+        163,
+        164,
+        165
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "resolve"
+        },
+        {
+          "node": "headline",
+          "turn": 1,
+          "word": "Equation"
+        },
+        {
+          "node": "headline",
+          "turn": 2,
+          "word": "American"
+        },
+        {
+          "node": "headline",
+          "turn": 3,
+          "word": "adjacent"
+        }
+      ]
+    },
+    {
+      "frame": "Four Falsifiable Predictions · Equation 2.6",
+      "turns": [
+        166
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "Resolving"
+        }
+      ]
+    },
+    {
+      "frame": "Level 4 · Recursive Local Partition",
+      "turns": [
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "Even"
+        },
+        {
+          "node": "headline",
+          "turn": 1,
+          "word": "recursive"
+        },
+        {
+          "node": "headline",
+          "turn": 2,
+          "word": "Equation"
+        },
+        {
+          "node": "headline",
+          "turn": 3,
+          "word": "Here"
+        },
+        {
+          "node": "headline",
+          "turn": 4,
+          "word": "Inside"
+        },
+        {
+          "node": "headline",
+          "turn": 5,
+          "word": "Apply"
+        },
+        {
+          "node": "headline",
+          "turn": 6,
+          "word": "single"
+        },
+        {
+          "node": "headline",
+          "turn": 7,
+          "word": "Apply"
+        },
+        {
+          "node": "headline",
+          "turn": 8,
+          "word": "Apply"
+        }
+      ]
+    },
+    {
+      "frame": "Table 2.1 · The Set-Resolution Ladder",
+      "turns": [
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "Table"
+        },
+        {
+          "node": "item 1",
+          "turn": 1,
+          "word": "Table"
+        },
+        {
+          "node": "item 2",
+          "turn": 2,
+          "word": "Level"
+        },
+        {
+          "node": "item 3",
+          "turn": 3,
+          "word": "Figure"
+        },
+        {
+          "node": "item 1",
+          "turn": 4,
+          "word": "Whenever"
+        },
+        {
+          "node": "item 2",
+          "turn": 5,
+          "word": "Arguments"
+        },
+        {
+          "node": "item 3",
+          "turn": 6,
+          "word": "Conversely"
+        },
+        {
+          "node": "item 1",
+          "turn": 7,
+          "word": "Holding"
+        }
+      ]
+    },
+    {
+      "frame": "Segment 07 · Test 1: Portugal, 1441–1486",
+      "turns": [
+        184
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "public"
+        }
+      ]
+    },
+    {
+      "frame": "Portuguese Material Optimization · Early 1400s",
+      "turns": [
+        185
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "Picture"
+        }
+      ]
+    },
+    {
+      "frame": "Mediterranean Archive · Two Pre-1441 Templates",
+      "turns": [
+        186
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "depth"
+        }
+      ]
+    },
+    {
+      "frame": "1441 · Rio d'Ouro Nocturnal Raid",
+      "turns": [
+        187
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "Viewed"
+        }
+      ]
+    },
+    {
+      "frame": "1444 · Companhia de Lagos & Royal Quinto",
+      "turns": [
+        188
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "Rotate"
+        }
+      ]
+    },
+    {
+      "frame": "1445–1446 · Military Resistance & Trade Pivot",
+      "turns": [
+        189
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "upward"
+        }
+      ]
+    },
+    {
+      "frame": "Dum Diversas, 1452 · Romanus Pontifex, 1455",
+      "turns": [
+        190
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "book"
+        }
+      ]
+    },
+    {
+      "frame": "1453 · Zurara's Commissioned Chronicle",
+      "turns": [
+        191
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "downward"
+        }
+      ]
+    },
+    {
+      "frame": "Portuguese Compile Sequence · 1441–1486",
+      "turns": [
+        192
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "Zoom"
+        }
+      ]
+    },
+    {
+      "frame": "In-Group Status Allocation · Equation 3.2",
+      "turns": [
+        193
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "Elite"
+        }
+      ]
+    },
+    {
+      "frame": "The Phenotype Lock · Equation 3.10",
+      "turns": [
+        194
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "optical"
+        }
+      ]
+    },
+    {
+      "frame": "Control Case 1 · Roman Slavery (Equation 3.9)",
+      "turns": [
+        197
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "Buffer"
+        }
+      ]
+    },
+    {
+      "frame": "Control Case 2 · Religious Partition (Equation 3.11)",
+      "turns": [
+        198
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "projection"
+        }
+      ]
+    },
+    {
+      "frame": "1449 Sentencia-Estatuto to Atlantic Phenotype Lock",
+      "turns": [
+        199
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "wide"
+        }
+      ]
+    },
+    {
+      "frame": "Test 1 Verdict · Portugal, 1441–1486",
+      "turns": [
+        200
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "projection"
+        }
+      ]
+    },
+    {
+      "frame": "1441 · Rio d'Ouro Nocturnal Raid",
+      "turns": [
+        210,
+        211,
+        212,
+        213,
+        214
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "track"
+        },
+        {
+          "node": "item 2",
+          "turn": 1,
+          "word": "Rio"
+        },
+        {
+          "node": "item 3",
+          "turn": 2,
+          "word": "ashore"
+        },
+        {
+          "node": "item 4",
+          "turn": 3,
+          "word": "raid"
+        },
+        {
+          "node": "item 1",
+          "turn": 4,
+          "word": "Prince"
+        }
+      ]
+    },
+    {
+      "frame": "1444 · Companhia de Lagos & Royal Quinto",
+      "turns": [
+        215,
+        216,
+        217
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "Companhia"
+        },
+        {
+          "node": "item 3",
+          "turn": 1,
+          "word": "six"
+        },
+        {
+          "node": "item 4",
+          "turn": 2,
+          "word": "captives"
+        }
+      ]
+    },
+    {
+      "frame": "1444 · Companhia de Lagos & Royal Quinto",
+      "turns": [
+        219
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "Lagos"
+        }
+      ]
+    },
+    {
+      "frame": "In-Group Status Allocation · Equation 3.2",
+      "turns": [
+        236,
+        237
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "Equation"
+        },
+        {
+          "node": "headline",
+          "turn": 1,
+          "word": "Equation"
+        }
+      ]
+    },
+    {
+      "frame": "The Phenotype Lock · Equation 3.10",
+      "turns": [
+        238,
+        239,
+        240,
+        241,
+        242,
+        243,
+        244,
+        245,
+        246,
+        247,
+        248,
+        249
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "defining"
+        },
+        {
+          "node": "headline",
+          "turn": 1,
+          "word": "chronology"
+        },
+        {
+          "node": "headline",
+          "turn": 2,
+          "word": "phenotype"
+        },
+        {
+          "node": "headline",
+          "turn": 3,
+          "word": "Phenotypic"
+        },
+        {
+          "node": "headline",
+          "turn": 4,
+          "word": "phenotype"
+        },
+        {
+          "node": "headline",
+          "turn": 5,
+          "word": "biological"
+        },
+        {
+          "node": "headline",
+          "turn": 6,
+          "word": "Jablonski"
+        },
+        {
+          "node": "headline",
+          "turn": 7,
+          "word": "genome-wide"
+        },
+        {
+          "node": "headline",
+          "turn": 8,
+          "word": "Ancient"
+        },
+        {
+          "node": "headline",
+          "turn": 9,
+          "word": "Research"
+        },
+        {
+          "node": "headline",
+          "turn": 10,
+          "word": "legal"
+        },
+        {
+          "node": "headline",
+          "turn": 11,
+          "word": "Phenotype"
+        }
+      ]
+    },
+    {
+      "frame": "1449 Sentencia-Estatuto to Atlantic Phenotype Lock",
+      "turns": [
+        250
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "Atlantic"
+        }
+      ]
+    },
+    {
+      "frame": "Portuguese Compile Sequence · 1441–1486",
+      "turns": [
+        251
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "sequence"
+        }
+      ]
+    },
+    {
+      "frame": "1449 Sentencia-Estatuto to Atlantic Phenotype Lock",
+      "turns": [
+        252
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "body"
+        }
+      ]
+    },
+    {
+      "frame": "The Phenotype Lock · Equation 3.10",
+      "turns": [
+        253
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "lock"
+        }
+      ]
+    },
+    {
+      "frame": "Control Case 1 · Roman Slavery (Equation 3.9)",
+      "turns": [
+        254,
+        255
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "Roman"
+        },
+        {
+          "node": "headline",
+          "turn": 1,
+          "word": "Roman"
+        }
+      ]
+    },
+    {
+      "frame": "1449 Sentencia-Estatuto to Atlantic Phenotype Lock",
+      "turns": [
+        259,
+        260,
+        261
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "Third"
+        },
+        {
+          "node": "item 2",
+          "turn": 1,
+          "word": "barred"
+        },
+        {
+          "node": "item 3",
+          "turn": 2,
+          "word": "Equation"
+        }
+      ]
+    },
+    {
+      "frame": "The Phenotype Lock · Equation 3.10",
+      "turns": [
+        262
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "Phenotype"
+        }
+      ]
+    },
+    {
+      "frame": "Test 1 Verdict · Portugal, 1441–1486",
+      "turns": [
+        263,
+        264,
+        265,
+        266
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "Test"
+        },
+        {
+          "node": "item 1",
+          "turn": 1,
+          "word": "sponsoring"
+        },
+        {
+          "node": "item 2",
+          "turn": 2,
+          "word": "case"
+        },
+        {
+          "node": "item 3",
+          "turn": 3,
+          "word": "boldest"
+        }
+      ]
+    },
+    {
+      "frame": "Segment 10 · Test 3: Backlash Record, 1840–2020",
+      "turns": [
+        321,
+        322
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "Virginia"
+        },
+        {
+          "node": "item 1",
+          "turn": 1,
+          "word": "book"
+        }
+      ]
+    },
+    {
+      "frame": "Part B · Interface Optimizer (Equations 2.9–2.10)",
+      "turns": [
+        334,
+        335
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "systems"
+        },
+        {
+          "node": "headline",
+          "turn": 1,
+          "word": "framework"
+        }
+      ]
+    },
+    {
+      "frame": "War on Drugs · Quantitative Proxy Series",
+      "turns": [
+        344,
+        345,
+        346
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "Here"
+        },
+        {
+          "node": "item 1",
+          "turn": 1,
+          "word": "Buffer"
+        },
+        {
+          "node": "item 2",
+          "turn": 2,
+          "word": "angle"
+        }
+      ]
+    },
+    {
+      "frame": "Evidentiary Audit · State v. Williams (Fla. 1993)",
+      "turns": [
+        348
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "Past"
+        }
+      ]
+    },
+    {
+      "frame": "Part C · Suppression Envelope (Equations 2.13–2.14)",
+      "turns": [
+        352
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "same"
+        }
+      ]
+    },
+    {
+      "frame": "Part C · Suppression Envelope (Equations 2.13–2.14)",
+      "turns": [
+        354
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "Arms"
+        }
+      ]
+    },
+    {
+      "frame": "Part C · Suppression Envelope (Equations 2.13–2.14)",
+      "turns": [
+        356,
+        357,
+        358,
+        359,
+        360
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "United"
+        },
+        {
+          "node": "headline",
+          "turn": 1,
+          "word": "C"
+        },
+        {
+          "node": "headline",
+          "turn": 2,
+          "word": "part"
+        },
+        {
+          "node": "headline",
+          "turn": 3,
+          "word": "seventeen"
+        },
+        {
+          "node": "headline",
+          "turn": 4,
+          "word": "Both"
+        }
+      ]
+    },
+    {
+      "frame": "Part C · Suppression Envelope (Equations 2.13–2.14)",
+      "turns": [
+        362
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "two-series"
+        }
+      ]
+    },
+    {
+      "frame": "Test 3 Verdict · American Backlash Record (1840–2020)",
+      "turns": [
+        374,
+        375,
+        376
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "deindustrialization"
+        },
+        {
+          "node": "item 1",
+          "turn": 1,
+          "word": "Culture-war"
+        },
+        {
+          "node": "item 2",
+          "turn": 2,
+          "word": "Equation"
+        }
+      ]
+    },
+    {
+      "frame": "Formal Definition of Racism · Section 2.2",
+      "turns": [
+        488
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "signal-processing"
+        }
+      ]
+    },
+    {
+      "frame": "Formal Definition of Racism · Section 2.2",
+      "turns": [
+        489
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "Equation"
+        }
+      ]
+    },
+    {
+      "frame": "Five Operational Steps · Section 2.2",
+      "turns": [
+        490,
+        491,
+        492
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "Equation"
+        },
+        {
+          "node": "item 1",
+          "turn": 1,
+          "word": "Figure"
+        },
+        {
+          "node": "item 2",
+          "turn": 2,
+          "word": "grievance"
+        }
+      ]
+    },
+    {
+      "frame": "Level 4 · Recursive Local Partition",
+      "turns": [
+        493
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "recursive"
+        }
+      ]
+    },
+    {
+      "frame": "Five Operational Steps · Section 2.2",
+      "turns": [
+        494,
+        495
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "Chapter"
+        },
+        {
+          "node": "item 1",
+          "turn": 1,
+          "word": "Equation"
+        }
+      ]
+    },
+    {
+      "frame": "Scalar Prejudice vs. Vector Racism · Equations 3.1 & 25.1",
+      "turns": [
+        496,
+        497,
+        498,
+        499
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "dispersion"
+        },
+        {
+          "node": "headline",
+          "turn": 1,
+          "word": "Chapter"
+        },
+        {
+          "node": "headline",
+          "turn": 2,
+          "word": "state"
+        },
+        {
+          "node": "headline",
+          "turn": 3,
+          "word": "spectral"
+        }
+      ]
+    },
+    {
+      "frame": "Refutation Standard 3 · Reverse Racism Vector Audit",
+      "turns": [
+        500,
+        501,
+        502,
+        503
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "search"
+        },
+        {
+          "node": "item 1",
+          "turn": 1,
+          "word": "Table"
+        },
+        {
+          "node": "item 2",
+          "turn": 2,
+          "word": "six-year"
+        },
+        {
+          "node": "item 3",
+          "turn": 3,
+          "word": "spectrum"
+        }
+      ]
+    },
+    {
+      "frame": "Structural Tier Position vs. Intra-Group Stratification",
+      "turns": [
+        504,
+        505,
+        506
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "Chapter"
+        },
+        {
+          "node": "item 1",
+          "turn": 1,
+          "word": "time-domain"
+        },
+        {
+          "node": "item 2",
+          "turn": 2,
+          "word": "annual"
+        }
+      ]
+    },
+    {
+      "frame": "Segment 14 · Complete Analytical Arc",
+      "turns": [
+        510
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "rebuild"
+        }
+      ]
+    },
+    {
+      "frame": "Segment 14 · Complete Analytical Arc",
+      "turns": [
+        511,
+        512,
+        513
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "right-hand"
+        },
+        {
+          "node": "item 1",
+          "turn": 1,
+          "word": "rebuilt"
+        },
+        {
+          "node": "item 2",
+          "turn": 2,
+          "word": "middle"
+        }
+      ]
+    },
+    {
+      "frame": "Synthesis · Mathematical Models & Historical Tests",
+      "turns": [
+        514
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "base"
+        }
+      ]
+    },
+    {
+      "frame": "Formal Definition of Racism · Section 2.2",
+      "turns": [
+        515
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "Section"
+        }
+      ]
+    },
+    {
+      "frame": "Synthesis · Mathematical Models & Historical Tests",
+      "turns": [
+        516
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "Through"
+        }
+      ]
+    },
+    {
+      "frame": "Host Wetware vs. Psycho-Legal Software",
+      "turns": [
+        517
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "software"
+        }
+      ]
+    },
+    {
+      "frame": "Five Operational Steps · Section 2.2",
+      "turns": [
+        518
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "Section"
+        }
+      ]
+    },
+    {
+      "frame": "Synthesis · Mathematical Models & Historical Tests",
+      "turns": [
+        519
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "rebuilt"
+        }
+      ]
+    },
+    {
+      "frame": "Five Operational Steps · Section 2.2",
+      "turns": [
+        520
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "Step"
+        }
+      ]
+    },
+    {
+      "frame": "Five Operational Steps · Section 2.2",
+      "turns": [
+        523
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "Step"
+        }
+      ]
+    },
+    {
+      "frame": "Scalar Prejudice vs. Vector Racism · Equations 3.1 & 25.1",
+      "turns": [
+        524
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "vector"
+        }
+      ]
+    },
+    {
+      "frame": "Segment 14 · Complete Analytical Arc",
+      "turns": [
+        536,
+        537,
+        538
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "complete"
+        },
+        {
+          "node": "item 2",
+          "turn": 1,
+          "word": "dictionary"
+        },
+        {
+          "node": "item 3",
+          "turn": 2,
+          "word": "bias"
+        }
+      ]
+    },
+    {
+      "frame": "Segment 02 · What Makes a System a System",
+      "turns": [
+        539
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "system"
+        }
+      ]
+    },
+    {
+      "frame": "The Concession Theorem · Equation 19.2",
+      "turns": [
+        548
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "Concession"
+        }
+      ]
+    },
+    {
+      "frame": "Concession Theorem · Appendix Falsification Protocol",
+      "turns": [
+        552,
+        553,
+        554,
+        555,
+        556
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "falsification"
+        },
+        {
+          "node": "item 1",
+          "turn": 1,
+          "word": "Second"
+        },
+        {
+          "node": "item 2",
+          "turn": 2,
+          "word": "Third"
+        },
+        {
+          "node": "item 3",
+          "turn": 3,
+          "word": "reform"
+        },
+        {
+          "node": "item 4",
+          "turn": 4,
+          "word": "manuscript"
+        }
+      ]
+    },
+    {
+      "frame": "Architecting the Operation · Series & Manuscript",
+      "turns": [
+        557
+      ],
+      "beats": [
+        {
+          "node": "headline",
+          "turn": 0,
+          "word": "series"
+        }
+      ]
+    },
+    {
+      "frame": "assembly",
+      "turns": [
+        438,
+        439,
+        440,
+        441,
+        442,
+        443,
+        444,
+        445,
+        446,
+        447,
+        448,
+        449,
+        450,
+        451,
+        452
+      ],
+      "beats": [
+        {
+          "node": "era band",
+          "turn": 0,
+          "word": "centuries"
+        },
+        {
+          "node": "panel header",
+          "turn": 0,
+          "word": "dashboard"
+        },
+        {
+          "node": "panel stress",
+          "turn": 2,
+          "word": "System"
+        },
+        {
+          "node": "panel capital",
+          "turn": 4,
+          "word": "Capital"
+        },
+        {
+          "node": "panel interference",
+          "turn": 5,
+          "word": "Phi-load"
+        },
+        {
+          "node": "panel patch",
+          "turn": 7,
+          "word": "Active"
+        },
+        {
+          "node": "panel variables",
+          "turn": 8,
+          "word": "Variables"
+        },
+        {
+          "node": "panel function",
+          "turn": 9,
+          "word": "Executing"
+        },
+        {
+          "node": "panel wage",
+          "turn": 10,
+          "word": "wage"
+        },
+        {
+          "node": "panel result",
+          "turn": 13,
+          "word": "Result"
+        },
+        {
+          "node": "era progress",
+          "after": "panel result",
+          "gap": 0.5
+        }
+      ]
+    },
+    {
+      "frame": "intro 1 · System Stress",
+      "turns": [
+        440,
+        441
+      ],
+      "beats": [
+        {
+          "node": "description",
+          "turn": 0,
+          "word": "measure"
+        },
+        {
+          "node": "instrument",
+          "turn": 0,
+          "word": "System"
+        },
+        {
+          "node": "level MINIMAL",
+          "turn": 1,
+          "word": "minimal"
+        },
+        {
+          "node": "level MODERATE",
+          "turn": 1,
+          "word": "moderate"
+        },
+        {
+          "node": "level HIGH",
+          "turn": 1,
+          "word": "high"
+        },
+        {
+          "node": "level CRITICAL",
+          "turn": 1,
+          "word": "critical"
+        }
+      ]
+    },
+    {
+      "frame": "intro 2 · Capital",
+      "turns": [
+        442
+      ],
+      "beats": [
+        {
+          "node": "description",
+          "turn": 0,
+          "word": "maximum"
+        },
+        {
+          "node": "instrument",
+          "turn": 0,
+          "word": "Capital"
+        },
+        {
+          "node": "level STAGNANT",
+          "turn": 0,
+          "word": "stagnant"
+        },
+        {
+          "node": "level EXPANDING",
+          "turn": 0,
+          "word": "expanding"
+        },
+        {
+          "node": "level AT RISK",
+          "turn": 0,
+          "word": "risk"
+        }
+      ]
+    },
+    {
+      "frame": "intro 3 · Interference State",
+      "turns": [
+        443
+      ],
+      "beats": [
+        {
+          "node": "description",
+          "turn": 0,
+          "word": "interference"
+        },
+        {
+          "node": "instrument",
+          "turn": 0,
+          "word": "Phi-load"
+        },
+        {
+          "node": "phi bar",
+          "turn": 0,
+          "word": "range"
+        }
+      ]
+    },
+    {
+      "frame": "intro 4 · Threshold Dial",
+      "turns": [
+        444
+      ],
+      "beats": [
+        {
+          "node": "description",
+          "turn": 0,
+          "word": "reads"
+        },
+        {
+          "node": "instrument",
+          "turn": 0,
+          "word": "threshold"
+        },
+        {
+          "node": "rho needle",
+          "turn": 0,
+          "word": "rho-tau",
+          "until": {
+            "turn": 0,
+            "word": "crash"
+          }
+        },
+        {
+          "node": "crash reading",
+          "turn": 0,
+          "word": "one"
+        },
+        {
+          "node": "crash box",
+          "turn": 0,
+          "word": "crash"
+        },
+        {
+          "node": "crash dot",
+          "after": "crash reading",
+          "gap": 0.2
+        },
+        {
+          "node": "post-patch box",
+          "after": "crash box",
+          "gap": 0.6
+        }
+      ]
+    },
+    {
+      "frame": "intro 5 · Active Patch",
+      "turns": [
+        445
+      ],
+      "beats": [
+        {
+          "node": "description",
+          "turn": 0,
+          "word": "recompile"
+        },
+        {
+          "node": "instrument",
+          "turn": 0,
+          "word": "Active"
+        },
+        {
+          "node": "patch",
+          "turn": 0,
+          "word": "update"
+        }
+      ]
+    },
+    {
+      "frame": "intro 6 · Variables Deployed",
+      "turns": [
+        446
+      ],
+      "beats": [
+        {
+          "node": "description",
+          "turn": 0,
+          "word": "chips"
+        },
+        {
+          "node": "instrument",
+          "turn": 0,
+          "word": "Variables"
+        },
+        {
+          "node": "chip I_buffer",
+          "turn": 0,
+          "word": "chips"
+        },
+        {
+          "node": "chip F_enforce^proto",
+          "after": "chip I_buffer",
+          "gap": 0.35
+        },
+        {
+          "node": "chip P_uppet^v1.0",
+          "after": "chip F_enforce^proto",
+          "gap": 0.35
+        },
+        {
+          "node": "chip W",
+          "after": "chip P_uppet^v1.0",
+          "gap": 0.35
+        },
+        {
+          "node": "chip E",
+          "after": "chip W",
+          "gap": 0.35
+        },
+        {
+          "node": "chip O_racialized",
+          "after": "chip E",
+          "gap": 0.35
+        },
+        {
+          "node": "chip I",
+          "after": "chip O_racialized",
+          "gap": 0.35
+        }
+      ]
+    },
+    {
+      "frame": "intro 7 · Executing Function",
+      "turns": [
+        447
+      ],
+      "beats": [
+        {
+          "node": "description",
+          "turn": 0,
+          "word": "algorithm"
+        },
+        {
+          "node": "instrument",
+          "turn": 0,
+          "word": "Executing"
+        },
+        {
+          "node": "function",
+          "turn": 0,
+          "word": "codifying"
+        }
+      ]
+    },
+    {
+      "frame": "intro 8 · Wage Phasor",
+      "turns": [
+        448,
+        449,
+        450
+      ],
+      "beats": [
+        {
+          "node": "description",
+          "turn": 0,
+          "word": "phasor"
+        },
+        {
+          "node": "instrument",
+          "turn": 0,
+          "word": "wage"
+        },
+        {
+          "node": "wage phasor",
+          "turn": 0,
+          "word": "phasor",
+          "until": {
+            "turn": 1,
+            "word": "Quadrant"
+          }
+        },
+        {
+          "node": "projection material",
+          "turn": 1,
+          "word": "Material"
+        },
+        {
+          "node": "projection psych",
+          "turn": 1,
+          "word": "psychological"
+        },
+        {
+          "node": "readout all material",
+          "after": "projection material",
+          "gap": 0.4
+        },
+        {
+          "node": "readout pure status",
+          "turn": 1,
+          "word": "pure"
+        },
+        {
+          "node": "readout Quadrant II",
+          "turn": 1,
+          "word": "Quadrant"
+        }
+      ]
+    },
+    {
+      "frame": "intro 9 · Result",
+      "turns": [
+        451
+      ],
+      "beats": [
+        {
+          "node": "description",
+          "turn": 0,
+          "word": "output"
+        },
+        {
+          "node": "instrument",
+          "turn": 0,
+          "word": "Result"
+        },
+        {
+          "node": "ticker 1",
+          "turn": 0,
+          "word": "policy"
+        },
+        {
+          "node": "ticker 2",
+          "after": "ticker 1",
+          "gap": 0.6
+        },
+        {
+          "node": "ticker 3",
+          "turn": 0,
+          "word": "warning"
+        }
+      ]
+    },
+    {
+      "frame": "era 1486",
+      "turns": [
+        453,
+        454,
+        455,
+        456
+      ],
+      "beats": [
+        {
+          "node": "era band",
+          "turn": 0,
+          "word": "1486"
+        },
+        {
+          "node": "panel header",
+          "turn": 0,
+          "word": "Log",
+          "subtree": true
+        },
+        {
+          "node": "panel stress",
+          "turn": 0,
+          "word": "Stress",
+          "subtree": true
+        },
+        {
+          "node": "panel capital",
+          "turn": 0,
+          "word": "Capital",
+          "subtree": true
+        },
+        {
+          "node": "panel interference",
+          "turn": 1,
+          "word": "Phi-load",
+          "subtree": true
+        },
+        {
+          "node": "rho needle",
+          "turn": 1,
+          "word": "Rho-tau",
+          "until": {
+            "turn": 1,
+            "word": "eighty-five"
+          }
+        },
+        {
+          "node": "panel patch",
+          "turn": 1,
+          "word": "Compiling",
+          "subtree": true
+        },
+        {
+          "node": "panel variables",
+          "turn": 2,
+          "word": "chips",
+          "subtree": true
+        },
+        {
+          "node": "panel function",
+          "turn": 2,
+          "word": "Contract",
+          "subtree": true
+        },
+        {
+          "node": "panel wage",
+          "turn": 2,
+          "word": "wage",
+          "subtree": true
+        },
+        {
+          "node": "wage phasor",
+          "turn": 2,
+          "word": "phasor",
+          "until": {
+            "turn": 2,
+            "word": "status"
+          }
+        },
+        {
+          "node": "panel result",
+          "turn": 3,
+          "word": "Result",
+          "subtree": true
+        },
+        {
+          "node": "era progress",
+          "after": "panel result",
+          "gap": 0.5
+        }
+      ]
+    },
+    {
+      "frame": "era 1676",
+      "turns": [
+        457,
+        458,
+        459,
+        460
+      ],
+      "beats": [
+        {
+          "node": "era band",
+          "turn": 0,
+          "word": "1676"
+        },
+        {
+          "node": "panel header",
+          "turn": 0,
+          "word": "Log",
+          "subtree": true
+        },
+        {
+          "node": "panel stress",
+          "turn": 0,
+          "word": "Stress",
+          "subtree": true
+        },
+        {
+          "node": "panel capital",
+          "turn": 0,
+          "word": "Capital",
+          "subtree": true
+        },
+        {
+          "node": "panel interference",
+          "turn": 1,
+          "word": "Rho-tau",
+          "subtree": true
+        },
+        {
+          "node": "rho needle",
+          "turn": 1,
+          "word": "Rho-tau",
+          "until": {
+            "turn": 1,
+            "word": "seventy-five"
+          }
+        },
+        {
+          "node": "panel patch",
+          "turn": 1,
+          "word": "recompile",
+          "subtree": true
+        },
+        {
+          "node": "panel variables",
+          "turn": 2,
+          "word": "chips",
+          "subtree": true
+        },
+        {
+          "node": "panel wage",
+          "turn": 2,
+          "word": "wage",
+          "subtree": true
+        },
+        {
+          "node": "wage phasor",
+          "turn": 2,
+          "word": "wage",
+          "until": {
+            "turn": 2,
+            "word": "degrees"
+          }
+        },
+        {
+          "node": "panel function",
+          "turn": 3,
+          "word": "function",
+          "subtree": true
+        },
+        {
+          "node": "panel result",
+          "turn": 3,
+          "word": "Result",
+          "subtree": true
+        },
+        {
+          "node": "era progress",
+          "after": "panel result",
+          "gap": 0.5
+        }
+      ]
+    },
+    {
+      "frame": "era 1704",
+      "turns": [
+        461,
+        462,
+        463,
+        464
+      ],
+      "beats": [
+        {
+          "node": "era band",
+          "turn": 0,
+          "word": "1704"
+        },
+        {
+          "node": "panel header",
+          "turn": 0,
+          "word": "Log",
+          "subtree": true
+        },
+        {
+          "node": "panel stress",
+          "turn": 0,
+          "word": "Stress",
+          "subtree": true
+        },
+        {
+          "node": "panel capital",
+          "turn": 0,
+          "word": "Capital",
+          "subtree": true
+        },
+        {
+          "node": "panel interference",
+          "turn": 1,
+          "word": "Phi-load",
+          "subtree": true
+        },
+        {
+          "node": "rho needle",
+          "turn": 1,
+          "word": "rho-tau",
+          "until": {
+            "turn": 1,
+            "word": "sixty-five"
+          }
+        },
+        {
+          "node": "panel patch",
+          "after": "panel interference",
+          "gap": 0.6,
+          "subtree": true
+        },
+        {
+          "node": "panel wage",
+          "turn": 2,
+          "word": "wage",
+          "subtree": true
+        },
+        {
+          "node": "wage phasor",
+          "turn": 2,
+          "word": "wage",
+          "until": {
+            "turn": 2,
+            "word": "degrees"
+          }
+        },
+        {
+          "node": "panel variables",
+          "turn": 2,
+          "word": "Enforcement",
+          "subtree": true
+        },
+        {
+          "node": "panel function",
+          "turn": 3,
+          "word": "function",
+          "subtree": true
+        },
+        {
+          "node": "panel result",
+          "turn": 3,
+          "word": "Result",
+          "subtree": true
+        },
+        {
+          "node": "era progress",
+          "after": "panel result",
+          "gap": 0.5
+        }
+      ]
+    },
+    {
+      "frame": "era 1894",
+      "turns": [
+        465,
+        466,
+        467,
+        468,
+        469
+      ],
+      "beats": [
+        {
+          "node": "era band",
+          "turn": 0,
+          "word": "1894"
+        },
+        {
+          "node": "panel header",
+          "turn": 0,
+          "word": "Log",
+          "subtree": true
+        },
+        {
+          "node": "panel stress",
+          "turn": 0,
+          "word": "Stress",
+          "subtree": true
+        },
+        {
+          "node": "panel capital",
+          "turn": 1,
+          "word": "Capital",
+          "subtree": true
+        },
+        {
+          "node": "panel interference",
+          "turn": 1,
+          "word": "Phi-load",
+          "subtree": true
+        },
+        {
+          "node": "rho needle",
+          "turn": 1,
+          "word": "rho-tau",
+          "until": {
+            "turn": 1,
+            "word": "sixty-eight"
+          }
+        },
+        {
+          "node": "panel patch",
+          "after": "panel interference",
+          "gap": 0.6,
+          "subtree": true
+        },
+        {
+          "node": "panel wage",
+          "turn": 2,
+          "word": "Wage",
+          "subtree": true
+        },
+        {
+          "node": "wage phasor",
+          "turn": 2,
+          "word": "weapon",
+          "until": {
+            "turn": 3,
+            "word": "mechanism"
+          }
+        },
+        {
+          "node": "panel variables",
+          "turn": 3,
+          "word": "redlining",
+          "subtree": true
+        },
+        {
+          "node": "panel function",
+          "turn": 3,
+          "word": "containment",
+          "subtree": true
+        },
+        {
+          "node": "panel result",
+          "turn": 4,
+          "word": "Result",
+          "subtree": true
+        },
+        {
+          "node": "era progress",
+          "after": "panel result",
+          "gap": 0.5
+        }
+      ]
+    },
+    {
+      "frame": "era 1968",
+      "turns": [
+        470,
+        471,
+        472,
+        473
+      ],
+      "beats": [
+        {
+          "node": "era band",
+          "turn": 0,
+          "word": "1968"
+        },
+        {
+          "node": "panel header",
+          "turn": 0,
+          "word": "Log",
+          "subtree": true
+        },
+        {
+          "node": "panel stress",
+          "turn": 0,
+          "word": "Stress",
+          "subtree": true
+        },
+        {
+          "node": "panel capital",
+          "turn": 0,
+          "word": "Capital",
+          "subtree": true
+        },
+        {
+          "node": "panel interference",
+          "turn": 1,
+          "word": "Phi-load",
+          "subtree": true
+        },
+        {
+          "node": "rho needle",
+          "turn": 1,
+          "word": "rho-tau",
+          "until": {
+            "turn": 1,
+            "word": "ninety-eight"
+          }
+        },
+        {
+          "node": "panel patch",
+          "after": "panel interference",
+          "gap": 0.6,
+          "subtree": true
+        },
+        {
+          "node": "panel variables",
+          "turn": 1,
+          "word": "tiers",
+          "subtree": true
+        },
+        {
+          "node": "panel wage",
+          "turn": 2,
+          "word": "Theta",
+          "subtree": true
+        },
+        {
+          "node": "wage phasor",
+          "turn": 2,
+          "word": "Theta",
+          "until": {
+            "turn": 2,
+            "word": "Quadrant"
+          }
+        },
+        {
+          "node": "panel function",
+          "turn": 3,
+          "word": "function",
+          "subtree": true
+        },
+        {
+          "node": "panel result",
+          "turn": 3,
+          "word": "Result",
+          "subtree": true
+        },
+        {
+          "node": "era progress",
+          "after": "panel result",
+          "gap": 0.5
+        }
+      ]
+    },
+    {
+      "frame": "era 1994",
+      "turns": [
+        474,
+        475,
+        476,
+        477
+      ],
+      "beats": [
+        {
+          "node": "era band",
+          "turn": 0,
+          "word": "1994"
+        },
+        {
+          "node": "panel header",
+          "turn": 0,
+          "word": "Log",
+          "subtree": true
+        },
+        {
+          "node": "panel stress",
+          "turn": 0,
+          "word": "Stress",
+          "subtree": true
+        },
+        {
+          "node": "panel capital",
+          "turn": 0,
+          "word": "Capital",
+          "subtree": true
+        },
+        {
+          "node": "panel interference",
+          "turn": 1,
+          "word": "Phi-load",
+          "subtree": true
+        },
+        {
+          "node": "rho needle",
+          "turn": 1,
+          "word": "rho-tau",
+          "until": {
+            "turn": 1,
+            "word": "five"
+          }
+        },
+        {
+          "node": "panel patch",
+          "after": "panel interference",
+          "gap": 0.6,
+          "subtree": true
+        },
+        {
+          "node": "panel variables",
+          "turn": 1,
+          "word": "tiers",
+          "subtree": true
+        },
+        {
+          "node": "panel wage",
+          "turn": 2,
+          "word": "phasor",
+          "subtree": true
+        },
+        {
+          "node": "wage phasor",
+          "turn": 2,
+          "word": "phasor",
+          "until": {
+            "turn": 2,
+            "word": "material"
+          }
+        },
+        {
+          "node": "panel function",
+          "turn": 2,
+          "word": "subroutine",
+          "subtree": true
+        },
+        {
+          "node": "panel result",
+          "turn": 3,
+          "word": "warning",
+          "subtree": true
+        },
+        {
+          "node": "era progress",
+          "after": "panel result",
+          "gap": 0.5
+        }
+      ]
+    },
+    {
+      "frame": "era 2010",
+      "turns": [
+        478,
+        479,
+        480,
+        481,
+        482
+      ],
+      "beats": [
+        {
+          "node": "era band",
+          "turn": 0,
+          "word": "2010s"
+        },
+        {
+          "node": "panel header",
+          "turn": 0,
+          "word": "Log",
+          "subtree": true
+        },
+        {
+          "node": "panel stress",
+          "turn": 0,
+          "word": "Stress",
+          "subtree": true
+        },
+        {
+          "node": "panel capital",
+          "turn": 1,
+          "word": "Capital",
+          "subtree": true
+        },
+        {
+          "node": "panel interference",
+          "turn": 1,
+          "word": "Phi-load",
+          "subtree": true
+        },
+        {
+          "node": "rho needle",
+          "turn": 1,
+          "word": "rho-tau",
+          "until": {
+            "turn": 1,
+            "word": "eight"
+          }
+        },
+        {
+          "node": "panel patch",
+          "after": "panel interference",
+          "gap": 0.6,
+          "subtree": true
+        },
+        {
+          "node": "panel variables",
+          "turn": 1,
+          "word": "targeting",
+          "subtree": true
+        },
+        {
+          "node": "panel wage",
+          "turn": 2,
+          "word": "Quadrant",
+          "subtree": true
+        },
+        {
+          "node": "wage phasor",
+          "turn": 2,
+          "word": "Quadrant",
+          "until": {
+            "turn": 2,
+            "word": "hardware"
+          }
+        },
+        {
+          "node": "panel function",
+          "turn": 3,
+          "word": "function",
+          "subtree": true
+        },
+        {
+          "node": "panel result",
+          "turn": 3,
+          "word": "warning",
+          "subtree": true
+        },
+        {
+          "node": "era progress",
+          "turn": 4,
+          "word": "Across"
+        }
+      ]
+    }
+  ]
+}

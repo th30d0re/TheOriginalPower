@@ -2,7 +2,7 @@
   "kind": "equation",
   "headline": "Level 4 · Recursive Local Partition",
   "number": "Equation 2.4",
-  "latex": "X = X^{+}_{\\alpha} \\sqcup X^{-}_{\\alpha}, \\quad X^{+}_{\\alpha} \\cap X^{-}_{\\alpha} = \\emptyset",
+  "latex": "X = X^{+}_{\\alpha} \\dot{\\cup} X^{-}_{\\alpha}, \\quad X^{+}_{\\alpha} \\cap X^{-}_{\\alpha} = \\emptyset",
   "terms": [
     {
       "latex": "\\alpha",

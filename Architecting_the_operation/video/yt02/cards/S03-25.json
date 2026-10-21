@@ -2,7 +2,7 @@
   "kind": "equation",
   "headline": "Level 3 · Out-Group Decomposition",
   "number": "Equation 2.3",
-  "latex": "O = O_{\\mathrm{racialized}} \\sqcup O_{\\mathrm{adjacent},1} \\sqcup \\cdots \\sqcup O_{\\mathrm{adjacent},m}",
+  "latex": "O = O_{\\mathrm{racialized}} \\dot{\\cup} O_{\\mathrm{adjacent},1} \\dot{\\cup} \\cdots \\dot{\\cup} O_{\\mathrm{adjacent},m}",
   "terms": [
     {
       "latex": "O_{\\mathrm{racialized}}",
