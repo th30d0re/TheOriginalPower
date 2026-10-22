@@ -1243,120 +1243,120 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 ## S07-01 — Geometric illusion behind the public binary
 - **Anchor:** `Emmanuel Theodore (36:14)`
 - **Type:** scene
-- **Render:** `figma:Scene · Orthographic illusion`
-- **Note:** The Orthographic Illusion scene opens, framing the geometric mechanism that compresses five operating tiers into a flat binary. [book Ch 0, Elite Obscuration and the Orthographic Illusion]
+- **Render:** `manim:yt02/ortho_illusion.py:OrthoIllusion`
+- **Note:** A head-on view opens as two flat blocks: white In-group I on the left and black Out-group O on the right beneath the Orthographic Illusion title. [book Ch 0, Elite Obscuration and the Orthographic Illusion]
 
 ## S07-02 — Five-tier hierarchy as a 3D pyramid (Figure 0.2)
 - **Anchor:** `Emmanuel Theodore (36:25)`
 - **Type:** hold
-- **Render:** `figma:Scene · Orthographic illusion`
+- **Render:** `manim:yt02/ortho_illusion.py:OrthoIllusion`
 - **Holds:** `S07-01`
-- **Note:** The three-dimensional pyramid stands in isometric view with the Elite at the apex above Puppet, Enforcement, Buffer, and Out-group tiers. [book Ch 0, Fig 0.2]
+- **Note:** The camera orbits to the three-dimensional pyramid as the Elite apex and the Puppet, Enforcement, Buffer, and Out-group tiers appear. [book Ch 0, Fig 0.2]
 
 ## S07-03 — Orthographic projection along a fixed sightline
 - **Anchor:** `Emmanuel Theodore (36:37)`
 - **Type:** hold
-- **Render:** `figma:Scene · Orthographic illusion`
+- **Render:** `manim:yt02/ortho_illusion.py:OrthoIllusion`
 - **Holds:** `S07-01`
-- **Note:** Parallel projection rays align along the camera axis, collapsing depth onto a two-dimensional viewing plane. [book Ch 0, lines 762-769]
+- **Note:** Parallel rays travel along the camera sightline to a side plane, where the pyramid registers as a two-dimensional shadow. [book Ch 0, lines 762-769]
 
 ## S07-04 — Head-on view: flat white/Black binary
 - **Anchor:** `Emmanuel Theodore (36:51)`
 - **Type:** hold
-- **Render:** `figma:Scene · Orthographic illusion`
+- **Render:** `manim:yt02/ortho_illusion.py:OrthoIllusion`
 - **Holds:** `S07-01`
-- **Note:** Viewed head-on, the vertical command stack disappears behind two flat side-by-side blocks labeled In-group I and Out-group O. [book Ch 0, Elite Obscuration and the Orthographic Illusion]
+- **Note:** The camera returns head-on and the tier depth collapses into the flat In-group I and Out-group O blocks. [book Ch 0, Elite Obscuration and the Orthographic Illusion]
 
 ## S07-05 — Rotating the camera to restore tier separation
 - **Anchor:** `Emmanuel Theodore (37:01)`
 - **Type:** hold
-- **Render:** `figma:Scene · Orthographic illusion`
+- **Render:** `manim:yt02/ortho_illusion.py:OrthoIllusion`
 - **Holds:** `S07-01`
-- **Note:** The camera orbits 35 degrees off-axis; the flat blocks separate in depth and the Elite apex emerges above its intermediate proxies. [book Ch 0, Fig 0.2]
+- **Note:** A 35-degree orbit restores the depth between tiers and reveals the Elite apex with a gold rim. [book Ch 0, Fig 0.2]
 
 ## S07-06 — Upward sightline from the Out-group base
 - **Anchor:** `Emmanuel Theodore (37:08)`
 - **Type:** hold
-- **Render:** `figma:Scene · Orthographic illusion`
+- **Render:** `manim:yt02/ortho_illusion.py:OrthoIllusion`
 - **Holds:** `S07-01`
-- **Note:** The camera drops into the Out-group base and pans upward, where the underside of the Buffer Class fills the field of view. [book Ch 0, lines 765-775]
+- **Note:** The camera drops into the Out-group base and tilts upward until the underside of the Buffer slab fills the view. [book Ch 0, lines 765-775]
 
 ## S07-07 — The Square Ceiling effect
 - **Anchor:** `Emmanuel Theodore (37:20)`
 - **Type:** hold
-- **Render:** `figma:Scene · Orthographic illusion`
+- **Render:** `manim:yt02/ortho_illusion.py:OrthoIllusion`
 - **Holds:** `S07-01`
-- **Note:** The Square Ceiling callout tags the underside of I_buffer, which occludes the Puppet, Enforcement, and Elite tiers aligned above it. [book Ch 0, lines 769-785]
+- **Note:** The Square Ceiling callout tags the Buffer underside while the Enforcement, Puppet, and Elite tiers remain ghosted behind it. [book Ch 0, lines 769-785]
 
 ## S07-08 — Downward sightline from the In-group buffer
 - **Anchor:** `Emmanuel Theodore (37:32)`
 - **Type:** hold
-- **Render:** `figma:Scene · Orthographic illusion`
+- **Render:** `manim:yt02/ortho_illusion.py:OrthoIllusion`
 - **Holds:** `S07-01`
-- **Note:** The camera moves to the Buffer Class tier and pans downward toward O_racialized while upward extraction arrows to E sit outside the frame. [book Ch 0, Elite Obscuration and the Orthographic Illusion]
+- **Note:** From Buffer level the camera tilts down toward O_racialized while gold extraction arrows rise toward E beyond a visible frame boundary. [book Ch 0, Elite Obscuration and the Orthographic Illusion]
 
 ## S07-09 — Wide shot of the connected five-tier pyramid
 - **Anchor:** `Emmanuel Theodore (37:44)`
 - **Type:** hold
-- **Render:** `figma:Scene · Orthographic illusion`
+- **Render:** `manim:yt02/ortho_illusion.py:OrthoIllusion`
 - **Holds:** `S07-01`
-- **Note:** The camera pulls back to the full pyramid, revealing all five tiers and the continuous upward extraction circuit. [book Ch 0, Fig 0.2]
+- **Note:** The camera pulls back to the complete pyramid as the gold extraction circuit pulses continuously from base to apex. [book Ch 0, Fig 0.2]
 
 ## S07-10 — Elite Obscuration along the sightline
 - **Anchor:** `Emmanuel Theodore (37:55)`
 - **Type:** hold
-- **Render:** `figma:Scene · Orthographic illusion`
+- **Render:** `manim:yt02/ortho_illusion.py:OrthoIllusion`
 - **Holds:** `S07-01`
-- **Note:** A sightline vector pierces I_buffer, F_enforce, and P_uppet, illustrating how intermediate proxies visually shield the Elite apex. [book Ch 0, lines 787-792]
+- **Note:** A sightline vector pierces I_buffer, F_enforce, and P_uppet in sequence and stops below the Elite apex. [book Ch 0, lines 787-792]
 
 ## S07-11 — Real boundary with hidden internal hierarchy
 - **Anchor:** `Emmanuel Theodore (38:07)`
 - **Type:** hold
-- **Render:** `figma:Scene · Orthographic illusion`
+- **Render:** `manim:yt02/ortho_illusion.py:OrthoIllusion`
 - **Holds:** `S07-01`
-- **Note:** The I/O boundary line glows at the base while the internal elevation ticks between I_buffer and E highlight along the vertical axis. [book Ch 0; §2.1]
+- **Note:** The I/O boundary glows across the base while elevation ticks illuminate the internal hierarchy from I_buffer through E. [book Ch 0; §2.1]
 
 ## S07-12 — Equation 2.1 projection versus Equation 2.2 elevation
 - **Anchor:** `Emmanuel Theodore (38:18)`
 - **Type:** hold
-- **Render:** `figma:Scene · Orthographic illusion`
+- **Render:** `manim:yt02/ortho_illusion.py:OrthoIllusion`
 - **Holds:** `S07-01`
-- **Note:** Split callouts tag the 2D shadow plane as Equation 2.1 and the 3D vertical stack as Equation 2.2. [book §2.1, Eq 2.1, Eq 2.2]
+- **Note:** Split MathTex callouts tag the shadow plane as Equation 2.1 projection and the vertical stack as Equation 2.2 elevation. [book §2.1, Eq 2.1, Eq 2.2]
 
 ## S07-13 — Orthogonal Deflection of vertical class momentum
 - **Anchor:** `Emmanuel Theodore (38:32)`
 - **Type:** hold
-- **Render:** `figma:Scene · Orthographic illusion`
+- **Render:** `manim:yt02/ortho_illusion.py:OrthoIllusion`
 - **Holds:** `S07-01`
-- **Note:** An upward momentum vector aimed toward the Elite apex hits the deflection plane and bends 90 degrees into the horizontal identity plane. [book Ch 0, lines 793-799]
+- **Note:** An upward momentum arrow aimed at E meets the plane beneath I_buffer and bends 90 degrees into the horizontal identity plane. [book Ch 0, lines 793-799]
 
 ## S07-14 — Buffer Class as Kinetic Decoy
 - **Anchor:** `Emmanuel Theodore (38:43)`
 - **Type:** hold
-- **Render:** `figma:Scene · Orthographic illusion`
+- **Render:** `manim:yt02/ortho_illusion.py:OrthoIllusion`
 - **Holds:** `S07-01`
-- **Note:** The deflected vector strikes the Buffer Class block, which lights with the Kinetic Decoy badge as the apex remains untouched. [book Ch 0, lines 800-806]
+- **Note:** The deflected arrow strikes the Buffer block under a Kinetic Decoy badge while the Elite apex remains untouched. [book Ch 0, lines 800-806]
 
 ## S07-15 — Projection and deflection reinforcing each other
 - **Anchor:** `Emmanuel Theodore (38:51)`
 - **Type:** hold
-- **Render:** `figma:Scene · Orthographic illusion`
+- **Render:** `manim:yt02/ortho_illusion.py:OrthoIllusion`
 - **Holds:** `S07-01`
-- **Note:** The 2D sightline cone and the horizontal collision vector lock together between I_buffer and O_racialized. [book Ch 0, Elite Obscuration and the Orthographic Illusion]
+- **Note:** The sightline cone and horizontal collision arrow lock together between I_buffer and O_racialized. [book Ch 0, Elite Obscuration and the Orthographic Illusion]
 
 ## S07-16 — Wide shot restoring causal depth and surplus flow
 - **Anchor:** `Emmanuel Theodore (39:01)`
 - **Type:** hold
-- **Render:** `figma:Scene · Orthographic illusion`
+- **Render:** `manim:yt02/ortho_illusion.py:OrthoIllusion`
 - **Holds:** `S07-01`
-- **Note:** The camera restores full 3D perspective, showing horizontal collision at the base and uninterrupted surplus extraction rising to E. [book Ch 0; §2.1]
+- **Note:** The full 3D wide shot holds the base collision and the uninterrupted gold extraction path rising to E in one frame. [book Ch 0; §2.1]
 
 ## S07-17 — Locating the generative tier
 - **Anchor:** `Emmanuel Theodore (39:11)`
 - **Type:** hold
-- **Render:** `figma:Scene · Orthographic illusion`
+- **Render:** `manim:yt02/ortho_illusion.py:OrthoIllusion`
 - **Holds:** `S07-01`
-- **Note:** A directional causal query highlights the Elite apex E above the transmission, enforcement, and absorption layers. [book Ch 0; §2.2]
+- **Note:** A gold query ring marks E while fixed labels assign transmit and enforce to P/F and absorb to I_buffer and O. [book Ch 0; §2.2]
 
 <!-- SEG 08 · Test 1: Portugal, 1441–1486 -->
 
@@ -3789,4 +3789,3 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 - **Type:** card
 - **Render:** `figma-card:cards/S14-22.json`
 - **Note:** Item 3 reveals, closing Episode 2 of Architecting the Operation: What Racism Is. [editorial]
-
