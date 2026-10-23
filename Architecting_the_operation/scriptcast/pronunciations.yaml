@@ -44,9 +44,25 @@ louijeune:
 # Arline Geronimus (weathering research): jer-AH-nih-mus. Added 2026-10-18 for YT02v2 turn 422 ("gyranomus").
 geronimus:
   always: jer-AH-nih-mus
+  phonon: ""   # Phonon spells the capitals out; it reads the plain name right
 
 # "decile" was coming out as "decel" (YT02v2 turn 415).
 decile:
   always: DESS-ile
 geronimus's:
   always: jer-AH-nih-mus's
+  phonon: ""
+
+# Phonon 31m readings of the complex-wage and dashboard symbols, calibrated
+# 2026-10-23 (two takes each, heard back with mlx-whisper small). A hyphenated
+# key matches the whole compound. No "always", so other engines are unchanged.
+psi-sub-m:
+  phonon: sigh sub em     # plain: "peace of them"
+psi-sub-s:
+  phonon: sigh sub ess    # plain: "P sub sub S"
+psi:
+  phonon: sigh            # "psi of t"; plain: "PFC"
+phi-load:
+  phonon: fie load        # plain: "phylode"
+rho-tau:
+  phonon: row-tao         # plain: "row-top"; "roe-tau": "road talk"

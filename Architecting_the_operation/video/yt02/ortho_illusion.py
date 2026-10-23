@@ -93,7 +93,7 @@ class OrthoIllusion(YTScene3D):
         self.play(m.Indicate(title, color=GOLD), run_time=0.6)
 
         # 1 — reveal the actual pyramid from apex to base as each named region arrives.
-        self.until(self.at(1, "pyramid"))
+        self.until(self.at(1, "cone"))
         self.play(m.FadeOut(binary), m.FadeOut(title), run_time=0.35)
         self.move_camera(phi=52 * D, theta=-68 * D, zoom=0.98,
                          frame_center=[PYRAMID_X, 0, 1.0], run_time=1.15)
