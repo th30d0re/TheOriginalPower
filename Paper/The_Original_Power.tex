@@ -251,10 +251,10 @@ The framework identifies four architectural components common to oppressive syst
 Before the historical timeline begins, \textbf{Chapter~\ref{ch:system_init}: System Initialization}
 compiles the abstract geometry of the trap: the five structural nodes ($E$,
 $P_{\text{uppet}}$, $F_{\text{enforce}}$, $I_{\text{buffer}}$, $O$), their
-arrangement as a 3-D pyramid that captures structure the flat 2-D triangle misses, the Tri-Modal
-Enclosure Model that prevents the Out-group from stepping outside that pyramid
+arrangement as a 3-D cone that captures structure the flat 2-D triangle misses, the Tri-Modal
+Enclosure Model that prevents the Out-group from stepping outside that cone
 to perceive its own architecture, and the optical illusion---Elite Obscuration
-and the Square Ceiling---that makes the apex invisible from the base.
+and the Flat Ceiling---that makes the apex invisible from the base.
 Chapter~\ref{ch:redefining} then loads racism as the primary empirical
 dataset: defining the software before running its execution history. The
 historical compile begins in Chapter~\ref{ch:portugal} and is instantiated
@@ -483,7 +483,7 @@ the directional work of the material wage (extraction/enrichment). See the
 Empirical Methodology chapter (p.~\pageref{ch:empirical_methodology}) and
 the \hyperref[app:empirical_index]{Empirical Validation Index}.}
 
-\section{The Five Nodes and the 3-D Pyramid}
+\section{The Five Nodes and the 3-D Cone}
 \label{sec:system_init_nodes}
 
 The familiar two-set picture, $I$ versus $O$, can describe unequal outcomes,
@@ -546,11 +546,11 @@ territorial and hereditary) and from slave capitalism (where labor is legally
 property), though the latter is a subtype that shares capitalism's accumulation logic.
 \end{definition}
 
-The hierarchy is therefore a \textbf{3-D pyramid}. $E$ occupies the apex along the vertical $z$-axis;
+The hierarchy is therefore a \textbf{3-D cone}. $E$ occupies the apex along the vertical $z$-axis;
 $P_{\text{uppet}}$, $F_{\text{enforce}}$, and $I_{\text{buffer}}$ form descending
 structural layers beneath it; $O$ is enclosed at the base. This third dimension
 is operational: it is the geometric condition that makes the system's primary
-illusion possible: from inside the pyramid, the observer cannot see the apex
+illusion possible: from inside the cone, the observer cannot see the apex
 directly. The lower layers occlude it.
 
 \begin{figure}[htbp]
@@ -558,20 +558,28 @@ directly. The lower layers occlude it.
 \renewcommand{\thefigure}{0.\arabic{figure}}
 \begin{tikzpicture}[line width=0.6pt, >=Latex]
   \coordinate (apex) at (0,4.8);
-  \coordinate (frontleft) at (-4.3,0);
-  \coordinate (frontright) at (3.4,0);
-  \coordinate (backright) at (4.35,1.15);
-  \coordinate (backleft) at (-0.85,1.15);
-  \fill[blue!7] (apex) -- (frontleft) -- (frontright) -- cycle;
-  \fill[gray!16] (apex) -- (frontright) -- (backright) -- cycle;
-  \fill[blue!11] (apex) -- (backleft) -- (frontleft) -- cycle;
-  \fill[blue!14] (frontleft) -- (frontright) -- (backright) -- (backleft) -- cycle;
-  \draw (apex) -- (frontleft) -- (frontright) -- (backright) -- (apex) -- (backleft) -- (frontleft);
-  \draw (frontleft) -- (frontright) -- (backright) -- (backleft) -- cycle;
-  \foreach \s in {0.22,0.43,0.64,0.84} {
-    \draw[black!60] ($(apex)!\s!(frontleft)$) -- ($(apex)!\s!(frontright)$) --
-      ($(apex)!\s!(backright)$) -- ($(apex)!\s!(backleft)$) -- cycle;
-  }
+  \coordinate (basecenter) at (0,0.6);
+  \coordinate (baseleft) at (-4,0.6);
+  \coordinate (baseright) at (4,0.6);
+  \fill[blue!7] (apex) -- (baseleft)
+    arc[start angle=180,end angle=360,x radius=4,y radius=0.9] -- cycle;
+  \fill[gray!16] (apex) -- (baseright)
+    arc[start angle=0,end angle=-90,x radius=4,y radius=0.9] -- cycle;
+  \draw (apex) -- (baseleft);
+  \draw (apex) -- (baseright);
+  \draw[dashed] (baseright)
+    arc[start angle=0,end angle=180,x radius=4,y radius=0.9];
+  \draw (baseleft)
+    arc[start angle=180,end angle=360,x radius=4,y radius=0.9];
+  \begin{scope}
+    \clip (apex) -- (baseleft)
+      arc[start angle=180,end angle=360,x radius=4,y radius=0.9] -- cycle;
+    \foreach \s in {0.22,0.43,0.64,0.84} {
+      \draw[black!60]
+        ($(apex)!\s!(basecenter)+(4*\s,0)$)
+        arc[start angle=0,end angle=360,x radius={4*\s},y radius={0.9*\s}];
+    }
+  \end{scope}
   \node[font=\scriptsize, fill=white, inner sep=2pt] at (-0.20,4.42) {$E$};
   \node[font=\scriptsize, fill=white, inner sep=2pt] at (-0.32,3.25) {$P_{\text{uppet}}$};
   \node[font=\scriptsize, fill=white, inner sep=2pt] at (-0.46,2.25) {$F_{\text{enforce}}$};
@@ -580,7 +588,7 @@ directly. The lower layers occlude it.
   \draw[->] (apex) -- (0,5.35)
     node[above, font=\scriptsize] {$z$};
 \end{tikzpicture}
-\caption[The five-tier 3-D pyramid]{\textbf{The Five-Tier 3-D Pyramid.} Tier placement follows Section~\ref{sec:system_init_nodes}.}
+\caption[The five-tier 3-D cone]{\textbf{The Five-Tier 3-D Cone.} Tier placement follows Section~\ref{sec:system_init_nodes}.}
 \label{fig:tier_pyramid}
 \end{figure}
 
@@ -762,25 +770,28 @@ velocity into orthogonal, non-extractive motion.
 \section{Elite Obscuration and the Orthographic Illusion}
 \label{sec:system_init_optics}
 
-The 3-D pyramid explains why the hierarchy can be materially real and
+The 3-D cone explains why the hierarchy can be materially real and
 perceptually hidden at the same time. An observer enclosed inside $O$ looks
-upward through the pyramid. By the laws of \textbf{orthographic projection}---the
+upward through the cone. By the laws of \textbf{orthographic projection}---the
 geometric rule by which a 3-D structure collapses into a 2-D plane from a given
 line of sight---the apex disappears behind the lower layers. The observer sees
 only the flat ceiling of $I_{\text{buffer}}$ pressing downward. This is the
-\textbf{Square Ceiling}: the optical illusion that society is simply Oppressor
+\textbf{Flat Ceiling}: the optical illusion that society is simply Oppressor
 versus Oppressed.
+The observer on the axis sees the disc-shaped underside of
+$I_{\text{buffer}}$ with every higher tier centred behind it, so the alignment
+of the proxies along the sightline is exact.
 
 The illusion follows from enclosure inside the structure. The Tri-Modal Enclosure prevents the
-observer from stepping outside the pyramid; orthographic projection makes the
+observer from stepping outside the cone; orthographic projection makes the
 apex invisible from inside it. Together, enclosure and projection make the trap
 self-concealing.
 
 This book uses four terms for that geometry:
 
 \begin{description}
-    \item[\textbf{Orthographic Projection / Square Ceiling.}] The collapse of
-    the 3-D pyramid into a 2-D plane from $O$'s vantage point, causing
+    \item[\textbf{Orthographic Projection / Flat Ceiling.}] The collapse of
+    the 3-D cone into a 2-D plane from $O$'s vantage point, causing
     $I_{\text{buffer}}$ to appear as the whole system and to hide the layers
     above it.
 
@@ -2400,7 +2411,7 @@ The suppression envelope $\Sigma_{\text{sup}}(t)$ (Equation~\ref{eq:1.8-suppress
 
 \subsubsection{The Energy Recovery Circuit: Interface Swap as Multi-Stage Coil Gun}
 
-The historical transition between eras of oppression---Chattel Slavery $\rightarrow$ Jim Crow $\rightarrow$ Mass Incarceration $\rightarrow$ Algorithmic Gig Economy---models onto the topology of a multi-stage linear accelerator. In this electrodynamic schematic, the \textbf{projectile} is the continuous upward extraction of wealth to the Elite (the vertical $z$-axis vector of the 3-D pyramid). The \textbf{coils} are the distinct historical eras, each pulsed in sequence to accelerate the projectile. The \textbf{orthogonal magnetic field} is the psychological wage $j\psi_s$: it projects horizontally, saturating the Buffer Class and maintaining alignment with the system, while performing zero work on the vertical extraction axis.
+The historical transition between eras of oppression---Chattel Slavery $\rightarrow$ Jim Crow $\rightarrow$ Mass Incarceration $\rightarrow$ Algorithmic Gig Economy---models onto the topology of a multi-stage linear accelerator. In this electrodynamic schematic, the \textbf{projectile} is the continuous upward extraction of wealth to the Elite (the vertical $z$-axis vector of the 3-D cone). The \textbf{coils} are the distinct historical eras, each pulsed in sequence to accelerate the projectile. The \textbf{orthogonal magnetic field} is the psychological wage $j\psi_s$: it projects horizontally, saturating the Buffer Class and maintaining alignment with the system, while performing zero work on the vertical extraction axis.
 
 When the Out-group successfully organizes and forces a kernel breach (the Civil Rights Act of 1964, for example) they effectively cut the power to the current historical coil (Jim Crow). Physics demands a toll. The massive magnetic field of racial animus and segregation abruptly collapses. This collapse generates a catastrophic Back-EMF:
 \begin{equation}\label{eq:1.7d-back-emf}
@@ -13653,7 +13664,7 @@ The algorithmic upgrade sidesteps this error by replacing vertical friction with
 
 \paragraph{Geometric reading of the injection.}
 To understand why this deflection is structurally inevitable, recall the
-3-D Pyramid architecture seeded in Chapter~\ref{ch:system_init},
+3-D Cone architecture seeded in Chapter~\ref{ch:system_init},
 Section~\ref{sec:system_init_nodes}, and formalized by the full five-tier
 reveal in Chapter~\ref{ch:full_algo}, \S\ref{sec:full_reveal}.
 The Out-group's class momentum naturally forms a vector $\vec{v}$ aimed upward
@@ -13709,21 +13720,24 @@ This is the Elite's most efficient $\min$-management protocol in the historical 
 \section{Elite Obscuration: The Perfect Eclipse and the Orthographic Projection}
 \label{sec:perfect_eclipse}
 
-To understand why the angular-collapse alignment below is structurally inevitable, model the hierarchy as the fully realized \textbf{3-D Pyramid} implied by the five-tier hierarchy in Chapter~\ref{ch:full_algo}, \S\ref{sec:full_reveal}; the flat 2-D triangle is an inadequate simplification.
+To understand why the angular-collapse alignment below is structurally inevitable, model the hierarchy as the fully realized \textbf{3-D Cone} implied by the five-tier hierarchy in Chapter~\ref{ch:full_algo}, \S\ref{sec:full_reveal}; the flat 2-D triangle is an inadequate simplification.
 Place $E$ at the apex along the $z$-axis; place $P_{\text{uppet}}$, $F_{\text{enforce}}$,
 and $I_{\text{buffer}}$ at descending structural layers.
 
-An observer in $O$, enclosed beneath the pyramid and looking upward along the
+An observer in $O$, enclosed beneath the cone and looking upward along the
 vertical axis, perceives the structure through \textbf{orthographic projection}:
 the geometric law by which a 3-D structure collapses into a 2-D plane as a
-function of the observer's angle. The pyramid's apex disappears. The observer
+function of the observer's angle. The cone's apex disappears. The observer
 perceives only the flat, 2-D face of $I_{\text{buffer}}$ pressing directly
-downward---the ``Square Ceiling.'' This is the \textit{optical illusion of the
+downward---the ``Flat Ceiling.'' This is the \textit{optical illusion of the
 2-tier binary}: the perception that society is simply Oppressor versus Oppressed.
 It is the mathematically necessary output of the
 observer's position inside the structure.
+The observer on the axis sees the disc-shaped underside of
+$I_{\text{buffer}}$ with every higher tier centred behind it, so the alignment
+of the proxies along the sightline is exact.
 
-The only way to perceive the full 3-D pyramid is to step \textit{outside} it---
+The only way to perceive the full 3-D cone is to step \textit{outside} it---
 which is precisely what the Tri-Modal Enclosure ($\mathcal{S}_{\text{enc}}$,
 Chapter~\ref{ch:system_init}, Section~\ref{sec:trimodal}) is engineered to
 prevent.
@@ -13754,7 +13768,7 @@ where $K_{\text{decoy}}$ is the absorptive capacity of the Puppet stratum. Broke
 \paragraph{Illustrative instantiation.}
 The Occupy Wall Street movement (2011--2012) directed its kinetic energy precisely at $P_{\text{uppet}}$ nodes: congressional hearings on financial regulation, symbolic CEO accountability, and partial legislative reform (the Dodd-Frank Act). Per Equation~\eqref{eq:14.6-decoy-transfer-coefficient}, the transfer coefficient to $E$ should be approximately zero. The WID.world Piketty-Saez-Zucman dataset confirms: the US top-0.1\% wealth share was 15.3\% in 2011 and 17.8\% in 2020---an increase of 16\% across the full arc of the Occupy mobilization and its legislative aftermath, with no sustained reversal at any point in the decade \cite{piketty}. The kinetic energy absorbed by congressional hearings and Dodd-Frank produced $\partial\max / \partial K(t) \approx 0$ over the 2011--2020 window. The Decoy Vertex grounded the movement's momentum entirely within the $P_{\text{uppet}}$ stratum.
 
-Each layer of the 3-D Pyramid serves as an additional energy-absorption stratum along the $z$-axis. When $O$'s kinetic energy is sufficient to pierce the $I_{\text{buffer}}$ ceiling, it encounters $P_{\text{uppet}}$ next---another engineered shock absorber that converts outrage into bureaucratic friction before any of it can reach the $E$ apex. The architecture ensures that the vertical $z$-axis remains perpetually isolated from the impact of class momentum, regardless of its magnitude.
+Each layer of the 3-D Cone serves as an additional energy-absorption stratum along the $z$-axis. When $O$'s kinetic energy is sufficient to pierce the $I_{\text{buffer}}$ ceiling, it encounters $P_{\text{uppet}}$ next---another engineered shock absorber that converts outrage into bureaucratic friction before any of it can reach the $E$ apex. The architecture ensures that the vertical $z$-axis remains perpetually isolated from the impact of class momentum, regardless of its magnitude.
 
 \textbf{Parameter estimate:} $\partial\max / \partial K(t) \approx 0$; top-0.1\% share increased 16\% despite peak class-solidarity mobilization. \textbf{Confidence: Tier~2} --- WID.world public dataset; single-movement instantiation.
 
