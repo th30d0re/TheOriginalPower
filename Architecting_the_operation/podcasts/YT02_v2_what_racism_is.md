@@ -500,7 +500,7 @@ We can audit the American racial hierarchy against each of those five requiremen
 <!-- [book Ch 0; Ch 2; Ch 4] -->
 
 Emmanuel Theodore (09:17)
-What makes racism count as a system at all? Requirement one is a set of differentiated components with specialized roles. Chapter 0 and Equation two point two define five structural tiers arranged in a three-dimensional pyramid in Figure zero point two and an extraction circuit in Figure zero point three.
+What makes racism count as a system at all? Requirement one is a set of differentiated components with specialized roles. Chapter 0 and Equation two point two define five structural tiers arranged in a three-dimensional cone in Figure zero point two and an extraction circuit in Figure zero point three.
 <!-- [book Ch 0, Fig 0.2, Fig 0.3; §2.1, Eq 2.2] -->
 
 Emmanuel Theodore (09:31)
@@ -675,7 +675,7 @@ The decomposition preserves the racial In-group as a set while exposing the uneq
 <!-- [book §2.1, Eq 2.2] -->
 
 Emmanuel Theodore (17:15)
-Why resolve the Out-group after refining the In-group? Next, Equation two point three applies the same resolution lens to the Out-group O so that the base of the pyramid is analyzed with equal precision.
+Why resolve the Out-group after refining the In-group? Next, Equation two point three applies the same resolution lens to the Out-group O so that the base of the cone is analyzed with equal precision.
 <!-- [book §2.1, Eq 2.3] -->
 
 Emmanuel Theodore (17:25)
@@ -769,15 +769,15 @@ Why does public debate still sound binary after the set ladder exposed five tier
 <!-- [book Ch 0, Elite Obscuration and the Orthographic Illusion] -->
 
 Emmanuel Theodore (21:16)
-Picture the Segment five hierarchy as a three-dimensional pyramid. The Elite occupies the apex, with the Puppet, Enforcement, and Buffer tiers and the racialized Out-group descending beneath it.
+Picture the Segment five hierarchy as a three-dimensional cone. The Elite occupies the apex, with the Puppet, Enforcement, and Buffer tiers and the racialized Out-group descending beneath it.
 <!-- [book Ch 0, Fig 0.2] -->
 
 Emmanuel Theodore (21:27)
-Why does depth vanish in a head-on view of the pyramid? Orthographic projection collapses a three-dimensional structure onto a two-dimensional plane along a fixed line of sight. Depth disappears, and layers aligned with that line overlap.
+Why does depth vanish in a head-on view of the cone? Orthographic projection collapses a three-dimensional structure onto a two-dimensional plane along a fixed line of sight. Depth disappears, and layers aligned with that line overlap.
 <!-- [book Ch 0, lines 762-769] -->
 
 Emmanuel Theodore (21:37)
-Viewed head-on, the pyramid becomes two flat groups: a white In-group on one side and a Black Out-group on the other. The vertical command structure vanishes.
+Viewed head-on, the cone becomes two flat groups: a white In-group on one side and a Black Out-group on the other. The vertical command structure vanishes.
 <!-- [book Ch 0, Elite Obscuration and the Orthographic Illusion] -->
 
 Emmanuel Theodore (21:48)
@@ -789,7 +789,7 @@ Pan upward from the Out-group's position inside the base. The observer sees the 
 <!-- [book Ch 0, lines 765-775] -->
 
 Emmanuel Theodore (22:08)
-The book calls that apparent surface the Square Ceiling. It presents society as a simple Oppressor-versus-Oppressed binary because the upper tiers align behind the visible Buffer Class.
+The book calls that apparent surface the Flat Ceiling. It presents society as a simple Oppressor-versus-Oppressed binary because the upper tiers align behind the visible Buffer Class.
 <!-- [book Ch 0, lines 769-785] -->
 
 Emmanuel Theodore (22:18)
@@ -797,7 +797,7 @@ Now pan downward from the In-group's position. The racialized Out-group appears 
 <!-- [book Ch 0, Elite Obscuration and the Orthographic Illusion] -->
 
 Emmanuel Theodore (22:30)
-Zoom out again. The full pyramid reveals the Elite, its Puppet and Enforcement proxies, the Buffer Class, and the Out-group within one connected extraction architecture.
+Zoom out again. The full cone reveals the Elite, its Puppet and Enforcement proxies, the Buffer Class, and the Out-group within one connected extraction architecture.
 <!-- [book Ch 0, Fig 0.2] -->
 
 Emmanuel Theodore (22:40)
@@ -825,7 +825,7 @@ The projection and the deflection reinforce each other. The observer sees the ne
 <!-- [book Ch 0, Elite Obscuration and the Orthographic Illusion] -->
 
 Emmanuel Theodore (23:43)
-The wide shot restores causal depth: visible conflict remains real, while the pyramid locates the tiers that set its boundary conditions and capture its output.
+The wide shot restores causal depth: visible conflict remains real, while the cone locates the tiers that set its boundary conditions and capture its output.
 <!-- [book Ch 0; §2.1] -->
 
 Emmanuel Theodore (23:53)

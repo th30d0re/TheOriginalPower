@@ -4,6 +4,7 @@ import sys
 from pathlib import Path
 
 import manimgx as m
+import numpy as np
 
 COMMON = Path(__file__).resolve().parents[1] / "yt01_redefining_racism/manim"
 YT02 = Path(__file__).resolve().parent
@@ -15,12 +16,46 @@ from orthographic16x9 import (  # noqa: E402
     D,
     PYRAMID_X,
     Orthographic16x9,
-    _build_pyramid,
+    S,
     _horizontal_split,
     _legend_group,
     _split_setup,
 )
 from tier_pyramid import ELITE, FORCE, NIGHT, PAPER, PUPPET  # noqa: E402
+
+# The book's 3-D model is a cone: E at the apex on the z-axis, O the enclosed base.
+# Same heights as the YT01 slab stack, so the camera moves and callouts still frame it.
+CONE_BASE_Z, CONE_APEX_Z, CONE_RADIUS = -0.76 * S, 2.95 * S, 2.6 * S
+TIER_BANDS = ((-0.76, -0.34, NIGHT), (-0.06, 0.36, PAPER), (0.64, 1.06, FORCE),
+              (1.34, 1.76, PUPPET), (2.04, 2.95, ELITE))
+
+
+def _radius(z):
+    return CONE_RADIUS * (CONE_APEX_Z - z) / (CONE_APEX_Z - CONE_BASE_Z)
+
+
+def _cap(z, color):
+    disc = m.Circle(radius=_radius(z), fill_color=color, fill_opacity=1, stroke_width=0)
+    return disc.move_to([PYRAMID_X, 0, z])
+
+
+def _frustum(z0, z1, color):
+    """One conical tier: the side wall plus flat discs top and bottom."""
+    side = m.Surface(
+        lambda u, v: [PYRAMID_X + _radius(v) * np.cos(u), _radius(v) * np.sin(u), v],
+        u_range=(0, m.TAU), v_range=(z0, z1), resolution=(48, 2),
+        checkerboard_colors=False, fill_color=color, fill_opacity=1, stroke_width=0,
+    )
+    parts = [side, _cap(z0, color)]
+    if _radius(z1) > 1e-3:
+        parts.append(_cap(z1, color))
+    return m.VGroup(*parts)
+
+
+def _build_cone():
+    """Out-group base through Elite apex, as five frustums with thin gaps."""
+    tiers = [_frustum(z0 * S, z1 * S, color) for z0, z1, color in TIER_BANDS]
+    return m.VGroup(*tiers), tiers
 
 
 class OrthoIllusion(YTScene3D):
@@ -28,7 +63,7 @@ class OrthoIllusion(YTScene3D):
 
     def shot_S07_01(self):
         Orthographic16x9._lights(self)
-        tiers, slabs = _build_pyramid()
+        tiers, slabs = _build_cone()
         out, buf, enf, pup, eli = slabs
         for slab in slabs:
             slab.set_opacity(0)
@@ -107,35 +142,38 @@ class OrthoIllusion(YTScene3D):
         apex_rim = m.SurroundingRectangle(eli, color=GOLD, buff=0.06, stroke_width=5)
         self.play(m.Create(apex_rim), m.Indicate(eli, color=ELITE), run_time=0.75)
 
-        # 5 — occupy the base and look upward into the Buffer underside.
+        # 5 — stand inside O and look straight up: the Buffer's underside fills the view.
         self.until(self.at(5, "upward"))
-        self.play(m.FadeOut(apex_rim), run_time=0.25)
-        self.move_camera(phi=22 * D, theta=-90 * D, zoom=1.42,
-                         frame_center=[PYRAMID_X, 0, 0.05], run_time=1.15)
+        self.play(m.FadeOut(apex_rim), out.animate.set_opacity(0), run_time=0.35)
+        self.move_camera(phi=178 * D, theta=-90 * D, zoom=1.3,
+                         frame_center=[PYRAMID_X, 0, 0.0], run_time=1.2)
         self.until(self.at(5, "Buffer"))
-        self.play(m.Indicate(buf, color=PAPER), run_time=0.65)
+        self.play(m.Indicate(buf, color=PAPER, scale_factor=1.03), run_time=0.65)
 
-        # 6 — the nearest surface becomes the Square Ceiling; upper tiers remain ghosts.
-        self.until(self.at(6, "Square"))
-        ceiling = T("SQUARE CEILING", 38, GOLD).move_to([4.65, 2.15, 0])
-        ceiling_rule = m.Line([3.15, 1.78, 0], [6.15, 1.78, 0], color=GOLD, stroke_width=3)
+        # 6 — the Buffer underside becomes the Flat Ceiling; upper tiers remain ghosts.
+        self.until(self.at(6, "Ceiling"))
+        ceiling = T("FLAT CEILING", 34, GOLD).move_to([5.55, 2.6, 0])
+        ceiling_rule = m.Line([4.25, 2.25, 0], [6.85, 2.25, 0], color=GOLD, stroke_width=3)
         self.flat(ceiling, ceiling_rule)
-        self.play(m.FadeIn(ceiling), m.Create(ceiling_rule),
-                  *[s.animate.set_opacity(0.16) for s in (enf, pup, eli)], run_time=0.75)
-        self.until(self.at(6, "binary"))
-        self.play(m.Indicate(buf, color=GOLD), run_time=0.55)
+        self.play(m.FadeIn(ceiling), m.Create(ceiling_rule), run_time=0.75)
+        self.until(self.at(6, "align"))
+        # Ghost the ceiling: every higher tier sits centred behind it on the same axis.
+        self.play(buf.animate.set_opacity(0.08), run_time=0.7)
+        self.until(self.beat_end(6) - 0.45)
+        self.play(buf.animate.set_opacity(1), run_time=0.4)
 
         # 7 — reverse the look; extraction exits a visible frame above the observer.
         self.until(self.at(7, "downward"))
         self.play(m.FadeOut(ceiling), m.FadeOut(ceiling_rule), run_time=0.3)
-        self.move_camera(phi=132 * D, theta=-70 * D, zoom=1.12,
-                         frame_center=[PYRAMID_X, 0, -0.2], run_time=1.1)
-        extraction = m.VGroup(*[
-            m.Arrow3D([PYRAMID_X + dx, 0, -0.45], [PYRAMID_X + dx, 0, 3.45],
-                      color=GOLD, thickness=0.055)
-            for dx in (-0.42, 0.42)
-        ])
-        frame = m.Rectangle(width=9.5, height=5.25, stroke_color=PAPER, stroke_width=3)
+        # From the Buffer's level, looking down: the upper tiers drop out of view.
+        self.move_camera(phi=58 * D, theta=-90 * D, zoom=1.15, frame_center=[PYRAMID_X, 0, -0.4],
+                         added_anims=[out.animate.set_opacity(1),
+                                      *[t.animate.set_opacity(0.12) for t in (enf, pup, eli)]],
+                         run_time=1.1)
+        # One arrow up the axis, leaving the cone through E's tip.
+        extraction = m.VGroup(m.Arrow3D([PYRAMID_X, 0, 0.5], [PYRAMID_X, 0, CONE_APEX_Z + 0.75],
+                                        color=GOLD, thickness=0.06))
+        frame = m.Rectangle(width=9.5, height=4.0, stroke_color=PAPER, stroke_width=3).move_to([0, -1.35, 0])
         outside = T("EXTRACTION → E", 27, GOLD).move_to([4.85, 2.55, 0])
         self.flat(frame, outside)
         self.play(m.Create(extraction), m.FadeIn(frame), run_time=0.8)
@@ -188,7 +226,8 @@ class OrthoIllusion(YTScene3D):
 
         # 12 — vertical momentum hits the Buffer plane and bends ninety degrees.
         self.until(self.at(12, "Orthogonal"))
-        self.play(m.FadeOut(eq21), m.FadeOut(eq22), m.FadeOut(sightline), run_time=0.3)
+        self.play(m.FadeOut(eq21), m.FadeOut(eq22), m.FadeOut(sightline),
+                  *[t.animate.set_opacity(0.35) for t in slabs], run_time=0.4)
         up_arrow = m.Arrow3D([PYRAMID_X + 1.0, 0, -0.8], [PYRAMID_X + 1.0, 0, 0.05],
                              color=HER, thickness=0.075)
         deflect_plane = m.Rectangle(width=5.0, height=2.0, fill_color=PAPER, fill_opacity=0.12,
@@ -218,7 +257,8 @@ class OrthoIllusion(YTScene3D):
 
         # 15 — wide view retains local collision and uninterrupted extraction.
         self.until(self.at(15, "wide"))
-        self.play(m.FadeOut(decoy), m.FadeOut(cone), m.FadeOut(deflect_plane), run_time=0.3)
+        self.play(m.FadeOut(decoy), m.FadeOut(cone), m.FadeOut(deflect_plane),
+                  *[t.animate.set_opacity(1) for t in slabs], run_time=0.4)
         self.move_camera(phi=52 * D, theta=-68 * D, zoom=0.82,
                          frame_center=[PYRAMID_X, 0, 1.0], run_time=1.0)
         self.until(self.at(15, "capture"))
