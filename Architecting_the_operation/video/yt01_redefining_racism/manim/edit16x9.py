@@ -231,12 +231,16 @@ def render_one(item):
         # Preview only: a titled slate stands in for a run that does not render yet.
         n = run_frame_count(shots, primary, args.fps)
         w, h = args.res.split("x")
-        title = re.sub(r"[^A-Za-z0-9 .,:·-]", "", f"{primary}  {shot.title}")[:80]
+        # A colon ends a drawtext option, so it never reaches the filter.
+        title = re.sub(r"[^A-Za-z0-9 .,·-]", "", f"{primary}  {shot.title}".replace(":", " -"))[:80]
         vf = (f"drawtext=fontfile='{FONT}':text='{title}':fontcolor=0xF4EAD2:fontsize={int(h) // 18}:"
               "x=(w-tw)/2:y=(h-th)/2")
-        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "lavfi", "-i",
-                        f"color=c=0x0F1B33:s={w}x{h}:r={args.fps}", "-frames:v", str(n), "-vf", vf,
-                        "-c:v", "libx264", "-preset", "veryfast", "-pix_fmt", "yuv420p", str(out)], check=True)
+        try:
+            subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "lavfi", "-i",
+                            f"color=c=0x0F1B33:s={w}x{h}:r={args.fps}", "-frames:v", str(n), "-vf", vf,
+                            "-c:v", "libx264", "-preset", "veryfast", "-pix_fmt", "yuv420p", str(out)], check=True)
+        except subprocess.CalledProcessError as e:
+            return primary, f"FAILED (slate {e.returncode})", p.stderr[-600:]
         return primary, "slate", p.stderr[-600:]
     return primary, "ok" if p.returncode == 0 else f"FAILED ({p.returncode})", p.stderr[-600:] if p.returncode else ""
 
