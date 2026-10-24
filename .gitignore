@@ -196,3 +196,4 @@ animations/**/*.mp3
 
 # Cloned voice files: anyone with one can speak as the speaker. Keep local.
 voices/phonon/
+voices/candidates/emmanuel_*.wav
