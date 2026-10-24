@@ -30,10 +30,11 @@ class WagePhasor(YTScene):
 
     SHOT = "S09-01"
 
-    def shot_S09_01(self):
+    def _stage(self, theta0=25.0):
+        """Build and add the full phasor layout; return its parts by name."""
         origin = ORIGIN
         length = LENGTH
-        theta = m.ValueTracker(25.0)
+        theta = m.ValueTracker(theta0)
 
         title = T("THE WAGE PHASOR", 42, GOLD).move_to([-2.6, 3.45, 0])
         equation_badge = T("EQUATION 3.5", 25, GOLD).move_to([4.15, 3.5, 0])
@@ -114,6 +115,12 @@ class WagePhasor(YTScene):
         self.add(title, equation, equation_badge, elite, q2, q2_label, y_axis, x_axis, y_label, x_label)
         self.add(material, status, material_drop, status_drop, phasor, theta_arc, theta_label, formulas, regime, history)
         self.add(historical_rail, pins, telemetry, algebra, proxy_tags, tier_badge)
+        return dict(locals())
+
+    def shot_S09_01(self):
+        """YT02 v1: the single 42-beat run (SEG 09)."""
+        g = self._stage()
+        theta, equation, equation_badge, y_axis, x_axis, material, status, formulas, regime, history, pins, telemetry, algebra, proxy_tags, tier_badge = (g[k] for k in "theta, equation, equation_badge, y_axis, x_axis, material, status, formulas, regime, history, pins, telemetry, algebra, proxy_tags, tier_badge".split(", "))
 
         cues = [
             "Virginia", "Prediction", "Virginia", "statutory", "Virginia", "White", "shipped",
@@ -208,3 +215,100 @@ class WagePhasor(YTScene):
                 run_time=0.42,
             )
         self.until(self.beat_end(41) - 0.2)
+
+    # ── YT02v2 SEG 10 ─────────────────────────────────────────────────────
+    # The v2 segment interleaves this scene with the hero plane and the arms
+    # scans, so its runs are short. Each shot names the phasor state its words
+    # call for: (cue word, θ in degrees, history caption, extras). θ opens from
+    # ψ_m (down) toward ψ_s (right); past 90° is Quadrant II.
+    V2_STATES = {
+        "S10-01": ("mechanical", 25, "WHY DEFEND A HIERARCHY THAT EXTRACTS?", ()),
+        "S10-02": ("suppression", 45, "SUPPRESSION ALLOCATION · TWO WAGE CHANNELS", ("channels",)),
+        "S10-03": ("psychological", 60, "DU BOIS · THE PSYCHOLOGICAL WAGE", ("status",)),
+        "S10-04": ("Equation", 45, "EQUATION 3.5 · ONE COMPLEX WAGE", ("equation",)),
+        "S10-05": ("angle", 45, "θ · AN ORDINAL DIAGNOSTIC", ("formulas",)),
+        "S10-14": ("same", 70, "EQUAL MAGNITUDE · DIFFERENT MIX", ("channels",)),
+        "S10-15": ("ordinal", 45, "ORDINAL REGIMES", ("tier",)),
+        "S10-24": ("negative", 120, "cos θ < 0 · MATERIAL FLOWS UP TO E", ("material",)),
+        "S10-25": ("lose", 125, "LOSS + SYMBOLIC RANK", ("channels",)),
+        "S10-26": ("tuning", 100, "θ · THE SYSTEM'S TUNING KNOB", ()),
+        "S10-28": ("Quadrant", 128, "QUADRANT II · FASCISM THRESHOLD", ()),
+        "S10-29": ("Firearms", 45, "ARMS · A DISCRETE ψₘ ANCHOR", ("material",)),
+        "S10-43": ("ordinal", 128, "ORDINAL DIRECTION · SIGN CHANGE", ()),
+        "S10-44": ("Bacon's", 90, "1705 · FIRST IMPLEMENTATION", ("pin0",)),
+        "S10-45": ("Runtime", 90, "LOG 3 · W = jψₛ", ("equation",)),
+        "S10-46": ("privileges", 72, "1705 · MATERIAL AND LEGAL PRIVILEGES", ("pin0",)),
+        "S10-47": ("mixed", 72, "1705 · MIXED ALLOCATION", ()),
+        "S10-48": ("containment", 90, "1894–1965 · CONTAINMENT", ("pin1",)),
+        "S10-49": ("material", 84, "PARTITIONED CREDIT + PROTECTION", ("material",)),
+        "S10-50": ("ranges", 90, "PHASE LOADING · THRESHOLD PROXIMITY", ("telemetry",)),
+        "S10-51": ("1965", 108, "AFTER 1965 · PROXY CHANNELS", ("pin2",)),
+        "S10-52": ("exemplars", 118, "FACIALLY NEUTRAL EXEMPLARS", ("proxies",)),
+        "S10-53": ("incarceration", 124, "CARCERAL + FINANCIAL PROXIES", ("proxies",)),
+        "S10-54": ("deindustrialization", 128, "MATERIAL PROJECTION CROSSES ZERO", ("material",)),
+        "S10-55": ("status", 135, "STATUS REMAINS POSITIVE", ("status",)),
+        "S10-56": ("rotating", 132, "ONE ROTATING CONTRACT", ("equation", "pins")),
+    }
+
+    def _regime(self, target):
+        if target == 0:
+            return "θ = 0° · MATERIAL", MAT
+        if target == 90:
+            return "θ = 90° · REACTIVE", STAT
+        if target > 90:
+            return "θ > 90° · QUADRANT II", HER
+        return "0° < θ < 90° · MIXED", GOLD
+
+    def build(self):
+        """YT02v2: one short run of SEG 10, starting where the previous state left θ."""
+        order = list(self.V2_STATES)
+        ids = [s.id for s in self.run]
+        first = next((i for i in ids if i in self.V2_STATES), None)
+        if first is None:
+            raise NotImplementedError(f"WagePhasor has no v2 state for run {self.primary}")
+        prior = order.index(first) - 1
+        start = self.V2_STATES[order[prior]][1] if prior >= 0 else self.V2_STATES[first][1]
+        g = self._stage(theta0=float(start))
+        theta, history, regime = g["theta"], g["history"], g["regime"]
+        band = history.get_center()  # the caption band; every history caption sits here
+        opening = self.V2_STATES[order[prior]][2] if prior >= 0 else self.V2_STATES[first][2]
+        history.become(T(opening, 26, INK, width=5.2).move_to(band))
+        clamp_above_caption(history)
+        regime.become(T(self._regime(start)[0], 28, self._regime(start)[1], width=5.0).move_to(regime))
+        clamp_above_caption(regime)
+        extras = {
+            "equation": lambda: [m.Indicate(g["equation"], color=GOLD), m.Indicate(g["equation_badge"], color=GOLD)],
+            "channels": lambda: [m.Indicate(g["material"], color=MAT), m.Indicate(g["status"], color=STAT)],
+            "material": lambda: [m.Indicate(g["material"], color=HER), m.Indicate(g["y_axis"], color=MAT)],
+            "status": lambda: [m.Indicate(g["status"], color=STAT), m.Indicate(g["x_axis"], color=STAT)],
+            "formulas": lambda: [m.Indicate(g["formulas"], color=GOLD)],
+            "tier": lambda: [g["tier_badge"].animate.set_opacity(1)],
+            "telemetry": lambda: [g["telemetry"].animate.set_opacity(1)],
+            "proxies": lambda: [g["proxy_tags"].animate.set_opacity(1)],
+            "pins": lambda: [m.Indicate(g["pins"], color=GOLD)],
+            "pin0": lambda: [m.Indicate(g["pins"][0], color=GOLD)],
+            "pin1": lambda: [m.Indicate(g["pins"][1], color=GOLD)],
+            "pin2": lambda: [m.Indicate(g["pins"][2], color=GOLD)],
+        }
+        for k, sid in enumerate(ids):
+            if sid not in self.V2_STATES:
+                continue
+            cue, target, label, extra = self.V2_STATES[sid]
+            try:
+                when = self.at(k, cue)
+            except KeyError:
+                when = self.beat(k) + 0.5
+            self.until(when)
+            next_history = T(label, 26, INK, width=5.2).move_to(band)
+            clamp_above_caption(next_history)
+            text, color = self._regime(target)
+            next_regime = T(text, 28, color, width=5.0).move_to(regime)
+            clamp_above_caption(next_regime)
+            self.play(
+                theta.animate.set_value(target),
+                m.Transform(history, next_history),
+                m.Transform(regime, next_regime),
+                *[a for key in extra for a in extras[key]()],
+                run_time=0.9,
+            )
+        self.until(self.beat_end(len(ids) - 1) - 0.2)
