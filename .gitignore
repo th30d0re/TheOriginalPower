@@ -193,3 +193,6 @@ Paper/data/spatial/boston/tiger_25/
 Paper/data/spatial/boston/*.zip
 .zed/
 animations/**/*.mp3
+
+# Cloned voice files: anyone with one can speak as the speaker. Keep local.
+voices/phonon/
