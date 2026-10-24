@@ -78,7 +78,8 @@ class RLCTeach(YTScene):
 
         glow = side = None
         self.camera.background_color = "#0F1B33"
-        self.add(head, circuit, panel, plot, curve, scope_head, eq)
+        # The trace is always_redraw, which ignores set_opacity; it joins the scene with its panel.
+        self.add(head, circuit, panel, plot, scope_head, eq)
 
         for cue, key in (("inertia", "L"), ("resistance", "R"), ("capacitance", "C")):
             self.until(self.at(0, cue))
@@ -97,6 +98,7 @@ class RLCTeach(YTScene):
         self.until(self.at(0, "differential"))
         self.play(m.FadeOut(glow, side), m.Create(circuit), run_time=0.85)
         self.until(self.at(0, "dynamic"))
+        self.add(curve)
         self.play(
             panel.animate.set_opacity(1),
             plot.animate.set_opacity(1),
@@ -107,10 +109,18 @@ class RLCTeach(YTScene):
         )
         self.until(self.beat_end(0) - 0.2)
 
-        self.until(self.at(1, "requirements"))
+        # S05-25: the reform shock rings the circuit; the scope trace replays its damped response.
+        self.until(self.at(1, "shock"))
+        self.play(t_end.animate.set_value(0.05), run_time=0.3)
+        self.play(t_end.animate.set_value(6.5), m.Indicate(scope_head, color=GOLD), run_time=1.6)
+        self.until(self.at(1, "damped"))
+        self.play(m.Indicate(curve, color=GOLD), run_time=0.6)
+
+        # S05-26: the checklist closes on the equation, term by term.
+        self.until(self.at(2, "requirements"))
         self.play(eq.animate.set_opacity(1), run_time=0.35)
         for term, cue in (("L", "mathematical"), ("R", "institutional"), ("C", "state")):
-            self.until(self.at(1, cue))
+            self.until(self.at(2, cue))
             self.play(m.Indicate(eq.get_part_by_tex(term), color=COMPONENT_LABELS[term][1]), run_time=0.42)
         clamp_above_caption(eq)
-        self.until(self.beat_end(1) - 0.2)
+        self.until(self.beat_end(2) - 0.2)

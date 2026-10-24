@@ -108,6 +108,10 @@ def conform_ext(src, out, res, fps, n_frames):
 def stale_external(out, shot):
     if not out.exists():
         return True
+    # The run's log records the source it was conformed from; a new Render source is stale.
+    log = out.with_suffix(".log")
+    if not log.exists() or not log.read_text().startswith(f"ext:{external_source(shot)}\n"):
+        return True
     deps = [external_source(shot), EP / "episode_manifest.json"]
     return any(d.exists() and d.stat().st_mtime > out.stat().st_mtime for d in deps)
 

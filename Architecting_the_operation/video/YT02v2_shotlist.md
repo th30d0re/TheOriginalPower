@@ -469,8 +469,8 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 
 ## S02-06 — Autonomy restriction and selective empathy coupling
 - **Anchor:** `Emmanuel Theodore (13:14)`
-- **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/four_components16x9.py:FourComponentLoop as=S02-11`
+- **Type:** card
+- **Render:** `figma-card:cards/S13-06.json`
 - **Note:** Directional arrows circulate around the four nodes, highlighting reproductive/movement restriction paired with selective empathy. [book Preface; Ch 2]
 
 ## S02-07 — Equation 4.2 Virginia 1691 boundary enforcement
@@ -940,14 +940,16 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 
 ## S05-25 — Damped oscillation restoring extraction equilibrium
 - **Anchor:** `Emmanuel Theodore (27:57)`
-- **Type:** card
-- **Render:** `figma-card:cards/S02-23.json`
+- **Type:** hold
+- **Render:** `manim:yt02/rlc_teach.py:RLCTeach`
+- **Holds:** `S05-24`
 - **Note:** Term 3 (buffering capacitance C) illuminates, showing how legal and symbolic absorption restores equilibrium. [book §2.3.6, Eq 2.11]
 
 ## S05-26 — Five-part systems engineering checklist satisfied
 - **Anchor:** `Emmanuel Theodore (28:07)`
-- **Type:** card
-- **Render:** `figma-card:cards/S02-23.json`
+- **Type:** hold
+- **Render:** `manim:yt02/rlc_teach.py:RLCTeach`
+- **Holds:** `S05-24`
 - **Note:** All three RLC term panels pulse together, completing the five-requirement systems audit. [book Ch 0; Ch 2]
 
 <!-- SEG 06 · The two sets -->
@@ -1075,20 +1077,21 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 ## S06-19 — Structural positions in the extraction circuit
 - **Anchor:** `Emmanuel Theodore (31:15)`
 - **Type:** diagram
-- **Render:** `manim:yt01_redefining_racism/manim/binary_refinement16x9.py:BinaryRefinement as=S03-19`
+- **Render:** `manim:yt02/binary_refinement_v2.py:BinaryRefinementV2 as=S03-19`
 - **Note:** The flat In-group block I splits horizontally into four stacked structural tiers above the Out-group block O. [book Ch 0; §2.1, Eq 2.2]
 
 ## S06-20 — Pre-1450 Mediterranean attitudes (Sweet 1997; Bethencourt 2013)
 - **Anchor:** `Emmanuel Theodore (31:28)`
 - **Type:** hold
-- **Render:** `figma-card:cards/S03-17.json`
-- **Holds:** `S06-17`
+- **Render:** `manim:yt02/binary_refinement_v2.py:BinaryRefinementV2 as=S03-19`
+- **Holds:** `S06-19`
 - **Note:** Row 2 reveals, citing James H. Sweet (1997) and Francisco Bethencourt (2013) on pre-1450 color-coded attitudes. [book §2.2, citing Sweet 1997; Bethencourt 2013]
 
 ## S06-21 — Preserving set I while exposing internal inequality
 - **Anchor:** `Emmanuel Theodore (31:40)`
-- **Type:** diagram
-- **Render:** `manim:yt01_redefining_racism/manim/binary_refinement16x9.py:BinaryRefinement as=S03-19`
+- **Type:** hold
+- **Render:** `manim:yt02/binary_refinement_v2.py:BinaryRefinementV2 as=S03-19`
+- **Holds:** `S06-19`
 - **Note:** A bracket spans all four bands to mark set I while payoff bars along the right margin display their unequal shares. [book §2.1, Eq 2.2]
 
 ## S06-22 — Equation 2.3: resolving the Out-group O
