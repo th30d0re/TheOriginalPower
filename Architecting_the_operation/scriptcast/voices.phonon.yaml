@@ -1,0 +1,129 @@
+# On-device voices: Phonon for Emmanuel, OmniVoice with real reference audio
+# for the others. The project default (see scriptcast.toml).
+#
+# OmniVoice conditions on the reference clip AND its transcript together, so
+# reference_text must match the clip word for word. A truncated or approximate
+# transcript is worse than a shorter clip; see the README section on reference
+# audio for the measurements behind that.
+#
+# A turn marked [emphasis] in the script renders from *_expressive instead.
+speakers:
+  emmanuel_theodore:
+    name: "Emmanuel Theodore"
+    engine: "phonon"
+    # Phonon 31m (Apache 2.0) with a Gradium clone of
+    # voices/candidates/emmanuel_expressive_clean.wav (Gradium voice ID
+    # 8ntUHC5PzIvOGuMi). Chosen over OmniVoice by ear, 2026-10-22.
+    phonon_voice: "voices/phonon/emmanuel.safetensors"
+    character_profile: "Host and author of The Original Power"
+
+  toussaint:
+    name: "Toussaint"
+    engine: "omnivoice"
+    reference_audio: "voices/candidates/toussaint_sentence_ref.wav"
+    reference_text: "Which turns your own discomfort into a measurement. Wherever the exercise gets hardest is where something was installed."
+    # The reference clip rendered him near 230 wpm against Aisha's 171.
+    # Emmanuel chose 0.75 (about 180 wpm) by ear, 2026-09-16.
+    speed: 0.75
+    character_profile: "Co-narrator, historical and structural throughline"
+
+  aisha:
+    name: "Aisha"
+    engine: "omnivoice"
+    reference_audio: "voices/candidates/aisha_sentence_ref.wav"
+    reference_text: "Elite Obscuration, and the Square Ceiling, which together make the apex invisible from the base."
+    character_profile: "Co-narrator, mathematical and empirical throughline"
+
+  lee_atwater:
+    name: "Lee Atwater"
+    # Not a voice. The archive engine plays the registered recording in
+    # Architecting_the_operation/archive/clips.yaml, and the text after the
+    # [clip:...] tag is the caption and what verification checks it against.
+    engine: "archive"
+    character_profile: "Archival recording, 1981"
+
+  the_reel:
+    name: "The Reel"
+    # Source clip for the Chapter 135 / Question 9 reaction video: the
+    # @harvardseye Instagram interview with Gov. Healey, spliced in between
+    # Emmanuel's reaction turns. Same archive mechanism as lee_atwater.
+    engine: "archive"
+    character_profile: "Source clip, @harvardseye x Gov. Healey, Yes-on-9 press event"
+
+  # EP04 cold open: real voices from the Cornell Chi Phi discourse, Sept-Oct 2026.
+  # Archive engine; each plays a registered clip from archive/clips.yaml.
+  blake_johnson:
+    name: "Blake Johnson"
+    engine: "archive"
+    character_profile: "Instagram reel, @eugenesquad, 2026"
+
+  jaylin_hertz:
+    name: "Jaylin Hertz"
+    engine: "archive"
+    character_profile: "Instagram reel, @jesus.reigns23, 2026"
+
+  nick_powers:
+    name: "Nick Powers"
+    engine: "archive"
+    character_profile: "Instagram reel, @thatnickpowersguy, 2026"
+
+  chloe_sunderland:
+    name: "Chloe Sunderland"
+    engine: "archive"
+    character_profile: "Instagram reel, @romaarmyy, 2026"
+
+  the_speech_prof:
+    name: "The Speech Prof"
+    engine: "archive"
+    character_profile: "Instagram reel, @thespeechprof, 2026"
+
+  # EP05 cold open: race-and-crime reels.
+  kaizen_asiedu:
+    name: "Kaizen Asiedu"
+    engine: "archive"
+    character_profile: "Instagram reel, @thatskaizen, 2025"
+
+  brianna_riddick:
+    name: "Brianna Riddick"
+    engine: "archive"
+    character_profile: "Instagram reel, @blackcarddeclined, 2025"
+
+  jaeden:
+    name: "jaeden"
+    engine: "archive"
+    character_profile: "Instagram reel, @jaeserv, 2026"
+
+  the_mutual_man:
+    name: "The Mutual Man"
+    engine: "archive"
+    character_profile: "Instagram reel, @themutualman, 2026"
+
+  jala_chantelle:
+    name: "Jala Chantelle"
+    engine: "archive"
+    character_profile: "Instagram reel, @jalachantelle, 2026"
+
+  mamwa:
+    name: "mamwa"
+    engine: "archive"
+    character_profile: "Instagram reel, @amandathegateman, 2026"
+
+  ilyas_abdulin:
+    name: "Ilyas Abdulin"
+    engine: "archive"
+    character_profile: "Instagram reel, @ilyas.abdulin_ig, 2026"
+
+  krystal:
+    name: "Krystal"
+    engine: "archive"
+    character_profile: "Instagram reel, @krystaltantricyogi, 2026"
+
+  eivin_sandstrom:
+    name: "Eivin Sandstrom"
+    engine: "archive"
+    character_profile: "Instagram reel, @uplandsandy, 2026"
+
+  may:
+    name: "May"
+    engine: "archive"
+    character_profile: "Instagram reel, @mayson_yaps, 2026"

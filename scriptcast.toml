@@ -2,7 +2,7 @@
 # scriptCast is its own repository (../scriptCast). Paths are relative to this
 # file, so scriptcast commands work from anywhere inside this repo.
 
-voices           = "Architecting_the_operation/scriptcast/voices.omnivoice.yaml"
+voices           = "Architecting_the_operation/scriptcast/voices.phonon.yaml"
 pronunciations   = "Architecting_the_operation/scriptcast/pronunciations.yaml"
 speaker_rates    = "Architecting_the_operation/scriptcast/speaker_rates.json"
 clips            = "Architecting_the_operation/archive/clips.yaml"
