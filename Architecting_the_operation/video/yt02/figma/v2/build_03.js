@@ -15,7 +15,8 @@ const CARDS = [
       10.23,
       23.15
     ],
-    "duration": 34.15
+    "duration": 34.15,
+    "hasQr": true
   },
   {
     "kind": "source",
@@ -43,7 +44,8 @@ const CARDS = [
       0.25,
       11.56
     ],
-    "duration": 20.77
+    "duration": 20.77,
+    "hasQr": true
   },
   {
     "kind": "compare",
@@ -66,7 +68,8 @@ const CARDS = [
     "beats": [
       0.25
     ],
-    "duration": 8.38
+    "duration": 8.38,
+    "hasQr": true
   },
   {
     "kind": "quote",

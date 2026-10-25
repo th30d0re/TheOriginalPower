@@ -25,7 +25,8 @@ const CARDS = [
       9.52,
       17.4
     ],
-    "duration": 28.68
+    "duration": 28.68,
+    "hasLatex": true
   },
   {
     "kind": "table",
@@ -46,14 +47,14 @@ const CARDS = [
       {
         "cells": [
           "Levels 1 & 2",
-          "Eq. 2.1 (U = I ⊔ O) · Eq. 2.2 (Refine(I))",
+          "Eq. 2.1 (U = I ∪̇ O) · Eq. 2.2 (Refine(I))",
           "Primary color line and four internal In-group tiers"
         ]
       },
       {
         "cells": [
           "Levels 3 & 4",
-          "Eq. 2.3 (Refine(O)) · Eq. 2.4 (X = X⁺_α ⊔ X⁻_α)",
+          "Eq. 2.3 (Refine(O)) · Eq. 2.4 (X = X⁺_α ∪̇ X⁻_α)",
           "Target/adjacent Out-groups and secondary α-axis fractures"
         ]
       }
@@ -123,7 +124,7 @@ const CARDS = [
   },
   {
     "kind": "title",
-    "headline": "Segment 07 · Test 1: Portugal, 1441–1486",
+    "headline": "Segment 08 · Test 1: Portugal, 1441–1486",
     "items": [
       {
         "title": "Chapter 3 · Version 1.0",

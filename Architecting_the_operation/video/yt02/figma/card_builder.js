@@ -16,6 +16,7 @@ const ST = Object.fromEntries(figma.motion.figmaAnimationStyles().map(s => [s.st
 const border = await figma.getNodeByIdAsync("3:119");
 const X0 = 190, X1 = 1730, W = X1 - X0;                      // content area inside the rails
 const assetsPage = figma.root.children.find(p => p.name === "YT02 · Assets");
+await assetsPage.loadAsync();   // pages load on demand; an unloaded page lists no children
 const ASSET = Object.fromEntries(assetsPage.children.map(n => [n.name, n]));
 async function txt(parent, name, s, style, color, x, y, w, align = "LEFT") {
   const t = figma.createText(); parent.appendChild(t); t.name = name; await t.setTextStyleIdAsync(TS[style].id); t.characters = String(s ?? ""); t.fills = bp(color); t.textAlignHorizontal = align;

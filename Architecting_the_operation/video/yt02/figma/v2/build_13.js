@@ -67,7 +67,8 @@ const CARDS = [
       59.99,
       72.43
     ],
-    "duration": 81.73
+    "duration": 81.73,
+    "hasLatex": true
   },
   {
     "kind": "equation",
@@ -95,7 +96,8 @@ const CARDS = [
       11.18,
       28.81
     ],
-    "duration": 40.69
+    "duration": 40.69,
+    "hasLatex": true
   },
   {
     "kind": "timeline",
@@ -134,7 +136,7 @@ const CARDS = [
   },
   {
     "kind": "title",
-    "headline": "Segment 10 · Test 3: Backlash Record, 1840–2020",
+    "headline": "Segment 11 · Test 3: Backlash Record, 1840–2020",
     "items": [
       {
         "title": "Quantitative American Archive",
@@ -182,7 +184,8 @@ const CARDS = [
       15.11,
       28.89
     ],
-    "duration": 42.37
+    "duration": 42.37,
+    "hasLatex": true
   }
 ];
 const PAGE_NAME = "YT02v2 · Cards";

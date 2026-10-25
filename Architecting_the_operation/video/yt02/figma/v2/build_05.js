@@ -98,7 +98,9 @@ const CARDS = [
     "beats": [
       0.25
     ],
-    "duration": 10.51
+    "duration": 10.51,
+    "hasQr": true,
+    "hasLatex": true
   },
   {
     "kind": "compare",
@@ -173,15 +175,15 @@ const CARDS = [
   },
   {
     "kind": "title",
-    "headline": "Segment 05 · Where the Agreement Ends",
+    "headline": "Segment 03 · Where the Agreement Ends",
     "items": [
       {
         "title": "Assembled Analytical Toolkit",
-        "detail": "Reviewing the shared definitions assembled across Segments 00 through 04."
+        "detail": "Taking stock of the tools stated in Segments 00 through 02."
       },
       {
         "title": "Established Disciplinary Tools",
-        "detail": "Lexical entries, social-psychology constructs, five-part system audit, and set partitions."
+        "detail": "Dictionary senses, the social-psychology constructs, and the vector definition of racism."
       },
       {
         "title": "Cross-Disciplinary Consensus",

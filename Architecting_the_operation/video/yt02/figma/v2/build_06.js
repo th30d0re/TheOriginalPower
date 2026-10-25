@@ -30,7 +30,8 @@ const CARDS = [
       21.98,
       31.33
     ],
-    "duration": 40.74
+    "duration": 40.74,
+    "hasLatex": true
   },
   {
     "kind": "table",
@@ -121,7 +122,8 @@ const CARDS = [
       11.46,
       21.49
     ],
-    "duration": 36.35
+    "duration": 36.35,
+    "hasLatex": true
   },
   {
     "kind": "quote",

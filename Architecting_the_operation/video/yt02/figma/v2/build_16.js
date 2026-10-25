@@ -27,7 +27,9 @@ const CARDS = [
     "beats": [
       0.25
     ],
-    "duration": 9.96
+    "duration": 9.96,
+    "hasQr": true,
+    "hasLatex": true
   },
   {
     "kind": "table",
@@ -162,7 +164,7 @@ const CARDS = [
   },
   {
     "kind": "title",
-    "headline": "Segment 14 · Complete Analytical Arc",
+    "headline": "Segment 15 · Complete Analytical Arc",
     "items": [
       {
         "title": "Arc Review",
@@ -207,7 +209,7 @@ const CARDS = [
         "cells": [
           "Orthographic & Phasor",
           "Fig. 0.2 · Eq. 3.5 (W = ψ_m + jψ_s)",
-          "3D pyramid projects to binary; wage rotates to status"
+          "3D cone projects to binary; wage rotates to status"
         ]
       },
       {

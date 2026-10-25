@@ -1,7 +1,7 @@
 const CARDS = [
   {
     "kind": "title",
-    "headline": "Segment 03 · The Set-Theoretic Ladder",
+    "headline": "Segment 06 · The Set-Theoretic Ladder",
     "items": [
       {
         "title": "Section 2.1 Set Ladder",
@@ -88,7 +88,8 @@ const CARDS = [
       10.53,
       17.88
     ],
-    "duration": 27.04
+    "duration": 27.04,
+    "hasLatex": true
   },
   {
     "kind": "compare",
@@ -139,7 +140,8 @@ const CARDS = [
       0.25,
       7.56
     ],
-    "duration": 24.9
+    "duration": 24.9,
+    "hasLatex": true
   },
   {
     "kind": "equation",
@@ -166,7 +168,8 @@ const CARDS = [
       0.25,
       12.17
     ],
-    "duration": 23.67
+    "duration": 23.67,
+    "hasLatex": true
   }
 ];
 const PAGE_NAME = "YT02v2 · Cards";

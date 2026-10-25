@@ -12,28 +12,28 @@ const CARDS = [
         "cells": [
           "Refutation Standard 1",
           "Durable phenotype caste without Elite sponsorship or prior to extraction",
-          "SEG 07 (Portugal)"
+          "SEG 08 (Portugal)"
         ]
       },
       {
         "cells": [
           "Refutation Standard 2",
           "Flat patrols during cotton boom, or post-1965 union rise",
-          "SEG 10 (1840–2020)"
+          "SEG 11 (1840–2020)"
         ]
       },
       {
         "cells": [
           "Refutation Standard 3",
           "Systemic racism against white Americans without institutional state control",
-          "SEG 13 (Vector Test)"
+          "SEG 14 (Vector Test)"
         ]
       },
       {
         "cells": [
           "Empirical Test Sequence",
           "Portugal (1441–1486) · Virginia (1640–1705) · US (1840–2020)",
-          "Segments 07, 08, and 10"
+          "Segments 08, 09, and 11"
         ]
       }
     ],
@@ -52,7 +52,7 @@ const CARDS = [
   },
   {
     "kind": "title",
-    "headline": "Segment 02 · What Makes a System a System",
+    "headline": "Segment 05 · What Makes a System a System",
     "items": [
       {
         "title": "Formal Systems Criterion",
@@ -114,7 +114,8 @@ const CARDS = [
       11.87,
       22.72
     ],
-    "duration": 38.61
+    "duration": 38.61,
+    "hasLatex": true
   },
   {
     "kind": "table",
@@ -193,7 +194,8 @@ const CARDS = [
       11.92,
       25.81
     ],
-    "duration": 34.37
+    "duration": 34.37,
+    "hasLatex": true
   },
   {
     "kind": "equation",
@@ -223,7 +225,8 @@ const CARDS = [
     "beats": [
       0.25
     ],
-    "duration": 13.72
+    "duration": 13.72,
+    "hasLatex": true
   }
 ];
 const PAGE_NAME = "YT02v2 · Cards";

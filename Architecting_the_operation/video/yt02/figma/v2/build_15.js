@@ -36,7 +36,8 @@ const CARDS = [
       33.04,
       42.35
     ],
-    "duration": 52.53
+    "duration": 52.53,
+    "hasQr": true
   },
   {
     "kind": "table",

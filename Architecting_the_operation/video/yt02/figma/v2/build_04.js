@@ -63,26 +63,26 @@ const CARDS = [
   },
   {
     "kind": "title",
-    "headline": "Segment 02 · What Makes a System a System",
+    "headline": "The Structural Argument · The Original Power",
     "items": [
       {
-        "title": "Formal Systems Criterion",
-        "detail": "Demonstrating that racism satisfies the engineering anatomy of a regulated machine."
+        "title": "Segment 02 · The Vector Definition",
+        "detail": "Racism defined as institutional force with a direction, measured against scalar prejudice."
       },
       {
-        "title": "State Variables & Equations",
-        "detail": "Bounded feedback-controlled architecture with measurable flows and governing laws."
+        "title": "Segments 03–04 · The Causal Arrow",
+        "detail": "Where the established account ends, and the hypothesis that reverses its direction."
       },
       {
-        "title": "Five-Part Engineering Audit",
-        "detail": "Components, policed boundary, inputs/outputs, objective function, and feedback loops."
+        "title": "Segments 05–07 · System, Sets, Projection",
+        "detail": "The engineering audit, the two sets, and the orthographic illusion."
       },
       {
-        "title": "Chapters 0, 2, and 4",
-        "detail": "Auditing the American racial order against each engineering requirement."
+        "title": "Segments 08–15 · The Tests",
+        "detail": "Portugal, Virginia, the complex wage, the backlash record, and the rebuilt definition."
       }
     ],
-    "sources": "The Original Power, Ch. 0, Ch. 2, Ch. 4",
+    "sources": "The Original Power, Preface & Ch. 2",
     "qrUrl": "",
     "id": "S02-01",
     "frame": "card v2 S01-48",
@@ -121,7 +121,9 @@ const CARDS = [
       0.25,
       8.59
     ],
-    "duration": 15.32
+    "duration": 15.32,
+    "hasQr": true,
+    "hasLatex": true
   },
   {
     "kind": "quote",
@@ -167,7 +169,8 @@ const CARDS = [
     "beats": [
       0.25
     ],
-    "duration": 8.97
+    "duration": 8.97,
+    "hasLatex": true
   }
 ];
 const PAGE_NAME = "YT02v2 · Cards";

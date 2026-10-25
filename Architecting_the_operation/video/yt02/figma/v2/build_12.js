@@ -1,7 +1,7 @@
 const CARDS = [
   {
     "kind": "title",
-    "headline": "Segment 08 · Test 2: Virginia, 1640–1705",
+    "headline": "Segment 09 · Test 2: Virginia, 1640–1705",
     "items": [
       {
         "title": "Chapter 4 · Colonial Virginia",
@@ -247,7 +247,8 @@ const CARDS = [
       44.06,
       56.51
     ],
-    "duration": 71.3
+    "duration": 71.3,
+    "hasLatex": true
   }
 ];
 const PAGE_NAME = "YT02v2 · Cards";

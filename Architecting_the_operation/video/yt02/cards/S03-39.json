@@ -17,14 +17,14 @@
     {
       "cells": [
         "Levels 1 & 2",
-        "Eq. 2.1 (U = I ⊔ O) · Eq. 2.2 (Refine(I))",
+        "Eq. 2.1 (U = I ∪̇ O) · Eq. 2.2 (Refine(I))",
         "Primary color line and four internal In-group tiers"
       ]
     },
     {
       "cells": [
         "Levels 3 & 4",
-        "Eq. 2.3 (Refine(O)) · Eq. 2.4 (X = X⁺_α ⊔ X⁻_α)",
+        "Eq. 2.3 (Refine(O)) · Eq. 2.4 (X = X⁺_α ∪̇ X⁻_α)",
         "Target/adjacent Out-groups and secondary α-axis fractures"
       ]
     }

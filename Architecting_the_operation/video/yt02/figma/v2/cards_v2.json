@@ -668,26 +668,26 @@
   },
   {
     "kind": "title",
-    "headline": "Segment 02 · What Makes a System a System",
+    "headline": "The Structural Argument · The Original Power",
     "items": [
       {
-        "title": "Formal Systems Criterion",
-        "detail": "Demonstrating that racism satisfies the engineering anatomy of a regulated machine."
+        "title": "Segment 02 · The Vector Definition",
+        "detail": "Racism defined as institutional force with a direction, measured against scalar prejudice."
       },
       {
-        "title": "State Variables & Equations",
-        "detail": "Bounded feedback-controlled architecture with measurable flows and governing laws."
+        "title": "Segments 03–04 · The Causal Arrow",
+        "detail": "Where the established account ends, and the hypothesis that reverses its direction."
       },
       {
-        "title": "Five-Part Engineering Audit",
-        "detail": "Components, policed boundary, inputs/outputs, objective function, and feedback loops."
+        "title": "Segments 05–07 · System, Sets, Projection",
+        "detail": "The engineering audit, the two sets, and the orthographic illusion."
       },
       {
-        "title": "Chapters 0, 2, and 4",
-        "detail": "Auditing the American racial order against each engineering requirement."
+        "title": "Segments 08–15 · The Tests",
+        "detail": "Portugal, Virginia, the complex wage, the backlash record, and the rebuilt definition."
       }
     ],
-    "sources": "The Original Power, Ch. 0, Ch. 2, Ch. 4",
+    "sources": "The Original Power, Preface & Ch. 2",
     "qrUrl": "",
     "id": "S02-01",
     "frame": "card v2 S01-48",
@@ -948,7 +948,7 @@
   },
   {
     "kind": "title",
-    "headline": "Segment 05 · Where the Agreement Ends",
+    "headline": "Segment 03 · Where the Agreement Ends",
     "items": [
       {
         "title": "Assembled Analytical Toolkit",
@@ -1289,7 +1289,7 @@
   },
   {
     "kind": "title",
-    "headline": "Segment 02 · What Makes a System a System",
+    "headline": "Segment 05 · What Makes a System a System",
     "items": [
       {
         "title": "Formal Systems Criterion",
@@ -1464,7 +1464,7 @@
   },
   {
     "kind": "title",
-    "headline": "Segment 03 · The Set-Theoretic Ladder",
+    "headline": "Segment 06 · The Set-Theoretic Ladder",
     "items": [
       {
         "title": "Section 2.1 Set Ladder",
@@ -1678,14 +1678,14 @@
       {
         "cells": [
           "Levels 1 & 2",
-          "Eq. 2.1 (U = I ⊔ O) · Eq. 2.2 (Refine(I))",
+          "Eq. 2.1 (U = I ∪̇ O) · Eq. 2.2 (Refine(I))",
           "Primary color line and four internal In-group tiers"
         ]
       },
       {
         "cells": [
           "Levels 3 & 4",
-          "Eq. 2.3 (Refine(O)) · Eq. 2.4 (X = X⁺_α ⊔ X⁻_α)",
+          "Eq. 2.3 (Refine(O)) · Eq. 2.4 (X = X⁺_α ∪̇ X⁻_α)",
           "Target/adjacent Out-groups and secondary α-axis fractures"
         ]
       }
@@ -1755,7 +1755,7 @@
   },
   {
     "kind": "title",
-    "headline": "Segment 07 · Test 1: Portugal, 1441–1486",
+    "headline": "Segment 08 · Test 1: Portugal, 1441–1486",
     "items": [
       {
         "title": "Chapter 3 · Version 1.0",
@@ -2251,7 +2251,7 @@
   },
   {
     "kind": "title",
-    "headline": "Segment 08 · Test 2: Virginia, 1640–1705",
+    "headline": "Segment 09 · Test 2: Virginia, 1640–1705",
     "items": [
       {
         "title": "Chapter 4 · Colonial Virginia",
@@ -2634,7 +2634,7 @@
   },
   {
     "kind": "title",
-    "headline": "Segment 10 · Test 3: Backlash Record, 1840–2020",
+    "headline": "Segment 11 · Test 3: Backlash Record, 1840–2020",
     "items": [
       {
         "title": "Quantitative American Archive",
@@ -3298,7 +3298,7 @@
   },
   {
     "kind": "title",
-    "headline": "Segment 14 · Complete Analytical Arc",
+    "headline": "Segment 15 · Complete Analytical Arc",
     "items": [
       {
         "title": "Arc Review",
@@ -3343,7 +3343,7 @@
         "cells": [
           "Orthographic & Phasor",
           "Fig. 0.2 · Eq. 3.5 (W = ψ_m + jψ_s)",
-          "3D pyramid projects to binary; wage rotates to status"
+          "3D cone projects to binary; wage rotates to status"
         ]
       },
       {

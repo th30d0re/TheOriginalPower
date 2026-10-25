@@ -70,7 +70,8 @@ const CARDS = [
       24.29,
       35.16
     ],
-    "duration": 44.17
+    "duration": 44.17,
+    "hasQr": true
   },
   {
     "kind": "source",
@@ -164,7 +165,8 @@ const CARDS = [
       82.88,
       92.9
     ],
-    "duration": 106.49
+    "duration": 106.49,
+    "hasQr": true
   },
   {
     "kind": "compare",
@@ -187,7 +189,8 @@ const CARDS = [
     "beats": [
       0.25
     ],
-    "duration": 7.97
+    "duration": 7.97,
+    "hasQr": true
   }
 ];
 const PAGE_NAME = "YT02v2 · Cards";

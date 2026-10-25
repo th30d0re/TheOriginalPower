@@ -25,7 +25,8 @@ const CARDS = [
       12.01,
       26.85
     ],
-    "duration": 43.3
+    "duration": 43.3,
+    "hasLatex": true
   },
   {
     "kind": "source",
@@ -159,7 +160,8 @@ const CARDS = [
       25.89,
       38.56
     ],
-    "duration": 58.78
+    "duration": 58.78,
+    "hasQr": true
   },
   {
     "kind": "equation",
@@ -187,7 +189,8 @@ const CARDS = [
       15.07,
       29.71
     ],
-    "duration": 42.1
+    "duration": 42.1,
+    "hasLatex": true
   }
 ];
 const PAGE_NAME = "YT02v2 · Cards";

@@ -25,7 +25,8 @@ const CARDS = [
       11.14,
       20.18
     ],
-    "duration": 33.77
+    "duration": 33.77,
+    "hasLatex": true
   },
   {
     "kind": "equation",
@@ -58,7 +59,8 @@ const CARDS = [
       22.88,
       34.28
     ],
-    "duration": 44.64
+    "duration": 44.64,
+    "hasLatex": true
   },
   {
     "kind": "equation",
@@ -86,7 +88,8 @@ const CARDS = [
       11.22,
       27.31
     ],
-    "duration": 40.75
+    "duration": 40.75,
+    "hasLatex": true
   },
   {
     "kind": "equation",
@@ -114,7 +117,8 @@ const CARDS = [
       11.79,
       29.27
     ],
-    "duration": 40.21
+    "duration": 40.21,
+    "hasLatex": true
   },
   {
     "kind": "timeline",

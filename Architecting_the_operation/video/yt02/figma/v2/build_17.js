@@ -25,7 +25,8 @@ const CARDS = [
       8.95,
       18.25
     ],
-    "duration": 27.37
+    "duration": 27.37,
+    "hasLatex": true
   },
   {
     "kind": "table",
