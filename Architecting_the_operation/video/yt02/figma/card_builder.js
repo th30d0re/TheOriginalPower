@@ -29,7 +29,7 @@ const fit = (t, maxH, min = 18) => { let s = t.fontSize; while (t.height > maxH 
 const num = s => { const m = String(s).replace(/,/g, "").match(/-?\d+(\.\d+)?/); return m ? parseFloat(m[0]) : null; };
 
 async function build(card, idx) {
-  const F = figma.createFrame(); F.name = `card ${card.id}`; F.resize(1920, 1080); F.x = (ORIGIN + idx) % 6 * 2120; F.y = Math.floor((ORIGIN + idx) / 6) * 1400; F.fills = bp(C.field); F.clipsContent = true;
+  const F = figma.createFrame(); F.name = card.frame || `card ${card.id}`; F.resize(1920, 1080); F.x = (ORIGIN + idx) % 6 * 2120; F.y = Math.floor((ORIGIN + idx) / 6) * 1400; F.fills = bp(C.field); F.clipsContent = true;
   const b = border.createInstance(); F.appendChild(b); b.name = "border";
   const head = await txt(F, "headline", card.headline, "Heading/H1", C.text, X0, 168, W - (card.hasQr ? 0 : 0)); fit(head, 160, 40);
   const rule = figma.createRectangle(); F.appendChild(rule); rule.name = "rule"; rule.resize(220, 4); rule.x = X0; rule.y = head.y + head.height + 14; rule.fills = bp(C.fillAccent); rule.cornerRadius = 2; rule.setEffectStyleIdAsync(ES["Glow/Accent"]);
@@ -118,5 +118,5 @@ async function build(card, idx) {
   return { id: F.id, name: F.name, items: reveal.length };
 }
 const out = [];
-for (let i = 0; i < CARDS.length; i++) { const old = page.findOne(n => n.name === `card ${CARDS[i].id}` && n.parent === page); if (old) old.remove(); out.push(await build(CARDS[i], i)); }
+for (let i = 0; i < CARDS.length; i++) { const frameName = CARDS[i].frame || `card ${CARDS[i].id}`; const old = page.findOne(n => n.name === frameName && n.parent === page); if (old) old.remove(); out.push(await build(CARDS[i], i)); }
 return out;

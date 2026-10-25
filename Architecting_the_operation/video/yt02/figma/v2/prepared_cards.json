@@ -1,0 +1,2382 @@
+[
+  {
+    "kind": "title",
+    "headline": "Episode 1 · What Racism Is",
+    "items": [
+      {
+        "title": "Empirical Proposition Test",
+        "detail": "Five centuries of primary archival records audit the causal direction of racial hierarchy."
+      },
+      {
+        "title": "Construct Separation",
+        "detail": "Interpersonal bias, prejudice, and discrimination separated from systemic racial architecture."
+      },
+      {
+        "title": "Causal Reversal Hypothesis",
+        "detail": "Four falsifiable predictions and three refutation standards tested against historical data."
+      },
+      {
+        "title": "Narration Disclosure",
+        "detail": "Artificial intelligence voice clone trained on the author's speech."
+      }
+    ],
+    "sources": "The Original Power, Preface & Ch. 2, §2.2",
+    "qrUrl": "",
+    "id": "S00-10"
+  },
+  {
+    "kind": "source",
+    "headline": "Dictionary Order as Implicit Causal Theory",
+    "items": [
+      {
+        "title": "Numbered Sense Sequence",
+        "detail": "Lexical ranking encodes an unstated theory of causation before empirical inquiry starts."
+      },
+      {
+        "title": "Slot 1 Priority Effect",
+        "detail": "Assigning interpersonal hostility to Sense 1 frames institutional patterns as derivative byproducts."
+      },
+      {
+        "title": "Moral-Psychologizing Audit",
+        "detail": "Public controversy narrows to inspecting private hearts, personal phrasing, and subjective intent."
+      },
+      {
+        "title": "Malice Inquiry Default",
+        "detail": "Courts and workplaces search for individual animus when confronted with structural disparity."
+      }
+    ],
+    "sources": "The Original Power, Ch. 2, §2.2",
+    "qrUrl": "",
+    "id": "S00-06"
+  },
+  {
+    "kind": "title",
+    "headline": "Segment 01 · Bias, Prejudice, Discrimination",
+    "items": [
+      {
+        "title": "Four Conflated Terms",
+        "detail": "Colloquial speech merges bias, prejudice, discrimination, and racism into one cluster."
+      },
+      {
+        "title": "Social-Science Taxonomy",
+        "detail": "Experimental psychology assigns distinct operational boundaries to the first three constructs."
+      },
+      {
+        "title": "Analytical Assignment",
+        "detail": "Preface and Chapter 2 preserve each psychological term for its exact interpersonal scope."
+      }
+    ],
+    "sources": "The Original Power, Preface & Ch. 2, §2.2",
+    "qrUrl": "",
+    "id": "S01-01"
+  },
+  {
+    "kind": "table",
+    "headline": "Lexical Hierarchy · Standard Dictionary Entry",
+    "columns": [
+      "Slot",
+      "Dictionary Sense",
+      "Implied Causal Weight"
+    ],
+    "items": [
+      {
+        "cells": [
+          "Entry Order",
+          "Individual animus precedes systemic structure",
+          "Lexical priority"
+        ]
+      },
+      {
+        "cells": [
+          "Sense 1",
+          "Interpersonal hostility or racial antipathy",
+          "Primary root"
+        ]
+      },
+      {
+        "cells": [
+          "Sense 2",
+          "Doctrine of biological group hierarchy",
+          "Ideological belief"
+        ]
+      },
+      {
+        "cells": [
+          "Sense 3",
+          "Institutional practices yielding unequal outcomes",
+          "Secondary extension"
+        ]
+      },
+      {
+        "cells": [
+          "Figure 2.3 (Left)",
+          "Inverted pyramid resting on private attitude",
+          "Conventional baseline"
+        ]
+      }
+    ],
+    "sources": "The Original Power, Ch. 2, §2.2, Fig. 2.3",
+    "qrUrl": "",
+    "id": "S00-01"
+  },
+  {
+    "kind": "table",
+    "headline": "Group Partitioning · APA Dictionary of Psychology",
+    "columns": [
+      "Construct",
+      "Cognitive Boundary",
+      "Evaluative Orientation"
+    ],
+    "items": [
+      {
+        "cells": [
+          "Ingroup",
+          "Shared membership and identity",
+          "Affiliation and trust"
+        ]
+      },
+      {
+        "cells": [
+          "Outgroup",
+          "External to group boundary",
+          "Detachment or competition"
+        ]
+      },
+      {
+        "cells": [
+          "Ingroup Bias",
+          "Preferential resource and trait allocation",
+          "Systematic ingroup favoritism"
+        ]
+      }
+    ],
+    "sources": "APA Dictionary of Psychology; The Original Power, Preface",
+    "qrUrl": "https://dictionary.apa.org/ingroup-bias",
+    "id": "S01-04",
+    "hasQr": true
+  },
+  {
+    "kind": "source",
+    "headline": "Social Identity Theory · Tajfel & Turner 1979",
+    "items": [
+      {
+        "title": "Tajfel & Turner (1979)",
+        "detail": "Formalized intergroup categorization and self-concept within social psychology."
+      },
+      {
+        "title": "Rapid Us-Them Sorting",
+        "detail": "Human cognition partitions social environments into ingroup and outgroup on minimal cues."
+      },
+      {
+        "title": "Coalitional Evolution",
+        "detail": "Evolved in small bands to regulate reciprocity, trust, and immediate threat detection."
+      }
+    ],
+    "sources": "Tajfel & Turner (1979), The Social Psychology of Intergroup Relations",
+    "qrUrl": "",
+    "id": "S01-07"
+  },
+  {
+    "kind": "source",
+    "headline": "Biological Host Wetware · Cognitive Baseline",
+    "items": [
+      {
+        "title": "Predictive Neural Network",
+        "detail": "Human brain operates as biological host wetware tuned for fast pattern compression."
+      },
+      {
+        "title": "Bandwidth Compression",
+        "detail": "Finite cognitive capacity reduces high-dimensional social variation into low-dimensional group tags."
+      },
+      {
+        "title": "Ancestral Band Survival",
+        "detail": "Distinguishing coalition allies from strangers carried immediate physical stakes."
+      },
+      {
+        "title": "Three Interpersonal Constructs",
+        "detail": "Bias, prejudice, and discrimination operate atop this shared cognitive substrate."
+      }
+    ],
+    "sources": "The Original Power, Preface & Ch. 2, §2.2",
+    "qrUrl": "",
+    "id": "S01-10"
+  },
+  {
+    "kind": "compare",
+    "headline": "Construct 1 · Evaluative Bias",
+    "items": [
+      {
+        "title": "Explicit Bias",
+        "detail": "Consciously endorsed evaluative tilt favoring or disfavoring individuals by group membership."
+      },
+      {
+        "title": "Implicit Bias",
+        "detail": "Automatic associative weighting operating prior to deliberative endorsement."
+      }
+    ],
+    "sources": "Greenwald & Banaji (1995); The Original Power, Preface & §2.2",
+    "qrUrl": "https://doi.org/10.1037/0033-295X.102.1.4",
+    "id": "S01-14",
+    "hasQr": true
+  },
+  {
+    "kind": "quote",
+    "headline": "Implicit Social Cognition · Greenwald & Banaji 1995",
+    "quote": "Implicit attitudes are introspectively unidentified (or inaccurately identified) traces of past experience that mediate favorable or unfavorable feeling, thought, or action toward social objects.",
+    "attribution": "Anthony G. Greenwald & Mahzarin R. Banaji, Psychological Review 102(1), 1995, p. 8",
+    "items": [],
+    "sources": "Greenwald & Banaji (1995), Psychological Review 102(1), 4–27",
+    "qrUrl": "https://doi.org/10.1037/0033-295X.102.1.4",
+    "id": "S01-16",
+    "hasQr": true
+  },
+  {
+    "kind": "source",
+    "headline": "Implicit Association Test · Greenwald et al. 1998",
+    "items": [
+      {
+        "title": "Greenwald, McGhee & Schwartz",
+        "detail": "Published the Implicit Association Test in Journal of Personality and Social Psychology (1998)."
+      },
+      {
+        "title": "Response-Latency Metric",
+        "detail": "Quantifies associative strength via millisecond pairing differentials in categorization tasks."
+      },
+      {
+        "title": "Individual Cognitive Weight",
+        "detail": "Captures an evaluative inclination inside an individual's perceptual apparatus."
+      }
+    ],
+    "sources": "Greenwald, McGhee, & Schwartz (1998), JPSP 74(6), 1464–1480",
+    "qrUrl": "https://doi.org/10.1037/0022-3514.74.6.1464",
+    "id": "S01-19",
+    "hasQr": true
+  },
+  {
+    "kind": "quote",
+    "headline": "Prejudice · Allport 1954",
+    "quote": "Ethnic prejudice is an antipathy based upon a faulty and inflexible generalization. It may be felt or expressed. It may be directed toward a group as a whole, or toward an individual because he is a member of that group.",
+    "attribution": "Gordon W. Allport, The Nature of Prejudice (1954), p. 9",
+    "items": [],
+    "sources": "Allport (1954), The Nature of Prejudice, ch. 1, p. 9",
+    "qrUrl": "",
+    "id": "S01-22"
+  },
+  {
+    "kind": "source",
+    "headline": "Refencing & Rigidity · Allport 1954",
+    "items": [
+      {
+        "title": "Affective-Belief Coupling",
+        "detail": "Combines emotional antipathy with an overgeneralized belief structure."
+      },
+      {
+        "title": "Counter-Evidence Resistance",
+        "detail": "Habitual prejudice rejects corrective empirical facts to preserve the group stereotype."
+      },
+      {
+        "title": "Refencing Device",
+        "detail": "Contradictory individuals are quarantined as isolated exceptions, leaving the rule intact."
+      }
+    ],
+    "sources": "Allport (1954), The Nature of Prejudice; The Original Power, §2.2",
+    "qrUrl": "",
+    "id": "S01-25"
+  },
+  {
+    "kind": "table",
+    "headline": "Tripartite Intergroup Model · Fiske 1998",
+    "columns": [
+      "Modality",
+      "Psychological Construct",
+      "Operational Expression"
+    ],
+    "items": [
+      {
+        "cells": [
+          "Outward Conduct",
+          "Discrimination",
+          "Observable behavioral treatment across group lines"
+        ]
+      },
+      {
+        "cells": [
+          "Synthesis Source",
+          "Fiske (1998), Handbook Vol. 2",
+          "Standard social-psychological taxonomy (pp. 357–411)"
+        ]
+      },
+      {
+        "cells": [
+          "Thinking / Feeling / Action",
+          "Stereotype · Prejudice · Discrimination",
+          "Cognitive belief, affective tone, behavioral act"
+        ]
+      },
+      {
+        "cells": [
+          "Functional Division",
+          "Category tag → Valence → Action",
+          "Internal appraisal converted into external conduct"
+        ]
+      },
+      {
+        "cells": [
+          "Interpersonal Cases",
+          "Exclusion, grading, service, rental refusal",
+          "Person-to-person differential treatment"
+        ]
+      }
+    ],
+    "sources": "Fiske (1998), Handbook of Social Psychology, 4th ed., Vol. 2, pp. 357–411",
+    "qrUrl": "",
+    "id": "S01-28"
+  },
+  {
+    "kind": "source",
+    "headline": "Interpersonal Class · Shared Structural Limits",
+    "items": [
+      {
+        "title": "Cross-Author Convergence",
+        "detail": "Greenwald and Banaji, Allport, and Fiske define operations at the actor level."
+      },
+      {
+        "title": "Bidirectional Symmetry",
+        "detail": "Psychological and behavioral operations can run in any direction between groups."
+      },
+      {
+        "title": "Universal Human Capacity",
+        "detail": "Any individual of any ancestry can hold bias, feel antipathy, or discriminate."
+      },
+      {
+        "title": "Zero Institutional Requirement",
+        "detail": "Requires no legislature, appellate court, police force, credit market, or army."
+      },
+      {
+        "title": "Interpersonal Class Assignment",
+        "detail": "The Original Power keeps all three constructs under their established technical names."
+      }
+    ],
+    "sources": "The Original Power, Preface & Ch. 2, §2.2",
+    "qrUrl": "",
+    "id": "S01-33"
+  },
+  {
+    "kind": "compare",
+    "headline": "Host Wetware vs. Psycho-Legal Software",
+    "items": [
+      {
+        "title": "Psycho-Legal Social Software",
+        "detail": "Institutional code compiling racial categories into property relations, statutes, and state coercion."
+      },
+      {
+        "title": "Biological Host Wetware",
+        "detail": "Universal human pattern-compression circuitry recruited and weaponized by the extraction regime."
+      }
+    ],
+    "sources": "The Original Power, Preface & Ch. 2, §2.2",
+    "qrUrl": "",
+    "id": "S01-42"
+  },
+  {
+    "kind": "title",
+    "headline": "Segment 02 · What Makes a System a System",
+    "items": [
+      {
+        "title": "Formal Systems Criterion",
+        "detail": "Demonstrating that racism satisfies the engineering anatomy of a regulated machine."
+      },
+      {
+        "title": "State Variables & Equations",
+        "detail": "Bounded feedback-controlled architecture with measurable flows and governing laws."
+      },
+      {
+        "title": "Five-Part Engineering Audit",
+        "detail": "Components, policed boundary, inputs/outputs, objective function, and feedback loops."
+      },
+      {
+        "title": "Chapters 0, 2, and 4",
+        "detail": "Auditing the American racial order against each engineering requirement."
+      }
+    ],
+    "sources": "The Original Power, Ch. 0, Ch. 2, Ch. 4",
+    "qrUrl": "",
+    "id": "S02-01"
+  },
+  {
+    "kind": "equation",
+    "headline": "Scalar Prejudice vs. Vector Racism · Equations 3.1 & 25.1",
+    "number": "Equations 3.1 & 25.1",
+    "latex": "\\vec{R}_{\\mathrm{systemic}} = \\lVert F_{\\mathrm{institutional}} \\rVert \\cdot \\hat{d}_{\\mathrm{hierarchy}} \\neq \\lvert \\mathrm{Prejudice}_{\\mathrm{individual}} \\rvert",
+    "terms": [
+      {
+        "latex": "M_{\\mathrm{agnitude}} \\cdot \\hat{d}_{\\mathrm{state}}",
+        "gloss": "Eq. 3.1 (citing Abulhawa): magnitude multiplied by state enforcement unit vector"
+      },
+      {
+        "latex": "\\lVert F_{\\mathrm{institutional}} \\rVert \\cdot \\hat{d}_{\\mathrm{hierarchy}}",
+        "gloss": "Eq. 25.1 (citing Gilens & Page 2014): institutional force directed along hierarchy"
+      },
+      {
+        "latex": "\\lvert \\mathrm{Prejudice}_{\\mathrm{individual}} \\rvert",
+        "gloss": "Scalar interpersonal animus possessing magnitude without state direction vector"
+      }
+    ],
+    "items": [],
+    "sources": "Abulhawa; Gilens & Page (2014); The Original Power, Ch. 3 (Eq. 3.1), Ch. 21, & Ch. 25 (Eq. 25.1)",
+    "qrUrl": "https://doi.org/10.1017/S1537592714001595",
+    "id": "S13-15",
+    "hasLatex": true,
+    "hasQr": true
+  },
+  {
+    "kind": "quote",
+    "headline": "Formal Definition of Racism · Section 2.2",
+    "quote": "Racism: A system of oppression that weaponizes prejudice and bias into structural mechanisms of exploitation and control.",
+    "attribution": "The Original Power, Chapter 2, §2.2",
+    "items": [],
+    "sources": "The Original Power, Preface, Ch. 2 (§2.2), & Ch. 21",
+    "qrUrl": "",
+    "id": "S13-06"
+  },
+  {
+    "kind": "equation",
+    "headline": "Requirement 2 · Policed System Boundary",
+    "number": "Equations 2.1 & 4.2",
+    "latex": "U = I \\dot{\\cup} O, \\quad I \\cap O = \\emptyset, \\quad I_{\\mathrm{buffer}} \\cap O_{\\mathrm{racialized}} = \\emptyset",
+    "terms": [
+      {
+        "latex": "U = I \\dot{\\cup} O",
+        "gloss": "Total population partitioned into dominant In-group and marginalized Out-group"
+      },
+      {
+        "latex": "I \\cap O = \\emptyset",
+        "gloss": "Strict statutory disjointness separating protected and subordinated tiers"
+      },
+      {
+        "latex": "I_{\\mathrm{buffer}} \\cap O_{\\mathrm{racialized}} = \\emptyset",
+        "gloss": "1691 Virginia Boundary Enforcement Act criminalizing cross-tier union"
+      }
+    ],
+    "items": [],
+    "sources": "The Original Power, Ch. 2, §2.1 (Eq. 2.1); Ch. 4 (Eq. 4.2)",
+    "qrUrl": "",
+    "id": "S02-13",
+    "hasLatex": true
+  },
+  {
+    "kind": "table",
+    "headline": "Morphological Boundary · The -ism Suffix",
+    "columns": [
+      "Term",
+      "Analytical Tier",
+      "Governing Domain"
+    ],
+    "items": [
+      {
+        "cells": [
+          "Racism",
+          "Macro-structural system",
+          "Multi-tier group extraction and legal control"
+        ]
+      },
+      {
+        "cells": [
+          "-ism Suffix",
+          "English morphological marker",
+          "Designates macro-level institutional orders"
+        ]
+      },
+      {
+        "cells": [
+          "Capitalism / Feudalism",
+          "Political-economic regime",
+          "Property law, labor allocation, state enforcement"
+        ]
+      },
+      {
+        "cells": [
+          "Lexical Precision",
+          "Preserves distinct tier labels",
+          "Prevents collapsing structure into private attitude"
+        ]
+      }
+    ],
+    "sources": "The Original Power, Preface & Ch. 2, §2.2",
+    "qrUrl": "",
+    "id": "S01-38"
+  },
+  {
+    "kind": "title",
+    "headline": "Segment 05 · Where the Agreement Ends",
+    "items": [
+      {
+        "title": "Assembled Analytical Toolkit",
+        "detail": "Reviewing the shared definitions assembled across Segments 00 through 04."
+      },
+      {
+        "title": "Established Disciplinary Tools",
+        "detail": "Lexical entries, social-psychology constructs, five-part system audit, and set partitions."
+      },
+      {
+        "title": "Cross-Disciplinary Consensus",
+        "detail": "Sociologists, experimental psychologists, and systems engineers share these baseline tools."
+      },
+      {
+        "title": "Unresolved Temporal Sequence",
+        "detail": "Determining the chronological order connecting attitudes, rules, and economic interests."
+      },
+      {
+        "title": "Direction of the Arrow",
+        "detail": "The Original Power departs from convention on the direction of primary causation."
+      }
+    ],
+    "sources": "The Original Power, Preface & Ch. 2, §2.1–2.2",
+    "qrUrl": "",
+    "id": "S05-01"
+  },
+  {
+    "kind": "equation",
+    "headline": "Conventional Causal Model · Equation 2.5",
+    "number": "Equation 2.5",
+    "latex": "\\mathrm{Individual\\ Prejudice} \\longrightarrow \\mathrm{Discriminatory\\ Actions} \\longrightarrow \\mathrm{Systemic\\ Outcomes}",
+    "terms": [
+      {
+        "latex": "\\mathrm{Individual\\ Prejudice}",
+        "gloss": "Private racial antipathy treated as the primary root cause"
+      },
+      {
+        "latex": "\\mathrm{Discriminatory\\ Actions}",
+        "gloss": "Isolated interpersonal acts aggregating across transactions"
+      },
+      {
+        "latex": "\\mathrm{Systemic\\ Outcomes}",
+        "gloss": "Macro-level disparities treated as a downstream statistical sum"
+      }
+    ],
+    "items": [],
+    "sources": "The Original Power, Ch. 2, §2.2, Eq. 2.5 (Confidence Tier 3)",
+    "qrUrl": "",
+    "id": "S05-06",
+    "hasLatex": true
+  },
+  {
+    "kind": "table",
+    "headline": "Equation 2.5 Audit · Predictions vs. Archival Record",
+    "columns": [
+      "Audit Domain",
+      "Equation 2.5 Expectation",
+      "Archival & Structural Reality"
+    ],
+    "items": [
+      {
+        "cells": [
+          "Attitude Education",
+          "Bias training dissolves structure",
+          "Institutional extraction persists intact"
+        ]
+      },
+      {
+        "cells": [
+          "Historical Chronology",
+          "Popular hatred precedes racial law",
+          "Commercial extraction precedes racial code"
+        ]
+      },
+      {
+        "cells": [
+          "Diagnostic Verdict (§2.2)",
+          "Bottom-up aggregation law",
+          "Chronological sequence runs in reverse"
+        ]
+      },
+      {
+        "cells": [
+          "Overnight Attitude Reset",
+          "Disparities halt immediately",
+          "Ledgers, statutes, and debt keep executing"
+        ]
+      },
+      {
+        "cells": [
+          "Reform Energy Allocation",
+          "Targets interpersonal maintenance layer",
+          "Leaves the extraction kernel untouched"
+        ]
+      }
+    ],
+    "sources": "The Original Power, Ch. 2, §2.2; Ch. 12",
+    "qrUrl": "",
+    "id": "S05-14"
+  },
+  {
+    "kind": "equation",
+    "headline": "The Causal Reversal · Equation 2.6",
+    "number": "Equation 2.6",
+    "latex": "\\mathrm{Elite\\ Economic\\ Interests} \\longrightarrow \\mathrm{Systemic\\ Racialization} \\longrightarrow \\mathrm{Interpersonal\\ Prejudice}",
+    "terms": [
+      {
+        "latex": "\\mathrm{Elite\\ Economic\\ Interests}",
+        "gloss": "Generative engine: labor control, surplus extraction, and solidarity suppression"
+      },
+      {
+        "latex": "\\mathrm{Systemic\\ Racialization}",
+        "gloss": "Legal codes, property partitions, and state enforcement machinery"
+      },
+      {
+        "latex": "\\mathrm{Interpersonal\\ Prejudice}",
+        "gloss": "Cultivated public attitudes that feed back to stabilize the hierarchy"
+      }
+    ],
+    "items": [],
+    "sources": "The Original Power, Ch. 2, §2.2, Eq. 2.6 (Confidence Tier 3)",
+    "qrUrl": "",
+    "id": "S06-01",
+    "hasLatex": true
+  },
+  {
+    "kind": "quote",
+    "headline": "Ideology Follows Oppression · Fields 1990",
+    "quote": "People are more readily perceived as inferior by nature when they are already seen as oppressed.",
+    "attribution": "Barbara J. Fields, 'Slavery, Race and Ideology in the United States of America,' New Left Review 181 (1990), p. 106",
+    "items": [],
+    "sources": "Fields (1990), New Left Review 181, 95–118; The Original Power, Ch. 2, §2.2",
+    "qrUrl": "",
+    "id": "S06-07"
+  },
+  {
+    "kind": "table",
+    "headline": "Historical Scope Qualification · Pre-1450 vs. Post-1450",
+    "columns": [
+      "Period",
+      "Form of Attitude / Rule",
+      "Institutional Status"
+    ],
+    "items": [
+      {
+        "cells": [
+          "Scope Boundary (§2.2)",
+          "Distinguishes fluid attitudes from state law",
+          "Prevents historical overstatement"
+        ]
+      },
+      {
+        "cells": [
+          "Pre-1450 Mediterranean",
+          "Color-coded somatic prejudices (Sweet; Bethencourt)",
+          "Circulated in medieval and Islamic worlds"
+        ]
+      },
+      {
+        "cells": [
+          "Pre-1450 Scalar Mode",
+          "Negotiable cultural and religious attitudes",
+          "No unified state chattel-phenotype lock"
+        ]
+      },
+      {
+        "cells": [
+          "Post-1450 Atlantic Compile",
+          "Heritable state-enforced legal partition",
+          "Recruited attitudes into chattel law"
+        ]
+      }
+    ],
+    "sources": "Sweet (1997); Bethencourt (2013); The Original Power, Ch. 2, §2.2 & Ch. 3",
+    "qrUrl": "",
+    "id": "S06-09"
+  },
+  {
+    "kind": "table",
+    "headline": "Four Falsifiable Predictions · Equation 2.6",
+    "columns": [
+      "ID",
+      "Prediction Name",
+      "Testable Archival / Quantitative Claim"
+    ],
+    "items": [
+      {
+        "cells": [
+          "Protocol",
+          "Four predictions & three refutation standards",
+          "Stated prior to opening historical case files"
+        ]
+      },
+      {
+        "cells": [
+          "Prediction 1",
+          "Institutional Production",
+          "Extraction and state licensing precede commissioned racial doctrine"
+        ]
+      },
+      {
+        "cells": [
+          "Prediction 2",
+          "Codification Follows Solidarity Threats",
+          "Strict race codes and buffer privileges follow joint labor revolts"
+        ]
+      },
+      {
+        "cells": [
+          "Prediction 3",
+          "Maintenance by Cultivation",
+          "Discredited explicit laws recompile into facially neutral proxies"
+        ]
+      },
+      {
+        "cells": [
+          "Prediction 4",
+          "Suppression Scales with Extraction",
+          "Coercive patrol spending tracks commodity value at a stable ratio"
+        ]
+      }
+    ],
+    "sources": "The Original Power, Empirical Methodology; Ch. 2–4",
+    "qrUrl": "",
+    "id": "S06-13"
+  },
+  {
+    "kind": "table",
+    "headline": "Three Explicit Refutation Standards · R1–R3",
+    "columns": [
+      "Standard",
+      "Empirical Defeat Condition",
+      "Test Segment"
+    ],
+    "items": [
+      {
+        "cells": [
+          "Refutation Standard 1",
+          "Durable phenotype caste without Elite sponsorship or prior to extraction",
+          "SEG 07 (Portugal)"
+        ]
+      },
+      {
+        "cells": [
+          "Refutation Standard 2",
+          "Flat patrols during cotton boom, or post-1965 union rise",
+          "SEG 10 (1840–2020)"
+        ]
+      },
+      {
+        "cells": [
+          "Refutation Standard 3",
+          "Systemic racism against white Americans without institutional state control",
+          "SEG 13 (Vector Test)"
+        ]
+      },
+      {
+        "cells": [
+          "Empirical Test Sequence",
+          "Portugal (1441–1486) · Virginia (1640–1705) · US (1840–2020)",
+          "Segments 07, 08, and 10"
+        ]
+      }
+    ],
+    "sources": "The Original Power, Empirical Methodology; Ch. 2, 3, 4, 21",
+    "qrUrl": "",
+    "id": "S06-18"
+  },
+  {
+    "kind": "table",
+    "headline": "Requirement 3 · Circuit Inputs and Outputs",
+    "columns": [
+      "Circuit Element",
+      "Formal Variable",
+      "Operational Role"
+    ],
+    "items": [
+      {
+        "cells": [
+          "Driving Energy Input",
+          "Kinetic labor of O and I_buffer",
+          "Productive capacity powering the Figure 0.3 circuit"
+        ]
+      },
+      {
+        "cells": [
+          "Parasitic Control Gate",
+          "Elite apex E",
+          "Directs high-current labor via small intermediate control current"
+        ]
+      },
+      {
+        "cells": [
+          "Primary System Outputs",
+          "E(t) upward; ψ(t) = ψ_s + ψ_m downward",
+          "Surplus to Elite; status and material wage to Buffer Class"
+        ]
+      },
+      {
+        "cells": [
+          "Concession Constraint",
+          "Δ_max = 0 (Chapter 19)",
+          "Non-kinetic concessions preserve maximum Elite extraction ceiling"
+        ]
+      }
+    ],
+    "sources": "The Original Power, Ch. 0, Fig. 0.3; Ch. 2, §2.3.1; Ch. 3, Eq. 3.2; Ch. 19",
+    "qrUrl": "",
+    "id": "S02-16"
+  },
+  {
+    "kind": "equation",
+    "headline": "Requirement 4 · Kernel Objective Function",
+    "number": "Equation 2.7",
+    "latex": "\\max E(t) \\quad \\text{subject to} \\quad M(t) < \\tau",
+    "terms": [
+      {
+        "latex": "E(t)",
+        "gloss": "Upward economic extraction rate captured by the Elite tier"
+      },
+      {
+        "latex": "M(t) < \\tau",
+        "gloss": "Cross-group class mobilization held below critical revolutionary threshold τ"
+      }
+    ],
+    "items": [],
+    "sources": "The Original Power, Ch. 2, §2.3.2, Eq. 2.7",
+    "qrUrl": "",
+    "id": "S02-20",
+    "hasLatex": true
+  },
+  {
+    "kind": "equation",
+    "headline": "Requirement 5 · Feedback & RLC Damping",
+    "number": "Equation 2.11",
+    "latex": "L\\frac{d^2 q}{dt^2} + R\\frac{dq}{dt} + \\frac{1}{C}q = F_{\\mathrm{shock}}(t)",
+    "terms": [
+      {
+        "latex": "L",
+        "gloss": "State institutional inertia resisting rapid structural change"
+      },
+      {
+        "latex": "R",
+        "gloss": "Coercive and administrative resistance dissipating mobilization energy"
+      },
+      {
+        "latex": "C",
+        "gloss": "Legal and symbolic buffering capacitance absorbing statutory shocks"
+      }
+    ],
+    "items": [],
+    "sources": "The Original Power, Ch. 2, §2.2 (Fig. 2.2) & §2.3.6 (Eq. 2.11)",
+    "qrUrl": "",
+    "id": "S02-23",
+    "hasLatex": true
+  },
+  {
+    "kind": "title",
+    "headline": "Segment 03 · The Set-Theoretic Ladder",
+    "items": [
+      {
+        "title": "Section 2.1 Set Ladder",
+        "detail": "Four nested equations resolve the five-tier hierarchy from Level 1 to Level 4."
+      }
+    ],
+    "sources": "The Original Power, Ch. 2, §2.1",
+    "qrUrl": "",
+    "id": "S03-01"
+  },
+  {
+    "kind": "source",
+    "headline": "Minimal-Group Paradigm · Tajfel 1970–1979",
+    "items": [
+      {
+        "title": "Experimental Baseline",
+        "detail": "Henri Tajfel's 1970s laboratory studies isolated the minimum trigger for group bias."
+      },
+      {
+        "title": "Arbitrary Criterion Split",
+        "detail": "Subjects sorted by Klee versus Kandinsky preference or dot-estimation guesses."
+      },
+      {
+        "title": "Zero Structural Confounds",
+        "detail": "No face-to-face contact, no shared history, and no personal financial stake."
+      },
+      {
+        "title": "Maximum Payoff Differential",
+        "detail": "Subjects systematically favored ingroup members and maximized relative outgroup gap."
+      },
+      {
+        "title": "Automatic Boundary Reflex",
+        "detail": "Establishes the default cognitive operation triggered by any group boundary label."
+      },
+      {
+        "title": "Institutional Capture (§2.1)",
+        "detail": "Political-economic systems capture that reflex and scale it into a five-tier machine."
+      }
+    ],
+    "sources": "Tajfel (1970); Tajfel & Turner (1979); The Original Power, Preface & §2.3.4",
+    "qrUrl": "",
+    "id": "S03-02"
+  },
+  {
+    "kind": "equation",
+    "headline": "Level 1 · Coarse Binary Partition",
+    "number": "Equation 2.1",
+    "latex": "U = I \\dot{\\cup} O, \\quad I \\cap O = \\emptyset",
+    "terms": [
+      {
+        "latex": "I,\\; O",
+        "gloss": "Dominant racial In-group I and marginalized Out-group O"
+      },
+      {
+        "latex": "I \\cap O = \\emptyset",
+        "gloss": "Disjointness enforced by census rules, slave codes, and blood-quantum law"
+      }
+    ],
+    "items": [],
+    "sources": "The Original Power, Ch. 2, §2.1, Eq. 2.1",
+    "qrUrl": "",
+    "id": "S03-12",
+    "hasLatex": true
+  },
+  {
+    "kind": "compare",
+    "headline": "Equation 2.1 · Revealed vs. Flattened",
+    "items": [
+      {
+        "title": "What Level 1 Reveals",
+        "detail": "Exposes the primary legal and phenotypic boundary separating I from O."
+      },
+      {
+        "title": "What Level 1 Conceals",
+        "detail": "Flattens I into one uniform beneficiary block and O into one undifferentiated mass."
+      }
+    ],
+    "sources": "The Original Power, Ch. 2, §2.1, Table 2.1",
+    "qrUrl": "",
+    "id": "S03-15"
+  },
+  {
+    "kind": "equation",
+    "headline": "Level 2 · In-Group Tier Decomposition",
+    "number": "Equation 2.2",
+    "latex": "\\mathrm{Refine}(I) = E \\sqcup P_{\\mathrm{uppet}} \\sqcup F_{\\mathrm{enforce}} \\sqcup I_{\\mathrm{buffer}}",
+    "terms": [
+      {
+        "latex": "E,\\; P_{\\mathrm{uppet}}",
+        "gloss": "Elite architects E and Puppet Class administrators P_uppet"
+      },
+      {
+        "latex": "F_{\\mathrm{enforce}},\\; I_{\\mathrm{buffer}}",
+        "gloss": "Enforcement Class F_enforce and non-elite Buffer Class I_buffer"
+      }
+    ],
+    "items": [],
+    "sources": "The Original Power, Ch. 2, §2.1, Eq. 2.2",
+    "qrUrl": "",
+    "id": "S03-17",
+    "hasLatex": true
+  },
+  {
+    "kind": "equation",
+    "headline": "Level 3 · Out-Group Decomposition",
+    "number": "Equation 2.3",
+    "latex": "O = O_{\\mathrm{racialized}} \\dot{\\cup} O_{\\mathrm{adjacent},1} \\dot{\\cup} \\cdots \\dot{\\cup} O_{\\mathrm{adjacent},m}",
+    "terms": [
+      {
+        "latex": "O_{\\mathrm{racialized}}",
+        "gloss": "Primary racialized target bearing anchor extraction and carceral containment"
+      },
+      {
+        "latex": "O_{\\mathrm{adjacent},1\\dots m}",
+        "gloss": "Adjacent Out-group subsets sorted across distinct legal and labor regimes"
+      }
+    ],
+    "items": [],
+    "sources": "The Original Power, Ch. 2, §2.1, Eq. 2.3",
+    "qrUrl": "",
+    "id": "S03-25",
+    "hasLatex": true
+  },
+  {
+    "kind": "equation",
+    "headline": "Level 4 · Recursive Local Partition",
+    "number": "Equation 2.4",
+    "latex": "X = X^{+}_{\\alpha} \\dot{\\cup} X^{-}_{\\alpha}, \\quad X^{+}_{\\alpha} \\cap X^{-}_{\\alpha} = \\emptyset",
+    "terms": [
+      {
+        "latex": "\\alpha",
+        "gloss": "Secondary sorting axis: gender, wealth, credentials, religion, citizenship, record"
+      },
+      {
+        "latex": "X^{+}_{\\alpha},\\; X^{-}_{\\alpha}",
+        "gloss": "Locally advantaged sub-cell X+_α and locally subordinated sub-cell X−_α"
+      }
+    ],
+    "items": [],
+    "sources": "The Original Power, Ch. 2, §2.1, Eq. 2.4",
+    "qrUrl": "",
+    "id": "S03-30",
+    "hasLatex": true
+  },
+  {
+    "kind": "table",
+    "headline": "Table 2.1 · The Set-Resolution Ladder",
+    "columns": [
+      "Resolution Level",
+      "Governing Equation",
+      "Analytical Scope"
+    ],
+    "items": [
+      {
+        "cells": [
+          "Diagnostic Matrix",
+          "Table 2.1 & Figure 2.1",
+          "Four nested equations read simultaneously as one instrument"
+        ]
+      },
+      {
+        "cells": [
+          "Levels 1 & 2",
+          "Eq. 2.1 (U = I ⊔ O) · Eq. 2.2 (Refine(I))",
+          "Primary color line and four internal In-group tiers"
+        ]
+      },
+      {
+        "cells": [
+          "Levels 3 & 4",
+          "Eq. 2.3 (Refine(O)) · Eq. 2.4 (X = X⁺_α ⊔ X⁻_α)",
+          "Target/adjacent Out-groups and secondary α-axis fractures"
+        ]
+      }
+    ],
+    "sources": "The Original Power, Ch. 2, §2.1, Table 2.1 & Fig. 2.1",
+    "qrUrl": "",
+    "id": "S03-39"
+  },
+  {
+    "kind": "table",
+    "headline": "Diagnostic Application · Public Debate Stall Points",
+    "columns": [
+      "Public Fallacy",
+      "Focused Level",
+      "Omitted Equation"
+    ],
+    "items": [
+      {
+        "cells": [
+          "Resolution Audit",
+          "Table 2.1 diagnostic lookup",
+          "Identifies which equation a stalled argument omits"
+        ]
+      },
+      {
+        "cells": [
+          "Denial of Systemic Privilege",
+          "Stares only at depressed cell X⁻_α in I_buffer",
+          "Omits Level 1 boundary (Eq. 2.1)"
+        ]
+      },
+      {
+        "cells": [
+          "Uniform In-Group Beneficiary Claim",
+          "Stares only at coarse block I in Level 1",
+          "Omits E ≫ I_buffer gradient (Eq. 2.2)"
+        ]
+      },
+      {
+        "cells": [
+          "Four-Level Simultaneous Hold",
+          "Integrates Equations 2.1 through 2.4",
+          "Prepares empirical test of the causal arrow"
+        ]
+      }
+    ],
+    "sources": "The Original Power, Ch. 2, §2.1, Table 2.1",
+    "qrUrl": "",
+    "id": "S03-43"
+  },
+  {
+    "kind": "title",
+    "headline": "Segment 07 · Test 1: Portugal, 1441–1486",
+    "items": [
+      {
+        "title": "Chapter 3 · Version 1.0",
+        "detail": "Initializing the Atlantic racial vector in fifteenth-century Portugal (1441–1486)."
+      },
+      {
+        "title": "Testing P1 and R1",
+        "detail": "Auditing exact calendar dates of raids, royal taxes, papal bulls, and chronicles."
+      }
+    ],
+    "sources": "The Original Power, Ch. 3",
+    "qrUrl": "",
+    "id": "S07-01"
+  },
+  {
+    "kind": "source",
+    "headline": "Portuguese Material Optimization · Early 1400s",
+    "items": [
+      {
+        "title": "Crown Optimization Problem",
+        "detail": "Portuguese nobility sought scalable labor for maritime trade and island plantations."
+      },
+      {
+        "title": "Post-Plague Labor Scarcity",
+        "detail": "Black Death mortality and European wars constrained domestic agricultural labor supply."
+      },
+      {
+        "title": "Feudal Peasant Friction",
+        "detail": "Shared religion, customary law, village solidarity, and flight limited domestic extraction."
+      },
+      {
+        "title": "Demand for Stripped Labor",
+        "detail": "High-mortality Madeira sugar cultivation required captives severed from kin and legal standing."
+      }
+    ],
+    "sources": "The Original Power, Ch. 3",
+    "qrUrl": "",
+    "id": "S07-03"
+  },
+  {
+    "kind": "compare",
+    "headline": "Mediterranean Archive · Two Pre-1441 Templates",
+    "items": [
+      {
+        "title": "Dual Institutional Precedents",
+        "detail": "Portuguese state architects drew upon two established Mediterranean control models."
+      },
+      {
+        "title": "Internal Template (Chapter 8)",
+        "detail": "Feudal coverture and witch trials suppressing European female reproductive autonomy."
+      },
+      {
+        "title": "External Template (Chapter 3)",
+        "detail": "Trans-Saharan and Mediterranean slave routes trading Slavic, Berber, and African captives."
+      }
+    ],
+    "sources": "The Original Power, Ch. 3 & Ch. 8",
+    "qrUrl": "",
+    "id": "S07-07"
+  },
+  {
+    "kind": "timeline",
+    "headline": "1441 · Rio d'Ouro Nocturnal Raid",
+    "items": [
+      {
+        "title": "West African Pivot",
+        "detail": "Chronological tracking of Portuguese coastal expeditions under Prince Henry."
+      },
+      {
+        "title": "1441 · Seal-Oil Commission",
+        "detail": "Antão Gonçalves sails to Rio d'Ouro ordered to procure sea-wolf skins and oil."
+      },
+      {
+        "title": "1441 · Nocturnal Kidnapping",
+        "detail": "Gonçalves exceeds orders ashore at night, seizing two Sanhaja Berber captives."
+      },
+      {
+        "title": "12-Year Ideological Lag",
+        "detail": "Twelve full years separate the 1441 raid from Zurara's 1453 racial chronicle."
+      }
+    ],
+    "sources": "Zurara (1453); The Original Power, Ch. 2, §2.2 & Ch. 3",
+    "qrUrl": "",
+    "id": "S07-10"
+  },
+  {
+    "kind": "timeline",
+    "headline": "1444 · Companhia de Lagos & Royal Quinto",
+    "items": [
+      {
+        "title": "Corporate Scaling",
+        "detail": "Lisbon court shifts from opportunistic raids to chartered syndicate logistics."
+      },
+      {
+        "title": "1444 · Companhia de Lagos",
+        "detail": "Algarve merchants form a joint-stock slave-raiding syndicate under Prince Henry."
+      },
+      {
+        "title": "Arguin Bay Expedition",
+        "detail": "Lançarote de Freitas commands six caravels, seizing 235 men, women, and children."
+      },
+      {
+        "title": "Aug 8, 1444 · Lagos Landing",
+        "detail": "Six caravels disembark 235 kidnapped captives at the Lagos field."
+      },
+      {
+        "title": "Five-Lot Family Separation",
+        "detail": "Captives divided into five lots on the beach, severing parents, children, and spouses."
+      },
+      {
+        "title": "Royal Quinto & Knighthood",
+        "detail": "Prince Henry collects his one-fifth sovereign share on horseback and knights Lançarote."
+      }
+    ],
+    "sources": "Zurara (1453); The Original Power, Ch. 3",
+    "qrUrl": "",
+    "id": "S07-14"
+  },
+  {
+    "kind": "source",
+    "headline": "1445–1446 · Military Resistance & Trade Pivot",
+    "items": [
+      {
+        "title": "Wolof & Mandinka Defense",
+        "detail": "Organized West African state militaries confront Portuguese raiders south of the Senegal."
+      },
+      {
+        "title": "Rising Coercive Cost",
+        "detail": "Poisoned arrows and shallow coastal waters kill European landing parties."
+      },
+      {
+        "title": "1445–1446 · Commercial Protocol",
+        "detail": "Operations pivot to trading horses, textiles, and weapons for captives at coastal forts."
+      },
+      {
+        "title": "Demand for Legal Title",
+        "detail": "Crown requires supranational ecclesiastical title and moral immunization for Christian Europe."
+      }
+    ],
+    "sources": "The Original Power, Ch. 3",
+    "qrUrl": "",
+    "id": "S07-20"
+  },
+  {
+    "kind": "timeline",
+    "headline": "Dum Diversas, 1452 · Romanus Pontifex, 1455",
+    "items": [
+      {
+        "title": "June 18, 1452 · Dum Diversas",
+        "detail": "Pope Nicholas V issues papal bull to King Afonso V of Portugal."
+      },
+      {
+        "title": "Perpetual Servitude Clause",
+        "detail": "Authorizes reducing Saracens, pagans, and non-Christians to perpetual hereditary servitude."
+      },
+      {
+        "title": "Jan 8, 1455 · Romanus Pontifex",
+        "detail": "Awards Portugal exclusive monopoly south of Cape Bojador and reaffirms enslavement."
+      }
+    ],
+    "sources": "Papal Bulls Dum Diversas (1452) & Romanus Pontifex (1455); The Original Power, Ch. 3",
+    "qrUrl": "",
+    "id": "S07-24"
+  },
+  {
+    "kind": "source",
+    "headline": "1453 · Zurara's Commissioned Chronicle",
+    "items": [
+      {
+        "title": "1453 · Ideological Compile",
+        "detail": "Racial narrative commissioned twelve years after the first captive raid."
+      },
+      {
+        "title": "Gomes Eanes de Zurara",
+        "detail": "Royal chronicler and Commander of the Military Order of Christ writes the Guinea Chronicle."
+      },
+      {
+        "title": "Kendi · First Racial Book",
+        "detail": "Stamped from the Beginning identifies Zurara as assembling one inferior African category."
+      },
+      {
+        "title": "Observed Phenotypic Variety",
+        "detail": "Zurara records Lagos captives ranging from near-white to mulatto to black."
+      },
+      {
+        "title": "Categorical Degradation",
+        "detail": "Collapses diverse peoples into one group portrayed as living like beasts without law."
+      },
+      {
+        "title": "Missionary Salvation Frame",
+        "detail": "Frames the Lagos auction and broken families as missionary salvation."
+      }
+    ],
+    "sources": "Zurara (1453); Kendi (2016), Stamped from the Beginning; The Original Power, §2.2 & Ch. 3",
+    "qrUrl": "",
+    "id": "S07-27"
+  },
+  {
+    "kind": "timeline",
+    "headline": "Portuguese Compile Sequence · 1441–1486",
+    "items": [
+      {
+        "title": "1441–1453 · Extraction Before Ideology",
+        "detail": "Raid and Lagos syndicate precede Dum Diversas and Zurara's commissioned chronicle."
+      },
+      {
+        "title": "Order of Christ Patronage",
+        "detail": "Zurara served inside the same military-religious order headed by quinto beneficiary Henry."
+      },
+      {
+        "title": "1486 · Casa dos Escravos",
+        "detail": "King João II establishes the Lisbon royal slave-customs house to tax human cargo."
+      }
+    ],
+    "sources": "The Original Power, Ch. 2, §2.2 & Ch. 3",
+    "qrUrl": "",
+    "id": "S07-33"
+  },
+  {
+    "kind": "equation",
+    "headline": "In-Group Status Allocation · Equation 3.2",
+    "number": "Equation 3.2",
+    "latex": "\\mathrm{Status}(I) = \\mathrm{Base\\ Humanity} + \\psi(t), \\quad \\psi(t) = \\psi_s + \\psi_m",
+    "terms": [
+      {
+        "latex": "\\psi(t) = \\psi_s + \\psi_m",
+        "gloss": "Total suppression allocation combining psychological status and material concessions"
+      },
+      {
+        "latex": "\\psi_s",
+        "gloss": "Zero-cost status elevation paid to non-elite Portuguese Christians above enslaved Africans"
+      }
+    ],
+    "items": [],
+    "sources": "The Original Power, Ch. 3, Eq. 3.2",
+    "qrUrl": "",
+    "id": "S07-36",
+    "hasLatex": true
+  },
+  {
+    "kind": "equation",
+    "headline": "The Phenotype Lock · Equation 3.10",
+    "number": "Equation 3.10",
+    "latex": "O_{\\mathrm{racialized}} = f(\\mathrm{Phenotype})",
+    "terms": [
+      {
+        "latex": "\\mathrm{Zero\\text{-}Day\\ Exploit}",
+        "gloss": "Industrializing ordinary human group sorting into a transatlantic capital asset"
+      },
+      {
+        "latex": "f(\\mathrm{Phenotype})",
+        "gloss": "Joining visible somatic markers to property law, inheritance, and commodity markets"
+      },
+      {
+        "latex": "O_{\\mathrm{racialized}}",
+        "gloss": "Racialized Out-group compiled as an administrative function of visible phenotype"
+      }
+    ],
+    "items": [],
+    "sources": "The Original Power, Ch. 2, §2.3 & Ch. 3, Eq. 3.10",
+    "qrUrl": "",
+    "id": "S07-39",
+    "hasLatex": true
+  },
+  {
+    "kind": "equation",
+    "headline": "Control Case 1 · Roman Slavery (Equation 3.9)",
+    "number": "Equation 3.9",
+    "latex": "O_{\\mathrm{slave}} = f(\\mathrm{Conquest},\\, \\mathrm{Debt},\\, \\mathrm{Crime},\\, \\mathrm{Birth})",
+    "terms": [
+      {
+        "latex": "\\mathrm{Conquest,\\, Debt,\\, Crime}",
+        "gloss": "Multi-ethnic Mediterranean, Gallic, Germanic, Syrian, and North African captives"
+      },
+      {
+        "latex": "\\mathrm{Peculium\\ \\&\\ Manumission}",
+        "gloss": "Keith Bradley: absence of visual marker allowed assimilation within 1–2 generations"
+      }
+    ],
+    "items": [],
+    "sources": "Bradley (1994); The Original Power, Ch. 3, Eq. 3.9",
+    "qrUrl": "",
+    "id": "S07-53",
+    "hasLatex": true
+  },
+  {
+    "kind": "equation",
+    "headline": "Control Case 2 · Religious Partition (Equation 3.11)",
+    "number": "Equation 3.11",
+    "latex": "O_{\\mathrm{religious}} = f(\\mathrm{Doctrine},\\, \\mathrm{Sect},\\, \\mathrm{Heresy})",
+    "terms": [
+      {
+        "latex": "\\mathrm{3M\\ +\\ 8M\\ Dead}",
+        "gloss": "French Wars of Religion (1562–1598) and Thirty Years' War (1618–1648)"
+      },
+      {
+        "latex": "\\mathrm{Inquisitorial\\ Cost}",
+        "gloss": "Internal belief could be concealed or recanted, requiring costly surveillance"
+      }
+    ],
+    "items": [],
+    "sources": "The Original Power, Ch. 3, Eq. 3.11",
+    "qrUrl": "",
+    "id": "S07-56",
+    "hasLatex": true
+  },
+  {
+    "kind": "timeline",
+    "headline": "1449 Sentencia-Estatuto to Atlantic Phenotype Lock",
+    "items": [
+      {
+        "title": "1449 · Toledo Sentencia-Estatuto",
+        "detail": "Municipal statute analyzed by David Nirenberg, issued four years before Zurara."
+      },
+      {
+        "title": "Limpieza de Sangre Rule",
+        "detail": "Barred Christian conversos of Jewish descent on a theory of heritable blood defect."
+      },
+      {
+        "title": "Equation 3.10 · Atlantic Lock",
+        "detail": "Merged Iberian blood-purity heritability with visible African phenotype."
+      },
+      {
+        "title": "Near-Zero Surveillance Cost",
+        "detail": "Printed legal tier on the skin, solving fugitive policing and inheritance simultaneously."
+      }
+    ],
+    "sources": "Nirenberg (2002); The Original Power, Ch. 3, Eq. 3.10–3.11",
+    "qrUrl": "",
+    "id": "S07-59"
+  },
+  {
+    "kind": "table",
+    "headline": "Test 1 Verdict · Portugal, 1441–1486",
+    "columns": [
+      "Criterion",
+      "Archival Finding",
+      "Evaluation"
+    ],
+    "items": [
+      {
+        "cells": [
+          "Prediction 1",
+          "1441 raid & 1444 syndicate precede 1453 Zurara chronicle",
+          "Supported"
+        ]
+      },
+      {
+        "cells": [
+          "Sponsoring Apparatus",
+          "Crown, papacy, Order of Christ, Lagos syndicate, Casa dos Escravos",
+          "Verified"
+        ]
+      },
+      {
+        "cells": [
+          "Refutation Standard 1",
+          "Zero unsponsored or pre-extraction phenotype caste found",
+          "No counterexample"
+        ]
+      }
+    ],
+    "sources": "The Original Power, Ch. 2, §2.2 & Ch. 3",
+    "qrUrl": "",
+    "id": "S07-63"
+  },
+  {
+    "kind": "title",
+    "headline": "Segment 08 · Test 2: Virginia, 1640–1705",
+    "items": [
+      {
+        "title": "Chapter 4 · Colonial Virginia",
+        "detail": "Tracing Chesapeake labor law from 1619 Point Comfort to the 1705 Slave Codes."
+      },
+      {
+        "title": "Testing Prediction 2",
+        "detail": "Evaluating whether statutory race codes and buffer privileges follow solidarity threats."
+      },
+      {
+        "title": "August 1619 · Point Comfort",
+        "detail": "Privateer White Lion trades twenty and odd Angolan captives from São João Bautista."
+      },
+      {
+        "title": "Pre-Code Statutory Baseline",
+        "detail": "Early Chesapeake law lacked comprehensive slave codes or a white legal category."
+      },
+      {
+        "title": "Shared Plantation Quarters",
+        "detail": "African laborers and European indentured servants worked, lived, and fled together."
+      }
+    ],
+    "sources": "The Original Power, Ch. 3 & Ch. 4",
+    "qrUrl": "",
+    "id": "S08-01"
+  },
+  {
+    "kind": "stat_bars",
+    "headline": "Chesapeake Indenture · Jordan & Walsh 2008",
+    "items": [
+      {
+        "title": "White Cargo (2008) Audit",
+        "detail": "150 years of British colonial servant transportation documented by Jordan and Walsh."
+      },
+      {
+        "title": "European Servants Shipped",
+        "detail": "500,000 maximum estimate (300,000–500,000 English, Scottish, and Irish servants)."
+      },
+      {
+        "title": "Chesapeake Term Mortality",
+        "detail": "40% died before completing indenture terms (up to 30% voyage mortality)."
+      },
+      {
+        "title": "London Child Abductions",
+        "detail": "840 children kidnapped from British streets in one year by spirit-merchant William Thiene."
+      },
+      {
+        "title": "Elizabeth Abbott Case",
+        "detail": "500 lashes inflicted in fatal beating while planter court shielded the master."
+      },
+      {
+        "title": "First 5,000 Land Survival",
+        "detail": "241 servants out of 5,000 survived indenture to acquire colonial land (4.8%)."
+      }
+    ],
+    "sources": "Jordan & Walsh (2008), White Cargo; The Original Power, Ch. 4",
+    "qrUrl": "",
+    "id": "S08-06"
+  },
+  {
+    "kind": "source",
+    "headline": "Cross-Racial Solidarity · Chesapeake Quarters",
+    "items": [
+      {
+        "title": "Shared Material Grievance",
+        "detail": "European servants and African laborers faced identical whips, fields, and planter oligarchs."
+      },
+      {
+        "title": "Joint Families & Flight",
+        "detail": "Laborers fraternized in quarters, formed cross-racial families, and escaped together."
+      },
+      {
+        "title": "Washington Runaway Notices",
+        "detail": "Maryland and Virginia Gazette ads offered equal cash rewards for white and Black runaways."
+      },
+      {
+        "title": "1640–1705 Statutory Compile",
+        "detail": "Sixty-five-year legislative sequence engineered to sever field-labor solidarity."
+      }
+    ],
+    "sources": "The Original Power, Ch. 4",
+    "qrUrl": "",
+    "id": "S08-12"
+  },
+  {
+    "kind": "table",
+    "headline": "Step 1 · John Punch Sentencing Differential (July 1640)",
+    "columns": [
+      "Runaway Defendant",
+      "Ancestry / Status",
+      "Virginia Council Sentence"
+    ],
+    "items": [
+      {
+        "cells": [
+          "July 1640 Case",
+          "Virginia Governor's Council",
+          "First judicial split of a joint runaway coalition"
+        ]
+      },
+      {
+        "cells": [
+          "Three Escaped Servants",
+          "Hugh Gwyn plantation",
+          "Victor (Dutch), James Gregory (Scots), John Punch (Black)"
+        ]
+      },
+      {
+        "cells": [
+          "Victor & James Gregory",
+          "European indentured servants",
+          "30 lashes each + 4 additional years of service"
+        ]
+      },
+      {
+        "cells": [
+          "John Punch",
+          "African laborer",
+          "30 lashes + servitude for his natural life"
+        ]
+      },
+      {
+        "cells": [
+          "Equation 3.10 Compile",
+          "O_racialized = f(Phenotype)",
+          "Lifelong bondage keyed to phenotype to fracture coalition"
+        ]
+      }
+    ],
+    "sources": "Minutes of the Council and General Court of Colonial Virginia (July 9, 1640); Ch. 4",
+    "qrUrl": "",
+    "id": "S08-16"
+  },
+  {
+    "kind": "timeline",
+    "headline": "Step 2 · Hereditary & Lethal Force Statutes (1662–1669)",
+    "items": [
+      {
+        "title": "Dec 1662 · Act XII",
+        "detail": "Virginia House of Burgesses enacts partus sequitur ventrem."
+      },
+      {
+        "title": "Maternal Condition Rule",
+        "detail": "Children held bond or free strictly according to the legal status of the mother."
+      },
+      {
+        "title": "Capital & Paternity Shield",
+        "detail": "Reversed English common law, converting Black reproduction into self-replenishing capital."
+      },
+      {
+        "title": "1664 MD & Oct 1669 VA",
+        "detail": "Maryland lifelong servitude statute followed by Virginia's Casual Killing Act."
+      },
+      {
+        "title": "1669 · Felony Exemption",
+        "detail": "Declared killing a resisting enslaved person during correction free of felony."
+      }
+    ],
+    "sources": "Hening's Statutes at Large, Vol. 2 (1662, 1669); The Original Power, Ch. 4 & Ch. 8",
+    "qrUrl": "",
+    "id": "S08-21"
+  },
+  {
+    "kind": "equation",
+    "headline": "1676 Solidarity Crisis · Equations 4.1 & 2.15",
+    "number": "Equations 4.1, 2.8 & 2.15",
+    "latex": "L_{\\mathrm{white}} + L_{\\mathrm{black}} > E \\implies \\mathrm{Revolution}, \\quad M_{\\mathrm{eff}}(t) = M(t) - \\lambda\\Phi_{\\mathrm{load}}(t)",
+    "terms": [
+      {
+        "latex": "L_{\\mathrm{white}} + L_{\\mathrm{black}} > E",
+        "gloss": "Equation 4.1: joint white and Black labor coalition exceeding Elite containment"
+      },
+      {
+        "latex": "\\int E(\\tau)\\,d\\tau > \\tau_{\\mathrm{MFT}}",
+        "gloss": "Equation 2.8: cumulative extraction crossing the minimum forcing threshold in 1676"
+      },
+      {
+        "latex": "\\Phi_{\\mathrm{load}} \\approx 0 \\implies M_{\\mathrm{eff}} > \\tau",
+        "gloss": "Equation 2.15: pre-1705 low phase dispersion allowed effective coherence to breach τ"
+      }
+    ],
+    "items": [],
+    "sources": "The Original Power, Ch. 2 (§2.3.2, §2.3.6) & Ch. 4 (Eq. 4.1)",
+    "qrUrl": "",
+    "id": "S08-26",
+    "hasLatex": true
+  },
+  {
+    "kind": "source",
+    "headline": "1676 · Jamestown & West Point Garrison (Allen 1997)",
+    "items": [
+      {
+        "title": "Sept 1676 · Jamestown Burned",
+        "detail": "Bacon's rebel army burns the colonial capital; Governor Berkeley flees to warships."
+      },
+      {
+        "title": "West Point Joint Garrison",
+        "detail": "Captain Thomas Grantham confronts 400 armed English and African fighters on the York River."
+      },
+      {
+        "title": "Deceptive Disarmament",
+        "detail": "False pardon promises disarm the garrison; 23 leaders hanged and African fighters re-enslaved."
+      },
+      {
+        "title": "Allen · Engineering Patch",
+        "detail": "The Invention of the White Race documents the planter patch to split L_white from L_black."
+      }
+    ],
+    "sources": "Allen (1994, 1997), The Invention of the White Race; The Original Power, Ch. 4",
+    "qrUrl": "",
+    "id": "S08-32"
+  },
+  {
+    "kind": "equation",
+    "headline": "Step 3 · 1691 Boundary Act (Equation 4.2)",
+    "number": "Equation 4.2",
+    "latex": "I_{\\mathrm{buffer}} \\cap O_{\\mathrm{racialized}} = \\emptyset",
+    "terms": [
+      {
+        "latex": "\\mathrm{April\\ 1691\\ Statute}",
+        "gloss": "Outlawed intermarriage with Black, mulatto, or Indigenous partners under banishment"
+      },
+      {
+        "latex": "\\mathrm{5\\ yr\\ /\\ 30\\ yr\\ Penalty}",
+        "gloss": "Five years extra servitude for white mothers; thirty years indenture for mixed-race children"
+      },
+      {
+        "latex": "\\mathrm{276\\text{-}Year\\ Runtime}",
+        "gloss": "Enforced through 1924 Racial Integrity Act and Bazile (1965) until Loving v. Virginia (1967)"
+      }
+    ],
+    "items": [],
+    "sources": "Hening's Statutes at Large, Vol. 3 (1691); Loving v. Virginia, 388 U.S. 1 (1967); Ch. 4",
+    "qrUrl": "",
+    "id": "S08-36",
+    "hasLatex": true
+  },
+  {
+    "kind": "equation",
+    "headline": "1705 State Transition · Equations 4.3 & 4.4",
+    "number": "Equations 4.3 & 4.4",
+    "latex": "\\mathrm{Benefit}(E) \\gg \\mathrm{Benefit}(I_{\\mathrm{buffer}}) > \\mathrm{Benefit}(O_{\\mathrm{racialized}})",
+    "terms": [
+      {
+        "latex": "I_{\\mathrm{poor}} \\longrightarrow I_{\\mathrm{buffer}}",
+        "gloss": "Equation 4.3: Buffer Created, converting poor Europeans into armed defenders of Elite E"
+      },
+      {
+        "latex": "\\mathrm{Benefit}(E) \\gg \\mathrm{Benefit}(I_{\\mathrm{buffer}})",
+        "gloss": "Equation 4.4: three-tier payoff ordering securing Elite surplus above buffer wages"
+      }
+    ],
+    "items": [],
+    "sources": "The Original Power, Ch. 4, Eq. 4.3 & Eq. 4.4",
+    "qrUrl": "",
+    "id": "S08-46",
+    "hasLatex": true
+  },
+  {
+    "kind": "timeline",
+    "headline": "Virginia Compile Verdict · 1640–1705",
+    "items": [
+      {
+        "title": "Du Bois · Psychological Wage",
+        "detail": "Black Reconstruction: public status allocation ψ_s paired with modest material rights ψ_m."
+      },
+      {
+        "title": "Eq. 2.19 · Φ_load = 0.15–0.55",
+        "detail": "1705 partition elevated phase dispersion into the ANES-calibrated resentment band."
+      },
+      {
+        "title": "Eq. 2.15 · M_eff(t) < τ",
+        "detail": "Elevated Φ_load depressed effective class coherence below τ for 150 years."
+      },
+      {
+        "title": "Test 2 Verdict · P2 Confirmed",
+        "detail": "1676 solidarity crisis triggered the 1691 boundary act and 1705 Slave Codes."
+      }
+    ],
+    "sources": "Du Bois (1935); The Original Power, Ch. 2 (§2.3.1, §2.3.6) & Ch. 4",
+    "qrUrl": "",
+    "id": "S08-48"
+  },
+  {
+    "kind": "title",
+    "headline": "Segment 10 · Test 3: Backlash Record, 1840–2020",
+    "items": [
+      {
+        "title": "Quantitative American Archive",
+        "detail": "Auditing three empirical time series across 180 years of United States history."
+      },
+      {
+        "title": "Testing P2, P3, P4 & R2",
+        "detail": "Antebellum patrols (1840–1860), Interface Swap (1954–2002), and Backlash Wave (1965–2020)."
+      }
+    ],
+    "sources": "The Original Power, Ch. 2, §2.3.2, §2.3.5, §2.3.6",
+    "qrUrl": "",
+    "id": "S10-01"
+  },
+  {
+    "kind": "equation",
+    "headline": "Part A · Antebellum Kernel (Equation 2.7)",
+    "number": "Equation 2.7",
+    "latex": "\\max E(t) \\quad \\text{subject to} \\quad M(t) < \\tau, \\quad \\frac{C_{\\mathrm{patrol}}(t)}{E_{\\mathrm{cotton}}(t)} \\approx 2.8\\%",
+    "terms": [
+      {
+        "latex": "E_{\\mathrm{cotton}}(t)",
+        "gloss": "Annual southern cotton revenue (Census Historical Statistics Series K 554–563)"
+      },
+      {
+        "latex": "C_{\\mathrm{patrol}}(t)",
+        "gloss": "State and municipal slave-patrol and militia expenditure (Hadden; Beckert; Baptist)"
+      }
+    ],
+    "items": [],
+    "sources": "US Census Series K 554–563; Hadden (2001); Beckert (2014); Baptist (2014); Ch. 2, §2.3.2",
+    "qrUrl": "",
+    "id": "S10-03",
+    "hasLatex": true
+  },
+  {
+    "kind": "equation",
+    "headline": "Part B · Interface Optimizer (Equations 2.9–2.10)",
+    "number": "Equations 2.9 & 2.10",
+    "latex": "S^*(t) = \\arg\\min_{S \\in \\mathcal{S}} \\bigl(C_{\\mathrm{coercive}} + C_{\\mathrm{legitimacy}} + C_{\\mathrm{economic}}\\bigr)",
+    "terms": [
+      {
+        "latex": "\\mathcal{S}",
+        "gloss": "Eq. 2.9 control set: Partition, Integration, Repression, Externalization"
+      },
+      {
+        "latex": "C_{\\mathrm{coercive}} + C_{\\mathrm{legitimacy}} + C_{\\mathrm{economic}}",
+        "gloss": "Eq. 2.10 total regime maintenance cost minimized at each moment t"
+      }
+    ],
+    "items": [],
+    "sources": "The Original Power, Ch. 2, §2.3.5, Eq. 2.9 & Eq. 2.10 (Confidence Tier 2)",
+    "qrUrl": "",
+    "id": "S10-14",
+    "hasLatex": true
+  },
+  {
+    "kind": "source",
+    "headline": "Southern Strategy · Evidentiary Audit",
+    "items": [
+      {
+        "title": "Baum (1994) Ehrlichman Quote",
+        "detail": "Attributed 1994 interview quote describing drug laws targeting Black communities and antiwar left."
+      },
+      {
+        "title": "Evidentiary Qualification",
+        "detail": "Posthumously published testimonial evidence disputed by family; structural series stand independently."
+      },
+      {
+        "title": "Lamis (1981) Atwater Tape",
+        "detail": "Tape-recorded interview with strategist Lee Atwater analyzed by Ian Haney López."
+      },
+      {
+        "title": "1954 → 1968 → 1981 Abstraction",
+        "detail": "Raw racial slurs replaced by busing/states' rights, then fiscal and tax proxies."
+      }
+    ],
+    "sources": "Baum (2016); Lamis (1984); Haney López (2014); The Original Power, Ch. 2, §2.3.5",
+    "qrUrl": "",
+    "id": "S10-21"
+  },
+  {
+    "kind": "stat_bars",
+    "headline": "War on Drugs · Quantitative Proxy Series",
+    "items": [
+      {
+        "title": "2002 Drug Prisoners (12.4x)",
+        "detail": "480,519 inmates in 2002 up from 38,680 in 1972 (Caulkins & Chandler)."
+      },
+      {
+        "title": "1986 Crack/Powder Ratio",
+        "detail": "100 to 1 federal sentencing quantity disparity under the Anti-Drug Abuse Act (USSC 2011)."
+      },
+      {
+        "title": "5-Year Mandatory Trigger",
+        "detail": "500 grams powder cocaine versus 5 grams crack cocaine for five-year federal minimum."
+      },
+      {
+        "title": "Cannabis Arrest Disparity",
+        "detail": "3.73 times higher Black arrest rate nationwide despite comparable usage (ACLU 2013, 2020)."
+      }
+    ],
+    "sources": "Caulkins & Chandler (2006); USSC (2011); ACLU (2013, 2020); The Original Power, §2.3.5",
+    "qrUrl": "",
+    "id": "S10-25"
+  },
+  {
+    "kind": "source",
+    "headline": "Evidentiary Audit · State v. Williams (Fla. 1993)",
+    "items": [
+      {
+        "title": "Anslinger Quote Excluded",
+        "detail": "Archival audit at Penn State found zero record in the Anslinger collection."
+      },
+      {
+        "title": "State v. Williams (Fla. 1993)",
+        "detail": "Verified appellate opinion (623 So. 2d 462): Broward Sheriff's lab manufactured crack cocaine."
+      },
+      {
+        "title": "299.8-Gram Police Batch",
+        "detail": "Sheriff's chemist converted powder cocaine into crack rocks for reverse-sting arrests."
+      },
+      {
+        "title": "1,000-Foot School-Zone Sting",
+        "detail": "Leon Williams arrested near a school; Florida Supreme Court reversed on due process."
+      }
+    ],
+    "sources": "State v. Williams, 623 So. 2d 462 (Fla. 1993); Penn State Special Collections; Ch. 2, §2.3.5",
+    "qrUrl": "https://law.justia.com/cases/florida/supreme-court/1993/79507-0.html",
+    "id": "S10-29",
+    "hasQr": true
+  },
+  {
+    "kind": "equation",
+    "headline": "Part C · Suppression Envelope (Equations 2.13–2.14)",
+    "number": "Equations 2.13 & 2.14",
+    "latex": "\\Sigma_{\\mathrm{sup}}(t) = \\psi_s(t) + \\psi_m(t) + R(t) + \\Phi_{\\mathrm{load}}(t), \\quad \\frac{dM}{dt} > \\frac{d\\Sigma_{\\mathrm{sup}}}{dt}",
+    "terms": [
+      {
+        "latex": "\\Sigma_{\\mathrm{sup}}(t)",
+        "gloss": "Eq. 2.13 total suppression envelope summing status, material, coercion, and phase load"
+      },
+      {
+        "latex": "\\frac{dM}{dt} > \\frac{d\\Sigma_{\\mathrm{sup}}}{dt}",
+        "gloss": "Eq. 2.14 crash condition when solidarity growth outpaces suppression expansion"
+      }
+    ],
+    "items": [],
+    "sources": "The Original Power, Ch. 2, §2.3.6, Eq. 2.13 & Eq. 2.14 (Confidence Tier 1)",
+    "qrUrl": "",
+    "id": "S10-33",
+    "hasLatex": true
+  },
+  {
+    "kind": "source",
+    "headline": "Definition 2.3 · Biological Embedding",
+    "items": [
+      {
+        "title": "Definition 2.3 · Embodiment",
+        "detail": "Chronic social and institutional exposure converted into physiological system state."
+      },
+      {
+        "title": "Chronic Stress Pathways",
+        "detail": "Policing, poverty, spatial containment, and threat activate stress axes across years."
+      },
+      {
+        "title": "Measured Biomarkers",
+        "detail": "Allostatic load, inflammation, telomere attrition, DNA methylation, and epigenetic aging."
+      },
+      {
+        "title": "Geronimus et al. (2006)",
+        "detail": "Weathering framework: accelerated biological aging under cumulative socioeconomic adversity."
+      },
+      {
+        "title": "Duru (2012) & Spears (2026)",
+        "detail": "Allostatic load linked to mortality; discrimination-associated methylation and aging."
+      }
+    ],
+    "sources": "Geronimus et al. (2006); Duru et al. (2012); Ruiz-Narváez et al. (2024); Spears et al. (2026); §2.3",
+    "qrUrl": "https://doi.org/10.2105/AJPH.2004.060749",
+    "id": "S10-42",
+    "hasQr": true
+  },
+  {
+    "kind": "table",
+    "headline": "Biological Embedding · Causal Direction & Scope Limits",
+    "columns": [
+      "Analytical Dimension",
+      "Empirical Finding",
+      "Methodological Boundary"
+    ],
+    "items": [
+      {
+        "cells": [
+          "Causal Direction",
+          "Manufactured hierarchy → exposure → physiology",
+          "Social policy drives biological state"
+        ]
+      },
+      {
+        "cells": [
+          "Excluded Construct",
+          "Zero genetic race or moral essence",
+          "Architecture writes history via exposure"
+        ]
+      },
+      {
+        "cells": [
+          "Intergenerational Studies",
+          "Famine, Holocaust, Civil War POWs",
+          "Plausible marks (Heijmans; Yehuda; Costa)"
+        ]
+      },
+      {
+        "cells": [
+          "Confounding Limits",
+          "Small samples & shared environment",
+          "Germline vs. prenatal/social unseparated (Zhou & Ryan 2023)"
+        ]
+      },
+      {
+        "cells": [
+          "Strongest Race-Specific Data",
+          "Weathering, allostatic load, methylation",
+          "Within-lifespan cumulative exposure (§2.3)"
+        ]
+      }
+    ],
+    "sources": "Heijmans et al. (2008); Yehuda et al. (2016); Costa et al. (2018); Zhou & Ryan (2023); §2.3",
+    "qrUrl": "",
+    "id": "S10-47"
+  },
+  {
+    "kind": "source",
+    "headline": "Runtime Layer · Spatial Exposure to Physiology",
+    "items": [
+      {
+        "title": "Neighborhood Boundary Code",
+        "detail": "Covenants, redlining, lending, environmental toxicity, and policing set exposure rates."
+      },
+      {
+        "title": "Downstream State Variable",
+        "detail": "Biological depletion and mortality risk register as physical outputs of institutional rules."
+      },
+      {
+        "title": "Blocking Naturalization",
+        "detail": "Physiological disparity records the accumulated impact of policy across the boundary."
+      },
+      {
+        "title": "Weathering as Archive",
+        "detail": "Geronimus (2006): embodied evidence of sustained unequal environmental load."
+      }
+    ],
+    "sources": "Geronimus et al. (2006); The Original Power, Ch. 2, §2.3 (Runtime-Layer Empirical Anchors)",
+    "qrUrl": "",
+    "id": "S10-52"
+  },
+  {
+    "kind": "table",
+    "headline": "Test 3 Verdict · American Backlash Record (1840–2020)",
+    "columns": [
+      "Test Component",
+      "Empirical Series (1840–2020)",
+      "Evaluation"
+    ],
+    "items": [
+      {
+        "cells": [
+          "Embodiment Scope",
+          "Within-life weathering verified; germline bounded",
+          "Methodological discipline"
+        ]
+      },
+      {
+        "cells": [
+          "Physiological Output",
+          "Illness burden and accelerated aging",
+          "Integrated into backlash record"
+        ]
+      },
+      {
+        "cells": [
+          "Predictions 2, 3, 4 & R2",
+          "2.8% patrol ratio; post-1965 union drop & prison/wealth surge",
+          "Supported; R2 undefeated"
+        ]
+      }
+    ],
+    "sources": "The Original Power, Ch. 2, §2.3.2, §2.3.5, §2.3.6",
+    "qrUrl": "",
+    "id": "S10-56"
+  },
+  {
+    "kind": "table",
+    "headline": "Five Operational Steps · Section 2.2",
+    "columns": [
+      "Step",
+      "Operational Mechanism",
+      "Formal Expression"
+    ],
+    "items": [
+      {
+        "cells": [
+          "Operational Sequence",
+          "Weaponizing psychology into extraction",
+          "Section 2.2 five-step compile"
+        ]
+      },
+      {
+        "cells": [
+          "Step 1 · Institutionalize",
+          "Compile bias into statutes, credit, policing",
+          "Policy set P"
+        ]
+      },
+      {
+        "cells": [
+          "Step 2 · Concentrate Harm",
+          "Target disproportionate impact at intersection",
+          "O_racialized ∩ P"
+        ]
+      },
+      {
+        "cells": [
+          "Step 3 · Naturalize",
+          "Blame disparities on victim culture or biology",
+          "Ideological justification layer"
+        ]
+      },
+      {
+        "cells": [
+          "Step 4 · Compound",
+          "Transmit disadvantage across housing, schools, debt",
+          "Intergenerational baseline"
+        ]
+      },
+      {
+        "cells": [
+          "Step 5 · Protect Elite",
+          "Elevate phase dispersion across working tiers",
+          "Φ_load(t) → 1"
+        ]
+      }
+    ],
+    "sources": "The Original Power, Ch. 2, §2.2",
+    "qrUrl": "",
+    "id": "S13-09"
+  },
+  {
+    "kind": "table",
+    "headline": "Refutation Standard 3 · Reverse Racism Vector Audit",
+    "columns": [
+      "Analytical Dimension",
+      "Interpersonal Act (Out-Group → In-Group)",
+      "Systemic Vector Requirement"
+    ],
+    "items": [
+      {
+        "cells": [
+          "Audit Question (R3)",
+          "Apply Equations 3.1 and 25.1",
+          "Test scalar magnitude vs. state direction"
+        ]
+      },
+      {
+        "cells": [
+          "Interpersonal Magnitude",
+          "Real hostility or discriminatory conduct",
+          "M_agnitude > 0 at person-to-person level"
+        ]
+      },
+      {
+        "cells": [
+          "Taxonomy Assignment",
+          "Scalar racial prejudice or discrimination",
+          "Addressed by ethics, civil norms, and law"
+        ]
+      },
+      {
+        "cells": [
+          "Institutional Direction (d̂_state)",
+          "Zero state-backed apparatus targeting whites as class",
+          "d̂_state = 0; R3 undefeated"
+        ]
+      }
+    ],
+    "sources": "The Original Power, Preface, Ch. 3 (Eq. 3.1), Ch. 21, & Ch. 25 (Eq. 25.1)",
+    "qrUrl": "",
+    "id": "S13-20"
+  },
+  {
+    "kind": "table",
+    "headline": "Structural Tier Position vs. Intra-Group Stratification",
+    "columns": [
+      "Construct / Role",
+      "Structural Mechanism",
+      "Vector Orientation"
+    ],
+    "items": [
+      {
+        "cells": [
+          "Five Structural Tiers",
+          "Defined by relation to extraction and coercion",
+          "Independent of individual actor's phenotype"
+        ]
+      },
+      {
+        "cells": [
+          "Minority State Officials",
+          "Occupy F_enforce or P_uppet during enforcement",
+          "Executes existing carceral or fiscal code"
+        ]
+      },
+      {
+        "cells": [
+          "Systemic Force Vector",
+          "R_systemic (Equation 25.1)",
+          "Continues pointing downward at O_racialized"
+        ]
+      },
+      {
+        "cells": [
+          "Internalized Racism & Colorism",
+          "Absorbed inferiority belief vs. light-skin stratification",
+          "Intra-group fractures inside O_racialized (§2.3.7)"
+        ]
+      }
+    ],
+    "sources": "The Original Power, Ch. 0, Ch. 2 (§2.3.7), Ch. 21, & Ch. 25 (Eq. 25.1)",
+    "qrUrl": "",
+    "id": "S13-24"
+  },
+  {
+    "kind": "compare",
+    "headline": "Intervention Target · Maintenance Loop vs. Kernel",
+    "items": [
+      {
+        "title": "Dashed Maintenance Loop (Fig. 2.2)",
+        "detail": "Interpersonal prejudice sits on the downstream feedback arc stabilizing the system."
+      },
+      {
+        "title": "Symbolic & Attitude Reforms",
+        "detail": "Implicit-bias workshops, representation, and speech policing act only on the feedback loop."
+      },
+      {
+        "title": "Generative Kernel (Equation 2.7)",
+        "detail": "Durable transformation alters the material extraction and legal architecture at the source."
+      }
+    ],
+    "sources": "The Original Power, Ch. 2, §2.2 (Fig. 2.2) & §2.3.2 (Eq. 2.7)",
+    "qrUrl": "",
+    "id": "S13-28"
+  },
+  {
+    "kind": "title",
+    "headline": "Segment 14 · Complete Analytical Arc",
+    "items": [
+      {
+        "title": "Arc Review",
+        "detail": "Synthesizing the full trajectory from lexical entry to structural theorem."
+      },
+      {
+        "title": "Lexical & Causal Inversion",
+        "detail": "Exposing the untested causal assumption inside conventional dictionary sense ordering."
+      },
+      {
+        "title": "Interpersonal Psychology",
+        "detail": "Greenwald and Banaji (bias), Allport (prejudice), and Fiske (tripartite discrimination)."
+      },
+      {
+        "title": "Systems & Set Ladder",
+        "detail": "Five-part system checklist paired with the four-level set decomposition."
+      }
+    ],
+    "sources": "The Original Power, Preface & Ch. 2, §2.1–2.2",
+    "qrUrl": "",
+    "id": "S14-01"
+  },
+  {
+    "kind": "table",
+    "headline": "Synthesis · Mathematical Models & Historical Tests",
+    "columns": [
+      "Analytical Module",
+      "Governing Equation / Record",
+      "Core Structural Result"
+    ],
+    "items": [
+      {
+        "cells": [
+          "Orthographic & Phasor",
+          "Fig. 0.2 · Eq. 3.5 (W = ψ_m + jψ_s)",
+          "3D pyramid projects to binary; wage rotates to status"
+        ]
+      },
+      {
+        "cells": [
+          "Zero-Day & Embodiment",
+          "Eq. 3.10 · Definition 2.3",
+          "Discrete race cut from cline; chronic exposure embodied"
+        ]
+      },
+      {
+        "cells": [
+          "Runtime & Interference",
+          "Logs 2–17 · Eqs. 0.15–0.16, 22.2",
+          "Seven states tracked; phase dispersion cancels solidarity"
+        ]
+      },
+      {
+        "cells": [
+          "Rebuilt Hierarchy",
+          "Fig. 2.3 (Right) · Ch. 19",
+          "Policy → Ideology → Prejudice; Concession Theorem"
+        ]
+      },
+      {
+        "cells": [
+          "Empirical Hypothesis Tests",
+          "Eq. 2.6 · P1–P4 · R1–R3",
+          "Tested across Portugal, Virginia, 1840–2020, and Ch. 22"
+        ]
+      },
+      {
+        "cells": [
+          "Unified Test Verdict",
+          "Archival & spectral convergence",
+          "Extraction and solidarity control precede racial code"
+        ]
+      }
+    ],
+    "sources": "The Original Power, Ch. 0, 2, 3, 4, 19, 22, & Compiled Runtime Log",
+    "qrUrl": "",
+    "id": "S14-05"
+  },
+  {
+    "kind": "equation",
+    "headline": "The Concession Theorem · Equation 19.2",
+    "number": "Equation 19.2",
+    "latex": "\\frac{d\\,\\mathrm{Concession}}{dt} \\propto \\mathrm{Threat}\\bigl(M(t)\\bigr), \\quad \\Delta_{\\max} = 0",
+    "terms": [
+      {
+        "latex": "\\mathrm{Threat}\\bigl(M(t)\\bigr)",
+        "gloss": "Policy reform permitted at a rate proportional to rising class resistance"
+      },
+      {
+        "latex": "\\Delta_{\\max} = 0",
+        "gloss": "Concession invariant: resistance held below τ while preserving apex extraction"
+      }
+    ],
+    "items": [],
+    "sources": "The Original Power, Ch. 19, Concession Theorem, Eq. 19.2",
+    "qrUrl": "",
+    "id": "S14-13",
+    "hasLatex": true
+  },
+  {
+    "kind": "table",
+    "headline": "Concession Theorem · Appendix Falsification Protocol",
+    "columns": [
+      "Gate",
+      "Required Empirical Condition",
+      "1450–2026 Status"
+    ],
+    "items": [
+      {
+        "cells": [
+          "Dataset Claim",
+          "No non-kinetic reform permanently cut apex share",
+          "1450–2026 historical archive"
+        ]
+      },
+      {
+        "cells": [
+          "Condition 1 · Duration",
+          "Absolute decline in top-decile wealth share ≥ 30 years",
+          "Required simultaneously"
+        ]
+      },
+      {
+        "cells": [
+          "Condition 2 · All Channels",
+          "Real decline across offshore, new targets, and finance",
+          "Blocks channel-shift evasion"
+        ]
+      },
+      {
+        "cells": [
+          "Condition 3 · Low-Threat Survival",
+          "Reduction persists after kinetic resistance recedes",
+          "Proves durable kernel change"
+        ]
+      },
+      {
+        "cells": [
+          "Joint Falsification Rule",
+          "Any reform meeting Conditions 1–3 refutes theorem",
+          "Independent of adoption threat"
+        ]
+      },
+      {
+        "cells": [
+          "Current Audit Result",
+          "Zero qualifying counterexamples in 1450–2026 dataset",
+          "Theorem stands unfalsified"
+        ]
+      }
+    ],
+    "sources": "The Original Power, Appendix (Falsifiability Conditions for the Two Terminal Theorems)",
+    "qrUrl": "",
+    "id": "S14-16"
+  },
+  {
+    "kind": "source",
+    "headline": "The Original Power · Channel & Manuscript",
+    "items": [
+      {
+        "title": "Next · Chapter 2 Walkthrough",
+        "detail": "The chapter-by-chapter series: Bayesian defense and full RLC electrodynamic derivations."
+      },
+      {
+        "title": "Open-Access Manuscript",
+        "detail": "The Original Power: complete mathematical architecture and 146 calibrated anchor cases."
+      },
+      {
+        "title": "Episode 1 · Closing Credit",
+        "detail": "What Racism Is, from The Original Power."
+      }
+    ],
+    "sources": "The Original Power, Empirical Methodology & Full Manuscript",
+    "qrUrl": "",
+    "id": "S14-22"
+  }
+]

@@ -75,6 +75,10 @@ def figma_slug(shot):
 def external_source(shot):
     if shot.file == "ext":
         return ROOT / shot.scene
+    if shot.file == "figma-card":
+        versioned = EP / "video" / "figma" / f"{figma_slug(shot)}@{shot.primary.lower()}.mp4"
+        if versioned.exists():
+            return versioned
     return EP / "video" / "figma" / f"{figma_slug(shot)}.mp4"
 
 
