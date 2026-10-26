@@ -59,7 +59,7 @@ def build_cards():
         if "maxDuration" in card:  # Figma exports stop at 5 min; the editor holds the last frame for the rest
             cap = card.pop("maxDuration")
             card["duration"] = min(card["duration"], cap)
-            card["beats"] = [b for b in card["beats"] if b < cap - 1]
+            card["beats"] = [b for b in card["beats"] if b < cap - 0.25]
         cards.append(card)
     assert len(cards) == 119, len(cards)
     return cards
