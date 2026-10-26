@@ -1389,7 +1389,7 @@ The framework treats the angle as an ordinal diagnostic. The manuscript defines 
 <!-- [book Ch 3, Eq 3.5, phase-angle regimes] -->
 
 Emmanuel Theodore (54:19)
-Theta begins on the vertical material axis. At zero degrees, the phasor points straight up and the wage is purely material.
+Theta begins on the vertical material axis. At zero degrees, the phasor points straight down and the wage is purely material.
 <!-- [book Ch 0, DC wage collapse; Ch 3, Eq 3.5] -->
 
 Emmanuel Theodore (54:28)
@@ -1417,7 +1417,7 @@ The psychological wage costs the Elite zero capital. Its value comes from guaran
 <!-- [book Ch 3, Complex Suppression Allocation definition] -->
 
 Emmanuel Theodore (55:22)
-Continue the rotation past ninety degrees. The phasor drops below the horizontal line into the framework's Quadrant II regime.
+Continue the rotation past ninety degrees. The phasor rises above the horizontal line into the framework's Quadrant II regime.
 <!-- [book Ch 0, AC mode; Ch 3, Eq 3.5] -->
 
 Emmanuel Theodore (55:30)
@@ -1479,7 +1479,7 @@ United States versus Cruikshank described the arms right as prior to the Constit
 <!-- [book subsec:arms_joint_wage; SOURCES cruikshank] -->
 
 Emmanuel Theodore (58:06)
-Today the felony-in-possession bar in eighteen U.S.C. section nine twenty-two gee, paragraph one combines with racially disparate drug felony pipelines to preserve a proxy arms boundary.
+Today the felony-in-possession bar in Title eighteen of the United States Code, section nine twenty-two gee, paragraph one, combines with racially disparate drug felony pipelines to preserve a proxy arms boundary.
 <!-- [book subsec:arms_joint_wage] -->
 
 Emmanuel Theodore (58:16)
@@ -1859,7 +1859,7 @@ The wage instrument returns to the complex-wage phasor from Segment 09: W equals
 <!-- [book Ch 3, Eq 3.5; lines 2892-2911] -->
 
 Emmanuel Theodore (70:53)
-Material wage rises on the vertical axis, and psychological status extends across the horizontal axis. Theta at ninety degrees is pure status; Quadrant Two begins past ninety.
+Material wage extends down the vertical axis, and psychological status extends right along the horizontal axis. Theta at ninety degrees is pure status; Quadrant Two begins past ninety.
 <!-- [book Ch 3, Eq 3.5; lines 2914-2925; SEG 09] -->
 
 Emmanuel Theodore (71:04)

@@ -1,0 +1,60 @@
+[
+ {
+  "turn": 269,
+  "repetition": null,
+  "manifest_turn": 269,
+  "speaker": "emmanuel_theodore",
+  "turn_id": "8dfd03b7b1f085aa",
+  "score": 0.997,
+  "worst_run": 0,
+  "stress": [
+   {
+    "word": "record",
+    "reading": "default",
+    "expected": "\u0279\u02c8\u025bk\u0259\u0279d",
+    "contrast": "stress",
+    "at_s": 0.58,
+    "heard": "\u026a n j \u025a \u0279 \u025b k \u025a d o\u028a",
+    "verdict": "ok",
+    "d_expected": 0.0,
+    "d_other": 1.6
+   }
+  ],
+  "failed": false,
+  "expected": "The Virginia record opens in late August 1619 at Point Comfort, when the privateer vessel White Lion traded twenty and odd captives from Angola seized from the Portuguese slave ship Sao Joao Bautista.",
+  "heard": "The Virginia record opens in late August 1619 at Point Comfort when the privateer vessel White Lion traded 20 and odd captives from Angola seized from the Portuguese slave ship Sao Joao Batista.",
+  "feedback": {
+   "accepted": 0,
+   "hints": true
+  }
+ },
+ {
+  "turn": 357,
+  "repetition": null,
+  "manifest_turn": 357,
+  "speaker": "emmanuel_theodore",
+  "turn_id": "c166d84ee7028960",
+  "score": 0.94,
+  "worst_run": 3,
+  "stress": [
+   {
+    "word": "combines",
+    "reading": "default",
+    "expected": "k\u0259mb\u02c8Inz",
+    "contrast": "stress",
+    "at_s": 6.44,
+    "heard": "w \u028c n k \u0259 m b a\u026a n z w \u026a \u00f0",
+    "verdict": "ok",
+    "d_expected": 0.0,
+    "d_other": 0.8
+   }
+  ],
+  "failed": true,
+  "expected": "Today the felony-in-possession bar in eighteen U.S.C. section nine twenty-two gee, paragraph one combines with racially disparate drug felony pipelines to preserve a proxy arms boundary.",
+  "heard": "Today the felony in possession bar in 18 United States. Section 922G, paragraph 1 combines with racially disparate drug felony pipelines to preserve a proxy arms boundary.",
+  "feedback": {
+   "accepted": 0,
+   "hints": true
+  }
+ }
+]

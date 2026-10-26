@@ -194,10 +194,10 @@ class WagePlaneHero(YTScene):
         clamp_above_caption(note)
         self.camera.background_color = BG
         self.add(wage_grp, note)
-        for k, (cue, ang) in enumerate((("investment", 12), ("increases", 55), ("ninety", 90))):
+        for k, (cue, ang) in enumerate((("investment", 12), ("increases", 55), ("ninety", 90)), start=1):
             self.until(self.at(k, cue))
             self.play(theta.animate.set_value(ang), run_time=0.5)
-        self.until(self.beat_end(2) - 0.2)
+        self.until(self.beat_end(3) - 0.2)
 
     def shot_S10_23(self):
         wage_grp, theta, formulas = self._build_rotated_plane(90)
