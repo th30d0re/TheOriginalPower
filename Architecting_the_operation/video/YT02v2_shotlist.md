@@ -2,7 +2,7 @@
 - **Anchor:** `Emmanuel Theodore (00:00)`
 - **Type:** card
 - **Render:** `figma-card:cards/S00-10.json`
-- **Note:** Item 1 reveals Channel Episode 1: What Racism Is from The Original Power. [editorial]
+- **Note:** The title card shows Episode 1 · What Racism Is while Item 1 introduces the five-century empirical test. [editorial]
 
 ## S00-02 — Dictionary order as causal claim
 - **Anchor:** `Emmanuel Theodore (00:13)`
@@ -21,27 +21,27 @@
 - **Anchor:** `Emmanuel Theodore (00:39)`
 - **Type:** card
 - **Render:** `figma-card:cards/S01-01.json`
-- **Note:** Item 1 lists bias, prejudice, discrimination, and the tripartite model before the book's new material. [book Preface; §2.2]
+- **Note:** Item 1 presents bias, prejudice, discrimination, and racism as four conflated terms. [book Preface; §2.2]
 
 ## S00-05 — Sense 3: institutional practices
 - **Anchor:** `Emmanuel Theodore (00:48)`
 - **Type:** hold
 - **Render:** `figma-card:cards/S00-10.json`
 - **Holds:** `S00-01`
-- **Note:** Item 2 reveals the full episode roadmap on the title card. [editorial]
+- **Note:** Item 2 separates interpersonal bias, prejudice, and discrimination from systemic racial architecture. [book Preface; §2.2]
 
 ## S00-06 — Figure 2.3 inverted lexical pyramid
 - **Anchor:** `Emmanuel Theodore (01:10)`
 - **Type:** hold
 - **Render:** `figma-card:cards/S00-10.json`
 - **Holds:** `S00-01`
-- **Note:** Item 4 reveals the AI voice-clone disclosure. [editorial: AI voice disclosure]
+- **Note:** Item 3 presents the causal reversal hypothesis, four falsifiable predictions, and three refutation standards. [book §2.2; Empirical Methodology]
 
 ## S00-07 — Conventional dictionary hierarchy
 - **Anchor:** `Emmanuel Theodore (01:16)`
 - **Type:** card
 - **Render:** `figma-card:cards/S00-01.json`
-- **Note:** The table header and Row 1 appear for Sense 1 ordering. [book §2.2]
+- **Note:** The table header and Row 1 show individual animus preceding systemic structure in the standard entry order. [book §2.2]
 
 ## S00-08 — Sense 1: interpersonal hostility
 - **Anchor:** `Emmanuel Theodore (01:32)`
@@ -76,14 +76,14 @@
 - **Type:** hold
 - **Render:** `figma-card:cards/S00-01.json`
 - **Holds:** `S00-11`
-- **Note:** Item 3 reveals, tracking how public debate narrows to auditing subjective intentions and personal vocabulary. [book §2.2]
+- **Note:** Row 1 shows lexical priority placing individual animus before systemic structure. [book §2.2]
 
 ## S00-13 — Judicial and workplace malice audit
 - **Anchor:** `Emmanuel Theodore (02:22)`
 - **Type:** hold
 - **Render:** `figma-card:cards/S00-01.json`
 - **Holds:** `S00-11`
-- **Note:** Item 4 reveals, highlighting the default institutional search for private malice when a racial disparity surfaces. [book §2.2]
+- **Note:** Row 2 reveals Sense 1 interpersonal hostility as the primary root. [book §2.2, Fig 2.3]
 
 ## S00-14 — Testing the ordering against primary records
 - **Anchor:** `Emmanuel Theodore (02:32)`
@@ -96,14 +96,14 @@
 - **Type:** hold
 - **Render:** `figma-card:cards/S00-10.json`
 - **Holds:** `S00-14`
-- **Note:** Item 3 reveals, announcing the causal reversal hypothesis and its four falsifiable predictions. [book §2.2; Empirical Methodology]
+- **Note:** Item 2 separates interpersonal constructs from systemic racial architecture. [book Preface; §2.2]
 
 ## S00-16 — Author AI voice clone disclosure
 - **Anchor:** `Emmanuel Theodore (02:49)`
 - **Type:** hold
 - **Render:** `figma-card:cards/S00-10.json`
 - **Holds:** `S00-14`
-- **Note:** Item 4 reveals at the base of the title card, displaying the author-trained AI voice disclosure. [editorial: AI voice disclosure]
+- **Note:** Item 3 presents the causal reversal hypothesis, four falsifiable predictions, and three refutation standards. [book §2.2; Empirical Methodology]
 
 <!-- SEG 01 · Bias, prejudice, discrimination -->
 
@@ -138,7 +138,7 @@
 - **Type:** hold
 - **Render:** `figma-card:cards/S01-04.json`
 - **Holds:** `S01-04`
-- **Note:** Row 2 reveals the outgroup row, marking detachment, competition, or opposition across the group boundary. [book Preface, citing APA Dictionary of Psychology]
+- **Note:** Row 3 reveals ingroup bias as preferential resource allocation, evaluation, and attribution. [book Preface, citing APA Dictionary of Psychology]
 
 ## S01-06 — APA definition of outgroup
 - **Anchor:** `Emmanuel Theodore (04:03)`
@@ -205,14 +205,14 @@
 - **Anchor:** `Emmanuel Theodore (05:41)`
 - **Type:** card
 - **Render:** `figma-card:cards/S01-14.json`
-- **Note:** Item 1 opens predictive-coding priors; subsequent items reveal Pi_sub_race, earned medical wariness, and RLC pairing. [book §Bayesian Defense]
+- **Note:** Column 1 reveals explicit bias as a consciously endorsed evaluative tilt based on group membership. [book Preface; §2.2]
 
 ## S01-16 — Construct 1: evaluative bias
 - **Anchor:** `Emmanuel Theodore (05:53)`
 - **Type:** hold
 - **Render:** `figma-card:cards/S01-14.json`
 - **Holds:** `S01-15`
-- **Note:** Column 1 of the comparison card reveals, defining evaluative bias in perception, judgment, and attribution. [book Preface; §2.2]
+- **Note:** Column 2 reveals implicit bias as automatic associative weighting before deliberative endorsement. [book Preface; §2.2]
 
 ## S01-17 — Explicit and implicit cognitive operation
 - **Anchor:** `Emmanuel Theodore (06:07)`
@@ -226,195 +226,195 @@
 - **Type:** hold
 - **Render:** `figma-card:cards/S01-14.json`
 - **Holds:** `S01-15`
-- **Note:** The quotation card opens with the Psychological Review 102(1) header and citation strip. [book Preface; §2.2, citing Greenwald & Banaji 1995, Psychological Review 102(1), 4-27]
+- **Note:** The Evaluative Bias comparison remains on screen with explicit and implicit bias displayed together. [book Preface; §2.2]
 
 ## S01-19 — Verbatim definition of implicit attitudes
 - **Anchor:** `Emmanuel Theodore (06:37)`
 - **Type:** hold
 - **Render:** `figma-card:cards/S01-14.json`
 - **Holds:** `S01-15`
-- **Note:** Greenwald and Banaji's phrase 'introspectively unidentified (or inaccurately identified) traces of past experience' highlights inside the quote panel. [book Preface; §2.2, citing Greenwald & Banaji 1995]
+- **Note:** The Evaluative Bias comparison remains on screen with implicit associative weighting in focus. [book Preface; §2.2]
 
 ## S01-20 — Automatic operation despite egalitarian norms
 - **Anchor:** `Emmanuel Theodore (06:46)`
 - **Type:** hold
 - **Render:** `figma-card:cards/S01-14.json`
 - **Holds:** `S01-15`
-- **Note:** The closing clause 'favorable or unfavorable feeling, thought, or action toward social objects' pulses to emphasize automaticity. [book Preface; §2.2, citing Greenwald & Banaji 1995]
+- **Note:** The Evaluative Bias comparison remains on screen with implicit associative weighting in focus. [book Preface; §2.2]
 
 ## S01-21 — Greenwald, McGhee, and Schwartz (1998) IAT
 - **Anchor:** `Emmanuel Theodore (06:57)`
 - **Type:** hold
 - **Render:** `figma-card:cards/S01-14.json`
 - **Holds:** `S01-15`
-- **Note:** Item 1 of the 1998 IAT source card appears, citing the Journal of Personality and Social Psychology paper. [external: Greenwald, McGhee, & Schwartz 1998, JPSP 74(6), 1464-1480]
+- **Note:** The Evaluative Bias comparison remains on screen with explicit and implicit bias displayed together. [book Preface; §2.2]
 
 ## S01-22 — Response-latency differential measurement
 - **Anchor:** `Emmanuel Theodore (07:11)`
 - **Type:** hold
 - **Render:** `figma-card:cards/S01-14.json`
 - **Holds:** `S01-15`
-- **Note:** Item 2 reveals, detailing millisecond response-latency differentials in computerized categorization tasks. [external: Greenwald, McGhee, & Schwartz 1998, JPSP 74(6), 1464-1480]
+- **Note:** The Evaluative Bias comparison remains on screen with implicit associative weighting in focus. [book Preface; §2.2]
 
 ## S01-23 — Bias as individual cognitive weighting
 - **Anchor:** `Emmanuel Theodore (07:22)`
 - **Type:** hold
 - **Render:** `figma-card:cards/S01-14.json`
 - **Holds:** `S01-15`
-- **Note:** Item 3 reveals, summarizing bias as an evaluative weighting inside an individual actor. [book Preface; §2.2]
+- **Note:** The Evaluative Bias comparison remains on screen with implicit associative weighting in focus. [book Preface; §2.2]
 
 ## S01-24 — Construct 2: Allport (1954) on prejudice
 - **Anchor:** `Emmanuel Theodore (07:35)`
 - **Type:** card
 - **Render:** `figma-card:cards/S01-14.json`
-- **Note:** The quote card opens with Gordon Allport's 1954 treatise The Nature of Prejudice, page 9. [book Preface; §2.2, citing Allport 1954, p. 9]
+- **Note:** Column 1 reveals explicit bias as a consciously endorsed evaluative tilt based on group membership. [book Preface; §2.2]
 
 ## S01-25 — Construct 2: Allport (1954) on prejudice
 - **Anchor:** `Emmanuel Theodore (07:42)`
 - **Type:** card
 - **Render:** `figma-card:cards/S01-16.json`
-- **Note:** The quote card opens with Gordon Allport's 1954 treatise The Nature of Prejudice, page 9. [book Preface; §2.2, citing Allport 1954, p. 9]
+- **Note:** The Greenwald and Banaji quote card opens with the Psychological Review 102(1) citation. [book Preface; §2.2, citing Greenwald & Banaji 1995]
 
 ## S01-26 — Antipathy and inflexible generalization
 - **Anchor:** `Emmanuel Theodore (07:53)`
 - **Type:** hold
 - **Render:** `figma-card:cards/S01-16.json`
 - **Holds:** `S01-25`
-- **Note:** Allport's phrase 'an antipathy based upon a faulty and inflexible generalization' underlines in accent amber. [book Preface; §2.2, citing Allport 1954, p. 9]
+- **Note:** Greenwald and Banaji's phrase 'introspectively unidentified (or inaccurately identified) traces of past experience' highlights. [book Preface; §2.2, citing Greenwald & Banaji 1995]
 
 ## S01-27 — Group-directed and member-directed target
 - **Anchor:** `Emmanuel Theodore (08:07)`
 - **Type:** hold
 - **Render:** `figma-card:cards/S01-16.json`
 - **Holds:** `S01-25`
-- **Note:** The second sentence 'directed toward a group as a whole, or toward an individual because he is a member' highlights. [book Preface; §2.2, citing Allport 1954, p. 9]
+- **Note:** The closing clause on favorable or unfavorable feeling, thought, or action remains visible in the Greenwald and Banaji quote. [book Preface; §2.2, citing Greenwald & Banaji 1995]
 
 ## S01-28 — Affective posture coupled to rigid belief
 - **Anchor:** `Emmanuel Theodore (08:19)`
 - **Type:** card
 - **Render:** `figma-card:cards/S01-19.json`
-- **Note:** Item 1 of the Allport refencing card opens, pairing affective antipathy with overgeneralized belief. [book Preface; §2.2, citing Allport 1954]
+- **Note:** Item 1 cites Greenwald, McGhee, and Schwartz's 1998 Implicit Association Test paper. [external: Greenwald, McGhee, & Schwartz 1998, JPSP 74(6), 1464-1480]
 
 ## S01-29 — Habitual resistance to contradictory facts
 - **Anchor:** `Emmanuel Theodore (08:31)`
 - **Type:** hold
 - **Render:** `figma-card:cards/S01-19.json`
 - **Holds:** `S01-28`
-- **Note:** Item 2 reveals, noting how habitual prejudice resists correction under strong counter-evidence. [book Preface; §2.2, citing Allport 1954]
+- **Note:** Item 2 presents response-latency differences as the IAT measure of associative strength. [external: Greenwald, McGhee, & Schwartz 1998, JPSP 74(6), 1464-1480]
 
 ## S01-30 — Refencing contradictory individuals as exceptions
 - **Anchor:** `Emmanuel Theodore (08:41)`
 - **Type:** hold
 - **Render:** `figma-card:cards/S01-14.json`
-- **Note:** Item 3 reveals, illustrating Allport's exception-fencing mechanism that preserves the stereotype. [book Preface; §2.2, citing Allport 1954]
+- **Note:** Column 1 reveals explicit bias as a consciously endorsed evaluative tilt based on group membership. [book Preface; §2.2]
 
 ## S01-31 — Construct 3: discrimination as outward conduct
 - **Anchor:** `Emmanuel Theodore (08:50)`
 - **Type:** card
 - **Render:** `figma-card:cards/S01-22.json`
-- **Note:** The Fiske (1998) tripartite table opens with Row 1, marking the shift from internal state to outward conduct. [book Preface; §2.2, citing Fiske 1998]
+- **Note:** The Allport quote card opens with The Nature of Prejudice (1954), page 9. [book Preface; §2.2, citing Allport 1954, p. 9]
 
 ## S01-32 — Fiske (1998) Handbook of Social Psychology
 - **Anchor:** `Emmanuel Theodore (09:04)`
 - **Type:** hold
 - **Render:** `figma-card:cards/S01-22.json`
 - **Holds:** `S01-31`
-- **Note:** Row 2 reveals the citation to Fiske's 1998 synthesis in the fourth edition of the Handbook of Social Psychology. [book Preface; §2.2, citing Fiske 1998]
+- **Note:** Allport's phrase 'an antipathy based upon a faulty and inflexible generalization' highlights. [book Preface; §2.2, citing Allport 1954, p. 9]
 
 ## S01-33 — Thinking, feeling, and behavior modalities
 - **Anchor:** `Emmanuel Theodore (09:13)`
 - **Type:** hold
 - **Render:** `figma-card:cards/S01-22.json`
 - **Holds:** `S01-31`
-- **Note:** Row 3 reveals the tripartite division: stereotyping (cognitive), prejudice (affective), and discrimination (behavioral). [book Preface; §2.2, citing Fiske 1998]
+- **Note:** The clause directing prejudice toward a group or one of its members highlights in Allport's definition. [book Preface; §2.2, citing Allport 1954, p. 9]
 
 ## S01-34 — Thinking, feeling, and behavior modalities
 - **Anchor:** `Emmanuel Theodore (09:23)`
 - **Type:** hold
 - **Render:** `figma-card:cards/S01-22.json`
 - **Holds:** `S01-31`
-- **Note:** Row 3 reveals the tripartite division: stereotyping (cognitive), prejudice (affective), and discrimination (behavioral). [book Preface; §2.2, citing Fiske 1998]
+- **Note:** Allport's complete definition remains visible while the narration identifies its affective and rigid-belief components. [book Preface; §2.2, citing Allport 1954, p. 9]
 
 ## S01-35 — Belief, valence, and differential treatment
 - **Anchor:** `Emmanuel Theodore (09:34)`
 - **Type:** hold
 - **Render:** `figma-card:cards/S01-25.json`
-- **Note:** Row 4 reveals the functional mapping from categorical belief and emotional valence to differential action. [book Preface; §2.2, citing Fiske 1998]
+- **Note:** Item 1 pairs affective antipathy with an overgeneralized belief structure. [book Preface; §2.2, citing Allport 1954]
 
 ## S01-36 — Concrete interpersonal discrimination examples
 - **Anchor:** `Emmanuel Theodore (09:44)`
 - **Type:** hold
 - **Render:** `figma-card:cards/S01-25.json`
 - **Holds:** `S01-35`
-- **Note:** Row 5 reveals interpersonal examples: exclusion, unequal service, biased grading, and rental refusal. [book Preface; §2.2, citing Fiske 1998]
+- **Note:** Item 2 shows habitual prejudice resisting corrective evidence. [book Preface; §2.2, citing Allport 1954]
 
 ## S01-37 — Shared properties across the three constructs
 - **Anchor:** `Emmanuel Theodore (09:56)`
 - **Type:** card
 - **Render:** `figma-card:cards/S01-28.json`
-- **Note:** Item 1 opens on the Interpersonal Class synthesis card, aligning Greenwald and Banaji, Allport, and Fiske. [book Preface; §2.2]
+- **Note:** Row 1 defines discrimination as observable outward conduct across group lines. [book Preface; §2.2, citing Fiske 1998]
 
 ## S01-38 — Bidirectional interpersonal operations
 - **Anchor:** `Emmanuel Theodore (10:10)`
 - **Type:** hold
 - **Render:** `figma-card:cards/S01-28.json`
 - **Holds:** `S01-37`
-- **Note:** Item 2 reveals, showing that actor-level psychological and behavioral operations can run between any two groups. [book Preface; §2.2]
+- **Note:** Row 2 cites Fiske's 1998 Handbook synthesis as the standard social-psychological taxonomy. [book Preface; §2.2, citing Fiske 1998]
 
 ## S01-39 — Universal human capacity across phenotypes
 - **Anchor:** `Emmanuel Theodore (10:21)`
 - **Type:** hold
 - **Render:** `figma-card:cards/S01-28.json`
 - **Holds:** `S01-37`
-- **Note:** Item 3 reveals, noting that any human actor can hold bias, feel antipathy, or act with differential treatment. [book Preface; §2.2]
+- **Note:** Row 3 presents stereotype, prejudice, and discrimination as thinking, feeling, and action. [book Preface; §2.2, citing Fiske 1998]
 
 ## S01-40 — Zero requirement of state or capital control
 - **Anchor:** `Emmanuel Theodore (10:35)`
 - **Type:** hold
 - **Render:** `figma-card:cards/S01-28.json`
 - **Holds:** `S01-37`
-- **Note:** Item 4 reveals, specifying that interpersonal bias, prejudice, and discrimination require zero control over courts, police, or capital. [book Preface; §2.2]
+- **Note:** Row 4 maps category tag to emotional valence and outward action. [book Preface; §2.2, citing Fiske 1998]
 
 ## S01-41 — Assigning the trio to the interpersonal class
 - **Anchor:** `Emmanuel Theodore (10:48)`
 - **Type:** hold
 - **Render:** `figma-card:cards/S01-28.json`
 - **Holds:** `S01-37`
-- **Note:** Item 5 reveals, locking bias, prejudice, and discrimination into the interpersonal taxonomy where their technical names belong. [book Preface; §2.2]
+- **Note:** Row 5 lists exclusion, grading, service, and rental refusal as interpersonal cases. [book Preface; §2.2, citing Fiske 1998]
 
 ## S01-42 — Reserving racism for the structural class
 - **Anchor:** `Emmanuel Theodore (10:59)`
 - **Type:** card
 - **Render:** `figma-card:cards/S01-33.json`
-- **Note:** Row 1 of the morphological table reveals, assigning racism to an institutionalized multi-tier extraction system. [book Preface; §2.2]
+- **Note:** Item 1 identifies actor-level convergence across Greenwald and Banaji, Allport, and Fiske. [book Preface; §2.2]
 
 ## S01-43 — The -ism suffix in English morphology
 - **Anchor:** `Emmanuel Theodore (11:07)`
 - **Type:** hold
 - **Render:** `figma-card:cards/S01-33.json`
 - **Holds:** `S01-42`
-- **Note:** Row 2 reveals, highlighting the suffix -ism across capitalism, feudalism, and colonialism. [book §2.2]
+- **Note:** Item 2 shows psychological and behavioral operations running in any direction between groups. [book Preface; §2.2]
 
 ## S01-44 — The -ism suffix in English morphology
 - **Anchor:** `Emmanuel Theodore (11:17)`
 - **Type:** hold
 - **Render:** `figma-card:cards/S01-33.json`
 - **Holds:** `S01-42`
-- **Note:** Row 2 reveals, highlighting the suffix -ism across capitalism, feudalism, and colonialism. [book §2.2]
+- **Note:** Item 3 states the universal human capacity for bias, antipathy, and discrimination. [book Preface; §2.2]
 
 ## S01-45 — Capitalism as property and exchange order
 - **Anchor:** `Emmanuel Theodore (11:28)`
 - **Type:** hold
 - **Render:** `figma-card:cards/S01-33.json`
 - **Holds:** `S01-42`
-- **Note:** Row 3 reveals, showing how -ism designates a macro-level legal and property order. [book §2.2]
+- **Note:** Item 4 states that the three interpersonal constructs require no legislature, court, police force, credit market, or army. [book Preface; §2.2]
 
 ## S01-46 — Preserving distinct structural and psychological terms
 - **Anchor:** `Emmanuel Theodore (11:37)`
 - **Type:** hold
 - **Render:** `figma-card:cards/S01-33.json`
 - **Holds:** `S01-42`
-- **Note:** Row 4 reveals, showing why re-labeling private prejudice as racism wastes a macro-structural term. [book Preface; §2.2]
+- **Note:** Item 5 assigns bias, prejudice, and discrimination to the interpersonal class under their established names. [book Preface; §2.2]
 
 ## S01-47 — Racism as psycho-legal social software
 - **Anchor:** `Emmanuel Theodore (11:46)`
@@ -426,7 +426,7 @@
 - **Anchor:** `Emmanuel Theodore (11:56)`
 - **Type:** hold
 - **Render:** `figma-card:cards/S02-01.json`
-- **Note:** Column 2 reveals alongside Column 1, distinguishing universal biological host wetware from the institutional extraction code. [book Preface; §2.2]
+- **Note:** Item 1 introduces the formal systems criterion for a bounded, feedback-controlled racial architecture. [editorial]
 
 <!-- SEG 02 · The vector definition of racism -->
 
@@ -434,14 +434,14 @@
 - **Anchor:** `Emmanuel Theodore (12:08)`
 - **Type:** card
 - **Render:** `figma-card:cards/S13-15.json`
-- **Note:** The Segment 02 title card opens with Item 1, stating the requirement to prove formal systems anatomy. [editorial]
+- **Note:** The scalar-prejudice and vector-racism equation card opens with Equations 3.1 and 25.1. [book Ch 3, Eq 3.1; Ch 25, Eq 25.1]
 
 ## S02-02 — Five-part engineering checklist
 - **Anchor:** `Emmanuel Theodore (12:17)`
 - **Type:** hold
 - **Render:** `figma-card:cards/S13-15.json`
 - **Holds:** `S02-01`
-- **Note:** Item 3 reveals, listing components, boundary, inputs/outputs, objective function, and feedback loops. [editorial]
+- **Note:** The equation card holds institutional force directed along the hierarchy against scalar individual prejudice. [book Ch 3, Eq 3.1; Ch 25, Eq 25.1]
 
 ## S02-03 — Racism as a vector: Equation 3.1 on the cone
 - **Anchor:** `Emmanuel Theodore (12:23)`
@@ -467,43 +467,43 @@
 - **Anchor:** `Emmanuel Theodore (13:14)`
 - **Type:** card
 - **Render:** `figma-card:cards/S13-06.json`
-- **Note:** Directional arrows circulate around the four nodes, highlighting reproductive/movement restriction paired with selective empathy. [book Preface; Ch 2]
+- **Note:** The Section 2.2 quote card displays the formal definition of racism as weaponized interpersonal psychology compiled into structural exploitation and control. [book §2.2; Ch 21]
 
 ## S02-07 — Equation 4.2 Virginia 1691 boundary enforcement
 - **Anchor:** `Emmanuel Theodore (13:27)`
 - **Type:** hold
 - **Render:** `figma-card:cards/S02-13.json`
-- **Note:** Term 3 (I_buffer ∩ O_racialized = ∅) illuminates, citing Virginia's 1691 statute outlawing cross-tier marriage and reproduction. [book Ch 4, Eq 4.2]
+- **Note:** The boundary equation card displays U = I ∪̇ O, I ∩ O = ∅, and the 1691 cross-tier boundary condition. [book §2.1, Eq 2.1; Ch 4, Eq 4.2]
 
 ## S02-08 — Elite tier as parasitic control gate
 - **Anchor:** `Emmanuel Theodore (13:36)`
 - **Type:** hold
 - **Render:** `figma-card:cards/S01-42.json`
-- **Note:** Row 2 reveals, showing the Elite apex directing high-current labor flow via a small intermediate control current. [book Preface; Ch 0]
+- **Note:** Item 1 defines psycho-legal social software as institutional code embedded in property, statutes, and state coercion. [book Preface; §2.2]
 
 ## S02-09 — Chapter 19 Concession Theorem constraint Δ_max = 0
 - **Anchor:** `Emmanuel Theodore (13:46)`
 - **Type:** hold
 - **Render:** `figma-card:cards/S01-38.json`
-- **Note:** Row 4 reveals, stating the Concession Theorem invariant Δ_max = 0 on non-kinetic status and material allocations. [book §2.3.1; Ch 19]
+- **Note:** Row 1 defines racism as a macro-structural system of multi-tier group extraction and legal control. [book Preface; §2.2]
 
 ## S02-10 — Equation 2.7: maximize E(t) subject to M(t) < τ
 - **Anchor:** `Emmanuel Theodore (13:57)`
 - **Type:** hold
 - **Render:** `figma-card:cards/S13-15.json`
-- **Note:** Term 1 (E(t)) highlights, identifying net upward economic extraction as the maximand. [book §2.3.2, Eq 2.7]
+- **Note:** The scalar-prejudice and vector-racism equation card returns with Equations 3.1 and 25.1. [book Ch 3, Eq 3.1; Ch 25, Eq 25.1]
 
 ## S02-11 — Equation 2.11 series RLC parameters L, R, and C
 - **Anchor:** `Emmanuel Theodore (14:08)`
 - **Type:** hold
 - **Render:** `figma-card:cards/S01-42.json`
-- **Note:** Terms 1 and 2 (state inertia L and coercive resistance R) illuminate beneath the differential equation. [book §2.3.6, Eq 2.11]
+- **Note:** Item 1 defines psycho-legal social software as institutional code embedded in property, statutes, and state coercion. [book Preface; §2.2]
 
 ## S02-12 — Five-part systems engineering checklist satisfied
 - **Anchor:** `Emmanuel Theodore (14:18)`
 - **Type:** hold
 - **Render:** `figma-card:cards/S01-38.json`
-- **Note:** All three RLC term panels pulse together, completing the five-requirement systems audit. [book Ch 0; Ch 2]
+- **Note:** Row 1 defines racism as a macro-structural system of multi-tier group extraction and legal control. [book Preface; §2.2]
 
 <!-- SEG 03 · Where the agreement ends -->
 
@@ -552,7 +552,7 @@
 - **Type:** hold
 - **Render:** `figma-card:cards/S05-06.json`
 - **Holds:** `S03-06`
-- **Note:** Term 1 illuminates with the Confidence Tier 3 badge, framing Equation 2.5 as a directional claim testable by historical sequence. [book Empirical Methodology; §2.2, Eq 2.5]
+- **Note:** The Equation 2.5 causal chain remains on screen during its Confidence Tier 3 classification. [book Empirical Methodology; §2.2, Eq 2.5]
 
 ## S03-08 — Reading Equation 2.5 from left to right
 - **Anchor:** `Emmanuel Theodore (15:45)`
@@ -566,7 +566,7 @@
 - **Type:** hold
 - **Render:** `figma-card:cards/S05-06.json`
 - **Holds:** `S03-06`
-- **Note:** Term 3 illuminates, highlighting how Equation 2.5 locates the prime mover inside individual psychology on the left. [book §2.2, Eq 2.5]
+- **Note:** The Individual Prejudice term receives focus at the left side of Equation 2.5. [book §2.2, Eq 2.5]
 
 ## S03-10 — Bottom-up accumulation across isolated transactions
 - **Anchor:** `Emmanuel Theodore (16:06)`
@@ -866,7 +866,7 @@
 - **Type:** hold
 - **Render:** `figma-card:cards/S02-13.json`
 - **Holds:** `S05-13`
-- **Note:** Term 1 (U = I ⊔ O) and Term 2 (I ∩ O = ∅) illuminate, defining the primary In-group and Out-group partition. [book §2.1, Eq 2.1]
+- **Note:** Term 1 (U = I ∪̇ O) and Term 2 (I ∩ O = ∅) illuminate, defining the primary In-group and Out-group partition. [book §2.1, Eq 2.1]
 
 ## S05-15 — Equation 4.2 Virginia 1691 boundary enforcement
 - **Anchor:** `Emmanuel Theodore (25:42)`
@@ -1028,7 +1028,7 @@
 - **Anchor:** `Emmanuel Theodore (30:02)`
 - **Type:** card
 - **Render:** `figma-card:cards/S03-12.json`
-- **Note:** The Equation 2.1 card opens, displaying U = I ⊔ O with I ∩ O = ∅ in the main equation box. [book §2.1, Eq 2.1]
+- **Note:** The Equation 2.1 card opens, displaying U = I ∪̇ O with I ∩ O = ∅ in the main equation box. [book §2.1, Eq 2.1]
 
 ## S06-13 — Dominant In-group I and marginalized Out-group O
 - **Anchor:** `Emmanuel Theodore (30:13)`
@@ -1061,7 +1061,7 @@
 - **Anchor:** `Emmanuel Theodore (30:50)`
 - **Type:** card
 - **Render:** `figma-card:cards/S03-17.json`
-- **Note:** The Equation 2.2 card opens, displaying Refine(I) = E ⊔ P_uppet ⊔ F_enforce ⊔ I_buffer. [book §2.1, Eq 2.2]
+- **Note:** The Equation 2.2 card opens, displaying Refine(I) = E ∪̇ P_uppet ∪̇ F_enforce ∪̇ I_buffer. [book §2.1, Eq 2.2]
 
 ## S06-18 — Four disjoint functional tiers inside I
 - **Anchor:** `Emmanuel Theodore (30:58)`
@@ -1094,7 +1094,7 @@
 - **Anchor:** `Emmanuel Theodore (31:47)`
 - **Type:** card
 - **Render:** `figma-card:cards/S03-25.json`
-- **Note:** The Equation 2.3 card opens, displaying O = O_racialized ⊔ O_adjacent,1 ⊔ … ⊔ O_adjacent,m. [book §2.1, Eq 2.3]
+- **Note:** The Equation 2.3 card opens, displaying O = O_racialized ∪̇ O_adjacent,1 ∪̇ … ∪̇ O_adjacent,m. [book §2.1, Eq 2.3]
 
 ## S06-23 — Primary racialized target and adjacent Out-groups
 - **Anchor:** `Emmanuel Theodore (32:00)`
@@ -1134,7 +1134,7 @@
 - **Type:** hold
 - **Render:** `figma-card:cards/S03-30.json`
 - **Holds:** `S06-27`
-- **Note:** The main formula X = X⁺_α ⊔ X⁻_α highlights in the equation box. [book §2.1, Eq 2.4]
+- **Note:** The main formula X = X⁺_α ∪̇ X⁻_α highlights in the equation box. [book §2.1, Eq 2.4]
 
 ## S06-29 — Disjoint local sub-cells on axis α
 - **Anchor:** `Emmanuel Theodore (33:13)`
@@ -1195,14 +1195,14 @@
 - **Type:** hold
 - **Render:** `figma-card:cards/S03-39.json`
 - **Holds:** `S06-36`
-- **Note:** Row 2 reveals Levels 1 and 2 side by side: Equation 2.1 (U = I ⊔ O) and Equation 2.2 (Refine(I)). [book §2.1, Table 2.1]
+- **Note:** Row 2 reveals Levels 1 and 2 side by side: Equation 2.1 (U = I ∪̇ O) and Equation 2.2 (Refine(I)). [book §2.1, Table 2.1]
 
 ## S06-38 — Levels 3 and 4: Out-group and recursive α partitions
 - **Anchor:** `Emmanuel Theodore (35:05)`
 - **Type:** hold
 - **Render:** `figma-card:cards/S03-39.json`
 - **Holds:** `S06-36`
-- **Note:** Row 3 reveals Levels 3 and 4: Equation 2.3 (Refine(O)) and Equation 2.4 (X = X⁺_α ⊔ X⁻_α). [book §2.1, Table 2.1]
+- **Note:** Row 3 reveals Levels 3 and 4: Equation 2.3 (Refine(O)) and Equation 2.4 (X = X⁺_α ∪̇ X⁻_α). [book §2.1, Table 2.1]
 
 ## S06-39 — Figure 2.1: Zooming the Binary
 - **Anchor:** `Emmanuel Theodore (35:17)`
@@ -1285,7 +1285,7 @@
 - **Type:** hold
 - **Render:** `manim:yt02/ortho_illusion.py:OrthoIllusion`
 - **Holds:** `S07-01`
-- **Note:** The Square Ceiling callout tags the Buffer underside while the Enforcement, Puppet, and Elite tiers remain ghosted behind it. [book Ch 0, lines 769-785]
+- **Note:** The Flat Ceiling callout tags the Buffer underside while the Enforcement, Puppet, and Elite tiers remain ghosted behind it. [book Ch 0, lines 769-785]
 
 ## S07-08 — Downward sightline from the In-group buffer
 - **Anchor:** `Emmanuel Theodore (37:32)`
@@ -1802,7 +1802,7 @@
 - **Type:** hold
 - **Render:** `figma-card:cards/S07-63.json`
 - **Holds:** `S08-63`
-- **Note:** Node 4 illuminates, confirming that the 1676 solidarity crisis triggered the 1691 boundary act and 1705 Slave Codes. [book Ch 4; YT02_outline P2]
+- **Note:** Row 3 remains focused on the absence of any unsponsored or pre-extraction phenotype caste in the Portugal case. [book §2.2; Ch 3; YT02_outline R1]
 
 <!-- SEG 09 · Test 2: Virginia, 1640–1705 -->
 
@@ -2069,7 +2069,7 @@
 - **Type:** hold
 - **Render:** `figma-card:cards/S08-36.json`
 - **Holds:** `S09-36`
-- **Note:** Three historical marker pins appear along the circular arc at 1705, 1894–1965, and Post-1965. [book Ch 4]
+- **Note:** The 276-Year Runtime term remains visible on the Equation 4.2 card while the narration supplies the life-expectancy context. [book Ch 4, Eq 4.2]
 
 ## S09-40 — Equation 4.2 set-theoretic command: I_buffer ∩ O_racialized = ∅
 - **Anchor:** `Emmanuel Theodore (61:07)`
@@ -2090,7 +2090,7 @@
 - **Type:** hold
 - **Render:** `figma-card:cards/S08-36.json`
 - **Holds:** `S09-36`
-- **Note:** The citation strip highlights Chief Justice Earl Warren's June 12, 1967 ruling in Loving v. Virginia. [book Ch 4]
+- **Note:** The 276-Year Runtime term remains focused through the Loving v. Virginia endpoint in 1967. [book Ch 4]
 
 ## S09-43 — Step 4: October 1705 Virginia Slave Codes
 - **Anchor:** `Emmanuel Theodore (61:43)`
@@ -2130,7 +2130,7 @@
 - **Type:** hold
 - **Render:** `figma-card:cards/S08-46.json`
 - **Holds:** `S09-47`
-- **Note:** The phasor swings to θ = 118° past the 90° line and opens the callout 'Logs 14–15 · Post-1965: Quadrant II Rotation'. [book Ch 0, AC mode; §2.3.5]
+- **Note:** The 1705 state-transition card remains on screen with Equations 4.3 and 4.4. [book Ch 4, Eq 4.3, Eq 4.4]
 
 ## S09-49 — Equation 4.4 three-tier payoff ordering
 - **Anchor:** `Emmanuel Theodore (63:01)`
@@ -2171,7 +2171,7 @@
 - **Type:** hold
 - **Render:** `figma-card:cards/S08-48.json`
 - **Holds:** `S09-50`
-- **Note:** The phasor holds at θ = 128° with all three historical pins (1705, 1894–1965, Post-1965) and Equation 3.5 illuminated together. [book Ch 3, Eq 3.5; Ch 13]
+- **Note:** The Test 2 verdict remains focused on the 1676 solidarity crisis triggering the 1691 boundary act and 1705 Slave Codes. [book Ch 4; YT02_outline P2]
 
 <!-- SEG 10 · The wage as a phasor -->
 
@@ -2186,7 +2186,7 @@
 - **Type:** hold
 - **Render:** `manim:yt02/wage_phasor.py:WagePhasor`
 - **Holds:** `S10-01`
-- **Note:** The header badge highlights Equation 3.5 in the upper-right rail while the phasor holds at θ = 25° in Quadrant I. [book §2.3, canonical variable map]
+- **Note:** The phasor rotates to θ = 45° while the material and status channels highlight together. [book §2.3, canonical variable map]
 
 ## S10-03 — W. E. B. Du Bois (1935) public and psychological wage
 - **Anchor:** `Emmanuel Theodore (64:50)`
@@ -2207,7 +2207,7 @@
 - **Type:** hold
 - **Render:** `manim:yt02/wage_phasor.py:WagePhasor`
 - **Holds:** `S10-01`
-- **Note:** Term 2 (C_patrol(t)) illuminates, citing Census Historical Statistics Series K 554–563, Hadden, Beckert, and Baptist. [book §2.3.2, citing US Census; Hadden; Beckert; Baptist]
+- **Note:** The phasor holds at θ = 45° while both component formulas highlight under the ordinal-diagnostic caption. [book Ch 3, Eq 3.5]
 
 ## S10-06 — Complex-wage plane hero build
 - **Anchor:** `Emmanuel Theodore (65:28)`
@@ -2268,72 +2268,72 @@
 - **Anchor:** `Emmanuel Theodore (67:00)`
 - **Type:** diagram
 - **Render:** `manim:yt02/wage_phasor.py:WagePhasor`
-- **Note:** The phasor rotates further to θ = 65° along the constant-|W| circle; the green vertical bar ψ_m shrinks as the amber bar ψ_s lengthens. [book Ch 3, Eq 3.5]
+- **Note:** The phasor rotates to θ = 70° along the constant-|W| circle as ψ_m shrinks and ψ_s grows. [book Ch 3, Eq 3.5]
 
 ## S10-15 — Confidence Tier 3 structural representation of angle θ
 - **Anchor:** `Emmanuel Theodore (67:09)`
 - **Type:** diagram
 - **Render:** `manim:yt02/wage_phasor.py:WagePhasor`
-- **Note:** The Tier 3 ordinal badge pulses in the right-hand readout panel while θ holds at 55°. [book Ch 3, Eq 3.5, phase-angle regimes]
+- **Note:** The Tier 3 ordinal badge appears while the phasor holds at θ = 45°. [book Ch 3, Eq 3.5, phase-angle regimes]
 
 ## S10-16 — Theta begins on the vertical material axis
 - **Anchor:** `Emmanuel Theodore (67:20)`
 - **Type:** diagram
 - **Render:** `manim:yt02/wage_plane_hero.py:WagePlaneHero`
-- **Note:** The CostBarsOverTime diagram opens on the 1954–1965 window as all three cost bars for explicit Jim Crow begin rising sharply. [book §2.3.5] Scene labels stay above the caption band. [revision G]
+- **Note:** The rotated wage plane opens at θ = 0° with the label PURE MATERIAL. [book Ch 3, Eq 3.5] Scene labels stay above the caption band. [revision G]
 
 ## S10-17 — This position represents genuine economic investment in the Buffer Class
 - **Anchor:** `Emmanuel Theodore (67:27)`
 - **Type:** hold
 - **Render:** `manim:yt02/wage_plane_hero.py:WagePlaneHero`
 - **Holds:** `S10-16`
-- **Note:** The C_legitimacy bar surges past the threshold line, annotated with Birmingham, Selma, and Mary Dudziak's Cold War Civil Rights. [book §2.3.5, citing Dudziak]
+- **Note:** The wage-plane arrow rotates to θ = 12° as material investment enters the mixed regime. [book Ch 3, Eq 3.5]
 
 ## S10-18 — As theta increases, the arrow rotates toward the psychological axis
 - **Anchor:** `Emmanuel Theodore (67:38)`
 - **Type:** hold
 - **Render:** `manim:yt02/wage_plane_hero.py:WagePlaneHero`
 - **Holds:** `S10-16`
-- **Note:** The C_coercive and C_economic bars cross the unsustainable ceiling alongside C_legitimacy. [book §2.3.5]
+- **Note:** The wage-plane arrow rotates to θ = 55°, shrinking the material projection and enlarging the status projection. [book Ch 3, Eq 3.5]
 
 ## S10-19 — At ninety degrees, the phasor lies entirely on the horizontal axis
 - **Anchor:** `Emmanuel Theodore (67:46)`
 - **Type:** hold
 - **Render:** `manim:yt02/wage_plane_hero.py:WagePlaneHero`
 - **Holds:** `S10-16`
-- **Note:** Equation 2.10 switches S*(t) from Explicit Partition to Criminal/Fiscal Proxy, dropping C_legitimacy while preserving extraction. [book §2.3.5, Eq 2.10]
+- **Note:** The wage-plane arrow reaches θ = 90°, where ψ_m equals zero and ψ_s carries the wage. [book Ch 3, Eq 3.5]
 
 ## S10-20 — Electrical engineering calls this reactive power
 - **Anchor:** `Emmanuel Theodore (67:55)`
 - **Type:** diagram
 - **Render:** `manim:yt02/wage_plane_hero.py:WagePlaneHero`
-- **Note:** Item 1 of the Southern Strategy Evidentiary Audit card reveals, citing Baum's published 1994 Ehrlichman quote. [book §2.3.5, citing Baum] Scene labels stay above the caption band. [revision G]
+- **Note:** The wage plane holds at θ = 90° with the label REACTIVE POWER · ψ_m = 0. [book Ch 3, Eq 3.5] Scene labels stay above the caption band. [revision G]
 
 ## S10-21 — In the social mapping, pure reactive power is culture war: intense statu
 - **Anchor:** `Emmanuel Theodore (68:04)`
 - **Type:** hold
 - **Render:** `manim:yt02/wage_plane_hero.py:WagePlaneHero`
 - **Holds:** `S10-20`
-- **Note:** Item 2 reveals, noting family and historian disputes over the posthumous quote while pointing to the independent quantitative series. [book §2.3.5; MANUSCRIPT_GAP §5]
+- **Note:** The wage plane remains at θ = 90° in the pure-status reactive-power state. [book Ch 3, Eq 3.5]
 
 ## S10-22 — The psychological wage costs the Elite zero capital
 - **Anchor:** `Emmanuel Theodore (68:15)`
 - **Type:** hold
 - **Render:** `manim:yt02/wage_plane_hero.py:WagePlaneHero`
 - **Holds:** `S10-20`
-- **Note:** Item 3 reveals, citing Alexander Lamis's 1981 tape recording of strategist Lee Atwater and Ian Haney López's analysis. [book §2.3.5, citing Lamis; Atwater; Haney Lopez]
+- **Note:** The wage plane remains at θ = 90° with zero material transfer and positive status allocation. [book Ch 3, Eq 3.5]
 
 ## S10-23 — Continue the rotation past ninety degrees
 - **Anchor:** `Emmanuel Theodore (68:25)`
 - **Type:** diagram
 - **Render:** `manim:yt02/wage_plane_hero.py:WagePlaneHero`
-- **Note:** Item 4 reveals, tracing Atwater's progression from 1954 slurs to 1968 busing/states' rights to 1981 fiscal and tax proxies. [book §2.3.5, citing Lamis; Atwater] Scene labels stay above the caption band. [revision G]
+- **Note:** The wage-plane phasor rotates from θ = 90° to θ = 118° in Quadrant II. [book Ch 3, Eq 3.5] Scene labels stay above the caption band. [revision G]
 
 ## S10-24 — Negative cosine in Quadrant II: ψ_m < 0, ψ_s > 0
 - **Anchor:** `Emmanuel Theodore (68:32)`
 - **Type:** diagram
 - **Render:** `manim:yt02/wage_phasor.py:WagePhasor`
-- **Note:** Thephasor advances to θ = 122°; the vertical material projection flips downward in crimson (ψ_m < 0) while horizontal status ψ_s stays positive. [book Ch 0, AC mode; Ch 3, Eq 3.5]
+- **Note:** The phasor advances to θ = 120°; the material projection turns negative while status remains positive. [book Ch 0, AC mode; Ch 3, Eq 3.5]
 
 ## S10-25 — Buffer Class losing real wealth while compensated in status
 - **Anchor:** `Emmanuel Theodore (68:42)`
@@ -2345,19 +2345,19 @@
 - **Anchor:** `Emmanuel Theodore (68:52)`
 - **Type:** diagram
 - **Render:** `manim:yt02/wage_phasor.py:WagePhasor`
-- **Note:** The angle readout dial highlights θ = 120° as the primary state variable tracking Buffer Class extraction. [book Ch 0, AC mode; Ch 3, Eq 3.5]
+- **Note:** The angle readout moves to θ = 100° under the system-tuning caption. [book Ch 0, AC mode; Ch 3, Eq 3.5]
 
 ## S10-27 — The ninety-degree position is the extraction kernel's default operating
 - **Anchor:** `Emmanuel Theodore (69:03)`
 - **Type:** diagram
 - **Render:** `manim:yt02/wage_plane_hero.py:WagePlaneHero`
-- **Note:** Bar 4 animates to 3.73x, showing the nationwide Black-to-white cannabis possession arrest ratio despite comparable usage. [book §2.3.5, citing ACLU 2013, 2020] Scene labels stay above the caption band. [revision G]
+- **Note:** The wage plane holds at θ = 90° and highlights the ψ_s status formula. [book Ch 3, Eq 3.5] Scene labels stay above the caption band. [revision G]
 
 ## S10-28 — Past 90°: Buffer Class cannibalization regime
 - **Anchor:** `Emmanuel Theodore (69:15)`
 - **Type:** diagram
 - **Render:** `manim:yt02/wage_phasor.py:WagePhasor`
-- **Note:** The phasor sweeps to θ = 128° into the shaded lower-right region labeled 'Quadrant II · Buffer Cannibalization (ψ_m < 0)'. [book Ch 3, Eq 3.5, phase-angle regimes]
+- **Note:** The phasor sweeps to θ = 128° into the shaded upper-right Quadrant II region labeled FASCISM THRESHOLD. [book Ch 3, Eq 3.5, phase-angle regimes]
 
 ## S10-29 — Arms-calibrated wage phasor
 - **Anchor:** `Emmanuel Theodore (69:25)`
@@ -2382,7 +2382,7 @@
 - **Type:** hold
 - **Render:** `ext:Architecting_the_operation/video/yt02/archive/hening3_1705/hening3_1705_p451.png`
 - **Holds:** `S10-31`
-- **Note:** The Equations 2.13 and 2.14 card opens with the Confidence Tier 1 empirical badge. [book §2.3.6, Eq 2.13]
+- **Note:** The Hening volume 3, page 451 archive image remains on screen for the 1705 prohibition on armed enslaved people. [SOURCES.md]
 
 ## S10-33 — Primary source scan
 - **Anchor:** `Emmanuel Theodore (70:26)`
@@ -2395,7 +2395,7 @@
 - **Type:** hold
 - **Render:** `ext:Architecting_the_operation/video/yt02/archive/hening5_1738/hening5_1738_p17.png`
 - **Holds:** `S10-33`
-- **Note:** Term 2 (dM/dt > dΣ_sup/dt) illuminates, defining the systemic breach condition when mobilization outpaces suppression. [book §2.3.6, Fig 2.7]
+- **Note:** The Hening volume 5, page 17 archive image remains on screen for the militia statute's racial arms boundary. [SOURCES.md]
 
 ## S10-35 — Primary source scan
 - **Anchor:** `Emmanuel Theodore (70:49)`
@@ -2408,35 +2408,35 @@
 - **Type:** hold
 - **Render:** `ext:Architecting_the_operation/video/yt02/archive/dredscott_416/dredscott_416_p417.png`
 - **Holds:** `S10-35`
-- **Note:** Source citations populate the four panels: BLS and Troy & Sheflin, WID (Piketty, Saez, Zucman), BJS, and The Sentencing Project. [book §2.3.6, Fig 2.7]
+- **Note:** The Dred Scott U.S. Reports page 417 archive image remains on screen during the Cruikshank comparison. [SOURCES.md]
 
 ## S10-37 — Union density falls 28.4% → 10.8%; top-decile wealth rises 67.5% → 76.5%
 - **Anchor:** `Emmanuel Theodore (71:06)`
 - **Type:** hold
 - **Render:** `ext:Architecting_the_operation/video/yt02/archive/dredscott_416/dredscott_416_p417.png`
 - **Holds:** `S10-35`
-- **Note:** Panel 1 plots US union density falling from 28.4% to 10.8% while Panel 2 plots top-decile wealth climbing from 67.5% to 76.5%. [book §2.3.6, Fig 2.7]
+- **Note:** The Dred Scott U.S. Reports page 417 archive image remains on screen during the felony-in-possession discussion. [SOURCES.md]
 
 ## S10-38 — Overall US incarceration rises 231%: 108 → 358 per 100,000
 - **Anchor:** `Emmanuel Theodore (71:17)`
 - **Type:** hold
 - **Render:** `ext:Architecting_the_operation/video/yt02/archive/dredscott_416/dredscott_416_p417.png`
 - **Holds:** `S10-35`
-- **Note:** Panel 3 plots the overall US incarceration rate climbing 231% from 108 to 358 per 100,000 residents. [book §2.3.6; MANUSCRIPT_GAP §5]
+- **Note:** The Dred Scott U.S. Reports page 417 archive image remains on screen during the compulsory militia and patrol analysis. [SOURCES.md]
 
 ## S10-39 — Black incarceration rate: 588 (1965) → 3,074 (2010) → 1,821 (2020)
 - **Anchor:** `Emmanuel Theodore (71:34)`
 - **Type:** hold
 - **Render:** `ext:Architecting_the_operation/video/yt02/archive/dredscott_416/dredscott_416_p417.png`
 - **Holds:** `S10-35`
-- **Note:** The Black incarceration curve surges from 588 per 100,000 in 1965 to 3,074 in 2010 and 1,821 in 2020 (>3x baseline). [book §2.3.6, Fig 2.7]
+- **Note:** The Dred Scott U.S. Reports page 417 archive image remains on screen during the 1705 joint-wage calibration. [SOURCES.md]
 
 ## S10-40 — Composite Σ_sup(t) expands >23% as elite wealth gains 9 points
 - **Anchor:** `Emmanuel Theodore (71:44)`
 - **Type:** hold
 - **Render:** `ext:Architecting_the_operation/video/yt02/archive/dredscott_416/dredscott_416_p417.png`
 - **Holds:** `S10-35`
-- **Note:** Panel 4 plots the composite suppression envelope Σ_sup(t) expanding >23% alongside the +9 percentage-point top-decile wealth gain. [book §2.3, Definition 2.3]
+- **Note:** The Dred Scott U.S. Reports page 417 archive image remains on screen during the present-day arms-boundary discussion. [SOURCES.md]
 
 ## S10-41 — Primary source scan
 - **Anchor:** `Emmanuel Theodore (71:56)`
@@ -2449,7 +2449,7 @@
 - **Type:** hold
 - **Render:** `ext:Architecting_the_operation/video/yt02/archive/fbi_table8_2025/fbi_table8_2025_p1.png`
 - **Holds:** `S10-41`
-- **Note:** Item 2 reveals, listing law, policing, poverty, spatial containment, and anticipatory threat. [book §2.3, Definition 2.3]
+- **Note:** The FBI Expanded Homicide Data Table 8 page 1 archive image remains on screen during the two-series calibration proposal. [SOURCES.md]
 
 ## S10-43 — Arms-calibrated wage phasor
 - **Anchor:** `Emmanuel Theodore (72:29)`
@@ -2461,79 +2461,79 @@
 - **Anchor:** `Emmanuel Theodore (72:41)`
 - **Type:** diagram
 - **Render:** `manim:yt02/wage_phasor.py:WagePhasor`
-- **Note:** Three historical marker pins appear along the circular arc at 1705, 1894–1965, and Post-1965. [book Ch 4]
+- **Note:** The phasor rotates to θ = 90° under the 1705 first-implementation caption, with the 1705 pin indicated. [book Ch 4]
 
 ## S10-45 — Stop 1: 1705 Virginia Slave Codes at θ = 90° (Log 3)
 - **Anchor:** `Emmanuel Theodore (72:51)`
 - **Type:** diagram
 - **Render:** `manim:yt02/wage_phasor.py:WagePhasor`
-- **Note:** The phasor locks onto the 1705 marker at θ = 90° and opens the callout 'Log 3 · 1705 Virginia: W = jψ_s (Pure Status)'. [book Compiled Runtime Log 3, lines 15231-15241]
+- **Note:** The phasor holds at θ = 90° while Equation 3.5 highlights under the Log 3 · W = jψ_s caption. [book Compiled Runtime Log 3, lines 15231-15241]
 
 ## S10-46 — Modest 1705 freedom dues dominated by permanent racial status
 - **Anchor:** `Emmanuel Theodore (73:02)`
 - **Type:** diagram
 - **Render:** `manim:yt02/wage_phasor.py:WagePhasor`
-- **Note:** Thephasor nudges to θ = 84° to show minor freedom dues (ψ_m small) overwhelmed by the long horizontal status bar ψ_s. [book Ch 4]
+- **Note:** The phasor rotates to θ = 72° and indicates the 1705 pin under the material-and-legal-privileges caption. [book Ch 4]
 
 ## S10-47 — Near-pure status regime aligning the Buffer Class with planters
 - **Anchor:** `Emmanuel Theodore (73:13)`
 - **Type:** diagram
 - **Render:** `manim:yt02/wage_phasor.py:WagePhasor`
-- **Note:** The phasor returns to θ = 90°, locking the 1705 pure-status badge in the historical log rail. [book Ch 4; Compiled Runtime Log 3]
+- **Note:** The phasor holds at θ = 72° under the 1705 mixed-allocation caption. [book Ch 4; Compiled Runtime Log 3]
 
 ## S10-48 — Stop 2: 1894–1965 containment and the Pullman Corollary
 - **Anchor:** `Emmanuel Theodore (73:22)`
 - **Type:** diagram
 - **Render:** `manim:yt02/wage_phasor.py:WagePhasor`
-- **Note:** The phasor moves to θ = 72° and opens the historical callout 'Log 9 · 1894–1965: Pullman Strike & New Deal / GI Bill'. [book Compiled Runtime Log 9, lines 15298-15306]
+- **Note:** The phasor rotates to θ = 90° and indicates the 1894–1965 pin under the containment caption. [book Compiled Runtime Log 9, lines 15298-15306]
 
 ## S10-49 — Racially restricted New Deal/GI Bill credit paired with status
 - **Anchor:** `Emmanuel Theodore (73:34)`
 - **Type:** diagram
 - **Render:** `manim:yt02/wage_phasor.py:WagePhasor`
-- **Note:** At θ = 108°, the Pullman algebraic note jψ_s · jψ_s = −ψ_s² appears, showing compounded status wage driving material loss. [book Ch 10; Ch 15]
+- **Note:** At θ = 84°, the material channel highlights under the partitioned-credit-and-protection caption. [book Ch 10; Ch 15]
 
 ## S10-50 — Log 9 telemetry: Φ_load = 0.72, ρ_τ = 0.68
 - **Anchor:** `Emmanuel Theodore (73:46)`
 - **Type:** diagram
 - **Render:** `manim:yt02/wage_phasor.py:WagePhasor`
-- **Note:** The telemetry readout updates to Φ_load = 0.72 and ρ_τ = 0.68 beside the 1894–1965 marker. [book Compiled Runtime Log 9; YT02_outline SEG 09]
+- **Note:** The phasor rotates to θ = 90° while the Φ_load = 0.72 and ρ_τ = 0.68 telemetry readout appears. [book Compiled Runtime Log 9; YT02_outline SEG 09]
 
 ## S10-51 — Stop 3: Post-1965 rotation past 90° into Quadrant II
 - **Anchor:** `Emmanuel Theodore (73:57)`
 - **Type:** diagram
 - **Render:** `manim:yt02/wage_phasor.py:WagePhasor`
-- **Note:** The phasor swings to θ = 118° past the 90° line and opens the callout 'Logs 14–15 · Post-1965: Quadrant II Rotation'. [book Ch 0, AC mode; §2.3.5]
+- **Note:** The phasor rotates to θ = 108° and indicates the Post-1965 pin under the proxy-channels caption. [book Ch 0, AC mode; §2.3.5]
 
 ## S10-52 — Chapter 0 AC-mode exemplars: Southern Strategy to 2008 bailout
 - **Anchor:** `Emmanuel Theodore (74:07)`
 - **Type:** diagram
 - **Render:** `manim:yt02/wage_phasor.py:WagePhasor`
-- **Note:** The phasor advances to θ = 124° as tags for Southern Strategy, War on Drugs, 1994 Crime Bill, and 2008 bailout populate the rail. [book Ch 0, AC mode]
+- **Note:** The phasor advances to θ = 118° as the Southern Strategy, War on Drugs, and 1994 Crime Bill proxy tags appear. [book Ch 0, AC mode]
 
 ## S10-53 — Dual role of mass incarceration: containing O andCannibalizing I_buffer
 - **Anchor:** `Emmanuel Theodore (74:20)`
 - **Type:** diagram
 - **Render:** `manim:yt02/wage_phasor.py:WagePhasor`
-- **Note:** At θ = 128°, the crimson downward bar ψ_m < 0 and amber status bar ψ_s > 0 highlight the dual containment and buffer-extraction mode. [book Ch 0; §2.3.5; Ch 12]
+- **Note:** At θ = 124°, the carceral and financial proxy tags remain visible in Quadrant II. [book Ch 0; §2.3.5; Ch 12]
 
 ## S10-54 — Deindustrialization, debt enclosure, and deregulation driving ψ_m < 0
 - **Anchor:** `Emmanuel Theodore (74:31)`
 - **Type:** diagram
 - **Render:** `manim:yt02/wage_phasor.py:WagePhasor`
-- **Note:** The phasor rotates to θ = 135°, extending the crimson negative material bar ψ_m < 0 downward. [book Ch 13]
+- **Note:** The phasor rotates to θ = 128° and highlights the negative material projection. [book Ch 13]
 
 ## S10-55 — Positive culture-war status ψ_s masking negative material ψ_m
 - **Anchor:** `Emmanuel Theodore (74:41)`
 - **Type:** diagram
 - **Render:** `manim:yt02/wage_phasor.py:WagePhasor`
-- **Note:** At θ = 132°, the positive horizontal amber bar ψ_s glows while the downward crimson bar ψ_m records ongoing material drainage. [book Ch 0, AC mode; Ch 3, Eq 3.5]
+- **Note:** At θ = 135°, the positive status channel highlights while the material projection remains negative. [book Ch 0, AC mode; Ch 3, Eq 3.5]
 
 ## S10-56 — Equation 3.5 unifying all three historical regimes on one dial
 - **Anchor:** `Emmanuel Theodore (74:51)`
 - **Type:** diagram
 - **Render:** `manim:yt02/wage_phasor.py:WagePhasor`
-- **Note:** The phasor holds at θ = 128° with all three historical pins (1705, 1894–1965, Post-1965) and Equation 3.5 illuminated together. [book Ch 3, Eq 3.5; Ch 13]
+- **Note:** The phasor rotates to θ = 132° while Equation 3.5 and all three historical pins highlight together. [book Ch 3, Eq 3.5; Ch 13]
 
 <!-- SEG 11 · Test 3: The American backlash record, 1840–2020 -->
 
@@ -2688,28 +2688,28 @@
 - **Anchor:** `Emmanuel Theodore (80:45)`
 - **Type:** card
 - **Render:** `figma-card:cards/S10-21.json`
-- **Note:** Item 3 reveals strategist, date, and Lamis interview before the tape. [source atwater_1981]
+- **Note:** Item 1 presents the disputed Baum (1994) Ehrlichman quotation in the Southern Strategy evidentiary audit. [book §2.3.5, citing Baum]
 
 ## S11-24 — Log 2 variables and phasor: E, O_racialized, I, and θ = 90°
 - **Anchor:** `Emmanuel Theodore (80:59)`
 - **Type:** hold
 - **Render:** `figma-card:cards/S10-21.json`
 - **Holds:** `S11-23`
-- **Note:** Content note in editorial band; slur stays off-screen. [editorial]
+- **Note:** Item 2 presents the evidentiary qualification for the posthumously published Ehrlichman quotation. [book §2.3.5; MANUSCRIPT_GAP §5]
 
 ## S11-25 — Log 2 Result: Dum Diversas, Romanus Pontifex, Casa dos Escravos
 - **Anchor:** `Lee Atwater (81:08)`
 - **Type:** hold
 - **Render:** `figma-card:cards/S10-21.json`
 - **Holds:** `S11-23`
-- **Note:** Archival [clip:atwater_1981] over held title card; ladder 1954→1968→1981 in captions. [source atwater_1981]
+- **Note:** Item 3 identifies the 1981 Lamis interview with strategist Lee Atwater. [source atwater_1981]
 
 ## S11-26 — Log 2 Result: Dum Diversas, Romanus Pontifex, Casa dos Escravos
 - **Anchor:** `Emmanuel Theodore (82:00)`
 - **Type:** hold
 - **Render:** `figma-card:cards/S10-21.json`
 - **Holds:** `S11-23`
-- **Note:** The Result console prints Dum Diversas (1452), Romanus Pontifex (1455), and the Casa dos Escravos (1486). [book Compiled Runtime Log 2, line 15228]
+- **Note:** Item 4 presents the 1954 → 1968 → 1981 abstraction from explicit racial language to fiscal and tax proxies. [source atwater_1981]
 
 ## S11-27 — 12-fold rise in US drug incarceration, 1972–2002 (Caulkins & Chandler)
 - **Anchor:** `Emmanuel Theodore (82:11)`
@@ -2776,7 +2776,7 @@
 - **Type:** hold
 - **Render:** `figma-card:cards/S10-33.json`
 - **Holds:** `S11-35`
-- **Note:** Term 1 (Σ_sup(t) = ψ_s + ψ_m + R(t) + Φ_load(t)) illuminates below the main equation box. [book §2.3.6, Eq 2.14]
+- **Note:** Term 2 highlights the Equation 2.14 crash condition dM/dt > dΣ_sup/dt. [book §2.3.6, Eq 2.14]
 
 ## S11-37 — Equation 2.14 crash condition: dM/dt > dΣ_sup/dt
 - **Anchor:** `Emmanuel Theodore (84:48)`
@@ -2946,7 +2946,7 @@
 - **Type:** hold
 - **Render:** `figma-card:cards/S10-56.json`
 - **Holds:** `S11-58`
-- **Note:** All seven era tabs pulse across the top rail, showing the invariant objective function across changing interfaces and latencies. [book Preface; Compiled Runtime Log]
+- **Note:** Row 3 remains focused on the supported Predictions 2, 3, and 4 and the undefeated Refutation Standard 2. [book §2.3.5; §2.3.6; YT02_outline P3, P4, R2]
 
 <!-- SEG 12 · Five centuries in versions -->
 
@@ -3539,7 +3539,7 @@
 - **Anchor:** `Emmanuel Theodore (106:39)`
 - **Type:** hold
 - **Render:** `figma-card:cards/S13-15.json`
-- **Note:** Term 1 (Threat(M(t))) illuminates, showing policy concessions scaling with rising class mobilization threat. [book Ch 19, lines 11645-11653]
+- **Note:** The scalar-prejudice and vector-racism equation card displays Equations 3.1 and 25.1. [book Ch 3, Eq 3.1; Ch 25, Eq 25.1]
 
 ## S14-16 — Applying Equations 3.1 and 25.1 to Refutation Standard 3
 - **Anchor:** `Emmanuel Theodore (106:50)`
@@ -3763,14 +3763,14 @@
 - **Anchor:** `Emmanuel Theodore (113:09)`
 - **Type:** card
 - **Render:** `figma-card:cards/S14-22.json`
-- **Note:** Item 1 of the closing card reveals, pointing to Episode 1 for the Bayesian defense and RLC electrodynamic derivations. [editorial]
+- **Note:** Item 1 points to the Chapter 2 walkthrough for the Bayesian defense and full RLC electrodynamic derivations. [editorial]
 
 ## S15-23 — Open-access manuscript of The Original Power (146 anchor cases)
 - **Anchor:** `Emmanuel Theodore (113:23)`
 - **Type:** hold
 - **Render:** `figma-card:cards/S14-22.json`
 - **Holds:** `S15-22`
-- **Note:** Item 2 reveals, citing the open-access manuscript and its 146 calibrated historical anchor cases. [book Empirical Methodology]
+- **Note:** Item 1 resets on the closing card and points to the Chapter 2 walkthrough. [editorial]
 
 ## S15-24 — Open-access manuscript of The Original Power (146 anchor cases)
 - **Anchor:** `Emmanuel Theodore (113:32)`
@@ -3783,4 +3783,4 @@
 - **Anchor:** `Emmanuel Theodore (113:43)`
 - **Type:** card
 - **Render:** `figma-card:cards/S14-22.json`
-- **Note:** Item 3 reveals, closing Episode 2 of Architecting the Operation: What Racism Is. [editorial]
+- **Note:** Item 1 resets on the closing card and points to the Chapter 2 walkthrough. [editorial]
