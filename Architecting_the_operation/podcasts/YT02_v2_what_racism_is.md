@@ -1417,7 +1417,7 @@ The psychological wage costs the Elite zero capital. Its value comes from guaran
 <!-- [book Ch 3, Complex Suppression Allocation definition] -->
 
 Emmanuel Theodore (55:22)
-Continue the rotation past ninety degrees. The phasor rises above the horizontal line into the framework's Quadrant II regime.
+Continue the rotation past ninety degrees. The phasor rises above the horizontal line into the framework's Quadrant two regime.
 <!-- [book Ch 0, AC mode; Ch 3, Eq 3.5] -->
 
 Emmanuel Theodore (55:30)
@@ -1437,7 +1437,7 @@ The ninety-degree position is the extraction kernel's default operating mode in 
 <!-- [book Ch 3, Complex Suppression Allocation definition] -->
 
 Emmanuel Theodore (56:08)
-Past ninety degrees, the manuscript names Quadrant II as its fascism threshold: negative material transfer paired with hyper-inflated psychological wages.
+Past ninety degrees, the manuscript names Quadrant two as its fascism threshold: negative material transfer paired with hyper-inflated psychological wages.
 <!-- [book Ch 3, Eq 3.5, phase-angle regimes] -->
 
 Emmanuel Theodore (56:16)
@@ -1553,7 +1553,7 @@ As deindustrialization, debt enclosure, and declining union power extract from t
 <!-- [book Ch 13] -->
 
 Emmanuel Theodore (58:11)
-Culture-war status remains positive on the horizontal axis. The resulting Quadrant II phasor describes material loss paired with intensified psychological compensation.
+Culture-war status remains positive on the horizontal axis. The resulting Quadrant two phasor describes material loss paired with intensified psychological compensation.
 <!-- [book Ch 0, AC mode; Ch 3, Eq 3.5] -->
 
 Emmanuel Theodore (58:20)
