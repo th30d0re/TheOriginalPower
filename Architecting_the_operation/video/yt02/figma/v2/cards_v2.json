@@ -668,26 +668,26 @@
   },
   {
     "kind": "title",
-    "headline": "The Structural Argument · The Original Power",
+    "headline": "Segment 02 · What Makes a System a System",
     "items": [
       {
-        "title": "Segment 02 · The Vector Definition",
-        "detail": "Racism defined as institutional force with a direction, measured against scalar prejudice."
+        "title": "Formal Systems Criterion",
+        "detail": "Demonstrating that racism satisfies the engineering anatomy of a regulated machine."
       },
       {
-        "title": "Segments 03–04 · The Causal Arrow",
-        "detail": "Where the established account ends, and the hypothesis that reverses its direction."
+        "title": "State Variables & Equations",
+        "detail": "Bounded feedback-controlled architecture with measurable flows and governing laws."
       },
       {
-        "title": "Segments 05–07 · System, Sets, Projection",
-        "detail": "The engineering audit, the two sets, and the orthographic illusion."
+        "title": "Five-Part Engineering Audit",
+        "detail": "Components, policed boundary, inputs/outputs, objective function, and feedback loops."
       },
       {
-        "title": "Segments 08–15 · The Tests",
-        "detail": "Portugal, Virginia, the complex wage, the backlash record, and the rebuilt definition."
+        "title": "Chapters 0, 2, and 4",
+        "detail": "Auditing the American racial order against each engineering requirement."
       }
     ],
-    "sources": "The Original Power, Preface & Ch. 2",
+    "sources": "The Original Power, Ch. 0, Ch. 2, Ch. 4",
     "qrUrl": "",
     "id": "S02-01",
     "frame": "card v2 S01-48",
@@ -948,7 +948,7 @@
   },
   {
     "kind": "title",
-    "headline": "Segment 03 · Where the Agreement Ends",
+    "headline": "Segment 05 · Where the Agreement Ends",
     "items": [
       {
         "title": "Assembled Analytical Toolkit",
@@ -1017,6 +1017,39 @@
       31.33
     ],
     "duration": 40.74
+  },
+  {
+    "kind": "equation",
+    "headline": "Conventional Causal Model · Equation 2.5",
+    "number": "Equation 2.5",
+    "latex": "\\mathrm{Individual\\ Prejudice} \\longrightarrow \\mathrm{Discriminatory\\ Actions} \\longrightarrow \\mathrm{Systemic\\ Outcomes}",
+    "terms": [
+      {
+        "latex": "\\mathrm{Individual\\ Prejudice}",
+        "gloss": "Private racial antipathy treated as the generative root"
+      },
+      {
+        "latex": "\\mathrm{Discriminatory\\ Actions}",
+        "gloss": "Isolated interpersonal acts aggregating across transactions"
+      },
+      {
+        "latex": "\\mathrm{Systemic\\ Outcomes}",
+        "gloss": "Segregation, wealth gaps, and sentencing disparities as downstream sums"
+      }
+    ],
+    "items": [],
+    "sources": "The Original Power, Ch. 2, §2.2, Eq. 2.5",
+    "qrUrl": "",
+    "id": "v2-S03-10",
+    "frame": "card v2 S03-10",
+    "primary": "S03-10",
+    "beats": [
+      0.25,
+      16.21,
+      26.81,
+      33.25
+    ],
+    "duration": 45.19
   },
   {
     "kind": "table",
@@ -1108,6 +1141,35 @@
       21.49
     ],
     "duration": 36.35
+  },
+  {
+    "kind": "source",
+    "headline": "Figure 2.2 · Causal Reversal Mechanism",
+    "items": [
+      {
+        "title": "Forward Generative Chain",
+        "detail": "Elite Economic Interests → Systemic Racialization → Interpersonal Prejudice (two solid arrows)."
+      },
+      {
+        "title": "Reinforcing Feedback Loop",
+        "detail": "Dashed arc from Interpersonal Prejudice back into Systemic Racialization."
+      },
+      {
+        "title": "Stabilized Apparatus",
+        "detail": "Cultivated public prejudice legitimates laws, labor partitions, and state propaganda."
+      }
+    ],
+    "sources": "The Original Power, Ch. 2, §2.2, Fig. 2.2",
+    "qrUrl": "",
+    "id": "v2-S04-04",
+    "frame": "card v2 S04-04",
+    "primary": "S04-04",
+    "beats": [
+      0.25,
+      14.08,
+      23.52
+    ],
+    "duration": 36.21
   },
   {
     "kind": "quote",
@@ -1289,7 +1351,7 @@
   },
   {
     "kind": "title",
-    "headline": "Segment 05 · What Makes a System a System",
+    "headline": "Segment 02 · What Makes a System a System",
     "items": [
       {
         "title": "Formal Systems Criterion",
@@ -1320,6 +1382,30 @@
       32.09
     ],
     "duration": 39.69
+  },
+  {
+    "kind": "title",
+    "headline": "Four Operational Modules Across the Tiers",
+    "items": [
+      {
+        "title": "Asymmetric Autonomy Restriction",
+        "detail": "Reproductive control and movement constraints on the Out-group."
+      },
+      {
+        "title": "Selective Empathy · Ideology · Critique Resistance",
+        "detail": "Validates In-group grievances, commissions justification, and blocks structural critique."
+      }
+    ],
+    "sources": "The Original Power, Preface; Ch. 2",
+    "qrUrl": "",
+    "id": "v2-S05-11",
+    "frame": "card v2 S05-11",
+    "primary": "S05-11",
+    "beats": [
+      0.25,
+      15.07
+    ],
+    "duration": 25.55
   },
   {
     "kind": "equation",
@@ -1464,7 +1550,7 @@
   },
   {
     "kind": "title",
-    "headline": "Segment 06 · The Set-Theoretic Ladder",
+    "headline": "Segment 03 · The Set-Theoretic Ladder",
     "items": [
       {
         "title": "Section 2.1 Set Ladder",
@@ -1524,6 +1610,40 @@
       47.47
     ],
     "duration": 55.33
+  },
+  {
+    "kind": "source",
+    "headline": "Elementary Set Operations on Population U",
+    "items": [
+      {
+        "title": "Set and Subset",
+        "detail": "Circle A inside rectangle U: a well-defined collection and proper subset A ⊂ U."
+      },
+      {
+        "title": "Union and Intersection",
+        "detail": "A ∪ B joins members; A ∩ B keeps only shared members."
+      },
+      {
+        "title": "Disjoint Union",
+        "detail": "When A ∩ B = ∅, the join is a partition written A ∪̇ B."
+      },
+      {
+        "title": "Plain-Language Symbols",
+        "detail": "Every operator on screen maps to spoken definitions before Equations 2.1–2.4."
+      }
+    ],
+    "sources": "The Original Power, Ch. 2, §2.1",
+    "qrUrl": "",
+    "id": "v2-S06-08",
+    "frame": "card v2 S06-08",
+    "primary": "S06-08",
+    "beats": [
+      0.25,
+      7.68,
+      15.0,
+      23.12
+    ],
+    "duration": 30.85
   },
   {
     "kind": "equation",
@@ -1605,6 +1725,35 @@
     "duration": 24.9
   },
   {
+    "kind": "title",
+    "headline": "Equation 2.2 · Structural Positions in the Circuit",
+    "items": [
+      {
+        "title": "Four In-group Tiers",
+        "detail": "Flat block I splits into Elite, Puppet, Enforcer, and Buffer structural tiers above O."
+      },
+      {
+        "title": "Payoff Ordering",
+        "detail": "Benefit of E ≫ Puppet ≫ F_enforce ≫ I_buffer (Equation 0.3)."
+      },
+      {
+        "title": "Set I Preserved",
+        "detail": "Internal inequality exposed while the racial In-group remains one bounded set."
+      }
+    ],
+    "sources": "The Original Power, Ch. 0, Eq. 0.3; Ch. 2, §2.1, Eq. 2.2",
+    "qrUrl": "",
+    "id": "v2-S06-19",
+    "frame": "card v2 S06-19",
+    "primary": "S06-19",
+    "beats": [
+      0.25,
+      13.21,
+      24.76
+    ],
+    "duration": 31.81
+  },
+  {
     "kind": "equation",
     "headline": "Level 3 · Out-Group Decomposition",
     "number": "Equation 2.3",
@@ -1630,6 +1779,35 @@
       12.17
     ],
     "duration": 23.67
+  },
+  {
+    "kind": "source",
+    "headline": "Equation 2.3 · Out-group Partition",
+    "items": [
+      {
+        "title": "O_racialized",
+        "detail": "Black Americans under chattel slavery, Jim Crow, and mass carceral containment."
+      },
+      {
+        "title": "O_adjacent,1 … O_adjacent,m",
+        "detail": "Indigenous dispossession, Latino and Asian labor bars, pre-incorporation European arrivals."
+      },
+      {
+        "title": "Wedge Management",
+        "detail": "Differential concessions, model-minority narratives, and border policing between subordinated bands."
+      }
+    ],
+    "sources": "The Original Power, Ch. 2, §2.1, Eq. 2.3",
+    "qrUrl": "",
+    "id": "v2-S06-24",
+    "frame": "card v2 S06-24",
+    "primary": "S06-24",
+    "beats": [
+      0.25,
+      9.48,
+      26.75
+    ],
+    "duration": 37.98
   },
   {
     "kind": "equation",
@@ -1658,6 +1836,50 @@
       17.4
     ],
     "duration": 28.68
+  },
+  {
+    "kind": "source",
+    "headline": "Equation 2.4 · Recursive α Partition",
+    "items": [
+      {
+        "title": "Axis Selector α",
+        "detail": "Gender, wealth, credentials, religion, citizenship, geography, criminal record."
+      },
+      {
+        "title": "X⁺_α and X⁻_α",
+        "detail": "Vertical cut divides any subset X into locally advantaged and subordinated cells."
+      },
+      {
+        "title": "α = gender in I_buffer",
+        "detail": "Male head-of-household authority versus female coverture subordination (Chapter 8)."
+      },
+      {
+        "title": "α = property / felony",
+        "detail": "Second cut yields four compartments with distinct legal rights and wage ceilings."
+      },
+      {
+        "title": "α = credentials in O_racialized",
+        "detail": "Selective incorporation O⁺_α above mass containment O⁻_α."
+      },
+      {
+        "title": "Partition notation",
+        "detail": "Each split writes X = X⁺_α ∪̇ X⁻_α with disjoint cells."
+      }
+    ],
+    "sources": "The Original Power, Ch. 2, §2.1, Eq. 2.4; Ch. 8",
+    "qrUrl": "",
+    "id": "v2-S06-30",
+    "frame": "card v2 S06-30",
+    "primary": "S06-30",
+    "beats": [
+      0.25,
+      12.42,
+      23.68,
+      34.41,
+      44.42,
+      55.53
+    ],
+    "duration": 69.13
   },
   {
     "kind": "table",
@@ -1701,6 +1923,29 @@
       23.94
     ],
     "duration": 34.47
+  },
+  {
+    "kind": "title",
+    "headline": "Figure 2.1 · Zooming the Binary",
+    "items": [
+      {
+        "title": "Flat Blocks I and O",
+        "detail": "Opening frame: coarse binary partition before internal structure."
+      },
+      {
+        "title": "Five Vertical Tiers",
+        "detail": "Zoom reveals tier stack and internal α-axis subdivisions (Figure 2.1)."
+      }
+    ],
+    "sources": "The Original Power, Ch. 2, §2.1, Fig. 2.1",
+    "qrUrl": "",
+    "id": "v2-S06-39",
+    "frame": "card v2 S06-39",
+    "primary": "S06-39",
+    "beats": [
+      0.25
+    ],
+    "duration": 11.39
   },
   {
     "kind": "table",
@@ -1755,7 +2000,7 @@
   },
   {
     "kind": "title",
-    "headline": "Segment 08 · Test 1: Portugal, 1441–1486",
+    "headline": "Segment 07 · Test 1: Portugal, 1441–1486",
     "items": [
       {
         "title": "Chapter 3 · Version 1.0",
@@ -2116,6 +2361,84 @@
     "duration": 44.64
   },
   {
+    "kind": "source",
+    "headline": "Continuous Pigmentation Cline",
+    "items": [
+      {
+        "title": "Huxley 1938 cline",
+        "detail": "Polygenic skin-reflectance gradient correlated with latitude and UV radiation."
+      },
+      {
+        "title": "Jablonski & Chaplin 2000",
+        "detail": "Folate protection versus vitamin D synthesis across environments."
+      },
+      {
+        "title": "Crawford et al. 2017",
+        "detail": "Four loci explain ~29% of measured pigmentation variance across N = 2,092 Africans."
+      },
+      {
+        "title": "La Braña 7 ka",
+        "detail": "A 7,000-year-old genome carries dark-skin alleles with a blue-eye haplotype (Olalde et al. 2014)."
+      },
+      {
+        "title": "Cheddar Man",
+        "detail": "Mesolithic Britain: dark-to-black skin with blue/green eyes (Brace et al. 2019)."
+      }
+    ],
+    "sources": "The Original Power, Ch. 2, §2.3; Huxley (1938); Jablonski & Chaplin (2000); Crawford et al. (2017)",
+    "qrUrl": "",
+    "id": "v2-S08-43",
+    "frame": "card v2 S08-43",
+    "primary": "S08-43",
+    "beats": [
+      0.25,
+      14.81,
+      23.53,
+      33.96,
+      42.75
+    ],
+    "duration": 52.88
+  },
+  {
+    "kind": "source",
+    "headline": "Statutory Binary Cut Across the Cline",
+    "items": [
+      {
+        "title": "Legal partition blade",
+        "detail": "Vertical statutory cut converts continuous pigmentation into two administrative boxes."
+      },
+      {
+        "title": "Phenotype surveillance",
+        "detail": "Visible trait polices mobility and inheritance where religion allowed conversion."
+      },
+      {
+        "title": "1449 descent logic",
+        "detail": "Sentencia-Estatuto blood partition fused with Atlantic plantation phenotype."
+      },
+      {
+        "title": "Deployment sequence",
+        "detail": "1441 seizure → 1444 scaling → 1452/1455 papal authorization → 1453 ideology → 1486 fiscal lock."
+      },
+      {
+        "title": "Extraction compile",
+        "detail": "Continuous biology behind walls of category, boundary, inheritance rule, and enforcement."
+      }
+    ],
+    "sources": "The Original Power, Ch. 2, §2.3; Ch. 3; Nirenberg (2002)",
+    "qrUrl": "",
+    "id": "v2-S08-48",
+    "frame": "card v2 S08-48",
+    "primary": "S08-48",
+    "beats": [
+      0.25,
+      9.82,
+      23.2,
+      35.32,
+      56.25
+    ],
+    "duration": 66.89
+  },
+  {
     "kind": "equation",
     "headline": "Control Case 1 · Roman Slavery (Equation 3.9)",
     "number": "Equation 3.9",
@@ -2251,7 +2574,7 @@
   },
   {
     "kind": "title",
-    "headline": "Segment 09 · Test 2: Virginia, 1640–1705",
+    "headline": "Segment 08 · Test 2: Virginia, 1640–1705",
     "items": [
       {
         "title": "Chapter 4 · Colonial Virginia",
@@ -2570,6 +2893,40 @@
     "duration": 81.73
   },
   {
+    "kind": "timeline",
+    "headline": "October 1705 Virginia Slave Codes",
+    "items": [
+      {
+        "title": "1676 labor block",
+        "detail": "Joint L_white + L_black labor facing Elite block E before statutory redraw."
+      },
+      {
+        "title": "1705 partition",
+        "detail": "House of Burgesses Act Concerning Servants and Slaves redraws the labor partition."
+      },
+      {
+        "title": "I_buffer elevation",
+        "detail": "Poor Europeans elevated; enslaved Africans classified as real estate."
+      },
+      {
+        "title": "Enforcement lock",
+        "detail": "Testimony ban, office bar, and white fugitive-patrol deputization onto O_racialized."
+      }
+    ],
+    "sources": "The Original Power, Ch. 4, Eq. 4.3–4.4",
+    "qrUrl": "",
+    "id": "v2-S09-43",
+    "frame": "card v2 S09-43",
+    "primary": "S09-43",
+    "beats": [
+      0.25,
+      12.56,
+      23.04,
+      33.24
+    ],
+    "duration": 43.39
+  },
+  {
     "kind": "equation",
     "headline": "1705 State Transition · Equations 4.3 & 4.4",
     "number": "Equations 4.3 & 4.4",
@@ -2634,7 +2991,7 @@
   },
   {
     "kind": "title",
-    "headline": "Segment 11 · Test 3: Backlash Record, 1840–2020",
+    "headline": "Segment 10 · Test 3: Backlash Record, 1840–2020",
     "items": [
       {
         "title": "Quantitative American Archive",
@@ -2685,6 +3042,70 @@
     "duration": 42.37
   },
   {
+    "kind": "stat_bars",
+    "headline": "Figure 2.4 · Cotton Revenue and Patrol Ratio",
+    "items": [
+      {
+        "title": "1840 benchmark",
+        "detail": "2.70% patrol-to-revenue ratio: $2.0M patrol and militia spend on $74.1M cotton revenue."
+      },
+      {
+        "title": "1850 benchmark",
+        "detail": "2.88% ratio: $2.95M patrol spend on $102.5M cotton revenue."
+      },
+      {
+        "title": "1860 benchmark",
+        "detail": "2.75% ratio: $6.8M patrol spend on $247.0M cotton revenue."
+      },
+      {
+        "title": "1831–1860 stability",
+        "detail": "Revenue +233%; enslaved population 2,487,455 → 3,953,761; ratio band 2.70%–2.88% (CV < 0.04)."
+      }
+    ],
+    "sources": "The Original Power, Ch. 2, §2.3.2, Fig. 2.4; US Census Series K 554–563",
+    "qrUrl": "",
+    "id": "v2-S11-06",
+    "frame": "card v2 S11-06",
+    "primary": "S11-06",
+    "beats": [
+      0.25,
+      11.19,
+      23.99,
+      37.68,
+      53.05
+    ],
+    "duration": 75.28
+  },
+  {
+    "kind": "source",
+    "headline": "Part A Confounds · Equation 2.7 Kernel",
+    "items": [
+      {
+        "title": "1793 cotton gin",
+        "detail": "Whitney gin: ~50× processing efficiency; Jevons expansion of acreage and enslaved labor (Flachs 2025; Lakwete)."
+      },
+      {
+        "title": "August 1831 Southampton",
+        "detail": "Nat Turner rebellion triggers 1831–1832 anti-literacy, assembly ban, compulsory white patrol statutes."
+      },
+      {
+        "title": "Part A verdict",
+        "detail": "Predictions 4 and 2 supported; patrol overhead locked at 2.7%–2.9% of cotton extraction."
+      }
+    ],
+    "sources": "The Original Power, Ch. 2, §2.3.2; Ch. 9; Flachs (2025); Lakwete",
+    "qrUrl": "",
+    "id": "v2-S11-11",
+    "frame": "card v2 S11-11",
+    "primary": "S11-11",
+    "beats": [
+      0.25,
+      20.62,
+      39.99
+    ],
+    "duration": 53.53
+  },
+  {
     "kind": "equation",
     "headline": "Part B · Interface Optimizer (Equations 2.9–2.10)",
     "number": "Equations 2.9 & 2.10",
@@ -2711,6 +3132,40 @@
       26.85
     ],
     "duration": 43.3
+  },
+  {
+    "kind": "source",
+    "headline": "1954–1965 Jim Crow Cost Spike",
+    "items": [
+      {
+        "title": "Three rising costs",
+        "detail": "C_legitimacy, C_coercive, and C_economic spike maintaining explicit Jim Crow partition."
+      },
+      {
+        "title": "Cold War legitimacy",
+        "detail": "Televised Birmingham and Selma brutality; Global South leverage on US moral authority (Dudziak)."
+      },
+      {
+        "title": "Movement pressure",
+        "detail": "Boycotts, sit-ins, and federal troop deployments push coercion and economic costs unsustainable."
+      },
+      {
+        "title": "Interface Swap · Eq. 2.10",
+        "detail": "1964–1965 statutes retire explicit racial labels for carceral and fiscal proxies."
+      }
+    ],
+    "sources": "The Original Power, Ch. 2, §2.3.5, Eq. 2.10; Ch. 3; Dudziak",
+    "qrUrl": "",
+    "id": "v2-S11-17",
+    "frame": "card v2 S11-17",
+    "primary": "S11-17",
+    "beats": [
+      0.25,
+      12.65,
+      38.67,
+      48.84
+    ],
+    "duration": 63.14
   },
   {
     "kind": "source",
@@ -2873,6 +3328,50 @@
       29.71
     ],
     "duration": 42.1
+  },
+  {
+    "kind": "stat_bars",
+    "headline": "Figure 2.7 · Post-1965 Backlash Series (1965–2020)",
+    "items": [
+      {
+        "title": "Union density (BLS; Troy & Sheflin)",
+        "detail": "10.8% in 2020, down from 28.4% in 1965."
+      },
+      {
+        "title": "Top-decile wealth (WID)",
+        "detail": "76.5% in 2020, up from 67.5% in 1965."
+      },
+      {
+        "title": "US incarceration (BJS)",
+        "detail": "+231%: from 108 to 358 per 100,000."
+      },
+      {
+        "title": "Black incarceration (BJS; Sentencing Project)",
+        "detail": "3,074 at the 2010 peak, up from 588; 1,821 by 2020."
+      },
+      {
+        "title": "Σ_suppression envelope",
+        "detail": ">23% composite suppression expansion alongside a +9-point top-decile wealth gain."
+      },
+      {
+        "title": "Biological Embedding",
+        "detail": "Chronic social exposure becomes a physiological system state."
+      }
+    ],
+    "sources": "The Original Power, Ch. 2, §2.3.6, Fig. 2.7; BLS; Troy & Sheflin; WID; BJS; Sentencing Project; Definition 2.3",
+    "qrUrl": "",
+    "id": "v2-S11-38",
+    "frame": "card v2 S11-38",
+    "primary": "S11-38",
+    "beats": [
+      0.25,
+      17.41,
+      30.98,
+      41.31,
+      58.59,
+      71.33
+    ],
+    "duration": 81.96
   },
   {
     "kind": "source",
@@ -3049,6 +3548,85 @@
       35.93
     ],
     "duration": 46.17
+  },
+  {
+    "kind": "stat_bars",
+    "headline": "Interference Engine · Φ_load and Spectral Carriers",
+    "items": [
+      {
+        "title": "Aligned grievance currents",
+        "detail": "0.2π phase gap: i₁(t) and i₂(t) align and sum to a coherent I_E(t) at the Elite node."
+      },
+      {
+        "title": "Constitutional phase jammer",
+        "detail": "1787: Madison's Federalist No. 10 advances Δφ toward π, and the vector sum collapses (Fig. 0.6)."
+      },
+      {
+        "title": "Φ_load dispersion",
+        "detail": "0.92 on the Equation 22.2 readout (0 = class lock, 1 = cancellation)."
+      },
+      {
+        "title": "Congressional Record DFT",
+        "detail": "24.06 = P_identity / P_class at the 4-year presidential carrier, f = 0.25 cycles/yr (N = 60)."
+      },
+      {
+        "title": "Electoral harmonics",
+        "detail": "21.02 at the 6-year Senate carrier; 12.86 at the 8-year two-term carrier; Parseval energy ratio 0.9996."
+      },
+      {
+        "title": "Google Trends weekly",
+        "detail": "12.82 at the 2-year midterm carrier in the 2004–2024 weekly series (Table 22.2)."
+      }
+    ],
+    "sources": "The Original Power, Ch. 0, Eq. 0.15–0.16; Ch. 5; Ch. 22, Eq. 22.2, Tables 22.1–22.2",
+    "qrUrl": "",
+    "id": "v2-S13-01",
+    "frame": "card v2 S13-01",
+    "primary": "S13-01",
+    "beats": [
+      0.25,
+      26.28,
+      145.48,
+      212.59,
+      226.11,
+      294.36
+    ],
+    "duration": 299
+  },
+  {
+    "kind": "compare",
+    "headline": "Figure 2.3 · Rebuilt Definitional Hierarchy",
+    "items": [
+      {
+        "title": "Empirical return",
+        "detail": "After partition walk and three tests, Figure 2.3 rebuilds racism from verified causal order."
+      },
+      {
+        "title": "Generative apex",
+        "detail": "Systemic policies, legal codes, and institutions serve Elite economic extraction."
+      },
+      {
+        "title": "Legitimating layer",
+        "detail": "Ideological narratives, media tropes, and racial doctrines naturalize the partition."
+      },
+      {
+        "title": "Downstream base",
+        "detail": "Interpersonal prejudice and discrimination cultivated inside the structure; feedback maintains it."
+      }
+    ],
+    "sources": "The Original Power, Ch. 2, §2.2, Fig. 2.3",
+    "qrUrl": "",
+    "id": "v2-S14-01",
+    "frame": "card v2 S14-01",
+    "primary": "S14-01",
+    "beats": [
+      0.25,
+      14.37,
+      23.16,
+      33.3,
+      42.5
+    ],
+    "duration": 53.73
   },
   {
     "kind": "quote",
@@ -3298,7 +3876,7 @@
   },
   {
     "kind": "title",
-    "headline": "Segment 15 · Complete Analytical Arc",
+    "headline": "Segment 14 · Complete Analytical Arc",
     "items": [
       {
         "title": "Arc Review",
@@ -3396,6 +3974,30 @@
       58.33
     ],
     "duration": 67.86
+  },
+  {
+    "kind": "title",
+    "headline": "Section 2.3.11 · Three Operational Modes",
+    "items": [
+      {
+        "title": "Mode 1 · Mode 2 · Mode 3",
+        "detail": "Intentional Design; Autonomous Propagation on incentive gradients; Conscious Intervention."
+      },
+      {
+        "title": "Case-by-case taxonomy",
+        "detail": "Each historical update classified as coordinated design or firmware propagation on inherited institutions."
+      }
+    ],
+    "sources": "The Original Power, Ch. 2, §2.3.11",
+    "qrUrl": "",
+    "id": "v2-S15-11",
+    "frame": "card v2 S15-11",
+    "primary": "S15-11",
+    "beats": [
+      0.25,
+      14.49
+    ],
+    "duration": 23.86
   },
   {
     "kind": "equation",

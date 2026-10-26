@@ -1,0 +1,42 @@
+{
+  "kind": "stat_bars",
+  "headline": "Interference Engine · Φ_load and Spectral Carriers",
+  "items": [
+    {
+      "title": "Aligned grievance currents",
+      "detail": "0.2π phase gap: i₁(t) and i₂(t) align and sum to a coherent I_E(t) at the Elite node."
+    },
+    {
+      "title": "Constitutional phase jammer",
+      "detail": "1787: Madison's Federalist No. 10 advances Δφ toward π, and the vector sum collapses (Fig. 0.6)."
+    },
+    {
+      "title": "Φ_load dispersion",
+      "detail": "0.92 on the Equation 22.2 readout (0 = class lock, 1 = cancellation)."
+    },
+    {
+      "title": "Congressional Record DFT",
+      "detail": "24.06 = P_identity / P_class at the 4-year presidential carrier, f = 0.25 cycles/yr (N = 60)."
+    },
+    {
+      "title": "Electoral harmonics",
+      "detail": "21.02 at the 6-year Senate carrier; 12.86 at the 8-year two-term carrier; Parseval energy ratio 0.9996."
+    },
+    {
+      "title": "Google Trends weekly",
+      "detail": "12.82 at the 2-year midterm carrier in the 2004–2024 weekly series (Table 22.2)."
+    }
+  ],
+  "sources": "The Original Power, Ch. 0, Eq. 0.15–0.16; Ch. 5; Ch. 22, Eq. 22.2, Tables 22.1–22.2",
+  "qrUrl": "",
+  "revealTurns": [
+    0,
+    2,
+    12,
+    18,
+    19,
+    25,
+    26
+  ],
+  "maxDuration": 299
+}

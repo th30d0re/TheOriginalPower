@@ -1,0 +1,28 @@
+{
+  "kind": "source",
+  "headline": "Continuous Pigmentation Cline",
+  "items": [
+    {
+      "title": "Huxley 1938 cline",
+      "detail": "Polygenic skin-reflectance gradient correlated with latitude and UV radiation."
+    },
+    {
+      "title": "Jablonski & Chaplin 2000",
+      "detail": "Folate protection versus vitamin D synthesis across environments."
+    },
+    {
+      "title": "Crawford et al. 2017",
+      "detail": "Four loci explain ~29% of measured pigmentation variance across N = 2,092 Africans."
+    },
+    {
+      "title": "La Braña 7 ka",
+      "detail": "A 7,000-year-old genome carries dark-skin alleles with a blue-eye haplotype (Olalde et al. 2014)."
+    },
+    {
+      "title": "Cheddar Man",
+      "detail": "Mesolithic Britain: dark-to-black skin with blue/green eyes (Brace et al. 2019)."
+    }
+  ],
+  "sources": "The Original Power, Ch. 2, §2.3; Huxley (1938); Jablonski & Chaplin (2000); Crawford et al. (2017)",
+  "qrUrl": ""
+}

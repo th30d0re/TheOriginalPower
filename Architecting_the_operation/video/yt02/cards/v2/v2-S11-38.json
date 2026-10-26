@@ -1,0 +1,32 @@
+{
+  "kind": "stat_bars",
+  "headline": "Figure 2.7 · Post-1965 Backlash Series (1965–2020)",
+  "items": [
+    {
+      "title": "Union density (BLS; Troy & Sheflin)",
+      "detail": "10.8% in 2020, down from 28.4% in 1965."
+    },
+    {
+      "title": "Top-decile wealth (WID)",
+      "detail": "76.5% in 2020, up from 67.5% in 1965."
+    },
+    {
+      "title": "US incarceration (BJS)",
+      "detail": "+231%: from 108 to 358 per 100,000."
+    },
+    {
+      "title": "Black incarceration (BJS; Sentencing Project)",
+      "detail": "3,074 at the 2010 peak, up from 588; 1,821 by 2020."
+    },
+    {
+      "title": "Σ_suppression envelope",
+      "detail": ">23% composite suppression expansion alongside a +9-point top-decile wealth gain."
+    },
+    {
+      "title": "Biological Embedding",
+      "detail": "Chronic social exposure becomes a physiological system state."
+    }
+  ],
+  "sources": "The Original Power, Ch. 2, §2.3.6, Fig. 2.7; BLS; Troy & Sheflin; WID; BJS; Sentencing Project; Definition 2.3",
+  "qrUrl": ""
+}

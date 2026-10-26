@@ -1,0 +1,23 @@
+{
+  "kind": "equation",
+  "headline": "Conventional Causal Model · Equation 2.5",
+  "number": "Equation 2.5",
+  "latex": "\\mathrm{Individual\\ Prejudice} \\longrightarrow \\mathrm{Discriminatory\\ Actions} \\longrightarrow \\mathrm{Systemic\\ Outcomes}",
+  "terms": [
+    {
+      "latex": "\\mathrm{Individual\\ Prejudice}",
+      "gloss": "Private racial antipathy treated as the generative root"
+    },
+    {
+      "latex": "\\mathrm{Discriminatory\\ Actions}",
+      "gloss": "Isolated interpersonal acts aggregating across transactions"
+    },
+    {
+      "latex": "\\mathrm{Systemic\\ Outcomes}",
+      "gloss": "Segregation, wealth gaps, and sentencing disparities as downstream sums"
+    }
+  ],
+  "items": [],
+  "sources": "The Original Power, Ch. 2, §2.2, Eq. 2.5",
+  "qrUrl": ""
+}

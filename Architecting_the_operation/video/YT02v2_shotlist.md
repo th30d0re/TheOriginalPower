@@ -1,9 +1,3 @@
-# YT02v2 — What Racism Is: shot list
-
-One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Figma cues where the v2 narration matches.
-
-<!-- SEG 00 · The dictionary order -->
-
 ## S00-01 — Episode 1 premiere title
 - **Anchor:** `Emmanuel Theodore (00:00)`
 - **Type:** card
@@ -574,30 +568,30 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 
 ## S03-10 — Bottom-up accumulation across isolated transactions
 - **Anchor:** `Emmanuel Theodore (16:06)`
-- **Type:** diagram
-- **Render:** `manim:yt01_redefining_racism/manim/causal_reversal16x9.py:CausalReversal as=S05-10`
-- **Note:** The top chain of CausalReversal draws left to right: Individual Prejudice → Discriminatory Actions → Systemic Outcomes. [book §2.2, Eq 2.5]
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S03-10.json`
+- **Note:** Figma card `v2-S03-10` highlights: Equation panel.
 
 ## S03-11 — Equal-protection requirement of individual intent
 - **Anchor:** `Emmanuel Theodore (16:23)`
-- **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/causal_reversal16x9.py:CausalReversal as=S05-10`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S03-10.json`
 - **Holds:** `S03-10`
-- **Note:** A judicial callout brackets the left-hand Individual Prejudice node, illustrating intent-centered equal-protection doctrine. [book §2.2; Ch 12]
+- **Note:** Figma card `v2-S03-10` highlights: Private racial antipathy treated as the generative root.
 
 ## S03-12 — Policy conclusion following from Equation 2.5
 - **Anchor:** `Emmanuel Theodore (16:36)`
-- **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/causal_reversal16x9.py:CausalReversal as=S05-10`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S03-10.json`
 - **Holds:** `S03-10`
-- **Note:** An intervention spotlight focuses exclusively on the left-hand Individual Prejudice box. [book §2.2]
+- **Note:** Figma card `v2-S03-10` highlights: Isolated interpersonal acts aggregating across transactions.
 
 ## S03-13 — Moral persuasion and attitude-adjustment remedies
 - **Anchor:** `Emmanuel Theodore (16:44)`
-- **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/causal_reversal16x9.py:CausalReversal as=S05-10`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S03-10.json`
 - **Holds:** `S03-10`
-- **Note:** Labels for moral persuasion and diversity workshops attach to the left-hand box while Systemic Outcomes on the right stays fixed. [book §2.2]
+- **Note:** Figma card `v2-S03-10` highlights: Segregation, wealth gaps, and sentencing disparities as downstream sums.
 
 ## S03-14 — Prediction of progressive dissolution via education
 - **Anchor:** `Emmanuel Theodore (16:57)`
@@ -657,23 +651,23 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 
 ## S04-04 — Figure 2.2: two solid forward generative arrows
 - **Anchor:** `Emmanuel Theodore (18:37)`
-- **Type:** diagram
-- **Render:** `manim:yt01_redefining_racism/manim/causal_reversal16x9.py:CausalReversal as=S06-04`
-- **Note:** Figure 2.2 builds on screen: two solid forward arrows run from Elite Economic Interests to Systemic Racialization to Interpersonal Prejudice. [book §2.2, Fig 2.2]
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S04-04.json`
+- **Note:** Figma card `v2-S04-04` highlights: Forward Generative Chain.
 
 ## S04-05 — Dashed Reinforcing Feedback Loop arc
 - **Anchor:** `Emmanuel Theodore (18:52)`
-- **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/causal_reversal16x9.py:CausalReversal as=S06-04`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S04-04.json`
 - **Holds:** `S04-04`
-- **Note:** A curved dashed amber arc draws underneath from Interpersonal Prejudice back to Systemic Racialization, labeled Reinforcing Feedback Loop. [book §2.2, Fig 2.2]
+- **Note:** Figma card `v2-S04-04` highlights: Reinforcing Feedback Loop.
 
 ## S04-06 — Cultivated public prejudice stabilizing the apparatus
 - **Anchor:** `Emmanuel Theodore (19:03)`
-- **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/causal_reversal16x9.py:CausalReversal as=S06-04`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S04-04.json`
 - **Holds:** `S04-04`
-- **Note:** Pulses travel forward along the solid generative arrows and return along the dashed feedback arc into Systemic Racialization. [book §2.2, Fig 2.2]
+- **Note:** Figma card `v2-S04-04` highlights: Stabilized Apparatus.
 
 ## S04-07 — Barbara J. Fields (1990) citation
 - **Anchor:** `Emmanuel Theodore (19:18)`
@@ -848,16 +842,16 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 
 ## S05-11 — Four operational modules across the tiers
 - **Anchor:** `Emmanuel Theodore (24:49)`
-- **Type:** diagram
-- **Render:** `manim:yt01_redefining_racism/manim/four_components16x9.py:FourComponentLoop as=S02-11`
-- **Note:** The four-module ring diagram draws: Asymmetric Autonomy Restriction, Selective Empathy, Ideological Justification, and Resistance to Critique. [book Preface; Ch 2]
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S05-11.json`
+- **Note:** Figma card `v2-S05-11` highlights: Asymmetric Autonomy Restriction.
 
 ## S05-12 — Autonomy restriction and selective empathy coupling
 - **Anchor:** `Emmanuel Theodore (25:06)`
-- **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/four_components16x9.py:FourComponentLoop as=S02-11`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S05-11.json`
 - **Holds:** `S05-11`
-- **Note:** Directional arrows circulate around the four nodes, highlighting reproductive/movement restriction paired with selective empathy. [book Preface; Ch 2]
+- **Note:** Figma card `v2-S05-11` highlights: Selective Empathy · Ideology · Critique Resistance.
 
 ## S05-13 — Requirement 2: a policed boundary
 - **Anchor:** `Emmanuel Theodore (25:18)`
@@ -1003,30 +997,30 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 
 ## S06-08 — Four elementary set-theory operations
 - **Anchor:** `Emmanuel Theodore (29:28)`
-- **Type:** diagram
-- **Render:** `manim:yt01_redefining_racism/manim/set_primer16x9.py:SetTheoryPrimer as=S03-08`
-- **Note:** The SetTheoryPrimer canvas opens with the total population rectangle U and notation header. [book §2.1]
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S06-08.json`
+- **Note:** Figma card `v2-S06-08` highlights: Set and Subset.
 
 ## S06-09 — Set and subset definitions
 - **Anchor:** `Emmanuel Theodore (29:36)`
-- **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/set_primer16x9.py:SetTheoryPrimer as=S03-08`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S06-08.json`
 - **Holds:** `S06-08`
-- **Note:** A bounded circle A draws inside the population rectangle U, illustrating a set and a proper subset (A ⊂ U). [book §2.1]
+- **Note:** Figma card `v2-S06-08` highlights: Union and Intersection.
 
 ## S06-10 — Union (∪) and intersection (∩)
 - **Anchor:** `Emmanuel Theodore (29:44)`
-- **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/set_primer16x9.py:SetTheoryPrimer as=S03-08`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S06-08.json`
 - **Holds:** `S06-08`
-- **Note:** Two overlapping circles A and B illuminate first across their combined union (A ∪ B) and then across their shared lens (A ∩ B). [book §2.1]
+- **Note:** Figma card `v2-S06-08` highlights: Disjoint Union.
 
 ## S06-11 — Empty intersection (∅) and disjoint partition (⊔)
 - **Anchor:** `Emmanuel Theodore (29:53)`
-- **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/set_primer16x9.py:SetTheoryPrimer as=S03-08`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S06-08.json`
 - **Holds:** `S06-08`
-- **Note:** The two sets separate until their overlap vanishes (A ∩ B = ∅), forming a clean disjoint partition (A ⊔ B). [book §2.1]
+- **Note:** Figma card `v2-S06-08` highlights: Plain-Language Symbols.
 
 ## S06-12 — Equation 2.1: coarse binary partition of U
 - **Anchor:** `Emmanuel Theodore (30:02)`
@@ -1076,23 +1070,23 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 
 ## S06-19 — Structural positions in the extraction circuit
 - **Anchor:** `Emmanuel Theodore (31:15)`
-- **Type:** diagram
-- **Render:** `manim:yt02/binary_refinement_v2.py:BinaryRefinementV2 as=S03-19`
-- **Note:** The flat In-group block I splits horizontally into four stacked structural tiers above the Out-group block O. [book Ch 0; §2.1, Eq 2.2]
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S06-19.json`
+- **Note:** Figma card `v2-S06-19` highlights: Four In-group Tiers.
 
 ## S06-20 — Pre-1450 Mediterranean attitudes (Sweet 1997; Bethencourt 2013)
 - **Anchor:** `Emmanuel Theodore (31:28)`
-- **Type:** hold
-- **Render:** `manim:yt02/binary_refinement_v2.py:BinaryRefinementV2 as=S03-19`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S06-19.json`
 - **Holds:** `S06-19`
-- **Note:** Row 2 reveals, citing James H. Sweet (1997) and Francisco Bethencourt (2013) on pre-1450 color-coded attitudes. [book §2.2, citing Sweet 1997; Bethencourt 2013]
+- **Note:** Figma card `v2-S06-19` highlights: Payoff Ordering.
 
 ## S06-21 — Preserving set I while exposing internal inequality
 - **Anchor:** `Emmanuel Theodore (31:40)`
-- **Type:** hold
-- **Render:** `manim:yt02/binary_refinement_v2.py:BinaryRefinementV2 as=S03-19`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S06-19.json`
 - **Holds:** `S06-19`
-- **Note:** A bracket spans all four bands to mark set I while payoff bars along the right margin display their unequal shares. [book §2.1, Eq 2.2]
+- **Note:** Figma card `v2-S06-19` highlights: Set I Preserved.
 
 ## S06-22 — Equation 2.3: resolving the Out-group O
 - **Anchor:** `Emmanuel Theodore (31:47)`
@@ -1109,23 +1103,23 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 
 ## S06-24 — O_racialized in the American historical record
 - **Anchor:** `Emmanuel Theodore (32:12)`
-- **Type:** diagram
-- **Render:** `manim:yt01_redefining_racism/manim/outgroup_axes16x9.py:OutgroupAxes as=S03-27`
-- **Note:** The Out-group base block partitions into O_racialized (chattel slavery, Jim Crow, mass carcerality) and adjacent bands. [book §2.1, Eq 2.3]
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S06-24.json`
+- **Note:** Figma card `v2-S06-24` highlights: O_racialized.
 
 ## S06-25 — Adjacent Out-groups O_adjacent,1 through O_adjacent,m
 - **Anchor:** `Emmanuel Theodore (32:21)`
-- **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/outgroup_axes16x9.py:OutgroupAxes as=S03-27`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S06-24.json`
 - **Holds:** `S06-24`
-- **Note:** Adjacent sub-bands label Indigenous land dispossession, Latino and Asian immigration/labor bars, and pre-incorporation European arrivals. [book §2.1, Eq 2.3]
+- **Note:** Figma card `v2-S06-24` highlights: O_adjacent,1 … O_adjacent,m.
 
 ## S06-26 — Differential concessions and inter-group wedge management
 - **Anchor:** `Emmanuel Theodore (32:41)`
-- **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/outgroup_axes16x9.py:OutgroupAxes as=S03-27`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S06-24.json`
 - **Holds:** `S06-24`
-- **Note:** Wedge arrows between O_racialized and O_adjacent illustrate model-minority tropes and differential border policing. [book §2.1, Eq 2.3]
+- **Note:** Figma card `v2-S06-24` highlights: Wedge Management.
 
 ## S06-27 — Internal fractures along secondary social axes
 - **Anchor:** `Emmanuel Theodore (32:55)`
@@ -1149,44 +1143,44 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 
 ## S06-30 — Secondary axes α: gender, wealth, credentials, record
 - **Anchor:** `Emmanuel Theodore (33:24)`
-- **Type:** diagram
-- **Render:** `manim:yt01_redefining_racism/manim/recursive_partition16x9.py:RecursivePartition as=S03-33`
-- **Note:** The RecursivePartition diagram opens on subset X with the α-axis selector rail listing gender, wealth, credentials, religion, and record. [book §2.1, Eq 2.4]
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S06-30.json`
+- **Note:** Figma card `v2-S06-30` highlights: Axis Selector α.
 
 ## S06-31 — Locally advantaged X⁺_α and subordinated X⁻_α sub-cells
 - **Anchor:** `Emmanuel Theodore (33:36)`
-- **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/recursive_partition16x9.py:RecursivePartition as=S03-33`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S06-30.json`
 - **Holds:** `S06-30`
-- **Note:** A vertical cut divides X into the locally advantaged cell X⁺_α on the left and subordinated cell X⁻_α on the right. [book §2.1, Eq 2.4]
+- **Note:** Figma card `v2-S06-30` highlights: X⁺_α and X⁻_α.
 
 ## S06-32 — Applying α = gender inside I_buffer (Chapter 8)
 - **Anchor:** `Emmanuel Theodore (33:48)`
-- **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/recursive_partition16x9.py:RecursivePartition as=S03-33`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S06-30.json`
 - **Holds:** `S06-30`
-- **Note:** The selector locks onto α = gender inside I_buffer, invoking the Chapter 8 reproductive kernel O_gendered. [book §2.1, Eq 2.4; Ch 8]
+- **Note:** Figma card `v2-S06-30` highlights: α = gender in I_buffer.
 
 ## S06-33 — Coverture headship versus reproductive subordination
 - **Anchor:** `Emmanuel Theodore (34:00)`
-- **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/recursive_partition16x9.py:RecursivePartition as=S03-33`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S06-30.json`
 - **Holds:** `S06-30`
-- **Note:** I_buffer splits into I⁺_gender (male household authority under coverture) and I⁻_gender (female property and reproductive subordination). [book §2.1, Eq 2.4; Ch 8]
+- **Note:** Figma card `v2-S06-30` highlights: α = property / felony.
 
 ## S06-34 — Second recursive cut on property or felony conviction
 - **Anchor:** `Emmanuel Theodore (34:13)`
-- **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/recursive_partition16x9.py:RecursivePartition as=S03-33`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S06-30.json`
 - **Holds:** `S06-30`
-- **Note:** A horizontal cut subdivides both cells along α = property / felony record, creating four compartments with distinct legal rights. [book §2.1, Eq 2.4]
+- **Note:** Figma card `v2-S06-30` highlights: α = credentials in O_racialized.
 
 ## S06-35 — Applying Equation 2.4 inside O_racialized
 - **Anchor:** `Emmanuel Theodore (34:25)`
-- **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/recursive_partition16x9.py:RecursivePartition as=S03-33`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S06-30.json`
 - **Holds:** `S06-30`
-- **Note:** Target X switches to O_racialized along α = credentials / skin tone, isolating a small incorporated sub-cell O⁺_α above mass containment O⁻_α. [book §2.1, Eq 2.4; §2.3.7]
+- **Note:** Figma card `v2-S06-30` highlights: Partition notation.
 
 ## S06-36 — Table 2.1 Set-Resolution Ladder and Figure 2.1
 - **Anchor:** `Emmanuel Theodore (34:42)`
@@ -1210,9 +1204,9 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 
 ## S06-39 — Figure 2.1: Zooming the Binary
 - **Anchor:** `Emmanuel Theodore (35:17)`
-- **Type:** diagram
-- **Render:** `manim:yt01_redefining_racism/manim/binary_zoom16x9.py:ZoomingBinary as=S03-42`
-- **Note:** The ZoomingBinary diagram animates Figure 2.1, zooming from flat boxes I and O into the five vertical tiers and internal α-cells. [book §2.1, Fig 2.1]
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S06-39.json`
+- **Note:** Figma card `v2-S06-39` highlights: Flat Blocks I and O.
 
 ## S06-40 — Diagnosing stalled public arguments with Table 2.1
 - **Anchor:** `Emmanuel Theodore (35:30)`
@@ -1648,71 +1642,71 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 
 ## S08-43 — Continuous biological cline (Huxley 1938; Jablonski & Chaplin 2000)
 - **Anchor:** `Emmanuel Theodore (48:03)`
-- **Type:** diagram
-- **Render:** `manim:yt01_redefining_racism/manim/cline16x9.py:ClineGradient as=S07-43`
-- **Note:** The ClineGradient diagram draws a continuous polygenic skin-reflectance spectrum correlated with latitude and UV radiation. [book §2.3, citing Huxley 1938; Jablonski & Chaplin 2000]
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S08-43.json`
+- **Note:** Figma card `v2-S08-43` highlights: Huxley 1938 cline.
 
 ## S08-44 — Folate protection versus vitamin D synthesis adaptation
 - **Anchor:** `Emmanuel Theodore (48:18)`
-- **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/cline16x9.py:ClineGradient as=S07-43`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S08-43.json`
 - **Holds:** `S08-43`
-- **Note:** Dual physiological curves plot ultraviolet folate photolysis protection in the tropics against vitamin D synthesis at high latitudes. [book §2.3, citing Jablonski & Chaplin 2000]
+- **Note:** Figma card `v2-S08-43` highlights: Jablonski & Chaplin 2000.
 
 ## S08-45 — Crawford et al. (2017) African pigmentation genomic diversity
 - **Anchor:** `Emmanuel Theodore (48:27)`
-- **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/cline16x9.py:ClineGradient as=S07-43`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S08-43.json`
 - **Holds:** `S08-43`
-- **Note:** Four genomic locus markers highlight along the African reflectance distribution (N = 2,092; ~29% variance explained). [book §2.3, citing Crawford et al. 2017]
+- **Note:** Figma card `v2-S08-43` highlights: Crawford et al. 2017.
 
 ## S08-46 — Olalde et al. (2014) La Braña 1 ancient DNA reconstruction
 - **Anchor:** `Emmanuel Theodore (48:38)`
-- **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/cline16x9.py:ClineGradient as=S07-43`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S08-43.json`
 - **Holds:** `S08-43`
-- **Note:** An ancient-DNA callout marks the 7,000-year-old La Braña hunter-gatherer combining ancestral dark-skin alleles with blue eyes. [book §2.3, citing Olalde et al. 2014]
+- **Note:** Figma card `v2-S08-43` highlights: La Braña 7 ka.
 
 ## S08-47 — Brace et al. (2019) Mesolithic Cheddar Man reconstruction
 - **Anchor:** `Emmanuel Theodore (48:48)`
-- **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/cline16x9.py:ClineGradient as=S07-43`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S08-43.json`
 - **Holds:** `S08-43`
-- **Note:** A second callout marks Britain's Mesolithic Cheddar Man (dark-to-black skin with blue/green eyes), dissolving fixed racial bundles. [book §2.3, citing Brace et al. 2019]
+- **Note:** Figma card `v2-S08-43` highlights: Cheddar Man.
 
 ## S08-48 — Legal architecture cutting a binary out of the continuous cline
 - **Anchor:** `Emmanuel Theodore (48:59)`
-- **Type:** diagram
-- **Render:** `manim:yt01_redefining_racism/manim/cline16x9.py:BinaryPartitionCut as=S07-48`
-- **Note:** A sharp vertical statutory blade drops across the continuous pigmentation gradient, severing it into two discrete legal boxes. [book §2.3, lines 2107-2109]
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S08-48.json`
+- **Note:** Figma card `v2-S08-48` highlights: Legal partition blade.
 
 ## S08-49 — Phenotype as low-cost surveillance marker versus religion
 - **Anchor:** `Emmanuel Theodore (49:09)`
-- **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/cline16x9.py:BinaryPartitionCut as=S07-48`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S08-48.json`
 - **Holds:** `S08-48`
-- **Note:** Surveillance-cost callouts contrast porous religious conversion with the persistent visibility of the phenotypic cut. [book §2.3; Ch 3]
+- **Note:** Figma card `v2-S08-48` highlights: Phenotype surveillance.
 
 ## S08-50 — Fusing 1449 descent logic with plantation phenotype
 - **Anchor:** `Emmanuel Theodore (49:24)`
-- **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/cline16x9.py:BinaryPartitionCut as=S07-48`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S08-48.json`
 - **Holds:** `S08-48`
-- **Note:** An inheritance arrow locks onto the severed right-hand box, fusing 1449 blood-descent logic with Atlantic plantation bondage. [book Ch 3, citing Nirenberg 2002]
+- **Note:** Figma card `v2-S08-48` highlights: 1449 descent logic.
 
 ## S08-51 — 1441–1486 deployment sequence as a single compile
 - **Anchor:** `Emmanuel Theodore (49:37)`
-- **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/cline16x9.py:BinaryPartitionCut as=S07-48`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S08-48.json`
 - **Holds:** `S08-48`
-- **Note:** Date stamps 1441 → 1444 → 1452/1455 → 1453 → 1486 lock along the lower rail beneath the binary partition cut. [book §2.2; §2.3; Ch 3]
+- **Note:** Figma card `v2-S08-48` highlights: Deployment sequence.
 
 ## S08-52 — Continuous bodily variation versus system-built category
 - **Anchor:** `Emmanuel Theodore (49:55)`
-- **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/cline16x9.py:BinaryPartitionCut as=S07-48`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S08-48.json`
 - **Holds:** `S08-48`
-- **Note:** The continuous biological gradient remains visible behind the rigid statutory walls of the administrative partition. [book §2.3, The Zero-Day Exploit; Ch 3]
+- **Note:** Figma card `v2-S08-48` highlights: Extraction compile.
 
 ## S08-53 — Comparative sidebar: three historical control cases
 - **Anchor:** `Emmanuel Theodore (50:05)`
@@ -2098,30 +2092,30 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 
 ## S09-43 — Step 4: October 1705 Virginia Slave Codes
 - **Anchor:** `Emmanuel Theodore (61:43)`
-- **Type:** diagram
-- **Render:** `manim:yt01_redefining_racism/manim/partition_redraw16x9.py:PartitionRedraw as=S08-42`
-- **Note:** The PartitionRedraw diagram opens on the 1676 joint labor block (L_white + L_black) facing the small Elite block E. [book Ch 4, Eq 4.3, Eq 4.4]
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S09-43.json`
+- **Note:** Figma card `v2-S09-43` highlights: 1676 labor block.
 
 ## S09-44 — Degrading enslaved Africans to real estate while elevating poor whites
 - **Anchor:** `Emmanuel Theodore (61:55)`
-- **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/partition_redraw16x9.py:PartitionRedraw as=S08-42`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S09-43.json`
 - **Holds:** `S09-43`
-- **Note:** A statutory partition line drives between L_white and L_black, elevating poor Europeans into I_buffer above O_racialized. [book Ch 4, Eq 4.3, Eq 4.4]
+- **Note:** Figma card `v2-S09-43` highlights: 1705 partition.
 
 ## S09-45 — Naked-whipping ban and statutory freedom dues (corn, money, musket)
 - **Anchor:** `Emmanuel Theodore (62:07)`
-- **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/partition_redraw16x9.py:PartitionRedraw as=S08-42`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S09-43.json`
 - **Holds:** `S09-43`
-- **Note:** Privilege badges (naked-whipping ban, corn, cash, and musket freedom dues) attach to the newly formed I_buffer block. [book Ch 4]
+- **Note:** Figma card `v2-S09-43` highlights: I_buffer elevation.
 
 ## S09-46 — Testimony bar and universal white fugitive-policing authority
 - **Anchor:** `Emmanuel Theodore (62:18)`
-- **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/partition_redraw16x9.py:PartitionRedraw as=S08-42`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S09-43.json`
 - **Holds:** `S09-43`
-- **Note:** Downward enforcement arrows lock from I_buffer onto O_racialized, marking the testimony ban and fugitive-patrol deputization. [book Ch 4]
+- **Note:** Figma card `v2-S09-43` highlights: Enforcement lock.
 
 ## S09-47 — Equation 4.3 state transition: Buffer Created
 - **Anchor:** `Emmanuel Theodore (62:31)`
@@ -2580,57 +2574,57 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 
 ## S11-06 — 1840 benchmark: $74.1M cotton revenue (Figure 2.4)
 - **Anchor:** `Emmanuel Theodore (76:16)`
-- **Type:** diagram
-- **Render:** `manim:yt01_redefining_racism/manim/kerneloptimization16x9.py:KernelOptimizationCase as=S10-06`
-- **Note:** Figure 2.4 opens on the 1840 benchmark, raising the cotton revenue bar to $74.1M. [book §2.3.2, Fig 2.4]
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S11-06.json`
+- **Note:** Figma card `v2-S11-06` highlights: 1840 benchmark.
 
 ## S11-07 — 1840 patrol expenditure: $2.0M (2.70% ratio)
 - **Anchor:** `Emmanuel Theodore (76:27)`
-- **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/kerneloptimization16x9.py:KernelOptimizationCase as=S10-06`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S11-06.json`
 - **Holds:** `S11-06`
-- **Note:** Alongside the 1840 cotton bar, the patrol/militia expenditure bar rises to $2.0M and plots the 2.70% ratio point. [book §2.3.2, Fig 2.4]
+- **Note:** Figma card `v2-S11-06` highlights: 1850 benchmark.
 
 ## S11-08 — 1850 benchmark: $102.5M cotton, $2.95M patrol (2.88% ratio)
 - **Anchor:** `Emmanuel Theodore (76:41)`
-- **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/kerneloptimization16x9.py:KernelOptimizationCase as=S10-06`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S11-06.json`
 - **Holds:** `S11-06`
-- **Note:** The 1850 bars rise in lockstep to $102.5M cotton revenue and $2.95M patrol expenditure, plotting the 2.88% ratio point. [book §2.3.2, Fig 2.4]
+- **Note:** Figma card `v2-S11-06` highlights: 1860 benchmark.
 
 ## S11-09 — 1860 benchmark: $247.0M cotton, $6.8M patrol (2.75% ratio)
 - **Anchor:** `Emmanuel Theodore (76:54)`
-- **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/kerneloptimization16x9.py:KernelOptimizationCase as=S10-06`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S11-06.json`
 - **Holds:** `S11-06`
-- **Note:** The 1860 bars surge to $247.0M cotton revenue and $6.8M patrol expenditure, plotting the 2.75% ratio point. [book §2.3.2, Fig 2.4]
+- **Note:** Figma card `v2-S11-06` highlights: 1831–1860 stability.
 
 ## S11-10 — 233% revenue growth with 0.18-point ratio band (CV < 0.04)
 - **Anchor:** `Emmanuel Theodore (77:08)`
-- **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/kerneloptimization16x9.py:KernelOptimizationCase as=S10-06`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S11-06.json`
 - **Holds:** `S11-06`
-- **Note:** A horizontal stability band spans 2.70%–2.88% (CV < 0.04) as the enslaved population counter climbs from 2,487,455 to 3,953,761. [book §2.3.2, Fig 2.4]
+- **Note:** Figma card `v2-S11-06` highlights: 1831–1860 stability.
 
 ## S11-11 — Confound 1: 1793 cotton gin Jevons Paradox (Flachs 2025; Lakwete)
 - **Anchor:** `Emmanuel Theodore (77:29)`
-- **Type:** diagram
-- **Render:** `manim:yt01_redefining_racism/manim/kerneloptimization16x9.py:CottonGinConfound as=S10-11`
-- **Note:** The CottonGinConfound diagram illustrates Eli Whitney's 1793 gin (50x processing efficiency) expanding plantation acreage and enslaved labor demand. [book §2.3.2, citing Flachs 2025; Lakwete]
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S11-11.json`
+- **Note:** Figma card `v2-S11-11` highlights: 1793 cotton gin.
 
 ## S11-12 — Confound 2: August 1831 Nat Turner rebellion and 1831–1832 codes
 - **Anchor:** `Emmanuel Theodore (77:50)`
-- **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/kerneloptimization16x9.py:CottonGinConfound as=S10-11`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S11-11.json`
 - **Holds:** `S11-11`
-- **Note:** An 1831 Southampton shock marker triggers the 1831–1832 statutory lock (anti-literacy, assembly ban, compulsory white militia patrols). [book §2.3.2; Ch 9]
+- **Note:** Figma card `v2-S11-11` highlights: August 1831 Southampton.
 
 ## S11-13 — Part A verdict: P4 and P2 supported, R2 first condition absent
 - **Anchor:** `Emmanuel Theodore (78:09)`
-- **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/kerneloptimization16x9.py:CottonGinConfound as=S10-11`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S11-11.json`
 - **Holds:** `S11-11`
-- **Note:** Summary badges confirm Predictions 4 and 2 with patrol overhead locked at 2.7%–2.9% of cotton extraction. [book §2.3.2, Fig 2.4; YT02_outline P2, P4, R2]
+- **Note:** Figma card `v2-S11-11` highlights: Part A verdict.
 
 ## S11-14 — Part B: Twentieth-century Interface Swap (Equations 2.9–2.10)
 - **Anchor:** `Emmanuel Theodore (78:23)`
@@ -2654,30 +2648,30 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 
 ## S11-17 — 1954–1965 cost spike of explicit Jim Crow partition
 - **Anchor:** `Emmanuel Theodore (79:07)`
-- **Type:** diagram
-- **Render:** `manim:yt01_redefining_racism/manim/interfaceswap16x9.py:CostBarsOverTime as=S10-17`
-- **Note:** The CostBarsOverTime diagram opens on the 1954–1965 window as all three cost bars for explicit Jim Crow begin rising sharply. [book §2.3.5]
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S11-17.json`
+- **Note:** Figma card `v2-S11-17` highlights: Three rising costs.
 
 ## S11-18 — Fascism threshold at 90° and Tier 3 ordinal calibration
 - **Anchor:** `Emmanuel Theodore (79:19)`
-- **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/interfaceswap16x9.py:CostBarsOverTime as=S10-17`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S11-17.json`
 - **Holds:** `S11-17`
-- **Note:** The 90° fascism-threshold marker pulses alongside the Tier 3 ordinal badge indicating directional regime mode. [book Ch 3, lines 2914-2925; Empirical Methodology]
+- **Note:** Figma card `v2-S11-17` highlights: Cold War legitimacy.
 
 ## S11-19 — Boycotts, sit-ins, and troop deployments spiking C_coercive and C_economic
 - **Anchor:** `Emmanuel Theodore (79:48)`
-- **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/interfaceswap16x9.py:CostBarsOverTime as=S10-17`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S11-17.json`
 - **Holds:** `S11-17`
-- **Note:** The C_coercive and C_economic bars cross the unsustainable ceiling alongside C_legitimacy. [book §2.3.5]
+- **Note:** Figma card `v2-S11-17` highlights: Movement pressure.
 
 ## S11-20 — 1964–1965 statutory swap to facially neutral carceral and fiscal proxies
 - **Anchor:** `Emmanuel Theodore (79:56)`
-- **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/interfaceswap16x9.py:CostBarsOverTime as=S10-17`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S11-17.json`
 - **Holds:** `S11-17`
-- **Note:** Equation 2.10 switches S*(t) from Explicit Partition to Criminal/Fiscal Proxy, dropping C_legitimacy while preserving extraction. [book §2.3.5, Eq 2.10]
+- **Note:** Figma card `v2-S11-17` highlights: Interface Swap · Eq. 2.10.
 
 ## S11-21 — Dan Baum's 1994 John Ehrlichman interview quote
 - **Anchor:** `Emmanuel Theodore (80:13)`
@@ -2795,44 +2789,44 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 
 ## S11-38 — Post-1965 expansion of R(t) and Φ_load(t) to prevent breach
 - **Anchor:** `Emmanuel Theodore (85:02)`
-- **Type:** diagram
-- **Render:** `manim:yt01_redefining_racism/manim/backlash_wave16x9.py:BacklashWave as=S10-36`
-- **Note:** The Figure 2.7 four-panel BacklashWave time-series grid opens across the 1965–2020 horizontal axis. [book §2.3.6, Fig 2.7, citing BLS; Troy & Sheflin; WID; BJS; Sentencing Project]
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S11-38.json`
+- **Note:** Figma card `v2-S11-38` highlights: Union density (BLS; Troy & Sheflin).
 
 ## S11-39 — Primary data sources: BLS, Troy & Sheflin, WID, BJS, Sentencing Project
 - **Anchor:** `Emmanuel Theodore (85:18)`
-- **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/backlash_wave16x9.py:BacklashWave as=S10-36`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S11-38.json`
 - **Holds:** `S11-38`
-- **Note:** Source citations populate the four panels: BLS and Troy & Sheflin, WID (Piketty, Saez, Zucman), BJS, and The Sentencing Project. [book §2.3.6, Fig 2.7]
+- **Note:** Figma card `v2-S11-38` highlights: Top-decile wealth (WID).
 
 ## S11-40 — Union density falls 28.4% → 10.8%; top-decile wealth rises 67.5% → 76.5%
 - **Anchor:** `Emmanuel Theodore (85:32)`
-- **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/backlash_wave16x9.py:BacklashWave as=S10-36`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S11-38.json`
 - **Holds:** `S11-38`
-- **Note:** Panel 1 plots US union density falling from 28.4% to 10.8% while Panel 2 plots top-decile wealth climbing from 67.5% to 76.5%. [book §2.3.6, Fig 2.7]
+- **Note:** Figma card `v2-S11-38` highlights: US incarceration (BJS).
 
 ## S11-41 — Overall US incarceration rises 231%: 108 → 358 per 100,000
 - **Anchor:** `Emmanuel Theodore (85:43)`
-- **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/backlash_wave16x9.py:BacklashWave as=S10-36`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S11-38.json`
 - **Holds:** `S11-38`
-- **Note:** Panel 3 plots the overall US incarceration rate climbing 231% from 108 to 358 per 100,000 residents. [book §2.3.6; MANUSCRIPT_GAP §5]
+- **Note:** Figma card `v2-S11-38` highlights: Black incarceration (BJS; Sentencing Project).
 
 ## S11-42 — Black incarceration rate: 588 (1965) → 3,074 (2010) → 1,821 (2020)
 - **Anchor:** `Emmanuel Theodore (86:03)`
-- **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/backlash_wave16x9.py:BacklashWave as=S10-36`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S11-38.json`
 - **Holds:** `S11-38`
-- **Note:** The Black incarceration curve surges from 588 per 100,000 in 1965 to 3,074 in 2010 and 1,821 in 2020 (>3x baseline). [book §2.3.6, Fig 2.7]
+- **Note:** Figma card `v2-S11-38` highlights: Σ_suppression envelope.
 
 ## S11-43 — Composite Σ_sup(t) expands >23% as elite wealth gains 9 points
 - **Anchor:** `Emmanuel Theodore (86:17)`
-- **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/backlash_wave16x9.py:BacklashWave as=S10-36`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S11-38.json`
 - **Holds:** `S11-38`
-- **Note:** Panel 4 plots the composite suppression envelope Σ_sup(t) expanding >23% alongside the +9 percentage-point top-decile wealth gain. [book §2.3, Definition 2.3]
+- **Note:** Figma card `v2-S11-38` highlights: Biological Embedding.
 
 ## S11-44 — Definition 2.3: Biological Embedding
 - **Anchor:** `Emmanuel Theodore (86:28)`
@@ -3260,227 +3254,227 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 
 ## S13-01 — Engineering question: why I_buffer and O_racialized fail to synchronize
 - **Anchor:** `Emmanuel Theodore (98:09)`
-- **Type:** diagram
-- **Render:** `manim:yt02/interference_engine.py:InterferenceEngine as=S12-01`
-- **Note:** The InterferenceEngine canvas opens with two grievance waveforms i_1(t) and i_2(t) nearly aligned in phase (Δφ = 0.2π), summing to a high coherent wave I_E(t). [book Ch 0; Ch 11; Ch 18]
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S13-01.json`
+- **Note:** Figma card `v2-S13-01` highlights: Aligned grievance currents.
 
 ## S13-02 — The Interference Engine across Chapters 0, 14, and 22
 - **Anchor:** `Emmanuel Theodore (98:26)`
-- **Type:** hold
-- **Render:** `manim:yt02/interference_engine.py:InterferenceEngine as=S12-01`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S13-01.json`
 - **Holds:** `S13-01`
-- **Note:** Header badges for Chapter 0 (Hardware), Chapter 14 (Tweedism), and Chapter 22 (The Spectral Carrier) illuminate above the wave tracks. [book Ch 0; Ch 14; Ch 22]
+- **Note:** Figma card `v2-S13-01` highlights: Constitutional phase jammer.
 
 ## S13-03 — November 1787: James Madison's Federalist No. 10
 - **Anchor:** `Emmanuel Theodore (98:39)`
-- **Type:** hold
-- **Render:** `manim:yt02/interference_engine.py:InterferenceEngine as=S12-01`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S13-01.json`
 - **Holds:** `S13-01`
-- **Note:** A historical callout tags November 1787 and James Madison's Federalist No. 10 beside the phase-control bus. [book Ch 5, citing Madison 1787]
+- **Note:** Figma card `v2-S13-01` highlights: Φ_load dispersion.
 
 ## S13-04 — Unequal distribution of property as the durable source of faction
 - **Anchor:** `Emmanuel Theodore (98:49)`
-- **Type:** hold
-- **Render:** `manim:yt02/interference_engine.py:InterferenceEngine as=S12-01`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S13-01.json`
 - **Holds:** `S13-01`
-- **Note:** The two aligned waveforms label the structural property divide between creditors/proprietors and debtors/propertyless laborers. [book Ch 5, citing Madison 1787]
+- **Note:** Figma card `v2-S13-01` highlights: Congressional Record DFT.
 
 ## S13-05 — Extending the sphere across competing religious and regional axes
 - **Anchor:** `Emmanuel Theodore (99:09)`
-- **Type:** hold
-- **Render:** `manim:yt02/interference_engine.py:InterferenceEngine as=S12-01`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S13-01.json`
 - **Holds:** `S13-01`
-- **Note:** Multiple secondary cleavage tracks appear along the left margin, representing Madison's multiplicity of factions. [book Ch 5, citing Madison 1787]
+- **Note:** Figma card `v2-S13-01` highlights: Electoral harmonics.
 
 ## S13-06 — Constitutional architecture as an active phased-array signal jammer
 - **Anchor:** `Emmanuel Theodore (99:24)`
-- **Type:** hold
-- **Render:** `manim:yt02/interference_engine.py:InterferenceEngine as=S12-01`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S13-01.json`
 - **Holds:** `S13-01`
-- **Note:** The phase-shifter advances Δφ to 0.55π; the second trace shifts rightward and the combined sum wave I_E(t) visibly drops in amplitude. [book Ch 0; Ch 5; Ch 14]
+- **Note:** Figma card `v2-S13-01` highlights: Google Trends weekly.
 
 ## S13-07 — Equation 0.15: alternating grievance current i_k(t)
 - **Anchor:** `Emmanuel Theodore (99:34)`
-- **Type:** hold
-- **Render:** `manim:yt02/interference_engine.py:InterferenceEngine as=S12-01`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S13-01.json`
 - **Holds:** `S13-01`
-- **Note:** Equation 0.15 writes in the upper-right rail: i_k(t) = ρ_k A_k cos(ωt + φ_k) as Δφ advances to 0.75π. [book Ch 0, Eq 0.15]
+- **Note:** Figma card `v2-S13-01` highlights: Google Trends weekly.
 
 ## S13-08 — Equation 0.16: Kirchhoff sum I_E(t) at the Elite node
 - **Anchor:** `Emmanuel Theodore (99:48)`
-- **Type:** hold
-- **Render:** `manim:yt02/interference_engine.py:InterferenceEngine as=S12-01`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S13-01.json`
 - **Holds:** `S13-01`
-- **Note:** Equation 0.16 writes below Equation 0.15: I_E(t) = Σ i_k(t), linking the lower sum trace to net coherent pressure at the Elite node. [book Ch 0, Eq 0.16]
+- **Note:** Figma card `v2-S13-01` highlights: Google Trends weekly.
 
 ## S13-09 — Figure 0.6: Destructive Interference across time
 - **Anchor:** `Emmanuel Theodore (100:01)`
-- **Type:** hold
-- **Render:** `manim:yt02/interference_engine.py:InterferenceEngine as=S12-01`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S13-01.json`
 - **Holds:** `S13-01`
-- **Note:** The phase difference locks to Δφ = π (180° antiphase), matching Figure 0.6 in Chapter 0. [book Ch 0, Fig 0.6]
+- **Note:** Figma card `v2-S13-01` highlights: Google Trends weekly.
 
 ## S13-10 — 180° antiphase alignment collapsing the vector sum near zero
 - **Anchor:** `Emmanuel Theodore (100:09)`
-- **Type:** hold
-- **Render:** `manim:yt02/interference_engine.py:InterferenceEngine as=S12-01`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S13-01.json`
 - **Holds:** `S13-01`
-- **Note:** With peaks of i_1(t) aligned directly above troughs of i_2(t), the lower sum trace I_E(t) flattens to a near-zero line. [book Ch 0, Fig 0.6]
+- **Note:** Figma card `v2-S13-01` highlights: Google Trends weekly.
 
 ## S13-11 — Equation 2.4 α-axes supplying additional phase channels
 - **Anchor:** `Emmanuel Theodore (100:21)`
-- **Type:** hold
-- **Render:** `manim:yt02/interference_engine.py:InterferenceEngine as=S12-01`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S13-01.json`
 - **Holds:** `S13-01`
-- **Note:** Four recursive α-axis channel badges (Race, Gender, Religion, Nativity) illuminate along the phase-array modulator. [book §2.1, Eq 2.4; Ch 11]
+- **Note:** Figma card `v2-S13-01` highlights: Google Trends weekly.
 
 ## S13-12 — Equation 22.1: decomposing discourse power into class and identity bands
 - **Anchor:** `Emmanuel Theodore (100:37)`
-- **Type:** hold
-- **Render:** `manim:yt02/interference_engine.py:InterferenceEngine as=S12-01`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S13-01.json`
 - **Holds:** `S13-01`
-- **Note:** A spectral split badge marks Equation 22.1, separating public discourse power into P_identity(f) and P_class(f). [book Ch 22, Eq 22.1]
+- **Note:** Figma card `v2-S13-01` highlights: Google Trends weekly.
 
 ## S13-13 — Equation 22.2: circular phase dispersion Φ_load(t)
 - **Anchor:** `Emmanuel Theodore (100:50)`
-- **Type:** hold
-- **Render:** `manim:yt02/interference_engine.py:InterferenceEngine as=S12-01`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S13-01.json`
 - **Holds:** `S13-01`
-- **Note:** Equation 22.2 writes in the math rail: Φ_load(t) = 1 − |(1/N) Σ e^{iΦ_j}| while the dispersion readout climbs to 0.92. [book Ch 22, Eq 22.2]
+- **Note:** Figma card `v2-S13-01` highlights: Google Trends weekly.
 
 ## S13-14 — Φ_load bounded between 0 (synchronization) and 1 (cancellation)
 - **Anchor:** `Emmanuel Theodore (101:00)`
-- **Type:** hold
-- **Render:** `manim:yt02/interference_engine.py:InterferenceEngine as=S12-01`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S13-01.json`
 - **Holds:** `S13-01`
-- **Note:** The Φ_load gauge highlights its 0.00 (in-phase class lock) and 1.00 (complete antiphase cancellation) bounds. [book Ch 11, Eq 11.22; Ch 18, Eq 18.2]
+- **Note:** Figma card `v2-S13-01` highlights: Google Trends weekly.
 
 ## S13-15 — Confidence Tier 2 spectral test on two public datasets
 - **Anchor:** `Emmanuel Theodore (101:09)`
-- **Type:** hold
-- **Render:** `manim:yt02/interference_engine.py:InterferenceEngine as=S12-01`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S13-01.json`
 - **Holds:** `S13-01`
-- **Note:** The right-hand Spectral Evidence Rail activates with the Confidence Tier 2 badge for Datasets 1 and 2. [book Ch 22; Empirical Methodology]
+- **Note:** Figma card `v2-S13-01` highlights: Google Trends weekly.
 
 ## S13-16 — Predicted identity-to-class power peaks at fixed electoral frequencies
 - **Anchor:** `Emmanuel Theodore (101:20)`
-- **Type:** hold
-- **Render:** `manim:yt02/interference_engine.py:InterferenceEngine as=S12-01`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S13-01.json`
 - **Holds:** `S13-01`
-- **Note:** Frequency markers at f = 0.25 cyc/yr (4y), 0.167 cyc/yr (6y), 0.125 cyc/yr (8y), and 0.50 cyc/yr (2y) light along the spectral rail. [book Ch 22, P1-P6]
+- **Note:** Figma card `v2-S13-01` highlights: Google Trends weekly.
 
 ## S13-17 — Falsification gate: 4-year ratio ≤ 1.2 or comparable class peak
 - **Anchor:** `Emmanuel Theodore (101:37)`
-- **Type:** hold
-- **Render:** `manim:yt02/interference_engine.py:InterferenceEngine as=S12-01`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S13-01.json`
 - **Holds:** `S13-01`
-- **Note:** A dashed crimson falsification line draws across the spectral chart at P_identity / P_class = 1.20. [book Ch 22, P1-P6]
+- **Note:** Figma card `v2-S13-01` highlights: Google Trends weekly.
 
 ## S13-18 — Dataset 1: US Congressional Record, 1965–2024 (N = 60 annual)
 - **Anchor:** `Emmanuel Theodore (101:48)`
-- **Type:** hold
-- **Render:** `manim:yt02/interference_engine.py:InterferenceEngine as=S12-01`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S13-01.json`
 - **Holds:** `S13-01`
-- **Note:** The Dataset 1 header ('Congressional Record, 1965–2024, N = 60, Table 22.1') illuminates above the spectral bar chart. [book Ch 22, Table 22.1, Fig 22.2]
+- **Note:** Figma card `v2-S13-01` highlights: Google Trends weekly.
 
 ## S13-19 — Table 22.1: 4-year presidential cycle (0.25 cyc/yr) ratio = 24.06
 - **Anchor:** `Emmanuel Theodore (102:07)`
-- **Type:** hold
-- **Render:** `manim:yt02/interference_engine.py:InterferenceEngine as=S12-01`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S13-01.json`
 - **Holds:** `S13-01`
-- **Note:** Bar 1 (4y Presidential, f = 0.25) surges to 24.06, towering twenty-fold above the 1.20 falsification line. [book Ch 22, Table 22.1, Fig 22.2]
+- **Note:** Figma card `v2-S13-01` highlights: Google Trends weekly.
 
 ## S13-20 — Table 22.1: 6-year Senate ratio = 21.02; 8-year two-term ratio = 12.86
 - **Anchor:** `Emmanuel Theodore (102:22)`
-- **Type:** hold
-- **Render:** `manim:yt02/interference_engine.py:InterferenceEngine as=S12-01`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S13-01.json`
 - **Holds:** `S13-01`
-- **Note:** Bar 2 (6y Senate = 21.02) and Bar 3 (8y Two-term = 12.86) illuminate in amber beside the 4-year peak. [book Ch 22, Table 22.1]
+- **Note:** Figma card `v2-S13-01` highlights: Google Trends weekly.
 
 ## S13-21 — Parseval energy conservation verified to 0.9996
 - **Anchor:** `Emmanuel Theodore (102:33)`
-- **Type:** hold
-- **Render:** `manim:yt02/interference_engine.py:InterferenceEngine as=S12-01`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S13-01.json`
 - **Holds:** `S13-01`
-- **Note:** The verification badge 'Parseval energy ratio = 0.9996 (within 0.04%)' lights beneath Table 22.1. [book Ch 22, Table 22.1]
+- **Note:** Figma card `v2-S13-01` highlights: Google Trends weekly.
 
 ## S13-22 — Negative control: time-domain election-year t-test (t = 0.479, p = 0.634)
 - **Anchor:** `Emmanuel Theodore (102:44)`
-- **Type:** hold
-- **Render:** `manim:yt02/interference_engine.py:InterferenceEngine as=S12-01`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S13-01.json`
 - **Holds:** `S13-01`
-- **Note:** The negative-control callout opens: 'Time-Domain Mean Test: t = 0.479, p = 0.634 (Unconfirmed)'. [book Ch 22, Time-Domain Election-Year Test]
+- **Note:** Figma card `v2-S13-01` highlights: Google Trends weekly.
 
 ## S13-23 — Secular volume drift masking time-domain means vs. Fourier isolation
 - **Anchor:** `Emmanuel Theodore (102:58)`
-- **Type:** hold
-- **Render:** `manim:yt02/interference_engine.py:InterferenceEngine as=S12-01`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S13-01.json`
 - **Holds:** `S13-01`
-- **Note:** The callout contrasts multi-decade baseline drift in raw counts with phase-locked 4-year isolation in the DFT spectrum. [book Ch 22, Time-Domain Election-Year Test]
+- **Note:** Figma card `v2-S13-01` highlights: Google Trends weekly.
 
 ## S13-24 — Annual Nyquist boundary at 0.50 cyc/yr: 2-year ratio = 0.58
 - **Anchor:** `Emmanuel Theodore (103:10)`
-- **Type:** hold
-- **Render:** `manim:yt02/interference_engine.py:InterferenceEngine as=S12-01`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S13-01.json`
 - **Holds:** `S13-01`
-- **Note:** Bar 4 (Annual 2y Nyquist, f = 0.50) highlights at 0.58 with the Nyquist boundary warning tag. [book Ch 22, Table 22.1]
+- **Note:** Figma card `v2-S13-01` highlights: Google Trends weekly.
 
 ## S13-25 — Dataset 2: Weekly Google Trends series, 2004–2024 (Table 22.2)
 - **Anchor:** `Emmanuel Theodore (103:22)`
-- **Type:** hold
-- **Render:** `manim:yt02/interference_engine.py:InterferenceEngine as=S12-01`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S13-01.json`
 - **Holds:** `S13-01`
-- **Note:** The Dataset 2 header ('Google Trends Weekly, 2004–2024, 52 obs/yr, Table 22.2') illuminates. [book Ch 22, Table 22.2]
+- **Note:** Figma card `v2-S13-01` highlights: Google Trends weekly.
 
 ## S13-26 — Table 22.2 resolves the 2-year midterm carrier at ratio = 12.82
 - **Anchor:** `Emmanuel Theodore (103:33)`
-- **Type:** hold
-- **Render:** `manim:yt02/interference_engine.py:InterferenceEngine as=S12-01`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S13-01.json`
 - **Holds:** `S13-01`
-- **Note:** Bar 5 (Weekly 2y Midterm carrier) rises to 12.82, resolving the midterm cycle well below the weekly Nyquist limit. [book Ch 22, Table 22.2]
+- **Note:** Figma card `v2-S13-01` highlights: Google Trends weekly.
 
 ## S13-27 — Tier 2 spectral results confirming phase-locked carrier modulation
 - **Anchor:** `Emmanuel Theodore (103:44)`
-- **Type:** hold
-- **Render:** `manim:yt02/interference_engine.py:InterferenceEngine as=S12-01`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S13-01.json`
 - **Holds:** `S13-01`
-- **Note:** All spectral carrier bars (24.06, 21.02, 12.86, and weekly 12.82) glow together alongside the flat antiphase sum wave I_E(t). [book Ch 22, Table 22.1, Table 22.2]
+- **Note:** Figma card `v2-S13-01` highlights: Google Trends weekly.
 
 <!-- SEG 14 · The definition, rebuilt -->
 
 ## S14-01 — Returning to Figure 2.3 to rebuild the definition
 - **Anchor:** `Emmanuel Theodore (103:52)`
-- **Type:** diagram
-- **Render:** `manim:yt01_redefining_racism/manim/hierarchy_inversion16x9.py:HierarchyInversion as=S13-01`
-- **Note:** Figure 2.3 opens with the conventional inverted pyramid on the left and the rebuilt structural pyramid on the right. [book §2.2, Fig 2.3]
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S14-01.json`
+- **Note:** Figma card `v2-S14-01` highlights: Empirical return.
 
 ## S14-02 — Inverting the Definitional Hierarchy (Figure 2.3 right column)
 - **Anchor:** `Emmanuel Theodore (104:07)`
-- **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/hierarchy_inversion16x9.py:HierarchyInversion as=S13-01`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S14-01.json`
 - **Holds:** `S14-01`
-- **Note:** An inversion arc flips the causal ordering from the left-hand column into the empirically verified right-hand hierarchy. [book §2.2, Fig 2.3]
+- **Note:** Figma card `v2-S14-01` highlights: Generative apex.
 
 ## S14-03 — Top layer: systemic policies, legal codes, and institutions
 - **Anchor:** `Emmanuel Theodore (104:17)`
-- **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/hierarchy_inversion16x9.py:HierarchyInversion as=S13-01`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S14-01.json`
 - **Holds:** `S14-01`
-- **Note:** The top tier of the rebuilt column lights: Systemic Policies & Institutional Structures (generative extraction engine). [book §2.2, Fig 2.3]
+- **Note:** Figma card `v2-S14-01` highlights: Legitimating layer.
 
 ## S14-04 — Middle layer: ideological narratives, media tropes, and doctrines
 - **Anchor:** `Emmanuel Theodore (104:28)`
-- **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/hierarchy_inversion16x9.py:HierarchyInversion as=S13-01`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S14-01.json`
 - **Holds:** `S14-01`
-- **Note:** The middle tier lights: Ideological Narratives & Racial Doctrines commissioned to naturalize the legal partition. [book §2.2, Fig 2.3]
+- **Note:** Figma card `v2-S14-01` highlights: Downstream base.
 
 ## S14-05 — Base layer: downstream interpersonal prejudice and maintenance loop
 - **Anchor:** `Emmanuel Theodore (104:38)`
-- **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/hierarchy_inversion16x9.py:HierarchyInversion as=S13-01`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S14-01.json`
 - **Holds:** `S14-01`
-- **Note:** The base tier lights: Interpersonal Prejudice, Bias & Discrimination, with a dashed feedback arrow looping back up. [book §2.2, Fig 2.3]
+- **Note:** Figma card `v2-S14-01` highlights: Downstream base.
 
 ## S14-06 — Section 2.2 formal definition of racism
 - **Anchor:** `Emmanuel Theodore (104:51)`
@@ -3695,16 +3689,16 @@ One shot per script turn (561). Reuses YT02 v1 card ids, manimgx scenes, and Fig
 
 ## S15-11 — Section 2.3.11: Mode 1 Design, Mode 2 Propagation, Mode 3 Intervention
 - **Anchor:** `Emmanuel Theodore (111:06)`
-- **Type:** diagram
-- **Render:** `manim:yt01_redefining_racism/manim/three_modes16x9.py:ThreeModes as=S14-11`
-- **Note:** The ThreeModes diagram displays the three operational lanes: Mode 1 Intentional Design, Mode 2 Autonomous Propagation, and Mode 3 Conscious Intervention. [book §2.3.11]
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S15-11.json`
+- **Note:** Figma card `v2-S15-11` highlights: Mode 1 · Mode 2 · Mode 3.
 
 ## S15-12 — Case-by-case distinction between coordination and firmware propagation
 - **Anchor:** `Emmanuel Theodore (111:23)`
-- **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/three_modes16x9.py:ThreeModes as=S14-11`
+- **Type:** card
+- **Render:** `figma-card:cards/v2/v2-S15-11.json`
 - **Holds:** `S15-11`
-- **Note:** Focus highlights the handoff between Mode 1 architectural design and Mode 2 incentive-gradient propagation on inherited firmware. [book §2.3.11]
+- **Note:** Figma card `v2-S15-11` highlights: Case-by-case taxonomy.
 
 ## S15-13 — Chapter 19 Concession Theorem closing the structural definition
 - **Anchor:** `Emmanuel Theodore (111:35)`

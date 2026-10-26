@@ -1,0 +1,24 @@
+{
+  "kind": "stat_bars",
+  "headline": "Figure 2.4 · Cotton Revenue and Patrol Ratio",
+  "items": [
+    {
+      "title": "1840 benchmark",
+      "detail": "2.70% patrol-to-revenue ratio: $2.0M patrol and militia spend on $74.1M cotton revenue."
+    },
+    {
+      "title": "1850 benchmark",
+      "detail": "2.88% ratio: $2.95M patrol spend on $102.5M cotton revenue."
+    },
+    {
+      "title": "1860 benchmark",
+      "detail": "2.75% ratio: $6.8M patrol spend on $247.0M cotton revenue."
+    },
+    {
+      "title": "1831–1860 stability",
+      "detail": "Revenue +233%; enslaved population 2,487,455 → 3,953,761; ratio band 2.70%–2.88% (CV < 0.04)."
+    }
+  ],
+  "sources": "The Original Power, Ch. 2, §2.3.2, Fig. 2.4; US Census Series K 554–563",
+  "qrUrl": ""
+}

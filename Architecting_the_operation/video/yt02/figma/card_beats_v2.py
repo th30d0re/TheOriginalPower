@@ -27,6 +27,12 @@ CARDS = ROOT / "Architecting_the_operation/video/yt02/cards"
 OUT = Path(__file__).resolve().parent / "v2/cards_v2.json"
 
 
+def card_json_path(scene: str) -> Path:
+    """Resolve figma-card scene paths (e.g. cards/v2/v2-S03-10.json) under yt02/cards/."""
+    rel = scene.removeprefix("cards/")
+    return CARDS / rel
+
+
 def build_cards():
     shots = load_shots(SHOTLIST)
     turns = json.loads(MANIFEST.read_text())["turns"]
@@ -36,7 +42,7 @@ def build_cards():
         if first.file != "figma-card":
             continue
         stem = Path(first.scene).stem
-        card = json.loads((CARDS / f"{stem}.json").read_text())
+        card = json.loads(card_json_path(first.scene).read_text())
         t0 = turns[first.index]["start_ms"] / 1000
         after = run[-1].index + 1
         t1 = (turns[after]["start_ms"] if after < len(turns) else turns[-1]["end_ms"]) / 1000
@@ -47,9 +53,15 @@ def build_cards():
             round(turns[shot.index]["start_ms"] / 1000 - t0 + 0.25, 2)
             for shot in run
         ]
+        if "revealTurns" in card:  # long runs: reveal item i on the turn its topic is spoken
+            card["beats"] = [card["beats"][k] for k in card.pop("revealTurns")]
         card["duration"] = round(t1 - t0, 2)
+        if "maxDuration" in card:  # Figma exports stop at 5 min; the editor holds the last frame for the rest
+            cap = card.pop("maxDuration")
+            card["duration"] = min(card["duration"], cap)
+            card["beats"] = [b for b in card["beats"] if b < cap - 1]
         cards.append(card)
-    assert len(cards) == 101, len(cards)
+    assert len(cards) == 119, len(cards)
     return cards
 
 

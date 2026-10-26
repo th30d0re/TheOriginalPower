@@ -1,0 +1,32 @@
+{
+  "kind": "source",
+  "headline": "Equation 2.4 · Recursive α Partition",
+  "items": [
+    {
+      "title": "Axis Selector α",
+      "detail": "Gender, wealth, credentials, religion, citizenship, geography, criminal record."
+    },
+    {
+      "title": "X⁺_α and X⁻_α",
+      "detail": "Vertical cut divides any subset X into locally advantaged and subordinated cells."
+    },
+    {
+      "title": "α = gender in I_buffer",
+      "detail": "Male head-of-household authority versus female coverture subordination (Chapter 8)."
+    },
+    {
+      "title": "α = property / felony",
+      "detail": "Second cut yields four compartments with distinct legal rights and wage ceilings."
+    },
+    {
+      "title": "α = credentials in O_racialized",
+      "detail": "Selective incorporation O⁺_α above mass containment O⁻_α."
+    },
+    {
+      "title": "Partition notation",
+      "detail": "Each split writes X = X⁺_α ∪̇ X⁻_α with disjoint cells."
+    }
+  ],
+  "sources": "The Original Power, Ch. 2, §2.1, Eq. 2.4; Ch. 8",
+  "qrUrl": ""
+}

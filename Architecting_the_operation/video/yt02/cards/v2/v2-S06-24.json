@@ -1,0 +1,20 @@
+{
+  "kind": "source",
+  "headline": "Equation 2.3 · Out-group Partition",
+  "items": [
+    {
+      "title": "O_racialized",
+      "detail": "Black Americans under chattel slavery, Jim Crow, and mass carceral containment."
+    },
+    {
+      "title": "O_adjacent,1 … O_adjacent,m",
+      "detail": "Indigenous dispossession, Latino and Asian labor bars, pre-incorporation European arrivals."
+    },
+    {
+      "title": "Wedge Management",
+      "detail": "Differential concessions, model-minority narratives, and border policing between subordinated bands."
+    }
+  ],
+  "sources": "The Original Power, Ch. 2, §2.1, Eq. 2.3",
+  "qrUrl": ""
+}

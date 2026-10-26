@@ -1,0 +1,24 @@
+{
+  "kind": "source",
+  "headline": "Elementary Set Operations on Population U",
+  "items": [
+    {
+      "title": "Set and Subset",
+      "detail": "Circle A inside rectangle U: a well-defined collection and proper subset A ⊂ U."
+    },
+    {
+      "title": "Union and Intersection",
+      "detail": "A ∪ B joins members; A ∩ B keeps only shared members."
+    },
+    {
+      "title": "Disjoint Union",
+      "detail": "When A ∩ B = ∅, the join is a partition written A ∪̇ B."
+    },
+    {
+      "title": "Plain-Language Symbols",
+      "detail": "Every operator on screen maps to spoken definitions before Equations 2.1–2.4."
+    }
+  ],
+  "sources": "The Original Power, Ch. 2, §2.1",
+  "qrUrl": ""
+}

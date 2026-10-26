@@ -606,55 +606,55 @@
   "nodeId": "68:34510"
  },
  {
-  "frame": "intro 1 \u00b7 System Stress",
+  "frame": "intro 1 · System Stress",
   "primary": "S12-01",
   "target": "intro-1-system-stress.mp4",
   "nodeId": "17:2"
  },
  {
-  "frame": "intro 2 \u00b7 Capital",
+  "frame": "intro 2 · Capital",
   "primary": "S12-05",
   "target": "intro-2-capital.mp4",
   "nodeId": "17:173"
  },
  {
-  "frame": "intro 3 \u00b7 Interference State",
+  "frame": "intro 3 · Interference State",
   "primary": "S12-06",
   "target": "intro-3-interference-state.mp4",
   "nodeId": "17:343"
  },
  {
-  "frame": "intro 4 \u00b7 Threshold Dial",
+  "frame": "intro 4 · Threshold Dial",
   "primary": "S12-07",
   "target": "intro-4-threshold-dial.mp4",
   "nodeId": "17:535"
  },
  {
-  "frame": "intro 5 \u00b7 Active Patch",
+  "frame": "intro 5 · Active Patch",
   "primary": "S12-08",
   "target": "intro-5-active-patch.mp4",
   "nodeId": "17:741"
  },
  {
-  "frame": "intro 6 \u00b7 Variables Deployed",
+  "frame": "intro 6 · Variables Deployed",
   "primary": "S12-09",
   "target": "intro-6-variables-deployed.mp4",
   "nodeId": "17:885"
  },
  {
-  "frame": "intro 7 \u00b7 Executing Function",
+  "frame": "intro 7 · Executing Function",
   "primary": "S12-10",
   "target": "intro-7-executing-function.mp4",
   "nodeId": "17:1078"
  },
  {
-  "frame": "intro 8 \u00b7 Wage Phasor",
+  "frame": "intro 8 · Wage Phasor",
   "primary": "S12-11",
   "target": "intro-8-wage-phasor.mp4",
   "nodeId": "17:1217"
  },
  {
-  "frame": "intro 9 \u00b7 Result",
+  "frame": "intro 9 · Result",
   "primary": "S12-14",
   "target": "intro-9-result.mp4",
   "nodeId": "17:1402"
@@ -706,5 +706,113 @@
   "primary": "S12-41",
   "target": "era-2010.mp4",
   "nodeId": "14:284"
+ },
+ {
+  "frame": "card v2 S03-10",
+  "primary": "S03-10",
+  "target": "card-v2-s03-10@s03-10.mp4",
+  "nodeId": "76:32519"
+ },
+ {
+  "frame": "card v2 S04-04",
+  "primary": "S04-04",
+  "target": "card-v2-s04-04@s04-04.mp4",
+  "nodeId": "76:32961"
+ },
+ {
+  "frame": "card v2 S05-11",
+  "primary": "S05-11",
+  "target": "card-v2-s05-11@s05-11.mp4",
+  "nodeId": "76:33158"
+ },
+ {
+  "frame": "card v2 S06-08",
+  "primary": "S06-08",
+  "target": "card-v2-s06-08@s06-08.mp4",
+  "nodeId": "76:33337"
+ },
+ {
+  "frame": "card v2 S06-19",
+  "primary": "S06-19",
+  "target": "card-v2-s06-19@s06-19.mp4",
+  "nodeId": "76:33544"
+ },
+ {
+  "frame": "card v2 S06-24",
+  "primary": "S06-24",
+  "target": "card-v2-s06-24@s06-24.mp4",
+  "nodeId": "76:33728"
+ },
+ {
+  "frame": "card v2 S06-30",
+  "primary": "S06-30",
+  "target": "card-v2-s06-30@s06-30.mp4",
+  "nodeId": "76:34168"
+ },
+ {
+  "frame": "card v2 S06-39",
+  "primary": "S06-39",
+  "target": "card-v2-s06-39@s06-39.mp4",
+  "nodeId": "76:34395"
+ },
+ {
+  "frame": "card v2 S08-43",
+  "primary": "S08-43",
+  "target": "card-v2-s08-43@s08-43.mp4",
+  "nodeId": "76:34574"
+ },
+ {
+  "frame": "card v2 S08-48",
+  "primary": "S08-48",
+  "target": "card-v2-s08-48@s08-48.mp4",
+  "nodeId": "76:34791"
+ },
+ {
+  "frame": "card v2 S09-43",
+  "primary": "S09-43",
+  "target": "card-v2-s09-43@s09-43.mp4",
+  "nodeId": "76:35008"
+ },
+ {
+  "frame": "card v2 S11-06",
+  "primary": "S11-06",
+  "target": "card-v2-s11-06@s11-06.mp4",
+  "nodeId": "76:35202"
+ },
+ {
+  "frame": "card v2 S11-11",
+  "primary": "S11-11",
+  "target": "card-v2-s11-11@s11-11.mp4",
+  "nodeId": "76:35723"
+ },
+ {
+  "frame": "card v2 S11-17",
+  "primary": "S11-17",
+  "target": "card-v2-s11-17@s11-17.mp4",
+  "nodeId": "76:35920"
+ },
+ {
+  "frame": "card v2 S11-38",
+  "primary": "S11-38",
+  "target": "card-v2-s11-38@s11-38.mp4",
+  "nodeId": "76:36127"
+ },
+ {
+  "frame": "card v2 S13-01",
+  "primary": "S13-01",
+  "target": "card-v2-s13-01@s13-01.mp4",
+  "nodeId": "77:19161"
+ },
+ {
+  "frame": "card v2 S14-01",
+  "primary": "S14-01",
+  "target": "card-v2-s14-01@s14-01.mp4",
+  "nodeId": "76:36597"
+ },
+ {
+  "frame": "card v2 S15-11",
+  "primary": "S15-11",
+  "target": "card-v2-s15-11@s15-11.mp4",
+  "nodeId": "76:36808"
  }
 ]
