@@ -1,0 +1,636 @@
+[
+ {
+  "name": "wage S10-01",
+  "theta0": 25,
+  "eq": false,
+  "cs": false,
+  "pins": false,
+  "headline": "The Wage Phasor · Two Wage Channels",
+  "source": "The Original Power, Ch. 3, Eq. 3.5; Ch. 4 citing Du Bois · θ placements are illustrative",
+  "duration": 56.94,
+  "states": [
+   {
+    "t": 1.42,
+    "theta": 25,
+    "cap": "WHY DEFEND A HIERARCHY THAT EXTRACTS?",
+    "x": []
+   },
+   {
+    "t": 10.21,
+    "theta": 45,
+    "cap": "SUPPRESSION ALLOCATION · TWO WAGE CHANNELS",
+    "x": [
+     "ctx:alloc"
+    ],
+    "ctx": {
+     "tag": "SUPPRESSION ALLOCATION",
+     "body": [
+      "ψ_m · the material wage",
+      "ψ_s · the psychological or status wage"
+     ],
+     "svg": null,
+     "lines": null
+    }
+   },
+   {
+    "t": 12.89,
+    "theta": null,
+    "cap": null,
+    "x": [
+     "hi:m"
+    ]
+   },
+   {
+    "t": 16.85,
+    "theta": null,
+    "cap": null,
+    "x": [
+     "hi:s"
+    ]
+   },
+   {
+    "t": 22.87,
+    "theta": 60,
+    "cap": "DU BOIS · THE PSYCHOLOGICAL WAGE",
+    "x": [
+     "ctx:dubois",
+     "hi:s"
+    ],
+    "ctx": {
+     "tag": "DU BOIS · THE WAGE OF WHITENESS",
+     "body": [
+      "deference · public standing",
+      "institutional access · legal leniency",
+      "W. E. B. Du Bois, Black Reconstruction in America (1935)"
+     ],
+     "svg": null,
+     "lines": null
+    }
+   },
+   {
+    "t": 32.32,
+    "theta": 45,
+    "cap": "EQUATION 3.5 · ONE COMPLEX WAGE",
+    "x": [
+     "eq",
+     "hi:eq"
+    ]
+   },
+   {
+    "t": 45.13,
+    "theta": null,
+    "cap": "θ · AN ORDINAL DIAGNOSTIC",
+    "x": [
+     "cs",
+     "hi:cs",
+     "ctx:diag"
+    ],
+    "ctx": {
+     "tag": "AN ORDINAL DIAGNOSTIC",
+     "body": null,
+     "svg": null,
+     "lines": [
+      [
+       49.53,
+       "material concessions shrink"
+      ],
+      [
+       50.85,
+       "status expands"
+      ],
+      [
+       52.53,
+       "extraction crosses into the Buffer Class"
+      ]
+     ]
+    }
+   }
+  ]
+ },
+ {
+  "name": "wage S10-14",
+  "theta0": 35,
+  "eq": true,
+  "cs": true,
+  "pins": false,
+  "headline": "The Wage Phasor · Rotating θ",
+  "source": "The Original Power, Ch. 3, Eq. 3.5 and the Complex Suppression Allocation · θ placements are illustrative",
+  "duration": 156.27,
+  "states": [
+   {
+    "t": 1.64,
+    "theta": 70,
+    "cap": "EQUAL MAGNITUDE · DIFFERENT MIX",
+    "x": [
+     "circle",
+     "ctx:const"
+    ],
+    "ctx": {
+     "tag": "SAME |W| · DIFFERENT θ",
+     "body": [
+      "Equal total allocation; different lives for the Buffer Class."
+     ],
+     "svg": "ph.const",
+     "lines": null
+    }
+   },
+   {
+    "t": 8.95,
+    "theta": 45,
+    "cap": "ORDINAL REGIMES",
+    "x": [
+     "nocircle",
+     "ctx:tier3"
+    ],
+    "ctx": {
+     "tag": "CONFIDENCE TIER 3 · ORDINAL REGIMES",
+     "body": null,
+     "svg": null,
+     "lines": [
+      [
+       12.65,
+       "θ = 0° · pure material"
+      ],
+      [
+       13.03,
+       "θ = 90° · pure status"
+      ],
+      [
+       14.35,
+       "θ > 90° · Quadrant II"
+      ]
+     ]
+    }
+   },
+   {
+    "t": 21.46,
+    "theta": 0,
+    "cap": "θ = 0° · PURE MATERIAL",
+    "x": [
+     "hi:m"
+    ]
+   },
+   {
+    "t": 28.53,
+    "theta": 12,
+    "cap": "MATERIAL INVESTMENT",
+    "x": [
+     "ctx:invest"
+    ],
+    "ctx": {
+     "tag": "MATERIAL WORK",
+     "body": [
+      "land · capital · healthcare",
+      "wages · public works"
+     ],
+     "svg": null,
+     "lines": null
+    }
+   },
+   {
+    "t": 37.61,
+    "theta": 55,
+    "cap": "ROTATION REDISTRIBUTES THE WAGE",
+    "x": [
+     "hi:m",
+     "hi:s"
+    ]
+   },
+   {
+    "t": 45.47,
+    "theta": 90,
+    "cap": "θ = 90° · ψ_m = 0",
+    "x": [
+     "ctx:zero",
+     "hi:s"
+    ],
+    "ctx": {
+     "tag": "PURE STATUS · θ = 90°",
+     "body": [
+      "ψ_s carries the full wage magnitude."
+     ],
+     "svg": "ph.zero",
+     "lines": null
+    }
+   },
+   {
+    "t": 56.48,
+    "theta": null,
+    "cap": "REACTIVE POWER",
+    "x": [
+     "ctx:reactive"
+    ],
+    "ctx": {
+     "tag": "REACTIVE POWER",
+     "body": [
+      "Sustains a field and redirects current",
+      "with zero net work on the material axis."
+     ],
+     "svg": null,
+     "lines": null
+    }
+   },
+   {
+    "t": 66.22,
+    "theta": null,
+    "cap": "CULTURE WAR · PURE REACTIVE POWER",
+    "x": [
+     "ctx:culture"
+    ],
+    "ctx": {
+     "tag": "THE SOCIAL MAPPING · CULTURE WAR",
+     "body": [
+      "status signaling · hierarchy defense",
+      "identity conflict",
+      "zero material improvement for the Buffer Class"
+     ],
+     "svg": null,
+     "lines": null
+    }
+   },
+   {
+    "t": 76.54,
+    "theta": null,
+    "cap": "ZERO-CAPITAL STATUS ALLOCATION",
+    "x": [
+     "ctx:free"
+    ],
+    "ctx": {
+     "tag": "ZERO-CAPITAL STATUS WAGE",
+     "body": [
+      "rank · deference · immunity",
+      "proximity to the protected side of the boundary"
+     ],
+     "svg": null,
+     "lines": null
+    }
+   },
+   {
+    "t": 85.94,
+    "theta": 118,
+    "cap": "PAST 90° · QUADRANT II",
+    "x": []
+   },
+   {
+    "t": 93.29,
+    "theta": 120,
+    "cap": "MATERIAL FLOWS UP TO THE ELITE",
+    "x": [
+     "ctx:neg",
+     "hi:m"
+    ],
+    "ctx": {
+     "tag": "COSINE TURNS NEGATIVE",
+     "body": [
+      "Material wealth flows up to the Elite;",
+      "the status component stays positive."
+     ],
+     "svg": "ph.neg",
+     "lines": null
+    }
+   },
+   {
+    "t": 101.74,
+    "theta": 125,
+    "cap": "LOSS + SYMBOLIC RANK",
+    "x": [
+     "ctx:lose"
+    ],
+    "ctx": {
+     "tag": "MATERIAL LOSS · SYMBOLIC GAIN",
+     "body": [
+      "wages · housing security · healthcare",
+      "bargaining power",
+      "traded for a larger promise of superiority"
+     ],
+     "svg": null,
+     "lines": null
+    }
+   },
+   {
+    "t": 111.62,
+    "theta": 100,
+    "cap": "θ · THE SYSTEM'S TUNING KNOB",
+    "x": [
+     "ctx:knob"
+    ],
+    "ctx": {
+     "tag": "θ · THE SYSTEM'S TUNING KNOB",
+     "body": [
+      "Cheap status allocation replaces",
+      "expensive material concessions."
+     ],
+     "svg": null,
+     "lines": null
+    }
+   },
+   {
+    "t": 120.87,
+    "theta": 90,
+    "cap": "90° · THE DEFAULT OPERATING MODE",
+    "x": [
+     "ctx:csa",
+     "hi:s"
+    ],
+    "ctx": {
+     "tag": "COMPLEX SUPPRESSION ALLOCATION",
+     "body": [
+      "90° is the extraction kernel's default mode:",
+      "status preserves alignment, capital stays at the apex."
+     ],
+     "svg": null,
+     "lines": null
+    }
+   },
+   {
+    "t": 133.71,
+    "theta": 128,
+    "cap": "QUADRANT II · FASCISM THRESHOLD",
+    "x": [
+     "ctx:fascism"
+    ],
+    "ctx": {
+     "tag": "QUADRANT II · FASCISM THRESHOLD",
+     "body": [
+      "negative material transfer",
+      "+ hyper-inflated psychological wages"
+     ],
+     "svg": null,
+     "lines": null
+    }
+   },
+   {
+    "t": 144.29,
+    "theta": 45,
+    "cap": "ARMS · A DISCRETE ψ_m ANCHOR",
+    "x": [
+     "ctx:arms",
+     "hi:m"
+    ],
+    "ctx": {
+     "tag": "ARMS · A CALIBRATION ANCHOR FOR ψ_m",
+     "body": [
+      "who may carry arms",
+      "who must appear without them",
+      "what object closes an indenture"
+     ],
+     "svg": null,
+     "lines": null
+    }
+   }
+  ]
+ },
+ {
+  "name": "wage S10-43",
+  "theta0": 128,
+  "eq": true,
+  "cs": true,
+  "pins": true,
+  "headline": "The Wage Phasor · Historical Markers",
+  "source": "The Original Power, Ch. 4; Compiled Runtime Logs 3 and 9 · θ placements are illustrative",
+  "duration": 152.47,
+  "states": [
+   {
+    "t": 2.56,
+    "theta": null,
+    "cap": "ORDINAL DIRECTION · SIGN CHANGE",
+    "x": [
+     "ctx:q2dates"
+    ],
+    "ctx": {
+     "tag": "QUADRANT II · ORDINAL",
+     "body": [
+      "direction and sign change;",
+      "arms statutes supply discrete dates"
+     ],
+     "svg": null,
+     "lines": null
+    }
+   },
+   {
+    "t": 14.73,
+    "theta": 90,
+    "cap": "1705 · FIRST IMPLEMENTATION",
+    "x": [
+     "pin:0"
+    ]
+   },
+   {
+    "t": 21.25,
+    "theta": null,
+    "cap": "LOG 3 · W = jψ_s",
+    "x": [
+     "ctx:log3",
+     "hi:eq"
+    ],
+    "ctx": {
+     "tag": "COMPILED RUNTIME LOG 3",
+     "body": [
+      "The status channel becomes an explicit",
+      "system component after 1676."
+     ],
+     "svg": "ph.log3",
+     "lines": null
+    }
+   },
+   {
+    "t": 38.42,
+    "theta": 72,
+    "cap": "1705 · MATERIAL AND LEGAL PRIVILEGES",
+    "x": [
+     "ctx:codes",
+     "hi:m"
+    ],
+    "ctx": {
+     "tag": "THE 1705 CODES",
+     "body": [
+      "freedom dues · a musket",
+      "protection from chattel slavery",
+      "authority to police the racial boundary"
+     ],
+     "svg": null,
+     "lines": null
+    }
+   },
+   {
+    "t": 47.07,
+    "theta": null,
+    "cap": "1705 · MIXED ALLOCATION",
+    "x": [
+     "ctx:mixed"
+    ],
+    "ctx": {
+     "tag": "1705 · A MIXED ALLOCATION",
+     "body": [
+      "material privileges plus the formal",
+      "installation of the psychological component"
+     ],
+     "svg": null,
+     "lines": null
+    }
+   },
+   {
+    "t": 54.13,
+    "theta": 90,
+    "cap": "1894–1965 · CONTAINMENT",
+    "x": [
+     "pin:1",
+     "ctx:log9"
+    ],
+    "ctx": {
+     "tag": "COMPILED RUNTIME LOG 9",
+     "body": [
+      "The Complex Wage weaponized alongside",
+      "spatial redlining and the Capture Variable"
+     ],
+     "svg": null,
+     "lines": null
+    }
+   },
+   {
+    "t": 65.24,
+    "theta": 84,
+    "cap": "PARTITIONED CREDIT + PROTECTION",
+    "x": [
+     "ctx:credit",
+     "hi:m"
+    ],
+    "ctx": {
+     "tag": "THE CONTAINMENT-ERA WAGE",
+     "body": [
+      "ψ_m · partitioned housing credit, infrastructure,",
+      "labor protections",
+      "ψ_s · rank and legal protection across the color line"
+     ],
+     "svg": null,
+     "lines": null
+    }
+   },
+   {
+    "t": 78.01,
+    "theta": 90,
+    "cap": "NO INVENTED ANGLE",
+    "x": [
+     "ctx:tele"
+    ],
+    "ctx": {
+     "tag": "PHASE LOADING · THRESHOLD PROXIMITY",
+     "body": [
+      "Dashboard ranges only; no measured θ."
+     ],
+     "svg": "ph.tele",
+     "lines": null
+    }
+   },
+   {
+    "t": 87.69,
+    "theta": 108,
+    "cap": "AFTER 1965 · PROXY CHANNELS",
+    "x": [
+     "pin:2",
+     "ctx:ac"
+    ],
+    "ctx": {
+     "tag": "AFTER 1965 · AC MODE",
+     "body": [
+      "Facially neutral rules preserve extraction",
+      "through phase-shifted proxy channels."
+     ],
+     "svg": null,
+     "lines": null
+    }
+   },
+   {
+    "t": 97.43,
+    "theta": 118,
+    "cap": "FACIALLY NEUTRAL EXEMPLARS",
+    "x": [
+     "ctx:exemplars"
+    ],
+    "ctx": {
+     "tag": "THE BOOK'S EXEMPLARS",
+     "body": [
+      "mass incarceration · the War on Drugs",
+      "redlining 2.0 · algorithmic credit scoring",
+      "subprime lending · school-funding gerrymanders",
+      "the culture-war runtime"
+     ],
+     "svg": null,
+     "lines": null
+    }
+   },
+   {
+    "t": 110.26,
+    "theta": 124,
+    "cap": "CARCERAL + FINANCIAL PROXIES",
+    "x": [
+     "ctx:routes"
+    ],
+    "ctx": {
+     "tag": "TWO PROXY ROUTES",
+     "body": [
+      "criminal status · incarceration, the War on Drugs",
+      "spatial and financial · redlining 2.0, credit, subprime"
+     ],
+     "svg": null,
+     "lines": null
+    }
+   },
+   {
+    "t": 121.59,
+    "theta": 128,
+    "cap": "MATERIAL PROJECTION CROSSES ZERO",
+    "x": [
+     "ctx:enclose",
+     "hi:m"
+    ],
+    "ctx": {
+     "tag": "EXTRACTION FROM THE BUFFER CLASS",
+     "body": [
+      "deindustrialization · debt enclosure",
+      "declining union power"
+     ],
+     "svg": "ph.neg",
+     "lines": null
+    }
+   },
+   {
+    "t": 131.04,
+    "theta": 135,
+    "cap": "STATUS REMAINS POSITIVE",
+    "x": [
+     "ctx:q2loss",
+     "hi:s"
+    ],
+    "ctx": {
+     "tag": "QUADRANT II",
+     "body": [
+      "material loss paired with",
+      "intensified psychological compensation"
+     ],
+     "svg": null,
+     "lines": null
+    }
+   },
+   {
+    "t": 143.73,
+    "theta": 132,
+    "cap": "ONE ROTATING CONTRACT",
+    "x": [
+     "ctx:contract",
+     "hi:eq",
+     "pin:all"
+    ],
+    "ctx": {
+     "tag": "ONE ROTATING QUANTITY",
+     "body": [
+      "Material concessions recede, status expands,",
+      "and extraction crosses into the Buffer Class."
+     ],
+     "svg": null,
+     "lines": null
+    }
+   }
+  ]
+ }
+]

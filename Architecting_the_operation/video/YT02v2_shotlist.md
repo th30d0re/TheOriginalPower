@@ -2177,37 +2177,37 @@
 
 ## S10-01 — Buffer Class puzzle: defending a system that extracts from it
 - **Anchor:** `Emmanuel Theodore (64:30)`
-- **Type:** diagram
-- **Render:** `manim:yt02/wage_phasor.py:WagePhasor`
-- **Note:** The WagePhasor complex plane opens with vertical material axis (+1) and horizontal psychological status axis (+j); the phasor arrow W starts at θ = 25°. [book Ch 0; §2.3; Ch 4]
+- **Type:** scene
+- **Render:** `figma:wage S10-01`
+- **Note:** The wage S10-01 Figma frame: W holds at θ = 25°; the caption reads WHY DEFEND A HIERARCHY THAT EXTRACTS?. [book Ch 0; §2.3; Ch 4]
 
 ## S10-02 — The Complex Wage in Chapter 3, Equation 3.5
 - **Anchor:** `Emmanuel Theodore (64:40)`
 - **Type:** hold
-- **Render:** `manim:yt02/wage_phasor.py:WagePhasor`
+- **Render:** `figma:wage S10-01`
 - **Holds:** `S10-01`
-- **Note:** The phasor rotates to θ = 45° while the material and status channels highlight together. [book §2.3, canonical variable map]
+- **Note:** The wage S10-01 Figma frame: W rotates to θ = 45°; the caption reads SUPPRESSION ALLOCATION · TWO WAGE CHANNELS; the SUPPRESSION ALLOCATION panel appears; the ψ_m component pulses; the ψ_s component pulses. [book §2.3, canonical variable map]
 
 ## S10-03 — W. E. B. Du Bois (1935) public and psychological wage
 - **Anchor:** `Emmanuel Theodore (64:50)`
 - **Type:** hold
-- **Render:** `manim:yt02/wage_phasor.py:WagePhasor`
+- **Render:** `figma:wage S10-01`
 - **Holds:** `S10-01`
-- **Note:** The horizontal projection bar ψ_s pulses in amber and the vertical projection bar ψ_m pulses in green, pairing Du Bois's status and material components. [book §2.3; Ch 4, citing Du Bois]
+- **Note:** The wage S10-01 Figma frame: W rotates to θ = 60°; the caption reads DU BOIS · THE PSYCHOLOGICAL WAGE; the DU BOIS · THE WAGE OF WHITENESS panel appears; the ψ_s component pulses. [book §2.3; Ch 4, citing Du Bois]
 
 ## S10-04 — Packaging ψ_m and ψ_s into a single mathematical object
 - **Anchor:** `Emmanuel Theodore (65:02)`
 - **Type:** hold
-- **Render:** `manim:yt02/wage_phasor.py:WagePhasor`
+- **Render:** `figma:wage S10-01`
 - **Holds:** `S10-01`
-- **Note:** The formula W = ψ_m + jψ_s illuminates in the equation card at the top-right of the canvas. [book Ch 3, Eq 3.5]
+- **Note:** The wage S10-01 Figma frame: W rotates to θ = 45°; the caption reads EQUATION 3.5 · ONE COMPLEX WAGE; Equation 3.5 appears; Equation 3.5 is ringed. [book Ch 3, Eq 3.5]
 
 ## S10-05 — Census Series K 554–563, Hadden, Beckert, and Baptist sources
 - **Anchor:** `Emmanuel Theodore (65:12)`
 - **Type:** hold
-- **Render:** `manim:yt02/wage_phasor.py:WagePhasor`
+- **Render:** `figma:wage S10-01`
 - **Holds:** `S10-01`
-- **Note:** The phasor holds at θ = 45° while both component formulas highlight under the ordinal-diagnostic caption. [book Ch 3, Eq 3.5]
+- **Note:** The wage S10-01 Figma frame: W holds at θ = 45°; the caption reads θ · AN ORDINAL DIAGNOSTIC; ψ_m = |W| cos θ and ψ_s = |W| sin θ appear; the AN ORDINAL DIAGNOSTIC panel appears. [book Ch 3, Eq 3.5]
 
 ## S10-06 — Complex-wage plane hero build
 - **Anchor:** `Emmanuel Theodore (65:28)`
@@ -2266,104 +2266,114 @@
 
 ## S10-14 — Constant total allocation with declining material share
 - **Anchor:** `Emmanuel Theodore (67:00)`
-- **Type:** diagram
-- **Render:** `manim:yt02/wage_phasor.py:WagePhasor`
-- **Note:** The phasor rotates to θ = 70° along the constant-|W| circle as ψ_m shrinks and ψ_s grows. [book Ch 3, Eq 3.5]
+- **Type:** scene
+- **Render:** `figma:wage S10-14`
+- **Note:** The wage S10-14 Figma frame: W rotates to θ = 70°; the caption reads EQUAL MAGNITUDE · DIFFERENT MIX; the constant-|W| circle draws; the SAME |W| · DIFFERENT θ panel appears. [book Ch 3, Eq 3.5]
 
 ## S10-15 — Confidence Tier 3 structural representation of angle θ
 - **Anchor:** `Emmanuel Theodore (67:09)`
-- **Type:** diagram
-- **Render:** `manim:yt02/wage_phasor.py:WagePhasor`
-- **Note:** The Tier 3 ordinal badge appears while the phasor holds at θ = 45°. [book Ch 3, Eq 3.5, phase-angle regimes]
+- **Type:** hold
+- **Render:** `figma:wage S10-14`
+- **Holds:** `S10-14`
+- **Note:** The wage S10-14 Figma frame: W rotates to θ = 45°; the caption reads ORDINAL REGIMES; the CONFIDENCE TIER 3 · ORDINAL REGIMES panel appears. [book Ch 3, Eq 3.5, phase-angle regimes]
 
 ## S10-16 — Theta begins on the vertical material axis
 - **Anchor:** `Emmanuel Theodore (67:20)`
-- **Type:** diagram
-- **Render:** `manim:yt02/wage_plane_hero.py:WagePlaneHero`
-- **Note:** The rotated wage plane opens at θ = 0° with the label PURE MATERIAL. [book Ch 3, Eq 3.5] Scene labels stay above the caption band. [revision G]
+- **Type:** hold
+- **Render:** `figma:wage S10-14`
+- **Holds:** `S10-14`
+- **Note:** The wage S10-14 Figma frame: W rotates to θ = 0°; the caption reads θ = 0° · PURE MATERIAL; the ψ_m component pulses. [book Ch 3, Eq 3.5]
 
 ## S10-17 — This position represents genuine economic investment in the Buffer Class
 - **Anchor:** `Emmanuel Theodore (67:27)`
 - **Type:** hold
-- **Render:** `manim:yt02/wage_plane_hero.py:WagePlaneHero`
-- **Holds:** `S10-16`
-- **Note:** The wage-plane arrow rotates to θ = 12° as material investment enters the mixed regime. [book Ch 3, Eq 3.5]
+- **Render:** `figma:wage S10-14`
+- **Holds:** `S10-14`
+- **Note:** The wage S10-14 Figma frame: W rotates to θ = 12°; the caption reads MATERIAL INVESTMENT; the MATERIAL WORK panel appears. [book Ch 3, Eq 3.5]
 
 ## S10-18 — As theta increases, the arrow rotates toward the psychological axis
 - **Anchor:** `Emmanuel Theodore (67:38)`
 - **Type:** hold
-- **Render:** `manim:yt02/wage_plane_hero.py:WagePlaneHero`
-- **Holds:** `S10-16`
-- **Note:** The wage-plane arrow rotates to θ = 55°, shrinking the material projection and enlarging the status projection. [book Ch 3, Eq 3.5]
+- **Render:** `figma:wage S10-14`
+- **Holds:** `S10-14`
+- **Note:** The wage S10-14 Figma frame: W rotates to θ = 55°; the caption reads ROTATION REDISTRIBUTES THE WAGE; the ψ_m component pulses; the ψ_s component pulses. [book Ch 3, Eq 3.5]
 
 ## S10-19 — At ninety degrees, the phasor lies entirely on the horizontal axis
 - **Anchor:** `Emmanuel Theodore (67:46)`
 - **Type:** hold
-- **Render:** `manim:yt02/wage_plane_hero.py:WagePlaneHero`
-- **Holds:** `S10-16`
-- **Note:** The wage-plane arrow reaches θ = 90°, where ψ_m equals zero and ψ_s carries the wage. [book Ch 3, Eq 3.5]
+- **Render:** `figma:wage S10-14`
+- **Holds:** `S10-14`
+- **Note:** The wage S10-14 Figma frame: W rotates to θ = 90°; the caption reads θ = 90° · ψ_m = 0; the PURE STATUS · θ = 90° panel appears; the ψ_s component pulses. [book Ch 3, Eq 3.5]
 
 ## S10-20 — Electrical engineering calls this reactive power
 - **Anchor:** `Emmanuel Theodore (67:55)`
-- **Type:** diagram
-- **Render:** `manim:yt02/wage_plane_hero.py:WagePlaneHero`
-- **Note:** The wage plane holds at θ = 90° with the label REACTIVE POWER · ψ_m = 0. [book Ch 3, Eq 3.5] Scene labels stay above the caption band. [revision G]
+- **Type:** hold
+- **Render:** `figma:wage S10-14`
+- **Holds:** `S10-14`
+- **Note:** The wage S10-14 Figma frame: W holds at θ = 90°; the caption reads REACTIVE POWER; the REACTIVE POWER panel appears. [book Ch 3, Eq 3.5]
 
 ## S10-21 — In the social mapping, pure reactive power is culture war: intense statu
 - **Anchor:** `Emmanuel Theodore (68:04)`
 - **Type:** hold
-- **Render:** `manim:yt02/wage_plane_hero.py:WagePlaneHero`
-- **Holds:** `S10-20`
-- **Note:** The wage plane remains at θ = 90° in the pure-status reactive-power state. [book Ch 3, Eq 3.5]
+- **Render:** `figma:wage S10-14`
+- **Holds:** `S10-14`
+- **Note:** The wage S10-14 Figma frame: W holds at θ = 90°; the caption reads CULTURE WAR · PURE REACTIVE POWER; the THE SOCIAL MAPPING · CULTURE WAR panel appears. [book Ch 3, Eq 3.5]
 
 ## S10-22 — The psychological wage costs the Elite zero capital
 - **Anchor:** `Emmanuel Theodore (68:15)`
 - **Type:** hold
-- **Render:** `manim:yt02/wage_plane_hero.py:WagePlaneHero`
-- **Holds:** `S10-20`
-- **Note:** The wage plane remains at θ = 90° with zero material transfer and positive status allocation. [book Ch 3, Eq 3.5]
+- **Render:** `figma:wage S10-14`
+- **Holds:** `S10-14`
+- **Note:** The wage S10-14 Figma frame: W holds at θ = 90°; the caption reads ZERO-CAPITAL STATUS ALLOCATION; the ZERO-CAPITAL STATUS WAGE panel appears. [book Ch 3, Eq 3.5]
 
 ## S10-23 — Continue the rotation past ninety degrees
 - **Anchor:** `Emmanuel Theodore (68:25)`
-- **Type:** diagram
-- **Render:** `manim:yt02/wage_plane_hero.py:WagePlaneHero`
-- **Note:** The wage-plane phasor rotates from θ = 90° to θ = 118° in Quadrant II. [book Ch 3, Eq 3.5] Scene labels stay above the caption band. [revision G]
+- **Type:** hold
+- **Render:** `figma:wage S10-14`
+- **Holds:** `S10-14`
+- **Note:** The wage S10-14 Figma frame: W rotates to θ = 118°; the caption reads PAST 90° · QUADRANT II. [book Ch 3, Eq 3.5]
 
 ## S10-24 — Negative cosine in Quadrant II: ψ_m < 0, ψ_s > 0
 - **Anchor:** `Emmanuel Theodore (68:32)`
-- **Type:** diagram
-- **Render:** `manim:yt02/wage_phasor.py:WagePhasor`
-- **Note:** The phasor advances to θ = 120°; the material projection turns negative while status remains positive. [book Ch 0, AC mode; Ch 3, Eq 3.5]
+- **Type:** hold
+- **Render:** `figma:wage S10-14`
+- **Holds:** `S10-14`
+- **Note:** The wage S10-14 Figma frame: W rotates to θ = 120°; the caption reads MATERIAL FLOWS UP TO THE ELITE; the COSINE TURNS NEGATIVE panel appears; the ψ_m component pulses. [book Ch 0, AC mode; Ch 3, Eq 3.5]
 
 ## S10-25 — Buffer Class losing real wealth while compensated in status
 - **Anchor:** `Emmanuel Theodore (68:42)`
-- **Type:** diagram
-- **Render:** `manim:yt02/wage_phasor.py:WagePhasor`
-- **Note:** At θ = 125°, the crimson downward bar ψ_m < 0 (falling real wages, rising debt) and amber rightward bar ψ_s > 0 pulse simultaneously. [book Ch 0; Ch 13]
+- **Type:** hold
+- **Render:** `figma:wage S10-14`
+- **Holds:** `S10-14`
+- **Note:** The wage S10-14 Figma frame: W rotates to θ = 125°; the caption reads LOSS + SYMBOLIC RANK; the MATERIAL LOSS · SYMBOLIC GAIN panel appears. [book Ch 0; Ch 13]
 
 ## S10-26 — Phase angle θ as the system's operating-mode indicator
 - **Anchor:** `Emmanuel Theodore (68:52)`
-- **Type:** diagram
-- **Render:** `manim:yt02/wage_phasor.py:WagePhasor`
-- **Note:** The angle readout moves to θ = 100° under the system-tuning caption. [book Ch 0, AC mode; Ch 3, Eq 3.5]
+- **Type:** hold
+- **Render:** `figma:wage S10-14`
+- **Holds:** `S10-14`
+- **Note:** The wage S10-14 Figma frame: W rotates to θ = 100°; the caption reads θ · THE SYSTEM'S TUNING KNOB; the θ · THE SYSTEM'S TUNING KNOB panel appears. [book Ch 0, AC mode; Ch 3, Eq 3.5]
 
 ## S10-27 — The ninety-degree position is the extraction kernel's default operating
 - **Anchor:** `Emmanuel Theodore (69:03)`
-- **Type:** diagram
-- **Render:** `manim:yt02/wage_plane_hero.py:WagePlaneHero`
-- **Note:** The wage plane holds at θ = 90° and highlights the ψ_s status formula. [book Ch 3, Eq 3.5] Scene labels stay above the caption band. [revision G]
+- **Type:** hold
+- **Render:** `figma:wage S10-14`
+- **Holds:** `S10-14`
+- **Note:** The wage S10-14 Figma frame: W rotates to θ = 90°; the caption reads 90° · THE DEFAULT OPERATING MODE; the COMPLEX SUPPRESSION ALLOCATION panel appears; the ψ_s component pulses. [book Ch 3, Eq 3.5]
 
 ## S10-28 — Past 90°: Buffer Class cannibalization regime
 - **Anchor:** `Emmanuel Theodore (69:15)`
-- **Type:** diagram
-- **Render:** `manim:yt02/wage_phasor.py:WagePhasor`
-- **Note:** The phasor sweeps to θ = 128° into the shaded upper-right Quadrant II region labeled FASCISM THRESHOLD. [book Ch 3, Eq 3.5, phase-angle regimes]
+- **Type:** hold
+- **Render:** `figma:wage S10-14`
+- **Holds:** `S10-14`
+- **Note:** The wage S10-14 Figma frame: W rotates to θ = 128°; the caption reads QUADRANT II · FASCISM THRESHOLD; the QUADRANT II · FASCISM THRESHOLD panel appears. [book Ch 3, Eq 3.5, phase-angle regimes]
 
 ## S10-29 — Arms-calibrated wage phasor
 - **Anchor:** `Emmanuel Theodore (69:25)`
-- **Type:** diagram
-- **Render:** `manim:yt02/wage_phasor.py:WagePhasor`
-- **Note:** Illustrative θ only; ψ_m anchored on arms statutes. [book subsec:arms_joint_wage]
+- **Type:** hold
+- **Render:** `figma:wage S10-14`
+- **Holds:** `S10-14`
+- **Note:** The wage S10-14 Figma frame: W rotates to θ = 45°; the caption reads ARMS · A DISCRETE ψ_m ANCHOR; the ARMS · A CALIBRATION ANCHOR FOR ψ_m panel appears; the ψ_m component pulses. [book subsec:arms_joint_wage]
 
 ## S10-30 — Primary source scan
 - **Anchor:** `Emmanuel Theodore (69:40)`
@@ -2453,87 +2463,100 @@
 
 ## S10-43 — Arms-calibrated wage phasor
 - **Anchor:** `Emmanuel Theodore (72:29)`
-- **Type:** diagram
-- **Render:** `manim:yt02/wage_phasor.py:WagePhasor`
-- **Note:** Illustrative θ only; ψ_m anchored on arms statutes. [book subsec:arms_joint_wage]
+- **Type:** scene
+- **Render:** `figma:wage S10-43`
+- **Note:** The wage S10-43 Figma frame: W holds at θ = 128°; the caption reads ORDINAL DIRECTION · SIGN CHANGE; the QUADRANT II · ORDINAL panel appears. [book subsec:arms_joint_wage]
 
 ## S10-44 — Stopping the phasor at three historical operating points
 - **Anchor:** `Emmanuel Theodore (72:41)`
-- **Type:** diagram
-- **Render:** `manim:yt02/wage_phasor.py:WagePhasor`
-- **Note:** The phasor rotates to θ = 90° under the 1705 first-implementation caption, with the 1705 pin indicated. [book Ch 4]
+- **Type:** hold
+- **Render:** `figma:wage S10-43`
+- **Holds:** `S10-43`
+- **Note:** The wage S10-43 Figma frame: W rotates to θ = 90°; the caption reads 1705 · FIRST IMPLEMENTATION; the 1705 marker lights. [book Ch 4]
 
 ## S10-45 — Stop 1: 1705 Virginia Slave Codes at θ = 90° (Log 3)
 - **Anchor:** `Emmanuel Theodore (72:51)`
-- **Type:** diagram
-- **Render:** `manim:yt02/wage_phasor.py:WagePhasor`
-- **Note:** The phasor holds at θ = 90° while Equation 3.5 highlights under the Log 3 · W = jψ_s caption. [book Compiled Runtime Log 3, lines 15231-15241]
+- **Type:** hold
+- **Render:** `figma:wage S10-43`
+- **Holds:** `S10-43`
+- **Note:** The wage S10-43 Figma frame: W holds at θ = 90°; the caption reads LOG 3 · W = jψ_s; the COMPILED RUNTIME LOG 3 panel appears; Equation 3.5 is ringed. [book Compiled Runtime Log 3, lines 15231-15241]
 
 ## S10-46 — Modest 1705 freedom dues dominated by permanent racial status
 - **Anchor:** `Emmanuel Theodore (73:02)`
-- **Type:** diagram
-- **Render:** `manim:yt02/wage_phasor.py:WagePhasor`
-- **Note:** The phasor rotates to θ = 72° and indicates the 1705 pin under the material-and-legal-privileges caption. [book Ch 4]
+- **Type:** hold
+- **Render:** `figma:wage S10-43`
+- **Holds:** `S10-43`
+- **Note:** The wage S10-43 Figma frame: W rotates to θ = 72°; the caption reads 1705 · MATERIAL AND LEGAL PRIVILEGES; the THE 1705 CODES panel appears; the ψ_m component pulses. [book Ch 4]
 
 ## S10-47 — Near-pure status regime aligning the Buffer Class with planters
 - **Anchor:** `Emmanuel Theodore (73:13)`
-- **Type:** diagram
-- **Render:** `manim:yt02/wage_phasor.py:WagePhasor`
-- **Note:** The phasor holds at θ = 72° under the 1705 mixed-allocation caption. [book Ch 4; Compiled Runtime Log 3]
+- **Type:** hold
+- **Render:** `figma:wage S10-43`
+- **Holds:** `S10-43`
+- **Note:** The wage S10-43 Figma frame: W holds at θ = 72°; the caption reads 1705 · MIXED ALLOCATION; the 1705 · A MIXED ALLOCATION panel appears. [book Ch 4; Compiled Runtime Log 3]
 
 ## S10-48 — Stop 2: 1894–1965 containment and the Pullman Corollary
 - **Anchor:** `Emmanuel Theodore (73:22)`
-- **Type:** diagram
-- **Render:** `manim:yt02/wage_phasor.py:WagePhasor`
-- **Note:** The phasor rotates to θ = 90° and indicates the 1894–1965 pin under the containment caption. [book Compiled Runtime Log 9, lines 15298-15306]
+- **Type:** hold
+- **Render:** `figma:wage S10-43`
+- **Holds:** `S10-43`
+- **Note:** The wage S10-43 Figma frame: W rotates to θ = 90°; the caption reads 1894–1965 · CONTAINMENT; the 1894–1965 marker lights; the COMPILED RUNTIME LOG 9 panel appears. [book Compiled Runtime Log 9, lines 15298-15306]
 
 ## S10-49 — Racially restricted New Deal/GI Bill credit paired with status
 - **Anchor:** `Emmanuel Theodore (73:34)`
-- **Type:** diagram
-- **Render:** `manim:yt02/wage_phasor.py:WagePhasor`
-- **Note:** At θ = 84°, the material channel highlights under the partitioned-credit-and-protection caption. [book Ch 10; Ch 15]
+- **Type:** hold
+- **Render:** `figma:wage S10-43`
+- **Holds:** `S10-43`
+- **Note:** The wage S10-43 Figma frame: W rotates to θ = 84°; the caption reads PARTITIONED CREDIT + PROTECTION; the THE CONTAINMENT-ERA WAGE panel appears; the ψ_m component pulses. [book Ch 10; Ch 15]
 
 ## S10-50 — Log 9 telemetry: Φ_load = 0.72, ρ_τ = 0.68
 - **Anchor:** `Emmanuel Theodore (73:46)`
-- **Type:** diagram
-- **Render:** `manim:yt02/wage_phasor.py:WagePhasor`
-- **Note:** The phasor rotates to θ = 90° while the Φ_load = 0.72 and ρ_τ = 0.68 telemetry readout appears. [book Compiled Runtime Log 9; YT02_outline SEG 09]
+- **Type:** hold
+- **Render:** `figma:wage S10-43`
+- **Holds:** `S10-43`
+- **Note:** The wage S10-43 Figma frame: W rotates to θ = 90°; the caption reads NO INVENTED ANGLE; the PHASE LOADING · THRESHOLD PROXIMITY panel appears. [book Compiled Runtime Log 9; YT02_outline SEG 09]
 
 ## S10-51 — Stop 3: Post-1965 rotation past 90° into Quadrant II
 - **Anchor:** `Emmanuel Theodore (73:57)`
-- **Type:** diagram
-- **Render:** `manim:yt02/wage_phasor.py:WagePhasor`
-- **Note:** The phasor rotates to θ = 108° and indicates the Post-1965 pin under the proxy-channels caption. [book Ch 0, AC mode; §2.3.5]
+- **Type:** hold
+- **Render:** `figma:wage S10-43`
+- **Holds:** `S10-43`
+- **Note:** The wage S10-43 Figma frame: W rotates to θ = 108°; the caption reads AFTER 1965 · PROXY CHANNELS; the after-1965 marker lights; the AFTER 1965 · AC MODE panel appears. [book Ch 0, AC mode; §2.3.5]
 
 ## S10-52 — Chapter 0 AC-mode exemplars: Southern Strategy to 2008 bailout
 - **Anchor:** `Emmanuel Theodore (74:07)`
-- **Type:** diagram
-- **Render:** `manim:yt02/wage_phasor.py:WagePhasor`
-- **Note:** The phasor advances to θ = 118° as the Southern Strategy, War on Drugs, and 1994 Crime Bill proxy tags appear. [book Ch 0, AC mode]
+- **Type:** hold
+- **Render:** `figma:wage S10-43`
+- **Holds:** `S10-43`
+- **Note:** The wage S10-43 Figma frame: W rotates to θ = 118°; the caption reads FACIALLY NEUTRAL EXEMPLARS; the THE BOOK'S EXEMPLARS panel appears. [book Ch 0, AC mode]
 
 ## S10-53 — Dual role of mass incarceration: containing O andCannibalizing I_buffer
 - **Anchor:** `Emmanuel Theodore (74:20)`
-- **Type:** diagram
-- **Render:** `manim:yt02/wage_phasor.py:WagePhasor`
-- **Note:** At θ = 124°, the carceral and financial proxy tags remain visible in Quadrant II. [book Ch 0; §2.3.5; Ch 12]
+- **Type:** hold
+- **Render:** `figma:wage S10-43`
+- **Holds:** `S10-43`
+- **Note:** The wage S10-43 Figma frame: W rotates to θ = 124°; the caption reads CARCERAL + FINANCIAL PROXIES; the TWO PROXY ROUTES panel appears. [book Ch 0; §2.3.5; Ch 12]
 
 ## S10-54 — Deindustrialization, debt enclosure, and deregulation driving ψ_m < 0
 - **Anchor:** `Emmanuel Theodore (74:31)`
-- **Type:** diagram
-- **Render:** `manim:yt02/wage_phasor.py:WagePhasor`
-- **Note:** The phasor rotates to θ = 128° and highlights the negative material projection. [book Ch 13]
+- **Type:** hold
+- **Render:** `figma:wage S10-43`
+- **Holds:** `S10-43`
+- **Note:** The wage S10-43 Figma frame: W rotates to θ = 128°; the caption reads MATERIAL PROJECTION CROSSES ZERO; the EXTRACTION FROM THE BUFFER CLASS panel appears; the ψ_m component pulses. [book Ch 13]
 
 ## S10-55 — Positive culture-war status ψ_s masking negative material ψ_m
 - **Anchor:** `Emmanuel Theodore (74:41)`
-- **Type:** diagram
-- **Render:** `manim:yt02/wage_phasor.py:WagePhasor`
-- **Note:** At θ = 135°, the positive status channel highlights while the material projection remains negative. [book Ch 0, AC mode; Ch 3, Eq 3.5]
+- **Type:** hold
+- **Render:** `figma:wage S10-43`
+- **Holds:** `S10-43`
+- **Note:** The wage S10-43 Figma frame: W rotates to θ = 135°; the caption reads STATUS REMAINS POSITIVE; the QUADRANT II panel appears; the ψ_s component pulses. [book Ch 0, AC mode; Ch 3, Eq 3.5]
 
 ## S10-56 — Equation 3.5 unifying all three historical regimes on one dial
 - **Anchor:** `Emmanuel Theodore (74:51)`
-- **Type:** diagram
-- **Render:** `manim:yt02/wage_phasor.py:WagePhasor`
-- **Note:** The phasor rotates to θ = 132° while Equation 3.5 and all three historical pins highlight together. [book Ch 3, Eq 3.5; Ch 13]
+- **Type:** hold
+- **Render:** `figma:wage S10-43`
+- **Holds:** `S10-43`
+- **Note:** The wage S10-43 Figma frame: W rotates to θ = 132°; the caption reads ONE ROTATING CONTRACT; the ONE ROTATING QUANTITY panel appears; Equation 3.5 is ringed; all three historical markers light. [book Ch 3, Eq 3.5; Ch 13]
 
 <!-- SEG 11 · Test 3: The American backlash record, 1840–2020 -->
 
