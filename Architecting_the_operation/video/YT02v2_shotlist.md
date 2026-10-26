@@ -443,23 +443,25 @@
 - **Holds:** `S02-01`
 - **Note:** Item 3 reveals, listing components, boundary, inputs/outputs, objective function, and feedback loops. [editorial]
 
-## S02-03 — Apex tier: the Elite (E)
+## S02-03 — Racism as a vector: Equation 3.1 on the cone
 - **Anchor:** `Emmanuel Theodore (12:23)`
-- **Type:** hold
-- **Render:** `manim:yt02/tier_pyramid.py:TierPyramid`
-- **Note:** The top gold cap lights and its legend tag E (Elite: capital owners and architects) highlights while lower tiers dim. [book Ch 0; §2.1, Eq 2.2, Fig 2.1] Single pyramid asset; camera keeps the adjacent Out-group inside the frame. [book Ch 0, Fig 0.2]
+- **Type:** scene
+- **Render:** `figma:vec S02-03`
+- **Note:** The vec S02-03 Figma frame opens: the five-tier cone cross-section builds from its Elite tip to the base, Equation 3.1 (R_acism = M_agnitude · d̂_state) appears, and the d̂_state arrow runs from E down the cone. [book Ch 3, Eq 3.1; Abulhawa]
 
-## S02-04 — Third tier: the Enforcement Class (F_enforce)
+## S02-04 — Equation 25.1: institutional force along the hierarchy
 - **Anchor:** `Emmanuel Theodore (12:43)`
 - **Type:** hold
-- **Render:** `manim:yt02/tier_pyramid.py:TierPyramid`
-- **Note:** Focus steps down to the third tier F_enforce (slave patrols, militias, police, carceral agencies). [book Ch 0; §2.1, Eq 2.2, Fig 2.1] Single pyramid asset; camera keeps the adjacent Out-group inside the frame. [book Ch 0, Fig 0.2]
+- **Render:** `figma:vec S02-03`
+- **Holds:** `S02-03`
+- **Note:** Equation 25.1 (R_systemic = ‖F_institutional‖ · d̂_hierarchy) appears, the Enforcement tier holds focus as the other tiers dim, and the arrow relabels to d̂_hierarchy. [book Ch 25, Eq 25.1]
 
-## S02-05 — Base tier: the racialized Out-group (O_racialized)
+## S02-05 — Racism as directed extraction; prejudice as a scalar
 - **Anchor:** `Emmanuel Theodore (12:59)`
 - **Type:** hold
-- **Render:** `manim:yt02/tier_pyramid.py:TierPyramid`
-- **Note:** Focus reaches the broad base tier O_racialized and adjacent Out-groups bearing primary labor extraction and containment. [book Ch 0; §2.1, Eq 2.2, Eq 2.3, Fig 2.1]
+- **Render:** `figma:vec S02-03`
+- **Holds:** `S02-03`
+- **Note:** Focus lands on the O_racialized base with the adjacent Out-groups tag; the closing lines state racism as vector extraction through law, courts, policing, credit, and capital, and prejudice without a unit vector as a scalar. [book Ch 3; Ch 25]
 
 ## S02-06 — Autonomy restriction and selective empathy coupling
 - **Anchor:** `Emmanuel Theodore (13:14)`
@@ -802,41 +804,41 @@
 ## S05-05 — Requirement 1: five differentiated structural tiers
 - **Anchor:** `Emmanuel Theodore (23:30)`
 - **Type:** diagram
-- **Render:** `manim:yt01_redefining_racism/manim/orthographic16x9.py:Orthographic16x9 as=S02-05`
-- **Note:** The 3D five-tier stepped pyramid assembles on screen, corresponding to Figure 0.2 and Equation 2.2. [book Ch 0, Fig 0.2, Fig 0.3; §2.1, Eq 2.2]
+- **Render:** `manim:yt02/tier_cone.py:TierCone`
+- **Note:** The 3D five-tier cone assembles on screen, corresponding to Figure 0.2 and Equation 2.2. [book Ch 0, Fig 0.2, Fig 0.3; §2.1, Eq 2.2]
 
 ## S05-06 — Apex tier: the Elite (E)
 - **Anchor:** `Emmanuel Theodore (23:49)`
 - **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/orthographic16x9.py:Orthographic16x9 as=S02-05`
+- **Render:** `manim:yt02/tier_cone.py:TierCone`
 - **Holds:** `S05-05`
 - **Note:** The top gold cap lights and its legend tag E (Elite: capital owners and architects) highlights while lower tiers dim. [book Ch 0; §2.1, Eq 2.2, Fig 2.1]
 
 ## S05-07 — Second tier: the Puppet Class (P_uppet)
 - **Anchor:** `Emmanuel Theodore (23:59)`
 - **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/orthographic16x9.py:Orthographic16x9 as=S02-05`
+- **Render:** `manim:yt02/tier_cone.py:TierCone`
 - **Holds:** `S05-05`
 - **Note:** Focus steps down to the second tier P_uppet (politicians, judges, administrators, media). [book Ch 0; §2.1, Eq 2.2, Fig 2.1]
 
 ## S05-08 — Third tier: the Enforcement Class (F_enforce)
 - **Anchor:** `Emmanuel Theodore (24:11)`
 - **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/orthographic16x9.py:Orthographic16x9 as=S02-05`
+- **Render:** `manim:yt02/tier_cone.py:TierCone`
 - **Holds:** `S05-05`
 - **Note:** Focus steps down to the third tier F_enforce (slave patrols, militias, police, carceral agencies). [book Ch 0; §2.1, Eq 2.2, Fig 2.1]
 
 ## S05-09 — Fourth tier: the Buffer Class (I_buffer)
 - **Anchor:** `Emmanuel Theodore (24:23)`
 - **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/orthographic16x9.py:Orthographic16x9 as=S02-05`
+- **Render:** `manim:yt02/tier_cone.py:TierCone`
 - **Holds:** `S05-05`
 - **Note:** Focus steps down to the fourth tier I_buffer (non-Elite dominant In-group absorbing friction for status and concessions). [book Ch 0; §2.1, Eq 2.2, Fig 2.1]
 
 ## S05-10 — Base tier: the racialized Out-group (O_racialized)
 - **Anchor:** `Emmanuel Theodore (24:37)`
 - **Type:** hold
-- **Render:** `manim:yt01_redefining_racism/manim/orthographic16x9.py:Orthographic16x9 as=S02-05`
+- **Render:** `manim:yt02/tier_cone.py:TierCone`
 - **Holds:** `S05-05`
 - **Note:** Focus reaches the broad base tier O_racialized and adjacent Out-groups bearing primary labor extraction and containment. [book Ch 0; §2.1, Eq 2.2, Eq 2.3, Fig 2.1]
 
@@ -1243,19 +1245,19 @@
 - **Render:** `manim:yt02/ortho_illusion.py:OrthoIllusion`
 - **Note:** A head-on view opens as two flat blocks: white In-group I on the left and black Out-group O on the right beneath the Orthographic Illusion title. [book Ch 0, Elite Obscuration and the Orthographic Illusion]
 
-## S07-02 — Five-tier hierarchy as a 3D pyramid (Figure 0.2)
+## S07-02 — Five-tier hierarchy as a 3D cone (Figure 0.2)
 - **Anchor:** `Emmanuel Theodore (36:25)`
 - **Type:** hold
 - **Render:** `manim:yt02/ortho_illusion.py:OrthoIllusion`
 - **Holds:** `S07-01`
-- **Note:** The camera orbits to the three-dimensional pyramid as the Elite apex and the Puppet, Enforcement, Buffer, and Out-group tiers appear. [book Ch 0, Fig 0.2]
+- **Note:** The camera orbits to the three-dimensional cone as the Elite apex and the Puppet, Enforcement, Buffer, and Out-group tiers appear. [book Ch 0, Fig 0.2]
 
 ## S07-03 — Orthographic projection along a fixed sightline
 - **Anchor:** `Emmanuel Theodore (36:37)`
 - **Type:** hold
 - **Render:** `manim:yt02/ortho_illusion.py:OrthoIllusion`
 - **Holds:** `S07-01`
-- **Note:** Parallel rays travel along the camera sightline to a side plane, where the pyramid registers as a two-dimensional shadow. [book Ch 0, lines 762-769]
+- **Note:** Parallel rays travel along the camera sightline to a side plane, where the cone registers as a two-dimensional shadow. [book Ch 0, lines 762-769]
 
 ## S07-04 — Head-on view: flat white/Black binary
 - **Anchor:** `Emmanuel Theodore (36:51)`
@@ -1292,12 +1294,12 @@
 - **Holds:** `S07-01`
 - **Note:** From Buffer level the camera tilts down toward O_racialized while gold extraction arrows rise toward E beyond a visible frame boundary. [book Ch 0, Elite Obscuration and the Orthographic Illusion]
 
-## S07-09 — Wide shot of the connected five-tier pyramid
+## S07-09 — Wide shot of the connected five-tier cone
 - **Anchor:** `Emmanuel Theodore (37:44)`
 - **Type:** hold
 - **Render:** `manim:yt02/ortho_illusion.py:OrthoIllusion`
 - **Holds:** `S07-01`
-- **Note:** The camera pulls back to the complete pyramid as the gold extraction circuit pulses continuously from base to apex. [book Ch 0, Fig 0.2]
+- **Note:** The camera pulls back to the complete cone as the gold extraction circuit pulses continuously from base to apex. [book Ch 0, Fig 0.2]
 
 ## S07-10 — Elite Obscuration along the sightline
 - **Anchor:** `Emmanuel Theodore (37:55)`
