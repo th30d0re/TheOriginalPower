@@ -909,7 +909,7 @@ The captives were divided into five lots on the beach, separating parents from c
 <!-- [book Ch 3, citing Zurara] -->
 
 Emmanuel Theodore (34:02)
-Prince Henry the Navigator attended the Lagos division mounted on a powerful horse, collected his royal quinto, one-fifth of the human cargo, as fiscal sovereign, and knighted Lancarote de Freitas on the spot for the profitability of the voyage.
+Prince Henry the Navigator attended the Lagos division mounted on a powerful horse, collected his royal quinto, one-fifth of the human cargo, as fiscal sovereign, and knighted, Lancarote de Freitas on the spot for the profitability of the voyage.
 <!-- [book Ch 3, citing Zurara] -->
 
 Emmanuel Theodore (34:18)
@@ -1073,7 +1073,7 @@ Third, in 1449, just four years before Zurara's chronicle, the municipal rebels 
 <!-- [book Ch 3, citing Nirenberg 2002] -->
 
 Emmanuel Theodore (41:32)
-That 1449 Toledan statute barred Christian converts of Jewish descent, conversos, from public office on the theory that ancestral blood transmitted permanent defect regardless of baptism.
+That 1449 statute of Toledo barred Christian converts of Jewish descent, conversos, from public office on the theory that ancestral blood transmitted permanent defect regardless of baptism.
 <!-- [book Ch 3, citing Nirenberg 2002] -->
 
 Emmanuel Theodore (41:43)
@@ -1114,7 +1114,7 @@ This case tests Prediction 2, Codification follows solidarity threats: the predi
 <!-- [book Ch 4; YT02_outline P2] -->
 
 Emmanuel Theodore (42:54)
-The Virginia record opens in late August 1619 at Point Comfort, when the privateer vessel White Lion traded twenty and odd Angolan captives seized from the Portuguese slave ship Sao Joao Bautista.
+The Virginia record opens in late August 1619 at Point Comfort, when the privateer vessel White Lion traded twenty and odd captives from Angola seized from the Portuguese slave ship Sao Joao Bautista.
 <!-- [book Ch 3; Ch 4] -->
 
 Emmanuel Theodore (43:07)
@@ -1441,7 +1441,7 @@ Past ninety degrees, the manuscript names Quadrant II as its fascism threshold: 
 <!-- [book Ch 3, Eq 3.5, phase-angle regimes] -->
 
 Emmanuel Theodore (56:16)
-Why use arms statutes to anchor psi-sub-m? Firearms supply a discrete calibration anchor for the kinetic channel of the complex wage. The statutory record names who may carry arms, who must appear without them, and what object closes an indenture.
+Why use the statutes on arms to anchor psi-sub-m? Firearms supply a discrete calibration anchor for the kinetic channel of the complex wage. The statutory record names who may carry arms, who must appear without them, and what object closes an indenture.
 <!-- [book subsec:arms_joint_wage] -->
 
 Emmanuel Theodore (56:26)
@@ -1479,7 +1479,7 @@ United States versus Cruikshank described the arms right as prior to the Constit
 <!-- [book subsec:arms_joint_wage; SOURCES cruikshank] -->
 
 Emmanuel Theodore (58:06)
-Today the felony-in-possession bar in eighteen U.S.C. section nine twenty-two g one combines with racially disparate drug felony pipelines to preserve a proxy arms boundary.
+Today the felony-in-possession bar in eighteen U.S.C. section nine twenty-two gee, paragraph one combines with racially disparate drug felony pipelines to preserve a proxy arms boundary.
 <!-- [book subsec:arms_joint_wage] -->
 
 Emmanuel Theodore (58:16)
@@ -1710,7 +1710,7 @@ Equation two point fourteen states the crash condition: whenever the time deriva
 <!-- [book §2.3.6, Eq 2.14] -->
 
 Emmanuel Theodore (65:16)
-To prevent that breach after the 1965 civil rights statutes, the system expanded coercive containment R of t and ideological phase dispersion Phi-sub-load of t while contracting working-class bargaining power.
+To prevent that breach after the 1965 civil rights statutes, the system expanded coercive containment R of t and ideological phase dispersion Phi-sub-load of t while contracting bargaining power among the working class.
 <!-- [book §2.3.6, Fig 2.7] -->
 
 Emmanuel Theodore (65:28)
@@ -2024,7 +2024,7 @@ In the signal-processing formalism of Chapter 0 and Chapter 14, Madison's consti
 <!-- [book Ch 0; Ch 5; Ch 14] -->
 
 Emmanuel Theodore (77:34)
-Equation zero point fifteen models each social cleavage axis k as an alternating grievance current i-sub-k of t equal to salience weight rho-sub-k times amplitude A-sub-k times the cosine of omega-t plus phase angle phi-sub-k.
+Equation zero point fifteen models each social cleavage axis k as an alternating grievance current i-sub-k of t. The current equals salience weight rho-sub-k, multiplied by amplitude A-sub-k, and by the cosine of omega-t plus phase angle phi-sub-k.
 <!-- [book Ch 0, Eq 0.15] -->
 
 Emmanuel Theodore (77:47)

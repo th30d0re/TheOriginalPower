@@ -63,12 +63,24 @@ psi-sub-s:
 psi:
   phonon: sigh            # "psi of t"; plain: "PFC"
 phi-load:
-  phonon: fie load        # plain: "phylode"
+  phonon: fee load        # "fie load" heard as "fy load"; plain: "payload"
+phi-sub-load:
+  phonon: "fee sub, load" # plain hyphenated form collapses to "fee subload"
+phi-sub-k:
+  phonon: phi sub kay
 rho-tau:
-  phonon: row-tao         # plain: "row-top"; "roe-tau": "road talk"
+  phonon: row-tao         # "roe, tau" heard as "row tile"; plain "roe-tau": "road talk"
 psi-m:
   phonon: sigh em         # plain: "PSN"
 psi-s:
   phonon: sigh ess        # plain: "JPS" (after j)
 pullman:
   phonon: pull-man        # plain: "poem and"
+cosine:
+  phonon: co-sine         # plain: "cuisine" / "cation"
+lancarote:
+  phonon: lancer roe tay  # "lance a row tay de" heard as "atlanta rotate to"
+"lancarote's":
+  phonon: lancer roe tay's
+lagos:
+  phonon: lah goosh       # plain: "legos"
