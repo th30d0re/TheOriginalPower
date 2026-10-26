@@ -199,6 +199,21 @@ class WagePlaneHero(YTScene):
             self.play(theta.animate.set_value(ang), run_time=0.5)
         self.until(self.beat_end(2) - 0.2)
 
+    def shot_S10_23(self):
+        wage_grp, theta, formulas = self._build_rotated_plane(90)
+        self.camera.background_color = BG
+        self.add(wage_grp)
+        self.until(self.at(0, "past"))
+        self.play(theta.animate.set_value(118.0), run_time=0.8)
+        self.until(self.beat_end(0) - 0.2)
+
+    def shot_S10_27(self):
+        wage_grp, theta, formulas = self._build_rotated_plane(90)
+        self.camera.background_color = BG
+        self.add(wage_grp)
+        self.play(m.Indicate(formulas[1], color=STAT), run_time=0.5)
+        self.until(self.beat_end(0) - 0.2)
+
     def shot_S10_20(self):
         wage_grp, theta, formulas = self._build_rotated_plane(90)
         react = T("REACTIVE POWER · ψₘ = 0", 28, STAT, width=5.5).move_to([4.15, -1.55, 0])

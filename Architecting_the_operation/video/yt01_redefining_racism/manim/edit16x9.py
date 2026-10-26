@@ -99,9 +99,12 @@ def run_frame_count(shots, primary, fps):
 
 
 def conform_ext(src, out, res, fps, n_frames):
-    """Scale, resample, pad or trim to n_frames; silent x264 matching manimgx defaults."""
+    """Fit inside res keeping the aspect ratio (letterbox in BG), resample, pad or trim to n_frames;
+    silent x264 matching manimgx defaults."""
     w, h = res.split("x")
-    vf = (f"fps={fps},scale={w}:{h},tpad=stop_mode=clone:stop={n_frames},"
+    vf = (f"fps={fps},scale={w}:{h}:force_original_aspect_ratio=decrease,"
+          f"pad={w}:{h}:(ow-iw)/2:(oh-ih)/2:color=0x0F1B33,setsar=1,"
+          f"tpad=stop_mode=clone:stop={n_frames},"
           f"trim=end_frame={n_frames},setpts=PTS-STARTPTS")
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(src),
                     "-vf", vf, "-frames:v", str(n_frames), "-an",
@@ -114,7 +117,9 @@ def stale_external(out, shot):
         return True
     # The run's log records the source it was conformed from; a new Render source is stale.
     log = out.with_suffix(".log")
-    if not log.exists() or not log.read_text().startswith(f"ext:{external_source(shot)}\n"):
+    # Clips conformed before aspect-ratio fitting carry no "fit=1" line and are redone.
+    if not log.exists() or not log.read_text().startswith(f"ext:{external_source(shot)}\n") \
+            or "fit=1" not in log.read_text():
         return True
     deps = [external_source(shot), EP / "episode_manifest.json"]
     return any(d.exists() and d.stat().st_mtime > out.stat().st_mtime for d in deps)
@@ -227,7 +232,7 @@ def render_one(item):
         except subprocess.CalledProcessError as e:
             return primary, f"FAILED ({e.returncode})", str(e)
         log = out.with_suffix(".log")
-        log.write_text(f"ext:{src}\nframes={n}\n")
+        log.write_text(f"ext:{src}\nframes={n}\nfit=1\n")
         return primary, "ok", ""
     env = dict(os.environ, YT_EP=EP_NAME, **{f"{EP_NAME}_SHOT": primary})
     cmd = [str(MANIMGX), "render", str(manim_source(shot)), shot.scene, "-r", args.res, "--fps", str(args.fps),

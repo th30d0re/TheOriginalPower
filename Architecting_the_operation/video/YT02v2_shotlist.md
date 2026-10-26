@@ -2211,58 +2211,58 @@
 
 ## S10-06 — Complex-wage plane hero build
 - **Anchor:** `Emmanuel Theodore (65:28)`
-- **Type:** diagram
-- **Render:** `manim:yt02/wage_plane_hero.py:WagePlaneHero`
-- **Note:** Number line → ComplexPlane → vector → W=ψ_m+jψ_s → quarter-turn ×(−j) → invariants → θ sweep to Quadrant II; caption band reserved below. [revision G]
+- **Type:** scene
+- **Render:** `figma:wage S10-06`
+- **Note:** The wage S10-06 Figma frame opens on one real line, adds the perpendicular j direction, and shows j = √−1. [book Ch 3, Eq 3.5]
 
 ## S10-07 — Equation three point five says W equals psi-sub-m plus j psi-sub-s
 - **Anchor:** `Emmanuel Theodore (65:36)`
 - **Type:** hold
-- **Render:** `manim:yt02/wage_plane_hero.py:WagePlaneHero`
+- **Render:** `figma:wage S10-06`
 - **Holds:** `S10-06`
-- **Note:** Alongside the 1840 cotton bar, the patrol/militia expenditure bar rises to $2.0M and plots the 2.70% ratio point. [book §2.3.2, Fig 2.4] Scene labels stay above the caption band. [revision G]
+- **Note:** Equation 3.5, W = ψ_m + jψ_s, appears with its one-magnitude, one-phase gloss. [book Ch 3, Eq 3.5]
 
 ## S10-08 — The textbook Argand layout uses real horizontal and imaginary vertical
 - **Anchor:** `Emmanuel Theodore (65:45)`
 - **Type:** hold
-- **Render:** `manim:yt02/wage_plane_hero.py:WagePlaneHero`
+- **Render:** `figma:wage S10-06`
 - **Holds:** `S10-06`
-- **Note:** The 1850 bars rise in lockstep to $102.5M cotton revenue and $2.95M patrol expenditure, plotting the 2.88% ratio point. [book §2.3.2, Fig 2.4] Scene labels stay above the caption band. [revision G]
+- **Note:** Textbook Re/Im axes give way to the quarter turn W·(−j); the screen-coordinate mapping x = ψ_s, y = −ψ_m appears. [book Ch 3]
 
 ## S10-09 — That rotation preserves every length, every angle, and the same handedne
 - **Anchor:** `Emmanuel Theodore (66:02)`
 - **Type:** hold
-- **Render:** `manim:yt02/wage_plane_hero.py:WagePlaneHero`
+- **Render:** `figma:wage S10-06`
 - **Holds:** `S10-06`
-- **Note:** The 1860 bars surge to $247.0M cotton revenue and $6.8M patrol expenditure, plotting the 2.75% ratio point. [book §2.3.2, Fig 2.4] Scene labels stay above the caption band. [revision G]
+- **Note:** ψ_m positive points down, extraction points up toward the Elite, ψ_s points right, and Quadrant II shades upper-right. [book Ch 3]
 
 ## S10-10 — Draw W as an arrow from the origin
 - **Anchor:** `Emmanuel Theodore (66:22)`
 - **Type:** hold
-- **Render:** `manim:yt02/wage_plane_hero.py:WagePlaneHero`
+- **Render:** `figma:wage S10-06`
 - **Holds:** `S10-06`
-- **Note:** A horizontal stability band spans 2.70%–2.88% (CV < 0.04) as the enslaved population counter climbs from 2,487,455 to 3,953,761. [book §2.3.2, Fig 2.4] Scene labels stay above the caption band. [revision G]
+- **Note:** W draws from the origin at θ = 35°, with |W| and the θ arc opening from the downward ψ_m axis. [book Ch 3, Eq 3.5]
 
 ## S10-11 — Project the arrow onto the vertical axis
 - **Anchor:** `Emmanuel Theodore (66:32)`
 - **Type:** hold
-- **Render:** `manim:yt02/wage_plane_hero.py:WagePlaneHero`
+- **Render:** `figma:wage S10-06`
 - **Holds:** `S10-06`
-- **Note:** The CottonGinConfound diagram illustrates Eli Whitney's 1793 gin (50x processing efficiency) expanding plantation acreage and enslaved labor demand. [book §2.3.2, citing Flachs 2025; Lakwete] Scene labels stay above the caption band. [revision G]
+- **Note:** The vertical projection draws and ψ_m = |W| cos θ appears. [book Ch 3]
 
 ## S10-12 — Project it onto the horizontal axis
 - **Anchor:** `Emmanuel Theodore (66:40)`
 - **Type:** hold
-- **Render:** `manim:yt02/wage_plane_hero.py:WagePlaneHero`
+- **Render:** `figma:wage S10-06`
 - **Holds:** `S10-06`
-- **Note:** An 1831 Southampton shock marker triggers the 1831–1832 statutory lock (anti-literacy, assembly ban, compulsory white militia patrols). [book §2.3.2; Ch 9] Scene labels stay above the caption band. [revision G]
+- **Note:** The horizontal projection draws and ψ_s = |W| sin θ appears. [book Ch 3]
 
 ## S10-13 — Magnitude and angle answer different questions
 - **Anchor:** `Emmanuel Theodore (66:47)`
 - **Type:** hold
-- **Render:** `manim:yt02/wage_plane_hero.py:WagePlaneHero`
-- **Holds:** `S10-11`
-- **Note:** Summary badges confirm Predictions 4 and 2 with patrol overhead locked at 2.7%–2.9% of cotton extraction. [book §2.3.2, Fig 2.4; YT02_outline P2, P4, R2]
+- **Render:** `figma:wage S10-06`
+- **Holds:** `S10-06`
+- **Note:** Closing lines: |W| records the total suppression allocation; θ records the material and psychological split. [book Ch 3]
 
 ## S10-14 — Constant total allocation with declining material share
 - **Anchor:** `Emmanuel Theodore (67:00)`
@@ -2278,9 +2278,8 @@
 
 ## S10-16 — Theta begins on the vertical material axis
 - **Anchor:** `Emmanuel Theodore (67:20)`
-- **Type:** hold
+- **Type:** diagram
 - **Render:** `manim:yt02/wage_plane_hero.py:WagePlaneHero`
-- **Holds:** `S10-06`
 - **Note:** The CostBarsOverTime diagram opens on the 1954–1965 window as all three cost bars for explicit Jim Crow begin rising sharply. [book §2.3.5] Scene labels stay above the caption band. [revision G]
 
 ## S10-17 — This position represents genuine economic investment in the Buffer Class
@@ -2306,9 +2305,8 @@
 
 ## S10-20 — Electrical engineering calls this reactive power
 - **Anchor:** `Emmanuel Theodore (67:55)`
-- **Type:** hold
+- **Type:** diagram
 - **Render:** `manim:yt02/wage_plane_hero.py:WagePlaneHero`
-- **Holds:** `S10-06`
 - **Note:** Item 1 of the Southern Strategy Evidentiary Audit card reveals, citing Baum's published 1994 Ehrlichman quote. [book §2.3.5, citing Baum] Scene labels stay above the caption band. [revision G]
 
 ## S10-21 — In the social mapping, pure reactive power is culture war: intense statu
@@ -2327,9 +2325,8 @@
 
 ## S10-23 — Continue the rotation past ninety degrees
 - **Anchor:** `Emmanuel Theodore (68:25)`
-- **Type:** hold
+- **Type:** diagram
 - **Render:** `manim:yt02/wage_plane_hero.py:WagePlaneHero`
-- **Holds:** `S10-06`
 - **Note:** Item 4 reveals, tracing Atwater's progression from 1954 slurs to 1968 busing/states' rights to 1981 fiscal and tax proxies. [book §2.3.5, citing Lamis; Atwater] Scene labels stay above the caption band. [revision G]
 
 ## S10-24 — Negative cosine in Quadrant II: ψ_m < 0, ψ_s > 0
@@ -2352,9 +2349,8 @@
 
 ## S10-27 — The ninety-degree position is the extraction kernel's default operating
 - **Anchor:** `Emmanuel Theodore (69:03)`
-- **Type:** hold
+- **Type:** diagram
 - **Render:** `manim:yt02/wage_plane_hero.py:WagePlaneHero`
-- **Holds:** `S10-06`
 - **Note:** Bar 4 animates to 3.73x, showing the nationwide Black-to-white cannabis possession arrest ratio despite comparable usage. [book §2.3.5, citing ACLU 2013, 2020] Scene labels stay above the caption band. [revision G]
 
 ## S10-28 — Past 90°: Buffer Class cannibalization regime
