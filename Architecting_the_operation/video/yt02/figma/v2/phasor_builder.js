@@ -57,7 +57,7 @@ const EPS = 0.001, pos = v => Math.max(v, EPS);
 const OX = 640, OY = 575, R = 270, L = 250;
 const G = figma.createFrame(); F.appendChild(G); G.name = "plane"; G.fills = []; G.clipsContent = false; G.resize(1920, 1080);
 const q2 = figma.createRectangle(); G.appendChild(q2); q2.name = "quadrant II"; q2.resize(R - 6, R - 6); q2.x = OX + 3; q2.y = OY - R + 3; q2.fills = [{ type: "SOLID", color: rgb(RED), opacity: 0.12 }]; q2.strokes = [{ type: "SOLID", color: rgb(RED), opacity: 0.5 }]; q2.strokeWeight = 1;
-const q2T = await txt(G, "quadrant II tag", "Quadrant II · θ > 90°", "Label/Mono Small", RED, OX + 24, OY - R + 22);
+const q2T = await txt(G, "quadrant II tag", "Quadrant II · θ > 90°", "Label/Mono Small", RED, OX + 24, OY - R + 22, null, 18);
 for (const n of [q2, q2T]) kf(n, "OPACITY", [[0, 0], [0.5, 0.45], ...S.map(([t, th]) => [Math.max(t, 0.6), th > 90.5 ? 1 : 0.45])]);
 const h = line(G, "axis horizontal", [[OX - R, OY], [OX + R, OY]], INK, 3, { arrow: true });
 const vD = line(G, "axis vertical down", [[OX, OY - R], [OX, OY + R]], INK, 3, { arrow: true });
