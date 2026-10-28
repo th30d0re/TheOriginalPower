@@ -537,6 +537,7 @@ shapes.geometric,arrows.meta}
 \setlength{\columnwidth}{6.3in}
 \renewcommand{\cite}[1]{}
 \providecommand{\SourceNote}[1]{}
+%%GRAPHICSPATH%%
 \begin{document}
 """
 
@@ -547,6 +548,15 @@ def emit_tikz(paper: Path, outdir: Path) -> int:
     Order matches replace_tikz(), so fig-NN.png lines up with the NNth picture.
     """
     outdir.mkdir(parents=True, exist_ok=True)
+    # \TT is a print glyph (figures/tewodros_ta.pdf). Standalone pictures are
+    # compiled outside Paper/, so the search path has to be absolute.
+    root = paper.resolve().as_posix()
+    graphics = (
+        "\\graphicspath{{" + root + "/}}\n"
+        "\\newcommand{\\TT}{\\mathord{\\raisebox{-0.1ex}"
+        "{\\includegraphics[height=1.55ex]{figures/tewodros_ta.pdf}}}}\n"
+    )
+    preamble = TIKZ_PREAMBLE.replace("%%GRAPHICSPATH%%\n", graphics)
     text = expand_inputs(paper / "The_Original_Power.tex", paper)
     n, i = 0, 0
     while True:
@@ -555,10 +565,76 @@ def emit_tikz(paper: Path, outdir: Path) -> int:
             break
         e = env_span(text, s, "tikzpicture")
         (outdir / ("fig-%02d.tex" % n)).write_text(
-            TIKZ_PREAMBLE + text[s:e] + "\n\\end{document}\n", encoding="utf-8")
+            preamble + text[s:e] + "\n\\end{document}\n", encoding="utf-8")
         n += 1
         i = e
     return n
+
+
+def expand_macro(text: str, name: str, nargs: int, replace) -> tuple[str, int]:
+    """Expand \\name{a1}...{aN} with balanced-brace arguments."""
+    needle = "\\" + name
+    nlen = len(needle)
+    out, i, count = [], 0, 0
+    while True:
+        s = text.find(needle, i)
+        if s < 0:
+            break
+        after = s + nlen
+        if after < len(text) and text[after].isalpha():
+            out.append(text[i:after])
+            i = after
+            continue
+        j = after
+        args = []
+        try:
+            for _ in range(nargs):
+                while j < len(text) and text[j] in " \t\n":
+                    j += 1
+                arg, j = brace_span(text, j)
+                args.append(arg)
+        except (ValueError, AssertionError):
+            out.append(text[i:after])
+            i = after
+            continue
+        out.append(text[i:s])
+        out.append(replace(*args))
+        count += 1
+        i = j
+    out.append(text[i:])
+    return "".join(out), count
+
+
+def _eqsym_repl(n: str, body: str) -> str:
+    body, _ = expand_macro(body, "eqsym", 2, _eqsym_repl)
+    # Print puts a script-sized index on the symbol so a later superscript
+    # still binds to the same nucleus. EPUB keeps the index and drops the color.
+    return "{%s}_{\\scriptscriptstyle %s}" % (body, n.strip())
+
+
+def _eqphrase_repl(n: str, words: str) -> str:
+    return "%s\\textsuperscript{%s}" % (words, n.strip())
+
+
+def _eqlegrow_repl(n: str, math: str, phrase: str) -> str:
+    return "\\textsuperscript{%s} & $%s$ & %s \\\\" % (n.strip(), math, phrase)
+
+
+def expand_eq_decoder(text: str) -> tuple[str, dict[str, int]]:
+    """Unfold the equation color-decoder for pandoc.
+
+    \\eqsym, \\eqphrase and \\eqlegrow are print-only color keys. Left in
+    the source, pandoc drops the legend text and leaves the enclosure-score
+    displays as raw TeX.
+    """
+    text, n_sym = expand_macro(text, "eqsym", 2, _eqsym_repl)
+    text, n_phrase = expand_macro(text, "eqphrase", 2, _eqphrase_repl)
+    text, n_row = expand_macro(text, "eqlegrow", 3, _eqlegrow_repl)
+    text = text.replace(
+        r"\begin{eqlegend}",
+        "\\begin{eqlegend}\n\\begin{boxtitle}Terms\\end{boxtitle}\n",
+    )
+    return text, {"eqsym": n_sym, "eqphrase": n_phrase, "eqlegrow": n_row}
 
 
 def main() -> int:
@@ -590,6 +666,7 @@ def main() -> int:
     text = rewrite_boxes(text)
     text = rewrite_tcolorbox(text)
     text = rewrite_refs(text, numbers, section_labels, starred_titles)
+    text, eq_counts = expand_eq_decoder(text)
 
     for pat in STRIP_CMDS:
         text = re.sub(pat, "", text)
@@ -633,6 +710,8 @@ def main() -> int:
     print("starred targets fixed : %d" % len(starred_titles))
     print("IfFileExists kept/drop: %d / %d" % (n_kept, n_dropped))
     print("duplicate labels fixed: %s" % (", ".join(dupes) if dupes else "none"))
+    print("eq decoder expanded   : %s" % ", ".join(
+        "%s %d" % (k, v) for k, v in eq_counts.items()))
     print("body chars            : %d" % len(body))
     return 0
 
