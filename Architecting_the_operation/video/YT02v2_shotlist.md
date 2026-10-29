@@ -416,11 +416,11 @@
 - **Holds:** `S01-42`
 - **Note:** Item 5 assigns bias, prejudice, and discrimination to the interpersonal class under their established names. [book Preface; §2.2]
 
-## S01-47 — Racism as psycho-legal social software
+## S01-47 — Where the established literature ends
 - **Anchor:** `Emmanuel Theodore (11:46)`
 - **Type:** card
-- **Render:** `figma-card:cards/S01-42.json`
-- **Note:** Column 1 of the comparison card reveals, defining racism as psycho-legal social software compiled into law and coercion. [book Preface; §2.2]
+- **Render:** `figma-card:cards/S01-47.json`
+- **Note:** The Where the Established Literature Ends quote card shows the spoken sentence: bias, prejudice, and discrimination name interpersonal operations with standard definitions from experimental psychology. [book Preface; §2.2]
 
 ## S01-48 — Separating host wetware from institutional code
 - **Anchor:** `Emmanuel Theodore (11:56)`
