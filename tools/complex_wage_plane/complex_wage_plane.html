@@ -339,8 +339,8 @@ svg text:is([font-size="10"],[font-size="11"],[font-size="12"],[font-size="13"],
     </div>
 
     <div class="panel">
-      <h2>Saint-Domingue, 1789–1804 <span class="hint" style="text-transform:none;letter-spacing:0">(illustrative)</span></h2>
-      <p class="note" style="margin-top:0">Two Buffer phasors: the gens de couleur libres (orange) and the petits blancs (violet). O, the enslaved majority, has no phasor. Its mobilization and its arms parity raise M and grow the τ zone. The dates come from the historical record. The wage, mobilization, and parity values are my illustrations, not measurements.</p>
+      <h2>Saint-Domingue, 1789–1804 <span class="hint" style="text-transform:none;letter-spacing:0">(coded)</span></h2>
+      <p class="note" style="margin-top:0">Two Buffer phasors: the gens de couleur libres (orange) and the petits blancs (violet). O, the enslaved majority, has no phasor. Its mobilization and its arms parity raise M and grow the τ zone. Every point comes from a coded row below: ordinal scores with stated rubrics, evidence, and sources. The scores are judgments, and most sources are encyclopedias; check them against Dubois and Geggus before the book uses them.</p>
       <div class="checks"><label><input type="checkbox" id="c-sd"> Show the scenario on the plane</label></div>
       <div class="row"><label for="s-sdYear">Year</label><input id="s-sdYear" type="range" min="1789" max="1804" step="0.01"><output id="o-sdYear" for="s-sdYear"></output></div>
       <div class="btns"><button class="btn go" type="button" id="b-sdplay">Play</button></div>
@@ -352,10 +352,18 @@ svg text:is([font-size="10"],[font-size="11"],[font-size="12"],[font-size="13"],
       <div class="row"><label for="s-sdW">p <span class="hint">O pressure</span></label><input id="s-sdW" type="range" min="0" max="150" step="1"><output id="o-sdW" for="s-sdW"></output></div>
       <p class="note muted">a, b, and τ come from the τ model panel. While the scenario is on, dragging W is off.</p>
       <div class="tablewrap"><table class="data" id="sd-events"></table></div>
-      <h3 class="sub">1802, coded from sources</h3>
-      <p class="note muted" style="margin-top:0">For 1802, the gens de couleur libres phasor comes from this table; the other years stay illustrative. The wages measure what the colonial order gives the group. M1: commission or command in French service (+1 held, 0 lost). M2: safety of person and property under French rule (+1 secure, 0 at risk, −1 under attack by the order). S1: equal rights under the 1792 law (+1 in force, −1 repealed or acted against). S2: signals from Paris on the rights of people of color (0 none, −1 hostile). ψ<sub>m</sub> = 40 × mean(M1, M2). ψ<sub>s</sub> = 60 × mean(S1, S2).</p>
+      <h3 class="sub">Gens de couleur libres, 1789–1801, coded from sources</h3>
+      <div class="tablewrap"><table class="data" id="sd-code-pre"></table></div>
+      <h3 class="sub">Gens de couleur libres, 1802, coded from sources</h3>
+      <p class="note muted" style="margin-top:0">Both gens de couleur libres tables use one rubric. The wages measure what the colonial order gives the group. M1: commission or command in French service (+1 held, 0 lost). M2: safety of person and property under French rule (+1 secure, 0 at risk, −1 under attack by the order). S1: equal rights under the 1792 law (+1 in force, −1 repealed or acted against). S2: signals from Paris on the rights of people of color (0 none, −1 hostile). ψ<sub>m</sub> = 40 × mean(M1, M2). ψ<sub>s</sub> = 60 × mean(S1, S2).</p>
       <div class="tablewrap"><table class="data" id="sd-code"></table></div>
       <p class="note" id="sd-code-sum"></p>
+      <h3 class="sub">Petits blancs, coded from sources</h3>
+      <p class="note muted" style="margin-top:0">P1: posts granted by the order (+1 held, 0.5 modest, 0 none). P2: safety of person and property (+1 secure, 0 at risk, −1 attacked or destroyed). S1: privilege over free people of color (+1 exclusive, 0 equal). S2: status over the enslaved (+1 slavery in force, 0 abolished, −1 under a Black-led government). Same scales: ψ<sub>m</sub> = 40 × mean(P1, P2), ψ<sub>s</sub> = 60 × mean(S1, S2).</p>
+      <div class="tablewrap"><table class="data" id="sd-code-pb"></table></div>
+      <h3 class="sub">O, coded from sources</h3>
+      <p class="note muted" style="margin-top:0">Mobilization: 0.1 marronage only, 0.3 after submission, 0.5 organized revolt in one province, 0.6 army of the colonial state, 0.8 war across provinces, 1.0 colony-wide war under a unified command. Arms parity: 0 disarmed by law, 0.25 irregular arms, 0.5 armed by an outside power or under disarmament, 0.75 standing army with state arms, 1.0 standing army that defeats the colonial force.</p>
+      <div class="tablewrap"><table class="data" id="sd-code-o"></table></div>
       <p class="note muted">The gens de couleur libres cross τ twice. In 1791 the April 1792 decree buys them back. In 1802, with O armed and the Polish defections under way, nothing buys them back, and the plane ends in 1804. Sources: the manuscript (Haitian Theorem :12296–:12335; Arcahaie flag :3665; Polish proof :14111 and :14125); C. L. R. James, <i>The Black Jacobins</i>; Laurent Dubois, <i>Avengers of the New World</i>; works by David Geggus cited in the manuscript.</p>
     </div>
 
@@ -1366,7 +1374,7 @@ function updateRandUI(){
   var t=(S.year<CY0?'Before '+CY0+', the table drives W. Showing '+CY0+'.\n':'')+yr+' · '+q.name+'\nprohibited '+pct(q.v[0])+' · may issue '+pct(q.v[1])+' · shall issue '+pct(q.v[2])+' · permitless '+pct(q.v[3])+'\nunder an assault-weapon ban '+pct(q.ban)+(CARRY.fedAW[yr-CY0]>0?' (federal ban in force)':'')+' · B '+q.B.toFixed(2)+' · O '+q.O.toFixed(2);
   $('rand-read').textContent=t;$('rand-read').style.whiteSpace='pre-line';
   var RN=['prohibited','may issue','shall issue','permitless'],i=yr-CY0;
-  var th2='<tr><th>State</th><th>Carry</th><th>Ban</th><th>B</th><th>O</th><th>ψm</th><th>ψs</th><th>Clock</th><th>M</th></tr>';
+  var th2='<tr><th>State</th><th>Carry</th><th>Ban</th><th>B</th><th>O</th><th>\u03c8m</th><th>\u03c8s</th><th>Clock</th><th>M</th></tr>';
   CARRY.states.slice().sort(function(a,b){return a.name<b.name?-1:1;}).forEach(function(st){
     var r=stateBO(st,i);
     if(!r){th2+='<tr><td>'+esc(st.name)+'</td><td colspan="8">no carry law in the database for '+yr+'</td></tr>';return;}
@@ -1442,10 +1450,7 @@ $('c-sp').addEventListener('change',function(e){S.useSP=e.target.checked;if(S.dr
 
 /* ---------- Saint-Domingue, 1789-1804 (illustrative values; dates from the historical record) ---------- */
 var SD={
-  mob:[[1789,0.1],[1791.6,0.15],[1791.64,0.8],[1793.66,0.9],[1794.1,0.75],[1801.5,0.7],[1802.1,0.6],[1802.35,0.35],[1802.78,0.9],[1803.4,1],[1804,1]],
-  parO:[[1789,0.05],[1791.64,0.2],[1793.66,0.45],[1794.4,0.7],[1801.5,0.85],[1802.35,0.55],[1802.78,0.8],[1803.2,0.95],[1804,1]],
-  gcl:[[1789,40,-35],[1790.79,40,-50],[1791.1,35,-60],[1791.37,38,-30],[1791.73,30,-55],[1792.26,40,15],[1794.1,30,10],[1799.45,20,5]],
-  pb:[[1789,15,70],[1791.73,10,75],[1792.26,5,45],[1793.66,0,20],[1794.1,-5,10],[1798,-10,5],[1802.1,10,50],[1802.78,10,50],[1803.88,-20,20],[1804,-20,20]],
+  mob:[],parO:[],gcl:[],pb:[],
   events:[
     [1789.6,'Declaration of the Rights of Man (August 1789)'],
     [1790.79,'Ogé’s revolt for the rights of free men of color (October 1790)'],
@@ -1474,9 +1479,67 @@ var SD_CODE=[
   {t:1802.79,when:'October 1802',m:[0,-1],s:[-1,-1],ev:'Pétion and Clervaux leave French service (October 13–14). Leclerc disarms about 1,200 native soldiers; Black and mulatto prisoners are drowned at Le Cap. Leclerc’s orders call for deporting leading officers of color.',src:[['Haiti: Her History and Her Detractors, ch. IX','https://en.wikisource.org/wiki/Haiti:_Her_History_and_Her_Detractors/Part_I:_Chapter_IX'],['French Navy and the expedition','https://ijnh.seahistory.org/the-ugly-duckling-the-french-navy-and-the-saint-domingue-expedition1801-1803/']]}
 ];
 function sdCodeW(c){return [40*(c.m[0]+c.m[1])/2,60*(c.s[0]+c.s[1])/2];}
-SD.gcl=SD.gcl.concat(SD_CODE.map(function(c){var w=sdCodeW(c);return [c.t,w[0],w[1]];})).concat([[1804].concat(sdCodeW(SD_CODE[SD_CODE.length-1]))]);
+/* Gens de couleur libres before 1802, same rubric as SD_CODE. */
+var SD_GCL_PRE=[
+  {t:1789,when:'Before August 1789',m:[0,1],s:[-1,0],ev:'About 25,000 gens de couleur libres beside about 30,000 white colonists; an elite owned plantations and enslaved people. A long history of discriminatory law. M1 = 0 is unverified: no source here shows commissions in colonial service.',src:[['1789 election in Saint-Domingue','https://en.wikipedia.org/wiki/1789_French_legislative_election_in_Saint-Domingue'],['Petition of December 2, 1789','https://colonyincrisis.lib.umd.edu/1789/12/02/request-and-petition-from-the-citizens-of-color-of-the-french-isles-and-colonies-december-2-1789/']]},
+  {t:1790.79,when:'October 1790',m:[0,0],s:[-1,0],ev:'Ogé’s revolt for equal rights; the colonial order puts it down.',src:[['Vincent Ogé','https://en.wikipedia.org/wiki/Vincent_Og%C3%A9']]},
+  {t:1791.1,when:'February 1791',m:[0,-1],s:[-1,0],ev:'The colonial authorities execute Ogé and Chavannes.',src:[['Vincent Ogé','https://en.wikipedia.org/wiki/Vincent_Og%C3%A9']]},
+  {t:1791.37,when:'May 1791',m:[0,0],s:[-1,0.5],ev:'The National Assembly grants rights to free men of color born of free parents (May 15); the colonists refuse to apply it.',src:[['Haitian Revolution','https://en.wikipedia.org/wiki/Haitian_Revolution']]},
+  {t:1791.73,when:'September 1791',m:[0,0],s:[-1,-1],ev:'The Assembly revokes the May decree (September 24); gens de couleur libres in the West take up arms on their own.',src:[['Haitian Revolution','https://en.wikipedia.org/wiki/Haitian_Revolution']]},
+  {t:1792.26,when:'April 1792',m:[1,1],s:[1,1],ev:'The April 4, 1792 decree gives full equal rights; commissions open (Rigaud becomes a general in the South).',src:[['Haitian Revolution','https://en.wikipedia.org/wiki/Haitian_Revolution'],['André Rigaud','https://en.wikipedia.org/wiki/Andr%C3%A9_Rigaud']]},
+  {t:1798,when:'1794–1798',m:[1,1],s:[1,1],ev:'Rigaud holds the South for the Republic; equality is in force.',src:[['André Rigaud','https://en.wikipedia.org/wiki/Andr%C3%A9_Rigaud']]},
+  {t:1799.45,when:'June 1799–July 1800',m:[0,-1],s:[1,0],ev:'War of the South: Toussaint, governor for France, defeats Rigaud, who goes into exile; Dessalines leads reprisals against Rigaud’s supporters (scale disputed).',src:[['War of the South','https://en.wikipedia.org/wiki/War_of_the_South']]},
+  {t:1800.6,when:'July 1800–1801',m:[0.5,0],s:[1,0],ev:'General amnesty (July 1800); some officers of color serve under Toussaint.',src:[['War of the South','https://en.wikipedia.org/wiki/War_of_the_South']]}
+];
+/* Petits blancs. p = [P1 posts granted by the order (+1 held, 0.5 modest, 0 none), P2 person and property (+1 secure, 0 at risk, -1 attacked or destroyed)];
+   s = [S1 privilege over free people of color (+1 exclusive, 0 equal), S2 status over the enslaved (+1 slavery in force, 0 abolished, -1 under a Black-led government)]. */
+var SD_PB=[
+  {t:1789,when:'Before August 1789',m:[0.5,1],s:[1,1],ev:'Petits blancs (shopkeepers, artisans, laborers) sit below the grands blancs. Whites alone hold full rights; slavery is in force. P1 = 0.5 is a judgment: a modest material stake.',src:[['Upheavals, 1793–1796','https://thehaitianrevolution.com/upheavals']]},
+  {t:1791.64,when:'August–September 1791',m:[0.5,0],s:[1,1],ev:'The northern uprising destroys plantations; whites’ persons and property are at risk.',src:[['Haitian Revolution','https://en.wikipedia.org/wiki/Haitian_Revolution']]},
+  {t:1792.26,when:'April 1792',m:[0.5,0],s:[0,1],ev:'Equal rights for free people of color end the racial privilege over them.',src:[['Haitian Revolution','https://en.wikipedia.org/wiki/Haitian_Revolution']]},
+  {t:1793.47,when:'June 1793',m:[0,-1],s:[0,1],ev:'Battle of Cap-Français: settlers fight the commissioners; the city burns and thousands flee.',src:[['Battle of Cap-Français (1793)','https://en.wikipedia.org/wiki/Battle_of_Cap-Fran%C3%A7ais_(1793)']]},
+  {t:1793.66,when:'August 1793–February 1794',m:[0,-1],s:[0,0],ev:'Sonthonax frees the enslaved in the North; the Convention abolishes slavery.',src:[['Sonthonax','https://en.wikipedia.org/wiki/L%C3%A9ger-F%C3%A9licit%C3%A9_Sonthonax']]},
+  {t:1798.3,when:'1798–1801',m:[0,0.5],s:[0,-1],ev:'Toussaint governs; slavery stays abolished; white planters are invited back to reclaim property; whites live under a Black-led government.',src:[['Constitution of 1801','https://www.marxists.org/history/haiti/1801/constitution.htm'],['Caribbean National Weekly','https://www.caribbeannationalweekly.com/caribbean-breaking-news-featured/haitian-revolution-toussaint-louverture/']]},
+  {t:1802.1,when:'February 1802',m:[1,1],s:[0.5,0.5],ev:'Leclerc restores French command; the secret instructions plan a return to the old order.',src:[['Secret instructions','http://faculty.webster.edu/corbetre/haiti/history/revolution/secret.htm']]},
+  {t:1802.54,when:'July 1802',m:[1,1],s:[1,1],ev:'Guadeloupe: slavery restored and citizenship reserved for whites.',src:[['Richepanse','https://en.wikipedia.org/wiki/Antoine_Richepanse']]},
+  {t:1802.79,when:'October 1802–October 1803',m:[1,0],s:[1,1],ev:'War resumes; French forces lose ground.',src:[['Saint-Domingue expedition','https://en.wikipedia.org/wiki/Saint-Domingue_expedition']]},
+  {t:1803.88,when:'November 1803',m:[0,-1],s:[1,1],ev:'Vertières: the French army is defeated and leaves.',src:[['Saint-Domingue expedition','https://en.wikipedia.org/wiki/Saint-Domingue_expedition']]}
+];
+/* O, the enslaved majority. mob: 0.1 marronage only, 0.3 after submission, 0.5 organized revolt in one province, 0.6 army of the colonial state,
+   0.8 war across provinces, 1.0 colony-wide war under unified command. par: 0 disarmed by law, 0.25 irregular arms,
+   0.5 armed by an outside power or under disarmament, 0.75 standing army with state arms, 1.0 standing army that defeats the colonial force. */
+var SD_O=[
+  {t:1789,when:'Before 1791',mob:0.1,par:0,ev:'Marronage; the Code Noir forbids the enslaved to carry arms.',src:[['Code Noir','https://en.wikipedia.org/wiki/Code_Noir']]},
+  {t:1791.64,when:'August 1791',mob:0.5,par:0.25,ev:'Northern uprising (August 22, 1791): one province, irregular arms.',src:[['Haitian Revolution','https://en.wikipedia.org/wiki/Haitian_Revolution']]},
+  {t:1793.4,when:'May–June 1793',mob:0.8,par:0.5,ev:'Biassou and Jean-François ally with Spain; the commissioners free Black men who fight for them.',src:[['Georges Biassou','https://en.wikipedia.org/wiki/Georges_Biassou'],['Sonthonax','https://en.wikipedia.org/wiki/L%C3%A9ger-F%C3%A9licit%C3%A9_Sonthonax']]},
+  {t:1794.35,when:'May 1794',mob:0.8,par:0.75,ev:'Toussaint brings his army to the French side.',src:[['Toussaint Louverture','https://en.wikipedia.org/wiki/Toussaint_Louverture']]},
+  {t:1798.3,when:'1798',mob:0.8,par:0.75,ev:'Toussaint’s forces secure the British withdrawal.',src:[['Armistice of March 30, 1798','https://en.wikipedia.org/wiki/Armistice_of_March_30,_1798']]},
+  {t:1801,when:'1801',mob:0.6,par:0.75,ev:'Toussaint governs the whole island; the 1801 constitution binds cultivators to plantation labor. Army size not found in these sources.',src:[['Constitution of 1801','https://www.marxists.org/history/haiti/1801/constitution.htm']]},
+  {t:1802.1,when:'February 1802',mob:0.8,par:0.75,ev:'Toussaint’s army fights Leclerc’s 31,131 troops.',src:[['Saint-Domingue expedition','https://en.wikipedia.org/wiki/Saint-Domingue_expedition']]},
+  {t:1802.38,when:'May 1802',mob:0.3,par:0.5,ev:'Toussaint submits; the disarmament campaign begins.',src:[['Charles Leclerc','https://en.wikipedia.org/wiki/Charles_Leclerc_(general,_born_1772)']]},
+  {t:1802.79,when:'October 1802',mob:1,par:0.75,ev:'General insurrection after the October defections.',src:[['Alexandre Pétion','https://en.wikipedia.org/wiki/Alexandre_P%C3%A9tion']]},
+  {t:1803.4,when:'May 1803',mob:1,par:1,ev:'Unified command at Arcahaie; Polish legionnaires defect with artillery skills; the French force collapses (manuscript :3665, :14111).',src:[['Saint-Domingue expedition','https://en.wikipedia.org/wiki/Saint-Domingue_expedition']]},
+  {t:1803.88,when:'November 1803',mob:1,par:1,ev:'Vertières (November 18, 1803).',src:[['Saint-Domingue expedition','https://en.wikipedia.org/wiki/Saint-Domingue_expedition']]}
+];
+SD.gcl=SD_GCL_PRE.concat(SD_CODE).map(function(c){var w=sdCodeW(c);return [c.t,w[0],w[1]];});
+SD.gcl.push([1804].concat(SD.gcl[SD.gcl.length-1].slice(1)));
+SD.pb=SD_PB.map(function(c){var w=sdCodeW(c);return [c.t,w[0],w[1]];});
+SD.pb.push([1804].concat(SD.pb[SD.pb.length-1].slice(1)));
+SD.mob=SD_O.map(function(c){return [c.t,c.mob];});SD.mob.push([1804,1]);
+SD.parO=SD_O.map(function(c){return [c.t,c.par];});SD.parO.push([1804,1]);
+function srcLinks(c){return c.src.map(function(s){return '<a href="'+s[1]+'" target="_blank" rel="noopener">'+esc(s[0])+'</a>';}).join(' \u00b7 ');}
+function codeTable(rows,h1,h2){
+  var t='<tr><th>When</th><th>'+h1+'1</th><th>'+h1+'2</th><th>S1</th><th>S2</th><th>\u03c8m</th><th>\u03c8s</th><th>Clock</th><th>Evidence</th></tr>';
+  rows.forEach(function(c){var w=sdCodeW(c);t+='<tr><td>'+c.when+'</td>'+c.m.concat(c.s).map(function(v){return '<td class="num">'+fmt(v,1)+'</td>';}).join('')+'<td class="num">'+fmt(w[0])+'</td><td class="num">'+fmt(w[1])+'</td><td class="num">'+(mag(w[0],w[1])<0.5?'\u2014':clock(theta(w[0],w[1])))+'</td><td>'+esc(c.ev)+' '+srcLinks(c)+'</td></tr>';});
+  return t;
+}
 function renderSDCode(){
-  var t='<tr><th>When</th><th>M1</th><th>M2</th><th>S1</th><th>S2</th><th>ψm</th><th>ψs</th><th>Clock</th><th>Evidence</th></tr>';
+  $('sd-code-pre').innerHTML=codeTable(SD_GCL_PRE,'M');
+  $('sd-code-pb').innerHTML=codeTable(SD_PB,'P');
+  var o='<tr><th>When</th><th>Mobilization</th><th>Arms parity</th><th>Evidence</th></tr>';
+  SD_O.forEach(function(c){o+='<tr><td>'+c.when+'</td><td class="num">'+c.mob.toFixed(2)+'</td><td class="num">'+c.par.toFixed(2)+'</td><td>'+esc(c.ev)+' '+srcLinks(c)+'</td></tr>';});
+  $('sd-code-o').innerHTML=o;
+  var t='<tr><th>When</th><th>M1</th><th>M2</th><th>S1</th><th>S2</th><th>\u03c8m</th><th>\u03c8s</th><th>Clock</th><th>Evidence</th></tr>';
   SD_CODE.forEach(function(c){
     var w=sdCodeW(c);
     t+='<tr><td>'+c.when+'</td>'+c.m.concat(c.s).map(function(v){return '<td class="num">'+fmt(v,1)+'</td>';}).join('')+'<td class="num">'+fmt(w[0])+'</td><td class="num">'+fmt(w[1])+'</td><td class="num">'+clock(theta(w[0],w[1]))+'</td><td>'+esc(c.ev)+' '+c.src.map(function(s){return '<a href="'+s[1]+'" target="_blank" rel="noopener">'+esc(s[0])+'</a>';}).join(' · ')+'</td></tr>';
@@ -1485,12 +1548,11 @@ function renderSDCode(){
   var last=SD_CODE[SD_CODE.length-1],w=sdCodeW(last),eq=[50*(last.m[0]+last.m[1])/2,50*(last.s[0]+last.s[1])/2];
   $('sd-code-sum').textContent='From February to October 1802 the phasor turns clockwise from '+clock(theta(sdCodeW(SD_CODE[0])[0],sdCodeW(SD_CODE[0])[1]))+' to '+clock(theta(w[0],w[1]))+'. October lands just past 9 o’clock, in Quadrant III, because the order attacked the group (M2 = −1). With M2 = 0 it would sit at exactly 9:00. With equal scales (50 for both) it sits at '+clock(theta(eq[0],eq[1]))+', so the October position changes little with the scale choice. The sources here are encyclopedias, a translated primary text, and an older history; check them against Dubois and Geggus before the book uses them.';
 }
+/* Coded values hold from their date until the next coded date (events are steps, not slopes). */
 function sdAt(arr,y){
-  if(y<=arr[0][0])return arr[0].slice(1);
-  for(var i=0;i<arr.length-1;i++){
-    if(y>=arr[i][0]&&y<=arr[i+1][0]){var t=(y-arr[i][0])/((arr[i+1][0]-arr[i][0])||1);return arr[i].slice(1).map(function(v,j){return v+t*(arr[i+1][j+1]-v);});}
-  }
-  return arr[arr.length-1].slice(1);
+  var v=arr[0].slice(1);
+  for(var i=0;i<arr.length;i++){if(arr[i][0]<=y+1e-9)v=arr[i].slice(1);}
+  return v;
 }
 function sdM0eff(y){return S.sdM0+S.sdW*sdAt(SD.mob,y)[0]*(0.5+0.5*sdAt(SD.parO,y)[0]);}
 function sdM(m,s,y){return sdM0eff(y)-S.a*m-S.b*s;}

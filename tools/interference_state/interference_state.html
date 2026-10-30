@@ -1,0 +1,214 @@
+<title>Interference State</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Layout concept: one instrument card (Phi_load bar over a rho_tau dial), the log's own words beside it,
+   and a field chart of every log below. Same identity as the Complex Wage Plane: navy field, bronze line art,
+   accent orange for the reading, ivory for tau. One look for every viewer. */
+:root{
+  --paper:#0D1B2A; --well:#081421; --panel:#132538; --ink:#ECE7DC; --ink-2:#A9B6C4;
+  --rule:#8A6A45; --label-sm:#B8956A;
+  --accent:#E08A3C; --accent-hi:#F7C38E; --tau:#ECE7DC;
+  --sans:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,Menlo,Consolas,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{
+  background:var(--paper); color:var(--ink); font:15px/1.55 var(--sans);
+  padding-block:22px 48px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+}
+.app{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px 32px;align-items:start}
+header{grid-column:1/-1}
+h1{font:600 24px/1.2 var(--sans);margin:0 0 6px;letter-spacing:-.01em;text-wrap:balance}
+.lede{margin:0;color:var(--ink-2);max-width:72ch}
+.card{background:var(--panel);border:1px solid var(--rule);border-radius:10px;padding:18px 20px;min-width:0}
+.nav{display:flex;gap:8px;align-items:center;margin-bottom:14px}
+.nav select{flex:1;min-width:0;font:400 14px var(--sans);padding:7px 9px;border:1px solid var(--rule);border-radius:6px;background:var(--well);color:var(--ink)}
+.btn{font:500 14px var(--sans);padding:7px 12px;border:1px solid var(--rule);border-radius:6px;background:var(--well);color:var(--ink);cursor:pointer}
+.btn:hover{border-color:var(--accent)}
+.btn:focus-visible,.nav select:focus-visible,#field:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.entry{font:600 16px/1.35 var(--sans);margin:0 0 12px;text-wrap:balance}
+.eyebrow{font:400 13px var(--mono);color:var(--label-sm);margin:0 0 12px;letter-spacing:.02em}
+.rowhead{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin:4px 0 8px}
+.rowhead .name{font:400 18px var(--sans)}
+.rowhead .val{font:500 14px var(--mono);color:var(--accent);font-variant-numeric:tabular-nums;white-space:nowrap}
+.track{position:relative;height:14px;border-radius:7px;background:var(--well)}
+.pill{position:absolute;top:0;bottom:0;border-radius:7px;background:var(--accent);box-shadow:0 0 10px rgba(224,138,60,.45);transition:left .45s ease,width .45s ease}
+.ticks{display:flex;justify-content:space-between;font:400 12px var(--mono);color:var(--label-sm);margin-top:6px}
+.gauge{display:block;width:100%;height:auto;margin-top:4px}
+#needle{transition:transform .6s cubic-bezier(.3,.9,.3,1.05)}
+.none{color:var(--ink-2);font-size:14px;margin:8px 0 0}
+.text{margin:0 0 12px}
+.src{font-size:13px;color:var(--ink-2);margin:0}
+.src code{font-family:var(--mono);font-size:12.5px;color:var(--label-sm)}
+.field-wrap{grid-column:1/-1}
+h2{font:600 12px/1.3 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--label-sm);margin:0 0 10px}
+#field{display:block;width:100%;height:auto}
+.note{font-size:13.5px;color:var(--ink-2);margin:10px 0 0;max-width:80ch}
+svg text{font-family:var(--mono)}
+@media (max-width:860px){.app{grid-template-columns:minmax(0,1fr)}}
+@media (prefers-reduced-motion:reduce){.pill,#needle{transition:none}}
+</style>
+
+<div class="app">
+  <header>
+    <h1>Interference State</h1>
+    <p class="lede">The manuscript's Compiled Runtime Log, read as an instrument. Φ<sub>load</sub> is the phase-loading of the interference engine. ρ<sub>τ</sub> = M(t)/τ is the proximity to τ: at 1.0 the system crosses its crash threshold. Every value and every line of text comes from <code>Paper/The_Original_Power.tex</code>.</p>
+  </header>
+
+  <section class="card" aria-label="Instrument">
+    <div class="nav">
+      <button class="btn" type="button" id="b-prev" aria-label="Previous log">←</button>
+      <select id="sel-log" aria-label="Runtime log entry"></select>
+      <button class="btn" type="button" id="b-next" aria-label="Next log">→</button>
+    </div>
+    <p class="entry" id="entry"></p>
+    <p class="eyebrow">Interference State (Φ_load, proximity to τ)</p>
+
+    <div class="rowhead"><span class="name">Φ_load</span><span class="val" id="v-phi"></span></div>
+    <div class="track" id="track"><div class="pill" id="pill"></div></div>
+    <div class="ticks"><span>0</span><span>0.5</span><span>1</span></div>
+
+    <div class="rowhead" style="margin-top:22px"><span class="name">ρ_τ = M(t)/τ</span><span class="val" id="v-rho"></span></div>
+    <svg class="gauge" id="gauge" viewBox="0 0 440 236" role="img" aria-label="Dial of rho tau from 0 to 1.2">
+      <defs>
+        <filter id="glow" filterUnits="userSpaceOnUse" x="0" y="0" width="440" height="236" color-interpolation-filters="sRGB">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="3.5" result="b"/>
+          <feColorMatrix in="b" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.7 0" result="g"/>
+          <feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+        <filter id="shadow" filterUnits="userSpaceOnUse" x="0" y="0" width="440" height="236" color-interpolation-filters="sRGB">
+          <feGaussianBlur in="SourceAlpha" stdDeviation="2.5" result="sb"/><feOffset in="sb" dx="2" dy="3" result="so"/>
+          <feFlood flood-color="#000000" flood-opacity="0.55"/><feComposite in2="so" operator="in" result="s"/>
+          <feMerge><feMergeNode in="s"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+      <g id="g-dial"></g>
+      <g id="needle"><line id="needle-line" x1="210" y1="200" x2="210" y2="62" style="stroke:var(--accent-hi)" stroke-width="4" stroke-linecap="round" filter="url(#shadow)"/></g>
+      <circle cx="210" cy="200" r="9" style="fill:var(--accent)" filter="url(#glow)"/>
+    </svg>
+    <p class="none" id="none" hidden>This log gives no Φ_load or ρ_τ values.</p>
+  </section>
+
+  <section class="card" aria-label="The log's words">
+    <h2>What the log says</h2>
+    <p class="text" id="text"></p>
+    <p class="text" id="special" hidden></p>
+    <p class="src" id="src"></p>
+  </section>
+
+  <section class="card field-wrap" aria-label="Every log">
+    <h2>Every log with values <span style="text-transform:none;letter-spacing:0;font-weight:500">· Φ_load against ρ_τ</span></h2>
+    <svg id="field" viewBox="0 0 900 420" role="img" aria-label="Boxes for each runtime log: Phi_load range across, rho tau range up. Select a box to read that log." tabindex="0"></svg>
+    <p class="note" id="corr"></p>
+    <p class="note">Each box spans a log's Φ<sub>load</sub> range across and its ρ<sub>τ</sub> range up. A dot marks a single value (Haiti, 1966). The ivory line is τ. These are the author's estimates (Tier 2 and Tier 3 in the manuscript's scheme), so the pattern shows how the estimates relate, not a measurement.</p>
+  </section>
+</div>
+
+<script>
+(function(){
+'use strict';
+/* Compiled Runtime Log, Paper/The_Original_Power.tex (built by scripts/build_runtime_log.py). */
+var LOG=[{"n":1,"title":"WEST AFRICA (PRE-COLONIAL BASELINE → COLONIAL OVERWRITE, 1450–1950 CE)","chapter":"ch:kinship","line":15339,"phi":null,"rho":null,"point":null,"text":"NEAR-ZERO — Gender complementarity and indigenous gender fluidity deny the extraction kernel its required binary input variable. Divide-and-conquer function fails to compile."},{"n":2,"title":"1486 (LISBON, PORTUGAL)","chapter":"ch:portugal","line":15350,"phi":[0.1,0.2],"rho":[0.7,0.85],"point":null,"text":"LOW axis count; phenotype partition initializing. Estimated Φ_load ∈ [0.10, 0.20], ρ_τ=M(t)/τ ∈ [0.70, 0.85]."},{"n":3,"title":"1676–1787 (VIRGINIA COLONY → PHILADELPHIA)","chapter":"ch:bacon","line":15361,"phi":[0.15,0.55],"rho":[0.6,0.75],"point":null,"text":"TRANSITIONING — coherence breach pre-patch, then rapid phase-loading via codified racial partition. Estimated Φ_load ∈ [0.15, 0.55]; ρ_τ>1.00 at crash, then ρ_τ ∈ [0.60, 0.75] post-patch.","crash":"ρ_τ > 1.00 at the crash (Bacon’s Rebellion, 1676), then the range after the 1705 patch"},{"n":4,"title":"GENDERED AXIS (FOUNDATIONAL – PRESENT)","chapter":"ch:gendered","line":15373,"phi":null,"rho":null,"point":null,"text":"FRAGMENTED — Intersection O_racialized ∩ O_gendered generates maximum extraction coefficient α_r,g."},{"n":5,"title":"1704–1865 (AMERICAN SOUTH)","chapter":"ch:enforcement","line":15384,"phi":[0.45,0.6],"rho":[0.45,0.65],"point":null,"text":"STABLE — race-dominant phase management with low dimensionality. Estimated Φ_load ∈ [0.45, 0.60], ρ_τ ∈ [0.45, 0.65]."},{"n":6,"title":"HAITI (1803–1915 CE), OUT-GROUP EXPORT VECTOR ACTIVE","chapter":"ch:haitian_export","line":15395,"phi":null,"rho":[0.7,0.9],"point":1.0,"text":"MAXIMAL FOR E_global — Sovereign Black republic broadcasting proof-of-concept to every enslaved population in the hemisphere. Estimated ρ_τ ∈ [0.70, 0.90] for adjacent Caribbean extraction zones.","pointLabel":"Haitian Theorem executed at ρ_τ = 1.0","rangeLabel":"adjacent Caribbean extraction zones"},{"n":7,"title":"biological_extraction_kernel","chapter":"ch:environmental_racism","line":15401,"phi":null,"rho":null,"point":null,"text":"This log gives no interference-state values."},{"n":8,"title":"1890s–PRESENT (SCALING THE POLITICAL FRONT-END)","chapter":"ch:tweedism","line":15417,"phi":[0.62,0.81],"rho":[0.6,0.78],"point":null,"text":"Φ_load ∈ [0.62, 0.81]; ρ_τ ∈ [0.60, 0.78]."},{"n":9,"title":"1894–1965 (POST-EMANCIPATION CONTAINMENT)","chapter":"ch:containment","line":15428,"phi":[0.55,0.72],"rho":[0.5,0.68],"point":null,"text":"Φ_load ∈ [0.55, 0.72]; ρ_τ ∈ [0.50, 0.68]."},{"n":10,"title":"1904–1945 (SOUTHWEST AFRICA → CENTRAL EUROPE)","chapter":"ch:german","line":15439,"phi":[0.65,0.85],"rho":[0.75,0.95],"point":null,"text":"HIGH-DIMENSIONAL — obfuscation algorithm routing blame from E to internal buffer. Estimated Φ_load ∈ [0.65, 0.85], ρ_τ ∈ [0.75, 0.95]."},{"n":11,"title":"1947–1948 (UNITED NATIONS → TEL AVIV → WASHINGTON)","chapter":"ch:geopolitical_patch","line":15451,"phi":[0.35,0.55],"rho":[0.75,0.9],"point":null,"text":"TRANSITIONING — post-war decolonization raising Φ_load globally; Palestine partition deployed as defensive patch to relocate I_buffer and establish new enforcement node. Estimated Φ_load ∈ [0.35, 0.55]; ρ_τ ∈ [0.75, 0.90]."},{"n":12,"title":"v5.1 (HYBRID TEMPORAL–SPECTRAL INTERFERENCE ENGINE)","chapter":"ch:tweedism","line":15462,"phi":null,"rho":null,"point":null,"text":"Class-band power P_class(t) depressed; identity-band power P_id(t) elevated across K distinct axis frequencies; noise floor η(t) absorbs residual attention."},{"n":13,"title":"1966 (SECURITY PATCH)","chapter":"ch:recompile","line":15471,"phi":null,"rho":null,"point":0.95,"text":"HIGH. Cross-racial solidarity (Black Power + Anti-War) increasing min. ρ_τ=M(t)/τ → 0.95.","pointLabel":"ρ_τ → 0.95"},{"n":14,"title":"1968–1994 (THE RECOMPILE)","chapter":"ch:recompile","line":15481,"phi":[0.75,0.92],"rho":[0.8,0.98],"point":null,"text":"HIGH-DIMENSIONAL — fractal identity routing active across multiple axes. Estimated Φ_load ∈ [0.75, 0.92], ρ_τ ∈ [0.80, 0.98]."},{"n":15,"title":"1994–PRESENT (TERMINAL RUNTIME)","chapter":"ch:full_algo","line":15493,"phi":[0.82,0.95],"rho":[0.92,1.05],"point":null,"text":"Φ_load ∈ [0.82, 0.95]; ρ_τ ∈ [0.92, 1.05]."},{"n":16,"title":"PIPELINE ARCHITECTURE v4.1","chapter":"ch:pipeline_architecture","line":15500,"phi":null,"rho":null,"point":null,"text":"This log gives no interference-state values."},{"n":17,"title":"ALGORITHMIC EPOCH (TERMINAL RACE, 2010s–PRESENT)","chapter":"ch:algorithmic_epoch","line":15515,"phi":[0.88,0.98],"rho":[0.95,1.08],"point":null,"text":"SATURATED — Orthogonal Vector Injections (ℰ) deploying at machine speed; cross-class coalitions severed before reaching coherence. Estimated Φ_load ∈ [0.88, 0.98], ρ_τ ∈ [0.95, 1.08]."},{"n":18,"title":"TRACING THE DISARMAMENT VARIABLE ACROSS THE FULL TIMELINE","chapter":"ch:kinetic","line":15525,"phi":[0.6,0.85],"rho":[0.7,0.95],"point":null,"text":"MODERATE-HIGH — disarmament operates as kinetic adjunct to identity-fragmentation controls. Estimated Φ_load ∈ [0.60, 0.85], ρ_τ ∈ [0.70, 0.95]."},{"n":19,"title":"TESTING PRESCRIPTIVE INTERVENTIONS AGAINST KERNEL LOGIC","chapter":"ch:contradiction","line":15536,"phi":[0.82,0.95],"rho":[0.92,1.05],"point":null,"text":"SATURATED BUT SLIPPING — maximum phase-loading encountering diminishing suppression returns. Estimated Φ_load ∈ [0.82, 0.95], ρ_τ ∈ [0.92, 1.05]."},{"n":20,"title":"SCALING DIAGNOSTIC TO IMPERIAL ARCHITECTURE","chapter":"ch:global","line":15546,"phi":[0.5,0.9],"rho":[0.55,0.95],"point":null,"text":"REGION-DEPENDENT — imperial core maintains high phase-loading; periphery varies with bloc coordination. Estimated Φ_load ∈ [0.50, 0.90], ρ_τ ∈ [0.55, 0.95]."},{"n":21,"title":"FINAL OUTPUT","chapter":"ch:conclusion","line":15555,"phi":[0.85,0.97],"rho":[0.95,1.08],"point":null,"text":"TERMINAL SATURATION — compound phase-shifting near design limits. Estimated Φ_load ∈ [0.85, 0.97], ρ_τ ∈ [0.95, 1.08]."}];
+var $=function(id){return document.getElementById(id);};
+var CX=210,CY=200,RG=150,VMAX=1.2;
+var cur=0;
+function fmt2(v){return v.toFixed(2);}
+function ang(v){return Math.PI*(1-Math.max(0,Math.min(VMAX,v))/VMAX);}
+function pt(v,r){var a=ang(v);return [CX+r*Math.cos(a),CY-r*Math.sin(a)];}
+function arc(v0,v1,r){var a=pt(v0,r),b=pt(v1,r),large=(v1-v0)/VMAX>0.5?1:0;return 'M'+a[0].toFixed(1)+' '+a[1].toFixed(1)+' A'+r+' '+r+' 0 '+large+' 1 '+b[0].toFixed(1)+' '+b[1].toFixed(1);}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function dial(e){
+  var h='<path d="'+arc(0,VMAX,RG)+'" fill="none" style="stroke:var(--well)" stroke-width="26" stroke-linecap="butt"/>';
+  [0,0.2,0.4,0.6,0.8,1.0,1.2].forEach(function(v){var a=pt(v,RG-19),b=pt(v,RG-13);h+='<line x1="'+a[0].toFixed(1)+'" y1="'+a[1].toFixed(1)+'" x2="'+b[0].toFixed(1)+'" y2="'+b[1].toFixed(1)+'" style="stroke:var(--rule)" stroke-width="1.5"/>';});
+  if(e&&e.rho)h+='<path d="'+arc(e.rho[0],Math.min(VMAX,e.rho[1]),RG)+'" fill="none" style="stroke:var(--accent)" stroke-width="26" filter="url(#glow)"/>';
+  if(e&&e.crash){var c=pt(1.06,RG+22);h+='<path d="M'+(c[0]-6).toFixed(1)+' '+(c[1]-6).toFixed(1)+' l12 0 l-6 10 z" style="fill:var(--tau)"/><text x="'+(c[0]+10).toFixed(1)+'" y="'+(c[1]+2).toFixed(1)+'" font-size="12" style="fill:var(--tau)">crash &gt; 1.00</text>';}
+  var t0=pt(1.0,RG-20),t1=pt(1.0,RG+24),tl=pt(1.0,RG+34);
+  h+='<line x1="'+t0[0].toFixed(1)+'" y1="'+t0[1].toFixed(1)+'" x2="'+t1[0].toFixed(1)+'" y2="'+t1[1].toFixed(1)+'" style="stroke:var(--tau)" stroke-width="3" stroke-linecap="round"/>';
+  h+='<text x="'+(tl[0]+4).toFixed(1)+'" y="'+(tl[1]+2).toFixed(1)+'" font-size="14" style="fill:var(--tau)">τ = 1.0</text>';
+  h+='<text x="'+(CX-RG)+'" y="'+(CY+30)+'" text-anchor="middle" font-size="14" style="fill:var(--label-sm)">0</text>';
+  h+='<text x="'+CX+'" y="'+(CY-RG-22)+'" text-anchor="middle" font-size="14" style="fill:var(--label-sm)">0.6</text>';
+  h+='<text x="'+(CX+RG)+'" y="'+(CY+30)+'" text-anchor="middle" font-size="14" style="fill:var(--label-sm)">1.2</text>';
+  $('g-dial').innerHTML=h;
+}
+function reading(e){
+  if(e.point!=null&&!e.rho)return e.point;
+  if(e.point!=null&&e.rho)return e.point;
+  if(e.rho)return (e.rho[0]+e.rho[1])/2;
+  return null;
+}
+function show(i){
+  cur=(i+LOG.length)%LOG.length;var e=LOG[cur];
+  $('sel-log').value=String(cur);
+  $('entry').textContent=e.n+' \u00b7 '+e.title;
+  var hasPhi=!!e.phi,hasRho=!!(e.rho||e.point!=null);
+  $('v-phi').textContent=hasPhi?'['+fmt2(e.phi[0])+', '+fmt2(e.phi[1])+']':'—';
+  $('pill').style.left=hasPhi?(e.phi[0]*100)+'%':'0';$('pill').style.width=hasPhi?Math.max(1.5,(e.phi[1]-e.phi[0])*100)+'%':'0';
+  $('v-rho').textContent=e.rho?'['+fmt2(e.rho[0])+', '+fmt2(e.rho[1])+']'+(e.point!=null?' \u00b7 '+fmt2(e.point):''):(e.point!=null?fmt2(e.point):'—');
+  dial(e);
+  var r=reading(e);
+  $('needle').style.transform='rotate('+(r==null?-90:(r/VMAX*180-90))+'deg)';
+  $('needle').style.transformOrigin=CX+'px '+CY+'px';
+  $('needle').style.opacity=r==null?'0.25':'1';
+  $('none').hidden=hasPhi||hasRho;
+  $('text').textContent=e.text;
+  var sp=[];
+  if(e.crash)sp.push(e.crash+'.');
+  if(e.pointLabel)sp.push(e.pointLabel+(e.rangeLabel?'. The range shows the '+e.rangeLabel:'')+'.');
+  $('special').hidden=!sp.length;$('special').textContent=sp.join(' ');
+  $('src').innerHTML='Source: <code>Paper/The_Original_Power.tex</code>, line '+e.line+' (Compiled Runtime Log, entry '+e.n+'; chapter <code>'+esc(e.chapter)+'</code>). The needle sits at the middle of the range'+(e.point!=null?', or at the single value where the log gives one':'')+'.';
+  field();
+  try{history.replaceState(null,'','#log'+e.n);}catch(x){}
+}
+var FW=900,FH=420,FL=60,FR=130,FT=20,FB=46,PX=900-62;
+function fx(v){return FL+v*(FW-FL-FR);}
+function fy(v){return FT+(1-v/VMAX)*(FH-FT-FB);}
+function field(){
+  var h='',placed=[];
+  function place(x,y){var k=0;while(k<6&&placed.some(function(q){return Math.abs(q[0]-x)<24&&Math.abs(q[1]-y)<12;})){y+=13;k++;}placed.push([x,y]);return y;}
+  [0,0.2,0.4,0.6,0.8,1.0].forEach(function(v){h+='<line x1="'+fx(v)+'" y1="'+FT+'" x2="'+fx(v)+'" y2="'+(FH-FB)+'" style="stroke:var(--rule)" stroke-opacity=".45"/><text x="'+fx(v)+'" y="'+(FH-FB+18)+'" text-anchor="middle" font-size="12" style="fill:var(--label-sm)">'+v.toFixed(1)+'</text>';});
+  [0,0.2,0.4,0.6,0.8,1.0,1.2].forEach(function(v){h+='<line x1="'+FL+'" y1="'+fy(v)+'" x2="'+(FW-FR)+'" y2="'+fy(v)+'" style="stroke:var(--rule)" stroke-opacity=".45"/><text x="'+(FL-8)+'" y="'+(fy(v)+4)+'" text-anchor="end" font-size="12" style="fill:var(--label-sm)">'+v.toFixed(1)+'</text>';});
+  h+='<text x="'+((FL+FW-FR)/2)+'" y="'+(FH-8)+'" text-anchor="middle" font-size="13" style="fill:var(--label-sm)">Φ_load</text>';
+  h+='<text x="16" y="'+((FT+FH-FB)/2)+'" text-anchor="middle" font-size="13" style="fill:var(--label-sm)" transform="rotate(-90 16 '+((FT+FH-FB)/2)+')">ρ_τ</text>';
+  h+='<line x1="'+FL+'" y1="'+fy(1)+'" x2="'+(FW-14)+'" y2="'+fy(1)+'" style="stroke:var(--tau)" stroke-width="2" stroke-dasharray="7 5"/><text x="'+(FL+6)+'" y="'+(fy(1)-7)+'" font-size="13" style="fill:var(--tau)">τ = 1.0</text>';
+  h+='<line x1="'+(FW-FR+22)+'" y1="'+FT+'" x2="'+(FW-FR+22)+'" y2="'+(FH-FB)+'" style="stroke:var(--rule)" stroke-opacity=".45"/><text x="'+PX+'" y="'+(FH-FB+18)+'" text-anchor="middle" font-size="12" style="fill:var(--label-sm)">no Φ_load</text>';
+  var groups={};
+  LOG.forEach(function(e,i){if(e.phi&&e.rho){var k=e.phi.join()+'|'+e.rho.join();(groups[k]=groups[k]||[]).push(i);}});
+  Object.keys(groups).forEach(function(k){
+    var ids=groups[k],i=ids.indexOf(cur)>=0?cur:ids[0],e=LOG[i],lab=ids.map(function(j){return LOG[j].n;}).join(', ');
+    var sel=ids.indexOf(cur)>=0,x0=fx(e.phi[0]),x1=fx(e.phi[1]),y0=fy(Math.min(VMAX,e.rho[1])),y1=fy(e.rho[0]);
+    h+='<g data-i="'+i+'" style="cursor:pointer"><rect x="'+x0.toFixed(1)+'" y="'+y0.toFixed(1)+'" width="'+Math.max(3,x1-x0).toFixed(1)+'" height="'+Math.max(3,y1-y0).toFixed(1)+'" rx="3" style="fill:var(--accent);stroke:var(--'+(sel?'accent-hi':'accent')+')" fill-opacity="'+(sel?0.45:0.14)+'" stroke-width="'+(sel?2.5:1.2)+'"'+(sel?' filter="url(#fglow)"':'')+'/><text x="'+((x0+x1)/2).toFixed(1)+'" y="'+place((x0+x1)/2,(y0+y1)/2+4).toFixed(1)+'" text-anchor="middle" font-size="12" style="fill:var(--'+(sel?'ink':'label-sm')+')">'+lab+'</text><title>'+esc(ids.map(function(j){return LOG[j].n+' \u00b7 '+LOG[j].title;}).join('; '))+'</title></g>';
+  });
+  LOG.forEach(function(e,i){
+    if(e.point==null)return;
+    var sel=i===cur,x=e.phi?fx((e.phi[0]+e.phi[1])/2):PX,y=fy(e.point);
+    h+='<g data-i="'+i+'" style="cursor:pointer"><circle cx="'+x+'" cy="'+y+'" r="'+(sel?8:6)+'" style="fill:var(--accent);stroke:var(--accent-hi)" stroke-width="'+(sel?2.5:1)+'"/><text x="'+(x-12)+'" y="'+(y+4)+'" text-anchor="end" font-size="12" style="fill:var(--'+(sel?'ink':'label-sm')+')">'+e.n+'</text><title>'+esc(e.n+' \u00b7 '+e.title+' \u00b7 '+(e.pointLabel||''))+'</title></g>';
+  });
+  $('field').innerHTML='<defs><filter id="fglow" filterUnits="userSpaceOnUse" x="0" y="0" width="900" height="420"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>'+h;
+}
+function corr(){
+  var xs=[],ys=[];
+  LOG.forEach(function(e){if(e.phi&&e.rho){xs.push((e.phi[0]+e.phi[1])/2);ys.push((e.rho[0]+e.rho[1])/2);}});
+  var n=xs.length,mx=xs.reduce(function(a,b){return a+b;},0)/n,my=ys.reduce(function(a,b){return a+b;},0)/n,sxy=0,sxx=0,syy=0;
+  for(var i=0;i<n;i++){sxy+=(xs[i]-mx)*(ys[i]-my);sxx+=(xs[i]-mx)*(xs[i]-mx);syy+=(ys[i]-my)*(ys[i]-my);}
+  var r=sxy/Math.sqrt(sxx*syy),over=LOG.filter(function(e){return e.rho&&e.rho[1]>1;}).map(function(e){return e.n;});
+  $('corr').textContent='Across the '+n+' logs with both ranges, the midpoints of Φ_load and ρ_τ correlate at r = '+r.toFixed(2)+'. Higher phase-loading goes with closer proximity to τ. The ranges of logs '+over.join(', ')+' reach past τ = 1.0.';
+}
+var sel=$('sel-log');
+sel.innerHTML=LOG.map(function(e,i){return '<option value="'+i+'">'+e.n+' \u00b7 '+esc(e.title)+'</option>';}).join('');
+sel.addEventListener('change',function(){show(+sel.value);});
+$('b-prev').addEventListener('click',function(){show(cur-1);});
+$('b-next').addEventListener('click',function(){show(cur+1);});
+$('field').addEventListener('click',function(ev){var g=ev.target.closest('[data-i]');if(g)show(+g.getAttribute('data-i'));});
+$('field').addEventListener('keydown',function(ev){if(ev.key==='ArrowRight'){ev.preventDefault();show(cur+1);}else if(ev.key==='ArrowLeft'){ev.preventDefault();show(cur-1);}});
+var start=1,m=/^#log(\d+)$/.exec(location.hash||'');
+if(m){LOG.forEach(function(e,i){if(e.n===+m[1])start=i;});}
+corr();show(start);
+window.addEventListener('hashchange',function(){var mm=/^#log(\d+)$/.exec(location.hash||'');if(mm)LOG.forEach(function(e,i){if(e.n===+mm[1]&&i!==cur)show(i);});});
+})();
+</script>
