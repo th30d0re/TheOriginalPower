@@ -16,7 +16,7 @@ with τ = 1.0 marked.
 - **The log's words.** The Interference State line of the selected log, converted from TeX to plain
   text, with its source line in the manuscript.
 - **Field chart.** Every log with both values as a box: Φ_load range across, ρ_τ range up, τ as an
-  ivory line. Logs with only a single ρ_τ value (6, Haiti; 13, 1966) sit in a separate column. Select
+  red line. Logs with only a single ρ_τ value (6, Haiti; 13, 1966) sit in a separate column. Select
   a box to read that log.
 
 Logs 1, 4, 7, 12, and 16 give no numbers; the page shows their text only. Three logs carry notes
@@ -44,6 +44,6 @@ Run it after any change to the runtime log in the manuscript. It reproduces the 
 ## Design
 
 Same identity as `tools/complex_wage_plane`: navy field (#0D1B2A), bronze line art (#8A6A45, lighter
-bronze #B8956A for small labels), accent orange (#E08A3C) for the reading, and ivory (#ECE7DC) for τ.
-The mockup this follows drew τ in red; the page uses ivory to match the wage plane, where τ marks a
-threshold whose outcome is open.
+bronze #B8956A for small labels), and accent orange (#E08A3C) for the reading. τ is red (#FF7A6B), as in
+the mockup this instrument follows. (On the wage plane τ is ivory, because there it is drawn from the
+Buffer's side as a threshold whose outcome is open.)

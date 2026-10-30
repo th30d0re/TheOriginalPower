@@ -1,0 +1,285 @@
+<title>Backlash Oscillator</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=STIX+Two+Text:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<style>
+/* Layout concept: the series RLC circuit on the left (the schematic is the control panel), the
+   q(t) response on the right, the four fitted shocks underneath. Palette follows the mockup: cream wires
+   and axes, red R, green L, cream C, gold source and impulse, red text for the extraction zone. */
+:root{
+  --paper:#0D1B2A; --zone:#1B1E2B; --panel:#132538; --well:#081421;
+  --wire:#ECE7DC; --ink:#ECE7DC; --ink-2:#A9B6C4;
+  --rule:#8A6A45; --label-sm:#B8956A;
+  --gold:#D4A84B; --red:#E0604A; --green:#7CC08A; --accent:#E08A3C;
+  --sans:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,Menlo,Consolas,monospace;
+  --math:'STIX Two Text','Cambria Math','Times New Roman',serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{background:var(--paper);color:var(--ink);font:15px/1.55 var(--sans);padding-block:22px 48px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.app{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:20px 28px;align-items:start}
+header{grid-column:1/-1}
+h1{font:600 24px/1.2 var(--sans);margin:0 0 6px;letter-spacing:-.01em}
+.lede{margin:0;color:var(--ink-2);max-width:78ch}
+.card{background:var(--panel);border:1px solid var(--rule);border-radius:10px;padding:16px 18px;min-width:0}
+h2{font:600 12px/1.3 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--label-sm);margin:0 0 10px}
+svg{display:block;width:100%;height:auto}
+svg text{font-family:var(--mono)}
+.m{font-family:var(--math);font-style:italic}
+.comp{cursor:pointer}
+.comp:hover path,.comp:hover line{filter:url(#hot)}
+.row{display:grid;grid-template-columns:92px minmax(0,1fr) 70px;gap:10px;align-items:center;margin:8px 0}
+.row label{font:400 15px var(--math);font-style:italic}
+.row label .hint{font:400 12px var(--sans);font-style:normal;color:var(--ink-2)}
+.row output{font:500 13px var(--mono);text-align:right;font-variant-numeric:tabular-nums}
+input[type=range]{width:100%;min-width:0;accent-color:var(--gold)}
+input[type=range]:focus-visible,.btn:focus-visible,select:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+#s-R{accent-color:var(--red)} #s-L{accent-color:var(--green)} #s-C{accent-color:var(--wire)}
+.btns{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 4px}
+.btn{font:500 13px var(--sans);padding:7px 11px;border:1px solid var(--rule);border-radius:6px;background:var(--well);color:var(--ink);cursor:pointer}
+.btn:hover{border-color:var(--gold)}
+.btn[aria-pressed="true"]{border-color:var(--gold);color:var(--gold)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px 16px;margin:12px 0 4px}
+.stats div{min-width:0}
+.stats dt{font-size:12px;color:var(--ink-2)}
+.stats dd{margin:0;font:500 15px var(--mono);font-variant-numeric:tabular-nums}
+.verdict{margin:10px 0 0;font-size:14.5px}
+.full{grid-column:1/-1}
+.shocks{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.shock{background:var(--well);border:1px solid var(--rule);border-radius:8px;padding:10px 10px 8px;cursor:pointer;text-align:left;color:var(--ink);font:inherit}
+.shock:hover,.shock[aria-pressed="true"]{border-color:var(--gold)}
+.shock .yr{font:600 15px var(--sans)}
+.shock .meta{font:400 12px var(--mono);color:var(--ink-2);margin-top:4px;line-height:1.5}
+.note{font-size:13.5px;color:var(--ink-2);margin:10px 0 0;max-width:90ch}
+.note code{font-family:var(--mono);font-size:12.5px;color:var(--label-sm)}
+@media (max-width:900px){.app{grid-template-columns:minmax(0,1fr)}.shocks{grid-template-columns:repeat(2,minmax(0,1fr))}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+
+<div class="app">
+  <header>
+    <h1>Backlash Oscillator</h1>
+    <p class="lede">The manuscript's series RLC circuit (eq. 1.7a): a reform shock V(t) displaces the equality-surplus charge q(t) above the extraction baseline, and the circuit's reactive parts pull it back past zero into backlash. R is bureaucratic and carceral friction, L is cultural inertia, and C is token-reform absorption capacity.</p>
+  </header>
+
+  <section class="card" aria-label="Circuit">
+    <h2>The circuit</h2>
+    <svg id="circuit" viewBox="0 0 700 520" role="img" aria-label="Series RLC circuit: source V(t), resistor R, inductor L, capacitor C. Select a component to adjust it.">
+      <defs>
+        <filter id="hot" filterUnits="userSpaceOnUse" x="0" y="0" width="700" height="520"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+      </defs>
+      <!-- wires -->
+      <path d="M60 215 V120 H140 M270 120 H315 M452 120 H552 M568 120 H660 V385 H60 V291" fill="none" style="stroke:var(--wire)" stroke-width="3" stroke-linejoin="miter"/>
+      <!-- source -->
+      <g class="comp" data-k="V0" tabindex="0" role="button" aria-label="Reform shock size">
+        <circle cx="60" cy="253" r="38" fill="none" style="stroke:var(--gold)" stroke-width="3.5"/>
+        <path d="M38 253 C46 230, 54 230, 60 253 S74 276, 82 253" fill="none" style="stroke:var(--gold)" stroke-width="3.5" stroke-linecap="round"/>
+        <text x="116" y="268" class="m" font-size="34" style="fill:var(--gold)">V(t)</text>
+        <text x="116" y="296" font-size="17" style="fill:var(--gold)">reform shock</text>
+      </g>
+      <!-- R -->
+      <g class="comp" data-k="R" tabindex="0" role="button" aria-label="Resistor R: bureaucratic and carceral friction">
+        <rect x="132" y="88" width="146" height="64" fill="transparent"/>
+        <path d="M140 120 L148 120 L160 100 L176 140 L192 100 L208 140 L224 100 L240 140 L256 100 L264 120 L270 120" fill="none" style="stroke:var(--red)" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+        <text x="205" y="58" text-anchor="middle" class="m" font-size="40" style="fill:var(--red)">R</text>
+      </g>
+      <!-- L -->
+      <g class="comp" data-k="L" tabindex="0" role="button" aria-label="Inductor L: cultural inertia">
+        <rect x="308" y="80" width="152" height="64" fill="transparent"/>
+        <path d="M315 120 C315 72, 349 72, 349 120 M349 120 C349 72, 383 72, 383 120 M383 120 C383 72, 417 72, 417 120 M417 120 C417 72, 451 72, 451 120" fill="none" style="stroke:var(--green)" stroke-width="3.5" stroke-linecap="round"/>
+        <text x="383" y="58" text-anchor="middle" class="m" font-size="40" style="fill:var(--green)">L</text>
+      </g>
+      <!-- C -->
+      <g class="comp" data-k="C" tabindex="0" role="button" aria-label="Capacitor C: token-reform absorption capacity">
+        <rect x="536" y="80" width="48" height="84" fill="transparent"/>
+        <line x1="552" y1="84" x2="552" y2="156" style="stroke:var(--wire)" stroke-width="4" stroke-linecap="round"/>
+        <line x1="568" y1="84" x2="568" y2="156" style="stroke:var(--wire)" stroke-width="4" stroke-linecap="round"/>
+        <text x="560" y="58" text-anchor="middle" class="m" font-size="40" style="fill:var(--wire)">C</text>
+      </g>
+      <!-- governing equation (eq. 1.7a) -->
+      <g aria-label="L q double dot plus R q dot plus q over C equals V of t">
+        <text x="84" y="486" class="m" font-size="40" style="fill:var(--ink)">L q̈ + R q̇ +</text>
+        <text x="324" y="461" text-anchor="middle" class="m" font-size="34" style="fill:var(--ink)" font-style="normal">1</text>
+        <line x1="306" y1="473" x2="342" y2="473" style="stroke:var(--ink)" stroke-width="2"/>
+        <text x="324" y="512" text-anchor="middle" class="m" font-size="40" style="fill:var(--ink)">C</text>
+        <text x="352" y="486" class="m" font-size="40" style="fill:var(--ink)">q = V(t)</text>
+      </g>
+    </svg>
+    <div class="row"><label for="s-R">R <span class="hint">friction</span></label><input id="s-R" type="range" min="0" max="15" step="0.01"><output id="o-R" for="s-R"></output></div>
+    <div class="row"><label for="s-L">L <span class="hint">inertia</span></label><input id="s-L" type="range" min="-1" max="1" step="0.01"><output id="o-L" for="s-L"></output></div>
+    <div class="row"><label for="s-C">C <span class="hint">absorption</span></label><input id="s-C" type="range" min="-2.5" max="2.5" step="0.01"><output id="o-C" for="s-C"></output></div>
+    <div class="row"><label for="s-V0">V₀ <span class="hint">shock size</span></label><input id="s-V0" type="range" min="0.1" max="3" step="0.01"><output id="o-V0" for="s-V0"></output></div>
+    <p class="note" style="margin-top:4px">L and C move on log scales. Time runs in years.</p>
+  </section>
+
+  <section class="card" aria-label="Response">
+    <h2>The response</h2>
+    <div class="btns" role="group" aria-label="Drive">
+      <button class="btn" type="button" data-mode="impulse">Impulse shock</button>
+      <button class="btn" type="button" data-mode="charge">Initial charge Q₀ (eq. 1.7b)</button>
+      <button class="btn" type="button" data-mode="periodic">Sustained drive V₀ cos ωt</button>
+    </div>
+    <div class="row" id="row-w" hidden><label for="s-w">ω/ω₀ <span class="hint">drive</span></label><input id="s-w" type="range" min="0.2" max="3" step="0.01"><output id="o-w" for="s-w"></output></div>
+    <svg id="plot" viewBox="0 0 980 540" role="img" aria-label="q of t over time, with the extraction baseline at q equals zero"></svg>
+    <dl class="stats">
+      <div><dt>Damping ratio ζ</dt><dd id="r-z"></dd></div>
+      <div><dt>Natural period 2π/ω₀</dt><dd id="r-T"></dd></div>
+      <div><dt>Decay rate α = R/2L</dt><dd id="r-a"></dd></div>
+      <div><dt>Settling time (4/α)</dt><dd id="r-ts"></dd></div>
+      <div><dt>First backlash depth</dt><dd id="r-ov"></dd></div>
+      <div><dt>First crossing below 0</dt><dd id="r-cross"></dd></div>
+      <div><dt>Quality factor Q</dt><dd id="r-q"></dd></div>
+      <div><dt>Regime</dt><dd id="r-reg"></dd></div>
+    </dl>
+    <p class="verdict" id="verdict"></p>
+  </section>
+
+  <section class="card full" aria-label="Fitted shocks">
+    <h2>Four fitted shocks</h2>
+    <div class="shocks" id="shocks"></div>
+    <p class="note" id="trend"></p>
+    <p class="note">Sources: the governing equation and solution, eq. 1.7a–1.7b (<code>Paper/The_Original_Power.tex:2208</code>); the convergence prediction and the resonance escape condition (<code>:2316</code>, <code>:2319</code>); the four fits from <code>Paper/scripts/spectral_laplace.ipynb</code> with proxies in <code>Paper/data/backlash_proxies.csv</code> (<code>:7029</code>–<code>:7034</code>). The fits identify ζ and ω<sub>n</sub> only, so each preset fixes L = 1 and sets C = 1/ω<sub>n</sub>² and R = 2ζω<sub>n</sub>. The manuscript states that R, L, and C are not read off the record; the supported claim is ordinal: damping rises and the period shortens from shock to shock (<code>:2390</code>).</p>
+  </section>
+</div>
+
+<script>
+(function(){
+'use strict';
+var $=function(id){return document.getElementById(id);};
+var SHOCKS=[
+  {y:1865,name:'Abolition / Reconstruction',z:0.17,wn:0.30,proxy:'Klan and vigilante membership, 1865–1920'},
+  {y:1964,name:'Civil Rights Act',z:0.59,wn:0.52,proxy:'Southern-strategy polling, 1964–1985'},
+  {y:2008,name:'Obama election',z:0.70,wn:1.08,proxy:'Tea Party favourability, 2008–2020'},
+  {y:2020,name:'George Floyd protests',z:0.97,wn:6.65,proxy:'Militia membership, 2020–2024'}
+];
+var S={R:0.102,L:1,C:1/(0.3*0.3),V0:1,mode:'impulse',w:1,year:1865,preset:0};
+function clamp(v,a,b){return Math.max(a,Math.min(b,v));}
+function f(v,d){if(!isFinite(v))return '—';var a=Math.abs(v);return a>=100?v.toFixed(0):a>=10?v.toFixed(1):v.toFixed(d==null?2:d);}
+function params(){
+  var a=S.R/(2*S.L),w0=1/Math.sqrt(S.L*S.C),z=a/w0,wd=z<1?w0*Math.sqrt(1-z*z):0;
+  return {a:a,w0:w0,z:z,wd:wd,Q:S.R>0?Math.sqrt(S.L/S.C)/S.R:Infinity};
+}
+function horizon(p){
+  if(S.mode==='periodic')return clamp(14*2*Math.PI/(S.w*p.w0),2,400);
+  var t=p.a>1e-6?6/p.a:40*2*Math.PI/p.w0;
+  if(p.wd>0)t=Math.max(t,2.5*2*Math.PI/p.wd);
+  return clamp(t,1,400);
+}
+function simulate(T,N){
+  var dt=T/N,q,v,t=0,out=[],p=params();
+  if(S.mode==='impulse'){q=0;v=S.V0/S.L;}else if(S.mode==='charge'){q=S.V0;v=0;}else{q=0;v=0;}
+  var wdrv=S.w*p.w0;
+  function V(tt){return S.mode==='periodic'?S.V0*Math.cos(wdrv*tt):0;}
+  function acc(tt,qq,vv){return (V(tt)-S.R*vv-qq/S.C)/S.L;}
+  var sub=Math.max(1,Math.ceil(dt*p.w0*8)),h=dt/sub;
+  out.push([0,q]);
+  for(var i=0;i<N;i++){
+    for(var k=0;k<sub;k++){
+      var k1q=v,k1v=acc(t,q,v),k2q=v+h/2*k1v,k2v=acc(t+h/2,q+h/2*k1q,v+h/2*k1v),
+          k3q=v+h/2*k2v,k3v=acc(t+h/2,q+h/2*k2q,v+h/2*k2v),k4q=v+h*k3v,k4v=acc(t+h,q+h*k3q,v+h*k3v);
+      q+=h/6*(k1q+2*k2q+2*k3q+k4q);v+=h/6*(k1v+2*k2v+2*k3v+k4v);t+=h;
+    }
+    out.push([t,q]);
+  }
+  return out;
+}
+var PW=980,PH=540,PL=70,PR=40,PT=40,PB=60;
+function plot(){
+  var p=params(),T=horizon(p),pts=simulate(T,700),qmax=0,qmin=0;
+  pts.forEach(function(s){if(s[1]>qmax)qmax=s[1];if(s[1]<qmin)qmin=s[1];});
+  var A=Math.max(qmax,-qmin,1e-9),top=A*1.15,bot=-A*0.95;
+  function X(t){return PL+t/T*(PW-PL-PR);}
+  function Y(q){return PT+(top-q)/(top-bot)*(PH-PT-PB);}
+  var y0=Y(0),h='';
+  h+='<defs><filter id="glow" filterUnits="userSpaceOnUse" x="0" y="0" width="'+PW+'" height="'+PH+'"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>'+
+     '<marker id="ah" viewBox="0 0 12 12" refX="6" refY="6" markerWidth="16" markerHeight="16" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L12,6 L0,12 z" style="fill:var(--wire)"/></marker>'+
+     '<marker id="ag" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="26" markerHeight="26" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L12,6 L0,12 z" style="fill:var(--gold)"/></marker></defs>';
+  h+='<rect x="'+PL+'" y="'+y0.toFixed(1)+'" width="'+(PW-PL-PR)+'" height="'+(PH-PB-y0).toFixed(1)+'" style="fill:var(--zone)"/>';
+  h+='<text x="'+(PL+18)+'" y="'+(PH-PB-14)+'" font-size="18" style="fill:var(--red)">below q = 0 · backlash into the extraction zone</text>';
+  var step=T>150?25:T>60?10:T>25?5:T>8?2:T>3?1:0.25;
+  for(var t=step;t<T*0.98;t+=step){h+='<line x1="'+X(t).toFixed(1)+'" y1="'+PT+'" x2="'+X(t).toFixed(1)+'" y2="'+(PH-PB)+'" style="stroke:var(--rule)" stroke-opacity=".35"/><text x="'+X(t).toFixed(1)+'" y="'+(PH-PB+22)+'" text-anchor="middle" font-size="14" style="fill:var(--label-sm)">'+(S.year?(S.year+(step<1?t:Math.round(t))):('+'+(step<1?t:Math.round(t))))+'</text>';}
+  h+='<line x1="'+PL+'" y1="'+(PH-PB+6)+'" x2="'+PL+'" y2="'+(PT-12)+'" style="stroke:var(--wire)" stroke-width="2.5" marker-end="url(#ah)"/>';
+  h+='<line x1="'+PL+'" y1="'+y0.toFixed(1)+'" x2="'+(PW-PR+20)+'" y2="'+y0.toFixed(1)+'" style="stroke:var(--wire)" stroke-width="2.5" marker-end="url(#ah)"/>';
+  h+='<text x="'+(PL+16)+'" y="'+(PT+4)+'" class="m" font-size="28" style="fill:var(--ink)">q(t)</text><text x="'+(PL+86)+'" y="'+(PT)+'" font-size="17" style="fill:var(--ink-2)">equality-surplus charge</text>';
+  h+='<text x="'+(PW-PR)+'" y="'+(y0-12).toFixed(1)+'" text-anchor="end" font-size="17" style="fill:var(--ink)">q = 0 · extraction baseline</text>';
+  h+='<text x="'+(PW-PR)+'" y="'+(y0+36).toFixed(1)+'" text-anchor="end" class="m" font-size="26" style="fill:var(--ink)">t</text>';
+  if(S.mode==='impulse')h+='<line x1="'+(PL+8)+'" y1="'+y0.toFixed(1)+'" x2="'+(PL+8)+'" y2="'+(PT+28)+'" style="stroke:var(--gold)" stroke-width="5" marker-end="url(#ag)"/>';
+  else if(S.mode==='charge')h+='<circle cx="'+X(0)+'" cy="'+Y(S.V0).toFixed(1)+'" r="7" style="fill:var(--gold)"/>';
+  else{var sw='';for(var u=0;u<=60;u++){var tt=u/60*Math.min(T,4*2*Math.PI/(S.w*p.w0));sw+=(u?'L':'M')+X(tt).toFixed(1)+' '+(y0-18*Math.cos(S.w*p.w0*tt)).toFixed(1);}h+='<path d="'+sw+'" fill="none" style="stroke:var(--gold)" stroke-width="2" stroke-opacity=".6"/>';}
+  var seg='',state=null,paths='';
+  function flush(){if(seg)paths+='<path d="'+seg+'" fill="none" style="stroke:var(--'+(state?'accent':'red')+')" stroke-width="3.5" stroke-linejoin="round" filter="url(#glow)"/>';}
+  pts.forEach(function(s,i){var st=s[1]>=0,xy=X(s[0]).toFixed(1)+' '+Y(s[1]).toFixed(1);if(state===null)state=st;if(st!==state){seg+='L'+xy;flush();seg='M'+xy;state=st;}else seg+=(seg?'L':'M')+xy;});
+  flush();h+=paths;
+  /* first peak and first trough */
+  var pk=null,tr=null;
+  for(var i=1;i<pts.length-1;i++){if(!pk&&pts[i][1]>0&&pts[i][1]>=pts[i-1][1]&&pts[i][1]>=pts[i+1][1])pk=pts[i];if(pk&&!tr&&pts[i][1]<0&&pts[i][1]<=pts[i-1][1]&&pts[i][1]<=pts[i+1][1])tr=pts[i];}
+  if(S.mode==='charge')pk=pts[0];
+  if(pk)h+='<circle cx="'+X(pk[0]).toFixed(1)+'" cy="'+Y(pk[1]).toFixed(1)+'" r="5" style="fill:var(--accent)"/><text x="'+(X(pk[0])+10).toFixed(1)+'" y="'+(Y(pk[1])+22).toFixed(1)+'" font-size="15" style="fill:var(--accent)">reform displacement</text>';
+  if(tr)h+='<circle cx="'+X(tr[0]).toFixed(1)+'" cy="'+Y(tr[1]).toFixed(1)+'" r="5" style="fill:var(--red)"/><text x="'+(X(tr[0])+10).toFixed(1)+'" y="'+(Y(tr[1])+22).toFixed(1)+'" font-size="15" style="fill:var(--red)">first backlash</text>';
+  $('plot').innerHTML=h;
+  return {p:p,pk:pk,tr:tr,pts:pts,T:T};
+}
+function stats(r){
+  var p=r.p;
+  $('r-z').textContent=f(p.z,2);
+  $('r-T').textContent=f(2*Math.PI/p.w0,1)+' yr';
+  $('r-a').textContent=f(p.a,3)+' /yr';
+  $('r-ts').textContent=p.a>0?f(4/p.a,1)+' yr':'never';
+  var depth=r.pk&&r.tr?-r.tr[1]/r.pk[1]:0;
+  $('r-ov').textContent=r.tr?Math.round(100*depth)+'% of the peak':'none';
+  var cross=null;for(var i=1;i<r.pts.length;i++){if(r.pts[i-1][1]>=0&&r.pts[i][1]<0){cross=r.pts[i][0];break;}}
+  $('r-cross').textContent=cross==null?'none':(S.year?Math.round(S.year+cross)+' (+'+f(cross,1)+' yr)':'+'+f(cross,1)+' yr');
+  $('r-q').textContent=isFinite(p.Q)?f(p.Q,2):'∞';
+  $('r-reg').textContent=p.z<1?'underdamped':p.z===1?'critical':'overdamped';
+  var v;
+  if(S.mode==='periodic'){
+    var amp=0,n=r.pts.length;for(var j=Math.floor(n*0.75);j<n;j++)amp=Math.max(amp,Math.abs(r.pts[j][1]));
+    var res=S.R>0?S.V0/(S.R*p.w0):Infinity;
+    v='Sustained drive at '+f(S.w,2)+'×ω₀: late swing amplitude '+f(amp,2)+'. At resonance (ω = ω₀) the steady amplitude is V₀/(Rω₀) = '+(isFinite(res)?f(res,2):'unbounded')+', which is Q = '+(isFinite(p.Q)?f(p.Q,2):'∞')+' times the off-resonance response. The manuscript reads this as the only forcing that can exceed the circuit’s absorption capacity (:2319).';
+  }else{
+    v=p.z<1?'Underdamped: the shock lifts q above the baseline, and the circuit swings it '+(r.tr?Math.round(100*(-r.tr[1]/r.pk[1]))+'% of that height ':'')+'below zero into backlash, then decays toward q = 0. Without a sustained V(t), q(t) → 0 (:2316).':'Overdamped or critical: q returns to the baseline without swinging below it. The manuscript’s fitted shocks are all underdamped (ζ < 1).';
+  }
+  $('verdict').textContent=v;
+}
+function sync(){
+  $('s-R').value=S.R;$('o-R').textContent=f(S.R,3);
+  $('s-L').value=Math.log10(S.L);$('o-L').textContent=f(S.L,3);
+  $('s-C').value=Math.log10(S.C);$('o-C').textContent=f(S.C,3);
+  $('s-V0').value=S.V0;$('o-V0').textContent=f(S.V0,2);
+  $('s-w').value=S.w;$('o-w').textContent=f(S.w,2);
+  $('row-w').hidden=S.mode!=='periodic';
+  Array.prototype.forEach.call(document.querySelectorAll('[data-mode]'),function(b){b.setAttribute('aria-pressed',String(b.getAttribute('data-mode')===S.mode));});
+  Array.prototype.forEach.call(document.querySelectorAll('.shock'),function(b,i){b.setAttribute('aria-pressed',String(i===S.preset));});
+}
+function refresh(){sync();stats(plot());}
+function loadShock(i){var s=SHOCKS[i];S.L=1;S.C=1/(s.wn*s.wn);S.R=2*s.z*s.wn;S.year=s.y;S.preset=i;refresh();}
+function custom(){S.preset=-1;S.year=0;}
+$('s-R').addEventListener('input',function(e){custom();S.R=+e.target.value;refresh();});
+$('s-L').addEventListener('input',function(e){custom();S.L=Math.pow(10,+e.target.value);refresh();});
+$('s-C').addEventListener('input',function(e){custom();S.C=Math.pow(10,+e.target.value);refresh();});
+$('s-V0').addEventListener('input',function(e){S.V0=+e.target.value;refresh();});
+$('s-w').addEventListener('input',function(e){S.w=+e.target.value;refresh();});
+Array.prototype.forEach.call(document.querySelectorAll('[data-mode]'),function(b){b.addEventListener('click',function(){S.mode=b.getAttribute('data-mode');refresh();});});
+Array.prototype.forEach.call(document.querySelectorAll('.comp'),function(g){
+  function go(){var k=g.getAttribute('data-k');var el=$('s-'+k);if(el)el.focus();}
+  g.addEventListener('click',go);g.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();go();}});
+});
+/* small multiples: each fitted shock on its own time scale */
+var sh='';
+SHOCKS.forEach(function(s,i){
+  var a=s.z*s.wn,wd=s.wn*Math.sqrt(1-s.z*s.z),T=Math.max(4/a,2.2*2*Math.PI/wd),W=260,H=96,d='',mx=0,pts=[];
+  for(var u=0;u<=160;u++){var t=u/160*T,q=Math.exp(-a*t)*Math.sin(wd*t);pts.push([t,q]);mx=Math.max(mx,Math.abs(q));}
+  var seg='',st=null,paths='';
+  pts.forEach(function(p){var x=(6+p[0]/T*(W-12)).toFixed(1),y=(H/2-p[1]/mx*(H/2-10)).toFixed(1),s2=p[1]>=0;if(st===null)st=s2;if(s2!==st){seg+='L'+x+' '+y;paths+='<path d="'+seg+'" fill="none" style="stroke:var(--'+(st?'accent':'red')+')" stroke-width="2.2"/>';seg='M'+x+' '+y;st=s2;}else seg+=(seg?'L':'M')+x+' '+y;});
+  paths+='<path d="'+seg+'" fill="none" style="stroke:var(--'+(st?'accent':'red')+')" stroke-width="2.2"/>';
+  sh+='<button type="button" class="shock" aria-pressed="false" data-i="'+i+'"><div class="yr">'+s.y+' · '+s.name+'</div><svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Fitted impulse response for '+s.y+'"><rect x="0" y="'+H/2+'" width="'+W+'" height="'+H/2+'" style="fill:var(--zone)"/><line x1="0" y1="'+H/2+'" x2="'+W+'" y2="'+H/2+'" style="stroke:var(--wire)" stroke-width="1.2"/>'+paths+'</svg><div class="meta">ζ '+s.z.toFixed(2)+' · ωₙ '+s.wn.toFixed(2)+' rad/yr<br>natural period '+(2*Math.PI/s.wn).toFixed(1)+' yr · settles in '+(4/a).toFixed(1)+' yr<br>window '+T.toFixed(1)+' yr · '+s.proxy+'</div></button>';
+});
+$('shocks').innerHTML=sh;
+Array.prototype.forEach.call(document.querySelectorAll('.shock'),function(b){b.addEventListener('click',function(){loadShock(+b.getAttribute('data-i'));});});
+$('trend').textContent='From 1865 to 2020 the damping ratio rises from 0.17 to 0.97 and the natural period shrinks from about 21 years to under one year. Each card uses its own time window, so the shapes compare damping and swing, not duration. The first backlash depth falls from '+Math.round(100*Math.exp(-Math.PI*0.17/Math.sqrt(1-0.17*0.17)))+'% of the peak (1865) to '+Math.round(100*Math.exp(-Math.PI*0.97/Math.sqrt(1-0.97*0.97)))+'% (2020): each wave of backlash comes faster and swings less.';
+loadShock(0);
+})();
+</script>
