@@ -352,6 +352,10 @@ svg text:is([font-size="10"],[font-size="11"],[font-size="12"],[font-size="13"],
       <div class="row"><label for="s-sdW">p <span class="hint">O pressure</span></label><input id="s-sdW" type="range" min="0" max="150" step="1"><output id="o-sdW" for="s-sdW"></output></div>
       <p class="note muted">a, b, and τ come from the τ model panel. While the scenario is on, dragging W is off.</p>
       <div class="tablewrap"><table class="data" id="sd-events"></table></div>
+      <h3 class="sub">1802, coded from sources</h3>
+      <p class="note muted" style="margin-top:0">For 1802, the gens de couleur libres phasor comes from this table; the other years stay illustrative. The wages measure what the colonial order gives the group. M1: commission or command in French service (+1 held, 0 lost). M2: safety of person and property under French rule (+1 secure, 0 at risk, −1 under attack by the order). S1: equal rights under the 1792 law (+1 in force, −1 repealed or acted against). S2: signals from Paris on the rights of people of color (0 none, −1 hostile). ψ<sub>m</sub> = 40 × mean(M1, M2). ψ<sub>s</sub> = 60 × mean(S1, S2).</p>
+      <div class="tablewrap"><table class="data" id="sd-code"></table></div>
+      <p class="note" id="sd-code-sum"></p>
       <p class="note muted">The gens de couleur libres cross τ twice. In 1791 the April 1792 decree buys them back. In 1802, with O armed and the Polish defections under way, nothing buys them back, and the plane ends in 1804. Sources: the manuscript (Haitian Theorem :12296–:12335; Arcahaie flag :3665; Polish proof :14111 and :14125); C. L. R. James, <i>The Black Jacobins</i>; Laurent Dubois, <i>Avengers of the New World</i>; works by David Geggus cited in the manuscript.</p>
     </div>
 
@@ -1440,7 +1444,7 @@ $('c-sp').addEventListener('change',function(e){S.useSP=e.target.checked;if(S.dr
 var SD={
   mob:[[1789,0.1],[1791.6,0.15],[1791.64,0.8],[1793.66,0.9],[1794.1,0.75],[1801.5,0.7],[1802.1,0.6],[1802.35,0.35],[1802.78,0.9],[1803.4,1],[1804,1]],
   parO:[[1789,0.05],[1791.64,0.2],[1793.66,0.45],[1794.4,0.7],[1801.5,0.85],[1802.35,0.55],[1802.78,0.8],[1803.2,0.95],[1804,1]],
-  gcl:[[1789,40,-35],[1790.79,40,-50],[1791.1,35,-60],[1791.37,38,-30],[1791.73,30,-55],[1792.26,40,15],[1794.1,30,10],[1799.45,20,5],[1802.1,25,20],[1802.54,5,-50],[1802.78,0,-60],[1804,0,-60]],
+  gcl:[[1789,40,-35],[1790.79,40,-50],[1791.1,35,-60],[1791.37,38,-30],[1791.73,30,-55],[1792.26,40,15],[1794.1,30,10],[1799.45,20,5]],
   pb:[[1789,15,70],[1791.73,10,75],[1792.26,5,45],[1793.66,0,20],[1794.1,-5,10],[1798,-10,5],[1802.1,10,50],[1802.78,10,50],[1803.88,-20,20],[1804,-20,20]],
   events:[
     [1789.6,'Declaration of the Rights of Man (August 1789)'],
@@ -1462,6 +1466,25 @@ var SD={
     [1803.88,'Vertières (November 18, 1803)'],
     [1804.0,'Independence (January 1, 1804): no Elite left to pay a wage']
   ]};
+/* 1802 positions of the gens de couleur libres, coded from sources. m = [M1, M2], s = [S1, S2]. */
+var SD_CODE=[
+  {t:1802.1,when:'February 1802',m:[1,1],s:[1,0],ev:'Officers of color land with Leclerc (Pétion, Rigaud). The 1792 equality law is in force. Napoleon’s secret instructions (October 31, 1801) plan deportation of leaders, but they are not public.',src:[['Secret instructions','http://faculty.webster.edu/corbetre/haiti/history/revolution/secret.htm'],['Pétion','https://en.wikipedia.org/wiki/Alexandre_P%C3%A9tion']]},
+  {t:1802.38,when:'May 1802',m:[1,1],s:[1,-0.5],ev:'Toussaint submits; officers of color still command. The law of May 20, 1802 keeps slavery in the colonies that never applied abolition.',src:[['Law of 20 May 1802','https://en.wikipedia.org/wiki/Law_of_20_May_1802']]},
+  {t:1802.54,when:'July 1802',m:[0.5,0.5],s:[-0.5,-1],ev:'In Guadeloupe, Richepanse restores slavery and reserves the title of citizen for whites (July 16–17), repealing the 1792 equality law there. A July 2 decree bars people of color from entering France. Disarmament breeds the “greatest discontent.”',src:[['Richepanse','https://en.wikipedia.org/wiki/Antoine_Richepanse'],['Decree of 29 March 1815 (history of the 1802 decrees)','https://en.wikipedia.org/wiki/Decree_of_29_March_1815']]},
+  {t:1802.79,when:'October 1802',m:[0,-1],s:[-1,-1],ev:'Pétion and Clervaux leave French service (October 13–14). Leclerc disarms about 1,200 native soldiers; Black and mulatto prisoners are drowned at Le Cap. Leclerc’s orders call for deporting leading officers of color.',src:[['Haiti: Her History and Her Detractors, ch. IX','https://en.wikisource.org/wiki/Haiti:_Her_History_and_Her_Detractors/Part_I:_Chapter_IX'],['French Navy and the expedition','https://ijnh.seahistory.org/the-ugly-duckling-the-french-navy-and-the-saint-domingue-expedition1801-1803/']]}
+];
+function sdCodeW(c){return [40*(c.m[0]+c.m[1])/2,60*(c.s[0]+c.s[1])/2];}
+SD.gcl=SD.gcl.concat(SD_CODE.map(function(c){var w=sdCodeW(c);return [c.t,w[0],w[1]];})).concat([[1804].concat(sdCodeW(SD_CODE[SD_CODE.length-1]))]);
+function renderSDCode(){
+  var t='<tr><th>When</th><th>M1</th><th>M2</th><th>S1</th><th>S2</th><th>ψm</th><th>ψs</th><th>Clock</th><th>Evidence</th></tr>';
+  SD_CODE.forEach(function(c){
+    var w=sdCodeW(c);
+    t+='<tr><td>'+c.when+'</td>'+c.m.concat(c.s).map(function(v){return '<td class="num">'+fmt(v,1)+'</td>';}).join('')+'<td class="num">'+fmt(w[0])+'</td><td class="num">'+fmt(w[1])+'</td><td class="num">'+clock(theta(w[0],w[1]))+'</td><td>'+esc(c.ev)+' '+c.src.map(function(s){return '<a href="'+s[1]+'" target="_blank" rel="noopener">'+esc(s[0])+'</a>';}).join(' · ')+'</td></tr>';
+  });
+  $('sd-code').innerHTML=t;
+  var last=SD_CODE[SD_CODE.length-1],w=sdCodeW(last),eq=[50*(last.m[0]+last.m[1])/2,50*(last.s[0]+last.s[1])/2];
+  $('sd-code-sum').textContent='From February to October 1802 the phasor turns clockwise from '+clock(theta(sdCodeW(SD_CODE[0])[0],sdCodeW(SD_CODE[0])[1]))+' to '+clock(theta(w[0],w[1]))+'. October lands just past 9 o’clock, in Quadrant III, because the order attacked the group (M2 = −1). With M2 = 0 it would sit at exactly 9:00. With equal scales (50 for both) it sits at '+clock(theta(eq[0],eq[1]))+', so the October position changes little with the scale choice. The sources here are encyclopedias, a translated primary text, and an older history; check them against Dubois and Geggus before the book uses them.';
+}
 function sdAt(arr,y){
   if(y<=arr[0][0])return arr[0].slice(1);
   for(var i=0;i<arr.length-1;i++){
@@ -1568,6 +1591,7 @@ shockCheck();
 bruenRender();
 renderPB2();
 renderSDEvents();
+renderSDCode();
 if(S.drive)applyTL();
 buildTable();
 $('i-q3').value=S.q3;$('i-q4').value=S.q4;

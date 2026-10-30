@@ -21,7 +21,7 @@ manuscript does (`:2876`): $+\psi_m$ points down, $+\psi_s$ points right, and θ
 | Sensitive places and transit | Carry access lowered by transit commuting share by race | ACS data; ban coverage coded from sources |
 | Grandfather clauses | q_B and q_O scale O's parity relative to B's | No data yet; both 0 |
 | O arms parity and κ | M = M₀ + κ · O parity − a·ψm − b·ψs | κ = 0 by default |
-| Saint-Domingue, 1789–1804 | Two Buffer phasors (gens de couleur libres, petits blancs); O mobilization and parity grow the τ zone | Dates documented; values illustrative |
+| Saint-Domingue, 1789–1804 | Two Buffer phasors (gens de couleur libres, petits blancs); O mobilization and parity grow the τ zone | Dates documented; 1802 positions of the gens de couleur libres coded from sources; other values illustrative |
 | Decomposition | Shapley split of a change among B, O, F, and parity | Method |
 | Calibration test | Fit M₀, a, b on runtime-log eras before 1966; test on later eras | Targets from the manuscript |
 | Shock-timing check | Do gun restrictions follow shocks? | Repository data |
@@ -34,6 +34,7 @@ manuscript does (`:2876`): $+\psi_m$ points down, $+\psi_s$ points right, and θ
 | `data/states_carry.json` | RAND State Firearm Law Database 6.0 (TL-A243-2-v4, January 2026; laws as of September 1, 2025). Concealed-carry regime shares and assault-weapon-ban shares by state and year, 1979–2025. Population weights: 2024 values derived from `Paper/data/gun_laws_new_england/states.csv`. | `scripts/build_states.py` |
 | `data/transit.json` | Census Bureau ACS 2024 5-year table-based summary files, tables B08105B (Black alone) and B08105H (White alone, not Hispanic): share of workers 16+ who commute by public transportation (line 004 / line 001). | `scripts/build_transit.py` |
 | `data/bruen_test.json` | RAND 6.0: restrictive and permissive state laws in the 1,166 days before and after *Bruen* (June 23, 2022), by state. | `scripts/bruen_test.py` |
+| `data/sd_1802_coding.csv` | The 1802 positions of the gens de couleur libres, coded with a stated rubric (M1 commission, M2 safety of person and property, S1 the 1792 equality law, S2 signals from Paris), with the evidence and sources for each row. Exported from the page. | — |
 | `data/post_bruen_coding.csv` | Coded post-*Bruen* outcomes and transit bans for licensed carry, with a source for each row. Exported from the page's tables. | — |
 
 The page also embeds data copied from the repository: `Paper/data/eq65_68_2a_case_law.csv`,
@@ -87,13 +88,17 @@ byte for byte. `bruen_test.py` uses a fixed seed for its permutation test.
   45. The definitions were set after reading the forced states' laws, so this describes a pattern.
 - **Calibration.** With arms parity on and the default weights, 2 of 4 held-out eras fall inside their
   ranges. The weights were not fitted; tuning them to the held-out eras would void the test.
-- **Saint-Domingue.** In the illustration, the gens de couleur libres cross τ in 1791, return inside τ
-  after the April 1792 decree, and cross again in 1802 without return. The positions are illustrative
-  values, so they show the hypothesis and do not test it.
+- **Saint-Domingue.** The gens de couleur libres cross τ in 1791, return inside τ after the April 1792
+  decree, and cross again in 1802 without return. The 1802 positions are coded from sources: the
+  phasor turns clockwise from 4:46 (February) through 5:19 (May) and 8:12 (July) to 9:37 (October),
+  just past 9 o'clock in Quadrant III, because the colonial order attacked the group (disarmament,
+  drownings at Le Cap). With equal scales the October position is 9:53. The other years remain
+  illustrative, and the 1802 sources (encyclopedias, a translated primary text, an older history)
+  still need checking against Dubois and Geggus.
 
 ## Open items
 
-- Code O's parity and the Buffer phasors for Saint-Domingue from sources.
+- Code O's parity, the petits blancs, and the pre-1802 gens de couleur libres positions from sources.
 - Code the crossing point, approach direction, and outcome for each historical breach.
 - Estimate the g gap and q_O from data (prohibited-person rules, incarceration).
 - Confirm Maryland's SB 1 effective date and transit coverage in California and Hawaii.
