@@ -20,6 +20,7 @@ _SCRIPTS = {
     "YT01": "YT01_what_racism_really_is.md",
     "YT02": "YT02_what_racism_is.md",
     "YT02V2": "YT02_v2_what_racism_is.md",
+    "YT02V2_OV": "YT02_v2_what_racism_is.md",
 }
 if EP_NAME not in _SCRIPTS:
     sys.exit(f"YT_EP must be one of {sorted(_SCRIPTS)}, got {EP_NAME!r}")

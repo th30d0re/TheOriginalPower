@@ -12,3 +12,9 @@ scripts          = "Architecting_the_operation/podcasts"
 outputs          = "outputs"
 omnivoice_python = ".venv-omnivoice/bin/python"
 tail_ms          = 800   # keep the decay of each turn's last word (was clipping "now", "clause")
+
+[youtube]
+shots = "Architecting_the_operation/video/YT02v2_shotlist.md"
+
+[youtube.by_episode]
+YT02v2_ov = "Architecting_the_operation/video/YT02v2_ov_shotlist.md"
