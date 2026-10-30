@@ -60,6 +60,13 @@ CARD_SWAPS = {
     "figma-card:cards/S07-33.json": "figma:g-card-s07-33@s08-33",
     "figma-card:cards/v2/v2-S09-43.json": "figma:g-card-v2-s09-43@s09-43",
 }
+# Timed card exports re-cut with real subscripts (2026-10-30); same beats and length as the old clip.
+FIGMA_SWAPS = {f"figma:{old}": f"figma:g-{old}" for old in (
+    "card-s02-16@s05-16", "card-v2-s06-24@s06-24", "card-s03-17@s06-17", "card-v2-s06-19@s06-19",
+    "card-v2-s06-30@s06-30", "card-s08-16@s09-16", "card-s08-32@s09-32", "card-s08-48@s09-50",
+    "card-v2-s11-17@s11-17", "card-v2-s11-38@s11-38", "card-v2-s13-01@s13-01", "card-s13-09@s14-09",
+    "card-s13-20@s14-16", "card-s13-24@s14-20", "card-s14-05@s15-05",
+)}
 
 
 def match(old_ids, old_texts, new_ids, new_texts):
@@ -116,7 +123,7 @@ def main() -> int:
             stem = Path(render.split(":", 1)[1]).stem.lower()
             if (FIGMA / f"card-{stem}@{primary}.mp4").exists():
                 render = f"figma:card-{stem}@{primary}"  # keep the run's timed export when its id changes
-        return render
+        return FIGMA_SWAPS.get(render, render)
 
     # Group new turns into runs.
     runs: list[dict] = []

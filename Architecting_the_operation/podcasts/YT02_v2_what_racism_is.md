@@ -651,17 +651,17 @@ Orthographic projection collapses a three-dimensional structure onto a flat two-
 <!-- [book Ch 0, lines 762-769] -->
 
 Emmanuel Theodore (40:00)
-Open zoomed tight into the structure so the frame splits fifty-fifty across the horizontal line: a white region on top labeled with the In-group set I, and a black region on the bottom labeled with the Out-group set O. That flat horizontal split is the coarse binary projection, and the vertical command structure is completely hidden.
+Up close, the structure looks like a single horizontal line. White fills the top half, labeled with the In-group set I, and black fills the bottom half, labeled with the Out-group set O. That flat split is the coarse binary projection, and it hides the vertical command structure completely.
 <!-- [book Ch 0, Elite Obscuration and the Orthographic Illusion] -->
 <!-- SHOT: G17 new entry — zoomed into cone, white on top and black on bottom split 50/50 horizontally, labeled I above and O below -->
 
 Emmanuel Theodore (40:10)
-Now pull the camera back. The flat blocks separate into tiers along a three-dimensional cone, and the Elite apex emerges at the top above the intermediate layers that had concealed it.
+From farther back, the flat blocks separate into tiers along a three-dimensional cone, and the Elite apex emerges at the top, above the intermediate layers that had concealed it.
 <!-- [book Ch 0, Fig 0.2] -->
 <!-- SHOT: G17 camera pulls back (no rotation) so flat blocks separate into tiers of the 3D cone -->
 
 Emmanuel Theodore (40:17)
-Move the camera to the Out-group's position inside the base and look straight up. The observer's view fills with white: the underside of the In-group pressing downward.
+An observer standing in the Out-group at the base and looking straight up sees only white: the underside of the In-group pressing downward.
 <!-- [book Ch 0, lines 765-775] -->
 <!-- SHOT: G17 camera moves to Out-group position and looks up: white -->
 
@@ -671,12 +671,12 @@ The book calls that apparent overhead surface the Flat Ceiling. Many people in t
 <!-- BOOK-UPDATE? G18 tex:773-803 -->
 
 Emmanuel Theodore (40:40)
-Now make the exact same camera move looking straight down from the In-group's position. The view fills with black: the racialized Out-group appears below as the sole source of social pressure, disorder, and competition, while the wealth extraction flowing upward stays out of view above the observer's head.
+An observer standing in the In-group and looking straight down sees only black: the racialized Out-group appears below as the sole source of social pressure, disorder, and competition, while the wealth extraction flowing upward stays out of view above the observer's head.
 <!-- [book Ch 0, Elite Obscuration and the Orthographic Illusion] -->
 <!-- SHOT: G17 pan downward with the same camera move looking down: black -->
 
 Emmanuel Theodore (40:54)
-Pull back to the wide view again. The full three-dimensional cone reveals the upper tiers, the marginal In-group, and the Out-group within one connected extraction machine.
+From the wide view, the full three-dimensional cone holds the upper tiers, the marginal In-group, and the Out-group in one connected extraction machine.
 <!-- [book Ch 0, Fig 0.2] -->
 
 Emmanuel Theodore (41:04)
@@ -2766,7 +2766,7 @@ In Tajfel's Bristol experiments, schoolboys were randomly assigned to nominal gr
 <!-- SOURCE LIFT: YT01_what_racism_really_is.md:945-952 -->
 
 Emmanuel Theodore (124:35)
-The Elite developed an epistemic architecture to defend the racial partition against contradictory evidence. It functions as a Bayesian defense inside the host's perception. The unnumbered prior equation defines this cognitive defense mechanism. It describes how incoming sensory evidence combines with the installed racial prior. The equation reads: P sub i of T, given X and pi sub race, is proportional to two multiplied probabilities. It multiplies the probability of X given T by P sub i of T given pi sub race. Excessive precision assigned to the racial prior can dominate the interpretation. The malicious input is the legal and social prior assigned excessive precision by repeated institutional reinforcement. That weighting can dominate the interpretation of incoming sensory input. In plain terms, a heavily reinforced racial expectation can outweigh the evidence in front of the observer.
+The Elite developed an epistemic architecture to defend the racial partition against contradictory evidence. It functions as a Bayesian defense inside the host's perception. Equation two point eight a defines this cognitive defense mechanism. It describes how incoming sensory evidence combines with the installed racial prior. The equation reads: P sub i of T, given X and pi sub race, is proportional to two multiplied probabilities. It multiplies the probability of X given T by P sub i of T given pi sub race. Excessive precision assigned to the racial prior can dominate the interpretation. The malicious input is the legal and social prior assigned excessive precision by repeated institutional reinforcement. That weighting can dominate the interpretation of incoming sensory input. In plain terms, a heavily reinforced racial expectation can outweigh the evidence in front of the observer.
 <!-- TIME: estimate -->
 <!-- SOURCE LIFT: YT01_what_racism_really_is.md:954-967 -->
 
