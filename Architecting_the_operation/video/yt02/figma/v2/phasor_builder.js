@@ -1,4 +1,5 @@
-// Draws one SEG 10 wage-phasor frame from a phasor_specs.json entry, in the style of "wage S10-06".
+return (async () => {
+// Draws one wage-phasor frame from a phasor_specs.json entry, in the style of "wage S10-06".
 // Run through use_figma with "const SPEC = <entry>;" prepended. θ opens from the downward ψ_m axis
 // toward ψ_s; past 90° the arrow rises into Quadrant II (upper-right).
 // Motion: W sits in a rig frame centred on the origin, so ROTATION pivots there; the ψ_m / ψ_s
@@ -57,14 +58,14 @@ const EPS = 0.001, pos = v => Math.max(v, EPS);
 const OX = 640, OY = 575, R = 270, L = 250;
 const G = figma.createFrame(); F.appendChild(G); G.name = "plane"; G.fills = []; G.clipsContent = false; G.resize(1920, 1080);
 const q2 = figma.createRectangle(); G.appendChild(q2); q2.name = "quadrant II"; q2.resize(R - 6, R - 6); q2.x = OX + 3; q2.y = OY - R + 3; q2.fills = [{ type: "SOLID", color: rgb(RED), opacity: 0.12 }]; q2.strokes = [{ type: "SOLID", color: rgb(RED), opacity: 0.5 }]; q2.strokeWeight = 1;
-const q2T = await txt(G, "quadrant II tag", "Quadrant II · θ > 90°", "Label/Mono Small", RED, OX + 24, OY - R + 22, null, 18);
+const q2T = await txt(G, "quadrant II tag", "Quadrant II\nθ > 90°", "Label/Mono Small", RED, OX + 30, OY - R + 22, 170, 18);
 for (const n of [q2, q2T]) kf(n, "OPACITY", [[0, 0], [0.5, 0.45], ...S.map(([t, th]) => [Math.max(t, 0.6), th > 90.5 ? 1 : 0.45])]);
 const h = line(G, "axis horizontal", [[OX - R, OY], [OX + R, OY]], INK, 3, { arrow: true });
 const vD = line(G, "axis vertical down", [[OX, OY - R], [OX, OY + R]], INK, 3, { arrow: true });
 const psis = svg(G, "psi_s label", "w35.psis", 40, STAT); psis.x = OX + R + 14; psis.y = OY - psis.height / 2;
-const psisT = await txt(G, "psi_s tag", "status (+)", "Label/Mono Small", STAT, OX + R + 14 + psis.width + 8, OY - 10);
-const psim = svg(G, "psi_m label", "w35.psim", 40, MAT); psim.x = OX + 14; psim.y = OY + R + 4;
-const psimT = await txt(G, "psi_m tag", "material delivered down (+)", "Label/Mono Small", MAT, OX + 14 + psim.width + 10, OY + R + 12);
+const psisT = await txt(G, "psi_s tag", "psychological status →", "Label/Mono Small", STAT, OX + R + 14 + psis.width + 8, OY - 10);
+const psim = svg(G, "psi_m label", "w35.psim", 40, MAT); psim.x = OX + 14; psim.y = OY + R + 18;
+const psimT = await txt(G, "psi_m tag", "material value delivered down (+)", "Label/Mono Small", MAT, OX + 14 + psim.width + 10, OY + R + 34);
 const ext = line(G, "extraction up", [[OX - 40, OY - 30], [OX - 40, OY - R + 10]], RED, 5, { arrow: true });
 const extT = await txt(G, "extraction tag", "extraction → Elite", "Label/Mono Small", RED, OX - 40 - 210, OY - R + 4, 190); extT.textAlignHorizontal = "RIGHT";
 for (const n of [h, vD, psis, psisT, psim, psimT, ext, extT]) show(n, 0.3);
@@ -114,10 +115,10 @@ pulse(sR.children[0], hiTimes("s"), 10, 20);
 // caption under the plane
 const caps = SPEC.states.filter(s => s.cap);
 for (let i = 0; i < caps.length; i++) {
-  const c = await txt(F, "caption · " + caps[i].cap, caps[i].cap, "Label/Mono Small", STAT, 190, 902, 900, 24);
+  const c = await txt(F, "caption · " + caps[i].cap, caps[i].cap, "Label/Mono Small", STAT, 190, 922, 1100, 24);
   show(c, caps[i].t, caps[i + 1] ? caps[i + 1].t : null);
 }
-const src = await txt(F, "source", SPEC.source, "Source/Citation", C.textDim, 190, 944, 640); src.fontSize = 18;
+const src = await txt(F, "source", SPEC.source, "Source/Citation", C.textDim, 190, 968, 900); src.fontSize = 18;
 
 // ── right column ──
 async function panel(name, y, tag) { const p = figma.createFrame(); F.appendChild(p); p.name = name; p.x = 1180; p.y = y; p.fills = bp(C.s1); p.cornerRadius = 14; p.strokes = bp(C.chart); p.strokeWeight = 1; await p.setEffectStyleIdAsync(ES["Elevation/1 Panel"]); p.resize(550, 60); p.clipsContent = false;
@@ -134,12 +135,12 @@ P1.resize(550, 156);
 ring(P1, esv, hiTimes("eq")); ring(P1, { name: "cos/sin", x: csv.x, y: csv.y, width: snv.x + snv.width - csv.x, height: csv.height }, hiTimes("cs"));
 
 const P2 = await panel("panel phase angle", P1.y + P1.height + 16, "PHASE ANGLE · ILLUSTRATIVE PLACEMENT"); show(P2, 0.5); P2.resize(550, 104);
-const regime = th => th === 0 ? ["pure material", MAT] : th === 90 ? ["pure status · ψ_m = 0", STAT] : th > 90 ? ["Quadrant II · ψ_m < 0", RED] : ["mixed · 0° < θ < 90°", INK];
+const regime = th => th === 0 ? ["pure material", MAT] : th === 90 ? ["pure status\nψ_m = 0", STAT] : th > 90 ? ["Quadrant II\nψ_m < 0", RED] : ["mixed · 0° < θ < 90°", INK];
 const moves = [{ t: 0.5, theta: SPEC.theta0 }, ...SPEC.states.filter(s => s.theta !== null)].filter((s, i, a) => i === 0 || s.theta !== a[i - 1].theta);
 for (let i = 0; i < moves.length; i++) {
   const [rt, rc] = regime(moves[i].theta), off = moves[i + 1] ? moves[i + 1].t : null;
   const a = await txt(P2, "θ = " + moves[i].theta, "θ = " + moves[i].theta + "°", "Body/Default", C.textAccent, 20, 40, 160, 30); show(a, moves[i].t, off);
-  const r = await txt(P2, "regime " + moves[i].theta, rt, "Label/Mono Small", rc, 190, 50, 340, 20); show(r, moves[i].t, off);
+  const r = await txt(P2, "regime " + moves[i].theta, rt, "Label/Mono Small", rc, 190, 42, 340, 20); show(r, moves[i].t, off);
 }
 let y4 = P2.y + P2.height + 16;
 if (SPEC.pins) {
@@ -162,3 +163,4 @@ for (let i = 0; i < ctxs.length; i++) {
 }
 head.setTimelineDuration(head.timelines[0].id, DUR);
 return { id: F.id, x: F.x, y: F.y, samples: S.length, panelBottom: Math.round(bottom), nodes: F.findAll(() => true).length };
+})();

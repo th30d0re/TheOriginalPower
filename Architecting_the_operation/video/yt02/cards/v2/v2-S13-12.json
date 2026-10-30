@@ -1,0 +1,19 @@
+{
+  "kind": "equation",
+  "headline": "Discourse Power Split · Equation 22.1",
+  "number": "Equation 22.1",
+  "latex": "\\hat{S}_{\\mathrm{total}}(f,t) = \\hat{S}_{\\mathrm{class}}(f,t) + \\hat{S}_{\\mathrm{identity}}(f,t)",
+  "terms": [
+    {
+      "latex": "\\hat{S}_{\\mathrm{class}}(f,t)",
+      "gloss": "Economic class signal"
+    },
+    {
+      "latex": "\\hat{S}_{\\mathrm{identity}}(f,t)",
+      "gloss": "Identity-wedge signal"
+    }
+  ],
+  "items": [],
+  "sources": "The Original Power, Ch. 22, Eq. 22.1",
+  "qrUrl": ""
+}

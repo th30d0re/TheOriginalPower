@@ -1,0 +1,23 @@
+{
+  "kind": "equation",
+  "headline": "Alternating Grievance Current · Equation 0.10",
+  "number": "Equation 0.10",
+  "latex": "i_k(t) = \\rho_k A_k \\cos(\\omega t + \\phi_k), \\qquad k = 1, \\ldots, N",
+  "terms": [
+    {
+      "latex": "\\rho_k",
+      "gloss": "Salience weight on social cleavage axis k"
+    },
+    {
+      "latex": "A_k",
+      "gloss": "Amplitude of the grievance current"
+    },
+    {
+      "latex": "\\phi_k",
+      "gloss": "Phase angle added to omega-t"
+    }
+  ],
+  "items": [],
+  "sources": "The Original Power, Ch. 0, Eq. 0.10",
+  "qrUrl": ""
+}

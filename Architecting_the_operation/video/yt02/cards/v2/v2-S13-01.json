@@ -3,8 +3,8 @@
   "headline": "Interference Engine · Φ_load and Spectral Carriers",
   "items": [
     {
-      "title": "Aligned grievance currents",
-      "detail": "0.2π phase gap: i₁(t) and i₂(t) align and sum to a coherent I_E(t) at the Elite node."
+      "title": "0.2π phase gap",
+      "detail": "i₁(t) + i₂(t) → coherent I_E(t) at the Elite node."
     },
     {
       "title": "Constitutional phase jammer",
@@ -27,7 +27,7 @@
       "detail": "12.82 at the 2-year midterm carrier in the 2004–2024 weekly series (Table 22.2)."
     }
   ],
-  "sources": "The Original Power, Ch. 0, Eq. 0.15–0.16; Ch. 5; Ch. 22, Eq. 22.2, Tables 22.1–22.2",
+  "sources": "The Original Power, Ch. 0, Eq. 0.10–0.11; Ch. 5; Ch. 22, Eq. 22.2, Tables 22.1–22.2",
   "qrUrl": "",
   "revealTurns": [
     0,

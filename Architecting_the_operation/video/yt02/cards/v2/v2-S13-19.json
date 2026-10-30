@@ -1,0 +1,48 @@
+{
+  "kind": "table",
+  "headline": "Electoral-Cycle Power Ratios · Table 22.1",
+  "columns": [
+    "Cycle / Check",
+    "Period and Frequency",
+    "Identity / Class Ratio"
+  ],
+  "items": [
+    {
+      "cells": [
+        "Midterm · Nyquist caution",
+        "2 years · 0.5000 cycles/year",
+        "0.58"
+      ]
+    },
+    {
+      "cells": [
+        "Presidential",
+        "4 years · 0.2500 cycles/year",
+        "24.06"
+      ]
+    },
+    {
+      "cells": [
+        "Senate",
+        "6 years · 0.1667 cycles/year",
+        "21.02"
+      ]
+    },
+    {
+      "cells": [
+        "Two-term",
+        "8 years · 0.1250 cycles/year",
+        "12.86"
+      ]
+    },
+    {
+      "cells": [
+        "Parseval · separate consistency check",
+        "Time-domain / frequency-domain energy",
+        "0.9996"
+      ]
+    }
+  ],
+  "sources": "The Original Power, Ch. 22, Table 22.1 and Parseval Consistency",
+  "qrUrl": ""
+}

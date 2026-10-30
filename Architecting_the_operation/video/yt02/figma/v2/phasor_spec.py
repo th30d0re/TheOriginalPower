@@ -1,4 +1,4 @@
-"""Timed specs for the three SEG 10 phasor frames in Figma (phasor_builder.js draws them).
+"""Timed specs for the wage-phasor frames in Figma (phasor_builder.js draws them).
 
     YT_EP=YT02v2 .venv-manimgx/bin/python Architecting_the_operation/video/yt02/figma/v2/phasor_spec.py
 
@@ -46,7 +46,7 @@ CTX = {
     "fascism": ("QUADRANT II · FASCISM THRESHOLD", ["negative material transfer", "+ hyper-inflated psychological wages"], None, None),
     "arms": ("ARMS · A CALIBRATION ANCHOR FOR ψ_m", ["who may carry arms", "who must appear without them", "what object closes an indenture"], None, None),
     "q2dates": ("QUADRANT II · ORDINAL", ["direction and sign change;", "arms statutes supply discrete dates"], None, None),
-    "log3": ("COMPILED RUNTIME LOG 3", ["The status channel becomes an explicit", "system component after 1676."], "ph.log3", None),
+    "log3": ("COMPILED RUNTIME LOG 3", ["Second Amendment arms · material payment", "1705 musket and deputized status · Quadrant I", "Tier 3 illustration near 45°"], "ph.log3", None),
     "codes": ("THE 1705 CODES", ["freedom dues · a musket", "protection from chattel slavery", "authority to police the racial boundary"], None, None),
     "mixed": ("1705 · A MIXED ALLOCATION", ["material privileges plus the formal", "installation of the psychological component"], None, None),
     "log9": ("COMPILED RUNTIME LOG 9", ["The Complex Wage weaponized alongside", "spatial redlining and the Capture Variable"], None, None),
@@ -101,9 +101,11 @@ FRAMES = [
      "source": "The Original Power, Ch. 4; Compiled Runtime Logs 3 and 9 · θ placements are illustrative",
      "states": [
          ("S10-43", "ordinal", None, "ORDINAL DIRECTION · SIGN CHANGE", ["ctx:q2dates"]),
-         ("S10-44", "Bacon's", 90, "1705 · FIRST IMPLEMENTATION", ["pin:0"]),
-         ("S10-45", "Runtime", None, "LOG 3 · W = jψ_s", ["ctx:log3", "hi:eq"]),
-         ("S10-46", "privileges", 72, "1705 · MATERIAL AND LEGAL PRIVILEGES", ["ctx:codes", "hi:m"]),
+         # Book conflict: Paper/The_Original_Power.tex:2939-2941 keeps generic 90° at zero material;
+         # the current Runtime Log 3 at :3262 and joint wage at :5148-5151 support this log-specific 45° illustration.
+         ("S10-44", "Bacon's", 45, "1705 · MUSKET ψ_m PULLS θ DOWN", ["pin:0", "hi:m"]),
+         ("S10-45", "Runtime", 45, "LOG 3 · W = ψ_m + jψ_s", ["ctx:log3", "hi:eq"]),
+         ("S10-46", "privileges", 45, "1705 · MATERIAL AND LEGAL PRIVILEGES", ["ctx:codes", "hi:m"]),
          ("S10-47", "mixed", None, "1705 · MIXED ALLOCATION", ["ctx:mixed"]),
          ("S10-48", "containment", 90, "1894–1965 · CONTAINMENT", ["pin:1", "ctx:log9"]),
          ("S10-49", "material", 84, "PARTITIONED CREDIT + PROTECTION", ["ctx:credit", "hi:m"]),
@@ -115,6 +117,15 @@ FRAMES = [
          ("S10-55", "status", 135, "STATUS REMAINS POSITIVE", ["ctx:q2loss", "hi:s"]),
          ("S10-56", "rotating", 132, "ONE ROTATING CONTRACT", ["ctx:contract", "hi:eq", "pin:all"]),
      ]},
+    {"name": "wage S12-11", "first": "S12-11", "next": "S12-14", "theta0": 45, "eq": True, "cs": True, "pins": False,
+     "headline": "The Wage Phasor · Runtime Instrument",
+     "source": "The Original Power, Ch. 3, Eq. 3.5 and the fascism threshold · θ placements are illustrative",
+     "states": [
+         ("S12-11", "wage", 45, "EQUATION 3.5 · THE WAGE PHASOR", ["ctx:alloc"]),
+         ("S12-12", "Material", 90, "θ = 90° · PURE STATUS", ["ctx:zero", "hi:m", "hi:s"]),
+         ("S12-12", "past", 118, "PAST 90° · QUADRANT II", ["ctx:fascism"]),
+         ("S12-13", "fascism", None, "QUADRANT II · FASCISM THRESHOLD", ["ctx:fascism"]),
+     ]},
 ]
 
 
@@ -123,9 +134,9 @@ def norm(w):
 
 
 def turns():
-    """shot id -> (start seconds, text), from `edit16x9.py turns` for segments 10 and 11."""
+    """shot id -> (start seconds, text), from `edit16x9.py turns` for segments 10–12."""
     out = {}
-    for seg in ("10", "11"):
+    for seg in ("10", "11", "12"):
         txt = subprocess.run([sys.executable, str(EDIT), "turns", seg], capture_output=True, text=True, check=True).stdout
         for m in re.finditer(r"^\s+\[\d+\] (S\d\d-\d\d) \w+ @([\d.]+)s  (.*)$", txt, re.M):
             out[m.group(1)] = (float(m.group(2)), m.group(3).strip())

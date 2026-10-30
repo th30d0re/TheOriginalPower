@@ -1,0 +1,23 @@
+{
+  "kind": "equation",
+  "headline": "Destructive Interference · Figure 0.6",
+  "number": "180° antiphase",
+  "latex": "\\Delta\\phi = \\pi \\;\\Rightarrow\\; i_k(t) = -i_j(t) \\;\\Rightarrow\\; i_j(t) + i_k(t) \\approx 0",
+  "terms": [
+    {
+      "latex": "\\Delta\\phi = \\pi",
+      "gloss": "The two grievance currents are 180 degrees out of phase"
+    },
+    {
+      "latex": "i_j(t),\\; i_k(t)",
+      "gloss": "Peaks on one current align with troughs on the other"
+    },
+    {
+      "latex": "i_j(t) + i_k(t) \\approx 0",
+      "gloss": "The vector sum collapses near zero"
+    }
+  ],
+  "items": [],
+  "sources": "The Original Power, Ch. 0, Fig. 0.6; yt02/interference_engine.py",
+  "qrUrl": ""
+}

@@ -3,8 +3,20 @@
   "headline": "Portuguese Compile Sequence · 1441–1486",
   "items": [
     {
-      "title": "1441–1453 · Extraction Before Ideology",
-      "detail": "Raid and Lagos syndicate precede Dum Diversas and Zurara's commissioned chronicle."
+      "title": "1441 · Rio d'Ouro raid",
+      "detail": "First kidnapping raid on the West African coast."
+    },
+    {
+      "title": "1444 · Syndicate and Lagos",
+      "detail": "A chartered syndicate forms and the Lagos auction sells captives."
+    },
+    {
+      "title": "1452 · Dum Diversas",
+      "detail": "The papal bull authorizes conquest and perpetual servitude."
+    },
+    {
+      "title": "1453 · Zurara completes",
+      "detail": "The commissioned chronicle finishes the racial ideology."
     },
     {
       "title": "Order of Christ Patronage",
@@ -16,5 +28,11 @@
     }
   ],
   "sources": "The Original Power, Ch. 2, §2.2 & Ch. 3",
-  "qrUrl": ""
+  "qrUrl": "",
+  "span": {
+    "from": 0,
+    "to": 3,
+    "at": 4,
+    "label": "1441–1453 · Extraction before ideology"
+  }
 }

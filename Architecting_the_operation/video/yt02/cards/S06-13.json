@@ -44,5 +44,10 @@
     }
   ],
   "sources": "The Original Power, Empirical Methodology; Ch. 2–4",
-  "qrUrl": ""
+  "qrUrl": "",
+  "colWeights": [
+    0.16,
+    0.31,
+    0.53
+  ]
 }

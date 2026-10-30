@@ -1,0 +1,48 @@
+{
+  "kind": "table",
+  "headline": "Capital · Spoken Runtime Conditions",
+  "columns": [
+    "Order",
+    "Condition"
+  ],
+  "items": [
+    {
+      "cells": [
+        "1",
+        "STAGNANT"
+      ]
+    },
+    {
+      "cells": [
+        "2",
+        "EXPANDING"
+      ]
+    },
+    {
+      "cells": [
+        "3",
+        "RESTRUCTURING"
+      ]
+    },
+    {
+      "cells": [
+        "4",
+        "AT RISK"
+      ]
+    },
+    {
+      "cells": [
+        "5",
+        "THREATENED"
+      ]
+    },
+    {
+      "cells": [
+        "6",
+        "PEAK"
+      ]
+    }
+  ],
+  "sources": "YT02v2 spoken block 442; The Original Power, Compiled Runtime Logs",
+  "qrUrl": ""
+}

@@ -1,0 +1,10 @@
+{
+  "kind": "equation",
+  "headline": "Circular Phase Dispersion · Equation 22.2",
+  "number": "Equation 22.2",
+  "latex": "\\Phi_{\\mathrm{load}}(t) = 1 - \\left| \\frac{1}{N} \\sum_{j=1}^{N} e^{i\\phi_j(t)} \\right|",
+  "terms": [],
+  "items": [],
+  "sources": "The Original Power, Ch. 22, Eq. 22.2",
+  "qrUrl": ""
+}

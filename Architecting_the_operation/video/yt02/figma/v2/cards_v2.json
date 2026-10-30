@@ -644,21 +644,14 @@
     "duration": 45.29
   },
   {
-    "kind": "compare",
-    "headline": "Host Wetware vs. Psycho-Legal Software",
-    "items": [
-      {
-        "title": "Psycho-Legal Social Software",
-        "detail": "Institutional code compiling racial categories into property relations, statutes, and state coercion."
-      },
-      {
-        "title": "Biological Host Wetware",
-        "detail": "Universal human pattern-compression circuitry recruited and weaponized by the extraction regime."
-      }
-    ],
+    "kind": "quote",
+    "headline": "Where the Established Literature Ends",
+    "quote": "This is where the established literature ends. Bias, prejudice, and discrimination name interpersonal operations with standard definitions from experimental psychology.",
+    "attribution": "The Original Power · Preface and §2.2",
+    "items": [],
     "sources": "The Original Power, Preface & Ch. 2, §2.2",
     "qrUrl": "",
-    "id": "S01-42",
+    "id": "S01-47",
     "frame": "card v2 S01-47",
     "primary": "S01-47",
     "beats": [
@@ -986,25 +979,23 @@
     "duration": 49.62
   },
   {
-    "kind": "equation",
+    "kind": "compare",
     "headline": "Conventional Causal Model · Equation 2.5",
     "number": "Equation 2.5",
-    "latex": "\\mathrm{Individual\\ Prejudice} \\longrightarrow \\mathrm{Discriminatory\\ Actions} \\longrightarrow \\mathrm{Systemic\\ Outcomes}",
-    "terms": [
+    "items": [
       {
-        "latex": "\\mathrm{Individual\\ Prejudice}",
-        "gloss": "Private racial antipathy treated as the primary root cause"
+        "title": "Individual Prejudice",
+        "detail": "Private racial antipathy treated as the primary root cause"
       },
       {
-        "latex": "\\mathrm{Discriminatory\\ Actions}",
-        "gloss": "Isolated interpersonal acts aggregating across transactions"
+        "title": "→ Discriminatory Actions",
+        "detail": "Isolated interpersonal acts aggregating across transactions"
       },
       {
-        "latex": "\\mathrm{Systemic\\ Outcomes}",
-        "gloss": "Macro-level disparities treated as a downstream statistical sum"
+        "title": "→ Systemic Outcomes",
+        "detail": "Macro-level disparities treated as a downstream statistical sum"
       }
     ],
-    "items": [],
     "sources": "The Original Power, Ch. 2, §2.2, Eq. 2.5 (Confidence Tier 3)",
     "qrUrl": "",
     "id": "S05-06",
@@ -3554,8 +3545,8 @@
     "headline": "Interference Engine · Φ_load and Spectral Carriers",
     "items": [
       {
-        "title": "Aligned grievance currents",
-        "detail": "0.2π phase gap: i₁(t) and i₂(t) align and sum to a coherent I_E(t) at the Elite node."
+        "title": "0.2π phase gap",
+        "detail": "i₁(t) + i₂(t) → coherent I_E(t) at the Elite node."
       },
       {
         "title": "Constitutional phase jammer",
@@ -3578,7 +3569,7 @@
         "detail": "12.82 at the 2-year midterm carrier in the 2004–2024 weekly series (Table 22.2)."
       }
     ],
-    "sources": "The Original Power, Ch. 0, Eq. 0.15–0.16; Ch. 5; Ch. 22, Eq. 22.2, Tables 22.1–22.2",
+    "sources": "The Original Power, Ch. 0, Eq. 0.10–0.11; Ch. 5; Ch. 22, Eq. 22.2, Tables 22.1–22.2",
     "qrUrl": "",
     "id": "v2-S13-01",
     "frame": "card v2 S13-01",
@@ -3748,7 +3739,7 @@
     "headline": "Refutation Standard 3 · Reverse Racism Vector Audit",
     "columns": [
       "Analytical Dimension",
-      "Interpersonal Act (Out-Group → In-Group)",
+      "Out-Group → In-Group",
       "Systemic Vector Requirement"
     ],
     "items": [

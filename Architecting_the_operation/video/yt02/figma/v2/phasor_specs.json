@@ -409,16 +409,17 @@
    },
    {
     "t": 14.73,
-    "theta": 90,
-    "cap": "1705 · FIRST IMPLEMENTATION",
+    "theta": 45,
+    "cap": "1705 · MUSKET ψ_m PULLS θ DOWN",
     "x": [
-     "pin:0"
+     "pin:0",
+     "hi:m"
     ]
    },
    {
     "t": 21.25,
-    "theta": null,
-    "cap": "LOG 3 · W = jψ_s",
+    "theta": 45,
+    "cap": "LOG 3 · W = ψ_m + jψ_s",
     "x": [
      "ctx:log3",
      "hi:eq"
@@ -426,8 +427,9 @@
     "ctx": {
      "tag": "COMPILED RUNTIME LOG 3",
      "body": [
-      "The status channel becomes an explicit",
-      "system component after 1676."
+      "Second Amendment arms · material payment",
+      "1705 musket and deputized status · Quadrant I",
+      "Tier 3 illustration near 45°"
      ],
      "svg": "ph.log3",
      "lines": null
@@ -435,7 +437,7 @@
    },
    {
     "t": 38.42,
-    "theta": 72,
+    "theta": 45,
     "cap": "1705 · MATERIAL AND LEGAL PRIVILEGES",
     "x": [
      "ctx:codes",
@@ -626,6 +628,87 @@
      "body": [
       "Material concessions recede, status expands,",
       "and extraction crosses into the Buffer Class."
+     ],
+     "svg": null,
+     "lines": null
+    }
+   }
+  ]
+ },
+ {
+  "name": "wage S12-11",
+  "theta0": 45,
+  "eq": true,
+  "cs": true,
+  "pins": false,
+  "headline": "The Wage Phasor · Runtime Instrument",
+  "source": "The Original Power, Ch. 3, Eq. 3.5 and the fascism threshold · θ placements are illustrative",
+  "duration": 30.96,
+  "states": [
+   {
+    "t": 0.12,
+    "theta": 45,
+    "cap": "EQUATION 3.5 · THE WAGE PHASOR",
+    "x": [
+     "ctx:alloc"
+    ],
+    "ctx": {
+     "tag": "SUPPRESSION ALLOCATION",
+     "body": [
+      "ψ_m · the material wage",
+      "ψ_s · the psychological or status wage"
+     ],
+     "svg": null,
+     "lines": null
+    }
+   },
+   {
+    "t": 8.86,
+    "theta": 90,
+    "cap": "θ = 90° · PURE STATUS",
+    "x": [
+     "ctx:zero",
+     "hi:m",
+     "hi:s"
+    ],
+    "ctx": {
+     "tag": "PURE STATUS · θ = 90°",
+     "body": [
+      "ψ_s carries the full wage magnitude."
+     ],
+     "svg": "ph.zero",
+     "lines": null
+    }
+   },
+   {
+    "t": 19.36,
+    "theta": 118,
+    "cap": "PAST 90° · QUADRANT II",
+    "x": [
+     "ctx:fascism"
+    ],
+    "ctx": {
+     "tag": "QUADRANT II · FASCISM THRESHOLD",
+     "body": [
+      "negative material transfer",
+      "+ hyper-inflated psychological wages"
+     ],
+     "svg": null,
+     "lines": null
+    }
+   },
+   {
+    "t": 22.08,
+    "theta": null,
+    "cap": "QUADRANT II · FASCISM THRESHOLD",
+    "x": [
+     "ctx:fascism"
+    ],
+    "ctx": {
+     "tag": "QUADRANT II · FASCISM THRESHOLD",
+     "body": [
+      "negative material transfer",
+      "+ hyper-inflated psychological wages"
      ],
      "svg": null,
      "lines": null
