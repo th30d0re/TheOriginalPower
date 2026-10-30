@@ -1,0 +1,1576 @@
+<title>Complex Wage Plane</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Patrick+Hand&display=swap" rel="stylesheet">
+<style>
+/* Layout concept: the sketch redrawn as a sticky square plane on the left, instrument panels on the right.
+   Palette: one dark field (#0D1B2A) behind every frame, bronze (#8A6A45) for chart grids and secondary
+   line art, light ink, and bright accents for W, the tau zone, and the carry regimes. One look for every viewer. */
+:root{
+  --paper:#0D1B2A; --plane:#0D1B2A; --panel:#132538; --ink:#ECE7DC; --ink-2:#A9B6C4;
+  --rule:#8A6A45; --grid:#8A6A45; --label-sm:#B8956A;
+  --red:#FF7A6B; --blue:#7FAEFF; --green:#62CC9E; --yellow:#F0C940;
+  --danger:#FF7A6B; --safe:#62CC9E;
+  --tau:#ECE7DC; --tau-in:#6F8AA6;
+  --accent:#E08A3C; --accent-hi:#F7C38E;
+  --rg0:#9AA3AD; --rg1:#E8B04A; --rg2:#4CC2C2; --rg3:#B892F2;
+  --sans:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,Menlo,Consolas,monospace;
+  --hand:'Patrick Hand','Segoe Print','Bradley Hand',cursive;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{
+  background:var(--paper); color:var(--ink); font:15px/1.5 var(--sans);
+  padding-block:20px 48px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+}
+.app{max-width:1260px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);gap:8px 32px;align-items:start}
+header{grid-column:1/-1;padding-bottom:6px}
+h1{font:600 24px/1.2 var(--sans);margin:0 0 4px;letter-spacing:-.01em;text-wrap:balance}
+.lede{margin:0;color:var(--ink-2);max-width:70ch}
+.plane-card{position:sticky;top:calc(12px + env(safe-area-inset-top,0px));min-width:0}
+#plane{display:block;width:100%;height:auto;touch-action:none;cursor:crosshair;border-radius:4px}
+#plane:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+.caption{margin:8px 0 0;font-size:13px;color:var(--ink-2)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 18px;margin:10px 0 0;padding:0;list-style:none;font-size:13px;color:var(--ink-2)}
+.legend li{display:flex;align-items:center;gap:7px}
+.sw{display:inline-block;width:18px;height:12px;flex:none}
+.sw.hatch{background:repeating-linear-gradient(45deg,var(--tau) 0 1.5px,transparent 1.5px 5px);border:1px solid var(--tau)}
+.sw.vec{height:3px;background:var(--accent);box-shadow:0 0 6px var(--accent)}
+.sw.dia{width:11px;height:11px;background:var(--red);transform:rotate(45deg)}
+.sw.dot{width:11px;height:11px;border-radius:50%;background:var(--green)}
+.sw.ring{height:4px;background:linear-gradient(90deg,var(--tau-in) 0 55%,var(--tau) 55%)}
+.controls{min-width:0}
+.panel{border-top:1px solid var(--rule);padding-top:14px;margin-top:20px}
+.panel:first-child{border-top:0;margin-top:0;padding-top:0}
+h2{font:600 12px/1.3 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);margin:0 0 12px}
+.row{display:grid;grid-template-columns:104px minmax(0,1fr) 62px;gap:10px;align-items:center;margin-bottom:8px}
+.row label{font-size:14px}
+.hint{color:var(--ink-2);font-size:12px}
+.row output{font:500 13px var(--mono);text-align:right;font-variant-numeric:tabular-nums}
+input[type=range]{width:100%;accent-color:var(--blue);min-width:0}
+input[type=range]:focus-visible,input[type=checkbox]:focus-visible,input[type=text]:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+dl.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 18px;margin:14px 0 12px}
+dl.stats div{min-width:0}
+dt{font-size:12px;color:var(--ink-2)}
+dd{margin:0;font:500 15px/1.35 var(--mono);font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.status{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin-bottom:8px}
+.chip{display:inline-flex;align-items:center;padding:3px 10px;border-radius:99px;border:1px solid currentColor;font:500 12.5px var(--sans)}
+.chip.safe{color:var(--tau-in)}
+.chip.danger{color:var(--tau)}
+.mono{font-family:var(--mono);font-size:13px}
+.gauge{position:relative;margin-top:22px;height:10px;background:var(--panel);border:1px solid var(--rule);border-radius:2px}
+#gfill{position:absolute;inset:0 auto 0 0;background:var(--tau-in);opacity:.85}
+#gfill.danger{background:var(--tau)}
+#gtau{position:absolute;top:-5px;bottom:-5px;width:2px;background:var(--ink)}
+#gtau::after{content:"τ";position:absolute;top:-17px;left:-4px;font:500 12px var(--mono);color:var(--ink)}
+.gscale{display:flex;justify-content:space-between;font:400 11px var(--mono);color:var(--ink-2);margin-top:3px}
+.note{margin:12px 0 0;font-size:14px}
+.note.muted{color:var(--ink-2);font-size:13px}
+.btns{display:flex;flex-wrap:wrap;gap:8px}
+.btn{font:500 13px var(--sans);padding:7px 11px;border:1px solid var(--rule);background:var(--panel);color:var(--ink);border-radius:4px;cursor:pointer}
+.btn:hover{border-color:var(--ink)}
+.btn:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.btn.go{border-color:var(--blue);color:var(--blue)}
+.checks{display:flex;flex-wrap:wrap;gap:6px 18px;margin:12px 0 4px;font-size:14px}
+.checks label{display:flex;align-items:center;gap:6px}
+.formula{font:400 13px/1.5 var(--mono);background:var(--panel);border:1px solid var(--rule);border-radius:4px;padding:8px 10px;margin:0 0 12px;overflow-x:auto}
+.names{display:grid;grid-template-columns:104px minmax(0,1fr);gap:8px 10px;align-items:center}
+input[type=text]{font:400 14px var(--sans);padding:6px 8px;border:1px solid var(--rule);border-radius:4px;background:var(--plane);color:var(--ink);min-width:0;width:100%}
+.src{font-size:13px;color:var(--ink-2)}
+.src p{margin:0 0 8px}
+sub{font-size:.72em;line-height:0}
+.fw-head,.fw-row{display:grid;grid-template-columns:62px minmax(0,1fr) 68px 68px 32px;gap:6px;align-items:center}
+.fw-head{font-size:12px;color:var(--ink-2);margin:12px 0 4px}
+.fw-row{margin-bottom:6px}
+.fw-row input{font:400 13px var(--sans);padding:5px 6px;border:1px solid var(--rule);border-radius:4px;background:var(--plane);color:var(--ink);min-width:0;width:100%}
+.fw-row input[type=number]{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.fw-row input:focus-visible{outline:2px solid var(--blue);outline-offset:1px}
+.fw-row .x{padding:4px 0;width:32px;text-align:center}
+.fw-row .x:disabled{opacity:.35;cursor:not-allowed}
+#tl-chart{display:block;width:100%;height:auto;touch-action:none;cursor:ew-resize;margin:12px 0 4px}
+.tl-read{font:400 13px/1.5 var(--mono);margin:0 0 12px;overflow-wrap:anywhere}
+.sub{font:600 13px/1.3 var(--sans);margin:18px 0 8px}
+.tablewrap{overflow-x:auto;margin:10px 0 0}
+table.data{border-collapse:collapse;width:100%;font:400 12.5px/1.4 var(--mono);font-variant-numeric:tabular-nums}
+table.data th{font:500 11.5px var(--sans);color:var(--ink-2);text-align:left;padding:4px 6px;border-bottom:1px solid var(--rule);white-space:nowrap}
+table.data td{padding:4px 6px;border-bottom:1px solid var(--grid);vertical-align:top}
+table.data td.num{text-align:right;white-space:nowrap}
+table.data a{color:var(--blue)}
+.ok{color:var(--safe)} .bad{color:var(--danger)}
+.accent{fill:var(--accent)} .tin{color:var(--tau-in)} .tout{color:var(--tau)} .tau{fill:var(--tau)}
+.names input[type=number]{font:400 14px var(--mono);padding:6px 8px;border:1px solid var(--rule);border-radius:4px;background:var(--plane);color:var(--ink);min-width:0;width:100%}
+.names input[type=number]:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.names select{font:400 14px var(--sans);padding:6px 8px;border:1px solid var(--rule);border-radius:4px;background:var(--plane);color:var(--ink);min-width:0;width:100%}
+.names select:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+#reg-chart{display:block;width:100%;height:auto;margin:12px 0 4px}
+.states-box summary{cursor:pointer;font:500 13.5px var(--sans);margin:4px 0 6px}
+.states-box summary:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.sw.r0{background:var(--rg0)} .sw.r1{background:var(--rg1)} .sw.r2{background:var(--rg2)} .sw.r3{background:var(--rg3)}
+.sw.dash{height:0;border-top:2px dashed var(--rule)}
+/* SVG text */
+svg text{font-family:var(--sans)}
+.t-hand{font-family:var(--hand)}
+.t-mono{font-family:var(--mono)}
+.ink{fill:var(--rule)} .muted{fill:var(--rule)}
+svg text:is([font-size="10"],[font-size="11"],[font-size="12"],[font-size="13"],[font-size="14"],[font-size="15"],[font-size="16"]):is(.ink,.muted){fill:var(--label-sm)} .red{fill:var(--red)} .blue{fill:var(--blue)} .green{fill:var(--green)}
+.halo{paint-order:stroke;stroke:var(--plane);stroke-width:4px;stroke-linejoin:round}
+@media (max-width:920px){
+  .app{grid-template-columns:minmax(0,1fr)}
+  .plane-card{position:static}
+  .row{grid-template-columns:92px minmax(0,1fr) 58px}
+}
+</style>
+
+<div class="app">
+  <header>
+    <h1>Complex Wage Plane</h1>
+    <p class="lede">W = ψ<sub>m</sub> + jψ<sub>s</sub>, drawn as the sketch draws it. Down is +ψ<sub>m</sub>. Right is +ψ<sub>s</sub>. The angle θ starts at 6 o'clock and grows counterclockwise.</p>
+  </header>
+
+  <section class="plane-card" aria-label="Wage plane">
+    <svg id="plane" viewBox="0 0 800 830" tabindex="0" role="application" aria-label="Wage plane. Use the arrow keys to move the wage vector W.">
+      <defs>
+        <pattern id="hatch" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+          <line x1="0" y1="0" x2="0" y2="10" style="stroke:var(--tau);stroke-width:1.5;opacity:.22"/>
+        </pattern>
+        <marker id="arr-ink" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="14" markerHeight="14" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L12,6 L0,12 z" style="fill:var(--rule)"/></marker>
+        <marker id="arr-blue" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="18" markerHeight="18" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L12,6 L0,12 z" style="fill:var(--blue)"/></marker>
+        <marker id="arr-acc" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="19" markerHeight="19" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L12,6 L0,12 z" style="fill:var(--accent)"/></marker>
+        <filter id="w3d" filterUnits="userSpaceOnUse" x="0" y="0" width="800" height="830" color-interpolation-filters="sRGB">
+          <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="sb"/>
+          <feOffset in="sb" dx="3" dy="5" result="so"/>
+          <feFlood flood-color="#000000" flood-opacity="0.6"/>
+          <feComposite in2="so" operator="in" result="shadow"/>
+          <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="gb"/>
+          <feColorMatrix in="gb" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.75 0" result="glow"/>
+          <feMerge><feMergeNode in="shadow"/><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+        <marker id="arr-vio" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="17" markerHeight="17" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L12,6 L0,12 z" style="fill:var(--rg3)"/></marker>
+        <marker id="arr-red" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="14" markerHeight="14" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L12,6 L0,12 z" style="fill:var(--red)"/></marker>
+        <marker id="arr-green" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="14" markerHeight="14" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L12,6 L0,12 z" style="fill:var(--green)"/></marker>
+      </defs>
+      <g id="g-back"></g>
+      <g id="g-zone"></g>
+      <g id="g-front"></g>
+      <g id="g-dyn"></g>
+    </svg>
+    <p class="caption">Click or drag in the plane to move W. The arrow keys also work. Hold Shift for larger steps.</p>
+    <ul class="legend">
+      <li><span class="sw hatch"></span>τ zone: M above τ</li>
+      <li><span class="sw vec"></span>W</li>
+      <li><span class="sw ring"></span>Arc at the current |W|</li>
+      <li><span class="sw dia"></span>Elite optimum</li>
+      <li><span class="sw dot"></span>6 o'clock ideal</li>
+    </ul>
+  </section>
+
+  <section class="controls" aria-label="Controls">
+    <div class="panel">
+      <h2>Wage vector</h2>
+      <div class="row"><label for="s-psim">ψ<sub>m</sub> <span class="hint">material</span></label><input id="s-psim" type="range" min="-100" max="100" step="1"><output id="o-psim" for="s-psim"></output></div>
+      <div class="row"><label for="s-psis">ψ<sub>s</sub> <span class="hint">status</span></label><input id="s-psis" type="range" min="-100" max="100" step="1"><output id="o-psis" for="s-psis"></output></div>
+      <div class="row"><label for="s-theta">θ <span class="hint">keeps |W|</span></label><input id="s-theta" type="range" min="-180" max="180" step="1"><output id="o-theta" for="s-theta"></output></div>
+
+      <dl class="stats">
+        <div><dt>Angle θ</dt><dd id="r-theta"></dd></div>
+        <div><dt>Size |W|</dt><dd id="r-mag"></dd></div>
+        <div><dt>Clock position</dt><dd id="r-clock"></dd></div>
+        <div><dt>Quadrant</dt><dd id="r-quad"></dd></div>
+        <div><dt>Class-coherence risk M</dt><dd id="r-M"></dd></div>
+        <div><dt>Margin to τ</dt><dd id="r-margin"></dd></div>
+        <div><dt>Material flow</dt><dd id="r-flow"></dd></div>
+        <div><dt>Safest angle at any |W|</dt><dd id="r-safest"></dd></div>
+      </dl>
+
+      <div class="status"><span id="chip" class="chip safe">Inside the τ limit</span><span id="mtext" class="mono"></span></div>
+      <div class="gauge" id="gauge" role="img" aria-label="Gauge of M against τ"><div id="gfill"></div><div id="gtau"></div></div>
+      <div class="gscale"><span>0</span><span>M</span><span>150</span></div>
+
+      <p class="note" id="regime"></p>
+      <p class="note muted" id="ring-text"></p>
+    </div>
+
+    <div class="panel">
+      <h2>Firearms timeline <span class="hint" style="text-transform:none;letter-spacing:0">(proposal)</span></h2>
+      <p class="note" style="margin-top:0">Two indices drive W. <strong>B</strong> is the Buffer's access to militia-grade arms. <strong>O</strong> is the Out-group's access. Each runs from 0 (banned) to 1 (open). The class of arms is the musket in 1705 and the AR-15 class today.</p>
+      <p class="formula">ψ<sub>m</sub> = k<sub>m</sub> · B / F<sup>γ</sup><br>ψ<sub>s</sub> = k<sub>s</sub> · (B − O) / F<sup>γ</sup></p>
+      <p class="note muted" style="margin-top:0">ψ<sub>m</sub> is the material value of the Buffer's own access. ψ<sub>s</sub> is the status premium. It shrinks as O gains the access that B has.</p>
+      <div class="row"><label for="s-year">Year</label><input id="s-year" type="range" min="1705" max="2026" step="1"><output id="o-year" for="s-year"></output></div>
+      <div class="btns"><button class="btn go" type="button" id="b-play">Play</button></div>
+      <svg id="tl-chart" viewBox="0 0 460 200" role="img" aria-label="Phasor angle by year. Drag to move through the years."></svg>
+      <p class="tl-read" id="tl-read" aria-live="off"></p>
+      <div class="row"><label for="s-km">k<sub>m</sub> <span class="hint">material</span></label><input id="s-km" type="range" min="0" max="100" step="1"><output id="o-km" for="s-km"></output></div>
+      <div class="row"><label for="s-ks">k<sub>s</sub> <span class="hint">status</span></label><input id="s-ks" type="range" min="0" max="100" step="1"><output id="o-ks" for="s-ks"></output></div>
+      <div class="row"><label for="s-gamma">γ <span class="hint">force weight</span></label><input id="s-gamma" type="range" min="0" max="1" step="0.05"><output id="o-gamma" for="s-gamma"></output></div>
+      <p class="note muted" style="margin-top:0">F is the Elite's enforcement capacity: the U.S. incarceration rate relative to 1980 (eq63_mass_incarceration.csv). The repository has no series before 1980, so F = 1 there. Both wages are divided by F<sup>γ</sup>. γ = 0 turns F off.</p>
+      <div class="checks">
+        <label><input type="checkbox" id="c-drive"> Timeline drives W</label>
+        <label><input type="checkbox" id="c-path"> Show path</label>
+        <label><input type="checkbox" id="c-step"> Step between events</label>
+      </div>
+      <div class="fw-head"><span>Year</span><span>Event</span><span title="Buffer access">B</span><span title="Out-group access">O</span><span></span></div>
+      <div id="fw-rows"></div>
+      <div class="btns" style="margin-top:10px">
+        <button class="btn" type="button" id="b-fw-add">Add event</button>
+        <button class="btn" type="button" id="b-fw-reset">Reset to placeholders</button>
+        <button class="btn" type="button" id="b-fw-ms">Load manuscript events</button>
+        <button class="btn" type="button" id="b-fw-undo" disabled>Undo table change</button>
+      </div>
+      <p class="note muted">Load manuscript events: the rows from 1911 to 2024 come from eq65_68_2a_case_law.csv. Each restriction moves an index by 0.05, or 0.025 for a state law. A law aimed at O lowers O. It also lowers B by half as much if its scope later reached the Buffer. A law aimed at the Buffer lowers B and O together. A ruling that expands rights raises them. The rows before 1911 are placeholders tied to events in the manuscript.</p>
+      <p class="note muted">The seed values for B and O are my placeholders, not data. The events come from the public record and need citations before the book uses them. B and O should measure effective access, not only the written law.</p>
+    </div>
+
+    <div class="panel">
+      <h2>Arms parity <span class="hint" style="text-transform:none;letter-spacing:0">(proposal)</span></h2>
+      <p class="note" style="margin-top:0">Parity is lawful civilian access to the state's standard infantry arm. When parity drives the material wage, ψ<sub>m</sub> measures the promise "here are the weapons that let you stop us."</p>
+      <div class="checks"><label><input type="checkbox" id="c-parity"> Material wage = arms parity</label></div>
+      <p class="formula">Parity = P<sub>fed</sub>(t) · (1 − h · ban)<br>ψ<sub>m</sub> = k<sub>m</sub> · Parity / F<sup>γ</sup></p>
+      <div class="row"><label for="s-pNFA">NFA level <span class="hint">1934–1985</span></label><input id="s-pNFA" type="range" min="0" max="1" step="0.05"><output id="o-pNFA" for="s-pNFA"></output></div>
+      <div class="row"><label for="s-pHughes">Hughes level <span class="hint">from 1986</span></label><input id="s-pHughes" type="range" min="0" max="1" step="0.05"><output id="o-pHughes" for="s-pHughes"></output></div>
+      <div class="row"><label for="s-kappa">κ <span class="hint">O parity in M</span></label><input id="s-kappa" type="range" min="0" max="60" step="1"><output id="o-kappa" for="s-kappa"></output></div>
+      <p class="note muted" style="margin-top:0">Blue: the Buffer's parity. Teal, dashed: O's parity, which is O's access times the same federal level and ban term (with q<sub>O</sub> for grandfathered arms). With κ above 0, O's parity raises M: M = M₀ + κ · O parity − a·ψ<sub>m</sub> − b·ψ<sub>s</sub>. κ is 0 by default, so earlier results do not change.</p>
+      <svg id="par-chart" viewBox="0 0 460 150" role="img" aria-label="Arms parity by year"></svg>
+      <p class="tl-read" id="par-read"></p>
+      <p class="note muted">P<sub>fed</sub> is 1 before the National Firearms Act (1934). From 1934, automatic arms need registration and a $200 tax that was never indexed (about $4,700 in 2024 dollars). From 1986, the Hughes Amendment closes new automatic arms to civilians. The ban term uses the federal assault-weapon ban (1994–2004) and, from 1979, the RAND state bans; h is the ban depth from the state panel. The two levels are ordinal proposals (Tier 3). When parity is on, B and O use carry access only (w = 1), so a ban does not count twice.</p>
+    </div>
+
+    <div class="panel">
+      <h2>State carry laws <span class="hint" style="text-transform:none;letter-spacing:0">(RAND, 1979–2025)</span></h2>
+      <p class="note" style="margin-top:0">From 1979, B and O come from the RAND State Firearm Law Database 6.0 (laws as of September 1, 2025). Each state has a concealed-carry regime and can have an assault-weapon ban. Before 1979, the table above still drives W.</p>
+      <div class="checks">
+        <label><input type="checkbox" id="c-rand"> Use RAND data from 1979</label>
+        <label><input type="checkbox" id="c-states"> Show states on the plane</label>
+      </div>
+      <div class="names"><label for="sel-scope">Scope</label><select id="sel-scope"></select></div>
+      <svg id="reg-chart" viewBox="0 0 460 170" role="img" aria-label="Share of the U.S. population by concealed-carry regime, 1979 to 2025"></svg>
+      <ul class="legend">
+        <li><span class="sw r0"></span>Prohibited</li>
+        <li><span class="sw r1"></span>May issue</li>
+        <li><span class="sw r2"></span>Shall issue</li>
+        <li><span class="sw r3"></span>Permitless</li>
+        <li><span class="sw dash"></span>Under any assault-weapon ban</li>
+      </ul>
+      <p class="tl-read" id="rand-read" style="margin-top:10px"></p>
+      <details class="states-box"><summary>Each state's wage in the selected year</summary><div class="tablewrap"><table class="data" id="state-table"></table></div></details>
+      <p class="formula">C = Σ regime score × share of the year<br>A = 1 − h × ban<br>B = w · C + (1 − w) · A<br>O = (w · C<sub>O</sub> + (1 − w) · A) · (1 − g)<br>C<sub>O</sub> multiplies the may-issue score by δ</p>
+      <div class="row"><label for="s-wc">w <span class="hint">carry weight (parity off)</span></label><input id="s-wc" type="range" min="0" max="1" step="0.05"><output id="o-wc" for="s-wc"></output></div>
+      <div class="row"><label for="s-sc0">Prohibited</label><input id="s-sc0" type="range" min="0" max="1" step="0.05"><output id="o-sc0" for="s-sc0"></output></div>
+      <div class="row"><label for="s-sc1">May issue</label><input id="s-sc1" type="range" min="0" max="1" step="0.05"><output id="o-sc1" for="s-sc1"></output></div>
+      <div class="row"><label for="s-sc2">Shall issue</label><input id="s-sc2" type="range" min="0" max="1" step="0.05"><output id="o-sc2" for="s-sc2"></output></div>
+      <div class="row"><label for="s-sc3">Permitless</label><input id="s-sc3" type="range" min="0" max="1" step="0.05"><output id="o-sc3" for="s-sc3"></output></div>
+      <div class="row"><label for="s-delta">δ <span class="hint">O's may-issue share</span></label><input id="s-delta" type="range" min="0" max="1" step="0.05"><output id="o-delta" for="s-delta"></output></div>
+      <div class="row"><label for="s-hban">h <span class="hint">ban depth</span></label><input id="s-hban" type="range" min="0" max="1" step="0.05"><output id="o-hban" for="s-hban"></output></div>
+      <div class="row"><label for="s-ogap">g <span class="hint">other O gap</span></label><input id="s-ogap" type="range" min="0" max="0.9" step="0.05"><output id="o-ogap" for="s-ogap"></output></div>
+      <p class="note muted">The scores, δ, h, and g are proposals. g covers gaps in effective access that the law data do not record, such as enforcement and prohibited-person rules. It is 0 by default.</p>
+      <p class="note muted">Data rules: where two carry laws overlap, the most recently effective law sets the regime. MO1072 is a permit to acquire a handgun filed under concealed carry, so it is left out. DC1063 is a repeal, so DC counts as prohibited from 2009 to 2014. Virginia has no carry law in the database before July 1995, so it drops out of the national average before then. Population weights are 2024 values derived from Paper/data/gun_laws_new_england/states.csv.</p>
+    </div>
+
+    <div class="panel">
+      <h2>Sensitive places and transit <span class="hint" style="text-transform:none;letter-spacing:0">(post-Bruen)</span></h2>
+      <p class="note" style="margin-top:0">Where public transit is a sensitive place, a license holder who rides it must stay unarmed for the whole trip. The page lowers each group's carry access by the share of its workers who commute by transit (ACS 2024 5-year, tables B08105B and B08105H). O uses Black workers. B uses white non-Hispanic workers.</p>
+      <div class="checks"><label><input type="checkbox" id="c-sp"> Apply transit bans</label></div>
+      <p class="formula">C<sub>B</sub> × (1 − transit ban × e<sub>B</sub>)<br>C<sub>O</sub> × (1 − transit ban × e<sub>O</sub>)</p>
+      <div class="row"><label for="s-spScale">Exposure scale</label><input id="s-spScale" type="range" min="0" max="3" step="0.1"><output id="o-spScale" for="s-spScale"></output></div>
+      <div class="tablewrap"><table class="data" id="sp-table"></table></div>
+      <p class="note muted">The four states above have transit bans for licensed carry with confirmed coverage. California and Hawaii passed post-Bruen lists, but transit coverage is not confirmed here, so they are off. Washington's 2024 transit ban exempts license holders. Exposure counts only commutes to work. At scale 1, other trips are left out.</p>
+      <h3 class="sub">Grandfather clauses</h3>
+      <p class="note muted" style="margin-top:0">Chapter 135 exempts firearms lawfully possessed on August 1, 2024 (G.L. c. 140, § 131M). New owners cannot get the banned configurations. q is the share of each group's owners whose arms predate a ban. With parity on, B's parity uses q<sub>B</sub>, and O's carry access is scaled by O's parity relative to B's.</p>
+      <div class="row"><label for="s-qB">q<sub>B</sub> <span class="hint">Buffer, pre-ban</span></label><input id="s-qB" type="range" min="0" max="1" step="0.05"><output id="o-qB" for="s-qB"></output></div>
+      <div class="row"><label for="s-qO">q<sub>O</sub> <span class="hint">O, pre-ban</span></label><input id="s-qO" type="range" min="0" max="1" step="0.05"><output id="o-qO" for="s-qO"></output></div>
+      <p class="note muted">No source here gives q by group. Pew finds that 24% of Black adults owned a gun in both 2017 and 2023, so the reported surge of new Black buyers does not appear as a higher ownership rate. Both values stay 0 until there is data.</p>
+    </div>
+
+    <div class="panel">
+      <h2>What changed between two years</h2>
+      <div class="names">
+        <label for="d-y0">From year</label><input id="d-y0" type="number" step="1">
+        <label for="d-y1">To year</label><input id="d-y1" type="number" step="1">
+      </div>
+      <div class="tablewrap"><table class="data" id="dec-table"></table></div>
+      <p class="note" id="dec-sum"></p>
+      <p class="note muted">Each change is split among B, O, F, and arms parity with Shapley values. The parts add up to the total change.</p>
+    </div>
+
+    <div class="panel">
+      <h2>Calibration test</h2>
+      <p class="note" style="margin-top:0">The targets are the ρ<sub>τ</sub> = M/τ ranges in the manuscript's Compiled Runtime Log. The fit sets M₀, a, and b from the eras before 1966. The later eras are the held-out test.</p>
+      <div class="checks"><label><input type="checkbox" id="c-fitall"> Fit on all eras (no held-out test)</label></div>
+      <div class="btns">
+        <button class="btn go" type="button" id="b-fit">Run fit</button>
+        <button class="btn" type="button" id="b-apply" disabled>Apply fitted values</button>
+      </div>
+      <div class="tablewrap"><table class="data" id="cal-table"></table></div>
+      <p class="note" id="cal-sum">Press Run fit. The fit uses the current timeline, k<sub>m</sub>, k<sub>s</sub>, γ, and τ.</p>
+      <h3 class="sub">Shock-timing check</h3>
+      <p class="note muted" style="margin-top:0">This check uses no model. It tests the manuscript's claim that gun-control laws follow moments when O approaches kinetic parity (:15529). The shocks come from historical_shocks.json. The laws come from eq65_68_2a_case_law.csv.</p>
+      <div class="tablewrap"><table class="data" id="shock-a"></table></div>
+      <p class="note" id="shock-a-sum"></p>
+      <div class="tablewrap"><table class="data" id="shock-b"></table></div>
+      <p class="note" id="shock-b-sum"></p>
+      <h3 class="sub">Post-Bruen test</h3>
+      <p class="note muted" style="margin-top:0">Method fixed before the run. Treated: the states with a may-issue carry regime on June 22, 2022, the day before Bruen. Outcome: state laws that took effect after Bruen, against the same number of days before it. Federal rows are left out. Data: RAND State Firearm Law Database 6.0.</p>
+      <div class="tablewrap"><table class="data" id="bruen-table"></table></div>
+      <p class="note" id="bruen-sum"></p>
+      <p class="note muted">Limits: RAND has no class for sensitive-places laws, a main part of the post-Bruen response (for example, in New York's 2022 Concealed Carry Improvement Act). Uvalde (May 2022) and the federal Bipartisan Safer Communities Act (June 2022) came at the same time and drove new laws in many states. DC was already shall-issue in June 2022, so it is not in the treated group. Known post-Bruen sensitive-places laws: New York (Concealed Carry Improvement Act, 2022), New Jersey (Chapter 131, 2022), Maryland (SB 1, 2023), Hawaii (2023), California (SB 2, 2023, in force 2024), and Massachusetts (Chapter 135, 2024). All six are states that Bruen moved from may-issue to shall-issue.</p>
+      <h3 class="sub">Post-Bruen response, coded from sources</h3>
+      <p class="note muted" style="margin-top:0">Outcome A: a law signed after Bruen that bars licensed carriers from at least 10 categories of public places. Outcome B: a law signed from June 23, 2022 to September 1, 2025 that enacts an assault-weapon ban or widens its definition. I set both definitions after reading the six forced states' laws, so this comparison describes the pattern; it is not a blind test. "No" for a state means no such law was found in the sources searched.</p>
+      <div class="tablewrap"><table class="data" id="pb2-table"></table></div>
+      <p class="note" id="pb2-sum"></p>
+      <div class="tablewrap"><table class="data" id="pb2-list"></table></div>
+      <p class="note muted">The runtime-log ranges and the shock list are the author's own estimates. They are independent of this page, but not of the author.</p>
+    </div>
+
+    <div class="panel">
+      <h2>Scenarios</h2>
+      <div class="btns" id="scenarios">
+        <button class="btn" type="button" data-id="bacon" data-m="0" data-s="0">Bacon's Rebellion</button>
+        <button class="btn" type="button" data-id="codes" data-m="36" data-s="63">After 1705</button>
+        <button class="btn" type="button" data-id="socdem" data-m="60" data-s="0">Social democracy</button>
+        <button class="btn" type="button" data-id="fascism" data-m="-30" data-s="75">Fascism zone</button>
+        <button class="btn" type="button" data-id="demotion" data-m="-55" data-s="-45">Buffer demotion</button>
+        <button class="btn" type="button" data-id="solidarity" data-m="60" data-s="-25">Solidarity side</button>
+      </div>
+      <p class="note muted" id="scn-text">Values are illustrations, not data. Press a button to move W there.</p>
+    </div>
+
+    <div class="panel">
+      <h2>Saint-Domingue, 1789–1804 <span class="hint" style="text-transform:none;letter-spacing:0">(illustrative)</span></h2>
+      <p class="note" style="margin-top:0">Two Buffer phasors: the gens de couleur libres (orange) and the petits blancs (violet). O, the enslaved majority, has no phasor. Its mobilization and its arms parity raise M and grow the τ zone. The dates come from the historical record. The wage, mobilization, and parity values are my illustrations, not measurements.</p>
+      <div class="checks"><label><input type="checkbox" id="c-sd"> Show the scenario on the plane</label></div>
+      <div class="row"><label for="s-sdYear">Year</label><input id="s-sdYear" type="range" min="1789" max="1804" step="0.01"><output id="o-sdYear" for="s-sdYear"></output></div>
+      <div class="btns"><button class="btn go" type="button" id="b-sdplay">Play</button></div>
+      <svg id="sd-chart" viewBox="0 0 460 150" role="img" aria-label="O mobilization and O arms parity, 1789 to 1804"></svg>
+      <ul class="legend"><li><span class="sw" style="height:3px;background:var(--tau)"></span>O mobilization</li><li><span class="sw" style="height:3px;background:var(--rg2)"></span>O arms parity</li></ul>
+      <p class="tl-read" id="sd-read" style="margin-top:10px"></p>
+      <p class="formula">M = M₀ + p · mobilization · (0.5 + 0.5 · O parity) − a·ψ<sub>m</sub> − b·ψ<sub>s</sub></p>
+      <div class="row"><label for="s-sdM0">M₀ <span class="hint">scenario</span></label><input id="s-sdM0" type="range" min="0" max="60" step="1"><output id="o-sdM0" for="s-sdM0"></output></div>
+      <div class="row"><label for="s-sdW">p <span class="hint">O pressure</span></label><input id="s-sdW" type="range" min="0" max="150" step="1"><output id="o-sdW" for="s-sdW"></output></div>
+      <p class="note muted">a, b, and τ come from the τ model panel. While the scenario is on, dragging W is off.</p>
+      <div class="tablewrap"><table class="data" id="sd-events"></table></div>
+      <p class="note muted">The gens de couleur libres cross τ twice. In 1791 the April 1792 decree buys them back. In 1802, with O armed and the Polish defections under way, nothing buys them back, and the plane ends in 1804. Sources: the manuscript (Haitian Theorem :12296–:12335; Arcahaie flag :3665; Polish proof :14111 and :14125); C. L. R. James, <i>The Black Jacobins</i>; Laurent Dubois, <i>Avengers of the New World</i>; works by David Geggus cited in the manuscript.</p>
+    </div>
+
+    <div class="panel">
+      <h2>Routes between quadrants</h2>
+      <div class="btns">
+        <button class="btn go" type="button" id="b-ccw">Elite drift ↺ counterclockwise</button>
+        <button class="btn go" type="button" id="b-cw">Governed push ↻ clockwise</button>
+        <button class="btn go" type="button" id="b-origin">Through the origin</button>
+        <button class="btn" type="button" id="b-stop">Stop</button>
+        <button class="btn" type="button" id="b-clear">Clear trail</button>
+      </div>
+      <p class="note muted">A route starts at the current W. The two laps keep |W| fixed. The trail turns red where M is above τ.</p>
+      <p class="note" id="route-msg" aria-live="polite"></p>
+    </div>
+
+    <div class="panel">
+      <h2>τ model <span class="hint" style="text-transform:none;letter-spacing:0">(proposal)</span></h2>
+      <p class="formula">M = M₀ − a·ψ<sub>m</sub> − b·ψ<sub>s</sub><br>τ zone: M &gt; τ, so a·ψ<sub>m</sub> + b·ψ<sub>s</sub> &lt; M₀ − τ</p>
+      <div class="row"><label for="s-M0">M₀ <span class="hint">risk at W = 0</span></label><input id="s-M0" type="range" min="0" max="100" step="1"><output id="o-M0" for="s-M0"></output></div>
+      <div class="row"><label for="s-tau">τ <span class="hint">crash level</span></label><input id="s-tau" type="range" min="0" max="100" step="1"><output id="o-tau" for="s-tau"></output></div>
+      <div class="row"><label for="s-a">a <span class="hint">material weight</span></label><input id="s-a" type="range" min="0.2" max="2" step="0.05"><output id="o-a" for="s-a"></output></div>
+      <div class="row"><label for="s-b">b <span class="hint">status weight</span></label><input id="s-b" type="range" min="0.2" max="2" step="0.05"><output id="o-b" for="s-b"></output></div>
+      <div class="row"><label for="s-smax">ψ<sub>s</sub> ceiling <span class="hint">cap</span></label><input id="s-smax" type="range" min="0" max="100" step="1"><output id="o-smax" for="s-smax"></output></div>
+      <div class="checks">
+        <label><input type="checkbox" id="c-zone"> τ zone</label>
+        <label><input type="checkbox" id="c-ring"> Arc at |W|</label>
+        <label><input type="checkbox" id="c-elite"> Elite optimum</label>
+      </div>
+      <p class="note muted" id="elite-text"></p>
+      <div class="btns" style="margin-top:10px"><button class="btn" type="button" id="b-reset">Reset model</button></div>
+    </div>
+
+    <div class="panel">
+      <h2>Quadrant names</h2>
+      <div class="names">
+        <label for="i-q3">Quadrant III</label><input id="i-q3" type="text" maxlength="22" autocomplete="off">
+        <label for="i-q4">Quadrant IV</label><input id="i-q4" type="text" maxlength="22" autocomplete="off">
+      </div>
+      <p class="note muted">Quadrants I and II keep the manuscript's names.</p>
+    </div>
+
+    <div class="panel src">
+      <h2>What comes from where</h2>
+      <p><strong>Manuscript</strong> (Paper/The_Original_Power.tex): the rotated Argand plane (:2876), the θ regimes (:2937–2945), the joint wage in Quadrant I (:5149), and the constraint M < τ (:1531, :2059).</p>
+      <p><strong>Proposed here</strong>: negative ψ<sub>s</sub> as a status inversion, Quadrants III and IV, the formula for M, the ψ<sub>s</sub> ceiling, and the Elite optimum. The manuscript gives no formula for M in terms of W.</p>
+      <p>Wage units run from −100 to 100. They are arbitrary.</p>
+      <p><strong>Proposed here, firearms</strong>: the indices B and O, the formulas for ψ<sub>m</sub> and ψ<sub>s</sub>, and every seed value. The model keeps ψ<sub>m</sub> at or above zero, so it cannot show Quadrants II and III.</p>
+      <p><strong>RAND data</strong>: State Firearm Law Database 6.0 (TL-A243-2-v4, January 2026; laws as of September 1, 2025). Concealed-carry regimes and assault-weapon bans by state, 1979–2025.</p>
+      <p><strong>Data from the repository</strong>: Paper/data/eq65_68_2a_case_law.csv (gun laws and rulings, 1911–2024), eq63_mass_incarceration.csv (F, 1980–2024), historical_shocks.json (shock years), and the ρ<sub>τ</sub> ranges in the Compiled Runtime Log (:15361–:15515).</p>
+    </div>
+  </section>
+</div>
+
+<script>
+(function(){
+'use strict';
+var R=100,K=3,CX=400,CY=450;
+var $=function(id){return document.getElementById(id);};
+var svg=$('plane'),gBack=$('g-back'),gZone=$('g-zone'),gFront=$('g-front'),gDyn=$('g-dyn');
+var reduced=!!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches);
+
+/* Placeholder waypoints. B = Buffer access, O = Out-group access, 0 (banned) to 1 (open). Not data. */
+var FW0=[
+  {y:1705,e:'Virginia slave codes',B:0.9,O:0},
+  {y:1791,e:'Second Amendment ratified',B:1,O:0},
+  {y:1857,e:'Dred Scott',B:1,O:0.05},
+  {y:1866,e:'Black Codes',B:1,O:0.1},
+  {y:1868,e:'Fourteenth Amendment',B:1,O:0.4},
+  {y:1876,e:'Cruikshank',B:1,O:0.1},
+  {y:1967,e:'Mulford Act (California)',B:0.95,O:0.35},
+  {y:1994,e:'Federal assault weapons ban',B:0.75,O:0.4},
+  {y:2004,e:'Federal ban expires',B:0.95,O:0.5},
+  {y:2008,e:'Heller',B:1,O:0.6},
+  {y:2022,e:'Bruen',B:1,O:0.75},
+  {y:2026,e:'Now (your reading)',B:0.8,O:0.7}
+];
+function cloneFW(a){return a.map(function(w){return {y:w.y,e:w.e,B:w.B,O:w.O};});}
+function validW(w){return w&&typeof w.y==='number'&&typeof w.B==='number'&&typeof w.O==='number'&&typeof w.e==='string';}
+var DEF={psim:50,psis:40,M0:60,tau:40,a:1,b:0.7,smax:80,q3:'Buffer demotion',q4:'Solidarity side',ring:true,elite:true,zone:true,
+  km:40,ks:70,year:1705,drive:true,showPath:true,step:false,fw:FW0,gamma:0,dy0:2008,dy1:2026,fitAll:false,
+  useRand:true,showStates:true,scope:'US',wc:0.5,sc0:0,sc1:0.25,sc2:0.75,sc3:1,delta:0.5,hban:0.5,ogap:0,
+  useParity:true,pNFA:0.6,pHughes:0.3,
+  useSP:true,spScale:1,qB:0,qO:0,
+  kappa:0,sdOn:false,sdYear:1789,sdM0:20,sdW:80};
+var S={};Object.keys(DEF).forEach(function(k){S[k]=(k==='fw')?cloneFW(DEF.fw):DEF[k];});
+try{
+  var raw=localStorage.getItem('cwp-v1');
+  if(raw){
+    var o=JSON.parse(raw);
+    Object.keys(DEF).forEach(function(k){
+      if(k==='fw'){if(Array.isArray(o.fw)&&o.fw.length>=2&&o.fw.every(validW))S.fw=cloneFW(o.fw);}
+      else if(typeof o[k]===typeof DEF[k])S[k]=o[k];
+    });
+  }
+}catch(e){}
+S.psim=clamp(S.psim,-R,R);S.psis=clamp(S.psis,-R,R);
+
+var trail=[],anim=null,dragging=false,saveTimer=0;
+
+function clamp(v,lo,hi){return Math.max(lo,Math.min(hi,v));}
+function sx(s){return CX+s*K;}
+function sy(m){return CY+m*K;}
+function deg(r){return r*180/Math.PI;}
+function rad(d){return d*Math.PI/180;}
+function mag(m,s){return Math.hypot(m,s);}
+function theta(m,s){return deg(Math.atan2(s,m));}
+function fmt(n,d){d=d||0;var f=Math.pow(10,d),v=Math.round(n*f)/f;return (v<0?'−':'')+Math.abs(v).toFixed(d);}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function quad(m,s){if(m>=0&&s>=0)return 1;if(m<0&&s>=0)return 2;if(m<0&&s<0)return 3;return 4;}
+function clock(th){
+  var h=6-th/30;h=((h%12)+12)%12;
+  var hh=Math.floor(h),mm=Math.round((h-hh)*60);
+  if(mm===60){mm=0;hh=(hh+1)%12;}
+  if(hh===0)hh=12;
+  return hh+':'+(mm<10?'0':'')+mm;
+}
+function M0at(y){return S.M0+(S.kappa>0?S.kappa*parityOAt(y):0);}
+function Mof(m,s,y){return M0at(y==null?S.year:y)-S.a*m-S.b*s;}
+function qName(q){return q===1?'Joint wage':q===2?'Fascism zone':q===3?(S.q3.trim()||DEF.q3):(S.q4.trim()||DEF.q4);}
+function qTag(q){return q<=2?'manuscript':'proposed';}
+var ROMAN=['','I','II','III','IV'];
+/* SVG text with a subscript: the rest of the text restores the baseline */
+function PSI(sb,rest){return 'ψ<tspan dy="5" font-size="72%">'+sb+'</tspan>'+(rest?'<tspan dy="-5"> '+rest+'</tspan>':'');}
+
+/* ---------- geometry ---------- */
+function clipDanger(M0v){
+  var k=(M0v==null?M0at(S.year):M0v)-S.tau,poly=[[-R,-R],[R,-R],[R,R],[-R,R]],out=[],cross=[];
+  function f(p){return S.a*p[1]+S.b*p[0]-k;}
+  for(var i=0;i<4;i++){
+    var A=poly[i],B=poly[(i+1)%4],fa=f(A),fb=f(B);
+    if(fa<=0)out.push(A);
+    if((fa<0&&fb>0)||(fa>0&&fb<0)){
+      var t=fa/(fa-fb),P=[A[0]+t*(B[0]-A[0]),A[1]+t*(B[1]-A[1])];
+      out.push(P);cross.push(P);
+    }
+  }
+  return {poly:out,line:cross};
+}
+function elite(){
+  var k=M0at(S.year)-S.tau,m=(k-S.b*S.smax)/S.a;
+  return {m:clamp(m,-R,R),s:S.smax};
+}
+function safeArcs(r){
+  var N=360,fl=[],i;
+  for(i=0;i<N;i++){var t=rad(-180+i+.5);fl.push(Mof(r*Math.cos(t),r*Math.sin(t))<=S.tau);}
+  var all=fl.every(Boolean),any=fl.some(Boolean);
+  if(all)return {all:true};
+  if(!any)return {none:true};
+  var arcs=[];
+  for(i=0;i<N;i++){
+    if(fl[i]&&!fl[(i-1+N)%N]){var j=i;while(fl[(j+1)%N])j=(j+1)%N;arcs.push([-180+i,-180+j+1]);}
+  }
+  return {arcs:arcs};
+}
+
+/* ---------- static drawing ---------- */
+function polar(rr,th){return [sx(rr*Math.sin(rad(th))),sy(rr*Math.cos(rad(th)))];}
+function buildStatic(){
+  var b='',f='',i,v;
+  b+='<rect x="'+(CX-R*K)+'" y="'+(CY-R*K)+'" width="'+(2*R*K)+'" height="'+(2*R*K)+'" style="fill:var(--plane);stroke:var(--rule)" stroke-width="1.5"/>';
+  [-75,-50,-25,25,50,75].forEach(function(g){
+    b+='<line x1="'+sx(g)+'" y1="'+(CY-R*K)+'" x2="'+sx(g)+'" y2="'+(CY+R*K)+'" style="stroke:var(--grid)"/>';
+    b+='<line x1="'+(CX-R*K)+'" y1="'+sy(g)+'" x2="'+(CX+R*K)+'" y2="'+sy(g)+'" style="stroke:var(--grid)"/>';
+  });
+  gBack.innerHTML=b;
+
+  /* clock face */
+  f+='<circle cx="'+CX+'" cy="'+CY+'" r="'+(R*K)+'" fill="none" style="stroke:var(--rule)" stroke-width="1.2" stroke-dasharray="2 6"/>';
+  for(i=0;i<12;i++){
+    var th=(6-i)*30,p1=polar(R-6,th),p2=polar(R,th);
+    f+='<line x1="'+p1[0].toFixed(1)+'" y1="'+p1[1].toFixed(1)+'" x2="'+p2[0].toFixed(1)+'" y2="'+p2[1].toFixed(1)+'" style="stroke:var(--rule)" stroke-width="1.5"/>';
+    if(i%3!==0){
+      var pn=polar(R+8,th);
+      f+='<text x="'+pn[0].toFixed(1)+'" y="'+pn[1].toFixed(1)+'" text-anchor="middle" dominant-baseline="middle" class="t-mono muted" font-size="15">'+(i===0?12:i)+'</text>';
+    }
+  }
+  /* axes */
+  f+='<line x1="'+(CX-R*K)+'" y1="'+CY+'" x2="'+(CX+R*K+16)+'" y2="'+CY+'" style="stroke:var(--rule)" stroke-width="2" marker-end="url(#arr-ink)"/>';
+  f+='<line x1="'+CX+'" y1="'+CY+'" x2="'+CX+'" y2="'+(CY+R*K+16)+'" style="stroke:var(--green)" stroke-width="2" marker-end="url(#arr-green)"/>';
+  f+='<line x1="'+CX+'" y1="'+CY+'" x2="'+CX+'" y2="12" style="stroke:var(--red)" stroke-width="2" marker-end="url(#arr-red)"/>';
+  /* tick values */
+  f+='<text x="'+sx(50)+'" y="'+(CY+18)+'" text-anchor="middle" class="t-mono muted" font-size="13">50</text>';
+  f+='<text x="'+sx(-50)+'" y="'+(CY+18)+'" text-anchor="middle" class="t-mono muted" font-size="13">−50</text>';
+  f+='<text x="'+(CX+8)+'" y="'+(sy(50)+4)+'" class="t-mono muted" font-size="13">50</text>';
+  f+='<text x="'+(CX+8)+'" y="'+(sy(-50)+4)+'" class="t-mono muted" font-size="13">−50</text>';
+  /* axis labels */
+  f+='<text x="'+(CX+R*K+22)+'" y="'+(CY-8)+'" class="ink" font-size="17" font-weight="600">'+PSI('s','(+)')+'</text>';
+  f+='<text x="'+(CX+R*K+22)+'" y="'+(CY+12)+'" class="muted" font-size="14">3 o’clock</text>';
+  f+='<text x="'+(CX+R*K+22)+'" y="'+(CY+30)+'" class="t-mono muted" font-size="14">90°</text>';
+  f+='<text x="'+(CX-R*K-22)+'" y="'+(CY-8)+'" text-anchor="end" class="ink" font-size="17" font-weight="600">'+PSI('s','(−)')+'</text>';
+  f+='<text x="'+(CX-R*K-22)+'" y="'+(CY+12)+'" text-anchor="end" class="muted" font-size="14">9 o’clock</text>';
+  f+='<text x="'+(CX-R*K-22)+'" y="'+(CY+30)+'" text-anchor="end" class="t-mono muted" font-size="14">−90°</text>';
+  f+='<text x="'+CX+'" y="'+(CY+R*K+46)+'" text-anchor="middle" class="ink" font-size="17" font-weight="600">'+PSI('m','(+)  ·  6 o’clock  ·  0°')+'</text>';
+  f+='<text x="'+(CX+92)+'" y="'+(CY-R*K-6)+'" class="muted" font-size="14">'+PSI('m','(−)  ·  12 o’clock  ·  180°')+'</text>';
+
+  /* pyramid */
+  var apex=40,base=128,hw=78;
+  function half(y){return hw*(y-apex)/(base-apex);}
+  var ys=[apex,apex+(base-apex)/3,apex+2*(base-apex)/3,base],cols=['var(--yellow)','var(--green)','var(--blue)'],lab=['E','P','F'];
+  for(i=0;i<3;i++){
+    var ya=ys[i],yb=ys[i+1];
+    f+='<polygon points="'+(CX-half(ya)).toFixed(1)+','+ya.toFixed(1)+' '+(CX+half(ya)).toFixed(1)+','+ya.toFixed(1)+' '+(CX+half(yb)).toFixed(1)+','+yb.toFixed(1)+' '+(CX-half(yb)).toFixed(1)+','+yb.toFixed(1)+'" style="fill:'+cols[i]+';stroke:var(--rule)" fill-opacity=".55" stroke-width="1.6"/>';
+    var ym=(ya+yb)/2;
+    f+='<text x="'+(CX-half(ym)-18).toFixed(1)+'" y="'+(ym+9).toFixed(1)+'" text-anchor="end" class="t-hand red" font-size="30">'+lab[i]+'</text>';
+  }
+  f+='<line x1="'+CX+'" y1="'+apex+'" x2="'+CX+'" y2="'+base+'" style="stroke:var(--rule)" stroke-width="1.6"/>';
+  f+='<text x="'+(CX+18)+'" y="30" class="t-hand red" font-size="27">Elite extraction</text>';
+  gFront.innerHTML=f;
+}
+
+/* ---------- dynamic drawing ---------- */
+function run(pts,state){
+  if(pts.length<2)return '';
+  var d=pts.map(function(p,i){return (i?'L':'M')+p[0].toFixed(1)+' '+p[1].toFixed(1);}).join('');
+  return '<path d="'+d+'" fill="none" style="stroke:var(--'+(state?'tau':'tau-in')+')" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>';
+}
+function render(){
+  var m=S.psim,s=S.psis,r=mag(m,s),th=theta(m,s),q=quad(m,s),h='',z='',i;
+
+  /* tau zone */
+  if(S.zone){
+    var c=clipDanger(S.sdOn?sdM0eff(S.sdYear):null);
+    if(c.poly.length>=3){
+      var d=c.poly.map(function(p,j){return (j?'L':'M')+sx(p[0]).toFixed(1)+' '+sy(p[1]).toFixed(1);}).join('')+'Z';
+      z+='<path d="'+d+'" style="fill:var(--tau);opacity:.05"/><path d="'+d+'" fill="url(#hatch)"/>';
+    }
+    if(c.line.length===2){
+      var A=c.line[0],B=c.line[1],x1=sx(A[0]),y1=sy(A[1]),x2=sx(B[0]),y2=sy(B[1]);
+      var ang=deg(Math.atan2(y2-y1,x2-x1));if(ang>90)ang-=180;if(ang<-90)ang+=180;
+      z+='<line x1="'+x1.toFixed(1)+'" y1="'+y1.toFixed(1)+'" x2="'+x2.toFixed(1)+'" y2="'+y2.toFixed(1)+'" style="stroke:var(--tau)" stroke-width="2.5"/>';
+      z+='<text transform="translate('+((x1+x2)/2).toFixed(1)+' '+((y1+y2)/2).toFixed(1)+') rotate('+ang.toFixed(1)+')" dy="-9" text-anchor="middle" class="t-mono halo tau" font-size="15">τ boundary · M = τ</text>';
+    }
+  }
+  gZone.innerHTML=z;
+
+  /* quadrant labels */
+  [[1,55,66],[2,55,-66],[3,-55,-66],[4,-55,66]].forEach(function(Q){
+    var on=Q[0]===q&&r>=1,cls=on?'ink':'muted';
+    h+='<text x="'+sx(Q[1])+'" y="'+sy(Q[2])+'" text-anchor="middle" class="t-hand halo '+cls+'" font-size="25">'+esc(qName(Q[0]))+'</text>';
+    h+='<text x="'+sx(Q[1])+'" y="'+(sy(Q[2])+19)+'" text-anchor="middle" class="t-mono halo '+cls+'" font-size="13">Q'+ROMAN[Q[0]]+' · '+qTag(Q[0])+'</text>';
+  });
+
+  if(S.sdOn){h+=renderSD();gDyn.innerHTML=h;return;}
+
+  /* arc at current |W| */
+  if(S.ring&&r>=3){
+    var N=180,cur=null,pts=[],pp;
+    for(i=0;i<N;i++){
+      var t0=-180+i*2,t1=t0+2,tm=t0+1,st=Mof(r*Math.cos(rad(tm)),r*Math.sin(rad(tm)))>S.tau;
+      var a0=[sx(r*Math.sin(rad(t0))),sy(r*Math.cos(rad(t0)))],a1=[sx(r*Math.sin(rad(t1))),sy(r*Math.cos(rad(t1)))];
+      if(cur===null){cur=st;pts=[a0];}
+      if(st!==cur){h+=run(pts,cur).replace('stroke-width="3.5"','stroke-width="5" opacity=".5"');pts=[a0];cur=st;}
+      pts.push(a1);
+    }
+    h+=run(pts,cur).replace('stroke-width="3.5"','stroke-width="5" opacity=".5"');
+  }
+
+  /* trail */
+  if(trail.length>1){
+    var seg=[],state=trail[0].b;
+    for(i=0;i<trail.length;i++){
+      var tp=trail[i];
+      if(tp.b!==state){h+=run(seg,state);seg=[seg[seg.length-1]];state=tp.b;}
+      seg.push([tp.x,tp.y]);
+    }
+    h+=run(seg,state);
+  }
+
+  /* firearms path */
+  if(S.showPath&&S.fw.length>1){
+    var pts=[];
+    S.fw.forEach(function(w){if(!(S.useRand&&w.y>=CY0))pts.push({y:w.y,B:w.B,O:w.O,lab:String(w.y),dot:true});});
+    if(S.useRand){
+      for(var yy=CY0;yy<=CY1;yy++){
+        var q0=randAt(yy),mk=(yy%10===0||yy===CY0||yy===CY1);
+        pts.push({y:yy,B:q0.B,O:q0.O,lab:mk?String(yy):'',dot:mk});
+      }
+    }
+    var pp=pts.map(function(w){var v=fwW(w.B,w.O,w.y);return [sx(v[1]),sy(v[0]),w.lab,w.dot];});
+    h+='<path d="'+pp.map(function(p,j){return (j?'L':'M')+p[0].toFixed(1)+' '+p[1].toFixed(1);}).join('')+'" fill="none" style="stroke:var(--rule)" stroke-width="2" stroke-dasharray="6 5"/>';
+    var placed=[],order=[0,pp.length-1],showLab={},q;
+    for(q=1;q<pp.length-1;q++)order.push(q);
+    order.forEach(function(k){
+      if(pp[k][2]==='')return;
+      var p=pp[k],ok=placed.every(function(z){return Math.hypot(z[0]-p[0],z[1]-p[1])>=34;});
+      if(ok||k===0||k===pp.length-1){showLab[k]=true;placed.push(p);}
+    });
+    pp.forEach(function(p,qi){
+      var dx=p[0]-CX,dy=p[1]-CY,L=Math.hypot(dx,dy)||1,ox=dx/L*14,oy=dy/L*14;
+      if(p[3])h+='<circle cx="'+p[0].toFixed(1)+'" cy="'+p[1].toFixed(1)+'" r="4" style="fill:var(--plane);stroke:var(--rule)" stroke-width="1.8"/>';
+      if(showLab[qi])h+='<text x="'+(p[0]+ox).toFixed(1)+'" y="'+(p[1]+oy+4).toFixed(1)+'" text-anchor="'+(ox>3?'start':ox<-3?'end':'middle')+'" class="t-mono halo muted" font-size="12">'+p[2]+'</text>';
+    });
+  }
+
+  /* state dots, grouped where states share a position */
+  if(S.useRand&&S.showStates&&S.year>=CY0){
+    var si=carryYearIndex(S.year),groups={},tp=0;
+    CARRY.states.forEach(function(st){tp+=st.pop;});
+    CARRY.states.forEach(function(st){
+      var r=stateBO(st,si);if(!r)return;
+      var v=fwW(r.B,r.O,S.year,parityAt(S.year,st)),gx=Math.round(sx(v[1])),gy=Math.round(sy(v[0])),key=gx+','+gy;
+      if(!groups[key])groups[key]={x:gx,y:gy,pop:0,ab:[],reg:[0,0,0,0]};
+      var g=groups[key];g.pop+=st.pop;g.ab.push(st.ab);
+      for(var k=0;k<4;k++)g.reg[k]+=st.pop*r.v[k];
+    });
+    var glist=Object.keys(groups).map(function(k){return groups[k];}).sort(function(a,b){return b.pop-a.pop;}),labeled=[];
+    glist.forEach(function(g){
+      var dom=g.reg.indexOf(Math.max.apply(null,g.reg)),rad=3+14*Math.sqrt(g.pop/tp),sel=g.ab.indexOf(S.scope)>=0;
+      h+='<circle cx="'+g.x+'" cy="'+g.y+'" r="'+rad.toFixed(1)+'" style="fill:var(--rg'+dom+');stroke:var(--'+(sel?'rule':'plane')+')" fill-opacity=".72" stroke-width="'+(sel?2.5:1)+'"><title>'+g.ab.join(', ')+'</title></circle>';
+      g.rad=rad;
+    });
+    glist.forEach(function(g){
+      var lx=g.x+g.rad+3,ok=labeled.every(function(z){return Math.abs(z[0]-lx)>60||Math.abs(z[1]-g.y)>14;})&&Math.hypot(g.x-CX,g.y-CY)>18;
+      if(!ok)return;
+      labeled.push([lx,g.y]);
+      h+='<text x="'+lx.toFixed(1)+'" y="'+(g.y+4)+'" class="t-mono halo muted" font-size="11">'+(g.ab.length<=3?g.ab.join(' '):g.ab.length+' states')+'</text>';
+    });
+  }
+
+  /* 6 o'clock ideal */
+  if(r>=8){
+    h+='<circle cx="'+sx(0)+'" cy="'+sy(r)+'" r="6" style="fill:var(--green);stroke:var(--plane)" stroke-width="2"/>';
+    h+='<text x="'+(sx(0)+11)+'" y="'+(sy(r)+5)+'" class="t-mono halo green" font-size="13">6:00 ideal</text>';
+  }
+
+  /* elite optimum */
+  if(S.elite){
+    var E=elite(),ex=sx(E.s),ey=sy(E.m),left=ex>CX+170;
+    h+='<path d="M'+ex+' '+(ey-10)+' L'+(ex+10)+' '+ey+' L'+ex+' '+(ey+10)+' L'+(ex-10)+' '+ey+'Z" style="fill:var(--red);stroke:var(--plane)" stroke-width="2"/>';
+    h+='<text x="'+(ex+(left?-15:15))+'" y="'+(ey+5)+'" text-anchor="'+(left?'end':'start')+'" class="t-mono halo red" font-size="14">Elite optimum '+clock(theta(E.m,E.s))+'</text>';
+  }
+
+  /* projections, vector, angle arc */
+  var tx=sx(s),ty=sy(m);
+  if(r>=3){
+    h+='<line x1="'+tx+'" y1="'+ty+'" x2="'+CX+'" y2="'+ty+'" style="stroke:var(--rule)" stroke-width="1.5" stroke-dasharray="5 4"/>';
+    h+='<line x1="'+tx+'" y1="'+ty+'" x2="'+tx+'" y2="'+CY+'" style="stroke:var(--rule)" stroke-width="1.5" stroke-dasharray="5 4"/>';
+    if(Math.abs(s)>=14)h+='<text x="'+((tx+CX)/2)+'" y="'+(ty+(m>=0?-8:19))+'" text-anchor="middle" class="t-mono halo ink" font-size="13">ψs = '+fmt(s)+'</text>';
+    if(Math.abs(m)>=14)h+='<text x="'+(tx+(s>=0?9:-9))+'" y="'+(((ty+CY)/2)+4)+'" text-anchor="'+(s>=0?'start':'end')+'" class="t-mono halo ink" font-size="13">ψm = '+fmt(m)+'</text>';
+    var vl=Math.hypot(tx-CX,ty-CY),ux=(tx-CX)/vl,uy=(ty-CY)/vl,nx=-uy,ny=ux;
+    if(nx+ny>0){nx=-nx;ny=-ny;}
+    h+='<g filter="url(#w3d)"><line x1="'+CX+'" y1="'+CY+'" x2="'+tx+'" y2="'+ty+'" style="stroke:var(--accent)" stroke-width="5" stroke-linecap="round" marker-end="url(#arr-acc)"/></g>';
+    if(vl>24)h+='<line x1="'+(CX+ux*5+nx*1.3).toFixed(1)+'" y1="'+(CY+uy*5+ny*1.3).toFixed(1)+'" x2="'+(tx-ux*15+nx*1.3).toFixed(1)+'" y2="'+(ty-uy*15+ny*1.3).toFixed(1)+'" style="stroke:var(--accent-hi)" stroke-width="1.4" stroke-linecap="round" opacity=".9"/>';
+  }
+  /* theta arc */
+  if(r>=12&&Math.abs(th)>1){
+    var ar=34,a0x=CX,a0y=CY+ar;
+    var ex2=CX+ar*Math.sin(rad(th)),ey2=CY+ar*Math.cos(rad(th)),sweep=th>0?0:1;
+    h+='<path d="M'+a0x+' '+a0y+' A'+ar+' '+ar+' 0 0 '+sweep+' '+ex2.toFixed(1)+' '+ey2.toFixed(1)+'" fill="none" style="stroke:var(--rule)" stroke-width="2"/>';
+    var mid=90-th/2,lx=CX+(ar+15)*Math.cos(rad(mid)),ly=CY+(ar+15)*Math.sin(rad(mid));
+    h+='<text x="'+lx.toFixed(1)+'" y="'+(ly+5).toFixed(1)+'" text-anchor="middle" class="t-hand halo ink" font-size="22">θ</text>';
+  }
+  /* origin node */
+  h+='<circle cx="'+CX+'" cy="'+CY+'" r="12" style="fill:var(--plane);stroke:var(--rule)" stroke-width="2"/><circle cx="'+CX+'" cy="'+CY+'" r="2.5" style="fill:var(--rule)"/>';
+  h+='<text x="'+(CX-18)+'" y="'+(CY-16)+'" text-anchor="end" class="t-hand halo muted" font-size="19">Buffer class</text>';
+  /* handle */
+  h+='<circle cx="'+tx+'" cy="'+ty+'" r="16" style="fill:var(--accent);stroke:var(--accent)" fill-opacity=".26" stroke-opacity=".8" stroke-width="1.5"/>';
+  h+='<text x="'+(tx+(s>=0?20:-20))+'" y="'+(ty+(m>=0?26:-14))+'" text-anchor="'+(s>=0?'start':'end')+'" class="t-hand halo accent" font-size="28">W</text>';
+  if(S.drive)h+='<text x="'+tx+'" y="'+(ty+(m>=0?48:-34))+'" text-anchor="middle" class="t-mono halo accent" font-size="15" font-weight="500">'+Math.round(S.year)+'</text>';
+  gDyn.innerHTML=h;
+}
+
+/* ---------- readouts ---------- */
+function regime(m,s,r,th,q){
+  if(r<3)return 'W is near zero. The Buffer has no wage of either kind. These are the conditions of Bacon’s Rebellion.';
+  if(Math.abs(th)<=8)return 'Almost all material. Manuscript: genuine economic investment in the Buffer (:2937).';
+  if(Math.abs(th-90)<=8)return 'Almost all status. Manuscript: the default operating mode of the extraction kernel (:2939).';
+  if(q===1)return 'Quadrant I. A joint wage of material value and status (:5149).';
+  if(q===2)return 'Quadrant II. The Elite take material value from the Buffer and pay in status. Manuscript: the fascism threshold, θ > 90° (:2942).';
+  if(q===3)return 'Quadrant III (proposed). The Buffer loses material value and status. It is treated as part of O. This pushes M toward τ.';
+  return 'Quadrant IV (proposed). The Buffer has material value and feels inferior in status. A negative ψs means a status inversion.';
+}
+function updateUI(){
+  var m=S.psim,s=S.psis,r=mag(m,s),th=theta(m,s),M=Mof(m,s),q=quad(m,s),near0=r<0.5;
+  $('s-psim').value=m;$('s-psis').value=s;$('s-theta').value=near0?0:th;
+  $('o-psim').textContent=fmt(m);$('o-psis').textContent=fmt(s);$('o-theta').textContent=near0?'—':fmt(th)+'°';
+  $('r-theta').textContent=near0?'—':fmt(th,1)+'°';
+  $('r-mag').textContent=fmt(r,1);
+  $('r-clock').textContent=near0?'—':clock(th);
+  $('r-quad').textContent=near0?'origin':'Q'+ROMAN[q]+' · '+qName(q);
+  $('r-M').textContent=fmt(M,1)+' (τ = '+fmt(S.tau)+')';
+  var margin=S.tau-M;
+  $('r-margin').textContent=margin>=0?fmt(margin,1)+' below τ':fmt(-margin,1)+' above τ';
+  $('r-flow').textContent=Math.abs(m)<0.5?'none':(m<0?'taken from Buffer: '+fmt(-m):'paid to Buffer: '+fmt(m));
+  var sd=theta(S.a,S.b);
+  $('r-safest').textContent=clock(sd)+' (θ = '+fmt(sd)+'°)';
+  var bad=M>S.tau,chip=$('chip');
+  chip.className='chip '+(bad?'danger':'safe');
+  chip.textContent=bad?'Past τ: breach':'Inside the τ limit';
+  $('mtext').textContent='M = '+fmt(M,1)+'   τ = '+fmt(S.tau);
+  var g=$('gfill');g.className=bad?'danger':'';g.style.width=clamp(M/150*100,0,100)+'%';
+  $('gtau').style.left='calc('+clamp(S.tau/150*100,0,100)+'% - 1px)';
+  $('regime').textContent=regime(m,s,r,th,q);
+  var rt='';
+  if(r<3)rt='Move W away from the origin to see which angles stay inside τ.';
+  else{
+    var sa=safeArcs(r);
+    if(sa.all)rt='At |W| = '+fmt(r)+', every angle stays inside τ.';
+    else if(sa.none)rt='At |W| = '+fmt(r)+', no angle stays inside τ. Raise |W| or lower τ.';
+    else rt='At |W| = '+fmt(r)+', the safe arc runs counterclockwise from '+sa.arcs.map(function(a){return clock(a[0])+' to '+clock(a[1]);}).join(' and from ')+'.';
+  }
+  $('ring-text').textContent=rt;
+  var E=elite();
+  $('elite-text').textContent='Elite optimum: ψm = '+fmt(E.m)+', ψs = '+fmt(E.s)+', at '+clock(theta(E.m,E.s))+' (θ = '+fmt(theta(E.m,E.s))+'°). It takes the most material value from the Buffer while M stays at or below τ and ψs stays at or below its ceiling.';
+  ['M0','tau','a','b','smax'].forEach(function(k){
+    $('s-'+k).value=S[k];
+    $('o-'+k).textContent=(k==='a'||k==='b')?S[k].toFixed(2):fmt(S[k]);
+  });
+  $('c-zone').checked=S.zone;$('c-ring').checked=S.ring;$('c-elite').checked=S.elite;
+}
+function refresh(){render();updateUI();updateTL();}
+function scheduleSave(){
+  clearTimeout(saveTimer);
+  saveTimer=setTimeout(function(){try{localStorage.setItem('cwp-v1',JSON.stringify(S));}catch(e){}},400);
+}
+function setW(m,s){S.psim=clamp(m,-R,R);S.psis=clamp(s,-R,R);refresh();}
+
+/* ---------- animation ---------- */
+function stopAnim(){if(anim){cancelAnimationFrame(anim.raf);anim=null;}}
+function userMove(){stopAnim();S.drive=false;if(trail.length){trail=[];}$('route-msg').textContent='';}
+function tweenTo(m,s,ms){
+  stopAnim();S.drive=false;trail=[];$('route-msg').textContent='';
+  var m0=S.psim,s0=S.psis;
+  if(reduced){setW(m,s);scheduleSave();return;}
+  var t0=performance.now();anim={raf:0};
+  function step(now){
+    var t=clamp((now-t0)/ms,0,1),e=t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2;
+    setW(m0+(m-m0)*e,s0+(s-s0)*e);
+    if(t<1)anim.raf=requestAnimationFrame(step);else{anim=null;scheduleSave();}
+  }
+  anim.raf=requestAnimationFrame(step);
+}
+function runRoute(kind){
+  stopAnim();S.drive=false;trail=[];
+  var m0=S.psim,s0=S.psis,r0=mag(m0,s0),th0=theta(m0,s0);
+  var msg=$('route-msg');
+  if(r0<5){msg.textContent='Set |W| above 5 first. A route needs a start point away from the origin.';refresh();return;}
+  var fn,dur,label;
+  if(kind==='ccw'){fn=function(t){var a=rad(th0+360*t);return [r0*Math.cos(a),r0*Math.sin(a)];};dur=7000;label='Elite drift (counterclockwise lap at |W| = '+fmt(r0)+')';}
+  else if(kind==='cw'){fn=function(t){var a=rad(th0-360*t);return [r0*Math.cos(a),r0*Math.sin(a)];};dur=7000;label='Governed push (clockwise lap at |W| = '+fmt(r0)+')';}
+  else{fn=function(t){var u=t<.5?1-2*t:-(2*t-1);return [m0*u,s0*u];};dur=4500;label='Route through the origin';}
+  var st={n:0,breach:0,peak:-1e9};
+  function sample(t){
+    var p=fn(t),M=Mof(p[0],p[1]),b=M>S.tau;
+    S.psim=clamp(p[0],-R,R);S.psis=clamp(p[1],-R,R);
+    trail.push({x:sx(S.psis),y:sy(S.psim),b:b});
+    st.n++;if(b)st.breach++;if(M>st.peak)st.peak=M;
+  }
+  function finish(){
+    anim=null;
+    msg.textContent=label+': M is above τ for '+Math.round(100*st.breach/st.n)+'% of the route. Peak M = '+fmt(st.peak,1)+'.';
+    refresh();scheduleSave();
+  }
+  if(reduced){for(var i=0;i<=240;i++)sample(i/240);finish();return;}
+  msg.textContent='Running: '+label+'…';
+  var t0=performance.now();anim={raf:0};
+  function step(now){
+    var t=clamp((now-t0)/dur,0,1);sample(t);refresh();
+    if(t<1)anim.raf=requestAnimationFrame(step);else finish();
+  }
+  anim.raf=requestAnimationFrame(step);
+}
+
+/* ---------- input ---------- */
+function planePoint(e){
+  var p=svg.createSVGPoint();p.x=e.clientX;p.y=e.clientY;
+  var q=p.matrixTransform(svg.getScreenCTM().inverse());
+  return {s:(q.x-CX)/K,m:(q.y-CY)/K};
+}
+function moveTo(e){var p=planePoint(e);setW(p.m,p.s);}
+svg.addEventListener('pointerdown',function(e){
+  if(S.sdOn)return;
+  userMove();dragging=true;
+  try{svg.setPointerCapture(e.pointerId);}catch(x){}
+  moveTo(e);svg.focus({preventScroll:true});
+});
+svg.addEventListener('pointermove',function(e){if(dragging)moveTo(e);});
+function endDrag(){if(dragging){dragging=false;scheduleSave();}}
+svg.addEventListener('pointerup',endDrag);
+svg.addEventListener('pointercancel',endDrag);
+svg.addEventListener('keydown',function(e){
+  if(S.sdOn)return;
+  var st=e.shiftKey?10:2,m=S.psim,s=S.psis;
+  if(e.key==='ArrowRight')s+=st;else if(e.key==='ArrowLeft')s-=st;
+  else if(e.key==='ArrowDown')m+=st;else if(e.key==='ArrowUp')m-=st;
+  else return;
+  e.preventDefault();userMove();setW(m,s);scheduleSave();
+});
+$('s-psim').addEventListener('input',function(e){userMove();setW(+e.target.value,S.psis);scheduleSave();});
+$('s-psis').addEventListener('input',function(e){userMove();setW(S.psim,+e.target.value);scheduleSave();});
+$('s-theta').addEventListener('input',function(e){
+  userMove();
+  var r=mag(S.psim,S.psis);if(r<1)r=40;
+  var a=rad(+e.target.value);
+  setW(r*Math.cos(a),r*Math.sin(a));scheduleSave();
+});
+['M0','tau','a','b','smax'].forEach(function(k){
+  $('s-'+k).addEventListener('input',function(e){S[k]=+e.target.value;refresh();scheduleSave();});
+});
+[['c-zone','zone'],['c-ring','ring'],['c-elite','elite']].forEach(function(p){
+  $(p[0]).addEventListener('change',function(e){S[p[1]]=e.target.checked;refresh();scheduleSave();});
+});
+$('i-q3').addEventListener('input',function(e){S.q3=e.target.value;refresh();scheduleSave();});
+$('i-q4').addEventListener('input',function(e){S.q4=e.target.value;refresh();scheduleSave();});
+$('b-reset').addEventListener('click',function(){
+  ['M0','tau','a','b','smax'].forEach(function(k){S[k]=DEF[k];});
+  S.zone=DEF.zone;S.ring=DEF.ring;S.elite=DEF.elite;refresh();scheduleSave();
+});
+var SCN={
+  bacon:'Bacon’s Rebellion (1676). No wage of either kind. M sits at its baseline M₀.',
+  codes:'After the 1705 Virginia Slave Codes. Status leads, and arms add a material concession (B = 0.9, O = 0 in the timeline). The constitutional protection of arms dates from 1791, so for 1705 read this as arms by colonial militia law and custom.',
+  socdem:'θ = 0°. Genuine economic investment in the Buffer (manuscript :2937).',
+  fascism:'Quadrant II. Material value is taken from the Buffer and status is inflated (manuscript :2942).',
+  demotion:'Quadrant III (proposed). The Buffer loses both wages. Watch M against τ.',
+  solidarity:'Quadrant IV (proposed). Material security with a status inversion.'
+};
+Array.prototype.forEach.call(document.querySelectorAll('#scenarios .btn'),function(b){
+  b.addEventListener('click',function(){
+    tweenTo(+b.dataset.m,+b.dataset.s,650);
+    $('scn-text').textContent=SCN[b.dataset.id]+' Values are illustrations, not data.';
+  });
+});
+$('b-ccw').addEventListener('click',function(){runRoute('ccw');});
+$('b-cw').addEventListener('click',function(){runRoute('cw');});
+$('b-origin').addEventListener('click',function(){runRoute('origin');});
+$('b-stop').addEventListener('click',function(){stopAnim();$('route-msg').textContent='Stopped.';refresh();});
+$('b-clear').addEventListener('click',function(){stopAnim();trail=[];$('route-msg').textContent='';refresh();});
+
+/* ---------- firearms timeline ---------- */
+function fwSort(){S.fw.sort(function(a,b){return a.y-b.y;});}
+function yearRange(){return [S.fw[0].y,S.fw[S.fw.length-1].y];}
+function fwAt0(year){
+  if(S.useRand&&year>=CY0){var q=randAt(year);return {B:q.B,O:q.O};}
+  var L=S.fw,n=L.length,i;
+  if(year<=L[0].y)return {B:L[0].B,O:L[0].O};
+  if(year>=L[n-1].y)return {B:L[n-1].B,O:L[n-1].O};
+  for(i=0;i<n-1;i++){
+    if(year>=L[i].y&&year<L[i+1].y){
+      if(S.step)return {B:L[i].B,O:L[i].O};
+      var t=(year-L[i].y)/(L[i+1].y-L[i].y);
+      return {B:L[i].B+t*(L[i+1].B-L[i].B),O:L[i].O+t*(L[i+1].O-L[i].O)};
+    }
+  }
+  return {B:L[n-1].B,O:L[n-1].O};
+}
+function fwAt(year){var r=fwAt0(year);r.y=year;return r;}
+function fwW(B,O,y,par){
+  var yy=y==null?S.year:y,s=S.gamma>0?Math.pow(Fat(yy),-S.gamma):1,mat=S.useParity?(par!=null?par:parityAt(yy)):B;
+  return [clamp(S.km*mat*s,-R,R),clamp(S.ks*(B-O)*s,-R,R)];
+}
+function applyTL(){var f=fwAt(S.year),w=fwW(f.B,f.O,f.y);S.psim=w[0];S.psis=w[1];}
+function afterFwEdit(){var r=yearRange();S.year=clamp(S.year,r[0],r[1]);if(S.drive)applyTL();refresh();scheduleSave();}
+
+var CW=460,CH=200,ML=78,MR=14,MT=14,MB=30;
+function chX(y){var r=yearRange();return ML+(y-r[0])/Math.max(1,r[1]-r[0])*(CW-ML-MR);}
+function chY(th){return MT+(90-th)/180*(CH-MT-MB);}
+function chRun(pts,state){
+  if(pts.length<2)return '';
+  return '<path d="'+pts.map(function(p,i){return (i?'L':'M')+p[0].toFixed(1)+' '+p[1].toFixed(1);}).join('')+'" fill="none" style="stroke:var(--'+(state?'tau':'tau-in')+')" stroke-width="2.5" stroke-linejoin="round"/>';
+}
+function drawChart(){
+  var r=yearRange(),span=Math.max(1,r[1]-r[0]),h='',y;
+  h+='<rect x="'+ML+'" y="'+MT+'" width="'+(CW-ML-MR)+'" height="'+(CH-MT-MB)+'" style="fill:var(--plane);stroke:var(--rule)"/>';
+  [[90,'3:00'],[0,'6:00'],[-90,'9:00']].forEach(function(g){
+    h+='<line x1="'+ML+'" y1="'+chY(g[0])+'" x2="'+(CW-MR)+'" y2="'+chY(g[0])+'" style="stroke:'+(g[0]===0?'var(--rule)':'var(--grid)')+'"/>';
+    h+='<text x="'+(ML-6)+'" y="'+(chY(g[0])+4)+'" text-anchor="end" class="t-mono muted" font-size="11">'+(g[0]<0?'−':'')+Math.abs(g[0])+'° · '+g[1]+'</text>';
+  });
+  var step=span>200?50:span>80?20:10;
+  for(y=Math.ceil(r[0]/step)*step;y<=r[1];y+=step){
+    h+='<line x1="'+chX(y)+'" y1="'+MT+'" x2="'+chX(y)+'" y2="'+(CH-MB)+'" style="stroke:var(--grid)"/>';
+    h+='<text x="'+chX(y)+'" y="'+(CH-MB+15)+'" text-anchor="middle" class="t-mono muted" font-size="11">'+y+'</text>';
+  }
+  var seg=[],st=null,dy=Math.max(.5,span/300);
+  for(y=r[0];y<=r[1]+1e-6;y+=dy){
+    var f=fwAt(y),w=fwW(f.B,f.O,f.y),rr=mag(w[0],w[1]),th=rr<0.5?0:theta(w[0],w[1]),b=Mof(w[0],w[1],y)>S.tau,p=[chX(y),chY(th)];
+    if(st===null)st=b;
+    if(b!==st){h+=chRun(seg,st);seg=[seg[seg.length-1]];st=b;}
+    seg.push(p);
+  }
+  h+=chRun(seg,st);
+  S.fw.forEach(function(wp){
+    var w=fwW(wp.B,wp.O,wp.y),th=mag(w[0],w[1])<0.5?0:theta(w[0],w[1]);
+    h+='<circle cx="'+chX(wp.y).toFixed(1)+'" cy="'+chY(th).toFixed(1)+'" r="3.5" style="fill:var(--plane);stroke:var(--rule)" stroke-width="1.5"/>';
+  });
+  var cx2=chX(S.year),fc=fwAt(S.year),wc=fwW(fc.B,fc.O,S.year),thc=mag(wc[0],wc[1])<0.5?0:theta(wc[0],wc[1]);
+  h+='<line x1="'+cx2.toFixed(1)+'" y1="'+MT+'" x2="'+cx2.toFixed(1)+'" y2="'+(CH-MB)+'" style="stroke:var(--accent)" stroke-width="1.5"/>';
+  h+='<circle cx="'+cx2.toFixed(1)+'" cy="'+chY(thc).toFixed(1)+'" r="5.5" style="fill:var(--accent);stroke:var(--plane)" stroke-width="2"/>';
+  $('tl-chart').innerHTML=h;
+}
+function updateTL(){
+  var r=yearRange(),ys=$('s-year');
+  ys.min=r[0];ys.max=r[1];ys.value=Math.round(S.year);
+  $('o-year').textContent=Math.round(S.year);
+  $('s-km').value=S.km;$('s-ks').value=S.ks;$('o-km').textContent=fmt(S.km);$('o-ks').textContent=fmt(S.ks);
+  $('c-drive').checked=S.drive;$('c-path').checked=S.showPath;$('c-step').checked=S.step;
+  $('b-play').textContent=(anim&&anim.tl)?'Pause':(S.year>=r[1]-0.5?'Replay':'Play');
+  var f=fwAt(S.year),w=fwW(f.B,f.O,f.y),rr=mag(w[0],w[1]),th=theta(w[0],w[1]),M=Mof(w[0],w[1]),ev=S.fw[0];
+  S.fw.forEach(function(wp){if(wp.y<=S.year)ev=wp;});
+  $('tl-read').textContent='Year '+Math.round(S.year)+' · '+((S.useRand&&S.year>=CY0)?'source: RAND state data':'latest event: '+ev.e+' ('+ev.y+')')+'\nB '+f.B.toFixed(2)+' · O '+f.O.toFixed(2)+' · ψm '+fmt(w[0])+' · ψs '+fmt(w[1])+' · θ '+(rr<0.5?'—':fmt(th)+'° ('+clock(th)+')')+' · |W| '+fmt(rr)+' · F '+Fat(S.year).toFixed(2)+' · '+(M>S.tau?'past τ':'inside τ');
+  $('tl-read').style.whiteSpace='pre-line';
+  $('s-gamma').value=S.gamma;$('o-gamma').textContent=S.gamma.toFixed(2);
+  $('c-fitall').checked=S.fitAll;
+  updateRandUI();
+  updateParityUI();
+  updateSPUI();
+  updateSDUI();
+  updateDecomp();
+  drawChart();
+}
+function playTL(){
+  stopAnim();trail=[];$('route-msg').textContent='';
+  var r=yearRange();S.drive=true;
+  var y0=S.year>=r[1]-0.5?r[0]:S.year;
+  if(reduced){S.year=r[1];applyTL();refresh();scheduleSave();return;}
+  var dur=Math.max(1500,16000*(r[1]-y0)/Math.max(1,r[1]-r[0])),t0=performance.now();
+  anim={raf:0,tl:true};
+  function step(now){
+    var t=clamp((now-t0)/dur,0,1);
+    S.year=y0+(r[1]-y0)*t;applyTL();
+    if(t<1){refresh();anim.raf=requestAnimationFrame(step);}
+    else{anim=null;refresh();scheduleSave();}
+  }
+  anim.raf=requestAnimationFrame(step);
+}
+function buildTable(){
+  var h='';
+  S.fw.forEach(function(w,i){
+    var n=i+1;
+    h+='<div class="fw-row">'
+      +'<input id="fw-y-'+i+'" type="number" step="1" data-f="y" data-i="'+i+'" value="'+w.y+'" aria-label="Year, event '+n+'">'
+      +'<input id="fw-e-'+i+'" type="text" data-f="e" data-i="'+i+'" value="'+esc(w.e)+'" maxlength="60" autocomplete="off" aria-label="Event name, event '+n+'">'
+      +'<input id="fw-B-'+i+'" type="number" min="0" max="1" step="0.05" data-f="B" data-i="'+i+'" value="'+w.B+'" aria-label="B, Buffer access, event '+n+'">'
+      +'<input id="fw-O-'+i+'" type="number" min="0" max="1" step="0.05" data-f="O" data-i="'+i+'" value="'+w.O+'" aria-label="O, Out-group access, event '+n+'">'
+      +'<button type="button" class="btn x" data-del="'+i+'" aria-label="Remove event '+n+'"'+(S.fw.length<=2?' disabled':'')+'>✕</button></div>';
+  });
+  $('fw-rows').innerHTML=h;
+}
+$('fw-rows').addEventListener('input',function(e){
+  var t=e.target,f=t.dataset.f,i=+t.dataset.i;
+  if(!f||!S.fw[i])return;
+  if(f==='e'){S.fw[i].e=t.value;}
+  else if(f==='B'||f==='O'){var v=parseFloat(t.value);if(isNaN(v))return;S.fw[i][f]=clamp(v,0,1);}
+  else return;
+  afterFwEdit();
+});
+$('fw-rows').addEventListener('change',function(e){
+  var t=e.target,f=t.dataset.f,i=+t.dataset.i;
+  if(!f||!S.fw[i])return;
+  if(f==='B'||f==='O'){t.value=S.fw[i][f];}
+  else if(f==='y'){
+    var v=parseInt(t.value,10);
+    if(isNaN(v)){t.value=S.fw[i].y;return;}
+    S.fw[i].y=clamp(v,1000,2200);fwSort();buildTable();afterFwEdit();
+  }
+});
+$('fw-rows').addEventListener('click',function(e){
+  var b=e.target.closest('[data-del]');
+  if(!b||S.fw.length<=2)return;
+  S.fw.splice(+b.dataset.del,1);buildTable();afterFwEdit();
+});
+$('b-fw-add').addEventListener('click',function(){
+  var L=S.fw[S.fw.length-1];
+  S.fw.push({y:L.y+1,e:'New event',B:L.B,O:L.O});
+  buildTable();afterFwEdit();
+  var el=$('fw-e-'+(S.fw.length-1));if(el){el.focus();el.select();}
+});
+$('b-fw-reset').addEventListener('click',function(){
+  keepUndo();S.fw=cloneFW(FW0);S.km=DEF.km;S.ks=DEF.ks;S.step=DEF.step;
+  buildTable();afterFwEdit();
+});
+$('s-year').addEventListener('input',function(e){
+  stopAnim();trail=[];S.drive=true;S.year=+e.target.value;applyTL();refresh();scheduleSave();
+});
+$('s-km').addEventListener('input',function(e){S.km=+e.target.value;if(S.drive)applyTL();refresh();scheduleSave();});
+$('s-ks').addEventListener('input',function(e){S.ks=+e.target.value;if(S.drive)applyTL();refresh();scheduleSave();});
+$('c-drive').addEventListener('change',function(e){S.drive=e.target.checked;if(S.drive){stopAnim();trail=[];applyTL();}refresh();scheduleSave();});
+$('c-path').addEventListener('change',function(e){S.showPath=e.target.checked;refresh();scheduleSave();});
+$('c-step').addEventListener('change',function(e){S.step=e.target.checked;if(S.drive)applyTL();refresh();scheduleSave();});
+$('b-play').addEventListener('click',function(){if(anim&&anim.tl){stopAnim();refresh();}else playTL();});
+var chart=$('tl-chart'),chDrag=false;
+function chartYear(e){
+  var p=chart.createSVGPoint();p.x=e.clientX;p.y=e.clientY;
+  var q=p.matrixTransform(chart.getScreenCTM().inverse()),r=yearRange();
+  return r[0]+clamp((q.x-ML)/(CW-ML-MR),0,1)*(r[1]-r[0]);
+}
+chart.addEventListener('pointerdown',function(e){
+  stopAnim();trail=[];chDrag=true;
+  try{chart.setPointerCapture(e.pointerId);}catch(x){}
+  S.drive=true;S.year=chartYear(e);applyTL();refresh();
+});
+chart.addEventListener('pointermove',function(e){if(chDrag){S.year=chartYear(e);applyTL();refresh();}});
+function chEnd(){if(chDrag){chDrag=false;scheduleSave();}}
+chart.addEventListener('pointerup',chEnd);
+chart.addEventListener('pointercancel',chEnd);
+
+/* ---------- repository data (copied from Paper/data and the manuscript) ---------- */
+/* eq65_68_2a_case_law.csv: [year, event, jurisdiction, target (O | OI | I), net_restriction_delta, target_expansion_flag] */
+var CASE=[
+  [1911,'Sullivan Law','state','O',1,1],[1934,'NFA','federal','O',1,1],[1967,'Mulford Act','state','O',1,0],
+  [1968,'Gun Control Act','federal','OI',1,1],[1986,'Hughes Amendment','federal','I',1,1],[1993,'Brady Act','federal','I',1,1],
+  [1994,'Federal AWB','federal','I',1,1],[2004,'AWB lapse','federal','I',-1,0],[2008,'Heller','scotus','I',-1,0],
+  [2010,'McDonald','scotus','I',-1,0],[2018,'Bump stock ban','federal','I',1,1],[2022,'Bruen','scotus','I',-1,0],
+  [2022,'Ghost gun rule','federal','I',1,1],[2023,'Pistol brace rule','federal','I',1,1],[2024,'Cargill','scotus','I',-1,0],
+  [2024,'Rahimi','scotus','I',1,1]
+];
+/* historical_shocks.json: [shock_year, label, intermediate] */
+var SHOCKS=[
+  [1865,'End of Reconstruction / abolition shock',0],[1917,'Great Migration + Red Summer',1],[1954,'Brown v. Board',1],
+  [1964,'Civil Rights Act',0],[1968,'MLK assassination / Kerner Commission',1],[1992,'Rodney King verdict / LA uprising',1],
+  [2008,'Obama election',0],[2020,'George Floyd protests',0],[2022,'NYSRPA v. Bruen',0,1]
+];
+/* eq63_mass_incarceration.csv: [year, total incarcerated, total population] */
+var INC=[
+  [1980,503586,226546000],[1985,744208,237924000],[1990,1148702,248709000],[1994,1476600,260327000],[1998,1802496,275854000],
+  [2000,1937482,281421000],[2005,2196013,295507000],[2008,2307504,304059000],[2010,2266800,309000000],[2012,2228400,313914000],
+  [2015,2173800,320896000],[2018,2086500,327167000],[2020,1697200,331449000],[2022,1767200,333000000],[2024,1820000,335000000]
+];
+var INC_RATE=INC.map(function(r){return [r[0],r[1]/r[2]];});
+/* Compiled Runtime Log: rho_tau = M/tau ranges by era (Paper/The_Original_Power.tex) */
+var TARGETS=[
+  {y0:1705,y1:1787,lo:0.60,hi:0.75,src:'Log 3, post-1705 patch (:15361)',early:true},
+  {y0:1705,y1:1865,lo:0.45,hi:0.65,src:'Log 5, American South (:15384)',early:true},
+  {y0:1894,y1:1965,lo:0.50,hi:0.68,src:'Log 9, containment (:15428)',early:true},
+  {y0:1966,y1:1966,lo:0.95,hi:0.95,src:'Log 13, security patch (:15471)',early:false},
+  {y0:1968,y1:1994,lo:0.80,hi:0.98,src:'Log 14, the recompile (:15481)',early:false},
+  {y0:1994,y1:2026,lo:0.92,hi:1.05,src:'Log 15, terminal runtime (:15493)',early:false},
+  {y0:2010,y1:2026,lo:0.95,hi:1.08,src:'Log 17, algorithmic epoch (:15515)',early:false}
+];
+/* Rows before 1911: placeholders tied to events the manuscript discusses */
+var FW_PRE=[
+  {y:1705,e:'Virginia slave codes',B:0.9,O:0},
+  {y:1791,e:'Second Amendment ratified',B:1,O:0},
+  {y:1857,e:'Dred Scott',B:1,O:0.05},
+  {y:1865,e:'Black Codes',B:1,O:0.05},
+  {y:1866,e:"Freedmen's Bureau Act",B:1,O:0.4},
+  {y:1876,e:'Hamburg massacre',B:1,O:0.1}
+];
+var LAW_STEP=0.05,STATE_W=0.5;
+function msEvents(){
+  var rows=cloneFW(FW_PRE),last=rows[rows.length-1],B=last.B,O=last.O,byYear={},order=[];
+  CASE.forEach(function(c){if(!byYear[c[0]]){byYear[c[0]]=[];order.push(c[0]);}byYear[c[0]].push(c);});
+  order.forEach(function(y){
+    var names=[];
+    byYear[y].forEach(function(c){
+      var d=c[4]*LAW_STEP*(c[2]==='state'?STATE_W:1);
+      if(c[3]==='O'){O-=d;if(c[5])B-=d/2;}
+      else{B-=d;O-=d;}
+      B=clamp(B,0,1);O=clamp(O,0,1);names.push(c[1]);
+    });
+    rows.push({y:y,e:names.join(' + '),B:Math.round(B*1000)/1000,O:Math.round(O*1000)/1000});
+  });
+  return rows;
+}
+function Fat(y){
+  var L=INC_RATE,base=L[0][1],i;
+  if(y<=L[0][0])return 1;
+  if(y>=L[L.length-1][0])return L[L.length-1][1]/base;
+  for(i=0;i<L.length-1;i++){
+    if(y>=L[i][0]&&y<L[i+1][0]){var t=(y-L[i][0])/(L[i+1][0]-L[i][0]);return (L[i][1]+t*(L[i+1][1]-L[i][1]))/base;}
+  }
+  return 1;
+}
+
+/* ---------- decomposition ---------- */
+var DEC_N=['B','O','F','parity'];
+function decompose(y0,y1){
+  var p=fwAt0(y0),q=fwAt0(y1),x0=[p.B,p.O,Fat(y0),parityAt(y0)],x1=[q.B,q.O,Fat(y1),parityAt(y1)],n=4,val=[],m,i,j,res=[];
+  function f(x){var s=S.gamma>0?Math.pow(x[2],-S.gamma):1;return [S.km*(S.useParity?x[3]:x[0])*s,S.ks*(x[0]-x[1])*s];}
+  function fact(k){var r=1;for(var t=2;t<=k;t++)r*=t;return r;}
+  for(m=0;m<(1<<n);m++){var x=[];for(i=0;i<n;i++)x.push((m>>i)&1?x1[i]:x0[i]);val.push(f(x));}
+  for(i=0;i<n;i++){
+    var c=[0,0];
+    for(m=0;m<(1<<n);m++){
+      if((m>>i)&1)continue;
+      var k=0;for(j=0;j<n;j++)if((m>>j)&1)k++;
+      var w=fact(k)*fact(n-k-1)/fact(n),v1=val[m|(1<<i)],v0=val[m];
+      c[0]+=w*(v1[0]-v0[0]);c[1]+=w*(v1[1]-v0[1]);
+    }
+    res.push(c);
+  }
+  return {start:val[0],end:val[(1<<n)-1],x0:x0,x1:x1,c:res};
+}
+function updateDecomp(){
+  var r=yearRange(),y0=clamp(Math.round(S.dy0),r[0],r[1]),y1=clamp(Math.round(S.dy1),r[0],r[1]),d=decompose(y0,y1);
+  function Mv(v){return S.M0-S.a*v[0]-S.b*v[1];}
+  function cell(v){return '<td class="num">'+fmt(v,1)+'</td>';}
+  function cells(k){return d.c.map(function(c){return cell(c[k]);}).join('');}
+  var h='<tr><th></th><th>'+y0+'</th><th>'+y1+'</th><th>Change</th>'+DEC_N.map(function(n){return '<th>from '+n+'</th>';}).join('')+'</tr>';
+  h+='<tr><td>B, O, F, parity</td><td class="num">'+d.x0.map(function(v){return v.toFixed(2);}).join(', ')+'</td><td class="num">'+d.x1.map(function(v){return v.toFixed(2);}).join(', ')+'</td><td></td><td></td><td></td><td></td><td></td></tr>';
+  h+='<tr><td>ψm</td>'+cell(d.start[0])+cell(d.end[0])+cell(d.end[0]-d.start[0])+cells(0)+'</tr>';
+  h+='<tr><td>ψs</td>'+cell(d.start[1])+cell(d.end[1])+cell(d.end[1]-d.start[1])+cells(1)+'</tr>';
+  var cm=d.c.map(function(c){return -S.a*c[0]-S.b*c[1];});
+  h+='<tr><td>M (wages)</td>'+cell(Mv(d.start))+cell(Mv(d.end))+cell(Mv(d.end)-Mv(d.start))+cm.map(cell).join('')+'</tr>';
+  $('dec-table').innerHTML=h;
+  function share(parts,total,name){
+    var abs=0;parts.forEach(function(p){abs+=Math.abs(p);});
+    if(abs<0.5)return name+' barely changes.';
+    if(Math.abs(total)<0.6*abs)return name+' changes by '+fmt(total,1)+'. The factors pull in opposite directions, so percentages mislead here. See the table.';
+    return name+' changes by '+fmt(total,1)+': '+parts.map(function(p,i){return DEC_N[i]+' gives '+Math.round(100*p/total)+'%';}).join(', ')+'.';
+  }
+  $('dec-sum').textContent='Between '+y0+' and '+y1+': '+share(d.c.map(function(c){return c[0];}),d.end[0]-d.start[0],'ψm')+' '+share(d.c.map(function(c){return c[1];}),d.end[1]-d.start[1],'ψs')+' '+share(cm,Mv(d.end)-Mv(d.start),'M from wages')+(S.kappa>0?' O arms parity adds '+fmt(S.kappa*(parityOAt(y1)-parityOAt(y0)),1)+' to M through \u03ba (not in the table).':'');
+}
+
+/* ---------- calibration ---------- */
+var lastFit=null;
+function eraRows(){
+  var r=yearRange(),ser=[],y;
+  for(y=r[0];y<=r[1];y++){var f=fwAt(y),w=fwW(f.B,f.O,y);ser.push([y,w[0],w[1],parityOAt(y)]);}
+  return TARGETS.map(function(T){
+    var a=0,b=0,po=0,n=0;
+    ser.forEach(function(p){if(p[0]>=T.y0&&p[0]<=T.y1){a+=p[1];b+=p[2];po+=p[3];n++;}});
+    return {T:T,n:n,m:n?a/n:0,s:n?b/n:0,po:n?po/n:0};
+  }).filter(function(e){return e.n>0;});
+}
+function rhoOf(e,M0,a,b){return (M0+S.kappa*e.po-a*e.m-b*e.s)/(S.tau||1);}
+function runFit(){
+  var rows=eraRows(),train=rows.filter(function(e){return S.fitAll||e.T.early;}),best=null,i,j,k,q;
+  if(!train.length){$('cal-sum').textContent='No fit era lies inside the timeline. Extend the timeline to cover 1705–1965.';return;}
+  for(i=0;i<=100;i++)for(j=0;j<=36;j++)for(k=0;k<=36;k++){
+    var M0=i,a=Math.round((0.2+j*0.05)*100)/100,b=Math.round((0.2+k*0.05)*100)/100,L=0,out=0;
+    for(q=0;q<train.length;q++){
+      var e=train[q],T=e.T,rho=rhoOf(e,M0,a,b),o=rho<T.lo?T.lo-rho:rho>T.hi?rho-T.hi:0;
+      out+=o*o;L+=o*o+0.01*Math.pow(rho-(T.lo+T.hi)/2,2);
+    }
+    if(!best||L<best.L)best={L:L,out:out,M0:M0,a:a,b:b};
+  }
+  lastFit={best:best,rows:rows,fitAll:S.fitAll};
+  renderFit();
+}
+function renderFit(){
+  if(!lastFit)return;
+  var bf=lastFit.best,h='<tr><th>Era</th><th>Source</th><th>Target ρ</th><th>Model ρ</th><th>Set</th><th>Result</th></tr>',held=0,heldIn=0,nFit=0;
+  lastFit.rows.forEach(function(e){
+    var T=e.T,rho=rhoOf(e,bf.M0,bf.a,bf.b),train=lastFit.fitAll||T.early,res=rho<T.lo-0.005?'below':rho>T.hi+0.005?'above':'inside';
+    if(train)nFit++;else{held++;if(res==='inside')heldIn++;}
+    h+='<tr><td>'+T.y0+(T.y1!==T.y0?'–'+T.y1:'')+'</td><td>'+esc(T.src)+'</td><td class="num">'+(T.lo===T.hi?T.lo.toFixed(2):T.lo.toFixed(2)+'–'+T.hi.toFixed(2))+'</td><td class="num">'+rho.toFixed(2)+'</td><td>'+(train?'fit':'test')+'</td><td class="'+(res==='inside'?'ok':'bad')+'">'+res+'</td></tr>';
+  });
+  $('cal-table').innerHTML=h;
+  var r=yearRange(),first=null,y;
+  for(y=r[0];y<=r[1];y++){var f=fwAt(y),w=fwW(f.B,f.O,y);if((bf.M0+S.kappa*parityOAt(y)-bf.a*w[0]-bf.b*w[1])/(S.tau||1)>=1){first=y;break;}}
+  var s='Fitted on '+nFit+' eras: M₀ = '+bf.M0+', a = '+bf.a.toFixed(2)+', b = '+bf.b.toFixed(2)+' (τ = '+fmt(S.tau)+'). ';
+  if(bf.out<1e-9)s+='Every fit era is inside its range, and other parameter sets may fit as well. The fit picks the one nearest the middle of each range. ';
+  s+=lastFit.fitAll?'No eras are held out. ':'Held-out eras inside their range: '+heldIn+' of '+held+'. ';
+  s+=first?'With these values, ρ first reaches 1 in '+first+'.':'With these values, ρ never reaches 1 in the timeline.';
+  $('cal-sum').textContent=s;
+  $('b-apply').disabled=false;
+}
+
+/* ---------- shock-timing check ---------- */
+/* SHOCKS rows: [year, label, intermediate, added after the result] */
+function comb(n,k){var r=1;for(var i=1;i<=k;i++)r=r*(n-k+i)/i;return r;}
+function binomTail(n,k,p){var s=0;for(var j=k;j<=n;j++)s+=comb(n,j)*Math.pow(p,j)*Math.pow(1-p,n-j);return s;}
+function shockCheck(){
+  var Y0=1911,Y1=2024,WIN=5,y;
+  function restr(a,b){return CASE.filter(function(c){return c[4]>0&&c[0]>=a&&c[0]<=b;});}
+  function shocks(a,b,post){return SHOCKS.filter(function(s){return s[0]>=a&&s[0]<=b&&(post||!s[3]);});}
+  function tag(s){return (s[2]?' (intermediate)':'')+(s[3]?' (added after the result)':'');}
+  var hA='<tr><th>Shock</th><th>Event</th><th>Restriction 0–5 years after</th></tr>';
+  shocks(Y0,Y1,true).forEach(function(s){
+    var hits=restr(s[0],Math.min(s[0]+WIN,Y1));
+    hA+='<tr><td>'+s[0]+'</td><td>'+esc(s[1])+tag(s)+'</td><td class="'+(hits.length?'ok':'bad')+'">'+(hits.length?hits.map(function(c){return c[0]+' '+esc(c[1]);}).join(', '):'none')+'</td></tr>';
+  });
+  $('shock-a').innerHTML=hA;
+  var cA=0,tA=0;for(y=Y0;y<=Y1-WIN;y++){tA++;if(restr(y,y+WIN).length)cA++;}
+  var pA=cA/tA;
+  function sumA(post){var k=0,n=0;shocks(Y0,Y1,post).forEach(function(s){n++;if(restr(s[0],Math.min(s[0]+WIN,Y1)).length)k++;});return [k,n,binomTail(n,k,pA)];}
+  var a0=sumA(false),a1=sumA(true);
+  $('shock-a-sum').textContent=a0[0]+' of '+a0[1]+' shocks from 1911 to 2024 have a restriction within 5 years after them. A random 6-year window holds a restriction with probability '+pA.toFixed(2)+'. The chance of '+a0[0]+' or more by luck is '+a0[2].toFixed(2)+'. With Bruen added after the result: '+a1[0]+' of '+a1[1]+' (chance '+a1[2].toFixed(2)+'). A shock added after the result biases this check, so read the first figure.';
+  var fed=CASE.filter(function(c){return c[2]==='federal'&&c[4]>0;}),hB='<tr><th>Federal restriction</th><th>Shock 0–5 years before</th></tr>';
+  fed.forEach(function(c){
+    var hits=shocks(c[0]-WIN,c[0],true);
+    hB+='<tr><td>'+c[0]+' '+esc(c[1])+'</td><td class="'+(hits.length?'ok':'bad')+'">'+(hits.length?hits.map(function(s){return s[0]+' '+esc(s[1])+(s[3]?' (added after)':'');}).join(', '):'none')+'</td></tr>';
+  });
+  $('shock-b').innerHTML=hB;
+  function sumB(post){
+    var k=0,c=0,t=0;
+    fed.forEach(function(r){if(shocks(r[0]-WIN,r[0],post).length)k++;});
+    for(y=Y0;y<=Y1;y++){t++;if(shocks(y-WIN,y,post).length)c++;}
+    return [k,fed.length,c/t,binomTail(fed.length,k,c/t)];
+  }
+  var b0=sumB(false),b1=sumB(true);
+  $('shock-b-sum').textContent=b0[0]+' of '+b0[1]+' federal restrictions (laws and ATF rules) come within 5 years after a shock. A random year has a shock in the 5 years before it with probability '+b0[2].toFixed(2)+'. The chance of '+b0[0]+' or more by luck is '+b0[3].toFixed(2)+'. With Bruen added after the result: '+b1[0]+' of '+b1[1]+' (chance '+b1[3].toFixed(2)+').';
+}
+
+/* ---------- post-Bruen test (computed by scripts/bruen_test.py from RAND 6.0; method fixed before the run) ---------- */
+var BRUEN={"window_days":1166,"pre":["2019-04-14","2022-06-22"],"post":["2022-06-23","2025-08-31"],"treated":["CA","DE","HI","MA","MD","NJ","NY","RI"],"counts":{"AK":{"r_pre":0,"r_post":0,"p_pre":0,"p_post":0,"name":"Alaska"},"AL":{"r_pre":0,"r_post":0,"p_pre":0,"p_post":1,"name":"Alabama"},"AR":{"r_pre":0,"r_post":0,"p_pre":2,"p_post":0,"name":"Arkansas"},"AZ":{"r_pre":0,"r_post":0,"p_pre":0,"p_post":0,"name":"Arizona"},"CA":{"r_pre":1,"r_post":3,"p_pre":0,"p_post":1,"name":"California"},"CO":{"r_pre":6,"r_post":8,"p_pre":0,"p_post":0,"name":"Colorado"},"CT":{"r_pre":3,"r_post":1,"p_pre":0,"p_post":0,"name":"Connecticut"},"DC":{"r_pre":4,"r_post":0,"p_pre":0,"p_post":1,"name":"District of Columbia"},"DE":{"r_pre":1,"r_post":8,"p_pre":0,"p_post":0,"name":"Delaware"},"FL":{"r_pre":0,"r_post":0,"p_pre":0,"p_post":1,"name":"Florida"},"GA":{"r_pre":0,"r_post":0,"p_pre":1,"p_post":0,"name":"Georgia"},"HI":{"r_pre":5,"r_post":0,"p_pre":0,"p_post":2,"name":"Hawaii"},"IA":{"r_pre":1,"r_post":1,"p_pre":1,"p_post":2,"name":"Iowa"},"ID":{"r_pre":0,"r_post":0,"p_pre":0,"p_post":0,"name":"Idaho"},"IL":{"r_pre":1,"r_post":2,"p_pre":0,"p_post":0,"name":"Illinois"},"IN":{"r_pre":1,"r_post":0,"p_pre":0,"p_post":1,"name":"Indiana"},"KS":{"r_pre":0,"r_post":0,"p_pre":0,"p_post":0,"name":"Kansas"},"KY":{"r_pre":0,"r_post":0,"p_pre":1,"p_post":0,"name":"Kentucky"},"LA":{"r_pre":0,"r_post":0,"p_pre":0,"p_post":1,"name":"Louisiana"},"MA":{"r_pre":1,"r_post":2,"p_pre":0,"p_post":1,"name":"Massachusetts"},"MD":{"r_pre":0,"r_post":1,"p_pre":0,"p_post":1,"name":"Maryland"},"ME":{"r_pre":1,"r_post":4,"p_pre":0,"p_post":0,"name":"Maine"},"MI":{"r_pre":0,"r_post":5,"p_pre":0,"p_post":1,"name":"Michigan"},"MN":{"r_pre":0,"r_post":5,"p_pre":0,"p_post":0,"name":"Minnesota"},"MO":{"r_pre":0,"r_post":0,"p_pre":1,"p_post":0,"name":"Missouri"},"MS":{"r_pre":0,"r_post":0,"p_pre":0,"p_post":1,"name":"Mississippi"},"MT":{"r_pre":0,"r_post":0,"p_pre":1,"p_post":0,"name":"Montana"},"NC":{"r_pre":0,"r_post":0,"p_pre":0,"p_post":5,"name":"North Carolina"},"ND":{"r_pre":0,"r_post":0,"p_pre":1,"p_post":0,"name":"North Dakota"},"NE":{"r_pre":0,"r_post":0,"p_pre":0,"p_post":1,"name":"Nebraska"},"NH":{"r_pre":0,"r_post":0,"p_pre":0,"p_post":0,"name":"New Hampshire"},"NJ":{"r_pre":3,"r_post":0,"p_pre":0,"p_post":2,"name":"New Jersey"},"NM":{"r_pre":6,"r_post":2,"p_pre":0,"p_post":0,"name":"New Mexico"},"NV":{"r_pre":4,"r_post":0,"p_pre":0,"p_post":0,"name":"Nevada"},"NY":{"r_pre":7,"r_post":2,"p_pre":0,"p_post":1,"name":"New York"},"OH":{"r_pre":0,"r_post":0,"p_pre":2,"p_post":0,"name":"Ohio"},"OK":{"r_pre":0,"r_post":0,"p_pre":1,"p_post":0,"name":"Oklahoma"},"OR":{"r_pre":3,"r_post":2,"p_pre":0,"p_post":0,"name":"Oregon"},"PA":{"r_pre":0,"r_post":0,"p_pre":0,"p_post":0,"name":"Pennsylvania"},"RI":{"r_pre":4,"r_post":1,"p_pre":0,"p_post":0,"name":"Rhode Island"},"SC":{"r_pre":0,"r_post":0,"p_pre":0,"p_post":1,"name":"South Carolina"},"SD":{"r_pre":0,"r_post":0,"p_pre":1,"p_post":1,"name":"South Dakota"},"TN":{"r_pre":0,"r_post":0,"p_pre":1,"p_post":1,"name":"Tennessee"},"TX":{"r_pre":1,"r_post":0,"p_pre":0,"p_post":0,"name":"Texas"},"UT":{"r_pre":0,"r_post":0,"p_pre":1,"p_post":1,"name":"Utah"},"VA":{"r_pre":7,"r_post":0,"p_pre":0,"p_post":0,"name":"Virginia"},"VT":{"r_pre":0,"r_post":6,"p_pre":0,"p_post":0,"name":"Vermont"},"WA":{"r_pre":6,"r_post":6,"p_pre":0,"p_post":0,"name":"Washington"},"WI":{"r_pre":0,"r_post":0,"p_pre":0,"p_post":0,"name":"Wisconsin"},"WV":{"r_pre":0,"r_post":0,"p_pre":0,"p_post":0,"name":"West Virginia"},"WY":{"r_pre":0,"r_post":0,"p_pre":0,"p_post":0,"name":"Wyoming"}},"did_r":-0.5784883720930233,"p_r":0.59606,"did_p":0.8837209302325582,"p_p":0.053345};
+function bruenRender(){
+  var tr=BRUEN.treated,all=Object.keys(BRUEN.counts),co=all.filter(function(a){return tr.indexOf(a)<0;});
+  function g(set,k){var s=0;set.forEach(function(a){s+=BRUEN.counts[a][k];});return s;}
+  function row(name,set){return '<tr><td>'+name+'</td><td class="num">'+set.length+'</td>'+['r_pre','r_post','p_pre','p_post'].map(function(k){return '<td class="num">'+g(set,k)+'</td>';}).join('')+'</tr>';}
+  $('bruen-table').innerHTML='<tr><th>Group</th><th>States</th><th>Restrictive before</th><th>Restrictive after</th><th>Permissive before</th><th>Permissive after</th></tr>'+row('Former may-issue',tr)+row('Other states',co);
+  $('bruen-sum').textContent='Windows: '+BRUEN.pre[0]+' to '+BRUEN.pre[1]+' and '+BRUEN.post[0]+' to '+BRUEN.post[1]+' ('+BRUEN.window_days+' days each). Former may-issue states: '+tr.join(', ')+'. Per state, the change in restrictive laws differs from the other states by '+fmt(BRUEN.did_r,2)+' (permutation p = '+BRUEN.p_r.toFixed(2)+'). The change in permissive laws differs by '+fmt(BRUEN.did_p,2)+' (p = '+BRUEN.p_p.toFixed(2)+'); most of these are the permit changes that Bruen required. This count cannot see the main post-Bruen response. RAND codes an omnibus act as one or two entries and has no class for sensitive places. Massachusetts Chapter 135 appears only as one untraceable-firearms entry (October 2, 2024).';
+}
+
+/* ---------- RAND State Firearm Law Database 6.0: state-year carry regimes and assault-weapon bans ----------
+   ccw: per year [prohibited, may issue, shall issue, permitless] shares of the year; aw: share of the year under a state ban;
+   fedAW: share of the year under the federal ban. Built by scripts/build_states.py (see the page notes for the rules). */
+var CARRY={"years":[1979,2025],"states":[{"ab":"AK","name":"Alaska","pop":733871,"ccw":[[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[0.748,0.0,0.252,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,0.688,0.312],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0]],"aw":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]},{"ab":"AL","name":"Alabama","pop":5113924,"ccw":[[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0]],"aw":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]},{"ab":"AR","name":"Arkansas","pop":3067308,"ccw":[[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[0.145,0.0,0.855,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,0.663,0.337],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0]],"aw":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]},{"ab":"AZ","name":"Arizona","pop":7435754,"ccw":[[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[0.282,0.0,0.718,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,0.573,0.427],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0]],"aw":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]},{"ab":"CA","name":"California","pop":39082192,"ccw":[[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,0.474,0.526,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0]],"aw":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0]},{"ab":"CO","name":"Colorado","pop":5859756,"ccw":[[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,0.373,0.627,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0]],"aw":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]},{"ab":"CT","name":"Connecticut","pop":3612903,"ccw":[[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0]],"aw":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.252,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0]},{"ab":"DC","name":"District of Columbia","pop":678899,"ccw":[[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.619,0.381,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[0.77,0.23,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,0.762,0.238,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0]],"aw":[1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0]},{"ab":"DE","name":"Delaware","pop":1033613,"ccw":[[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0]],"aw":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.507,1.0,1.0,1.0]},{"ab":"FL","name":"Florida","pop":22631206,"ccw":[[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,0.748,0.252,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,0.496,0.504],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0]],"aw":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]},{"ab":"GA","name":"Georgia","pop":11027778,"ccw":[[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,0.647,0.353,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,0.277,0.723],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0]],"aw":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]},{"ab":"HI","name":"Hawaii","pop":1435897,"ccw":[[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,0.474,0.526,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0]],"aw":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.503,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0]},{"ab":"IA","name":"Iowa","pop":3214876,"ccw":[[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,0.496,0.504],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0]],"aw":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]},{"ab":"ID","name":"Idaho","pop":1970238,"ccw":[[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,0.258,0.742,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,0.497,0.503],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0]],"aw":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]},{"ab":"IL","name":"Illinois","pop":12504000,"ccw":[[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[0.518,0.0,0.482,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0]],"aw":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.975,1.0,1.0]},{"ab":"IN","name":"Indiana","pop":6873563,"ccw":[[0.0,1.0,0.0,0.0],[0.0,0.038,0.962,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,0.496,0.504],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0]],"aw":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]},{"ab":"KS","name":"Kansas","pop":2934211,"ccw":[[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,0.496,0.504],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0]],"aw":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]},{"ab":"KY","name":"Kentucky","pop":4531250,"ccw":[[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[0.749,0.0,0.251,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,0.482,0.518],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0]],"aw":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]},{"ab":"LA","name":"Louisiana","pop":4582222,"ccw":[[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,0.298,0.702,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,0.582,0.418],[0.0,0.0,0.0,1.0]],"aw":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]},{"ab":"MA","name":"Massachusetts","pop":7000000,"ccw":[[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,0.474,0.526,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0]],"aw":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.197,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0]},{"ab":"MD","name":"Maryland","pop":6172414,"ccw":[[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,0.474,0.526,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0]],"aw":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.586,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0]},{"ab":"ME","name":"Maine","pop":1392308,"ccw":[[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,0.715,0.285,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,0.786,0.214],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0]],"aw":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]},{"ab":"MI","name":"Michigan","pop":10065574,"ccw":[[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,0.496,0.504,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0]],"aw":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]},{"ab":"MN","name":"Minnesota","pop":5762376,"ccw":[[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,0.581,0.419,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0]],"aw":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]},{"ab":"MO","name":"Missouri","pop":6201005,"ccw":[[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[0.153,0.0,0.847,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0]],"aw":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]},{"ab":"MS","name":"Mississippi","pop":2934783,"ccw":[[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[0.496,0.0,0.504,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,0.287,0.713],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0]],"aw":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]},{"ab":"MT","name":"Montana","pop":1133028,"ccw":[[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,0.37,0.63,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,0.132,0.868],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0]],"aw":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]},{"ab":"NC","name":"North Carolina","pop":10857988,"ccw":[[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[0.521,0.0,0.479,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0]],"aw":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]},{"ab":"ND","name":"North Dakota","pop":785124,"ccw":[[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[0.285,0.0,0.715,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,0.581,0.419],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0]],"aw":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]},{"ab":"NE","name":"Nebraska","pop":1981818,"ccw":[[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[0.507,0.493,0.0,0.0],[0.0,0.663,0.337,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,0.668,0.332],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0]],"aw":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]},{"ab":"NH","name":"New Hampshire","pop":1407407,"ccw":[[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,0.142,0.858],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0]],"aw":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]},{"ab":"NJ","name":"New Jersey","pop":9357143,"ccw":[[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,0.474,0.526,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0]],"aw":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.592,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0]},{"ab":"NM","name":"New Mexico","pop":2116541,"ccw":[[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0]],"aw":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]},{"ab":"NV","name":"Nevada","pop":3197802,"ccw":[[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,0.512,0.488,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0]],"aw":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]},{"ab":"NY","name":"New York","pop":19478261,"ccw":[[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,0.474,0.526,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0]],"aw":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.167,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0]},{"ab":"OH","name":"Ohio","pop":11790541,"ccw":[[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[0.268,0.0,0.732,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,0.447,0.553],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0]],"aw":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]},{"ab":"OK","name":"Oklahoma","pop":4051020,"ccw":[[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,0.833,0.167],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0]],"aw":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]},{"ab":"OR","name":"Oregon","pop":4222930,"ccw":[[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0]],"aw":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]},{"ab":"PA","name":"Pennsylvania","pop":12992000,"ccw":[[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,0.468,0.532,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0]],"aw":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]},{"ab":"RI","name":"Rhode Island","pop":1100000,"ccw":[[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0]],"aw":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]},{"ab":"SC","name":"South Carolina","pop":5373737,"ccw":[[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,0.642,0.358,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,0.18,0.82],[0.0,0.0,0.0,1.0]],"aw":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]},{"ab":"SD","name":"South Dakota","pop":919075,"ccw":[[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,0.195,0.805,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,0.496,0.504],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0]],"aw":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]},{"ab":"TN","name":"Tennessee","pop":7133005,"ccw":[[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[0.833,0.167,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,0.749,0.251,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,0.496,0.504],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0]],"aw":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]},{"ab":"TX","name":"Texas","pop":30479167,"ccw":[[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,0.666,0.334],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0]],"aw":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]},{"ab":"UT","name":"Utah","pop":3413534,"ccw":[[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,0.329,0.671,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,0.34,0.66],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0]],"aw":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]},{"ab":"VA","name":"Virginia","pop":8734848,"ccw":[[0.0,0.0,0.0,0.0],[0.0,0.0,0.0,0.0],[0.0,0.0,0.0,0.0],[0.0,0.0,0.0,0.0],[0.0,0.0,0.0,0.0],[0.0,0.0,0.0,0.0],[0.0,0.0,0.0,0.0],[0.0,0.0,0.0,0.0],[0.0,0.0,0.0,0.0],[0.0,0.0,0.0,0.0],[0.0,0.0,0.0,0.0],[0.0,0.0,0.0,0.0],[0.0,0.0,0.0,0.0],[0.0,0.0,0.0,0.0],[0.0,0.0,0.0,0.0],[0.0,0.0,0.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0]],"aw":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]},{"ab":"VT","name":"Vermont","pop":649573,"ccw":[[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0]],"aw":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]},{"ab":"WA","name":"Washington","pop":7820513,"ccw":[[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0]],"aw":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.688,1.0,1.0]},{"ab":"WI","name":"Wisconsin","pop":5927419,"ccw":[[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[1.0,0.0,0.0,0.0],[0.556,0.0,0.444,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0]],"aw":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]},{"ab":"WV","name":"West Virginia","pop":1767296,"ccw":[[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,0.6,0.4,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,0.393,0.607],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0]],"aw":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]},{"ab":"WY","name":"Wyoming","pop":583673,"ccw":[[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,1.0,0.0,0.0],[0.0,0.748,0.252,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,1.0,0.0],[0.0,0.0,0.496,0.504],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0],[0.0,0.0,0.0,1.0]],"aw":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]}],"fedAW":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.301,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.699,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]};
+var CY0=CARRY.years[0],CY1=CARRY.years[1],stateByAb={};
+CARRY.states.forEach(function(st){stateByAb[st.ab]=st;});
+function carryYearIndex(y){return clamp(Math.floor(y),CY0,CY1)-CY0;}
+/* ACS 2024 5-year, B08105B and B08105H: share of workers 16+ who commute by public transportation
+   [Black alone, White alone not Hispanic, Black workers]. Built by scripts/build_transit.py. */
+var TRANSIT={"AK":[0.0126,0.0067,12571],"AL":[0.0064,0.0015,536373],"AR":[0.0074,0.0021,178058],"AZ":[0.0318,0.0062,162060],"CA":[0.0546,0.0184,931332],"CO":[0.0484,0.0116,120359],"CT":[0.0837,0.0204,190254],"DC":[0.2439,0.1689,118612],"DE":[0.0478,0.0062,108434],"FL":[0.0298,0.0042,1535884],"GA":[0.0219,0.0042,1552430],"HI":[0.0353,0.0156,15946],"IA":[0.0249,0.0051,54054],"ID":[0.0126,0.005,7754],"IL":[0.1221,0.0413,703975],"IN":[0.0238,0.0036,274279],"KS":[0.0132,0.0029,74205],"KY":[0.0346,0.0031,152109],"LA":[0.0195,0.0032,549250],"MA":[0.1353,0.0458,233235],"MD":[0.075,0.0184,909042],"ME":[0.0478,0.0034,11891],"MI":[0.037,0.0044,527575],"MN":[0.0649,0.0113,178061],"MO":[0.0435,0.0034,300966],"MS":[0.0038,0.0018,424180],"MT":[0.0333,0.0062,2223],"NC":[0.0143,0.0032,1007780],"ND":[0.01,0.0021,14273],"NE":[0.0238,0.0029,42448],"NH":[0.0216,0.0042,10487],"NJ":[0.1195,0.0509,558420],"NM":[0.0067,0.0048,20983],"NV":[0.0597,0.0142,128607],"NY":[0.371,0.1184,1230919],"OH":[0.0449,0.0044,610431],"OK":[0.0086,0.0018,119324],"OR":[0.0795,0.0176,39164],"PA":[0.1523,0.0176,584810],"RI":[0.0434,0.0116,29635],"SC":[0.0071,0.0018,572661],"SD":[0.0282,0.0039,10774],"TN":[0.0129,0.0021,503405],"TX":[0.0188,0.0045,1728359],"US":[0.0667,0.0181,18200786],"UT":[0.0336,0.0141,19932],"VA":[0.0317,0.0163,781120],"VT":[0.0167,0.007,4081],"WA":[0.0866,0.0264,152514],"WI":[0.0637,0.0065,141485],"WV":[0.014,0.004,21497],"WY":[0.009,0.0091,2565]};
+/* Transit is a sensitive place for licensed carry (coverage confirmed in the sources below). start = year + fraction. */
+var SP_LAWS=[
+  {ab:'NY',start:2022.67,law:'Concealed Carry Improvement Act, in force Sept. 1, 2022',url:'https://www.nysenate.gov/legislation/laws/PEN/265.01-E'},
+  {ab:'NJ',start:2022.97,law:'Chapter 131, Dec. 22, 2022',url:'https://newjerseymonitor.com/2025/09/11/where-you-can-and-cant-take-guns-in-nj-following-appeals-court-ruling/'},
+  {ab:'MD',start:2023.75,law:'SB 1 (2023); Oct. 1, 2023 date not yet confirmed',url:'https://firearmslaw.duke.edu/2023/10/litigation-highlight-federal-judge-weighs-marylands-post-bruen-sensitive-places-law'},
+  {ab:'IL',start:2014.0,law:'2013 carry law (licenses from 2014); upheld by the Seventh Circuit in 2025',url:'https://news.bgov.com/litigation/chicagos-mass-transit-gun-ban-faces-scrutiny-under-history-test'}
+];
+function spFrac(ab,y){var f=0;SP_LAWS.forEach(function(l){if(l.ab===ab)f=Math.max(f,clamp(y+1-l.start,0,1));});return f;}
+function stateBO(st,i){
+  var v=st.ccw[i];
+  if(v[0]+v[1]+v[2]+v[3]<0.5)return null;
+  var cB=v[0]*S.sc0+v[1]*S.sc1+v[2]*S.sc2+v[3]*S.sc3,cO=v[0]*S.sc0+v[1]*S.sc1*S.delta+v[2]*S.sc2+v[3]*S.sc3;
+  var sp=S.useSP?spFrac(st.ab,CY0+i):0,tr=TRANSIT[st.ab]||[0,0];
+  cB*=1-sp*Math.min(1,(tr[1]||0)*S.spScale);cO*=1-sp*Math.min(1,(tr[0]||0)*S.spScale);
+  var ban=Math.max(st.aw[i],CARRY.fedAW[i]),A=1-S.hban*ban;
+  if(S.useParity&&(S.qB>0||S.qO>0)){var pB=1-S.hban*ban*(1-S.qB),pO=1-S.hban*ban*(1-S.qO);if(pB>0)cO*=pO/pB;}
+  var w=S.useParity?1:S.wc;
+  return {B:w*cB+(1-w)*A,O:(w*cO+(1-w)*A)*(1-S.ogap),ban:ban,v:v,sp:sp};
+}
+function pFed(y){return y<1934?1:(y<1986?S.pNFA:S.pHughes);}
+function banNational(i){var tp=0,b=0;CARRY.states.forEach(function(st){tp+=st.pop;b+=st.pop*Math.max(st.aw[i],CARRY.fedAW[i]);});return b/tp;}
+function parityAt(y,st){
+  var b=0;
+  if(y>=CY0){
+    var i=carryYearIndex(y);
+    if(st)b=Math.max(st.aw[i],CARRY.fedAW[i]);
+    else if(S.useRand&&S.scope!=='US'&&stateByAb[S.scope])b=Math.max(stateByAb[S.scope].aw[i],CARRY.fedAW[i]);
+    else if(S.useRand)b=banNational(i);
+    else b=CARRY.fedAW[i];
+  }
+  return pFed(y)*(1-S.hban*b*(1-S.qB));
+}
+function parityOAt(y){
+  var o=clamp(fwAt0(y).O,0,1),b=0;
+  if(y>=CY0){
+    var i=carryYearIndex(y);
+    if(S.useRand&&S.scope!=='US'&&stateByAb[S.scope])b=Math.max(stateByAb[S.scope].aw[i],CARRY.fedAW[i]);
+    else if(S.useRand)b=banNational(i);
+    else b=CARRY.fedAW[i];
+  }
+  return o*pFed(y)*(1-S.hban*b*(1-S.qO));
+}
+function updateParityUI(){
+  $('s-kappa').value=S.kappa;$('o-kappa').textContent=fmt(S.kappa);
+  $('c-parity').checked=S.useParity;
+  ['pNFA','pHughes'].forEach(function(k){$('s-'+k).value=S[k];$('o-'+k).textContent=S[k].toFixed(2);});
+  var r=yearRange(),W0=460,H0=150,ml=40,mr=12,mt=10,mb=24,iw=W0-ml-mr,ih=H0-mt-mb,h='',y;
+  function xx(yr){return ml+(yr-r[0])/Math.max(1,r[1]-r[0])*iw;}
+  function yy(v){return mt+(1-v)*ih;}
+  [0,0.5,1].forEach(function(v){h+='<line x1="'+ml+'" y1="'+yy(v)+'" x2="'+(W0-mr)+'" y2="'+yy(v)+'" style="stroke:var(--grid)"/><text x="'+(ml-6)+'" y="'+(yy(v)+4)+'" text-anchor="end" class="t-mono muted" font-size="11">'+v.toFixed(1)+'</text>';});
+  var d='';for(y=r[0];y<=r[1];y++)d+=(y===r[0]?'M':'L')+xx(y).toFixed(1)+' '+yy(parityAt(y)).toFixed(1);
+  h+='<path d="'+d+'" fill="none" style="stroke:var(--blue)" stroke-width="2.2"/>';
+  var dO='';for(y=r[0];y<=r[1];y++)dO+=(y===r[0]?'M':'L')+xx(y).toFixed(1)+' '+yy(parityOAt(y)).toFixed(1);
+  h+='<path d="'+dO+'" fill="none" style="stroke:var(--rg2)" stroke-width="2" stroke-dasharray="5 4"/>';
+  [1934,1986,1994,2004].forEach(function(e){if(e<r[0]||e>r[1])return;h+='<line x1="'+xx(e).toFixed(1)+'" y1="'+mt+'" x2="'+xx(e).toFixed(1)+'" y2="'+(mt+ih)+'" style="stroke:var(--rule)" stroke-dasharray="2 3"/>';});
+  h+='<text x="'+(xx(1934)+4).toFixed(1)+'" y="'+yy(0.68).toFixed(1)+'" class="t-mono muted" font-size="10">NFA 1934</text>';
+  h+='<text x="'+(xx(1986)-4).toFixed(1)+'" y="'+yy(0.08).toFixed(1)+'" text-anchor="end" class="t-mono muted" font-size="10">Hughes 1986 · AWB 1994–2004</text>';
+  for(y=Math.ceil(r[0]/50)*50;y<=r[1];y+=50)h+='<text x="'+xx(y).toFixed(1)+'" y="'+(H0-6)+'" text-anchor="middle" class="t-mono muted" font-size="11">'+y+'</text>';
+  var cx4=xx(S.year);h+='<line x1="'+cx4.toFixed(1)+'" y1="'+mt+'" x2="'+cx4.toFixed(1)+'" y2="'+(mt+ih)+'" style="stroke:var(--rule)" stroke-width="1.5"/>';
+  $('par-chart').innerHTML=h;
+  var yr=Math.floor(S.year);
+  $('par-read').textContent=yr+' · federal level '+pFed(yr).toFixed(2)+' · parity '+parityAt(yr).toFixed(2)+(S.useParity?' · drives ψm':' · not in use')+' · O parity '+parityOAt(yr).toFixed(2);
+}
+function randNational(i){
+  var tw=0,B=0,O=0,ban=0,v=[0,0,0,0];
+  CARRY.states.forEach(function(st){
+    var r=stateBO(st,i);if(!r)return;
+    tw+=st.pop;B+=st.pop*r.B;O+=st.pop*r.O;ban+=st.pop*r.ban;
+    for(var k=0;k<4;k++)v[k]+=st.pop*r.v[k];
+  });
+  return {B:B/tw,O:O/tw,ban:ban/tw,v:v.map(function(x){return x/tw;}),name:'United States'};
+}
+function randAt(y){
+  var i=carryYearIndex(y);
+  if(S.scope!=='US'&&stateByAb[S.scope]){
+    var r=stateBO(stateByAb[S.scope],i);
+    if(r){r.name=stateByAb[S.scope].name;return r;}
+  }
+  return randNational(i);
+}
+function drawRegChart(){
+  var W0=460,H0=170,ml=40,mr=12,mt=10,mb=24,iw=W0-ml-mr,ih=H0-mt-mb,h='',y,k;
+  function xx(yr){return ml+(yr-CY0)/(CY1-CY0)*iw;}
+  function yy(v){return mt+(1-v)*ih;}
+  var rows=[];for(y=CY0;y<=CY1;y++)rows.push(randNational(y-CY0));
+  var cum=rows.map(function(){return 0;});
+  for(k=0;k<4;k++){
+    var top=[],bot=[];
+    rows.forEach(function(r,i){var yr=CY0+i;bot.push([xx(yr),yy(cum[i])]);cum[i]+=r.v[k];top.push([xx(yr),yy(cum[i])]);});
+    var d=top.map(function(p,i){return (i?'L':'M')+p[0].toFixed(1)+' '+p[1].toFixed(1);}).join('')+bot.reverse().map(function(p){return 'L'+p[0].toFixed(1)+' '+p[1].toFixed(1);}).join('')+'Z';
+    h+='<path d="'+d+'" style="fill:var(--rg'+k+')" fill-opacity=".8"/>';
+  }
+  h+='<path d="'+rows.map(function(r,i){return (i?'L':'M')+xx(CY0+i).toFixed(1)+' '+yy(r.ban).toFixed(1);}).join('')+'" fill="none" style="stroke:var(--rule)" stroke-width="1.8" stroke-dasharray="5 4"/>';
+  [0,0.5,1].forEach(function(v){h+='<text x="'+(ml-6)+'" y="'+(yy(v)+4)+'" text-anchor="end" class="t-mono muted" font-size="11">'+Math.round(v*100)+'%</text>';});
+  for(y=1980;y<=CY1;y+=10)h+='<text x="'+xx(y)+'" y="'+(H0-6)+'" text-anchor="middle" class="t-mono muted" font-size="11">'+y+'</text>';
+  if(S.year>=CY0){var cx3=xx(Math.min(Math.floor(S.year),CY1));h+='<line x1="'+cx3.toFixed(1)+'" y1="'+mt+'" x2="'+cx3.toFixed(1)+'" y2="'+(mt+ih)+'" style="stroke:var(--blue)" stroke-width="2"/>';}
+  $('reg-chart').innerHTML=h;
+}
+function updateRandUI(){
+  $('c-rand').checked=S.useRand;$('c-states').checked=S.showStates;$('sel-scope').value=S.scope;
+  ['wc','sc0','sc1','sc2','sc3','delta','hban','ogap'].forEach(function(k){$('s-'+k).value=S[k];$('o-'+k).textContent=S[k].toFixed(2);});
+  var yr=clamp(Math.floor(S.year),CY0,CY1),q=randAt(yr),pct=function(x){return Math.round(100*x)+'%';};
+  var t=(S.year<CY0?'Before '+CY0+', the table drives W. Showing '+CY0+'.\n':'')+yr+' · '+q.name+'\nprohibited '+pct(q.v[0])+' · may issue '+pct(q.v[1])+' · shall issue '+pct(q.v[2])+' · permitless '+pct(q.v[3])+'\nunder an assault-weapon ban '+pct(q.ban)+(CARRY.fedAW[yr-CY0]>0?' (federal ban in force)':'')+' · B '+q.B.toFixed(2)+' · O '+q.O.toFixed(2);
+  $('rand-read').textContent=t;$('rand-read').style.whiteSpace='pre-line';
+  var RN=['prohibited','may issue','shall issue','permitless'],i=yr-CY0;
+  var th2='<tr><th>State</th><th>Carry</th><th>Ban</th><th>B</th><th>O</th><th>ψm</th><th>ψs</th><th>Clock</th><th>M</th></tr>';
+  CARRY.states.slice().sort(function(a,b){return a.name<b.name?-1:1;}).forEach(function(st){
+    var r=stateBO(st,i);
+    if(!r){th2+='<tr><td>'+esc(st.name)+'</td><td colspan="8">no carry law in the database for '+yr+'</td></tr>';return;}
+    var w=fwW(r.B,r.O,yr,parityAt(yr,st)),M=Mof(w[0],w[1],yr),dom=r.v.indexOf(Math.max.apply(null,r.v));
+    th2+='<tr'+(st.ab===S.scope?' style="font-weight:600"':'')+'><td>'+esc(st.name)+'</td><td>'+RN[dom]+'</td><td>'+(r.ban>0?(r.ban>=0.995?'yes':Math.round(r.ban*100)+'%'):'no')+'</td><td class="num">'+r.B.toFixed(2)+'</td><td class="num">'+r.O.toFixed(2)+'</td><td class="num">'+fmt(w[0],1)+'</td><td class="num">'+fmt(w[1],1)+'</td><td class="num">'+(mag(w[0],w[1])<0.5?'—':clock(theta(w[0],w[1])))+'</td><td class="num '+(M>S.tau?'tout':'tin')+'">'+fmt(M,1)+'</td></tr>';
+  });
+  $('state-table').innerHTML=th2;
+  drawRegChart();
+}
+(function(){
+  var sel=$('sel-scope'),opts='<option value="US">United States (population-weighted)</option>';
+  CARRY.states.slice().sort(function(a,b){return a.name<b.name?-1:1;}).forEach(function(st){opts+='<option value="'+st.ab+'">'+esc(st.name)+'</option>';});
+  sel.innerHTML=opts;
+  if(S.scope!=='US'&&!stateByAb[S.scope])S.scope='US';
+})();
+$('c-rand').addEventListener('change',function(e){S.useRand=e.target.checked;if(S.drive)applyTL();refresh();scheduleSave();});
+$('c-states').addEventListener('change',function(e){S.showStates=e.target.checked;refresh();scheduleSave();});
+$('sel-scope').addEventListener('change',function(e){S.scope=e.target.value;if(S.drive)applyTL();refresh();scheduleSave();});
+['wc','sc0','sc1','sc2','sc3','delta','hban','ogap'].forEach(function(k){
+  $('s-'+k).addEventListener('input',function(e){S[k]=+e.target.value;if(S.drive)applyTL();refresh();scheduleSave();});
+});
+
+$('c-parity').addEventListener('change',function(e){S.useParity=e.target.checked;if(S.drive)applyTL();refresh();scheduleSave();});
+['pNFA','pHughes'].forEach(function(k){$('s-'+k).addEventListener('input',function(e){S[k]=+e.target.value;if(S.drive)applyTL();refresh();scheduleSave();});});
+
+/* ---------- sensitive places, grandfather clauses, coded post-Bruen outcomes ---------- */
+function updateSPUI(){
+  $('c-sp').checked=S.useSP;
+  ['spScale','qB','qO'].forEach(function(k){$('s-'+k).value=S[k];$('o-'+k).textContent=S[k].toFixed(2);});
+  var h='<tr><th>State</th><th>Transit ban for licensed carry</th><th>Black transit share</th><th>White NH share</th><th>Ratio</th></tr>';
+  SP_LAWS.forEach(function(l){var t=TRANSIT[l.ab]||[0,0];h+='<tr><td>'+l.ab+'</td><td><a href="'+l.url+'" target="_blank" rel="noopener">'+esc(l.law)+'</a></td><td class="num">'+(100*t[0]).toFixed(1)+'%</td><td class="num">'+(100*t[1]).toFixed(1)+'%</td><td class="num">'+(t[1]?(t[0]/t[1]).toFixed(1):'—')+'</td></tr>';});
+  var us=TRANSIT.US;h+='<tr><td>U.S.</td><td>all workers, for reference</td><td class="num">'+(100*us[0]).toFixed(1)+'%</td><td class="num">'+(100*us[1]).toFixed(1)+'%</td><td class="num">'+(us[0]/us[1]).toFixed(1)+'</td></tr>';
+  $('sp-table').innerHTML=h;
+}
+var PB2={forced:['CA','HI','MA','MD','NJ','NY'],
+  rows:[
+    ['NY','A',1,'Concealed Carry Improvement Act (2022): parks, zoos, bars, theaters, transit, and more','https://everytownlaw.org/press/victory-for-gun-safety-in-the-courts-second-circuit-court-of-appeals-broadly-upholds-new-yorks-life-saving-gun-safety-law/'],
+    ['NJ','A',1,'Chapter 131 (2022): 25 categories, including public transit','https://newjerseymonitor.com/2025/09/10/federal-judges-uphold-new-jersey-law-restricting-guns-in-sensitive-places/'],
+    ['MD','A',1,'SB 1 (2023): mass transit, parks, hospitals, museums, stadiums, and more','https://firearmslaw.duke.edu/2023/10/litigation-highlight-federal-judge-weighs-marylands-post-bruen-sensitive-places-law'],
+    ['HI','A',1,'Act 52 (2023): parks, beaches, stadiums, bars, polling places, and more','https://constitutioncenter.org/blog/the-supreme-court-considers-expanding-gun-possession-guidelines'],
+    ['CA','A',1,'SB 2 (2023): 26 categories','https://www.courthousenews.com/ninth-circuit-takes-on-challenge-to-california-firearms-ban-in-sensitive-places/'],
+    ['MA','A',0,'Chapter 135 (2024): schools, government buildings, polling places (fewer than 10)','https://www.axios.com/local/boston/2026/10/13/massachusetts-question-9-gun-law-ballot-2026-vote-yes-no-repeal-ghost-guns-red-flag'],
+    ['CO','A',0,'SB24-131 (2024): cut from 19 categories to about five','https://cpr.org/2024/04/02/colorado-democrats-eliminate-dozens-of-sensitive-spaces-from-gun-control-bill'],
+    ['WA','A',0,'SB 5444 (2024): transit, libraries, zoos, but license holders are exempt','https://senatedemocrats.wa.gov/valdez/2024/03/26/valdez-bill-prohibiting-firearms-in-certain-public-spaces-signed-into-law/'],
+    ['MA','B',1,'Chapter 135 (signed July 25, 2024): definition rewritten; grandfather date August 1, 2024','https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXX/Chapter140/Section121'],
+    ['DE','B',1,'Lethal Firearms Safety Act (June 30, 2022); RAND DE1064',''],
+    ['IL','B',1,'Protect Illinois Communities Act (Jan. 10, 2023); RAND IL1079',''],
+    ['WA','B',1,'HB 1240 (Apr. 25, 2023); RAND WA1073',''],
+    ['CT','B',1,'2023 widening of the feature definition (secondary source)','https://gunlawsbystate.com/assault-weapon-bans-by-state-2026-which-states-prohibit-military-style-firearms'],
+    ['RI','B',1,'Assault Weapons Ban Act of 2025 (signed June 26, 2025; in force July 1, 2026; secondary source)','https://factually.co/fact-checks/politics/states-assault-weapon-magazine-bans-2025-2026-effective-dates-penalties-115dd6'],
+    ['CO','B',0,'SB25-003 (2025): a purchase permit and course, not a ban (secondary source)','https://factually.co/fact-checks/politics/states-assault-weapon-magazine-bans-2025-2026-effective-dates-penalties-115dd6']
+  ]};
+function hyperTail(N,K,n,k){
+  function lc(a,b){if(b<0||b>a)return -Infinity;var s=0;for(var i=1;i<=b;i++)s+=Math.log(a-b+i)-Math.log(i);return s;}
+  var p=0;for(var x=k;x<=Math.min(n,K);x++)p+=Math.exp(lc(K,x)+lc(N-K,n-x)-lc(N,n));return p;
+}
+function renderPB2(){
+  var N=CARRY.states.length,n=PB2.forced.length,h='<tr><th>Outcome</th><th>Forced states (6)</th><th>Other states ('+(N-n)+')</th><th>Chance by luck</th></tr>',sum=[];
+  ['A','B'].forEach(function(o){
+    var pos=PB2.rows.filter(function(r){return r[1]===o&&r[2]===1;}).map(function(r){return r[0];});
+    var kf=pos.filter(function(s){return PB2.forced.indexOf(s)>=0;}).length,K=pos.length,p=hyperTail(N,K,n,kf);
+    h+='<tr><td>'+(o==='A'?'A: broad sensitive-places law':'B: new or wider assault-weapon ban')+'</td><td class="num">'+kf+' of '+n+'</td><td class="num">'+(K-kf)+' of '+(N-n)+'</td><td class="num">'+(p<0.001?p.toExponential(1):p.toFixed(2))+'</td></tr>';
+    sum.push([o,kf,K-kf,p]);
+  });
+  $('pb2-table').innerHTML=h;
+  $('pb2-sum').textContent='Outcome A sits almost entirely in the six states that Bruen forced to change ('+sum[0][1]+' of 6 against '+sum[0][2]+' of '+(N-n)+'). Outcome B does not ('+sum[1][1]+' of 6 against '+sum[1][2]+' of '+(N-n)+'): the post-2022 wave of assault-weapon laws reached many states, and Massachusetts is the forced state in it. The chance figures assume the coding is complete for the other states, which a search of this size cannot promise.';
+  var l='<tr><th>State</th><th>Outcome</th><th>Coded</th><th>Law</th></tr>';
+  PB2.rows.forEach(function(r){l+='<tr><td>'+r[0]+'</td><td>'+r[1]+'</td><td>'+(r[2]?'yes':'no')+'</td><td>'+(r[4]?'<a href="'+r[4]+'" target="_blank" rel="noopener">'+esc(r[3])+'</a>':esc(r[3]))+'</td></tr>';});
+  $('pb2-list').innerHTML=l;
+}
+$('c-sp').addEventListener('change',function(e){S.useSP=e.target.checked;if(S.drive)applyTL();refresh();scheduleSave();});
+['spScale','qB','qO'].forEach(function(k){$('s-'+k).addEventListener('input',function(e){S[k]=+e.target.value;if(S.drive)applyTL();refresh();scheduleSave();});});
+
+/* ---------- Saint-Domingue, 1789-1804 (illustrative values; dates from the historical record) ---------- */
+var SD={
+  mob:[[1789,0.1],[1791.6,0.15],[1791.64,0.8],[1793.66,0.9],[1794.1,0.75],[1801.5,0.7],[1802.1,0.6],[1802.35,0.35],[1802.78,0.9],[1803.4,1],[1804,1]],
+  parO:[[1789,0.05],[1791.64,0.2],[1793.66,0.45],[1794.4,0.7],[1801.5,0.85],[1802.35,0.55],[1802.78,0.8],[1803.2,0.95],[1804,1]],
+  gcl:[[1789,40,-35],[1790.79,40,-50],[1791.1,35,-60],[1791.37,38,-30],[1791.73,30,-55],[1792.26,40,15],[1794.1,30,10],[1799.45,20,5],[1802.1,25,20],[1802.54,5,-50],[1802.78,0,-60],[1804,0,-60]],
+  pb:[[1789,15,70],[1791.73,10,75],[1792.26,5,45],[1793.66,0,20],[1794.1,-5,10],[1798,-10,5],[1802.1,10,50],[1802.78,10,50],[1803.88,-20,20],[1804,-20,20]],
+  events:[
+    [1789.6,'Declaration of the Rights of Man (August 1789)'],
+    [1790.79,'Ogé’s revolt for the rights of free men of color (October 1790)'],
+    [1791.1,'Ogé executed (February 1791)'],
+    [1791.37,'May 15, 1791 decree: rights for some free men of color'],
+    [1791.64,'Uprising of the enslaved in the North (August 1791)'],
+    [1791.73,'Decree revoked (September 1791); gens de couleur libres take up arms in the West and arm enslaved men, the “Suisses”'],
+    [1792.26,'April 4, 1792 decree: full civil rights for free people of color'],
+    [1793.66,'Sonthonax abolishes slavery in the North (August 1793)'],
+    [1794.09,'National Convention abolishes slavery (February 4, 1794)'],
+    [1799.45,'War of the South: Rigaud against Toussaint (1799–1800)'],
+    [1802.1,'Leclerc’s expedition lands (February 1802)'],
+    [1802.35,'Toussaint submits (May 1802); disarmament campaign'],
+    [1802.54,'Slavery restored in Guadeloupe (July 1802)'],
+    [1802.78,'Pétion and the gens de couleur libres join Dessalines (October 1802)'],
+    [1802.9,'Polish legionnaires begin to defect, bringing artillery skills (1802–1803)'],
+    [1803.38,'Arcahaie: the white band torn from the flag (May 1803)'],
+    [1803.88,'Vertières (November 18, 1803)'],
+    [1804.0,'Independence (January 1, 1804): no Elite left to pay a wage']
+  ]};
+function sdAt(arr,y){
+  if(y<=arr[0][0])return arr[0].slice(1);
+  for(var i=0;i<arr.length-1;i++){
+    if(y>=arr[i][0]&&y<=arr[i+1][0]){var t=(y-arr[i][0])/((arr[i+1][0]-arr[i][0])||1);return arr[i].slice(1).map(function(v,j){return v+t*(arr[i+1][j+1]-v);});}
+  }
+  return arr[arr.length-1].slice(1);
+}
+function sdM0eff(y){return S.sdM0+S.sdW*sdAt(SD.mob,y)[0]*(0.5+0.5*sdAt(SD.parO,y)[0]);}
+function sdM(m,s,y){return sdM0eff(y)-S.a*m-S.b*s;}
+var SDG=[['gcl','accent','arr-acc','gens de couleur libres'],['pb','rg3','arr-vio','petits blancs']];
+function renderSD(){
+  var y=S.sdYear,h='',end=y>=1803.995;
+  SDG.forEach(function(g){
+    var pts=[],t;
+    for(t=1789;t<=y+1e-9;t+=0.04){var q=sdAt(SD[g[0]],t);pts.push(sx(q[1]).toFixed(1)+' '+sy(q[0]).toFixed(1));}
+    if(pts.length>1)h+='<path d="M'+pts.join('L')+'" fill="none" style="stroke:var(--'+g[1]+')" stroke-width="1.6" stroke-dasharray="4 4" opacity=".75"/>';
+  });
+  if(end){
+    h+='<text x="'+CX+'" y="'+(CY-R*K+60)+'" text-anchor="middle" class="t-hand halo tau" font-size="26">1804: no Elite left to pay a wage</text>';
+    h+='<text x="'+CX+'" y="'+(CY-R*K+84)+'" text-anchor="middle" class="t-mono halo tau" font-size="14">W is undefined. max(t_post) = 0 locally.</text>';
+  } else {
+    SDG.forEach(function(g){
+      var v=sdAt(SD[g[0]],y),m=v[0],s=v[1],tx=sx(s),ty=sy(m),past=sdM(m,s,y)>S.tau;
+      if(mag(m,s)>=3)h+='<g filter="url(#w3d)"><line x1="'+CX+'" y1="'+CY+'" x2="'+tx+'" y2="'+ty+'" style="stroke:var(--'+g[1]+')" stroke-width="4.5" stroke-linecap="round" marker-end="url(#'+g[2]+')"/></g>';
+      h+='<circle cx="'+tx+'" cy="'+ty+'" r="13" style="fill:var(--'+g[1]+')" fill-opacity=".26"/>';
+      var left=s<0&&tx<360,lx=left?tx-12:tx+(s>=0?16:-16),anc=(left||s>=0)?'start':'end',ly=ty+(left?30:(m>=0?24:-14));
+      h+='<text x="'+lx+'" y="'+ly+'" text-anchor="'+anc+'" class="t-mono halo" style="fill:var(--'+g[1]+')" font-size="13">'+g[3]+(past?' · past τ':'')+'</text>';
+    });
+  }
+  h+='<circle cx="'+CX+'" cy="'+CY+'" r="12" style="fill:var(--plane);stroke:var(--rule)" stroke-width="2"/><circle cx="'+CX+'" cy="'+CY+'" r="2.5" style="fill:var(--rule)"/>';
+  h+='<text x="'+CX+'" y="'+(CY+R*K-14)+'" text-anchor="middle" class="t-mono halo tau" font-size="16">Saint-Domingue '+Math.floor(y)+'</text>';
+  return h;
+}
+function updateSDUI(){
+  $('c-sd').checked=S.sdOn;
+  $('b-sdplay').textContent=(anim&&anim.sd)?'Pause':(S.sdYear>=1803.99?'Replay':'Play');
+  $('s-sdYear').value=S.sdYear;$('o-sdYear').textContent=Math.floor(S.sdYear);
+  ['sdM0','sdW'].forEach(function(k){$('s-'+k).value=S[k];$('o-'+k).textContent=fmt(S[k]);});
+  var y=S.sdYear,ev=SD.events[0],lines=[];
+  SD.events.forEach(function(e){if(e[0]<=y+1e-6)ev=e;});
+  lines.push(Math.floor(y)+' · '+ev[1]);
+  lines.push('O mobilization '+sdAt(SD.mob,y)[0].toFixed(2)+' · O arms parity '+sdAt(SD.parO,y)[0].toFixed(2)+' · M₀ effective '+fmt(sdM0eff(y),1));
+  if(y<1803.995)SDG.forEach(function(g){var v=sdAt(SD[g[0]],y),M=sdM(v[0],v[1],y);lines.push(g[3]+': ψm '+fmt(v[0])+' · ψs '+fmt(v[1])+' · '+(mag(v[0],v[1])<0.5?'—':clock(theta(v[0],v[1])))+' · M '+fmt(M,1)+(M>S.tau?' · past τ':' · inside τ'));});
+  else lines.push('The extraction kernel is gone locally. No phasor remains.');
+  $('sd-read').textContent=lines.join('\n');$('sd-read').style.whiteSpace='pre-line';
+  var W0=460,H0=150,ml=34,mr=10,mt=10,mb=24,iw=W0-ml-mr,ih=H0-mt-mb,c='';
+  function xx(t){return ml+(t-1789)/15*iw;}
+  function yy(v){return mt+(1-v)*ih;}
+  [0,0.5,1].forEach(function(v){c+='<line x1="'+ml+'" y1="'+yy(v)+'" x2="'+(W0-mr)+'" y2="'+yy(v)+'" style="stroke:var(--grid)"/><text x="'+(ml-6)+'" y="'+(yy(v)+4)+'" text-anchor="end" class="t-mono muted" font-size="11">'+v.toFixed(1)+'</text>';});
+  SD.events.forEach(function(e){c+='<line x1="'+xx(e[0]).toFixed(1)+'" y1="'+mt+'" x2="'+xx(e[0]).toFixed(1)+'" y2="'+(mt+ih)+'" style="stroke:var(--rule)" stroke-dasharray="1 3"/>';});
+  [['mob','tau'],['parO','rg2']].forEach(function(sr){var d='';for(var t=1789;t<=1804.001;t+=0.05)d+=(t===1789?'M':'L')+xx(t).toFixed(1)+' '+yy(sdAt(SD[sr[0]],t)[0]).toFixed(1);c+='<path d="'+d+'" fill="none" style="stroke:var(--'+sr[1]+')" stroke-width="2.2"/>';});
+  [1790,1792,1794,1796,1798,1800,1802,1804].forEach(function(t){c+='<text x="'+xx(t).toFixed(1)+'" y="'+(H0-6)+'" text-anchor="middle" class="t-mono muted" font-size="11">'+t+'</text>';});
+  c+='<line x1="'+xx(y).toFixed(1)+'" y1="'+mt+'" x2="'+xx(y).toFixed(1)+'" y2="'+(mt+ih)+'" style="stroke:var(--accent)" stroke-width="2"/>';
+  $('sd-chart').innerHTML=c;
+}
+function renderSDEvents(){
+  var t='<tr><th>When</th><th>Event</th></tr>';
+  SD.events.forEach(function(e){t+='<tr><td class="num">'+Math.floor(e[0])+'</td><td>'+esc(e[1])+'</td></tr>';});
+  $('sd-events').innerHTML=t;
+}
+function playSD(){
+  stopAnim();S.sdOn=true;
+  var y0=S.sdYear>=1803.99?1789:S.sdYear;
+  if(reduced){S.sdYear=1804;refresh();scheduleSave();return;}
+  var dur=Math.max(1500,18000*(1804-y0)/15),t0=performance.now();anim={raf:0,sd:true};
+  function step(now){var t=clamp((now-t0)/dur,0,1);S.sdYear=y0+(1804-y0)*t;refresh();if(t<1)anim.raf=requestAnimationFrame(step);else{anim=null;refresh();scheduleSave();}}
+  anim.raf=requestAnimationFrame(step);
+}
+$('c-sd').addEventListener('change',function(e){S.sdOn=e.target.checked;refresh();scheduleSave();});
+$('s-sdYear').addEventListener('input',function(e){stopAnim();S.sdOn=true;S.sdYear=+e.target.value;refresh();scheduleSave();});
+['sdM0','sdW'].forEach(function(k){$('s-'+k).addEventListener('input',function(e){S[k]=+e.target.value;refresh();scheduleSave();});});
+$('b-sdplay').addEventListener('click',function(){if(anim&&anim.sd){stopAnim();refresh();}else playSD();});
+$('s-kappa').addEventListener('input',function(e){S.kappa=+e.target.value;refresh();scheduleSave();});
+
+/* ---------- undo, load, and new listeners ---------- */
+var undoFW=null;
+function keepUndo(){undoFW={fw:cloneFW(S.fw),km:S.km,ks:S.ks,step:S.step};$('b-fw-undo').disabled=false;}
+$('b-fw-ms').addEventListener('click',function(){keepUndo();S.fw=msEvents();buildTable();afterFwEdit();});
+$('b-fw-undo').addEventListener('click',function(){
+  if(!undoFW)return;
+  S.fw=undoFW.fw;S.km=undoFW.km;S.ks=undoFW.ks;S.step=undoFW.step;undoFW=null;$('b-fw-undo').disabled=true;
+  fwSort();buildTable();afterFwEdit();
+});
+$('s-gamma').addEventListener('input',function(e){S.gamma=+e.target.value;if(S.drive)applyTL();refresh();scheduleSave();});
+function decInput(k,id){
+  $(id).addEventListener('change',function(e){
+    var v=parseInt(e.target.value,10),r=yearRange();
+    if(!isNaN(v))S[k]=clamp(v,r[0],r[1]);
+    e.target.value=S[k];refresh();scheduleSave();
+  });
+}
+decInput('dy0','d-y0');decInput('dy1','d-y1');
+$('c-fitall').addEventListener('change',function(e){S.fitAll=e.target.checked;scheduleSave();});
+$('b-fit').addEventListener('click',runFit);
+$('b-apply').addEventListener('click',function(){
+  if(!lastFit)return;
+  S.M0=lastFit.best.M0;S.a=lastFit.best.a;S.b=lastFit.best.b;refresh();scheduleSave();
+});
+
+fwSort();
+(function(){var yr=yearRange();S.year=clamp(S.year,yr[0],yr[1]);S.dy0=clamp(S.dy0,yr[0],yr[1]);S.dy1=clamp(S.dy1,yr[0],yr[1]);})();
+$('d-y0').value=S.dy0;$('d-y1').value=S.dy1;
+shockCheck();
+bruenRender();
+renderPB2();
+renderSDEvents();
+if(S.drive)applyTL();
+buildTable();
+$('i-q3').value=S.q3;$('i-q4').value=S.q4;
+buildStatic();refresh();
+})();
+</script>
