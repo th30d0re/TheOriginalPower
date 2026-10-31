@@ -76,6 +76,20 @@ class ConeFrame:
             raise KeyError(f"{type(self).__name__}: none of {words} after {after:.2f}s")
         return fallback
 
+    def cue_in(self, k, *words, frac=0.0, lead=0.1):
+        """A beat inside the run's k-th turn, and never outside it.
+
+        The first spoken word starting with any of `words` when the turn still has one; otherwise
+        `frac` of the way through the turn. A rewritten or re-voiced turn then moves the beat
+        with its turn instead of sending it to the next turn that happens to share the word."""
+        index = self.run_turns[k]
+        start, end = self.BEATS[index], self.beat_end(k)
+        keys = [_norm(w) for w in words]
+        for word in self.WORDS[index]["words"]:
+            if any(_norm(word["w"]).startswith(key) for key in keys):
+                return start + max(0.0, word["t"] - lead)
+        return start + frac * (end - start)
+
     def turn_of(self, t):
         """The run-local index of the turn spoken at time `t`."""
         ks = [k for k in range(len(self.run_turns)) if self.BEATS[self.run_turns[k]] <= t + 1e-6]

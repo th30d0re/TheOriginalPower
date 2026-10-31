@@ -53,3 +53,31 @@ Checked and fine: 0–62, 63–71, 73–127 (apart from 72), 129–183, 215–28
 - No antithesis on any new card text.
 - The first build of the Eq 2.4 / S09-43 timeline showed collapsed detail text. Cause: `resize()` after the sizing modes reset the frame to FIXED height. Fixed in the builder; the exported S09-43 clip is from the fixed build.
 - I did not edit the podcast script, shot lists, `Paper/`, `scriptcast.toml`, `phasor_builder.js`, cone/manim files or `runs/`. Nothing is committed. Files changed or added by this pass: `figma/card_builder.js`, `figma/card_builder_patch_g.js`, `figma/apply_g_patch.js`, `figma/g_cards.py`, `figma/v2/g_cards.json`, `cards/S06-13.json`, `cards/S07-33.json`, `cards/S13-20.json`, `cards/g-S02-07.json`, this log.
+
+## Subscript sweep for the OV shot list (2026-10-30, author review)
+
+Swept every `figma:` card clip in `YT02v2_ov_shotlist.md` (card JSON text outside `kind`/`latex`/`sources`) for `_` subscripts. 15 cards matched; all are rebuilt with the real-subscript builder and re-exported with the **same beats and duration as the old clip** (timings from `figma/v2/cards_v2.json`; spec file `figma/v2/g_cards_fix.json`; Figma frames `164:*` at slots 300–314). Each new clip's duration matches the old one to the frame. Clips are in `outputs/YT02V2/video/figma/`.
+
+| Old Render (`figma:` key) | New clip (`figma:` key) | Figma node | Underscores fixed |
+|---|---|---|---|
+| card-s02-16@s05-16 | g-card-s02-16@s05-16 | 164:24474 | I_buffer, ψ_s, ψ_m, Δ_max |
+| card-v2-s06-24@s06-24 (Eq 2.3 card) | g-card-v2-s06-24@s06-24 | 164:25262 | O_racialized, O_adjacent,1, O_adjacent,m |
+| card-s03-17@s06-17 | g-card-s03-17@s06-17 | 164:24716 | P_uppet, F_enforce, I_buffer (gloss) |
+| card-v2-s06-19@s06-19 | g-card-v2-s06-19@s06-19 | 164:25063 | F_enforce, I_buffer |
+| card-v2-s06-30@s06-30 | g-card-v2-s06-30@s06-30 | 164:25469 | X⁺_α, X⁻_α, I_buffer, O_racialized |
+| card-s08-16@s09-16 | g-card-s08-16@s09-16 | 164:25975 | O_racialized |
+| card-s08-32@s09-32 | g-card-s08-32@s09-32 | 164:26206 | L_white, L_black |
+| card-s08-48@s09-50 | g-card-s08-48@s09-50 | 164:26433 | ψ_s, ψ_m, Φ_load, M_eff |
+| card-v2-s11-17@s11-17 | g-card-v2-s11-17@s11-17 | 164:26678 | C_legitimacy, C_coercive, C_economic |
+| card-v2-s11-38@s11-38 | g-card-v2-s11-38@s11-38 | 164:28422 | Σ_suppression |
+| card-v2-s13-01@s13-01 | g-card-v2-s13-01@s13-01 | 164:26903 | Φ_load, I_E, P_identity, P_class |
+| card-s13-09@s14-09 | g-card-s13-09@s14-09 | 164:27450 | O_racialized, Φ_load |
+| card-s13-20@s14-16 | g-card-s13-20@s14-16 | 164:27942 | d̂_state |
+| card-s13-24@s14-20 | g-card-s13-24@s14-20 | 164:27698 | F_enforce, P_uppet, R_systemic, O_racialized |
+| card-s14-05@s15-05 | g-card-s14-05@s15-05 | 164:28170 | ψ_m, ψ_s |
+
+Already done in the first pass (same shot-list keys): g-card-s03-39@s06-36, g-card-s03-43@s06-40, g-card-v2-s09-43@s09-43.
+
+Eq 2.3: the card the OV shows with "Equation 2.3" in its headline is `v2-S06-24` (3 reveals). `card-s03-25@s06-22` (equation box at S07-54) carries its subscripts as LaTeX art, not text, and needed no change. Eq 2.3 also appears in the Table 2.1 card, fixed in `g-card-s03-39`.
+
+Checked by screenshot or extracted frame: S02-16, v2-S06-24, v2-S06-30, S14-05. The other 11 are built by the same code path.

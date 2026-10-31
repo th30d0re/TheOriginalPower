@@ -1,0 +1,698 @@
+[
+ {
+  "kind": "table",
+  "headline": "Requirement 3 · Circuit Inputs and Outputs",
+  "columns": [
+   "Circuit Element",
+   "Formal Variable",
+   "Operational Role"
+  ],
+  "items": [
+   {
+    "cells": [
+     "Driving Energy Input",
+     "Kinetic labor of O and I_buffer",
+     "Productive capacity powering the Figure 0.3 circuit"
+    ]
+   },
+   {
+    "cells": [
+     "Parasitic Control Gate",
+     "Elite apex E",
+     "Directs high-current labor via small intermediate control current"
+    ]
+   },
+   {
+    "cells": [
+     "Primary System Outputs",
+     "E(t) upward; ψ(t) = ψ_s + ψ_m downward",
+     "Surplus to Elite; status and material wage to Buffer Class"
+    ]
+   },
+   {
+    "cells": [
+     "Concession Constraint",
+     "Δ_max = 0 (Chapter 19)",
+     "Non-kinetic concessions preserve maximum Elite extraction ceiling"
+    ]
+   }
+  ],
+  "sources": "The Original Power, Ch. 0, Fig. 0.3; Ch. 2, §2.3.1; Ch. 3, Eq. 3.2; Ch. 19",
+  "qrUrl": "",
+  "id": "S02-16",
+  "primary": "S05-16",
+  "beats": [
+   0.25,
+   13.89,
+   22.32,
+   36.48
+  ],
+  "duration": 48.16,
+  "frame": "g card S02-16@S05-16",
+  "export": "g-card-s02-16@s05-16.mp4",
+  "old": "card-s02-16@s05-16.mp4"
+ },
+ {
+  "kind": "equation",
+  "headline": "Level 2 · In-Group Tier Decomposition",
+  "number": "Equation 2.2",
+  "latex": "\\mathrm{Refine}(I) = E \\sqcup P_{\\mathrm{uppet}} \\sqcup F_{\\mathrm{enforce}} \\sqcup I_{\\mathrm{buffer}}",
+  "terms": [
+   {
+    "latex": "E,\\; P_{\\mathrm{uppet}}",
+    "gloss": "Elite architects E and Puppet Class administrators P_uppet"
+   },
+   {
+    "latex": "F_{\\mathrm{enforce}},\\; I_{\\mathrm{buffer}}",
+    "gloss": "Enforcement Class F_enforce and non-elite Buffer Class I_buffer"
+   }
+  ],
+  "items": [],
+  "sources": "The Original Power, Ch. 2, §2.1, Eq. 2.2",
+  "qrUrl": "",
+  "id": "S03-17",
+  "primary": "S06-17",
+  "beats": [
+   0.25,
+   7.56
+  ],
+  "duration": 24.9,
+  "frame": "g card S03-17@S06-17",
+  "export": "g-card-s03-17@s06-17.mp4",
+  "old": "card-s03-17@s06-17.mp4"
+ },
+ {
+  "kind": "title",
+  "headline": "Equation 2.2 · Structural Positions in the Circuit",
+  "items": [
+   {
+    "title": "Four In-group Tiers",
+    "detail": "Flat block I splits into Elite, Puppet, Enforcer, and Buffer structural tiers above O."
+   },
+   {
+    "title": "Payoff Ordering",
+    "detail": "Benefit of E ≫ Puppet ≫ F_enforce ≫ I_buffer (Equation 0.3)."
+   },
+   {
+    "title": "Set I Preserved",
+    "detail": "Internal inequality exposed while the racial In-group remains one bounded set."
+   }
+  ],
+  "sources": "The Original Power, Ch. 0, Eq. 0.3; Ch. 2, §2.1, Eq. 2.2",
+  "qrUrl": "",
+  "id": "v2-S06-19",
+  "primary": "S06-19",
+  "beats": [
+   0.25,
+   13.21,
+   24.76
+  ],
+  "duration": 31.81,
+  "frame": "g card v2-S06-19@S06-19",
+  "export": "g-card-v2-s06-19@s06-19.mp4",
+  "old": "card-v2-s06-19@s06-19.mp4"
+ },
+ {
+  "kind": "source",
+  "headline": "Equation 2.3 · Out-group Partition",
+  "items": [
+   {
+    "title": "O_racialized",
+    "detail": "Black Americans under chattel slavery, Jim Crow, and mass carceral containment."
+   },
+   {
+    "title": "O_adjacent,1 … O_adjacent,m",
+    "detail": "Indigenous dispossession, Latino and Asian labor bars, pre-incorporation European arrivals."
+   },
+   {
+    "title": "Wedge Management",
+    "detail": "Differential concessions, model-minority narratives, and border policing between subordinated bands."
+   }
+  ],
+  "sources": "The Original Power, Ch. 2, §2.1, Eq. 2.3",
+  "qrUrl": "",
+  "id": "v2-S06-24",
+  "primary": "S06-24",
+  "beats": [
+   0.25,
+   9.48,
+   26.75
+  ],
+  "duration": 37.98,
+  "frame": "g card v2-S06-24@S06-24",
+  "export": "g-card-v2-s06-24@s06-24.mp4",
+  "old": "card-v2-s06-24@s06-24.mp4"
+ },
+ {
+  "kind": "source",
+  "headline": "Equation 2.4 · Recursive α Partition",
+  "items": [
+   {
+    "title": "Axis Selector α",
+    "detail": "Gender, wealth, credentials, religion, citizenship, geography, criminal record."
+   },
+   {
+    "title": "X⁺_α and X⁻_α",
+    "detail": "Vertical cut divides any subset X into locally advantaged and subordinated cells."
+   },
+   {
+    "title": "α = gender in I_buffer",
+    "detail": "Male head-of-household authority versus female coverture subordination (Chapter 8)."
+   },
+   {
+    "title": "α = property / felony",
+    "detail": "Second cut yields four compartments with distinct legal rights and wage ceilings."
+   },
+   {
+    "title": "α = credentials in O_racialized",
+    "detail": "Selective incorporation O⁺_α above mass containment O⁻_α."
+   },
+   {
+    "title": "Partition notation",
+    "detail": "Each split writes X = X⁺_α ∪̇ X⁻_α with disjoint cells."
+   }
+  ],
+  "sources": "The Original Power, Ch. 2, §2.1, Eq. 2.4; Ch. 8",
+  "qrUrl": "",
+  "id": "v2-S06-30",
+  "primary": "S06-30",
+  "beats": [
+   0.25,
+   12.42,
+   23.68,
+   34.41,
+   44.42,
+   55.53
+  ],
+  "duration": 69.13,
+  "frame": "g card v2-S06-30@S06-30",
+  "export": "g-card-v2-s06-30@s06-30.mp4",
+  "old": "card-v2-s06-30@s06-30.mp4"
+ },
+ {
+  "kind": "table",
+  "headline": "Step 1 · John Punch Sentencing Differential (July 1640)",
+  "columns": [
+   "Runaway Defendant",
+   "Ancestry / Status",
+   "Virginia Council Sentence"
+  ],
+  "items": [
+   {
+    "cells": [
+     "July 1640 Case",
+     "Virginia Governor's Council",
+     "First judicial split of a joint runaway coalition"
+    ]
+   },
+   {
+    "cells": [
+     "Three Escaped Servants",
+     "Hugh Gwyn plantation",
+     "Victor (Dutch), James Gregory (Scots), John Punch (Black)"
+    ]
+   },
+   {
+    "cells": [
+     "Victor & James Gregory",
+     "European indentured servants",
+     "30 lashes each + 4 additional years of service"
+    ]
+   },
+   {
+    "cells": [
+     "John Punch",
+     "African laborer",
+     "30 lashes + servitude for his natural life"
+    ]
+   },
+   {
+    "cells": [
+     "Equation 3.10 Compile",
+     "O_racialized = f(Phenotype)",
+     "Lifelong bondage keyed to phenotype to fracture coalition"
+    ]
+   }
+  ],
+  "sources": "Minutes of the Council and General Court of Colonial Virginia (July 9, 1640); Ch. 4",
+  "qrUrl": "",
+  "id": "S08-16",
+  "primary": "S09-16",
+  "beats": [
+   0.25,
+   11.74,
+   22.17,
+   29.93,
+   36.55
+  ],
+  "duration": 50.17,
+  "frame": "g card S08-16@S09-16",
+  "export": "g-card-s08-16@s09-16.mp4",
+  "old": "card-s08-16@s09-16.mp4"
+ },
+ {
+  "kind": "source",
+  "headline": "1676 · Jamestown & West Point Garrison (Allen 1997)",
+  "items": [
+   {
+    "title": "Sept 1676 · Jamestown Burned",
+    "detail": "Bacon's rebel army burns the colonial capital; Governor Berkeley flees to warships."
+   },
+   {
+    "title": "West Point Joint Garrison",
+    "detail": "Captain Thomas Grantham confronts 400 armed English and African fighters on the York River."
+   },
+   {
+    "title": "Deceptive Disarmament",
+    "detail": "False pardon promises disarm the garrison; 23 leaders hanged and African fighters re-enslaved."
+   },
+   {
+    "title": "Allen · Engineering Patch",
+    "detail": "The Invention of the White Race documents the planter patch to split L_white from L_black."
+   }
+  ],
+  "sources": "Allen (1994, 1997), The Invention of the White Race; The Original Power, Ch. 4",
+  "qrUrl": "",
+  "id": "S08-32",
+  "primary": "S09-32",
+  "beats": [
+   0.25,
+   12.31,
+   24.14,
+   34.09
+  ],
+  "duration": 47.87,
+  "frame": "g card S08-32@S09-32",
+  "export": "g-card-s08-32@s09-32.mp4",
+  "old": "card-s08-32@s09-32.mp4"
+ },
+ {
+  "kind": "timeline",
+  "headline": "Virginia Compile Verdict · 1640–1705",
+  "items": [
+   {
+    "title": "Du Bois · Psychological Wage",
+    "detail": "Black Reconstruction: public status allocation ψ_s paired with modest material rights ψ_m."
+   },
+   {
+    "title": "Eq. 2.19 · Φ_load = 0.15–0.55",
+    "detail": "1705 partition elevated phase dispersion into the ANES-calibrated resentment band."
+   },
+   {
+    "title": "Eq. 2.15 · M_eff(t) < τ",
+    "detail": "Elevated Φ_load depressed effective class coherence below τ for 150 years."
+   },
+   {
+    "title": "Test 2 Verdict · P2 Confirmed",
+    "detail": "1676 solidarity crisis triggered the 1691 boundary act and 1705 Slave Codes."
+   }
+  ],
+  "sources": "Du Bois (1935); The Original Power, Ch. 2 (§2.3.1, §2.3.6) & Ch. 4",
+  "qrUrl": "",
+  "id": "S08-48",
+  "primary": "S09-50",
+  "beats": [
+   0.25,
+   12.78,
+   30.26,
+   42.43,
+   57.4
+  ],
+  "duration": 68.63,
+  "frame": "g card S08-48@S09-50",
+  "export": "g-card-s08-48@s09-50.mp4",
+  "old": "card-s08-48@s09-50.mp4"
+ },
+ {
+  "kind": "source",
+  "headline": "1954–1965 Jim Crow Cost Spike",
+  "items": [
+   {
+    "title": "Three rising costs",
+    "detail": "C_legitimacy, C_coercive, and C_economic spike maintaining explicit Jim Crow partition."
+   },
+   {
+    "title": "Cold War legitimacy",
+    "detail": "Televised Birmingham and Selma brutality; Global South leverage on US moral authority (Dudziak)."
+   },
+   {
+    "title": "Movement pressure",
+    "detail": "Boycotts, sit-ins, and federal troop deployments push coercion and economic costs unsustainable."
+   },
+   {
+    "title": "Interface Swap · Eq. 2.10",
+    "detail": "1964–1965 statutes retire explicit racial labels for carceral and fiscal proxies."
+   }
+  ],
+  "sources": "The Original Power, Ch. 2, §2.3.5, Eq. 2.10; Ch. 3; Dudziak",
+  "qrUrl": "",
+  "id": "v2-S11-17",
+  "primary": "S11-17",
+  "beats": [
+   0.25,
+   12.65,
+   38.67,
+   48.84
+  ],
+  "duration": 63.14,
+  "frame": "g card v2-S11-17@S11-17",
+  "export": "g-card-v2-s11-17@s11-17.mp4",
+  "old": "card-v2-s11-17@s11-17.mp4"
+ },
+ {
+  "kind": "stat_bars",
+  "headline": "Interference Engine · Φ_load and Spectral Carriers",
+  "items": [
+   {
+    "title": "0.2π phase gap",
+    "detail": "i₁(t) + i₂(t) → coherent I_E(t) at the Elite node."
+   },
+   {
+    "title": "Constitutional phase jammer",
+    "detail": "1787: Madison's Federalist No. 10 advances Δφ toward π, and the vector sum collapses (Fig. 0.6)."
+   },
+   {
+    "title": "Φ_load dispersion",
+    "detail": "0.92 on the Equation 22.2 readout (0 = class lock, 1 = cancellation)."
+   },
+   {
+    "title": "Congressional Record DFT",
+    "detail": "24.06 = P_identity / P_class at the 4-year presidential carrier, f = 0.25 cycles/yr (N = 60)."
+   },
+   {
+    "title": "Electoral harmonics",
+    "detail": "21.02 at the 6-year Senate carrier; 12.86 at the 8-year two-term carrier; Parseval energy ratio 0.9996."
+   },
+   {
+    "title": "Google Trends weekly",
+    "detail": "12.82 at the 2-year midterm carrier in the 2004–2024 weekly series (Table 22.2)."
+   }
+  ],
+  "sources": "The Original Power, Ch. 0, Eq. 0.10–0.11; Ch. 5; Ch. 22, Eq. 22.2, Tables 22.1–22.2",
+  "qrUrl": "",
+  "id": "v2-S13-01",
+  "primary": "S13-01",
+  "beats": [
+   0.25,
+   26.28,
+   148.19,
+   216.87,
+   230.39,
+   298.64
+  ],
+  "duration": 299,
+  "frame": "g card v2-S13-01@S13-01",
+  "export": "g-card-v2-s13-01@s13-01.mp4",
+  "old": "card-v2-s13-01@s13-01.mp4"
+ },
+ {
+  "kind": "table",
+  "headline": "Five Operational Steps · Section 2.2",
+  "columns": [
+   "Step",
+   "Operational Mechanism",
+   "Formal Expression"
+  ],
+  "items": [
+   {
+    "cells": [
+     "Operational Sequence",
+     "Weaponizing psychology into extraction",
+     "Section 2.2 five-step compile"
+    ]
+   },
+   {
+    "cells": [
+     "Step 1 · Institutionalize",
+     "Compile bias into statutes, credit, policing",
+     "Policy set P"
+    ]
+   },
+   {
+    "cells": [
+     "Step 2 · Concentrate Harm",
+     "Target disproportionate impact at intersection",
+     "O_racialized ∩ P"
+    ]
+   },
+   {
+    "cells": [
+     "Step 3 · Naturalize",
+     "Blame disparities on victim culture or biology",
+     "Ideological justification layer"
+    ]
+   },
+   {
+    "cells": [
+     "Step 4 · Compound",
+     "Transmit disadvantage across housing, schools, debt",
+     "Intergenerational baseline"
+    ]
+   },
+   {
+    "cells": [
+     "Step 5 · Protect Elite",
+     "Elevate phase dispersion across working tiers",
+     "Φ_load(t) → 1"
+    ]
+   }
+  ],
+  "sources": "The Original Power, Ch. 2, §2.2",
+  "qrUrl": "",
+  "id": "S13-09",
+  "primary": "S14-09",
+  "beats": [
+   0.25,
+   7.98,
+   23.25,
+   35.86,
+   45.73,
+   56.97
+  ],
+  "duration": 68.33,
+  "frame": "g card S13-09@S14-09",
+  "export": "g-card-s13-09@s14-09.mp4",
+  "old": "card-s13-09@s14-09.mp4"
+ },
+ {
+  "kind": "table",
+  "headline": "Structural Tier Position vs. Intra-Group Stratification",
+  "columns": [
+   "Construct / Role",
+   "Structural Mechanism",
+   "Vector Orientation"
+  ],
+  "items": [
+   {
+    "cells": [
+     "Five Structural Tiers",
+     "Defined by relation to extraction and coercion",
+     "Independent of individual actor's phenotype"
+    ]
+   },
+   {
+    "cells": [
+     "Minority State Officials",
+     "Occupy F_enforce or P_uppet during enforcement",
+     "Executes existing carceral or fiscal code"
+    ]
+   },
+   {
+    "cells": [
+     "Systemic Force Vector",
+     "R_systemic (Equation 25.1)",
+     "Continues pointing downward at O_racialized"
+    ]
+   },
+   {
+    "cells": [
+     "Internalized Racism & Colorism",
+     "Absorbed inferiority belief vs. light-skin stratification",
+     "Intra-group fractures inside O_racialized (§2.3.7)"
+    ]
+   }
+  ],
+  "sources": "The Original Power, Ch. 0, Ch. 2 (§2.3.7), Ch. 21, & Ch. 25 (Eq. 25.1)",
+  "qrUrl": "",
+  "id": "S13-24",
+  "primary": "S14-20",
+  "beats": [
+   0.25,
+   9.26,
+   22.38,
+   32.7
+  ],
+  "duration": 49.78,
+  "frame": "g card S13-24@S14-20",
+  "export": "g-card-s13-24@s14-20.mp4",
+  "old": "card-s13-24@s14-20.mp4"
+ },
+ {
+  "kind": "table",
+  "headline": "Refutation Standard 3 · Reverse Racism Vector Audit",
+  "columns": [
+   "Analytical Dimension",
+   "Out-Group → In-Group",
+   "Systemic Vector Requirement"
+  ],
+  "items": [
+   {
+    "cells": [
+     "Audit Question (R3)",
+     "Apply Equations 3.1 and 25.1",
+     "Test scalar magnitude vs. state direction"
+    ]
+   },
+   {
+    "cells": [
+     "Interpersonal Magnitude",
+     "Real hostility or discriminatory conduct",
+     "Magnitude > 0 at person-to-person level"
+    ]
+   },
+   {
+    "cells": [
+     "Taxonomy Assignment",
+     "Scalar racial prejudice or discrimination",
+     "Addressed by ethics, civil norms, and law"
+    ]
+   },
+   {
+    "cells": [
+     "Institutional Direction (d̂_state)",
+     "Zero state-backed apparatus targeting whites as class",
+     "d̂_state = 0; R3 undefeated"
+    ]
+   }
+  ],
+  "sources": "The Original Power, Preface, Ch. 3 (Eq. 3.1), Ch. 21, & Ch. 25 (Eq. 25.1)",
+  "qrUrl": "",
+  "id": "S13-20",
+  "primary": "S14-16",
+  "beats": [
+   0.25,
+   7.62,
+   17.49,
+   27.21
+  ],
+  "duration": 42.08,
+  "frame": "g card S13-20@S14-16",
+  "export": "g-card-s13-20@s14-16.mp4",
+  "old": "card-s13-20@s14-16.mp4"
+ },
+ {
+  "kind": "table",
+  "headline": "Synthesis · Mathematical Models & Historical Tests",
+  "columns": [
+   "Analytical Module",
+   "Governing Equation / Record",
+   "Core Structural Result"
+  ],
+  "items": [
+   {
+    "cells": [
+     "Orthographic & Phasor",
+     "Fig. 0.2 · Eq. 3.5 (W = ψ_m + jψ_s)",
+     "3D cone projects to binary; wage rotates to status"
+    ]
+   },
+   {
+    "cells": [
+     "Zero-Day & Embodiment",
+     "Eq. 3.10 · Definition 2.3",
+     "Discrete race cut from cline; chronic exposure embodied"
+    ]
+   },
+   {
+    "cells": [
+     "Runtime & Interference",
+     "Logs 2–17 · Eqs. 0.15–0.16, 22.2",
+     "Seven states tracked; phase dispersion cancels solidarity"
+    ]
+   },
+   {
+    "cells": [
+     "Rebuilt Hierarchy",
+     "Fig. 2.3 (Right) · Ch. 19",
+     "Policy → Ideology → Prejudice; Concession Theorem"
+    ]
+   },
+   {
+    "cells": [
+     "Empirical Hypothesis Tests",
+     "Eq. 2.6 · P1–P4 · R1–R3",
+     "Tested across Portugal, Virginia, 1840–2020, and Ch. 22"
+    ]
+   },
+   {
+    "cells": [
+     "Unified Test Verdict",
+     "Archival & spectral convergence",
+     "Extraction and solidarity control precede racial code"
+    ]
+   }
+  ],
+  "sources": "The Original Power, Ch. 0, 2, 3, 4, 19, 22, & Compiled Runtime Log",
+  "qrUrl": "",
+  "id": "S14-05",
+  "primary": "S15-05",
+  "beats": [
+   0.25,
+   10.77,
+   21.27,
+   30.25,
+   39.73,
+   58.33
+  ],
+  "duration": 67.86,
+  "frame": "g card S14-05@S15-05",
+  "export": "g-card-s14-05@s15-05.mp4",
+  "old": "card-s14-05@s15-05.mp4"
+ },
+ {
+  "kind": "stat_bars",
+  "headline": "Figure 2.7 · Post-1965 Backlash Series (1965–2020)",
+  "items": [
+   {
+    "title": "Union density (BLS; Troy & Sheflin)",
+    "detail": "10.8% in 2020, down from 28.4% in 1965."
+   },
+   {
+    "title": "Top-decile wealth (WID)",
+    "detail": "76.5% in 2020, up from 67.5% in 1965."
+   },
+   {
+    "title": "US incarceration (BJS)",
+    "detail": "+231%: from 108 to 358 per 100,000."
+   },
+   {
+    "title": "Black incarceration (BJS; Sentencing Project)",
+    "detail": "3,074 at the 2010 peak, up from 588; 1,821 by 2020."
+   },
+   {
+    "title": "Σ_suppression envelope",
+    "detail": ">23% composite suppression expansion alongside a +9-point top-decile wealth gain."
+   },
+   {
+    "title": "Biological Embedding",
+    "detail": "Chronic social exposure becomes a physiological system state."
+   }
+  ],
+  "sources": "The Original Power, Ch. 2, §2.3.6, Fig. 2.7; BLS; Troy & Sheflin; WID; BJS; Sentencing Project; Definition 2.3",
+  "qrUrl": "",
+  "id": "v2-S11-38",
+  "primary": "S11-38",
+  "beats": [
+   0.25,
+   17.41,
+   30.98,
+   41.31,
+   58.59,
+   71.33
+  ],
+  "duration": 81.96,
+  "frame": "g card v2-S11-38@S11-38",
+  "export": "g-card-v2-s11-38@s11-38.mp4",
+  "old": "card-v2-s11-38@s11-38.mp4"
+ }
+]

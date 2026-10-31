@@ -173,3 +173,51 @@ turns, so the turn order can change. If a cue word disappears in S07-01, that be
   - "generative", then "absorb".
 - **Turns 195–196:** they now play over the binary until the reorder lands. If they stay, the projection sentence
   should match the zoomed-in binary, for example coarse resolution showing one boundary, and avoid "head-on".
+
+## 2026-10-30: OV author review fixes, S07-01 (OV turns 144–160)
+
+**Cause of the blank turn 152.** The 21:56 render on 2026-10-29 used the new 626-turn script with
+cue words from the old one. The beats searched forward for words, and turn 150 had lost "align".
+That beat jumped to "alignment" in turn 153, and every beat after it missed its word and slid
+1 s at a time. The look-down, extraction and wide view all crowded into turn 153, and turn 152
+showed nothing. The render log listed 19 cue warnings.
+
+**Fix: beats keyed to turns.**
+- `cone_frame.cue_in(k, *words, frac)` returns a time inside the run's k-th turn. It uses the hint
+  word while the turn still has it, or a fixed fraction of the turn when it doesn't, and it can
+  never leave its turn.
+- k counts from the run's first turn (OV turn 144), so k = turn − 144.
+- Every OrthoIllusion beat now uses it, so the planned rewrite of turns 147–152 and the re-voicing
+  move the beats with their turns.
+- Hint words that are gone fall back to these fractions:
+  - start of 148 (pull-back); 0.55 of 148 (apex);
+  - start of 149 (look up); 0.2 of 150 (see-through);
+  - start of 151 (In-group place); 0.15 of 151 (eyes down); 0.8 of 151 (extraction);
+  - start of 152 (wide view).
+
+**Turn 151, the mirror of 149.**
+- At the turn start the camera moves to the In-group's place (`IN_EYE`, phi 90°, level with the
+  Buffer) and labels it "IN-GROUP I".
+- At "straight down" (falling back to 0.15 of the turn), the eyes turn down over 2.6 s
+  (`LOOK_DOWN`). The tiers above fade, and the black Out-group face rises from below and fills the
+  frame before "black".
+
+**Turn 152.**
+- The wide view returns at the turn start.
+- The upper tiers, the Buffer and the Out-group light in turn as each is named.
+- The extraction arrow pulses at "connected".
+
+**Render.** `outputs/YT02v2_ov/video/runs/1920x1080@30/S07-01.mp4` runs 250.73 s, which is the
+shot list's window for turns 144–160. The log has no warnings. (`edit16x9.py render` defaults to
+960×540@15; the 1080p clip needs `-r 1920x1080 --fps 30`.)
+
+**Sheets.**
+- `logs/G_cone/sheet_S07-01_turns_149_151_152.png`
+- `logs/G_cone/sheet_S07-01_audit.png`, every beat from turns 144–160
+
+**Audit findings, not fixed in this pass:**
+- Turn 154: the HER boundary line runs behind the cone, so only two short stubs show at "boundary".
+- Turn 156: the sideways deflection arrow is hard to read against the faded cone.
+- Turn 160: the speech says "five tiers" while the functions list has four rows; the Out-group
+  has no row.
+- Turns 144–146: the 50/50 binary holds for 37 s before turn 147 describes it.

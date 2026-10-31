@@ -11,7 +11,7 @@ YT02 = Path(__file__).resolve().parent
 sys.path.insert(0, str(COMMON))
 sys.path.insert(0, str(YT02))
 
-from common16x9 import DIM, GOLD, HER, LOG, T, YTScene3D  # noqa: E402
+from common16x9 import DIM, GOLD, HER, T, YTScene3D  # noqa: E402
 from orthographic16x9 import D, INK_FACE, PYRAMID_X, Orthographic16x9, S, _legend_group  # noqa: E402
 from tier_pyramid import ELITE, FORCE, NIGHT, PAPER, PUPPET  # noqa: E402
 
@@ -63,23 +63,28 @@ CLOSE = dict(phi=86 * D, theta=-90 * D, zoom=4.2, focal_distance=20,
 # mirrored, and close enough that the facing tier fills the frame.
 LOOK_UP = dict(phi=178 * D, theta=-90 * D, zoom=3.2, focal_distance=20, frame_center=[PYRAMID_X, 0, OUT_TOP_Z])
 LOOK_DOWN = dict(phi=2 * D, theta=-90 * D, zoom=3.2, focal_distance=20, frame_center=[PYRAMID_X, 0, BUF_BOTTOM_Z])
+# The In-group's place: level with the Buffer, side on, before the eyes turn down.
+IN_EYE = dict(phi=90 * D, theta=-90 * D, zoom=0.95, focal_distance=20,
+              frame_center=[PYRAMID_X, 0, (BUF_BOTTOM_Z + BUF_TOP_Z) / 2 + 0.3])
 
 
 def _fast(t):
     return min(1.0, 4 * t)
 
 
-class OrthoIllusion(ConeFrame, YTScene3D):
-    """Continuous S07-01..S07-17 camera argument, bordered, on the Figma ground (R5, G17, G19)."""
+def _half(t):
+    return m.smooth(min(1.0, 2 * t))
 
-    def next_cue(self, *words, slack=1.0):
-        """The next spoken word starting with any of `words`; a missing word waits `slack` and warns."""
-        now = self.T0 + self.time
-        try:
-            return self.cue_any(*words, after=now)
-        except KeyError:
-            LOG.warning("%s: none of %s after %.2fs; beat runs %.1fs later", type(self).__name__, words, now, slack)
-            return now + slack
+
+class OrthoIllusion(ConeFrame, YTScene3D):
+    """Continuous S07-01..S07-17 camera argument, bordered, on the Figma ground (R5, G17, G19).
+
+    Every beat is keyed to a run turn with `cue_in(k, ...)`: k counts from the run's first turn
+    (OV turn 144, so k = turn - 144), the words are hints inside that turn, and `frac` places the
+    beat when a rewrite drops the word. A beat never leaves its turn."""
+
+    def at_turn(self, k, *words, frac=0.0):
+        self.until(self.cue_in(k, *words, frac=frac))
 
     def shot_S07_01(self):
         Orthographic16x9._lights(self)
@@ -90,7 +95,8 @@ class OrthoIllusion(ConeFrame, YTScene3D):
         self.add(tiers)
         legend = _legend_group().shift(m.LEFT * 0.6).set_opacity(0)
 
-        # The coarse projection fills the bordered frame: In-group I above the line, Out-group O below.
+        # Turns 144–147. The coarse projection fills the bordered frame: In-group I above the line,
+        # Out-group O below.
         half_w, half_h = 2 * SAFE_X, SAFE_Y
         white = m.Rectangle(width=half_w, height=half_h, fill_color=PAPER, fill_opacity=1, stroke_width=0)
         black = m.Rectangle(width=half_w, height=half_h, fill_color=NIGHT, fill_opacity=1, stroke_width=0)
@@ -107,38 +113,45 @@ class OrthoIllusion(ConeFrame, YTScene3D):
         self.set_camera_orientation(**CLOSE)
         self.play(binary.animate.set_opacity(1), run_time=0.6)
 
-        # Pull back: the flat blocks separate into tiers and the cone stands whole. No rotation.
-        self.until(self.next_cue("separate", "pull", "back"))
+        # Turn 148. Pull back: the flat blocks separate into tiers and the cone stands whole. No rotation.
+        self.at_turn(4, "separate", "pull", frac=0.0)
         self.move_camera(**WIDE, added_anims=[m.FadeOut(binary, rate_func=_fast),
                                               *[s.animate(rate_func=_fast).set_opacity(1) for s in slabs]],
                          run_time=2.2)
-        self.until(self.next_cue("apex", "Elite"))
+        self.at_turn(4, "apex", "Elite", frac=0.55)
         self.play(m.Indicate(eli, color=ELITE), legend.animate.set_opacity(1), run_time=0.8)
 
-        # Up from the Out-group's place in the base: the Buffer's underside fills the view, white.
-        self.until(self.next_cue("upward", "up"))
+        # Turn 149. Up from the Out-group's place in the base: the Buffer's underside fills the view, white.
+        self.at_turn(5, frac=0.0)
         self.move_camera(**LOOK_UP, added_anims=[out.animate.set_opacity(0), legend.animate.set_opacity(0)],
                          run_time=1.8)
 
-        # The Flat Ceiling: ghost the Buffer and every higher tier sits centred behind it, on one axis.
-        self.until(self.next_cue("Ceiling"))
+        # Turn 150. The Flat Ceiling; then ghost the Buffer and the higher tiers show through it, on one axis.
+        self.at_turn(6, "Ceiling", frac=0.08)
         ceiling = T("FLAT CEILING", 40, INK_FACE).move_to([0, SAFE_Y - 0.5, 0])
         self.flat(ceiling)
         self.play(m.FadeIn(ceiling), run_time=0.6)
-        self.until(self.next_cue("align"))
+        self.at_turn(6, "Enforcement", "see", frac=0.2)
         self.play(buf.animate.set_opacity(0.08), enf.animate.set_opacity(0.4), pup.animate.set_opacity(0.55),
                   ceiling.animate.set_color(PAPER), run_time=0.7)
-        self.until(self.cue_any("downward", after=self.T0 + self.time, fallback=self.T0 + self.time + 2.0) - 1.2)
+        self.until(self.beat_end(6) - 0.8)
         self.play(*[t.animate.set_opacity(1) for t in (buf, enf, pup)], m.FadeOut(ceiling), run_time=0.5)
 
-        # The same move from the Buffer's place, eyes down: the Out-group's face fills the view, black.
-        self.until(self.next_cue("downward", "down"))
-        self.move_camera(**LOOK_DOWN, added_anims=[out.animate.set_opacity(1),
-                                                    *[t.animate.set_opacity(0) for t in (buf, enf, pup, eli)]],
-                         run_time=1.8)
+        # Turn 151, the mirror of 149. The camera comes to the In-group's place, level with the Buffer,
+        # then turns its eyes straight down: the tiers above drop away and the Out-group's face fills
+        # the view, black.
+        self.at_turn(7, frac=0.0)
+        place = T("IN-GROUP I", 32, PAPER).move_to([4.4, -0.3, 0])
+        self.flat(place)
+        self.move_camera(**IN_EYE, added_anims=[out.animate.set_opacity(1), m.FadeIn(place)], run_time=1.6)
+        self.play(m.Indicate(buf, color=PAPER, scale_factor=1.04), run_time=0.6)
+        self.at_turn(7, "straight", "down", frac=0.15)
+        self.move_camera(**LOOK_DOWN, added_anims=[m.FadeOut(place, rate_func=_fast),
+                                                    *[t.animate(rate_func=_half).set_opacity(0) for t in (buf, enf, pup, eli)]],
+                         run_time=2.6)
 
         # Extraction leaves upward, outside the frame the observer holds.
-        self.until(self.next_cue("extraction", "outside"))
+        self.at_turn(7, "extraction", "upward", frac=0.8)
         self.move_camera(phi=58 * D, theta=-90 * D, zoom=0.74, focal_distance=20, frame_center=[PYRAMID_X, 0, 0.6],
                          added_anims=[buf.animate.set_opacity(1), *[t.animate.set_opacity(0.12) for t in (enf, pup, eli)]],
                          run_time=1.0)
@@ -149,17 +162,23 @@ class OrthoIllusion(ConeFrame, YTScene3D):
         self.flat(frame, outside)
         self.play(m.Create(extraction), m.FadeIn(frame), m.FadeIn(outside), run_time=0.5)
 
-        # Wide architecture and a complete base-to-apex circuit.
-        self.until(self.next_cue("Zoom", "full", "cone"))
+        # Turn 152. The wide view again: every tier, base to apex, on one extraction circuit.
+        self.at_turn(8, frac=0.0)
         self.play(m.FadeOut(frame), m.FadeOut(outside), run_time=0.25)
         self.move_camera(**WIDE, added_anims=[*[s.animate.set_opacity(1) for s in slabs], legend.animate.set_opacity(1)],
-                         run_time=1.2)
-        self.until(self.next_cue("connected", "architecture"))
+                         run_time=1.4)
+        self.at_turn(8, "upper", frac=0.4)
+        self.play(*[m.Indicate(t, color=GOLD, scale_factor=1.04) for t in (enf, pup, eli)], run_time=0.7)
+        self.at_turn(8, "marginal", frac=0.55)
+        self.play(m.Indicate(buf, color=PAPER, scale_factor=1.04), run_time=0.6)
+        self.at_turn(8, "Out-group", frac=0.7)
+        self.play(m.Indicate(out, color=HER, scale_factor=1.04), run_time=0.6)
+        self.at_turn(8, "connected", "machine", frac=0.85)
         self.play(m.Indicate(extraction, color=GOLD), run_time=0.75)
 
-        # G19 — Elite, Puppet and Enforcement close into one block, the control node; the bottom two
-        # tiers, alone, never see it.
-        self.until(self.next_cue("alignment", "Obscuration"))
+        # Turn 153, G19. Elite, Puppet and Enforcement close into one block, the control node; the
+        # bottom two tiers, alone, never see it.
+        self.at_turn(9, "alignment", "Obscuration", frac=0.05)
         control = m.VGroup(enf, pup, eli)
         self.play(pup.animate.shift(m.IN * TIER_GAP), eli.animate.shift(m.IN * 2 * TIER_GAP),
                   buf.animate.set_opacity(0.25), out.animate.set_opacity(0.25),
@@ -169,27 +188,27 @@ class OrthoIllusion(ConeFrame, YTScene3D):
                         ).arrange(m.DOWN, buff=0.2).move_to([3.7, 1.2, 0])
         self.flat(node)
         self.play(m.Indicate(control, color=GOLD, scale_factor=1.05), m.FadeIn(node), run_time=0.9)
-        self.until(self.next_cue("indistinguishable", "becomes"))
+        self.at_turn(9, "pulse", "together", frac=0.45)
         self.play(m.Indicate(control, color=GOLD, scale_factor=1.05), run_time=0.8)
         self.play(m.Indicate(control, color=GOLD, scale_factor=1.05), run_time=0.8)
-        self.until(self.next_cue("administer", "actors"))
+        self.at_turn(9, "miss", "bottom", frac=0.65)
         below = m.VGroup(m.MathTex(r"I_{\text{buffer}},\ O", font_size=40, color=PAPER),
                          T("the bottom two, alone", 27, DIM)).arrange(m.DOWN, buff=0.15).move_to([3.7, -1.3, 0])
         self.flat(below)
         self.play(control.animate.set_opacity(0.06), buf.animate.set_opacity(1), out.animate.set_opacity(1),
                   node.animate.set_opacity(0.35), m.FadeIn(below), run_time=0.9)
-        self.until(self.beat_end(self.turn_of(self.T0 + self.time)) - 0.7)
+        self.until(self.beat_end(9) - 0.7)
         self.play(control.animate.set_opacity(1), pup.animate.shift(m.OUT * TIER_GAP),
                   eli.animate.shift(m.OUT * 2 * TIER_GAP), m.FadeOut(node), m.FadeOut(below),
                   legend.animate.set_opacity(1), run_time=0.6)
 
-        # Base boundary and elevation ticks show two distinct geometric relations.
-        self.until(self.next_cue("real", "boundary"))
+        # Turn 154. Base boundary and elevation ticks show two distinct geometric relations.
+        self.at_turn(10, "boundary", "real", frac=0.6)
         self.play(legend.animate.set_opacity(0), run_time=0.3)
         boundary = m.Line3D([PYRAMID_X - 3.8, 0, -0.9], [PYRAMID_X + 3.8, 0, -0.9],
                             color=HER, thickness=0.075)
         self.play(m.Create(boundary), run_time=0.65)
-        self.until(self.next_cue("hierarchy"))
+        self.at_turn(10, "ranking", "hierarchy", frac=0.8)
         axis = m.Line3D([PYRAMID_X - 3.95, 0, 0.1], [PYRAMID_X - 3.95, 0, 3.65],
                         color=PAPER, thickness=0.035)
         ticks = m.VGroup(*[
@@ -198,20 +217,20 @@ class OrthoIllusion(ConeFrame, YTScene3D):
         ])
         self.play(m.Create(axis), m.LaggedStart(*[m.Create(t) for t in ticks], lag_ratio=0.12), run_time=0.9)
 
-        # Fixed callouts distinguish projection from elevation.
-        self.until(self.next_cue("Equation"))
+        # Turn 155. Fixed callouts distinguish projection from elevation.
+        self.at_turn(11, "Equation", frac=0.0)
         eq21 = m.VGroup(m.MathTex(r"\mathrm{Eq}\ 2.1", font_size=38, color=GOLD),
                         T("projection", 28, PAPER)).arrange(m.DOWN, buff=0.12).move_to([4.4, 1.75, 0])
         self.flat(eq21)
         self.play(m.FadeIn(eq21), run_time=0.6)
-        self.until(self.next_cue("Equation"))
+        self.at_turn(11, "elevation", "next", frac=0.45)
         eq22 = m.VGroup(m.MathTex(r"\mathrm{Eq}\ 2.2", font_size=38, color=HER),
                         T("elevation", 28, PAPER)).arrange(m.DOWN, buff=0.12).move_to([4.4, 0.25, 0])
         self.flat(eq22)
         self.play(m.FadeIn(eq22), run_time=0.6)
 
-        # Vertical momentum hits the Buffer plane and bends ninety degrees.
-        self.until(self.next_cue("Orthogonal", "Deflection"))
+        # Turn 156. Vertical momentum hits the Buffer plane and bends ninety degrees.
+        self.at_turn(12, "Orthogonal", "Deflection", frac=0.1)
         self.play(m.FadeOut(eq21), m.FadeOut(eq22), *[t.animate.set_opacity(0.35) for t in slabs], run_time=0.4)
         up_arrow = m.Arrow3D([PYRAMID_X + 1.0, 0, -0.8], [PYRAMID_X + 1.0, 0, 0.05],
                              color=HER, thickness=0.075)
@@ -219,40 +238,40 @@ class OrthoIllusion(ConeFrame, YTScene3D):
                                     stroke_color=GOLD, stroke_width=2).rotate(90 * D, axis=m.RIGHT)
         deflect_plane.move_to([PYRAMID_X, 0, 0.12])
         self.play(m.Create(up_arrow), m.FadeIn(deflect_plane), run_time=0.75)
-        self.until(self.next_cue("horizontal"))
+        self.at_turn(12, "sideways", "horizontal", frac=0.6)
         across = m.Arrow3D([PYRAMID_X + 1.0, 0, 0.05], [PYRAMID_X + 3.35, 0, 0.05],
                            color=HER, thickness=0.075)
         self.play(m.Create(across), run_time=0.75)
 
-        # The redirected vector terminates at the Buffer; the apex stays unchanged.
-        self.until(self.next_cue("Kinetic", "Decoy"))
+        # Turn 157. The redirected vector terminates at the Buffer; the apex stays unchanged.
+        self.at_turn(13, "Kinetic", "Decoy", frac=0.3)
         decoy = T("KINETIC DECOY", 36, HER).move_to([4.4, 1.85, 0])
         self.flat(decoy)
         self.play(m.FadeIn(decoy), m.Indicate(buf, color=HER), run_time=0.75)
 
-        # Projection and collision become one coupled local picture.
-        self.until(self.next_cue("reinforce"))
+        # Turn 158. Projection and collision become one coupled local picture.
+        self.at_turn(14, "reinforce", frac=0.2)
         cone = m.Polygon([-0.7, -0.5, 0], [2.2, -1.35, 0], [2.2, 0.35, 0],
                          fill_color=HER, fill_opacity=0.12, stroke_color=HER, stroke_width=2)
         cone.move_to([1.15, -0.15, 0])
         self.flat(cone)
         self.play(m.FadeIn(cone), run_time=0.65)
-        self.until(self.next_cue("collides"))
+        self.at_turn(14, "collides", frac=0.75)
         self.play(m.Indicate(across, color=GOLD), m.Indicate(buf, color=HER), run_time=0.7)
 
-        # The wide view keeps the local collision and the uninterrupted extraction.
-        self.until(self.next_cue("wide"))
+        # Turn 159. The wide view keeps the local collision and the uninterrupted extraction.
+        self.at_turn(15, "wide", frac=0.0)
         self.play(m.FadeOut(decoy), m.FadeOut(cone), m.FadeOut(deflect_plane),
                   *[t.animate.set_opacity(1) for t in slabs], run_time=0.4)
         self.move_camera(**WIDE, run_time=1.0)
-        self.until(self.next_cue("capture"))
+        self.at_turn(15, "capture", frac=0.85)
         self.play(m.Indicate(extraction, color=GOLD), m.Indicate(across, color=HER), run_time=0.75)
 
-        # Locate generation and assign the downstream functions.
-        self.until(self.next_cue("generative"))
+        # Turn 160. Locate generation and assign the downstream functions, tier by tier.
+        self.at_turn(16, "trace", frac=0.2)
         query = m.Circle(radius=0.72, color=GOLD, stroke_width=5).move_to(eli.get_center())
         self.play(m.Create(query), m.Indicate(eli, color=ELITE), run_time=0.75)
-        self.until(self.next_cue("absorb"))
+        self.at_turn(16, "tiers", "five", frac=0.75)
         functions = m.VGroup(*[
             m.VGroup(m.MathTex(symbol, font_size=34, color=color), T(verb, 27, color)).arrange(m.RIGHT, buff=0.3)
             for symbol, verb, color in ((r"E", "generates", GOLD), (r"P_{\text{uppet}}", "transmits", PAPER),

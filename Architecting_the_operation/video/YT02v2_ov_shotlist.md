@@ -1007,35 +1007,35 @@ Each shot is one turn of the OmniVoice narration, in order. Rebuilt for the G sc
 ## S07-33 — Equation 2.2: applying the refinement operator Refine(I)
 - **Anchor:** `Emmanuel Theodore (32:06)`
 - **Type:** card
-- **Render:** `figma:card-s03-17@s06-17`
+- **Render:** `figma:g-card-s03-17@s06-17`
 - **Note:** The Equation 2.2 card opens, displaying Refine(I) = E ∪̇ P_uppet ∪̇ F_enforce ∪̇ I_buffer. [book §2.1, Eq 2.2]
 ## S07-34 — Four disjoint functional tiers inside I
 - **Anchor:** `Emmanuel Theodore (32:13)`
 - **Type:** hold
-- **Render:** `figma:card-s03-17@s06-17`
+- **Render:** `figma:g-card-s03-17@s06-17`
 - **Holds:** `S07-33`
 - **Note:** Term 1 (E, P_uppet) and Term 2 (F_enforce, I_buffer) illuminate, naming all four subsets inside the dominant In-group. [book §2.1, Eq 2.2]
 ## S07-35 — Picture holds
 - **Anchor:** `Emmanuel Theodore (32:29)`
 - **Type:** hold
-- **Render:** `figma:card-s03-17@s06-17`
+- **Render:** `figma:g-card-s03-17@s06-17`
 - **Holds:** `S07-33`
 - **Note:** The picture already on screen holds across this line.
 ## S07-36 — Structural positions in the extraction circuit
 - **Anchor:** `Emmanuel Theodore (32:49)`
 - **Type:** card
-- **Render:** `figma:card-v2-s06-19@s06-19`
+- **Render:** `figma:g-card-v2-s06-19@s06-19`
 - **Note:** Figma card `v2-S06-19` highlights: Four In-group Tiers.
 ## S07-37 — Pre-1450 Mediterranean attitudes (Sweet 1997; Bethencourt 2013)
 - **Anchor:** `Emmanuel Theodore (33:02)`
 - **Type:** card
-- **Render:** `figma:card-v2-s06-19@s06-19`
+- **Render:** `figma:g-card-v2-s06-19@s06-19`
 - **Holds:** `S07-36`
 - **Note:** Figma card `v2-S06-19` highlights: Payoff Ordering.
 ## S07-38 — Preserving set I while exposing internal inequality
 - **Anchor:** `Emmanuel Theodore (33:16)`
 - **Type:** card
-- **Render:** `figma:card-v2-s06-19@s06-19`
+- **Render:** `figma:g-card-v2-s06-19@s06-19`
 - **Holds:** `S07-36`
 - **Note:** Figma card `v2-S06-19` highlights: Set I Preserved.
 ## S07-39 — Equation 4.2 Virginia 1691 boundary enforcement
@@ -1046,30 +1046,30 @@ Each shot is one turn of the OmniVoice narration, in order. Rebuilt for the G sc
 ## S07-40 — Requirement 3: circuit inputs and driving labor
 - **Anchor:** `Emmanuel Theodore (27:01)`
 - **Type:** card
-- **Render:** `figma:card-s02-16@s05-16`
+- **Render:** `figma:g-card-s02-16@s05-16`
 - **Note:** The Requirement 3 circuit-flow table opens with Row 1, naming Out-group and Buffer Class labor as the driving input. [book Preface; Ch 0, Fig 0.3]
 ## S07-41 — Elite tier as parasitic control gate
 - **Anchor:** `Emmanuel Theodore (27:16)`
 - **Type:** hold
-- **Render:** `figma:card-s02-16@s05-16`
+- **Render:** `figma:g-card-s02-16@s05-16`
 - **Holds:** `S07-40`
 - **Note:** Row 2 reveals, showing the Elite apex directing high-current labor flow via a small intermediate control current. [book Preface; Ch 0]
 ## S07-42 — Upward extraction E(t) and downward wage ψ(t)
 - **Anchor:** `Emmanuel Theodore (27:26)`
 - **Type:** hold
-- **Render:** `figma:card-s02-16@s05-16`
+- **Render:** `figma:g-card-s02-16@s05-16`
 - **Holds:** `S07-40`
 - **Note:** Row 3 reveals, pairing upward surplus E(t) with downward suppression allocation ψ(t) = ψ_s + ψ_m. [book §2.3.1; Ch 3, Eq 3.2]
 ## S07-43 — Picture holds
 - **Anchor:** `Emmanuel Theodore (27:39)`
 - **Type:** hold
-- **Render:** `figma:card-s02-16@s05-16`
+- **Render:** `figma:g-card-s02-16@s05-16`
 - **Holds:** `S07-40`
 - **Note:** The picture already on screen holds across this line.
 ## S07-44 — Chapter 19 Concession Theorem constraint Δ_max = 0
 - **Anchor:** `Emmanuel Theodore (27:47)`
 - **Type:** hold
-- **Render:** `figma:card-s02-16@s05-16`
+- **Render:** `figma:g-card-s02-16@s05-16`
 - **Holds:** `S07-40`
 - **Note:** Row 4 reveals, stating the Concession Theorem invariant Δ_max = 0 on non-kinetic status and material allocations. [book §2.3.1; Ch 19]
 ## S07-45 — Requirement 4: system objective function
@@ -1137,18 +1137,18 @@ Each shot is one turn of the OmniVoice narration, in order. Rebuilt for the G sc
 ## S07-56 — O_racialized in the American historical record
 - **Anchor:** `Emmanuel Theodore (33:49)`
 - **Type:** card
-- **Render:** `figma:card-v2-s06-24@s06-24`
+- **Render:** `figma:g-card-v2-s06-24@s06-24`
 - **Note:** Figma card `v2-S06-24` highlights: O_racialized.
 ## S07-57 — Adjacent Out-groups O_adjacent,1 through O_adjacent,m
 - **Anchor:** `Emmanuel Theodore (33:58)`
 - **Type:** card
-- **Render:** `figma:card-v2-s06-24@s06-24`
+- **Render:** `figma:g-card-v2-s06-24@s06-24`
 - **Holds:** `S07-56`
 - **Note:** Figma card `v2-S06-24` highlights: O_adjacent,1 … O_adjacent,m.
 ## S07-58 — Differential concessions and inter-group wedge management
 - **Anchor:** `Emmanuel Theodore (34:19)`
 - **Type:** card
-- **Render:** `figma:card-v2-s06-24@s06-24`
+- **Render:** `figma:g-card-v2-s06-24@s06-24`
 - **Holds:** `S07-56`
 - **Note:** Figma card `v2-S06-24` highlights: Wedge Management.
 ## S07-59 — Internal fractures along secondary social axes
@@ -1171,36 +1171,36 @@ Each shot is one turn of the OmniVoice narration, in order. Rebuilt for the G sc
 ## S07-62 — Secondary axes α: gender, wealth, credentials, record
 - **Anchor:** `Emmanuel Theodore (35:03)`
 - **Type:** card
-- **Render:** `figma:card-v2-s06-30@s06-30`
+- **Render:** `figma:g-card-v2-s06-30@s06-30`
 - **Note:** Figma card `v2-S06-30` highlights: Axis Selector α.
 ## S07-63 — Locally advantaged X⁺_α and subordinated X⁻_α sub-cells
 - **Anchor:** `Emmanuel Theodore (35:15)`
 - **Type:** card
-- **Render:** `figma:card-v2-s06-30@s06-30`
+- **Render:** `figma:g-card-v2-s06-30@s06-30`
 - **Holds:** `S07-62`
 - **Note:** Figma card `v2-S06-30` highlights: X⁺_α and X⁻_α.
 ## S07-64 — Applying α = gender inside I_buffer (Chapter 8)
 - **Anchor:** `Emmanuel Theodore (35:27)`
 - **Type:** card
-- **Render:** `figma:card-v2-s06-30@s06-30`
+- **Render:** `figma:g-card-v2-s06-30@s06-30`
 - **Holds:** `S07-62`
 - **Note:** Figma card `v2-S06-30` highlights: α = gender in I_buffer.
 ## S07-65 — Coverture headship versus reproductive subordination
 - **Anchor:** `Emmanuel Theodore (35:39)`
 - **Type:** card
-- **Render:** `figma:card-v2-s06-30@s06-30`
+- **Render:** `figma:g-card-v2-s06-30@s06-30`
 - **Holds:** `S07-62`
 - **Note:** Figma card `v2-S06-30` highlights: α = property / felony.
 ## S07-66 — Second recursive cut on property or felony conviction
 - **Anchor:** `Emmanuel Theodore (35:53)`
 - **Type:** card
-- **Render:** `figma:card-v2-s06-30@s06-30`
+- **Render:** `figma:g-card-v2-s06-30@s06-30`
 - **Holds:** `S07-62`
 - **Note:** Figma card `v2-S06-30` highlights: α = credentials in O_racialized.
 ## S07-67 — Applying Equation 2.4 inside O_racialized
 - **Anchor:** `Emmanuel Theodore (36:05)`
 - **Type:** card
-- **Render:** `figma:card-v2-s06-30@s06-30`
+- **Render:** `figma:g-card-v2-s06-30@s06-30`
 - **Holds:** `S07-62`
 - **Note:** Figma card `v2-S06-30` highlights: Partition notation.
 ## S07-68 — Table 2.1 Set-Resolution Ladder and Figure 2.1
@@ -1223,7 +1223,7 @@ Each shot is one turn of the OmniVoice narration, in order. Rebuilt for the G sc
 ## S07-71 — Figure 2.1: Zooming the Binary
 - **Anchor:** `Emmanuel Theodore (36:58)`
 - **Type:** card
-- **Render:** `figma:card-v2-s06-39@s06-39`
+- **Render:** `figma:g-fig2.1-zooming-the-binary`
 - **Note:** Figma card `v2-S06-39` highlights: Flat Blocks I and O.
 ## S07-72 — Diagnosing stalled public arguments with Table 2.1
 - **Anchor:** `Emmanuel Theodore (37:12)`
@@ -1406,31 +1406,30 @@ Each shot is one turn of the OmniVoice narration, in order. Rebuilt for the G sc
 - **Anchor:** `Emmanuel Theodore (48:01)`
 - **Type:** hold
 - **Render:** `figma:g-cine-235-poisoned-arrows`
-- **Holds:** `S08-21`
 - **Note:** The picture already on screen holds across this line.
 ## S08-24 — Picture holds
 - **Anchor:** `Emmanuel Theodore (48:01)`
 - **Type:** hold
 - **Render:** `figma:g-cine-235-poisoned-arrows`
-- **Holds:** `S08-21`
+- **Holds:** `S08-23`
 - **Note:** The picture already on screen holds across this line.
 ## S08-25 — Picture holds
 - **Anchor:** `Emmanuel Theodore (48:01)`
 - **Type:** hold
 - **Render:** `figma:g-cine-235-poisoned-arrows`
-- **Holds:** `S08-21`
+- **Holds:** `S08-23`
 - **Note:** The picture already on screen holds across this line.
 ## S08-26 — Picture holds
 - **Anchor:** `Emmanuel Theodore (48:01)`
 - **Type:** hold
 - **Render:** `figma:g-cine-235-poisoned-arrows`
-- **Holds:** `S08-21`
+- **Holds:** `S08-23`
 - **Note:** The picture already on screen holds across this line.
 ## S08-27 — Picture holds
 - **Anchor:** `Emmanuel Theodore (48:01)`
 - **Type:** hold
 - **Render:** `figma:g-cine-235-poisoned-arrows`
-- **Holds:** `S08-21`
+- **Holds:** `S08-23`
 - **Note:** The picture already on screen holds across this line.
 ## S08-28 — Crown demand for supranational legal title and ideology
 - **Anchor:** `Emmanuel Theodore (48:19)`
@@ -1730,6 +1729,65 @@ Each shot is one turn of the OmniVoice narration, in order. Rebuilt for the G sc
 - **Render:** `figma:card-s07-63@s08-63`
 - **Holds:** `S08-80`
 - **Note:** Row 3 remains focused on the absence of any unsponsored or pre-extraction phenotype caste in the Portugal case. [book §2.2; Ch 3; YT02_outline R1]
+## S08-84 — Picture holds
+- **Anchor:** `Emmanuel Theodore (57:40)`
+- **Type:** hold
+- **Render:** `figma:g-trade-1-portugal-atlantic`
+- **Note:** The picture already on screen holds across this line.
+## S08-85 — Picture holds
+- **Anchor:** `Emmanuel Theodore (57:40)`
+- **Type:** hold
+- **Render:** `figma:g-trade-2-spanish-demand`
+- **Note:** The picture already on screen holds across this line.
+## S08-86 — Picture holds
+- **Anchor:** `Emmanuel Theodore (57:40)`
+- **Type:** hold
+- **Render:** `figma:g-trade-3-brazil-angola`
+- **Note:** The picture already on screen holds across this line.
+## S08-87 — Picture holds
+- **Anchor:** `Emmanuel Theodore (57:40)`
+- **Type:** hold
+- **Render:** `figma:g-trade-3-brazil-angola`
+- **Holds:** `S08-86`
+- **Note:** The picture already on screen holds across this line.
+## S08-88 — Picture holds
+- **Anchor:** `Emmanuel Theodore (57:40)`
+- **Type:** hold
+- **Render:** `figma:g-trade-4-northern-companies`
+- **Note:** The picture already on screen holds across this line.
+## S08-89 — Picture holds
+- **Anchor:** `Emmanuel Theodore (57:40)`
+- **Type:** hold
+- **Render:** `figma:g-trade-5-triangle`
+- **Note:** The picture already on screen holds across this line.
+## S08-90 — Picture holds
+- **Anchor:** `Emmanuel Theodore (57:40)`
+- **Type:** hold
+- **Render:** `figma:g-trade-6-volume-over-time`
+- **Note:** The picture already on screen holds across this line.
+## S08-91 — Picture holds
+- **Anchor:** `Emmanuel Theodore (57:40)`
+- **Type:** hold
+- **Render:** `figma:g-trade-6-volume-over-time`
+- **Holds:** `S08-90`
+- **Note:** The picture already on screen holds across this line.
+## S08-92 — Picture holds
+- **Anchor:** `Emmanuel Theodore (57:40)`
+- **Type:** hold
+- **Render:** `figma:g-trade-6-volume-over-time`
+- **Holds:** `S08-90`
+- **Note:** The picture already on screen holds across this line.
+## S08-93 — Picture holds
+- **Anchor:** `Emmanuel Theodore (57:40)`
+- **Type:** hold
+- **Render:** `figma:g-trade-7-americas-1619`
+- **Note:** The picture already on screen holds across this line.
+## S08-94 — Picture holds
+- **Anchor:** `Emmanuel Theodore (57:40)`
+- **Type:** hold
+- **Render:** `figma:g-trade-7-americas-1619`
+- **Holds:** `S08-93`
+- **Note:** The picture already on screen holds across this line.
 ## S09-01 — Test 2: Seventeenth-century Virginia (1619–1705)
 - **Anchor:** `Emmanuel Theodore (57:52)`
 - **Type:** card
@@ -1830,30 +1888,30 @@ Each shot is one turn of the OmniVoice narration, in order. Rebuilt for the G sc
 ## S09-16 — Step 1: July 1640 John Punch case before the Governor's Council
 - **Anchor:** `Emmanuel Theodore (61:29)`
 - **Type:** card
-- **Render:** `figma:card-s08-16@s09-16`
+- **Render:** `figma:g-card-s08-16@s09-16`
 - **Note:** Row 1 of the John Punch Sentencing table reveals, opening the July 1640 Virginia Governor's Council record. [book Ch 4]
 ## S09-17 — Three recaptured runaways: Victor, James Gregory, and John Punch
 - **Anchor:** `Emmanuel Theodore (61:41)`
 - **Type:** hold
-- **Render:** `figma:card-s08-16@s09-16`
+- **Render:** `figma:g-card-s08-16@s09-16`
 - **Holds:** `S09-16`
 - **Note:** Row 2 reveals the three coalition members who fled Hugh Gwyn's plantation: Victor (Dutch), James Gregory (Scots), and John Punch (Black). [book Ch 4]
 ## S09-18 — 30 lashes and +4 years for the Dutchman and Scotsman
 - **Anchor:** `Emmanuel Theodore (61:53)`
 - **Type:** hold
-- **Render:** `figma:card-s08-16@s09-16`
+- **Render:** `figma:g-card-s08-16@s09-16`
 - **Holds:** `S09-16`
 - **Note:** Row 3 reveals the sentence for Victor and James Gregory: 30 lashes each and four additional years of indenture. [book Ch 4]
 ## S09-19 — Lifelong servitude ordered for John Punch
 - **Anchor:** `Emmanuel Theodore (62:02)`
 - **Type:** hold
-- **Render:** `figma:card-s08-16@s09-16`
+- **Render:** `figma:g-card-s08-16@s09-16`
 - **Holds:** `S09-16`
 - **Note:** Row 4 reveals the differential sentence for John Punch: service for the time of his natural life. [book Ch 4]
 ## S09-20 — First judicial compilation of Equation 3.10 to split a coalition
 - **Anchor:** `Emmanuel Theodore (62:09)`
 - **Type:** hold
-- **Render:** `figma:card-s08-16@s09-16`
+- **Render:** `figma:g-card-s08-16@s09-16`
 - **Holds:** `S09-16`
 - **Note:** Row 5 reveals, tagging the 1640 judgment as the first American judicial compile of O_racialized = f(Phenotype). [book Ch 3, Eq 3.10; Ch 4]
 ## S09-21 — Step 2: December 1662 partus sequitur ventrem statute
@@ -1923,30 +1981,30 @@ Each shot is one turn of the OmniVoice narration, in order. Rebuilt for the G sc
 ## S09-32 — September 1676: burning of Jamestown and flight of Berkeley
 - **Anchor:** `Emmanuel Theodore (64:41)`
 - **Type:** card
-- **Render:** `figma:card-s08-32@s09-32`
+- **Render:** `figma:g-card-s08-32@s09-32`
 - **Note:** Item 1 of the Jamestown & West Point card reveals, recording the September 1676 burning of Jamestown. [book Ch 4]
 ## S09-33 — Grantham's encounter with 400 English and African fighters at West Point
 - **Anchor:** `Emmanuel Theodore (64:54)`
 - **Type:** hold
-- **Render:** `figma:card-s08-32@s09-32`
+- **Render:** `figma:g-card-s08-32@s09-32`
 - **Holds:** `S09-32`
 - **Note:** Item 2 reveals, documenting Thomas Grantham facing 400 armed English and African men standing side by side at West Point. [book Ch 4, citing Allen]
 ## S09-34 — Deceptive pardon promises, 23 hangings, and re-enslavement
 - **Anchor:** `Emmanuel Theodore (65:09)`
 - **Type:** hold
-- **Render:** `figma:card-s08-32@s09-32`
+- **Render:** `figma:g-card-s08-32@s09-32`
 - **Holds:** `S09-32`
 - **Note:** Item 3 reveals, recording Grantham's deceptive disarmament, 23 executions, and the return of African rebels to bondage. [book Ch 4, citing Allen]
 ## S09-35 — Theodore W. Allen on the planter class's engineering patch
 - **Anchor:** `Emmanuel Theodore (65:22)`
 - **Type:** hold
-- **Render:** `figma:card-s08-32@s09-32`
+- **Render:** `figma:g-card-s08-32@s09-32`
 - **Holds:** `S09-32`
 - **Note:** Item 4 reveals, citing Theodore W. Allen's The Invention of the White Race on the statutory patch designed to split labor. [book Ch 4, citing Allen]
 ## S09-57 — Picture holds
 - **Anchor:** `Emmanuel Theodore (65:37)`
 - **Type:** hold
-- **Render:** `figma:card-s08-32@s09-32`
+- **Render:** `figma:g-card-s08-32@s09-32`
 - **Holds:** `S09-32`
 - **Note:** The picture already on screen holds across this line.
 ## S09-36 — Step 3: April 1691 Boundary Enforcement Act
@@ -2049,48 +2107,48 @@ Each shot is one turn of the OmniVoice narration, in order. Rebuilt for the G sc
 ## S09-53 — W. E. B. Du Bois on the public and psychological wage
 - **Anchor:** `Emmanuel Theodore (68:59)`
 - **Type:** card
-- **Render:** `figma:card-s08-48@s09-50`
+- **Render:** `figma:g-card-s08-48@s09-50`
 - **Note:** Node 1 of the Virginia Compile Verdict timeline illuminates, citing Du Bois's public and psychological wage (ψ_s + ψ_m). [book §2.3.1; Ch 4, citing Du Bois]
 ## S09-54 — Equation 2.19: Φ_load elevated into 0.15–0.55 regime
 - **Anchor:** `Emmanuel Theodore (69:11)`
 - **Type:** hold
-- **Render:** `figma:card-s08-48@s09-50`
+- **Render:** `figma:g-card-s08-48@s09-50`
 - **Holds:** `S09-53`
 - **Note:** Node 2 illuminates, recording Φ_load rising from near zero into the 0.15–0.55 ANES-calibrated resentment band. [book §2.3.6, Eq 2.19]
 ## S09-58 — Equation 2.15: M_eff(t) depressed safely below τ
 - **Anchor:** `Emmanuel Theodore (69:29)`
 - **Type:** hold
-- **Render:** `figma:card-s08-48@s09-50`
+- **Render:** `figma:g-card-s08-48@s09-50`
 - **Holds:** `S09-53`
 - **Note:** Node 3 illuminates, showing elevated Φ_load holding effective class coherence M_eff(t) below τ for 150 years. [book §2.3.6, Eq 2.15; Ch 4]
 ## S09-59 — Test 2 verdict: Prediction 2 confirmed across 1640–1705
 - **Anchor:** `Emmanuel Theodore (69:41)`
 - **Type:** hold
-- **Render:** `figma:card-s08-48@s09-50`
+- **Render:** `figma:g-card-s08-48@s09-50`
 - **Holds:** `S09-53`
 - **Note:** Node 4 illuminates, confirming that the 1676 solidarity crisis triggered the 1691 boundary act and 1705 Slave Codes. [book Ch 4; YT02_outline P2]
 ## S09-60 — Equation 3.5 unifying all three historical regimes on one dial
 - **Anchor:** `Emmanuel Theodore (69:58)`
 - **Type:** hold
-- **Render:** `figma:card-s08-48@s09-50`
+- **Render:** `figma:g-card-s08-48@s09-50`
 - **Holds:** `S09-53`
 - **Note:** The Test 2 verdict remains focused on the 1676 solidarity crisis triggering the 1691 boundary act and 1705 Slave Codes. [book Ch 4; YT02_outline P2]
 ## S10-45 — Picture holds
 - **Anchor:** `Emmanuel Theodore (70:12)`
 - **Type:** hold
-- **Render:** `figma:card-s08-48@s09-50`
+- **Render:** `figma:g-card-s08-48@s09-50`
 - **Holds:** `S09-53`
 - **Note:** The picture already on screen holds across this line.
 ## S10-57 — Picture holds
 - **Anchor:** `Emmanuel Theodore (70:22)`
 - **Type:** hold
-- **Render:** `figma:card-s08-48@s09-50`
+- **Render:** `figma:g-card-s08-48@s09-50`
 - **Holds:** `S09-53`
 - **Note:** The picture already on screen holds across this line.
 ## S10-58 — Picture holds
 - **Anchor:** `Emmanuel Theodore (70:35)`
 - **Type:** hold
-- **Render:** `figma:card-s08-48@s09-50`
+- **Render:** `figma:g-card-s08-48@s09-50`
 - **Holds:** `S09-53`
 - **Note:** The picture already on screen holds across this line.
 ## S10-59 — Picture holds
@@ -2455,6 +2513,192 @@ Each shot is one turn of the OmniVoice narration, in order. Rebuilt for the G sc
 - **Render:** `figma:wage S10-43`
 - **Holds:** `S10-43`
 - **Note:** The wage S10-43 Figma frame: W rotates to θ = 132°; the caption reads ONE ROTATING CONTRACT; the ONE ROTATING QUANTITY panel appears; Equation 3.5 is ringed; all three historical markers light. [book Ch 3, Eq 3.5; Ch 13]
+## S10-66 — Picture holds
+- **Anchor:** `Emmanuel Theodore (83:23)`
+- **Type:** hold
+- **Render:** `figma:g-haiti-1-atlantic-node`
+- **Note:** The picture already on screen holds across this line.
+## S10-67 — Picture holds
+- **Anchor:** `Emmanuel Theodore (83:23)`
+- **Type:** hold
+- **Render:** `figma:g-haiti-1-atlantic-node`
+- **Holds:** `S10-66`
+- **Note:** The picture already on screen holds across this line.
+## S10-68 — Picture holds
+- **Anchor:** `Emmanuel Theodore (83:23)`
+- **Type:** hold
+- **Render:** `figma:g-haiti-2-saint-domingue-data`
+- **Note:** The picture already on screen holds across this line.
+## S10-69 — Picture holds
+- **Anchor:** `Emmanuel Theodore (83:23)`
+- **Type:** hold
+- **Render:** `figma:g-haiti-2-saint-domingue-data`
+- **Holds:** `S10-68`
+- **Note:** The picture already on screen holds across this line.
+## S10-70 — Picture holds
+- **Anchor:** `Emmanuel Theodore (83:23)`
+- **Type:** hold
+- **Render:** `figma:g-haiti-2-saint-domingue-data`
+- **Holds:** `S10-68`
+- **Note:** The picture already on screen holds across this line.
+## S10-71 — Picture holds
+- **Anchor:** `Emmanuel Theodore (83:23)`
+- **Type:** hold
+- **Render:** `figma:g-haiti-3-captive-routes`
+- **Note:** The picture already on screen holds across this line.
+## S10-72 — Picture holds
+- **Anchor:** `Emmanuel Theodore (83:23)`
+- **Type:** hold
+- **Render:** `figma:g-haiti-4-social-pyramid`
+- **Note:** The picture already on screen holds across this line.
+## S10-73 — Picture holds
+- **Anchor:** `Emmanuel Theodore (83:23)`
+- **Type:** hold
+- **Render:** `figma:g-haiti-5-uprising-1791`
+- **Note:** The picture already on screen holds across this line.
+## S10-74 — Picture holds
+- **Anchor:** `Emmanuel Theodore (83:23)`
+- **Type:** hold
+- **Render:** `figma:g-haiti-5-uprising-1791`
+- **Holds:** `S10-73`
+- **Note:** The picture already on screen holds across this line.
+## S10-75 — Picture holds
+- **Anchor:** `Emmanuel Theodore (83:23)`
+- **Type:** hold
+- **Render:** `figma:g-haiti-6-emancipation-decrees`
+- **Note:** The picture already on screen holds across this line.
+## S10-76 — Picture holds
+- **Anchor:** `Emmanuel Theodore (83:23)`
+- **Type:** hold
+- **Render:** `figma:g-haiti-7-timeline-1791-1804`
+- **Note:** The picture already on screen holds across this line.
+## S10-77 — Picture holds
+- **Anchor:** `Emmanuel Theodore (83:23)`
+- **Type:** hold
+- **Render:** `figma:g-haiti-8-war-of-independence`
+- **Note:** The picture already on screen holds across this line.
+## S10-78 — Picture holds
+- **Anchor:** `Emmanuel Theodore (83:23)`
+- **Type:** hold
+- **Render:** `figma:g-haiti-8-war-of-independence`
+- **Holds:** `S10-77`
+- **Note:** The picture already on screen holds across this line.
+## S10-79 — Picture holds
+- **Anchor:** `Emmanuel Theodore (83:23)`
+- **Type:** hold
+- **Render:** `figma:g-haiti-8-war-of-independence`
+- **Holds:** `S10-77`
+- **Note:** The picture already on screen holds across this line.
+## S10-80 — Picture holds
+- **Anchor:** `Emmanuel Theodore (83:23)`
+- **Type:** hold
+- **Render:** `figma:g-haiti-9-declaration-1804`
+- **Note:** The picture already on screen holds across this line.
+## S10-81 — Picture holds
+- **Anchor:** `Emmanuel Theodore (83:23)`
+- **Type:** hold
+- **Render:** `figma:g-haiti-10-haitian-theorem`
+- **Note:** The picture already on screen holds across this line.
+## S10-82 — Picture holds
+- **Anchor:** `Emmanuel Theodore (83:23)`
+- **Type:** hold
+- **Render:** `figma:g-haiti-10-haitian-theorem`
+- **Holds:** `S10-81`
+- **Note:** The picture already on screen holds across this line.
+## S10-83 — Picture holds
+- **Anchor:** `Emmanuel Theodore (83:23)`
+- **Type:** hold
+- **Render:** `figma:g-haiti-11-louisiana-purchase`
+- **Note:** The picture already on screen holds across this line.
+## S10-84 — Picture holds
+- **Anchor:** `Emmanuel Theodore (83:23)`
+- **Type:** hold
+- **Render:** `figma:g-haiti-12-containment-triad`
+- **Note:** The picture already on screen holds across this line.
+## S10-85 — Picture holds
+- **Anchor:** `Emmanuel Theodore (83:23)`
+- **Type:** hold
+- **Render:** `figma:g-haiti-12-containment-triad`
+- **Holds:** `S10-84`
+- **Note:** The picture already on screen holds across this line.
+## S10-86 — Picture holds
+- **Anchor:** `Emmanuel Theodore (83:23)`
+- **Type:** hold
+- **Render:** `figma:g-haiti-13-ransom-1825`
+- **Note:** The picture already on screen holds across this line.
+## S10-87 — Picture holds
+- **Anchor:** `Emmanuel Theodore (83:23)`
+- **Type:** hold
+- **Render:** `figma:g-haiti-13-ransom-1825`
+- **Holds:** `S10-86`
+- **Note:** The picture already on screen holds across this line.
+## S10-88 — Picture holds
+- **Anchor:** `Emmanuel Theodore (83:23)`
+- **Type:** hold
+- **Render:** `figma:g-haiti-14-occupation-1915`
+- **Note:** The picture already on screen holds across this line.
+## S10-89 — Picture holds
+- **Anchor:** `Emmanuel Theodore (83:23)`
+- **Type:** hold
+- **Render:** `figma:g-haiti-14-occupation-1915`
+- **Holds:** `S10-88`
+- **Note:** The picture already on screen holds across this line.
+## S10-90 — Picture holds
+- **Anchor:** `Emmanuel Theodore (83:23)`
+- **Type:** hold
+- **Render:** `figma:g-haiti-15-backlash-1800-1822`
+- **Note:** The picture already on screen holds across this line.
+## S10-91 — Picture holds
+- **Anchor:** `Emmanuel Theodore (83:23)`
+- **Type:** hold
+- **Render:** `figma:g-haiti-15-backlash-1800-1822`
+- **Holds:** `S10-90`
+- **Note:** The picture already on screen holds across this line.
+## S10-92 — Picture holds
+- **Anchor:** `Emmanuel Theodore (83:23)`
+- **Type:** hold
+- **Render:** `figma:g-haiti-15-backlash-1800-1822`
+- **Holds:** `S10-90`
+- **Note:** The picture already on screen holds across this line.
+## S10-93 — Picture holds
+- **Anchor:** `Emmanuel Theodore (83:23)`
+- **Type:** hold
+- **Render:** `figma:g-haiti-15-backlash-1800-1822`
+- **Holds:** `S10-90`
+- **Note:** The picture already on screen holds across this line.
+## S10-94 — Picture holds
+- **Anchor:** `Emmanuel Theodore (83:23)`
+- **Type:** hold
+- **Render:** `figma:g-haiti-16-inverse-contagion`
+- **Note:** The picture already on screen holds across this line.
+## S10-95 — Picture holds
+- **Anchor:** `Emmanuel Theodore (83:23)`
+- **Type:** hold
+- **Render:** `figma:g-haiti-16-inverse-contagion`
+- **Holds:** `S10-94`
+- **Note:** The picture already on screen holds across this line.
+## S10-96 — Picture holds
+- **Anchor:** `Emmanuel Theodore (83:23)`
+- **Type:** hold
+- **Render:** `figma:g-haiti-16-inverse-contagion`
+- **Holds:** `S10-94`
+- **Note:** The picture already on screen holds across this line.
+## S10-97 — Picture holds
+- **Anchor:** `Emmanuel Theodore (83:23)`
+- **Type:** hold
+- **Render:** `figma:g-haiti-17-firmin-1891`
+- **Note:** The picture already on screen holds across this line.
+## S10-98 — Picture holds
+- **Anchor:** `Emmanuel Theodore (83:23)`
+- **Type:** hold
+- **Render:** `figma:g-haiti-18-breach-cycle`
+- **Note:** The picture already on screen holds across this line.
+## S10-99 — Picture holds
+- **Anchor:** `Emmanuel Theodore (83:23)`
+- **Type:** hold
+- **Render:** `figma:g-haiti-18-breach-cycle`
+- **Holds:** `S10-98`
+- **Note:** The picture already on screen holds across this line.
 ## S11-01 — Test 3: Quantitative American record (1840–2020)
 - **Anchor:** `Emmanuel Theodore (83:36)`
 - **Type:** card
@@ -2549,24 +2793,24 @@ Each shot is one turn of the OmniVoice narration, in order. Rebuilt for the G sc
 ## S11-17 — 1954–1965 cost spike of explicit Jim Crow partition
 - **Anchor:** `Emmanuel Theodore (87:43)`
 - **Type:** card
-- **Render:** `figma:card-v2-s11-17@s11-17`
+- **Render:** `figma:g-card-v2-s11-17@s11-17`
 - **Note:** Figma card `v2-S11-17` highlights: Three rising costs.
 ## S11-18 — Fascism threshold at 90° and Tier 3 ordinal calibration
 - **Anchor:** `Emmanuel Theodore (87:56)`
 - **Type:** card
-- **Render:** `figma:card-v2-s11-17@s11-17`
+- **Render:** `figma:g-card-v2-s11-17@s11-17`
 - **Holds:** `S11-17`
 - **Note:** Figma card `v2-S11-17` highlights: Cold War legitimacy.
 ## S11-19 — Boycotts, sit-ins, and troop deployments spiking C_coercive and C_economic
 - **Anchor:** `Emmanuel Theodore (88:24)`
 - **Type:** card
-- **Render:** `figma:card-v2-s11-17@s11-17`
+- **Render:** `figma:g-card-v2-s11-17@s11-17`
 - **Holds:** `S11-17`
 - **Note:** Figma card `v2-S11-17` highlights: Movement pressure.
 ## S11-20 — 1964–1965 statutory swap to facially neutral carceral and fiscal proxies
 - **Anchor:** `Emmanuel Theodore (88:33)`
 - **Type:** card
-- **Render:** `figma:card-v2-s11-17@s11-17`
+- **Render:** `figma:g-card-v2-s11-17@s11-17`
 - **Holds:** `S11-17`
 - **Note:** Figma card `v2-S11-17` highlights: Interface Swap · Eq. 2.10.
 ## S11-21 — Dan Baum's 1994 John Ehrlichman interview quote
@@ -2669,36 +2913,36 @@ Each shot is one turn of the OmniVoice narration, in order. Rebuilt for the G sc
 ## S11-38 — Post-1965 expansion of R(t) and Φ_load(t) to prevent breach
 - **Anchor:** `Emmanuel Theodore (93:43)`
 - **Type:** card
-- **Render:** `figma:card-v2-s11-38@s11-38`
+- **Render:** `figma:g-card-v2-s11-38@s11-38`
 - **Note:** Figma card `v2-S11-38` highlights: Union density (BLS; Troy & Sheflin).
 ## S11-39 — Primary data sources: BLS, Troy & Sheflin, WID, BJS, Sentencing Project
 - **Anchor:** `Emmanuel Theodore (93:59)`
 - **Type:** card
-- **Render:** `figma:card-v2-s11-38@s11-38`
+- **Render:** `figma:g-card-v2-s11-38@s11-38`
 - **Holds:** `S11-38`
 - **Note:** Figma card `v2-S11-38` highlights: Top-decile wealth (WID).
 ## S11-40 — Union density falls 28.4% → 10.8%; top-decile wealth rises 67.5% → 76.5%
 - **Anchor:** `Emmanuel Theodore (94:14)`
 - **Type:** card
-- **Render:** `figma:card-v2-s11-38@s11-38`
+- **Render:** `figma:g-card-v2-s11-38@s11-38`
 - **Holds:** `S11-38`
 - **Note:** Figma card `v2-S11-38` highlights: US incarceration (BJS).
 ## S11-41 — Overall US incarceration rises 231%: 108 → 358 per 100,000
 - **Anchor:** `Emmanuel Theodore (94:25)`
 - **Type:** card
-- **Render:** `figma:card-v2-s11-38@s11-38`
+- **Render:** `figma:g-card-v2-s11-38@s11-38`
 - **Holds:** `S11-38`
 - **Note:** Figma card `v2-S11-38` highlights: Black incarceration (BJS; Sentencing Project).
 ## S11-42 — Black incarceration rate: 588 (1965) → 3,074 (2010) → 1,821 (2020)
 - **Anchor:** `Emmanuel Theodore (94:44)`
 - **Type:** card
-- **Render:** `figma:card-v2-s11-38@s11-38`
+- **Render:** `figma:g-card-v2-s11-38@s11-38`
 - **Holds:** `S11-38`
 - **Note:** Figma card `v2-S11-38` highlights: Σ_suppression envelope.
 ## S11-43 — Composite Σ_sup(t) expands >23% as elite wealth gains 9 points
 - **Anchor:** `Emmanuel Theodore (94:57)`
 - **Type:** card
-- **Render:** `figma:card-v2-s11-38@s11-38`
+- **Render:** `figma:g-card-v2-s11-38@s11-38`
 - **Holds:** `S11-38`
 - **Note:** Figma card `v2-S11-38` highlights: Biological Embedding.
 ## S11-44 — Definition 2.3: Biological Embedding
@@ -3061,162 +3305,162 @@ Each shot is one turn of the OmniVoice narration, in order. Rebuilt for the G sc
 ## S13-01 — Engineering question: why I_buffer and O_racialized fail to synchronize
 - **Anchor:** `Emmanuel Theodore (107:28)`
 - **Type:** card
-- **Render:** `figma:card-v2-s13-01@s13-01`
+- **Render:** `figma:g-card-v2-s13-01@s13-01`
 - **Note:** Figma card `v2-S13-01` highlights: Aligned grievance currents.
 ## S13-02 — The Interference Engine across Chapters 0, 14, and 22
 - **Anchor:** `Emmanuel Theodore (107:42)`
 - **Type:** card
-- **Render:** `figma:card-v2-s13-01@s13-01`
+- **Render:** `figma:g-card-v2-s13-01@s13-01`
 - **Holds:** `S13-01`
 - **Note:** Figma card `v2-S13-01` highlights: Constitutional phase jammer.
 ## S13-03 — November 1787: James Madison's Federalist No. 10
 - **Anchor:** `Emmanuel Theodore (107:56)`
 - **Type:** card
-- **Render:** `figma:card-v2-s13-01@s13-01`
+- **Render:** `figma:g-card-v2-s13-01@s13-01`
 - **Holds:** `S13-01`
 - **Note:** Figma card `v2-S13-01` highlights: Φ_load dispersion.
 ## S13-04 — Unequal distribution of property as the durable source of faction
 - **Anchor:** `Emmanuel Theodore (108:07)`
 - **Type:** card
-- **Render:** `figma:card-v2-s13-01@s13-01`
+- **Render:** `figma:g-card-v2-s13-01@s13-01`
 - **Holds:** `S13-01`
 - **Note:** Figma card `v2-S13-01` highlights: Congressional Record DFT.
 ## S13-05 — Extending the sphere across competing religious and regional axes
 - **Anchor:** `Emmanuel Theodore (108:27)`
 - **Type:** card
-- **Render:** `figma:card-v2-s13-01@s13-01`
+- **Render:** `figma:g-card-v2-s13-01@s13-01`
 - **Holds:** `S13-01`
 - **Note:** Figma card `v2-S13-01` highlights: Electoral harmonics.
 ## S13-06 — Constitutional architecture as an active phased-array signal jammer
 - **Anchor:** `Emmanuel Theodore (108:43)`
 - **Type:** card
-- **Render:** `figma:card-v2-s13-01@s13-01`
+- **Render:** `figma:g-card-v2-s13-01@s13-01`
 - **Holds:** `S13-01`
 - **Note:** Figma card `v2-S13-01` highlights: Google Trends weekly.
 ## S13-07 — Equation 0.15: alternating grievance current i_k(t)
 - **Anchor:** `Emmanuel Theodore (108:52)`
 - **Type:** card
-- **Render:** `figma:card-v2-s13-01@s13-01`
+- **Render:** `figma:g-card-v2-s13-01@s13-01`
 - **Holds:** `S13-01`
 - **Note:** Figma card `v2-S13-01` highlights: Google Trends weekly.
 ## S13-08 — Equation 0.16: Kirchhoff sum I_E(t) at the Elite node
 - **Anchor:** `Emmanuel Theodore (109:08)`
 - **Type:** card
-- **Render:** `figma:card-v2-s13-01@s13-01`
+- **Render:** `figma:g-card-v2-s13-01@s13-01`
 - **Holds:** `S13-01`
 - **Note:** Figma card `v2-S13-01` highlights: Google Trends weekly.
 ## S13-09 — Figure 0.6: Destructive Interference across time
 - **Anchor:** `Emmanuel Theodore (109:20)`
 - **Type:** card
-- **Render:** `figma:card-v2-s13-01@s13-01`
+- **Render:** `figma:g-card-v2-s13-01@s13-01`
 - **Holds:** `S13-01`
 - **Note:** Figma card `v2-S13-01` highlights: Google Trends weekly.
 ## S13-10 — 180° antiphase alignment collapsing the vector sum near zero
 - **Anchor:** `Emmanuel Theodore (109:29)`
 - **Type:** card
-- **Render:** `figma:card-v2-s13-01@s13-01`
+- **Render:** `figma:g-card-v2-s13-01@s13-01`
 - **Holds:** `S13-01`
 - **Note:** Figma card `v2-S13-01` highlights: Google Trends weekly.
 ## S13-11 — Equation 2.4 α-axes supplying additional phase channels
 - **Anchor:** `Emmanuel Theodore (109:40)`
 - **Type:** card
-- **Render:** `figma:card-v2-s13-01@s13-01`
+- **Render:** `figma:g-card-v2-s13-01@s13-01`
 - **Holds:** `S13-01`
 - **Note:** Figma card `v2-S13-01` highlights: Google Trends weekly.
 ## S13-12 — Equation 22.1: decomposing discourse power into class and identity bands
 - **Anchor:** `Emmanuel Theodore (109:56)`
 - **Type:** card
-- **Render:** `figma:card-v2-s13-01@s13-01`
+- **Render:** `figma:g-card-v2-s13-01@s13-01`
 - **Holds:** `S13-01`
 - **Note:** Figma card `v2-S13-01` highlights: Google Trends weekly.
 ## S13-13 — Equation 22.2: circular phase dispersion Φ_load(t)
 - **Anchor:** `Emmanuel Theodore (110:10)`
 - **Type:** card
-- **Render:** `figma:card-v2-s13-01@s13-01`
+- **Render:** `figma:g-card-v2-s13-01@s13-01`
 - **Holds:** `S13-01`
 - **Note:** Figma card `v2-S13-01` highlights: Google Trends weekly.
 ## S13-14 — Φ_load bounded between 0 (synchronization) and 1 (cancellation)
 - **Anchor:** `Emmanuel Theodore (110:18)`
 - **Type:** card
-- **Render:** `figma:card-v2-s13-01@s13-01`
+- **Render:** `figma:g-card-v2-s13-01@s13-01`
 - **Holds:** `S13-01`
 - **Note:** Figma card `v2-S13-01` highlights: Google Trends weekly.
 ## S13-15 — Confidence Tier 2 spectral test on two public datasets
 - **Anchor:** `Emmanuel Theodore (110:26)`
 - **Type:** card
-- **Render:** `figma:card-v2-s13-01@s13-01`
+- **Render:** `figma:g-card-v2-s13-01@s13-01`
 - **Holds:** `S13-01`
 - **Note:** Figma card `v2-S13-01` highlights: Google Trends weekly.
 ## S13-16 — Predicted identity-to-class power peaks at fixed electoral frequencies
 - **Anchor:** `Emmanuel Theodore (110:37)`
 - **Type:** card
-- **Render:** `figma:card-v2-s13-01@s13-01`
+- **Render:** `figma:g-card-v2-s13-01@s13-01`
 - **Holds:** `S13-01`
 - **Note:** Figma card `v2-S13-01` highlights: Google Trends weekly.
 ## S13-17 — Falsification gate: 4-year ratio ≤ 1.2 or comparable class peak
 - **Anchor:** `Emmanuel Theodore (110:54)`
 - **Type:** card
-- **Render:** `figma:card-v2-s13-01@s13-01`
+- **Render:** `figma:g-card-v2-s13-01@s13-01`
 - **Holds:** `S13-01`
 - **Note:** Figma card `v2-S13-01` highlights: Google Trends weekly.
 ## S13-18 — Dataset 1: US Congressional Record, 1965–2024 (N = 60 annual)
 - **Anchor:** `Emmanuel Theodore (111:06)`
 - **Type:** card
-- **Render:** `figma:card-v2-s13-01@s13-01`
+- **Render:** `figma:g-card-v2-s13-01@s13-01`
 - **Holds:** `S13-01`
 - **Note:** Figma card `v2-S13-01` highlights: Google Trends weekly.
 ## S13-19 — Table 22.1: 4-year presidential cycle (0.25 cyc/yr) ratio = 24.06
 - **Anchor:** `Emmanuel Theodore (111:25)`
 - **Type:** card
-- **Render:** `figma:card-v2-s13-01@s13-01`
+- **Render:** `figma:g-card-v2-s13-01@s13-01`
 - **Holds:** `S13-01`
 - **Note:** Figma card `v2-S13-01` highlights: Google Trends weekly.
 ## S13-20 — Table 22.1: 6-year Senate ratio = 21.02; 8-year two-term ratio = 12.86
 - **Anchor:** `Emmanuel Theodore (111:40)`
 - **Type:** card
-- **Render:** `figma:card-v2-s13-01@s13-01`
+- **Render:** `figma:g-card-v2-s13-01@s13-01`
 - **Holds:** `S13-01`
 - **Note:** Figma card `v2-S13-01` highlights: Google Trends weekly.
 ## S13-21 — Parseval energy conservation verified to 0.9996
 - **Anchor:** `Emmanuel Theodore (111:52)`
 - **Type:** card
-- **Render:** `figma:card-v2-s13-01@s13-01`
+- **Render:** `figma:g-card-v2-s13-01@s13-01`
 - **Holds:** `S13-01`
 - **Note:** Figma card `v2-S13-01` highlights: Google Trends weekly.
 ## S13-22 — Negative control: time-domain election-year t-test (t = 0.479, p = 0.634)
 - **Anchor:** `Emmanuel Theodore (112:03)`
 - **Type:** card
-- **Render:** `figma:card-v2-s13-01@s13-01`
+- **Render:** `figma:g-card-v2-s13-01@s13-01`
 - **Holds:** `S13-01`
 - **Note:** Figma card `v2-S13-01` highlights: Google Trends weekly.
 ## S13-23 — Secular volume drift masking time-domain means vs. Fourier isolation
 - **Anchor:** `Emmanuel Theodore (112:17)`
 - **Type:** card
-- **Render:** `figma:card-v2-s13-01@s13-01`
+- **Render:** `figma:g-card-v2-s13-01@s13-01`
 - **Holds:** `S13-01`
 - **Note:** Figma card `v2-S13-01` highlights: Google Trends weekly.
 ## S13-24 — Annual Nyquist boundary at 0.50 cyc/yr: 2-year ratio = 0.58
 - **Anchor:** `Emmanuel Theodore (112:30)`
 - **Type:** card
-- **Render:** `figma:card-v2-s13-01@s13-01`
+- **Render:** `figma:g-card-v2-s13-01@s13-01`
 - **Holds:** `S13-01`
 - **Note:** Figma card `v2-S13-01` highlights: Google Trends weekly.
 ## S13-25 — Dataset 2: Weekly Google Trends series, 2004–2024 (Table 22.2)
 - **Anchor:** `Emmanuel Theodore (112:42)`
 - **Type:** card
-- **Render:** `figma:card-v2-s13-01@s13-01`
+- **Render:** `figma:g-card-v2-s13-01@s13-01`
 - **Holds:** `S13-01`
 - **Note:** Figma card `v2-S13-01` highlights: Google Trends weekly.
 ## S13-26 — Table 22.2 resolves the 2-year midterm carrier at ratio = 12.82
 - **Anchor:** `Emmanuel Theodore (112:53)`
 - **Type:** card
-- **Render:** `figma:card-v2-s13-01@s13-01`
+- **Render:** `figma:g-card-v2-s13-01@s13-01`
 - **Holds:** `S13-01`
 - **Note:** Figma card `v2-S13-01` highlights: Google Trends weekly.
 ## S13-27 — Tier 2 spectral results confirming phase-locked carrier modulation
 - **Anchor:** `Emmanuel Theodore (113:04)`
 - **Type:** card
-- **Render:** `figma:card-v2-s13-01@s13-01`
+- **Render:** `figma:g-card-v2-s13-01@s13-01`
 - **Holds:** `S13-01`
 - **Note:** Figma card `v2-S13-01` highlights: Google Trends weekly.
 ## S14-01 — Returning to Figure 2.3 to rebuild the definition
@@ -3272,42 +3516,42 @@ Each shot is one turn of the OmniVoice narration, in order. Rebuilt for the G sc
 ## S14-09 — Five operational steps weaponizing psychology into extraction
 - **Anchor:** `Emmanuel Theodore (114:56)`
 - **Type:** card
-- **Render:** `figma:card-s13-09@s14-09`
+- **Render:** `figma:g-card-s13-09@s14-09`
 - **Note:** The Five Operational Steps table opens with Row 1, framing the Section 2.2 compile sequence. [book §2.2]
 ## S14-10 — Step 1: institutionalize bias into policy set P
 - **Anchor:** `Emmanuel Theodore (115:05)`
 - **Type:** hold
-- **Render:** `figma:card-s13-09@s14-09`
+- **Render:** `figma:g-card-s13-09@s14-09`
 - **Holds:** `S14-09`
 - **Note:** Row 2 reveals Step 1: compiling attitudes into statutes, administrative rules, credit algorithms, and policing protocols P. [book §2.2]
 ## S14-11 — Step 2: concentrate harm at intersection O_racialized ∩ P
 - **Anchor:** `Emmanuel Theodore (115:21)`
 - **Type:** hold
-- **Render:** `figma:card-s13-09@s14-09`
+- **Render:** `figma:g-card-s13-09@s14-09`
 - **Holds:** `S14-09`
 - **Note:** Row 3 reveals Step 2: concentrating material harm at the formal intersection O_racialized ∩ P. [book §2.2]
 ## S14-12 — Step 3: naturalize disparities through cultural or biological blame
 - **Anchor:** `Emmanuel Theodore (115:37)`
 - **Type:** hold
-- **Render:** `figma:card-s13-09@s14-09`
+- **Render:** `figma:g-card-s13-09@s14-09`
 - **Holds:** `S14-09`
 - **Note:** Row 4 reveals Step 3: ideological narratives attributing wealth, health, and carceral gaps to the targeted population. [book §2.2]
 ## S14-28 — Picture holds
 - **Anchor:** `Emmanuel Theodore (115:48)`
 - **Type:** hold
-- **Render:** `figma:card-s13-09@s14-09`
+- **Render:** `figma:g-card-s13-09@s14-09`
 - **Holds:** `S14-09`
 - **Note:** The picture already on screen holds across this line.
 ## S14-13 — Step 4: compound disadvantage intergenerationally
 - **Anchor:** `Emmanuel Theodore (115:58)`
 - **Type:** hold
-- **Render:** `figma:card-s13-09@s14-09`
+- **Render:** `figma:g-card-s13-09@s14-09`
 - **Holds:** `S14-09`
 - **Note:** Row 5 reveals Step 4: compounding extraction across housing, schooling, credit, and criminal records across generations. [book §2.2]
 ## S14-14 — Step 5: elevate Φ_load to prevent working-class solidarity
 - **Anchor:** `Emmanuel Theodore (116:10)`
 - **Type:** hold
-- **Render:** `figma:card-s13-09@s14-09`
+- **Render:** `figma:g-card-s13-09@s14-09`
 - **Holds:** `S14-09`
 - **Note:** Row 6 reveals Step 5: elevating phase dispersion Φ_load between I_buffer and O_racialized to protect Elite surplus. [book §2.2]
 ## S14-15 — Equation 19.2: concession rate proportional to kinetic threat
@@ -3318,47 +3562,47 @@ Each shot is one turn of the OmniVoice narration, in order. Rebuilt for the G sc
 ## S14-16 — Applying Equations 3.1 and 25.1 to Refutation Standard 3
 - **Anchor:** `Emmanuel Theodore (116:32)`
 - **Type:** card
-- **Render:** `figma:card-s13-20@s14-16`
+- **Render:** `figma:g-card-s13-20@s14-16`
 - **Note:** Row 1 of the Refutation Standard 3 table reveals, setting up the vector audit of reverse racism. [book Ch 3, Eq 3.1; Ch 25, Eq 25.1; MANUSCRIPT_GAP §1; YT02_outline R3]
 ## S14-17 — Out-group hostility against In-group member has real magnitude
 - **Anchor:** `Emmanuel Theodore (116:40)`
 - **Type:** hold
-- **Render:** `figma:card-s13-20@s14-16`
+- **Render:** `figma:g-card-s13-20@s14-16`
 - **Holds:** `S14-16`
 - **Note:** Row 2 reveals, confirming that Out-group hostility or discrimination carries real interpersonal magnitude M_agnitude > 0. [book Preface; Ch 21; MANUSCRIPT_GAP §1]
 ## S14-18 — Classified as scalar prejudice or scalar discrimination
 - **Anchor:** `Emmanuel Theodore (116:52)`
 - **Type:** hold
-- **Render:** `figma:card-s13-20@s14-16`
+- **Render:** `figma:g-card-s13-20@s14-16`
 - **Holds:** `S14-16`
 - **Note:** Row 3 reveals, assigning the act to scalar prejudice or discrimination addressed by ethics, civil norms, and law. [book Preface; Ch 21; MANUSCRIPT_GAP §1]
 ## S14-19 — Absence of state enforcement unit vector d̂_state targeting whites
 - **Anchor:** `Emmanuel Theodore (117:02)`
 - **Type:** hold
-- **Render:** `figma:card-s13-20@s14-16`
+- **Render:** `figma:g-card-s13-20@s14-16`
 - **Holds:** `S14-16`
 - **Note:** Row 4 reveals, showing d̂_state = 0 because no legislature, judiciary, policing network, or capital monopoly targets white Americans as a racial class. [book Ch 3, Eq 3.1; Ch 21, Eq 21.1; MANUSCRIPT_GAP §1]
 ## S14-20 — Five tiers defined as structural positions in the extraction circuit
 - **Anchor:** `Emmanuel Theodore (117:19)`
 - **Type:** card
-- **Render:** `figma:card-s13-24@s14-20`
+- **Render:** `figma:g-card-s13-24@s14-20`
 - **Note:** Row 1 of the Structural Role table reveals, defining the five tiers by functional relation to extraction and enforcement. [book Ch 0; Ch 21; MANUSCRIPT_GAP §1]
 ## S14-21 — Minority officials occupying F_enforce or P_uppet during enforcement
 - **Anchor:** `Emmanuel Theodore (117:29)`
 - **Type:** hold
-- **Render:** `figma:card-s13-24@s14-20`
+- **Render:** `figma:g-card-s13-24@s14-20`
 - **Holds:** `S14-20`
 - **Note:** Row 2 reveals, showing how a Black officer, prosecutor, or official occupies F_enforce or P_uppet when enforcing a harmful rule. [book Ch 0; Ch 21; MANUSCRIPT_GAP §1]
 ## S14-22 — Equation 25.1 force vector R_systemic still pointing at O_racialized
 - **Anchor:** `Emmanuel Theodore (117:42)`
 - **Type:** hold
-- **Render:** `figma:card-s13-24@s14-20`
+- **Render:** `figma:g-card-s13-24@s14-20`
 - **Holds:** `S14-20`
 - **Note:** Row 3 reveals, confirming that the institutional vector R_systemic continues pointing downward at O_racialized regardless of actor phenotype. [book Ch 0; Ch 25, Eq 25.1; MANUSCRIPT_GAP §1]
 ## S14-23 — Internalized racism versus colorism inside O_racialized (§2.3.7)
 - **Anchor:** `Emmanuel Theodore (117:53)`
 - **Type:** hold
-- **Render:** `figma:card-s13-24@s14-20`
+- **Render:** `figma:g-card-s13-24@s14-20`
 - **Holds:** `S14-20`
 - **Note:** Row 4 reveals, distinguishing internalized racism (absorbed inferiority beliefs) from colorism (light-skin stratification). [book §2.3.7; MANUSCRIPT_GAP §2]
 ## S14-24 — Interpersonal prejudice on the dashed maintenance feedback loop
@@ -3404,36 +3648,36 @@ Each shot is one turn of the OmniVoice narration, in order. Rebuilt for the G sc
 ## S15-05 — Orthographic illusion and Equation 3.5 Complex Wage phasor
 - **Anchor:** `Emmanuel Theodore (119:34)`
 - **Type:** card
-- **Render:** `figma:card-s14-05@s15-05`
+- **Render:** `figma:g-card-s14-05@s15-05`
 - **Note:** Row 1 of the Synthesis table reveals, pairing the 3D orthographic projection with the Equation 3.5 wage phasor. [book Ch 0; Ch 3, Eq 3.5]
 ## S15-06 — Zero-Day phenotype lock and Definition 2.3 Biological Embedding
 - **Anchor:** `Emmanuel Theodore (119:46)`
 - **Type:** hold
-- **Render:** `figma:card-s14-05@s15-05`
+- **Render:** `figma:g-card-s14-05@s15-05`
 - **Holds:** `S15-05`
 - **Note:** Row 2 reveals, pairing the Equation 3.10 phenotype cut from the continuous cline with Definition 2.3 embodiment. [book §2.3, The Zero-Day Exploit; Definition 2.3]
 ## S15-07 — Seven runtime dashboard states and the Interference Engine
 - **Anchor:** `Emmanuel Theodore (119:59)`
 - **Type:** hold
-- **Render:** `figma:card-s14-05@s15-05`
+- **Render:** `figma:g-card-s14-05@s15-05`
 - **Holds:** `S15-05`
 - **Note:** Row 3 reveals, pairing the Compiled Runtime Log (1486–2010s) with the antiphase Interference Engine. [book Compiled Runtime Log; Ch 11; Ch 18]
 ## S15-08 — Rebuilt definitional hierarchy and Concession Theorem preview
 - **Anchor:** `Emmanuel Theodore (120:10)`
 - **Type:** hold
-- **Render:** `figma:card-s14-05@s15-05`
+- **Render:** `figma:g-card-s14-05@s15-05`
 - **Holds:** `S15-05`
 - **Note:** Row 4 reveals, placing policy → ideology → prejudice in verified order alongside Chapter 19's Concession Theorem. [book §2.2, Fig 2.3; Ch 15]
 ## S15-09 — Testing Equation 2.6 across Portugal, Virginia, 1840–2020, and Ch. 22
 - **Anchor:** `Emmanuel Theodore (120:21)`
 - **Type:** hold
-- **Render:** `figma:card-s14-05@s15-05`
+- **Render:** `figma:g-card-s14-05@s15-05`
 - **Holds:** `S15-05`
 - **Note:** Row 5 reveals, listing all four empirical test arenas against Predictions 1–4 and Refutation Standards 1–3. [book §2.2, Eq 2.6; Ch 3; Ch 4; Ch 22]
 ## S15-10 — Convergence across tests: extraction and solidarity control first
 - **Anchor:** `Emmanuel Theodore (120:42)`
 - **Type:** hold
-- **Render:** `figma:card-s14-05@s15-05`
+- **Render:** `figma:g-card-s14-05@s15-05`
 - **Holds:** `S15-05`
 - **Note:** Row 6 reveals, confirming that extraction and solidarity management preceded racial law and drove interface recompiles. [book §2.2; §2.3.5]
 ## S15-11 — Section 2.3.11: Mode 1 Design, Mode 2 Propagation, Mode 3 Intervention
@@ -3514,68 +3758,61 @@ Each shot is one turn of the OmniVoice narration, in order. Rebuilt for the G sc
 ## S15-27 — Picture holds
 - **Anchor:** `Emmanuel Theodore (124:35)`
 - **Type:** hold
-- **Render:** `figma:card-s14-16@s15-16`
-- **Holds:** `S15-16`
+- **Render:** `figma:g-eq-bayesian-prior`
 - **Note:** The picture already on screen holds across this line.
 ## S15-28 — Picture holds
 - **Anchor:** `Emmanuel Theodore (125:27)`
 - **Type:** hold
-- **Render:** `figma:card-s14-16@s15-16`
-- **Holds:** `S15-16`
+- **Render:** `figma:g-eq-bayesian-prior`
+- **Holds:** `S15-27`
 - **Note:** The picture already on screen holds across this line.
 ## S15-29 — Picture holds
 - **Anchor:** `Emmanuel Theodore (125:50)`
 - **Type:** hold
-- **Render:** `figma:card-s14-16@s15-16`
-- **Holds:** `S15-16`
+- **Render:** `figma:g-rlc-tail-615`
 - **Note:** The picture already on screen holds across this line.
 ## S15-30 — Picture holds
 - **Anchor:** `Emmanuel Theodore (126:48)`
 - **Type:** hold
-- **Render:** `figma:card-s14-16@s15-16`
-- **Holds:** `S15-16`
+- **Render:** `figma:g-rlc-tail-615`
+- **Holds:** `S15-29`
 - **Note:** The picture already on screen holds across this line.
 ## S15-31 — Picture holds
 - **Anchor:** `Emmanuel Theodore (127:25)`
 - **Type:** hold
-- **Render:** `figma:card-s14-16@s15-16`
-- **Holds:** `S15-16`
+- **Render:** `figma:g-rlc-tail-617`
 - **Note:** The picture already on screen holds across this line.
 ## S15-32 — Picture holds
 - **Anchor:** `Emmanuel Theodore (128:03)`
 - **Type:** hold
-- **Render:** `figma:card-s14-16@s15-16`
-- **Holds:** `S15-16`
+- **Render:** `figma:g-rlc-tail-618`
 - **Note:** The picture already on screen holds across this line.
 ## S15-33 — Picture holds
 - **Anchor:** `Emmanuel Theodore (128:57)`
 - **Type:** hold
-- **Render:** `figma:card-s14-16@s15-16`
-- **Holds:** `S15-16`
+- **Render:** `figma:g-rlc-tail-618`
+- **Holds:** `S15-32`
 - **Note:** The picture already on screen holds across this line.
 ## S15-34 — Picture holds
 - **Anchor:** `Emmanuel Theodore (129:50)`
 - **Type:** hold
-- **Render:** `figma:card-s14-16@s15-16`
-- **Holds:** `S15-16`
+- **Render:** `figma:g-rlc-tail-620`
 - **Note:** The picture already on screen holds across this line.
 ## S15-35 — Picture holds
 - **Anchor:** `Emmanuel Theodore (130:25)`
 - **Type:** hold
-- **Render:** `figma:card-s14-16@s15-16`
-- **Holds:** `S15-16`
+- **Render:** `figma:g-rlc-tail-621`
 - **Note:** The picture already on screen holds across this line.
 ## S15-36 — Picture holds
 - **Anchor:** `Emmanuel Theodore (131:09)`
 - **Type:** hold
 - **Render:** `figma:card-s14-16@s15-16`
-- **Holds:** `S15-16`
 - **Note:** The picture already on screen holds across this line.
 ## S15-23 — Open-access manuscript of The Original Power (146 anchor cases)
 - **Anchor:** `Emmanuel Theodore (131:51)`
 - **Type:** hold
 - **Render:** `figma:card-s14-16@s15-16`
-- **Holds:** `S15-16`
+- **Holds:** `S15-36`
 - **Note:** Item 1 resets on the closing card and points to the Chapter 2 walkthrough. [editorial]
 ## S15-24 — Open-access manuscript of The Original Power (146 anchor cases)
 - **Anchor:** `Emmanuel Theodore (132:00)`

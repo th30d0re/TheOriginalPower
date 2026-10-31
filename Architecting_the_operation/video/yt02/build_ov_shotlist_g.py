@@ -51,7 +51,49 @@ NEW_OVERRIDES = {
     "0a4f7c7a74c7e737": ("hold", None),
     "7252c082908fd607": ("hold", None),
     "b8c3ead37b2cbf8b": ("hold", None),
+    # H pass (2026-10-30), keyed by the 671-turn ids.
+    "2e5ed107beeff5fb": ("start", "figma:g-fig2.1-zooming-the-binary"),  # Figure two point one renders that progression
+    "4fb5b9d50e284fb3": ("start", "figma:g-trade-1-portugal-atlantic"),  # trade segue: Casa dos Escravos
+    "febc6d7cdd67738b": ("start", "figma:g-trade-2-spanish-demand"),
+    "950b82a9b5ff90db": ("start", "figma:g-trade-3-brazil-angola"),
+    "7b7c8ff75e27d546": ("hold", None),
+    "dc3d2c4bd53d5fa5": ("start", "figma:g-trade-4-northern-companies"),
+    "46666f486914b909": ("start", "figma:g-trade-5-triangle"),
+    "16e3b083d1a488c3": ("start", "figma:g-trade-6-volume-over-time"),
+    "434b8f16717d358f": ("hold", None),
+    "e95f08a8cff03bd1": ("hold", None),
+    "10c4809a300c4f06": ("start", "figma:g-trade-7-americas-1619"),
+    "e24faaa8668e8abb": ("hold", None),
+    "a472919640166468": ("start", "figma:g-haiti-1-atlantic-node"),  # SEG 10b
+    "6781414e7d891817": ("start", "figma:g-haiti-2-saint-domingue-data"),
+    "ac78b092ae155edc": ("start", "figma:g-haiti-3-captive-routes"),
+    "fe3b4009abae151e": ("start", "figma:g-haiti-4-social-pyramid"),
+    "5918d469e1cb4a0c": ("start", "figma:g-haiti-5-uprising-1791"),
+    "26b8f1c49ddc79ae": ("start", "figma:g-haiti-6-emancipation-decrees"),
+    "c49f35760930452c": ("start", "figma:g-haiti-7-timeline-1791-1804"),
+    "fea6678c795eaf43": ("start", "figma:g-haiti-8-war-of-independence"),
+    "9056affb85b709e1": ("start", "figma:g-haiti-9-declaration-1804"),
+    "197fb6f7c578efe8": ("start", "figma:g-haiti-10-haitian-theorem"),
+    "a8e2a712542349a6": ("start", "figma:g-haiti-11-louisiana-purchase"),
+    "04a3c28a824d682a": ("start", "figma:g-haiti-12-containment-triad"),
+    "b474e2b3e6e84876": ("start", "figma:g-haiti-13-ransom-1825"),
+    "53a399c1a4611101": ("start", "figma:g-haiti-14-occupation-1915"),
+    "a8b1ace2395fbf3f": ("start", "figma:g-haiti-15-backlash-1800-1822"),
+    "cce5864bab0ce754": ("start", "figma:g-haiti-16-inverse-contagion"),
+    "40b8551291da3ff3": ("start", "figma:g-haiti-17-firmin-1891"),
+    "add16d965a7b04da": ("start", "figma:g-haiti-18-breach-cycle"),
+    "27332b8f76c837b2": ("start", "figma:g-eq-bayesian-prior"),  # Eq 2.8a
+    "b4001513cacd6e39": ("hold", None),
+    "bfdc46d6110f5831": ("start", "figma:g-rlc-tail-615"),
+    "713ab93e1d7c25db": ("hold", None),
+    "dadea92f605fe012": ("start", "figma:g-rlc-tail-617"),
+    "54d5a1bdad4ea6d8": ("start", "figma:g-rlc-tail-618"),
+    "27ad75bbffd2cbbe": ("hold", None),
+    "1b94d5f113f74a0a": ("start", "figma:g-rlc-tail-620"),
+    "02842d2f4f1ab121": ("start", "figma:g-rlc-tail-621"),
 }
+# Haiti turns that start no clip hold the clip before them (staged clips cut on turn boundaries).
+HAITI_HOLD = range(441, 474)
 # Card Renders whose rebuilt clip replaces the old one wherever the card is on screen.
 CARD_SWAPS = {
     "figma-card:cards/S06-13.json": "figma:g-card-s06-13@s04-13",
@@ -131,6 +173,8 @@ def main() -> int:
         src = old_shots[oi] if oi is not None else None
         key = (src["holds"] or src["id"]) if src else None
         ov = NEW_OVERRIDES.get(new_turns[j]["turn_id"]) or (OVERRIDES.get(old_ids[oi]) if oi is not None else None)
+        if j in HAITI_HOLD and not (ov and ov[0] == "start"):
+            ov = ("hold", None)
         if ov and ov[0] == "start":
             runs.append({"key": ("override", j), "render": ov[1], "members": [j]})
         elif runs and ((ov and ov[0] == "hold") or src is None or runs[-1]["key"] == key):

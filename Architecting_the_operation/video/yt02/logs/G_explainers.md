@@ -302,3 +302,23 @@ These are proposals for Figma explainers in the same kit (`g_prelude.js`, rig ro
 - **BOOK-UPDATE? (G11):**
   - The L and C sweep directions, and the finding that the fastest 5 % settling sits below ζ = 1.
   - The book states only that the kernel expands R, raising α (`tex:2316`).
+
+## Batch 2 (2026-10-30): Fig 2.1, Bayesian prior, RLC tail
+
+Builders: `figma/v2/g_head.js` + builder; shared helpers are stored in Figma as node `167:646` (the text of `g_lib.js`). Math is live STIX text with real sub/superscripts (`g_math.js`).
+
+| Clip | Frame | Length | Turns · beats |
+|---|---|---|---|
+| `g-fig2.1-zooming-the-binary.mp4` | `168:809` | 13.83 s | 214 · boxes 3.76, I 5.24, O 5.74, zoom 6.64, five tiers 7.98, α subdivisions 9.62, focus 12.26 |
+| `g-eq-bayesian-prior.mp4` | `172:2346` | 83.43 s | 613 (0) and 614 (+60.05) · eq 11.34, evidence 16.74, prior 19.42, posterior 21.68, ∝ 26.1, likelihood 29.72, prior 31.72, precision sweep 34.68–38.2 and 44.98–46.4, gap 57.08; proxies +61.3–63.8, override +65.2, harm relabel +66.8, coding +76.7. Equation number left blank (text node `172:2645`). |
+| `g-rlc-tail-615.mp4` | `177:968` | 94.40 s | 615 (0) and 616 (+58.05) · circuit 2.84, eq 11.6, L/R/C/V terms 20.8/24.6/27.3/29.1, q 30.0, impulse 43.7, Fig 2.5 47.9; R/L/C roles +0.1/+9.6/+17.3; Eq 2.12 +24.7; envelope +30.3 |
+| `g-rlc-tail-617.mp4` | `182:1129` | 39.00 s | 617 · Q₀ 3.0, exponential 4.4, cos 8.0, sin 11.0, product 19.2, α sweep 21–26, ω₀ sweep 26–31, ω_d sweep 35.6–37 |
+| `g-rlc-tail-618.mp4` | `185:1290` | 106.83 s | 618 (0) and 619 (+54.0) · baseline 0.1, shock 1 13.0, Lenz trace 25.4, beyond 40.2, overshoot 1 42.4–47.6; shock 2 +0, ζ panel +5.5, overshoot 2 +14–19.4, interface swap +23, axes +35.8/+38.2, trace +41.7, illustrative +46.2. ζ 0.17/0.59 are the book's fits (tex 2390); Fig 2.6 itself uses α = 0.35. |
+| `g-rlc-tail-620.mp4` | `188:1612` | 35.00 s | 620 · limit 0.1, trace 3.8, envelope 9.5, ζ 0.59 at 15.3, ζ 0.97 at 18.3, envelopes light 31.3 |
+| `g-rlc-tail-621.mp4` | `191:1776` | 50.73 s | 621 · ω₀ 5.6, reactances 11.0, q_res 14.8, Q_f 20.7, ×Q_f 26.4, R sweep 34.4/36.0/38.7, unbounded 40.3, build-up 44–48.7 |
+
+Stills: `logs/stills_g/g21_*`, `gb_*`, `gr615_*`–`gr621_*`.
+
+Open: `g-rlc-tail-621` shows "|q_res|" with only the r subscripted (needs `q_{res}`; builder fixed, frame not rebuilt or re-exported).
+
+2026-10-31: `g-eq-bayesian-prior` now reads Equation 2.8a (tag at top right, caption at the equation beat); `g-rlc-tail-621` rebuilt with |q_res| fully subscripted. Lengths and beats unchanged. OV re-voice: turns 613–621 are now 658–666; beats stay keyed to each turn's start.
