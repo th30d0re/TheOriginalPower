@@ -1,0 +1,35 @@
+import React,{useState} from 'react';
+import {TokensContext,useStageMs,resolveMode,type InstrumentMode,type ModeKey,type Camera,type InstrumentGrow} from '@stage';
+import layout from '../handoff/layout.json';
+import {Tokens} from '../tokens';
+import {CompactBorder} from './CompactBorder';
+import {EraStrip} from './EraStrip';
+import {DashboardMap} from './DashboardMap';
+import {instruments} from './PanelContent';
+import {EraClock} from './instruments/era-clock';
+import {SystemStress} from './instruments/system-stress';
+import {Capital} from './instruments/capital';
+import {Interference} from './instruments/interference';
+import {ActivePatch} from './instruments/active-patch';
+import {Variables} from './instruments/variables';
+import {WagePlane} from './instruments/wage-plane';
+import {BacklashOscillator} from './instruments/backlash-oscillator';
+import {ExecutingFunction} from './instruments/executing-function';
+import {PolicyTicker} from './instruments/policy-ticker';
+const frame=layout.frames['dash 1486 · compact'];
+export const rail=[...frame.leftStack.panels,...frame.rightStack.panels,...frame.bottomStrips];
+export const slugs=rail.map(p=>p.instrument.toLowerCase().replaceAll(' ','-'));
+const components=[EraClock,SystemStress,Capital,Interference,ActivePatch,Variables,WagePlane,BacklashOscillator,ExecutingFunction,PolicyTicker];
+export type DashboardProps={era?:number;world?:boolean;camera?:Camera;worldOpacity?:number;routeDraw?:number;dim?:number;lights?:number[];empty?:boolean;modes?:Record<string,InstrumentMode>;modeTimelines?:Record<string,ModeKey[]>};
+export function Dashboard({era=2,world=false,camera,worldOpacity=0,routeDraw=1,dim=1,lights=[],empty=false,modes={},modeTimelines={}}:DashboardProps) {
+ const ms=useStageMs();
+ const [interactiveModes,setInteractiveModes]=useState<Record<string,InstrumentMode|null>>({});
+ if(era!==2) throw new Error(`YT02 handoff supplies instrument content for log 2; received ${era}`);
+ const heights=rail.map((p,i)=>{const d=instruments[p.instrument],forced=interactiveModes[slugs[i]]??modes[slugs[i]],weights=resolveMode(ms,modeTimelines[slugs[i]]??[]).weights;return forced?d[forced].h:weights.compact*d.compact.h+weights.expanded*d.expanded.h+weights.settings*d.settings.h;});
+ return <TokensContext.Provider value={Tokens}><div className="yt02-dashboard" style={{position:'absolute',inset:0,width:1920,height:1080,background:Tokens.colours.background,overflow:'hidden'}}><style>{'.yt02-dashboard sub { vertical-align: baseline; position: relative; top: .2em; }'}</style><EraStrip activeLog={era} empty={empty}/><DashboardMap world={world} camera={camera} worldOpacity={worldOpacity} draw={routeDraw}/>{rail.map((p,i)=>{
+ const Component=components[i],start=i<4?0:4;
+ const shift=i<8?heights.slice(start,i).reduce((sum,h,j)=>sum+h-rail[start+j].h,0):0;
+ const grow:InstrumentGrow=i<4?'right-down':i<8?'left-down':i===8?'right-up':'left-up';
+ return <Component onInteractiveModeChange={mode=>setInteractiveModes(previous=>({...previous,[slugs[i]]:mode}))} key={slugs[i]} anchor={{x:p.x,y:p.y+shift,width:p.w,height:p.h}} grow={grow} mode={modes[slugs[i]]} modeTimeline={modeTimelines[slugs[i]]} opacity={lights[i]??dim}/>;
+ })}<CompactBorder/></div></TokensContext.Provider>;
+}

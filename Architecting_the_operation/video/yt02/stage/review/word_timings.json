@@ -1,0 +1,47 @@
+{
+  "turns": {
+    "r1": [
+      {
+        "text": "boot",
+        "start_ms": 0,
+        "end_ms": 500
+      }
+    ],
+    "r2": [
+      {
+        "text": "fly",
+        "start_ms": 200,
+        "end_ms": 400
+      },
+      {
+        "text": "route",
+        "start_ms": 2600,
+        "end_ms": 2800
+      }
+    ],
+    "r3": [
+      {
+        "text": "expand",
+        "start_ms": 500,
+        "end_ms": 700
+      },
+      {
+        "text": "collapse",
+        "start_ms": 4000,
+        "end_ms": 4200
+      }
+    ],
+    "r4": [
+      {
+        "text": "settings",
+        "start_ms": 500,
+        "end_ms": 700
+      },
+      {
+        "text": "close",
+        "start_ms": 3600,
+        "end_ms": 3800
+      }
+    ]
+  }
+}

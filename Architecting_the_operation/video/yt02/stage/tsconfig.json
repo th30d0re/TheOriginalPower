@@ -1,0 +1,34 @@
+{
+  "extends": "/Users/emmanuel/Documents/Theory/scriptCast-stage/video/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@stage": [
+        "/Users/emmanuel/Documents/Theory/scriptCast-stage/video/src/stage/api.ts"
+      ],
+      "@episode": [
+        "./index.ts"
+      ],
+      "react": [
+        "/Users/emmanuel/Documents/Theory/scriptCast-stage/video/node_modules/@types/react"
+      ],
+      "react/*": [
+        "/Users/emmanuel/Documents/Theory/scriptCast-stage/video/node_modules/@types/react/*"
+      ],
+      "react-dom/*": [
+        "/Users/emmanuel/Documents/Theory/scriptCast-stage/video/node_modules/@types/react-dom/*"
+      ]
+    },
+    "typeRoots": [
+      "/Users/emmanuel/Documents/Theory/scriptCast-stage/video/node_modules/@types"
+    ]
+  },
+  "include": [
+    "./**/*.ts",
+    "./**/*.tsx",
+    "/Users/emmanuel/Documents/Theory/scriptCast-stage/video/scripts/react-dom-server.d.ts"
+  ],
+  "exclude": [
+    "review/site-dist"
+  ]
+}

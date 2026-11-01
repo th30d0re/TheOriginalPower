@@ -1,0 +1,1004 @@
+{
+ "_readme": "Absolute positions in each 1920x1080 frame, px, origin top-left. Panel x/y/w/h are the outer box including the 1 px (compact) or 1.6 px (expanded/settings) inside stroke. Auto-layout stacks: children keep their own widths; right stack right-aligns them. Instrument visuals: svg/<instrument>.<mode>.svg and spec.json.",
+ "frames": {
+  "dash 1486 · compact": {
+   "id": "207:20",
+   "name": "dash 1486 · compact",
+   "size": {
+    "w": 1920,
+    "h": 1080
+   },
+   "background": "color/bg/field (#0d1b2a)",
+   "clipsContent": true,
+   "zOrder_bottom_to_top": [
+    "era strip",
+    "map",
+    "left stack",
+    "right stack",
+    "executing function",
+    "policy ticker",
+    "border"
+   ],
+   "eraStrip": {
+    "component": "Era strip",
+    "variant": "state=1486",
+    "x": 60,
+    "y": 38,
+    "w": 1800,
+    "h": 40,
+    "cells": 7,
+    "cellWidth": 257.143,
+    "labelRow": {
+     "x": 60,
+     "y": 38,
+     "w": 1800,
+     "h": 20
+    },
+    "ruler": {
+     "x": 60,
+     "y": 64,
+     "w": 1800,
+     "h": 14
+    },
+    "rulerGeometry": "baseline y=76 (ruler-local y=12) full width; minor ticks every 16 px (ruler y 7..12); major ticks at each cell centre x=cellWidth*(i+0.5) (ruler y 1..12); stroke color/line/hairline-strong 1 px",
+    "labels": [
+     {
+      "text": "LOG 2 · 1486",
+      "font": "IBM Plex Mono 15 ls0.8px",
+      "x": 130.1,
+      "y": 38,
+      "w": 117,
+      "h": 20,
+      "weight": "Medium",
+      "colour": "color/text/primary",
+      "cellCentreX": 188.6
+     },
+     {
+      "text": "LOG 3 · 1676–1787",
+      "font": "IBM Plex Mono 15 ls0.8px",
+      "x": 362.7,
+      "y": 38,
+      "w": 166,
+      "h": 20,
+      "weight": "Regular",
+      "colour": "color/text/faint",
+      "cellCentreX": 445.7
+     },
+     {
+      "text": "LOG 5 · 1704–1865",
+      "font": "IBM Plex Mono 15 ls0.8px",
+      "x": 619.9,
+      "y": 38,
+      "w": 166,
+      "h": 20,
+      "weight": "Regular",
+      "colour": "color/text/faint",
+      "cellCentreX": 702.9
+     },
+     {
+      "text": "LOG 9 · 1894–1965",
+      "font": "IBM Plex Mono 15 ls0.8px",
+      "x": 877,
+      "y": 38,
+      "w": 166,
+      "h": 20,
+      "weight": "Regular",
+      "colour": "color/text/faint",
+      "cellCentreX": 960.0
+     },
+     {
+      "text": "LOG 14 · 1968–1994",
+      "font": "IBM Plex Mono 15 ls0.8px",
+      "x": 1129.1,
+      "y": 38,
+      "w": 176,
+      "h": 20,
+      "weight": "Regular",
+      "colour": "color/text/faint",
+      "cellCentreX": 1217.1
+     },
+     {
+      "text": "LOG 15 · 1994–PRESENT",
+      "font": "IBM Plex Mono 15 ls0.8px",
+      "x": 1371.8,
+      "y": 38,
+      "w": 205,
+      "h": 20,
+      "weight": "Regular",
+      "colour": "color/text/faint",
+      "cellCentreX": 1474.3
+     },
+     {
+      "text": "LOG 17 · 2010s–present",
+      "font": "IBM Plex Mono 15 ls0.8px",
+      "x": 1623.9,
+      "y": 38,
+      "w": 215,
+      "h": 20,
+      "weight": "Regular",
+      "colour": "color/text/faint",
+      "cellCentreX": 1731.4
+     }
+    ],
+    "activeMarker": {
+     "x": 187.1,
+     "y": 64,
+     "w": 3,
+     "h": 14,
+     "fill": "color/fill/gold",
+     "note": "vertical bar at the centre of cell 1 (x=60+126.6)"
+    },
+    "activeDot": {
+     "x": 183.6,
+     "y": 72,
+     "w": 10,
+     "h": 10,
+     "fill": "color/fill/gold"
+    }
+   },
+   "map": {
+    "component": "Map/Iberia · West Africa",
+    "x": 32,
+    "y": 84,
+    "w": 1856,
+    "h": 968,
+    "role": "clip frame (overflow hidden); land never touches the border line",
+    "see": "map.json"
+   },
+   "border": {
+    "component": "Frame/Border 16:9 · compact (232:163)",
+    "x": 0,
+    "y": 0,
+    "w": 1920,
+    "h": 1080,
+    "svg": "svg/border-compact.svg",
+    "lineInset": 20,
+    "stroke": "stroke/chart 1.6 + color/line/wire",
+    "drawnOnTop": true
+   },
+   "leftStack": {
+    "layout": "vertical auto-layout, gap 8, children left-aligned, hugs content, top-left anchored",
+    "x": 36,
+    "y": 96,
+    "w": 281,
+    "h": 333.8,
+    "panels": [
+     {
+      "name": "era clock",
+      "instrument": "Era clock",
+      "mode": "compact",
+      "x": 36,
+      "y": 96,
+      "w": 281,
+      "h": 89
+     },
+     {
+      "name": "system stress",
+      "instrument": "System Stress",
+      "mode": "compact",
+      "x": 36,
+      "y": 193,
+      "w": 113,
+      "h": 62
+     },
+     {
+      "name": "capital",
+      "instrument": "Capital",
+      "mode": "compact",
+      "x": 36,
+      "y": 263,
+      "w": 118,
+      "h": 62
+     },
+     {
+      "name": "interference",
+      "instrument": "Interference",
+      "mode": "compact",
+      "x": 36,
+      "y": 333,
+      "w": 163,
+      "h": 96.8
+     }
+    ]
+   },
+   "rightStack": {
+    "layout": "vertical auto-layout, gap 8, children right-aligned (counter axis MAX), hugs content, top-right anchored: right edge x=1882, top y=96",
+    "x": 1671,
+    "y": 96,
+    "w": 211,
+    "h": 348,
+    "panels": [
+     {
+      "name": "active patch",
+      "instrument": "Active Patch",
+      "mode": "compact",
+      "x": 1671,
+      "y": 96,
+      "w": 211,
+      "h": 60
+     },
+     {
+      "name": "variables",
+      "instrument": "Variables",
+      "mode": "compact",
+      "x": 1729,
+      "y": 164,
+      "w": 153,
+      "h": 56
+     },
+     {
+      "name": "wage plane",
+      "instrument": "Wage plane",
+      "mode": "compact",
+      "x": 1695,
+      "y": 228,
+      "w": 187,
+      "h": 120
+     },
+     {
+      "name": "backlash oscillator",
+      "instrument": "Backlash oscillator",
+      "mode": "compact",
+      "x": 1680,
+      "y": 356,
+      "w": 202,
+      "h": 88
+     }
+    ]
+   },
+   "bottomStrips": [
+    {
+     "name": "executing function",
+     "instrument": "Executing Function",
+     "mode": "compact",
+     "x": 60,
+     "y": 1005,
+     "w": 554,
+     "h": 39,
+     "anchor": "bottom-left: x=60, bottom edge y=1044"
+    },
+    {
+     "name": "policy ticker",
+     "instrument": "Policy ticker",
+     "mode": "compact",
+     "x": 1153,
+     "y": 1008,
+     "w": 707,
+     "h": 36,
+     "anchor": "bottom-right: right edge x=1860, bottom edge y=1044"
+    }
+   ],
+   "png": "png/dash_1486_compact.png"
+  },
+  "dash 1486 · interference expanded": {
+   "id": "207:222",
+   "name": "dash 1486 · interference expanded",
+   "size": {
+    "w": 1920,
+    "h": 1080
+   },
+   "background": "color/bg/field (#0d1b2a)",
+   "clipsContent": true,
+   "zOrder_bottom_to_top": [
+    "era strip",
+    "map",
+    "left stack",
+    "right stack",
+    "executing function",
+    "policy ticker",
+    "border"
+   ],
+   "eraStrip": {
+    "component": "Era strip",
+    "variant": "state=1486",
+    "x": 60,
+    "y": 38,
+    "w": 1800,
+    "h": 40,
+    "cells": 7,
+    "cellWidth": 257.143,
+    "labelRow": {
+     "x": 60,
+     "y": 38,
+     "w": 1800,
+     "h": 20
+    },
+    "ruler": {
+     "x": 60,
+     "y": 64,
+     "w": 1800,
+     "h": 14
+    },
+    "rulerGeometry": "baseline y=76 (ruler-local y=12) full width; minor ticks every 16 px (ruler y 7..12); major ticks at each cell centre x=cellWidth*(i+0.5) (ruler y 1..12); stroke color/line/hairline-strong 1 px",
+    "labels": [
+     {
+      "text": "LOG 2 · 1486",
+      "font": "IBM Plex Mono 15 ls0.8px",
+      "x": 130.1,
+      "y": 38,
+      "w": 117,
+      "h": 20,
+      "weight": "Medium",
+      "colour": "color/text/primary",
+      "cellCentreX": 188.6
+     },
+     {
+      "text": "LOG 3 · 1676–1787",
+      "font": "IBM Plex Mono 15 ls0.8px",
+      "x": 362.7,
+      "y": 38,
+      "w": 166,
+      "h": 20,
+      "weight": "Regular",
+      "colour": "color/text/faint",
+      "cellCentreX": 445.7
+     },
+     {
+      "text": "LOG 5 · 1704–1865",
+      "font": "IBM Plex Mono 15 ls0.8px",
+      "x": 619.9,
+      "y": 38,
+      "w": 166,
+      "h": 20,
+      "weight": "Regular",
+      "colour": "color/text/faint",
+      "cellCentreX": 702.9
+     },
+     {
+      "text": "LOG 9 · 1894–1965",
+      "font": "IBM Plex Mono 15 ls0.8px",
+      "x": 877,
+      "y": 38,
+      "w": 166,
+      "h": 20,
+      "weight": "Regular",
+      "colour": "color/text/faint",
+      "cellCentreX": 960.0
+     },
+     {
+      "text": "LOG 14 · 1968–1994",
+      "font": "IBM Plex Mono 15 ls0.8px",
+      "x": 1129.1,
+      "y": 38,
+      "w": 176,
+      "h": 20,
+      "weight": "Regular",
+      "colour": "color/text/faint",
+      "cellCentreX": 1217.1
+     },
+     {
+      "text": "LOG 15 · 1994–PRESENT",
+      "font": "IBM Plex Mono 15 ls0.8px",
+      "x": 1371.8,
+      "y": 38,
+      "w": 205,
+      "h": 20,
+      "weight": "Regular",
+      "colour": "color/text/faint",
+      "cellCentreX": 1474.3
+     },
+     {
+      "text": "LOG 17 · 2010s–present",
+      "font": "IBM Plex Mono 15 ls0.8px",
+      "x": 1623.9,
+      "y": 38,
+      "w": 215,
+      "h": 20,
+      "weight": "Regular",
+      "colour": "color/text/faint",
+      "cellCentreX": 1731.4
+     }
+    ],
+    "activeMarker": {
+     "x": 187.1,
+     "y": 64,
+     "w": 3,
+     "h": 14,
+     "fill": "color/fill/gold",
+     "note": "vertical bar at the centre of cell 1 (x=60+126.6)"
+    },
+    "activeDot": {
+     "x": 183.6,
+     "y": 72,
+     "w": 10,
+     "h": 10,
+     "fill": "color/fill/gold"
+    }
+   },
+   "map": {
+    "component": "Map/Iberia · West Africa",
+    "x": 32,
+    "y": 84,
+    "w": 1856,
+    "h": 968,
+    "role": "clip frame (overflow hidden); land never touches the border line",
+    "see": "map.json"
+   },
+   "border": {
+    "component": "Frame/Border 16:9 · compact (232:163)",
+    "x": 0,
+    "y": 0,
+    "w": 1920,
+    "h": 1080,
+    "svg": "svg/border-compact.svg",
+    "lineInset": 20,
+    "stroke": "stroke/chart 1.6 + color/line/wire",
+    "drawnOnTop": true
+   },
+   "leftStack": {
+    "layout": "vertical auto-layout, gap 8, children left-aligned, hugs content, top-left anchored",
+    "x": 36,
+    "y": 96,
+    "w": 640,
+    "h": 712.2,
+    "panels": [
+     {
+      "name": "era clock",
+      "instrument": "Era clock",
+      "mode": "compact",
+      "x": 36,
+      "y": 96,
+      "w": 281,
+      "h": 89
+     },
+     {
+      "name": "system stress",
+      "instrument": "System Stress",
+      "mode": "compact",
+      "x": 36,
+      "y": 193,
+      "w": 113,
+      "h": 62
+     },
+     {
+      "name": "capital",
+      "instrument": "Capital",
+      "mode": "compact",
+      "x": 36,
+      "y": 263,
+      "w": 118,
+      "h": 62
+     },
+     {
+      "name": "interference · expanded",
+      "instrument": "Interference",
+      "mode": "expanded",
+      "x": 36,
+      "y": 333,
+      "w": 640,
+      "h": 475.2,
+      "anchor": "top-left anchored at the compact interference position (36,333); grows right and down; replaces the compact instance in the stack"
+     }
+    ]
+   },
+   "rightStack": {
+    "layout": "vertical auto-layout, gap 8, children right-aligned (counter axis MAX), hugs content, top-right anchored: right edge x=1882, top y=96",
+    "x": 1671,
+    "y": 96,
+    "w": 211,
+    "h": 348,
+    "panels": [
+     {
+      "name": "active patch",
+      "instrument": "Active Patch",
+      "mode": "compact",
+      "x": 1671,
+      "y": 96,
+      "w": 211,
+      "h": 60
+     },
+     {
+      "name": "variables",
+      "instrument": "Variables",
+      "mode": "compact",
+      "x": 1729,
+      "y": 164,
+      "w": 153,
+      "h": 56
+     },
+     {
+      "name": "wage plane",
+      "instrument": "Wage plane",
+      "mode": "compact",
+      "x": 1695,
+      "y": 228,
+      "w": 187,
+      "h": 120
+     },
+     {
+      "name": "backlash oscillator",
+      "instrument": "Backlash oscillator",
+      "mode": "compact",
+      "x": 1680,
+      "y": 356,
+      "w": 202,
+      "h": 88
+     }
+    ]
+   },
+   "bottomStrips": [
+    {
+     "name": "executing function",
+     "instrument": "Executing Function",
+     "mode": "compact",
+     "x": 60,
+     "y": 1005,
+     "w": 554,
+     "h": 39,
+     "anchor": "bottom-left: x=60, bottom edge y=1044"
+    },
+    {
+     "name": "policy ticker",
+     "instrument": "Policy ticker",
+     "mode": "compact",
+     "x": 1153,
+     "y": 1008,
+     "w": 707,
+     "h": 36,
+     "anchor": "bottom-right: right edge x=1860, bottom edge y=1044"
+    }
+   ],
+   "png": "png/dash_1486_interference_expanded.png"
+  },
+  "dash 1486 · settings": {
+   "id": "207:453",
+   "name": "dash 1486 · settings",
+   "size": {
+    "w": 1920,
+    "h": 1080
+   },
+   "background": "color/bg/field (#0d1b2a)",
+   "clipsContent": true,
+   "zOrder_bottom_to_top": [
+    "era strip",
+    "map",
+    "left stack",
+    "right stack",
+    "executing function",
+    "policy ticker",
+    "border"
+   ],
+   "eraStrip": {
+    "component": "Era strip",
+    "variant": "state=1486",
+    "x": 60,
+    "y": 38,
+    "w": 1800,
+    "h": 40,
+    "cells": 7,
+    "cellWidth": 257.143,
+    "labelRow": {
+     "x": 60,
+     "y": 38,
+     "w": 1800,
+     "h": 20
+    },
+    "ruler": {
+     "x": 60,
+     "y": 64,
+     "w": 1800,
+     "h": 14
+    },
+    "rulerGeometry": "baseline y=76 (ruler-local y=12) full width; minor ticks every 16 px (ruler y 7..12); major ticks at each cell centre x=cellWidth*(i+0.5) (ruler y 1..12); stroke color/line/hairline-strong 1 px",
+    "labels": [
+     {
+      "text": "LOG 2 · 1486",
+      "font": "IBM Plex Mono 15 ls0.8px",
+      "x": 130.1,
+      "y": 38,
+      "w": 117,
+      "h": 20,
+      "weight": "Medium",
+      "colour": "color/text/primary",
+      "cellCentreX": 188.6
+     },
+     {
+      "text": "LOG 3 · 1676–1787",
+      "font": "IBM Plex Mono 15 ls0.8px",
+      "x": 362.7,
+      "y": 38,
+      "w": 166,
+      "h": 20,
+      "weight": "Regular",
+      "colour": "color/text/faint",
+      "cellCentreX": 445.7
+     },
+     {
+      "text": "LOG 5 · 1704–1865",
+      "font": "IBM Plex Mono 15 ls0.8px",
+      "x": 619.9,
+      "y": 38,
+      "w": 166,
+      "h": 20,
+      "weight": "Regular",
+      "colour": "color/text/faint",
+      "cellCentreX": 702.9
+     },
+     {
+      "text": "LOG 9 · 1894–1965",
+      "font": "IBM Plex Mono 15 ls0.8px",
+      "x": 877,
+      "y": 38,
+      "w": 166,
+      "h": 20,
+      "weight": "Regular",
+      "colour": "color/text/faint",
+      "cellCentreX": 960.0
+     },
+     {
+      "text": "LOG 14 · 1968–1994",
+      "font": "IBM Plex Mono 15 ls0.8px",
+      "x": 1129.1,
+      "y": 38,
+      "w": 176,
+      "h": 20,
+      "weight": "Regular",
+      "colour": "color/text/faint",
+      "cellCentreX": 1217.1
+     },
+     {
+      "text": "LOG 15 · 1994–PRESENT",
+      "font": "IBM Plex Mono 15 ls0.8px",
+      "x": 1371.8,
+      "y": 38,
+      "w": 205,
+      "h": 20,
+      "weight": "Regular",
+      "colour": "color/text/faint",
+      "cellCentreX": 1474.3
+     },
+     {
+      "text": "LOG 17 · 2010s–present",
+      "font": "IBM Plex Mono 15 ls0.8px",
+      "x": 1623.9,
+      "y": 38,
+      "w": 215,
+      "h": 20,
+      "weight": "Regular",
+      "colour": "color/text/faint",
+      "cellCentreX": 1731.4
+     }
+    ],
+    "activeMarker": {
+     "x": 187.1,
+     "y": 64,
+     "w": 3,
+     "h": 14,
+     "fill": "color/fill/gold",
+     "note": "vertical bar at the centre of cell 1 (x=60+126.6)"
+    },
+    "activeDot": {
+     "x": 183.6,
+     "y": 72,
+     "w": 10,
+     "h": 10,
+     "fill": "color/fill/gold"
+    }
+   },
+   "map": {
+    "component": "Map/Iberia · West Africa",
+    "x": 32,
+    "y": 84,
+    "w": 1856,
+    "h": 968,
+    "role": "clip frame (overflow hidden); land never touches the border line",
+    "see": "map.json"
+   },
+   "border": {
+    "component": "Frame/Border 16:9 · compact (232:163)",
+    "x": 0,
+    "y": 0,
+    "w": 1920,
+    "h": 1080,
+    "svg": "svg/border-compact.svg",
+    "lineInset": 20,
+    "stroke": "stroke/chart 1.6 + color/line/wire",
+    "drawnOnTop": true
+   },
+   "leftStack": {
+    "layout": "vertical auto-layout, gap 8, children left-aligned, hugs content, top-left anchored",
+    "x": 36,
+    "y": 96,
+    "w": 281,
+    "h": 333.8,
+    "panels": [
+     {
+      "name": "era clock",
+      "instrument": "Era clock",
+      "mode": "compact",
+      "x": 36,
+      "y": 96,
+      "w": 281,
+      "h": 89
+     },
+     {
+      "name": "system stress",
+      "instrument": "System Stress",
+      "mode": "compact",
+      "x": 36,
+      "y": 193,
+      "w": 113,
+      "h": 62
+     },
+     {
+      "name": "capital",
+      "instrument": "Capital",
+      "mode": "compact",
+      "x": 36,
+      "y": 263,
+      "w": 118,
+      "h": 62
+     },
+     {
+      "name": "interference",
+      "instrument": "Interference",
+      "mode": "compact",
+      "x": 36,
+      "y": 333,
+      "w": 163,
+      "h": 96.8
+     }
+    ]
+   },
+   "rightStack": {
+    "layout": "vertical auto-layout, gap 8, children right-aligned (counter axis MAX), hugs content, top-right anchored: right edge x=1882, top y=96",
+    "x": 1322,
+    "y": 96,
+    "w": 560,
+    "h": 552.2,
+    "panels": [
+     {
+      "name": "active patch",
+      "instrument": "Active Patch",
+      "mode": "compact",
+      "x": 1671,
+      "y": 96,
+      "w": 211,
+      "h": 60
+     },
+     {
+      "name": "variables",
+      "instrument": "Variables",
+      "mode": "compact",
+      "x": 1729,
+      "y": 164,
+      "w": 153,
+      "h": 56
+     },
+     {
+      "name": "wage plane · settings",
+      "instrument": "Wage plane",
+      "mode": "settings",
+      "x": 1322,
+      "y": 228,
+      "w": 560,
+      "h": 324.2,
+      "anchor": "right edge anchored at x=1882 (the compact wage plane's right edge); grows left and down; replaces the compact instance in the stack"
+     },
+     {
+      "name": "backlash oscillator",
+      "instrument": "Backlash oscillator",
+      "mode": "compact",
+      "x": 1680,
+      "y": 560.2,
+      "w": 202,
+      "h": 88
+     }
+    ]
+   },
+   "bottomStrips": [
+    {
+     "name": "executing function",
+     "instrument": "Executing Function",
+     "mode": "compact",
+     "x": 60,
+     "y": 1005,
+     "w": 554,
+     "h": 39,
+     "anchor": "bottom-left: x=60, bottom edge y=1044"
+    },
+    {
+     "name": "policy ticker",
+     "instrument": "Policy ticker",
+     "mode": "compact",
+     "x": 1153,
+     "y": 1008,
+     "w": 707,
+     "h": 36,
+     "anchor": "bottom-right: right edge x=1860, bottom edge y=1044"
+    }
+   ],
+   "png": "png/dash_1486_settings.png"
+  },
+  "dash world · boot": {
+   "id": "207:672",
+   "name": "dash world · boot",
+   "size": {
+    "w": 1920,
+    "h": 1080
+   },
+   "background": "color/bg/field (#0d1b2a)",
+   "clipsContent": true,
+   "zOrder_bottom_to_top": [
+    "era strip",
+    "map",
+    "left stack",
+    "right stack",
+    "executing function",
+    "policy ticker",
+    "border"
+   ],
+   "eraStrip": {
+    "component": "Era strip",
+    "variant": "state=empty",
+    "x": 60,
+    "y": 38,
+    "w": 1800,
+    "h": 40,
+    "cells": 7,
+    "cellWidth": 257.143,
+    "labelRow": {
+     "x": 60,
+     "y": 38,
+     "w": 1800,
+     "h": 20
+    },
+    "ruler": {
+     "x": 60,
+     "y": 64,
+     "w": 1800,
+     "h": 14
+    },
+    "rulerGeometry": "baseline y=76 (ruler-local y=12) full width; minor ticks every 16 px (ruler y 7..12); major ticks at each cell centre x=cellWidth*(i+0.5) (ruler y 1..12); stroke color/line/hairline-strong 1 px",
+    "labels": [],
+    "note": "empty state for boot: label texts hidden, ruler only"
+   },
+   "map": {
+    "component": "Map/World",
+    "x": 32,
+    "y": 84,
+    "w": 1856,
+    "h": 968,
+    "role": "clip frame (overflow hidden); land never touches the border line",
+    "see": "map.json"
+   },
+   "border": {
+    "component": "Frame/Border 16:9 · compact (232:163)",
+    "x": 0,
+    "y": 0,
+    "w": 1920,
+    "h": 1080,
+    "svg": "svg/border-compact.svg",
+    "lineInset": 20,
+    "stroke": "stroke/chart 1.6 + color/line/wire",
+    "drawnOnTop": true
+   },
+   "leftStack": {
+    "layout": "vertical auto-layout, gap 8, children left-aligned, hugs content, top-left anchored",
+    "x": 36,
+    "y": 96,
+    "w": 281,
+    "h": 333.8,
+    "panels": [
+     {
+      "name": "era clock",
+      "instrument": "Era clock",
+      "mode": "compact",
+      "x": 36,
+      "y": 96,
+      "w": 281,
+      "h": 89,
+      "opacity": 0.3
+     },
+     {
+      "name": "system stress",
+      "instrument": "System Stress",
+      "mode": "compact",
+      "x": 36,
+      "y": 193,
+      "w": 113,
+      "h": 62,
+      "opacity": 0.3
+     },
+     {
+      "name": "capital",
+      "instrument": "Capital",
+      "mode": "compact",
+      "x": 36,
+      "y": 263,
+      "w": 118,
+      "h": 62,
+      "opacity": 0.3
+     },
+     {
+      "name": "interference",
+      "instrument": "Interference",
+      "mode": "compact",
+      "x": 36,
+      "y": 333,
+      "w": 163,
+      "h": 96.8,
+      "opacity": 0.3
+     }
+    ]
+   },
+   "rightStack": {
+    "layout": "vertical auto-layout, gap 8, children right-aligned (counter axis MAX), hugs content, top-right anchored: right edge x=1882, top y=96",
+    "x": 1671,
+    "y": 96,
+    "w": 211,
+    "h": 348,
+    "panels": [
+     {
+      "name": "active patch",
+      "instrument": "Active Patch",
+      "mode": "compact",
+      "x": 1671,
+      "y": 96,
+      "w": 211,
+      "h": 60,
+      "opacity": 0.3
+     },
+     {
+      "name": "variables",
+      "instrument": "Variables",
+      "mode": "compact",
+      "x": 1729,
+      "y": 164,
+      "w": 153,
+      "h": 56,
+      "opacity": 0.3
+     },
+     {
+      "name": "wage plane",
+      "instrument": "Wage plane",
+      "mode": "compact",
+      "x": 1695,
+      "y": 228,
+      "w": 187,
+      "h": 120,
+      "opacity": 0.3
+     },
+     {
+      "name": "backlash oscillator",
+      "instrument": "Backlash oscillator",
+      "mode": "compact",
+      "x": 1680,
+      "y": 356,
+      "w": 202,
+      "h": 88,
+      "opacity": 0.3
+     }
+    ]
+   },
+   "bottomStrips": [
+    {
+     "name": "executing function",
+     "instrument": "Executing Function",
+     "mode": "compact",
+     "x": 60,
+     "y": 1005,
+     "w": 554,
+     "h": 39,
+     "opacity": 0.3,
+     "anchor": "bottom-left: x=60, bottom edge y=1044"
+    },
+    {
+     "name": "policy ticker",
+     "instrument": "Policy ticker",
+     "mode": "compact",
+     "x": 1153,
+     "y": 1008,
+     "w": 707,
+     "h": 36,
+     "opacity": 0.3,
+     "anchor": "bottom-right: right edge x=1860, bottom edge y=1044"
+    }
+   ],
+   "dimOpacity": 0.3,
+   "dimNote": "every instrument panel and both bottom strips at opacity 0.3 (node opacity); era strip uses the empty variant; border and map undimmed",
+   "png": "png/dash_world_boot.png",
+   "bootNote": "turn-4 roadmap boot state: world map, instruments dimmed, era strip empty"
+  }
+ }
+}

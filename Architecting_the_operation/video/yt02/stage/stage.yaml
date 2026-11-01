@@ -1,0 +1,41 @@
+episode: yt02_dashboard_review
+outputs: review
+fps: 30
+width: 1920
+height: 1080
+shots:
+  - shot_id: R-01
+    turn_id: r1
+    scene: DashboardBoot
+    cues:
+      i1: {ms: 800}
+      i2: {ms: 1250}
+      i3: {ms: 1700}
+      i4: {ms: 2150}
+      i5: {ms: 2600}
+      i6: {ms: 3050}
+      i7: {ms: 3500}
+      i8: {ms: 3950}
+      i9: {ms: 4400}
+      i10: {ms: 4850}
+  - shot_id: R-02
+    turn_id: r2
+    scene: Dashboard1486
+    instance: dashboard
+    cues:
+      fly: {word: fly}
+      route: {word: route}
+  - shot_id: R-03
+    turn_id: r3
+    scene: Dashboard1486
+    instance: dashboard
+    cues:
+      'expand:interference': {word: expand}
+      'collapse:interference': {word: collapse}
+  - shot_id: R-04
+    turn_id: r4
+    scene: Dashboard1486
+    instance: dashboard
+    cues:
+      'settings:wage-plane': {word: settings}
+      'collapse:wage-plane': {word: close}

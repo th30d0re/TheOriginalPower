@@ -1,0 +1,11 @@
+import '/Users/emmanuel/Documents/Theory/scriptCast-stage/video/node_modules/@fontsource/ibm-plex-sans/400.css';
+import '/Users/emmanuel/Documents/Theory/scriptCast-stage/video/node_modules/@fontsource/ibm-plex-sans/500.css';
+import '/Users/emmanuel/Documents/Theory/scriptCast-stage/video/node_modules/@fontsource/ibm-plex-sans/700.css';
+import '/Users/emmanuel/Documents/Theory/scriptCast-stage/video/node_modules/@fontsource/ibm-plex-sans/400-italic.css';
+import '/Users/emmanuel/Documents/Theory/scriptCast-stage/video/node_modules/@fontsource/ibm-plex-mono/400.css';
+import '/Users/emmanuel/Documents/Theory/scriptCast-stage/video/node_modules/@fontsource/ibm-plex-mono/500.css';
+import type {SceneRegistry} from '@stage';
+import {DashboardBoot,Dashboard1486} from './Scenes';
+export {DashboardBoot,Dashboard1486};
+export {Dashboard} from './dashboard/Dashboard';
+export const scenes:SceneRegistry={DashboardBoot,Dashboard1486};

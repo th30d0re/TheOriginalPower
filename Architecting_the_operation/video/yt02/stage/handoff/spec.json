@@ -1,0 +1,4947 @@
+{
+ "_readme": "Per-instrument, per-mode spec of the Figma components (file 6SPd7rWzwyvxHhIj4Cmb7a, page 'Stage · Dashboard v1'). Units px. 'box' = [x, y, w, h] relative to the variant's own top-left (outer edge, including the inside stroke). Colours are token names from tokens.json; never use paint-level opacity, use the alpha-baked tokens. Instrument names match svg/<instrument-slug>.<mode>.svg.",
+ "conventions": {
+  "stroke": "All panel strokes are INSIDE strokes; Figma auto-layout counts the stroke inside the padding, so content origin = padding + stroke width (compact 10+1 / 8+1, expanded and settings 16+1.6 = 17.6).",
+  "fontKey": "font objects: family, style, size (px), optional letterSpacing_px and lineHeight_px (absent = font default line height; Plex line box is about 1.3 x size).",
+  "autoLayout": "layout: horizontal | vertical; itemSpacing in px; padding_tRBL = [top, right, bottom, left]. HUG = size from content.",
+  "tokens": "fill/stroke given as {token, width} or token string; see tokens.json for hex+alpha."
+ },
+ "panelRecipes": {
+  "compact": "HUG both axes; padding 8 top/bottom (spacing/xs) and 10 left/right; itemSpacing 2..6 (stated per node); radius 8; fill color/fill/panel-wash (#5b6b7d at 14%); 1 px inside stroke color/line/hairline (cream at 55%); backdrop blur 12 px (CSS: backdrop-filter: blur(12px) — Figma BACKGROUND_BLUR radius 12; the CSS blur radius is about half: blur(6px) is what Figma's own SVG export emits). Label text Mono 11 ls0.4 color/text/muted.",
+  "expanded": "fixed width 640, height hugs content; padding 16; itemSpacing 8; radius 10; fill color/fill/glass (#14263a at 88%); 1.6 px inside stroke color/line/hairline (= stroke/chart weight); no backdrop blur on expanded or settings (glass alpha .88 over the map).",
+  "settings": "fixed width 560; same chrome as expanded; header with close control + three rows (SOURCE LINE, UNITS, LOG TEXT); see settingsTemplate."
+ },
+ "richText": {
+  "why": "The Figma Plugin API has no baseline shift, so subscripts are separate text nodes.",
+  "recipe": "A text with an underscore subscript is a horizontal auto-layout row (hugging, or wrapping when the original was a fill-width paragraph) whose children are words. A word containing a subscript is a nested row: base text node(s) + a subscript text node. All nodes share fill token and family/style. Subscript node: font size = round(0.7 x base size), explicit lineHeight = round(0.8 x subscript size); both rows bottom-align their children (counterAxisAlignItems MAX), so the shorter line box lowers the subscript baseline by about 0.2 x base size. Words are separated by itemSpacing (0.26 x size for Plex Sans, 0.6 x size for Plex Mono; plus letterSpacing for spaced labels) because Figma trims trailing spaces; no space characters are stored.",
+  "reactRecipe": "<span>ρ<sub>τ</sub></span> with sub { fontSize: .7em; verticalAlign: baseline; position: relative; top: .2em; lineHeight: 0 } reproduces the geometry; runs[] in each richText node give the exact pixel boxes to compare against.",
+  "subscriptRuns": "ρ_τ, Φ_load, ψ_m, ψ_s, jψ_s, O_racialized. Settings strings use _{...} markers for the same runs. Identifier underscores (dashboard_eras.json, fields.system_stress ...) are NOT subscripts."
+ },
+ "settingsTemplate": {
+  "w": 560,
+  "layout": "vertical",
+  "padding_tRBL": [
+   16,
+   16,
+   16,
+   16
+  ],
+  "itemSpacing": 16,
+  "radius": 10,
+  "fill": {
+   "token": "color/fill/glass",
+   "hex": "#14263a",
+   "alpha": 0.88
+  },
+  "stroke": {
+   "token": "color/line/hairline",
+   "width": 1.6
+  },
+  "header": {
+   "box": [
+    17.6,
+    17.6,
+    524.8,
+    28
+   ],
+   "layout": "horizontal, centred",
+   "title": {
+    "font": {
+     "family": "IBM Plex Mono",
+     "style": "Medium",
+     "size": 13,
+     "letterSpacing_px": 0.8
+    },
+    "colour": "color/text/primary",
+    "text": "SETTINGS · <INSTRUMENT NAME UPPERCASE>"
+   },
+   "close": {
+    "box": [
+     514.4,
+     17.6,
+     28,
+     28
+    ],
+    "stroke": {
+     "token": "color/line/hairline-strong",
+     "width": 1.6
+    },
+    "radius": 6,
+    "glyph": {
+     "text": "×",
+     "font": {
+      "family": "IBM Plex Mono",
+      "style": "Regular",
+      "size": 20
+     },
+     "colour": "color/text/primary"
+    }
+   }
+  },
+  "rows": [
+   {
+    "label": "SOURCE LINE",
+    "valueFont": {
+     "family": "IBM Plex Mono",
+     "style": "Regular",
+     "size": 13
+    },
+    "valueColour": "color/text/primary"
+   },
+   {
+    "label": "UNITS",
+    "valueFont": {
+     "family": "IBM Plex Mono",
+     "style": "Regular",
+     "size": 13
+    },
+    "valueColour": "color/text/primary"
+   },
+   {
+    "label": "LOG TEXT",
+    "valueFont": {
+     "family": "IBM Plex Sans",
+     "style": "Regular",
+     "size": 16
+    },
+    "valueColour": "color/text/primary"
+   }
+  ],
+  "rowRecipe": "each row = vertical stack gap 8: label (Mono 12 ls0.6 color/text/muted, 16 px tall) then a well (fill color/surface/well, radius 6, padding top/bottom 8, left/right 10) holding the wrapped value text at the full 524.8-4... inner width 504.8; well height = 16 + lines * lineHeight (Mono 13 -> 17 px/line, Sans 16 -> 21 px/line); rows separated by 16",
+  "example_EraClock": {
+   "h": 303.2,
+   "rows": [
+    {
+     "label": [
+      17.6,
+      61.6,
+      86,
+      16
+     ],
+     "well": [
+      17.6,
+      85.6,
+      524.8,
+      33
+     ]
+    },
+    {
+     "label": [
+      17.6,
+      134.6,
+      39,
+      16
+     ],
+     "well": [
+      17.6,
+      158.6,
+      524.8,
+      50
+     ]
+    },
+    {
+     "label": [
+      17.6,
+      224.6,
+      62,
+      16
+     ],
+     "well": [
+      17.6,
+      248.6,
+      524.8,
+      37
+     ]
+    }
+   ],
+   "valueTextX": 27.6,
+   "valueTextWidth": 504.8
+  }
+ },
+ "instruments": {
+  "Era clock": {
+   "compact": {
+    "w": 281,
+    "h": 89,
+    "sizing": "HUG both axes",
+    "layout": "vertical",
+    "padding_tRBL": [
+     8,
+     10,
+     8,
+     10
+    ],
+    "itemSpacing": 2,
+    "radius": 8,
+    "fill": {
+     "token": "color/fill/panel-wash",
+     "hex": "#5b6b7d",
+     "alpha": 0.14
+    },
+    "stroke": {
+     "token": "color/line/hairline",
+     "width": 1
+    },
+    "backgroundBlur_px": 12,
+    "children": [
+     {
+      "k": "text",
+      "text": "1486",
+      "font": {
+       "family": "IBM Plex Sans",
+       "style": "Bold",
+       "size": 40
+      },
+      "colour": "color/text/primary",
+      "box": [
+       11,
+       9,
+       96,
+       52
+      ],
+      "name": "era date"
+     },
+     {
+      "k": "frame",
+      "name": "place + log",
+      "box": [
+       11,
+       63,
+       259,
+       17
+      ],
+      "itemSpacing": 6,
+      "layout": "horizontal",
+      "children": [
+       {
+        "k": "text",
+        "text": "LISBON, PORTUGAL",
+        "font": {
+         "family": "IBM Plex Sans",
+         "style": "Medium",
+         "size": 12,
+         "letterSpacing_px": 0.5
+        },
+        "colour": "color/text/primary",
+        "box": [
+         11,
+         63.5,
+         119,
+         16
+        ],
+        "name": "era place"
+       },
+       {
+        "k": "frame",
+        "name": "chip RUNTIME LOG 2 · Ch 3",
+        "box": [
+         136,
+         63,
+         134,
+         17
+        ],
+        "fill": "color/fill/gold-wash",
+        "stroke": {
+         "token": "color/fill/gold",
+         "width": 1
+        },
+        "radius": 999,
+        "layout": "horizontal",
+        "children": [
+         {
+          "k": "text",
+          "text": "RUNTIME LOG 2 · Ch 3",
+          "font": {
+           "family": "IBM Plex Mono",
+           "style": "Regular",
+           "size": 10
+          },
+          "colour": "color/fill/gold",
+          "box": [
+           143,
+           65,
+           120,
+           13
+          ]
+         }
+        ],
+        "padding_tRBL": [
+         1,
+         6,
+         1,
+         6
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   "expanded": {
+    "w": 640,
+    "h": 472,
+    "layout": "vertical",
+    "padding_tRBL": [
+     16,
+     16,
+     16,
+     16
+    ],
+    "itemSpacing": 8,
+    "radius": 10,
+    "fill": {
+     "token": "color/fill/glass",
+     "hex": "#14263a",
+     "alpha": 0.88
+    },
+    "stroke": {
+     "token": "color/line/hairline",
+     "width": 1.6
+    },
+    "backgroundBlur_px": null,
+    "children": [
+     {
+      "k": "frame",
+      "name": "era head",
+      "box": [
+       17.6,
+       17.6,
+       604.8,
+       147.2
+      ],
+      "itemSpacing": 8,
+      "layout": "vertical",
+      "children": [
+       {
+        "k": "text",
+        "text": "1486",
+        "font": {
+         "family": "IBM Plex Sans",
+         "style": "Bold",
+         "size": 64
+        },
+        "colour": "color/text/primary",
+        "box": [
+         17.6,
+         17.6,
+         154,
+         83
+        ],
+        "name": "era date"
+       },
+       {
+        "k": "text",
+        "text": "LISBON, PORTUGAL",
+        "font": {
+         "family": "IBM Plex Sans",
+         "style": "Medium",
+         "size": 18,
+         "letterSpacing_px": 1.2
+        },
+        "colour": "color/text/primary",
+        "box": [
+         17.6,
+         108.6,
+         185,
+         23
+        ],
+        "name": "era place"
+       },
+       {
+        "k": "frame",
+        "name": "chip RUNTIME LOG 2 · Ch 3",
+        "box": [
+         17.6,
+         139.6,
+         167.2,
+         25.2
+        ],
+        "fill": "color/fill/gold-wash",
+        "stroke": {
+         "token": "color/fill/gold",
+         "width": 1
+        },
+        "radius": 999,
+        "layout": "horizontal",
+        "children": [
+         {
+          "k": "text",
+          "text": "RUNTIME LOG 2 · Ch 3",
+          "font": {
+           "family": "IBM Plex Mono",
+           "style": "Regular",
+           "size": 12
+          },
+          "colour": "color/fill/gold",
+          "box": [
+           29.2,
+           144.2,
+           144,
+           16
+          ]
+         }
+        ],
+        "padding_tRBL": [
+         3,
+         10,
+         3,
+         10
+        ],
+        "itemSpacing": 6
+       }
+      ]
+     },
+     {
+      "k": "rect",
+      "name": "divider",
+      "fill": "color/fill/divider",
+      "box": [
+       17.6,
+       172.8,
+       604.8,
+       1.6
+      ]
+     },
+     {
+      "k": "text",
+      "text": "ERA TIMELINE · EVERY LOG",
+      "font": {
+       "family": "IBM Plex Mono",
+       "style": "Regular",
+       "size": 12,
+       "letterSpacing_px": 0.6
+      },
+      "colour": "color/text/muted",
+      "box": [
+       17.6,
+       182.4,
+       187,
+       16
+      ]
+     },
+     {
+      "k": "frame",
+      "name": "log row 1",
+      "box": [
+       17.6,
+       206.4,
+       604.8,
+       26
+      ],
+      "fill": "color/fill/accent-wash",
+      "radius": 6,
+      "padding_tRBL": [
+       4,
+       10,
+       4,
+       10
+      ],
+      "itemSpacing": 12,
+      "layout": "horizontal",
+      "children": [
+       {
+        "k": "ellipse",
+        "name": "dot",
+        "box": [
+         27.6,
+         214.4,
+         10,
+         10
+        ],
+        "fill": "color/fill/gold"
+       },
+       {
+        "k": "text",
+        "text": "LOG 2 · 1486",
+        "font": {
+         "family": "IBM Plex Mono",
+         "style": "Medium",
+         "size": 14
+        },
+        "colour": "color/text/primary",
+        "box": [
+         49.6,
+         210.4,
+         200,
+         18
+        ],
+        "name": "log label"
+       },
+       {
+        "k": "text",
+        "text": "LISBON, PORTUGAL",
+        "font": {
+         "family": "IBM Plex Sans",
+         "style": "Regular",
+         "size": 14
+        },
+        "colour": "color/text/primary",
+        "box": [
+         261.6,
+         210.4,
+         350.8,
+         18
+        ],
+        "name": "log place"
+       }
+      ]
+     },
+     {
+      "k": "frame",
+      "name": "log row 2",
+      "box": [
+       17.6,
+       240.4,
+       604.8,
+       26
+      ],
+      "radius": 6,
+      "padding_tRBL": [
+       4,
+       10,
+       4,
+       10
+      ],
+      "itemSpacing": 12,
+      "layout": "horizontal",
+      "children": [
+       {
+        "k": "ellipse",
+        "name": "dot",
+        "box": [
+         27.6,
+         248.4,
+         10,
+         10
+        ],
+        "stroke": {
+         "token": "color/line/hairline",
+         "width": 1.6
+        }
+       },
+       {
+        "k": "text",
+        "text": "LOG 3 · 1676–1787",
+        "font": {
+         "family": "IBM Plex Mono",
+         "style": "Regular",
+         "size": 14
+        },
+        "colour": "color/text/muted",
+        "box": [
+         49.6,
+         244.4,
+         200,
+         18
+        ],
+        "name": "log label"
+       },
+       {
+        "k": "text",
+        "text": "VIRGINIA COLONY → PHILADELPHIA",
+        "font": {
+         "family": "IBM Plex Sans",
+         "style": "Regular",
+         "size": 14
+        },
+        "colour": "color/text/muted",
+        "box": [
+         261.6,
+         244.4,
+         350.8,
+         18
+        ],
+        "name": "log place"
+       }
+      ]
+     },
+     {
+      "k": "frame",
+      "name": "log row 3",
+      "box": [
+       17.6,
+       274.4,
+       604.8,
+       26
+      ],
+      "radius": 6,
+      "padding_tRBL": [
+       4,
+       10,
+       4,
+       10
+      ],
+      "itemSpacing": 12,
+      "layout": "horizontal",
+      "children": [
+       {
+        "k": "ellipse",
+        "name": "dot",
+        "box": [
+         27.6,
+         282.4,
+         10,
+         10
+        ],
+        "stroke": {
+         "token": "color/line/hairline",
+         "width": 1.6
+        }
+       },
+       {
+        "k": "text",
+        "text": "LOG 5 · 1704–1865",
+        "font": {
+         "family": "IBM Plex Mono",
+         "style": "Regular",
+         "size": 14
+        },
+        "colour": "color/text/muted",
+        "box": [
+         49.6,
+         278.4,
+         200,
+         18
+        ],
+        "name": "log label"
+       },
+       {
+        "k": "text",
+        "text": "AMERICAN SOUTH",
+        "font": {
+         "family": "IBM Plex Sans",
+         "style": "Regular",
+         "size": 14
+        },
+        "colour": "color/text/muted",
+        "box": [
+         261.6,
+         278.4,
+         350.8,
+         18
+        ],
+        "name": "log place"
+       }
+      ]
+     },
+     {
+      "k": "frame",
+      "name": "log row 4",
+      "box": [
+       17.6,
+       308.4,
+       604.8,
+       26
+      ],
+      "radius": 6,
+      "padding_tRBL": [
+       4,
+       10,
+       4,
+       10
+      ],
+      "itemSpacing": 12,
+      "layout": "horizontal",
+      "children": [
+       {
+        "k": "ellipse",
+        "name": "dot",
+        "box": [
+         27.6,
+         316.4,
+         10,
+         10
+        ],
+        "stroke": {
+         "token": "color/line/hairline",
+         "width": 1.6
+        }
+       },
+       {
+        "k": "text",
+        "text": "LOG 9 · 1894–1965",
+        "font": {
+         "family": "IBM Plex Mono",
+         "style": "Regular",
+         "size": 14
+        },
+        "colour": "color/text/muted",
+        "box": [
+         49.6,
+         312.4,
+         200,
+         18
+        ],
+        "name": "log label"
+       },
+       {
+        "k": "text",
+        "text": "POST-EMANCIPATION CONTAINMENT",
+        "font": {
+         "family": "IBM Plex Sans",
+         "style": "Regular",
+         "size": 14
+        },
+        "colour": "color/text/muted",
+        "box": [
+         261.6,
+         312.4,
+         350.8,
+         18
+        ],
+        "name": "log place"
+       }
+      ]
+     },
+     {
+      "k": "frame",
+      "name": "log row 5",
+      "box": [
+       17.6,
+       342.4,
+       604.8,
+       26
+      ],
+      "radius": 6,
+      "padding_tRBL": [
+       4,
+       10,
+       4,
+       10
+      ],
+      "itemSpacing": 12,
+      "layout": "horizontal",
+      "children": [
+       {
+        "k": "ellipse",
+        "name": "dot",
+        "box": [
+         27.6,
+         350.4,
+         10,
+         10
+        ],
+        "stroke": {
+         "token": "color/line/hairline",
+         "width": 1.6
+        }
+       },
+       {
+        "k": "text",
+        "text": "LOG 14 · 1968–1994",
+        "font": {
+         "family": "IBM Plex Mono",
+         "style": "Regular",
+         "size": 14
+        },
+        "colour": "color/text/muted",
+        "box": [
+         49.6,
+         346.4,
+         200,
+         18
+        ],
+        "name": "log label"
+       },
+       {
+        "k": "text",
+        "text": "THE RECOMPILE",
+        "font": {
+         "family": "IBM Plex Sans",
+         "style": "Regular",
+         "size": 14
+        },
+        "colour": "color/text/muted",
+        "box": [
+         261.6,
+         346.4,
+         350.8,
+         18
+        ],
+        "name": "log place"
+       }
+      ]
+     },
+     {
+      "k": "frame",
+      "name": "log row 6",
+      "box": [
+       17.6,
+       376.4,
+       604.8,
+       26
+      ],
+      "radius": 6,
+      "padding_tRBL": [
+       4,
+       10,
+       4,
+       10
+      ],
+      "itemSpacing": 12,
+      "layout": "horizontal",
+      "children": [
+       {
+        "k": "ellipse",
+        "name": "dot",
+        "box": [
+         27.6,
+         384.4,
+         10,
+         10
+        ],
+        "stroke": {
+         "token": "color/line/hairline",
+         "width": 1.6
+        }
+       },
+       {
+        "k": "text",
+        "text": "LOG 15 · 1994–PRESENT",
+        "font": {
+         "family": "IBM Plex Mono",
+         "style": "Regular",
+         "size": 14
+        },
+        "colour": "color/text/muted",
+        "box": [
+         49.6,
+         380.4,
+         200,
+         18
+        ],
+        "name": "log label"
+       },
+       {
+        "k": "text",
+        "text": "TERMINAL RUNTIME",
+        "font": {
+         "family": "IBM Plex Sans",
+         "style": "Regular",
+         "size": 14
+        },
+        "colour": "color/text/muted",
+        "box": [
+         261.6,
+         380.4,
+         350.8,
+         18
+        ],
+        "name": "log place"
+       }
+      ]
+     },
+     {
+      "k": "frame",
+      "name": "log row 7",
+      "box": [
+       17.6,
+       410.4,
+       604.8,
+       44
+      ],
+      "radius": 6,
+      "padding_tRBL": [
+       4,
+       10,
+       4,
+       10
+      ],
+      "itemSpacing": 12,
+      "layout": "horizontal",
+      "children": [
+       {
+        "k": "ellipse",
+        "name": "dot",
+        "box": [
+         27.6,
+         427.4,
+         10,
+         10
+        ],
+        "stroke": {
+         "token": "color/line/hairline",
+         "width": 1.6
+        }
+       },
+       {
+        "k": "text",
+        "text": "LOG 17 · 2010s–present",
+        "font": {
+         "family": "IBM Plex Mono",
+         "style": "Regular",
+         "size": 14
+        },
+        "colour": "color/text/muted",
+        "box": [
+         49.6,
+         423.4,
+         200,
+         18
+        ],
+        "name": "log label"
+       },
+       {
+        "k": "text",
+        "text": "ALGORITHMIC EPOCH (TERMINAL RACE, 2010s–PRESENT)",
+        "font": {
+         "family": "IBM Plex Sans",
+         "style": "Regular",
+         "size": 14
+        },
+        "colour": "color/text/muted",
+        "box": [
+         261.6,
+         414.4,
+         350.8,
+         36
+        ],
+        "name": "log place"
+       }
+      ]
+     }
+    ],
+    "childOriginNote": "child boxes are measured from the panel's outer top-left; content starts at padding+stroke (16+1.6=17.6)"
+   },
+   "settings": {
+    "w": 560,
+    "h": 303.2,
+    "template": "settingsTemplate",
+    "content": {
+     "title": "SETTINGS · ERA CLOCK",
+     "source": "Runtime Log 2 · ch:portugal · dashboard_eras.json › title",
+     "units": "era: calendar year, range or open interval · log: runtime log number · chapter: ch label",
+     "log": "1486 (LISBON, PORTUGAL)"
+    }
+   }
+  },
+  "System Stress": {
+   "compact": {
+    "w": 113,
+    "h": 62,
+    "sizing": "HUG both axes",
+    "layout": "vertical",
+    "padding_tRBL": [
+     8,
+     10,
+     8,
+     10
+    ],
+    "itemSpacing": 4,
+    "radius": 8,
+    "fill": {
+     "token": "color/fill/panel-wash",
+     "hex": "#5b6b7d",
+     "alpha": 0.14
+    },
+    "stroke": {
+     "token": "color/line/hairline",
+     "width": 1
+    },
+    "backgroundBlur_px": 12,
+    "children": [
+     {
+      "k": "text",
+      "text": "System Stress",
+      "font": {
+       "family": "IBM Plex Mono",
+       "style": "Regular",
+       "size": 11,
+       "letterSpacing_px": 0.4
+      },
+      "colour": "color/text/muted",
+      "box": [
+       11,
+       9,
+       91,
+       14
+      ]
+     },
+     {
+      "k": "frame",
+      "name": "badge HIGH",
+      "box": [
+       11,
+       27,
+       57,
+       26
+      ],
+      "fill": "color/fill/red-wash",
+      "stroke": {
+       "token": "color/marker/race",
+       "width": 1
+      },
+      "radius": 5,
+      "padding_tRBL": [
+       3,
+       8,
+       3,
+       8
+      ],
+      "layout": "horizontal",
+      "children": [
+       {
+        "k": "text",
+        "text": "HIGH",
+        "font": {
+         "family": "IBM Plex Sans",
+         "style": "Bold",
+         "size": 14,
+         "letterSpacing_px": 0.6
+        },
+        "colour": "color/marker/race",
+        "box": [
+         20,
+         31,
+         39,
+         18
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   "expanded": {
+    "w": 640,
+    "h": 157.4,
+    "layout": "vertical",
+    "padding_tRBL": [
+     16,
+     16,
+     16,
+     16
+    ],
+    "itemSpacing": 8,
+    "radius": 10,
+    "fill": {
+     "token": "color/fill/glass",
+     "hex": "#14263a",
+     "alpha": 0.88
+    },
+    "stroke": {
+     "token": "color/line/hairline",
+     "width": 1.6
+    },
+    "backgroundBlur_px": null,
+    "children": [
+     {
+      "k": "text",
+      "text": "System Stress (min: class resistance)",
+      "font": {
+       "family": "IBM Plex Mono",
+       "style": "Regular",
+       "size": 12,
+       "letterSpacing_px": 0.6
+      },
+      "colour": "color/text/muted",
+      "box": [
+       17.6,
+       17.6,
+       288,
+       16
+      ]
+     },
+     {
+      "k": "frame",
+      "name": "badge HIGH",
+      "box": [
+       17.6,
+       41.6,
+       69.2,
+       34.2
+      ],
+      "fill": "color/fill/red-wash",
+      "stroke": {
+       "token": "color/marker/race",
+       "width": 1.6
+      },
+      "radius": 6,
+      "padding_tRBL": [
+       4,
+       8,
+       4,
+       8
+      ],
+      "layout": "horizontal",
+      "children": [
+       {
+        "k": "text",
+        "text": "HIGH",
+        "font": {
+         "family": "IBM Plex Sans",
+         "style": "Bold",
+         "size": 18,
+         "letterSpacing_px": 0.8
+        },
+        "colour": "color/marker/race",
+        "box": [
+         27.2,
+         47.2,
+         50,
+         23
+        ]
+       }
+      ]
+     },
+     {
+      "k": "text",
+      "text": "Domestic labor shortage threatening agricultural capital. Existing moral framework constrains exploitation of Christians.",
+      "font": {
+       "family": "IBM Plex Sans",
+       "style": "Regular",
+       "size": 20,
+       "lineHeight_px": 28
+      },
+      "colour": "color/text/primary",
+      "box": [
+       17.6,
+       83.8,
+       604.8,
+       56
+      ],
+      "name": "reason"
+     }
+    ],
+    "childOriginNote": "child boxes are measured from the panel's outer top-left; content starts at padding+stroke (16+1.6=17.6)"
+   },
+   "settings": {
+    "w": 560,
+    "h": 345.2,
+    "template": "settingsTemplate",
+    "content": {
+     "title": "SETTINGS · SYSTEM STRESS",
+     "source": "Runtime Log 2 · ch:portugal · dashboard_eras.json › fields.system_stress",
+     "units": "level: ordinal label (HIGH, CRITICAL, MODERATE) · reason: text",
+     "log": "System Stress (min: class resistance): HIGH — Domestic labor shortage threatening agricultural capital. Existing moral framework constrains exploitation of Christians."
+    }
+   }
+  },
+  "Capital": {
+   "compact": {
+    "w": 118,
+    "h": 62,
+    "sizing": "HUG both axes",
+    "layout": "vertical",
+    "padding_tRBL": [
+     8,
+     10,
+     8,
+     10
+    ],
+    "itemSpacing": 4,
+    "radius": 8,
+    "fill": {
+     "token": "color/fill/panel-wash",
+     "hex": "#5b6b7d",
+     "alpha": 0.14
+    },
+    "stroke": {
+     "token": "color/line/hairline",
+     "width": 1
+    },
+    "backgroundBlur_px": 12,
+    "children": [
+     {
+      "k": "text",
+      "text": "Capital",
+      "font": {
+       "family": "IBM Plex Mono",
+       "style": "Regular",
+       "size": 11,
+       "letterSpacing_px": 0.4
+      },
+      "colour": "color/text/muted",
+      "box": [
+       11,
+       9,
+       49,
+       14
+      ]
+     },
+     {
+      "k": "frame",
+      "name": "badge STAGNANT",
+      "box": [
+       11,
+       27,
+       96,
+       26
+      ],
+      "fill": "color/fill/accent-wash",
+      "stroke": {
+       "token": "color/fill/accent",
+       "width": 1
+      },
+      "radius": 5,
+      "padding_tRBL": [
+       3,
+       8,
+       3,
+       8
+      ],
+      "layout": "horizontal",
+      "children": [
+       {
+        "k": "text",
+        "text": "STAGNANT",
+        "font": {
+         "family": "IBM Plex Sans",
+         "style": "Bold",
+         "size": 14,
+         "letterSpacing_px": 0.6
+        },
+        "colour": "color/fill/accent",
+        "box": [
+         20,
+         31,
+         78,
+         18
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   "expanded": {
+    "w": 640,
+    "h": 157.4,
+    "layout": "vertical",
+    "padding_tRBL": [
+     16,
+     16,
+     16,
+     16
+    ],
+    "itemSpacing": 8,
+    "radius": 10,
+    "fill": {
+     "token": "color/fill/glass",
+     "hex": "#14263a",
+     "alpha": 0.88
+    },
+    "stroke": {
+     "token": "color/line/hairline",
+     "width": 1.6
+    },
+    "backgroundBlur_px": null,
+    "children": [
+     {
+      "k": "text",
+      "text": "Capital (max: extraction output)",
+      "font": {
+       "family": "IBM Plex Mono",
+       "style": "Regular",
+       "size": 12,
+       "letterSpacing_px": 0.6
+      },
+      "colour": "color/text/muted",
+      "box": [
+       17.6,
+       17.6,
+       249,
+       16
+      ]
+     },
+     {
+      "k": "frame",
+      "name": "badge STAGNANT",
+      "box": [
+       17.6,
+       41.6,
+       119.2,
+       34.2
+      ],
+      "fill": "color/fill/accent-wash",
+      "stroke": {
+       "token": "color/fill/accent",
+       "width": 1.6
+      },
+      "radius": 6,
+      "padding_tRBL": [
+       4,
+       8,
+       4,
+       8
+      ],
+      "layout": "horizontal",
+      "children": [
+       {
+        "k": "text",
+        "text": "STAGNANT",
+        "font": {
+         "family": "IBM Plex Sans",
+         "style": "Bold",
+         "size": 18,
+         "letterSpacing_px": 0.8
+        },
+        "colour": "color/fill/accent",
+        "box": [
+         27.2,
+         47.2,
+         100,
+         23
+        ]
+       }
+      ]
+     },
+     {
+      "k": "text",
+      "text": "Sugar trade demands labor the current moral economy cannot supply.",
+      "font": {
+       "family": "IBM Plex Sans",
+       "style": "Regular",
+       "size": 20,
+       "lineHeight_px": 28
+      },
+      "colour": "color/text/primary",
+      "box": [
+       17.6,
+       83.8,
+       604.8,
+       56
+      ],
+      "name": "reason"
+     }
+    ],
+    "childOriginNote": "child boxes are measured from the panel's outer top-left; content starts at padding+stroke (16+1.6=17.6)"
+   },
+   "settings": {
+    "w": 560,
+    "h": 341.2,
+    "template": "settingsTemplate",
+    "content": {
+     "title": "SETTINGS · CAPITAL",
+     "source": "Runtime Log 2 · ch:portugal · dashboard_eras.json › fields.capital",
+     "units": "level: ordinal label (STAGNANT, AT RISK, EXPANDING) · reason: text",
+     "log": "Capital (max: extraction output): STAGNANT — Sugar trade demands labor the current moral economy cannot supply."
+    }
+   }
+  },
+  "Interference": {
+   "compact": {
+    "w": 163,
+    "h": 96.8,
+    "sizing": "HUG both axes",
+    "layout": "vertical",
+    "padding_tRBL": [
+     8,
+     10,
+     8,
+     10
+    ],
+    "itemSpacing": 4,
+    "radius": 8,
+    "fill": {
+     "token": "color/fill/panel-wash",
+     "hex": "#5b6b7d",
+     "alpha": 0.14
+    },
+    "stroke": {
+     "token": "color/line/hairline",
+     "width": 1
+    },
+    "backgroundBlur_px": 12,
+    "children": [
+     {
+      "k": "text",
+      "text": "Interference",
+      "font": {
+       "family": "IBM Plex Mono",
+       "style": "Regular",
+       "size": 11,
+       "letterSpacing_px": 0.4
+      },
+      "colour": "color/text/muted",
+      "box": [
+       11,
+       9,
+       84,
+       14
+      ]
+     },
+     {
+      "k": "frame",
+      "name": "dial row",
+      "box": [
+       11,
+       27,
+       141,
+       42.8
+      ],
+      "itemSpacing": 8,
+      "layout": "horizontal",
+      "children": [
+       {
+        "k": "graphic",
+        "name": "rho_tau dial",
+        "box": [
+         11,
+         27,
+         88,
+         42.8
+        ],
+        "params": {
+         "frameSize": [
+          88.0,
+          42.8
+         ],
+         "centre": [
+          42.0,
+          40.0
+         ],
+         "ringRadiusOuter": 32.6,
+         "ringRadiusInner": 27.4,
+         "valueRange": [
+          0,
+          1.2
+         ],
+         "angleMapping": "theta = PI*(1+v/1.2) radians, clockwise from +x with y down; point = (cx + r*cos(theta), cy + r*sin(theta)); v=0 left, v=0.6 top, v=1.2 right (upper semicircle only)",
+         "track": {
+          "fill": "color/surface/well",
+          "arc": "theta PI..2PI"
+         },
+         "range": {
+          "fill": "color/fill/accent",
+          "from": 0.7,
+          "to": 0.85,
+          "thetaFrom": 4.9742,
+          "thetaTo": 5.3669
+         },
+         "tauMark": {
+          "value": 1.0,
+          "radiusFrom": 26.0,
+          "radiusTo": 34.8,
+          "stroke": "color/marker/race",
+          "width": 1.2,
+          "cap": "round"
+         },
+         "needle": {
+          "value": 0.775,
+          "note": "midpoint of the range",
+          "radius": 27.6,
+          "stroke": "color/text/primary",
+          "width": 1.6,
+          "cap": "round"
+         },
+         "hub": {
+          "diameter": 6,
+          "fill": "color/fill/accent"
+         },
+         "ticks": {
+          "values": [
+           0,
+           0.2,
+           0.4,
+           0.6,
+           0.8,
+           1.0,
+           1.2
+          ],
+          "radiusFrom": 26.2,
+          "radiusTo": 27.4,
+          "stroke": "color/line/hairline-strong",
+          "width": 0.6,
+          "drawn": false
+         }
+        }
+       },
+       {
+        "k": "frame",
+        "name": "readout",
+        "box": [
+         107,
+         29.9,
+         45,
+         37
+        ],
+        "itemSpacing": 2,
+        "layout": "vertical",
+        "children": [
+         {
+          "k": "richText",
+          "name": "rho label",
+          "font": {
+           "family": "IBM Plex Sans",
+           "style": "Regular",
+           "size": 16
+          },
+          "colour": "color/text/primary",
+          "box": [
+           107,
+           29.9,
+           15,
+           21
+          ],
+          "runs": [
+           {
+            "t": "ρ",
+            "box": [
+             107,
+             29.9,
+             9,
+             21
+            ]
+           },
+           {
+            "t": "τ",
+            "box": [
+             116,
+             41.9,
+             6,
+             9
+            ],
+            "sub": true,
+            "size": 11,
+            "lineHeight_px": 9
+           }
+          ]
+         },
+         {
+          "k": "text",
+          "text": "τ = 1.0",
+          "font": {
+           "family": "IBM Plex Mono",
+           "style": "Regular",
+           "size": 11
+          },
+          "colour": "color/marker/race",
+          "box": [
+           107,
+           52.9,
+           45,
+           14
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "k": "text",
+      "text": "[0.70, 0.85]",
+      "font": {
+       "family": "IBM Plex Mono",
+       "style": "Medium",
+       "size": 11
+      },
+      "colour": "color/text/accent",
+      "box": [
+       11,
+       73.8,
+       80,
+       14
+      ],
+      "name": "rho range value"
+     }
+    ]
+   },
+   "expanded": {
+    "w": 640,
+    "h": 475.2,
+    "layout": "vertical",
+    "padding_tRBL": [
+     16,
+     16,
+     16,
+     16
+    ],
+    "itemSpacing": 8,
+    "radius": 10,
+    "fill": {
+     "token": "color/fill/glass",
+     "hex": "#14263a",
+     "alpha": 0.88
+    },
+    "stroke": {
+     "token": "color/line/hairline",
+     "width": 1.6
+    },
+    "backgroundBlur_px": null,
+    "children": [
+     {
+      "k": "richText",
+      "name": "Interference State (Φ_load, proximity to τ)",
+      "font": {
+       "family": "IBM Plex Mono",
+       "style": "Regular",
+       "size": 12,
+       "letterSpacing_px": 0.6
+      },
+      "colour": "color/text/muted",
+      "box": [
+       17.6,
+       17.6,
+       317,
+       16
+      ],
+      "runs": [
+       {
+        "t": "Interference",
+        "box": [
+         17.6,
+         17.6,
+         93,
+         16
+        ]
+       },
+       {
+        "t": "State",
+        "box": [
+         118.4,
+         17.6,
+         39,
+         16
+        ]
+       },
+       {
+        "t": "(Φ",
+        "box": [
+         165.2,
+         17.6,
+         18,
+         16
+        ]
+       },
+       {
+        "t": "load",
+        "box": [
+         183.2,
+         27.6,
+         21,
+         6
+        ],
+        "sub": true,
+        "size": 8,
+        "lineHeight_px": 6
+       },
+       {
+        "t": ",",
+        "box": [
+         204.2,
+         17.6,
+         8,
+         16
+        ]
+       },
+       {
+        "t": "proximity",
+        "box": [
+         220,
+         17.6,
+         70,
+         16
+        ]
+       },
+       {
+        "t": "to",
+        "box": [
+         297.8,
+         17.6,
+         15,
+         16
+        ]
+       },
+       {
+        "t": "τ)",
+        "box": [
+         320.6,
+         17.6,
+         14,
+         16
+        ]
+       }
+      ]
+     },
+     {
+      "k": "frame",
+      "name": "rowhead Φ_load",
+      "box": [
+       17.6,
+       41.6,
+       604.8,
+       26
+      ],
+      "layout": "horizontal",
+      "children": [
+       {
+        "k": "richText",
+        "name": "name",
+        "font": {
+         "family": "IBM Plex Sans",
+         "style": "Regular",
+         "size": 20
+        },
+        "colour": "color/text/primary",
+        "box": [
+         17.6,
+         41.6,
+         496.8,
+         26
+        ],
+        "runs": [
+         {
+          "t": "Φ",
+          "box": [
+           17.6,
+           41.6,
+           18,
+           26
+          ]
+         },
+         {
+          "t": "load",
+          "box": [
+           35.6,
+           56.6,
+           28,
+           11
+          ],
+          "sub": true,
+          "size": 14,
+          "lineHeight_px": 11
+         }
+        ]
+       },
+       {
+        "k": "text",
+        "text": "[0.10, 0.20]",
+        "font": {
+         "family": "IBM Plex Mono",
+         "style": "Medium",
+         "size": 15
+        },
+        "colour": "color/text/accent",
+        "box": [
+         514.4,
+         44.6,
+         108,
+         20
+        ],
+        "name": "value"
+       }
+      ]
+     },
+     {
+      "k": "frame",
+      "name": "phi bar",
+      "box": [
+       17.6,
+       75.6,
+       604.8,
+       38
+      ],
+      "itemSpacing": 8,
+      "layout": "vertical",
+      "children": [
+       {
+        "k": "graphic",
+        "name": "phi track",
+        "box": [
+         17.6,
+         75.6,
+         604.8,
+         14
+        ],
+        "params": {
+         "track": {
+          "fill": "color/surface/well",
+          "radius": 7,
+          "h": 14
+         },
+         "pill": {
+          "fill": "color/fill/accent",
+          "radius": 7,
+          "valueRange": [
+           0.1,
+           0.2
+          ],
+          "x": "0.10*width",
+          "w": "max(6, 0.10*width)",
+          "box": [
+           78.4,
+           75.6,
+           60.8,
+           14
+          ]
+         },
+         "scale": "0..1 across the full track width (604.8)"
+        }
+       },
+       {
+        "k": "frame",
+        "name": "ticks",
+        "box": [
+         17.6,
+         97.6,
+         604.8,
+         16
+        ],
+        "layout": "horizontal space-between",
+        "children": [
+         {
+          "k": "text",
+          "text": "0",
+          "font": {
+           "family": "IBM Plex Mono",
+           "style": "Regular",
+           "size": 12
+          },
+          "colour": "color/text/muted",
+          "box": [
+           17.6,
+           97.6,
+           8,
+           16
+          ]
+         },
+         {
+          "k": "text",
+          "text": "0.5",
+          "font": {
+           "family": "IBM Plex Mono",
+           "style": "Regular",
+           "size": 12
+          },
+          "colour": "color/text/muted",
+          "box": [
+           309,
+           97.6,
+           22,
+           16
+          ]
+         },
+         {
+          "k": "text",
+          "text": "1",
+          "font": {
+           "family": "IBM Plex Mono",
+           "style": "Regular",
+           "size": 12
+          },
+          "colour": "color/text/muted",
+          "box": [
+           614.4,
+           97.6,
+           8,
+           16
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "k": "frame",
+      "name": "rowhead ρ_τ",
+      "box": [
+       17.6,
+       121.6,
+       604.8,
+       26
+      ],
+      "layout": "horizontal",
+      "children": [
+       {
+        "k": "richText",
+        "name": "name",
+        "font": {
+         "family": "IBM Plex Sans",
+         "style": "Regular",
+         "size": 20
+        },
+        "colour": "color/text/primary",
+        "box": [
+         17.6,
+         121.6,
+         496.8,
+         26
+        ],
+        "runs": [
+         {
+          "t": "ρ",
+          "box": [
+           17.6,
+           121.6,
+           12,
+           26
+          ]
+         },
+         {
+          "t": "τ",
+          "box": [
+           29.6,
+           136.6,
+           7,
+           11
+          ],
+          "sub": true,
+          "size": 14,
+          "lineHeight_px": 11
+         },
+         {
+          "t": "=",
+          "box": [
+           41.8,
+           121.6,
+           12,
+           26
+          ]
+         },
+         {
+          "t": "M(t)/τ",
+          "box": [
+           59,
+           121.6,
+           54,
+           26
+          ]
+         }
+        ]
+       },
+       {
+        "k": "text",
+        "text": "[0.70, 0.85]",
+        "font": {
+         "family": "IBM Plex Mono",
+         "style": "Medium",
+         "size": 15
+        },
+        "colour": "color/text/accent",
+        "box": [
+         514.4,
+         124.6,
+         108,
+         20
+        ],
+        "name": "value"
+       }
+      ]
+     },
+     {
+      "k": "frame",
+      "name": "dial wrap",
+      "box": [
+       17.6,
+       155.6,
+       604.8,
+       236
+      ],
+      "layout": "horizontal centred",
+      "children": [
+       {
+        "k": "graphic",
+        "name": "rho_tau dial",
+        "box": [
+         100,
+         155.6,
+         440,
+         236
+        ],
+        "params": {
+         "frameSize": [
+          440,
+          236
+         ],
+         "centre": [
+          210,
+          200
+         ],
+         "ringRadiusOuter": 163,
+         "ringRadiusInner": 137,
+         "valueRange": [
+          0,
+          1.2
+         ],
+         "angleMapping": "theta = PI*(1+v/1.2) radians, clockwise from +x with y down; point = (cx + r*cos(theta), cy + r*sin(theta)); v=0 left, v=0.6 top, v=1.2 right (upper semicircle only)",
+         "track": {
+          "fill": "color/surface/well",
+          "arc": "theta PI..2PI"
+         },
+         "range": {
+          "fill": "color/fill/accent",
+          "from": 0.7,
+          "to": 0.85,
+          "thetaFrom": 4.9742,
+          "thetaTo": 5.3669
+         },
+         "tauMark": {
+          "value": 1.0,
+          "radiusFrom": 130,
+          "radiusTo": 174,
+          "stroke": "color/marker/race",
+          "width": 3.6,
+          "cap": "round"
+         },
+         "needle": {
+          "value": 0.775,
+          "note": "midpoint of the range",
+          "radius": 138,
+          "stroke": "color/text/primary",
+          "width": 4.8,
+          "cap": "round"
+         },
+         "hub": {
+          "diameter": 18,
+          "fill": "color/fill/accent"
+         },
+         "ticks": {
+          "values": [
+           0,
+           0.2,
+           0.4,
+           0.6,
+           0.8,
+           1.0,
+           1.2
+          ],
+          "radiusFrom": 131,
+          "radiusTo": 137,
+          "stroke": "color/line/hairline-strong",
+          "width": 1.8,
+          "drawn": true
+         }
+        },
+        "parts": [
+         {
+          "k": "text",
+          "text": "τ = 1.0",
+          "font": {
+           "family": "IBM Plex Mono",
+           "style": "Regular",
+           "size": 14
+          },
+          "colour": "color/marker/race",
+          "box": [
+           473.3,
+           255.6,
+           58,
+           18
+          ],
+          "name": "tau label: at r=184 on the v=1.0 ray, x+4, y-8"
+         },
+         {
+          "k": "text",
+          "text": "0",
+          "font": {
+           "family": "IBM Plex Mono",
+           "style": "Regular",
+           "size": 14
+          },
+          "colour": "color/text/muted",
+          "box": [
+           155.5,
+           369.6,
+           9,
+           18
+          ],
+          "name": "dial tick label"
+         },
+         {
+          "k": "text",
+          "text": "0.6",
+          "font": {
+           "family": "IBM Plex Mono",
+           "style": "Regular",
+           "size": 14
+          },
+          "colour": "color/text/muted",
+          "box": [
+           297,
+           167.6,
+           26,
+           18
+          ],
+          "name": "dial tick label"
+         },
+         {
+          "k": "text",
+          "text": "1.2",
+          "font": {
+           "family": "IBM Plex Mono",
+           "style": "Regular",
+           "size": 14
+          },
+          "colour": "color/text/muted",
+          "box": [
+           447,
+           369.6,
+           26,
+           18
+          ],
+          "name": "dial tick label"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "k": "frame",
+      "name": "log words",
+      "box": [
+       17.6,
+       399.6,
+       604.8,
+       58
+      ],
+      "fill": "color/surface/well",
+      "radius": 6,
+      "padding_tRBL": [
+       8,
+       10,
+       8,
+       10
+      ],
+      "itemSpacing": 4,
+      "layout": "horizontal",
+      "wrapNote": "rich text wraps; word boxes given as laid out; word gap 4.2",
+      "children": [
+       {
+        "k": "richText",
+        "name": "LOW axis count; … ρ_τ=M(t)/τ ∈ [0.70, 0.85].",
+        "font": {
+         "family": "IBM Plex Sans",
+         "style": "Regular",
+         "size": 16
+        },
+        "colour": "color/text/primary",
+        "box": [
+         27.6,
+         407.6,
+         584.8,
+         42
+        ],
+        "runs": [
+         {
+          "t": "LOW",
+          "box": [
+           27.6,
+           407.6,
+           34,
+           21
+          ]
+         },
+         {
+          "t": "axis",
+          "box": [
+           65.8,
+           407.6,
+           29,
+           21
+          ]
+         },
+         {
+          "t": "count;",
+          "box": [
+           98.9,
+           407.6,
+           46,
+           21
+          ]
+         },
+         {
+          "t": "phenotype",
+          "box": [
+           149.1,
+           407.6,
+           77,
+           21
+          ]
+         },
+         {
+          "t": "partition",
+          "box": [
+           230.2,
+           407.6,
+           62,
+           21
+          ]
+         },
+         {
+          "t": "initializing.",
+          "box": [
+           296.4,
+           407.6,
+           78,
+           21
+          ]
+         },
+         {
+          "t": "Estimated",
+          "box": [
+           378.6,
+           407.6,
+           73,
+           21
+          ]
+         },
+         {
+          "t": "Φ",
+          "box": [
+           455.7,
+           407.6,
+           14,
+           21
+          ]
+         },
+         {
+          "t": "load",
+          "box": [
+           469.7,
+           419.6,
+           22,
+           9
+          ],
+          "sub": true,
+          "size": 11,
+          "lineHeight_px": 9
+         },
+         {
+          "t": "∈",
+          "box": [
+           495.9,
+           407.6,
+           12,
+           21
+          ]
+         },
+         {
+          "t": "[0.10,",
+          "box": [
+           512,
+           407.6,
+           43,
+           21
+          ]
+         },
+         {
+          "t": "0.20],",
+          "box": [
+           559.2,
+           407.6,
+           43,
+           21
+          ]
+         },
+         {
+          "t": "ρ",
+          "box": [
+           27.6,
+           428.6,
+           9,
+           21
+          ]
+         },
+         {
+          "t": "τ",
+          "box": [
+           36.6,
+           440.6,
+           6,
+           9
+          ],
+          "sub": true,
+          "size": 11,
+          "lineHeight_px": 9
+         },
+         {
+          "t": "=M(t)/τ",
+          "box": [
+           42.6,
+           428.6,
+           53,
+           21
+          ]
+         },
+         {
+          "t": "∈",
+          "box": [
+           99.8,
+           428.6,
+           12,
+           21
+          ]
+         },
+         {
+          "t": "[0.70,",
+          "box": [
+           115.9,
+           428.6,
+           43,
+           21
+          ]
+         },
+         {
+          "t": "0.85].",
+          "box": [
+           163.1,
+           428.6,
+           43,
+           21
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "childOriginNote": "child boxes are measured from the panel's outer top-left; content starts at padding+stroke (16+1.6=17.6)"
+   },
+   "settings": {
+    "w": 560,
+    "h": 345.2,
+    "template": "settingsTemplate",
+    "content": {
+     "title": "SETTINGS · INTERFERENCE",
+     "source": "Runtime Log 2 · ch:portugal · dashboard_eras.json › fields.interference_state",
+     "units": "Φ_{load}: 0 to 1 · ρ_{τ} = M(t)/τ: 0 to 1.2 · crash threshold τ = 1.0",
+     "log": "Interference State (Φ_{load}, proximity to τ): LOW axis count; phenotype partition initializing. Estimated Φ_{load} ∈ [0.10, 0.20], ρ_{τ}=M(t)/τ ∈ [0.70, 0.85].",
+     "subscripts": "_{...} marks a subscript run (70% size)"
+    }
+   }
+  },
+  "Active Patch": {
+   "compact": {
+    "w": 211,
+    "h": 60,
+    "sizing": "HUG both axes",
+    "layout": "vertical",
+    "padding_tRBL": [
+     8,
+     10,
+     8,
+     10
+    ],
+    "itemSpacing": 4,
+    "radius": 8,
+    "fill": {
+     "token": "color/fill/panel-wash",
+     "hex": "#5b6b7d",
+     "alpha": 0.14
+    },
+    "stroke": {
+     "token": "color/line/hairline",
+     "width": 1
+    },
+    "backgroundBlur_px": 12,
+    "children": [
+     {
+      "k": "text",
+      "text": "Active Patch",
+      "font": {
+       "family": "IBM Plex Mono",
+       "style": "Regular",
+       "size": 11,
+       "letterSpacing_px": 0.4
+      },
+      "colour": "color/text/muted",
+      "box": [
+       11,
+       9,
+       84,
+       14
+      ]
+     },
+     {
+      "k": "frame",
+      "name": "well",
+      "box": [
+       11,
+       27,
+       189,
+       24
+      ],
+      "fill": "color/surface/well",
+      "radius": 5,
+      "padding_tRBL": [
+       4,
+       8,
+       4,
+       8
+      ],
+      "itemSpacing": 4,
+      "layout": "horizontal",
+      "children": [
+       {
+        "k": "text",
+        "text": "> Compiling Version 1.0…",
+        "font": {
+         "family": "IBM Plex Mono",
+         "style": "Regular",
+         "size": 12
+        },
+        "colour": "color/text/accent",
+        "box": [
+         19,
+         31,
+         173,
+         16
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   "expanded": {
+    "w": 640,
+    "h": 130.2,
+    "layout": "vertical",
+    "padding_tRBL": [
+     16,
+     16,
+     16,
+     16
+    ],
+    "itemSpacing": 8,
+    "radius": 10,
+    "fill": {
+     "token": "color/fill/glass",
+     "hex": "#14263a",
+     "alpha": 0.88
+    },
+    "stroke": {
+     "token": "color/line/hairline",
+     "width": 1.6
+    },
+    "backgroundBlur_px": null,
+    "children": [
+     {
+      "k": "text",
+      "text": "Active Patch",
+      "font": {
+       "family": "IBM Plex Mono",
+       "style": "Regular",
+       "size": 12,
+       "letterSpacing_px": 0.6
+      },
+      "colour": "color/text/muted",
+      "box": [
+       17.6,
+       17.6,
+       93,
+       16
+      ]
+     },
+     {
+      "k": "frame",
+      "name": "console",
+      "box": [
+       17.6,
+       41.6,
+       604.8,
+       71
+      ],
+      "fill": "color/surface/well",
+      "radius": 6,
+      "padding_tRBL": [
+       20,
+       16,
+       20,
+       16
+      ],
+      "itemSpacing": 6,
+      "layout": "horizontal",
+      "children": [
+       {
+        "k": "text",
+        "text": "> Compiling Version 1.0…",
+        "font": {
+         "family": "IBM Plex Mono",
+         "style": "Regular",
+         "size": 24
+        },
+        "colour": "color/text/accent",
+        "box": [
+         33.6,
+         61.6,
+         346,
+         31
+        ],
+        "name": "typed line"
+       },
+       {
+        "k": "rect",
+        "name": "cursor",
+        "fill": "color/fill/accent",
+        "box": [
+         385.6,
+         65.1,
+         12,
+         24
+        ]
+       }
+      ]
+     }
+    ],
+    "childOriginNote": "child boxes are measured from the panel's outer top-left; content starts at padding+stroke (16+1.6=17.6)"
+   },
+   "settings": {
+    "w": 560,
+    "h": 303.2,
+    "template": "settingsTemplate",
+    "content": {
+     "title": "SETTINGS · ACTIVE PATCH",
+     "source": "Runtime Log 2 · ch:portugal · dashboard_eras.json › fields.active_patch",
+     "units": "text: one console line, prompt \">\"",
+     "log": "Active Patch: Compiling Version 1.0…"
+    }
+   }
+  },
+  "Variables": {
+   "compact": {
+    "w": 153,
+    "h": 56,
+    "sizing": "HUG both axes",
+    "layout": "vertical",
+    "padding_tRBL": [
+     8,
+     10,
+     8,
+     10
+    ],
+    "itemSpacing": 4,
+    "radius": 8,
+    "fill": {
+     "token": "color/fill/panel-wash",
+     "hex": "#5b6b7d",
+     "alpha": 0.14
+    },
+    "stroke": {
+     "token": "color/line/hairline",
+     "width": 1
+    },
+    "backgroundBlur_px": 12,
+    "children": [
+     {
+      "k": "text",
+      "text": "Variables",
+      "font": {
+       "family": "IBM Plex Mono",
+       "style": "Regular",
+       "size": 11,
+       "letterSpacing_px": 0.4
+      },
+      "colour": "color/text/muted",
+      "box": [
+       11,
+       9,
+       63,
+       14
+      ]
+     },
+     {
+      "k": "frame",
+      "name": "chip row",
+      "box": [
+       11,
+       27,
+       131,
+       20
+      ],
+      "itemSpacing": 4,
+      "layout": "horizontal",
+      "children": [
+       {
+        "k": "frame",
+        "name": "chip E",
+        "box": [
+         11,
+         27,
+         25,
+         20
+        ],
+        "fill": "color/fill/gold-wash",
+        "stroke": {
+         "token": "color/fill/gold",
+         "width": 1
+        },
+        "radius": 999,
+        "layout": "horizontal",
+        "children": [
+         {
+          "k": "text",
+          "text": "E",
+          "font": {
+           "family": "IBM Plex Mono",
+           "style": "Regular",
+           "size": 11
+          },
+          "colour": "color/fill/gold",
+          "box": [
+           20,
+           30,
+           7,
+           14
+          ]
+         }
+        ],
+        "padding_tRBL": [
+         2,
+         8,
+         2,
+         8
+        ],
+        "itemSpacing": 4
+       },
+       {
+        "k": "frame",
+        "name": "chip O_racialized",
+        "box": [
+         40,
+         27,
+         73,
+         20
+        ],
+        "fill": "color/fill/gold-wash",
+        "stroke": {
+         "token": "color/fill/gold",
+         "width": 1
+        },
+        "radius": 999,
+        "layout": "horizontal",
+        "children": [
+         {
+          "k": "richText",
+          "name": "text",
+          "font": {
+           "family": "IBM Plex Mono",
+           "style": "Regular",
+           "size": 11
+          },
+          "colour": "color/fill/gold",
+          "box": [
+           49,
+           30,
+           55,
+           14
+          ],
+          "runs": [
+           {
+            "t": "O",
+            "box": [
+             49,
+             30,
+             7,
+             14
+            ]
+           },
+           {
+            "t": "racialized",
+            "box": [
+             56,
+             38,
+             48,
+             6
+            ],
+            "sub": true,
+            "size": 8,
+            "lineHeight_px": 6
+           }
+          ]
+         }
+        ],
+        "padding_tRBL": [
+         2,
+         8,
+         2,
+         8
+        ],
+        "itemSpacing": 4
+       },
+       {
+        "k": "frame",
+        "name": "chip I",
+        "box": [
+         117,
+         27,
+         25,
+         20
+        ],
+        "fill": "color/fill/gold-wash",
+        "stroke": {
+         "token": "color/fill/gold",
+         "width": 1
+        },
+        "radius": 999,
+        "layout": "horizontal",
+        "children": [
+         {
+          "k": "text",
+          "text": "I",
+          "font": {
+           "family": "IBM Plex Mono",
+           "style": "Regular",
+           "size": 11
+          },
+          "colour": "color/fill/gold",
+          "box": [
+           126,
+           30,
+           7,
+           14
+          ]
+         }
+        ],
+        "padding_tRBL": [
+         2,
+         8,
+         2,
+         8
+        ],
+        "itemSpacing": 4
+       }
+      ]
+     }
+    ]
+   },
+   "expanded": {
+    "w": 640,
+    "h": 158.6,
+    "layout": "vertical",
+    "padding_tRBL": [
+     16,
+     16,
+     16,
+     16
+    ],
+    "itemSpacing": 8,
+    "radius": 10,
+    "fill": {
+     "token": "color/fill/glass",
+     "hex": "#14263a",
+     "alpha": 0.88
+    },
+    "stroke": {
+     "token": "color/line/hairline",
+     "width": 1.6
+    },
+    "backgroundBlur_px": null,
+    "children": [
+     {
+      "k": "text",
+      "text": "Variables",
+      "font": {
+       "family": "IBM Plex Mono",
+       "style": "Regular",
+       "size": 12,
+       "letterSpacing_px": 0.6
+      },
+      "colour": "color/text/muted",
+      "box": [
+       17.6,
+       17.6,
+       70,
+       16
+      ]
+     },
+     {
+      "k": "text",
+      "text": "Deployed this cycle",
+      "font": {
+       "family": "IBM Plex Mono",
+       "style": "Regular",
+       "size": 16
+      },
+      "colour": "color/text/soft",
+      "box": [
+       17.6,
+       41.6,
+       183,
+       21
+      ]
+     },
+     {
+      "k": "frame",
+      "name": "chip row",
+      "box": [
+       17.6,
+       70.6,
+       604.8,
+       70.4
+      ],
+      "itemSpacing": 8,
+      "layout": "horizontal wrap",
+      "rowGap": 10,
+      "children": [
+       {
+        "k": "frame",
+        "name": "chip The Elite Class (E)",
+        "box": [
+         17.6,
+         70.6,
+         220.2,
+         30.2
+        ],
+        "fill": "color/fill/gold-wash",
+        "stroke": {
+         "token": "color/fill/gold",
+         "width": 1.6
+        },
+        "radius": 999,
+        "padding_tRBL": [
+         3,
+         10,
+         3,
+         10
+        ],
+        "itemSpacing": 6,
+        "layout": "horizontal",
+        "children": [
+         {
+          "k": "ellipse",
+          "name": "dot",
+          "box": [
+           29.2,
+           81.7,
+           8,
+           8
+          ],
+          "fill": "color/fill/gold"
+         },
+         {
+          "k": "text",
+          "text": "The Elite Class (E)",
+          "font": {
+           "family": "IBM Plex Mono",
+           "style": "Regular",
+           "size": 16
+          },
+          "colour": "color/fill/gold",
+          "box": [
+           43.2,
+           75.2,
+           183,
+           21
+          ]
+         }
+        ]
+       },
+       {
+        "k": "frame",
+        "name": "chip The Out-group (O_racialized)",
+        "box": [
+         245.8,
+         70.6,
+         268.4,
+         30.2
+        ],
+        "fill": "color/fill/gold-wash",
+        "stroke": {
+         "token": "color/fill/gold",
+         "width": 1.6
+        },
+        "radius": 999,
+        "padding_tRBL": [
+         3,
+         10,
+         3,
+         10
+        ],
+        "itemSpacing": 6,
+        "layout": "horizontal",
+        "children": [
+         {
+          "k": "ellipse",
+          "name": "dot",
+          "box": [
+           257.4,
+           81.7,
+           8,
+           8
+          ],
+          "fill": "color/fill/gold"
+         },
+         {
+          "k": "richText",
+          "name": "The Out-group (O_racialized)",
+          "font": {
+           "family": "IBM Plex Mono",
+           "style": "Regular",
+           "size": 16
+          },
+          "colour": "color/fill/gold",
+          "box": [
+           271.4,
+           75.2,
+           231.2,
+           21
+          ],
+          "runs": [
+           {
+            "t": "The",
+            "box": [
+             271.4,
+             75.2,
+             29,
+             21
+            ]
+           },
+           {
+            "t": "Out-group",
+            "box": [
+             310,
+             75.2,
+             87,
+             21
+            ]
+           },
+           {
+            "t": "(O",
+            "box": [
+             406.6,
+             75.2,
+             20,
+             21
+            ]
+           },
+           {
+            "t": "racialized",
+            "box": [
+             426.6,
+             87.2,
+             66,
+             9
+            ],
+            "sub": true,
+            "size": 11,
+            "lineHeight_px": 9
+           },
+           {
+            "t": ")",
+            "box": [
+             492.6,
+             75.2,
+             10,
+             21
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "k": "frame",
+        "name": "chip The In-group (I)",
+        "box": [
+         17.6,
+         110.8,
+         191.2,
+         30.2
+        ],
+        "fill": "color/fill/gold-wash",
+        "stroke": {
+         "token": "color/fill/gold",
+         "width": 1.6
+        },
+        "radius": 999,
+        "padding_tRBL": [
+         3,
+         10,
+         3,
+         10
+        ],
+        "itemSpacing": 6,
+        "layout": "horizontal",
+        "children": [
+         {
+          "k": "ellipse",
+          "name": "dot",
+          "box": [
+           29.2,
+           121.9,
+           8,
+           8
+          ],
+          "fill": "color/fill/gold"
+         },
+         {
+          "k": "text",
+          "text": "The In-group (I)",
+          "font": {
+           "family": "IBM Plex Mono",
+           "style": "Regular",
+           "size": 16
+          },
+          "colour": "color/fill/gold",
+          "box": [
+           43.2,
+           115.4,
+           154,
+           21
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "childOriginNote": "child boxes are measured from the panel's outer top-left; content starts at padding+stroke (16+1.6=17.6)"
+   },
+   "settings": {
+    "w": 560,
+    "h": 324.2,
+    "template": "settingsTemplate",
+    "content": {
+     "title": "SETTINGS · VARIABLES",
+     "source": "Runtime Log 2 · ch:portugal · dashboard_eras.json › fields.variables_deployed",
+     "units": "chip: variable symbol · gold chip: deployed this cycle",
+     "log": "Variables Deployed: The Elite Class (E), The Out-group (O_{racialized}), The In-group (I).",
+     "subscripts": "_{...} marks a subscript run"
+    }
+   }
+  },
+  "Executing Function": {
+   "compact": {
+    "w": 554,
+    "h": 39,
+    "sizing": "HUG both axes",
+    "layout": "horizontal",
+    "padding_tRBL": [
+     8,
+     10,
+     8,
+     10
+    ],
+    "itemSpacing": 10,
+    "radius": 8,
+    "fill": {
+     "token": "color/fill/panel-wash",
+     "hex": "#5b6b7d",
+     "alpha": 0.14
+    },
+    "stroke": {
+     "token": "color/line/hairline",
+     "width": 1
+    },
+    "backgroundBlur_px": 12,
+    "children": [
+     {
+      "k": "text",
+      "text": "Executing Function",
+      "font": {
+       "family": "IBM Plex Mono",
+       "style": "Regular",
+       "size": 11,
+       "letterSpacing_px": 0.4
+      },
+      "colour": "color/text/muted",
+      "box": [
+       11,
+       12.5,
+       126,
+       14
+      ]
+     },
+     {
+      "k": "text",
+      "text": "The Implicit Contract (Issuing the Psychological Wage).",
+      "font": {
+       "family": "IBM Plex Sans",
+       "style": "Regular",
+       "size": 16
+      },
+      "colour": "color/text/primary",
+      "box": [
+       147,
+       9,
+       396,
+       21
+      ],
+      "name": "function"
+     }
+    ]
+   },
+   "expanded": {
+    "w": 640,
+    "h": 143.2,
+    "layout": "vertical",
+    "padding_tRBL": [
+     16,
+     16,
+     16,
+     16
+    ],
+    "itemSpacing": 8,
+    "radius": 10,
+    "fill": {
+     "token": "color/fill/glass",
+     "hex": "#14263a",
+     "alpha": 0.88
+    },
+    "stroke": {
+     "token": "color/line/hairline",
+     "width": 1.6
+    },
+    "backgroundBlur_px": null,
+    "children": [
+     {
+      "k": "text",
+      "text": "Executing Function",
+      "font": {
+       "family": "IBM Plex Mono",
+       "style": "Regular",
+       "size": 12,
+       "letterSpacing_px": 0.6
+      },
+      "colour": "color/text/muted",
+      "box": [
+       17.6,
+       17.6,
+       140,
+       16
+      ]
+     },
+     {
+      "k": "text",
+      "text": "The Implicit Contract (Issuing the Psychological Wage).",
+      "font": {
+       "family": "IBM Plex Sans",
+       "style": "Regular",
+       "size": 32,
+       "lineHeight_px": 42
+      },
+      "colour": "color/text/primary",
+      "box": [
+       17.6,
+       41.6,
+       604.8,
+       84
+      ]
+     }
+    ],
+    "childOriginNote": "child boxes are measured from the panel's outer top-left; content starts at padding+stroke (16+1.6=17.6)"
+   },
+   "settings": {
+    "w": 560,
+    "h": 324.2,
+    "template": "settingsTemplate",
+    "content": {
+     "title": "SETTINGS · EXECUTING FUNCTION",
+     "source": "Runtime Log 2 · ch:portugal · dashboard_eras.json › fields.executing_function",
+     "units": "text: one function name with its gloss",
+     "log": "Executing Function: The Implicit Contract (Issuing the Psychological Wage)."
+    }
+   }
+  },
+  "Policy ticker": {
+   "compact": {
+    "w": 707,
+    "h": 36,
+    "sizing": "HUG both axes",
+    "layout": "horizontal",
+    "padding_tRBL": [
+     8,
+     10,
+     8,
+     10
+    ],
+    "itemSpacing": 10,
+    "radius": 8,
+    "fill": {
+     "token": "color/fill/panel-wash",
+     "hex": "#5b6b7d",
+     "alpha": 0.14
+    },
+    "stroke": {
+     "token": "color/line/hairline",
+     "width": 1
+    },
+    "backgroundBlur_px": 12,
+    "children": [
+     {
+      "k": "text",
+      "text": "Result",
+      "font": {
+       "family": "IBM Plex Mono",
+       "style": "Regular",
+       "size": 11,
+       "letterSpacing_px": 0.4
+      },
+      "colour": "color/text/muted",
+      "box": [
+       11,
+       11,
+       42,
+       14
+      ]
+     },
+     {
+      "k": "rect",
+      "name": "accent bar",
+      "fill": "color/fill/accent",
+      "box": [
+       63,
+       10,
+       4,
+       16
+      ]
+     },
+     {
+      "k": "text",
+      "text": "[POLICY] Casa dos Escravos (1486) institutionalizes state-managed extraction. Vector established.",
+      "font": {
+       "family": "IBM Plex Sans",
+       "style": "Regular",
+       "size": 14
+      },
+      "colour": "color/text/primary",
+      "box": [
+       77,
+       9,
+       619,
+       18
+      ],
+      "name": "policy line"
+     }
+    ]
+   },
+   "expanded": {
+    "w": 640,
+    "h": 238.2,
+    "layout": "vertical",
+    "padding_tRBL": [
+     16,
+     16,
+     16,
+     16
+    ],
+    "itemSpacing": 8,
+    "radius": 10,
+    "fill": {
+     "token": "color/fill/glass",
+     "hex": "#14263a",
+     "alpha": 0.88
+    },
+    "stroke": {
+     "token": "color/line/hairline",
+     "width": 1.6
+    },
+    "backgroundBlur_px": null,
+    "children": [
+     {
+      "k": "text",
+      "text": "Result",
+      "font": {
+       "family": "IBM Plex Mono",
+       "style": "Regular",
+       "size": 12,
+       "letterSpacing_px": 0.6
+      },
+      "colour": "color/text/muted",
+      "box": [
+       17.6,
+       17.6,
+       47,
+       16
+      ]
+     },
+     {
+      "k": "frame",
+      "name": "ticker",
+      "box": [
+       17.6,
+       41.6,
+       604.8,
+       39
+      ],
+      "fill": "color/surface/well",
+      "radius": 6,
+      "padding_tRBL": [
+       8,
+       8,
+       8,
+       0
+      ],
+      "itemSpacing": 14,
+      "layout": "horizontal",
+      "children": [
+       {
+        "k": "rect",
+        "name": "accent bar",
+        "fill": "color/fill/accent",
+        "box": [
+         17.6,
+         49.6,
+         5,
+         23
+        ]
+       },
+       {
+        "k": "text",
+        "text": "Extraction Algorithm initialized.",
+        "font": {
+         "family": "IBM Plex Sans",
+         "style": "Regular",
+         "size": 18
+        },
+        "colour": "color/text/primary",
+        "box": [
+         36.6,
+         49.6,
+         577.8,
+         23
+        ],
+        "name": "policy line"
+       }
+      ]
+     },
+     {
+      "k": "frame",
+      "name": "ticker",
+      "box": [
+       17.6,
+       88.6,
+       604.8,
+       62
+      ],
+      "fill": "color/surface/well",
+      "radius": 6,
+      "padding_tRBL": [
+       8,
+       8,
+       8,
+       0
+      ],
+      "itemSpacing": 14,
+      "layout": "horizontal",
+      "children": [
+       {
+        "k": "rect",
+        "name": "accent bar",
+        "fill": "color/fill/accent",
+        "box": [
+         17.6,
+         96.6,
+         5,
+         46
+        ]
+       },
+       {
+        "k": "text",
+        "text": "[POLICY] Dum Diversas (1452) and Romanus Pontifex (1455) authorize unlimited exploitation.",
+        "font": {
+         "family": "IBM Plex Sans",
+         "style": "Regular",
+         "size": 18
+        },
+        "colour": "color/text/primary",
+        "box": [
+         36.6,
+         96.6,
+         577.8,
+         46
+        ],
+        "name": "policy line"
+       }
+      ]
+     },
+     {
+      "k": "frame",
+      "name": "ticker",
+      "box": [
+       17.6,
+       158.6,
+       604.8,
+       62
+      ],
+      "fill": "color/surface/well",
+      "radius": 6,
+      "padding_tRBL": [
+       8,
+       8,
+       8,
+       0
+      ],
+      "itemSpacing": 14,
+      "layout": "horizontal",
+      "children": [
+       {
+        "k": "rect",
+        "name": "accent bar",
+        "fill": "color/fill/accent",
+        "box": [
+         17.6,
+         166.6,
+         5,
+         46
+        ]
+       },
+       {
+        "k": "text",
+        "text": "[POLICY] Casa dos Escravos (1486) institutionalizes state-managed extraction. Vector established.",
+        "font": {
+         "family": "IBM Plex Sans",
+         "style": "Regular",
+         "size": 18
+        },
+        "colour": "color/text/primary",
+        "box": [
+         36.6,
+         166.6,
+         577.8,
+         46
+        ],
+        "name": "policy line"
+       }
+      ]
+     }
+    ],
+    "childOriginNote": "child boxes are measured from the panel's outer top-left; content starts at padding+stroke (16+1.6=17.6)"
+   },
+   "settings": {
+    "w": 560,
+    "h": 383.2,
+    "template": "settingsTemplate",
+    "content": {
+     "title": "SETTINGS · POLICY TICKER",
+     "source": "Runtime Log 2 · ch:portugal · dashboard_eras.json › fields.results",
+     "units": "text: one line per result · [POLICY] prefix marks a statute or ruling",
+     "log": "Result: Extraction Algorithm initialized. [POLICY] Dum Diversas (1452) and Romanus Pontifex (1455) authorize unlimited exploitation. [POLICY] Casa dos Escravos (1486) institutionalizes state-managed extraction. Vector established."
+    }
+   }
+  },
+  "Wage plane": {
+   "compact": {
+    "w": 187,
+    "h": 120,
+    "sizing": "HUG both axes",
+    "layout": "vertical",
+    "padding_tRBL": [
+     8,
+     10,
+     8,
+     10
+    ],
+    "itemSpacing": 4,
+    "radius": 8,
+    "fill": {
+     "token": "color/fill/panel-wash",
+     "hex": "#5b6b7d",
+     "alpha": 0.14
+    },
+    "stroke": {
+     "token": "color/line/hairline",
+     "width": 1
+    },
+    "backgroundBlur_px": 12,
+    "children": [
+     {
+      "k": "text",
+      "text": "Wage plane",
+      "font": {
+       "family": "IBM Plex Mono",
+       "style": "Regular",
+       "size": 11,
+       "letterSpacing_px": 0.4
+      },
+      "colour": "color/text/muted",
+      "box": [
+       11,
+       9,
+       70,
+       14
+      ]
+     },
+     {
+      "k": "frame",
+      "name": "plane row",
+      "box": [
+       11,
+       27,
+       165,
+       84
+      ],
+      "itemSpacing": 8,
+      "layout": "horizontal",
+      "children": [
+       {
+        "k": "graphic",
+        "name": "wage plane",
+        "box": [
+         11,
+         27,
+         84,
+         84
+        ],
+        "params": {
+         "unitSquare": "psi plane, +-100 units on both axes; screen x = psi_s (right = +), screen y = psi_m (down = +). Extraction (negative psi_m) points UP.",
+         "pxPerUnit": 0.38,
+         "halfSize_px": 38,
+         "padding_px": 4,
+         "frameSize": [
+          84,
+          84
+         ],
+         "box": {
+          "size": 76,
+          "fill": "color/surface/well",
+          "stroke": "color/line/hairline-strong",
+          "strokeWidth": 1
+         },
+         "tauZone": {
+          "model": "M = M0 - a*psi_m - b*psi_s, danger where M > tau; M0=60, tau=40, a=1, b=0.7",
+          "polygon_in_units_(psi_s,psi_m)": [
+           [
+            -100,
+            -100
+           ],
+           [
+            -100,
+            90
+           ],
+           [
+            100,
+            -50
+           ],
+           [
+            100,
+            -100
+           ]
+          ],
+          "fill": "color/fill/red-faint",
+          "boundaryDash": null,
+          "boundaryStroke": null
+         },
+         "hatch": {
+          "angle": "45 deg lines y = x + c, spacing 6 px along the diagonal axis step, clipped (Cyrus-Beck) to the zone polygon",
+          "stroke": "color/line/hatch",
+          "width": 0.8
+         },
+         "clockFace": {
+          "circleRadius_px": 38,
+          "dash": [
+           2,
+           3
+          ],
+          "stroke": "color/line/hairline-strong",
+          "width": 0.8,
+          "ticks": "none"
+         },
+         "grid": "none",
+         "axes": {
+          "stroke": "color/line/wire",
+          "width": 1,
+          "extent": "+-H"
+         },
+         "W": {
+          "value_(psi_m,psi_s)": [
+           0,
+           60
+          ],
+          "theta_deg": 90,
+          "vector": {
+           "stroke": "color/fill/accent",
+           "width": 2,
+           "cap": "round",
+           "from": "origin",
+           "to": "(psi_s*k - arrowhead*0.6, 0)"
+          },
+          "arrowhead": {
+           "size": 6,
+           "fill": "color/fill/accent",
+           "shape": "triangle pointing +x, tip at (60k,0), half-height size/2"
+          },
+          "origin": null
+         },
+         "arcAtW": "none",
+         "clockConvention": "theta starts at 6 o'clock (psi_m+, down) and grows counter-clockwise; theta=90 deg = 3 o'clock = pure status (psi_s)"
+        }
+       },
+       {
+        "k": "frame",
+        "name": "readout",
+        "box": [
+         103,
+         41.5,
+         73,
+         55
+        ],
+        "itemSpacing": 2,
+        "layout": "vertical",
+        "children": [
+         {
+          "k": "text",
+          "text": "θ = 90°",
+          "font": {
+           "family": "IBM Plex Sans",
+           "style": "Bold",
+           "size": 18
+          },
+          "colour": "color/text/accent",
+          "box": [
+           103,
+           41.5,
+           60,
+           23
+          ],
+          "name": "theta"
+         },
+         {
+          "k": "text",
+          "text": "pure status",
+          "font": {
+           "family": "IBM Plex Mono",
+           "style": "Regular",
+           "size": 11
+          },
+          "colour": "color/text/primary",
+          "box": [
+           103,
+           66.5,
+           73,
+           14
+          ]
+         },
+         {
+          "k": "richText",
+          "name": "W = jψ_s",
+          "font": {
+           "family": "IBM Plex Mono",
+           "style": "Regular",
+           "size": 11
+          },
+          "colour": "color/text/muted",
+          "box": [
+           103,
+           82.5,
+           47.2,
+           14
+          ],
+          "runs": [
+           {
+            "t": "W",
+            "box": [
+             103,
+             82.5,
+             7,
+             14
+            ]
+           },
+           {
+            "t": "=",
+            "box": [
+             116.6,
+             82.5,
+             7,
+             14
+            ]
+           },
+           {
+            "t": "jψ",
+            "box": [
+             130.2,
+             82.5,
+             15,
+             14
+            ]
+           },
+           {
+            "t": "s",
+            "box": [
+             145.2,
+             90.5,
+             5,
+             6
+            ],
+            "sub": true,
+            "size": 8,
+            "lineHeight_px": 6
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   "expanded": {
+    "w": 640,
+    "h": 431.2,
+    "layout": "vertical",
+    "padding_tRBL": [
+     16,
+     16,
+     16,
+     16
+    ],
+    "itemSpacing": 8,
+    "radius": 10,
+    "fill": {
+     "token": "color/fill/glass",
+     "hex": "#14263a",
+     "alpha": 0.88
+    },
+    "stroke": {
+     "token": "color/line/hairline",
+     "width": 1.6
+    },
+    "backgroundBlur_px": null,
+    "children": [
+     {
+      "k": "text",
+      "text": "Buffer Class wage",
+      "font": {
+       "family": "IBM Plex Mono",
+       "style": "Regular",
+       "size": 12,
+       "letterSpacing_px": 0.6
+      },
+      "colour": "color/text/muted",
+      "box": [
+       17.6,
+       17.6,
+       132,
+       16
+      ]
+     },
+     {
+      "k": "frame",
+      "name": "plane row",
+      "box": [
+       17.6,
+       41.6,
+       604.8,
+       372
+      ],
+      "itemSpacing": 24,
+      "layout": "horizontal",
+      "children": [
+       {
+        "k": "graphic",
+        "name": "wage plane",
+        "box": [
+         17.6,
+         41.6,
+         372,
+         372
+        ],
+        "params": {
+         "unitSquare": "psi plane, +-100 units on both axes; screen x = psi_s (right = +), screen y = psi_m (down = +). Extraction (negative psi_m) points UP.",
+         "pxPerUnit": 1.4,
+         "halfSize_px": 140,
+         "padding_px": 46,
+         "frameSize": [
+          372,
+          372
+         ],
+         "box": {
+          "size": 280,
+          "fill": "color/surface/well",
+          "stroke": "color/line/hairline-strong",
+          "strokeWidth": 1.6
+         },
+         "tauZone": {
+          "model": "M = M0 - a*psi_m - b*psi_s, danger where M > tau; M0=60, tau=40, a=1, b=0.7",
+          "polygon_in_units_(psi_s,psi_m)": [
+           [
+            -100,
+            -100
+           ],
+           [
+            -100,
+            90
+           ],
+           [
+            100,
+            -50
+           ],
+           [
+            100,
+            -100
+           ]
+          ],
+          "fill": "color/fill/red-faint",
+          "boundaryDash": [
+           6,
+           4
+          ],
+          "boundaryStroke": "color/marker/race 1.6"
+         },
+         "hatch": {
+          "angle": "45 deg lines y = x + c, spacing 11 px along the diagonal axis step, clipped (Cyrus-Beck) to the zone polygon",
+          "stroke": "color/line/hatch",
+          "width": 1
+         },
+         "clockFace": {
+          "circleRadius_px": 140,
+          "dash": [
+           2,
+           5
+          ],
+          "stroke": "color/line/hairline-strong",
+          "width": 1.6,
+          "ticks": "12 ticks, theta_i=(6-i)*30 deg, point=(cx+r*sin(theta), cy+r*cos(theta)), r from H-6*k to H, stroke hairline-strong 1.2"
+         },
+         "grid": "lines at +-25,+-50,+-75 units, stroke color/line/chart-faint 1",
+         "axes": {
+          "stroke": "color/line/wire",
+          "width": 1.6,
+          "extent": "+-H plus 8 px past the box"
+         },
+         "W": {
+          "value_(psi_m,psi_s)": [
+           0,
+           60
+          ],
+          "theta_deg": 90,
+          "vector": {
+           "stroke": "color/fill/accent",
+           "width": 4,
+           "cap": "round",
+           "from": "origin",
+           "to": "(psi_s*k - arrowhead*0.6, 0)"
+          },
+          "arrowhead": {
+           "size": 12,
+           "fill": "color/fill/accent",
+           "shape": "triangle pointing +x, tip at (60k,0), half-height size/2"
+          },
+          "origin": {
+           "diameter": 8,
+           "fill": "color/fill/accent"
+          }
+         },
+         "arcAtW": {
+          "radius_px": 84.0,
+          "dash": [
+           3,
+           4
+          ],
+          "stroke": "color/line/accent-soft",
+          "width": 1.6
+         },
+         "clockConvention": "theta starts at 6 o'clock (psi_m+, down) and grows counter-clockwise; theta=90 deg = 3 o'clock = pure status (psi_s)"
+        },
+        "parts": [
+         {
+          "k": "richText",
+          "name": "axis label",
+          "font": {
+           "family": "IBM Plex Mono",
+           "style": "Regular",
+           "size": 13
+          },
+          "colour": "color/text/soft",
+          "box": [
+           155.9,
+           235.6,
+           95.4,
+           17
+          ],
+          "runs": [
+           {
+            "t": "ψ",
+            "box": [
+             155.9,
+             235.6,
+             10,
+             17
+            ]
+           },
+           {
+            "t": "s",
+            "box": [
+             165.9,
+             245.6,
+             6,
+             7
+            ],
+            "sub": true,
+            "size": 9,
+            "lineHeight_px": 7
+           },
+           {
+            "t": "(+)",
+            "box": [
+             179.7,
+             235.6,
+             24,
+             17
+            ]
+           },
+           {
+            "t": "·",
+            "box": [
+             211.5,
+             235.6,
+             8,
+             17
+            ]
+           },
+           {
+            "t": "90°",
+            "box": [
+             227.3,
+             235.6,
+             24,
+             17
+            ]
+           }
+          ]
+         },
+         {
+          "k": "richText",
+          "name": "axis label",
+          "font": {
+           "family": "IBM Plex Mono",
+           "style": "Regular",
+           "size": 13
+          },
+          "colour": "color/text/soft",
+          "box": [
+           132.5,
+           381.6,
+           142.2,
+           17
+          ],
+          "runs": [
+           {
+            "t": "ψ",
+            "box": [
+             132.5,
+             381.6,
+             10,
+             17
+            ]
+           },
+           {
+            "t": "m",
+            "box": [
+             142.5,
+             391.6,
+             6,
+             7
+            ],
+            "sub": true,
+            "size": 9,
+            "lineHeight_px": 7
+           },
+           {
+            "t": "(+)",
+            "box": [
+             156.3,
+             381.6,
+             24,
+             17
+            ]
+           },
+           {
+            "t": "·",
+            "box": [
+             188.1,
+             381.6,
+             8,
+             17
+            ]
+           },
+           {
+            "t": "6",
+            "box": [
+             203.9,
+             381.6,
+             8,
+             17
+            ]
+           },
+           {
+            "t": "o’clock",
+            "box": [
+             219.7,
+             381.6,
+             55,
+             17
+            ]
+           }
+          ]
+         },
+         {
+          "k": "richText",
+          "name": "axis label",
+          "font": {
+           "family": "IBM Plex Mono",
+           "style": "Regular",
+           "size": 13
+          },
+          "colour": "color/text/soft",
+          "box": [
+           128.5,
+           47.6,
+           150.2,
+           17
+          ],
+          "runs": [
+           {
+            "t": "ψ",
+            "box": [
+             128.5,
+             47.6,
+             10,
+             17
+            ]
+           },
+           {
+            "t": "m",
+            "box": [
+             138.5,
+             57.6,
+             6,
+             7
+            ],
+            "sub": true,
+            "size": 9,
+            "lineHeight_px": 7
+           },
+           {
+            "t": "(−)",
+            "box": [
+             152.3,
+             47.6,
+             24,
+             17
+            ]
+           },
+           {
+            "t": "·",
+            "box": [
+             184.1,
+             47.6,
+             8,
+             17
+            ]
+           },
+           {
+            "t": "12",
+            "box": [
+             199.9,
+             47.6,
+             16,
+             17
+            ]
+           },
+           {
+            "t": "o’clock",
+            "box": [
+             223.7,
+             47.6,
+             55,
+             17
+            ]
+           }
+          ]
+         },
+         {
+          "k": "text",
+          "text": "W",
+          "font": {
+           "family": "IBM Plex Mono",
+           "style": "Regular",
+           "size": 13
+          },
+          "colour": "color/fill/accent",
+          "box": [
+           275.6,
+           199.6,
+           8,
+           17
+          ],
+          "name": "axis label"
+         }
+        ]
+       },
+       {
+        "k": "frame",
+        "name": "readout",
+        "box": [
+         413.6,
+         82.6,
+         208.8,
+         290
+        ],
+        "itemSpacing": 16,
+        "layout": "vertical",
+        "children": [
+         {
+          "k": "text",
+          "text": "θ = 90°",
+          "font": {
+           "family": "IBM Plex Sans",
+           "style": "Bold",
+           "size": 40
+          },
+          "colour": "color/text/accent",
+          "box": [
+           413.6,
+           82.6,
+           133,
+           52
+          ],
+          "name": "theta"
+         },
+         {
+          "k": "text",
+          "text": "pure status",
+          "font": {
+           "family": "IBM Plex Mono",
+           "style": "Regular",
+           "size": 18
+          },
+          "colour": "color/text/primary",
+          "box": [
+           413.6,
+           150.6,
+           119,
+           23
+          ]
+         },
+         {
+          "k": "text",
+          "text": "Implicit Contract issues the psychological wage",
+          "font": {
+           "family": "IBM Plex Sans",
+           "style": "Regular",
+           "size": 18,
+           "lineHeight_px": 26
+          },
+          "colour": "color/text/primary",
+          "box": [
+           413.6,
+           189.6,
+           208.8,
+           52
+          ]
+         },
+         {
+          "k": "frame",
+          "name": "legend",
+          "box": [
+           413.6,
+           257.6,
+           149,
+           67
+          ],
+          "itemSpacing": 8,
+          "layout": "vertical",
+          "children": [
+           {
+            "k": "frame",
+            "name": "legend row",
+            "box": [
+             413.6,
+             257.6,
+             126,
+             17
+            ],
+            "itemSpacing": 8,
+            "layout": "horizontal",
+            "children": [
+             {
+              "k": "rect",
+              "name": "swatch",
+              "fill": "color/fill/red-wash",
+              "box": [
+               413.6,
+               261.1,
+               16,
+               10
+              ]
+             },
+             {
+              "k": "text",
+              "text": "τ zone: M above τ",
+              "font": {
+               "family": "IBM Plex Sans",
+               "style": "Regular",
+               "size": 13
+              },
+              "colour": "color/text/soft",
+              "box": [
+               437.6,
+               257.6,
+               102,
+               17
+              ]
+             }
+            ]
+           },
+           {
+            "k": "frame",
+            "name": "legend row",
+            "box": [
+             413.6,
+             282.6,
+             36,
+             17
+            ],
+            "itemSpacing": 8,
+            "layout": "horizontal",
+            "children": [
+             {
+              "k": "rect",
+              "name": "swatch",
+              "fill": "color/fill/accent",
+              "box": [
+               413.6,
+               286.1,
+               16,
+               10
+              ]
+             },
+             {
+              "k": "text",
+              "text": "W",
+              "font": {
+               "family": "IBM Plex Sans",
+               "style": "Regular",
+               "size": 13
+              },
+              "colour": "color/text/soft",
+              "box": [
+               437.6,
+               282.6,
+               12,
+               17
+              ]
+             }
+            ]
+           },
+           {
+            "k": "frame",
+            "name": "legend row",
+            "box": [
+             413.6,
+             307.6,
+             149,
+             17
+            ],
+            "itemSpacing": 8,
+            "layout": "horizontal",
+            "children": [
+             {
+              "k": "rect",
+              "name": "swatch",
+              "fill": "color/fill/accent-wash",
+              "box": [
+               413.6,
+               311.1,
+               16,
+               10
+              ]
+             },
+             {
+              "k": "text",
+              "text": "Arc at the current |W|",
+              "font": {
+               "family": "IBM Plex Sans",
+               "style": "Regular",
+               "size": 13
+              },
+              "colour": "color/text/soft",
+              "box": [
+               437.6,
+               307.6,
+               125,
+               17
+              ]
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "k": "richText",
+          "name": "source",
+          "font": {
+           "family": "IBM Plex Mono",
+           "style": "Regular",
+           "size": 12
+          },
+          "colour": "color/text/soft",
+          "box": [
+           413.6,
+           340.6,
+           208.8,
+           32
+          ],
+          "runs": [
+           {
+            "t": "W",
+            "box": [
+             413.6,
+             340.6,
+             8,
+             16
+            ]
+           },
+           {
+            "t": "=",
+            "box": [
+             428.8,
+             340.6,
+             8,
+             16
+            ]
+           },
+           {
+            "t": "ψ",
+            "box": [
+             444,
+             340.6,
+             9,
+             16
+            ]
+           },
+           {
+            "t": "m",
+            "box": [
+             453,
+             350.6,
+             5,
+             6
+            ],
+            "sub": true,
+            "size": 8,
+            "lineHeight_px": 6
+           },
+           {
+            "t": "+",
+            "box": [
+             465.2,
+             340.6,
+             8,
+             16
+            ]
+           },
+           {
+            "t": "jψ",
+            "box": [
+             480.4,
+             340.6,
+             17,
+             16
+            ]
+           },
+           {
+            "t": "s",
+            "box": [
+             497.4,
+             350.6,
+             5,
+             6
+            ],
+            "sub": true,
+            "size": 8,
+            "lineHeight_px": 6
+           },
+           {
+            "t": "·",
+            "box": [
+             509.6,
+             340.6,
+             8,
+             16
+            ]
+           },
+           {
+            "t": "Log",
+            "box": [
+             524.8,
+             340.6,
+             22,
+             16
+            ]
+           },
+           {
+            "t": "2",
+            "box": [
+             554,
+             340.6,
+             8,
+             16
+            ]
+           },
+           {
+            "t": "·",
+            "box": [
+             569.2,
+             340.6,
+             8,
+             16
+            ]
+           },
+           {
+            "t": "ordinal",
+            "box": [
+             413.6,
+             356.6,
+             51,
+             16
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "childOriginNote": "child boxes are measured from the panel's outer top-left; content starts at padding+stroke (16+1.6=17.6)"
+   },
+   "settings": {
+    "w": 560,
+    "h": 324.2,
+    "template": "settingsTemplate",
+    "content": {
+     "title": "SETTINGS · WAGE PLANE",
+     "source": "W = ψ_{m} + jψ_{s} · Log 2 · ordinal",
+     "units": "ψ_{m}, ψ_{s}: ordinal, −100 to 100 · θ: degrees, 0° at 6 o’clock, counterclockwise · τ zone: M above τ",
+     "log": "Buffer Class wage: θ = 90° · pure status · Implicit Contract issues the psychological wage",
+     "subscripts": "_{...} marks a subscript run"
+    }
+   }
+  },
+  "Backlash oscillator": {
+   "compact": {
+    "w": 202,
+    "h": 88,
+    "sizing": "HUG both axes",
+    "layout": "vertical",
+    "padding_tRBL": [
+     8,
+     10,
+     8,
+     10
+    ],
+    "itemSpacing": 4,
+    "radius": 8,
+    "fill": {
+     "token": "color/fill/panel-wash",
+     "hex": "#5b6b7d",
+     "alpha": 0.14
+    },
+    "stroke": {
+     "token": "color/line/hairline",
+     "width": 1
+    },
+    "backgroundBlur_px": 12,
+    "children": [
+     {
+      "k": "text",
+      "text": "Backlash oscillator",
+      "font": {
+       "family": "IBM Plex Mono",
+       "style": "Regular",
+       "size": 11,
+       "letterSpacing_px": 0.4
+      },
+      "colour": "color/text/muted",
+      "box": [
+       11,
+       9,
+       133,
+       14
+      ]
+     },
+     {
+      "k": "graphic",
+      "name": "q(t) response",
+      "box": [
+       11,
+       27,
+       180,
+       52
+      ],
+      "params": {
+       "model": "damped impulse response of the series RLC loop (eq. 1.7a), 1865 fitted shock",
+       "formula": "q(t) = exp(-alpha*t) * sin(omega_d*t)",
+       "zeta": 0.17,
+       "omega_n_rad_per_yr": 0.3,
+       "alpha": 0.051,
+       "omega_d": 0.2956,
+       "T_yr": 78.43,
+       "T_formula": "max(4/alpha, 2.2*2*PI/omega_d)",
+       "samples": "compact 400 (401 points), expanded 600 (601 points), t_i = i/N*T",
+       "yScale": "A = max|q| over the samples (about 0.86); top = 1.15*A, bottom = -0.95*A; y(q) = PT + (top-q)/(top-bottom)*(h-PT-PB); baseline y0 = y(0)",
+       "xScale": "x(t) = PL + t/T*(w-PL-PR)",
+       "padding_compact": {
+        "PL": 4,
+        "PR": 4,
+        "PT": 4,
+        "PB": 4
+       },
+       "padding_expanded": {
+        "PL": 46,
+        "PR": 14,
+        "PT": 16,
+        "PB": 30
+       },
+       "segments": "polyline split at zero crossings; points with q>=0 in color/fill/accent, q<0 in color/marker/race; stroke 1.5 compact / 3 expanded, round caps",
+       "zone": "rect from baseline to plot bottom, x from PL to w-PR, fill color/fill/red-faint",
+       "impulse": "vertical gold line at x=PL+3 (compact) / PL+6 (expanded) from baseline up to PT+1 / PT+10, stroke color/fill/gold 1.5 / 3 round",
+       "well": "rect full size, radius 4 compact / 6 expanded, fill color/surface/well",
+       "plot": "180 x 52",
+       "baselineY_relPanel": 55.1
+      }
+     }
+    ]
+   },
+   "expanded": {
+    "w": 640,
+    "h": 439.2,
+    "layout": "vertical",
+    "padding_tRBL": [
+     16,
+     16,
+     16,
+     16
+    ],
+    "itemSpacing": 8,
+    "radius": 10,
+    "fill": {
+     "token": "color/fill/glass",
+     "hex": "#14263a",
+     "alpha": 0.88
+    },
+    "stroke": {
+     "token": "color/line/hairline",
+     "width": 1.6
+    },
+    "backgroundBlur_px": null,
+    "children": [
+     {
+      "k": "text",
+      "text": "Backlash oscillator · series RLC, eq. 1.7a",
+      "font": {
+       "family": "IBM Plex Mono",
+       "style": "Regular",
+       "size": 12,
+       "letterSpacing_px": 0.6
+      },
+      "colour": "color/text/muted",
+      "box": [
+       17.6,
+       17.6,
+       327,
+       16
+      ]
+     },
+     {
+      "k": "graphic",
+      "name": "RLC schematic",
+      "box": [
+       17.6,
+       41.6,
+       604.8,
+       176
+      ],
+      "params": {
+       "note": "hand-drawn series loop; vector path data are local to each vector's own box origin (box x,y given relative to the panel)",
+       "vectors": [
+        {
+         "name": "wires",
+         "box": [
+          77.6,
+          85.6,
+          530,
+          106
+         ],
+         "d": "M 0 66 L 0 106 L 530 106 L 530 0 L 476 0 M 460 0 L 398 0 M 270 0 L 230 0 M 110 0 L 0 0 L 0 22",
+         "stroke": "color/line/wire",
+         "width": 2.2,
+         "cap": "round",
+         "join": "miter"
+        },
+        {
+         "name": "source V(t)",
+         "ellipse": [
+          55.6,
+          107.6,
+          44,
+          44
+         ],
+         "stroke": "color/fill/gold",
+         "width": 3.4
+        },
+        {
+         "name": "source sine",
+         "box": [
+          63.6,
+          117.6,
+          28,
+          24
+         ],
+         "d": "M 0 12 C 5 -4 10 -4 14 12 C 18 28 24 28 28 12",
+         "stroke": "color/fill/gold",
+         "width": 2.6,
+         "cap": "round"
+        },
+        {
+         "name": "R resistor",
+         "box": [
+          187.6,
+          65.6,
+          120,
+          40
+         ],
+         "d": "M 0 20 L 6 20 L 18 0 L 34 40 L 50 0 L 66 40 L 82 0 L 98 40 L 110 20 L 120 20",
+         "stroke": "color/marker/race",
+         "width": 2.8,
+         "cap": "round",
+         "join": "round"
+        },
+        {
+         "name": "L inductor",
+         "box": [
+          347.6,
+          61.6,
+          128,
+          24
+         ],
+         "d": "M 0 24 C 0 -8 32 -8 32 24 C 32 -8 64 -8 64 24 C 64 -8 96 -8 96 24 C 96 -8 128 -8 128 24",
+         "stroke": "color/marker/sexuality",
+         "width": 2.8,
+         "cap": "round"
+        },
+        {
+         "name": "C capacitor",
+         "box": [
+          537.6,
+          59.6,
+          16,
+          52
+         ],
+         "d": "M 0 0 L 0 52 M 16 0 L 16 52",
+         "stroke": "color/line/wire",
+         "width": 3.2,
+         "cap": "round"
+        }
+       ]
+      },
+      "parts": [
+       {
+        "k": "text",
+        "text": "R",
+        "font": {
+         "family": "IBM Plex Sans",
+         "style": "Italic",
+         "size": 26
+        },
+        "colour": "color/marker/race",
+        "box": [
+         238.1,
+         125.6,
+         17,
+         34
+        ],
+        "name": "R label"
+       },
+       {
+        "k": "text",
+        "text": "L",
+        "font": {
+         "family": "IBM Plex Sans",
+         "style": "Italic",
+         "size": 26
+        },
+        "colour": "color/marker/sexuality",
+        "box": [
+         405.1,
+         125.6,
+         13,
+         34
+        ],
+        "name": "L label"
+       },
+       {
+        "k": "text",
+        "text": "C",
+        "font": {
+         "family": "IBM Plex Sans",
+         "style": "Italic",
+         "size": 26
+        },
+        "colour": "color/text/primary",
+        "box": [
+         537.6,
+         125.6,
+         16,
+         34
+        ],
+        "name": "C label"
+       },
+       {
+        "k": "text",
+        "text": "V(t)",
+        "font": {
+         "family": "IBM Plex Sans",
+         "style": "Italic",
+         "size": 20
+        },
+        "colour": "color/fill/gold",
+        "box": [
+         109.6,
+         111.6,
+         32,
+         26
+        ],
+        "name": "V label"
+       },
+       {
+        "k": "text",
+        "text": "reform shock",
+        "font": {
+         "family": "IBM Plex Mono",
+         "style": "Regular",
+         "size": 11
+        },
+        "colour": "color/fill/gold",
+        "box": [
+         109.6,
+         135.6,
+         80,
+         14
+        ]
+       },
+       {
+        "k": "text",
+        "text": "R friction · L inertia · C absorption",
+        "font": {
+         "family": "IBM Plex Mono",
+         "style": "Regular",
+         "size": 11
+        },
+        "colour": "color/text/muted",
+        "box": [
+         347.6,
+         165.6,
+         245,
+         14
+        ]
+       },
+       {
+        "k": "text",
+        "text": "L q'' + R q' + q/C = V(t)",
+        "font": {
+         "family": "IBM Plex Mono",
+         "style": "Medium",
+         "size": 14
+        },
+        "colour": "color/text/primary",
+        "box": [
+         397.6,
+         199.6,
+         210,
+         18
+        ],
+        "name": "eq 1.7a"
+       }
+      ]
+     },
+     {
+      "k": "graphic",
+      "name": "q(t) response",
+      "box": [
+       17.6,
+       225.6,
+       604.8,
+       196
+      ],
+      "params": {
+       "model": "damped impulse response of the series RLC loop (eq. 1.7a), 1865 fitted shock",
+       "formula": "q(t) = exp(-alpha*t) * sin(omega_d*t)",
+       "zeta": 0.17,
+       "omega_n_rad_per_yr": 0.3,
+       "alpha": 0.051,
+       "omega_d": 0.2956,
+       "T_yr": 78.43,
+       "T_formula": "max(4/alpha, 2.2*2*PI/omega_d)",
+       "samples": "compact 400 (401 points), expanded 600 (601 points), t_i = i/N*T",
+       "yScale": "A = max|q| over the samples (about 0.86); top = 1.15*A, bottom = -0.95*A; y(q) = PT + (top-q)/(top-bottom)*(h-PT-PB); baseline y0 = y(0)",
+       "xScale": "x(t) = PL + t/T*(w-PL-PR)",
+       "padding_compact": {
+        "PL": 4,
+        "PR": 4,
+        "PT": 4,
+        "PB": 4
+       },
+       "padding_expanded": {
+        "PL": 46,
+        "PR": 14,
+        "PT": 16,
+        "PB": 30
+       },
+       "segments": "polyline split at zero crossings; points with q>=0 in color/fill/accent, q<0 in color/marker/race; stroke 1.5 compact / 3 expanded, round caps",
+       "zone": "rect from baseline to plot bottom, x from PL to w-PR, fill color/fill/red-faint",
+       "impulse": "vertical gold line at x=PL+3 (compact) / PL+6 (expanded) from baseline up to PT+1 / PT+10, stroke color/fill/gold 1.5 / 3 round",
+       "well": "rect full size, radius 4 compact / 6 expanded, fill color/surface/well",
+       "plot": "608 x 196 (well is 608 wide in a 604.8 slot: 3 px overhang each side is clipped by the panel padding box in Figma)",
+       "baselineY_relPanel": 323.7,
+       "gridYearTicks": "vertical lines every 20 yr from t=20 while t<T-5, stroke color/line/chart-faint 1; year labels 1865+t (1885, 1905, 1925) Mono 11 muted centred under the grid, y=399.6",
+       "axes": "q axis x=PL from y=h-PB up to PT-4 (wire 1.6); baseline wire 1.6"
+      },
+      "parts": [
+       {
+        "k": "text",
+        "text": "q(t)",
+        "font": {
+         "family": "IBM Plex Sans",
+         "style": "Italic",
+         "size": 18
+        },
+        "colour": "color/text/primary",
+        "box": [
+         77.6,
+         239.6,
+         28,
+         23
+        ],
+        "name": "axis q"
+       },
+       {
+        "k": "text",
+        "text": "equality-surplus charge",
+        "font": {
+         "family": "IBM Plex Mono",
+         "style": "Regular",
+         "size": 11
+        },
+        "colour": "color/text/muted",
+        "box": [
+         121.6,
+         244.6,
+         152,
+         14
+        ]
+       },
+       {
+        "k": "text",
+        "text": "1865 fitted shock · ζ 0.17 · ωₙ 0.30 rad/yr",
+        "font": {
+         "family": "IBM Plex Mono",
+         "style": "Regular",
+         "size": 11
+        },
+        "colour": "color/text/muted",
+        "box": [
+         327.6,
+         244.6,
+         283,
+         14
+        ]
+       },
+       {
+        "k": "text",
+        "text": "q = 0 · extraction baseline",
+        "font": {
+         "family": "IBM Plex Mono",
+         "style": "Regular",
+         "size": 11
+        },
+        "colour": "color/text/soft",
+        "box": [
+         432.6,
+         305.7,
+         179,
+         14
+        ]
+       },
+       {
+        "k": "text",
+        "text": "below q = 0 · backlash into the extraction zone",
+        "font": {
+         "family": "IBM Plex Mono",
+         "style": "Regular",
+         "size": 11
+        },
+        "colour": "color/marker/race",
+        "box": [
+         73.6,
+         371.6,
+         310,
+         14
+        ]
+       },
+       {
+        "k": "text",
+        "text": "t",
+        "font": {
+         "family": "IBM Plex Sans",
+         "style": "Italic",
+         "size": 16
+        },
+        "colour": "color/text/primary",
+        "box": [
+         603.6,
+         327.7,
+         6,
+         21
+        ]
+       },
+       {
+        "k": "text",
+        "text": "1885",
+        "font": {
+         "family": "IBM Plex Mono",
+         "style": "Regular",
+         "size": 11
+        },
+        "colour": "color/text/muted",
+        "box": [
+         189.8,
+         399.6,
+         27,
+         14
+        ],
+        "name": "year tick"
+       },
+       {
+        "k": "text",
+        "text": "1905",
+        "font": {
+         "family": "IBM Plex Mono",
+         "style": "Regular",
+         "size": 11
+        },
+        "colour": "color/text/muted",
+        "box": [
+         329.6,
+         399.6,
+         27,
+         14
+        ],
+        "name": "year tick"
+       },
+       {
+        "k": "text",
+        "text": "1925",
+        "font": {
+         "family": "IBM Plex Mono",
+         "style": "Regular",
+         "size": 11
+        },
+        "colour": "color/text/muted",
+        "box": [
+         469.3,
+         399.6,
+         27,
+         14
+        ],
+        "name": "year tick"
+       }
+      ]
+     }
+    ],
+    "childOriginNote": "child boxes are measured from the panel's outer top-left; content starts at padding+stroke (16+1.6=17.6)"
+   },
+   "settings": {
+    "w": 560,
+    "h": 387.2,
+    "template": "settingsTemplate",
+    "content": {
+     "title": "SETTINGS · BACKLASH OSCILLATOR",
+     "source": "eq. 1.7a · L q̈ + R q̇ + q/C = V(t)",
+     "units": "q(t): equality-surplus charge · t: years from the shock · R friction, L inertia, C absorption",
+     "log": "The manuscript’s series RLC circuit (eq. 1.7a): a reform shock V(t) displaces the equality-surplus charge q(t) above the extraction baseline, and the circuit’s reactive parts pull it back past zero into backlash. R is bureaucratic and carceral friction, L is cultural inertia, and C is token-reform absorption capacity."
+    }
+   }
+  }
+ }
+}

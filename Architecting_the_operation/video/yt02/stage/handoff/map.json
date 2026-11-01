@@ -1,0 +1,441 @@
+{
+ "_readme": "Everything needed to redraw the two maps. build_maps.mjs (copied beside this file) is the authority: run it with node (needs d3-geo, topojson-client, world-atlas in node_modules; the path in the script points at scriptCast-stage/video/node_modules) to regenerate svg/map.iberia.svg, svg/map.world.svg and map_overlay.json. All coordinates are in the map clip frame (origin = frame x 32, y 84; size 1856 x 968).",
+ "clipFrame": {
+  "frameX": 32,
+  "frameY": 84,
+  "w": 1856,
+  "h": 968,
+  "fill": "color/bg/field",
+  "overflow": "hidden",
+  "cornerRadius": 0,
+  "stroke": null
+ },
+ "layerOrderBottomToTop_iberia": [
+  "graticule",
+  "rhumb lines (4 hubs)",
+  "land (fill+coast stroke)",
+  "country borders",
+  "Portugal (ISO 620)",
+  "route (gold)",
+  "route dashes",
+  "compass rose",
+  "markers + labels"
+ ],
+ "iberia": {
+  "projection": {
+   "name": "d3.geoEquirectangular",
+   "scale_px_per_radian": 1117.2677,
+   "scale_px_per_degree": 19.5,
+   "centre_lonlat": [
+    8,
+    24.2
+   ],
+   "translate": [
+    928,
+    484
+   ],
+   "clipExtent": [
+    [
+     0,
+     0
+    ],
+    [
+     1856,
+     968
+    ]
+   ],
+   "visibleLonRange": [
+    -39.6,
+    55.6
+   ],
+   "visibleLatRange": [
+    -0.6,
+    49.0
+   ],
+   "formula": "x = 928 + 19.5*(lon-8); y = 484 - 19.5*(lat-24.2)",
+   "data": "world-atlas countries-50m (Natural Earth) via topojson-client; land = objects.land, borders = mesh(countries, a!==b), Portugal = country id 620 (includes Azores and Madeira)"
+  },
+  "graticule": {
+   "step_deg": 10,
+   "meridians": "lon -180..180, pole to pole",
+   "parallels": "lat -80..80 across -180..180",
+   "stroke": "color/line/graticule",
+   "strokeWidth": 0.8,
+   "fill": "none"
+  },
+  "land": {
+   "fill": "color/surface/1",
+   "stroke": "color/line/wire",
+   "strokeWidth": 1.1,
+   "linejoin": "round",
+   "note": "coastline stroke is the land path outline"
+  },
+  "countryBorders": {
+   "stroke": "color/line/border",
+   "strokeWidth": 0.7
+  },
+  "portugal": {
+   "isoNumeric": "620",
+   "fill": "color/fill/gold",
+   "stroke": "color/line/wire",
+   "strokeWidth": 1.2,
+   "linejoin": "round",
+   "svgLayerName": "country 620 Portugal"
+  },
+  "rhumbLines": {
+   "hubs_px": [
+    [
+     265,
+     351.4
+    ],
+    [
+     187.0,
+     702.4
+    ],
+    [
+     674.5,
+     721.9
+    ],
+    [
+     733,
+     214.9
+    ]
+   ],
+   "hubs_lonlat": [
+    [
+     -26,
+     31
+    ],
+    [
+     -30,
+     13
+    ],
+    [
+     -5,
+     12
+    ],
+    [
+     -2,
+     38
+    ]
+   ],
+   "spokesPerHub": 16,
+   "spokeAngles_deg": "k*22.5 for k=0..15, 0 = north, clockwise",
+   "spokeLength_px": 2400,
+   "stroke": "color/line/graticule",
+   "strokeWidth": 0.8,
+   "drawnBelow": "land (the opaque land fill hides spokes over land)"
+  },
+  "compassRose": {
+   "centre_px": [
+    128.5,
+    546.4
+   ],
+   "centre_lonlat": [
+    -33,
+    21
+   ],
+   "frame": {
+    "x": 33.5,
+    "y": 451.4,
+    "w": 190,
+    "h": 190
+   },
+   "star": {
+    "points": 32,
+    "radiusCardinal": 70,
+    "radii": "i%8==0:70, i%4==0:50.4, i%2==0:35, else 14 (angle i*11.25 deg, 0=north)",
+    "pathData_relativeToCentre": "M 0.00 -70.00 L 2.73 -13.73 L 13.39 -32.34 L 7.78 -11.64 L 35.64 -35.64 L 11.64 -7.78 L 32.34 -13.39 L 13.73 -2.73 L 70.00 -0.00 L 13.73 2.73 L 32.34 13.39 L 11.64 7.78 L 35.64 35.64 L 7.78 11.64 L 13.39 32.34 L 2.73 13.73 L 0.00 70.00 L -2.73 13.73 L -13.39 32.34 L -7.78 11.64 L -35.64 35.64 L -11.64 7.78 L -32.34 13.39 L -13.73 2.73 L -70.00 0.00 L -13.73 -2.73 L -32.34 -13.39 L -11.64 -7.78 L -35.64 -35.64 L -7.78 -11.64 L -13.39 -32.34 L -2.73 -13.73 Z",
+    "fill": "color/fill/rose",
+    "stroke": "color/line/graticule",
+    "strokeWidth": 1
+   },
+   "rings": [
+    {
+     "radius": 82,
+     "stroke": "color/line/hairline-strong",
+     "strokeWidth": 1
+    },
+    {
+     "radius": 66,
+     "stroke": "color/line/hairline-strong",
+     "strokeWidth": 1
+    }
+   ],
+   "northLabel": {
+    "text": "N",
+    "font": "IBM Plex Mono Medium 14",
+    "fill": "color/text/primary",
+    "centredX": true,
+    "yOffsetFromFrameTop": -8
+   },
+   "svg": "svg/compass-rose.svg",
+   "note": "centre moved to open Atlantic (lon -33, lat 21): clear of the Cape Verde islands, Canaries, Madeira and the route. Use centre_px."
+  },
+  "route": {
+   "drawnAs": "cubic Bezier spline through waypoints (Catmull-Rom, tension 0.4): for each segment p1->p2 with neighbours p0,p3 (end points duplicated): c1 = p1 + (p2-p0)*t/3, c2 = p2 - (p3-p1)*t/3, t=0.4",
+   "waypoints": [
+    {
+     "name": "Lisbon (marker)",
+     "lon": -9.14,
+     "lat": 38.72
+    },
+    {
+     "name": "Tagus mouth",
+     "lon": -9.3,
+     "lat": 38.64
+    },
+    {
+     "name": "Lisbon offshore",
+     "lon": -9.6,
+     "lat": 38.6
+    },
+    {
+     "name": "off Cape St Vincent",
+     "lon": -9.5,
+     "lat": 36.8
+    },
+    {
+     "name": "off Cape Cantin",
+     "lon": -10.5,
+     "lat": 32.5
+    },
+    {
+     "name": "Cape Bojador offshore",
+     "lon": -15.2,
+     "lat": 26.1
+    },
+    {
+     "name": "Cape Blanc offshore",
+     "lon": -17.5,
+     "lat": 20.8
+    },
+    {
+     "name": "Cape Verde offshore",
+     "lon": -18.0,
+     "lat": 14.7
+    },
+    {
+     "name": "Guinea bulge 1",
+     "lon": -17.8,
+     "lat": 11.2
+    },
+    {
+     "name": "Guinea bulge 2",
+     "lon": -15.8,
+     "lat": 8.8
+    },
+    {
+     "name": "Guinea bulge 3",
+     "lon": -13.8,
+     "lat": 7.0
+    },
+    {
+     "name": "Guinea bulge 4",
+     "lon": -11.6,
+     "lat": 5.1
+    },
+    {
+     "name": "Gulf of Guinea 1",
+     "lon": -9.4,
+     "lat": 4.4
+    },
+    {
+     "name": "Cape Palmas",
+     "lon": -7.9,
+     "lat": 4.2
+    },
+    {
+     "name": "Gulf of Guinea 2",
+     "lon": -5.0,
+     "lat": 4.3
+    },
+    {
+     "name": "Gulf of Guinea 3",
+     "lon": -2.6,
+     "lat": 4.35
+    },
+    {
+     "name": "Elmina offshore",
+     "lon": -1.35,
+     "lat": 4.8
+    }
+   ],
+   "pathData_px": "M 593.77 200.86 C 593.35 201.07 591.85 202.11 590.65 202.42 C 589.45 202.73 585.32 198.42 584.80 203.20 C 584.28 207.98 589.09 222.44 586.75 238.30 C 584.41 254.16 582.07 294.33 567.25 322.15 C 552.43 349.97 493.80 416.53 475.60 446.95 C 457.40 477.37 438.03 520.66 430.75 550.30 C 423.47 579.94 421.78 644.29 421.00 669.25 C 420.22 694.21 419.18 722.16 424.90 737.50 C 430.62 752.84 453.50 773.38 463.90 784.30 C 474.30 795.22 491.98 809.78 502.90 819.40 C 513.82 829.02 534.36 849.69 545.80 856.45 C 557.24 863.21 579.08 867.76 588.70 870.10 C 598.32 872.44 606.51 873.74 617.95 874.00 C 629.39 874.26 660.72 872.44 674.50 872.05 C 688.28 871.66 711.81 872.38 721.30 871.08 C 730.79 869.78 742.42 863.47 745.67 862.30",
+   "stroke": "color/fill/gold",
+   "strokeWidth": 3.2,
+   "linecap": "round",
+   "dashOverlay": {
+    "same path": true,
+    "stroke": "color/line/hairline-strong",
+    "strokeWidth": 1,
+    "dasharray": [
+     2,
+     7
+    ],
+    "linecap": "round"
+   },
+   "landHitCheck": "0 land hits (40 samples per segment against the 50m land polygon, run in build_maps.mjs)"
+  },
+  "markers": [
+   {
+    "name": "Lisbon",
+    "coord_px": [
+     593.77,
+     200.86
+    ],
+    "lonlat": [
+     -9.14,
+     38.72
+    ],
+    "marker": {
+     "diameter": 12,
+     "fill": "color/fill/gold",
+     "stroke": "color/fill/gold",
+     "strokeWidth": 2
+    },
+    "label": {
+     "text": "LISBON",
+     "side": "left",
+     "x": 530.8,
+     "y": 193.9,
+     "w": 49,
+     "h": 16
+    }
+   },
+   {
+    "name": "Cape Bojador",
+    "coord_px": [
+     489.25,
+     446.95
+    ],
+    "lonlat": [
+     -14.5,
+     26.1
+    ],
+    "marker": {
+     "diameter": 9,
+     "fill": "color/bg/field",
+     "stroke": "color/fill/gold",
+     "strokeWidth": 2
+    },
+    "label": {
+     "text": "CAPE BOJADOR",
+     "side": "left",
+     "x": 378.8,
+     "y": 440.0,
+     "w": 98,
+     "h": 16
+    }
+   },
+   {
+    "name": "Cape Verde",
+    "coord_px": [
+     430.75,
+     669.25
+    ],
+    "lonlat": [
+     -17.5,
+     14.7
+    ],
+    "marker": {
+     "diameter": 9,
+     "fill": "color/bg/field",
+     "stroke": "color/fill/gold",
+     "strokeWidth": 2
+    },
+    "label": {
+     "text": "CAPE VERDE",
+     "side": "left",
+     "x": 337.3,
+     "y": 662.3,
+     "w": 81,
+     "h": 16
+    }
+   },
+   {
+    "name": "Elmina",
+    "coord_px": [
+     745.67,
+     856.84
+    ],
+    "lonlat": [
+     -1.35,
+     5.08
+    ],
+    "marker": {
+     "diameter": 9,
+     "fill": "color/bg/field",
+     "stroke": "color/fill/gold",
+     "strokeWidth": 2
+    },
+    "label": {
+     "text": "ELMINA",
+     "side": "right",
+     "x": 759.7,
+     "y": 849.8,
+     "w": 49,
+     "h": 16
+    }
+   }
+  ],
+  "labelFont": {
+   "family": "IBM Plex Mono",
+   "style": "Regular",
+   "size": 12,
+   "letterSpacing": "1px",
+   "fill": "color/text/primary",
+   "uppercase": true,
+   "placement": "left of marker for Lisbon, Cape Bojador, Cape Verde: x = marker_cx - diameter/2 - 8 - textWidth; Elmina right: x = marker_cx + 14; all y = marker_cy - 7"
+  }
+ },
+ "world": {
+  "projection": {
+   "name": "d3.geoNaturalEarth1",
+   "fitExtent": [
+    [
+     8,
+     8
+    ],
+    [
+     1848,
+     960
+    ]
+   ],
+   "fit_to": "Sphere",
+   "clipExtent": [
+    [
+     0,
+     0
+    ],
+    [
+     1856,
+     968
+    ]
+   ],
+   "data": "world-atlas countries-110m",
+   "note": "fitted by height; sphere spans x 12.6..1843.4, y 8..960"
+  },
+  "graticule": "same 10 deg graticule, stroke color/line/graticule 0.8",
+  "land": "fill color/surface/1, stroke color/line/wire 1.1",
+  "countryBorders": "color/line/border 0.7",
+  "portugal": {
+   "fill": "color/fill/gold",
+   "stroke": "color/line/wire",
+   "strokeWidth": 1.2,
+   "centroid_px": [
+    887.92,
+    250.14
+   ]
+  },
+  "label": {
+   "text": "PORTUGAL",
+   "font": "IBM Plex Mono Regular 12 ls1px",
+   "fill": "color/text/primary",
+   "x": 899.9,
+   "y": 232.1,
+   "rule": "x = centroid_x + 12, y = centroid_y - 18"
+  },
+  "noOverlays": "no rhumb lines, compass rose or route on the world map"
+ }
+}
