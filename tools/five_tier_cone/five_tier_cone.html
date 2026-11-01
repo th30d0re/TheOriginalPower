@@ -69,7 +69,7 @@ h3{font:600 13px var(--sans);margin:16px 0 4px;color:var(--ink)}
   </header>
 
   <section class="card" aria-label="Cone">
-    <h2>The cone <span class="nt" style="color:var(--ink-2)">· drag to rotate</span></h2>
+    <h2>The cone <span class="nt" style="color:var(--ink-2)">· drag to rotate; drag down to sink into O</span></h2>
     <div class="btns" role="group" aria-label="Views">
       <button class="btn" type="button" data-view="out">Outside view</button>
       <button class="btn" type="button" data-view="side">Side view</button>
@@ -196,7 +196,7 @@ Array.prototype.forEach.call(document.querySelectorAll('[data-view]'),function(b
 var drag=null,svg=$('cone');
 svg.addEventListener('pointerdown',function(e){drag={x:e.clientX,y:e.clientY,el:S.el,az:S.az};svg.setPointerCapture(e.pointerId);svg.classList.add('drag');});
 svg.addEventListener('pointermove',function(e){if(!drag)return;var k=360/svg.getBoundingClientRect().width;
-  S.az=((drag.az+(e.clientX-drag.x)*k*0.6+540)%360)-180;S.el=Math.max(-90,Math.min(90,drag.el+(e.clientY-drag.y)*k*0.5));refresh();});
+  S.az=((drag.az+(e.clientX-drag.x)*k*0.6+540)%360)-180;S.el=Math.max(-90,Math.min(elMax(),drag.el-(e.clientY-drag.y)*k*0.5));refresh();});
 ['pointerup','pointercancel'].forEach(function(ev){svg.addEventListener(ev,function(){drag=null;svg.classList.remove('drag');});});
 refresh();
 })();
