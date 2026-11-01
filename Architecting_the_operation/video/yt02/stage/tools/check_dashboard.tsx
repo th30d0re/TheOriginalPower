@@ -10,7 +10,7 @@ import {ClockContext,PlanContext,createProjection,catmullRomPath,resolveMode,fly
 import {DashboardBoot,Dashboard1486} from '../Scenes';
 import {Dashboard,rail,slugs} from '../dashboard/Dashboard';
 import {DashboardMap,defaultPolities1486,type Polities} from '../dashboard/DashboardMap';
-import {ARTIFACT_VIEWS,PanelContent,eraLog2,instruments,computeCompassMetrics,formatCoord} from '../dashboard/PanelContent';
+import {ARTIFACT_VIEWS,PanelContent,TRAY_VIEW_LAYOUT_HEIGHTS,eraLog2,instruments,computeCompassMetrics,formatCoord} from '../dashboard/PanelContent';
 import {regionalProjection as project,worldCamera,iberiaCamera,iberiaFit,labelOffsets} from '../dashboard/mapGeometry';
 import {wageModel,wageReadings,dangerPolygon,WAGE_EXPANDED_BOX,WAGE_STAT_LABELS} from '../dashboard/ComplexWagePlane';
 import {transitionWagePlaneMode,type WageInteractionEvent} from '../dashboard/instruments/wage-plane';
@@ -44,6 +44,7 @@ const renderPanel=(name:string,mode:'compact'|'expanded'|'settings')=>renderToSt
 const renderDashboard=(ms:number,modes:Record<string,any>={},modeTimelines:Record<string,any>={})=>renderToStaticMarkup(
  <ClockContext.Provider value={{ms,fps:30,interactive:false}}><Dashboard modes={modes} modeTimelines={modeTimelines}/></ClockContext.Provider>
 );
+const renderedUnderscoreText=(html:string)=>[...html.matchAll(/>([^<>]*_[A-Za-z{][^<>]*)</g)].map(match=>match[1].trim()).filter(Boolean);
 const trayModeHashes=()=>TRAY_INSTRUMENTS.flatMap(name=>
  (['compact','expanded','settings'] as const).map(mode=>({name,mode,hash:createHash('sha256').update(renderPanel(name,mode)).digest('hex')}))
 );
@@ -107,6 +108,7 @@ if(process.env.DASHBOARD_SNAPSHOT==='1') {
    const html=renderPanel(name,mode);
    assert.ok(html.length>500,`${name} ${mode} did not render`);
    assert.ok(!interactionHint.test(html),`${name} ${mode} leaks an interaction hint`);
+   assert.deepEqual(renderedUnderscoreText(html),[],`${name} ${mode} renders literal underscore markup text`);
    if(name==='Wage plane') assert.ok(html.includes(mode==='settings'?'data-settings="Wage plane"':'data-artifact="Complex Wage Plane"'));
    else assert.ok(html.includes(`data-artifact="${name}"`));
    if(mode==='expanded') assert.ok(html.includes('data-control="gear" data-action="open-settings"'));
@@ -117,6 +119,14 @@ if(process.env.DASHBOARD_SNAPSHOT==='1') {
  }
  const snubberSettings=renderPanel('Snubber Circuit','settings');
  assert.ok(snubberSettings.includes('raise')&&snubberSettings.includes('clamps the surge sooner')&&snubberSettings.includes('higher')&&snubberSettings.includes('lets a larger surge through')&&snubberSettings.includes('readings conflict'));
+ assert.deepEqual(Object.keys(TRAY_VIEW_LAYOUT_HEIGHTS),TRAY_INSTRUMENTS);
+ for(const [name,layouts] of Object.entries(TRAY_VIEW_LAYOUT_HEIGHTS)) for(const [mode,total] of Object.entries(layouts)) assert.ok(total<=828,`${name} ${mode} declared layout ${total}px exceeds 828px`);
+ const thyristorCompact=renderPanel('Thyristor Latch','compact'),thyristorExpanded=renderPanel('Thyristor Latch','expanded');
+ assert.ok(thyristorCompact.includes('data-trace-points="601"')&&thyristorExpanded.includes('data-trace-points="601"'),'Thyristor compact and expanded traces must share the 601-point static history');
+ assert.ok(thyristorExpanded.includes('height:370px')&&thyristorExpanded.includes('height:280px'),'Thyristor expanded panels must use the audited compact heights');
+ const acExpanded=renderPanel('AC Extraction Meter','expanded'); assert.ok(acExpanded.includes('height:700px')&&acExpanded.includes('height:288px')&&acExpanded.includes('height:400px'),'AC expanded columns must use the audited 700px split');
+ const backlashExpanded=renderPanel('Backlash oscillator','expanded');
+ assert.ok(backlashExpanded.includes('Active preset · Impulse shock')&&!backlashExpanded.includes('Initial charge Q₀')&&!backlashExpanded.includes('Sustained drive'),'non-interactive Backlash header must show only its active preset');
  assert.deepEqual([wageModel.m,wageModel.s],[0,60]);
 
  // 2. Iberia framing under Equal Earth & route land-hit check
@@ -386,5 +396,5 @@ if(process.env.DASHBOARD_SNAPSHOT==='1') {
  };
  fs.writeFileSync(new URL('../review/map-geometry-fix1.json',import.meta.url),JSON.stringify(geometry,null,2)+'\n');
  fs.writeFileSync(new URL('../review/map-geometry-fix2.json',import.meta.url),JSON.stringify(geometry,null,2)+'\n');
- console.log(`PASS: Equal Earth route ${samples} samples / ${hits} land hits, bounds ${routeMinX.toFixed(2)}..${routeMaxX.toFixed(2)} × ${routeMinY.toFixed(2)}..${routeMaxY.toFixed(2)} above tray y=${trayTopLocal}; Portugal height ${portugalMainlandHeightPx}px mainland (${portugalWithEnclaveHeightPx}px with 1486 Moroccan enclave); ${times.length} deterministic timeline states; right stack + 9-cell tray geometry; all 27 tray modes; gear-only settings; no rendered interaction hints; 75 polities with ${polityLabelBoxes.length} non-colliding labels.`);
+ console.log(`PASS: Equal Earth route ${samples} samples / ${hits} land hits, bounds ${routeMinX.toFixed(2)}..${routeMaxX.toFixed(2)} × ${routeMinY.toFixed(2)}..${routeMaxY.toFixed(2)} above tray y=${trayTopLocal}; Portugal height ${portugalMainlandHeightPx}px mainland (${portugalWithEnclaveHeightPx}px with 1486 Moroccan enclave); ${times.length} deterministic timeline states; right stack + 9-cell tray geometry; all 27 tray modes; 18 declared layouts ≤ 828px; no literal underscore text; shared 601-point Thyristor traces; Backlash static active preset; gear-only settings; no rendered interaction hints; 75 polities with ${polityLabelBoxes.length} non-colliding labels.`);
 }

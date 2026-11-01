@@ -1567,7 +1567,7 @@ function SettingsPhaseCoherence({
                 <MathText>{'Φ_{load}'}</MathText> as circular dispersion, the Kuramoto order
                 parameter (eqs. 1.11 and 8.17,{' '}
                 <code style={{fontFamily: Tokens.fonts.mono, color: color('color/text/primary')}}>
-                  Paper/The_Original_Power.tex:2517
+                  <MathText>{'Paper/The_Original_Power.tex:2517'}</MathText>
                 </code>
                 ,{' '}
                 <code style={{fontFamily: Tokens.fonts.mono, color: color('color/text/primary')}}>

@@ -44,6 +44,13 @@ export const ARTIFACT_VIEWS: Record<string, ArtifactViewComponent> = {
 // compact 177×80 centred in the cell, expanded/settings 1368×828 inside the 1400×860 card.
 const TRAY_COMPACT_CONTENT = {w: 177, h: 80};
 const TRAY_EXPANDED_CONTENT = {w: 1368, h: 828};
+export const TRAY_VIEW_LAYOUT_HEIGHTS: Record<string,{expanded:number;settings:number}> = {
+  'Wage plane': {expanded: 828, settings: 828}, 'Interference Engine': {expanded: 828, settings: 828},
+  'Phase Coherence': {expanded: 828, settings: 828}, 'Five-Tier Cone': {expanded: 828, settings: 828},
+  'Compounding Ledger': {expanded: 828, settings: 828}, 'Backlash oscillator': {expanded: 828, settings: 828},
+  'Thyristor Latch': {expanded: 779, settings: 828}, 'AC Extraction Meter': {expanded: 816, settings: 828},
+  'Snubber Circuit': {expanded: 828, settings: 828},
+};
 
 const trayArtifactSpec = {
   compact: {w: TRAY_CELL_WIDTH, h: TRAY.height},

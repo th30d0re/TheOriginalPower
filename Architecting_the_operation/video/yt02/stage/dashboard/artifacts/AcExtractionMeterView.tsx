@@ -929,7 +929,7 @@ function SettingsView({
         width,
         height,
         boxSizing: 'border-box',
-        overflowY: 'auto',
+        overflow: 'hidden',
         padding: '16px 20px',
         color: colWire,
         fontFamily: tokens.fonts.sans,
@@ -1057,11 +1057,11 @@ function SettingsView({
           </div>
 
           <p style={{margin: 0, fontSize: 13, lineHeight: 1.5, color: color('color/text/muted')}}>
-            From the manuscript: DC mode, P = V·I and W = ψ_m with θ = 0 (eqs. 0.7, 0.7a); AC mode, S = V·I* = P + jQ with P = ψ_m and Q = ψ_s (eqs. 0.8–0.9); the regimes by θ, including Quadrant II for θ &gt; 90° (<code>Paper/The_Original_Power.tex:1150</code>); the Variable Swap as DC → AC migration and the carceral state as a half-wave rectifier (<code>:1240</code>–<code>:1275</code>); systemic work and the Buffer-Class Work Theorem (eqs. 0.13–0.15); the Reparations Integral and its limits, t_0 = 1619, t_{'{now}'} = 2026 (eq. 0.16, <code>:1385</code>).
+            <MathText>{'From the manuscript: DC mode, P = V·I and W = ψ_m with θ = 0 (eqs. 0.7, 0.7a); AC mode, S = V·I* = P + jQ with P = ψ_m and Q = ψ_s (eqs. 0.8–0.9); the regimes by θ, including Quadrant II for θ > 90° (Paper/The_Original_Power.tex:1150); the Variable Swap as DC → AC migration and the carceral state as a half-wave rectifier (:1240–:1275); systemic work and the Buffer-Class Work Theorem (eqs. 0.13–0.15); the Reparations Integral and its limits, t_0 = 1619, t_{now} = 2026 (eq. 0.16, :1385).'}</MathText>
           </p>
 
           <p style={{margin: 0, fontSize: 13, lineHeight: 1.5, color: color('color/text/muted')}}>
-            Orientation follows the complex wage plane: +ψ_m points down (6 o&apos;clock), +ψ_s points right, and the clock reading is 6 − θ/30. V is the reference phasor; I is drawn at −θ so that S = V·I* sits at +θ.
+            <MathText>{'Orientation follows the complex wage plane: +ψ_m points down (6 o’clock), +ψ_s points right, and the clock reading is 6 − θ/30. V is the reference phasor; I is drawn at −θ so that S = V·I* sits at +θ.'}</MathText>
           </p>
 
           <p style={{margin: 0, fontSize: 13, lineHeight: 1.5, color: color('color/text/muted')}}>
@@ -1114,7 +1114,7 @@ function ExpandedContent({
         width,
         height,
         boxSizing: 'border-box',
-        overflowY: 'auto',
+        overflow: 'hidden',
         padding: '16px 20px',
         color: colWire,
         fontFamily: tokens.fonts.sans,
@@ -1155,6 +1155,7 @@ function ExpandedContent({
           gridTemplateColumns: 'minmax(400px, 460px) minmax(600px, 1fr)',
           gap: 18,
           alignItems: 'start',
+          height: 700,
         }}
       >
         {/* Left Column: Phasor Diagram card */}
@@ -1226,7 +1227,7 @@ function ExpandedContent({
 
           {/* Phasor SVG */}
           <div style={{width: '100%', maxWidth: 440, margin: '0 auto'}}>
-            <PhasorSvg th={th} V={V} I={I} />
+            <PhasorSvg th={th} V={V} I={I} height={260} />
           </div>
 
           {/* Sliders / Static controls */}
@@ -1330,7 +1331,7 @@ function ExpandedContent({
         </section>
 
         {/* Right Column: Waveforms & Reparations Integral cards */}
-        <div style={{display: 'flex', flexDirection: 'column', gap: 18}}>
+        <div style={{display: 'flex', flexDirection: 'column', gap: 12, height: 700}}>
           {/* Waveforms Card */}
           <section
             style={{
@@ -1338,6 +1339,8 @@ function ExpandedContent({
               border: `1px solid ${colRule}`,
               borderRadius: 10,
               padding: '14px 16px',
+              height: 288,
+              overflow: 'hidden',
             }}
             aria-label="Waveforms"
           >
@@ -1353,7 +1356,7 @@ function ExpandedContent({
               One cycle, instant by instant
             </h2>
             <div style={{width: '100%', margin: '0 auto'}}>
-              <WaveformSvg th={th} V={V} I={I} />
+              <WaveformSvg th={th} V={V} I={I} height={145} />
             </div>
             <p style={{fontSize: 13, color: colMuted, margin: '8px 0 0', lineHeight: 1.45}}>
               p(t) = v(t)·i(t) splits into two parts. The real part, P(1 + cos 2ωt), always flows one way. The reactive part, Q·sin 2ωt, flows back and forth and averages to zero. Over the window shown, the net work of the reactive part is{' '}
@@ -1368,6 +1371,8 @@ function ExpandedContent({
               border: `1px solid ${colRule}`,
               borderRadius: 10,
               padding: '14px 16px',
+              height: 400,
+              overflow: 'hidden',
             }}
             aria-label="Reparations integral"
           >
@@ -1383,7 +1388,7 @@ function ExpandedContent({
               The Reparations Integral, 1619–2026
             </h2>
             <div style={{width: '100%', margin: '0 auto'}}>
-              <IntegralSvg th={th} dc={dc} hw={hw} ac={ac} />
+              <IntegralSvg th={th} dc={dc} hw={hw} ac={ac} height={110} />
             </div>
 
             {/* Sliders for Integral */}

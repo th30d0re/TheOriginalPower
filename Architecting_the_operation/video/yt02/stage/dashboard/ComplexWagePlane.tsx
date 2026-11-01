@@ -1815,7 +1815,7 @@ export function WagePlaneSettings({
             Secondary configuration &amp; provenance · Complex Wage Plane
           </div>
           <div data-model-default="true" style={{fontSize: 12, color: c.accent, marginTop: 3}}>
-            Model default: log 2 predates the 1705 timeline; fix-pass-3 values remain ψ_m = 0 and ψ_s = 60.
+            <MathText>{'Model default: log 2 predates the 1705 timeline; fix-pass-3 values remain ψ_m = 0 and ψ_s = 60.'}</MathText>
           </div>
         </div>
         <HeaderControls mode="settings" interactive={interactive} onSelectMode={selectMode} />
@@ -1995,7 +1995,7 @@ export function WagePlaneSettings({
             <h2 style={h2Style}>What comes from where</h2>
             <div style={{fontSize: 12.5, lineHeight: 1.48, color: c.ink2}}>
               <p style={{margin: '0 0 8px'}}>
-                <strong style={{color: c.ink}}>Manuscript</strong> (Paper/The_Original_Power.tex):
+                <strong style={{color: c.ink}}>Manuscript</strong> <MathText>{'(Paper/The_Original_Power.tex)'}</MathText>:
                 the rotated Argand plane (:2876), the θ regimes (:2937–2945), the joint wage in
                 Quadrant I (:5149), and the constraint M &lt; τ (:1531, :2059).
               </p>
@@ -2019,8 +2019,8 @@ export function WagePlaneSettings({
               </p>
               <p style={{margin: 0}}>
                 <strong style={{color: c.ink}}>Data from the repository</strong>:
-                Paper/data/eq65_68_2a_case_law.csv (gun laws and rulings, 1911–2024),
-                eq63_mass_incarceration.csv (F, 1980–2024), historical_shocks.json (shock years),
+                <MathText>{'Paper/data/eq65_68_2a_case_law.csv'}</MathText> (gun laws and rulings, 1911–2024),
+                <MathText>{'eq63_mass_incarceration.csv'}</MathText> (F, 1980–2024), <MathText>{'historical_shocks.json'}</MathText> (shock years),
                 and the <MathText>{'ρ_τ'}</MathText> ranges in the Compiled Runtime Log
                 (:15361–:15515).
               </p>

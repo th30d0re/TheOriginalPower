@@ -1073,7 +1073,7 @@ function ExpandedView({
                   <b style={{fontFamily: Tokens.fonts.mono, fontSize: 12, color: cInk}}>
                     <MathText>{t.mathLabel}</MathText>
                   </b>
-                  <span style={{color: cInk2, lineHeight: 1.35}}>{t.circuitRole}</span>
+                  <span style={{color: cInk2, lineHeight: 1.35}}><MathText>{t.circuitRole}</MathText></span>
                 </li>
               ))}
               <li
@@ -1095,7 +1095,7 @@ function ExpandedView({
                   }}
                 />
                 <b style={{fontFamily: Tokens.fonts.mono, fontSize: 12, color: cInk}}>O</b>
-                <span style={{color: cInk2, lineHeight: 1.35}}>{BASE_O_DEF.circuitRole}</span>
+                <span style={{color: cInk2, lineHeight: 1.35}}><MathText>{BASE_O_DEF.circuitRole}</MathText></span>
               </li>
             </ul>
             <div style={{fontSize: 11.5, color: cGold, marginTop: 4}}>
@@ -1332,7 +1332,7 @@ function SettingsView({
                   </span>
                 </div>
                 <div style={{fontSize: 11.5, color: cInk, lineHeight: 1.35}}>
-                  {t.circuitRole}
+                  <MathText>{t.circuitRole}</MathText>
                 </div>
               </div>
             ))}
@@ -1362,7 +1362,7 @@ function SettingsView({
                 </span>
               </div>
               <div style={{fontSize: 11.5, color: cInk, lineHeight: 1.35}}>
-                {BASE_O_DEF.circuitRole}
+                <MathText>{BASE_O_DEF.circuitRole}</MathText>
               </div>
             </div>
           </div>
@@ -1410,7 +1410,7 @@ function SettingsView({
             <div>
               <b style={{color: cGold}}>From the manuscript:</b> the five nodes and the 3-D cone,
               E at the apex on the z-axis and O enclosed at the base (
-              <code>Paper/The_Original_Power.tex:486</code>–<code>:593</code>); the node-to-circuit-element
+              <code><MathText>{'Paper/The_Original_Power.tex:486'}</MathText></code>–<code>:593</code>); the node-to-circuit-element
               table and the voltage-drop ordering, eq. 0.2 (<code>:604</code>–<code>:650</code>);
               the Tri-Modal Enclosure score, eq. 1.1 (<code>:713</code>); the Flat Ceiling, Elite
               Obscuration, and the observer on the axis (<code>:770</code>–<code>:810</code>); the

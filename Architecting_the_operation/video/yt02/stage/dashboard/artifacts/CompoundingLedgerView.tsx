@@ -1834,7 +1834,7 @@ function SettingsView({
         <p style={{fontSize: 13, lineHeight: 1.55, color: color('color/text/muted'), margin: '0 0 10px'}}>
           From the manuscript: the compounding model, eq. 6.5, and the full chain, eqs. 6.8–6.12 (
           <code style={{fontFamily: Tokens.fonts.mono, color: color('color/text/dim')}}>
-            Paper/The_Original_Power.tex:5345
+            <MathText>{'Paper/The_Original_Power.tex:5345'}</MathText>
           </code>
           –
           <code style={{fontFamily: Tokens.fonts.mono, color: color('color/text/dim')}}>
@@ -1842,7 +1842,7 @@ function SettingsView({
           </code>
           ); the sourced factors and their notes (
           <code style={{fontFamily: Tokens.fonts.mono, color: color('color/text/dim')}}>
-            Paper/data/eq33_cannabis_redlining.csv
+            <MathText>{'Paper/data/eq33_cannabis_redlining.csv'}</MathText>
           </code>
           ): enslavement 0.09 (Baptist 2014; Darity and Mullen 2020), 13th Amendment exception and convict leasing 0.61
           (Blackmon 2008), HOLC redlining and FHA exclusion 0.48 (Mapping Inequality; Rothstein 2017), War on Drugs 0.73

@@ -95,6 +95,15 @@ export function thyristorLatchFromEra(
 
 // Module-level memoisation for bifurcation curves
 const bifPathCache = new Map<string, {up: string; dn: string}>();
+type LatchHistoryPoint = {t: number; I: number; B: number};
+const latchHistoryCache = new Map<string, LatchHistoryPoint[]>();
+function getStaticLatchHistory(s: number, eta: number, lam: number): LatchHistoryPoint[] {
+  const key = `${s.toFixed(4)}:${eta.toFixed(4)}:${lam.toFixed(4)}`;
+  const cached = latchHistoryCache.get(key); if (cached) return cached;
+  const B = onB(s, eta, lam) ?? 0, I = cur(B, s);
+  const history = Array.from({length: Math.floor(WIN / (DT * 5)) + 1}, (_, k) => ({t: -WIN + k * DT * 5, I, B}));
+  latchHistoryCache.set(key, history); return history;
+}
 
 function getBifPaths(
   sc: number,
@@ -164,9 +173,10 @@ function StaticThyristorLatchView(props: ThyristorLatchViewProps) {
   const sc = scrit(eta, lam);
   const mb = midB(s, eta, lam);
   const isLatched = latched(steadyB, s, eta, lam);
+  const history = getStaticLatchHistory(s, eta, lam);
 
   if (mode === 'compact') {
-    return renderCompact({width, height, isLatched, curI, ih, s, sc, tokens});
+    return renderCompact({width, height, isLatched, curI, ih, s, sc, history, tokens});
   }
 
   if (mode === 'settings') {
@@ -186,6 +196,7 @@ function StaticThyristorLatchView(props: ThyristorLatchViewProps) {
     sc,
     mb,
     isLatched,
+    history,
     tokens,
   });
 }
@@ -201,6 +212,7 @@ function renderCompact({
   ih,
   s,
   sc,
+  history,
   tokens,
 }: {
   width: number;
@@ -210,12 +222,14 @@ function renderCompact({
   ih: number;
   s: number;
   sc: number;
+  history: LatchHistoryPoint[];
   tokens: ReturnType<typeof useTokens>;
 }) {
   const badgeColor = isLatched ? palette.red : palette.teal;
   const barW = 86;
   const filledW = Math.max(0, Math.min(barW, barW * curI));
   const tickX = Math.max(0, Math.min(barW, barW * ih));
+  const sparkline = history.map((point, index) => `${index ? 'L' : 'M'}${((index / (history.length - 1)) * barW).toFixed(1)} ${(11 - point.I * 8).toFixed(1)}`).join(' ');
 
   return (
     <div
@@ -276,6 +290,7 @@ function renderCompact({
             strokeWidth="0.8"
           />
           <rect x="0" y="3" width={filledW} height="8" rx="2" fill={palette.accent} />
+          <path data-trace-points={history.length} d={sparkline} fill="none" stroke={palette.ink} strokeWidth="1.4" />
           <line x1={tickX} y1="1" x2={tickX} y2="13" stroke={palette.red} strokeWidth="1.8" />
         </svg>
       </div>
@@ -316,6 +331,7 @@ function renderExpandedStatic({
   sc,
   mb,
   isLatched,
+  history,
   tokens,
 }: {
   width: number;
@@ -329,6 +345,7 @@ function renderExpandedStatic({
   sc: number;
   mb: number | null;
   isLatched: boolean;
+  history: LatchHistoryPoint[];
   tokens: ReturnType<typeof useTokens>;
 }) {
   const cardStyle: React.CSSProperties = {
@@ -376,10 +393,9 @@ function renderExpandedStatic({
   const YI = (iVal: number) => T_strip + ((Imax - iVal) / Imax) * (mid_strip - T_strip - 20);
   const YB = (bVal: number) => mid_strip + 20 + ((Bmax_strip - bVal) / Bmax_strip) * (H_strip - B2_strip - mid_strip - 20);
 
-  const xStart = L_strip;
-  const xEnd = W_strip - Rr_strip;
-  const dI = `M${xStart} ${YI(curI).toFixed(1)} L${xEnd} ${YI(curI).toFixed(1)}`;
-  const dB = `M${xStart} ${YB(B).toFixed(1)} L${xEnd} ${YB(B).toFixed(1)}`;
+  const XStrip = (t: number) => L_strip + ((t + WIN) / WIN) * (W_strip - L_strip - Rr_strip);
+  const dI = history.map((point, index) => `${index ? 'L' : 'M'}${XStrip(point.t).toFixed(1)} ${YI(point.I).toFixed(1)}`).join(' ');
+  const dB = history.map((point, index) => `${index ? 'L' : 'M'}${XStrip(point.t).toFixed(1)} ${YB(point.B).toFixed(1)}`).join(' ');
 
   // Bifurcation paths
   const W_bif = 1200;
@@ -406,7 +422,7 @@ function renderExpandedStatic({
         width,
         height,
         boxSizing: 'border-box',
-        overflowY: 'auto',
+        overflow: 'hidden',
         display: 'flex',
         flexDirection: 'column',
         gap: 14,
@@ -455,16 +471,17 @@ function renderExpandedStatic({
           gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1fr)',
           gap: 16,
           alignItems: 'start',
+          height: 370,
         }}
       >
         {/* Card 1: Loop schematic */}
-        <section style={cardStyle} aria-label="Circuit and controls">
+        <section style={{...cardStyle, height: '100%', overflow: 'hidden'}} aria-label="Circuit and controls">
           <h2 style={h2Style}>The self-exciting loop</h2>
           <svg
             viewBox="0 0 640 330"
             role="img"
             aria-label="The Out-group's supply feeds extraction through the Elite's latch; a feedback tap funds the field; a snubber grid diverts a share of the supply"
-            style={{display: 'block', width: '100%', height: 'auto'}}
+            style={{display: 'block', width: '100%', height: 210}}
           >
             <defs>
               <marker
@@ -611,7 +628,7 @@ function renderExpandedStatic({
         </section>
 
         {/* Card 2: Strip Chart */}
-        <section style={cardStyle} aria-label="Current and field over time">
+        <section style={{...cardStyle, height: '100%', overflow: 'hidden'}} aria-label="Current and field over time">
           <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8}}>
             <h2 style={{...h2Style, margin: 0}}>Current through the latch</h2>
             <span
@@ -634,7 +651,7 @@ function renderExpandedStatic({
             viewBox="0 0 900 470"
             role="img"
             aria-label="Extraction current and holding current over the last 60 years"
-            style={{display: 'block', width: '100%', height: 'auto'}}
+            style={{display: 'block', width: '100%', height: 190}}
           >
             <text x={L_strip} y={T_strip - 6} fontSize="13" fontFamily={tokens.fonts.mono} fill={palette.labelSm}>
               extraction current I
@@ -690,7 +707,7 @@ function renderExpandedStatic({
               </>
             )}
 
-            <path d={dI} fill="none" stroke={palette.accent} strokeWidth="2.6" />
+            <path data-trace-points={history.length} d={dI} fill="none" stroke={palette.accent} strokeWidth="2.6" />
             <path d={dB} fill="none" stroke={palette.gold} strokeWidth="2.2" />
 
             {[0, 10, 20, 30, 40, 50, 60].map(yVal => {
@@ -756,19 +773,19 @@ function renderExpandedStatic({
           </div>
 
           <p style={{margin: '10px 0 0', fontSize: 13.5, color: palette.ink, lineHeight: 1.4}}>
-            {verdictText}
+            <MathText>{verdictText}</MathText>
           </p>
         </section>
       </div>
 
       {/* Card 3: Bifurcation diagram */}
-      <section style={cardStyle} aria-label="Bifurcation diagram">
+      <section style={{...cardStyle, height: 280, overflow: 'hidden'}} aria-label="Bifurcation diagram">
         <h2 style={h2Style}>Where the latch can hold</h2>
         <svg
           viewBox="0 0 1200 360"
           role="img"
           aria-label="Steady-state field B against the routed share s: the on branch, the unstable threshold, and the off state"
-          style={{display: 'block', width: '100%', height: 'auto'}}
+          style={{display: 'block', width: '100%', height: 160}}
         >
           <rect
             x={XBif(sc).toFixed(1)}
@@ -942,7 +959,7 @@ function renderSettings({
         width,
         height,
         boxSizing: 'border-box',
-        overflowY: 'auto',
+        overflow: 'hidden',
         padding: '16px 20px',
         display: 'flex',
         flexDirection: 'column',
@@ -1150,7 +1167,7 @@ function renderSettings({
               <p style={{margin: 0, fontSize: 13.5, lineHeight: 1.5, color: palette.ink2}}>
                 From the manuscript: the self-exciting field, ∂B/∂t = η·(extraction) − λB (eq. 0.1a,{' '}
                 <code style={{fontFamily: tokens.fonts.mono, fontSize: 12.5, color: palette.labelSm}}>
-                  Paper/The_Original_Power.tex:474
+                  <MathText>{'Paper/The_Original_Power.tex:474'}</MathText>
                 </code>
                 ); the reinforcing extraction loop and the Parasitic System Collapse Theorem, where
                 routing energy through local, open-source grids severs <MathText>{'V_{cc}'}</MathText> and
@@ -1184,10 +1201,7 @@ function renderSettings({
           <section style={cardStyle}>
             <h2 style={h2Style}>Runtime log &amp; era mapping</h2>
             <p style={{margin: 0, fontSize: 13.5, lineHeight: 1.5, color: palette.ink2}}>
-              Runtime Log / Era Mapping: This instrument has no log input in yt02/dashboard_eras.json.
-              A driver could pulse the gate when system_stress.level is CRITICAL (logs 3, 14, 15) or
-              when rho_tau_crash is set (log 3), and raise s as ρ_τ approaches 1. Because this mapping
-              rule is unapproved by the author, model defaults are retained.
+              <MathText>{'Runtime Log / Era Mapping: This instrument has no log input in yt02/dashboard_eras.json. A driver could pulse the gate when system_stress.level is CRITICAL (logs 3, 14, 15) or when rho_tau_crash is set (log 3), and raise s as ρ_τ approaches 1. Because this mapping rule is unapproved by the author, model defaults are retained.'}</MathText>
             </p>
           </section>
         </div>
@@ -1301,7 +1315,7 @@ function InteractiveThyristorLatchView(props: ThyristorLatchViewProps) {
   const isLatched = latched(B, s, eta, lam);
 
   if (mode === 'compact') {
-    return renderCompact({width, height, isLatched, curI, ih, s, sc, tokens});
+    return renderCompact({width, height, isLatched, curI, ih, s, sc, history: stateRef.current.hist, tokens});
   }
 
   if (mode === 'settings') {
@@ -1402,7 +1416,7 @@ function InteractiveThyristorLatchView(props: ThyristorLatchViewProps) {
         width,
         height,
         boxSizing: 'border-box',
-        overflowY: 'auto',
+        overflow: 'hidden',
         display: 'flex',
         flexDirection: 'column',
         gap: 14,
@@ -1456,16 +1470,17 @@ function InteractiveThyristorLatchView(props: ThyristorLatchViewProps) {
           gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1fr)',
           gap: 16,
           alignItems: 'start',
+          height: 370,
         }}
       >
         {/* Card 1: Circuit schematic + controls */}
-        <section style={cardStyle} aria-label="Circuit and controls">
+        <section style={{...cardStyle, height: '100%', overflow: 'hidden'}} aria-label="Circuit and controls">
           <h2 style={h2Style}>The self-exciting loop</h2>
           <svg
             viewBox="0 0 640 330"
             role="img"
             aria-label="The Out-group's supply feeds extraction through the Elite's latch; a feedback tap funds the field; a snubber grid diverts a share of the supply"
-            style={{display: 'block', width: '100%', height: 'auto'}}
+            style={{display: 'block', width: '100%', height: 210}}
           >
             <defs>
               <marker
@@ -1706,7 +1721,7 @@ function InteractiveThyristorLatchView(props: ThyristorLatchViewProps) {
         </section>
 
         {/* Card 2: Strip Chart */}
-        <section style={cardStyle} aria-label="Current and field over time">
+        <section style={{...cardStyle, height: '100%', overflow: 'hidden'}} aria-label="Current and field over time">
           <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8}}>
             <h2 style={{...h2Style, margin: 0}}>Current through the latch</h2>
             <span
@@ -1729,7 +1744,7 @@ function InteractiveThyristorLatchView(props: ThyristorLatchViewProps) {
             viewBox="0 0 900 470"
             role="img"
             aria-label="Extraction current and holding current over the last 60 years"
-            style={{display: 'block', width: '100%', height: 'auto'}}
+            style={{display: 'block', width: '100%', height: 190}}
           >
             <text x={L_strip} y={T_strip - 6} fontSize="13" fontFamily={tokens.fonts.mono} fill={palette.labelSm}>
               extraction current I
@@ -1873,19 +1888,19 @@ function InteractiveThyristorLatchView(props: ThyristorLatchViewProps) {
           </div>
 
           <p style={{margin: '10px 0 0', fontSize: 13.5, color: palette.ink, lineHeight: 1.4}}>
-            {verdictText}
+            <MathText>{verdictText}</MathText>
           </p>
         </section>
       </div>
 
       {/* Card 3: Bifurcation diagram */}
-      <section style={cardStyle} aria-label="Bifurcation diagram">
+      <section style={{...cardStyle, height: 280, overflow: 'hidden'}} aria-label="Bifurcation diagram">
         <h2 style={h2Style}>Where the latch can hold</h2>
         <svg
           viewBox="0 0 1200 360"
           role="img"
           aria-label="Steady-state field B against the routed share s: the on branch, the unstable threshold, and the off state"
-          style={{display: 'block', width: '100%', height: 'auto'}}
+          style={{display: 'block', width: '100%', height: 160}}
         >
           <rect
             x={XBif(sc).toFixed(1)}

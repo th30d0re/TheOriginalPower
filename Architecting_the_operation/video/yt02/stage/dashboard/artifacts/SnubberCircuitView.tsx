@@ -1370,7 +1370,7 @@ function SettingsView({
             From the manuscript: the back-EMF surge as backlash,{' '}
             <MathText text="v = -L di/dt" /> (eq. 1.7d), and the stored energy{' '}
             <MathText text="U = \frac{1}{2}LI^2" /> (eq. 1.7e), with the Elite harvesting it into
-            the next era's capacitors (<code>Paper/The_Original_Power.tex:2416</code>–<code>:2440</code>);
+            the next era's capacitors (<code><MathText>{'Paper/The_Original_Power.tex:2416'}</MathText></code>–<code>:2440</code>);
             the snubber as the Out-group routing its energy through local, open-source grids (
             <code>:14435</code>, <code>:14348</code>); the TVS diode as armed deterrence that clamps
             strikes above <MathText text="V_{br}" /> (<code>:11598</code>–<code>:11630</code>).

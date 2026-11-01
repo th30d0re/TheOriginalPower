@@ -688,8 +688,7 @@ function SettingsOscillatorView({
                   {s.y} · {s.name}
                 </div>
                 <div style={{fontSize: 12, color: c.ink2, fontFamily: c.tokens.fonts.mono}}>
-                  ζ {s.z.toFixed(2)} · ω_n {s.wn.toFixed(2)} rad/yr · period{' '}
-                  {( (2 * Math.PI) / s.wn).toFixed(1)} yr
+                  <MathText>{`ζ ${s.z.toFixed(2)} · ω_n ${s.wn.toFixed(2)} rad/yr · period ${((2 * Math.PI) / s.wn).toFixed(1)} yr`}</MathText>
                 </div>
                 <div style={{fontSize: 11.5, color: c.labelSm}}>{s.proxy}</div>
               </div>
@@ -720,11 +719,10 @@ function SettingsOscillatorView({
         </h2>
         <p style={{margin: '0 0 10px', fontSize: 13, lineHeight: 1.6, color: c.ink2}}>
           Sources: the governing equation and solution, eq. 1.7a–1.7b (
-          <code>Paper/The_Original_Power.tex:2208</code>); the convergence prediction and the resonance
+          <code><MathText>{'Paper/The_Original_Power.tex:2208'}</MathText></code>); the convergence prediction and the resonance
           escape condition (<code>:2316</code>, <code>:2319</code>); the four fits from{' '}
-          <code>Paper/scripts/spectral_laplace.ipynb</code> with proxies in{' '}
-          <code>Paper/data/backlash_proxies.csv</code> (<code>:7029</code>–<code>:7034</code>). The
-          fits identify ζ and ω_n only, so each preset fixes L = 1 and sets C = 1/ω_n² and R = 2ζω_n.
+          <code><MathText>{'Paper/scripts/spectral_laplace.ipynb'}</MathText></code> with proxies in{' '}
+          <code><MathText>{'Paper/data/backlash_proxies.csv'}</MathText></code> (<code>:7029</code>–<code>:7034</code>). <MathText>{'The fits identify ζ and ω_n only, so each preset fixes L = 1 and sets C = 1/ω_n² and R = 2ζω_n.'}</MathText>
           The manuscript states that R, L, and C are not read off the record; the supported claim is
           ordinal: damping rises and the period shortens from shock to shock (<code>:2390</code>).
         </p>
@@ -1340,7 +1338,7 @@ function ExpandedOscillatorView({
         }}
       >
         {/* Header lede */}
-        <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 12}}>
+        <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 12, paddingRight: 92}}>
           <div>
             <h1
               style={{
@@ -1368,6 +1366,7 @@ function ExpandedOscillatorView({
               ] as const
             ).map(([m, label]) => {
               const active = model.mode === m;
+              if (!interactive && !active) return null;
               if (interactive) {
                 return (
                   <button
@@ -1409,7 +1408,7 @@ function ExpandedOscillatorView({
                     fontWeight: 500,
                   }}
                 >
-                  {label}
+                  Active preset · {label}
                 </div>
               );
             })}

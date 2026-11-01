@@ -140,7 +140,7 @@ export function computeVerdict(
     parts.push(`the spectral lever falls from u = ${u.toFixed(2)} to ${nu.toFixed(2)}`);
   }
   if (isFinite(nphi) && nphi > 0) {
-    parts.push(`the phase lever falls from Φ_load = ${phi.toFixed(2)} to ${nphi.toFixed(2)}`);
+    parts.push(`the phase lever falls from Φ_{load} = ${phi.toFixed(2)} to ${nphi.toFixed(2)}`);
   }
   return `ρ_τ = ${r.toFixed(2)}: kernel-safe. ${
     parts.length
@@ -964,7 +964,7 @@ function ExpandedView({
 
         {/* Verdict paragraph */}
         <div style={{fontSize: 13, color: color('color/text/primary'), borderTop: `1px solid ${color('color/line/chart')}`, paddingTop: 6, marginTop: 4}}>
-          {verdictText}
+          <MathText>{verdictText}</MathText>
         </div>
       </section>
 
@@ -1321,11 +1321,11 @@ function SettingsView({
         <div style={{display: 'flex', flexDirection: 'column', gap: 10, fontSize: 13, lineHeight: 1.5, color: color('color/text/primary')}}>
           <p style={{margin: 0}}>
             From the manuscript: Model C and the control objective with total power held constant (eqs. 8.12–8.16,{' '}
-            <code style={{fontFamily: tokens.fonts.mono, color: color('color/fill/gold')}}>Paper/The_Original_Power.tex:6914–:6946</code>); the bands (
+            <code style={{fontFamily: tokens.fonts.mono, color: color('color/fill/gold')}}><MathText>{'Paper/The_Original_Power.tex:6914–:6946'}</MathText></code>); the bands (
             <code style={{fontFamily: tokens.fonts.mono, color: color('color/fill/gold')}}>:6955</code>); circular dispersion <MathText>{'Φ_{load}'}</MathText> and its relation to the band-power ratio, &quot;two faces of the same control&quot; (eqs. 8.17 and 8.22,{' '}
             <code style={{fontFamily: tokens.fonts.mono, color: color('color/fill/gold')}}>:7195–:7210</code>); the ANES calibration of <MathText>{'Φ_{load}'}</MathText>, 0.078 before 1964 and 0.403 after 1980 (
             <code style={{fontFamily: tokens.fonts.mono, color: color('color/fill/gold')}}>:2522</code>); the Compiled Runtime Log (via{' '}
-            <code style={{fontFamily: tokens.fonts.mono, color: color('color/fill/gold')}}>tools/interference_state/data/runtime_log.json</code>); the four Laplace fits (
+            <code style={{fontFamily: tokens.fonts.mono, color: color('color/fill/gold')}}><MathText>{'tools/interference_state/data/runtime_log.json'}</MathText></code>); the four Laplace fits (
             <code style={{fontFamily: tokens.fonts.mono, color: color('color/fill/gold')}}>:7032–:7035</code>); the Weimar <MathText>{'ℛ_{suppress} ≈ 0.03'}</MathText> (
             <code style={{fontFamily: tokens.fonts.mono, color: color('color/fill/gold')}}>:7006</code>); the spectral carrier chapter (
             <code style={{fontFamily: tokens.fonts.mono, color: color('color/fill/gold')}}>:14446–:14670</code>).
@@ -1336,7 +1336,7 @@ function SettingsView({
           </p>
 
           <p style={{margin: 0}}>
-            <strong style={{color: color('color/fill/gold')}}>Data panels.</strong> The page embeds the three processed CSVs from <code style={{fontFamily: tokens.fonts.mono, color: color('color/fill/gold')}}>Paper/data/</code> and the runtime log (built by <code style={{fontFamily: tokens.fonts.mono, color: color('color/fill/gold')}}>tools/interference_engine/scripts/build_data.py</code>). It applies the corrected methods of <code style={{fontFamily: tokens.fonts.mono, color: color('color/fill/gold')}}>Paper/scripts/spectral_fourier.ipynb</code> (ANES at 1 sample per year; within-series shares; seasonality removal by the mean ISO-week profile) and of <code style={{fontFamily: tokens.fonts.mono, color: color('color/fill/gold')}}>Paper/scripts/eq_fourier_electoral_cycle.py</code> (one-sided spectrum with the Nyquist bin; both bracketing bins for an off-grid target).
+            <strong style={{color: color('color/fill/gold')}}>Data panels.</strong> The page embeds the three processed CSVs from <code style={{fontFamily: tokens.fonts.mono, color: color('color/fill/gold')}}>Paper/data/</code> and the runtime log (built by <code style={{fontFamily: tokens.fonts.mono, color: color('color/fill/gold')}}><MathText>{'tools/interference_engine/scripts/build_data.py'}</MathText></code>). It applies the corrected methods of <code style={{fontFamily: tokens.fonts.mono, color: color('color/fill/gold')}}><MathText>{'Paper/scripts/spectral_fourier.ipynb'}</MathText></code> (ANES at 1 sample per year; within-series shares; seasonality removal by the mean ISO-week profile) and of <code style={{fontFamily: tokens.fonts.mono, color: color('color/fill/gold')}}><MathText>{'Paper/scripts/eq_fourier_electoral_cycle.py'}</MathText></code> (one-sided spectrum with the Nyquist bin; both bracketing bins for an off-grid target).
           </p>
         </div>
       </section>

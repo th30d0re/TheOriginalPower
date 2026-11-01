@@ -138,3 +138,75 @@ assets/index-DBt0f1ck.js  1,804.28 kB │ gzip: 531.91 kB
 ```
 
 Vite emitted its existing chunk-size warning for the 1.8 MB application bundle. The build exited 0 and wrote only to `stage/review/site-dist`.
+
+## Fix pass 1 — rendered tray review
+
+### Repairs
+
+1. **Thyristor layout:** the expanded root now clips no content and uses a 370 px two-card row plus a 280 px bifurcation card. Its schematic, current chart, and bifurcation SVGs use fixed heights of 210, 190, and 160 px. The declared vertical total is 779 px inside the 828 px content box.
+2. **AC layout:** the expanded root uses a 700 px main grid. The right column uses a 288 px waveform card, a 12 px gap, and a 400 px Reparations Integral card. Fixed SVG heights are 260 px for the phasor, 145 px for the waveform, and 110 px for the integral. The declared root total is 816 px.
+3. **Thyristor trace:** the artifact reset history is ported as a module-cached 601-point default trace. The default values remain `I = 0.79`, `I_H = 0.30`, and `LATCHED`. Compact and expanded renders consume the same cached data.
+4. **Mathematical text:** the Interference Engine verdict passes through `MathText`, uses `ρ_τ`, and spells the phase lever as `Φ_{load}`. The rendered-markup audit also found source paths and formulas in the Wage Plane, Phase Coherence, Five-Tier Cone, Compounding Ledger, Backlash Oscillator, Thyristor Latch, AC Extraction Meter, and Snubber Circuit views. Each now renders through `MathText`.
+5. **Backlash header:** non-interactive renders show one static `Active preset · Impulse shock` label. Interactive site renders retain all three preset buttons and reserve 92 px at the right edge for the gear and close controls. The other eight headers contain no non-interactive control row in the reserved top-right area.
+
+### Expanded and settings height audit
+
+The checker owns the declared layout-height table and rejects any expanded or settings total above 828 px. Flexible columns below use the exact remainder after fixed padding, headers, and gaps.
+
+| View | Expanded arithmetic | Settings arithmetic |
+|---|---:|---:|
+| Complex Wage Plane | fixed 828 px content grid | fixed 828 px content grid |
+| Interference Engine | 382 + 14 + 432 = **828** | fixed 828 px two-column grid |
+| Phase Coherence | 76 header + 10 gap + 742 main = **828** | 16 padding + 14 gap + 798 columns = **828** |
+| Five-Tier Cone | 32 padding + 71 header + 12 gap + 713 main = **828** | 32 padding + 12 gap + 784 columns = **828** |
+| Compounding Ledger | 62 header + 12 gap + 754 main = **828** | 32 padding + 16 gap + 780 columns = **828** |
+| Backlash Oscillator | 32 padding + 796 column = **828** | 48 padding + 780 settings body = **828** |
+| Thyristor Latch | 24 padding + 77 header + 28 gaps + 370 main + 280 bifurcation = **779** | 32 padding + 16 gap + 780 columns = **828** |
+| AC Extraction Meter | 32 padding + 68 header + 16 gap + 700 main = **816** | 32 padding + 16 gap + 780 columns = **828** |
+| Snubber Circuit | fixed 828 px full-height two-column grid | 32 padding + 16 gap + 780 columns = **828** |
+
+No additional overflow appeared in the arithmetic audit. Settings layouts use parallel columns within their declared height. The Interference Engine, Phase Coherence, Five-Tier Cone, Compounding Ledger, Backlash Oscillator, and Snubber Circuit expanded views already bounded their main content with fixed or flex-remainder heights.
+
+### Checker additions
+
+- Every tray view declares expanded and settings totals in `TRAY_VIEW_LAYOUT_HEIGHTS`; all 18 totals must be at most 828 px.
+- Every rendered tray mode is scanned for a markup text node containing `_` followed by a letter or `{`.
+- Thyristor compact and expanded output must each expose the shared 601-point trace.
+- Thyristor and AC markup must contain the audited fixed panel heights.
+- Backlash non-interactive expanded output must contain only the active preset label.
+
+### Verification tails
+
+**Episode TypeScript**
+
+```text
+$ npx --prefix /Users/emmanuel/Documents/Theory/scriptCast-stage/video tsc --noEmit -p .../stage
+exit 0; no diagnostics
+```
+
+**Dashboard checker**
+
+```text
+PASS: 19 frames plus all 27 tray mode renders repeated in fresh Node processes; identical stack/tray markup and whole-Dashboard hashes; state/effect/reducer hooks trap on invocation.
+PASS: Equal Earth route 1296 samples / 0 land hits, bounds 540.14..821.86 × 84.29..843.36 above tray y=860; Portugal height 102.18px mainland (136.7px with 1486 Moroccan enclave); 18 deterministic timeline states; right stack + 9-cell tray geometry; all 27 tray modes; 18 declared layouts ≤ 828px; no literal underscore text; shared 601-point Thyristor traces; Backlash static active preset; gear-only settings; no rendered interaction hints; 75 polities with 16 non-colliding labels.
+```
+
+**Review plans and render dry-runs**
+
+```text
+wrote .../stage/review/stage_plan.json
+wrote .../stage/review_tray/stage_plan.json
+review: yt02_dashboard_review · 24000 ms · 720 frames
+review_tray: yt02_dashboard_tray_review · 29300 ms · 879 frames
+Both --dry-run invocations emitted Remotion commands and exited 0. Chromium remained closed.
+```
+
+**Site build**
+
+```text
+✓ 259 modules transformed.
+assets/index-Cn5ocv6T.js  1,805.80 kB │ gzip: 532.26 kB
+✓ built in 1.10s
+```
+
+Vite emitted the existing chunk-size warning. The build exited 0 and wrote to `stage/review/site-dist`.
