@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Phase Coherence</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=STIX+Two+Text:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#0D1B2A; --panel:#132538; --well:#081421;
+  --wire:#ECE7DC; --ink:#ECE7DC; --ink-2:#A9B6C4;
+  --rule:#8A6A45; --label-sm:#B8956A;
+  --green:#7CC08A; --red:#E0604A; --tau:#FF7A6B; --teal:#4CC2C2; --gold:#D4A84B; --accent:#E08A3C; --dim:#4A5566;
+  --sans:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,Menlo,Consolas,monospace;
+  --math:'STIX Two Text','Cambria Math','Times New Roman',serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.55 var(--sans);padding-block:22px 48px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.app{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:20px 28px;align-items:start}
+header{grid-column:1/-1}
+h1{font:600 24px/1.2 var(--sans);margin:0 0 6px;letter-spacing:-.01em}
+.lede{margin:0;color:var(--ink-2);max-width:84ch}
+.card{background:var(--panel);border:1px solid var(--rule);border-radius:10px;padding:16px 18px;min-width:0}
+h2{font:600 12px/1.3 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--label-sm);margin:0 0 10px}
+.nt{text-transform:none;letter-spacing:0}
+svg{display:block;width:100%;height:auto}
+svg text{font-family:var(--mono)}
+.m{font-family:var(--math);font-style:italic}
+.row{display:grid;grid-template-columns:150px minmax(0,1fr) 62px;gap:10px;align-items:center;margin:7px 0}
+.row label{font:400 14px var(--sans)}
+.row label i{font-family:var(--math);font-size:16px}
+.row output{font:500 13px var(--mono);text-align:right;font-variant-numeric:tabular-nums}
+input[type=range]{width:100%;min-width:0;accent-color:var(--wire)}
+input:focus-visible,.btn:focus-visible,.chip:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.btns{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 6px}
+.btn,.chip{font:500 13px var(--sans);padding:7px 11px;border:1px solid var(--rule);border-radius:6px;background:var(--well);color:var(--ink);cursor:pointer}
+.btn:hover,.chip:hover{border-color:var(--gold)}
+.btn[aria-pressed="true"]{border-color:var(--gold);color:var(--gold)}
+.chip[aria-pressed="true"]{border-color:var(--accent);color:var(--accent)}
+.chip small{color:var(--ink-2);font-weight:400}
+.check{display:flex;gap:8px;align-items:center;font-size:14px;margin:6px 0}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px 16px;margin:12px 0 0}
+.stats dt{font-size:12px;color:var(--ink-2)}
+.stats dd{margin:0;font:500 15px var(--mono);font-variant-numeric:tabular-nums}
+.verdict{margin:12px 0 0;font-size:14.5px}
+.full{grid-column:1/-1}
+.note{font-size:13.5px;color:var(--ink-2);margin:8px 0 0;max-width:100ch}
+.note code{font-family:var(--mono);font-size:12.5px;color:var(--label-sm)}
+@media (max-width:900px){.app{grid-template-columns:minmax(0,1fr)}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+</head>
+<body>
+<div class="app">
+  <header>
+    <h1>Phase Coherence</h1>
+    <p class="lede">Each dot is a subgroup's class-solidarity phase Φ<sub>j</sub>. The Interference Engine injects identity offsets on each active axis, and the dots spread out: Φ<sub>load</sub> = 1 − |mean e<sup>iΦ</sup>| rises (eq. 1.11). Solidarity reaches τ only when the phases align. The Snubber Circuit must therefore include phase coherence: the deliberate alignment of resistance signals (<code style="font-family:var(--mono);font-size:13px">:14668</code>).</p>
+  </header>
+
+  <section class="card" aria-label="Phase circle">
+    <h2>Subgroup phases · <span id="yr" style="font-family:var(--mono);color:var(--ink)"></span></h2>
+    <svg id="circle" viewBox="0 0 440 440" role="img" aria-label="Subgroup phases on the unit circle and their mean vector"></svg>
+    <dl class="stats">
+      <div><dt>Φ<sub>load</sub></dt><dd id="r-phi"></dd></div>
+      <div><dt>Coherence r</dt><dd id="r-r"></dd></div>
+      <div><dt>τ needs r ≥</dt><dd id="r-tau"></dd></div>
+      <div><dt>Active axes</dt><dd id="r-ax"></dd></div>
+    </dl>
+    <p class="verdict" id="verdict"></p>
+  </section>
+
+  <section class="card" aria-label="Controls and time series">
+    <h2><span class="nt">Φ<sub>load</sub></span> over time</h2>
+    <svg id="series" viewBox="0 0 900 380" role="img" aria-label="Phase loading over time with the manuscript's ANES reference levels"></svg>
+    <div class="btns" role="group" aria-label="Identity axes" id="axes"></div>
+    <label class="check"><input type="checkbox" id="c-hist" checked> Follow history: switch each axis on at its date</label>
+    <div class="row"><label for="s-K"><i>K</i> phase coherence</label><input id="s-K" type="range" min="0" max="2" step="0.01"><output id="o-K" for="s-K"></output></div>
+    <div class="row"><label for="s-sig"><i>σ</i> natural drift</label><input id="s-sig" type="range" min="0" max="0.4" step="0.01"><output id="o-sig" for="s-sig"></output></div>
+    <div class="row"><label for="s-tau">τ coherence <i>r</i><sub>τ</sub></label><input id="s-tau" type="range" min="0.6" max="0.98" step="0.01"><output id="o-tau" for="s-tau"></output></div>
+    <div class="btns" role="group" aria-label="Engine">
+      <button class="btn" type="button" data-eng="0">Engine: static</button>
+      <button class="btn" type="button" data-eng="4">Engine: 4-yr carrier</button>
+      <button class="btn" type="button" data-eng="2">Engine: 2-yr carrier</button>
+    </div>
+    <div class="btns">
+      <button class="btn" type="button" id="b-play" aria-pressed="true">Pause</button>
+      <button class="btn" type="button" id="b-restart">Restart at 1960</button>
+    </div>
+  </section>
+
+  <section class="card full" aria-label="Summed solidarity wave">
+    <h2>The summed solidarity wave against <span class="nt">τ</span></h2>
+    <svg id="wave" viewBox="0 0 1200 260" role="img" aria-label="The sum of the subgroup waves over one cycle, with the tau band"></svg>
+    <p class="note">The thin lines are the subgroup waves cos(ωt + Φ<sub>j</sub>). Their average, in orange, has amplitude r = 1 − Φ<sub>load</sub>. Aligned phases add up; spread phases cancel. The crash condition is the zero-sequence case: all phases in step (<code>:1230</code>).</p>
+  </section>
+
+  <section class="card full" aria-label="Notes">
+    <h2>What the page assumes</h2>
+    <p class="note">From the manuscript: Φ<sub>load</sub> as circular dispersion, the Kuramoto order parameter (eqs. 1.11 and 8.17, <code>Paper/The_Original_Power.tex:2517</code>, <code>:7193</code>); the axis table and activation dates, gender 1972, nationality 1974, sexuality 1977, religion 1979 (<code>:7215</code>–<code>:7256</code>); the ANES calibration, Φ<sub>load</sub> ≈ 0.078 before 1964, ≈ 0.214 during activation, ≈ 0.403 after 1980 (<code>:2522</code>); the Engine as a phase-locked control system on the electoral clock, 24.1:1 identity-band power at the 4-year cycle and 12.8:1 at the 2-year cycle (<code>:14640</code>–<code>:14665</code>); phase coherence as part of the Snubber Circuit (<code>:14668</code>). The ability axis has no date in that list; the page uses the ADA, 1990, from the axis table.</p>
+    <p class="note">The model: 24 subgroups. Each phase is Φ<sub>j</sub> = θ<sub>j</sub> + Σ<sub>k</sub> a<sub>k</sub>u<sub>kj</sub>, with fixed random draws u<sub>kj</sub> in [−1, 1] per active axis (opposite signs drive subgroups into antagonism, as the manuscript defines). The base phases follow the Kuramoto equation dθ<sub>j</sub>/dt = ω<sub>j</sub> + K·r·sin(ψ − Φ<sub>j</sub>), where K is deliberate alignment and σ spreads the natural frequencies ω<sub>j</sub>. The page sets the axis amplitudes so that, with K = 0, the race axis alone gives Φ<sub>load</sub> = 0.078 and race plus the four 1965–1980 axes give 0.403, the manuscript's two ANES endpoints. With an electoral carrier on, the Engine redraws the offsets u<sub>kj</sub> at each election: a new set of wedge issues. The τ level is illustrative; at the default r<sub>τ</sub> = 0.90, the pre-1964 race-only state sits just above it, the kernel-breach condition of the civil-rights era.</p>
+  </section>
+</div>
+
+<script>
+(function(){
+'use strict';
+var $=function(id){return document.getElementById(id);};
+var N=24,DT=0.01,Y0=1960,Y1=2030;
+var AXES=[{k:'race',name:'Race',y:0},{k:'gender',name:'Gender',y:1972},{k:'nat',name:'Nationality',y:1974},{k:'sex',name:'Sexuality',y:1977},{k:'rel',name:'Religion',y:1979},{k:'abl',name:'Ability',y:1990}];
+var S={K:0,sig:0,tau:0.9,eng:4,hist:true};
+var st={t:Y0,theta:[],w:[],u:{},on:{},hist:[],play:true,amp:{},elections:[]};
+function rng(seed){return function(){seed|=0;seed=seed+0x6D2B79F5|0;var t=Math.imul(seed^seed>>>15,1|seed);t=t+Math.imul(t^t>>>7,61|t)^t;return ((t^t>>>14)>>>0)/4294967296;};}
+var R=rng(20260611);
+function draw(){var a=[];for(var j=0;j<N;j++)a.push(2*R()-1);return a;}
+function gauss(){var u=R()||1e-9,v=R();return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v);}
+function offs(on,amp,u){var o=[];for(var j=0;j<N;j++){var s=0;AXES.forEach(function(a){if(on[a.k])s+=amp[a.k]*u[a.k][j];});o.push(s);}return o;}
+function order(ph){var c=0,s=0;ph.forEach(function(p){c+=Math.cos(p);s+=Math.sin(p);});c/=ph.length;s/=ph.length;return {r:Math.hypot(c,s),psi:Math.atan2(s,c)};}
+function bisect(fn,target){var lo=0,hi=3;for(var i=0;i<60;i++){var m=(lo+hi)/2;if(fn(m)<target)lo=m;else hi=m;}return (lo+hi)/2;}
+/* calibrate amplitudes on the initial draws */
+AXES.forEach(function(a){st.u[a.k]=draw();});
+(function(){
+  var ar=bisect(function(x){var o=offs({race:1},{race:x},st.u);return 1-order(o).r;},0.078);
+  var an=bisect(function(x){var amp={race:ar,gender:x,nat:x,sex:x,rel:x};var o=offs({race:1,gender:1,nat:1,sex:1,rel:1},amp,st.u);return 1-order(o).r;},0.403);
+  st.amp={race:ar,gender:an,nat:an,sex:an,rel:an,abl:an};
+})();
+var U0=JSON.parse(JSON.stringify(st.u));
+function restart(){
+  R=rng(20260611);AXES.forEach(function(a){draw();});
+  st.u=JSON.parse(JSON.stringify(U0));st.t=Y0;st.hist=[];st.elections=[];st.theta=[];st.w=[];
+  for(var j=0;j<N;j++){st.theta.push(0);st.w.push(gauss());}
+  AXES.forEach(function(a){st.on[a.k]=S.hist?(a.y===0):!!st.on[a.k];});
+  if(S.hist)st.on.race=true;
+  st.lastE=Y0;
+}
+function phases(){var o=offs(st.on,st.amp,st.u);return st.theta.map(function(t,j){return t+o[j];});}
+function step(){
+  var ph=phases(),z=order(ph);
+  for(var j=0;j<N;j++)st.theta[j]+=DT*(S.sig*st.w[j]+S.K*z.r*Math.sin(z.psi-ph[j]));
+  var y0=st.t;st.t+=DT;
+  if(S.hist)AXES.forEach(function(a){if(a.y&&y0<a.y&&st.t>=a.y){st.on[a.k]=true;st.u[a.k]=draw();syncAxes();}});
+  if(S.eng>0){var ey=Math.floor(st.t/S.eng)*S.eng;if(ey>st.lastE&&ey>Y0){st.lastE=ey;st.elections.push(ey);AXES.forEach(function(a){if(st.on[a.k])st.u[a.k]=draw();});}}
+}
+function tick(){
+  if(st.play&&st.t<Y1){for(var k=0;k<4;k++){step();}var z=order(phases());st.hist.push([st.t,1-z.r]);render();}
+  requestAnimationFrame(tick);
+}
+/* ---- render ---- */
+function circle(ph,z){
+  var C=220,Rr=170,h='<defs><filter id="gl" filterUnits="userSpaceOnUse" x="0" y="0" width="440" height="440"><feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="#000" flood-opacity=".5"/><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>';
+  h+='<circle cx="'+C+'" cy="'+C+'" r="'+Rr+'" fill="none" style="stroke:var(--rule)" stroke-width="1.6"/>';
+  h+='<circle cx="'+C+'" cy="'+C+'" r="'+(Rr*S.tau).toFixed(1)+'" fill="none" style="stroke:var(--tau)" stroke-width="1.6" stroke-dasharray="6 5"/>';
+  h+='<text x="'+(C+Rr*S.tau*0.71+6).toFixed(1)+'" y="'+(C-Rr*S.tau*0.71-6).toFixed(1)+'" font-size="13" style="fill:var(--tau)">τ</text>';
+  h+='<line x1="'+(C-Rr-10)+'" y1="'+C+'" x2="'+(C+Rr+10)+'" y2="'+C+'" style="stroke:var(--rule)" stroke-opacity=".5"/><line x1="'+C+'" y1="'+(C-Rr-10)+'" x2="'+C+'" y2="'+(C+Rr+10)+'" style="stroke:var(--rule)" stroke-opacity=".5"/>';
+  h+='<text x="'+(C+Rr+14)+'" y="'+(C+4)+'" font-size="12" style="fill:var(--label-sm)">0</text><text x="'+(C-Rr-14)+'" y="'+(C+4)+'" text-anchor="end" font-size="12" style="fill:var(--label-sm)">π</text>';
+  ph.forEach(function(p){h+='<circle cx="'+(C+Rr*Math.cos(p)).toFixed(1)+'" cy="'+(C-Rr*Math.sin(p)).toFixed(1)+'" r="6.5" style="fill:var(--teal)" fill-opacity=".85"/>';});
+  var tx=C+Rr*z.r*Math.cos(z.psi),ty=C-Rr*z.r*Math.sin(z.psi),a=Math.atan2(ty-C,tx-C),hl=14;
+  var col=z.r>=S.tau?'var(--tau)':'var(--accent)';
+  h+='<g filter="url(#gl)"><line x1="'+C+'" y1="'+C+'" x2="'+(tx-hl*Math.cos(a)).toFixed(1)+'" y2="'+(ty-hl*Math.sin(a)).toFixed(1)+'" style="stroke:'+col+'" stroke-width="5" stroke-linecap="round"/>'+
+    '<path d="M'+tx.toFixed(1)+' '+ty.toFixed(1)+' L'+(tx-hl*Math.cos(a)+7*Math.sin(a)).toFixed(1)+' '+(ty-hl*Math.sin(a)-7*Math.cos(a)).toFixed(1)+' L'+(tx-hl*Math.cos(a)-7*Math.sin(a)).toFixed(1)+' '+(ty-hl*Math.sin(a)+7*Math.cos(a)).toFixed(1)+'Z" style="fill:'+col+'"/></g>';
+  h+='<circle cx="'+C+'" cy="'+C+'" r="4" style="fill:var(--wire)"/>';
+  h+='<text x="14" y="430" font-size="12" style="fill:var(--ink-2)">arrow: mean vector, length r</text>';
+  $('circle').innerHTML=h;
+}
+var ANES=[[1960,1964,0.078,'ANES pre-1964'],[1965,1980,0.214,'activation'],[1980,1990,0.403,'post-1980']];
+function series(){
+  var W=900,H=380,L=56,Rr=20,T=20,B=40;
+  function X(y){return L+(y-Y0)/(Y1-Y0)*(W-L-Rr);}
+  function Y(v){return T+(1-v)*(H-T-B);}
+  var h='';
+  [0,0.25,0.5,0.75,1].forEach(function(v){h+='<line x1="'+L+'" y1="'+Y(v)+'" x2="'+(W-Rr)+'" y2="'+Y(v)+'" style="stroke:var(--rule)" stroke-opacity=".3"/><text x="'+(L-8)+'" y="'+(Y(v)+4)+'" text-anchor="end" font-size="12" style="fill:var(--label-sm)">'+v.toFixed(2)+'</text>';});
+  [1960,1970,1980,1990,2000,2010,2020,2030].forEach(function(y){h+='<text x="'+X(y)+'" y="'+(H-B+20)+'" text-anchor="middle" font-size="12" style="fill:var(--label-sm)">'+y+'</text>';});
+  var ty=1-S.tau;h+='<rect x="'+L+'" y="'+Y(ty)+'" width="'+(W-L-Rr)+'" height="'+(Y(0)-Y(ty))+'" style="fill:var(--tau)" fill-opacity=".1"/><text x="'+(W-Rr-6)+'" y="'+(Y(0)-6)+'" text-anchor="end" font-size="12" style="fill:var(--tau)">τ zone: Φload ≤ '+ty.toFixed(2)+'</text>';
+  st.elections.forEach(function(e){h+='<line x1="'+X(e).toFixed(1)+'" y1="'+(H-B)+'" x2="'+X(e).toFixed(1)+'" y2="'+(H-B-8)+'" style="stroke:var(--gold)" stroke-width="1.5"/>';});
+  AXES.forEach(function(a){if(a.y&&st.on[a.k]&&S.hist&&a.y<=st.t){h+='<line x1="'+X(a.y)+'" y1="'+T+'" x2="'+X(a.y)+'" y2="'+(H-B)+'" style="stroke:var(--accent)" stroke-opacity=".35" stroke-dasharray="3 4"/>';}});
+  ANES.forEach(function(e){h+='<line x1="'+X(e[0])+'" y1="'+Y(e[2])+'" x2="'+X(e[1])+'" y2="'+Y(e[2])+'" style="stroke:var(--wire)" stroke-width="4" stroke-opacity=".55"/>';});
+  h+='<text x="'+X(1981)+'" y="'+(Y(0.403)-8)+'" font-size="12" style="fill:var(--wire)" fill-opacity=".8">ANES reference</text>';
+  var d='';st.hist.forEach(function(p,k){d+=(k?'L':'M')+X(p[0]).toFixed(1)+' '+Y(p[1]).toFixed(1);});
+  h+='<path d="'+d+'" fill="none" style="stroke:var(--accent)" stroke-width="2.2"/>';
+  h+='<text x="'+L+'" y="'+(H-4)+'" font-size="12" style="fill:var(--ink-2)">gold ticks: elections that redraw the offsets · dotted: axis switched on</text>';
+  $('series').innerHTML=h;
+}
+function wave(ph,z){
+  var W=1200,H=260,L=40,Rr=20,mid=130,A=100,h='',n=200;
+  h+='<rect x="'+L+'" y="'+(mid-A)+'" width="'+(W-L-Rr)+'" height="'+(A*(1-S.tau)).toFixed(1)+'" style="fill:var(--tau)" fill-opacity=".12"/>';
+  h+='<rect x="'+L+'" y="'+(mid+A*S.tau).toFixed(1)+'" width="'+(W-L-Rr)+'" height="'+(A*(1-S.tau)).toFixed(1)+'" style="fill:var(--tau)" fill-opacity=".12"/>';
+  [S.tau,-S.tau].forEach(function(v){h+='<line x1="'+L+'" y1="'+(mid-A*v).toFixed(1)+'" x2="'+(W-Rr)+'" y2="'+(mid-A*v).toFixed(1)+'" style="stroke:var(--tau)" stroke-width="1.4" stroke-dasharray="6 5"/>';});
+  h+='<line x1="'+L+'" y1="'+mid+'" x2="'+(W-Rr)+'" y2="'+mid+'" style="stroke:var(--wire)" stroke-width="1.2"/>';
+  function X(u){return L+u/(4*Math.PI)*(W-L-Rr);}
+  ph.forEach(function(p){var d='';for(var i=0;i<=n;i++){var u=4*Math.PI*i/n;d+=(i?'L':'M')+X(u).toFixed(1)+' '+(mid-A*Math.cos(u+p)).toFixed(1);}h+='<path d="'+d+'" fill="none" style="stroke:var(--teal)" stroke-opacity=".22" stroke-width="1"/>';});
+  var d='';for(var i=0;i<=n;i++){var u=4*Math.PI*i/n,s=0;ph.forEach(function(p){s+=Math.cos(u+p);});d+=(i?'L':'M')+X(u).toFixed(1)+' '+(mid-A*s/N).toFixed(1);}
+  h+='<path d="'+d+'" fill="none" style="stroke:'+(z.r>=S.tau?'var(--tau)':'var(--accent)')+'" stroke-width="3.2"/>';
+  h+='<text x="'+(W-Rr)+'" y="'+(mid-A*S.tau-8).toFixed(1)+'" text-anchor="end" font-size="12" style="fill:var(--tau)">τ</text>';
+  $('wave').innerHTML=h;
+}
+function render(){
+  var ph=phases(),z=order(ph);
+  circle(ph,z);series();wave(ph,z);
+  $('yr').textContent=Math.floor(st.t);
+  $('r-phi').textContent=(1-z.r).toFixed(3);$('r-r').textContent=z.r.toFixed(3);$('r-tau').textContent=S.tau.toFixed(2);
+  var n=0;AXES.forEach(function(a){if(st.on[a.k])n++;});$('r-ax').textContent=n;
+  var t;
+  if(z.r>=S.tau)t='Coherent: the phases are aligned enough that the summed signal reaches τ. This is the kernel-threat condition.';
+  else if(S.K===0)t='Kernel-safe. The injected offsets cancel '+Math.round(100*(1-z.r))+'% of the solidarity signal, and nothing pulls the phases back together. Raise K to model deliberate alignment.';
+  else t='Kernel-safe for now: alignment K pulls the phases together, and the Engine re-scatters them'+(S.eng?' every '+S.eng+' years':' only when an axis switches on')+'.';
+  $('verdict').textContent=t;
+  $('b-restart').disabled=false;
+}
+function syncAxes(){
+  var h='';AXES.forEach(function(a){h+='<button class="chip" type="button" data-ax="'+a.k+'" aria-pressed="'+(!!st.on[a.k])+'">'+a.name+(a.y?' <small>'+a.y+'</small>':'')+'</button>';});
+  $('axes').innerHTML=h;
+  Array.prototype.forEach.call(document.querySelectorAll('[data-ax]'),function(b){b.addEventListener('click',function(){var k=b.getAttribute('data-ax');st.on[k]=!st.on[k];if(st.on[k])st.u[k]=draw();S.hist=false;$('c-hist').checked=false;syncAxes();if(!st.play)render();});});
+}
+function sync(){
+  [['K',2],['sig',2],['tau',2]].forEach(function(k){$('s-'+k[0]).value=S[k[0]];$('o-'+k[0]).textContent=S[k[0]].toFixed(k[1]);});
+  Array.prototype.forEach.call(document.querySelectorAll('[data-eng]'),function(b){b.setAttribute('aria-pressed',String(+b.getAttribute('data-eng')===S.eng));});
+}
+['K','sig','tau'].forEach(function(k){$('s-'+k).addEventListener('input',function(e){S[k]=+e.target.value;sync();if(!st.play)render();});});
+Array.prototype.forEach.call(document.querySelectorAll('[data-eng]'),function(b){b.addEventListener('click',function(){S.eng=+b.getAttribute('data-eng');st.lastE=Math.floor(st.t/(S.eng||1))*(S.eng||1);sync();});});
+$('c-hist').addEventListener('change',function(){S.hist=this.checked;if(S.hist){restart();syncAxes();}});
+$('b-play').addEventListener('click',function(){st.play=!st.play;this.textContent=st.play?'Pause':'Play';this.setAttribute('aria-pressed',String(st.play));});
+$('b-restart').addEventListener('click',function(){restart();syncAxes();render();if(!st.play)$('b-play').click();});
+sync();restart();syncAxes();render();requestAnimationFrame(tick);
+})();
+</script>
+</body>
+</html>

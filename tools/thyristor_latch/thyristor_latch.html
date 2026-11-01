@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Thyristor Latch</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=STIX+Two+Text:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#0D1B2A; --panel:#132538; --well:#081421;
+  --wire:#ECE7DC; --ink:#ECE7DC; --ink-2:#A9B6C4;
+  --rule:#8A6A45; --label-sm:#B8956A;
+  --green:#7CC08A; --red:#E0604A; --teal:#4CC2C2; --gold:#D4A84B; --accent:#E08A3C; --dim:#4A5566;
+  --sans:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,Menlo,Consolas,monospace;
+  --math:'STIX Two Text','Cambria Math','Times New Roman',serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.55 var(--sans);padding-block:22px 48px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.app{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px 28px;align-items:start}
+header{grid-column:1/-1}
+h1{font:600 24px/1.2 var(--sans);margin:0 0 6px;letter-spacing:-.01em}
+.lede{margin:0;color:var(--ink-2);max-width:84ch}
+.card{background:var(--panel);border:1px solid var(--rule);border-radius:10px;padding:16px 18px;min-width:0}
+h2{font:600 12px/1.3 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--label-sm);margin:0 0 10px}
+svg{display:block;width:100%;height:auto}
+svg text{font-family:var(--mono)}
+.m{font-family:var(--math);font-style:italic}
+.row{display:grid;grid-template-columns:150px minmax(0,1fr) 62px;gap:10px;align-items:center;margin:7px 0}
+.row label{font:400 14px var(--sans)}
+.row label i{font-family:var(--math);font-size:16px}
+.row output{font:500 13px var(--mono);text-align:right;font-variant-numeric:tabular-nums}
+input[type=range]{width:100%;min-width:0;accent-color:var(--wire)}
+input[type=range]:focus-visible,.btn:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.btns{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 4px}
+.btn{font:500 13px var(--sans);padding:7px 11px;border:1px solid var(--rule);border-radius:6px;background:var(--well);color:var(--ink);cursor:pointer}
+.btn:hover{border-color:var(--gold)}
+.btn.gate{border-color:var(--red);color:var(--red)}
+.badge{display:inline-block;font:600 13px var(--mono);letter-spacing:.06em;padding:4px 10px;border-radius:5px;border:1px solid}
+.badge.on{color:var(--red);border-color:var(--red)}
+.badge.off{color:var(--teal);border-color:var(--teal)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px 16px;margin:12px 0 0}
+.stats dt{font-size:12px;color:var(--ink-2)}
+.stats dd{margin:0;font:500 15px var(--mono);font-variant-numeric:tabular-nums}
+.verdict{margin:12px 0 0;font-size:14.5px}
+.full{grid-column:1/-1}
+.note{font-size:13.5px;color:var(--ink-2);margin:8px 0 0;max-width:100ch}
+.note code{font-family:var(--mono);font-size:12.5px;color:var(--label-sm)}
+.flow{animation:flow 1s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-28}}
+@media (prefers-reduced-motion:reduce){.flow{animation:none}}
+@media (max-width:900px){.app{grid-template-columns:minmax(0,1fr)}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+</head>
+<body>
+<div class="app">
+  <header>
+    <h1>Thyristor Latch</h1>
+    <p class="lede">A thyristor stays on after its gate pulse ends, as long as the current through it stays above the holding current I<sub>H</sub>. The Elite's extraction loop latches the same way: extraction funds the cultural field B (eq. 0.1a), and the field keeps the extraction flowing. When the Out-group routes enough of its energy through its own grid, the current falls below I<sub>H</sub> and the machine powers down (Parasitic System Collapse Theorem).</p>
+  </header>
+
+  <section class="card" aria-label="Circuit and controls">
+    <h2>The self-exciting loop</h2>
+    <svg id="loop" viewBox="0 0 640 330" role="img" aria-label="The Out-group's supply feeds extraction through the Elite's latch; a feedback tap funds the field; a snubber grid diverts a share of the supply"></svg>
+    <div class="row"><label for="s-s"><i>s</i> routed to own grid</label><input id="s-s" type="range" min="0" max="1" step="0.01"><output id="o-s" for="s-s"></output></div>
+    <div class="row"><label for="s-eta"><i>η</i> feedback efficiency</label><input id="s-eta" type="range" min="0.4" max="2" step="0.01"><output id="o-eta" for="s-eta"></output></div>
+    <div class="row"><label for="s-lam"><i>λ</i> field decay / yr</label><input id="s-lam" type="range" min="0.1" max="0.6" step="0.01"><output id="o-lam" for="s-lam"></output></div>
+    <div class="btns">
+      <button class="btn gate" type="button" id="b-gate">Gate pulse (manufactured crisis)</button>
+      <button class="btn" type="button" id="b-play" aria-pressed="true">Pause</button>
+      <button class="btn" type="button" id="b-reset">Reset</button>
+    </div>
+    <p class="note">Try it: raise <i>s</i> slowly until the latch releases, then lower it again. The machine stays off until the Elite fire the gate, and the gate fails while <i>s</i> stays above the critical share.</p>
+  </section>
+
+  <section class="card" aria-label="Current and field over time">
+    <h2>Current through the latch <span class="badge on" id="badge" style="margin-left:8px">LATCHED</span></h2>
+    <svg id="strip" viewBox="0 0 900 470" role="img" aria-label="Extraction current and holding current over the last 60 years"></svg>
+    <dl class="stats">
+      <div><dt>Current <i>I</i></dt><dd id="r-I"></dd></div>
+      <div><dt>Holding <i>I</i><sub>H</sub></dt><dd id="r-IH"></dd></div>
+      <div><dt>Field <i>B</i></dt><dd id="r-B"></dd></div>
+      <div><dt>Critical share <i>s</i>*</dt><dd id="r-sc"></dd></div>
+    </dl>
+    <p class="verdict" id="verdict"></p>
+  </section>
+
+  <section class="card full" aria-label="Bifurcation diagram">
+    <h2>Where the latch can hold</h2>
+    <svg id="bif" viewBox="0 0 1200 360" role="img" aria-label="Steady-state field B against the routed share s: the on branch, the unstable threshold, and the off state"></svg>
+    <p class="note">Solid lines are states the loop can rest in; the dashed line is the threshold between them. Left of s*, both the on state and the off state are stable, so history decides which one holds (hysteresis). Right of s*, only the off state exists: no gate pulse can latch the machine.</p>
+  </section>
+
+  <section class="card full" aria-label="Notes">
+    <h2>What the page assumes</h2>
+    <p class="note">From the manuscript: the self-exciting field, ∂B/∂t = η·(extraction) − λB (eq. 0.1a, <code>Paper/The_Original_Power.tex:474</code>); the reinforcing extraction loop and the Parasitic System Collapse Theorem, where routing energy through local, open-source grids severs V<sub>cc</sub> and the holding current I<sub>H</sub> drops (<code>:14412</code>–<code>:14440</code>); the enforcement nodes as the holding current of the extraction machine (<code>:12222</code>).</p>
+    <p class="note">The page adds one assumption. Eq. 0.1a is linear: with a fixed extraction term, the field settles at η·E/λ and reaches zero only when extraction stops completely. A latch needs feedback in the other direction too. Here, extraction depends on the field, because compliance depends on it: I = (1 − s)·E<sub>0</sub>·B²/(B² + K²). With that, the loop has a threshold. The on state exists only while η(1 − s)E<sub>0</sub> ≥ 2λK, so the critical share is s* = 1 − 2λK/(ηE<sub>0</sub>), and the holding current is I<sub>H</sub> = λK/η, the current at the fold. E<sub>0</sub> = 1 and K = 1; time is in years. The values are illustrative.</p>
+  </section>
+</div>
+
+<script>
+(function(){
+'use strict';
+var $=function(id){return document.getElementById(id);};
+var E0=1,K=1,DT=0.02,WIN=60,GATE=2.6;
+var S={s:0.1,eta:1,lam:0.3};
+var st={B:0,t:0,hist:[],gate:0,play:true,pulses:[]};
+function f(v,d){return v.toFixed(d==null?2:d);}
+function g(B){return B*B/(B*B+K*K);}
+function a(){return S.eta*(1-S.s)*E0;}
+function onB(){var r=a()/S.lam,disc=r*r-4*K*K;return disc>=0?(r+Math.sqrt(disc))/2:null;}
+function midB(){var r=a()/S.lam,disc=r*r-4*K*K;return disc>=0?(r-Math.sqrt(disc))/2:null;}
+function latched(){var m=midB();return m!=null&&st.B>m;}
+function IH(){return S.lam*K/S.eta;}
+function scrit(){return Math.max(0,1-2*S.lam*K/(S.eta*E0));}
+function cur(B){return (1-S.s)*E0*g(B);}
+function reset(){st.B=onB()||0;st.t=0;st.hist=[];st.pulses=[];for(var k=0;k<=WIN/DT/5;k++)st.hist.push({t:-WIN+k*DT*5,I:cur(st.B),B:st.B});}
+function step(){
+  var gin=st.gate>0?GATE/0.5:0;if(st.gate>0)st.gate-=DT;
+  var dB=S.eta*cur(st.B)+gin-S.lam*st.B;
+  st.B=Math.max(0,st.B+DT*dB);st.t+=DT;
+}
+var acc=0;
+function tick(){
+  if(st.play){for(var k=0;k<6;k++){step();acc++;if(acc%5===0){st.hist.push({t:st.t,I:cur(st.B),B:st.B});}}
+    while(st.hist.length&&st.hist[0].t<st.t-WIN)st.hist.shift();
+    while(st.pulses.length&&st.pulses[0]<st.t-WIN)st.pulses.shift();
+    draw();}
+  requestAnimationFrame(tick);
+}
+/* ---- loop schematic ---- */
+function loop(){
+  var I=cur(st.B),on=latched(),sp=Math.max(0.25,3-2.5*I);
+  var h='';
+  h+='<defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" orient="auto"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--wire)"/></marker></defs>';
+  /* supply rail */
+  h+='<rect x="24" y="130" width="120" height="70" rx="8" fill="none" style="stroke:var(--teal)" stroke-width="2"/><text x="84" y="160" text-anchor="middle" font-size="13" style="fill:var(--teal)">Out-group</text><text x="84" y="180" text-anchor="middle" font-size="13" style="fill:var(--teal)">V_cc rail</text>';
+  /* main path to SCR */
+  var w=1.5+6*I;
+  h+='<path d="M144 165 H300" fill="none" style="stroke:var(--accent);animation-duration:'+sp.toFixed(2)+'s" stroke-width="'+w.toFixed(1)+'" stroke-dasharray="14 14" class="flow"/>';
+  /* SCR symbol at 300..360 */
+  h+='<path d="M300 140 L300 190 L345 165 Z" style="fill:'+(on?'var(--red)':'var(--dim)')+'"/><line x1="345" y1="138" x2="345" y2="192" style="stroke:'+(on?'var(--red)':'var(--dim)')+'" stroke-width="4"/><line x1="345" y1="165" x2="372" y2="190" style="stroke:var(--gold)" stroke-width="3"/>';
+  h+='<text x="322" y="126" text-anchor="middle" font-size="13" style="fill:var(--red)">Elite latch</text><text x="384" y="208" font-size="13" style="fill:var(--gold)">gate</text>';
+  h+='<path d="M345 165 H520" fill="none" style="stroke:var(--accent)" stroke-width="'+w.toFixed(1)+'" stroke-dasharray="14 14" class="flow"/>';
+  h+='<rect x="520" y="130" width="100" height="70" rx="8" fill="none" style="stroke:var(--red)" stroke-width="2"/><text x="570" y="160" text-anchor="middle" font-size="13" style="fill:var(--red)">extracted</text><text x="570" y="180" text-anchor="middle" font-size="13" style="fill:var(--red)">wealth</text>';
+  /* feedback tap to field */
+  h+='<path d="M570 130 V60 H190" fill="none" style="stroke:var(--wire)" stroke-width="2" marker-end="url(#ar)"/><text x="400" y="50" text-anchor="middle" font-size="13" style="fill:var(--wire)">feedback tap η: media, campaigns, policing</text>';
+  var br=12+18*Math.min(1,st.B/3.2);
+  h+='<circle cx="160" cy="60" r="'+br.toFixed(1)+'" fill="none" style="stroke:var(--gold)" stroke-width="2.5"/><text x="160" y="66" text-anchor="middle" class="m" font-size="18" style="fill:var(--gold)">B</text>';
+  h+='<path d="M'+(160+br*0.7).toFixed(1)+' '+(60+br*0.7).toFixed(1)+' C 150 230 330 240 368 194" fill="none" style="stroke:var(--gold)" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#ar)"/>';
+  h+='<text x="40" y="20" font-size="12" style="fill:var(--ink-2)">field holds compliance</text>';
+  /* snubber diversion */
+  var ws=1.5+6*S.s;
+  h+='<path d="M84 200 V280 H300" fill="none" style="stroke:var(--teal)" stroke-width="'+ws.toFixed(1)+'" stroke-dasharray="14 14" class="flow"/>';
+  h+='<rect x="300" y="250" width="200" height="60" rx="8" fill="none" style="stroke:var(--teal)" stroke-width="2"/><text x="400" y="276" text-anchor="middle" font-size="13" style="fill:var(--teal)">snubber grid</text><text x="400" y="296" text-anchor="middle" font-size="12" style="fill:var(--ink-2)">share s = '+Math.round(100*S.s)+'%</text>';
+  $('loop').innerHTML=h;
+}
+/* ---- strip chart ---- */
+function strip(){
+  var W=900,H=470,L=60,Rr=20,T=24,mid=250,B2=40;
+  var Imax=1.05;
+  function X(t){return L+(t-(st.t-WIN))/WIN*(W-L-Rr);}
+  function YI(I){return T+(Imax-I)/Imax*(mid-T-20);}
+  var Bmax=Math.max(3.5,(onB()||0)*1.1);
+  function YB(b){return mid+20+(Bmax-b)/Bmax*(H-B2-mid-20);}
+  var h='<text x="'+L+'" y="'+(T-6)+'" font-size="13" style="fill:var(--label-sm)">extraction current I</text>';
+  h+='<text x="'+L+'" y="'+(mid+14)+'" font-size="13" style="fill:var(--label-sm)">cultural field B</text>';
+  h+='<line x1="'+L+'" y1="'+YI(0)+'" x2="'+(W-Rr)+'" y2="'+YI(0)+'" style="stroke:var(--wire)" stroke-width="1.4"/>';
+  h+='<line x1="'+L+'" y1="'+YB(0)+'" x2="'+(W-Rr)+'" y2="'+YB(0)+'" style="stroke:var(--wire)" stroke-width="1.4"/>';
+  var ih=IH();h+='<line x1="'+L+'" y1="'+YI(ih).toFixed(1)+'" x2="'+(W-Rr)+'" y2="'+YI(ih).toFixed(1)+'" style="stroke:var(--red)" stroke-width="1.6" stroke-dasharray="8 5"/><text x="'+(W-Rr)+'" y="'+(YI(ih)-6).toFixed(1)+'" text-anchor="end" font-size="13" style="fill:var(--red)">I_H = '+f(ih)+'</text>';
+  var mb=midB();if(mb!=null){h+='<line x1="'+L+'" y1="'+YB(mb).toFixed(1)+'" x2="'+(W-Rr)+'" y2="'+YB(mb).toFixed(1)+'" style="stroke:var(--gold)" stroke-width="1.2" stroke-dasharray="4 5" stroke-opacity=".7"/><text x="'+(W-Rr)+'" y="'+(YB(mb)-5).toFixed(1)+'" text-anchor="end" font-size="12" style="fill:var(--gold)">latch threshold</text>';}
+  st.pulses.forEach(function(p){h+='<line x1="'+X(p).toFixed(1)+'" y1="'+T+'" x2="'+X(p).toFixed(1)+'" y2="'+YB(0)+'" style="stroke:var(--red)" stroke-opacity=".5"/><text x="'+(X(p)+4).toFixed(1)+'" y="'+(T+12)+'" font-size="11" style="fill:var(--red)">gate</text>';});
+  var dI='',dB='';st.hist.forEach(function(p,k){dI+=(k?'L':'M')+X(p.t).toFixed(1)+' '+YI(p.I).toFixed(1);dB+=(k?'L':'M')+X(p.t).toFixed(1)+' '+YB(p.B).toFixed(1);});
+  h+='<path d="'+dI+'" fill="none" style="stroke:var(--accent)" stroke-width="2.6"/><path d="'+dB+'" fill="none" style="stroke:var(--gold)" stroke-width="2.2"/>';
+  for(var y=0;y<=WIN;y+=10){var xx=X(st.t-WIN+y);h+='<text x="'+xx.toFixed(1)+'" y="'+(H-14)+'" text-anchor="middle" font-size="12" style="fill:var(--label-sm)">'+(y-WIN===0?'now':(y-WIN)+' yr')+'</text>';}
+  $('strip').innerHTML=h;
+}
+/* ---- bifurcation ---- */
+function bif(){
+  var W=1200,H=360,L=70,Rr=30,T=24,B=50,Bmax=Math.max(4,S.eta*E0/S.lam*1.05);
+  function X(s){return L+s*(W-L-Rr);}
+  function Y(b){return T+(Bmax-b)/Bmax*(H-T-B);}
+  var sc=scrit(),h='';
+  h+='<rect x="'+X(sc).toFixed(1)+'" y="'+T+'" width="'+(X(1)-X(sc)).toFixed(1)+'" height="'+(H-T-B)+'" style="fill:var(--teal)" fill-opacity=".08"/>';
+  h+='<text x="'+(X(sc)+10).toFixed(1)+'" y="'+(T+18)+'" font-size="13" style="fill:var(--teal)">s &gt; s*: the latch cannot hold</text>';
+  h+='<line x1="'+X(sc).toFixed(1)+'" y1="'+T+'" x2="'+X(sc).toFixed(1)+'" y2="'+(H-B)+'" style="stroke:var(--teal)" stroke-width="1.6" stroke-dasharray="6 4"/><text x="'+X(sc).toFixed(1)+'" y="'+(H-B+36)+'" text-anchor="middle" font-size="13" style="fill:var(--teal)">s* = '+f(sc)+'</text>';
+  [0,0.2,0.4,0.6,0.8,1].forEach(function(s){h+='<text x="'+X(s)+'" y="'+(H-B+18)+'" text-anchor="middle" font-size="12" style="fill:var(--label-sm)">'+s.toFixed(1)+'</text>';});
+  h+='<text x="'+(W-Rr)+'" y="'+(H-6)+'" text-anchor="end" font-size="12" style="fill:var(--label-sm)">share s routed through the Out-group’s own grid</text>';
+  h+='<text x="'+(L-10)+'" y="'+(T+10)+'" text-anchor="end" class="m" font-size="18" style="fill:var(--gold)">B</text>';
+  var up='',dn='';for(var k=0;k<=400;k++){var s=sc*k/400,r=S.eta*(1-s)*E0/S.lam,d=Math.max(0,r*r-4*K*K);up+=(k?'L':'M')+X(s).toFixed(1)+' '+Y((r+Math.sqrt(d))/2).toFixed(1);dn+=(k?'L':'M')+X(s).toFixed(1)+' '+Y((r-Math.sqrt(d))/2).toFixed(1);}
+  h+='<path d="'+up+'" fill="none" style="stroke:var(--red)" stroke-width="3"/><path d="'+dn+'" fill="none" style="stroke:var(--gold)" stroke-width="2" stroke-dasharray="7 5"/>';
+  h+='<line x1="'+X(0)+'" y1="'+Y(0)+'" x2="'+X(1)+'" y2="'+Y(0)+'" style="stroke:var(--teal)" stroke-width="3"/>';
+  h+='<text x="'+(X(0)+8)+'" y="'+(Y(onB0())-10).toFixed(1)+'" font-size="13" style="fill:var(--red)">on: latched</text><text x="'+(X(0)+8)+'" y="'+(Y(0)-8)+'" font-size="13" style="fill:var(--teal)">off: powered down</text>';
+  h+='<circle cx="'+X(S.s).toFixed(1)+'" cy="'+Y(Math.min(st.B,Bmax)).toFixed(1)+'" r="8" style="fill:var(--accent);stroke:var(--wire)" stroke-width="2"/>';
+  $('bif').innerHTML=h;
+}
+function onB0(){var r=S.eta*E0/S.lam,d=Math.max(0,r*r-4*K*K);return (r+Math.sqrt(d))/2;}
+function draw(){
+  loop();strip();bif();
+  var I=cur(st.B),on=latched();
+  $('badge').textContent=on?'LATCHED':'RELEASED';$('badge').className='badge '+(on?'on':'off');
+  $('r-I').textContent=f(I);$('r-IH').textContent=f(IH());$('r-B').textContent=f(st.B);$('r-sc').textContent=f(scrit());
+  var t;
+  if(on)t='The field is above the latch threshold and the current stays above I_H, so the latch holds. The field the extraction funds keeps the extraction flowing.';
+  else if(S.s>scrit())t='Released. With '+Math.round(100*S.s)+'% of the supply on the Out-group’s own grid, no on state exists: a gate pulse lifts the field for a moment, and then it decays.';
+  else t='Released, and the off state holds even though s is below s*. The machine stays down until the Elite fire the gate hard enough to cross the latch threshold.';
+  $('verdict').textContent=t;
+}
+function sync(){[['s',2],['eta',2],['lam',2]].forEach(function(k){$('s-'+k[0]).value=S[k[0]];$('o-'+k[0]).textContent=f(S[k[0]],k[1]);});}
+['s','eta','lam'].forEach(function(k){$('s-'+k).addEventListener('input',function(e){S[k]=+e.target.value;sync();if(!st.play)draw();});});
+$('b-gate').addEventListener('click',function(){st.gate=0.5;st.pulses.push(st.t);if(!st.play){for(var k=0;k<60;k++)step();st.hist.push({t:st.t,I:cur(st.B),B:st.B});draw();}});
+$('b-play').addEventListener('click',function(){st.play=!st.play;this.textContent=st.play?'Pause':'Play';this.setAttribute('aria-pressed',String(st.play));});
+$('b-reset').addEventListener('click',function(){S={s:0.1,eta:1,lam:0.3};sync();reset();draw();});
+sync();reset();draw();requestAnimationFrame(tick);
+})();
+</script>
+</body>
+</html>
