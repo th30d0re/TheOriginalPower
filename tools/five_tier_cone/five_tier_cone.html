@@ -148,6 +148,16 @@ function visible(){
     if(!cov)v++;}
   return v/n;
 }
+/* light from straight above: every tier casts a shadow on the planes below it.
+   Shadows are on top faces, so they show only when the observer looks from above (el > 0);
+   from below, the observer sees the darker undersides instead. */
+function shadows(zp,cid,cx,cy,rx,ry,se){
+  if(S.el<=0.5)return '';
+  var g='<clipPath id="'+cid+'"><ellipse cx="'+cx.toFixed(1)+'" cy="'+cy.toFixed(1)+'" rx="'+rx.toFixed(1)+'" ry="'+ry.toFixed(1)+'"/></clipPath><g clip-path="url(#'+cid+')" opacity=".42">';
+  TIERS.forEach(function(t){if(t.z<=zp+1e-6)return;var c=ctr(t),p=proj(c[0],c[1],zp);
+    g+='<ellipse cx="'+p.x.toFixed(1)+'" cy="'+p.y.toFixed(1)+'" rx="'+(t.r*SC).toFixed(1)+'" ry="'+Math.max(0.8,t.r*SC*se).toFixed(1)+'" style="fill:#000"/>';});
+  return g+'</g>';
+}
 function draw(){
   var se=Math.abs(Math.sin(S.el*D2R)),h='';
   h+='<defs><filter id="gl" filterUnits="userSpaceOnUse" x="0" y="0" width="720" height="560"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>';
@@ -159,13 +169,15 @@ function draw(){
   /* items with depth */
   var items=[];
   var bc=proj(0,0,0);
-  items.push({d:bc.d,svg:'<ellipse cx="'+bc.x.toFixed(1)+'" cy="'+bc.y.toFixed(1)+'" rx="'+(RB*SC).toFixed(1)+'" ry="'+Math.max(0.8,RB*SC*se).toFixed(1)+'" style="fill:var(--green);stroke:var(--green)" fill-opacity=".10" stroke-width="2" stroke-dasharray="7 5"/>'+
+  items.push({d:bc.d,svg:'<ellipse cx="'+bc.x.toFixed(1)+'" cy="'+bc.y.toFixed(1)+'" rx="'+(RB*SC).toFixed(1)+'" ry="'+Math.max(0.8,RB*SC*se).toFixed(1)+'" style="fill:var(--green);stroke:var(--green)" fill-opacity=".10" stroke-width="2" stroke-dasharray="7 5"/>'+shadows(0,'cp-O',bc.x,bc.y,RB*SC,Math.max(0.8,RB*SC*se),se)+
     '<text x="'+(bc.x+RB*SC*0.72).toFixed(1)+'" y="'+(bc.y+Math.max(14,RB*SC*se*0.72)+4).toFixed(1)+'" font-size="15" style="fill:var(--green)">O</text>'});
   TIERS.forEach(function(t){
     var c=ctr(t),p=proj(c[0],c[1],t.z),rx=t.r*SC,ry=Math.max(0.8,t.r*SC*se);
     var lx=p.x+rx*Math.cos(-0.6),ly=p.y+ry*Math.sin(-0.6)-(se<0.25?10:0);
     var lab=t.name.replace('_uppet','').replace('_enforce','').replace('_buffer','');
     items.push({d:p.d,svg:'<ellipse cx="'+p.x.toFixed(1)+'" cy="'+p.y.toFixed(1)+'" rx="'+rx.toFixed(1)+'" ry="'+ry.toFixed(1)+'" style="fill:'+t.col+';stroke:var(--well)" fill-opacity="1" stroke-width="2"'+(t.k==='E'?' filter="url(#gl)"':'')+'/>'+
+      shadows(t.z,'cp-'+t.k,p.x,p.y,rx,ry,se)+
+      (S.el<-0.5?'<ellipse cx="'+p.x.toFixed(1)+'" cy="'+p.y.toFixed(1)+'" rx="'+rx.toFixed(1)+'" ry="'+ry.toFixed(1)+'" style="fill:#000" fill-opacity=".34"/>':'')+
       '<text x="'+(lx+6).toFixed(1)+'" y="'+(ly-4).toFixed(1)+'" font-size="15" font-weight="500" style="fill:var(--ink);paint-order:stroke;stroke:var(--well);stroke-width:4px">'+lab+'</text>'});
   });
   items.sort(function(a,b){return a.d-b.d;});items.forEach(function(it){h+=it.svg;});

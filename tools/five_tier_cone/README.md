@@ -13,6 +13,10 @@ Flat Ceiling (`:770`–`:810`) and the angular collapse, eq. 14.5 (`:13751`).
   side view, and the view from inside O.
 - The tier discs are slices of the cone and are opaque. From inside O, looking up the axis, the I_buffer
   disc hides P, F, and E: the Flat Ceiling.
+- **Depth cues.** Light comes straight down. Seen from above, each tier casts a shadow on the tiers below
+  it and on the floor of O. Seen from below, the undersides are darker and no shadows show. These two
+  cues keep the flat ellipses from looking the same from both sides near 0° elevation. Dragging down
+  lowers the observer toward O.
 - **Tier alignment.** At 1.00 the four upper tiers share one axis (eq. 14.5). Lower values move them
   apart by fixed amounts. The readout gives the share of E's disc that no lower disc covers in the view
   up the axis. E comes into view as alignment falls from 0.5 to 0.3.
