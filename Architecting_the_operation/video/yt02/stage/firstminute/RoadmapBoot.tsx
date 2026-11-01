@@ -73,7 +73,7 @@ export function RoadmapBoot(){
  const collapse=cubicInOut(progress(ms,endAt,endAt+COLLAPSE_MS));
  const currentLine=cues.reduce((acc,at,i)=>ms>=at?i:acc,-1);
  return <div style={{position:'absolute',inset:0,width:1920,height:1080,background:color('color/bg/field')}}>
-  <Dashboard world empty dim={DIM} lights={lights} mapOpacity={mapOpacity}/>
+  <Dashboard world empty dim={DIM} lights={lights} mapOpacity={mapOpacity} eraClockStandby mapOutlineOnly/>
   <svg data-roadmap-wires="overlay" width={1920} height={1080} style={{position:'absolute',inset:0,pointerEvents:'none'}}>
    {ITEMS.map((item,i)=>{
     const wire=wireFor(item,i);

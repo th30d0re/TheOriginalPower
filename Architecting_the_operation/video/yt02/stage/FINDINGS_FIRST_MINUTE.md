@@ -163,3 +163,182 @@ assets/index-D2DsRSt0.js                                     1,832.19 kB │ gzi
 ```
 
 Vite emitted its existing chunk-size warning.
+
+
+---
+
+# Fix pass 1 (frame review of `first_minute_v0.mp4`)
+
+Model: Kimi Code CLI. Brief: `BRIEF_FIRST_MINUTE_FIX1.md`. Every fix is in place; each
+scene's beats and cues are unchanged. Layout constants are exported from the scene files
+and asserted in `tools/check_first_minute.tsx`, so the geometry the check verifies is the
+geometry the scenes render.
+
+## Fix 1 · DictionaryEntry number gutter
+
+`DictionaryEntry.tsx` gains an exported `DICTIONARY_LAYOUT` and `DICTIONARY_LIFT_X`.
+
+- The panel's 55 px leftward shift now runs on the `order` progress (previously on
+  `causal`), so the panel's right edge rests at x 965 before the numbers arrive.
+- On `order` the sense numbers lift `translateX(850px)` into a gutter column at canvas
+  x 985: clear of the shifted panel's right edge (965) and of every sense line (sense
+  text ends at x 941). The 28 px mono digits occupy x 985–1002.
+- On `causal` the chain draws at left 1050, right of the gutter, spanning 1050–1820.
+- Vertical centring: entry panel top 262 → 325, chain top 300 → 363. The content column
+  (entry 325–755, chain plus evidence slot 363–677) centres at y 540. The header (top
+  105) and the source line (bottom 78) stay where they were.
+
+## Fix 2 · TitleOpen sizing and centring
+
+- Tiles are 340 × 240 at y 533–773, xs 350 / 790 / 1230 (row width 1220, centred), with
+  the graphics scaled up inside: folio and tests SVGs 220 × 126 → 260 × 149, equation 27
+  → 31 px with the phasor plane 180 × 65 → 205 × 74.
+- The title block sits at top 306. The pre-fold block (title 306–463, tiles 533–773)
+  centres at y ≈ 539.5.
+- The post-fold block (title 306, folded strip 493–565, episode line 605, subtitle
+  709–767) centres at y ≈ 536.5. Strip targets were recomputed for the 340-wide tiles:
+  xs 643.2 / 878.2 / 1113.2, y 493, scale 0.48 × 0.30 (strip cells 163.2 × 72).
+- The folio header "ARCHIVE · 1676" now sets at 9.5 px mono with letterSpacing 0.8 at
+  x 62, ending near x 150, clear of the fold corner that begins at x 160.
+
+Note on tile size: the brief asks for "about 340 × 240"; the previous tiles measured
+360 × 250 in the code and the frames, so the enlargement went into the graphics and the
+vertical centring, and the tiles keep the brief's stated dimensions.
+
+## Fix 3 · WhyLadder alignment, map label, slot-1 caption
+
+`WhyLadder.tsx` exports `WHY_LAYOUT`: the header and the thumbnail column share the left
+edge x 240 (≥ 120); rows are 1540 wide with the question text at 365–1485 inside the row.
+
+- The continuity shrink lands the turn-1 entry at (240, 224), on slot 1's thumbnail.
+- "Virginia · 1676" carries a 196 × 30 backing plate (rx 4, `color/fill/panel-render`,
+  1 px hairline) at x 8–204, y 140–170 inside the 320 × 180 thumbnail; the coastline no
+  longer crosses the label.
+- Slot 1 gains the caption "rac·ism · senses 1–3" (20 px mono, left 16, bottom 9 inside
+  the thumbnail frame). It renders at the scene root with zIndex 3 because the continuity
+  overlay sits at zIndex 2, and it dims in step with row 1.
+
+## Fix 4 · LiteratureStack connectors and boundary
+
+`LiteratureStack.tsx` exports `LITERATURE_LAYOUT`: blocks at y 196 / 316 / 436 (x 220,
+w 1480, h 112), tripartite row at (330, 592) sized 1260 × 166, boundary at y 780 with
+"where the literature stops" on its left end. The empty dark region below the boundary
+measures 264 px (780–1044).
+
+The two straight connector verticals are replaced by nested elbows, generated from the
+constant so check and render share one source:
+
+- feeling → Prejudice: (989, 610) → (989, 562) → (1730, 562) → (1730, 372) → (1700, 372)
+- behavior → Discrimination: (1395.7, 610) → (1395.7, 578) → (1750, 578) → (1750, 492) →
+  (1700, 492)
+
+Each connector leaves its component's top, runs right to its gutter lane (1730 for
+feeling, 1750 for behavior), rises, and enters the block's right edge at x 1700. The
+feeling lane at y 562 and the behavior lane at y 578 both sit below the Discrimination
+block (bottom edge 548), the feeling vertical at 1730 never descends to the behavior
+lane, and both verticals run right of the stack (blocks end at x 1700). No segment
+crosses text, a block, or the other connector; the check's segment–rect test asserts this
+against the definition text column (x 530–1370) for every block.
+
+## Fix 5 · RoadmapBoot standby state
+
+Two optional `Dashboard` props; their defaults leave every existing render byte-identical
+(`check_dashboard` passes unchanged):
+
+1. `eraClockStandby?: boolean` — provides the new `EraClockStandbyContext` from
+   `PanelContent.tsx`. When set, the Era clock compact panel renders "—" for the year and
+   "STANDBY" for the place, with no log chip, and the Policy ticker's compact result line
+   renders "—" (see the deviation below). The panel sizes and positions are unchanged.
+2. `mapOutlineOnly?: boolean` — `DashboardMap` draws the world outline only: the polity
+   layer, the Portugal gold highlight, and every map label are suppressed.
+
+`RoadmapBoot` now renders
+`<Dashboard world empty dim lights mapOpacity eraClockStandby mapOutlineOnly/>`; the era
+strip stays empty as briefed, and all other instruments keep their values.
+
+Deviation from the brief: the brief scoped the 1486 leak to the Era clock and the map.
+The Policy ticker's compact result line reads "[POLICY] Casa dos Escravos (1486)
+institutionalizes state-managed extraction. Vector established." — a third place the 1486
+state shows, and one the mandated check ("1486" absent from every RoadmapBoot frame)
+cannot pass with the ticker untouched. The ticker therefore takes the same standby
+treatment under the same context. Every other instrument keeps its values.
+
+## Fix 6 · Check additions
+
+`tools/check_first_minute.tsx` now asserts, from the exported layout constants:
+
+- the DictionaryEntry gutter (x 985) is clear of the shifted panel's right edge (965),
+  the lift lands exactly on the gutter (`panelX + orderShiftX + numberInsetX +
+  DICTIONARY_LIFT_X === gutterX`), and the chain (1050) draws right of the gutter;
+- `WHY_LAYOUT.headerX === WHY_LAYOUT.columnX` and that edge is ≥ 120;
+- `LITERATURE_LAYOUT.boundaryY` is within 760–800;
+- no LiteratureStack connector segment intersects any block's definition text box
+  (orthogonal segment–rect intersection over the exported polylines).
+
+The stale `translateX(735px)` assertion now asserts `translateX(850px)` via
+`DICTIONARY_LIFT_X`.
+
+`tools/check_roadmap_boot.tsx` now asserts on every rendered frame: the tag-stripped
+visible text contains no "1486", "LISBON", "PORTUGAL" or "RUNTIME LOG", and contains
+"STANDBY". (The "1486"-prefixed digit strings inside map path `d` attributes are
+coordinates; the assert runs on text nodes only.)
+
+## Fix pass 1 check output tails
+
+### Episode TypeScript
+
+```text
+$ npx --prefix …/scriptCast-stage/video tsc --noEmit -p …/yt02/stage
+exit 0; no diagnostics
+```
+
+### First-Minute Checker
+
+```text
+PASS: 43 first-minute frames rendered in two fresh processes; all markup hashes match.
+PASS: 43 cue-derived frames; five scene contracts, manuscript strings, real subscripts, hook policy, underscore policy, and interaction-hint policy verified; fix-pass-1 geometry: DictionaryEntry gutter x 985 clear of panel edge 965 with chain at 1050; WhyLadder header/column aligned at x 240; LiteratureStack boundary y 780 and elbow connectors clear of all block text boxes.
+```
+
+### Dashboard Regression
+
+```text
+PASS: 19 frames plus all 24 tray mode renders and 3 moved Wage plane mode renders repeated in fresh Node processes; identical stack/tray markup and whole-Dashboard hashes; state/effect/reducer hooks trap on invocation.
+PASS: Equal Earth route 1296 samples / 0 land hits, bounds 540.14..821.86 × 84.29..843.36 above tray y=860; Portugal height 102.18px mainland (136.7px with 1486 Moroccan enclave); 18 deterministic timeline states; 5-panel right stack + 8-cell tray geometry; all 24 tray modes plus 3 Wage plane modes; 18 declared layouts ≤ 828px; no literal underscore text; shared 601-point Thyristor traces; Backlash static active preset; gear-only settings; no rendered interaction hints; 75 polities with 16 non-colliding labels.
+```
+
+### RoadmapBoot Checker
+
+```text
+PASS: 17 RoadmapBoot frames rendered in two fresh Node processes with identical markup; state/effect/reducer/ref hooks trap on invocation.
+PASS: RoadmapBoot renders 17 deterministic frames; 13 labels land on their cues and are absent before; console box 580–1340 × 150–790 clears stacks (317 / 1671) and tray (944); panels 12, 9, 14 light on items 06, 09, 10 with wires; item11 sweep complete by +1300 (map opacity 1); item12 pulse present; console collapsed by roadmapEnd+600; era strip empty throughout; Era clock on standby and map outline-only ("1486", "LISBON", "PORTUGAL", "RUNTIME LOG" absent from every frame); no literal underscores; no interaction hints.
+```
+
+### Plan Compile and Render Dry-Run
+
+```text
+wrote Architecting_the_operation/video/yt02/stage/ov/stage_plan.json   (byte-identical; git diff empty)
+STAGE_EPISODE_DIR=.../stage npx --no-install remotion render src/stage/index.ts StageEpisode /private/tmp/x.mp4 --props=.../stage/ov/stage_plan.json --timeout=120000 --codec h264 --concurrency=8 '--browser-executable=/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
+```
+
+### Site Build
+
+Fresh `/tmp` output directory (`/tmp/yt02-first-minute-fix1-site.0Db7we`):
+
+```text
+✓ 267 modules transformed.
+stage/default.json                                           2,216.81 kB │ gzip: 258.50 kB
+assets/index-BH83ifGA.js                                     1,838.55 kB │ gzip: 543.38 kB
+✓ built in 1.07s
+```
+
+Vite emitted its existing chunk-size warning. The built bundle contains the new "STANDBY"
+and "rac·ism · senses 1–3" strings.
+
+### Git State
+
+`git status --porcelain` shows modifications only in the permitted files
+(`firstminute/*.tsx`, `dashboard/Dashboard.tsx`, `dashboard/DashboardMap.tsx`,
+`dashboard/PanelContent.tsx`, `tools/check_first_minute.tsx`,
+`tools/check_roadmap_boot.tsx`). The pre-existing dirty paths outside `stage/`
+(`.claude/launch.json`, `yt02/logs/…`, `tmp/`) were left untouched. No git state was
+changed.

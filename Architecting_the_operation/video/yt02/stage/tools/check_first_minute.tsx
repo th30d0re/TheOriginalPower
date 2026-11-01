@@ -5,9 +5,9 @@ import fs from 'node:fs';
 import {createHash} from 'node:crypto';
 import {ClockContext,PlanContext,type StagePlan} from '@stage';
 import {TitleOpen} from '../firstminute/TitleOpen';
-import {DictionaryEntry} from '../firstminute/DictionaryEntry';
-import {WhyLadder} from '../firstminute/WhyLadder';
-import {LiteratureStack} from '../firstminute/LiteratureStack';
+import {DICTIONARY_LAYOUT, DICTIONARY_LIFT_X, DictionaryEntry} from '../firstminute/DictionaryEntry';
+import {WHY_LAYOUT, WhyLadder} from '../firstminute/WhyLadder';
+import {LITERATURE_LAYOUT, LiteratureStack} from '../firstminute/LiteratureStack';
 import {Disclosure} from '../firstminute/Disclosure';
 
 const plan=JSON.parse(fs.readFileSync(new URL('../ov/stage_plan.json',import.meta.url),'utf8')) as StagePlan;
@@ -86,7 +86,7 @@ if(process.env.FIRST_MINUTE_SNAPSHOT==='1'){
   assertStrings('DictionaryEntry','individual',['Individual prejudice or discrimination based on race']);
   assertStrings('DictionaryEntry','institutional',['Systemic or institutional discrimination','if present at all']);
   const orderHtml=assertStrings('DictionaryEntry','order',['1','2','3']);
-  assert.ok(orderHtml.includes('translateX(735px)'),'DictionaryEntry sense numbers have not lifted out');
+  assert.ok(orderHtml.includes(`translateX(${DICTIONARY_LIFT_X}px)`),'DictionaryEntry sense numbers have not lifted into the gutter column');
   assertStrings('DictionaryEntry','causal',['causal story','Individual Prejudice','Discriminatory Actions','Systemic Outcomes']);
   assertStrings('DictionaryEntry','evidence',['evidence','The Original Power, §Racism as Primary Example · Eq. 1.3']);
 
@@ -115,5 +115,29 @@ if(process.env.FIRST_MINUTE_SNAPSHOT==='1'){
   assertStrings('Disclosure','disclosureEnd',['long-form exposition.']);
   assert.equal((render('Disclosure',plan.cues.disclosureEnd).match(/<path/g)??[]).length>=2,true,'Disclosure waveform paths are missing');
 
-  console.log(`PASS: ${rendered.length} cue-derived frames; five scene contracts, manuscript strings, real subscripts, hook policy, underscore policy, and interaction-hint policy verified.`);
+  // Fix pass 1: static geometry asserts from the exported layout constants.
+  {
+    const d=DICTIONARY_LAYOUT;
+    const panelRight=d.panelX+d.orderShiftX+d.panelW;
+    assert.ok(d.gutterX>panelRight,`DictionaryEntry number gutter (${d.gutterX}) overlaps the shifted panel (right edge ${panelRight})`);
+    assert.equal(d.panelX+d.orderShiftX+d.numberInsetX+DICTIONARY_LIFT_X,d.gutterX,'DictionaryEntry lift does not land on the gutter column');
+    assert.ok(d.chainX>d.gutterX+20,`DictionaryEntry chain (${d.chainX}) does not draw right of the number gutter (${d.gutterX})`);
+
+    assert.ok(WHY_LAYOUT.headerX===WHY_LAYOUT.columnX&&WHY_LAYOUT.columnX>=120,`WhyLadder header (${WHY_LAYOUT.headerX}) and thumbnail column (${WHY_LAYOUT.columnX}) do not share a left edge ≥ 120`);
+
+    assert.ok(LITERATURE_LAYOUT.boundaryY>=760&&LITERATURE_LAYOUT.boundaryY<=800,`LiteratureStack boundary y ${LITERATURE_LAYOUT.boundaryY} outside 760–800`);
+    const textRects=LITERATURE_LAYOUT.blockYs.map(y=>({x:LITERATURE_LAYOUT.definitionColumnX,y,w:LITERATURE_LAYOUT.definitionColumnW,h:LITERATURE_LAYOUT.blockH}));
+    const segHitsRect=(seg:readonly number[],rect:{x:number;y:number;w:number;h:number})=>{
+      const [x1,y1,x2,y2]=seg;
+      if(x1===x2){const lo=Math.min(y1,y2),hi=Math.max(y1,y2);return x1>rect.x&&x1<rect.x+rect.w&&hi>rect.y&&lo<rect.y+rect.h;}
+      if(y1===y2){const lo=Math.min(x1,x2),hi=Math.max(x1,x2);return y1>rect.y&&y1<rect.y+rect.h&&hi>rect.x&&lo<rect.x+rect.w;}
+      throw new Error('non-orthogonal connector segment');
+    };
+    for(const connector of LITERATURE_LAYOUT.connectors)
+      for(let i=0;i+1<connector.length;i++)
+        for(const rect of textRects)
+          assert.ok(!segHitsRect([...connector[i],...connector[i+1]],rect),`LiteratureStack connector segment ${connector[i]}→${connector[i+1]} crosses a block text box`);
+  }
+
+  console.log(`PASS: ${rendered.length} cue-derived frames; five scene contracts, manuscript strings, real subscripts, hook policy, underscore policy, and interaction-hint policy verified; fix-pass-1 geometry: DictionaryEntry gutter x ${DICTIONARY_LAYOUT.gutterX} clear of panel edge ${DICTIONARY_LAYOUT.panelX+DICTIONARY_LAYOUT.orderShiftX+DICTIONARY_LAYOUT.panelW} with chain at ${DICTIONARY_LAYOUT.chainX}; WhyLadder header/column aligned at x ${WHY_LAYOUT.columnX}; LiteratureStack boundary y ${LITERATURE_LAYOUT.boundaryY} and elbow connectors clear of all block text boxes.`);
 }

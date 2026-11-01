@@ -19,6 +19,19 @@ import {SnubberCircuitView} from './artifacts/SnubberCircuitView';
 
 export const CameraContext = React.createContext<Camera>(iberiaCamera);
 
+// When a Dashboard sets `eraClockStandby`, the Era clock's compact panel shows a standby
+// state (a dash for the year, "STANDBY" for the place, no log chip) instead of the log-2
+// 1486 state, and the Policy ticker's compact result line (whose log-2 entry names the
+// year 1486) shows a dash. Default false: every existing render is unchanged.
+export const EraClockStandbyContext = React.createContext(false);
+
+function EraClockCompactStandby() {
+ return <>
+  <div style={{position:'absolute',left:11,top:9,width:96,height:52,fontFamily:Tokens.fonts.sans,fontSize:40,fontWeight:700,lineHeight:'52px',color:color('color/text/primary'),whiteSpace:'pre-wrap'}}>—</div>
+  <div style={{position:'absolute',left:11,top:63.5,width:119,height:16,fontFamily:Tokens.fonts.sans,fontSize:12,fontWeight:500,letterSpacing:0.5,lineHeight:'16px',color:color('color/text/muted'),whiteSpace:'pre-wrap'}}>STANDBY</div>
+ </>;
+}
+
 // The gear in an expanded tray card switches to the artifact's settings view (and back).
 // The control state lives in the tray instrument frame; PanelContent only renders the chrome.
 export const TrayModeControlContext = React.createContext<((mode: InstrumentMode | null) => void) | null>(null);
@@ -298,12 +311,13 @@ function ExecutingFunctionCompact() {
  </>;
 }
 function PolicyTickerCompact() {
+ const standby=useContext(EraClockStandbyContext);
  const results=(eraLog2.fields.results as string[]|undefined)??[];
- const latest=results[results.length-1]??'';
+ const latest=standby?'—':(results[results.length-1]??'');
  return <>
   <div style={{position:'absolute',left:10,top:6,right:10,fontFamily:Tokens.fonts.mono,fontSize:9.5,letterSpacing:0.6,color:color('color/text/dim'),whiteSpace:'nowrap'}}>RESULT</div>
   <div style={{position:'absolute',left:10,top:21,width:3,height:13,background:color('color/fill/accent'),borderRadius:1}}/>
-  <div style={{position:'absolute',left:19,top:20,right:10,fontFamily:Tokens.fonts.sans,fontSize:12,lineHeight:'15px',color:color('color/text/primary'),whiteSpace:'nowrap',overflow:'hidden',textOverflow:'ellipsis'}}>{latest}</div>
+  <div style={{position:'absolute',left:19,top:20,right:10,fontFamily:Tokens.fonts.sans,fontSize:12,lineHeight:'15px',color:color(standby?'color/text/muted':'color/text/primary'),whiteSpace:'nowrap',overflow:'hidden',textOverflow:'ellipsis'}}>{latest}</div>
  </>;
 }
 
@@ -387,12 +401,14 @@ function ArtifactContent({name,mode,interactive}:{name:string;mode:InstrumentMod
 
 export function PanelContent({name,mode}:{name:string;mode:InstrumentMode}) {
  const {interactive}=useContext(ClockContext);
+ const eraClockStandby=useContext(EraClockStandbyContext);
  const data=instruments[name][mode],compact=mode==='compact';
  const renderFill=`linear-gradient(${color('color/fill/panel-wash')}, ${color('color/fill/panel-wash')}), ${color('color/fill/panel-render')}`;
  const fill=interactive?color(compact?'color/fill/panel-wash':'color/fill/glass'):renderFill;
  const isArtifact=name in ARTIFACT_VIEWS;
  return <GlassPanel fill={fill} blur={interactive&&compact?6:0} padding={0} radius={compact?8:10} style={{backdropFilter:interactive&&compact?'blur(6px)':'none',WebkitBackdropFilter:interactive&&compact?'blur(6px)':'none',position:'relative',width:data.w,height:data.h,border:'none',boxShadow:`inset 0 0 0 ${compact?1:1.6}px ${color('color/line/hairline')}`,color:color('color/text/primary')}}>{
  isArtifact?<ArtifactContent name={name} mode={mode} interactive={interactive}/>
+ :name==='Era clock'&&compact&&eraClockStandby?<EraClockCompactStandby/>
  :name==='Wage plane'&&mode==='compact'?<div data-artifact="Complex Wage Plane" data-compact-padding-x="11"><Nodes nodes={data.children} compact/></div>
  :name==='Wage plane'&&mode==='expanded'?<ComplexWagePlane/>
  :name==='Wage plane'&&mode==='settings'?<WagePlaneSettings data={data}/>

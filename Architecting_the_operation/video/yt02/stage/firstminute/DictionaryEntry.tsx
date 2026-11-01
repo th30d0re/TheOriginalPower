@@ -5,6 +5,18 @@ import {CompactBorder} from '../dashboard/CompactBorder';
 
 const enter = (ms:number, at:number, duration=460) => cubicOut(progress(ms, at, at + duration));
 
+// Canvas geometry for the entry panel, the number gutter the sense numbers lift into on
+// `order`, and the causal chain that draws right of the gutter on `causal`. Exported for
+// the static geometry asserts in tools/check_first_minute.tsx.
+export const DICTIONARY_LAYOUT = {
+  panelX: 170, panelY: 325, panelW: 850, panelH: 430,
+  orderShiftX: -55,
+  numberInsetX: 20,
+  gutterX: 985,
+  chainX: 1050, chainY: 363, chainW: 770,
+} as const;
+export const DICTIONARY_LIFT_X = DICTIONARY_LAYOUT.gutterX - (DICTIONARY_LAYOUT.panelX + DICTIONARY_LAYOUT.orderShiftX + DICTIONARY_LAYOUT.numberInsetX);
+
 export type DefinitionHierarchyState = {
   header:number;
   wrong:number;
@@ -22,16 +34,18 @@ export const finalDefinitionState: DefinitionHierarchyState = {
 
 function Sense({number, children, bright=1, tertiary=false, lift=0}: React.PropsWithChildren<{number:number; bright?:number; tertiary?:boolean; lift?:number}>) {
   return <div style={{position:'relative', display:'grid', gridTemplateColumns:'58px 1fr', alignItems:'start', minHeight:tertiary?78:92, padding:'18px 24px 12px 20px', borderTop:`1px solid ${color('color/line/graticule')}`, opacity:(tertiary?.48:.68)+bright*(tertiary?.30:.32)}}>
-    <span style={{font:'500 28px "IBM Plex Mono"', color:bright>.5?color('color/fill/gold'):color('color/text/dim'), transform:`translateX(${lift*735}px)`, transition:'none'}}>{number}</span>
+    <span style={{font:'500 28px "IBM Plex Mono"', color:bright>.5?color('color/fill/gold'):color('color/text/dim'), transform:`translateX(${lift*DICTIONARY_LIFT_X}px)`, transition:'none'}}>{number}</span>
     <span style={{fontSize:30, lineHeight:1.35, color:color('color/text/primary')}}>{children}</span>
     {number===1 && <span aria-hidden="true" style={{position:'absolute', left:0, top:8, bottom:8, width:4, background:color('color/fill/gold'), transform:`scaleY(${bright})`, transformOrigin:'center top'}}/>}
   </div>;
 }
 
 export function DefinitionHierarchy({state}: {state:DefinitionHierarchyState}) {
-  const entryShift = state.causal * -55;
+  // The panel shifts left while the numbers lift, so the lifted digits always rest in the
+  // gutter clear of the shifted panel's right edge (965) and the chain (1050).
+  const entryShift = state.order * DICTIONARY_LAYOUT.orderShiftX;
   return <>
-    {state.entry>0 && <div data-definition-entry="true" style={{position:'absolute', left:170 + entryShift, top:262, width:850, height:430, opacity:state.entry, transform:`translateY(${20*(1-state.entry)}px)`, background:color('color/fill/panel-render'), border:`1px solid ${color('color/line/hairline')}`, boxShadow:`inset 0 0 0 1px ${color('color/fill/panel-wash')}`}}>
+    {state.entry>0 && <div data-definition-entry="true" style={{position:'absolute', left:DICTIONARY_LAYOUT.panelX + entryShift, top:DICTIONARY_LAYOUT.panelY, width:DICTIONARY_LAYOUT.panelW, height:DICTIONARY_LAYOUT.panelH, opacity:state.entry, transform:`translateY(${20*(1-state.entry)}px)`, background:color('color/fill/panel-render'), border:`1px solid ${color('color/line/hairline')}`, boxShadow:`inset 0 0 0 1px ${color('color/fill/panel-wash')}`}}>
       <div style={{padding:'28px 30px 22px', display:'flex', alignItems:'baseline', gap:18}}>
         <strong style={{fontSize:48, letterSpacing:.5}}>rac·ism</strong><em style={{fontSize:25, color:color('color/text/muted')}}>(noun)</em>
       </div>
@@ -39,7 +53,7 @@ export function DefinitionHierarchy({state}: {state:DefinitionHierarchyState}) {
       <Sense number={2} bright={0} lift={state.order}>Belief in racial superiority</Sense>
       {state.institutional>0 && <div style={{opacity:state.institutional, transform:`translateY(${12*(1-state.institutional)}px)`}}><Sense number={3} bright={0} tertiary lift={state.order}>Systemic or institutional discrimination <span style={{marginLeft:12, padding:'4px 9px', border:`1px solid ${color('color/line/hairline')}`, font:'500 20px "IBM Plex Mono"', color:color('color/text/muted'), whiteSpace:'nowrap'}}>if present at all</span></Sense></div>}
     </div>}
-    {state.causal>0 && <div data-causal-chain="true" style={{position:'absolute', left:1010, top:300, width:770, opacity:state.causal, transform:`translateX(${24*(1-state.causal)}px)`}}>
+    {state.causal>0 && <div data-causal-chain="true" style={{position:'absolute', left:DICTIONARY_LAYOUT.chainX, top:DICTIONARY_LAYOUT.chainY, width:DICTIONARY_LAYOUT.chainW, opacity:state.causal, transform:`translateX(${24*(1-state.causal)}px)`}}>
       <div style={{font:'500 21px "IBM Plex Mono"', letterSpacing:2.4, color:color('color/fill/gold'), marginBottom:18, textTransform:'uppercase'}}>causal story</div>
       <div style={{display:'flex', alignItems:'stretch', gap:12}}>
         {['Individual Prejudice','Discriminatory Actions','Systemic Outcomes'].map((label,i)=><React.Fragment key={label}>

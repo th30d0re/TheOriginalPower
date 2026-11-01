@@ -63,12 +63,16 @@ if(process.env.ROADMAP_BOOT_SNAPSHOT==='1'){
  const sectionOpacities=(html:string)=>(html.match(/<section\b[^>]*>/g)??[]).map(tag=>Number(tag.match(/opacity:([\d.]+)/)?.[1]));
 
  // Per-frame invariants: no NaN, no literal underscore text, no interaction hints, era
- // strip stays empty for the whole shot.
+ // strip stays empty for the whole shot, and no 1486 state shows anywhere: the Era clock
+ // reads its standby state and the map stays an unlabelled outline.
  for(const {kind,html} of rendered){
   assert.ok(!html.includes('NaN'),`RoadmapBoot ${kind} contains NaN`);
   assert.deepEqual(renderedUnderscoreText(html),[],`RoadmapBoot ${kind} renders a literal underscore`);
-  assert.ok(!interactionHint.test(plain(html)),`RoadmapBoot ${kind} renders an interaction hint`);
+  const text=plain(html);
+  assert.ok(!interactionHint.test(text),`RoadmapBoot ${kind} renders an interaction hint`);
   assert.ok(!eraStrip(html).includes('<text'),`RoadmapBoot ${kind}: era strip shows a year`);
+  for(const banned of ['1486','LISBON','PORTUGAL','RUNTIME LOG']) assert.ok(!text.includes(banned),`RoadmapBoot ${kind} shows "${banned}" before the history starts`);
+  assert.ok(text.includes('STANDBY'),`RoadmapBoot ${kind}: Era clock is not in its standby state`);
  }
 
  // Console geometry: clear of both stacks and the tray, below the era strip.
@@ -147,5 +151,5 @@ if(process.env.ROADMAP_BOOT_SNAPSHOT==='1'){
  for(const [i,opacity] of sectionOpacities(shotEnd).entries()) assert.equal(opacity,1,`panel ${i} not lit at shot end`);
  assert.equal(mapOpacity(shotEnd),1,'map not at full brightness at shot end');
 
- console.log(`PASS: RoadmapBoot renders ${rendered.length} deterministic frames; 13 labels land on their cues and are absent before; console box ${box.left}–${box.left+box.width} × ${box.top}–${box.top+box.height} clears stacks (${leftStackRight} / ${rightStackLeft}) and tray (${TRAY.top}); panels 12, 9, 14 light on items 06, 09, 10 with wires; item11 sweep complete by +1300 (map opacity 1); item12 pulse present; console collapsed by roadmapEnd+600; era strip empty throughout; no literal underscores; no interaction hints.`);
+ console.log(`PASS: RoadmapBoot renders ${rendered.length} deterministic frames; 13 labels land on their cues and are absent before; console box ${box.left}–${box.left+box.width} × ${box.top}–${box.top+box.height} clears stacks (${leftStackRight} / ${rightStackLeft}) and tray (${TRAY.top}); panels 12, 9, 14 light on items 06, 09, 10 with wires; item11 sweep complete by +1300 (map opacity 1); item12 pulse present; console collapsed by roadmapEnd+600; era strip empty throughout; Era clock on standby and map outline-only ("1486", "LISBON", "PORTUGAL", "RUNTIME LOG" absent from every frame); no literal underscores; no interaction hints.`);
 }

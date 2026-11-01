@@ -6,7 +6,7 @@ import {CompactBorder} from './CompactBorder';
 import {EraStrip} from './EraStrip';
 import {DashboardMap} from './DashboardMap';
 import {worldCamera,iberiaCamera} from './mapGeometry';
-import {CameraContext,instruments} from './PanelContent';
+import {CameraContext,EraClockStandbyContext,instruments} from './PanelContent';
 import {EraClock} from './instruments/era-clock';
 import {SystemStress} from './instruments/system-stress';
 import {Capital} from './instruments/capital';
@@ -39,7 +39,7 @@ const trayArtifactFor=(name:string)=>{
  return TrayCell;
 };
 const components=[EraClock,SystemStress,Capital,Interference,Compass,ActivePatch,Variables,ExecutingFunction,PolicyTicker,WagePlane,...TRAY_INSTRUMENTS.map(trayArtifactFor)];
-export type DashboardProps={era?:number;world?:boolean;camera?:Camera;worldOpacity?:number;routeDraw?:number;dim?:number;lights?:number[];empty?:boolean;mapOpacity?:number;modes?:Record<string,InstrumentMode>;modeTimelines?:Record<string,ModeKey[]>};
+export type DashboardProps={era?:number;world?:boolean;camera?:Camera;worldOpacity?:number;routeDraw?:number;dim?:number;lights?:number[];empty?:boolean;mapOpacity?:number;eraClockStandby?:boolean;mapOutlineOnly?:boolean;modes?:Record<string,InstrumentMode>;modeTimelines?:Record<string,ModeKey[]>};
 type InteractiveState={interactiveModes?:Record<string,InstrumentMode|null>;onModeChange?:(slug:string,mode:InstrumentMode|null)=>void};
 export function Dashboard(props:DashboardProps) {
  const {interactive}=useContext(ClockContext);
@@ -49,15 +49,15 @@ function InteractiveDashboard(props:DashboardProps) {
  const [interactiveModes,setInteractiveModes]=useState<Record<string,InstrumentMode|null>>({});
  return <DashboardFrame {...props} interactiveModes={interactiveModes} onModeChange={(slug,mode)=>setInteractiveModes(previous=>({...previous,[slug]:mode}))}/>;
 }
-function DashboardFrame({era=2,world=false,camera,worldOpacity=0,routeDraw=1,dim=1,lights=[],empty=false,mapOpacity,modes={},modeTimelines={},interactiveModes={},onModeChange}:DashboardProps & InteractiveState) {
+function DashboardFrame({era=2,world=false,camera,worldOpacity=0,routeDraw=1,dim=1,lights=[],empty=false,mapOpacity,eraClockStandby,mapOutlineOnly,modes={},modeTimelines={},interactiveModes={},onModeChange}:DashboardProps & InteractiveState) {
  const ms=useStageMs();
  if(era!==2) throw new Error(`YT02 handoff supplies instrument content for log 2; received ${era}`);
  const activeCamera=camera??(world?worldCamera:iberiaCamera);
  const heights=rail.map((p,i)=>{const d=instruments[p.instrument];const forced=interactiveModes[slugs[i]]??modes[slugs[i]],weights=resolveMode(ms,modeTimelines[slugs[i]]??[]).weights;return forced?d[forced].h:weights.compact*d.compact.h+weights.expanded*d.expanded.h+weights.settings*d.settings.h;});
- return <TokensContext.Provider value={Tokens}><CameraContext.Provider value={activeCamera}><div className="yt02-dashboard" style={{position:'absolute',inset:0,width:1920,height:1080,background:Tokens.colours.background,overflow:'hidden'}}><style>{'.yt02-dashboard sub { vertical-align: baseline; position: relative; top: .2em; }'}</style><EraStrip activeLog={era} empty={empty}/><DashboardMap world={world} camera={camera} worldOpacity={worldOpacity} draw={routeDraw} mapOpacity={mapOpacity}/>{rail.map((p,i)=>{
+ return <TokensContext.Provider value={Tokens}><CameraContext.Provider value={activeCamera}><EraClockStandbyContext.Provider value={eraClockStandby??false}><div className="yt02-dashboard" style={{position:'absolute',inset:0,width:1920,height:1080,background:Tokens.colours.background,overflow:'hidden'}}><style>{'.yt02-dashboard sub { vertical-align: baseline; position: relative; top: .2em; }'}</style><EraStrip activeLog={era} empty={empty}/><DashboardMap world={world} camera={camera} worldOpacity={worldOpacity} draw={routeDraw} mapOpacity={mapOpacity} outlineOnly={mapOutlineOnly}/>{rail.map((p,i)=>{
  const Component=components[i],start=i<5?0:5;
  const y=i<10?96+heights.slice(start,i).reduce((sum,h)=>sum+h+8,0):p.y;
  const grow:InstrumentGrow=i<5?'right-down':i<10?'left-down':'centre';
  return <Component onInteractiveModeChange={onModeChange?mode=>onModeChange(slugs[i],mode):undefined} key={slugs[i]} anchor={{x:i>=5?p.x+p.w-instruments[p.instrument].compact.w:p.x,y,width:instruments[p.instrument].compact.w,height:instruments[p.instrument].compact.h}} grow={grow} mode={modes[slugs[i]]} modeTimeline={modeTimelines[slugs[i]]} opacity={lights[i]??dim}/>;
- })}<CompactBorder/></div></CameraContext.Provider></TokensContext.Provider>;
+ })}<CompactBorder/></div></EraClockStandbyContext.Provider></CameraContext.Provider></TokensContext.Provider>;
 }
