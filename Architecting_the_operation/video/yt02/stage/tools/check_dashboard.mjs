@@ -9,6 +9,6 @@ try {
  const snapshot=()=>JSON.parse(execFileSync(process.execPath,[root+'tools/.check-dashboard.mjs'],{env:{...process.env,DASHBOARD_SNAPSHOT:'1'},maxBuffer:32*1024*1024,encoding:'utf8'}));
  const first=snapshot(),second=snapshot();
  assert.deepEqual(first,second,'fresh-process stack / tray markup differs');
- console.log(`PASS: ${first.frames.length} frames plus all ${first.tray.length} tray mode renders repeated in fresh Node processes; identical stack/tray markup and whole-Dashboard hashes; state/effect/reducer hooks trap on invocation.`);
+ console.log(`PASS: ${first.frames.length} frames plus all ${first.tray.length} tray mode renders and ${first.wage.length} moved Wage plane mode renders repeated in fresh Node processes; identical stack/tray markup and whole-Dashboard hashes; state/effect/reducer hooks trap on invocation.`);
  await import('./.check-dashboard.mjs');
 } finally {unlinkSync(root+'tools/.check-dashboard.mjs');}

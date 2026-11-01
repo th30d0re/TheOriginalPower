@@ -210,3 +210,61 @@ assets/index-Cn5ocv6T.js  1,805.80 kB │ gzip: 532.26 kB
 ```
 
 Vite emitted the existing chunk-size warning. The build exited 0 and wrote to `stage/review/site-dist`.
+
+## Fix pass 2 — Buffer Class Wage returns to the right stack
+
+### Layout
+
+The right stack now contains five panels:
+
+| Order | Panel | Box `[x, y, w, h]` |
+|---:|---|---:|
+| 1 | Active Patch | `[1671, 96, 211, 60]` |
+| 2 | Variables | `[1729, 164, 153, 56]` |
+| 3 | Executing Function | `[1671, 228, 211, 40]` |
+| 4 | Policy ticker | `[1671, 276, 211, 40]` |
+| 5 | Buffer Class Wage | `[1695, 324, 187, 120]` |
+
+The Wage plane compact uses the handoff `Nodes` tree and retains the 84 px plane graphic, τ zone, W vector, and readouts. Its visible title is `Buffer Class Wage`. The title box is `[11, 9, 165, 14]`, which gives 11 px horizontal padding on both sides. Expanded and settings modes retain `[260, 138, 1400, 860]`. The expanded title remains `Complex Wage Plane`, and the settings title is `SETTINGS · BUFFER CLASS WAGE`.
+
+The tray contains the eight requested artifacts in the requested order. Its fixed span is 1,848 px (`1884 − 36`). Seven 8 px gaps consume 56 px, leaving 1,792 px for cells. Each cell is therefore **224 px** wide. A 225 px cell width would require a 1,856 px span and a right edge at 1,892 px.
+
+### Review plan
+
+The Wage plane expansion remains at 4,000 ms and now grows from the right-stack box. The eight tray expansions and the Interference Engine settings step retain their cue times. `review_tray/states.json` records the settled Wage state as `right_stack_wage_plane_expanded` at 4,600 ms.
+
+### Verification tails
+
+**Episode TypeScript**
+
+```text
+$ npx --prefix /Users/emmanuel/Documents/Theory/scriptCast-stage/video tsc --noEmit -p .../stage
+exit 0; no diagnostics
+```
+
+**Dashboard checker**
+
+```text
+PASS: 19 frames plus all 24 tray mode renders and 3 moved Wage plane mode renders repeated in fresh Node processes; identical stack/tray markup and whole-Dashboard hashes; state/effect/reducer hooks trap on invocation.
+PASS: Equal Earth route 1296 samples / 0 land hits, bounds 540.14..821.86 × 84.29..843.36 above tray y=860; Portugal height 102.18px mainland (136.7px with 1486 Moroccan enclave); 18 deterministic timeline states; 5-panel right stack + 8-cell tray geometry; all 24 tray modes plus 3 Wage plane modes; 18 declared layouts ≤ 828px; no literal underscore text; shared 601-point Thyristor traces; Backlash static active preset; gear-only settings; no rendered interaction hints; 75 polities with 16 non-colliding labels.
+```
+
+**Plan compilation and render dry-runs**
+
+```text
+wrote .../stage/review/stage_plan.json
+wrote .../stage/review_tray/stage_plan.json
+review: yt02_dashboard_review · 24000 ms · 720 frames
+review_tray: yt02_dashboard_tray_review · 29300 ms · 879 frames
+Both --dry-run invocations emitted Remotion commands and exited 0. Chromium remained closed.
+```
+
+**Site build**
+
+```text
+✓ 259 modules transformed.
+assets/index-D2JwB6gC.js  1,803.87 kB │ gzip: 531.84 kB
+✓ built in 1.04s
+```
+
+Vite emitted the existing chunk-size warning. The build exited 0 and wrote to `stage/review/site-dist`.

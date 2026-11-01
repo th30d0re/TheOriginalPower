@@ -5,7 +5,7 @@ import map from '../handoff/map.json';
 import eras from '../../dashboard_eras.json';
 import {color, Tokens} from '../tokens';
 import {iberiaCamera} from './mapGeometry';
-import {ComplexWagePlane, WagePlaneSettings, WagePlaneCompact, WAGE_EXPANDED_BOX} from './ComplexWagePlane';
+import {ComplexWagePlane, WagePlaneSettings, WAGE_EXPANDED_BOX} from './ComplexWagePlane';
 import {Graphic} from './Graphics';
 import {TRAY_CELL_WIDTH, TRAY} from './trayLayout';
 import {InterferenceEngineView} from './artifacts/InterferenceEngineView';
@@ -76,7 +76,14 @@ const compassSpec = {
 
 const wagePlaneSpec = {
  ...spec.instruments['Wage plane'],
- compact: {...spec.instruments['Wage plane'].compact, w: TRAY_CELL_WIDTH, h: TRAY.height},
+ compact: {
+  ...spec.instruments['Wage plane'].compact,
+  children: spec.instruments['Wage plane'].compact.children.map((child:any,index:number)=>index===0?{
+   ...child,
+   text: 'Buffer Class Wage',
+   box: [11,9,165,14],
+  }:child),
+ },
  expanded: {
   ...spec.instruments['Wage plane'].expanded,
   w: WAGE_EXPANDED_BOX.width,
@@ -86,6 +93,10 @@ const wagePlaneSpec = {
   ...spec.instruments['Wage plane'].settings,
   w: WAGE_EXPANDED_BOX.width,
   h: WAGE_EXPANDED_BOX.height,
+  content: {
+   ...spec.instruments['Wage plane'].settings.content,
+   title: 'SETTINGS · BUFFER CLASS WAGE',
+  },
  },
 };
 
@@ -382,7 +393,7 @@ export function PanelContent({name,mode}:{name:string;mode:InstrumentMode}) {
  const isArtifact=name in ARTIFACT_VIEWS;
  return <GlassPanel fill={fill} blur={interactive&&compact?6:0} padding={0} radius={compact?8:10} style={{backdropFilter:interactive&&compact?'blur(6px)':'none',WebkitBackdropFilter:interactive&&compact?'blur(6px)':'none',position:'relative',width:data.w,height:data.h,border:'none',boxShadow:`inset 0 0 0 ${compact?1:1.6}px ${color('color/line/hairline')}`,color:color('color/text/primary')}}>{
  isArtifact?<ArtifactContent name={name} mode={mode} interactive={interactive}/>
- :name==='Wage plane'&&mode==='compact'?<WagePlaneCompact era={eraLog2}/>
+ :name==='Wage plane'&&mode==='compact'?<div data-artifact="Complex Wage Plane" data-compact-padding-x="11"><Nodes nodes={data.children} compact/></div>
  :name==='Wage plane'&&mode==='expanded'?<ComplexWagePlane/>
  :name==='Wage plane'&&mode==='settings'?<WagePlaneSettings data={data}/>
  :name==='Compass'&&(mode==='compact'||mode==='expanded')?<CompassWidget mode={mode}/>

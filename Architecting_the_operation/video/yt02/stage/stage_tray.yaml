@@ -4,8 +4,8 @@ fps: 30
 width: 1920
 height: 1080
 shots:
-  # The 1486 dashboard flies in and settles with the tray visible, then each tray instrument
-  # expands in turn (~2.5 s), and the Interference Engine also opens its settings via the gear.
+  # The 1486 dashboard settles with the tray visible. The right-stack Wage plane expands first,
+  # followed by the eight tray instruments; Interference Engine also opens its settings.
   - shot_id: T-01
     turn_id: t0
     scene: Dashboard1486

@@ -48,6 +48,11 @@ const renderedUnderscoreText=(html:string)=>[...html.matchAll(/>([^<>]*_[A-Za-z{
 const trayModeHashes=()=>TRAY_INSTRUMENTS.flatMap(name=>
  (['compact','expanded','settings'] as const).map(mode=>({name,mode,hash:createHash('sha256').update(renderPanel(name,mode)).digest('hex')}))
 );
+const wageModeHashes=()=>(['compact','expanded','settings'] as const).map(mode=>({
+ name:'Wage plane',
+ mode,
+ hash:createHash('sha256').update(renderPanel('Wage plane',mode)).digest('hex'),
+}));
 function sectionRect(html:string,slug:string){
  const tag=html.match(new RegExp(`<section data-instrument="${slug}"[^>]*style="([^"]+)"`))?.[1];
  assert.ok(tag,`missing section ${slug}`);
@@ -63,9 +68,9 @@ if(process.env.DASHBOARD_SNAPSHOT==='1') {
   assert.ok(!html.includes('blur('));
   assert.ok(!html.includes('<button'));
   assert.ok(html.includes('rgba(13,27,42,0.88)'));
-  return {left:sections.slice(0,5),right:sections.slice(5,9),tray:sections.slice(9),whole:createHash('sha256').update(html).digest('hex')};
+  return {left:sections.slice(0,5),right:sections.slice(5,10),tray:sections.slice(10),whole:createHash('sha256').update(html).digest('hex')};
  });
- console.log(JSON.stringify({frames,tray:trayModeHashes()}));
+ console.log(JSON.stringify({frames,wage:wageModeHashes(),tray:trayModeHashes()}));
 } else {
  // 1. Panel legibility without blur
  assert.equal(color('color/fill/panel-render'),'rgba(13,27,42,0.88)');
@@ -85,25 +90,30 @@ if(process.env.DASHBOARD_SNAPSHOT==='1') {
 
  // 2. New right stack and always-on tray geometry
  assert.equal(rail.length,18);
- assert.deepEqual(rail.slice(5,9).map(p=>p.instrument),['Active Patch','Variables','Executing Function','Policy ticker']);
+ assert.deepEqual(rail.slice(5,10).map(p=>p.instrument),['Active Patch','Variables','Executing Function','Policy ticker','Wage plane']);
  const policyResults=eraLog2.fields.results as string[];
  const policyCompact=renderPanel('Policy ticker','compact'),policyExpanded=renderPanel('Policy ticker','expanded');
  assert.ok(policyCompact.includes(policyResults.at(-1)!));
  for(const result of policyResults) assert.ok(policyExpanded.includes(result),`expanded policy ticker missing: ${result}`);
  assert.ok(renderPanel('Executing Function','compact').includes(String(eraLog2.fields.executing_function)));
- assert.deepEqual(rail.slice(9).map(p=>p.instrument),[...TRAY_INSTRUMENTS]);
- assert.deepEqual(Object.keys(ARTIFACT_VIEWS),TRAY_INSTRUMENTS.slice(1));
- assert.deepEqual(slugs.slice(9),TRAY_INSTRUMENTS.map(name=>name.toLowerCase().replaceAll(' ','-')));
- assert.deepEqual(TRAY,{left:36,right:1884,top:944,height:100,gap:8,count:9});
- assert.ok(Math.abs(TRAY_CELL_WIDTH-198.2222222222)<1e-8);
+ const wageCompact=renderPanel('Wage plane','compact');
+ assert.deepEqual([instruments['Wage plane'].compact.w,instruments['Wage plane'].compact.h],[187,120]);
+ assert.ok(wageCompact.includes('Buffer Class Wage'));
+ assert.ok(wageCompact.includes('data-compact-padding-x="11"'),'Wage plane compact must retain at least 10px horizontal padding');
+ assert.ok(wageCompact.includes('left:11px;top:9px;width:165px;height:14px'),'Wage plane title must remain within the 11px compact insets');
+ assert.deepEqual(rail.slice(10).map(p=>p.instrument),[...TRAY_INSTRUMENTS]);
+ assert.deepEqual(Object.keys(ARTIFACT_VIEWS),[...TRAY_INSTRUMENTS]);
+ assert.deepEqual(slugs.slice(10),TRAY_INSTRUMENTS.map(name=>name.toLowerCase().replaceAll(' ','-')));
+ assert.deepEqual(TRAY,{left:36,right:1884,top:944,height:100,gap:8,count:8});
+ assert.equal(TRAY_CELL_WIDTH,224);
  for(let i=0;i<TRAY.count;i++){
-  const cell=trayCellRect(i),panel=rail[9+i];
+  const cell=trayCellRect(i),panel=rail[10+i];
   assert.deepEqual(panel,{name:TRAY_INSTRUMENTS[i].toLowerCase(),instrument:TRAY_INSTRUMENTS[i],mode:'compact',x:cell.x,y:cell.y,w:cell.width,h:cell.height});
   if(i>0) assert.ok(Math.abs(cell.x-(trayCellRect(i-1).x+TRAY_CELL_WIDTH+8))<1e-8);
  }
- const modelDefaultTray=new Set(['Wage plane','Phase Coherence','Five-Tier Cone','Compounding Ledger','Backlash oscillator','Thyristor Latch','AC Extraction Meter','Snubber Circuit']);
+ const modelDefaultInstruments=new Set(['Wage plane','Phase Coherence','Five-Tier Cone','Compounding Ledger','Backlash oscillator','Thyristor Latch','AC Extraction Meter','Snubber Circuit']);
  const interactionHint=/\b(?:drag|click|arrow keys|press)\b/i;
- for(const name of TRAY_INSTRUMENTS){
+ for(const name of ['Wage plane',...TRAY_INSTRUMENTS]){
   for(const mode of ['compact','expanded','settings'] as const){
    const html=renderPanel(name,mode);
    assert.ok(html.length>500,`${name} ${mode} did not render`);
@@ -115,11 +125,12 @@ if(process.env.DASHBOARD_SNAPSHOT==='1') {
    if(mode==='settings') assert.ok(html.includes('data-control="gear" data-action="open-expanded"'));
   }
   const settings=renderPanel(name,'settings');
-  assert.equal(settings.includes('Model default:'),modelDefaultTray.has(name),`${name} model-default marker`);
+  assert.equal(settings.includes('Model default:'),modelDefaultInstruments.has(name),`${name} model-default marker`);
  }
+ assert.ok(renderPanel('Wage plane','settings').includes('SETTINGS · BUFFER CLASS WAGE'));
  const snubberSettings=renderPanel('Snubber Circuit','settings');
  assert.ok(snubberSettings.includes('raise')&&snubberSettings.includes('clamps the surge sooner')&&snubberSettings.includes('higher')&&snubberSettings.includes('lets a larger surge through')&&snubberSettings.includes('readings conflict'));
- assert.deepEqual(Object.keys(TRAY_VIEW_LAYOUT_HEIGHTS),TRAY_INSTRUMENTS);
+ assert.deepEqual(Object.keys(TRAY_VIEW_LAYOUT_HEIGHTS),['Wage plane',...TRAY_INSTRUMENTS]);
  for(const [name,layouts] of Object.entries(TRAY_VIEW_LAYOUT_HEIGHTS)) for(const [mode,total] of Object.entries(layouts)) assert.ok(total<=828,`${name} ${mode} declared layout ${total}px exceeds 828px`);
  const thyristorCompact=renderPanel('Thyristor Latch','compact'),thyristorExpanded=renderPanel('Thyristor Latch','expanded');
  assert.ok(thyristorCompact.includes('data-trace-points="601"')&&thyristorExpanded.includes('data-trace-points="601"'),'Thyristor compact and expanded traces must share the 601-point static history');
@@ -150,7 +161,7 @@ if(process.env.DASHBOARD_SNAPSHOT==='1') {
  }
  const mapLeft=32,mapTop=84,trayTopLocal=TRAY.top-mapTop;
  const leftStackRightLocal=Math.max(...rail.slice(0,5).map(p=>p.x+instruments[p.instrument].compact.w))-mapLeft;
- const rightStackLeftLocal=Math.min(...rail.slice(5,9).map(p=>p.x+p.w-instruments[p.instrument].compact.w))-mapLeft;
+ const rightStackLeftLocal=Math.min(...rail.slice(5,10).map(p=>p.x+p.w-instruments[p.instrument].compact.w))-mapLeft;
  assert.equal(hits,0,`route land hits ${hits}`);
  assert.ok(routeMinX>leftStackRightLocal&&routeMaxX<rightStackLeftLocal,`route horizontal bounds ${routeMinX}..${routeMaxX} cross a stack`);
  assert.ok(routeMinY>12&&routeMaxY<trayTopLocal,`route vertical bounds ${routeMinY}..${routeMaxY} cross the tray`);
@@ -217,7 +228,7 @@ if(process.env.DASHBOARD_SNAPSHOT==='1') {
  const panelBoxesMapLocal=rail.map((p,i)=>{
   const d=instruments[p.instrument].compact;
   const start=i<5?0:5;
-  const y=i<9?96+rail.slice(start,i).reduce((s,item)=>s+instruments[item.instrument].compact.h+8,0):p.y;
+  const y=i<10?96+rail.slice(start,i).reduce((s,item)=>s+instruments[item.instrument].compact.h+8,0):p.y;
   const x=i>=5?p.x+p.w-d.w:p.x;
   return {name:`panel:${p.name}`,box:[x-32,y-84,d.w,d.h] as [number,number,number,number]};
  });
@@ -297,7 +308,7 @@ if(process.env.DASHBOARD_SNAPSHOT==='1') {
  assert.equal(transitionTrayMode('settings','click-gear'),'expanded');
  assert.deepEqual(TRAY_EXPANDED_BOX,{x:260,y:138,width:1400,height:860});
  for(let i=0;i<TRAY_INSTRUMENTS.length;i++){
-  const slug=slugs[9+i],expanded=sectionRect(renderDashboard(0,{[slug]:'expanded'}),slug);
+  const slug=slugs[10+i],expanded=sectionRect(renderDashboard(0,{[slug]:'expanded'}),slug);
   assert.deepEqual(expanded,TRAY_EXPANDED_BOX,`${slug} expanded box`);
   const start=trayCellRect(i),moving=sectionRect(renderDashboard(300,{}, {[slug]:[{at:0,mode:'expanded'}]}),slug);
   assert.ok(moving.x>Math.min(start.x,260)&&moving.x<Math.max(start.x,260),`${slug} x does not grow centreward`);
@@ -337,7 +348,7 @@ if(process.env.DASHBOARD_SNAPSHOT==='1') {
  assert.ok(wageSettingsHtml.includes('left:260px;top:138px;width:1400px;height:860px'),'settings wage card must have the same 1400×860 footprint at [260, 138]');
  assert.ok(wageSettingsHtml.includes('data-instrument="wage-plane" data-active-mode="settings"'));
  assert.ok(wageSettingsHtml.includes('data-settings="Wage plane"'));
- assert.ok(wageSettingsHtml.includes('SETTINGS · WAGE PLANE'));
+ assert.ok(wageSettingsHtml.includes('SETTINGS · BUFFER CLASS WAGE'));
  assert.ok(wageSettingsHtml.includes('data-control="gear" data-action="open-expanded"'));
  assert.ok(wageSettingsHtml.includes('Quadrant names'));
  assert.ok(wageSettingsHtml.includes('What comes from where'));
@@ -396,5 +407,5 @@ if(process.env.DASHBOARD_SNAPSHOT==='1') {
  };
  fs.writeFileSync(new URL('../review/map-geometry-fix1.json',import.meta.url),JSON.stringify(geometry,null,2)+'\n');
  fs.writeFileSync(new URL('../review/map-geometry-fix2.json',import.meta.url),JSON.stringify(geometry,null,2)+'\n');
- console.log(`PASS: Equal Earth route ${samples} samples / ${hits} land hits, bounds ${routeMinX.toFixed(2)}..${routeMaxX.toFixed(2)} × ${routeMinY.toFixed(2)}..${routeMaxY.toFixed(2)} above tray y=${trayTopLocal}; Portugal height ${portugalMainlandHeightPx}px mainland (${portugalWithEnclaveHeightPx}px with 1486 Moroccan enclave); ${times.length} deterministic timeline states; right stack + 9-cell tray geometry; all 27 tray modes; 18 declared layouts ≤ 828px; no literal underscore text; shared 601-point Thyristor traces; Backlash static active preset; gear-only settings; no rendered interaction hints; 75 polities with ${polityLabelBoxes.length} non-colliding labels.`);
+ console.log(`PASS: Equal Earth route ${samples} samples / ${hits} land hits, bounds ${routeMinX.toFixed(2)}..${routeMaxX.toFixed(2)} × ${routeMinY.toFixed(2)}..${routeMaxY.toFixed(2)} above tray y=${trayTopLocal}; Portugal height ${portugalMainlandHeightPx}px mainland (${portugalWithEnclaveHeightPx}px with 1486 Moroccan enclave); ${times.length} deterministic timeline states; 5-panel right stack + 8-cell tray geometry; all 24 tray modes plus 3 Wage plane modes; 18 declared layouts ≤ 828px; no literal underscore text; shared 601-point Thyristor traces; Backlash static active preset; gear-only settings; no rendered interaction hints; 75 polities with ${polityLabelBoxes.length} non-colliding labels.`);
 }
