@@ -6,6 +6,15 @@ scenes; Kimi builds turn 4 (`firstminute/RoadmapBoot.tsx`) at the same time from
 `BRIEF_FIRST_MINUTE_T4.md`. Read `../STAGE_PLAN.md` ("First minute") for the storyboard. Where this
 brief and the plan differ, this brief wins: it corrects the plan against the manuscript.
 
+## Checkpoint (AGENTS.md commit-before-destroy is satisfied)
+
+The orchestrator committed the clean checkpoint for this task as `5942676`. It contains the stubs,
+`stage_ov.yaml` and this brief. The remaining dirty paths are the author's own work, outside this
+task's scope: `.claude/launch.json`, `yt02/logs/…` and `tmp/`. Leave them alone, and do not
+treat them as blocking. They are not part of any file you edit. The orchestrator commits your
+result after review. Skip the Obsidian session log; `FINDINGS_FIRST_MINUTE.md` is the session
+record for this run.
+
 ## Rules
 
 - Write only inside `Architecting_the_operation/video/yt02/stage/`. The engine at
