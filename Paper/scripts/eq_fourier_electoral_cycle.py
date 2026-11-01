@@ -20,7 +20,14 @@ Critical methodological notes:
        The 4-year period (0.2500 cyc/yr) falls EXACTLY on FFT bin 15.
        The 6-year period (0.1667 cyc/yr) falls EXACTLY on FFT bin 10.
        The 2-year period (0.5000 cyc/yr) falls at the Nyquist limit (bin 30)
-       and is therefore reported with caution.
+       and is therefore reported with caution. The one-sided spectrum is taken
+       with rfft/rfftfreq so that the Nyquist bin is kept (fftfreq returns it
+       as -0.5 and a positive-frequency filter drops it).
+       The 8-year period (0.1250 cyc/yr) falls BETWEEN bins 7 and 8; both
+       bracketing bins are reported (see spectral_bins.target_bins).
+    3a. A single-bin periodogram ratio scatters widely. Each target ratio is
+       therefore reported with its rank among all bins and with the median
+       ratio across the spectrum (spectral_bins.ratio_context).
     4. Welch's method with nperseg=16 yields only ~5 independent segments;
        variance is high. We therefore report FFT as the primary estimator and
        Welch as a robustness check with larger segment sizes.
@@ -41,9 +48,12 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from scipy import signal
-from scipy.fft import fft, fftfreq
+from scipy.fft import rfft, rfftfreq
 from pathlib import Path
 from scipy.stats import ttest_ind
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from spectral_bins import target_bins, ratio_context, rank_of, welch_ratio_at  # noqa: E402
 
 # ---------------------------------------------------------------------------
 # Paths
@@ -79,12 +89,12 @@ identity_freq_dt = signal.detrend(identity_freq, type="linear")
 # ---------------------------------------------------------------------------
 # FFT (primary estimator: periods align exactly with frequency bins)
 # ---------------------------------------------------------------------------
-freqs = fftfreq(N, d=1/fs)
+freqs = rfftfreq(N, d=1/fs)          # keeps the Nyquist bin (0.5 cyc/yr)
 pos = freqs > 0
 f_pos = freqs[pos]
 
-fft_class = np.abs(fft(class_freq_dt))[pos]
-fft_id = np.abs(fft(identity_freq_dt))[pos]
+fft_class = np.abs(rfft(class_freq_dt))[pos]
+fft_id = np.abs(rfft(identity_freq_dt))[pos]
 
 psd_class = fft_class**2 / N
 psd_id = fft_id**2 / N
@@ -111,6 +121,9 @@ _, psd_welch12_id = welch_est(identity_freq_dt, 12)
 def nearest_idx(arr, val):
     return int(np.argmin(np.abs(arr - val)))
 
+# Bin-wise context for every target ratio (median and count >= 20 across all bins)
+CTX = ratio_context(f_pos, psd_id, psd_class)
+
 targets = {
     "2 yr (midterm, Nyquist)": 1/2,
     "4 yr (presidential)": 1/4,
@@ -124,7 +137,9 @@ print("FFT BIN ALIGNMENT")
 print("="*70)
 for label, f_target in targets.items():
     bin_num = f_target * N
-    print(f"  {label:22s}: f = {f_target:.4f} cyc/yr -> FFT bin {bin_num:.1f}")
+    idx, on_grid = target_bins(f_pos, f_target)
+    where = "exact bin" if on_grid else "between bins " + " and ".join(f"{f_pos[i]:.4f}" for i in idx)
+    print(f"  {label:22s}: f = {f_target:.4f} cyc/yr -> FFT bin {bin_num:.1f} ({where})")
 
 # ---------------------------------------------------------------------------
 # Spectral power at target frequencies
@@ -135,40 +150,53 @@ print("="*70)
 
 results = []
 for label, f_target in targets.items():
-    idx_fft = nearest_idx(f_pos, f_target)
+    idx_list, on_grid = target_bins(f_pos, f_target)
     idx_w20 = nearest_idx(f_welch20, f_target)
     idx_w12 = nearest_idx(f_welch12, f_target)
-    
-    p_id_fft = psd_id[idx_fft]
-    p_cl_fft = psd_class[idx_fft]
-    ratio_fft = p_id_fft / p_cl_fft if p_cl_fft > 0 else np.inf
-    
+
     p_id_w20 = psd_welch20_id[idx_w20]
     p_cl_w20 = psd_welch20_class[idx_w20]
-    ratio_w20 = p_id_w20 / p_cl_w20 if p_cl_w20 > 0 else np.inf
-    
-    p_id_w12 = psd_welch12_id[idx_w12]
-    p_cl_w12 = psd_welch12_class[idx_w12]
-    ratio_w12 = p_id_w12 / p_cl_w12 if p_cl_w12 > 0 else np.inf
-    
-    results.append({
-        "period": label,
-        "f_target": f_target,
-        "T_target_yr": 1/f_target,
-        "fft_bin": f_target * N,
-        "ratio_fft": ratio_fft,
-        "ratio_welch20": ratio_w20,
-        "ratio_welch12": ratio_w12,
-        "p_id_fft": p_id_fft,
-        "p_cl_fft": p_cl_fft,
-        "p_id_welch20": p_id_w20,
-        "p_cl_welch20": p_cl_w20,
-    })
-    
+    # NaN when the segment length cannot resolve the target (see welch_ratio_at)
+    ratio_w20, _, res_w20 = welch_ratio_at(f_welch20, psd_welch20_id, psd_welch20_class, f_target)
+    ratio_w12, _, res_w12 = welch_ratio_at(f_welch12, psd_welch12_id, psd_welch12_class, f_target)
+
     print(f"\n{label}")
-    print(f"  FFT   identity/class ratio = {ratio_fft:10.3f}")
-    print(f"  Welch(20) ratio            = {ratio_w20:10.3f}")
-    print(f"  Welch(12) ratio            = {ratio_w12:10.3f}")
+    # One row per FFT bin measured: the exact bin when the target is on the
+    # grid, otherwise both bracketing bins, each labelled with its own period.
+    for idx_fft in idx_list:
+        p_id_fft = psd_id[idx_fft]
+        p_cl_fft = psd_class[idx_fft]
+        ratio_fft = p_id_fft / p_cl_fft if p_cl_fft > 0 else np.inf
+        row_label = label if on_grid else f"{label} @ {1/f_pos[idx_fft]:.2f} yr"
+        results.append({
+            "period": row_label,
+            "f_target": f_target,
+            "T_target_yr": 1/f_target,
+            "fft_bin": f_target * N,
+            "on_grid": on_grid,
+            "f_used": f_pos[idx_fft],
+            "T_used_yr": 1/f_pos[idx_fft],
+            "ratio_fft": ratio_fft,
+            "rank_among_bins": rank_of(CTX["ratios"], ratio_fft),
+            "n_bins": CTX["n_bins"],
+            "welch20_resolved": res_w20,
+            "welch12_resolved": res_w12,
+            "ratio_welch20": ratio_w20,
+            "ratio_welch12": ratio_w12,
+            "f_welch20_used": f_welch20[idx_w20],
+            "f_welch12_used": f_welch12[idx_w12],
+            "p_id_fft": p_id_fft,
+            "p_cl_fft": p_cl_fft,
+            "p_id_welch20": p_id_w20,
+            "p_cl_welch20": p_cl_w20,
+        })
+        print(f"  FFT   bin f = {f_pos[idx_fft]:.4f} ({1/f_pos[idx_fft]:.2f} yr): identity/class ratio = {ratio_fft:10.3f}"
+              f"  (rank {rank_of(CTX['ratios'], ratio_fft)} of {CTX['n_bins']} bins)")
+    print(f"  Welch(20) ratio at f = {f_welch20[idx_w20]:.4f}: {ratio_w20:10.3f}")
+    print(f"  Welch(12) ratio at f = {f_welch12[idx_w12]:.4f}: {ratio_w12:10.3f}")
+
+print(f"\nAll-bin context: median identity/class ratio = {CTX['median']:.2f}; "
+      f"{CTX['n_at_or_above']} of {CTX['n_bins']} bins have a ratio >= {CTX['threshold']:.0f}")
 
 # ---------------------------------------------------------------------------
 # Time-domain test: election-year vs non-election-year means
@@ -195,7 +223,11 @@ print(f"\n  t-test (pres vs non-election): t = {t_stat:.3f}, p = {p_val:.4f}")
 # Parseval check
 # ---------------------------------------------------------------------------
 total_energy_time = np.sum(identity_freq_dt**2) + np.sum(class_freq_dt**2)
-total_energy_freq = 2 * (np.sum(psd_id) + np.sum(psd_class))
+# One-sided rfft: interior bins count twice; the Nyquist bin (last, N even) once.
+_w = np.full(psd_id.shape, 2.0)
+if N % 2 == 0:
+    _w[-1] = 1.0
+total_energy_freq = np.sum(_w * psd_id) + np.sum(_w * psd_class)
 print(f"\nParseval check (factor-2 corrected):")
 print(f"  Time:  {total_energy_time:.3f}")
 print(f"  Freq:  {total_energy_freq:.3f}")
@@ -216,7 +248,8 @@ verdicts = []
 
 # P1: 4-year FFT peak
 if r_4["ratio_fft"] > 2.0:
-    verdicts.append(f"P1 PASS: FFT 4-yr identity/class ratio = {r_4['ratio_fft']:.1f} >> 1")
+    verdicts.append(f"P1 PASS: FFT 4-yr identity/class ratio = {r_4['ratio_fft']:.1f} >> 1 "
+                    f"(rank {r_4['rank_among_bins']} of {r_4['n_bins']} bins; Welch 20/12: {r_4['ratio_welch20']:.2f}/{r_4['ratio_welch12']:.2f})")
 elif r_4["ratio_fft"] > 1.2:
     verdicts.append(f"P1 WEAK: FFT 4-yr ratio = {r_4['ratio_fft']:.1f}")
 else:
@@ -239,7 +272,8 @@ else:
 
 # P4: ratio >> 1
 if r_4["ratio_fft"] > 5.0:
-    verdicts.append(f"P4 PASS: 4-yr ratio = {r_4['ratio_fft']:.1f} >> 1")
+    verdicts.append(f"P4 PASS: 4-yr ratio = {r_4['ratio_fft']:.1f} >> 1 "
+                    f"(all-bin median {CTX['median']:.2f}; {CTX['n_at_or_above']} of {CTX['n_bins']} bins >= {CTX['threshold']:.0f})")
 elif r_4["ratio_fft"] > 2.0:
     verdicts.append(f"P4 WEAK: 4-yr ratio = {r_4['ratio_fft']:.1f}")
 else:
@@ -319,10 +353,15 @@ colors = ["#2ca02c" if r > 2.0 else "#ff7f0e" if r > 1.2 else "#d62728" for r in
 bars = ax.bar([r["period"] for r in results], ratios_fft, color=colors, edgecolor="black", width=0.6)
 ax.axhline(1.0, color="black", ls="--", label="Parity (ratio = 1)")
 ax.axhline(2.0, color="green", ls=":", alpha=0.4, label="Framework threshold (2.0)")
-ax.set_ylabel("Identity / Class power ratio (FFT)")
-ax.set_title("D. FFT Power Ratios at Electoral Cycles\n(Framework predicts >> 1 for identity band)")
-ax.legend()
-ax.set_ylim(0, max(ratios_fft)*1.2)
+ax.axhline(CTX["median"], color="purple", ls="-.", alpha=0.7,
+           label=f"Median ratio over all {CTX['n_bins']} bins ({CTX['median']:.1f})")
+ax.set_yscale("log")
+ax.set_ylabel("Identity / Class power ratio (FFT, log scale)")
+ax.set_title("D. FFT Power Ratios at Electoral Cycles\n"
+             f"({CTX['n_at_or_above']} of {CTX['n_bins']} bins reach a ratio of {CTX['threshold']:.0f} or more)")
+ax.legend(fontsize=8)
+ax.set_ylim(min(ratios_fft)*0.5, max(ratios_fft)*3)
+ax.tick_params(axis="x", labelrotation=20)
 for bar, r in zip(bars, ratios_fft):
     height = bar.get_height()
     ax.annotate(f"{r:.1f}", xy=(bar.get_x() + bar.get_width()/2, height),

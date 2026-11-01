@@ -36,8 +36,11 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from scipy import signal
-from scipy.fft import fft, fftfreq
+from scipy.fft import rfft, rfftfreq
 from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from spectral_bins import target_bins, ratio_context, rank_of, welch_ratio_at  # noqa: E402
 from scipy.stats import ttest_ind
 
 # ---------------------------------------------------------------------------
@@ -79,12 +82,12 @@ identity_count_dt = signal.detrend(identity_count, type="linear")
 # ---------------------------------------------------------------------------
 # FFT (primary estimator)
 # ---------------------------------------------------------------------------
-freqs = fftfreq(N, d=1/fs)
+freqs = rfftfreq(N, d=1/fs)          # keeps the Nyquist bin
 pos = freqs > 0
 f_pos = freqs[pos]
 
-fft_class = np.abs(fft(class_count_dt))[pos]
-fft_id = np.abs(fft(identity_count_dt))[pos]
+fft_class = np.abs(rfft(class_count_dt))[pos]
+fft_id = np.abs(rfft(identity_count_dt))[pos]
 
 psd_class = fft_class**2 / N
 psd_id = fft_id**2 / N
@@ -132,8 +135,11 @@ print("\n" + "="*70)
 print("SPECTRAL POWER AT ELECTORAL FREQUENCIES")
 print("="*70)
 
+CTX = ratio_context(f_pos, psd_id, psd_class, f_lo=0.1, f_hi=1.0)
+
 results = []
 for label, f_target in targets.items():
+    idx_list, on_grid = target_bins(f_pos, f_target)
     idx_fft = nearest_idx(f_pos, f_target)
     idx_w80 = nearest_idx(f_welch80, f_target)
     idx_w48 = nearest_idx(f_welch48, f_target)
@@ -141,21 +147,26 @@ for label, f_target in targets.items():
     p_id_fft = psd_id[idx_fft]
     p_cl_fft = psd_class[idx_fft]
     ratio_fft = p_id_fft / p_cl_fft if p_cl_fft > 0 else np.inf
+    fft_bins = ";".join(f"{f_pos[i]:.4f}:{psd_id[i]/psd_class[i]:.3f}" for i in idx_list)
 
     p_id_w80 = psd_welch80_id[idx_w80]
     p_cl_w80 = psd_welch80_class[idx_w80]
-    ratio_w80 = p_id_w80 / p_cl_w80 if p_cl_w80 > 0 else np.inf
-
-    p_id_w48 = psd_welch48_id[idx_w48]
-    p_cl_w48 = psd_welch48_class[idx_w48]
-    ratio_w48 = p_id_w48 / p_cl_w48 if p_cl_w48 > 0 else np.inf
+    # NaN when the segment length cannot resolve the target (see welch_ratio_at)
+    ratio_w80, _, res_w80 = welch_ratio_at(f_welch80, psd_welch80_id, psd_welch80_class, f_target)
+    ratio_w48, _, res_w48 = welch_ratio_at(f_welch48, psd_welch48_id, psd_welch48_class, f_target)
 
     results.append({
         "period": label,
         "f_target": f_target,
         "T_target_yr": 1/f_target,
         "fft_bin": f_target * N / fs,
+        "fft_on_grid": on_grid,
+        "f_fft_nearest": f_pos[idx_fft],
+        "fft_bins_bracketing": fft_bins,
         "ratio_fft": ratio_fft,
+        "fft_rank_0p1_to_1": rank_of(CTX["ratios"], ratio_fft),
+        "welch80_resolved": res_w80,
+        "welch48_resolved": res_w48,
         "ratio_welch80": ratio_w80,
         "ratio_welch48": ratio_w48,
         "p_id_fft": p_id_fft,
@@ -199,7 +210,7 @@ print(f"\n  t-test (pres vs non-election): t = {t_stat:.3f}, p = {p_val:.4f}")
 # Parseval check
 # ---------------------------------------------------------------------------
 total_energy_time = np.sum(class_count_dt**2) + np.sum(identity_count_dt**2)
-total_energy_freq = 2 * (np.sum(psd_id) + np.sum(psd_class))
+total_energy_freq = (np.sum(np.where(np.arange(psd_id.size) == psd_id.size - 1, 1.0 if N % 2 == 0 else 2.0, 2.0) * (psd_id + psd_class)))
 print(f"\nParseval check (factor-2 corrected):")
 print(f"  Time:  {total_energy_time:.3f}")
 print(f"  Freq:  {total_energy_freq:.3f}")
