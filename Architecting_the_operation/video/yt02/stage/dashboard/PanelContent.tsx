@@ -4,7 +4,7 @@ import spec from '../handoff/spec.json';
 import map from '../handoff/map.json';
 import {color, Tokens} from '../tokens';
 import {iberiaCamera} from './mapGeometry';
-import {ComplexWagePlane} from './ComplexWagePlane';
+import {ComplexWagePlane, WagePlaneSettings, WAGE_EXPANDED_BOX} from './ComplexWagePlane';
 import {Graphic} from './Graphics';
 
 export const CameraContext = React.createContext<Camera>(iberiaCamera);
@@ -25,7 +25,21 @@ const compassSpec = {
  },
 };
 
-export const instruments: Record<string,any> = {...spec.instruments, Compass: compassSpec};
+const wagePlaneSpec = {
+ ...spec.instruments['Wage plane'],
+ expanded: {
+  ...spec.instruments['Wage plane'].expanded,
+  w: WAGE_EXPANDED_BOX.width,
+  h: WAGE_EXPANDED_BOX.height,
+ },
+ settings: {
+  ...spec.instruments['Wage plane'].settings,
+  w: WAGE_EXPANDED_BOX.width,
+  h: WAGE_EXPANDED_BOX.height,
+ },
+};
+
+export const instruments: Record<string,any> = {...spec.instruments, 'Wage plane': wagePlaneSpec, Compass: compassSpec};
 
 const fontStyle=(f:any):React.CSSProperties=>({fontFamily:f.family,fontSize:f.size,fontWeight:f.style==='Bold'?700:f.style==='Medium'?500:400,fontStyle:f.style==='Italic'?'italic':'normal',letterSpacing:f.letterSpacing_px??0,lineHeight:`${f.lineHeight_px??Math.round(f.size*1.3)}px`});
 const pos=(b:number[]):React.CSSProperties=>({position:'absolute',left:b[0],top:b[1],width:b[2],height:b[3]});
@@ -217,5 +231,5 @@ export function PanelContent({name,mode}:{name:string;mode:InstrumentMode}) {
  const data=instruments[name][mode],compact=mode==='compact';
  const renderFill=`linear-gradient(${color('color/fill/panel-wash')}, ${color('color/fill/panel-wash')}), ${color('color/fill/panel-render')}`;
  const fill=interactive?color(compact?'color/fill/panel-wash':'color/fill/glass'):renderFill;
- return <GlassPanel fill={fill} blur={interactive&&compact?6:0} padding={0} radius={compact?8:10} style={{backdropFilter:interactive&&compact?'blur(6px)':'none',WebkitBackdropFilter:interactive&&compact?'blur(6px)':'none',position:'relative',width:data.w,height:data.h,border:'none',boxShadow:`inset 0 0 0 ${compact?1:1.6}px ${color('color/line/hairline')}`,color:color('color/text/primary')}}>{name==='Compass'&&(mode==='compact'||mode==='expanded')?<CompassWidget mode={mode}/>:name==='Wage plane'&&mode==='expanded'?<ComplexWagePlane/>:mode==='settings'?<Settings name={name} data={data}/>:<Nodes nodes={data.children} compact={compact}/>}</GlassPanel>;
+ return <GlassPanel fill={fill} blur={interactive&&compact?6:0} padding={0} radius={compact?8:10} style={{backdropFilter:interactive&&compact?'blur(6px)':'none',WebkitBackdropFilter:interactive&&compact?'blur(6px)':'none',position:'relative',width:data.w,height:data.h,border:'none',boxShadow:`inset 0 0 0 ${compact?1:1.6}px ${color('color/line/hairline')}`,color:color('color/text/primary')}}>{name==='Compass'&&(mode==='compact'||mode==='expanded')?<CompassWidget mode={mode}/>:name==='Wage plane'&&mode==='expanded'?<ComplexWagePlane/>:name==='Wage plane'&&mode==='settings'?<WagePlaneSettings data={data}/>:mode==='settings'?<Settings name={name} data={data}/>:<Nodes nodes={data.children} compact={compact}/>}</GlassPanel>;
 }

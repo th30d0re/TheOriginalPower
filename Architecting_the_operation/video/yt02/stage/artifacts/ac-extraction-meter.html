@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AC Extraction Meter</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=STIX+Two+Text:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#0D1B2A; --panel:#132538; --well:#081421;
+  --wire:#ECE7DC; --ink:#ECE7DC; --ink-2:#A9B6C4;
+  --rule:#8A6A45; --label-sm:#B8956A;
+  --green:#7CC08A; --red:#E0604A; --teal:#4CC2C2; --gold:#D4A84B; --accent:#E08A3C; --dim:#4A5566;
+  --sans:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,Menlo,Consolas,monospace;
+  --math:'STIX Two Text','Cambria Math','Times New Roman',serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.55 var(--sans);padding-block:22px 48px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.app{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:20px 28px;align-items:start}
+header{grid-column:1/-1}
+h1{font:600 24px/1.2 var(--sans);margin:0 0 6px;letter-spacing:-.01em}
+.lede{margin:0;color:var(--ink-2);max-width:84ch}
+.card{background:var(--panel);border:1px solid var(--rule);border-radius:10px;padding:16px 18px;min-width:0}
+h2{font:600 12px/1.3 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--label-sm);margin:0 0 10px}
+svg{display:block;width:100%;height:auto}
+svg text{font-family:var(--mono)}
+.m{font-family:var(--math);font-style:italic}
+.row{display:grid;grid-template-columns:128px minmax(0,1fr) 70px;gap:10px;align-items:center;margin:7px 0}
+.row label{font:400 14px var(--sans)}
+.row label i{font-family:var(--math);font-size:16px}
+.row output{font:500 13px var(--mono);text-align:right;font-variant-numeric:tabular-nums}
+input[type=range]{width:100%;min-width:0;accent-color:var(--wire)}
+input[type=range]:focus-visible,.btn:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.btns{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 10px}
+.btn{font:500 13px var(--sans);padding:7px 11px;border:1px solid var(--rule);border-radius:6px;background:var(--well);color:var(--ink);cursor:pointer}
+.btn:hover{border-color:var(--gold)}
+.btn[aria-pressed="true"]{border-color:var(--gold);color:var(--gold)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px 16px;margin:12px 0 0}
+.stats dt{font-size:12px;color:var(--ink-2)}
+.stats dd{margin:0;font:500 15px var(--mono);font-variant-numeric:tabular-nums}
+.verdict{margin:12px 0 0;font-size:14.5px}
+.full{grid-column:1/-1}
+.note{font-size:13.5px;color:var(--ink-2);margin:8px 0 0;max-width:100ch}
+.note code{font-family:var(--mono);font-size:12.5px;color:var(--label-sm)}
+.shares{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px 16px;margin:10px 0 0}
+.shares div{border-left:3px solid var(--rule);padding-left:10px}
+.shares b{display:block;font:500 15px var(--mono)}
+.shares span{font-size:12.5px;color:var(--ink-2)}
+@media (max-width:900px){.app{grid-template-columns:minmax(0,1fr)}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.shares{grid-template-columns:minmax(0,1fr)}}
+</style>
+</head>
+<body>
+<div class="app">
+  <header>
+    <h1>AC Extraction Meter</h1>
+    <p class="lede">The complex wage is complex power: S = V·I* = P + jQ, with P = ψ<sub>m</sub> (real power, material work) and Q = ψ<sub>s</sub> (reactive power, status that does no net work) (eqs. 0.8–0.9). The phase angle θ is the system's tuning knob. The lower panel integrates the real power over the eras to give the Reparations Integral (eq. 0.16).</p>
+  </header>
+
+  <section class="card" aria-label="Phasor">
+    <h2>The wage as complex power</h2>
+    <div class="btns" role="group" aria-label="Regimes">
+      <button class="btn" type="button" data-th="0">DC (θ = 0°)</button>
+      <button class="btn" type="button" data-th="55">AC, covert</button>
+      <button class="btn" type="button" data-th="90">Pure reactive</button>
+      <button class="btn" type="button" data-th="125">Quadrant II</button>
+    </div>
+    <svg id="phasor" viewBox="0 0 480 480" role="img" aria-label="Phasor diagram of V, I and S on the wage plane"></svg>
+    <div class="row"><label for="s-th"><i>θ</i> phase angle</label><input id="s-th" type="range" min="-180" max="180" step="1"><output id="o-th" for="s-th"></output></div>
+    <div class="row"><label for="s-V">|<i>V</i>| state voltage</label><input id="s-V" type="range" min="0.2" max="1.5" step="0.01"><output id="o-V" for="s-V"></output></div>
+    <div class="row"><label for="s-I">|<i>I</i>| labor current</label><input id="s-I" type="range" min="0.2" max="1.5" step="0.01"><output id="o-I" for="s-I"></output></div>
+    <dl class="stats">
+      <div><dt>P = ψ<sub>m</sub></dt><dd id="r-P"></dd></div>
+      <div><dt>Q = ψ<sub>s</sub></dt><dd id="r-Q"></dd></div>
+      <div><dt>|S| = |W|</dt><dd id="r-S"></dd></div>
+      <div><dt>cos θ · clock</dt><dd id="r-pf"></dd></div>
+    </dl>
+    <p class="verdict" id="verdict"></p>
+  </section>
+
+  <section class="card" aria-label="Waveforms">
+    <h2>One cycle, instant by instant</h2>
+    <svg id="wave" viewBox="0 0 900 520" role="img" aria-label="v of t, i of t, and the two parts of instantaneous power"></svg>
+    <p class="note">p(t) = v(t)·i(t) splits into two parts. The real part, P(1 + cos 2ωt), always flows one way. The reactive part, Q·sin 2ωt, flows back and forth and averages to zero. Over the window shown, the net work of the reactive part is <b id="r-qint" style="font-family:var(--mono);color:var(--ink)"></b>. This is the Buffer-Class Work Theorem (eq. 0.15): status delivered as ψ<sub>s</sub> does no cumulative material work.</p>
+  </section>
+
+  <section class="card full" aria-label="Reparations integral">
+    <h2>The Reparations Integral, 1619–2026</h2>
+    <svg id="integral" viewBox="0 0 1200 380" role="img" aria-label="Real power flow from O to E by era, and its running integral"></svg>
+    <div class="row"><label for="s-dc">DC level, 1619–1865</label><input id="s-dc" type="range" min="0" max="1.5" step="0.01"><output id="o-dc" for="s-dc"></output></div>
+    <div class="row"><label for="s-hw">Rectified share, 1865–1965</label><input id="s-hw" type="range" min="0" max="1" step="0.01"><output id="o-hw" for="s-hw"></output></div>
+    <div class="row"><label for="s-ac">AC |V||I|, 1965–2026</label><input id="s-ac" type="range" min="0" max="1.5" step="0.01"><output id="o-ac" for="s-ac"></output></div>
+    <p class="note">The AC era uses the θ set above (P = |V||I| cos θ). The 1865–1965 era runs a half-wave rectifier inside the AC envelope: the share you set passes as DC labor (the 13th Amendment exception, Jim Crow statutes), and the rest follows the AC era's power factor.</p>
+    <div class="shares" id="shares"></div>
+  </section>
+
+  <section class="card full" aria-label="Notes">
+    <h2>What the page assumes</h2>
+    <p class="note">From the manuscript: DC mode, P = V·I and W = ψ<sub>m</sub> with θ = 0 (eqs. 0.7, 0.7a); AC mode, S = V·I* = P + jQ with P = ψ<sub>m</sub> and Q = ψ<sub>s</sub> (eqs. 0.8–0.9); the regimes by θ, including Quadrant II for θ &gt; 90° (<code>Paper/The_Original_Power.tex:1150</code>); the Variable Swap as DC → AC migration and the carceral state as a half-wave rectifier (<code>:1240</code>–<code>:1275</code>); systemic work and the Buffer-Class Work Theorem (eqs. 0.13–0.15); the Reparations Integral and its limits, t<sub>0</sub> = 1619, t<sub>now</sub> = 2026 (eq. 0.16, <code>:1385</code>).</p>
+    <p class="note">Orientation follows the complex wage plane: +ψ<sub>m</sub> points down (6 o'clock), +ψ<sub>s</sub> points right, and the clock reading is 6 − θ/30. V is the reference phasor; I is drawn at −θ so that S = V·I* sits at +θ.</p>
+    <p class="note">The manuscript states that the shape of the real-power curve is illustrative and implies no calibrated values. The era levels here are also illustrative, so the era shares show how the regimes add up under your settings, not a measured split. The dollar estimates the manuscript cites (Craemer, about $14–17 trillion; Darity and Mullen, about $10–12 trillion) come from those studies, not from this page.</p>
+  </section>
+</div>
+
+<script>
+(function(){
+'use strict';
+var $=function(id){return document.getElementById(id);};
+var S={th:55,V:1,I:1,dc:1,hw:0.6,ac:1};
+var R=Math.PI/180;
+function f(v,d){return (Math.abs(v)<0.0005?0:v).toFixed(d==null?2:d);}
+function clock(th){var h=((6-th/30)%12+12)%12;if(h<0.25||h>11.75)return '12:00';var H=Math.floor(h),M=Math.round((h-H)*60);if(M===60){H++;M=0;}return (H===0?12:H)+':'+(M<10?'0':'')+M;}
+function arrow(x1,y1,x2,y2,col,w,id){
+  var a=Math.atan2(y2-y1,x2-x1),L=Math.hypot(x2-x1,y2-y1),hl=Math.min(16,L*0.4);
+  var bx=x2-hl*Math.cos(a),by=y2-hl*Math.sin(a);
+  return '<line x1="'+x1.toFixed(1)+'" y1="'+y1.toFixed(1)+'" x2="'+bx.toFixed(1)+'" y2="'+by.toFixed(1)+'" style="stroke:'+col+'" stroke-width="'+w+'" stroke-linecap="round"/>'+
+    (L>4?'<path d="M'+x2.toFixed(1)+' '+y2.toFixed(1)+' L'+(bx+hl*0.45*Math.sin(a)).toFixed(1)+' '+(by-hl*0.45*Math.cos(a)).toFixed(1)+' L'+(bx-hl*0.45*Math.sin(a)).toFixed(1)+' '+(by+hl*0.45*Math.cos(a)).toFixed(1)+' Z" style="fill:'+col+'"/>':'');
+}
+/* ---- phasor: screen x = psi_s, screen y = +psi_m (down) ---- */
+function phasor(){
+  var C=240,K=110,P=S.V*S.I*Math.cos(S.th*R),Q=S.V*S.I*Math.sin(S.th*R);
+  var h='<defs><filter id="glow" filterUnits="userSpaceOnUse" x="0" y="0" width="480" height="480"><feDropShadow dx="3" dy="5" stdDeviation="3" flood-color="#000" flood-opacity=".55"/><feGaussianBlur stdDeviation="2.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>';
+  [1,2].forEach(function(r){h+='<circle cx="'+C+'" cy="'+C+'" r="'+r*K+'" fill="none" style="stroke:var(--rule)" stroke-opacity=".45" stroke-dasharray="3 5"/>';});
+  h+='<line x1="'+C+'" y1="'+(C-215)+'" x2="'+C+'" y2="'+C+'" style="stroke:var(--red)" stroke-width="2"/><line x1="'+C+'" y1="'+C+'" x2="'+C+'" y2="'+(C+215)+'" style="stroke:var(--green)" stroke-width="2"/>';
+  h+='<line x1="'+(C-215)+'" y1="'+C+'" x2="'+(C+215)+'" y2="'+C+'" style="stroke:var(--rule)" stroke-width="2"/>';
+  h+='<text x="'+(C+8)+'" y="'+(C+210)+'" font-size="13" style="fill:var(--green)">+ψm  real power</text><text x="'+(C+8)+'" y="'+(C-200)+'" font-size="13" style="fill:var(--red)">−ψm</text>';
+  h+='<text x="'+(C+212)+'" y="'+(C-8)+'" text-anchor="end" font-size="13" style="fill:var(--label-sm)">+ψs  reactive</text><text x="'+(C-212)+'" y="'+(C-8)+'" font-size="13" style="fill:var(--label-sm)">−ψs</text>';
+  [['12',0,-1],['3',1,0],['6',0,1],['9',-1,0]].forEach(function(c){h+='<text x="'+(C+c[1]*228)+'" y="'+(C+c[2]*228+(c[2]>0?12:c[2]<0?0:5))+'" text-anchor="middle" font-size="12" style="fill:var(--label-sm)">'+c[0]+'</text>';});
+  /* power triangle */
+  var sx=C+Q*K,sy=C+P*K;
+  h+='<line x1="'+C+'" y1="'+sy.toFixed(1)+'" x2="'+sx.toFixed(1)+'" y2="'+sy.toFixed(1)+'" style="stroke:var(--label-sm)" stroke-dasharray="5 4" stroke-width="1.5"/>';
+  h+='<line x1="'+sx.toFixed(1)+'" y1="'+C+'" x2="'+sx.toFixed(1)+'" y2="'+sy.toFixed(1)+'" style="stroke:'+(P>=0?'var(--green)':'var(--red)')+'" stroke-dasharray="5 4" stroke-width="1.5"/>';
+  /* theta arc */
+  var ar=46,steps=Math.max(2,Math.round(Math.abs(S.th)/4)),d='';
+  for(var k=0;k<=steps;k++){var t=S.th*R*k/steps;d+=(k?'L':'M')+(C+ar*Math.sin(t)).toFixed(1)+' '+(C+ar*Math.cos(t)).toFixed(1);}
+  h+='<path d="'+d+'" fill="none" style="stroke:var(--gold)" stroke-width="1.6"/>';
+  var tm=S.th*R/2;h+='<text x="'+(C+(ar+16)*Math.sin(tm)).toFixed(1)+'" y="'+(C+(ar+16)*Math.cos(tm)+5).toFixed(1)+'" text-anchor="middle" class="m" font-size="17" style="fill:var(--gold)">θ</text>';
+  /* V reference along +psi_m, I at -theta */
+  h+=arrow(C,C,C,C+S.V*K,'var(--wire)',2.2);
+  h+='<text x="'+(C-10)+'" y="'+(C+S.V*K+4)+'" text-anchor="end" class="m" font-size="17" style="fill:var(--wire)">V</text>';
+  var ix=C+S.I*K*Math.sin(-S.th*R),iy=C+S.I*K*Math.cos(-S.th*R);
+  h+=arrow(C,C,ix,iy,'var(--teal)',2.2);
+  h+='<text x="'+(ix+(ix<C?-10:10)).toFixed(1)+'" y="'+(iy+4).toFixed(1)+'" text-anchor="'+(ix<C?'end':'start')+'" class="m" font-size="17" style="fill:var(--teal)">I</text>';
+  h+='<g filter="url(#glow)">'+arrow(C,C,sx,sy,'var(--accent)',4.5)+'</g>';
+  h+='<text x="'+(sx+(sx<C?-12:12)).toFixed(1)+'" y="'+(sy+(sy<C?-8:18)).toFixed(1)+'" text-anchor="'+(sx<C?'end':'start')+'" font-size="15" style="fill:var(--accent)">S = W</text>';
+  h+='<circle cx="'+C+'" cy="'+C+'" r="4" style="fill:var(--wire)"/>';
+  $('phasor').innerHTML=h;
+  $('r-P').textContent=f(P);$('r-Q').textContent=f(Q);$('r-S').textContent=f(S.V*S.I);
+  $('r-pf').textContent=f(Math.cos(S.th*R))+' · '+clock(S.th);
+  var a=Math.abs(S.th),t;
+  if(a<2)t='DC limit: θ = 0, so W = ψm (eq. 0.7a). Open, unidirectional extraction; the system needs no status wage and no phase-shifting Buffer Class.';
+  else if(a<88)t='AC mode: covert, plausibly neutral extraction. Real power still flows ('+Math.round(100*Math.cos(a*R))+'% of |S|), and the reactive part hides its direction.';
+  else if(a<=92)t='Pure reactive power: the wage is all status. No net work moves; the system runs on culture war.';
+  else t='Quadrant II: cos θ < 0. Real power reverses, so the Elite extract material wealth from the Buffer Class while ψs stays inflated.';
+  if(S.th<-2)t+=' With θ < 0, ψs is negative: status inversion (buffer demotion).';
+  $('verdict').textContent=t;
+}
+/* ---- waveforms over two cycles ---- */
+function wave(){
+  var W=900,H=520,L=60,Rr=20,cyc=2,N=400,c=Math.cos(S.th*R),s=Math.sin(S.th*R),VI=S.V*S.I;
+  function X(u){return L+u/(2*Math.PI*cyc)*(W-L-Rr);}
+  var top={y0:130,k:70},bot={y0:390,k:58};
+  var h='';
+  /* panel labels and axes */
+  h+='<text x="'+L+'" y="26" font-size="14" style="fill:var(--label-sm)">v(t), i(t)</text>';
+  h+='<text x="'+L+'" y="280" font-size="14" style="fill:var(--label-sm)">p(t) = real part + reactive part</text>';
+  [top,bot].forEach(function(p){h+='<line x1="'+L+'" y1="'+p.y0+'" x2="'+(W-Rr)+'" y2="'+p.y0+'" style="stroke:var(--wire)" stroke-width="1.6"/>';});
+  for(var g=1;g<cyc*4;g++){var gx=X(g*Math.PI/2);h+='<line x1="'+gx+'" y1="40" x2="'+gx+'" y2="'+(H-14)+'" style="stroke:var(--rule)" stroke-opacity=".3"/>';}
+  function path(fn,p){var d='';for(var n=0;n<=N;n++){var u=2*Math.PI*cyc*n/N;d+=(n?'L':'M')+X(u).toFixed(1)+' '+(p.y0-p.k*fn(u)).toFixed(1);}return d;}
+  /* v and i: i lags v by theta when Q>0 (S = V I*) */
+  h+='<path d="'+path(function(u){return S.V*Math.cos(u);},top)+'" fill="none" style="stroke:var(--wire)" stroke-width="2.2"/>';
+  h+='<path d="'+path(function(u){return S.I*Math.cos(u-S.th*R);},top)+'" fill="none" style="stroke:var(--teal)" stroke-width="2.2"/>';
+  h+='<text x="'+(W-Rr)+'" y="'+(top.y0-top.k*1.25)+'" text-anchor="end" font-size="13" style="fill:var(--wire)">v(t)</text><text x="'+(W-Rr-50)+'" y="'+(top.y0-top.k*1.25)+'" text-anchor="end" font-size="13" style="fill:var(--teal)">i(t)</text>';
+  /* p parts: p(t) = v i = VI/2 [cos th (1+cos 2u) + sin th sin 2u] ; scale so mean real = P */
+  var real=function(u){return VI*c*(1+Math.cos(2*u));},reac=function(u){return VI*s*Math.sin(2*u);};
+  var fill='M'+X(0)+' '+bot.y0;for(var n=0;n<=N;n++){var u=2*Math.PI*cyc*n/N;fill+='L'+X(u).toFixed(1)+' '+(bot.y0-bot.k*real(u)).toFixed(1);}fill+='L'+X(2*Math.PI*cyc)+' '+bot.y0+'Z';
+  h+='<path d="'+fill+'" style="fill:'+(c>=0?'var(--green)':'var(--red)')+'" fill-opacity=".14"/>';
+  h+='<path d="'+path(real,bot)+'" fill="none" style="stroke:'+(c>=0?'var(--green)':'var(--red)')+'" stroke-width="2.2"/>';
+  h+='<path d="'+path(reac,bot)+'" fill="none" style="stroke:var(--label-sm)" stroke-width="2" stroke-dasharray="6 4"/>';
+  h+='<path d="'+path(function(u){return real(u)+reac(u);},bot)+'" fill="none" style="stroke:var(--accent)" stroke-width="2.6"/>';
+  var my=bot.y0-bot.k*VI*c;h+='<line x1="'+L+'" y1="'+my.toFixed(1)+'" x2="'+(W-Rr)+'" y2="'+my.toFixed(1)+'" style="stroke:var(--gold)" stroke-width="1.6" stroke-dasharray="8 5"/>';
+  h+='<text x="'+(L+6)+'" y="'+(my-6).toFixed(1)+'" font-size="13" style="fill:var(--gold)">mean = P = ψm</text>';
+  var lg=[['var(--accent)','p(t)'],[c>=0?'var(--green)':'var(--red)','real part'],['var(--label-sm)','reactive part']];
+  lg.forEach(function(e,k){h+='<line x1="'+(W-Rr-330+k*104)+'" y1="296" x2="'+(W-Rr-310+k*104)+'" y2="296" style="stroke:'+e[0]+'" stroke-width="3"'+(k===2?' stroke-dasharray="6 4"':'')+'/><text x="'+(W-Rr-304+k*104)+'" y="300" font-size="12" style="fill:var(--ink-2)">'+e[1]+'</text>';});
+  h+='<text x="'+(W-Rr)+'" y="'+(H-2)+'" text-anchor="end" font-size="12" style="fill:var(--label-sm)">two cycles of the carrier</text>';
+  $('wave').innerHTML=h;
+  var qi=0,dt=2*Math.PI*cyc/4000;for(var n=0;n<4000;n++)qi+=reac((n+0.5)*dt)*dt;
+  $('r-qint').textContent=f(qi,3);
+}
+/* ---- reparations integral ---- */
+var ERAS=[{a:1619,b:1865,k:'dc',col:'var(--red)',name:'DC: chattel slavery'},{a:1865,b:1965,k:'hw',col:'var(--gold)',name:'Rectified: 13th Am., Jim Crow'},{a:1965,b:2026,k:'ac',col:'var(--accent)',name:'AC: phase-shifted'}];
+function power(y){
+  var pf=Math.cos(S.th*R);
+  if(y<1865)return S.dc;
+  if(y<1965)return S.dc*(S.hw+(1-S.hw)*pf);
+  return S.ac*pf;
+}
+function integral(){
+  var W=1200,H=380,L=70,Rr=70,T=56,B=46,y0=1619,y1=2026;
+  function X(y){return L+(y-y0)/(y1-y0)*(W-L-Rr);}
+  var pmax=1.6,pmin=-1.6;function Y(p){return T+(pmax-p)/(pmax-pmin)*(H-T-B);}
+  var cum=[],acc=0,tot={dc:0,hw:0,ac:0},pts=[];
+  for(var y=y0;y<=y1;y+=0.5){var p=power(y);pts.push([y,p]);if(y<y1){acc+=p*0.5;tot[y<1865?'dc':y<1965?'hw':'ac']+=p*0.5;}cum.push([y,acc]);}
+  var cmax=Math.max(1,Math.max.apply(null,cum.map(function(c){return Math.abs(c[1]);})));
+  function YC(c){return Y(0)-(c/cmax)*(Y(0)-T);}
+  var h='';
+  ERAS.forEach(function(e){h+='<rect x="'+X(e.a)+'" y="'+T+'" width="'+(X(e.b)-X(e.a))+'" height="'+(H-T-B)+'" style="fill:'+e.col+'" fill-opacity=".06"/><text x="'+(X(e.a)+6)+'" y="'+(T-12)+'" text-anchor="start" font-size="13" style="fill:'+e.col+'">'+e.name+'</text>';});
+  [1700,1800,1865,1900,1965,2000].forEach(function(y){h+='<line x1="'+X(y)+'" y1="'+T+'" x2="'+X(y)+'" y2="'+(H-B)+'" style="stroke:var(--rule)" stroke-opacity=".35"/><text x="'+X(y)+'" y="'+(H-B+20)+'" text-anchor="middle" font-size="13" style="fill:var(--label-sm)">'+y+'</text>';});
+  h+='<line x1="'+L+'" y1="'+Y(0)+'" x2="'+(W-Rr)+'" y2="'+Y(0)+'" style="stroke:var(--wire)" stroke-width="1.6"/>';
+  var d='M'+X(y0)+' '+Y(0);pts.forEach(function(p){d+='L'+X(p[0]).toFixed(1)+' '+Y(p[1]).toFixed(1);});d+='L'+X(y1)+' '+Y(0)+'Z';
+  h+='<path d="'+d+'" style="fill:var(--green)" fill-opacity=".16"/>';
+  var d2='';pts.forEach(function(p,k){d2+=(k?'L':'M')+X(p[0]).toFixed(1)+' '+Y(p[1]).toFixed(1);});
+  h+='<path d="'+d2+'" fill="none" style="stroke:var(--green)" stroke-width="2"/>';
+  var d3='';cum.forEach(function(c,k){d3+=(k?'L':'M')+X(c[0]).toFixed(1)+' '+YC(c[1]).toFixed(1);});
+  h+='<path d="'+d3+'" fill="none" style="stroke:var(--accent)" stroke-width="2.8"/>';
+  h+='<text x="'+(W-Rr+6)+'" y="'+(YC(acc)+4).toFixed(1)+'" font-size="14" style="fill:var(--accent)">ℛ</text>';
+  h+='<text x="'+(L-8)+'" y="'+(Y(0)+4)+'" text-anchor="end" font-size="12" style="fill:var(--label-sm)">0</text>';
+  h+='<text x="'+L+'" y="'+(H-6)+'" font-size="12" style="fill:var(--ink-2)">green: real power from O into E, Re[V I*] · orange: running integral ℛ (scaled to fit)</text>';
+  $('integral').innerHTML=h;
+  var all=tot.dc+tot.hw+tot.ac,sh='';
+  ERAS.forEach(function(e){sh+='<div style="border-color:'+e.col+'"><b>'+(all>0?Math.round(100*tot[e.k]/all)+'%':'—')+'</b><span>'+e.name+' · '+f(tot[e.k],0)+' unit-years</span></div>';});
+  $('shares').innerHTML=sh;
+}
+function sync(){
+  [['th',0],['V',2],['I',2],['dc',2],['hw',2],['ac',2]].forEach(function(k){$('s-'+k[0]).value=S[k[0]];$('o-'+k[0]).textContent=k[0]==='th'?S.th+'°':f(S[k[0]],k[1]);});
+  Array.prototype.forEach.call(document.querySelectorAll('[data-th]'),function(b){b.setAttribute('aria-pressed',String(+b.getAttribute('data-th')===S.th));});
+}
+function refresh(){sync();phasor();wave();integral();}
+['th','V','I','dc','hw','ac'].forEach(function(k){$('s-'+k).addEventListener('input',function(e){S[k]=+e.target.value;refresh();});});
+Array.prototype.forEach.call(document.querySelectorAll('[data-th]'),function(b){b.addEventListener('click',function(){S.th=+b.getAttribute('data-th');refresh();});});
+refresh();
+})();
+</script>
+</body>
+</html>

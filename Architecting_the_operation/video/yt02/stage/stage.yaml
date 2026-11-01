@@ -38,5 +38,7 @@ shots:
     scene: Dashboard1486
     instance: dashboard
     cues:
+      'expand:wage-plane': {word: expand}
       'settings:wage-plane': {word: settings}
-      'collapse:wage-plane': {word: close}
+      'reexpand:wage-plane': {word: return}
+      'collapse:wage-plane': {word: close, offset_ms: 150}

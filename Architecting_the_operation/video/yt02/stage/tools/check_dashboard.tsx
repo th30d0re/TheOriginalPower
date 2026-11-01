@@ -12,9 +12,11 @@ import {Dashboard,rail} from '../dashboard/Dashboard';
 import {DashboardMap,defaultPolities1486,type Polities} from '../dashboard/DashboardMap';
 import {PanelContent,instruments,formatCoord} from '../dashboard/PanelContent';
 import {regionalProjection as project,worldCamera,iberiaCamera,iberiaFit,labelOffsets} from '../dashboard/mapGeometry';
-import {wageReadings,dangerPolygon} from '../dashboard/ComplexWagePlane';
+import {wageReadings,dangerPolygon,WAGE_EXPANDED_BOX,WAGE_STAT_LABELS} from '../dashboard/ComplexWagePlane';
+import {transitionWagePlaneMode,type WageInteractionEvent} from '../dashboard/instruments/wage-plane';
 import {color} from '../tokens';
 import map from '../handoff/map.json';
+import states from '../review/states.json';
 
 const plan=JSON.parse(fs.readFileSync(new URL('../review/stage_plan.json',import.meta.url),'utf8')) as StagePlan;
 
@@ -33,7 +35,7 @@ function state(ms:number,expanded=false) {
  return renderToStaticMarkup(<PlanContext.Provider value={plan}><ClockContext.Provider value={{ms,fps:30,interactive:false}}>{expanded?<Dashboard modes={{'wage-plane':'expanded'}}/>:<Scene segment={segment} shots={segment.shots} shotAt={time=>segment.shots.find(s=>time>=s.start_ms&&time<s.end_ms)}/>}</ClockContext.Provider></PlanContext.Provider>);
 }
 
-const times=[500,5600,6200,6233.333333,7300,8400,13000,14500,14700,16000,18200,19500,19700,21000,22800];
+const times=[500,5600,6200,6233.333333,7300,8400,13000,14500,14700,16000,18200,19500,19700,21000,22000,22600,23420,23900];
 
 if(process.env.DASHBOARD_SNAPSHOT==='1') {
  const result=[...times.map(ms=>state(ms)),state(13000,true)].map(html=>{
@@ -89,11 +91,9 @@ if(process.env.DASHBOARD_SNAPSHOT==='1') {
  const ptEnclaveSouth=project([-5.9,35.32])!;
  const portugalMainlandHeightPx=Number((ptMainlandSouth[1]-ptMainlandNorth[1]).toFixed(2));
  const portugalWithEnclaveHeightPx=Number((ptEnclaveSouth[1]-ptMainlandNorth[1]).toFixed(2));
- // handoff/svg/map.iberia.svg mainland Portugal height is 100.07 px (99 px in PNG; 130..140 px with route/enclave)
  assert.ok(portugalMainlandHeightPx>=90&&portugalMainlandHeightPx<=110,`mainland Portugal height ${portugalMainlandHeightPx}px outside ±10% of 100.07px`);
  assert.ok(portugalWithEnclaveHeightPx>=126&&portugalWithEnclaveHeightPx<=154,`Portugal mainland+enclave height ${portugalWithEnclaveHeightPx}px outside ±10% of 140px`);
 
- assert.equal(resolveMode(21000,[{at:19500,mode:'settings'}]).weights.settings,1);
  let previous=0;
  for(let ms=6200;ms<=8400;ms+=10){
   const camera=flyTo(ms,[{at:6200,camera:worldCamera},{at:8400,camera:iberiaCamera}],cubicInOut);
@@ -142,7 +142,6 @@ if(process.env.DASHBOARD_SNAPSHOT==='1') {
  const compact1486Html=state(13000);
  assert.ok(compact1486Html.includes('stroke-dasharray="4 3"')&&compact1486Html.includes('PORTUGAL')&&compact1486Html.includes('CASTILE')&&compact1486Html.includes('SONGHAI'));
 
- // Check polity label non-collision against each other, route labels, and compact panels (in map-local coords)
  const panelBoxesMapLocal=rail.map((p,i)=>{
   const d=instruments[p.instrument].compact;
   const start=i<5?0:5;
@@ -172,24 +171,98 @@ if(process.env.DASHBOARD_SNAPSHOT==='1') {
   }
  }
 
- // Check timeline states & layout restacking
+ // 5. Expanded Wage plane = full Complex Wage Plane artifact view; Settings is secondary & reached only via gear
+ assert.deepEqual(WAGE_EXPANDED_BOX,{x:260,y:138,width:1400,height:860});
+ assert.deepEqual(states,{
+  dash_world_boot:500,
+  dash_1486_compact:13000,
+  dash_1486_interference_expanded:16000,
+  dash_1486_wage_expanded:21000,
+  dash_1486_wage_settings:22600,
+ });
+
+ const wageTimeline=[
+  {at:plan.cues['expand:wage-plane'],mode:'expanded' as const},
+  {at:plan.cues['settings:wage-plane'],mode:'settings' as const},
+  {at:plan.cues['reexpand:wage-plane'],mode:'expanded' as const},
+  {at:plan.cues['collapse:wage-plane'],mode:'compact' as const},
+ ];
+ assert.equal(plan.cues['expand:wage-plane'],19500);
+ assert.equal(plan.cues['settings:wage-plane'],21800);
+ assert.equal(plan.cues['reexpand:wage-plane'],23000);
+ assert.equal(plan.cues['collapse:wage-plane'],23450);
+ assert.equal(resolveMode(states.dash_1486_wage_expanded,wageTimeline).weights.expanded,1);
+ assert.equal(resolveMode(states.dash_1486_wage_expanded,wageTimeline).weights.settings,0);
+ assert.equal(resolveMode(states.dash_1486_wage_settings,wageTimeline).weights.settings,1);
+ assert.equal(resolveMode(states.dash_1486_wage_settings,wageTimeline).weights.expanded,0);
+ assert.equal(resolveMode(23420,wageTimeline).weights.expanded,1);
+ assert.equal(resolveMode(23900,wageTimeline).weights.compact,1);
+
+ // Verify interactive mode transitions: hover/click on compact open expanded, never settings; only click-gear reaches settings
+ const nonGearEvents:WageInteractionEvent[]=['hover-compact','click-compact','click-close'];
+ for(const ev of nonGearEvents){
+  assert.notEqual(transitionWagePlaneMode('compact',ev),'settings',`event ${ev} from compact must never open settings`);
+  assert.notEqual(transitionWagePlaneMode('expanded',ev),'settings',`event ${ev} from expanded must never open settings`);
+ }
+ assert.equal(transitionWagePlaneMode('compact','hover-compact'),'expanded');
+ assert.equal(transitionWagePlaneMode('compact','click-compact'),'expanded');
+ assert.equal(transitionWagePlaneMode('compact','click-gear'),'settings');
+ assert.equal(transitionWagePlaneMode('expanded','click-gear'),'settings');
+ assert.equal(transitionWagePlaneMode('settings','click-gear'),'expanded');
+ assert.equal(transitionWagePlaneMode('settings','click-close'),'compact');
+ assert.equal(transitionWagePlaneMode('expanded','click-close'),'compact');
+
+ // Verify timeline states & layout restacking
  for(const ms of times){
   const html=state(ms);
   assert.ok(!html.includes('NaN'));
   assert.equal(html,state(ms));
   assert.equal((html.match(/<section/g)??[]).length,11);
-  if(ms===13000) assert.ok(html.includes('top:483.8px')); // Compass restacked below Interference (333 + 142.8 + 8)
-  if(ms===16000) assert.ok(html.includes('top:816.2px')); // Compass restacked below expanded Interference (333 + 475.2 + 8)
-  if(ms===21000) assert.ok(html.includes('top:560.2px')); // Backlash below Wage plane settings
+  if(ms===13000) assert.ok(html.includes('top:483.8px'));
+  if(ms===16000) assert.ok(html.includes('top:816.2px'));
   if(ms===500) assert.ok(html.includes('opacity:0.3'));
  }
- const expanded=state(13000,true);
- assert.ok(expanded.includes('left:922px;top:228px;width:960px;height:650px'));
- assert.ok(expanded.includes('top:886px'));
- assert.ok(expanded.includes('data-plane-size="420"'));
+
+ const wageExpandedHtml=state(states.dash_1486_wage_expanded);
+ assert.ok(wageExpandedHtml.includes('left:260px;top:138px;width:1400px;height:860px'),'expanded wage card box must be 1400×860 at [260, 138]');
+ assert.ok(wageExpandedHtml.includes('data-instrument="wage-plane" data-active-mode="expanded"'));
+ assert.ok(wageExpandedHtml.includes('data-artifact="Complex Wage Plane"'));
+ assert.ok(wageExpandedHtml.includes('data-plane-size="720"'),'expanded wage card must contain the 720px plane');
+ assert.ok(wageExpandedHtml.includes('Wage vector'));
+ assert.ok(wageExpandedHtml.includes('data-control="gear" data-action="open-settings"'));
+ assert.ok(wageExpandedHtml.includes('data-control="close" data-action="close"'));
+ assert.ok(wageExpandedHtml.includes('aria-label="Gauge of M against τ"')&&wageExpandedHtml.includes('data-gauge="M-against-tau"'),'expanded wage card must contain the M-against-τ gauge');
+ assert.ok(wageExpandedHtml.includes('Inside the τ limit'));
+ assert.ok(wageExpandedHtml.includes('Almost all status. Manuscript: the default operating mode of the extraction kernel (:2939).'));
+ assert.ok(wageExpandedHtml.includes('At |W| = 60, the safe arc runs counterclockwise from 7:18 to 2:22.'));
+ for(const label of WAGE_STAT_LABELS){
+  assert.ok(wageExpandedHtml.includes(`>${label}</dt>`),`expanded wage card missing stat label: ${label}`);
+ }
+
+ const wageSettingsHtml=state(states.dash_1486_wage_settings);
+ assert.ok(wageSettingsHtml.includes('left:260px;top:138px;width:1400px;height:860px'),'settings wage card must have the same 1400×860 footprint at [260, 138]');
+ assert.ok(wageSettingsHtml.includes('data-instrument="wage-plane" data-active-mode="settings"'));
+ assert.ok(wageSettingsHtml.includes('data-settings="Wage plane"'));
+ assert.ok(wageSettingsHtml.includes('SETTINGS · WAGE PLANE'));
+ assert.ok(wageSettingsHtml.includes('data-control="gear" data-action="open-expanded"'));
+ assert.ok(wageSettingsHtml.includes('Quadrant names'));
+ assert.ok(wageSettingsHtml.includes('What comes from where'));
+ assert.ok(wageSettingsHtml.includes('data-chip="τ zone" data-chip-state="on"'));
+ assert.ok(wageSettingsHtml.includes('data-chip="Arc at |W|" data-chip-state="on"'));
+ assert.ok(wageSettingsHtml.includes('data-chip="Elite optimum" data-chip-state="on"'));
 
  const r=wageReadings();
  assert.deepEqual([r.theta,r.magnitude,r.clock,r.quadrant,r.M,r.margin,r.elite.s,r.elite.m],[90,60,'3:00',1,18,22,80,-36]);
+ assert.deepEqual(r.stats,[
+  ['Angle θ','90.0°'],
+  ['Size |W|','60.0'],
+  ['Clock position','3:00'],
+  ['Quadrant','QI · Joint wage'],
+  ['Class-coherence risk M','18.0 (τ = 40)'],
+  ['Margin to τ','22.0 below τ'],
+  ['Material flow','none'],
+  ['Safest angle at any |W|','4:50 (θ = 35°)'],
+ ]);
  assert.deepEqual(dangerPolygon(),[[-100,-100],[100,-100],[100,-50],[-100,90]]);
 
  const polities:Polities={type:'FeatureCollection',features:[{type:'Feature',properties:{style:{fill:'#123456',stroke:'#654321'},label:{text:'TEST POLITY',at:[0,25]}},geometry:{type:'Polygon',coordinates:[[[0,20],[0,30],[10,30],[10,20],[0,20]]]}}]};
@@ -227,5 +300,5 @@ if(process.env.DASHBOARD_SNAPSHOT==='1') {
  };
  fs.writeFileSync(new URL('../review/map-geometry-fix1.json',import.meta.url),JSON.stringify(geometry,null,2)+'\n');
  fs.writeFileSync(new URL('../review/map-geometry-fix2.json',import.meta.url),JSON.stringify(geometry,null,2)+'\n');
- console.log(`PASS: Equal Earth route ${samples} samples / ${hits} land hits; Portugal height ${portugalMainlandHeightPx}px mainland (${portugalWithEnclaveHeightPx}px with 1486 Moroccan enclave); monotonic flight; label clearance; ${times.length} deterministic timeline states; all 33 instrument modes (11 instruments × 3 modes) with opaque panel-render fill; Compass widget live camera updates; 75 Cliopatria 1486 polities with ${polityLabelBoxes.length} non-colliding labels.`);
+ console.log(`PASS: Equal Earth route ${samples} samples / ${hits} land hits; Portugal height ${portugalMainlandHeightPx}px mainland (${portugalWithEnclaveHeightPx}px with 1486 Moroccan enclave); monotonic flight; label clearance; ${times.length} deterministic timeline states; all 33 instrument modes (11 instruments × 3 modes) with opaque panel-render fill; expanded Complex Wage Plane (1400×860 at [260,138], 720px plane, 8 stat labels, M-against-τ gauge) & gear-only settings verified; Compass widget live camera updates; 75 Cliopatria 1486 polities with ${polityLabelBoxes.length} non-colliding labels.`);
 }

@@ -20,12 +20,15 @@
     "i8": 3950,
     "i9": 4400,
     "i10": 4850,
+    "i11": 5300,
     "fly": 6200,
     "route": 8600,
     "expand:interference": 14500,
     "collapse:interference": 18000,
-    "settings:wage-plane": 19500,
-    "collapse:wage-plane": 22600,
+    "expand:wage-plane": 19500,
+    "settings:wage-plane": 21800,
+    "reexpand:wage-plane": 23000,
+    "collapse:wage-plane": 23450,
     "R-01.i1": 800,
     "R-01.i2": 1250,
     "R-01.i3": 1700,
@@ -36,12 +39,15 @@
     "R-01.i8": 3950,
     "R-01.i9": 4400,
     "R-01.i10": 4850,
+    "R-01.i11": 5300,
     "R-02.fly": 6200,
     "R-02.route": 8600,
     "R-03.expand:interference": 14500,
     "R-03.collapse:interference": 18000,
-    "R-04.settings:wage-plane": 19500,
-    "R-04.collapse:wage-plane": 22600
+    "R-04.expand:wage-plane": 19500,
+    "R-04.settings:wage-plane": 21800,
+    "R-04.reexpand:wage-plane": 23000,
+    "R-04.collapse:wage-plane": 23450
   },
   "segments": [
     {
@@ -131,14 +137,24 @@
     ],
     "r4": [
       {
-        "text": "settings",
+        "text": "expand",
         "start_ms": 19500,
         "end_ms": 19700
       },
       {
+        "text": "settings",
+        "start_ms": 21800,
+        "end_ms": 22000
+      },
+      {
+        "text": "return",
+        "start_ms": 23000,
+        "end_ms": 23150
+      },
+      {
         "text": "close",
-        "start_ms": 22600,
-        "end_ms": 22800
+        "start_ms": 23300,
+        "end_ms": 23450
       }
     ]
   },

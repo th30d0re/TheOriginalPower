@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Compounding Ledger</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=STIX+Two+Text:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#0D1B2A; --panel:#132538; --well:#081421;
+  --wire:#ECE7DC; --ink:#ECE7DC; --ink-2:#A9B6C4;
+  --rule:#8A6A45; --label-sm:#B8956A;
+  --green:#7CC08A; --red:#E0604A; --teal:#4CC2C2; --gold:#D4A84B; --accent:#E08A3C; --dim:#4A5566;
+  --sans:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,Menlo,Consolas,monospace;
+  --math:'STIX Two Text','Cambria Math','Times New Roman',serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.55 var(--sans);padding-block:22px 48px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.app{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:20px 28px;align-items:start}
+header{grid-column:1/-1}
+h1{font:600 24px/1.2 var(--sans);margin:0 0 6px;letter-spacing:-.01em}
+.lede{margin:0;color:var(--ink-2);max-width:84ch}
+.card{background:var(--panel);border:1px solid var(--rule);border-radius:10px;padding:16px 18px;min-width:0}
+h2{font:600 12px/1.3 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--label-sm);margin:0 0 10px}
+.nt{text-transform:none;letter-spacing:0}
+svg{display:block;width:100%;height:auto}
+svg text{font-family:var(--mono)}
+.m{font-family:var(--math);font-style:italic}
+.row{display:grid;grid-template-columns:minmax(0,1fr) 120px 52px;gap:10px;align-items:center;margin:8px 0}
+.row label{font:400 14px var(--sans)}
+.row label small{display:block;color:var(--ink-2);font-size:12px}
+.row output{font:500 13px var(--mono);text-align:right;font-variant-numeric:tabular-nums}
+input[type=range]{width:100%;min-width:0;accent-color:var(--wire)}
+input:focus-visible,.btn:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.btns{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 10px}
+.btn{font:500 13px var(--sans);padding:7px 11px;border:1px solid var(--rule);border-radius:6px;background:var(--well);color:var(--ink);cursor:pointer}
+.btn:hover{border-color:var(--gold)}
+.btn[aria-pressed="true"]{border-color:var(--gold);color:var(--gold)}
+.big{font:500 30px/1.1 var(--mono);color:var(--accent);margin:6px 0 2px}
+.verdict{margin:12px 0 0;font-size:14.5px}
+.half{grid-column:span 1}
+.full{grid-column:1/-1}
+.pair{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px 28px}
+.note{font-size:13.5px;color:var(--ink-2);margin:8px 0 0;max-width:100ch}
+.note code{font-family:var(--mono);font-size:12.5px;color:var(--label-sm)}
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:6px}
+th,td{padding:6px 8px;text-align:right;border-bottom:1px solid rgba(138,106,69,.35);font-variant-numeric:tabular-nums}
+th{font:500 12px var(--sans);color:var(--label-sm);text-align:right}
+th:first-child,td:first-child{text-align:left}
+td{font-family:var(--mono);font-size:13px}
+td:first-child{font-family:var(--sans);font-size:13.5px}
+.scroll{overflow-x:auto}
+@media (max-width:900px){.app,.pair{grid-template-columns:minmax(0,1fr)}}
+</style>
+</head>
+<body>
+<div class="app">
+  <header>
+    <h1>Compounding Ledger</h1>
+    <p class="lede">Harm compounds; it does not add. Each policy shock multiplies the Out-group's remaining capacity by a retention factor: O<sub>t</sub> = O<sub>t−1</sub>·(1 − αP<sub>t</sub>) (eq. 6.5). Four sourced shocks take a normalized 1450 baseline of 1.0 down to 0.019 by the War on Drugs (eq. 6.12).</p>
+  </header>
+
+  <section class="card" aria-label="Waterfall">
+    <h2>The compounding chain</h2>
+    <div class="btns" role="group" aria-label="Scale">
+      <button class="btn" type="button" data-scale="lin">Linear scale</button>
+      <button class="btn" type="button" data-scale="log">Log scale</button>
+    </div>
+    <svg id="fall" viewBox="0 0 900 470" role="img" aria-label="Waterfall of remaining capacity after each policy shock"></svg>
+    <p class="note">Bars show the capacity left after each shock; the grey cap on each bar is the capacity that shock removed. On the log scale, every shock with the same retention factor drops the bar by the same height, whatever came before.</p>
+  </section>
+
+  <section class="card" aria-label="Factors">
+    <h2>Retention factors <span class="nt">(1 − factor)</span></h2>
+    <div id="rows"></div>
+    <div class="btns"><button class="btn" type="button" id="b-src">Restore sourced values</button></div>
+    <p class="big" id="term"></p>
+    <p class="note" id="term-note" style="margin-top:0"></p>
+    <p class="verdict" id="add"></p>
+  </section>
+
+  <div class="pair">
+    <section class="card" aria-label="Order">
+      <h2>Order changes the path, not the end</h2>
+      <div class="btns" role="group" aria-label="Order" id="orders"></div>
+      <svg id="order" viewBox="0 0 700 340" role="img" aria-label="Capacity trajectory for the historical order and the selected order"></svg>
+      <p class="note" id="order-note"></p>
+    </section>
+    <section class="card" aria-label="Asymmetric multiplier">
+      <h2>Same behavior, asymmetric shock</h2>
+      <div class="row"><label for="s-ratio">Enforcement ratio<small>Black / white cannabis arrests at equal use</small></label><input id="s-ratio" type="range" min="1" max="9.6" step="0.01"><output id="o-ratio" for="s-ratio"></output></div>
+      <svg id="asym" viewBox="0 0 700 250" role="img" aria-label="War on Drugs retention for the Out-group and the Buffer Class"></svg>
+      <p class="note">eq. 6.6: α<sub>O</sub>P<sub>t</sub> ≈ 3.73·α<sub>I∖E</sub>P<sub>t</sub>. The page applies the ratio to the War on Drugs shock only, the one the manuscript calibrates it on. National ratio 3.73× (2010) and 3.64× (2018); states range from about 2.1× to 9.6× (Montana).</p>
+    </section>
+  </div>
+
+  <div class="pair">
+    <section class="card" aria-label="Latent and observed">
+      <h2>Latent capacity and observed wealth</h2>
+      <svg id="latent" viewBox="0 0 700 260" role="img" aria-label="The chain's terminal latent capacity against the observed wealth ratio"></svg>
+      <p class="note">The chain's 0.019 is latent capacity before transfers, adaptation, public support, informal economies, and partial recovery. The observed ratio is the Federal Reserve SCF 2022 median family wealth: $44.89k Black against $285.01k white, 15.75%. The manuscript models the observed ratio as an output transform of the latent value, not as the same number.</p>
+    </section>
+    <section class="card" aria-label="Memory gap">
+      <h2>The memory gap</h2>
+      <div class="row"><label for="s-lam">Decay rate λ<small>per generation</small></label><input id="s-lam" type="range" min="0.1" max="1.2" step="0.01"><output id="o-lam" for="s-lam"></output></div>
+      <svg id="mem" viewBox="0 0 700 300" role="img" aria-label="Integer-order and fractional-order memory decay over 12 generations"></svg>
+      <p class="note" id="mem-note"></p>
+    </section>
+  </div>
+
+  <section class="card full" aria-label="Ledger table">
+    <h2>The ledger</h2>
+    <div class="scroll"><table id="tbl"></table></div>
+  </section>
+
+  <section class="card full" aria-label="Notes">
+    <h2>What the page assumes</h2>
+    <p class="note">From the manuscript: the compounding model, eq. 6.5, and the full chain, eqs. 6.8–6.12 (<code>Paper/The_Original_Power.tex:5345</code>–<code>:5420</code>); the sourced factors and their notes (<code>Paper/data/eq33_cannabis_redlining.csv</code>): enslavement 0.09 (Baptist 2014; Darity and Mullen 2020), 13th Amendment exception and convict leasing 0.61 (Blackmon 2008), HOLC redlining and FHA exclusion 0.48 (Mapping Inequality; Rothstein 2017), War on Drugs 0.73 (ACLU 2020); the asymmetric enforcement multiplier, eq. 6.6 (<code>:5365</code>); the latent-versus-observed qualifier and SCF 2022 values (<code>:5509</code>–<code>:5510</code>); the fractional-order memory figure (<code>:5521</code>–<code>:5566</code>).</p>
+    <p class="note">The memory panel computes the Mittag-Leffler function E<sub>1/2</sub>(−λ√t) = e<sup>λ²t</sup>·erfc(λ√t) exactly. The manuscript's figure draws a rational curve as a stand-in for the same function, so the two curves differ in detail; both show the same gap. The Buffer-Class comparison in the asymmetry panel divides the War on Drugs capacity loss by the enforcement ratio; this is the page's reading of eq. 6.6, not a sourced Buffer-Class factor.</p>
+  </section>
+</div>
+
+<script>
+(function(){
+'use strict';
+var $=function(id){return document.getElementById(id);};
+var SRC=[
+  {k:'a',y0:1619,y1:1865,name:'Enslavement + chattel system',short:'Enslavement',f:0.09,src:'Baptist (2014); Darity & Mullen (2020)'},
+  {k:'b',y0:1865,y1:1934,name:'13th Am. exception + convict leasing',short:'13th Am.',f:0.61,src:'Blackmon (2008)'},
+  {k:'g',y0:1934,y1:1968,name:'HOLC redlining + FHA exclusion',short:'Redlining',f:0.48,src:'Mapping Inequality; Rothstein (2017)'},
+  {k:'d',y0:1971,y1:2020,name:'War on Drugs + cannabis enforcement',short:'War on Drugs',f:0.73,src:'ACLU (2020)'}
+];
+var S={f:SRC.map(function(s){return s.f;}),scale:'log',order:[0,1,2,3],ratio:3.73,lam:0.5};
+function chain(order){var v=[1];order.forEach(function(i){v.push(v[v.length-1]*S.f[i]);});return v;}
+function fx(v){return v>=0.1?v.toFixed(2):v>=0.01?v.toFixed(3):v.toPrecision(2);}
+/* ---- waterfall ---- */
+function fall(){
+  var W=900,H=470,L=70,Rr=20,T=30,B=90,v=chain([0,1,2,3]),n=5,bw=(W-L-Rr)/n*0.62,gap=(W-L-Rr)/n;
+  var lg=S.scale==='log',lo=Math.log10(0.005);
+  function Y(x){if(lg){var l=Math.log10(Math.max(x,0.005));return T+(0-l)/(0-lo)*(H-T-B);}return T+(1-x)*(H-T-B);}
+  var h='';
+  var ticks=lg?[1,0.1,0.01]:[0,0.25,0.5,0.75,1];
+  ticks.forEach(function(t){h+='<line x1="'+L+'" y1="'+Y(t).toFixed(1)+'" x2="'+(W-Rr)+'" y2="'+Y(t).toFixed(1)+'" style="stroke:var(--rule)" stroke-opacity=".35"/><text x="'+(L-8)+'" y="'+(Y(t)+4).toFixed(1)+'" text-anchor="end" font-size="13" style="fill:var(--label-sm)">'+t+'</text>';});
+  var labels=['1450 baseline'].concat(SRC.map(function(s){return s.y1+' · '+s.short;}));
+  for(var i=0;i<n;i++){
+    var x=L+gap*i+(gap-bw)/2,yv=Y(v[i]),yb=Y(lg?0.005:0);
+    if(i>0){var yp=Y(v[i-1]);h+='<rect x="'+x.toFixed(1)+'" y="'+yp.toFixed(1)+'" width="'+bw.toFixed(1)+'" height="'+(yv-yp).toFixed(1)+'" style="fill:var(--dim)" fill-opacity=".55"/>';
+      h+='<line x1="'+(x-gap+bw).toFixed(1)+'" y1="'+yp.toFixed(1)+'" x2="'+x.toFixed(1)+'" y2="'+yp.toFixed(1)+'" style="stroke:var(--rule)" stroke-dasharray="3 3"/>';
+      h+='<text x="'+(x+bw/2).toFixed(1)+'" y="'+(yp-8).toFixed(1)+'" text-anchor="middle" font-size="13" style="fill:var(--label-sm)">×'+S.f[i-1].toFixed(2)+'</text>';}
+    h+='<rect x="'+x.toFixed(1)+'" y="'+yv.toFixed(1)+'" width="'+bw.toFixed(1)+'" height="'+Math.max(1,yb-yv).toFixed(1)+'" style="fill:'+(i===0?'var(--green)':i===n-1?'var(--accent)':'var(--teal)')+'" fill-opacity="'+(i===0?0.7:0.85)+'"/>';
+    h+='<text x="'+(x+bw/2).toFixed(1)+'" y="'+(yb-yv>26?yv+20:yv-8).toFixed(1)+'" text-anchor="middle" font-size="14" font-weight="500" style="fill:'+(yb-yv>26?'var(--paper)':'var(--ink)')+'">'+fx(v[i])+'</text>';
+    h+='<text x="'+(x+bw/2).toFixed(1)+'" y="'+(H-B+22)+'" text-anchor="middle" font-size="13" style="fill:var(--label-sm)">'+labels[i].split(' · ')[0]+'</text>';
+    if(labels[i].indexOf(' · ')>0)h+='<text x="'+(x+bw/2).toFixed(1)+'" y="'+(H-B+40)+'" text-anchor="middle" font-size="12" style="fill:var(--ink-2)">'+labels[i].split(' · ')[1]+'</text>';
+  }
+  h+='<text x="'+L+'" y="'+(H-12)+'" font-size="12" style="fill:var(--ink-2)">O capacity, normalized to the 1450 pre-racialization baseline = 1.0</text>';
+  $('fall').innerHTML=h;
+  var term=v[4];$('term').textContent='O = '+fx(term);
+  $('term-note').textContent=Math.round(1000*(1-term))/10+'% of the baseline stripped.';
+  var sumLoss=S.f.reduce(function(a,f){return a+(1-f);},0);
+  $('add').textContent='An additive model would subtract the losses: 1 − ('+S.f.map(function(f){return (1-f).toFixed(2);}).join(' + ')+') = '+(1-sumLoss).toFixed(2)+(1-sumLoss<0?', an impossible negative capacity':'')+'. The multiplicative model gives '+fx(term)+': each shock takes its share of what the earlier shocks left.';
+}
+/* ---- factor rows ---- */
+function rows(){
+  var h='';SRC.forEach(function(s,i){h+='<div class="row"><label for="f'+i+'">'+s.name+'<small>'+s.y0+'–'+s.y1+' · '+s.src+'</small></label><input id="f'+i+'" type="range" min="0.01" max="1" step="0.01" value="'+S.f[i]+'"><output id="of'+i+'" for="f'+i+'">'+S.f[i].toFixed(2)+'</output></div>';});
+  $('rows').innerHTML=h;
+  SRC.forEach(function(s,i){$('f'+i).addEventListener('input',function(e){S.f[i]=+e.target.value;$('of'+i).textContent=S.f[i].toFixed(2);all();});});
+}
+/* ---- order ---- */
+var ORDERS=[[[0,1,2,3],'Historical'],[[3,2,1,0],'Reversed'],[[2,3,0,1],'Redlining first'],[[1,3,2,0],'Enslavement last']];
+function order(){
+  var W=700,H=340,L=60,Rr=44,T=26,B=50,lo=Math.log10(0.005);
+  function X(i){return L+i/4*(W-L-Rr);}
+  function Y(x){return T+(0-Math.log10(Math.max(x,0.005)))/(0-lo)*(H-T-B);}
+  var h='';[1,0.1,0.01].forEach(function(t){h+='<line x1="'+L+'" y1="'+Y(t)+'" x2="'+(W-Rr)+'" y2="'+Y(t)+'" style="stroke:var(--rule)" stroke-opacity=".35"/><text x="'+(L-8)+'" y="'+(Y(t)+4)+'" text-anchor="end" font-size="12" style="fill:var(--label-sm)">'+t+'</text>';});
+  for(var i=0;i<=4;i++)h+='<text x="'+X(i)+'" y="'+(H-B+20)+'" text-anchor="middle" font-size="12" style="fill:var(--label-sm)">'+(i===0?'start':'shock '+i)+'</text>';
+  function line(o,col,dash){var v=chain(o),d='';v.forEach(function(x,i){d+=(i?'L':'M')+X(i).toFixed(1)+' '+Y(x).toFixed(1);});var s='<path d="'+d+'" fill="none" style="stroke:'+col+'" stroke-width="2.6"'+(dash?' stroke-dasharray="7 5"':'')+'/>';v.forEach(function(x,i){s+='<circle cx="'+X(i).toFixed(1)+'" cy="'+Y(x).toFixed(1)+'" r="4.5" style="fill:'+col+'"/>';});return s;}
+  h+=line([0,1,2,3],'var(--teal)',false);
+  if(S.order.join()!=='0,1,2,3'){h+=line(S.order,'var(--accent)',true);
+    S.order.forEach(function(k,i){h+='<text x="'+X(i+1).toFixed(1)+'" y="'+(T+12)+'" text-anchor="middle" font-size="11" style="fill:var(--accent)">'+SRC[k].short+'</text>';});}
+  h+='<text x="'+L+'" y="'+(H-6)+'" font-size="12" style="fill:var(--ink-2)">teal: historical order · orange: selected order (log scale)</text>';
+  $('order').innerHTML=h;
+  var a=chain([0,1,2,3]),b=chain(S.order),mx=0;for(var i=1;i<4;i++)mx=Math.max(mx,Math.abs(Math.log10(a[i]/b[i])));
+  $('order-note').textContent=S.order.join()==='0,1,2,3'?'Select another order to compare. Multiplication commutes, so every order ends at the same value; the path to it differs.':'Both orders end at '+fx(b[4])+'. On the way, the two paths differ by up to a factor of '+Math.pow(10,mx).toFixed(1)+'. That gap is the difference in what each later shock had left to take, and the reason the manuscript calls the sequence non-commutative in its intermediate states (eq. 6.7).';
+  var hb='';ORDERS.forEach(function(o,i){hb+='<button class="btn" type="button" data-o="'+i+'" aria-pressed="'+(o[0].join()===S.order.join())+'">'+o[1]+'</button>';});
+  $('orders').innerHTML=hb;
+  Array.prototype.forEach.call(document.querySelectorAll('[data-o]'),function(b){b.addEventListener('click',function(){S.order=ORDERS[+b.getAttribute('data-o')][0].slice();order();});});
+}
+/* ---- asymmetry ---- */
+function asym(){
+  var W=700,H=250,L=150,Rr=60,fo=S.f[3],fi=1-(1-fo)/S.ratio,h='';
+  function X(v){return L+v*(W-L-Rr);}
+  [['Out-group',fo,'var(--accent)',60],['Buffer Class',fi,'var(--teal)',140]].forEach(function(r){
+    h+='<text x="'+(L-12)+'" y="'+(r[3]+22)+'" text-anchor="end" font-size="14" style="fill:var(--ink)">'+r[0]+'</text>';
+    h+='<rect x="'+L+'" y="'+r[3]+'" width="'+(X(1)-L)+'" height="34" style="fill:var(--well)"/><rect x="'+L+'" y="'+r[3]+'" width="'+(X(r[1])-L).toFixed(1)+'" height="34" style="fill:'+r[2]+'" fill-opacity=".85"/>';
+    h+='<text x="'+(X(r[1])+8).toFixed(1)+'" y="'+(r[3]+23)+'" font-size="14" style="fill:var(--ink)">×'+r[1].toFixed(3)+'</text>';
+  });
+  h+='<text x="'+L+'" y="30" font-size="13" style="fill:var(--label-sm)">War on Drugs retention factor, same behavior</text>';
+  h+='<text x="'+L+'" y="'+(H-14)+'" font-size="12" style="fill:var(--ink-2)">loss: '+Math.round(100*(1-fo))+'% against '+(100*(1-fi)).toFixed(1)+'%</text>';
+  $('asym').innerHTML=h;$('o-ratio').textContent=S.ratio.toFixed(2)+'×';
+}
+/* ---- latent ---- */
+function latent(){
+  var term=chain([0,1,2,3])[4],obs=44.89/285.01,W=700,H=260,L=200,Rr=70,h='';
+  function X(v){return L+v/0.2*(W-L-Rr);}
+  [['Latent capacity (chain)',term,'var(--accent)',50],['Observed wealth ratio (SCF 2022)',obs,'var(--gold)',130]].forEach(function(r){
+    h+='<text x="'+(L-12)+'" y="'+(r[3]+22)+'" text-anchor="end" font-size="13" style="fill:var(--ink)">'+r[0].split(' (')[0]+'</text><text x="'+(L-12)+'" y="'+(r[3]+40)+'" text-anchor="end" font-size="12" style="fill:var(--ink-2)">('+r[0].split(' (')[1]+'</text>';
+    h+='<rect x="'+L+'" y="'+r[3]+'" width="'+Math.max(2,X(Math.min(r[1],0.2))-L).toFixed(1)+'" height="34" style="fill:'+r[2]+'" fill-opacity=".85"/>';
+    h+='<text x="'+(X(Math.min(r[1],0.2))+8).toFixed(1)+'" y="'+(r[3]+23)+'" font-size="14" style="fill:var(--ink)">'+fx(r[1])+'</text>';
+  });
+  [0,0.05,0.1,0.15,0.2].forEach(function(t){h+='<line x1="'+X(t)+'" y1="40" x2="'+X(t)+'" y2="'+(H-40)+'" style="stroke:var(--rule)" stroke-opacity=".3"/><text x="'+X(t)+'" y="'+(H-22)+'" text-anchor="middle" font-size="12" style="fill:var(--label-sm)">'+t+'</text>';});
+  $('latent').innerHTML=h;
+}
+/* ---- memory gap ---- */
+function erfcx(x){var t=1/(1+0.5*x);return t*Math.exp(-1.26551223+t*(1.00002368+t*(0.37409196+t*(0.09678418+t*(-0.18628806+t*(0.27886807+t*(-1.13520398+t*(1.48851587+t*(-0.82215223+t*0.17087277)))))))));}
+function ml(t){return erfcx(S.lam*Math.sqrt(t));}
+function mem(){
+  var W=700,H=300,L=50,Rr=20,T=20,B=44,G=12;
+  function X(g){return L+g/G*(W-L-Rr);}
+  function Y(v){return T+(1-v)*(H-T-B);}
+  var h='';[0,0.25,0.5,0.75,1].forEach(function(v){h+='<line x1="'+L+'" y1="'+Y(v)+'" x2="'+(W-Rr)+'" y2="'+Y(v)+'" style="stroke:var(--rule)" stroke-opacity=".3"/><text x="'+(L-8)+'" y="'+(Y(v)+4)+'" text-anchor="end" font-size="12" style="fill:var(--label-sm)">'+v+'</text>';});
+  for(var g=0;g<=G;g+=2)h+='<text x="'+X(g)+'" y="'+(H-B+18)+'" text-anchor="middle" font-size="12" style="fill:var(--label-sm)">'+g+'</text>';
+  var d1='',d2='';for(var i=0;i<=240;i++){var t=G*i/240;d1+=(i?'L':'M')+X(t).toFixed(1)+' '+Y(Math.exp(-S.lam*t)).toFixed(1);d2+=(i?'L':'M')+X(t).toFixed(1)+' '+Y(ml(t)).toFixed(1);}
+  h+='<path d="'+d1+'" fill="none" style="stroke:var(--ink-2)" stroke-width="2" stroke-dasharray="7 5"/><path d="'+d2+'" fill="none" style="stroke:var(--red)" stroke-width="2.8"/>';
+  var e6=Math.exp(-S.lam*6),m6=ml(6);
+  h+='<line x1="'+X(6)+'" y1="'+T+'" x2="'+X(6)+'" y2="'+(H-B)+'" style="stroke:var(--teal)" stroke-dasharray="5 4"/><text x="'+(X(6)+6)+'" y="'+(T+12)+'" font-size="12" style="fill:var(--teal)">≈ 6 generations since enslavement</text>';
+  h+='<line x1="'+(X(6)+14)+'" y1="'+Y(e6).toFixed(1)+'" x2="'+(X(6)+14)+'" y2="'+Y(m6).toFixed(1)+'" style="stroke:var(--red)" stroke-width="2"/><text x="'+(X(6)+20)+'" y="'+((Y(e6)+Y(m6))/2+4).toFixed(1)+'" font-size="13" style="fill:var(--red)">memory gap</text>';
+  h+='<text x="'+L+'" y="'+(H-6)+'" font-size="12" style="fill:var(--ink-2)">dashed: e^(−λt), integer order · red: E½(−λ√t), fractional order · generations</text>';
+  $('mem').innerHTML=h;$('o-lam').textContent=S.lam.toFixed(2);
+  $('mem-note').textContent='At generation 6, integer-order decay leaves '+(100*e6).toFixed(1)+'% of the initial damage; fractional-order memory leaves '+(100*m6).toFixed(1)+'%. A reform timeline that assumes exponential decay expects the damage to be gone; the power-law kernel keeps it.';
+}
+/* ---- table ---- */
+function table(){
+  var v=chain([0,1,2,3]),h='<tr><th>Shock</th><th>Years</th><th>Retention</th><th>Before</th><th>Removed</th><th>After</th><th>Same shock on a full 1.0</th></tr>';
+  SRC.forEach(function(s,i){h+='<tr><td>'+s.name+'</td><td>'+s.y0+'–'+s.y1+'</td><td>'+S.f[i].toFixed(2)+'</td><td>'+fx(v[i])+'</td><td>'+fx(v[i]-v[i+1])+'</td><td>'+fx(v[i+1])+'</td><td>'+(1-S.f[i]).toFixed(2)+'</td></tr>';});
+  $('tbl').innerHTML=h;
+}
+function sync(){
+  Array.prototype.forEach.call(document.querySelectorAll('[data-scale]'),function(b){b.setAttribute('aria-pressed',String(b.getAttribute('data-scale')===S.scale));});
+  $('s-ratio').value=S.ratio;$('s-lam').value=S.lam;
+}
+function all(){sync();fall();order();asym();latent();mem();table();}
+Array.prototype.forEach.call(document.querySelectorAll('[data-scale]'),function(b){b.addEventListener('click',function(){S.scale=b.getAttribute('data-scale');all();});});
+$('s-ratio').addEventListener('input',function(e){S.ratio=+e.target.value;asym();});
+$('s-lam').addEventListener('input',function(e){S.lam=+e.target.value;mem();});
+$('b-src').addEventListener('click',function(){S.f=SRC.map(function(s){return s.f;});rows();all();});
+rows();all();
+})();
+</script>
+</body>
+</html>

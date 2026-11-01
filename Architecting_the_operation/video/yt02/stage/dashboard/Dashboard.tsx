@@ -37,7 +37,7 @@ function DashboardFrame({era=2,world=false,camera,worldOpacity=0,routeDraw=1,dim
  const ms=useStageMs();
  if(era!==2) throw new Error(`YT02 handoff supplies instrument content for log 2; received ${era}`);
  const activeCamera=camera??(world?worldCamera:iberiaCamera);
- const heights=rail.map((p,i)=>{const d=instruments[p.instrument],forced=interactiveModes[slugs[i]]??modes[slugs[i]],weights=resolveMode(ms,modeTimelines[slugs[i]]??[]).weights;return forced?d[forced].h:weights.compact*d.compact.h+weights.expanded*d.expanded.h+weights.settings*d.settings.h;});
+ const heights=rail.map((p,i)=>{const d=instruments[p.instrument];if(p.instrument==='Wage plane')return d.compact.h;const forced=interactiveModes[slugs[i]]??modes[slugs[i]],weights=resolveMode(ms,modeTimelines[slugs[i]]??[]).weights;return forced?d[forced].h:weights.compact*d.compact.h+weights.expanded*d.expanded.h+weights.settings*d.settings.h;});
  return <TokensContext.Provider value={Tokens}><CameraContext.Provider value={activeCamera}><div className="yt02-dashboard" style={{position:'absolute',inset:0,width:1920,height:1080,background:Tokens.colours.background,overflow:'hidden'}}><style>{'.yt02-dashboard sub { vertical-align: baseline; position: relative; top: .2em; }'}</style><EraStrip activeLog={era} empty={empty}/><DashboardMap world={world} camera={camera} worldOpacity={worldOpacity} draw={routeDraw}/>{rail.map((p,i)=>{
  const Component=components[i],start=i<5?0:5;
  const y=i<9?96+heights.slice(start,i).reduce((sum,h)=>sum+h+8,0):p.y;

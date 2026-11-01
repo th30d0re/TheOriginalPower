@@ -15,8 +15,8 @@ export function Dashboard1486({shotAt}:SceneProps) {
   timelines[slug]=Object.entries(plan.cues).flatMap(([name,at])=>{
    const local=name.includes('.')?name.slice(name.indexOf('.')+1):name;
    const [action,target]=local.split(':');
-   if(target!==slug||!['expand','collapse','settings'].includes(action))return [];
-   return [{at,mode:action==='expand'?'expanded' as const:action==='settings'?'settings' as const:'compact' as const}];
+   if(target!==slug||!['expand','reexpand','collapse','settings'].includes(action))return [];
+   return [{at,mode:action==='expand'||action==='reexpand'?'expanded' as const:action==='settings'?'settings' as const:'compact' as const}];
   }).filter((k,i,all)=>all.findIndex(v=>v.at===k.at&&v.mode===k.mode)===i).sort((a,b)=>a.at-b.at);
  }
  return <Dashboard {...props} camera={props.camera??camera} world={ms<=fly.at} worldOpacity={0} routeDraw={props.routeDraw??progress(ms,route.at,route.at+3400)} modeTimelines={{...timelines,...props.modeTimelines}}/>;
