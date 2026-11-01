@@ -23,6 +23,17 @@ no Chromium.
   Elmina), its labels and Portugal sit above the tray's top edge and clear of both stacks.
   Re-run the land-hit and label-collision checks.
 
+## Ported views (already done)
+
+`stage/dashboard/artifacts/<Name>View.tsx` holds a ported view for eight of the nine tray
+instruments (Interference Engine, Phase Coherence, Five-Tier Cone, Compounding Ledger, Thyristor
+Latch, AC Extraction Meter, Snubber Circuit, Backlash Oscillator), built to
+`dashboard/artifacts/CONTRACT.md`: each renders `compact` / `expanded` / `settings` into a content box
+with no panel chrome and exports `<camel>FromEra`. Read each `PORT_<slug>.md`. Your job is to wire
+them in: wrap each in the dashboard's panel (`PanelContent` recipe), size the cells, drive mode
+timelines from cues, and register them. The Complex Wage Plane keeps its existing implementation
+(fix pass 3). Fix defects you find in a view file and list them; do not rewrite a view.
+
 ## Each tray instrument
 
 `compact`: the catalogue's suggested compact readout drawn to fit the cell (title in 11 px mono,
