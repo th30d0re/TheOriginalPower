@@ -1,72 +1,92 @@
 # Interference Engine
 
-An instrument for Model C, the Interference Engine as spectral redistribution
-(`Paper/The_Original_Power.tex`, eqs. 8.12–8.16, `:6914`–`:6946`; Parseval, eq. 8.21, `:7089`). It also
-reruns the manuscript's spectral tests on the repository data.
+An instrument for the Interference Engine (`Paper/The_Original_Power.tex`, Model C, eqs. 8.12–8.16,
+`:6914`–`:6946`; phase loading, eqs. 8.17 and 8.22, `:7195`–`:7210`). It joins the Engine's two levers
+into one distance to τ, measures that distance with three earlier instruments, and reruns the
+manuscript's spectral tests on the repository data.
 
 - Published page (private until shared): https://claude.ai/artifact/AgvYcJfpeNKujrpzSsthiJ
 - Local copy: open `interference_engine.html` in a browser. The data is embedded in the page.
 
-## What the page does
+## 1 · The Engine's state
 
-**Model C (top half).**
-- The page synthesizes a 60-year attention signal with unit total power: a class carrier at 1/4.2 per
-  year, up to six identity modes in the identity band, and a white noise floor.
-- The Engine load u moves power from the carrier to the identity modes; total power stays constant.
-- The page computes the PSD, P_class, P_id, and ℛ_suppress = P_class/P_id, plus a Parseval check (time
-  variance against integrated spectrum). It compares P_class with τ.
-- Presets: Unmanaged, Post-1965, Weimar 1932 (one channel, carrier/identity power set to 0.03 before
-  noise and leakage; the measured ℛ is about 0.04), and Google Trends 2024 (class share 0.016).
-- The frequency of each identity axis and the τ level (default 0.40) are the page's choices.
+**Readout.** The Engine keeps class solidarity below τ with two levers:
+- the **spectral lever** u moves attention out of the class band (Model C);
+- the **phase lever** Φ_load scatters the phases of the subgroups that stay in the class band.
 
-**Measured spectra (bottom half)**, with the notebook's method (`Paper/scripts/spectral_fourier.ipynb`:
-linear detrend, Hann window, one-sided PSD, trapezoid band power):
-- Google Trends, the Congressional Record, and ANES. For each series, the page shows both bands and its
-  own share of power in each band.
-- Rolling 10-year windows of Google Trends, 2014–2024.
-- The electoral carrier table from Chapter 21 (`Paper/scripts/eq_fourier_electoral_cycle.py`: plain
-  periodogram), with the ratio at every frequency bin.
+The page joins them as
 
-## What the page reproduces
+    ρ_τ = M₀ · P_class · (1 − Φ_load)²,   P_class = (1 − η)(1 − u).
 
-| Quantity | Published | Page |
-|---|---|---|
-| Google Trends class-band power (class series) | 4.85 | 4.846 |
-| Google Trends identity-band power (identity series) | 53.4 | 53.407 |
-| Ratio | 11.0 | 11.0 |
-| Dominant periods, Google Trends | 4.2 yr, 1.0 yr | 4.20, 1.00 |
-| Dominant periods, Congressional Record | 5.0 yr, 2.5 yr | 5.00, 2.50 |
-| Rolling class-band power, 2014 → 2024 | 2.28 → 0.55 | 2.276 → 0.546 |
-| Rolling class share, 2014 → 2024 | 0.073 → 0.016 | 0.073 → 0.016 |
-| Electoral ratios, 2 / 4 / 6 / 8 yr | 0.58 / 24.06 / 21.02 / 12.86 | same |
+N subgroup carriers with phases Φ_j add up to an amplitude N·(1 − Φ_load), so the coherent class
+power scales as (1 − Φ_load)². M₀ is the class pressure before the Engine acts, in units of τ (log
+slider). The crash condition is ρ_τ ≥ 1. The verdict states how far each lever must move to reach τ.
+This joint measure is the page's construction; the manuscript states the two levers separately and
+calls them "two faces of the same control".
 
-## Points for the manuscript
+Presets:
+- **Pre-1964:** race axis only, Φ_load 0.078 (ANES).
+- **Post-1980:** four axes added, Φ_load 0.403 (ANES).
+- **Weimar 1932:** one channel, class/identity power 0.03.
+- **Google Trends 2024:** class share 0.016.
 
-1. **The Google Trends comparison pairs two series in two bands.** The 11.0 ratio compares class-band
-   power of the class series with identity-band power of the identity series. Each series compared with
-   itself:
-   - the class series has 73.8% of its power in the class band and 0.8% in the identity band;
-   - the identity series has 4.8% in the class band and 80.0% in the identity band.
+Three earlier instruments measure the state:
+- **Phase Coherence:** 24 subgroup phases on the unit circle, set to the current Φ_load, with their
+  mean vector.
+- **Interference State:** the ρ_τ dial with τ in red and a Φ_load bar. The runtime-log field plots
+  each logged era's Φ_load × ρ_τ box (`tools/interference_state/data/runtime_log.json`) with the
+  model's curve and point. For a selected log, the page computes the class pressure M₀ that the model
+  needs to sit in that box: about 3–7 for the early logs (1–5) and about 23–575 for the late logs
+  (14 on). Read through the model, the log says the Engine loads phases hardest in the eras when the
+  class pressure is highest.
+- **Backlash Oscillator:** four panels that add a kernel-breach shock to the current ρ_τ and let the
+  Engine respond with each era's fitted transfer function (1865, 1964, 2008, 2020). Each panel reports
+  the time above τ and the backlash dip. The 2020 fit's gain sits at the optimizer's upper bound
+  (K ≈ 100,000), so that panel is the least reliable.
 
-   From 2019 on, the identity series carries more class-band power than the class series in every
-   rolling window.
-2. **The identity series peaks at exactly 1.00 year.** That is the period of an ordinary annual cycle in
-   weekly search data. A seasonality-removed rerun would show whether the peak comes from the calendar.
-3. **ANES sampling rate.** `anes_issue_salience.csv` is annualized (one row per year), but the notebook
-   uses fs = 0.5. Every period on that frequency axis is therefore doubled. The published peaks (5.4 and
-   8.1 years) reproduce only with fs = 0.5. With fs = 1, the class-band peaks are 8.1 years (economy) and
-   4.1 years (race).
-4. **Electoral table bins.** The 2-year row is computed at 0.4833 per year, not 0.5000: numpy's
-   `fftfreq` has no positive Nyquist bin. The 8-year row is computed at 0.1167 per year, not 0.1250,
-   because 1/8 falls between bins. At the exact 0.5000 bin the ratio is 2.51; at 0.1333 it is about
-   3,483.
-5. **The size of the electoral ratios.** Across all 30 bins, the median identity/class ratio is 6.07,
-   and 11 bins reach 20 or more. A ratio above 20 is therefore common in these two series, and it does
-   not single out the electoral frequencies by itself. The chapter's own robustness section already says
-   that the Welch estimates are unstable and that P5 is not confirmed.
-6. **The Laplace pole figure (`:7052`–`:7084`) uses older fits.** Its labels (ζ = 0.16, 0.54, 0.61,
-   0.77; 2020 poles at −3.76 ± 3.07j) do not match the fits in the text (0.17, 0.59, 0.70, 0.97; 2020
-   poles at −6.47 ± 1.56j).
+## 2 · Model C
+
+A 60-year synthesized attention signal with unit total power: a class carrier at 1/4.2 per year, up to
+six identity modes in the identity band, and a white noise floor. The page shows the PSD, the band
+powers, ℛ_suppress, and a Parseval check. Which frequency goes to which axis is the page's choice.
+
+## 3 · The measured spectra
+
+The page uses the corrected methods of `Paper/scripts/spectral_fourier.ipynb` and
+`Paper/scripts/eq_fourier_electoral_cycle.py`:
+- **Google Trends, the Congressional Record, and ANES,** with band powers, within-series shares, and
+  band-local peaks. A button removes the calendar cycle (mean ISO-week profile) from the Google Trends
+  series.
+- **Rolling 10-year windows** of Google Trends, including the identity series' own class-band power.
+- **The electoral carrier table** for the Congressional Record, with the ratio and rank of every bin.
+
+## Values the page reproduces (corrected manuscript)
+
+| Quantity | Value |
+|---|---|
+| Google Trends class-band / identity-band power | 4.846 / 53.407 (ratio 11.0) |
+| Same, calendar cycle removed | 4.854 / 30.663 (ratio 6.3); identity peak 1.91 yr |
+| Own shares: class series / identity series | 74% in class band / 84% in identity band |
+| Rolling class-band power, class share | 2.28 → 0.55; 0.073 → 0.016 |
+| Identity series, class-band power (rolling) | 0.06 → 3.47; above the class series from 2019 |
+| ANES class-band peaks (fs = 1) | 8.1 yr (economy), 4.1 yr (race) |
+| Congressional Record ratios, 2 / 4 / 6 yr | 2.51 / 24.06 / 21.02 |
+| Congressional Record, 8-yr bracketing bins | 12.86 (8.57 yr), 3,483 (7.50 yr) |
+| All-bin context (30 bins) | median 5.18; 11 bins ≥ 20; the 4-yr bin ranks 10th |
+
+## The corrections behind these values
+
+Commits `f90812c` (scripts and notebook) and `ac313a6` (manuscript and PDF) on this branch:
+1. The ANES file is on a 1-year grid; the notebook used fs = 0.5, which doubled every period.
+2. `fftfreq` drops the positive Nyquist bin, so the "2-year" row was computed at 0.4833 per year. The
+   scripts now use `rfftfreq`.
+3. 1/8 per year has no bin at N = 60; the scripts now report both bracketing bins.
+4. In the Google Trends script, Welch lookups for the 6-year and 8-year rows returned the 4-year bin
+   and the DC bin. These rows are now marked as not resolved.
+5. The notebook and scripts now report within-series shares, a seasonality-removed rerun, and the rank
+   of each electoral ratio among all bins. Both Welch estimates at 0.25 per year fall below parity
+   (0.18 and 0.69).
+6. The Laplace pole plot now uses the fitted values (ζ = 0.17, 0.59, 0.70, 0.97).
 
 ## Rebuilding the embedded data
 

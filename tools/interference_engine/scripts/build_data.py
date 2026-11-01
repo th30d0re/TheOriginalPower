@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Collect the spectral proxy series for the Interference Engine page.
 
-Reads the three processed CSVs that Paper/scripts/spectral_fourier.ipynb uses
+Reads the three processed CSVs that Paper/scripts/spectral_fourier.ipynb uses,
+plus the runtime-log estimates from tools/interference_state/data/runtime_log.json,
 and writes one compact JSON file. With --embed, also rewrites the single
 `var DATA=` line in the page so the page stays self-contained.
 
@@ -48,9 +49,18 @@ def main(argv):
             "sol": [float(r["cross_group_solidarity_pct"]) for r in an],
         },
     }
+    log_path = Path(__file__).resolve().parents[2] / "interference_state" / "data" / "runtime_log.json"
+    if log_path.exists():
+        logs = json.loads(log_path.read_text())
+        payload["log"] = [
+            {"n": e["n"], "title": e["title"], "phi": e["phi"], "rho": e["rho"], "point": e["point"]}
+            for e in logs
+            if e.get("phi") is not None or e.get("rho") is not None or e.get("point") is not None
+        ]
     text = json.dumps(payload, separators=(",", ":"))
     out.write_text(text + "\n")
-    print(f"wrote {out} ({len(text)} bytes): gt {len(gt)}, cr {len(cr)}, anes {len(an)} rows")
+    print(f"wrote {out} ({len(text)} bytes): gt {len(gt)}, cr {len(cr)}, anes {len(an)} rows, "
+          f"runtime log {len(payload.get('log', []))} entries")
     if len(argv) >= 5 and argv[3] == "--embed":
         page = Path(argv[4])
         lines = page.read_text().split("\n")
