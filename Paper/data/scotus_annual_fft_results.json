@@ -1,4 +1,6 @@
 {
+  "producer": "Paper/scripts/scotus_annual_fft.py",
+  "input": "Paper/data/scotus_annual_keyword_counts.csv",
   "n_samples": 192,
   "year_range": [
     1832,
@@ -6,38 +8,54 @@
   ],
   "interpolation": "linear",
   "caveat": "Tier 2 -- exploratory; interpolation across gaps introduces artifacts",
+  "frequency_grid": "rfftfreq (includes the Nyquist bin)",
   "dominant_periods": {
     "class": 96.0,
-    "identity": 48.0
+    "identity": 48.0,
+    "class_band_local": 8.0,
+    "identity_band_local": 3.0
   },
   "electoral_power": {
     "2-year (Nyquist)": {
-      "frequency": 0.49479166666666663,
-      "period": 2.0210526315789474,
-      "class_psd": 0.0188244881249287,
-      "identity_psd": 0.6227153815111696,
-      "ratio": 33.080069820678226
+      "frequency": 0.5,
+      "period": 2.0,
+      "on_grid": true,
+      "class_psd": 0.002924393292819781,
+      "identity_psd": 1.3678654727924784,
+      "ratio": 467.7433353957479,
+      "rank_among_bins": 3
     },
     "4-year (Presidential)": {
       "frequency": 0.25,
       "period": 4.0,
-      "class_psd": 0.10014271383553869,
-      "identity_psd": 2.9311963949937963,
-      "ratio": 29.270191337211116
+      "on_grid": true,
+      "class_psd": 0.10014271383553874,
+      "identity_psd": 2.9311963949937976,
+      "ratio": 29.270191337211113,
+      "rank_among_bins": 38
     },
     "6-year (Senate)": {
       "frequency": 0.16666666666666666,
       "period": 6.0,
+      "on_grid": true,
       "class_psd": 0.16872049829248306,
-      "identity_psd": 2.1750807205884035,
-      "ratio": 12.891621009901375
+      "identity_psd": 2.175080720588402,
+      "ratio": 12.891621009901366,
+      "rank_among_bins": 63
     },
     "8-year (Two-term)": {
       "frequency": 0.125,
       "period": 8.0,
+      "on_grid": true,
       "class_psd": 0.6206332213613036,
-      "identity_psd": 6.3177936679653035,
-      "ratio": 10.179593116378442
+      "identity_psd": 6.317793667965298,
+      "ratio": 10.179593116378433,
+      "rank_among_bins": 69
     }
+  },
+  "all_bin_context": {
+    "n_bins": 96,
+    "median_ratio": 20.95451602299844,
+    "n_bins_ratio_at_or_above_20": 50
   }
 }

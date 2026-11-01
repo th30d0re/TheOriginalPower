@@ -25,17 +25,26 @@ Methods:
     4. Epoch analysis around actual election dates
 
 Output:
-    Paper/figures/eq_fourier_australian_parliament.png
-    Paper/data/eq_fourier_australian_parliament_results.csv
+    Paper/figures/eq_fourier_australian_parliament.png (and .pdf)
+    Paper/data/eq_fourier_australian_parliament_results.csv (annual counts;
+        written only when the parquet is read)
+    Paper/data/eq_fourier_australian_parliament_ratios.csv (period ratios)
+
+Usage:
+    python3 Paper/scripts/eq_fourier_australian_parliament.py                 # parquet if present
+    python3 Paper/scripts/eq_fourier_australian_parliament.py --from-results  # rerun spectra only
 """
 
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from scipy import signal
-from scipy.fft import fft, fftfreq
+from scipy.fft import rfft, rfftfreq
 from scipy.signal import lombscargle
 from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from spectral_bins import target_bins, ratio_context, rank_of  # noqa: E402
 
 # ---------------------------------------------------------------------------
 # Paths
@@ -83,57 +92,72 @@ IDENTITY_KEYWORDS = [
 # ---------------------------------------------------------------------------
 # Load data
 # ---------------------------------------------------------------------------
-print(f"Loading {DATA_PARQUET}...")
-df = pd.read_parquet(DATA_PARQUET)
-print(f"Dataset shape: {df.shape}")
-print(f"Columns: {df.columns.tolist()}")
-print(f"Date range: {df['date'].min()} to {df['date'].max()}")
+# Two entry points:
+#   * the raw Zenodo parquet (keyword counting + spectral analysis), or
+#   * --from-results / no parquet: rerun the spectral stage from the annual
+#     counts this script already wrote to RESULTS_CSV. The parquet is not
+#     tracked in git, so this keeps the spectral analysis reproducible.
+RESULTS_CSV = ROOT / "data" / "eq_fourier_australian_parliament_results.csv"
+FROM_RESULTS = "--from-results" in sys.argv or not DATA_PARQUET.exists()
 
-# ---------------------------------------------------------------------------
-# Extract annual counts
-# ---------------------------------------------------------------------------
-df["year"] = pd.to_datetime(df["date"]).dt.year
-
-# Combine all text fields
-if "body" in df.columns:
-    text_col = "body"
-elif "text" in df.columns:
-    text_col = "text"
-elif "speech" in df.columns:
-    text_col = "speech"
+if FROM_RESULTS:
+    print(f"Loading annual counts from {RESULTS_CSV} (parquet not used)")
+    _prev = pd.read_csv(RESULTS_CSV)
+    years = [int(y) for y in _prev["year"]]
+    class_counts = _prev["class_count"].to_numpy(dtype=float)
+    identity_counts = _prev["identity_count"].to_numpy(dtype=float)
 else:
-    # Try to find a text column
-    text_candidates = [c for c in df.columns if df[c].dtype == object and df[c].str.len().mean() > 50]
-    text_col = text_candidates[0] if text_candidates else None
-    print(f"Using text column: {text_col}")
+    print(f"Loading {DATA_PARQUET}...")
+    df = pd.read_parquet(DATA_PARQUET)
+    print(f"Dataset shape: {df.shape}")
+    print(f"Columns: {df.columns.tolist()}")
+    print(f"Date range: {df['date'].min()} to {df['date'].max()}")
 
-print(f"Text column: {text_col}")
-print(f"Sample text: {df[text_col].iloc[0][:200]}")
+    # ---------------------------------------------------------------------------
+    # Extract annual counts
+    # ---------------------------------------------------------------------------
+    df["year"] = pd.to_datetime(df["date"]).dt.year
 
-# Count keyword occurrences per year
-def count_keywords(texts, keywords):
-    """Count total occurrences of keywords in a series of texts."""
-    total = 0
-    for text in texts.dropna():
-        text_lower = str(text).lower()
-        for kw in keywords:
-            total += text_lower.count(kw.lower())
-    return total
+    # Combine all text fields
+    if "body" in df.columns:
+        text_col = "body"
+    elif "text" in df.columns:
+        text_col = "text"
+    elif "speech" in df.columns:
+        text_col = "speech"
+    else:
+        # Try to find a text column
+        text_candidates = [c for c in df.columns if df[c].dtype == object and df[c].str.len().mean() > 50]
+        text_col = text_candidates[0] if text_candidates else None
+        print(f"Using text column: {text_col}")
 
-years = sorted(df["year"].unique())
-years = [y for y in years if 1998 <= y <= 2024]
+    print(f"Text column: {text_col}")
+    print(f"Sample text: {df[text_col].iloc[0][:200]}")
 
-class_counts = []
-identity_counts = []
+    # Count keyword occurrences per year
+    def count_keywords(texts, keywords):
+        """Count total occurrences of keywords in a series of texts."""
+        total = 0
+        for text in texts.dropna():
+            text_lower = str(text).lower()
+            for kw in keywords:
+                total += text_lower.count(kw.lower())
+        return total
 
-for year in years:
-    year_df = df[df["year"] == year]
-    class_counts.append(count_keywords(year_df[text_col], CLASS_KEYWORDS))
-    identity_counts.append(count_keywords(year_df[text_col], IDENTITY_KEYWORDS))
-    print(f"{year}: class={class_counts[-1]:>5}, identity={identity_counts[-1]:>5}")
+    years = sorted(df["year"].unique())
+    years = [y for y in years if 1998 <= y <= 2024]
 
-class_counts = np.array(class_counts, dtype=float)
-identity_counts = np.array(identity_counts, dtype=float)
+    class_counts = []
+    identity_counts = []
+
+    for year in years:
+        year_df = df[df["year"] == year]
+        class_counts.append(count_keywords(year_df[text_col], CLASS_KEYWORDS))
+        identity_counts.append(count_keywords(year_df[text_col], IDENTITY_KEYWORDS))
+        print(f"{year}: class={class_counts[-1]:>5}, identity={identity_counts[-1]:>5}")
+
+    class_counts = np.array(class_counts, dtype=float)
+    identity_counts = np.array(identity_counts, dtype=float)
 
 N = len(years)
 fs = 1.0  # yr^-1
@@ -149,27 +173,38 @@ identity_dt = signal.detrend(identity_counts, type="linear")
 # ---------------------------------------------------------------------------
 # FFT Periodogram
 # ---------------------------------------------------------------------------
-fft_class = fft(class_dt)
-fft_identity = fft(identity_dt)
+# One-sided spectrum via rfft. The previous slice fft(...)[:N//2] dropped the
+# highest positive bin for odd N (N = 27: f = 13/27 = 0.481 cyc/yr, 2.08 yr).
+fft_class = rfft(class_dt)
+fft_identity = rfft(identity_dt)
 
-psd_class = np.abs(fft_class[:N//2])**2 / N
-psd_identity = np.abs(fft_identity[:N//2])**2 / N
-freqs = fftfreq(N, d=1.0)[:N//2]
+psd_class = np.abs(fft_class)**2 / N
+psd_identity = np.abs(fft_identity)**2 / N
+freqs = rfftfreq(N, d=1.0)
 periods_fft = 1.0 / freqs[1:]  # skip DC
 
 # ---------------------------------------------------------------------------
 # Power ratios at key periods
 # ---------------------------------------------------------------------------
-def power_at_period(psd, freqs, target_period):
-    target_freq = 1.0 / target_period
-    idx = np.argmin(np.abs(freqs[1:] - target_freq))
-    return psd[1:][idx], 1.0 / freqs[1:][idx]
-
+# Each target period is reported at its exact bin when one exists (T = 3 yr at
+# N = 27) and otherwise at both bracketing bins, each labelled with its true
+# period. A target beyond Nyquist (T = 2 yr; Nyquist here is 2.08 yr) has only
+# the last bin below it.
+f_pos = freqs[1:]
+CTX = ratio_context(f_pos, psd_identity[1:], psd_class[1:])
+ratio_rows = []
 for T in [2, 3, 4, 5, 6]:
-    p_id, actual_T_id = power_at_period(psd_identity, freqs, T)
-    p_cl, actual_T_cl = power_at_period(psd_class, freqs, T)
-    ratio = p_id / p_cl if p_cl > 0 else np.inf
-    print(f"T={T}yr (actual {actual_T_id:.2f}yr): identity/class ratio = {ratio:.2f}")
+    idx_list, on_grid = target_bins(f_pos, 1.0 / T)
+    for i in idx_list:
+        p_id, p_cl = psd_identity[1:][i], psd_class[1:][i]
+        ratio = p_id / p_cl if p_cl > 0 else np.inf
+        ratio_rows.append({"target_period_yr": T, "bin_period_yr": 1.0 / f_pos[i], "bin_freq": f_pos[i],
+                           "on_grid": on_grid, "identity_psd": p_id, "class_psd": p_cl, "ratio": ratio,
+                           "rank_among_bins": rank_of(CTX["ratios"], ratio), "n_bins": CTX["n_bins"]})
+        print(f"T={T}yr: bin {1.0/f_pos[i]:.2f}yr ({'exact' if on_grid else 'bracketing'}): "
+              f"identity/class ratio = {ratio:.2f} (rank {rank_of(CTX['ratios'], ratio)} of {CTX['n_bins']})")
+print(f"All-bin context: median ratio {CTX['median']:.2f}; "
+      f"{CTX['n_at_or_above']} of {CTX['n_bins']} bins >= {CTX['threshold']:.0f}")
 
 # ---------------------------------------------------------------------------
 # Lomb-Scargle Periodogram (robustness check)
@@ -239,9 +274,12 @@ results = pd.DataFrame({
     "identity_dt": identity_dt,
     "election_year": election_mask,
 })
-results_path = ROOT / "data" / "eq_fourier_australian_parliament_results.csv"
-results.to_csv(results_path, index=False)
-print(f"\nSaved results to {results_path}")
+if not FROM_RESULTS:
+    results.to_csv(RESULTS_CSV, index=False)
+    print(f"\nSaved results to {RESULTS_CSV}")
+ratios_path = ROOT / "data" / "eq_fourier_australian_parliament_ratios.csv"
+pd.DataFrame(ratio_rows).to_csv(ratios_path, index=False)
+print(f"Saved period ratios to {ratios_path}")
 
 # ---------------------------------------------------------------------------
 # Figure

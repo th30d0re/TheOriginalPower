@@ -15,11 +15,21 @@ Methodology:
     4. Apply FFT Periodogram with linear detrending (same as CR analysis).
     5. Report dominant periods and compare to Lomb-Scargle results.
 
+Frequency bins:
+    The one-sided spectrum uses rfft/rfftfreq, which keeps the Nyquist bin
+    (0.5 cyc/yr). numpy's fftfreq returns that bin as -0.5, so a positive-
+    frequency filter dropped it and the "2-year" row was measured at
+    0.4948 cyc/yr (2.02 yr). Each electoral row now reports the bin(s) it
+    measures (spectral_bins.target_bins) and its rank among all bins.
+
 Caveats (Tier 2 -- exploratory):
     - Interpolation across gaps introduces spectral artifacts.
     - Only 55 annual samples across 191 years; many gaps.
     - FFT assumes uniform sampling; interpolation enforces this artificially.
     - Results should be treated as directional, not definitive.
+    - Linear interpolation across multi-year gaps acts as a low-pass filter:
+      it removes power at short periods in the gap years, so ratios near the
+      2-year Nyquist limit depend heavily on the interpolation.
 """
 from __future__ import annotations
 
@@ -29,13 +39,15 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
-from numpy.fft import fft, fftfreq
+from numpy.fft import rfft, rfftfreq
 
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from spectral_bins import target_bins, ratio_context, rank_of  # noqa: E402
 IN_CSV = ROOT / "data" / "scotus_annual_keyword_counts.csv"
 OUT_FIG = ROOT / "figures" / "spectral" / "scotus_annual_fft.pdf"
 OUT_JSON = ROOT / "data" / "scotus_annual_fft_results.json"
@@ -76,9 +88,9 @@ def main() -> None:
     identity_detrended = identity_signal - np.polyval(np.polyfit(np.arange(n), identity_signal, 1), np.arange(n))
 
     # FFT
-    class_fft = fft(class_detrended)
-    identity_fft = fft(identity_detrended)
-    freqs = fftfreq(n, dt)
+    class_fft = rfft(class_detrended)
+    identity_fft = rfft(identity_detrended)
+    freqs = rfftfreq(n, dt)            # keeps the Nyquist bin
 
     # Positive frequencies only
     pos = freqs > 0
@@ -92,9 +104,21 @@ def main() -> None:
     class_peak_period = 1.0 / freqs_pos[class_peak_idx] if freqs_pos[class_peak_idx] != 0 else np.inf
     identity_peak_period = 1.0 / freqs_pos[identity_peak_idx] if freqs_pos[identity_peak_idx] != 0 else np.inf
 
+    # Band-local peaks (class band 3-10 yr, identity band 0.8-3 yr below Nyquist),
+    # as in spectral_fourier.ipynb; the all-frequency argmax above lands on
+    # near-DC periods (tens of years) left over from the detrended trend.
+    def band_peak(psd, lo, hi):
+        m = (freqs_pos >= lo) & (freqs_pos <= hi)
+        return float(1.0 / freqs_pos[m][np.argmax(psd[m])]) if m.any() else float("nan")
+    class_band_peak = band_peak(class_psd, 0.1, 1/3)
+    identity_band_peak = band_peak(identity_psd, 1/3, 0.5)
+
     print(f"\nFFT Results (N={n}, interpolated):")
-    print(f"  Class-band dominant period: {class_peak_period:.2f} yr")
-    print(f"  Identity-band dominant period: {identity_peak_period:.2f} yr")
+    print(f"  Class-band dominant period: {class_peak_period:.2f} yr (all frequencies); "
+          f"{class_band_peak:.2f} yr (class band 3-10 yr)")
+    print(f"  Identity-band dominant period: {identity_peak_period:.2f} yr (all frequencies); "
+          f"{identity_band_peak:.2f} yr (identity band, 2-3 yr below Nyquist)")
+    CTX = ratio_context(freqs_pos, identity_psd, class_psd)
 
     # Electoral frequencies
     electoral_freqs = {
@@ -104,31 +128,42 @@ def main() -> None:
         "8-year (Two-term)": 0.125,
     }
     print(f"\nPower at electoral frequencies:")
-    results = {"n_samples": int(n), "year_range": [int(merged["year"].min()), int(merged["year"].max())],
+    results = {"producer": "Paper/scripts/scotus_annual_fft.py",
+               "input": "Paper/data/scotus_annual_keyword_counts.csv",
+               "n_samples": int(n), "year_range": [int(merged["year"].min()), int(merged["year"].max())],
                "interpolation": "linear", "caveat": "Tier 2 -- exploratory; interpolation across gaps introduces artifacts",
-               "dominant_periods": {}, "electoral_power": {}}
-
-    def nearest_idx(target_freq):
-        return int(np.argmin(np.abs(freqs_pos - target_freq)))
+               "frequency_grid": "rfftfreq (includes the Nyquist bin)",
+               "dominant_periods": {}, "electoral_power": {},
+               "all_bin_context": {"n_bins": CTX["n_bins"], "median_ratio": CTX["median"],
+                                   "n_bins_ratio_at_or_above_20": CTX["n_at_or_above"]}}
 
     for name, f_target in electoral_freqs.items():
-        idx = nearest_idx(f_target)
-        actual_f = freqs_pos[idx]
-        actual_period = 1.0 / actual_f if actual_f != 0 else np.inf
-        class_p = float(class_psd[idx])
-        identity_p = float(identity_psd[idx])
-        ratio = identity_p / class_p if class_p > 0 else np.inf
-        print(f"  {name}: f={actual_f:.4f} cyc/yr (T={actual_period:.1f} yr) | Class PSD={class_p:.4e} | Identity PSD={identity_p:.4e} | Ratio={ratio:.2f}")
-        results["electoral_power"][name] = {
-            "frequency": float(actual_f),
-            "period": float(actual_period),
-            "class_psd": class_p,
-            "identity_psd": identity_p,
-            "ratio": float(ratio),
-        }
+        idx_list, on_grid = target_bins(freqs_pos, f_target)
+        for idx in idx_list:
+            actual_f = freqs_pos[idx]
+            actual_period = 1.0 / actual_f if actual_f != 0 else np.inf
+            class_p = float(class_psd[idx])
+            identity_p = float(identity_psd[idx])
+            ratio = identity_p / class_p if class_p > 0 else np.inf
+            key = name if on_grid else f"{name} @ {actual_period:.2f} yr"
+            print(f"  {key}: f={actual_f:.4f} cyc/yr (T={actual_period:.2f} yr) | Class PSD={class_p:.4e} | "
+                  f"Identity PSD={identity_p:.4e} | Ratio={ratio:.2f} (rank {rank_of(CTX['ratios'], ratio)} of {CTX['n_bins']})")
+            results["electoral_power"][key] = {
+                "frequency": float(actual_f),
+                "period": float(actual_period),
+                "on_grid": bool(on_grid),
+                "class_psd": class_p,
+                "identity_psd": identity_p,
+                "ratio": float(ratio),
+                "rank_among_bins": rank_of(CTX["ratios"], ratio),
+            }
+    print(f"  All-bin context: median ratio {CTX['median']:.2f}; "
+          f"{CTX['n_at_or_above']} of {CTX['n_bins']} bins >= {CTX['threshold']:.0f}")
 
     results["dominant_periods"]["class"] = float(class_peak_period)
     results["dominant_periods"]["identity"] = float(identity_peak_period)
+    results["dominant_periods"]["class_band_local"] = class_band_peak
+    results["dominant_periods"]["identity_band_local"] = identity_band_peak
 
     # Plot
     fig, axes = plt.subplots(2, 2, figsize=(14, 10))
@@ -178,9 +213,13 @@ def main() -> None:
     # Parseval check
     ax = axes[1, 1]
     time_energy_class = np.sum(class_detrended**2)
-    freq_energy_class = np.sum(class_psd) * n  # Multiply by N for positive frequencies
+    # One-sided spectrum: interior bins count twice, the Nyquist bin (n even) once.
+    w = np.full(class_psd.shape, 2.0)
+    if n % 2 == 0:
+        w[-1] = 1.0
+    freq_energy_class = np.sum(w * class_psd)
     time_energy_identity = np.sum(identity_detrended**2)
-    freq_energy_identity = np.sum(identity_psd) * n
+    freq_energy_identity = np.sum(w * identity_psd)
     parseval_class = freq_energy_class / time_energy_class if time_energy_class > 0 else np.nan
     parseval_identity = freq_energy_identity / time_energy_identity if time_energy_identity > 0 else np.nan
     ax.bar(["Class\n(time)", "Class\n(freq)", "Identity\n(time)", "Identity\n(freq)"],
