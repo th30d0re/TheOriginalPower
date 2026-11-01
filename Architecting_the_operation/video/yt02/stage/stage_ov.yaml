@@ -78,3 +78,58 @@ shots:
       clone: {word: clone}
       speech: {word: speech}
       disclosureEnd: {word: exposition, at: end}
+  # Minute two: turns 6-10 (1:20.7-2:18.3). Cue names carry a turn prefix to stay unique.
+  - shot_id: S00-06
+    turn_id: 156a6bd72a273602
+    scene: EntryOpen
+    cues:
+      t6Why: {word: why}
+      t6Open: {word: open}
+      t6Numbered: {word: numbered}
+      t6Begin: {word: begin}
+      t6Individual: {word: individual, occurrence: 2}
+      t6Systemic: {word: systemic}
+      t6Bottom: {word: bottom}
+      t6Includes: {word: includes}
+  - shot_id: S00-07
+    turn_id: 360e6c6e943db5a1
+    scene: SenseOne
+    cues:
+      t7Sense: {word: sense}
+      t7Prejudice: {word: prejudice}
+      t7Hostility: {word: hostility}
+      t7Discrimination: {word: discrimination}
+      t7Person: {word: person}
+      t7Race: {word: race}
+  - shot_id: S00-08
+    turn_id: 2487f4f840697052
+    scene: SenseTwo
+    cues:
+      t8Sense: {word: sense}
+      t8Ideological: {word: ideological}
+      t8Doctrine: {word: doctrine}
+      t8Biological: {word: biological}
+      t8Groups: {word: groups}
+      t8Determine: {word: determine}
+      t8Achievement: {word: achievement}
+  - shot_id: S00-09
+    turn_id: 735863086953aa26
+    scene: SenseThree
+    cues:
+      t9Sense: {word: sense}
+      t9Third: {word: third}
+      t9Institutional: {word: institutional}
+      t9Practices: {word: practices}
+      t9Unequal: {word: unequal}
+      t9Categories: {word: categories}
+  - shot_id: S00-10
+    turn_id: 6caa17cd7246265c
+    scene: FigureTwoThree
+    cues:
+      t10Figure: {word: figure}
+      t10Chapter: {word: chapter}
+      t10Displays: {word: displays}
+      t10Order: {word: order}
+      t10Column: {word: column}
+      t10Pyramid: {word: pyramid}
+      t10End: {word: pyramid, at: end}

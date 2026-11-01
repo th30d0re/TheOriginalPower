@@ -3,10 +3,10 @@
   "fps": 30,
   "width": 1920,
   "height": 1080,
-  "duration_ms": 81190,
+  "duration_ms": 139100,
   "range": {
     "start_ms": 0,
-    "end_ms": 81190
+    "end_ms": 139100
   },
   "audio": "stage/YT02v2_ov/YT02v2_ov.mp3",
   "cues": {
@@ -58,6 +58,40 @@
     "clone": 76830,
     "speech": 78190,
     "disclosureEnd": 80030,
+    "t6Why": 80880,
+    "t6Open": 84120,
+    "t6Numbered": 87980,
+    "t6Begin": 89480,
+    "t6Individual": 90100,
+    "t6Systemic": 93160,
+    "t6Bottom": 94500,
+    "t6Includes": 96020,
+    "t7Sense": 97910,
+    "t7Prejudice": 100130,
+    "t7Hostility": 100790,
+    "t7Discrimination": 102090,
+    "t7Person": 104050,
+    "t7Race": 105210,
+    "t8Sense": 106990,
+    "t8Ideological": 109270,
+    "t8Doctrine": 110950,
+    "t8Biological": 113070,
+    "t8Groups": 115430,
+    "t8Determine": 115970,
+    "t8Achievement": 117850,
+    "t9Sense": 119000,
+    "t9Third": 121280,
+    "t9Institutional": 123040,
+    "t9Practices": 124680,
+    "t9Unequal": 126320,
+    "t9Categories": 127960,
+    "t10Figure": 129260,
+    "t10Chapter": 130500,
+    "t10Displays": 133100,
+    "t10Order": 134640,
+    "t10Column": 135980,
+    "t10Pyramid": 137460,
+    "t10End": 137820,
     "S00-00.title": 460,
     "S00-00.archives": 3480,
     "S00-00.equations": 4520,
@@ -105,7 +139,41 @@
     "S00-05.narration": 74130,
     "S00-05.clone": 76830,
     "S00-05.speech": 78190,
-    "S00-05.disclosureEnd": 80030
+    "S00-05.disclosureEnd": 80030,
+    "S00-06.t6Why": 80880,
+    "S00-06.t6Open": 84120,
+    "S00-06.t6Numbered": 87980,
+    "S00-06.t6Begin": 89480,
+    "S00-06.t6Individual": 90100,
+    "S00-06.t6Systemic": 93160,
+    "S00-06.t6Bottom": 94500,
+    "S00-06.t6Includes": 96020,
+    "S00-07.t7Sense": 97910,
+    "S00-07.t7Prejudice": 100130,
+    "S00-07.t7Hostility": 100790,
+    "S00-07.t7Discrimination": 102090,
+    "S00-07.t7Person": 104050,
+    "S00-07.t7Race": 105210,
+    "S00-08.t8Sense": 106990,
+    "S00-08.t8Ideological": 109270,
+    "S00-08.t8Doctrine": 110950,
+    "S00-08.t8Biological": 113070,
+    "S00-08.t8Groups": 115430,
+    "S00-08.t8Determine": 115970,
+    "S00-08.t8Achievement": 117850,
+    "S00-09.t9Sense": 119000,
+    "S00-09.t9Third": 121280,
+    "S00-09.t9Institutional": 123040,
+    "S00-09.t9Practices": 124680,
+    "S00-09.t9Unequal": 126320,
+    "S00-09.t9Categories": 127960,
+    "S00-10.t10Figure": 129260,
+    "S00-10.t10Chapter": 130500,
+    "S00-10.t10Displays": 133100,
+    "S00-10.t10Order": 134640,
+    "S00-10.t10Column": 135980,
+    "S00-10.t10Pyramid": 137460,
+    "S00-10.t10End": 137820
   },
   "segments": [
     {
@@ -192,14 +260,94 @@
       "instance": "S00-05",
       "scene": "Disclosure",
       "start_ms": 73970,
-      "end_ms": 81190,
+      "end_ms": 80740,
       "shots": [
         {
           "shot_id": "S00-05",
           "turn_id": "a5f0b18ecbdbb6a2",
           "turn_index": 5,
           "start_ms": 73970,
-          "end_ms": 81190,
+          "end_ms": 80740,
+          "props": {}
+        }
+      ]
+    },
+    {
+      "instance": "S00-06",
+      "scene": "EntryOpen",
+      "start_ms": 80740,
+      "end_ms": 97910,
+      "shots": [
+        {
+          "shot_id": "S00-06",
+          "turn_id": "156a6bd72a273602",
+          "turn_index": 6,
+          "start_ms": 80740,
+          "end_ms": 97910,
+          "props": {}
+        }
+      ]
+    },
+    {
+      "instance": "S00-07",
+      "scene": "SenseOne",
+      "start_ms": 97910,
+      "end_ms": 106990,
+      "shots": [
+        {
+          "shot_id": "S00-07",
+          "turn_id": "360e6c6e943db5a1",
+          "turn_index": 7,
+          "start_ms": 97910,
+          "end_ms": 106990,
+          "props": {}
+        }
+      ]
+    },
+    {
+      "instance": "S00-08",
+      "scene": "SenseTwo",
+      "start_ms": 106990,
+      "end_ms": 119000,
+      "shots": [
+        {
+          "shot_id": "S00-08",
+          "turn_id": "2487f4f840697052",
+          "turn_index": 8,
+          "start_ms": 106990,
+          "end_ms": 119000,
+          "props": {}
+        }
+      ]
+    },
+    {
+      "instance": "S00-09",
+      "scene": "SenseThree",
+      "start_ms": 119000,
+      "end_ms": 129260,
+      "shots": [
+        {
+          "shot_id": "S00-09",
+          "turn_id": "735863086953aa26",
+          "turn_index": 9,
+          "start_ms": 119000,
+          "end_ms": 129260,
+          "props": {}
+        }
+      ]
+    },
+    {
+      "instance": "S00-10",
+      "scene": "FigureTwoThree",
+      "start_ms": 129260,
+      "end_ms": 139100,
+      "shots": [
+        {
+          "shot_id": "S00-10",
+          "turn_id": "6caa17cd7246265c",
+          "turn_index": 10,
+          "start_ms": 129260,
+          "end_ms": 139100,
           "props": {}
         }
       ]
