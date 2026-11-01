@@ -6952,10 +6952,10 @@ The equality constraint in eq.~\ref{eq:8.16-interference-control-objective} is t
 The Model C formulation is not an abstract preference: it makes a falsifiable prediction about the spectrum of observed political-attention time series. If the interference engine is active, then a low-frequency class-band component should be \emph{suppressed} relative to higher-frequency identity-band components, and the two band powers should move in opposite directions over time. We test that prediction by computing the discrete Fourier transform of three proxy signals and integrating the resulting power spectral density across the bands defined above.
 
 \paragraph{Proxy operationalization.}
-Three time series operationalize $S_{\text{total}}(t)$ at three sampling rates. \textbf{Google Trends} supplies weekly U.S.\ search-interest indices (2004--2024) for a class-signal keyword basket (\textit{union}, \textit{strike}, \textit{class war}, \textit{minimum wage}, \textit{labor rights}) and an identity-signal basket (\textit{racism}, \textit{gender war}, \textit{trans rights}, \textit{intersectionality}, \textit{privilege}) \cite{google_trends_2024}. \textbf{Congressional Record} floor speeches (1965--2024, annual) yield keyword-frequency counts for the same two baskets via GovInfo bulk-download extraction \cite{govinfo_crec_2024}. The \textbf{ANES Cumulative Data File} (1948--2020, biennial) provides issue-salience shares (``most important problem'') for the economy and for race/civil rights, plus a cross-group economic-solidarity item \cite{anes_cumulative_2022}. The class band is defined as periods of 3--10 years ($0.10 \le f \le 0.33\,\text{yr}^{-1}$); the identity band as periods of 0.8--3 years ($0.33 < f \le 1.25\,\text{yr}^{-1}$).
+Three time series operationalize $S_{\text{total}}(t)$ at three sampling rates. \textbf{Google Trends} supplies weekly U.S.\ search-interest indices (2004--2024) for a class-signal keyword basket (\textit{union}, \textit{strike}, \textit{class war}, \textit{minimum wage}, \textit{labor rights}) and an identity-signal basket (\textit{racism}, \textit{gender war}, \textit{trans rights}, \textit{intersectionality}, \textit{privilege}) \cite{google_trends_2024}. \textbf{Congressional Record} floor speeches (1965--2024, annual) yield keyword-frequency counts for the same two baskets via GovInfo bulk-download extraction \cite{govinfo_crec_2024}. The \textbf{ANES Cumulative Data File} (1948--2020, biennial surveys interpolated onto a 1-year grid) provides issue-salience shares (``most important problem'') for the economy and for race/civil rights, plus a cross-group economic-solidarity item \cite{anes_cumulative_2022}. The class band is defined as periods of 3--10 years ($0.10 \le f \le 0.33\,\text{yr}^{-1}$); the identity band as periods of 0.8--3 years ($0.33 < f \le 1.25\,\text{yr}^{-1}$).
 
 \paragraph{Spectral results.}
-Each proxy is linearly detrended and Hann-windowed before the FFT so that low-frequency drift cannot capture the peak-selection step; dominant-period extraction is then confined to the relevant band with a band-restricted \textsc{argmax}. The full-window power spectra of all three proxies are plotted in Figure~\ref{fig:power_spectrum}. Integrating the Google Trends PSD across the two bands gives a class-band power of $4.85$ and an identity-band power of $53.4$ over the 2004--2024 window --- identity-band power exceeds class-band power by a factor of $11.0$. When we retract the analysis to rolling 10-year windows and step the window-end from 2014 to 2024, the class-band power falls from $2.28$ to $0.55$ (a $76.0\%$ decline) while identity-band power remains dominant throughout, finishing at $33.7$; the class share of total spectral power, $P_{\text{class}}/(P_{\text{class}}+P_{\text{id}})$, drops from $0.073$ to $0.016$ (Figure~\ref{fig:band_power_tradeoff}). Band-local dominant periods (\textsc{argmax} restricted to each band) come in at $\approx 4.2$\,yr in the Google Trends class band and $\approx 1.0$\,yr in the identity band, $\approx 5.0$\,yr and $\approx 2.5$\,yr in the Congressional Record, and $\approx 5.4$\,yr (economy) / $\approx 8.1$\,yr (race) for the ANES class-band channels. The Congressional Record series carries the expected low-frequency trend (a monotone decline in class-keyword frequency over 1965--2024) together with detectable identity-band structure; the ANES series, sampled biennially, cannot resolve the identity band by Nyquist but confirms the low-frequency collapse of cross-group economic solidarity relative to identity-issue salience. The numerical results are reproduced by \texttt{Paper/scripts/spectral\_fourier.ipynb}, which ingests the three CSVs in \texttt{Paper/data/} and writes the two figures below \cite{oppenheim_schafer_dsp_1999}.
+Each proxy is linearly detrended and Hann-windowed before the FFT so that low-frequency drift cannot capture the peak-selection step; dominant-period extraction is then confined to the relevant band with a band-restricted \textsc{argmax}. The full-window power spectra of all three proxies are plotted in Figure~\ref{fig:power_spectrum}. Integrating the Google Trends PSD across the two bands gives a class-band power of $4.85$ and an identity-band power of $53.4$ over the 2004--2024 window --- identity-band power exceeds class-band power by a factor of $11.0$. This headline ratio pairs the class band of the class series with the identity band of the identity series. Each series measured against its own spectrum points the same way: the class series holds $74\%$ of its power in the class band and $0.8\%$ in the identity band, and the identity series holds $84\%$ in the identity band and $5\%$ in the class band. When we retract the analysis to rolling 10-year windows and step the window-end from 2014 to 2024, the class-band power falls from $2.28$ to $0.55$ (a $76.0\%$ decline) while identity-band power remains dominant throughout, finishing at $33.7$; the class share of total spectral power, $P_{\text{class}}/(P_{\text{class}}+P_{\text{id}})$, drops from $0.073$ to $0.016$ (Figure~\ref{fig:band_power_tradeoff}). Over the same windows the identity series gains class-band power, from $0.06$ to $3.47$, and from 2019 onward it carries more class-band power than the class series does. Band-local dominant periods (\textsc{argmax} restricted to each band) come in at $\approx 4.2$\,yr in the Google Trends class band and $\approx 1.0$\,yr in the identity band, $\approx 5.0$\,yr and $\approx 2.5$\,yr in the Congressional Record, and $\approx 8.1$\,yr (economy) / $\approx 4.1$\,yr (race) for the ANES class-band channels, computed on the file's 1-year grid. The 1.0-year identity peak in the weekly search data coincides with the annual calendar cycle. Removing the mean week-of-year profile from both Google Trends series lowers identity-band power from $53.4$ to $30.7$, moves the identity-band peak to $\approx 1.9$\,yr, close to the 2-year midterm cycle, and leaves a seasonality-free cross-band ratio of $6.3$. The Congressional Record series carries the expected low-frequency trend (a monotone decline in class-keyword frequency over 1965--2024) together with detectable identity-band structure; the ANES series, interpolated from biennial surveys, carries no information in the identity band but confirms the low-frequency collapse of cross-group economic solidarity relative to identity-issue salience. The numerical results are reproduced by \texttt{Paper/scripts/spectral\_fourier.ipynb}, which ingests the three CSVs in \texttt{Paper/data/} and writes the two figures below \cite{oppenheim_schafer_dsp_1999}.
 
 \begin{figure}[htbp]
 \centering
@@ -6964,7 +6964,7 @@ Each proxy is linearly detrended and Hann-windowed before the FFT so that low-fr
 }{%
 \textit{[Figure file not generated]}%
 }
-\caption{\textbf{Power spectra of three political-attention proxy signals.} Top: Google Trends weekly indices (2004--2024) for class keywords (blue) and identity keywords (red). Middle: annual U.S.\ Congressional Record word-frequency counts (1965--2024). Bottom: ANES biennial issue-salience shares (1948--2020) for economy (blue), race (red), and cross-group economic solidarity (green, dashed). Shaded regions mark the class band (3--10\,yr periods) and the identity band (0.8--3\,yr periods). Computed in \texttt{Paper/scripts/spectral\_fourier.ipynb}.}
+\caption{\textbf{Power spectra of three political-attention proxy signals.} Top: Google Trends weekly indices (2004--2024) for class keywords (blue) and identity keywords (red). Middle: annual U.S.\ Congressional Record word-frequency counts (1965--2024). Bottom: ANES issue-salience shares (1948--2020; biennial surveys interpolated onto a 1-year grid) for economy (blue), race (red), and cross-group economic solidarity (green, dashed). Shaded regions mark the class band (3--10\,yr periods) and the identity band (0.8--3\,yr periods). Computed in \texttt{Paper/scripts/spectral\_fourier.ipynb}.}
 \label{fig:power_spectrum}
 \end{figure}
 
@@ -6975,7 +6975,7 @@ Each proxy is linearly detrended and Hann-windowed before the FFT so that low-fr
 }{%
 \textit{[Figure file not generated]}%
 }
-\caption{\textbf{Class-band versus identity-band power, rolling 10-year windows of Google Trends (2014--2024).} Top: integrated band powers after linear detrending and Hann-windowing. Class-band power (blue circles) falls from $2.28$ to $0.55$ across the window; identity-band power (red squares) remains an order of magnitude larger throughout. Bottom: class share of total spectral power, $P_{\text{class}}/(P_{\text{class}}+P_{\text{id}})$, declines from $0.073$ to $0.016$ --- the spectral signature of the interference engine redirecting attention from the class band into the identity band.}
+\caption{\textbf{Class-band versus identity-band power, rolling 10-year windows of Google Trends (2014--2024).} Top: integrated band powers after linear detrending and Hann-windowing. Class-band power (blue circles) falls from $2.28$ to $0.55$ across the window; identity-band power (red squares) remains an order of magnitude larger throughout. Dashed red: class-band power of the identity series, which rises from $0.06$ to $3.47$ and exceeds the class series' class-band power from 2019. Bottom: class share of total spectral power, $P_{\text{class}}/(P_{\text{class}}+P_{\text{id}})$, declines from $0.073$ to $0.016$ --- the spectral signature of the interference engine redirecting attention from the class band into the identity band.}
 \label{fig:band_power_tradeoff}
 \end{figure}
 
@@ -7060,27 +7060,27 @@ Across the four shocks the natural period of the backlash collapses from $\appro
   }
   \node[font=\scriptsize, anchor=east, black!60] at (-0.05, 3.07) {$j\omega_d$};
 
-  % 1865: -0.049 +/- 0.297j (scale im x10 visually for legibility)
-  \fill[blue!70!black] (-0.49, 2.97) circle (2.5pt) node[right, font=\tiny] {\ 1865 ($\zeta{=}0.16$)};
-  \fill[blue!70!black] (-0.49, -2.97) circle (2.5pt);
+  % 1865: -0.051 +/- 0.296j (scale im x10 visually for legibility)
+  \fill[blue!70!black] (-0.51, 2.96) circle (2.5pt) node[right, font=\tiny] {\ 1865 ($\zeta{=}0.17$)};
+  \fill[blue!70!black] (-0.51, -2.96) circle (2.5pt);
 
-  % 1964: -0.283 +/- 0.446j  (x10 visually: -2.83, 4.46)  -- cap to figure box
-  \fill[orange!85!black] (-2.83, 2.23) circle (2.5pt) node[above right, font=\tiny] {\ 1964 ($\zeta{=}0.54$)};
-  \fill[orange!85!black] (-2.83, -2.23) circle (2.5pt);
+  % 1964: -0.310 +/- 0.424j  (x10 real, x5 imaginary to fit the figure box)
+  \fill[orange!85!black] (-3.10, 2.12) circle (2.5pt) node[above right, font=\tiny] {\ 1964 ($\zeta{=}0.59$)};
+  \fill[orange!85!black] (-3.10, -2.12) circle (2.5pt);
 
-  % 2008: -0.663 +/- 0.854j (x5 visually: -3.315, 4.27) -- scale to fit
-  \fill[red!80!black] (-3.31, 1.71) circle (2.5pt) node[above right, font=\tiny] {\ 2008 ($\zeta{=}0.61$)};
-  \fill[red!80!black] (-3.31, -1.71) circle (2.5pt);
+  % 2008: -0.754 +/- 0.772j (x5 real, x2 imaginary to fit the figure box)
+  \fill[red!80!black] (-3.77, 1.54) circle (2.5pt) node[above right, font=\tiny] {\ 2008 ($\zeta{=}0.70$)};
+  \fill[red!80!black] (-3.77, -1.54) circle (2.5pt);
 
-  % 2020: -3.76 +/- 3.07j -- scale to fit (x1)
-  \fill[purple!80!black] (-3.76, 3.07) circle (2.5pt) node[above right, font=\tiny] {\ 2020 ($\zeta{=}0.77$)};
-  \fill[purple!80!black] (-3.76, -3.07) circle (2.5pt);
+  % 2020: -6.466 +/- 1.555j (x0.7 real to fit the figure box, x1 imaginary)
+  \fill[purple!80!black] (-4.53, 1.56) circle (2.5pt) node[below right, font=\tiny] {\ 2020 ($\zeta{=}0.97$)};
+  \fill[purple!80!black] (-4.53, -1.56) circle (2.5pt);
 
   \draw[black!40] (-0.3, -3.8) rectangle (0.05, 3.8);
   \node[font=\tiny, align=center, black!55, anchor=west] at (-4.9, -3.6)
     {\textbf{Left half-plane (stable): all four pole pairs sit here.}\\Closer to $j\omega$-axis $\Rightarrow$ slower backlash decay (1865).\\Deeper in LHP $\Rightarrow$ faster saturation (2020).};
 \end{tikzpicture}
-\caption{\textbf{Laplace-plane pole plot of the four fitted shock transfer functions.} Each pair of complex-conjugate poles $s_\pm = -\zeta\omega_n \pm j\omega_d$ is plotted schematically in the left half-plane; horizontal spacing encodes $\zeta\omega_n$ (decay rate), vertical spacing encodes $\omega_d$ (oscillation frequency). Poles migrate leftward and outward over historical time: the engine's shock response becomes faster and more oscillatory with each successive era. Positions are schematic; exact fitted values are reported in Section~\ref{sec:laplace_transfer_function} and in \texttt{Paper/scripts/spectral\_laplace.ipynb}.}
+\caption{\textbf{Laplace-plane pole plot of the four fitted shock transfer functions.} Each pair of complex-conjugate poles $s_\pm = -\zeta\omega_n \pm j\omega_d$ is plotted schematically in the left half-plane; horizontal spacing encodes $\zeta\omega_n$ (decay rate), vertical spacing encodes $\omega_d$ (oscillation frequency). Poles migrate leftward and toward the real axis over historical time: the engine's shock response becomes faster and more heavily damped with each successive era. Positions are schematic; exact fitted values are reported in Section~\ref{sec:laplace_transfer_function} and in \texttt{Paper/scripts/spectral\_laplace.ipynb}.}
 \label{fig:laplace-pole-plot}
 \end{figure}
 
@@ -14549,31 +14549,32 @@ Figure~\ref{fig:spectral_main}C presents the FFT periodograms of the detrended a
 
 \begin{table}[htbp]
 \centering
-\caption{\textbf{Electoral-Cycle Power Ratios: Identity Band / Class Band (FFT Periodogram).} The framework predicts ratios $> 2.0$ for identity-dominant frequencies. The 2-year estimate is at the Nyquist limit and is reported with caution.}
+\caption{\textbf{Electoral-Cycle Power Ratios: Identity Band / Class Band (FFT Periodogram).} The framework predicts ratios $> 2.0$ for identity-dominant frequencies. The 2-year estimate is at the Nyquist limit and is reported with caution. The 8-year period has no bin of its own at $N = 60$; both bracketing bins are listed. Across all 30 bins the median ratio is $5.18$, and 11 bins reach 20 or more; the 4-year ratio ranks tenth.}
 \label{tab:spectral_ratios}
 \begin{tabular}{lccc}
 \toprule
 Cycle & Period (yr) & Frequency (cyc/yr) & Identity/Class Power Ratio \\
 \midrule
-Midterm (Nyquist) & 2 & 0.5000 & 0.58 \\
+Midterm (Nyquist) & 2 & 0.5000 & 2.51 \\
 Presidential & 4 & 0.2500 & \textbf{24.06} \\
 Senate & 6 & 0.1667 & 21.02 \\
-Two-term & 8 & 0.1250 & 12.86 \\
+Two-term (lower bin) & 8.57 & 0.1167 & 12.86 \\
+Two-term (upper bin) & 7.50 & 0.1333 & 3{,}483 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\textbf{P1 is confirmed:} The 4-year presidential cycle shows a 24:1 power advantage for identity-band language. This is a dominant spectral mode.
+\textbf{P1 is confirmed:} The 4-year presidential cycle shows a 24:1 power advantage for identity-band language. The ratio ranks tenth of the 30 frequency bins, and the median ratio across all bins is $5.18$; the 4-year bin therefore sits in the upper third of a spectrum in which identity language generally dominates.
 
-\textbf{P2 is indeterminate:} The 2-year midterm cycle falls at the Nyquist limit, where the FFT has only 2 samples per cycle. The ratio of 0.58 suggests class-band dominance at this frequency, but the estimate is unreliable. Higher-frequency data (monthly or quarterly) are required to resolve the 2-year cycle cleanly.
+\textbf{P2 is weakly supported:} The 2-year midterm cycle falls exactly on the Nyquist bin, where the FFT has only 2 samples per cycle. The ratio there is $2.51$, above the framework threshold of 2.0, and the estimate carries the high variance of a single Nyquist bin. Higher-frequency data (monthly or quarterly) are required to resolve the 2-year cycle cleanly.
 
-\textbf{P3 is confirmed:} The class-band power at $f = 0.25$~cyc/yr sits at the 72nd percentile of all class-band frequencies---relatively flat. The class spectrum shows no corresponding concentration at the electoral frequency.
+\textbf{P3 is confirmed:} The class-band power at $f = 0.25$~cyc/yr sits at the 73rd percentile of all class-band frequencies---relatively flat. The class spectrum shows no corresponding concentration at the electoral frequency.
 
 \textbf{P4 is confirmed:} The 24:1 ratio far exceeds the framework threshold of 2.0.
 
 \subsection{Welch Robustness Check}
 
-Figure~\ref{fig:spectral_main}E presents Welch PSD estimates at two segment lengths. Welch's method smooths the periodogram by averaging across overlapping segments, reducing variance at the cost of frequency resolution. With $N = 60$, segment lengths of 20 and 12 yield only 3--5 and 5--9 independent segments, respectively. The variance is therefore high, and the Welch estimates are inconsistent at the exact 4-year frequency---the smeared frequency bins do not align perfectly with the $f = 0.25$~cyc/yr target. The Welch results are reported as a robustness check but are not the primary estimator.
+Figure~\ref{fig:spectral_main}E presents Welch PSD estimates at two segment lengths. Welch's method smooths the periodogram by averaging across overlapping segments, reducing variance at the cost of frequency resolution. With $N = 60$, segment lengths of 20 and 12 yield only 3--5 and 5--9 independent segments, respectively. The variance is therefore high. Both segment lengths place a bin at exactly $f = 0.25$~cyc/yr, and both give identity/class ratios below parity there ($0.18$ and $0.69$). The 4-year concentration therefore appears in the full-length periodogram and does not survive segment averaging. The Welch results are reported as a robustness check but are not the primary estimator.
 
 \subsection{Parseval Consistency}
 
@@ -14617,13 +14618,13 @@ The annual Congressional Record dataset cannot resolve the 2-year midterm cycle 
 
 \textbf{Strategy 1: Quarterly Congressional Record via GovInfo API.} A pipeline has been constructed to extract quarterly document-count proxies from the GovInfo API (free registration at \url{https://www.govinfo.gov/api-signup}). The script \texttt{Paper/scripts/govinfo\_crec\_quarterly\_query.py} searches the CREC collection for class-band and identity-band keyword baskets per quarter, returning document-match counts. With $f_s = 4$~yr$^{-1}$, the 2-year cycle moves to FFT bin 30---well below the new Nyquist limit of $2.0$~cyc/yr---while preserving the 60-year baseline. Preprocessing and spectral analysis scripts have been updated to consume quarterly output. This strategy awaits API-key activation.
 
-\textbf{Strategy 2: Weekly Google Trends (2004--2024).} Google Trends supplies weekly search-interest indices ($f_s = 52$~yr$^{-1}$) for the same keyword baskets. The baseline is shorter ($N \approx 21$ years) and the metric is relative public-search interest, a different quantity from institutional word frequency, but the Nyquist frequency of $26$~cyc/yr provides ample headroom to resolve the midterm cycle without interpolation artifacts.
+\textbf{Strategy 2: Weekly Google Trends (2004--2024).} Google Trends supplies weekly search-interest indices ($f_s = 52.18$~yr$^{-1}$) for the same keyword baskets. The baseline is shorter ($N \approx 21$ years) and the metric is relative public-search interest, a different quantity from institutional word frequency, but the Nyquist frequency of $26$~cyc/yr provides ample headroom to resolve the midterm cycle without interpolation artifacts.
 
 The Google Trends spectral analysis yields a striking result (Table~\ref{tab:spectral_ratios_google}). At the 2-year midterm frequency, the identity band dominates with a Welch-estimated power ratio of $12.8:1$---comparable in magnitude to the Congressional Record's 4-year presidential ratio of $24.1:1$. At the 4-year presidential frequency, the ratio is $1.6:1$ (near parity), suggesting that public search interest in identity topics does not spike during presidential cycles to the same degree that Congressional floor speech does.
 
 \begin{table}[htbp]
 \centering
-\caption{\textbf{Electoral-Cycle Power Ratios: Identity / Class (Welch PSD, Google Trends 2004--2024).} Weekly sampling ($f_s = 52$~yr$^{-1}$) places the 2-year cycle safely below Nyquist.}
+\caption{\textbf{Electoral-Cycle Power Ratios: Identity / Class (Welch PSD, Google Trends 2004--2024).} Weekly sampling ($f_s = 52.18$~yr$^{-1}$) places the 2-year cycle safely below Nyquist. With 208-week segments the bin spacing is $0.25$~cyc/yr, so the 6-year and 4-year cycles share one bin and the 8-year cycle has no bin; those rows are marked n/r (not resolved).}
 \label{tab:spectral_ratios_google}
 \begin{tabular}{lccc}
 \toprule
@@ -14631,8 +14632,8 @@ Cycle & Period (yr) & Frequency (cyc/yr) & Identity/Class Power Ratio \\
 \midrule
 Midterm & 2 & 0.5000 & \textbf{12.82} \\
 Presidential & 4 & 0.2500 & 1.62 \\
-Senate & 6 & 0.1667 & 1.62 \\
-Two-term & 8 & 0.1250 & 2.81 \\
+Senate & 6 & 0.1667 & n/r \\
+Two-term & 8 & 0.1250 & n/r \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -14645,19 +14646,19 @@ The framework predicts both patterns. The Engine is a multi-channel control syst
 
 \subsection{The Spectral Carrier as Empirical Proof}
 
-The 24:1 power ratio at the 4-year presidential cycle is the Fourier-domain signature of the Interference Engine. It demonstrates that the Engine operates as a \textbf{phase-locked control system} synchronized to the electoral clock. Every four years, the spectral power of identity-band discourse spikes while class-band discourse remains invariant. The mechanism is consistent with the framework's prediction that the Engine monitors $M(t)$ and injects phase-shifted identity signals to prevent class coherence from achieving threshold amplitude.
+The 24:1 power ratio at the 4-year presidential cycle is the Fourier-domain signature that the framework predicts for the Interference Engine. Within the limits set by the robustness checks above (a single-bin estimate that ranks tenth of 30 and does not survive Welch averaging), it is consistent with an Engine that operates as a \textbf{phase-locked control system} synchronized to the electoral clock. Every four years, the spectral power of identity-band discourse spikes while class-band discourse remains invariant. The mechanism is consistent with the framework's prediction that the Engine monitors $M(t)$ and injects phase-shifted identity signals to prevent class coherence from achieving threshold amplitude.
 
 This finding resolves a long-standing puzzle in political economy: why do American elections consistently revolve around identity conflict even during periods of extreme economic inequality? The spectral answer is that identity conflict operates as a \textbf{carrier wave} that the extraction system modulates to prevent economic solidarity from achieving coherent phase. The Buffer Class is \textbf{phase-locked} to an electoral carrier whose frequency is hardcoded into the political architecture.
 
 \subsection{The Senate and Two-Term Cycles}
 
-The 6-year Senate cycle (21:1 ratio) and 8-year two-term cycle (13:1 ratio) also show strong identity-band concentration. These are consistent with the framework. The Senate cycle reflects the staggered reelection schedule that keeps a permanent fraction of the Puppet Class in campaign mode. The two-term cycle reflects the broader strategic horizon of presidential administrations, which often front-load identity-band legislation in the first term and shift to enforcement consolidation in the second.
+The 6-year Senate cycle (21:1 ratio) and the two bins that bracket the 8-year two-term cycle (13:1 at 8.57 years, 3{,}483:1 at 7.50 years) also show strong identity-band concentration. These are consistent with the framework. The Senate cycle reflects the staggered reelection schedule that keeps a permanent fraction of the Puppet Class in campaign mode. The two-term cycle reflects the broader strategic horizon of presidential administrations, which often front-load identity-band legislation in the first term and shift to enforcement consolidation in the second.
 
 Together, the 4-year, 6-year, and 8-year peaks form a \textbf{harmonic series} of electoral periodicities, all amplified in the identity band and suppressed in the class band. This is the spectral fingerprint of a system whose control architecture is organized around electoral competition; economic redistribution is absent from its control architecture.
 
 \subsection{The Missing 2-Year Signal}
 
-The 2-year midterm cycle is unresolved in the Congressional Record annual substrate but resolved in the Google Trends weekly substrate (Section~\ref{sec:high_freq_validation}). The quarterly Congressional Record pipeline, once populated via GovInfo API queries, will provide the definitive 60-year resolution. The Google Trends result---a $12.8:1$ identity-band power ratio at the 2-year frequency---confirms the framework's prediction that the Interference Engine imposes a midterm periodicity on public attention. The asymmetry between the 4-year institutional carrier and the 2-year public-search carrier reveals that the Engine operates as a \textbf{multi-channel phase-locked loop}, tuning its modulation frequency to the electoral substrate that is most electorally consequential at each cycle type.
+The 2-year midterm cycle sits on the Nyquist bin of the Congressional Record annual substrate (ratio $2.51$, high variance) and is resolved in the Google Trends weekly substrate (Section~\ref{sec:high_freq_validation}). The quarterly Congressional Record pipeline, once populated via GovInfo API queries, will provide the definitive 60-year resolution. The Google Trends result---a $12.8:1$ identity-band power ratio at the 2-year frequency---confirms the framework's prediction that the Interference Engine imposes a midterm periodicity on public attention. The asymmetry between the 4-year institutional carrier and the 2-year public-search carrier reveals that the Engine operates as a \textbf{multi-channel phase-locked loop}, tuning its modulation frequency to the electoral substrate that is most electorally consequential at each cycle type.
 
 \input{ch21_section_21.6}
 
