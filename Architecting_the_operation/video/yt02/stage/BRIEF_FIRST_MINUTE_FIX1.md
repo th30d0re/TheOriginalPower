@@ -1,13 +1,17 @@
 # Brief: first-minute fix pass 1 (orchestrator's frame review of `first_minute_v0.mp4`)
 
-Read `BRIEF_FIRST_MINUTE.md` (Rules, Checkpoint, The contract) and `FINDINGS_FIRST_MINUTE.md`. The
+Read `BRIEF_FIRST_MINUTE.md` (Rules, Checkpoint, The contract), `BRIEF_FIRST_MINUTE_T4.md` (Rules),
+`FINDINGS_FIRST_MINUTE.md` and `FINDINGS_FIRST_MINUTE_T4.md`. One worker owns this pass. You may edit
+the five Codex scenes, `firstminute/RoadmapBoot.tsx`, `firstminute/` helpers, additive optional props
+in `dashboard/`, and `tools/check_first_minute.*` / `tools/check_roadmap_boot.*`. Working directory:
+`/Users/emmanuel/Documents/Theory/TheOriginalPower`. No `rm -rf`, no secrets. The
 same rules apply:
 - Write only the files named here plus `tools/check_first_minute.*`.
 - Do not change git state.
 - Keep the frame path deterministic.
 - Do not launch Chromium.
 
-The orchestrator committed the checkpoint as `e72217f`. Dirty paths outside `stage/` are the
+The orchestrator committed the checkpoint as `da143f1`. Dirty paths outside `stage/` are the
 author's own work; leave them alone.
 
 The render is `outputs/YT02v2_ov/video/stage_runs/first_minute_v0.mp4`, and its frames are in
@@ -58,7 +62,24 @@ the source line stay where they are.
   the tripartite row so the boundary lands at y 760–800, with an empty dark region of at least 180
   px under it. The label "where the literature stops" stays on the line's left end.
 
-## 5. Check additions
+## 5. `RoadmapBoot` (turn 4): a year shows before the history starts
+
+The era strip stays empty, as briefed, but two other places still show the 1486 state:
+- The Era clock compact panel reads "1486 · LISBON, PORTUGAL" (and "RUNTIME LOG 2"), dimmed before
+  the sweep and lit after it.
+- After `item11`, the map draws Portugal in gold with its "PORTUGAL" label.
+
+Throughout `RoadmapBoot`, the Era clock shows a standby state instead: a dash in place of the year,
+"STANDBY" in place of the place, and no log chip. The map shows the world outline only, with no
+polity highlight and no labels. The other instruments keep their values.
+
+Do this through optional `Dashboard` props whose defaults leave every existing render
+byte-identical: for example `eraClockStandby` on the Era clock and `polities={empty}` or a
+`highlight` switch on the map. `check_dashboard` must still pass unchanged. Extend
+`check_roadmap_boot` to assert that "1486", "LISBON" and "PORTUGAL" are absent from every
+RoadmapBoot frame.
+
+## 6. Check additions
 
 Extend `tools/check_first_minute` with static geometry asserts from the layout constants:
 - The DictionaryEntry number gutter does not overlap the panel.
@@ -75,5 +96,5 @@ All of these pass:
 - Plan compile and `--dry-run` of `stage_ov.yaml`.
 - The site build into a fresh `/tmp` directory.
 
-Then append a "Fix pass 1" section to `FINDINGS_FIRST_MINUTE.md` with each fix, the new geometry,
+Also `check_roadmap_boot`. Then append a "Fix pass 1" section to `FINDINGS_FIRST_MINUTE.md` with each fix, the new geometry,
 and each check's tail.
