@@ -21,12 +21,12 @@ function PolityLayer({polities}:{polities?:Polities}) {
  const projection=useProjection(),path=geoPath(projection);
  return <g data-layer="polities">{polities?.features.map((feature,i)=>{const {style={},label}=feature.properties??{},point=label?projection(label.at):null;return <g key={feature.id??i}><path d={path(feature)??''} fill={style.fill??'none'} stroke={style.stroke??color('color/line/wire')} strokeWidth={style.strokeWidth??1} strokeDasharray={style.strokeDasharray} opacity={style.opacity??1}/>{label&&point&&<text x={point[0]} y={point[1]} fontFamily={Tokens.fonts.mono} fontSize={10} letterSpacing={0.8} fill={label.color??color('color/text/primary')}>{label.text}</text>}</g>;})}</g>;
 }
-export type DashboardMapProps={world?:boolean;camera?:Camera;draw?:number;worldOpacity?:number;polities?:Polities};
-export function DashboardMap({world=false,camera,draw=1,worldOpacity=0,polities}:DashboardMapProps) {
+export type DashboardMapProps={world?:boolean;camera?:Camera;draw?:number;worldOpacity?:number;mapOpacity?:number;polities?:Polities};
+export function DashboardMap({world=false,camera,draw=1,worldOpacity=0,mapOpacity,polities}:DashboardMapProps) {
  const activePolities=world?undefined:(polities??defaultPolities1486);
  const hasPeriodPortugal=Boolean(activePolities?.features.some(f=>f.properties?.Name==='Kingdom of Portugal'));
  const common={width:1856,height:968,engraved:true,clip:{x:0,y:0,width:1856,height:968},land:{fill:color(m.land.fill),stroke:color(m.land.stroke),strokeWidth:m.land.strokeWidth},graticule:{step:10,stroke:color(m.graticule.stroke),strokeWidth:.8,opacity:1},highlight:hasPeriodPortugal?[]:[{id:'620',color:color(m.portugal.fill),amount:1}]};
- return <div style={{position:'absolute',left:32,top:84,width:1856,height:968,overflow:'hidden'}}>
+ return <div style={{position:'absolute',left:32,top:84,width:1856,height:968,overflow:'hidden',...(mapOpacity===undefined?{}:{opacity:mapOpacity})}}>
  <MapStage {...common} {...(world?{camera:{center:[0,0] as [number,number],zoom:1}}:camera?{camera}:{fit:iberiaFit})} projection="equalEarth" rhumb={world?undefined:{centres:m.rhumbLines.hubs_lonlat as [number,number][],spokes:16,stroke:color(m.rhumbLines.stroke),strokeWidth:.8,opacity:1}}><PolityLayer polities={activePolities}/><Overlays draw={draw} world={world}/></MapStage>
  </div>;
 }
