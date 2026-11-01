@@ -18,6 +18,7 @@ shots:
       i8: {ms: 3950}
       i9: {ms: 4400}
       i10: {ms: 4850}
+      i11: {ms: 5300}
   - shot_id: R-02
     turn_id: r2
     scene: Dashboard1486

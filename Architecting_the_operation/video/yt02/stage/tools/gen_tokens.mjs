@@ -1,7 +1,10 @@
 import fs from 'node:fs';
 const root = new URL('../', import.meta.url);
 const source = JSON.parse(fs.readFileSync(new URL('handoff/tokens.json', root), 'utf8'));
-const colors = Object.fromEntries(Object.entries(source.Color).map(([k,v]) => [k,v.rgba]));
+const overrides = {
+  'color/fill/panel-render': source.Color['color/bg/field'].rgba.replace(/,\s*1\)$/, ',0.88)'),
+};
+const colors = {...Object.fromEntries(Object.entries(source.Color).map(([k,v]) => [k,v.rgba])), ...overrides};
 const c = k => colors['color/'+k];
 const sans = '"IBM Plex Sans", sans-serif', mono = '"IBM Plex Mono", monospace';
 const tokens = {colours:{background:c('bg/field'),surface:c('fill/panel-wash'),glass:c('fill/glass'),text:c('text/primary'),muted:c('text/muted'),accent:c('fill/gold'),border:c('line/hairline'),land:c('surface/1'),ocean:c('bg/field')},fonts:{body:sans,heading:sans,sans,mono},sizes:{body:16,title:40,label:12},radii:{panel:8},strokes:{border:1,map:1.1,route:3.2}};

@@ -33,7 +33,8 @@ export const colors: Record<string,string> = {
   "color/fill/red-faint": "rgba(224,82,82,0.12)",
   "color/text/muted": "rgba(232,201,155,0.72)",
   "color/text/soft": "rgba(232,201,155,0.85)",
-  "color/text/faint": "rgba(232,201,155,0.55)"
+  "color/text/faint": "rgba(232,201,155,0.55)",
+  "color/fill/panel-render": "rgba(13,27,42,0.88)"
 };
 export const dimensions = {
   "stroke/wire": {
