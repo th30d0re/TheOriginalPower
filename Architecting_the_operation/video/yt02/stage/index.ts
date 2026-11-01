@@ -6,6 +6,12 @@ import '/Users/emmanuel/Documents/Theory/scriptCast-stage/video/node_modules/@fo
 import '/Users/emmanuel/Documents/Theory/scriptCast-stage/video/node_modules/@fontsource/ibm-plex-mono/500.css';
 import type {SceneRegistry} from '@stage';
 import {DashboardBoot,Dashboard1486} from './Scenes';
-export {DashboardBoot,Dashboard1486};
+import {TitleOpen} from './firstminute/TitleOpen';
+import {DictionaryEntry} from './firstminute/DictionaryEntry';
+import {WhyLadder} from './firstminute/WhyLadder';
+import {LiteratureStack} from './firstminute/LiteratureStack';
+import {RoadmapBoot} from './firstminute/RoadmapBoot';
+import {Disclosure} from './firstminute/Disclosure';
+export {DashboardBoot,Dashboard1486,TitleOpen,DictionaryEntry,WhyLadder,LiteratureStack,RoadmapBoot,Disclosure};
 export {Dashboard} from './dashboard/Dashboard';
-export const scenes:SceneRegistry={DashboardBoot,Dashboard1486};
+export const scenes:SceneRegistry={DashboardBoot,Dashboard1486,TitleOpen,DictionaryEntry,WhyLadder,LiteratureStack,RoadmapBoot,Disclosure};

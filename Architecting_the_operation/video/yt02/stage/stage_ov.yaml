@@ -1,0 +1,80 @@
+# YT02v2_ov on Stage: first minute (turns 0–5, 0:00–1:20.7).
+# Cue words resolve against outputs/YT02v2_ov/word_timings.json (turn-relative + manifest start_ms).
+episode: YT02v2_ov
+outputs: ../../../../outputs/YT02v2_ov
+fps: 30
+width: 1920
+height: 1080
+shots:
+  - shot_id: S00-00
+    turn_id: 0edfe226e42abaa3
+    scene: TitleOpen
+    cues:
+      title: {word: original}
+      archives: {word: archives}
+      equations: {word: equations}
+      tests: {word: tests}
+      episode: {word: episode, occurrence: 2}
+      definition: {word: definition}
+      taught: {word: taught, at: end}
+      fails: {word: fails}
+  - shot_id: S00-01
+    turn_id: a57c5a84a6c02ce8
+    scene: DictionaryEntry
+    cues:
+      common: {word: definition}
+      wrong: {word: wrong}
+      dictionary: {word: dictionary}
+      individual: {word: individual}
+      institutional: {word: institutional}
+      order: {word: order}
+      causal: {word: causal}
+      evidence: {word: evidence}
+  - shot_id: S00-02
+    turn_id: bde588bc43717c0d
+    scene: WhyLadder
+    cues:
+      header: {word: why, occurrence: 1}
+      why1: {word: why, occurrence: 2}
+      why2: {word: why, occurrence: 3}
+      why3: {word: why, occurrence: 4}
+      virginia: {word: virginia}
+      why4: {word: why, occurrence: 5}
+      backlash: {word: backlash}
+  - shot_id: S00-03
+    turn_id: 6622f92e3444bd49
+    scene: LiteratureStack
+    cues:
+      established: {word: established}
+      bias: {word: bias}
+      prejudice: {word: prejudice}
+      discrimination: {word: discrimination}
+      tripartite: {word: tripartite}
+      mark: {word: mark}
+      stops: {word: stops}
+  - shot_id: S00-04
+    turn_id: cfc2fe7339d89e61
+    scene: RoadmapBoot
+    cues:
+      item01: {word: vector}
+      item02: {word: conventional}
+      item03: {word: reversed}
+      item04: {word: two-set}
+      item05: {word: orthographic}
+      item06: {word: five}
+      item07: {word: set-resolution}
+      item08: {word: three}
+      item09: {word: complex}
+      item10: {word: american}
+      item11: {word: runtime}
+      item12: {word: interference}
+      item13: {word: rebuilt}
+      roadmapEnd: {word: hierarchy, at: end}
+  - shot_id: S00-05
+    turn_id: a5f0b18ecbdbb6a2
+    scene: Disclosure
+    cues:
+      narration: {word: narration}
+      clone: {word: clone}
+      speech: {word: speech}
+      disclosureEnd: {word: exposition, at: end}
