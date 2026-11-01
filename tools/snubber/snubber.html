@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Snubber Circuit</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=STIX+Two+Text:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<style>
+/* Layout concept: the switching moment. The schematic (coil, breach switch, three competing paths) is the
+   control panel; the surge v(t) and the energy ledger sit beside it. Palette continues the Backlash
+   Oscillator: cream wires, green coil, red for the Elite's recovery path, teal for the Out-group's
+   snubber grid, gold for the TVS clamp, accent orange for the surge. */
+:root{
+  --paper:#0D1B2A; --zone:#1B1E2B; --panel:#132538; --well:#081421;
+  --wire:#ECE7DC; --ink:#ECE7DC; --ink-2:#A9B6C4;
+  --rule:#8A6A45; --label-sm:#B8956A;
+  --green:#7CC08A; --red:#E0604A; --teal:#4CC2C2; --gold:#D4A84B; --accent:#E08A3C; --dim:#4A5566;
+  --sans:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,Menlo,Consolas,monospace;
+  --math:'STIX Two Text','Cambria Math','Times New Roman',serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{background:var(--paper);color:var(--ink);font:15px/1.55 var(--sans);padding-block:22px 48px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.app{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:20px 28px;align-items:start}
+header{grid-column:1/-1}
+h1{font:600 24px/1.2 var(--sans);margin:0 0 6px;letter-spacing:-.01em}
+.lede{margin:0;color:var(--ink-2);max-width:82ch}
+.card{background:var(--panel);border:1px solid var(--rule);border-radius:10px;padding:16px 18px;min-width:0}
+h2{font:600 12px/1.3 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--label-sm);margin:0 0 10px}
+svg{display:block;width:100%;height:auto}
+svg text{font-family:var(--mono)}
+.m{font-family:var(--math);font-style:italic}
+.branch{cursor:pointer}
+.branch.off{opacity:.28}
+.branch:focus-visible{outline:none}
+.branch:focus-visible .hit{stroke:var(--wire);stroke-dasharray:4 4}
+.row{display:grid;grid-template-columns:118px minmax(0,1fr) 66px;gap:10px;align-items:center;margin:7px 0}
+.row label{font:400 14px var(--sans)}
+.row label i{font-family:var(--math);font-size:16px}
+.row output{font:500 13px var(--mono);text-align:right;font-variant-numeric:tabular-nums}
+input[type=range]{width:100%;min-width:0;accent-color:var(--wire)}
+input[type=range]:focus-visible,.btn:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.btns{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 8px}
+.btn{font:500 13px var(--sans);padding:7px 11px;border:1px solid var(--rule);border-radius:6px;background:var(--well);color:var(--ink);cursor:pointer}
+.btn:hover{border-color:var(--gold)}
+.btn[aria-pressed="true"]{border-color:var(--gold);color:var(--gold)}
+.ledger{margin:14px 0 0}
+.bar{display:flex;height:22px;border-radius:5px;overflow:hidden;background:var(--well);border:1px solid var(--rule)}
+.bar span{display:block;height:100%;transition:width .35s ease}
+.legend{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 18px;margin:10px 0 0;padding:0;list-style:none;font-size:13.5px}
+.legend li{display:flex;gap:8px;align-items:baseline;min-width:0}
+.sw{width:12px;height:12px;border-radius:3px;flex:none;transform:translateY(1px)}
+.legend b{font:500 13px var(--mono);margin-left:auto;font-variant-numeric:tabular-nums}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px 16px;margin:14px 0 0}
+.stats dt{font-size:12px;color:var(--ink-2)}
+.stats dd{margin:0;font:500 15px var(--mono);font-variant-numeric:tabular-nums}
+.verdict{margin:12px 0 0;font-size:14.5px}
+.full{grid-column:1/-1}
+.note{font-size:13.5px;color:var(--ink-2);margin:8px 0 0;max-width:96ch}
+.note code{font-family:var(--mono);font-size:12.5px;color:var(--label-sm)}
+@media (prefers-reduced-motion:reduce){.bar span{transition:none}}
+@media (max-width:900px){.app{grid-template-columns:minmax(0,1fr)}.legend,.stats{grid-template-columns:minmax(0,1fr)}}
+</style>
+</head>
+<body>
+
+<div class="app">
+  <header>
+    <h1>Snubber Circuit</h1>
+    <p class="lede">A kernel breach cuts the current that holds an era's racialized field in the coil L. The collapsing field drives a back-EMF surge, v = −L di/dt: the backlash (eq. 1.7d). Its energy, ½LI₀², has to go somewhere. Three paths compete for it: the Elite's recovery path into the next coil, the Out-group's snubber grid, and the armed TVS clamp.</p>
+  </header>
+
+  <section class="card" aria-label="Circuit">
+    <h2>The switching moment</h2>
+    <div class="btns" role="group" aria-label="Scenarios">
+      <button class="btn" type="button" data-p="0">Unprotected</button>
+      <button class="btn" type="button" data-p="1">Elite recovery only</button>
+      <button class="btn" type="button" data-p="2">Snubber grid</button>
+      <button class="btn" type="button" data-p="3">Snubber + TVS</button>
+      <button class="btn" type="button" data-p="4">Decoupled grid</button>
+    </div>
+    <svg id="circuit" viewBox="0 0 720 450" role="img" aria-label="Coil L with a breach switch and three parallel paths: Elite recovery, snubber, TVS clamp. Select a path to switch it on or off."></svg>
+    <p class="note" style="margin-top:4px">Select a path in the drawing to switch it on or off.</p>
+    <div class="row"><label for="s-I0"><i>I</i>₀ field current</label><input id="s-I0" type="range" min="0.2" max="2" step="0.01"><output id="o-I0" for="s-I0"></output></div>
+    <div class="row"><label for="s-L"><i>L</i> coil</label><input id="s-L" type="range" min="-0.7" max="0.7" step="0.01"><output id="o-L" for="s-L"></output></div>
+    <div class="row"><label for="s-Ch"><i>C</i><sub>next</sub> next coil</label><input id="s-Ch" type="range" min="-2" max="0" step="0.01"><output id="o-Ch" for="s-Ch"></output></div>
+    <div class="row"><label for="s-Cs"><i>C</i><sub>s</sub> grid capacity</label><input id="s-Cs" type="range" min="-2.5" max="0" step="0.01"><output id="o-Cs" for="s-Cs"></output></div>
+    <div class="row"><label for="s-Rs"><i>R</i><sub>s</sub> grid absorption</label><input id="s-Rs" type="range" min="-1.5" max="1" step="0.01"><output id="o-Rs" for="s-Rs"></output></div>
+    <div class="row"><label for="s-Vbr"><i>V</i><sub>br</sub> clamp level</label><input id="s-Vbr" type="range" min="0.5" max="20" step="0.1"><output id="o-Vbr" for="s-Vbr"></output></div>
+    <p class="note">L, C<sub>next</sub>, C<sub>s</sub>, and R<sub>s</sub> move on log scales. V<sub>br</sub> keeps its electrical meaning: a lower V<sub>br</sub> clamps the surge sooner. The manuscript says arms and training <em>raise</em> V<sub>br</sub> (<code>:11611</code>). In a real TVS diode, a higher V<sub>br</sub> lets a larger surge through before the clamp acts, so the two readings conflict (see the README).</p>
+  </section>
+
+  <section class="card" aria-label="Surge and ledger">
+    <h2>The surge v(t)</h2>
+    <svg id="plot" viewBox="0 0 980 470" role="img" aria-label="The backlash surge v of t after the breach"></svg>
+    <div class="ledger">
+      <h2 style="margin-bottom:8px">Where the field's energy goes</h2>
+      <div class="bar" id="bar" role="img" aria-label="Energy shares"></div>
+      <ul class="legend" id="legend"></ul>
+    </div>
+    <dl class="stats">
+      <div><dt>Peak surge</dt><dd id="r-peak"></dd></div>
+      <div><dt>Unprotected peak</dt><dd id="r-free"></dd></div>
+      <div><dt>Surge reduction</dt><dd id="r-red"></dd></div>
+    </dl>
+    <p class="verdict" id="verdict"></p>
+  </section>
+
+  <section class="card full" aria-label="Notes">
+    <h2>What the page assumes</h2>
+    <p class="note">From the manuscript: the back-EMF surge as backlash, v = −L di/dt (eq. 1.7d), and the stored energy U = ½LI² (eq. 1.7e), with the Elite harvesting it into the next era's capacitors (<code>Paper/The_Original_Power.tex:2416</code>–<code>:2440</code>); the snubber as the Out-group routing its energy through local, open-source grids (<code>:14435</code>, <code>:14348</code>); the TVS diode as armed deterrence that clamps strikes above V<sub>br</sub> (<code>:11598</code>–<code>:11630</code>).</p>
+    <p class="note">The circuit: when the switch opens at t = 0, the coil current I flows into the node and splits among a small stray capacitance (always present, 0.002), the Elite's recovery path (an ideal diode and R<sub>h</sub> = 0.5 into C<sub>next</sub>, which starts empty), the snubber (R<sub>s</sub> in series with C<sub>s</sub>), and the TVS clamp (an ideal clamp at ±V<sub>br</sub>). The coil has a small resistance (0.05). The page integrates the circuit numerically and adds up the energy in each path. Energy that charges C<sub>next</sub> or heats R<sub>h</sub> counts as recovered by the Elite; energy in R<sub>s</sub> or left in C<sub>s</sub> counts as absorbed by the grid.</p>
+    <p class="note">The manuscript gives no values for these parts. Every number here is illustrative, so the page shows how the paths compete, not how large any historical surge was.</p>
+  </section>
+</div>
+
+<script>
+(function(){
+'use strict';
+var $=function(id){return document.getElementById(id);};
+var CP=0.002,RL=0.05,RH=0.5;
+var PRESETS=[
+  {name:'Unprotected',h:false,s:false,t:false},
+  {name:'Elite recovery only',h:true,s:false,t:false},
+  {name:'Snubber grid',h:true,s:true,t:false},
+  {name:'Snubber + TVS',h:true,s:true,t:true,Vbr:1.2},
+  {name:'Decoupled grid',h:false,s:true,t:true,Vbr:1.2}
+];
+var S={I0:1,L:1,Ch:0.1,Cs:0.1,Rs:1,Vbr:3,h:true,s:false,t:false,preset:1};
+function f(v,d){if(!isFinite(v))return '—';var a=Math.abs(v);return a>=100?v.toFixed(0):a>=10?v.toFixed(1):v.toFixed(d==null?2:d);}
+
+/* ---- simulation: states i (coil current into node), v (node), vh (C_next), vs (C_s) ---- */
+function simulate(withH,withS,withT){
+  var T=6,dt=4e-5,N=Math.round(T/dt),every=Math.round(N/700);
+  var i=S.I0,v=0,vh=0,vs=0,E={RL:0,Rh:0,Rs:0,TVS:0},out=[],peak=0;
+  function deriv(i,v,vh,vs){
+    var ih=withH?Math.max(0,(v-vh)/RH):0,is=withS?(v-vs)/S.Rs:0,ic=i-ih-is,it=0;
+    if(withT&&((v>=S.Vbr&&ic>0)||(v<=-S.Vbr&&ic<0))){it=ic;ic=0;}
+    return {di:(-v-RL*i)/S.L,dv:ic/CP,dvh:withH?ih/S.Ch:0,dvs:withS?is/S.Cs:0,ih:ih,is:is,it:it};
+  }
+  for(var n=0;n<=N;n++){
+    var a=deriv(i,v,vh,vs),
+        b=deriv(i+dt/2*a.di,v+dt/2*a.dv,vh+dt/2*a.dvh,vs+dt/2*a.dvs),
+        c=deriv(i+dt/2*b.di,v+dt/2*b.dv,vh+dt/2*b.dvh,vs+dt/2*b.dvs),
+        d=deriv(i+dt*c.di,v+dt*c.dv,vh+dt*c.dvh,vs+dt*c.dvs);
+    E.RL+=RL*i*i*dt;E.Rh+=RH*b.ih*b.ih*dt;if(withS)E.Rs+=S.Rs*b.is*b.is*dt;E.TVS+=Math.abs(v)*Math.abs(b.it)*dt;
+    i+=dt/6*(a.di+2*b.di+2*c.di+d.di);v+=dt/6*(a.dv+2*b.dv+2*c.dv+d.dv);
+    vh+=dt/6*(a.dvh+2*b.dvh+2*c.dvh+d.dvh);vs+=dt/6*(a.dvs+2*b.dvs+2*c.dvs+d.dvs);
+    if(withT){if(v>S.Vbr)v=S.Vbr;if(v<-S.Vbr)v=-S.Vbr;}
+    if(Math.abs(v)>peak)peak=Math.abs(v);
+    if(n%every===0)out.push([n*dt,v]);
+  }
+  var U=0.5*S.L*S.I0*S.I0,stored={h:0.5*S.Ch*vh*vh,s:0.5*S.Cs*vs*vs,field:0.5*S.L*i*i+0.5*CP*v*v};
+  return {pts:out,peak:peak,U:U,parts:{
+    elite:E.Rh+stored.h, grid:E.Rs+stored.s, tvs:E.TVS, coil:E.RL, field:stored.field}};
+}
+/* ---- schematic ---- */
+function circuit(){
+  var W='var(--wire)',on=function(k){return S[k]?'':' off';};
+  var h='';
+  h+='<defs><filter id="glw" filterUnits="userSpaceOnUse" x="0" y="0" width="720" height="450"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>';
+  /* rails */
+  h+='<path d="M80 300 V380 H600 M80 160 V100 H120 M200 100 H600" fill="none" style="stroke:'+W+'" stroke-width="3"/>';
+  /* coil (vertical) */
+  h+='<path d="M80 160 C112 160,112 195,80 195 C112 195,112 230,80 230 C112 230,112 265,80 265 C112 265,112 300,80 300" fill="none" style="stroke:var(--green)" stroke-width="3.5" filter="url(#glw)"/>';
+  h+='<text x="122" y="236" class="m" font-size="34" style="fill:var(--green)">L</text>';
+  h+='<text x="20" y="330" font-size="13" style="fill:var(--green)">I₀: the era’s field</text>';
+  /* switch */
+  h+='<circle cx="120" cy="100" r="4.5" style="fill:'+W+'"/><circle cx="200" cy="100" r="4.5" style="fill:'+W+'"/><line x1="120" y1="100" x2="192" y2="62" style="stroke:'+W+'" stroke-width="3" stroke-linecap="round"/>';
+  h+='<text x="160" y="40" text-anchor="middle" font-size="13" style="fill:var(--wire)">opens at t = 0 · kernel breach</text>';
+  h+='<text x="214" y="88" font-size="14" style="fill:var(--accent)">v(t) surge</text>';
+  /* branch: Elite recovery */
+  h+='<g class="branch'+on('h')+'" data-k="h" tabindex="0" role="switch" aria-checked="'+S.h+'" aria-label="Elite recovery path">';
+  h+='<rect class="hit" x="262" y="100" width="120" height="282" fill="transparent"/>';
+  h+='<path d="M300 100 V128 M300 168 V180 M300 250 V282 M300 296 V380" fill="none" style="stroke:'+W+'" stroke-width="3"/>';
+  h+='<path d="M286 128 H314 L300 152 Z" style="fill:var(--red)"/><line x1="286" y1="154" x2="314" y2="154" style="stroke:var(--red)" stroke-width="3.5"/><line x1="300" y1="154" x2="300" y2="168" style="stroke:var(--red)" stroke-width="3"/>';
+  h+='<path d="M300 180 L288 188 L312 200 L288 212 L312 224 L288 236 L312 244 L300 250" fill="none" style="stroke:var(--red)" stroke-width="3" stroke-linejoin="round"/>';
+  h+='<line x1="282" y1="282" x2="318" y2="282" style="stroke:var(--red)" stroke-width="4"/><line x1="282" y1="296" x2="318" y2="296" style="stroke:var(--red)" stroke-width="4"/>';
+  h+='<text x="324" y="218" font-size="13" style="fill:var(--red)">R<tspan dy="4" font-size="10">h</tspan></text><text x="324" y="294" font-size="13" style="fill:var(--red)">C<tspan dy="4" font-size="10">next</tspan></text>';
+  h+='<text x="300" y="414" text-anchor="middle" font-size="13" style="fill:var(--red)">Elite recovery</text><text x="300" y="432" text-anchor="middle" font-size="12" style="fill:var(--ink-2)">next coil</text></g>';
+  /* branch: snubber */
+  h+='<g class="branch'+on('s')+'" data-k="s" tabindex="0" role="switch" aria-checked="'+S.s+'" aria-label="Snubber grid path">';
+  h+='<rect class="hit" x="412" y="100" width="120" height="282" fill="transparent"/>';
+  h+='<path d="M450 100 V150 M450 228 V272 M450 286 V380" fill="none" style="stroke:'+W+'" stroke-width="3"/>';
+  h+='<path d="M450 150 L438 158 L462 170 L438 182 L462 194 L438 206 L462 218 L450 228" fill="none" style="stroke:var(--teal)" stroke-width="3" stroke-linejoin="round"/>';
+  h+='<line x1="432" y1="272" x2="468" y2="272" style="stroke:var(--teal)" stroke-width="4"/><line x1="432" y1="286" x2="468" y2="286" style="stroke:var(--teal)" stroke-width="4"/>';
+  h+='<text x="474" y="194" font-size="13" style="fill:var(--teal)">R<tspan dy="4" font-size="10">s</tspan></text><text x="474" y="284" font-size="13" style="fill:var(--teal)">C<tspan dy="4" font-size="10">s</tspan></text>';
+  h+='<text x="450" y="414" text-anchor="middle" font-size="13" style="fill:var(--teal)">Snubber grid</text><text x="450" y="432" text-anchor="middle" font-size="12" style="fill:var(--ink-2)">Out-group</text></g>';
+  /* branch: TVS */
+  h+='<g class="branch'+on('t')+'" data-k="t" tabindex="0" role="switch" aria-checked="'+S.t+'" aria-label="TVS clamp path">';
+  h+='<rect class="hit" x="560" y="100" width="130" height="282" fill="transparent"/>';
+  h+='<path d="M600 100 V214 M600 252 V380" fill="none" style="stroke:'+W+'" stroke-width="3"/>';
+  h+='<path d="M584 214 H616 L600 240 Z" style="fill:var(--gold)"/><path d="M580 248 L584 242 H616 L620 236" fill="none" style="stroke:var(--gold)" stroke-width="3.5"/><path d="M584 252 H616 L600 226 Z" style="fill:var(--gold)" opacity=".9"/>';
+  h+='<text x="626" y="240" font-size="13" style="fill:var(--gold)">V<tspan dy="4" font-size="10">br</tspan></text>';
+  h+='<text x="612" y="414" text-anchor="middle" font-size="13" style="fill:var(--gold)">TVS clamp</text><text x="612" y="432" text-anchor="middle" font-size="12" style="fill:var(--ink-2)">armed deterrence</text></g>';
+  $('circuit').innerHTML=h;
+  Array.prototype.forEach.call(document.querySelectorAll('.branch'),function(g){
+    function tog(kb){var k=g.getAttribute('data-k');S[k]=!S[k];S.preset=-1;refresh();var el=document.querySelector('.branch[data-k="'+k+'"]');if(kb&&el)el.focus();}
+    g.addEventListener('click',function(){tog(false);});g.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();tog(true);}});
+  });
+}
+/* ---- plot ---- */
+var PW=980,PH=470,PL=70,PR=30,PT=30,PB=50;
+function plot(r){
+  var pts=r.pts,T=pts[pts.length-1][0],A=Math.max(r.peak,0.5),top=A*1.12,bot=-A*1.12;
+  function X(t){return PL+t/T*(PW-PL-PR);}
+  function Y(v){return PT+(top-v)/(top-bot)*(PH-PT-PB);}
+  var h='<defs><filter id="pg" filterUnits="userSpaceOnUse" x="0" y="0" width="'+PW+'" height="'+PH+'"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>'+
+    '<marker id="ah" viewBox="0 0 12 12" refX="6" refY="6" markerWidth="15" markerHeight="15" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L12,6 L0,12 z" style="fill:var(--wire)"/></marker></defs>';
+  [1,2,3,4,5].forEach(function(t){h+='<line x1="'+X(t)+'" y1="'+PT+'" x2="'+X(t)+'" y2="'+(PH-PB)+'" style="stroke:var(--rule)" stroke-opacity=".35"/><text x="'+X(t)+'" y="'+(PH-PB+22)+'" text-anchor="middle" font-size="14" style="fill:var(--label-sm)">'+t+'</text>';});
+  if(S.t){[S.Vbr,-S.Vbr].forEach(function(v){h+='<line x1="'+PL+'" y1="'+Y(v).toFixed(1)+'" x2="'+(PW-PR)+'" y2="'+Y(v).toFixed(1)+'" style="stroke:var(--gold)" stroke-width="1.6" stroke-dasharray="7 5"/>';});h+='<text x="'+(PW-PR)+'" y="'+(Y(S.Vbr)-8).toFixed(1)+'" text-anchor="end" font-size="14" style="fill:var(--gold)">V_br = '+f(S.Vbr,1)+'</text>';}
+  h+='<line x1="'+PL+'" y1="'+(PH-PB+6)+'" x2="'+PL+'" y2="'+(PT-10)+'" style="stroke:var(--wire)" stroke-width="2.5" marker-end="url(#ah)"/>';
+  h+='<line x1="'+PL+'" y1="'+Y(0).toFixed(1)+'" x2="'+(PW-PR+16)+'" y2="'+Y(0).toFixed(1)+'" style="stroke:var(--wire)" stroke-width="2"/>';
+  h+='<text x="'+(PL+14)+'" y="'+(PT+16)+'" class="m" font-size="26" style="fill:var(--ink)">v(t)</text><text x="'+(PL+74)+'" y="'+(PT+12)+'" font-size="15" style="fill:var(--ink-2)">backlash surge</text>';
+  h+='<text x="'+(PW-PR)+'" y="'+(PH-PB+40)+'" text-anchor="end" font-size="14" style="fill:var(--label-sm)">t after the breach (illustrative units)</text>';
+  var d='';pts.forEach(function(p,k){d+=(k?'L':'M')+X(p[0]).toFixed(1)+' '+Y(p[1]).toFixed(1);});
+  h+='<path d="'+d+'" fill="none" style="stroke:var(--accent)" stroke-width="2.6" stroke-linejoin="round" filter="url(#pg)"/>';
+  $('plot').innerHTML=h;
+}
+/* ---- ledger ---- */
+var KEYS=[['elite','red','Recovered by the Elite (next coil)'],['grid','teal','Absorbed by the snubber grid'],['tvs','gold','Clamped by the TVS node'],['coil','dim','Lost in the coil'],['field','wire','Still ringing in the field']];
+function ledger(r){
+  var tot=0;KEYS.forEach(function(k){tot+=r.parts[k[0]];});
+  var bar='',leg='';
+  KEYS.forEach(function(k){
+    var sh=r.parts[k[0]]/tot;
+    bar+='<span style="width:'+(100*sh).toFixed(2)+'%;background:var(--'+k[1]+')" title="'+k[2]+'"></span>';
+    leg+='<li><span class="sw" style="background:var(--'+k[1]+')"></span><span>'+k[2]+'</span><b>'+Math.round(100*sh)+'%</b></li>';
+  });
+  $('bar').innerHTML=bar;$('legend').innerHTML=leg;
+  $('bar').setAttribute('aria-label',KEYS.map(function(k){return k[2]+' '+Math.round(100*r.parts[k[0]]/tot)+'%';}).join(', '));
+  return tot;
+}
+function verdict(r,free){
+  var tot=0;KEYS.forEach(function(k){tot+=r.parts[k[0]];});
+  var e=r.parts.elite/tot,g=(r.parts.grid+r.parts.tvs)/tot,red=1-r.peak/free.peak,t;
+  if(!S.h&&!S.s&&!S.t)t='With no path for it, the surge rings at full height and the energy stays in the field, wasting only in the coil. This is the uncontrolled back-EMF that, in ordinary circuits, destroys components.';
+  else if(S.h&&!S.s&&!S.t)t='With only the Elite’s path open, the Elite recover '+Math.round(100*e)+'% of the field’s energy into the next coil: the energy recovery circuit of eq. 1.7e.';
+  else t='The Out-group’s paths take '+Math.round(100*g)+'% of the energy and the Elite recover '+Math.round(100*e)+'%. The surge peak falls by '+Math.round(100*red)+'% against an unprotected circuit.'+(S.h?'':' With the Elite’s path removed, nothing is carried into the next coil.');
+  $('verdict').textContent=t;
+}
+var FREE=null;
+function sync(){
+  $('s-I0').value=S.I0;$('o-I0').textContent=f(S.I0);
+  $('s-L').value=Math.log10(S.L);$('o-L').textContent=f(S.L,2);
+  $('s-Ch').value=Math.log10(S.Ch);$('o-Ch').textContent=f(S.Ch,3);
+  $('s-Cs').value=Math.log10(S.Cs);$('o-Cs').textContent=f(S.Cs,3);
+  $('s-Rs').value=Math.log10(S.Rs);$('o-Rs').textContent=f(S.Rs,2);
+  $('s-Vbr').value=S.Vbr;$('o-Vbr').textContent=f(S.Vbr,1);
+  Array.prototype.forEach.call(document.querySelectorAll('[data-p]'),function(b){b.setAttribute('aria-pressed',String(+b.getAttribute('data-p')===S.preset));});
+}
+function refresh(){
+  sync();circuit();
+  var r=simulate(S.h,S.s,S.t);FREE=simulate(false,false,false);
+  plot(r);ledger(r);
+  $('r-peak').textContent=f(r.peak,1);$('r-free').textContent=f(FREE.peak,1);
+  $('r-red').textContent=Math.round(100*(1-r.peak/FREE.peak))+'%';
+  verdict(r,FREE);
+}
+var timer=0;function soon(){clearTimeout(timer);timer=setTimeout(refresh,30);}
+[['I0',1],['L',0],['Ch',0],['Cs',0],['Rs',0],['Vbr',1]].forEach(function(k){
+  $('s-'+k[0]).addEventListener('input',function(e){var v=+e.target.value;S[k[0]]=k[1]?v:Math.pow(10,v);sync();soon();});
+});
+Array.prototype.forEach.call(document.querySelectorAll('[data-p]'),function(b){b.addEventListener('click',function(){var p=PRESETS[+b.getAttribute('data-p')];S.h=p.h;S.s=p.s;S.t=p.t;if(p.Vbr)S.Vbr=p.Vbr;S.preset=+b.getAttribute('data-p');refresh();});});
+refresh();
+})();
+</script>
+</body>
+</html>
