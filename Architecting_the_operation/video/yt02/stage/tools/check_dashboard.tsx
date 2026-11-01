@@ -8,12 +8,14 @@ import {feature} from 'topojson-client';
 import atlas from '/Users/emmanuel/Documents/Theory/scriptCast-stage/video/node_modules/world-atlas/countries-50m.json';
 import {ClockContext,PlanContext,createProjection,catmullRomPath,resolveMode,flyTo,cubicInOut,type StagePlan} from '@stage';
 import {DashboardBoot,Dashboard1486} from '../Scenes';
-import {Dashboard,rail} from '../dashboard/Dashboard';
+import {Dashboard,rail,slugs} from '../dashboard/Dashboard';
 import {DashboardMap,defaultPolities1486,type Polities} from '../dashboard/DashboardMap';
-import {PanelContent,instruments,formatCoord} from '../dashboard/PanelContent';
+import {ARTIFACT_VIEWS,PanelContent,eraLog2,instruments,computeCompassMetrics,formatCoord} from '../dashboard/PanelContent';
 import {regionalProjection as project,worldCamera,iberiaCamera,iberiaFit,labelOffsets} from '../dashboard/mapGeometry';
-import {wageReadings,dangerPolygon,WAGE_EXPANDED_BOX,WAGE_STAT_LABELS} from '../dashboard/ComplexWagePlane';
+import {wageModel,wageReadings,dangerPolygon,WAGE_EXPANDED_BOX,WAGE_STAT_LABELS} from '../dashboard/ComplexWagePlane';
 import {transitionWagePlaneMode,type WageInteractionEvent} from '../dashboard/instruments/wage-plane';
+import {transitionTrayMode,type TrayInteractionEvent,TRAY_EXPANDED_BOX} from '../dashboard/instruments/tray-artifact';
+import {TRAY,TRAY_CELL_WIDTH,TRAY_INSTRUMENTS,trayCellRect} from '../dashboard/trayLayout';
 import {color} from '../tokens';
 import map from '../handoff/map.json';
 import states from '../review/states.json';
@@ -36,24 +38,39 @@ function state(ms:number,expanded=false) {
 }
 
 const times=[500,5600,6200,6233.333333,7300,8400,13000,14500,14700,16000,18200,19500,19700,21000,22000,22600,23420,23900];
+const renderPanel=(name:string,mode:'compact'|'expanded'|'settings')=>renderToStaticMarkup(
+ <ClockContext.Provider value={{ms:0,fps:30,interactive:false}}><PanelContent name={name} mode={mode}/></ClockContext.Provider>
+);
+const renderDashboard=(ms:number,modes:Record<string,any>={},modeTimelines:Record<string,any>={})=>renderToStaticMarkup(
+ <ClockContext.Provider value={{ms,fps:30,interactive:false}}><Dashboard modes={modes} modeTimelines={modeTimelines}/></ClockContext.Provider>
+);
+const trayModeHashes=()=>TRAY_INSTRUMENTS.flatMap(name=>
+ (['compact','expanded','settings'] as const).map(mode=>({name,mode,hash:createHash('sha256').update(renderPanel(name,mode)).digest('hex')}))
+);
+function sectionRect(html:string,slug:string){
+ const tag=html.match(new RegExp(`<section data-instrument="${slug}"[^>]*style="([^"]+)"`))?.[1];
+ assert.ok(tag,`missing section ${slug}`);
+ const value=(key:string)=>Number(tag.match(new RegExp(`${key}:([\\d.]+)px`))?.[1]);
+ return {x:value('left'),y:value('top'),width:value('width'),height:value('height')};
+}
 
 if(process.env.DASHBOARD_SNAPSHOT==='1') {
- const result=[...times.map(ms=>state(ms)),state(13000,true)].map(html=>{
+ const frames=[...times.map(ms=>state(ms)),state(13000,true)].map(html=>{
   const sections=html.match(/<section\b[\s\S]*?<\/section>/g)!;
-  assert.equal(sections.length,11);
+  assert.equal(sections.length,18);
   assert.ok(!html.includes('NaN'));
   assert.ok(!html.includes('blur('));
   assert.ok(!html.includes('<button'));
   assert.ok(html.includes('rgba(13,27,42,0.88)'));
-  return {left:sections.slice(0,5),right:sections.slice(5,9),strips:sections.slice(9),whole:createHash('sha256').update(html).digest('hex')};
+  return {left:sections.slice(0,5),right:sections.slice(5,9),tray:sections.slice(9),whole:createHash('sha256').update(html).digest('hex')};
  });
- console.log(JSON.stringify(result));
+ console.log(JSON.stringify({frames,tray:trayModeHashes()}));
 } else {
  // 1. Panel legibility without blur
  assert.equal(color('color/fill/panel-render'),'rgba(13,27,42,0.88)');
  for(const name of Object.keys(instruments)) {
   for(const mode of ['compact','expanded','settings'] as const) {
-   const html=renderToStaticMarkup(<PanelContent name={name} mode={mode}/>);
+   const html=renderPanel(name,mode);
    assert.ok(html.length>100);
    assert.ok(!html.includes('NaN'));
    assert.ok(!html.includes('blur('));
@@ -65,25 +82,68 @@ if(process.env.DASHBOARD_SNAPSHOT==='1') {
  const interactiveCompact=renderToStaticMarkup(<ClockContext.Provider value={{ms:0,fps:30,interactive:true}}><PanelContent name="Era clock" mode="compact"/></ClockContext.Provider>);
  assert.ok(interactiveCompact.includes('blur(6px)'));
 
+ // 2. New right stack and always-on tray geometry
+ assert.equal(rail.length,18);
+ assert.deepEqual(rail.slice(5,9).map(p=>p.instrument),['Active Patch','Variables','Executing Function','Policy ticker']);
+ const policyResults=eraLog2.fields.results as string[];
+ const policyCompact=renderPanel('Policy ticker','compact'),policyExpanded=renderPanel('Policy ticker','expanded');
+ assert.ok(policyCompact.includes(policyResults.at(-1)!));
+ for(const result of policyResults) assert.ok(policyExpanded.includes(result),`expanded policy ticker missing: ${result}`);
+ assert.ok(renderPanel('Executing Function','compact').includes(String(eraLog2.fields.executing_function)));
+ assert.deepEqual(rail.slice(9).map(p=>p.instrument),[...TRAY_INSTRUMENTS]);
+ assert.deepEqual(Object.keys(ARTIFACT_VIEWS),TRAY_INSTRUMENTS.slice(1));
+ assert.deepEqual(slugs.slice(9),TRAY_INSTRUMENTS.map(name=>name.toLowerCase().replaceAll(' ','-')));
+ assert.deepEqual(TRAY,{left:36,right:1884,top:944,height:100,gap:8,count:9});
+ assert.ok(Math.abs(TRAY_CELL_WIDTH-198.2222222222)<1e-8);
+ for(let i=0;i<TRAY.count;i++){
+  const cell=trayCellRect(i),panel=rail[9+i];
+  assert.deepEqual(panel,{name:TRAY_INSTRUMENTS[i].toLowerCase(),instrument:TRAY_INSTRUMENTS[i],mode:'compact',x:cell.x,y:cell.y,w:cell.width,h:cell.height});
+  if(i>0) assert.ok(Math.abs(cell.x-(trayCellRect(i-1).x+TRAY_CELL_WIDTH+8))<1e-8);
+ }
+ const modelDefaultTray=new Set(['Wage plane','Phase Coherence','Five-Tier Cone','Compounding Ledger','Backlash oscillator','Thyristor Latch','AC Extraction Meter','Snubber Circuit']);
+ const interactionHint=/\b(?:drag|click|arrow keys|press)\b/i;
+ for(const name of TRAY_INSTRUMENTS){
+  for(const mode of ['compact','expanded','settings'] as const){
+   const html=renderPanel(name,mode);
+   assert.ok(html.length>500,`${name} ${mode} did not render`);
+   assert.ok(!interactionHint.test(html),`${name} ${mode} leaks an interaction hint`);
+   if(name==='Wage plane') assert.ok(html.includes(mode==='settings'?'data-settings="Wage plane"':'data-artifact="Complex Wage Plane"'));
+   else assert.ok(html.includes(`data-artifact="${name}"`));
+   if(mode==='expanded') assert.ok(html.includes('data-control="gear" data-action="open-settings"'));
+   if(mode==='settings') assert.ok(html.includes('data-control="gear" data-action="open-expanded"'));
+  }
+  const settings=renderPanel(name,'settings');
+  assert.equal(settings.includes('Model default:'),modelDefaultTray.has(name),`${name} model-default marker`);
+ }
+ const snubberSettings=renderPanel('Snubber Circuit','settings');
+ assert.ok(snubberSettings.includes('raise')&&snubberSettings.includes('clamps the surge sooner')&&snubberSettings.includes('higher')&&snubberSettings.includes('lets a larger surge through')&&snubberSettings.includes('readings conflict'));
+ assert.deepEqual([wageModel.m,wageModel.s],[0,60]);
+
  // 2. Iberia framing under Equal Earth & route land-hit check
  const points=map.iberia.route.waypoints.map(p=>project([p.lon,p.lat])!);
  const route=catmullRomPath(points,.4,'handoff');
  const nums=route.d.match(/-?\d+(?:\.\d+)?(?:e[+-]?\d+)?/g)!.map(Number);
  const land=feature(atlas as any,atlas.objects.land as any);
- let current=nums.slice(0,2),hits=0,samples=0,routeMinY=Infinity,routeMaxY=-Infinity;
+ let current=nums.slice(0,2),hits=0,samples=0,routeMinX=Infinity,routeMaxX=-Infinity,routeMinY=Infinity,routeMaxY=-Infinity;
  for(let i=2;i<nums.length;i+=6){
   const c1=nums.slice(i,i+2),c2=nums.slice(i+2,i+4),end=nums.slice(i+4,i+6);
   for(let j=0;j<=80;j++){
    const t=j/80,u=1-t,p=current.map((v,k)=>u**3*v+3*u*u*t*c1[k]+3*u*t*t*c2[k]+t**3*end[k]) as [number,number];
    hits+=Number(geoContains(land,project.invert!(p)!));
+   routeMinX=Math.min(routeMinX,p[0]);
+   routeMaxX=Math.max(routeMaxX,p[0]);
    routeMinY=Math.min(routeMinY,p[1]);
    routeMaxY=Math.max(routeMaxY,p[1]);
    samples++;
   }
   current=end;
  }
+ const mapLeft=32,mapTop=84,trayTopLocal=TRAY.top-mapTop;
+ const leftStackRightLocal=Math.max(...rail.slice(0,5).map(p=>p.x+instruments[p.instrument].compact.w))-mapLeft;
+ const rightStackLeftLocal=Math.min(...rail.slice(5,9).map(p=>p.x+p.w-instruments[p.instrument].compact.w))-mapLeft;
  assert.equal(hits,0,`route land hits ${hits}`);
- assert.ok(routeMinY>12&&routeMaxY<921,`route vertical bounds ${routeMinY}..${routeMaxY} not clear of strips`);
+ assert.ok(routeMinX>leftStackRightLocal&&routeMaxX<rightStackLeftLocal,`route horizontal bounds ${routeMinX}..${routeMaxX} cross a stack`);
+ assert.ok(routeMinY>12&&routeMaxY<trayTopLocal,`route vertical bounds ${routeMinY}..${routeMaxY} cross the tray`);
 
  // Measure Portugal height in settled 1486 state
  const ptMainlandNorth=project([-8.2,42.113])!;
@@ -91,6 +151,7 @@ if(process.env.DASHBOARD_SNAPSHOT==='1') {
  const ptEnclaveSouth=project([-5.9,35.32])!;
  const portugalMainlandHeightPx=Number((ptMainlandSouth[1]-ptMainlandNorth[1]).toFixed(2));
  const portugalWithEnclaveHeightPx=Number((ptEnclaveSouth[1]-ptMainlandNorth[1]).toFixed(2));
+ assert.ok(Math.max(ptMainlandNorth[1],ptMainlandSouth[1],ptEnclaveSouth[1])<trayTopLocal,'Portugal crosses the tray top edge');
  assert.ok(portugalMainlandHeightPx>=90&&portugalMainlandHeightPx<=110,`mainland Portugal height ${portugalMainlandHeightPx}px outside ±10% of 100.07px`);
  assert.ok(portugalWithEnclaveHeightPx>=126&&portugalWithEnclaveHeightPx<=154,`Portugal mainland+enclave height ${portugalWithEnclaveHeightPx}px outside ±10% of 140px`);
 
@@ -110,7 +171,7 @@ if(process.env.DASHBOARD_SNAPSHOT==='1') {
   return {name:m.name,point:p,box:[p[0]+labelOffsets[i][0],p[1]-7,m.label.w+10,16] as [number,number,number,number]};
  });
  for(const {name,box:[x,y,w,h]} of labels){
-  assert.ok(x>317&&x+w<1639&&y>12&&y+h<921,`${name} label [${x},${y},${w},${h}] not clear of panels/strips`);
+  assert.ok(x>leftStackRightLocal&&x+w<rightStackLeftLocal&&y>12&&y+h<trayTopLocal,`${name} label [${x},${y},${w},${h}] not clear of stacks/tray`);
  }
 
  // 3. Compass widget & removal of map compass rose
@@ -119,8 +180,9 @@ if(process.env.DASHBOARD_SNAPSHOT==='1') {
  const compassCompact=renderToStaticMarkup(<PanelContent name="Compass" mode="compact"/>);
  const compassExpanded=renderToStaticMarkup(<PanelContent name="Compass" mode="expanded"/>);
  const compassSettings=renderToStaticMarkup(<PanelContent name="Compass" mode="settings"/>);
- assert.ok(compassCompact.includes('data-compass-rose="56"')&&compassCompact.includes('22.2°N 5.0°E')&&compassCompact.includes('500 km'));
- assert.ok(compassExpanded.includes('data-compass-rose="148"')&&compassExpanded.includes('Equal Earth')&&compassExpanded.includes('3.53×')&&compassExpanded.includes('1000 km'));
+ const iberiaMetrics=computeCompassMetrics(iberiaCamera);
+ assert.ok(compassCompact.includes('data-compass-rose="56"')&&compassCompact.includes(iberiaMetrics.centerText)&&compassCompact.includes(`${iberiaMetrics.compactScale.km} km`));
+ assert.ok(compassExpanded.includes('data-compass-rose="148"')&&compassExpanded.includes('Equal Earth')&&compassExpanded.includes(iberiaMetrics.zoomText)&&compassExpanded.includes(`${iberiaMetrics.expandedScale.km} km`));
  assert.ok(compassSettings.includes('Šavrič, Patterson and Jenny, 2018')&&compassSettings.includes('Natural Earth, public domain; Cliopatria, CC BY 4.0, Bennett et al. 2025'));
 
  // Verify Compass updates during flyTo
@@ -130,7 +192,7 @@ if(process.env.DASHBOARD_SNAPSHOT==='1') {
  const midCamera=flyTo(7300,[{at:6200,camera:worldCamera},{at:8400,camera:iberiaCamera}],cubicInOut);
  assert.ok(flyStartHtml.includes('data-compass-center="0.0°N 0.0°E"')&&flyStartHtml.includes('data-compass-scale-km="2000"'));
  assert.ok(flyMidHtml.includes(`data-compass-center="${formatCoord(midCamera.center)}"`));
- assert.ok(flyEndHtml.includes('data-compass-center="22.2°N 5.0°E"')&&flyEndHtml.includes('data-compass-scale-km="500"'));
+ assert.ok(flyEndHtml.includes(`data-compass-center="${iberiaMetrics.centerText}"`)&&flyEndHtml.includes(`data-compass-scale-km="${iberiaMetrics.compactScale.km}"`));
 
  // 4. Period polities for 1486 (Cliopatria) & label collision checks
  const geojsonRaw=fs.readFileSync(new URL('../data/polities_1486.geojson',import.meta.url),'utf8');
@@ -157,6 +219,10 @@ if(process.env.DASHBOARD_SNAPSHOT==='1') {
  });
  assert.equal(polityLabelBoxes.length,16);
  const overlaps=(a:[number,number,number,number],b:[number,number,number,number],pad=2)=>!(a[0]+a[2]+pad<=b[0]||b[0]+b[2]+pad<=a[0]||a[1]+a[3]+pad<=b[1]||b[1]+b[3]+pad<=a[1]);
+ for(let i=0;i<labels.length;i++){
+  for(let j=i+1;j<labels.length;j++) assert.ok(!overlaps(labels[i].box,labels[j].box,2),`${labels[i].name} collides with ${labels[j].name}`);
+  for(const pBox of panelBoxesMapLocal) assert.ok(!overlaps(labels[i].box,pBox.box,2),`${labels[i].name} collides with ${pBox.name}`);
+ }
  for(let i=0;i<polityLabelBoxes.length;i++){
   const a=polityLabelBoxes[i];
   assert.ok(a.box[0]>0&&a.box[0]+a.box[2]<1856&&a.box[1]>12&&a.box[1]+a.box[3]<837,`${a.name} outside safe map area`);
@@ -211,13 +277,31 @@ if(process.env.DASHBOARD_SNAPSHOT==='1') {
  assert.equal(transitionWagePlaneMode('settings','click-gear'),'expanded');
  assert.equal(transitionWagePlaneMode('settings','click-close'),'compact');
  assert.equal(transitionWagePlaneMode('expanded','click-close'),'compact');
+ const trayNonGearEvents:TrayInteractionEvent[]=['hover-compact','click-compact','click-close'];
+ for(const ev of trayNonGearEvents){
+  assert.notEqual(transitionTrayMode('compact',ev),'settings',`tray event ${ev} from compact must never open settings`);
+  assert.notEqual(transitionTrayMode('expanded',ev),'settings',`tray event ${ev} from expanded must never open settings`);
+ }
+ assert.equal(transitionTrayMode('compact','click-gear'),'settings');
+ assert.equal(transitionTrayMode('expanded','click-gear'),'settings');
+ assert.equal(transitionTrayMode('settings','click-gear'),'expanded');
+ assert.deepEqual(TRAY_EXPANDED_BOX,{x:260,y:138,width:1400,height:860});
+ for(let i=0;i<TRAY_INSTRUMENTS.length;i++){
+  const slug=slugs[9+i],expanded=sectionRect(renderDashboard(0,{[slug]:'expanded'}),slug);
+  assert.deepEqual(expanded,TRAY_EXPANDED_BOX,`${slug} expanded box`);
+  const start=trayCellRect(i),moving=sectionRect(renderDashboard(300,{}, {[slug]:[{at:0,mode:'expanded'}]}),slug);
+  assert.ok(moving.x>Math.min(start.x,260)&&moving.x<Math.max(start.x,260),`${slug} x does not grow centreward`);
+  assert.ok(moving.y>138&&moving.y<start.y,`${slug} y does not grow upward`);
+  assert.ok(moving.width>start.width&&moving.width<1400,`${slug} width does not expand`);
+  assert.ok(moving.height>start.height&&moving.height<860,`${slug} height does not expand`);
+ }
 
  // Verify timeline states & layout restacking
  for(const ms of times){
   const html=state(ms);
   assert.ok(!html.includes('NaN'));
   assert.equal(html,state(ms));
-  assert.equal((html.match(/<section/g)??[]).length,11);
+  assert.equal((html.match(/<section/g)??[]).length,18);
   if(ms===13000) assert.ok(html.includes('top:483.8px'));
   if(ms===16000) assert.ok(html.includes('top:816.2px'));
   if(ms===500) assert.ok(html.includes('opacity:0.3'));
@@ -285,11 +369,13 @@ if(process.env.DASHBOARD_SNAPSHOT==='1') {
   },
   points,
   route:route.d,
+  routeBounds:{minX:routeMinX,maxX:routeMaxX,minY:routeMinY,maxY:routeMaxY},
   landHits:hits,
   samples,
   labels,
   polityLabels:polityLabelBoxes,
   politiesCount:defaultPolities1486.features.length,
+  tray:{...TRAY,cellWidth:TRAY_CELL_WIDTH,mapLocalTop:trayTopLocal},
   hubs:map.iberia.rhumbLines.hubs_lonlat.map(p=>project(p as [number,number])),
   clipMidpointExtents:{
    west:project.invert!([0,484]),
@@ -300,5 +386,5 @@ if(process.env.DASHBOARD_SNAPSHOT==='1') {
  };
  fs.writeFileSync(new URL('../review/map-geometry-fix1.json',import.meta.url),JSON.stringify(geometry,null,2)+'\n');
  fs.writeFileSync(new URL('../review/map-geometry-fix2.json',import.meta.url),JSON.stringify(geometry,null,2)+'\n');
- console.log(`PASS: Equal Earth route ${samples} samples / ${hits} land hits; Portugal height ${portugalMainlandHeightPx}px mainland (${portugalWithEnclaveHeightPx}px with 1486 Moroccan enclave); monotonic flight; label clearance; ${times.length} deterministic timeline states; all 33 instrument modes (11 instruments × 3 modes) with opaque panel-render fill; expanded Complex Wage Plane (1400×860 at [260,138], 720px plane, 8 stat labels, M-against-τ gauge) & gear-only settings verified; Compass widget live camera updates; 75 Cliopatria 1486 polities with ${polityLabelBoxes.length} non-colliding labels.`);
+ console.log(`PASS: Equal Earth route ${samples} samples / ${hits} land hits, bounds ${routeMinX.toFixed(2)}..${routeMaxX.toFixed(2)} × ${routeMinY.toFixed(2)}..${routeMaxY.toFixed(2)} above tray y=${trayTopLocal}; Portugal height ${portugalMainlandHeightPx}px mainland (${portugalWithEnclaveHeightPx}px with 1486 Moroccan enclave); ${times.length} deterministic timeline states; right stack + 9-cell tray geometry; all 27 tray modes; gear-only settings; no rendered interaction hints; 75 polities with ${polityLabelBoxes.length} non-colliding labels.`);
 }

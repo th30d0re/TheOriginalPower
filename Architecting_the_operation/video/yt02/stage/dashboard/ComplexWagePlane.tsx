@@ -748,7 +748,7 @@ function ComplexWagePlaneFrame({
             viewBox="0 0 800 830"
             tabIndex={interactive ? 0 : undefined}
             role="application"
-            aria-label="Wage plane. Use the arrow keys to move the wage vector W."
+            aria-label={interactive ? 'Wage plane. Use the arrow keys to move the wage vector W.' : 'Complex wage plane'}
             onPointerDown={onPlanePointerDown}
             onPointerMove={onPlanePointerMove}
             onPointerUp={onPlanePointerUp}
@@ -1813,6 +1813,9 @@ export function WagePlaneSettings({
           </div>
           <div style={{fontSize: 12.5, color: c.ink2, marginTop: 2}}>
             Secondary configuration &amp; provenance · Complex Wage Plane
+          </div>
+          <div data-model-default="true" style={{fontSize: 12, color: c.accent, marginTop: 3}}>
+            Model default: log 2 predates the 1705 timeline; fix-pass-3 values remain ψ_m = 0 and ψ_s = 60.
           </div>
         </div>
         <HeaderControls mode="settings" interactive={interactive} onSelectMode={selectMode} />
