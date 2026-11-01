@@ -1,0 +1,38 @@
+[
+  {
+    "k": "a",
+    "y0": 1619,
+    "y1": 1865,
+    "name": "Enslavement + chattel system",
+    "short": "Enslavement",
+    "f": 0.09,
+    "src": "Baptist (2014); Darity & Mullen (2020)"
+  },
+  {
+    "k": "b",
+    "y0": 1865,
+    "y1": 1934,
+    "name": "13th Am. exception + convict leasing",
+    "short": "13th Am.",
+    "f": 0.61,
+    "src": "Blackmon (2008)"
+  },
+  {
+    "k": "g",
+    "y0": 1934,
+    "y1": 1968,
+    "name": "HOLC redlining + FHA exclusion",
+    "short": "Redlining",
+    "f": 0.48,
+    "src": "Mapping Inequality; Rothstein (2017)"
+  },
+  {
+    "k": "d",
+    "y0": 1971,
+    "y1": 2020,
+    "name": "War on Drugs + cannabis enforcement",
+    "short": "War on Drugs",
+    "f": 0.73,
+    "src": "ACLU (2020)"
+  }
+]

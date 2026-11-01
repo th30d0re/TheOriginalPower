@@ -1,0 +1,30 @@
+[
+  {
+    "y": 1865,
+    "name": "Abolition / Reconstruction",
+    "z": 0.17,
+    "wn": 0.3,
+    "proxy": "Klan and vigilante membership, 1865–1920"
+  },
+  {
+    "y": 1964,
+    "name": "Civil Rights Act",
+    "z": 0.59,
+    "wn": 0.52,
+    "proxy": "Southern-strategy polling, 1964–1985"
+  },
+  {
+    "y": 2008,
+    "name": "Obama election",
+    "z": 0.7,
+    "wn": 1.08,
+    "proxy": "Tea Party favourability, 2008–2020"
+  },
+  {
+    "y": 2020,
+    "name": "George Floyd protests",
+    "z": 0.97,
+    "wn": 6.65,
+    "proxy": "Militia membership, 2020–2024"
+  }
+]
