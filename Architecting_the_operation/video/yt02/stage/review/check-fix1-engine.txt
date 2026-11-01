@@ -1,0 +1,5 @@
+
+> scriptcast-video@0.2.0 check-stage
+> node scripts/run-check-stage.mjs
+
+PASS: motion/fly-to, springs, cues, instrument growth, four map projections + fit, and MathText parsing.

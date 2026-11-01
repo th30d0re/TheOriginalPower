@@ -1,0 +1,2 @@
+PASS: 15 frames rendered twice in fresh Node processes; identical right-stack and strip markup / whole-Dashboard hashes; state/effect/reducer hooks trap on invocation.
+PASS: Equal Earth route 1296 samples / 0 land hits; monotonic flight; label clearance; 14 deterministic timeline states; all 30 instrument modes; 420 px wage plane, model and rail bounds; polity layer.

@@ -1319,7 +1319,7 @@
   "Interference": {
    "compact": {
     "w": 163,
-    "h": 96.8,
+    "h": 142.8,
     "sizing": "HUG both axes",
     "layout": "vertical",
     "padding_tRBL": [
@@ -1531,6 +1531,112 @@
        14
       ],
       "name": "rho range value"
+     },
+     {
+      "k": "richText",
+      "name": "phi label",
+      "font": {
+       "family": "IBM Plex Sans",
+       "style": "Regular",
+       "size": 12
+      },
+      "colour": "color/text/primary",
+      "box": [
+       11,
+       92,
+       40,
+       16
+      ],
+      "runs": [
+       {
+        "t": "Φ",
+        "box": [
+         11,
+         92,
+         9,
+         16
+        ]
+       },
+       {
+        "t": "load",
+        "sub": true,
+        "box": [
+         20,
+         99,
+         22,
+         8
+        ]
+       }
+      ]
+     },
+     {
+      "k": "text",
+      "name": "phi range value",
+      "text": "[0.10, 0.20]",
+      "font": {
+       "family": "IBM Plex Mono",
+       "style": "Medium",
+       "size": 10
+      },
+      "colour": "color/text/accent",
+      "box": [
+       72,
+       94,
+       80,
+       14
+      ]
+     },
+     {
+      "k": "graphic",
+      "name": "phi track",
+      "box": [
+       11,
+       113,
+       141,
+       8
+      ],
+      "params": {
+       "track": {
+        "radius": 4,
+        "fill": "color/surface/well"
+       },
+       "pill": {
+        "radius": 4,
+        "fill": "color/fill/accent"
+       }
+      }
+     },
+     {
+      "k": "text",
+      "text": "0",
+      "font": {
+       "family": "IBM Plex Mono",
+       "style": "Regular",
+       "size": 9
+      },
+      "colour": "color/text/muted",
+      "box": [
+       11,
+       124,
+       8,
+       11
+      ]
+     },
+     {
+      "k": "text",
+      "text": "1",
+      "font": {
+       "family": "IBM Plex Mono",
+       "style": "Regular",
+       "size": 9
+      },
+      "colour": "color/text/muted",
+      "box": [
+       146,
+       124,
+       8,
+       11
+      ]
      }
     ]
    },
@@ -3654,8 +3760,8 @@
     ]
    },
    "expanded": {
-    "w": 640,
-    "h": 431.2,
+    "w": 960,
+    "h": 650,
     "layout": "vertical",
     "padding_tRBL": [
      16,

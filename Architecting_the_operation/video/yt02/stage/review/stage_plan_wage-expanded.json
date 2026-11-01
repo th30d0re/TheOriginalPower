@@ -1,0 +1,150 @@
+{
+  "episode": "yt02_dashboard_review",
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "duration_ms": 24000,
+  "range": {
+    "start_ms": 0,
+    "end_ms": 24000
+  },
+  "audio": "",
+  "cues": {
+    "i1": 800,
+    "i2": 1250,
+    "i3": 1700,
+    "i4": 2150,
+    "i5": 2600,
+    "i6": 3050,
+    "i7": 3500,
+    "i8": 3950,
+    "i9": 4400,
+    "i10": 4850,
+    "fly": 6200,
+    "route": 8600,
+    "expand:interference": 14500,
+    "collapse:interference": 18000,
+    "settings:wage-plane": 19500,
+    "collapse:wage-plane": 22600,
+    "R-01.i1": 800,
+    "R-01.i2": 1250,
+    "R-01.i3": 1700,
+    "R-01.i4": 2150,
+    "R-01.i5": 2600,
+    "R-01.i6": 3050,
+    "R-01.i7": 3500,
+    "R-01.i8": 3950,
+    "R-01.i9": 4400,
+    "R-01.i10": 4850,
+    "R-02.fly": 6200,
+    "R-02.route": 8600,
+    "R-03.expand:interference": 14500,
+    "R-03.collapse:interference": 18000,
+    "R-04.settings:wage-plane": 19500,
+    "R-04.collapse:wage-plane": 22600
+  },
+  "segments": [
+    {
+      "instance": "R-01",
+      "scene": "DashboardBoot",
+      "start_ms": 0,
+      "end_ms": 6000,
+      "shots": [
+        {
+          "shot_id": "R-01",
+          "turn_id": "r1",
+          "turn_index": 0,
+          "start_ms": 0,
+          "end_ms": 6000,
+          "props": {}
+        }
+      ]
+    },
+    {
+      "instance": "dashboard",
+      "scene": "Dashboard1486",
+      "start_ms": 6000,
+      "end_ms": 24000,
+      "shots": [
+        {
+          "shot_id": "R-02",
+          "turn_id": "r2",
+          "turn_index": 1,
+          "start_ms": 6000,
+          "end_ms": 14000,
+          "props": {
+            "modes": {
+              "wage-plane": "expanded"
+            }
+          }
+        },
+        {
+          "shot_id": "R-03",
+          "turn_id": "r3",
+          "turn_index": 2,
+          "start_ms": 14000,
+          "end_ms": 19000,
+          "props": {}
+        },
+        {
+          "shot_id": "R-04",
+          "turn_id": "r4",
+          "turn_index": 3,
+          "start_ms": 19000,
+          "end_ms": 24000,
+          "props": {}
+        }
+      ]
+    }
+  ],
+  "words": {
+    "r1": [
+      {
+        "text": "boot",
+        "start_ms": 0,
+        "end_ms": 500
+      }
+    ],
+    "r2": [
+      {
+        "text": "fly",
+        "start_ms": 6200,
+        "end_ms": 6400
+      },
+      {
+        "text": "route",
+        "start_ms": 8600,
+        "end_ms": 8800
+      }
+    ],
+    "r3": [
+      {
+        "text": "expand",
+        "start_ms": 14500,
+        "end_ms": 14700
+      },
+      {
+        "text": "collapse",
+        "start_ms": 18000,
+        "end_ms": 18200
+      }
+    ],
+    "r4": [
+      {
+        "text": "settings",
+        "start_ms": 19500,
+        "end_ms": 19700
+      },
+      {
+        "text": "close",
+        "start_ms": 22600,
+        "end_ms": 22800
+      }
+    ]
+  },
+  "warnings": [
+    "Word timings normalized from relative milliseconds",
+    "No episode MP3 found; silent episode"
+  ],
+  "episode_dir": "/Users/emmanuel/Documents/Theory/TheOriginalPower/Architecting_the_operation/video/yt02/stage"
+}

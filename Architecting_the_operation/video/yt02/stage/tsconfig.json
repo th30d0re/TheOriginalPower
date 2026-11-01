@@ -17,6 +17,15 @@
       ],
       "react-dom/*": [
         "/Users/emmanuel/Documents/Theory/scriptCast-stage/video/node_modules/@types/react-dom/*"
+      ],
+      "d3-geo": [
+        "/Users/emmanuel/Documents/Theory/scriptCast-stage/video/node_modules/@types/d3-geo"
+      ],
+      "topojson-client": [
+        "/Users/emmanuel/Documents/Theory/scriptCast-stage/video/node_modules/@types/topojson-client"
+      ],
+      "geojson": [
+        "/Users/emmanuel/Documents/Theory/scriptCast-stage/video/node_modules/@types/geojson"
       ]
     },
     "typeRoots": [
