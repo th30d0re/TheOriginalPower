@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Five-Tier Cone</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=STIX+Two+Text:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#0D1B2A; --panel:#132538; --well:#081421;
+  --wire:#ECE7DC; --ink:#ECE7DC; --ink-2:#A9B6C4;
+  --rule:#8A6A45; --label-sm:#B8956A;
+  --green:#7CC08A; --red:#E0604A; --teal:#4CC2C2; --gold:#D4A84B; --accent:#E08A3C; --dim:#4A5566;
+  --sans:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,Menlo,Consolas,monospace;
+  --math:'STIX Two Text','Cambria Math','Times New Roman',serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.55 var(--sans);padding-block:22px 48px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.app{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:20px 28px;align-items:start}
+header{grid-column:1/-1}
+h1{font:600 24px/1.2 var(--sans);margin:0 0 6px;letter-spacing:-.01em}
+.lede{margin:0;color:var(--ink-2);max-width:84ch}
+.card{background:var(--panel);border:1px solid var(--rule);border-radius:10px;padding:16px 18px;min-width:0}
+h2{font:600 12px/1.3 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--label-sm);margin:0 0 10px}
+.nt{text-transform:none;letter-spacing:0}
+svg{display:block;width:100%;height:auto}
+svg text{font-family:var(--mono)}
+#cone{touch-action:none;cursor:grab;background:var(--well);border-radius:8px}
+#cone.drag{cursor:grabbing}
+.row{display:grid;grid-template-columns:150px minmax(0,1fr) 58px;gap:10px;align-items:center;margin:7px 0}
+.row label{font:400 14px var(--sans)}
+.row label small{display:block;color:var(--ink-2);font-size:12px}
+.row output{font:500 13px var(--mono);text-align:right;font-variant-numeric:tabular-nums}
+input[type=range]{width:100%;min-width:0;accent-color:var(--wire)}
+input:focus-visible,.btn:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.btns{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 10px}
+.btn{font:500 13px var(--sans);padding:7px 11px;border:1px solid var(--rule);border-radius:6px;background:var(--well);color:var(--ink);cursor:pointer}
+.btn:hover{border-color:var(--gold)}
+.btn[aria-pressed="true"]{border-color:var(--gold);color:var(--gold)}
+.check{display:flex;gap:8px;align-items:center;font-size:14px;margin:8px 0}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px 16px;margin:12px 0 0}
+.stats dt{font-size:12px;color:var(--ink-2)}
+.stats dd{margin:0;font:500 15px var(--mono);font-variant-numeric:tabular-nums}
+.verdict{margin:12px 0 0;font-size:14.5px}
+.full{grid-column:1/-1}
+.note{font-size:13.5px;color:var(--ink-2);margin:8px 0 0;max-width:100ch}
+.note code{font-family:var(--mono);font-size:12.5px;color:var(--label-sm)}
+.legend{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.legend li{display:grid;grid-template-columns:14px 88px minmax(0,1fr);gap:10px;align-items:baseline;font-size:13.5px}
+.legend .sw{width:14px;height:14px;border-radius:50%;transform:translateY(2px)}
+.legend b{font:500 13px var(--mono)}
+.legend span{color:var(--ink-2)}
+h3{font:600 13px var(--sans);margin:16px 0 4px;color:var(--ink)}
+@media (max-width:900px){.app{grid-template-columns:minmax(0,1fr)}.stats{grid-template-columns:minmax(0,1fr)}}
+</style>
+</head>
+<body>
+<div class="app">
+  <header>
+    <h1>Five-Tier Cone</h1>
+    <p class="lede">The hierarchy is a 3-D cone: E at the apex, P<sub>uppet</sub>, F<sub>enforce</sub>, and I<sub>buffer</sub> as descending layers, O enclosed at the base. From inside O, looking up the axis, orthographic projection hides the apex behind the lower layers: the Flat Ceiling. Enclosure keeps the observer from stepping outside to see the whole cone.</p>
+  </header>
+
+  <section class="card" aria-label="Cone">
+    <h2>The cone <span class="nt" style="color:var(--ink-2)">· drag to rotate</span></h2>
+    <div class="btns" role="group" aria-label="Views">
+      <button class="btn" type="button" data-view="out">Outside view</button>
+      <button class="btn" type="button" data-view="side">Side view</button>
+      <button class="btn" type="button" data-view="in">From inside O</button>
+    </div>
+    <svg id="cone" viewBox="0 0 720 560" role="img" aria-label="The five-tier cone, rotatable"></svg>
+    <div class="row"><label for="s-el">Elevation<small>−90° looks up from O</small></label><input id="s-el" type="range" min="-90" max="90" step="1"><output id="o-el" for="s-el"></output></div>
+    <div class="row"><label for="s-az">Azimuth</label><input id="s-az" type="range" min="-180" max="180" step="1"><output id="o-az" for="s-az"></output></div>
+    <dl class="stats">
+      <div><dt>E visible from inside O</dt><dd id="r-vis"></dd></div>
+      <div><dt>Enclosure S<sub>enc</sub></dt><dd id="r-enc"></dd></div>
+      <div><dt>Highest view allowed</dt><dd id="r-max"></dd></div>
+    </dl>
+    <p class="verdict" id="verdict"></p>
+  </section>
+
+  <section class="card" aria-label="Controls">
+    <h2>Alignment and enclosure</h2>
+    <div class="row"><label for="s-al">Tier alignment<small>θ-collapse, eq. 14.5</small></label><input id="s-al" type="range" min="0" max="1" step="0.01"><output id="o-al" for="s-al"></output></div>
+    <p class="note" style="margin-top:0">At 1.00, P, F, and I sit on E's sightline, so the four nodes eclipse. Lower it to pull the tiers off their common axis and watch E come into view from below.</p>
+    <h3>Tri-Modal Enclosure</h3>
+    <div class="row"><label for="s-e1"><span class="nt">e₁</span> communal capacity</label><input id="s-e1" type="range" min="0" max="1" step="0.01"><output id="o-e1" for="s-e1"></output></div>
+    <div class="row"><label for="s-e2"><span class="nt">e₂</span> mobility</label><input id="s-e2" type="range" min="0" max="1" step="0.01"><output id="o-e2" for="s-e2"></output></div>
+    <div class="row"><label for="s-e3"><span class="nt">e₃</span> epistemic</label><input id="s-e3" type="range" min="0" max="1" step="0.01"><output id="o-e3" for="s-e3"></output></div>
+    <label class="check"><input type="checkbox" id="c-lock" checked> Enclosure limits the observer's view</label>
+    <p class="note">S<sub>enc</sub> = (1/√2)·√(((e₁ + e₂)/2)² + e₃²) (eq. 1.1). With the limit on, the highest elevation the observer can reach is −90° + 180°·(1 − S<sub>enc</sub>). At total enclosure the observer is held at −90°, under the Flat Ceiling.</p>
+    <h3>Nodes as circuit elements</h3>
+    <ul class="legend">
+      <li><span class="sw" style="background:var(--accent)"></span><b>E</b><span>Voltage source: sets the potential across the network; never touched by the current it generates.</span></li>
+      <li><span class="sw" style="background:var(--gold)"></span><b>P<sub>uppet</sub></b><span>Potential divider: turns E's potential into policy-level drops and absorbs blame that would arc to E.</span></li>
+      <li><span class="sw" style="background:var(--red)"></span><b>F<sub>enforce</sub></b><span>Current source: the conductive path that makes law executable as amperage.</span></li>
+      <li><span class="sw" style="background:var(--teal)"></span><b>I<sub>buffer</sub></b><span>Dielectric: receives W = ψ<sub>m</sub> + jψ<sub>s</sub>, stores energy in the ideological field, passes no current to E.</span></li>
+      <li><span class="sw" style="background:var(--green)"></span><b>O</b><span>Sink / ground: all net current flows here.</span></li>
+    </ul>
+    <p class="note">Benefit(E) ≫ Benefit(P) &gt; Benefit(F) &gt; Benefit(I) &gt; Benefit(O) (eq. 0.2).</p>
+  </section>
+
+  <section class="card full" aria-label="Notes">
+    <h2>What the page assumes</h2>
+    <p class="note">From the manuscript: the five nodes and the 3-D cone, E at the apex on the z-axis and O enclosed at the base (<code>Paper/The_Original_Power.tex:486</code>–<code>:593</code>); the node-to-circuit-element table and the voltage-drop ordering, eq. 0.2 (<code>:604</code>–<code>:650</code>); the Tri-Modal Enclosure score, eq. 1.1 (<code>:713</code>); the Flat Ceiling, Elite Obscuration, and the observer on the axis (<code>:770</code>–<code>:810</code>); the angular-collapse condition θ<sub>E</sub> = θ<sub>P</sub> = θ<sub>F</sub> = θ<sub>I</sub>, eq. 14.5 (<code>:13751</code>).</p>
+    <p class="note">The page draws the cone in orthographic projection, as the manuscript specifies. Tier heights and radii follow the manuscript's figure: each layer is a slice of the cone, so a lower layer is wider than the ones above it. Two links are the page's own devices: the elevation limit tied to S<sub>enc</sub> (the manuscript says enclosure prevents the observer from stepping outside the cone; the page turns that into a limit on the viewing angle), and the alignment control (the page shifts the four upper tiers apart, off their common axis, by fixed amounts to show what the θ-collapse prevents). "E visible from inside O" is the share of E's disc that no lower disc covers in the view straight up the axis.</p>
+  </section>
+</div>
+
+<script>
+(function(){
+'use strict';
+var $=function(id){return document.getElementById(id);};
+var H=5,RB=4,SC=54,X0=360,Y0=290,D2R=Math.PI/180;
+var TIERS=[
+  {k:'E',name:'E',z:4.55,col:'var(--accent)',off:[-2.6,2.0]},
+  {k:'P',name:'P_uppet',z:3.45,col:'var(--gold)',off:[-0.5,-1.5]},
+  {k:'F',name:'F_enforce',z:2.35,col:'var(--red)',off:[1.0,2.0]},
+  {k:'I',name:'I_buffer',z:1.25,col:'var(--teal)',off:[1.4,-1.6]}
+];
+TIERS.forEach(function(t){t.r=RB*(1-t.z/H);});
+var S={el:22,az:-28,al:1,e1:0.3,e2:0.3,e3:0.3,lock:true};
+function enc(){var m=(S.e1+S.e2)/2;return Math.sqrt(m*m+S.e3*S.e3)/Math.SQRT2;}
+function elMax(){return S.lock?-90+180*(1-enc()):90;}
+function ctr(t){var a=1-S.al;return [a*t.off[0],a*t.off[1]];}
+function proj(x,y,z){
+  var ca=Math.cos(S.az*D2R),sa=Math.sin(S.az*D2R),ce=Math.cos(S.el*D2R),se=Math.sin(S.el*D2R);
+  var x1=x*ca-y*sa,y1=x*sa+y*ca,zz=z-2.5;
+  return {x:X0+SC*x1,y:Y0-SC*(zz*ce-y1*se),d:-y1*ce+zz*se};
+}
+function hull(P){P=P.slice().sort(function(a,b){return a[0]-b[0]||a[1]-b[1];});
+  function cr(o,a,b){return (a[0]-o[0])*(b[1]-o[1])-(a[1]-o[1])*(b[0]-o[0]);}
+  var lo=[],up=[];P.forEach(function(p){while(lo.length>=2&&cr(lo[lo.length-2],lo[lo.length-1],p)<=0)lo.pop();lo.push(p);});
+  for(var i=P.length-1;i>=0;i--){var p=P[i];while(up.length>=2&&cr(up[up.length-2],up[up.length-1],p)<=0)up.pop();up.push(p);}
+  up.pop();lo.pop();return lo.concat(up);}
+function visible(){
+  var E=TIERS[0],ce=ctr(E),n=0,v=0;
+  for(var i=-20;i<=20;i++)for(var j=-20;j<=20;j++){var x=i/20*E.r,y=j/20*E.r;if(x*x+y*y>E.r*E.r)continue;n++;
+    var px=ce[0]+x,py=ce[1]+y,cov=false;
+    for(var k=1;k<TIERS.length;k++){var t=TIERS[k],c=ctr(t);if((px-c[0])*(px-c[0])+(py-c[1])*(py-c[1])<=t.r*t.r){cov=true;break;}}
+    if(!cov)v++;}
+  return v/n;
+}
+function draw(){
+  var se=Math.abs(Math.sin(S.el*D2R)),h='';
+  h+='<defs><filter id="gl" filterUnits="userSpaceOnUse" x="0" y="0" width="720" height="560"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>';
+  /* cone hull */
+  var pts=[],ap=proj(0,0,H);pts.push([ap.x,ap.y]);
+  for(var i=0;i<96;i++){var a=2*Math.PI*i/96,p=proj(RB*Math.cos(a),RB*Math.sin(a),0);pts.push([p.x,p.y]);}
+  var hp=hull(pts),dh='';hp.forEach(function(p,i){dh+=(i?'L':'M')+p[0].toFixed(1)+' '+p[1].toFixed(1);});dh+='Z';
+  h+='<path d="'+dh+'" style="fill:var(--rule)" fill-opacity=".10"/>';
+  /* items with depth */
+  var items=[];
+  var bc=proj(0,0,0);
+  items.push({d:bc.d,svg:'<ellipse cx="'+bc.x.toFixed(1)+'" cy="'+bc.y.toFixed(1)+'" rx="'+(RB*SC).toFixed(1)+'" ry="'+Math.max(0.8,RB*SC*se).toFixed(1)+'" style="fill:var(--green);stroke:var(--green)" fill-opacity=".10" stroke-width="2" stroke-dasharray="7 5"/>'+
+    '<text x="'+(bc.x+RB*SC*0.72).toFixed(1)+'" y="'+(bc.y+Math.max(14,RB*SC*se*0.72)+4).toFixed(1)+'" font-size="15" style="fill:var(--green)">O</text>'});
+  TIERS.forEach(function(t){
+    var c=ctr(t),p=proj(c[0],c[1],t.z),rx=t.r*SC,ry=Math.max(0.8,t.r*SC*se);
+    var lx=p.x+rx*Math.cos(-0.6),ly=p.y+ry*Math.sin(-0.6)-(se<0.25?10:0);
+    var lab=t.name.replace('_uppet','').replace('_enforce','').replace('_buffer','');
+    items.push({d:p.d,svg:'<ellipse cx="'+p.x.toFixed(1)+'" cy="'+p.y.toFixed(1)+'" rx="'+rx.toFixed(1)+'" ry="'+ry.toFixed(1)+'" style="fill:'+t.col+';stroke:var(--well)" fill-opacity="1" stroke-width="2"'+(t.k==='E'?' filter="url(#gl)"':'')+'/>'+
+      '<text x="'+(lx+6).toFixed(1)+'" y="'+(ly-4).toFixed(1)+'" font-size="15" font-weight="500" style="fill:var(--ink);paint-order:stroke;stroke:var(--well);stroke-width:4px">'+lab+'</text>'});
+  });
+  items.sort(function(a,b){return a.d-b.d;});items.forEach(function(it){h+=it.svg;});
+  h+='<path d="'+dh+'" fill="none" style="stroke:var(--rule)" stroke-width="1.6" stroke-opacity=".8"/>';
+  if(S.el<-80)h+='<text x="20" y="540" font-size="13" style="fill:var(--ink-2)">observer in O, looking straight up the z-axis</text>';
+  else{var za=proj(0,0,H+0.6);h+='<line x1="'+ap.x.toFixed(1)+'" y1="'+ap.y.toFixed(1)+'" x2="'+za.x.toFixed(1)+'" y2="'+za.y.toFixed(1)+'" style="stroke:var(--wire)" stroke-width="1.5"/><text x="'+(za.x+6).toFixed(1)+'" y="'+(za.y).toFixed(1)+'" font-size="13" style="fill:var(--wire)">z</text>';}
+  $('cone').innerHTML=h;
+  var vis=visible(),e=enc();
+  $('r-vis').textContent=Math.round(100*vis)+'%';$('r-enc').textContent=e.toFixed(2);$('r-max').textContent=Math.round(elMax())+'°';
+  var t;
+  if(S.el<-80&&vis<0.01)t='Flat Ceiling: from inside O, the observer sees only the underside of I_buffer. P, F, and E sit behind it on the same sightline, so the system looks like Oppressor against Oppressed.';
+  else if(S.el<-80)t='From inside O with the proxies off the axis, '+Math.round(100*vis)+'% of E shows past the lower layers. Elite Obscuration depends on keeping the tiers aligned.';
+  else if(S.lock&&S.el>=elMax()-0.5&&elMax()<90)t='The enclosure stops the observer at '+Math.round(elMax())+'°. Lower e₁, e₂, or e₃ to let the observer climb out and see more of the cone.';
+  else t='From outside the cone, all five tiers are visible. The trap hides its architecture only from the inside.';
+  $('verdict').textContent=t;
+}
+function sync(){
+  S.el=Math.min(S.el,elMax());
+  [['el',0,'°'],['az',0,'°'],['al',2,''],['e1',2,''],['e2',2,''],['e3',2,'']].forEach(function(k){$('s-'+k[0]).value=S[k[0]];$('o-'+k[0]).textContent=(+S[k[0]]).toFixed(k[1])+k[2];});
+  var v=S.el<-80?'in':Math.abs(S.el)<3?'side':'out';
+  Array.prototype.forEach.call(document.querySelectorAll('[data-view]'),function(b){b.setAttribute('aria-pressed',String(b.getAttribute('data-view')===v));});
+}
+function refresh(){sync();draw();}
+['el','az','al','e1','e2','e3'].forEach(function(k){$('s-'+k).addEventListener('input',function(e){S[k]=+e.target.value;refresh();});});
+$('c-lock').addEventListener('change',function(){S.lock=this.checked;refresh();});
+var VIEWS={out:[22,-28],side:[0,-28],'in':[-90,0]};
+Array.prototype.forEach.call(document.querySelectorAll('[data-view]'),function(b){b.addEventListener('click',function(){var v=VIEWS[b.getAttribute('data-view')];S.el=v[0];S.az=v[1];refresh();});});
+var drag=null,svg=$('cone');
+svg.addEventListener('pointerdown',function(e){drag={x:e.clientX,y:e.clientY,el:S.el,az:S.az};svg.setPointerCapture(e.pointerId);svg.classList.add('drag');});
+svg.addEventListener('pointermove',function(e){if(!drag)return;var k=360/svg.getBoundingClientRect().width;
+  S.az=((drag.az+(e.clientX-drag.x)*k*0.6+540)%360)-180;S.el=Math.max(-90,Math.min(90,drag.el+(e.clientY-drag.y)*k*0.5));refresh();});
+['pointerup','pointercancel'].forEach(function(ev){svg.addEventListener(ev,function(){drag=null;svg.classList.remove('drag');});});
+refresh();
+})();
+</script>
+</body>
+</html>
