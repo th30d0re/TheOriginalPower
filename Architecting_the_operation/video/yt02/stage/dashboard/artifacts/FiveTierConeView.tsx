@@ -917,8 +917,7 @@ function ExpandedView({
             onChange={v => onUpdateModel?.({al: v})}
           />
           <p style={{margin: '0 0 4px', fontSize: 12, lineHeight: 1.4, color: cInk2}}>
-            At 1.00, P, F, and I sit on E’s sightline, so the four nodes eclipse. Lower it to pull the
-            tiers off their common axis and watch E come into view from below.
+            {`At 1.00, P, F, and I sit on E’s sightline, so the four nodes eclipse.${interactive ? ' Lower it to pull the tiers off their common axis and watch E come into view from below.' : ''}`}
           </p>
 
           <div

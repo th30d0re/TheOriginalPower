@@ -570,7 +570,7 @@ function ExpandedPhaseCoherence({
   if (isPastTau) {
     verdict = 'Coherent: the phases are aligned enough that the summed signal reaches τ. This is the kernel-threat condition.';
   } else if (inputs.K === 0) {
-    verdict = `Kernel-safe. The injected offsets cancel ${Math.round(100 * phi)}% of the solidarity signal, and nothing pulls the phases back together. Raise K to model deliberate alignment.`;
+    verdict = `Kernel-safe. The injected offsets cancel ${Math.round(100 * phi)}% of the solidarity signal, and nothing pulls the phases back together.${interactive ? ' Raise K to model deliberate alignment.' : ''}`;
   } else {
     verdict = `Kernel-safe for now: alignment K pulls the phases together, and the Engine re-scatters them ${
       inputs.eng ? 'every ' + inputs.eng + ' years' : 'only when an axis switches on'

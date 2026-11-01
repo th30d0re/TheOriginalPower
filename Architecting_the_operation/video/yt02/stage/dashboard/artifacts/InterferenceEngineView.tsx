@@ -1084,20 +1084,28 @@ function ExpandedView({
             <div style={{display: 'flex', flexWrap: 'wrap', gap: 6, margin: '4px 0'}}>
               {LOGS.filter(x => x.phi && x.rho).map(x => {
                 const isSel = x.n === model.log;
+                const chipStyle: React.CSSProperties = {
+                  font: `500 12px ${tokens.fonts.sans}`,
+                  padding: '4px 8px',
+                  borderRadius: 5,
+                  border: `1px solid ${isSel ? color('color/fill/gold') : color('color/line/chart')}`,
+                  background: color('color/surface/well'),
+                  color: isSel ? color('color/fill/gold') : color('color/text/primary'),
+                  cursor: interactive ? 'pointer' : 'default',
+                };
+                if (!interactive) {
+                  return (
+                    <span key={x.n} style={{...chipStyle, display: 'inline-block'}} title={x.title}>
+                      {x.n}
+                    </span>
+                  );
+                }
                 return (
                   <button
                     key={x.n}
                     type="button"
-                    onClick={() => interactive && onSelectLog?.(x.n)}
-                    style={{
-                      font: `500 12px ${tokens.fonts.sans}`,
-                      padding: '4px 8px',
-                      borderRadius: 5,
-                      border: `1px solid ${isSel ? color('color/fill/gold') : color('color/line/chart')}`,
-                      background: color('color/surface/well'),
-                      color: isSel ? color('color/fill/gold') : color('color/text/primary'),
-                      cursor: interactive ? 'pointer' : 'default',
-                    }}
+                    onClick={() => onSelectLog?.(x.n)}
+                    style={chipStyle}
                     title={x.title}
                   >
                     {x.n}

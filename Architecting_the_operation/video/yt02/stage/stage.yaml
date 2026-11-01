@@ -19,6 +19,14 @@ shots:
       i9: {ms: 4400}
       i10: {ms: 4850}
       i11: {ms: 5300}
+      # Tray cells (rail order, quick sweep to stay inside R-01).
+      i12: {ms: 5380}
+      i13: {ms: 5460}
+      i14: {ms: 5540}
+      i15: {ms: 5620}
+      i16: {ms: 5700}
+      i17: {ms: 5780}
+      i18: {ms: 5860}
   - shot_id: R-02
     turn_id: r2
     scene: Dashboard1486

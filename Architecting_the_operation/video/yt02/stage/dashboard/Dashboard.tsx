@@ -15,14 +15,30 @@ import {Compass} from './instruments/compass';
 import {ActivePatch} from './instruments/active-patch';
 import {Variables} from './instruments/variables';
 import {WagePlane} from './instruments/wage-plane';
-import {BacklashOscillator} from './instruments/backlash-oscillator';
 import {ExecutingFunction} from './instruments/executing-function';
 import {PolicyTicker} from './instruments/policy-ticker';
+import {TrayArtifact} from './instruments/tray-artifact';
+import {TRAY_INSTRUMENTS,trayCellRect} from './trayLayout';
+import type {DashboardInstrumentProps} from './DashboardInstrument';
 const frame=layout.frames['dash 1486 · compact'];
 const compassRailItem={name:'compass',instrument:'Compass',mode:'compact',x:36,y:483.8,w:196,h:96};
-export const rail=[...frame.leftStack.panels,compassRailItem,...frame.rightStack.panels,...frame.bottomStrips];
+// Right stack: Active Patch and Variables keep their slots; Executing Function and Policy
+// ticker move up from the removed bottom strips as compact one-line panels. The Wage plane
+// and Backlash oscillator move to the tray.
+const rightStackPanels=[
+ {...frame.rightStack.panels[0]},
+ {...frame.rightStack.panels[1]},
+ {name:'executing function',instrument:'Executing Function',mode:'compact',x:1671,y:228,w:211,h:40},
+ {name:'policy ticker',instrument:'Policy ticker',mode:'compact',x:1671,y:276,w:211,h:40},
+];
+const trayPanels=TRAY_INSTRUMENTS.map((instrument,i)=>{const r=trayCellRect(i);return {name:instrument.toLowerCase(),instrument,mode:'compact',x:r.x,y:r.y,w:r.width,h:r.height};});
+export const rail=[...frame.leftStack.panels,compassRailItem,...rightStackPanels,...trayPanels];
 export const slugs=rail.map(p=>p.instrument.toLowerCase().replaceAll(' ','-'));
-const components=[EraClock,SystemStress,Capital,Interference,Compass,ActivePatch,Variables,WagePlane,BacklashOscillator,ExecutingFunction,PolicyTicker];
+const trayArtifactFor=(name:string)=>{
+ const TrayCell=(props:DashboardInstrumentProps)=><TrayArtifact name={name} {...props}/>;
+ return TrayCell;
+};
+const components=[EraClock,SystemStress,Capital,Interference,Compass,ActivePatch,Variables,ExecutingFunction,PolicyTicker,WagePlane,...TRAY_INSTRUMENTS.slice(1).map(trayArtifactFor)];
 export type DashboardProps={era?:number;world?:boolean;camera?:Camera;worldOpacity?:number;routeDraw?:number;dim?:number;lights?:number[];empty?:boolean;modes?:Record<string,InstrumentMode>;modeTimelines?:Record<string,ModeKey[]>};
 type InteractiveState={interactiveModes?:Record<string,InstrumentMode|null>;onModeChange?:(slug:string,mode:InstrumentMode|null)=>void};
 export function Dashboard(props:DashboardProps) {
@@ -37,11 +53,11 @@ function DashboardFrame({era=2,world=false,camera,worldOpacity=0,routeDraw=1,dim
  const ms=useStageMs();
  if(era!==2) throw new Error(`YT02 handoff supplies instrument content for log 2; received ${era}`);
  const activeCamera=camera??(world?worldCamera:iberiaCamera);
- const heights=rail.map((p,i)=>{const d=instruments[p.instrument];if(p.instrument==='Wage plane')return d.compact.h;const forced=interactiveModes[slugs[i]]??modes[slugs[i]],weights=resolveMode(ms,modeTimelines[slugs[i]]??[]).weights;return forced?d[forced].h:weights.compact*d.compact.h+weights.expanded*d.expanded.h+weights.settings*d.settings.h;});
+ const heights=rail.map((p,i)=>{const d=instruments[p.instrument];const forced=interactiveModes[slugs[i]]??modes[slugs[i]],weights=resolveMode(ms,modeTimelines[slugs[i]]??[]).weights;return forced?d[forced].h:weights.compact*d.compact.h+weights.expanded*d.expanded.h+weights.settings*d.settings.h;});
  return <TokensContext.Provider value={Tokens}><CameraContext.Provider value={activeCamera}><div className="yt02-dashboard" style={{position:'absolute',inset:0,width:1920,height:1080,background:Tokens.colours.background,overflow:'hidden'}}><style>{'.yt02-dashboard sub { vertical-align: baseline; position: relative; top: .2em; }'}</style><EraStrip activeLog={era} empty={empty}/><DashboardMap world={world} camera={camera} worldOpacity={worldOpacity} draw={routeDraw}/>{rail.map((p,i)=>{
  const Component=components[i],start=i<5?0:5;
  const y=i<9?96+heights.slice(start,i).reduce((sum,h)=>sum+h+8,0):p.y;
- const grow:InstrumentGrow=i<5?'right-down':i<9?'left-down':i===9?'right-up':'left-up';
+ const grow:InstrumentGrow=i<5?'right-down':i<9?'left-down':'centre';
  return <Component onInteractiveModeChange={onModeChange?mode=>onModeChange(slugs[i],mode):undefined} key={slugs[i]} anchor={{x:i>=5?p.x+p.w-instruments[p.instrument].compact.w:p.x,y,width:instruments[p.instrument].compact.w,height:instruments[p.instrument].compact.h}} grow={grow} mode={modes[slugs[i]]} modeTimeline={modeTimelines[slugs[i]]} opacity={lights[i]??dim}/>;
  })}<CompactBorder/></div></CameraContext.Provider></TokensContext.Provider>;
 }

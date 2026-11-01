@@ -1,0 +1,80 @@
+episode: yt02_dashboard_tray_review
+outputs: review_tray
+fps: 30
+width: 1920
+height: 1080
+shots:
+  # The 1486 dashboard flies in and settles with the tray visible, then each tray instrument
+  # expands in turn (~2.5 s), and the Interference Engine also opens its settings via the gear.
+  - shot_id: T-01
+    turn_id: t0
+    scene: Dashboard1486
+    instance: dashboard
+    cues:
+      fly: {ms: 0}
+      route: {ms: 0}
+  - shot_id: T-02
+    turn_id: t1
+    scene: Dashboard1486
+    instance: dashboard
+    cues:
+      'expand:wage-plane': {ms: 0}
+      'collapse:wage-plane': {ms: 2100}
+  - shot_id: T-03
+    turn_id: t2
+    scene: Dashboard1486
+    instance: dashboard
+    cues:
+      'expand:interference-engine': {ms: 0}
+      'settings:interference-engine': {ms: 1800}
+      'reexpand:interference-engine': {ms: 3400}
+      'collapse:interference-engine': {ms: 4100}
+  - shot_id: T-04
+    turn_id: t3
+    scene: Dashboard1486
+    instance: dashboard
+    cues:
+      'expand:phase-coherence': {ms: 0}
+      'collapse:phase-coherence': {ms: 2100}
+  - shot_id: T-05
+    turn_id: t4
+    scene: Dashboard1486
+    instance: dashboard
+    cues:
+      'expand:five-tier-cone': {ms: 0}
+      'collapse:five-tier-cone': {ms: 2100}
+  - shot_id: T-06
+    turn_id: t5
+    scene: Dashboard1486
+    instance: dashboard
+    cues:
+      'expand:compounding-ledger': {ms: 0}
+      'collapse:compounding-ledger': {ms: 2100}
+  - shot_id: T-07
+    turn_id: t6
+    scene: Dashboard1486
+    instance: dashboard
+    cues:
+      'expand:backlash-oscillator': {ms: 0}
+      'collapse:backlash-oscillator': {ms: 2100}
+  - shot_id: T-08
+    turn_id: t7
+    scene: Dashboard1486
+    instance: dashboard
+    cues:
+      'expand:thyristor-latch': {ms: 0}
+      'collapse:thyristor-latch': {ms: 2100}
+  - shot_id: T-09
+    turn_id: t8
+    scene: Dashboard1486
+    instance: dashboard
+    cues:
+      'expand:ac-extraction-meter': {ms: 0}
+      'collapse:ac-extraction-meter': {ms: 2100}
+  - shot_id: T-10
+    turn_id: t9
+    scene: Dashboard1486
+    instance: dashboard
+    cues:
+      'expand:snubber-circuit': {ms: 0}
+      'collapse:snubber-circuit': {ms: 2100}

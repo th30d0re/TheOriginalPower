@@ -1339,9 +1339,11 @@ function ComplexWagePlaneFrame({
           </svg>
 
           {/* Caption and legend under the plane */}
-          <p style={{margin: '6px 0 0', fontSize: 12.5, color: c.ink2}}>
-            Click or drag in the plane to move W. The arrow keys also work. Hold Shift for larger steps.
-          </p>
+          {interactive && (
+            <p style={{margin: '6px 0 0', fontSize: 12.5, color: c.ink2}}>
+              Click or drag in the plane to move W. The arrow keys also work. Hold Shift for larger steps.
+            </p>
+          )}
           <ul
             style={{
               display: 'flex',
@@ -2067,6 +2069,153 @@ export function WagePlaneSettings({
             ))}
           </div>
         </div>
+      </div>
+    </div>
+  );
+}
+
+// Tray compact readout (177×80 content box), catalogue-suggested: mini plane with the hatched
+// τ zone, clock ring and the orange W arrow at the log-2 state; clock reading and ρ_τ = M/τ
+// beside it, the era year under them. Driven by the same model as the expanded card.
+export function WagePlaneCompact({era}: {era?: {log: number; title?: string}}) {
+  const year = (era?.title ?? '').split(' ')[0] || '';
+  const rd = wageReadings(wageModel);
+  const rho = rd.M / wageModel.tau;
+  const id = useId().replace(/:/g, '');
+  const S = 56;
+  const pad = 4;
+  const H = 24;
+  const k = 0.24;
+  const C = pad + H;
+  const zone = dangerPolygon(wageModel)
+    .map(([u, v]) => `${(C + u * k).toFixed(2)},${(C + v * k).toFixed(2)}`)
+    .join(' ');
+  const hatch: number[] = [];
+  for (let d = -2 * H; d <= 2 * H; d += 6) hatch.push(d);
+  const tip = C + 60 * k;
+  const ah = 5;
+  return (
+    <div
+      data-artifact="Complex Wage Plane"
+      style={{position: 'absolute', inset: 0, fontFamily: Tokens.fonts.sans}}
+    >
+      <div
+        style={{
+          position: 'absolute',
+          left: 0,
+          top: 1,
+          fontFamily: Tokens.fonts.mono,
+          fontSize: 11,
+          letterSpacing: 0.6,
+          color: color('color/text/dim'),
+        }}
+      >
+        WAGE PLANE
+      </div>
+      <svg
+        width={S}
+        height={S}
+        viewBox={`0 0 ${S} ${S}`}
+        role="img"
+        aria-label="Mini wage plane with the τ zone and the W vector"
+        style={{position: 'absolute', left: 0, top: 21, display: 'block', overflow: 'visible'}}
+      >
+        <defs>
+          <clipPath id={`${id}-zone`}>
+            <polygon points={zone} />
+          </clipPath>
+        </defs>
+        <rect
+          x={pad}
+          y={pad}
+          width={2 * H}
+          height={2 * H}
+          fill={color('color/surface/well')}
+          stroke={color('color/line/hairline-strong')}
+          strokeWidth={1}
+        />
+        <polygon points={zone} fill={color('color/fill/red-faint')} />
+        <g clipPath={`url(#${id}-zone)`}>
+          {hatch.map(d => (
+            <line
+              key={d}
+              x1={C - H}
+              y1={C - H + d}
+              x2={C + H}
+              y2={C + H + d}
+              stroke={color('color/line/hatch')}
+              strokeWidth={0.8}
+            />
+          ))}
+        </g>
+        <circle
+          cx={C}
+          cy={C}
+          r={H}
+          fill="none"
+          stroke={color('color/line/hairline-strong')}
+          strokeWidth={0.8}
+          strokeDasharray="2 3"
+        />
+        <path
+          d={`M${C - H} ${C} H${C + H} M${C} ${C - H} V${C + H}`}
+          stroke={color('color/line/wire')}
+          strokeWidth={1}
+        />
+        <line
+          x1={C}
+          y1={C}
+          x2={tip - ah * 0.6}
+          y2={C}
+          stroke={color('color/fill/accent')}
+          strokeWidth={2}
+          strokeLinecap="round"
+        />
+        <path d={`M${tip} ${C} l${-ah} ${-ah / 2} v${ah} Z`} fill={color('color/fill/accent')} />
+      </svg>
+      <div
+        style={{
+          position: 'absolute',
+          left: 64,
+          top: 24,
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 3,
+        }}
+      >
+        <span
+          style={{
+            fontFamily: Tokens.fonts.mono,
+            fontSize: 16,
+            fontWeight: 600,
+            lineHeight: '18px',
+            color: color('color/text/accent'),
+            fontVariantNumeric: 'tabular-nums',
+          }}
+        >
+          {rd.clock}
+        </span>
+        <span
+          style={{
+            fontFamily: Tokens.fonts.mono,
+            fontSize: 10.5,
+            lineHeight: '13px',
+            color: rho >= 1 ? '#FF7A6B' : color('color/text/primary'),
+            fontVariantNumeric: 'tabular-nums',
+          }}
+        >
+          <MathText>{'ρ_τ'}</MathText> {rho.toFixed(2)}
+        </span>
+        <span
+          style={{
+            fontFamily: Tokens.fonts.mono,
+            fontSize: 9,
+            lineHeight: '11px',
+            color: color('color/text/muted'),
+          }}
+        >
+          {year}
+        </span>
       </div>
     </div>
   );

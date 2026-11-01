@@ -1,13 +1,55 @@
-import React,{useContext} from 'react';
+import React,{useContext,type JSX} from 'react';
 import {ClockContext, GlassPanel, MathText, createProjection, type Camera, type InstrumentMode} from '@stage';
 import spec from '../handoff/spec.json';
 import map from '../handoff/map.json';
+import eras from '../../dashboard_eras.json';
 import {color, Tokens} from '../tokens';
 import {iberiaCamera} from './mapGeometry';
-import {ComplexWagePlane, WagePlaneSettings, WAGE_EXPANDED_BOX} from './ComplexWagePlane';
+import {ComplexWagePlane, WagePlaneSettings, WagePlaneCompact, WAGE_EXPANDED_BOX} from './ComplexWagePlane';
 import {Graphic} from './Graphics';
+import {TRAY_CELL_WIDTH, TRAY} from './trayLayout';
+import {InterferenceEngineView} from './artifacts/InterferenceEngineView';
+import {PhaseCoherenceView} from './artifacts/PhaseCoherenceView';
+import {FiveTierConeView} from './artifacts/FiveTierConeView';
+import {CompoundingLedgerView} from './artifacts/CompoundingLedgerView';
+import {BacklashOscillatorView} from './artifacts/BacklashOscillatorView';
+import {ThyristorLatchView} from './artifacts/ThyristorLatchView';
+import {AcExtractionMeterView} from './artifacts/AcExtractionMeterView';
+import {SnubberCircuitView} from './artifacts/SnubberCircuitView';
 
 export const CameraContext = React.createContext<Camera>(iberiaCamera);
+
+// The gear in an expanded tray card switches to the artifact's settings view (and back).
+// The control state lives in the tray instrument frame; PanelContent only renders the chrome.
+export const TrayModeControlContext = React.createContext<((mode: InstrumentMode | null) => void) | null>(null);
+
+export type EraEntry = {log: number; title?: string; fields: Record<string, unknown>};
+export const eraLog2: EraEntry = (eras as unknown as {log: number; title: string; fields: Record<string, unknown>}[]).find(e => e.log === 2)!;
+
+// The eight ported artifact views (tray instruments). The Complex Wage Plane keeps its own
+// fix-pass-3 implementation and is handled separately.
+type ArtifactViewComponent = (props: {mode: InstrumentMode; width: number; height: number; interactive: boolean; era?: EraEntry}) => JSX.Element;
+export const ARTIFACT_VIEWS: Record<string, ArtifactViewComponent> = {
+  'Interference Engine': InterferenceEngineView,
+  'Phase Coherence': PhaseCoherenceView,
+  'Five-Tier Cone': FiveTierConeView,
+  'Compounding Ledger': CompoundingLedgerView,
+  'Backlash oscillator': BacklashOscillatorView,
+  'Thyristor Latch': ThyristorLatchView,
+  'AC Extraction Meter': AcExtractionMeterView,
+  'Snubber Circuit': SnubberCircuitView,
+};
+
+// Tray cells share the dashboard's panel recipe; content boxes follow the port contract:
+// compact 177×80 centred in the cell, expanded/settings 1368×828 inside the 1400×860 card.
+const TRAY_COMPACT_CONTENT = {w: 177, h: 80};
+const TRAY_EXPANDED_CONTENT = {w: 1368, h: 828};
+
+const trayArtifactSpec = {
+  compact: {w: TRAY_CELL_WIDTH, h: TRAY.height},
+  expanded: {w: WAGE_EXPANDED_BOX.width, h: WAGE_EXPANDED_BOX.height},
+  settings: {w: WAGE_EXPANDED_BOX.width, h: WAGE_EXPANDED_BOX.height},
+};
 
 const compassSpec = {
  compact: {w: 196, h: 96, children: []},
@@ -27,6 +69,7 @@ const compassSpec = {
 
 const wagePlaneSpec = {
  ...spec.instruments['Wage plane'],
+ compact: {...spec.instruments['Wage plane'].compact, w: TRAY_CELL_WIDTH, h: TRAY.height},
  expanded: {
   ...spec.instruments['Wage plane'].expanded,
   w: WAGE_EXPANDED_BOX.width,
@@ -39,7 +82,31 @@ const wagePlaneSpec = {
  },
 };
 
-export const instruments: Record<string,any> = {...spec.instruments, 'Wage plane': wagePlaneSpec, Compass: compassSpec};
+// Right-stack compact panels (one line each), replacing the removed bottom strips.
+const executingFunctionSpec = {
+ ...spec.instruments['Executing Function'],
+ compact: {...spec.instruments['Executing Function'].compact, w: 211, h: 40},
+};
+const policyTickerSpec = {
+ ...spec.instruments['Policy ticker'],
+ compact: {...spec.instruments['Policy ticker'].compact, w: 211, h: 40},
+};
+
+export const instruments: Record<string,any> = {
+ ...spec.instruments,
+ 'Wage plane': wagePlaneSpec,
+ 'Backlash oscillator': trayArtifactSpec,
+ 'Executing Function': executingFunctionSpec,
+ 'Policy ticker': policyTickerSpec,
+ Compass: compassSpec,
+ 'Interference Engine': trayArtifactSpec,
+ 'Phase Coherence': trayArtifactSpec,
+ 'Five-Tier Cone': trayArtifactSpec,
+ 'Compounding Ledger': trayArtifactSpec,
+ 'Thyristor Latch': trayArtifactSpec,
+ 'AC Extraction Meter': trayArtifactSpec,
+ 'Snubber Circuit': trayArtifactSpec,
+};
 
 const fontStyle=(f:any):React.CSSProperties=>({fontFamily:f.family,fontSize:f.size,fontWeight:f.style==='Bold'?700:f.style==='Medium'?500:400,fontStyle:f.style==='Italic'?'italic':'normal',letterSpacing:f.letterSpacing_px??0,lineHeight:`${f.lineHeight_px??Math.round(f.size*1.3)}px`});
 const pos=(b:number[]):React.CSSProperties=>({position:'absolute',left:b[0],top:b[1],width:b[2],height:b[3]});
@@ -203,6 +270,25 @@ function CompassWidget({mode}:{mode:'compact'|'expanded'}) {
  </>;
 }
 
+// Right-stack compact one-liners (replacing the removed bottom strips). Verbatim era values;
+// the strip truncates with an ellipsis and the expanded mode shows the full text.
+function ExecutingFunctionCompact() {
+ const text=String(eraLog2.fields.executing_function??'');
+ return <>
+  <div style={{position:'absolute',left:10,top:6,right:10,fontFamily:Tokens.fonts.mono,fontSize:9.5,letterSpacing:0.6,color:color('color/text/dim'),whiteSpace:'nowrap'}}>EXECUTING FUNCTION</div>
+  <div style={{position:'absolute',left:10,top:20,right:10,fontFamily:Tokens.fonts.sans,fontSize:12,lineHeight:'15px',color:color('color/text/primary'),whiteSpace:'nowrap',overflow:'hidden',textOverflow:'ellipsis'}}>{text}</div>
+ </>;
+}
+function PolicyTickerCompact() {
+ const results=(eraLog2.fields.results as string[]|undefined)??[];
+ const latest=results[results.length-1]??'';
+ return <>
+  <div style={{position:'absolute',left:10,top:6,right:10,fontFamily:Tokens.fonts.mono,fontSize:9.5,letterSpacing:0.6,color:color('color/text/dim'),whiteSpace:'nowrap'}}>RESULT</div>
+  <div style={{position:'absolute',left:10,top:21,width:3,height:13,background:color('color/fill/accent'),borderRadius:1}}/>
+  <div style={{position:'absolute',left:19,top:20,right:10,fontFamily:Tokens.fonts.sans,fontSize:12,lineHeight:'15px',color:color('color/text/primary'),whiteSpace:'nowrap',overflow:'hidden',textOverflow:'ellipsis'}}>{latest}</div>
+ </>;
+}
+
 function Nodes({nodes,compact}:{nodes:any[];compact:boolean}) {
  return <>{nodes.map((n,i)=>{
   let own:React.ReactNode;
@@ -226,10 +312,76 @@ function Settings({name,data}:{name:string;data:any}) {
  }:data.content;
  return <><div style={{position:'absolute',left:17.6,top:17.6,width:490,height:28,display:'flex',alignItems:'center',...fontStyle(t.header.title.font),color:color(t.header.title.colour)}}>{content.title}</div><div style={{position:'absolute',...pos(t.header.close.box),border:`1.6px solid ${color('color/line/hairline-strong')}`,borderRadius:6,boxSizing:'border-box',textAlign:'center',fontFamily:Tokens.fonts.mono,fontSize:20,lineHeight:'24px'}}>×</div><div style={{position:'absolute',left:17.6,right:17.6,top:61.6,display:'flex',flexDirection:'column',gap:16}}>{t.rows.map((r,i)=>{const key=['source','units','log'][i],text=content[key];return <div key={key}><div style={{fontFamily:Tokens.fonts.mono,fontSize:12,letterSpacing:.6,lineHeight:'16px',color:color('color/text/muted'),marginBottom:8}}>{r.label}</div><div style={{background:color('color/surface/well'),borderRadius:6,padding:'8px 10px',...fontStyle(r.valueFont),color:color(r.valueColour)}}>{text.includes('_{')?<MathText>{text}</MathText>:text}</div></div>;})}</div></>;
 }
+
+// Gear / close chrome for expanded and settings tray cards. Static divs in the rendered
+// path, buttons on the interactive site; the mode switch goes to TrayModeControlContext.
+export function TrayHeaderControls({mode}:{mode:'expanded'|'settings'}) {
+ const {interactive}=useContext(ClockContext);
+ const select=useContext(TrayModeControlContext);
+ const gearTarget:InstrumentMode=mode==='settings'?'expanded':'settings';
+ const gearAction=mode==='settings'?'open-expanded':'open-settings';
+ const gearLabel=mode==='settings'?'Back to the expanded view':'Open settings';
+ const closeLabel=mode==='settings'?'Close settings':'Close expanded view';
+ const boxStyle:React.CSSProperties={
+  width:30,
+  height:30,
+  borderRadius:6,
+  border:`1.6px solid ${color('color/line/hairline-strong')}`,
+  background:color('color/surface/1'),
+  color:color('color/text/primary'),
+  fontFamily:Tokens.fonts.mono,
+  fontSize:17,
+  lineHeight:'26px',
+  textAlign:'center',
+  boxSizing:'border-box',
+  cursor:interactive?'pointer':'default',
+  padding:0,
+  display:'inline-flex',
+  alignItems:'center',
+  justifyContent:'center',
+ };
+ const wrapStyle:React.CSSProperties={position:'absolute',top:14,right:18,display:'flex',gap:8,alignItems:'center',zIndex:5};
+ if(interactive) {
+  return <div style={wrapStyle}>
+   <button type="button" data-control="gear" data-action={gearAction} aria-label={gearLabel} onClick={e=>{e.stopPropagation();select?.(gearTarget);}} style={{...boxStyle,borderColor:mode==='settings'?color('color/fill/accent'):color('color/line/hairline-strong'),color:mode==='settings'?color('color/fill/accent'):color('color/text/primary')}}>⚙</button>
+   <button type="button" data-control="close" data-action="close" aria-label={closeLabel} onClick={e=>{e.stopPropagation();select?.('compact');}} style={boxStyle}>×</button>
+  </div>;
+ }
+ return <div style={wrapStyle}>
+  <div data-control="gear" data-action={gearAction} aria-label={gearLabel} style={{...boxStyle,borderColor:mode==='settings'?color('color/fill/accent'):color('color/line/hairline-strong'),color:mode==='settings'?color('color/fill/accent'):color('color/text/primary')}}>⚙</div>
+  <div data-control="close" data-action="close" aria-label={closeLabel} style={boxStyle}>×</div>
+ </div>;
+}
+
+function ArtifactContent({name,mode,interactive}:{name:string;mode:InstrumentMode;interactive:boolean}) {
+ const View=ARTIFACT_VIEWS[name];
+ if(mode==='compact') {
+  const left=(TRAY_CELL_WIDTH-TRAY_COMPACT_CONTENT.w)/2;
+  const top=(TRAY.height-TRAY_COMPACT_CONTENT.h)/2;
+  return <div data-artifact={name} style={{position:'absolute',left,top,width:TRAY_COMPACT_CONTENT.w,height:TRAY_COMPACT_CONTENT.h}}>
+   <View mode="compact" width={TRAY_COMPACT_CONTENT.w} height={TRAY_COMPACT_CONTENT.h} interactive={interactive} era={eraLog2}/>
+  </div>;
+ }
+ return <div data-artifact={name} style={{position:'absolute',left:16,top:16,width:TRAY_EXPANDED_CONTENT.w,height:TRAY_EXPANDED_CONTENT.h}}>
+  <View mode={mode} width={TRAY_EXPANDED_CONTENT.w} height={TRAY_EXPANDED_CONTENT.h} interactive={interactive} era={eraLog2}/>
+ </div>;
+}
+
 export function PanelContent({name,mode}:{name:string;mode:InstrumentMode}) {
  const {interactive}=useContext(ClockContext);
  const data=instruments[name][mode],compact=mode==='compact';
  const renderFill=`linear-gradient(${color('color/fill/panel-wash')}, ${color('color/fill/panel-wash')}), ${color('color/fill/panel-render')}`;
  const fill=interactive?color(compact?'color/fill/panel-wash':'color/fill/glass'):renderFill;
- return <GlassPanel fill={fill} blur={interactive&&compact?6:0} padding={0} radius={compact?8:10} style={{backdropFilter:interactive&&compact?'blur(6px)':'none',WebkitBackdropFilter:interactive&&compact?'blur(6px)':'none',position:'relative',width:data.w,height:data.h,border:'none',boxShadow:`inset 0 0 0 ${compact?1:1.6}px ${color('color/line/hairline')}`,color:color('color/text/primary')}}>{name==='Compass'&&(mode==='compact'||mode==='expanded')?<CompassWidget mode={mode}/>:name==='Wage plane'&&mode==='expanded'?<ComplexWagePlane/>:name==='Wage plane'&&mode==='settings'?<WagePlaneSettings data={data}/>:mode==='settings'?<Settings name={name} data={data}/>:<Nodes nodes={data.children} compact={compact}/>}</GlassPanel>;
+ const isArtifact=name in ARTIFACT_VIEWS;
+ return <GlassPanel fill={fill} blur={interactive&&compact?6:0} padding={0} radius={compact?8:10} style={{backdropFilter:interactive&&compact?'blur(6px)':'none',WebkitBackdropFilter:interactive&&compact?'blur(6px)':'none',position:'relative',width:data.w,height:data.h,border:'none',boxShadow:`inset 0 0 0 ${compact?1:1.6}px ${color('color/line/hairline')}`,color:color('color/text/primary')}}>{
+ isArtifact?<ArtifactContent name={name} mode={mode} interactive={interactive}/>
+ :name==='Wage plane'&&mode==='compact'?<WagePlaneCompact era={eraLog2}/>
+ :name==='Wage plane'&&mode==='expanded'?<ComplexWagePlane/>
+ :name==='Wage plane'&&mode==='settings'?<WagePlaneSettings data={data}/>
+ :name==='Compass'&&(mode==='compact'||mode==='expanded')?<CompassWidget mode={mode}/>
+ :name==='Executing Function'&&mode==='compact'?<ExecutingFunctionCompact/>
+ :name==='Policy ticker'&&mode==='compact'?<PolicyTickerCompact/>
+ :mode==='settings'?<Settings name={name} data={data}/>
+ :<Nodes nodes={data.children} compact={compact}/>
+ }{isArtifact&&mode!=='compact'&&<TrayHeaderControls mode={mode}/>}</GlassPanel>;
 }

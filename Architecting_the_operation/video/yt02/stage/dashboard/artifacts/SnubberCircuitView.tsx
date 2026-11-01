@@ -572,24 +572,31 @@ function ExpandedView({
         <div style={{display: 'flex', flexWrap: 'wrap', gap: 6, margin: '2px 0 6px'}}>
           {PRESETS.map((p, idx) => {
             const isSelected = inputs.preset === idx;
+            const chipStyle: React.CSSProperties = {
+              fontFamily: tokens.fonts.sans ?? Tokens.fonts.sans,
+              fontSize: 12,
+              fontWeight: 500,
+              padding: '5px 9px',
+              borderRadius: 6,
+              border: `1px solid ${isSelected ? goldColor : color('color/line/chart')}`,
+              background: color('color/surface/well'),
+              color: isSelected ? goldColor : color('color/text/primary'),
+              cursor: interactive ? 'pointer' : 'default',
+              opacity: !interactive && !isSelected ? 0.65 : 1,
+            };
+            if (!interactive) {
+              return (
+                <span key={p.name} style={{...chipStyle, display: 'inline-block'}}>
+                  {p.name}
+                </span>
+              );
+            }
             return (
               <button
                 key={p.name}
                 type="button"
-                disabled={!interactive}
                 onClick={() => onSelectPreset?.(idx)}
-                style={{
-                  fontFamily: tokens.fonts.sans ?? Tokens.fonts.sans,
-                  fontSize: 12,
-                  fontWeight: 500,
-                  padding: '5px 9px',
-                  borderRadius: 6,
-                  border: `1px solid ${isSelected ? goldColor : color('color/line/chart')}`,
-                  background: color('color/surface/well'),
-                  color: isSelected ? goldColor : color('color/text/primary'),
-                  cursor: interactive ? 'pointer' : 'default',
-                  opacity: !interactive && !isSelected ? 0.65 : 1,
-                }}
+                style={chipStyle}
               >
                 {p.name}
               </button>
