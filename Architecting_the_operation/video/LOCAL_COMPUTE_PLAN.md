@@ -112,6 +112,28 @@ possible in scriptCast's Stage player:
 - **Training data.** Each note and override is a labelled example of the author's taste, ready for
   the critic fine-tune in Phase 3.
 
+### 3.5 The model to copy: scriptCast's audio verification loop
+
+The audio side of this pipeline already solved the same problem: a stochastic generator whose
+output looks valid and is wrong. A TTS clip can have the right length and the wrong words. It
+solved it offline, on-device, and with no human listening to every clip. The video loop should
+copy its structure:
+
+| Audio (shipped in scriptCast) | Video (to build) |
+|---|---|
+| Ground truth is the script text | Ground truth is the scene spec: strings, cue times, required elements, layout |
+| `scriptcast-verify`: transcribe every clip with on-device Whisper and compare it to the script | Read every cue still back with on-device OCR (Apple Vision, or the tesseract already in videolab). Compare it to the spec: right text, right beat, absent before its word |
+| Two stages: whisper-tiny sweeps everything; a larger model re-checks only what was flagged | Two stages: an OCR and pixel sweep over every cue frame; the VLM on the Ultra re-checks only what was flagged |
+| `scriptcast-stress`: a phoneme recognizer catches what Whisper cannot (wrong stress on a correct word) | A pixel check catches what OCR cannot. It measures ink inside each declared container (empty or crowded boxes) and in the border band (text on the frame), from rendered pixels, independent of declared text |
+| `check_render_outliers`: a duration model flags clips that run long | A density model flags frames whose text or ink density is far from the approved minutes |
+| `scriptcast-repair`: regenerate only failing turns, re-check only those, up to `--max-passes` | Rebuild only failing scenes in the **same builder session**, re-check only those, with a pass cap |
+| `scriptcast-calibrate`: judge by the rate across several takes, never one take | Calibrate critic thresholds against the author's accepted and rejected frames |
+| "Read the printed pairs; do not regenerate on the number alone" | The select-and-annotate review in §3.4. The author sees the flagged frames with the critic's reasons |
+
+The principle carries over. Every check verifies **content against ground truth** by reading the
+output back with an independent model, and a specialised second check covers the blind spot of
+the first. Local models do the reading; hosted models only handle escalations.
+
 ## 4. Agent dispatch rules (applies to hosted and local models)
 
 - **Resume, never cold-start, for follow-ups.** The session that built a scene fixes it. Every CLI
