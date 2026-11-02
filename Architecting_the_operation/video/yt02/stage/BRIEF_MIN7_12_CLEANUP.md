@@ -134,3 +134,20 @@ your report to `FINDINGS_MIN7_12_CLEANUP_EH.md`, not `FINDINGS_MIN7_12_CLEANUP.m
   "ATTITUDE RECORD", "ANTIPATHY RECORD", "BEHAVIORAL RECORD", "Three canonical constructs…",
   "Complete specification of…", "CHAPTER 2 · SECTION TRANSITION", "LITERATURE BOUNDARY ·
   INTERPERSONAL TO STRUCTURAL HANDOFF".
+
+## Rule amendment (orchestrator, after the first F/G run)
+
+The first runs showed that two layout rules, applied at every sampled frame, push filler text
+into the picture. Replace them in your checks:
+
+1. **Vertical span (70%):** assert it only at each scene's **end frame**, and at turn ends inside
+   multi-turn scenes. A beat that shows only a question or a title card is a valid layout.
+2. **Card fit (≤40 px slack):**
+   - Assert it only for citation cards, definition cards and term blocks.
+   - Measure content as the union of the text boxes **and** the declared marks and shapes inside
+     the card. A card that holds a drawing is full.
+   - Plain panels around a drawing are exempt.
+3. **Word budget:** at most 30 on-screen words per settled beat, source line excluded. Hidden
+   labels are unmounted, never left at opacity 0, so they do not count.
+4. **Failure reporting:** make each check collect every failure before it exits, so one run shows
+   the whole list.
