@@ -7,11 +7,11 @@ import {EntryRail, SenseCard, type RailSlotSpec} from './EntryRail';
 const enter = (ms:number, at:number, duration=460) => cubicOut(progress(ms, at, at + duration));
 
 const PHRASES = [
-  {cue:'t7Prejudice', text:'individual prejudice'},
-  {cue:'t7Hostility', text:', hostility,'},
-  {cue:'t7Discrimination', text:' or discrimination'},
-  {cue:'t7Person', text:' directed against another person'},
-  {cue:'t7Race', text:' on the basis of race or ethnicity.'},
+  {cue:'t7Prejudice', text:'individual prejudice,'},
+  {cue:'t7Hostility', text:'hostility,'},
+  {cue:'t7Discrimination', text:'or discrimination'},
+  {cue:'t7Person', text:'directed against another person'},
+  {cue:'t7Race', text:'on the basis of race or ethnicity.'},
 ] as const;
 
 const ARROW_LABELS = [
@@ -50,10 +50,10 @@ export function SenseOne({segment}:SceneProps) {
     <EntryRail slots={slots} enter={openP}/>
     <SenseCard title="Sense 1" enter={openP}>
       <div data-definition="sense-1" style={{position:'absolute', left:40, top:116, width:1240, fontSize:38, lineHeight:1.55}}>
-        {PHRASES.map(({cue:name, text}) => {
+        {PHRASES.map(({cue:name, text}, index) => {
           const at = cue[name].at;
           const p = enter(ms, at, 380);
-          return ms >= at && <span key={name} data-phrase={name} style={{display:'inline-block', whiteSpace:'pre-wrap', opacity:p, transform:`translateY(${10*(1-p)}px)`}}>{text}</span>;
+          return ms >= at && <React.Fragment key={name}>{index>0 && ' '}<span data-phrase={name} style={{opacity:p}}>{text}</span></React.Fragment>;
         })}
       </div>
       <svg style={{position:'absolute', left:40, top:300}} width="1240" height="410" viewBox="0 0 1240 410" aria-label="One person acting on another">

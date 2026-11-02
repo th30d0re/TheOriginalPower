@@ -8,8 +8,8 @@ const enter = (ms:number, at:number, duration=460) => cubicOut(progress(ms, at, 
 
 const PHRASES = [
   {cue:'t9Institutional', text:'institutional or systemic practices'},
-  {cue:'t9Unequal', text:' that produce unequal outcomes'},
-  {cue:'t9Categories', text:' across racial categories.'},
+  {cue:'t9Unequal', text:'that produce unequal outcomes'},
+  {cue:'t9Categories', text:'across racial categories.'},
 ] as const;
 
 // Institution network (left) and outcome meter (right) inside the card's svg
@@ -47,10 +47,10 @@ export function SenseThree({segment}:SceneProps) {
     <EntryRail slots={slots} enter={openP}/>
     <SenseCard title="Sense 3" enter={openP} dashed={1-solidP}>
       <div data-definition="sense-3" style={{position:'absolute', left:40, top:116, width:1240, fontSize:36, lineHeight:1.5}}>
-        {PHRASES.map(({cue:name, text}) => {
+        {PHRASES.map(({cue:name, text}, index) => {
           const at = cue[name].at;
           const p = enter(ms, at, 380);
-          return ms >= at && <span key={name} data-phrase={name} style={{display:'inline-block', whiteSpace:'pre-wrap', opacity:p, transform:`translateY(${10*(1-p)}px)`}}>{text}</span>;
+          return ms >= at && <React.Fragment key={name}>{index>0 && ' '}<span data-phrase={name} style={{opacity:p}}>{text}</span></React.Fragment>;
         })}
       </div>
       <svg style={{position:'absolute', left:40, top:300}} width="1240" height="410" viewBox="0 0 1240 410" aria-label="A system of practices and unequal outcomes">

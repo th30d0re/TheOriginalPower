@@ -11,6 +11,7 @@ const enter = (ms:number, at:number, duration=460) => cubicOut(progress(ms, at, 
 // Exported for the ratio assert in tools/check_minute_two.tsx.
 export const FIGURE_LAYOUT = {
   plate:{x:440, y:110, w:1440, h:890},
+  finalPlateX:240,
   captionY:178, sourceY:210, ruleY:222, headerY:328,
   leftCenter:760, rightCenter:1560,
   layerY:[352,466,580], layerH:92,
@@ -34,6 +35,10 @@ const LAYERS_RIGHT = [
 ] as const;
 
 export const FIGURE_FLIGHT = {dur:800, stagger:220, railTextFade:320, layerTextDelay:40, layerTextFade:240} as const;
+
+export function figurePlateShift(ms:number, displaysAt:number, orderAt:number) {
+  return (FIGURE_LAYOUT.finalPlateX-FIGURE_LAYOUT.plate.x)*cubicInOut(progress(ms, displaysAt, orderAt+600));
+}
 
 export function figureFlightState(ms:number, displaysAt:number, index:number) {
   const t0 = displaysAt + index*FIGURE_FLIGHT.stagger;
@@ -63,6 +68,8 @@ export function FigureTwoThree({segment}:SceneProps) {
   const noteP = enter(ms, cue.t10Pyramid.at + 250, 400);
   const labelP = 1 - progress(ms, cue.t10Displays.at, cue.t10Displays.at + 400);
   const flights = [0,1,2].map(i => figureFlightState(ms, cue.t10Displays.at, i));
+  const plateShiftX = figurePlateShift(ms, cue.t10Displays.at, cue.t10Order.at);
+  const targetCenter = F.leftCenter + plateShiftX;
   const bracketLeft = F.bracket.startLeft + (F.leftCenter-F.layerWidths[0]/2-F.bracket.finalPad-F.bracket.startLeft)*taperP;
   const bracketRight = F.bracket.startRight + (F.leftCenter+F.layerWidths[0]/2+F.bracket.finalPad-F.bracket.startRight)*taperP;
   const bracketBottomLeftX = F.bracket.startLeft + (F.leftCenter-F.bracket.startLeft)*taperP;
@@ -72,7 +79,8 @@ export function FigureTwoThree({segment}:SceneProps) {
     <SceneBorder segment={segment}/>
     {ms >= cue.t10Figure.at && <>
       <svg style={{position:'absolute', inset:0}} width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" aria-hidden="true">
-        <rect data-plate="true" x={F.plate.x} y={F.plate.y} width={F.plate.w} height={F.plate.h} stroke={color('color/line/hairline')} strokeWidth={1} pathLength={1} strokeDasharray="1" strokeDashoffset={1-plateP}/>
+        <g transform={`translate(${plateShiftX} 0)`}>
+        <rect data-plate="true" data-plate-left={F.plate.x+plateShiftX} data-plate-right={F.plate.x+plateShiftX+F.plate.w} x={F.plate.x} y={F.plate.y} width={F.plate.w} height={F.plate.h} stroke={color('color/line/hairline')} strokeWidth={1} pathLength={1} strokeDasharray="1" strokeDashoffset={1-plateP}/>
         <line x1={F.plate.x+40} y1={F.ruleY} x2={F.plate.x+F.plate.w-40} y2={F.ruleY} stroke={color('color/line/hairline')} strokeWidth={1} opacity={captionP}/>
         <g data-right-column="true" opacity={.25*dimP}>
           <text x={F.rightCenter} y={F.headerY} textAnchor="middle" fontFamily="IBM Plex Sans" fontWeight={700} fontSize={26} fill={color('color/text/primary')}>Correct Hierarchy</text>
@@ -96,15 +104,16 @@ export function FigureTwoThree({segment}:SceneProps) {
         {columnP>0 && <path data-column-bracket="true" data-bracket-left={bracketLeft} data-bracket-right={bracketRight} d={`M ${bracketLeft} ${F.bracket.startTop} L ${bracketBottomLeftX} ${bracketBottomY} L ${bracketBottomRightX} ${bracketBottomY} L ${bracketRight} ${F.bracket.startTop} Z`} stroke={color('color/fill/gold')} strokeWidth={3} pathLength={1} strokeDasharray="1" strokeDashoffset={1-bracketP}/>}
         {traceP>0 && <path data-pyramid-outline="true" d={`M ${F.pyramid.leftX} ${F.pyramid.topY} L ${F.pyramid.apexX} ${F.pyramid.apexY} L ${F.pyramid.rightX} ${F.pyramid.topY} Z`} stroke={color('color/line/hairline-strong')} strokeWidth={2} pathLength={1} strokeDasharray="1" strokeDashoffset={1-traceP}/>}
         {noteP>0 && <text x={F.leftCenter} y={F.noteY} textAnchor="middle" fontFamily="IBM Plex Sans" fontSize={22} fill={color('color/marker/race')} opacity={noteP}>↑ buried, rarely referenced</text>}
+        </g>
       </svg>
-      <div data-caption="true" style={{position:'absolute', left:F.plate.x, width:F.plate.w, top:150, textAlign:'center', font:'500 28px "IBM Plex Mono"', letterSpacing:2, color:color('color/text/primary'), opacity:captionP}}>Figure 2.3 · Inverting the Definitional Hierarchy</div>
-      {ms >= cue.t10Chapter.at && <div data-source-line="true" style={{position:'absolute', left:F.plate.x, width:F.plate.w, top:188, textAlign:'center', font:'400 20px "IBM Plex Mono"', color:color('color/text/muted'), opacity:sourceP}}>The Original Power, Chapter 2</div>}
+      <div data-caption="true" style={{position:'absolute', left:F.plate.x+plateShiftX, width:F.plate.w, top:150, textAlign:'center', font:'500 28px "IBM Plex Mono"', letterSpacing:2, color:color('color/text/primary'), opacity:captionP}}>Figure 2.3 · Inverting the Definitional Hierarchy</div>
+      {ms >= cue.t10Chapter.at && <div data-source-line="true" style={{position:'absolute', left:F.plate.x+plateShiftX, width:F.plate.w, top:188, textAlign:'center', font:'400 20px "IBM Plex Mono"', color:color('color/text/muted'), opacity:sourceP}}>The Original Power, Chapter 2</div>}
       <div data-rail-label="true" style={{position:'absolute', left:RAIL.x, top:RAIL.labelY, font:'400 20px "IBM Plex Mono"', lineHeight:1.4, color:color('color/text/muted'), opacity:labelP}}>
         {RAIL_LABEL_LINES.map(line => <div key={line}>{line}</div>)}
       </div>
       {flights.map(({p, railTextOpacity, layerTextOpacity}, i) => {
         const w = RAIL.w + (F.landW - RAIL.w)*p + (F.layerWidths[i]-F.landW)*taperP;
-        const cx = (RAIL.x + RAIL.w/2) + (F.leftCenter - (RAIL.x + RAIL.w/2))*p;
+        const cx = (RAIL.x + RAIL.w/2) + (targetCenter - (RAIL.x + RAIL.w/2))*p;
         const y = RAIL.slotY[i] + (F.layerY[i]-RAIL.slotY[i])*p;
         const h = RAIL.slotH + (F.layerH-RAIL.slotH)*p;
         const layer = LAYERS_LEFT[i];

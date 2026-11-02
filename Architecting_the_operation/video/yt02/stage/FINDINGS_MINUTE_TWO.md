@@ -316,3 +316,81 @@ site output: /tmp/yt02-minute-two-fix1-site.HxkBNU
 Vite emitted its existing chunk-size warning. The scoped diff contains the three sense scenes,
 `FigureTwoThree.tsx`, `tools/check_minute_two.tsx`, and this findings section. The compiled plan
 remained byte-identical. All listed external dirty paths remained untouched.
+
+## Fix pass 2
+
+Model: GPT-5 Codex
+
+### Fixes
+
+1. **Definition line starts.** `SenseOne`, `SenseTwo`, and `SenseThree` now use inline phrase
+   spans whose strings begin with visible characters. A plain text-node space separates every
+   adjacent pair. Browser whitespace collapsing preserves one mid-line space and removes a space
+   at a wrapped line start. The exact-sentence checks remain active. The checker also verifies
+   every fragment string and every separator in the rendered markup.
+2. **FigureTwoThree centering.** The plate moves from x = 440 to x = 240 between `t10Displays`
+   and `t10Order + 600 ms`. Its final 1440 px width leaves equal 240 px margins in the 1920 px
+   frame. Captions, diagram geometry, brackets, labels, and flight targets follow the same easing
+   displacement. Each rail frame interpolates toward the moving left-column center.
+3. **Flight hand-off regression.** The ten samples from `t10Displays` through `t10Pyramid` use
+   the moving target center. Every sampled rail-text and layer-text pair clears the intersection
+   test whenever both opacities exceed 0.05.
+
+The pass used deterministic server-rendered markup, static geometry checks, plan compilation,
+and the site build. Chromium stayed closed. No video or frame render ran.
+
+### Check output tails
+
+#### Episode TypeScript
+
+```text
+exit 0; no diagnostics
+```
+
+#### Minute-two checker
+
+```text
+PASS: 44 minute-two frames rendered in two fresh processes; all markup hashes match.
+PASS: 44 cue-derived frames; exact definition spacing through plain text-node separators, opaque node masking, non-crossing network wires, moving-target flight text hand-off across ten samples, centered final plate, tapered gold outline, scene contracts, hook policy, underscore policy, and interaction-hint policy verified; rail x 120–420 clear of card x 480; Figure 2.3 layer widths 598 / 483 / 368 px in the ratio 5.2 : 4.2 : 3.2.
+```
+
+#### First-minute checker
+
+```text
+PASS: 43 first-minute frames rendered in two fresh processes; all markup hashes match.
+PASS: 43 cue-derived frames; five scene contracts, manuscript strings, real subscripts, hook policy, underscore policy, and interaction-hint policy verified; fix-pass-1 geometry: DictionaryEntry gutter x 985 clear of panel edge 965 with chain at 1050; WhyLadder header/column aligned at x 240; LiteratureStack boundary y 780 and elbow connectors clear of all block text boxes.
+```
+
+#### RoadmapBoot checker
+
+```text
+PASS: 17 RoadmapBoot frames rendered in two fresh Node processes with identical markup; state/effect/reducer/ref hooks trap on invocation.
+PASS: RoadmapBoot renders 17 deterministic frames; 13 labels land on their cues and are absent before; console box 580–1340 × 150–790 clears stacks (317 / 1671) and tray (944); panels 12, 9, 14 light on items 06, 09, 10 with wires; item11 sweep complete by +1300 (map opacity 1); item12 pulse present; console collapsed by roadmapEnd+600; era strip empty throughout; Era clock on standby and map outline-only ("1486", "LISBON", "PORTUGAL", "RUNTIME LOG" absent from every frame); no literal underscores; no interaction hints.
+```
+
+#### Dashboard checker
+
+```text
+PASS: 19 frames plus all 24 tray mode renders and 3 moved Wage plane mode renders repeated in fresh Node processes; identical stack/tray markup and whole-Dashboard hashes; state/effect/reducer hooks trap on invocation.
+PASS: Equal Earth route 1296 samples / 0 land hits, bounds 540.14..821.86 × 84.29..843.36 above tray y=860; Portugal height 102.18px mainland (136.7px with 1486 Moroccan enclave); 18 deterministic timeline states; 5-panel right stack + 8-cell tray geometry; all 24 tray modes plus 3 Wage plane modes; 18 declared layouts ≤ 828px; no literal underscore text; shared 601-point Thyristor traces; Backlash static active preset; gear-only settings; no rendered interaction hints; 75 polities with 16 non-colliding labels.
+```
+
+#### Plan compile
+
+```text
+wrote Architecting_the_operation/video/yt02/stage/ov/stage_plan.json
+plan byte-identical: d283f60db13e898c4835c16275cff7be29c5fe41f63dc38b3f720243bb32e35d
+```
+
+#### Site build
+
+```text
+✓ 276 modules transformed.
+assets/index-CKU5yo3i.js  1,884.74 kB │ gzip: 549.98 kB
+✓ built in 1.13s
+site output: /tmp/yt02-minute-two-fix2-site.OZnmFc
+```
+
+Vite emitted its existing chunk-size warning. The scoped diff contains the three sense scenes,
+`FigureTwoThree.tsx`, `tools/check_minute_two.tsx`, and this Fix pass 2 section. The compiled plan
+remained byte-identical. The external dirty paths retained their original state.

@@ -8,7 +8,7 @@ import {EntryOpen, ENTRY_OPEN_LAYOUT} from '../minutetwo/EntryOpen';
 import {SenseOne} from '../minutetwo/SenseOne';
 import {SenseTwo} from '../minutetwo/SenseTwo';
 import {SenseThree, SENSE3_METER, SENSE3_NETWORK} from '../minutetwo/SenseThree';
-import {FigureTwoThree, FIGURE_LAYOUT, figureFlightState} from '../minutetwo/FigureTwoThree';
+import {FigureTwoThree, FIGURE_LAYOUT, figureFlightState, figurePlateShift} from '../minutetwo/FigureTwoThree';
 import {RAIL, CARD} from '../minutetwo/EntryRail';
 
 const plan=JSON.parse(fs.readFileSync(new URL('../ov/stage_plan.json',import.meta.url),'utf8')) as StagePlan;
@@ -46,6 +46,18 @@ function definitionText(html:string,id:string){
   const match=html.match(new RegExp(`<div data-definition="${id}"[^>]*>([\\s\\S]*?)<\\/div>`));
   assert.ok(match,`missing definition block ${id}`);
   return match[1].replace(/<[^>]+>/g,'').replaceAll('&amp;','&').replaceAll('&quot;','"').replaceAll('&#x27;',"'").replaceAll('&#39;',"'").replaceAll('&gt;','>').replaceAll('&lt;','<');
+}
+function assertDefinitionSeparators(html:string,id:string,expectedCount:number){
+  const block=html.match(new RegExp(`<div data-definition="${id}"[^>]*>([\\s\\S]*?)<\\/div>`));
+  assert.ok(block,`missing definition block ${id}`);
+  const spans=[...block[1].matchAll(/<span data-phrase="[^"]+"[^>]*>([^<]*)<\/span>/g)];
+  assert.equal(spans.length,expectedCount,`${id} has an unexpected fragment count`);
+  for(const span of spans)assert.ok(!/^\s/.test(span[1]),`${id} fragment begins with whitespace: “${span[1]}”`);
+  for(let i=1;i<spans.length;i++){
+    const previous=spans[i-1],current=spans[i];
+    const separator:string=block[1].slice(previous.index!+previous[0].length,current.index!);
+    assert.equal(separator,' ',`${id} fragments ${i} and ${i+1} are not separated by one plain text-node space`);
+  }
 }
 type Box={x:number;y:number;w:number;h:number};
 const boxesIntersect=(a:Box,b:Box)=>a.x<b.x+b.w&&a.x+a.w>b.x&&a.y<b.y+b.h&&a.y+a.h>b.y;
@@ -113,6 +125,7 @@ if(process.env.MINUTE_TWO_SNAPSHOT==='1'){
   {
     const lastCue=byKind('SenseOne').find(frame=>frame.kind==='t7Race')!;
     assert.equal(definitionText(lastCue.html,'sense-1'),'individual prejudice, hostility, or discrimination directed against another person on the basis of race or ethnicity.','SenseOne definition has a missing or doubled space at t7Race+700');
+    assertDefinitionSeparators(lastCue.html,'sense-1',5);
   }
 
   // Turn 8 · SenseTwo
@@ -126,6 +139,7 @@ if(process.env.MINUTE_TWO_SNAPSHOT==='1'){
   {
     const lastCue=byKind('SenseTwo').find(frame=>frame.kind==='t8Determine')!;
     assert.equal(definitionText(lastCue.html,'sense-2'),'an ideological belief or doctrine holding that built-in biological differences among human racial groups determine cultural or intellectual achievement.','SenseTwo definition has a missing or doubled space at t8Determine+700');
+    assertDefinitionSeparators(lastCue.html,'sense-2',5);
   }
 
   // Turn 9 · SenseThree
@@ -142,6 +156,7 @@ if(process.env.MINUTE_TWO_SNAPSHOT==='1'){
   {
     const lastCue=byKind('SenseThree').find(frame=>frame.kind==='t9Categories')!;
     assert.equal(definitionText(lastCue.html,'sense-3'),'institutional or systemic practices that produce unequal outcomes across racial categories.','SenseThree definition has a missing or doubled space at t9Categories+700');
+    assertDefinitionSeparators(lastCue.html,'sense-3',3);
     const end=byKind('SenseThree').find(frame=>frame.kind==='end')!;
     for(const unit of ['one person','a belief','a system'])assert.ok(end.html.includes(`data-rail-unit="${unit}"`),`SenseThree end rail is missing unit tag "${unit}"`);
   }
@@ -170,6 +185,11 @@ if(process.env.MINUTE_TWO_SNAPSHOT==='1'){
     assert.ok(Math.abs(k1/k0-1)<.01&&Math.abs(k2/k0-1)<.01,`Figure 2.3 layer widths ${w0}/${w1}/${w2} are not in the ratio 5.2 : 4.2 : 3.2 within 1%`);
     assert.ok(FIGURE_LAYOUT.leftCenter-FIGURE_LAYOUT.layerWidths[0]/2>=FIGURE_LAYOUT.plate.x,'Figure 2.3 left column leaves the plate');
     assert.ok(FIGURE_LAYOUT.rightCenter+FIGURE_LAYOUT.layerWidths[0]/2<=FIGURE_LAYOUT.plate.x+FIGURE_LAYOUT.plate.w,'Figure 2.3 right column leaves the plate');
+    const settleAt=plan.cues.t10Order+600;
+    const shift=figurePlateShift(settleAt,plan.cues.t10Displays,plan.cues.t10Order);
+    const leftMargin=FIGURE_LAYOUT.plate.x+shift;
+    const rightMargin=1920-(leftMargin+FIGURE_LAYOUT.plate.w);
+    assert.ok(Math.abs(leftMargin-rightMargin)<=8,`Figure 2.3 final plate margins differ: ${leftMargin}px left and ${rightMargin}px right`);
   }
   assert.ok(ENTRY_OPEN_LAYOUT.slot3BottomY>ENTRY_OPEN_LAYOUT.slotY[2]&&ENTRY_OPEN_LAYOUT.slot3BottomY+ENTRY_OPEN_LAYOUT.slotH<=ENTRY_OPEN_LAYOUT.panelH,'EntryOpen slot 3 does not slide to the panel bottom');
   assert.ok(SENSE3_METER.barAH>=2*SENSE3_METER.barBH,'SenseThree outcome bars are not clearly unequal');
@@ -207,8 +227,10 @@ if(process.env.MINUTE_TWO_SNAPSHOT==='1'){
     for(let sample=0;sample<10;sample++){
       const ms=start+(end-start)*sample/9;
       const states=[0,1,2].map(i=>figureFlightState(ms,start,i));
+      const plateShiftX=figurePlateShift(ms,start,plan.cues.t10Order);
       const boxes=states.map((state,i)=>{
-        const cx=RAIL.x+RAIL.w/2+(FIGURE_LAYOUT.leftCenter-(RAIL.x+RAIL.w/2))*state.p;
+        const targetCenter=FIGURE_LAYOUT.leftCenter+plateShiftX;
+        const cx=RAIL.x+RAIL.w/2+(targetCenter-(RAIL.x+RAIL.w/2))*state.p;
         const y=RAIL.slotY[i]+(FIGURE_LAYOUT.layerY[i]-RAIL.slotY[i])*state.p;
         const w=RAIL.w+(FIGURE_LAYOUT.landW-RAIL.w)*state.p;
         const h=RAIL.slotH+(FIGURE_LAYOUT.layerH-RAIL.slotH)*state.p;
@@ -230,5 +252,5 @@ if(process.env.MINUTE_TWO_SNAPSHOT==='1'){
     assert.ok(pyramidHtml.includes(`data-bracket-left="${finalLeft}"`)&&pyramidHtml.includes(`data-bracket-right="${finalRight}"`),'FigureTwoThree gold outline does not hug the tapered pyramid');
   }
 
-  console.log(`PASS: ${rendered.length} cue-derived frames; exact definition spacing, opaque node masking, non-crossing network wires, flight text hand-off, tapered gold outline, scene contracts, hook policy, underscore policy, and interaction-hint policy verified; rail x ${RAIL.x}–${RAIL.x+RAIL.w} clear of card x ${CARD.x}; Figure 2.3 layer widths ${FIGURE_LAYOUT.layerWidths.join(' / ')} px in the ratio 5.2 : 4.2 : 3.2.`);
+  console.log(`PASS: ${rendered.length} cue-derived frames; exact definition spacing through plain text-node separators, opaque node masking, non-crossing network wires, moving-target flight text hand-off across ten samples, centered final plate, tapered gold outline, scene contracts, hook policy, underscore policy, and interaction-hint policy verified; rail x ${RAIL.x}–${RAIL.x+RAIL.w} clear of card x ${CARD.x}; Figure 2.3 layer widths ${FIGURE_LAYOUT.layerWidths.join(' / ')} px in the ratio 5.2 : 4.2 : 3.2.`);
 }

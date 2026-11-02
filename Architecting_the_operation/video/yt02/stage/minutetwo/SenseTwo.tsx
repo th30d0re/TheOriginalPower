@@ -8,10 +8,10 @@ const enter = (ms:number, at:number, duration=460) => cubicOut(progress(ms, at, 
 
 const PHRASES = [
   {cue:'t8Ideological', text:'an ideological belief'},
-  {cue:'t8Doctrine', text:' or doctrine'},
-  {cue:'t8Biological', text:' holding that built-in biological differences'},
-  {cue:'t8Groups', text:' among human racial groups'},
-  {cue:'t8Determine', text:' determine cultural or intellectual achievement.'},
+  {cue:'t8Doctrine', text:'or doctrine'},
+  {cue:'t8Biological', text:'holding that built-in biological differences'},
+  {cue:'t8Groups', text:'among human racial groups'},
+  {cue:'t8Determine', text:'determine cultural or intellectual achievement.'},
 ] as const;
 
 // Doctrine chain diagram inside the card's svg (viewBox 1240 × 410): the claimed chain sits
@@ -45,10 +45,10 @@ export function SenseTwo({segment}:SceneProps) {
     <EntryRail slots={slots} enter={openP}/>
     <SenseCard title="Sense 2" enter={openP}>
       <div data-definition="sense-2" style={{position:'absolute', left:40, top:116, width:1240, fontSize:36, lineHeight:1.5}}>
-        {PHRASES.map(({cue:name, text}) => {
+        {PHRASES.map(({cue:name, text}, index) => {
           const at = cue[name].at;
           const p = enter(ms, at, 380);
-          return ms >= at && <span key={name} data-phrase={name} style={{display:'inline-block', whiteSpace:'pre-wrap', opacity:p, transform:`translateY(${10*(1-p)}px)`}}>{text}</span>;
+          return ms >= at && <React.Fragment key={name}>{index>0 && ' '}<span data-phrase={name} style={{opacity:p}}>{text}</span></React.Fragment>;
         })}
       </div>
       <svg style={{position:'absolute', left:40, top:300}} width="1240" height="410" viewBox="0 0 1240 410" aria-label="The doctrine's claimed chain">
