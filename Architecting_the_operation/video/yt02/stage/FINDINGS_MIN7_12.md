@@ -887,3 +887,96 @@ Execute fix pass 1 for minutes 7–12 Package H based on frame reviews of `min7_
 
 - Video rendering was not run locally because Chromium video rendering is performed by the orchestrator. Visual validation relies on static layout audits, deterministic static markup comparisons, and automated fill-ratio checks.
 
+## Package G
+
+Checkpoint: `e8cdff6`
+
+### What was requested
+
+Build `STAGE: PACKAGE G` (turns 47–54, shots `S00-47`..`S00-54`, scenes 7–10 of `STORYBOARD_MIN7_12.md`) under `Architecting_the_operation/video/yt02/stage/min7_12/g/`, and write `tools/check_min7_12_g.{tsx,mjs}` enforcing all storyboard requirements plus the polish invariants from `BRIEF_MIN7_12_FIX_F.md`, `BRIEF_MIN7_12_FIX_EH.md`, and `BRIEF_MIN7_12_POLISH.md` from the start:
+
+1. Replace the four Package G scene stubs (`AllportAntipathy.tsx`, `ExceptionFence.tsx`, `FiskeHandoff.tsx`, `ThreePartTaxonomy.tsx`), preserving their export names and implementing every cue, beat, string, and sweep in `STORYBOARD_MIN7_12.md` §4 (Scenes 7–10).
+2. Enforce the six polish invariants across all sampled frames and write them as assertions in `tools/check_min7_12_g.tsx`:
+   - Every box holds its content: zero empty frames (`inside.length > 0`) and `areaFillRatio >= 0.18 || verticalSpanRatio >= 0.45`.
+   - Faded labels and replaced turn views are completely absent from the DOM.
+   - No turn numbers (`/\bturn \d+\b/i`) or internal labels on screen.
+   - Compositions span at least ~70% of the safe-area height (`>= 658 px`, verified even when excluding `source-line`).
+   - Cards fit their text tightly (`frame.h - (maxTextY - minTextY) <= 40 px`).
+   - 28 px body / 20 px label font-size floor enforced on declared `data-fit` metadata.
+
+### How I built it
+
+1. **`AllportAntipathy.tsx` (`min7_12/g/AllportAntipathy.tsx`, turns 47–49, shots `S00-47`..`S00-49`)**:
+   - Turns 47–48 (`!isTurn49`, `data-turns="47-48"`):
+     - Left column: `definition-card` (`{x: 110, y: 150, w: 690, h: 356}`, 36 px text-span slack) presenting `PREJUDICE`, Allport's paraphrased definition (`antipathy grounded in a faulty and inflexible generalization, felt internally or expressed outwardly`, 30 px sans), `Allport 1954, p. 9`, and `(paraphrased)`; paired with `observer-panel` (`{x: 110, y: 560, w: 690, h: 320}`, 36 px slack) holding an ingroup `PersonMark`, internal affective heart socket (`FELT INTERNALLY` at `t47Felt`), and outward channel (`EXPRESSED OUTWARDLY` at `t47Expressed`).
+     - Right column: `template-panel` (`{x: 900, y: 150, w: 880, h: 356}`, 36 px slack) opening at `t47Antipathy` (`ANTIPATHY`), lighting `ERROR MARKER · FAULTY GROUP BELIEF` at `t47Faulty`, locking gold rigid braces (`INFLEXIBLE · RIGID BRACES LOCKED`) at `t47Inflexible`, and stamping four outgroup `PersonMark` cells (`FAULTY GENERALIZATION`) at `t47Generalization`; paired with `target-field` (`{x: 900, y: 560, w: 880, h: 320}`, 36 px slack) opening at `t47Expressed` with an outward connecting vector, splitting into `GROUP AS A WHOLE` (`t48Hostility` / `t48Whole`) and `INDIVIDUAL MEMBER` (`t48Specifically`), and drawing the dashed membership connector (`TARGETED BECAUSE OF GROUP MEMBERSHIP`) at `t48Belongs`.
+   - Turn 49 (`isTurn49`, `data-turn="49"`):
+     - Completely removes `data-turns="47-48"` from the DOM at `t49Bias` and mounts a full-frame two-tier comparison (`y: 115..875`, vertical span `760 px`): top comparison banner (`turn49-header-panel`), left `bias-block` (`BIAS · MENTAL LEAN` with tilt-needle meter), right `prejudice-block` (`PREJUDICE · EMOTIONAL HOSTILITY` at `t49Prejudice` / `t49Emotional`), lower-left `bias-baseline-card` (`STARTING EXPECTATION`), and lower-right `stereotype-gate` (`RIGID SWEEPING STEREOTYPE` at `t49Rigid`, `GROUP TEMPLATE LOCKED IN GATE` at `t49Stereotype`, stopped contrary-evidence tokens at `t49Resists`, and `CONTRARY EVIDENCE RESISTED` at `t49Evidence`).
+
+2. **`ExceptionFence.tsx` (`min7_12/g/ExceptionFence.tsx`, turns 50–51, shots `S00-50`..`S00-51`)**:
+   - Constructed a continuous four-zone pipeline spanning `y: 115..860` (`745 px` vertical span):
+     - Top source tab (`allport-tab`, `ALLPORT 1954`) and left `habitual-template` (`{x: 120, y: 210, w: 570, h: 650}`, 36 px slack) displaying `HABITUAL PREJUDICE` and `GROUP STEREOTYPE` (`t50Habitual`) with six outgroup `PersonMark` figures inside a closed template loop.
+     - Center-right `update-gate` (`{x: 1160, y: 290, w: 160, h: 510}`, 36 px slack) closing at `t50Resist` (`UPDATE GATE CLOSED`, `BLOCKS REVISION` at `t50Facts`), and center-left `facts-lane` (`{x: 740, y: 260, w: 380, h: 540}`, 36 px slack) arriving at `t50Correcting` (`CORRECTION ATTEMPT`) and intensifying at `t50Strong` (`STRONG CONTRADICTORY FACTS`).
+     - At `t51Contradicts`, the sixth member departs the group loop (`departing-member-mark`) and is routed at `t51Fences` / `t51Exception` into the upper-right `exception-cell` (`{x: 1390, y: 210, w: 400, h: 300}`, 36 px slack, `EXCEPTION FENCE`, `LONE EXCEPTION`), while the lower-right `retained-field` (`{x: 1390, y: 560, w: 400, h: 300}`, 36 px slack) locks at `t51Keeping` / `t51Stereotype` / `t51Intact` (`STEREOTYPE RETAINED`, `INTACT · ZERO REVISION`).
+
+3. **`FiskeHandoff.tsx` (`min7_12/g/FiskeHandoff.tsx`, turns 52–53, shots `S00-52`..`S00-53`)**:
+   - Turn 52 (`!isTurn53`, `data-turn="52"`):
+     - Renders `QuestionHeader` (`Why does Fiske treat discrimination as its own category beside stereotyping and prejudice?` at `y: 105..245`), `fiske-socket` (`SOURCE SOCKET`, `FISKE · 3-PART` at `t52Fiske`), three component cards across `y: 310..650` (`thought-card` `STEREOTYPING · INTERNAL THOUGHT` at `t52Stereotyping`, `feeling-card` `PREJUDICE · INTERNAL FEELING` at `t52Prejudice`, and `action-card` `DISCRIMINATION` / `3 · DISCRIMINATION` / `OBSERVABLE OUTWARD ACTION` at `t52Discrimination`, `t52Third`, `t52Action`), horizontal boundary-crossing arrows at `t52Moves`, and `locus-summary-panel` (`{x: 150, y: 710, w: 1620, h: 165}`, 36 px slack), spanning `y: 105..875` (`770 px`).
+   - Turn 53 (`isTurn53`, `data-turn="53"`):
+     - Completely removes `data-turn="52"` from the DOM at `t53Susan` and presents `t53-banner` (`{x: 330, y: 120, w: 1260, h: 74}`), `citation-card` built to its final `1260 × 336` geometry from `t53Susan` (`SUSAN T. FISKE`, `1998` at `t53NinetyEight`, `Stereotyping, Prejudice, and Discrimination` at `t53Handbook`, and progressive edition line `The Handbook of Social Psychology · 4th ed. · vol. 2 · pp. 357–411` across `t53Fourth`, `t53Volume`, `t53Pages`), and the three-socket motif (`motif-socket-1/2/3`, `y: 610..870`, 36 px slack), spanning `y: 120..870` (`750 px`).
+
+4. **`ThreePartTaxonomy.tsx` (`min7_12/g/ThreePartTaxonomy.tsx`, turn 54, shot `S00-54`)**:
+   - Renders `taxonomy-frame` (`{x: 120, y: 130, w: 1680, h: 660}`, 36 px slack) with header `FISKE’S THREE-PART MODEL` and `Fiske 1998`, containing three module slots (`L.modules`, `500 × 484` at `y: 234..718`, 36 px slack).
+   - Each dashed `data-module-socket="1|2|3"` is completely removed from the DOM when its corresponding module lands (`t54Stereotyping` → `STEREOTYPING`, `COGNITIVE` at `t54Cognitive`, `THINKING PART` at `t54Thinking`; `t54Prejudice` → `PREJUDICE`, `AFFECTIVE` at `t54Affective`, `FEELING PART` at `t54Feeling`; `t54Discrimination` → `DISCRIMINATION`, `BEHAVIORAL` at `t54Behavioral`, `ACTING PART` at `t54Acting`).
+   - Draws `taxonomy-bracket-line` beneath the frame at `t54Three` and updates `taxonomy-bracket-label` to `THREE DISTINCT PSYCHOLOGICAL PARTS` at `t54Acting`, spanning `y: 130..884` (`754 px`).
+
+5. **`tools/check_min7_12_g.{tsx,mjs}`**:
+   - Models two-process determinism (`MIN7_12_G_SNAPSHOT`) across 243 frames (segment start, every cue + 700 ms, 500 ms grid, and segment end).
+   - Verifies hook policy (`useCue`, `useStageMs` only), no literal underscores, no interaction hints, no internal turn numbers (`!/\bturn \d+\b/i`), storyboard beat string presence/absence, and complete DOM removal of replaced views/sockets.
+   - Asserts `checkFillAndCardFitAndSizes` on every sampled frame (`areaFillRatio >= 0.18 || verticalSpanRatio >= 0.45`, `f.h - textSpan <= 40 px`, `fit.size >= 20 px` for all labels and `fit.size >= 28 px` for all body/title/header/question text) and `checkCompositionSpan` (`span >= 658 px` excluding `source-line`) on every cue frame and end frame.
+
+### Challenges encountered
+
+1. **Pre-cue substring leakage in outer taxonomy footer**:
+   - In `ThreePartTaxonomy.tsx`, an initial outer frame footer string `COGNITIVE · AFFECTIVE · BEHAVIORAL DIMENSIONS OF BIAS` rendered at `t54Divides`, which caused the `beat()` pre-cue absence check for `t54Cognitive` to find `"COGNITIVE"` before `t54Cognitive`.
+   - Changing `taxonomy-footer` to `SOCIAL PSYCHOLOGY TAXONOMY · THREE COMPONENT SLOTS` preserved the 36 px card-fit margin on `taxonomy-frame` while keeping `COGNITIVE`, `AFFECTIVE`, and `BEHAVIORAL` strictly absent before their spoken cues.
+2. **Multi-line glyph advance heights at 28 px body floor**:
+   - `auditLayout` flagged multi-line wrapping heights on 28 px body copy inside compact cards (`template-body`, `target-body`, `facts-lane-body`, `exception-cell-body`, `retained-body`, `cite-summary`, `motif-socket-*-body`, `socket-*-body`, and `*-body` in `ThreePartTaxonomy`), as well as 2-line wrapping on the long `Fiske · The Handbook of Social Psychology · 4th ed. · vol. 2 · pp. 357–411` source line in a 28 px tall box.
+   - Compacted adjacent SVG mark heights by 12–20 px to allocate 72–120 px vertical height to the 28 px body text boxes, and gave `source` `{x: 116, y: 944, w: 750, h: 52}` (staying left of the `x: 880..1040` bottom notch zone and within `y <= 1010`), resolving all 5,555 audited box checks to zero violations.
+
+### Next ideas (6 Ideas)
+
+1. Promote `checkFillAndCardFitAndSizes` and `checkCompositionSpan` into a shared audit helper in `tools/layout_audit.ts` so every package check can call a single unified polish gate.
+2. Create a reusable `TwoColumnTurnSwitch` wrapper in `min7_12/shared/` that enforces DOM unmounting between multi-turn views within a single scene segment.
+3. Add a `TripartiteModuleCard` component in `min7_12/shared/` encapsulating the socket-to-active module transition used in `ThreePartTaxonomy`.
+4. Parameterize `Panel` with an optional top-and-bottom label pair that automatically computes `h = textSpan + 36` to guarantee `<= 40 px` card-fit slack by construction.
+5. Add a static pre-check that scans all cue beat strings for substring overlaps across earlier cues in the same segment.
+6. Build a `GateBarrierMark` shared SVG primitive for stereotype and update-gate scenes (`AllportAntipathy` Turn 49 and `ExceptionFence` Turns 50–51).
+
+### Checks
+
+- Episode TypeScript: `npx --prefix /Users/emmanuel/Documents/Theory/scriptCast-stage/video tsc --noEmit -p Architecting_the_operation/video/yt02/stage` exits 0 with zero diagnostics.
+- `check_min7_12_g` tail:
+  - `PASS: 243 Package G frames rendered in two fresh processes; all markup hashes match.`
+  - `PASS: audit self-test (10 rules); 243 Package G frames (cues + 500 ms grid); layout audit of 5555 declared boxes (safe area, notch zones, text fit, collisions); fill-ratio, card-fit (<= 40 px slack), vertical-span (>= 658 px), and 28/20 px size-floor asserts verified; clean turn transitions, storyboard strings, hook, underscore, internal-turn and interaction-hint policies verified.`
+- `check_first_minute` tail: `PASS: 43 cue-derived frames; five scene contracts, manuscript strings, real subscripts, hook policy, underscore policy, and interaction-hint policy verified; …`
+- `check_roadmap_boot` tail: `PASS: RoadmapBoot renders 17 deterministic frames; 13 labels land on their cues and are absent before; …`
+- `check_minute_two` tail: `PASS: 44 cue-derived frames; exact definition spacing …; Figure 2.3 layer widths 598 / 483 / 368 px in the ratio 5.2 : 4.2 : 3.2.`
+- `check_dashboard` tail: `PASS: Equal Earth route 1296 samples / 0 land hits …; all 24 tray modes plus 3 Wage plane modes; …no rendered interaction hints; 75 polities with 16 non-colliding labels.`
+- `check_min3_7_shared` tail: `PASS: 25 representative shared-component states; eleven component contracts, hook policy, underscore policy, Gaussian curves, … Posterior modes: 0.280460 / 0.499174 / 0.718096.`
+- `check_min3_7_a` tail: `PASS: audit self-test (10 rules); 47 Package A cue-derived frames; 1282 audited boxes; …`
+- `check_min3_7_b` tail: `PASS: audit self-test (10 rules); 43 Package B cue-derived frames; 1146 audited boxes; …`
+- `check_min3_7_c` tail: `PASS: audit self-test (10 rules); 195 Package C frames (cues + 500 ms grid); layout audit of 6799 declared boxes …`
+- `check_min3_7_d` tail: `PASS: audit self-test (10 rules); 211 Package D frames (cues + 500 ms grid); layout audit of 5306 declared boxes over 211 frames …; monotonic posterior sweep 0.2800 → 0.6755 (prior 0.72).`
+- `check_equations` tail: `PASS: 14 equation frames; 111 registered coloured terms; 11 pulse cues peak at cue + 200 ms and rest after 600 ms; Eq. 2.5 and Eq. 2.8a are verbatim with MathText subscripts.`
+- `check_min7_12_shared` tail: `PASS: 25 min7_12-shared states rendered in two fresh processes; all markup hashes match. PASS: audit self-test (10 rules); 25 min7_12 shared-component states; layout audit of 171 declared boxes …`
+- `check_min7_12_e` tail: `PASS: 203 Package E frames rendered in two fresh processes; all markup hashes match. PASS: audit self-test (10 rules); 203 Package E frames (cues + 500 ms grid); layout audit of 3900 declared boxes …`
+- `check_min7_12_f` tail: `PASS: 223 Package F frames rendered in two fresh processes; all markup hashes match. PASS: audit self-test (10 rules); 223 Package F frames (cues + 500 ms grid); layout audit of 3858 declared boxes …`
+- `check_min7_12_h` tail: `PASS: 227 Package H frames rendered in two fresh processes; all markup hashes match. PASS: audit self-test (10 rules); 227 Package H frames (cues + 500 ms grid); layout audit of 5975 declared boxes …`
+- `tools/check_antithesis.py` on all Package G files, checks, and `FINDINGS_MIN7_12.md`: `check-antithesis: no banned constructions found.`
+
+### Unverified remainder
+
+- Chromium browser rendering and MP4 encoding were not run locally, as video rendering is performed by the orchestrator. Visual verification relies on the static layout audit (`5555` declared boxes across `243` frames), two-process deterministic static markup verification, and automated fill-ratio, card-fit, vertical-span, and font-size floor assertions.
+
+
