@@ -7,6 +7,7 @@ import {ClockContext,PlanContext,type StagePlan} from '@stage';
 import {LiteratureHandoff,LITERATURE_HANDOFF_LAYOUT} from '../min3_7/b/LiteratureHandoff';
 import {APAGroupDefinitions,APA_GROUP_LAYOUT,APA_MARKS} from '../min3_7/b/APAGroupDefinitions';
 import {TajfelCitation,TAJFEL_LAYOUT} from '../min3_7/b/TajfelCitation';
+import {auditItems,auditLayout,auditSelfTest} from './layout_audit';
 
 const plan=JSON.parse(fs.readFileSync(new URL('../ov/stage_plan.json',import.meta.url),'utf8')) as StagePlan;
 const sceneComponents={LiteratureHandoff,APAGroupDefinitions,TajfelCitation};
@@ -23,7 +24,7 @@ for(const hook of ['useState','useEffect','useLayoutEffect','useReducer','useRef
   assert.throws(()=>renderToStaticMarkup(<Probe/>),new RegExp(`${hook} reached`));
 }
 
-const sourceFiles=['LiteratureHandoff.tsx','APAGroupDefinitions.tsx','TajfelCitation.tsx'];
+const sourceFiles=['LiteratureHandoff.tsx','APAGroupDefinitions.tsx','TajfelCitation.tsx','AuditVisuals.tsx'];
 for(const file of sourceFiles){
   const source=fs.readFileSync(new URL(`../min3_7/b/${file}`,import.meta.url),'utf8');
   const hooks=[...source.matchAll(/\b(use[A-Z][A-Za-z0-9]*)\b/g)].map(match=>match[1]);
@@ -85,6 +86,15 @@ if(process.env.MIN3_7_B_SNAPSHOT==='1'){
     assert.ok(!interactionHint.test(plain(html)),`${scene} ${kind} renders an interaction hint`);
   }
 
+  const selfTests=auditSelfTest();
+  let auditedItems=0;
+  const violations:string[]=[];
+  for(const {scene,kind,ms,html} of rendered){
+    for(const problem of auditLayout(html))violations.push(`${scene} ${kind} (${ms} ms): ${problem}`);
+    auditedItems+=auditItems(html).length;
+  }
+  assert.deepEqual(violations,[],`Package B layout audit failed:\n${violations.slice(0,80).join('\n')}`);
+
   beat('LiteratureHandoff','t17Social',{text:['ESTABLISHED SOCIAL PSYCHOLOGY'],markup:['data-source-frame="1"','data-source-frame="2"','data-source-frame="3"']});
   beat('LiteratureHandoff','t17Three',{text:['BIAS','PREJUDICE','DISCRIMINATION'],markup:['data-literature-card="BIAS"','data-literature-card="PREJUDICE"','data-literature-card="DISCRIMINATION"']});
   beat('LiteratureHandoff','t17Distinct',{markup:['data-literature-socket="1"','data-literature-socket="2"','data-literature-socket="3"']});
@@ -100,7 +110,7 @@ if(process.env.MIN3_7_B_SNAPSHOT==='1'){
 
   beat('APAGroupDefinitions','t19Baseline',{markup:['data-sorting-field="radial"','data-shared="PersonMark"']});
   const sorted=beat('APAGroupDefinitions','t19Sort',{});
-  assert.ok(sorted.includes('left:480px;top:395px'), 'APAGroupDefinitions center mark has not reached the specified field center');
+  assert.ok(sorted.includes('left:370px;top:250px'), 'APAGroupDefinitions center mark has not reached the specified field center');
   beat('APAGroupDefinitions','t19American',{text:['APA Dictionary of Psychology'],markup:['data-definition-card-wrap="true"']});
   beat('APAGroupDefinitions','t19Ingroup',{text:['INGROUP','a social unit in which a person holds membership or psychological identification','(paraphrased)'],markup:['data-group-boundary="true"']});
   beat('APAGroupDefinitions','t19Membership',{text:['MEMBERSHIP'],markup:['data-membership-token="person-2"']});
@@ -125,8 +135,8 @@ if(process.env.MIN3_7_B_SNAPSHOT==='1'){
   beat('TajfelCitation','t22Formalized',{markup:['data-formalized-rule="true"']});
   beat('TajfelCitation','t22SeventyNine',{text:['1979'],markup:['data-year-medallion="true"']});
   beat('TajfelCitation','t22Social',{text:['AN INTEGRATIVE'],markup:['data-title-block="true"']});
-  beat('TajfelCitation','t22Theory',{text:['AN INTEGRATIVE THEORY OF INTERGROUP CONFLICT']});
-  beat('TajfelCitation','t22Relations',{markup:['data-outgoing-connector="true"']});
+  beat('TajfelCitation','t22Theory',{text:['AN INTEGRATIVE THEORY OF INTERGROUP CONFLICT','SOCIAL IDENTITY THEORY']});
+  beat('TajfelCitation','t22Relations',{text:['in The Social Psychology of Intergroup Relations, ed. Austin & Worchel'],markup:['data-outgoing-connector="true"']});
 
   const canvas={x:0,y:0,w:1920,h:1080};
   assertDisjoint(LITERATURE_HANDOFF_LAYOUT.cards,'LiteratureHandoff source cards');
@@ -134,17 +144,18 @@ if(process.env.MIN3_7_B_SNAPSHOT==='1'){
     assertInside(card,canvas,'LiteratureHandoff card');
     assert.ok(card.y+card.h<LITERATURE_HANDOFF_LAYOUT.disciplineY,'LiteratureHandoff card overlaps its discipline label');
   }
+  assert.ok(LITERATURE_HANDOFF_LAYOUT.socketY+8<LITERATURE_HANDOFF_LAYOUT.disciplineY,'LiteratureHandoff connector dots are not above their discipline labels');
   assert.ok(LITERATURE_HANDOFF_LAYOUT.disciplineY+28<LITERATURE_HANDOFF_LAYOUT.boundary.y,'LiteratureHandoff discipline labels overlap the literature boundary');
   assert.ok(LITERATURE_HANDOFF_LAYOUT.boundary.y<LITERATURE_HANDOFF_LAYOUT.dock.y,'LiteratureHandoff boundary overlaps the book dock');
   assert.ok(LITERATURE_HANDOFF_LAYOUT.dock.y+LITERATURE_HANDOFF_LAYOUT.dock.h<LITERATURE_HANDOFF_LAYOUT.source.y,'LiteratureHandoff dock overlaps the source line');
   assert.ok(!intersects(APA_GROUP_LAYOUT.definition,APA_GROUP_LAYOUT.field),'APA definition card overlaps the sorting field');
   assertInside(APA_GROUP_LAYOUT.definition,canvas,'APA definition card');
   assertInside(APA_GROUP_LAYOUT.field,canvas,'APA sorting field');
-  assertInside(APA_GROUP_LAYOUT.tray,APA_GROUP_LAYOUT.field,'APA allocation tray');
-  assertDisjoint(APA_GROUP_LAYOUT.textBoxes,'APAGroupDefinitions text boxes');
-  assert.equal(APA_GROUP_LAYOUT.field.cx,480,'APA field center x changed');
-  assert.equal(APA_GROUP_LAYOUT.field.cy,395,'APA field center y changed');
-  assert.equal(APA_GROUP_LAYOUT.field.r,285,'APA group boundary radius changed');
+  assertInside(APA_GROUP_LAYOUT.tray,canvas,'APA allocation tray');
+  assert.ok(APA_GROUP_LAYOUT.field.y+APA_GROUP_LAYOUT.field.h<APA_GROUP_LAYOUT.tray.y,'APA allocation tray does not have its own area below the field');
+  assert.equal(APA_GROUP_LAYOUT.field.cx,370,'APA field center x changed');
+  assert.equal(APA_GROUP_LAYOUT.field.cy,250,'APA field center y changed');
+  assert.equal(APA_GROUP_LAYOUT.field.r,215,'APA group boundary radius changed');
   assert.equal(APA_MARKS.length,21,'APA field mark count changed');
   assert.ok(!intersects(TAJFEL_LAYOUT.names,TAJFEL_LAYOUT.year),'Tajfel names overlap the year medallion');
   assert.ok(!intersects(TAJFEL_LAYOUT.names,TAJFEL_LAYOUT.title),'Tajfel names overlap the title block');
@@ -152,6 +163,26 @@ if(process.env.MIN3_7_B_SNAPSHOT==='1'){
   assertInside(TAJFEL_LAYOUT.names,TAJFEL_LAYOUT.plate,'Tajfel names line');
   assertInside(TAJFEL_LAYOUT.year,TAJFEL_LAYOUT.plate,'Tajfel year medallion');
   assertInside(TAJFEL_LAYOUT.title,TAJFEL_LAYOUT.plate,'Tajfel title block');
+  assertInside(TAJFEL_LAYOUT.theoryTag,TAJFEL_LAYOUT.plate,'Tajfel theory tag');
+  assertInside(TAJFEL_LAYOUT.relations,TAJFEL_LAYOUT.plate,'Tajfel relations source');
+  assert.ok(TAJFEL_LAYOUT.connector.x2<=1840,'Tajfel connector exceeds x 1840');
 
-  console.log(`PASS: ${rendered.length} Package B cue-derived frames; storyboard strings, deterministic geometry, 8/4 derived allocation, hook policy, underscore policy, interaction-hint policy, and text-box layout verified.`);
+  const literatureItems=auditItems(byKind('LiteratureHandoff').find(frame=>frame.kind==='t17Psychology')!.html).filter(item=>item.opacity>.05);
+  for(let index=1;index<=3;index++){
+    const socket=literatureItems.find(item=>item.id===`literature-socket-${index}`)!;
+    const discipline=literatureItems.find(item=>item.id===`discipline-${index===1?'experimental':index===2?'social-prejudice':'social-discrimination'}`)!;
+    assert.ok(socket.y+socket.h<discipline.y,`LiteratureHandoff socket ${index} does not clear its discipline label`);
+  }
+  const turn21=byKind('APAGroupDefinitions').find(frame=>frame.kind==='t21Behavior')!;
+  for(const retired of ['OUTSIDE THE PERSON’S GROUP','DETACHMENT','COMPETITION','OPPOSITION','MEMBERSHIP','PSYCHOLOGICAL IDENTIFICATION'])assert.ok(!plain(turn21.html).includes(retired),`APAGroupDefinitions turn 21 retains faded label “${retired}”`);
+  const turn21Items=auditItems(turn21.html).filter(item=>item.opacity>.05),field=turn21Items.find(item=>item.id==='apa-field')!,tray=turn21Items.find(item=>item.id==='allocation-tray')!;
+  assert.ok(field.y+field.h<tray.y,'APAGroupDefinitions tray overlaps the sorting field');
+  for(const cue of ['t19Ingroup','t20Reference','t21American'] as const){
+    const visible=auditItems(byKind('APAGroupDefinitions').find(frame=>frame.kind===cue)!.html).filter(item=>item.opacity>.05),card=visible.find(item=>item.id==='definition-card')!;
+    const cardText=visible.filter(item=>item.role==='text'&&item.id.startsWith('definition-'));
+    const bottom=Math.max(...cardText.map(item=>item.y+item.h));
+    assert.ok(card.y+card.h-bottom<=42,`APAGroupDefinitions ${cue} definition card leaves ${card.y+card.h-bottom}px below its content`);
+  }
+
+  console.log(`PASS: audit self-test (${selfTests} rules); ${rendered.length} Package B cue-derived frames; ${auditedItems} audited boxes; safe area, notch zones, text fit, text/shape collisions, literature socket clearance, separate APA tray, compact definition cards, complete Tajfel citation, storyboard beats, determinism, hook, underscore, and interaction-hint policies verified.`);
 }

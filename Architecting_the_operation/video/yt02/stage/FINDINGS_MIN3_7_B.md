@@ -134,3 +134,43 @@ The package checker verifies containment and pairwise separation for the declare
 4. Promote the local allocation tray after a second scene establishes a reusable contract.
 5. Add semantic SVG labels for the relation arrows during the accessibility pass.
 6. Review the turn-22 outgoing connector beside the Package C opening frame after integration rendering.
+
+## Fix pass 1
+
+### Frame review
+
+Reviewed all attached Package B frames from `ab_v1`: episode seconds 215, 224.5, 239, 251, 264, 271, and 275. The review covered the complete sampled progression through `LiteratureHandoff`, `APAGroupDefinitions`, and `TajfelCitation`.
+
+### Changes
+
+- Moved the three literature sockets above the discipline labels. Each socket route moves sideways before descending beside its label.
+- Resized the book dock and assigned explicit widths to all three analytical-job chips. The discrimination chip now fits on one line.
+- Reduced the APA definition cards to content-driven heights for ingroup, outgroup, and ingroup bias.
+- Reduced the sorting field to y 130–650 and placed the derived-illustration tray in its own y 690–910 region.
+- Moved membership and psychological-identification labels below the group circle with short leaders.
+- Placed detachment, competition, and opposition labels in dedicated field margins. The relation strokes occupy separate lanes.
+- Removed the turn-19 and turn-20 field labels from the turn-21 markup.
+- Added the `SOCIAL IDENTITY THEORY` tag at `t22Theory`.
+- Added `in The Social Psychology of Intergroup Relations, ed. Austin & Worchel` at `t22Relations`. The bibliographic record opened for this line was `Paper/references.bib:4236–4244`.
+- Delayed the citation exit connector until `t22Relations` and capped it at x 1820.
+- Added absolute `data-text` and `data-shape` geometry for visible text, panels, person marks, field structures, and connectors.
+
+### Geometric verification
+
+- Package B determinism: `PASS: 43 Package B frames rendered in two fresh processes; all markup hashes match.`
+- Package B layout and cue check: `PASS: audit self-test (10 rules); 43 Package B cue-derived frames; 1146 audited boxes; safe area, notch zones, text fit, text/shape collisions, literature socket clearance, separate APA tray, compact definition cards, complete Tajfel citation, storyboard beats, determinism, hook, underscore, and interaction-hint policies verified.`
+- The checker runs `auditLayout` on every sampled frame and adds explicit assertions for socket clearance, field-to-tray separation, retired-label absence, definition-card content depth, citation containment, and the x 1840 connector limit.
+
+### Validation
+
+- Episode TypeScript: exit 0 with no diagnostics.
+- Shared foundation, minute-two, first-minute, RoadmapBoot, and dashboard checks: exit 0.
+- Plan compile: wrote a temporary plan under `/tmp`; `cmp` returned exit 0 against `ov/stage_plan.json`.
+- Independent prose review: 0 CERTAIN, 0 arguable, and 43 candidate lines considered and cleared across the complete A/B change set.
+- Render status: skipped by instruction.
+
+### Challenges
+
+1. The literature channels needed side routes because a vertical descent from each socket crossed its discipline label.
+2. The radial APA field required new mark positions so every relation label could occupy a clear margin while the group circle retained readable membership geometry.
+3. The citation plate needed a larger lower information region for the theory tag and edited-volume line while preserving the year medallion and title hierarchy.

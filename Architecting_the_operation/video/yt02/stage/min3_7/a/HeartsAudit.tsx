@@ -1,8 +1,8 @@
 import React from 'react';
 import {useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../../tokens';
-import {StageSceneFrame, TermBlock} from '../shared';
-import {enter, HeartIcon, PANEL_STYLE, PersonIcon, ScanLines, WordIcon, type Box} from './PackageAVisuals';
+import {StageSceneFrame} from '../shared';
+import {AuditedTermBlock,enter,HeartIcon,Label,lineAttrs,PANEL_STYLE,pathFrom,PersonIcon,ScanLines,SceneSource,shapeAttrs,textAttrs,WordIcon,type Box,type Point} from './PackageAVisuals';
 
 export const HEARTS_LAYOUT = {
   header:{x:130,y:100,w:1660,h:90},
@@ -20,7 +20,7 @@ export const HEARTS_LAYOUT = {
 type CueMap=Record<string,{at:number}>;
 
 function Header({text,p}:{text:string;p:number}) {
-  return <div data-audit-header="true" style={{position:'absolute',left:HEARTS_LAYOUT.header.x,top:HEARTS_LAYOUT.header.y,width:HEARTS_LAYOUT.header.w,height:HEARTS_LAYOUT.header.h,textAlign:'center',font:'500 28px "IBM Plex Mono"',letterSpacing:1.8,color:color('color/fill/gold'),opacity:p}}>{text}</div>;
+  return <Label id={`hearts-header-${text.toLowerCase().replaceAll(' ','-')}`} box={HEARTS_LAYOUT.header} size={28} weight={500} ls={1.8} align="center" ink={color('color/fill/gold')} opacity={p}>{text}</Label>;
 }
 
 function TurnThirteen({ms,cue}:{ms:number;cue:CueMap}) {
@@ -34,23 +34,20 @@ function TurnThirteen({ms,cue}:{ms:number;cue:CueMap}) {
   ] as const;
   return <div data-audit-turn="13">
     {ms>=cue.t13Ordering.at&&<Header text="DEFAULT DEFINITION" p={ordering}/>}
-    <div style={{...PANEL_STYLE,left:HEARTS_LAYOUT.debate.x,top:HEARTS_LAYOUT.debate.y,width:HEARTS_LAYOUT.debate.w,height:HEARTS_LAYOUT.debate.h,opacity:ordering}}>
-      {ms>=cue.t13Public.at&&<div style={{position:'absolute',left:48,top:54,width:260,font:'500 25px "IBM Plex Mono"',color:color('color/text/primary'),opacity:publicP}}>PUBLIC DEBATE</div>}
+    <div {...shapeAttrs('debate-panel',HEARTS_LAYOUT.debate,'frame')} style={{...PANEL_STYLE,left:HEARTS_LAYOUT.debate.x,top:HEARTS_LAYOUT.debate.y,width:HEARTS_LAYOUT.debate.w,height:HEARTS_LAYOUT.debate.h,opacity:ordering}}>
+      {ms>=cue.t13Public.at&&<div {...textAttrs('public-debate',{x:208,y:304,w:260,h:34},{size:25,lh:1.25})} style={{position:'absolute',left:48,top:54,width:260,font:'500 25px "IBM Plex Mono"',color:color('color/text/primary'),opacity:publicP}}>PUBLIC DEBATE</div>}
       <svg width="880" height="590" viewBox="0 0 880 590" style={{position:'absolute',inset:0}} aria-hidden="true">
-        {ms>=cue.t13Public.at&&<path d="M 70 145 H 550 L 680 280 L 550 415 H 70" fill={color('color/fill/gold-wash')} stroke={color('color/line/hairline-strong')} strokeWidth="2" opacity={publicP}/>}
+        {ms>=cue.t13Public.at&&<path {...shapeAttrs('debate-funnel',{x:230,y:395,w:610,h:270},'frame')} d="M 70 145 H 550 L 680 280 L 550 415 H 70" fill={color('color/fill/gold-wash')} stroke={color('color/line/hairline-strong')} strokeWidth="2" opacity={publicP}/>}
         {ms>=cue.t13Audit.at&&<>
-          <path d="M 680 280 L 860 245 L 860 315 Z" fill={color('color/fill/red-faint')} opacity={auditP}/>
+          <path {...shapeAttrs('audit-beam',{x:840,y:495,w:180,h:70},'mark','audit-beam')} d="M 680 280 L 860 245 L 860 315 Z" fill={color('color/fill/red-faint')} opacity={auditP}/>
           <ScanLines x={690} y={245} w={170} h={70} progress={auditP}/>
         </>}
         {[190,270,350].map((y,index)=><path key={y} d={`M 80 ${y} H ${390-index*18}`} stroke={color('color/text/muted')} strokeWidth="8" opacity={.22*ordering}/>) }
       </svg>
-      {ms>=cue.t13Audit.at&&<div style={{position:'absolute',right:22,top:196,width:220,textAlign:'center',font:'500 20px "IBM Plex Mono"',color:color('color/marker/race'),opacity:auditP}}>INDIVIDUAL AUDIT</div>}
-      <div aria-hidden="true" style={{position:'absolute',left:72,bottom:72,width:330,height:90,border:`1px dashed ${color('color/line/hairline')}`,opacity:.55*ordering}}/>
+      {ms>=cue.t13Audit.at&&<div {...textAttrs('individual-audit',{x:798,y:350,w:220,h:30},{size:20,lh:1.25})} style={{position:'absolute',right:22,top:100,width:220,textAlign:'center',font:'500 20px "IBM Plex Mono"',color:color('color/marker/race'),opacity:auditP}}>INDIVIDUAL AUDIT</div>}
     </div>
-    <div style={{position:'absolute',left:HEARTS_LAYOUT.targets.x,top:HEARTS_LAYOUT.targets.y,width:HEARTS_LAYOUT.targets.w,height:HEARTS_LAYOUT.targets.h}}>
-      {targets.map((target,index)=>ms>=cue[target.cue].at&&<div key={target.label} style={{position:'absolute',left:0,top:index*174,width:580,height:142,opacity:enter(ms,cue[target.cue].at,430)}}><TermBlock term={target.label} glyph={target.glyph} state="selected" accent="color/marker/race" unit={`audit ${index+1}`}/></div>)}
-    </div>
-    {ms>=cue.t13Intentions.at&&<div style={{position:'absolute',left:160,top:872,width:1580,textAlign:'center',fontSize:30,opacity:enter(ms,cue.t13Intentions.at,500)}}>The ordering directs attention.</div>}
+    {targets.map((target,index)=>ms>=cue[target.cue].at&&<AuditedTermBlock key={target.label} id={`audit-target-${index+1}`} box={{x:HEARTS_LAYOUT.targets.x,y:HEARTS_LAYOUT.targets.y+index*174,w:580,h:142}} term={target.label} glyph={target.glyph} selected accent="color/marker/race" unit={`audit ${index+1}`} opacity={enter(ms,cue[target.cue].at,430)} titleSize={30}/>)}
+    {ms>=cue.t13Intentions.at&&<Label id="ordering-directs-attention" box={{x:160,y:872,w:1580,h:42}} size={30} weight={400} sans align="center" opacity={enter(ms,cue.t13Intentions.at,500)}>The ordering directs attention.</Label>}
   </div>;
 }
 
@@ -72,29 +69,29 @@ function TurnFourteen({ms,cue}:{ms:number;cue:CueMap}) {
   return <div data-audit-turn="14">
     {ms>=cue.t14Disparity.at&&<Header text="RACIAL DISPARITY" p={disparity}/>}
     <div style={{position:'absolute',left:HEARTS_LAYOUT.inputs.x,top:HEARTS_LAYOUT.inputs.y,width:HEARTS_LAYOUT.inputs.w,height:HEARTS_LAYOUT.inputs.h}}>
-      {rows.map((row,index)=>ms>=cue[row.cue].at&&<div key={row.label} style={{...PANEL_STYLE,left:0,top:index*176,width:520,height:140,opacity:enter(ms,cue[row.cue].at,450)}}>
+      {rows.map((row,index)=>{const box={x:HEARTS_LAYOUT.inputs.x,y:HEARTS_LAYOUT.inputs.y+index*176,w:520,h:140};return ms>=cue[row.cue].at&&<div key={row.label} {...shapeAttrs(`disparity-row-${index+1}`,box,'frame')} style={{...PANEL_STYLE,left:0,top:index*176,width:520,height:140,opacity:enter(ms,cue[row.cue].at,450)}}>
         <div style={{position:'absolute',left:22,top:20}}><DisparityGlyph kind={row.kind}/></div>
-        <div style={{position:'absolute',left:90,top:22,font:'500 22px "IBM Plex Mono"'}}>{row.label}</div>
-        <div aria-hidden="true" style={{position:'absolute',left:92,top:76,width:290,height:12,background:color('color/fill/gold-wash')}}/>
-        <div aria-hidden="true" style={{position:'absolute',left:92,top:102,width:180-index*22,height:12,background:color('color/fill/red-wash')}}/>
+        <div {...textAttrs(`disparity-row-label-${index+1}`,{x:box.x+90,y:box.y+22,w:260,h:30},{size:22,lh:1.25})} style={{position:'absolute',left:90,top:22,font:'500 22px "IBM Plex Mono"'}}>{row.label}</div>
+        <div {...shapeAttrs(`disparity-gold-bar-${index+1}`,{x:box.x+92,y:box.y+76,w:290,h:12},'mark',`bar-${index+1}`)} aria-hidden="true" style={{position:'absolute',left:92,top:76,width:290,height:12,background:color('color/fill/gold-wash')}}/>
+        <div {...shapeAttrs(`disparity-red-bar-${index+1}`,{x:box.x+92,y:box.y+102,w:180-index*22,h:12},'mark',`bar-${index+1}`)} aria-hidden="true" style={{position:'absolute',left:92,top:102,width:180-index*22,height:12,background:color('color/fill/red-wash')}}/>
         {ms>=cue.t14Disparity.at&&<div aria-hidden="true" style={{position:'absolute',left:390,top:70,width:18,height:56,borderTop:`2px solid ${color('color/marker/race')}`,borderBottom:`2px solid ${color('color/marker/race')}`,borderRight:`2px solid ${color('color/marker/race')}`,opacity:disparity}}/>}
-      </div>)}
+      </div>;})}
     </div>
-    {ms>=cue.t14Default.at&&<div data-definition-router="true" style={{...PANEL_STYLE,left:HEARTS_LAYOUT.router.x,top:HEARTS_LAYOUT.router.y,width:HEARTS_LAYOUT.router.w,height:HEARTS_LAYOUT.router.h,opacity:route}}>
-      <div style={{position:'absolute',left:30,top:35,width:310,textAlign:'center',font:'500 22px "IBM Plex Mono"',color:color('color/fill/gold')}}>DEFAULT DEFINITION</div>
+    {ms>=cue.t14Default.at&&<div data-definition-router="true" {...shapeAttrs('definition-router',HEARTS_LAYOUT.router,'frame')} style={{...PANEL_STYLE,left:HEARTS_LAYOUT.router.x,top:HEARTS_LAYOUT.router.y,width:HEARTS_LAYOUT.router.w,height:HEARTS_LAYOUT.router.h,opacity:route}}>
+      <div {...textAttrs('definition-router-title',{x:780,y:345,w:310,h:30},{size:22,lh:1.25})} style={{position:'absolute',left:30,top:35,width:310,textAlign:'center',font:'500 22px "IBM Plex Mono"',color:color('color/fill/gold')}}>DEFAULT DEFINITION</div>
       <svg width="370" height="420" viewBox="0 0 370 420" aria-hidden="true">
-        {[120,210,300].map((y,index)=><path key={y} d={`M 18 ${y} H 166 Q 225 ${y} 225 210 H 348`} fill="none" stroke={color('color/fill/gold')} strokeWidth="2" opacity={enter(ms,cue.t14Default.at+index*90,500)}/>) }
+        {[120,210,300].map((y,index)=>{const points:Point[]=[[768,HEARTS_LAYOUT.router.y+y],[916,HEARTS_LAYOUT.router.y+y],[975,520],[1098,520]];return <path key={y} {...lineAttrs(`router-line-${index+1}`,points)} d={`M 18 ${y} H 166 Q 225 ${y} 225 210 H 348`} fill="none" stroke={color('color/fill/gold')} strokeWidth="2" opacity={enter(ms,cue.t14Default.at+index*90,500)}/>;})}
       </svg>
     </div>}
-    {ms>=cue.t14Malice.at&&<div style={{...PANEL_STYLE,left:HEARTS_LAYOUT.thoughts.x,top:HEARTS_LAYOUT.thoughts.y,width:HEARTS_LAYOUT.thoughts.w,height:HEARTS_LAYOUT.thoughts.h,opacity:malice}}>
-      <div style={{position:'absolute',left:0,top:42,width:550,textAlign:'center',font:'500 24px "IBM Plex Mono"',color:color('color/marker/race')}}>MALICE AUDIT</div>
+    {ms>=cue.t14Malice.at&&<div {...shapeAttrs('thought-audit-panel',HEARTS_LAYOUT.thoughts,'frame')} style={{...PANEL_STYLE,left:HEARTS_LAYOUT.thoughts.x,top:HEARTS_LAYOUT.thoughts.y,width:HEARTS_LAYOUT.thoughts.w,height:HEARTS_LAYOUT.thoughts.h,opacity:malice}}>
+      <div {...textAttrs('malice-audit',{x:1210,y:272,w:550,h:32},{size:24,lh:1.25})} style={{position:'absolute',left:0,top:42,width:550,textAlign:'center',font:'500 24px "IBM Plex Mono"',color:color('color/marker/race')}}>MALICE AUDIT</div>
       <svg width="550" height="620" viewBox="0 0 550 620" aria-hidden="true">
-        <circle cx="275" cy="255" r="112" fill="none" stroke={color('color/line/hairline-strong')} strokeWidth="3"/>
+        <circle {...shapeAttrs('thought-head',{x:1373,y:373,w:224,h:224},'frame')} cx="275" cy="255" r="112" fill="none" stroke={color('color/line/hairline-strong')} strokeWidth="3"/>
         <path d="M 205 370 Q 275 430 345 370" fill="none" stroke={color('color/line/hairline-strong')} strokeWidth="3"/>
-        <line x1="480" y1="105" x2={300+(1-malice)*160} y2={230+(1-malice)*-100} stroke={color('color/marker/race')} strokeWidth="4"/>
+        <line {...lineAttrs('malice-probe',[[1690,335],[1510+(1-malice)*160,460+(1-malice)*-100]])} x1="480" y1="105" x2={300+(1-malice)*160} y2={230+(1-malice)*-100} stroke={color('color/marker/race')} strokeWidth="4"/>
         <circle cx={300+(1-malice)*160} cy={230+(1-malice)*-100} r="12" fill={color('color/marker/race')}/>
       </svg>
-      {ms>=cue.t14Thoughts.at&&<div style={{position:'absolute',left:75,top:500,width:400,textAlign:'center',fontSize:28,opacity:enter(ms,cue.t14Thoughts.at,450)}}>PRIVATE THOUGHTS</div>}
+      {ms>=cue.t14Thoughts.at&&<div {...textAttrs('private-thoughts',{x:1285,y:730,w:400,h:38},{size:28,lh:1.25,sans:true})} style={{position:'absolute',left:75,top:500,width:400,textAlign:'center',fontSize:28,opacity:enter(ms,cue.t14Thoughts.at,450)}}>PRIVATE THOUGHTS</div>}
     </div>}
   </div>;
 }
@@ -109,32 +106,32 @@ function TurnFifteen({ms,cue}:{ms:number;cue:CueMap}) {
   const records=enter(ms,cue.t15Records.at,450);
   return <div data-audit-turn="15">
     {ms>=cue.t15Original.at&&<Header text="THE ORIGINAL POWER" p={original}/>}
-    <div style={{...PANEL_STYLE,left:HEARTS_LAYOUT.claim.x,top:HEARTS_LAYOUT.claim.y,width:HEARTS_LAYOUT.claim.w,height:HEARTS_LAYOUT.claim.h,opacity:original}}>
-      {ms>=cue.t15Causal.at&&<div style={{position:'absolute',left:32,top:38,width:426,textAlign:'center',font:'500 22px "IBM Plex Mono"',color:color('color/fill/gold'),opacity:causal}}>CLAIM</div>}
-      {ms>=cue.t15Testable.at&&<div style={{position:'absolute',left:38,top:130,width:414,textAlign:'center',fontSize:34,lineHeight:1.25,fontWeight:600,opacity:testable}}>TESTABLE HISTORICAL CLAIM</div>}
+    <div {...shapeAttrs('claim-panel',HEARTS_LAYOUT.claim,'frame')} style={{...PANEL_STYLE,left:HEARTS_LAYOUT.claim.x,top:HEARTS_LAYOUT.claim.y,width:HEARTS_LAYOUT.claim.w,height:HEARTS_LAYOUT.claim.h,opacity:original}}>
+      {ms>=cue.t15Causal.at&&<div {...textAttrs('claim-label',{x:162,y:288,w:426,h:30},{size:22,lh:1.25})} style={{position:'absolute',left:32,top:38,width:426,textAlign:'center',font:'500 22px "IBM Plex Mono"',color:color('color/fill/gold'),opacity:causal}}>CLAIM</div>}
+      {ms>=cue.t15Testable.at&&<div {...textAttrs('historical-claim',{x:168,y:380,w:414,h:94},{size:34,lh:1.25,sans:true})} style={{position:'absolute',left:38,top:130,width:414,textAlign:'center',fontSize:34,lineHeight:1.25,fontWeight:600,opacity:testable}}>TESTABLE HISTORICAL CLAIM</div>}
       <svg width="490" height="530" viewBox="0 0 490 530" aria-hidden="true">
-        {ms>=cue.t15Testable.at&&<path d="M245 260 V430 H470" fill="none" stroke={color('color/fill/gold')} strokeWidth="3" strokeDasharray="10 9" opacity={testable}/>}
+        {ms>=cue.t15Testable.at&&<path {...lineAttrs('claim-test-lead',[[375,510],[375,680],[600,680]])} d="M245 260 V430 H470" fill="none" stroke={color('color/fill/gold')} strokeWidth="3" strokeDasharray="10 9" opacity={testable}/>}
       </svg>
     </div>
-    <div style={{...PANEL_STYLE,left:HEARTS_LAYOUT.formal.x,top:HEARTS_LAYOUT.formal.y,width:HEARTS_LAYOUT.formal.w,height:HEARTS_LAYOUT.formal.h,opacity:testable}}>
+    <div {...shapeAttrs('formal-panel',HEARTS_LAYOUT.formal,'frame')} style={{...PANEL_STYLE,left:HEARTS_LAYOUT.formal.x,top:HEARTS_LAYOUT.formal.y,width:HEARTS_LAYOUT.formal.w,height:HEARTS_LAYOUT.formal.h,opacity:testable}}>
       {ms>=cue.t15Formally.at&&<>
-        <div style={{position:'absolute',left:24,top:34,width:522,textAlign:'center',font:'500 22px "IBM Plex Mono"',color:color('color/fill/gold'),opacity:formal}}>FORMAL STATEMENT</div>
-        <div style={{position:'absolute',left:42,top:130,width:486,textAlign:'center',fontSize:28,lineHeight:1.55,opacity:formal}}>Individual Prejudice → {' '}<br/>Discriminatory Actions → {' '}<br/>Systemic Outcomes</div>
-        <div style={{position:'absolute',left:50,top:390,width:470,textAlign:'center',font:'400 20px "IBM Plex Mono"',color:color('color/text/muted'),opacity:formal}}>Eq. 2.5 · Tier 3 structural claim</div>
+        <div {...textAttrs('formal-statement',{x:714,y:284,w:522,h:30},{size:22,lh:1.25})} style={{position:'absolute',left:24,top:34,width:522,textAlign:'center',font:'500 22px "IBM Plex Mono"',color:color('color/fill/gold'),opacity:formal}}>FORMAL STATEMENT</div>
+        <div {...textAttrs('formal-equation',{x:732,y:380,w:486,h:140},{size:28,lh:1.55,sans:true})} style={{position:'absolute',left:42,top:130,width:486,textAlign:'center',fontSize:28,lineHeight:1.55,opacity:formal}}>Individual Prejudice → {' '}<br/>Discriminatory Actions → {' '}<br/>Systemic Outcomes</div>
+        <div {...textAttrs('formal-source',{x:740,y:640,w:470,h:30},{size:20,lh:1.25})} style={{position:'absolute',left:50,top:390,width:470,textAlign:'center',font:'400 20px "IBM Plex Mono"',color:color('color/text/muted'),opacity:formal}}>Eq. 2.5 · Tier 3 structural claim</div>
       </>}
     </div>
-    <div style={{...PANEL_STYLE,left:HEARTS_LAYOUT.archive.x,top:HEARTS_LAYOUT.archive.y,width:HEARTS_LAYOUT.archive.w,height:HEARTS_LAYOUT.archive.h,opacity:checked}}>
-      {ms>=cue.t15Checked.at&&<div style={{position:'absolute',left:20,top:30,width:400,textAlign:'center',font:'500 22px "IBM Plex Mono"',color:color('color/fill/gold'),opacity:checked}}>PRIMARY RECORDS</div>}
+    <div {...shapeAttrs('archive-panel',HEARTS_LAYOUT.archive,'frame')} style={{...PANEL_STYLE,left:HEARTS_LAYOUT.archive.x,top:HEARTS_LAYOUT.archive.y,width:HEARTS_LAYOUT.archive.w,height:HEARTS_LAYOUT.archive.h,opacity:checked}}>
+      {ms>=cue.t15Checked.at&&<div {...textAttrs('primary-records',{x:1350,y:250,w:400,h:30},{size:22,lh:1.25})} style={{position:'absolute',left:20,top:30,width:400,textAlign:'center',font:'500 22px "IBM Plex Mono"',color:color('color/fill/gold'),opacity:checked}}>PRIMARY RECORDS</div>}
       <svg width="440" height="600" viewBox="0 0 440 600" aria-hidden="true">
         {ms>=cue.t15Checked.at&&Array.from({length:6},(_,index)=><g key={index} opacity={enter(ms,cue.t15Checked.at+index*80,420)}>
-          <rect x={56+(index%2)*190} y={110+Math.floor(index/2)*116} width="150" height="86" fill={color('color/surface/1')} stroke={color('color/line/hairline')}/>
+          <rect {...shapeAttrs(`archive-folio-${index+1}`,{x:1386+(index%2)*190,y:330+Math.floor(index/2)*116,w:150,h:86},'frame')} x={56+(index%2)*190} y={110+Math.floor(index/2)*116} width="150" height="86" fill={color('color/surface/1')} stroke={color('color/line/hairline')}/>
           <path d={`M ${74+(index%2)*190} ${137+Math.floor(index/2)*116} H ${184+(index%2)*190} M ${74+(index%2)*190} ${160+Math.floor(index/2)*116} H ${164+(index%2)*190}`} stroke={color('color/text/muted')} strokeWidth="2"/>
         </g>)}
         {ms>=cue.t15Centuries.at&&<line x1="26" y1="100" x2="26" y2={100+410*centuries} stroke={color('color/fill/gold')} strokeWidth="4"/>}
         {ms>=cue.t15Records.at&&<rect x="78" y="480" width="284" height="72" fill={color('color/fill/red-faint')} stroke={color('color/marker/race')} strokeWidth="2" opacity={records}/>}
       </svg>
-      {ms>=cue.t15Centuries.at&&<div style={{position:'absolute',left:-52,top:288,width:150,transform:'rotate(-90deg)',textAlign:'center',font:'500 20px "IBM Plex Mono"',color:color('color/fill/gold'),opacity:centuries}}>FIVE CENTURIES</div>}
-      {ms>=cue.t15Records.at&&<div style={{position:'absolute',left:78,top:500,width:284,textAlign:'center',font:'500 22px "IBM Plex Mono"',color:color('color/marker/race'),opacity:records}}>HISTORICAL TEST</div>}
+      {ms>=cue.t15Centuries.at&&<div {...textAttrs('five-centuries',{x:1348,y:674,w:170,h:28},{size:20,lh:1.25})} style={{position:'absolute',left:18,top:454,width:170,textAlign:'left',font:'500 20px "IBM Plex Mono"',color:color('color/fill/gold'),opacity:centuries}}>FIVE CENTURIES</div>}
+      {ms>=cue.t15Records.at&&<div {...textAttrs('historical-test',{x:1408,y:720,w:284,h:30},{size:22,lh:1.25})} style={{position:'absolute',left:78,top:500,width:284,textAlign:'center',font:'500 22px "IBM Plex Mono"',color:color('color/marker/race'),opacity:records}}>HISTORICAL TEST</div>}
     </div>
   </div>;
 }
@@ -147,9 +144,10 @@ export function HeartsAudit({segment}:SceneProps) {
     t15Original:useCue('t15Original'),t15Causal:useCue('t15Causal'),t15Testable:useCue('t15Testable'),t15Formally:useCue('t15Formally'),t15Checked:useCue('t15Checked'),t15Centuries:useCue('t15Centuries'),t15Records:useCue('t15Records'),
   };
   const phase=ms<cue.t14Public.at?13:ms<cue.t15Original.at?14:15;
-  return <StageSceneFrame segment={segment} source="The Original Power, Chapter 2">
+  return <StageSceneFrame segment={segment}>
     {phase===13&&<TurnThirteen ms={ms} cue={cue}/>}
     {phase===14&&<TurnFourteen ms={ms} cue={cue}/>}
     {phase===15&&<TurnFifteen ms={ms} cue={cue}/>}
+    <SceneSource text="The Original Power, Chapter 2"/>
   </StageSceneFrame>;
 }

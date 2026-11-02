@@ -4,9 +4,10 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {createHash} from 'node:crypto';
 import {ClockContext,PlanContext,type StagePlan} from '@stage';
-import {SequenceAsTheory,SEQUENCE_LAYOUT,sequenceNodeBoxes} from '../min3_7/a/SequenceAsTheory';
+import {SequenceAsTheory,SEQUENCE_LAYOUT,numberRailWirePoints,sequenceNodeBoxes} from '../min3_7/a/SequenceAsTheory';
 import {HeartsAudit,HEARTS_LAYOUT} from '../min3_7/a/HeartsAudit';
 import {TermsInOneBucket,TERMS_LAYOUT} from '../min3_7/a/TermsInOneBucket';
+import {auditItems,auditLayout,auditSelfTest} from './layout_audit';
 
 const plan=JSON.parse(fs.readFileSync(new URL('../ov/stage_plan.json',import.meta.url),'utf8')) as StagePlan;
 const sceneComponents={SequenceAsTheory,HeartsAudit,TermsInOneBucket};
@@ -81,6 +82,15 @@ if(process.env.MIN3_7_A_SNAPSHOT==='1'){
     assert.ok(!interactionHint.test(plain(html)),`${scene} ${kind} renders an interaction hint`);
   }
 
+  const selfTests=auditSelfTest();
+  let auditedItems=0;
+  const violations:string[]=[];
+  for(const {scene,kind,ms,html} of rendered){
+    for(const problem of auditLayout(html))violations.push(`${scene} ${kind} (${ms} ms): ${problem}`);
+    auditedItems+=auditItems(html).length;
+  }
+  assert.deepEqual(violations,[],`Package A layout audit failed:\n${violations.slice(0,60).join('\n')}`);
+
   const sequenceStart=plain(byKind('SequenceAsTheory').find(frame=>frame.kind==='start')!.html);
   for(const expected of ['Figure 2.3 · Inverting the Definitional Hierarchy','Conventional Hierarchy','1. Individual Prejudice','2. Belief in Superiority','3. Systemic (if present)','The Original Power, Chapter 2'])assert.ok(sequenceStart.includes(expected),`SequenceAsTheory opening continuity is missing “${expected}”`);
   assert.ok(byKind('SequenceAsTheory').find(frame=>frame.kind==='start')!.html.includes('opacity:0.25'),`SequenceAsTheory opening does not preserve the 25% secondary column`);
@@ -131,24 +141,31 @@ if(process.env.MIN3_7_A_SNAPSHOT==='1'){
   for(const term of ['BIAS','PREJUDICE','DISCRIMINATION','RACISM'])assert.ok(plain(restoredTerms).includes(term),`TermsInOneBucket restored rail is missing “${term}”`);
   beat('TermsInOneBucket','t16Bucket',{text:['ONE SHARED BUCKET'],markup:['data-bucket-seal="true"']});
 
+  for(const summary of ['STARTING TENDENCY','GROUP ANTIPATHY','DIFFERENTIAL BEHAVIOR','SYSTEMIC STRUCTURE'])assert.ok(plain(restoredTerms).includes(summary),`TermsInOneBucket restored rail is missing “${summary}”`);
+  assert.ok(!byKind('HeartsAudit').find(frame=>frame.kind==='t13Intentions')!.html.includes('border:1px dashed'),'HeartsAudit retains the empty outlined rectangle below the funnel');
+
   assertPairwiseClear([SEQUENCE_LAYOUT.caption,SEQUENCE_LAYOUT.claim,SEQUENCE_LAYOUT.footer,SEQUENCE_LAYOUT.source],'SequenceAsTheory vertical text bands');
   assert.ok(SEQUENCE_LAYOUT.numberRail.x+SEQUENCE_LAYOUT.numberRail.w<=SEQUENCE_LAYOUT.graph.x,'SequenceAsTheory number rail overlaps the causal graph');
-  for(let sample=0;sample<=10;sample++)assertPairwiseClear(sequenceNodeBoxes(sample/10),`SequenceAsTheory causal nodes at sample ${sample}`);
+  for(let sample=0;sample<=10;sample++){
+    const nodes=sequenceNodeBoxes(sample/10);
+    assertPairwiseClear(nodes,`SequenceAsTheory causal nodes at sample ${sample}`);
+    for(let index=0;index<3;index++)assert.ok(numberRailWirePoints(index,nodes)[0][0]-(SEQUENCE_LAYOUT.numberRail.x+SEQUENCE_LAYOUT.numberRail.w)>=12,`SequenceAsTheory rail wire ${index+1} lacks a 12 px label gap at sample ${sample}`);
+  }
   assertPairwiseClear([HEARTS_LAYOUT.debate,HEARTS_LAYOUT.targets],'HeartsAudit turn 13');
   assertPairwiseClear([HEARTS_LAYOUT.inputs,HEARTS_LAYOUT.router,HEARTS_LAYOUT.thoughts],'HeartsAudit turn 14');
   assertPairwiseClear([HEARTS_LAYOUT.claim,HEARTS_LAYOUT.formal,HEARTS_LAYOUT.archive],'HeartsAudit turn 15');
   assertPairwiseClear(TERMS_LAYOUT.blocks,'TermsInOneBucket initial term blocks');
   for(const frame of byKind('TermsInOneBucket')){
-    const boxes=[...frame.html.matchAll(/data-box="([\d.]+),([\d.]+),([\d.]+),([\d.]+)"/g)].map(match=>({x:Number(match[1]),y:Number(match[2]),w:Number(match[3]),h:Number(match[4])}));
+    const boxes=[...frame.html.matchAll(/data-flight-box="([\d.]+),([\d.]+),([\d.]+),([\d.]+)"/g)].map(match=>({x:Number(match[1]),y:Number(match[2]),w:Number(match[3]),h:Number(match[4])}));
     assertPairwiseClear(boxes,`TermsInOneBucket ${frame.kind}`);
   }
-  const finalTerms=[0,1,2,3].map(index=>({x:180+index*400,y:625,w:360,h:190}));
+  const finalTerms=TERMS_LAYOUT.blocks.map(block=>({...block,y:TERMS_LAYOUT.rail.y,h:TERMS_LAYOUT.rail.h}));
   assertPairwiseClear(finalTerms,'TermsInOneBucket restored analytical rail');
-  assert.ok(finalTerms.every(box=>box.y+box.h<=820),'TermsInOneBucket restored terms overlap the bucket seal');
+  assert.ok(finalTerms.every(box=>box.y+box.h+40<=TERMS_LAYOUT.bucket.y),'TermsInOneBucket restored terms do not clear the bucket rim');
 
   for(const scene of Object.keys(sceneComponents) as SceneName[]){
     const end=byKind(scene).find(frame=>frame.kind==='end')!;
     assert.ok(plain(end.html).length>100,`${scene} end frame is incomplete`);
   }
-  console.log(`PASS: ${rendered.length} Package A cue-derived frames; three continuous scene contracts, Figure 2.3 continuity, causal scale sweep, all storyboard beat strings, deterministic hook policy, underscore policy, interaction-hint policy, and sampled layout separation verified.`);
+  console.log(`PASS: audit self-test (${selfTests} rules); ${rendered.length} Package A cue-derived frames; ${auditedItems} audited boxes; safe area, notch zones, text fit, text/shape collisions, 12 px list-wire gaps, populated analytical blocks, separated bucket geometry, storyboard beats, determinism, hook, underscore, and interaction-hint policies verified.`);
 }

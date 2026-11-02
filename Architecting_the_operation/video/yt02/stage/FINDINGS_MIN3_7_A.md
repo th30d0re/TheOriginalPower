@@ -61,3 +61,40 @@ Build turns 11–16 from `STORYBOARD_MIN3_7.md` as three deterministic scenes: `
 4. Check legibility at delivery compression settings.
 5. Reuse the Package A causal-chain helper if a later storyboard extension repeats Eq. 2.5.
 6. Add a plan lint that reports cue-table ordering differences before implementation begins.
+
+## Fix pass 1
+
+### Frame review
+
+Reviewed all attached Package A frames from `ab_v1`: episode seconds 145, 161, 169, 179, 189.5, 200, and 207. The review covered the complete sampled progression through `SequenceAsTheory`, `HeartsAudit`, and `TermsInOneBucket`.
+
+### Changes
+
+- Rebuilt the causal nodes with dedicated 66 px title regions and separate subtitle regions. “Discriminatory Actions” and “INSTITUTIONAL PATTERNS” now wrap above their causal-node subtitles.
+- Routed all three numbered-order wires from the right edge of each label with a 12 px gap. The second and third wires use clear lanes above the causal graph.
+- Removed the empty outlined rectangle beneath the public-debate funnel.
+- Moved “INDIVIDUAL AUDIT” into clear space above the funnel beam.
+- Rebuilt the final term composition with four populated analytical blocks above the bucket. Each block carries its concise analytical job: starting tendency, group antipathy, differential behavior, or systemic structure.
+- Placed the shared bucket below the restored blocks. Output channels begin below the blocks and terminate at the bucket rim.
+- Moved the closing line upward into the active composition and retained a clear source line at y 968.
+- Added absolute `data-text` and `data-shape` geometry for visible text, panels, marks, and connectors.
+
+### Geometric verification
+
+- Package A determinism: `PASS: 47 Package A frames rendered in two fresh processes; all markup hashes match.`
+- Package A layout and cue check: `PASS: audit self-test (10 rules); 47 Package A cue-derived frames; 1272 audited boxes; safe area, notch zones, text fit, text/shape collisions, 12 px list-wire gaps, populated analytical blocks, separated bucket geometry, storyboard beats, determinism, hook, underscore, and interaction-hint policies verified.`
+- The checker runs `auditLayout` on every sampled frame and rejects text-to-text overlap, shape or line crossings through text, safe-area exits, notch-zone entries, and declared text-fit failures.
+
+### Validation
+
+- Episode TypeScript: exit 0 with no diagnostics.
+- Shared foundation, minute-two, first-minute, RoadmapBoot, and dashboard checks: exit 0.
+- Plan compile: wrote a temporary plan under `/tmp`; `cmp` returned exit 0 against `ov/stage_plan.json`.
+- Independent prose review: 0 CERTAIN, 0 arguable, and 43 candidate lines considered and cleared across the complete A/B change set.
+- Render status: skipped by instruction.
+
+### Challenges
+
+1. The numbered-order wires required separate upper routing lanes because the expanded first node occupies the direct path to nodes two and three.
+2. The compiled turn-16 cue order restores the term blocks before the bucket seal. The final layout therefore keeps the bucket available as a lower destination while the blocks settle above it.
+3. The static-markup audit requires explicit absolute geometry for shared visual primitives. Package A now supplies local audited wrappers while preserving the shared directory unchanged.
