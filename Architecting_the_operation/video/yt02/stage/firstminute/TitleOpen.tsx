@@ -15,7 +15,8 @@ const rise = (ms: number, at: number, duration = 500) => cubicOut(progress(ms, a
 // the post-fold block of title, strip, episode line and subtitle spans 306–767.
 const TITLE_Y = 306;
 const TILE = {w: 340, h: 240, y: 533, xs: [350, 790, 1230]};
-const STRIP = {y: 493, xs: [643.2, 878.2, 1113.2], scaleX: .48, scaleY: .30};
+// Folded tiles keep the tile's aspect ratio: one uniform scale, centred on x 834 / 960 / 1086 (24 px gaps).
+const STRIP = {y: 493, scale: .30, xs: [783, 909, 1035]};
 const EPISODE_Y = 605, SUBTITLE_Y = 709;
 
 function FolioGraphic() {
@@ -63,9 +64,8 @@ function MethodTile({label, at, children, ms, index, fold}: React.PropsWithChild
   const foldedLeft = STRIP.xs[index];
   const x = left + (foldedLeft - left) * fold;
   const y = TILE.y + (STRIP.y - TILE.y) * fold;
-  const scaleX = 1 + (STRIP.scaleX - 1) * fold;
-  const scaleY = 1 + (STRIP.scaleY - 1) * fold;
-  return <div style={{...panel, position:'absolute', left:x, top:y, width:TILE.w, height:TILE.h, opacity:visible, transform:`translateY(${18*(1-visible)}px) scale(${scaleX}, ${scaleY})`, transformOrigin:'top left', overflow:'hidden'}}>
+  const scale = 1 + (STRIP.scale - 1) * fold;
+  return <div style={{...panel, position:'absolute', left:x, top:y, width:TILE.w, height:TILE.h, opacity:visible, transform:`translateY(${18*(1-visible)}px) scale(${scale})`, transformOrigin:'top left', overflow:'hidden'}}>
     <div style={{height:178, display:'grid', placeItems:'center'}}>{children}</div>
     <div style={{borderTop:`1px solid ${color('color/line/hairline')}`, paddingTop:17, textAlign:'center', font:'500 28px "IBM Plex Mono"', letterSpacing:2, color:color('color/text/primary')}}>{label}</div>
   </div>;
