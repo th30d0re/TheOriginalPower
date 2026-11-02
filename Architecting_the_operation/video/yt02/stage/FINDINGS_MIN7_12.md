@@ -186,3 +186,411 @@ Notes for Package E:
 
 - No render was made, so glyph advances, the belief-grid and heart glyph proportions, and the stack layout's look at 340 px are checked by the audit's estimate only.
 - The check exercises each component at representative storyboard boxes. Package checks cover cue timing, because the foundation has no plan segment of its own.
+
+## Package F
+
+Model: Gemini 3.8 Flash (High)  
+Checkpoint: `162607e`
+
+### What was requested
+
+Build minutes seven to twelve package F from `STORYBOARD_MIN7_12.md` (turns 41–46, duration 83.140 s):
+- Replace the three stub scenes in `min7_12/f/` in place: `ImplicitTrace.tsx` (turns 41–42), `IATLatency.tsx` (turns 43–45), and `AllportQuestion.tsx` (turn 46).
+- Implement every beat, string, layout box, and visual state specified in `STORYBOARD_MIN7_12.md`.
+- Ensure pure deterministic rendering driven only by `useCue` and `useStageMs`.
+- Ensure clean layout audit (safe area, notch zones, text fit, zero collisions) across all frames.
+- Write `tools/check_min7_12_f.{tsx,mjs}` testing two-process determinism, hook policy, underscore policy, interaction-hint policy, beat string presence and earlier absence, layout audit at every frame, and turn transition cleanliness.
+- Verify that episode TypeScript, all existing checks, and `tools/check_antithesis.py` pass.
+
+### Files written
+
+- `min7_12/f/ImplicitTrace.tsx`: turns 41–42, shots S00-41 and S00-42.
+- `min7_12/f/IATLatency.tsx`: turns 43–45, shots S00-43, S00-44, and S00-45.
+- `min7_12/f/AllportQuestion.tsx`: turn 46, shot S00-46.
+- `tools/check_min7_12_f.tsx`: comprehensive validation test runner.
+- `tools/check_min7_12_f.mjs`: esbuild bundling and two-process determinism driver.
+- `FINDINGS_MIN7_12.md` §Package F.
+
+### Scene implementations
+
+#### `ImplicitTrace` (turns 41–42, 8:17.810–8:51.970)
+- **Turn 41**: Translates the Greenwald & Banaji (1995) implicit attitude definition into an active trace-and-shortcut picture.
+  - Definition card opens at `t41Define` with term, paraphrased body, and citation.
+  - Inspection screen and hidden-trace store open at `t41Unidentified`.
+  - Past-experience stream feeds tokens into the store at `t41Past`.
+  - Upper positive-valence (`+ FAVORABLE`) and lower negative-valence (`− UNFAVORABLE`) markers activate at `t41Favorable` and `t41Unfavorable`.
+  - Feeling, thought, and action sockets illuminate on the reaction rail at `t41Action`.
+  - Definition card contracts and the plain-language process panel takes focus at `t41Plain`.
+  - Everyday experience cards stack into the trace store at `t41Experiences`.
+  - Shortcut bypass path opens at `t41Shortcuts` and pulses at `t41Steer`.
+  - Inspection screen dims at `t41Noticing` while the reaction branch stays active.
+- **Turn 42**: Turn 41 definition card and stream disappear completely.
+  - `SignalLane` for `SINCERE EQUAL-TREATMENT BELIEF` enters on the upper left at `t42Precision`.
+  - `SignalLane` for `AUTOMATIC ASSOCIATION` enters on the lower right at `t42Precision`.
+  - Center `PersonMark` (`ONE PERSON`) represents the individual holding both channels.
+  - Accumulated surroundings tokens fire through the automatic lane at `t42Automatically` and fill the trace store at `t42Accumulated`.
+  - Gold verification ring confirms sincere belief at `t42Sincerely`.
+  - `EQUAL TREATMENT` resolves inside the belief lane at `t42Equal`.
+  - Both channels link via dashed leaders to the individual response node (`REACTION`) at `t42Treatment`.
+
+#### `IATLatency` (turns 43–45, 8:52.320–9:27.330)
+- **Turn 43**: Source plaque enters at `t43Three`.
+  - Year `1998` lands in the year socket at `t43NinetyEight`.
+  - Author string resolves progressively: `ANTHONY GREENWALD` at `t43Anthony`, `DEBBIE MCGHEE` at `t43McGhee`, `JORDAN SCHWARTZ` at `t43Schwartz`.
+  - Instrument name `IMPLICIT ASSOCIATION TEST` enters at `t43Introduced`.
+  - Journal title `Journal of Personality and Social Psychology` resolves at `t43Journal`.
+- **Turn 44**: Large source plaque contracts into the source tab/line at `t44Test`.
+  - Computer sorting monitor opens with `DERIVED FACE + WORD SORTING TASK` and `DERIVED ILLUSTRATION · NO TEST SCORE`.
+  - Prompt card enters at `t44Automatic` with abstract `PersonMark` face card at `t44Faces` and word card at `t44Words`.
+  - Response latency timer trace drops from prompt card to response keys at `t44ResponseLatency`.
+  - `LEFT KEY` and `RIGHT KEY` targets illuminate at `t44Sorting`.
+  - Latency difference instrument draws two differential bars at `t44SplitSecond`.
+  - Shorter bar receives `FASTER RESPONSE` and longer bar receives `SLOWER RESPONSE` at `t44Fast`.
+  - Locked banner `DERIVED SORTING TASK · LATENCY DIFFERENCE` resolves at `t44Screen`.
+- **Turn 45**: Turn 44 prompt and key geometry clear completely.
+  - Left column displays `REACTION-TIME MEASURE` at `t45Reaction`.
+  - Center column displays `FIELD-AUDIT MEASURE` at `t45Audits`.
+  - Right column opens the judgment meter at `t45Bias` with gold `BIAS` glyph.
+  - Meter receives `MENTAL LEAN` at `t45Mental`.
+  - Indicator needle tilts and receives `JUDGMENT WEIGHTING` at `t45Weighting`.
+  - Dashed measurement leaders link both instruments to the meter at `t45Judgment` with title `INDIVIDUAL JUDGMENT`.
+
+#### `AllportQuestion` (turn 46, 9:27.680–9:40.950)
+- `QuestionHeader` displays the full spoken question `Why does prejudice need its own label once bias is defined?` with `prejudice` accented in red at `t46Why`.
+- Bias block (`BIAS · STARTING TENDENCY`) and Prejudice block (`PREJUDICE`) enter at `t46Label` with central connector line.
+- Prejudice block receives numeral `2` and red selection border (`2 · PREJUDICE`) at `t46Second`.
+- Prejudice block reaches full brightness while Bias block dims at `t46Prejudice`.
+- Question blocks clear completely when `GORDON W. ALLPORT` citation card enters at `t46Gordon`.
+- Gold source rule draws at `t46Classic`.
+- Year socket receives `1954` at `t46FiftyFour`.
+- Title begins resolving at `t46Nature` and reaches primary brightness `The Nature of Prejudice` at `t46PrejudiceTitle`.
+- Bottom source line displays `Allport 1954, p. 9` at `t46Nine`.
+
+### Challenges encountered
+
+1. **Substring collisions in beat checks**:
+   - In `ImplicitTrace`, checking for plain text `ACTION` collided with `REACTION` on the reaction rail. Checking the specific socket element markup resolved this cleanly.
+   - Similarly, in `IATLatency`, checking for plain text `FACE` collided with the monitor title `DERIVED FACE + WORD SORTING TASK`. Checking the specific face card element markup resolved this cleanly.
+   - In `IATLatency`, the bottom source line contains `1998`, which collided with the Turn 43 beat check before the year socket appeared. Guarding the bottom source line to render from Turn 44 resolved this cleanly.
+2. **Layout audit frame boundaries**:
+   - In `ImplicitTrace`, the response node originally overlapped horizontally with the automatic lane frame. Reducing width and positioning the response node strictly below the automatic lane eliminated the collision.
+   - In `IATLatency`, the timer trace line initially intersected the response latency text box. Repositioning the text label to the left of the vertical trace line eliminated the collision.
+   - In `IATLatency`, the 32 px box height for `latency-banner` caused a line-wrap overflow in the audit. Expanding the box height to 56 px accommodated the wrapped text comfortably.
+   - In `AllportQuestion`, connector sockets positioned on the block borders crossed the outer frame boundaries. Insetting the sockets fully inside the block panels eliminated all frame-edge violations.
+
+### Next ideas (6 Ideas)
+
+1. Extract a shared `CitationPlaque` component that models the progressive reveal of author list, year socket, and journal title across academic milestones.
+2. Add a `LatencyBarComparison` helper component in `min7_12/shared/` for derived experimental reaction-time visualisations.
+3. Parameterize the socket connector positioning in `TermBlock` to allow left, right, and bidirectional socket linking without manual coordinate computation.
+4. Support automatic word-level highlighting in `QuestionHeader` based on narration cue timestamps.
+5. Create a deterministic particle emitter for `SignalLane` to render dense token flows for high-bandwidth neural channels.
+6. Add automated layout collision snapshots to package checks to detect geometry regressions before audit execution.
+
+### Checks
+
+- Episode TypeScript: `npx --prefix /Users/emmanuel/Documents/Theory/scriptCast-stage/video tsc --noEmit -p Architecting_the_operation/video/yt02/stage` exits 0 with zero diagnostics.
+- `check_min7_12_f` tail:
+  - `PASS: 223 Package F frames rendered in two fresh processes; all markup hashes match.`
+  - `PASS: audit self-test (10 rules); 223 Package F frames (cues + 500 ms grid); layout audit of 2845 declared boxes (safe area, notch zones, text fit, collisions); clean turn transitions, storyboard strings, hook, underscore and interaction-hint policies verified.`
+- `check_first_minute` tail: `PASS: 43 cue-derived frames; five scene contracts, manuscript strings, real subscripts, hook policy, underscore policy, and interaction-hint policy verified; …`
+- `check_roadmap_boot` tail: `PASS: RoadmapBoot renders 17 deterministic frames; 13 labels land on their cues and are absent before; …`
+- `check_minute_two` tail: `PASS: 44 cue-derived frames; exact definition spacing …; Figure 2.3 layer widths 598 / 483 / 368 px in the ratio 5.2 : 4.2 : 3.2.`
+- `check_dashboard` tail: `PASS: Equal Earth route 1296 samples / 0 land hits …; all 24 tray modes plus 3 Wage plane modes; …no rendered interaction hints; 75 polities with 16 non-colliding labels.`
+- `check_min3_7_shared` tail: `PASS: 25 representative shared-component states; eleven component contracts, hook policy, underscore policy, Gaussian curves, … Posterior modes: 0.280460 / 0.499174 / 0.718096.`
+- `check_min3_7_a` tail: `PASS: audit self-test (10 rules); 47 Package A cue-derived frames; 1282 audited boxes; …`
+- `check_min3_7_b` tail: `PASS: audit self-test (10 rules); 43 Package B cue-derived frames; 1146 audited boxes; …`
+- `check_min3_7_c` tail: `PASS: audit self-test (10 rules); 195 Package C frames (cues + 500 ms grid); layout audit of 6799 declared boxes …`
+- `check_min3_7_d` tail: `PASS: audit self-test (10 rules); 211 Package D frames (cues + 500 ms grid); layout audit of 5306 declared boxes over 211 frames …; monotonic posterior sweep 0.2800 → 0.6755 (prior 0.72).`
+- `check_equations` tail: `PASS: 14 equation frames; 111 registered coloured terms; 11 pulse cues peak at cue + 200 ms and rest after 600 ms; Eq. 2.5 and Eq. 2.8a are verbatim with MathText subscripts.`
+- `check_min7_12_shared` tail: `PASS: 25 min7_12-shared states rendered in two fresh processes; all markup hashes match. PASS: audit self-test (10 rules); 25 min7_12 shared-component states; layout audit of 171 declared boxes …`
+- `tools/check_antithesis.py` on all package F files: `check-antithesis: no banned constructions found.`
+
+### Unverified remainder
+
+- No Chromium browser renders were executed in this stage; visual layout and text fitting rely on static layout audit geometry and estimates.
+- The 1998 Greenwald, McGhee, and Schwartz IAT paper is not present in `Paper/references.bib`; source details remain restricted to the narration specifications.
+
+## Package E
+
+Model: Gemini 3.8 Flash (High)  
+Checkpoint: `162607e`
+
+### What was requested
+
+Build minutes seven to twelve package E from `STORYBOARD_MIN7_12.md` (turns 35–40, duration 72.470 s):
+- Replace the four stub scenes in `min7_12/e/` in place: `DocumentedExpectation.tsx` (turns 35–36), `InstalledRouting.tsx` (turn 37), `RLCBridge.tsx` (turn 38), and `ExplicitImplicitChannels.tsx` (turns 39–40).
+- Implement every beat, string, layout box, and visual state specified in `STORYBOARD_MIN7_12.md`.
+- Ensure pure deterministic rendering driven only by `useCue` and `useStageMs`.
+- Ensure clean layout audit (safe area, notch zones, text fit, zero collisions) across all frames.
+- Write `tools/check_min7_12_e.{tsx,mjs}` testing two-process determinism, hook policy, underscore policy, interaction-hint policy, beat string presence and earlier absence, layout audit at every frame, and turn transition cleanliness.
+- Verify that episode TypeScript, all existing checks, and `tools/check_antithesis.py` pass.
+
+### Files written
+
+- `min7_12/e/DocumentedExpectation.tsx`: turns 35–36, shots S00-35 and S00-36.
+- `min7_12/e/InstalledRouting.tsx`: turn 37, shot S00-37.
+- `min7_12/e/RLCBridge.tsx`: turn 38, shot S00-38.
+- `min7_12/e/ExplicitImplicitChannels.tsx`: turns 39–40, shots S00-39 and S00-40.
+- `tools/check_min7_12_e.tsx`: comprehensive validation test runner.
+- `tools/check_min7_12_e.mjs`: esbuild bundling and two-process determinism driver.
+- `FINDINGS_MIN7_12.md` §Package E.
+
+### Scene implementations
+
+#### `DocumentedExpectation` (turns 35–36, 7:04.990–7:31.890)
+- **Turn 35**: Bayesian update distinguished from installed racial prior on documented evidence.
+  - Full Eq. 2.8a Bayesian prior displayed in continuity strip at `t35Consider`.
+  - Evidence ledger introduces gold person-group marker `BLACK WOMEN` and `WARINESS TOWARD THE U.S. MEDICAL SYSTEM` at `t35Black`.
+  - Bias person glyph and `BIAS · STATISTICAL STARTING TENDENCY` dock above plot at `t35Bias`.
+  - Generic prior curve transitions to gold and receives `STARTING EXPECTATION` at `t35Statistical`.
+  - Expectation card enters and links to prior curve at `t35Starting`.
+  - Evidence curve enters and posterior shifts toward evidence at `t35Updated`.
+  - Documented harm and ongoing disparity tokens lock with source sockets at `t35Documented`.
+  - Posterior holds in updated position with caption `EXPECTATION UPDATED ON DOCUMENTED EVIDENCE` at `t35Disparity`.
+- **Turn 36**: Turn 35 plot and ledger clear completely at `t36National`.
+  - NCHS source plaque enters with author, year `2023`, and report title `Maternal Mortality Rates in the United States, 2021`.
+  - Qualitative series frame enters at `t36Maternal` with heading `MATERNAL MORTALITY · SURVEILLANCE SERIES`.
+  - Relation bracket resolves at `t36Elevated` reading `ELEVATED RELATIVE LEVEL`.
+  - Upper gold path draws through surveillance stations labelled `BLACK WOMEN` at `t36Black`.
+  - Lower cream path draws through same stations labelled `WHITE WOMEN` at `t36White`.
+  - Unlabeled surveillance station guides and `DOCUMENTED SERIES` resolve at `t36Surveillance`.
+  - Starting expectation marker docks beside upper path at `t36Expectation`.
+  - Gold tracking line follows upper path at `t36Tracks` with label `EXPECTATION TRACKS THE DOCUMENTED SERIES`.
+  - Disclosure strip resolves at `t36Numbers` reading `QUALITATIVE RELATIONSHIP · RATE VALUES OMITTED`.
+
+#### `InstalledRouting` (turn 37, 7:32.240–7:44.760)
+- Continuity equation strip renders Eq. 2.8a with installed racial prior label.
+- Red `Π_race` term expands into installed-prior cartridge at `t37PiRace`.
+- Red `INSTITUTIONAL INPUT` bus enters cartridge from border at `t37Institutionally`.
+- Cartridge locks and resolves `INSTITUTIONALLY INSTALLED RACIAL ASSUMPTION` at `t37Installed`.
+- Output traces draw from cartridge toward empty gates at `t37Routes`.
+- Upper gate opens with `EMPATHY ROUTING` at `t37Empathy`.
+- Lower gate opens with `THREAT DETECTION` at `t37Threat`.
+- Vertical divider rule draws with `LEGAL COLOR LINE` at `t37Legal`.
+- Direct facts lane displays `DIRECT FACTS`, `DIRECT EVIDENCE`, `RECORDED OBSERVATION`, and `MEASURED OUTCOMES` with `FACTS REMAIN VISIBLE` at `t37Facts`.
+- Routing traces hold locked to cartridge while direct facts lane remains unchanged at `t37Support`.
+
+#### `RLCBridge` (turn 38, 7:45.110–7:59.730)
+- Heading `RLC BACKLASH MODEL` draws in institutional panel at `t38Rlc`.
+- Installed-prior cartridge settles in mental half under `BAYESIAN DEFENSE` at `t38Bayesian`.
+- Cartridge sends pulse across coupling bridge at `t38Installed`.
+- Footer label `MENTAL HALF · INSTALLED PRIORS` locks below cartridge at `t38Mental`.
+- Institutional panel displays `INSTITUTIONAL HALF` at `t38Institutional`.
+- Passive elements enter in spoken sequence:
+  - `L · INDUCTANCE` with `CULTURAL INERTIA + INSTITUTIONAL ENTRENCHMENT` at `t38Inductance`.
+  - `R · RESISTANCE` with `BUREAUCRATIC + CARCERAL FRICTION` at `t38Resistance`.
+  - `C · CAPACITANCE` with `TOKEN-REFORM ABSORPTION CAPACITY` at `t38Capacitance`.
+  - `q(t) · EQUALITY-SURPLUS CHARGE` chip enters at `t38Absorbs`.
+  - `V(t) · REFORM-SHOCK DRIVING VOLTAGE` chip enters at `t38Reform`.
+- Damped response preview gains baseline `EXTRACTION BASELINE · q = 0` at `t38Absorbs`.
+- Reform shock launches; normalized R control sweeps upward with `DERIVED PREVIEW · NORMALIZED R SWEEP`, `REFORM SHOCK`, `DAMPED RESPONSE`, and `Eq. 2.12 · damped solution` at `t38Damps`.
+- All introduced chips assemble into Eq. 2.11 (`Lq̈ + Rq̇ + (1/C)q = V(t)`) with `Eq. 2.11 · RLC governing equation` and `Figure 2.6 · response preview` at `t38Shocks`.
+
+#### `ExplicitImplicitChannels` (turns 39–40, 8:00.080–8:17.460)
+- **Turn 39**: Dual channels for individual judgment.
+  - Central Bias hub enters with gold person glyph and `BIAS` at `t39Bias`.
+  - Upper channel draws reading `EXPLICIT` at `t39Explicit`.
+  - Signed judgment card enters upper channel under `CONSCIOUSLY ENDORSED JUDGMENT` at `t39Consciously`.
+  - Lower channel draws reading `IMPLICIT` at `t39Implicit`.
+  - Association nodes fire through lower channel with `AUTOMATIC MENTAL ASSOCIATION` at `t39Automatic`.
+  - Both channels terminate at meter labelled `INDIVIDUAL JUDGMENT` at `t39Associations`.
+- **Turn 40**: Channels clear completely; Greenwald and Banaji (1995) citation card enters.
+  - Author line resolves `ANTHONY G. GREENWALD` at `t40Anthony` and completes `ANTHONY G. GREENWALD · MAHZARIN R. BANAJI` at `t40Banaji`.
+  - Gold source rule joins author line to year socket at `t40Formal`.
+  - Year `1995` lands in year socket at `t40NinetyFive`.
+  - Title begins resolving at `t40Implicit` and reaches primary brightness `Implicit Social Cognition: Attitudes, Self-Esteem, and Stereotypes` at `t40Cognition`.
+  - Card holds with clean academic citation at `t40Article`.
+
+### Challenges encountered
+
+1. **Literal underscore detection on bibliographic paths**:
+   - The test runner enforces zero literal underscores in rendered text. Raw LaTeX source paths like `Paper/The_Original_Power.tex` triggered this assertion. Using clean bibliographic attribution (`The Original Power, Chapter 2`) resolved this cleanly across all scenes.
+2. **Visual curve collision with text boxes**:
+   - In `DocumentedExpectation`, Gaussian prior and posterior distribution curves crossed the `STARTING EXPECTATION` label box at y = 520. Positioning the distribution labels below the plot axis at y = 760 completely cleared the curve stroke paths.
+3. **Safe area margin padding on stroke polylines**:
+   - In `InstalledRouting`, the institutional input bus started at x = 60, but `lineAttrs` applied a default 2 px padding box extending to x = 58, which tripped the safe area boundary. Insetting the line start to x = 64 ensured the bounding box stayed inside x >= 60.
+4. **Line stroke intersection with vertical divider labels**:
+   - In `InstalledRouting`, the vertical legal color line passed through the center of the `LEGAL COLOR LINE` text box. Splitting the rule into upper and lower segments with a clean gap around the label eliminated the collision.
+5. **Multi-line wrap and text fit on mono strings**:
+   - In `RLCBridge`, single-line boxes for `EXTRACTION BASELINE · q = 0`, `Eq. 2.12 · damped solution`, and `Figure 2.6 · response preview` triggered line-wrap overflow assertions in the layout audit. Expanding their heights to 54 px comfortably accommodated their two-line wraps.
+6. **Card rail discontinuity in explicit channels**:
+   - In `ExplicitImplicitChannels`, the continuous rail line intersected the signed judgment card text box. Rendering disjoint input and output segments connecting to the card boundaries preserved the circuit aesthetic without text collision.
+
+### Next ideas (6 Ideas)
+
+1. Add a `BypassedStroke` helper component to route connection lines cleanly around text boxes and chips.
+2. Create a `HarmSeriesPlot` helper in `min7_12/shared/` for qualitative surveillance plots.
+3. Support multi-segment dashed line rails in `SignalLane` to bridge around docked cards automatically.
+4. Build a reusable `CircuitDampingPreview` component that encapsulates the normalized R-sweep and decaying sine visualization.
+5. Add an automatic label-advance and line-wrap estimator in package check runners to catch fit-estimate issues before audit execution.
+6. Parameterize citation plaque subtitle transitions to automatically resolve author lines and title reveals on narration timestamps.
+
+### Checks
+
+- Episode TypeScript: `npx --prefix /Users/emmanuel/Documents/Theory/scriptCast-stage/video tsc --noEmit -p Architecting_the_operation/video/yt02/stage` exits 0 with zero diagnostics.
+- `check_min7_12_e` tail:
+  - `PASS: 203 Package E frames rendered in two fresh processes; all markup hashes match.`
+  - `PASS: audit self-test (10 rules); 203 Package E frames (cues + 500 ms grid); layout audit of 3938 declared boxes (safe area, notch zones, text fit, collisions); clean turn transitions, storyboard strings, hook, underscore, interaction-hint and equation pulse policies verified.`
+- `check_min7_12_f` tail: `PASS: 223 Package F frames rendered in two fresh processes; all markup hashes match. PASS: audit self-test (10 rules); 223 Package F frames (cues + 500 ms grid); layout audit of 2845 declared boxes …`
+- `check_min7_12_shared` tail: `PASS: 25 min7_12-shared states rendered in two fresh processes; all markup hashes match. PASS: audit self-test (10 rules); 25 min7_12 shared-component states; layout audit of 171 declared boxes …`
+- `check_first_minute` tail: `PASS: 43 cue-derived frames; five scene contracts, manuscript strings, real subscripts, hook policy, underscore policy, and interaction-hint policy verified; …`
+- `check_roadmap_boot` tail: `PASS: RoadmapBoot renders 17 deterministic frames; 13 labels land on their cues and are absent before; …no literal underscores; no interaction hints.`
+- `check_minute_two` tail: `PASS: 44 cue-derived frames; exact definition spacing …; Figure 2.3 layer widths 598 / 483 / 368 px in the ratio 5.2 : 4.2 : 3.2.`
+- `check_dashboard` tail: `PASS: Equal Earth route 1296 samples / 0 land hits …; all 24 tray modes plus 3 Wage plane modes; …no rendered interaction hints; 75 polities with 16 non-colliding labels.`
+- `check_min3_7_shared` tail: `PASS: 25 representative shared-component states; eleven component contracts, hook policy, underscore policy, Gaussian curves, … Posterior modes: 0.280460 / 0.499174 / 0.718096.`
+- `check_min3_7_a` tail: `PASS: audit self-test (10 rules); 47 Package A cue-derived frames; 1282 audited boxes; …`
+- `check_min3_7_b` tail: `PASS: audit self-test (10 rules); 43 Package B cue-derived frames; 1146 audited boxes; …`
+- `check_min3_7_c` tail: `PASS: audit self-test (10 rules); 195 Package C frames (cues + 500 ms grid); layout audit of 6799 declared boxes …`
+- `check_min3_7_d` tail: `PASS: audit self-test (10 rules); 211 Package D frames (cues + 500 ms grid); layout audit of 5306 declared boxes over 211 frames …; monotonic posterior sweep 0.2800 → 0.6755 (prior 0.72).`
+- `check_equations` tail: `PASS: 14 equation frames; 111 registered coloured terms; 11 pulse cues peak at cue + 200 ms and rest after 600 ms; Eq. 2.5 and Eq. 2.8a are verbatim with MathText subscripts.`
+- `tools/check_antithesis.py` on all package E files: `check-antithesis: no banned constructions found.`
+
+### Unverified remainder
+
+- No Chromium browser renders were executed in this stage; visual layout and text fitting rely on static layout audit geometry and estimates.
+- The NCHS report and Greenwald & Banaji (1995) paper citations conform to the approved narration and storyboard register without external network fetching.
+
+
+
+
+## Package H
+
+Model: Gemini 3.8 Flash (High)  
+Checkpoint: `162607e`
+
+### What was requested
+
+Build minutes seven to twelve package H from `STORYBOARD_MIN7_12.md` (turns 55–62, duration 79.600 s):
+- Replace the three stub scenes in `min7_12/h/` in place: `UnequalTreatment.tsx` (turns 55–56), `InterpersonalClass.tsx` (turns 57–61), and `LiteratureBoundary.tsx` (turn 62).
+- Implement every beat, string, layout box, and visual transition specified in `STORYBOARD_MIN7_12.md`.
+- Ensure pure deterministic rendering driven only by `useCue` and `useStageMs`.
+- Ensure clean layout audit (safe area, notch zones, text fit, zero collisions) across all frames.
+- Write `tools/check_min7_12_h.{tsx,mjs}` testing two-process determinism, hook policy, underscore policy, interaction-hint policy, beat string presence and earlier absence, layout audit at every frame, and turn transition cleanliness.
+- Verify that episode TypeScript, all existing checks, and `tools/check_antithesis.py` pass.
+
+### Files written
+
+- `min7_12/h/UnequalTreatment.tsx`: turns 55–56, shots S00-55 and S00-56.
+- `min7_12/h/InterpersonalClass.tsx`: turns 57–61, shots S00-57, S00-58, S00-59, S00-60, and S00-61.
+- `min7_12/h/LiteratureBoundary.tsx`: turn 62, shot S00-62.
+- `tools/check_min7_12_h.tsx`: validation test runner covering 227 frames.
+- `tools/check_min7_12_h.mjs`: esbuild bundling and two-process determinism driver.
+- `FINDINGS_MIN7_12.md` §Package H.
+
+### Scene implementations
+
+#### `UnequalTreatment` (turns 55–56, 11:12.040–11:34.290)
+- **Turn 55**: Assembles the three-part taxonomy into a continuous horizontal pipeline connecting group belief, emotional hostility, and unequal treatment.
+  - Stereotype, Prejudice, and Discrimination modules enter inside the pipeline frame at `t55ThreePart`.
+  - First node receives label `GROUP BELIEF` at `t55Stereotype`.
+  - Belief tokens illuminate within the 3 × 3 belief grid at `t55Belief`.
+  - Second node activates in red with affective wave visual at `t55Prejudice`.
+  - `EMOTIONAL HOSTILITY` resolves beside the heart glyph at `t55Hostility`.
+  - Third node activates in orange with action vector visual at `t55Discrimination`.
+  - `UNEQUAL TREATMENT` resolves beside the directional arrow at `t55Unequal`.
+  - `GROUP MEMBERSHIP` token enters at `t55Membership` and travels through the pipeline path from node 1 to node 3.
+- **Turn 56**: Clears the Turn 55 pipeline completely and opens the treatment tray with four observable treatment examples.
+  - Orange discrimination header tab displays `DISCRIMINATION · OBSERVABLE ACTION` at `t56Unequal`.
+  - Treatment tray container enters with heading `PERSON-TO-PERSON UNEQUAL TREATMENT` at `t56Unequal`.
+  - Card 1 enters with speech boundary card graphic at `t56Verbal` and resolves as `VERBAL EXCLUSION` at `t56Exclusion`.
+  - Card 2 enters with service-counter partition graphic and receives `WORSE CUSTOMER SERVICE` at `t56Customer`.
+  - Card 3 enters with evaluation sheet graphic and receives `BIASED GRADING` at `t56Grading`.
+  - Card 4 enters with rental key graphic and receives `RENTAL REFUSAL` at `t56Refusing`.
+  - Card 4 receives apartment structural outline at `t56Apartment`.
+  - Qualification badge and verification check display `QUALIFIED TENANT` on the tenant record at `t56Qualified`.
+  - All four cards hold under the discrimination tab through `t56Tenant`.
+
+#### `InterpersonalClass` (turns 57–61, 11:34.640–12:20.390)
+- **Turn 57**: Collects bias, prejudice, and discrimination on the upper source-backed rail.
+  - Bias, Prejudice, and Discrimination blocks enter with established glyphs and palette accents at `t57Look`.
+  - Bias block receives citation `GREENWALD & BANAJI 1995` at `t57Bias`.
+  - Prejudice block receives citation `ALLPORT 1954` at `t57Prejudice`.
+  - Discrimination block receives citation `FISKE 1998` at `t57Discrimination`.
+  - Gold grouping bracket draws beneath the three blocks from `t57Fiske`.
+- **Turn 58**: Establishes individual and group operational locus.
+  - Bracket closes with title `INTERPERSONAL CLASS` at `t58Three`.
+  - Mental locus label `INSIDE AN INDIVIDUAL` enters at `t58Mental`.
+  - Behavioral locus label `BETWEEN INDIVIDUALS` enters at `t58Behavioral`.
+  - Group boundaries for `GROUP A` and `GROUP B` enter at `t58Direction` with opposing directional arrows.
+  - Both arrows complete and `ANY DIRECTION BETWEEN ANY TWO SOCIAL GROUPS` resolves at `t58Two`.
+- **Turn 59**: Displays individual ubiquity across social groups.
+  - Varied row of abstract human marks enters with label `ANY HUMAN BEING` at `t59Any`.
+  - Labels `ANY SKIN COLOR` and `ANY ANCESTRY` resolve at `t59Skin` and `t59Ancestry`.
+  - Gold lean indicator activates with label `MENTAL BIAS` at `t59Bias`.
+  - Red heart field activates with label `RIGID HOSTILITY` at `t59Hostility`.
+  - Directional action vector links individuals with label `UNEQUAL TREATMENT` at `t59Treat`.
+  - Opposing group arrows remain active through `t59Unequally`.
+- **Turn 60**: Separates interpersonal actions from state power institutions.
+  - Heading `PERSON-TO-PERSON ACTIONS` resolves above the contracted group field at `t60PersonToPerson`.
+  - State-power rack opens on the right separated by a 100 px empty gutter.
+  - Header `REQUIRES ZERO CONTROL OVER` resolves in red accent above the rack at `t60Zero`.
+  - Five distinct institutional cells resolve in sequence: `STATE LEGISLATURES` at `t60Legislatures`, `APPELLATE COURTS` at `t60Courts`, `POLICE DEPARTMENTS` at `t60Police`, `CREDIT MARKETS` at `t60Credit`, and `MILITARY FORCE` at `t60Military`.
+  - Every interpersonal line and mark remains confined to the left field.
+- **Turn 61**: Assembles the formal classification on the assignment strip.
+  - Turn 60 lower rack and field clear when book-shaped assignment strip rises at `t61Original`.
+  - Title `THE ORIGINAL POWER` displays at upper left of strip at `t61Original`.
+  - Three docking sockets receive the term blocks at `t61Assigns`.
+  - Sockets lock individually with verification markers: `BIAS` at `t61Bias`, `PREJUDICE` at `t61Prejudice`, and `DISCRIMINATION` at `t61Discrimination`.
+  - Primary title `INTERPERSONAL CLASS OF SOCIAL BEHAVIOR` reaches full brightness at `t61Interpersonal`.
+  - Precision calibration ticks and label `EXACT SCIENTIFIC NAMES` lock at `t61Scientific`.
+
+#### `LiteratureBoundary` (turn 62, 12:20.740–12:31.640)
+- Established literature field opens with heading `ESTABLISHED EXPERIMENTAL PSYCHOLOGY` above three empty dashed sockets at `t62Established`.
+- Compact stacked term blocks dock into the sockets at `t62Literature`: `BIAS · GREENWALD & BANAJI 1995`, `PREJUDICE · ALLPORT 1954`, and `DISCRIMINATION · FISKE 1998`.
+- Vertical terminal boundary draws top to bottom in its own 60 px column with vertical text `ESTABLISHED LITERATURE ENDS HERE` at `t62Ends`.
+- Spoken-word pulses illuminate the three blocks at `t62Bias`, `t62Prejudice`, and `t62Discrimination`.
+- Gold grouping bracket connects all three blocks under `PERSON-TO-PERSON OPERATIONS` at `t62PersonToPerson`.
+- Label `STANDARD DEFINITIONS` locks beneath the bracket at `t62Standard`.
+- Literature field reaches full brightness at `t62Experimental`.
+- Turn-63 handoff field opens on the right with label `TURN 63 · STRUCTURAL ARGUMENT BEGINS` and an empty structural continuation socket at `t62Psychology`.
+
+### Challenges encountered
+
+1. **Horizontal text overflow in narrow terminal column**:
+   - The terminal boundary occupies a dedicated 60 px column (`x: 1300–1360`). Horizontal text for `ESTABLISHED LITERATURE ENDS HERE` would require 384 px, crossing the boundary into adjacent fields.
+   - Aligning the text vertically using `writingMode: 'vertical-rl'` and omitting horizontal `data-fit` estimates keeps the text contained within `{x: 1305, y: 220, w: 50, h: 580}` with zero edge violations.
+2. **Boundary frame edge crossings in group field**:
+   - In `InterpersonalClass`, placing turn 58 and turn 59 labels inside or across the `GroupDirectionField` boundaries created edge-crossing collisions with the panel borders.
+   - Positioning the upper label row (`ANY HUMAN BEING`, `ANY SKIN COLOR`, `ANY ANCESTRY`) at `y: 545`, strictly above the boundary panels (`y: 610–830`), eliminated all edge-crossing conflicts while maintaining visual hierarchy.
+   - Sizing the gutter label `UNEQUAL TREATMENT` to fit precisely within the 212 px gutter prevented collisions with the left and right boundary borders.
+3. **Line-height estimate in compact label box**:
+   - In `InterpersonalClass`, the label `EXACT SCIENTIFIC NAMES` (20 px font, 1.25 line height) requires 25 px vertical clearance. A declared box height of 22 px triggered a line-height overflow. Expanding the box height to 26 px resolved the diagnostic.
+4. **Clean turn state separation**:
+   - Turn 56 clears all Turn 55 pipeline geometry and arrows.
+   - Turn 61 clears Turn 60 group field and state-power rack geometry upon entry of the assignment strip.
+   - Turn-conditional DOM gating ensures replaced elements leave the markup completely, satisfying string-absence checks.
+
+### Next ideas (6 Ideas)
+
+1. Extract a reusable `StatePowerRack` component that formats vertical lists of governance and coercive institutions with status indicators.
+2. Create an automated vertical-text layout audit helper that computes font height advances for rotated Asian and vertical Latin typography.
+3. Add animated particle flow along the `GroupDirectionField` opposing arrows to highlight bidirectional volume dynamics.
+4. Parameterize the `TermTriad` dock socket animation to provide mechanical lock clicks upon socket closure.
+5. Create a shared `TreatmentTray` component for social-interaction case audits and experimental examples.
+6. Provide automatic subtitle tracking for multiline book title banners in transition strips.
+
+### Checks
+
+- Episode TypeScript: All Package H files compile cleanly with zero diagnostics. Parallel runner file `min7_12/e/InstalledRouting.tsx` reported two errors (`dividerPoints`), left untouched per multi-package rules.
+- `check_min7_12_h` tail:
+  - `PASS: 227 Package H frames rendered in two fresh processes; all markup hashes match.`
+  - `PASS: audit self-test (10 rules); 227 Package H frames (cues + 500 ms grid); layout audit of 4782 declared boxes (safe area, notch zones, text fit, collisions); clean turn transitions, storyboard strings, hook, underscore and interaction-hint policies verified.`
+- `check_first_minute` tail: `PASS: 43 cue-derived frames; five scene contracts, manuscript strings, real subscripts, hook policy, underscore policy, and interaction-hint policy verified; …`
+- `check_roadmap_boot` tail: `PASS: RoadmapBoot renders 17 deterministic frames; 13 labels land on their cues and are absent before; …`
+- `check_minute_two` tail: `PASS: 44 cue-derived frames; exact definition spacing …; Figure 2.3 layer widths 598 / 483 / 368 px in the ratio 5.2 : 4.2 : 3.2.`
+- `check_dashboard` tail: `PASS: Equal Earth route 1296 samples / 0 land hits …; all 24 tray modes plus 3 Wage plane modes; …no rendered interaction hints; 75 polities with 16 non-colliding labels.`
+- `check_min3_7_shared` tail: `PASS: 25 representative shared-component states; eleven component contracts, hook policy, underscore policy, Gaussian curves, … Posterior modes: 0.280460 / 0.499174 / 0.718096.`
+- `check_min3_7_a` tail: `PASS: audit self-test (10 rules); 47 Package A cue-derived frames; 1282 audited boxes; …`
+- `check_min3_7_b` tail: `PASS: audit self-test (10 rules); 43 Package B cue-derived frames; 1146 audited boxes; …`
+- `check_min3_7_c` tail: `PASS: audit self-test (10 rules); 195 Package C frames (cues + 500 ms grid); layout audit of 6799 declared boxes …`
+- `check_min3_7_d` tail: `PASS: audit self-test (10 rules); 211 Package D frames (cues + 500 ms grid); layout audit of 5306 declared boxes over 211 frames …; monotonic posterior sweep 0.2800 → 0.6755 (prior 0.72).`
+- `check_equations` tail: `PASS: 14 equation frames; 111 registered coloured terms; 11 pulse cues peak at cue + 200 ms and rest after 600 ms; Eq. 2.5 and Eq. 2.8a are verbatim with MathText subscripts.`
+- `check_min7_12_shared` tail: `PASS: 25 min7_12-shared states rendered in two fresh processes; all markup hashes match. PASS: audit self-test (10 rules); 25 min7_12 shared-component states; layout audit of 171 declared boxes …`
+- `check_min7_12_f` tail: `PASS: 223 Package F frames rendered in two fresh processes; all markup hashes match. PASS: audit self-test (10 rules); 223 Package F frames (cues + 500 ms grid); layout audit of 2845 declared boxes …`
+- `tools/check_antithesis.py` on all package H files and findings: `check-antithesis: no banned constructions found.`
+
+### Unverified remainder
+
+- No Chromium browser renders were executed in this stage; visual layout and text fitting rely on static layout audit geometry and estimates.
+- The state-power rack institutions follow the approved narration script; additional legal-code citations remain outside the episode storyboard.
