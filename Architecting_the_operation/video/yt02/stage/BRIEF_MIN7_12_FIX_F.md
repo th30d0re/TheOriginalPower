@@ -9,9 +9,8 @@ Read `BRIEF_MIN7_12_BUILD.md` (its Rules, Checkpoint and Standard all apply),
 - `tools/check_min7_12_f.*`;
 - a "Fix pass 1" section in `FINDINGS_MIN7_12.md`.
 
-**Frames:** the review frames are attached. Their source is
-`outputs/YT02v2_ov/video/stage_runs/f_v1/e<episode-seconds>.jpg`, and the render starts at episode
-497.8 s.
+**Frames:** the review frames are `outputs/YT02v2_ov/video/stage_runs/f_v1/e<episode-seconds>.jpg`,
+and the render starts at episode 497.8 s. Open and look at every one before you change code.
 
 **The problem:** the check passes, and the picture still does too little. The rule this pass adds:
 **every box on screen holds its content at its last beat.** No panel, card or window may stay
