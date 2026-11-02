@@ -18,10 +18,10 @@ const move = (ms: number, at: number, duration = 650) => cubicInOut(progress(ms,
 
 export const ALLPORT_QUESTION_LAYOUT = {
   header: {x: 150, y: 110, w: 1620, h: 135},
-  biasBlock: {x: 200, y: 350, w: 480, h: 240},
-  prejudiceBlock: {x: 760, y: 350, w: 480, h: 240},
-  connectorLine: [[680, 470], [760, 470]] as const satisfies readonly Point[],
-  citationCard: {x: 350, y: 300, w: 1220, h: 520},
+  biasBlock: {x: 240, y: 350, w: 460, h: 180},
+  prejudiceBlock: {x: 780, y: 350, w: 460, h: 180},
+  connectorLine: [[695, 444], [785, 444]] as const satisfies readonly Point[],
+  citationCard: {x: 380, y: 340, w: 1160, h: 340},
   source: {x: 116, y: 964, w: 740, h: 26},
 } as const;
 
@@ -59,9 +59,10 @@ export function AllportQuestion({segment}: SceneProps) {
   const raceRed = color('color/marker/race');
   const primary = color('color/text/primary');
   const muted = color('color/text/muted');
+  const soft = color('color/text/soft');
 
-  const connectorPoints: Point[] = [[676, 470], [764, 470]];
-  const sourceRule: Point[] = [[410, 520], [1510, 520]];
+  const connectorPoints: Point[] = [[690, 444], [790, 444]];
+  const sourceRule: Point[] = [[430, 495], [1490, 495]];
 
   const biasOpacity = isCitation ? 0 : ms >= cue.t46Prejudice ? 0.42 : labelP;
   const prejudiceOpacity = isCitation ? 0 : ms >= cue.t46Prejudice ? 1 : labelP;
@@ -86,23 +87,26 @@ export function AllportQuestion({segment}: SceneProps) {
               <span aria-hidden="true" style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: 4, background: gold}} />
             </Panel>
             <div
-              {...shapeAttrs('bias-glyph', {x: 230, y: 440, w: 48, h: 62}, 'mark', 'person')}
-              style={{position: 'absolute', left: 230, top: 440, width: 48, height: 62}}
+              {...shapeAttrs('bias-glyph', {x: 270, y: 455, w: 48, h: 56}, 'mark', 'person')}
+              style={{position: 'absolute', left: 270, top: 455, width: 48, height: 56}}
             >
-              <PersonMark x={24} y={31} group="ingroup" emphasis={1} scale={1} />
+              <PersonMark x={24} y={28} group="ingroup" emphasis={1} scale={1} />
             </div>
-            <Label id="bias-label" box={{x: 230, y: 380, w: 420, h: 42}} size={26} weight={600} sans ink={gold}>
+            <Label id="bias-label" box={{x: 270, y: 375, w: 400, h: 36}} size={24} weight={600} sans ink={gold}>
               BIAS · STARTING TENDENCY
             </Label>
+            <Label id="bias-summary" box={{x: 270, y: 415, w: 400, h: 28}} size={20} weight={500} sans ink={soft}>
+              STARTING TENDENCY
+            </Label>
             <div
-              {...shapeAttrs('bias-socket', {x: 652, y: 458, w: 24, h: 24}, 'mark', 'socket')}
+              {...shapeAttrs('bias-socket', {x: 672, y: 435, w: 18, h: 18}, 'mark', 'socket')}
               style={{
                 position: 'absolute',
-                left: 652,
-                top: 458,
-                width: 24,
-                height: 24,
-                borderRadius: 12,
+                left: 672,
+                top: 435,
+                width: 18,
+                height: 18,
+                borderRadius: 9,
                 background: gold,
                 boxSizing: 'border-box',
               }}
@@ -110,7 +114,7 @@ export function AllportQuestion({segment}: SceneProps) {
           </div>
 
           <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position: 'absolute', inset: 0}} aria-hidden="true">
-            <path {...lineAttrs('question-connector', connectorPoints)} d="M680 470H760" stroke={gold} strokeWidth="3" />
+            <path {...lineAttrs('question-connector', connectorPoints)} d="M690 444H790" stroke={gold} strokeWidth="3" />
           </svg>
 
           <div data-term-block="prejudice" style={{opacity: prejudiceOpacity}}>
@@ -127,8 +131,8 @@ export function AllportQuestion({segment}: SceneProps) {
             </Panel>
 
             <div
-              {...shapeAttrs('prejudice-glyph', {x: 790, y: 440, w: 48, h: 48}, 'mark', 'heart')}
-              style={{position: 'absolute', left: 790, top: 440, width: 48, height: 48, color: raceRed}}
+              {...shapeAttrs('prejudice-glyph', {x: 810, y: 455, w: 48, h: 48}, 'mark', 'heart')}
+              style={{position: 'absolute', left: 810, top: 455, width: 48, height: 48, color: raceRed}}
             >
               <svg width="48" height="48" viewBox="0 0 48 48" aria-hidden="true">
                 <path d="M24 40 C18 34 7 27 7 17 C7 7 19 5 24 13 C29 5 41 7 41 17 C41 27 30 34 24 40 Z" fill="none" stroke="currentColor" strokeWidth="2.5" />
@@ -137,24 +141,34 @@ export function AllportQuestion({segment}: SceneProps) {
 
             <Label
               id="prejudice-label"
-              box={{x: 790, y: 380, w: 420, h: 42}}
-              size={26}
+              box={{x: 810, y: 375, w: 400, h: 36}}
+              size={24}
               weight={600}
               sans
               ink={ms >= cue.t46Second ? raceRed : color('color/text/accent')}
             >
               {ms >= cue.t46Second ? '2 · PREJUDICE' : 'PREJUDICE'}
             </Label>
+            <Label
+              id="prejudice-summary"
+              box={{x: 810, y: 415, w: 400, h: 28}}
+              size={20}
+              weight={500}
+              sans
+              ink={ms >= cue.t46Second ? raceRed : soft}
+            >
+              GROUP ANTIPATHY
+            </Label>
 
             <div
-              {...shapeAttrs('prejudice-socket', {x: 764, y: 458, w: 24, h: 24}, 'mark', 'socket')}
+              {...shapeAttrs('prejudice-socket', {x: 790, y: 435, w: 18, h: 18}, 'mark', 'socket')}
               style={{
                 position: 'absolute',
-                left: 764,
-                top: 458,
-                width: 24,
-                height: 24,
-                borderRadius: 12,
+                left: 790,
+                top: 435,
+                width: 18,
+                height: 18,
+                borderRadius: 9,
                 background: raceRed,
                 boxSizing: 'border-box',
               }}
@@ -170,24 +184,30 @@ export function AllportQuestion({segment}: SceneProps) {
           </Panel>
 
           {ms >= cue.t46FiftyFour && (
-            <Label id="cite-year" box={{x: 410, y: 360, w: 200, h: 44}} size={32} weight={600} ink={gold} opacity={fiftyFourP}>
+            <Label id="cite-year" box={{x: 430, y: 375, w: 180, h: 40}} size={32} weight={600} ink={gold} opacity={fiftyFourP}>
               1954
             </Label>
           )}
 
-          <Label id="cite-author" box={{x: 410, y: 440, w: 1100, h: 56}} size={38} weight={650} sans ink={primary} opacity={gordonP}>
+          <Label id="cite-author" box={{x: 430, y: 425, w: 1060, h: 52}} size={38} weight={650} sans ink={primary} opacity={gordonP}>
             GORDON W. ALLPORT
           </Label>
 
           {ms >= cue.t46Classic && (
             <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position: 'absolute', inset: 0}} aria-hidden="true" opacity={classicP}>
-              <path {...lineAttrs('cite-rule', sourceRule)} d="M410 520H1510" stroke={gold} strokeWidth="2" />
+              <path {...lineAttrs('cite-rule', sourceRule)} d="M430 495H1490" stroke={gold} strokeWidth="2" />
             </svg>
           )}
 
           {ms >= cue.t46Nature && (
-            <Label id="cite-title" box={{x: 410, y: 550, w: 1100, h: 60}} size={36} sans ink={primary} style={{fontStyle: 'italic'}} opacity={titleP}>
+            <Label id="cite-title" box={{x: 430, y: 515, w: 1060, h: 48}} size={36} sans ink={primary} style={{fontStyle: 'italic'}} opacity={titleP}>
               {titleText}
+            </Label>
+          )}
+
+          {ms >= cue.t46Nine && (
+            <Label id="cite-source-detail" box={{x: 430, y: 580, w: 1060, h: 32}} size={22} weight={500} ink={soft} opacity={nineP}>
+              Allport 1954, p. 9
             </Label>
           )}
         </div>

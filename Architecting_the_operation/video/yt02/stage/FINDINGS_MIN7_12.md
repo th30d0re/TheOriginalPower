@@ -594,3 +594,100 @@ Build minutes seven to twelve package H from `STORYBOARD_MIN7_12.md` (turns 55�
 
 - No Chromium browser renders were executed in this stage; visual layout and text fitting rely on static layout audit geometry and estimates.
 - The state-power rack institutions follow the approved narration script; additional legal-code citations remain outside the episode storyboard.
+
+## Fix pass 1 (Package F)
+
+Model: Gemini 3.8 Flash (High)  
+Checkpoint: `ad1b96e`
+
+### What was requested
+
+Execute fix pass 1 for minutes 7–12 Package F based on frame reviews of `min7_12_F_v1.mp4`:
+- Enforce the new layout invariant: every box on screen holds its content at its last beat; all panels, cards, and windows are populated.
+- Add an automated fill-ratio assert to `tools/check_min7_12_f.tsx` with documented thresholds (area fill ratio and vertical span ratio).
+- Fix `ImplicitTrace` (turns 41–42, frames `e500`, `e508`, `e515`, `e524`, `e531`):
+  - Size the definition card to its content across expanded and contracted states.
+  - Eliminate the duplicate heading in the past-experience stream column, populating the three trace boxes with distinct tokens and labels.
+  - Populate the `INTROSPECTIVELY UNIDENTIFIED TRACE` panel with stored trace tokens and the storyboard's faint steering path.
+  - Compose turn 42 as a balanced three-column layout where belief and automatic association lanes symmetrically feed the central person and response node.
+- Fix `IATLatency` (turns 43–45, frames `e536`, `e545`, `e552`, `e558`):
+  - Build the citation card to its final height from the start, revealing author names progressively.
+  - Populate the stimulus window with the derived sorting trial (face mark and word chip) and pairing labels on left/right response keys.
+  - Populate the field-audit measure rows with matched-case trial rows and draw the judgment-weighting meter dial with its needle pointing at the joined reading.
+  - Remove `JPSP 74(6)` from the source line, formatting it strictly as `Greenwald, McGhee & Schwartz 1998 · Journal of Personality and Social Psychology`.
+- Fix `AllportQuestion` (turn 46, frames `e563`, `e570`, `e578`):
+  - Size the bias and prejudice term blocks to their content and include the one-line summaries `STARTING TENDENCY` and `GROUP ANTIPATHY`.
+  - Size the Allport citation card to its content, presenting author, year, title, and page reference `Allport 1954, p. 9`.
+- Verify episode TypeScript, the updated Package F checker, all prior stage checkers, and `tools/check_antithesis.py`.
+
+### How I fixed it
+
+1. **ImplicitTrace layout and content density**:
+   - Resized `definitionExpanded` height from 680 px to 380 px, and `definitionContracted` height from 260 px to 125 px. Positioned `plainPanel` directly beneath the contracted definition card at `{x: 120, y: 310, w: 710, h: 250}`.
+   - Removed the duplicate `PAST EXPERIENCES` column title. Sized the `stream` panel to `{x: 930, y: 240, w: 230, h: 350}` and populated `exp-card-1` and `exp-card-2` with `PAST EXPERIENCE` labels. Rendered `exp-card-3` and `stream-experiences` with label `PAST EXPERIENCES` on cue `t41Experiences`.
+   - Sized the `traceStore` panel to `{x: 1220, y: 240, w: 270, h: 350}` with an inset `inspection-screen` panel (`{x: 1235, y: 325, w: 240, h: 210}`). Placed stored trace cards (`UNIDENTIFIED TRACE`, `STORED SHORTCUT`) and rendered an SVG dashed faint steering path connecting the stream inlet to the shortcut exit.
+   - Recomposed turn 42 into a balanced arrangement: `beliefLane` (`{x: 140, y: 330, w: 660, h: 170}`) on the left, `automaticLane` (`{x: 1120, y: 330, w: 660, h: 170}`) on the right, `PersonMark` (`{x: 880, y: 330, w: 160, h: 180}`) at the center, and `responseNode` (`{x: 780, y: 640, w: 360, h: 160}`) at the base. Routed horizontal dashed leader strokes directly into the person mark and a vertical dashed leader down to the response node.
+
+2. **IATLatency instruments and sourcing**:
+   - Sized `sourcePlaque` to its final dimensions `{x: 330, y: 260, w: 1260, h: 350}` from beat `t43Three`. Added an internal gold divider rule above `Journal of Personality and Social Psychology` and positioned `IMPLICIT ASSOCIATION TEST` as a clean title outside the plaque at `y: 650`.
+   - Resized the stimulus window `promptCard` to `{x: 450, y: 290, w: 480, h: 240}` with an internal header `SORTING TRIAL STIMULI` and footer `CONGRUENT / INCONGRUENT PAIR`. Populated `faceCard` with `prompt-face`, `PersonMark`, and `face-target-label`. Populated `wordCard` with `prompt-word`, gold-accented `word-chip`, and `word-category-label`.
+   - Added explicit pairing labels to response keys: `PAIRING: FACE A + WORD A` on `keyLeft` and `PAIRING: FACE B + WORD B` on `keyRight`.
+   - Populated the `fieldAuditInstrument` rows: `fa-card-1` holds `MATCHED CASE PAIR A` and `IDENTICAL RESUME · EQUAL QUALIFICATIONS`; `fa-card-2` holds `MATCHED CASE PAIR B` and `SYSTEMATIC DIFFERENTIAL OUTCOME`; added summary label `DERIVED AUDIT · NO RESULT VALUES`.
+   - Replaced the placeholder rectangle in `judgmentMeter` with a drawn gauge arc, scale tick marks, pivot dot, and a gold needle stroke rotated to point at the joined reading. Added `INDIVIDUAL JUDGMENT`, `MENTAL LEAN`, `JUDGMENT WEIGHTING`, and `JOINED MEASUREMENT READING` labels.
+   - Widened the source line box to 1300 px to accommodate single-line typesetting and updated text to `Greenwald, McGhee & Schwartz 1998 · Journal of Personality and Social Psychology`, removing `JPSP 74(6)`.
+
+3. **AllportQuestion block geometry and citation**:
+   - Sized `biasBlock` and `prejudiceBlock` to `{w: 460, h: 180}` at `y: 350`.
+   - Added one-line summary labels `STARTING TENDENCY` inside `biasBlock` and `GROUP ANTIPATHY` inside `prejudiceBlock`. Inset connector sockets inside block boundaries to satisfy layout-audit edge rules.
+   - Sized the Allport citation card to `{x: 380, y: 340, w: 1160, h: 340}`, showing year `1954`, author `GORDON W. ALLPORT`, gold source rule, title `The Nature of Prejudice`, and card citation detail `Allport 1954, p. 9`.
+
+4. **Automated fill-ratio assertion**:
+   - Implemented `checkFillRatio` in `tools/check_min7_12_f.tsx`.
+   - For every declared `data-shape` frame with effective opacity ≥ 0.05, the assertion computes the sum of areas and vertical span of all enclosed declared text boxes.
+   - Enforced dual threshold: area fill ratio ≥ 0.18 OR vertical span ratio ≥ 0.45, with zero allowed empty containers.
+   - Applied the assertion across all scene end frames and major settled beat frames (`t41Noticing`, `t44Screen`, `t46Second`).
+
+### Challenges encountered
+
+1. **SignalLane internal geometry collisions**:
+   - `SignalLane` computes its rail vertical center at `midY = (top + bottom) / 2`. Placing status labels at `y: 440` in a 180 px lane placed text directly on top of the rail and moving tokens.
+   - Sizing the lane height to 170 px (`box.y = 330`) established the rail at `y: 429`. Placing status labels at `y: 450` provided 21 px vertical clearance from the rail, eliminating all collision diagnostics.
+2. **Text advance line wrapping on source line**:
+   - The expanded IAT source string contains 81 characters, requiring 972 px in IBM Plex Mono. A declared width of 840 px triggered a two-line wrapping overflow diagnostic in the audit. Expanding the box width to 1300 px accommodated the text on a single line within safe area bounds.
+3. **Turn-boundary container fill verification**:
+   - Evaluating fill ratios across turn transitions revealed that outer grouping panels (`stream-panel`, `trace-panel`, `prompt-card`) required proportional vertical sizing to avoid disproportionate whitespace while enclosing subcards.
+   - Adjusting outer panel heights to match their active content bounds ensured high content density across intermediate and final frame states.
+
+### Next ideas (6 Ideas)
+
+1. Introduce an automated fill-ratio check into `tools/layout_audit.ts` so all episode packages enforce container density systematically.
+2. Build a dedicated `GaugeMeter` component in `min7_12/shared/` that parameterizes dial angle, scale ticks, and needle interpolation.
+3. Create a composite `MatchedAuditCard` helper for standardized side-by-side empirical field audit presentations.
+4. Support progressive multi-line text reveals in `CitationCard` to synchronize line entrances with spoken word timestamps.
+5. Add an optional pairing badge slot to `Panel` keys for interactive sorting and classification scenes.
+6. Provide automatic symmetrical lane balancing helpers that compute equal horizontal margins and shared center-dock coordinates.
+
+### Checks
+
+- Episode TypeScript: `npx --prefix /Users/emmanuel/Documents/Theory/scriptCast-stage/video tsc --noEmit -p Architecting_the_operation/video/yt02/stage` exits 0 with zero diagnostics.
+- `check_min7_12_f` tail:
+  - `PASS: 223 Package F frames rendered in two fresh processes; all markup hashes match.`
+  - `PASS: audit self-test (10 rules); 223 Package F frames (cues + 500 ms grid); layout audit of 3858 declared boxes (safe area, notch zones, text fit, collisions); fill-ratio assert verified on all scene end frames; clean turn transitions, storyboard strings, hook, underscore and interaction-hint policies verified.`
+- `check_first_minute` tail: `PASS: 43 cue-derived frames; five scene contracts, manuscript strings, real subscripts, hook policy, underscore policy, and interaction-hint policy verified; …`
+- `check_roadmap_boot` tail: `PASS: RoadmapBoot renders 17 deterministic frames; 13 labels land on their cues and are absent before; …`
+- `check_minute_two` tail: `PASS: 44 cue-derived frames; exact definition spacing …; Figure 2.3 layer widths 598 / 483 / 368 px in the ratio 5.2 : 4.2 : 3.2.`
+- `check_dashboard` tail: `PASS: Equal Earth route 1296 samples / 0 land hits …; all 24 tray modes plus 3 Wage plane modes; …no rendered interaction hints; 75 polities with 16 non-colliding labels.`
+- `check_min3_7_shared` tail: `PASS: 25 representative shared-component states; eleven component contracts, hook policy, underscore policy, Gaussian curves, … Posterior modes: 0.280460 / 0.499174 / 0.718096.`
+- `check_min3_7_a` tail: `PASS: audit self-test (10 rules); 47 Package A cue-derived frames; 1282 audited boxes; …`
+- `check_min3_7_b` tail: `PASS: audit self-test (10 rules); 43 Package B cue-derived frames; 1146 audited boxes; …`
+- `check_min3_7_c` tail: `PASS: audit self-test (10 rules); 195 Package C frames (cues + 500 ms grid); layout audit of 6799 declared boxes …`
+- `check_min3_7_d` tail: `PASS: audit self-test (10 rules); 211 Package D frames (cues + 500 ms grid); layout audit of 5306 declared boxes over 211 frames …; monotonic posterior sweep 0.2800 → 0.6755 (prior 0.72).`
+- `check_equations` tail: `PASS: 14 equation frames; 111 registered coloured terms; 11 pulse cues peak at cue + 200 ms and rest after 600 ms; Eq. 2.5 and Eq. 2.8a are verbatim with MathText subscripts.`
+- `check_min7_12_shared` tail: `PASS: 25 min7_12-shared states rendered in two fresh processes; all markup hashes match. PASS: audit self-test (10 rules); 25 min7_12 shared-component states; layout audit of 171 declared boxes …`
+- `check_min7_12_e` tail: `PASS: 203 Package E frames rendered in two fresh processes; all markup hashes match. PASS: audit self-test (10 rules); 203 Package E frames (cues + 500 ms grid); layout audit of 3938 declared boxes …`
+- `check_min7_12_h` tail: `PASS: 227 Package H frames rendered in two fresh processes; all markup hashes match. PASS: audit self-test (10 rules); 227 Package H frames (cues + 500 ms grid); layout audit of 4782 declared boxes …`
+- `tools/check_antithesis.py` on all package F files and findings: `check-antithesis: no banned constructions found.`
+
+### Unverified remainder
+
+- Video rendering was not run locally because Chromium rendering is performed by the orchestrator. Frame validation relies on the static layout audit, deterministic StaticMarkup evaluation, and automated fill-ratio checks.

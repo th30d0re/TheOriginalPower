@@ -181,6 +181,60 @@ for (const {scene, kind, ms, html} of rendered) {
 }
 assert.deepEqual(violations, [], `layout audit failed:\n${violations.slice(0, 40).join('\n')}`);
 
+// Fill-ratio assertion:
+// Every box on screen holds its content at its last beat. All panels, cards, and windows are populated.
+// At each scene's last frame, every declared data-shape frame (with effective opacity >= 0.05) must contain
+// declared text boxes that cover enough of its geometry.
+// Documented thresholds:
+//   - An empty container (0 text boxes) is a defect.
+//   - Either area fill ratio >= 0.18 (18% of frame area covered by declared text boxes),
+//   - OR vertical span ratio >= 0.45 (declared text bounds cover at least 45% of the frame's height),
+// ensuring every container is sized to its content and holds its storyboard content.
+const MIN_AREA_FILL_RATIO = 0.18;
+const MIN_VERTICAL_SPAN_RATIO = 0.45;
+
+function checkFillRatio(html: string, context: string) {
+  const audited = auditItems(html);
+  const frames = audited.filter(item => item.role === 'frame' && item.opacity >= 0.05);
+  const texts = audited.filter(item => item.role === 'text' && item.opacity >= 0.05);
+
+  for (const f of frames) {
+    const inside = texts.filter(
+      t => t.x >= f.x - 4 && t.y >= f.y - 4 && t.x + t.w <= f.x + f.w + 4 && t.y + t.h <= f.y + f.h + 4,
+    );
+    assert.ok(
+      inside.length > 0,
+      `${context}: container "${f.id}" (${f.w}×${f.h} at [${f.x}, ${f.y}]) is empty with 0 text boxes inside`,
+    );
+
+    const textArea = inside.reduce((sum, t) => sum + t.w * t.h, 0);
+    const frameArea = f.w * f.h;
+    const areaFillRatio = textArea / frameArea;
+
+    const minY = Math.min(...inside.map(t => t.y));
+    const maxY = Math.max(...inside.map(t => t.y + t.h));
+    const verticalSpanRatio = (maxY - minY) / f.h;
+
+    const passes = areaFillRatio >= MIN_AREA_FILL_RATIO || verticalSpanRatio >= MIN_VERTICAL_SPAN_RATIO;
+    assert.ok(
+      passes,
+      `${context}: container "${f.id}" (${f.w}×${f.h}) underfilled: area ratio ${areaFillRatio.toFixed(3)} < ${MIN_AREA_FILL_RATIO} and vertical span ratio ${verticalSpanRatio.toFixed(3)} < ${MIN_VERTICAL_SPAN_RATIO}`,
+    );
+  }
+}
+
+// Assert fill ratio at every scene's last frame (per brief specification)
+for (const scene of Object.keys(sceneComponents) as SceneName[]) {
+  const lastFrame = rendered.find(frame => frame.scene === scene && frame.kind === 'end')!;
+  assert.ok(lastFrame, `missing end frame for ${scene}`);
+  checkFillRatio(lastFrame.html, `${scene} at end frame`);
+}
+
+// Also assert fill ratio at major beat settled states (Turn 41 final beat, Turn 44 final beat, Turn 46 question blocks)
+checkFillRatio(byKind('ImplicitTrace').find(f => f.kind === 't41Noticing')!.html, 'ImplicitTrace at t41Noticing');
+checkFillRatio(byKind('IATLatency').find(f => f.kind === 't44Screen')!.html, 'IATLatency at t44Screen');
+checkFillRatio(byKind('AllportQuestion').find(f => f.kind === 't46Second')!.html, 'AllportQuestion at t46Second');
+
 // Structural checks:
 // Turn 42 replaces Turn 41: turn 41 definition and stream are absent in turn 42.
 for (const cue of ['t42Precision', 't42Automatically', 't42Accumulated', 't42Sincerely', 't42Equal', 't42Treatment']) {
@@ -201,5 +255,5 @@ for (const cue of ['t46Gordon', 't46Classic', 't46FiftyFour', 't46Nature', 't46P
 }
 
 console.log(
-  `PASS: audit self-test (${selfTests} rules); ${rendered.length} Package F frames (cues + 500 ms grid); layout audit of ${items} declared boxes (safe area, notch zones, text fit, collisions); clean turn transitions, storyboard strings, hook, underscore and interaction-hint policies verified.`,
+  `PASS: audit self-test (${selfTests} rules); ${rendered.length} Package F frames (cues + 500 ms grid); layout audit of ${items} declared boxes (safe area, notch zones, text fit, collisions); fill-ratio assert verified on all scene end frames; clean turn transitions, storyboard strings, hook, underscore and interaction-hint policies verified.`,
 );
