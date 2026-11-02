@@ -7,7 +7,7 @@ import {ClockContext, PlanContext, type StagePlan} from '@stage';
 import {UnequalTreatment, UNEQUAL_TREATMENT_LAYOUT} from '../min7_12/h/UnequalTreatment';
 import {InterpersonalClass, INTERPERSONAL_LAYOUT} from '../min7_12/h/InterpersonalClass';
 import {LiteratureBoundary, LITERATURE_BOUNDARY_LAYOUT} from '../min7_12/h/LiteratureBoundary';
-import {auditItems, auditLayout, auditSelfTest} from './layout_audit';
+import {SAFE_AREA, auditItems, auditLayout, auditSelfTest} from './layout_audit';
 
 const plan = JSON.parse(fs.readFileSync(new URL('../ov/stage_plan.json', import.meta.url), 'utf8')) as StagePlan;
 const sceneComponents = {UnequalTreatment, InterpersonalClass, LiteratureBoundary};
@@ -74,6 +74,17 @@ for (const scene of Object.keys(sceneComponents) as SceneName[]) {
   frames.push({scene, ms: segment.end_ms - 1000 / plan.fps, kind: 'end'});
 }
 
+// Include exact review-frame timestamps (e683, e690, e712, e726, e735, e751)
+const reviewFrameSpecs: {scene: SceneName; ms: number; kind: string}[] = [
+  {scene: 'UnequalTreatment', ms: 683000, kind: 'e683'},
+  {scene: 'UnequalTreatment', ms: 690000, kind: 'e690'},
+  {scene: 'InterpersonalClass', ms: 712000, kind: 'e712'},
+  {scene: 'InterpersonalClass', ms: 726000, kind: 'e726'},
+  {scene: 'InterpersonalClass', ms: 735000, kind: 'e735'},
+  {scene: 'LiteratureBoundary', ms: 751000, kind: 'e751'},
+];
+for (const spec of reviewFrameSpecs) frames.push(spec);
+
 const rendered = frames.map(frame => ({...frame, html: render(frame.scene, frame.ms)}));
 const byKind = (scene: SceneName) => rendered.filter(frame => frame.scene === scene);
 
@@ -106,7 +117,6 @@ function beat(scene: SceneName, cue: string, opts: {text?: string[]; markup?: st
     if (earlier.ms >= threshold - 1) continue;
     const earlierText = plain(earlier.html);
     for (const expected of opts.text ?? []) {
-      // Use word-boundary lookahead to prevent e.g. "GROUP A" matching inside "GROUP ANTIPATHY"
       const escaped = expected.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
       const present = new RegExp(`\\b${escaped}\\b`).test(earlierText);
       assert.ok(!present, `${scene} at ${earlier.kind} already contains “${expected}”`);
@@ -123,7 +133,7 @@ beat('UnequalTreatment', 't55Unequal', {text: ['UNEQUAL TREATMENT']});
 beat('UnequalTreatment', 't55Membership', {text: ['GROUP MEMBERSHIP']});
 
 beat('UnequalTreatment', 't56Unequal', {
-  text: ['PERSON-TO-PERSON UNEQUAL TREATMENT'],
+  text: ['DISCRIMINATION · OBSERVABLE ACTION', 'PERSON-TO-PERSON UNEQUAL TREATMENT'],
 });
 beat('UnequalTreatment', 't56Exclusion', {text: ['VERBAL EXCLUSION', 'SPEECH BOUNDARY']});
 beat('UnequalTreatment', 't56Customer', {text: ['WORSE CUSTOMER SERVICE', 'SERVICE COUNTER']});
@@ -195,58 +205,239 @@ for (const {scene, kind, ms, html} of rendered) {
 }
 assert.deepEqual(violations, [], `layout audit failed:\n${violations.slice(0, 40).join('\n')}`);
 
-// Fill-ratio assertion:
-// Every box on screen holds its content at its last beat. All panels, cards, and windows are populated.
-// At each scene's last frame, every declared data-shape frame (with effective opacity >= 0.05) must contain
-// declared text boxes that cover enough of its geometry.
-// Documented thresholds:
-//   - An empty container (0 text boxes) is a defect.
-//   - Either area fill ratio >= 0.18 (18% of frame area covered by declared text boxes),
-//   - OR vertical span ratio >= 0.45 (declared text bounds cover at least 45% of the frame's height),
-// ensuring every container is sized to its content and holds its storyboard content.
+// ============================================================================
+// DESIGN PASS RULES (1: Vertical Span, 2: Card Fit, 3: Minimum Font Size Floor)
+// ============================================================================
+
+const SAFE_AREA_HEIGHT = SAFE_AREA.y1 - SAFE_AREA.y0; // 940 px
+const MIN_SCENE_VERTICAL_SPAN = Math.floor(SAFE_AREA_HEIGHT * 0.70); // 658 px (~70% of safe area height)
+const MAX_CARD_SLACK_PX = 40;
+const MIN_LABEL_FONT_PX = 20;
+const MIN_BODY_FONT_PX = 28;
 const MIN_AREA_FILL_RATIO = 0.18;
 const MIN_VERTICAL_SPAN_RATIO = 0.45;
 
-function checkFillRatio(html: string, context: string) {
-  const audited = auditItems(html);
-  const frames = audited.filter(item => item.role === 'frame' && item.opacity >= 0.05);
-  const texts = audited.filter(item => item.role === 'text' && item.opacity >= 0.05);
+// Body / heading / title text IDs that must satisfy the >= 28 px floor
+const BODY_TEXT_IDS = new Set([
+  // UnequalTreatment
+  't55-banner-title',
+  'pipeline-header-title',
+  'stereotype-title',
+  'stereotype-body',
+  'prejudice-title',
+  'prejudice-body',
+  'discrimination-title',
+  'discrimination-body',
+  'pathway-transit-label',
+  'membership-token-label',
+  't56-banner-title',
+  'tray-heading-label',
+  'card-1-title',
+  'card-1-body',
+  'card-2-title',
+  'card-2-body',
+  'card-3-title',
+  'card-3-body',
+  'card-4-title',
+  'card-4-body',
+  // InterpersonalClass
+  'interpersonal-triad-title-1',
+  'interpersonal-triad-title-2',
+  'interpersonal-triad-title-3',
+  'locus-banner-title',
+  'any-human-label',
+  'group-direction-two-label',
+  'person-actions-heading',
+  'zero-control-heading',
+  'book-title-label',
+  'strip-term-bias',
+  'strip-term-prejudice',
+  'strip-term-discrimination',
+  // LiteratureBoundary
+  't62-banner-title',
+  'established-psychology-heading',
+  'established-sub-heading',
+  'literature-socket-1-body',
+  'literature-socket-2-body',
+  'literature-socket-3-body',
+  'literature-boundary-triad-title-1',
+  'literature-boundary-triad-title-2',
+  'literature-boundary-triad-title-3',
+  'standard-definitions-label',
+  'literature-scope-body',
+  'structural-handoff-label',
+  'structural-subject-title',
+  'structural-subject-body',
+]);
 
-  for (const f of frames) {
-    const inside = texts.filter(
+// Strict text cards whose vertical slack must be <= 40 px based on text bounds alone
+const STRICT_TEXT_CARDS = new Set([
+  't55-banner-frame',
+  'pathway-transit-bar',
+  't56-banner-frame',
+  'card-1-panel',
+  'card-2-panel',
+  'card-3-panel',
+  'card-4-panel',
+  'interpersonal-triad-frame-1',
+  'interpersonal-triad-frame-2',
+  'interpersonal-triad-frame-3',
+  'locus-banner-frame',
+  'direction-banner-frame',
+  'person-actions-panel',
+  'direction-banner-contracted',
+  'state-power-rack',
+  'rack-item-1',
+  'rack-item-2',
+  'rack-item-3',
+  'rack-item-4',
+  'rack-item-5',
+  'book-assignment-strip',
+  'socket-strip-bias',
+  'socket-strip-prejudice',
+  'socket-strip-discrimination',
+  't62-banner-frame',
+  'established-literature-frame',
+  'literature-socket-1',
+  'literature-socket-2',
+  'literature-socket-3',
+  'structural-handoff-frame',
+  'structural-continuation-socket',
+]);
+
+// Rule 1: Vertical-span assertion (excluding source-line so bottom-left source text cannot artificially inflate span)
+function checkVerticalSpan(html: string, context: string) {
+  const audited = auditItems(html).filter(
+    item => item.opacity >= 0.05 && item.id !== 'source-line',
+  );
+  assert.ok(audited.length > 0, `${context}: no visible items on screen`);
+  const minY = Math.min(...audited.map(i => i.y));
+  const maxY = Math.max(...audited.map(i => i.y + i.h));
+  const span = maxY - minY;
+  assert.ok(
+    span >= MIN_SCENE_VERTICAL_SPAN,
+    `${context}: vertical span ${span} px (y: ${minY}..${maxY}) < ${MIN_SCENE_VERTICAL_SPAN} px (70% of safe area)`,
+  );
+}
+
+// Rule 2 (Card Fit) & Rule 3 (Minimum Font Size Floor) + Fill-Ratio assertion
+function checkFillAndCardFitAndSizes(html: string, context: string) {
+  const audited = auditItems(html);
+  const framesOnScreen = audited.filter(item => item.role === 'frame' && item.opacity >= 0.05);
+  const texts = audited.filter(item => item.role === 'text' && item.opacity >= 0.05);
+  const allVisible = audited.filter(item => item.opacity >= 0.05);
+
+  // Rule 3: Minimum font size floor on every declared text element
+  for (const t of texts) {
+    if (t.id === 'terminal-boundary-label') {
+      const verticalMatch = html.match(/data-text="terminal-boundary-label"[^>]*data-vertical-font-size="(\d+)"/);
+      assert.ok(verticalMatch, `${context}: terminal-boundary-label missing data-vertical-font-size declaration`);
+      const vSize = Number(verticalMatch[1]);
+      assert.ok(
+        vSize >= MIN_LABEL_FONT_PX,
+        `${context}: terminal-boundary-label font size ${vSize} px < ${MIN_LABEL_FONT_PX} px label floor`,
+      );
+      continue;
+    }
+    assert.ok(t.fit, `${context}: text "${t.id}" missing data-fit declaration`);
+    assert.ok(
+      t.fit.size >= MIN_LABEL_FONT_PX,
+      `${context}: text "${t.id}" font size ${t.fit.size} px < ${MIN_LABEL_FONT_PX} px label floor`,
+    );
+    if (BODY_TEXT_IDS.has(t.id)) {
+      assert.ok(
+        t.fit.size >= MIN_BODY_FONT_PX,
+        `${context}: body/heading text "${t.id}" font size ${t.fit.size} px < ${MIN_BODY_FONT_PX} px body floor`,
+      );
+    }
+  }
+
+  // Rule 2 + Fill Ratio on every frame
+  for (const f of framesOnScreen) {
+    const insideTexts = texts.filter(
       t => t.x >= f.x - 4 && t.y >= f.y - 4 && t.x + t.w <= f.x + f.w + 4 && t.y + t.h <= f.y + f.h + 4,
     );
+    const insideAll = allVisible.filter(
+      item =>
+        item.id !== f.id &&
+        item.x >= f.x - 4 &&
+        item.y >= f.y - 4 &&
+        item.x + item.w <= f.x + f.w + 4 &&
+        item.y + item.h <= f.y + f.h + 4,
+    );
+
     assert.ok(
-      inside.length > 0,
+      insideTexts.length > 0,
       `${context}: container "${f.id}" (${f.w}×${f.h} at [${f.x}, ${f.y}]) is empty with 0 text boxes inside`,
     );
 
-    const textArea = inside.reduce((sum, t) => sum + t.w * t.h, 0);
+    const textArea = insideTexts.reduce((sum, t) => sum + t.w * t.h, 0);
     const frameArea = f.w * f.h;
     const areaFillRatio = textArea / frameArea;
 
-    const minY = Math.min(...inside.map(t => t.y));
-    const maxY = Math.max(...inside.map(t => t.y + t.h));
-    const verticalSpanRatio = (maxY - minY) / f.h;
+    const minY = Math.min(...insideAll.map(i => i.y));
+    const maxY = Math.max(...insideAll.map(i => i.y + i.h));
+    const span = maxY - minY;
+    const verticalSpanRatio = span / f.h;
 
     const passes = areaFillRatio >= MIN_AREA_FILL_RATIO || verticalSpanRatio >= MIN_VERTICAL_SPAN_RATIO;
     assert.ok(
       passes,
       `${context}: container "${f.id}" (${f.w}×${f.h}) underfilled: area ratio ${areaFillRatio.toFixed(3)} < ${MIN_AREA_FILL_RATIO} and vertical span ratio ${verticalSpanRatio.toFixed(3)} < ${MIN_VERTICAL_SPAN_RATIO}`,
     );
+
+    // Rule 2: Card fit (vertical slack <= 40 px)
+    const slack = f.h - span;
+    assert.ok(
+      slack <= MAX_CARD_SLACK_PX,
+      `${context}: container "${f.id}" (${f.w}×${f.h}) has ${slack} px vertical slack (content span ${span} px; max allowed slack ${MAX_CARD_SLACK_PX} px)`,
+    );
+
+    if (STRICT_TEXT_CARDS.has(f.id)) {
+      const textMinY = Math.min(...insideTexts.map(t => t.y));
+      const textMaxY = Math.max(...insideTexts.map(t => t.y + t.h));
+      const textSpan = textMaxY - textMinY;
+      const textSlack = f.h - textSpan;
+      assert.ok(
+        textSlack <= MAX_CARD_SLACK_PX,
+        `${context}: strict text card "${f.id}" (${f.w}×${f.h}) has ${textSlack} px text slack (text span ${textSpan} px; max allowed ${MAX_CARD_SLACK_PX} px)`,
+      );
+    }
   }
 }
 
-// Assert fill ratio at every scene's last frame
-for (const scene of Object.keys(sceneComponents) as SceneName[]) {
-  const lastFrame = rendered.find(frame => frame.scene === scene && frame.kind === 'end')!;
-  assert.ok(lastFrame, `missing end frame for ${scene}`);
-  checkFillRatio(lastFrame.html, `${scene} at end frame`);
+// Run Rule 1, Rule 2, Rule 3, and Fill-Ratio across all rendered frames
+for (const {scene, kind, ms, html} of rendered) {
+  checkFillAndCardFitAndSizes(html, `${scene} at ${kind} (${ms} ms)`);
+  checkVerticalSpan(html, `${scene} at ${kind} (${ms} ms)`);
 }
 
-// Also assert fill ratio at major beat settled states
-checkFillRatio(byKind('UnequalTreatment').find(f => f.kind === 't55Membership')!.html, 'UnequalTreatment at t55Membership');
-checkFillRatio(byKind('InterpersonalClass').find(f => f.kind === 't60Military')!.html, 'InterpersonalClass at t60Military');
+// Explicit review-frame assertions (e683, e690, e712, e726, e735, e751)
+{
+  const e683 = rendered.find(f => f.kind === 'e683')!;
+  const items683 = auditItems(e683.html);
+  const pipe683 = items683.find(i => i.id === 'turn55-pipeline-frame')!;
+  const sNode683 = items683.find(i => i.id === 'stereotype-node')!;
+  assert.ok(pipe683 && pipe683.h >= 640, 'e683 must render enlarged centered three-stage pipeline frame');
+  assert.ok(sNode683 && sNode683.h >= 460, 'e683 must render enlarged three-stage nodes');
+
+  const e712 = rendered.find(f => f.kind === 'e712')!;
+  const items712 = auditItems(e712.html);
+  const leftBound712 = items712.find(i => i.id === 'group-direction-main-boundary-left')!;
+  const dirBanner712 = items712.find(i => i.id === 'direction-banner-frame')!;
+  assert.ok(leftBound712 && leftBound712.h >= 300, 'e712 must render scaled-up GroupDirectionField');
+  assert.ok(dirBanner712 && dirBanner712.y + dirBanner712.h >= 880, 'e712 must balance the lower third down to y >= 880');
+
+  const e726 = rendered.find(f => f.kind === 'e726')!;
+  for (let k = 1; k <= 5; k++) {
+    assert.ok(e726.html.includes(`data-rack-item="${k}"`), `e726 must render populated state-power rack slot ${k}`);
+  }
+}
+
+// Verify layout exports remain well-typed
+assert.ok(UNEQUAL_TREATMENT_LAYOUT.pipeline.h >= 640);
+assert.ok(INTERPERSONAL_LAYOUT.groupFieldFull.h >= 300);
+assert.ok(LITERATURE_BOUNDARY_LAYOUT.literatureField.h >= 640);
 
 // Structural checks:
 // Turn 56 clears Turn 55 pipeline: turn 55 markup absent in turn 56.
@@ -268,5 +459,5 @@ for (const cue of ['t62Ends', 't62Bias', 't62Prejudice', 't62Discrimination', 't
 }
 
 console.log(
-  `PASS: audit self-test (${selfTests} rules); ${rendered.length} Package H frames (cues + 500 ms grid); layout audit of ${items} declared boxes (safe area, notch zones, text fit, collisions); fill-ratio assert verified on all scene end frames; clean turn transitions, storyboard strings, hook, underscore, internal-turn and interaction-hint policies verified.`,
+  `PASS: audit self-test (${selfTests} rules); ${rendered.length} Package H frames (cues + review frames + 500 ms grid); layout audit of ${items} declared boxes (safe area, notch zones, text fit, collisions); vertical span (>= ${MIN_SCENE_VERTICAL_SPAN} px), card fit (<= ${MAX_CARD_SLACK_PX} px slack), and font floors (>= ${MIN_BODY_FONT_PX} px body / >= ${MIN_LABEL_FONT_PX} px labels) verified on all frames; clean turn transitions, storyboard strings, hook, underscore, internal-turn and interaction-hint policies verified.`,
 );

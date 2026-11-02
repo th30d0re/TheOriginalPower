@@ -1173,3 +1173,92 @@ Build `STAGE: PACKAGE G` (turns 47–54, shots `S00-47`..`S00-54`, scenes 7–10
 - Chromium browser rendering and MP4 encoding were not run locally, as video rendering is performed by the orchestrator. Visual verification relies on the static layout audit (`5555` declared boxes across `243` frames), two-process deterministic static markup verification, and automated fill-ratio, card-fit, vertical-span, and font-size floor assertions.
 
 
+## Design pass (Package H)
+
+Model: Gemini 4 Argon (High)  
+Checkpoint: `a274563`
+
+### What was requested
+
+Execute the minutes 7–12 Design Pass for Package H (turns 55–62: `UnequalTreatment`, `InterpersonalClass`, `LiteratureBoundary`) after reviewing the current rendered frames in `outputs/YT02v2_ov/video/stage_runs/v2/` (`e683.jpg`, `e690.jpg`, `e712.jpg`, `e726.jpg`, `e735.jpg`, `e751.jpg`, `s2.jpg`, `s3.jpg`):
+- Enforce Rule 1 (Composition): at every beat's settled state, content spans at least ~70% of the safe area's height (`>= 658 px` of `y: 70..1010`, verified even excluding `source-line`).
+- Enforce Rule 2 (Cards fit their text): every citation or definition card and panel is no more than 40 px taller than its final content/text block (`f.h - span <= 40 px`), built at final size from its first beat and filled as each element is spoken.
+- Enforce Rule 3 (Size floor): body text is at least 28 px and labels at least 20 px across all declared text boxes, with no exceptions.
+- Fix `UnequalTreatment`, turn 55 (`e683`) and turn 56 (`e690`):
+  - Rebalance the Turn 55 three-stage path (`STEREOTYPE`, `PREJUDICE`, `DISCRIMINATION`) so it is centered and enlarged across the safe area (`y: 115..875`, `760 px` vertical span).
+  - Populate all four Turn 56 treatment card slots (`VERBAL EXCLUSION`, `WORSE CUSTOMER SERVICE`, `BIASED GRADING`, `RENTAL REFUSAL`) from Turn 56 start across `y: 115..875` (`760 px` vertical span) with `28 px` titles and `28 px` body copy so intermediate frames (`e690`) hold structured card content with `<= 40 px` slack.
+- Fix `InterpersonalClass`, turns 57–61 (`e712`, `e726`, `e735`):
+  - Scale the `GroupDirectionField` up (`h: 320 px` at `y: 484..804`) and pair it with a locus/ubiquity header banner (`y: 400..468`) and a bottom direction banner (`y: 820..888`), eliminating the empty lower third at `e712` (`768 px` vertical span across `y: 120..888`).
+  - Populate all five state-power rack slots (`STATE LEGISLATURES`, `APPELLATE COURTS`, `POLICE DEPARTMENTS`, `CREDIT MARKETS`, `MILITARY FORCE`) inside `state-power-rack` (`{x: 1280, y: 400, w: 520, h: 488}`) from Turn 60 start so intermediate frames (`e726`) never leave the lower half of the rack empty.
+  - Tighten the Turn 61 `book-assignment-strip` (`{x: 120, y: 700, w: 1680, h: 188}`, `34 px` slack) and upgrade all socket titles (`BIAS`, `PREJUDICE`, `DISCRIMINATION`) and headers to `28 px` sans (`e735`).
+- Fix `LiteratureBoundary`, turn 62 (`e751`):
+  - Expand `established-literature-frame`, `terminal-boundary-column`, and `structural-handoff-frame` across `y: 215..880` (`h: 665`) beneath `t62-banner-frame` (`y: 115..187`), giving a `765 px` vertical span (`81.4%` of safe area height).
+  - Tighten `structural-continuation-socket` (`{x: 1400, y: 316, w: 380, h: 550}`, `28 px` text slack) and `structural-handoff-frame` (`36 px` text slack) and upgrade `structural-handoff-label` (`THE ORIGINAL POWER · STRUCTURAL ARGUMENT`) and `structural-subject-title` (`RACISM AS AN INSTITUTIONAL EXTRACTION SYSTEM`) to `28 px` sans.
+- Add automated vertical-span (Rule 1), card-fit (Rule 2), and minimum-font (Rule 3) assertions to `tools/check_min7_12_h.tsx` while keeping all earlier assertions.
+
+### How I fixed it
+
+1. **`UnequalTreatment` (`min7_12/h/UnequalTreatment.tsx`, turns 55–56, `e683`, `e690`)**:
+   - Re-laid Turn 55 (`!isTurn56`) across `y: 115..875` (`760 px` vertical span, `80.9%` of safe area height) with `t55-banner-frame` (`{x: 120, y: 115, w: 1680, h: 72}`, `36 px` slack) and `turn55-pipeline-frame` (`{x: 120, y: 215, w: 1680, h: 660}`, `34 px` slack).
+   - Scaled up the three stage nodes (`stereotype-node`, `prejudice-node`, `discrimination-node`) to `{y: 290, w: 460, h: 490}` (`36 px` content slack, `40 px` text slack), each holding a `52 × 52` glyph, `32 px` sans title (`STEREOTYPE`, `PREJUDICE`, `DISCRIMINATION`), `22 px` stage role sublabel (`GROUP BELIEF`, `EMOTIONAL HOSTILITY`, `UNEQUAL TREATMENT`), a `412 × 190` diagram mark, `28 px` sans body copy, and a `20 px` locus footer, with `pathway-transit-bar` (`{x: 150, y: 795, w: 1620, h: 64}`, `28 px` slack) below the nodes.
+   - Re-laid Turn 56 (`isTurn56`) across `y: 115..875` (`760 px` vertical span) with `t56-banner-frame` (`DISCRIMINATION · OBSERVABLE ACTION` at `28 px` sans), `treatment-tray` (`{x: 110, y: 215, w: 1700, h: 660}`, `36 px` slack), and four equal-height cards (`{y: 295, w: 380, h: 562}`, `36 px` text slack) populated from Turn 56 start with `20 px` slot headers, `28 px` sans titles, `332 × 220` vector illustrations, `28 px` sans body descriptions, and `20 px` domain tags.
+
+2. **`InterpersonalClass` (`min7_12/h/InterpersonalClass.tsx`, turns 57–61, `e712`, `e726`, `e735`)**:
+   - Positioned the top `TermTriad` rail at `y: 120..300` (`{w: 520, h: 180}`, `32 px` content slack, `34 px` text slack) with `progress: 1` on internal lines and citation sources so child labels remain synchronized with parent block opacity across every entrance ramp.
+   - Scaled `GroupDirectionField` up to `{x: 120, y: 484, w: 1680, h: 320}` (`28 px` boundary slack) in Turns 57–59 (`e712`), flanked by `locus-banner-frame` (`{x: 120, y: 400, w: 1680, h: 68}`, `32 px` slack, displaying the Turn 59 ubiquity labels `ANY HUMAN BEING` at `28 px` sans, `ANY SKIN COLOR`, `ANY ANCESTRY`, and `UNEQUAL TREATMENT` at `22 px` mono) and `direction-banner-frame` (`{x: 120, y: 820, w: 1680, h: 68}`, `32 px` slack, displaying `ANY DIRECTION BETWEEN ANY TWO SOCIAL GROUPS` at `28 px` sans), spanning `y: 120..888` (`768 px`, `81.7%` of safe area height).
+   - Paired the contracted Turn 60 left column (`person-actions-panel`, `groupFieldContracted` `{x: 120, y: 484, w: 1060, h: 320}`, and `direction-banner-contracted` across `y: 400..888`) with `state-power-rack` (`{x: 1280, y: 400, w: 520, h: 488}`, `36 px` text slack) holding a `28 px` sans heading (`REQUIRES ZERO CONTROL OVER`), all five `472 × 64` institutional item cards (`32 px` slack each) populated from Turn 60 start (`e726`), and a `20 px` rack footer.
+   - Re-laid Turn 61 (`isTurn61`, `e735`) with `groupFieldTurn61` (`{x: 120, y: 400, w: 1680, h: 280}`) and `book-assignment-strip` (`{x: 120, y: 700, w: 1680, h: 188}`, `34 px` slack) containing `28 px` sans headers and `28 px` sans term sockets (`socket-strip-bias`, `socket-strip-prejudice`, `socket-strip-discrimination`, `28 px` slack each).
+
+3. **`LiteratureBoundary` (`min7_12/h/LiteratureBoundary.tsx`, turn 62, `e751`)**:
+   - Added `t62-banner-frame` (`{x: 120, y: 115, w: 1680, h: 72}`, `36 px` slack) and expanded `established-literature-frame` (`{x: 120, y: 215, w: 1140, h: 665}`, `36 px` text slack), `terminal-boundary-column` (`{x: 1290, y: 215, w: 60, h: 665}`, `36 px` slack), and `structural-handoff-frame` (`{x: 1380, y: 215, w: 420, h: 665}`, `36 px` text slack) to span `y: 115..880` (`765 px`, `81.4%` of safe area height).
+   - Replaced empty pre-dock sockets before `t62Literature` with populated `340 × 290` socket cards (`36 px` slack) and populated the docked `TermTriad` blocks (`{w: 340, h: 290}`, `32 px` slack) with `STARTING TENDENCY`, `GROUP ANTIPATHY`, and `UNEQUAL TREATMENT` lines plus single-line record footers.
+   - Upgraded `structural-handoff-label` (`THE ORIGINAL POWER · STRUCTURAL ARGUMENT`) and `structural-subject-title` (`RACISM AS AN INSTITUTIONAL EXTRACTION SYSTEM`) to `28 px` sans and sized `structural-continuation-socket` (`{x: 1400, y: 316, w: 380, h: 550}`, `28 px` text slack) tightly to its content.
+
+4. **Validation runner (`tools/check_min7_12_h.tsx`)**:
+   - Added `checkVerticalSpan` enforcing `span >= 658 px` (70% of safe-area height, excluding `source-line`) across all 233 frames (segment starts, cue frames, review frames `e683`, `e690`, `e712`, `e726`, `e735`, `e751`, 500 ms grid frames, and end frames).
+   - Added `checkFillAndCardFitAndSizes` enforcing `f.h - span <= 40 px` on every visible frame and strict text card across all 233 frames, `t.fit.size >= 20 px` on all labels (plus `data-vertical-font-size >= 20 px` on `terminal-boundary-label`), and `t.fit.size >= 28 px` on all body/heading/title text boxes.
+
+### Challenges encountered
+
+1. **Nested entrance opacity multiplication in `TermTriad` and `GroupDirectionField`**:
+   - `TermTriad` wraps each term block in `<div style={{opacity: amount}}>` and also applies `line.progress` and `source.progress` to inner `<Label>` elements. Passing `lookP` for both the block state and the inner line/source progresses caused `lookP * lookP` to fall below `0.05` during early entrance frames while the outer `<Panel>` remained above `0.05`. Passing `progress: 1` on inner lines and sources kept all child text opacities locked to the parent block opacity.
+2. **Vertical text fit estimation in `terminal-boundary-column`**:
+   - `fitEstimate` in `tools/layout_audit.ts` computes horizontal line wraps from `item.w`, which flags 11-character words inside a `50 px`-wide vertical-text column (`writingMode: 'vertical-rl'`). Declaring `data-vertical-font-size="20"` on `terminal-boundary-label` allowed `check_min7_12_h.tsx` to verify the `>= 20 px` font floor directly from markup while keeping horizontal `fitEstimate` clean.
+3. **Outer handoff panel text-span slack**:
+   - `structural-handoff-frame` (`h: 665`, `y: 215..880`) initially had `54 px` of text-only slack because its bottom text sat inside the nested `structural-continuation-socket` at `y: 844`. Adjusting `turn63Label` to `y: 229`, `turn63Socket` to `y: 316..866`, and `structural-socket-footer` to `y: 824..854` reduced text slack on `structural-handoff-frame` to `40 px` and on `structural-continuation-socket` to `28 px`.
+
+### Next ideas (6 Ideas)
+
+1. Extract a shared `verifyDesignPassInvariants` helper into `tools/layout_audit.ts` so `check_min7_12_e.tsx`, `check_min7_12_f.tsx`, `check_min7_12_g.tsx`, and `check_min7_12_h.tsx` share one implementation of Rules 1–3.
+2. Add native `writingMode: 'vertical-rl'` support to `fitEstimate` in `tools/layout_audit.ts` so vertical labels can use `item.h` as their line-wrap axis.
+3. Update `TermTriad` in `min7_12/shared/TermTriad.tsx` so default `line.progress` and `source.progress` values default to `1` when omitted.
+4. Create a `PopulatedSlotGrid` primitive in `min7_12/shared/` for multi-card trays (`UnequalTreatment` Turn 56 and `InterpersonalClass` Turn 60) that transitions slot placeholders to active spoken items automatically.
+5. Add a `StageBanner` component in `min7_12/shared/` with fixed `72 px` height and `36 px` text slack to standardize top context strips across scenes.
+6. Export an explicit `role="body" | "label"` attribute from `Label` so minimum-font assertions can inspect markup directly without maintaining per-scene ID sets.
+
+
+### Checks
+
+- Episode TypeScript: `npx --prefix /Users/emmanuel/Documents/Theory/scriptCast-stage/video tsc --noEmit -p Architecting_the_operation/video/yt02/stage` exits 0 with zero diagnostics.
+- `check_min7_12_h` tail:
+  - `PASS: 233 Package H frames rendered in two fresh processes; all markup hashes match.`
+  - `PASS: audit self-test (10 rules); 233 Package H frames (cues + review frames + 500 ms grid); layout audit of 8923 declared boxes (safe area, notch zones, text fit, collisions); vertical span (>= 658 px), card fit (<= 40 px slack), and font floors (>= 28 px body / >= 20 px labels) verified on all frames; clean turn transitions, storyboard strings, hook, underscore, internal-turn and interaction-hint policies verified.`
+- `check_first_minute` tail: `PASS: 43 cue-derived frames; five scene contracts, manuscript strings, real subscripts, hook policy, underscore policy, and interaction-hint policy verified; …`
+- `check_roadmap_boot` tail: `PASS: RoadmapBoot renders 17 deterministic frames; 13 labels land on their cues and are absent before; …`
+- `check_minute_two` tail: `PASS: 44 cue-derived frames; exact definition spacing …; Figure 2.3 layer widths 598 / 483 / 368 px in the ratio 5.2 : 4.2 : 3.2.`
+- `check_dashboard` tail: `PASS: Equal Earth route 1296 samples / 0 land hits …; all 24 tray modes plus 3 Wage plane modes; …no rendered interaction hints; 75 polities with 16 non-colliding labels.`
+- `check_min3_7_shared` tail: `PASS: 25 representative shared-component states; eleven component contracts, hook policy, underscore policy, Gaussian curves, … Posterior modes: 0.280460 / 0.499174 / 0.718096.`
+- `check_min3_7_a` tail: `PASS: audit self-test (10 rules); 47 Package A cue-derived frames; 1282 audited boxes; …`
+- `check_min3_7_b` tail: `PASS: audit self-test (10 rules); 43 Package B cue-derived frames; 1146 audited boxes; …`
+- `check_min3_7_c` tail: `PASS: audit self-test (10 rules); 195 Package C frames (cues + 500 ms grid); layout audit of 6799 declared boxes …`
+- `check_min3_7_d` tail: `PASS: audit self-test (10 rules); 211 Package D frames (cues + 500 ms grid); layout audit of 5306 declared boxes over 211 frames …; monotonic posterior sweep 0.2800 → 0.6755 (prior 0.72).`
+- `check_equations` tail: `PASS: 14 equation frames; 111 registered coloured terms; 11 pulse cues peak at cue + 200 ms and rest after 600 ms; Eq. 2.5 and Eq. 2.8a are verbatim with MathText subscripts.`
+- `check_min7_12_shared` tail: `PASS: 25 min7_12-shared states rendered in two fresh processes; all markup hashes match. PASS: audit self-test (10 rules); 25 min7_12 shared-component states; layout audit of 171 declared boxes …`
+- `check_min7_12_e` tail: `PASS: 203 Package E frames rendered in two fresh processes; all markup hashes match. PASS: audit self-test (10 rules); 203 Package E frames (cues + 500 ms grid); layout audit of 6087 declared boxes (safe area, notch zones, text fit, collisions); vertical-span, card-fit, font-floor, and fill-ratio asserts verified; clean turn transitions, storyboard strings, hook, underscore, internal-turn and interaction-hint policies verified.`
+- `check_min7_12_f` tail: `PASS: 223 Package F frames rendered in two fresh processes; all markup hashes match. PASS: audit self-test (10 rules); 223 Package F frames (cues + 500 ms grid); layout audit of 7248 declared boxes (safe area, notch zones, text fit, collisions); fill-ratio, card-fit (<= 40 px slack), vertical-span (>= 658 px), and 28/20 px size-floor asserts verified; clean turn transitions, storyboard strings, hook, underscore and interaction-hint policies verified.`
+- `check_min7_12_g` tail: `PASS: 243 Package G frames rendered in two fresh processes; all markup hashes match. PASS: audit self-test (10 rules); 243 Package G frames (cues + 500 ms grid); layout audit of 5555 declared boxes (safe area, notch zones, text fit, collisions); fill-ratio, card-fit (<= 40 px slack), vertical-span (>= 658 px), and 28/20 px size-floor asserts verified; clean turn transitions, storyboard strings, hook, underscore, internal-turn and interaction-hint policies verified.`
+- `tools/check_antithesis.py` on all Package H files and `FINDINGS_MIN7_12.md`: `check-antithesis: no banned constructions found.`
+
+### Unverified remainder
+
+- Chromium browser rendering and MP4 encoding were skipped locally because video rendering is executed by the orchestrator. Visual verification relies on the static layout audit (`8923` declared boxes across `233` frames), two-process deterministic static markup verification, and automated vertical-span (`>= 658 px`), card-fit (`<= 40 px` slack), font-size floor (`28 px` body / `20 px` label), and fill-ratio assertions.
