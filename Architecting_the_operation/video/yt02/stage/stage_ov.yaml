@@ -133,3 +133,297 @@ shots:
       t10Column: {word: column}
       t10Pyramid: {word: pyramid}
       t10End: {word: pyramid, at: end}
+  # Minutes 3–7: turns 11–34 (2:18.650–7:04.640).
+  - shot_id: S00-11
+    turn_id: d37dfa893e4dd044
+    scene: SequenceAsTheory
+    instance: SequenceAsTheory
+    cues:
+      t11Numbered: {word: numbered, occurrence: 1}
+      t11Analytical: {word: analytical}
+      t11Unstated: {word: unstated}
+      t11Cause: {word: cause}
+      t11Order: {word: order}
+      t11Caused: {word: caused}
+  - shot_id: S00-12
+    turn_id: c444e280370e1825
+    scene: SequenceAsTheory
+    instance: SequenceAsTheory
+    cues:
+      t12Personal: {word: personal}
+      t12First: {word: first}
+      t12Root: {word: root}
+      t12Institutional: {word: institutional}
+      t12Effects: {word: effects}
+  - shot_id: S00-13
+    turn_id: 621ebb6822b8e3bd
+    scene: HeartsAudit
+    instance: HeartsAudit
+    cues:
+      t13Ordering: {word: ordering}
+      t13Public: {word: public}
+      t13Audit: {word: audit}
+      t13Hearts: {word: hearts}
+      t13Vocabulary: {word: vocabulary}
+      t13Intentions: {word: intentions}
+  - shot_id: S00-14
+    turn_id: 857ffd713b442a57
+    scene: HeartsAudit
+    instance: HeartsAudit
+    cues:
+      t14Public: {word: public}
+      t14Court: {word: court}
+      t14Workplace: {word: workplace}
+      t14Disparity: {word: disparity}
+      t14Default: {word: default}
+      t14Malice: {word: malice}
+      t14Thoughts: {word: thoughts}
+  - shot_id: S00-15
+    turn_id: 182a7f87ecc0ad7d
+    scene: HeartsAudit
+    instance: HeartsAudit
+    cues:
+      t15Original: {word: Original}
+      t15Causal: {word: causal}
+      t15Testable: {word: testable}
+      t15Formally: {word: formally}
+      t15Checked: {word: checked}
+      t15Centuries: {word: centuries}
+      t15Records: {word: records}
+  - shot_id: S00-16
+    turn_id: 65dc57402b769a76
+    scene: TermsInOneBucket
+    instance: TermsInOneBucket
+    cues:
+      t16Why: {word: Why}
+      t16Bias: {word: bias, occurrence: 1}
+      t16Prejudice: {word: prejudice, occurrence: 1}
+      t16Discrimination: {word: discrimination, occurrence: 1}
+      t16Racism: {word: racism, occurrence: 1}
+      t16Exact: {word: exact}
+      t16Conversation: {word: conversation}
+      t16Bucket: {word: bucket}
+      t16Distinct: {word: distinct}
+      t16Terms: {word: terms}
+  - shot_id: S00-17
+    turn_id: 6b0c581fadd5d3c6
+    scene: LiteratureHandoff
+    instance: LiteratureHandoff
+    cues:
+      t17Social: {word: social, occurrence: 1}
+      t17Three: {word: three}
+      t17Distinct: {word: distinct}
+      t17Definitions: {word: definitions}
+      t17Experimental: {word: experimental}
+      t17Psychology: {word: psychology}
+  - shot_id: S00-18
+    turn_id: c6298c438eea63bc
+    scene: LiteratureHandoff
+    instance: LiteratureHandoff
+    cues:
+      t18Preface: {word: Preface}
+      t18Chapter: {word: Chapter}
+      t18Original: {word: Original}
+      t18Established: {word: established}
+      t18Each: {word: each}
+      t18Job: {word: job}
+  - shot_id: S00-19
+    turn_id: d0b810384350906a
+    scene: APAGroupDefinitions
+    instance: APAGroupDefinitions
+    cues:
+      t19Baseline: {word: baseline}
+      t19Sort: {word: sort}
+      t19American: {word: American}
+      t19Ingroup: {word: ingroup}
+      t19Membership: {word: membership}
+      t19Identification: {word: identification}
+  - shot_id: S00-20
+    turn_id: ac11496765270e79
+    scene: APAGroupDefinitions
+    instance: APAGroupDefinitions
+    cues:
+      t20Reference: {word: reference}
+      t20Outgroup: {word: outgroup}
+      t20Outside: {word: outside}
+      t20Detachment: {word: detachment}
+      t20Competition: {word: competition}
+      t20Opposition: {word: opposition}
+  - shot_id: S00-21
+    turn_id: 67fd2fdb52cd6306
+    scene: APAGroupDefinitions
+    instance: APAGroupDefinitions
+    cues:
+      t21American: {word: American}
+      t21Bias: {word: bias}
+      t21Tendency: {word: tendency}
+      t21Resources: {word: resources}
+      t21Conduct: {word: conduct}
+      t21Behavior: {word: behavior}
+  - shot_id: S00-22
+    turn_id: 2d92876c393c73d2
+    scene: TajfelCitation
+    instance: TajfelCitation
+    cues:
+      t22Henri: {word: Henri}
+      t22Turner: {word: Turner}
+      t22Formalized: {word: formalized}
+      t22SeventyNine: {word: seventy-nine}
+      t22Social: {word: Social}
+      t22Theory: {word: Theory}
+      t22Relations: {word: relations}
+  - shot_id: S00-23
+    turn_id: 996c986f9503a4b9
+    scene: UsThemSorting
+    instance: UsThemSorting
+    cues:
+      t23Social: {word: Social}
+      t23Demonstrates: {word: demonstrates}
+      t23Sort: {word: sort}
+      t23Us: {word: us}
+      t23Them: {word: them}
+      t23Speed: {word: speed}
+      t23Prompting: {word: prompting}
+  - shot_id: S00-24
+    turn_id: 4b9c43064a5ddffd
+    scene: UsThemSorting
+    instance: UsThemSorting
+    cues:
+      t24Sorting: {word: sorting}
+      t24Bands: {word: bands}
+      t24Trust: {word: trust}
+      t24Threat: {word: threat}
+      t24Reciprocity: {word: reciprocity}
+      t24Belonging: {word: belonging}
+      t24SelfConcept: {word: self-concept}
+  - shot_id: S00-25
+    turn_id: 81a00e72e74789e6
+    scene: HostWetware
+    instance: HostWetware
+    cues:
+      t25Terminology: {word: terminology}
+      t25Brain: {word: brain}
+      t25Biological: {word: biological}
+      t25Wetware: {word: wetware}
+      t25Predictive: {word: predictive}
+      t25Pattern: {word: pattern-compressing}
+      t25Categorization: {word: categorization}
+  - shot_id: S00-26
+    turn_id: 41cad0878c30de70
+    scene: HostWetware
+    instance: HostWetware
+    cues:
+      t26Bandwidth: {word: bandwidth}
+      t26Compresses: {word: compresses}
+      t26Variation: {word: variation}
+      t26Labels: {word: labels}
+      t26Deliberate: {word: deliberate}
+      t26Reasoning: {word: reasoning}
+  - shot_id: S00-27
+    turn_id: be357529a9e0e811
+    scene: HostWetware
+    instance: HostWetware
+    cues:
+      t27Pattern: {word: pattern}
+      t27Survival: {word: survival}
+      t27Bands: {word: bands}
+      t27Allies: {word: allies}
+      t27Strangers: {word: strangers}
+      t27Consequences: {word: consequences}
+  - shot_id: S00-28
+    turn_id: 92d3be9dbd632116
+    scene: BiasDefinition
+    instance: BiasDefinition
+    cues:
+      t28Baseline: {word: baseline}
+      t28Experimental: {word: experimental}
+      t28Three: {word: three}
+      t28Interpersonal: {word: interpersonal}
+      t28Process: {word: process}
+      t28Act: {word: act}
+      t28Categories: {word: categories}
+  - shot_id: S00-29
+    turn_id: 1f259d03c2bc6def
+    scene: BiasDefinition
+    instance: BiasDefinition
+    cues:
+      t29Concept: {word: concept}
+      t29Bias: {word: Bias, occurrence: 2}
+      t29Tendency: {word: tendency}
+      t29Favors: {word: favors}
+      t29Perception: {word: perception}
+      t29Evaluation: {word: evaluation}
+      t29Explanation: {word: explanation}
+  - shot_id: S00-30
+    turn_id: 52bd5da35b110981
+    scene: PredictiveCoding
+    instance: PredictiveCoding
+    cues:
+      t30Why: {word: Why}
+      t30Predictive: {word: Predictive-coding}
+      t30Perception: {word: perception}
+      t30Error: {word: error}
+      t30Priors: {word: priors}
+      t30Data: {word: data}
+      t30Updates: {word: updates}
+      t30Plain: {word: plain}
+      t30Guesses: {word: guesses}
+      t30Compares: {word: compares}
+      t30Report: {word: report}
+  - shot_id: S00-31
+    turn_id: 88b09667d28e18f8
+    scene: PredictiveCoding
+    instance: PredictiveCoding
+    cues:
+      t31Architecture: {word: architecture}
+      t31Bias: {word: bias}
+      t31Tilt: {word: tilt}
+      t31Starting: {word: starting}
+      t31Guessing: {word: guessing}
+      t31GeneralPurpose: {word: general-purpose}
+      t31Legally: {word: legally}
+      t31Weight: {word: weight}
+  - shot_id: S00-32
+    turn_id: 09151051cc713a31
+    scene: ComputationalBias
+    instance: ComputationalBias
+    cues:
+      t32Computer: {word: Computer}
+      t32Two: {word: two}
+      t32Neural: {word: neural}
+      t32BiasTerm: {word: bias, occurrence: 1}
+      t32Offset: {word: offset}
+      t32Layer: {word: layer}
+      t32Social: {word: Social}
+      t32BiasSocial: {word: bias, occurrence: 2}
+      t32Weights: {word: weights}
+      t32Repeats: {word: repeats}
+  - shot_id: S00-33
+    turn_id: c3a99a41d6e0d4a6
+    scene: InstalledRacialPrior
+    instance: InstalledRacialPrior
+    cues:
+      t33Book: {word: book}
+      t33Installed: {word: installed}
+      t33Prior: {word: prior}
+      t33Pi: {word: Pi-sub-race}
+      t33Stereotypes: {word: Stereotypes}
+      t33Bayesian: {word: Bayesian}
+      t33Override: {word: override}
+      t33Evidence: {word: evidence}
+      t33Institutions: {word: institutions}
+      t33Weight: {word: weight}
+  - shot_id: S00-34
+    turn_id: 3c9cd583329a9345
+    scene: InstalledRacialPrior
+    instance: InstalledRacialPrior
+    cues:
+      t34Bias: {word: Bias}
+      t34Sociology: {word: sociology}
+      t34Neuroscience: {word: neuroscience}
+      t34Learning: {word: learning}
+      t34Prediction: {word: prediction}
+      t34Experience: {word: experience}
+      t34Accurate: {word: accurate}
+      t34Outdated: {word: outdated}
+      t34History: {word: history}
