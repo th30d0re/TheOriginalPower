@@ -429,3 +429,364 @@ shots:
       t34Accurate: {word: accurate}
       t34Outdated: {word: outdated}
       t34History: {word: history}
+  # Minutes 7–12: turns 35–62 (7:04.990–12:31.640).
+  - shot_id: S00-35
+    turn_id: 7e5bc55ef05470bd
+    scene: DocumentedExpectation
+    instance: DocumentedExpectation
+    cues:
+      t35Consider: {word: Consider}
+      t35Black: {word: Black}
+      t35Bias: {word: bias}
+      t35Statistical: {word: statistical}
+      t35Starting: {word: starting}
+      t35Updated: {word: updated}
+      t35Documented: {word: documented}
+      t35Disparity: {word: disparity}
+  - shot_id: S00-36
+    turn_id: 6e5ffc6318ec6e40
+    scene: DocumentedExpectation
+    instance: DocumentedExpectation
+    cues:
+      t36National: {word: National}
+      t36Maternal: {word: maternal}
+      t36Elevated: {word: elevated}
+      t36Black: {word: Black}
+      t36White: {word: white}
+      t36Surveillance: {word: surveillance}
+      t36Expectation: {word: expectation}
+      t36Tracks: {word: tracks}
+      t36Numbers: {word: numbers}
+  - shot_id: S00-37
+    turn_id: 49019a2e964e6173
+    scene: InstalledRouting
+    instance: InstalledRouting
+    cues:
+      t37PiRace: {word: Pi-sub-race}
+      t37Object: {word: object}
+      t37Institutionally: {word: institutionally}
+      t37Installed: {word: installed}
+      t37Routes: {word: routes}
+      t37Empathy: {word: empathy}
+      t37Threat: {word: threat}
+      t37Legal: {word: legal}
+      t37Facts: {word: facts}
+      t37Support: {word: support}
+  - shot_id: S00-38
+    turn_id: 554662b807b4b14b
+    scene: RLCBridge
+    instance: RLCBridge
+    cues:
+      t38Bayesian: {word: Bayesian}
+      t38Rlc: {word: RLC}
+      t38Installed: {word: Installed}
+      t38Mental: {word: mental}
+      t38Inductance: {word: inductance}
+      t38Resistance: {word: resistance}
+      t38Capacitance: {word: capacitance}
+      t38Institutional: {word: institutional}
+      t38Absorbs: {word: absorbs}
+      t38Damps: {word: damps}
+      t38Reform: {word: reform}
+      t38Shocks: {word: shocks}
+  - shot_id: S00-39
+    turn_id: 39e59100e252ac72
+    scene: ExplicitImplicitChannels
+    instance: ExplicitImplicitChannels
+    cues:
+      t39Bias: {word: Bias}
+      t39Explicit: {word: explicit}
+      t39Consciously: {word: consciously}
+      t39Implicit: {word: implicit}
+      t39Automatic: {word: automatic}
+      t39Associations: {word: associations}
+  - shot_id: S00-40
+    turn_id: 65387009364bd216
+    scene: ExplicitImplicitChannels
+    instance: ExplicitImplicitChannels
+    cues:
+      t40Anthony: {word: Anthony}
+      t40Banaji: {word: Banaji}
+      t40Formal: {word: formal}
+      t40Implicit: {word: implicit}
+      t40Cognition: {word: cognition}
+      t40NinetyFive: {word: ninety-five}
+      t40Article: {word: article}
+  - shot_id: S00-41
+    turn_id: 292cf36f66df93bd
+    scene: ImplicitTrace
+    instance: ImplicitTrace
+    cues:
+      t41Define: {word: define}
+      t41Unidentified: {word: unidentified}
+      t41Past: {word: past, occurrence: 1}
+      t41Favorable: {word: favorable}
+      t41Unfavorable: {word: unfavorable}
+      t41Action: {word: action}
+      t41Plain: {word: plain}
+      t41Experiences: {word: experiences}
+      t41Shortcuts: {word: shortcuts}
+      t41Steer: {word: steer}
+      t41Noticing: {word: noticing}
+  - shot_id: S00-42
+    turn_id: d39fca7f0a3eb873
+    scene: ImplicitTrace
+    instance: ImplicitTrace
+    cues:
+      t42Precision: {word: precision}
+      t42Automatically: {word: automatically}
+      t42Accumulated: {word: accumulated}
+      t42Sincerely: {word: sincerely}
+      t42Equal: {word: equal}
+      t42Treatment: {word: treatment}
+  - shot_id: S00-43
+    turn_id: ae5b91cd164d0295
+    scene: IATLatency
+    instance: IATLatency
+    cues:
+      t43Three: {word: Three}
+      t43NinetyEight: {word: ninety-eight}
+      t43Anthony: {word: Anthony}
+      t43McGhee: {word: McGhee}
+      t43Schwartz: {word: Schwartz}
+      t43Introduced: {word: introduced}
+      t43Journal: {word: Journal}
+      t43Psychology: {word: Psychology}
+  - shot_id: S00-44
+    turn_id: c067122235d8fa97
+    scene: IATLatency
+    instance: IATLatency
+    cues:
+      t44Test: {word: test}
+      t44Automatic: {word: automatic}
+      t44ResponseLatency: {word: response-latency}
+      t44Sorting: {word: sorting}
+      t44SplitSecond: {word: split-second}
+      t44Fast: {word: fast}
+      t44Pairs: {word: pairs}
+      t44Faces: {word: faces}
+      t44Words: {word: words}
+      t44Screen: {word: screen}
+  - shot_id: S00-45
+    turn_id: 9d3360ac383337cf
+    scene: IATLatency
+    instance: IATLatency
+    cues:
+      t45Reaction: {word: reaction}
+      t45Audits: {word: audits}
+      t45Bias: {word: bias}
+      t45Mental: {word: mental}
+      t45Weighting: {word: weighting}
+      t45Judgment: {word: judgment}
+  - shot_id: S00-46
+    turn_id: b752245e3d899901
+    scene: AllportQuestion
+    instance: AllportQuestion
+    cues:
+      t46Why: {word: Why}
+      t46Label: {word: label}
+      t46Second: {word: second}
+      t46Prejudice: {word: prejudice, occurrence: 2}
+      t46Gordon: {word: Gordon}
+      t46Classic: {word: classic}
+      t46FiftyFour: {word: fifty-four}
+      t46Nature: {word: Nature}
+      t46PrejudiceTitle: {word: Prejudice, occurrence: 3}
+      t46Nine: {word: nine}
+  - shot_id: S00-47
+    turn_id: 6d6b8b846134059a
+    scene: AllportAntipathy
+    instance: AllportAntipathy
+    cues:
+      t47Defines: {word: defines}
+      t47Antipathy: {word: antipathy}
+      t47Faulty: {word: faulty}
+      t47Inflexible: {word: inflexible}
+      t47Generalization: {word: generalization}
+      t47Felt: {word: felt}
+      t47Expressed: {word: expressed}
+  - shot_id: S00-48
+    turn_id: e68bd0933ea3f202
+    scene: AllportAntipathy
+    instance: AllportAntipathy
+    cues:
+      t48Hostility: {word: hostility}
+      t48Whole: {word: whole}
+      t48Specifically: {word: specifically}
+      t48Belongs: {word: belongs}
+  - shot_id: S00-49
+    turn_id: 709ddfa4b239eb44
+    scene: AllportAntipathy
+    instance: AllportAntipathy
+    cues:
+      t49Bias: {word: bias}
+      t49Prejudice: {word: prejudice}
+      t49Emotional: {word: emotional}
+      t49Rigid: {word: rigid}
+      t49Stereotype: {word: stereotype}
+      t49Resists: {word: resists}
+      t49Evidence: {word: evidence}
+  - shot_id: S00-50
+    turn_id: 04c2672ab918748f
+    scene: ExceptionFence
+    instance: ExceptionFence
+    cues:
+      t50Allport: {word: Allport}
+      t50Habitual: {word: habitual}
+      t50Resist: {word: resist}
+      t50Correcting: {word: correcting}
+      t50Strong: {word: strong}
+      t50Facts: {word: facts}
+  - shot_id: S00-51
+    turn_id: 30ec22ca2a6c0ef5
+    scene: ExceptionFence
+    instance: ExceptionFence
+    cues:
+      t51Contradicts: {word: contradicts}
+      t51Fences: {word: fences}
+      t51Exception: {word: exception}
+      t51Keeping: {word: keeping}
+      t51Stereotype: {word: stereotype, occurrence: 2}
+      t51Intact: {word: intact}
+  - shot_id: S00-52
+    turn_id: 13bbe04c3ff81485
+    scene: FiskeHandoff
+    instance: FiskeHandoff
+    cues:
+      t52Why: {word: Why}
+      t52Fiske: {word: Fiske}
+      t52Discrimination: {word: discrimination, occurrence: 1}
+      t52Stereotyping: {word: stereotyping}
+      t52Prejudice: {word: prejudice}
+      t52Third: {word: third}
+      t52Moves: {word: moves}
+      t52Action: {word: action}
+  - shot_id: S00-53
+    turn_id: 145481dbe262d612
+    scene: FiskeHandoff
+    instance: FiskeHandoff
+    cues:
+      t53Susan: {word: Susan}
+      t53Model: {word: model}
+      t53NinetyEight: {word: ninety-eight}
+      t53Fourth: {word: fourth}
+      t53Handbook: {word: Handbook}
+      t53Volume: {word: volume}
+      t53Pages: {word: pages}
+  - shot_id: S00-54
+    turn_id: 1838ffe8b1ad9f63
+    scene: ThreePartTaxonomy
+    instance: ThreePartTaxonomy
+    cues:
+      t54Divides: {word: divides}
+      t54Three: {word: three}
+      t54Stereotyping: {word: stereotyping}
+      t54Cognitive: {word: cognitive}
+      t54Thinking: {word: thinking}
+      t54Prejudice: {word: prejudice}
+      t54Affective: {word: affective}
+      t54Feeling: {word: feeling}
+      t54Discrimination: {word: discrimination}
+      t54Behavioral: {word: behavioral}
+      t54Acting: {word: acting}
+  - shot_id: S00-55
+    turn_id: 0f2a68ca0df881df
+    scene: UnequalTreatment
+    instance: UnequalTreatment
+    cues:
+      t55ThreePart: {word: three-part}
+      t55Stereotype: {word: stereotype}
+      t55Belief: {word: belief}
+      t55Prejudice: {word: prejudice}
+      t55Hostility: {word: hostility}
+      t55Discrimination: {word: discrimination}
+      t55Unequal: {word: unequal}
+      t55Membership: {word: membership}
+  - shot_id: S00-56
+    turn_id: 745f1e3ed6045791
+    scene: UnequalTreatment
+    instance: UnequalTreatment
+    cues:
+      t56Unequal: {word: Unequal}
+      t56Verbal: {word: verbal}
+      t56Exclusion: {word: exclusion}
+      t56Customer: {word: customer}
+      t56Grading: {word: grading}
+      t56Refusing: {word: refusing}
+      t56Apartment: {word: apartment}
+      t56Qualified: {word: qualified}
+      t56Tenant: {word: tenant}
+  - shot_id: S00-57
+    turn_id: f7e1d0c27354aded
+    scene: InterpersonalClass
+    instance: InterpersonalClass
+    cues:
+      t57Look: {word: Look}
+      t57Bias: {word: bias}
+      t57Prejudice: {word: prejudice}
+      t57Discrimination: {word: discrimination}
+      t57Fiske: {word: Fiske}
+  - shot_id: S00-58
+    turn_id: c7c7b5994da5c8b5
+    scene: InterpersonalClass
+    instance: InterpersonalClass
+    cues:
+      t58Three: {word: three}
+      t58Mental: {word: mental}
+      t58Behavioral: {word: behavioral}
+      t58Inside: {word: inside}
+      t58Between: {word: between, occurrence: 1}
+      t58Direction: {word: direction}
+      t58Two: {word: two}
+  - shot_id: S00-59
+    turn_id: 8b605ff3a73c56c3
+    scene: InterpersonalClass
+    instance: InterpersonalClass
+    cues:
+      t59Any: {word: Any, occurrence: 1}
+      t59Skin: {word: skin}
+      t59Ancestry: {word: ancestry}
+      t59Bias: {word: bias}
+      t59Hostility: {word: hostility}
+      t59Treat: {word: treat}
+      t59Unequally: {word: unequally}
+  - shot_id: S00-60
+    turn_id: 43f22b6877721edc
+    scene: InterpersonalClass
+    instance: InterpersonalClass
+    cues:
+      t60PersonToPerson: {word: person-to-person}
+      t60Zero: {word: zero}
+      t60Legislatures: {word: legislatures}
+      t60Courts: {word: courts}
+      t60Police: {word: police}
+      t60Credit: {word: credit}
+      t60Military: {word: military}
+  - shot_id: S00-61
+    turn_id: 8f032b3a503c4a80
+    scene: InterpersonalClass
+    instance: InterpersonalClass
+    cues:
+      t61Original: {word: Original}
+      t61Assigns: {word: assigns}
+      t61Bias: {word: bias}
+      t61Prejudice: {word: prejudice}
+      t61Discrimination: {word: discrimination}
+      t61Interpersonal: {word: interpersonal}
+      t61Exact: {word: exact}
+      t61Scientific: {word: scientific}
+  - shot_id: S00-62
+    turn_id: 037c398dbdb08181
+    scene: LiteratureBoundary
+    instance: LiteratureBoundary
+    cues:
+      t62Established: {word: established}
+      t62Literature: {word: literature}
+      t62Ends: {word: ends}
+      t62Bias: {word: Bias}
+      t62Prejudice: {word: prejudice}
+      t62Discrimination: {word: discrimination}
+      t62PersonToPerson: {word: person-to-person}
+      t62Standard: {word: standard}
+      t62Experimental: {word: experimental}
+      t62Psychology: {word: psychology}
