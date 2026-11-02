@@ -1,0 +1,4723 @@
+{
+  "generatedAt": "2026-11-02T00:39:50.683Z",
+  "svgoVersion": "4.1.0",
+  "baseConfig": "preset-default, removeViewBox:false, floatPrecision:3, multipass",
+  "entries": [
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets_g/g.alpha.svg",
+      "bytesBefore": 3456,
+      "bytesAfter": 2642,
+      "pctSaved": 23.55,
+      "status": "pass",
+      "precision": 4,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 44,
+          "height": 27,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 1188,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 87,
+          "height": 54,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 4698,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets_g/g.C.svg",
+      "bytesBefore": 778,
+      "bytesAfter": 610,
+      "pctSaved": 21.59,
+      "status": "pass",
+      "precision": 4,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 10,
+          "height": 10,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 100,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 20,
+          "height": 19,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 380,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets_g/g.eq211.svg",
+      "bytesBefore": 6834,
+      "bytesAfter": 5030,
+      "pctSaved": 26.4,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 133,
+          "height": 27,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 3591,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 267,
+          "height": 54,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 14418,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets_g/g.j2.svg",
+      "bytesBefore": 2126,
+      "bytesAfter": 1576,
+      "pctSaved": 25.87,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 46,
+          "height": 14,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 644,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 92,
+          "height": 29,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 2668,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets_g/g.jpsis.svg",
+      "bytesBefore": 2503,
+      "bytesAfter": 1832,
+      "pctSaved": 26.81,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 22,
+          "height": 12,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 264,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 43,
+          "height": 24,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 1032,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets_g/g.L.svg",
+      "bytesBefore": 856,
+      "bytesAfter": 661,
+      "pctSaved": 22.78,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 9,
+          "height": 9,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 81,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 17,
+          "height": 18,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 306,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets_g/g.omega.svg",
+      "bytesBefore": 3780,
+      "bytesAfter": 2872,
+      "pctSaved": 24.02,
+      "status": "pass",
+      "precision": 4,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 64,
+          "height": 30,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 1920,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 128,
+          "height": 60,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 7680,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets_g/g.pair.svg",
+      "bytesBefore": 4291,
+      "bytesAfter": 4192,
+      "pctSaved": 2.31,
+      "status": "pass",
+      "precision": 5,
+      "reducedPlugins": true,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 52,
+          "height": 13,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 676,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 105,
+          "height": 27,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 2835,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets_g/g.q.svg",
+      "bytesBefore": 2196,
+      "bytesAfter": 2123,
+      "pctSaved": 3.32,
+      "status": "pass",
+      "precision": 5,
+      "reducedPlugins": true,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 20,
+          "height": 13,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 260,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 40,
+          "height": 27,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 1080,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets_g/g.q0.svg",
+      "bytesBefore": 1754,
+      "bytesAfter": 1330,
+      "pctSaved": 24.17,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 30,
+          "height": 11,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 330,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 60,
+          "height": 23,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 1380,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets_g/g.R.svg",
+      "bytesBefore": 1201,
+      "bytesAfter": 935,
+      "pctSaved": 22.15,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 10,
+          "height": 9,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 90,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 20,
+          "height": 19,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 380,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets_g/g.t.svg",
+      "bytesBefore": 730,
+      "bytesAfter": 552,
+      "pctSaved": 24.38,
+      "status": "pass",
+      "precision": 4,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 4,
+          "height": 8,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 32,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 9,
+          "height": 17,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 153,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets_g/g.V.svg",
+      "bytesBefore": 2135,
+      "bytesAfter": 2064,
+      "pctSaved": 3.33,
+      "status": "pass",
+      "precision": 5,
+      "reducedPlugins": true,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 25,
+          "height": 13,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 325,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 49,
+          "height": 27,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 1323,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets_g/g.Wsum.svg",
+      "bytesBefore": 5491,
+      "bytesAfter": 3940,
+      "pctSaved": 28.25,
+      "status": "pass",
+      "precision": 4,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 89,
+          "height": 12,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 1068,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 177,
+          "height": 24,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 4248,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets_g/g.zeta.svg",
+      "bytesBefore": 4737,
+      "bytesAfter": 3560,
+      "pctSaved": 24.85,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 65,
+          "height": 32,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 2080,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 130,
+          "height": 64,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 8320,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets_new/v2-S03-10.latex.svg",
+      "bytesBefore": 15068,
+      "bytesAfter": 8307,
+      "pctSaved": 44.87,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 429,
+          "height": 17,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 7293,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 859,
+          "height": 34,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 29206,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets_new/v2-S03-10.term1.svg",
+      "bytesBefore": 7061,
+      "bytesAfter": 6653,
+      "pctSaved": 5.78,
+      "status": "pass",
+      "precision": 5,
+      "reducedPlugins": true,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 123,
+          "height": 17,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 2091,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 246,
+          "height": 34,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 8364,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets_new/v2-S03-10.term2.svg",
+      "bytesBefore": 7685,
+      "bytesAfter": 4179,
+      "pctSaved": 45.62,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 141,
+          "height": 17,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 2397,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 281,
+          "height": 34,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 9554,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets_new/v2-S03-10.term3.svg",
+      "bytesBefore": 6623,
+      "bytesAfter": 3752,
+      "pctSaved": 43.35,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 119,
+          "height": 17,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 2023,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 237,
+          "height": 34,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 8058,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets_vec/ph.const.svg",
+      "bytesBefore": 5204,
+      "bytesAfter": 2818,
+      "pctSaved": 45.85,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 81,
+          "height": 19,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 1539,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 161,
+          "height": 37,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 5957,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets_vec/ph.log3.svg",
+      "bytesBefore": 4082,
+      "bytesAfter": 2183,
+      "pctSaved": 46.52,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 60,
+          "height": 17,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 1020,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 120,
+          "height": 34,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 4080,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets_vec/ph.neg.svg",
+      "bytesBefore": 6731,
+      "bytesAfter": 3724,
+      "pctSaved": 44.67,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 127,
+          "height": 17,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 2159,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 255,
+          "height": 34,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 8670,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets_vec/ph.tele.svg",
+      "bytesBefore": 7903,
+      "bytesAfter": 4411,
+      "pctSaved": 44.19,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 158,
+          "height": 17,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 2686,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 315,
+          "height": 34,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 10710,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets_vec/ph.wage.svg",
+      "bytesBefore": 3651,
+      "bytesAfter": 1971,
+      "pctSaved": 46.01,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 55,
+          "height": 17,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 935,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 111,
+          "height": 34,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 3774,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets_vec/ph.zero.svg",
+      "bytesBefore": 3529,
+      "bytesAfter": 3330,
+      "pctSaved": 5.64,
+      "status": "pass",
+      "precision": 5,
+      "reducedPlugins": true,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 48,
+          "height": 17,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 816,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 97,
+          "height": 34,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 3298,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets_vec/vec.dhier.svg",
+      "bytesBefore": 5217,
+      "bytesAfter": 2723,
+      "pctSaved": 47.81,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 56,
+          "height": 22,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 1232,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 111,
+          "height": 43,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 4773,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets_vec/vec.dstate.svg",
+      "bytesBefore": 3626,
+      "bytesAfter": 1975,
+      "pctSaved": 45.53,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 35,
+          "height": 20,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 700,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 71,
+          "height": 40,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 2840,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets_vec/vec.eq251.svg",
+      "bytesBefore": 13633,
+      "bytesAfter": 7082,
+      "pctSaved": 48.05,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 212,
+          "height": 22,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 4664,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 425,
+          "height": 44,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 18700,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets_vec/vec.eq31.svg",
+      "bytesBefore": 11651,
+      "bytesAfter": 6040,
+      "pctSaved": 48.16,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 153,
+          "height": 22,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 3366,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 306,
+          "height": 44,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 13464,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets_vec/w35.absW.svg",
+      "bytesBefore": 1576,
+      "bytesAfter": 836,
+      "pctSaved": 46.95,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 27,
+          "height": 19,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 513,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 54,
+          "height": 37,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 1998,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets_vec/w35.cos.svg",
+      "bytesBefore": 6652,
+      "bytesAfter": 3553,
+      "pctSaved": 46.59,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 92,
+          "height": 19,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 1748,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 185,
+          "height": 37,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 6845,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets_vec/w35.eq.svg",
+      "bytesBefore": 6012,
+      "bytesAfter": 3182,
+      "pctSaved": 47.07,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 95,
+          "height": 17,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 1615,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 190,
+          "height": 34,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 6460,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets_vec/w35.im.svg",
+      "bytesBefore": 1515,
+      "bytesAfter": 764,
+      "pctSaved": 49.57,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 21,
+          "height": 14,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 294,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 42,
+          "height": 29,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 1218,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets_vec/w35.j.svg",
+      "bytesBefore": 2654,
+      "bytesAfter": 1389,
+      "pctSaved": 47.66,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 57,
+          "height": 20,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 1140,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 114,
+          "height": 40,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 4560,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets_vec/w35.jax.svg",
+      "bytesBefore": 856,
+      "bytesAfter": 535,
+      "pctSaved": 37.5,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 11,
+          "height": 17,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 187,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 23,
+          "height": 33,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 759,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets_vec/w35.psim.svg",
+      "bytesBefore": 2523,
+      "bytesAfter": 1358,
+      "pctSaved": 46.18,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 24,
+          "height": 17,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 408,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 48,
+          "height": 34,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 1632,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets_vec/w35.psis.svg",
+      "bytesBefore": 1917,
+      "bytesAfter": 1814,
+      "pctSaved": 5.37,
+      "status": "pass",
+      "precision": 5,
+      "reducedPlugins": true,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 20,
+          "height": 17,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 340,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 39,
+          "height": 34,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 1326,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets_vec/w35.re.svg",
+      "bytesBefore": 1509,
+      "bytesAfter": 885,
+      "pctSaved": 41.35,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 21,
+          "height": 14,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 294,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 42,
+          "height": 29,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 1218,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets_vec/w35.rot.svg",
+      "bytesBefore": 3293,
+      "bytesAfter": 1792,
+      "pctSaved": 45.58,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 56,
+          "height": 19,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 1064,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 112,
+          "height": 37,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 4144,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets_vec/w35.screen.svg",
+      "bytesBefore": 6433,
+      "bytesAfter": 3477,
+      "pctSaved": 45.95,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 118,
+          "height": 17,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 2006,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 236,
+          "height": 34,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 8024,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets_vec/w35.sin.svg",
+      "bytesBefore": 6143,
+      "bytesAfter": 3223,
+      "pctSaved": 47.53,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 86,
+          "height": 19,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 1634,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 173,
+          "height": 37,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 6401,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets_vec/w35.theta.svg",
+      "bytesBefore": 674,
+      "bytesAfter": 454,
+      "pctSaved": 32.64,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 12,
+          "height": 15,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 180,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 24,
+          "height": 29,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 696,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets_vec/w35.W.svg",
+      "bytesBefore": 1229,
+      "bytesAfter": 640,
+      "pctSaved": 47.93,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 20,
+          "height": 14,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 280,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 39,
+          "height": 29,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 1131,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S01-04.qr.svg",
+      "bytesBefore": 3152,
+      "bytesAfter": 2791,
+      "pctSaved": 11.45,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 264,
+          "height": 264,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 69696,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 528,
+          "height": 528,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 278784,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S01-14.qr.svg",
+      "bytesBefore": 3087,
+      "bytesAfter": 2732,
+      "pctSaved": 11.5,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 264,
+          "height": 264,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 69696,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 528,
+          "height": 528,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 278784,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S01-16.qr.svg",
+      "bytesBefore": 3087,
+      "bytesAfter": 2732,
+      "pctSaved": 11.5,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 264,
+          "height": 264,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 69696,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 528,
+          "height": 528,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 278784,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S01-19.qr.svg",
+      "bytesBefore": 3920,
+      "bytesAfter": 3459,
+      "pctSaved": 11.76,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 296,
+          "height": 296,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 87616,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 592,
+          "height": 592,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 350464,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S02-13.latex.svg",
+      "bytesBefore": 11591,
+      "bytesAfter": 6250,
+      "pctSaved": 46.08,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 282,
+          "height": 18,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 5076,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 563,
+          "height": 37,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 20831,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S02-13.term1.svg",
+      "bytesBefore": 3311,
+      "bytesAfter": 1769,
+      "pctSaved": 46.57,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 60,
+          "height": 16,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 960,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 119,
+          "height": 31,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 3689,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S02-13.term2.svg",
+      "bytesBefore": 2914,
+      "bytesAfter": 1651,
+      "pctSaved": 43.34,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 62,
+          "height": 16,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 992,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 123,
+          "height": 32,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 3936,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S02-13.term3.svg",
+      "bytesBefore": 8828,
+      "bytesAfter": 4696,
+      "pctSaved": 46.81,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 132,
+          "height": 17,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 2244,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 265,
+          "height": 34,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 9010,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S02-20.latex.svg",
+      "bytesBefore": 11793,
+      "bytesAfter": 6223,
+      "pctSaved": 47.23,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 197,
+          "height": 19,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 3743,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 394,
+          "height": 37,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 14578,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S02-20.term1.svg",
+      "bytesBefore": 2751,
+      "bytesAfter": 1498,
+      "pctSaved": 45.55,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 31,
+          "height": 19,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 589,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 62,
+          "height": 37,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 2294,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S02-20.term2.svg",
+      "bytesBefore": 3587,
+      "bytesAfter": 1949,
+      "pctSaved": 45.66,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 60,
+          "height": 19,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 1140,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 119,
+          "height": 37,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 4403,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S02-23.latex.svg",
+      "bytesBefore": 13215,
+      "bytesAfter": 11955,
+      "pctSaved": 9.53,
+      "status": "pass",
+      "precision": 5,
+      "reducedPlugins": true,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 184,
+          "height": 34,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 6256,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 367,
+          "height": 68,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 24956,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S02-23.term1.svg",
+      "bytesBefore": 940,
+      "bytesAfter": 511,
+      "pctSaved": 45.64,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 14,
+          "height": 14,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 196,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 29,
+          "height": 29,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 841,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S02-23.term2.svg",
+      "bytesBefore": 1287,
+      "bytesAfter": 716,
+      "pctSaved": 44.37,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 15,
+          "height": 14,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 210,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 31,
+          "height": 29,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 899,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S02-23.term3.svg",
+      "bytesBefore": 835,
+      "bytesAfter": 546,
+      "pctSaved": 34.61,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 16,
+          "height": 14,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 224,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 31,
+          "height": 29,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 899,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S03-12.latex.svg",
+      "bytesBefore": 5185,
+      "bytesAfter": 2871,
+      "pctSaved": 44.63,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 135,
+          "height": 18,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 2430,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 271,
+          "height": 37,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 10027,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S03-12.term1.svg",
+      "bytesBefore": 1694,
+      "bytesAfter": 926,
+      "pctSaved": 45.34,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 32,
+          "height": 17,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 544,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 65,
+          "height": 34,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 2210,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S03-12.term2.svg",
+      "bytesBefore": 2914,
+      "bytesAfter": 1651,
+      "pctSaved": 43.34,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 62,
+          "height": 16,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 992,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 123,
+          "height": 32,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 3936,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S03-17.latex.svg",
+      "bytesBefore": 14678,
+      "bytesAfter": 7370,
+      "pctSaved": 49.79,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 243,
+          "height": 19,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 4617,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 485,
+          "height": 38,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 18430,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S03-17.term1.svg",
+      "bytesBefore": 4387,
+      "bytesAfter": 2290,
+      "pctSaved": 47.8,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 61,
+          "height": 18,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 1098,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 123,
+          "height": 36,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 4428,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S03-17.term2.svg",
+      "bytesBefore": 7408,
+      "bytesAfter": 3665,
+      "pctSaved": 50.53,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 90,
+          "height": 17,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 1530,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 181,
+          "height": 34,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 6154,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S03-25.latex.svg",
+      "bytesBefore": 11075,
+      "bytesAfter": 9907,
+      "pctSaved": 10.55,
+      "status": "pass",
+      "precision": 5,
+      "reducedPlugins": true,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 255,
+          "height": 20,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 5100,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 510,
+          "height": 39,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 19890,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S03-25.term1.svg",
+      "bytesBefore": 4507,
+      "bytesAfter": 2483,
+      "pctSaved": 44.91,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 60,
+          "height": 16,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 960,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 120,
+          "height": 33,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 3960,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S03-25.term2.svg",
+      "bytesBefore": 6786,
+      "bytesAfter": 3672,
+      "pctSaved": 45.89,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 82,
+          "height": 18,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 1476,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 165,
+          "height": 36,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 5940,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S03-30.latex.svg",
+      "bytesBefore": 6524,
+      "bytesAfter": 3528,
+      "pctSaved": 45.92,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 186,
+          "height": 20,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 3720,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 372,
+          "height": 39,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 14508,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S03-30.term1.svg",
+      "bytesBefore": 917,
+      "bytesAfter": 555,
+      "pctSaved": 39.48,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 14,
+          "height": 11,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 154,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 27,
+          "height": 22,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 594,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S03-30.term2.svg",
+      "bytesBefore": 3481,
+      "bytesAfter": 1791,
+      "pctSaved": 48.55,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 57,
+          "height": 20,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 1140,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 113,
+          "height": 39,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 4407,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S05-06.latex.svg",
+      "bytesBefore": 15068,
+      "bytesAfter": 8307,
+      "pctSaved": 44.87,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 429,
+          "height": 17,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 7293,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 859,
+          "height": 34,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 29206,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S05-06.term1.svg",
+      "bytesBefore": 7061,
+      "bytesAfter": 6653,
+      "pctSaved": 5.78,
+      "status": "pass",
+      "precision": 5,
+      "reducedPlugins": true,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 123,
+          "height": 17,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 2091,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 246,
+          "height": 34,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 8364,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S05-06.term2.svg",
+      "bytesBefore": 7685,
+      "bytesAfter": 4179,
+      "pctSaved": 45.62,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 141,
+          "height": 17,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 2397,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 281,
+          "height": 34,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 9554,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S05-06.term3.svg",
+      "bytesBefore": 6623,
+      "bytesAfter": 3752,
+      "pctSaved": 43.35,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 119,
+          "height": 17,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 2023,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 237,
+          "height": 34,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 8058,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S06-01.latex.svg",
+      "bytesBefore": 16008,
+      "bytesAfter": 14766,
+      "pctSaved": 7.76,
+      "status": "pass",
+      "precision": 5,
+      "reducedPlugins": true,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 472,
+          "height": 17,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 8024,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 943,
+          "height": 34,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 32062,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S06-01.term1.svg",
+      "bytesBefore": 7113,
+      "bytesAfter": 3820,
+      "pctSaved": 46.3,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 147,
+          "height": 15,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 2205,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 295,
+          "height": 29,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 8555,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S06-01.term2.svg",
+      "bytesBefore": 8824,
+      "bytesAfter": 4768,
+      "pctSaved": 45.97,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 137,
+          "height": 17,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 2329,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 273,
+          "height": 34,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 9282,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S06-01.term3.svg",
+      "bytesBefore": 8854,
+      "bytesAfter": 4844,
+      "pctSaved": 45.29,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 141,
+          "height": 17,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 2397,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 281,
+          "height": 34,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 9554,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S07-36.latex.svg",
+      "bytesBefore": 15642,
+      "bytesAfter": 8279,
+      "pctSaved": 47.07,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 318,
+          "height": 19,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 6042,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 636,
+          "height": 37,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 23532,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S07-36.term1.svg",
+      "bytesBefore": 5807,
+      "bytesAfter": 3119,
+      "pctSaved": 46.29,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 97,
+          "height": 19,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 1843,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 193,
+          "height": 37,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 7141,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S07-36.term2.svg",
+      "bytesBefore": 1917,
+      "bytesAfter": 1814,
+      "pctSaved": 5.37,
+      "status": "pass",
+      "precision": 5,
+      "reducedPlugins": true,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 20,
+          "height": 17,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 340,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 39,
+          "height": 34,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 1326,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S07-39.latex.svg",
+      "bytesBefore": 10994,
+      "bytesAfter": 10317,
+      "pctSaved": 6.16,
+      "status": "pass",
+      "precision": 5,
+      "reducedPlugins": true,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 158,
+          "height": 19,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 3002,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 315,
+          "height": 37,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 11655,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S07-39.term1.svg",
+      "bytesBefore": 7249,
+      "bytesAfter": 3811,
+      "pctSaved": 47.43,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 106,
+          "height": 17,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 1802,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 213,
+          "height": 34,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 7242,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S07-39.term2.svg",
+      "bytesBefore": 6197,
+      "bytesAfter": 3369,
+      "pctSaved": 45.63,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 85,
+          "height": 19,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 1615,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 171,
+          "height": 37,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 6327,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S07-39.term3.svg",
+      "bytesBefore": 4507,
+      "bytesAfter": 2483,
+      "pctSaved": 44.91,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 60,
+          "height": 16,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 960,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 120,
+          "height": 33,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 3960,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S07-53.latex.svg",
+      "bytesBefore": 14887,
+      "bytesAfter": 8096,
+      "pctSaved": 45.62,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 248,
+          "height": 19,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 4712,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 496,
+          "height": 37,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 18352,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S07-53.term1.svg",
+      "bytesBefore": 8097,
+      "bytesAfter": 4422,
+      "pctSaved": 45.39,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 140,
+          "height": 17,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 2380,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 280,
+          "height": 34,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 9520,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S07-53.term2.svg",
+      "bytesBefore": 8492,
+      "bytesAfter": 4578,
+      "pctSaved": 46.09,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 154,
+          "height": 15,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 2310,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 309,
+          "height": 29,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 8961,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S07-56.latex.svg",
+      "bytesBefore": 14960,
+      "bytesAfter": 7903,
+      "pctSaved": 47.17,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 221,
+          "height": 19,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 4199,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 442,
+          "height": 38,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 16796,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S07-56.term1.svg",
+      "bytesBefore": 5175,
+      "bytesAfter": 2898,
+      "pctSaved": 44,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 103,
+          "height": 16,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 1648,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 205,
+          "height": 31,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 6355,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S07-56.term2.svg",
+      "bytesBefore": 6655,
+      "bytesAfter": 3650,
+      "pctSaved": 45.15,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 107,
+          "height": 17,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 1819,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 213,
+          "height": 34,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 7242,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S08-26.latex.svg",
+      "bytesBefore": 21492,
+      "bytesAfter": 10985,
+      "pctSaved": 48.89,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 393,
+          "height": 19,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 7467,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 787,
+          "height": 37,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 29119,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S08-26.term1.svg",
+      "bytesBefore": 8408,
+      "bytesAfter": 3975,
+      "pctSaved": 52.72,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 119,
+          "height": 16,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 1904,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 237,
+          "height": 33,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 7821,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S08-26.term2.svg",
+      "bytesBefore": 6435,
+      "bytesAfter": 3344,
+      "pctSaved": 48.03,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 114,
+          "height": 35,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 3990,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 227,
+          "height": 70,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 15890,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S08-26.term3.svg",
+      "bytesBefore": 8950,
+      "bytesAfter": 4606,
+      "pctSaved": 48.54,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 146,
+          "height": 16,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 2336,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 292,
+          "height": 33,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 9636,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S08-36.latex.svg",
+      "bytesBefore": 8828,
+      "bytesAfter": 4696,
+      "pctSaved": 46.81,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 132,
+          "height": 17,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 2244,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 265,
+          "height": 34,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 9010,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S08-36.term1.svg",
+      "bytesBefore": 7396,
+      "bytesAfter": 4021,
+      "pctSaved": 45.63,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 113,
+          "height": 17,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 1921,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 227,
+          "height": 34,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 7718,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S08-36.term2.svg",
+      "bytesBefore": 7232,
+      "bytesAfter": 3831,
+      "pctSaved": 47.03,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 123,
+          "height": 19,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 2337,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 245,
+          "height": 37,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 9065,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S08-36.term3.svg",
+      "bytesBefore": 8075,
+      "bytesAfter": 4272,
+      "pctSaved": 47.1,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 111,
+          "height": 14,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 1554,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 221,
+          "height": 29,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 6409,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S08-46.latex.svg",
+      "bytesBefore": 13952,
+      "bytesAfter": 7500,
+      "pctSaved": 46.24,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 297,
+          "height": 19,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 5643,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 593,
+          "height": 37,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 21941,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S08-46.term1.svg",
+      "bytesBefore": 5779,
+      "bytesAfter": 3036,
+      "pctSaved": 47.46,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 95,
+          "height": 18,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 1710,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 190,
+          "height": 36,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 6840,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S08-46.term2.svg",
+      "bytesBefore": 9595,
+      "bytesAfter": 5019,
+      "pctSaved": 47.69,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 173,
+          "height": 19,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 3287,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 346,
+          "height": 37,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 12802,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S10-03.latex.svg",
+      "bytesBefore": 21206,
+      "bytesAfter": 11352,
+      "pctSaved": 46.47,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 319,
+          "height": 37,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 11803,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 639,
+          "height": 73,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 46647,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S10-03.term1.svg",
+      "bytesBefore": 4757,
+      "bytesAfter": 2513,
+      "pctSaved": 47.17,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 60,
+          "height": 19,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 1140,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 121,
+          "height": 37,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 4477,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S10-03.term2.svg",
+      "bytesBefore": 5208,
+      "bytesAfter": 2821,
+      "pctSaved": 45.83,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 58,
+          "height": 19,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 1102,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 117,
+          "height": 38,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 4446,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S10-14.latex.svg",
+      "bytesBefore": 20936,
+      "bytesAfter": 11039,
+      "pctSaved": 47.27,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 298,
+          "height": 27,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 8046,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 596,
+          "height": 54,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 32184,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S10-14.term1.svg",
+      "bytesBefore": 992,
+      "bytesAfter": 616,
+      "pctSaved": 37.9,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 14,
+          "height": 14,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 196,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 29,
+          "height": 29,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 841,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S10-14.term2.svg",
+      "bytesBefore": 9674,
+      "bytesAfter": 5070,
+      "pctSaved": 47.59,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 195,
+          "height": 18,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 3510,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 390,
+          "height": 36,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 14040,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S10-29.qr.svg",
+      "bytesBefore": 4973,
+      "bytesAfter": 4372,
+      "pctSaved": 12.09,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 328,
+          "height": 328,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 107584,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 656,
+          "height": 656,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 430336,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S10-33.latex.svg",
+      "bytesBefore": 16909,
+      "bytesAfter": 15194,
+      "pctSaved": 10.14,
+      "status": "pass",
+      "precision": 5,
+      "reducedPlugins": true,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 344,
+          "height": 33,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 11352,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 688,
+          "height": 65,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 44720,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S10-33.term1.svg",
+      "bytesBefore": 3845,
+      "bytesAfter": 2101,
+      "pctSaved": 45.36,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 47,
+          "height": 19,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 893,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 93,
+          "height": 38,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 3534,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S10-33.term2.svg",
+      "bytesBefore": 6026,
+      "bytesAfter": 3188,
+      "pctSaved": 47.1,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 84,
+          "height": 33,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 2772,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 167,
+          "height": 65,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 10855,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S10-42.qr.svg",
+      "bytesBefore": 3182,
+      "bytesAfter": 2815,
+      "pctSaved": 11.53,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 264,
+          "height": 264,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 69696,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 528,
+          "height": 528,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 278784,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S13-15.latex.svg",
+      "bytesBefore": 19923,
+      "bytesAfter": 10545,
+      "pctSaved": 47.07,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 339,
+          "height": 22,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 7458,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 678,
+          "height": 44,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 29832,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S13-15.qr.svg",
+      "bytesBefore": 2942,
+      "bytesAfter": 2607,
+      "pctSaved": 11.39,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 264,
+          "height": 264,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 69696,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 528,
+          "height": 528,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 278784,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S13-15.term1.svg",
+      "bytesBefore": 8108,
+      "bytesAfter": 4289,
+      "pctSaved": 47.1,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 99,
+          "height": 22,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 2178,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 197,
+          "height": 43,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 8471,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S13-15.term2.svg",
+      "bytesBefore": 10313,
+      "bytesAfter": 5347,
+      "pctSaved": 48.15,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 145,
+          "height": 22,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 3190,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 289,
+          "height": 43,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 12427,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S13-15.term3.svg",
+      "bytesBefore": 8216,
+      "bytesAfter": 4314,
+      "pctSaved": 47.49,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 114,
+          "height": 19,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 2166,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 228,
+          "height": 37,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 8436,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S14-13.latex.svg",
+      "bytesBefore": 16696,
+      "bytesAfter": 8750,
+      "pctSaved": 47.59,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 255,
+          "height": 33,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 8415,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 511,
+          "height": 65,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 33215,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S14-13.term1.svg",
+      "bytesBefore": 6879,
+      "bytesAfter": 3593,
+      "pctSaved": 47.77,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 87,
+          "height": 21,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 1827,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 174,
+          "height": 42,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 7308,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/figma/v2/assets/S14-13.term2.svg",
+      "bytesBefore": 4032,
+      "bytesAfter": 1968,
+      "pctSaved": 51.19,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 61,
+          "height": 16,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 976,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 122,
+          "height": 33,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 4026,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/stage/handoff/svg/active-patch.compact.svg",
+      "bytesBefore": 25431,
+      "bytesAfter": 15178,
+      "pctSaved": 40.32,
+      "status": "pass",
+      "precision": 4,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 211,
+          "height": 60,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 12660,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 422,
+          "height": 120,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 50640,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/stage/handoff/svg/active-patch.expanded.svg",
+      "bytesBefore": 27861,
+      "bytesAfter": 27674,
+      "pctSaved": 0.67,
+      "status": "pass",
+      "precision": 5,
+      "reducedPlugins": true,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 640,
+          "height": 131,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 83840,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 1280,
+          "height": 262,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 335360,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/stage/handoff/svg/active-patch.settings.svg",
+      "bytesBefore": 124267,
+      "bytesAfter": 72072,
+      "pctSaved": 42,
+      "status": "pass",
+      "precision": 4,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 560,
+          "height": 304,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 170240,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 1120,
+          "height": 608,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 680960,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/stage/handoff/svg/backlash-oscillator.compact.svg",
+      "bytesBefore": 21013,
+      "bytesAfter": 12069,
+      "pctSaved": 42.56,
+      "status": "pass",
+      "precision": 4,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 202,
+          "height": 88,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 17776,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 404,
+          "height": 176,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 71104,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/stage/handoff/svg/backlash-oscillator.expanded.svg",
+      "bytesBefore": 200148,
+      "bytesAfter": 111608,
+      "pctSaved": 44.24,
+      "status": "pass",
+      "precision": 4,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 640,
+          "height": 440,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 281600,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 1280,
+          "height": 880,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 1126400,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/stage/handoff/svg/backlash-oscillator.settings.svg",
+      "bytesBefore": 302814,
+      "bytesAfter": 176968,
+      "pctSaved": 41.56,
+      "status": "pass",
+      "precision": 4,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 560,
+          "height": 388,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 217280,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 1120,
+          "height": 776,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 869120,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/stage/handoff/svg/border-compact.svg",
+      "bytesBefore": 19415,
+      "bytesAfter": 19415,
+      "pctSaved": 0,
+      "status": "kept-original",
+      "reason": "excluded: stage/tools/svg_to_tsx.mjs reads it with case-sensitive regexes (fill=\"#F5F5F5\")",
+      "precision": null,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": []
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/stage/handoff/svg/capital.compact.svg",
+      "bytesBefore": 9757,
+      "bytesAfter": 6531,
+      "pctSaved": 33.06,
+      "status": "pass",
+      "precision": 4,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 118,
+          "height": 62,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 7316,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 236,
+          "height": 124,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 29264,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/stage/handoff/svg/capital.expanded.svg",
+      "bytesBefore": 71796,
+      "bytesAfter": 41362,
+      "pctSaved": 42.39,
+      "status": "pass",
+      "precision": 4,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 640,
+          "height": 158,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 101120,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 1280,
+          "height": 316,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 404480,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/stage/handoff/svg/capital.settings.svg",
+      "bytesBefore": 178617,
+      "bytesAfter": 104385,
+      "pctSaved": 41.56,
+      "status": "pass",
+      "precision": 4,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 560,
+          "height": 342,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 191520,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 1120,
+          "height": 684,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 766080,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/stage/handoff/svg/compass-rose.svg",
+      "bytesBefore": 1217,
+      "bytesAfter": 878,
+      "pctSaved": 27.86,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 190,
+          "height": 194,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 36860,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 380,
+          "height": 388,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 147440,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/stage/handoff/svg/era-clock.compact.svg",
+      "bytesBefore": 22346,
+      "bytesAfter": 12968,
+      "pctSaved": 41.97,
+      "status": "pass-aa-tolerance",
+      "precision": 3,
+      "diffPixels": 7,
+      "maxChannelDelta": 5,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 281,
+          "height": 89,
+          "sizeMismatch": false,
+          "diffPixels": 1,
+          "totalPixels": 25009,
+          "maxChannelDelta": 5
+        },
+        {
+          "scale": 2,
+          "width": 562,
+          "height": 178,
+          "sizeMismatch": false,
+          "diffPixels": 7,
+          "totalPixels": 100036,
+          "maxChannelDelta": 5
+        }
+      ],
+      "reason": "anti-aliasing noise within tolerance"
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/stage/handoff/svg/era-clock.expanded.svg",
+      "bytesBefore": 180326,
+      "bytesAfter": 179451,
+      "pctSaved": 0.49,
+      "status": "pass",
+      "precision": 5,
+      "reducedPlugins": true,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 640,
+          "height": 472,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 302080,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 1280,
+          "height": 944,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 1208320,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/stage/handoff/svg/era-clock.settings.svg",
+      "bytesBefore": 145289,
+      "bytesAfter": 84429,
+      "pctSaved": 41.89,
+      "status": "pass",
+      "precision": 4,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 560,
+          "height": 304,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 170240,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 1120,
+          "height": 608,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 680960,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/stage/handoff/svg/era-strip.1486.svg",
+      "bytesBefore": 75070,
+      "bytesAfter": 42319,
+      "pctSaved": 43.63,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 1801,
+          "height": 44,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 79244,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/stage/handoff/svg/era-strip.empty.svg",
+      "bytesBefore": 1785,
+      "bytesAfter": 1192,
+      "pctSaved": 33.22,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 1801,
+          "height": 40,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 72040,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/stage/handoff/svg/executing-function.compact.svg",
+      "bytesBefore": 49529,
+      "bytesAfter": 29687,
+      "pctSaved": 40.06,
+      "status": "pass-aa-tolerance",
+      "precision": 3,
+      "diffPixels": 7,
+      "maxChannelDelta": 5,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 554,
+          "height": 39,
+          "sizeMismatch": false,
+          "diffPixels": 1,
+          "totalPixels": 21606,
+          "maxChannelDelta": 2
+        },
+        {
+          "scale": 2,
+          "width": 1108,
+          "height": 78,
+          "sizeMismatch": false,
+          "diffPixels": 7,
+          "totalPixels": 86424,
+          "maxChannelDelta": 5
+        }
+      ],
+      "reason": "anti-aliasing noise within tolerance"
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/stage/handoff/svg/executing-function.expanded.svg",
+      "bytesBefore": 52695,
+      "bytesAfter": 32765,
+      "pctSaved": 37.82,
+      "status": "pass",
+      "precision": 4,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 640,
+          "height": 144,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 92160,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 1280,
+          "height": 288,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 368640,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/stage/handoff/svg/executing-function.settings.svg",
+      "bytesBefore": 165601,
+      "bytesAfter": 96523,
+      "pctSaved": 41.71,
+      "status": "pass",
+      "precision": 4,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 560,
+          "height": 325,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 182000,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 1120,
+          "height": 650,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 728000,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/stage/handoff/svg/interference.compact.svg",
+      "bytesBefore": 26060,
+      "bytesAfter": 16006,
+      "pctSaved": 38.58,
+      "status": "pass",
+      "precision": 4,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 163,
+          "height": 97,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 15811,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 326,
+          "height": 194,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 63244,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/stage/handoff/svg/interference.expanded.svg",
+      "bytesBefore": 139536,
+      "bytesAfter": 137243,
+      "pctSaved": 1.64,
+      "status": "pass",
+      "precision": 5,
+      "reducedPlugins": true,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 640,
+          "height": 476,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 304640,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 1280,
+          "height": 952,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 1218560,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/stage/handoff/svg/interference.settings.svg",
+      "bytesBefore": 210821,
+      "bytesAfter": 208240,
+      "pctSaved": 1.22,
+      "status": "pass",
+      "precision": 5,
+      "reducedPlugins": true,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 560,
+          "height": 346,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 193760,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 1120,
+          "height": 692,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 775040,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/stage/handoff/svg/map.iberia.svg",
+      "bytesBefore": 209142,
+      "bytesAfter": 130368,
+      "pctSaved": 37.67,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 1856,
+          "height": 968,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 1796608,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 3712,
+          "height": 1936,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 7186432,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/stage/handoff/svg/map.world.svg",
+      "bytesBefore": 332397,
+      "bytesAfter": 198606,
+      "pctSaved": 40.25,
+      "status": "pass",
+      "precision": 3,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 1856,
+          "height": 968,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 1796608,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 3712,
+          "height": 1936,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 7186432,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/stage/handoff/svg/policy-ticker.compact.svg",
+      "bytesBefore": 69519,
+      "bytesAfter": 43661,
+      "pctSaved": 37.2,
+      "status": "pass",
+      "precision": 4,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 707,
+          "height": 36,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 25452,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 1414,
+          "height": 72,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 101808,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/stage/handoff/svg/policy-ticker.expanded.svg",
+      "bytesBefore": 144667,
+      "bytesAfter": 84262,
+      "pctSaved": 41.75,
+      "status": "pass",
+      "precision": 4,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 640,
+          "height": 239,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 152960,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 1280,
+          "height": 478,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 611840,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/stage/handoff/svg/policy-ticker.settings.svg",
+      "bytesBefore": 262863,
+      "bytesAfter": 154030,
+      "pctSaved": 41.4,
+      "status": "pass",
+      "precision": 4,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 560,
+          "height": 384,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 215040,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 1120,
+          "height": 768,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 860160,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/stage/handoff/svg/system-stress.compact.svg",
+      "bytesBefore": 15010,
+      "bytesAfter": 9778,
+      "pctSaved": 34.86,
+      "status": "pass",
+      "precision": 4,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 113,
+          "height": 62,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 7006,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 226,
+          "height": 124,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 28024,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/stage/handoff/svg/system-stress.expanded.svg",
+      "bytesBefore": 117199,
+      "bytesAfter": 65875,
+      "pctSaved": 43.79,
+      "status": "pass",
+      "precision": 4,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 640,
+          "height": 158,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 101120,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 1280,
+          "height": 316,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 404480,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/stage/handoff/svg/system-stress.settings.svg",
+      "bytesBefore": 235984,
+      "bytesAfter": 137912,
+      "pctSaved": 41.56,
+      "status": "pass",
+      "precision": 4,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 560,
+          "height": 346,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 193760,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 1120,
+          "height": 692,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 775040,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/stage/handoff/svg/variables.compact.svg",
+      "bytesBefore": 18662,
+      "bytesAfter": 18279,
+      "pctSaved": 2.05,
+      "status": "pass",
+      "precision": 5,
+      "reducedPlugins": true,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 153,
+          "height": 56,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 8568,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 306,
+          "height": 112,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 34272,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/stage/handoff/svg/variables.expanded.svg",
+      "bytesBefore": 73076,
+      "bytesAfter": 72298,
+      "pctSaved": 1.06,
+      "status": "pass",
+      "precision": 5,
+      "reducedPlugins": true,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 640,
+          "height": 159,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 101760,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 1280,
+          "height": 318,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 407040,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/stage/handoff/svg/variables.settings.svg",
+      "bytesBefore": 179460,
+      "bytesAfter": 178210,
+      "pctSaved": 0.7,
+      "status": "pass",
+      "precision": 5,
+      "reducedPlugins": true,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 560,
+          "height": 325,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 182000,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 1120,
+          "height": 650,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 728000,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/stage/handoff/svg/wage-plane.compact.svg",
+      "bytesBefore": 30205,
+      "bytesAfter": 17937,
+      "pctSaved": 40.62,
+      "status": "pass-aa-tolerance",
+      "precision": 3,
+      "diffPixels": 7,
+      "maxChannelDelta": 5,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 187,
+          "height": 120,
+          "sizeMismatch": false,
+          "diffPixels": 1,
+          "totalPixels": 22440,
+          "maxChannelDelta": 4
+        },
+        {
+          "scale": 2,
+          "width": 374,
+          "height": 240,
+          "sizeMismatch": false,
+          "diffPixels": 7,
+          "totalPixels": 89760,
+          "maxChannelDelta": 5
+        }
+      ],
+      "reason": "anti-aliasing noise within tolerance"
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/stage/handoff/svg/wage-plane.expanded.svg",
+      "bytesBefore": 138981,
+      "bytesAfter": 136409,
+      "pctSaved": 1.85,
+      "status": "pass",
+      "precision": 5,
+      "reducedPlugins": true,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 640,
+          "height": 432,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 276480,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 1280,
+          "height": 864,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 1105920,
+          "maxChannelDelta": 0
+        }
+      ]
+    },
+    {
+      "path": "Architecting_the_operation/video/yt02/stage/handoff/svg/wage-plane.settings.svg",
+      "bytesBefore": 173799,
+      "bytesAfter": 171612,
+      "pctSaved": 1.26,
+      "status": "pass",
+      "precision": 5,
+      "reducedPlugins": true,
+      "diffPixels": 0,
+      "maxChannelDelta": 0,
+      "checks": [
+        {
+          "scale": 1,
+          "width": 560,
+          "height": 325,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 182000,
+          "maxChannelDelta": 0
+        },
+        {
+          "scale": 2,
+          "width": 1120,
+          "height": 650,
+          "sizeMismatch": false,
+          "diffPixels": 0,
+          "totalPixels": 728000,
+          "maxChannelDelta": 0
+        }
+      ]
+    }
+  ],
+  "totals": {
+    "handoff": {
+      "files": 36,
+      "bytesBefore": 4052358,
+      "bytesAfter": 2848200
+    },
+    "figma": {
+      "files": 121,
+      "bytesBefore": 800146,
+      "bytesAfter": 480763
+    },
+    "overall": {
+      "files": 157,
+      "bytesBefore": 4852504,
+      "bytesAfter": 3328963
+    }
+  }
+}
