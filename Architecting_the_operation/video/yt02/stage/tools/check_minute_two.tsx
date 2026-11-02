@@ -7,8 +7,8 @@ import {ClockContext,PlanContext,type StagePlan} from '@stage';
 import {EntryOpen, ENTRY_OPEN_LAYOUT} from '../minutetwo/EntryOpen';
 import {SenseOne} from '../minutetwo/SenseOne';
 import {SenseTwo} from '../minutetwo/SenseTwo';
-import {SenseThree, SENSE3_METER} from '../minutetwo/SenseThree';
-import {FigureTwoThree, FIGURE_LAYOUT} from '../minutetwo/FigureTwoThree';
+import {SenseThree, SENSE3_METER, SENSE3_NETWORK} from '../minutetwo/SenseThree';
+import {FigureTwoThree, FIGURE_LAYOUT, figureFlightState} from '../minutetwo/FigureTwoThree';
 import {RAIL, CARD} from '../minutetwo/EntryRail';
 
 const plan=JSON.parse(fs.readFileSync(new URL('../ov/stage_plan.json',import.meta.url),'utf8')) as StagePlan;
@@ -42,6 +42,16 @@ function render(scene:SceneName,ms:number){
 function plain(html:string){
   return html.replace(/<[^>]+>/g,'').replaceAll('&amp;','&').replaceAll('&quot;','"').replaceAll('&#x27;',"'").replaceAll('&#39;',"'").replaceAll('&gt;','>').replaceAll('&lt;','<').replace(/\s+/g,' ').trim();
 }
+function definitionText(html:string,id:string){
+  const match=html.match(new RegExp(`<div data-definition="${id}"[^>]*>([\\s\\S]*?)<\\/div>`));
+  assert.ok(match,`missing definition block ${id}`);
+  return match[1].replace(/<[^>]+>/g,'').replaceAll('&amp;','&').replaceAll('&quot;','"').replaceAll('&#x27;',"'").replaceAll('&#39;',"'").replaceAll('&gt;','>').replaceAll('&lt;','<');
+}
+type Box={x:number;y:number;w:number;h:number};
+const boxesIntersect=(a:Box,b:Box)=>a.x<b.x+b.w&&a.x+a.w>b.x&&a.y<b.y+b.h&&a.y+a.h>b.y;
+const samePoint=(a:readonly number[],b:readonly number[])=>a[0]===b[0]&&a[1]===b[1];
+const orient=(a:readonly number[],b:readonly number[],c:readonly number[])=>(b[0]-a[0])*(c[1]-a[1])-(b[1]-a[1])*(c[0]-a[0]);
+const properIntersection=(a:readonly number[],b:readonly number[],c:readonly number[],d:readonly number[])=>orient(a,b,c)*orient(a,b,d)<0&&orient(c,d,a)*orient(c,d,b)<0;
 const renderedUnderscoreText=(html:string)=>[...html.matchAll(/>([^<>]*_[A-Za-z{][^<>]*)</g)].map(match=>match[1].trim()).filter(Boolean);
 const interactionHint=/\b(?:click|drag|hover|tap|swipe|press|arrow keys)\b/i;
 
@@ -101,8 +111,8 @@ if(process.env.MINUTE_TWO_SNAPSHOT==='1'){
   beat('SenseOne','t7Person',{text:['directed against another person'],markup:['data-arrow="sense1"']});
   beat('SenseOne','t7Race',{text:['on the basis of race or ethnicity','unit: one person'],markup:['data-rail-unit="one person"']});
   {
-    const end=byKind('SenseOne').find(frame=>frame.kind==='end')!;
-    assert.ok(plain(end.html).includes('individual prejudice, hostility, or discrimination directed against another person on the basis of race or ethnicity.'),'SenseOne end frame does not hold the assembled definition');
+    const lastCue=byKind('SenseOne').find(frame=>frame.kind==='t7Race')!;
+    assert.equal(definitionText(lastCue.html,'sense-1'),'individual prejudice, hostility, or discrimination directed against another person on the basis of race or ethnicity.','SenseOne definition has a missing or doubled space at t7Race+700');
   }
 
   // Turn 8 · SenseTwo
@@ -114,8 +124,8 @@ if(process.env.MINUTE_TWO_SNAPSHOT==='1'){
   beat('SenseTwo','t8Determine',{text:['determine cultural or intellectual achievement','claimed to determine'],markup:['data-phrase="t8Determine"']});
   beat('SenseTwo','t8Achievement',{text:['unit: a belief'],markup:['data-diagram-box="achievement"','data-rail-unit="a belief"']});
   {
-    const end=byKind('SenseTwo').find(frame=>frame.kind==='end')!;
-    assert.ok(plain(end.html).includes('an ideological belief or doctrine holding that built-in biological differences among human racial groups determine cultural or intellectual achievement.'),'SenseTwo end frame does not hold the assembled definition');
+    const lastCue=byKind('SenseTwo').find(frame=>frame.kind==='t8Determine')!;
+    assert.equal(definitionText(lastCue.html,'sense-2'),'an ideological belief or doctrine holding that built-in biological differences among human racial groups determine cultural or intellectual achievement.','SenseTwo definition has a missing or doubled space at t8Determine+700');
   }
 
   // Turn 9 · SenseThree
@@ -130,8 +140,9 @@ if(process.env.MINUTE_TWO_SNAPSHOT==='1'){
   beat('SenseThree','t9Unequal',{text:['that produce unequal outcomes','category A','category B','illustrative'],markup:['data-outcome-meter="true"','data-bar="a"','data-bar="b"']});
   beat('SenseThree','t9Categories',{text:['across racial categories','unit: a system'],markup:['data-rail-unit="a system"']});
   {
+    const lastCue=byKind('SenseThree').find(frame=>frame.kind==='t9Categories')!;
+    assert.equal(definitionText(lastCue.html,'sense-3'),'institutional or systemic practices that produce unequal outcomes across racial categories.','SenseThree definition has a missing or doubled space at t9Categories+700');
     const end=byKind('SenseThree').find(frame=>frame.kind==='end')!;
-    assert.ok(plain(end.html).includes('institutional or systemic practices that produce unequal outcomes across racial categories.'),'SenseThree end frame does not hold the assembled definition');
     for(const unit of ['one person','a belief','a system'])assert.ok(end.html.includes(`data-rail-unit="${unit}"`),`SenseThree end rail is missing unit tag "${unit}"`);
   }
 
@@ -163,5 +174,61 @@ if(process.env.MINUTE_TWO_SNAPSHOT==='1'){
   assert.ok(ENTRY_OPEN_LAYOUT.slot3BottomY>ENTRY_OPEN_LAYOUT.slotY[2]&&ENTRY_OPEN_LAYOUT.slot3BottomY+ENTRY_OPEN_LAYOUT.slotH<=ENTRY_OPEN_LAYOUT.panelH,'EntryOpen slot 3 does not slide to the panel bottom');
   assert.ok(SENSE3_METER.barAH>=2*SENSE3_METER.barBH,'SenseThree outcome bars are not clearly unequal');
 
-  console.log(`PASS: ${rendered.length} cue-derived frames; five minute-two scene contracts, narration strings, manuscript figure strings, hook policy, underscore policy, and interaction-hint policy verified; strings present from their beat and absent before it; rail x ${RAIL.x}–${RAIL.x+RAIL.w} clear of card x ${CARD.x}; Figure 2.3 layer widths ${FIGURE_LAYOUT.layerWidths.join(' / ')} px in the ratio 5.2 : 4.2 : 3.2.`);
+  // Wires paint first and disappear beneath opaque nodes. Independent wire segments do not
+  // cross, and each segment clears every unrelated node.
+  {
+    const networkHtml=byKind('SenseThree').find(frame=>frame.kind==='t9Practices')!.html;
+    assert.ok(networkHtml.indexOf('data-network-wire="1"')<networkHtml.indexOf('data-institution-node="1"'),'SenseThree nodes are not painted after the wires');
+    const field=networkHtml.match(/data-scene="SenseThree" style="[^"]*background:([^;]+);/)?.[1];
+    const nodeFill=networkHtml.match(/data-institution-node="1"[^>]*><rect[^>]*fill="([^"]+)"/)?.[1];
+    assert.equal(nodeFill,field,'SenseThree nodes do not use the opaque field fill');
+    const {wires,nodes,nodeW,nodeH}=SENSE3_NETWORK;
+    for(let i=0;i<wires.length;i++)for(let j=i+1;j<wires.length;j++){
+      const [a,b]=wires[i],[c,d]=wires[j];
+      if([a,b].some(p=>[c,d].some(q=>samePoint(p,q))))continue;
+      assert.ok(!properIntersection(a,b,c,d),`SenseThree wires ${i+1} and ${j+1} cross`);
+    }
+    for(let wireIndex=0;wireIndex<wires.length;wireIndex++){
+      const [a,b]=wires[wireIndex];
+      for(let nodeIndex=0;nodeIndex<nodes.length;nodeIndex++){
+        const node=nodes[nodeIndex],center=[node.x+nodeW/2,node.y+nodeH/2] as const;
+        if(samePoint(a,center)||samePoint(b,center))continue;
+        const corners=[[node.x,node.y],[node.x+nodeW,node.y],[node.x+nodeW,node.y+nodeH],[node.x,node.y+nodeH]] as const;
+        const crosses=corners.some((corner,k)=>properIntersection(a,b,corner,corners[(k+1)%4]));
+        assert.ok(!crosses,`SenseThree wire ${wireIndex+1} passes through node ${nodeIndex+1}`);
+      }
+    }
+  }
+
+  // Ten evenly spaced hand-off samples use the scene's layout constants. Any spatial
+  // intersection fails when both the departing rail text and arriving layer text are visible.
+  {
+    const start=plan.cues.t10Displays,end=plan.cues.t10Pyramid;
+    for(let sample=0;sample<10;sample++){
+      const ms=start+(end-start)*sample/9;
+      const states=[0,1,2].map(i=>figureFlightState(ms,start,i));
+      const boxes=states.map((state,i)=>{
+        const cx=RAIL.x+RAIL.w/2+(FIGURE_LAYOUT.leftCenter-(RAIL.x+RAIL.w/2))*state.p;
+        const y=RAIL.slotY[i]+(FIGURE_LAYOUT.layerY[i]-RAIL.slotY[i])*state.p;
+        const w=RAIL.w+(FIGURE_LAYOUT.landW-RAIL.w)*state.p;
+        const h=RAIL.slotH+(FIGURE_LAYOUT.layerH-RAIL.slotH)*state.p;
+        return {
+          rail:{x:cx-RAIL.w/2,y:y+(h-RAIL.slotH)/2,w:RAIL.w,h:RAIL.slotH},
+          layer:{x:cx-w/2,y,w,h},
+        };
+      });
+      for(let rail=0;rail<3;rail++)for(let layer=0;layer<3;layer++){
+        const bothVisible=states[rail].railTextOpacity>.05&&states[layer].layerTextOpacity>.05;
+        assert.ok(!(bothVisible&&boxesIntersect(boxes[rail].rail,boxes[layer].layer)),`FigureTwoThree rail text ${rail+1} intersects layer text ${layer+1} at ${ms} ms`);
+      }
+    }
+  }
+  {
+    const finalLeft=FIGURE_LAYOUT.leftCenter-FIGURE_LAYOUT.layerWidths[0]/2-FIGURE_LAYOUT.bracket.finalPad;
+    const finalRight=FIGURE_LAYOUT.leftCenter+FIGURE_LAYOUT.layerWidths[0]/2+FIGURE_LAYOUT.bracket.finalPad;
+    const pyramidHtml=byKind('FigureTwoThree').find(frame=>frame.kind==='t10Pyramid')!.html;
+    assert.ok(pyramidHtml.includes(`data-bracket-left="${finalLeft}"`)&&pyramidHtml.includes(`data-bracket-right="${finalRight}"`),'FigureTwoThree gold outline does not hug the tapered pyramid');
+  }
+
+  console.log(`PASS: ${rendered.length} cue-derived frames; exact definition spacing, opaque node masking, non-crossing network wires, flight text hand-off, tapered gold outline, scene contracts, hook policy, underscore policy, and interaction-hint policy verified; rail x ${RAIL.x}–${RAIL.x+RAIL.w} clear of card x ${CARD.x}; Figure 2.3 layer widths ${FIGURE_LAYOUT.layerWidths.join(' / ')} px in the ratio 5.2 : 4.2 : 3.2.`);
 }

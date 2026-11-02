@@ -230,3 +230,89 @@ dictionary senses" ×2).
 files `minutetwo/EntryRail.tsx`, `tools/check_minute_two.{mjs,tsx}`, and this findings
 file. The pre-existing dirty paths outside the task scope (`.claude/launch.json`,
 `yt02/logs/…`, `tmp/`) were left untouched. No git state was changed.
+
+## Fix pass 1
+
+Model: GPT-5 Codex
+
+### Fixes
+
+1. **Definition fragment spacing.** `SenseOne`, `SenseTwo`, and `SenseThree` now render
+   each inline fragment with `white-space: pre-wrap`. The authored leading spaces survive
+   the inline-block boundary. Each definition container carries a stable `data-definition`
+   identifier. The checker extracts the container text without whitespace normalization and
+   compares it for exact equality at the final phrase cue plus 700 ms. Missing and doubled
+   spaces now fail the check.
+2. **SenseThree network masking.** The six wires remain ahead of the five nodes in SVG paint
+   order. Every node now has an opaque `color/bg/field` fill and its existing hairline stroke.
+   The checker confirms paint order, fill equality with the scene field, clearance between
+   unrelated wires and nodes, and the absence of crossings between independent wire segments.
+3. **FigureTwoThree text hand-off.** Each rail label fades from opacity 1 to 0 during the first
+   320 ms of its 800 ms flight. The empty frame completes its flight. The layer label begins
+   40 ms after landing and fades in over 240 ms. The checker evaluates ten evenly spaced frames
+   from `t10Displays` through `t10Pyramid` and rejects an intersecting rail-text/layer-text pair
+   when both opacities exceed 0.05.
+4. **FigureTwoThree pyramid highlight.** The gold column wrap begins at 630 px wide and morphs
+   with the taper into a pyramid outline. Its final outer bound is 614 px: the 598 px widest
+   layer plus 8 px on each side. The final checker sample asserts x = 453–1067 from the exported
+   layout constants. `SceneBorder` and its animated tier notch remain in every scene.
+
+Rendering remained with the orchestrator. This pass used deterministic server-rendered markup,
+static geometry checks, the dry-run command, and the site build.
+
+### Check output tails
+
+#### Episode TypeScript
+
+```text
+exit 0; no diagnostics
+```
+
+#### Minute-two checker
+
+```text
+PASS: 44 minute-two frames rendered in two fresh processes; all markup hashes match.
+PASS: 44 cue-derived frames; exact definition spacing, opaque node masking, non-crossing network wires, flight text hand-off, tapered gold outline, scene contracts, hook policy, underscore policy, and interaction-hint policy verified; rail x 120–420 clear of card x 480; Figure 2.3 layer widths 598 / 483 / 368 px in the ratio 5.2 : 4.2 : 3.2.
+```
+
+#### First-minute checker
+
+```text
+PASS: 43 first-minute frames rendered in two fresh processes; all markup hashes match.
+PASS: 43 cue-derived frames; five scene contracts, manuscript strings, real subscripts, hook policy, underscore policy, and interaction-hint policy verified; fix-pass-1 geometry: DictionaryEntry gutter x 985 clear of panel edge 965 with chain at 1050; WhyLadder header/column aligned at x 240; LiteratureStack boundary y 780 and elbow connectors clear of all block text boxes.
+```
+
+#### RoadmapBoot checker
+
+```text
+PASS: 17 RoadmapBoot frames rendered in two fresh Node processes with identical markup; state/effect/reducer/ref hooks trap on invocation.
+PASS: RoadmapBoot renders 17 deterministic frames; 13 labels land on their cues and are absent before; console box 580–1340 × 150–790 clears stacks (317 / 1671) and tray (944); panels 12, 9, 14 light on items 06, 09, 10 with wires; item11 sweep complete by +1300 (map opacity 1); item12 pulse present; console collapsed by roadmapEnd+600; era strip empty throughout; Era clock on standby and map outline-only ("1486", "LISBON", "PORTUGAL", "RUNTIME LOG" absent from every frame); no literal underscores; no interaction hints.
+```
+
+#### Dashboard checker
+
+```text
+PASS: 19 frames plus all 24 tray mode renders and 3 moved Wage plane mode renders repeated in fresh Node processes; identical stack/tray markup and whole-Dashboard hashes; state/effect/reducer hooks trap on invocation.
+PASS: Equal Earth route 1296 samples / 0 land hits, bounds 540.14..821.86 × 84.29..843.36 above tray y=860; Portugal height 102.18px mainland (136.7px with 1486 Moroccan enclave); 18 deterministic timeline states; 5-panel right stack + 8-cell tray geometry; all 24 tray modes plus 3 Wage plane modes; 18 declared layouts ≤ 828px; no literal underscore text; shared 601-point Thyristor traces; Backlash static active preset; gear-only settings; no rendered interaction hints; 75 polities with 16 non-colliding labels.
+```
+
+#### Plan compile and dry-run
+
+```text
+wrote ov/stage_plan.json
+plan byte-identical: d283f60db13e898c4835c16275cff7be29c5fe41f63dc38b3f720243bb32e35d
+STAGE_EPISODE_DIR=…/stage npx --no-install remotion render src/stage/index.ts StageEpisode /private/tmp/x.mp4 --props=…/stage/ov/stage_plan.json --timeout=120000 --codec h264 --concurrency=8 '--browser-executable=/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
+```
+
+#### Site build
+
+```text
+✓ 276 modules transformed.
+assets/index-D3ZCN5WE.js  1,884.61 kB │ gzip: 549.92 kB
+✓ built in 1.15s
+site output: /tmp/yt02-minute-two-fix1-site.HxkBNU
+```
+
+Vite emitted its existing chunk-size warning. The scoped diff contains the three sense scenes,
+`FigureTwoThree.tsx`, `tools/check_minute_two.tsx`, and this findings section. The compiled plan
+remained byte-identical. All listed external dirty paths remained untouched.

@@ -18,6 +18,7 @@ export const FIGURE_LAYOUT = {
   landW:598,
   arrow:{x1:1090, x2:1230, y:500},
   pyramid:{leftX:452, rightX:1068, topY:344, apexX:760, apexY:724},
+  bracket:{startLeft:445, startRight:1075, startTop:340, startBottom:684, finalPad:8},
   noteY:768,
 } as const;
 
@@ -32,7 +33,17 @@ const LAYERS_RIGHT = [
   '3. Interpersonal Prejudice',
 ] as const;
 
-const FLIGHT = {dur:800, stagger:220} as const;
+export const FIGURE_FLIGHT = {dur:800, stagger:220, railTextFade:320, layerTextDelay:40, layerTextFade:240} as const;
+
+export function figureFlightState(ms:number, displaysAt:number, index:number) {
+  const t0 = displaysAt + index*FIGURE_FLIGHT.stagger;
+  const landAt = t0 + FIGURE_FLIGHT.dur;
+  return {
+    p:cubicInOut(progress(ms, t0, landAt)),
+    railTextOpacity:1-progress(ms, t0, t0+FIGURE_FLIGHT.railTextFade),
+    layerTextOpacity:progress(ms, landAt+FIGURE_FLIGHT.layerTextDelay, landAt+FIGURE_FLIGHT.layerTextDelay+FIGURE_FLIGHT.layerTextFade),
+  };
+}
 
 export function FigureTwoThree({segment}:SceneProps) {
   const ms = useStageMs();
@@ -51,10 +62,12 @@ export function FigureTwoThree({segment}:SceneProps) {
   const traceP = enter(ms, cue.t10Pyramid.at + 150, 600);
   const noteP = enter(ms, cue.t10Pyramid.at + 250, 400);
   const labelP = 1 - progress(ms, cue.t10Displays.at, cue.t10Displays.at + 400);
-  const flights = [0,1,2].map(i => {
-    const t0 = cue.t10Displays.at + i*FLIGHT.stagger;
-    return {p:cubicInOut(progress(ms, t0, t0 + FLIGHT.dur)), q:progress(ms, t0 + 480, t0 + FLIGHT.dur)};
-  });
+  const flights = [0,1,2].map(i => figureFlightState(ms, cue.t10Displays.at, i));
+  const bracketLeft = F.bracket.startLeft + (F.leftCenter-F.layerWidths[0]/2-F.bracket.finalPad-F.bracket.startLeft)*taperP;
+  const bracketRight = F.bracket.startRight + (F.leftCenter+F.layerWidths[0]/2+F.bracket.finalPad-F.bracket.startRight)*taperP;
+  const bracketBottomLeftX = F.bracket.startLeft + (F.leftCenter-F.bracket.startLeft)*taperP;
+  const bracketBottomRightX = F.bracket.startRight + (F.leftCenter-F.bracket.startRight)*taperP;
+  const bracketBottomY = F.bracket.startBottom + (F.pyramid.apexY-F.bracket.startBottom)*taperP;
   return <div data-scene="FigureTwoThree" style={{position:'absolute', inset:0, width:1920, height:1080, overflow:'hidden', background:color('color/bg/field'), color:color('color/text/primary'), fontFamily:'IBM Plex Sans'}}>
     <SceneBorder segment={segment}/>
     {ms >= cue.t10Figure.at && <>
@@ -80,7 +93,7 @@ export function FigureTwoThree({segment}:SceneProps) {
           <text x={(F.arrow.x1+F.arrow.x2)/2 + 11} y={F.arrow.y+80} textAnchor="middle" fontFamily="IBM Plex Sans" fontWeight={700} fontSize={22} fill={color('color/text/dim')}>invert</text>
         </g>
         <text data-left-header="true" x={F.leftCenter} y={F.headerY} textAnchor="middle" fontFamily="IBM Plex Sans" fontWeight={700} fontSize={26} fill={color('color/text/primary')} opacity={.25*dimP + .75*columnP}>Conventional Hierarchy</text>
-        {columnP>0 && <path data-column-bracket="true" d={`M 469 340 L 445 340 L 445 684 L 469 684 M 1051 340 L 1075 340 L 1075 684 L 1051 684`} stroke={color('color/fill/gold')} strokeWidth={3} pathLength={1} strokeDasharray="1" strokeDashoffset={1-bracketP}/>}
+        {columnP>0 && <path data-column-bracket="true" data-bracket-left={bracketLeft} data-bracket-right={bracketRight} d={`M ${bracketLeft} ${F.bracket.startTop} L ${bracketBottomLeftX} ${bracketBottomY} L ${bracketBottomRightX} ${bracketBottomY} L ${bracketRight} ${F.bracket.startTop} Z`} stroke={color('color/fill/gold')} strokeWidth={3} pathLength={1} strokeDasharray="1" strokeDashoffset={1-bracketP}/>}
         {traceP>0 && <path data-pyramid-outline="true" d={`M ${F.pyramid.leftX} ${F.pyramid.topY} L ${F.pyramid.apexX} ${F.pyramid.apexY} L ${F.pyramid.rightX} ${F.pyramid.topY} Z`} stroke={color('color/line/hairline-strong')} strokeWidth={2} pathLength={1} strokeDasharray="1" strokeDashoffset={1-traceP}/>}
         {noteP>0 && <text x={F.leftCenter} y={F.noteY} textAnchor="middle" fontFamily="IBM Plex Sans" fontSize={22} fill={color('color/marker/race')} opacity={noteP}>↑ buried, rarely referenced</text>}
       </svg>
@@ -89,19 +102,19 @@ export function FigureTwoThree({segment}:SceneProps) {
       <div data-rail-label="true" style={{position:'absolute', left:RAIL.x, top:RAIL.labelY, font:'400 20px "IBM Plex Mono"', lineHeight:1.4, color:color('color/text/muted'), opacity:labelP}}>
         {RAIL_LABEL_LINES.map(line => <div key={line}>{line}</div>)}
       </div>
-      {flights.map(({p, q}, i) => {
+      {flights.map(({p, railTextOpacity, layerTextOpacity}, i) => {
         const w = RAIL.w + (F.landW - RAIL.w)*p + (F.layerWidths[i]-F.landW)*taperP;
         const cx = (RAIL.x + RAIL.w/2) + (F.leftCenter - (RAIL.x + RAIL.w/2))*p;
         const y = RAIL.slotY[i] + (F.layerY[i]-RAIL.slotY[i])*p;
         const h = RAIL.slotH + (F.layerH-RAIL.slotH)*p;
         const layer = LAYERS_LEFT[i];
         return <div key={i} data-flight-layer={i+1} style={{position:'absolute', left:cx-w/2, top:y, width:w, height:h, background:color('color/fill/panel-render'), border:`1px solid ${color('color/line/hairline-strong')}`}}>
-          {q>0 && <span aria-hidden="true" style={{position:'absolute', inset:0, background:color(layer.fill), opacity:q*layer.fillOp}}/>}
-          <span aria-hidden="true" style={{position:'absolute', left:0, top:8, bottom:8, width:4, background:color('color/fill/gold'), opacity:1-q}}/>
-          {q<1 && <div style={{position:'absolute', left:'50%', top:'50%', width:RAIL.w, height:RAIL.slotH, transform:'translate(-50%,-50%)', opacity:1-q, color:color('color/fill/gold')}}>
+          {layerTextOpacity>0 && <span aria-hidden="true" style={{position:'absolute', inset:0, background:color(layer.fill), opacity:layerTextOpacity*layer.fillOp}}/>}
+          <span aria-hidden="true" style={{position:'absolute', left:0, top:8, bottom:8, width:4, background:color('color/fill/gold'), opacity:1-layerTextOpacity}}/>
+          {railTextOpacity>0 && <div data-rail-slot-text={i+1} data-opacity={railTextOpacity} style={{position:'absolute', left:'50%', top:'50%', width:RAIL.w, height:RAIL.slotH, transform:'translate(-50%,-50%)', opacity:railTextOpacity, color:color('color/fill/gold')}}>
             <RailSlotContent index={i} unitP={1}/>
           </div>}
-          {q>0 && <div style={{position:'absolute', inset:0, display:'grid', placeItems:'center', opacity:q, fontSize:24, color:color('color/text/primary'), whiteSpace:'nowrap'}}>
+          {layerTextOpacity>0 && <div data-layer-text={i+1} data-opacity={layerTextOpacity} style={{position:'absolute', inset:0, display:'grid', placeItems:'center', opacity:layerTextOpacity, fontSize:24, color:color('color/text/primary'), whiteSpace:'nowrap'}}>
             <span><strong>{layer.main}</strong>{layer.tail && <span style={{fontWeight:400}}>{layer.tail}</span>}</span>
           </div>}
         </div>;

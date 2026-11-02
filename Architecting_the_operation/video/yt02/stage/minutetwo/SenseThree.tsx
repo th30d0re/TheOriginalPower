@@ -21,6 +21,8 @@ const NODE_W = 150, NODE_H = 64;
 const CENTER = NODES.map(({x, y}) => [x + NODE_W/2, y + NODE_H/2] as const);
 const WIRES = [[0,1],[1,2],[0,3],[3,4],[2,4],[1,3]].map(([a,b]) => [CENTER[a], CENTER[b]] as const);
 
+export const SENSE3_NETWORK = {nodes:NODES, nodeW:NODE_W, nodeH:NODE_H, wires:WIRES} as const;
+
 export const SENSE3_METER = {trackY:110, trackH:190, baseline:300, barAX:850, barBX:1060, barW:90, barAH:170, barBH:58} as const;
 
 export function SenseThree({segment}:SceneProps) {
@@ -44,21 +46,21 @@ export function SenseThree({segment}:SceneProps) {
     <SceneBorder segment={segment}/>
     <EntryRail slots={slots} enter={openP}/>
     <SenseCard title="Sense 3" enter={openP} dashed={1-solidP}>
-      <div style={{position:'absolute', left:40, top:116, width:1240, fontSize:36, lineHeight:1.5}}>
+      <div data-definition="sense-3" style={{position:'absolute', left:40, top:116, width:1240, fontSize:36, lineHeight:1.5}}>
         {PHRASES.map(({cue:name, text}) => {
           const at = cue[name].at;
           const p = enter(ms, at, 380);
-          return ms >= at && <span key={name} data-phrase={name} style={{display:'inline-block', opacity:p, transform:`translateY(${10*(1-p)}px)`}}>{text}</span>;
+          return ms >= at && <span key={name} data-phrase={name} style={{display:'inline-block', whiteSpace:'pre-wrap', opacity:p, transform:`translateY(${10*(1-p)}px)`}}>{text}</span>;
         })}
       </div>
       <svg style={{position:'absolute', left:40, top:300}} width="1240" height="410" viewBox="0 0 1240 410" aria-label="A system of practices and unequal outcomes">
         {ms >= cue.t9Practices.at && <g data-network="true">
-          {WIRES.map(([[x1, y1], [x2, y2]], i) => <line key={i} x1={x1} y1={y1} x2={x2} y2={y2} stroke={color('color/line/chart')} strokeWidth={2} pathLength={1} strokeDasharray="1" strokeDashoffset={1-netP}/>)}
+          {WIRES.map(([[x1, y1], [x2, y2]], i) => <line key={i} data-network-wire={i+1} x1={x1} y1={y1} x2={x2} y2={y2} stroke={color('color/line/chart')} strokeWidth={2} pathLength={1} strokeDasharray="1" strokeDashoffset={1-netP}/>)}
           {NODES.map(({x, y}, i) => {
             const p = enter(ms, cue.t9Practices.at + i*90, 400);
             const cx = x + NODE_W/2, cy = y + NODE_H/2;
             return <g key={i} data-institution-node={i+1} opacity={p} transform={`translate(${cx} ${cy}) scale(${.8+.2*p}) translate(${-cx} ${-cy})`}>
-              <rect x={x} y={y} width={NODE_W} height={NODE_H} rx={10} fill={color('color/fill/panel-render')} stroke={color('color/line/hairline-strong')} strokeWidth={2}/>
+              <rect x={x} y={y} width={NODE_W} height={NODE_H} rx={10} fill={color('color/bg/field')} stroke={color('color/line/hairline-strong')} strokeWidth={2}/>
             </g>;
           })}
         </g>}

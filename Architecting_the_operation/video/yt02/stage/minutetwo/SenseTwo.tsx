@@ -44,11 +44,11 @@ export function SenseTwo({segment}:SceneProps) {
     <SceneBorder segment={segment}/>
     <EntryRail slots={slots} enter={openP}/>
     <SenseCard title="Sense 2" enter={openP}>
-      <div style={{position:'absolute', left:40, top:116, width:1240, fontSize:36, lineHeight:1.5}}>
+      <div data-definition="sense-2" style={{position:'absolute', left:40, top:116, width:1240, fontSize:36, lineHeight:1.5}}>
         {PHRASES.map(({cue:name, text}) => {
           const at = cue[name].at;
           const p = enter(ms, at, 380);
-          return ms >= at && <span key={name} data-phrase={name} style={{display:'inline-block', opacity:p, transform:`translateY(${10*(1-p)}px)`}}>{text}</span>;
+          return ms >= at && <span key={name} data-phrase={name} style={{display:'inline-block', whiteSpace:'pre-wrap', opacity:p, transform:`translateY(${10*(1-p)}px)`}}>{text}</span>;
         })}
       </div>
       <svg style={{position:'absolute', left:40, top:300}} width="1240" height="410" viewBox="0 0 1240 410" aria-label="The doctrine's claimed chain">
