@@ -1,45 +1,43 @@
 import React from 'react';
-import {cubicInOut, cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
+import {cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../../tokens';
 import {PersonMark, StageSceneFrame} from '../../min3_7/shared';
 import {
   Label,
   Panel,
-  clamp01,
   lineAttrs,
+  pathFrom,
   shapeAttrs,
-  type Box,
   type Point,
 } from '../shared';
 
 const enter = (ms: number, at: number, duration = 520) => cubicOut(progress(ms, at, at + duration));
-const move = (ms: number, at: number, duration = 650) => cubicInOut(progress(ms, at, at + duration));
 
 export const IAT_LATENCY_LAYOUT = {
-  // Turn 43
-  sourcePlaque: {x: 330, y: 260, w: 1260, h: 350},
-  plaqueYear: {x: 380, y: 290, w: 200, h: 44},
-  plaqueAuthors: {x: 380, y: 355, w: 1160, h: 56},
-  plaqueJournal: {x: 380, y: 450, w: 1160, h: 48},
-  iatTitle: {x: 380, y: 650, w: 1160, h: 60},
+  // Turn 43: Full-height milestone composition (y: 115..880, span = 765 px)
+  t43Banner: {x: 330, y: 115, w: 1260, h: 72},
+  sourcePlaque: {x: 330, y: 225, w: 1260, h: 290},
+  iatInstrumentCard: {x: 330, y: 560, w: 1260, h: 320},
 
-  // Turn 44
-  sourceTab: {x: 120, y: 115, w: 600, h: 48},
-  sortingMonitor: {x: 120, y: 170, w: 1140, h: 700},
-  promptCard: {x: 450, y: 290, w: 480, h: 240},
-  faceCard: {x: 465, y: 335, w: 210, h: 140},
-  wordCard: {x: 705, y: 335, w: 210, h: 140},
-  keyLeft: {x: 200, y: 670, w: 340, h: 130},
-  keyRight: {x: 840, y: 670, w: 340, h: 130},
-  timerTrace: {x: 440, y: 605, w: 230, h: 30},
-  latencyInstrument: {x: 1320, y: 220, w: 470, h: 580},
+  // Turn 44: Sorting monitor (y: 120..880, span = 760 px) + tight 2-bar latency panel (y: 290..710, h = 420)
+  sortingMonitor: {x: 120, y: 120, w: 1140, h: 760},
+  promptCard: {x: 350, y: 245, w: 680, h: 254},
+  faceCard: {x: 374, y: 305, w: 296, h: 130},
+  wordCard: {x: 710, y: 305, w: 296, h: 130},
+  wordChip: {x: 738, y: 365, w: 240, h: 60},
+  keyLeft: {x: 165, y: 660, w: 440, h: 136},
+  keyRight: {x: 775, y: 660, w: 440, h: 136},
+  timerTrace: {x: 380, y: 568, w: 290, h: 34},
+  latencyInstrument: {x: 1310, y: 290, w: 490, h: 420},
 
-  // Turn 45
-  reactionInstrument: {x: 130, y: 260, w: 550, h: 530},
-  fieldAuditInstrument: {x: 740, y: 260, w: 510, h: 530},
-  judgmentMeter: {x: 1330, y: 260, w: 460, h: 530},
+  // Turn 45: Three-column convergent measurement (y: 115..887, span = 772 px)
+  t45Banner: {x: 130, y: 115, w: 1660, h: 72},
+  reactionInstrument: {x: 130, y: 225, w: 530, h: 560},
+  fieldAuditInstrument: {x: 705, y: 225, w: 530, h: 560},
+  judgmentMeter: {x: 1280, y: 225, w: 510, h: 560},
+  t45Bus: {x: 130, y: 815, w: 1660, h: 72},
 
-  source: {x: 116, y: 964, w: 1300, h: 26},
+  source: {x: 116, y: 954, w: 1300, h: 30},
 } as const;
 
 export function IATLatency({segment}: SceneProps) {
@@ -82,8 +80,6 @@ export function IATLatency({segment}: SceneProps) {
   const plaqueP = enter(ms, cue.t43Three);
   const yearP = enter(ms, cue.t43NinetyEight);
   const anthonyP = enter(ms, cue.t43Anthony);
-  const mcgheeP = enter(ms, cue.t43McGhee);
-  const schwartzP = enter(ms, cue.t43Schwartz);
   const introP = enter(ms, cue.t43Introduced);
   const journalP = enter(ms, cue.t43Journal);
 
@@ -93,7 +89,6 @@ export function IATLatency({segment}: SceneProps) {
   const sortingP = enter(ms, cue.t44Sorting);
   const splitP = enter(ms, cue.t44SplitSecond);
   const fastP = enter(ms, cue.t44Fast);
-  const pairsP = enter(ms, cue.t44Pairs);
   const facesP = enter(ms, cue.t44Faces);
   const wordsP = enter(ms, cue.t44Words);
   const screenP = enter(ms, cue.t44Screen);
@@ -116,279 +111,398 @@ export function IATLatency({segment}: SceneProps) {
       ? 'ANTHONY GREENWALD · DEBBIE MCGHEE · JORDAN SCHWARTZ'
       : ms >= cue.t43McGhee
         ? 'ANTHONY GREENWALD · DEBBIE MCGHEE'
-        : 'ANTHONY GREENWALD';
+        : ms >= cue.t43Anthony
+          ? 'ANTHONY GREENWALD'
+          : 'THREE RESEARCHERS · AUTHOR LINE';
 
-  const plaqueRule: Point[] = [[380, 430], [1540, 430]];
-  const timerLine: Point[] = [[690, 530], [690, 668]];
+  const plaqueRule: Point[] = [[370, 382], [1550, 382]];
+  const timerLine: Point[] = [[690, 501], [690, 658]];
   const meterNeedlePoints: Point[] = [
-    [1560, 500],
-    [1560 + Math.sin((12 + weightP * 18) * (Math.PI / 180)) * 90, 500 - Math.cos((12 + weightP * 18) * (Math.PI / 180)) * 90],
+    [1535, 515],
+    [
+      Math.round(1535 + Math.sin((14 + weightP * 18) * (Math.PI / 180)) * 84),
+      Math.round(515 - Math.cos((14 + weightP * 18) * (Math.PI / 180)) * 84),
+    ],
   ];
-  const leaderLeft: Point[] = [[405, 790], [405, 818], [1560, 818], [1560, 790]];
-  const leaderCenter: Point[] = [[995, 790], [995, 818], [1560, 818], [1560, 790]];
+  const leaderLeftToBus: Point[] = [[395, 785], [395, 813]];
+  const leaderCenterToBus: Point[] = [[970, 785], [970, 813]];
+  const leaderBusToMeter: Point[] = [[1535, 813], [1535, 785]];
 
   return (
     <StageSceneFrame segment={segment}>
+      {/* TURN 43: Source Plaque + Instrument Overview (y: 115..880, span = 765 px) */}
       {isTurn43 && ms >= cue.t43Three && (
         <div data-turn="43" style={{opacity: plaqueP}}>
+          {/* Top Context Banner (height 72, text span 36 -> 36 px slack) */}
+          <Panel id="t43-banner" box={L.t43Banner} accent="color/fill/gold" />
+          <Label id="t43-banner-title" box={{x: 360, y: 133, w: 1200, h: 36}} size={28} weight={650} sans align="center" ink={gold}>
+            EXPERIMENTAL MEASUREMENT MILESTONE · SORTING TIMING
+          </Label>
+
+          {/* Source Plaque (height 290, text span 254 -> 36 px slack) */}
           <Panel id="source-plaque" box={L.sourcePlaque} accent="color/fill/gold">
             <span aria-hidden="true" style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: 6, background: gold}} />
           </Panel>
+          <Label id="plaque-tag" box={{x: 370, y: 243, w: 720, h: 34}} size={22} weight={600} ink={gold}>
+            FOUNDATIONAL SOURCE RECORD
+          </Label>
+          <Label
+            id="plaque-year"
+            box={{x: 1350, y: 243, w: 200, h: 40}}
+            size={32}
+            weight={700}
+            align="right"
+            ink={ms >= cue.t43NinetyEight ? gold : muted}
+            opacity={ms >= cue.t43NinetyEight ? yearP : 1}
+          >
+            {ms >= cue.t43NinetyEight ? '1998' : 'YEAR'}
+          </Label>
 
-          {ms >= cue.t43NinetyEight && (
-            <Label id="plaque-year" box={L.plaqueYear} size={32} weight={600} ink={gold} opacity={yearP}>
-              1998
-            </Label>
-          )}
+          <Label
+            id="plaque-authors"
+            box={{x: 370, y: 305, w: 1180, h: 52}}
+            size={34}
+            weight={650}
+            sans
+            ink={ms >= cue.t43Anthony ? primary : soft}
+            opacity={ms >= cue.t43Anthony ? anthonyP : 1}
+          >
+            {authorsText}
+          </Label>
 
-          {ms >= cue.t43Anthony && (
-            <Label id="plaque-authors" box={L.plaqueAuthors} size={36} weight={650} sans ink={primary} opacity={anthonyP}>
-              {authorsText}
-            </Label>
-          )}
+          <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position: 'absolute', inset: 0}} aria-hidden="true">
+            <path {...lineAttrs('plaque-rule', plaqueRule)} d={pathFrom(plaqueRule)} stroke={gold} strokeWidth="2" />
+          </svg>
 
-          {ms >= cue.t43Journal && (
-            <>
-              <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position: 'absolute', inset: 0}} aria-hidden="true">
-                <path {...lineAttrs('plaque-rule', plaqueRule)} d="M380 430H1540" stroke={gold} strokeWidth="1" opacity={journalP} />
-              </svg>
-              <Label id="plaque-journal" box={L.plaqueJournal} size={28} weight={400} sans ink={soft} style={{fontStyle: 'italic'}} opacity={journalP}>
-                Journal of Personality and Social Psychology
-              </Label>
-            </>
-          )}
+          <Label
+            id="plaque-journal"
+            box={{x: 370, y: 404, w: 1180, h: 44}}
+            size={30}
+            weight={400}
+            sans
+            ink={ms >= cue.t43Journal ? soft : muted}
+            style={{fontStyle: 'italic'}}
+            opacity={ms >= cue.t43Journal ? journalP : 1}
+          >
+            {ms >= cue.t43Journal ? 'Journal of Personality and Social Psychology' : 'Peer-Reviewed Empirical Publication'}
+          </Label>
 
-          {ms >= cue.t43Introduced && (
-            <Label id="iat-title" box={L.iatTitle} size={40} weight={650} sans align="center" ink={gold} opacity={introP}>
-              IMPLICIT ASSOCIATION TEST
-            </Label>
-          )}
+          <Label id="plaque-footer" box={{x: 370, y: 465, w: 1180, h: 32}} size={20} weight={500} ink={muted}>
+            AUTOMATIC ASSOCIATION MEASUREMENT PARADIGM
+          </Label>
+
+          {/* Lower Instrument Card (height 320, text span 284 -> 36 px slack) */}
+          <Panel id="iat-instrument-card" box={L.iatInstrumentCard} accent="color/line/hairline-strong" />
+          <Label id="iat-card-tag" box={{x: 370, y: 578, w: 1180, h: 32}} size={20} weight={600} align="center" ink={gold}>
+            INTRODUCED EXPERIMENTAL INSTRUMENT
+          </Label>
+          <Label
+            id="iat-title"
+            box={{x: 370, y: 626, w: 1180, h: 52}}
+            size={40}
+            weight={650}
+            sans
+            align="center"
+            ink={ms >= cue.t43Introduced ? gold : soft}
+            opacity={ms >= cue.t43Introduced ? introP : 1}
+          >
+            {ms >= cue.t43Introduced ? 'IMPLICIT ASSOCIATION TEST' : 'PAIRED SORTING LATENCY INSTRUMENT'}
+          </Label>
+          <Label id="iat-card-body" box={{x: 370, y: 700, w: 1180, h: 80}} size={28} weight={400} sans align="center" ink={primary}>
+            Measures split-second response latency when sorting paired social categories and descriptive words.
+          </Label>
+          <Label id="iat-card-footer" box={{x: 370, y: 828, w: 1180, h: 34}} size={20} weight={500} align="center" ink={muted}>
+            PAIRED CATEGORIZATION · AUTOMATIC ASSOCIATION STRENGTH
+          </Label>
         </div>
       )}
 
+      {/* TURN 44: Derived Face + Word Sorting Task & Tight 2-Bar Latency Panel */}
       {isTurn44 && (
         <div data-turn="44" style={{opacity: testP}}>
+          {/* Sorting Monitor (x: 120, y: 120, w: 1140, h: 760, text span 724 -> 36 px slack) */}
           <Panel id="sorting-monitor" box={L.sortingMonitor} />
-          <Label id="monitor-heading" box={{x: 150, y: 195, w: 720, h: 36}} size={28} weight={600} sans ink={gold}>
+          <Label id="monitor-heading" box={{x: 156, y: 138, w: 1068, h: 40}} size={30} weight={650} sans ink={gold}>
             DERIVED FACE + WORD SORTING TASK
           </Label>
-          <Label id="monitor-notice" box={{x: 150, y: 238, w: 720, h: 30}} size={20} weight={500} ink={muted}>
+          <Label id="monitor-notice" box={{x: 156, y: 184, w: 1068, h: 30}} size={20} weight={500} ink={muted}>
             DERIVED ILLUSTRATION · NO TEST SCORE
           </Label>
 
-          {ms >= cue.t44Automatic && (
-            <div data-prompt-card="true" style={{opacity: autoP}}>
-              <Panel id="prompt-card" box={L.promptCard} accent="color/fill/gold" />
-              <Label id="prompt-header" box={{x: 460, y: 302, w: 460, h: 26}} size={18} weight={600} align="center" ink={gold}>
-                SORTING TRIAL STIMULI
-              </Label>
+          {/* Stimulus Window (x: 350, y: 245, w: 680, h: 270, text span 234 -> 36 px slack) */}
+          <div data-prompt-card="true" style={{opacity: Math.max(0.85, autoP)}}>
+            <Panel id="prompt-card" box={L.promptCard} accent="color/fill/gold" />
+            <Label id="prompt-header" box={{x: 374, y: 263, w: 632, h: 30}} size={20} weight={600} align="center" ink={gold}>
+              SORTING TRIAL STIMULI
+            </Label>
 
-              <div data-face-card="true" style={{opacity: Math.max(autoP, facesP)}}>
-                <Panel id="face-card" box={L.faceCard} />
-                <Label id="prompt-face" box={{x: 475, y: 345, w: 190, h: 26}} size={20} weight={600} align="center" ink={gold}>
-                  FACE
-                </Label>
-                <div
-                  {...shapeAttrs('face-mark', {x: 540, y: 375, w: 60, h: 60}, 'mark', 'person')}
-                  style={{position: 'absolute', left: 540, top: 375, width: 60, height: 60}}
-                >
-                  <PersonMark x={30} y={30} group="neutral" emphasis={ms >= cue.t44Faces ? 1 : 0.65} scale={1.0} />
-                </div>
-                <Label id="face-target-label" box={{x: 475, y: 440, w: 190, h: 22}} size={16} weight={500} align="center" ink={soft}>
-                  TARGET GLYPH
-                </Label>
+            {/* Face Card: only FACE heading and PersonMark (no TARGET GLYPH) */}
+            <div data-face-card={ms >= cue.t44Faces ? 'true' : undefined} style={{opacity: Math.max(0.85, autoP, facesP)}}>
+              <Panel id="face-card" box={L.faceCard} />
+              <Label id="prompt-face" box={{x: 390, y: 319, w: 264, h: 32}} size={22} weight={650} align="center" ink={gold}>
+                FACE
+              </Label>
+              <div
+                {...shapeAttrs('face-mark', {x: 492, y: 355, w: 60, h: 66}, 'mark', 'person')}
+                style={{position: 'absolute', left: 492, top: 355, width: 60, height: 66}}
+              >
+                <PersonMark x={30} y={35} group="neutral" emphasis={ms >= cue.t44Faces ? 1 : 0.8} scale={1.1} />
               </div>
-
-              <div data-word-card="true" style={{opacity: Math.max(autoP, wordsP)}}>
-                <Panel id="word-card" box={L.wordCard} />
-                <Label id="prompt-word" box={{x: 715, y: 345, w: 190, h: 26}} size={20} weight={600} align="center" ink={gold}>
-                  WORD
-                </Label>
-                <Panel id="word-chip" box={{x: 725, y: 378, w: 170, h: 50}} accent="color/fill/gold">
-                  <span aria-hidden="true" style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: 3, background: gold}} />
-                </Panel>
-                <Label id="word-chip-label" box={{x: 735, y: 391, w: 150, h: 24}} size={18} weight={500} align="center" ink={primary}>
-                  STIMULUS
-                </Label>
-                <Label id="word-category-label" box={{x: 715, y: 440, w: 190, h: 22}} size={16} weight={500} align="center" ink={soft}>
-                  VALENCE WORD
-                </Label>
-              </div>
-
-              <Label id="prompt-trial-sub" box={{x: 460, y: 490, w: 460, h: 26}} size={16} weight={500} align="center" ink={soft}>
-                CONGRUENT / INCONGRUENT PAIR
-              </Label>
             </div>
-          )}
 
-          {ms >= cue.t44ResponseLatency && (
-            <div data-timer-trace="true" style={{opacity: latencyP}}>
-              <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position: 'absolute', inset: 0}} aria-hidden="true">
-                <path {...lineAttrs('timer-line', timerLine)} d="M690 530V668" stroke={raceRed} strokeWidth="3" strokeDasharray="4 4" />
-              </svg>
-              <Label id="timer-label" box={L.timerTrace} size={20} weight={500} align="center" ink={raceRed}>
-                RESPONSE LATENCY
+            {/* Word Card: only WORD heading and neutral example word chip "pleasant" (no STIMULUS, no VALENCE WORD) */}
+            <div data-word-card={ms >= cue.t44Words ? 'true' : undefined} style={{opacity: Math.max(0.85, autoP, wordsP)}}>
+              <Panel id="word-card" box={L.wordCard} />
+              <Label id="prompt-word" box={{x: 726, y: 319, w: 264, h: 32}} size={22} weight={650} align="center" ink={gold}>
+                WORD
               </Label>
-            </div>
-          )}
-
-          {ms >= cue.t44Sorting && (
-            <div data-response-keys="true" style={{opacity: sortingP}}>
-              <Panel id="key-left" box={L.keyLeft} accent="color/fill/gold">
+              <Panel id="word-chip" box={L.wordChip} accent="color/fill/gold">
                 <span aria-hidden="true" style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: 4, background: gold}} />
               </Panel>
-              <Label id="key-left-label" box={{x: 210, y: 685, w: 320, h: 34}} size={24} weight={600} align="center" ink={gold}>
-                LEFT KEY
-              </Label>
-              <Label id="key-left-pairing" box={{x: 210, y: 730, w: 320, h: 28}} size={18} weight={500} align="center" ink={soft}>
-                PAIRING: FACE A + WORD A
-              </Label>
-
-              <Panel id="key-right" box={L.keyRight} accent="color/fill/gold">
-                <span aria-hidden="true" style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: 4, background: gold}} />
-              </Panel>
-              <Label id="key-right-label" box={{x: 850, y: 685, w: 320, h: 34}} size={24} weight={600} align="center" ink={gold}>
-                RIGHT KEY
-              </Label>
-              <Label id="key-right-pairing" box={{x: 850, y: 730, w: 320, h: 28}} size={18} weight={500} align="center" ink={soft}>
-                PAIRING: FACE B + WORD B
+              <Label id="word-chip-label" box={{x: 750, y: 375, w: 216, h: 42}} size={28} weight={600} sans align="center" ink={primary}>
+                pleasant
               </Label>
             </div>
-          )}
 
-          {ms >= cue.t44SplitSecond && (
-            <div data-latency-instrument="true" style={{opacity: splitP}}>
-              <Panel id="latency-instrument" box={L.latencyInstrument} />
-              <Label id="latency-heading" box={{x: 1340, y: 250, w: 430, h: 36}} size={22} weight={600} sans ink={gold}>
-                LATENCY DIFFERENCE
-              </Label>
-
-              {ms >= cue.t44Screen && (
-                <Label id="latency-banner" box={{x: 1340, y: 295, w: 430, h: 56}} size={18} weight={500} ink={muted} opacity={screenP}>
-                  DERIVED SORTING TASK · LATENCY DIFFERENCE
-                </Label>
-              )}
-
-              <div
-                {...shapeAttrs('bar-fast', {x: 1350, y: 380, w: 220, h: 44}, 'mark', 'bar')}
-                style={{position: 'absolute', left: 1350, top: 380, width: 220, height: 44, background: gold, borderRadius: 4}}
-              />
-              {ms >= cue.t44Fast && (
-                <Label id="bar-fast-label" box={{x: 1350, y: 435, w: 300, h: 30}} size={20} weight={600} ink={gold} opacity={fastP}>
-                  FASTER RESPONSE
-                </Label>
-              )}
-
-              <div
-                {...shapeAttrs('bar-slow', {x: 1350, y: 505, w: 360, h: 44}, 'mark', 'bar')}
-                style={{position: 'absolute', left: 1350, top: 505, width: 360, height: 44, background: muted, borderRadius: 4}}
-              />
-              {ms >= cue.t44Fast && (
-                <Label id="bar-slow-label" box={{x: 1350, y: 560, w: 300, h: 30}} size={20} weight={600} ink={soft} opacity={fastP}>
-                  SLOWER RESPONSE
-                </Label>
-              )}
-            </div>
-          )}
-        </div>
-      )}
-
-      {isTurn45 && (
-        <div data-turn="45" style={{opacity: rtP}}>
-          <div data-reaction-instrument="true" style={{opacity: rtP}}>
-            <Panel id="rt-instrument" box={L.reactionInstrument} />
-            <Label id="rt-heading" box={{x: 150, y: 285, w: 510, h: 38}} size={26} weight={600} sans ink={gold}>
-              REACTION-TIME MEASURE
-            </Label>
-            <div
-              {...shapeAttrs('rt-bar-1', {x: 170, y: 380, w: 200, h: 40}, 'mark', 'rt-bar')}
-              style={{position: 'absolute', left: 170, top: 380, width: 200, height: 40, background: gold, borderRadius: 4}}
-            />
-            <Label id="rt-bar-1-label" box={{x: 170, y: 430, w: 300, h: 28}} size={18} weight={600} ink={gold}>
-              FASTER LATENCY
-            </Label>
-
-            <div
-              {...shapeAttrs('rt-bar-2', {x: 170, y: 490, w: 320, h: 40}, 'mark', 'rt-bar')}
-              style={{position: 'absolute', left: 170, top: 490, width: 320, height: 40, background: muted, borderRadius: 4}}
-            />
-            <Label id="rt-bar-2-label" box={{x: 170, y: 540, w: 300, h: 28}} size={18} weight={600} ink={soft}>
-              SLOWER LATENCY
-            </Label>
-
-            <Label id="rt-delta-label" box={{x: 170, y: 640, w: 460, h: 32}} size={20} weight={500} align="center" ink={primary}>
-              LATENCY DIFFERENCE Δt
+            <Label id="prompt-trial-sub" box={{x: 374, y: 453, w: 632, h: 28}} size={20} weight={500} align="center" ink={soft}>
+              PAIRED CATEGORIZATION TRIAL
             </Label>
           </div>
 
+          {/* Timer Trace between Prompt Card and Keys */}
+          <div data-timer-trace={ms >= cue.t44ResponseLatency ? 'true' : undefined} style={{opacity: Math.max(0.85, latencyP)}}>
+            <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position: 'absolute', inset: 0}} aria-hidden="true">
+              <path {...lineAttrs('timer-line', timerLine)} d={pathFrom(timerLine)} stroke={raceRed} strokeWidth="3.5" strokeDasharray="5 4" />
+            </svg>
+            <Label
+              id="timer-label"
+              box={L.timerTrace}
+              size={20}
+              weight={600}
+              align="right"
+              ink={ms >= cue.t44ResponseLatency ? raceRed : soft}
+              opacity={ms >= cue.t44ResponseLatency ? latencyP : 1}
+            >
+              {ms >= cue.t44ResponseLatency ? 'RESPONSE LATENCY' : 'TRIAL CLOCK'}
+            </Label>
+          </div>
+
+          {/* Left & Right Response Keys (height 136, text span 100 -> 36 px slack) */}
+          <div data-response-keys={ms >= cue.t44Sorting ? 'true' : undefined} style={{opacity: Math.max(0.85, sortingP)}}>
+            <Panel id="key-left" box={L.keyLeft} accent="color/fill/gold">
+              <span aria-hidden="true" style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: 4, background: gold}} />
+            </Panel>
+            <Label id="key-left-label" box={{x: 185, y: 678, w: 400, h: 36}} size={28} weight={650} sans align="center" ink={gold}>
+              {ms >= cue.t44Sorting ? 'LEFT KEY' : 'KEY A'}
+            </Label>
+            <Label id="key-left-pairing" box={{x: 185, y: 742, w: 400, h: 36}} size={20} weight={500} align="center" ink={soft}>
+              PAIRING: FACE A + pleasant
+            </Label>
+
+            <Panel id="key-right" box={L.keyRight} accent="color/fill/gold">
+              <span aria-hidden="true" style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: 4, background: gold}} />
+            </Panel>
+            <Label id="key-right-label" box={{x: 795, y: 678, w: 400, h: 36}} size={28} weight={650} sans align="center" ink={gold}>
+              {ms >= cue.t44Sorting ? 'RIGHT KEY' : 'KEY B'}
+            </Label>
+            <Label id="key-right-pairing" box={{x: 795, y: 742, w: 400, h: 36}} size={20} weight={500} align="center" ink={soft}>
+              PAIRING: FACE B + unpleasant
+            </Label>
+          </div>
+
+          <Label id="monitor-footer" box={{x: 156, y: 830, w: 1068, h: 32}} size={20} weight={500} align="center" ink={muted}>
+            AUTOMATIC SORTING TASK · SPLIT-SECOND KEY TIMING
+          </Label>
+
+          {/* Right Column: Latency Difference Panel sized tightly to its two bars (x: 1310, y: 290, w: 490, h: 420, text span 384 -> 36 px slack) */}
+          <div data-latency-instrument={ms >= cue.t44SplitSecond ? 'true' : undefined} style={{opacity: Math.max(0.85, splitP)}}>
+            <Panel id="latency-instrument" box={L.latencyInstrument} />
+            <Label id="latency-heading" box={{x: 1338, y: 308, w: 434, h: 38}} size={28} weight={650} sans ink={gold}>
+              {ms >= cue.t44SplitSecond ? 'LATENCY DIFFERENCE' : 'TIMING COMPARISON'}
+            </Label>
+            <Label
+              id="latency-banner"
+              box={{x: 1338, y: 354, w: 434, h: 54}}
+              size={20}
+              weight={500}
+              ink={ms >= cue.t44Screen ? gold : muted}
+              opacity={ms >= cue.t44Screen ? screenP : 1}
+            >
+              {ms >= cue.t44Screen ? 'DERIVED SORTING TASK · LATENCY DIFFERENCE' : 'SPLIT-SECOND DIFFERENTIAL'}
+            </Label>
+
+            <div
+              {...shapeAttrs('bar-fast', {x: 1338, y: 428, w: 230, h: 46}, 'mark', 'bar')}
+              style={{position: 'absolute', left: 1338, top: 428, width: 230, height: 46, background: gold, borderRadius: 4}}
+            />
+            <Label
+              id="bar-fast-label"
+              box={{x: 1338, y: 486, w: 434, h: 30}}
+              size={22}
+              weight={650}
+              ink={gold}
+              opacity={ms >= cue.t44Fast ? fastP : 1}
+            >
+              {ms >= cue.t44Fast ? 'FASTER RESPONSE' : 'SHORT LATENCY TRIAL'}
+            </Label>
+
+            <div
+              {...shapeAttrs('bar-slow', {x: 1338, y: 544, w: 390, h: 46}, 'mark', 'bar')}
+              style={{position: 'absolute', left: 1338, top: 544, width: 390, height: 46, background: muted, borderRadius: 4}}
+            />
+            <Label
+              id="bar-slow-label"
+              box={{x: 1338, y: 602, w: 434, h: 30}}
+              size={22}
+              weight={650}
+              ink={soft}
+              opacity={ms >= cue.t44Fast ? fastP : 1}
+            >
+              {ms >= cue.t44Fast ? 'SLOWER RESPONSE' : 'LONG LATENCY TRIAL'}
+            </Label>
+
+            <Label id="latency-footer" box={{x: 1338, y: 660, w: 434, h: 32}} size={20} weight={500} ink={muted}>
+              UNEQUAL SORTING SPEEDS
+            </Label>
+          </div>
+        </div>
+      )}
+
+      {/* TURN 45: Convergent Reaction-Time & Field-Audit Measures -> Individual Judgment Meter (y: 115..887, span = 772 px) */}
+      {isTurn45 && (
+        <div data-turn="45" style={{opacity: rtP}}>
+          {/* Top Banner (height 72, text span 36 -> 36 px slack) */}
+          <Panel id="t45-banner" box={L.t45Banner} accent="color/fill/gold" />
+          <Label id="t45-banner-title" box={{x: 160, y: 133, w: 1600, h: 36}} size={28} weight={650} sans align="center" ink={gold}>
+            CONVERGENT MEASUREMENT · REACTION TIME &amp; FIELD AUDITS
+          </Label>
+
+          {/* Column 1: Reaction-Time Measure (height 560, text span 524 -> 36 px slack) */}
+          <div data-reaction-instrument="true" style={{opacity: rtP}}>
+            <Panel id="rt-instrument" box={L.reactionInstrument} />
+            <Label id="rt-heading" box={{x: 158, y: 243, w: 474, h: 38}} size={28} weight={650} sans ink={gold}>
+              REACTION-TIME MEASURE
+            </Label>
+            <Label id="rt-sub" box={{x: 158, y: 290, w: 474, h: 30}} size={20} weight={500} ink={muted}>
+              LABORATORY SORTING TASK
+            </Label>
+
+            <div
+              {...shapeAttrs('rt-bar-1', {x: 158, y: 350, w: 220, h: 48}, 'mark', 'rt-bar')}
+              style={{position: 'absolute', left: 158, top: 350, width: 220, height: 48, background: gold, borderRadius: 4}}
+            />
+            <Label id="rt-bar-1-label" box={{x: 158, y: 410, w: 474, h: 30}} size={20} weight={600} ink={gold}>
+              FASTER LATENCY · CONGRUENT PAIR
+            </Label>
+
+            <div
+              {...shapeAttrs('rt-bar-2', {x: 158, y: 470, w: 380, h: 48}, 'mark', 'rt-bar')}
+              style={{position: 'absolute', left: 158, top: 470, width: 380, height: 48, background: muted, borderRadius: 4}}
+            />
+            <Label id="rt-bar-2-label" box={{x: 158, y: 530, w: 474, h: 30}} size={20} weight={600} ink={soft}>
+              SLOWER LATENCY · INCONGRUENT PAIR
+            </Label>
+
+            <Label id="rt-body" box={{x: 158, y: 590, w: 474, h: 112}} size={28} weight={400} sans ink={primary}>
+              Split-second sorting gap inside one person.
+            </Label>
+
+            <Label id="rt-delta-label" box={{x: 158, y: 735, w: 474, h: 32}} size={20} weight={600} ink={gold}>
+              TIMING DIFFERENTIAL Δt
+            </Label>
+          </div>
+
+          {/* Column 2: Field-Audit Measure (height 560, text span 524 -> 36 px slack) */}
           {ms >= cue.t45Audits && (
             <div data-field-audit="true" style={{opacity: auditP}}>
               <Panel id="fa-instrument" box={L.fieldAuditInstrument} />
-              <Label id="fa-heading" box={{x: 760, y: 285, w: 470, h: 38}} size={26} weight={600} sans ink={gold}>
+              <Label id="fa-heading" box={{x: 733, y: 243, w: 474, h: 38}} size={28} weight={650} sans ink={gold}>
                 FIELD-AUDIT MEASURE
               </Label>
+              <Label id="fa-sub" box={{x: 733, y: 290, w: 474, h: 30}} size={20} weight={500} ink={muted}>
+                MATCHED-PAIR EXPERIMENTAL DESIGN
+              </Label>
 
-              <Panel id="fa-card-1" box={{x: 765, y: 350, w: 460, h: 84}} accent="color/fill/gold">
-                <span aria-hidden="true" style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: 3, background: gold}} />
+              <Panel id="fa-card-1" box={{x: 733, y: 345, w: 474, h: 112}} accent="color/fill/gold">
+                <span aria-hidden="true" style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: 4, background: gold}} />
               </Panel>
-              <Label id="fa-card-1-title" box={{x: 780, y: 362, w: 430, h: 28}} size={20} weight={600} ink={gold}>
+              <Label id="fa-card-1-title" box={{x: 753, y: 361, w: 434, h: 30}} size={22} weight={650} ink={gold}>
                 MATCHED CASE PAIR A
               </Label>
-              <Label id="fa-card-1-sub" box={{x: 780, y: 395, w: 430, h: 26}} size={18} weight={400} ink={soft}>
-                IDENTICAL RESUME · EQUAL QUALIFICATIONS
+              <Label id="fa-card-1-sub" box={{x: 753, y: 401, w: 434, h: 40}} size={20} weight={500} ink={primary}>
+                IDENTICAL RESUME · QUALIFICATIONS
               </Label>
 
-              <Panel id="fa-card-2" box={{x: 765, y: 454, w: 460, h: 84}} accent="color/fill/gold">
-                <span aria-hidden="true" style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: 3, background: gold}} />
+              <Panel id="fa-card-2" box={{x: 733, y: 475, w: 474, h: 112}} accent="color/fill/gold">
+                <span aria-hidden="true" style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: 4, background: gold}} />
               </Panel>
-              <Label id="fa-card-2-title" box={{x: 780, y: 466, w: 430, h: 28}} size={20} weight={600} ink={gold}>
+              <Label id="fa-card-2-title" box={{x: 753, y: 491, w: 434, h: 30}} size={22} weight={650} ink={gold}>
                 MATCHED CASE PAIR B
               </Label>
-              <Label id="fa-card-2-sub" box={{x: 780, y: 499, w: 430, h: 26}} size={18} weight={400} ink={soft}>
-                SYSTEMATIC DIFFERENTIAL OUTCOME
+              <Label id="fa-card-2-sub" box={{x: 753, y: 531, w: 434, h: 40}} size={20} weight={500} ink={soft}>
+                DIFFERENTIAL EVALUATION OUTCOME
               </Label>
 
-              <Label id="fa-notice" box={{x: 765, y: 575, w: 460, h: 30}} size={18} weight={500} ink={muted} align="center">
+              <Label id="fa-body" box={{x: 733, y: 610, w: 474, h: 80}} size={28} weight={400} sans ink={primary}>
+                Controlled decision comparison across matched candidates.
+              </Label>
+
+              <Label id="fa-notice" box={{x: 733, y: 735, w: 474, h: 32}} size={20} weight={500} ink={muted}>
                 DERIVED AUDIT · NO RESULT VALUES
               </Label>
             </div>
           )}
 
+          {/* Column 3: Judgment Meter (height 560, text span 524 -> 36 px slack) */}
           {ms >= cue.t45Bias && (
             <div data-judgment-meter="true" style={{opacity: biasP}}>
               <Panel id="judgment-meter" box={L.judgmentMeter} />
-              <Label id="meter-bias" box={{x: 1350, y: 285, w: 420, h: 34}} size={26} weight={650} align="center" ink={gold}>
+              <Label id="meter-bias" box={{x: 1308, y: 243, w: 454, h: 38}} size={28} weight={650} sans align="center" ink={gold}>
                 BIAS
               </Label>
-              {ms >= cue.t45Judgment && (
-                <Label id="meter-title" box={{x: 1350, y: 325, w: 420, h: 32}} size={20} weight={600} sans align="center" ink={primary} opacity={judgmentP}>
-                  INDIVIDUAL JUDGMENT
-                </Label>
-              )}
+              <Label
+                id="meter-title"
+                box={{x: 1308, y: 292, w: 454, h: 36}}
+                size={28}
+                weight={600}
+                sans
+                align="center"
+                ink={primary}
+                opacity={ms >= cue.t45Judgment ? judgmentP : 1}
+              >
+                {ms >= cue.t45Judgment ? 'INDIVIDUAL JUDGMENT' : 'EVALUATION CONSTRUCT'}
+              </Label>
 
-              {ms >= cue.t45Mental && (
-                <Label id="meter-mental" box={{x: 1350, y: 375, w: 420, h: 30}} size={20} weight={600} align="center" ink={primary} opacity={mentalP}>
-                  MENTAL LEAN
-                </Label>
-              )}
+              <Label
+                id="meter-mental"
+                box={{x: 1308, y: 344, w: 454, h: 32}}
+                size={22}
+                weight={600}
+                align="center"
+                ink={ms >= cue.t45Mental ? gold : soft}
+                opacity={ms >= cue.t45Mental ? mentalP : 1}
+              >
+                {ms >= cue.t45Mental ? 'MENTAL LEAN' : 'STARTING TILT'}
+              </Label>
 
               <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position: 'absolute', inset: 0}} aria-hidden="true">
-                <path d="M1480 500 A 80 80 0 0 1 1640 500" fill="none" stroke={muted} strokeWidth="3" />
-                <path d="M1520 440 L1525 450 M1560 420 L1560 430 M1600 440 L1595 450" stroke={gold} strokeWidth="2" />
+                <path d="M1455 515 A 80 80 0 0 1 1615 515" fill="none" stroke={muted} strokeWidth="3" />
+                <path d="M1495 455 L1500 465 M1535 435 L1535 445 M1575 455 L1570 465" stroke={gold} strokeWidth="2.5" />
                 <path
                   {...lineAttrs('meter-needle-line', meterNeedlePoints)}
-                  d={`M1560 500 L${meterNeedlePoints[1][0]} ${meterNeedlePoints[1][1]}`}
+                  d={pathFrom(meterNeedlePoints)}
                   stroke={gold}
                   strokeWidth="4"
+                  strokeLinecap="round"
                 />
               </svg>
 
               <div
-                {...shapeAttrs('meter-pivot', {x: 1550, y: 490, w: 20, h: 20}, 'mark', 'pivot')}
+                {...shapeAttrs('meter-pivot', {x: 1525, y: 505, w: 20, h: 20}, 'mark', 'pivot')}
                 style={{
                   position: 'absolute',
-                  left: 1550,
-                  top: 490,
+                  left: 1525,
+                  top: 505,
                   width: 20,
                   height: 20,
                   borderRadius: 10,
@@ -396,26 +510,45 @@ export function IATLatency({segment}: SceneProps) {
                 }}
               />
 
-              {ms >= cue.t45Weighting && (
-                <Label id="meter-weighting" box={{x: 1350, y: 640, w: 420, h: 32}} size={22} weight={600} align="center" ink={gold} opacity={weightP}>
-                  JUDGMENT WEIGHTING
-                </Label>
-              )}
+              <Label
+                id="meter-weighting"
+                box={{x: 1308, y: 565, w: 454, h: 36}}
+                size={24}
+                weight={650}
+                align="center"
+                ink={ms >= cue.t45Weighting ? gold : soft}
+                opacity={ms >= cue.t45Weighting ? weightP : 1}
+              >
+                {ms >= cue.t45Weighting ? 'JUDGMENT WEIGHTING' : 'EVALUATION SCALE'}
+              </Label>
 
-              {ms >= cue.t45Judgment && (
-                <Label id="meter-joined" box={{x: 1350, y: 685, w: 420, h: 26}} size={18} weight={500} align="center" ink={soft} opacity={judgmentP}>
-                  JOINED MEASUREMENT READING
-                </Label>
-              )}
+              <Label id="meter-body" box={{x: 1308, y: 618, w: 454, h: 80}} size={28} weight={400} sans align="center" ink={primary}>
+                Starting tilt in how an individual weighs evidence.
+              </Label>
+
+              <Label id="meter-joined" box={{x: 1308, y: 735, w: 454, h: 32}} size={20} weight={500} align="center" ink={soft}>
+                JOINED MEASUREMENT READING
+              </Label>
             </div>
           )}
 
-          {ms >= cue.t45Judgment && (
-            <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position: 'absolute', inset: 0}} aria-hidden="true" opacity={judgmentP}>
-              <path {...lineAttrs('leader-left', leaderLeft)} d="M405 790V818H1560V790" fill="none" stroke={gold} strokeWidth="2" strokeDasharray="3 3" />
-              <path {...lineAttrs('leader-center', leaderCenter)} d="M995 790V818H1560V790" fill="none" stroke={gold} strokeWidth="2" strokeDasharray="3 3" />
-            </svg>
-          )}
+          {/* Bottom Convergence Bus (height 72, text span 36 -> 36 px slack) */}
+          <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position: 'absolute', inset: 0}} aria-hidden="true">
+            <path {...lineAttrs('leader-left-bus', leaderLeftToBus)} d={pathFrom(leaderLeftToBus)} fill="none" stroke={gold} strokeWidth="3" strokeDasharray="4 4" />
+            {ms >= cue.t45Audits && (
+              <path {...lineAttrs('leader-center-bus', leaderCenterToBus)} d={pathFrom(leaderCenterToBus)} fill="none" stroke={gold} strokeWidth="3" strokeDasharray="4 4" />
+            )}
+            {ms >= cue.t45Bias && (
+              <path {...lineAttrs('leader-bus-meter', leaderBusToMeter)} d={pathFrom(leaderBusToMeter)} fill="none" stroke={gold} strokeWidth="3" strokeDasharray="4 4" />
+            )}
+          </svg>
+          <Panel id="t45-bus" box={L.t45Bus} accent="color/line/hairline-strong" />
+          <Label id="t45-bus-title" box={{x: 160, y: 833, w: 1020, h: 36}} size={28} weight={600} sans ink={primary}>
+            Both instruments measure the same individual-level judgment lean.
+          </Label>
+          <Label id="t45-bus-tag" box={{x: 1200, y: 836, w: 560, h: 30}} size={20} weight={600} align="right" ink={gold}>
+            CONVERGENT CONSTRUCT VALIDATION
+          </Label>
         </div>
       )}
 

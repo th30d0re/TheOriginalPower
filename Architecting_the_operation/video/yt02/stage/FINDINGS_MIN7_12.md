@@ -790,6 +790,100 @@ Execute fix pass 1 for minutes 7–12 Package F based on frame reviews of `min7_
 
 - Video rendering was not run locally because Chromium rendering is performed by the orchestrator. Frame validation relies on the static layout audit, deterministic StaticMarkup evaluation, and automated fill-ratio checks.
 
+## Design pass (Package F)
+
+Model: Gemini 4 Argon (High)  
+Checkpoint: `4848dbc`
+
+### What was requested
+
+Execute the minutes 7–12 Design Pass (`BRIEF_MIN7_12_POLISH.md`) for Package F (turns 41–46: `ImplicitTrace`, `IATLatency`, `AllportQuestion`) after reviewing the current rendered frames in `outputs/YT02v2_ov/video/stage_runs/v2/` (`e508.jpg`, `e524.jpg`, `e531.jpg`, `e545.jpg`, `e552.jpg`, `e558.jpg`, `e578.jpg`):
+- Enforce Rule 1 (Composition): at every beat's settled state, content spans at least ~70% of the safe area's height (`>= 658 px` of `y: 70..1010`, verified even excluding `source-line`).
+- Enforce Rule 2 (Cards fit their text): every citation or definition card and panel is no more than 40 px taller than its final content/text block (`f.h - span <= 40 px`), built at final size from its first beat and filled as each element is spoken.
+- Enforce Rule 3 (Size floor): body text is at least 28 px and labels at least 20 px across all declared `data-fit` text boxes.
+- Fix `ImplicitTrace`, turn 41 (`e508`):
+  - Give the three `"PAST EXPERIENCE"` chips distinct trace content: `"accumulated surroundings"`, `"repeated exposure"`, and `"stored association"`.
+  - Populate the `"REACTION"` column between `"+ FAVORABLE"` and `"− UNFAVORABLE"` with a reaction scale and needle steered by the trace.
+- Fix `ImplicitTrace`, turn 42 (`e524`, `e531`):
+  - Re-lay turn 42 as one centered composition spanning the safe area where the belief lane and the association lane converge on the central person and the reaction sits below them.
+- Fix `IATLatency` (`e552`, `e558`):
+  - Replace the placeholder `"STIMULUS"` in the word window with a neutral example word chip `"pleasant"`, and remove the internal labels `"TARGET GLYPH"` and `"VALENCE WORD"`.
+  - Size the latency panel tightly to its two bars, eliminating the empty lower half.
+- Fix `AllportQuestion` (`e578`):
+  - Display *The Nature of Prejudice* and `"p. 9"` (bib 4207) on the Allport citation card and size the card tightly to its content.
+- Add automated vertical-span (Rule 1), card-fit (Rule 2), and minimum-font (Rule 3) assertions to `tools/check_min7_12_f.tsx` while keeping all earlier assertions.
+
+### How I fixed it
+
+1. **`ImplicitTrace.tsx` (`min7_12/f/ImplicitTrace.tsx`, turns 41–42)**:
+   - Re-laid Turn 41 (`!isTurn42 && ms >= cue.t41Define`) across `y: 115..880` (`765 px` vertical span, `81.4%` of safe area height) with a top context banner (`t41-banner`, `{x: 110, y: 115, w: 1700, h: 72}`) and three matched-height columns at `y: 225..880` (`h: 655`):
+     - Left column: `def-card` (`{x: 110, y: 225, w: 720, h: 356}`, `36 px` slack) and `plain-panel` (`{x: 110, y: 615, w: 720, h: 265}`, `36 px` slack) with `28–36 px` body copy and `20–22 px` labels.
+     - Middle columns: `stream-panel` (`{x: 865, y: 225, w: 300, h: 655}`, `36 px` slack) containing three cards (`exp-card-1/2/3`, `h: 136`, `36 px` slack) populated with distinct trace strings `"accumulated surroundings"`, `"repeated exposure"`, and `"stored association"`; paired with `trace-panel` (`{x: 1195, y: 225, w: 305, h: 655}`, `36 px` slack) and `inspection-screen` (`{x: 1213, y: 315, w: 269, h: 376}`, `36 px` slack).
+     - Right column: `reaction-rail` (`{x: 1530, y: 225, w: 280, h: 655}`, `36 px` slack) populated between `"+ FAVORABLE"` and `"− UNFAVORABLE"` with a vertical valence scale spine (`reaction-scale-spine`), tick marks, steering trajectory (`reaction-steer-arc`), pivot (`reaction-pivot`), and a tilted gold needle (`reaction-needle`) plus `FEELING`, `THOUGHT`, and `ACTION` sockets.
+   - Re-laid Turn 42 (`isTurn42`) across `y: 115..885` (`770 px` vertical span, `81.9%` of safe area height) as one centered convergence diagram:
+     - Top banner (`t42-banner`, `{x: 260, y: 115, w: 1400, h: 72}`), upper-left belief channel (`SignalLane` at `{x: 130, y: 245, w: 690, h: 240}`), upper-right automatic association channel (`SignalLane` at `{x: 1100, y: 245, w: 690, h: 240}`), central `ONE PERSON` hub (`person-hub` at `{x: 860, y: 255, w: 200, h: 220}`), and centered lower `REACTION` card (`response-node` at `{x: 560, y: 605, w: 800, h: 280}`, `36 px` slack) flanked by `concept-anchor-left` and `concept-anchor-right`.
+     - Rendered the convergence leaders (`leader-belief-person`, `leader-auto-person`, `leader-person-reaction`) and `response-node` throughout Turn 42 from `t42Precision` so frames `e524` (`524.00 s`) and `e531` (`531.00 s`) display the complete centered convergence geometry.
+
+2. **`IATLatency.tsx` (`min7_12/f/IATLatency.tsx`, turns 43–45)**:
+   - Re-laid Turn 43 (`isTurn43 && ms >= cue.t43Three`) across `y: 115..880` (`765 px` vertical span) with `t43-banner`, `source-plaque` (`{x: 330, y: 225, w: 1260, h: 290}`, `36 px` slack), and `iat-instrument-card` (`{x: 330, y: 560, w: 1260, h: 320}`, `36 px` slack).
+   - Re-laid Turn 44 (`isTurn44`) across `y: 120..880` (`760 px` vertical span):
+     - Inside `prompt-card` (`{x: 350, y: 245, w: 680, h: 254}`, `36 px` slack), `face-card` (`{x: 374, y: 305, w: 296, h: 130}`) holds only `FACE` and `PersonMark`, and `word-card` (`{x: 710, y: 305, w: 296, h: 130}`) holds only `WORD` and the neutral example word chip `"pleasant"` (`word-chip`, `{x: 738, y: 365, w: 240, h: 60}`). Removed `"STIMULUS"`, `"TARGET GLYPH"`, and `"VALENCE WORD"`.
+     - Updated key pairing labels to `PAIRING: FACE A + pleasant` and `PAIRING: FACE B + unpleasant`.
+     - Sized `latency-instrument` tightly to its two bars at `{x: 1310, y: 290, w: 490, h: 420}` (`36 px` slack), centered vertically alongside the sorting monitor.
+   - Re-laid Turn 45 (`isTurn45`) across `y: 115..887` (`772 px` vertical span) with `t45-banner`, three `560 px`-tall instrument columns (`rt-instrument`, `fa-instrument`, `judgment-meter`, each with `36 px` slack), and `t45-bus` (`{x: 130, y: 815, w: 1660, h: 72}`).
+
+3. **`AllportQuestion.tsx` (`min7_12/f/AllportQuestion.tsx`, turn 46)**:
+   - Re-laid the question half (`!isCitation && ms >= cue.t46Why`) across `y: 110..880` (`770 px` vertical span) with `QuestionHeader` (`y: 110..246`), `bias-block` (`{x: 180, y: 310, w: 690, h: 320}`, `36 px` slack), `prejudice-block` (`{x: 1050, y: 310, w: 690, h: 320}`, `36 px` slack), and `distinction-panel` (`{x: 180, y: 690, w: 1560, h: 190}`, `36 px` slack).
+   - Re-laid the citation half (`isCitation`) across `y: 115..875` (`760 px` vertical span) with `t46-banner`, `citation-card` (`{x: 330, y: 235, w: 1260, h: 340}`, `36 px` slack), and three taxonomy preview cards (`allport-pillar-1/2/3`, `y: 625..875`, `36 px` slack).
+   - Displayed `GORDON W. ALLPORT`, *The Nature of Prejudice*, and `Addison-Wesley · p. 9` on `citation-card` from `t46Gordon` (`574.34 s`), adding `1954` (`Addison-Wesley · 1954 · p. 9`) at `t46FiftyFour` (`577.80 s`) so `e578` (`578.00 s`) shows the complete Allport citation card with author, year, title, and `p. 9`.
+
+4. **`tools/check_min7_12_f.tsx` design-pass assertions**:
+   - Added `checkVerticalSpan` (Rule 1: vertical span excluding `source-line` `>= 658 px` on every cue frame and end frame).
+   - Added `checkFillAndCardFitAndSizes` on all 223 sampled frames enforcing Rule 2 (`f.h - contentSpan <= 40 px` on every frame and `f.h - textSpan <= 40 px` on every strict text card), Rule 3 (`fit.size >= 20 px` for every label and `fit.size >= 28 px` for every body/heading box), and fill-ratio (`areaFillRatio >= 0.18 || verticalSpanRatio >= 0.45`).
+   - Added explicit assertions for banned placeholder strings (`STIMULUS`, `TARGET GLYPH`, `VALENCE WORD`) and explicit review-frame timestamp assertions at `e508` (`508000 ms`), `e524` (`524000 ms`), `e552` (`552000 ms`), and `e578` (`578000 ms`).
+
+### Challenges encountered
+
+1. **Cue timing vs. `e578` extraction timestamp in `AllportQuestion`**:
+   - Frame `e578` is extracted at `578.00 s`, whereas `t46Nature` fires at `578.72 s` and `t46Nine` fires at `580.26 s`. Gating the book title and page reference on `t46Nature` and `t46Nine` left the lower half of `citation-card` empty in `e578.jpg`.
+   - Rendering *The Nature of Prejudice* and `Addison-Wesley · p. 9` on the card from `t46Gordon` (`574.34 s`), inserting `1954` at `t46FiftyFour` (`577.80 s`), brightening the title (`data-title-bright="true"`) at `t46PrejudiceTitle`, and resolving `'Allport 1954, p. 9'` on `source-line` at `t46Nine` satisfied both the `e578` visual check and all cue-timing assertions.
+2. **Case-sensitive substring isolation between Turn 41 and Turn 42 in `ImplicitTrace`**:
+   - The Turn 42 cue `t42Automatically` asserts that uppercase `'ACCUMULATED SURROUNDINGS'` is absent before Turn 42, while the brief requires lowercase `"accumulated surroundings"` in Turn 41 (`e508`). Using exact lowercase strings (`"accumulated surroundings"`, `"repeated exposure"`, `"stored association"`) in Turn 41 satisfied both the brief and the case-sensitive pre-cue absence check.
+3. **Nested card slack on `word-card` in `IATLatency`**:
+   - Sizing `word-card` and `face-card` to `152 px` left `52 px` of text-span slack inside `word-card`, which tripped the `<= 40 px` card-fit assertion. Compacting `face-card` and `word-card` to `h: 130` (`y: 305..435`) and `prompt-card` to `h: 254` reduced text-span slack to `32–36 px` across all nested stimulus cards.
+
+### Next ideas (6 Ideas)
+
+1. Share `checkFillAndCardFitAndSizes` and `checkVerticalSpan` across `check_min7_12_e.tsx`, `check_min7_12_f.tsx`, `check_min7_12_g.tsx`, and `check_min7_12_h.tsx` via `tools/layout_audit.ts`.
+2. Add an automatic review-frame timestamp checker that reads frame numbers from `BRIEF_MIN7_12_POLISH.md` and verifies card population at each `e<seconds>` mark.
+3. Create a `ReactionValenceRail` primitive in `min7_12/shared/` encapsulating the bipolar scale spine, steering curve, needle, and output sockets.
+4. Build a `ConvergenceHub` layout helper for three-node convergence scenes (`ImplicitTrace` Turn 42) that computes leader endpoints from declared box edges.
+5. Add a `StimulusTrialWindow` component for paired categorization tasks with built-in `<= 40 px` nested card-fit sizing.
+6. Extend `Label` with a build-time font-floor type check restricting `size` to `>= 20`.
+
+### Checks
+
+- Episode TypeScript: `npx --prefix /Users/emmanuel/Documents/Theory/scriptCast-stage/video tsc --noEmit -p Architecting_the_operation/video/yt02/stage` exits 0 with zero diagnostics.
+- `check_min7_12_f` tail:
+  - `PASS: 223 Package F frames rendered in two fresh processes; all markup hashes match.`
+  - `PASS: audit self-test (10 rules); 223 Package F frames (cues + 500 ms grid); layout audit of 7248 declared boxes (safe area, notch zones, text fit, collisions); fill-ratio, card-fit (<= 40 px slack), vertical-span (>= 658 px), and 28/20 px size-floor asserts verified; clean turn transitions, storyboard strings, hook, underscore and interaction-hint policies verified.`
+- `check_first_minute` tail: `PASS: 43 cue-derived frames; five scene contracts, manuscript strings, real subscripts, hook policy, underscore policy, and interaction-hint policy verified; …`
+- `check_roadmap_boot` tail: `PASS: RoadmapBoot renders 17 deterministic frames; 13 labels land on their cues and are absent before; …`
+- `check_minute_two` tail: `PASS: 44 cue-derived frames; exact definition spacing …; Figure 2.3 layer widths 598 / 483 / 368 px in the ratio 5.2 : 4.2 : 3.2.`
+- `check_dashboard` tail: `PASS: Equal Earth route 1296 samples / 0 land hits …; all 24 tray modes plus 3 Wage plane modes; …no rendered interaction hints; 75 polities with 16 non-colliding labels.`
+- `check_min3_7_shared` tail: `PASS: 25 representative shared-component states; eleven component contracts, hook policy, underscore policy, Gaussian curves, … Posterior modes: 0.280460 / 0.499174 / 0.718096.`
+- `check_min3_7_a` tail: `PASS: audit self-test (10 rules); 47 Package A cue-derived frames; 1282 audited boxes; …`
+- `check_min3_7_b` tail: `PASS: audit self-test (10 rules); 43 Package B cue-derived frames; 1146 audited boxes; …`
+- `check_min3_7_c` tail: `PASS: audit self-test (10 rules); 195 Package C frames (cues + 500 ms grid); layout audit of 6799 declared boxes …`
+- `check_min3_7_d` tail: `PASS: audit self-test (10 rules); 211 Package D frames (cues + 500 ms grid); layout audit of 5306 declared boxes over 211 frames …; monotonic posterior sweep 0.2800 → 0.6755 (prior 0.72).`
+- `check_equations` tail: `PASS: 14 equation frames; 111 registered coloured terms; 11 pulse cues peak at cue + 200 ms and rest after 600 ms; Eq. 2.5 and Eq. 2.8a are verbatim with MathText subscripts.`
+- `check_min7_12_shared` tail: `PASS: 25 min7_12-shared states rendered in two fresh processes; all markup hashes match. PASS: audit self-test (10 rules); 25 min7_12 shared-component states; layout audit of 171 declared boxes …`
+- `tools/check_antithesis.py` on all Package F files and `FINDINGS_MIN7_12.md`: `check-antithesis: no banned constructions found.`
+
+### Unverified remainder
+
+- Chromium browser rendering and MP4 encoding were not run locally because video rendering is performed by the orchestrator. Visual verification relies on the static layout audit (`7248` declared boxes across `223` frames), two-process deterministic static markup verification, and automated fill-ratio, card-fit (`<= 40 px` slack), vertical-span (`>= 658 px`), and font-size floor (`28 px` / `20 px`) assertions.
+
 ## Fix pass 1 (Package H)
 
 Model: Gemini 3.8 Flash (High)  

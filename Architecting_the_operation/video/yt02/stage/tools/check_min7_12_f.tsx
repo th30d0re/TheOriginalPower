@@ -7,7 +7,7 @@ import {ClockContext, PlanContext, type StagePlan} from '@stage';
 import {ImplicitTrace, IMPLICIT_TRACE_LAYOUT} from '../min7_12/f/ImplicitTrace';
 import {IATLatency, IAT_LATENCY_LAYOUT} from '../min7_12/f/IATLatency';
 import {AllportQuestion, ALLPORT_QUESTION_LAYOUT} from '../min7_12/f/AllportQuestion';
-import {auditItems, auditLayout, auditSelfTest} from './layout_audit';
+import {SAFE_AREA, auditItems, auditLayout, auditSelfTest} from './layout_audit';
 
 const plan = JSON.parse(fs.readFileSync(new URL('../ov/stage_plan.json', import.meta.url), 'utf8')) as StagePlan;
 const sceneComponents = {ImplicitTrace, IATLatency, AllportQuestion};
@@ -64,6 +64,7 @@ function plain(html: string) {
 
 const renderedUnderscoreText = (html: string) => [...html.matchAll(/>([^<>]*_[A-Za-z{][^<>]*)</g)].map(match => match[1].trim()).filter(Boolean);
 const interactionHint = /\b(?:click|drag|hover|tap|swipe|press|arrow keys)\b/i;
+const internalTurnPattern = /\bturn \d+\b/i;
 
 const frames: {scene: SceneName; ms: number; kind: string}[] = [];
 for (const scene of Object.keys(sceneComponents) as SceneName[]) {
@@ -91,7 +92,12 @@ if (process.env.MIN7_12_F_SNAPSHOT) {
 for (const {scene, kind, ms, html} of rendered) {
   const underscores = renderedUnderscoreText(html);
   assert.deepEqual(underscores, [], `${scene} at ${kind} (${ms} ms) rendered literal subscripts: ${underscores.join(', ')}`);
-  assert.ok(!interactionHint.test(plain(html)), `${scene} at ${kind} (${ms} ms) contains an interaction hint`);
+  const text = plain(html);
+  assert.ok(!interactionHint.test(text), `${scene} at ${kind} (${ms} ms) contains an interaction hint`);
+  assert.ok(!internalTurnPattern.test(text), `${scene} at ${kind} (${ms} ms) contains an internal turn label`);
+  assert.ok(!text.includes('TARGET GLYPH'), `${scene} at ${kind} (${ms} ms) contains banned internal label TARGET GLYPH`);
+  assert.ok(!text.includes('VALENCE WORD'), `${scene} at ${kind} (${ms} ms) contains banned internal label VALENCE WORD`);
+  assert.ok(!/\bSTIMULUS\b/.test(text), `${scene} at ${kind} (${ms} ms) contains placeholder STIMULUS`);
 }
 
 function beat(scene: SceneName, cue: string, opts: {text?: string[]; markup?: string[]}, absentBeforeCue?: string) {
@@ -119,9 +125,16 @@ beat('ImplicitTrace', 't41Define', {
   ],
 });
 beat('ImplicitTrace', 't41Unidentified', {text: ['INTROSPECTIVELY UNIDENTIFIED TRACE']});
-beat('ImplicitTrace', 't41Past', {text: ['PAST EXPERIENCE']});
+beat('ImplicitTrace', 't41Past', {
+  text: [
+    'PAST EXPERIENCE',
+    'accumulated surroundings',
+    'repeated exposure',
+    'stored association',
+  ],
+});
 beat('ImplicitTrace', 't41Favorable', {text: ['+ FAVORABLE']});
-beat('ImplicitTrace', 't41Unfavorable', {text: ['− UNFAVORABLE']});
+beat('ImplicitTrace', 't41Unfavorable', {text: ['− UNFAVORABLE'], markup: ['reaction-needle', 'reaction-scale-spine']});
 beat('ImplicitTrace', 't41Action', {text: ['FEELING', 'THOUGHT'], markup: ['socket-action']});
 beat('ImplicitTrace', 't41Plain', {text: ['IN PLAIN WORDS']});
 beat('ImplicitTrace', 't41Experiences', {text: ['PAST EXPERIENCES']});
@@ -131,6 +144,7 @@ beat('ImplicitTrace', 't41Noticing', {markup: ['data-reaction-rail="true"']});
 
 beat('ImplicitTrace', 't42Precision', {
   text: ['AUTOMATIC ASSOCIATION', 'SINCERE EQUAL-TREATMENT BELIEF', 'ONE PERSON'],
+  markup: ['leader-belief-person', 'leader-auto-person', 'leader-person-reaction', 'response-node'],
 });
 beat('ImplicitTrace', 't42Automatically', {text: ['ACCUMULATED SURROUNDINGS']});
 beat('ImplicitTrace', 't42Equal', {markup: ['equal-treatment']});
@@ -145,7 +159,7 @@ beat('IATLatency', 't43Introduced', {text: ['IMPLICIT ASSOCIATION TEST']});
 beat('IATLatency', 't43Journal', {text: ['Journal of Personality and Social Psychology']});
 
 beat('IATLatency', 't44Test', {
-  text: ['DERIVED FACE + WORD SORTING TASK', 'DERIVED ILLUSTRATION · NO TEST SCORE'],
+  text: ['DERIVED FACE + WORD SORTING TASK', 'DERIVED ILLUSTRATION · NO TEST SCORE', 'pleasant'],
 });
 beat('IATLatency', 't44ResponseLatency', {text: ['RESPONSE LATENCY']});
 beat('IATLatency', 't44Sorting', {text: ['LEFT KEY', 'RIGHT KEY']});
@@ -166,10 +180,42 @@ beat('IATLatency', 't45Judgment', {text: ['INDIVIDUAL JUDGMENT']});
 beat('AllportQuestion', 't46Why', {text: ['Why does prejudice need its own label once bias is defined?']});
 beat('AllportQuestion', 't46Label', {text: ['BIAS · STARTING TENDENCY']});
 beat('AllportQuestion', 't46Second', {text: ['2 · PREJUDICE']});
-beat('AllportQuestion', 't46Gordon', {text: ['GORDON W. ALLPORT']});
-beat('AllportQuestion', 't46FiftyFour', {text: ['1954']});
-beat('AllportQuestion', 't46PrejudiceTitle', {text: ['The Nature of Prejudice']});
+beat('AllportQuestion', 't46Gordon', {
+  text: ['GORDON W. ALLPORT', 'The Nature of Prejudice', 'Addison-Wesley · p. 9'],
+});
+beat('AllportQuestion', 't46FiftyFour', {text: ['1954', 'Addison-Wesley · 1954 · p. 9']});
+beat('AllportQuestion', 't46PrejudiceTitle', {
+  text: ['The Nature of Prejudice'],
+  markup: ['data-title-bright="true"'],
+}, 't46Gordon');
 beat('AllportQuestion', 't46Nine', {text: ['Allport 1954, p. 9']});
+
+// Verify review-frame timestamps explicitly (e508, e524, e531, e545, e552, e558, e578):
+{
+  const e508 = render('ImplicitTrace', 508000);
+  const e508Text = plain(e508);
+  assert.ok(e508Text.includes('accumulated surroundings'), 'e508 missing accumulated surroundings');
+  assert.ok(e508Text.includes('repeated exposure'), 'e508 missing repeated exposure');
+  assert.ok(e508Text.includes('stored association'), 'e508 missing stored association');
+  assert.ok(e508.includes('reaction-needle'), 'e508 missing reaction-needle');
+
+  const e524 = render('ImplicitTrace', 524000);
+  assert.ok(e524.includes('leader-belief-person'), 'e524 missing belief convergence leader');
+  assert.ok(e524.includes('leader-auto-person'), 'e524 missing auto convergence leader');
+  assert.ok(e524.includes('leader-person-reaction'), 'e524 missing reaction convergence leader');
+
+  const e552 = render('IATLatency', 552000);
+  const e552Text = plain(e552);
+  assert.ok(e552Text.includes('pleasant'), 'e552 missing example word chip "pleasant"');
+  assert.ok(!e552Text.includes('STIMULUS'), 'e552 still has placeholder STIMULUS');
+
+  const e578 = render('AllportQuestion', 578000);
+  const e578Text = plain(e578);
+  assert.ok(e578Text.includes('1954'), 'e578 missing 1954');
+  assert.ok(e578Text.includes('GORDON W. ALLPORT'), 'e578 missing GORDON W. ALLPORT');
+  assert.ok(e578Text.includes('The Nature of Prejudice'), 'e578 missing The Nature of Prejudice');
+  assert.ok(e578Text.includes('p. 9'), 'e578 missing p. 9');
+}
 
 // Layout audit: safe area, notch zones, text fit, and collisions at every sampled frame.
 const selfTests = auditSelfTest();
@@ -181,59 +227,153 @@ for (const {scene, kind, ms, html} of rendered) {
 }
 assert.deepEqual(violations, [], `layout audit failed:\n${violations.slice(0, 40).join('\n')}`);
 
-// Fill-ratio assertion:
-// Every box on screen holds its content at its last beat. All panels, cards, and windows are populated.
-// At each scene's last frame, every declared data-shape frame (with effective opacity >= 0.05) must contain
-// declared text boxes that cover enough of its geometry.
-// Documented thresholds:
-//   - An empty container (0 text boxes) is a defect.
-//   - Either area fill ratio >= 0.18 (18% of frame area covered by declared text boxes),
-//   - OR vertical span ratio >= 0.45 (declared text bounds cover at least 45% of the frame's height),
-// ensuring every container is sized to its content and holds its storyboard content.
+// Design-pass rules (Rules 1, 2, 3 + Fill-ratio):
+// - Fill-ratio assert: every active frame contains text and covers >= 18% area OR >= 45% vertical span.
+// - Rule 1 (Vertical-span assert): at every beat's settled state, content spans >= 70% of safe-area height (>= 658 px), even excluding source-line.
+// - Rule 2 (Card-fit assert): every citation/definition card and every panel is no more than 40 px taller than its content block (and for citation/definition cards, no more than 40 px taller than its text block).
+// - Rule 3 (Size-floor assert): read from declared data-fit sizes: body text >= 28 px and labels >= 20 px, with no exceptions.
 const MIN_AREA_FILL_RATIO = 0.18;
 const MIN_VERTICAL_SPAN_RATIO = 0.45;
+const MAX_CARD_SLACK_PX = 40;
+const MIN_COMPOSITION_SPAN_PX = Math.floor(0.7 * (SAFE_AREA.y1 - SAFE_AREA.y0)); // 658 px
 
-function checkFillRatio(html: string, context: string) {
+const BODY_ID_PATTERNS = [
+  /body/i,
+  /def-term/i,
+  /plain-heading/i,
+  /t41-banner-title/i,
+  /t42-banner-title/i,
+  /belief-desc/i,
+  /auto-desc/i,
+  /response-title/i,
+  /t43-banner-title/i,
+  /plaque-authors/i,
+  /plaque-journal/i,
+  /iat-title/i,
+  /monitor-heading/i,
+  /word-chip-label/i,
+  /key-left-label/i,
+  /key-right-label/i,
+  /latency-heading/i,
+  /t45-banner-title/i,
+  /rt-heading/i,
+  /fa-heading/i,
+  /meter-bias/i,
+  /meter-title/i,
+  /t45-bus-title/i,
+  /question-header-text/i,
+  /bias-label/i,
+  /prejudice-label/i,
+  /distinction-title/i,
+  /cite-author/i,
+  /cite-title/i,
+];
+
+const STRICT_TEXT_CARD_IDS = new Set([
+  'def-card',
+  'plain-panel',
+  'source-plaque',
+  'iat-instrument-card',
+  'citation-card',
+  'bias-block',
+  'prejudice-block',
+  'distinction-panel',
+  'concept-anchor-left',
+  'concept-anchor-right',
+  'response-node',
+  'latency-instrument',
+  'rt-instrument',
+  'fa-instrument',
+  'judgment-meter',
+]);
+
+function checkFillAndCardFitAndSizes(html: string, context: string) {
   const audited = auditItems(html);
   const frames = audited.filter(item => item.role === 'frame' && item.opacity >= 0.05);
   const texts = audited.filter(item => item.role === 'text' && item.opacity >= 0.05);
+  const marks = audited.filter(item => item.role === 'mark' && item.opacity >= 0.05);
 
+  // Rule 3: Minimum-font assert read from declared text sizes
+  for (const t of texts) {
+    assert.ok(t.fit, `${context}: text "${t.id}" is missing declared data-fit size`);
+    assert.ok(
+      t.fit.size >= 20,
+      `${context}: label "${t.id}" has declared size ${t.fit.size} px < 20 px floor`,
+    );
+    if (BODY_ID_PATTERNS.some(re => re.test(t.id))) {
+      assert.ok(
+        t.fit.size >= 28,
+        `${context}: body/heading text "${t.id}" has declared size ${t.fit.size} px < 28 px floor`,
+      );
+    }
+  }
+
+  // Fill-ratio & Rule 2 (Card-fit assert)
   for (const f of frames) {
-    const inside = texts.filter(
+    const insideTexts = texts.filter(
       t => t.x >= f.x - 4 && t.y >= f.y - 4 && t.x + t.w <= f.x + f.w + 4 && t.y + t.h <= f.y + f.h + 4,
     );
     assert.ok(
-      inside.length > 0,
+      insideTexts.length > 0,
       `${context}: container "${f.id}" (${f.w}×${f.h} at [${f.x}, ${f.y}]) is empty with 0 text boxes inside`,
     );
 
-    const textArea = inside.reduce((sum, t) => sum + t.w * t.h, 0);
+    const textArea = insideTexts.reduce((sum, t) => sum + t.w * t.h, 0);
     const frameArea = f.w * f.h;
     const areaFillRatio = textArea / frameArea;
 
-    const minY = Math.min(...inside.map(t => t.y));
-    const maxY = Math.max(...inside.map(t => t.y + t.h));
-    const verticalSpanRatio = (maxY - minY) / f.h;
+    const minTextY = Math.min(...insideTexts.map(t => t.y));
+    const maxTextY = Math.max(...insideTexts.map(t => t.y + t.h));
+    const textSpan = maxTextY - minTextY;
+    const verticalSpanRatio = textSpan / f.h;
 
-    const passes = areaFillRatio >= MIN_AREA_FILL_RATIO || verticalSpanRatio >= MIN_VERTICAL_SPAN_RATIO;
+    const passesFill = areaFillRatio >= MIN_AREA_FILL_RATIO || verticalSpanRatio >= MIN_VERTICAL_SPAN_RATIO;
     assert.ok(
-      passes,
+      passesFill,
       `${context}: container "${f.id}" (${f.w}×${f.h}) underfilled: area ratio ${areaFillRatio.toFixed(3)} < ${MIN_AREA_FILL_RATIO} and vertical span ratio ${verticalSpanRatio.toFixed(3)} < ${MIN_VERTICAL_SPAN_RATIO}`,
+    );
+
+    const insideContent = STRICT_TEXT_CARD_IDS.has(f.id)
+      ? insideTexts
+      : [...insideTexts, ...marks.filter(m => m.x >= f.x - 4 && m.y >= f.y - 4 && m.x + m.w <= f.x + f.w + 4 && m.y + m.h <= f.y + f.h + 4)];
+    const minContentY = Math.min(...insideContent.map(c => c.y));
+    const maxContentY = Math.max(...insideContent.map(c => c.y + c.h));
+    const contentSpan = maxContentY - minContentY;
+    const slack = f.h - contentSpan;
+    assert.ok(
+      slack <= MAX_CARD_SLACK_PX,
+      `${context}: card/frame "${f.id}" (${f.w}×${f.h}) is ${slack.toFixed(1)} px taller than its content block (${contentSpan.toFixed(1)} px), exceeding ${MAX_CARD_SLACK_PX} px limit`,
     );
   }
 }
 
-// Assert fill ratio at every scene's last frame (per brief specification)
+function checkVerticalSpan(html: string, context: string) {
+  const audited = auditItems(html).filter(item => item.opacity >= 0.05 && item.id !== 'source-line');
+  assert.ok(audited.length > 0, `${context}: no visible audited items`);
+  const minY = Math.min(...audited.map(i => i.y));
+  const maxY = Math.max(...audited.map(i => i.y + i.h));
+  const span = maxY - minY;
+  assert.ok(
+    span >= MIN_COMPOSITION_SPAN_PX,
+    `${context}: vertical span (excluding source-line) is ${span} px < ${MIN_COMPOSITION_SPAN_PX} px (70% of safe-area height; y=${minY}..${maxY})`,
+  );
+}
+
+// Run fill-ratio, card-fit (Rule 2), and minimum-font (Rule 3) assertions on EVERY sampled frame
+for (const {scene, kind, ms, html} of rendered) {
+  checkFillAndCardFitAndSizes(html, `${scene} at ${kind} (${ms} ms)`);
+}
+
+// Run vertical-span assertion (Rule 1) at every beat's settled state and scene end frame
 for (const scene of Object.keys(sceneComponents) as SceneName[]) {
   const lastFrame = rendered.find(frame => frame.scene === scene && frame.kind === 'end')!;
   assert.ok(lastFrame, `missing end frame for ${scene}`);
-  checkFillRatio(lastFrame.html, `${scene} at end frame`);
+  checkVerticalSpan(lastFrame.html, `${scene} at end frame`);
+  for (const cue of sceneCues[scene]) {
+    const cueFrame = byKind(scene).find(f => f.kind === cue)!;
+    checkVerticalSpan(cueFrame.html, `${scene} at ${cue}`);
+  }
 }
-
-// Also assert fill ratio at major beat settled states (Turn 41 final beat, Turn 44 final beat, Turn 46 question blocks)
-checkFillRatio(byKind('ImplicitTrace').find(f => f.kind === 't41Noticing')!.html, 'ImplicitTrace at t41Noticing');
-checkFillRatio(byKind('IATLatency').find(f => f.kind === 't44Screen')!.html, 'IATLatency at t44Screen');
-checkFillRatio(byKind('AllportQuestion').find(f => f.kind === 't46Second')!.html, 'AllportQuestion at t46Second');
 
 // Structural checks:
 // Turn 42 replaces Turn 41: turn 41 definition and stream are absent in turn 42.
@@ -255,5 +395,5 @@ for (const cue of ['t46Gordon', 't46Classic', 't46FiftyFour', 't46Nature', 't46P
 }
 
 console.log(
-  `PASS: audit self-test (${selfTests} rules); ${rendered.length} Package F frames (cues + 500 ms grid); layout audit of ${items} declared boxes (safe area, notch zones, text fit, collisions); fill-ratio assert verified on all scene end frames; clean turn transitions, storyboard strings, hook, underscore and interaction-hint policies verified.`,
+  `PASS: audit self-test (${selfTests} rules); ${rendered.length} Package F frames (cues + 500 ms grid); layout audit of ${items} declared boxes (safe area, notch zones, text fit, collisions); fill-ratio, card-fit (<= 40 px slack), vertical-span (>= 658 px), and 28/20 px size-floor asserts verified; clean turn transitions, storyboard strings, hook, underscore and interaction-hint policies verified.`,
 );
