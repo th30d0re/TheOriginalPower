@@ -1,6 +1,7 @@
 import React from 'react';
-import {MathText, progress, useCue, useStageMs, type SceneProps} from '@stage';
+import {progress, useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../../tokens';
+import {ColoredTerm, EquationTerms, TermChip, type EquationPulseMap, type EquationToken} from '../../equations';
 import {PrecisionGauge, StageSceneFrame, UsThemSortingField} from '../shared';
 import type {SortingMark} from '../shared';
 import {Label, MiniNetwork, Panel, SceneSource, clamp, enter, gaussianPoints, leave, lineAttrs, mix, pathFrom, shapeAttrs, type LayoutBox, type Point} from './sceneUtils';
@@ -13,27 +14,26 @@ export const INSTALLED_PRIOR_LAYOUT = {
 } as const satisfies Record<string,LayoutBox>;
 
 export const INSTALLED_PRIOR_TEXT = {
-  posteriorKey:{x:150,y:326,w:130,h:28}, evidenceKey:{x:310,y:326,w:220,h:28}, priorKey:{x:560,y:326,w:170,h:28},
+  posteriorKey:{x:150,y:326,w:330,h:34}, evidenceKey:{x:490,y:326,w:280,h:34}, priorKey:{x:790,y:326,w:360,h:34},
   cartridge:{x:1052,y:380,w:236,h:52}, pi:{x:1052,y:436,w:236,h:38}, reinforcement:{x:1404,y:816,w:342,h:32},
   stereotypes:{x:150,y:826,w:600,h:32}, alphaLow:{x:1390,y:712,w:300,h:28}, alphaHigh:{x:1460,y:746,w:300,h:28},
   strip:{x:150,y:96,w:1620,h:40}, bias:{x:860,y:136,w:200,h:34}, prediction:{x:430,y:400,w:1060,h:40},
   pi34:{x:1192,y:520,w:196,h:40}, starting:{x:300,y:632,w:1320,h:36},
 } as const satisfies Record<string,LayoutBox>;
 
-/** Eq. 2.8a, laid out term by term in fixed columns so terms can enter one at a time. */
-const TERMS = [
-  {id:'posterior', w:380, text:'P_i(T | X, Π_{race})'},
-  {id:'proportional', w:80, text:'∝'},
-  {id:'likelihood', w:200, text:'P(X | T)'},
-  {id:'times', w:80, text:'·'},
-  {id:'prior', w:320, text:'P_i(T | Π_{race})'},
-] as const;
-type TermId = typeof TERMS[number]['id'];
-const TERM_ROW = {y:158,h:52,size:38} as const;
-const TERM_BOXES = (()=>{
-  let x=960-TERMS.reduce((sum,term)=>sum+term.w,0)/2;
-  return TERMS.map(term=>{const box={x,y:TERM_ROW.y,w:term.w,h:TERM_ROW.h}; x+=term.w; return {...term,box};});
-})();
+export const EQ_28A = 'P_i(T | X, Π_race) ∝ P(X | T) · P_i(T | Π_race)' as const;
+const equationTokens=(at:number):readonly EquationToken[]=>[
+  {text:'P',width:32,revealAt:at},{term:'i',math:'_i',width:24,revealAt:at+35},{text:'(',width:18,revealAt:at+70},
+  {term:'T',width:34,revealAt:at+105},{text:' | ',width:42,revealAt:at+140},{term:'X',width:34,revealAt:at+175},
+  {text:', ',width:30,revealAt:at+210},{term:'PiRace',math:'Π_{race}',width:76,revealAt:at+245},{text:')',width:18,revealAt:at+280},
+  {text:' ∝ ',width:74,revealAt:at+315},{text:'P(',width:48,revealAt:at+350},{term:'X',width:34,revealAt:at+385},
+  {text:' | ',width:42,revealAt:at+420},{term:'T',width:34,revealAt:at+455},{text:') · P',width:88,revealAt:at+490},
+  {term:'i',math:'_i',width:24,revealAt:at+525},{text:'(',width:18,revealAt:at+560},{term:'T',width:34,revealAt:at+595},
+  {text:' | ',width:42,revealAt:at+630},{term:'PiRace',math:'Π_{race}',width:76,revealAt:at+665},{text:')',width:18,revealAt:at+700},
+];
+const posteriorTokens:readonly EquationToken[]=[{text:'POSTERIOR · P',width:154},{term:'i',math:'_i',width:18},{text:'(',width:12},{term:'T',width:22},{text:' | ',width:26},{term:'X',width:22},{text:',',width:10},{term:'PiRace',math:'Π_{race}',width:54},{text:')',width:12}];
+const evidenceTokens:readonly EquationToken[]=[{text:'EVIDENCE · P(',width:146},{term:'X',width:22},{text:' | ',width:26},{term:'T',width:22},{text:')',width:12}];
+const priorTokens:readonly EquationToken[]=[{text:'PRIOR · P',width:106},{term:'i',math:'_i',width:18},{text:'(',width:12},{term:'T',width:22},{text:' | ',width:26},{term:'PiRace',math:'Π_{race}',width:54},{text:')',width:12}];
 
 /**
  * Power-prior sweep (derived display model). The prior keeps its Gaussian shape N(μp, 1/τ0);
@@ -68,18 +68,15 @@ function Curve({id, points, ink, width, opacity=1, dataCurve}:{id:string;points:
 
 export function InstalledRacialPrior({segment}:SceneProps) {
   const ms=useStageMs();
-  const cue={book:useCue('t33Book'),installed:useCue('t33Installed'),prior:useCue('t33Prior'),pi:useCue('t33Pi'),stereotypes:useCue('t33Stereotypes'),bayesian:useCue('t33Bayesian'),override:useCue('t33Override'),evidence:useCue('t33Evidence'),institutions:useCue('t33Institutions'),weight:useCue('t33Weight'),bias:useCue('t34Bias'),sociology:useCue('t34Sociology'),neuroscience:useCue('t34Neuroscience'),learning:useCue('t34Learning'),prediction:useCue('t34Prediction'),experience:useCue('t34Experience'),accurate:useCue('t34Accurate'),outdated:useCue('t34Outdated'),history:useCue('t34History')};
+  const cue={book:useCue('t33Book'),installed:useCue('t33Installed'),prior:useCue('t33Prior'),pi:useCue('t33Pi'),stereotypes:useCue('t33Stereotypes'),bayesian:useCue('t33Bayesian'),priors:useCue('t33Priors'),override:useCue('t33Override'),sensory:useCue('t33Sensory'),evidence:useCue('t33Evidence'),institutions:useCue('t33Institutions'),weight:useCue('t33Weight'),bias:useCue('t34Bias'),sociology:useCue('t34Sociology'),neuroscience:useCue('t34Neuroscience'),learning:useCue('t34Learning'),prediction:useCue('t34Prediction'),experience:useCue('t34Experience'),accurate:useCue('t34Accurate'),outdated:useCue('t34Outdated'),history:useCue('t34History')};
   const L=INSTALLED_PRIOR_LAYOUT, T=INSTALLED_PRIOR_TEXT;
   const gold=color('color/fill/gold'), red=color('color/marker/race'), accent=color('color/text/accent'), soft=color('color/text/soft');
   const alpha=installedPrecision(ms,cue.institutions.at,cue.weight.at), posterior=installedPosterior(alpha);
   const turn33=ms<cue.bias.at+320, turn33Opacity=leave(ms,cue.bias.at,300), turn34=ms>=cue.bias.at, turn34Opacity=enter(ms,cue.bias.at+260,440);
   const bookP=enter(ms,cue.book.at), compressP=enter(ms,cue.stereotypes.at,700);
   const priorPrecision=mix(BAYES.genericPriorPrecision,BAYES.installedPriorPrecision,compressP);
-  const highlight:TermId|'equation'|'gauge'|'none'=ms>=cue.weight.at?'posterior':ms>=cue.institutions.at?'gauge':ms>=cue.evidence.at?'likelihood':ms>=cue.override.at?'prior':ms>=cue.bayesian.at?'equation':'none';
-  const termVisible:Record<TermId,boolean>={likelihood:ms>=cue.book.at, prior:ms>=cue.pi.at, posterior:ms>=cue.bayesian.at, proportional:ms>=cue.bayesian.at, times:ms>=cue.bayesian.at};
-  const termAt:Record<TermId,number>={likelihood:cue.book.at, prior:cue.pi.at, posterior:cue.bayesian.at, proportional:cue.bayesian.at, times:cue.bayesian.at};
-  const termInk:Record<TermId,string>={posterior:accent, proportional:soft, likelihood:gold, times:soft, prior:red};
-  const termEmphasis=(id:TermId)=>highlight==='none'||highlight==='equation'||highlight==='gauge'||highlight===id?1:.5;
+  const highlight:'posterior'|'evidence'|'prior'|'gauge'|'none'=ms>=cue.weight.at?'posterior':ms>=cue.institutions.at?'gauge':ms>=cue.sensory.at?'evidence':ms>=cue.priors.at?'prior':'none';
+  const termPulses:EquationPulseMap={PiRace:[cue.pi.at,cue.priors.at,cue.institutions.at],T:[cue.priors.at],i:[cue.priors.at],X:[cue.sensory.at]};
 
   const evidencePoints=gaussianPoints(AXIS.left,AXIS.right,AXIS.y,heightFor(BAYES.evidencePrecision),BAYES.evidenceMean,BAYES.evidencePrecision,90);
   const priorPoints=gaussianPoints(AXIS.left,AXIS.right,AXIS.y,heightFor(priorPrecision),BAYES.priorMean,priorPrecision,90);
@@ -102,15 +99,17 @@ export function InstalledRacialPrior({segment}:SceneProps) {
   return <StageSceneFrame segment={segment}>
     {turn33 && <div data-turn="33" style={{opacity:turn33Opacity}}>
       <Panel box={L.equation} id="equation-band" dataPanel="equation-band" style={{opacity:bookP}}/>
-      {TERM_BOXES.map(term=>termVisible[term.id]&&<Label key={term.id} id={`term-${term.id}`} box={term.box} size={TERM_ROW.size} weight={500} ls={0} align="center" ink={termInk[term.id]} opacity={enter(ms,termAt[term.id])*termEmphasis(term.id)} style={{whiteSpace:'nowrap'}}>
-        <span data-term={term.id} data-beat={term.id==='posterior'?'t33Bayesian':undefined}><MathText text={term.text}/></span>
-      </Label>)}
+      {ms>=cue.evidence.at&&<EquationTerms tokens={equationTokens(cue.evidence.at)} pulses={termPulses} ms={ms} box={{x:150,y:116,w:1620,h:52}} fontSize={34} align="center" equation={EQ_28A} style={{opacity:bookP}}/>}
+      {ms>=cue.pi.at&&<TermChip term="PiRace" ms={ms} pulses={termPulses.PiRace} box={{x:150,y:190,w:410,h:54}} opacity={enter(ms,cue.pi.at)}/>}
+      {ms>=cue.priors.at&&<TermChip term="T" ms={ms} pulses={termPulses.T} box={{x:580,y:190,w:410,h:54}} opacity={enter(ms,cue.priors.at)}/>}
+      {ms>=cue.priors.at&&<TermChip term="i" ms={ms} pulses={termPulses.i} box={{x:1010,y:190,w:300,h:54}} opacity={enter(ms,cue.priors.at)}/>}
+      {ms>=cue.sensory.at&&<TermChip term="X" ms={ms} pulses={termPulses.X} box={{x:1330,y:190,w:440,h:54}} opacity={enter(ms,cue.sensory.at)}/>}
 
       <div data-prior-plot="true" data-precision={alpha.toFixed(3)} data-posterior-mode={posterior.mean.toFixed(6)} data-posterior-precision={posterior.precision.toFixed(6)} style={{opacity:bookP}}>
         <Panel box={L.plot} id="plot" dataPanel="prior-plot"/>
         <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position:'absolute',inset:0}} aria-hidden="true">
           <path {...lineAttrs('axis',[[AXIS.left,AXIS.y],[AXIS.right,AXIS.y]])} d={`M${AXIS.left} ${AXIS.y}H${AXIS.right}`} stroke={color('color/line/hairline')} strokeWidth="2"/>
-          <Curve id="evidence-curve" dataCurve="evidence" points={evidencePoints} ink={gold} width={highlight==='likelihood'?6:3}/>
+          <Curve id="evidence-curve" dataCurve="evidence" points={evidencePoints} ink={gold} width={highlight==='evidence'?6:3}/>
           <path {...lineAttrs('evidence-tick',[[xFor(BAYES.evidenceMean),AXIS.y],[xFor(BAYES.evidenceMean),AXIS.y+14]])} d={`M${xFor(BAYES.evidenceMean)} ${AXIS.y}V${AXIS.y+14}`} stroke={gold} strokeWidth="4"/>
           <Curve id="prior-curve" dataCurve="prior" points={priorPoints} ink={red} width={highlight==='prior'?6:3}/>
           {ms>=cue.bayesian.at && <Curve id="posterior-curve" dataCurve="posterior" points={posteriorPoints} ink={accent} width={highlight==='posterior'?6:4} opacity={enter(ms,cue.bayesian.at)}/>}
@@ -129,18 +128,18 @@ export function InstalledRacialPrior({segment}:SceneProps) {
         <Label id="reinforcement" box={T.reinforcement} size={20} ls={0} align="center" ink={red} opacity={cartridgeP}><span data-beat="t33Installed">INSTITUTIONAL REINFORCEMENT</span></Label>
       </>}
       {ms>=cue.prior.at && <Label id="cartridge-label" box={T.cartridge} size={20} weight={700} ls={0} align="center" ink={red} opacity={enter(ms,cue.prior.at)}><span data-beat="t33Prior">INSTALLED RACIAL PRIOR</span></Label>}
-      {ms>=cue.pi.at && <Label id="cartridge-pi" box={T.pi} size={30} weight={700} ls={0} lh={1.2} align="center" opacity={enter(ms,cue.pi.at)}><span data-beat="t33Pi"><MathText text="Π_{race}"/></span></Label>}
+      {ms>=cue.pi.at && <ColoredTerm term="PiRace" ms={ms} pulses={termPulses.PiRace} box={T.pi} style={{position:'absolute',left:T.pi.x,top:T.pi.y,width:T.pi.w,height:T.pi.h,display:'grid',placeItems:'center',font:'700 30px "IBM Plex Mono"',opacity:enter(ms,cue.pi.at)}}/>}
       {ms>=cue.stereotypes.at && <>
         <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position:'absolute',inset:0}} aria-hidden="true">
           {tokens.map((token,index)=><rect key={index} data-stereotype-token={index+1} {...shapeAttrs(`stereotype-token-${index+1}`,{x:token.x-6,y:token.y-6,w:12,h:12},'mark','token')} x={token.x-6} y={token.y-6} width="12" height="12" fill={red} opacity={token.opacity}/>)}
         </svg>
         <Label id="stereotypes" box={T.stereotypes} size={22} ls={0} ink={soft} opacity={enter(ms,cue.stereotypes.at)}><span data-beat="t33Stereotypes">STEREOTYPES → COMPRESSED PRIORS</span></Label>
       </>}
-      {ms>=cue.bayesian.at && <>
-        <Label id="key-posterior" box={T.posteriorKey} size={20} ls={0} ink={accent} opacity={enter(ms,cue.bayesian.at)}>POSTERIOR</Label>
-        <Label id="key-evidence" box={T.evidenceKey} size={20} ls={0} ink={gold} opacity={enter(ms,cue.bayesian.at)}>SENSORY EVIDENCE</Label>
-        <Label id="key-prior" box={T.priorKey} size={20} ls={0} ink={red} opacity={enter(ms,cue.bayesian.at)}>RACIAL PRIOR</Label>
-        <SceneSource text="Eq. 2.8a · Bayesian prior" opacity={enter(ms,cue.bayesian.at)}/>
+      {ms>=cue.priors.at&&<EquationTerms tokens={priorTokens} pulses={termPulses} ms={ms} box={T.priorKey} fontSize={18} align="left" equation="P_i(T | Π_race)" style={{opacity:enter(ms,cue.priors.at),color:soft}}/>}
+      {ms>=cue.sensory.at&&<EquationTerms tokens={evidenceTokens} pulses={termPulses} ms={ms} box={T.evidenceKey} fontSize={18} align="left" equation="P(X | T)" style={{opacity:enter(ms,cue.sensory.at),color:soft}}/>}
+      {ms>=cue.evidence.at&&<>
+        <EquationTerms tokens={posteriorTokens} pulses={termPulses} ms={ms} box={T.posteriorKey} fontSize={18} align="left" equation="P_i(T | X, Π_race)" style={{opacity:enter(ms,cue.evidence.at),color:soft}}/>
+        <SceneSource text="Eq. 2.8a · Bayesian prior" opacity={enter(ms,cue.evidence.at)}/>
       </>}
       {ms>=cue.override.at && <>
         <div data-beat="t33Override" data-gauge-box="true" {...shapeAttrs('precision-gauge',L.gauge,'frame')} style={{position:'absolute',left:L.gauge.x,top:L.gauge.y,width:L.gauge.w,height:L.gauge.h,boxShadow:ms>=cue.institutions.at?`0 0 0 ${3*enter(ms,cue.institutions.at)}px ${gold}`:undefined,opacity:enter(ms,cue.override.at)}}>
@@ -156,7 +155,7 @@ export function InstalledRacialPrior({segment}:SceneProps) {
     </div>}
 
     {turn34 && <div data-turn="34" style={{opacity:turn34Opacity}}>
-      <Label id="equation-strip" box={T.strip} size={26} weight={500} ls={0} align="center" ink={soft} style={{whiteSpace:'nowrap'}}><MathText text="P_i(T | X, Π_{race}) ∝ P(X | T) · P_i(T | Π_{race})"/></Label>
+      <EquationTerms tokens={equationTokens(cue.bias.at-1000)} pulses={termPulses} ms={ms} box={T.strip} fontSize={26} align="center" equation={EQ_28A} style={{color:soft}}/>
       <Label id="bias" box={T.bias} size={28} weight={700} ls={2} lh={1.15} align="center" ink={gold}><span data-beat="t34Bias">BIAS</span></Label>
       <Panel box={L.rail} id="rail" dataPanel="three-field-rail"/>
       {ms>=cue.sociology.at && <>
@@ -188,7 +187,7 @@ export function InstalledRacialPrior({segment}:SceneProps) {
         <Label id="prediction" box={T.prediction} size={30} weight={700} ls={0} align="center" ink={accent} opacity={enter(ms,cue.prediction.at)}><span data-beat="t34Prediction">PREDICTION FROM PRIOR EXPERIENCE</span></Label>
       </>}
       <div data-cartridge-34="true" {...shapeAttrs('cartridge-34',L.cartridge34,'frame')} style={{position:'absolute',left:L.cartridge34.x,top:L.cartridge34.y,width:L.cartridge34.w,height:L.cartridge34.h,boxSizing:'border-box',background:color('color/fill/red-wash'),border:`2px solid ${red}`}}/>
-      <Label id="cartridge-34-pi" box={T.pi34} size={30} weight={700} ls={0} lh={1.2} align="center"><MathText text="Π_{race}"/></Label>
+      <ColoredTerm term="PiRace" ms={ms} pulses={termPulses.PiRace} box={T.pi34} style={{position:'absolute',left:T.pi34.x,top:T.pi34.y,width:T.pi34.w,height:T.pi34.h,display:'grid',placeItems:'center',font:'700 30px "IBM Plex Mono"'}}/>
       {ms>=cue.experience.at && (()=>{
         const p=enter(ms,cue.experience.at,650), shift=((ms-cue.experience.at)/40)%64;
         return <svg data-beat="t34Experience" data-history-ribbon="true" width="1920" height="1080" viewBox="0 0 1920 1080" style={{position:'absolute',inset:0}} aria-hidden="true" opacity={p}>

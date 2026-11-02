@@ -10,6 +10,8 @@ export const SEQUENCE_LAYOUT={
   claim:{x:610,y:188,w:1080,h:40},footer:{x:116,y:850,w:1688,h:44},source:{x:116,y:968,w:740,h:30},
 } satisfies Record<string,Box>;
 
+export const EQ_25 = 'Individual Prejudice → Discriminatory Actions → Systemic Outcomes' as const;
+
 const CONTINUITY_LAYERS=[
   {label:'1. Individual Prejudice',w:598,y:352},
   {label:'2. Belief in Superiority',w:483,y:466},
@@ -77,11 +79,11 @@ export function SequenceAsTheory({segment}:SceneProps){
     <Label id="sequence-caption" box={SEQUENCE_LAYOUT.caption} size={28} weight={500} ls={1.4} align="center">Figure 2.3 · Inverting the Definitional Hierarchy</Label>
     <ContinuityPlate opacity={continuityOpacity}/>
     {ms>=cue.t11Numbered.at&&<NumberRail ms={ms} numberedAt={cue.t11Numbered.at} analyticalAt={cue.t11Analytical.at} orderAt={cue.t11Order.at} nodes={nodes}/>}
-    {ms>=cue.t11Unstated.at&&<div data-causal-graph="true" style={{opacity:graphP}}>
+    {ms>=cue.t11Unstated.at&&<div data-causal-graph="true" data-equation={EQ_25} style={{opacity:graphP}}>
       {ms>=cue.t11Cause.at&&<Label id="causal-claim" box={SEQUENCE_LAYOUT.claim} size={24} weight={500} ls={2} align="center" opacity={enter(ms,cue.t11Cause.at,440)} ink={color('color/marker/race')}>CAUSAL CLAIM</Label>}
-      <AuditedTermBlock id="node-one" box={first} term={firstLabel} summary={ms>=cue.t12First.at?'assigned first':'causal node 1'} glyph={<PersonIcon/>} selected={ms>=cue.t12First.at} accent={ms>=cue.t12First.at?'color/marker/race':'color/fill/gold'} unit="slot 1" opacity={graphP}/>
-      <AuditedTermBlock id="node-two" box={second} term="Discriminatory Actions" summary="causal node 2" glyph={<ActionIcon/>} accent="color/fill/gold" unit="slot 2" opacity={graphP}/>
-      <AuditedTermBlock id="node-three" box={third} term={thirdLabel} summary="causal node 3" glyph={<SystemIcon/>} accent="color/fill/gold" unit="slot 3" opacity={graphP}/>
+      <AuditedTermBlock id="node-one" box={first} term={firstLabel} termId="IndividualPrejudice" ms={ms} pulses={[cue.t12Personal.at,cue.t12Root.at]} summary={ms>=cue.t12First.at?'assigned first':'causal node 1'} glyph={<PersonIcon/>} selected={ms>=cue.t12First.at} accent={ms>=cue.t12First.at?'color/marker/race':'color/fill/gold'} unit="slot 1" opacity={graphP}/>
+      <AuditedTermBlock id="node-two" box={second} term="Discriminatory Actions" termId="DiscriminatoryActions" ms={ms} summary="causal node 2" glyph={<ActionIcon/>} accent="color/fill/gold" unit="slot 2" opacity={graphP}/>
+      <AuditedTermBlock id="node-three" box={third} term={thirdLabel} termId="SystemicOutcomes" ms={ms} pulses={[cue.t12Institutional.at]} summary="causal node 3" glyph={<SystemIcon/>} accent="color/fill/gold" unit="slot 3" opacity={graphP}/>
       {ms>=cue.t11Cause.at&&<svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position:'absolute',inset:0}} aria-hidden="true">
         <path data-causal-arrow="one-two" {...lineAttrs('causal-arrow-one-two',arrowOne)} d={pathFrom(arrowOne)} stroke={color(rootP>.01?'color/marker/race':'color/fill/gold')} strokeWidth={3+5*rootP} opacity={arrowP}/>
         <path data-causal-arrow="two-three" {...lineAttrs('causal-arrow-two-three',arrowTwo)} d={pathFrom(arrowTwo)} stroke={color('color/fill/gold')} strokeWidth="3" opacity={arrowP}/>

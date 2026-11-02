@@ -1,8 +1,16 @@
 import React from 'react';
 import {useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../../tokens';
+import {EquationTerms, type EquationToken} from '../../equations';
 import {StageSceneFrame} from '../shared';
 import {AuditedTermBlock,enter,HeartIcon,Label,lineAttrs,PANEL_STYLE,pathFrom,PersonIcon,ScanLines,SceneSource,shapeAttrs,textAttrs,WordIcon,type Box,type Point} from './PackageAVisuals';
+import {EQ_25} from './SequenceAsTheory';
+
+const FORMAL_LINES:readonly (readonly EquationToken[])[]=[
+  [{term:'IndividualPrejudice',width:282},{text:' → ',width:48}],
+  [{term:'DiscriminatoryActions',width:312},{text:' → ',width:48}],
+  [{term:'SystemicOutcomes',width:260}],
+];
 
 export const HEARTS_LAYOUT = {
   header:{x:130,y:100,w:1660,h:90},
@@ -116,7 +124,9 @@ function TurnFifteen({ms,cue}:{ms:number;cue:CueMap}) {
     <div {...shapeAttrs('formal-panel',HEARTS_LAYOUT.formal,'frame')} style={{...PANEL_STYLE,left:HEARTS_LAYOUT.formal.x,top:HEARTS_LAYOUT.formal.y,width:HEARTS_LAYOUT.formal.w,height:HEARTS_LAYOUT.formal.h,opacity:testable}}>
       {ms>=cue.t15Formally.at&&<>
         <div {...textAttrs('formal-statement',{x:714,y:284,w:522,h:30},{size:22,lh:1.25})} style={{position:'absolute',left:24,top:34,width:522,textAlign:'center',font:'500 22px "IBM Plex Mono"',color:color('color/fill/gold'),opacity:formal}}>FORMAL STATEMENT</div>
-        <div {...textAttrs('formal-equation',{x:732,y:380,w:486,h:140},{size:28,lh:1.55,sans:true})} style={{position:'absolute',left:42,top:130,width:486,textAlign:'center',fontSize:28,lineHeight:1.55,opacity:formal}}>Individual Prejudice → {' '}<br/>Discriminatory Actions → {' '}<br/>Systemic Outcomes</div>
+        <div data-equation={EQ_25} style={{opacity:formal}}>
+          {FORMAL_LINES.map((tokens,index)=><EquationTerms key={index} tokens={tokens} pulses={{}} ms={ms} box={{x:732,y:370+index*48,w:486,h:44}} fontSize={28} lineHeight={1.2} weight={500} align="center" equation={EQ_25} style={{left:42,top:120+index*48}}/>)}
+        </div>
         <div {...textAttrs('formal-source',{x:740,y:640,w:470,h:30},{size:20,lh:1.25})} style={{position:'absolute',left:50,top:390,width:470,textAlign:'center',font:'400 20px "IBM Plex Mono"',color:color('color/text/muted'),opacity:formal}}>Eq. 2.5 · Tier 3 structural claim</div>
       </>}
     </div>

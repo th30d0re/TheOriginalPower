@@ -8,6 +8,7 @@ import {SequenceAsTheory,SEQUENCE_LAYOUT,numberRailWirePoints,sequenceNodeBoxes}
 import {HeartsAudit,HEARTS_LAYOUT} from '../min3_7/a/HeartsAudit';
 import {TermsInOneBucket,TERMS_LAYOUT} from '../min3_7/a/TermsInOneBucket';
 import {auditItems,auditLayout,auditSelfTest} from './layout_audit';
+import {EQUATION_TERMS,equationColor} from '../equations';
 
 const plan=JSON.parse(fs.readFileSync(new URL('../ov/stage_plan.json',import.meta.url),'utf8')) as StagePlan;
 const sceneComponents={SequenceAsTheory,HeartsAudit,TermsInOneBucket};
@@ -100,11 +101,13 @@ if(process.env.MIN3_7_A_SNAPSHOT==='1'){
   beat('SequenceAsTheory','t11Cause',{text:['CAUSAL CLAIM'],markup:['data-causal-arrow="one-two"','data-causal-arrow="two-three"']});
   beat('SequenceAsTheory','t11Order',{text:['1 → 2 → 3','Eq. 2.5 · conventional causal arrow']});
   beat('SequenceAsTheory','t11Caused',{text:['ROOT','EFFECT']});
-  beat('SequenceAsTheory','t12Personal',{text:['PRIVATE HOSTILITY']});
+  const personalHtml=beat('SequenceAsTheory','t12Personal',{text:['PRIVATE HOSTILITY']});
+  assert.ok(personalHtml.includes(`data-term-color="${equationColor(EQUATION_TERMS.IndividualPrejudice.slot)}"`),'SequenceAsTheory individual-prejudice node does not use the registry colour');
   const firstHtml=beat('SequenceAsTheory','t12First',{text:['ROOT CAUSE']});
   assert.ok(firstHtml.includes('data-scale="1.180"'),'SequenceAsTheory first node does not reach the specified 1.18 scale state');
   beat('SequenceAsTheory','t12Root',{markup:['data-root-pulse="true"']});
-  beat('SequenceAsTheory','t12Institutional',{text:['INSTITUTIONAL PATTERNS']});
+  const institutionalHtml=beat('SequenceAsTheory','t12Institutional',{text:['INSTITUTIONAL PATTERNS']});
+  assert.ok(institutionalHtml.includes(`data-term-color="${equationColor(EQUATION_TERMS.SystemicOutcomes.slot)}"`),'SequenceAsTheory systemic-outcomes node does not use the registry colour');
   const effectsHtml=beat('SequenceAsTheory','t12Effects',{text:['SIDE EFFECT','The first slot assigns the cause.'],markup:['data-effect-pulse="1"','data-effect-pulse="2"','data-effect-pulse="3"']});
   assert.ok(effectsHtml.includes('data-scale="0.880"'),'SequenceAsTheory third node does not reach the specified 0.88 scale state');
 
@@ -124,7 +127,7 @@ if(process.env.MIN3_7_A_SNAPSHOT==='1'){
   beat('HeartsAudit','t15Original',{text:['THE ORIGINAL POWER']});
   beat('HeartsAudit','t15Causal',{text:['CLAIM']});
   beat('HeartsAudit','t15Testable',{text:['TESTABLE HISTORICAL CLAIM']});
-  beat('HeartsAudit','t15Formally',{text:['FORMAL STATEMENT','Individual Prejudice → Discriminatory Actions → Systemic Outcomes','Eq. 2.5 · Tier 3 structural claim']});
+  beat('HeartsAudit','t15Formally',{text:['FORMAL STATEMENT','Individual Prejudice → Discriminatory Actions → Systemic Outcomes','Eq. 2.5 · Tier 3 structural claim'],markup:['data-term="IndividualPrejudice"','data-term="DiscriminatoryActions"','data-term="SystemicOutcomes"']});
   beat('HeartsAudit','t15Checked',{text:['PRIMARY RECORDS']});
   beat('HeartsAudit','t15Centuries',{text:['FIVE CENTURIES']});
   beat('HeartsAudit','t15Records',{text:['HISTORICAL TEST']});

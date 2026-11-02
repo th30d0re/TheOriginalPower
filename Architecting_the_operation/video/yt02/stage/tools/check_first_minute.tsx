@@ -9,6 +9,7 @@ import {DICTIONARY_LAYOUT, DICTIONARY_LIFT_X, DictionaryEntry} from '../firstmin
 import {WHY_LAYOUT, WhyLadder} from '../firstminute/WhyLadder';
 import {LITERATURE_LAYOUT, LiteratureStack} from '../firstminute/LiteratureStack';
 import {Disclosure} from '../firstminute/Disclosure';
+import {EQUATION_TERMS,equationColor} from '../equations';
 
 const plan=JSON.parse(fs.readFileSync(new URL('../ov/stage_plan.json',import.meta.url),'utf8')) as StagePlan;
 const sceneComponents={TitleOpen,DictionaryEntry,WhyLadder,LiteratureStack,Disclosure};
@@ -83,8 +84,10 @@ if(process.env.FIRST_MINUTE_SNAPSHOT==='1'){
   assertStrings('DictionaryEntry','common',['The common definition of racism']);
   assertStrings('DictionaryEntry','wrong',['wrong']);
   assertStrings('DictionaryEntry','dictionary',['rac·ism','(noun)','Individual prejudice or discrimination based on race','Belief in racial superiority']);
-  assertStrings('DictionaryEntry','individual',['Individual prejudice or discrimination based on race']);
-  assertStrings('DictionaryEntry','institutional',['Systemic or institutional discrimination','if present at all']);
+  const individualEntry=assertStrings('DictionaryEntry','individual',['Individual prejudice or discrimination based on race']);
+  assert.ok(individualEntry.includes(`data-term="IndividualPrejudice"`)&&individualEntry.includes(`data-term-color="${equationColor(EQUATION_TERMS.IndividualPrejudice.slot)}"`),'DictionaryEntry individual prejudice does not use the registry colour');
+  const institutionalEntry=assertStrings('DictionaryEntry','institutional',['Systemic or institutional discrimination','if present at all']);
+  assert.ok(institutionalEntry.includes(`data-term="SystemicOutcomes"`)&&institutionalEntry.includes(`data-term-color="${equationColor(EQUATION_TERMS.SystemicOutcomes.slot)}"`),'DictionaryEntry institutional pattern does not use the registry colour');
   const orderHtml=assertStrings('DictionaryEntry','order',['1','2','3']);
   assert.ok(orderHtml.includes(`translateX(${DICTIONARY_LIFT_X}px)`),'DictionaryEntry sense numbers have not lifted into the gutter column');
   assertStrings('DictionaryEntry','causal',['causal story','Individual Prejudice','Discriminatory Actions','Systemic Outcomes']);

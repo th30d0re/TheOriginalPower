@@ -409,7 +409,9 @@ shots:
       t33Pi: {word: Pi-sub-race}
       t33Stereotypes: {word: Stereotypes}
       t33Bayesian: {word: Bayesian}
+      t33Priors: {word: priors, at: start}
       t33Override: {word: override}
+      t33Sensory: {word: sensory, at: start}
       t33Evidence: {word: evidence}
       t33Institutions: {word: institutions}
       t33Weight: {word: weight}

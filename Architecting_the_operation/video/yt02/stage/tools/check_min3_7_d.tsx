@@ -15,7 +15,7 @@ type SceneName=keyof typeof scenes;
 const sceneCues:Record<SceneName,string[]>={
   PredictiveCoding:['t30Why','t30Predictive','t30Perception','t30Error','t30Priors','t30Data','t30Updates','t30Plain','t30Guesses','t30Compares','t30Report','t31Architecture','t31Bias','t31Tilt','t31Starting','t31Guessing','t31GeneralPurpose','t31Legally','t31Weight'],
   ComputationalBias:['t32Computer','t32Two','t32Neural','t32BiasTerm','t32Offset','t32Layer','t32Social','t32BiasSocial','t32Weights','t32Repeats'],
-  InstalledRacialPrior:['t33Book','t33Installed','t33Prior','t33Pi','t33Stereotypes','t33Bayesian','t33Override','t33Evidence','t33Institutions','t33Weight','t34Bias','t34Sociology','t34Neuroscience','t34Learning','t34Prediction','t34Experience','t34Accurate','t34Outdated','t34History'],
+  InstalledRacialPrior:['t33Book','t33Installed','t33Prior','t33Pi','t33Stereotypes','t33Bayesian','t33Priors','t33Override','t33Sensory','t33Evidence','t33Institutions','t33Weight','t34Bias','t34Sociology','t34Neuroscience','t34Learning','t34Prediction','t34Experience','t34Accurate','t34Outdated','t34History'],
 };
 const GRID_MS=500;
 
@@ -142,18 +142,19 @@ if(process.env.MIN3_7_D_SNAPSHOT==='1'){
   assert.equal(after.length,4,'four offset traces expected');
   assert.ok(after.every((top,index)=>Math.abs((before[index]-top)-LAYER_OFFSET_PX)<.2),`every layer trace must shift by the same ${LAYER_OFFSET_PX} px: ${before.join('/')} → ${after.join('/')}`);
 
-  beat('InstalledRacialPrior','t33Book',{markup:['data-prior-plot="true"','data-prior-socket="true"','data-term="likelihood"']});
+  beat('InstalledRacialPrior','t33Book',{markup:['data-prior-plot="true"','data-prior-socket="true"','data-panel="equation-band"']});
   beat('InstalledRacialPrior','t33Installed',{text:['INSTITUTIONAL REINFORCEMENT'],markup:['data-cartridge="true"']});
   beat('InstalledRacialPrior','t33Prior',{text:['INSTALLED RACIAL PRIOR']});
-  const piHtml=beat('InstalledRacialPrior','t33Pi',{markup:['<sub style="font-size:0.7em;line-height:0">race</sub>','data-term="prior"']});
+  const piHtml=beat('InstalledRacialPrior','t33Pi',{markup:['<sub style="font-size:0.7em;line-height:0">race</sub>','data-term="PiRace"']});
   assert.ok(plain(piHtml).includes('Πrace'),'installed prior cartridge is missing Π with race subscript');
   beat('InstalledRacialPrior','t33Stereotypes',{text:['STEREOTYPES → COMPRESSED PRIORS']});
-  // The storyboard brings the plot back at t33Book; only the strings that the Bayesian beat introduces are held back.
-  const equationHtml=beat('InstalledRacialPrior','t33Bayesian',{text:['POSTERIOR','SENSORY EVIDENCE','RACIAL PRIOR','Eq. 2.8a · Bayesian prior'],markup:['data-term="posterior"'],absent:['SENSORY EVIDENCE','Eq. 2.8a · Bayesian prior','data-term="posterior"','data-curve="posterior"']});
-  assert.ok(equationHtml.includes('P<sub')&&equationHtml.includes('Π<sub'),'Eq. 2.8a does not use real subscripts');
-  assert.ok(plain(equationHtml).includes('Pi(T | X, Πrace)∝P(X | T)·Pi(T | Πrace)'),'Eq. 2.8a is not complete and in term order at t33Bayesian');
+  // The plot returns at t33Book. Term chips arrive before the complete equation assembles at t33Evidence.
+  beat('InstalledRacialPrior','t33Bayesian',{markup:['data-curve="posterior"'],absent:['data-curve="posterior"']});
+  beat('InstalledRacialPrior','t33Priors',{markup:['data-term-chip="T"','data-term-chip="i"','data-equation="P_i(T | Π_race)"']});
   beat('InstalledRacialPrior','t33Override',{text:['α = 0 · EVIDENCE-LED','DERIVED · NORMALIZED PRIOR PRECISION α'],markup:['data-posterior-marker="true"']});
-  beat('InstalledRacialPrior','t33Evidence',{markup:['data-curve="evidence"'],absent:[]});
+  beat('InstalledRacialPrior','t33Sensory',{markup:['data-term-chip="X"','data-equation="P(X | T)"']});
+  const equationHtml=beat('InstalledRacialPrior','t33Evidence',{text:['POSTERIOR','Eq. 2.8a · Bayesian prior'],markup:['data-equation="P_i(T | X, Π_race) ∝ P(X | T) · P_i(T | Π_race)"','data-curve="evidence"'],absent:['Eq. 2.8a · Bayesian prior','data-equation="P_i(T | X, Π_race) ∝ P(X | T) · P_i(T | Π_race)"']});
+  assert.ok(equationHtml.includes('>i</sub>')&&equationHtml.includes('>race</sub>'),'Eq. 2.8a does not use real MathText subscripts');
   beat('InstalledRacialPrior','t33Institutions',{markup:['data-beat="t33Institutions"','data-institution-pulse="1"']});
   beat('InstalledRacialPrior','t33Weight',{text:['α = 1 · PRIOR-LED']});
   beat('InstalledRacialPrior','t34Bias',{text:['BIAS']});

@@ -2,6 +2,7 @@ import React from 'react';
 import {cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../tokens';
 import {SceneBorder} from '../dashboard/SceneBorder';
+import {ColoredTerm, type EquationPulseMap, type EquationTermId} from '../equations';
 
 const enter = (ms:number, at:number, duration=460) => cubicOut(progress(ms, at, at + duration));
 
@@ -16,6 +17,7 @@ export const DICTIONARY_LAYOUT = {
   chainX: 1050, chainY: 363, chainW: 770,
 } as const;
 export const DICTIONARY_LIFT_X = DICTIONARY_LAYOUT.gutterX - (DICTIONARY_LAYOUT.panelX + DICTIONARY_LAYOUT.orderShiftX + DICTIONARY_LAYOUT.numberInsetX);
+export const DICTIONARY_EQ_25 = 'Individual Prejudice → Discriminatory Actions → Systemic Outcomes' as const;
 
 export type DefinitionHierarchyState = {
   header:number;
@@ -40,7 +42,7 @@ function Sense({number, children, bright=1, tertiary=false, lift=0}: React.Props
   </div>;
 }
 
-export function DefinitionHierarchy({state}: {state:DefinitionHierarchyState}) {
+export function DefinitionHierarchy({state,ms=0,pulses={}}: {state:DefinitionHierarchyState;ms?:number;pulses?:EquationPulseMap}) {
   // The panel shifts left while the numbers lift, so the lifted digits always rest in the
   // gutter clear of the shifted panel's right edge (965) and the chain (1050).
   const entryShift = state.order * DICTIONARY_LAYOUT.orderShiftX;
@@ -49,15 +51,15 @@ export function DefinitionHierarchy({state}: {state:DefinitionHierarchyState}) {
       <div style={{padding:'28px 30px 22px', display:'flex', alignItems:'baseline', gap:18}}>
         <strong style={{fontSize:48, letterSpacing:.5}}>rac·ism</strong><em style={{fontSize:25, color:color('color/text/muted')}}>(noun)</em>
       </div>
-      <Sense number={1} bright={state.individual} lift={state.order}>Individual prejudice or discrimination based on race</Sense>
+      <Sense number={1} bright={state.individual} lift={state.order}><ColoredTerm term="IndividualPrejudice" ms={ms} pulses={pulses.IndividualPrejudice} display="Individual prejudice" box={{x:DICTIONARY_LAYOUT.panelX+entryShift+102,y:438,w:280,h:42}}/> or discrimination based on race</Sense>
       <Sense number={2} bright={0} lift={state.order}>Belief in racial superiority</Sense>
-      {state.institutional>0 && <div style={{opacity:state.institutional, transform:`translateY(${12*(1-state.institutional)}px)`}}><Sense number={3} bright={0} tertiary lift={state.order}>Systemic or institutional discrimination <span style={{marginLeft:12, padding:'4px 9px', border:`1px solid ${color('color/line/hairline')}`, font:'500 20px "IBM Plex Mono"', color:color('color/text/muted'), whiteSpace:'nowrap'}}>if present at all</span></Sense></div>}
+      {state.institutional>0 && <div style={{opacity:state.institutional, transform:`translateY(${12*(1-state.institutional)}px)`}}><Sense number={3} bright={0} tertiary lift={state.order}><ColoredTerm term="SystemicOutcomes" ms={ms} pulses={pulses.SystemicOutcomes} display="Systemic or institutional discrimination" box={{x:DICTIONARY_LAYOUT.panelX+entryShift+102,y:620,w:470,h:42}}/> <span style={{marginLeft:12, padding:'4px 9px', border:`1px solid ${color('color/line/hairline')}`, font:'500 20px "IBM Plex Mono"', color:color('color/text/muted'), whiteSpace:'nowrap'}}>if present at all</span></Sense></div>}
     </div>}
-    {state.causal>0 && <div data-causal-chain="true" style={{position:'absolute', left:DICTIONARY_LAYOUT.chainX, top:DICTIONARY_LAYOUT.chainY, width:DICTIONARY_LAYOUT.chainW, opacity:state.causal, transform:`translateX(${24*(1-state.causal)}px)`}}>
+    {state.causal>0 && <div data-causal-chain="true" data-equation={DICTIONARY_EQ_25} style={{position:'absolute', left:DICTIONARY_LAYOUT.chainX, top:DICTIONARY_LAYOUT.chainY, width:DICTIONARY_LAYOUT.chainW, opacity:state.causal, transform:`translateX(${24*(1-state.causal)}px)`}}>
       <div style={{font:'500 21px "IBM Plex Mono"', letterSpacing:2.4, color:color('color/fill/gold'), marginBottom:18, textTransform:'uppercase'}}>causal story</div>
       <div style={{display:'flex', alignItems:'stretch', gap:12}}>
-        {['Individual Prejudice','Discriminatory Actions','Systemic Outcomes'].map((label,i)=><React.Fragment key={label}>
-          <div style={{width:210, minHeight:108, padding:'18px 15px', display:'grid', placeItems:'center', textAlign:'center', fontSize:27, lineHeight:1.25, color:color('color/text/primary'), background:color('color/fill/panel-render'), border:`1px solid ${color('color/line/hairline')}`}}>{label}</div>
+        {([['IndividualPrejudice','Individual Prejudice'],['DiscriminatoryActions','Discriminatory Actions'],['SystemicOutcomes','Systemic Outcomes']] as const).map(([termId,label],i)=><React.Fragment key={label}>
+          <div style={{width:210, minHeight:108, padding:'18px 15px', display:'grid', placeItems:'center', textAlign:'center', fontSize:27, lineHeight:1.25, background:color('color/fill/panel-render'), border:`1px solid ${color('color/line/hairline')}`}}><ColoredTerm term={termId as EquationTermId} ms={ms} pulses={pulses[termId]} box={{x:DICTIONARY_LAYOUT.chainX+i*255,y:421,w:210,h:68}} display={label}/></div>
           {i<2 && <div style={{display:'grid', placeItems:'center', font:'500 35px "IBM Plex Mono"', color:color('color/fill/gold')}}>→</div>}
         </React.Fragment>)}
       </div>
@@ -66,11 +68,11 @@ export function DefinitionHierarchy({state}: {state:DefinitionHierarchyState}) {
   </>;
 }
 
-export function DefinitionSceneContent({state}: {state:DefinitionHierarchyState}) {
+export function DefinitionSceneContent({state,ms=0,pulses={}}: {state:DefinitionHierarchyState;ms?:number;pulses?:EquationPulseMap}) {
   return <div style={{position:'absolute', inset:0, width:1920, height:1080, color:color('color/text/primary'), fontFamily:'IBM Plex Sans'}}>
     {state.header>0 && <div style={{position:'absolute', left:150, top:105, opacity:state.header, transform:`translateY(${18*(1-state.header)}px)`, fontSize:68, fontWeight:500}}>The common definition of racism</div>}
     {state.wrong>0 && <div style={{position:'absolute', left:1375, top:118, opacity:state.wrong, transform:`translateY(${12*(1-state.wrong)}px) rotate(-2deg)`, padding:'9px 18px', border:`2px solid ${color('color/marker/race')}`, background:color('color/fill/red-faint'), font:'500 25px "IBM Plex Mono"', letterSpacing:3, textTransform:'uppercase', color:color('color/marker/race')}}>wrong</div>}
-    <DefinitionHierarchy state={state}/>
+    <DefinitionHierarchy state={state} ms={ms} pulses={pulses}/>
     {state.evidence>0 && <div style={{position:'absolute', left:150, bottom:78, opacity:state.evidence, font:'400 20px "IBM Plex Mono"', letterSpacing:.4, color:color('color/text/muted')}}>The Original Power, §Racism as Primary Example · Eq. 2.5</div>}
   </div>;
 }
@@ -91,6 +93,6 @@ export function DictionaryEntry({segment}:SceneProps) {
   };
   return <div data-scene="DictionaryEntry" style={{position:'absolute',inset:0,width:1920,height:1080,overflow:'hidden',background:color('color/bg/field')}}>
     <SceneBorder segment={segment}/>
-    <DefinitionSceneContent state={state}/>
+    <DefinitionSceneContent state={state} ms={ms} pulses={{IndividualPrejudice:[individual.at],SystemicOutcomes:[institutional.at]}}/>
   </div>;
 }
