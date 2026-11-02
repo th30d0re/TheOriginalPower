@@ -1,7 +1,7 @@
 import React from 'react';
-import {cubicOut, progress, useCue, useStageMs} from '@stage';
+import {cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../tokens';
-import {CardBorder} from '../dashboard/CardBorder';
+import {SceneBorder} from '../dashboard/SceneBorder';
 
 const enter = (ms:number, at:number, duration=460) => cubicOut(progress(ms, at, at + duration));
 
@@ -75,7 +75,7 @@ export function DefinitionSceneContent({state}: {state:DefinitionHierarchyState}
   </div>;
 }
 
-export function DictionaryEntry() {
+export function DictionaryEntry({segment}:SceneProps) {
   const ms=useStageMs();
   const common=useCue('common'), wrong=useCue('wrong'), dictionary=useCue('dictionary'), individual=useCue('individual');
   const institutional=useCue('institutional'), order=useCue('order'), causal=useCue('causal'), evidence=useCue('evidence');
@@ -90,7 +90,7 @@ export function DictionaryEntry() {
     evidence:enter(ms,evidence.at,430),
   };
   return <div data-scene="DictionaryEntry" style={{position:'absolute',inset:0,width:1920,height:1080,overflow:'hidden',background:color('color/bg/field')}}>
-    <CardBorder/>
+    <SceneBorder segment={segment}/>
     <DefinitionSceneContent state={state}/>
   </div>;
 }

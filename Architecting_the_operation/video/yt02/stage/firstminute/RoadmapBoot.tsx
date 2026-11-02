@@ -4,8 +4,9 @@
 // item11 sweeps every panel online and raises the map to full brightness; item12 pulses
 // the Interference Engine tray cell; roadmapEnd collapses the console toward the top.
 // Brief: BRIEF_FIRST_MINUTE_T4.md. Every frame is a pure function of stage ms and cues.
+import {useNotch} from '../dashboard/notch';
 import React from 'react';
-import {useStageMs,usePlan,lookupCue,progress,cubicOut,cubicInOut} from '@stage';
+import {useStageMs,usePlan,lookupCue,progress,cubicOut,cubicInOut,type SceneProps} from '@stage';
 import {color,Tokens} from '../tokens';
 import {Dashboard,rail} from '../dashboard/Dashboard';
 import {instruments} from '../dashboard/PanelContent';
@@ -58,7 +59,8 @@ const wireFor=(item:Item,i:number)=>{
 
 const mono26={fontFamily:Tokens.fonts.mono,fontSize:26,fontWeight:400} as const;
 
-export function RoadmapBoot(){
+export function RoadmapBoot({segment}:SceneProps){
+  const notch=useNotch(segment);
  const ms=useStageMs(),plan=usePlan();
  const cues=ITEMS.map(item=>lookupCue(plan.cues,item.cue));
  const bootAt=lookupCue(plan.cues,'item11'),endAt=lookupCue(plan.cues,'roadmapEnd');
@@ -73,7 +75,7 @@ export function RoadmapBoot(){
  const collapse=cubicInOut(progress(ms,endAt,endAt+COLLAPSE_MS));
  const currentLine=cues.reduce((acc,at,i)=>ms>=at?i:acc,-1);
  return <div style={{position:'absolute',inset:0,width:1920,height:1080,background:color('color/bg/field')}}>
-  <Dashboard world empty dim={DIM} lights={lights} mapOpacity={mapOpacity} eraClockStandby mapOutlineOnly/>
+  <Dashboard world empty dim={DIM} lights={lights} mapOpacity={mapOpacity} eraClockStandby mapOutlineOnly notch={notch}/>
   <svg data-roadmap-wires="overlay" width={1920} height={1080} style={{position:'absolute',inset:0,pointerEvents:'none'}}>
    {ITEMS.map((item,i)=>{
     const wire=wireFor(item,i);

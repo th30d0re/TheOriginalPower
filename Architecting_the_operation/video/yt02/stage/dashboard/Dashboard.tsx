@@ -3,6 +3,7 @@ import {ClockContext,TokensContext,useStageMs,resolveMode,type InstrumentMode,ty
 import layout from '../handoff/layout.json';
 import {Tokens} from '../tokens';
 import {CompactBorder} from './CompactBorder';
+import {CardBorder} from './CardBorder';
 import {EraStrip} from './EraStrip';
 import {DashboardMap} from './DashboardMap';
 import {worldCamera,iberiaCamera} from './mapGeometry';
@@ -39,7 +40,7 @@ const trayArtifactFor=(name:string)=>{
  return TrayCell;
 };
 const components=[EraClock,SystemStress,Capital,Interference,Compass,ActivePatch,Variables,ExecutingFunction,PolicyTicker,WagePlane,...TRAY_INSTRUMENTS.map(trayArtifactFor)];
-export type DashboardProps={era?:number;world?:boolean;camera?:Camera;worldOpacity?:number;routeDraw?:number;dim?:number;lights?:number[];empty?:boolean;mapOpacity?:number;eraClockStandby?:boolean;mapOutlineOnly?:boolean;modes?:Record<string,InstrumentMode>;modeTimelines?:Record<string,ModeKey[]>};
+export type DashboardProps={era?:number;world?:boolean;camera?:Camera;worldOpacity?:number;routeDraw?:number;dim?:number;lights?:number[];empty?:boolean;mapOpacity?:number;eraClockStandby?:boolean;mapOutlineOnly?:boolean;notch?:number;modes?:Record<string,InstrumentMode>;modeTimelines?:Record<string,ModeKey[]>};
 type InteractiveState={interactiveModes?:Record<string,InstrumentMode|null>;onModeChange?:(slug:string,mode:InstrumentMode|null)=>void};
 export function Dashboard(props:DashboardProps) {
  const {interactive}=useContext(ClockContext);
@@ -49,7 +50,7 @@ function InteractiveDashboard(props:DashboardProps) {
  const [interactiveModes,setInteractiveModes]=useState<Record<string,InstrumentMode|null>>({});
  return <DashboardFrame {...props} interactiveModes={interactiveModes} onModeChange={(slug,mode)=>setInteractiveModes(previous=>({...previous,[slug]:mode}))}/>;
 }
-function DashboardFrame({era=2,world=false,camera,worldOpacity=0,routeDraw=1,dim=1,lights=[],empty=false,mapOpacity,eraClockStandby,mapOutlineOnly,modes={},modeTimelines={},interactiveModes={},onModeChange}:DashboardProps & InteractiveState) {
+function DashboardFrame({era=2,world=false,camera,worldOpacity=0,routeDraw=1,dim=1,lights=[],empty=false,mapOpacity,eraClockStandby,mapOutlineOnly,notch,modes={},modeTimelines={},interactiveModes={},onModeChange}:DashboardProps & InteractiveState) {
  const ms=useStageMs();
  if(era!==2) throw new Error(`YT02 handoff supplies instrument content for log 2; received ${era}`);
  const activeCamera=camera??(world?worldCamera:iberiaCamera);
@@ -59,5 +60,5 @@ function DashboardFrame({era=2,world=false,camera,worldOpacity=0,routeDraw=1,dim
  const y=i<10?96+heights.slice(start,i).reduce((sum,h)=>sum+h+8,0):p.y;
  const grow:InstrumentGrow=i<5?'right-down':i<10?'left-down':'centre';
  return <Component onInteractiveModeChange={onModeChange?mode=>onModeChange(slugs[i],mode):undefined} key={slugs[i]} anchor={{x:i>=5?p.x+p.w-instruments[p.instrument].compact.w:p.x,y,width:instruments[p.instrument].compact.w,height:instruments[p.instrument].compact.h}} grow={grow} mode={modes[slugs[i]]} modeTimeline={modeTimelines[slugs[i]]} opacity={lights[i]??dim}/>;
- })}<CompactBorder/></div></EraClockStandbyContext.Provider></CameraContext.Provider></TokensContext.Provider>;
+ })}{notch===undefined?<CompactBorder/>:<CardBorder notch={notch}/>}</div></EraClockStandbyContext.Provider></CameraContext.Provider></TokensContext.Provider>;
 }

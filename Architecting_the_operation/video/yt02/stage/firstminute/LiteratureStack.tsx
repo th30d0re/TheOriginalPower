@@ -1,7 +1,7 @@
 import React from 'react';
-import {cubicOut, progress, useCue, useStageMs} from '@stage';
+import {cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../tokens';
-import {CardBorder} from '../dashboard/CardBorder';
+import {SceneBorder} from '../dashboard/SceneBorder';
 
 const reveal=(ms:number,at:number,duration=480)=>cubicOut(progress(ms,at,at+duration));
 
@@ -56,7 +56,7 @@ function Tripartite({amount}:{amount:number}) {
   </div>;
 }
 
-export function LiteratureStack() {
+export function LiteratureStack({segment}:SceneProps) {
   const ms=useStageMs();
   const established=useCue('established'),bias=useCue('bias'),prejudice=useCue('prejudice'),discrimination=useCue('discrimination'),tripartite=useCue('tripartite'),stops=useCue('stops');
   const headerIn=reveal(ms,established.at,520);
@@ -64,7 +64,7 @@ export function LiteratureStack() {
   const tripartiteIn=reveal(ms,tripartite.at,560);
   const boundary=cubicOut(progress(ms,stops.at,stops.at+600));
   return <div data-scene="LiteratureStack" style={{position:'absolute',inset:0,width:1920,height:1080,overflow:'hidden',background:color('color/bg/field'),fontFamily:'IBM Plex Sans',color:color('color/text/primary')}}>
-    <CardBorder/>
+    <SceneBorder segment={segment}/>
     {ms>=established.at&&<div style={{position:'absolute',left:220,top:88,fontSize:68,fontWeight:500,opacity:headerIn,transform:`translateY(${18*(1-headerIn)}px)`}}>Established social science</div>}
     {blockCues.map((at,index)=>ms>=at?<LiteratureBlock key={at} index={index} amount={reveal(ms,at)}/>:null)}
     {ms>=tripartite.at&&<Tripartite amount={tripartiteIn}/>} 

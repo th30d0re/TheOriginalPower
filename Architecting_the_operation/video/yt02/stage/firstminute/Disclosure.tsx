@@ -1,7 +1,7 @@
 import React from 'react';
-import {cubicOut, progress, useCue, useStageMs} from '@stage';
+import {cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../tokens';
-import {CardBorder} from '../dashboard/CardBorder';
+import {SceneBorder} from '../dashboard/SceneBorder';
 import waveform from './data/waveform_t5.json';
 
 const WIDTH=1400,HEIGHT=170,CENTER=HEIGHT/2;
@@ -16,14 +16,14 @@ const lower=[...points].reverse().map(({x,amplitude})=>`L${x.toFixed(2)},${(CENT
 const waveformPath=`${upper} ${lower} Z`;
 const cloneColor=(amount:number)=>`rgba(${Math.round(232+(224-232)*amount)},${Math.round(201+(163-201)*amount)},${Math.round(155+(60-155)*amount)},1)`;
 
-export function Disclosure() {
+export function Disclosure({segment}:SceneProps) {
   const ms=useStageMs(),narration=useCue('narration'),clone=useCue('clone');
   const visible=cubicOut(progress(ms,narration.at,narration.at+650));
   const cloneGold=cubicOut(progress(ms,clone.at,clone.at+450));
   const played=progress(ms,waveform.start_ms,waveform.end_ms);
   const playhead=played*WIDTH;
   return <div data-scene="Disclosure" style={{position:'absolute',inset:0,width:1920,height:1080,overflow:'hidden',background:color('color/bg/field'),fontFamily:'IBM Plex Sans',color:color('color/text/primary')}}>
-    <CardBorder/>
+    <SceneBorder segment={segment}/>
     {ms>=narration.at&&<div style={{position:'absolute',left:245,top:320,width:1430,textAlign:'center',opacity:visible,transform:`translateY(${10*(1-visible)}px)`}}>
       <div style={{fontSize:40,lineHeight:1.48,fontWeight:400}}>
         <span>This narration uses an artificial intelligence </span>

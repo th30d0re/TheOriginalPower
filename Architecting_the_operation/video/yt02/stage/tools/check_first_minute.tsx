@@ -35,8 +35,8 @@ for(const file of sourceFiles){
 }
 
 function render(scene:SceneName,ms:number){
-  const Scene=sceneComponents[scene];
-  return renderToStaticMarkup(<PlanContext.Provider value={plan}><ClockContext.Provider value={{ms,fps:plan.fps,interactive:false}}><Scene/></ClockContext.Provider></PlanContext.Provider>);
+  const Scene=sceneComponents[scene],segment=plan.segments.find(s=>s.scene===scene)!;
+  return renderToStaticMarkup(<PlanContext.Provider value={plan}><ClockContext.Provider value={{ms,fps:plan.fps,interactive:false}}><Scene segment={segment} shots={segment.shots} shotAt={m=>segment.shots.find(s=>m>=s.start_ms&&m<s.end_ms)}/></ClockContext.Provider></PlanContext.Provider>);
 }
 function plain(html:string){
   return html.replace(/<[^>]+>/g,'').replaceAll('&amp;','&').replaceAll('&quot;','"').replaceAll('&#x27;',"'").replaceAll('&#39;',"'").replaceAll('&gt;','>').replaceAll('&lt;','<').replace(/\s+/g,' ').trim();

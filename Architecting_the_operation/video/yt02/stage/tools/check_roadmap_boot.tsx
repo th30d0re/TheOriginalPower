@@ -28,9 +28,8 @@ for(const hook of ['useState','useEffect','useLayoutEffect','useReducer','useRef
  assert.ok(!/\b(?:Math\.random|Date\b|getBoundingClientRect|offsetWidth|offsetHeight)\b/.test(source),'RoadmapBoot.tsx contains a nondeterministic or measured path');
 }
 
-const render=(ms:number)=>renderToStaticMarkup(<PlanContext.Provider value={plan}><ClockContext.Provider value={{ms,fps:plan.fps,interactive:false}}><RoadmapBoot/></ClockContext.Provider></PlanContext.Provider>);
-
 const segment=plan.segments.find(s=>s.scene==='RoadmapBoot')!;
+const render=(ms:number)=>renderToStaticMarkup(<PlanContext.Provider value={plan}><ClockContext.Provider value={{ms,fps:plan.fps,interactive:false}}><RoadmapBoot segment={segment} shots={segment.shots} shotAt={m=>segment.shots.find(s=>m>=s.start_ms&&m<s.end_ms)}/></ClockContext.Provider></PlanContext.Provider>);
 const cue=(name:string)=>plan.cues[name];
 const ITEM_CUES=Array.from({length:13},(_,i)=>`item${String(i+1).padStart(2,'0')}`);
 const frames:{kind:string;ms:number}[]=[{kind:'shot start',ms:segment.start_ms}];
