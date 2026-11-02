@@ -21,19 +21,20 @@ const enter = (ms: number, at: number, duration = 520) => cubicOut(progress(ms, 
 const move = (ms: number, at: number, duration = 650) => cubicInOut(progress(ms, at, at + duration));
 
 export const INTERPERSONAL_LAYOUT = {
-  biasBlock: {x: 140, y: 210, w: 480, h: 180},
-  prejudiceBlock: {x: 720, y: 210, w: 480, h: 180},
-  discriminationBlock: {x: 1300, y: 210, w: 480, h: 180},
-  bracket: {x: 230, y: 445, w: 1460, h: 75},
+  biasBlock: {x: 140, y: 170, w: 480, h: 180},
+  prejudiceBlock: {x: 720, y: 170, w: 480, h: 180},
+  discriminationBlock: {x: 1300, y: 170, w: 480, h: 180},
+  bracket: {x: 230, y: 380, w: 1460, h: 65},
 
-  groupField: {x: 120, y: 610, w: 1060, h: 220},
-  directionLabel: {x: 140, y: 845, w: 1020, h: 34},
+  groupFieldFull: {x: 120, y: 490, w: 1680, h: 250},
+  groupFieldContracted: {x: 120, y: 500, w: 1060, h: 240},
+  directionLabel: {x: 140, y: 760, w: 1020, h: 34},
 
-  personToPersonLabel: {x: 140, y: 545, w: 420, h: 32},
-  stateRack: {x: 1280, y: 535, w: 520, h: 365},
-  rackHeading: {x: 1300, y: 550, w: 480, h: 32},
+  personToPersonLabel: {x: 140, y: 460, w: 420, h: 32},
+  stateRack: {x: 1240, y: 460, w: 560, h: 440},
+  rackHeading: {x: 1260, y: 480, w: 520, h: 32},
 
-  assignmentStrip: {x: 240, y: 760, w: 1440, h: 160},
+  assignmentStrip: {x: 240, y: 745, w: 1440, h: 175},
   source: {x: 116, y: 964, w: 740, h: 26},
 } as const;
 
@@ -131,9 +132,21 @@ export function InterpersonalClass({segment}: SceneProps) {
 
   // Term triad configuration
   const triadTerms: readonly TriadTerm[] = [
-    {kind: 'bias', title: 'BIAS'},
-    {kind: 'prejudice', title: 'PREJUDICE'},
-    {kind: 'discrimination', title: 'DISCRIMINATION'},
+    {
+      kind: 'bias',
+      title: 'BIAS',
+      lines: [{text: 'STARTING TENDENCY', progress: lookP, tone: 'accent'}],
+    },
+    {
+      kind: 'prejudice',
+      title: 'PREJUDICE',
+      lines: [{text: 'GROUP ANTIPATHY', progress: lookP, tone: 'accent'}],
+    },
+    {
+      kind: 'discrimination',
+      title: 'DISCRIMINATION',
+      lines: [{text: 'UNEQUAL TREATMENT', progress: lookP, tone: 'accent'}],
+    },
   ];
   const triadSources: readonly TriadSource[] = [
     ms >= cue.t57Bias ? {text: 'GREENWALD & BANAJI 1995', progress: biasSourceP} : null,
@@ -145,11 +158,18 @@ export function InterpersonalClass({segment}: SceneProps) {
 
   // Group marks
   const groupMarks: GroupMarkSpec[] = [
-    {id: 'p1', side: 'left', x: 0.3, y: 0.45, accent: 'ingroup', progress: directionP},
-    {id: 'p2', side: 'left', x: 0.7, y: 0.45, accent: 'neutral', progress: directionP},
-    {id: 'p3', side: 'right', x: 0.3, y: 0.45, accent: 'neutral', progress: directionP},
-    {id: 'p4', side: 'right', x: 0.7, y: 0.45, accent: 'outgroup', progress: directionP},
+    {id: 'p1', side: 'left', x: 0.3, y: 0.45, accent: 'ingroup', progress: lookP},
+    {id: 'p2', side: 'left', x: 0.7, y: 0.45, accent: 'neutral', progress: lookP},
+    {id: 'p3', side: 'right', x: 0.3, y: 0.45, accent: 'neutral', progress: lookP},
+    {id: 'p4', side: 'right', x: 0.7, y: 0.45, accent: 'outgroup', progress: lookP},
   ];
+
+  const currentGroupBox = isTurn60 ? L.groupFieldContracted : L.groupFieldFull;
+  const currentInsideLabels = {
+    left: ms >= cue.t59Bias ? 'MENTAL BIAS' : (ms >= cue.t58Mental ? 'INSIDE AN INDIVIDUAL' : undefined),
+    right: ms >= cue.t59Hostility ? 'RIGID HOSTILITY' : (ms >= cue.t58Behavioral ? 'BETWEEN INDIVIDUALS' : undefined),
+    progress: 1,
+  };
 
   return (
     <StageSceneFrame segment={segment}>
@@ -165,69 +185,39 @@ export function InterpersonalClass({segment}: SceneProps) {
         bracketLabel={ms >= cue.t58Three ? 'INTERPERSONAL CLASS' : undefined}
       />
 
-      {/* Turn 58 / 59 / 60 Group Direction Field */}
-      {!isTurn61 && ms >= cue.t58Direction && (
-        <div data-turn-field="group-direction">
-          <GroupDirectionField
-            id="group-direction-main"
-            box={L.groupField}
-            marks={groupMarks}
-            leftLabel="GROUP A"
-            rightLabel="GROUP B"
-            forwardProgress={twoP}
-            reverseProgress={twoP}
-            boundaryProgress={directionP}
-          />
-          {ms >= cue.t58Two && (
-            <Label
-              id="group-direction-two-label"
-              box={L.directionLabel}
-              size={22}
-              weight={600}
-              ink={gold}
-              opacity={twoP}
-            >
-              ANY DIRECTION BETWEEN ANY TWO SOCIAL GROUPS
-            </Label>
-          )}
-        </div>
-      )}
-
-      {/* Turn 58 Locus Labels & Sockets (above group field) */}
-      {isTurn58 && (
-        <div data-turn="58-locus">
+      {/* Group Direction Field: Present across all 5 turns for balanced full-frame composition */}
+      <div data-turn-field="group-direction">
+        <GroupDirectionField
+          id="group-direction-main"
+          box={currentGroupBox}
+          marks={groupMarks}
+          leftLabel={ms >= cue.t58Direction ? 'GROUP A' : ''}
+          rightLabel={ms >= cue.t58Direction ? 'GROUP B' : ''}
+          forwardProgress={twoP}
+          reverseProgress={twoP}
+          boundaryProgress={lookP}
+          insideLabels={currentInsideLabels}
+        />
+        {!isTurn61 && ms >= cue.t58Two && (
           <Label
-            id="inside-individual-label"
-            box={{x: 140, y: 545, w: 320, h: 30}}
+            id="group-direction-two-label"
+            box={L.directionLabel}
             size={22}
             weight={600}
             ink={gold}
-            opacity={mentalP}
+            opacity={twoP}
           >
-            INSIDE AN INDIVIDUAL
+            ANY DIRECTION BETWEEN ANY TWO SOCIAL GROUPS
           </Label>
-          {ms >= cue.t58Behavioral && (
-            <Label
-              id="between-individuals-label"
-              box={{x: 760, y: 545, w: 320, h: 30}}
-              size={22}
-              weight={600}
-              ink={orange}
-              opacity={behavioralP}
-            >
-              BETWEEN INDIVIDUALS
-            </Label>
-          )}
-        </div>
-      )}
+        )}
+      </div>
 
-      {/* Turn 59 Varied Human Marks & Ubiquity (above and inside group field) */}
+      {/* Turn 59 Varied Human Marks & Ubiquity */}
       {isTurn59 && (
         <div data-turn="59-ubiquity" style={{opacity: anyP}}>
-          {/* Top row labels above group field */}
           <Label
             id="any-human-label"
-            box={{x: 140, y: 545, w: 260, h: 30}}
+            box={{x: 140, y: 456, w: 260, h: 26}}
             size={20}
             weight={600}
             ink={primary}
@@ -237,7 +227,7 @@ export function InterpersonalClass({segment}: SceneProps) {
           {ms >= cue.t59Skin && (
             <Label
               id="any-skin-label"
-              box={{x: 430, y: 545, w: 220, h: 30}}
+              box={{x: 430, y: 456, w: 220, h: 26}}
               size={20}
               weight={600}
               ink={gold}
@@ -249,7 +239,7 @@ export function InterpersonalClass({segment}: SceneProps) {
           {ms >= cue.t59Ancestry && (
             <Label
               id="any-ancestry-label"
-              box={{x: 680, y: 545, w: 200, h: 30}}
+              box={{x: 680, y: 456, w: 200, h: 26}}
               size={20}
               weight={600}
               ink={primary}
@@ -258,36 +248,10 @@ export function InterpersonalClass({segment}: SceneProps) {
               ANY ANCESTRY
             </Label>
           )}
-
-          {/* Lower row labels inside group field */}
-          {ms >= cue.t59Bias && (
-            <Label
-              id="mental-bias-label"
-              box={{x: 160, y: 770, w: 200, h: 28}}
-              size={20}
-              weight={600}
-              ink={gold}
-              opacity={t59BiasP}
-            >
-              MENTAL BIAS
-            </Label>
-          )}
-          {ms >= cue.t59Hostility && (
-            <Label
-              id="rigid-hostility-label"
-              box={{x: 800, y: 770, w: 220, h: 28}}
-              size={20}
-              weight={600}
-              ink={raceRed}
-              opacity={hostilityP}
-            >
-              RIGID HOSTILITY
-            </Label>
-          )}
           {ms >= cue.t59Treat && (
             <Label
               id="unequal-treatment-t59-label"
-              box={{x: 548, y: 770, w: 204, h: 28}}
+              box={{x: 855, y: 672, w: 210, h: 28}}
               size={20}
               weight={600}
               ink={orange}
@@ -319,10 +283,9 @@ export function InterpersonalClass({segment}: SceneProps) {
             <Label
               id="zero-control-heading"
               box={L.rackHeading}
-              size={20}
-              weight={600}
+              size={22}
+              weight={650}
               ink={raceRed}
-              opacity={zeroP}
             >
               REQUIRES ZERO CONTROL OVER
             </Label>
@@ -330,19 +293,19 @@ export function InterpersonalClass({segment}: SceneProps) {
 
           {/* 1: State Legislatures */}
           {ms >= cue.t60Legislatures && (
-            <div data-rack-item="1" style={{opacity: legP}}>
-              <Panel id="rack-item-1" box={{x: 1304, y: 595, w: 472, h: 50}} />
+            <div data-rack-item="1">
+              <Panel id="rack-item-1" box={{x: 1260, y: 535, w: 520, h: 56}} />
               <div
-                {...shapeAttrs('icon-leg', {x: 1318, y: 607, w: 26, h: 26}, 'mark', 'icon')}
-                style={{position: 'absolute', left: 1318, top: 607, width: 26, height: 26, color: raceRed}}
+                {...shapeAttrs('icon-leg', {x: 1276, y: 549, w: 28, h: 28}, 'mark', 'icon')}
+                style={{position: 'absolute', left: 1276, top: 549, width: 28, height: 28, color: raceRed}}
               >
-                <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M3 21 H21 M4 10 L12 3 L20 10 H4 Z M6 10 V18 M10 10 V18 M14 10 V18 M18 10 V18" fill="none" stroke="currentColor" strokeWidth="2" />
                 </svg>
               </div>
               <Label
                 id="rack-label-leg"
-                box={{x: 1354, y: 608, w: 400, h: 26}}
+                box={{x: 1318, y: 550, w: 440, h: 26}}
                 size={20}
                 weight={500}
                 ink={primary}
@@ -354,19 +317,19 @@ export function InterpersonalClass({segment}: SceneProps) {
 
           {/* 2: Appellate Courts */}
           {ms >= cue.t60Courts && (
-            <div data-rack-item="2" style={{opacity: courtsP}}>
-              <Panel id="rack-item-2" box={{x: 1304, y: 652, w: 472, h: 50}} />
+            <div data-rack-item="2">
+              <Panel id="rack-item-2" box={{x: 1260, y: 605, w: 520, h: 56}} />
               <div
-                {...shapeAttrs('icon-courts', {x: 1318, y: 664, w: 26, h: 26}, 'mark', 'icon')}
-                style={{position: 'absolute', left: 1318, top: 664, width: 26, height: 26, color: raceRed}}
+                {...shapeAttrs('icon-courts', {x: 1276, y: 619, w: 28, h: 28}, 'mark', 'icon')}
+                style={{position: 'absolute', left: 1276, top: 619, width: 28, height: 28, color: raceRed}}
               >
-                <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M12 3 V21 M5 8 L12 6 L19 8 M5 8 L2 14 H8 L5 8 Z M19 8 L16 14 H22 L19 8 Z" fill="none" stroke="currentColor" strokeWidth="2" />
                 </svg>
               </div>
               <Label
                 id="rack-label-courts"
-                box={{x: 1354, y: 665, w: 400, h: 26}}
+                box={{x: 1318, y: 620, w: 440, h: 26}}
                 size={20}
                 weight={500}
                 ink={primary}
@@ -378,19 +341,19 @@ export function InterpersonalClass({segment}: SceneProps) {
 
           {/* 3: Police Departments */}
           {ms >= cue.t60Police && (
-            <div data-rack-item="3" style={{opacity: policeP}}>
-              <Panel id="rack-item-3" box={{x: 1304, y: 709, w: 472, h: 50}} />
+            <div data-rack-item="3">
+              <Panel id="rack-item-3" box={{x: 1260, y: 675, w: 520, h: 56}} />
               <div
-                {...shapeAttrs('icon-police', {x: 1318, y: 721, w: 26, h: 26}, 'mark', 'icon')}
-                style={{position: 'absolute', left: 1318, top: 721, width: 26, height: 26, color: raceRed}}
+                {...shapeAttrs('icon-police', {x: 1276, y: 689, w: 28, h: 28}, 'mark', 'icon')}
+                style={{position: 'absolute', left: 1276, top: 689, width: 28, height: 28, color: raceRed}}
               >
-                <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M12 3 L4 7 V12 C4 17 8 20 12 21 C16 20 20 17 20 12 V7 L12 3 Z" fill="none" stroke="currentColor" strokeWidth="2" />
                 </svg>
               </div>
               <Label
                 id="rack-label-police"
-                box={{x: 1354, y: 722, w: 400, h: 26}}
+                box={{x: 1318, y: 690, w: 440, h: 26}}
                 size={20}
                 weight={500}
                 ink={primary}
@@ -402,19 +365,19 @@ export function InterpersonalClass({segment}: SceneProps) {
 
           {/* 4: Credit Markets */}
           {ms >= cue.t60Credit && (
-            <div data-rack-item="4" style={{opacity: creditP}}>
-              <Panel id="rack-item-4" box={{x: 1304, y: 766, w: 472, h: 50}} />
+            <div data-rack-item="4">
+              <Panel id="rack-item-4" box={{x: 1260, y: 745, w: 520, h: 56}} />
               <div
-                {...shapeAttrs('icon-credit', {x: 1318, y: 778, w: 26, h: 26}, 'mark', 'icon')}
-                style={{position: 'absolute', left: 1318, top: 778, width: 26, height: 26, color: raceRed}}
+                {...shapeAttrs('icon-credit', {x: 1276, y: 759, w: 28, h: 28}, 'mark', 'icon')}
+                style={{position: 'absolute', left: 1276, top: 759, width: 28, height: 28, color: raceRed}}
               >
-                <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M3 6 H21 V18 H3 Z M3 10 H21 M7 15 H9" fill="none" stroke="currentColor" strokeWidth="2" />
                 </svg>
               </div>
               <Label
                 id="rack-label-credit"
-                box={{x: 1354, y: 779, w: 400, h: 26}}
+                box={{x: 1318, y: 760, w: 440, h: 26}}
                 size={20}
                 weight={500}
                 ink={primary}
@@ -426,19 +389,19 @@ export function InterpersonalClass({segment}: SceneProps) {
 
           {/* 5: Military Force */}
           {ms >= cue.t60Military && (
-            <div data-rack-item="5" style={{opacity: militaryP}}>
-              <Panel id="rack-item-5" box={{x: 1304, y: 823, w: 472, h: 50}} />
+            <div data-rack-item="5">
+              <Panel id="rack-item-5" box={{x: 1260, y: 815, w: 520, h: 56}} />
               <div
-                {...shapeAttrs('icon-military', {x: 1318, y: 835, w: 26, h: 26}, 'mark', 'icon')}
-                style={{position: 'absolute', left: 1318, top: 835, width: 26, height: 26, color: raceRed}}
+                {...shapeAttrs('icon-military', {x: 1276, y: 829, w: 28, h: 28}, 'mark', 'icon')}
+                style={{position: 'absolute', left: 1276, top: 829, width: 28, height: 28, color: raceRed}}
               >
-                <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M12 2 L15 8 L22 9 L17 14 L18 21 L12 18 L6 21 L7 14 L2 9 L9 8 Z" fill="none" stroke="currentColor" strokeWidth="2" />
                 </svg>
               </div>
               <Label
                 id="rack-label-military"
-                box={{x: 1354, y: 836, w: 400, h: 26}}
+                box={{x: 1318, y: 830, w: 440, h: 26}}
                 size={20}
                 weight={500}
                 ink={primary}
@@ -460,32 +423,19 @@ export function InterpersonalClass({segment}: SceneProps) {
             style={{borderWidth: 2, background: color('color/fill/panel-wash')}}
           />
 
-          {/* Title Header */}
+          {/* Single Header: Shows one coherent header without faint ghost text */}
           <Label
             id="book-title-label"
-            box={{x: 270, y: 776, w: 340, h: 32}}
+            box={{x: 270, y: 760, w: 1380, h: 34}}
             size={24}
             weight={650}
             sans
             ink={gold}
           >
-            THE ORIGINAL POWER
+            {ms >= cue.t61Interpersonal
+              ? 'THE ORIGINAL POWER · INTERPERSONAL CLASS OF SOCIAL BEHAVIOR'
+              : 'THE ORIGINAL POWER'}
           </Label>
-
-          {/* Classification Banner */}
-          {ms >= cue.t61Interpersonal && (
-            <Label
-              id="interpersonal-class-behavior"
-              box={{x: 640, y: 776, w: 1000, h: 32}}
-              size={26}
-              weight={650}
-              sans
-              ink={primary}
-              opacity={interpP}
-            >
-              INTERPERSONAL CLASS OF SOCIAL BEHAVIOR
-            </Label>
-          )}
 
           {/* Sockets for Three Terms */}
           {ms >= cue.t61Assigns && (
@@ -493,12 +443,12 @@ export function InterpersonalClass({segment}: SceneProps) {
               {/* Bias Socket */}
               <Panel
                 id="socket-strip-bias"
-                box={{x: 270, y: 824, w: 380, h: 56}}
+                box={{x: 270, y: 808, w: 380, h: 54}}
                 accent={ms >= cue.t61Bias ? 'color/fill/gold' : 'color/line/hairline'}
               />
               <Label
                 id="strip-term-bias"
-                box={{x: 290, y: 836, w: 340, h: 32}}
+                box={{x: 290, y: 820, w: 340, h: 30}}
                 size={24}
                 weight={650}
                 sans
@@ -511,12 +461,12 @@ export function InterpersonalClass({segment}: SceneProps) {
               {/* Prejudice Socket */}
               <Panel
                 id="socket-strip-prejudice"
-                box={{x: 690, y: 824, w: 380, h: 56}}
+                box={{x: 690, y: 808, w: 380, h: 54}}
                 accent={ms >= cue.t61Prejudice ? 'color/marker/race' : 'color/line/hairline'}
               />
               <Label
                 id="strip-term-prejudice"
-                box={{x: 710, y: 836, w: 340, h: 32}}
+                box={{x: 710, y: 820, w: 340, h: 30}}
                 size={24}
                 weight={650}
                 sans
@@ -529,12 +479,12 @@ export function InterpersonalClass({segment}: SceneProps) {
               {/* Discrimination Socket */}
               <Panel
                 id="socket-strip-discrimination"
-                box={{x: 1110, y: 824, w: 380, h: 56}}
+                box={{x: 1110, y: 808, w: 380, h: 54}}
                 accent={ms >= cue.t61Discrimination ? 'color/text/accent' : 'color/line/hairline'}
               />
               <Label
                 id="strip-term-discrimination"
-                box={{x: 1130, y: 836, w: 340, h: 32}}
+                box={{x: 1130, y: 820, w: 340, h: 30}}
                 size={24}
                 weight={650}
                 sans
@@ -550,7 +500,7 @@ export function InterpersonalClass({segment}: SceneProps) {
           {ms >= cue.t61Scientific && (
             <Label
               id="exact-scientific-names"
-              box={{x: 270, y: 888, w: 420, h: 26}}
+              box={{x: 270, y: 874, w: 420, h: 26}}
               size={20}
               weight={500}
               ink={gold}

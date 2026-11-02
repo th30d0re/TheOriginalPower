@@ -20,24 +20,24 @@ const move = (ms: number, at: number, duration = 650) => cubicInOut(progress(ms,
 const pulseAmount = (ms: number, at: number) => Math.max(0, 1 - Math.abs(ms - (at + 200)) / 300);
 
 export const LITERATURE_BOUNDARY_LAYOUT = {
-  literatureField: {x: 120, y: 170, w: 1140, h: 680},
+  literatureField: {x: 120, y: 170, w: 1140, h: 560},
   fieldHeading: {x: 160, y: 200, w: 900, h: 44},
   blocks: [
-    {x: 160, y: 310, w: 340, h: 250},
-    {x: 520, y: 310, w: 340, h: 250},
-    {x: 880, y: 310, w: 340, h: 250},
+    {x: 160, y: 270, w: 340, h: 230},
+    {x: 520, y: 270, w: 340, h: 230},
+    {x: 880, y: 270, w: 340, h: 230},
   ] as const satisfies readonly Box[],
-  bracket: {x: 200, y: 615, w: 980, h: 75},
-  standardDefinitions: {x: 450, y: 720, w: 480, h: 36},
+  bracket: {x: 200, y: 535, w: 980, h: 65},
+  standardDefinitions: {x: 450, y: 645, w: 480, h: 36},
 
-  terminalColumn: {x: 1300, y: 170, w: 60, h: 680},
-  terminalLeftLine: [[1300, 170], [1300, 850]] as const satisfies readonly Point[],
-  terminalRightLine: [[1360, 170], [1360, 850]] as const satisfies readonly Point[],
-  terminalLabelBox: {x: 1305, y: 220, w: 50, h: 580},
+  terminalColumn: {x: 1300, y: 170, w: 60, h: 560},
+  terminalLeftLine: [[1300, 170], [1300, 730]] as const satisfies readonly Point[],
+  terminalRightLine: [[1360, 170], [1360, 730]] as const satisfies readonly Point[],
+  terminalLabelBox: {x: 1305, y: 200, w: 50, h: 500},
 
-  turn63Field: {x: 1420, y: 260, w: 380, h: 500},
-  turn63Label: {x: 1440, y: 290, w: 340, h: 64},
-  turn63Socket: {x: 1440, y: 380, w: 340, h: 340},
+  turn63Field: {x: 1400, y: 170, w: 420, h: 560},
+  turn63Label: {x: 1420, y: 196, w: 380, h: 64},
+  turn63Socket: {x: 1420, y: 280, w: 380, h: 420},
 
   source: {x: 116, y: 964, w: 740, h: 26},
 } as const;
@@ -158,14 +158,14 @@ export function LiteratureBoundary({segment}: SceneProps) {
           <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position: 'absolute', inset: 0}}>
             <path
               {...lineAttrs('terminal-boundary-line-left', L.terminalLeftLine)}
-              d="M1300 170 L1300 850"
+              d="M1300 170 L1300 730"
               fill="none"
               stroke={raceRed}
               strokeWidth="2"
             />
             <path
               {...lineAttrs('terminal-boundary-line-right', L.terminalRightLine)}
-              d="M1360 170 L1360 850"
+              d="M1360 170 L1360 730"
               fill="none"
               stroke={raceRed}
               strokeWidth="2"
@@ -195,26 +195,54 @@ export function LiteratureBoundary({segment}: SceneProps) {
         </div>
       )}
 
-      {/* Turn-63 Handoff Field */}
+      {/* Structural Argument Handoff Field */}
       {ms >= cue.t62Psychology && (
-        <div data-field="turn-63-handoff" style={{opacity: psychologyP}}>
-          <Panel id="turn-63-handoff-frame" box={L.turn63Field} accent="color/line/hairline" />
+        <div data-field="structural-handoff" style={{opacity: psychologyP}}>
+          <Panel id="structural-handoff-frame" box={L.turn63Field} accent="color/line/hairline" />
           <Label
-            id="turn-63-argument-label"
+            id="structural-handoff-label"
             box={L.turn63Label}
             size={22}
             weight={650}
             sans
             ink={gold}
           >
-            TURN 63 · STRUCTURAL ARGUMENT BEGINS
+            THE ORIGINAL POWER · STRUCTURAL ARGUMENT
           </Label>
           <Panel
             id="structural-continuation-socket"
             box={L.turn63Socket}
-            style={{borderStyle: 'dashed', borderWidth: 2, background: 'transparent'}}
-            accent="color/line/hairline-strong"
+            style={{borderStyle: 'solid', borderWidth: 1, background: color('color/fill/panel-wash')}}
+            accent="color/fill/gold"
           />
+          <Label
+            id="structural-subject-title"
+            box={{x: 1440, y: 304, w: 340, h: 104}}
+            size={24}
+            weight={650}
+            sans
+            ink={primary}
+          >
+            RACISM AS AN INSTITUTIONAL EXTRACTION SYSTEM
+          </Label>
+          <Label
+            id="structural-equation-label"
+            box={{x: 1440, y: 430, w: 340, h: 40}}
+            size={20}
+            weight={600}
+            ink={gold}
+          >
+            STATED IN EQUATIONS
+          </Label>
+          <Label
+            id="structural-archives-label"
+            box={{x: 1440, y: 510, w: 340, h: 56}}
+            size={20}
+            weight={500}
+            ink={color('color/text/soft')}
+          >
+            TESTED AGAINST HISTORICAL ARCHIVES
+          </Label>
         </div>
       )}
 

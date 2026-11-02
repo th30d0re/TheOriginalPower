@@ -58,11 +58,12 @@ function render(scene: SceneName, ms: number) {
 }
 
 function plain(html: string) {
-  return html.replace(/<[^>]+>/g, '').replaceAll('&amp;', '&').replaceAll('&quot;', '"').replaceAll('&#x27;', "'").replaceAll('&#39;', "'").replaceAll('&gt;', '>').replaceAll('&lt;', '<').replace(/\s+/g, ' ').trim();
+  return html.replace(/<[^>]+>/g, ' ').replaceAll('&amp;', '&').replaceAll('&quot;', '"').replaceAll('&#x27;', "'").replaceAll('&#39;', "'").replaceAll('&gt;', '>').replaceAll('&lt;', '<').replace(/\s+/g, ' ').trim();
 }
 
 const renderedUnderscoreText = (html: string) => [...html.matchAll(/>([^<>]*_[A-Za-z{][^<>]*)</g)].map(match => match[1].trim()).filter(Boolean);
 const interactionHint = /\b(?:click|drag|hover|tap|swipe|press|arrow keys)\b/i;
+const internalTurnPattern = /\bturn \d+\b/i;
 
 const frames: {scene: SceneName; ms: number; kind: string}[] = [];
 for (const scene of Object.keys(sceneComponents) as SceneName[]) {
@@ -91,6 +92,7 @@ for (const {scene, kind, ms, html} of rendered) {
   const underscores = renderedUnderscoreText(html);
   assert.deepEqual(underscores, [], `${scene} at ${kind} (${ms} ms) rendered literal subscripts: ${underscores.join(', ')}`);
   assert.ok(!interactionHint.test(plain(html)), `${scene} at ${kind} (${ms} ms) contains an interaction hint`);
+  assert.ok(!internalTurnPattern.test(plain(html)), `${scene} at ${kind} (${ms} ms) contains an internal turn label`);
 }
 
 function beat(scene: SceneName, cue: string, opts: {text?: string[]; markup?: string[]}, absentBeforeCue?: string) {
@@ -103,7 +105,12 @@ function beat(scene: SceneName, cue: string, opts: {text?: string[]; markup?: st
   for (const earlier of byKind(scene)) {
     if (earlier.ms >= threshold - 1) continue;
     const earlierText = plain(earlier.html);
-    for (const expected of opts.text ?? []) assert.ok(!earlierText.includes(expected), `${scene} at ${earlier.kind} already contains “${expected}”`);
+    for (const expected of opts.text ?? []) {
+      // Use word-boundary lookahead to prevent e.g. "GROUP A" matching inside "GROUP ANTIPATHY"
+      const escaped = expected.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const present = new RegExp(`\\b${escaped}\\b`).test(earlierText);
+      assert.ok(!present, `${scene} at ${earlier.kind} already contains “${expected}”`);
+    }
   }
   return frame.html;
 }
@@ -116,16 +123,18 @@ beat('UnequalTreatment', 't55Unequal', {text: ['UNEQUAL TREATMENT']});
 beat('UnequalTreatment', 't55Membership', {text: ['GROUP MEMBERSHIP']});
 
 beat('UnequalTreatment', 't56Unequal', {
-  text: ['DISCRIMINATION · OBSERVABLE ACTION', 'PERSON-TO-PERSON UNEQUAL TREATMENT'],
+  text: ['PERSON-TO-PERSON UNEQUAL TREATMENT'],
 });
-beat('UnequalTreatment', 't56Exclusion', {text: ['VERBAL EXCLUSION']});
-beat('UnequalTreatment', 't56Customer', {text: ['WORSE CUSTOMER SERVICE']});
-beat('UnequalTreatment', 't56Grading', {text: ['BIASED GRADING']});
+beat('UnequalTreatment', 't56Exclusion', {text: ['VERBAL EXCLUSION', 'SPEECH BOUNDARY']});
+beat('UnequalTreatment', 't56Customer', {text: ['WORSE CUSTOMER SERVICE', 'SERVICE COUNTER']});
+beat('UnequalTreatment', 't56Grading', {text: ['BIASED GRADING', 'GRADING SHEET']});
 beat('UnequalTreatment', 't56Refusing', {text: ['RENTAL REFUSAL']});
 beat('UnequalTreatment', 't56Qualified', {text: ['QUALIFIED TENANT']});
 
 // Beat assertions: InterpersonalClass
-beat('InterpersonalClass', 't57Look', {text: ['BIAS', 'PREJUDICE', 'DISCRIMINATION']});
+beat('InterpersonalClass', 't57Look', {
+  text: ['BIAS', 'PREJUDICE', 'DISCRIMINATION', 'STARTING TENDENCY', 'GROUP ANTIPATHY', 'UNEQUAL TREATMENT'],
+});
 beat('InterpersonalClass', 't57Bias', {text: ['GREENWALD & BANAJI 1995']});
 beat('InterpersonalClass', 't57Prejudice', {text: ['ALLPORT 1954']});
 beat('InterpersonalClass', 't57Discrimination', {text: ['FISKE 1998']});
@@ -141,7 +150,7 @@ beat('InterpersonalClass', 't59Skin', {text: ['ANY SKIN COLOR']});
 beat('InterpersonalClass', 't59Ancestry', {text: ['ANY ANCESTRY']});
 beat('InterpersonalClass', 't59Bias', {text: ['MENTAL BIAS']});
 beat('InterpersonalClass', 't59Hostility', {text: ['RIGID HOSTILITY']});
-beat('InterpersonalClass', 't59Treat', {text: ['UNEQUAL TREATMENT']});
+beat('InterpersonalClass', 't59Treat', {text: ['UNEQUAL TREATMENT'], markup: ['data-text="unequal-treatment-t59-label"']}, 't57Look');
 
 beat('InterpersonalClass', 't60PersonToPerson', {text: ['PERSON-TO-PERSON ACTIONS']});
 beat('InterpersonalClass', 't60Zero', {text: ['REQUIRES ZERO CONTROL OVER']});
@@ -167,7 +176,14 @@ beat('LiteratureBoundary', 't62Literature', {
 beat('LiteratureBoundary', 't62Ends', {text: ['ESTABLISHED LITERATURE ENDS HERE']});
 beat('LiteratureBoundary', 't62PersonToPerson', {text: ['PERSON-TO-PERSON OPERATIONS']});
 beat('LiteratureBoundary', 't62Standard', {text: ['STANDARD DEFINITIONS']});
-beat('LiteratureBoundary', 't62Psychology', {text: ['TURN 63 · STRUCTURAL ARGUMENT BEGINS']});
+beat('LiteratureBoundary', 't62Psychology', {
+  text: [
+    'THE ORIGINAL POWER · STRUCTURAL ARGUMENT',
+    'RACISM AS AN INSTITUTIONAL EXTRACTION SYSTEM',
+    'STATED IN EQUATIONS',
+    'TESTED AGAINST HISTORICAL ARCHIVES',
+  ],
+});
 
 // Layout audit: safe area, notch zones, text fit, and collisions at every sampled frame.
 const selfTests = auditSelfTest();
@@ -178,6 +194,59 @@ for (const {scene, kind, ms, html} of rendered) {
   items += auditItems(html).length;
 }
 assert.deepEqual(violations, [], `layout audit failed:\n${violations.slice(0, 40).join('\n')}`);
+
+// Fill-ratio assertion:
+// Every box on screen holds its content at its last beat. All panels, cards, and windows are populated.
+// At each scene's last frame, every declared data-shape frame (with effective opacity >= 0.05) must contain
+// declared text boxes that cover enough of its geometry.
+// Documented thresholds:
+//   - An empty container (0 text boxes) is a defect.
+//   - Either area fill ratio >= 0.18 (18% of frame area covered by declared text boxes),
+//   - OR vertical span ratio >= 0.45 (declared text bounds cover at least 45% of the frame's height),
+// ensuring every container is sized to its content and holds its storyboard content.
+const MIN_AREA_FILL_RATIO = 0.18;
+const MIN_VERTICAL_SPAN_RATIO = 0.45;
+
+function checkFillRatio(html: string, context: string) {
+  const audited = auditItems(html);
+  const frames = audited.filter(item => item.role === 'frame' && item.opacity >= 0.05);
+  const texts = audited.filter(item => item.role === 'text' && item.opacity >= 0.05);
+
+  for (const f of frames) {
+    const inside = texts.filter(
+      t => t.x >= f.x - 4 && t.y >= f.y - 4 && t.x + t.w <= f.x + f.w + 4 && t.y + t.h <= f.y + f.h + 4,
+    );
+    assert.ok(
+      inside.length > 0,
+      `${context}: container "${f.id}" (${f.w}×${f.h} at [${f.x}, ${f.y}]) is empty with 0 text boxes inside`,
+    );
+
+    const textArea = inside.reduce((sum, t) => sum + t.w * t.h, 0);
+    const frameArea = f.w * f.h;
+    const areaFillRatio = textArea / frameArea;
+
+    const minY = Math.min(...inside.map(t => t.y));
+    const maxY = Math.max(...inside.map(t => t.y + t.h));
+    const verticalSpanRatio = (maxY - minY) / f.h;
+
+    const passes = areaFillRatio >= MIN_AREA_FILL_RATIO || verticalSpanRatio >= MIN_VERTICAL_SPAN_RATIO;
+    assert.ok(
+      passes,
+      `${context}: container "${f.id}" (${f.w}×${f.h}) underfilled: area ratio ${areaFillRatio.toFixed(3)} < ${MIN_AREA_FILL_RATIO} and vertical span ratio ${verticalSpanRatio.toFixed(3)} < ${MIN_VERTICAL_SPAN_RATIO}`,
+    );
+  }
+}
+
+// Assert fill ratio at every scene's last frame
+for (const scene of Object.keys(sceneComponents) as SceneName[]) {
+  const lastFrame = rendered.find(frame => frame.scene === scene && frame.kind === 'end')!;
+  assert.ok(lastFrame, `missing end frame for ${scene}`);
+  checkFillRatio(lastFrame.html, `${scene} at end frame`);
+}
+
+// Also assert fill ratio at major beat settled states
+checkFillRatio(byKind('UnequalTreatment').find(f => f.kind === 't55Membership')!.html, 'UnequalTreatment at t55Membership');
+checkFillRatio(byKind('InterpersonalClass').find(f => f.kind === 't60Military')!.html, 'InterpersonalClass at t60Military');
 
 // Structural checks:
 // Turn 56 clears Turn 55 pipeline: turn 55 markup absent in turn 56.
@@ -199,5 +268,5 @@ for (const cue of ['t62Ends', 't62Bias', 't62Prejudice', 't62Discrimination', 't
 }
 
 console.log(
-  `PASS: audit self-test (${selfTests} rules); ${rendered.length} Package H frames (cues + 500 ms grid); layout audit of ${items} declared boxes (safe area, notch zones, text fit, collisions); clean turn transitions, storyboard strings, hook, underscore and interaction-hint policies verified.`,
+  `PASS: audit self-test (${selfTests} rules); ${rendered.length} Package H frames (cues + 500 ms grid); layout audit of ${items} declared boxes (safe area, notch zones, text fit, collisions); fill-ratio assert verified on all scene end frames; clean turn transitions, storyboard strings, hook, underscore, internal-turn and interaction-hint policies verified.`,
 );

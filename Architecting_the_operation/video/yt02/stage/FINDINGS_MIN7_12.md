@@ -789,3 +789,101 @@ Execute fix pass 1 for minutes 7–12 Package F based on frame reviews of `min7_
 ### Unverified remainder
 
 - Video rendering was not run locally because Chromium rendering is performed by the orchestrator. Frame validation relies on the static layout audit, deterministic StaticMarkup evaluation, and automated fill-ratio checks.
+
+## Fix pass 1 (Package H)
+
+Model: Gemini 3.8 Flash (High)  
+Checkpoint: `cb4501a`
+
+### What was requested
+
+Execute fix pass 1 for minutes 7–12 Package H based on frame reviews of `min7_12_H_v1.mp4`:
+- Enforce the new layout invariant: every box on screen holds its content at its last beat; all panels, cards, and windows are populated.
+- Add an automated fill-ratio assert to `tools/check_min7_12_h.tsx` with documented thresholds (area fill ratio ≥ 0.18 OR vertical span ratio ≥ 0.45, zero empty containers).
+- Add an assert to `tools/check_min7_12_h.tsx` verifying no on-screen text matches `/\bturn \d+\b/i`.
+- Fix `UnequalTreatment` (turns 55–56, frames `e676`, `e683`, `e690`):
+  - Eliminate empty placeholder frames at `e676`. Render boxes strictly as their spoken content arrives.
+  - Sizing the outer pipeline panel to its content, removing the dead vertical space beneath the nodes.
+  - Sizing the treatment tray panel to its content. Lay out all four card slots from the start, filled as each action is spoken: verbal exclusion, worse customer service, biased grading, rental refusal.
+  - Remove the ghost header tab from the top left of the treatment tray.
+- Fix `InterpersonalClass` (turns 57–61, frames `e698`, `e705`, `e712`, `e718`, `e726`, `e735`):
+  - Keep one full-frame composition across all five turns, eliminating the empty lower half at `e698` and `e735`.
+  - Populate term blocks with the one-line summaries `STARTING TENDENCY`, `GROUP ANTIPATHY`, and `UNEQUAL TREATMENT`.
+  - Allocate a dedicated region for the state-power rack in turn 60 (`{x: 1240, y: 460, w: 560, h: 440}`) with heading `REQUIRES ZERO CONTROL OVER` and render all five items at full strength.
+  - Remove the ghost header at `e745`, showing one clear title without duplicate underlying labels.
+- Fix `LiteratureBoundary` (turn 62, frames `e745`, `e751`):
+  - Sizing the literature panel to its content, removing dead space in its lower half.
+  - Replace the internal label `TURN 63 · STRUCTURAL ARGUMENT BEGINS` with the storyboard string `THE ORIGINAL POWER · STRUCTURAL ARGUMENT`.
+  - Replace the empty dashed frame with the structural preview card displaying racism as an institutional extraction system, stated in equations and tested against historical archives.
+- Verify episode TypeScript, the updated Package H checker, all prior stage checkers, and `tools/check_antithesis.py`.
+
+### How I fixed it
+
+1. **UnequalTreatment layout compaction and complete card layouts**:
+   - Sized the outer pipeline panel `pipeline` to `{x: 120, y: 260, w: 1680, h: 420}` and node panels to `{y: 280, h: 310}`, removing dead space beneath the three nodes.
+   - Guarded node outline frames to render only when their spoken cues arrive (`hostility-field-frame` at `cue.t55Hostility`, `action-vector-frame` at `cue.t55Unequal`). Marked internal vector graphics with `data-role="mark"` to keep frame audits focused on structural content containers.
+   - Sized `treatmentTray` to `{x: 120, y: 230, w: 1680, h: 540}` with a single header `PERSON-TO-PERSON UNEQUAL TREATMENT`. Removed the duplicate ghost header tab.
+   - Established all four card slots (`cardVerbal`, `cardCustomer`, `cardGrading`, `cardApartment`) at turn 56 start with height 390 px, populated with category headers, vector icon glyphs, spoken titles, and bottom domain tags (`SPEECH BOUNDARY`, `SERVICE COUNTER`, `GRADING SHEET`, `QUALIFIED TENANT`).
+
+2. **InterpersonalClass full-frame balance and state rack**:
+   - Maintained `GroupDirectionField` with person marks across turns 57–61, sustaining a balanced composition throughout the entire scene.
+   - Conditioned boundary labels to render on cue `t58Direction` (`leftLabel={ms >= cue.t58Direction ? 'GROUP A' : ''}`), preserving term-absence invariants for preceding frames.
+   - Sized term triad blocks to `{y: 170, h: 180}` and populated them with one-line summaries `STARTING TENDENCY`, `GROUP ANTIPATHY`, and `UNEQUAL TREATMENT`.
+   - Constructed the state-power rack in turn 60 at `{x: 1240, y: 460, w: 560, h: 440}` with header `REQUIRES ZERO CONTROL OVER` and five full-strength item panels: state legislatures, appellate courts, police departments, credit markets, and military force.
+   - Guarded `directionLabel` with `!isTurn61` to prevent boundary label collisions with the turn 61 assignment strip. Positioned turn 59 ubiquity labels at `y: 456` and the unequal treatment label at `{x: 855, y: 672, w: 210, h: 28}` within the central gutter, clearing all bracket label and arrow paths.
+   - Consolidated the turn 61 book strip header into a single label `THE ORIGINAL POWER · INTERPERSONAL CLASS OF SOCIAL BEHAVIOR`, eliminating faint ghost text.
+
+3. **LiteratureBoundary panel sizing and structural preview card**:
+   - Sized `literatureField` to `{x: 120, y: 170, w: 1140, h: 560}` and matched `terminalColumn` to `{x: 1300, y: 170, w: 60, h: 560}`, eliminating dead lower space.
+   - Replaced internal turn indicator with header `THE ORIGINAL POWER · STRUCTURAL ARGUMENT` in a dedicated label box.
+   - Replaced empty dashed frame with a solid continuation socket card at `{x: 1420, y: 280, w: 380, h: 420}` holding three structured statements: `RACISM AS AN INSTITUTIONAL EXTRACTION SYSTEM` (box `340 × 104`), `STATED IN EQUATIONS` (`340 × 40`), and `TESTED AGAINST HISTORICAL ARCHIVES` (`340 × 56`).
+
+4. **Automated fill-ratio and internal-label assertions**:
+   - Added `checkFillRatio` to `tools/check_min7_12_h.tsx` verifying that every active `data-shape="frame"` container satisfies `areaFillRatio >= 0.18` or `verticalSpanRatio >= 0.45`, with zero empty containers. Asserted this invariant at every scene end frame and major settled beats (`t55Membership`, `t60Military`).
+   - Added regex assertion `!/\bturn \d+\b/i.test(plain(html))` verifying zero internal turn labels appear in rendered output.
+
+### Challenges encountered
+
+1. **Substring collision in term-absence checking**:
+   - The brief required adding the one-line summary `GROUP ANTIPATHY` to the prejudice term block at turn 57 (`t57Look`). The absence check at `t58Direction` verified that `'GROUP A'` was absent before turn 58. Because the substring `'GROUP A'` is the leading prefix of `'GROUP ANTIPATHY'`, string inclusion `.includes('GROUP A')` triggered a false positive assertion failure.
+   - Resolved the check by testing word boundaries with `new RegExp('\\b' + escaped + '\\b')` on plain-text frames, correctly distinguishing isolated label tokens from compound words while preserving strict absence checks.
+2. **Text fitting on multi-line continuation title**:
+   - Typesetting `RACISM AS AN INSTITUTIONAL EXTRACTION SYSTEM` in IBM Plex Sans 24 px required three wrapped lines totaling 90 px height. The original box height of 72 px triggered a layout audit overflow error.
+   - Expanded the label box height to 104 px within the 420 px continuation socket, ensuring generous clearance for text fitting.
+3. **Turn 61 assignment strip boundary clearance**:
+   - Unconditional rendering of `directionLabel` (`ANY DIRECTION BETWEEN ANY TWO SOCIAL GROUPS`) persisted across turn 61, crossing the top edge of `book-assignment-strip` at `y: 745`.
+   - Guarded the direction label with `!isTurn61`, hiding it when the turn 61 assignment strip takes over the safe area.
+
+### Next ideas (6 Ideas)
+
+1. Introduce an automated fill-ratio check into `tools/layout_audit.ts` to standardize content density validation across all stage suites.
+2. Build an `InstitutionsRack` shared component in `min7_12/shared/` that formalizes icon-and-label rack layouts with sequential entrance sweeps.
+3. Create a unified `ContinuationCard` component for section-handoff frames that enforces title, formula, and empirical citation slot spacing.
+4. Parameterize `GroupDirectionField` with an explicit label suppression prop for early turns where boundary containers appear before label text is spoken.
+5. Add layout audit rules that automatically detect substring collisions between term summaries and variable names.
+6. Provide automatic vertical centering helpers for card contents that maintain balanced spacing when supplementary tags are omitted.
+
+### Checks
+
+- Episode TypeScript: `npx --prefix /Users/emmanuel/Documents/Theory/scriptCast-stage/video tsc --noEmit -p Architecting_the_operation/video/yt02/stage` exits 0 with zero diagnostics.
+- `check_min7_12_h` tail:
+  - `PASS: 227 Package H frames rendered in two fresh processes; all markup hashes match.`
+  - `PASS: audit self-test (10 rules); 227 Package H frames (cues + 500 ms grid); layout audit of 5975 declared boxes (safe area, notch zones, text fit, collisions); fill-ratio assert verified on all scene end frames; clean turn transitions, storyboard strings, hook, underscore, internal-turn and interaction-hint policies verified.`
+- `check_min7_12_shared` tail: `PASS: 25 min7_12-shared states rendered in two fresh processes; all markup hashes match. PASS: audit self-test (10 rules); 25 min7_12 shared-component states; layout audit of 171 declared boxes …`
+- `check_min7_12_f` tail: `PASS: 223 Package F frames rendered in two fresh processes; all markup hashes match. PASS: audit self-test (10 rules); 223 Package F frames (cues + 500 ms grid); layout audit of 3858 declared boxes …`
+- `check_equations` tail: `PASS: 14 equation frames rendered in two fresh processes; all markup hashes match. PASS: 14 equation frames; 111 registered coloured terms; 11 pulse cues peak at cue + 200 ms and rest after 600 ms; Eq. 2.5 and Eq. 2.8a are verbatim with MathText subscripts.`
+- `check_first_minute` tail: `PASS: 43 cue-derived frames; five scene contracts, manuscript strings, real subscripts, hook policy, underscore policy, and interaction-hint policy verified; …`
+- `check_roadmap_boot` tail: `PASS: RoadmapBoot renders 17 deterministic frames; 13 labels land on their cues and are absent before; …`
+- `check_minute_two` tail: `PASS: 44 cue-derived frames; exact definition spacing …; Figure 2.3 layer widths 598 / 483 / 368 px in the ratio 5.2 : 4.2 : 3.2.`
+- `check_dashboard` tail: `PASS: Equal Earth route 1296 samples / 0 land hits …; all 24 tray modes plus 3 Wage plane modes; …no rendered interaction hints; 75 polities with 16 non-colliding labels.`
+- `check_min3_7_shared` tail: `PASS: 25 representative shared-component states; eleven component contracts, hook policy, underscore policy, Gaussian curves, … Posterior modes: 0.280460 / 0.499174 / 0.718096.`
+- `check_min3_7_a` tail: `PASS: audit self-test (10 rules); 47 Package A cue-derived frames; 1282 audited boxes; …`
+- `check_min3_7_b` tail: `PASS: audit self-test (10 rules); 43 Package B cue-derived frames; 1146 audited boxes; …`
+- `check_min3_7_c` tail: `PASS: audit self-test (10 rules); 195 Package C frames (cues + 500 ms grid); layout audit of 6799 declared boxes …`
+- `check_min3_7_d` tail: `PASS: audit self-test (10 rules); 211 Package D frames (cues + 500 ms grid); layout audit of 5306 declared boxes over 211 frames …; monotonic posterior sweep 0.2800 → 0.6755 (prior 0.72).`
+- `tools/check_antithesis.py` on all package H files, tool checks, and findings: `check-antithesis: no banned constructions found.`
+
+### Unverified remainder
+
+- Video rendering was not run locally because Chromium video rendering is performed by the orchestrator. Visual validation relies on static layout audits, deterministic static markup comparisons, and automated fill-ratio checks.
+

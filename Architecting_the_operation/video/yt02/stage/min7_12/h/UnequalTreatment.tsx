@@ -16,21 +16,20 @@ const enter = (ms: number, at: number, duration = 520) => cubicOut(progress(ms, 
 const move = (ms: number, at: number, duration = 650) => cubicInOut(progress(ms, at, at + duration));
 
 export const UNEQUAL_TREATMENT_LAYOUT = {
-  pipeline: {x: 120, y: 220, w: 1680, h: 570},
-  stereotypeNode: {x: 140, y: 310, w: 460, h: 350},
-  prejudiceNode: {x: 730, y: 310, w: 460, h: 350},
-  discriminationNode: {x: 1320, y: 310, w: 460, h: 350},
-  pipelineArrow1: [[600, 485], [730, 485]] as const satisfies readonly Point[],
-  pipelineArrow2: [[1190, 485], [1320, 485]] as const satisfies readonly Point[],
+  pipeline: {x: 120, y: 260, w: 1680, h: 420},
+  stereotypeNode: {x: 140, y: 280, w: 460, h: 310},
+  prejudiceNode: {x: 730, y: 280, w: 460, h: 310},
+  discriminationNode: {x: 1320, y: 280, w: 460, h: 310},
+  pipelineArrow1: [[600, 435], [730, 435]] as const satisfies readonly Point[],
+  pipelineArrow2: [[1190, 435], [1320, 435]] as const satisfies readonly Point[],
 
-  treatmentTray: {x: 110, y: 220, w: 1700, h: 640},
-  discriminationTab: {x: 140, y: 232, w: 460, h: 44},
-  trayHeading: {x: 140, y: 284, w: 780, h: 36},
+  treatmentTray: {x: 110, y: 230, w: 1700, h: 540},
+  trayHeading: {x: 140, y: 254, w: 1000, h: 38},
   cards: [
-    {x: 140, y: 330, w: 380, h: 410},
-    {x: 560, y: 330, w: 380, h: 410},
-    {x: 980, y: 330, w: 380, h: 410},
-    {x: 1400, y: 330, w: 380, h: 410},
+    {x: 140, y: 310, w: 380, h: 430},
+    {x: 560, y: 310, w: 380, h: 430},
+    {x: 980, y: 310, w: 380, h: 430},
+    {x: 1400, y: 310, w: 380, h: 430},
   ] as const satisfies readonly Box[],
   source: {x: 116, y: 964, w: 740, h: 26},
 } as const;
@@ -90,7 +89,7 @@ export function UnequalTreatment({segment}: SceneProps) {
   // Token interpolation across the pipeline
   const tokenProgress = clamp01(progress(ms, cue.t55Membership, cue.t56Unequal));
   const tokenX = 230 + tokenProgress * (1410 - 230);
-  const tokenBox: Box = {x: tokenX, y: 590, w: 260, h: 46};
+  const tokenBox: Box = {x: tokenX, y: 610, w: 260, h: 46};
 
   return (
     <StageSceneFrame segment={segment}>
@@ -102,8 +101,8 @@ export function UnequalTreatment({segment}: SceneProps) {
           {/* Node 1: Stereotype */}
           <Panel id="stereotype-node" box={L.stereotypeNode} />
           <div
-            {...shapeAttrs('glyph-stereotype', {x: 164, y: 334, w: 52, h: 52}, 'mark', 'glyph')}
-            style={{position: 'absolute', left: 164, top: 334, width: 52, height: 52, color: primary}}
+            {...shapeAttrs('glyph-stereotype', {x: 164, y: 300, w: 52, h: 52}, 'mark', 'glyph')}
+            style={{position: 'absolute', left: 164, top: 300, width: 52, height: 52, color: primary}}
           >
             <svg width="52" height="52" viewBox="0 0 48 48" aria-hidden="true">
               {[0, 1, 2].flatMap(row =>
@@ -126,7 +125,7 @@ export function UnequalTreatment({segment}: SceneProps) {
           </div>
           <Label
             id="stereotype-title"
-            box={{x: 232, y: 340, w: 340, h: 42}}
+            box={{x: 232, y: 304, w: 340, h: 42}}
             size={32}
             weight={650}
             sans
@@ -137,7 +136,7 @@ export function UnequalTreatment({segment}: SceneProps) {
           {ms >= cue.t55Stereotype && (
             <Label
               id="stereotype-sublabel"
-              box={{x: 164, y: 406, w: 412, h: 34}}
+              box={{x: 164, y: 366, w: 412, h: 34}}
               size={22}
               weight={500}
               ink={gold}
@@ -149,11 +148,11 @@ export function UnequalTreatment({segment}: SceneProps) {
 
           {/* Belief grid visual inside node 1 */}
           <div
-            {...shapeAttrs('belief-grid-frame', {x: 230, y: 460, w: 120, h: 90}, 'frame')}
+            {...shapeAttrs('belief-grid-frame', {x: 230, y: 420, w: 120, h: 90}, 'mark')}
             style={{
               position: 'absolute',
               left: 230,
-              top: 460,
+              top: 420,
               width: 120,
               height: 90,
               border: `1px dashed ${color('color/line/hairline')}`,
@@ -180,7 +179,7 @@ export function UnequalTreatment({segment}: SceneProps) {
           <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position: 'absolute', inset: 0}}>
             <path
               {...lineAttrs('pipeline-arrow-1', L.pipelineArrow1)}
-              d="M600 485 L730 485"
+              d="M600 435 L730 435"
               fill="none"
               stroke={gold}
               strokeWidth="4"
@@ -195,11 +194,11 @@ export function UnequalTreatment({segment}: SceneProps) {
             accent={ms >= cue.t55Prejudice ? 'color/marker/race' : undefined}
           />
           <div
-            {...shapeAttrs('glyph-prejudice', {x: 754, y: 334, w: 52, h: 52}, 'mark', 'glyph')}
+            {...shapeAttrs('glyph-prejudice', {x: 754, y: 300, w: 52, h: 52}, 'mark', 'glyph')}
             style={{
               position: 'absolute',
               left: 754,
-              top: 334,
+              top: 300,
               width: 52,
               height: 52,
               color: ms >= cue.t55Prejudice ? raceRed : muted,
@@ -217,7 +216,7 @@ export function UnequalTreatment({segment}: SceneProps) {
           </div>
           <Label
             id="prejudice-title"
-            box={{x: 822, y: 340, w: 340, h: 42}}
+            box={{x: 822, y: 304, w: 340, h: 42}}
             size={32}
             weight={650}
             sans
@@ -228,7 +227,7 @@ export function UnequalTreatment({segment}: SceneProps) {
           {ms >= cue.t55Hostility && (
             <Label
               id="prejudice-sublabel"
-              box={{x: 754, y: 406, w: 412, h: 34}}
+              box={{x: 754, y: 366, w: 412, h: 34}}
               size={22}
               weight={500}
               ink={raceRed}
@@ -239,39 +238,41 @@ export function UnequalTreatment({segment}: SceneProps) {
           )}
 
           {/* Heart field visual inside node 2 */}
-          <div
-            {...shapeAttrs('hostility-field-frame', {x: 820, y: 460, w: 100, h: 90}, 'frame')}
-            style={{
-              position: 'absolute',
-              left: 820,
-              top: 460,
-              width: 100,
-              height: 90,
-              border: `1px solid ${ms >= cue.t55Prejudice ? raceRed : color('color/line/hairline')}`,
-              borderRadius: 8,
-              background: ms >= cue.t55Prejudice ? color('color/fill/panel-wash') : 'transparent',
-            }}
-          >
-            <svg width="100" height="90" viewBox="0 0 100 90" aria-hidden="true">
-              <circle
-                cx="50"
-                cy="45"
-                r="30"
-                fill="none"
-                stroke={raceRed}
-                strokeWidth="2"
-                strokeDasharray="4 4"
-                opacity={hostilityP}
-              />
-              <circle cx="50" cy="45" r="16" fill={raceRed} opacity={hostilityP * 0.45} />
-            </svg>
-          </div>
+          {ms >= cue.t55Hostility && (
+            <div
+              {...shapeAttrs('hostility-field-frame', {x: 820, y: 420, w: 100, h: 90}, 'mark')}
+              style={{
+                position: 'absolute',
+                left: 820,
+                top: 420,
+                width: 100,
+                height: 90,
+                border: `1px solid ${raceRed}`,
+                borderRadius: 8,
+                background: color('color/fill/panel-wash'),
+                opacity: hostilityP,
+              }}
+            >
+              <svg width="100" height="90" viewBox="0 0 100 90" aria-hidden="true">
+                <circle
+                  cx="50"
+                  cy="45"
+                  r="30"
+                  fill="none"
+                  stroke={raceRed}
+                  strokeWidth="2"
+                  strokeDasharray="4 4"
+                />
+                <circle cx="50" cy="45" r="16" fill={raceRed} opacity={0.45} />
+              </svg>
+            </div>
+          )}
 
           {/* Pipeline Arrow 2 */}
           <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position: 'absolute', inset: 0}}>
             <path
               {...lineAttrs('pipeline-arrow-2', L.pipelineArrow2)}
-              d="M1190 485 L1320 485"
+              d="M1190 435 L1320 435"
               fill="none"
               stroke={orange}
               strokeWidth="4"
@@ -286,11 +287,11 @@ export function UnequalTreatment({segment}: SceneProps) {
             accent={ms >= cue.t55Discrimination ? 'color/text/accent' : undefined}
           />
           <div
-            {...shapeAttrs('glyph-discrimination', {x: 1344, y: 334, w: 52, h: 52}, 'mark', 'glyph')}
+            {...shapeAttrs('glyph-discrimination', {x: 1344, y: 300, w: 52, h: 52}, 'mark', 'glyph')}
             style={{
               position: 'absolute',
               left: 1344,
-              top: 334,
+              top: 300,
               width: 52,
               height: 52,
               color: ms >= cue.t55Discrimination ? orange : muted,
@@ -309,7 +310,7 @@ export function UnequalTreatment({segment}: SceneProps) {
           </div>
           <Label
             id="discrimination-title"
-            box={{x: 1412, y: 340, w: 340, h: 42}}
+            box={{x: 1412, y: 304, w: 340, h: 42}}
             size={32}
             weight={650}
             sans
@@ -320,7 +321,7 @@ export function UnequalTreatment({segment}: SceneProps) {
           {ms >= cue.t55Unequal && (
             <Label
               id="discrimination-sublabel"
-              box={{x: 1344, y: 406, w: 412, h: 34}}
+              box={{x: 1344, y: 366, w: 412, h: 34}}
               size={22}
               weight={500}
               ink={orange}
@@ -331,30 +332,32 @@ export function UnequalTreatment({segment}: SceneProps) {
           )}
 
           {/* Action glyph visual inside node 3 */}
-          <div
-            {...shapeAttrs('action-vector-frame', {x: 1410, y: 475, w: 120, h: 60}, 'frame')}
-            style={{
-              position: 'absolute',
-              left: 1410,
-              top: 475,
-              width: 120,
-              height: 60,
-              border: `1px solid ${ms >= cue.t55Discrimination ? orange : color('color/line/hairline')}`,
-              borderRadius: 6,
-            }}
-          >
-            <svg width="120" height="60" viewBox="0 0 120 60" aria-hidden="true">
-              <path
-                d="M16 30 H100 M82 18 L102 30 L82 42"
-                fill="none"
-                stroke={orange}
-                strokeWidth="4"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                opacity={unequalP}
-              />
-            </svg>
-          </div>
+          {ms >= cue.t55Unequal && (
+            <div
+              {...shapeAttrs('action-vector-frame', {x: 1410, y: 435, w: 120, h: 60}, 'mark')}
+              style={{
+                position: 'absolute',
+                left: 1410,
+                top: 435,
+                width: 120,
+                height: 60,
+                border: `1px solid ${orange}`,
+                borderRadius: 6,
+                opacity: unequalP,
+              }}
+            >
+              <svg width="120" height="60" viewBox="0 0 120 60" aria-hidden="true">
+                <path
+                  d="M16 30 H100 M82 18 L102 30 L82 42"
+                  fill="none"
+                  stroke={orange}
+                  strokeWidth="4"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </div>
+          )}
 
           {/* Group Membership Token */}
           {ms >= cue.t55Membership && (
@@ -378,23 +381,6 @@ export function UnequalTreatment({segment}: SceneProps) {
       {/* Turn 56 Treatment Tray */}
       {isTurn56 && (
         <div data-turn="56" style={{opacity: t56UnequalP}}>
-          {/* Discrimination Tab */}
-          <Panel
-            id="discrimination-tab"
-            box={L.discriminationTab}
-            accent="color/text/accent"
-            style={{background: color('color/fill/panel-wash'), borderWidth: 2}}
-          />
-          <Label
-            id="discrimination-tab-label"
-            box={{x: L.discriminationTab.x + 16, y: L.discriminationTab.y + 10, w: L.discriminationTab.w - 32, h: 26}}
-            size={20}
-            weight={600}
-            ink={orange}
-          >
-            DISCRIMINATION · OBSERVABLE ACTION
-          </Label>
-
           {/* Treatment Tray Container */}
           <Panel id="treatment-tray" box={L.treatmentTray} />
           <Label
@@ -408,33 +394,38 @@ export function UnequalTreatment({segment}: SceneProps) {
             PERSON-TO-PERSON UNEQUAL TREATMENT
           </Label>
 
+          {/* All 4 Card Panels Laid Out From the Start */}
+          <Panel id="card-1-panel" box={L.cards[0]} />
+          <Panel id="card-2-panel" box={L.cards[1]} />
+          <Panel id="card-3-panel" box={L.cards[2]} />
+          <Panel id="card-4-panel" box={L.cards[3]} />
+
           {/* Card 1: Verbal Exclusion */}
-          {ms >= cue.t56Verbal && (
-            <div data-card="1" style={{opacity: verbalP}}>
-              <Panel id="card-1-panel" box={L.cards[0]} />
-              {ms >= cue.t56Exclusion && (
-                <Label
-                  id="card-1-title"
-                  box={{x: L.cards[0].x + 20, y: L.cards[0].y + 26, w: L.cards[0].w - 40, h: 36}}
-                  size={22}
-                  weight={500}
-                  ink={primary}
-                  opacity={exclusionP}
-                >
-                  VERBAL EXCLUSION
-                </Label>
-              )}
-              {/* Speech boundary card graphic */}
+          <div data-card="1">
+            {ms >= cue.t56Exclusion && (
+              <Label
+                id="card-1-title"
+                box={{x: L.cards[0].x + 20, y: L.cards[0].y + 24, w: L.cards[0].w - 40, h: 36}}
+                size={22}
+                weight={500}
+                ink={primary}
+                opacity={exclusionP}
+              >
+                VERBAL EXCLUSION
+              </Label>
+            )}
+            {ms >= cue.t56Verbal && (
               <div
-                {...shapeAttrs('speech-boundary-graphic', {x: L.cards[0].x + 30, y: L.cards[0].y + 100, w: 320, h: 250}, 'frame')}
+                {...shapeAttrs('speech-boundary-graphic', {x: L.cards[0].x + 30, y: L.cards[0].y + 75, w: 320, h: 250}, 'mark')}
                 style={{
                   position: 'absolute',
                   left: L.cards[0].x + 30,
-                  top: L.cards[0].y + 100,
+                  top: L.cards[0].y + 75,
                   width: 320,
                   height: 250,
                   border: `1px solid ${color('color/line/hairline')}`,
                   borderRadius: 12,
+                  opacity: verbalP,
                 }}
               >
                 <svg width="320" height="250" viewBox="0 0 320 250" aria-hidden="true">
@@ -449,164 +440,197 @@ export function UnequalTreatment({segment}: SceneProps) {
                   <line x1="160" y1="40" x2="160" y2="190" stroke={raceRed} strokeWidth="3" />
                 </svg>
               </div>
-            </div>
-          )}
+            )}
+            {ms >= cue.t56Exclusion && (
+              <Label
+                id="card-1-tag"
+                box={{x: L.cards[0].x + 20, y: L.cards[0].y + 345, w: L.cards[0].w - 40, h: 32}}
+                size={20}
+                weight={500}
+                ink={gold}
+                opacity={exclusionP}
+                align="center"
+              >
+                SPEECH BOUNDARY
+              </Label>
+            )}
+          </div>
 
           {/* Card 2: Worse Customer Service */}
-          {ms >= cue.t56Customer && (
-            <div data-card="2" style={{opacity: customerP}}>
-              <Panel id="card-2-panel" box={L.cards[1]} />
-              <Label
-                id="card-2-title"
-                box={{x: L.cards[1].x + 20, y: L.cards[1].y + 26, w: L.cards[1].w - 40, h: 36}}
-                size={22}
-                weight={500}
-                ink={primary}
-              >
-                WORSE CUSTOMER SERVICE
-              </Label>
-              {/* Service counter graphic */}
-              <div
-                {...shapeAttrs('service-counter-graphic', {x: L.cards[1].x + 30, y: L.cards[1].y + 100, w: 320, h: 250}, 'frame')}
-                style={{
-                  position: 'absolute',
-                  left: L.cards[1].x + 30,
-                  top: L.cards[1].y + 100,
-                  width: 320,
-                  height: 250,
-                  border: `1px solid ${color('color/line/hairline')}`,
-                  borderRadius: 12,
-                }}
-              >
-                <svg width="320" height="250" viewBox="0 0 320 250" aria-hidden="true">
-                  {/* Service counter line */}
-                  <line x1="20" y1="150" x2="300" y2="150" stroke={primary} strokeWidth="3" />
-                  {/* Service bell or counter partition */}
-                  <path d="M120 150 C120 110 200 110 200 150 Z" fill="none" stroke={gold} strokeWidth="2.5" />
-                  <line x1="160" y1="100" x2="160" y2="110" stroke={gold} strokeWidth="3" />
-                  {/* Differential service latency bar */}
-                  <rect x="40" y="180" width="100" height="24" rx="4" fill={gold} fillOpacity="0.4" />
-                  <rect x="180" y="180" width="100" height="24" rx="4" fill={orange} fillOpacity="0.4" />
-                </svg>
-              </div>
-            </div>
-          )}
+          <div data-card="2">
+            {ms >= cue.t56Customer && (
+              <>
+                <Label
+                  id="card-2-title"
+                  box={{x: L.cards[1].x + 20, y: L.cards[1].y + 24, w: L.cards[1].w - 40, h: 36}}
+                  size={22}
+                  weight={500}
+                  ink={primary}
+                  opacity={customerP}
+                >
+                  WORSE CUSTOMER SERVICE
+                </Label>
+                <div
+                  {...shapeAttrs('service-counter-graphic', {x: L.cards[1].x + 30, y: L.cards[1].y + 75, w: 320, h: 250}, 'mark')}
+                  style={{
+                    position: 'absolute',
+                    left: L.cards[1].x + 30,
+                    top: L.cards[1].y + 75,
+                    width: 320,
+                    height: 250,
+                    border: `1px solid ${color('color/line/hairline')}`,
+                    borderRadius: 12,
+                    opacity: customerP,
+                  }}
+                >
+                  <svg width="320" height="250" viewBox="0 0 320 250" aria-hidden="true">
+                    <line x1="20" y1="150" x2="300" y2="150" stroke={primary} strokeWidth="3" />
+                    <path d="M120 150 C120 110 200 110 200 150 Z" fill="none" stroke={gold} strokeWidth="2.5" />
+                    <line x1="160" y1="100" x2="160" y2="110" stroke={gold} strokeWidth="3" />
+                    <rect x="40" y="180" width="100" height="24" rx="4" fill={gold} fillOpacity="0.4" />
+                    <rect x="180" y="180" width="100" height="24" rx="4" fill={orange} fillOpacity="0.4" />
+                  </svg>
+                </div>
+                <Label
+                  id="card-2-tag"
+                  box={{x: L.cards[1].x + 20, y: L.cards[1].y + 345, w: L.cards[1].w - 40, h: 32}}
+                  size={20}
+                  weight={500}
+                  ink={gold}
+                  opacity={customerP}
+                  align="center"
+                >
+                  SERVICE COUNTER
+                </Label>
+              </>
+            )}
+          </div>
 
           {/* Card 3: Biased Grading */}
-          {ms >= cue.t56Grading && (
-            <div data-card="3" style={{opacity: gradingP}}>
-              <Panel id="card-3-panel" box={L.cards[2]} />
-              <Label
-                id="card-3-title"
-                box={{x: L.cards[2].x + 20, y: L.cards[2].y + 26, w: L.cards[2].w - 40, h: 36}}
-                size={22}
-                weight={500}
-                ink={primary}
-              >
-                BIASED GRADING
-              </Label>
-              {/* Grading sheet graphic */}
-              <div
-                {...shapeAttrs('grading-sheet-graphic', {x: L.cards[2].x + 30, y: L.cards[2].y + 100, w: 320, h: 250}, 'frame')}
-                style={{
-                  position: 'absolute',
-                  left: L.cards[2].x + 30,
-                  top: L.cards[2].y + 100,
-                  width: 320,
-                  height: 250,
-                  border: `1px solid ${color('color/line/hairline')}`,
-                  borderRadius: 12,
-                }}
-              >
-                <svg width="320" height="250" viewBox="0 0 320 250" aria-hidden="true">
-                  {/* Paper sheet */}
-                  <rect x="50" y="30" width="220" height="190" rx="6" fill="none" stroke={primary} strokeWidth="2" />
-                  <line x1="80" y1="70" x2="230" y2="70" stroke={muted} strokeWidth="2" />
-                  <line x1="80" y1="105" x2="230" y2="105" stroke={muted} strokeWidth="2" />
-                  <line x1="80" y1="140" x2="230" y2="140" stroke={muted} strokeWidth="2" />
-                  {/* Evaluation mark */}
-                  <circle cx="210" cy="70" r="16" fill="none" stroke={raceRed} strokeWidth="2.5" />
-                  <line x1="198" y1="70" x2="222" y2="70" stroke={raceRed} strokeWidth="2.5" />
-                </svg>
-              </div>
-            </div>
-          )}
+          <div data-card="3">
+            {ms >= cue.t56Grading && (
+              <>
+                <Label
+                  id="card-3-title"
+                  box={{x: L.cards[2].x + 20, y: L.cards[2].y + 24, w: L.cards[2].w - 40, h: 36}}
+                  size={22}
+                  weight={500}
+                  ink={primary}
+                  opacity={gradingP}
+                >
+                  BIASED GRADING
+                </Label>
+                <div
+                  {...shapeAttrs('grading-sheet-graphic', {x: L.cards[2].x + 30, y: L.cards[2].y + 75, w: 320, h: 250}, 'mark')}
+                  style={{
+                    position: 'absolute',
+                    left: L.cards[2].x + 30,
+                    top: L.cards[2].y + 75,
+                    width: 320,
+                    height: 250,
+                    border: `1px solid ${color('color/line/hairline')}`,
+                    borderRadius: 12,
+                    opacity: gradingP,
+                  }}
+                >
+                  <svg width="320" height="250" viewBox="0 0 320 250" aria-hidden="true">
+                    <rect x="50" y="30" width="220" height="190" rx="6" fill="none" stroke={primary} strokeWidth="2" />
+                    <line x1="80" y1="70" x2="230" y2="70" stroke={muted} strokeWidth="2" />
+                    <line x1="80" y1="105" x2="230" y2="105" stroke={muted} strokeWidth="2" />
+                    <line x1="80" y1="140" x2="230" y2="140" stroke={muted} strokeWidth="2" />
+                    <circle cx="210" cy="70" r="16" fill="none" stroke={raceRed} strokeWidth="2.5" />
+                    <line x1="198" y1="70" x2="222" y2="70" stroke={raceRed} strokeWidth="2.5" />
+                  </svg>
+                </div>
+                <Label
+                  id="card-3-tag"
+                  box={{x: L.cards[2].x + 20, y: L.cards[2].y + 345, w: L.cards[2].w - 40, h: 32}}
+                  size={20}
+                  weight={500}
+                  ink={gold}
+                  opacity={gradingP}
+                  align="center"
+                >
+                  GRADING SHEET
+                </Label>
+              </>
+            )}
+          </div>
 
           {/* Card 4: Rental Refusal */}
-          {ms >= cue.t56Refusing && (
-            <div data-card="4" style={{opacity: refusingP}}>
-              <Panel id="card-4-panel" box={L.cards[3]} />
-              <Label
-                id="card-4-title"
-                box={{x: L.cards[3].x + 20, y: L.cards[3].y + 26, w: L.cards[3].w - 40, h: 36}}
-                size={22}
-                weight={500}
-                ink={primary}
-              >
-                RENTAL REFUSAL
-              </Label>
-
-              {/* Apartment and Rental Key Graphic */}
-              <div
-                {...shapeAttrs('rental-refusal-graphic', {x: L.cards[3].x + 30, y: L.cards[3].y + 90, w: 320, h: 180}, 'frame')}
-                style={{
-                  position: 'absolute',
-                  left: L.cards[3].x + 30,
-                  top: L.cards[3].y + 90,
-                  width: 320,
-                  height: 180,
-                  border: `1px solid ${color('color/line/hairline')}`,
-                  borderRadius: 12,
-                }}
-              >
-                <svg width="320" height="180" viewBox="0 0 320 180" aria-hidden="true">
-                  {/* Apartment outline */}
-                  {ms >= cue.t56Apartment && (
-                    <g opacity={apartmentP}>
-                      <rect x="30" y="30" width="130" height="120" rx="4" fill="none" stroke={gold} strokeWidth="2.5" />
-                      <line x1="75" y1="30" x2="75" y2="150" stroke={gold} strokeWidth="2" strokeDasharray="4 4" />
-                      <rect x="45" y="55" width="20" height="30" rx="2" fill="none" stroke={gold} strokeWidth="1.5" />
-                      <rect x="95" y="55" width="20" height="30" rx="2" fill="none" stroke={gold} strokeWidth="1.5" />
-                      <rect x="85" y="105" width="30" height="45" rx="2" fill="none" stroke={gold} strokeWidth="2" />
-                    </g>
-                  )}
-                  {/* Key / Lock refusal symbol */}
-                  <circle cx="230" cy="70" r="24" fill="none" stroke={orange} strokeWidth="3" />
-                  <path d="M230 94 V140 M230 115 H248 M230 130 H244" stroke={orange} strokeWidth="3" strokeLinecap="round" />
-                  <line x1="200" y1="40" x2="260" y2="100" stroke={raceRed} strokeWidth="3.5" />
-                </svg>
-              </div>
-
-              {/* Qualified Tenant Badge */}
-              {ms >= cue.t56Qualified && (
-                <div data-qualified="true" style={{opacity: qualifiedP}}>
-                  <Panel
-                    id="qualified-tenant-badge"
-                    box={{x: L.cards[3].x + 30, y: L.cards[3].y + 295, w: 320, h: 80}}
-                    accent="color/fill/gold"
-                    style={{borderRadius: 8}}
-                  />
-                  <div
-                    {...shapeAttrs('qualified-check-mark', {x: L.cards[3].x + 46, y: L.cards[3].y + 319, w: 30, h: 30}, 'mark', 'icon')}
-                    style={{position: 'absolute', left: L.cards[3].x + 46, top: L.cards[3].y + 319, width: 30, height: 30, color: gold}}
-                  >
-                    <svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M4 12 L9 17 L20 6" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </div>
-                  <Label
-                    id="qualified-tenant-label"
-                    box={{x: L.cards[3].x + 86, y: L.cards[3].y + 320, w: 250, h: 30}}
-                    size={20}
-                    weight={600}
-                    ink={gold}
-                  >
-                    QUALIFIED TENANT
-                  </Label>
+          <div data-card="4">
+            {ms >= cue.t56Refusing && (
+              <>
+                <Label
+                  id="card-4-title"
+                  box={{x: L.cards[3].x + 20, y: L.cards[3].y + 24, w: L.cards[3].w - 40, h: 36}}
+                  size={22}
+                  weight={500}
+                  ink={primary}
+                  opacity={refusingP}
+                >
+                  RENTAL REFUSAL
+                </Label>
+                <div
+                  {...shapeAttrs('rental-refusal-graphic', {x: L.cards[3].x + 30, y: L.cards[3].y + 75, w: 320, h: 230}, 'mark')}
+                  style={{
+                    position: 'absolute',
+                    left: L.cards[3].x + 30,
+                    top: L.cards[3].y + 75,
+                    width: 320,
+                    height: 230,
+                    border: `1px solid ${color('color/line/hairline')}`,
+                    borderRadius: 12,
+                    opacity: refusingP,
+                  }}
+                >
+                  <svg width="320" height="230" viewBox="0 0 320 230" aria-hidden="true">
+                    {ms >= cue.t56Apartment && (
+                      <g opacity={apartmentP}>
+                        <rect x="30" y="30" width="130" height="120" rx="4" fill="none" stroke={gold} strokeWidth="2.5" />
+                        <line x1="75" y1="30" x2="75" y2="150" stroke={gold} strokeWidth="2" strokeDasharray="4 4" />
+                        <rect x="45" y="55" width="20" height="30" rx="2" fill="none" stroke={gold} strokeWidth="1.5" />
+                        <rect x="95" y="55" width="20" height="30" rx="2" fill="none" stroke={gold} strokeWidth="1.5" />
+                        <rect x="85" y="105" width="30" height="45" rx="2" fill="none" stroke={gold} strokeWidth="2" />
+                      </g>
+                    )}
+                    <circle cx="230" cy="70" r="24" fill="none" stroke={orange} strokeWidth="3" />
+                    <path d="M230 94 V140 M230 115 H248 M230 130 H244" stroke={orange} strokeWidth="3" strokeLinecap="round" />
+                    <line x1="200" y1="40" x2="260" y2="100" stroke={raceRed} strokeWidth="3.5" />
+                  </svg>
                 </div>
-              )}
-            </div>
-          )}
+              </>
+            )}
+
+            {/* Qualified Tenant Badge */}
+            {ms >= cue.t56Qualified && (
+              <div data-qualified="true" style={{opacity: qualifiedP}}>
+                <Panel
+                  id="qualified-tenant-badge"
+                  box={{x: L.cards[3].x + 30, y: L.cards[3].y + 325, w: 320, h: 72}}
+                  accent="color/fill/gold"
+                  style={{borderRadius: 8}}
+                />
+                <div
+                  {...shapeAttrs('qualified-check-mark', {x: L.cards[3].x + 46, y: L.cards[3].y + 346, w: 30, h: 30}, 'mark', 'icon')}
+                  style={{position: 'absolute', left: L.cards[3].x + 46, top: L.cards[3].y + 346, width: 30, height: 30, color: gold}}
+                >
+                  <svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M4 12 L9 17 L20 6" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </div>
+                <Label
+                  id="qualified-tenant-label"
+                  box={{x: L.cards[3].x + 86, y: L.cards[3].y + 346, w: 250, h: 30}}
+                  size={20}
+                  weight={600}
+                  ink={gold}
+                >
+                  QUALIFIED TENANT
+                </Label>
+              </div>
+            )}
+          </div>
         </div>
       )}
 
