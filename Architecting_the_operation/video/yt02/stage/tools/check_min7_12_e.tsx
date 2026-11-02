@@ -71,6 +71,7 @@ function plain(html: string) {
 
 const renderedUnderscoreText = (html: string) => [...html.matchAll(/>([^<>]*_[A-Za-z{][^<>]*)</g)].map(match => match[1].trim()).filter(Boolean);
 const interactionHint = /\b(?:click|drag|hover|tap|swipe|press|arrow keys)\b/i;
+const internalTurnPattern = /\bturn \d+\b/i;
 
 const frames: {scene: SceneName; ms: number; kind: string}[] = [];
 for (const scene of Object.keys(sceneComponents) as SceneName[]) {
@@ -99,6 +100,7 @@ for (const {scene, kind, ms, html} of rendered) {
   const underscores = renderedUnderscoreText(html);
   assert.deepEqual(underscores, [], `${scene} ${kind} (${ms} ms) renders literal underscore text: ${underscores.join(', ')}`);
   assert.ok(!interactionHint.test(plain(html)), `${scene} ${kind} (${ms} ms) contains interaction hint`);
+  assert.ok(!internalTurnPattern.test(plain(html)), `${scene} ${kind} (${ms} ms) contains internal turn label`);
 }
 
 function beat(scene: SceneName, cue: string, assertOpts: {text?: string[]; markup?: string[]}) {
@@ -133,7 +135,12 @@ beat('DocumentedExpectation', 't35Documented', {text: ['DOCUMENTED HARM', 'ONGOI
 beat('DocumentedExpectation', 't35Disparity', {text: ['EXPECTATION UPDATED ON DOCUMENTED EVIDENCE']});
 
 beat('DocumentedExpectation', 't36National', {
-  text: ['NATIONAL CENTER FOR HEALTH STATISTICS', '2023', 'Maternal Mortality Rates in the United States, 2021'],
+  text: [
+    'NATIONAL CENTER FOR HEALTH STATISTICS',
+    '2023',
+    'Maternal Mortality Rates in the United States, 2021',
+    'QUALITATIVE · NO RATES SHOWN',
+  ],
 });
 beat('DocumentedExpectation', 't36Maternal', {text: ['MATERNAL MORTALITY · SURVEILLANCE SERIES']});
 beat('DocumentedExpectation', 't36Elevated', {text: ['ELEVATED RELATIVE LEVEL']});
@@ -183,6 +190,7 @@ beat('ExplicitImplicitChannels', 't40Anthony', {text: ['ANTHONY G. GREENWALD']})
 beat('ExplicitImplicitChannels', 't40Banaji', {text: ['ANTHONY G. GREENWALD · MAHZARIN R. BANAJI']});
 beat('ExplicitImplicitChannels', 't40NinetyFive', {text: ['1995']});
 beat('ExplicitImplicitChannels', 't40Cognition', {text: ['Implicit Social Cognition: Attitudes, Self-Esteem, and Stereotypes']});
+beat('ExplicitImplicitChannels', 't40Article', {text: ['Psychological Review 102(1)']});
 
 // Structural checks:
 // Turn 36 replaces Turn 35 in DocumentedExpectation
@@ -229,6 +237,61 @@ for (const {scene, kind, ms, html} of rendered) {
 }
 assert.deepEqual(violations, [], `layout audit failed:\n${violations.slice(0, 40).join('\n')}`);
 
+// Fill-ratio assertion:
+// Every box on screen holds its content at its last beat. All panels, cards, and windows are populated.
+// At each scene's last frame, every declared data-shape frame (with effective opacity >= 0.05) must contain
+// declared text boxes that cover enough of its geometry.
+// Documented thresholds:
+//   - An empty container (0 text boxes) is a defect.
+//   - Either area fill ratio >= 0.18 (18% of frame area covered by declared text boxes),
+//   - OR vertical span ratio >= 0.45 (declared text bounds cover at least 45% of the frame's height),
+// ensuring every container is sized to its content and holds its storyboard content.
+const MIN_AREA_FILL_RATIO = 0.18;
+const MIN_VERTICAL_SPAN_RATIO = 0.45;
+
+function checkFillRatio(html: string, context: string) {
+  const audited = auditItems(html);
+  const frames = audited.filter(item => item.role === 'frame' && item.opacity >= 0.05);
+  const texts = audited.filter(item => item.role === 'text' && item.opacity >= 0.05);
+
+  for (const f of frames) {
+    const inside = texts.filter(
+      t => t.x >= f.x - 4 && t.y >= f.y - 4 && t.x + t.w <= f.x + f.w + 4 && t.y + t.h <= f.y + f.h + 4,
+    );
+    assert.ok(
+      inside.length > 0,
+      `${context}: container "${f.id}" (${f.w}×${f.h} at [${f.x}, ${f.y}]) is empty with 0 text boxes inside`,
+    );
+
+    const textArea = inside.reduce((sum, t) => sum + t.w * t.h, 0);
+    const frameArea = f.w * f.h;
+    const areaFillRatio = textArea / frameArea;
+
+    const minY = Math.min(...inside.map(t => t.y));
+    const maxY = Math.max(...inside.map(t => t.y + t.h));
+    const verticalSpanRatio = (maxY - minY) / f.h;
+
+    const passes = areaFillRatio >= MIN_AREA_FILL_RATIO || verticalSpanRatio >= MIN_VERTICAL_SPAN_RATIO;
+    assert.ok(
+      passes,
+      `${context}: container "${f.id}" (${f.w}×${f.h}) underfilled: area ratio ${areaFillRatio.toFixed(3)} < ${MIN_AREA_FILL_RATIO} and vertical span ratio ${verticalSpanRatio.toFixed(3)} < ${MIN_VERTICAL_SPAN_RATIO}`,
+    );
+  }
+}
+
+// Assert fill ratio at every scene's last frame
+for (const scene of Object.keys(sceneComponents) as SceneName[]) {
+  const lastFrame = rendered.find(frame => frame.scene === scene && frame.kind === 'end')!;
+  assert.ok(lastFrame, `missing end frame for ${scene}`);
+  checkFillRatio(lastFrame.html, `${scene} at end frame`);
+}
+
+// Also assert fill ratio at major beat settled states
+checkFillRatio(byKind('DocumentedExpectation').find(f => f.kind === 't35Disparity')!.html, 'DocumentedExpectation at t35Disparity');
+checkFillRatio(byKind('InstalledRouting').find(f => f.kind === 't37Facts')!.html, 'InstalledRouting at t37Facts');
+checkFillRatio(byKind('RLCBridge').find(f => f.kind === 't38Shocks')!.html, 'RLCBridge at t38Shocks');
+checkFillRatio(byKind('ExplicitImplicitChannels').find(f => f.kind === 't39Associations')!.html, 'ExplicitImplicitChannels at t39Associations');
+
 console.log(
-  `PASS: audit self-test (${selfTests} rules); ${rendered.length} Package E frames (cues + 500 ms grid); layout audit of ${items} declared boxes (safe area, notch zones, text fit, collisions); clean turn transitions, storyboard strings, hook, underscore, interaction-hint and equation pulse policies verified.`,
+  `PASS: audit self-test (${selfTests} rules); ${rendered.length} Package E frames (cues + 500 ms grid); layout audit of ${items} declared boxes (safe area, notch zones, text fit, collisions); fill-ratio assert verified on all scene end frames; clean turn transitions, storyboard strings, hook, underscore, internal-turn and interaction-hint policies verified.`,
 );

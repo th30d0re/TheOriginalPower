@@ -18,32 +18,33 @@ const enter = (ms: number, at: number, duration = 520) => cubicOut(progress(ms, 
 const move = (ms: number, at: number, duration = 650) => cubicInOut(progress(ms, at, at + duration));
 
 export const EXPLICIT_IMPLICIT_LAYOUT = {
-  // Turn 39: Bias Hub
-  biasHub: {x: 120, y: 330, w: 380, h: 370},
-  biasTitle: {x: 150, y: 360, w: 320, h: 48},
-  biasMark: {x: 270, y: 460, w: 80, h: 100},
-  biasSub: {x: 150, y: 620, w: 320, h: 36},
+  // Turn 39: Bias Hub (vertically centered across both channels, filling frame)
+  biasHub: {x: 120, y: 280, w: 420, h: 500},
+  biasTitle: {x: 150, y: 310, w: 360, h: 48},
+  biasMark: {x: 290, y: 430, w: 80, h: 100},
+  biasSub: {x: 150, y: 700, w: 360, h: 36},
 
-  // Turn 39: Explicit Channel
-  explicitChannel: {x: 620, y: 230, w: 1160, h: 230},
-  explicitHeading: {x: 650, y: 255, w: 300, h: 36},
-  explicitCard: {x: 750, y: 320, w: 480, h: 60},
-  explicitCardLabel: {x: 760, y: 335, w: 460, h: 30},
+  // Turn 39: Explicit Channel (present from start of turn 39, filling upper lane)
+  explicitChannel: {x: 620, y: 240, w: 1160, h: 220},
+  explicitHeading: {x: 650, y: 260, w: 300, h: 36},
+  explicitCard: {x: 750, y: 350, w: 480, h: 64},
+  explicitCardLabel: {x: 760, y: 365, w: 460, h: 34},
 
-  // Turn 39: Implicit Channel
-  implicitChannel: {x: 620, y: 590, w: 1160, h: 230},
-  implicitHeading: {x: 650, y: 615, w: 300, h: 36},
-  implicitAssocLabel: {x: 750, y: 675, w: 480, h: 32},
+  // Turn 39: Implicit Channel (present from start of turn 39, filling lower lane)
+  implicitChannel: {x: 620, y: 560, w: 1160, h: 220},
+  implicitHeading: {x: 650, y: 580, w: 300, h: 36},
+  implicitAssocLabel: {x: 750, y: 715, w: 480, h: 34},
 
   // Turn 39: Individual Judgment Meter
-  meterPanel: {x: 1540, y: 460, w: 240, h: 130},
+  meterPanel: {x: 1540, y: 460, w: 240, h: 100},
   meterLabel: {x: 1550, y: 475, w: 220, h: 56},
 
-  // Turn 40: Citation Card
-  citationCard: {x: 330, y: 230, w: 1260, h: 590},
-  citeAuthors: {x: 390, y: 310, w: 1140, h: 56},
-  citeYear: {x: 390, y: 440, w: 200, h: 64},
-  citeTitle: {x: 390, y: 540, w: 1140, h: 120},
+  // Turn 40: Citation Card (built to final size, h: 480)
+  citationCard: {x: 330, y: 240, w: 1260, h: 480},
+  citeAuthors: {x: 390, y: 275, w: 1140, h: 50},
+  citeYear: {x: 390, y: 370, w: 200, h: 44},
+  citeTitle: {x: 390, y: 440, w: 1140, h: 96},
+  citeJournal: {x: 390, y: 565, w: 1140, h: 44},
 
   // Source line
   source: {x: 116, y: 946, w: 740, h: 56},
@@ -92,26 +93,26 @@ export function ExplicitImplicitChannels({segment}: SceneProps) {
   const primary = color('color/text/primary');
   const soft = color('color/text/soft');
   const muted = color('color/text/muted');
-  const hairline = color('color/line/hairline');
 
   // Turn 39 Rails and Leaders
   const hasCard = ms >= cue.t39Consciously;
-  const explicitRailInFull: Point[] = [[650, 350], [750, 350]];
-  const explicitRailOutFull: Point[] = [[1230, 350], [1500, 350]];
-  const explicitRailThrough: Point[] = [[650, 350], [1500, 350]];
+  const explicitRailInFull: Point[] = [[650, 382], [750, 382]];
+  const explicitRailOutFull: Point[] = [[1230, 382], [1500, 382]];
+  const explicitRailThrough: Point[] = [[650, 382], [1500, 382]];
 
   const explicitInDrawn = partialPolyline(explicitRailInFull, explicitP);
   const explicitOutDrawn = partialPolyline(explicitRailOutFull, consciouslyP);
   const explicitThroughDrawn = partialPolyline(explicitRailThrough, explicitP);
 
-  const implicitRailFull: Point[] = [[650, 750], [1500, 750]];
+  // Implicit rail passes at y = 650, completely clear of heading (ends at 616) and label (starts at 715)
+  const implicitRailFull: Point[] = [[650, 650], [1500, 650]];
   const implicitDrawn = partialPolyline(implicitRailFull, implicitP);
 
-  const leaderExplicitToMeter: Point[] = [[1500, 350], [1540, 480]];
-  const leaderImplicitToMeter: Point[] = [[1500, 750], [1540, 560]];
+  const leaderExplicitToMeter: Point[] = [[1500, 382], [1540, 480]];
+  const leaderImplicitToMeter: Point[] = [[1500, 650], [1540, 520]];
 
   // Turn 40 Source Rule
-  const citeRulePoints: Point[] = [[390, 400], [1530, 400]];
+  const citeRulePoints: Point[] = [[390, 345], [1530, 345]];
 
   const authorsText = ms >= cue.t40Banaji
     ? 'ANTHONY G. GREENWALD · MAHZARIN R. BANAJI'
@@ -119,7 +120,7 @@ export function ExplicitImplicitChannels({segment}: SceneProps) {
 
   return (
     <StageSceneFrame segment={segment}>
-      {/* TURN 39: Channels and Bias Hub */}
+      {/* TURN 39: Balanced Dual-Channel System and Bias Hub */}
       {!isTurn40 && (
         <div data-turn="39">
           {/* Bias Hub */}
@@ -139,61 +140,61 @@ export function ExplicitImplicitChannels({segment}: SceneProps) {
             </Label>
           </div>
 
-          {/* Explicit Channel */}
-          {ms >= cue.t39Explicit && (
-            <div data-explicit-channel="true" style={{opacity: explicitP}}>
-              <Panel id="explicit-channel-frame" box={L.explicitChannel} accent="color/fill/gold" />
-              <Label id="explicit-heading" box={L.explicitHeading} size={26} weight={600} ink={gold}>
+          {/* Explicit Channel: frame present from start of Turn 39, filling upper lane */}
+          <div data-explicit-channel="true">
+            <Panel id="explicit-channel-frame" box={L.explicitChannel} accent={ms >= cue.t39Explicit ? 'color/fill/gold' : 'color/line/hairline'} />
+            {ms >= cue.t39Explicit && (
+              <Label id="explicit-heading" box={L.explicitHeading} size={26} weight={600} ink={gold} opacity={explicitP}>
                 EXPLICIT
               </Label>
-              <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position: 'absolute', inset: 0}} aria-hidden="true">
-                {!hasCard && explicitThroughDrawn.length >= 2 && (
-                  <path {...lineAttrs('explicit-rail-through', explicitThroughDrawn)} d={pathFrom(explicitThroughDrawn)} fill="none" stroke={gold} strokeWidth="3" />
-                )}
-                {hasCard && explicitInDrawn.length >= 2 && (
-                  <path {...lineAttrs('explicit-rail-in', explicitInDrawn)} d={pathFrom(explicitInDrawn)} fill="none" stroke={gold} strokeWidth="3" />
-                )}
-                {hasCard && explicitOutDrawn.length >= 2 && (
-                  <path {...lineAttrs('explicit-rail-out', explicitOutDrawn)} d={pathFrom(explicitOutDrawn)} fill="none" stroke={gold} strokeWidth="3" />
-                )}
-              </svg>
-              {ms >= cue.t39Consciously && (
-                <div data-signed-card="true" style={{opacity: consciouslyP}}>
-                  <Panel id="explicit-card-frame" box={L.explicitCard} accent="color/fill/gold" />
-                  <Label id="explicit-card-label" box={L.explicitCardLabel} size={20} weight={600} ink={primary}>
-                    CONSCIOUSLY ENDORSED JUDGMENT
-                  </Label>
-                </div>
+            )}
+            <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position: 'absolute', inset: 0}} aria-hidden="true">
+              {!hasCard && explicitThroughDrawn.length >= 2 && (
+                <path {...lineAttrs('explicit-rail-through', explicitThroughDrawn)} d={pathFrom(explicitThroughDrawn)} fill="none" stroke={gold} strokeWidth="3" opacity={explicitP} />
               )}
-            </div>
-          )}
+              {hasCard && explicitInDrawn.length >= 2 && (
+                <path {...lineAttrs('explicit-rail-in', explicitInDrawn)} d={pathFrom(explicitInDrawn)} fill="none" stroke={gold} strokeWidth="3" opacity={consciouslyP} />
+              )}
+              {hasCard && explicitOutDrawn.length >= 2 && (
+                <path {...lineAttrs('explicit-rail-out', explicitOutDrawn)} d={pathFrom(explicitOutDrawn)} fill="none" stroke={gold} strokeWidth="3" opacity={consciouslyP} />
+              )}
+            </svg>
+            {ms >= cue.t39Consciously && (
+              <div data-signed-card="true" style={{opacity: consciouslyP}}>
+                <Panel id="explicit-card-frame" box={L.explicitCard} accent="color/fill/gold" />
+                <Label id="explicit-card-label" box={L.explicitCardLabel} size={20} weight={600} ink={primary}>
+                  CONSCIOUSLY ENDORSED JUDGMENT
+                </Label>
+              </div>
+            )}
+          </div>
 
-          {/* Implicit Channel */}
-          {ms >= cue.t39Implicit && (
-            <div data-implicit-channel="true" style={{opacity: implicitP}}>
-              <Panel id="implicit-channel-frame" box={L.implicitChannel} accent="color/marker/race" />
-              <Label id="implicit-heading" box={L.implicitHeading} size={26} weight={600} ink={raceRed}>
+          {/* Implicit Channel: frame present from start of Turn 39, filling lower lane */}
+          <div data-implicit-channel="true">
+            <Panel id="implicit-channel-frame" box={L.implicitChannel} accent={ms >= cue.t39Implicit ? 'color/marker/race' : 'color/line/hairline'} />
+            {ms >= cue.t39Implicit && (
+              <Label id="implicit-heading" box={L.implicitHeading} size={26} weight={600} ink={raceRed} opacity={implicitP}>
                 IMPLICIT
               </Label>
-              {implicitDrawn.length >= 2 && (
-                <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position: 'absolute', inset: 0}} aria-hidden="true">
-                  <path {...lineAttrs('implicit-rail', implicitDrawn)} d={pathFrom(implicitDrawn)} fill="none" stroke={raceRed} strokeWidth="3" />
-                  {ms >= cue.t39Automatic && (
-                    <>
-                      <circle cx={1260} cy={750} r={9} fill={raceRed} />
-                      <circle cx={1340} cy={750} r={9} fill={raceRed} />
-                      <circle cx={1420} cy={750} r={9} fill={raceRed} />
-                    </>
-                  )}
-                </svg>
-              )}
-              {ms >= cue.t39Automatic && (
-                <Label id="implicit-assoc-label" box={L.implicitAssocLabel} size={20} weight={600} ink={primary} opacity={automaticP}>
-                  AUTOMATIC MENTAL ASSOCIATION
-                </Label>
-              )}
-            </div>
-          )}
+            )}
+            {ms >= cue.t39Implicit && implicitDrawn.length >= 2 && (
+              <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position: 'absolute', inset: 0}} aria-hidden="true">
+                <path {...lineAttrs('implicit-rail', implicitDrawn)} d={pathFrom(implicitDrawn)} fill="none" stroke={raceRed} strokeWidth="3" opacity={implicitP} />
+                {ms >= cue.t39Automatic && (
+                  <>
+                    <circle cx={1260} cy={650} r={9} fill={raceRed} opacity={automaticP} />
+                    <circle cx={1340} cy={650} r={9} fill={raceRed} opacity={automaticP} />
+                    <circle cx={1420} cy={650} r={9} fill={raceRed} opacity={automaticP} />
+                  </>
+                )}
+              </svg>
+            )}
+            {ms >= cue.t39Automatic && (
+              <Label id="implicit-assoc-label" box={L.implicitAssocLabel} size={20} weight={600} ink={primary} opacity={automaticP}>
+                AUTOMATIC MENTAL ASSOCIATION
+              </Label>
+            )}
+          </div>
 
           {/* Individual Judgment Meter */}
           {ms >= cue.t39Associations && (
@@ -211,7 +212,7 @@ export function ExplicitImplicitChannels({segment}: SceneProps) {
         </div>
       )}
 
-      {/* TURN 40: Greenwald & Banaji Citation Card */}
+      {/* TURN 40: Greenwald & Banaji Citation Card (built to final size, populated in step) */}
       {isTurn40 && (
         <div data-turn="40">
           <Panel id="citation-card-frame" box={L.citationCard} accent="color/fill/gold">
@@ -219,7 +220,7 @@ export function ExplicitImplicitChannels({segment}: SceneProps) {
           </Panel>
 
           {ms >= cue.t40Anthony && (
-            <Label id="cite-authors" box={L.citeAuthors} size={36} weight={650} sans ink={primary} opacity={anthonyP}>
+            <Label id="cite-authors" box={L.citeAuthors} size={34} weight={650} sans ink={primary} opacity={anthonyP}>
               {authorsText}
             </Label>
           )}
@@ -231,7 +232,7 @@ export function ExplicitImplicitChannels({segment}: SceneProps) {
           )}
 
           {ms >= cue.t40NinetyFive && (
-            <Label id="cite-year" box={L.citeYear} size={36} weight={700} ink={gold} opacity={ninetyFiveP}>
+            <Label id="cite-year" box={L.citeYear} size={32} weight={700} ink={gold} opacity={ninetyFiveP}>
               1995
             </Label>
           )}
@@ -240,7 +241,7 @@ export function ExplicitImplicitChannels({segment}: SceneProps) {
             <Label
               id="cite-title"
               box={L.citeTitle}
-              size={36}
+              size={32}
               weight={500}
               sans
               lh={1.3}
@@ -251,6 +252,13 @@ export function ExplicitImplicitChannels({segment}: SceneProps) {
               {ms >= cue.t40Cognition
                 ? 'Implicit Social Cognition: Attitudes, Self-Esteem, and Stereotypes'
                 : 'Implicit Social Cognition…'}
+            </Label>
+          )}
+
+          {/* references.bib 4226: Psychological Review 102(1) */}
+          {ms >= cue.t40Article && (
+            <Label id="cite-journal" box={L.citeJournal} size={24} weight={500} sans ink={primary} opacity={articleP}>
+              Psychological Review 102(1)
             </Label>
           )}
         </div>

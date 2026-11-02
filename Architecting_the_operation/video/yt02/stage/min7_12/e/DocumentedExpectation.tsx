@@ -20,19 +20,20 @@ const enter = (ms: number, at: number, duration = 520) => cubicOut(progress(ms, 
 const move = (ms: number, at: number, duration = 650) => cubicInOut(progress(ms, at, at + duration));
 
 export const DOCUMENTED_EXPECTATION_LAYOUT = {
-  // Equation strip
+  // Continuity equation strip
   equation: {x: 120, y: 100, w: 1680, h: 120},
-  eqTerms: {x: 120, y: 108, w: 1680, h: 50},
-  eqLabel: {x: 120, y: 168, w: 360, h: 32},
+  eqTerms: {x: 120, y: 112, w: 1680, h: 54},
+  eqLabel: {x: 120, y: 172, w: 1680, h: 32},
 
-  // Turn 35: Evidence Ledger
-  ledger: {x: 120, y: 285, w: 480, h: 590},
-  ledgerHeaderMark: {x: 145, y: 310, w: 55, h: 65},
-  ledgerHeaderLabel: {x: 215, y: 325, w: 360, h: 36},
-  warinessToken: {x: 145, y: 400, w: 430, h: 80},
-  harmToken: {x: 145, y: 510, w: 430, h: 52},
-  disparityToken: {x: 145, y: 585, w: 430, h: 52},
-  updatedCaption: {x: 145, y: 680, w: 430, h: 80},
+  // Turn 35: Evidence Ledger (compact before documented harm, expanded after)
+  ledgerCompact: {x: 120, y: 285, w: 480, h: 220},
+  ledgerExpanded: {x: 120, y: 285, w: 480, h: 495},
+  ledgerHeaderMark: {x: 145, y: 305, w: 55, h: 65},
+  ledgerHeaderLabel: {x: 215, y: 320, w: 360, h: 36},
+  warinessToken: {x: 145, y: 395, w: 430, h: 80},
+  harmToken: {x: 145, y: 505, w: 430, h: 52},
+  disparityToken: {x: 145, y: 580, w: 430, h: 52},
+  updatedCaption: {x: 145, y: 675, w: 430, h: 80},
 
   // Turn 35: Bayesian Plot
   plotFrame: {x: 680, y: 285, w: 640, h: 590},
@@ -42,57 +43,58 @@ export const DOCUMENTED_EXPECTATION_LAYOUT = {
   evidenceLabel: {x: 730, y: 760, w: 160, h: 28},
   posteriorLabel: {x: 840, y: 440, w: 180, h: 28},
 
-  // Turn 35: Expectation Card
-  expectationCard: {x: 1390, y: 350, w: 400, h: 370},
-  cardTitle: {x: 1420, y: 380, w: 340, h: 36},
-  cardSub: {x: 1420, y: 430, w: 340, h: 80},
+  // Turn 35: Expectation Card (sized to content)
+  expectationCard: {x: 1390, y: 350, w: 400, h: 180},
+  cardTitle: {x: 1420, y: 375, w: 340, h: 36},
+  cardSub: {x: 1420, y: 425, w: 340, h: 80},
 
-  // Turn 36: NCHS Plaque
-  plaque: {x: 120, y: 235, w: 490, h: 265},
-  plaqueYear: {x: 150, y: 260, w: 430, h: 36},
-  plaqueAuthor: {x: 150, y: 310, w: 430, h: 64},
-  plaqueTitle: {x: 150, y: 390, w: 430, h: 80},
+  // Turn 36: NCHS Plaque (sized to content)
+  plaque: {x: 120, y: 235, w: 490, h: 260},
+  plaqueYear: {x: 150, y: 255, w: 430, h: 38},
+  plaqueAuthor: {x: 150, y: 300, w: 430, h: 64},
+  plaqueTitle: {x: 150, y: 375, w: 430, h: 80},
 
-  // Turn 36: Qualitative Series Plot
-  seriesFrame: {x: 690, y: 235, w: 1100, h: 615},
-  seriesTitle: {x: 720, y: 260, w: 850, h: 36},
-  blackPathLabel: {x: 730, y: 360, w: 200, h: 32},
-  whitePathLabel: {x: 730, y: 650, w: 200, h: 32},
-  surveillanceLabel: {x: 720, y: 760, w: 300, h: 32},
-  elevationLabel: {x: 1540, y: 520, w: 180, h: 64},
-  expectationMarker: {x: 1320, y: 330, w: 320, h: 42},
-  tracksLabel: {x: 1040, y: 760, w: 710, h: 32},
+  // Turn 36: Qualitative Series Plot (balanced composition)
+  seriesFrame: {x: 690, y: 235, w: 1100, h: 580},
+  seriesTitle: {x: 720, y: 255, w: 600, h: 36},
+  qualitativeBadge: {x: 1340, y: 260, w: 410, h: 28},
+  blackPathLabel: {x: 730, y: 340, w: 200, h: 32},
+  whitePathLabel: {x: 730, y: 610, w: 200, h: 32},
+  surveillanceLabel: {x: 720, y: 690, w: 300, h: 32},
+  elevationLabel: {x: 1540, y: 430, w: 170, h: 64},
+  tracksLabel: {x: 1040, y: 690, w: 710, h: 32},
 
   // Turn 36: Disclosure Strip
-  disclosure: {x: 1040, y: 870, w: 750, h: 55},
-  disclosureLabel: {x: 1060, y: 882, w: 710, h: 32},
+  disclosure: {x: 1040, y: 840, w: 750, h: 55},
+  disclosureLabel: {x: 1060, y: 852, w: 710, h: 32},
 
   // Source line
   source: {x: 116, y: 946, w: 740, h: 56},
 } as const;
 
+// Token definitions without manual width overrides: tokenWidth calculates glyph advances
 const eq28aTokens: readonly EquationToken[] = [
-  {text: 'P', width: 32},
-  {term: 'i', math: '_i', width: 24},
-  {text: '(', width: 18},
-  {term: 'T', width: 34},
-  {text: ' | ', width: 42},
-  {term: 'X', width: 34},
-  {text: ', ', width: 30},
-  {term: 'PiRace', math: 'Π_{race}', width: 76},
-  {text: ')', width: 18},
-  {text: ' ∝ ', width: 74},
-  {text: 'P(', width: 48},
-  {term: 'X', width: 34},
-  {text: ' | ', width: 42},
-  {term: 'T', width: 34},
-  {text: ') · P', width: 88},
-  {term: 'i', math: '_i', width: 24},
-  {text: '(', width: 18},
-  {term: 'T', width: 34},
-  {text: ' | ', width: 42},
-  {term: 'PiRace', math: 'Π_{race}', width: 76},
-  {text: ')', width: 18},
+  {text: 'P'},
+  {term: 'i', math: '_i'},
+  {text: '('},
+  {term: 'T'},
+  {text: ' | '},
+  {term: 'X'},
+  {text: ', '},
+  {term: 'PiRace', math: 'Π_{race}'},
+  {text: ')'},
+  {text: ' ∝ '},
+  {text: 'P('},
+  {term: 'X'},
+  {text: ' | '},
+  {term: 'T'},
+  {text: ') · P'},
+  {term: 'i', math: '_i'},
+  {text: '('},
+  {term: 'T'},
+  {text: ' | '},
+  {term: 'PiRace', math: 'Π_{race}'},
+  {text: ')'},
 ];
 
 export function DocumentedExpectation({segment}: SceneProps) {
@@ -151,7 +153,7 @@ export function DocumentedExpectation({segment}: SceneProps) {
   // Curve data for Turn 35 plot
   const axisY = 730;
   const axisPoints: Point[] = [[720, axisY], [1280, axisY]];
-  const leaderPoints: Point[] = [[1280, 536], [1390, 536]];
+  const leaderPoints: Point[] = [[1280, 440], [1390, 440]];
 
   // Prior Gaussian curve (moves from red to gold at t35Statistical)
   const priorColor = ms >= cue.t35Statistical ? gold : raceRed;
@@ -183,10 +185,10 @@ export function DocumentedExpectation({segment}: SceneProps) {
   // Turn 36 qualitative surveillance stations and paths
   const stations = [780, 930, 1080, 1230, 1380, 1530];
   const blackPathFull: Point[] = [
-    [780, 430], [930, 410], [1080, 420], [1230, 400], [1380, 390], [1530, 380],
+    [780, 410], [930, 395], [1080, 405], [1230, 385], [1380, 375], [1530, 365],
   ];
   const whitePathFull: Point[] = [
-    [780, 630], [930, 620], [1080, 630], [1230, 610], [1380, 600], [1530, 590],
+    [780, 560], [930, 550], [1080, 560], [1230, 545], [1380, 535], [1530, 525],
   ];
 
   const blackDrawn = partialPolyline(blackPathFull, t36BlackP);
@@ -194,14 +196,17 @@ export function DocumentedExpectation({segment}: SceneProps) {
   const trackingDrawn = partialPolyline(blackPathFull, tracksP);
 
   const bracketPoints: Point[] = [
-    [1720, 385], [1736, 385], [1736, 595], [1720, 595],
+    [1720, 365], [1736, 365], [1736, 530], [1720, 530],
   ];
 
   const eqPulses: EquationPulseMap = {};
 
+  // Active ledger layout: sized to content
+  const currentLedgerBox = ms >= cue.t35Documented ? L.ledgerExpanded : L.ledgerCompact;
+
   return (
     <StageSceneFrame segment={segment}>
-      {/* Continuity equation strip */}
+      {/* Continuity equation strip: centered Eq. 2.8a at 34 px */}
       <div data-continuity-strip="true">
         <Panel id="eq-strip-frame" box={L.equation} />
         <EquationTerms
@@ -210,9 +215,10 @@ export function DocumentedExpectation({segment}: SceneProps) {
           pulses={eqPulses}
           ms={ms}
           box={L.eqTerms}
-          fontSize={28}
+          fontSize={34}
+          align="center"
         />
-        <Label id="eq-label" box={L.eqLabel} size={20} weight={500} ink={gold}>
+        <Label id="eq-label" box={L.eqLabel} size={20} weight={500} align="center" ink={gold}>
           Eq. 2.8a · Bayesian prior
         </Label>
       </div>
@@ -220,8 +226,8 @@ export function DocumentedExpectation({segment}: SceneProps) {
       {/* TURN 35: Evidence Ledger, Bayesian Plot, Expectation Card */}
       {!isTurn36 && (
         <div data-turn="35">
-          {/* Evidence Ledger */}
-          <Panel id="ledger-frame" box={L.ledger} accent="color/line/hairline" />
+          {/* Evidence Ledger: sized to content at each beat */}
+          <Panel id="ledger-frame" box={currentLedgerBox} accent="color/line/hairline" />
 
           {ms >= cue.t35Black && (
             <>
@@ -325,7 +331,7 @@ export function DocumentedExpectation({segment}: SceneProps) {
             </>
           )}
 
-          {/* Expectation Card */}
+          {/* Expectation Card: sized to content */}
           {ms >= cue.t35Starting && (
             <div data-expectation-card="true" style={{opacity: startingP}}>
               <Panel id="expect-card-frame" box={L.expectationCard} accent="color/fill/gold" />
@@ -343,7 +349,7 @@ export function DocumentedExpectation({segment}: SceneProps) {
       {/* TURN 36: NCHS Plaque, Qualitative Series Plot, Disclosure */}
       {isTurn36 && (
         <div data-turn="36">
-          {/* NCHS Plaque */}
+          {/* NCHS Plaque: sized to content */}
           <Panel id="nchs-plaque-frame" box={L.plaque} accent="color/fill/gold">
             <span aria-hidden="true" style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: 5, background: gold}} />
           </Panel>
@@ -357,25 +363,28 @@ export function DocumentedExpectation({segment}: SceneProps) {
             Maternal Mortality Rates in the United States, 2021
           </Label>
 
-          {/* Qualitative Series Plot */}
+          {/* Qualitative Series Plot: populated from the first frame of NCHS beat */}
           <Panel id="series-plot-frame" box={L.seriesFrame} accent="color/line/hairline" />
 
+          {/* Title rendered at t36Maternal */}
           {ms >= cue.t36Maternal && (
             <Label id="series-title" box={L.seriesTitle} size={24} weight={600} sans ink={primary} opacity={maternalP}>
               MATERNAL MORTALITY · SURVEILLANCE SERIES
             </Label>
           )}
 
-          {/* Surveillance Station Guides */}
-          {ms >= cue.t36Surveillance && (
-            <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position: 'absolute', inset: 0}} aria-hidden="true" opacity={survP}>
-              {stations.map((sx, idx) => (
-                <line key={`station-${idx}`} x1={sx} y1={340} x2={sx} y2={730} stroke={hairline} strokeWidth="1.5" strokeDasharray="4 4" />
-              ))}
-            </svg>
-          )}
+          <Label id="qualitative-badge" box={L.qualitativeBadge} size={20} weight={600} align="right" ink={gold} opacity={nationalP}>
+            QUALITATIVE · NO RATES SHOWN
+          </Label>
 
-          {/* Paths and Bracket */}
+          {/* Surveillance Station Guides: present from first frame of NCHS beat */}
+          <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position: 'absolute', inset: 0}} aria-hidden="true" opacity={Math.max(0.6 * nationalP, survP)}>
+            {stations.map((sx, idx) => (
+              <line key={`station-${idx}`} x1={sx} y1={330} x2={sx} y2={660} stroke={hairline} strokeWidth="1.5" strokeDasharray="4 4" />
+            ))}
+          </svg>
+
+          {/* Qualitative paths and relation bracket */}
           <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position: 'absolute', inset: 0}} aria-hidden="true">
             {blackDrawn.length >= 2 && (
               <path {...lineAttrs('black-path', blackDrawn)} d={pathFrom(blackDrawn)} fill="none" stroke={gold} strokeWidth="4" opacity={t36BlackP} />
@@ -415,17 +424,16 @@ export function DocumentedExpectation({segment}: SceneProps) {
             </Label>
           )}
 
+          {/* Expectation marker docks beside the upper path: clean marker without ghost text */}
           {ms >= cue.t36Expectation && (
-            <div data-expectation-marker="true" style={{opacity: expectP}}>
-              <EvidenceToken
-                id="marker-expectation"
-                label="STARTING EXPECTATION"
-                kind="documented"
-                progress={expectP}
-                emphasis={expectP}
-                box={L.expectationMarker}
-                size={20}
-              />
+            <div
+              data-expectation-marker="true"
+              {...shapeAttrs('expectation-marker-pin', {x: 1530, y: 355, w: 20, h: 20}, 'mark', 'marker')}
+              style={{position: 'absolute', left: 1530, top: 355, width: 20, height: 20, opacity: expectP}}
+            >
+              <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+                <circle cx="10" cy="10" r="7" fill={gold} stroke={color('color/bg/field')} strokeWidth="2" />
+              </svg>
             </div>
           )}
 

@@ -19,73 +19,74 @@ const move = (ms: number, at: number, duration = 650) => cubicInOut(progress(ms,
 
 export const RLC_BRIDGE_LAYOUT = {
   // Header
-  header: {x: 120, y: 100, w: 1680, h: 75},
-  headerLabel: {x: 120, y: 110, w: 1680, h: 48},
+  header: {x: 120, y: 100, w: 1680, h: 60},
+  headerLabel: {x: 120, y: 108, w: 1680, h: 48},
 
-  // Mental Half
-  mentalPanel: {x: 120, y: 220, w: 450, h: 540},
-  mentalTitle: {x: 150, y: 245, w: 390, h: 36},
-  cartridge: {x: 150, y: 310, w: 390, h: 260},
-  cartridgePi: {x: 170, y: 335, w: 350, h: 60},
-  cartridgeLabel: {x: 170, y: 415, w: 350, h: 64},
-  mentalFooter: {x: 150, y: 640, w: 390, h: 36},
+  // Mental Half (spans vertical safe area)
+  mentalPanel: {x: 120, y: 180, w: 460, h: 742},
+  mentalTitle: {x: 150, y: 205, w: 400, h: 36},
+  cartridge: {x: 155, y: 290, w: 390, h: 260},
+  cartridgePi: {x: 175, y: 315, w: 350, h: 60},
+  cartridgeLabel: {x: 175, y: 395, w: 350, h: 64},
+  mentalFooter: {x: 150, y: 840, w: 400, h: 36},
 
   // Coupling Bridge
-  bridge: {x: 570, y: 400, w: 260, h: 80},
+  bridge: {x: 580, y: 420, w: 70, h: 4},
 
-  // Institutional Circuit Panel
-  instPanel: {x: 830, y: 220, w: 970, h: 380},
-  instTitle: {x: 860, y: 235, w: 400, h: 36},
+  // Institutional Panel: compact component chips (y: 180 to 400, h: 220)
+  instPanel: {x: 650, y: 180, w: 1150, h: 220},
+  instTitle: {x: 680, y: 195, w: 400, h: 32},
 
-  // Circuit components (L, R, C, q, V)
-  lChip: {x: 860, y: 280, w: 910, h: 56},
-  lTitle: {x: 880, y: 292, w: 220, h: 32},
-  lMeaning: {x: 1120, y: 292, w: 630, h: 32},
+  // Component chips: L, R, C, q, V
+  lChip: {x: 670, y: 232, w: 1110, h: 32},
+  lTitle: {x: 680, y: 232, w: 220, h: 30},
+  lMeaning: {x: 920, y: 232, w: 840, h: 30},
 
-  rChip: {x: 860, y: 344, w: 910, h: 56},
-  rTitle: {x: 880, y: 356, w: 220, h: 32},
-  rMeaning: {x: 1120, y: 356, w: 630, h: 32},
+  rChip: {x: 670, y: 266, w: 1110, h: 32},
+  rTitle: {x: 680, y: 266, w: 220, h: 30},
+  rMeaning: {x: 920, y: 266, w: 840, h: 30},
 
-  cChip: {x: 860, y: 408, w: 910, h: 56},
-  cTitle: {x: 880, y: 420, w: 220, h: 32},
-  cMeaning: {x: 1120, y: 420, w: 630, h: 32},
+  cChip: {x: 670, y: 300, w: 1110, h: 32},
+  cTitle: {x: 680, y: 300, w: 220, h: 30},
+  cMeaning: {x: 920, y: 300, w: 840, h: 30},
 
-  qChip: {x: 860, y: 472, w: 910, h: 56},
-  qTitle: {x: 880, y: 484, w: 440, h: 32},
+  qChip: {x: 670, y: 334, w: 1110, h: 32},
+  qTitle: {x: 680, y: 334, w: 500, h: 30},
 
-  vChip: {x: 860, y: 536, w: 910, h: 56},
-  vTitle: {x: 880, y: 548, w: 520, h: 32},
+  vChip: {x: 670, y: 368, w: 1110, h: 32},
+  vTitle: {x: 680, y: 368, w: 550, h: 30},
 
-  // Equation Band
-  eqBand: {x: 830, y: 620, w: 970, h: 120},
-  eqTerms: {x: 860, y: 630, w: 910, h: 46},
-  eqLabel: {x: 860, y: 685, w: 500, h: 30},
+  // Equation Band: large and centered Eq. 2.11 at 36 px (y: 412 to 522, h: 110)
+  eqBand: {x: 650, y: 412, w: 1150, h: 110},
+  eqTerms: {x: 650, y: 420, w: 1150, h: 56},
+  eqLabel: {x: 650, y: 482, w: 1150, h: 30},
 
-  // Damped Response Preview
-  previewPanel: {x: 830, y: 760, w: 970, h: 170},
-  previewSweepLabel: {x: 860, y: 772, w: 450, h: 28},
-  reformShockLabel: {x: 1350, y: 772, w: 200, h: 28},
-  dampedResponseLabel: {x: 1570, y: 772, w: 200, h: 28},
-  baselineLabel: {x: 860, y: 872, w: 280, h: 54},
-  dampedSolutionLabel: {x: 1160, y: 872, w: 280, h: 54},
-  figureLabel: {x: 1460, y: 872, w: 310, h: 54},
+  // Damped Response Preview (height 390 px >= 200 px requirement, y: 532 to 922)
+  previewPanel: {x: 650, y: 532, w: 1150, h: 390},
+  previewSweepLabel: {x: 680, y: 548, w: 460, h: 32},
+  reformShockLabel: {x: 1220, y: 548, w: 220, h: 32},
+  dampedResponseLabel: {x: 1480, y: 548, w: 280, h: 32},
+  baselineLabel: {x: 680, y: 865, w: 350, h: 36},
+  dampedSolutionLabel: {x: 1070, y: 865, w: 340, h: 36},
+  figureLabel: {x: 1440, y: 865, w: 340, h: 36},
 
   // Source line
   source: {x: 116, y: 946, w: 740, h: 56},
 } as const;
 
+// Token definitions without manual width overrides: tokenWidth calculates glyph advances
 const eq211Tokens: readonly EquationToken[] = [
-  {term: 'L', width: 28},
-  {term: 'q', math: 'q̈', display: 'q̈', width: 34},
-  {text: ' + ', width: 38},
-  {term: 'R', width: 28},
-  {term: 'q', math: 'q̇', display: 'q̇', width: 34},
-  {text: ' + (1/', width: 68},
-  {term: 'C', width: 28},
-  {text: ')', width: 16},
-  {term: 'q', math: 'q', display: 'q', width: 28},
-  {text: ' = ', width: 38},
-  {term: 'V', math: 'V(t)', display: 'V(t)', width: 68},
+  {term: 'L'},
+  {term: 'q', math: 'q̈', display: 'q̈'},
+  {text: ' + '},
+  {term: 'R'},
+  {term: 'q', math: 'q̇', display: 'q̇'},
+  {text: ' + (1/'},
+  {term: 'C'},
+  {text: ')'},
+  {term: 'q', math: 'q', display: 'q'},
+  {text: ' = '},
+  {term: 'V', math: 'V(t)', display: 'V(t)'},
 ];
 
 export function RLCBridge({segment}: SceneProps) {
@@ -143,20 +144,24 @@ export function RLCBridge({segment}: SceneProps) {
   };
 
   // Coupling bridge
-  const bridgePoints: Point[] = [[570, 440], [830, 440]];
+  const bridgePoints: Point[] = [[580, 420], [650, 420]];
   const bridgePulseT = clamp01(progress(ms, cue.t38Installed, cue.t38Installed + 800));
-  const pulseX = 570 + bridgePulseT * 260;
+  const pulseX = 580 + bridgePulseT * 70;
 
-  // Damped response curve points
-  const dampingFactor = 0.003 + dampsP * 0.006;
-  const baselineY = 835;
-  const baselinePoints: Point[] = [[860, baselineY], [1770, baselineY]];
-  const curvePoints: Point[] = Array.from({length: 61}, (_, i) => {
-    const px = 860 + i * 15;
-    const t = (px - 860);
-    const decay = Math.exp(-dampingFactor * t);
-    const wave = Math.sin(t * 0.035);
-    const py = baselineY - wave * decay * 24;
+  // Underdamped response curve: visible shock, overshoot, decay
+  // Baseline at y = 710, curve reaches 120 px overshoot peak above baseline and 65 px below
+  const baselineY = 710;
+  const baselinePoints: Point[] = [[680, baselineY], [1760, baselineY]];
+
+  // Damping parameter sweeps from 0.0035 to 0.0085 with dampsP
+  const dampingRate = 0.0035 + dampsP * 0.005;
+  const omega = 0.024;
+  const curvePoints: Point[] = Array.from({length: 71}, (_, i) => {
+    const px = 700 + i * 15;
+    const t = px - 700;
+    const decay = Math.exp(-dampingRate * t);
+    const wave = Math.sin(omega * t);
+    const py = baselineY - 145 * wave * decay;
     return [px, py];
   });
 
@@ -203,12 +208,12 @@ export function RLCBridge({segment}: SceneProps) {
         <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position: 'absolute', inset: 0}} aria-hidden="true">
           <path {...lineAttrs('bridge-rail', bridgePoints)} d={pathFrom(bridgePoints)} fill="none" stroke={gold} strokeWidth="3" strokeDasharray="6 4" opacity={installedP} />
           {bridgePulseT > 0 && bridgePulseT < 1 && (
-            <circle cx={pulseX} cy={440} r={9} fill={raceRed} stroke={gold} strokeWidth="2" />
+            <circle cx={pulseX} cy={420} r={9} fill={raceRed} stroke={gold} strokeWidth="2" />
           )}
         </svg>
       )}
 
-      {/* Institutional Circuit Panel */}
+      {/* Institutional Circuit Panel: components introduced and compressed to chips */}
       <div data-institutional-half="true">
         <Panel id="inst-panel-frame" box={L.instPanel} accent="color/line/hairline" />
 
@@ -222,10 +227,10 @@ export function RLCBridge({segment}: SceneProps) {
         {ms >= cue.t38Inductance && (
           <div data-chip-l="true" style={{opacity: indP}}>
             <Panel id="l-chip-frame" box={L.lChip} accent="color/line/hairline" />
-            <Label id="l-title" box={L.lTitle} size={22} weight={600} ink={lColor}>
+            <Label id="l-title" box={L.lTitle} size={20} weight={600} ink={lColor}>
               L · INDUCTANCE
             </Label>
-            <Label id="l-meaning" box={L.lMeaning} size={20} weight={500} ink={soft}>
+            <Label id="l-meaning" box={L.lMeaning} size={18} weight={500} sans ink={soft}>
               CULTURAL INERTIA + INSTITUTIONAL ENTRENCHMENT
             </Label>
           </div>
@@ -235,10 +240,10 @@ export function RLCBridge({segment}: SceneProps) {
         {ms >= cue.t38Resistance && (
           <div data-chip-r="true" style={{opacity: resP}}>
             <Panel id="r-chip-frame" box={L.rChip} accent="color/line/hairline" />
-            <Label id="r-title" box={L.rTitle} size={22} weight={600} ink={rColor}>
+            <Label id="r-title" box={L.rTitle} size={20} weight={600} ink={rColor}>
               R · RESISTANCE
             </Label>
-            <Label id="r-meaning" box={L.rMeaning} size={20} weight={500} ink={soft}>
+            <Label id="r-meaning" box={L.rMeaning} size={18} weight={500} sans ink={soft}>
               BUREAUCRATIC + CARCERAL FRICTION
             </Label>
           </div>
@@ -248,10 +253,10 @@ export function RLCBridge({segment}: SceneProps) {
         {ms >= cue.t38Capacitance && (
           <div data-chip-c="true" style={{opacity: capP}}>
             <Panel id="c-chip-frame" box={L.cChip} accent="color/line/hairline" />
-            <Label id="c-title" box={L.cTitle} size={22} weight={600} ink={cColor}>
+            <Label id="c-title" box={L.cTitle} size={20} weight={600} ink={cColor}>
               C · CAPACITANCE
             </Label>
-            <Label id="c-meaning" box={L.cMeaning} size={20} weight={500} ink={soft}>
+            <Label id="c-meaning" box={L.cMeaning} size={18} weight={500} sans ink={soft}>
               TOKEN-REFORM ABSORPTION CAPACITY
             </Label>
           </div>
@@ -261,7 +266,7 @@ export function RLCBridge({segment}: SceneProps) {
         {ms >= cue.t38Absorbs && (
           <div data-chip-q="true" style={{opacity: absP}}>
             <Panel id="q-chip-frame" box={L.qChip} accent="color/line/hairline" />
-            <Label id="q-title" box={L.qTitle} size={22} weight={600} ink={qColor}>
+            <Label id="q-title" box={L.qTitle} size={20} weight={600} ink={qColor}>
               q(t) · EQUALITY-SURPLUS CHARGE
             </Label>
           </div>
@@ -271,77 +276,76 @@ export function RLCBridge({segment}: SceneProps) {
         {ms >= cue.t38Reform && (
           <div data-chip-v="true" style={{opacity: refP}}>
             <Panel id="v-chip-frame" box={L.vChip} accent="color/line/hairline" />
-            <Label id="v-title" box={L.vTitle} size={22} weight={600} ink={vColor}>
+            <Label id="v-title" box={L.vTitle} size={20} weight={600} ink={vColor}>
               V(t) · REFORM-SHOCK DRIVING VOLTAGE
             </Label>
           </div>
         )}
       </div>
 
-      {/* Equation Band */}
-      <div data-equation-band="true">
-        {ms >= cue.t38Shocks && (
-          <div data-assembled-equation="true" style={{opacity: shocksP}}>
-            <EquationTerms
-              equation="Eq. 2.11"
-              tokens={eq211Tokens}
-              pulses={eqPulses}
-              ms={ms}
-              box={L.eqTerms}
-              fontSize={30}
-            />
-            <Label id="eq-211-label" box={L.eqLabel} size={20} weight={500} ink={gold}>
-              Eq. 2.11 · RLC governing equation
-            </Label>
-          </div>
-        )}
-      </div>
-
-      {/* Damped Response Preview */}
-      <div data-response-preview="true">
-        <Panel id="preview-panel-frame" box={L.previewPanel} accent="color/line/hairline" />
-
-        {ms >= cue.t38Damps && (
-          <>
-            <Label id="sweep-label" box={L.previewSweepLabel} size={20} weight={600} ink={gold} opacity={dampsP}>
-              DERIVED PREVIEW · NORMALIZED R SWEEP
-            </Label>
-            <Label id="reform-label" box={L.reformShockLabel} size={20} weight={600} ink={raceRed} opacity={dampsP}>
-              REFORM SHOCK
-            </Label>
-            <Label id="damped-label" box={L.dampedResponseLabel} size={20} weight={600} ink={primary} opacity={dampsP}>
-              DAMPED RESPONSE
-            </Label>
-          </>
-        )}
-
-        {/* Baseline and curve */}
-        {ms >= cue.t38Absorbs && (
-          <>
-            <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position: 'absolute', inset: 0}} aria-hidden="true">
-              <path {...lineAttrs('baseline-rail', baselinePoints)} d={pathFrom(baselinePoints)} fill="none" stroke={hairline} strokeWidth="1.5" strokeDasharray="4 4" opacity={absP} />
-              {ms >= cue.t38Damps && (
-                <path {...lineAttrs('response-curve', curvePoints)} d={pathFrom(curvePoints)} fill="none" stroke={color('color/text/accent')} strokeWidth="3" opacity={dampsP} />
-              )}
-            </svg>
-            <Label id="baseline-label" box={L.baselineLabel} size={20} weight={500} ink={muted} opacity={absP}>
-              EXTRACTION BASELINE · q = 0
-            </Label>
-          </>
-        )}
-
-        {ms >= cue.t38Damps && (
-          <Label id="solution-label" box={L.dampedSolutionLabel} size={20} weight={500} ink={soft} opacity={dampsP}>
-            Eq. 2.12 · damped solution
+      {/* Equation Band: assembled at t38Shocks, centered Eq. 2.11 at 36 px */}
+      {ms >= cue.t38Shocks && (
+        <div data-equation-band="true" style={{opacity: shocksP}}>
+          <Panel id="eq-band-frame" box={L.eqBand} accent="color/line/hairline" />
+          <EquationTerms
+            equation="Eq. 2.11"
+            tokens={eq211Tokens}
+            pulses={eqPulses}
+            ms={ms}
+            box={L.eqTerms}
+            fontSize={36}
+            align="center"
+          />
+          <Label id="eq-211-label" box={L.eqLabel} size={20} weight={500} align="center" ink={gold}>
+            Eq. 2.11 · RLC governing equation
           </Label>
-        )}
+        </div>
+      )}
 
-        {ms >= cue.t38Shocks && (
-          <Label id="figure-label" box={L.figureLabel} size={20} weight={600} ink={gold} opacity={shocksP}>
-            Figure 2.6 · response preview
+      {/* Damped Response Preview: rendered ONLY when content arrives (from t38Absorbs) */}
+      {ms >= cue.t38Absorbs && (
+        <div data-response-preview="true">
+          <Panel id="preview-panel-frame" box={L.previewPanel} accent="color/line/hairline" />
+
+          {ms >= cue.t38Damps && (
+            <>
+              <Label id="sweep-label" box={L.previewSweepLabel} size={20} weight={600} ink={gold} opacity={dampsP}>
+                DERIVED PREVIEW · NORMALIZED R SWEEP
+              </Label>
+              <Label id="reform-label" box={L.reformShockLabel} size={20} weight={600} ink={raceRed} opacity={dampsP}>
+                REFORM SHOCK
+              </Label>
+              <Label id="damped-label" box={L.dampedResponseLabel} size={20} weight={600} ink={primary} opacity={dampsP}>
+                DAMPED RESPONSE
+              </Label>
+            </>
+          )}
+
+          {/* Baseline rail */}
+          <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position: 'absolute', inset: 0}} aria-hidden="true">
+            <path {...lineAttrs('baseline-rail', baselinePoints)} d={pathFrom(baselinePoints)} fill="none" stroke={hairline} strokeWidth="2" strokeDasharray="6 4" opacity={absP} />
+            {ms >= cue.t38Damps && (
+              <path {...lineAttrs('response-curve', curvePoints)} d={pathFrom(curvePoints)} fill="none" stroke={color('color/text/accent')} strokeWidth="4" opacity={dampsP} />
+            )}
+          </svg>
+
+          <Label id="baseline-label" box={L.baselineLabel} size={18} weight={500} ink={muted} opacity={absP}>
+            EXTRACTION BASELINE · q = 0
           </Label>
-        )}
-      </div>
+
+          {ms >= cue.t38Damps && (
+            <Label id="solution-label" box={L.dampedSolutionLabel} size={18} weight={500} ink={soft} opacity={dampsP}>
+              Eq. 2.12 · damped solution
+            </Label>
+          )}
+
+          {ms >= cue.t38Shocks && (
+            <Label id="figure-label" box={L.figureLabel} size={18} weight={600} ink={gold} opacity={shocksP}>
+              Figure 2.6 · response preview
+            </Label>
+          )}
+        </div>
+      )}
 
       {/* Source line */}
       <Label id="source-line" box={L.source} size={20} weight={400} ls={0.35} lh={1.35} ink={muted}>

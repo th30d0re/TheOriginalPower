@@ -451,10 +451,108 @@ Build minutes seven to twelve package E from `STORYBOARD_MIN7_12.md` (turns 35�
 - No Chromium browser renders were executed in this stage; visual layout and text fitting rely on static layout audit geometry and estimates.
 - The NCHS report and Greenwald & Banaji (1995) paper citations conform to the approved narration and storyboard register without external network fetching.
 
+## Fix pass 1 (Package E)
+
+Model: Gemini 3.8 Flash (High)  
+Checkpoint: `0301138`
+
+### What was requested
+
+Execute fix pass 1 for minutes 7–12 Package E based on frame reviews of `min7_12_E_v1.mp4`:
+- Enforce the new layout invariant: every box on screen holds its content at its last beat; all panels, cards, and windows are populated.
+- Enforce rule 2: faded-out labels are fully absent with zero ghost text.
+- Enforce rule 3: zero internal labels on screen (no turn numbers matching `/\bturn \d+\b/i`, cue names, or file names).
+- Enforce rule 4: balanced final frame compositions with no empty band exceeding one third of the safe area.
+- Enforce rule 5: equations are the largest element in their beat; Eq. 2.8a and Eq. 2.11 set at 34 px or larger, centered, with glyph-derived token advances.
+- Address Package E defects:
+  - `DocumentedExpectation` (turns 35–36, frames `e428`, `e434`, `e441`, `e449`):
+    - Center Eq. 2.8a at 34 px in the continuity strip.
+    - Size the `BLACK WOMEN` ledger card to its active content.
+    - Populate the qualitative series plot from the first frame of the NCHS beat with the label `QUALITATIVE · NO RATES SHOWN` and no axis numbers.
+    - Remove the faint ghost `STARTING EXPECTATION` label behind the plot's top right at `e449`.
+  - `InstalledRouting` (turn 37, frames `e457`, `e463`):
+    - Draw each of the three right-hand boxes only when its content arrives.
+    - Size the gates and cartridge to their content.
+  - `RLCBridge` (turn 38, frames `e470`, `e477`, `r473`, `r476`, `r479`):
+    - Remove the empty preview box prior to content arrival; bring circuit components in step with spoken inductance, resistance, and capacitance.
+    - Re-lay the final state: assemble Eq. 2.11 centered at 36 px; give the damping preview at least 200 px of height (allocated 390 px) displaying a visible underdamped curve (shock impulse, overshoot, decay); compress components to compact chips.
+    - Typeset Eq. 2.11 using pure glyph-derived `EquationTerms` tokens without manual width overrides.
+  - `ExplicitImplicitChannels` (turns 39–40, frames `e483`, `e490`, `e496`):
+    - Build both explicit and implicit channels across the full vertical frame from the start of turn 39, centering the bias hub.
+    - Build the turn-40 citation card to its final size from the start, populating names, 1995, title, and *Psychological Review* 102(1) as each element is spoken.
+- Verify episode TypeScript, the updated Package E checker (including the fill-ratio assertion and `/\bturn \d+\b/i` assertion), all existing test suites, and `tools/check_antithesis.py`.
+
+### How I fixed it
+
+1. **`DocumentedExpectation` (turns 35–36)**:
+   - Centered Eq. 2.8a at 34 px font size inside `eqTerms` with `align="center"`. Removed manual width overrides from `eq28aTokens`, allowing `tokenWidth` to calculate advances from glyph metrics. Centered the label `Eq. 2.8a · Bayesian prior` at y = 172.
+   - Sized `ledgerCompact` to 220 px height (`y: 285` to `505`) during the starting wariness beat. Expanded smoothly to 495 px height on `t35Documented` to hold documented harm, ongoing disparity, and updated expectation tokens. Sized `expectationCard` to `{w: 400, h: 180}` at `{x: 1390, y: 350}`.
+   - Drawn the qualitative series plot frame and unlabeled surveillance station guides from `t36National`. Displayed `QUALITATIVE · NO RATES SHOWN` at `{x: 1340, y: 260}` from the first frame of the NCHS beat. Rendered the title `MATERNAL MORTALITY · SURVEILLANCE SERIES` at `t36Maternal`.
+   - Removed the redundant turn-36 `EvidenceToken` text `STARTING EXPECTATION`. Replaced it with a clean gold expectation marker pin docking on the upper path at `t36Expectation`. Positioned `whitePathLabel` at y = 610 below the white path, eliminating path line intersection. Expanded `plaqueYear` height to 38 px to satisfy single-line typography bounds.
+
+2. **`InstalledRouting` (turn 37)**:
+   - Set direct facts lane `<Panel id="facts-lane-frame">` to render strictly on `ms >= cue.t37Facts`.
+   - Set empathy gate `<Panel id="empathy-gate-frame">` to render strictly on `ms >= cue.t37Empathy`.
+   - Set threat detection gate `<Panel id="threat-gate-frame">` to render strictly on `ms >= cue.t37Threat`.
+   - Sized `empathyGate` and `threatGate` to `{w: 420, h: 170}`. Routed connection traces directly to gate centers at y = 365 and y = 725.
+   - Sized `cartridge` to `{w: 440, h: 310}`. Centered Eq. 2.8a at 34 px in the continuity strip.
+
+3. **`RLCBridge` (turn 38)**:
+   - Deferred rendering `<Panel id="preview-panel-frame">` until `ms >= cue.t38Absorbs`.
+   - Introduced components sequentially with their cultural and carceral meanings in the institutional panel (y: 180 to 400). Connected passive elements on `t38Institutional`.
+   - Assembled Eq. 2.11 at `t38Shocks` in an equation band at y: 412, centered at 36 px with `align="center"`. Removed all manual width overrides from `eq211Tokens` so token advances derive from glyph properties.
+   - Allocated 390 px of height to `previewPanel` (`y: 532` to `922`). Synthesized a prominent underdamped response curve with an initial 120 px impulse peak, a 65 px undershoot trough, a decaying secondary oscillation, and exponential relaxation toward the extraction baseline. Sized lower labels to 18 px across 340 px boxes to ensure clean single-line typesetting.
+
+4. **`ExplicitImplicitChannels` (turns 39–40)**:
+   - Rendered both `explicitChannel` (y: 240 to 460) and `implicitChannel` (y: 560 to 780) panel frames from the beginning of turn 39, establishing balanced composition across the vertical canvas.
+   - Sized the central `biasHub` to `{w: 420, h: 500}` (`y: 280` to `780`), spanning both channels symmetrically.
+   - Routed `implicitRail` at y = 650 with 34 px vertical clearance from `implicitHeading` (y: 580 to 616) and 65 px vertical clearance from `implicitAssocLabel` (y: 715 to 749), eliminating line crossing diagnostics.
+   - Sized the turn-40 `citationCard` to final dimensions `{x: 330, y: 240, w: 1260, h: 480}` from the first beat of turn 40. Filled elements sequentially: authors on `t40Anthony` and `t40Banaji`, source rule on `t40Formal`, year 1995 on `t40NinetyFive`, title on `t40Implicit` and `t40Cognition`, and journal citation `Psychological Review 102(1)` on `t40Article`.
+
+5. **Validation runner updates**:
+   - Added `checkFillRatio` in `tools/check_min7_12_e.tsx` asserting that all declared frames with effective opacity ≥ 0.05 satisfy `areaFillRatio >= 0.18` OR `verticalSpanRatio >= 0.45` with zero empty containers. Verified fill ratios at all scene end frames and settled beat states (`t35Disparity`, `t37Facts`, `t38Shocks`, `t39Associations`).
+   - Added assertion prohibiting any on-screen text matching `/\bturn \d+\b/i` across all 203 rendered frames.
+   - Added beat assertions for `QUALITATIVE · NO RATES SHOWN` at `t36National` and `Psychological Review 102(1)` at `t40Article`.
+
+### Challenges encountered
+
+1. **Line intersection with dual-channel status labels**:
+   - In `ExplicitImplicitChannels`, shifting the implicit channel into the layout from turn start exposed a stroke intersection between `implicit-rail` (y = 680) and `implicit-assoc-label` (y = 670 to 704). Placing the rail at y = 650 and moving `implicitAssocLabel` to y = 715 established 65 px of clearance.
+2. **Text advance fitting on multi-term chips**:
+   - In `RLCBridge`, setting component meanings in narrow column chips caused estimated character wrapping. Organizing the component chips across full panel widths (`w: 1110`) allowed 840 px for descriptive strings, seating 44-character strings on a single line.
+3. **Typography line height on year markers**:
+   - In `DocumentedExpectation`, `plaqueYear` set at 28 px font size in a 32 px height container failed the 1.25 line-height ratio test. Expanding container height to 38 px satisfied the layout audit text fit rule.
+
+### Next ideas (6 Ideas)
+
+1. Introduce an `UnderdampedResponsePlot` component in `min7_12/shared/` that parameterizes damping ratio, natural frequency, and stroke styling.
+2. Build an automated container fill auditor CLI that runs across all scene plans in the repository.
+3. Add a layout audit rule that detects and flags empty frames during transitional frames between cue beats.
+4. Add progressive token connection animations in `EvidenceToken` to show live socket locking.
+5. Create a shared `CitationCard` component that encapsulates multi-field academic bibliographic reveals.
+6. Support multi-channel routing bus visualization with automatic collision avoidance around centered person marks.
+
+### Checks
+
+- Episode TypeScript: `npx --prefix /Users/emmanuel/Documents/Theory/scriptCast-stage/video tsc --noEmit -p Architecting_the_operation/video/yt02/stage` exits 0 with zero diagnostics.
+- `check_min7_12_e` tail:
+  - `PASS: 203 Package E frames rendered in two fresh processes; all markup hashes match.`
+  - `PASS: audit self-test (10 rules); 203 Package E frames (cues + 500 ms grid); layout audit of 3900 declared boxes (safe area, notch zones, text fit, collisions); fill-ratio assert verified on all scene end frames; clean turn transitions, storyboard strings, hook, underscore, internal-turn and interaction-hint policies verified.`
+- `check_min7_12_f` tail: `PASS: 223 Package F frames rendered in two fresh processes; all markup hashes match. PASS: audit self-test (10 rules); 223 Package F frames (cues + 500 ms grid); layout audit of 3858 declared boxes … fill-ratio assert verified on all scene end frames`
+- `check_min7_12_shared` tail: `PASS: 25 min7_12-shared states rendered in two fresh processes; all markup hashes match. PASS: audit self-test (10 rules); 25 min7_12 shared-component states; layout audit of 171 declared boxes …`
+- `check_first_minute` tail: `PASS: 43 cue-derived frames; five scene contracts, manuscript strings, real subscripts, hook policy, underscore policy, and interaction-hint policy verified; …`
+- `check_roadmap_boot` tail: `PASS: RoadmapBoot renders 17 deterministic frames; 13 labels land on their cues and are absent before; …no literal underscores; no interaction hints.`
+- `check_minute_two` tail: `PASS: 44 cue-derived frames; exact definition spacing …; Figure 2.3 layer widths 598 / 483 / 368 px in the ratio 5.2 : 4.2 : 3.2.`
+- `check_dashboard` tail: `PASS: Equal Earth route 1296 samples / 0 land hits …; all 24 tray modes plus 3 Wage plane modes; …no rendered interaction hints; 75 polities with 16 non-colliding labels.`
+- `check_min3_7_shared` tail: `PASS: 25 representative shared-component states; eleven component contracts, hook policy, underscore policy, Gaussian curves, … Posterior modes: 0.280460 / 0.499174 / 0.718096.`
+- `check_min3_7_a` tail: `PASS: audit self-test (10 rules); 47 Package A cue-derived frames; 1282 audited boxes; …`
+- `check_min3_7_b` tail: `PASS: audit self-test (10 rules); 43 Package B cue-derived frames; 1146 audited boxes; …`
+- `check_min3_7_c` tail: `PASS: audit self-test (10 rules); 195 Package C frames (cues + 500 ms grid); layout audit of 6799 declared boxes …`
+- `check_min3_7_d` tail: `PASS: audit self-test (10 rules); 211 Package D frames (cues + 500 ms grid); layout audit of 5306 declared boxes over 211 frames …; monotonic posterior sweep 0.2800 → 0.6755 (prior 0.72).`
+- `check_equations` tail: `PASS: 14 equation frames; 111 registered coloured terms; 11 pulse cues peak at cue + 200 ms and rest after 600 ms; Eq. 2.5 and Eq. 2.8a are verbatim with MathText subscripts.`
+- `tools/check_antithesis.py` on all package E files and findings: `check-antithesis: no banned constructions found.`
 
 
-
-## Package H
 
 Model: Gemini 3.8 Flash (High)  
 Checkpoint: `162607e`
