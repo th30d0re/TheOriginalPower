@@ -74,7 +74,8 @@ At this rate the episode cannot be finished on hosted quotas.
 |---|---|---|
 | Storyboard (once per ~5 min of picture) | Hosted frontier model | Design judgment, sourcing |
 | Component library (once) | Hosted frontier model | Foundation quality |
-| Scene descriptions and fixes | **Local coding model, Ultra A** | Bounded and verifiable |
+| **Design pass**: one scene spec and a grey-box wireframe per scene, approved by the author | Hosted frontier model | Composition is the judgment call; separating it from code was the main lesson |
+| **Implementation pass**: fill the approved spec, plus fixes | **Local coding model, Ultra A** | Bounded and verifiable; the layout comes from the grammar |
 | Frame review against a written rubric | **Local VLM critic, Ultra B** | Closes the "checks pass, picture wrong" gap |
 | Rendering | **Remotion workers on both Ultras** | Frame ranges split across machines |
 | Escalations and final review | Hosted frontier model plus the author | Taste and edge cases |
@@ -176,9 +177,19 @@ the first. Local models do the reading; hosted models only handle escalations.
 **Phase 1: the scene grammar.**
 - A frontier model builds the component library and grammar from the approved minutes.
 - Migrate one approved minute as the reference.
+- The full spec is in the scriptCast repo, `docs/briefs/v0.4-stage-production-loop.md`:
+  - the grammar and templates;
+  - wireframe mode;
+  - stills, OCR and pixel verify, the critic and repair;
+  - the review UI;
+  - a dispatch wrapper.
+- The orchestration rules every model follows are in `docs/STAGE_PRODUCTION_PARADIGM.md`.
 
-**Phase 2: the local production loop.**
+**Phase 2: the local production loop and a model comparison.**
 - Builder, checks, cue stills, critic and fix, as in §3.3, on the next 5 minutes of the episode.
+- **Frontier design comparison on that same new sequence.** Codex, Gemini Argon, Grok 4.7, Kimi
+  and a Claude model each do the design pass only. One fixed implementer then builds every design,
+  so design quality is measured separately from implementation quality.
 - Measure tokens and wall-clock per minute of picture against today.
 
 **Phase 3: fine-tuning.**
