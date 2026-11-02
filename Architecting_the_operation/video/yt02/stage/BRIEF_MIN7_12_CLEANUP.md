@@ -76,3 +76,61 @@ All of these pass:
 - `check_antithesis.py` on your files.
 
 Report in `FINDINGS_MIN7_12_CLEANUP.md`. List the strings you removed, by scene.
+
+## Packages E and H (after Argon's design pass)
+
+**Frames:** `outputs/YT02v2_ov/video/stage_runs/v4/e<episode-seconds>.jpg`. When you run E or H, write
+your report to `FINDINGS_MIN7_12_CLEANUP_EH.md`, not `FINDINGS_MIN7_12_CLEANUP.md`.
+
+**Blocking defects:**
+- **E, `RLCBridge` (`e476`, `e479`).**
+  - A stack of term labels ("L", "R", "C", "q(t)", "V(t)") and a faint band reading "CHAPTER 2 ·
+    SYSTEM COUPLING / RLC BACKLASH MODEL" render at y 0–80. They cross the top border and the
+    notch. Remove them, or move them into the safe area.
+  - The layout audit missed them because they carry no `data-text` or `data-shape` box. Add an
+    assert that every rendered text node sits inside a declared `data-text` box, so undeclared
+    text fails the check.
+- **H, `InterpersonalClass`, turn 60 (`e726`).** The state-power list must use the narration's
+  words, verbatim:
+  - STATE LEGISLATURES;
+  - APPELLATE COURTS;
+  - POLICE DEPARTMENTS;
+  - CREDIT MARKETS;
+  - MILITARY FORCE.
+
+  Remove "COERCIVE POLICING", "CAPITAL ALLOCATION", "ARMED SOVEREIGNTY" and "STRUCTURAL LEVERS
+  OUTSIDE DYADIC SCOPE".
+- **Invented or unsourced claims.** Delete all of these:
+  - "BIB 4226";
+  - "PART I · FORMAL MODEL";
+  - "CHAPTERS 2–21";
+  - "CIVIL RIGHTS AND RECONSTRUCTION FORCING";
+  - "INGROUP SOLIDARITY GRANT";
+  - "OUTGROUP SUSPICION TRIGGER";
+  - "VITAL STATISTICS SURVEILLANCE";
+  - "Macro-level control over law, courts, policing, and credit";
+  - "CALIBRATED TO EMPIRICAL RECORD".
+
+  An on-screen claim must come from the storyboard, the narration or a cited source line.
+- **H, `UnequalTreatment` (`e683`).** The cards titled "INTERPERSONAL CASE 03/04" are placeholders.
+  Each card appears when its example is spoken.
+
+**Filler to strip.** Keep the rules above and the 25-word budget. Examples:
+- **E:** "CLINICAL RECORD LEDGER", "OBSERVED STREAM FEEDS LIKELIHOOD P(X | T)", "SOURCE-BACKED
+  BAYESIAN UPDATE", "EMPIRICAL REVISION RULE", "BAYESIAN EMPIRICAL REVISION", "DIRECTIONAL
+  SURVEILLANCE COMPARISON", "ORDINAL COMPARISON · NO NUMERICAL AXES OR RATES" (keep the one
+  "QUALITATIVE · NO RATES SHOWN"), "INSTALLED PRIOR MODULE", "PRIOR ROUTING STAGE · CH. 2",
+  "AUTOMATIC GATEWAY SELECTION", "UPPER/LOWER OUTPUT GATE", "CROSS-TIER COUPLING", "STATE FEEDBACK ·
+  CH. 2", "CIRCUIT PARAMETERS · FIVE TERM CHIPS", "FOUNDATIONAL FORMULATION · CITATION RECORD",
+  "DUAL-CHANNEL SOURCE", "UPPER CHANNEL · SELF-REPORT", "LOWER CHANNEL · TRACE ACTIVATION",
+  "BEHAVIORAL OUTPUT", and the descriptive sentences under them.
+- **H:** "OPERATIONAL LOCUS · INDIVIDUAL & DYADIC INTERACTION", "SYMMETRICAL INTERGROUP
+  CAPABILITY", "SOCIAL COHORT 01/02" (use GROUP A / GROUP B), "BILATERAL INTERPERSONAL CAPABILITY
+  ACROSS GROUPS", "SYMMETRICAL DYADIC GRAPH", "UNIVERSAL TRAIT", "UNIVERSAL ORIGIN", "INTERPERSONAL
+  UBIQUITY", "DYADIC INTERACTION FIELD", "TAXONOMIC CALIBRATION · THREE INTERPERSONAL TERMS",
+  "CHAPTER 2 · NOMENCLATURE SPECIFICATION", "SEQUENTIAL INTERPERSONAL PIPELINE", "STAGE 01 → STAGE
+  02 → STAGE 03", "PATHWAY SIGNAL…", "THREE-STAGE TRANSMISSION", "LOCUS · …", "CASE 0n ·
+  SPEECH/COMMERCE/…", "SPEECH BOUNDARY", "SERVICE COUNTER", "GRADING SHEET", "QUALIFIED TENANT",
+  "ATTITUDE RECORD", "ANTIPATHY RECORD", "BEHAVIORAL RECORD", "Three canonical constructs…",
+  "Complete specification of…", "CHAPTER 2 · SECTION TRANSITION", "LITERATURE BOUNDARY ·
+  INTERPERSONAL TO STRUCTURAL HANDOFF".
