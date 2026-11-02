@@ -1,7 +1,7 @@
 import React from 'react';
 import {cubicOut, progress, useCue, useStageMs} from '@stage';
 import {color} from '../tokens';
-import {CompactBorder} from '../dashboard/CompactBorder';
+import {CardBorder} from '../dashboard/CardBorder';
 import waveform from './data/waveform_t5.json';
 
 const WIDTH=1400,HEIGHT=170,CENTER=HEIGHT/2;
@@ -23,7 +23,7 @@ export function Disclosure() {
   const played=progress(ms,waveform.start_ms,waveform.end_ms);
   const playhead=played*WIDTH;
   return <div data-scene="Disclosure" style={{position:'absolute',inset:0,width:1920,height:1080,overflow:'hidden',background:color('color/bg/field'),fontFamily:'IBM Plex Sans',color:color('color/text/primary')}}>
-    <CompactBorder/>
+    <CardBorder/>
     {ms>=narration.at&&<div style={{position:'absolute',left:245,top:320,width:1430,textAlign:'center',opacity:visible,transform:`translateY(${10*(1-visible)}px)`}}>
       <div style={{fontSize:40,lineHeight:1.48,fontWeight:400}}>
         <span>This narration uses an artificial intelligence </span>

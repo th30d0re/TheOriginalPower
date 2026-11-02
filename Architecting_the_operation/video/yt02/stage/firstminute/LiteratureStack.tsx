@@ -1,7 +1,7 @@
 import React from 'react';
 import {cubicOut, progress, useCue, useStageMs} from '@stage';
 import {color} from '../tokens';
-import {CompactBorder} from '../dashboard/CompactBorder';
+import {CardBorder} from '../dashboard/CardBorder';
 
 const reveal=(ms:number,at:number,duration=480)=>cubicOut(progress(ms,at,at+duration));
 
@@ -64,7 +64,7 @@ export function LiteratureStack() {
   const tripartiteIn=reveal(ms,tripartite.at,560);
   const boundary=cubicOut(progress(ms,stops.at,stops.at+600));
   return <div data-scene="LiteratureStack" style={{position:'absolute',inset:0,width:1920,height:1080,overflow:'hidden',background:color('color/bg/field'),fontFamily:'IBM Plex Sans',color:color('color/text/primary')}}>
-    <CompactBorder/>
+    <CardBorder/>
     {ms>=established.at&&<div style={{position:'absolute',left:220,top:88,fontSize:68,fontWeight:500,opacity:headerIn,transform:`translateY(${18*(1-headerIn)}px)`}}>Established social science</div>}
     {blockCues.map((at,index)=>ms>=at?<LiteratureBlock key={at} index={index} amount={reveal(ms,at)}/>:null)}
     {ms>=tripartite.at&&<Tripartite amount={tripartiteIn}/>} 

@@ -1,7 +1,7 @@
 import React from 'react';
 import {cubicOut, progress, useCue, useStageMs} from '@stage';
 import {color} from '../tokens';
-import {CompactBorder} from '../dashboard/CompactBorder';
+import {CardBorder} from '../dashboard/CardBorder';
 
 const enter = (ms:number, at:number, duration=460) => cubicOut(progress(ms, at, at + duration));
 
@@ -90,7 +90,7 @@ export function DictionaryEntry() {
     evidence:enter(ms,evidence.at,430),
   };
   return <div data-scene="DictionaryEntry" style={{position:'absolute',inset:0,width:1920,height:1080,overflow:'hidden',background:color('color/bg/field')}}>
-    <CompactBorder/>
+    <CardBorder/>
     <DefinitionSceneContent state={state}/>
   </div>;
 }

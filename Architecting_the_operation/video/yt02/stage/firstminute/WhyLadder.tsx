@@ -1,7 +1,7 @@
 import React from 'react';
 import {cubicOut, progress, useCue, usePlan, useStageMs} from '@stage';
 import {color} from '../tokens';
-import {CompactBorder} from '../dashboard/CompactBorder';
+import {CardBorder} from '../dashboard/CardBorder';
 import {BacklashOscillatorView} from '../dashboard/artifacts/BacklashOscillatorView';
 import {DefinitionSceneContent, finalDefinitionState} from './DictionaryEntry';
 import chesapeake from './data/chesapeake_coastline.json';
@@ -77,7 +77,7 @@ export function WhyLadder() {
   const x=WHY_LAYOUT.columnX*shrink,y=WHY_LAYOUT.rowYs[0]*shrink;
   const slotOneCaption=reveal(ms,why1.at,520)*(active===0?1:.48);
   return <div data-scene="WhyLadder" style={{position:'absolute',inset:0,width:1920,height:1080,overflow:'hidden',background:color('color/bg/field'),fontFamily:'IBM Plex Sans'}}>
-    <CompactBorder/>
+    <CardBorder/>
     <div data-continuity-entry="true" style={{position:'absolute',inset:0,transform:`translate(${x}px,${y}px) scale(${scale})`,transformOrigin:'top left',zIndex:2}}><DefinitionSceneContent state={finalDefinitionState}/></div>
     {ms>=header.at&&<div style={{position:'absolute',left:WHY_LAYOUT.headerX,top:78,fontSize:64,fontWeight:500,color:color('color/text/primary'),opacity:headerIn,transform:`translateY(${18*(1-headerIn)}px)`}}>Why, at every step</div>}
     {ms>=why1.at&&<WhyRow index={0} y={WHY_LAYOUT.rowYs[0]} at={why1.at} active={active===0} ms={ms}><ThumbFrame/></WhyRow>}

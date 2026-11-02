@@ -1,7 +1,7 @@
 import React from 'react';
 import {MathText, cubicOut, progress, useCue, useStageMs} from '@stage';
 import {color} from '../tokens';
-import {CompactBorder} from '../dashboard/CompactBorder';
+import {CardBorder} from '../dashboard/CardBorder';
 
 const panel: React.CSSProperties = {
   background: color('color/fill/panel-render'),
@@ -81,7 +81,7 @@ export function TitleOpen() {
   const definitionIn = rise(ms, definition.at, 520);
   const underline = cubicOut(progress(ms, fails.at, fails.at + 500));
   return <div data-scene="TitleOpen" style={{position:'absolute', inset:0, width:1920, height:1080, overflow:'hidden', background:color('color/bg/field'), color:color('color/text/primary'), fontFamily:'IBM Plex Sans'}}>
-    <CompactBorder/>
+    <CardBorder/>
     {ms >= title.at && <div style={{position:'absolute', left:120, right:120, top:TITLE_Y, textAlign:'center', opacity:titleIn, transform:`translateY(${24*(1-titleIn)}px)`}}>
       <div style={{fontSize:96, lineHeight:1, fontWeight:500, letterSpacing:-2}}>The Original Power</div>
       <div style={{marginTop:22, font:'400 30px "IBM Plex Mono"', letterSpacing:3, color:color('color/text/muted')}}>Emmanuel Theodore</div>
