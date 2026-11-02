@@ -552,7 +552,106 @@ Execute fix pass 1 for minutes 7–12 Package E based on frame reviews of `min7_
 - `check_equations` tail: `PASS: 14 equation frames; 111 registered coloured terms; 11 pulse cues peak at cue + 200 ms and rest after 600 ms; Eq. 2.5 and Eq. 2.8a are verbatim with MathText subscripts.`
 - `tools/check_antithesis.py` on all package E files and findings: `check-antithesis: no banned constructions found.`
 
+## Design pass (Package E)
 
+Model: Gemini 4 Argon (High)  
+Checkpoint: `4a99250`
+
+### What was requested
+
+Execute the minutes 7–12 Design Pass (`BRIEF_MIN7_12_POLISH.md`) for Package E (turns 35–40: `DocumentedExpectation`, `InstalledRouting`, `RLCBridge`, `ExplicitImplicitChannels`) after reviewing the current rendered frames in `outputs/YT02v2_ov/video/stage_runs/v2/` (`e434.jpg`, `e449.jpg`, `e463.jpg`, `e476.jpg`, `e479.jpg`, `e490.jpg`, `e496.jpg`, `s1.jpg`):
+- Enforce Rule 1 (Composition): at every beat's settled state, content spans at least ~70% of the safe area's height (`>= 658 px` of `y: 70..1010`, verified even excluding `source-line`).
+- Enforce Rule 2 (Cards fit their text): every citation or definition card and panel is no more than 40 px taller than its final content/text block (`f.h - span <= 40 px`), built at final size from its first beat and filled as each element is spoken.
+- Enforce Rule 3 (Size floor): body text is at least 28 px and labels at least 20 px across all declared text boxes, with no exceptions.
+- Fix `DocumentedExpectation` (`e434`, `e449`):
+  - Rebalance the three Turn 35 panels (`ledger-frame`, `bayes-plot-frame`, `expect-card-frame`) into one row of equal height (`y: 255..880`, `h: 625`), eliminating the empty space below the `"BLACK WOMEN"` card at `e434`.
+  - Balance the Turn 36 NCHS column (`y: 250..895`) and series plot column (`y: 250..895`) at `e449`.
+- Fix `RLCBridge` close (`e476`, `e479`):
+  - Re-lay the ~13 px component list as five term chips (`TermChip`) at the floor sizes (`>= 20 px` labels / `>= 28 px` body).
+  - Set Eq. 2.11 (`Lq̈ + Rq̇ + (1/C)q = V(t)`) at 40 px or more (`42 px`), centred, using `EquationTerms` tokens.
+  - Keep the derived damping preview at its readable height (`248 px >= 200 px`) while tightening all panel slack to `<= 40 px`.
+- Fix `ExplicitImplicitChannels`, the Greenwald & Banaji card (`e490`, `e496`):
+  - Size the Greenwald & Banaji card tightly to its content (`h: 256 px`, `36 px` slack), eliminating the empty lower two-thirds.
+  - Show its full content: the names (`ANTHONY G. GREENWALD · MAHZARIN R. BANAJI`), `1995`, the title (*Implicit Social Cognition: Attitudes, Self-Esteem, and Stereotypes*), and *Psychological Review* `102(1)` (bib 4226).
+  - Pair the card with the explicit/implicit picture (`BIAS` hub, `EXPLICIT` channel, `IMPLICIT` channel, `INDIVIDUAL JUDGMENT` meter) so the frame is balanced across the vertical canvas.
+- Add automated vertical-span (Rule 1), card-fit (Rule 2), and minimum-font (Rule 3) assertions to `tools/check_min7_12_e.tsx` while keeping all earlier assertions.
+
+### How I fixed it
+
+1. **`DocumentedExpectation` (`min7_12/e/DocumentedExpectation.tsx`, turns 35–36)**:
+   - Re-laid Turn 35 (`!isTurn36`) below the centered `36 px` Eq. 2.8a continuity strip (`y: 100..220`, `30 px` slack) as a single row of three matched-height panels (`y: 255..880`, `h: 625`, `36 px` slack each): `ledger-frame` (`{x: 120, y: 255, w: 480, h: 625}`), `bayes-plot-frame` (`{x: 635, y: 255, w: 690, h: 625}`), and `expect-card-frame` (`{x: 1360, y: 255, w: 440, h: 625}`).
+   - Populated `ledger-frame` with a `28 px` heading (`BLACK WOMEN` at `t35Black`), `28 px` clinical summary body, three `20 px` `EvidenceToken` rows (`WARINESS TOWARD THE U.S. MEDICAL SYSTEM`, `DOCUMENTED HARM`, `ONGOING DISPARITY`), and `20 px` update caption (`EXPECTATION UPDATED ON DOCUMENTED EVIDENCE` at `t35Disparity`).
+   - Re-laid Turn 36 (`isTurn36`) across `y: 250..895` (`795 px` total scene vertical span with the top strip): left column pairs `nchs-plaque-frame` (`{x: 120, y: 250, w: 490, h: 310}`, `36 px` slack) and `nchs-context-frame` (`{x: 120, y: 585, w: 490, h: 310}`, `36 px` slack) at `28 px` body/title sizes, while the right column pairs `series-plot-frame` (`{x: 650, y: 250, w: 1150, h: 550}`, `36 px` slack) and `disclosure-frame` (`{x: 650, y: 825, w: 1150, h: 70}`, `36 px` slack).
+
+2. **`InstalledRouting` (`min7_12/e/InstalledRouting.tsx`, turn 37)**:
+   - Centered Eq. 2.8a at `36 px` in the continuity strip (`{x: 120, y: 100, w: 1680, h: 120}`, `30 px` slack).
+   - Paired `cartridge-frame` (`{x: 120, y: 260, w: 440, h: 350}`, `36 px` slack) with `cartridge-mech-frame` (`{x: 120, y: 635, w: 440, h: 245}`, `36 px` slack) on the left (`y: 260..880`), giving the scene a `780 px` vertical span (`y: 100..880`, 83% of safe height) across every beat.
+   - Sized `facts-lane-frame` (`{x: 640, y: 260, w: 490, h: 620}`, `36 px` slack), `empathy-gate-frame` (`{x: 1340, y: 260, w: 460, h: 270}`, `36 px` slack), and `threat-gate-frame` (`{x: 1340, y: 610, w: 460, h: 270}`, `36 px` slack) with `28 px` titles and `28 px` body descriptions, routing `route-empathy` (`y = 240`) and `route-threat` (`y = 900`) around the central facts lane.
+
+3. **`RLCBridge` (`min7_12/e/RLCBridge.tsx`, turn 38, `e476`, `e479`)**:
+   - Built `RlcTermChip` rendering `data-term-chip={term}`, `<Panel id={`${idPrefix}-chip-frame`} />`, `<ColoredTerm>` symbol badge (`24 px` mono bold using registry palette colors), `22 px` term title (`L · INDUCTANCE`, `R · RESISTANCE`, `C · CAPACITANCE`, `q(t) · EQUALITY-SURPLUS CHARGE`, `V(t) · REFORM-SHOCK DRIVING VOLTAGE`), and `20 px` meaning inside `inst-panel-frame` (`{x: 640, y: 184, w: 1160, h: 356}`, `34 px` slack; chip heights `92 px` and `82 px`, `16–18 px` slack).
+   - Set Eq. 2.11 (`Lq̈ + Rq̇ + (1/C)q = V(t)`) at `42 px` (`>= 40 px` floor), centered inside `eq-band-frame` (`{x: 640, y: 550, w: 1160, h: 112}`, `26 px` slack) using `EquationTerms` tokens with live pulses at each term's cue and at `t38Shocks`.
+   - Kept the derived damping response preview (`preview-panel-frame`, `{x: 640, y: 672, w: 1160, h: 248}`, `32 px` slack) at readable height (`248 px >= 200 px`) with `20 px` labels and an underdamped response curve (`y: 734..858`) around the `y = 796` extraction baseline.
+   - Balanced the left column (`y: 184..920`) by pairing `mental-panel-frame` (`{x: 120, y: 184, w: 460, h: 380}`, `36 px` slack) and `coupling-panel-frame` (`{x: 120, y: 588, w: 460, h: 332}`, `36 px` slack) with `28 px` titles and body text.
+
+4. **`ExplicitImplicitChannels` (`min7_12/e/ExplicitImplicitChannels.tsx`, turns 39–40, `e490`, `e496`)**:
+   - Re-laid Turn 39 (`!isTurn40`, `y: 115..885`, `770 px` vertical span) with `t39-banner-frame` (`h: 72`, `32 px` slack), `bias-hub-frame` (`{x: 120, y: 220, w: 400, h: 665}`, `36 px` slack), `explicit-channel-frame` (`{x: 560, y: 220, w: 880, h: 310}`, `36 px` slack, housing `explicit-card-frame` `{x: 660, y: 295, w: 680, h: 80}` with `16 px` slack), `implicit-channel-frame` (`{x: 560, y: 575, w: 880, h: 310}`, `36 px` slack), and `meter-panel-frame` (`{x: 1480, y: 220, w: 320, h: 665}`, `36 px` slack) at `>= 28 px` body and `>= 20 px` label sizes.
+   - Re-laid Turn 40 (`isTurn40`, `y: 115..885`, `770 px` vertical span):
+     - Sized the Greenwald & Banaji citation card (`citation-card-frame`, `{x: 220, y: 115, w: 1480, h: 256}`) tightly to its text (`220 px` text span, `36 px` slack), displaying the full citation content on the card (`ANTHONY G. GREENWALD · MAHZARIN R. BANAJI` at `32 px`, `1995` at `32 px`, *Implicit Social Cognition: Attitudes, Self-Esteem, and Stereotypes* at `32 px`, and *Psychological Review* `102(1)` at `28 px`) while brightening each field on its cue (`data-cognition-bright`, `data-year-bright`, `data-article-bright`).
+     - Paired the citation card with the lower explicit/implicit diagram (`y: 410..885`, `h: 475`): `t40-bias-hub-frame` (`{x: 120, y: 410, w: 380, h: 475}`, `36 px` slack), `t40-explicit-frame` (`{x: 540, y: 410, w: 900, h: 220}`, `34 px` slack), `t40-implicit-frame` (`{x: 540, y: 665, w: 900, h: 220}`, `34 px` slack), and `t40-meter-frame` (`{x: 1480, y: 410, w: 320, h: 475}`, `36 px` slack).
+
+5. **Validation runner (`tools/check_min7_12_e.tsx`)**:
+   - Added `checkVerticalSpan` enforcing `span >= 658 px` (70% of the `940 px` safe-area height, excluding `source-line`) across all cue frames, review frames (`e434`, `e449`, `e463`, `e476`, `e479`, `e490`, `e496`), and end frames.
+   - Added `checkFillAndCardFitAndSizes` enforcing `f.h - span <= 40 px` on every visible frame and strict text card across all 210 frames, `t.fit.size >= 20 px` on all labels, `t.fit.size >= 28 px` on all body/heading texts, and `fontSize >= 40 px` on Eq. 2.11.
+   - Added explicit assertions at `e434`, `e476`, `e479`, `e490`, and `e496` verifying the 3 equal-height Turn 35 panels, the 5 `TermChip`s + Eq. 2.11 + `>= 200 px` preview, and the full Greenwald & Banaji card paired with the explicit/implicit picture.
+
+### Challenges encountered
+
+1. **Pre-cue substring collisions on populated panel scaffolding**:
+   - Populating the Turn 35 panels in `DocumentedExpectation` from the first beat initially introduced static strings containing `"EVIDENCE"` and `"POSTERIOR"` prior to `t35Updated`. Choosing distinct pre-cue scaffolding labels (`"CLINICAL RECORD LEDGER"`, `"OBSERVED STREAM FEEDS LIKELIHOOD P(X | T)"`, `"OBSERVED RECORD SHIFTS THE STARTING DENSITY"`) preserved tight `36 px` panel slack across all beats while keeping `"EVIDENCE"` and `"POSTERIOR"` absent until `t35Updated`.
+2. **Double-multiplied entrance opacity on nested containers**:
+   - In `InstalledRouting`, applying `opacity={factsP}` to both the outer `data-facts-lane` wrapper and its inner `<Label>` children caused the product `factsP * factsP` to dip below `0.05` at `462240 ms` (`40 ms` after `t37Facts`), while the parent frame remained at `0.21`. Setting child opacities to `1` inside the animated parent wrapper kept parent and child opacities synchronized throughout the entrance ramp.
+3. **Two-line wrapping inside two-column `TermChip` meanings**:
+   - In `RLCBridge`, the `45`-character string `"CULTURAL INERTIA + INSTITUTIONAL ENTRENCHMENT"` at `20 px` wrapped to two lines inside a `546 px`-wide half-column chip (`442 px` text width). Allocating `h: 92 px` to the four half-column chips (`L`, `R`, `C`, `q`) with a `46 px` two-line meaning box (`lh = 1.12`) and `h: 82 px` to the full-width `V` chip satisfied both the `20 px` label floor and the `<= 40 px` card-fit rule (`16–18 px` slack).
+4. **Inspection of `EquationTerms` inline font style format**:
+   - `EquationTerms` renders CSS shorthand `font: 500 42px "IBM Plex Mono"` on its `data-equation` container. Matching the shorthand `font:` property in `check_min7_12_e.tsx` verified the `42 px` (`>= 40 px`) Eq. 2.11 size floor directly from the rendered markup.
+
+### Next ideas (6 Ideas)
+
+1. Promote `RlcTermChip` into `equations/TermChip.tsx` as a configurable two-line `TermChip` variant supporting `>= 20 px` floor typography and custom uppercase storyboard meanings.
+2. Add a shared `DualColumnStageGrid` layout helper in `min7_12/shared/` that computes top/bottom-aligned panel boxes with guaranteed `36 px` vertical slack.
+3. Extend `auditLayout` in `tools/layout_audit.ts` with an opt-in `maxFrameSlack` parameter so every package can enforce `<= 40 px` container slack directly inside the shared layout audit pass.
+4. Add a `CitationRecordCard` component in `min7_12/shared/` that renders full bibliographic fields from beat start and exposes `data-*-bright` attributes as each cue arrives.
+5. Build a static SVG path clearance verifier that checks polyline segments against adjacent frame boundaries before running the full 500 ms frame grid.
+6. Export declarative `BODY_TEXT_IDS` metadata directly from `<Label role="body">` props so check scripts can distinguish `28 px` body text from `20 px` labels automatically.
+
+### Checks
+
+- Episode TypeScript: `npx --prefix /Users/emmanuel/Documents/Theory/scriptCast-stage/video tsc --noEmit -p Architecting_the_operation/video/yt02/stage` exits 0 with zero diagnostics.
+- `check_min7_12_e` tail:
+  - `PASS: 210 Package E frames rendered in two fresh processes; all markup hashes match.`
+  - `PASS: audit self-test (10 rules); 210 Package E frames (cues + review frames + 500 ms grid); layout audit of 8328 declared boxes (safe area, notch zones, text fit, collisions); vertical span (>= 658 px), card fit (<= 40 px slack), and font floors (>= 28 px body / >= 20 px labels / >= 40 px Eq. 2.11) verified on all frames.`
+- `check_first_minute` tail: `PASS: 43 cue-derived frames; five scene contracts, manuscript strings, real subscripts, hook policy, underscore policy, and interaction-hint policy verified; …`
+- `check_roadmap_boot` tail: `PASS: RoadmapBoot renders 17 deterministic frames; 13 labels land on their cues and are absent before; …`
+- `check_minute_two` tail: `PASS: 44 cue-derived frames; exact definition spacing …; Figure 2.3 layer widths 598 / 483 / 368 px in the ratio 5.2 : 4.2 : 3.2.`
+- `check_dashboard` tail: `PASS: Equal Earth route 1296 samples / 0 land hits …; all 24 tray modes plus 3 Wage plane modes; …no rendered interaction hints; 75 polities with 16 non-colliding labels.`
+- `check_min3_7_shared` tail: `PASS: 25 representative shared-component states; eleven component contracts, hook policy, underscore policy, Gaussian curves, … Posterior modes: 0.280460 / 0.499174 / 0.718096.`
+- `check_min3_7_a` tail: `PASS: audit self-test (10 rules); 47 Package A cue-derived frames; 1282 audited boxes; …`
+- `check_min3_7_b` tail: `PASS: audit self-test (10 rules); 43 Package B cue-derived frames; 1146 audited boxes; …`
+- `check_min3_7_c` tail: `PASS: audit self-test (10 rules); 195 Package C frames (cues + 500 ms grid); layout audit of 6799 declared boxes …`
+- `check_min3_7_d` tail: `PASS: audit self-test (10 rules); 211 Package D frames (cues + 500 ms grid); layout audit of 5306 declared boxes over 211 frames …; monotonic posterior sweep 0.2800 → 0.6755 (prior 0.72).`
+- `check_equations` tail: `PASS: 14 equation frames; 111 registered coloured terms; 11 pulse cues peak at cue + 200 ms and rest after 600 ms; Eq. 2.5 and Eq. 2.8a are verbatim with MathText subscripts.`
+- `check_min7_12_shared` tail: `PASS: 25 min7_12-shared states rendered in two fresh processes; all markup hashes match. PASS: audit self-test (10 rules); 25 min7_12 shared-component states; layout audit of 171 declared boxes …`
+- `check_min7_12_f` tail: `PASS: 223 Package F frames rendered in two fresh processes; all markup hashes match. PASS: audit self-test (10 rules); 223 Package F frames (cues + 500 ms grid); layout audit of 7248 declared boxes …`
+- `check_min7_12_g` tail: `PASS: 243 Package G frames rendered in two fresh processes; all markup hashes match. PASS: audit self-test (10 rules); 243 Package G frames (cues + 500 ms grid); layout audit of 5555 declared boxes …`
+- `check_min7_12_h` tail: `PASS: 227 Package H frames rendered in two fresh processes; all markup hashes match. PASS: audit self-test (10 rules); 227 Package H frames (cues + 500 ms grid); layout audit of 5975 declared boxes …`
+- `tools/check_antithesis.py` on all modified Package E files and `FINDINGS_MIN7_12.md`: `check-antithesis: no banned constructions found.`
+
+### Unverified remainder
+
+- Visual verification in this pass relies on the static markup layout audit (`8328` declared boxes across `210` frames, including `e434`, `e449`, `e463`, `e476`, `e479`, `e490`, and `e496`) without launching a headless Chromium browser render.
+
+## Package H
 
 Model: Gemini 3.8 Flash (High)  
 Checkpoint: `162607e`

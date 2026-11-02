@@ -7,12 +7,10 @@ import {
   EvidenceToken,
   Label,
   Panel,
-  clamp01,
   lineAttrs,
   partialPolyline,
   pathFrom,
   shapeAttrs,
-  type Box,
   type Point,
 } from '../shared';
 
@@ -20,59 +18,74 @@ const enter = (ms: number, at: number, duration = 520) => cubicOut(progress(ms, 
 const move = (ms: number, at: number, duration = 650) => cubicInOut(progress(ms, at, at + duration));
 
 export const DOCUMENTED_EXPECTATION_LAYOUT = {
-  // Continuity equation strip
+  // Continuity equation strip (h: 120, text span 90 -> 30 px slack)
   equation: {x: 120, y: 100, w: 1680, h: 120},
   eqTerms: {x: 120, y: 112, w: 1680, h: 54},
-  eqLabel: {x: 120, y: 172, w: 1680, h: 32},
+  eqLabel: {x: 120, y: 174, w: 1680, h: 28},
 
-  // Turn 35: Evidence Ledger (compact before documented harm, expanded after)
-  ledgerCompact: {x: 120, y: 285, w: 480, h: 220},
-  ledgerExpanded: {x: 120, y: 285, w: 480, h: 495},
-  ledgerHeaderMark: {x: 145, y: 305, w: 55, h: 65},
-  ledgerHeaderLabel: {x: 215, y: 320, w: 360, h: 36},
-  warinessToken: {x: 145, y: 395, w: 430, h: 80},
-  harmToken: {x: 145, y: 505, w: 430, h: 52},
-  disparityToken: {x: 145, y: 580, w: 430, h: 52},
-  updatedCaption: {x: 145, y: 675, w: 430, h: 80},
+  // Turn 35: Three matched-height panels (y: 255..880, h: 625, text span 589 -> 36 px slack)
+  ledgerExpanded: {x: 120, y: 255, w: 480, h: 625},
+  ledgerCompact: {x: 120, y: 255, w: 480, h: 625},
+  ledgerHeaderMark: {x: 145, y: 273, w: 54, h: 60},
+  ledgerHeaderLabel: {x: 212, y: 273, w: 364, h: 38},
+  ledgerSubLabel: {x: 212, y: 315, w: 364, h: 28},
+  ledgerBody: {x: 145, y: 362, w: 430, h: 80},
+  warinessToken: {x: 145, y: 462, w: 430, h: 78},
+  harmToken: {x: 145, y: 558, w: 430, h: 56},
+  disparityToken: {x: 145, y: 632, w: 430, h: 56},
+  updatedCaption: {x: 145, y: 710, w: 430, h: 64},
+  ledgerFooter: {x: 145, y: 830, w: 430, h: 32},
 
-  // Turn 35: Bayesian Plot
-  plotFrame: {x: 680, y: 285, w: 640, h: 590},
-  biasMark: {x: 710, y: 310, w: 50, h: 60},
-  biasTitle: {x: 775, y: 322, w: 520, h: 36},
-  priorLabel: {x: 1010, y: 760, w: 250, h: 28},
-  evidenceLabel: {x: 730, y: 760, w: 160, h: 28},
-  posteriorLabel: {x: 840, y: 440, w: 180, h: 28},
+  // Turn 35: Center Bayesian Plot (y: 255..880, h: 625, text span 589 -> 36 px slack)
+  plotFrame: {x: 635, y: 255, w: 690, h: 625},
+  biasMark: {x: 660, y: 273, w: 50, h: 58},
+  biasTitle: {x: 722, y: 273, w: 580, h: 38},
+  biasSub: {x: 722, y: 315, w: 580, h: 28},
+  posteriorLabel: {x: 840, y: 376, w: 260, h: 30},
+  evidenceLabel: {x: 675, y: 748, w: 260, h: 32},
+  priorLabel: {x: 985, y: 748, w: 300, h: 32},
+  plotFooter: {x: 665, y: 830, w: 630, h: 32},
 
-  // Turn 35: Expectation Card (sized to content)
-  expectationCard: {x: 1390, y: 350, w: 400, h: 180},
-  cardTitle: {x: 1420, y: 375, w: 340, h: 36},
-  cardSub: {x: 1420, y: 425, w: 340, h: 80},
+  // Turn 35: Right Expectation Card (y: 255..880, h: 625, text span 589 -> 36 px slack)
+  expectationCard: {x: 1360, y: 255, w: 440, h: 625},
+  cardTitle: {x: 1388, y: 273, w: 384, h: 38},
+  cardTag: {x: 1388, y: 315, w: 384, h: 28},
+  cardSub: {x: 1388, y: 368, w: 384, h: 120},
+  cardRuleLabel: {x: 1388, y: 520, w: 384, h: 30},
+  cardBody2: {x: 1388, y: 562, w: 384, h: 120},
+  cardStatus: {x: 1388, y: 716, w: 384, h: 64},
+  cardFooter: {x: 1388, y: 830, w: 384, h: 32},
 
-  // Turn 36: NCHS Plaque (sized to content)
-  plaque: {x: 120, y: 235, w: 490, h: 260},
-  plaqueYear: {x: 150, y: 255, w: 430, h: 38},
-  plaqueAuthor: {x: 150, y: 300, w: 430, h: 64},
-  plaqueTitle: {x: 150, y: 375, w: 430, h: 80},
+  // Turn 36: Left Column (NCHS Plaque + Empirical Grounding Card, y: 250..895)
+  plaque: {x: 120, y: 250, w: 490, h: 310},
+  plaqueYear: {x: 150, y: 268, w: 430, h: 38},
+  plaqueAuthor: {x: 150, y: 314, w: 430, h: 76},
+  plaqueTitle: {x: 150, y: 400, w: 430, h: 80},
+  plaqueFooter: {x: 150, y: 510, w: 430, h: 32},
 
-  // Turn 36: Qualitative Series Plot (balanced composition)
-  seriesFrame: {x: 690, y: 235, w: 1100, h: 580},
-  seriesTitle: {x: 720, y: 255, w: 600, h: 36},
-  qualitativeBadge: {x: 1340, y: 260, w: 410, h: 28},
-  blackPathLabel: {x: 730, y: 340, w: 200, h: 32},
-  whitePathLabel: {x: 730, y: 610, w: 200, h: 32},
-  surveillanceLabel: {x: 720, y: 690, w: 300, h: 32},
-  elevationLabel: {x: 1540, y: 430, w: 170, h: 64},
-  tracksLabel: {x: 1040, y: 690, w: 710, h: 32},
+  nchsContext: {x: 120, y: 585, w: 490, h: 310},
+  nchsContextTitle: {x: 150, y: 603, w: 430, h: 38},
+  nchsContextBody: {x: 150, y: 655, w: 430, h: 150},
+  nchsContextFooter: {x: 150, y: 845, w: 430, h: 32},
 
-  // Turn 36: Disclosure Strip
-  disclosure: {x: 1040, y: 840, w: 750, h: 55},
-  disclosureLabel: {x: 1060, y: 852, w: 710, h: 32},
+  // Turn 36: Right Column (Qualitative Series Plot + Disclosure Strip, y: 250..895)
+  seriesFrame: {x: 650, y: 250, w: 1150, h: 550},
+  seriesTitle: {x: 680, y: 268, w: 650, h: 38},
+  qualitativeBadge: {x: 1350, y: 272, w: 420, h: 32},
+  blackPathLabel: {x: 680, y: 345, w: 220, h: 32},
+  whitePathLabel: {x: 680, y: 610, w: 220, h: 32},
+  elevationLabel: {x: 1555, y: 425, w: 170, h: 64},
+  surveillanceLabel: {x: 680, y: 750, w: 360, h: 32},
+  tracksLabel: {x: 1060, y: 750, w: 710, h: 32},
+
+  // Turn 36: Disclosure Strip (h: 70, text span 34 -> 36 px slack)
+  disclosure: {x: 650, y: 825, w: 1150, h: 70},
+  disclosureLabel: {x: 680, y: 843, w: 1090, h: 34},
 
   // Source line
   source: {x: 116, y: 946, w: 740, h: 56},
 } as const;
 
-// Token definitions without manual width overrides: tokenWidth calculates glyph advances
 const eq28aTokens: readonly EquationToken[] = [
   {text: 'P'},
   {term: 'i', math: '_i'},
@@ -152,8 +165,8 @@ export function DocumentedExpectation({segment}: SceneProps) {
 
   // Curve data for Turn 35 plot
   const axisY = 730;
-  const axisPoints: Point[] = [[720, axisY], [1280, axisY]];
-  const leaderPoints: Point[] = [[1280, 440], [1390, 440]];
+  const axisPoints: Point[] = [[675, axisY], [1285, axisY]];
+  const leaderPoints: Point[] = [[1325, 520], [1360, 520]];
 
   // Prior Gaussian curve (moves from red to gold at t35Statistical)
   const priorColor = ms >= cue.t35Statistical ? gold : raceRed;
@@ -164,10 +177,10 @@ export function DocumentedExpectation({segment}: SceneProps) {
     return [x, y];
   });
 
-  // Evidence curve (centered around x = 810)
+  // Evidence curve (centered around x = 830)
   const evidencePoints: Point[] = Array.from({length: 31}, (_, i) => {
-    const x = 720 + i * 8;
-    const norm = (x - 840) / 40;
+    const x = 710 + i * 8;
+    const norm = (x - 830) / 40;
     const y = axisY - Math.exp(-0.5 * norm * norm) * 160;
     return [x, y];
   });
@@ -185,7 +198,7 @@ export function DocumentedExpectation({segment}: SceneProps) {
   // Turn 36 qualitative surveillance stations and paths
   const stations = [780, 930, 1080, 1230, 1380, 1530];
   const blackPathFull: Point[] = [
-    [780, 410], [930, 395], [1080, 405], [1230, 385], [1380, 375], [1530, 365],
+    [780, 415], [930, 400], [1080, 410], [1230, 390], [1380, 380], [1530, 370],
   ];
   const whitePathFull: Point[] = [
     [780, 560], [930, 550], [1080, 560], [1230, 545], [1380, 535], [1530, 525],
@@ -196,17 +209,14 @@ export function DocumentedExpectation({segment}: SceneProps) {
   const trackingDrawn = partialPolyline(blackPathFull, tracksP);
 
   const bracketPoints: Point[] = [
-    [1720, 365], [1736, 365], [1736, 530], [1720, 530],
+    [1734, 370], [1750, 370], [1750, 530], [1734, 530],
   ];
 
   const eqPulses: EquationPulseMap = {};
 
-  // Active ledger layout: sized to content
-  const currentLedgerBox = ms >= cue.t35Documented ? L.ledgerExpanded : L.ledgerCompact;
-
   return (
     <StageSceneFrame segment={segment}>
-      {/* Continuity equation strip: centered Eq. 2.8a at 34 px */}
+      {/* Continuity equation strip: centered Eq. 2.8a at 36 px */}
       <div data-continuity-strip="true">
         <Panel id="eq-strip-frame" box={L.equation} />
         <EquationTerms
@@ -215,7 +225,7 @@ export function DocumentedExpectation({segment}: SceneProps) {
           pulses={eqPulses}
           ms={ms}
           box={L.eqTerms}
-          fontSize={34}
+          fontSize={36}
           align="center"
         />
         <Label id="eq-label" box={L.eqLabel} size={20} weight={500} align="center" ink={gold}>
@@ -223,86 +233,119 @@ export function DocumentedExpectation({segment}: SceneProps) {
         </Label>
       </div>
 
-      {/* TURN 35: Evidence Ledger, Bayesian Plot, Expectation Card */}
+      {/* TURN 35: Three Equal-Height Panels (Evidence Ledger, Bayesian Plot, Expectation Card) */}
       {!isTurn36 && (
         <div data-turn="35">
-          {/* Evidence Ledger: sized to content at each beat */}
-          <Panel id="ledger-frame" box={currentLedgerBox} accent="color/line/hairline" />
+          {/* Panel 1 (Left): Evidence Ledger */}
+          <Panel id="ledger-frame" box={L.ledgerExpanded} accent={ms >= cue.t35Black ? 'color/fill/gold' : 'color/line/hairline'} />
+          <div
+            {...shapeAttrs('ledger-group-mark', L.ledgerHeaderMark, 'mark', 'ledger-group-mark')}
+            style={{position: 'absolute', left: L.ledgerHeaderMark.x, top: L.ledgerHeaderMark.y, width: L.ledgerHeaderMark.w, height: L.ledgerHeaderMark.h}}
+          >
+            <PersonMark x={27} y={30} group="ingroup" emphasis={ms >= cue.t35Black ? blackP : 0.7} scale={1.15} />
+          </div>
+          <Label
+            id="ledger-header"
+            box={L.ledgerHeaderLabel}
+            size={28}
+            weight={650}
+            sans
+            ink={gold}
+          >
+            {ms >= cue.t35Black ? 'BLACK WOMEN' : 'PATIENT GROUP'}
+          </Label>
+          <Label id="ledger-sub" box={L.ledgerSubLabel} size={20} weight={500} ink={soft}>
+            CLINICAL RECORD LEDGER
+          </Label>
+          <Label id="ledger-body" box={L.ledgerBody} size={28} weight={400} sans lh={1.28} ink={primary}>
+            Recorded clinical history shapes baseline caution.
+          </Label>
 
-          {ms >= cue.t35Black && (
-            <>
-              <div
-                {...shapeAttrs('ledger-group-mark', L.ledgerHeaderMark, 'mark', 'ledger-group-mark')}
-                style={{position: 'absolute', left: L.ledgerHeaderMark.x, top: L.ledgerHeaderMark.y, width: L.ledgerHeaderMark.w, height: L.ledgerHeaderMark.h}}
-              >
-                <PersonMark x={27} y={32} group="ingroup" emphasis={blackP} scale={1.2} />
-              </div>
-              <Label id="ledger-header" box={L.ledgerHeaderLabel} size={26} weight={600} ink={gold} opacity={blackP}>
-                BLACK WOMEN
-              </Label>
-              <EvidenceToken
-                id="token-wariness"
-                label="WARINESS TOWARD THE U.S. MEDICAL SYSTEM"
-                kind="experience"
-                progress={blackP}
-                emphasis={blackP}
-                box={L.warinessToken}
-                size={20}
-              />
-            </>
-          )}
+          <EvidenceToken
+            id="token-wariness"
+            label={ms >= cue.t35Black ? 'WARINESS TOWARD THE U.S. MEDICAL SYSTEM' : 'BASELINE CLINICAL CAUTION'}
+            kind="experience"
+            progress={1}
+            emphasis={ms >= cue.t35Black ? blackP : 0.65}
+            box={L.warinessToken}
+            size={20}
+          />
 
-          {ms >= cue.t35Documented && (
-            <>
-              <EvidenceToken
-                id="token-harm"
-                label="DOCUMENTED HARM"
-                kind="documented"
-                progress={docP}
-                emphasis={docP}
-                box={L.harmToken}
-                sourceSocket={{lock: docP, side: 'left'}}
-                size={20}
-              />
-              <EvidenceToken
-                id="token-disparity"
-                label="ONGOING DISPARITY"
-                kind="documented"
-                progress={docP}
-                emphasis={docP}
-                box={L.disparityToken}
-                sourceSocket={{lock: docP, side: 'left'}}
-                size={20}
-              />
-            </>
-          )}
+          <EvidenceToken
+            id="token-harm"
+            label={ms >= cue.t35Documented ? 'DOCUMENTED HARM' : 'MATERNAL CARE RECORD'}
+            kind="documented"
+            progress={1}
+            emphasis={ms >= cue.t35Documented ? docP : 0.65}
+            box={L.harmToken}
+            sourceSocket={{lock: ms >= cue.t35Documented ? docP : 0.35, side: 'left'}}
+            size={20}
+          />
 
-          {ms >= cue.t35Disparity && (
-            <Label id="updated-caption" box={L.updatedCaption} size={20} weight={600} ink={gold} lh={1.3} opacity={disparityP}>
-              EXPECTATION UPDATED ON DOCUMENTED EVIDENCE
-            </Label>
-          )}
+          <EvidenceToken
+            id="token-disparity"
+            label={ms >= cue.t35Documented ? 'ONGOING DISPARITY' : 'OUTCOME DIFFERENTIAL'}
+            kind="documented"
+            progress={1}
+            emphasis={ms >= cue.t35Documented ? docP : 0.65}
+            box={L.disparityToken}
+            sourceSocket={{lock: ms >= cue.t35Documented ? docP : 0.35, side: 'left'}}
+            size={20}
+          />
 
-          {/* Bayesian Plot */}
+          <Label
+            id="updated-caption"
+            box={L.updatedCaption}
+            size={20}
+            weight={600}
+            ink={ms >= cue.t35Disparity ? gold : soft}
+            lh={1.3}
+          >
+            {ms >= cue.t35Disparity
+              ? 'EXPECTATION UPDATED ON DOCUMENTED EVIDENCE'
+              : 'OBSERVED STREAM FEEDS LIKELIHOOD P(X | T)'}
+          </Label>
+
+          <Label id="ledger-footer" box={L.ledgerFooter} size={20} weight={500} ink={muted}>
+            SOURCE-BACKED BAYESIAN UPDATE
+          </Label>
+
+          {/* Panel 2 (Center): Bayesian Plot */}
           <Panel id="bayes-plot-frame" box={L.plotFrame} accent="color/line/hairline" />
+          <div
+            {...shapeAttrs('bias-glyph-mark', L.biasMark, 'mark', 'bias-glyph-mark')}
+            style={{position: 'absolute', left: L.biasMark.x, top: L.biasMark.y, width: L.biasMark.w, height: L.biasMark.h}}
+          >
+            <PersonMark x={25} y={29} group="ingroup" emphasis={ms >= cue.t35Bias ? biasP : 0.7} scale={1.1} />
+          </div>
+          <Label
+            id="bias-title"
+            box={L.biasTitle}
+            size={28}
+            weight={650}
+            sans
+            ink={gold}
+          >
+            {ms >= cue.t35Bias ? 'BIAS · STATISTICAL STARTING TENDENCY' : 'BAYESIAN PREDICTIVE UPDATE'}
+          </Label>
+          <Label id="bias-sub" box={L.biasSub} size={20} weight={500} ink={soft}>
+            LIKELIHOOD &amp; PRIOR DISTRIBUTION SHIFT
+          </Label>
 
-          {ms >= cue.t35Bias && (
-            <>
-              <div
-                {...shapeAttrs('bias-glyph-mark', L.biasMark, 'mark', 'bias-glyph-mark')}
-                style={{position: 'absolute', left: L.biasMark.x, top: L.biasMark.y, width: L.biasMark.w, height: L.biasMark.h}}
-              >
-                <PersonMark x={25} y={30} group="ingroup" emphasis={biasP} scale={1.1} />
-              </div>
-              <Label id="bias-title" box={L.biasTitle} size={22} weight={600} ink={gold} opacity={biasP}>
-                BIAS · STATISTICAL STARTING TENDENCY
-              </Label>
-            </>
-          )}
+          <Label
+            id="posterior-label"
+            box={L.posteriorLabel}
+            size={20}
+            weight={600}
+            align="center"
+            ink={ms >= cue.t35Updated ? color('color/text/accent') : soft}
+          >
+            {ms >= cue.t35Updated ? 'POSTERIOR' : 'PREDICTIVE DENSITY'}
+          </Label>
 
           <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position: 'absolute', inset: 0}} aria-hidden="true">
             <path {...lineAttrs('bayes-axis', axisPoints)} d={pathFrom(axisPoints)} fill="none" stroke={hairline} strokeWidth="2" />
-            <path {...lineAttrs('prior-curve', priorPoints)} d={pathFrom(priorPoints)} fill="none" stroke={priorColor} strokeWidth="3" />
+            <path {...lineAttrs('prior-curve', priorPoints)} d={pathFrom(priorPoints)} fill="none" stroke={priorColor} strokeWidth="3.5" />
             {ms >= cue.t35Updated && (
               <>
                 <path {...lineAttrs('evidence-curve', evidencePoints)} d={pathFrom(evidencePoints)} fill="none" stroke={gold} strokeWidth="3" strokeDasharray="6 4" opacity={updatedP} />
@@ -310,77 +353,121 @@ export function DocumentedExpectation({segment}: SceneProps) {
               </>
             )}
             {ms >= cue.t35Starting && (
-              <path {...lineAttrs('start-leader', leaderPoints)} d={pathFrom(leaderPoints)} fill="none" stroke={gold} strokeWidth="2" strokeDasharray="4 4" opacity={startingP} />
+              <path {...lineAttrs('start-leader', leaderPoints)} d={pathFrom(leaderPoints)} fill="none" stroke={gold} strokeWidth="2.5" strokeDasharray="4 4" opacity={startingP} />
             )}
           </svg>
 
-          {ms >= cue.t35Statistical && (
-            <Label id="prior-label" box={L.priorLabel} size={20} weight={600} ink={gold} opacity={statP}>
-              STARTING EXPECTATION
+          <Label
+            id="evidence-label"
+            box={L.evidenceLabel}
+            size={20}
+            weight={500}
+            ink={ms >= cue.t35Updated ? gold : muted}
+          >
+            {ms >= cue.t35Updated ? 'EVIDENCE' : 'OBSERVED DATA X'}
+          </Label>
+
+          <Label
+            id="prior-label"
+            box={L.priorLabel}
+            size={20}
+            weight={600}
+            align="right"
+            ink={ms >= cue.t35Statistical ? gold : soft}
+          >
+            {ms >= cue.t35Statistical ? 'STARTING EXPECTATION' : 'PRIOR DISTRIBUTION'}
+          </Label>
+
+          <Label id="plot-footer" box={L.plotFooter} size={20} weight={500} ink={muted}>
+            OBSERVED RECORD SHIFTS THE STARTING DENSITY
+          </Label>
+
+          {/* Panel 3 (Right): Expectation Card */}
+          <div data-expectation-card={ms >= cue.t35Starting ? 'true' : undefined}>
+            <Panel
+              id="expect-card-frame"
+              box={L.expectationCard}
+              accent={ms >= cue.t35Starting ? 'color/fill/gold' : 'color/line/hairline'}
+            />
+            <Label id="card-title" box={L.cardTitle} size={28} weight={650} sans ink={gold}>
+              {ms >= cue.t35Statistical ? 'STARTING EXPECTATION' : 'PRIOR SPECIFICATION'}
             </Label>
-          )}
-
-          {ms >= cue.t35Updated && (
-            <>
-              <Label id="evidence-label" box={L.evidenceLabel} size={20} weight={500} ink={gold} opacity={updatedP}>
-                EVIDENCE
-              </Label>
-              <Label id="posterior-label" box={L.posteriorLabel} size={20} weight={600} ink={color('color/text/accent')} opacity={updatedP}>
-                POSTERIOR
-              </Label>
-            </>
-          )}
-
-          {/* Expectation Card: sized to content */}
-          {ms >= cue.t35Starting && (
-            <div data-expectation-card="true" style={{opacity: startingP}}>
-              <Panel id="expect-card-frame" box={L.expectationCard} accent="color/fill/gold" />
-              <Label id="card-title" box={L.cardTitle} size={24} weight={600} ink={gold}>
-                STARTING EXPECTATION
-              </Label>
-              <Label id="card-sub" box={L.cardSub} size={20} weight={400} lh={1.3} ink={soft}>
-                baseline probability prior to fresh clinical observation
-              </Label>
-            </div>
-          )}
+            <Label id="card-tag" box={L.cardTag} size={20} weight={500} ink={soft}>
+              BAYESIAN PRIOR TERM
+            </Label>
+            <Label id="card-sub" box={L.cardSub} size={28} weight={400} sans lh={1.28} ink={primary}>
+              Baseline probability prior to fresh clinical observation.
+            </Label>
+            <Label id="card-rule-label" box={L.cardRuleLabel} size={20} weight={600} ink={gold}>
+              EMPIRICAL REVISION RULE
+            </Label>
+            <Label id="card-body-2" box={L.cardBody2} size={28} weight={400} sans lh={1.28} ink={soft}>
+              Shifts toward recorded history as clinical data arrives.
+            </Label>
+            <Label id="card-status" box={L.cardStatus} size={20} weight={600} lh={1.3} ink={gold}>
+              CALIBRATED TO EMPIRICAL RECORD
+            </Label>
+            <Label id="card-footer" box={L.cardFooter} size={20} weight={500} ink={muted}>
+              BAYESIAN EMPIRICAL REVISION
+            </Label>
+          </div>
         </div>
       )}
 
-      {/* TURN 36: NCHS Plaque, Qualitative Series Plot, Disclosure */}
+      {/* TURN 36: Balanced Two-Column Layout (NCHS Plaque + Context Card on Left, Series Plot + Disclosure on Right) */}
       {isTurn36 && (
-        <div data-turn="36">
-          {/* NCHS Plaque: sized to content */}
+        <div data-turn="36" style={{opacity: nationalP}}>
+          {/* Left Upper: NCHS Plaque */}
           <Panel id="nchs-plaque-frame" box={L.plaque} accent="color/fill/gold">
             <span aria-hidden="true" style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: 5, background: gold}} />
           </Panel>
-          <Label id="plaque-year" box={L.plaqueYear} size={28} weight={600} ink={gold} opacity={nationalP}>
+          <Label id="plaque-year" box={L.plaqueYear} size={28} weight={700} ink={gold}>
             2023
           </Label>
-          <Label id="plaque-author" box={L.plaqueAuthor} size={26} weight={650} sans lh={1.2} ink={primary} opacity={nationalP}>
+          <Label id="plaque-author" box={L.plaqueAuthor} size={28} weight={650} sans lh={1.25} ink={primary}>
             NATIONAL CENTER FOR HEALTH STATISTICS
           </Label>
-          <Label id="plaque-title" box={L.plaqueTitle} size={22} weight={400} sans lh={1.3} ink={soft} style={{fontStyle: 'italic'}} opacity={nationalP}>
+          <Label id="plaque-title" box={L.plaqueTitle} size={28} weight={400} sans lh={1.28} ink={soft} style={{fontStyle: 'italic'}}>
             Maternal Mortality Rates in the United States, 2021
           </Label>
+          <Label id="plaque-footer" box={L.plaqueFooter} size={20} weight={500} ink={muted}>
+            VITAL STATISTICS SURVEILLANCE
+          </Label>
 
-          {/* Qualitative Series Plot: populated from the first frame of NCHS beat */}
+          {/* Left Lower: Empirical Grounding Card */}
+          <Panel id="nchs-context-frame" box={L.nchsContext} accent="color/line/hairline" />
+          <Label id="nchs-context-title" box={L.nchsContextTitle} size={28} weight={650} sans ink={gold}>
+            EMPIRICAL GROUNDING
+          </Label>
+          <Label id="nchs-context-body" box={L.nchsContextBody} size={28} weight={400} sans lh={1.28} ink={primary}>
+            Documented disparity grounds the starting expectation in recorded clinical reality.
+          </Label>
+          <Label id="nchs-context-footer" box={L.nchsContextFooter} size={20} weight={500} ink={muted}>
+            QUALITATIVE SERIES COMPARISON
+          </Label>
+
+          {/* Right Upper: Qualitative Series Plot */}
           <Panel id="series-plot-frame" box={L.seriesFrame} accent="color/line/hairline" />
-
-          {/* Title rendered at t36Maternal */}
-          {ms >= cue.t36Maternal && (
-            <Label id="series-title" box={L.seriesTitle} size={24} weight={600} sans ink={primary} opacity={maternalP}>
-              MATERNAL MORTALITY · SURVEILLANCE SERIES
-            </Label>
-          )}
-
-          <Label id="qualitative-badge" box={L.qualitativeBadge} size={20} weight={600} align="right" ink={gold} opacity={nationalP}>
+          <Label
+            id="series-title"
+            box={L.seriesTitle}
+            size={28}
+            weight={650}
+            sans
+            ink={primary}
+          >
+            {ms >= cue.t36Maternal
+              ? 'MATERNAL MORTALITY · SURVEILLANCE SERIES'
+              : 'VITAL STATISTICS SURVEILLANCE SERIES'}
+          </Label>
+          <Label id="qualitative-badge" box={L.qualitativeBadge} size={20} weight={600} align="right" ink={gold}>
             QUALITATIVE · NO RATES SHOWN
           </Label>
 
-          {/* Surveillance Station Guides: present from first frame of NCHS beat */}
+          {/* Surveillance Station Guides */}
           <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position: 'absolute', inset: 0}} aria-hidden="true" opacity={Math.max(0.6 * nationalP, survP)}>
             {stations.map((sx, idx) => (
-              <line key={`station-${idx}`} x1={sx} y1={330} x2={sx} y2={660} stroke={hairline} strokeWidth="1.5" strokeDasharray="4 4" />
+              <line key={`station-${idx}`} x1={sx} y1={335} x2={sx} y2={665} stroke={hairline} strokeWidth="1.5" strokeDasharray="4 4" />
             ))}
           </svg>
 
@@ -393,7 +480,7 @@ export function DocumentedExpectation({segment}: SceneProps) {
               <path {...lineAttrs('white-path', whiteDrawn)} d={pathFrom(whiteDrawn)} fill="none" stroke={soft} strokeWidth="3" opacity={whiteP} />
             )}
             {tracksP > 0 && trackingDrawn.length >= 2 && (
-              <path {...lineAttrs('tracking-line', trackingDrawn)} d={pathFrom(trackingDrawn)} fill="none" stroke={gold} strokeWidth="2" strokeDasharray="6 4" opacity={tracksP} />
+              <path {...lineAttrs('tracking-line', trackingDrawn)} d={pathFrom(trackingDrawn)} fill="none" stroke={gold} strokeWidth="2.5" strokeDasharray="6 4" opacity={tracksP} />
             )}
             {ms >= cue.t36Elevated && (
               <path {...lineAttrs('elevated-bracket', bracketPoints)} d={pathFrom(bracketPoints)} fill="none" stroke={gold} strokeWidth="2.5" opacity={elevatedP} />
@@ -412,24 +499,17 @@ export function DocumentedExpectation({segment}: SceneProps) {
             </Label>
           )}
 
-          {ms >= cue.t36Surveillance && (
-            <Label id="surveillance-label" box={L.surveillanceLabel} size={20} weight={500} ink={muted} opacity={survP}>
-              DOCUMENTED SERIES
-            </Label>
-          )}
-
           {ms >= cue.t36Elevated && (
             <Label id="elevation-label" box={L.elevationLabel} size={20} weight={600} lh={1.3} ink={gold} opacity={elevatedP}>
               ELEVATED RELATIVE LEVEL
             </Label>
           )}
 
-          {/* Expectation marker docks beside the upper path: clean marker without ghost text */}
           {ms >= cue.t36Expectation && (
             <div
               data-expectation-marker="true"
-              {...shapeAttrs('expectation-marker-pin', {x: 1530, y: 355, w: 20, h: 20}, 'mark', 'marker')}
-              style={{position: 'absolute', left: 1530, top: 355, width: 20, height: 20, opacity: expectP}}
+              {...shapeAttrs('expectation-marker-pin', {x: 1530, y: 360, w: 20, h: 20}, 'mark', 'marker')}
+              style={{position: 'absolute', left: 1530, top: 360, width: 20, height: 20, opacity: expectP}}
             >
               <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
                 <circle cx="10" cy="10" r="7" fill={gold} stroke={color('color/bg/field')} strokeWidth="2" />
@@ -437,21 +517,46 @@ export function DocumentedExpectation({segment}: SceneProps) {
             </div>
           )}
 
-          {ms >= cue.t36Tracks && (
-            <Label id="tracks-label" box={L.tracksLabel} size={20} weight={600} ink={gold} opacity={tracksP}>
-              EXPECTATION TRACKS THE DOCUMENTED SERIES
-            </Label>
-          )}
+          <Label
+            id="surveillance-label"
+            box={L.surveillanceLabel}
+            size={20}
+            weight={500}
+            ink={ms >= cue.t36Surveillance ? primary : muted}
+          >
+            {ms >= cue.t36Surveillance ? 'DOCUMENTED SERIES' : 'SURVEILLANCE STATIONS'}
+          </Label>
 
-          {/* Disclosure Strip */}
-          {ms >= cue.t36Numbers && (
-            <div data-disclosure="true" style={{opacity: numbersP}}>
-              <Panel id="disclosure-frame" box={L.disclosure} accent="color/line/hairline" />
-              <Label id="disclosure-label" box={L.disclosureLabel} size={20} weight={600} ls={1} align="center" ink={primary}>
-                QUALITATIVE RELATIONSHIP · RATE VALUES OMITTED
-              </Label>
-            </div>
-          )}
+          <Label
+            id="tracks-label"
+            box={L.tracksLabel}
+            size={20}
+            weight={600}
+            align="right"
+            ink={ms >= cue.t36Tracks ? gold : soft}
+          >
+            {ms >= cue.t36Tracks
+              ? 'EXPECTATION TRACKS THE DOCUMENTED SERIES'
+              : 'DIRECTIONAL SURVEILLANCE COMPARISON'}
+          </Label>
+
+          {/* Right Lower: Disclosure Strip */}
+          <div data-disclosure={ms >= cue.t36Numbers ? 'true' : undefined}>
+            <Panel id="disclosure-frame" box={L.disclosure} accent={ms >= cue.t36Numbers ? 'color/fill/gold' : 'color/line/hairline'} />
+            <Label
+              id="disclosure-label"
+              box={L.disclosureLabel}
+              size={20}
+              weight={600}
+              ls={0.8}
+              align="center"
+              ink={ms >= cue.t36Numbers ? primary : soft}
+            >
+              {ms >= cue.t36Numbers
+                ? 'QUALITATIVE RELATIONSHIP · RATE VALUES OMITTED'
+                : 'ORDINAL COMPARISON · NO NUMERICAL AXES OR RATES'}
+            </Label>
+          </div>
         </div>
       )}
 

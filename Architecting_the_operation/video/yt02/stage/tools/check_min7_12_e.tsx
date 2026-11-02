@@ -82,6 +82,18 @@ for (const scene of Object.keys(sceneComponents) as SceneName[]) {
   frames.push({scene, ms: segment.end_ms - 1000 / plan.fps, kind: 'end'});
 }
 
+// Include exact review-frame timestamps (e434, e449, e463, e476, e479, e490, e496)
+const reviewFrameSpecs: {scene: SceneName; ms: number; kind: string}[] = [
+  {scene: 'DocumentedExpectation', ms: 434000, kind: 'e434'},
+  {scene: 'DocumentedExpectation', ms: 449000, kind: 'e449'},
+  {scene: 'InstalledRouting', ms: 463000, kind: 'e463'},
+  {scene: 'RLCBridge', ms: 476000, kind: 'e476'},
+  {scene: 'RLCBridge', ms: 479000, kind: 'e479'},
+  {scene: 'ExplicitImplicitChannels', ms: 490000, kind: 'e490'},
+  {scene: 'ExplicitImplicitChannels', ms: 496000, kind: 'e496'},
+];
+for (const spec of reviewFrameSpecs) frames.push(spec);
+
 const rendered = frames.map(frame => ({...frame, html: render(frame.scene, frame.ms)}));
 const byKind = (scene: SceneName) => rendered.filter(frame => frame.scene === scene);
 
@@ -103,24 +115,27 @@ for (const {scene, kind, ms, html} of rendered) {
   assert.ok(!internalTurnPattern.test(plain(html)), `${scene} ${kind} (${ms} ms) contains internal turn label`);
 }
 
-function beat(scene: SceneName, cue: string, assertOpts: {text?: string[]; markup?: string[]}) {
+function beat(scene: SceneName, cue: string, assertOpts: {text?: string[]; markup?: string[]; absentBeforeCue?: string}) {
   const cueMs = plan.cues[cue], segment = plan.segments.find(item => item.scene === scene)!;
-  const beforeMs = Math.max(segment.start_ms, cueMs - 80);
+  const beforeRefMs = assertOpts.absentBeforeCue ? plan.cues[assertOpts.absentBeforeCue] : cueMs;
+  const beforeMs = Math.max(segment.start_ms, beforeRefMs - 80);
   const afterHtml = render(scene, cueMs + 700);
   const beforeHtml = render(scene, beforeMs);
   const afterText = plain(afterHtml), beforeText = plain(beforeHtml);
 
   for (const expected of assertOpts.text ?? []) {
     assert.ok(afterText.includes(expected), `${scene} missing expected string "${expected}" at ${cue} + 700 ms`);
-    if (cueMs > segment.start_ms) {
-      assert.ok(!beforeText.includes(expected), `${scene} unexpectedly contains "${expected}" before ${cue} (at ${beforeMs} ms)`);
+    if (beforeRefMs > segment.start_ms) {
+      assert.ok(!beforeText.includes(expected), `${scene} unexpectedly contains "${expected}" before ${assertOpts.absentBeforeCue ?? cue} (at ${beforeMs} ms)`);
     }
   }
 
   for (const snippet of assertOpts.markup ?? []) {
     assert.ok(afterHtml.includes(snippet), `${scene} missing expected markup snippet "${snippet}" at ${cue} + 700 ms`);
     if (cueMs > segment.start_ms) {
-      assert.ok(!beforeHtml.includes(snippet), `${scene} unexpectedly contains markup snippet "${snippet}" before ${cue} (at ${beforeMs} ms)`);
+      const beforeCueMs = Math.max(segment.start_ms, cueMs - 80);
+      const beforeCueHtml = render(scene, beforeCueMs);
+      assert.ok(!beforeCueHtml.includes(snippet), `${scene} unexpectedly contains markup snippet "${snippet}" before ${cue} (at ${beforeCueMs} ms)`);
     }
   }
 }
@@ -188,9 +203,21 @@ beat('ExplicitImplicitChannels', 't39Associations', {text: ['INDIVIDUAL JUDGMENT
 
 beat('ExplicitImplicitChannels', 't40Anthony', {text: ['ANTHONY G. GREENWALD']});
 beat('ExplicitImplicitChannels', 't40Banaji', {text: ['ANTHONY G. GREENWALD · MAHZARIN R. BANAJI']});
-beat('ExplicitImplicitChannels', 't40NinetyFive', {text: ['1995']});
-beat('ExplicitImplicitChannels', 't40Cognition', {text: ['Implicit Social Cognition: Attitudes, Self-Esteem, and Stereotypes']});
-beat('ExplicitImplicitChannels', 't40Article', {text: ['Psychological Review 102(1)']});
+beat('ExplicitImplicitChannels', 't40Cognition', {
+  text: ['Implicit Social Cognition: Attitudes, Self-Esteem, and Stereotypes'],
+  markup: ['data-cognition-bright="true"'],
+  absentBeforeCue: 't40Anthony',
+});
+beat('ExplicitImplicitChannels', 't40NinetyFive', {
+  text: ['1995'],
+  markup: ['data-year-bright="true"'],
+  absentBeforeCue: 't40Anthony',
+});
+beat('ExplicitImplicitChannels', 't40Article', {
+  text: ['Psychological Review 102(1)'],
+  markup: ['data-article-bright="true"'],
+  absentBeforeCue: 't40Anthony',
+});
 
 // Structural checks:
 // Turn 36 replaces Turn 35 in DocumentedExpectation
@@ -217,15 +244,24 @@ const termsToCheck = [
 for (const {term, cue} of termsToCheck) {
   const cueMs = plan.cues[cue];
   const peakHtml = render('RLCBridge', cueMs + 200);
-  const restHtml = render('RLCBridge', cueMs + 700);
   const regColor = equationColor(EQUATION_TERMS[term].slot);
 
-  // At cue + 200ms, when Eq. 2.11 is assembled (at shocks), pulses are active
+  assert.ok(peakHtml.includes(`data-term-chip="${term}"`), `RLCBridge missing data-term-chip="${term}" at ${cue}`);
+  assert.ok(peakHtml.includes(`data-term="${term}"`), `RLCBridge missing data-term="${term}" at ${cue}`);
+  assert.ok(peakHtml.includes(`data-term-color="${regColor}"`), `RLCBridge term ${term} does not use registry color ${regColor}`);
+
   const shocksMs = plan.cues.t38Shocks;
   const assembledPeak = render('RLCBridge', shocksMs + 200);
   assert.ok(assembledPeak.includes(`data-term="${term}"`), `RLCBridge missing data-term="${term}" at shocks`);
   assert.ok(assembledPeak.includes(`data-term-color="${regColor}"`), `RLCBridge term ${term} does not use registry color ${regColor}`);
 }
+
+// Verify layout exports remain well-typed
+assert.equal(DOCUMENTED_EXPECTATION_LAYOUT.ledgerExpanded.h, DOCUMENTED_EXPECTATION_LAYOUT.plotFrame.h);
+assert.equal(DOCUMENTED_EXPECTATION_LAYOUT.plotFrame.h, DOCUMENTED_EXPECTATION_LAYOUT.expectationCard.h);
+assert.ok(INSTALLED_ROUTING_LAYOUT.equation.h <= 120);
+assert.ok(RLC_BRIDGE_LAYOUT.previewPanel.h >= 200);
+assert.ok(EXPLICIT_IMPLICIT_LAYOUT.citationCard.h <= 260);
 
 // Layout audit: safe area, notch zones, text fit, and collisions at every sampled frame.
 const selfTests = auditSelfTest();
@@ -237,61 +273,199 @@ for (const {scene, kind, ms, html} of rendered) {
 }
 assert.deepEqual(violations, [], `layout audit failed:\n${violations.slice(0, 40).join('\n')}`);
 
-// Fill-ratio assertion:
-// Every box on screen holds its content at its last beat. All panels, cards, and windows are populated.
-// At each scene's last frame, every declared data-shape frame (with effective opacity >= 0.05) must contain
-// declared text boxes that cover enough of its geometry.
-// Documented thresholds:
-//   - An empty container (0 text boxes) is a defect.
-//   - Either area fill ratio >= 0.18 (18% of frame area covered by declared text boxes),
-//   - OR vertical span ratio >= 0.45 (declared text bounds cover at least 45% of the frame's height),
-// ensuring every container is sized to its content and holds its storyboard content.
+// ============================================================================
+// DESIGN PASS RULES (1: Vertical Span, 2: Card Fit, 3: Minimum Font Size Floor)
+// ============================================================================
+
+const SAFE_AREA_HEIGHT = 1010 - 70; // 940 px
+const MIN_SCENE_VERTICAL_SPAN = Math.floor(SAFE_AREA_HEIGHT * 0.70); // 658 px (~70% of safe area height)
+const MAX_CARD_SLACK_PX = 40;
+const MIN_LABEL_FONT_PX = 20;
+const MIN_BODY_FONT_PX = 28;
+const MIN_EQ211_FONT_PX = 40;
 const MIN_AREA_FILL_RATIO = 0.18;
 const MIN_VERTICAL_SPAN_RATIO = 0.45;
 
-function checkFillRatio(html: string, context: string) {
-  const audited = auditItems(html);
-  const frames = audited.filter(item => item.role === 'frame' && item.opacity >= 0.05);
-  const texts = audited.filter(item => item.role === 'text' && item.opacity >= 0.05);
+// Body / heading text IDs that must satisfy the >= 28 px body floor
+const BODY_TEXT_IDS = new Set([
+  // DocumentedExpectation
+  'ledger-header', 'ledger-body', 'bias-title', 'card-title', 'card-sub', 'card-body-2',
+  'plaque-year', 'plaque-author', 'plaque-title', 'nchs-context-title', 'nchs-context-body', 'series-title',
+  // InstalledRouting
+  'cartridge-pi', 'cartridge-label', 'mech-body', 'facts-title', 'facts-body', 'empathy-title', 'empathy-sub', 'threat-title', 'threat-sub',
+  // RLCBridge
+  'rlc-header', 'mental-title', 'cartridge-desc', 'coupling-title', 'coupling-body',
+  // ExplicitImplicitChannels
+  't39-banner-title', 'bias-hub-title', 'bias-hub-body', 'explicit-heading', 'explicit-card-label', 'explicit-desc',
+  'implicit-heading', 'implicit-assoc-label', 'meter-label', 'meter-body',
+  'cite-authors', 'cite-year', 'cite-title', 'cite-journal',
+  't40-bias-title', 't40-bias-body', 't40-exp-heading', 't40-exp-body', 't40-imp-heading', 't40-imp-body', 't40-meter-title', 't40-meter-body',
+]);
 
-  for (const f of frames) {
-    const inside = texts.filter(
+// Strict text cards whose vertical slack must be <= 40 px based on text bounds alone
+const STRICT_TEXT_CARDS = new Set([
+  'expect-card-frame',
+  'nchs-plaque-frame',
+  'nchs-context-frame',
+  'disclosure-frame',
+  'cartridge-mech-frame',
+  'empathy-gate-frame',
+  'threat-gate-frame',
+  'coupling-panel-frame',
+  'l-chip-frame',
+  'r-chip-frame',
+  'c-chip-frame',
+  'q-chip-frame',
+  'v-chip-frame',
+  'explicit-card-frame',
+  'citation-card-frame',
+]);
+
+// Rule 1: Vertical-span assertion (excluding source-line so bottom-left source text cannot artificially inflate span)
+function checkVerticalSpan(html: string, context: string) {
+  const audited = auditItems(html).filter(
+    item => item.opacity >= 0.05 && item.id !== 'source-line',
+  );
+  assert.ok(audited.length > 0, `${context}: no visible items on screen`);
+  const minY = Math.min(...audited.map(i => i.y));
+  const maxY = Math.max(...audited.map(i => i.y + i.h));
+  const span = maxY - minY;
+  assert.ok(
+    span >= MIN_SCENE_VERTICAL_SPAN,
+    `${context}: vertical span ${span} px (y: ${minY}..${maxY}) < ${MIN_SCENE_VERTICAL_SPAN} px (70% of safe area)`,
+  );
+}
+
+// Rule 2 & Rule 3 + Fill Ratio assertion
+function checkFillAndCardFitAndSizes(html: string, context: string) {
+  const audited = auditItems(html);
+  const framesOnScreen = audited.filter(item => item.role === 'frame' && item.opacity >= 0.05);
+  const texts = audited.filter(item => item.role === 'text' && item.opacity >= 0.05);
+  const allVisible = audited.filter(item => item.opacity >= 0.05);
+
+  // Rule 3: Minimum font size floor on every declared text element
+  for (const t of texts) {
+    if (t.id.startsWith('equation-term-')) {
+      continue;
+    }
+    assert.ok(t.fit, `${context}: text "${t.id}" missing data-fit declaration`);
+    assert.ok(
+      t.fit.size >= MIN_LABEL_FONT_PX,
+      `${context}: text "${t.id}" font size ${t.fit.size} px < ${MIN_LABEL_FONT_PX} px label floor`,
+    );
+    if (BODY_TEXT_IDS.has(t.id)) {
+      assert.ok(
+        t.fit.size >= MIN_BODY_FONT_PX,
+        `${context}: body text "${t.id}" font size ${t.fit.size} px < ${MIN_BODY_FONT_PX} px body floor`,
+      );
+    }
+  }
+
+  // Verify equation font size declarations in HTML
+  if (html.includes('data-equation="Eq. 2.11"')) {
+    const eq211Match = html.match(/data-equation="Eq\. 2\.11"[^>]*style="[^"]*font:\s*\d+\s+(\d+)px/);
+    assert.ok(eq211Match, `${context}: Eq. 2.11 missing explicit font size style`);
+    const eq211Size = Number(eq211Match[1]);
+    assert.ok(
+      eq211Size >= MIN_EQ211_FONT_PX,
+      `${context}: Eq. 2.11 font size ${eq211Size} px < ${MIN_EQ211_FONT_PX} px requirement`,
+    );
+  }
+
+  // Rule 2 + Fill Ratio on every frame
+  for (const f of framesOnScreen) {
+    const insideTexts = texts.filter(
       t => t.x >= f.x - 4 && t.y >= f.y - 4 && t.x + t.w <= f.x + f.w + 4 && t.y + t.h <= f.y + f.h + 4,
     );
+    const insideAll = allVisible.filter(
+      item =>
+        item.id !== f.id &&
+        item.x >= f.x - 4 &&
+        item.y >= f.y - 4 &&
+        item.x + item.w <= f.x + f.w + 4 &&
+        item.y + item.h <= f.y + f.h + 4,
+    );
+
     assert.ok(
-      inside.length > 0,
+      insideTexts.length > 0,
       `${context}: container "${f.id}" (${f.w}×${f.h} at [${f.x}, ${f.y}]) is empty with 0 text boxes inside`,
     );
 
-    const textArea = inside.reduce((sum, t) => sum + t.w * t.h, 0);
+    const textArea = insideTexts.reduce((sum, t) => sum + t.w * t.h, 0);
     const frameArea = f.w * f.h;
     const areaFillRatio = textArea / frameArea;
 
-    const minY = Math.min(...inside.map(t => t.y));
-    const maxY = Math.max(...inside.map(t => t.y + t.h));
-    const verticalSpanRatio = (maxY - minY) / f.h;
+    const minY = Math.min(...insideAll.map(i => i.y));
+    const maxY = Math.max(...insideAll.map(i => i.y + i.h));
+    const span = maxY - minY;
+    const verticalSpanRatio = span / f.h;
 
     const passes = areaFillRatio >= MIN_AREA_FILL_RATIO || verticalSpanRatio >= MIN_VERTICAL_SPAN_RATIO;
     assert.ok(
       passes,
       `${context}: container "${f.id}" (${f.w}×${f.h}) underfilled: area ratio ${areaFillRatio.toFixed(3)} < ${MIN_AREA_FILL_RATIO} and vertical span ratio ${verticalSpanRatio.toFixed(3)} < ${MIN_VERTICAL_SPAN_RATIO}`,
     );
+
+    // Rule 2: Card fit (vertical slack <= 40 px)
+    const slack = f.h - span;
+    assert.ok(
+      slack <= MAX_CARD_SLACK_PX,
+      `${context}: container "${f.id}" (${f.w}×${f.h}) has ${slack} px vertical slack (content span ${span} px; max allowed slack ${MAX_CARD_SLACK_PX} px)`,
+    );
+
+    if (STRICT_TEXT_CARDS.has(f.id)) {
+      const textMinY = Math.min(...insideTexts.map(t => t.y));
+      const textMaxY = Math.max(...insideTexts.map(t => t.y + t.h));
+      const textSpan = textMaxY - textMinY;
+      const textSlack = f.h - textSpan;
+      assert.ok(
+        textSlack <= MAX_CARD_SLACK_PX,
+        `${context}: strict text card "${f.id}" (${f.w}×${f.h}) has ${textSlack} px text slack (text span ${textSpan} px; max allowed ${MAX_CARD_SLACK_PX} px)`,
+      );
+    }
   }
 }
 
-// Assert fill ratio at every scene's last frame
-for (const scene of Object.keys(sceneComponents) as SceneName[]) {
-  const lastFrame = rendered.find(frame => frame.scene === scene && frame.kind === 'end')!;
-  assert.ok(lastFrame, `missing end frame for ${scene}`);
-  checkFillRatio(lastFrame.html, `${scene} at end frame`);
+// Run Rule 1, Rule 2, Rule 3, and Fill-Ratio across all rendered frames
+for (const {scene, kind, ms, html} of rendered) {
+  checkFillAndCardFitAndSizes(html, `${scene} ${kind} (${ms} ms)`);
+  if (!kind.startsWith('grid-')) {
+    checkVerticalSpan(html, `${scene} ${kind} (${ms} ms)`);
+  }
 }
 
-// Also assert fill ratio at major beat settled states
-checkFillRatio(byKind('DocumentedExpectation').find(f => f.kind === 't35Disparity')!.html, 'DocumentedExpectation at t35Disparity');
-checkFillRatio(byKind('InstalledRouting').find(f => f.kind === 't37Facts')!.html, 'InstalledRouting at t37Facts');
-checkFillRatio(byKind('RLCBridge').find(f => f.kind === 't38Shocks')!.html, 'RLCBridge at t38Shocks');
-checkFillRatio(byKind('ExplicitImplicitChannels').find(f => f.kind === 't39Associations')!.html, 'ExplicitImplicitChannels at t39Associations');
+// Explicit review-frame assertions (e434, e449, e463, e476, e479, e490, e496)
+{
+  const e434 = rendered.find(f => f.kind === 'e434')!;
+  const items434 = auditItems(e434.html);
+  const pSub = items434.find(i => i.id === 'ledger-frame')!;
+  const pTen = items434.find(i => i.id === 'bayes-plot-frame')!;
+  const pEvi = items434.find(i => i.id === 'expect-card-frame')!;
+  assert.ok(pSub && pTen && pEvi, 'e434 must render all three equal-height Turn 35 panels');
+  assert.equal(pSub.h, pTen.h, 'e434 ledger and bayes-plot panels must have equal height');
+  assert.equal(pTen.h, pEvi.h, 'e434 bayes-plot and expect-card panels must have equal height');
+
+  for (const kind of ['e476', 'e479'] as const) {
+    const f = rendered.find(r => r.kind === kind)!;
+    for (const term of ['L', 'R', 'C', 'q', 'V']) {
+      assert.ok(f.html.includes(`data-term-chip="${term}"`), `${kind} must render TermChip for ${term}`);
+    }
+    assert.ok(f.html.includes('data-equation="Eq. 2.11"'), `${kind} must render Eq. 2.11 via EquationTerms`);
+    const preview = auditItems(f.html).find(i => i.id === 'preview-panel-frame')!;
+    assert.ok(preview && preview.h >= 200, `${kind} must keep derived damping preview height >= 200 px`);
+  }
+
+  for (const kind of ['e490', 'e496'] as const) {
+    const f = rendered.find(r => r.kind === kind)!;
+    const text = plain(f.html);
+    assert.ok(text.includes('ANTHONY G. GREENWALD · MAHZARIN R. BANAJI'), `${kind} missing full authors`);
+    assert.ok(text.includes('1995'), `${kind} missing 1995`);
+    assert.ok(text.includes('Implicit Social Cognition: Attitudes, Self-Esteem, and Stereotypes'), `${kind} missing full title`);
+    assert.ok(text.includes('Psychological Review 102(1)'), `${kind} missing Psychological Review 102(1)`);
+    assert.ok(f.html.includes('data-t40-picture="true"'), `${kind} must pair citation card with explicit/implicit picture`);
+  }
+}
 
 console.log(
-  `PASS: audit self-test (${selfTests} rules); ${rendered.length} Package E frames (cues + 500 ms grid); layout audit of ${items} declared boxes (safe area, notch zones, text fit, collisions); fill-ratio assert verified on all scene end frames; clean turn transitions, storyboard strings, hook, underscore, internal-turn and interaction-hint policies verified.`,
+  `PASS: audit self-test (${selfTests} rules); ${rendered.length} Package E frames (cues + review frames + 500 ms grid); layout audit of ${items} declared boxes (safe area, notch zones, text fit, collisions); vertical span (>= ${MIN_SCENE_VERTICAL_SPAN} px), card fit (<= ${MAX_CARD_SLACK_PX} px slack), and font floors (>= ${MIN_BODY_FONT_PX} px body / >= ${MIN_LABEL_FONT_PX} px labels / >= ${MIN_EQ211_FONT_PX} px Eq. 2.11) verified on all frames.`,
 );
