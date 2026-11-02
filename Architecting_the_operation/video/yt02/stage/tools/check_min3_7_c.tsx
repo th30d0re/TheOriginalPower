@@ -7,6 +7,7 @@ import {ClockContext,PlanContext,type StagePlan} from '@stage';
 import {UsThemSorting,US_THEM_LAYOUT,US_THEM_MARKS} from '../min3_7/c/UsThemSorting';
 import {HostWetware,HOST_WETWARE_LAYOUT,HOST_INPUT_MARKS} from '../min3_7/c/HostWetware';
 import {BiasDefinition,BIAS_LAYOUT,BIAS_TILT} from '../min3_7/c/BiasDefinition';
+import {auditItems,auditLayout,auditSelfTest} from './layout_audit';
 
 const plan=JSON.parse(fs.readFileSync(new URL('../ov/stage_plan.json',import.meta.url),'utf8')) as StagePlan;
 const sceneComponents={UsThemSorting,HostWetware,BiasDefinition};
@@ -47,6 +48,7 @@ for(const scene of Object.keys(sceneComponents) as SceneName[]){
   const segment=plan.segments.find(item=>item.scene===scene)!;
   frames.push({scene,ms:segment.start_ms,kind:'start'});
   for(const cue of sceneCues[scene])frames.push({scene,ms:plan.cues[cue]+700,kind:cue});
+  for(let ms=segment.start_ms+500;ms<segment.end_ms;ms+=500)frames.push({scene,ms,kind:`grid-${ms}`});
   frames.push({scene,ms:segment.end_ms-1000/plan.fps,kind:'end'});
 }
 const rendered=frames.map(frame=>({...frame,html:render(frame.scene,frame.ms)}));
@@ -138,30 +140,40 @@ if(process.env.MIN3_7_C_SNAPSHOT==='1'){
   beat('BiasDefinition','t29Evaluation',{text:['EVALUATION']});
   beat('BiasDefinition','t29Explanation',{text:['EXPLANATION','a tendency or lean that favors or disfavors individuals or groups in perception, evaluation, and explanation because of group membership','(paraphrased)','Greenwald & Banaji 1995']});
 
-  const canvas={x:0,y:0,w:1920,h:1080};
+  const selfTests=auditSelfTest();
+  // Layout audit: safe area, notch zones, text fit, and no text/shape collisions at every sampled frame.
+  let items=0;
+  const violations:string[]=[];
+  for(const {scene,kind,ms,html} of rendered){
+    for(const problem of auditLayout(html))violations.push(`${scene} ${kind} (${ms} ms): ${problem}`);
+    items+=auditItems(html).length;
+  }
+  assert.deepEqual(violations,[],`layout audit failed:\n${violations.slice(0,40).join('\n')}`);
+  const visibleAt=(scene:SceneName,cue:string)=>auditItems(byKind(scene).find(frame=>frame.kind===cue)!.html).filter(item=>item.opacity>.05);
+  // Every person mark and function chip is declared to the audit, so chips, titles and bands are verified clear of the marks.
+  const sorted=visibleAt('UsThemSorting','t24SelfConcept');
+  assert.equal(sorted.filter(item=>item.layer==='person').length,48,'UsThemSorting does not declare all 48 person marks');
+  for(const id of ['trust-chip','threat-chip','reciprocity-chip','belonging-chip','self-concept-chip','band-1','band-2','band-3','belonging-wrap','self-ring','us-title','them-title'])assert.ok(sorted.some(item=>item.id===id),`UsThemSorting final state does not declare ${id}`);
+  const field=US_THEM_LAYOUT.field;
+  for(const chip of sorted.filter(item=>item.id.endsWith('-chip')))assert.ok(chip.x+chip.w<=field.x||chip.x>=field.x+field.w,`UsThemSorting chip ${chip.id} sits inside the sorting field`);
+  // Turn 27: the old network picture is fully absent, so the band diagram stands alone.
+  for(const cue of ['t27Survival','t27Bands','t27Allies','t27Strangers','t27Consequences']){
+    const html=byKind('HostWetware').find(frame=>frame.kind===cue)!.html;
+    assert.ok(!html.includes('data-pre-band-field="true"'),`HostWetware ${cue} still renders the turn-25/26 picture`);
+    assert.equal((plain(html).match(/STRANGER/g)??[]).length,cue==='t27Strangers'||cue==='t27Consequences'?1:0,`HostWetware ${cue} shows a duplicate STRANGER`);
+  }
+  const network=visibleAt('HostWetware','t26Reasoning');
+  assert.ok(network.some(item=>item.layer==='network')&&network.filter(item=>item.layer==='input').length===24&&network.filter(item=>item.layer==='ghost').length===4,'HostWetware does not declare network, 24 input marks and 4 ghost marks');
+  // Turn 29: the definition card grows to its content and no faint turn-28 panel remains.
+  const definition=byKind('BiasDefinition').find(frame=>frame.kind==='t29Tendency')!.html;
+  assert.ok(!definition.includes('data-turn-28-field="true"'),'BiasDefinition turn 29 still renders the turn-28 picture');
+  const collapsed=visibleAt('BiasDefinition','t29Tendency').find(item=>item.id==='definition-card')!, expanded=visibleAt('BiasDefinition','t29Explanation').find(item=>item.id==='definition-card')!;
+  const lastText=visibleAt('BiasDefinition','t29Explanation').filter(item=>item.id.startsWith('definition-')&&item.role==='text').reduce((bottom,item)=>Math.max(bottom,item.y+item.h),0);
+  assert.ok(collapsed.h<=BIAS_LAYOUT.definitionCollapsedH+.5&&expanded.y+expanded.h-lastText<=40,`BiasDefinition card is not sized to its content (${collapsed.h} → ${expanded.h}, text ends ${lastText})`);
   assert.equal(US_THEM_MARKS.length,48,'UsThemSorting mark count changed');
-  assertDisjoint([US_THEM_LAYOUT.title,US_THEM_LAYOUT.rapid,US_THEM_LAYOUT.prompt],'UsThemSorting upper text boxes');
-  assertDisjoint(US_THEM_LAYOUT.functions,'UsThemSorting function labels');
-  assert.ok(!intersects(US_THEM_LAYOUT.bands,US_THEM_LAYOUT.functions[4]),'UsThemSorting bands label overlaps self-concept');
-  assert.ok(!intersects(US_THEM_LAYOUT.bounded,US_THEM_LAYOUT.functions[2])&&!intersects(US_THEM_LAYOUT.bounded,US_THEM_LAYOUT.functions[3]),'UsThemSorting bounded label overlaps lower function labels');
-  for(const box of [US_THEM_LAYOUT.title,US_THEM_LAYOUT.rapid,US_THEM_LAYOUT.prompt,US_THEM_LAYOUT.bands,US_THEM_LAYOUT.bounded,...US_THEM_LAYOUT.functions,US_THEM_LAYOUT.source])assertInside(box,canvas,'UsThemSorting text box');
-
   assert.equal(HOST_INPUT_MARKS.length,24,'HostWetware input mark count changed');
-  assertDisjoint(HOST_WETWARE_LAYOUT.outputCards,'HostWetware output cards');
-  assert.ok(HOST_WETWARE_LAYOUT.ribbon.y+HOST_WETWARE_LAYOUT.ribbon.h<HOST_WETWARE_LAYOUT.neural.y,'HostWetware ribbon overlaps neural field');
-  assert.ok(HOST_WETWARE_LAYOUT.neural.x+HOST_WETWARE_LAYOUT.neural.w<HOST_WETWARE_LAYOUT.output.x,'HostWetware neural field overlaps output bus');
-  assert.ok(HOST_WETWARE_LAYOUT.fastLane.y+HOST_WETWARE_LAYOUT.fastLane.h<=HOST_WETWARE_LAYOUT.deliberateLane.y,'HostWetware processing lanes overlap');
-  assert.ok(HOST_WETWARE_LAYOUT.deliberateLane.y+HOST_WETWARE_LAYOUT.deliberateLane.h<HOST_WETWARE_LAYOUT.source.y,'HostWetware deliberate lane overlaps source');
-  for(const box of [HOST_WETWARE_LAYOUT.ribbon,HOST_WETWARE_LAYOUT.neural,HOST_WETWARE_LAYOUT.input,HOST_WETWARE_LAYOUT.output,HOST_WETWARE_LAYOUT.bandwidth,HOST_WETWARE_LAYOUT.fastLane,HOST_WETWARE_LAYOUT.deliberateLane,HOST_WETWARE_LAYOUT.band,HOST_WETWARE_LAYOUT.source,...HOST_WETWARE_LAYOUT.outputCards])assertInside(box,canvas,'HostWetware layout box');
-
-  assertDisjoint(BIAS_LAYOUT.terms,'BiasDefinition turn-28 term cards');
-  assertDisjoint(BIAS_LAYOUT.meters,'BiasDefinition tilt meters');
-  assert.ok(!intersects(BIAS_LAYOUT.definition,BIAS_LAYOUT.meters[0])&&!intersects(BIAS_LAYOUT.definition,BIAS_LAYOUT.meters[1])&&!intersects(BIAS_LAYOUT.definition,BIAS_LAYOUT.meters[2]),'BiasDefinition definition card overlaps tilt meters');
-  assert.ok(BIAS_LAYOUT.stack.x+BIAS_LAYOUT.stack.w<BIAS_LAYOUT.input.x,'BiasDefinition term stack overlaps group-category input');
-  assert.ok(BIAS_LAYOUT.input.x+BIAS_LAYOUT.input.w<BIAS_LAYOUT.lanes.x,'BiasDefinition group-category input overlaps processing lanes');
-  assert.ok(BIAS_LAYOUT.meters[2].y+BIAS_LAYOUT.meters[2].h<BIAS_LAYOUT.starting.y,'BiasDefinition final meter overlaps starting-tendency label');
   assert.equal(BIAS_TILT.fraction,.18,'BiasDefinition tilt changed from the storyboard 18%');
-  for(const box of [BIAS_LAYOUT.heading,BIAS_LAYOUT.stack,BIAS_LAYOUT.bracket,BIAS_LAYOUT.input,BIAS_LAYOUT.lanes,BIAS_LAYOUT.definition,BIAS_LAYOUT.starting,BIAS_LAYOUT.source,...BIAS_LAYOUT.terms,...BIAS_LAYOUT.meters])assertInside(box,canvas,'BiasDefinition layout box');
+  assert.equal(HOST_WETWARE_LAYOUT.outputCards.length,3,'HostWetware compresses to three label cards');
 
-  console.log(`PASS: ${rendered.length} Package C cue-derived frames; 48 deterministic sorting marks, 24-to-3 compression, 18% tilt geometry, storyboard strings, hook policy, underscore policy, interaction-hint policy, and text-box layout verified.`);
+  console.log(`PASS: audit self-test (${selfTests} rules); ${rendered.length} Package C frames (cues + 500 ms grid); layout audit of ${items} declared boxes (safe area, notch zones, text fit, text/shape collisions); 48 deterministic sorting marks, 24-to-3 compression, clean turn-27 and turn-29 replacements, 18% tilt geometry, storyboard strings, hook, underscore and interaction-hint policies verified.`);
 }
