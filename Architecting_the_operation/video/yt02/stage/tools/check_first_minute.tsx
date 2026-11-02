@@ -88,7 +88,7 @@ if(process.env.FIRST_MINUTE_SNAPSHOT==='1'){
   const orderHtml=assertStrings('DictionaryEntry','order',['1','2','3']);
   assert.ok(orderHtml.includes(`translateX(${DICTIONARY_LIFT_X}px)`),'DictionaryEntry sense numbers have not lifted into the gutter column');
   assertStrings('DictionaryEntry','causal',['causal story','Individual Prejudice','Discriminatory Actions','Systemic Outcomes']);
-  assertStrings('DictionaryEntry','evidence',['evidence','The Original Power, §Racism as Primary Example · Eq. 1.3']);
+  assertStrings('DictionaryEntry','evidence',['evidence','The Original Power, §Racism as Primary Example · Eq. 2.5']);
 
   const whySegment=plan.segments.find(item=>item.scene==='WhyLadder')!;
   assert.ok(plain(render('WhyLadder',whySegment.start_ms)).includes('The common definition of racism'),'WhyLadder does not open on DictionaryEntry final state');

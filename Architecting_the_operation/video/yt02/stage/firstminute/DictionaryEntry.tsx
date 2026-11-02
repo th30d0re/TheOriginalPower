@@ -71,7 +71,7 @@ export function DefinitionSceneContent({state}: {state:DefinitionHierarchyState}
     {state.header>0 && <div style={{position:'absolute', left:150, top:105, opacity:state.header, transform:`translateY(${18*(1-state.header)}px)`, fontSize:68, fontWeight:500}}>The common definition of racism</div>}
     {state.wrong>0 && <div style={{position:'absolute', left:1375, top:118, opacity:state.wrong, transform:`translateY(${12*(1-state.wrong)}px) rotate(-2deg)`, padding:'9px 18px', border:`2px solid ${color('color/marker/race')}`, background:color('color/fill/red-faint'), font:'500 25px "IBM Plex Mono"', letterSpacing:3, textTransform:'uppercase', color:color('color/marker/race')}}>wrong</div>}
     <DefinitionHierarchy state={state}/>
-    {state.evidence>0 && <div style={{position:'absolute', left:150, bottom:78, opacity:state.evidence, font:'400 20px "IBM Plex Mono"', letterSpacing:.4, color:color('color/text/muted')}}>The Original Power, §Racism as Primary Example · Eq. 1.3</div>}
+    {state.evidence>0 && <div style={{position:'absolute', left:150, bottom:78, opacity:state.evidence, font:'400 20px "IBM Plex Mono"', letterSpacing:.4, color:color('color/text/muted')}}>The Original Power, §Racism as Primary Example · Eq. 2.5</div>}
   </div>;
 }
 
