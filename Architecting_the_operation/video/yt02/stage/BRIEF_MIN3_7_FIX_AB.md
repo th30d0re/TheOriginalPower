@@ -11,11 +11,13 @@ Write only these files:
 The shared components in `min3_7/shared/` are read-only. Work around any problem there locally.
 Do not change git state. Do not render.
 
-The render is `outputs/YT02v2_ov/video/stage_runs/min3_7_AB_v1.mp4`, starting at episode
+**Frames are attached to this prompt as images**; look at every one before you change code. The render is `outputs/YT02v2_ov/video/stage_runs/min3_7_AB_v1.mp4`, starting at episode
 138.667 s. Its frames are `stage_runs/ab_v1/e<episode-seconds>.png`.
 
-**The rule this pass enforces everywhere: no text overlaps other text, and no line or shape
-crosses text.** The checks pass today because they do not test this. Every fix below needs a
+**The rules this pass enforces are the two in `BRIEF_MIN3_7_FIX_CD.md`: the safe area, and no
+collisions.** A no-collision failure means text overlapping other text, or a line or shape crossing
+text. The C/D pass ran first and wrote `tools/layout_audit`. Use it: mark A and B's text and
+shapes with `data-text` / `data-shape` and their boxes. The checks pass today because they do not test this. Every fix below needs a
 geometric assert built from the layout constants, at every sampled frame.
 
 ## Package A
