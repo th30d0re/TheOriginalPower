@@ -50,6 +50,16 @@ speakers:
     engine: "archive"
     character_profile: "Source clip, @harvardseye x Gov. Healey, Yes-on-9 press event"
 
+  evan_george:
+    name: "Evan George"
+    engine: "archive"
+    character_profile: "Instagram reel, @bostopianews, Ballot Question 9, 2026-11-02"
+
+  governor_healey:
+    name: "Governor Healey"
+    engine: "archive"
+    character_profile: "Source clip, @harvardseye x Gov. Healey, Yes-on-9 press event"
+
   # EP04 cold open: real voices from the Cornell Chi Phi discourse, Sept-Oct 2026.
   # Archive engine; each plays a registered clip from archive/clips.yaml.
   blake_johnson:

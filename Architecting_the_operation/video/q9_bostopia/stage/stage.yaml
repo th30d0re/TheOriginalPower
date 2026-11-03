@@ -40,7 +40,7 @@ shots:
     cues:
       reel: {ms: 0}
   - shot_id: R-02-02
-    turn_id: fe1ee0121f8ffbe8
+    turn_id: ff4ace460f57fede
     scene: SaintDomingue
     instance: r02
     cues:
@@ -82,7 +82,7 @@ shots:
     cues:
       reel: {ms: 0}
   - shot_id: R-05-02
-    turn_id: 2b6f08bdbf08b868
+    turn_id: 8e547f0491f92d6f
     scene: TheCheck
     instance: r05
     cues:
@@ -91,10 +91,8 @@ shots:
       fifty: {word: Fifty}
       receipt: {word: receipt}
       less: {word: less}
-      repeal: {word: repeal}
-      tours: {word: tours}
   - shot_id: R-05-03
-    turn_id: 059c7a0e0824a461
+    turn_id: bdba3b23a4b7de71
     scene: TheCheck
     instance: r05
     cues:
@@ -206,7 +204,7 @@ shots:
       sink: {word: sink}
       date: {word: date}
   - shot_id: R-08-03
-    turn_id: 0ebd26be7ea87b7f
+    turn_id: 4be352f52d5d72f6
     scene: TheWage
     instance: r08
     cues:
@@ -238,11 +236,11 @@ shots:
       zero: {word: zero}
       storage: {word: storage}
   - shot_id: R-10-02
-    turn_id: ebcc516af8577d2c
+    turn_id: 1428fda076b50e25
     scene: TheReturn
     instance: r10
     cues:
-      tomorrow: {word: tomorrow}
+      today: {word: today}
       systemic: {word: systemic}
       standing: {word: standing}
       larger: {word: larger}

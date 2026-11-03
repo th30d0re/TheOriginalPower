@@ -5,7 +5,7 @@ import type {SceneProps} from '@stage';
 import {color} from '../../../yt02/stage/tokens';
 import {ClipFrames, clipEndMs} from './shared/ClipFrames';
 import {FLOOR, Frame, HBar, HRule, Phrases, SourceLine, Text, VBar, blockHeight, phraseBottom, type PhraseSpec} from './shared/layout';
-import {QrMark} from './shared/QrMark';
+import {QrMark, cornerQr} from './shared/QrMark';
 
 const GREEN_FRAMES = 386;
 
@@ -44,8 +44,6 @@ export function TheCheck({segment}: SceneProps) {
   const fiftyAt = useCue('fifty').at;
   const receiptAt = useCue('receipt').at;
   const lessAt = useCue('less').at;
-  const repealAt = useCue('repeal').at;
-  const toursAt = useCue('tours').at;
   const licenseAt = useCue('license').at;
   const greenAt = useCue('green').at;
   const virginiaAt = useCue('virginia').at;
@@ -61,8 +59,6 @@ export function TheCheck({segment}: SceneProps) {
     {id: 'ph-fifty', at: fiftyAt, until: licenseAt, text: 'Fifty thousand dollars'},
     {id: 'ph-receipt', at: receiptAt, until: licenseAt, text: 'That is one receipt'},
     {id: 'ph-less', at: lessAt, until: licenseAt, text: 'a hundred dollars or less'},
-    {id: 'ph-repeal', at: repealAt, until: licenseAt, text: 'on the repeal'},
-    {id: 'ph-tours', at: toursAt, until: licenseAt, text: 'the listening tours'},
     {id: 'ph-license', at: licenseAt, text: 'two hundred dollars or more'},
     {id: 'ph-virginia', at: virginiaAt, text: "Virginia's poll tax"},
     {id: 'ph-fifteen', at: fifteenAt, text: 'about fifteen dollars a year'},
@@ -149,6 +145,7 @@ export function TheCheck({segment}: SceneProps) {
           <Text id="count-all" text="3,324" x={540} y={countY} w={440} size={64} kind="headline" weight={600} />
           <ReceiptField x={60} y={fieldY} w={960} h={fieldH} />
           <SourceLine at={receiptAt} id="source-ocpf" text="Source: OCPF report 960537, receipt 17220407" until={licenseAt} w={600} />
+          <QrMark id="ocpf-qr" cue="receipt" url="https://www.ocpf.us/Reports/DisplayReport?reportId=960537" x={cornerQr.x} y={cornerQr.y} size={cornerQr.size} />
         </>
       )}
       {showLicense && (
@@ -176,12 +173,14 @@ export function TheCheck({segment}: SceneProps) {
       {showWealth && (
         <>
           <Text id="wealth-white" text="$550,000" x={80} y={wealthTop} w={420} size={64} kind="headline" weight={600} ink={color('color/fill/gold')} />
-          <Text id="wealth-white-who" text="white families" x={80} y={wealthTop + wealthLabelH + 8} w={420} size={40} kind="body" />
+          <Text id="wealth-white-who" text="White families" x={80} y={wealthTop + wealthLabelH + 8} w={420} size={40} kind="body" />
           <Text id="wealth-black" text="$7,800" x={560} y={wealthTop} w={420} size={64} kind="headline" weight={600} />
           <Text id="wealth-black-who" text="Black families" x={560} y={wealthTop + wealthLabelH + 8} w={420} size={40} kind="body" />
           <VBar id="wealth-white-bar" x={180} baseline={wealthBase} w={160} h={whiteH} fill={color('color/fill/gold')} layer="wealth" />
           <VBar id="wealth-black-bar" x={660} baseline={wealthBase} w={160} h={Math.max(blackH, 8)} fill={color('color/marker/race')} layer="wealth" />
           <HRule id="wealth-base" x1={120} x2={900} y={wealthBase} />
+          <SourceLine at={wealthAt} id="source-wealth" text="Source: Federal Reserve Bank of Boston, Mass ECHOS (2026)" w={600} />
+          <QrMark id="wealth-qr" cue="wealth" url="https://www.bostonfed.org/news-and-events/news/2026/08/mass-echos-wealth-survey-median-family-net-wealth-economic-disparities.aspx" x={cornerQr.x} y={cornerQr.y} size={cornerQr.size} />
         </>
       )}
     </>

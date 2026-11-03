@@ -44,7 +44,7 @@ export function TheRight({segment}: SceneProps) {
           {id: 'ph-safety', at: safetyAt, text: "billed to everyone else's safety."},
         ];
   const quote = ms >= preyAt
-    ? 'Hand the force to the legislator, and he can make a prey of them when he pleases.'
+    ? '“Hand the force to the legislator, and he can make a prey of them when he pleases.”'
     : ms >= animalsAt
       ? 'Other animals carry that charge.'
       : 'He called the condition before government the state of nature.';

@@ -12,14 +12,14 @@ export function TheReturn(_props: SceneProps) {
   const pointAt = useCue('point').at;
   const zeroAt = useCue('zero').at;
   const storageAt = useCue('storage').at;
-  const tomorrowAt = useCue('tomorrow').at;
+  const todayAt = useCue('today').at;
   const systemicAt = useCue('systemic').at;
   const standingAt = useCue('standing').at;
   const largerAt = useCue('larger').at;
-  const vote = ms >= tomorrowAt;
+  const vote = ms >= todayAt;
   const lines: PhraseSpec[] = vote
     ? [
-        {id: 'ph-question', at: tomorrowAt, text: 'on Question 9.'},
+        {id: 'ph-question', at: todayAt, text: 'on Question 9.'},
         {id: 'ph-racism', at: systemicAt, text: 'Racism, sexism, and systemic ableism.'},
         {id: 'ph-standing', at: standingAt, text: 'leaves safe storage and background checks standing.'},
         {id: 'ph-larger', at: largerAt, text: 'a larger change than that return contains.'},

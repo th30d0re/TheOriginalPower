@@ -56,7 +56,7 @@ Evan George (01:07)
 [clip:bostopia_smith] The second type are the gun manufacturers themselves, who profit off of the aforementioned people and America's high level of gun violence.
 
 Emmanuel Theodore (01:14)
-He names Smith and Wesson. The check is dated September 25th, 2024. Fifty thousand dollars, from Smith and Wesson Brands, to The Civil Rights Coalition, the committee for a no vote. That is one receipt. The committee's file holds three thousand three hundred twenty-four receipts, and two thousand four hundred ninety-nine of them are a hundred dollars or less. I had been on the repeal from the time Chapter 135 was still a bill, through the revisions and the listening tours.
+He names Smith and Wesson. The check is dated September 25th, 2024. Fifty thousand dollars, from Smith and Wesson Brands, to The Civil Rights Coalition, the committee for a no vote. That is one receipt. The committee's file holds three thousand three hundred twenty-four receipts, and two thousand four hundred ninety-nine of them are a hundred dollars or less.
 
 Emmanuel Theodore (01:48)
 A first license runs two hundred dollars or more.

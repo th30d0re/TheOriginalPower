@@ -83,46 +83,41 @@ export function TheRepeal({segment}: SceneProps) {
           ];
   const spread = grant || speech;
   const packed = phraseBottom(lines, ms, spread ? {x: 96, y: grant ? 420 : 220, w: 880} : undefined);
-  const nameH = blockHeight('Mini-14', 440, 72);
-  const sameH = blockHeight('Same round.', 960, 64);
-  const dateH = blockHeight('August 1, 2024', 960, 72);
   const showDate = ms >= augustAt;
-  const footerH = sameH + (showDate ? 16 + dateH : 0);
-  const figW = 460;
-  const naturalFig = Math.round(figW * 150 / 220);
-  const room = FLOOR - (packed + 16) - nameH - 12 - 16 - footerH;
-  const figH = Math.max(160, Math.min(naturalFig, room));
-  const blockH = nameH + 12 + figH + 16 + footerH;
-  const blockTop = Math.max(packed + 16, FLOOR - blockH);
-  const nameY = blockTop;
-  const figY = nameY + nameH + 12;
-  const sameY = figY + figH + 16;
-  const dateY = sameY + sameH + 16;
-  const head = 'Stock and grip';
-  const headH = blockHeight(head, 960, 72);
-  const headY = packed + 16;
-  const panelY = headY + headH + 16;
-  const panelH = Math.max(1, FLOOR - panelY);
-  const pad = 28;
-  const innerW = 960 - pad * 2;
-  const innerH = panelH - pad * 2;
-  const colW = (innerW - 24) / 2;
-  let stockW = colW;
-  let stockH = stockW * 849 / 1500;
-  if (stockH > innerH) {
-    stockH = innerH;
-    stockW = stockH * 1500 / 849;
-  }
-  let gripH = innerH;
-  let gripW = gripH * 786 / 1014;
-  if (gripW > colW) {
-    gripW = colW;
-    gripH = gripW * 1014 / 786;
-  }
-  const stockX = 60 + pad + (colW - stockW) / 2;
-  const gripX = 60 + pad + colW + 24 + (colW - gripW) / 2;
-  const stockImgY = panelY + pad + (innerH - stockH) / 2;
-  const gripImgY = panelY + pad + (innerH - gripH) / 2;
+  const dateH = blockHeight('August 1, 2024', 960, 72);
+  const blockTop = packed + 16;
+  const blockH = FLOOR - blockTop - (showDate ? dateH + 24 : 0);
+  const dateY = FLOOR - dateH;
+  const panelY = packed + 16;
+  const panelH = FLOOR - panelY;
+  const partsList = [
+    {
+      image: 'assets/parts/stock.png',
+      title: 'Adjustable stock',
+      detail: 'Changes the length of pull, so a smaller frame gets a proper fit',
+    },
+    {
+      image: 'assets/parts/pistol_grip.png',
+      title: 'Pistol grip',
+      detail: 'Easier to control, with a natural hand and wrist position',
+    },
+    {
+      image: 'assets/parts/forward_grip.png',
+      title: 'Forward grip',
+      detail: 'Gives the support hand a place to steady the rifle',
+    },
+    {
+      image: 'assets/parts/threaded_barrel.png',
+      title: 'Threaded barrel',
+      detail: 'Accepts a flash suppressor or muzzle brake',
+    },
+    {
+      image: 'assets/parts/shroud.png',
+      title: 'Barrel shroud',
+      detail: "Shields the bearer's hand from heat",
+    },
+  ];
+  const rowH = Math.floor((panelH - 16) / 5);
   return (
     <>
       <ClipFrames clip="bostopia_abusers" startMs={segment.start_ms} />
@@ -140,26 +135,126 @@ export function TheRepeal({segment}: SceneProps) {
       )}
       {rifles && (
         <>
-          <Text id="ar-name" text="AR-15" x={60} y={nameY} w={440} size={72} kind="headline" weight={600} ink={color('color/fill/gold')} />
-          <Text id="mini-name" text="Mini-14" x={560} y={nameY} w={440} size={72} kind="headline" weight={600} />
-          <RifleMark id="ar-fig" x={60} y={figY} w={figW} h={figH} />
-          <RifleMark id="mini-fig" x={560} y={figY} w={figW} h={figH} wood />
-          <Text id="same-round" text="Same round." x={60} y={sameY} w={960} size={64} kind="headline" weight={600} />
+          <div
+            data-shape="ruger-ar-plate"
+            data-role="frame"
+            data-box={box(60, blockTop, 960, blockH)}
+            style={{
+              position: 'absolute',
+              left: 60,
+              top: blockTop,
+              width: 960,
+              height: blockH,
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            <img
+              data-shape="ruger-vs-ar"
+              data-role="mark"
+              data-box={box(80, blockTop + 10, 920, blockH - (showDate ? dateH + 32 : 20))}
+              src={staticFile('assets/frames/ruger_vs_ar15.jpg')}
+              alt="Ruger Mini-14 vs AR-15"
+              style={{
+                width: 920,
+                maxHeight: blockH - (showDate ? dateH + 32 : 20),
+                objectFit: 'contain',
+                borderRadius: 8,
+              }}
+            />
+          </div>
           {showDate && (
             <Text id="august-date" text="August 1, 2024" x={60} y={dateY} w={960} size={72} kind="headline" weight={600} ink={color('color/fill/gold')} />
           )}
         </>
       )}
       {parts && (
+        <div
+          data-shape="parts-plate"
+          data-role="frame"
+          data-box={box(60, panelY, 960, panelH)}
+          style={{
+            position: 'absolute',
+            left: 60,
+            top: panelY,
+            width: 960,
+            height: panelH,
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-between',
+          }}
+        >
+          {partsList.map((part, index) => (
+            <div
+              key={part.title}
+              style={{
+                position: 'relative',
+                display: 'flex',
+                alignItems: 'center',
+                height: rowH,
+                padding: '8px 16px',
+                boxSizing: 'border-box',
+              }}
+            >
+              <div
+                style={{
+                  width: 220,
+                  height: rowH - 16,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexShrink: 0,
+                }}
+              >
+                <img
+                  src={staticFile(part.image)}
+                  alt=""
+                  style={{
+                    maxWidth: 210,
+                    maxHeight: rowH - 16,
+                    objectFit: 'contain',
+                    filter: 'brightness(1.8) contrast(1.1) drop-shadow(0 0 6px rgba(244,234,210,0.5))',
+                  }}
+                />
+              </div>
+              <div style={{flex: 1, paddingLeft: 24}}>
+                <div style={{fontSize: 40, fontWeight: 700, color: color('color/fill/gold'), lineHeight: 1.15}}>
+                  {part.title}
+                </div>
+                <div style={{fontSize: 28, color: color('color/text/primary'), marginTop: 6, lineHeight: 1.25}}>
+                  {part.detail}
+                </div>
+              </div>
+              {index < partsList.length - 1 && (
+                <div
+                  style={{
+                    position: 'absolute',
+                    bottom: 0,
+                    left: 16,
+                    right: 16,
+                    height: 1,
+                    background: color('color/line/hairline'),
+                  }}
+                />
+              )}
+            </div>
+          ))}
+        </div>
+      )}
+      {ms >= miniAt && ms < stockAt && (
         <>
-          <Text id="parts-title" text={head} x={60} y={headY} w={960} size={72} kind="headline" weight={600} ink={color('color/fill/gold')} />
-          <div data-shape="parts-plate" data-role="frame" data-box={box(60, panelY, 960, panelH)} style={{position: 'absolute', left: 60, top: panelY, width: 960, height: panelH, background: color('color/text/primary'), borderRadius: 8}} />
-          <img data-shape="stock-photo" data-role="mark" data-layer="parts" data-box={box(stockX, stockImgY, stockW, stockH)} src={staticFile('assets/parts/stock.png')} alt="" style={{position: 'absolute', left: stockX, top: stockImgY, width: stockW, height: stockH, objectFit: 'contain'}} />
-          <img data-shape="grip-photo" data-role="mark" data-layer="parts" data-box={box(gripX, gripImgY, gripW, gripH)} src={staticFile('assets/parts/pistol_grip.png')} alt="" style={{position: 'absolute', left: gripX, top: gripImgY, width: gripW, height: gripH, objectFit: 'contain'}} />
+          <QrMark id="notice-qr" cue="mini14" url="https://www.mass.gov/enforcing-the-massachusetts-assault-weapons-ban" x={cornerQr.x} y={cornerQr.y} size={cornerQr.size} />
+          <SourceLine at={miniAt} text="Source: Massachusetts Attorney General, 2016 notice" />
         </>
       )}
-      {ms >= miniAt && <QrMark id="notice-qr" cue="mini14" url="https://www.mass.gov/enforcing-the-massachusetts-assault-weapons-ban" x={cornerQr.x} y={cornerQr.y} size={cornerQr.size} />}
-      {ms >= miniAt && <SourceLine at={miniAt} text="Source: Massachusetts Attorney General, 2016 notice" />}
+      {ms >= stockAt && (
+        <>
+          <QrMark id="c121-qr" cue="stock" url="https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXX/Chapter140/Section121" x={cornerQr.x} y={cornerQr.y} size={cornerQr.size} />
+          <SourceLine at={stockAt} text="Source: G.L. c.140, § 121 (the five features)" />
+        </>
+      )}
     </>
   );
 }
