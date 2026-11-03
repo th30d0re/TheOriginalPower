@@ -236,7 +236,7 @@ shots:
       zero: {word: zero}
       storage: {word: storage}
   - shot_id: R-10-02
-    turn_id: 1428fda076b50e25
+    turn_id: 9b1acf761d49ef45
     scene: TheReturn
     instance: r10
     cues:

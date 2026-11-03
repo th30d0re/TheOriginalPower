@@ -20,7 +20,7 @@ export function TheReturn(_props: SceneProps) {
   const lines: PhraseSpec[] = vote
     ? [
         {id: 'ph-question', at: todayAt, text: 'on Question 9.'},
-        {id: 'ph-racism', at: systemicAt, text: 'Racism, sexism, and systemic ableism.'},
+        {id: 'ph-racism', at: systemicAt, text: 'Systemic racism, sexism, and ableism.'},
         {id: 'ph-standing', at: standingAt, text: 'leaves safe storage and background checks standing.'},
         {id: 'ph-larger', at: largerAt, text: 'a larger change than that return contains.'},
       ]

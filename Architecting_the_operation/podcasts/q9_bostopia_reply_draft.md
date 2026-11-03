@@ -113,4 +113,4 @@ Emmanuel Theodore (05:49)
 Across the fifty states, poverty tracks gun homicide at about point seven. Once you account for poverty and inequality, the link between gun laws and gun homicide is essentially zero. Massachusetts already has the laws RAND finds work best: safe storage and background checks.
 
 Emmanuel Theodore (06:05)
-Today is voting day. Vote no on Question 9. This law upholds racism, sexism, and systemic ableism in the same statute. A no vote returns the state to the restrictions it already had, and it leaves safe storage and background checks standing. The yes campaign is describing a larger change than that return contains.
+Today is voting day. Vote no on Question 9. This law upholds systemic racism, sexism, and ableism in the same statute. A no vote returns the state to the restrictions it already had, and it leaves safe storage and background checks standing. The yes campaign is describing a larger change than that return contains.

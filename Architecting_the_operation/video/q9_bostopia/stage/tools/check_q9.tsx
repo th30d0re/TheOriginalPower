@@ -56,8 +56,9 @@ const DRAFT: Record<string, string> = {
   '4be352f52d5d72f6': "Massachusetts already drew this line in Lexington, April 1775. The British marched on Lexington and Concord to take the colony's arms, and the people met them with muskets, which today would be the equivalent of an AR-15.",
   '5f26e76ebf926953': 'That is Governor Healey. A yes vote funds none of the programs she names. The position is incoherent.',
   '05f776724a9cea20': 'Across the fifty states, poverty tracks gun homicide at about point seven. Once you account for poverty and inequality, the link between gun laws and gun homicide is essentially zero. Massachusetts already has the laws RAND finds work best: safe storage and background checks.',
-  ebcc516af8577d2c: 'Today is voting day. Vote no on Question 9. This law upholds racism, sexism, and systemic ableism in the same statute. A no vote returns the state to the restrictions it already had, and it leaves safe storage and background checks standing. The yes campaign is describing a larger change than that return contains.',
-  '1428fda076b50e25': 'Today is voting day. Vote no on Question 9. This law upholds racism, sexism, and systemic ableism in the same statute. A no vote returns the state to the restrictions it already had, and it leaves safe storage and background checks standing. The yes campaign is describing a larger change than that return contains.',
+  ebcc516af8577d2c: 'Today is voting day. Vote no on Question 9. This law upholds systemic racism, sexism, and ableism in the same statute. A no vote returns the state to the restrictions it already had, and it leaves safe storage and background checks standing. The yes campaign is describing a larger change than that return contains.',
+  '1428fda076b50e25': 'Today is voting day. Vote no on Question 9. This law upholds systemic racism, sexism, and ableism in the same statute. A no vote returns the state to the restrictions it already had, and it leaves safe storage and background checks standing. The yes campaign is describing a larger change than that return contains.',
+  '9b1acf761d49ef45': 'Today is voting day. Vote no on Question 9. This law upholds systemic racism, sexism, and ableism in the same statute. A no vote returns the state to the restrictions it already had, and it leaves safe storage and background checks standing. The yes campaign is describing a larger change than that return contains.',
 };
 
 const SOURCED = [
@@ -286,7 +287,7 @@ if (process.env.Q9_SNAPSHOT === '1') {
     ['TheReturn', 'zero', ['r = +0.29', 'About zero']],
     ['TheReturn', 'storage', ['Safe storage and background checks']],
     ['TheReturn', 'today', ['Today is voting day. Vote no.']],
-    ['TheReturn', 'systemic', ['systemic ableism']],
+    ['TheReturn', 'systemic', ['Systemic racism, sexism, and ableism']],
   ];
   for (const [scene, cue, text] of expect) {
     try { beat(scene, cue, text); }

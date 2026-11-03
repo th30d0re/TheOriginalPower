@@ -3,10 +3,10 @@
   "fps": 30,
   "width": 1080,
   "height": 1920,
-  "duration_ms": 398871,
+  "duration_ms": 393391,
   "range": {
     "start_ms": 0,
-    "end_ms": 398871
+    "end_ms": 393391
   },
   "audio": "stage/q9_bostopia_reply/q9_bostopia_reply.mp3",
   "cues": {
@@ -43,58 +43,58 @@
     "wealth": 120218,
     "seventyeight": 124788,
     "arriving": 128898,
-    "abuses": 145860,
-    "gun": 147300,
-    "bear": 148420,
-    "jail": 150460,
-    "everyone": 153807,
-    "repeals": 155603,
-    "strict": 161683,
-    "banned": 163923,
-    "notice": 167683,
-    "mini14": 175073,
-    "without": 184263,
-    "august": 189343,
-    "tightening": 194943,
-    "stock": 198746,
-    "grip": 199486,
-    "shooter": 201726,
-    "lands": 205006,
-    "protecting": 206946,
-    "school": 212266,
-    "privilege": 227946,
-    "safety": 229906,
-    "unalienable": 231767,
-    "declaration": 233307,
-    "permission": 244607,
-    "locke": 245500,
-    "liberty": 252610,
-    "animals": 261730,
-    "firearm": 267750,
-    "worse": 275270,
-    "prey": 280740,
-    "firearms": 288230,
-    "enslaved": 292030,
-    "planters": 296710,
-    "wage": 302489,
-    "patrols": 306349,
-    "mason": 314289,
-    "disarm": 317669,
-    "sink": 325069,
-    "date": 326109,
-    "lexington": 327502,
-    "muskets": 337682,
-    "healey": 357852,
-    "none": 359422,
-    "incoherent": 361802,
-    "poverty": 363488,
-    "point": 365428,
-    "zero": 371748,
-    "storage": 376548,
-    "today": 378171,
-    "systemic": 384331,
-    "standing": 392731,
-    "larger": 395851,
+    "abuses": 140100,
+    "gun": 141540,
+    "bear": 142660,
+    "jail": 144700,
+    "everyone": 148047,
+    "repeals": 149843,
+    "strict": 155923,
+    "banned": 158163,
+    "notice": 161923,
+    "mini14": 169313,
+    "without": 178503,
+    "august": 183583,
+    "tightening": 189183,
+    "stock": 192986,
+    "grip": 193726,
+    "shooter": 195966,
+    "lands": 199246,
+    "protecting": 201186,
+    "school": 206506,
+    "privilege": 222186,
+    "safety": 224146,
+    "unalienable": 226007,
+    "declaration": 227547,
+    "permission": 238847,
+    "locke": 239740,
+    "liberty": 246850,
+    "animals": 255970,
+    "firearm": 261990,
+    "worse": 269510,
+    "prey": 274980,
+    "firearms": 282470,
+    "enslaved": 286270,
+    "planters": 290950,
+    "wage": 296729,
+    "patrols": 300589,
+    "mason": 308529,
+    "disarm": 311909,
+    "sink": 319309,
+    "date": 320349,
+    "lexington": 321742,
+    "muskets": 331922,
+    "healey": 352092,
+    "none": 353662,
+    "incoherent": 356042,
+    "poverty": 357728,
+    "point": 359668,
+    "zero": 365988,
+    "storage": 370788,
+    "today": 372411,
+    "systemic": 376831,
+    "standing": 387111,
+    "larger": 390331,
     "R-01.reel": 0,
     "R-01-02.case": 9330,
     "R-01-02.question": 10190,
@@ -131,61 +131,61 @@
     "R-05-03.wealth": 120218,
     "R-05-03.seventyeight": 124788,
     "R-05-03.arriving": 128898,
-    "R-06.reel": 135160,
-    "R-06-02.abuses": 145860,
-    "R-06-02.gun": 147300,
-    "R-06-02.bear": 148420,
-    "R-06-02.jail": 150460,
-    "R-06-03.everyone": 153807,
-    "R-06-04.repeals": 155603,
-    "R-06-04.strict": 161683,
-    "R-06-04.banned": 163923,
-    "R-06-04.notice": 167683,
-    "R-06-04.mini14": 175073,
-    "R-06-04.without": 184263,
-    "R-06-04.august": 189343,
-    "R-06-04.tightening": 194943,
-    "R-06-05.stock": 198746,
-    "R-06-05.grip": 199486,
-    "R-06-05.shooter": 201726,
-    "R-06-05.lands": 205006,
-    "R-06-05.protecting": 206946,
-    "R-06-05.school": 212266,
-    "R-07.reel": 212807,
-    "R-07-02.privilege": 227946,
-    "R-07-02.safety": 229906,
-    "R-07-03.unalienable": 231767,
-    "R-07-03.declaration": 233307,
-    "R-07-03.permission": 244607,
-    "R-07-04.locke": 245500,
-    "R-07-04.liberty": 252610,
-    "R-07-04.animals": 261730,
-    "R-07-04.firearm": 267750,
-    "R-07-04.worse": 275270,
-    "R-07-04.prey": 280740,
-    "R-08.firearms": 288230,
-    "R-08.enslaved": 292030,
-    "R-08.planters": 296710,
-    "R-08-02.wage": 302489,
-    "R-08-02.patrols": 306349,
-    "R-08-02.mason": 314289,
-    "R-08-02.disarm": 317669,
-    "R-08-02.sink": 325069,
-    "R-08-02.date": 326109,
-    "R-08-03.lexington": 327502,
-    "R-08-03.muskets": 337682,
-    "R-09.reel": 342332,
-    "R-09-02.healey": 357852,
-    "R-09-02.none": 359422,
-    "R-09-02.incoherent": 361802,
-    "R-10.poverty": 363488,
-    "R-10.point": 365428,
-    "R-10.zero": 371748,
-    "R-10.storage": 376548,
-    "R-10-02.today": 378171,
-    "R-10-02.systemic": 384331,
-    "R-10-02.standing": 392731,
-    "R-10-02.larger": 395851
+    "R-06.reel": 129400,
+    "R-06-02.abuses": 140100,
+    "R-06-02.gun": 141540,
+    "R-06-02.bear": 142660,
+    "R-06-02.jail": 144700,
+    "R-06-03.everyone": 148047,
+    "R-06-04.repeals": 149843,
+    "R-06-04.strict": 155923,
+    "R-06-04.banned": 158163,
+    "R-06-04.notice": 161923,
+    "R-06-04.mini14": 169313,
+    "R-06-04.without": 178503,
+    "R-06-04.august": 183583,
+    "R-06-04.tightening": 189183,
+    "R-06-05.stock": 192986,
+    "R-06-05.grip": 193726,
+    "R-06-05.shooter": 195966,
+    "R-06-05.lands": 199246,
+    "R-06-05.protecting": 201186,
+    "R-06-05.school": 206506,
+    "R-07.reel": 207047,
+    "R-07-02.privilege": 222186,
+    "R-07-02.safety": 224146,
+    "R-07-03.unalienable": 226007,
+    "R-07-03.declaration": 227547,
+    "R-07-03.permission": 238847,
+    "R-07-04.locke": 239740,
+    "R-07-04.liberty": 246850,
+    "R-07-04.animals": 255970,
+    "R-07-04.firearm": 261990,
+    "R-07-04.worse": 269510,
+    "R-07-04.prey": 274980,
+    "R-08.firearms": 282470,
+    "R-08.enslaved": 286270,
+    "R-08.planters": 290950,
+    "R-08-02.wage": 296729,
+    "R-08-02.patrols": 300589,
+    "R-08-02.mason": 308529,
+    "R-08-02.disarm": 311909,
+    "R-08-02.sink": 319309,
+    "R-08-02.date": 320349,
+    "R-08-03.lexington": 321742,
+    "R-08-03.muskets": 331922,
+    "R-09.reel": 336572,
+    "R-09-02.healey": 352092,
+    "R-09-02.none": 353662,
+    "R-09-02.incoherent": 356042,
+    "R-10.poverty": 357728,
+    "R-10.point": 359668,
+    "R-10.zero": 365988,
+    "R-10.storage": 370788,
+    "R-10-02.today": 372411,
+    "R-10-02.systemic": 376831,
+    "R-10-02.standing": 387111,
+    "R-10-02.larger": 390331
   },
   "segments": [
     {
@@ -288,7 +288,7 @@
       "instance": "r05",
       "scene": "TheCheck",
       "start_ms": 66290,
-      "end_ms": 135160,
+      "end_ms": 129400,
       "shots": [
         {
           "shot_id": "R-05",
@@ -311,7 +311,7 @@
           "turn_id": "bdba3b23a4b7de71",
           "turn_index": 10,
           "start_ms": 96850,
-          "end_ms": 135160,
+          "end_ms": 129400,
           "props": {}
         }
       ]
@@ -319,47 +319,47 @@
     {
       "instance": "r06",
       "scene": "TheRepeal",
-      "start_ms": 135160,
-      "end_ms": 212807,
+      "start_ms": 129400,
+      "end_ms": 207047,
       "shots": [
         {
           "shot_id": "R-06",
           "turn_id": "9ed68338220cb59b",
           "turn_index": 11,
-          "start_ms": 135160,
-          "end_ms": 145400,
+          "start_ms": 129400,
+          "end_ms": 139640,
           "props": {}
         },
         {
           "shot_id": "R-06-02",
           "turn_id": "3771e77a712a1de8",
           "turn_index": 12,
-          "start_ms": 145400,
-          "end_ms": 151227,
+          "start_ms": 139640,
+          "end_ms": 145467,
           "props": {}
         },
         {
           "shot_id": "R-06-03",
           "turn_id": "0d199cd59fc2d6df",
           "turn_index": 13,
-          "start_ms": 151227,
-          "end_ms": 155123,
+          "start_ms": 145467,
+          "end_ms": 149363,
           "props": {}
         },
         {
           "shot_id": "R-06-04",
           "turn_id": "c9f407fbbc18940f",
           "turn_index": 14,
-          "start_ms": 155123,
-          "end_ms": 196186,
+          "start_ms": 149363,
+          "end_ms": 190426,
           "props": {}
         },
         {
           "shot_id": "R-06-05",
           "turn_id": "5814f3374efbb843",
           "turn_index": 15,
-          "start_ms": 196186,
-          "end_ms": 212807,
+          "start_ms": 190426,
+          "end_ms": 207047,
           "props": {}
         }
       ]
@@ -367,39 +367,39 @@
     {
       "instance": "r07",
       "scene": "TheRight",
-      "start_ms": 212807,
-      "end_ms": 282350,
+      "start_ms": 207047,
+      "end_ms": 276590,
       "shots": [
         {
           "shot_id": "R-07",
           "turn_id": "710692280e905645",
           "turn_index": 16,
-          "start_ms": 212807,
-          "end_ms": 227126,
+          "start_ms": 207047,
+          "end_ms": 221366,
           "props": {}
         },
         {
           "shot_id": "R-07-02",
           "turn_id": "077b55e6ef1bbf7f",
           "turn_index": 17,
-          "start_ms": 227126,
-          "end_ms": 230427,
+          "start_ms": 221366,
+          "end_ms": 224667,
           "props": {}
         },
         {
           "shot_id": "R-07-03",
           "turn_id": "7205f00a5f085108",
           "turn_index": 18,
-          "start_ms": 230427,
-          "end_ms": 245230,
+          "start_ms": 224667,
+          "end_ms": 239470,
           "props": {}
         },
         {
           "shot_id": "R-07-04",
           "turn_id": "2688c25d92fa76cc",
           "turn_index": 19,
-          "start_ms": 245230,
-          "end_ms": 282350,
+          "start_ms": 239470,
+          "end_ms": 276590,
           "props": {}
         }
       ]
@@ -407,31 +407,31 @@
     {
       "instance": "r08",
       "scene": "TheWage",
-      "start_ms": 282350,
-      "end_ms": 342332,
+      "start_ms": 276590,
+      "end_ms": 336572,
       "shots": [
         {
           "shot_id": "R-08",
           "turn_id": "a6dd8735def362a8",
           "turn_index": 20,
-          "start_ms": 282350,
-          "end_ms": 300589,
+          "start_ms": 276590,
+          "end_ms": 294829,
           "props": {}
         },
         {
           "shot_id": "R-08-02",
           "turn_id": "c3633a567d1b89c4",
           "turn_index": 21,
-          "start_ms": 300589,
-          "end_ms": 327502,
+          "start_ms": 294829,
+          "end_ms": 321742,
           "props": {}
         },
         {
           "shot_id": "R-08-03",
           "turn_id": "4be352f52d5d72f6",
           "turn_index": 22,
-          "start_ms": 327502,
-          "end_ms": 342332,
+          "start_ms": 321742,
+          "end_ms": 336572,
           "props": {}
         }
       ]
@@ -439,23 +439,23 @@
     {
       "instance": "r09",
       "scene": "TheGovernor",
-      "start_ms": 342332,
-      "end_ms": 362408,
+      "start_ms": 336572,
+      "end_ms": 356648,
       "shots": [
         {
           "shot_id": "R-09",
           "turn_id": "c2c57b30dc43fbb6",
           "turn_index": 23,
-          "start_ms": 342332,
-          "end_ms": 357082,
+          "start_ms": 336572,
+          "end_ms": 351322,
           "props": {}
         },
         {
           "shot_id": "R-09-02",
           "turn_id": "5f26e76ebf926953",
           "turn_index": 24,
-          "start_ms": 357082,
-          "end_ms": 362408,
+          "start_ms": 351322,
+          "end_ms": 356648,
           "props": {}
         }
       ]
@@ -463,23 +463,23 @@
     {
       "instance": "r10",
       "scene": "TheReturn",
-      "start_ms": 362408,
-      "end_ms": 398871,
+      "start_ms": 356648,
+      "end_ms": 393391,
       "shots": [
         {
           "shot_id": "R-10",
           "turn_id": "05f776724a9cea20",
           "turn_index": 25,
-          "start_ms": 362408,
-          "end_ms": 378171,
+          "start_ms": 356648,
+          "end_ms": 372411,
           "props": {}
         },
         {
           "shot_id": "R-10-02",
-          "turn_id": "1428fda076b50e25",
+          "turn_id": "9b1acf761d49ef45",
           "turn_index": 26,
-          "start_ms": 378171,
-          "end_ms": 398871,
+          "start_ms": 372411,
+          "end_ms": 393391,
           "props": {}
         }
       ]
@@ -1528,3397 +1528,3125 @@
     "3771e77a712a1de8": [
       {
         "text": "A",
-        "start_ms": 145400,
-        "end_ms": 145400
+        "start_ms": 139640,
+        "end_ms": 139640
       },
       {
         "text": "man",
-        "start_ms": 145400,
-        "end_ms": 145640
+        "start_ms": 139640,
+        "end_ms": 139880
       },
       {
         "text": "who",
-        "start_ms": 145640,
-        "end_ms": 145860
+        "start_ms": 139880,
+        "end_ms": 140100
       },
       {
         "text": "abuses",
-        "start_ms": 145860,
-        "end_ms": 146200
+        "start_ms": 140100,
+        "end_ms": 140440
       },
       {
         "text": "his",
-        "start_ms": 146200,
-        "end_ms": 146400
+        "start_ms": 140440,
+        "end_ms": 140640
       },
       {
         "text": "family",
-        "start_ms": 146400,
-        "end_ms": 146740
+        "start_ms": 140640,
+        "end_ms": 140980
       },
       {
         "text": "should",
-        "start_ms": 146740,
-        "end_ms": 146920
+        "start_ms": 140980,
+        "end_ms": 141160
       },
       {
         "text": "lose",
-        "start_ms": 146920,
-        "end_ms": 147140
+        "start_ms": 141160,
+        "end_ms": 141380
       },
       {
         "text": "the",
-        "start_ms": 147140,
-        "end_ms": 147300
+        "start_ms": 141380,
+        "end_ms": 141540
       },
       {
         "text": "gun.",
-        "start_ms": 147300,
-        "end_ms": 147560
+        "start_ms": 141540,
+        "end_ms": 141800
       },
       {
         "text": "and",
-        "start_ms": 147560,
-        "end_ms": 147800
+        "start_ms": 141800,
+        "end_ms": 142040
       },
       {
         "text": "the",
-        "start_ms": 147800,
-        "end_ms": 147900
+        "start_ms": 142040,
+        "end_ms": 142140
       },
       {
         "text": "ability",
-        "start_ms": 147900,
-        "end_ms": 148180
+        "start_ms": 142140,
+        "end_ms": 142420
       },
       {
         "text": "to",
-        "start_ms": 148180,
-        "end_ms": 148420
+        "start_ms": 142420,
+        "end_ms": 142660
       },
       {
         "text": "bear",
-        "start_ms": 148420,
-        "end_ms": 148580
+        "start_ms": 142660,
+        "end_ms": 142820
       },
       {
         "text": "any",
-        "start_ms": 148580,
-        "end_ms": 148820
+        "start_ms": 142820,
+        "end_ms": 143060
       },
       {
         "text": "arm.",
-        "start_ms": 148820,
-        "end_ms": 149180
+        "start_ms": 143060,
+        "end_ms": 143420
       },
       {
         "text": "They",
-        "start_ms": 149640,
-        "end_ms": 149860
+        "start_ms": 143880,
+        "end_ms": 144100
       },
       {
         "text": "should",
-        "start_ms": 149860,
-        "end_ms": 150020
+        "start_ms": 144100,
+        "end_ms": 144260
       },
       {
         "text": "be",
-        "start_ms": 150020,
-        "end_ms": 150160
+        "start_ms": 144260,
+        "end_ms": 144400
       },
       {
         "text": "put",
-        "start_ms": 150160,
-        "end_ms": 150340
+        "start_ms": 144400,
+        "end_ms": 144580
       },
       {
         "text": "in",
-        "start_ms": 150340,
-        "end_ms": 150460
+        "start_ms": 144580,
+        "end_ms": 144700
       },
       {
         "text": "jail",
-        "start_ms": 150460,
-        "end_ms": 150660
+        "start_ms": 144700,
+        "end_ms": 144900
       },
       {
         "text": "for",
-        "start_ms": 150660,
-        "end_ms": 150860
+        "start_ms": 144900,
+        "end_ms": 145100
       },
       {
         "text": "abuse.",
-        "start_ms": 150860,
-        "end_ms": 151100
+        "start_ms": 145100,
+        "end_ms": 145340
       }
     ],
     "0d199cd59fc2d6df": [
       {
         "text": "He",
-        "start_ms": 151227,
-        "end_ms": 151287
+        "start_ms": 145467,
+        "end_ms": 145527
       },
       {
         "text": "took",
-        "start_ms": 151287,
-        "end_ms": 151447
+        "start_ms": 145527,
+        "end_ms": 145687
       },
       {
         "text": "that",
-        "start_ms": 151447,
-        "end_ms": 151607
+        "start_ms": 145687,
+        "end_ms": 145847
       },
       {
         "text": "provision",
-        "start_ms": 151607,
-        "end_ms": 151927
+        "start_ms": 145847,
+        "end_ms": 146167
       },
       {
         "text": "and",
-        "start_ms": 151927,
-        "end_ms": 152407
+        "start_ms": 146167,
+        "end_ms": 146647
       },
       {
         "text": "made",
-        "start_ms": 152407,
-        "end_ms": 152647
+        "start_ms": 146647,
+        "end_ms": 146887
       },
       {
         "text": "it",
-        "start_ms": 152647,
-        "end_ms": 152767
+        "start_ms": 146887,
+        "end_ms": 147007
       },
       {
         "text": "a",
-        "start_ms": 152767,
-        "end_ms": 152867
+        "start_ms": 147007,
+        "end_ms": 147107
       },
       {
         "text": "description",
-        "start_ms": 152867,
-        "end_ms": 153287
+        "start_ms": 147107,
+        "end_ms": 147527
       },
       {
         "text": "of",
-        "start_ms": 153287,
-        "end_ms": 153807
+        "start_ms": 147527,
+        "end_ms": 148047
       },
       {
         "text": "everyone",
-        "start_ms": 153807,
-        "end_ms": 154147
+        "start_ms": 148047,
+        "end_ms": 148387
       },
       {
         "text": "who",
-        "start_ms": 154147,
-        "end_ms": 154407
+        "start_ms": 148387,
+        "end_ms": 148647
       },
       {
         "text": "votes",
-        "start_ms": 154407,
-        "end_ms": 154647
+        "start_ms": 148647,
+        "end_ms": 148887
       },
       {
         "text": "no.",
-        "start_ms": 154647,
-        "end_ms": 154907
+        "start_ms": 148887,
+        "end_ms": 149147
       }
     ],
     "c9f407fbbc18940f": [
       {
         "text": "A",
-        "start_ms": 155123,
-        "end_ms": 155123
+        "start_ms": 149363,
+        "end_ms": 149363
       },
       {
         "text": "no",
-        "start_ms": 155123,
-        "end_ms": 155323
+        "start_ms": 149363,
+        "end_ms": 149563
       },
       {
         "text": "vote",
-        "start_ms": 155323,
-        "end_ms": 155603
+        "start_ms": 149563,
+        "end_ms": 149843
       },
       {
         "text": "repeals",
-        "start_ms": 155603,
-        "end_ms": 156163
+        "start_ms": 149843,
+        "end_ms": 150403
       },
       {
         "text": "the",
-        "start_ms": 156163,
-        "end_ms": 156363
+        "start_ms": 150403,
+        "end_ms": 150603
       },
       {
         "text": "2024",
-        "start_ms": 156713,
-        "end_ms": 157063
+        "start_ms": 150953,
+        "end_ms": 151303
       },
       {
         "text": "act.",
-        "start_ms": 157063,
-        "end_ms": 157463
+        "start_ms": 151303,
+        "end_ms": 151703
       },
       {
         "text": "Massachusetts",
-        "start_ms": 157463,
-        "end_ms": 158203
+        "start_ms": 151703,
+        "end_ms": 152443
       },
       {
         "text": "goes",
-        "start_ms": 158203,
-        "end_ms": 158543
+        "start_ms": 152443,
+        "end_ms": 152783
       },
       {
         "text": "back",
-        "start_ms": 158543,
-        "end_ms": 158803
+        "start_ms": 152783,
+        "end_ms": 153043
       },
       {
         "text": "to",
-        "start_ms": 158803,
-        "end_ms": 158983
+        "start_ms": 153043,
+        "end_ms": 153223
       },
       {
         "text": "the",
-        "start_ms": 158983,
-        "end_ms": 159083
+        "start_ms": 153223,
+        "end_ms": 153323
       },
       {
         "text": "gun",
-        "start_ms": 159083,
-        "end_ms": 159283
+        "start_ms": 153323,
+        "end_ms": 153523
       },
       {
         "text": "law",
-        "start_ms": 159283,
-        "end_ms": 159503
+        "start_ms": 153523,
+        "end_ms": 153743
       },
       {
         "text": "it",
-        "start_ms": 159503,
-        "end_ms": 159683
+        "start_ms": 153743,
+        "end_ms": 153923
       },
       {
         "text": "already",
-        "start_ms": 159683,
-        "end_ms": 159903
+        "start_ms": 153923,
+        "end_ms": 154143
       },
       {
         "text": "had,",
-        "start_ms": 159903,
-        "end_ms": 160323
+        "start_ms": 154143,
+        "end_ms": 154563
       },
       {
         "text": "and",
-        "start_ms": 160323,
-        "end_ms": 160783
+        "start_ms": 154563,
+        "end_ms": 155023
       },
       {
         "text": "that",
-        "start_ms": 160783,
-        "end_ms": 160963
+        "start_ms": 155023,
+        "end_ms": 155203
       },
       {
         "text": "law",
-        "start_ms": 160963,
-        "end_ms": 161183
+        "start_ms": 155203,
+        "end_ms": 155423
       },
       {
         "text": "was",
-        "start_ms": 161183,
-        "end_ms": 161383
+        "start_ms": 155423,
+        "end_ms": 155623
       },
       {
         "text": "already",
-        "start_ms": 161383,
-        "end_ms": 161683
+        "start_ms": 155623,
+        "end_ms": 155923
       },
       {
         "text": "strict.",
-        "start_ms": 161683,
-        "end_ms": 162123
+        "start_ms": 155923,
+        "end_ms": 156363
       },
       {
         "text": "The",
-        "start_ms": 162123,
-        "end_ms": 162643
+        "start_ms": 156363,
+        "end_ms": 156883
       },
       {
         "text": "AR-15",
-        "start_ms": 162973,
-        "end_ms": 163303
+        "start_ms": 157213,
+        "end_ms": 157543
       },
       {
         "text": "was",
-        "start_ms": 163303,
-        "end_ms": 163643
+        "start_ms": 157543,
+        "end_ms": 157883
       },
       {
         "text": "already",
-        "start_ms": 163643,
-        "end_ms": 163923
+        "start_ms": 157883,
+        "end_ms": 158163
       },
       {
         "text": "banned",
-        "start_ms": 163923,
-        "end_ms": 164183
+        "start_ms": 158163,
+        "end_ms": 158423
       },
       {
         "text": "by",
-        "start_ms": 164183,
-        "end_ms": 164363
+        "start_ms": 158423,
+        "end_ms": 158603
       },
       {
         "text": "name.",
-        "start_ms": 164363,
-        "end_ms": 164783
+        "start_ms": 158603,
+        "end_ms": 159023
       },
       {
         "text": "In",
-        "start_ms": 165563,
-        "end_ms": 165843
+        "start_ms": 159803,
+        "end_ms": 160083
       },
       {
         "text": "2016",
-        "start_ms": 166133,
-        "end_ms": 166423
+        "start_ms": 160373,
+        "end_ms": 160663
       },
       {
         "text": "the",
-        "start_ms": 166423,
-        "end_ms": 166683
+        "start_ms": 160663,
+        "end_ms": 160923
       },
       {
         "text": "Attorney",
-        "start_ms": 166683,
-        "end_ms": 166883
+        "start_ms": 160923,
+        "end_ms": 161123
       },
       {
         "text": "General",
-        "start_ms": 166883,
-        "end_ms": 167203
+        "start_ms": 161123,
+        "end_ms": 161443
       },
       {
         "text": "issued",
-        "start_ms": 167203,
-        "end_ms": 167543
+        "start_ms": 161443,
+        "end_ms": 161783
       },
       {
         "text": "a",
-        "start_ms": 167543,
-        "end_ms": 167683
+        "start_ms": 161783,
+        "end_ms": 161923
       },
       {
         "text": "notice",
-        "start_ms": 167683,
-        "end_ms": 167983
+        "start_ms": 161923,
+        "end_ms": 162223
       },
       {
         "text": "that",
-        "start_ms": 167983,
-        "end_ms": 168483
+        "start_ms": 162223,
+        "end_ms": 162723
       },
       {
         "text": "told",
-        "start_ms": 168483,
-        "end_ms": 168643
+        "start_ms": 162723,
+        "end_ms": 162883
       },
       {
         "text": "owners",
-        "start_ms": 168643,
-        "end_ms": 169063
+        "start_ms": 162883,
+        "end_ms": 163303
       },
       {
         "text": "and",
-        "start_ms": 169063,
-        "end_ms": 169283
+        "start_ms": 163303,
+        "end_ms": 163523
       },
       {
         "text": "dealers",
-        "start_ms": 169283,
-        "end_ms": 169583
+        "start_ms": 163523,
+        "end_ms": 163823
       },
       {
         "text": "which",
-        "start_ms": 169583,
-        "end_ms": 169963
+        "start_ms": 163823,
+        "end_ms": 164203
       },
       {
         "text": "guns",
-        "start_ms": 169963,
-        "end_ms": 170243
+        "start_ms": 164203,
+        "end_ms": 164483
       },
       {
         "text": "counted",
-        "start_ms": 170243,
-        "end_ms": 170663
+        "start_ms": 164483,
+        "end_ms": 164903
       },
       {
         "text": "as",
-        "start_ms": 170663,
-        "end_ms": 170843
+        "start_ms": 164903,
+        "end_ms": 165083
       },
       {
         "text": "copies,",
-        "start_ms": 170843,
-        "end_ms": 171203
+        "start_ms": 165083,
+        "end_ms": 165443
       },
       {
         "text": "and",
-        "start_ms": 171203,
-        "end_ms": 171943
+        "start_ms": 165443,
+        "end_ms": 166183
       },
       {
         "text": "that",
-        "start_ms": 171943,
-        "end_ms": 172103
+        "start_ms": 166183,
+        "end_ms": 166343
       },
       {
         "text": "notice",
-        "start_ms": 172103,
-        "end_ms": 172403
+        "start_ms": 166343,
+        "end_ms": 166643
       },
       {
         "text": "functioned",
-        "start_ms": 172403,
-        "end_ms": 172943
+        "start_ms": 166643,
+        "end_ms": 167183
       },
       {
         "text": "as",
-        "start_ms": 172943,
-        "end_ms": 173043
+        "start_ms": 167183,
+        "end_ms": 167283
       },
       {
         "text": "the",
-        "start_ms": 173043,
-        "end_ms": 173163
+        "start_ms": 167283,
+        "end_ms": 167403
       },
       {
         "text": "line.",
-        "start_ms": 173163,
-        "end_ms": 173563
+        "start_ms": 167403,
+        "end_ms": 167803
       },
       {
         "text": "A",
-        "start_ms": 173563,
-        "end_ms": 174483
+        "start_ms": 167803,
+        "end_ms": 168723
       },
       {
         "text": "Ruger",
-        "start_ms": 174483,
-        "end_ms": 174763
+        "start_ms": 168723,
+        "end_ms": 169003
       },
       {
         "text": "Mini-14",
-        "start_ms": 175073,
-        "end_ms": 175383
+        "start_ms": 169313,
+        "end_ms": 169623
       },
       {
         "text": "fires",
-        "start_ms": 175383,
-        "end_ms": 175843
+        "start_ms": 169623,
+        "end_ms": 170083
       },
       {
         "text": "the",
-        "start_ms": 175843,
-        "end_ms": 176043
+        "start_ms": 170083,
+        "end_ms": 170283
       },
       {
         "text": "same",
-        "start_ms": 176043,
-        "end_ms": 176283
+        "start_ms": 170283,
+        "end_ms": 170523
       },
       {
         "text": "round,",
-        "start_ms": 176283,
-        "end_ms": 176703
+        "start_ms": 170523,
+        "end_ms": 170943
       },
       {
         "text": "and",
-        "start_ms": 176703,
-        "end_ms": 177543
+        "start_ms": 170943,
+        "end_ms": 171783
       },
       {
         "text": "the",
-        "start_ms": 177543,
-        "end_ms": 177643
+        "start_ms": 171783,
+        "end_ms": 171883
       },
       {
         "text": "Attorney",
-        "start_ms": 177643,
-        "end_ms": 177903
+        "start_ms": 171883,
+        "end_ms": 172143
       },
       {
         "text": "General",
-        "start_ms": 177903,
-        "end_ms": 178303
+        "start_ms": 172143,
+        "end_ms": 172543
       },
       {
         "text": "lists",
-        "start_ms": 178430,
-        "end_ms": 178556
+        "start_ms": 172670,
+        "end_ms": 172796
       },
       {
         "text": "it",
-        "start_ms": 178556,
-        "end_ms": 178683
+        "start_ms": 172796,
+        "end_ms": 172923
       },
       {
         "text": "as",
-        "start_ms": 178683,
-        "end_ms": 179003
+        "start_ms": 172923,
+        "end_ms": 173243
       },
       {
         "text": "a",
-        "start_ms": 179003,
-        "end_ms": 179083
+        "start_ms": 173243,
+        "end_ms": 173323
       },
       {
         "text": "gun",
-        "start_ms": 179083,
-        "end_ms": 179343
+        "start_ms": 173323,
+        "end_ms": 173583
       },
       {
         "text": "the",
-        "start_ms": 179343,
-        "end_ms": 179703
+        "start_ms": 173583,
+        "end_ms": 173943
       },
       {
         "text": "ban",
-        "start_ms": 179843,
-        "end_ms": 179983
+        "start_ms": 174083,
+        "end_ms": 174223
       },
       {
         "text": "leaves",
-        "start_ms": 179983,
-        "end_ms": 180303
+        "start_ms": 174223,
+        "end_ms": 174543
       },
       {
         "text": "open.",
-        "start_ms": 180303,
-        "end_ms": 180683
+        "start_ms": 174543,
+        "end_ms": 174923
       },
       {
         "text": "People",
-        "start_ms": 180683,
-        "end_ms": 181823
+        "start_ms": 174923,
+        "end_ms": 176063
       },
       {
         "text": "with",
-        "start_ms": 181823,
-        "end_ms": 182023
+        "start_ms": 176063,
+        "end_ms": 176263
       },
       {
         "text": "counsel",
-        "start_ms": 182183,
-        "end_ms": 182343
+        "start_ms": 176423,
+        "end_ms": 176583
       },
       {
         "text": "could",
-        "start_ms": 182343,
-        "end_ms": 182583
+        "start_ms": 176583,
+        "end_ms": 176823
       },
       {
         "text": "fight",
-        "start_ms": 182583,
-        "end_ms": 182843
+        "start_ms": 176823,
+        "end_ms": 177083
       },
       {
         "text": "a",
-        "start_ms": 182843,
-        "end_ms": 182923
+        "start_ms": 177083,
+        "end_ms": 177163
       },
       {
         "text": "classification.",
-        "start_ms": 182923,
-        "end_ms": 183443
+        "start_ms": 177163,
+        "end_ms": 177683
       },
       {
         "text": "People",
-        "start_ms": 184083,
-        "end_ms": 184263
+        "start_ms": 178323,
+        "end_ms": 178503
       },
       {
         "text": "without",
-        "start_ms": 184263,
-        "end_ms": 184583
+        "start_ms": 178503,
+        "end_ms": 178823
       },
       {
         "text": "counsel",
-        "start_ms": 184803,
-        "end_ms": 185023
+        "start_ms": 179043,
+        "end_ms": 179263
       },
       {
         "text": "lived",
-        "start_ms": 185023,
-        "end_ms": 185263
+        "start_ms": 179263,
+        "end_ms": 179503
       },
       {
         "text": "under",
-        "start_ms": 185263,
-        "end_ms": 185543
+        "start_ms": 179503,
+        "end_ms": 179783
       },
       {
         "text": "the",
-        "start_ms": 185543,
-        "end_ms": 185663
+        "start_ms": 179783,
+        "end_ms": 179903
       },
       {
         "text": "notice.",
-        "start_ms": 185663,
-        "end_ms": 185963
+        "start_ms": 179903,
+        "end_ms": 180203
       },
       {
         "text": "If",
-        "start_ms": 187003,
-        "end_ms": 187303
+        "start_ms": 181243,
+        "end_ms": 181543
       },
       {
         "text": "you",
-        "start_ms": 187303,
-        "end_ms": 187443
+        "start_ms": 181543,
+        "end_ms": 181683
       },
       {
         "text": "legally",
-        "start_ms": 187443,
-        "end_ms": 187703
+        "start_ms": 181683,
+        "end_ms": 181943
       },
       {
         "text": "held",
-        "start_ms": 187703,
-        "end_ms": 188163
+        "start_ms": 181943,
+        "end_ms": 182403
       },
       {
         "text": "one",
-        "start_ms": 188163,
-        "end_ms": 188443
+        "start_ms": 182403,
+        "end_ms": 182683
       },
       {
         "text": "of",
-        "start_ms": 188443,
-        "end_ms": 188543
+        "start_ms": 182683,
+        "end_ms": 182783
       },
       {
         "text": "these",
-        "start_ms": 188543,
-        "end_ms": 188683
+        "start_ms": 182783,
+        "end_ms": 182923
       },
       {
         "text": "rifles",
-        "start_ms": 188683,
-        "end_ms": 189023
+        "start_ms": 182923,
+        "end_ms": 183263
       },
       {
         "text": "on",
-        "start_ms": 189023,
-        "end_ms": 189343
+        "start_ms": 183263,
+        "end_ms": 183583
       },
       {
         "text": "August",
-        "start_ms": 189343,
-        "end_ms": 189603
+        "start_ms": 183583,
+        "end_ms": 183843
       },
       {
         "text": "1st,",
-        "start_ms": 189603,
-        "end_ms": 190223
+        "start_ms": 183843,
+        "end_ms": 184463
       },
       {
         "text": "2024,",
-        "start_ms": 190303,
-        "end_ms": 190783
+        "start_ms": 184543,
+        "end_ms": 185023
       },
       {
         "text": "you",
-        "start_ms": 191443,
-        "end_ms": 191523
+        "start_ms": 185683,
+        "end_ms": 185763
       },
       {
         "text": "can",
-        "start_ms": 191523,
-        "end_ms": 191643
+        "start_ms": 185763,
+        "end_ms": 185883
       },
       {
         "text": "register",
-        "start_ms": 191643,
-        "end_ms": 192003
+        "start_ms": 185883,
+        "end_ms": 186243
       },
       {
         "text": "it",
-        "start_ms": 192003,
-        "end_ms": 192223
+        "start_ms": 186243,
+        "end_ms": 186463
       },
       {
         "text": "and",
-        "start_ms": 192223,
-        "end_ms": 192363
+        "start_ms": 186463,
+        "end_ms": 186603
       },
       {
         "text": "keep",
-        "start_ms": 192363,
-        "end_ms": 192583
+        "start_ms": 186603,
+        "end_ms": 186823
       },
       {
         "text": "it.",
-        "start_ms": 192583,
-        "end_ms": 192743
+        "start_ms": 186823,
+        "end_ms": 186983
       },
       {
         "text": "Anyone",
-        "start_ms": 193383,
-        "end_ms": 193663
+        "start_ms": 187623,
+        "end_ms": 187903
       },
       {
         "text": "after",
-        "start_ms": 193663,
-        "end_ms": 194043
+        "start_ms": 187903,
+        "end_ms": 188283
       },
       {
         "text": "that",
-        "start_ms": 194043,
-        "end_ms": 194243
+        "start_ms": 188283,
+        "end_ms": 188483
       },
       {
         "text": "date",
-        "start_ms": 194243,
-        "end_ms": 194503
+        "start_ms": 188483,
+        "end_ms": 188743
       },
       {
         "text": "is",
-        "start_ms": 194503,
-        "end_ms": 194723
+        "start_ms": 188743,
+        "end_ms": 188963
       },
       {
         "text": "who",
-        "start_ms": 194723,
-        "end_ms": 194843
+        "start_ms": 188963,
+        "end_ms": 189083
       },
       {
         "text": "the",
-        "start_ms": 194843,
-        "end_ms": 194943
+        "start_ms": 189083,
+        "end_ms": 189183
       },
       {
         "text": "tightening",
-        "start_ms": 194943,
-        "end_ms": 195283
+        "start_ms": 189183,
+        "end_ms": 189523
       },
       {
         "text": "is",
-        "start_ms": 195283,
-        "end_ms": 195563
+        "start_ms": 189523,
+        "end_ms": 189803
       },
       {
         "text": "written",
-        "start_ms": 195563,
-        "end_ms": 195763
+        "start_ms": 189803,
+        "end_ms": 190003
       },
       {
         "text": "against.",
-        "start_ms": 195763,
-        "end_ms": 196063
+        "start_ms": 190003,
+        "end_ms": 190303
       }
     ],
     "5814f3374efbb843": [
       {
         "text": "The",
-        "start_ms": 196186,
-        "end_ms": 196246
+        "start_ms": 190426,
+        "end_ms": 190486
       },
       {
         "text": "parts",
-        "start_ms": 196246,
-        "end_ms": 196526
+        "start_ms": 190486,
+        "end_ms": 190766
       },
       {
         "text": "that",
-        "start_ms": 196526,
-        "end_ms": 196706
+        "start_ms": 190766,
+        "end_ms": 190946
       },
       {
         "text": "definition",
-        "start_ms": 196706,
-        "end_ms": 197166
+        "start_ms": 190946,
+        "end_ms": 191406
       },
       {
         "text": "still",
-        "start_ms": 197166,
-        "end_ms": 197566
+        "start_ms": 191406,
+        "end_ms": 191806
       },
       {
         "text": "targets,",
-        "start_ms": 197566,
-        "end_ms": 198006
+        "start_ms": 191806,
+        "end_ms": 192246
       },
       {
         "text": "an",
-        "start_ms": 198006,
-        "end_ms": 198426
+        "start_ms": 192246,
+        "end_ms": 192666
       },
       {
         "text": "adjustable",
-        "start_ms": 198426,
-        "end_ms": 198746
+        "start_ms": 192666,
+        "end_ms": 192986
       },
       {
         "text": "stock,",
-        "start_ms": 198746,
-        "end_ms": 199226
+        "start_ms": 192986,
+        "end_ms": 193466
       },
       {
         "text": "a",
-        "start_ms": 199226,
-        "end_ms": 199486
+        "start_ms": 193466,
+        "end_ms": 193726
       },
       {
         "text": "grip,",
-        "start_ms": 199486,
-        "end_ms": 199766
+        "start_ms": 193726,
+        "end_ms": 194006
       },
       {
         "text": "are",
-        "start_ms": 200126,
-        "end_ms": 200446
+        "start_ms": 194366,
+        "end_ms": 194686
       },
       {
         "text": "what",
-        "start_ms": 200446,
-        "end_ms": 200606
+        "start_ms": 194686,
+        "end_ms": 194846
       },
       {
         "text": "let",
-        "start_ms": 200606,
-        "end_ms": 200766
+        "start_ms": 194846,
+        "end_ms": 195006
       },
       {
         "text": "a",
-        "start_ms": 200766,
-        "end_ms": 200866
+        "start_ms": 195006,
+        "end_ms": 195106
       },
       {
         "text": "smaller",
-        "start_ms": 200866,
-        "end_ms": 201206
+        "start_ms": 195106,
+        "end_ms": 195446
       },
       {
         "text": "or",
-        "start_ms": 201206,
-        "end_ms": 201386
+        "start_ms": 195446,
+        "end_ms": 195626
       },
       {
         "text": "disabled",
-        "start_ms": 201386,
-        "end_ms": 201726
+        "start_ms": 195626,
+        "end_ms": 195966
       },
       {
         "text": "shooter",
-        "start_ms": 201726,
-        "end_ms": 202186
+        "start_ms": 195966,
+        "end_ms": 196426
       },
       {
         "text": "fit",
-        "start_ms": 202186,
-        "end_ms": 202686
+        "start_ms": 196426,
+        "end_ms": 196926
       },
       {
         "text": "and",
-        "start_ms": 202686,
-        "end_ms": 202906
+        "start_ms": 196926,
+        "end_ms": 197146
       },
       {
         "text": "control",
-        "start_ms": 202906,
-        "end_ms": 203286
+        "start_ms": 197146,
+        "end_ms": 197526
       },
       {
         "text": "a",
-        "start_ms": 203286,
-        "end_ms": 203386
+        "start_ms": 197526,
+        "end_ms": 197626
       },
       {
         "text": "rifle.",
-        "start_ms": 203386,
-        "end_ms": 203766
+        "start_ms": 197626,
+        "end_ms": 198006
       },
       {
         "text": "Tightening",
-        "start_ms": 204426,
-        "end_ms": 204746
+        "start_ms": 198666,
+        "end_ms": 198986
       },
       {
         "text": "them",
-        "start_ms": 204746,
-        "end_ms": 205006
+        "start_ms": 198986,
+        "end_ms": 199246
       },
       {
         "text": "lands",
-        "start_ms": 205006,
-        "end_ms": 205266
+        "start_ms": 199246,
+        "end_ms": 199506
       },
       {
         "text": "on",
-        "start_ms": 205266,
-        "end_ms": 205486
+        "start_ms": 199506,
+        "end_ms": 199726
       },
       {
         "text": "women",
-        "start_ms": 205486,
-        "end_ms": 205746
+        "start_ms": 199726,
+        "end_ms": 199986
       },
       {
         "text": "and",
-        "start_ms": 205746,
-        "end_ms": 206066
+        "start_ms": 199986,
+        "end_ms": 200306
       },
       {
         "text": "on",
-        "start_ms": 206066,
-        "end_ms": 206166
+        "start_ms": 200306,
+        "end_ms": 200406
       },
       {
         "text": "disabled",
-        "start_ms": 206166,
-        "end_ms": 206486
+        "start_ms": 200406,
+        "end_ms": 200726
       },
       {
         "text": "people",
-        "start_ms": 206486,
-        "end_ms": 206946
+        "start_ms": 200726,
+        "end_ms": 201186
       },
       {
         "text": "protecting",
-        "start_ms": 206946,
-        "end_ms": 207366
+        "start_ms": 201186,
+        "end_ms": 201606
       },
       {
         "text": "themselves.",
-        "start_ms": 207366,
-        "end_ms": 207966
+        "start_ms": 201606,
+        "end_ms": 202206
       },
       {
         "text": "He",
-        "start_ms": 208506,
-        "end_ms": 208826
+        "start_ms": 202746,
+        "end_ms": 203066
       },
       {
         "text": "is",
-        "start_ms": 208826,
-        "end_ms": 208926
+        "start_ms": 203066,
+        "end_ms": 203166
       },
       {
         "text": "describing",
-        "start_ms": 208926,
-        "end_ms": 209326
+        "start_ms": 203166,
+        "end_ms": 203566
       },
       {
         "text": "those",
-        "start_ms": 209326,
-        "end_ms": 209586
+        "start_ms": 203566,
+        "end_ms": 203826
       },
       {
         "text": "people",
-        "start_ms": 209586,
-        "end_ms": 209906
+        "start_ms": 203826,
+        "end_ms": 204146
       },
       {
         "text": "as",
-        "start_ms": 209906,
-        "end_ms": 210186
+        "start_ms": 204146,
+        "end_ms": 204426
       },
       {
         "text": "alcoholic",
-        "start_ms": 210186,
-        "end_ms": 210586
+        "start_ms": 204426,
+        "end_ms": 204826
       },
       {
         "text": "men",
-        "start_ms": 210586,
-        "end_ms": 211026
+        "start_ms": 204826,
+        "end_ms": 205266
       },
       {
         "text": "hiding",
-        "start_ms": 211026,
-        "end_ms": 211466
+        "start_ms": 205266,
+        "end_ms": 205706
       },
       {
         "text": "abuse",
-        "start_ms": 211466,
-        "end_ms": 211866
+        "start_ms": 205706,
+        "end_ms": 206106
       },
       {
         "text": "from",
-        "start_ms": 211866,
-        "end_ms": 212146
+        "start_ms": 206106,
+        "end_ms": 206386
       },
       {
         "text": "a",
-        "start_ms": 212146,
-        "end_ms": 212266
+        "start_ms": 206386,
+        "end_ms": 206506
       },
       {
         "text": "school.",
-        "start_ms": 212266,
-        "end_ms": 212506
+        "start_ms": 206506,
+        "end_ms": 206746
       }
     ],
     "077b55e6ef1bbf7f": [
       {
         "text": "He",
-        "start_ms": 227126,
-        "end_ms": 227186
+        "start_ms": 221366,
+        "end_ms": 221426
       },
       {
         "text": "calls",
-        "start_ms": 227186,
-        "end_ms": 227406
+        "start_ms": 221426,
+        "end_ms": 221646
       },
       {
         "text": "the",
-        "start_ms": 227406,
-        "end_ms": 227586
+        "start_ms": 221646,
+        "end_ms": 221826
       },
       {
         "text": "right",
-        "start_ms": 227586,
-        "end_ms": 227806
+        "start_ms": 221826,
+        "end_ms": 222046
       },
       {
         "text": "a",
-        "start_ms": 227806,
-        "end_ms": 227946
+        "start_ms": 222046,
+        "end_ms": 222186
       },
       {
         "text": "privilege,",
-        "start_ms": 227946,
-        "end_ms": 228346
+        "start_ms": 222186,
+        "end_ms": 222586
       },
       {
         "text": "billed",
-        "start_ms": 228676,
-        "end_ms": 229006
+        "start_ms": 222916,
+        "end_ms": 223246
       },
       {
         "text": "to",
-        "start_ms": 229006,
-        "end_ms": 229206
+        "start_ms": 223246,
+        "end_ms": 223446
       },
       {
         "text": "everyone",
-        "start_ms": 229206,
-        "end_ms": 229506
+        "start_ms": 223446,
+        "end_ms": 223746
       },
       {
         "text": "else's",
-        "start_ms": 229506,
-        "end_ms": 229906
+        "start_ms": 223746,
+        "end_ms": 224146
       },
       {
         "text": "safety.",
-        "start_ms": 229906,
-        "end_ms": 230206
+        "start_ms": 224146,
+        "end_ms": 224446
       }
     ],
     "7205f00a5f085108": [
       {
         "text": "The",
-        "start_ms": 230427,
-        "end_ms": 230507
+        "start_ms": 224667,
+        "end_ms": 224747
       },
       {
         "text": "right",
-        "start_ms": 230507,
-        "end_ms": 230687
+        "start_ms": 224747,
+        "end_ms": 224927
       },
       {
         "text": "to",
-        "start_ms": 230687,
-        "end_ms": 230867
+        "start_ms": 224927,
+        "end_ms": 225107
       },
       {
         "text": "defend",
-        "start_ms": 230867,
-        "end_ms": 231147
+        "start_ms": 225107,
+        "end_ms": 225387
       },
       {
         "text": "yourself",
-        "start_ms": 231147,
-        "end_ms": 231567
+        "start_ms": 225387,
+        "end_ms": 225807
       },
       {
         "text": "is",
-        "start_ms": 231567,
-        "end_ms": 231767
+        "start_ms": 225807,
+        "end_ms": 226007
       },
       {
         "text": "unalienable.",
-        "start_ms": 231767,
-        "end_ms": 232547
+        "start_ms": 226007,
+        "end_ms": 226787
       },
       {
         "text": "The",
-        "start_ms": 232547,
-        "end_ms": 233307
+        "start_ms": 226787,
+        "end_ms": 227547
       },
       {
         "text": "Declaration",
-        "start_ms": 233307,
-        "end_ms": 233707
+        "start_ms": 227547,
+        "end_ms": 227947
       },
       {
         "text": "uses",
-        "start_ms": 233707,
-        "end_ms": 234267
+        "start_ms": 227947,
+        "end_ms": 228507
       },
       {
         "text": "that",
-        "start_ms": 234267,
-        "end_ms": 234527
+        "start_ms": 228507,
+        "end_ms": 228767
       },
       {
         "text": "word.",
-        "start_ms": 234527,
-        "end_ms": 234807
+        "start_ms": 228767,
+        "end_ms": 229047
       },
       {
         "text": "It",
-        "start_ms": 234807,
-        "end_ms": 235327
+        "start_ms": 229047,
+        "end_ms": 229567
       },
       {
         "text": "belongs",
-        "start_ms": 235327,
-        "end_ms": 235607
+        "start_ms": 229567,
+        "end_ms": 229847
       },
       {
         "text": "to",
-        "start_ms": 235607,
-        "end_ms": 235847
+        "start_ms": 229847,
+        "end_ms": 230087
       },
       {
         "text": "a",
-        "start_ms": 235847,
-        "end_ms": 235947
+        "start_ms": 230087,
+        "end_ms": 230187
       },
       {
         "text": "person",
-        "start_ms": 235947,
-        "end_ms": 236267
+        "start_ms": 230187,
+        "end_ms": 230507
       },
       {
         "text": "before",
-        "start_ms": 236267,
-        "end_ms": 236587
+        "start_ms": 230507,
+        "end_ms": 230827
       },
       {
         "text": "any",
-        "start_ms": 236587,
-        "end_ms": 236947
+        "start_ms": 230827,
+        "end_ms": 231187
       },
       {
         "text": "government",
-        "start_ms": 236947,
-        "end_ms": 237307
+        "start_ms": 231187,
+        "end_ms": 231547
       },
       {
         "text": "recognizes",
-        "start_ms": 237307,
-        "end_ms": 237947
+        "start_ms": 231547,
+        "end_ms": 232187
       },
       {
         "text": "it.",
-        "start_ms": 237947,
-        "end_ms": 238367
+        "start_ms": 232187,
+        "end_ms": 232607
       },
       {
         "text": "Any",
-        "start_ms": 238367,
-        "end_ms": 238927
+        "start_ms": 232607,
+        "end_ms": 233167
       },
       {
         "text": "politics",
-        "start_ms": 238927,
-        "end_ms": 239327
+        "start_ms": 233167,
+        "end_ms": 233567
       },
       {
         "text": "that",
-        "start_ms": 239327,
-        "end_ms": 239587
+        "start_ms": 233567,
+        "end_ms": 233827
       },
       {
         "text": "takes",
-        "start_ms": 239587,
-        "end_ms": 239807
+        "start_ms": 233827,
+        "end_ms": 234047
       },
       {
         "text": "autonomy",
-        "start_ms": 239807,
-        "end_ms": 240227
+        "start_ms": 234047,
+        "end_ms": 234467
       },
       {
         "text": "seriously",
-        "start_ms": 240227,
-        "end_ms": 240687
+        "start_ms": 234467,
+        "end_ms": 234927
       },
       {
         "text": "inherits",
-        "start_ms": 240687,
-        "end_ms": 241367
+        "start_ms": 234927,
+        "end_ms": 235607
       },
       {
         "text": "the",
-        "start_ms": 241367,
-        "end_ms": 241507
+        "start_ms": 235607,
+        "end_ms": 235747
       },
       {
         "text": "right,",
-        "start_ms": 241507,
-        "end_ms": 241787
+        "start_ms": 235747,
+        "end_ms": 236027
       },
       {
         "text": "because",
-        "start_ms": 241787,
-        "end_ms": 242447
+        "start_ms": 236027,
+        "end_ms": 236687
       },
       {
         "text": "autonomy",
-        "start_ms": 242447,
-        "end_ms": 242887
+        "start_ms": 236687,
+        "end_ms": 237127
       },
       {
         "text": "someone",
-        "start_ms": 242887,
-        "end_ms": 243227
+        "start_ms": 237127,
+        "end_ms": 237467
       },
       {
         "text": "else",
-        "start_ms": 243227,
-        "end_ms": 243467
+        "start_ms": 237467,
+        "end_ms": 237707
       },
       {
         "text": "can",
-        "start_ms": 243467,
-        "end_ms": 243687
+        "start_ms": 237707,
+        "end_ms": 237927
       },
       {
         "text": "override",
-        "start_ms": 243687,
-        "end_ms": 244167
+        "start_ms": 237927,
+        "end_ms": 238407
       },
       {
         "text": "is",
-        "start_ms": 244167,
-        "end_ms": 244527
+        "start_ms": 238407,
+        "end_ms": 238767
       },
       {
         "text": "a",
-        "start_ms": 244527,
-        "end_ms": 244607
+        "start_ms": 238767,
+        "end_ms": 238847
       },
       {
         "text": "permission.",
-        "start_ms": 244607,
-        "end_ms": 244867
+        "start_ms": 238847,
+        "end_ms": 239107
       }
     ],
     "2688c25d92fa76cc": [
       {
         "text": "John",
-        "start_ms": 245230,
-        "end_ms": 245390
+        "start_ms": 239470,
+        "end_ms": 239630
       },
       {
         "text": "Locke",
-        "start_ms": 245500,
-        "end_ms": 245610
+        "start_ms": 239740,
+        "end_ms": 239850
       },
       {
         "text": "wrote",
-        "start_ms": 245610,
-        "end_ms": 245850
+        "start_ms": 239850,
+        "end_ms": 240090
       },
       {
         "text": "the",
-        "start_ms": 245850,
-        "end_ms": 246010
+        "start_ms": 240090,
+        "end_ms": 240250
       },
       {
         "text": "account",
-        "start_ms": 246010,
-        "end_ms": 246290
+        "start_ms": 240250,
+        "end_ms": 240530
       },
       {
         "text": "that",
-        "start_ms": 246290,
-        "end_ms": 246450
+        "start_ms": 240530,
+        "end_ms": 240690
       },
       {
         "text": "word",
-        "start_ms": 246450,
-        "end_ms": 246670
+        "start_ms": 240690,
+        "end_ms": 240910
       },
       {
         "text": "comes",
-        "start_ms": 246670,
-        "end_ms": 246950
+        "start_ms": 240910,
+        "end_ms": 241190
       },
       {
         "text": "from.",
-        "start_ms": 246950,
-        "end_ms": 247270
+        "start_ms": 241190,
+        "end_ms": 241510
       },
       {
         "text": "He",
-        "start_ms": 247980,
-        "end_ms": 248250
+        "start_ms": 242220,
+        "end_ms": 242490
       },
       {
         "text": "called",
-        "start_ms": 248250,
-        "end_ms": 248490
+        "start_ms": 242490,
+        "end_ms": 242730
       },
       {
         "text": "the",
-        "start_ms": 248490,
-        "end_ms": 248630
+        "start_ms": 242730,
+        "end_ms": 242870
       },
       {
         "text": "condition",
-        "start_ms": 248630,
-        "end_ms": 248970
+        "start_ms": 242870,
+        "end_ms": 243210
       },
       {
         "text": "before",
-        "start_ms": 248970,
-        "end_ms": 249250
+        "start_ms": 243210,
+        "end_ms": 243490
       },
       {
         "text": "government",
-        "start_ms": 249250,
-        "end_ms": 249690
+        "start_ms": 243490,
+        "end_ms": 243930
       },
       {
         "text": "the",
-        "start_ms": 249690,
-        "end_ms": 249950
+        "start_ms": 243930,
+        "end_ms": 244190
       },
       {
         "text": "state",
-        "start_ms": 249950,
-        "end_ms": 250150
+        "start_ms": 244190,
+        "end_ms": 244390
       },
       {
         "text": "of",
-        "start_ms": 250150,
-        "end_ms": 250250
+        "start_ms": 244390,
+        "end_ms": 244490
       },
       {
         "text": "nature.",
-        "start_ms": 250250,
-        "end_ms": 250530
+        "start_ms": 244490,
+        "end_ms": 244770
       },
       {
         "text": "In",
-        "start_ms": 251040,
-        "end_ms": 251310
+        "start_ms": 245280,
+        "end_ms": 245550
       },
       {
         "text": "it,",
-        "start_ms": 251310,
-        "end_ms": 251510
+        "start_ms": 245550,
+        "end_ms": 245750
       },
       {
         "text": "a",
-        "start_ms": 251510,
-        "end_ms": 251870
+        "start_ms": 245750,
+        "end_ms": 246110
       },
       {
         "text": "person",
-        "start_ms": 251870,
-        "end_ms": 252170
+        "start_ms": 246110,
+        "end_ms": 246410
       },
       {
         "text": "has",
-        "start_ms": 252170,
-        "end_ms": 252450
+        "start_ms": 246410,
+        "end_ms": 246690
       },
       {
         "text": "the",
-        "start_ms": 252450,
-        "end_ms": 252610
+        "start_ms": 246690,
+        "end_ms": 246850
       },
       {
         "text": "liberty",
-        "start_ms": 252610,
-        "end_ms": 252850
+        "start_ms": 246850,
+        "end_ms": 247090
       },
       {
         "text": "to",
-        "start_ms": 252850,
-        "end_ms": 253110
+        "start_ms": 247090,
+        "end_ms": 247350
       },
       {
         "text": "defend",
-        "start_ms": 253110,
-        "end_ms": 253410
+        "start_ms": 247350,
+        "end_ms": 247650
       },
       {
         "text": "their",
-        "start_ms": 253410,
-        "end_ms": 253630
+        "start_ms": 247650,
+        "end_ms": 247870
       },
       {
         "text": "right,",
-        "start_ms": 253630,
-        "end_ms": 253970
+        "start_ms": 247870,
+        "end_ms": 248210
       },
       {
         "text": "and",
-        "start_ms": 254640,
-        "end_ms": 254910
+        "start_ms": 248880,
+        "end_ms": 249150
       },
       {
         "text": "the",
-        "start_ms": 254910,
-        "end_ms": 255010
+        "start_ms": 249150,
+        "end_ms": 249250
       },
       {
         "text": "power",
-        "start_ms": 255010,
-        "end_ms": 255170
+        "start_ms": 249250,
+        "end_ms": 249410
       },
       {
         "text": "to",
-        "start_ms": 255170,
-        "end_ms": 255290
+        "start_ms": 249410,
+        "end_ms": 249530
       },
       {
         "text": "maintain",
-        "start_ms": 255290,
-        "end_ms": 255730
+        "start_ms": 249530,
+        "end_ms": 249970
       },
       {
         "text": "it",
-        "start_ms": 255730,
-        "end_ms": 255990
+        "start_ms": 249970,
+        "end_ms": 250230
       },
       {
         "text": "on",
-        "start_ms": 255990,
-        "end_ms": 256170
+        "start_ms": 250230,
+        "end_ms": 250410
       },
       {
         "text": "equal",
-        "start_ms": 256170,
-        "end_ms": 256490
+        "start_ms": 250410,
+        "end_ms": 250730
       },
       {
         "text": "terms",
-        "start_ms": 256490,
-        "end_ms": 256890
+        "start_ms": 250730,
+        "end_ms": 251130
       },
       {
         "text": "with",
-        "start_ms": 256890,
-        "end_ms": 257150
+        "start_ms": 251130,
+        "end_ms": 251390
       },
       {
         "text": "whoever",
-        "start_ms": 257150,
-        "end_ms": 257410
+        "start_ms": 251390,
+        "end_ms": 251650
       },
       {
         "text": "comes",
-        "start_ms": 257410,
-        "end_ms": 257730
+        "start_ms": 251650,
+        "end_ms": 251970
       },
       {
         "text": "against",
-        "start_ms": 257730,
-        "end_ms": 258010
+        "start_ms": 251970,
+        "end_ms": 252250
       },
       {
         "text": "them.",
-        "start_ms": 258010,
-        "end_ms": 258370
+        "start_ms": 252250,
+        "end_ms": 252610
       },
       {
         "text": "Defending",
-        "start_ms": 259020,
-        "end_ms": 259290
+        "start_ms": 253260,
+        "end_ms": 253530
       },
       {
         "text": "the",
-        "start_ms": 259290,
-        "end_ms": 259490
+        "start_ms": 253530,
+        "end_ms": 253730
       },
       {
         "text": "life",
-        "start_ms": 259490,
-        "end_ms": 259770
+        "start_ms": 253730,
+        "end_ms": 254010
       },
       {
         "text": "is",
-        "start_ms": 259770,
-        "end_ms": 259950
+        "start_ms": 254010,
+        "end_ms": 254190
       },
       {
         "text": "part",
-        "start_ms": 259950,
-        "end_ms": 260150
+        "start_ms": 254190,
+        "end_ms": 254390
       },
       {
         "text": "of",
-        "start_ms": 260150,
-        "end_ms": 260250
+        "start_ms": 254390,
+        "end_ms": 254490
       },
       {
         "text": "having",
-        "start_ms": 260250,
-        "end_ms": 260470
+        "start_ms": 254490,
+        "end_ms": 254710
       },
       {
         "text": "the",
-        "start_ms": 260470,
-        "end_ms": 260630
+        "start_ms": 254710,
+        "end_ms": 254870
       },
       {
         "text": "life.",
-        "start_ms": 260630,
-        "end_ms": 260950
+        "start_ms": 254870,
+        "end_ms": 255190
       },
       {
         "text": "other",
-        "start_ms": 261460,
-        "end_ms": 261730
+        "start_ms": 255700,
+        "end_ms": 255970
       },
       {
         "text": "animals",
-        "start_ms": 261730,
-        "end_ms": 262090
+        "start_ms": 255970,
+        "end_ms": 256330
       },
       {
         "text": "carry",
-        "start_ms": 262090,
-        "end_ms": 262450
+        "start_ms": 256330,
+        "end_ms": 256690
       },
       {
         "text": "that",
-        "start_ms": 262450,
-        "end_ms": 262650
+        "start_ms": 256690,
+        "end_ms": 256890
       },
       {
         "text": "same",
-        "start_ms": 262650,
-        "end_ms": 262870
+        "start_ms": 256890,
+        "end_ms": 257110
       },
       {
         "text": "charge,",
-        "start_ms": 262870,
-        "end_ms": 263230
+        "start_ms": 257110,
+        "end_ms": 257470
       },
       {
         "text": "in",
-        "start_ms": 263230,
-        "end_ms": 263630
+        "start_ms": 257470,
+        "end_ms": 257870
       },
       {
         "text": "teeth,",
-        "start_ms": 263630,
-        "end_ms": 263930
+        "start_ms": 257870,
+        "end_ms": 258170
       },
       {
         "text": "in",
-        "start_ms": 263930,
-        "end_ms": 264190
+        "start_ms": 258170,
+        "end_ms": 258430
       },
       {
         "text": "speed,",
-        "start_ms": 264190,
-        "end_ms": 264530
+        "start_ms": 258430,
+        "end_ms": 258770
       },
       {
         "text": "in",
-        "start_ms": 264530,
-        "end_ms": 264810
+        "start_ms": 258770,
+        "end_ms": 259050
       },
       {
         "text": "venom,",
-        "start_ms": 264810,
-        "end_ms": 265070
+        "start_ms": 259050,
+        "end_ms": 259310
       },
       {
         "text": "in",
-        "start_ms": 265070,
-        "end_ms": 265350
+        "start_ms": 259310,
+        "end_ms": 259590
       },
       {
         "text": "the",
-        "start_ms": 265350,
-        "end_ms": 265450
+        "start_ms": 259590,
+        "end_ms": 259690
       },
       {
         "text": "herd.",
-        "start_ms": 265450,
-        "end_ms": 265750
+        "start_ms": 259690,
+        "end_ms": 259990
       },
       {
         "text": "Human",
-        "start_ms": 266450,
-        "end_ms": 266990
+        "start_ms": 260690,
+        "end_ms": 261230
       },
       {
         "text": "beings",
-        "start_ms": 266990,
-        "end_ms": 267310
+        "start_ms": 261230,
+        "end_ms": 261550
       },
       {
         "text": "built",
-        "start_ms": 267310,
-        "end_ms": 267590
+        "start_ms": 261550,
+        "end_ms": 261830
       },
       {
         "text": "the",
-        "start_ms": 267590,
-        "end_ms": 267750
+        "start_ms": 261830,
+        "end_ms": 261990
       },
       {
         "text": "firearm.",
-        "start_ms": 267750,
-        "end_ms": 268110
+        "start_ms": 261990,
+        "end_ms": 262350
       },
       {
         "text": "It",
-        "start_ms": 268580,
-        "end_ms": 268850
+        "start_ms": 262820,
+        "end_ms": 263090
       },
       {
         "text": "is",
-        "start_ms": 268850,
-        "end_ms": 268950
+        "start_ms": 263090,
+        "end_ms": 263190
       },
       {
         "text": "the",
-        "start_ms": 268950,
-        "end_ms": 269050
+        "start_ms": 263190,
+        "end_ms": 263290
       },
       {
         "text": "most",
-        "start_ms": 269050,
-        "end_ms": 269230
+        "start_ms": 263290,
+        "end_ms": 263470
       },
       {
         "text": "effective",
-        "start_ms": 269230,
-        "end_ms": 269590
+        "start_ms": 263470,
+        "end_ms": 263830
       },
       {
         "text": "tool",
-        "start_ms": 269590,
-        "end_ms": 269990
+        "start_ms": 263830,
+        "end_ms": 264230
       },
       {
         "text": "we",
-        "start_ms": 269990,
-        "end_ms": 270150
+        "start_ms": 264230,
+        "end_ms": 264390
       },
       {
         "text": "have",
-        "start_ms": 270150,
-        "end_ms": 270270
+        "start_ms": 264390,
+        "end_ms": 264510
       },
       {
         "text": "made",
-        "start_ms": 270270,
-        "end_ms": 270470
+        "start_ms": 264510,
+        "end_ms": 264710
       },
       {
         "text": "for",
-        "start_ms": 270470,
-        "end_ms": 270710
+        "start_ms": 264710,
+        "end_ms": 264950
       },
       {
         "text": "it.",
-        "start_ms": 270710,
-        "end_ms": 270990
+        "start_ms": 264950,
+        "end_ms": 265230
       },
       {
         "text": "A",
-        "start_ms": 270990,
-        "end_ms": 271670
+        "start_ms": 265230,
+        "end_ms": 265910
       },
       {
         "text": "government",
-        "start_ms": 271670,
-        "end_ms": 271990
+        "start_ms": 265910,
+        "end_ms": 266230
       },
       {
         "text": "that",
-        "start_ms": 271990,
-        "end_ms": 272350
+        "start_ms": 266230,
+        "end_ms": 266590
       },
       {
         "text": "disarms",
-        "start_ms": 272350,
-        "end_ms": 272850
+        "start_ms": 266590,
+        "end_ms": 267090
       },
       {
         "text": "the",
-        "start_ms": 272850,
-        "end_ms": 273050
+        "start_ms": 267090,
+        "end_ms": 267290
       },
       {
         "text": "people",
-        "start_ms": 273050,
-        "end_ms": 273330
+        "start_ms": 267290,
+        "end_ms": 267570
       },
       {
         "text": "and",
-        "start_ms": 273330,
-        "end_ms": 273610
+        "start_ms": 267570,
+        "end_ms": 267850
       },
       {
         "text": "arms",
-        "start_ms": 273610,
-        "end_ms": 273870
+        "start_ms": 267850,
+        "end_ms": 268110
       },
       {
         "text": "itself",
-        "start_ms": 273870,
-        "end_ms": 274310
+        "start_ms": 268110,
+        "end_ms": 268550
       },
       {
         "text": "puts",
-        "start_ms": 274310,
-        "end_ms": 274850
+        "start_ms": 268550,
+        "end_ms": 269090
       },
       {
         "text": "them",
-        "start_ms": 274850,
-        "end_ms": 275070
+        "start_ms": 269090,
+        "end_ms": 269310
       },
       {
         "text": "in",
-        "start_ms": 275070,
-        "end_ms": 275190
+        "start_ms": 269310,
+        "end_ms": 269430
       },
       {
         "text": "a",
-        "start_ms": 275190,
-        "end_ms": 275270
+        "start_ms": 269430,
+        "end_ms": 269510
       },
       {
         "text": "worse",
-        "start_ms": 275270,
-        "end_ms": 275490
+        "start_ms": 269510,
+        "end_ms": 269730
       },
       {
         "text": "condition",
-        "start_ms": 275490,
-        "end_ms": 275990
+        "start_ms": 269730,
+        "end_ms": 270230
       },
       {
         "text": "than",
-        "start_ms": 275990,
-        "end_ms": 276190
+        "start_ms": 270230,
+        "end_ms": 270430
       },
       {
         "text": "the",
-        "start_ms": 276190,
-        "end_ms": 276310
+        "start_ms": 270430,
+        "end_ms": 270550
       },
       {
         "text": "state",
-        "start_ms": 276310,
-        "end_ms": 276510
+        "start_ms": 270550,
+        "end_ms": 270750
       },
       {
         "text": "of",
-        "start_ms": 276510,
-        "end_ms": 276610
+        "start_ms": 270750,
+        "end_ms": 270850
       },
       {
         "text": "nature.",
-        "start_ms": 276610,
-        "end_ms": 276950
+        "start_ms": 270850,
+        "end_ms": 271190
       },
       {
         "text": "Hand",
-        "start_ms": 277690,
-        "end_ms": 278110
+        "start_ms": 271930,
+        "end_ms": 272350
       },
       {
         "text": "the",
-        "start_ms": 278110,
-        "end_ms": 278250
+        "start_ms": 272350,
+        "end_ms": 272490
       },
       {
         "text": "force",
-        "start_ms": 278250,
-        "end_ms": 278450
+        "start_ms": 272490,
+        "end_ms": 272690
       },
       {
         "text": "to",
-        "start_ms": 278450,
-        "end_ms": 278630
+        "start_ms": 272690,
+        "end_ms": 272870
       },
       {
         "text": "the",
-        "start_ms": 278630,
-        "end_ms": 278730
+        "start_ms": 272870,
+        "end_ms": 272970
       },
       {
         "text": "legislator,",
-        "start_ms": 278730,
-        "end_ms": 279310
+        "start_ms": 272970,
+        "end_ms": 273550
       },
       {
         "text": "and",
-        "start_ms": 279310,
-        "end_ms": 280070
+        "start_ms": 273550,
+        "end_ms": 274310
       },
       {
         "text": "he",
-        "start_ms": 280070,
-        "end_ms": 280170
+        "start_ms": 274310,
+        "end_ms": 274410
       },
       {
         "text": "can",
-        "start_ms": 280170,
-        "end_ms": 280310
+        "start_ms": 274410,
+        "end_ms": 274550
       },
       {
         "text": "make",
-        "start_ms": 280310,
-        "end_ms": 280510
+        "start_ms": 274550,
+        "end_ms": 274750
       },
       {
         "text": "a",
-        "start_ms": 280510,
-        "end_ms": 280630
+        "start_ms": 274750,
+        "end_ms": 274870
       },
       {
         "text": "prey",
-        "start_ms": 280740,
-        "end_ms": 280850
+        "start_ms": 274980,
+        "end_ms": 275090
       },
       {
         "text": "of",
-        "start_ms": 280850,
-        "end_ms": 281010
+        "start_ms": 275090,
+        "end_ms": 275250
       },
       {
         "text": "them",
-        "start_ms": 281010,
-        "end_ms": 281210
+        "start_ms": 275250,
+        "end_ms": 275450
       },
       {
         "text": "when",
-        "start_ms": 281210,
-        "end_ms": 281410
+        "start_ms": 275450,
+        "end_ms": 275650
       },
       {
         "text": "he",
-        "start_ms": 281410,
-        "end_ms": 281530
+        "start_ms": 275650,
+        "end_ms": 275770
       },
       {
         "text": "pleases.",
-        "start_ms": 281530,
-        "end_ms": 281750
+        "start_ms": 275770,
+        "end_ms": 275990
       }
     ],
     "a6dd8735def362a8": [
       {
         "text": "That",
-        "start_ms": 282350,
-        "end_ms": 282470
+        "start_ms": 276590,
+        "end_ms": 276710
       },
       {
         "text": "asymmetry",
-        "start_ms": 282470,
-        "end_ms": 283070
+        "start_ms": 276710,
+        "end_ms": 277310
       },
       {
         "text": "is",
-        "start_ms": 283070,
-        "end_ms": 283390
+        "start_ms": 277310,
+        "end_ms": 277630
       },
       {
         "text": "part",
-        "start_ms": 283390,
-        "end_ms": 283650
+        "start_ms": 277630,
+        "end_ms": 277890
       },
       {
         "text": "of",
-        "start_ms": 283650,
-        "end_ms": 283810
+        "start_ms": 277890,
+        "end_ms": 278050
       },
       {
         "text": "why",
-        "start_ms": 283810,
-        "end_ms": 284010
+        "start_ms": 278050,
+        "end_ms": 278250
       },
       {
         "text": "so",
-        "start_ms": 284010,
-        "end_ms": 284230
+        "start_ms": 278250,
+        "end_ms": 278470
       },
       {
         "text": "many",
-        "start_ms": 284230,
-        "end_ms": 284410
+        "start_ms": 278470,
+        "end_ms": 278650
       },
       {
         "text": "Black",
-        "start_ms": 284410,
-        "end_ms": 284670
+        "start_ms": 278650,
+        "end_ms": 278910
       },
       {
         "text": "people",
-        "start_ms": 284670,
-        "end_ms": 285010
+        "start_ms": 278910,
+        "end_ms": 279250
       },
       {
         "text": "are",
-        "start_ms": 285010,
-        "end_ms": 285250
+        "start_ms": 279250,
+        "end_ms": 279490
       },
       {
         "text": "on",
-        "start_ms": 285250,
-        "end_ms": 285410
+        "start_ms": 279490,
+        "end_ms": 279650
       },
       {
         "text": "this",
-        "start_ms": 285410,
-        "end_ms": 285610
+        "start_ms": 279650,
+        "end_ms": 279850
       },
       {
         "text": "side",
-        "start_ms": 285610,
-        "end_ms": 285790
+        "start_ms": 279850,
+        "end_ms": 280030
       },
       {
         "text": "of",
-        "start_ms": 285790,
-        "end_ms": 285870
+        "start_ms": 280030,
+        "end_ms": 280110
       },
       {
         "text": "the",
-        "start_ms": 285870,
-        "end_ms": 285970
+        "start_ms": 280110,
+        "end_ms": 280210
       },
       {
         "text": "Atlantic.",
-        "start_ms": 285970,
-        "end_ms": 286490
+        "start_ms": 280210,
+        "end_ms": 280730
       },
       {
         "text": "European",
-        "start_ms": 286490,
-        "end_ms": 287530
+        "start_ms": 280730,
+        "end_ms": 281770
       },
       {
         "text": "traders",
-        "start_ms": 287530,
-        "end_ms": 287910
+        "start_ms": 281770,
+        "end_ms": 282150
       },
       {
         "text": "sold",
-        "start_ms": 287910,
-        "end_ms": 288230
+        "start_ms": 282150,
+        "end_ms": 282470
       },
       {
         "text": "firearms",
-        "start_ms": 288230,
-        "end_ms": 288730
+        "start_ms": 282470,
+        "end_ms": 282970
       },
       {
         "text": "to",
-        "start_ms": 288730,
-        "end_ms": 288970
+        "start_ms": 282970,
+        "end_ms": 283210
       },
       {
         "text": "coastal",
-        "start_ms": 288970,
-        "end_ms": 289270
+        "start_ms": 283210,
+        "end_ms": 283510
       },
       {
         "text": "African",
-        "start_ms": 289270,
-        "end_ms": 289750
+        "start_ms": 283510,
+        "end_ms": 283990
       },
       {
         "text": "kingdoms,",
-        "start_ms": 289750,
-        "end_ms": 290110
+        "start_ms": 283990,
+        "end_ms": 284350
       },
       {
         "text": "and",
-        "start_ms": 290690,
-        "end_ms": 290970
+        "start_ms": 284930,
+        "end_ms": 285210
       },
       {
         "text": "the",
-        "start_ms": 290970,
-        "end_ms": 291090
+        "start_ms": 285210,
+        "end_ms": 285330
       },
       {
         "text": "price",
-        "start_ms": 291090,
-        "end_ms": 291410
+        "start_ms": 285330,
+        "end_ms": 285650
       },
       {
         "text": "they",
-        "start_ms": 291410,
-        "end_ms": 291590
+        "start_ms": 285650,
+        "end_ms": 285830
       },
       {
         "text": "took",
-        "start_ms": 291590,
-        "end_ms": 291830
+        "start_ms": 285830,
+        "end_ms": 286070
       },
       {
         "text": "was",
-        "start_ms": 291830,
-        "end_ms": 292030
+        "start_ms": 286070,
+        "end_ms": 286270
       },
       {
         "text": "enslaved",
-        "start_ms": 292030,
-        "end_ms": 292390
+        "start_ms": 286270,
+        "end_ms": 286630
       },
       {
         "text": "people.",
-        "start_ms": 292390,
-        "end_ms": 292810
+        "start_ms": 286630,
+        "end_ms": 287050
       },
       {
         "text": "A",
-        "start_ms": 293330,
-        "end_ms": 293610
+        "start_ms": 287570,
+        "end_ms": 287850
       },
       {
         "text": "kingdom",
-        "start_ms": 293610,
-        "end_ms": 293850
+        "start_ms": 287850,
+        "end_ms": 288090
       },
       {
         "text": "without",
-        "start_ms": 293850,
-        "end_ms": 294150
+        "start_ms": 288090,
+        "end_ms": 288390
       },
       {
         "text": "the",
-        "start_ms": 294150,
-        "end_ms": 294390
+        "start_ms": 288390,
+        "end_ms": 288630
       },
       {
         "text": "guns",
-        "start_ms": 294390,
-        "end_ms": 294710
+        "start_ms": 288630,
+        "end_ms": 288950
       },
       {
         "text": "became",
-        "start_ms": 294710,
-        "end_ms": 295090
+        "start_ms": 288950,
+        "end_ms": 289330
       },
       {
         "text": "the",
-        "start_ms": 295090,
-        "end_ms": 295310
+        "start_ms": 289330,
+        "end_ms": 289550
       },
       {
         "text": "next",
-        "start_ms": 295310,
-        "end_ms": 295470
+        "start_ms": 289550,
+        "end_ms": 289710
       },
       {
         "text": "supply.",
-        "start_ms": 295470,
-        "end_ms": 295890
+        "start_ms": 289710,
+        "end_ms": 290130
       },
       {
         "text": "The",
-        "start_ms": 296430,
-        "end_ms": 296710
+        "start_ms": 290670,
+        "end_ms": 290950
       },
       {
         "text": "planters",
-        "start_ms": 296710,
-        "end_ms": 297090
+        "start_ms": 290950,
+        "end_ms": 291330
       },
       {
         "text": "here",
-        "start_ms": 297090,
-        "end_ms": 297410
+        "start_ms": 291330,
+        "end_ms": 291650
       },
       {
         "text": "held",
-        "start_ms": 297410,
-        "end_ms": 297770
+        "start_ms": 291650,
+        "end_ms": 292010
       },
       {
         "text": "the",
-        "start_ms": 297770,
-        "end_ms": 297950
+        "start_ms": 292010,
+        "end_ms": 292190
       },
       {
         "text": "enslaved",
-        "start_ms": 297950,
-        "end_ms": 298270
+        "start_ms": 292190,
+        "end_ms": 292510
       },
       {
         "text": "population",
-        "start_ms": 298270,
-        "end_ms": 298930
+        "start_ms": 292510,
+        "end_ms": 293170
       },
       {
         "text": "with",
-        "start_ms": 298930,
-        "end_ms": 299190
+        "start_ms": 293170,
+        "end_ms": 293430
       },
       {
         "text": "that",
-        "start_ms": 299190,
-        "end_ms": 299350
+        "start_ms": 293430,
+        "end_ms": 293590
       },
       {
         "text": "same",
-        "start_ms": 299350,
-        "end_ms": 299670
+        "start_ms": 293590,
+        "end_ms": 293910
       },
       {
         "text": "gap",
-        "start_ms": 299670,
-        "end_ms": 299930
+        "start_ms": 293910,
+        "end_ms": 294170
       },
       {
         "text": "in",
-        "start_ms": 299930,
-        "end_ms": 300130
+        "start_ms": 294170,
+        "end_ms": 294370
       },
       {
         "text": "force.",
-        "start_ms": 300130,
-        "end_ms": 300410
+        "start_ms": 294370,
+        "end_ms": 294650
       }
     ],
     "c3633a567d1b89c4": [
       {
         "text": "The",
-        "start_ms": 300589,
-        "end_ms": 300669
+        "start_ms": 294829,
+        "end_ms": 294909
       },
       {
         "text": "guns",
-        "start_ms": 300669,
-        "end_ms": 300869
+        "start_ms": 294909,
+        "end_ms": 295109
       },
       {
         "text": "went",
-        "start_ms": 300869,
-        "end_ms": 301069
+        "start_ms": 295109,
+        "end_ms": 295309
       },
       {
         "text": "to",
-        "start_ms": 301069,
-        "end_ms": 301189
+        "start_ms": 295309,
+        "end_ms": 295429
       },
       {
         "text": "the",
-        "start_ms": 301189,
-        "end_ms": 301289
+        "start_ms": 295429,
+        "end_ms": 295529
       },
       {
         "text": "White",
-        "start_ms": 301289,
-        "end_ms": 301449
+        "start_ms": 295529,
+        "end_ms": 295689
       },
       {
         "text": "buffer",
-        "start_ms": 301449,
-        "end_ms": 301729
+        "start_ms": 295689,
+        "end_ms": 295969
       },
       {
         "text": "class,",
-        "start_ms": 301729,
-        "end_ms": 302149
+        "start_ms": 295969,
+        "end_ms": 296389
       },
       {
         "text": "as",
-        "start_ms": 302149,
-        "end_ms": 302409
+        "start_ms": 296389,
+        "end_ms": 296649
       },
       {
         "text": "a",
-        "start_ms": 302409,
-        "end_ms": 302489
+        "start_ms": 296649,
+        "end_ms": 296729
       },
       {
         "text": "wage.",
-        "start_ms": 302489,
-        "end_ms": 302789
+        "start_ms": 296729,
+        "end_ms": 297029
       },
       {
         "text": "In",
-        "start_ms": 303509,
-        "end_ms": 303749
+        "start_ms": 297749,
+        "end_ms": 297989
       },
       {
         "text": "the",
-        "start_ms": 303749,
-        "end_ms": 303869
+        "start_ms": 297989,
+        "end_ms": 298109
       },
       {
         "text": "Southern",
-        "start_ms": 303869,
-        "end_ms": 304089
+        "start_ms": 298109,
+        "end_ms": 298329
       },
       {
         "text": "states",
-        "start_ms": 304089,
-        "end_ms": 304469
+        "start_ms": 298329,
+        "end_ms": 298709
       },
       {
         "text": "the",
-        "start_ms": 304469,
-        "end_ms": 304709
+        "start_ms": 298709,
+        "end_ms": 298949
       },
       {
         "text": "militias",
-        "start_ms": 304709,
-        "end_ms": 305089
+        "start_ms": 298949,
+        "end_ms": 299329
       },
       {
         "text": "that",
-        "start_ms": 305089,
-        "end_ms": 305229
+        "start_ms": 299329,
+        "end_ms": 299469
       },
       {
         "text": "received",
-        "start_ms": 305229,
-        "end_ms": 305549
+        "start_ms": 299469,
+        "end_ms": 299789
       },
       {
         "text": "them",
-        "start_ms": 305549,
-        "end_ms": 305829
+        "start_ms": 299789,
+        "end_ms": 300069
       },
       {
         "text": "were",
-        "start_ms": 305899,
-        "end_ms": 305969
+        "start_ms": 300139,
+        "end_ms": 300209
       },
       {
         "text": "the",
-        "start_ms": 305969,
-        "end_ms": 306089
+        "start_ms": 300209,
+        "end_ms": 300329
       },
       {
         "text": "slave",
-        "start_ms": 306089,
-        "end_ms": 306349
+        "start_ms": 300329,
+        "end_ms": 300589
       },
       {
         "text": "patrols.",
-        "start_ms": 306349,
-        "end_ms": 307049
+        "start_ms": 300589,
+        "end_ms": 301289
       },
       {
         "text": "The",
-        "start_ms": 307569,
-        "end_ms": 307809
+        "start_ms": 301809,
+        "end_ms": 302049
       },
       {
         "text": "deal",
-        "start_ms": 307809,
-        "end_ms": 308029
+        "start_ms": 302049,
+        "end_ms": 302269
       },
       {
         "text": "was",
-        "start_ms": 308029,
-        "end_ms": 308189
+        "start_ms": 302269,
+        "end_ms": 302429
       },
       {
         "text": "parity",
-        "start_ms": 308189,
-        "end_ms": 308529
+        "start_ms": 302429,
+        "end_ms": 302769
       },
       {
         "text": "for",
-        "start_ms": 308529,
-        "end_ms": 308789
+        "start_ms": 302769,
+        "end_ms": 303029
       },
       {
         "text": "the",
-        "start_ms": 308789,
-        "end_ms": 308889
+        "start_ms": 303029,
+        "end_ms": 303129
       },
       {
         "text": "white",
-        "start_ms": 308889,
-        "end_ms": 309069
+        "start_ms": 303129,
+        "end_ms": 303309
       },
       {
         "text": "men",
-        "start_ms": 309069,
-        "end_ms": 309349
+        "start_ms": 303309,
+        "end_ms": 303589
       },
       {
         "text": "who",
-        "start_ms": 309349,
-        "end_ms": 309529
+        "start_ms": 303589,
+        "end_ms": 303769
       },
       {
         "text": "policed",
-        "start_ms": 309699,
-        "end_ms": 309869
+        "start_ms": 303939,
+        "end_ms": 304109
       },
       {
         "text": "the",
-        "start_ms": 309869,
-        "end_ms": 310049
+        "start_ms": 304109,
+        "end_ms": 304289
       },
       {
         "text": "boundary,",
-        "start_ms": 310049,
-        "end_ms": 310389
+        "start_ms": 304289,
+        "end_ms": 304629
       },
       {
         "text": "and",
-        "start_ms": 310969,
-        "end_ms": 311449
+        "start_ms": 305209,
+        "end_ms": 305689
       },
       {
         "text": "the",
-        "start_ms": 311449,
-        "end_ms": 311529
+        "start_ms": 305689,
+        "end_ms": 305769
       },
       {
         "text": "proof",
-        "start_ms": 311529,
-        "end_ms": 311769
+        "start_ms": 305769,
+        "end_ms": 306009
       },
       {
         "text": "that",
-        "start_ms": 311769,
-        "end_ms": 311989
+        "start_ms": 306009,
+        "end_ms": 306229
       },
       {
         "text": "the",
-        "start_ms": 311989,
-        "end_ms": 312069
+        "start_ms": 306229,
+        "end_ms": 306309
       },
       {
         "text": "boundary",
-        "start_ms": 312069,
-        "end_ms": 312369
+        "start_ms": 306309,
+        "end_ms": 306609
       },
       {
         "text": "would",
-        "start_ms": 312369,
-        "end_ms": 312589
+        "start_ms": 306609,
+        "end_ms": 306829
       },
       {
         "text": "stay",
-        "start_ms": 312589,
-        "end_ms": 312809
+        "start_ms": 306829,
+        "end_ms": 307049
       },
       {
         "text": "off",
-        "start_ms": 312809,
-        "end_ms": 313049
+        "start_ms": 307049,
+        "end_ms": 307289
       },
       {
         "text": "them.",
-        "start_ms": 313049,
-        "end_ms": 313289
+        "start_ms": 307289,
+        "end_ms": 307529
       },
       {
         "text": "George",
-        "start_ms": 313809,
-        "end_ms": 314289
+        "start_ms": 308049,
+        "end_ms": 308529
       },
       {
         "text": "Mason",
-        "start_ms": 314289,
-        "end_ms": 314569
+        "start_ms": 308529,
+        "end_ms": 308809
       },
       {
         "text": "said",
-        "start_ms": 314569,
-        "end_ms": 314789
+        "start_ms": 308809,
+        "end_ms": 309029
       },
       {
         "text": "the",
-        "start_ms": 314789,
-        "end_ms": 314929
+        "start_ms": 309029,
+        "end_ms": 309169
       },
       {
         "text": "method",
-        "start_ms": 314929,
-        "end_ms": 315189
+        "start_ms": 309169,
+        "end_ms": 309429
       },
       {
         "text": "in",
-        "start_ms": 315189,
-        "end_ms": 315409
+        "start_ms": 309429,
+        "end_ms": 309649
       },
       {
         "text": "Virginia",
-        "start_ms": 315409,
-        "end_ms": 315909
+        "start_ms": 309649,
+        "end_ms": 310149
       },
       {
         "text": "in",
-        "start_ms": 315909,
-        "end_ms": 316049
+        "start_ms": 310149,
+        "end_ms": 310289
       },
       {
         "text": "1788.",
-        "start_ms": 316739,
-        "end_ms": 317429
+        "start_ms": 310979,
+        "end_ms": 311669
       },
       {
         "text": "To",
-        "start_ms": 317429,
-        "end_ms": 317669
+        "start_ms": 311669,
+        "end_ms": 311909
       },
       {
         "text": "disarm",
-        "start_ms": 317669,
-        "end_ms": 318009
+        "start_ms": 311909,
+        "end_ms": 312249
       },
       {
         "text": "the",
-        "start_ms": 318009,
-        "end_ms": 318149
+        "start_ms": 312249,
+        "end_ms": 312389
       },
       {
         "text": "people",
-        "start_ms": 318149,
-        "end_ms": 318409
+        "start_ms": 312389,
+        "end_ms": 312649
       },
       {
         "text": "is",
-        "start_ms": 318409,
-        "end_ms": 318689
+        "start_ms": 312649,
+        "end_ms": 312929
       },
       {
         "text": "the",
-        "start_ms": 318689,
-        "end_ms": 318809
+        "start_ms": 312929,
+        "end_ms": 313049
       },
       {
         "text": "best",
-        "start_ms": 318809,
-        "end_ms": 319089
+        "start_ms": 313049,
+        "end_ms": 313329
       },
       {
         "text": "and",
-        "start_ms": 319089,
-        "end_ms": 319269
+        "start_ms": 313329,
+        "end_ms": 313509
       },
       {
         "text": "most",
-        "start_ms": 319269,
-        "end_ms": 319469
+        "start_ms": 313509,
+        "end_ms": 313709
       },
       {
         "text": "effective",
-        "start_ms": 319469,
-        "end_ms": 319869
+        "start_ms": 313709,
+        "end_ms": 314109
       },
       {
         "text": "way",
-        "start_ms": 319869,
-        "end_ms": 320189
+        "start_ms": 314109,
+        "end_ms": 314429
       },
       {
         "text": "to",
-        "start_ms": 320189,
-        "end_ms": 320389
+        "start_ms": 314429,
+        "end_ms": 314629
       },
       {
         "text": "enslave",
-        "start_ms": 320389,
-        "end_ms": 320789
+        "start_ms": 314629,
+        "end_ms": 315029
       },
       {
         "text": "them.",
-        "start_ms": 320789,
-        "end_ms": 321149
+        "start_ms": 315029,
+        "end_ms": 315389
       },
       {
         "text": "He",
-        "start_ms": 321609,
-        "end_ms": 321849
+        "start_ms": 315849,
+        "end_ms": 316089
       },
       {
         "text": "said",
-        "start_ms": 321849,
-        "end_ms": 322009
+        "start_ms": 316089,
+        "end_ms": 316249
       },
       {
         "text": "to",
-        "start_ms": 322009,
-        "end_ms": 322149
+        "start_ms": 316249,
+        "end_ms": 316389
       },
       {
         "text": "do",
-        "start_ms": 322149,
-        "end_ms": 322309
+        "start_ms": 316389,
+        "end_ms": 316549
       },
       {
         "text": "it",
-        "start_ms": 322309,
-        "end_ms": 322389
+        "start_ms": 316549,
+        "end_ms": 316629
       },
       {
         "text": "gradually.",
-        "start_ms": 322389,
-        "end_ms": 322889
+        "start_ms": 316629,
+        "end_ms": 317129
       },
       {
         "text": "Weaken",
-        "start_ms": 323509,
-        "end_ms": 323749
+        "start_ms": 317749,
+        "end_ms": 317989
       },
       {
         "text": "them,",
-        "start_ms": 323749,
-        "end_ms": 324109
+        "start_ms": 317989,
+        "end_ms": 318349
       },
       {
         "text": "and",
-        "start_ms": 324569,
-        "end_ms": 324809
+        "start_ms": 318809,
+        "end_ms": 319049
       },
       {
         "text": "let",
-        "start_ms": 324809,
-        "end_ms": 324949
+        "start_ms": 319049,
+        "end_ms": 319189
       },
       {
         "text": "them",
-        "start_ms": 324949,
-        "end_ms": 325069
+        "start_ms": 319189,
+        "end_ms": 319309
       },
       {
         "text": "sink.",
-        "start_ms": 325069,
-        "end_ms": 325469
+        "start_ms": 319309,
+        "end_ms": 319709
       },
       {
         "text": "That",
-        "start_ms": 325469,
-        "end_ms": 325869
+        "start_ms": 319709,
+        "end_ms": 320109
       },
       {
         "text": "is",
-        "start_ms": 325869,
-        "end_ms": 326009
+        "start_ms": 320109,
+        "end_ms": 320249
       },
       {
         "text": "the",
-        "start_ms": 326009,
-        "end_ms": 326109
+        "start_ms": 320249,
+        "end_ms": 320349
       },
       {
         "text": "date",
-        "start_ms": 326109,
-        "end_ms": 326309
+        "start_ms": 320349,
+        "end_ms": 320549
       },
       {
         "text": "in",
-        "start_ms": 326309,
-        "end_ms": 326409
+        "start_ms": 320549,
+        "end_ms": 320649
       },
       {
         "text": "this",
-        "start_ms": 326409,
-        "end_ms": 326529
+        "start_ms": 320649,
+        "end_ms": 320769
       },
       {
         "text": "law.",
-        "start_ms": 326529,
-        "end_ms": 326749
+        "start_ms": 320769,
+        "end_ms": 320989
       }
     ],
     "4be352f52d5d72f6": [
       {
         "text": "Massachusetts",
-        "start_ms": 327502,
-        "end_ms": 328022
+        "start_ms": 321742,
+        "end_ms": 322262
       },
       {
         "text": "already",
-        "start_ms": 328022,
-        "end_ms": 328502
+        "start_ms": 322262,
+        "end_ms": 322742
       },
       {
         "text": "drew",
-        "start_ms": 328502,
-        "end_ms": 328842
+        "start_ms": 322742,
+        "end_ms": 323082
       },
       {
         "text": "this",
-        "start_ms": 328842,
-        "end_ms": 329062
+        "start_ms": 323082,
+        "end_ms": 323302
       },
       {
         "text": "line",
-        "start_ms": 329062,
-        "end_ms": 329302
+        "start_ms": 323302,
+        "end_ms": 323542
       },
       {
         "text": "in",
-        "start_ms": 329302,
-        "end_ms": 329462
+        "start_ms": 323542,
+        "end_ms": 323702
       },
       {
         "text": "Lexington,",
-        "start_ms": 329462,
-        "end_ms": 330042
+        "start_ms": 323702,
+        "end_ms": 324282
       },
       {
         "text": "April",
-        "start_ms": 330042,
-        "end_ms": 330782
+        "start_ms": 324282,
+        "end_ms": 325022
       },
       {
         "text": "1775.",
-        "start_ms": 331662,
-        "end_ms": 332542
+        "start_ms": 325902,
+        "end_ms": 326782
       },
       {
         "text": "The",
-        "start_ms": 332542,
-        "end_ms": 332822
+        "start_ms": 326782,
+        "end_ms": 327062
       },
       {
         "text": "British",
-        "start_ms": 332822,
-        "end_ms": 333162
+        "start_ms": 327062,
+        "end_ms": 327402
       },
       {
         "text": "marched",
-        "start_ms": 333272,
-        "end_ms": 333382
+        "start_ms": 327512,
+        "end_ms": 327622
       },
       {
         "text": "on",
-        "start_ms": 333382,
-        "end_ms": 333642
+        "start_ms": 327622,
+        "end_ms": 327882
       },
       {
         "text": "Lexington",
-        "start_ms": 333642,
-        "end_ms": 334102
+        "start_ms": 327882,
+        "end_ms": 328342
       },
       {
         "text": "and",
-        "start_ms": 334102,
-        "end_ms": 334302
+        "start_ms": 328342,
+        "end_ms": 328542
       },
       {
         "text": "Concord",
-        "start_ms": 334302,
-        "end_ms": 334722
+        "start_ms": 328542,
+        "end_ms": 328962
       },
       {
         "text": "to",
-        "start_ms": 334722,
-        "end_ms": 334902
+        "start_ms": 328962,
+        "end_ms": 329142
       },
       {
         "text": "take",
-        "start_ms": 334902,
-        "end_ms": 335062
+        "start_ms": 329142,
+        "end_ms": 329302
       },
       {
         "text": "the",
-        "start_ms": 335062,
-        "end_ms": 335202
+        "start_ms": 329302,
+        "end_ms": 329442
       },
       {
         "text": "colony's",
-        "start_ms": 335362,
-        "end_ms": 335522
+        "start_ms": 329602,
+        "end_ms": 329762
       },
       {
         "text": "arms,",
-        "start_ms": 335522,
-        "end_ms": 336022
+        "start_ms": 329762,
+        "end_ms": 330262
       },
       {
         "text": "and",
-        "start_ms": 336422,
-        "end_ms": 336702
+        "start_ms": 330662,
+        "end_ms": 330942
       },
       {
         "text": "the",
-        "start_ms": 336702,
-        "end_ms": 336802
+        "start_ms": 330942,
+        "end_ms": 331042
       },
       {
         "text": "people",
-        "start_ms": 336802,
-        "end_ms": 337042
+        "start_ms": 331042,
+        "end_ms": 331282
       },
       {
         "text": "met",
-        "start_ms": 337042,
-        "end_ms": 337322
+        "start_ms": 331282,
+        "end_ms": 331562
       },
       {
         "text": "them",
-        "start_ms": 337322,
-        "end_ms": 337522
+        "start_ms": 331562,
+        "end_ms": 331762
       },
       {
         "text": "with",
-        "start_ms": 337522,
-        "end_ms": 337682
+        "start_ms": 331762,
+        "end_ms": 331922
       },
       {
         "text": "muskets,",
-        "start_ms": 337682,
-        "end_ms": 338382
+        "start_ms": 331922,
+        "end_ms": 332622
       },
       {
         "text": "which",
-        "start_ms": 338962,
-        "end_ms": 339242
+        "start_ms": 333202,
+        "end_ms": 333482
       },
       {
         "text": "today",
-        "start_ms": 339242,
-        "end_ms": 339562
+        "start_ms": 333482,
+        "end_ms": 333802
       },
       {
         "text": "would",
-        "start_ms": 339562,
-        "end_ms": 339762
+        "start_ms": 333802,
+        "end_ms": 334002
       },
       {
         "text": "be",
-        "start_ms": 339762,
-        "end_ms": 339902
+        "start_ms": 334002,
+        "end_ms": 334142
       },
       {
         "text": "the",
-        "start_ms": 339902,
-        "end_ms": 340042
+        "start_ms": 334142,
+        "end_ms": 334282
       },
       {
         "text": "equivalent",
-        "start_ms": 340042,
-        "end_ms": 340442
+        "start_ms": 334282,
+        "end_ms": 334682
       },
       {
         "text": "of",
-        "start_ms": 340442,
-        "end_ms": 340682
+        "start_ms": 334682,
+        "end_ms": 334922
       },
       {
         "text": "an",
-        "start_ms": 340682,
-        "end_ms": 340802
+        "start_ms": 334922,
+        "end_ms": 335042
       },
       {
         "text": "AR-15.",
-        "start_ms": 341567,
-        "end_ms": 342332
+        "start_ms": 335807,
+        "end_ms": 336572
       }
     ],
     "5f26e76ebf926953": [
       {
         "text": "That",
-        "start_ms": 357082,
-        "end_ms": 357182
+        "start_ms": 351322,
+        "end_ms": 351422
       },
       {
         "text": "is",
-        "start_ms": 357182,
-        "end_ms": 357302
+        "start_ms": 351422,
+        "end_ms": 351542
       },
       {
         "text": "Governor",
-        "start_ms": 357302,
-        "end_ms": 357562
+        "start_ms": 351542,
+        "end_ms": 351802
       },
       {
         "text": "Healey.",
-        "start_ms": 357852,
-        "end_ms": 358142
+        "start_ms": 352092,
+        "end_ms": 352382
       },
       {
         "text": "A",
-        "start_ms": 358142,
-        "end_ms": 358642
+        "start_ms": 352382,
+        "end_ms": 352882
       },
       {
         "text": "yes",
-        "start_ms": 358642,
-        "end_ms": 358902
+        "start_ms": 352882,
+        "end_ms": 353142
       },
       {
         "text": "vote",
-        "start_ms": 358902,
-        "end_ms": 359122
+        "start_ms": 353142,
+        "end_ms": 353362
       },
       {
         "text": "funds",
-        "start_ms": 359122,
-        "end_ms": 359422
+        "start_ms": 353362,
+        "end_ms": 353662
       },
       {
         "text": "none",
-        "start_ms": 359422,
-        "end_ms": 359622
+        "start_ms": 353662,
+        "end_ms": 353862
       },
       {
         "text": "of",
-        "start_ms": 359622,
-        "end_ms": 359722
+        "start_ms": 353862,
+        "end_ms": 353962
       },
       {
         "text": "the",
-        "start_ms": 359722,
-        "end_ms": 359802
+        "start_ms": 353962,
+        "end_ms": 354042
       },
       {
         "text": "programs",
-        "start_ms": 359952,
-        "end_ms": 360102
+        "start_ms": 354192,
+        "end_ms": 354342
       },
       {
         "text": "she",
-        "start_ms": 360102,
-        "end_ms": 360382
+        "start_ms": 354342,
+        "end_ms": 354622
       },
       {
         "text": "names.",
-        "start_ms": 360382,
-        "end_ms": 360802
+        "start_ms": 354622,
+        "end_ms": 355042
       },
       {
         "text": "The",
-        "start_ms": 360802,
-        "end_ms": 361242
+        "start_ms": 355042,
+        "end_ms": 355482
       },
       {
         "text": "position",
-        "start_ms": 361242,
-        "end_ms": 361562
+        "start_ms": 355482,
+        "end_ms": 355802
       },
       {
         "text": "is",
-        "start_ms": 361562,
-        "end_ms": 361802
+        "start_ms": 355802,
+        "end_ms": 356042
       },
       {
         "text": "incoherent.",
-        "start_ms": 361802,
-        "end_ms": 362382
+        "start_ms": 356042,
+        "end_ms": 356622
       }
     ],
     "05f776724a9cea20": [
       {
         "text": "Across",
-        "start_ms": 362408,
-        "end_ms": 362608
+        "start_ms": 356648,
+        "end_ms": 356848
       },
       {
         "text": "the",
-        "start_ms": 362608,
-        "end_ms": 362848
+        "start_ms": 356848,
+        "end_ms": 357088
       },
       {
         "text": "fifty",
-        "start_ms": 362848,
-        "end_ms": 363048
+        "start_ms": 357088,
+        "end_ms": 357288
       },
       {
         "text": "states,",
-        "start_ms": 363048,
-        "end_ms": 363488
+        "start_ms": 357288,
+        "end_ms": 357728
       },
       {
         "text": "poverty",
-        "start_ms": 363488,
-        "end_ms": 363848
+        "start_ms": 357728,
+        "end_ms": 358088
       },
       {
         "text": "tracks",
-        "start_ms": 363848,
-        "end_ms": 364228
+        "start_ms": 358088,
+        "end_ms": 358468
       },
       {
         "text": "gun",
-        "start_ms": 364228,
-        "end_ms": 364488
+        "start_ms": 358468,
+        "end_ms": 358728
       },
       {
         "text": "homicide",
-        "start_ms": 364488,
-        "end_ms": 364908
+        "start_ms": 358728,
+        "end_ms": 359148
       },
       {
         "text": "at",
-        "start_ms": 364908,
-        "end_ms": 365228
+        "start_ms": 359148,
+        "end_ms": 359468
       },
       {
         "text": "about",
-        "start_ms": 365228,
-        "end_ms": 365428
+        "start_ms": 359468,
+        "end_ms": 359668
       },
       {
         "text": "point",
-        "start_ms": 365428,
-        "end_ms": 365668
+        "start_ms": 359668,
+        "end_ms": 359908
       },
       {
         "text": "seven.",
-        "start_ms": 365668,
-        "end_ms": 366068
+        "start_ms": 359908,
+        "end_ms": 360308
       },
       {
         "text": "Once",
-        "start_ms": 366628,
-        "end_ms": 366948
+        "start_ms": 360868,
+        "end_ms": 361188
       },
       {
         "text": "you",
-        "start_ms": 366948,
-        "end_ms": 367068
+        "start_ms": 361188,
+        "end_ms": 361308
       },
       {
         "text": "account",
-        "start_ms": 367068,
-        "end_ms": 367288
+        "start_ms": 361308,
+        "end_ms": 361528
       },
       {
         "text": "for",
-        "start_ms": 367288,
-        "end_ms": 367448
+        "start_ms": 361528,
+        "end_ms": 361688
       },
       {
         "text": "poverty",
-        "start_ms": 367448,
-        "end_ms": 367828
+        "start_ms": 361688,
+        "end_ms": 362068
       },
       {
         "text": "and",
-        "start_ms": 367828,
-        "end_ms": 368048
+        "start_ms": 362068,
+        "end_ms": 362288
       },
       {
         "text": "inequality,",
-        "start_ms": 368048,
-        "end_ms": 368588
+        "start_ms": 362288,
+        "end_ms": 362828
       },
       {
         "text": "the",
-        "start_ms": 368588,
-        "end_ms": 369068
+        "start_ms": 362828,
+        "end_ms": 363308
       },
       {
         "text": "link",
-        "start_ms": 369068,
-        "end_ms": 369248
+        "start_ms": 363308,
+        "end_ms": 363488
       },
       {
         "text": "between",
-        "start_ms": 369248,
-        "end_ms": 369548
+        "start_ms": 363488,
+        "end_ms": 363788
       },
       {
         "text": "gun",
-        "start_ms": 369548,
-        "end_ms": 369828
+        "start_ms": 363788,
+        "end_ms": 364068
       },
       {
         "text": "laws",
-        "start_ms": 369828,
-        "end_ms": 370048
+        "start_ms": 364068,
+        "end_ms": 364288
       },
       {
         "text": "and",
-        "start_ms": 370048,
-        "end_ms": 370308
+        "start_ms": 364288,
+        "end_ms": 364548
       },
       {
         "text": "gun",
-        "start_ms": 370308,
-        "end_ms": 370528
+        "start_ms": 364548,
+        "end_ms": 364768
       },
       {
         "text": "homicide",
-        "start_ms": 370528,
-        "end_ms": 370948
+        "start_ms": 364768,
+        "end_ms": 365188
       },
       {
         "text": "is",
-        "start_ms": 370948,
-        "end_ms": 371268
+        "start_ms": 365188,
+        "end_ms": 365508
       },
       {
         "text": "essentially",
-        "start_ms": 371268,
-        "end_ms": 371748
+        "start_ms": 365508,
+        "end_ms": 365988
       },
       {
         "text": "zero.",
-        "start_ms": 371748,
-        "end_ms": 372208
+        "start_ms": 365988,
+        "end_ms": 366448
       },
       {
         "text": "Massachusetts",
-        "start_ms": 372908,
-        "end_ms": 373368
+        "start_ms": 367148,
+        "end_ms": 367608
       },
       {
         "text": "already",
-        "start_ms": 373368,
-        "end_ms": 373868
+        "start_ms": 367608,
+        "end_ms": 368108
       },
       {
         "text": "has",
-        "start_ms": 373868,
-        "end_ms": 374208
+        "start_ms": 368108,
+        "end_ms": 368448
       },
       {
         "text": "the",
-        "start_ms": 374208,
-        "end_ms": 374368
+        "start_ms": 368448,
+        "end_ms": 368608
       },
       {
         "text": "laws",
-        "start_ms": 374368,
-        "end_ms": 374548
+        "start_ms": 368608,
+        "end_ms": 368788
       },
       {
         "text": "RAND",
-        "start_ms": 374688,
-        "end_ms": 374828
+        "start_ms": 368928,
+        "end_ms": 369068
       },
       {
         "text": "finds",
-        "start_ms": 374828,
-        "end_ms": 375148
+        "start_ms": 369068,
+        "end_ms": 369388
       },
       {
         "text": "work",
-        "start_ms": 375148,
-        "end_ms": 375368
+        "start_ms": 369388,
+        "end_ms": 369608
       },
       {
         "text": "best:",
-        "start_ms": 375368,
-        "end_ms": 375808
+        "start_ms": 369608,
+        "end_ms": 370048
       },
       {
         "text": "safe",
-        "start_ms": 375808,
-        "end_ms": 376548
+        "start_ms": 370048,
+        "end_ms": 370788
       },
       {
         "text": "storage",
-        "start_ms": 376548,
-        "end_ms": 377068
+        "start_ms": 370788,
+        "end_ms": 371308
       },
       {
         "text": "and",
-        "start_ms": 377068,
-        "end_ms": 377448
+        "start_ms": 371308,
+        "end_ms": 371688
       },
       {
         "text": "background",
-        "start_ms": 377448,
-        "end_ms": 377828
+        "start_ms": 371688,
+        "end_ms": 372068
       },
       {
         "text": "checks.",
-        "start_ms": 378000,
-        "end_ms": 378171
-      }
-    ],
-    "1428fda076b50e25": [
-      {
-        "text": "Today",
-        "start_ms": 378171,
-        "end_ms": 378391
-      },
-      {
-        "text": "is",
-        "start_ms": 378391,
-        "end_ms": 378571
-      },
-      {
-        "text": "voting",
-        "start_ms": 378571,
-        "end_ms": 378791
-      },
-      {
-        "text": "day.",
-        "start_ms": 378791,
-        "end_ms": 379131
-      },
-      {
-        "text": "Vote",
-        "start_ms": 379131,
-        "end_ms": 379911
-      },
-      {
-        "text": "no",
-        "start_ms": 379911,
-        "end_ms": 380131
-      },
-      {
-        "text": "on",
-        "start_ms": 380131,
-        "end_ms": 380331
-      },
-      {
-        "text": "Question",
-        "start_ms": 380331,
-        "end_ms": 380571
-      },
-      {
-        "text": "9.",
-        "start_ms": 380801,
-        "end_ms": 381031
-      },
-      {
-        "text": "This",
-        "start_ms": 381031,
-        "end_ms": 381751
-      },
-      {
-        "text": "law",
-        "start_ms": 381751,
-        "end_ms": 381951
-      },
-      {
-        "text": "upholds",
-        "start_ms": 381951,
-        "end_ms": 382451
-      },
-      {
-        "text": "racism,",
-        "start_ms": 382451,
-        "end_ms": 383031
-      },
-      {
-        "text": "sexism,",
-        "start_ms": 383031,
-        "end_ms": 384091
-      },
-      {
-        "text": "and",
-        "start_ms": 384091,
-        "end_ms": 384331
-      },
-      {
-        "text": "systemic",
-        "start_ms": 384331,
-        "end_ms": 384651
-      },
-      {
-        "text": "ableism",
-        "start_ms": 384651,
-        "end_ms": 385271
-      },
-      {
-        "text": "in",
-        "start_ms": 385271,
-        "end_ms": 385471
-      },
-      {
-        "text": "the",
-        "start_ms": 385471,
-        "end_ms": 385611
-      },
-      {
-        "text": "same",
-        "start_ms": 385611,
-        "end_ms": 385831
-      },
-      {
-        "text": "statute.",
-        "start_ms": 385831,
-        "end_ms": 386331
-      },
-      {
-        "text": "A",
-        "start_ms": 386331,
-        "end_ms": 387431
-      },
-      {
-        "text": "no",
-        "start_ms": 387431,
-        "end_ms": 387631
-      },
-      {
-        "text": "vote",
-        "start_ms": 387631,
-        "end_ms": 387871
-      },
-      {
-        "text": "returns",
-        "start_ms": 387871,
-        "end_ms": 388191
-      },
-      {
-        "text": "the",
-        "start_ms": 388191,
-        "end_ms": 388431
-      },
-      {
-        "text": "state",
-        "start_ms": 388431,
-        "end_ms": 388651
-      },
-      {
-        "text": "to",
-        "start_ms": 388651,
-        "end_ms": 388831
-      },
-      {
-        "text": "the",
-        "start_ms": 388831,
-        "end_ms": 388911
-      },
-      {
-        "text": "restrictions",
-        "start_ms": 388911,
-        "end_ms": 389331
-      },
-      {
-        "text": "it",
-        "start_ms": 389331,
-        "end_ms": 389591
-      },
-      {
-        "text": "already",
-        "start_ms": 389591,
-        "end_ms": 389891
-      },
-      {
-        "text": "had,",
-        "start_ms": 389891,
-        "end_ms": 390251
-      },
-      {
-        "text": "and",
-        "start_ms": 390251,
-        "end_ms": 390471
-      },
-      {
-        "text": "it",
-        "start_ms": 390471,
-        "end_ms": 390591
-      },
-      {
-        "text": "leaves",
-        "start_ms": 390591,
-        "end_ms": 390831
-      },
-      {
-        "text": "safe",
-        "start_ms": 390831,
-        "end_ms": 391431
-      },
-      {
-        "text": "storage",
-        "start_ms": 391431,
-        "end_ms": 391851
-      },
-      {
-        "text": "and",
-        "start_ms": 391851,
-        "end_ms": 392091
-      },
-      {
-        "text": "background",
-        "start_ms": 392091,
-        "end_ms": 392431
-      },
-      {
-        "text": "checks",
-        "start_ms": 392431,
-        "end_ms": 392731
-      },
-      {
-        "text": "standing.",
-        "start_ms": 392731,
-        "end_ms": 393231
-      },
-      {
-        "text": "The",
-        "start_ms": 393231,
-        "end_ms": 394471
-      },
-      {
-        "text": "yes",
-        "start_ms": 394471,
-        "end_ms": 394711
-      },
-      {
-        "text": "campaign",
-        "start_ms": 394711,
-        "end_ms": 395051
-      },
-      {
-        "text": "is",
-        "start_ms": 395051,
-        "end_ms": 395311
-      },
-      {
-        "text": "describing",
-        "start_ms": 395311,
-        "end_ms": 395651
-      },
-      {
-        "text": "a",
-        "start_ms": 395651,
-        "end_ms": 395851
-      },
-      {
-        "text": "larger",
-        "start_ms": 395851,
-        "end_ms": 396091
-      },
-      {
-        "text": "change",
-        "start_ms": 396091,
-        "end_ms": 396411
-      },
-      {
-        "text": "than",
-        "start_ms": 396411,
-        "end_ms": 396651
-      },
-      {
-        "text": "that",
-        "start_ms": 396651,
-        "end_ms": 396791
-      },
-      {
-        "text": "return",
-        "start_ms": 396791,
-        "end_ms": 397131
-      },
-      {
-        "text": "contains.",
-        "start_ms": 397131,
-        "end_ms": 397551
+        "start_ms": 372240,
+        "end_ms": 372411
       }
     ],
     "bdba3b23a4b7de71": [
@@ -5217,10 +4945,281 @@
         "start_ms": 128898,
         "end_ms": 129278
       }
+    ],
+    "9b1acf761d49ef45": [
+      {
+        "text": "Today",
+        "start_ms": 372411,
+        "end_ms": 372671
+      },
+      {
+        "text": "is",
+        "start_ms": 372671,
+        "end_ms": 372911
+      },
+      {
+        "text": "Voting",
+        "start_ms": 372911,
+        "end_ms": 373251
+      },
+      {
+        "text": "Day.",
+        "start_ms": 373251,
+        "end_ms": 373791
+      },
+      {
+        "text": "Vote",
+        "start_ms": 374291,
+        "end_ms": 374611
+      },
+      {
+        "text": "no",
+        "start_ms": 374611,
+        "end_ms": 374851
+      },
+      {
+        "text": "on",
+        "start_ms": 374851,
+        "end_ms": 374991
+      },
+      {
+        "text": "question",
+        "start_ms": 374991,
+        "end_ms": 375291
+      },
+      {
+        "text": "nine.",
+        "start_ms": 375291,
+        "end_ms": 375731
+      },
+      {
+        "text": "This",
+        "start_ms": 375831,
+        "end_ms": 376011
+      },
+      {
+        "text": "law",
+        "start_ms": 376011,
+        "end_ms": 376251
+      },
+      {
+        "text": "upholds",
+        "start_ms": 376251,
+        "end_ms": 376831
+      },
+      {
+        "text": "systemic",
+        "start_ms": 376831,
+        "end_ms": 377331
+      },
+      {
+        "text": "racism,",
+        "start_ms": 377331,
+        "end_ms": 378031
+      },
+      {
+        "text": "sexism,",
+        "start_ms": 378291,
+        "end_ms": 378871
+      },
+      {
+        "text": "and",
+        "start_ms": 379051,
+        "end_ms": 379151
+      },
+      {
+        "text": "abalism",
+        "start_ms": 379151,
+        "end_ms": 379651
+      },
+      {
+        "text": "in",
+        "start_ms": 379651,
+        "end_ms": 379891
+      },
+      {
+        "text": "the",
+        "start_ms": 379891,
+        "end_ms": 380031
+      },
+      {
+        "text": "same",
+        "start_ms": 380031,
+        "end_ms": 380231
+      },
+      {
+        "text": "statute.",
+        "start_ms": 380231,
+        "end_ms": 380751
+      },
+      {
+        "text": "A",
+        "start_ms": 381471,
+        "end_ms": 381611
+      },
+      {
+        "text": "no",
+        "start_ms": 381611,
+        "end_ms": 381831
+      },
+      {
+        "text": "vote",
+        "start_ms": 381831,
+        "end_ms": 382171
+      },
+      {
+        "text": "returns",
+        "start_ms": 382171,
+        "end_ms": 382631
+      },
+      {
+        "text": "the",
+        "start_ms": 382631,
+        "end_ms": 382851
+      },
+      {
+        "text": "state",
+        "start_ms": 382851,
+        "end_ms": 383051
+      },
+      {
+        "text": "to",
+        "start_ms": 383051,
+        "end_ms": 383311
+      },
+      {
+        "text": "the",
+        "start_ms": 383311,
+        "end_ms": 383351
+      },
+      {
+        "text": "restrictions",
+        "start_ms": 383351,
+        "end_ms": 383771
+      },
+      {
+        "text": "it",
+        "start_ms": 383771,
+        "end_ms": 384031
+      },
+      {
+        "text": "already",
+        "start_ms": 384031,
+        "end_ms": 384311
+      },
+      {
+        "text": "had,",
+        "start_ms": 384311,
+        "end_ms": 384831
+      },
+      {
+        "text": "and",
+        "start_ms": 385111,
+        "end_ms": 385151
+      },
+      {
+        "text": "it",
+        "start_ms": 385151,
+        "end_ms": 385271
+      },
+      {
+        "text": "leaves",
+        "start_ms": 385271,
+        "end_ms": 385511
+      },
+      {
+        "text": "safe",
+        "start_ms": 385511,
+        "end_ms": 385811
+      },
+      {
+        "text": "storage",
+        "start_ms": 385811,
+        "end_ms": 386191
+      },
+      {
+        "text": "and",
+        "start_ms": 386191,
+        "end_ms": 386411
+      },
+      {
+        "text": "background",
+        "start_ms": 386411,
+        "end_ms": 386771
+      },
+      {
+        "text": "check",
+        "start_ms": 386771,
+        "end_ms": 387111
+      },
+      {
+        "text": "standing.",
+        "start_ms": 387111,
+        "end_ms": 387691
+      },
+      {
+        "text": "The",
+        "start_ms": 388671,
+        "end_ms": 388831
+      },
+      {
+        "text": "yes",
+        "start_ms": 388831,
+        "end_ms": 389111
+      },
+      {
+        "text": "campaign",
+        "start_ms": 389111,
+        "end_ms": 389451
+      },
+      {
+        "text": "is",
+        "start_ms": 389451,
+        "end_ms": 389691
+      },
+      {
+        "text": "describing",
+        "start_ms": 389691,
+        "end_ms": 390131
+      },
+      {
+        "text": "a",
+        "start_ms": 390131,
+        "end_ms": 390331
+      },
+      {
+        "text": "larger",
+        "start_ms": 390331,
+        "end_ms": 390591
+      },
+      {
+        "text": "change",
+        "start_ms": 390591,
+        "end_ms": 391071
+      },
+      {
+        "text": "than",
+        "start_ms": 391071,
+        "end_ms": 391271
+      },
+      {
+        "text": "that",
+        "start_ms": 391271,
+        "end_ms": 391431
+      },
+      {
+        "text": "return",
+        "start_ms": 391431,
+        "end_ms": 391771
+      },
+      {
+        "text": "contains.",
+        "start_ms": 391771,
+        "end_ms": 392211
+      }
     ]
   },
   "warnings": [
     "Word timings normalized from relative milliseconds"
-  ],
-  "episode_dir": "/Users/emmanuel/Documents/Theory/TheOriginalPower/Architecting_the_operation/video/q9_bostopia/stage"
+  ]
 }
