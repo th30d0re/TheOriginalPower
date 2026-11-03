@@ -1,0 +1,258 @@
+{
+  "schema_version": 1,
+  "shot_count": 18,
+  "shots": [
+    {
+      "id": "R-02",
+      "title": "R-02",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "00:07",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 1,
+        "start_ms": 7230,
+        "end_ms": 15036
+      },
+      "hold": {},
+      "type": "card"
+    },
+    {
+      "id": "R-03",
+      "title": "R-03",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "00:32",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 4,
+        "start_ms": 31532,
+        "end_ms": 41105
+      },
+      "hold": {},
+      "type": "card"
+    },
+    {
+      "id": "R-03A",
+      "title": "R-03A",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "00:41",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 5,
+        "start_ms": 41105,
+        "end_ms": 49784
+      },
+      "hold": {},
+      "type": "card"
+    },
+    {
+      "id": "R-04",
+      "title": "R-04",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "00:50",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 6,
+        "start_ms": 49784,
+        "end_ms": 60419
+      },
+      "hold": {},
+      "type": "card"
+    },
+    {
+      "id": "R-06",
+      "title": "R-06",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "01:00",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 7,
+        "start_ms": 60419,
+        "end_ms": 67315
+      },
+      "hold": {},
+      "type": "card"
+    },
+    {
+      "id": "R-07",
+      "title": "R-07",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "01:14",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 9,
+        "start_ms": 74255,
+        "end_ms": 108848
+      },
+      "hold": {},
+      "type": "card"
+    },
+    {
+      "id": "R-08",
+      "title": "R-08",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "01:49",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 10,
+        "start_ms": 108848,
+        "end_ms": 128678
+      },
+      "hold": {},
+      "type": "card"
+    },
+    {
+      "id": "R-08A",
+      "title": "R-08A",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "02:19",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 12,
+        "start_ms": 138918,
+        "end_ms": 144745
+      },
+      "hold": {},
+      "type": "card"
+    },
+    {
+      "id": "R-09",
+      "title": "R-09",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "02:29",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 14,
+        "start_ms": 148641,
+        "end_ms": 189704
+      },
+      "hold": {},
+      "type": "card"
+    },
+    {
+      "id": "R-12",
+      "title": "R-12",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "03:10",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 15,
+        "start_ms": 189704,
+        "end_ms": 206325
+      },
+      "hold": {},
+      "type": "card"
+    },
+    {
+      "id": "R-13",
+      "title": "R-13",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "03:41",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 17,
+        "start_ms": 220644,
+        "end_ms": 223946
+      },
+      "hold": {},
+      "type": "card"
+    },
+    {
+      "id": "R-14",
+      "title": "R-14",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "03:59",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 19,
+        "start_ms": 238749,
+        "end_ms": 275418
+      },
+      "hold": {},
+      "type": "card"
+    },
+    {
+      "id": "R-14A",
+      "title": "R-14A",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "04:35",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 20,
+        "start_ms": 275418,
+        "end_ms": 293657
+      },
+      "hold": {},
+      "type": "card"
+    },
+    {
+      "id": "R-15",
+      "title": "R-15",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "04:54",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 21,
+        "start_ms": 293657,
+        "end_ms": 319971
+      },
+      "hold": {},
+      "type": "card"
+    },
+    {
+      "id": "R-16",
+      "title": "R-16",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "05:20",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 22,
+        "start_ms": 319971,
+        "end_ms": 329572
+      },
+      "hold": {},
+      "type": "card"
+    },
+    {
+      "id": "R-17",
+      "title": "R-17",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "05:44",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 24,
+        "start_ms": 344322,
+        "end_ms": 349648
+      },
+      "hold": {},
+      "type": "card"
+    },
+    {
+      "id": "R-18",
+      "title": "R-18",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "05:50",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 25,
+        "start_ms": 349648,
+        "end_ms": 365412
+      },
+      "hold": {},
+      "type": "card"
+    },
+    {
+      "id": "R-19",
+      "title": "R-19",
+      "anchor": {
+        "speaker": "Emmanuel Theodore",
+        "timestamp": "06:05",
+        "speaker_id": "emmanuel_theodore",
+        "turn_index": 26,
+        "start_ms": 365412,
+        "end_ms": 384014
+      },
+      "hold": {},
+      "type": "card"
+    }
+  ]
+}

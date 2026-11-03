@@ -1,0 +1,19 @@
+{
+  "component": "TitleCard",
+  "headline": "Unalienable",
+  "items": [
+    {
+      "title": "He calls the right a privilege",
+      "detail": "Billed to everyone else's safety"
+    },
+    {
+      "title": "The Declaration's word",
+      "detail": "A right the person already holds"
+    },
+    {
+      "title": "Article 17",
+      "detail": "The people have a right to keep and to bear arms for the common defence"
+    }
+  ],
+  "sources": "Sources: Declaration of Independence \u00b7 Massachusetts Declaration of Rights, Article 17"
+}

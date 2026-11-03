@@ -1,0 +1,15 @@
+{
+  "component": "TitleCard",
+  "headline": "Tomorrow is voting day",
+  "items": [
+    {
+      "title": "Vote no",
+      "detail": "The law upholds racism, sexism, and systemic ableism"
+    },
+    {
+      "title": "A no vote returns the restrictions the state already had",
+      "detail": "Safe storage and background checks stay. The yes campaign describes a larger change than that return contains"
+    }
+  ],
+  "sources": "Question 9, November 3, 2026"
+}

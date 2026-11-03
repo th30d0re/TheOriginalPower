@@ -1,0 +1,12 @@
+{
+  "component": "TitleCard",
+  "headline": "Lexington and Concord",
+  "items": [
+    {
+      "title": "April 1775",
+      "emphasis": "Massachusetts",
+      "detail": "The British march was to seize the colony's arms"
+    }
+  ],
+  "sources": "Source: the manuscript"
+}

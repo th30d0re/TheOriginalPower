@@ -1,0 +1,19 @@
+{
+  "component": "TitleCard",
+  "headline": "Mimic automatic fire",
+  "items": [
+    {
+      "title": "His line",
+      "detail": "Changed the definition for machine guns and assault rifles to incorporate modifiers"
+    },
+    {
+      "title": "A forced-reset trigger",
+      "detail": "One shot for each pull. The trigger resets for the next pull"
+    },
+    {
+      "title": "Section 121",
+      "detail": "A faster rate of that fire, written into the machine-gun definition"
+    }
+  ],
+  "sources": "Sources: his reel \u00b7 G.L. c. 140, \u00a7 121 \u00b7 26 U.S.C. \u00a7 5845(b)"
+}

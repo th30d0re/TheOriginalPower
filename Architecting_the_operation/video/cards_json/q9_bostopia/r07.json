@@ -1,0 +1,16 @@
+{
+  "component": "TitleCard",
+  "headline": "One receipt",
+  "items": [
+    {
+      "title": "Smith & Wesson Brands",
+      "emphasis": "$50,000",
+      "detail": "September 25, 2024, to The Civil Rights Coalition"
+    },
+    {
+      "title": "3,324 receipts in the committee file",
+      "detail": "2,499 of them are $100 or less"
+    }
+  ],
+  "sources": "Source: OCPF report 960537, receipt 17220407 \u00b7 CPF 95523"
+}

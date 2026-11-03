@@ -1,0 +1,20 @@
+{
+  "component": "TitleCard",
+  "headline": "The first license",
+  "items": [
+    {
+      "title": "Two hundred dollars or more",
+      "detail": "State fee plus the live-fire course"
+    },
+    {
+      "title": "Virginia's poll tax",
+      "emphasis": "about $15 a year",
+      "detail": "In today's money"
+    },
+    {
+      "title": "Median net wealth",
+      "detail": "About $550,000 white. About $7,800 Black"
+    }
+  ],
+  "sources": "Sources: mass.gov \u00b7 the manuscript, \u00a7\u00a732\u201333"
+}

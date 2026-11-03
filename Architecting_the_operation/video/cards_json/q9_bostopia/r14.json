@@ -1,0 +1,15 @@
+{
+  "component": "TitleCard",
+  "headline": "The state of nature",
+  "items": [
+    {
+      "title": "John Locke, Second Treatise, \u00a7137",
+      "detail": "To give a legislator absolute power is to put people into a worse condition than the state of nature, where they had a liberty to defend their right"
+    },
+    {
+      "title": "They have disarmed themselves, and armed him",
+      "detail": "The manuscript's quotation of that section"
+    }
+  ],
+  "sources": "Source: Locke, Second Treatise, Ch. XI, \u00a7137, Founders' Constitution transcription"
+}

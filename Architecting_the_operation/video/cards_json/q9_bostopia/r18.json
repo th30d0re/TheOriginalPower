@@ -1,0 +1,13 @@
+{
+  "component": "FreezeCallout",
+  "headline": "Poverty tracks firearm homicide",
+  "image": "assets/frames/gunlaws_poverty_portrait.png",
+  "aspect": 0.8372,
+  "callouts": [],
+  "caption": "About 0.7 with poverty. Once poverty and inequality are in, the gun-law link is essentially zero. Safe storage and background checks are the laws RAND finds work.",
+  "sources": "Sources: CDC \u00b7 Census \u00b7 RAND Gun Policy in America",
+  "qr": false,
+  "qrUrl": "https://www.rand.org/research/gun-policy/analysis.html",
+  "fullBleed": true,
+  "imageTop": 470
+}

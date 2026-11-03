@@ -1,0 +1,13 @@
+{
+  "component": "FreezeCallout",
+  "headline": "Grades C and D, about seven times",
+  "image": "assets/frames/boston_holc_map_navy.png",
+  "aspect": 0.8496,
+  "callouts": [],
+  "caption": "Boston, 1938. His name for the result is state-sponsored democide. The ratio is where the shootings concentrate.",
+  "sources": "Sources: Mapping Inequality \u00b7 Analyze Boston \u00b7 ACS 2024",
+  "qr": false,
+  "qrUrl": "https://dsl.richmond.edu/panorama/redlining/map/MA/Boston/context",
+  "fullBleed": true,
+  "imageTop": 505
+}

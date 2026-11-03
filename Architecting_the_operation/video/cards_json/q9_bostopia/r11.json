@@ -1,0 +1,23 @@
+{
+  "component": "CompareCard",
+  "headline": "Same rifle. Only the date differs.",
+  "items": [
+    {
+      "title": "Held before August 1, 2024",
+      "points": [
+        "The people who already held it keep it"
+      ]
+    },
+    {
+      "title": "Just getting in",
+      "points": [
+        "A harder door than the one that was already there"
+      ]
+    }
+  ],
+  "sources": "Source: Acts of 2024, Ch. 135",
+  "art": {
+    "src": "assets/quiver/g12_identical_rifles.svg",
+    "size": "hero"
+  }
+}

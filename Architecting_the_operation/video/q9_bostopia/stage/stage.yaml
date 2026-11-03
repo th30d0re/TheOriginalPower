@@ -1,0 +1,214 @@
+# Question 9, Bostopia reply. Portrait 1080 × 1920.
+# Ten scenes, one per shot on the 6:24 list. Each spoken turn is its own shot entry
+# because a cue resolves only against its shot's turn. Turns that share an instance
+# stay mounted as one scene. The six archive clips have no word timings; their cue
+# is the start of the clip.
+episode: q9_bostopia_reply
+outputs: ../../../../outputs/q9_bostopia_reply
+fps: 30
+width: 1080
+height: 1920
+shots:
+  - shot_id: R-01
+    turn_id: 16d9482fb72c3c54
+    scene: HisClose
+    instance: r01
+    cues:
+      reel: {ms: 0}
+  - shot_id: R-01-02
+    turn_id: b9dbf73a0ee1def9
+    scene: HisClose
+    instance: r01
+    cues:
+      mouth: {word: mouth}
+      four: {word: four}
+  - shot_id: R-01-03
+    turn_id: f1308549789ee5b1
+    scene: HisClose
+    instance: r01
+    cues:
+      libertarianism: {word: libertarianism}
+      left: {word: left}
+
+  - shot_id: R-02
+    turn_id: 64383da46804c7a9
+    scene: SaintDomingue
+    instance: r02
+    cues:
+      reel: {ms: 0}
+  - shot_id: R-02-02
+    turn_id: fe1ee0121f8ffbe8
+    scene: SaintDomingue
+    instance: r02
+    cues:
+      source: {word: source}
+      bans: {word: bans}
+      rifles: {word: rifles}
+  - shot_id: R-02-03
+    turn_id: e17058b56b3d1acd
+    scene: SaintDomingue
+    instance: r02
+    cues:
+      privileged: {word: privileged}
+      protector: {word: protector}
+
+  - shot_id: R-03
+    turn_id: 00569698b6d5aa6c
+    scene: BostonMap
+    instance: r03
+    cues:
+      boston: {word: boston}
+      seven: {word: seven}
+      democide: {word: democide}
+
+  - shot_id: R-04
+    turn_id: b3def8e665405eb1
+    scene: Paranoia
+    instance: r04
+    cues:
+      eightyseven: {word: eighty-seven}
+      paranoia: {word: paranoia}
+
+  - shot_id: R-05
+    turn_id: e0f3051cf2cab2e7
+    scene: TheCheck
+    instance: r05
+    cues:
+      reel: {ms: 0}
+  - shot_id: R-05-02
+    turn_id: 2b6f08bdbf08b868
+    scene: TheCheck
+    instance: r05
+    cues:
+      smith: {word: smith}
+      receipt: {word: receipt}
+  - shot_id: R-05-03
+    turn_id: 059c7a0e0824a461
+    scene: TheCheck
+    instance: r05
+    cues:
+      license: {word: license}
+      green: {ms: 3360}
+      virginia: {word: "Virginia's"}
+      fifteen: {word: fifteen}
+      wealth: {word: wealth}
+      arriving: {word: arriving}
+
+  - shot_id: R-06
+    turn_id: 9ed68338220cb59b
+    scene: TheRepeal
+    instance: r06
+    cues:
+      reel: {ms: 0}
+  - shot_id: R-06-02
+    turn_id: 3771e77a712a1de8
+    scene: TheRepeal
+    instance: r06
+    cues:
+      abuses: {word: abuses}
+      jail: {word: jail}
+  - shot_id: R-06-03
+    turn_id: 0d199cd59fc2d6df
+    scene: TheRepeal
+    instance: r06
+    cues:
+      everyone: {word: everyone}
+  - shot_id: R-06-04
+    turn_id: c9f407fbbc18940f
+    scene: TheRepeal
+    instance: r06
+    cues:
+      strict: {word: strict}
+      mini14: {word: mini-14}
+      august: {word: august}
+      tightening: {word: tightening}
+  - shot_id: R-06-05
+    turn_id: 5814f3374efbb843
+    scene: TheRepeal
+    instance: r06
+    cues:
+      stock: {word: stock}
+      grip: {word: grip}
+
+  - shot_id: R-07
+    turn_id: 710692280e905645
+    scene: TheRight
+    instance: r07
+    cues:
+      reel: {ms: 0}
+  - shot_id: R-07-02
+    turn_id: 077b55e6ef1bbf7f
+    scene: TheRight
+    instance: r07
+    cues:
+      privilege: {word: privilege}
+  - shot_id: R-07-03
+    turn_id: 7205f00a5f085108
+    scene: TheRight
+    instance: r07
+    cues:
+      unalienable: {word: unalienable}
+  - shot_id: R-07-04
+    turn_id: 2688c25d92fa76cc
+    scene: TheRight
+    instance: r07
+    cues:
+      locke: {word: locke}
+      animals: {word: animals}
+      prey: {word: prey}
+
+  - shot_id: R-08
+    turn_id: a6dd8735def362a8
+    scene: TheWage
+    instance: r08
+    cues:
+      firearms: {word: firearms}
+      planters: {word: planters}
+  - shot_id: R-08-02
+    turn_id: c3633a567d1b89c4
+    scene: TheWage
+    instance: r08
+    cues:
+      wage: {word: wage}
+      mason: {word: mason}
+      sink: {word: sink}
+      date: {word: date}
+  - shot_id: R-08-03
+    turn_id: 0ebd26be7ea87b7f
+    scene: TheWage
+    instance: r08
+    cues:
+      lexington: {ms: 0}
+      muskets: {word: muskets}
+
+  - shot_id: R-09
+    turn_id: c2c57b30dc43fbb6
+    scene: TheGovernor
+    instance: r09
+    cues:
+      reel: {ms: 0}
+  - shot_id: R-09-02
+    turn_id: 5f26e76ebf926953
+    scene: TheGovernor
+    instance: r09
+    cues:
+      healey: {word: healey}
+      none: {word: none}
+      incoherent: {word: incoherent}
+
+  - shot_id: R-10
+    turn_id: 05f776724a9cea20
+    scene: TheReturn
+    instance: r10
+    cues:
+      poverty: {word: poverty}
+      zero: {word: zero}
+      storage: {word: storage}
+  - shot_id: R-10-02
+    turn_id: ebcc516af8577d2c
+    scene: TheReturn
+    instance: r10
+    cues:
+      tomorrow: {word: tomorrow}
+      systemic: {word: systemic}
+      standing: {word: standing}

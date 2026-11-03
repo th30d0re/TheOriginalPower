@@ -1,0 +1,16 @@
+{
+  "component": "TitleCard",
+  "headline": "Black women, 2021",
+  "items": [
+    {
+      "title": "Gun ownership",
+      "emphasis": "+87%",
+      "detail": "NSSF survey. He called that record paranoia"
+    }
+  ],
+  "sources": "Source: NSSF",
+  "art": {
+    "src": "assets/quiver/g21_stat87.svg",
+    "size": "strip"
+  }
+}

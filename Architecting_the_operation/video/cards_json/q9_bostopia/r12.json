@@ -1,0 +1,17 @@
+{
+  "component": "PartsCard",
+  "headline": "The stock and the grip",
+  "parts": [
+    {
+      "image": "assets/parts/stock.png",
+      "title": "Adjustable stock",
+      "detail": "Length of pull, so a smaller or disabled shooter can fit the rifle"
+    },
+    {
+      "image": "assets/parts/pistol_grip.png",
+      "title": "Grip",
+      "detail": "A hand position a smaller shooter can control"
+    }
+  ],
+  "sources": "Source: G.L. c. 140, \u00a7 121, the feature list"
+}

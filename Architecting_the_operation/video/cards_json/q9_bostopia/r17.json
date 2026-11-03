@@ -1,0 +1,15 @@
+{
+  "component": "TitleCard",
+  "headline": "The number one thing",
+  "items": [
+    {
+      "title": "Programs for kids",
+      "detail": "What she names as the number one thing"
+    },
+    {
+      "title": "A yes vote funds none of them",
+      "detail": "The position is incoherent"
+    }
+  ],
+  "sources": "Source: Gov. Healey, @harvardseye reel"
+}

@@ -1,0 +1,26 @@
+{
+  "component": "CompareCard",
+  "headline": "Same round. The 2016 notice.",
+  "items": [
+    {
+      "title": "AR-15",
+      "points": [
+        "Banned by name"
+      ]
+    },
+    {
+      "title": "Ruger Mini-14",
+      "points": [
+        "Same round",
+        "The Attorney General lists it as not covered",
+        "Held on August 1, 2024, the rifle stays"
+      ]
+    }
+  ],
+  "sources": "Source: Massachusetts Attorney General, 2016 enforcement notice",
+  "art": {
+    "src": "assets/quiver/g15_ar15_mini14.svg",
+    "size": "hero"
+  },
+  "qrUrl": "https://www.mass.gov/enforcing-the-massachusetts-assault-weapons-ban"
+}
