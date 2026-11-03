@@ -1,11 +1,13 @@
 import React from 'react';
+import {ClipFrames} from './shared/ClipFrames';
 import type {SceneProps} from '@stage';
 import {Beat, SourceLine} from './shared/Beat';
 import {QrMark, cornerQr, cornerSource} from './shared/QrMark';
 
-export function TheRepeal(_props: SceneProps) {
+export function TheRepeal({segment}: SceneProps) {
   return (
     <>
+      <ClipFrames clip="bostopia_abusers" startMs={segment.start_ms} />
       <Beat id="grant" cue="jail" until="mini14" well box={{x: 60, y: 180, w: 960, h: 220}} title="He should lose the gun." />
       <Beat id="compare" cue="mini14" box={{x: 60, y: 180, w: 960, h: 460}} title="AR-15 · Mini-14" body="Banned by name. The ban leaves it open. Same round." />
       <Beat id="date" cue="august" bodyCue="tightening" box={{x: 60, y: 680, w: 960, h: 360}} title="August 1, 2024" body="Held that day, the rifle stays. After that date is who the tightening is written against." />

@@ -1,4 +1,5 @@
 import React from 'react';
+import {ClipFrames} from './shared/ClipFrames';
 import {staticFile} from 'remotion';
 import {cubicOut, progress, useCue, useStageMs} from '@stage';
 import type {SceneProps} from '@stage';
@@ -6,7 +7,7 @@ import {color} from '../../../yt02/stage/tokens';
 import {Beat, SourceLine} from './shared/Beat';
 import {QrMark} from './shared/QrMark';
 
-const GREEN_FRAMES = 129;
+const GREEN_FRAMES = 386;
 
 const SMALL = Array.from({length: 72}, (_, index) => {
   const column = index % 18;
@@ -14,16 +15,18 @@ const SMALL = Array.from({length: 72}, (_, index) => {
   return {id: `receipt-${index}`, x: 108 + column * 36, y: 500 + row * 28};
 });
 
-export function TheCheck(_props: SceneProps) {
+export function TheCheck({segment}: SceneProps) {
   const ms = useStageMs();
   const at = useCue('receipt').at;
   const greenAt = useCue('green').at;
   const backAt = useCue('virginia').at;
   const t = cubicOut(progress(ms, at, at + 520));
-  const greenFrame = Math.min(GREEN_FRAMES, Math.max(1, Math.floor((ms - greenAt) / 100) + 1));
+  // 30 fps frames from the excerpt's in-point; the mix carries her audio from greenAt with no offset (measured).
+  const greenFrame = Math.min(GREEN_FRAMES, Math.max(1, Math.floor(((ms - greenAt) * 30) / 1000) + 1));
   const showGreen = ms >= greenAt && ms < backAt;
   return (
     <>
+      <ClipFrames clip="bostopia_smith" startMs={segment.start_ms} />
       <Beat id="receipt" cue="receipt" box={{x: 60, y: 180, w: 960, h: 640}} title="$50,000" body="Smith & Wesson Brands. September 25, 2024. One receipt among 3,324. 2,499 are $100 or less." />
       {ms >= at && SMALL.map(mark => (
         <div
