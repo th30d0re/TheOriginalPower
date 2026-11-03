@@ -32,6 +32,39 @@
       ],
       "port": 9000,
       "cwd": "Architecting_the_operation/video/motioncanvas"
+    },
+    {
+      "name": "stage-site",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "--prefix",
+        "/Users/emmanuel/Documents/Theory/scriptCast-stage/video",
+        "run",
+        "site",
+        "--",
+        "--port",
+        "5310",
+        "--strictPort"
+      ],
+      "port": 5310
+    },
+    {
+      "name": "yt02-dashboard-site",
+      "runtimeExecutable": "env",
+      "runtimeArgs": [
+        "STAGE_EPISODE_DIR=/Users/emmanuel/Documents/Theory/TheOriginalPower/Architecting_the_operation/video/yt02/stage",
+        "STAGE_PLAN=/Users/emmanuel/Documents/Theory/TheOriginalPower/Architecting_the_operation/video/yt02/stage/review/stage_plan.json",
+        "npm",
+        "--prefix",
+        "/Users/emmanuel/Documents/Theory/scriptCast-stage/video",
+        "run",
+        "site",
+        "--",
+        "--port",
+        "5311",
+        "--strictPort"
+      ],
+      "port": 5311
     }
   ]
 }

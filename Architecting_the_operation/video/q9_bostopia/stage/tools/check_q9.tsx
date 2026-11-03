@@ -31,6 +31,65 @@ const ALLOWED_NUMBERS = new Set([
 
 const BANNED = [/Tulsa/i, /Madison/, /\b2004\b/, /machine[- ]gun/i, /forced[- ]reset/i, /\+58%/, /Article 17/];
 
+const DRAFT: Record<string, string> = {
+  b9dbf73a0ee1def9: "That's Evan George, Bostopia News, closing his case for a yes on Question 9. A no vote, in his mouth, makes you a psychopath, of one of four kinds.",
+  f1308549789ee5b1: 'The only politics he names is libertarianism. This answer comes from the left.',
+  fe1ee0121f8ffbe8: "He cites no source for that. The state bans the AR-15. Rifles were 3 percent of the gun murders in the FBI's 2024 count.",
+  e17058b56b3d1acd: 'Why would anyone want arms against this government. That question comes from a privileged position. It is an easy question when this government has been your protector.',
+  '00569698b6d5aa6c': 'Here in Boston, the areas a federal map graded C and D in 1938 have about seven times the shooting rate of A and B. The map is the government\'s. I call that state-sponsored democide.',
+  b3def8e665405eb1: 'Gun ownership among Black women jumped eighty-seven percent in 2021. He took that record and called it paranoia.',
+  '2b6f08bdbf08b868': "He names Smith and Wesson. The check is dated September 25th, 2024. Fifty thousand dollars, from Smith and Wesson Brands, to The Civil Rights Coalition, the committee for a no vote. That is one receipt. The committee's file holds three thousand three hundred twenty-four receipts, and two thousand four hundred ninety-nine of them are a hundred dollars or less. I had been on the repeal from the time Chapter 135 was still a bill, through the revisions and the listening tours.",
+  '059c7a0e0824a461': "A first license runs two hundred dollars or more. Virginia's poll tax was about fifteen dollars a year in today's money, and the Supreme Court struck it down. Median net wealth in Massachusetts is about five hundred fifty thousand dollars for white families and seventy-eight hundred for Black families. The household it keeps out is the one still arriving.",
+  '3771e77a712a1de8': 'A man who abuses his family should lose the gun. and the ability to bear any arm. They should be put in jail for abuse.',
+  '0d199cd59fc2d6df': 'He took that provision and made it a description of everyone who votes no.',
+  c9f407fbbc18940f: 'A no vote repeals the 2024 act. Massachusetts goes back to the gun law it already had, and that law was already strict. The AR-15 was already banned by name. In 2016 the Attorney General issued a notice that told owners and dealers which guns counted as copies, and that notice functioned as the line. A Ruger Mini-14 fires the same round, and the Attorney General lists it as a gun the ban leaves open. People with counsel could fight a classification. People without counsel lived under the notice. If you legally held one of these rifles on August 1st, 2024, you can register it and keep it. Anyone after that date is who the tightening is written against.',
+  '5814f3374efbb843': 'The parts that definition still targets, an adjustable stock, a grip, are what let a smaller or disabled shooter fit and control a rifle. Tightening them lands on women and on disabled people protecting themselves. He is describing those people as alcoholic men hiding abuse from a school.',
+  '077b55e6ef1bbf7f': "He calls the right a privilege, billed to everyone else's safety.",
+  '7205f00a5f085108': 'The right to defend yourself is unalienable. The Declaration uses that word. It belongs to a person before any government recognizes it. Any politics that takes autonomy seriously inherits the right, because autonomy someone else can override is a permission.',
+  '2688c25d92fa76cc': 'John Locke wrote the account that word comes from. He called the condition before government the state of nature. In it, a person has the liberty to defend their right, and the power to maintain it on equal terms with whoever comes against them. Defending the life is part of having the life. other animals carry that same charge, in teeth, in speed, in venom, in the herd. Human beings built the firearm. It is the most effective tool we have made for it. A government that disarms the people and arms itself puts them in a worse condition than the state of nature. Hand the force to the legislator, and he can make a prey of them when he pleases.',
+  a6dd8735def362a8: 'That asymmetry is part of why so many Black people are on this side of the Atlantic. European traders sold firearms to coastal African kingdoms, and the price they took was enslaved people. A kingdom without the guns became the next supply. The planters here held the enslaved population with that same gap in force.',
+  c3633a567d1b89c4: 'The guns went to the White buffer class, as a wage. In the Southern states the militias that received them were the slave patrols. The deal was parity for the white men who policed the boundary, and the proof that the boundary would stay off them. George Mason said the method in Virginia in 1788. To disarm the people is the best and most effective way to enslave them. He said to do it gradually. Weaken them, and let them sink. That is the date in this law.',
+  '0ebd26be7ea87b7f': "Massachusetts already drew this line in Lexington, April 1775. The British marched on Lexington and Concord to take the colony's arms, and the people met them with muskets, which today would be the equivalent of an AR-15.",
+  '5f26e76ebf926953': 'That is Governor Healey. A yes vote funds none of the programs she names. The position is incoherent.',
+  '05f776724a9cea20': 'Across the fifty states, poverty tracks gun homicide at about point seven. Once you account for poverty and inequality, the link between gun laws and gun homicide is essentially zero. Massachusetts already has the laws RAND finds work best: safe storage and background checks.',
+  ebcc516af8577d2c: 'Today is voting day. Vote no on Question 9. This law upholds racism, sexism, and systemic ableism in the same statute. A no vote returns the state to the restrictions it already had, and it leaves safe storage and background checks standing. The yes campaign is describing a larger change than that return contains.',
+};
+
+const SOURCED = [
+  'Rifles, 3%', '42%', '42% of that count names no firearm type.', 'Pew Research, FBI gun murders, 2024',
+  '1938 Boston map', '3.14', '3.12', '0.43', 'Shootings per 10,000 residents per year.',
+  'Sources: Mapping Inequality · Analyze Boston · ACS 2024',
+  '+87%', 'Black women, gun ownership, 2021.', 'He called that record paranoia.', 'Source: NSSF via KRON4',
+  '$50,000', '3,324', '2,499', 'Source: OCPF report 960537, receipt 17220407', '$200 or more',
+  '+50% and +32.7%', 'Basic $80 to $150', 'Live fire $120 to $199', 'LTC fee $100',
+  'Boston, Weymouth, Quincy, Rockland, and Braintree already required it.',
+  'Loretta Green · EOPSS live-fire report', '$550,000', '$7,800',
+  'He should lose the gun.', 'August 1, 2024', 'Stock and grip',
+  'Source: Massachusetts Attorney General, 2016 notice',
+  'Other animals carry that charge.', "Locke, Second Treatise, §137, Founders' Constitution",
+  'Arms for captives', 'The Original Power, Ch. 9, §9.3.6 Arms as a Wage',
+  'W = ψ_m + jψ_s', 'ψ_m', 'ψ_s',
+  'Source: Gov. Healey, her yes-on-9 reel',
+  'Poverty r = +0.72', 'r = +0.29', 'About zero', 'Sources: CDC · Census · RAND Gun Policy in America',
+  'Source: @bostopianews, Question 9 reel, Nov. 2, 2026',
+  'Evan George · @bostopianews · Instagram · Nov. 2, 2026',
+  'Gov. Maura Healey · via @harvardseye · Instagram',
+];
+
+function norm(value: string) {
+  return value.toLowerCase().replace(/-/g, ' ').replace(/&/g, ' and ').replace(/(\d)\.(\d)/g, '$1\u0000$2').replace(/[^\p{L}\p{N}+\u0000\s]/gu, '').replace(/\u0000/g, '.').replace(/\s+/g, ' ').trim();
+}
+const sourcedNorm = new Set(SOURCED.map(norm));
+const shotList = plan.segments.flatMap(segment => segment.shots.map(shot => ({...shot, scene: segment.scene})));
+function draftsAt(ms: number) {
+  const index = shotList.findIndex(shot => ms >= shot.start_ms && ms < shot.end_ms);
+  if (index < 0) return '';
+  let text = DRAFT[shotList[index].turn_id] ?? '';
+  const previous = shotList[index - 1];
+  if (previous && previous.scene === shotList[index].scene && ms < previous.end_ms + 700) text += ` ${DRAFT[previous.turn_id] ?? ''}`;
+  return norm(text);
+}
+
 for (const hook of ['useState', 'useEffect', 'useLayoutEffect', 'useReducer', 'useRef'] as const) {
   (React as any)[hook] = () => { throw new Error(`${hook} reached in Q9 render`); };
   const Probe = () => { (React as any)[hook](); return null; };
@@ -78,6 +137,7 @@ for (const scene of Object.keys(sceneComponents) as SceneName[]) {
     frames.push({scene, ms: at, kind: cue});
   }
   frames.push({scene, ms: segment.end_ms - 1000 / plan.fps, kind: 'end'});
+  for (const shot of segment.shots) frames.push({scene, ms: shot.end_ms - 1000 / plan.fps, kind: `shot-end ${shot.shot_id}`});
 }
 const rendered = frames.map(frame => ({...frame, html: render(frame.scene, frame.ms)}));
 const byKind = (scene: SceneName) => rendered.filter(frame => frame.scene === scene);
@@ -122,6 +182,51 @@ if (process.env.Q9_SNAPSHOT === '1') {
       const number = match[0].replace(/[$+,]/g, '');
       if (!ALLOWED_NUMBERS.has(number)) fail(`${scene} ${kind} shows number ${match[0]} with no source in this cut`);
     }
+    if (html.includes('data-clip')) {
+      for (const item of auditItems(html).filter(item => item.opacity > 0.05)) {
+        if (item.role !== 'text' || !item.id.startsWith('clip-label-')) fail(`${scene} ${kind} mounts ${item.role} “${item.id}” over a clip`);
+      }
+    }
+    const visible = auditItems(html).filter(item => item.opacity > 0.05);
+    const spoken = draftsAt(ms);
+    let phrases = 0;
+    for (const tag of html.matchAll(/<[^>]*\bdata-text="([^"]+)"[^>]*>/g)) {
+      const id = tag[1];
+      const source = tag[0];
+      const item = visible.find(entry => entry.role === 'text' && entry.id === id);
+      if (!item) continue;
+      const kindName = source.match(/\bdata-kind="([^"]+)"/)?.[1];
+      const fitted = source.match(/\bdata-fit="sans (\d+(?:\.\d+)?)/)?.[1];
+      const fontPx = Number(source.match(/(\d+)px/)?.[1] ?? NaN);
+      if (id.startsWith('clip-label-')) {
+        if (!(fontPx >= 24)) fail(`${scene} ${kind} clip label “${id}” is below 24 px`);
+      } else if (kindName === 'phrase') {
+        phrases += 1;
+        const size = Number(fitted);
+        if (!(size >= 60 && size <= 84)) fail(`${scene} ${kind} phrase “${item.text}” is ${size} px`);
+      } else if (kindName === 'headline') {
+        const size = Number(fitted);
+        if (!(size >= 56)) fail(`${scene} ${kind} headline “${item.text}” is ${size} px`);
+      } else if (kindName === 'body') {
+        const size = Number(fitted);
+        if (!(size >= 40)) fail(`${scene} ${kind} body “${item.text}” is ${size} px`);
+      } else if (kindName === 'source') {
+        const size = Number(fitted);
+        if (!(size >= 24)) fail(`${scene} ${kind} source “${item.text}” is ${size} px`);
+      } else fail(`${scene} ${kind} text “${item.text}” has no type role`);
+      const normalized = norm(item.text);
+      if (normalized && !sourcedNorm.has(normalized) && !spoken.includes(normalized)) fail(`${scene} ${kind} shows “${item.text}” outside the speaker's turn and the source list`);
+    }
+    if (phrases > 3) fail(`${scene} ${kind} keeps ${phrases} phrase lines`);
+    if (kind.startsWith('shot-end') && !html.includes('data-clip')) {
+      if (!visible.length) fail(`${scene} ${kind} is empty`);
+      else {
+        const top = Math.min(...visible.map(item => item.y));
+        const bottom = Math.max(...visible.map(item => item.y + item.h));
+        const span = bottom - top;
+        if (span < 0.7 * (1780 - 140)) fail(`${scene} ${kind} spans ${Math.round(span)} px, under 70% of the safe height`);
+      }
+    }
   }
 
   const expect: [SceneName, string, string[]][] = [
@@ -140,7 +245,7 @@ if (process.env.Q9_SNAPSHOT === '1') {
     ['TheCheck', 'receipt', ['$50,000', '3,324', '2,499']],
     ['TheCheck', 'license', ['$200 or more']],
     ['TheCheck', 'fifteen', ['Loretta Green', '+50% and +32.7%', 'already required it']],
-    ['TheCheck', 'arriving', ['$550,000', '$7,800']],
+    ['TheCheck', 'wealth', ['$550,000', '$7,800', 'white families']],
     ['TheRepeal', 'jail', ['He should lose the gun.']],
     ['TheRepeal', 'mini14', ['AR-15', 'Mini-14', 'Same round.']],
     ['TheRepeal', 'august', ['August 1, 2024']],
@@ -195,6 +300,8 @@ if (process.env.Q9_SNAPSHOT === '1') {
     }
   }
 
+  const green = byKind('TheCheck').find(frame => frame.kind === 'green');
+  if (green && (green.html.includes('data-text') || green.html.includes('data-shape'))) fail('TheCheck green frame still mounts a beat');
   const repeal = plain(byKind('TheRepeal').find(frame => frame.kind === 'mini14')!.html);
   if (repeal.includes('He should lose the gun.')) fail('TheRepeal still shows the grant after the Mini-14 cue');
   const selfTests = auditSelfTest();

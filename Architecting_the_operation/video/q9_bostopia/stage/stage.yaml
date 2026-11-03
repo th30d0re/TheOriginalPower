@@ -20,7 +20,10 @@ shots:
     scene: HisClose
     instance: r01
     cues:
+      case: {word: case}
+      question: {word: Question}
       mouth: {word: mouth}
+      psychopath: {word: psychopath}
       four: {word: four}
   - shot_id: R-01-03
     turn_id: f1308549789ee5b1
@@ -49,6 +52,7 @@ shots:
     scene: SaintDomingue
     instance: r02
     cues:
+      against: {word: against}
       privileged: {word: privileged}
       protector: {word: protector}
 
@@ -58,6 +62,7 @@ shots:
     instance: r03
     cues:
       boston: {word: boston}
+      graded: {word: graded}
       seven: {word: seven}
       democide: {word: democide}
 
@@ -66,6 +71,7 @@ shots:
     scene: Paranoia
     instance: r04
     cues:
+      women: {word: women}
       eightyseven: {word: eighty-seven}
       paranoia: {word: paranoia}
 
@@ -81,7 +87,12 @@ shots:
     instance: r05
     cues:
       smith: {word: smith}
+      september: {word: September}
+      fifty: {word: Fifty}
       receipt: {word: receipt}
+      less: {word: less}
+      repeal: {word: repeal}
+      tours: {word: tours}
   - shot_id: R-05-03
     turn_id: 059c7a0e0824a461
     scene: TheCheck
@@ -91,7 +102,9 @@ shots:
       green: {ms: 3360}
       virginia: {word: "Virginia's"}
       fifteen: {word: fifteen}
+      struck: {word: struck}
       wealth: {word: wealth}
+      seventyeight: {word: seventy-eight}
       arriving: {word: arriving}
 
   - shot_id: R-06
@@ -106,6 +119,8 @@ shots:
     instance: r06
     cues:
       abuses: {word: abuses}
+      gun: {word: gun}
+      bear: {word: bear}
       jail: {word: jail}
   - shot_id: R-06-03
     turn_id: 0d199cd59fc2d6df
@@ -118,8 +133,12 @@ shots:
     scene: TheRepeal
     instance: r06
     cues:
+      repeals: {word: repeals}
       strict: {word: strict}
+      banned: {word: banned}
+      notice: {word: notice, occurrence: 1}
       mini14: {word: mini-14}
+      without: {word: without}
       august: {word: august}
       tightening: {word: tightening}
   - shot_id: R-06-05
@@ -129,6 +148,10 @@ shots:
     cues:
       stock: {word: stock}
       grip: {word: grip}
+      shooter: {word: shooter}
+      lands: {word: lands}
+      protecting: {word: protecting}
+      school: {word: school}
 
   - shot_id: R-07
     turn_id: 710692280e905645
@@ -142,19 +165,25 @@ shots:
     instance: r07
     cues:
       privilege: {word: privilege}
+      safety: {word: safety}
   - shot_id: R-07-03
     turn_id: 7205f00a5f085108
     scene: TheRight
     instance: r07
     cues:
       unalienable: {word: unalienable}
+      declaration: {word: Declaration}
+      permission: {word: permission}
   - shot_id: R-07-04
     turn_id: 2688c25d92fa76cc
     scene: TheRight
     instance: r07
     cues:
       locke: {word: locke}
+      liberty: {word: liberty}
       animals: {word: animals}
+      firearm: {word: firearm}
+      worse: {word: worse}
       prey: {word: prey}
 
   - shot_id: R-08
@@ -163,6 +192,7 @@ shots:
     instance: r08
     cues:
       firearms: {word: firearms}
+      enslaved: {word: enslaved, occurrence: 1}
       planters: {word: planters}
   - shot_id: R-08-02
     turn_id: c3633a567d1b89c4
@@ -170,7 +200,9 @@ shots:
     instance: r08
     cues:
       wage: {word: wage}
+      patrols: {word: patrols}
       mason: {word: mason}
+      disarm: {word: disarm}
       sink: {word: sink}
       date: {word: date}
   - shot_id: R-08-03
@@ -202,6 +234,7 @@ shots:
     instance: r10
     cues:
       poverty: {word: poverty}
+      point: {word: point}
       zero: {word: zero}
       storage: {word: storage}
   - shot_id: R-10-02
@@ -212,3 +245,4 @@ shots:
       tomorrow: {word: tomorrow}
       systemic: {word: systemic}
       standing: {word: standing}
+      larger: {word: larger}

@@ -1,18 +1,34 @@
 import React from 'react';
-import {ClipFrames} from './shared/ClipFrames';
+import {useCue, useStageMs} from '@stage';
 import type {SceneProps} from '@stage';
-import {Beat, SourceLine} from './shared/Beat';
-import {QrMark, cornerQr, cornerSource} from './shared/QrMark';
+import {ClipFrames, clipEndMs} from './shared/ClipFrames';
+import {Edge, Frame, Phrases, SourceLine, type PhraseSpec} from './shared/layout';
+import {QrMark, cornerQr} from './shared/QrMark';
 
 export function TheGovernor({segment}: SceneProps) {
+  const ms = useStageMs();
+  const done = ms >= clipEndMs('reel_a1_short', segment.start_ms);
+  const healeyAt = useCue('healey').at;
+  const noneAt = useCue('none').at;
+  const incoherentAt = useCue('incoherent').at;
+  const lines: PhraseSpec[] = [
+    {id: 'ph-healey', at: healeyAt, text: 'That is Governor Healey.'},
+    {id: 'ph-none', at: noneAt, text: 'A yes vote funds none of the programs she names.'},
+    {id: 'ph-incoherent', at: incoherentAt, text: 'The position is incoherent.'},
+  ];
+  const show = done && ms >= healeyAt;
   return (
     <>
       <ClipFrames clip="reel_a1_short" startMs={segment.start_ms} />
-      <Beat id="name" cue="healey" box={{x: 60, y: 220, w: 960, h: 240}} title="Governor Healey" />
-      <Beat id="programs" cue="none" box={{x: 60, y: 520, w: 960, h: 360}} title="A yes vote funds none of the programs she names." />
-      <Beat id="position" cue="incoherent" box={{x: 60, y: 940, w: 960, h: 280}} title="The position is incoherent." />
-      <QrMark id="healey-qr" cue="healey" url="https://www.instagram.com/reel/DdoZBRXIbK5/" x={cornerQr.x} y={cornerQr.y} size={cornerQr.size} />
-      <SourceLine cue="healey" box={cornerSource} text="Source: Gov. Healey, her yes-on-9 reel" />
+      {show && (
+        <>
+          <Frame id="healey-card" x={60} y={160} w={960} h={1424} />
+          <Edge id="healey-edge" x={60} y={160} h={1424} />
+          <Phrases lines={lines} ms={ms} spread x={96} y={240} w={880} bottom={1460} />
+        </>
+      )}
+      {show && <QrMark id="healey-qr" cue="healey" url="https://www.instagram.com/reel/DdoZBRXIbK5/" x={cornerQr.x} y={cornerQr.y} size={cornerQr.size} />}
+      {show && <SourceLine at={healeyAt} text="Source: Gov. Healey, her yes-on-9 reel" />}
     </>
   );
 }
