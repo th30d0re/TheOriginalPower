@@ -89,7 +89,7 @@ export function WagePlane({x, y, w, h}: {x: number; y: number; w: number; h: num
           fontFamily="system-ui, sans-serif"
           fontWeight={600}
         >
-          ψₘ (firearm / kinetic guarantee)
+          ψₛ (status / slave patrols)
         </text>
         <text
           x={cx + 16}
@@ -100,7 +100,7 @@ export function WagePlane({x, y, w, h}: {x: number; y: number; w: number; h: num
           fontFamily="system-ui, sans-serif"
           fontWeight={600}
         >
-          ψₛ (status / slave patrols)
+          ψₘ (firearm / kinetic guarantee)
         </text>
         <text
           x={px + 16}
