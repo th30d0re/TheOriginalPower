@@ -420,8 +420,8 @@ export function AllportAntipathy({segment}: SceneProps) {
           >
             <svg width="620" height="118" viewBox="0 0 620 118" aria-hidden="true">
               <line x1="80" y1="88" x2="540" y2="88" stroke={muted} strokeWidth="2" />
-              <path d="M210 88 A100 100 0 0 1 410 88" fill="none" stroke={gold} strokeWidth="3" />
-              <line x1="310" y1="88" x2="375" y2="32" stroke={gold} strokeWidth="4" strokeLinecap="round" />
+              <path d="M250 88 A60 60 0 0 1 370 88" fill="none" stroke={gold} strokeWidth="3" />
+              <line x1="310" y1="88" x2="352" y2="46" stroke={gold} strokeWidth="4" strokeLinecap="round" />
               <circle cx="310" cy="88" r="6" fill={gold} />
             </svg>
           </div>
@@ -473,7 +473,7 @@ export function AllportAntipathy({segment}: SceneProps) {
               >
                 <svg width="620" height="118" viewBox="0 0 620 118" aria-hidden="true">
                   <circle cx="310" cy="59" r="42" fill="none" stroke={raceRed} strokeWidth="2.5" strokeDasharray="5 4" />
-                  <path d="M310 78 C298 66 276 52 276 36 C276 20 298 16 310 30 C322 16 344 20 344 36 C344 52 322 66 310 78 Z" fill={raceRed} opacity="0.7" />
+                  <path transform="translate(310 59) scale(0.72) translate(-310 -50)" d="M310 78 C298 66 276 52 276 36 C276 20 298 16 310 30 C322 16 344 20 344 36 C344 52 322 66 310 78 Z" fill={raceRed} opacity="0.7" />
                 </svg>
               </div>
               <Label id="prejudice-block-footer" box={{x: 1100, y: 523, w: 620, h: 30}} size={20} weight={500} ink={raceRed} opacity={ms >= cue.t49Emotional ? t49EmotionalP : 1}>

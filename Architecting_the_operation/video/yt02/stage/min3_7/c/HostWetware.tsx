@@ -100,8 +100,8 @@ export function HostWetware({segment}:SceneProps) {
   return <StageSceneFrame segment={segment}>
     {ms>=cue.terminology&&<>
       <div data-book-ribbon="true" {...shapeAttrs('ribbon',L.ribbon,'frame')} style={{position:'absolute',left:L.ribbon.x,top:L.ribbon.y,width:L.ribbon.w,height:L.ribbon.h,boxSizing:'border-box',background:color('color/fill/gold-wash'),border:`1px solid ${gold}`,opacity:ribbonP}}/>
-      <Label id="ribbon-text" box={{x:L.ribbon.x+20,y:L.ribbon.y+18,w:L.ribbon.w-40,h:36}} size={24} ls={2} align="center" ink={gold} opacity={ribbonP}>THE ORIGINAL POWER · BOOK MATERIAL</Label>
-      <SceneSource text="THE ORIGINAL POWER · BOOK MATERIAL" opacity={ribbonP}/>
+      <Label id="ribbon-text" box={{x:L.ribbon.x+20,y:L.ribbon.y+18,w:L.ribbon.w-40,h:36}} size={24} ls={2} align="center" ink={gold} opacity={ribbonP}>THE ORIGINAL POWER · CHAPTER 2 · §2.3.4 · HOST WETWARE</Label>
+      <SceneSource text="The Original Power, Chapter 2, §2.3.4 · Host wetware" opacity={ribbonP}/>
     </>}
 
     {preBandShown&&<div data-pre-band-field="true" style={{opacity:preBandOpacity}}>

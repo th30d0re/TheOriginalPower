@@ -29,18 +29,23 @@ export function NeuralField({layers, inputs, weights, activationProgress:rawActi
     x:NEURAL_FIELD.padX+layer*(NEURAL_FIELD.width-2*NEURAL_FIELD.padX)/Math.max(1,counts.length-1),
     y:NEURAL_FIELD.padY+index*(NEURAL_FIELD.height-2*NEURAL_FIELD.padY)/Math.max(1,count-1),
   })));
+  // One transform places a node and every wire end that meets it, so compression never separates them.
+  const shifted=(point:{x:number;y:number},layerIndex:number)=>({
+    x:point.x-40*compression*(layerIndex/Math.max(1,counts.length-1)),
+    y:point.y+(NEURAL_FIELD.height/2-point.y)*.22*compression,
+  });
   let wireIndex=0;
   return <div data-shared="NeuralField" style={{position:'relative', width:NEURAL_FIELD.width, height:NEURAL_FIELD.height, overflow:'hidden', background:color('color/fill/panel-render'), border:`1px solid ${color('color/line/hairline')}`}}>
     <svg width={NEURAL_FIELD.width} height={NEURAL_FIELD.height} viewBox={`0 0 ${NEURAL_FIELD.width} ${NEURAL_FIELD.height}`} style={{position:'absolute',inset:0}} aria-label="Neural processing field">
       {positions.slice(0,-1).flatMap((layer,layerIndex)=>layer.flatMap(start=>positions[layerIndex+1].map(end=>{
         const weight=allWeights.length?allWeights[wireIndex%allWeights.length]:.5, index=wireIndex++;
         const strength=.12+.68*clamp(Math.abs(weight))*activation;
-        return <line key={`w-${index}`} data-neural-wire={index} x1={start.x} y1={start.y} x2={end.x-40*compression} y2={end.y+(NEURAL_FIELD.height/2-end.y)*.22*compression} stroke={weight<0?color('color/marker/race'):color('color/line/wire')} strokeWidth={1+3*strength} opacity={strength}/>;
+        const a=shifted(start,layerIndex), b=shifted(end,layerIndex+1);
+        return <line key={`w-${index}`} data-neural-wire={index} x1={a.x} y1={a.y} x2={b.x} y2={b.y} stroke={weight<0?color('color/marker/race'):color('color/line/wire')} strokeWidth={1+3*strength} opacity={strength}/>;
       })))}
       {positions.flatMap((layer,layerIndex)=>layer.map((point,index)=>{
         const pulse=clamp(activation*counts.length-layerIndex+.15*index);
-        const x=point.x-40*compression*(layerIndex/Math.max(1,counts.length-1));
-        const y=point.y+(NEURAL_FIELD.height/2-point.y)*.22*compression;
+        const {x,y}=shifted(point,layerIndex);
         return <g key={`n-${layerIndex}-${index}`} data-neural-node={`${layerIndex}-${index}`}>
           <circle cx={x} cy={y} r={9+5*pulse} fill={color('color/bg/field')} stroke={pulse>.5?color('color/fill/gold'):color('color/line/hairline')} strokeWidth={2}/>
           <circle cx={x} cy={y} r={4} fill={color('color/fill/gold')} opacity={pulse}/>

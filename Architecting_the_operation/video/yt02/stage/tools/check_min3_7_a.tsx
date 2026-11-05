@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {createHash} from 'node:crypto';
 import {ClockContext,PlanContext,type StagePlan} from '@stage';
-import {SequenceAsTheory,SEQUENCE_LAYOUT,numberRailWirePoints,sequenceNodeBoxes} from '../min3_7/a/SequenceAsTheory';
+import {SequenceAsTheory,SEQUENCE_LAYOUT,nodeBadgeBox,sequenceNodeBoxes} from '../min3_7/a/SequenceAsTheory';
 import {HeartsAudit,HEARTS_LAYOUT} from '../min3_7/a/HeartsAudit';
 import {TermsInOneBucket,TERMS_LAYOUT} from '../min3_7/a/TermsInOneBucket';
 import {auditItems,auditLayout,auditSelfTest} from './layout_audit';
@@ -152,7 +152,7 @@ if(process.env.MIN3_7_A_SNAPSHOT==='1'){
   for(let sample=0;sample<=10;sample++){
     const nodes=sequenceNodeBoxes(sample/10);
     assertPairwiseClear(nodes,`SequenceAsTheory causal nodes at sample ${sample}`);
-    for(let index=0;index<3;index++)assert.ok(numberRailWirePoints(index,nodes)[0][0]-(SEQUENCE_LAYOUT.numberRail.x+SEQUENCE_LAYOUT.numberRail.w)>=12,`SequenceAsTheory rail wire ${index+1} lacks a 12 px label gap at sample ${sample}`);
+    for(let index=0;index<3;index++)assert.ok(nodeBadgeBox(nodes[index]).y>=SEQUENCE_LAYOUT.claim.y+SEQUENCE_LAYOUT.claim.h,`SequenceAsTheory node badge ${index+1} collides with the causal claim band at sample ${sample}`);
   }
   assertPairwiseClear([HEARTS_LAYOUT.debate,HEARTS_LAYOUT.targets],'HeartsAudit turn 13');
   assertPairwiseClear([HEARTS_LAYOUT.inputs,HEARTS_LAYOUT.router,HEARTS_LAYOUT.thoughts],'HeartsAudit turn 14');

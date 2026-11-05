@@ -36,8 +36,8 @@ export function Panel({id,box,opacity=1,accent,style}:{id:string;box:Box;opacity
   return <div {...shapeAttrs(id,box,'frame')} style={{...PANEL_STYLE,left:box.x,top:box.y,width:box.w,height:box.h,opacity,border:accent?`1px solid ${color(accent)}`:PANEL_STYLE.border,...style}}/>;
 }
 
-export function AuditedTermBlock({id,box,term,summary,glyph,accent='color/fill/gold',unit,opacity=1,selected=false,titleSize=27,summarySize=24,termId,ms,pulses}:{
-  id:string;box:Box;term:string;summary?:string;glyph:React.ReactNode;accent?:string;unit?:string;opacity?:number;selected?:boolean;titleSize?:number;summarySize?:number;
+export function AuditedTermBlock({id,box,term,summary,glyph,accent='color/fill/gold',unit,opacity=1,selected=false,framed=false,titleSize=27,summarySize=24,termId,ms,pulses}:{
+  id:string;box:Box;term:string;summary?:string;glyph:React.ReactNode;accent?:string;unit?:string;opacity?:number;selected?:boolean;framed?:boolean;titleSize?:number;summarySize?:number;
   termId?:EquationTermId;ms?:number;pulses?:readonly number[];
 }){
   const title={x:box.x+92,y:box.y+18,w:box.w-112,h:66};
@@ -45,7 +45,7 @@ export function AuditedTermBlock({id,box,term,summary,glyph,accent='color/fill/g
   const icon={x:box.x+24,y:box.y+22,w:48,h:48};
   const unitBox={x:box.x+24,y:box.y+box.h-38,w:box.w-48,h:26};
   return <>
-    <Panel id={`${id}-frame`} box={box} opacity={opacity} accent={selected?accent:undefined} style={{border:selected?`2px solid ${color(accent)}`:undefined}}/>
+    <Panel id={`${id}-frame`} box={box} opacity={opacity} accent={selected||framed?accent:undefined} style={{border:selected?`2px solid ${color(accent)}`:framed?`1.5px solid ${color(accent)}`:undefined}}/>
     <div {...shapeAttrs(`${id}-icon`,icon,'mark',`${id}-icon`)} style={{position:'absolute',left:icon.x,top:icon.y,width:icon.w,height:icon.h,opacity,display:'grid',placeItems:'center'}}>{glyph}</div>
     {termId&&ms!==undefined
       ? <ColoredTerm term={termId} ms={ms} pulses={pulses} box={title} display={term} style={{position:'absolute',left:title.x,top:title.y,width:title.w,height:title.h,font:`650 ${titleSize}px "IBM Plex Sans"`,lineHeight:1.15,opacity}}/>

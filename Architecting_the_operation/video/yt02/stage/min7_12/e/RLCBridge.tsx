@@ -157,6 +157,12 @@ function RlcTermChip({
         pulses={pulses?.[term]}
         box={symbolBox}
         style={{
+          position: 'absolute',
+          left: symbolBox.x,
+          top: symbolBox.y,
+          width: symbolBox.w,
+          height: symbolBox.h,
+          boxSizing: 'border-box',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',

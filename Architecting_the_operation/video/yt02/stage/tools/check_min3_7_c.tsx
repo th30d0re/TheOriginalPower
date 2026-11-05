@@ -102,7 +102,7 @@ if(process.env.MIN3_7_C_SNAPSHOT==='1'){
   beat('UsThemSorting','t24Belonging',{text:['BELONGING'],markup:['data-belonging-wrap="true"']});
   beat('UsThemSorting','t24SelfConcept',{text:['SELF-CONCEPT'],markup:['data-self-ring="true"']});
 
-  beat('HostWetware','t25Terminology',{text:['THE ORIGINAL POWER · BOOK MATERIAL'],markup:['data-book-ribbon="true"']});
+  beat('HostWetware','t25Terminology',{text:['THE ORIGINAL POWER · CHAPTER 2 · §2.3.4 · HOST WETWARE'],markup:['data-book-ribbon="true"']});
   beat('HostWetware','t25Brain',{text:['NEURAL NETWORK'],markup:['data-shared="NeuralField"']});
   beat('HostWetware','t25Biological',{text:['BIOLOGICAL HOST WETWARE']});
   beat('HostWetware','t25Wetware',{markup:['data-input-socket="1"','data-input-socket="4"','data-compressed-bus="true"']});

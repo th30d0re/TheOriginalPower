@@ -44,19 +44,18 @@ function ContinuityPlate({opacity}:{opacity:number}){
 
 const RAIL_LABELS=['1. Individual Prejudice','2. Belief in Superiority','3. Systemic (if present)'] as const;
 const railLabelBox=(index:number):Box=>({x:150,y:346+index*144,w:180,h:54});
-export function numberRailWirePoints(index:number,nodes:Box[]):Point[]{
-  const label=railLabelBox(index),start:[number,number]=[label.x+label.w+12,label.y+label.h/2];
-  if(index===0)return [start,[nodes[0].x,nodes[0].y+42]];
-  if(index===1)return [start,[360,start[1]],[360,320],[nodes[1].x-12,320],[nodes[1].x-12,nodes[1].y+50],[nodes[1].x,nodes[1].y+50]];
-  return [start,[370,start[1]],[370,290],[nodes[2].x-12,290],[nodes[2].x-12,nodes[2].y+120],[nodes[2].x,nodes[2].y+120]];
-}
+/** Numbered badge that sits just above the top-left corner of each causal node and repeats its rail number. */
+export const nodeBadgeBox=(node:Box):Box=>({x:node.x,y:node.y-62,w:48,h:48});
 
 function NumberRail({ms,numberedAt,analyticalAt,orderAt,nodes}:{ms:number;numberedAt:number;analyticalAt:number;orderAt:number;nodes:Box[]}){
   const p=enter(ms,numberedAt,500),current=enter(ms,analyticalAt,600);
   return <div data-number-rail="true" style={{opacity:p}}>
     {ms>=analyticalAt&&<Label id="numbered-order" box={{x:150,y:224,w:180,h:30}} size={20} weight={500} align="center" opacity={current} ink={color('color/fill/gold')}>NUMBERED ORDER</Label>}
     {RAIL_LABELS.map((label,index)=>{const badge={x:150,y:288+index*144,w:48,h:48},text=railLabelBox(index);return <React.Fragment key={label}><div {...shapeAttrs(`rail-badge-${index+1}`,badge,'frame')} style={{position:'absolute',left:badge.x,top:badge.y,width:badge.w,height:badge.h,borderRadius:24,border:`2px solid ${color('color/fill/gold')}`,boxSizing:'border-box',opacity:.65+.35*current}}/><Label id={`rail-number-${index+1}`} box={badge} size={24} weight={500} align="center" opacity={.65+.35*current} style={{paddingTop:7}} ink={color('color/fill/gold')}>{index+1}</Label><Label id={`rail-label-${index+1}`} box={text} size={20} weight={400} lh={1.2} sans ink={color('color/text/soft')}>{label}</Label></React.Fragment>;})}
-    {ms>=orderAt&&<svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position:'absolute',inset:0}} aria-hidden="true">{RAIL_LABELS.map((_,index)=>{const points=numberRailWirePoints(index,nodes);return <path key={index} {...lineAttrs(`rail-wire-${index+1}`,points)} d={pathFrom(points)} fill="none" stroke={color('color/fill/gold')} strokeWidth="1.5" opacity={enter(ms,orderAt+index*90,430)}/>;})}</svg>}
+    {ms>=orderAt&&nodes.map((node,index)=>{const badge=nodeBadgeBox(node),at=enter(ms,orderAt+index*160,430);return <React.Fragment key={index}>
+      <div {...shapeAttrs(`node-badge-${index+1}`,badge,'frame')} style={{position:'absolute',left:badge.x,top:badge.y,width:badge.w,height:badge.h,borderRadius:24,border:`2px solid ${color('color/fill/gold')}`,background:color('color/bg/field'),boxSizing:'border-box',opacity:at}}/>
+      <Label id={`node-badge-number-${index+1}`} box={badge} size={24} weight={500} align="center" opacity={at} style={{paddingTop:7}} ink={color('color/fill/gold')}>{index+1}</Label>
+    </React.Fragment>;})}
   </div>;
 }
 
@@ -82,8 +81,8 @@ export function SequenceAsTheory({segment}:SceneProps){
     {ms>=cue.t11Unstated.at&&<div data-causal-graph="true" data-equation={EQ_25} style={{opacity:graphP}}>
       {ms>=cue.t11Cause.at&&<Label id="causal-claim" box={SEQUENCE_LAYOUT.claim} size={24} weight={500} ls={2} align="center" opacity={enter(ms,cue.t11Cause.at,440)} ink={color('color/marker/race')}>CAUSAL CLAIM</Label>}
       <AuditedTermBlock id="node-one" box={first} term={firstLabel} termId="IndividualPrejudice" ms={ms} pulses={[cue.t12Personal.at,cue.t12Root.at]} summary={ms>=cue.t12First.at?'assigned first':'causal node 1'} glyph={<PersonIcon/>} selected={ms>=cue.t12First.at} accent={ms>=cue.t12First.at?'color/marker/race':'color/fill/gold'} unit="slot 1" opacity={graphP}/>
-      <AuditedTermBlock id="node-two" box={second} term="Discriminatory Actions" termId="DiscriminatoryActions" ms={ms} summary="causal node 2" glyph={<ActionIcon/>} accent="color/fill/gold" unit="slot 2" opacity={graphP}/>
-      <AuditedTermBlock id="node-three" box={third} term={thirdLabel} termId="SystemicOutcomes" ms={ms} pulses={[cue.t12Institutional.at]} summary="causal node 3" glyph={<SystemIcon/>} accent="color/fill/gold" unit="slot 3" opacity={graphP}/>
+      <AuditedTermBlock id="node-two" box={second} term="Discriminatory Actions" termId="DiscriminatoryActions" ms={ms} summary="causal node 2" glyph={<ActionIcon/>} accent="color/fill/gold" framed unit="slot 2" opacity={graphP}/>
+      <AuditedTermBlock id="node-three" box={third} term={thirdLabel} termId="SystemicOutcomes" ms={ms} pulses={[cue.t12Institutional.at]} summary="causal node 3" glyph={<SystemIcon/>} accent="color/fill/gold" framed unit="slot 3" opacity={graphP}/>
       {ms>=cue.t11Cause.at&&<svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position:'absolute',inset:0}} aria-hidden="true">
         <path data-causal-arrow="one-two" {...lineAttrs('causal-arrow-one-two',arrowOne)} d={pathFrom(arrowOne)} stroke={color(rootP>.01?'color/marker/race':'color/fill/gold')} strokeWidth={3+5*rootP} opacity={arrowP}/>
         <path data-causal-arrow="two-three" {...lineAttrs('causal-arrow-two-three',arrowTwo)} d={pathFrom(arrowTwo)} stroke={color('color/fill/gold')} strokeWidth="3" opacity={arrowP}/>
