@@ -90,7 +90,7 @@ export function TitleOpen({segment}:SceneProps) {
     {ms >= equations.at && <MethodTile label="Equations" at={equations.at} ms={ms} index={1} fold={fold}><EquationGraphic/></MethodTile>}
     {ms >= tests.at && <MethodTile label="Tests" at={tests.at} ms={ms} index={2} fold={fold}><TestsGraphic/></MethodTile>}
     {ms >= episode.at && <div style={{position:'absolute', left:180, right:180, top:EPISODE_Y, textAlign:'center', opacity:episodeIn, transform:`translateY(${25*(1-episodeIn)}px)`}}>
-      <div style={{fontSize:70, fontWeight:500, letterSpacing:-.6}}>Episode 1 · What Racism Is</div>
+      <div style={{fontSize:70, fontWeight:500, letterSpacing:-.6}}>Episode 1 · What Racism Actually Is</div>
     </div>}
     {ms >= definition.at && <div style={{position:'absolute', left:300, right:300, top:SUBTITLE_Y, textAlign:'center', opacity:definitionIn, transform:`translateY(${18*(1-definitionIn)}px)`, fontSize:40, lineHeight:1.45, color:color('color/text/soft')}}>
       <span>and why </span><span style={{position:'relative', display:'inline-block'}}>the definition most of us were taught

@@ -1,0 +1,388 @@
+[
+ {
+  "episode": 1,
+  "title": "What Racism Actually Is",
+  "chapters": [
+   "book"
+  ],
+  "notebook": "d3f54f50-61a5-465e-a94a-55d17326c0e2"
+ },
+ {
+  "episode": 2,
+  "title": "Prefaces",
+  "chapters": [
+   "front"
+  ],
+  "pages": [
+   57,
+   73
+  ],
+  "file": "front_matter.pdf",
+  "notebook": "24cf630a-51e2-4ebc-b612-b343fa309c45",
+  "upload_ok": true
+ },
+ {
+  "episode": 3,
+  "title": "System Initialization",
+  "chapters": [
+   0
+  ],
+  "pages": [
+   74,
+   97
+  ],
+  "file": "00_system_initialization.pdf",
+  "notebook": "199d4949-9643-4bfd-9739-6f355f655a1e",
+  "upload_ok": true
+ },
+ {
+  "episode": 4,
+  "title": "Dynamical Systems Formulation of the Extraction Architecture",
+  "chapters": [
+   1
+  ],
+  "pages": [
+   98,
+   105
+  ],
+  "file": "01_dynamical_systems_formulation_of_the_ext.pdf",
+  "notebook": "3a645772-d81c-4274-ac6c-b6af2fddc362",
+  "upload_ok": true
+ },
+ {
+  "episode": 5,
+  "title": "Redefining Racism",
+  "chapters": [
+   2
+  ],
+  "pages": [
+   106,
+   160
+  ],
+  "file": "02_redefining_racism.pdf",
+  "notebook": "ebd42074-2b53-4dcc-a71c-89edb0a8943d",
+  "upload_ok": true
+ },
+ {
+  "episode": 6,
+  "title": "Version 1.0",
+  "chapters": [
+   3
+  ],
+  "pages": [
+   161,
+   191
+  ],
+  "file": "03_version_1_0.pdf",
+  "notebook": "fb8ccf91-8458-481b-835e-5ae3740854ef",
+  "upload_ok": true
+ },
+ {
+  "episode": 7,
+  "title": "The Application",
+  "chapters": [
+   4
+  ],
+  "pages": [
+   192,
+   202
+  ],
+  "file": "04_the_application.pdf",
+  "notebook": "8e2260bb-dff2-42fe-8c33-66d805879b3d",
+  "upload_ok": true
+ },
+ {
+  "episode": 8,
+  "title": "The Constitutional Kernel",
+  "chapters": [
+   5
+  ],
+  "pages": [
+   203,
+   211
+  ],
+  "file": "05_the_constitutional_kernel.pdf",
+  "notebook": "f1b94a59-f9c8-4b71-8966-af2facd21d80",
+  "upload_ok": true
+ },
+ {
+  "episode": 9,
+  "title": "The Haitian Export",
+  "chapters": [
+   6
+  ],
+  "pages": [
+   212,
+   232
+  ],
+  "file": "06_the_haitian_export.pdf",
+  "notebook": "e6244f7f-de1f-4d62-aa39-c4f77224335d",
+  "upload_ok": true
+ },
+ {
+  "episode": 10,
+  "title": "The Architecture of Kinship",
+  "chapters": [
+   7
+  ],
+  "pages": [
+   233,
+   250
+  ],
+  "file": "07_the_architecture_of_kinship.pdf",
+  "notebook": "7f0a5eef-5c41-4120-8dce-022b1cdfeb66",
+  "upload_ok": true
+ },
+ {
+  "episode": 11,
+  "title": "The Gendered Axis",
+  "chapters": [
+   8
+  ],
+  "pages": [
+   251,
+   318
+  ],
+  "file": "08_the_gendered_axis.pdf",
+  "notebook": "2413985e-7263-4abf-8e29-7319efbf8502",
+  "upload_ok": true
+ },
+ {
+  "episode": 12,
+  "title": "The Enforcement Engine",
+  "chapters": [
+   9
+  ],
+  "pages": [
+   319,
+   373
+  ],
+  "file": "09_the_enforcement_engine.pdf",
+  "notebook": "9d72cdad-e776-4a21-8277-c47a1e8a6630",
+  "upload_ok": true
+ },
+ {
+  "episode": 13,
+  "title": "The Containment",
+  "chapters": [
+   10
+  ],
+  "pages": [
+   374,
+   400
+  ],
+  "file": "10_the_containment.pdf",
+  "notebook": "7d9ca11f-f106-4925-97a7-47b0ff4e4d9d",
+  "upload_ok": true
+ },
+ {
+  "episode": 14,
+  "title": "The German Extraction Algorithm (1904\u20131945)",
+  "chapters": [
+   11
+  ],
+  "pages": [
+   401,
+   425
+  ],
+  "file": "11_the_german_extraction_algorithm_1904_194.pdf",
+  "notebook": "fcf4e2f8-0076-4449-8831-38f885d26279",
+  "upload_ok": true
+ },
+ {
+  "episode": 15,
+  "title": "The Geopolitical 1.1 Patch (1948\u2013Present)",
+  "chapters": [
+   12
+  ],
+  "pages": [
+   426,
+   450
+  ],
+  "file": "12_the_geopolitical_1_1_patch_1948_present.pdf",
+  "notebook": "7f3fc7a8-70aa-4e8f-bdd7-2185cf0a49e9",
+  "upload_ok": true
+ },
+ {
+  "episode": 16,
+  "title": "The Biological Extraction Kernel",
+  "chapters": [
+   13
+  ],
+  "pages": [
+   451,
+   464
+  ],
+  "file": "13_the_biological_extraction_kernel.pdf",
+  "notebook": "f31c029a-3044-45d3-a0a3-a3fdea06bff4",
+  "upload_ok": true
+ },
+ {
+  "episode": 17,
+  "title": "Tweedism and the Puppet Class",
+  "chapters": [
+   14
+  ],
+  "pages": [
+   465,
+   516
+  ],
+  "file": "14_tweedism_and_the_puppet_class.pdf",
+  "notebook": "5efe869c-3429-4b37-8b88-3c21351dff67",
+  "upload_ok": true
+ },
+ {
+  "episode": 18,
+  "title": "The Recompile",
+  "chapters": [
+   15
+  ],
+  "pages": [
+   517,
+   594
+  ],
+  "file": "15_the_recompile.pdf",
+  "notebook": "850838b9-647b-4a22-aefb-dfed53ab473d",
+  "upload_ok": true
+ },
+ {
+  "episode": 19,
+  "title": "The Full Algorithm",
+  "chapters": [
+   16
+  ],
+  "pages": [
+   595,
+   674
+  ],
+  "file": "16_the_full_algorithm.pdf",
+  "notebook": "3a1671c4-a9d3-4e95-95a8-2ed4098c78e6",
+  "upload_ok": true
+ },
+ {
+  "episode": 20,
+  "title": "The Pipeline Architecture",
+  "chapters": [
+   17
+  ],
+  "pages": [
+   675,
+   709
+  ],
+  "file": "17_the_pipeline_architecture.pdf",
+  "notebook": "496d3bee-a16e-47ab-a1f1-aa7a1cecd526",
+  "upload_ok": true
+ },
+ {
+  "episode": 21,
+  "title": "The Kinetic Guarantee",
+  "chapters": [
+   18
+  ],
+  "pages": [
+   710,
+   768
+  ],
+  "file": "18_the_kinetic_guarantee.pdf",
+  "notebook": "7382b900-5092-4c59-8be4-595647132547",
+  "upload_ok": true
+ },
+ {
+  "episode": 22,
+  "title": "The Contradiction",
+  "chapters": [
+   19
+  ],
+  "pages": [
+   769,
+   862
+  ],
+  "file": "19_the_contradiction.pdf",
+  "notebook": "9a28a132-ef8c-463a-8ee5-bb6f17fad2cc",
+  "upload_ok": true
+ },
+ {
+  "episode": 23,
+  "title": "The Global Containment Field",
+  "chapters": [
+   20
+  ],
+  "pages": [
+   863,
+   904
+  ],
+  "file": "20_the_global_containment_field.pdf",
+  "notebook": "ba080a2c-2387-46cf-b08c-05f8316be320",
+  "upload_ok": true
+ },
+ {
+  "episode": 24,
+  "title": "The Algorithmic Epoch",
+  "chapters": [
+   21
+  ],
+  "pages": [
+   905,
+   961
+  ],
+  "file": "21_the_algorithmic_epoch.pdf",
+  "notebook": "a427edbf-7ba0-4ccf-9c9b-c65640211ce5",
+  "upload_ok": true
+ },
+ {
+  "episode": 25,
+  "title": "The Spectral Carrier",
+  "chapters": [
+   22
+  ],
+  "pages": [
+   962,
+   980
+  ],
+  "file": "22_the_spectral_carrier.pdf",
+  "notebook": "1178f38f-734e-448e-bc07-c2d808c91659",
+  "upload_ok": true
+ },
+ {
+  "episode": 26,
+  "title": "The Post-Kinetic Horizon",
+  "chapters": [
+   23
+  ],
+  "pages": [
+   981,
+   987
+  ],
+  "file": "23_the_post_kinetic_horizon.pdf",
+  "notebook": "080e61fc-cb88-47d3-96d5-8cf35cb5f68a",
+  "upload_ok": true
+ },
+ {
+  "episode": 27,
+  "title": "The Single-Issue Trap and Multi-Axis Noise Cancellation",
+  "chapters": [
+   24
+  ],
+  "pages": [
+   988,
+   992
+  ],
+  "file": "24_the_single_issue_trap_and_multi_axis_noi.pdf",
+  "notebook": "74cd6311-ea93-4fe0-8f45-3101b012469d",
+  "upload_ok": true
+ },
+ {
+  "episode": 28,
+  "title": "Conclusion",
+  "chapters": [
+   25
+  ],
+  "pages": [
+   993,
+   1000
+  ],
+  "file": "25_conclusion.pdf",
+  "notebook": "38cc95d6-bb2a-4638-866c-8aa2683c34bb",
+  "upload_ok": true
+ }
+]

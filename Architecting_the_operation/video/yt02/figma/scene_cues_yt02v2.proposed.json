@@ -3,7 +3,7 @@
   "manifest": "outputs/YT02V2/episode_manifest.json",
   "scenes": [
     {
-      "frame": "Episode 02 · What Racism Is",
+      "frame": "Episode 02 · What Racism Actually Is",
       "turns": [
         0
       ],
@@ -48,7 +48,7 @@
       ]
     },
     {
-      "frame": "Episode 02 · What Racism Is",
+      "frame": "Episode 02 · What Racism Actually Is",
       "turns": [
         4,
         5
@@ -86,7 +86,7 @@
       ]
     },
     {
-      "frame": "Episode 02 · What Racism Is",
+      "frame": "Episode 02 · What Racism Actually Is",
       "turns": [
         13,
         14,

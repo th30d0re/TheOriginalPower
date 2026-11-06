@@ -109,7 +109,7 @@ const CARDS = [
       },
       {
         "title": "Episode 1 · Closing Credit",
-        "detail": "What Racism Is, from The Original Power."
+        "detail": "What Racism Actually Is, from The Original Power."
       }
     ],
     "sources": "The Original Power, Empirical Methodology & Full Manuscript",
@@ -137,7 +137,7 @@ const CARDS = [
       },
       {
         "title": "Episode 1 · Closing Credit",
-        "detail": "What Racism Is, from The Original Power."
+        "detail": "What Racism Actually Is, from The Original Power."
       }
     ],
     "sources": "The Original Power, Empirical Methodology & Full Manuscript",
@@ -164,7 +164,7 @@ const CARDS = [
       },
       {
         "title": "Episode 1 · Closing Credit",
-        "detail": "What Racism Is, from The Original Power."
+        "detail": "What Racism Actually Is, from The Original Power."
       }
     ],
     "sources": "The Original Power, Empirical Methodology & Full Manuscript",
