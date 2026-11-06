@@ -34,7 +34,7 @@ export const ALLPORT_ANTIPATHY_LAYOUT = {
   source: {x: 116, y: 960, w: 740, h: 28},
 } as const;
 
-const TEMPLATE_PERSON_XS = [1040, 1220, 1400, 1580] as const;
+const TEMPLATE_PERSON_XS = [1080, 1250, 1420, 1590] as const;
 const GROUP_WHOLE_XS = [1000, 1110, 1220] as const;
 
 export function AllportAntipathy({segment}: SceneProps) {
@@ -150,9 +150,9 @@ export function AllportAntipathy({segment}: SceneProps) {
             <PersonMark x={60} y={76} group="ingroup" emphasis={1} scale={1.35} />
             {ms >= cue.t47Felt && (
               <svg width="120" height="160" viewBox="0 0 120 160" style={{position: 'absolute', inset: 0}} aria-hidden="true">
-                <circle cx="60" cy="96" r="18" fill={raceRed} fillOpacity={0.28 * feltP} stroke={raceRed} strokeWidth="2.5" opacity={feltP} />
+                <circle cx="60" cy="98" r="12" fill={raceRed} fillOpacity={0.28 * feltP} stroke={raceRed} strokeWidth="2" opacity={feltP} />
                 <path
-                  d="M60 106 C56 102 49 97 49 91 C49 85 56 84 60 89 C64 84 71 85 71 91 C71 97 64 102 60 106 Z"
+                  transform="translate(60 98) scale(0.6) translate(-60 -95)" d="M60 106 C56 102 49 97 49 91 C49 85 56 84 60 89 C64 84 71 85 71 91 C71 97 64 102 60 106 Z"
                   fill={raceRed}
                   opacity={feltP}
                 />
@@ -245,9 +245,9 @@ export function AllportAntipathy({segment}: SceneProps) {
                   )}
                   {ms >= cue.t47Faulty && (
                     <g opacity={faultyP}>
-                      <circle cx="56" cy="58" r="18" fill="none" stroke={orange} strokeWidth="3" />
-                      <line x1="56" y1="46" x2="56" y2="61" stroke={orange} strokeWidth="3" strokeLinecap="round" />
-                      <circle cx="56" cy="68" r="2" fill={orange} />
+                      <circle cx="71" cy="58" r="16" fill="none" stroke={orange} strokeWidth="3" />
+                      <line x1="71" y1="49" x2="71" y2="61" stroke={orange} strokeWidth="3" strokeLinecap="round" />
+                      <circle cx="71" cy="67" r="2" fill={orange} />
                     </g>
                   )}
                   {ms >= cue.t47Generalization &&
