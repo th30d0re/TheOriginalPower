@@ -1,11 +1,11 @@
-What Racism Actually Is: a whole-book structural and empirical answer to the definitional question from The Original Power. Channel premiere, Episode 1. Solo narration, AI-cloned voice.
+What Racism Actually Is: a whole-book structural and empirical answer to the definitional question from The Original Power. Channel premiere, Special Edition. Solo narration, AI-cloned voice.
 
 
 
 <!-- SEG 00 · The dictionary order -->
 
 Emmanuel Theodore (00:00)
-I wrote The Original Power to answer one definitional question with archives, equations, and tests. This episode is Episode one on the channel: what racism is, and why the definition most of us were taught fails.
+I wrote The Original Power to answer one definitional question with archives, equations, and tests. This special edition opens the channel: what racism actually is, and why the definition most of us were taught fails.
 <!-- [editorial] -->
 
 Emmanuel Theodore (00:13)
@@ -3179,5 +3179,5 @@ When extraction moves, ask why. When a boundary hardens, ask why. When reform tr
 <!-- [editorial] -->
 
 Emmanuel Theodore (132:11)
-Thank you for listening to Episode one, What Racism Actually Is, from The Original Power.
+Thank you for listening to this special edition, What Racism Actually Is, from The Original Power.
 <!-- [editorial] -->

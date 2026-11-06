@@ -76,7 +76,7 @@ if(process.env.FIRST_MINUTE_SNAPSHOT==='1'){
   const equationHtml=assertStrings('TitleOpen','equations',['Equations','W = ψ']);
   assert.ok(equationHtml.includes('<sub')&&equationHtml.includes('>m</sub>')&&equationHtml.includes('>s</sub>'),'TitleOpen equation lacks real subscripts');
   assertStrings('TitleOpen','tests',['Tests']);
-  assertStrings('TitleOpen','episode',['Episode 1 · What Racism Actually Is']);
+  assertStrings('TitleOpen','episode',['Special Edition · What Racism Actually Is']);
   assertStrings('TitleOpen','definition',['and why the definition most of us were taught fails']);
   const titleEnd=assertStrings('TitleOpen','fails',['the definition most of us were taught']);
   assert.ok(/data-fails-underline="true"[^>]*scaleX\(1\)/.test(titleEnd),'TitleOpen underline is not fully drawn');
