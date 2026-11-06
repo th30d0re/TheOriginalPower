@@ -19,10 +19,12 @@ Decided by the author, 2026-11-06.
 4. Ch 2 Redefining Racism. It comes after the prefaces, Ch 0 and Ch 1 so it does not follow the racism special back to back.
 5. Ch 3 onward, one chapter per episode, through Ch 25 Conclusion.
 
-Chapter PDFs, page ranges and notebook ids: `chapters/v1.1.1/episode_map.json` (its `episode` field counts the special as 1, so series episode = that number − 1).
+Series episode = chapter + 2 (Prefaces are Ep 1). Notebooks are named "Architecting the Operation — Ep N: … (v1.1.1)". Chapter PDFs, page ranges and notebook ids: `chapters/v1.1.1/episode_map.json`.
 
 The older `ATO_EP01` (Author's Preface), `ATO_EP02` (Preface) and `ATO_EP03` (Redefining Racism) scripts predate this order.
 
 ## Titles
 
-Specials use catchy YouTube titles that emphasise the reveal, e.g. "What Racism *Actually* Is". Casing for the premiere is undecided.
+Specials are special editions with catchy YouTube titles. The channel opens with one.
+
+- Premiere YouTube title: **What Racism Actually Is (It's Not What You Were Taught)**. On-screen card and spoken outro: "What Racism Actually Is".

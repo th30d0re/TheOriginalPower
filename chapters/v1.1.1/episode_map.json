@@ -1,14 +1,17 @@
 [
  {
-  "episode": 1,
+  "kind": "special",
   "title": "What Racism Actually Is",
+  "youtube_title": "What Racism Actually Is (It's Not What You Were Taught)",
   "chapters": [
    "book"
   ],
   "notebook": "d3f54f50-61a5-465e-a94a-55d17326c0e2"
  },
  {
-  "episode": 2,
+  "kind": "series",
+  "series": "Architecting the Operation",
+  "episode": 1,
   "title": "Prefaces",
   "chapters": [
    "front"
@@ -22,7 +25,9 @@
   "upload_ok": true
  },
  {
-  "episode": 3,
+  "kind": "series",
+  "series": "Architecting the Operation",
+  "episode": 2,
   "title": "System Initialization",
   "chapters": [
    0
@@ -36,7 +41,9 @@
   "upload_ok": true
  },
  {
-  "episode": 4,
+  "kind": "series",
+  "series": "Architecting the Operation",
+  "episode": 3,
   "title": "Dynamical Systems Formulation of the Extraction Architecture",
   "chapters": [
    1
@@ -50,7 +57,9 @@
   "upload_ok": true
  },
  {
-  "episode": 5,
+  "kind": "series",
+  "series": "Architecting the Operation",
+  "episode": 4,
   "title": "Redefining Racism",
   "chapters": [
    2
@@ -64,7 +73,9 @@
   "upload_ok": true
  },
  {
-  "episode": 6,
+  "kind": "series",
+  "series": "Architecting the Operation",
+  "episode": 5,
   "title": "Version 1.0",
   "chapters": [
    3
@@ -78,7 +89,9 @@
   "upload_ok": true
  },
  {
-  "episode": 7,
+  "kind": "series",
+  "series": "Architecting the Operation",
+  "episode": 6,
   "title": "The Application",
   "chapters": [
    4
@@ -92,7 +105,9 @@
   "upload_ok": true
  },
  {
-  "episode": 8,
+  "kind": "series",
+  "series": "Architecting the Operation",
+  "episode": 7,
   "title": "The Constitutional Kernel",
   "chapters": [
    5
@@ -106,7 +121,9 @@
   "upload_ok": true
  },
  {
-  "episode": 9,
+  "kind": "series",
+  "series": "Architecting the Operation",
+  "episode": 8,
   "title": "The Haitian Export",
   "chapters": [
    6
@@ -120,7 +137,9 @@
   "upload_ok": true
  },
  {
-  "episode": 10,
+  "kind": "series",
+  "series": "Architecting the Operation",
+  "episode": 9,
   "title": "The Architecture of Kinship",
   "chapters": [
    7
@@ -134,7 +153,9 @@
   "upload_ok": true
  },
  {
-  "episode": 11,
+  "kind": "series",
+  "series": "Architecting the Operation",
+  "episode": 10,
   "title": "The Gendered Axis",
   "chapters": [
    8
@@ -148,7 +169,9 @@
   "upload_ok": true
  },
  {
-  "episode": 12,
+  "kind": "series",
+  "series": "Architecting the Operation",
+  "episode": 11,
   "title": "The Enforcement Engine",
   "chapters": [
    9
@@ -162,7 +185,9 @@
   "upload_ok": true
  },
  {
-  "episode": 13,
+  "kind": "series",
+  "series": "Architecting the Operation",
+  "episode": 12,
   "title": "The Containment",
   "chapters": [
    10
@@ -176,7 +201,9 @@
   "upload_ok": true
  },
  {
-  "episode": 14,
+  "kind": "series",
+  "series": "Architecting the Operation",
+  "episode": 13,
   "title": "The German Extraction Algorithm (1904\u20131945)",
   "chapters": [
    11
@@ -190,7 +217,9 @@
   "upload_ok": true
  },
  {
-  "episode": 15,
+  "kind": "series",
+  "series": "Architecting the Operation",
+  "episode": 14,
   "title": "The Geopolitical 1.1 Patch (1948\u2013Present)",
   "chapters": [
    12
@@ -204,7 +233,9 @@
   "upload_ok": true
  },
  {
-  "episode": 16,
+  "kind": "series",
+  "series": "Architecting the Operation",
+  "episode": 15,
   "title": "The Biological Extraction Kernel",
   "chapters": [
    13
@@ -218,7 +249,9 @@
   "upload_ok": true
  },
  {
-  "episode": 17,
+  "kind": "series",
+  "series": "Architecting the Operation",
+  "episode": 16,
   "title": "Tweedism and the Puppet Class",
   "chapters": [
    14
@@ -232,7 +265,9 @@
   "upload_ok": true
  },
  {
-  "episode": 18,
+  "kind": "series",
+  "series": "Architecting the Operation",
+  "episode": 17,
   "title": "The Recompile",
   "chapters": [
    15
@@ -246,7 +281,9 @@
   "upload_ok": true
  },
  {
-  "episode": 19,
+  "kind": "series",
+  "series": "Architecting the Operation",
+  "episode": 18,
   "title": "The Full Algorithm",
   "chapters": [
    16
@@ -260,7 +297,9 @@
   "upload_ok": true
  },
  {
-  "episode": 20,
+  "kind": "series",
+  "series": "Architecting the Operation",
+  "episode": 19,
   "title": "The Pipeline Architecture",
   "chapters": [
    17
@@ -274,7 +313,9 @@
   "upload_ok": true
  },
  {
-  "episode": 21,
+  "kind": "series",
+  "series": "Architecting the Operation",
+  "episode": 20,
   "title": "The Kinetic Guarantee",
   "chapters": [
    18
@@ -288,7 +329,9 @@
   "upload_ok": true
  },
  {
-  "episode": 22,
+  "kind": "series",
+  "series": "Architecting the Operation",
+  "episode": 21,
   "title": "The Contradiction",
   "chapters": [
    19
@@ -302,7 +345,9 @@
   "upload_ok": true
  },
  {
-  "episode": 23,
+  "kind": "series",
+  "series": "Architecting the Operation",
+  "episode": 22,
   "title": "The Global Containment Field",
   "chapters": [
    20
@@ -316,7 +361,9 @@
   "upload_ok": true
  },
  {
-  "episode": 24,
+  "kind": "series",
+  "series": "Architecting the Operation",
+  "episode": 23,
   "title": "The Algorithmic Epoch",
   "chapters": [
    21
@@ -330,7 +377,9 @@
   "upload_ok": true
  },
  {
-  "episode": 25,
+  "kind": "series",
+  "series": "Architecting the Operation",
+  "episode": 24,
   "title": "The Spectral Carrier",
   "chapters": [
    22
@@ -344,7 +393,9 @@
   "upload_ok": true
  },
  {
-  "episode": 26,
+  "kind": "series",
+  "series": "Architecting the Operation",
+  "episode": 25,
   "title": "The Post-Kinetic Horizon",
   "chapters": [
    23
@@ -358,7 +409,9 @@
   "upload_ok": true
  },
  {
-  "episode": 27,
+  "kind": "series",
+  "series": "Architecting the Operation",
+  "episode": 26,
   "title": "The Single-Issue Trap and Multi-Axis Noise Cancellation",
   "chapters": [
    24
@@ -372,7 +425,9 @@
   "upload_ok": true
  },
  {
-  "episode": 28,
+  "kind": "series",
+  "series": "Architecting the Operation",
+  "episode": 27,
   "title": "Conclusion",
   "chapters": [
    25
