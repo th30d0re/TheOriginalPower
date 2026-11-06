@@ -15,7 +15,7 @@ const plan=JSON.parse(fs.readFileSync(new URL('../ov/stage_plan.json',import.met
 const sceneComponents={TitleOpen,DictionaryEntry,WhyLadder,LiteratureStack,Disclosure};
 type SceneName=keyof typeof sceneComponents;
 const sceneCues:Record<SceneName,string[]>={
-  TitleOpen:['title','archives','equations','tests','episode','definition','fails'],
+  TitleOpen:['title','archives','equations','tests','slam','series','episode','definition','fails'],
   DictionaryEntry:['common','wrong','dictionary','individual','institutional','order','causal','evidence'],
   WhyLadder:['header','why1','why2','why3','virginia','why4','backlash'],
   LiteratureStack:['established','bias','prejudice','discrimination','tripartite','mark','stops'],
@@ -76,9 +76,11 @@ if(process.env.FIRST_MINUTE_SNAPSHOT==='1'){
   const equationHtml=assertStrings('TitleOpen','equations',['Equations','W = ψ']);
   assert.ok(equationHtml.includes('<sub')&&equationHtml.includes('>m</sub>')&&equationHtml.includes('>s</sub>'),'TitleOpen equation lacks real subscripts');
   assertStrings('TitleOpen','tests',['Tests']);
-  assertStrings('TitleOpen','episode',['Special Edition · What Racism Actually Is']);
-  assertStrings('TitleOpen','definition',['and why the definition most of us were taught fails']);
-  const titleEnd=assertStrings('TitleOpen','fails',['the definition most of us were taught']);
+  assertStrings('TitleOpen','episode',['What Racism Actually Is']);
+  assertStrings('TitleOpen','slam',['1,158 PAGES']);
+  assertStrings('TitleOpen','series',['ARCHITECTING THE OPERATION · SERIES PREMIERE']);
+  assertStrings('TitleOpen','definition',['Not What You Were Taught']);
+  const titleEnd=assertStrings('TitleOpen','fails',['Not What You Were Taught']);
   assert.ok(/data-fails-underline="true"[^>]*scaleX\(1\)/.test(titleEnd),'TitleOpen underline is not fully drawn');
 
   assertStrings('DictionaryEntry','common',['The common definition of racism']);

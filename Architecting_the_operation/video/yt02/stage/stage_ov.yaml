@@ -7,14 +7,16 @@ width: 1920
 height: 1080
 shots:
   - shot_id: S00-00
-    turn_id: 0edfe226e42abaa3
+    turn_id: f506b16263e7ace5
     scene: TitleOpen
     cues:
       title: {word: original}
       archives: {word: archives}
       equations: {word: equations}
       tests: {word: tests}
-      episode: {word: episode, occurrence: 2}
+      slam: {word: eleven}
+      series: {word: series}
+      episode: {word: actually}
       definition: {word: definition}
       taught: {word: taught, at: end}
       fails: {word: fails}

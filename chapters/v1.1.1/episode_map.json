@@ -1,7 +1,11 @@
 [
  {
-  "kind": "special",
+  "kind": "series",
+  "series": "Architecting the Operation",
+  "episode": 0,
   "title": "What Racism Actually Is",
+  "subtitle": "It's Not What You Were Taught",
+  "premiere": true,
   "youtube_title": "What Racism Actually Is (It's Not What You Were Taught)",
   "chapters": [
    "book"

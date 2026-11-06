@@ -100,16 +100,16 @@ const CARDS = [
     "headline": "The Original Power · Channel & Manuscript",
     "items": [
       {
-        "title": "Next · Chapter 2 Walkthrough",
-        "detail": "The chapter-by-chapter series: Bayesian defense and full RLC electrodynamic derivations."
+        "title": "Next · Episode 1: The Prefaces",
+        "detail": "Architecting the Operation continues chapter by chapter, starting at the beginning."
       },
       {
         "title": "Open-Access Manuscript",
         "detail": "The Original Power: complete mathematical architecture and 146 calibrated anchor cases."
       },
       {
-        "title": "Episode 1 · Closing Credit",
-        "detail": "What Racism Actually Is, from The Original Power."
+        "title": "Series Premiere · Closing Credit",
+        "detail": "Architecting the Operation, Episode 0: What Racism Actually Is, from The Original Power."
       }
     ],
     "sources": "The Original Power, Empirical Methodology & Full Manuscript",
@@ -128,16 +128,16 @@ const CARDS = [
     "headline": "The Original Power · Channel & Manuscript",
     "items": [
       {
-        "title": "Next · Chapter 2 Walkthrough",
-        "detail": "The chapter-by-chapter series: Bayesian defense and full RLC electrodynamic derivations."
+        "title": "Next · Episode 1: The Prefaces",
+        "detail": "Architecting the Operation continues chapter by chapter, starting at the beginning."
       },
       {
         "title": "Open-Access Manuscript",
         "detail": "The Original Power: complete mathematical architecture and 146 calibrated anchor cases."
       },
       {
-        "title": "Episode 1 · Closing Credit",
-        "detail": "What Racism Actually Is, from The Original Power."
+        "title": "Series Premiere · Closing Credit",
+        "detail": "Architecting the Operation, Episode 0: What Racism Actually Is, from The Original Power."
       }
     ],
     "sources": "The Original Power, Empirical Methodology & Full Manuscript",
@@ -155,16 +155,16 @@ const CARDS = [
     "headline": "The Original Power · Channel & Manuscript",
     "items": [
       {
-        "title": "Next · Chapter 2 Walkthrough",
-        "detail": "The chapter-by-chapter series: Bayesian defense and full RLC electrodynamic derivations."
+        "title": "Next · Episode 1: The Prefaces",
+        "detail": "Architecting the Operation continues chapter by chapter, starting at the beginning."
       },
       {
         "title": "Open-Access Manuscript",
         "detail": "The Original Power: complete mathematical architecture and 146 calibrated anchor cases."
       },
       {
-        "title": "Episode 1 · Closing Credit",
-        "detail": "What Racism Actually Is, from The Original Power."
+        "title": "Series Premiere · Closing Credit",
+        "detail": "Architecting the Operation, Episode 0: What Racism Actually Is, from The Original Power."
       }
     ],
     "sources": "The Original Power, Empirical Methodology & Full Manuscript",

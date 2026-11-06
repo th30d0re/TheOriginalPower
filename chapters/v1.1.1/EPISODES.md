@@ -2,18 +2,13 @@
 
 Set by the author 2026-11-06. See `Architecting_the_operation/SERIES.md`.
 
-## Special
-
-| Video | YouTube title | Source |
-|---|---|---|
-| What Racism Actually Is (channel premiere) | What Racism Actually Is (It's Not What You Were Taught) | whole-book notebook `d3f54f50…` |
-
 ## Architecting the Operation
 
 Series episode = chapter + 2 from Ch 0.
 
 | Ep | Episode | Book source | Pages | PDF |
 |---|---|---|---|---|
+| 0 | Series premiere: What Racism Actually Is (It's Not What You Were Taught) | Whole book | all | whole-book notebook `d3f54f50…` |
 | 1 | Prefaces | Front matter | 57–73 | `front_matter.pdf` |
 | 2 | System Initialization | Ch 0 | 74–97 | `00_system_initialization.pdf` |
 | 3 | Dynamical Systems Formulation of the Extraction Architecture | Ch 1 | 98–105 | `01_dynamical_systems_formulation_of_the_ext.pdf` |
