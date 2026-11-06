@@ -18,3 +18,16 @@ Do this once the worker quotas refresh.
   1. `InstalledRacialPrior` (Eq. 2.8a).
   2. The Eq. 2.5 chain in turns 1 and 11–12.
   3. Every later equation scene.
+
+## Figure 0.3 scene: five-tier extraction circuit with the inductor (author, 2026-11-05)
+
+Figure 0.3 has no scene yet. The narration names it around turn 121 of the older OV turn map
+(`feedback/OV_turn_map_2026-10-29.md`, `feedback/G_visual_audit.md` line 149), beyond the current
+plan range (turns 0–62). Check the turn number against the current OV before building.
+
+- **Content.** Match the book figure at `Paper/The_Original_Power.tex:644` (commit `9dec92f`):
+  current source `F_enforce`, two-resistor potential divider `P_uppet`, capacitor `I_buffer` in
+  series with the inductor `L` ("cultural inertia"), transistor `E`, ground `O`.
+- **Inductor.** The book figure now carries `L` on the buffer branch. The Stage scene must draw it
+  too.
+- **Printed numbers.** Read "Figure 0.3" from `Paper/*.aux`, not the label name.
