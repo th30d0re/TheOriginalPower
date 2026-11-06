@@ -18,7 +18,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from build_ov_shotlist import OUT, OV, SCRIPT, alloc, parse_script, parse_shots, write_shot  # noqa: E402
 
-FIGMA = Path(__file__).resolve().parents[3] / "outputs/YT02v2/video/figma"
+FIGMA = Path(__file__).resolve().parents[3] / "outputs/YT02v2_ov/video/figma"
 RATIO = 0.55
 
 # old turn id -> ("start", Render) begins a run; ("hold", None) joins the run before it.
