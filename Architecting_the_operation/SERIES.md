@@ -7,7 +7,8 @@ Decided by the author, 2026-11-06.
 **Specials (standalone).** One concept from The Original Power that spans many chapters, told in one video. Not part of any series. They draw on the whole book.
 
 - What Racism Actually Is (YT02v2_ov, channel premiere). Source: whole-book notebook `d3f54f50-61a5-465e-a94a-55d17326c0e2`.
-- Planned: how the police actually started (origins of policing).
+- Planned, second special: how the police actually started (origins of policing).
+- Planned, third special: the origins of gun control.
 
 **Architecting the Operation (series).** The book, chapter by chapter, in book order. It starts after the premiere special.
 
