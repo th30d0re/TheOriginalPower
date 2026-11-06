@@ -609,7 +609,7 @@ the same extraction function that appears in software as a
 $E$ & Voltage Source & Sets the potential difference across the entire network. Dictates boundary conditions. Never touched by the current it generates. \\
 $P_{\text{uppet}}$ & Potential Divider & Translates $E$'s potential into policy-level voltage drops. Absorbs public blame that would otherwise arc to $E$. \\
 $F_{\text{enforce}}$ & Current Source & The conductive path that makes law executable as amperage. Physical actuator of the electric field. \\
-$I_{\text{buffer}}$ & Dielectric / Insulator & Receives the suppression allocation $W = \psi_m + j\psi_s$ in exchange for policing the partition. Stores energy in the ideological field without permitting current to reach $E$. \\
+$I_{\text{buffer}}$ & Dielectric / Insulator with series inductor $L$ & Receives the suppression allocation $W = \psi_m + j\psi_s$ in exchange for policing the partition. Stores energy in the ideological field without permitting current to reach $E$. The series inductor $L$ (Section~\ref{subsec:inductor}) stores the entrenched inertia of the partition and opposes any rapid change in the current through it. \\
 $O$ & Sink / Ground & All net current flows here. The population positioned as extractable, disposable, and enclosure-bearing. \\
 \bottomrule
 \end{tabular}
@@ -623,9 +623,10 @@ $O$ & Sink / Ground & All net current flows here. The population positioned as e
     to[I, l_={\scriptsize $F_{\text{enforce}}$}, a^={\scriptsize current source}] (0,2.5)
     -- (0.6,2.5) to[R] (2.1,2.5) coordinate (policytap)
     to[R] (3.6,2.5) -- (4.2,2.5)
-    to[C, l^={\scriptsize $I_{\text{buffer}}$}] (6.2,2.5);
-  \node[npn, anchor=C] (gate) at (7.15,1.55) {};
-  \draw (6.2,2.5) -- (7.15,2.5) -- (gate.C);
+    to[C, l^={\scriptsize $I_{\text{buffer}}$}] (5.7,2.5)
+    -- (6.1,2.5) to[L, l^={\scriptsize $L$}] (7.7,2.5);
+  \node[npn, anchor=C] (gate) at (8.65,1.55) {};
+  \draw (7.7,2.5) -- (8.65,2.5) -- (gate.C);
   \draw (gate.E) -- (gate.E |- ground.north) -- (ground);
   \draw (policytap) |- (gate.B);
   \coordinate (tapmid) at ($(policytap |- gate.B)!0.42!(gate.B)$);
@@ -633,14 +634,16 @@ $O$ & Sink / Ground & All net current flows here. The population positioned as e
     {$P_{\text{uppet}}$ potential divider};
   \node[font=\scriptsize, align=center, anchor=north] at ([yshift=-11pt]tapmid)
     {policy-level output tap};
-  \node[font=\scriptsize, align=center, anchor=north] at (5.2,2.32)
-    {dielectric/insulator};
+  \node[font=\scriptsize, align=center, anchor=north] at (4.95,2.32)
+    {dielectric/\\insulator};
+  \node[font=\scriptsize, align=center, anchor=north] at (6.9,2.32)
+    {cultural inertia};
   \node[font=\scriptsize, anchor=west] at ([xshift=12pt]gate.center)
     {$E$};
   \node[font=\scriptsize, align=center, anchor=north] at (0,-1.05)
     {$O$\\sink/ground};
 \end{circuitikz}
-\caption[The five-tier extraction circuit]{\textbf{The Five-Tier Extraction Circuit.} The node-to-element mapping stated in Section~\ref{sec:hardware_mapping}. The policy-level output tap connects to the transistor base.}
+\caption[The five-tier extraction circuit]{\textbf{The Five-Tier Extraction Circuit.} The node-to-element mapping stated in Section~\ref{sec:hardware_mapping}. The buffer branch carries the dielectric capacitor $I_{\text{buffer}}$ in series with the inductor $L$. The policy-level output tap connects to the transistor base.}
 \label{fig:extraction_circuit}
 \end{figure}
 
