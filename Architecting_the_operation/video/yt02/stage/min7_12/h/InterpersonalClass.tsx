@@ -1,5 +1,5 @@
 import React from 'react';
-import {cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
+import {BootIn, Flicker, KitSound, useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../../tokens';
 import {StageSceneFrame} from '../../min3_7/shared';
 import {
@@ -14,7 +14,7 @@ import {
   type TriadTerm,
 } from '../shared';
 
-const enter = (ms: number, at: number, duration = 520) => cubicOut(progress(ms, at, at + duration));
+const cueFrame = (ms: number) => Math.round(ms * 30 / 1000);
 
 export const INTERPERSONAL_LAYOUT = {
   biasBlock: {x: 120, y: 120, w: 520, h: 180},
@@ -93,12 +93,10 @@ export function InterpersonalClass({segment}: SceneProps) {
   const isTurn60 = ms >= cue.t60PersonToPerson && ms < cue.t61Original;
   const isTurn61 = ms >= cue.t61Original;
 
-  const lookP = Math.max(0.25, enter(ms, cue.t57Look));
-  const fiskeP = enter(ms, cue.t57Fiske);
-  const directionP = enter(ms, cue.t58Direction);
-  const twoP = enter(ms, cue.t58Two);
-  const t60PersonP = Math.max(0.25, enter(ms, cue.t60PersonToPerson));
-  const origP = Math.max(0.25, enter(ms, cue.t61Original));
+  const lookP = 1;
+  const fiskeP = 1;
+  const directionP = ms >= cue.t58Direction ? 1 : 0;
+  const twoP = ms >= cue.t58Two ? 1 : 0;
 
   const gold = color('color/fill/gold');
   const raceRed = color('color/marker/race');
@@ -172,9 +170,9 @@ export function InterpersonalClass({segment}: SceneProps) {
   const reverseP = twoP;
 
   return (
-    <StageSceneFrame segment={segment}>
+    <StageSceneFrame segment={segment}><KitSound mode="beats">
       {/* Top Rail: TermTriad */}
-      <TermTriad
+      <Flicker startFrame={cueFrame(cue.t57Look)} durationFrames={16} beat><TermTriad
         id="interpersonal-triad"
         boxes={triadBoxes}
         terms={triadTerms}
@@ -183,11 +181,11 @@ export function InterpersonalClass({segment}: SceneProps) {
         bracketBox={L.bracket}
         progress={fiskeP}
         bracketLabel={ms >= cue.t58Three ? 'INTERPERSONAL CLASS' : undefined}
-      />
+      /></Flicker>
 
       {/* Turns 57–59 Locus & Ubiquity Header Banner */}
       {!isTurn60 && !isTurn61 && (
-        <div data-locus-banner="true" style={{opacity: lookP}}>
+        <Flicker startFrame={cueFrame(cue.t57Look)} durationFrames={16}><div data-locus-banner="true">
           <Panel id="locus-banner-frame" box={L.locusBanner} accent="color/line/hairline" />
           {!isTurn59 ? (
             <>
@@ -267,7 +265,7 @@ export function InterpersonalClass({segment}: SceneProps) {
               )}
             </div>
           )}
-        </div>
+        </div></Flicker>
       )}
 
       {/* Group Direction Field: Enlarged and present across all 5 turns */}
@@ -287,7 +285,7 @@ export function InterpersonalClass({segment}: SceneProps) {
 
       {/* Turns 57–59 Bottom Direction Banner */}
       {!isTurn60 && !isTurn61 && (
-        <div data-direction-banner="full" style={{opacity: lookP}}>
+        <Flicker startFrame={cueFrame(cue.t57Look)} durationFrames={16}><div data-direction-banner="full">
           <Panel
             id="direction-banner-frame"
             box={L.directionBannerFull}
@@ -315,12 +313,13 @@ export function InterpersonalClass({segment}: SceneProps) {
           >
             SYMMETRICAL DYADIC GRAPH
           </Label>
-        </div>
+        </div></Flicker>
       )}
 
       {/* Turn 60 State-Power Rack Separation */}
       {isTurn60 && (
-        <div data-turn="60" style={{opacity: t60PersonP}}>
+        <Flicker startFrame={cueFrame(cue.t60PersonToPerson)} durationFrames={16} beat><div data-turn="60">
+          <BootIn box={L.stateRack} startFrame={cueFrame(cue.t60PersonToPerson)} durationFrames={26} mode="scan" />
           {/* Left Column Header Panel */}
           <Panel id="person-actions-panel" box={L.personActionsPanel} accent="color/line/hairline" />
           <Label
@@ -509,12 +508,13 @@ export function InterpersonalClass({segment}: SceneProps) {
           >
             STRUCTURAL LEVERS OUTSIDE DYADIC SCOPE
           </Label>
-        </div>
+        </div></Flicker>
       )}
 
       {/* Turn 61 Book-Shaped Assignment Strip */}
       {isTurn61 && (
-        <div data-turn="61" style={{opacity: origP}}>
+        <Flicker startFrame={cueFrame(cue.t61Original)} durationFrames={16} beat><div data-turn="61">
+          <BootIn box={L.assignmentStrip} startFrame={cueFrame(cue.t61Original)} durationFrames={26} mode="scan" />
           <Panel
             id="book-assignment-strip"
             box={L.assignmentStrip}
@@ -606,7 +606,7 @@ export function InterpersonalClass({segment}: SceneProps) {
           >
             CHAPTER 2 · NOMENCLATURE SPECIFICATION
           </Label>
-        </div>
+        </div></Flicker>
       )}
 
       {/* Source Line */}
@@ -619,6 +619,6 @@ export function InterpersonalClass({segment}: SceneProps) {
       >
         Greenwald & Banaji 1995 · Allport 1954 · Fiske 1998
       </Label>
-    </StageSceneFrame>
+    </KitSound></StageSceneFrame>
   );
 }
