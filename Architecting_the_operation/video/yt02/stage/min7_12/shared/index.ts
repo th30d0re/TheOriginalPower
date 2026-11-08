@@ -1,7 +1,2 @@
-// Shared components for STORYBOARD_MIN7_12.md.
-export * from './audit';
-export * from './EvidenceToken';
-export * from './SignalLane';
-export * from './QuestionHeader';
-export * from './TermTriad';
-export * from './GroupDirectionField';
+export {arrowBarbs, boxData, clamp01, EVIDENCE_KINDS, EvidenceToken, evidenceTokenSize, GroupDirectionField, groupFieldGeometry, groupMarkPlacement, Label, laneGeometry, lanePoint, lineAttrs, MONO_ADVANCE, monoWidth, Panel, partialPolyline, pathFrom, QuestionHeader, questionHeaderFit, SANS_ADVANCE, shapeAttrs, SignalLane, TermTriad, textAttrs, triadBlockLayout, triadBracketBox, TRIAD_KINDS, wrapLineCount} from '@stage';
+export type {Box, EvidenceKind, EvidenceSocket, EvidenceTokenProps, GroupDirectionFieldProps, GroupMarkSpec, LaneDirection, LaneToken, Point, QuestionHeaderProps, SignalLaneProps, TermTriadProps, TriadKind, TriadLine, TriadSource, TriadTerm} from '@stage';
