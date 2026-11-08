@@ -1,8 +1,8 @@
 import React from 'react';
-import {progress, useCue, useStageMs, type SceneProps} from '@stage';
+import {KitSound, progress, useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../../tokens';
 import {StageSceneFrame, PrecisionGauge} from '../shared';
-import {CurveLane, Label, Panel, SceneSource, clamp, enter, lineAttrs, mix, mixBox, pathFrom, shapeAttrs, type LayoutBox, type Point} from './sceneUtils';
+import {CurveLane, Label, MotionLabel, MotionPanel, MotionPath, SceneSource, clamp, enter, lineAttrs, mix, mixBox, pathFrom, shapeAttrs, type LayoutBox, type Point} from './sceneUtils';
 
 // Storyboard boxes. The percept plot keeps its storyboard x span and ends at y 620 so that the
 // racial-prior precision gauge (no storyboard box in this scene) has its own box under it.
@@ -50,16 +50,16 @@ export function PredictiveCoding({segment}:SceneProps) {
   const markX=mix(SENSORY_MARK.from,SENSORY_MARK.to,ms>=cue.compares.at&&!turn31?1:guessCycle);
   const header=mixBox(L.header,L.headerStrip,stripP), headerSize=Math.round(mix(46,30,stripP));
   const red=color('color/marker/race'), gold=color('color/fill/gold'), accent=color('color/text/accent');
-  return <StageSceneFrame segment={segment}>
-    {ms>=cue.why.at && <Label id="question" box={header} size={headerSize} weight={500} ls={0} lh={1.2} sans opacity={whyP} style={{fontFamily:'IBM Plex Sans'}}>
+  return <KitSound mode="beats"><StageSceneFrame segment={segment}>
+    {ms>=cue.why.at && <MotionLabel startMs={cue.why.at} beat id="question" box={header} size={headerSize} weight={500} ls={0} lh={1.2} sans style={{fontFamily:'IBM Plex Sans'}}>
       <span data-beat="t30Why">Why does the brain carry bias at all?</span>
-    </Label>}
+    </MotionLabel>}
 
     {ms>=cue.predictive.at && <>
-      <Panel box={L.loop} id="loop" dataPanel="prediction-loop" style={{opacity:frameP}}/>
+      <MotionPanel box={L.loop} id="loop" dataPanel="prediction-loop" startMs={cue.predictive.at} beat/>
       <Label id="predictive-coding" box={T.predictive} size={22} weight={500} ls={1.4} ink={gold} opacity={frameP}><span data-beat="t30Predictive">PREDICTIVE CODING</span></Label>
-      <Panel box={L.core} id="core" dataPanel="comparison-core" style={{opacity:frameP}}/>
-      <Panel box={L.output} id="output" dataPanel="percept-output" style={{opacity:frameP}}/>
+      <MotionPanel box={L.core} id="core" dataPanel="comparison-core" startMs={cue.predictive.at}/>
+      <MotionPanel box={L.output} id="output" dataPanel="percept-output" startMs={cue.predictive.at}/>
       <Label id="percept-title" box={T.percept} size={20} weight={500} ls={1} ink={color('color/text/muted')} opacity={frameP}>LIVE PERCEPT / OUTPUT</Label>
       <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position:'absolute',inset:0}} aria-hidden="true">
         <path {...lineAttrs('percept-axis',[[PERCEPT.left,PERCEPT.y],[PERCEPT.right,PERCEPT.y]])} d={`M${PERCEPT.left} ${PERCEPT.y}H${PERCEPT.right}`} stroke={color('color/line/hairline')} strokeWidth="2" opacity={frameP}/>
@@ -76,11 +76,11 @@ export function PredictiveCoding({segment}:SceneProps) {
 
     {ms>=cue.priors.at && <>
       <CurveLane id="prior" box={L.prior} labelW={200} mean={priorMean} label="TOP-DOWN PRIOR" progress={priorP} tone={turn31?'red':'gold'}/>
-      <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position:'absolute',inset:0}} aria-hidden="true"><path {...lineAttrs('prediction-wire',PREDICTION_WIRE)} d={pathFrom(PREDICTION_WIRE)} fill="none" stroke={color('color/line/wire')} strokeWidth="3" opacity={priorP}/></svg>
+      <MotionPath id="prediction-wire" points={PREDICTION_WIRE} strokeWidth={3} startMs={cue.priors.at}/>
     </>}
     {ms>=cue.data.at && <>
       <CurveLane id="evidence" box={L.evidence} labelW={290} mean={M.evidence} label="INCOMING SENSORY DATA" progress={evidenceP}/>
-      <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position:'absolute',inset:0}} aria-hidden="true"><path {...lineAttrs('evidence-wire',EVIDENCE_WIRE)} d={pathFrom(EVIDENCE_WIRE)} fill="none" stroke={gold} strokeWidth="3" opacity={evidenceP}/></svg>
+      <MotionPath id="evidence-wire" points={EVIDENCE_WIRE} strokeToken="color/fill/gold" strokeWidth={3} startMs={cue.data.at}/>
     </>}
 
     {ms>=cue.updates.at && <>
@@ -119,5 +119,5 @@ export function PredictiveCoding({segment}:SceneProps) {
       {ms>=cue.weight.at && <Label id="weight-sentence" box={T.weight} size={28} weight={400} ls={0} lh={1.2} sans align="center" ink={color('color/text/soft')} opacity={enter(ms,cue.weight.at)}><span data-beat="t31Weight">Institutional reinforcement gives the racial prior overwhelming weight.</span></Label>}
     </>}
     <SceneSource text="Friston 2010 · Clark 2013" opacity={enter(ms,segment.start_ms,400)}/>
-  </StageSceneFrame>;
+  </StageSceneFrame></KitSound>;
 }

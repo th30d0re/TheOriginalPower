@@ -1,8 +1,8 @@
 import React from 'react';
-import {useCue, useStageMs, type SceneProps} from '@stage';
+import {KitSound, useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../../tokens';
 import {StageSceneFrame, TrainingTextStrip} from '../shared';
-import {Label, MiniNetwork, Panel, SceneSource, enter, lineAttrs, miniNetworkPoints, pathFrom, shapeAttrs, type LayoutBox, type Point} from './sceneUtils';
+import {Label, MiniNetwork, MotionLabel, MotionPanel, MotionPath, SceneSource, enter, lineAttrs, miniNetworkPoints, pathFrom, shapeAttrs, type LayoutBox, type Point} from './sceneUtils';
 
 export const COMPUTATIONAL_BIAS_LAYOUT = {
   header:{x:150,y:108,w:1620,h:48}, left:{x:120,y:235,w:790,h:665}, right:{x:1010,y:235,w:790,h:665},
@@ -37,17 +37,17 @@ export function ComputationalBias({segment}:SceneProps) {
   const feeds=[0,1,2].map(index=>[[L.rightText.x+L.rightText.w,L.rightText.y+index*(STRIP_HEIGHT+STRIP_GAP)+STRIP_HEIGHT/2],[rightLayers[0][index].x-12,rightLayers[0][index].y]] as Point[]);
   const lastLayer=rightLayers[rightLayers.length-1];
   const emit:Point[]=[[lastLayer[1].x+12,lastLayer[1].y],[1786,lastLayer[1].y],[1786,686],[OUTPUT_STRIPS[2].x+100,686],[OUTPUT_STRIPS[2].x+100,OUTPUT_STRIPS[2].y]];
-  return <StageSceneFrame segment={segment}>
-    {ms>=cue.computer.at && <Label id="header" box={L.header} size={36} ls={1.2} align="center" opacity={enter(ms,cue.computer.at)}><span data-beat="t32Computer">COMPUTER SCIENCE · TWO USES OF BIAS</span></Label>}
+  return <KitSound mode="beats"><StageSceneFrame segment={segment}>
+    {ms>=cue.computer.at && <MotionLabel startMs={cue.computer.at} beat id="header" box={L.header} size={36} ls={1.2} align="center"><span data-beat="t32Computer">COMPUTER SCIENCE · TWO USES OF BIAS</span></MotionLabel>}
     {ms>=cue.two.at && <>
-      <Panel box={L.left} id="left-panel" dataPanel="numerical-bias" style={{opacity:enter(ms,cue.two.at)}}/>
-      <Panel box={L.right} id="right-panel" dataPanel="social-bias" style={{opacity:enter(ms,cue.two.at)}}/>
+      <MotionPanel box={L.left} id="left-panel" dataPanel="numerical-bias" startMs={cue.two.at} beat/>
+      <MotionPanel box={L.right} id="right-panel" dataPanel="social-bias" startMs={cue.two.at}/>
       <div data-divider="true" {...lineAttrs('divider',[[960,235],[960,900]])} style={{position:'absolute',left:960,top:235,width:1,height:665,background:color('color/line/hairline'),opacity:enter(ms,cue.two.at)}}/>
     </>}
 
     {ms>=cue.neural.at && <MiniNetwork id="left-network" x={L.leftNetwork.x} y={L.leftNetwork.y} w={L.leftNetwork.w} h={L.leftNetwork.h} progress={networkP} hot={offsetP>.5}/>}
     {ms>=cue.bias.at && <>
-      <Label id="left-title" box={T.leftTitle} size={26} weight={700} ls={0} align="center" ink={gold} opacity={biasP}><span data-beat="t32BiasTerm">NEURAL-NETWORK BIAS TERM</span></Label>
+      <MotionLabel startMs={cue.bias.at} id="left-title" box={T.leftTitle} size={26} weight={700} ls={0} align="center" ink={gold}><span data-beat="t32BiasTerm">NEURAL-NETWORK BIAS TERM</span></MotionLabel>
       <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position:'absolute',inset:0}} aria-hidden="true" opacity={biasP}>
         <path {...lineAttrs('constant-bus',constantBus)} d={pathFrom(constantBus)} fill="none" stroke={accent} strokeWidth="3"/>
         {stubs.map((stub,index)=><path key={index} data-constant-link={index+1} {...lineAttrs(`constant-link-${index+1}`,stub)} d={pathFrom(stub)} fill="none" stroke={accent} strokeWidth="2" strokeDasharray="6 6"/>)}
@@ -64,7 +64,7 @@ export function ComputationalBias({segment}:SceneProps) {
     </>}
     {ms>=cue.layer.at && layerX.map((x,index)=><Label key={index} id={`layer-${index+1}`} box={{x:x-62,y:318,w:124,h:28}} size={20} weight={500} ls={0} align="center" ink={gold} opacity={enter(ms,cue.layer.at+index*80)}><span data-beat={index===0?'t32Layer':undefined}>{`LAYER ${index+1}`}</span></Label>)}
 
-    {ms>=cue.social.at && <Label id="right-title" box={T.rightTitle} size={26} weight={700} ls={0} align="center" ink={gold} opacity={enter(ms,cue.social.at)}><span data-beat="t32Social">SOCIAL BIAS IN LANGUAGE MODELS</span></Label>}
+    {ms>=cue.social.at && <MotionLabel startMs={cue.social.at} id="right-title" box={T.rightTitle} size={26} weight={700} ls={0} align="center" ink={gold}><span data-beat="t32Social">SOCIAL BIAS IN LANGUAGE MODELS</span></MotionLabel>}
     {ms>=cue.biasSocial.at && <>
       {STRIP_TOKENS.map((tokens,index)=>{
         const box={x:L.rightText.x,y:L.rightText.y+index*(STRIP_HEIGHT+STRIP_GAP),w:L.rightText.w,h:STRIP_HEIGHT};
@@ -78,10 +78,10 @@ export function ComputationalBias({segment}:SceneProps) {
     </>}
     {ms>=cue.weights.at && <Label id="weights" box={T.weights} size={20} ls={0} align="center" ink={accent} opacity={weightsP}><span data-beat="t32Weights">WEIGHTS TRAINED ON HUMAN TEXT</span></Label>}
     {ms>=cue.repeats.at && <>
-      <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position:'absolute',inset:0}} aria-hidden="true" opacity={enter(ms,cue.repeats.at)}><path {...lineAttrs('emit',emit)} d={pathFrom(emit)} fill="none" stroke={gold} strokeWidth="3"/></svg>
+      <MotionPath id="emit" points={emit} strokeToken="color/fill/gold" strokeWidth={3} startMs={cue.repeats.at}/>
       {OUTPUT_STRIPS.map((box,index)=><div key={index} data-output-strip={index+1} {...shapeAttrs(`output-strip-${index+1}`,box,'frame')} style={{position:'absolute',left:box.x,top:box.y,width:box.w,height:box.h}}><TrainingTextStrip tokens={['pattern']} patternKey={`repeated-pattern-${index}`} progress={enter(ms,cue.repeats.at+index*120,450)} emphasis="pattern"/></div>)}
       <Label id="repeated" box={T.repeated} size={24} weight={700} ls={0} align="center" ink={gold} opacity={enter(ms,cue.repeats.at)}><span data-beat="t32Repeats">REPEATED PATTERN</span></Label>
     </>}
     <SceneSource text="The Original Power · neural systems and learned priors" opacity={enter(ms,segment.start_ms,400)}/>
-  </StageSceneFrame>;
+  </StageSceneFrame></KitSound>;
 }

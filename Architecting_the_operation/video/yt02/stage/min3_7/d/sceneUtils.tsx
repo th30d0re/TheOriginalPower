@@ -1,5 +1,5 @@
 import React from 'react';
-import {cubicOut, progress} from '@stage';
+import {cubicOut, progress, DrawLine, DrawRect, Flicker, useStageMs} from '@stage';
 import {color} from '../../tokens';
 
 export type LayoutBox = {x:number;y:number;w:number;h:number};
@@ -50,6 +50,29 @@ export function FadeIn({ms, at, duration=500, children, style, dataBeat}:{ms:num
 
 export function Panel({box, id, children, accent=false, style, dataPanel}:{box:LayoutBox;id?:string;children?:React.ReactNode;accent?:boolean;style?:React.CSSProperties;dataPanel?:string}) {
   return <div data-panel={dataPanel} {...shapeAttrs(id??dataPanel??'panel', box, 'frame')} style={{position:'absolute',left:box.x,top:box.y,width:box.w,height:box.h,boxSizing:'border-box',overflow:'hidden',background:color('color/fill/panel-render'),border:`1px solid ${accent?color('color/line/hairline-strong'):color('color/line/hairline')}`,...style}}>{children}</div>;
+}
+
+/** Kit-powered frame that retains the audited panel node and resting fill exactly. */
+export function MotionPanel({box,id,children,accent=false,style,dataPanel,startMs,durationMs=500,beat=false}:{box:LayoutBox;id?:string;children?:React.ReactNode;accent?:boolean;style?:React.CSSProperties;dataPanel?:string;startMs:number;durationMs?:number;beat?:boolean}) {
+  const strokeToken=accent ? 'color/line/hairline-strong' : 'color/line/hairline';
+  return <>
+    <DrawRect box={box} startFrame={Math.round(startMs*30/1000)} durationFrames={Math.round(durationMs*30/1000)} strokeToken={strokeToken} fillToken="color/fill/panel-render" beat={beat}/>
+    <div data-panel={dataPanel} {...shapeAttrs(id??dataPanel??'panel',box,'frame')} style={{position:'absolute',left:box.x,top:box.y,width:box.w,height:box.h,boxSizing:'border-box',overflow:'hidden',background:color('color/fill/panel-render'),border:'none',...style}}>{children}</div>
+  </>;
+}
+
+/** The text node remains unchanged; only its entrance is delegated to the kit. */
+export function MotionLabel({startMs,durationMs=460,beat=false,...props}:{startMs:number;durationMs?:number;beat?:boolean}&React.ComponentProps<typeof Label>) {
+  return <Flicker startFrame={Math.round(startMs*30/1000)} durationFrames={Math.round(durationMs*30/1000)} beat={beat}><Label {...props}/></Flicker>;
+}
+
+/** A kit line plus the original audited path, whose dash draw preserves arbitrary geometry. */
+export function MotionPath({id,points,strokeToken='color/line/wire',strokeWidth=2,startMs,durationMs=500,beat=false,dashed=false}:{id:string;points:readonly Point[];strokeToken?:string;strokeWidth?:number;startMs:number;durationMs?:number;beat?:boolean;dashed?:boolean}) {
+  const p=enter(useStageMs(),startMs,durationMs);
+  return <>
+    <DrawLine points={points} startFrame={Math.round(startMs*30/1000)} durationFrames={Math.round(durationMs*30/1000)} strokeToken={strokeToken} strokeWidth={strokeWidth} beat={beat}/>
+    <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position:'absolute',inset:0,pointerEvents:'none'}} aria-hidden="true"><path {...lineAttrs(id,points)} d={pathFrom(points)} fill="none" stroke={color(strokeToken)} strokeWidth={strokeWidth} pathLength="1" strokeDasharray={dashed?'6 6':'1'} strokeDashoffset={dashed?undefined:1-p}/></svg>
+  </>;
 }
 
 export const MINI_NETWORK_LAYERS = [3,4,4,3] as const;
