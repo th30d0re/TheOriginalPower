@@ -1,7 +1,7 @@
 import React from 'react';
-import {cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
+import {BootIn, Flicker, KitSound, StickFigure, cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../../tokens';
-import {PersonMark, StageSceneFrame} from '../../min3_7/shared';
+import {StageSceneFrame} from '../../min3_7/shared';
 import {
   Label,
   Panel,
@@ -14,6 +14,8 @@ import {
 } from '../shared';
 
 const enter = (ms: number, at: number, duration = 520) => cubicOut(progress(ms, at, at + duration));
+const cueFrame = (ms: number) => Math.round(ms * 30 / 1000);
+const cueDuration = (ms = 520) => Math.round(ms * 30 / 1000);
 
 export const IMPLICIT_TRACE_LAYOUT = {
   // Turn 41: Full-canvas 4-region composition (y: 115..880, span = 765 px)
@@ -129,13 +131,17 @@ export function ImplicitTrace({segment}: SceneProps) {
 
   return (
     <StageSceneFrame segment={segment}>
+      <KitSound mode="beats">
       {!isTurn42 && ms >= cue.t41Define && (
         <div data-turn="41" style={{opacity: defP}}>
           {/* Top Header Banner (height 72, text span 36 -> 36 px slack) */}
           <Panel id="t41-banner" box={L.t41Banner} accent="color/fill/gold" />
-          <Label id="t41-banner-title" box={{x: 148, y: 133, w: 980, h: 36}} size={28} weight={650} sans ink={gold}>
-            IMPLICIT ATTITUDE · TRACE &amp; SHORTCUT MECHANISM
-          </Label>
+          <BootIn box={L.t41Banner} startFrame={cueFrame(cue.t41Define)} durationFrames={cueDuration()} mode="scan" beat />
+          <Flicker startFrame={cueFrame(cue.t41Define)} durationFrames={cueDuration()}>
+            <Label id="t41-banner-title" box={{x: 148, y: 133, w: 980, h: 36}} size={28} weight={650} sans ink={gold}>
+              IMPLICIT ATTITUDE · TRACE &amp; SHORTCUT MECHANISM
+            </Label>
+          </Flicker>
           <Label id="t41-banner-sub" box={{x: 1150, y: 136, w: 612, h: 30}} size={20} weight={500} align="right" ink={soft}>
             AUTOMATIC TRACE PATHWAY
           </Label>
@@ -458,6 +464,7 @@ export function ImplicitTrace({segment}: SceneProps) {
         <div data-turn="42" style={{opacity: precisionP}}>
           {/* Top Title Banner (height 72, text span 36 -> 36 px slack) */}
           <Panel id="t42-banner" box={L.t42Banner} accent="color/fill/gold" />
+          <BootIn box={L.t42Banner} startFrame={cueFrame(cue.t42Precision)} durationFrames={cueDuration()} mode="scan" beat />
           <Label id="t42-banner-title" box={{x: 170, y: 133, w: 1020, h: 36}} size={28} weight={650} sans ink={gold}>
             SIMULTANEOUS DUAL INPUTS · BELIEF &amp; AUTOMATIC TRACE
           </Label>
@@ -518,7 +525,7 @@ export function ImplicitTrace({segment}: SceneProps) {
             {...shapeAttrs('person-mark-frame', {x: 900, y: 305, w: 120, h: 135}, 'mark', 'person')}
             style={{position: 'absolute', left: 900, top: 305, width: 120, height: 135}}
           >
-            <PersonMark x={60} y={68} group="neutral" emphasis={1} scale={1.65} />
+            <StickFigure x={60} y={68} group="neutral" emphasis={1} scale={1.65} startFrame={cueFrame(cue.t42Precision)} durationFrames={cueDuration()} />
           </div>
           <Label id="person-hub-sub" box={{x: 846, y: 458, w: 228, h: 54}} size={20} weight={500} align="center" ink={soft}>
             HOLDS BOTH CHANNELS
@@ -639,6 +646,7 @@ export function ImplicitTrace({segment}: SceneProps) {
           Greenwald &amp; Banaji 1995 · Psychological Review 102(1)
         </Label>
       )}
+      </KitSound>
     </StageSceneFrame>
   );
 }
