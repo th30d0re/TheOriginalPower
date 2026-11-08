@@ -1,12 +1,11 @@
 import React from 'react';
-import {cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
+import {cubicOut, Flicker, KitSound, progress, useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../../tokens';
 import {StageSceneFrame} from '../../min3_7/shared';
 import {
   Label,
   Panel,
   lineAttrs,
-  partialPolyline,
   pathFrom,
   shapeAttrs,
   type Box,
@@ -14,6 +13,8 @@ import {
 } from '../shared';
 
 const enter = (ms: number, at: number, duration = 520) => cubicOut(progress(ms, at, at + duration));
+/** Narration cues are milliseconds; kit motion is composed at 30 fps. */
+const cueFrame = (ms: number) => Math.round(ms * 30 / 1000);
 
 export const THREE_PART_TAXONOMY_LAYOUT = {
   taxonomyFrame: {x: 120, y: 130, w: 1680, h: 660},
@@ -69,10 +70,11 @@ export function ThreePartTaxonomy({segment}: SceneProps) {
     [L.bracketBox.x + L.bracketBox.w, L.bracketBox.y + 26],
     [L.bracketBox.x + L.bracketBox.w, L.bracketBox.y],
   ];
-  const bracketDrawn = partialPolyline(bracketFull, threeP);
 
   return (
-    <StageSceneFrame segment={segment}>
+    <KitSound mode="beats">
+      <StageSceneFrame segment={segment}>
+        <Flicker startFrame={cueFrame(cue.t54Divides)} durationFrames={16} seed={54} beat>
       {ms >= cue.t54Divides && (
         <div data-taxonomy-scene="true" style={{opacity: dividesP}}>
           {/* Outer Taxonomy Frame (height 660, text span 624 -> 36 px margin) */}
@@ -391,17 +393,17 @@ export function ThreePartTaxonomy({segment}: SceneProps) {
           {ms >= cue.t54Three && (
             <div data-taxonomy-bracket="true" style={{opacity: threeP}}>
               <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position: 'absolute', inset: 0}} aria-hidden="true">
-                {bracketDrawn.length >= 2 && (
-                  <path
-                    {...lineAttrs('taxonomy-bracket-line', bracketDrawn)}
-                    d={pathFrom(bracketDrawn)}
+                <path
+                    {...lineAttrs('taxonomy-bracket-line', bracketFull)}
+                    d={pathFrom(bracketFull)}
                     fill="none"
                     stroke={gold}
                     strokeWidth="4"
                     strokeLinecap="round"
                     strokeLinejoin="round"
+                    pathLength={1}
+                    strokeDasharray={`${threeP} 1`}
                   />
-                )}
               </svg>
               <Label
                 id="taxonomy-bracket-label"
@@ -425,6 +427,8 @@ export function ThreePartTaxonomy({segment}: SceneProps) {
           Fiske 1998 · The Handbook of Social Psychology, 4th ed., vol. 2, pp. 357–411
         </Label>
       )}
-    </StageSceneFrame>
+        </Flicker>
+      </StageSceneFrame>
+    </KitSound>
   );
 }

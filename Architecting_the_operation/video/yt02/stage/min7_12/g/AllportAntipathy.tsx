@@ -1,5 +1,5 @@
 import React from 'react';
-import {cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
+import {cubicOut, Flicker, KitSound, progress, useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../../tokens';
 import {PersonMark, StageSceneFrame} from '../../min3_7/shared';
 import {
@@ -13,6 +13,8 @@ import {
 } from '../shared';
 
 const enter = (ms: number, at: number, duration = 520) => cubicOut(progress(ms, at, at + duration));
+/** Narration cues are milliseconds; kit motion is composed at 30 fps. */
+const cueFrame = (ms: number) => Math.round(ms * 30 / 1000);
 
 export const ALLPORT_ANTIPATHY_LAYOUT = {
   // Turns 47–48: Left column (Definition card + Observer locus card)
@@ -103,7 +105,9 @@ export function AllportAntipathy({segment}: SceneProps) {
   const turn49Bridge: Point[] = [[850, 393], [1070, 393]];
 
   return (
-    <StageSceneFrame segment={segment}>
+    <KitSound mode="beats">
+      <StageSceneFrame segment={segment}>
+        <Flicker startFrame={cueFrame(cue.t47Defines)} durationFrames={16} seed={47} beat>
       {/* TURNS 47–48: Allport Definition, Generalization Template, Observer Locus, and Target Field */}
       {!isTurn49 && ms >= cue.t47Defines && (
         <div data-turns="47-48" style={{opacity: definesP}}>
@@ -568,6 +572,8 @@ export function AllportAntipathy({segment}: SceneProps) {
           Allport 1954, p. 9 · The Nature of Prejudice
         </Label>
       )}
-    </StageSceneFrame>
+        </Flicker>
+      </StageSceneFrame>
+    </KitSound>
   );
 }
