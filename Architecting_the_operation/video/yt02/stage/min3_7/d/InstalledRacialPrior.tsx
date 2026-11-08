@@ -1,10 +1,10 @@
 import React from 'react';
-import {progress, useCue, useStageMs, type SceneProps} from '@stage';
+import {KitSound, progress, useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../../tokens';
 import {ColoredTerm, EquationTerms, TermChip, type EquationPulseMap, type EquationToken} from '../../equations';
 import {PrecisionGauge, StageSceneFrame, UsThemSortingField} from '../shared';
 import type {SortingMark} from '../shared';
-import {Label, MiniNetwork, Panel, SceneSource, clamp, enter, gaussianPoints, leave, lineAttrs, mix, pathFrom, shapeAttrs, type LayoutBox, type Point} from './sceneUtils';
+import {Label, MiniNetwork, MotionPanel, SceneSource, clamp, enter, gaussianPoints, leave, lineAttrs, mix, pathFrom, shapeAttrs, type LayoutBox, type Point} from './sceneUtils';
 
 export const INSTALLED_PRIOR_LAYOUT = {
   equation:{x:120,y:105,w:1680,h:155}, plot:{x:120,y:310,w:1200,h:570}, gauge:{x:1390,y:320,w:370,h:380},
@@ -96,9 +96,9 @@ export function InstalledRacialPrior({segment}:SceneProps) {
     return {x:mix(1030,xFor(BAYES.priorMean)+(index-1.5)*14,t), y:mix(400+index*18,AXIS.y-heightFor(priorPrecision)+10,t), opacity:1-t};
   }):[];
 
-  return <StageSceneFrame segment={segment}>
+  return <KitSound mode="beats"><StageSceneFrame segment={segment}>
     {turn33 && <div data-turn="33" style={{opacity:turn33Opacity}}>
-      <Panel box={L.equation} id="equation-band" dataPanel="equation-band" style={{opacity:bookP}}/>
+      <MotionPanel box={L.equation} id="equation-band" dataPanel="equation-band" startMs={cue.book.at} beat/>
       {ms>=cue.evidence.at&&<EquationTerms tokens={equationTokens(cue.evidence.at)} pulses={termPulses} ms={ms} box={{x:150,y:116,w:1620,h:52}} fontSize={34} align="center" equation={EQ_28A} style={{opacity:bookP}}/>}
       {ms>=cue.pi.at&&<TermChip term="PiRace" ms={ms} pulses={termPulses.PiRace} box={{x:150,y:190,w:410,h:54}} opacity={enter(ms,cue.pi.at)}/>}
       {ms>=cue.priors.at&&<TermChip term="T" ms={ms} pulses={termPulses.T} box={{x:580,y:190,w:410,h:54}} opacity={enter(ms,cue.priors.at)}/>}
@@ -106,7 +106,7 @@ export function InstalledRacialPrior({segment}:SceneProps) {
       {ms>=cue.sensory.at&&<TermChip term="X" ms={ms} pulses={termPulses.X} box={{x:1330,y:190,w:440,h:54}} opacity={enter(ms,cue.sensory.at)}/>}
 
       <div data-prior-plot="true" data-precision={alpha.toFixed(3)} data-posterior-mode={posterior.mean.toFixed(6)} data-posterior-precision={posterior.precision.toFixed(6)} style={{opacity:bookP}}>
-        <Panel box={L.plot} id="plot" dataPanel="prior-plot"/>
+        <MotionPanel box={L.plot} id="plot" dataPanel="prior-plot" startMs={cue.book.at}/>
         <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position:'absolute',inset:0}} aria-hidden="true">
           <path {...lineAttrs('axis',[[AXIS.left,AXIS.y],[AXIS.right,AXIS.y]])} d={`M${AXIS.left} ${AXIS.y}H${AXIS.right}`} stroke={color('color/line/hairline')} strokeWidth="2"/>
           <Curve id="evidence-curve" dataCurve="evidence" points={evidencePoints} ink={gold} width={highlight==='evidence'?6:3}/>
@@ -157,7 +157,7 @@ export function InstalledRacialPrior({segment}:SceneProps) {
     {turn34 && <div data-turn="34" style={{opacity:turn34Opacity}}>
       <EquationTerms tokens={equationTokens(cue.bias.at-1000)} pulses={termPulses} ms={ms} box={T.strip} fontSize={26} align="center" equation={EQ_28A} style={{color:soft}}/>
       <Label id="bias" box={T.bias} size={28} weight={700} ls={2} lh={1.15} align="center" ink={gold}><span data-beat="t34Bias">BIAS</span></Label>
-      <Panel box={L.rail} id="rail" dataPanel="three-field-rail"/>
+      <MotionPanel box={L.rail} id="rail" dataPanel="three-field-rail" startMs={cue.bias.at} beat/>
       {ms>=cue.sociology.at && <>
         <Label id="sociology" box={{x:RAIL_COLUMNS[0],y:188,w:480,h:30}} size={23} weight={700} ls={0} align="center" opacity={enter(ms,cue.sociology.at)}><span data-beat="t34Sociology">SOCIOLOGY</span></Label>
         <div data-sociology-glyph="true" {...shapeAttrs('sociology-glyph',{x:SOCIOLOGY_GLYPH.x,y:SOCIOLOGY_GLYPH.y,w:760*SOCIOLOGY_GLYPH.scale,h:430*SOCIOLOGY_GLYPH.scale},'mark','glyph')} style={{position:'absolute',left:SOCIOLOGY_GLYPH.x,top:SOCIOLOGY_GLYPH.y,width:760,height:430,transform:`scale(${SOCIOLOGY_GLYPH.scale})`,transformOrigin:'left top',opacity:enter(ms,cue.sociology.at)}}>
@@ -206,5 +206,5 @@ export function InstalledRacialPrior({segment}:SceneProps) {
         </React.Fragment>;
       })}
     </div>}
-  </StageSceneFrame>;
+  </StageSceneFrame></KitSound>;
 }
