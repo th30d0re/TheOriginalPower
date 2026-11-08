@@ -1,5 +1,5 @@
 import React from 'react';
-import {cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
+import {Flicker, KitSound, cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../../tokens';
 import {PersonMark, StageSceneFrame} from '../../min3_7/shared';
 import {
@@ -160,7 +160,7 @@ export function ExplicitImplicitChannels({segment}: SceneProps) {
     : 'ANTHONY G. GREENWALD';
 
   return (
-    <StageSceneFrame segment={segment}>
+    <StageSceneFrame segment={segment}><KitSound mode="beats">
       {/* TURN 39: Balanced Dual-Channel System and Bias Hub */}
       {!isTurn40 && (
         <div data-turn="39">
@@ -181,9 +181,9 @@ export function ExplicitImplicitChannels({segment}: SceneProps) {
             <Label id="bias-hub-header" box={L.biasHeader} size={20} weight={600} align="center" ink={muted} opacity={Math.max(0.85, biasP)}>
               STARTING NODE
             </Label>
-            <Label id="bias-hub-title" box={L.biasTitle} size={36} weight={700} sans align="center" ink={gold} opacity={Math.max(0.85, biasP)}>
+            <Flicker startFrame={Math.round(cue.t39Bias * 30 / 1000)} durationFrames={16} beat><Label id="bias-hub-title" box={L.biasTitle} size={36} weight={700} sans align="center" ink={gold}>
               BIAS
-            </Label>
+            </Label></Flicker>
             <div
               {...shapeAttrs('bias-person-mark', L.biasMark, 'mark', 'bias-person-mark')}
               style={{position: 'absolute', left: L.biasMark.x, top: L.biasMark.y, width: L.biasMark.w, height: L.biasMark.h, opacity: Math.max(0.85, biasP)}}
@@ -458,6 +458,6 @@ export function ExplicitImplicitChannels({segment}: SceneProps) {
           ? 'The Original Power, Chapter 2 · dual-channel judgment'
           : 'Greenwald & Banaji (1995) · Implicit Social Cognition'}
       </Label>
-    </StageSceneFrame>
+    </KitSound></StageSceneFrame>
   );
 }
