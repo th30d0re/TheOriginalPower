@@ -2,7 +2,7 @@ import React from 'react';
 import {cubicInOut,progress,useCue,useStageMs,type SceneProps} from '@stage';
 import {color} from '../../tokens';
 import {StageSceneFrame} from '../shared';
-import {ActionIcon,AuditedTermBlock,enter,HeartIcon,Label,lineAttrs,pathFrom,PersonIcon,SceneSource,shapeAttrs,SystemIcon,type Box,type Point} from './PackageAVisuals';
+import {ActionIcon,AuditedTermBlock,FlickerLabel,KitSound,enter,HeartIcon,Label,lineAttrs,pathFrom,PersonIcon,SceneSource,shapeAttrs,SystemIcon,type Box,type Point} from './PackageAVisuals';
 
 export const TERMS_LAYOUT={
   header:{x:160,y:110,w:1600,h:100},
@@ -41,8 +41,8 @@ export function TermsInOneBucket({segment}:SceneProps){
   const distinctP=ms>=cue.t16Distinct.at?enter(ms,cue.t16Distinct.at,520):0,termsP=ms>=cue.t16Terms.at?enter(ms,cue.t16Terms.at,650):0;
   const bucketP=ms>=cue.t16Bucket.at?enter(ms,cue.t16Bucket.at,450):0;
   const bucketPoints:Point[]=[[420,545],[1500,545],[1425,750],[495,750],[420,545]];
-  return <StageSceneFrame segment={segment}>
-    {ms>=cue.t16Why.at&&<Label id="terms-question" box={TERMS_LAYOUT.header} size={38} weight={500} lh={1.28} sans align="center" opacity={whyP}>Why separate bias, prejudice, and discrimination before naming racism?</Label>}
+  return <StageSceneFrame segment={segment}><KitSound mode="beats">
+    {ms>=cue.t16Why.at&&<FlickerLabel startMs={cue.t16Why.at} durationMs={550} beat id="terms-question" box={TERMS_LAYOUT.header} size={38} weight={500} lh={1.28} sans align="center">Why separate bias, prejudice, and discrimination before naming racism?</FlickerLabel>}
     {ms>=cue.t16Exact.at&&<Label id="exact-words" box={{x:180,y:245,w:1560,h:30}} size={22} weight={500} ls={2} align="center" opacity={exactP*(1-distinctP)} ink={color('color/fill/gold')}>EXACT WORDS</Label>}
     {ms>=cue.t16Distinct.at&&<Label id="analytical-terms" box={{x:600,y:250,w:720,h:32}} size={22} weight={500} ls={2} align="center" opacity={distinctP} ink={color('color/fill/gold')}>FOUR ANALYTICAL TERMS</Label>}
     <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position:'absolute',inset:0}} aria-hidden="true">
@@ -52,8 +52,8 @@ export function TermsInOneBucket({segment}:SceneProps){
     </svg>
     {ms>=cue.t16Conversation.at&&ms<cue.t16Distinct.at&&<Label id="everyday-conversation" box={{x:650,y:580,w:620,h:30}} size={20} weight={500} ls={1.4} align="center" opacity={conversationP} ink={color('color/text/muted')}>EVERYDAY CONVERSATION</Label>}
     {TERM_BLOCKS.map((item,index)=>{const at=cue[item.cue].at;if(ms<at)return null;if(ms>=cue.t16Conversation.at+500&&ms<cue.t16Terms.at)return null;const box=termBoxAt(index,ms,{conversation:cue.t16Conversation.at,terms:cue.t16Terms.at});const opacity=ms>=cue.t16Terms.at?termsP:enter(ms,at,420);return <div key={item.term} data-term-flight={item.term} data-flight-box={`${box.x.toFixed(1)},${box.y.toFixed(1)},${box.w.toFixed(1)},${box.h.toFixed(1)}`}><AuditedTermBlock id={`term-${index+1}`} box={box} term={item.term} summary={item.summary} glyph={item.glyph} selected={ms>=cue.t16Terms.at} accent={item.accent} opacity={opacity} titleSize={27} summarySize={19}/></div>;})}
-    {ms>=cue.t16Bucket.at&&<Label id="bucket-seal" box={{x:720,y:650,w:480,h:52}} size={22} weight={500} ls={1.5} align="center" opacity={bucketP} ink={color('color/marker/race')} style={{paddingTop:11,background:color('color/fill/panel-render'),border:`1px solid ${color('color/marker/race')}`}}><span data-bucket-seal="true">ONE SHARED BUCKET</span></Label>}
+    {ms>=cue.t16Bucket.at&&<FlickerLabel startMs={cue.t16Bucket.at} durationMs={450} id="bucket-seal" box={{x:720,y:650,w:480,h:52}} size={22} weight={500} ls={1.5} align="center" ink={color('color/marker/race')} style={{paddingTop:11,background:color('color/fill/panel-render'),border:`1px solid ${color('color/marker/race')}`}}><span data-bucket-seal="true">ONE SHARED BUCKET</span></FlickerLabel>}
     {ms>=cue.t16Terms.at&&<Label id="terms-closing" box={{x:180,y:820,w:1560,h:42}} size={30} weight={400} sans align="center" opacity={termsP}>Exact words support formal analysis.</Label>}
     <SceneSource text="The Original Power, Chapter 2"/>
-  </StageSceneFrame>;
+  </KitSound></StageSceneFrame>;
 }

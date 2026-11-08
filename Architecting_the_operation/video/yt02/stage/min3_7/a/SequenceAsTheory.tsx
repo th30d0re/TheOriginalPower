@@ -2,7 +2,7 @@ import React from 'react';
 import {useCue,useStageMs,type SceneProps} from '@stage';
 import {color} from '../../tokens';
 import {StageSceneFrame} from '../shared';
-import {ActionIcon,AuditedTermBlock,enter,Label,lineAttrs,Panel,pathFrom,PersonIcon,SceneSource,shapeAttrs,SystemIcon,type Box,type Point} from './PackageAVisuals';
+import {ActionIcon,AuditedTermBlock,DrawLine,FlickerLabel,KitSound,enter,Label,lineAttrs,Panel,pathFrom,PersonIcon,SceneSource,shapeAttrs,SystemIcon,type Box,type Point} from './PackageAVisuals';
 
 export const SEQUENCE_LAYOUT={
   caption:{x:116,y:92,w:1688,h:64},continuity:{x:92,y:174,w:1736,h:742},
@@ -74,26 +74,27 @@ export function SequenceAsTheory({segment}:SceneProps){
   const firstLabel=ms>=cue.t12Personal.at?'PRIVATE HOSTILITY':'Individual Prejudice';
   const thirdLabel=ms>=cue.t12Institutional.at?'INSTITUTIONAL PATTERNS':'Systemic Outcomes';
   const arrowOne:Point[]=[[first.x+first.w+8,480],[second.x-8,480]],arrowTwo:Point[]=[[second.x+second.w+8,480],[third.x-8,480]];
-  return <StageSceneFrame segment={segment}>
+  return <StageSceneFrame segment={segment}><KitSound mode="beats">
     <Label id="sequence-caption" box={SEQUENCE_LAYOUT.caption} size={28} weight={500} ls={1.4} align="center">Figure 2.3 · Inverting the Definitional Hierarchy</Label>
     <ContinuityPlate opacity={continuityOpacity}/>
     {ms>=cue.t11Numbered.at&&<NumberRail ms={ms} numberedAt={cue.t11Numbered.at} analyticalAt={cue.t11Analytical.at} orderAt={cue.t11Order.at} nodes={nodes}/>}
     {ms>=cue.t11Unstated.at&&<div data-causal-graph="true" data-equation={EQ_25} style={{opacity:graphP}}>
-      {ms>=cue.t11Cause.at&&<Label id="causal-claim" box={SEQUENCE_LAYOUT.claim} size={24} weight={500} ls={2} align="center" opacity={enter(ms,cue.t11Cause.at,440)} ink={color('color/marker/race')}>CAUSAL CLAIM</Label>}
+      {ms>=cue.t11Cause.at&&<FlickerLabel startMs={cue.t11Cause.at} durationMs={440} id="causal-claim" box={SEQUENCE_LAYOUT.claim} size={24} weight={500} ls={2} align="center" ink={color('color/marker/race')}>CAUSAL CLAIM</FlickerLabel>}
       <AuditedTermBlock id="node-one" box={first} term={firstLabel} termId="IndividualPrejudice" ms={ms} pulses={[cue.t12Personal.at,cue.t12Root.at]} summary={ms>=cue.t12First.at?'assigned first':'causal node 1'} glyph={<PersonIcon/>} selected={ms>=cue.t12First.at} framed accent={ms>=cue.t12First.at?'color/marker/race':'color/fill/gold'} unit="slot 1" opacity={graphP}/>
       <AuditedTermBlock id="node-two" box={second} term="Discriminatory Actions" termId="DiscriminatoryActions" ms={ms} summary="causal node 2" glyph={<ActionIcon/>} accent="color/fill/gold" framed unit="slot 2" opacity={graphP}/>
       <AuditedTermBlock id="node-three" box={third} term={thirdLabel} termId="SystemicOutcomes" ms={ms} pulses={[cue.t12Institutional.at]} summary="causal node 3" glyph={<SystemIcon/>} accent="color/fill/gold" framed unit="slot 3" opacity={graphP}/>
-      {ms>=cue.t11Cause.at&&<svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position:'absolute',inset:0}} aria-hidden="true">
-        <path data-causal-arrow="one-two" {...lineAttrs('causal-arrow-one-two',arrowOne)} d={pathFrom(arrowOne)} stroke={color(rootP>.01?'color/marker/race':'color/fill/gold')} strokeWidth={3+5*rootP} opacity={arrowP}/>
-        <path data-causal-arrow="two-three" {...lineAttrs('causal-arrow-two-three',arrowTwo)} d={pathFrom(arrowTwo)} stroke={color('color/fill/gold')} strokeWidth="3" opacity={arrowP}/>
+      {ms>=cue.t11Cause.at&&<>
+        <DrawLine points={arrowOne} startFrame={Math.round(cue.t11Cause.at*30/1000)} durationFrames={Math.round(650*30/1000)} strokeToken={rootP>.01?'color/marker/race':'color/fill/gold'} strokeWidth={3+5*rootP} beat/>
+        <DrawLine points={arrowTwo} startFrame={Math.round(cue.t11Cause.at*30/1000)} durationFrames={Math.round(650*30/1000)} strokeToken="color/fill/gold" strokeWidth={3}/>
+        <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position:'absolute',inset:0}} aria-hidden="true">
         {ms>=cue.t12Root.at&&<circle data-root-pulse="true" {...shapeAttrs('root-pulse',{x:first.x+first.w+8,y:473,w:14,h:14},'mark','pulse')} cx={first.x+first.w+15} cy="480" r="7" fill={color('color/marker/race')} opacity={rootP}/>}
         {ms>=cue.t12Effects.at&&[0,1,2].map(index=>{const x=second.x+second.w+8+enter(ms,cue.t12Effects.at+index*130,620)*Math.max(0,third.x-second.x-second.w-16);return <circle key={index} data-effect-pulse={index+1} {...shapeAttrs(`effect-pulse-${index+1}`,{x:x-6,y:474,w:12,h:12},'mark','pulse')} cx={x} cy="480" r="6" fill={color('color/fill/gold')} opacity={enter(ms,cue.t12Effects.at+index*130,300)}/>;})}
-      </svg>}
+        </svg></>}
       {ms>=cue.t11Order.at&&<><Label id="causal-order" box={{x:720,y:650,w:640,h:34}} size={24} weight={500} align="center" opacity={enter(ms,cue.t11Order.at,450)} ink={color('color/fill/gold')}>1 → 2 → 3</Label><Label id="causal-equation" box={{x:720,y:692,w:640,h:30}} size={20} weight={400} align="center" opacity={enter(ms,cue.t11Order.at+100,450)} ink={color('color/text/muted')}>Eq. 2.5 · conventional causal arrow</Label></>}
       {ms>=cue.t11Caused.at&&<><Label id="root-label" box={{x:first.x,y:600,w:first.w,h:32}} size={22} weight={500} align="center" opacity={enter(ms,cue.t11Caused.at,400)} ink={color('color/marker/race')}>{ms>=cue.t12First.at?'ROOT CAUSE':'ROOT'}</Label><Label id="effect-label" box={{x:third.x,y:600,w:third.w,h:32}} size={22} weight={500} align="center" opacity={enter(ms,cue.t11Caused.at+90,400)} ink={color('color/text/muted')}>{ms>=cue.t12Effects.at?'SIDE EFFECT':'EFFECT'}</Label></>}
       {ms>=cue.t12Effects.at&&<Label id="sequence-footer" box={SEQUENCE_LAYOUT.footer} size={30} weight={400} sans align="center" opacity={enter(ms,cue.t12Effects.at,500)}>The first slot assigns the cause.</Label>}
       <div data-node="one" data-scale={(1+.18*firstP).toFixed(3)} style={{display:'none'}}/><div data-node="three" data-scale={(1-.12*firstP).toFixed(3)} style={{display:'none'}}/>
     </div>}
     <SceneSource text="The Original Power, Chapter 2"/>
-  </StageSceneFrame>;
+  </KitSound></StageSceneFrame>;
 }
