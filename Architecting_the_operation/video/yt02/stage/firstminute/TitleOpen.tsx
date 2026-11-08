@@ -1,5 +1,5 @@
 import React from 'react';
-import {Flicker, KitSound, MathText, cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
+import {Flicker, KitSound, MathText, cubicInOut, cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../tokens';
 import {SceneBorder} from '../dashboard/SceneBorder';
 
@@ -19,6 +19,18 @@ const TILE = {w: 340, h: 240, y: 533, xs: [350, 790, 1230]};
 const STRIP = {y: 493, scale: .30, xs: [783, 909, 1035]};
 const SERIES_Y = 596, EPISODE_Y = 646, SUBTITLE_Y = 742;
 const BOOK = {w: 270, h: 360, x: 960 - 135, y: 490};
+const BOOK_CENTER = {x: BOOK.x + BOOK.w / 2, y: BOOK.y + BOOK.h / 2};
+const CONTENT_BOUNDS = {
+  left: 120,
+  right: 1920 - 120,
+  top: TITLE_Y,
+  bottom: SUBTITLE_Y + 40 * 1.45,
+};
+const BOOK_CONTENT_MARGIN = 12;
+const UNDER_BOOK_SCALE = Math.min(
+  (BOOK.w - 2 * BOOK_CONTENT_MARGIN) / (CONTENT_BOUNDS.right - CONTENT_BOUNDS.left),
+  (BOOK.h - 2 * BOOK_CONTENT_MARGIN) / (CONTENT_BOUNDS.bottom - CONTENT_BOUNDS.top),
+);
 const cueFrame=(ms:number)=>Math.round(ms*30/1000);
 const frames=(ms:number)=>Math.round(ms*30/1000);
 
@@ -121,6 +133,10 @@ export function TitleOpen({segment}:SceneProps) {
   const fall = Math.min(1, Math.max(0, (ms - slam.at) / 220)) ** 2;
   const squash = ms >= LAND ? 1 - .06 * Math.exp(-(ms - LAND) / 60) * Math.cos((ms - LAND) / 25) : 1;
   const bookOut = cubicOut(progress(ms, series.at, series.at + 420));
+  const zoomOut = cubicInOut(progress(ms, slam.at - 300, LAND));
+  const contentScale = ms < LAND
+    ? 1 + (UNDER_BOOK_SCALE - 1) * zoomOut
+    : UNDER_BOOK_SCALE + (1 - UNDER_BOOK_SCALE) * bookOut;
   const [sx, sy] = shake(ms, LAND);
   const episodeIn = rise(ms, episode.at, 580);
   const definitionIn = rise(ms, definition.at, 520);
@@ -128,6 +144,7 @@ export function TitleOpen({segment}:SceneProps) {
   return <div data-scene="TitleOpen" style={{position:'absolute', inset:0, width:1920, height:1080, overflow:'hidden', background:color('color/bg/field'), color:color('color/text/primary'), fontFamily:'IBM Plex Sans'}}><KitSound mode="beats">
     <SceneBorder segment={segment}/>
     <div style={{position:'absolute', inset:0, transform:`translate(${sx}px, ${sy}px)`}}>
+    <div style={{position:'absolute', inset:0, transform:contentScale === 1 ? undefined : `translate(0px, 0px) scale(${contentScale})`, transformOrigin:`${BOOK_CENTER.x}px ${BOOK_CENTER.y}px`}}>
     {ms >= title.at && <Flicker startFrame={cueFrame(title.at)} durationFrames={frames(650)} beat><div style={{position:'absolute', left:120, right:120, top:TITLE_Y, textAlign:'center'}}>
       <div style={{fontSize:96, lineHeight:1, fontWeight:500, letterSpacing:-2}}>The Original Power</div>
       <div style={{marginTop:22, font:'400 30px "IBM Plex Mono"', letterSpacing:3, color:color('color/text/muted')}}>Emmanuel Theodore</div>
@@ -146,6 +163,7 @@ export function TitleOpen({segment}:SceneProps) {
         <span data-fails-underline="true" aria-hidden="true" style={{position:'absolute', left:0, right:0, bottom:-8, height:5, background:color('color/marker/race'), transform:`scaleX(${underline})`, transformOrigin:'left center', borderRadius:4}}/>
       </span><span>)</span>
     </div>}
+    </div>
     </div>
     {ms >= slam.at && bookOut < 1 && <div style={{position:'absolute', left:BOOK.x, top:BOOK.y, opacity:1 - bookOut, transform:`translateY(${-520 * (1 - fall)}px) scale(${(1.9 - .9 * fall) * (1 - .25 * bookOut)}, ${(1.9 - .9 * fall) * squash * (1 - .25 * bookOut)})`, transformOrigin:'center bottom', filter:'drop-shadow(0 18px 30px rgba(0,0,0,.55))'}}><Textbook/></div>}
     {ms >= LAND && <Shockwaves ms={ms} at={LAND}/>}
