@@ -1,5 +1,5 @@
 import React from 'react';
-import {MathText, cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
+import {Flicker, KitSound, MathText, cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../tokens';
 import {SceneBorder} from '../dashboard/SceneBorder';
 
@@ -19,6 +19,8 @@ const TILE = {w: 340, h: 240, y: 533, xs: [350, 790, 1230]};
 const STRIP = {y: 493, scale: .30, xs: [783, 909, 1035]};
 const SERIES_Y = 596, EPISODE_Y = 646, SUBTITLE_Y = 742;
 const BOOK = {w: 270, h: 360, x: 960 - 135, y: 490};
+const cueFrame=(ms:number)=>Math.round(ms*30/1000);
+const frames=(ms:number)=>Math.round(ms*30/1000);
 
 // Exponentially decaying shake after the slam lands (px).
 function shake(ms: number, at: number): [number, number] {
@@ -112,7 +114,6 @@ export function TitleOpen({segment}:SceneProps) {
   const title = useCue('title'), archives = useCue('archives'), equations = useCue('equations'), tests = useCue('tests');
   const episode = useCue('episode'), definition = useCue('definition'), fails = useCue('fails');
   const slam = useCue('slam'), series = useCue('series');
-  const titleIn = rise(ms, title.at, 650);
   const fold = cubicOut(progress(ms, series.at, series.at + 650));
   const seriesIn = rise(ms, series.at + 250, 520);
   // Book falls for 220 ms (accelerating), lands at slam.at + 220, squashes, then clears at the series cue.
@@ -124,13 +125,13 @@ export function TitleOpen({segment}:SceneProps) {
   const episodeIn = rise(ms, episode.at, 580);
   const definitionIn = rise(ms, definition.at, 520);
   const underline = cubicOut(progress(ms, fails.at, fails.at + 500));
-  return <div data-scene="TitleOpen" style={{position:'absolute', inset:0, width:1920, height:1080, overflow:'hidden', background:color('color/bg/field'), color:color('color/text/primary'), fontFamily:'IBM Plex Sans'}}>
+  return <div data-scene="TitleOpen" style={{position:'absolute', inset:0, width:1920, height:1080, overflow:'hidden', background:color('color/bg/field'), color:color('color/text/primary'), fontFamily:'IBM Plex Sans'}}><KitSound mode="beats">
     <SceneBorder segment={segment}/>
     <div style={{position:'absolute', inset:0, transform:`translate(${sx}px, ${sy}px)`}}>
-    {ms >= title.at && <div style={{position:'absolute', left:120, right:120, top:TITLE_Y, textAlign:'center', opacity:titleIn, transform:`translateY(${24*(1-titleIn)}px)`}}>
+    {ms >= title.at && <Flicker startFrame={cueFrame(title.at)} durationFrames={frames(650)} beat><div style={{position:'absolute', left:120, right:120, top:TITLE_Y, textAlign:'center'}}>
       <div style={{fontSize:96, lineHeight:1, fontWeight:500, letterSpacing:-2}}>The Original Power</div>
       <div style={{marginTop:22, font:'400 30px "IBM Plex Mono"', letterSpacing:3, color:color('color/text/muted')}}>Emmanuel Theodore</div>
-    </div>}
+    </div></Flicker>}
     {ms >= archives.at && <MethodTile label="Archives" at={archives.at} ms={ms} index={0} fold={fold}><FolioGraphic/></MethodTile>}
     {ms >= equations.at && <MethodTile label="Equations" at={equations.at} ms={ms} index={1} fold={fold}><EquationGraphic/></MethodTile>}
     {ms >= tests.at && <MethodTile label="Tests" at={tests.at} ms={ms} index={2} fold={fold}><TestsGraphic/></MethodTile>}
@@ -148,5 +149,5 @@ export function TitleOpen({segment}:SceneProps) {
     </div>
     {ms >= slam.at && bookOut < 1 && <div style={{position:'absolute', left:BOOK.x, top:BOOK.y, opacity:1 - bookOut, transform:`translateY(${-520 * (1 - fall)}px) scale(${(1.9 - .9 * fall) * (1 - .25 * bookOut)}, ${(1.9 - .9 * fall) * squash * (1 - .25 * bookOut)})`, transformOrigin:'center bottom', filter:'drop-shadow(0 18px 30px rgba(0,0,0,.55))'}}><Textbook/></div>}
     {ms >= LAND && <Shockwaves ms={ms} at={LAND}/>}
-  </div>;
+  </KitSound></div>;
 }
