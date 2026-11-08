@@ -1,5 +1,5 @@
 import React from 'react';
-import {cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
+import {cubicOut, Flicker, KitSound, progress, useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../../tokens';
 import {StageSceneFrame} from '../../min3_7/shared';
 import {
@@ -14,6 +14,8 @@ import {
 } from '../shared';
 
 const enter = (ms: number, at: number, duration = 520) => cubicOut(progress(ms, at, at + duration));
+/** Narration cues are milliseconds; kit motion is composed at 30 fps. */
+const cueFrame = (ms: number) => Math.round(ms * 30 / 1000);
 
 export const FISKE_HANDOFF_LAYOUT = {
   // Turn 52: Question Header + Fiske Source Socket + Three-Card Flow + Locus Summary Band
@@ -112,7 +114,9 @@ export function FiskeHandoff({segment}: SceneProps) {
     : 'Susan T. Fiske · tripartite taxonomy';
 
   return (
-    <StageSceneFrame segment={segment}>
+    <KitSound mode="beats">
+      <StageSceneFrame segment={segment}>
+        <Flicker startFrame={cueFrame(cue.t52Why)} durationFrames={16} seed={52} beat>
       {/* TURN 52: Question Header, Source Socket, and Thought -> Feeling -> Action Flow */}
       {!isTurn53 && ms >= cue.t52Why && (
         <div data-turn="52" style={{opacity: whyP}}>
@@ -446,6 +450,8 @@ export function FiskeHandoff({segment}: SceneProps) {
           {sourceLineText}
         </Label>
       )}
-    </StageSceneFrame>
+        </Flicker>
+      </StageSceneFrame>
+    </KitSound>
   );
 }

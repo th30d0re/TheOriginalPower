@@ -1,5 +1,5 @@
 import React from 'react';
-import {cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
+import {cubicOut, Flicker, KitSound, progress, useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../../tokens';
 import {PersonMark, StageSceneFrame} from '../../min3_7/shared';
 import {
@@ -12,6 +12,8 @@ import {
 } from '../shared';
 
 const enter = (ms: number, at: number, duration = 520) => cubicOut(progress(ms, at, at + duration));
+/** Narration cues are milliseconds; kit motion is composed at 30 fps. */
+const cueFrame = (ms: number) => Math.round(ms * 30 / 1000);
 
 export const EXCEPTION_FENCE_LAYOUT = {
   // Top source header tab
@@ -94,7 +96,9 @@ export function ExceptionFence({segment}: SceneProps) {
   const retainedRouteLine: Point[] = [[1320, 710], [1390, 710]];
 
   return (
-    <StageSceneFrame segment={segment}>
+    <KitSound mode="beats">
+      <StageSceneFrame segment={segment}>
+        <Flicker startFrame={cueFrame(cue.t50Allport)} durationFrames={16} seed={50} beat>
       {ms >= cue.t50Allport && (
         <div data-scene-content="exception-fence" style={{opacity: allportP}}>
           {/* Top Source Tab (height 68, text span 36 -> 32 px margin) */}
@@ -441,6 +445,8 @@ export function ExceptionFence({segment}: SceneProps) {
           Allport 1954, p. 9 · The Nature of Prejudice
         </Label>
       )}
-    </StageSceneFrame>
+        </Flicker>
+      </StageSceneFrame>
+    </KitSound>
   );
 }
