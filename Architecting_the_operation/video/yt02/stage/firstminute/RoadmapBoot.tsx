@@ -6,7 +6,7 @@
 // Brief: BRIEF_FIRST_MINUTE_T4.md. Every frame is a pure function of stage ms and cues.
 import {useNotch} from '../dashboard/notch';
 import React from 'react';
-import {useStageMs,usePlan,lookupCue,progress,cubicOut,cubicInOut,type SceneProps} from '@stage';
+import {BootIn, DrawLine, Flicker, KitSound, useStageMs,usePlan,lookupCue,progress,cubicOut,cubicInOut,type SceneProps} from '@stage';
 import {color,Tokens} from '../tokens';
 import {Dashboard,rail} from '../dashboard/Dashboard';
 import {instruments} from '../dashboard/PanelContent';
@@ -36,6 +36,8 @@ const ITEMS:Item[]=[
 ];
 
 const round=(v:number)=>Math.round(v*10000)/10000;
+const cueFrame=(ms:number)=>Math.round(ms*30/1000);
+const frames=(ms:number)=>Math.round(ms*30/1000);
 
 // On-canvas rect of every rail panel in compact mode, mirroring DashboardFrame's stacking
 // (left stack from index 0, right stack from index 5, tray cells carry their own x/y).
@@ -74,16 +76,14 @@ export function RoadmapBoot({segment}:SceneProps){
  const mapOpacity=round(MAP_DIM+(1-MAP_DIM)*cubicOut(progress(ms,bootAt,bootAt+BOOT_MS)));
  const collapse=cubicInOut(progress(ms,endAt,endAt+COLLAPSE_MS));
  const currentLine=cues.reduce((acc,at,i)=>ms>=at?i:acc,-1);
- return <div style={{position:'absolute',inset:0,width:1920,height:1080,background:color('color/bg/field')}}>
+ return <div style={{position:'absolute',inset:0,width:1920,height:1080,background:color('color/bg/field')}}><KitSound mode="beats">
   <Dashboard world empty dim={DIM} lights={lights} mapOpacity={mapOpacity} eraClockStandby mapOutlineOnly notch={notch}/>
   <svg data-roadmap-wires="overlay" width={1920} height={1080} style={{position:'absolute',inset:0,pointerEvents:'none'}}>
    {ITEMS.map((item,i)=>{
     const wire=wireFor(item,i);
     if(!wire) return null;
-    const start=cues[i]+TYPE_MS,holdEnd=start+WIRE_DRAW_MS+WIRE_HOLD_MS;
-    const draw=progress(ms,start,start+WIRE_DRAW_MS),fade=1-progress(ms,holdEnd,holdEnd+WIRE_FADE_MS);
-    if(draw<=0||fade<=0) return null;
-    return <path key={item.cue} data-roadmap-wire={item.cue} d={`M${round(wire.x1)} ${round(wire.y1)} L${round(wire.x2)} ${round(wire.y2)}`} fill="none" stroke={color('color/fill/gold')} strokeWidth={2} strokeLinecap="round" pathLength={1} strokeDasharray="1" strokeDashoffset={round(1-draw)} opacity={round(fade)}/>;
+    if(ms<cues[i]+TYPE_MS) return null;
+    return <DrawLine key={item.cue} {...({points:[[round(wire.x1),round(wire.y1)],[round(wire.x2),round(wire.y2)]],startFrame:cueFrame(cues[i]+TYPE_MS),durationFrames:frames(WIRE_DRAW_MS),strokeToken:'color/fill/gold',strokeWidth:2} as any)}/>;
    })}
    {ITEMS.map((item,i)=>{
     if(item.pulse===undefined) return null;
@@ -93,7 +93,7 @@ export function RoadmapBoot({segment}:SceneProps){
     return <rect key={item.cue} data-engine-pulse={item.cue} x={r.x-pad} y={r.y-pad} width={r.w+2*pad} height={r.h+2*pad} rx={8} fill="none" stroke={color('color/fill/gold')} strokeWidth={2.5} opacity={round(Math.sin(Math.PI*p))}/>;
    })}
   </svg>
-  <div data-roadmap-console="box" style={{position:'absolute',left:CONSOLE.x,top:CONSOLE.y,width:CONSOLE.w,height:CONSOLE.h,background:color('color/fill/panel-render'),border:`1px solid ${color('color/line/hairline')}`,borderRadius:8,padding:PAD,boxSizing:'border-box',pointerEvents:'none',opacity:round(1-collapse),transform:`translateY(${round(-60*collapse)}px) scale(${round(1-.92*collapse)})`,transformOrigin:'50% 0%'}}>
+  <BootIn box={CONSOLE} startFrame={cueFrame(cues[0])} durationFrames={frames(500)} mode="scan" beat><div data-roadmap-console="box" style={{position:'absolute',inset:0,background:color('color/fill/panel-render'),border:`1px solid ${color('color/line/hairline')}`,borderRadius:8,padding:PAD,boxSizing:'border-box',pointerEvents:'none',opacity:round(1-collapse),transform:`translateY(${round(-60*collapse)}px) scale(${round(1-.92*collapse)})`,transformOrigin:'50% 0%'}}>
    <div style={{height:HEADER_H,boxSizing:'border-box'}}>
     <div style={{fontFamily:Tokens.fonts.mono,fontSize:22,fontWeight:500,letterSpacing:3,lineHeight:'30px',color:color('color/text/muted')}}>EPISODE 1 · ROADMAP</div>
     <div style={{height:1,marginTop:12,background:color('color/line/hairline')}}/>
@@ -103,13 +103,13 @@ export function RoadmapBoot({segment}:SceneProps){
     const index=String(i+1).padStart(2,'0'),full=index.length+item.label.length;
     const n=Math.floor(progress(ms,cues[i],cues[i]+TYPE_MS)*full),done=n>=full;
     const colour=i===currentLine?'color/text/primary':'color/text/soft';
-    return <div key={item.cue} data-roadmap-line={item.cue} style={{display:'flex',alignItems:'center',height:LINE_H}}>
+    return <Flicker key={item.cue} startFrame={cueFrame(cues[i])} durationFrames={frames(TYPE_MS)} style={{position:'relative',inset:'auto'} as any}><div data-roadmap-line={item.cue} style={{display:'flex',alignItems:'center',height:LINE_H}}>
      <span style={{width:12,height:12,flex:'0 0 auto',border:`1.5px solid ${color('color/line/hairline-strong')}`,borderRadius:2,background:done?color('color/fill/gold'):'transparent',marginRight:16}}/>
      <span style={{...mono26,color:color('color/text/dim'),marginRight:18}}>{index.slice(0,Math.min(n,index.length))}</span>
      <span style={{...mono26,color:color(colour)}}>{n>index.length?item.label.slice(0,n-index.length):''}</span>
      {item.tag&&done&&<span style={{fontFamily:Tokens.fonts.mono,fontSize:16,fontWeight:500,letterSpacing:1.5,color:color('color/marker/race'),border:`1px solid ${color('color/marker/race')}`,borderRadius:3,padding:'1px 7px',marginLeft:14}}>{item.tag}</span>}
-    </div>;
+    </div></Flicker>;
    })}
-  </div>
- </div>;
+  </div></BootIn>
+ </KitSound></div>;
 }

@@ -1,9 +1,10 @@
 import React from 'react';
-import {cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
+import {DrawLine, Flicker, KitSound, useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../tokens';
 import {SceneBorder} from '../dashboard/SceneBorder';
 
-const reveal=(ms:number,at:number,duration=480)=>cubicOut(progress(ms,at,at+duration));
+const cueFrame=(ms:number)=>Math.round(ms*30/1000);
+const frames=(ms:number)=>Math.round(ms*30/1000);
 
 // Canvas geometry for the stack, the tripartite row, and the boundary. Connectors are
 // nested elbows through the gutter right of the stack: out of the component's top, right
@@ -28,24 +29,24 @@ const blocks=[
   {name:'Discrimination',definition:'behavior that treats people differently because of group membership',citation:'',y:LITERATURE_LAYOUT.blockYs[2]},
 ] as const;
 
-function LiteratureBlock({index,amount}:{index:number;amount:number}) {
+function LiteratureBlock({index,at}:{index:number;at:number}) {
   const block=blocks[index];
-  return <div style={{position:'absolute',left:LITERATURE_LAYOUT.blockX,top:block.y,width:LITERATURE_LAYOUT.blockW,height:LITERATURE_LAYOUT.blockH,display:'grid',gridTemplateColumns:'280px 1fr 300px',alignItems:'center',padding:'0 30px',opacity:amount,transform:`translateY(${20*(1-amount)}px)`,background:color('color/fill/panel-render'),border:`1px solid ${color('color/line/hairline')}`}}>
+  return <Flicker startFrame={cueFrame(at)} durationFrames={frames(480)}><div style={{position:'absolute',left:LITERATURE_LAYOUT.blockX,top:block.y,width:LITERATURE_LAYOUT.blockW,height:LITERATURE_LAYOUT.blockH,display:'grid',gridTemplateColumns:'280px 1fr 300px',alignItems:'center',padding:'0 30px',background:color('color/fill/panel-render'),border:`1px solid ${color('color/line/hairline')}`}}>
     <strong style={{fontSize:38,fontWeight:500,color:color('color/fill/gold')}}>{block.name}</strong>
     <span style={{fontSize:28,lineHeight:1.25,color:color('color/text/primary')}}>{block.definition}</span>
     <span style={{font:'400 20px "IBM Plex Mono"',textAlign:'right',color:color('color/text/muted')}}>{block.citation}</span>
-  </div>;
+  </div></Flicker>;
 }
 
 const connectorD=(points:readonly (readonly number[])[])=>points.map((point,i)=>`${i===0?'M':'L'}${point[0]-LITERATURE_LAYOUT.tripX} ${point[1]-LITERATURE_LAYOUT.tripY}`).join(' ');
 
-function Tripartite({amount}:{amount:number}) {
+function Tripartite({at}:{at:number}) {
   const components=[['thinking','stereotype'],['feeling','prejudice'],['behavior','discrimination']];
-  return <div style={{position:'absolute',left:LITERATURE_LAYOUT.tripX,top:LITERATURE_LAYOUT.tripY,width:LITERATURE_LAYOUT.tripW,height:LITERATURE_LAYOUT.tripH,opacity:amount,transform:`translateY(${20*(1-amount)}px)`}}>
+  return <Flicker startFrame={cueFrame(at)} durationFrames={frames(560)}><div style={{position:'absolute',left:LITERATURE_LAYOUT.tripX,top:LITERATURE_LAYOUT.tripY,width:LITERATURE_LAYOUT.tripW,height:LITERATURE_LAYOUT.tripH}}>
     <svg aria-hidden="true" width={LITERATURE_LAYOUT.tripW} height={LITERATURE_LAYOUT.tripH} viewBox={`0 0 ${LITERATURE_LAYOUT.tripW} ${LITERATURE_LAYOUT.tripH}`} style={{position:'absolute',inset:0,overflow:'visible'}}>
       <path d="M18 16v128h22M18 80H0M18 16h22" fill="none" stroke={color('color/fill/gold')} strokeWidth="3"/>
-      {LITERATURE_LAYOUT.connectors.map(points=><path key={points[0][0]} d={connectorD(points)} fill="none" stroke={color('color/line/hairline')} strokeWidth="2"/>)}
     </svg>
+    {LITERATURE_LAYOUT.connectors.map((points,index)=><DrawLine key={points[0][0]} {...({points:points.map(([x,y])=>[x-LITERATURE_LAYOUT.tripX,y-LITERATURE_LAYOUT.tripY]),startFrame:cueFrame(at)+frames(160+index*110),durationFrames:frames(320),strokeToken:'color/line/hairline',strokeWidth:2} as any)}/>) }
     <div style={{position:'absolute',left:58,right:0,top:18,display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:18}}>
       {components.map(([kind,name])=><div key={kind} style={{height:92,display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',background:color('color/fill/panel-render'),border:`1px solid ${color('color/line/hairline')}`}}>
         <span style={{font:'500 20px "IBM Plex Mono"',letterSpacing:1.4,color:color('color/text/muted')}}>{kind}</span>
@@ -53,24 +54,20 @@ function Tripartite({amount}:{amount:number}) {
       </div>)}
     </div>
     <div style={{position:'absolute',left:58,bottom:0,font:'500 20px "IBM Plex Mono"',letterSpacing:1,color:color('color/fill/gold')}}>Tripartite model · Fiske 1998</div>
-  </div>;
+  </div></Flicker>;
 }
 
 export function LiteratureStack({segment}:SceneProps) {
   const ms=useStageMs();
   const established=useCue('established'),bias=useCue('bias'),prejudice=useCue('prejudice'),discrimination=useCue('discrimination'),tripartite=useCue('tripartite'),stops=useCue('stops');
-  const headerIn=reveal(ms,established.at,520);
   const blockCues=[bias.at,prejudice.at,discrimination.at];
-  const tripartiteIn=reveal(ms,tripartite.at,560);
-  const boundary=cubicOut(progress(ms,stops.at,stops.at+600));
   return <div data-scene="LiteratureStack" style={{position:'absolute',inset:0,width:1920,height:1080,overflow:'hidden',background:color('color/bg/field'),fontFamily:'IBM Plex Sans',color:color('color/text/primary')}}>
     <SceneBorder segment={segment}/>
-    {ms>=established.at&&<div style={{position:'absolute',left:220,top:88,fontSize:68,fontWeight:500,opacity:headerIn,transform:`translateY(${18*(1-headerIn)}px)`}}>Established social science</div>}
-    {blockCues.map((at,index)=>ms>=at?<LiteratureBlock key={at} index={index} amount={reveal(ms,at)}/>:null)}
-    {ms>=tripartite.at&&<Tripartite amount={tripartiteIn}/>} 
-    {ms>=stops.at&&<div style={{position:'absolute',left:140,top:LITERATURE_LAYOUT.boundaryY,width:1640,height:110}}>
-      <div style={{width:`${boundary*100}%`,height:4,background:color('color/fill/gold'),transformOrigin:'left center'}}/>
-      <div style={{marginTop:14,font:'500 21px "IBM Plex Mono"',letterSpacing:1.6,color:color('color/fill/gold'),opacity:boundary}}>where the literature stops</div>
-    </div>}
+    <KitSound mode="beats">
+    {ms>=established.at&&<Flicker startFrame={cueFrame(established.at)} durationFrames={frames(520)} beat><div style={{position:'absolute',left:220,top:88,fontSize:68,fontWeight:500}}>Established social science</div></Flicker>}
+    {blockCues.map((at,index)=>ms>=at?<LiteratureBlock key={at} index={index} at={at}/>:null)}
+    {ms>=tripartite.at&&<Tripartite at={tripartite.at}/>}
+    {ms>=stops.at&&<><DrawLine points={[[140,LITERATURE_LAYOUT.boundaryY+2],[1780,LITERATURE_LAYOUT.boundaryY+2]]} startFrame={cueFrame(stops.at)} durationFrames={frames(600)} strokeToken="color/fill/gold" strokeWidth={4}/><Flicker startFrame={cueFrame(stops.at)} durationFrames={frames(600)}><div style={{position:'absolute',left:140,top:LITERATURE_LAYOUT.boundaryY+18,font:'500 21px "IBM Plex Mono"',letterSpacing:1.6,color:color('color/fill/gold')}}>where the literature stops</div></Flicker></>}
+    </KitSound>
   </div>;
 }

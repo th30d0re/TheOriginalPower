@@ -1,10 +1,12 @@
 import React from 'react';
-import {cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
+import {Flicker, KitSound, cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../tokens';
 import {SceneBorder} from '../dashboard/SceneBorder';
 import {ColoredTerm, type EquationPulseMap, type EquationTermId} from '../equations';
 
 const enter = (ms:number, at:number, duration=460) => cubicOut(progress(ms, at, at + duration));
+const cueFrame=(ms:number)=>Math.round(ms*30/1000);
+const frames=(ms:number)=>Math.round(ms*30/1000);
 
 // Canvas geometry for the entry panel, the number gutter the sense numbers lift into on
 // `order`, and the causal chain that draws right of the gutter on `causal`. Exported for
@@ -93,6 +95,6 @@ export function DictionaryEntry({segment}:SceneProps) {
   };
   return <div data-scene="DictionaryEntry" style={{position:'absolute',inset:0,width:1920,height:1080,overflow:'hidden',background:color('color/bg/field')}}>
     <SceneBorder segment={segment}/>
-    <DefinitionSceneContent state={state} ms={ms} pulses={{IndividualPrejudice:[individual.at],SystemicOutcomes:[institutional.at]}}/>
+    <KitSound mode="beats"><Flicker startFrame={cueFrame(common.at)} durationFrames={frames(460)} beat><DefinitionSceneContent state={state} ms={ms} pulses={{IndividualPrejudice:[individual.at],SystemicOutcomes:[institutional.at]}}/></Flicker></KitSound>
   </div>;
 }
