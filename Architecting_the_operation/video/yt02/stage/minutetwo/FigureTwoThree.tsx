@@ -1,10 +1,11 @@
 import React from 'react';
-import {cubicInOut, cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
+import {Flicker, KitSound, cubicInOut, cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../tokens';
 import {SceneBorder} from '../dashboard/SceneBorder';
 import {RAIL, RAIL_LABEL_LINES, RailSlotContent} from './EntryRail';
 
 const enter = (ms:number, at:number, duration=460) => cubicOut(progress(ms, at, at + duration));
+const cueFrame = (ms:number) => Math.round(ms * 30 / 1000);
 
 // Figure 2.3 plate geometry. Layer widths are 115 × (5.2, 4.2, 3.2) from the tikz
 // minimum widths in Paper/The_Original_Power.tex lines 1953–1955 and 1965–1967.
@@ -75,7 +76,7 @@ export function FigureTwoThree({segment}:SceneProps) {
   const bracketBottomLeftX = F.bracket.startLeft + (F.leftCenter-F.bracket.startLeft)*taperP;
   const bracketBottomRightX = F.bracket.startRight + (F.leftCenter-F.bracket.startRight)*taperP;
   const bracketBottomY = F.bracket.startBottom + (F.pyramid.apexY-F.bracket.startBottom)*taperP;
-  return <div data-scene="FigureTwoThree" style={{position:'absolute', inset:0, width:1920, height:1080, overflow:'hidden', background:color('color/bg/field'), color:color('color/text/primary'), fontFamily:'IBM Plex Sans'}}>
+  return <KitSound mode="beats"><div data-scene="FigureTwoThree" style={{position:'absolute', inset:0, width:1920, height:1080, overflow:'hidden', background:color('color/bg/field'), color:color('color/text/primary'), fontFamily:'IBM Plex Sans'}}>
     <SceneBorder segment={segment}/>
     {ms >= cue.t10Figure.at && <>
       <svg style={{position:'absolute', inset:0}} width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" aria-hidden="true">
@@ -106,7 +107,7 @@ export function FigureTwoThree({segment}:SceneProps) {
         {noteP>0 && <text x={F.leftCenter} y={F.noteY} textAnchor="middle" fontFamily="IBM Plex Sans" fontSize={22} fill={color('color/marker/race')} opacity={noteP}>↑ buried, rarely referenced</text>}
         </g>
       </svg>
-      <div data-caption="true" style={{position:'absolute', left:F.plate.x+plateShiftX, width:F.plate.w, top:150, textAlign:'center', font:'500 28px "IBM Plex Mono"', letterSpacing:2, color:color('color/text/primary'), opacity:captionP}}>Figure 2.3 · Inverting the Definitional Hierarchy</div>
+      <Flicker startFrame={cueFrame(cue.t10Figure.at+150)} durationFrames={15}><div data-caption="true" style={{position:'absolute', left:F.plate.x+plateShiftX, width:F.plate.w, top:150, textAlign:'center', font:'500 28px "IBM Plex Mono"', letterSpacing:2, color:color('color/text/primary'), opacity:captionP}}>Figure 2.3 · Inverting the Definitional Hierarchy</div></Flicker>
       {ms >= cue.t10Chapter.at && <div data-source-line="true" style={{position:'absolute', left:F.plate.x+plateShiftX, width:F.plate.w, top:188, textAlign:'center', font:'400 20px "IBM Plex Mono"', color:color('color/text/muted'), opacity:sourceP}}>The Original Power, Chapter 2</div>}
       <div data-rail-label="true" style={{position:'absolute', left:RAIL.x, top:RAIL.labelY, font:'400 20px "IBM Plex Mono"', lineHeight:1.4, color:color('color/text/muted'), opacity:labelP}}>
         {RAIL_LABEL_LINES.map(line => <div key={line}>{line}</div>)}
@@ -129,5 +130,5 @@ export function FigureTwoThree({segment}:SceneProps) {
         </div>;
       })}
     </>}
-  </div>;
+  </div></KitSound>;
 }

@@ -1,10 +1,11 @@
 import React from 'react';
-import {cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
+import {DrawLine, Flicker, KitSound, cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../tokens';
 import {SceneBorder} from '../dashboard/SceneBorder';
 import {EntryRail, SenseCard, type RailSlotSpec} from './EntryRail';
 
 const enter = (ms:number, at:number, duration=460) => cubicOut(progress(ms, at, at + duration));
+const cueFrame = (ms:number) => Math.round(ms * 30 / 1000);
 
 const PHRASES = [
   {cue:'t9Institutional', text:'institutional or systemic practices'},
@@ -42,7 +43,7 @@ export function SenseThree({segment}:SceneProps) {
     {state:solidP>.5?'lit':'dashed', solidify:solidP, unitP},
   ];
   const M = SENSE3_METER;
-  return <div data-scene="SenseThree" style={{position:'absolute', inset:0, width:1920, height:1080, overflow:'hidden', background:color('color/bg/field'), color:color('color/text/primary'), fontFamily:'IBM Plex Sans'}}>
+  return <KitSound mode="beats"><div data-scene="SenseThree" style={{position:'absolute', inset:0, width:1920, height:1080, overflow:'hidden', background:color('color/bg/field'), color:color('color/text/primary'), fontFamily:'IBM Plex Sans'}}>
     <SceneBorder segment={segment}/>
     <EntryRail slots={slots} enter={openP}/>
     <SenseCard title="Sense 3" enter={openP} dashed={1-solidP}>
@@ -50,12 +51,11 @@ export function SenseThree({segment}:SceneProps) {
         {PHRASES.map(({cue:name, text}, index) => {
           const at = cue[name].at;
           const p = enter(ms, at, 380);
-          return ms >= at && <React.Fragment key={name}>{index>0 && ' '}<span data-phrase={name} style={{opacity:p}}>{text}</span></React.Fragment>;
+          return ms >= at && <React.Fragment key={name}>{index>0 && ' '}<Flicker startFrame={cueFrame(at)} durationFrames={Math.round(380*30/1000)} style={{position:'relative', inset:'auto', display:'inline'}}><span data-phrase={name} style={{opacity:p}}>{text}</span></Flicker></React.Fragment>;
         })}
       </div>
       <svg style={{position:'absolute', left:40, top:300}} width="1240" height="410" viewBox="0 0 1240 410" aria-label="A system of practices and unequal outcomes">
         {ms >= cue.t9Practices.at && <g data-network="true">
-          {WIRES.map(([[x1, y1], [x2, y2]], i) => <line key={i} data-network-wire={i+1} x1={x1} y1={y1} x2={x2} y2={y2} stroke={color('color/line/chart')} strokeWidth={2} pathLength={1} strokeDasharray="1" strokeDashoffset={1-netP}/>)}
           {NODES.map(({x, y}, i) => {
             const p = enter(ms, cue.t9Practices.at + i*90, 400);
             const cx = x + NODE_W/2, cy = y + NODE_H/2;
@@ -79,6 +79,7 @@ export function SenseThree({segment}:SceneProps) {
           <text x={980} y={385} textAnchor="middle" fontFamily="IBM Plex Mono" fontSize={22} fill={color('color/text/muted')}>unit: a system</text>
         </g>}
       </svg>
+      <div data-network-wires="true" style={{position:'absolute', left:40, top:300, width:1240, height:410}}>{WIRES.map((points,i) => <div key={i} data-network-wire={i+1} style={{position:'absolute', inset:0}}><DrawLine points={points} startFrame={cueFrame(cue.t9Practices.at)} durationFrames={18} strokeToken="color/line/chart" strokeWidth={2} nodes={false} origin={false} beat={i===0}/></div>)}</div>
     </SenseCard>
-  </div>;
+  </div></KitSound>;
 }

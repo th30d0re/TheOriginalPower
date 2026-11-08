@@ -1,10 +1,11 @@
 import React from 'react';
-import {cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
+import {DrawLine, Flicker, KitSound, cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../tokens';
 import {SceneBorder} from '../dashboard/SceneBorder';
 import {EntryRail, SenseCard, type RailSlotSpec} from './EntryRail';
 
 const enter = (ms:number, at:number, duration=460) => cubicOut(progress(ms, at, at + duration));
+const cueFrame = (ms:number) => Math.round(ms * 30 / 1000);
 
 const PHRASES = [
   {cue:'t7Prejudice', text:'individual prejudice,'},
@@ -45,7 +46,7 @@ export function SenseOne({segment}:SceneProps) {
     {state:'placeholder'},
     {state:'placeholder'},
   ];
-  return <div data-scene="SenseOne" style={{position:'absolute', inset:0, width:1920, height:1080, overflow:'hidden', background:color('color/bg/field'), color:color('color/text/primary'), fontFamily:'IBM Plex Sans'}}>
+  return <KitSound mode="beats"><div data-scene="SenseOne" style={{position:'absolute', inset:0, width:1920, height:1080, overflow:'hidden', background:color('color/bg/field'), color:color('color/text/primary'), fontFamily:'IBM Plex Sans'}}>
     <SceneBorder segment={segment}/>
     <EntryRail slots={slots} enter={openP}/>
     <SenseCard title="Sense 1" enter={openP}>
@@ -53,7 +54,7 @@ export function SenseOne({segment}:SceneProps) {
         {PHRASES.map(({cue:name, text}, index) => {
           const at = cue[name].at;
           const p = enter(ms, at, 380);
-          return ms >= at && <React.Fragment key={name}>{index>0 && ' '}<span data-phrase={name} style={{opacity:p}}>{text}</span></React.Fragment>;
+          return ms >= at && <React.Fragment key={name}>{index>0 && ' '}<Flicker startFrame={cueFrame(at)} durationFrames={Math.round(380*30/1000)} style={{position:'relative', inset:'auto', display:'inline'}}><span data-phrase={name} style={{opacity:p}}>{text}</span></Flicker></React.Fragment>;
         })}
       </div>
       <svg style={{position:'absolute', left:40, top:300}} width="1240" height="410" viewBox="0 0 1240 410" aria-label="One person acting on another">
@@ -64,12 +65,12 @@ export function SenseOne({segment}:SceneProps) {
           const at = cue[name].at;
           return ms >= at && <text key={name} data-arrow-label={text} x={630} y={y} textAnchor="middle" fontFamily="IBM Plex Mono" fontSize={22} fill={color('color/text/muted')} opacity={enter(ms, at, 350)}>{text}</text>;
         })}
-        {ms >= cue.t7Person.at && <line data-arrow="sense1" x1={ARROW_X1} y1={ARROW_Y} x2={ARROW_X1 + (ARROW_X2-ARROW_X1)*arrowP} y2={ARROW_Y} stroke={color('color/fill/gold')} strokeWidth={3} markerEnd={arrowP>.9 ? 'url(#sense1-arrow)' : undefined}/>}
         {ms >= cue.t7Race.at && <g data-unit-tag="one person" opacity={unitP}>
           <rect x={512} y={318} width={236} height={40} rx={6} fill={color('color/fill/panel-render')} stroke={color('color/line/hairline')}/>
           <text x={630} y={345} textAnchor="middle" fontFamily="IBM Plex Mono" fontSize={22} fill={color('color/text/muted')}>unit: one person</text>
         </g>}
       </svg>
+      <div data-arrow="sense1" style={{position:'absolute', left:40, top:300, width:1240, height:410}}><DrawLine points={[[ARROW_X1,ARROW_Y],[ARROW_X2,ARROW_Y]]} startFrame={cueFrame(cue.t7Person.at)} durationFrames={15} strokeToken="color/fill/gold" strokeWidth={3} end="arrow" beat/></div>
     </SenseCard>
-  </div>;
+  </div></KitSound>;
 }

@@ -1,10 +1,11 @@
 import React from 'react';
-import {cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
+import {DrawLine, Flicker, KitSound, cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../tokens';
 import {SceneBorder} from '../dashboard/SceneBorder';
 import {EntryRail, SenseCard, type RailSlotSpec} from './EntryRail';
 
 const enter = (ms:number, at:number, duration=460) => cubicOut(progress(ms, at, at + duration));
+const cueFrame = (ms:number) => Math.round(ms * 30 / 1000);
 
 const PHRASES = [
   {cue:'t8Ideological', text:'an ideological belief'},
@@ -40,7 +41,7 @@ export function SenseTwo({segment}:SceneProps) {
     {state:'lit', unitP},
     {state:'placeholder'},
   ];
-  return <div data-scene="SenseTwo" style={{position:'absolute', inset:0, width:1920, height:1080, overflow:'hidden', background:color('color/bg/field'), color:color('color/text/primary'), fontFamily:'IBM Plex Sans'}}>
+  return <KitSound mode="beats"><div data-scene="SenseTwo" style={{position:'absolute', inset:0, width:1920, height:1080, overflow:'hidden', background:color('color/bg/field'), color:color('color/text/primary'), fontFamily:'IBM Plex Sans'}}>
     <SceneBorder segment={segment}/>
     <EntryRail slots={slots} enter={openP}/>
     <SenseCard title="Sense 2" enter={openP}>
@@ -48,7 +49,7 @@ export function SenseTwo({segment}:SceneProps) {
         {PHRASES.map(({cue:name, text}, index) => {
           const at = cue[name].at;
           const p = enter(ms, at, 380);
-          return ms >= at && <React.Fragment key={name}>{index>0 && ' '}<span data-phrase={name} style={{opacity:p}}>{text}</span></React.Fragment>;
+          return ms >= at && <React.Fragment key={name}>{index>0 && ' '}<Flicker startFrame={cueFrame(at)} durationFrames={Math.round(380*30/1000)} style={{position:'relative', inset:'auto', display:'inline'}}><span data-phrase={name} style={{opacity:p}}>{text}</span></Flicker></React.Fragment>;
         })}
       </div>
       <svg style={{position:'absolute', left:40, top:300}} width="1240" height="410" viewBox="0 0 1240 410" aria-label="The doctrine's claimed chain">
@@ -69,7 +70,6 @@ export function SenseTwo({segment}:SceneProps) {
           </g>;
         })}
         {ms >= cue.t8Determine.at && <g>
-          {ARROWS.map(({x1, x2}) => <line key={x1} x1={x1} y1={178} x2={x1+(x2-x1)*arrowP} y2={178} stroke={color('color/fill/gold')} strokeWidth={3} markerEnd={arrowP>.9 ? 'url(#sense2-arrow)' : undefined}/>)}
           <text x={630} y={266} textAnchor="middle" fontFamily="IBM Plex Mono" fontSize={20} fill={color('color/text/muted')} opacity={arrowP}>claimed to determine</text>
         </g>}
         {ms >= cue.t8Achievement.at && <g data-unit-tag="a belief" opacity={unitP}>
@@ -77,6 +77,7 @@ export function SenseTwo({segment}:SceneProps) {
           <text x={630} y={375} textAnchor="middle" fontFamily="IBM Plex Mono" fontSize={22} fill={color('color/text/muted')}>unit: a belief</text>
         </g>}
       </svg>
+      <div style={{position:'absolute', left:40, top:300, width:1240, height:410}}>{ARROWS.map(({x1,x2}) => <div key={x1} data-doctrine-arrow={x1} style={{position:'absolute', inset:0}}><DrawLine points={[[x1,178],[x2,178]]} startFrame={cueFrame(cue.t8Determine.at)} durationFrames={15} strokeToken="color/fill/gold" strokeWidth={3} end="arrow" beat={x1===ARROWS[0].x1}/></div>)}</div>
     </SenseCard>
-  </div>;
+  </div></KitSound>;
 }
