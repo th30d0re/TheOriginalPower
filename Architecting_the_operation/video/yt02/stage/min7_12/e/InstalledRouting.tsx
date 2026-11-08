@@ -1,5 +1,5 @@
 import React from 'react';
-import {cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
+import {DrawLine, Flicker, KitSound, useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../../tokens';
 import {EquationTerms, type EquationPulseMap, type EquationToken} from '../../equations';
 import {StageSceneFrame} from '../../min3_7/shared';
@@ -8,12 +8,12 @@ import {
   Label,
   Panel,
   lineAttrs,
-  partialPolyline,
   pathFrom,
   type Point,
 } from '../shared';
 
-const enter = (ms: number, at: number, duration = 520) => cubicOut(progress(ms, at, at + duration));
+const cueFrame = (ms: number) => Math.round(ms * 30 / 1000);
+const cueDuration = (ms: number) => Math.round(ms * 30 / 1000);
 
 export const INSTALLED_ROUTING_LAYOUT = {
   // Equation continuity strip: centered Eq. 2.8a at 36 px (slack: 120 - 90 = 30 px)
@@ -107,14 +107,6 @@ export function InstalledRouting({segment}: SceneProps) {
 
   const L = INSTALLED_ROUTING_LAYOUT;
 
-  const piP = enter(ms, cue.t37PiRace);
-  const instP = enter(ms, cue.t37Institutionally);
-  const installedP = enter(ms, cue.t37Installed);
-  const routesP = enter(ms, cue.t37Routes);
-  const empathyP = enter(ms, cue.t37Empathy);
-  const threatP = enter(ms, cue.t37Threat);
-  const legalP = enter(ms, cue.t37Legal);
-  const factsP = enter(ms, cue.t37Facts);
 
   const gold = color('color/fill/gold');
   const raceRed = color('color/marker/race');
@@ -134,15 +126,13 @@ export function InstalledRouting({segment}: SceneProps) {
     [560, 500], [600, 500], [600, 900], [1300, 900], [1300, 745], [1340, 745],
   ];
 
-  const upperDrawn = partialPolyline(upperTraceFull, routesP);
-  const lowerDrawn = partialPolyline(lowerTraceFull, routesP);
 
   const busPoints: Point[] = [[64, 522], [120, 522]];
   const dividerTop: Point[] = [[1235, 260], [1235, 505]];
   const dividerBottom: Point[] = [[1235, 635], [1235, 880]];
 
   return (
-    <StageSceneFrame segment={segment}>
+    <StageSceneFrame segment={segment}><KitSound mode="beats">
       {/* Continuity Equation Strip: centered Eq. 2.8a at 36 px */}
       <div data-continuity-strip="true">
         <Panel id="eq-strip-frame" box={L.equation} />
@@ -167,25 +157,23 @@ export function InstalledRouting({segment}: SceneProps) {
           INSTALLED PRIOR MODULE
         </Label>
         {ms >= cue.t37PiRace && (
-          <Label id="cartridge-pi" box={L.cartridgePi} size={38} weight={700} ink={raceRed} opacity={piP}>
+          <Flicker startFrame={cueFrame(cue.t37PiRace)} durationFrames={cueDuration(520)}><Label id="cartridge-pi" box={L.cartridgePi} size={38} weight={700} ink={raceRed}>
             Π<sub>race</sub>
-          </Label>
+          </Label></Flicker>
         )}
 
         {ms >= cue.t37Installed && (
-          <Label id="cartridge-label" box={L.cartridgeLabel} size={28} weight={600} sans lh={1.25} ink={primary} opacity={installedP}>
+          <Flicker startFrame={cueFrame(cue.t37Installed)} durationFrames={cueDuration(520)} beat><Label id="cartridge-label" box={L.cartridgeLabel} size={28} weight={600} sans lh={1.25} ink={primary}>
             INSTITUTIONALLY INSTALLED RACIAL ASSUMPTION
-          </Label>
+          </Label></Flicker>
         )}
 
         {ms >= cue.t37Institutionally && (
           <>
-            <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position: 'absolute', inset: 0}} aria-hidden="true">
-              <path {...lineAttrs('inst-bus', busPoints)} d={pathFrom(busPoints)} fill="none" stroke={raceRed} strokeWidth="4" opacity={instP} />
-            </svg>
-            <Label id="cartridge-input" box={L.cartridgeInput} size={22} weight={600} ink={raceRed} opacity={instP}>
+            <DrawLine points={busPoints} startFrame={cueFrame(cue.t37Institutionally)} durationFrames={cueDuration(520)} strokeToken="color/marker/race" strokeWidth={4} />
+            <Flicker startFrame={cueFrame(cue.t37Institutionally)} durationFrames={cueDuration(520)}><Label id="cartridge-input" box={L.cartridgeInput} size={22} weight={600} ink={raceRed}>
               INSTITUTIONAL INPUT
-            </Label>
+            </Label></Flicker>
           </>
         )}
         <Label id="cartridge-footer" box={L.cartridgeFooter} size={20} weight={600} ink={gold}>
@@ -209,7 +197,7 @@ export function InstalledRouting({segment}: SceneProps) {
 
       {/* Direct Facts Lane */}
       {ms >= cue.t37Facts && (
-        <div data-facts-lane="true" style={{opacity: factsP}}>
+        <Flicker startFrame={cueFrame(cue.t37Facts)} durationFrames={cueDuration(520)}><div data-facts-lane="true">
           <Panel id="facts-lane-frame" box={L.factsLane} accent="color/line/hairline" />
           <Label id="facts-header" box={L.factsHeader} size={20} weight={600} ink={muted}>
             EVIDENCE STREAM
@@ -222,7 +210,7 @@ export function InstalledRouting({segment}: SceneProps) {
             label="DIRECT EVIDENCE"
             kind="fact"
             progress={1}
-            emphasis={factsP}
+            emphasis={1}
             box={L.tokenFact1}
             size={20}
           />
@@ -231,7 +219,7 @@ export function InstalledRouting({segment}: SceneProps) {
             label="RECORDED OBSERVATION"
             kind="fact"
             progress={1}
-            emphasis={factsP}
+            emphasis={1}
             box={L.tokenFact2}
             size={20}
           />
@@ -240,7 +228,7 @@ export function InstalledRouting({segment}: SceneProps) {
             label="MEASURED OUTCOMES"
             kind="fact"
             progress={1}
-            emphasis={factsP}
+            emphasis={1}
             box={L.tokenFact3}
             size={20}
           />
@@ -250,37 +238,31 @@ export function InstalledRouting({segment}: SceneProps) {
           <Label id="facts-visible" box={L.factsVisible} size={22} weight={600} align="center" ink={gold}>
             FACTS REMAIN VISIBLE
           </Label>
-        </div>
+        </div></Flicker>
       )}
 
       {/* Legal Color Line Divider */}
       {ms >= cue.t37Legal && (
         <div data-divider="true">
-          <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position: 'absolute', inset: 0}} aria-hidden="true">
-            <path {...lineAttrs('divider-rule-top', dividerTop)} d={pathFrom(dividerTop)} fill="none" stroke={gold} strokeWidth="3" strokeDasharray="6 4" opacity={legalP} />
-            <path {...lineAttrs('divider-rule-bottom', dividerBottom)} d={pathFrom(dividerBottom)} fill="none" stroke={gold} strokeWidth="3" strokeDasharray="6 4" opacity={legalP} />
-          </svg>
-          <Label id="divider-label" box={L.dividerLabel} size={20} weight={600} lh={1.25} align="center" ink={gold} opacity={legalP}>
+          <DrawLine points={dividerTop} startFrame={cueFrame(cue.t37Legal)} durationFrames={cueDuration(520)} strokeToken="color/fill/gold" strokeWidth={3} />
+          <DrawLine points={dividerBottom} startFrame={cueFrame(cue.t37Legal)} durationFrames={cueDuration(520)} strokeToken="color/fill/gold" strokeWidth={3} />
+          <Flicker startFrame={cueFrame(cue.t37Legal)} durationFrames={cueDuration(520)}><Label id="divider-label" box={L.dividerLabel} size={20} weight={600} lh={1.25} align="center" ink={gold}>
             LEGAL COLOR LINE
-          </Label>
+          </Label></Flicker>
         </div>
       )}
 
       {/* Routing Traces */}
       {ms >= cue.t37Routes && (
-        <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position: 'absolute', inset: 0}} aria-hidden="true">
-          {upperDrawn.length >= 2 && (
-            <path {...lineAttrs('route-empathy', upperDrawn)} d={pathFrom(upperDrawn)} fill="none" stroke={gold} strokeWidth="3.5" opacity={routesP} />
-          )}
-          {lowerDrawn.length >= 2 && (
-            <path {...lineAttrs('route-threat', lowerDrawn)} d={pathFrom(lowerDrawn)} fill="none" stroke={raceRed} strokeWidth="3.5" opacity={routesP} />
-          )}
-        </svg>
+        <>
+          <DrawLine points={upperTraceFull} startFrame={cueFrame(cue.t37Routes)} durationFrames={cueDuration(520)} strokeToken="color/fill/gold" strokeWidth={3.5} nodes />
+          <DrawLine points={lowerTraceFull} startFrame={cueFrame(cue.t37Routes)} durationFrames={cueDuration(520)} strokeToken="color/marker/race" strokeWidth={3.5} nodes />
+        </>
       )}
 
       {/* Output Gates */}
       {ms >= cue.t37Empathy && (
-        <div data-empathy-gate="true" style={{opacity: empathyP}}>
+        <Flicker startFrame={cueFrame(cue.t37Empathy)} durationFrames={cueDuration(520)}><div data-empathy-gate="true">
           <Panel id="empathy-gate-frame" box={L.empathyGate} accent="color/fill/gold" />
           <Label id="empathy-header" box={L.empathyHeader} size={20} weight={600} ink={muted}>
             UPPER OUTPUT GATE
@@ -294,11 +276,11 @@ export function InstalledRouting({segment}: SceneProps) {
           <Label id="empathy-footer" box={L.empathyFooter} size={20} weight={600} ink={gold}>
             INGROUP SOLIDARITY GRANT
           </Label>
-        </div>
+        </div></Flicker>
       )}
 
       {ms >= cue.t37Threat && (
-        <div data-threat-gate="true" style={{opacity: threatP}}>
+        <Flicker startFrame={cueFrame(cue.t37Threat)} durationFrames={cueDuration(520)}><div data-threat-gate="true">
           <Panel id="threat-gate-frame" box={L.threatGate} accent="color/marker/race" />
           <Label id="threat-header" box={L.threatHeader} size={20} weight={600} ink={muted}>
             LOWER OUTPUT GATE
@@ -312,13 +294,13 @@ export function InstalledRouting({segment}: SceneProps) {
           <Label id="threat-footer" box={L.threatFooter} size={20} weight={600} ink={raceRed}>
             OUTGROUP SUSPICION TRIGGER
           </Label>
-        </div>
+        </div></Flicker>
       )}
 
       {/* Source line */}
       <Label id="source-line" box={L.source} size={20} weight={400} ls={0.35} lh={1.35} ink={muted}>
         The Original Power, Chapter 2 · Eq. 2.8a · installed racial prior
       </Label>
-    </StageSceneFrame>
+    </KitSound></StageSceneFrame>
   );
 }

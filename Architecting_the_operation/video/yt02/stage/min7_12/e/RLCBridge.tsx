@@ -1,5 +1,5 @@
 import React from 'react';
-import {cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
+import {Flicker, KitSound, cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
 import {Tokens, color} from '../../tokens';
 import {
   ColoredTerm,
@@ -269,7 +269,7 @@ export function RLCBridge({segment}: SceneProps) {
   const hasV = ms >= cue.t38Reform;
 
   return (
-    <StageSceneFrame segment={segment}>
+    <StageSceneFrame segment={segment}><KitSound mode="beats">
       {/* Top Banner */}
       <div data-rlc-banner="true">
         <Panel id="rlc-banner-frame" box={L.header} accent="color/line/hairline" />
@@ -277,9 +277,9 @@ export function RLCBridge({segment}: SceneProps) {
           CHAPTER 2 · SYSTEM COUPLING
         </Label>
         {ms >= cue.t38Rlc && (
-          <Label id="rlc-header" box={L.headerLabel} size={34} weight={700} sans align="right" ink={gold} opacity={rlcP}>
+          <Flicker startFrame={Math.round(cue.t38Rlc * 30 / 1000)} durationFrames={16} beat><Label id="rlc-header" box={L.headerLabel} size={34} weight={700} sans align="right" ink={gold}>
             RLC BACKLASH MODEL
-          </Label>
+          </Label></Flicker>
         )}
       </div>
 
@@ -517,6 +517,6 @@ export function RLCBridge({segment}: SceneProps) {
       <Label id="source-line" box={L.source} size={20} weight={400} ls={0.35} lh={1.35} ink={muted}>
         The Original Power, Chapter 2 · Eq. 2.11 · Eq. 2.12 · Figure 2.6
       </Label>
-    </StageSceneFrame>
+    </KitSound></StageSceneFrame>
   );
 }

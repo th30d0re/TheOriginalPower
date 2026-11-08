@@ -1,5 +1,5 @@
 import React from 'react';
-import {cubicInOut, cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
+import {Flicker, KitSound, cubicInOut, cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../../tokens';
 import {EquationTerms, type EquationPulseMap, type EquationToken} from '../../equations';
 import {PersonMark, StageSceneFrame} from '../../min3_7/shared';
@@ -215,7 +215,7 @@ export function DocumentedExpectation({segment}: SceneProps) {
   const eqPulses: EquationPulseMap = {};
 
   return (
-    <StageSceneFrame segment={segment}>
+    <StageSceneFrame segment={segment}><KitSound mode="beats">
       {/* Continuity equation strip: centered Eq. 2.8a at 36 px */}
       <div data-continuity-strip="true">
         <Panel id="eq-strip-frame" box={L.equation} />
@@ -416,7 +416,7 @@ export function DocumentedExpectation({segment}: SceneProps) {
 
       {/* TURN 36: Balanced Two-Column Layout (NCHS Plaque + Context Card on Left, Series Plot + Disclosure on Right) */}
       {isTurn36 && (
-        <div data-turn="36" style={{opacity: nationalP}}>
+        <Flicker startFrame={Math.round(cue.t36National * 30 / 1000)} durationFrames={16} beat><div data-turn="36">
           {/* Left Upper: NCHS Plaque */}
           <Panel id="nchs-plaque-frame" box={L.plaque} accent="color/fill/gold">
             <span aria-hidden="true" style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: 5, background: gold}} />
@@ -557,7 +557,7 @@ export function DocumentedExpectation({segment}: SceneProps) {
                 : 'ORDINAL COMPARISON · NO NUMERICAL AXES OR RATES'}
             </Label>
           </div>
-        </div>
+        </div></Flicker>
       )}
 
       {/* Source line */}
@@ -566,6 +566,6 @@ export function DocumentedExpectation({segment}: SceneProps) {
           ? 'The Original Power, Chapter 2 · Eq. 2.8a · Bayesian prior'
           : 'National Center for Health Statistics (2023) · Maternal Mortality Rates in the United States, 2021'}
       </Label>
-    </StageSceneFrame>
+    </KitSound></StageSceneFrame>
   );
 }
