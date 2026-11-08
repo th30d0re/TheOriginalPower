@@ -1,12 +1,2 @@
-export * from './types';
-export * from './StageSceneFrame';
-export * from './SourceLine';
-export * from './TermBlock';
-export * from './DefinitionCard';
-export * from './CitationCard';
-export * from './UsThemSortingField';
-export * from './PersonMark';
-export * from './NeuralField';
-export * from './PredictiveUpdatePlot';
-export * from './PrecisionGauge';
-export * from './TrainingTextStrip';
+export {CitationCard, DefinitionCard, NEURAL_FIELD, NeuralField, PersonMark, PREDICTIVE_PLOT, PrecisionGauge, PredictiveUpdatePlot, calculatePredictivePosterior, priorPrecisionFor, SORTING_FIELD, SourceLine, StageSceneFrame, TermBlock, TrainingTextStrip, UsThemSortingField} from '@stage';
+export type {Accent, CitationCardProps, DefinitionCardProps, NeuralFieldProps, PersonGroup, PersonMarkProps, PredictiveTermHighlight, PredictiveUpdatePlotProps, PrecisionGaugeProps, SortingLabels, SortingMark, SortingMode, SourceLineProps, StageSceneFrameProps, TermBlockGlyph, TermBlockProps, TermState, TrainingTextStripProps, UsThemSortingFieldProps} from '@stage';
