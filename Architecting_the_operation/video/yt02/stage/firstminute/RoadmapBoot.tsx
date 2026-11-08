@@ -82,8 +82,9 @@ export function RoadmapBoot({segment}:SceneProps){
    {ITEMS.map((item,i)=>{
     const wire=wireFor(item,i);
     if(!wire) return null;
-    if(ms<cues[i]+TYPE_MS) return null;
-    return <DrawLine key={item.cue} {...({points:[[round(wire.x1),round(wire.y1)],[round(wire.x2),round(wire.y2)]],startFrame:cueFrame(cues[i]+TYPE_MS),durationFrames:frames(WIRE_DRAW_MS),strokeToken:'color/fill/gold',strokeWidth:2} as any)}/>;
+    const holdEnd=cues[i]+TYPE_MS+WIRE_DRAW_MS+WIRE_HOLD_MS,fade=1-progress(ms,holdEnd,holdEnd+WIRE_FADE_MS);
+    if(ms<cues[i]+TYPE_MS||fade<=0) return null;
+    return <g key={item.cue} data-roadmap-wire={item.cue} opacity={round(fade)}><DrawLine key={item.cue} {...({points:[[round(wire.x1),round(wire.y1)],[round(wire.x2),round(wire.y2)]],startFrame:cueFrame(cues[i]+TYPE_MS),durationFrames:frames(WIRE_DRAW_MS),strokeToken:'color/fill/gold',strokeWidth:2} as any)}/></g>;
    })}
    {ITEMS.map((item,i)=>{
     if(item.pulse===undefined) return null;
@@ -93,7 +94,7 @@ export function RoadmapBoot({segment}:SceneProps){
     return <rect key={item.cue} data-engine-pulse={item.cue} x={r.x-pad} y={r.y-pad} width={r.w+2*pad} height={r.h+2*pad} rx={8} fill="none" stroke={color('color/fill/gold')} strokeWidth={2.5} opacity={round(Math.sin(Math.PI*p))}/>;
    })}
   </svg>
-  <BootIn box={CONSOLE} startFrame={cueFrame(cues[0])} durationFrames={frames(500)} mode="scan" beat><div data-roadmap-console="box" style={{position:'absolute',inset:0,background:color('color/fill/panel-render'),border:`1px solid ${color('color/line/hairline')}`,borderRadius:8,padding:PAD,boxSizing:'border-box',pointerEvents:'none',opacity:round(1-collapse),transform:`translateY(${round(-60*collapse)}px) scale(${round(1-.92*collapse)})`,transformOrigin:'50% 0%'}}>
+  <div data-roadmap-collapse style={{position:'absolute',inset:0,pointerEvents:'none',opacity:round(1-collapse),transform:`translateY(${round(-60*collapse)}px) scale(${round(1-.92*collapse)})`,transformOrigin:`${CONSOLE.x+CONSOLE.w/2}px ${CONSOLE.y}px`}}><BootIn box={CONSOLE} startFrame={cueFrame(cues[0])} durationFrames={frames(500)} mode="scan" beat><div data-roadmap-console="box" style={{position:'absolute',inset:0,background:color('color/fill/panel-render'),border:`1px solid ${color('color/line/hairline')}`,borderRadius:8,padding:PAD,boxSizing:'border-box',pointerEvents:'none',}}>
    <div style={{height:HEADER_H,boxSizing:'border-box'}}>
     <div style={{fontFamily:Tokens.fonts.mono,fontSize:22,fontWeight:500,letterSpacing:3,lineHeight:'30px',color:color('color/text/muted')}}>EPISODE 1 · ROADMAP</div>
     <div style={{height:1,marginTop:12,background:color('color/line/hairline')}}/>
@@ -110,6 +111,6 @@ export function RoadmapBoot({segment}:SceneProps){
      {item.tag&&done&&<span style={{fontFamily:Tokens.fonts.mono,fontSize:16,fontWeight:500,letterSpacing:1.5,color:color('color/marker/race'),border:`1px solid ${color('color/marker/race')}`,borderRadius:3,padding:'1px 7px',marginLeft:14}}>{item.tag}</span>}
     </div></Flicker>;
    })}
-  </div></BootIn>
+  </div></BootIn></div>
  </KitSound></div>;
 }
