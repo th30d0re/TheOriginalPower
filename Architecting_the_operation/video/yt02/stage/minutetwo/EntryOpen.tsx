@@ -1,9 +1,10 @@
 import React from 'react';
-import {cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
+import {BootIn, Flicker, KitSound, cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../tokens';
 import {SceneBorder} from '../dashboard/SceneBorder';
 
 const enter = (ms:number, at:number, duration=460) => cubicOut(progress(ms, at, at + duration));
+const cueFrame = (ms:number) => Math.round(ms * 30 / 1000);
 
 // Entry panel geometry, panel-relative slot rows. Exported for tools/check_minute_two.tsx.
 export const ENTRY_OPEN_LAYOUT = {
@@ -38,9 +39,10 @@ export function EntryOpen({segment}:SceneProps) {
   const includesP = enter(ms, t6Includes.at, 400);
   const slot3Phase = includesP>0 ? 'included' : bottomP>0 ? 'bottom' : fill3>0 ? 'filled' : 'empty';
   const L = ENTRY_OPEN_LAYOUT;
-  return <div data-scene="EntryOpen" style={{position:'absolute', inset:0, width:1920, height:1080, overflow:'hidden', background:color('color/bg/field'), color:color('color/text/primary'), fontFamily:'IBM Plex Sans'}}>
+  return <KitSound mode="beats"><div data-scene="EntryOpen" style={{position:'absolute', inset:0, width:1920, height:1080, overflow:'hidden', background:color('color/bg/field'), color:color('color/text/primary'), fontFamily:'IBM Plex Sans'}}>
     <SceneBorder segment={segment}/>
-    {ms >= t6Why.at && <div style={{position:'absolute', left:L.headerX, top:L.headerY, opacity:whyP, transform:`translateY(${18*(1-whyP)}px)`, fontSize:46, fontWeight:500}}>Why does the dictionary list individual prejudice first?</div>}
+    {ms >= t6Why.at && <Flicker startFrame={cueFrame(t6Why.at)} durationFrames={15}><div style={{position:'absolute', left:L.headerX, top:L.headerY, opacity:whyP, transform:`translateY(${18*(1-whyP)}px)`, fontSize:46, fontWeight:500}}>Why does the dictionary list individual prejudice first?</div></Flicker>}
+    <BootIn box={{x:L.panelX,y:L.panelY,w:L.panelW,h:L.panelH}} startFrame={cueFrame(t6Open.at)} durationFrames={15} mode="scan" beat/>
     {ms >= t6Open.at && <div data-entry-panel="true" style={{position:'absolute', left:L.panelX, top:L.panelY, width:L.panelW, height:L.panelH, background:color('color/fill/panel-render'), border:`1px solid ${color('color/line/hairline')}`, boxShadow:`inset 0 0 0 1px ${color('color/fill/panel-wash')}`, transform:`scaleX(${openP})`, transformOrigin:'left center'}}>
       <div style={{position:'absolute', left:32, right:32, top:28, display:'flex', alignItems:'baseline'}}>
         <strong style={{fontSize:48, letterSpacing:.5}}>rac·ism</strong>
@@ -64,5 +66,5 @@ export function EntryOpen({segment}:SceneProps) {
         </span>}
       </div>}
     </div>}
-  </div>;
+  </div></KitSound>;
 }
