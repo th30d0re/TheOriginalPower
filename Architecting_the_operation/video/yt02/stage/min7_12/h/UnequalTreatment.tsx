@@ -1,5 +1,5 @@
 import React from 'react';
-import {cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
+import {BootIn, DrawLine, Flicker, KitSound, progress, useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../../tokens';
 import {StageSceneFrame} from '../../min3_7/shared';
 import {
@@ -14,7 +14,7 @@ import {
   type Point,
 } from '../shared';
 
-const enter = (ms: number, at: number, duration = 520) => cubicOut(progress(ms, at, at + duration));
+const cueFrame = (ms: number) => Math.round(ms * 30 / 1000);
 
 export const UNEQUAL_TREATMENT_LAYOUT = {
   t55Banner: {x: 120, y: 115, w: 1680, h: 72},
@@ -66,19 +66,17 @@ export function UnequalTreatment({segment}: SceneProps) {
   const isTurn56 = ms >= cue.t56Unequal;
   const hasThreePart = ms >= cue.t55ThreePart;
 
-  const turn55P = Math.max(0.25, enter(ms, cue.t55ThreePart));
-  const beliefP = enter(ms, cue.t55Belief);
-  const prejudiceP = enter(ms, cue.t55Prejudice);
-  const hostilityP = enter(ms, cue.t55Hostility);
-  const discriminationP = enter(ms, cue.t55Discrimination);
-  const unequalP = enter(ms, cue.t55Unequal);
+  const beliefP = ms >= cue.t55Belief ? 1 : 0;
+  const prejudiceP = ms >= cue.t55Prejudice ? 1 : 0;
+  const hostilityP = ms >= cue.t55Hostility ? 1 : 0;
+  const discriminationP = ms >= cue.t55Discrimination ? 1 : 0;
+  const unequalP = ms >= cue.t55Unequal ? 1 : 0;
 
-  const t56UnequalP = Math.max(0.25, enter(ms, cue.t56Unequal));
-  const verbalP = enter(ms, cue.t56Verbal);
-  const customerP = enter(ms, cue.t56Customer);
-  const gradingP = enter(ms, cue.t56Grading);
-  const refusingP = enter(ms, cue.t56Refusing);
-  const apartmentP = enter(ms, cue.t56Apartment);
+  const verbalP = ms >= cue.t56Verbal ? 1 : 0;
+  const customerP = ms >= cue.t56Customer ? 1 : 0;
+  const gradingP = ms >= cue.t56Grading ? 1 : 0;
+  const refusingP = ms >= cue.t56Refusing ? 1 : 0;
+  const apartmentP = ms >= cue.t56Apartment ? 1 : 0;
 
   const gold = color('color/fill/gold');
   const raceRed = color('color/marker/race');
@@ -95,10 +93,11 @@ export function UnequalTreatment({segment}: SceneProps) {
   const tokenDotX = Math.round(380 + tokenProgress * (1540 - 380));
 
   return (
-    <StageSceneFrame segment={segment}>
+    <StageSceneFrame segment={segment}><KitSound mode="beats">
       {/* Turn 55 Centered Full-Frame Three-Stage Path */}
       {!isTurn56 && (
-        <div data-turn="55" style={{opacity: turn55P}}>
+        <Flicker startFrame={cueFrame(cue.t55ThreePart)} durationFrames={16} beat><div data-turn="55">
+          <BootIn box={L.pipeline} startFrame={cueFrame(cue.t55ThreePart)} durationFrames={28} mode="scan" />
           {/* Top Context Banner */}
           <Panel id="t55-banner-frame" box={L.t55Banner} accent="color/line/hairline" />
           <Label
@@ -292,6 +291,8 @@ export function UnequalTreatment({segment}: SceneProps) {
               strokeLinejoin="round"
             />
           </svg>
+          <DrawLine points={L.pipelineArrow1} startFrame={cueFrame(cue.t55Belief)} durationFrames={18} strokeToken="color/fill/gold" strokeWidth={4} end="arrow" />
+          <DrawLine points={L.pipelineArrow2} startFrame={cueFrame(cue.t55Prejudice)} durationFrames={18} strokeToken="color/text/accent" strokeWidth={4} end="arrow" />
 
           {/* Node 2: Prejudice */}
           <Panel
@@ -550,12 +551,13 @@ export function UnequalTreatment({segment}: SceneProps) {
               }}
             />
           )}
-        </div>
+        </div></Flicker>
       )}
 
       {/* Turn 56 Full-Frame Treatment Tray */}
       {isTurn56 && (
-        <div data-turn="56" style={{opacity: t56UnequalP}}>
+        <Flicker startFrame={cueFrame(cue.t56Unequal)} durationFrames={16} beat><div data-turn="56">
+          <BootIn box={L.treatmentTray} startFrame={cueFrame(cue.t56Unequal)} durationFrames={28} mode="scan" />
           {/* Top Context Banner */}
           <Panel id="t56-banner-frame" box={L.t56Banner} accent="color/text/accent" />
           <Label
@@ -944,7 +946,7 @@ export function UnequalTreatment({segment}: SceneProps) {
               {ms >= cue.t56Qualified ? 'QUALIFIED TENANT' : 'HOUSING DOMAIN'}
             </Label>
           </div>
-        </div>
+        </div></Flicker>
       )}
 
       {/* Source Line */}
@@ -957,6 +959,6 @@ export function UnequalTreatment({segment}: SceneProps) {
       >
         Fiske 1998 · Observable Unequal Treatment
       </Label>
-    </StageSceneFrame>
+    </KitSound></StageSceneFrame>
   );
 }

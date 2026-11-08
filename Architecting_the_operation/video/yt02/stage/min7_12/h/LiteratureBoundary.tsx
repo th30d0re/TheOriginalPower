@@ -1,5 +1,5 @@
 import React from 'react';
-import {cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
+import {BootIn, DrawLine, Flicker, KitSound, useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../../tokens';
 import {StageSceneFrame} from '../../min3_7/shared';
 import {
@@ -15,8 +15,8 @@ import {
   type TriadTerm,
 } from '../shared';
 
-const enter = (ms: number, at: number, duration = 520) => cubicOut(progress(ms, at, at + duration));
 const pulseAmount = (ms: number, at: number) => Math.max(0, 1 - Math.abs(ms - (at + 200)) / 300);
+const cueFrame = (ms: number) => Math.round(ms * 30 / 1000);
 
 export const LITERATURE_BOUNDARY_LAYOUT = {
   t62Banner: {x: 120, y: 115, w: 1680, h: 72},
@@ -64,10 +64,7 @@ export function LiteratureBoundary({segment}: SceneProps) {
   const hasEstablished = ms >= cue.t62Established;
   const hasLiterature = ms >= cue.t62Literature;
 
-  const establishedP = Math.max(0.25, enter(ms, cue.t62Established));
-  const endsP = Math.max(0.25, enter(ms, cue.t62Ends, 600));
-  const personP = enter(ms, cue.t62PersonToPerson);
-  const psychologyP = Math.max(0.25, enter(ms, cue.t62Psychology));
+  const personP = ms >= cue.t62PersonToPerson ? 1 : 0;
 
   const gold = color('color/fill/gold');
   const raceRed = color('color/marker/race');
@@ -113,9 +110,9 @@ export function LiteratureBoundary({segment}: SceneProps) {
   ] as const;
 
   return (
-    <StageSceneFrame segment={segment}>
+    <StageSceneFrame segment={segment}><KitSound mode="beats">
       {/* Top Banner */}
-      <div data-t62-banner="true" style={{opacity: establishedP}}>
+      <Flicker startFrame={cueFrame(cue.t62Established)} durationFrames={16} beat><div data-t62-banner="true">
         <Panel id="t62-banner-frame" box={L.t62Banner} accent="color/line/hairline" />
         <Label
           id="t62-banner-title"
@@ -137,10 +134,11 @@ export function LiteratureBoundary({segment}: SceneProps) {
         >
           CHAPTER 2 · SECTION TRANSITION
         </Label>
-      </div>
+      </div></Flicker>
 
       {/* Established Literature Field */}
-      <div data-field="established-literature" style={{opacity: establishedP}}>
+      <Flicker startFrame={cueFrame(cue.t62Established)} durationFrames={16}><div data-field="established-literature">
+        <BootIn box={L.literatureField} startFrame={cueFrame(cue.t62Established)} durationFrames={28} mode="scan" />
         <Panel
           id="established-literature-frame"
           box={L.literatureField}
@@ -262,11 +260,12 @@ export function LiteratureBoundary({segment}: SceneProps) {
         >
           GREENWALD & BANAJI 1995 · ALLPORT 1954 · FISKE 1998
         </Label>
-      </div>
+      </div></Flicker>
 
       {/* Terminal Boundary Column */}
       {ms >= cue.t62Ends && (
-        <div data-terminal-boundary="true" style={{opacity: endsP}}>
+        <Flicker startFrame={cueFrame(cue.t62Ends)} durationFrames={18} beat><div data-terminal-boundary="true">
+          <BootIn box={L.terminalColumn} startFrame={cueFrame(cue.t62Ends)} durationFrames={24} mode="snap" />
           <Panel
             id="terminal-boundary-column"
             box={L.terminalColumn}
@@ -280,6 +279,8 @@ export function LiteratureBoundary({segment}: SceneProps) {
               fill="none"
               stroke={raceRed}
               strokeWidth="2"
+              pathLength={1}
+              strokeDasharray="1"
             />
             <path
               {...lineAttrs('terminal-boundary-line-right', L.terminalRightLine)}
@@ -287,6 +288,8 @@ export function LiteratureBoundary({segment}: SceneProps) {
               fill="none"
               stroke={raceRed}
               strokeWidth="2"
+              pathLength={1}
+              strokeDasharray="1"
             />
           </svg>
           <div
@@ -311,12 +314,15 @@ export function LiteratureBoundary({segment}: SceneProps) {
           >
             ESTABLISHED LITERATURE ENDS HERE
           </div>
-        </div>
+          <DrawLine points={L.terminalLeftLine} startFrame={cueFrame(cue.t62Ends)} durationFrames={18} strokeToken="color/marker/race" strokeWidth={2} />
+          <DrawLine points={L.terminalRightLine} startFrame={cueFrame(cue.t62Ends)} durationFrames={18} strokeToken="color/marker/race" strokeWidth={2} />
+        </div></Flicker>
       )}
 
       {/* Structural Argument Handoff Field */}
       {ms >= cue.t62Psychology && (
-        <div data-field="structural-handoff" style={{opacity: psychologyP}}>
+        <Flicker startFrame={cueFrame(cue.t62Psychology)} durationFrames={16} beat><div data-field="structural-handoff">
+          <BootIn box={L.turn63Field} startFrame={cueFrame(cue.t62Psychology)} durationFrames={28} mode="scan" />
           <Panel id="structural-handoff-frame" box={L.turn63Field} accent="color/line/hairline" />
           <Label
             id="structural-handoff-label"
@@ -414,7 +420,7 @@ export function LiteratureBoundary({segment}: SceneProps) {
           >
             FORMAL MODEL · CHAPTERS 2–21
           </Label>
-        </div>
+        </div></Flicker>
       )}
 
       {/* Source Line */}
@@ -427,6 +433,6 @@ export function LiteratureBoundary({segment}: SceneProps) {
       >
         Greenwald & Banaji 1995 · Allport 1954 · Fiske 1998
       </Label>
-    </StageSceneFrame>
+    </KitSound></StageSceneFrame>
   );
 }
