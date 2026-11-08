@@ -1,5 +1,5 @@
 import React from 'react';
-import {cubicOut, progress} from '@stage';
+import {BootIn, DrawLine, DrawRect, Flicker, KitSound, cubicOut, progress} from '@stage';
 import {color} from '../../tokens';
 import {ColoredTerm, type EquationTermId} from '../../equations';
 
@@ -10,6 +10,9 @@ export type Point = readonly [number,number];
 
 export const enter = (ms:number, at:number, duration=460) => cubicOut(progress(ms, at, at + duration));
 export const clamp = (value:number) => Math.max(0, Math.min(1, value));
+/** Stage narration cues are milliseconds; kit timing is on the 30 fps composition timeline. */
+export const cueFrame = (ms:number) => Math.round(ms * 30 / 1000);
+export {BootIn, DrawLine, DrawRect, Flicker, KitSound};
 
 const round=(value:number)=>Math.round(value*10)/10;
 export const boxData=(box:Box)=>`${round(box.x)} ${round(box.y)} ${round(box.w)} ${round(box.h)}`;
@@ -36,6 +39,17 @@ export function Label({id,box,children,size=20,weight=500,ls=0,lh=1.25,sans=fals
 
 export function Panel({id,box,opacity=1,accent,style}:{id:string;box:Box;opacity?:number;accent?:string;style?:React.CSSProperties}){
   return <div {...shapeAttrs(id,box,'frame')} style={{...PANEL_STYLE,left:box.x,top:box.y,width:box.w,height:box.h,opacity,border:accent?`1px solid ${color(accent)}`:PANEL_STYLE.border,...style}}/>;
+}
+
+/** A panel whose approved resting geometry remains the ordinary Panel geometry. */
+export function BootPanel({id,box,startMs,durationMs=500,beat=false,accent,style}:{id:string;box:Box;startMs:number;durationMs?:number;beat?:boolean;accent?:string;style?:React.CSSProperties}){
+  return <BootIn box={box} startFrame={cueFrame(startMs)} durationFrames={Math.round(durationMs * 30 / 1000)} beat={beat}>
+    <div {...shapeAttrs(id,box,'frame')} style={{...PANEL_STYLE,position:'absolute',inset:0,width:'100%',height:'100%',border:accent?`1px solid ${color(accent)}`:PANEL_STYLE.border,...style}}/>
+  </BootIn>;
+}
+
+export function FlickerLabel({startMs,durationMs=460,beat=false,...props}:{startMs:number;durationMs?:number;beat?:boolean}&React.ComponentProps<typeof Label>){
+  return <Flicker startFrame={cueFrame(startMs)} durationFrames={Math.round(durationMs * 30 / 1000)} beat={beat}><Label {...props}/></Flicker>;
 }
 
 export function AuditedTermBlock({id,box,term,summary,glyph,accent='color/fill/gold',unit,opacity=1,selected=false,framed=false,titleSize=27,summarySize=24,termId,ms,pulses}:{

@@ -3,7 +3,7 @@ import {useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../../tokens';
 import {EquationTerms, type EquationToken} from '../../equations';
 import {StageSceneFrame} from '../shared';
-import {AuditedTermBlock,enter,HeartIcon,Label,lineAttrs,PANEL_STYLE,pathFrom,PersonIcon,ScanLines,SceneSource,shapeAttrs,textAttrs,WordIcon,type Box,type Point} from './PackageAVisuals';
+import {AuditedTermBlock,DrawLine,FlickerLabel,KitSound,enter,HeartIcon,Label,lineAttrs,PANEL_STYLE,pathFrom,PersonIcon,ScanLines,SceneSource,shapeAttrs,textAttrs,WordIcon,type Box,type Point} from './PackageAVisuals';
 import {EQ_25} from './SequenceAsTheory';
 
 const FORMAL_LINES:readonly (readonly EquationToken[])[]=[
@@ -27,8 +27,8 @@ export const HEARTS_LAYOUT = {
 
 type CueMap=Record<string,{at:number}>;
 
-function Header({text,p}:{text:string;p:number}) {
-  return <Label id={`hearts-header-${text.toLowerCase().replaceAll(' ','-')}`} box={HEARTS_LAYOUT.header} size={28} weight={500} ls={1.8} align="center" ink={color('color/fill/gold')} opacity={p}>{text}</Label>;
+function Header({text,p,startMs,beat=false}:{text:string;p:number;startMs:number;beat?:boolean}) {
+  return <FlickerLabel startMs={startMs} durationMs={500} beat={beat} id={`hearts-header-${text.toLowerCase().replaceAll(' ','-')}`} box={HEARTS_LAYOUT.header} size={28} weight={500} ls={1.8} align="center" ink={color('color/fill/gold')}>{text}</FlickerLabel>;
 }
 
 function TurnThirteen({ms,cue}:{ms:number;cue:CueMap}) {
@@ -41,7 +41,7 @@ function TurnThirteen({ms,cue}:{ms:number;cue:CueMap}) {
     {cue:'t13Intentions',label:'MORAL INTENTION',glyph:<PersonIcon tone="color/marker/race"/>},
   ] as const;
   return <div data-audit-turn="13">
-    {ms>=cue.t13Ordering.at&&<Header text="DEFAULT DEFINITION" p={ordering}/>}
+    {ms>=cue.t13Ordering.at&&<Header text="DEFAULT DEFINITION" p={ordering} startMs={cue.t13Ordering.at} beat/>}
     <div {...shapeAttrs('debate-panel',HEARTS_LAYOUT.debate,'frame')} style={{...PANEL_STYLE,left:HEARTS_LAYOUT.debate.x,top:HEARTS_LAYOUT.debate.y,width:HEARTS_LAYOUT.debate.w,height:HEARTS_LAYOUT.debate.h,opacity:ordering}}>
       {ms>=cue.t13Public.at&&<div {...textAttrs('public-debate',{x:208,y:304,w:260,h:34},{size:25,lh:1.25})} style={{position:'absolute',left:48,top:54,width:260,font:'500 25px "IBM Plex Mono"',color:color('color/text/primary'),opacity:publicP}}>PUBLIC DEBATE</div>}
       <svg width="880" height="590" viewBox="0 0 880 590" style={{position:'absolute',inset:0}} aria-hidden="true">
@@ -75,7 +75,7 @@ function TurnFourteen({ms,cue}:{ms:number;cue:CueMap}) {
   const route=enter(ms,cue.t14Default.at,600);
   const malice=enter(ms,cue.t14Malice.at,500);
   return <div data-audit-turn="14">
-    {ms>=cue.t14Disparity.at&&<Header text="RACIAL DISPARITY" p={disparity}/>}
+    {ms>=cue.t14Disparity.at&&<Header text="RACIAL DISPARITY" p={disparity} startMs={cue.t14Disparity.at} beat/>}
     <div style={{position:'absolute',left:HEARTS_LAYOUT.inputs.x,top:HEARTS_LAYOUT.inputs.y,width:HEARTS_LAYOUT.inputs.w,height:HEARTS_LAYOUT.inputs.h}}>
       {rows.map((row,index)=>{const box={x:HEARTS_LAYOUT.inputs.x,y:HEARTS_LAYOUT.inputs.y+index*176,w:520,h:140};return ms>=cue[row.cue].at&&<div key={row.label} {...shapeAttrs(`disparity-row-${index+1}`,box,'frame')} style={{...PANEL_STYLE,left:0,top:index*176,width:520,height:140,opacity:enter(ms,cue[row.cue].at,450)}}>
         <div style={{position:'absolute',left:22,top:20}}><DisparityGlyph kind={row.kind}/></div>
@@ -88,7 +88,7 @@ function TurnFourteen({ms,cue}:{ms:number;cue:CueMap}) {
     {ms>=cue.t14Default.at&&<div data-definition-router="true" {...shapeAttrs('definition-router',HEARTS_LAYOUT.router,'frame')} style={{...PANEL_STYLE,left:HEARTS_LAYOUT.router.x,top:HEARTS_LAYOUT.router.y,width:HEARTS_LAYOUT.router.w,height:HEARTS_LAYOUT.router.h,opacity:route}}>
       <div {...textAttrs('definition-router-title',{x:780,y:345,w:310,h:30},{size:22,lh:1.25})} style={{position:'absolute',left:30,top:35,width:310,textAlign:'center',font:'500 22px "IBM Plex Mono"',color:color('color/fill/gold')}}>DEFAULT DEFINITION</div>
       <svg width="370" height="420" viewBox="0 0 370 420" aria-hidden="true">
-        {[120,210,300].map((y,index)=>{const points:Point[]=[[768,HEARTS_LAYOUT.router.y+y],[916,HEARTS_LAYOUT.router.y+y],[975,520],[1098,520]];return <path key={y} {...lineAttrs(`router-line-${index+1}`,points)} d={`M 18 ${y} H 166 Q 225 ${y} 225 210 H 348`} fill="none" stroke={color('color/fill/gold')} strokeWidth="2" opacity={enter(ms,cue.t14Default.at+index*90,500)}/>;})}
+        {[120,210,300].map((y,index)=>{const points:Point[]=[[768,HEARTS_LAYOUT.router.y+y],[916,HEARTS_LAYOUT.router.y+y],[975,520],[1098,520]];const k=enter(ms,cue.t14Default.at+index*90,500);return <path key={y} {...lineAttrs(`router-line-${index+1}`,points)} d={`M 18 ${y} H 166 Q 225 ${y} 225 210 H 348`} fill="none" stroke={color('color/fill/gold')} strokeWidth="2" pathLength={1} strokeDasharray={k>=1?undefined:`${k} 1`}/>;})}
       </svg>
     </div>}
     {ms>=cue.t14Malice.at&&<div {...shapeAttrs('thought-audit-panel',HEARTS_LAYOUT.thoughts,'frame')} style={{...PANEL_STYLE,left:HEARTS_LAYOUT.thoughts.x,top:HEARTS_LAYOUT.thoughts.y,width:HEARTS_LAYOUT.thoughts.w,height:HEARTS_LAYOUT.thoughts.h,opacity:malice}}>
@@ -113,7 +113,7 @@ function TurnFifteen({ms,cue}:{ms:number;cue:CueMap}) {
   const centuries=enter(ms,cue.t15Centuries.at,600);
   const records=enter(ms,cue.t15Records.at,450);
   return <div data-audit-turn="15">
-    {ms>=cue.t15Original.at&&<Header text="THE ORIGINAL POWER" p={original}/>}
+    {ms>=cue.t15Original.at&&<Header text="THE ORIGINAL POWER" p={original} startMs={cue.t15Original.at} beat/>}
     <div {...shapeAttrs('claim-panel',HEARTS_LAYOUT.claim,'frame')} style={{...PANEL_STYLE,left:HEARTS_LAYOUT.claim.x,top:HEARTS_LAYOUT.claim.y,width:HEARTS_LAYOUT.claim.w,height:HEARTS_LAYOUT.claim.h,opacity:original}}>
       {ms>=cue.t15Causal.at&&<div {...textAttrs('claim-label',{x:162,y:288,w:426,h:30},{size:22,lh:1.25})} style={{position:'absolute',left:32,top:38,width:426,textAlign:'center',font:'500 22px "IBM Plex Mono"',color:color('color/fill/gold'),opacity:causal}}>CLAIM</div>}
       {ms>=cue.t15Testable.at&&<div {...textAttrs('historical-claim',{x:168,y:380,w:414,h:94},{size:34,lh:1.25,sans:true})} style={{position:'absolute',left:38,top:130,width:414,textAlign:'center',fontSize:34,lineHeight:1.25,fontWeight:600,opacity:testable}}>TESTABLE HISTORICAL CLAIM</div>}
@@ -154,10 +154,10 @@ export function HeartsAudit({segment}:SceneProps) {
     t15Original:useCue('t15Original'),t15Causal:useCue('t15Causal'),t15Testable:useCue('t15Testable'),t15Formally:useCue('t15Formally'),t15Checked:useCue('t15Checked'),t15Centuries:useCue('t15Centuries'),t15Records:useCue('t15Records'),
   };
   const phase=ms<cue.t14Public.at?13:ms<cue.t15Original.at?14:15;
-  return <StageSceneFrame segment={segment}>
+  return <StageSceneFrame segment={segment}><KitSound mode="beats">
     {phase===13&&<TurnThirteen ms={ms} cue={cue}/>}
     {phase===14&&<TurnFourteen ms={ms} cue={cue}/>}
     {phase===15&&<TurnFifteen ms={ms} cue={cue}/>}
     <SceneSource text="The Original Power, Chapter 2"/>
-  </StageSceneFrame>;
+  </KitSound></StageSceneFrame>;
 }
