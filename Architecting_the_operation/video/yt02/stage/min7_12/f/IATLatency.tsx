@@ -1,7 +1,7 @@
 import React from 'react';
-import {cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
+import {BootIn, Flicker, KitSound, StickFigure, cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../../tokens';
-import {PersonMark, StageSceneFrame} from '../../min3_7/shared';
+import {StageSceneFrame} from '../../min3_7/shared';
 import {
   Label,
   Panel,
@@ -12,6 +12,8 @@ import {
 } from '../shared';
 
 const enter = (ms: number, at: number, duration = 520) => cubicOut(progress(ms, at, at + duration));
+const cueFrame = (ms: number) => Math.round(ms * 30 / 1000);
+const cueDuration = (ms = 520) => Math.round(ms * 30 / 1000);
 
 export const IAT_LATENCY_LAYOUT = {
   // Turn 43: Full-height milestone composition (y: 115..880, span = 765 px)
@@ -130,14 +132,18 @@ export function IATLatency({segment}: SceneProps) {
 
   return (
     <StageSceneFrame segment={segment}>
+      <KitSound mode="beats">
       {/* TURN 43: Source Plaque + Instrument Overview (y: 115..880, span = 765 px) */}
       {isTurn43 && ms >= cue.t43Three && (
         <div data-turn="43" style={{opacity: plaqueP}}>
           {/* Top Context Banner (height 72, text span 36 -> 36 px slack) */}
           <Panel id="t43-banner" box={L.t43Banner} accent="color/fill/gold" />
-          <Label id="t43-banner-title" box={{x: 360, y: 133, w: 1200, h: 36}} size={28} weight={650} sans align="center" ink={gold}>
-            EXPERIMENTAL MEASUREMENT MILESTONE · SORTING TIMING
-          </Label>
+          <BootIn box={L.t43Banner} startFrame={cueFrame(cue.t43Three)} durationFrames={cueDuration()} mode="scan" beat />
+          <Flicker startFrame={cueFrame(cue.t43Three)} durationFrames={cueDuration()}>
+            <Label id="t43-banner-title" box={{x: 360, y: 133, w: 1200, h: 36}} size={28} weight={650} sans align="center" ink={gold}>
+              EXPERIMENTAL MEASUREMENT MILESTONE · SORTING TIMING
+            </Label>
+          </Flicker>
 
           {/* Source Plaque (height 290, text span 254 -> 36 px slack) */}
           <Panel id="source-plaque" box={L.sourcePlaque} accent="color/fill/gold">
@@ -222,6 +228,7 @@ export function IATLatency({segment}: SceneProps) {
         <div data-turn="44" style={{opacity: testP}}>
           {/* Sorting Monitor (x: 120, y: 120, w: 1140, h: 760, text span 724 -> 36 px slack) */}
           <Panel id="sorting-monitor" box={L.sortingMonitor} />
+          <BootIn box={L.sortingMonitor} startFrame={cueFrame(cue.t44Test)} durationFrames={cueDuration()} mode="scan" beat />
           <Label id="monitor-heading" box={{x: 156, y: 138, w: 1068, h: 40}} size={30} weight={650} sans ink={gold}>
             DERIVED FACE + WORD SORTING TASK
           </Label>
@@ -246,7 +253,7 @@ export function IATLatency({segment}: SceneProps) {
                 {...shapeAttrs('face-mark', {x: 492, y: 355, w: 60, h: 66}, 'mark', 'person')}
                 style={{position: 'absolute', left: 492, top: 355, width: 60, height: 66}}
               >
-                <PersonMark x={30} y={35} group="neutral" emphasis={ms >= cue.t44Faces ? 1 : 0.8} scale={1.1} />
+                <StickFigure x={30} y={35} group="neutral" emphasis={ms >= cue.t44Faces ? 1 : 0.8} scale={1.1} startFrame={cueFrame(cue.t44Faces)} durationFrames={cueDuration()} />
               </div>
             </div>
 
@@ -373,6 +380,7 @@ export function IATLatency({segment}: SceneProps) {
         <div data-turn="45" style={{opacity: rtP}}>
           {/* Top Banner (height 72, text span 36 -> 36 px slack) */}
           <Panel id="t45-banner" box={L.t45Banner} accent="color/fill/gold" />
+          <BootIn box={L.t45Banner} startFrame={cueFrame(cue.t45Reaction)} durationFrames={cueDuration()} mode="scan" beat />
           <Label id="t45-banner-title" box={{x: 160, y: 133, w: 1600, h: 36}} size={28} weight={650} sans align="center" ink={gold}>
             CONVERGENT MEASUREMENT · REACTION TIME &amp; FIELD AUDITS
           </Label>
@@ -557,6 +565,7 @@ export function IATLatency({segment}: SceneProps) {
           Greenwald, McGhee &amp; Schwartz 1998 · Journal of Personality and Social Psychology
         </Label>
       )}
+      </KitSound>
     </StageSceneFrame>
   );
 }

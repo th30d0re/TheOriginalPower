@@ -1,7 +1,7 @@
 import React from 'react';
-import {cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
+import {BootIn, DrawLine, Flicker, KitSound, StickFigure, cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../../tokens';
-import {PersonMark, StageSceneFrame} from '../../min3_7/shared';
+import {StageSceneFrame} from '../../min3_7/shared';
 import {
   Label,
   Panel,
@@ -13,6 +13,8 @@ import {
 } from '../shared';
 
 const enter = (ms: number, at: number, duration = 520) => cubicOut(progress(ms, at, at + duration));
+const cueFrame = (ms: number) => Math.round(ms * 30 / 1000);
+const cueDuration = (ms = 520) => Math.round(ms * 30 / 1000);
 
 export const ALLPORT_QUESTION_LAYOUT = {
   header: {x: 150, y: 110, w: 1620, h: 135},
@@ -74,6 +76,7 @@ export function AllportQuestion({segment}: SceneProps) {
 
   return (
     <StageSceneFrame segment={segment}>
+      <KitSound mode="beats">
       <QuestionHeader
         id="question-header"
         box={L.header}
@@ -82,6 +85,7 @@ export function AllportQuestion({segment}: SceneProps) {
         accentTerm="prejudice"
         accent="color/marker/race"
       />
+      <BootIn box={L.header} startFrame={cueFrame(cue.t46Why)} durationFrames={cueDuration()} mode="scan" beat />
 
       {/* First Half: Bias & Prejudice Question Blocks + Distinction Summary Panel */}
       {!isCitation && ms >= cue.t46Why && (
@@ -95,7 +99,7 @@ export function AllportQuestion({segment}: SceneProps) {
               {...shapeAttrs('bias-glyph', {x: 174, y: 332, w: 52, h: 56}, 'mark', 'person')}
               style={{position: 'absolute', left: 174, top: 332, width: 52, height: 56}}
             >
-              <PersonMark x={26} y={28} group="ingroup" emphasis={1} scale={1.05} />
+              <StickFigure x={26} y={28} group="ingroup" emphasis={1} scale={1.05} startFrame={cueFrame(cue.t46Why)} durationFrames={cueDuration()} />
             </div>
             <Label id="bias-label" box={{x: 240, y: 328, w: 560, h: 40}} size={30} weight={650} sans ink={gold}>
               {ms >= cue.t46Label ? 'BIAS · STARTING TENDENCY' : 'CONCEPT 1 · BIAS'}
@@ -127,9 +131,12 @@ export function AllportQuestion({segment}: SceneProps) {
           </div>
 
           {ms >= cue.t46Label && (
-            <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position: 'absolute', inset: 0}} aria-hidden="true" opacity={labelP}>
-              <path {...lineAttrs('question-connector', connectorPoints)} d={pathFrom(connectorPoints)} stroke={gold} strokeWidth="3.5" />
-            </svg>
+            <>
+              <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position: 'absolute', inset: 0}} aria-hidden="true" opacity={labelP}>
+                <path {...lineAttrs('question-connector', connectorPoints)} d={pathFrom(connectorPoints)} stroke={gold} strokeWidth="3.5" />
+              </svg>
+              <DrawLine points={connectorPoints} startFrame={cueFrame(cue.t46Label)} durationFrames={cueDuration()} strokeToken="color/fill/gold" strokeWidth={3.5} origin={false} nodes={false} tail={0} />
+            </>
           )}
 
           {/* Right Block: Prejudice (height 330, text span 294 -> 36 px slack) */}
@@ -219,10 +226,13 @@ export function AllportQuestion({segment}: SceneProps) {
           <Panel id="citation-card" box={L.citationCard} accent="color/fill/gold">
             <span aria-hidden="true" style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: 6, background: gold}} />
           </Panel>
+          <BootIn box={L.citationCard} startFrame={cueFrame(cue.t46Gordon)} durationFrames={cueDuration()} mode="scan" beat />
 
-          <Label id="cite-author" box={{x: 374, y: 308, w: 860, h: 44}} size={36} weight={650} sans ink={primary}>
-            GORDON W. ALLPORT
-          </Label>
+          <Flicker startFrame={cueFrame(cue.t46Gordon)} durationFrames={cueDuration()}>
+            <Label id="cite-author" box={{x: 374, y: 308, w: 860, h: 44}} size={36} weight={650} sans ink={primary}>
+              GORDON W. ALLPORT
+            </Label>
+          </Flicker>
 
           <Label
             id="cite-year"
@@ -312,6 +322,7 @@ export function AllportQuestion({segment}: SceneProps) {
               : 'The Original Power, Chapter 2 · concept distinction'}
         </Label>
       )}
+      </KitSound>
     </StageSceneFrame>
   );
 }
