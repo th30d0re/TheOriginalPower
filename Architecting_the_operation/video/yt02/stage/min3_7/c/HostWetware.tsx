@@ -1,5 +1,5 @@
 import React from 'react';
-import {cubicInOut, cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
+import {BootIn, KitSound, cubicInOut, cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../../tokens';
 import {NEURAL_FIELD, NeuralField, PersonMark, StageSceneFrame} from '../shared';
 import {Label, SceneSource, leave, lineAttrs, pathFrom, shapeAttrs, type LayoutBox, type Point} from '../d/sceneUtils';
@@ -97,9 +97,9 @@ export function HostWetware({segment}:SceneProps) {
   const nodeHull={x:Math.min(...nodes.map(p=>p[0]))-11,y:Math.min(...nodes.map(p=>p[1]))-11,w:Math.max(...nodes.map(p=>p[0]))-Math.min(...nodes.map(p=>p[0]))+22,h:Math.max(...nodes.map(p=>p[1]))-Math.min(...nodes.map(p=>p[1]))+22};
   const compressedBus:Point[]=[[L.neural.x+L.neural.w,411],[1165,411],[1165,530],[1180,530]];
   const allyLeader:Point[]=[[T.ally.x+T.ally.w,480],[BAND.cx-Math.sqrt(BAND.r*BAND.r-60*60),480]];
-  return <StageSceneFrame segment={segment}>
+  return <KitSound mode="beats"><StageSceneFrame segment={segment}>
     {ms>=cue.terminology&&<>
-      <div data-book-ribbon="true" {...shapeAttrs('ribbon',L.ribbon,'frame')} style={{position:'absolute',left:L.ribbon.x,top:L.ribbon.y,width:L.ribbon.w,height:L.ribbon.h,boxSizing:'border-box',background:color('color/fill/gold-wash'),border:`1px solid ${gold}`,opacity:ribbonP}}/>
+      <BootIn box={L.ribbon} startFrame={Math.round(cue.terminology*30/1000)} durationFrames={17} mode="snap" strokeToken="color/fill/gold" fillToken="color/fill/gold-wash" beat><div data-book-ribbon="true" {...shapeAttrs('ribbon',L.ribbon,'frame')} style={{position:'absolute',inset:0,width:'100%',height:'100%',boxSizing:'border-box',background:color('color/fill/gold-wash'),border:`1px solid ${gold}`,opacity:ribbonP}}/></BootIn>
       <Label id="ribbon-text" box={{x:L.ribbon.x+20,y:L.ribbon.y+18,w:L.ribbon.w-40,h:36}} size={24} ls={2} align="center" ink={gold} opacity={ribbonP}>THE ORIGINAL POWER · CHAPTER 2 · §2.3.4 · HOST WETWARE</Label>
       <SceneSource text="The Original Power, Chapter 2, §2.3.4 · Host wetware" opacity={ribbonP}/>
     </>}
@@ -166,5 +166,5 @@ export function HostWetware({segment}:SceneProps) {
       {ms>=cue.survival&&<Label id="survival" box={T.survival} size={21} ls={1.2} align="center" ink={gold} opacity={survivalP}>SURVIVAL-RELEVANT CATEGORIZATION</Label>}
       {ms>=cue.consequences&&<Label id="consequence" box={T.consequence} size={21} ls={1} align="center" ink={red} opacity={consequenceP}>IMMEDIATE PHYSICAL CONSEQUENCE</Label>}
     </div>}
-  </StageSceneFrame>;
+  </StageSceneFrame></KitSound>;
 }

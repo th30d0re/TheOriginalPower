@@ -1,5 +1,5 @@
 import React from 'react';
-import {cubicInOut, cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
+import {DrawLine, Flicker, KitSound, cubicInOut, cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../../tokens';
 import {SORTING_FIELD, StageSceneFrame, UsThemSortingField, type SortingMark} from '../shared';
 import {Label, SceneSource, lineAttrs, pathFrom, shapeAttrs, type LayoutBox, type Point} from '../d/sceneUtils';
@@ -105,9 +105,9 @@ export function UsThemSorting({segment}:SceneProps) {
   const threat:Point[]=[[1446,290],[1471,395],[1478,500],[1471,605],[1446,710]];
   const allianceX=760, alliance:Point[]=[[allianceX,bandFrames[0].y+bandFrames[0].h],[allianceX,bandFrames[1].y]];
   const C=L.chips;
-  return <StageSceneFrame segment={segment}>
+  return <KitSound mode="beats"><StageSceneFrame segment={segment}>
     {ms>=cue.social&&<>
-      <Label id="social-title" box={L.title} size={24} ls={1.5} opacity={fieldP}>SOCIAL IDENTITY THEORY</Label>
+      <Flicker startFrame={Math.round(cue.social*30/1000)} durationFrames={16}><Label id="social-title" box={L.title} size={24} ls={1.5} opacity={fieldP}>SOCIAL IDENTITY THEORY</Label></Flicker>
       <div data-sorting-field-wrap="true" {...shapeAttrs('sorting-field',F,'frame')} style={{position:'absolute',left:F.x,top:F.y,width:SORTING_FIELD.width,height:SORTING_FIELD.height,transform:`scale(${FIELD_SCALE})`,transformOrigin:'left top',opacity:fieldP}}>
         <UsThemSortingField marks={marks} partitionProgress={sortP} ingroupProgress={usP} outgroupProgress={themP} labels={{ingroup:'US',outgroup:'THEM'}} mode="partition"/>
         {boxes.map((box,index)=><i key={index} data-mark-box={index+1} {...shapeAttrs(`person-${index+1}`,box,'mark','person')} style={{position:'absolute',left:0,top:0}}/>)}
@@ -121,7 +121,7 @@ export function UsThemSorting({segment}:SceneProps) {
 
     {ms>=cue.demonstrates&&<svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position:'absolute',inset:0}} aria-hidden="true">
       <path data-categorization-pulse="true" {...lineAttrs('pulse',[[440,500],[1480,500]])} d="M440 500H1480" stroke={gold} strokeWidth="5" pathLength="1" strokeDasharray=".08 .92" strokeDashoffset={1-pulseP} opacity={pulseP*(1-contractP)}/>
-      {ms>=cue.speed&&<path data-rapid-trace="true" {...lineAttrs('rapid-trace',[[800,150],[1120,150]])} d="M800 150H1120" stroke={gold} strokeWidth="5" pathLength="1" strokeDasharray="1" strokeDashoffset={1-speedP}/>}
+      {ms>=cue.speed&&<path data-rapid-trace="true" {...lineAttrs('rapid-trace',[[800,150],[1120,150]])} d="M800 150H1120" stroke={gold} strokeWidth="5" opacity="0"/>}
       {ms>=cue.sorting&&bandFrames.map((band,index)=><rect key={index} data-band={index+1} {...shapeAttrs(`band-${index+1}`,band,'frame')} x={band.x} y={band.y} width={band.w} height={band.h} rx="34" fill={color('color/fill/gold-wash')} fillOpacity=".35" stroke={index<2?gold:red} strokeWidth="3" opacity={contractP}/>)}
       {ms>=cue.sorting&&<path data-alliance-link="true" {...lineAttrs('alliance',alliance)} d={pathFrom(alliance)} stroke={gold} strokeWidth="5" strokeDasharray="8 6" opacity={contractP}/>}
       {ms>=cue.trust&&<path data-trust-bridge="true" {...lineAttrs('trust-bridge',[[trustA[0],trustY],[(trustA[0]+trustB[0])/2,trustY-10],[trustB[0],trustY]])} d={`M${trustA[0]} ${trustY}Q${(trustA[0]+trustB[0])/2} ${trustY-20} ${trustB[0]} ${trustY}`} fill="none" stroke={gold} strokeWidth="5" opacity={trustP}/>}
@@ -134,6 +134,8 @@ export function UsThemSorting({segment}:SceneProps) {
       {ms>=cue.selfConcept&&<g data-self-ring="true" opacity={selfP}><ellipse {...shapeAttrs('self-ring',ring,'frame')} cx={self[0]} cy={self[1]} rx="31" ry="40" fill="none" stroke={gold} strokeWidth="4"/></g>}
     </svg>}
 
+    {ms>=cue.speed&&<DrawLine points={[[800,150],[1120,150]]} startFrame={Math.round(cue.speed*30/1000)} durationFrames={15} strokeToken="color/fill/gold" glowToken="color/fill/gold" strokeWidth={5} origin={false} nodes={false}/>}
+
     {ms>=cue.speed&&<Label id="rapid" box={L.rapid} size={22} ls={1.4} align="center" ink={gold} opacity={speedP}>RAPID SORTING</Label>}
     {ms>=cue.prompting&&<Label id="prompt" box={L.prompt} size={20} weight={500} ls={1.2} align="right" ink={color('color/text/soft')} opacity={promptP}>MINIMAL PROMPTING</Label>}
     {ms>=cue.bands&&<Label id="bands" box={L.bands} size={28} weight={650} ls={1.2} align="center" opacity={bandsP}>SMALL BANDS + ALLIANCES</Label>}
@@ -143,7 +145,7 @@ export function UsThemSorting({segment}:SceneProps) {
     {ms>=cue.reciprocity&&<Chip id="reciprocity" box={C.reciprocity} text="RECIPROCITY" tone="gold" opacity={reciprocityP} leader={[[C.reciprocity.x+C.reciprocity.w,630],[recipA[0]-14,630]]}/>}
     {ms>=cue.belonging&&<Chip id="belonging" box={C.belonging} text="BELONGING" tone="gold" opacity={belongingP} leader={[[C.belonging.x+C.belonging.w,500],[wrap.x,500]]}/>}
     {ms>=cue.selfConcept&&<Chip id="self-concept" box={C.self} text="SELF-CONCEPT" tone="gold" opacity={selfP} leader={[[C.self.x+C.self.w,370],[self[0],370],[self[0],ring.y]]}/>}
-  </StageSceneFrame>;
+  </StageSceneFrame></KitSound>;
 }
 
 /** Audit annotation for text drawn inside the shared field (the "US" and "THEM" titles). */

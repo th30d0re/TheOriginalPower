@@ -1,5 +1,5 @@
 import React from 'react';
-import {cubicInOut, cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
+import {BootIn, Flicker, KitSound, cubicInOut, cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../../tokens';
 import {StageSceneFrame} from '../shared';
 import {Label, SceneSource, leave, lineAttrs, mix, pathFrom, shapeAttrs, type LayoutBox, type Point} from '../d/sceneUtils';
@@ -92,7 +92,7 @@ export function BiasDefinition({segment}:SceneProps) {
   const bracket:Point[]=[[190,250],[160,250],[160,656],[190,656]];
   const B=L.baseline, busCards=[0,1,2].map(index=>({x:B.x+120,y:B.y+20+index*125,w:300,h:90}));
   const busSpine:Point[]=[[B.x+60,busCards[0].y+45],[B.x+60,busCards[2].y+45]];
-  return <StageSceneFrame segment={segment}>
+  return <KitSound mode="beats"><StageSceneFrame segment={segment}>
     {turn28Shown&&<div data-turn-28-field="true" style={{opacity:turn28Opacity}}>
       {ms>=cue.baseline&&<div data-host-bus-baseline="true" style={{opacity:.3*baselineP}}>
         <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position:'absolute',inset:0}} aria-hidden="true">
@@ -103,7 +103,7 @@ export function BiasDefinition({segment}:SceneProps) {
           </React.Fragment>)}
         </svg>
       </div>}
-      {ms>=cue.experimental&&<Label id="experimental" box={L.heading} size={24} ls={1.5} opacity={experimentalP}>EXPERIMENTAL PSYCHOLOGY</Label>}
+      {ms>=cue.experimental&&<Flicker startFrame={Math.round(cue.experimental*30/1000)} durationFrames={16}><Label id="experimental" box={L.heading} size={24} ls={1.5} opacity={experimentalP}>EXPERIMENTAL PSYCHOLOGY</Label></Flicker>}
       {ms>=cue.three&&TERMS.map(([term,kind,accent],index)=><ModuleCard key={term} box={L.terms[index]} term={term} kind={kind} accent={accent} opacity={termsP}/>)}
       {ms>=cue.interpersonal&&<>
         <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position:'absolute',inset:0}} aria-hidden="true"><path data-interpersonal-bracket="true" {...lineAttrs('interpersonal-bracket',bracket)} d={pathFrom(bracket)} fill="none" stroke={gold} strokeWidth="4" pathLength="1" strokeDasharray="1" strokeDashoffset={1-interpersonalP}/></svg>
@@ -128,9 +128,9 @@ export function BiasDefinition({segment}:SceneProps) {
 
     {ms>=cue.concept&&<>
       <div data-definition-wrap="true" data-definition-term={ms>=cue.bias?'BIAS':''} style={{opacity:definitionP}}>
-        <div {...shapeAttrs('definition-card',card,'frame')} style={{position:'absolute',left:card.x,top:card.y,width:card.w,height:card.h,boxSizing:'border-box',background:color('color/fill/panel-render'),border:`1px solid ${color('color/line/hairline')}`}}>
+        <BootIn box={L.definition} startFrame={Math.round((cue.concept+300)*30/1000)} durationFrames={15} mode="snap" strokeToken="color/line/hairline" fillToken="color/fill/panel-render" beat><div {...shapeAttrs('definition-card',card,'frame')} style={{position:'absolute',left:0,top:0,width:'100%',height:'100%',boxSizing:'border-box',background:color('color/fill/panel-render'),border:`1px solid ${color('color/line/hairline')}`}}>
           <span aria-hidden="true" style={{position:'absolute',left:0,top:0,bottom:0,width:5,background:gold}}/>
-        </div>
+        </div></BootIn>
         {ms>=cue.bias&&<Label id="definition-title" box={{x:168,y:280,w:300,h:46}} size={38} weight={600} ls={0} lh={1.1} sans ink={gold} opacity={biasP}>BIAS</Label>}
         {ms>=cue.explanation&&<div style={{opacity:definitionTextP}}>
           <Label id="definition-text" box={{x:168,y:344,w:714,h:160}} size={28} weight={400} ls={0} lh={1.34} sans>{DEFINITION}</Label>
@@ -146,5 +146,5 @@ export function BiasDefinition({segment}:SceneProps) {
       </>}
       {ms>=cue.explanation&&<SceneSource text="Greenwald & Banaji 1995" opacity={explanationP}/>}
     </>}
-  </StageSceneFrame>;
+  </StageSceneFrame></KitSound>;
 }
