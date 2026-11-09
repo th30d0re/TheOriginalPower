@@ -26,6 +26,14 @@ export const EQUATION_TERMS = {
   Universe: {show: 'U', meaning: 'population universe (Eq. 2.1)', slot: 9},
   InGroupSet: {show: 'I', meaning: 'In-group set I (Eq. 2.1)', slot: 2},
   OutGroupSet: {show: 'O', meaning: 'Out-group set O (Eq. 2.1)', slot: 1},
+  // Eq. 2.2 (vertical refinement into four functional tiers) and Eq. 0.3 (benefit ordering),
+  // introduced in YT02 turns 169–180. The 14-slot palette is full, so each tier reuses the
+  // slot nearest its cone color: E orange, P gold, F red, I_buffer teal, O green.
+  Elite: {show: 'E', meaning: 'Elite tier; designs the rules, captures the net surplus (Eq. 2.2)', slot: 5},
+  Puppet: {show: 'P', math: 'P_{uppet}', meaning: 'Puppet Class tier; translates Elite priorities into statutes (Eq. 2.2)', slot: 2},
+  Enforce: {show: 'F', math: 'F_{enforce}', meaning: 'Enforcement Class tier; carries out the legal code by force (Eq. 2.2)', slot: 13},
+  IBuffer: {show: 'I_buffer', math: 'I_{buffer}', meaning: 'Buffer Class tier; defends the hierarchy for status and material allocation (Eq. 2.2)', slot: 0},
+  ORacialized: {show: 'O_racialized', math: 'O_{racialized}', meaning: 'racialized Out-group at the cone base (Eq. 2.2)', slot: 3},
 } as const;
 
 export type EquationTermId = keyof typeof EQUATION_TERMS;

@@ -2021,3 +2021,167 @@ shots:
       t167Authority: {word: authority}
       t167Protection: {word: protection}
   # Minutes 22–26: turns 111–123 (Predictions 1–4, Refutation Standards 1–3, Empirical Test Matrix, and Formal System Definition).
+  # Minutes 35–38: turns 168–180 (cone build, apex Elite, tier roster, operational modules,
+  # Eq. 2.2 refinement, Lincoln's admission price, Eq. 0.3 payoffs).
+  - shot_id: S00-168
+    turn_id: 0280d037c261ca75
+    scene: ConeBuild
+    instance: ConeBuild
+    cues:
+      t168Build: {word: Build}
+      t168Cone: {word: cone}
+      t168Outgroup: {word: Out-group}
+      t168Base: {word: base}
+      t168Buffer: {word: "Buffer Class"}
+      t168Enforcement: {word: "Enforcement Class"}
+      t168Puppet: {word: "Puppet Class"}
+      t168Elite: {word: Elite}
+      t168Tip: {word: tip}
+      t168Five: {word: Five}
+      t168Consistent: {word: consistent}
+  - shot_id: S00-169
+    turn_id: a2dce30475ca3ecc
+    scene: ApexElite
+    instance: ApexElite
+    cues:
+      t169FigureTwo: {word: Figure, occurrence: 1}
+      t169FigureThree: {word: Figure, occurrence: 2}
+      t169Refines: {word: refines}
+      t169Four: {word: four}
+      t169Apex: {word: apex}
+      t169Denoted: {word: denoted}
+      t169Capital: {word: capital}
+      t169Architects: {word: architects}
+      t169Design: {word: design}
+      t169Capture: {word: capture}
+  - shot_id: S00-170
+    turn_id: 78e7fe0297c108f6
+    scene: TierRoster
+    instance: TierRoster
+    cues:
+      t170Below: {word: Below}
+      t170Puppet: {word: Puppet}
+      t170Politicians: {word: politicians}
+      t170Media: {word: media}
+      t170Translate: {word: translate}
+      t170Statutes: {word: statutes}
+  - shot_id: S00-171
+    turn_id: e3e1d7fb9e61c877
+    scene: TierRoster
+    instance: TierRoster
+    cues:
+      t171Next: {word: Next}
+      t171Enforcement: {word: Enforcement}
+      t171Patrols: {word: patrols}
+      t171Police: {word: police}
+      t171Legal: {word: legal}
+      t171Force: {word: force}
+  - shot_id: S00-172
+    turn_id: 2509237c61af7d25
+    scene: TierRoster
+    instance: TierRoster
+    cues:
+      t172Beneath: {word: Beneath}
+      t172Buffer: {word: Buffer}
+      t172NonElite: {word: non-Elite}
+      t172Absorb: {word: absorb}
+      t172Defend: {word: defend}
+      t172Allocation: {word: allocation}
+  - shot_id: S00-173
+    turn_id: 67581ab6ddc0c1d5
+    scene: TierRoster
+    instance: TierRoster
+    cues:
+      t173Base: {word: base}
+      t173Outgroup: {word: Out-group}
+      t173ORacialized: {word: O-sub-racialized}
+      t173Adjacent: {word: adjacent}
+      t173Extraction: {word: extraction}
+      t173Dispossession: {word: dispossession}
+      t173Containment: {word: containment}
+  - shot_id: S00-174
+    turn_id: 3df9ddda8ea2b041
+    scene: OperationalModules
+    instance: OperationalModules
+    cues:
+      t174Alongside: {word: Alongside}
+      t174Modules: {word: modules}
+      t174Across: {word: across}
+      t174Asymmetric: {word: asymmetric}
+      t174Selective: {word: selective}
+      t174Ideological: {word: ideological}
+      t174Resistance: {word: resistance}
+  - shot_id: S00-175
+    turn_id: 9f99411636fafc63
+    scene: OperationalModules
+    instance: OperationalModules
+    cues:
+      t175Limits: {word: limits}
+      t175Outgroup: {word: Out-group, occurrence: 1}
+      t175Urgent: {word: urgent}
+      t175Dismisses: {word: dismisses}
+  - shot_id: S00-176
+    turn_id: af4fc876b00126b3
+    scene: RefinementEquation
+    instance: RefinementEquation
+    cues:
+      t176Equation: {word: Equation}
+      t176Vertical: {word: vertical}
+      t176Notation: {word: notation}
+      t176Operator: {word: operator}
+      t176I: {word: I}
+      t176Dominant: {word: dominant}
+  - shot_id: S00-177
+    turn_id: 9ae91d93e654d200
+    scene: RefinementEquation
+    instance: RefinementEquation
+    cues:
+      t177Splits: {word: splits}
+      t177InGroup: {word: In-group}
+      t177Disjoint: {word: disjoint}
+      t177Union: {word: union}
+      t177Named: {word: named}
+      t177Elite: {word: Elite}
+      t177Puppet: {word: Puppet}
+      t177Enforcement: {word: Enforcement}
+      t177Buffer: {word: Buffer}
+  - shot_id: S00-178
+    turn_id: 2b674eb92855a3d7
+    scene: AdmissionPrice
+    instance: AdmissionPrice
+    cues:
+      t178Lincoln: {word: Abraham}
+      t178Speed: {word: Speed}
+      t178FiftyFive: {word: fifty-five}
+      t178Admission: {word: admission}
+      t178KnowNothings: {word: Know-Nothings, occurrence: 1}
+      t178Control: {word: control}
+      t178Declaration: {word: Declaration}
+      t178Equal: {word: equal}
+      t178Except: {word: except}
+      t178Foreigners: {word: foreigners}
+      t178Catholics: {word: Catholics}
+  - shot_id: S00-179
+    turn_id: 0f863d910ac1b862
+    scene: StructuralPayoffs
+    instance: StructuralPayoffs
+    cues:
+      t179Labels: {word: labels}
+      t179Structural: {word: structural}
+      t179Names: {word: names}
+      t179Design: {word: design}
+      t179Administer: {word: administer}
+      t179Enforce: {word: enforce}
+      t179Defend: {word: defend}
+      t179Boundary: {word: boundary}
+  - shot_id: S00-180
+    turn_id: a617ff10ae83c0da
+    scene: StructuralPayoffs
+    instance: StructuralPayoffs
+    cues:
+      t180Payoffs: {word: payoffs}
+      t180Chapter: {word: Chapter}
+      t180Vastly: {word: vastly}
+      t180Puppet: {word: Puppet}
+      t180Enforcement: {word: Enforcement}
+      t180Buffer: {word: Buffer}

@@ -1,0 +1,15 @@
+# Minutes 35–38 · Turns 168–180
+
+`ConeBuild` (168) builds the five-tier cone in spoken order: the dashboard cone graphic stands large at right while five chips land at left from the base upward — Out-group, Buffer Class, Enforcement Class, Puppet Class, Elite at the tip — each with a leader into the cone frame, until the caption locks: five tiers are the minimum configuration consistent with the historical record.
+
+`ApexElite` (169) zooms the cone's tip: figure tags mark Chapter 0's Figure 0.2 (cone) and Figure 0.3 (extraction circuit), an apex triangle divides into four bands for the four upper tiers that Eq. 2.2 refines out of In-group I, the "ELITE · E" chip lands at the tip, and a definition card resolves the Elite as capital owners and institutional architects who design the rules and capture the net surplus.
+
+`TierRoster` (170–173) descends the cone one tier per turn: a small cone locator sits at left, name chips accumulate at their tier heights (Puppet, Enforcement, Buffer, Out-group under a dim Elite chip), and a spotlight card at right carries the current tier's members and function — politicians, judges, administrators, media actors translating priorities into statutes and narratives; patrols, militias, police, prosecutors, and prison agencies carrying the legal code by physical force; non-Elite In-group members absorbing friction and defending the hierarchy for status and material allocation; and O_racialized with adjacent Out-groups bearing labor extraction, land dispossession, and coercive containment.
+
+`OperationalModules` (174–175) lays four horizontal module lanes across a five-band tier column — asymmetric autonomy restriction, selective empathy, ideological justification, resistance to structural critique — then details the first two: autonomy restriction limits movement, property, and reproduction in the Out-group band, while selective empathy splits into a gold "grievances urgent" tag toward the In-group and a red "pain dismissed" tag toward the Out-group.
+
+`RefinementEquation` (176–177) writes Eq. 2.2 in set notation on one plate: the Refine operator applies to In-group I, then the split assembles term by term — I = E + P_uppet + F_enforce + I_buffer — with the disjoint-union caption and the four spoken tier names under their symbols.
+
+`AdmissionPrice` (178) opens the Lincoln letter card — to Joshua F. Speed, August 24, 1855 — beside an "admission price" tag set by the Know-Nothings, then resolves the Declaration strip: "all men are created equal" in cream with three red exception chips appended as spoken — except negroes, and foreigners, and Catholics.
+
+`StructuralPayoffs` (179–180) reads the tier labels as structural positions in the extraction circuit: four rows pair each Eq. 2.2 subset with its function verb (design, administer, enforce, defend the boundary), then Eq. 0.3's material payoffs draw as descending benefit bars — Elite vastly over Puppet over Enforcement over Buffer — closing on the ordering E >> P > F > B in registry colors.
