@@ -48,6 +48,12 @@ export const EQUATION_TERMS = {
   XLocal: {show: 'X', meaning: 'any tier or subset under local partition', slot: 3},
   XPlusAlpha: {show: 'X plus alpha', math: 'X_{+alpha}', meaning: 'locally advantaged half on alpha', slot: 0},
   XMinusAlpha: {show: 'X minus alpha', math: 'X_{-alpha}', meaning: 'locally disadvantaged half on alpha', slot: 6},
+  // Eq. 3.2 (Portuguese domestic-status allocation), introduced in YT02 turns 267–269.
+  StatusInGroup: {show: 'S in', math: 'S_{in}', meaning: 'status of the in-group', slot: 2},
+  BaseHumanity: {show: 'B', meaning: 'base humanity', slot: 7},
+  SuppressionPsi: {show: 'psi(t)', math: 'ψ(t)', meaning: 'suppression allocation', slot: 1},
+  PsychologicalStatusWage: {show: 'W psych', math: 'W_{psych}', meaning: 'psychological status wage', slot: 12},
+  MaterialConcessions: {show: 'M', meaning: 'material concessions', slot: 8},
 } as const;
 
 export type EquationTermId = keyof typeof EQUATION_TERMS;
