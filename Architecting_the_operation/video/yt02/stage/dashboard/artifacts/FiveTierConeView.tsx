@@ -8,6 +8,7 @@ export type FiveTierConeViewProps = {
   height: number; // content box to fill (no panel chrome)
   interactive: boolean; // true only on the website
   era?: {log: number; fields: Record<string, unknown>}; // an entry of yt02/dashboard_eras.json
+  model?: Partial<FiveTierConeModel>; // static path only: merged over the era-derived model
 };
 
 export type FiveTierConeModel = {
@@ -292,13 +293,13 @@ export function FiveTierConeView(props: FiveTierConeViewProps): JSX.Element {
 function StaticFiveTierConeView(props: FiveTierConeViewProps): JSX.Element {
   const eraData = fiveTierConeFromEra(props.era);
   const model: FiveTierConeModel = {
-    el: eraData.el,
-    az: eraData.az,
-    al: eraData.al,
-    e1: eraData.e1,
-    e2: eraData.e2,
-    e3: eraData.e3,
-    lock: eraData.lock,
+    el: props.model?.el ?? eraData.el,
+    az: props.model?.az ?? eraData.az,
+    al: props.model?.al ?? eraData.al,
+    e1: props.model?.e1 ?? eraData.e1,
+    e2: props.model?.e2 ?? eraData.e2,
+    e3: props.model?.e3 ?? eraData.e3,
+    lock: props.model?.lock ?? eraData.lock,
   };
 
   if (props.mode === 'compact') {
