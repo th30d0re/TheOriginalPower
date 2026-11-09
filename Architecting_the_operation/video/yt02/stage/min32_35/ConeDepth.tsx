@@ -1,7 +1,7 @@
 import React from 'react';
 import {interpolate} from 'remotion';
 import {DrawRect, useCue, useStageMs, type SceneProps} from '@stage';
-import {FiveTierConeView} from '../dashboard/artifacts/FiveTierConeView';
+import {ConeOnly} from '../dashboard/artifacts/FiveTierConeView';
 import {Copy, Panel, Scene, frame} from './shared';
 
 const clampBoth = {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'} as const;
@@ -27,8 +27,8 @@ export function ConeDepth({segment}: SceneProps) {
     <Copy at={cue.depth} box={{x: 150, y: 124, w: 900, h: 40}} size={30}>THE WIDE SHOT RESTORES CAUSAL DEPTH</Copy>
     {ms >= cue.cone && <>
       <DrawRect box={{x: 240, y: 186, w: 1440, h: 872}} startFrame={frame(cue.cone)} durationFrames={24} strokeToken="color/line/hairline" fillToken="color/fill/panel-render" glowToken="color/fill/gold" beat/>
-      <div style={{position: 'absolute', left: 262, top: 208, width: 1396, height: 828}}>
-        <FiveTierConeView mode="expanded" width={1396} height={828} interactive={false} model={{el, az}}/>
+      <div style={{position: 'absolute', left: 360, top: 238, width: 1200, height: 760}}>
+        <ConeOnly width={1200} height={760} model={{el, az}}/>
       </div>
     </>}
   </Scene>;
