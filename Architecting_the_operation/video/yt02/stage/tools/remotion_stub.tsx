@@ -13,3 +13,32 @@ export const delayRender = () => 1;
 export const continueRender = () => undefined;
 export const cancelRender = () => undefined;
 export const registerRoot = () => undefined;
+
+// Minimal numeric port of remotion's interpolate: linear between adjacent stops, optional
+// easing per segment, 'clamp' or 'extend' extrapolation on both ends (default 'extend').
+export function interpolate(
+  input: number,
+  rangeIn: number[],
+  rangeOut: number[],
+  options?: {easing?: (t: number) => number; extrapolateLeft?: 'clamp' | 'extend'; extrapolateRight?: 'clamp' | 'extend'},
+): number {
+  if (rangeIn.length !== rangeOut.length || rangeIn.length < 2) {
+    throw new Error('interpolate: input and output ranges must match and have at least two stops');
+  }
+  for (let i = 1; i < rangeIn.length; i++) {
+    if (rangeIn[i] <= rangeIn[i-1]) throw new Error('interpolate: input range must be strictly increasing');
+  }
+  const ease = options?.easing ?? ((t: number) => t);
+  const segment = (i: number, value: number) => {
+    const t = (value - rangeIn[i-1]) / (rangeIn[i] - rangeIn[i-1]);
+    return rangeOut[i-1] + ease(t) * (rangeOut[i] - rangeOut[i-1]);
+  };
+  if (input <= rangeIn[0]) {
+    return (options?.extrapolateLeft ?? 'extend') === 'clamp' ? rangeOut[0] : segment(1, input);
+  }
+  for (let i = 1; i < rangeIn.length; i++) {
+    if (input <= rangeIn[i]) return segment(i, input);
+  }
+  const last = rangeIn.length - 1;
+  return (options?.extrapolateRight ?? 'extend') === 'clamp' ? rangeOut[last] : segment(last, input);
+}
