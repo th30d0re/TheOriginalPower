@@ -181,6 +181,7 @@ export function BinaryProjection({segment}: SceneProps) {
               group="ingroup"
               emphasis={0.85}
               scale={1.2}
+              tone={0 + (0.4 / 5) * i}
               animate
               startFrame={frame(cue.visible)}
               durationFrames={14}
@@ -276,6 +277,7 @@ export function BinaryProjection({segment}: SceneProps) {
               group="outgroup"
               emphasis={0.85}
               scale={1.2}
+              tone={0.35 + (0.65 / 5) * i}
               animate
               startFrame={frame(cue.visible)}
               durationFrames={14}

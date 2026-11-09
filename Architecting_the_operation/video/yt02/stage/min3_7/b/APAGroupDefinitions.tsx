@@ -80,7 +80,16 @@ export function APAGroupDefinitions({segment}:SceneProps){
         {!biasPhase&&ms>=cue.opposition&&<path {...lineAttrs('opposition-line',oppositionLine)} d={`M${L.field.cx+L.field.r-10} ${L.field.cy+155}L650 ${L.field.cy+180}`} stroke={color('color/marker/race')} strokeWidth="4" opacity={oppositionP}/>}
         {biasPhase&&ms>=cue.tendency&&<path data-tendency-arrow="true" {...lineAttrs('tendency-arrow',[[L.field.x+780,L.field.y+80],[L.field.x+620,L.field.y+72],[L.field.x+525,L.field.y+160]])} d="M780 80C675 50 585 72 525 160" fill="none" stroke={color('color/fill/gold')} strokeWidth="6" opacity={tendencyP}/>}
       </svg>
-      {APA_MARKS.map(mark=>{const x=mark.initialX+(mark.finalX-mark.initialX)*sortP,y=mark.initialY+(mark.finalY-mark.initialY)*sortP,scale=mark.center?1.3:1,size=44*scale,box={x:L.field.x+x-size/2,y:L.field.y+y-size*1.3/2,w:size,h:size*1.3};return <React.Fragment key={mark.id}><StickFigure x={x} y={y} group={mark.own&&ms>=cue.bias?'ingroup':'neutral'} emphasis={mark.center?1:.72} scale={scale} startFrame={Math.round(cue.baseline*30/1000)} durationFrames={17}/><i {...shapeAttrs(`person-mark-${mark.id}`,box,'mark','person')} /></React.Fragment>;})}
+      {(() => {
+        let ownCount = 0;
+        return APA_MARKS.map(mark=>{
+          const ownIndex = mark.own ? ownCount++ : -1;
+          const x=mark.initialX+(mark.finalX-mark.initialX)*sortP,y=mark.initialY+(mark.finalY-mark.initialY)*sortP,scale=mark.center?1.3:1,size=44*scale,box={x:L.field.x+x-size/2,y:L.field.y+y-size*1.3/2,w:size,h:size*1.3};
+          const isIngroup = mark.own && ms >= cue.bias;
+          const tone = isIngroup ? 0 + (0.4 / 8) * ownIndex : undefined;
+          return <React.Fragment key={mark.id}><StickFigure x={x} y={y} group={isIngroup?'ingroup':'neutral'} tone={tone} emphasis={mark.center?1:.72} scale={scale} startFrame={Math.round(cue.baseline*30/1000)} durationFrames={17}/><i {...shapeAttrs(`person-mark-${mark.id}`,box,'mark','person')} /></React.Fragment>;
+        });
+      })()}
     </div>}
     {!biasPhase&&ms>=cue.membership&&<><Label id="membership-label" box={{x:870,y:610,w:170,h:28}} size={20} weight={500} ls={1.2} opacity={membershipP} ink={color('color/fill/gold')}>MEMBERSHIP</Label><svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position:'absolute',inset:0}}><path {...lineAttrs('membership-leader',[[1040,624],[1120,595]])} d="M1040 624L1120 595" stroke={color('color/fill/gold')} strokeWidth="2" opacity={membershipP}/></svg></>}
     {!biasPhase&&ms>=cue.identification&&<><Label id="identification-label" box={{x:1080,y:610,w:380,h:28}} size={20} weight={500} ls={1.2} opacity={identificationP} ink={color('color/fill/gold')}>PSYCHOLOGICAL IDENTIFICATION</Label><svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position:'absolute',inset:0}}><path {...lineAttrs('identification-leader',[[1270,610],[1200,595]])} d="M1270 610L1200 595" stroke={color('color/fill/gold')} strokeWidth="2" opacity={identificationP}/></svg></>}

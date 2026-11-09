@@ -1665,6 +1665,12 @@ shots:
       t136Partition: {word: partition}
       t136Legal: {word: legal}
       t136Line: {word: line}
+      t136Computing: {word: Computing}
+      t136Whitelist: {word: whitelist}
+      t136Blacklist: {word: blacklist}
+      t136Box: {word: box}
+      t136White: {word: White}
+      t136Controls: {word: controls}
   - shot_id: S00-137
     turn_id: 1c1677f190d30af6
     scene: PartitionEquation

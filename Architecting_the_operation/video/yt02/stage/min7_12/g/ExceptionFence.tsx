@@ -166,7 +166,7 @@ export function ExceptionFence({segment}: SceneProps) {
             {TEMPLATE_GRID.map(([gx, gy], idx) => {
               // At t51Contradicts, the 6th member departs toward the gate
               if (idx === 5 && ms >= cue.t51Contradicts) return null;
-              return <PersonMark key={idx} x={gx} y={gy} group="outgroup" emphasis={1} scale={1.05} />;
+              return <PersonMark key={idx} x={gx} y={gy} group="outgroup" emphasis={1} scale={1.05} tone={0.35 + (0.65 / 5) * idx} />;
             })}
           </div>
 
@@ -417,7 +417,7 @@ export function ExceptionFence({segment}: SceneProps) {
                 }}
               >
                 {[66, 138, 210, 282].map((rx, idx) => (
-                  <PersonMark key={idx} x={rx} y={54} group="outgroup" emphasis={1} scale={0.9} />
+                  <PersonMark key={idx} x={rx} y={54} group="outgroup" emphasis={1} scale={0.9} tone={0.35 + (0.65 / 3) * idx} />
                 ))}
               </div>
 

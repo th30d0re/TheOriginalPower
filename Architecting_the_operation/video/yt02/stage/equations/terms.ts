@@ -28,15 +28,15 @@ export const EQUATION_TERMS = {
   OutGroupSet: {show: 'O', meaning: 'Out-group set O (Eq. 2.1)', slot: 1},
   // Eq. 2.2 (vertical refinement into four functional tiers) and Eq. 0.3 (benefit ordering),
   // introduced in YT02 turns 169–180. The 14-slot palette is full, so each tier reuses the
-  // slot nearest its cone color: E orange, P gold, F red, I_buffer teal, O green.
+  // slot nearest its cone color: E orange, P gold, F red, I_buffer white, O green.
   Elite: {show: 'E', meaning: 'Elite tier; designs the rules, captures the net surplus (Eq. 2.2)', slot: 5},
   Puppet: {show: 'P', math: 'P_{uppet}', meaning: 'Puppet Class tier; translates Elite priorities into statutes (Eq. 2.2)', slot: 2},
   Enforce: {show: 'F', math: 'F_{enforce}', meaning: 'Enforcement Class tier; carries out the legal code by force (Eq. 2.2)', slot: 13},
-  IBuffer: {show: 'I_buffer', math: 'I_{buffer}', meaning: 'Buffer Class tier; defends the hierarchy for status and material allocation (Eq. 2.2)', slot: 0},
+  IBuffer: {show: 'I_buffer', math: 'I_{buffer}', meaning: 'Buffer Class tier; defends the hierarchy for status and material allocation (Eq. 2.2)', slot: 9},
   ORacialized: {show: 'O_racialized', math: 'O_{racialized}', meaning: 'racialized Out-group at the cone base (Eq. 2.2)', slot: 3},
   // Eq. 4.2 (1691 Boundary Enforcement Act), YT02 turn 182. Slots are reused because the
   // 14-slot palette is full; no shared scene mixes these with the earlier slot owners.
-  BufferClassSet: {show: 'I_buffer', math: 'I_{buffer}', meaning: 'Buffer Class set (Eq. 4.2)', slot: 7},
+  BufferClassSet: {show: 'I_buffer', math: 'I_{buffer}', meaning: 'Buffer Class set (Eq. 4.2)', slot: 9},
   // Delta-max rule (Concession Theorem, Chapter 15), YT02 turns 186–187.
   DeltaMax: {show: 'Δmax', math: 'Δ_{max}', meaning: "change in the Elite's maximum extraction share across a policy reform", slot: 2},
   // Eq. 2.7 (kernel optimization objective), YT02 turns 189–190.

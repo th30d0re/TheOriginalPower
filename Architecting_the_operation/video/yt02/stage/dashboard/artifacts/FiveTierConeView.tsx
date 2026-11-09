@@ -99,7 +99,7 @@ export const TIERS_DEF: TierDef[] = [
     mathLabel: 'I_{buffer}',
     z: 1.25,
     r: RB * (1 - 1.25 / H), // 3.00
-    color: '#4CC2C2', // teal
+    color: '#FFFFFF', // white (formerly teal #4CC2C2)
     off: [1.4, -1.6],
     circuitRole:
       'Dielectric: receives W = ψ_m + jψ_s, stores energy in the ideological field, passes no current to E.',
@@ -112,7 +112,8 @@ export const BASE_O_DEF = {
   mathLabel: 'O',
   z: 0,
   r: RB, // 4.00
-  color: '#7CC08A', // green
+  color: '#0B0B0B',
+  rimColor: 'rgba(232, 201, 155, 0.85)',
   circuitRole: 'Sink / ground: all net current flows here.',
 };
 
@@ -443,22 +444,32 @@ function CompactView({
   type MiniItem = {d: number; node: React.ReactNode};
   const items: MiniItem[] = [];
 
-  // Base O
+  // Base O (black with light rim for dark background legibility)
   items.push({
     d: bc.d,
     node: (
-      <ellipse
-        key="O"
-        cx={bc.x.toFixed(1)}
-        cy={bc.y.toFixed(1)}
-        rx={(RB * miniSc).toFixed(1)}
-        ry={Math.max(0.6, RB * miniSc * se).toFixed(1)}
-        fill={BASE_O_DEF.color}
-        fillOpacity={0.15}
-        stroke={BASE_O_DEF.color}
-        strokeWidth={1.2}
-        strokeDasharray="3 2"
-      />
+      <g key="O">
+        <ellipse
+          cx={bc.x.toFixed(1)}
+          cy={bc.y.toFixed(1)}
+          rx={(RB * miniSc).toFixed(1)}
+          ry={Math.max(0.6, RB * miniSc * se).toFixed(1)}
+          fill="none"
+          stroke={BASE_O_DEF.rimColor}
+          strokeWidth={2.4}
+        />
+        <ellipse
+          cx={bc.x.toFixed(1)}
+          cy={bc.y.toFixed(1)}
+          rx={(RB * miniSc).toFixed(1)}
+          ry={Math.max(0.6, RB * miniSc * se).toFixed(1)}
+          fill={BASE_O_DEF.color}
+          fillOpacity={0.75}
+          stroke={BASE_O_DEF.color}
+          strokeWidth={1.2}
+          strokeDasharray="3 2"
+        />
+      </g>
     ),
   });
 
@@ -1120,6 +1131,7 @@ function ExpandedView({
                     height: 10,
                     borderRadius: '50%',
                     background: BASE_O_DEF.color,
+                    border: `1px solid ${BASE_O_DEF.rimColor}`,
                     transform: 'translateY(1px)',
                   }}
                 />
@@ -1381,7 +1393,7 @@ function SettingsView({
                     fontFamily: Tokens.fonts.mono,
                     fontSize: 13,
                     fontWeight: 600,
-                    color: BASE_O_DEF.color,
+                    color: cInk,
                   }}
                 >
                   O (Out-group)
@@ -1521,13 +1533,23 @@ function ConeSvg({
     d: bc.d,
     node: (
       <g key="O">
+        {/* Light rim behind out-group black base for legibility */}
+        <ellipse
+          cx={bc.x.toFixed(1)}
+          cy={bc.y.toFixed(1)}
+          rx={(RB * SC).toFixed(1)}
+          ry={Math.max(0.8, RB * SC * se).toFixed(1)}
+          fill="none"
+          stroke={BASE_O_DEF.rimColor}
+          strokeWidth={3.5}
+        />
         <ellipse
           cx={bc.x.toFixed(1)}
           cy={bc.y.toFixed(1)}
           rx={(RB * SC).toFixed(1)}
           ry={Math.max(0.8, RB * SC * se).toFixed(1)}
           fill={BASE_O_DEF.color}
-          fillOpacity={isODeployed ? 0.10 : 0.04}
+          fillOpacity={isODeployed ? 0.75 : 0.30}
           stroke={BASE_O_DEF.color}
           strokeWidth={2}
           strokeDasharray="7 5"
@@ -1556,7 +1578,7 @@ function ConeSvg({
           y={(bc.y + Math.max(14, RB * SC * se * 0.72) + 4).toFixed(1)}
           fontSize={15}
           fontFamily={Tokens.fonts.mono}
-          fill={BASE_O_DEF.color}
+          fill="rgba(232, 201, 155, 0.95)"
         >
           O
         </text>

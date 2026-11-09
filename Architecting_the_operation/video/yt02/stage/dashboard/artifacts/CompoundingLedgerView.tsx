@@ -1149,7 +1149,7 @@ function AsymmetrySection({
             y={140}
             width={(X(fi) - L).toFixed(1)}
             height={34}
-            fill={PALETTE.teal}
+            fill="#FFFFFF"
             fillOpacity={0.85}
           />
           <text

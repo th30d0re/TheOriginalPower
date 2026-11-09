@@ -196,7 +196,7 @@ function order(){
 function asym(){
   var W=700,H=250,L=150,Rr=60,fo=S.f[3],fi=1-(1-fo)/S.ratio,h='';
   function X(v){return L+v*(W-L-Rr);}
-  [['Out-group',fo,'var(--accent)',60],['Buffer Class',fi,'var(--teal)',140]].forEach(function(r){
+  [['Out-group',fo,'var(--accent)',60],['Buffer Class',fi,'#FFFFFF',140]].forEach(function(r){
     h+='<text x="'+(L-12)+'" y="'+(r[3]+22)+'" text-anchor="end" font-size="14" style="fill:var(--ink)">'+r[0]+'</text>';
     h+='<rect x="'+L+'" y="'+r[3]+'" width="'+(X(1)-L)+'" height="34" style="fill:var(--well)"/><rect x="'+L+'" y="'+r[3]+'" width="'+(X(r[1])-L).toFixed(1)+'" height="34" style="fill:'+r[2]+'" fill-opacity=".85"/>';
     h+='<text x="'+(X(r[1])+8).toFixed(1)+'" y="'+(r[3]+23)+'" font-size="14" style="fill:var(--ink)">×'+r[1].toFixed(3)+'</text>';
