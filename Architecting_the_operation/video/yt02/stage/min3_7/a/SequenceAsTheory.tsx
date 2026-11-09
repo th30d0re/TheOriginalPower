@@ -33,12 +33,12 @@ export function sequenceNodeBoxes(firstProgress:number):Box[]{
 
 function ContinuityPlate({opacity}:{opacity:number}){
   const C=SEQUENCE_LAYOUT.continuity;
-  return <div data-continuity-plate="true" style={{opacity}}>
+  return <div data-continuity-plate="true" style={{position:'absolute',inset:0,width:'100%',height:'100%',overflow:'hidden',opacity}}>
     <Label id="continuity-conventional-title" box={{x:C.x+280,y:C.y+70,w:598,h:38}} size={26} weight={700} sans align="center">Conventional Hierarchy</Label>
     <Label id="continuity-correct-title" box={{x:C.x+1120,y:C.y+70,w:520,h:38}} size={26} weight={700} sans align="center" opacity={.25}>Correct Hierarchy</Label>
-    {CONTINUITY_LAYERS.map((layer,index)=>{const box={x:C.x+579-layer.w/2,y:C.y+layer.y-220,w:layer.w,h:92};return <React.Fragment key={layer.label}><Panel id={`continuity-conventional-${index+1}`} box={box} style={{background:color(index===0?'color/fill/red-wash':'color/fill/red-faint')}}/><Label id={`continuity-conventional-label-${index+1}`} box={{x:box.x+20,y:box.y+27,w:box.w-40,h:38}} size={24} weight={600} sans align="center">{layer.label}</Label></React.Fragment>;})}
+    {CONTINUITY_LAYERS.map((layer,index)=>{const box={x:C.x+579-layer.w/2,y:C.y+layer.y-220,w:layer.w,h:92};return <React.Fragment key={layer.label}><Panel id={`continuity-conventional-${index+1}`} box={box} fillToken={index===0?'color/fill/red-wash':'color/fill/red-faint'}/><Label id={`continuity-conventional-label-${index+1}`} box={{x:box.x+20,y:box.y+27,w:box.w-40,h:38}} size={24} weight={600} sans align="center">{layer.label}</Label></React.Fragment>;})}
     <Label id="continuity-invert" box={{x:C.x+915,y:C.y+334,w:150,h:58}} size={22} weight={700} lh={1.3} align="center" opacity={.25}>MUST<br/>INVERT</Label>
-    {CORRECT_LAYERS.map((layer,index)=>{const box={x:C.x+1378-layer.w/2,y:C.y+layer.y-220,w:layer.w,h:92};return <React.Fragment key={layer.label}><Panel id={`continuity-correct-${index+1}`} box={box} opacity={.25} style={{background:color('color/fill/gold-wash')}}/><Label id={`continuity-correct-label-${index+1}`} box={{x:box.x+20,y:box.y+16,w:box.w-40,h:60}} size={24} weight={600} sans align="center" opacity={.25}>{layer.label}</Label></React.Fragment>;})}
+    {CORRECT_LAYERS.map((layer,index)=>{const box={x:C.x+1378-layer.w/2,y:C.y+layer.y-220,w:layer.w,h:92};return <React.Fragment key={layer.label}><Panel id={`continuity-correct-${index+1}`} box={box} opacity={.25} fillToken="color/fill/gold-wash"/><Label id={`continuity-correct-label-${index+1}`} box={{x:box.x+20,y:box.y+16,w:box.w-40,h:60}} size={24} weight={600} sans align="center" opacity={.25}>{layer.label}</Label></React.Fragment>;})}
   </div>;
 }
 
@@ -52,9 +52,9 @@ function NumberRail({ms,numberedAt,analyticalAt,orderAt,nodes}:{ms:number;number
   return <div data-number-rail="true" style={{opacity:p}}>
     {ms>=analyticalAt&&<Label id="numbered-order" box={{x:150,y:224,w:180,h:30}} size={20} weight={500} align="center" opacity={current} ink={color('color/fill/gold')}>NUMBERED ORDER</Label>}
     {RAIL_LABELS.map((label,index)=>{const badge={x:150,y:288+index*144,w:48,h:48},text=railLabelBox(index);return <React.Fragment key={label}><div {...shapeAttrs(`rail-badge-${index+1}`,badge,'frame')} style={{position:'absolute',left:badge.x,top:badge.y,width:badge.w,height:badge.h,borderRadius:24,border:`2px solid ${color('color/fill/gold')}`,boxSizing:'border-box',opacity:.65+.35*current}}/><Label id={`rail-number-${index+1}`} box={badge} size={24} weight={500} align="center" opacity={.65+.35*current} style={{paddingTop:7}} ink={color('color/fill/gold')}>{index+1}</Label><Label id={`rail-label-${index+1}`} box={text} size={20} weight={400} lh={1.2} sans ink={color('color/text/soft')}>{label}</Label></React.Fragment>;})}
-    {ms>=orderAt&&nodes.map((node,index)=>{const badge=nodeBadgeBox(node),at=enter(ms,orderAt+index*160,430);return <React.Fragment key={index}>
-      <div {...shapeAttrs(`node-badge-${index+1}`,badge,'frame')} style={{position:'absolute',left:badge.x,top:badge.y,width:badge.w,height:badge.h,borderRadius:24,border:`2px solid ${color('color/fill/gold')}`,background:color('color/bg/field'),boxSizing:'border-box',opacity:at}}/>
-      <Label id={`node-badge-number-${index+1}`} box={badge} size={24} weight={500} align="center" opacity={at} style={{paddingTop:7}} ink={color('color/fill/gold')}>{index+1}</Label>
+    {ms>=orderAt&&nodes.map((node,index)=>{const badge=nodeBadgeBox(node),at=enter(ms,orderAt+index*160,430),badgeStyle={position:'absolute' as const,left:badge.x,top:badge.y,width:badge.w,height:badge.h,opacity:at,transform:`scale(${(.9+.1*at).toFixed(3)})`,transformOrigin:'center'};return <React.Fragment key={index}>
+      <div {...shapeAttrs(`node-badge-${index+1}`,badge,'frame')} style={{...badgeStyle,borderRadius:24,border:`2px solid ${color('color/fill/gold')}`,background:color('color/bg/field'),boxSizing:'border-box'}}/>
+      <Label id={`node-badge-number-${index+1}`} box={badge} size={24} weight={500} align="center" opacity={at} style={{paddingTop:7,transform:`scale(${(.9+.1*at).toFixed(3)})`,transformOrigin:'center'}} ink={color('color/fill/gold')}>{index+1}</Label>
     </React.Fragment>;})}
   </div>;
 }
@@ -78,11 +78,11 @@ export function SequenceAsTheory({segment}:SceneProps){
     <Label id="sequence-caption" box={SEQUENCE_LAYOUT.caption} size={28} weight={500} ls={1.4} align="center">Figure 2.3 · Inverting the Definitional Hierarchy</Label>
     <ContinuityPlate opacity={continuityOpacity}/>
     {ms>=cue.t11Numbered.at&&<NumberRail ms={ms} numberedAt={cue.t11Numbered.at} analyticalAt={cue.t11Analytical.at} orderAt={cue.t11Order.at} nodes={nodes}/>}
-    {ms>=cue.t11Unstated.at&&<div data-causal-graph="true" data-equation={EQ_25} style={{opacity:graphP}}>
+    {ms>=cue.t11Unstated.at&&<div data-causal-graph="true" data-equation={EQ_25} style={{position:'absolute',inset:0,width:'100%',height:'100%',overflow:'hidden',opacity:graphP}}>
       {ms>=cue.t11Cause.at&&<FlickerLabel startMs={cue.t11Cause.at} durationMs={440} id="causal-claim" box={SEQUENCE_LAYOUT.claim} size={24} weight={500} ls={2} align="center" ink={color('color/marker/race')}>CAUSAL CLAIM</FlickerLabel>}
-      <AuditedTermBlock id="node-one" box={first} term={firstLabel} termId="IndividualPrejudice" ms={ms} pulses={[cue.t12Personal.at,cue.t12Root.at]} summary={ms>=cue.t12First.at?'assigned first':'causal node 1'} glyph={<StickFigure x={24} y={24} group="neutral" emphasis={1} scale={0.8} animate={false}/>} selected={ms>=cue.t12First.at} framed accent={ms>=cue.t12First.at?'color/marker/race':'color/fill/gold'} unit="slot 1" opacity={graphP}/>
-      <AuditedTermBlock id="node-two" box={second} term="Discriminatory Actions" termId="DiscriminatoryActions" ms={ms} summary="causal node 2" glyph={<ActionIcon/>} accent="color/fill/gold" framed unit="slot 2" opacity={graphP}/>
-      <AuditedTermBlock id="node-three" box={third} term={thirdLabel} termId="SystemicOutcomes" ms={ms} pulses={[cue.t12Institutional.at]} summary="causal node 3" glyph={<SystemIcon/>} accent="color/fill/gold" framed unit="slot 3" opacity={graphP}/>
+      <AuditedTermBlock id="node-one" box={first} term={firstLabel} termId="IndividualPrejudice" ms={ms} pulses={[cue.t12Personal.at,cue.t12Root.at]} summary={ms>=cue.t12First.at?'assigned first':'causal node 1'} glyph={<StickFigure x={24} y={24} group="neutral" emphasis={1} scale={0.8} animate={false}/>} selected={ms>=cue.t12First.at} framed accent={ms>=cue.t12First.at?'color/marker/race':'color/fill/gold'} unit="slot 1" opacity={graphP} startMs={cue.t11Unstated.at}/>
+      <AuditedTermBlock id="node-two" box={second} term="Discriminatory Actions" termId="DiscriminatoryActions" ms={ms} summary="causal node 2" glyph={<ActionIcon/>} accent="color/fill/gold" framed unit="slot 2" opacity={graphP} startMs={cue.t11Unstated.at}/>
+      <AuditedTermBlock id="node-three" box={third} term={thirdLabel} termId="SystemicOutcomes" ms={ms} pulses={[cue.t12Institutional.at]} summary="causal node 3" glyph={<SystemIcon/>} accent="color/fill/gold" framed unit="slot 3" opacity={graphP} startMs={cue.t11Unstated.at}/>
       {ms>=cue.t11Cause.at&&<>
         <DrawLine points={arrowOne} startFrame={Math.round(cue.t11Cause.at*30/1000)} durationFrames={Math.round(650*30/1000)} strokeToken={rootP>.01?'color/marker/race':'color/fill/gold'} strokeWidth={3+5*rootP} beat/>
         <DrawLine points={arrowTwo} startFrame={Math.round(cue.t11Cause.at*30/1000)} durationFrames={Math.round(650*30/1000)} strokeToken="color/fill/gold" strokeWidth={3}/>
