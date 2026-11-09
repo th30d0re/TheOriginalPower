@@ -2690,3 +2690,154 @@ shots:
       t228Capital: {word: capital}
       t228Maritime: {word: maritime}
       t228Madeira: {word: Madeira}
+  # Minutes 50–53: turns 229–243 (Portuguese maritime pivot).
+  - shot_id: S00-229
+    turn_id: 4ad9dde373190959
+    scene: FeudalFriction
+    instance: FeudalFriction
+    cues:
+      t229Inside: {word: Inside}
+      t229Extraction: {word: extraction}
+      t229Friction: {word: friction}
+      t229Religious: {word: religious}
+      t229Legal: {word: legal}
+      t229Solidarity: {word: solidarity}
+      t229Revolt: {word: revolt}
+  - shot_id: S00-230
+    turn_id: 2710ea17b11e473e
+    scene: FeudalFriction
+    instance: FeudalFriction
+    cues:
+      t230Scale: {word: scale}
+      t230Portuguese: {word: Portuguese}
+      t230Elite: {word: Elite}
+      t230Labor: {word: labor}
+      t230Stripped: {word: stripped}
+      t230Kin: {word: kin}
+  - shot_id: S00-231
+    turn_id: 8513a7973d034050
+    scene: TemplateArchive
+    instance: TemplateArchive
+    cues:
+      t231Two: {word: Two}
+      t231Templates: {word: templates}
+      t231Mediterranean: {word: Mediterranean}
+      t231Crown: {word: Crown}
+  - shot_id: S00-232
+    turn_id: 84ad2764437061e0
+    scene: TemplateArchive
+    instance: TemplateArchive
+    cues:
+      t232Chapter: {word: Chapter}
+      t232Women: {word: women}
+      t232Coverture: {word: coverture}
+      t232Witch: {word: witch}
+  - shot_id: S00-233
+    turn_id: f11568aff8f736f4
+    scene: TemplateArchive
+    instance: TemplateArchive
+    cues:
+      t233Chapter: {word: Chapter}
+      t233External: {word: external}
+      t233Routes: {word: routes}
+      t233Captives: {word: captives}
+      t233Curse: {word: Curse}
+  - shot_id: S00-234
+    turn_id: 68a185b85bf65581
+    scene: MaritimePivot
+    instance: MaritimePivot
+    cues:
+      t234Now: {word: Now}
+      t234Track: {word: track}
+      t234Chronological: {word: chronological}
+      t234Portuguese: {word: Portuguese}
+      t234Maritime: {word: maritime}
+      t234Pivot: {word: pivot}
+      t234West: {word: West}
+      t234Coast: {word: coast}
+  - shot_id: S00-235
+    turn_id: 2bef3733b2bee912
+    scene: RaidToChronicle
+    instance: RaidToChronicle
+    cues:
+      t235Why: {word: Why}
+      t235Prediction: {word: Prediction}
+      t235Night: {word: night}
+      t235Fourteen: {word: fourteen, occurrence: 1}
+      t235Antao: {word: Antao}
+      t235Goncalves: {word: Goncalves}
+      t235Rio: {word: Rio}
+      t235Orders: {word: orders}
+  - shot_id: S00-236
+    turn_id: b1ab4a65e0130954
+    scene: RaidToChronicle
+    instance: RaidToChronicle
+    cues:
+      t236Seeking: {word: Seeking}
+      t236Return: {word: return}
+      t236Exceeded: {word: exceeded}
+      t236Raiding: {word: raiding}
+      t236Seized: {word: seized}
+      t236Captives: {word: captives}
+      t236Lisbon: {word: Lisbon}
+  - shot_id: S00-237
+    turn_id: d2b3c245f72167b2
+    scene: RaidToChronicle
+    instance: RaidToChronicle
+    cues:
+      t237Notice: {word: Notice}
+      t237Twelve: {word: Twelve}
+      t237Chronicle: {word: chronicle}
+  - shot_id: S00-238
+    turn_id: c83bd1e0f7bdb212
+    scene: CorporateLogistics
+    instance: CorporateLogistics
+    cues:
+      t238Once: {word: Once}
+      t238Return: {word: return}
+      t238Crown: {word: Crown}
+      t238Chartered: {word: chartered}
+      t238Logistics: {word: logistics}
+  - shot_id: S00-239
+    turn_id: 433fb3ab5452ab07
+    scene: CorporateLogistics
+    instance: CorporateLogistics
+    cues:
+      t239Fourteen: {word: fourteen, occurrence: 1}
+      t239Henry: {word: Henry}
+      t239Companhia: {word: Companhia}
+      t239Syndicate: {word: syndicate}
+      t239Finance: {word: finance}
+  - shot_id: S00-240
+    turn_id: d5bc88b1802355b5
+    scene: CorporateLogistics
+    instance: CorporateLogistics
+    cues:
+      t240Fleet: {word: fleet}
+      t240Caravels: {word: caravels}
+      t240Arguin: {word: Arguin}
+      t240Packed: {word: packed}
+  - shot_id: S00-241
+    turn_id: 742f3e437ca0e500
+    scene: CorporateLogistics
+    instance: CorporateLogistics
+    cues:
+      t241Captives: {word: captives}
+      t241Lagos: {word: Lagos}
+  - shot_id: S00-242
+    turn_id: c03b1e265748a3b2
+    scene: CorporateLogistics
+    instance: CorporateLogistics
+    cues:
+      t242Divided: {word: divided}
+      t242Five: {word: five}
+      t242Parents: {word: parents}
+      t242Townspeople: {word: townspeople}
+  - shot_id: S00-243
+    turn_id: 1ea5088c3950ea4f
+    scene: CorporateLogistics
+    instance: CorporateLogistics
+    cues:
+      t243Quinto: {word: quinto}
+      t243Knighted: {word: knighted}
+      t243Profitability: {word: profitability}
