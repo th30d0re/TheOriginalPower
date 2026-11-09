@@ -792,3 +792,92 @@ shots:
       t62Standard: {word: standard}
       t62Experimental: {word: experimental}
       t62Psychology: {word: psychology}
+  - shot_id: S00-63
+    turn_id: cc08cd0a7c9db474
+    scene: StructuralPivot
+    instance: StructuralPivot
+    cues:
+      t63Everything: {word: Everything}
+      t63Structural: {word: structural}
+      t63Racism: {word: racism}
+      t63Institutional: {word: institutional}
+      t63Extraction: {word: extraction}
+      t63Equations: {word: equations}
+      t63Historical: {word: historical}
+      t63Archives: {word: archives}
+  - shot_id: S00-64
+    turn_id: 735d2684b492eb67
+    scene: ScalarVsVector
+    instance: ScalarVsVector
+    cues:
+      t64Why: {word: Why}
+      t64Racism: {word: racism}
+      t64Personal: {word: personal}
+      t64Hostility: {word: hostility}
+      t64Separates: {word: separates}
+      t64Scalar: {word: scalar}
+      t64Interpersonal: {word: interpersonal}
+      t64Harm: {word: harm}
+      t64Vector: {word: vector}
+      t64Institutional: {word: institutional}
+      t64Force: {word: force}
+  - shot_id: S00-65
+    turn_id: 1cad7ad5170a8749
+    scene: SpeedVsVelocity
+    instance: SpeedVsVelocity
+    cues:
+      t65Physics: {word: physics}
+      t65Scalar: {word: scalar}
+      t65Size: {word: size, occurrence: 1}
+      t65Speed: {word: speed}
+      t65Speedometer: {word: speedometer}
+      t65Vector: {word: vector}
+      t65Both: {word: both}
+      t65Direction: {word: direction}
+      t65Velocity: {word: velocity}
+      t65Road: {word: road}
+  - shot_id: S00-66
+    turn_id: ddd4ef7318a18f9e
+    scene: RacismVectorEquation
+    instance: RacismVectorEquation
+    cues:
+      t66Drawing: {word: Drawing}
+      t66Susan: {word: Susan}
+      t66AboolHawa: {word: Abool-Hawa's}
+      t66Institutional: {word: institutional, occurrence: 1}
+      t66Equation: {word: Equation}
+      t66Three: {word: three, occurrence: 1}
+      t66Writes: {word: writes}
+      t66Conceptual: {word: conceptual}
+      t66Racism: {word: racism, occurrence: 1}
+      t66Vector: {word: vector, occurrence: 1}
+      t66Equals: {word: equals}
+      t66Emotional: {word: emotional}
+      t66Material: {word: material}
+      t66Magnitude: {word: magnitude}
+      t66Multiplied: {word: multiplied}
+      t66Unit: {word: unit}
+      t66Direction: {word: direction}
+      t66State: {word: state}
+      t66Enforcement: {word: enforcement}
+  - shot_id: S00-67
+    turn_id: 4d1cce6e4190af23
+    scene: MagnitudeDirection
+    instance: MagnitudeDirection
+    cues:
+      t67Magnitude: {word: Magnitude}
+      t67Amount: {word: amount}
+      t67Force: {word: force, occurrence: 1}
+      t67Racism: {word: racism}
+      t67Vector: {word: vector}
+      t67State: {word: state}
+      t67Institutional: {word: institutional}
+      t67Direction: {word: direction}
+      t67Where: {word: where}
+      t67Travels: {word: travels}
+      t67Law: {word: law}
+      t67Courts: {word: courts}
+      t67Policing: {word: policing}
+      t67Credit: {word: credit}
+      t67Capital: {word: capital}
+      t67Allocation: {word: allocation}
