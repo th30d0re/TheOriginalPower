@@ -117,10 +117,11 @@ function TurnFifteen({ms,cue}:{ms:number;cue:CueMap}) {
     <div {...shapeAttrs('claim-panel',HEARTS_LAYOUT.claim,'frame')} style={{...PANEL_STYLE,left:HEARTS_LAYOUT.claim.x,top:HEARTS_LAYOUT.claim.y,width:HEARTS_LAYOUT.claim.w,height:HEARTS_LAYOUT.claim.h,opacity:original}}>
       {ms>=cue.t15Causal.at&&<div {...textAttrs('claim-label',{x:162,y:288,w:426,h:30},{size:22,lh:1.25})} style={{position:'absolute',left:32,top:38,width:426,textAlign:'center',font:'500 22px "IBM Plex Mono"',color:color('color/fill/gold'),opacity:causal}}>CLAIM</div>}
       {ms>=cue.t15Testable.at&&<div {...textAttrs('historical-claim',{x:168,y:380,w:414,h:94},{size:34,lh:1.25,sans:true})} style={{position:'absolute',left:38,top:130,width:414,textAlign:'center',fontSize:34,lineHeight:1.25,fontWeight:600,opacity:testable}}>TESTABLE HISTORICAL CLAIM</div>}
-      <svg width="490" height="530" viewBox="0 0 490 530" aria-hidden="true">
-        {ms>=cue.t15Testable.at&&<path {...lineAttrs('claim-test-lead',[[375,510],[375,680],[600,680]])} d="M245 260 V430 H470" fill="none" stroke={color('color/fill/gold')} strokeWidth="3" strokeDasharray="10 9" opacity={testable}/>}
-      </svg>
     </div>
+    {ms>=cue.t15Testable.at&&<svg width="1920" height="1080" viewBox="0 0 1920 1080" aria-hidden="true" style={{position:'absolute',left:0,top:0,overflow:'visible'}}>
+      <path {...lineAttrs('claim-test-lead',[[375,790],[375,880],[1550,880],[1550,832]])} d="M375 790 V880 H1550 V838" fill="none" stroke={color('color/fill/gold')} strokeWidth="3" strokeDasharray="10 9" opacity={testable}/>
+      <path d="M1540 844 L1550 828 L1560 844" fill="none" stroke={color('color/fill/gold')} strokeWidth="3" opacity={testable}/>
+    </svg>}
     <div {...shapeAttrs('formal-panel',HEARTS_LAYOUT.formal,'frame')} style={{...PANEL_STYLE,left:HEARTS_LAYOUT.formal.x,top:HEARTS_LAYOUT.formal.y,width:HEARTS_LAYOUT.formal.w,height:HEARTS_LAYOUT.formal.h,opacity:testable}}>
       {ms>=cue.t15Formally.at&&<>
         <div {...textAttrs('formal-statement',{x:714,y:284,w:522,h:30},{size:22,lh:1.25})} style={{position:'absolute',left:24,top:34,width:522,textAlign:'center',font:'500 22px "IBM Plex Mono"',color:color('color/fill/gold'),opacity:formal}}>FORMAL STATEMENT</div>
@@ -137,10 +138,10 @@ function TurnFifteen({ms,cue}:{ms:number;cue:CueMap}) {
           <rect {...shapeAttrs(`archive-folio-${index+1}`,{x:1386+(index%2)*190,y:330+Math.floor(index/2)*116,w:150,h:86},'frame')} x={56+(index%2)*190} y={110+Math.floor(index/2)*116} width="150" height="86" fill={color('color/surface/1')} stroke={color('color/line/hairline')}/>
           <path d={`M ${74+(index%2)*190} ${137+Math.floor(index/2)*116} H ${184+(index%2)*190} M ${74+(index%2)*190} ${160+Math.floor(index/2)*116} H ${164+(index%2)*190}`} stroke={color('color/text/muted')} strokeWidth="2"/>
         </g>)}
-        {ms>=cue.t15Centuries.at&&<line x1="26" y1="100" x2="26" y2={100+410*centuries} stroke={color('color/fill/gold')} strokeWidth="4"/>}
+        {ms>=cue.t15Centuries.at&&<line x1="26" y1="100" x2="26" y2={100+300*centuries} stroke={color('color/fill/gold')} strokeWidth="4"/>}
         {ms>=cue.t15Records.at&&<rect x="78" y="480" width="284" height="72" fill={color('color/fill/red-faint')} stroke={color('color/marker/race')} strokeWidth="2" opacity={records}/>}
       </svg>
-      {ms>=cue.t15Centuries.at&&<div {...textAttrs('five-centuries',{x:1348,y:674,w:170,h:28},{size:20,lh:1.25})} style={{position:'absolute',left:18,top:454,width:170,textAlign:'left',font:'500 20px "IBM Plex Mono"',color:color('color/fill/gold'),opacity:centuries}}>FIVE CENTURIES</div>}
+      {ms>=cue.t15Centuries.at&&<div {...textAttrs('five-centuries',{x:1348,y:660,w:170,h:28},{size:20,lh:1.25})} style={{position:'absolute',left:18,top:440,width:170,textAlign:'left',font:'500 20px "IBM Plex Mono"',color:color('color/fill/gold'),opacity:centuries}}>FIVE CENTURIES</div>}
       {ms>=cue.t15Records.at&&<div {...textAttrs('historical-test',{x:1408,y:720,w:284,h:30},{size:22,lh:1.25})} style={{position:'absolute',left:78,top:500,width:284,textAlign:'center',font:'500 22px "IBM Plex Mono"',color:color('color/marker/race'),opacity:records}}>HISTORICAL TEST</div>}
     </div>
   </div>;
