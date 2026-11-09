@@ -107,7 +107,7 @@ export function CausalReversal({segment}: SceneProps) {
           startFrame={frame(c.prejudice)}
           beat
         />
-        <StickFigure x={1550} y={535} group="neutral" emphasis={1} scale={1.3} animate startFrame={frame(c.prejudice)} beat />
+        <StickFigure x={1700} y={560} group="neutral" emphasis={1} scale={1.3} animate startFrame={frame(c.prejudice)} beat />
         <Copy at={c.prejudice} box={{x: 1330, y: 615, w: 440, h: 32}} size={26} align="center">
           INTERPERSONAL PREJUDICE
         </Copy>
