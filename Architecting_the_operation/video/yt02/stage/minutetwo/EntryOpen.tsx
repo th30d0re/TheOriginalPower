@@ -1,10 +1,11 @@
 import React from 'react';
-import {BootIn, Flicker, KitSound, cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
+import {DrawRect, FitBox, Flicker, KitSound, cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../tokens';
 import {SceneBorder} from '../dashboard/SceneBorder';
 
 const enter = (ms:number, at:number, duration=460) => cubicOut(progress(ms, at, at + duration));
 const cueFrame = (ms:number) => Math.round(ms * 30 / 1000);
+const frames = (ms:number) => Math.round(ms * 30 / 1000);
 
 // Entry panel geometry, panel-relative slot rows. Exported for tools/check_minute_two.tsx.
 export const ENTRY_OPEN_LAYOUT = {
@@ -16,10 +17,10 @@ export const ENTRY_OPEN_LAYOUT = {
 } as const;
 const SLOT3_SLIDE = ENTRY_OPEN_LAYOUT.slot3BottomY - ENTRY_OPEN_LAYOUT.slotY[2];
 
-function EntrySlot({index, enterP, children}: React.PropsWithChildren<{index:number; enterP:number; children?:React.ReactNode}>) {
+function EntrySlot({index, enterP, startFrame, children}: React.PropsWithChildren<{index:number; enterP:number; startFrame:number; children?:React.ReactNode}>) {
   const L = ENTRY_OPEN_LAYOUT;
   return <div data-entry-slot={index+1} style={{position:'absolute', left:L.slotX, top:L.slotY[index], width:L.slotW, height:L.slotH, opacity:enterP, transform:`translateY(${-16*(1-enterP)}px)`, background:color('color/fill/panel-wash')}}>
-    <span aria-hidden="true" style={{position:'absolute', inset:0, border:`1px solid ${color('color/line/hairline')}`}}/>
+    <DrawRect box={{x:0, y:0, w:L.slotW, h:L.slotH}} startFrame={startFrame} durationFrames={frames(380)} strokeToken="color/line/hairline" fillToken="color/fill/panel-wash" glowToken="color/fill/gold" seed={61+index}/>
     <span style={{position:'absolute', left:24, top:31, font:'500 28px "IBM Plex Mono"', color:color('color/text/dim')}}>{index+1}</span>
     {children}
   </div>;
@@ -42,29 +43,30 @@ export function EntryOpen({segment}:SceneProps) {
   return <KitSound mode="beats"><div data-scene="EntryOpen" style={{position:'absolute', inset:0, width:1920, height:1080, overflow:'hidden', background:color('color/bg/field'), color:color('color/text/primary'), fontFamily:'IBM Plex Sans'}}>
     <SceneBorder segment={segment}/>
     {ms >= t6Why.at && <Flicker startFrame={cueFrame(t6Why.at)} durationFrames={15}><div style={{position:'absolute', left:L.headerX, top:L.headerY, opacity:whyP, transform:`translateY(${18*(1-whyP)}px)`, fontSize:46, fontWeight:500}}>Why does the dictionary list individual prejudice first?</div></Flicker>}
-    <BootIn box={{x:L.panelX,y:L.panelY,w:L.panelW,h:L.panelH}} startFrame={cueFrame(t6Open.at)} durationFrames={15} mode="scan" beat/>
-    {ms >= t6Open.at && <div data-entry-panel="true" style={{position:'absolute', left:L.panelX, top:L.panelY, width:L.panelW, height:L.panelH, background:color('color/fill/panel-render'), border:`1px solid ${color('color/line/hairline')}`, boxShadow:`inset 0 0 0 1px ${color('color/fill/panel-wash')}`, transform:`scaleX(${openP})`, transformOrigin:'left center'}}>
-      <div style={{position:'absolute', left:32, right:32, top:28, display:'flex', alignItems:'baseline'}}>
-        <strong style={{fontSize:48, letterSpacing:.5}}>rac·ism</strong>
-        <em style={{marginLeft:18, fontSize:25, color:color('color/text/muted')}}>(noun)</em>
-        <span style={{marginLeft:'auto', font:'400 20px "IBM Plex Mono"', color:color('color/text/muted')}}>Typical dictionary senses (paraphrased)</span>
+    {ms >= t6Open.at && <>
+      <DrawRect box={{x:L.panelX, y:L.panelY, w:L.panelW, h:L.panelH}} startFrame={cueFrame(t6Open.at)} durationFrames={frames(500)} strokeToken="color/line/hairline" fillToken="color/fill/panel-render" glowToken="color/fill/gold" seed={47}/>
+      <div data-entry-panel="true" style={{position:'absolute', left:L.panelX, top:L.panelY, width:L.panelW, height:L.panelH, opacity:openP, transform:`translateY(${20*(1-openP)}px)`}}>
+      <FitBox text="rac·ism" x={32} y={28} size={48} weight={600} lineHeight={1.1} padX="spacing/md" padY="spacing/sm" textToken="color/text/primary" strokeToken="color/fill/gold" fillToken="color/fill/panel-render" accentToken="color/fill/gold" tag="TERM" corners="tl-br" seed={17} intensity={.8} startFrame={cueFrame(t6Open.at)+frames(500)} durationFrames={frames(420)}/>
+      <Flicker startFrame={cueFrame(t6Open.at)+frames(500)} durationFrames={frames(300)} intensity={.5} style={{position:'absolute', inset:0}}><em style={{position:'absolute', left:226, top:47, fontSize:25, color:color('color/text/muted')}}>(noun)</em></Flicker>
+      <div style={{position:'absolute', left:32, right:32, top:28, height:80}}>
+        <span style={{position:'absolute', right:0, top:9, font:'400 20px "IBM Plex Mono"', color:color('color/text/muted')}}>Typical dictionary senses (paraphrased)</span>
       </div>
-      {slotEnter[0]>0 && <EntrySlot index={0} enterP={slotEnter[0]}>
+      {slotEnter[0]>0 && <EntrySlot index={0} enterP={slotEnter[0]} startFrame={cueFrame(t6Numbered.at)}>
         {ms >= t6Begin.at && <span style={{position:'absolute', left:76, top:32, fontSize:30, opacity:fill1}}>individual prejudice or discrimination</span>}
         <span aria-hidden="true" style={{position:'absolute', left:0, top:8, bottom:8, width:4, background:color('color/fill/gold'), transform:`scaleY(${gold1})`, transformOrigin:'center top'}}/>
         <span style={{position:'absolute', left:24, top:31, font:'500 28px "IBM Plex Mono"', color:color('color/fill/gold'), opacity:gold1}}>1</span>
       </EntrySlot>}
-      {slotEnter[1]>0 && <EntrySlot index={1} enterP={slotEnter[1]}>
+      {slotEnter[1]>0 && <EntrySlot index={1} enterP={slotEnter[1]} startFrame={cueFrame(t6Numbered.at+130)}>
         {bottomP>0 && <span data-slot2-placeholder="true" aria-hidden="true" style={{position:'absolute', left:76, top:47, width:420, height:3, background:color('color/line/chart-faint'), opacity:bottomP}}/>}
       </EntrySlot>}
       {slotEnter[2]>0 && <div data-entry-slot="3" data-slot3-phase={slot3Phase} style={{position:'absolute', left:L.slotX, top:L.slotY[2], width:L.slotW, height:L.slotH, opacity:slotEnter[2]*(1 - bottomP*.38 - includesP*.22), transform:`translateY(${-16*(1-slotEnter[2]) + SLOT3_SLIDE*bottomP}px)`, background:color('color/fill/panel-wash')}}>
-        <span aria-hidden="true" style={{position:'absolute', inset:0, border:`1px solid ${color('color/line/hairline')}`, opacity:1-includesP}}/>
+        <div aria-hidden="true" style={{position:'absolute', inset:0, opacity:1-includesP}}><DrawRect box={{x:0, y:0, w:L.slotW, h:L.slotH}} startFrame={cueFrame(t6Numbered.at+260)} durationFrames={frames(380)} strokeToken="color/line/hairline" fillToken="color/fill/panel-wash" glowToken="color/fill/gold" seed={63}/></div>
         <span aria-hidden="true" style={{position:'absolute', inset:0, border:`1px dashed ${color('color/line/hairline')}`, opacity:includesP}}/>
         <span style={{position:'absolute', left:24, top:31, font:'500 28px "IBM Plex Mono"', color:color('color/text/dim')}}>3</span>
         {ms >= t6Systemic.at && <span style={{position:'absolute', left:76, top:32, fontSize:30, opacity:fill3}}>systemic racism
           {ms >= t6Includes.at && <span style={{marginLeft:12, padding:'4px 9px', border:`1px solid ${color('color/line/hairline')}`, font:'500 20px "IBM Plex Mono"', color:color('color/text/muted'), whiteSpace:'nowrap', opacity:includesP}}>when included at all</span>}
         </span>}
       </div>}
-    </div>}
+    </div></>}
   </div></KitSound>;
 }
