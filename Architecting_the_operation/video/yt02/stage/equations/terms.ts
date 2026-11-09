@@ -34,6 +34,15 @@ export const EQUATION_TERMS = {
   Enforce: {show: 'F', math: 'F_{enforce}', meaning: 'Enforcement Class tier; carries out the legal code by force (Eq. 2.2)', slot: 13},
   IBuffer: {show: 'I_buffer', math: 'I_{buffer}', meaning: 'Buffer Class tier; defends the hierarchy for status and material allocation (Eq. 2.2)', slot: 0},
   ORacialized: {show: 'O_racialized', math: 'O_{racialized}', meaning: 'racialized Out-group at the cone base (Eq. 2.2)', slot: 3},
+  // Eq. 4.2 (1691 Boundary Enforcement Act), YT02 turn 182. Slots are reused because the
+  // 14-slot palette is full; no shared scene mixes these with the earlier slot owners.
+  BufferClassSet: {show: 'I_buffer', math: 'I_{buffer}', meaning: 'Buffer Class set (Eq. 4.2)', slot: 7},
+  // Delta-max rule (Concession Theorem, Chapter 15), YT02 turns 186–187.
+  DeltaMax: {show: 'Δmax', math: 'Δ_{max}', meaning: "change in the Elite's maximum extraction share across a policy reform", slot: 2},
+  // Eq. 2.7 (kernel optimization objective), YT02 turns 189–190.
+  ExtractionE: {show: 'E(t)', math: 'E(t)', meaning: 'extraction output (Eq. 2.7)', slot: 5},
+  CoherenceM: {show: 'M(t)', math: 'M(t)', meaning: 'cross-group class coherence (Eq. 2.7)', slot: 12},
+  Tau: {show: 'τ', math: 'τ', meaning: 'critical revolutionary threshold (Eq. 2.7)', slot: 13},
 } as const;
 
 export type EquationTermId = keyof typeof EQUATION_TERMS;

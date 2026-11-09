@@ -2185,3 +2185,187 @@ shots:
       t180Puppet: {word: Puppet}
       t180Enforcement: {word: Enforcement}
       t180Buffer: {word: Buffer}
+  # Minutes 38–41: turns 181–191. The In-group holds as one legal set with unequal subsets,
+  # the 1691 Boundary Enforcement Act keeps Buffer Class and Out-group disjoint (Eq. 4.2), and
+  # the last three engineering-checklist requirements land: defined flow (Fig. 0.3), the
+  # delta-max = 0 concession rule (Ch. 15), the Eq. 2.7 kernel objective, and the dashed
+  # maintenance feedback loop (Fig. 2.2).
+  - shot_id: S00-181
+    turn_id: cfc791e8ddd8ba15
+    scene: LegalSetIntact
+    instance: LegalSetIntact
+    cues:
+      t181Decomposition: {word: decomposition}
+      t181Ingroup: {word: in-group}
+      t181Intact: {word: intact}
+      t181Legal: {word: legal}
+      t181Exposing: {word: exposing}
+      t181Roles: {word: roles}
+      t181Payoffs: {word: payoffs}
+      t181Four: {word: four}
+      t181Subsets: {word: subsets}
+  - shot_id: S00-182
+    turn_id: c5781a627de5dfa4
+    scene: BoundaryAct1691
+    instance: BoundaryAct1691
+    cues:
+      t182BufferDefined: {word: "buffer class", occurrence: 1}
+      t182OutgroupDefined: {word: out-group, occurrence: 1}
+      t182Law: {word: law}
+      t182Polices: {word: polices}
+      t182Virginia: {word: "virginia's"}
+      t182NinetyOne: {word: "sixteen ninety-one"}
+      t182Act: {word: act}
+      t182FourPointTwo: {word: "four point two"}
+      t182Criminalized: {word: criminalized}
+      t182Marriage: {word: marriage}
+      t182Reproduction: {word: reproduction}
+      t182Intersection: {word: intersection}
+      t182BufferClass: {word: "buffer class", occurrence: 2}
+      t182OutGroup: {word: out-group, occurrence: 2}
+      t182EmptySet: {word: "empty set"}
+  - shot_id: S00-183
+    turn_id: 18f610cbc2823811
+    scene: FlowOfInputs
+    instance: FlowOfInputs
+    cues:
+      t183Complete: {word: complete}
+      t183Checklist: {word: checklist}
+      t183Requirement: {word: requirement}
+      t183Three: {word: three, occurrence: 2}
+      t183Flow: {word: flow}
+      t183Inputs: {word: inputs}
+      t183Outputs: {word: outputs}
+      t183Circuit: {word: circuit}
+      t183FigureZeroThree: {word: "figure zero point three"}
+      t183Labor: {word: labor}
+      t183Capacity: {word: capacity}
+      t183Supply: {word: supply}
+      t183Driving: {word: driving}
+      t183Energy: {word: energy}
+  - shot_id: S00-184
+    turn_id: b1627f2b4ea964a3
+    scene: ControlGateExtraction
+    instance: ControlGateExtraction
+    cues:
+      t184Elite: {word: elite}
+      t184Parasitic: {word: parasitic}
+      t184Gate: {word: gate}
+      t184Directs: {word: directs}
+      t184HighCurrent: {word: high-current}
+      t184Upward: {word: upward}
+      t184Drawing: {word: drawing}
+      t184ControlCurrent: {word: "control current"}
+      t184Puppet: {word: puppet}
+      t184Enforcement: {word: enforcement}
+  - shot_id: S00-185
+    turn_id: 5d5118cfdb35c07b
+    scene: ControlGateExtraction
+    instance: ControlGateExtraction
+    cues:
+      t185Output: {word: output}
+      t185Extraction: {word: extraction}
+      t185Captured: {word: captured}
+      t185Downward: {word: downward}
+      t185Suppression: {word: suppression}
+      t185Allocation: {word: allocation}
+      t185Paid: {word: paid}
+      t185Status: {word: status}
+      t185Concessions: {word: concessions}
+  - shot_id: S00-186
+    turn_id: d33de29c59c64867
+    scene: DeltaMaxCeiling
+    instance: DeltaMaxCeiling
+    cues:
+      t186DeltaMax: {word: delta-max}
+      t186Change: {word: change}
+      t186Maximum: {word: maximum}
+      t186Policy: {word: policy}
+      t186Reform: {word: reform}
+      t186Zero: {word: zero}
+      t186Ceiling: {word: ceiling}
+      t186Unchanged: {word: unchanged}
+  - shot_id: S00-187
+    turn_id: f04db7dcb9ad76ac
+    scene: DeltaMaxCeiling
+    instance: DeltaMaxCeiling
+    cues:
+      t187Concession: {word: concession}
+      t187Theorem: {word: theorem}
+      t187DeltaMaxZero: {word: "delta max equals zero"}
+      t187Redistribute: {word: redistribute}
+      t187Status: {word: status}
+      t187Benefits: {word: benefits}
+      t187Below: {word: below}
+      t187Apex: {word: apex}
+      t187Lowering: {word: lowering}
+      t187Ceiling: {word: ceiling}
+  - shot_id: S00-188
+    turn_id: 4dc307d3c92b0f7e
+    scene: PurposeFromBehavior
+    instance: PurposeFromBehavior
+    cues:
+      t188How: {word: how}
+      t188Four: {word: four}
+      t188Objective: {word: objective}
+      t188Function: {word: function}
+      t188OrPurpose: {word: purpose, occurrence: 2}
+      t188Theory: {word: theory}
+      t188Machine: {word: "machine's"}
+      t188Stable: {word: stable}
+      t188Runtime: {word: runtime}
+      t188Maximizes: {word: maximizes}
+  - shot_id: S00-189
+    turn_id: f33fc3ef232066a2
+    scene: KernelObjective
+    instance: KernelObjective
+    cues:
+      t189Equation: {word: equation}
+      t189TwoPointSeven: {word: "two point seven"}
+      t189Kernel: {word: kernel}
+      t189Maximize: {word: maximize}
+      t189Extraction: {word: extraction}
+      t189Output: {word: output}
+      t189EofT: {word: "e of t"}
+      t189Subject: {word: subject}
+      t189Coherence: {word: coherence}
+      t189MofT: {word: "m of t"}
+      t189Stays: {word: stays}
+      t189Below: {word: below}
+      t189Critical: {word: critical}
+      t189Threshold: {word: threshold}
+      t189Tau: {word: tau}
+      t189Plain: {word: plain}
+  - shot_id: S00-190
+    turn_id: 6f31d0235f0f4a11
+    scene: KernelObjective
+    instance: KernelObjective
+    cues:
+      t190Code: {word: code}
+      t190Payment: {word: payment}
+      t190Campaign: {word: campaign}
+      t190Chosen: {word: chosen}
+      t190EofT: {word: "e of t"}
+      t190High: {word: high}
+      t190Holding: {word: holding}
+      t190MofT: {word: "m of t"}
+      t190Tau: {word: tau}
+  - shot_id: S00-191
+    turn_id: 9c599cb078f9fc5d
+    scene: MaintenanceFeedback
+    instance: MaintenanceFeedback
+    cues:
+      t191Five: {word: five}
+      t191Regulation: {word: regulation}
+      t191Figure: {word: figure}
+      t191TwoPointTwo: {word: "two point two"}
+      t191Displays: {word: displays}
+      t191Dashed: {word: dashed}
+      t191Loop: {word: loop}
+      t191Prejudice: {word: prejudice}
+      t191Reenters: {word: re-enters}
+      t191Machine: {word: machine}
+      t191Voters: {word: voters}
+      t191Juries: {word: juries}
+      t191Lenders: {word: lenders}
+      t191Hiring: {word: "hiring managers"}
