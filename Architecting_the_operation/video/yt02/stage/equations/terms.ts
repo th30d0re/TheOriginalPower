@@ -16,6 +16,11 @@ export const EQUATION_TERMS = {
   RacismVector: {show: 'R', math: 'R_{racism}', meaning: 'the conceptual racism vector', slot: 11},
   Magnitude: {show: 'M', math: 'M_{force}', meaning: 'emotional and material magnitude', slot: 12},
   StateDirection: {show: 'd̂', math: 'd̂_{state}', meaning: 'unit direction of state and institutional enforcement', slot: 13},
+  // Eq. 2.1 (coarse binary partition), introduced in YT02 turns 124–140. Operators are
+  // spelled as words in the scene because IBM Plex Mono has no union/intersection glyphs.
+  U: {show: 'U', meaning: 'total population (Eq. 2.1)', slot: 2},
+  I: {show: 'I', meaning: 'dominant racial in-group (Eq. 2.1)', slot: 0},
+  O: {show: 'O', meaning: 'marginalized out-group (Eq. 2.1)', slot: 1},
 } as const;
 
 export type EquationTermId = keyof typeof EQUATION_TERMS;
