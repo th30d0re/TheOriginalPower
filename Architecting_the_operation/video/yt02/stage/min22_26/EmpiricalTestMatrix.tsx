@@ -52,14 +52,14 @@ export function EmpiricalTestMatrix({segment}: SceneProps) {
 
         <div style={{position: 'absolute', left: 120, top: 200, width: 1680, height: 76}}>
           <DrawRect box={{x: 0, y: 0, w: 1680, h: 76}} startFrame={frame(cue.test)} durationFrames={16} strokeToken="color/line/hairline-strong" fillToken="color/fill/panel-render" glowToken="color/fill/gold"/>
-          <Copy at={cue.test} box={{x: 148, y: 222, w: 760, h: 32}} size={24}>
-            TEST: PREDICTIONS 1–4 &amp; REFUTATION STANDARDS 1–2
+          <Copy at={cue.test} box={{x: 28, y: 22, w: 760, h: 32}} size={24}>
+            TEST SIX CLAIMS
           </Copy>
-          <Copy at={cue.predictions} box={{x: 980, y: 224, w: 380, h: 28}} size={22} tone="color/fill/gold">
-            SIX CLAIMS
+          <Copy at={cue.predictions} box={{x: 860, y: 24, w: 280, h: 28}} size={22} tone="color/fill/gold">
+            4 PREDICTIONS
           </Copy>
-          <Copy at={cue.standards} box={{x: 1380, y: 224, w: 380, h: 28}} size={22} tone="color/marker/race">
-            THREE RECORDS
+          <Copy at={cue.standards} box={{x: 1220, y: 24, w: 380, h: 28}} size={22} tone="color/marker/race">
+            2 REFUTATIONS
           </Copy>
         </div>
 
@@ -101,7 +101,7 @@ export function EmpiricalTestMatrix({segment}: SceneProps) {
           VIRGINIA
         </Copy>
         <Copy at={cue.quantitative} box={{x: 148, y: 650, w: 184, h: 52}} size={22}>
-          QUANTITATIVE AMERICAN RECORD
+          U.S. RECORD
         </Copy>
         <Copy at={cue.eighteen} box={{x: 148, y: 706, w: 184, h: 26}} size={20} tone="color/fill/gold">
           1840–2020

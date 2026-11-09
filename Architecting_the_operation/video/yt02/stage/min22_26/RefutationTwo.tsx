@@ -140,28 +140,28 @@ export function RefutationTwo({segment}: SceneProps) {
 
         <div style={{position: 'absolute', left: 150, top: 646, width: 500, height: 150}}>
           <DrawRect box={{x: 0, y: 0, w: 500, h: 150}} startFrame={frame(cue.union)} durationFrames={16} strokeToken="color/fill/gold" fillToken="color/fill/panel-render" glowToken="color/fill/gold"/>
-          <Copy at={cue.rise} box={{x: 178, y: 668, w: 444, h: 30}} size={24}>
+          <Copy at={cue.rise} box={{x: 28, y: 22, w: 444, h: 30}} size={24}>
             UNION MEMBERSHIP RISE
           </Copy>
-          <Copy at={cue.union} box={{x: 178, y: 706, w: 444, h: 44}} size={20} tone="color/fill/gold">
+          <Copy at={cue.union} box={{x: 28, y: 60, w: 444, h: 44}} size={20} tone="color/fill/gold">
             INDICATOR ONE MOVES UP
           </Copy>
         </div>
         <div style={{position: 'absolute', left: 710, top: 646, width: 500, height: 150}}>
           <DrawRect box={{x: 0, y: 0, w: 500, h: 150}} startFrame={frame(cue.incarceration)} durationFrames={16} strokeToken="color/marker/race" fillToken="color/fill/panel-render" glowToken="color/marker/race"/>
-          <Copy at={cue.incarceration} box={{x: 738, y: 668, w: 444, h: 30}} size={24}>
+          <Copy at={cue.incarceration} box={{x: 28, y: 22, w: 444, h: 30}} size={24}>
             INCARCERATION FALL
           </Copy>
-          <Copy at={cue.incarceration} box={{x: 738, y: 706, w: 444, h: 44}} size={20} tone="color/marker/race">
+          <Copy at={cue.incarceration} box={{x: 28, y: 60, w: 444, h: 44}} size={20} tone="color/marker/race">
             INDICATOR TWO MOVES DOWN
           </Copy>
         </div>
         <div style={{position: 'absolute', left: 1270, top: 646, width: 500, height: 150}}>
           <DrawRect box={{x: 0, y: 0, w: 500, h: 150}} startFrame={frame(cue.wealth)} durationFrames={16} strokeToken="color/marker/race" fillToken="color/fill/panel-render" glowToken="color/marker/race"/>
-          <Copy at={cue.wealth} box={{x: 1298, y: 668, w: 444, h: 30}} size={24}>
+          <Copy at={cue.wealth} box={{x: 28, y: 22, w: 444, h: 30}} size={24}>
             TOP-10% WEALTH SHARE FALL
           </Copy>
-          <Copy at={cue.share} box={{x: 1298, y: 706, w: 444, h: 44}} size={20} tone="color/marker/race">
+          <Copy at={cue.share} box={{x: 28, y: 60, w: 444, h: 44}} size={20} tone="color/marker/race">
             INDICATOR THREE MOVES DOWN
           </Copy>
         </div>

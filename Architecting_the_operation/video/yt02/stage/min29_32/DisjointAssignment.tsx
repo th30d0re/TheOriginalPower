@@ -427,7 +427,7 @@ export function DisjointAssignment({segment}: SceneProps) {
                 />
                 <Text
                   at={Number(at)}
-                  box={{x: bx + 16, y: by + 20, w: bw - 32, h: 28}}
+                  box={{x: 16, y: 20, w: bw - 32, h: 28}}
                   size={20}
                   align="center"
                   weight={600}

@@ -70,10 +70,10 @@ export function EngineeringQuestion({segment}: SceneProps) {
         </Copy>
         <div style={{position: 'absolute', left: left.x + 32, top: left.y + 330, width: 696, height: 120}}>
           <DrawRect box={{x: 0, y: 0, w: 696, h: 120}} startFrame={frame(cue.checklist)} durationFrames={16} strokeToken="color/line/hairline-strong" fillToken="color/fill/panel-render" glowToken="color/fill/gold"/>
-          <Copy at={cue.checklist} box={{x: left.x + 52, y: left.y + 354, w: 656, h: 30}} size={24}>
+          <Copy at={cue.checklist} box={{x: 20, y: 24, w: 656, h: 30}} size={24}>
             ENGINEERING CHECKLIST AS THE TEST
           </Copy>
-          <Copy at={cue.checklist} box={{x: left.x + 52, y: left.y + 392, w: 656, h: 44}} size={20} tone="color/text/soft">
+          <Copy at={cue.checklist} box={{x: 20, y: 62, w: 656, h: 44}} size={20} tone="color/text/soft">
             A DEFINITION EARNS THE WORD OR IT DOES NOT
           </Copy>
         </div>
@@ -116,10 +116,10 @@ export function EngineeringQuestion({segment}: SceneProps) {
         </Copy>
         <div style={{position: 'absolute', left: right.x + 32, top: right.y + 330, width: 696, height: 120}}>
           <DrawRect box={{x: 0, y: 0, w: 696, h: 120}} startFrame={frame(cue.system)} durationFrames={16} strokeToken="color/fill/gold" fillToken="color/fill/panel-render" glowToken="color/fill/gold"/>
-          <Copy at={cue.system} box={{x: right.x + 52, y: right.y + 354, w: 656, h: 30}} size={24} tone="color/fill/gold">
+          <Copy at={cue.system} box={{x: 20, y: 24, w: 656, h: 30}} size={24} tone="color/fill/gold">
             IN ENGINEERING &amp; SYSTEMS THEORY
           </Copy>
-          <Copy at={cue.theory} box={{x: right.x + 52, y: right.y + 392, w: 656, h: 44}} size={20} tone="color/text/soft">
+          <Copy at={cue.theory} box={{x: 20, y: 62, w: 656, h: 44}} size={20} tone="color/text/soft">
             THE FORMAL MEANING SETS THE BAR
           </Copy>
         </div>

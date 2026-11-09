@@ -77,21 +77,21 @@ export function PredictionOne({segment}: SceneProps) {
 
         <div style={{position: 'absolute', left: left.x + 36, top: left.y + 180, width: 648, height: 72}}>
           <DrawRect box={{x: 0, y: 0, w: 648, h: 72}} startFrame={frame(cue.licensing)} durationFrames={14} strokeToken="color/line/hairline-strong" fillToken="color/fill/panel-render" glowToken="color/fill/gold"/>
-          <Copy at={cue.licensing} box={{x: left.x + 56, y: left.y + 202, w: 608, h: 30}} size={24}>
+          <Copy at={cue.licensing} box={{x: 20, y: 22, w: 608, h: 30}} size={24}>
             FEITORIA MONOPOLIES &amp; STATE LICENSES
           </Copy>
         </div>
 
         <div style={{position: 'absolute', left: left.x + 36, top: left.y + 276, width: 648, height: 72}}>
           <DrawRect box={{x: 0, y: 0, w: 648, h: 72}} startFrame={frame(cue.founding)} durationFrames={14} strokeToken="color/line/hairline-strong" fillToken="color/fill/panel-render" glowToken="color/fill/gold"/>
-          <Copy at={cue.founding} box={{x: left.x + 56, y: left.y + 298, w: 608, h: 30}} size={24}>
+          <Copy at={cue.founding} box={{x: 20, y: 22, w: 608, h: 30}} size={24}>
             COMMERCIAL ENTERPRISE PRECEDES DOCTRINE
           </Copy>
         </div>
 
         <div style={{position: 'absolute', left: left.x + 36, top: left.y + 372, width: 648, height: 72}}>
           <DrawRect box={{x: 0, y: 0, w: 648, h: 72}} startFrame={frame(cue.captives)} durationFrames={14} strokeToken="color/line/hairline-strong" fillToken="color/fill/panel-render" glowToken="color/fill/gold"/>
-          <Copy at={cue.captives} box={{x: left.x + 56, y: left.y + 394, w: 608, h: 30}} size={24}>
+          <Copy at={cue.captives} box={{x: 20, y: 22, w: 608, h: 30}} size={24}>
             MATERIAL APPARATUS SECURES CAPTIVES
           </Copy>
         </div>
@@ -136,21 +136,21 @@ export function PredictionOne({segment}: SceneProps) {
 
         <div style={{position: 'absolute', left: right.x + 36, top: right.y + 180, width: 648, height: 72}}>
           <DrawRect box={{x: 0, y: 0, w: 648, h: 72}} startFrame={frame(cue.written)} durationFrames={14} strokeToken="color/line/hairline-strong" fillToken="color/fill/panel-render" glowToken="color/marker/race"/>
-          <Copy at={cue.written} box={{x: right.x + 56, y: right.y + 202, w: 608, h: 30}} size={24}>
+          <Copy at={cue.written} box={{x: 20, y: 22, w: 608, h: 30}} size={24}>
             COMMISSIONED CHRONICLES WRITTEN LATER
           </Copy>
         </div>
 
         <div style={{position: 'absolute', left: right.x + 36, top: right.y + 276, width: 648, height: 72}}>
           <DrawRect box={{x: 0, y: 0, w: 648, h: 72}} startFrame={frame(cue.justify)} durationFrames={14} strokeToken="color/line/hairline-strong" fillToken="color/fill/panel-render" glowToken="color/marker/race"/>
-          <Copy at={cue.justify} box={{x: right.x + 56, y: right.y + 298, w: 608, h: 30}} size={24}>
+          <Copy at={cue.justify} box={{x: 20, y: 22, w: 608, h: 30}} size={24}>
             JUSTIFIES CAPTIVES ALREADY TAKEN
           </Copy>
         </div>
 
         <div style={{position: 'absolute', left: right.x + 36, top: right.y + 372, width: 648, height: 72}}>
           <DrawRect box={{x: 0, y: 0, w: 648, h: 72}} startFrame={frame(cue.afterward)} durationFrames={14} strokeToken="color/line/hairline-strong" fillToken="color/fill/panel-render" glowToken="color/marker/race"/>
-          <Copy at={cue.afterward} box={{x: right.x + 56, y: right.y + 394, w: 608, h: 30}} size={24}>
+          <Copy at={cue.afterward} box={{x: 20, y: 22, w: 608, h: 30}} size={24}>
             RACIAL DOCTRINE PRODUCED POST-HOC
           </Copy>
         </div>
