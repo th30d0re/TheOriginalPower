@@ -26,6 +26,15 @@ export const EQUATION_TERMS = {
   Universe: {show: 'U', meaning: 'population universe (Eq. 2.1)', slot: 9},
   InGroupSet: {show: 'I', meaning: 'In-group set I (Eq. 2.1)', slot: 2},
   OutGroupSet: {show: 'O', meaning: 'Out-group set O (Eq. 2.1)', slot: 1},
+  // Eq. 4.2 (1691 Boundary Enforcement Act), YT02 turn 182. Slots are reused because the
+  // 14-slot palette is full; no shared scene mixes these with the earlier slot owners.
+  BufferClassSet: {show: 'I_buffer', math: 'I_{buffer}', meaning: 'Buffer Class set (Eq. 4.2)', slot: 7},
+  // Delta-max rule (Concession Theorem, Chapter 15), YT02 turns 186–187.
+  DeltaMax: {show: 'Δmax', math: 'Δ_{max}', meaning: "change in the Elite's maximum extraction share across a policy reform", slot: 2},
+  // Eq. 2.7 (kernel optimization objective), YT02 turns 189–190.
+  ExtractionE: {show: 'E(t)', math: 'E(t)', meaning: 'extraction output (Eq. 2.7)', slot: 5},
+  CoherenceM: {show: 'M(t)', math: 'M(t)', meaning: 'cross-group class coherence (Eq. 2.7)', slot: 12},
+  Tau: {show: 'τ', math: 'τ', meaning: 'critical revolutionary threshold (Eq. 2.7)', slot: 13},
 } as const;
 
 export type EquationTermId = keyof typeof EQUATION_TERMS;
