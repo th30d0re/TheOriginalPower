@@ -2020,4 +2020,109 @@ shots:
       t167Positions: {word: positions}
       t167Authority: {word: authority}
       t167Protection: {word: protection}
-  # Minutes 22–26: turns 111–123 (Predictions 1–4, Refutation Standards 1–3, Empirical Test Matrix, and Formal System Definition).
+  # Minutes 44–47: turns 205–217 (set-resolution diagnostic).
+  - shot_id: S00-205
+    turn_id: c6474497ec912f78
+    scene: AlphaAxis
+    instance: AlphaAxis
+    cues:
+      t205Alpha: {word: alpha}
+      t205Secondary: {word: secondary}
+      t205Axis: {word: axis}
+  - shot_id: S00-206
+    turn_id: f82d1788ef1c134e
+    scene: AlphaAxis
+    instance: AlphaAxis
+    cues:
+      t206Inside: {word: Inside}
+      t206Advantaged: {word: advantaged}
+      t206Subordinated: {word: subordinated}
+  - shot_id: S00-207
+    turn_id: 5d6788ad637e325c
+    scene: RecursivePartitions
+    instance: RecursivePartitions
+    cues:
+      t207Apply: {word: Apply}
+      t207Gender: {word: gender}
+  - shot_id: S00-208
+    turn_id: 3fb614db39874127
+    scene: RecursivePartitions
+    instance: RecursivePartitions
+    cues:
+      t208Buffer: {word: buffer}
+      t208Splits: {word: splits}
+  - shot_id: S00-209
+    turn_id: 064cfc02ea4339d5
+    scene: RecursivePartitions
+    instance: RecursivePartitions
+    cues:
+      t209Second: {word: second}
+      t209Compartments: {word: compartments}
+  - shot_id: S00-210
+    turn_id: 307667f6e69e17ce
+    scene: RecursivePartitions
+    instance: RecursivePartitions
+    cues:
+      t210Inside: {word: inside}
+      t210Token: {word: token}
+      t210Containment: {word: containment}
+  - shot_id: S00-211
+    turn_id: 6154d9eef30d09d3
+    scene: ResolutionLadder
+    instance: ResolutionLadder
+    cues:
+      t211Table: {word: Table}
+      t211Ladder: {word: Ladder}
+      t211Figure: {word: Figure}
+  - shot_id: S00-212
+    turn_id: c3e04139a912d886
+    scene: ResolutionLadder
+    instance: ResolutionLadder
+    cues:
+      t212Levels: {word: levels}
+      t212One: {word: '1'}
+      t212Two: {word: '2'}
+  - shot_id: S00-213
+    turn_id: 973d37e3a049e4b9
+    scene: ResolutionLadder
+    instance: ResolutionLadder
+    cues:
+      t213Three: {word: '3'}
+      t213Four: {word: '4'}
+  - shot_id: S00-214
+    turn_id: 2e5ed107beeff5fb
+    scene: ResolutionLadder
+    instance: ResolutionLadder
+    cues:
+      t214Zooming: {word: zooming}
+      t214Focus: {word: focus}
+  - shot_id: S00-215
+    turn_id: c4594fcff1860b71
+    scene: ResolutionLadder
+    instance: ResolutionLadder
+    cues:
+      t215Confusion: {word: confusion}
+  - shot_id: S00-216
+    turn_id: 195283bf7fa407d0
+    scene: LevelOne
+    instance: LevelOne
+    cues:
+      t216Level: {word: Level}
+      t216Binary: {word: binary}
+      t216Claim: {word: claim}
+      t216Uniform: {word: uniform}
+      t216Elite: {word: Elite}
+      t216Unresolved: {word: unresolved}
+  - shot_id: S00-217
+    turn_id: 32db3973e2ad9363
+    scene: LevelTwo
+    instance: LevelTwo
+    cues:
+      t217Level: {word: Level}
+      t217Ingroup: {word: In-group}
+      t217Rebuttal: {word: rebuttal}
+      t217Poverty: {word: poverty}
+      t217Exploitation: {word: exploitation}
+      t217Elite: {word: Elite}
+      t217Boundary: {word: boundary}
+      t217Inside: {word: inside}
