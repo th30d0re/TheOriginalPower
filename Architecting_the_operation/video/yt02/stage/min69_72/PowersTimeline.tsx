@@ -1,12 +1,12 @@
 import React from 'react';
-import {DrawLine, DrawRect, FitBox, useCue, type SceneProps} from '@stage';
-import {Copy, Panel, Scene, frame} from './shared';
+import {useCue, useStageMs, type SceneProps} from '@stage';
+import {AtlanticMap, cameraMove, Scene} from './shared';
 
-// Turn 308: three Atlantic entrants take dated positions on one timeline — Dutch
-// chartered and seizing Brazil and Elmina, England planting Barbados and
-// monopolizing the African trade, France taking Saint-Domingue.
+// Turn 308: new Atlantic entrants placed on the map as they are named —
+// Dutch to Brazil and Elmina, England to Barbados, France to Saint-Domingue.
 export function PowersTimeline({segment}: SceneProps) {
-  const cue = {
+  const ms = useStageMs();
+  const c = {
     dutch: useCue('t308Dutch').at,
     chartered: useCue('t308Chartered').at,
     brazil: useCue('t308Brazil').at,
@@ -18,29 +18,26 @@ export function PowersTimeline({segment}: SceneProps) {
     france: useCue('t308France').at,
     domingue: useCue('t308Domingue').at,
   };
+
+  const camera = cameraMove(ms, c.england, {center: [-30, 22], zoom: 1.5}, {center: [-38, 20], zoom: 1.65});
+  const draw = (at: number) => Math.min(1, Math.max(0, (ms - at) / 1000));
+
   return <Scene segment={segment}>
-    <Panel box={{x: 120, y: 106, w: 1200, h: 70}} at={cue.dutch}/>
-    <Copy at={cue.dutch} box={{x: 150, y: 124, w: 1100, h: 40}} size={32}>ATLANTIC POWERS · 1621–1697</Copy>
-    <DrawLine points={[[150, 560], [1770, 560]]} startFrame={frame(cue.dutch)} durationFrames={20} strokeToken="color/line/hairline-strong" strokeWidth={3}/>
-    {[1621, 1650, 1680].map((yr, i) => (
-      <Copy key={yr} at={cue.dutch} box={{x: 170 + i * 700, y: 578, w: 120, h: 24}} size={20} mono tone="color/text/dim">{yr}</Copy>
-    ))}
-    <FitBox text="DUTCH" x={150} y={220} size={30} weight={600} tag="W INDIA CO" startFrame={frame(cue.dutch)} durationFrames={16} textToken="color/text/primary" strokeToken="color/fill/gold" fillToken="color/fill/panel-render" accentToken="color/fill/gold" beat/>
-    <DrawRect box={{x: 190, y: 330, w: 220, h: 84}} startFrame={frame(cue.chartered)} durationFrames={16} strokeToken="color/fill/gold" fillToken="color/fill/panel-render" glowToken="color/fill/gold" beat/>
-    <Copy at={cue.chartered} box={{x: 206, y: 342, w: 190, h: 28}} size={22}>1621 · CHARTERED</Copy>
-    <DrawRect box={{x: 480, y: 330, w: 210, h: 84}} startFrame={frame(cue.brazil)} durationFrames={16} strokeToken="color/fill/gold" fillToken="color/fill/panel-render" glowToken="color/fill/gold" beat/>
-    <Copy at={cue.brazil} box={{x: 496, y: 342, w: 180, h: 28}} size={22}>1630 · BRAZIL</Copy>
-    <DrawRect box={{x: 760, y: 330, w: 220, h: 84}} startFrame={frame(cue.elmina)} durationFrames={16} strokeToken="color/fill/gold" fillToken="color/fill/panel-render" glowToken="color/fill/gold" beat/>
-    <Copy at={cue.elmina} box={{x: 776, y: 342, w: 190, h: 28}} size={22}>1637 · ELMINA</Copy>
-    <FitBox text="ENGLAND" x={150} y={640} size={30} weight={600} tag="AMERICAS" startFrame={frame(cue.england)} durationFrames={16} textToken="color/text/primary" strokeToken="color/fill/gold" fillToken="color/fill/panel-render" accentToken="color/fill/gold" beat/>
-    <DrawRect box={{x: 380, y: 730, w: 230, h: 84}} startFrame={frame(cue.barbados)} durationFrames={16} strokeToken="color/fill/gold" fillToken="color/fill/panel-render" glowToken="color/fill/gold" beat/>
-    <Copy at={cue.barbados} box={{x: 396, y: 742, w: 200, h: 28}} size={22}>1627 · BARBADOS</Copy>
-    <DrawRect box={{x: 680, y: 730, w: 210, h: 84}} startFrame={frame(cue.sugar)} durationFrames={16} strokeToken="color/fill/gold" fillToken="color/fill/panel-render" glowToken="color/fill/gold" beat/>
-    <Copy at={cue.sugar} box={{x: 696, y: 742, w: 180, h: 28}} size={22}>1640s · SUGAR</Copy>
-    <DrawRect box={{x: 960, y: 730, w: 240, h: 84}} startFrame={frame(cue.monopoly)} durationFrames={16} strokeToken="color/marker/race" fillToken="color/fill/panel-render" glowToken="color/marker/race" beat/>
-    <Copy at={cue.monopoly} box={{x: 976, y: 742, w: 210, h: 28}} size={22}>1672 · MONOPOLY</Copy>
-    <FitBox text="FRANCE" x={1380} y={640} size={30} weight={600} tag="CARIBBEAN" startFrame={frame(cue.france)} durationFrames={16} textToken="color/text/primary" strokeToken="color/fill/gold" fillToken="color/fill/panel-render" accentToken="color/fill/gold" beat/>
-    <DrawRect box={{x: 1380, y: 730, w: 300, h: 84}} startFrame={frame(cue.domingue)} durationFrames={16} strokeToken="color/fill/gold" fillToken="color/fill/panel-render" glowToken="color/fill/gold" beat/>
-    <Copy at={cue.domingue} box={{x: 1396, y: 742, w: 270, h: 28}} size={22}>1697 · SAINT-DOMINGUE</Copy>
+    <AtlanticMap
+      camera={camera}
+      at={c.dutch}
+      routes={[
+        {waypoints: [[4.9, 52.4], [-20, 28], [-43.2, -22.9]], draw: draw(c.brazil), markers: [0, 2]},
+        {waypoints: [[4.9, 52.4], [-10, 30], [-1.35, 5.08]], draw: draw(c.elmina), markers: [0, 2]},
+        {waypoints: [[-0.1, 51.5], [-30, 32], [-59.6, 13.2]], draw: draw(c.barbados), color: 'color/marker/race', markers: [0, 2]},
+        {waypoints: [[-1.6, 47.2], [-35, 30], [-72.3, 19.9]], draw: draw(c.domingue), markers: [0, 2]},
+      ]}
+      labels={[
+        {at: c.brazil, point: [-43.2, -22.9], text: 'BRAZIL · 1630'},
+        {at: c.elmina, point: [-1.35, 5.08], text: 'ELMINA · 1637'},
+        {at: c.barbados, point: [-59.6, 13.2], text: 'BARBADOS · 1627'},
+        {at: c.domingue, point: [-72.3, 19.9], text: 'SAINT-DOMINGUE · 1697'},
+      ]}
+    />
   </Scene>;
 }

@@ -9,6 +9,7 @@ export const Audio = () => null;
 export const Sequence = ({children}: React.PropsWithChildren) => <>{children}</>;
 export const Composition = () => null;
 export const staticFile = (path: string) => path;
+export const Img = (props: React.ImgHTMLAttributes<HTMLImageElement>) => <img {...props} />;
 export const delayRender = () => 1;
 export const continueRender = () => undefined;
 export const cancelRender = () => undefined;

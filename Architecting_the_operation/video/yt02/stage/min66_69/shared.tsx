@@ -15,3 +15,5 @@ export function Copy({at, box, children, size = 28, tone = 'color/text/primary',
 export function Scene({segment, children}: {segment: SceneProps['segment']; children: React.ReactNode}) {
   return <StageSceneFrame segment={segment}><KitSound mode="beats">{children}</KitSound></StageSceneFrame>;
 }
+
+export {AtlanticMap, cameraMove, CinematicStill} from '../min69_72/shared';
