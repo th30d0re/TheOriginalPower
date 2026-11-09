@@ -50,7 +50,7 @@ function ModuleCard({box,term,kind,accent,opacity}:{box:LayoutBox;term:string;ki
   return <div data-term-module={kind} data-term={term} style={{opacity}}>
     <div {...shapeAttrs(`module-${kind}`,box,'frame')} style={{position:'absolute',inset:0}}>
       <DrawRect box={box} progress={opacity} strokeToken="color/line/hairline" fillToken="color/fill/panel-render"/>
-      <span aria-hidden="true" style={{position:'absolute',left:0,top:12,bottom:12,width:4,background:ink}}/>
+      <span aria-hidden="true" style={{position:'absolute',left:box.x,top:box.y+12,height:box.h-24,width:4,background:ink}}/>
     </div>
     <div {...shapeAttrs(`glyph-${kind}`,glyph,'mark','glyph')} style={{position:'absolute',left:glyph.x,top:glyph.y,width:glyph.w,height:glyph.h,color:ink}}><TermGlyph kind={kind}/></div>
     <Label id={`term-${kind}`} box={{x:box.x+96,y:box.y+30,w:300,h:38}} size={30} weight={600} ls={0} lh={1.2} sans>{term}</Label>
@@ -95,7 +95,7 @@ export function BiasDefinition({segment}:SceneProps) {
   const busSpine:Point[]=[[B.x+60,busCards[0].y+45],[B.x+60,busCards[2].y+45]];
   return <KitSound mode="beats"><StageSceneFrame segment={segment}>
     {turn28Shown&&<div data-turn-28-field="true" style={{opacity:turn28Opacity}}>
-      {ms>=cue.baseline&&<div data-host-bus-baseline="true" style={{opacity:.3*baselineP}}>
+      {ms>=cue.baseline&&<div data-host-bus-baseline="true" style={{opacity:.5*baselineP}}>
         <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position:'absolute',inset:0}} aria-hidden="true">
           <path {...lineAttrs('baseline-spine',busSpine)} d={pathFrom(busSpine)} stroke={gold} strokeWidth="4"/>
           {busCards.map((box,index)=><React.Fragment key={index}>
@@ -103,6 +103,8 @@ export function BiasDefinition({segment}:SceneProps) {
           </React.Fragment>)}
         </svg>
         {busCards.map((box,index)=><DrawRect key={index} box={box} progress={baselineP} strokeToken="color/line/hairline-strong" fillToken="color/bg/field"/>) }
+        {busCards.map((box,index)=><Label key={`bl-${index}`} id={`baseline-${index}`} box={{x:box.x,y:box.y+28,w:box.w,h:34}} size={26} ls={2} align="center" ink={index===1?color('color/marker/race'):gold}>{['ALLY','STRANGER','UNKNOWN'][index]}</Label>)}
+        <Label id="baseline-caption" box={{x:busCards[0].x,y:busCards[0].y-44,w:busCards[0].w,h:28}} size={20} ls={1.4} align="center" ink={color('color/text/muted')}>SHARED BASELINE</Label>
       </div>}
       {ms>=cue.experimental&&<Flicker startFrame={Math.round(cue.experimental*30/1000)} durationFrames={16}><Label id="experimental" box={L.heading} size={24} ls={1.5} opacity={experimentalP}>EXPERIMENTAL PSYCHOLOGY</Label></Flicker>}
       {ms>=cue.three&&TERMS.map(([term,kind,accent],index)=><ModuleCard key={term} box={L.terms[index]} term={term} kind={kind} accent={accent} opacity={termsP}/>)}
