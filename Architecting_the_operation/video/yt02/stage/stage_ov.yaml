@@ -881,3 +881,134 @@ shots:
       t67Credit: {word: credit}
       t67Capital: {word: capital}
       t67Allocation: {word: allocation}
+  # Minutes 19–22: turns 98–110. Each cue resolves against its turn's spoken words.
+  - shot_id: S00-98
+    turn_id: 2a0deb5b5c6527dd
+    scene: MechanismLoop
+    instance: MechanismLoop
+    cues:
+      t98Figure: {word: Figure}
+      t98Complete: {word: complete}
+      t98Elite: {word: Elite}
+      t98Systemic: {word: Systemic, occurrence: 1}
+      t98Interpersonal: {word: Interpersonal}
+  - shot_id: S00-99
+    turn_id: 88669e7f7aedee0f
+    scene: MechanismLoop
+    instance: MechanismLoop
+    cues:
+      t99Curving: {word: Curving}
+      t99Dashed: {word: dashed}
+      t99Feedback: {word: Feedback}
+  - shot_id: S00-100
+    turn_id: 4854bfa54be88ad4
+    scene: MechanismLoop
+    instance: MechanismLoop
+    cues:
+      t100Laws: {word: laws}
+      t100Manufactured: {word: manufactured}
+      t100Subordinated: {word: subordinated}
+      t100Cultivated: {word: cultivated}
+      t100Stabilize: {word: stabilize}
+  - shot_id: S00-101
+    turn_id: a306f21ffd253993
+    scene: FieldsEvidence
+    instance: FieldsEvidence
+    cues:
+      t101Historian: {word: historian}
+      t101Barbara: {word: Barbara}
+      t101Essay: {word: essay}
+      t101Page: {word: page}
+  - shot_id: S00-102
+    turn_id: 89e1a5b93e30f814
+    scene: FieldsEvidence
+    instance: FieldsEvidence
+    cues:
+      t102Quotes: {word: quotes}
+      t102People: {word: People}
+      t102Inferior: {word: inferior}
+      t102Oppressed: {word: oppressed}
+  - shot_id: S00-103
+    turn_id: 8591d10d2c01ef00
+    scene: ArchiveQuestion
+    instance: ArchiveQuestion
+    cues:
+      t103Before: {word: Before}
+      t103Archive: {word: archive}
+      t103Definitions: {word: definitions}
+      t103Direct: {word: direct}
+      t103Where: {word: where}
+      t103AntiBlack: {word: anti-Black}
+      t103Begin: {word: begin}
+  - shot_id: S00-104
+    turn_id: a55c7548920bbe01
+    scene: TermSeparation
+    instance: TermSeparation
+    cues:
+      t104Separating: {word: Separating}
+      t104Bias: {word: bias}
+      t104Prejudice: {word: prejudice}
+      t104Discrimination: {word: discrimination}
+      t104Racism: {word: racism}
+      t104Common: {word: common}
+  - shot_id: S00-105
+    turn_id: 2d57794657c3add6
+    scene: TermSeparation
+    instance: TermSeparation
+    cues:
+      t105Folding: {word: folding}
+      t105Blurry: {word: blurry}
+      t105Ancient: {word: ancient}
+      t105Modern: {word: modern}
+  - shot_id: S00-106
+    turn_id: fd8f5ee7ea854f75
+    scene: TermSeparation
+    instance: TermSeparation
+    cues:
+      t106Holding: {word: Holding}
+      t106PreModern: {word: pre-modern}
+      t106Scalars: {word: scalars}
+      t106Structural: {word: structural}
+      t106Legal: {word: legal}
+      t106Chattel: {word: chattel}
+  - shot_id: S00-107
+    turn_id: 3b1df357a229d6f0
+    scene: ArchiveBoundary
+    instance: ArchiveBoundary
+    cues:
+      t107Historians: {word: Historians}
+      t107James: {word: James}
+      t107Francisco: {word: Francisco}
+      t107Documented: {word: documented}
+      t107Medieval: {word: medieval}
+  - shot_id: S00-108
+    turn_id: 0ea0ea6fdbc7b482
+    scene: ArchiveBoundary
+    instance: ArchiveBoundary
+    cues:
+      t108Before: {word: Before}
+      t108Shifting: {word: shifting}
+      t108Scalars: {word: scalars}
+      t108Without: {word: without}
+  - shot_id: S00-109
+    turn_id: c159e0c16cb2aa5e
+    scene: ArchiveBoundary
+    instance: ArchiveBoundary
+    cues:
+      t109Atlantic: {word: Atlantic}
+      t109Compiled: {word: compiled}
+      t109Durable: {word: durable}
+  - shot_id: S00-110
+    turn_id: d189343a091be8de
+    scene: HypothesisGate
+    instance: HypothesisGate
+    cues:
+      t110Because: {word: Because}
+      t110Equation: {word: Equation}
+      t110Testable: {word: testable}
+      t110Generates: {word: generates}
+      t110Four: {word: four}
+      t110Three: {word: three}
+      t110Refutation: {word: refutation}
+      t110Historical: {word: historical}
+      t110Files: {word: files}
