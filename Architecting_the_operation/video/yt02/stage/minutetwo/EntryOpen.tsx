@@ -47,7 +47,7 @@ export function EntryOpen({segment}:SceneProps) {
       <DrawRect box={{x:L.panelX, y:L.panelY, w:L.panelW, h:L.panelH}} startFrame={cueFrame(t6Open.at)} durationFrames={frames(500)} strokeToken="color/line/hairline" fillToken="color/fill/panel-render" glowToken="color/fill/gold" seed={47}/>
       <div data-entry-panel="true" style={{position:'absolute', left:L.panelX, top:L.panelY, width:L.panelW, height:L.panelH, opacity:openP, transform:`translateY(${20*(1-openP)}px)`}}>
       <FitBox text="rac·ism" x={32} y={28} size={48} weight={600} lineHeight={1.1} padX="spacing/md" padY="spacing/sm" textToken="color/text/primary" strokeToken="color/fill/gold" fillToken="color/fill/panel-render" accentToken="color/fill/gold" tag="TERM" corners="tl-br" seed={17} intensity={.8} startFrame={cueFrame(t6Open.at)+frames(500)} durationFrames={frames(420)}/>
-      <Flicker startFrame={cueFrame(t6Open.at)+frames(500)} durationFrames={frames(300)} intensity={.5} style={{position:'absolute', inset:0}}><em style={{position:'absolute', left:226, top:47, fontSize:25, color:color('color/text/muted')}}>(noun)</em></Flicker>
+      <Flicker startFrame={cueFrame(t6Open.at)+frames(500)} durationFrames={frames(300)} intensity={.5} style={{position:'absolute', inset:0}}><em style={{position:'absolute', left:268, top:58, fontSize:25, color:color('color/text/muted')}}>(noun)</em></Flicker>
       <div style={{position:'absolute', left:32, right:32, top:28, height:80}}>
         <span style={{position:'absolute', right:0, top:9, font:'400 20px "IBM Plex Mono"', color:color('color/text/muted')}}>Typical dictionary senses (paraphrased)</span>
       </div>
