@@ -2841,3 +2841,121 @@ shots:
       t243Quinto: {word: quinto}
       t243Knighted: {word: knighted}
       t243Profitability: {word: profitability}
+  # Minutes 53–56: turns 244–255 (coastal resistance, commercial protocol, and papal title).
+  - shot_id: S00-244
+    turn_id: af14875a5056195e
+    scene: CoastalResistance
+    instance: CoastalResistance
+    cues:
+      t244Raiders: {word: raiders}
+      t244Coastal: {word: coastal}
+      t244Surprise: {word: surprise}
+      t244Kidnapped: {word: kidnapped}
+      t244Wolof: {word: Wolof}
+      t244Fought: {word: fought}
+  - shot_id: S00-245
+    turn_id: 8a12bf429c148e04
+    scene: CoastalResistance
+    instance: CoastalResistance
+    cues:
+      t245FourteenFortySix: {word: defenders}
+      t245Canoes: {word: canoes}
+      t245Ambushed: {word: ambushed}
+      t245Arrows: {word: arrows}
+      t245Cost: {word: cost}
+      t245Commerce: {word: commerce}
+  - shot_id: S00-246
+    turn_id: f66836ca6674b549
+    scene: CommercialProtocol
+    instance: CommercialProtocol
+    cues:
+      t246Between: {word: Between}
+      t246Shifted: {word: shifted}
+      t246Raiding: {word: raiding}
+      t246Protocol: {word: protocol}
+      t246Horses: {word: horses}
+      t246Textiles: {word: textiles}
+      t246Intermediaries: {word: intermediaries}
+      t246Captives: {word: captives}
+  - shot_id: S00-247
+    turn_id: afe717ed02c28467
+    scene: ArmsPressure
+    instance: ArmsPressure
+    cues:
+      t247Pause: {word: Pause}
+      t247Claims: {word: claims}
+      t247Technology: {word: technology}
+  - shot_id: S00-248
+    turn_id: 3d80fc6b9fcb174f
+    scene: ArmsPressure
+    instance: ArmsPressure
+    cues:
+      t248Iron: {word: iron}
+      t248Steel: {word: steel}
+      t248Gunpowder: {word: gunpowder}
+      t248Barrel: {word: barrel}
+  - shot_id: S00-249
+    turn_id: fe9be1c5a088e204
+    scene: ArmsPressure
+    instance: ArmsPressure
+    cues:
+      t249Advantage: {word: advantage}
+      t249Firearms: {word: firearms}
+      t249ArmsRace: {word: race}
+  - shot_id: S00-250
+    turn_id: 8d35c81a1d0252c0
+    scene: ArmsPressure
+    instance: ArmsPressure
+    cues:
+      t250Rulers: {word: rulers}
+      t250Pressure: {word: pressure}
+      t250Cycle: {word: cycle}
+  - shot_id: S00-251
+    turn_id: 1318ad384a2155a8
+    scene: SovereignPeoples
+    instance: SovereignPeoples
+    cues:
+      t251Phrase: {word: phrase}
+      t251Modern: {word: modern}
+      t251Sovereign: {word: sovereign}
+      t251Peoples: {word: peoples}
+      t251Demand: {word: demand}
+      t251Capital: {word: capital}
+      t251ArmsRace: {word: race}
+      t251Conflicts: {word: conflicts}
+  - shot_id: S00-252
+    turn_id: 445abbeb348a8f94
+    scene: PapalTitle
+    instance: PapalTitle
+    cues:
+      t252Fiscal: {word: fiscal}
+      t252Fifth: {word: fifth}
+      t252Crown: {word: Crown}
+      t252Title: {word: title}
+      t252Ideological: {word: ideological}
+  - shot_id: S00-253
+    turn_id: ddbb09b442535d14
+    scene: PapalTitle
+    instance: PapalTitle
+    cues:
+      t253Why: {word: Why}
+      t253Papal: {word: papal}
+      t253June: {word: June}
+      t253Dum: {word: Dum}
+      t253Nicholas: {word: Nicholas}
+  - shot_id: S00-254
+    turn_id: 923528ae0159c6ab
+    scene: PapalTitle
+    instance: PapalTitle
+    cues:
+      t254Granted: {word: granted}
+      t254Authority: {word: authority}
+      t254Perpetual: {word: perpetual}
+  - shot_id: S00-255
+    turn_id: 5859e3f3080a30d1
+    scene: PapalTitle
+    instance: PapalTitle
+    cues:
+      t255Three: {word: Three}
+      t255Romanus: {word: Romanus}
+      t255Monopoly: {word: monopoly}
