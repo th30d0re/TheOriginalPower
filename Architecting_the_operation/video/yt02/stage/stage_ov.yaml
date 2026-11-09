@@ -1290,3 +1290,197 @@ shots:
       t110Refutation: {word: refutation}
       t110Historical: {word: historical}
       t110Files: {word: files}
+  # Minutes 32–35: turns 154–167. The binary endures, the illusion breaks, orthogonal deflection
+  # and the kinetic decoy, the wide cone shot, then the two-set picture splits into five tiers and
+  # meets the archive: slave patrols, the 13th Amendment exception, convict leasing.
+  - shot_id: S00-154
+    turn_id: 77a0ff73439ab4e1
+    scene: BinaryEndures
+    instance: BinaryEndures
+    cues:
+      t154Optical: {word: optical}
+      t154Binary: {word: binary, occurrence: 1}
+      t154Endures: {word: endures}
+      t154Records: {word: records}
+      t154Legal: {word: legal}
+      t154Boundary: {word: boundary}
+      t154Hiding: {word: hiding}
+      t154Ranking: {word: ranking}
+      t154Protected: {word: protected}
+  - shot_id: S00-155
+    turn_id: 690f616d3085d915
+    scene: FlatImageEquation
+    instance: FlatImageEquation
+    cues:
+      t155Equation: {word: Equation}
+      t155PointOne: {word: "point one"}
+      t155Captures: {word: captures}
+      t155Flat: {word: flat}
+      t155Breaking: {word: Breaking}
+      t155Reveals: {word: reveals}
+      t155Vertical: {word: vertical}
+      t155Formalize: {word: formalize}
+      t155Separating: {word: separating}
+      t155Visible: {word: visible}
+      t155Command: {word: command}
+      t155Runs: {word: runs}
+  - shot_id: S00-156
+    turn_id: b22600606fabf2bb
+    scene: OrthogonalDeflection
+    instance: OrthogonalDeflection
+    cues:
+      t156Orthogonal: {word: Orthogonal}
+      t156Vertical: {word: Vertical}
+      t156Momentum: {word: momentum}
+      t156Upward: {word: upward, occurrence: 1}
+      t156Elite: {word: Elite}
+      t156Loses: {word: loses}
+      t156Sideways: {word: sideways}
+      t156Identity: {word: identity}
+      t156WorkingClass: {word: working-class}
+      t156Collide: {word: collide}
+  - shot_id: S00-157
+    turn_id: b761ed8faef47237
+    scene: OrthogonalDeflection
+    instance: OrthogonalDeflection
+    cues:
+      t157Buffer: {word: Buffer}
+      t157Kinetic: {word: Kinetic}
+      t157Absorbing: {word: absorbing}
+      t157Pressure: {word: pressure}
+      t157Outgroup: {word: Out-group}
+      t157Upward: {word: upward}
+      t157Apex: {word: apex}
+  - shot_id: S00-158
+    turn_id: 870a58f9bf98b2fc
+    scene: ReinforcedCollision
+    instance: ReinforcedCollision
+    cues:
+      t158Projection: {word: projection}
+      t158Deflection: {word: deflection}
+      t158Reinforce: {word: reinforce}
+      t158Each: {word: Each, occurrence: 2}
+      t158Nearest: {word: nearest}
+      t158Opposing: {word: opposing}
+      t158Redirected: {word: redirected}
+      t158Energy: {word: energy}
+      t158Collides: {word: collides}
+      t158Line: {word: line}
+      t158System: {word: system}
+  - shot_id: S00-159
+    turn_id: 31971d25f8a123b3
+    scene: ConeDepth
+    instance: ConeDepth
+    cues:
+      t159Wide: {word: wide}
+      t159Cone: {word: cone, occurrence: 1}
+      t159Restores: {word: restores}
+      t159Depth: {word: depth}
+      t159Conflict: {word: conflict}
+      t159Boundary: {word: boundary}
+      t159Real: {word: real}
+      t159Vertical: {word: vertical}
+      t159Tiers: {word: tiers}
+      t159Rules: {word: rules}
+      t159Capture: {word: capture}
+      t159Wealth: {word: wealth}
+  - shot_id: S00-160
+    turn_id: 386116db25ac87e5
+    scene: TierSplits
+    instance: TierSplits
+    cues:
+      t160Trace: {word: trace}
+      t160Splits: {word: splits}
+      t160Step: {word: step, occurrence: 1}
+      t160Five: {word: five}
+  - shot_id: S00-161
+    turn_id: a9d7a74c389a3a96
+    scene: TierSplits
+    instance: TierSplits
+    cues:
+      t161TwoTier: {word: two-tier}
+      t161Oppressor: {word: Oppressor, occurrence: 1}
+      t161Oppressed: {word: Oppressed}
+      t161Surplus: {word: surplus}
+      t161Predicts: {word: predicts}
+      t161Record: {word: record}
+  - shot_id: S00-162
+    turn_id: 6f370961a94dc38d
+    scene: TierSplits
+    instance: TierSplits
+    cues:
+      t162Splitting: {word: Splitting}
+      t162ThreeTier: {word: three-tier}
+      t162Elite: {word: Elite}
+      t162Beneficiary: {word: beneficiary}
+      t162Middle: {word: middle}
+      t162Outgroup: {word: Out-group}
+      t162Load: {word: load}
+  - shot_id: S00-163
+    turn_id: 13edd10e58497019
+    scene: TierSplits
+    instance: TierSplits
+    cues:
+      t163Compresses: {word: compresses}
+      t163Lawmaking: {word: lawmaking}
+      t163Fourth: {word: fourth}
+      t163Puppet: {word: Puppet}
+      t163Salaried: {word: salaried}
+      t163Statutes: {word: statutes}
+  - shot_id: S00-164
+    turn_id: 3372454f5b209f1e
+    scene: TierSplits
+    instance: TierSplits
+    cues:
+      t164Fifth: {word: fifth}
+      t164EnforcementClass: {word: "Enforcement Class"}
+      t164BufferClass: {word: "Buffer Class"}
+      t164Standing: {word: standing}
+      t164Defend: {word: defend}
+  - shot_id: S00-165
+    turn_id: 6e3db8feee53d49d
+    scene: PatrolDeputization
+    instance: PatrolDeputization
+    cues:
+      t165Colonial: {word: colonial}
+      t165Statutes: {word: statutes}
+      t165Conscripted: {word: conscripted}
+      t165Ordinary: {word: ordinary}
+      t165Patrols: {word: patrols}
+      t165BufferClass: {word: "Buffer Class"}
+      t165Enforcement: {word: Enforcement}
+      t165Deputization: {word: deputization}
+      t165Enslavers: {word: enslavers}
+      t165Paid: {word: paid}
+      t165Substitutes: {word: substitutes}
+      t165Place: {word: place}
+  - shot_id: S00-166
+    turn_id: fa62eadbaa77a151
+    scene: ConvictLeasing
+    instance: ConvictLeasing
+    cues:
+      t166SixtyFive: {word: sixty-five}
+      t166Thirteenth: {word: Thirteenth}
+      t166Abolished: {word: abolished}
+      t166Except: {word: except}
+      t166Crime: {word: crime}
+      t166Police: {word: police}
+      t166Sheriffs: {word: sheriffs}
+      t166Vagrancy: {word: vagrancy}
+      t166Leasing: {word: leasing}
+      t166Extract: {word: extract}
+      t166Labor: {word: labor}
+      t166Criminal: {word: criminal}
+  - shot_id: S00-167
+    turn_id: 01d1e9b4f86337ce
+    scene: ConvictLeasing
+    instance: ConvictLeasing
+    cues:
+      t167Emancipation: {word: emancipation}
+      t167Officers: {word: officers}
+      t167Policing: {word: policing}
+      t167Citizens: {word: citizens}
+      t167Patrols: {word: patrols}
+      t167Positions: {word: positions}
+      t167Authority: {word: authority}
+      t167Protection: {word: protection}
