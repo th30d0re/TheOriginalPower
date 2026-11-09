@@ -1,4 +1,5 @@
 import React from 'react';
+import {interpolate} from 'remotion';
 import {
   BootIn,
   DrawLine,
@@ -10,10 +11,13 @@ import {
   StickFigure,
   color,
   useCue,
+  useStageMs,
   type SceneProps,
 } from '@stage';
+import {ConeOnly} from '../dashboard/artifacts/FiveTierConeView';
 
 const frame = (ms: number) => Math.round((ms * 30) / 1000);
+const clampBoth = {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'} as const;
 
 const Text = ({
   at,
@@ -53,6 +57,7 @@ const Text = ({
 );
 
 export function FlatCeilingCone({segment}: SceneProps) {
+  const ms = useStageMs();
   const cue = {
     up: useCue('t147Up').at,
     line: useCue('t147Line').at,
@@ -77,6 +82,9 @@ export function FlatCeilingCone({segment}: SceneProps) {
 
   const leftBox = {x: 120, y: 175, w: 520, h: 660};
   const rightBox = {x: 680, y: 175, w: 1120, h: 660};
+  // The observer begins directly beneath I, then the camera pulls outside the cone.
+  const coneEl = interpolate(frame(ms), [frame(cue.ceiling), frame(cue.rotate)], [-90, 20], clampBoth);
+  const coneAz = interpolate(frame(ms), [frame(cue.ceiling), frame(cue.rotate)], [0, -28], clampBoth);
 
   return (
     <StageSceneFrame segment={segment}>
@@ -283,74 +291,9 @@ export function FlatCeilingCone({segment}: SceneProps) {
             beat
           />
 
-          {/* 5 Stacked Tiers inside Right Panel */}
-          {[
-            ['ELITE (E) · APEX', 85, 260, cue.elite, 'color/fill/gold'],
-            ['PUPPET CLASS (P) · POLICY', 155, 400, cue.tiers, 'color/fill/gold'],
-            ['ENFORCEMENT CLASS (F) · CARCERAL', 225, 540, cue.enforcement, 'color/fill/gold'],
-            ['BUFFER CLASS · MARGINAL IN-GROUP', 295, 680, cue.buffer, 'color/fill/gold'],
-            ['OUT-GROUP (O) · EXTRACTION SURFACE', 365, 820, cue.base, 'color/marker/race'],
-          ].map(([name, y, w, at, tone]) => {
-            const ty = Number(y);
-            const tw = Number(w);
-            const tx = 560 - tw / 2;
-            return (
-              <React.Fragment key={String(name)}>
-                <div style={{position: 'absolute', left: tx, top: ty, width: tw, height: 48}}>
-                  <DrawRect
-                    box={{x: 0, y: 0, w: tw, h: 48}}
-                    startFrame={frame(Number(at))}
-                    durationFrames={14}
-                    strokeToken={String(tone)}
-                    fillToken="color/fill/panel-render"
-                    glowToken={String(tone)}
-                    seed={tx + ty}
-                    beat
-                  />
-                  <Flicker startFrame={frame(Number(at))} durationFrames={14} beat><div
-                    style={{
-                      position: 'absolute',
-                      inset: 0,
-                      display: 'grid',
-                      placeItems: 'center',
-                      font: '600 20px "IBM Plex Mono"',
-                      color: color(String(tone)),
-                    }}
-                  >
-                    {String(name)}
-                  </div></Flicker>
-                </div>
-              </React.Fragment>
-            );
-          })}
-
-          <FitBox
-            text="FLAT CEILING"
-            x={1400}
-            y={199}
-            size={24}
-            weight={600}
-            tag="SURFACE"
-            startFrame={frame(cue.ceiling)}
-            durationFrames={16}
-            textToken="color/text/primary"
-            strokeToken="color/fill/gold"
-            fillToken="color/fill/panel-render"
-            accentToken="color/fill/gold"
-            beat
-          />
-          <DrawLine
-            points={[
-              [800, 532],
-              [1680, 532],
-            ]}
-            startFrame={frame(cue.ceiling)}
-            durationFrames={16}
-            strokeToken="color/fill/gold"
-            glowToken="color/fill/gold"
-            strokeWidth={4}
-            beat
-          />
+          {ms >= cue.farther && <div style={{position: 'absolute', left: 60, top: 72, width: 1000, height: 440}}>
+            <ConeOnly width={1000} height={440} model={{el: coneEl, az: coneAz, al: 1}} />
+          </div>}
 
           {/* Perspective 1: Out-group Observer Looking UP */}
           <StickFigure

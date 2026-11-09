@@ -1,17 +1,13 @@
 import React from 'react';
 import {interpolate} from 'remotion';
 import {DrawLine, DrawRect, useCue, useStageMs, type SceneProps} from '@stage';
-import {FiveTierConeView} from '../dashboard/artifacts/FiveTierConeView';
+import {ConeOnly} from '../dashboard/artifacts/FiveTierConeView';
 import {Copy, Panel, Scene, frame} from './shared';
 
 const clampBoth = {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'} as const;
 
-// The cone widget's natural expanded content box, scaled down to fit the scene panel.
-const CONE_NATURAL = {w: 1368, h: 828};
 const CONE_PANEL = {x: 290, y: 220, w: 1410, h: 770};
 const CONE_INNER = {x: CONE_PANEL.x + 22, y: CONE_PANEL.y + 22, w: CONE_PANEL.w - 44, h: CONE_PANEL.h - 44};
-const CONE_SCALE = CONE_INNER.h / CONE_NATURAL.h;
-const CONE_LEFT = CONE_INNER.x + (CONE_INNER.w - CONE_NATURAL.w * CONE_SCALE) / 2;
 
 // Turns 160–164: the flat two-set picture is the collapsed cone seen from inside O (al = 1, E
 // hidden behind the lower tiers). Each numbered step of the narration pulls the tiers further
@@ -38,7 +34,7 @@ export function TierSplits({segment}: SceneProps) {
   const al = interpolate(
     frame(ms),
     [frame(cue.twoTier), ...swing(cue.threeTier), ...swing(cue.fourth), ...swing(cue.fifth)],
-    [1, 1, 0.4, 0.4, 0.2, 0.2, 0.05],
+    [1, 1, 0.62, 0.62, 0.3, 0.3, 0.05],
     clampBoth,
   );
   const steps: [string, number][] = [['1', cue.splits], ['2', cue.twoTier], ['3', cue.threeTier], ['4', cue.fourth], ['5', cue.fifth]];
@@ -64,10 +60,8 @@ export function TierSplits({segment}: SceneProps) {
       </React.Fragment>;
     })}
     <DrawRect box={CONE_PANEL} startFrame={frame(cue.splits)} durationFrames={20} strokeToken="color/line/hairline" fillToken="color/fill/panel-render" glowToken="color/fill/gold"/>
-    {ms >= cue.splits && <div style={{position: 'absolute', left: CONE_LEFT, top: CONE_INNER.y, width: CONE_NATURAL.w * CONE_SCALE, height: CONE_INNER.h, overflow: 'hidden'}}>
-      <div style={{width: CONE_NATURAL.w, height: CONE_NATURAL.h, transform: `scale(${CONE_SCALE})`, transformOrigin: 'top left'}}>
-        <FiveTierConeView mode="expanded" width={CONE_NATURAL.w} height={CONE_NATURAL.h} interactive={false} model={{el: -90, az: 0, al}}/>
-      </div>
+    {ms >= cue.splits && <div style={{position: 'absolute', left: CONE_INNER.x + 28, top: CONE_INNER.y + 10, width: CONE_INNER.w - 56, height: CONE_INNER.h - 20}}>
+      <ConeOnly width={CONE_INNER.w - 56} height={CONE_INNER.h - 20} model={{el: 20, az: -28, al}}/>
     </div>}
     {caption && <Copy at={caption[0]} box={{x: 350, y: 1006, w: 1300, h: 30}} size={20} align="center" tone={caption[2]}>{caption[1]}</Copy>}
   </Scene>;

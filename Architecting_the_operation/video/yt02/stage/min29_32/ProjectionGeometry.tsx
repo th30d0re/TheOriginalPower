@@ -11,6 +11,7 @@ import {
   useCue,
   type SceneProps,
 } from '@stage';
+import {ConeOnly} from '../dashboard/artifacts/FiveTierConeView';
 
 const frame = (ms: number) => Math.round((ms * 30) / 1000);
 
@@ -115,88 +116,12 @@ export function ProjectionGeometry({segment}: SceneProps) {
             beat
           />
 
-          {/* Cone Outline */}
-          <DrawLine
-            points={[
-              [360, 95],
-              [80, 480],
-              [640, 480],
-              [360, 95],
-            ]}
-            startFrame={frame(cue.cone)}
-            durationFrames={24}
-            strokeToken="color/fill/gold"
-            glowToken="color/fill/gold"
-            strokeWidth={4}
-            beat
-          />
-
-          {/* Vertical z-axis */}
-          <DrawLine
-            points={[
-              [360, 490],
-              [360, 75],
-            ]}
-            startFrame={frame(cue.cone)}
-            durationFrames={16}
-            strokeToken="color/line/wire"
-            strokeWidth={3}
-            end="arrow"
-          />
-          <Flicker startFrame={frame(cue.cone)} durationFrames={14} beat><div
-            data-text="z-axis-label"
-            data-box={`${leftPanel.x + 372} ${leftPanel.y + 70} 140 30`}
-            style={{
-              position: 'absolute',
-              left: 372,
-              top: 70,
-              width: 140,
-              font: '500 20px "IBM Plex Mono"',
-              color: color('color/text/muted'),
-            }}
-          >
-            z (extraction)
-          </div></Flicker>
-
-          {/* 5 Tiers in Cone */}
-          {[
-            ['ELITE (E)', 115, 200, cue.cone, 'color/fill/gold'],
-            ['PUPPET CLASS (P)', 185, 290, cue.cone, 'color/fill/gold'],
-            ['ENFORCEMENT CLASS (F)', 255, 380, cue.cone, 'color/fill/gold'],
-            ['BUFFER CLASS', 325, 470, cue.cone, 'color/fill/gold'],
-            ['OUT-GROUP (O)', 395, 560, cue.cone, 'color/marker/race'],
-          ].map(([name, y, w, at, tone]) => {
-            const ty = Number(y);
-            const tw = Number(w);
-            const tx = 360 - tw / 2;
-            return (
-              <React.Fragment key={String(name)}>
-                <div style={{position: 'absolute', left: tx, top: ty, width: tw, height: 44}}>
-                  <DrawRect
-                    box={{x: 0, y: 0, w: tw, h: 44}}
-                    startFrame={frame(Number(at))}
-                    durationFrames={14}
-                    strokeToken={String(tone)}
-                    fillToken="color/fill/panel-render"
-                    glowToken={String(tone)}
-                    seed={tx}
-                  />
-                  <Flicker startFrame={frame(Number(at))} durationFrames={14} beat><div
-                    style={{
-                      position: 'absolute',
-                      inset: 0,
-                      display: 'grid',
-                      placeItems: 'center',
-                      font: '600 20px "IBM Plex Mono"',
-                      color: color(String(tone)),
-                    }}
-                  >
-                    {String(name)}
-                  </div></Flicker>
-                </div>
-              </React.Fragment>
-            );
-          })}
+          {/** The shared projected cone keeps the five real tiers rather than a diagrammatic pyramid. */}
+          <Flicker startFrame={frame(cue.cone)} durationFrames={16} beat>
+            <div style={{position: 'absolute', left: 30, top: 88, width: 660, height: 430}}>
+              <ConeOnly width={660} height={430} model={{el: 20, az: -28, al: 1}} />
+            </div>
+          </Flicker>
 
           <Flicker startFrame={frame(cue.cone)} durationFrames={14} beat><div
             data-text="cone-depth-note"

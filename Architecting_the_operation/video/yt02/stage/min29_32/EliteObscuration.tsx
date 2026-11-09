@@ -1,4 +1,5 @@
 import React from 'react';
+import {interpolate} from 'remotion';
 import {
   BootIn,
   DrawLine,
@@ -7,13 +8,15 @@ import {
   Flicker,
   KitSound,
   StageSceneFrame,
-  StickFigure,
   color,
   useCue,
+  useStageMs,
   type SceneProps,
 } from '@stage';
+import {ConeOnly} from '../dashboard/artifacts/FiveTierConeView';
 
 const frame = (ms: number) => Math.round((ms * 30) / 1000);
+const clampBoth = {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'} as const;
 
 const Text = ({
   at,
@@ -52,53 +55,8 @@ const Text = ({
   </Flicker>
 );
 
-const Tier = ({
-  cx,
-  y,
-  w,
-  label,
-  at,
-  tone,
-  seed,
-}: {
-  cx: number;
-  y: number;
-  w: number;
-  label: string;
-  at: number;
-  tone: string;
-  seed: number;
-}) => {
-  const x = cx - w / 2;
-  return (
-    <div style={{position: 'absolute', left: x, top: y, width: w, height: 52}}>
-      <DrawRect
-        box={{x: 0, y: 0, w, h: 52}}
-        startFrame={frame(at)}
-        durationFrames={14}
-        strokeToken={tone}
-        fillToken="color/fill/panel-render"
-        glowToken={tone}
-        seed={seed}
-        beat
-      />
-      <Flicker startFrame={frame(at)} durationFrames={14} beat><div
-        style={{
-          position: 'absolute',
-          inset: 0,
-          display: 'grid',
-          placeItems: 'center',
-          font: '600 20px "IBM Plex Mono"',
-          color: color(tone),
-        }}
-      >
-        {label}
-      </div></Flicker>
-    </div>
-  );
-};
-
 export function EliteObscuration({segment}: SceneProps) {
+  const ms = useStageMs();
   const cue = {
     elite: useCue('t153Elite').at,
     obscuration: useCue('t153Obscuration').at,
@@ -115,6 +73,8 @@ export function EliteObscuration({segment}: SceneProps) {
 
   const leftBox = {x: 120, y: 230, w: 820, h: 600};
   const rightBox = {x: 1000, y: 230, w: 820, h: 600};
+  // Separation resolves the layers; alignment returns them to the observer's sightline.
+  const al = interpolate(frame(ms), [frame(cue.alignment), frame(cue.blends)], [0, 1], clampBoth);
 
   return (
     <StageSceneFrame segment={segment}>
@@ -163,74 +123,11 @@ export function EliteObscuration({segment}: SceneProps) {
           />
         </div>
 
-        <Tier cx={530} y={330} w={360} label="ELITE" at={cue.top} tone="color/fill/gold" seed={502} />
-        <Tier cx={530} y={430} w={440} label="PUPPET CLASS" at={cue.puppet} tone="color/fill/gold" seed={503} />
-        <Tier cx={530} y={530} w={520} label="ENFORCEMENT CLASS" at={cue.enforcement} tone="color/fill/gold" seed={504} />
-        <DrawLine
-          points={[
-            [530, 382],
-            [530, 430],
-          ]}
-          startFrame={frame(cue.alignment)}
-          durationFrames={14}
-          strokeToken="color/fill/gold"
-          glowToken="color/fill/gold"
-          strokeWidth={5}
-          beat
-        />
-        <DrawLine
-          points={[
-            [530, 482],
-            [530, 530],
-          ]}
-          startFrame={frame(cue.alignment)}
-          durationFrames={14}
-          strokeToken="color/fill/gold"
-          glowToken="color/fill/gold"
-          strokeWidth={5}
-        />
-        <DrawLine
-          points={[
-            [530, 582],
-            [530, 640],
-          ]}
-          startFrame={frame(cue.control)}
-          durationFrames={14}
-          strokeToken="color/fill/gold"
-          glowToken="color/fill/gold"
-          strokeWidth={5}
-          end="arrow"
-          beat
-        />
-        <FitBox
-          text="CONTROL NODE"
-          x={390}
-          y={650}
-          size={28}
-          weight={600}
-          tag="SYSTEM"
-          startFrame={frame(cue.control)}
-          durationFrames={16}
-          textToken="color/text/primary"
-          strokeToken="color/fill/gold"
-          fillToken="color/fill/panel-render"
-          accentToken="color/fill/gold"
-          beat
-        />
-        <StickFigure
-          x={530}
-          y={770}
-          group="outgroup"
-          emphasis={1}
-          scale={1.25}
-          pose="raise"
-          animate
-          startFrame={frame(cue.alignment)}
-          durationFrames={16}
-        />
-        <Text at={cue.alignment} box={{x: 590, y: 748, w: 300, h: 30}} size={20} tone="color/fill/gold" weight={600}>
-          OBSERVER BELOW
-        </Text>
+        {ms >= cue.alignment && <div style={{position: 'absolute', left: 205, top: 305, width: 650, height: 460}}>
+          <ConeOnly width={650} height={460} model={{el: -90, az: 0, al}} />
+        </div>}
+        <Text at={cue.top} box={{x: 140, y: 350, w: 145, h: 28}} size={18} tone="color/fill/gold" align="right" weight={600}>E · APEX →</Text>
+        <Text at={cue.control} box={{x: 140, y: 590, w: 145, h: 28}} size={18} tone="color/fill/gold" align="right" weight={600}>I · BUFFER →</Text>
 
         <div style={{position: 'absolute', left: rightBox.x, top: rightBox.y, width: rightBox.w, height: rightBox.h}}>
           <BootIn
@@ -269,18 +166,9 @@ export function EliteObscuration({segment}: SceneProps) {
           />
         </div>
 
-        <Tier cx={1410} y={370} w={520} label="MARGINAL IN-GROUP" at={cue.marginal} tone="color/fill/gold" seed={506} />
-        <Tier cx={1410} y={490} w={580} label="OUT-GROUP" at={cue.outgroup} tone="color/marker/race" seed={507} />
-        <StickFigure
-          x={1090}
-          y={660}
-          group="outgroup"
-          emphasis={1}
-          scale={1.25}
-          animate
-          startFrame={frame(cue.bottom)}
-          durationFrames={16}
-        />
+        <Text at={cue.outgroup} box={{x: 1040, y: 390, w: 700, h: 32}} size={22} tone="color/marker/race" align="center" weight={600}>
+          O · OUT-GROUP BASE
+        </Text>
         <DrawLine
           points={[
             [940, 556],

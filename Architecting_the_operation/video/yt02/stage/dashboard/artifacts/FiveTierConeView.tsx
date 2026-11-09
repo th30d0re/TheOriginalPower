@@ -287,6 +287,34 @@ export function FiveTierConeView(props: FiveTierConeViewProps): JSX.Element {
   return <StaticFiveTierConeView {...props} />;
 }
 
+/**
+ * The cone graphic without the dashboard card around it.  Stage scenes use this
+ * static path so their cue-driven model can fill an arbitrary composition box
+ * without inheriting controls, copy, or verdict UI from the expanded view.
+ */
+export function ConeOnly({
+  model,
+  width,
+  height,
+}: {
+  model: Partial<FiveTierConeModel>;
+  width: number;
+  height: number;
+}): JSX.Element {
+  const resolved = {...DEFAULT_MODEL, ...model};
+  return (
+    <ConeSvg
+      width={width}
+      height={height}
+      el={resolved.el}
+      az={resolved.az}
+      al={resolved.al}
+      interactive={false}
+      bare
+    />
+  );
+}
+
 // ---------------------------------------------------------------------------
 // STATIC RENDER (deterministic: zero useState / useEffect / useReducer)
 // ---------------------------------------------------------------------------
@@ -1460,6 +1488,7 @@ function ConeSvg({
   interactive,
   onDrag,
   deployedTiers,
+  bare = false,
 }: {
   width: number;
   height: number;
@@ -1469,6 +1498,7 @@ function ConeSvg({
   interactive: boolean;
   onDrag?: (dAz: number, dEl: number) => void;
   deployedTiers?: string[];
+  bare?: boolean;
 }) {
   const se = Math.abs(Math.sin(el * D2R));
   const cInk = color('color/text/primary');
@@ -1617,12 +1647,12 @@ function ConeSvg({
       width={width}
       height={height}
       viewBox="0 0 720 560"
+      preserveAspectRatio={bare ? 'none' : undefined}
       role="img"
       aria-label="The five-tier cone, orthographic 3D projection"
       style={{
         display: 'block',
-        background: cWell,
-        borderRadius: 8,
+        ...(bare ? {} : {background: cWell, borderRadius: 8}),
         touchAction: 'none',
         cursor: interactive ? 'grab' : 'default',
       }}
@@ -1693,7 +1723,7 @@ function ConeSvg({
       <path d={dh} fill="none" stroke={cRule} strokeWidth={1.6} strokeOpacity={0.8} />
 
       {/* Axis line or bottom observer note */}
-      {el < -80 ? (
+      {el < -80 && !bare ? (
         <text
           x={20}
           y={540}
