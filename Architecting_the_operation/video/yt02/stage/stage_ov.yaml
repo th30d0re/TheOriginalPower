@@ -2959,3 +2959,127 @@ shots:
       t255Three: {word: Three}
       t255Romanus: {word: Romanus}
       t255Monopoly: {word: monopoly}
+  # Minutes 56–59: turns 256–269 (Zurara, Lagos, and Portuguese fiscal architecture).
+  - shot_id: S00-256
+    turn_id: eecf055c3b247e42
+    scene: ZuraraChronicle
+    instance: ZuraraChronicle
+    cues:
+      t256Right: {word: Right}
+      t256Ideological: {word: ideological}
+      t256Compiled: {word: compiled}
+  - shot_id: S00-257
+    turn_id: 2bf94b3148fd67c9
+    scene: ZuraraChronicle
+    instance: ZuraraChronicle
+    cues:
+      t257King: {word: King}
+      t257Commissioned: {word: commissioned}
+      t257Zurara: {word: Zurara}
+      t257Chronicle: {word: Chronicle}
+  - shot_id: S00-258
+    turn_id: c77310bcf96cab68
+    scene: ZuraraChronicle
+    instance: ZuraraChronicle
+    cues:
+      t258Kendi: {word: Kendi}
+      t258First: {word: first}
+      t258Category: {word: category}
+  - shot_id: S00-259
+    turn_id: d5708ebc468f4a0e
+    scene: LagosCollapse
+    instance: LagosCollapse
+    cues:
+      t259Auction: {word: auction}
+      t259Lagos: {word: Lagos}
+      t259Varied: {word: varied}
+      t259Skin: {word: skin}
+  - shot_id: S00-260
+    turn_id: aad3f856f139dcc8
+    scene: LagosCollapse
+    instance: LagosCollapse
+    cues:
+      t260Collapsed: {word: collapsed}
+      t260Degraded: {word: degraded}
+      t260Beasts: {word: beasts}
+  - shot_id: S00-261
+    turn_id: 623341539ca77b3a
+    scene: LagosCollapse
+    instance: LagosCollapse
+    cues:
+      t261Enslavement: {word: enslavement}
+      t261Separation: {word: separation}
+      t261Rescue: {word: rescue}
+  - shot_id: S00-262
+    turn_id: 0bb4aecb13d8f990
+    scene: ZuraranIdeology
+    instance: ZuraranIdeology
+    cues:
+      t262Step: {word: Step}
+      t262Ideology: {word: ideology}
+      t262Running: {word: running}
+  - shot_id: S00-263
+    turn_id: 50935439867953c2
+    scene: ZuraranIdeology
+    instance: ZuraranIdeology
+    cues:
+      t263Modern: {word: modern}
+      t263Firearm: {word: firearm}
+      t263Repeats: {word: repeats}
+  - shot_id: S00-264
+    turn_id: 058e7216b599cade
+    scene: ZuraranIdeology
+    instance: ZuraranIdeology
+    cues:
+      t264Check: {word: Check}
+      t264Prediction: {word: Prediction}
+      t264Kidnapping: {word: kidnapping}
+      t264Dum: {word: Dum}
+  - shot_id: S00-265
+    turn_id: 3e58613955c2a7bf
+    scene: RoyalFiscalArchitecture
+    instance: RoyalFiscalArchitecture
+    cues:
+      t265Commissioned: {word: commissioned}
+      t265Author: {word: author}
+      t265Order: {word: Order}
+      t265Henry: {word: Henry}
+      t265Beneficiary: {word: beneficiary}
+  - shot_id: S00-266
+    turn_id: 4eadb9f2aab74954
+    scene: RoyalFiscalArchitecture
+    instance: RoyalFiscalArchitecture
+    cues:
+      t266Joao: {word: Joao}
+      t266Fiscal: {word: fiscal}
+      t266Casa: {word: Casa}
+      t266Registered: {word: registered}
+      t266Taxed: {word: taxed}
+      t266Licensed: {word: licensed}
+  - shot_id: S00-267
+    turn_id: adcc099d789e508e
+    scene: StatusWage
+    instance: StatusWage
+    cues:
+      t267Equation: {word: Equation}
+      t267Status: {word: Status}
+      t267Base: {word: Base}
+      t267Suppression: {word: suppression}
+      t267Psi: {word: psi}
+  - shot_id: S00-268
+    turn_id: c28f346fa2fbdc5d
+    scene: StatusWage
+    instance: StatusWage
+    cues:
+      t268Psychological: {word: psychological}
+      t268Material: {word: material}
+  - shot_id: S00-269
+    turn_id: 79306d1449b283e8
+    scene: StatusWage
+    instance: StatusWage
+    cues:
+      t269Racialized: {word: racialized}
+      t269Outgroup: {word: Out-group}
+      t269Crown: {word: Crown}
+      t269Wage: {word: wage}
+      t269Elevated: {word: elevated}

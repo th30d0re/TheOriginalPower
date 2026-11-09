@@ -3,10 +3,10 @@
   "fps": 30,
   "width": 1920,
   "height": 1080,
-  "duration_ms": 3403480,
+  "duration_ms": 3584210,
   "range": {
     "start_ms": 0,
-    "end_ms": 3403480
+    "end_ms": 3584210
   },
   "audio": "stage/YT02v2_ov/YT02v2_ov.mp3",
   "cues": {
@@ -1674,6 +1674,59 @@
     "t255Three": 3386250,
     "t255Romanus": 3392250,
     "t255Monopoly": 3396970,
+    "t256Right": 3403030,
+    "t256Ideological": 3406470,
+    "t256Compiled": 3407710,
+    "t257King": 3409380,
+    "t257Commissioned": 3411360,
+    "t257Zurara": 3414940,
+    "t257Chronicle": 3421940,
+    "t258Kendi": 3426740,
+    "t258First": 3432780,
+    "t258Category": 3438760,
+    "t259Auction": 3442340,
+    "t259Lagos": 3443573,
+    "t259Varied": 3445940,
+    "t259Skin": 3446940,
+    "t260Collapsed": 3451110,
+    "t260Degraded": 3453570,
+    "t260Beasts": 3456190,
+    "t261Enslavement": 3460820,
+    "t261Separation": 3462120,
+    "t261Rescue": 3464640,
+    "t262Step": 3469150,
+    "t262Ideology": 3484250,
+    "t262Running": 3487090,
+    "t263Modern": 3489720,
+    "t263Firearm": 3492940,
+    "t263Repeats": 3499500,
+    "t264Check": 3502710,
+    "t264Prediction": 3503770,
+    "t264Kidnapping": 3507690,
+    "t264Dum": 3514870,
+    "t265Commissioned": 3523540,
+    "t265Author": 3523920,
+    "t265Order": 3527760,
+    "t265Henry": 3529660,
+    "t265Beneficiary": 3531460,
+    "t266Joao": 3535590,
+    "t266Fiscal": 3536990,
+    "t266Casa": 3539950,
+    "t266Registered": 3543590,
+    "t266Taxed": 3544110,
+    "t266Licensed": 3545230,
+    "t267Equation": 3548210,
+    "t267Status": 3554910,
+    "t267Base": 3556870,
+    "t267Suppression": 3558330,
+    "t267Psi": 3559350,
+    "t268Psychological": 3565000,
+    "t268Material": 3566700,
+    "t269Racialized": 3569650,
+    "t269Outgroup": 3570450,
+    "t269Crown": 3573450,
+    "t269Wage": 3577230,
+    "t269Elevated": 3578130,
     "S00-00.title": 400,
     "S00-00.archives": 3960,
     "S00-00.equations": 4360,
@@ -3337,7 +3390,60 @@
     "S00-254.t254Perpetual": 3382390,
     "S00-255.t255Three": 3386250,
     "S00-255.t255Romanus": 3392250,
-    "S00-255.t255Monopoly": 3396970
+    "S00-255.t255Monopoly": 3396970,
+    "S00-256.t256Right": 3403030,
+    "S00-256.t256Ideological": 3406470,
+    "S00-256.t256Compiled": 3407710,
+    "S00-257.t257King": 3409380,
+    "S00-257.t257Commissioned": 3411360,
+    "S00-257.t257Zurara": 3414940,
+    "S00-257.t257Chronicle": 3421940,
+    "S00-258.t258Kendi": 3426740,
+    "S00-258.t258First": 3432780,
+    "S00-258.t258Category": 3438760,
+    "S00-259.t259Auction": 3442340,
+    "S00-259.t259Lagos": 3443573,
+    "S00-259.t259Varied": 3445940,
+    "S00-259.t259Skin": 3446940,
+    "S00-260.t260Collapsed": 3451110,
+    "S00-260.t260Degraded": 3453570,
+    "S00-260.t260Beasts": 3456190,
+    "S00-261.t261Enslavement": 3460820,
+    "S00-261.t261Separation": 3462120,
+    "S00-261.t261Rescue": 3464640,
+    "S00-262.t262Step": 3469150,
+    "S00-262.t262Ideology": 3484250,
+    "S00-262.t262Running": 3487090,
+    "S00-263.t263Modern": 3489720,
+    "S00-263.t263Firearm": 3492940,
+    "S00-263.t263Repeats": 3499500,
+    "S00-264.t264Check": 3502710,
+    "S00-264.t264Prediction": 3503770,
+    "S00-264.t264Kidnapping": 3507690,
+    "S00-264.t264Dum": 3514870,
+    "S00-265.t265Commissioned": 3523540,
+    "S00-265.t265Author": 3523920,
+    "S00-265.t265Order": 3527760,
+    "S00-265.t265Henry": 3529660,
+    "S00-265.t265Beneficiary": 3531460,
+    "S00-266.t266Joao": 3535590,
+    "S00-266.t266Fiscal": 3536990,
+    "S00-266.t266Casa": 3539950,
+    "S00-266.t266Registered": 3543590,
+    "S00-266.t266Taxed": 3544110,
+    "S00-266.t266Licensed": 3545230,
+    "S00-267.t267Equation": 3548210,
+    "S00-267.t267Status": 3554910,
+    "S00-267.t267Base": 3556870,
+    "S00-267.t267Suppression": 3558330,
+    "S00-267.t267Psi": 3559350,
+    "S00-268.t268Psychological": 3565000,
+    "S00-268.t268Material": 3566700,
+    "S00-269.t269Racialized": 3569650,
+    "S00-269.t269Outgroup": 3570450,
+    "S00-269.t269Crown": 3573450,
+    "S00-269.t269Wage": 3577230,
+    "S00-269.t269Elevated": 3578130
   },
   "segments": [
     {
@@ -6368,7 +6474,7 @@
       "instance": "PapalTitle",
       "scene": "PapalTitle",
       "start_ms": 3343310,
-      "end_ms": 3403480,
+      "end_ms": 3403030,
       "shots": [
         {
           "shot_id": "S00-252",
@@ -6399,7 +6505,159 @@
           "turn_id": "5859e3f3080a30d1",
           "turn_index": 255,
           "start_ms": 3386250,
-          "end_ms": 3403480,
+          "end_ms": 3403030,
+          "props": {}
+        }
+      ]
+    },
+    {
+      "instance": "ZuraraChronicle",
+      "scene": "ZuraraChronicle",
+      "start_ms": 3403030,
+      "end_ms": 3440040,
+      "shots": [
+        {
+          "shot_id": "S00-256",
+          "turn_id": "eecf055c3b247e42",
+          "turn_index": 256,
+          "start_ms": 3403030,
+          "end_ms": 3409380,
+          "props": {}
+        },
+        {
+          "shot_id": "S00-257",
+          "turn_id": "2bf94b3148fd67c9",
+          "turn_index": 257,
+          "start_ms": 3409380,
+          "end_ms": 3425040,
+          "props": {}
+        },
+        {
+          "shot_id": "S00-258",
+          "turn_id": "c77310bcf96cab68",
+          "turn_index": 258,
+          "start_ms": 3425040,
+          "end_ms": 3440040,
+          "props": {}
+        }
+      ]
+    },
+    {
+      "instance": "LagosCollapse",
+      "scene": "LagosCollapse",
+      "start_ms": 3440040,
+      "end_ms": 3469150,
+      "shots": [
+        {
+          "shot_id": "S00-259",
+          "turn_id": "d5708ebc468f4a0e",
+          "turn_index": 259,
+          "start_ms": 3440040,
+          "end_ms": 3450250,
+          "props": {}
+        },
+        {
+          "shot_id": "S00-260",
+          "turn_id": "aad3f856f139dcc8",
+          "turn_index": 260,
+          "start_ms": 3450250,
+          "end_ms": 3459460,
+          "props": {}
+        },
+        {
+          "shot_id": "S00-261",
+          "turn_id": "623341539ca77b3a",
+          "turn_index": 261,
+          "start_ms": 3459460,
+          "end_ms": 3469150,
+          "props": {}
+        }
+      ]
+    },
+    {
+      "instance": "ZuraranIdeology",
+      "scene": "ZuraranIdeology",
+      "start_ms": 3469150,
+      "end_ms": 3523440,
+      "shots": [
+        {
+          "shot_id": "S00-262",
+          "turn_id": "0bb4aecb13d8f990",
+          "turn_index": 262,
+          "start_ms": 3469150,
+          "end_ms": 3489260,
+          "props": {}
+        },
+        {
+          "shot_id": "S00-263",
+          "turn_id": "50935439867953c2",
+          "turn_index": 263,
+          "start_ms": 3489260,
+          "end_ms": 3502710,
+          "props": {}
+        },
+        {
+          "shot_id": "S00-264",
+          "turn_id": "058e7216b599cade",
+          "turn_index": 264,
+          "start_ms": 3502710,
+          "end_ms": 3523440,
+          "props": {}
+        }
+      ]
+    },
+    {
+      "instance": "RoyalFiscalArchitecture",
+      "scene": "RoyalFiscalArchitecture",
+      "start_ms": 3523440,
+      "end_ms": 3548210,
+      "shots": [
+        {
+          "shot_id": "S00-265",
+          "turn_id": "3e58613955c2a7bf",
+          "turn_index": 265,
+          "start_ms": 3523440,
+          "end_ms": 3534050,
+          "props": {}
+        },
+        {
+          "shot_id": "S00-266",
+          "turn_id": "4eadb9f2aab74954",
+          "turn_index": 266,
+          "start_ms": 3534050,
+          "end_ms": 3548210,
+          "props": {}
+        }
+      ]
+    },
+    {
+      "instance": "StatusWage",
+      "scene": "StatusWage",
+      "start_ms": 3548210,
+      "end_ms": 3584210,
+      "shots": [
+        {
+          "shot_id": "S00-267",
+          "turn_id": "adcc099d789e508e",
+          "turn_index": 267,
+          "start_ms": 3548210,
+          "end_ms": 3561000,
+          "props": {}
+        },
+        {
+          "shot_id": "S00-268",
+          "turn_id": "c28f346fa2fbdc5d",
+          "turn_index": 268,
+          "start_ms": 3561000,
+          "end_ms": 3568650,
+          "props": {}
+        },
+        {
+          "shot_id": "S00-269",
+          "turn_id": "79306d1449b283e8",
+          "turn_index": 269,
+          "start_ms": 3568650,
+          "end_ms": 3584210,
           "props": {}
         }
       ]
