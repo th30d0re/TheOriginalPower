@@ -1,5 +1,5 @@
 import React from 'react';
-import {DefinitionCard, DrawLine, DrawRect, FitBox, StickFigure, useCue, useStageMs, type SceneProps} from '@stage';
+import {DefinitionCard, DrawLine, DrawRect, FitBox, QRCode, StickFigure, color, useCue, useStageMs, type SceneProps} from '@stage';
 import {Copy, Panel, Scene, frame} from './shared';
 import {AtlanticMap, CineStill} from '../min53_56/PortugalVisuals';
 
@@ -19,5 +19,11 @@ export function ZuraraChronicle({segment}:SceneProps) {
     <Copy at={c.first} box={{x:930,y:670,w:660,h:36}} size={25} align="center" tone="color/marker/race">FIRST RACIAL CATEGORY</Copy>
     <Copy at={c.category} box={{x:930,y:720,w:660,h:28}} size={20} align="center" mono tone="color/text/soft">PEOPLES → ONE CATEGORY</Copy>
     <CineStill name="242-zurara-chronicler" at={c.zurara} until={c.chronicle} caption="PORTUGAL · 1453"/>
+    {ms >= c.chronicle && <div data-shared="SourceLine" style={{position:'absolute',right:116,top:928,display:'flex',alignItems:'center',gap:16,opacity:Math.max(0,Math.min(1,(ms-c.chronicle)/267)),pointerEvents:'none'}}>
+      <div style={{font:'400 20px "IBM Plex Mono"',lineHeight:1.35,letterSpacing:.35,color:color('color/text/muted'),textAlign:'right',whiteSpace:'nowrap'}}>
+        Zurara · Chronicle of Guinea (Hakluyt 1896)
+      </div>
+      <QRCode url="https://archive.org/details/chronicleofdisco01zura" size={112}/>
+    </div>}
   </Scene>;
 }

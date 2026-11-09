@@ -1,5 +1,5 @@
 import React from 'react';
-import {DrawLine, KitSound, StageSceneFrame, Trace, useCue, useStageMs, type SceneProps} from '@stage';
+import {DrawLine, KitSound, QRCode, StageSceneFrame, Trace, color, useCue, useStageMs, type SceneProps} from '@stage';
 import {AtlanticMap, Copy, Panel} from './shared';
 
 export function PortugalAuthorship({segment}:SceneProps){
@@ -14,5 +14,11 @@ export function PortugalAuthorship({segment}:SceneProps){
     <Copy at={cue.casa} box={{x:420,y:570,w:520,h:38}} size={28}>ATLANTIC SYSTEM</Copy><Trace points={[[215,646],[1100,646]]} drawn={Math.max(0,Math.min(1,(ms-cue.selected)/700))} width={5} strokeToken="color/marker/race" glowToken="color/marker/race"/>
     <Panel box={{x:1320,y:252,w:480,h:520}} at={cue.zurara} red/><Copy at={cue.profitable} box={{x:1356,y:300,w:400,h:32}} size={24}>PROFITABLE TRADE</Copy><Copy at={cue.zurara} box={{x:1356,y:406,w:390,h:60}} size={30} tone="color/marker/race">MORAL COVER</Copy>
     <Panel box={{x:330,y:850,w:1260,h:72}} at={cue.dubois}/><Copy at={cue.propaganda} box={{x:364,y:870,w:800,h:30}} size={25}>PROPAGANDA OF HISTORY</Copy><Copy at={cue.downward} box={{x:1160,y:872,w:390,h:27}} size={20} tone="color/marker/race">RESPONSIBILITY DOWNWARD</Copy>
+    {ms >= cue.zurara && <div data-shared="SourceLine" style={{position:'absolute',right:116,top:928,display:'flex',alignItems:'center',gap:16,opacity:Math.max(0,Math.min(1,(ms-cue.zurara)/267)),pointerEvents:'none'}}>
+      <div style={{font:'400 20px "IBM Plex Mono"',lineHeight:1.35,letterSpacing:.35,color:color('color/text/muted'),textAlign:'right',whiteSpace:'nowrap'}}>
+        Zurara · Chronicle of Guinea
+      </div>
+      <QRCode url="https://archive.org/details/chronicleofdisco01zura" size={112}/>
+    </div>}
   </KitSound></StageSceneFrame>;
 }

@@ -1,10 +1,11 @@
 import React from 'react';
-import {DrawLine, KitSound, StageSceneFrame, StickFigure, useCue, type SceneProps} from '@stage';
+import {DrawLine, KitSound, QRCode, StageSceneFrame, StickFigure, color, useCue, useStageMs, type SceneProps} from '@stage';
 import {Copy, Panel, Tag, frame} from './Visuals';
 
 // Turns 126–130: Tajfel's minimal-group apparatus in three panels —
 // arbitrary assignment, zero prior stake, and the observed reward gap.
 export function MinimalGroups({segment}: SceneProps) {
+  const ms = useStageMs();
   const c = {
     henri: useCue('t126Henri').at, minimal: useCue('t126Minimal').at, theory: useCue('t126Theory').at, evidence: useCue('t126Evidence').at,
     tajfel: useCue('t127Tajfel').at, arbitrary: useCue('t127Arbitrary').at, klee: useCue('t127Klee').at, dots: useCue('t127Dots').at,
@@ -37,5 +38,11 @@ export function MinimalGroups({segment}: SceneProps) {
     <Panel box={{x: 360, y: 845, w: 1200, h: 92}} at={c.finding} beat />
     <Copy at={c.automatic} box={{x: 400, y: 868, w: 1120, h: 28}} size={24} align="center">GROUP BOUNDARY → AUTOMATIC COGNITION</Copy>
     <DrawLine points={[[620, 908], [1300, 908]]} startFrame={frame(c.boundary)} durationFrames={16} strokeToken="color/fill/gold" strokeWidth={3} beat />
+    {ms >= c.henri && <div data-shared="SourceLine" style={{position:'absolute',right:116,top:940,display:'flex',alignItems:'center',gap:16,opacity:Math.max(0,Math.min(1,(ms-c.henri)/267)),pointerEvents:'none'}}>
+      <div style={{font:'400 20px "IBM Plex Mono"',lineHeight:1.35,letterSpacing:.35,color:color('color/text/muted'),textAlign:'right',whiteSpace:'nowrap'}}>
+        Tajfel · Scientific American · 1970
+      </div>
+      <QRCode url="https://doi.org/10.1038/scientificamerican1170-96" size={100}/>
+    </div>}
   </KitSound></StageSceneFrame>;
 }

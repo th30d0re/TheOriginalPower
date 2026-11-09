@@ -1,5 +1,5 @@
 import React from 'react';
-import {BootIn, DrawRect, Flicker, KitSound, StickFigure, cubicInOut,cubicOut,progress,useCue,useStageMs,type SceneProps} from '@stage';
+import {BootIn, DrawRect, Flicker, KitSound, QRCode, StickFigure, cubicInOut,cubicOut,progress,useCue,useStageMs,type SceneProps} from '@stage';
 import {color} from '../../tokens';
 import {PersonMark,StageSceneFrame} from '../shared';
 import {Label,lineAttrs,Panel,pathFrom,shapeAttrs,type Box,type Point} from './AuditVisuals';
@@ -89,6 +89,12 @@ export function APAGroupDefinitions({segment}:SceneProps){
     {!biasPhase&&ms>=cue.competition&&<Label id="competition-label" box={{x:1500,y:390,w:220,h:28}} size={20} weight={500} opacity={competitionP}>COMPETITION</Label>}
     {!biasPhase&&ms>=cue.opposition&&<Label id="opposition-label" box={{x:1510,y:610,w:220,h:28}} size={20} weight={500} opacity={oppositionP} ink={color('color/marker/race')}>OPPOSITION</Label>}
     {ms>=cue.resources&&<AllocationTray resourceP={resourceP} conductP={conductP} behaviorP={behaviorP}/>}
+    {ms>=cue.american19&&<div data-shared="SourceLine" style={{position:'absolute',right:116,top:928,display:'flex',alignItems:'center',gap:16,opacity:Math.max(0,Math.min(1,(ms-cue.american19)/267)),pointerEvents:'none'}}>
+      <div style={{font:'400 20px "IBM Plex Mono"',lineHeight:1.35,letterSpacing:.35,color:color('color/text/muted'),textAlign:'right',whiteSpace:'nowrap'}}>
+        {'APA Dictionary of Psychology · "group"'}
+      </div>
+      <QRCode url="https://dictionary.apa.org/group" size={112}/>
+    </div>}
     <div data-bias-progress={biasP.toFixed(3)} style={{display:'none'}}/>
   </StageSceneFrame></KitSound>;
 }

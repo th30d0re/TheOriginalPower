@@ -1,9 +1,10 @@
 import React from 'react';
-import {DrawLine, DrawRect, FitBox, useCue, type SceneProps} from '@stage';
+import {DrawLine, DrawRect, FitBox, QRCode, color, useCue, useStageMs, type SceneProps} from '@stage';
 import {Copy, Panel, Scene, frame} from './shared';
 import {AtlanticMap} from '../min53_56/PortugalVisuals';
 
 export function ZuraranIdeology({segment}:SceneProps) {
+  const ms=useStageMs();
   const c={step:useCue('t262Step').at,ideology:useCue('t262Ideology').at,running:useCue('t262Running').at,modern:useCue('t263Modern').at,firearm:useCue('t263Firearm').at,repeats:useCue('t263Repeats').at,check:useCue('t264Check').at,prediction:useCue('t264Prediction').at,kidnapping:useCue('t264Kidnapping').at,dum:useCue('t264Dum').at};
   const dates=[['1441 RAID',c.kidnapping],['1444 LAGOS',c.check],['1452 DUM',c.dum],['1453 IDEOLOGY',c.ideology]] as const;
   return <Scene segment={segment}>
@@ -20,5 +21,11 @@ export function ZuraranIdeology({segment}:SceneProps) {
     <FitBox text="PREDICTION 1" x={220} y={718} size={22} weight={600} tag="DATES" startFrame={frame(c.check)} durationFrames={14} textToken="color/text/primary" strokeToken="color/fill/gold" fillToken="color/fill/panel-render" accentToken="color/fill/gold" beat/>
     <DrawLine points={[[190,805],[1730,805]]} startFrame={frame(c.prediction)} durationFrames={20} strokeToken="color/line/hairline-strong" strokeWidth={3} beat/>
     {dates.map(([label,at],i)=><React.Fragment key={label}><DrawRect box={{x:220+i*390,y:765,w:290,h:80}} startFrame={frame(at)} durationFrames={14} strokeToken="color/fill/gold" fillToken="color/fill/panel-render" glowToken="color/fill/gold" beat/><Copy at={at} box={{x:235+i*390,y:790,w:260,h:27}} size={19} align="center" mono>{label}</Copy></React.Fragment>)}
+    {ms >= c.ideology && <div data-shared="SourceLine" style={{position:'absolute',right:116,top:928,display:'flex',alignItems:'center',gap:16,opacity:Math.max(0,Math.min(1,(ms-c.ideology)/267)),pointerEvents:'none'}}>
+      <div style={{font:'400 20px "IBM Plex Mono"',lineHeight:1.35,letterSpacing:.35,color:color('color/text/muted'),textAlign:'right',whiteSpace:'nowrap'}}>
+        Zurara · Chronicle of Guinea (Hakluyt 1896)
+      </div>
+      <QRCode url="https://archive.org/details/chronicleofdisco01zura" size={112}/>
+    </div>}
   </Scene>;
 }
