@@ -99,7 +99,7 @@ export function UnequalTreatment({segment}: SceneProps) {
         <Flicker startFrame={cueFrame(cue.t55ThreePart)} durationFrames={16} beat><div data-turn="55">
           <BootIn box={L.pipeline} startFrame={cueFrame(cue.t55ThreePart)} durationFrames={28} mode="scan" />
           {/* Top Context Banner */}
-          <Panel id="t55-banner-frame" box={L.t55Banner} accent="color/line/hairline" />
+          <Panel startMs={cue.t55ThreePart} id="t55-banner-frame" box={L.t55Banner} accent="color/line/hairline" />
           <Label
             id="t55-banner-title"
             box={{x: 148, y: 133, w: 1020, h: 36}}
@@ -122,7 +122,7 @@ export function UnequalTreatment({segment}: SceneProps) {
           </Label>
 
           {/* Main Pipeline Frame */}
-          <Panel id="turn55-pipeline-frame" box={L.pipeline} accent="color/line/hairline" />
+          <Panel startMs={cue.t55ThreePart} id="turn55-pipeline-frame" box={L.pipeline} accent="color/line/hairline" />
           <Label
             id="pipeline-header-title"
             box={{x: 150, y: 233, w: 980, h: 36}}
@@ -145,7 +145,7 @@ export function UnequalTreatment({segment}: SceneProps) {
           </Label>
 
           {/* Node 1: Stereotype */}
-          <Panel id="stereotype-node" box={L.stereotypeNode} accent="color/fill/gold" />
+          <Panel startMs={cue.t55ThreePart} id="stereotype-node" box={L.stereotypeNode} accent="color/fill/gold" />
           <div
             {...shapeAttrs('glyph-stereotype', {x: 174, y: 308, w: 52, h: 52}, 'mark', 'glyph-stereotype')}
             style={{position: 'absolute', left: 174, top: 308, width: 52, height: 52, color: primary}}
@@ -295,7 +295,7 @@ export function UnequalTreatment({segment}: SceneProps) {
           <DrawLine points={L.pipelineArrow2} startFrame={cueFrame(cue.t55Prejudice)} durationFrames={18} strokeToken="color/text/accent" strokeWidth={4} end="arrow" />
 
           {/* Node 2: Prejudice */}
-          <Panel
+          <Panel startMs={cue.t55Prejudice}
             id="prejudice-node"
             box={L.prejudiceNode}
             accent={ms >= cue.t55Prejudice ? 'color/marker/race' : 'color/line/hairline'}
@@ -406,7 +406,7 @@ export function UnequalTreatment({segment}: SceneProps) {
           </Label>
 
           {/* Node 3: Discrimination */}
-          <Panel
+          <Panel startMs={cue.t55Discrimination}
             id="discrimination-node"
             box={L.discriminationNode}
             accent={ms >= cue.t55Discrimination ? 'color/text/accent' : 'color/line/hairline'}
@@ -510,7 +510,7 @@ export function UnequalTreatment({segment}: SceneProps) {
           </Label>
 
           {/* Bottom Pathway Transit Bar */}
-          <Panel
+          <Panel startMs={cue.t55ThreePart}
             id="pathway-transit-bar"
             box={L.transitBar}
             accent={ms >= cue.t55Membership ? 'color/fill/gold' : 'color/line/hairline'}
@@ -559,7 +559,7 @@ export function UnequalTreatment({segment}: SceneProps) {
         <Flicker startFrame={cueFrame(cue.t56Unequal)} durationFrames={16} beat><div data-turn="56">
           <BootIn box={L.treatmentTray} startFrame={cueFrame(cue.t56Unequal)} durationFrames={28} mode="scan" />
           {/* Top Context Banner */}
-          <Panel id="t56-banner-frame" box={L.t56Banner} accent="color/text/accent" />
+          <Panel startMs={cue.t56Unequal} id="t56-banner-frame" box={L.t56Banner} accent="color/text/accent" />
           <Label
             id="t56-banner-title"
             box={{x: 140, y: 133, w: 920, h: 36}}
@@ -582,7 +582,7 @@ export function UnequalTreatment({segment}: SceneProps) {
           </Label>
 
           {/* Treatment Tray Container */}
-          <Panel id="treatment-tray" box={L.treatmentTray} />
+          <Panel startMs={cue.t56Unequal} id="treatment-tray" box={L.treatmentTray} />
           <Label
             id="tray-heading-label"
             box={L.trayHeading}
@@ -605,7 +605,7 @@ export function UnequalTreatment({segment}: SceneProps) {
           </Label>
 
           {/* Card 1: Verbal Exclusion */}
-          <Panel id="card-1-panel" box={L.cards[0]} accent={ms >= cue.t56Verbal ? 'color/text/accent' : 'color/line/hairline'} />
+          <Panel startMs={cue.t56Verbal} id="card-1-panel" box={L.cards[0]} accent={ms >= cue.t56Verbal ? 'color/text/accent' : 'color/line/hairline'} />
           <div data-card="1">
             <Label
               id="card-1-slot"
@@ -684,7 +684,7 @@ export function UnequalTreatment({segment}: SceneProps) {
           </div>
 
           {/* Card 2: Worse Customer Service */}
-          <Panel id="card-2-panel" box={L.cards[1]} accent={ms >= cue.t56Customer ? 'color/text/accent' : 'color/line/hairline'} />
+          <Panel startMs={cue.t56Customer} id="card-2-panel" box={L.cards[1]} accent={ms >= cue.t56Customer ? 'color/text/accent' : 'color/line/hairline'} />
           <div data-card="2">
             <Label
               id="card-2-slot"
@@ -772,7 +772,7 @@ export function UnequalTreatment({segment}: SceneProps) {
           </div>
 
           {/* Card 3: Biased Grading */}
-          <Panel id="card-3-panel" box={L.cards[2]} accent={ms >= cue.t56Grading ? 'color/text/accent' : 'color/line/hairline'} />
+          <Panel startMs={cue.t56Grading} id="card-3-panel" box={L.cards[2]} accent={ms >= cue.t56Grading ? 'color/text/accent' : 'color/line/hairline'} />
           <div data-card="3">
             <Label
               id="card-3-slot"
@@ -856,7 +856,7 @@ export function UnequalTreatment({segment}: SceneProps) {
           </div>
 
           {/* Card 4: Rental Refusal */}
-          <Panel id="card-4-panel" box={L.cards[3]} accent={ms >= cue.t56Refusing ? 'color/text/accent' : 'color/line/hairline'} />
+          <Panel startMs={cue.t56Refusing} id="card-4-panel" box={L.cards[3]} accent={ms >= cue.t56Refusing ? 'color/text/accent' : 'color/line/hairline'} />
           <div data-card="4">
             <Label
               id="card-4-slot"

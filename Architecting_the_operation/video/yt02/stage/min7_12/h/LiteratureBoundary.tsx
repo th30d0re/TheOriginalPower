@@ -113,7 +113,7 @@ export function LiteratureBoundary({segment}: SceneProps) {
     <StageSceneFrame segment={segment}><KitSound mode="beats">
       {/* Top Banner */}
       <Flicker startFrame={cueFrame(cue.t62Established)} durationFrames={16} beat><div data-t62-banner="true">
-        <Panel id="t62-banner-frame" box={L.t62Banner} accent="color/line/hairline" />
+        <Panel startMs={cue.t62Established} id="t62-banner-frame" box={L.t62Banner} accent="color/line/hairline" />
         <Label
           id="t62-banner-title"
           box={{x: 148, y: 133, w: 1080, h: 36}}
@@ -139,7 +139,7 @@ export function LiteratureBoundary({segment}: SceneProps) {
       {/* Established Literature Field */}
       <Flicker startFrame={cueFrame(cue.t62Established)} durationFrames={16}><div data-field="established-literature">
         <BootIn box={L.literatureField} startFrame={cueFrame(cue.t62Established)} durationFrames={28} mode="scan" />
-        <Panel
+        <Panel startMs={cue.t62Established}
           id="established-literature-frame"
           box={L.literatureField}
           accent={ms >= cue.t62Experimental ? 'color/line/hairline-strong' : 'color/line/hairline'}
@@ -173,7 +173,7 @@ export function LiteratureBoundary({segment}: SceneProps) {
               const cfg = socketConfigs[idx];
               return (
                 <div key={cfg.num} data-literature-socket={idx + 1}>
-                  <Panel
+                  <Panel startMs={cue.t62Established}
                     id={`literature-socket-${idx + 1}`}
                     box={b}
                     accent={cfg.accent}
@@ -266,10 +266,11 @@ export function LiteratureBoundary({segment}: SceneProps) {
       {ms >= cue.t62Ends && (
         <Flicker startFrame={cueFrame(cue.t62Ends)} durationFrames={18} beat><div data-terminal-boundary="true">
           <BootIn box={L.terminalColumn} startFrame={cueFrame(cue.t62Ends)} durationFrames={24} mode="snap" />
-          <Panel
+          <Panel startMs={cue.t62Ends}
             id="terminal-boundary-column"
             box={L.terminalColumn}
             accent="color/marker/race"
+            fillToken="color/fill/panel-wash"
             style={{background: color('color/fill/panel-wash'), borderWidth: 1}}
           />
           <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position: 'absolute', inset: 0}} aria-hidden="true">
@@ -323,7 +324,7 @@ export function LiteratureBoundary({segment}: SceneProps) {
       {ms >= cue.t62Psychology && (
         <Flicker startFrame={cueFrame(cue.t62Psychology)} durationFrames={16} beat><div data-field="structural-handoff">
           <BootIn box={L.turn63Field} startFrame={cueFrame(cue.t62Psychology)} durationFrames={28} mode="scan" />
-          <Panel id="structural-handoff-frame" box={L.turn63Field} accent="color/line/hairline" />
+          <Panel startMs={cue.t62Psychology} id="structural-handoff-frame" box={L.turn63Field} accent="color/line/hairline" />
           <Label
             id="structural-handoff-label"
             box={L.turn63Label}
@@ -335,9 +336,10 @@ export function LiteratureBoundary({segment}: SceneProps) {
           >
             THE ORIGINAL POWER · STRUCTURAL ARGUMENT
           </Label>
-          <Panel
+          <Panel startMs={cue.t62Psychology}
             id="structural-continuation-socket"
             box={L.turn63Socket}
+            fillToken="color/fill/panel-wash"
             style={{borderStyle: 'solid', borderWidth: 1, background: color('color/fill/panel-wash')}}
             accent="color/fill/gold"
           />

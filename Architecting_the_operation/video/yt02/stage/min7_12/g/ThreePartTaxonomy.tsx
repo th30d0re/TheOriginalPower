@@ -78,7 +78,7 @@ export function ThreePartTaxonomy({segment}: SceneProps) {
       {ms >= cue.t54Divides && (
         <div data-taxonomy-scene="true" style={{opacity: dividesP}}>
           {/* Outer Taxonomy Frame (height 660, text span 624 -> 36 px margin) */}
-          <Panel id="taxonomy-frame" box={L.taxonomyFrame} accent="color/line/hairline" />
+          <Panel startMs={cue.t54Divides} id="taxonomy-frame" box={L.taxonomyFrame} accent="color/line/hairline" />
           <Label id="taxonomy-heading" box={{x: 160, y: 148, w: 920, h: 42}} size={32} weight={650} sans ink={gold}>
             FISKE’S THREE-PART MODEL
           </Label>
@@ -92,7 +92,7 @@ export function ThreePartTaxonomy({segment}: SceneProps) {
           {/* MODULE 1: Stereotyping (x: 160–660, y: 240–724, h: 484, text span 448 -> 36 px margin) */}
           {ms < cue.t54Stereotyping ? (
             <div data-module-socket="1">
-              <Panel id="module-socket-1" box={L.modules[0]} accent="color/line/hairline-strong" style={{borderStyle: 'dashed'}} />
+              <Panel startMs={cue.t54Divides} id="module-socket-1" box={L.modules[0]} accent="color/line/hairline-strong" style={{borderStyle: 'dashed'}} />
               <Label id="socket-1-title" box={{x: 184, y: 258, w: 452, h: 38}} size={28} weight={600} sans ink={soft}>
                 MODULE SOCKET 1
               </Label>
@@ -117,7 +117,7 @@ export function ThreePartTaxonomy({segment}: SceneProps) {
             </div>
           ) : (
             <div data-module="stereotyping" style={{opacity: stereotypingP}}>
-              <Panel id="stereotyping-module" box={L.modules[0]} accent="color/text/primary">
+              <Panel startMs={cue.t54Stereotyping} id="stereotyping-module" box={L.modules[0]} accent="color/text/primary">
                 <span aria-hidden="true" style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: 5, background: primary}} />
               </Panel>
               <div
@@ -208,7 +208,7 @@ export function ThreePartTaxonomy({segment}: SceneProps) {
           {/* MODULE 2: Prejudice (x: 710–1210, y: 234–718, h: 484, text span 448 -> 36 px margin) */}
           {ms < cue.t54Prejudice ? (
             <div data-module-socket="2">
-              <Panel id="module-socket-2" box={L.modules[1]} accent="color/line/hairline-strong" style={{borderStyle: 'dashed'}} />
+              <Panel startMs={cue.t54Divides} id="module-socket-2" box={L.modules[1]} accent="color/line/hairline-strong" style={{borderStyle: 'dashed'}} />
               <Label id="socket-2-title" box={{x: 734, y: 258, w: 452, h: 38}} size={28} weight={600} sans ink={soft}>
                 MODULE SOCKET 2
               </Label>
@@ -233,7 +233,7 @@ export function ThreePartTaxonomy({segment}: SceneProps) {
             </div>
           ) : (
             <div data-module="prejudice" style={{opacity: prejudiceP}}>
-              <Panel id="prejudice-module" box={L.modules[1]} accent="color/marker/race">
+              <Panel startMs={cue.t54Prejudice} id="prejudice-module" box={L.modules[1]} accent="color/marker/race">
                 <span aria-hidden="true" style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: 5, background: raceRed}} />
               </Panel>
               <div
@@ -303,7 +303,7 @@ export function ThreePartTaxonomy({segment}: SceneProps) {
           {/* MODULE 3: Discrimination (x: 1260–1760, y: 234–718, h: 484, text span 448 -> 36 px margin) */}
           {ms < cue.t54Discrimination ? (
             <div data-module-socket="3">
-              <Panel id="module-socket-3" box={L.modules[2]} accent="color/line/hairline-strong" style={{borderStyle: 'dashed'}} />
+              <Panel startMs={cue.t54Divides} id="module-socket-3" box={L.modules[2]} accent="color/line/hairline-strong" style={{borderStyle: 'dashed'}} />
               <Label id="socket-3-title" box={{x: 1284, y: 258, w: 452, h: 38}} size={28} weight={600} sans ink={soft}>
                 MODULE SOCKET 3
               </Label>
@@ -328,7 +328,7 @@ export function ThreePartTaxonomy({segment}: SceneProps) {
             </div>
           ) : (
             <div data-module="discrimination" style={{opacity: discriminationP}}>
-              <Panel id="discrimination-module" box={L.modules[2]} accent="color/text/accent">
+              <Panel startMs={cue.t54Discrimination} id="discrimination-module" box={L.modules[2]} accent="color/text/accent">
                 <span aria-hidden="true" style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: 5, background: orange}} />
               </Panel>
               <div

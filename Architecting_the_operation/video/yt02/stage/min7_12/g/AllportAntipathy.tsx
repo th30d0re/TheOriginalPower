@@ -112,7 +112,7 @@ export function AllportAntipathy({segment}: SceneProps) {
       {!isTurn49 && ms >= cue.t47Defines && (
         <div data-turns="47-48" style={{opacity: definesP}}>
           {/* Left Upper: Prejudice Definition Card (height 356, text span 320 -> 36 px margin) */}
-          <Panel id="definition-card" box={L.definitionCard} accent="color/marker/race">
+          <Panel startMs={cue.t47Defines} id="definition-card" box={L.definitionCard} accent="color/marker/race">
             <span aria-hidden="true" style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: 5, background: raceRed}} />
           </Panel>
           <Label id="def-term" box={{x: 144, y: 168, w: 622, h: 46}} size={36} weight={650} sans ink={raceRed}>
@@ -129,7 +129,7 @@ export function AllportAntipathy({segment}: SceneProps) {
           </Label>
 
           {/* Left Lower: Observer & Expression Panel (height 320, text span 284 -> 36 px margin) */}
-          <Panel
+          <Panel startMs={cue.t47Defines}
             id="observer-panel"
             box={L.observerPanel}
             accent={ms >= cue.t47Felt ? 'color/marker/race' : 'color/line/hairline'}
@@ -200,7 +200,7 @@ export function AllportAntipathy({segment}: SceneProps) {
           {/* Right Upper: Generalization Template (opens at t47Antipathy, height 356, text span 320 -> 36 px margin) */}
           {ms >= cue.t47Antipathy && (
             <div data-template-panel="true" style={{opacity: antipathyP}}>
-              <Panel id="template-panel" box={L.templatePanel} accent="color/marker/race" />
+              <Panel startMs={cue.t47Antipathy} id="template-panel" box={L.templatePanel} accent="color/marker/race" />
               <Label id="template-antipathy" box={{x: 932, y: 168, w: 260, h: 38}} size={28} weight={650} sans ink={raceRed}>
                 ANTIPATHY
               </Label>
@@ -308,7 +308,7 @@ export function AllportAntipathy({segment}: SceneProps) {
           {/* Right Lower: Target Field (opens at t47Expressed, height 320, text span 284 -> 36 px margin) */}
           {ms >= cue.t47Expressed && (
             <div data-target-field="true" style={{opacity: expressedP}}>
-              <Panel id="target-field" box={L.targetField} accent="color/marker/race" />
+              <Panel startMs={cue.t47Expressed} id="target-field" box={L.targetField} accent="color/marker/race" />
               <Label id="target-header-left" box={{x: 932, y: 578, w: 400, h: 32}} size={22} weight={650} ink={ms >= cue.t48Hostility ? raceRed : gold}>
                 {ms >= cue.t48Hostility ? 'GROUP AS A WHOLE' : 'OUTWARD TARGET FIELD'}
               </Label>
@@ -389,13 +389,13 @@ export function AllportAntipathy({segment}: SceneProps) {
       {isTurn49 && (
         <div data-turn="49" style={{opacity: t49BiasP}}>
           {/* Top Comparison Banner (height 72, text span 38 -> 34 px margin) */}
-          <Panel id="turn49-header-panel" box={L.turn49Header} accent="color/fill/gold" />
+          <Panel startMs={cue.t49Bias} id="turn49-header-panel" box={L.turn49Header} accent="color/fill/gold" />
           <Label id="turn49-header-title" box={{x: 200, y: 132, w: 1520, h: 38}} size={28} weight={650} sans align="center" ink={primary}>
             CONCEPT DISTINCTION · DIRECTIONAL LEAN VS. RIGID AFFECTIVE ANTIPATHY
           </Label>
 
           {/* Left Block: Bias · Mental Lean (height 356, text span 320 -> 36 px margin) */}
-          <Panel id="bias-block" box={L.biasBlock} accent="color/fill/gold">
+          <Panel startMs={cue.t49Bias} id="bias-block" box={L.biasBlock} accent="color/fill/gold">
             <span aria-hidden="true" style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: 5, background: gold}} />
           </Panel>
           <div
@@ -443,7 +443,7 @@ export function AllportAntipathy({segment}: SceneProps) {
           {/* Right Block: Prejudice · Emotional Hostility (height 356, text span 320 -> 36 px margin) */}
           {ms >= cue.t49Prejudice && (
             <div data-turn49-prejudice="true" style={{opacity: t49PrejudiceP}}>
-              <Panel id="prejudice-block" box={L.prejudiceBlock} accent="color/marker/race">
+              <Panel startMs={cue.t49Prejudice} id="prejudice-block" box={L.prejudiceBlock} accent="color/marker/race">
                 <span aria-hidden="true" style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: 5, background: raceRed}} />
               </Panel>
               <div
@@ -487,7 +487,7 @@ export function AllportAntipathy({segment}: SceneProps) {
           )}
 
           {/* Lower Left: Bias Baseline Card (height 270, text span 234 -> 36 px margin) */}
-          <Panel id="bias-baseline-card" box={L.biasBaselineCard} accent="color/line/hairline" />
+          <Panel startMs={cue.t49Bias} id="bias-baseline-card" box={L.biasBaselineCard} accent="color/line/hairline" />
           <Label id="bias-baseline-title" box={{x: 196, y: 623, w: 388, h: 32}} size={22} weight={600} ink={gold}>
             STARTING EXPECTATION
           </Label>
@@ -501,7 +501,7 @@ export function AllportAntipathy({segment}: SceneProps) {
           {/* Lower Right: Rigid Stereotype Gate (opens at t49Rigid, height 270, text span 234 -> 36 px margin) */}
           {ms >= cue.t49Rigid && (
             <div data-stereotype-gate="true" style={{opacity: t49RigidP}}>
-              <Panel id="stereotype-gate" box={L.stereotypeGate} accent="color/marker/race" />
+              <Panel startMs={cue.t49Rigid} id="stereotype-gate" box={L.stereotypeGate} accent="color/marker/race" />
               <Label id="gate-title" box={{x: 682, y: 623, w: 560, h: 34}} size={24} weight={650} ink={raceRed}>
                 RIGID SWEEPING STEREOTYPE
               </Label>

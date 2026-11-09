@@ -102,7 +102,7 @@ export function ExceptionFence({segment}: SceneProps) {
       {ms >= cue.t50Allport && (
         <div data-scene-content="exception-fence" style={{opacity: allportP}}>
           {/* Top Source Tab (height 68, text span 36 -> 32 px margin) */}
-          <Panel id="allport-tab" box={L.allportTab} accent="color/fill/gold">
+          <Panel startMs={cue.t50Allport} id="allport-tab" box={L.allportTab} accent="color/fill/gold">
             <span aria-hidden="true" style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: 5, background: gold}} />
           </Panel>
           <Label id="allport-tab-label" box={{x: 148, y: 131, w: 520, h: 36}} size={28} weight={650} sans ink={gold}>
@@ -110,7 +110,7 @@ export function ExceptionFence({segment}: SceneProps) {
           </Label>
 
           {/* Left Panel: Habitual-Stereotype Template (height 650, text span 614 -> 36 px margin) */}
-          <Panel
+          <Panel startMs={cue.t50Allport}
             id="habitual-template"
             box={L.habitualTemplate}
             accent={ms >= cue.t50Habitual ? 'color/marker/race' : 'color/line/hairline'}
@@ -195,7 +195,7 @@ export function ExceptionFence({segment}: SceneProps) {
           {/* Center-Right: Update Gate (opens at t50Resist, height 510, text span 474 -> 36 px margin) */}
           {ms >= cue.t50Resist && (
             <div data-update-gate="true" data-gate-holds={ms >= cue.t50Facts ? 'true' : undefined} style={{opacity: resistP}}>
-              <Panel id="update-gate" box={L.updateGate} accent="color/marker/race" />
+              <Panel startMs={cue.t50Allport} id="update-gate" box={L.updateGate} accent="color/marker/race" />
               <Label
                 id="update-gate-title"
                 box={{x: 1172, y: 308, w: 136, h: 84}}
@@ -244,7 +244,7 @@ export function ExceptionFence({segment}: SceneProps) {
           {/* Center-Left: Contradictory-Facts Lane (opens at t50Correcting, height 540, text span 504 -> 36 px margin) */}
           {ms >= cue.t50Correcting && (
             <div data-facts-lane="true" style={{opacity: correctingP}}>
-              <Panel
+              <Panel startMs={cue.t50Allport}
                 id="facts-lane"
                 box={L.factsLane}
                 accent={ms >= cue.t50Strong ? 'color/text/accent' : 'color/fill/gold'}
@@ -336,7 +336,7 @@ export function ExceptionFence({segment}: SceneProps) {
                 <path {...lineAttrs('exception-route-line', exceptionRouteLine)} d={pathFrom(exceptionRouteLine)} fill="none" stroke={orange} strokeWidth="4" strokeDasharray="6 4" />
               </svg>
 
-              <Panel id="exception-cell" box={L.exceptionCell} accent="color/text/accent" />
+              <Panel startMs={cue.t50Allport} id="exception-cell" box={L.exceptionCell} accent="color/text/accent" />
               <Label id="exception-fence-title" box={{x: 1414, y: 228, w: 352, h: 34}} size={24} weight={650} ink={orange}>
                 EXCEPTION FENCE
               </Label>
@@ -391,7 +391,7 @@ export function ExceptionFence({segment}: SceneProps) {
                 <path {...lineAttrs('retained-route-line', retainedRouteLine)} d={pathFrom(retainedRouteLine)} fill="none" stroke={raceRed} strokeWidth="3.5" />
               </svg>
 
-              <Panel id="retained-field" box={L.retainedField} accent="color/marker/race" />
+              <Panel startMs={cue.t50Allport} id="retained-field" box={L.retainedField} accent="color/marker/race" />
               <Label
                 id="retained-title"
                 box={{x: 1414, y: 578, w: 352, h: 34}}

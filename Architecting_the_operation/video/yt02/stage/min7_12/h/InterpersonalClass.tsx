@@ -186,7 +186,7 @@ export function InterpersonalClass({segment}: SceneProps) {
       {/* Turns 57–59 Locus & Ubiquity Header Banner */}
       {!isTurn60 && !isTurn61 && (
         <Flicker startFrame={cueFrame(cue.t57Look)} durationFrames={16}><div data-locus-banner="true">
-          <Panel id="locus-banner-frame" box={L.locusBanner} accent="color/line/hairline" />
+          <Panel startMs={cue.t57Look} id="locus-banner-frame" box={L.locusBanner} accent="color/line/hairline" />
           {!isTurn59 ? (
             <>
               <Label
@@ -286,7 +286,7 @@ export function InterpersonalClass({segment}: SceneProps) {
       {/* Turns 57–59 Bottom Direction Banner */}
       {!isTurn60 && !isTurn61 && (
         <Flicker startFrame={cueFrame(cue.t57Look)} durationFrames={16}><div data-direction-banner="full">
-          <Panel
+          <Panel startMs={cue.t57Look}
             id="direction-banner-frame"
             box={L.directionBannerFull}
             accent={ms >= cue.t58Two ? 'color/fill/gold' : 'color/line/hairline'}
@@ -321,7 +321,7 @@ export function InterpersonalClass({segment}: SceneProps) {
         <Flicker startFrame={cueFrame(cue.t60PersonToPerson)} durationFrames={16} beat><div data-turn="60">
           <BootIn box={L.stateRack} startFrame={cueFrame(cue.t60PersonToPerson)} durationFrames={26} mode="scan" />
           {/* Left Column Header Panel */}
-          <Panel id="person-actions-panel" box={L.personActionsPanel} accent="color/line/hairline" />
+          <Panel startMs={cue.t57Look} id="person-actions-panel" box={L.personActionsPanel} accent="color/line/hairline" />
           <Label
             id="person-actions-heading"
             box={{x: 148, y: 416, w: 620, h: 36}}
@@ -344,7 +344,7 @@ export function InterpersonalClass({segment}: SceneProps) {
           </Label>
 
           {/* Left Column Bottom Direction Banner */}
-          <Panel id="direction-banner-contracted" box={L.directionBannerContracted} accent="color/fill/gold" />
+          <Panel startMs={cue.t57Look} id="direction-banner-contracted" box={L.directionBannerContracted} accent="color/fill/gold" />
           <Label
             id="group-direction-two-label"
             box={{x: 148, y: 836, w: 1004, h: 36}}
@@ -357,7 +357,7 @@ export function InterpersonalClass({segment}: SceneProps) {
           </Label>
 
           {/* Right Column: State-Power Rack Frame (all 5 slots present from turn 60 start) */}
-          <Panel id="state-power-rack" box={L.stateRack} accent="color/marker/race" />
+          <Panel startMs={cue.t57Look} id="state-power-rack" box={L.stateRack} accent="color/marker/race" />
           <Label
             id="zero-control-heading"
             box={L.rackHeading}
@@ -371,7 +371,7 @@ export function InterpersonalClass({segment}: SceneProps) {
 
           {/* 1: State Legislatures */}
           <div data-rack-item="1">
-            <Panel
+            <Panel startMs={cue.t57Look}
               id="rack-item-1"
               box={L.rackItems[0]}
               accent={ms >= cue.t60Legislatures ? 'color/marker/race' : 'color/line/hairline'}
@@ -397,7 +397,7 @@ export function InterpersonalClass({segment}: SceneProps) {
 
           {/* 2: Appellate Courts */}
           <div data-rack-item="2">
-            <Panel
+            <Panel startMs={cue.t57Look}
               id="rack-item-2"
               box={L.rackItems[1]}
               accent={ms >= cue.t60Courts ? 'color/marker/race' : 'color/line/hairline'}
@@ -423,7 +423,7 @@ export function InterpersonalClass({segment}: SceneProps) {
 
           {/* 3: Police Departments */}
           <div data-rack-item="3">
-            <Panel
+            <Panel startMs={cue.t57Look}
               id="rack-item-3"
               box={L.rackItems[2]}
               accent={ms >= cue.t60Police ? 'color/marker/race' : 'color/line/hairline'}
@@ -449,7 +449,7 @@ export function InterpersonalClass({segment}: SceneProps) {
 
           {/* 4: Credit Markets */}
           <div data-rack-item="4">
-            <Panel
+            <Panel startMs={cue.t57Look}
               id="rack-item-4"
               box={L.rackItems[3]}
               accent={ms >= cue.t60Credit ? 'color/marker/race' : 'color/line/hairline'}
@@ -475,7 +475,7 @@ export function InterpersonalClass({segment}: SceneProps) {
 
           {/* 5: Military Force */}
           <div data-rack-item="5">
-            <Panel
+            <Panel startMs={cue.t57Look}
               id="rack-item-5"
               box={L.rackItems[4]}
               accent={ms >= cue.t60Military ? 'color/marker/race' : 'color/line/hairline'}
@@ -515,10 +515,11 @@ export function InterpersonalClass({segment}: SceneProps) {
       {isTurn61 && (
         <Flicker startFrame={cueFrame(cue.t61Original)} durationFrames={16} beat><div data-turn="61">
           <BootIn box={L.assignmentStrip} startFrame={cueFrame(cue.t61Original)} durationFrames={26} mode="scan" />
-          <Panel
+          <Panel startMs={cue.t57Look}
             id="book-assignment-strip"
             box={L.assignmentStrip}
             accent="color/fill/gold"
+            fillToken="color/fill/panel-wash"
             style={{borderWidth: 2, background: color('color/fill/panel-wash')}}
           />
           <Label
@@ -536,7 +537,7 @@ export function InterpersonalClass({segment}: SceneProps) {
 
           {/* Sockets for Three Terms */}
           <div data-strip-sockets="true">
-            <Panel
+            <Panel startMs={cue.t57Look}
               id="socket-strip-bias"
               box={{x: 150, y: 764, w: 510, h: 64}}
               accent={ms >= cue.t61Bias ? 'color/fill/gold' : 'color/line/hairline'}
@@ -552,7 +553,7 @@ export function InterpersonalClass({segment}: SceneProps) {
               BIAS
             </Label>
 
-            <Panel
+            <Panel startMs={cue.t57Look}
               id="socket-strip-prejudice"
               box={{x: 685, y: 764, w: 510, h: 64}}
               accent={ms >= cue.t61Prejudice ? 'color/marker/race' : 'color/line/hairline'}
@@ -568,7 +569,7 @@ export function InterpersonalClass({segment}: SceneProps) {
               PREJUDICE
             </Label>
 
-            <Panel
+            <Panel startMs={cue.t57Look}
               id="socket-strip-discrimination"
               box={{x: 1220, y: 764, w: 550, h: 64}}
               accent={ms >= cue.t61Discrimination ? 'color/text/accent' : 'color/line/hairline'}

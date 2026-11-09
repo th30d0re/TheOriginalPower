@@ -92,7 +92,7 @@ export function AllportQuestion({segment}: SceneProps) {
         <div data-question-blocks="true" style={{opacity: whyP}}>
           {/* Left Block: Bias (height 330, text span 294 -> 36 px slack) */}
           <div data-term-block="bias" style={{opacity: biasOpacity}}>
-            <Panel id="bias-block" box={L.biasBlock} accent="color/fill/gold">
+            <Panel startMs={cue.t46Why} id="bias-block" box={L.biasBlock} accent="color/fill/gold">
               <span aria-hidden="true" style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: 5, background: gold}} />
             </Panel>
             <div
@@ -141,7 +141,7 @@ export function AllportQuestion({segment}: SceneProps) {
 
           {/* Right Block: Prejudice (height 330, text span 294 -> 36 px slack) */}
           <div data-term-block="prejudice" style={{opacity: prejudiceOpacity}}>
-            <Panel
+            <Panel startMs={cue.t46Why}
               id="prejudice-block"
               box={L.prejudiceBlock}
               accent={ms >= cue.t46Second ? 'color/marker/race' : 'color/line/hairline-strong'}
@@ -207,7 +207,7 @@ export function AllportQuestion({segment}: SceneProps) {
           </div>
 
           {/* Lower Distinction Summary Panel (height 170, text span 134 -> 36 px slack) */}
-          <Panel id="distinction-panel" box={L.distinctionPanel} accent="color/line/hairline" />
+          <Panel startMs={cue.t46Why} id="distinction-panel" box={L.distinctionPanel} accent="color/line/hairline" />
           <Label id="distinction-title" box={{x: 180, y: 728, w: 1560, h: 40}} size={28} weight={600} sans ink={primary}>
             ANALYTICAL QUESTION · WHY A SECOND CONCEPT IS REQUIRED
           </Label>
@@ -223,7 +223,7 @@ export function AllportQuestion({segment}: SceneProps) {
       {/* Second Half: Allport 1954 Citation Card (sized tightly to content, h=292, text span=256 -> 36 px slack) + Two Concept Anchors */}
       {isCitation && (
         <div data-citation-card="true" style={{opacity: gordonP}}>
-          <Panel id="citation-card" box={L.citationCard} accent="color/fill/gold">
+          <Panel startMs={cue.t46Why} id="citation-card" box={L.citationCard} accent="color/fill/gold">
             <span aria-hidden="true" style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: 6, background: gold}} />
           </Panel>
           <BootIn box={L.citationCard} startFrame={cueFrame(cue.t46Gordon)} durationFrames={cueDuration()} mode="scan" beat />
@@ -280,7 +280,7 @@ export function AllportQuestion({segment}: SceneProps) {
           </Label>
 
           {/* Lower Two-Concept Anchors (y: 630..880, h = 250, text span = 214 -> 36 px slack) */}
-          <Panel id="concept-anchor-left" box={L.conceptAnchorLeft} accent="color/line/hairline" />
+          <Panel startMs={cue.t46Why} id="concept-anchor-left" box={L.conceptAnchorLeft} accent="color/line/hairline" />
           <Label id="anchor-left-tag" box={{x: 358, y: 648, w: 544, h: 32}} size={20} weight={600} ink={gold}>
             CONCEPT 1 · BIAS
           </Label>
@@ -291,7 +291,7 @@ export function AllportQuestion({segment}: SceneProps) {
             GREENWALD &amp; BANAJI · 1995
           </Label>
 
-          <Panel id="concept-anchor-right" box={L.conceptAnchorRight} accent="color/marker/race" />
+          <Panel startMs={cue.t46Why} id="concept-anchor-right" box={L.conceptAnchorRight} accent="color/marker/race" />
           <Label id="anchor-right-tag" box={{x: 1018, y: 648, w: 544, h: 32}} size={20} weight={650} ink={raceRed}>
             CONCEPT 2 · PREJUDICE
           </Label>

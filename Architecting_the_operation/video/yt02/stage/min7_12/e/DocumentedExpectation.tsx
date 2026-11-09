@@ -218,7 +218,7 @@ export function DocumentedExpectation({segment}: SceneProps) {
     <StageSceneFrame segment={segment}><KitSound mode="beats">
       {/* Continuity equation strip: centered Eq. 2.8a at 36 px */}
       <div data-continuity-strip="true">
-        <Panel id="eq-strip-frame" box={L.equation} />
+        <Panel startMs={cue.t35Consider} id="eq-strip-frame" box={L.equation} />
         <EquationTerms
           equation="Eq. 2.8a"
           tokens={eq28aTokens}
@@ -237,7 +237,7 @@ export function DocumentedExpectation({segment}: SceneProps) {
       {!isTurn36 && (
         <div data-turn="35">
           {/* Panel 1 (Left): Evidence Ledger */}
-          <Panel id="ledger-frame" box={L.ledgerExpanded} accent={ms >= cue.t35Black ? 'color/fill/gold' : 'color/line/hairline'} />
+          <Panel startMs={cue.t35Consider} id="ledger-frame" box={L.ledgerExpanded} accent={ms >= cue.t35Black ? 'color/fill/gold' : 'color/line/hairline'} />
           <div
             {...shapeAttrs('ledger-group-mark', L.ledgerHeaderMark, 'mark', 'ledger-group-mark')}
             style={{position: 'absolute', left: L.ledgerHeaderMark.x, top: L.ledgerHeaderMark.y, width: L.ledgerHeaderMark.w, height: L.ledgerHeaderMark.h}}
@@ -311,7 +311,7 @@ export function DocumentedExpectation({segment}: SceneProps) {
           </Label>
 
           {/* Panel 2 (Center): Bayesian Plot */}
-          <Panel id="bayes-plot-frame" box={L.plotFrame} accent="color/line/hairline" />
+          <Panel startMs={cue.t35Consider} id="bayes-plot-frame" box={L.plotFrame} accent="color/line/hairline" />
           <div
             {...shapeAttrs('bias-glyph-mark', L.biasMark, 'mark', 'bias-glyph-mark')}
             style={{position: 'absolute', left: L.biasMark.x, top: L.biasMark.y, width: L.biasMark.w, height: L.biasMark.h}}
@@ -384,7 +384,7 @@ export function DocumentedExpectation({segment}: SceneProps) {
 
           {/* Panel 3 (Right): Expectation Card */}
           <div data-expectation-card={ms >= cue.t35Starting ? 'true' : undefined}>
-            <Panel
+            <Panel startMs={cue.t35Consider}
               id="expect-card-frame"
               box={L.expectationCard}
               accent={ms >= cue.t35Starting ? 'color/fill/gold' : 'color/line/hairline'}
@@ -418,7 +418,7 @@ export function DocumentedExpectation({segment}: SceneProps) {
       {isTurn36 && (
         <Flicker startFrame={Math.round(cue.t36National * 30 / 1000)} durationFrames={16} beat><div data-turn="36">
           {/* Left Upper: NCHS Plaque */}
-          <Panel id="nchs-plaque-frame" box={L.plaque} accent="color/fill/gold">
+          <Panel startMs={cue.t36National} id="nchs-plaque-frame" box={L.plaque} accent="color/fill/gold">
             <span aria-hidden="true" style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: 5, background: gold}} />
           </Panel>
           <Label id="plaque-year" box={L.plaqueYear} size={28} weight={700} ink={gold}>
@@ -435,7 +435,7 @@ export function DocumentedExpectation({segment}: SceneProps) {
           </Label>
 
           {/* Left Lower: Empirical Grounding Card */}
-          <Panel id="nchs-context-frame" box={L.nchsContext} accent="color/line/hairline" />
+          <Panel startMs={cue.t36National} id="nchs-context-frame" box={L.nchsContext} accent="color/line/hairline" />
           <Label id="nchs-context-title" box={L.nchsContextTitle} size={28} weight={650} sans ink={gold}>
             EMPIRICAL GROUNDING
           </Label>
@@ -447,7 +447,7 @@ export function DocumentedExpectation({segment}: SceneProps) {
           </Label>
 
           {/* Right Upper: Qualitative Series Plot */}
-          <Panel id="series-plot-frame" box={L.seriesFrame} accent="color/line/hairline" />
+          <Panel startMs={cue.t36National} id="series-plot-frame" box={L.seriesFrame} accent="color/line/hairline" />
           <Label
             id="series-title"
             box={L.seriesTitle}
@@ -542,7 +542,7 @@ export function DocumentedExpectation({segment}: SceneProps) {
 
           {/* Right Lower: Disclosure Strip */}
           <div data-disclosure={ms >= cue.t36Numbers ? 'true' : undefined}>
-            <Panel id="disclosure-frame" box={L.disclosure} accent={ms >= cue.t36Numbers ? 'color/fill/gold' : 'color/line/hairline'} />
+            <Panel startMs={cue.t36Numbers} id="disclosure-frame" box={L.disclosure} accent={ms >= cue.t36Numbers ? 'color/fill/gold' : 'color/line/hairline'} />
             <Label
               id="disclosure-label"
               box={L.disclosureLabel}

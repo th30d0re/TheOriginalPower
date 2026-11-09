@@ -135,7 +135,7 @@ export function InstalledRouting({segment}: SceneProps) {
     <StageSceneFrame segment={segment}><KitSound mode="beats">
       {/* Continuity Equation Strip: centered Eq. 2.8a at 36 px */}
       <div data-continuity-strip="true">
-        <Panel id="eq-strip-frame" box={L.equation} />
+        <Panel startMs={cue.t37PiRace} id="eq-strip-frame" box={L.equation} />
         <EquationTerms
           equation="Eq. 2.8a"
           tokens={eq28aTokens}
@@ -152,7 +152,7 @@ export function InstalledRouting({segment}: SceneProps) {
 
       {/* Installed-Prior Cartridge: sized to content */}
       <div data-cartridge="true">
-        <Panel id="cartridge-frame" box={L.cartridge} accent="color/marker/race" />
+        <Panel startMs={cue.t37PiRace} id="cartridge-frame" box={L.cartridge} accent="color/marker/race" />
         <Label id="cartridge-header" box={L.cartridgeHeader} size={20} weight={600} ink={muted}>
           INSTALLED PRIOR MODULE
         </Label>
@@ -183,7 +183,7 @@ export function InstalledRouting({segment}: SceneProps) {
 
       {/* Lower Left Routing Mechanism Card */}
       <div data-cartridge-mech="true">
-        <Panel id="cartridge-mech-frame" box={L.cartridgeMech} accent="color/line/hairline" />
+        <Panel startMs={cue.t37PiRace} id="cartridge-mech-frame" box={L.cartridgeMech} accent="color/line/hairline" />
         <Label id="mech-header" box={L.mechHeader} size={20} weight={600} ink={gold}>
           ROUTING MECHANISM
         </Label>
@@ -198,7 +198,7 @@ export function InstalledRouting({segment}: SceneProps) {
       {/* Direct Facts Lane */}
       {ms >= cue.t37Facts && (
         <Flicker startFrame={cueFrame(cue.t37Facts)} durationFrames={cueDuration(520)}><div data-facts-lane="true">
-          <Panel id="facts-lane-frame" box={L.factsLane} accent="color/line/hairline" />
+          <Panel startMs={cue.t37Facts} id="facts-lane-frame" box={L.factsLane} accent="color/line/hairline" />
           <Label id="facts-header" box={L.factsHeader} size={20} weight={600} ink={muted}>
             EVIDENCE STREAM
           </Label>
@@ -263,7 +263,7 @@ export function InstalledRouting({segment}: SceneProps) {
       {/* Output Gates */}
       {ms >= cue.t37Empathy && (
         <Flicker startFrame={cueFrame(cue.t37Empathy)} durationFrames={cueDuration(520)}><div data-empathy-gate="true">
-          <Panel id="empathy-gate-frame" box={L.empathyGate} accent="color/fill/gold" />
+          <Panel startMs={cue.t37Empathy} id="empathy-gate-frame" box={L.empathyGate} accent="color/fill/gold" />
           <Label id="empathy-header" box={L.empathyHeader} size={20} weight={600} ink={muted}>
             UPPER OUTPUT GATE
           </Label>
@@ -281,7 +281,7 @@ export function InstalledRouting({segment}: SceneProps) {
 
       {ms >= cue.t37Threat && (
         <Flicker startFrame={cueFrame(cue.t37Threat)} durationFrames={cueDuration(520)}><div data-threat-gate="true">
-          <Panel id="threat-gate-frame" box={L.threatGate} accent="color/marker/race" />
+          <Panel startMs={cue.t37Threat} id="threat-gate-frame" box={L.threatGate} accent="color/marker/race" />
           <Label id="threat-header" box={L.threatHeader} size={20} weight={600} ink={muted}>
             LOWER OUTPUT GATE
           </Label>

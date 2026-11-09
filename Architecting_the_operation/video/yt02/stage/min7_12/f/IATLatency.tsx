@@ -137,7 +137,7 @@ export function IATLatency({segment}: SceneProps) {
       {isTurn43 && ms >= cue.t43Three && (
         <div data-turn="43" style={{opacity: plaqueP}}>
           {/* Top Context Banner (height 72, text span 36 -> 36 px slack) */}
-          <Panel id="t43-banner" box={L.t43Banner} accent="color/fill/gold" />
+          <Panel startMs={cue.t43Three} id="t43-banner" box={L.t43Banner} accent="color/fill/gold" />
           <BootIn box={L.t43Banner} startFrame={cueFrame(cue.t43Three)} durationFrames={cueDuration()} mode="scan" beat />
           <Flicker startFrame={cueFrame(cue.t43Three)} durationFrames={cueDuration()}>
             <Label id="t43-banner-title" box={{x: 360, y: 133, w: 1200, h: 36}} size={28} weight={650} sans align="center" ink={gold}>
@@ -146,7 +146,7 @@ export function IATLatency({segment}: SceneProps) {
           </Flicker>
 
           {/* Source Plaque (height 290, text span 254 -> 36 px slack) */}
-          <Panel id="source-plaque" box={L.sourcePlaque} accent="color/fill/gold">
+          <Panel startMs={cue.t43Three} id="source-plaque" box={L.sourcePlaque} accent="color/fill/gold">
             <span aria-hidden="true" style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: 6, background: gold}} />
           </Panel>
           <Label id="plaque-tag" box={{x: 370, y: 243, w: 720, h: 34}} size={22} weight={600} ink={gold}>
@@ -198,7 +198,7 @@ export function IATLatency({segment}: SceneProps) {
           </Label>
 
           {/* Lower Instrument Card (height 320, text span 284 -> 36 px slack) */}
-          <Panel id="iat-instrument-card" box={L.iatInstrumentCard} accent="color/line/hairline-strong" />
+          <Panel startMs={cue.t43Three} id="iat-instrument-card" box={L.iatInstrumentCard} accent="color/line/hairline-strong" />
           <Label id="iat-card-tag" box={{x: 370, y: 578, w: 1180, h: 32}} size={20} weight={600} align="center" ink={gold}>
             INTRODUCED EXPERIMENTAL INSTRUMENT
           </Label>
@@ -227,7 +227,7 @@ export function IATLatency({segment}: SceneProps) {
       {isTurn44 && (
         <div data-turn="44" style={{opacity: testP}}>
           {/* Sorting Monitor (x: 120, y: 120, w: 1140, h: 760, text span 724 -> 36 px slack) */}
-          <Panel id="sorting-monitor" box={L.sortingMonitor} />
+          <Panel startMs={cue.t44Test} id="sorting-monitor" box={L.sortingMonitor} />
           <BootIn box={L.sortingMonitor} startFrame={cueFrame(cue.t44Test)} durationFrames={cueDuration()} mode="scan" beat />
           <Label id="monitor-heading" box={{x: 156, y: 138, w: 1068, h: 40}} size={30} weight={650} sans ink={gold}>
             DERIVED FACE + WORD SORTING TASK
@@ -238,14 +238,14 @@ export function IATLatency({segment}: SceneProps) {
 
           {/* Stimulus Window (x: 350, y: 245, w: 680, h: 270, text span 234 -> 36 px slack) */}
           <div data-prompt-card="true" style={{opacity: Math.max(0.85, autoP)}}>
-            <Panel id="prompt-card" box={L.promptCard} accent="color/fill/gold" />
+            <Panel startMs={cue.t44Automatic} id="prompt-card" box={L.promptCard} accent="color/fill/gold" />
             <Label id="prompt-header" box={{x: 374, y: 263, w: 632, h: 30}} size={20} weight={600} align="center" ink={gold}>
               SORTING TRIAL STIMULI
             </Label>
 
             {/* Face Card: only FACE heading and PersonMark (no TARGET GLYPH) */}
             <div data-face-card={ms >= cue.t44Faces ? 'true' : undefined} style={{opacity: Math.max(0.85, autoP, facesP)}}>
-              <Panel id="face-card" box={L.faceCard} />
+              <Panel startMs={cue.t44Faces} id="face-card" box={L.faceCard} />
               <Label id="prompt-face" box={{x: 390, y: 319, w: 264, h: 32}} size={22} weight={650} align="center" ink={gold}>
                 FACE
               </Label>
@@ -259,11 +259,11 @@ export function IATLatency({segment}: SceneProps) {
 
             {/* Word Card: only WORD heading and neutral example word chip "pleasant" (no STIMULUS, no VALENCE WORD) */}
             <div data-word-card={ms >= cue.t44Words ? 'true' : undefined} style={{opacity: Math.max(0.85, autoP, wordsP)}}>
-              <Panel id="word-card" box={L.wordCard} />
+              <Panel startMs={cue.t44Words} id="word-card" box={L.wordCard} />
               <Label id="prompt-word" box={{x: 726, y: 319, w: 264, h: 32}} size={22} weight={650} align="center" ink={gold}>
                 WORD
               </Label>
-              <Panel id="word-chip" box={L.wordChip} accent="color/fill/gold">
+              <Panel startMs={cue.t44Words} id="word-chip" box={L.wordChip} accent="color/fill/gold">
                 <span aria-hidden="true" style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: 4, background: gold}} />
               </Panel>
               <Label id="word-chip-label" box={{x: 750, y: 375, w: 216, h: 42}} size={28} weight={600} sans align="center" ink={primary}>
@@ -296,7 +296,7 @@ export function IATLatency({segment}: SceneProps) {
 
           {/* Left & Right Response Keys (height 136, text span 100 -> 36 px slack) */}
           <div data-response-keys={ms >= cue.t44Sorting ? 'true' : undefined} style={{opacity: Math.max(0.85, sortingP)}}>
-            <Panel id="key-left" box={L.keyLeft} accent="color/fill/gold">
+            <Panel startMs={cue.t44Screen} id="key-left" box={L.keyLeft} accent="color/fill/gold">
               <span aria-hidden="true" style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: 4, background: gold}} />
             </Panel>
             <Label id="key-left-label" box={{x: 185, y: 678, w: 400, h: 36}} size={28} weight={650} sans align="center" ink={gold}>
@@ -306,7 +306,7 @@ export function IATLatency({segment}: SceneProps) {
               PAIRING: FACE A + pleasant
             </Label>
 
-            <Panel id="key-right" box={L.keyRight} accent="color/fill/gold">
+            <Panel startMs={cue.t44Screen} id="key-right" box={L.keyRight} accent="color/fill/gold">
               <span aria-hidden="true" style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: 4, background: gold}} />
             </Panel>
             <Label id="key-right-label" box={{x: 795, y: 678, w: 400, h: 36}} size={28} weight={650} sans align="center" ink={gold}>
@@ -323,7 +323,7 @@ export function IATLatency({segment}: SceneProps) {
 
           {/* Right Column: Latency Difference Panel sized tightly to its two bars (x: 1310, y: 290, w: 490, h: 420, text span 384 -> 36 px slack) */}
           <div data-latency-instrument={ms >= cue.t44SplitSecond ? 'true' : undefined} style={{opacity: Math.max(0.85, splitP)}}>
-            <Panel id="latency-instrument" box={L.latencyInstrument} />
+            <Panel startMs={cue.t44ResponseLatency} id="latency-instrument" box={L.latencyInstrument} />
             <Label id="latency-heading" box={{x: 1338, y: 308, w: 434, h: 38}} size={28} weight={650} sans ink={gold}>
               {ms >= cue.t44SplitSecond ? 'LATENCY DIFFERENCE' : 'TIMING COMPARISON'}
             </Label>
@@ -379,7 +379,7 @@ export function IATLatency({segment}: SceneProps) {
       {isTurn45 && (
         <div data-turn="45" style={{opacity: rtP}}>
           {/* Top Banner (height 72, text span 36 -> 36 px slack) */}
-          <Panel id="t45-banner" box={L.t45Banner} accent="color/fill/gold" />
+          <Panel startMs={cue.t45Reaction} id="t45-banner" box={L.t45Banner} accent="color/fill/gold" />
           <BootIn box={L.t45Banner} startFrame={cueFrame(cue.t45Reaction)} durationFrames={cueDuration()} mode="scan" beat />
           <Label id="t45-banner-title" box={{x: 160, y: 133, w: 1600, h: 36}} size={28} weight={650} sans align="center" ink={gold}>
             CONVERGENT MEASUREMENT · REACTION TIME &amp; FIELD AUDITS
@@ -387,7 +387,7 @@ export function IATLatency({segment}: SceneProps) {
 
           {/* Column 1: Reaction-Time Measure (height 560, text span 524 -> 36 px slack) */}
           <div data-reaction-instrument="true" style={{opacity: rtP}}>
-            <Panel id="rt-instrument" box={L.reactionInstrument} />
+            <Panel startMs={cue.t45Reaction} id="rt-instrument" box={L.reactionInstrument} />
             <Label id="rt-heading" box={{x: 158, y: 243, w: 474, h: 38}} size={28} weight={650} sans ink={gold}>
               REACTION-TIME MEASURE
             </Label>
@@ -423,7 +423,7 @@ export function IATLatency({segment}: SceneProps) {
           {/* Column 2: Field-Audit Measure (height 560, text span 524 -> 36 px slack) */}
           {ms >= cue.t45Audits && (
             <div data-field-audit="true" style={{opacity: auditP}}>
-              <Panel id="fa-instrument" box={L.fieldAuditInstrument} />
+              <Panel startMs={cue.t45Audits} id="fa-instrument" box={L.fieldAuditInstrument} />
               <Label id="fa-heading" box={{x: 733, y: 243, w: 474, h: 38}} size={28} weight={650} sans ink={gold}>
                 FIELD-AUDIT MEASURE
               </Label>
@@ -431,7 +431,7 @@ export function IATLatency({segment}: SceneProps) {
                 MATCHED-PAIR EXPERIMENTAL DESIGN
               </Label>
 
-              <Panel id="fa-card-1" box={{x: 733, y: 345, w: 474, h: 112}} accent="color/fill/gold">
+              <Panel startMs={cue.t45Audits} id="fa-card-1" box={{x: 733, y: 345, w: 474, h: 112}} accent="color/fill/gold">
                 <span aria-hidden="true" style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: 4, background: gold}} />
               </Panel>
               <Label id="fa-card-1-title" box={{x: 753, y: 361, w: 434, h: 30}} size={22} weight={650} ink={gold}>
@@ -441,7 +441,7 @@ export function IATLatency({segment}: SceneProps) {
                 IDENTICAL RESUME · QUALIFICATIONS
               </Label>
 
-              <Panel id="fa-card-2" box={{x: 733, y: 475, w: 474, h: 112}} accent="color/fill/gold">
+              <Panel startMs={cue.t45Audits} id="fa-card-2" box={{x: 733, y: 475, w: 474, h: 112}} accent="color/fill/gold">
                 <span aria-hidden="true" style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: 4, background: gold}} />
               </Panel>
               <Label id="fa-card-2-title" box={{x: 753, y: 491, w: 434, h: 30}} size={22} weight={650} ink={gold}>
@@ -464,7 +464,7 @@ export function IATLatency({segment}: SceneProps) {
           {/* Column 3: Judgment Meter (height 560, text span 524 -> 36 px slack) */}
           {ms >= cue.t45Bias && (
             <div data-judgment-meter="true" style={{opacity: biasP}}>
-              <Panel id="judgment-meter" box={L.judgmentMeter} />
+              <Panel startMs={cue.t45Judgment} id="judgment-meter" box={L.judgmentMeter} />
               <Label id="meter-bias" box={{x: 1308, y: 243, w: 454, h: 38}} size={28} weight={650} sans align="center" ink={gold}>
                 BIAS
               </Label>
@@ -550,7 +550,7 @@ export function IATLatency({segment}: SceneProps) {
               <path {...lineAttrs('leader-bus-meter', leaderBusToMeter)} d={pathFrom(leaderBusToMeter)} fill="none" stroke={gold} strokeWidth="3" strokeDasharray="4 4" />
             )}
           </svg>
-          <Panel id="t45-bus" box={L.t45Bus} accent="color/line/hairline-strong" />
+          <Panel startMs={cue.t45Reaction} id="t45-bus" box={L.t45Bus} accent="color/line/hairline-strong" />
           <Label id="t45-bus-title" box={{x: 160, y: 833, w: 1020, h: 36}} size={28} weight={600} sans ink={primary}>
             Both instruments measure the same individual-level judgment lean.
           </Label>

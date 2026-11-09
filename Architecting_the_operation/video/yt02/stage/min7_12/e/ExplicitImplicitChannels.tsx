@@ -166,7 +166,7 @@ export function ExplicitImplicitChannels({segment}: SceneProps) {
         <div data-turn="39">
           {/* Top Banner */}
           <div data-t39-banner="true">
-            <Panel id="t39-banner-frame" box={L.t39Banner} accent="color/line/hairline" />
+            <Panel startMs={cue.t39Bias} id="t39-banner-frame" box={L.t39Banner} accent="color/line/hairline" />
             <Label id="t39-banner-tag" box={L.t39BannerTag} size={20} weight={600} ink={muted}>
               CHAPTER 2 · DUAL-CHANNEL ARCHITECTURE
             </Label>
@@ -177,7 +177,7 @@ export function ExplicitImplicitChannels({segment}: SceneProps) {
 
           {/* Bias Hub */}
           <div data-bias-hub="true">
-            <Panel id="bias-hub-frame" box={L.biasHub} accent="color/fill/gold" />
+            <Panel startMs={cue.t39Bias} id="bias-hub-frame" box={L.biasHub} accent="color/fill/gold" />
             <Label id="bias-hub-header" box={L.biasHeader} size={20} weight={600} align="center" ink={muted} opacity={Math.max(0.85, biasP)}>
               STARTING NODE
             </Label>
@@ -200,7 +200,7 @@ export function ExplicitImplicitChannels({segment}: SceneProps) {
 
           {/* Explicit Channel */}
           <div data-explicit-channel="true">
-            <Panel id="explicit-channel-frame" box={L.explicitChannel} accent={ms >= cue.t39Explicit ? 'color/fill/gold' : 'color/line/hairline'} />
+            <Panel startMs={cue.t39Bias} id="explicit-channel-frame" box={L.explicitChannel} accent={ms >= cue.t39Explicit ? 'color/fill/gold' : 'color/line/hairline'} />
             <Label id="explicit-tag" box={L.explicitTag} size={20} weight={600} ink={muted}>
               UPPER CHANNEL · SELF-REPORT
             </Label>
@@ -222,7 +222,7 @@ export function ExplicitImplicitChannels({segment}: SceneProps) {
             </svg>
             {ms >= cue.t39Consciously && (
               <div data-signed-card="true" style={{opacity: consciouslyP}}>
-                <Panel id="explicit-card-frame" box={L.explicitCard} accent="color/fill/gold" />
+                <Panel startMs={cue.t39Consciously} id="explicit-card-frame" box={L.explicitCard} accent="color/fill/gold" />
                 <Label id="explicit-card-tag" box={L.explicitCardTag} size={20} weight={600} lh={1.1} ink={gold}>
                   SIGNED STATEMENT CARD
                 </Label>
@@ -241,7 +241,7 @@ export function ExplicitImplicitChannels({segment}: SceneProps) {
 
           {/* Implicit Channel */}
           <div data-implicit-channel="true">
-            <Panel id="implicit-channel-frame" box={L.implicitChannel} accent={ms >= cue.t39Implicit ? 'color/marker/race' : 'color/line/hairline'} />
+            <Panel startMs={cue.t39Bias} id="implicit-channel-frame" box={L.implicitChannel} accent={ms >= cue.t39Implicit ? 'color/marker/race' : 'color/line/hairline'} />
             <Label id="implicit-tag" box={L.implicitTag} size={20} weight={600} ink={muted}>
               LOWER CHANNEL · TRACE ACTIVATION
             </Label>
@@ -280,7 +280,7 @@ export function ExplicitImplicitChannels({segment}: SceneProps) {
           {/* Individual Judgment Meter */}
           {ms >= cue.t39Associations && (
             <div data-judgment-meter="true" style={{opacity: assocP}}>
-              <Panel id="meter-panel-frame" box={L.meterPanel} accent="color/line/hairline" />
+              <Panel startMs={cue.t39Associations} id="meter-panel-frame" box={L.meterPanel} accent="color/line/hairline" />
               <Label id="meter-header" box={L.meterHeader} size={20} weight={600} align="center" ink={muted}>
                 CONVERGENCE READOUT
               </Label>
@@ -313,7 +313,7 @@ export function ExplicitImplicitChannels({segment}: SceneProps) {
         >
           {/* Tight Citation Card */}
           <div data-citation-card="true">
-            <Panel id="citation-card-frame" box={L.citationCard} accent="color/fill/gold">
+            <Panel startMs={cue.t40Anthony} id="citation-card-frame" box={L.citationCard} accent="color/fill/gold">
               <span aria-hidden="true" style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: 6, background: gold}} />
             </Panel>
 
@@ -374,7 +374,7 @@ export function ExplicitImplicitChannels({segment}: SceneProps) {
           {/* Lower Paired Explicit / Implicit Picture */}
           <div data-t40-picture="true">
             {/* Bias Hub */}
-            <Panel id="t40-bias-hub-frame" box={L.t40BiasHub} accent="color/fill/gold" />
+            <Panel startMs={cue.t40Anthony} id="t40-bias-hub-frame" box={L.t40BiasHub} accent="color/fill/gold" />
             <Label id="t40-bias-header" box={L.t40BiasHeader} size={20} weight={600} align="center" ink={muted}>
               DUAL-CHANNEL SOURCE
             </Label>
@@ -395,7 +395,7 @@ export function ExplicitImplicitChannels({segment}: SceneProps) {
             </Label>
 
             {/* Explicit Channel */}
-            <Panel id="t40-explicit-frame" box={L.t40ExplicitChannel} accent="color/fill/gold" />
+            <Panel startMs={cue.t40Anthony} id="t40-explicit-frame" box={L.t40ExplicitChannel} accent="color/fill/gold" />
             <Label id="t40-exp-tag" box={L.t40ExpTag} size={20} weight={600} ink={muted}>
               UPPER CHANNEL · SELF-REPORT
             </Label>
@@ -410,7 +410,7 @@ export function ExplicitImplicitChannels({segment}: SceneProps) {
             </Label>
 
             {/* Implicit Channel */}
-            <Panel id="t40-implicit-frame" box={L.t40ImplicitChannel} accent="color/marker/race" />
+            <Panel startMs={cue.t40Anthony} id="t40-implicit-frame" box={L.t40ImplicitChannel} accent="color/marker/race" />
             <Label id="t40-imp-tag" box={L.t40ImpTag} size={20} weight={600} ink={muted}>
               LOWER CHANNEL · TRACE ACTIVATION
             </Label>
@@ -425,7 +425,7 @@ export function ExplicitImplicitChannels({segment}: SceneProps) {
             </Label>
 
             {/* Meter Panel */}
-            <Panel id="t40-meter-frame" box={L.t40MeterPanel} accent="color/line/hairline" />
+            <Panel startMs={cue.t40Anthony} id="t40-meter-frame" box={L.t40MeterPanel} accent="color/line/hairline" />
             <Label id="t40-meter-header" box={L.t40MeterHeader} size={20} weight={600} align="center" ink={muted}>
               BEHAVIORAL OUTPUT
             </Label>
