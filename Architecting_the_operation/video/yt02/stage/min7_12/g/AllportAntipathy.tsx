@@ -284,7 +284,7 @@ export function AllportAntipathy({segment}: SceneProps) {
                     ))}
                 </svg>
                 {TEMPLATE_PERSON_XS.map((px, idx) => (
-                  <PersonMark key={idx} x={px - 932} y={60} group="outgroup" emphasis={1} scale={0.95} />
+                  <PersonMark key={idx} x={px - 932} y={60} group="outgroup" emphasis={1} scale={0.95} tone={.35+.65*idx/Math.max(1,TEMPLATE_PERSON_XS.length-1)} />
                 ))}
               </div>
 
@@ -352,7 +352,7 @@ export function AllportAntipathy({segment}: SceneProps) {
                 }}
               >
                 {GROUP_WHOLE_XS.map((gx, i) => (
-                  <PersonMark key={i} x={gx - 932} y={64} group="outgroup" emphasis={1} scale={0.95} />
+                  <PersonMark key={i} x={gx - 932} y={64} group="outgroup" emphasis={1} scale={0.95} tone={.35+.65*i/Math.max(1,GROUP_WHOLE_XS.length-1)} />
                 ))}
               </div>
 
@@ -557,9 +557,9 @@ export function AllportAntipathy({segment}: SceneProps) {
                 </svg>
                 {ms >= cue.t49Stereotype && (
                   <div style={{opacity: t49StereotypeP}}>
-                    <PersonMark x={250} y={70} group="outgroup" emphasis={1} scale={0.85} />
-                    <PersonMark x={340} y={70} group="outgroup" emphasis={1} scale={0.85} />
-                    <PersonMark x={430} y={70} group="outgroup" emphasis={1} scale={0.85} />
+                    <PersonMark x={250} y={70} group="outgroup" emphasis={1} scale={0.85} tone={.4} />
+                    <PersonMark x={340} y={70} group="outgroup" emphasis={1} scale={0.85} tone={.7} />
+                    <PersonMark x={430} y={70} group="outgroup" emphasis={1} scale={0.85} tone={1} />
                   </div>
                 )}
               </div>

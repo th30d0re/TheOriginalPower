@@ -64,7 +64,10 @@ const hull=(boxes:LayoutBox[]):LayoutBox=>{
 function toFieldMark(mark:MarkPath,[x,y]:Point,partition:number,emphasis:number):SortingMark{
   const direction=mark.group==='ingroup'?-1:1;
   const internalX=(x-US_THEM_LAYOUT.field.x)/FIELD_SCALE-direction*32*partition, internalY=(y-US_THEM_LAYOUT.field.y)/FIELD_SCALE;
-  return {id:mark.id,group:mark.group,x:internalX/SORTING_FIELD.width,y:internalY/SORTING_FIELD.height,emphasis,scale:US_THEM_GRID.markScale};
+  // Population skin-tone variance: in-group white to tan (0..0.4), out-group tan to black (0.35..1), spread per mark.
+  const n=Number(mark.id.split('-')[1])-1, k=((n%24)*7)%24/23;
+  const tone=mark.group==='ingroup'?.4*k:.35+.65*k;
+  return {id:mark.id,group:mark.group,x:internalX/SORTING_FIELD.width,y:internalY/SORTING_FIELD.height,emphasis,scale:US_THEM_GRID.markScale,tone};
 }
 
 function Chip({id,box,text,tone,opacity,leader}:{id:string;box:LayoutBox;text:string;tone:'gold'|'race';opacity:number;leader:Point[]}){
