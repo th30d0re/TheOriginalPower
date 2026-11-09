@@ -3490,3 +3490,140 @@ shots:
       t307Oversimplifies: {word: oversimplifies}
       t307Share: {word: share}
       t307Territories: {word: territories}
+  # Minutes 69–72: turns 308–318 (Atlantic expansion, crossing scale, and the Virginia test).
+  - shot_id: S00-308
+    turn_id: dc3d2c4bd53d5fa5
+    scene: PowersTimeline
+    instance: PowersTimeline
+    cues:
+      t308Dutch: {word: Dutch}
+      t308Chartered: {word: chartered}
+      t308Brazil: {word: Brazil}
+      t308Elmina: {word: Elmina}
+      t308England: {word: England}
+      t308Barbados: {word: Barbados}
+      t308Sugar: {word: sugar}
+      t308Monopoly: {word: monopoly}
+      t308France: {word: France}
+      t308Domingue: {word: Saint-Domingue}
+  - shot_id: S00-309
+    turn_id: 46666f486914b909
+    scene: TriangularFlow
+    instance: TriangularFlow
+    cues:
+      t309Manufactured: {word: Manufactured}
+      t309Liverpool: {word: Liverpool}
+      t309African: {word: African}
+      t309Captives: {word: Captives}
+      t309Middle: {word: Middle}
+      t309Sugar: {word: Sugar}
+      t309Rum: {word: rum}
+      t309Markets: {word: markets}
+  - shot_id: S00-310
+    turn_id: 16e3b083d1a488c3
+    scene: EmbarkationGrowth
+    instance: EmbarkationGrowth
+    cues:
+      t310Thirteen: {word: thirteen}
+      t310FiftyOne: {word: fifty-one}
+      t310SixtyOne: {word: sixty-one}
+      t310FiftyTwo: {word: fifty-two}
+      t310FiftyThree: {word: fifty-three}
+  - shot_id: S00-311
+    turn_id: 434b8f16717d358f
+    scene: CrossingLoss
+    instance: CrossingLoss
+    cues:
+      t311Across: {word: Across}
+      t311Embarked: {word: embarked}
+      t311Landed: {word: landed}
+      t311Died: {word: died}
+      t311Mortality: {word: mortality}
+      t311Fourteen: {word: fourteen}
+  - shot_id: S00-312
+    turn_id: e95f08a8cff03bd1
+    scene: DestinationShare
+    instance: DestinationShare
+    cues:
+      t312Brazil: {word: Brazil}
+      t312FortyFive: {word: forty-five}
+      t312Mainland: {word: Mainland}
+      t312Three: {word: three, occurrence: 1}
+      t312Thousand: {word: thousand}
+  - shot_id: S00-313
+    turn_id: 10c4809a300c4f06
+    scene: IberianHemisphere
+    instance: IberianHemisphere
+    cues:
+      t313Nineteen: {word: nineteen}
+      t313Iberian: {word: Iberian}
+      t313Brazil: {word: Brazil}
+      t313Sugar: {word: sugar}
+      t313Spanish: {word: Spanish}
+      t313Silver: {word: silver}
+      t313Cartagena: {word: Cartagena}
+      t313Veracruz: {word: Veracruz}
+      t313Spain: {word: Spain}
+      t313England: {word: England}
+      t313Colonies: {word: colonies}
+  - shot_id: S00-314
+    turn_id: e24faaa8668e8abb
+    scene: VirginiaPrediction
+    instance: VirginiaPrediction
+    cues:
+      t314Virginia: {word: Virginia}
+      t314Marginal: {word: marginal}
+      t314Tobacco: {word: tobacco}
+      t314Company: {word: Company}
+      t314Settlers: {word: settlers}
+      t314Indentured: {word: indentured}
+  - shot_id: S00-315
+    turn_id: 49f6743af6f10f91
+    scene: VirginiaPrediction
+    instance: VirginiaPrediction
+    cues:
+      t315Why: {word: Why}
+      t315Virginia: {word: Virginia}
+      t315Prediction: {word: Prediction, occurrence: 1}
+      t315Portugal: {word: Portugal}
+      t315Lisbon: {word: Lisbon}
+      t315VirginiaArrival: {word: Virginia, occurrence: 2}
+      t315Chapter: {word: Chapter}
+  - shot_id: S00-316
+    turn_id: c38ed224e9a03777
+    scene: VirginiaPrediction
+    instance: VirginiaPrediction
+    cues:
+      t316Prediction: {word: Prediction, occurrence: 1}
+      t316Codification: {word: Codification}
+      t316Solidarity: {word: solidarity}
+      t316Statutory: {word: statutory}
+      t316Buffer: {word: Buffer}
+      t316Privileges: {word: privileges}
+      t316Coalitions: {word: coalitions}
+      t316CrossRacial: {word: cross-racial}
+  - shot_id: S00-317
+    turn_id: d00b9354a54f0978
+    scene: PointComfort
+    instance: PointComfort
+    cues:
+      t317Virginia: {word: Virginia}
+      t317August: {word: August}
+      t317Point: {word: Point}
+      t317White: {word: White}
+      t317Lion: {word: Lion}
+      t317Traded: {word: traded}
+      t317Twenty: {word: twenty}
+      t317Angola: {word: Angola}
+      t317Bautista: {word: Bautista}
+  - shot_id: S00-318
+    turn_id: f12ff16daa7c925c
+    scene: PointComfort
+    instance: PointComfort
+    cues:
+      t318Why: {word: Why}
+      t318Statutory: {word: statutory, occurrence: 1}
+      t318Zero: {word: zero, occurrence: 1}
+      t318Codes: {word: codes}
+      t318ZeroSecond: {word: zero, occurrence: 2}
+      t318Tier: {word: tier, occurrence: 2}
