@@ -3,7 +3,7 @@ import {useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../../tokens';
 import {EquationTerms, type EquationToken} from '../../equations';
 import {StageSceneFrame} from '../shared';
-import {AuditedTermBlock,DrawLine,FlickerLabel,KitSound,enter,HeartIcon,Label,lineAttrs,PANEL_STYLE,pathFrom,PersonIcon,ScanLines,SceneSource,shapeAttrs,textAttrs,WordIcon,type Box,type Point} from './PackageAVisuals';
+import {AuditedTermBlock,DrawLine,FlickerLabel,KitSound,enter,HeartIcon,Label,lineAttrs,PANEL_STYLE,pathFrom,ScanLines,SceneSource,shapeAttrs,StickFigure,textAttrs,WordIcon,type Box,type Point} from './PackageAVisuals';
 import {EQ_25} from './SequenceAsTheory';
 
 const FORMAL_LINES:readonly (readonly EquationToken[])[]=[
@@ -38,7 +38,7 @@ function TurnThirteen({ms,cue}:{ms:number;cue:CueMap}) {
   const targets=[
     {cue:'t13Hearts',label:'HEART',glyph:<HeartIcon/>},
     {cue:'t13Vocabulary',label:'VOCABULARY',glyph:<WordIcon/>},
-    {cue:'t13Intentions',label:'MORAL INTENTION',glyph:<PersonIcon tone="color/marker/race"/>},
+    {cue:'t13Intentions',label:'MORAL INTENTION',glyph:<StickFigure x={24} y={24} group="outgroup" emphasis={1} scale={0.8} animate={false}/>},
   ] as const;
   return <div data-audit-turn="13">
     {ms>=cue.t13Ordering.at&&<Header text="DEFAULT DEFINITION" p={ordering} startMs={cue.t13Ordering.at} beat/>}
@@ -60,7 +60,7 @@ function TurnThirteen({ms,cue}:{ms:number;cue:CueMap}) {
 }
 
 function DisparityGlyph({kind}:{kind:'figure'|'court'|'workplace'}) {
-  if(kind==='figure')return <PersonIcon/>;
+  if(kind==='figure')return <StickFigure x={24} y={24} group="neutral" emphasis={1} scale={0.8} animate={false}/>;
   if(kind==='court')return <svg width="48" height="48" viewBox="0 0 48 48" aria-hidden="true"><path d="M5 17 L24 6 L43 17 Z M9 21 V38 M19 21 V38 M29 21 V38 M39 21 V38 M5 42 H43" fill="none" stroke={color('color/text/soft')} strokeWidth="2.3"/></svg>;
   return <svg width="48" height="48" viewBox="0 0 48 48" aria-hidden="true"><rect x="7" y="7" width="34" height="34" fill="none" stroke={color('color/text/soft')} strokeWidth="2"/>{[16,25,34].flatMap(x=>[16,25,34].map(y=><rect key={`${x}-${y}`} x={x-2} y={y-2} width="4" height="4" fill={color('color/fill/gold')}/>))}</svg>;
 }

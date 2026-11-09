@@ -2,7 +2,7 @@ import React from 'react';
 import {useCue,useStageMs,type SceneProps} from '@stage';
 import {color} from '../../tokens';
 import {StageSceneFrame} from '../shared';
-import {ActionIcon,AuditedTermBlock,DrawLine,FlickerLabel,KitSound,enter,Label,lineAttrs,Panel,pathFrom,PersonIcon,SceneSource,shapeAttrs,SystemIcon,type Box,type Point} from './PackageAVisuals';
+import {ActionIcon,AuditedTermBlock,DrawLine,FlickerLabel,KitSound,enter,Label,lineAttrs,Panel,pathFrom,SceneSource,shapeAttrs,StickFigure,SystemIcon,type Box,type Point} from './PackageAVisuals';
 
 export const SEQUENCE_LAYOUT={
   caption:{x:116,y:92,w:1688,h:64},continuity:{x:92,y:174,w:1736,h:742},
@@ -80,7 +80,7 @@ export function SequenceAsTheory({segment}:SceneProps){
     {ms>=cue.t11Numbered.at&&<NumberRail ms={ms} numberedAt={cue.t11Numbered.at} analyticalAt={cue.t11Analytical.at} orderAt={cue.t11Order.at} nodes={nodes}/>}
     {ms>=cue.t11Unstated.at&&<div data-causal-graph="true" data-equation={EQ_25} style={{opacity:graphP}}>
       {ms>=cue.t11Cause.at&&<FlickerLabel startMs={cue.t11Cause.at} durationMs={440} id="causal-claim" box={SEQUENCE_LAYOUT.claim} size={24} weight={500} ls={2} align="center" ink={color('color/marker/race')}>CAUSAL CLAIM</FlickerLabel>}
-      <AuditedTermBlock id="node-one" box={first} term={firstLabel} termId="IndividualPrejudice" ms={ms} pulses={[cue.t12Personal.at,cue.t12Root.at]} summary={ms>=cue.t12First.at?'assigned first':'causal node 1'} glyph={<PersonIcon/>} selected={ms>=cue.t12First.at} framed accent={ms>=cue.t12First.at?'color/marker/race':'color/fill/gold'} unit="slot 1" opacity={graphP}/>
+      <AuditedTermBlock id="node-one" box={first} term={firstLabel} termId="IndividualPrejudice" ms={ms} pulses={[cue.t12Personal.at,cue.t12Root.at]} summary={ms>=cue.t12First.at?'assigned first':'causal node 1'} glyph={<StickFigure x={24} y={24} group="neutral" emphasis={1} scale={0.8} animate={false}/>} selected={ms>=cue.t12First.at} framed accent={ms>=cue.t12First.at?'color/marker/race':'color/fill/gold'} unit="slot 1" opacity={graphP}/>
       <AuditedTermBlock id="node-two" box={second} term="Discriminatory Actions" termId="DiscriminatoryActions" ms={ms} summary="causal node 2" glyph={<ActionIcon/>} accent="color/fill/gold" framed unit="slot 2" opacity={graphP}/>
       <AuditedTermBlock id="node-three" box={third} term={thirdLabel} termId="SystemicOutcomes" ms={ms} pulses={[cue.t12Institutional.at]} summary="causal node 3" glyph={<SystemIcon/>} accent="color/fill/gold" framed unit="slot 3" opacity={graphP}/>
       {ms>=cue.t11Cause.at&&<>
