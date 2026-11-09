@@ -44,7 +44,7 @@ export function Panel({id,box,opacity=1,accent,fillToken,strokeWidth,startMs,dur
   // Callers still pass a CSS background; map the known washes onto DrawRect fill tokens.
   const fill=fillToken??(rest.background===color('color/fill/red-wash')?'color/fill/red-wash':rest.background===color('color/fill/red-faint')?'color/fill/red-faint':rest.background===color('color/fill/gold-wash')?'color/fill/gold-wash':'color/fill/panel-render');
   delete rest.background; delete rest.border; delete rest.borderColor; delete rest.borderWidth;
-  return <div {...shapeAttrs(id,box,'frame')} style={{...PANEL_STYLE,left:box.x,top:box.y,width:box.w,height:box.h,opacity,border:'none',background:'transparent',...rest}}>
+  return <div {...shapeAttrs(id,box,'frame')} style={{position:'absolute',boxSizing:'border-box',left:box.x,top:box.y,width:box.w,height:box.h,opacity,border:'none',background:'transparent',...rest}}>
     <DrawRect id={`${id}-draw`} box={{x:0,y:0,w:box.w,h:box.h}} {...drawTiming} strokeToken={accent??'color/line/hairline'} fillToken={fill} glowToken={accent??'color/fill/gold'} strokeWidth={strokeWidth} notch={false}/>
     {children}
   </div>;
