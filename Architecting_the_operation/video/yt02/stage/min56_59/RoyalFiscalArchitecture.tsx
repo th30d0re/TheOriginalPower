@@ -7,7 +7,7 @@ export function RoyalFiscalArchitecture({segment}:SceneProps) {
   const c={commissioned:useCue('t265Commissioned').at,author:useCue('t265Author').at,order:useCue('t265Order').at,henry:useCue('t265Henry').at,beneficiary:useCue('t265Beneficiary').at,joao:useCue('t266Joao').at,fiscal:useCue('t266Fiscal').at,casa:useCue('t266Casa').at,registered:useCue('t266Registered').at,taxed:useCue('t266Taxed').at,licensed:useCue('t266Licensed').at};
   const house={x:1020,y:230,w:650,h:550};
   return <Scene segment={segment}>
-    <AtlanticMap at={c.joao} route="atlantic" focus="iberia" labels={['Lisbon','Lagos']}/>
+    <AtlanticMap at={c.joao} until={c.casa} route="atlantic" focus="iberia" labels={['Lisbon','Lagos']}/>
     <Panel box={{x:120,y:104,w:1560,h:72}} at={c.commissioned}/><Copy at={c.author} box={{x:150,y:122,w:1080,h:38}} size={30}>AUTHORSHIP AND FISCAL POWER</Copy>
     <DrawRect box={{x:160,y:245,w:610,h:520}} startFrame={frame(c.order)} durationFrames={20} strokeToken="color/fill/gold" fillToken="color/fill/panel-render" glowToken="color/fill/gold" beat/>
     <FitBox text="MILITARY ORDER OF CHRIST" x={195} y={280} size={28} weight={600} tag="OFFICE" startFrame={frame(c.order)} durationFrames={16} textToken="color/text/primary" strokeToken="color/fill/gold" fillToken="color/fill/panel-render" accentToken="color/fill/gold" beat/>
@@ -17,6 +17,6 @@ export function RoyalFiscalArchitecture({segment}:SceneProps) {
     <DrawRect box={house} startFrame={frame(c.joao)} durationFrames={22} strokeToken="color/marker/race" fillToken="color/fill/red-faint" glowToken="color/marker/race" beat/>
     <FitBox text="CASA DOS ESCRAVOS" x={1060} y={275} size={34} weight={600} tag="LISBON · 1486" startFrame={frame(c.casa)} durationFrames={16} textToken="color/text/primary" strokeToken="color/marker/race" fillToken="color/fill/panel-render" accentToken="color/marker/race" beat/>
     {[['REGISTER',c.registered],['TAX',c.taxed],['LICENSE',c.licensed]].map(([label,at],i)=><React.Fragment key={String(label)}><DrawRect box={{x:1090+i*180,y:520,w:150,h:64}} startFrame={frame(Number(at))} durationFrames={14} strokeToken="color/marker/race" fillToken="color/fill/panel-render" glowToken="color/marker/race" beat/><Copy at={Number(at)} box={{x:1100+i*180,y:540,w:130,h:24}} size={19} align="center" mono>{String(label)}</Copy></React.Fragment>)}
-    <CineStill name="248-casa-dos-escravos" at={c.casa} caption="LISBON · 1486"/>
+    <CineStill name="248-casa-dos-escravos" at={c.casa} until={c.registered} caption="LISBON · 1486"/>
   </Scene>;
 }

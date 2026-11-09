@@ -7,7 +7,7 @@ export function ZuraranIdeology({segment}:SceneProps) {
   const c={step:useCue('t262Step').at,ideology:useCue('t262Ideology').at,running:useCue('t262Running').at,modern:useCue('t263Modern').at,firearm:useCue('t263Firearm').at,repeats:useCue('t263Repeats').at,check:useCue('t264Check').at,prediction:useCue('t264Prediction').at,kidnapping:useCue('t264Kidnapping').at,dum:useCue('t264Dum').at};
   const dates=[['1441 RAID',c.kidnapping],['1444 LAGOS',c.check],['1452 DUM',c.dum],['1453 IDEOLOGY',c.ideology]] as const;
   return <Scene segment={segment}>
-    <AtlanticMap at={c.check} route="coast" focus="atlantic" labels={['Lisbon','RioDeOro','Bojador','Senegal']}/>
+    <AtlanticMap at={c.check} until={c.prediction} route="coast" focus="atlantic" labels={['Lisbon','RioDeOro','Bojador','Senegal']}/>
     <Panel box={{x:120,y:104,w:1680,h:72}} at={c.step}/><Copy at={c.ideology} box={{x:150,y:122,w:980,h:38}} size={30}>IDEOLOGY · STILL RUNNING</Copy>
     <DrawRect box={{x:170,y:250,w:640,h:400}} startFrame={frame(c.ideology)} durationFrames={20} strokeToken="color/marker/race" fillToken="color/fill/red-faint" glowToken="color/marker/race" beat/>
     <FitBox text="1453 NARRATIVE" x={210} y={285} size={34} weight={600} tag="IDEA" startFrame={frame(c.ideology)} durationFrames={16} textToken="color/text/primary" strokeToken="color/marker/race" fillToken="color/fill/panel-render" accentToken="color/marker/race" beat/>

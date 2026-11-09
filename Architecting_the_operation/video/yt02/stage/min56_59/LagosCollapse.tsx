@@ -7,7 +7,7 @@ export function LagosCollapse({segment}:SceneProps) {
   const c={auction:useCue('t259Auction').at,lagos:useCue('t259Lagos').at,varied:useCue('t259Varied').at,skin:useCue('t259Skin').at,collapsed:useCue('t260Collapsed').at,degraded:useCue('t260Degraded').at,beasts:useCue('t260Beasts').at,enslavement:useCue('t261Enslavement').at,separation:useCue('t261Separation').at,rescue:useCue('t261Rescue').at};
   const people=[{x:290,group:'neutral' as const},{x:510,group:'ingroup' as const},{x:730,group:'outgroup' as const}];
   return <Scene segment={segment}>
-    <AtlanticMap at={c.lagos} route="portugal" focus="iberia" labels={['Lisbon','Lagos']}/>
+    <AtlanticMap at={c.lagos} until={c.varied} route="portugal" focus="iberia" labels={['Lisbon','Lagos']}/>
     <Panel box={{x:120,y:104,w:1680,h:72}} at={c.auction}/><Copy at={c.lagos} box={{x:150,y:122,w:820,h:38}} size={30}>LAGOS · 1444 AUCTION</Copy>
     <FitBox text="DISTINCT CAPTIVES" x={175} y={242} size={34} weight={600} tag="OBSERVED" startFrame={frame(c.varied)} durationFrames={16} textToken="color/text/primary" strokeToken="color/fill/gold" fillToken="color/fill/panel-render" accentToken="color/fill/gold" beat/>
     {people.map((p,i)=><React.Fragment key={p.x}><StickFigure x={p.x} y={495} group={p.group} emphasis={1} scale={1.6} animate startFrame={frame(c.skin+i*80)} durationFrames={16} beat/><Copy at={c.skin+i*80} box={{x:p.x-85,y:650,w:170,h:28}} size={20} align="center" tone="color/text/soft">PERSON {i+1}</Copy></React.Fragment>)}
