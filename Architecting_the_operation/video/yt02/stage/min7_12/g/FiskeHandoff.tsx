@@ -132,7 +132,7 @@ export function FiskeHandoff({segment}: SceneProps) {
           {/* Small Source Socket beside Question (height 110, text span 78 -> 32 px margin) */}
           {ms >= cue.t52Fiske && (
             <div data-fiske-socket="true" style={{opacity: fiskeP}}>
-              <Panel id="fiske-socket" box={L.fiskeSocket} accent="color/fill/gold" style={{borderStyle: 'dashed'}} />
+              <Panel startMs={cue.t52Why} id="fiske-socket" box={L.fiskeSocket} accent="color/fill/gold" style={{borderStyle: 'dashed'}} />
               <Label id="fiske-socket-top" box={{x: 1554, y: 136, w: 202, h: 28}} size={20} weight={500} align="center" ink={gold}>
                 SOURCE SOCKET
               </Label>
@@ -145,7 +145,7 @@ export function FiskeHandoff({segment}: SceneProps) {
           {/* Card 1: Internal Thought (height 340, text span 304 -> 36 px margin) */}
           {ms >= cue.t52Stereotyping && (
             <div data-thought-card="true" style={{opacity: stereotypingP}}>
-              <Panel id="thought-card" box={L.thoughtCard} accent="color/line/hairline-strong">
+              <Panel startMs={cue.t52Why} id="thought-card" box={L.thoughtCard} accent="color/line/hairline-strong">
                 <span aria-hidden="true" style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: 5, background: primary}} />
               </Panel>
               <div
@@ -185,7 +185,7 @@ export function FiskeHandoff({segment}: SceneProps) {
           {/* Card 2: Internal Feeling (height 340, text span 304 -> 36 px margin) */}
           {ms >= cue.t52Prejudice && (
             <div data-feeling-card="true" style={{opacity: prejudiceP}}>
-              <Panel id="feeling-card" box={L.feelingCard} accent="color/marker/race">
+              <Panel startMs={cue.t52Why} id="feeling-card" box={L.feelingCard} accent="color/marker/race">
                 <span aria-hidden="true" style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: 5, background: raceRed}} />
               </Panel>
               <div
@@ -233,7 +233,7 @@ export function FiskeHandoff({segment}: SceneProps) {
           {/* Card 3: Observable Outward Action (height 340, text span 304 -> 36 px margin) */}
           {ms >= cue.t52Discrimination && (
             <div data-discrimination-card="true" style={{opacity: discriminationP}}>
-              <Panel
+              <Panel startMs={cue.t52Why}
                 id="action-card"
                 box={L.actionCard}
                 accent="color/text/accent"
@@ -285,7 +285,7 @@ export function FiskeHandoff({segment}: SceneProps) {
           )}
 
           {/* Lower Locus Summary Band (height 165, text span 129 -> 36 px margin) */}
-          <Panel id="locus-summary-panel" box={L.locusSummaryPanel} accent="color/line/hairline" />
+          <Panel startMs={cue.t52Why} id="locus-summary-panel" box={L.locusSummaryPanel} accent="color/line/hairline" />
           <Label id="locus-summary-title" box={{x: 180, y: 728, w: 1560, h: 38}} size={28} weight={600} sans ink={primary}>
             {ms >= cue.t52Moves
               ? 'MOVEMENT ACROSS THE BOUNDARY · INTERNAL STATES TO OUTWARD CONDUCT'
@@ -304,13 +304,13 @@ export function FiskeHandoff({segment}: SceneProps) {
       {isTurn53 && (
         <div data-turn="53" style={{opacity: susanP}}>
           {/* Top Section Banner (height 74, text span 38 -> 36 px margin) */}
-          <Panel id="t53-banner" box={L.t53Banner} accent="color/fill/gold" />
+          <Panel startMs={cue.t53Susan} id="t53-banner" box={L.t53Banner} accent="color/fill/gold" />
           <Label id="t53-banner-title" box={{x: 360, y: 138, w: 1200, h: 38}} size={28} weight={650} sans align="center" ink={gold}>
             ESTABLISHED TAXONOMY SOURCE · SOCIAL PSYCHOLOGY LITERATURE
           </Label>
 
           {/* Citation Card (built to final size 1260×336 from t53Susan, text span 300 -> 36 px margin) */}
-          <Panel id="citation-card" box={L.citationCard} accent="color/fill/gold">
+          <Panel startMs={cue.t53Susan} id="citation-card" box={L.citationCard} accent="color/fill/gold">
             <span aria-hidden="true" style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: 6, background: gold}} />
           </Panel>
           <Label id="cite-author" box={{x: 374, y: 248, w: 820, h: 46}} size={36} weight={650} sans ink={primary}>
@@ -363,7 +363,7 @@ export function FiskeHandoff({segment}: SceneProps) {
           {/* Three-Socket Motif beneath Citation Card (each 390×260, text span 224 -> 36 px margin) */}
           <div data-three-socket-motif={ms >= cue.t53Model ? 'true' : undefined} style={{opacity: ms >= cue.t53Model ? modelP : 0.75}}>
             {/* Socket 1 */}
-            <Panel
+            <Panel startMs={cue.t52Why}
               id="motif-socket-1"
               box={L.motifSockets[0]}
               accent={ms >= cue.t53Model ? 'color/line/hairline-strong' : 'color/line/hairline'}
@@ -392,7 +392,7 @@ export function FiskeHandoff({segment}: SceneProps) {
             </Label>
 
             {/* Socket 2 */}
-            <Panel
+            <Panel startMs={cue.t52Why}
               id="motif-socket-2"
               box={L.motifSockets[1]}
               accent={ms >= cue.t53Model ? 'color/marker/race' : 'color/line/hairline'}
@@ -417,7 +417,7 @@ export function FiskeHandoff({segment}: SceneProps) {
             </Label>
 
             {/* Socket 3 */}
-            <Panel
+            <Panel startMs={cue.t52Why}
               id="motif-socket-3"
               box={L.motifSockets[2]}
               accent={ms >= cue.t53Model ? 'color/text/accent' : 'color/line/hairline'}

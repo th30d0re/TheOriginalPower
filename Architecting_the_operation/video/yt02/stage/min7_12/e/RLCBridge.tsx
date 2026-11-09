@@ -97,6 +97,7 @@ interface RlcTermChipProps {
   title: string;
   meaning: string;
   box: Box;
+  startMs: number;
   ms: number;
   pulses?: EquationPulseMap;
   active: boolean;
@@ -110,6 +111,7 @@ function RlcTermChip({
   title,
   meaning,
   box,
+  startMs,
   ms,
   pulses,
   active,
@@ -144,7 +146,7 @@ function RlcTermChip({
 
   return (
     <div data-term-chip={term} data-chip-active={active ? 'true' : 'false'}>
-      <Panel
+      <Panel startMs={startMs}
         id={`${idPrefix}-chip-frame`}
         box={box}
         accent={active ? 'color/fill/gold' : 'color/line/hairline'}
@@ -272,7 +274,7 @@ export function RLCBridge({segment}: SceneProps) {
     <StageSceneFrame segment={segment}><KitSound mode="beats">
       {/* Top Banner */}
       <div data-rlc-banner="true">
-        <Panel id="rlc-banner-frame" box={L.header} accent="color/line/hairline" />
+        <Panel startMs={cue.t38Bayesian} id="rlc-banner-frame" box={L.header} accent="color/line/hairline" />
         <Label id="rlc-banner-tag" box={L.headerTag} size={20} weight={600} ink={muted}>
           CHAPTER 2 · SYSTEM COUPLING
         </Label>
@@ -285,7 +287,7 @@ export function RLCBridge({segment}: SceneProps) {
 
       {/* Left Column Upper: Mental Half */}
       <div data-mental-half="true">
-        <Panel id="mental-panel-frame" box={L.mentalPanel} accent="color/line/hairline" />
+        <Panel startMs={cue.t38Bayesian} id="mental-panel-frame" box={L.mentalPanel} accent="color/line/hairline" />
         <Label id="mental-header" box={L.mentalHeader} size={20} weight={600} ink={muted}>
           PRIOR ROUTING STAGE
         </Label>
@@ -296,7 +298,7 @@ export function RLCBridge({segment}: SceneProps) {
         )}
 
         <div data-cartridge="true">
-          <Panel id="cartridge-frame" box={L.cartridge} accent="color/marker/race" />
+          <Panel startMs={cue.t38Bayesian} id="cartridge-frame" box={L.cartridge} accent="color/marker/race" />
           <Label id="cartridge-pi" box={L.cartridgePi} size={36} weight={700} ink={raceRed}>
             Π<sub>race</sub>
           </Label>
@@ -318,7 +320,7 @@ export function RLCBridge({segment}: SceneProps) {
 
       {/* Left Column Lower: Cross-Tier Coupling */}
       <div data-coupling-panel="true">
-        <Panel id="coupling-panel-frame" box={L.couplingPanel} accent="color/line/hairline" />
+        <Panel startMs={cue.t38Bayesian} id="coupling-panel-frame" box={L.couplingPanel} accent="color/line/hairline" />
         <Label id="coupling-header" box={L.couplingHeader} size={20} weight={600} ink={gold}>
           CROSS-TIER COUPLING
         </Label>
@@ -345,7 +347,7 @@ export function RLCBridge({segment}: SceneProps) {
 
       {/* Right Column Upper: Institutional Circuit Panel with 5 TermChips */}
       <div data-institutional-half="true">
-        <Panel id="inst-panel-frame" box={L.instPanel} accent="color/line/hairline" />
+        <Panel startMs={cue.t38Bayesian} id="inst-panel-frame" box={L.instPanel} accent="color/line/hairline" />
         <Label id="inst-header" box={L.instHeader} size={22} weight={600} ink={muted}>
           CIRCUIT PARAMETERS · FIVE TERM CHIPS
         </Label>
@@ -362,6 +364,7 @@ export function RLCBridge({segment}: SceneProps) {
           title={hasL ? 'L · INDUCTANCE' : 'TERM L · INERTIA SLOT'}
           meaning={hasL ? 'CULTURAL INERTIA + INSTITUTIONAL ENTRENCHMENT' : 'AWAITING PARAMETER'}
           box={L.lChip}
+          startMs={cue.t38Bayesian}
           ms={ms}
           pulses={eqPulses}
           active={hasL}
@@ -374,6 +377,7 @@ export function RLCBridge({segment}: SceneProps) {
           title={hasR ? 'R · RESISTANCE' : 'TERM R · DAMPING SLOT'}
           meaning={hasR ? 'BUREAUCRATIC + CARCERAL FRICTION' : 'AWAITING PARAMETER'}
           box={L.rChip}
+          startMs={cue.t38Bayesian}
           ms={ms}
           pulses={eqPulses}
           active={hasR}
@@ -386,6 +390,7 @@ export function RLCBridge({segment}: SceneProps) {
           title={hasC ? 'C · CAPACITANCE' : 'TERM C · BUFFER SLOT'}
           meaning={hasC ? 'TOKEN-REFORM ABSORPTION CAPACITY' : 'AWAITING PARAMETER'}
           box={L.cChip}
+          startMs={cue.t38Bayesian}
           ms={ms}
           pulses={eqPulses}
           active={hasC}
@@ -398,6 +403,7 @@ export function RLCBridge({segment}: SceneProps) {
           title={hasQ ? 'q(t) · EQUALITY-SURPLUS CHARGE' : 'TERM q(t) · CHARGE SLOT'}
           meaning={hasQ ? 'REFORM DISPLACEMENT FROM BASELINE' : 'STATE DISPLACEMENT VARIABLE'}
           box={L.qChip}
+          startMs={cue.t38Bayesian}
           ms={ms}
           pulses={eqPulses}
           active={hasQ}
@@ -410,6 +416,7 @@ export function RLCBridge({segment}: SceneProps) {
           title={hasV ? 'V(t) · REFORM-SHOCK DRIVING VOLTAGE' : 'TERM V(t) · FORCING SLOT'}
           meaning={hasV ? 'CIVIL RIGHTS AND RECONSTRUCTION FORCING' : 'EXTERNAL REFORM INPUT'}
           box={L.vChip}
+          startMs={cue.t38Bayesian}
           ms={ms}
           pulses={eqPulses}
           active={hasV}
@@ -419,7 +426,7 @@ export function RLCBridge({segment}: SceneProps) {
 
       {/* Equation Band: centered Eq. 2.11 at 42 px (>= 40 px requirement) */}
       <div data-equation-band="true">
-        <Panel id="eq-band-frame" box={L.eqBand} accent="color/line/hairline" />
+        <Panel startMs={cue.t38Bayesian} id="eq-band-frame" box={L.eqBand} accent="color/line/hairline" />
         <EquationTerms
           equation="Eq. 2.11"
           tokens={eq211Tokens}
@@ -443,7 +450,7 @@ export function RLCBridge({segment}: SceneProps) {
 
       {/* Derived Damping Response Preview */}
       <div data-response-preview="true">
-        <Panel id="preview-panel-frame" box={L.previewPanel} accent="color/line/hairline" />
+        <Panel startMs={cue.t38Bayesian} id="preview-panel-frame" box={L.previewPanel} accent="color/line/hairline" />
 
         <Label
           id="sweep-label"

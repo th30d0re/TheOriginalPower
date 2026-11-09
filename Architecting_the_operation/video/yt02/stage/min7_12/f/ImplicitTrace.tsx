@@ -135,7 +135,7 @@ export function ImplicitTrace({segment}: SceneProps) {
       {!isTurn42 && ms >= cue.t41Define && (
         <div data-turn="41" style={{opacity: defP}}>
           {/* Top Header Banner (height 72, text span 36 -> 36 px slack) */}
-          <Panel id="t41-banner" box={L.t41Banner} accent="color/fill/gold" />
+          <Panel startMs={cue.t41Define} id="t41-banner" box={L.t41Banner} accent="color/fill/gold" />
           <BootIn box={L.t41Banner} startFrame={cueFrame(cue.t41Define)} durationFrames={cueDuration()} mode="scan" beat />
           <Flicker startFrame={cueFrame(cue.t41Define)} durationFrames={cueDuration()}>
             <Label id="t41-banner-title" box={{x: 148, y: 133, w: 980, h: 36}} size={28} weight={650} sans ink={gold}>
@@ -147,7 +147,7 @@ export function ImplicitTrace({segment}: SceneProps) {
           </Label>
 
           {/* Left Top: Definition Card (height 310, text span 273 -> 37 px slack) */}
-          <Panel id="def-card" box={L.definitionCard} accent="color/fill/gold">
+          <Panel startMs={cue.t41Define} id="def-card" box={L.definitionCard} accent="color/fill/gold">
             <span aria-hidden="true" style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: 5, background: gold}} />
           </Panel>
           <Label id="def-term" box={{x: 150, y: 233, w: 630, h: 42}} size={34} weight={650} sans ink={gold}>
@@ -167,7 +167,7 @@ export function ImplicitTrace({segment}: SceneProps) {
 
           {/* Left Bottom: Plain-Language Process Panel (height 325, text span 289 -> 36 px slack) */}
           <div data-plain-panel={ms >= cue.t41Plain ? 'true' : undefined}>
-            <Panel id="plain-panel" box={L.plainPanel} accent={ms >= cue.t41Plain ? 'color/fill/gold' : 'color/line/hairline'} />
+            <Panel startMs={cue.t41Define} id="plain-panel" box={L.plainPanel} accent={ms >= cue.t41Plain ? 'color/fill/gold' : 'color/line/hairline'} />
             <Label
               id="plain-heading"
               box={{x: 150, y: 573, w: 630, h: 38}}
@@ -192,7 +192,7 @@ export function ImplicitTrace({segment}: SceneProps) {
           {/* Column 2: Past-Experience Stream (x: 845, y: 215, w: 300, h: 665, text span 629 -> 36 px slack) */}
           {ms >= cue.t41Past && (
             <div data-stream="true" style={{opacity: pastP}}>
-              <Panel id="stream-panel" box={L.stream} />
+              <Panel startMs={cue.t41Past} id="stream-panel" box={L.stream} />
               <Label id="stream-label" box={{x: 863, y: 233, w: 264, h: 32}} size={22} weight={650} ls={0.6} align="center" ink={gold}>
                 PAST EXPERIENCE
               </Label>
@@ -205,7 +205,7 @@ export function ImplicitTrace({segment}: SceneProps) {
               </svg>
 
               {/* Chip 1: accumulated surroundings (height 112, text span 82 -> 30 px slack) */}
-              <Panel id="exp-card-1" box={{x: 863, y: 325, w: 264, h: 112}} accent="color/fill/gold">
+              <Panel startMs={cue.t41Past} id="exp-card-1" box={{x: 863, y: 325, w: 264, h: 112}} accent="color/fill/gold">
                 <span aria-hidden="true" style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: 4, background: gold}} />
               </Panel>
               <Label id="exp-card-1-tag" box={{x: 879, y: 341, w: 232, h: 26}} size={20} weight={600} ink={gold}>
@@ -216,7 +216,7 @@ export function ImplicitTrace({segment}: SceneProps) {
               </Label>
 
               {/* Chip 2: repeated exposure (height 112, text span 82 -> 30 px slack) */}
-              <Panel id="exp-card-2" box={{x: 863, y: 460, w: 264, h: 112}} accent="color/fill/gold">
+              <Panel startMs={cue.t41Past} id="exp-card-2" box={{x: 863, y: 460, w: 264, h: 112}} accent="color/fill/gold">
                 <span aria-hidden="true" style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: 4, background: gold}} />
               </Panel>
               <Label id="exp-card-2-tag" box={{x: 879, y: 476, w: 232, h: 26}} size={20} weight={600} ink={gold}>
@@ -227,7 +227,7 @@ export function ImplicitTrace({segment}: SceneProps) {
               </Label>
 
               {/* Chip 3: stored association (height 112, text span 82 -> 30 px slack) */}
-              <Panel id="exp-card-3" box={{x: 863, y: 595, w: 264, h: 112}} accent="color/fill/gold">
+              <Panel startMs={cue.t41Past} id="exp-card-3" box={{x: 863, y: 595, w: 264, h: 112}} accent="color/fill/gold">
                 <span aria-hidden="true" style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: 4, background: gold}} />
               </Panel>
               <Label id="exp-card-3-tag" box={{x: 879, y: 611, w: 232, h: 26}} size={20} weight={600} ink={gold}>
@@ -257,13 +257,13 @@ export function ImplicitTrace({segment}: SceneProps) {
           {/* Column 3: Introspectively Unidentified Trace Store (x: 1185, y: 215, w: 300, h: 665, text span 629 -> 36 px slack) */}
           {ms >= cue.t41Unidentified && (
             <div data-trace-store="true" style={{opacity: unidentP}}>
-              <Panel id="trace-panel" box={L.traceStore} />
+              <Panel startMs={cue.t41Experiences} id="trace-panel" box={L.traceStore} />
               <Label id="trace-title" box={{x: 1201, y: 233, w: 268, h: 80}} size={20} weight={650} ls={0.4} align="center" ink={gold}>
                 INTROSPECTIVELY UNIDENTIFIED TRACE
               </Label>
 
               {/* Translucent Inspection Screen (height 382, text span 349 -> 33 px slack) */}
-              <Panel id="inspection-screen" box={{x: 1203, y: 325, w: 264, h: 382}}>
+              <Panel startMs={cue.t41Experiences} id="inspection-screen" box={{x: 1203, y: 325, w: 264, h: 382}}>
                 <div
                   style={{
                     position: 'absolute',
@@ -277,14 +277,14 @@ export function ImplicitTrace({segment}: SceneProps) {
                 INSPECTION SCREEN
               </Label>
 
-              <Panel id="trace-stored-1" box={{x: 1217, y: 385, w: 236, h: 90}} accent="color/line/hairline">
+              <Panel startMs={cue.t41Experiences} id="trace-stored-1" box={{x: 1217, y: 385, w: 236, h: 90}} accent="color/line/hairline">
                 <span aria-hidden="true" style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: 3, background: gold}} />
               </Panel>
               <Label id="trace-stored-1-label" box={{x: 1229, y: 401, w: 212, h: 58}} size={20} weight={500} align="center" ink={gold}>
                 UNIDENTIFIED TRACE
               </Label>
 
-              <Panel id="trace-stored-2" box={{x: 1217, y: 495, w: 236, h: 90}} accent="color/line/hairline">
+              <Panel startMs={cue.t41Experiences} id="trace-stored-2" box={{x: 1217, y: 495, w: 236, h: 90}} accent="color/line/hairline">
                 <span aria-hidden="true" style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: 3, background: gold}} />
               </Panel>
               <Label id="trace-stored-2-label" box={{x: 1229, y: 511, w: 212, h: 58}} size={20} weight={500} align="center" ink={primary}>
@@ -339,7 +339,7 @@ export function ImplicitTrace({segment}: SceneProps) {
 
           {/* Column 4: Reaction Rail with Steered Scale & Needle (x: 1525, y: 215, w: 265, h: 665, text span 629 -> 36 px slack) */}
           <div data-reaction-rail="true" style={{opacity: Math.max(0.85, favP, unfavP, actionP)}}>
-            <Panel id="rail-panel" box={L.reactionRail} />
+            <Panel startMs={cue.t41Define} id="rail-panel" box={L.reactionRail} />
             <Label id="rail-label" box={{x: 1541, y: 233, w: 233, h: 34}} size={24} weight={650} ls={0.8} align="center" ink={gold}>
               REACTION
             </Label>
@@ -463,7 +463,7 @@ export function ImplicitTrace({segment}: SceneProps) {
       {isTurn42 && (
         <div data-turn="42" style={{opacity: precisionP}}>
           {/* Top Title Banner (height 72, text span 36 -> 36 px slack) */}
-          <Panel id="t42-banner" box={L.t42Banner} accent="color/fill/gold" />
+          <Panel startMs={cue.t42Precision} id="t42-banner" box={L.t42Banner} accent="color/fill/gold" />
           <BootIn box={L.t42Banner} startFrame={cueFrame(cue.t42Precision)} durationFrames={cueDuration()} mode="scan" beat />
           <Label id="t42-banner-title" box={{x: 170, y: 133, w: 1020, h: 36}} size={28} weight={650} sans ink={gold}>
             SIMULTANEOUS DUAL INPUTS · BELIEF &amp; AUTOMATIC TRACE
@@ -517,7 +517,7 @@ export function ImplicitTrace({segment}: SceneProps) {
           )}
 
           {/* Center: One Person Hub (x: 830, y: 230, w: 260, h: 300, text span 264 -> 36 px slack) */}
-          <Panel id="person-hub" box={L.personHub} accent="color/fill/gold" />
+          <Panel startMs={cue.t42Precision} id="person-hub" box={L.personHub} accent="color/fill/gold" />
           <Label id="person-label" box={{x: 846, y: 248, w: 228, h: 34}} size={24} weight={650} ls={0.8} align="center" ink={gold}>
             ONE PERSON
           </Label>
@@ -590,7 +590,7 @@ export function ImplicitTrace({segment}: SceneProps) {
           </svg>
 
           {/* Lower Reaction Panel (x: 360, y: 620, w: 1200, h: 265, text span 229 -> 36 px slack) */}
-          <Panel
+          <Panel startMs={cue.t42Precision}
             id="response-node"
             box={L.responseNode}
             accent={ms >= cue.t42Treatment ? 'color/fill/gold' : 'color/line/hairline-strong'}
