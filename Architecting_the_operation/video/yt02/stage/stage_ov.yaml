@@ -2021,3 +2021,105 @@ shots:
       t167Authority: {word: authority}
       t167Protection: {word: protection}
   # Minutes 22–26: turns 111–123 (Predictions 1–4, Refutation Standards 1–3, Empirical Test Matrix, and Formal System Definition).
+  # Minutes 41–44: turns 192–204 (RLC response, five-tier refinement, and recursive partitions).
+  - shot_id: S00-192
+    turn_id: c944df96496a5600
+    scene: RlcResponse
+    instance: RlcResponse
+    cues:
+      t192Equation: {word: Equation}
+      t192Rlc: {word: RLC}
+      t192Inertia: {word: inertia}
+      t192Resistance: {word: resistance}
+      t192Capacitance: {word: capacitance}
+  - shot_id: S00-193
+    turn_id: 5764e37f2102a777
+    scene: RlcResponse
+    instance: RlcResponse
+    cues:
+      t193Shock: {word: shock}
+      t193Baseline: {word: baseline}
+      t193Damped: {word: damped}
+  - shot_id: S00-194
+    turn_id: 6bd2d3bf737b4701
+    scene: RlcResponse
+    instance: RlcResponse
+    cues:
+      t194Raising: {word: raising}
+  - shot_id: S00-195
+    turn_id: 72fac1d6c2b57afa
+    scene: RlcResponse
+    instance: RlcResponse
+    cues:
+      t195Inductance: {word: inductance}
+      t195Stores: {word: stores}
+  - shot_id: S00-196
+    turn_id: 74cc55e5f405ab7e
+    scene: ChecklistComplete
+    instance: ChecklistComplete
+    cues:
+      t196All: {word: All}
+      t196Five: {word: five}
+      t196Satisfied: {word: satisfied}
+      t196Mathematical: {word: mathematical}
+      t196Institutional: {word: institutional}
+  - shot_id: S00-197
+    turn_id: f763d0c4af909998
+    scene: ConeSetRefinement
+    instance: ConeSetRefinement
+    cues:
+      t197Extend: {word: extend}
+      t197Five: {word: five}
+      t197Equation: {word: Equation}
+      t197Outgroup: {word: Out-group}
+  - shot_id: S00-198
+    turn_id: 82306d7e1350173f
+    scene: OutgroupPartition
+    instance: OutgroupPartition
+    cues:
+      t198States: {word: states}
+      t198Disjoint: {word: disjoint}
+  - shot_id: S00-199
+    turn_id: 515db4150d2852bf
+    scene: OutgroupPartition
+    instance: OutgroupPartition
+    cues:
+      t199Racialized: {word: O-sub-racialized}
+      t199Black: {word: Black}
+  - shot_id: S00-200
+    turn_id: e43bcbfb32ea8ca9
+    scene: OutgroupPartition
+    instance: OutgroupPartition
+    cues:
+      t200Adjacent: {word: adjacent}
+      t200Indigenous: {word: Indigenous}
+  - shot_id: S00-201
+    turn_id: dda298627fdab622
+    scene: OutgroupPartition
+    instance: OutgroupPartition
+    cues:
+      t201Splitting: {word: Splitting}
+      t201Border: {word: border}
+  - shot_id: S00-202
+    turn_id: 8a4335ae9552decb
+    scene: LocalPartition
+    instance: LocalPartition
+    cues:
+      t202Splitting: {word: splitting}
+      t202Divisions: {word: divisions}
+  - shot_id: S00-203
+    turn_id: 302dbe9133ed9cfd
+    scene: LocalPartition
+    instance: LocalPartition
+    cues:
+      t203Equation: {word: Equation}
+      t203Recursive: {word: recursive}
+      t203Alpha: {word: alpha}
+  - shot_id: S00-204
+    turn_id: f69fa0f0d9a47959
+    scene: LocalPartition
+    instance: LocalPartition
+    cues:
+      t204Writes: {word: writes}
+      t204Intersection: {word: intersection}
+      t204Gender: {word: gender}

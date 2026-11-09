@@ -26,6 +26,12 @@ export const EQUATION_TERMS = {
   Universe: {show: 'U', meaning: 'population universe (Eq. 2.1)', slot: 9},
   InGroupSet: {show: 'I', meaning: 'In-group set I (Eq. 2.1)', slot: 2},
   OutGroupSet: {show: 'O', meaning: 'Out-group set O (Eq. 2.1)', slot: 1},
+  // Eq. 2.3 / Eq. 2.4 refinements, introduced in YT02 turns 197–204.
+  ORacialized: {show: 'O racialized', math: 'O_{racialized}', meaning: 'primary racialized target subset', slot: 1},
+  OAdjacent: {show: 'O adjacent', math: 'O_{adjacent}', meaning: 'adjacent out-group subset sequence', slot: 7},
+  X: {show: 'X', meaning: 'any tier or subset under local partition', slot: 3},
+  XPlusAlpha: {show: 'X plus alpha', math: 'X_{+alpha}', meaning: 'locally advantaged half on alpha', slot: 0},
+  XMinusAlpha: {show: 'X minus alpha', math: 'X_{-alpha}', meaning: 'locally disadvantaged half on alpha', slot: 6},
 } as const;
 
 export type EquationTermId = keyof typeof EQUATION_TERMS;
