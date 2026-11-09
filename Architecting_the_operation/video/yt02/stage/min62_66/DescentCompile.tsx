@@ -1,0 +1,18 @@
+import React from 'react';
+import {DrawLine, DrawRect, FitBox, useCue, type SceneProps} from '@stage';
+import {Copy, Panel, Scene, frame} from './shared';
+
+export function DescentCompile({segment}:SceneProps) {
+  const c={sentencia:useCue('t287Sentencia').at,descent:useCue('t287Descent').at,portuguese:useCue('t287Portuguese').at,plantation:useCue('t287Plantation').at,phenotype:useCue('t287Phenotype').at,deployment:useCue('t288Deployment').at,compile:useCue('t288Compile').at,captive:useCue('t288Captive').at,commercial:useCue('t288Commercial').at,papal:useCue('t288Papal').at,commissioned:useCue('t288Commissioned').at,fiscal:useCue('t288Fiscal').at,body:useCue('t289Body').at,extraction:useCue('t289Extraction').at,category:useCue('t289Category').at,boundary:useCue('t289Boundary').at,inheritance:useCue('t289Inheritance').at,enforcement:useCue('t289Enforcement').at,durable:useCue('t289Durable').at};
+  const nodes=[['1441','SEIZURE',c.captive],['1444','SCALING',c.commercial],['1452–55','TITLE',c.papal],['1453','IDEOLOGY',c.commissioned],['1486','FISCAL',c.fiscal]] as const;
+  return <Scene segment={segment}>
+    <Panel box={{x:120,y:104,w:1680,h:72}} at={c.sentencia}/><Copy at={c.sentencia} box={{x:150,y:122,w:1200,h:38}} size={30}>DESCENT-KEYED LEGAL PARTITION</Copy>
+    <Panel box={{x:150,y:240,w:510,h:220}} at={c.descent} accent="color/marker/race"/><FitBox text="SENTENCIA-ESTATUTO" x={188} y={274} size={28} weight={600} tag="1449" startFrame={frame(c.sentencia)} durationFrames={16} textToken="color/text/primary" strokeToken="color/marker/race" fillToken="color/fill/panel-render" accentToken="color/marker/race" beat/>
+    <DrawLine points={[[680,350],[865,350]]} startFrame={frame(c.portuguese)} durationFrames={14} strokeToken="color/fill/gold" strokeWidth={5} end="arrow" beat/>
+    <Panel box={{x:890,y:240,w:790,h:220}} at={c.plantation}/><FitBox text="ATLANTIC INSTITUTIONS" x={930} y={274} size={28} weight={600} tag="PORTUGAL" startFrame={frame(c.portuguese)} durationFrames={16} textToken="color/text/primary" strokeToken="color/fill/gold" fillToken="color/fill/panel-render" accentToken="color/fill/gold" beat/>
+    <Panel box={{x:120,y:540,w:1680,h:270}} at={c.deployment}/><FitBox text="ONE COMPILE" x={155} y={510} size={30} weight={600} tag="DEPLOYMENT" startFrame={frame(c.compile)} durationFrames={16} textToken="color/text/primary" strokeToken="color/fill/gold" fillToken="color/fill/panel-render" accentToken="color/fill/gold" beat/>
+    {nodes.map(([year,label,at],i)=><React.Fragment key={label}><DrawRect box={{x:165+i*325,y:620,w:260,h:112}} startFrame={frame(at)} durationFrames={14} strokeToken="color/fill/gold" fillToken="color/fill/panel-render" glowToken="color/fill/gold" beat/><Copy at={at} box={{x:180+i*325,y:642,w:230,h:24}} size={19} align="center" mono tone="color/fill/gold">{year}</Copy><Copy at={at} box={{x:180+i*325,y:680,w:230,h:26}} size={20} align="center">{label}</Copy>{i<4&&<DrawLine points={[[425+i*325,676],[480+i*325,676]]} startFrame={frame(at)} durationFrames={10} strokeToken="color/fill/gold" strokeWidth={3} end="arrow"/>}</React.Fragment>)}
+    <DrawLine points={[[210,880],[820,880]]} startFrame={frame(c.body)} durationFrames={16} strokeToken="color/fill/gold" strokeWidth={4} end="arrow" beat/><Copy at={c.body} box={{x:120,y:905,w:810,h:30}} size={24} align="center">BODY · CONTINUOUS VARIATION</Copy>
+    <DrawLine points={[[1100,880],[1710,880]]} startFrame={frame(c.extraction)} durationFrames={16} strokeToken="color/marker/race" strokeWidth={4} end="arrow" beat/><Copy at={c.durable} box={{x:980,y:905,w:810,h:30}} size={24} align="center" tone="color/marker/race">CATEGORY · BOUNDARY · INHERITANCE · ENFORCEMENT</Copy>
+  </Scene>;
+}
