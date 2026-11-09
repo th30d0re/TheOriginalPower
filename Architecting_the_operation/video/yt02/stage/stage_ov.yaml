@@ -3083,3 +3083,141 @@ shots:
       t269Crown: {word: Crown}
       t269Wage: {word: wage}
       t269Elevated: {word: elevated}
+  # Minutes 59–62: turns 270–283 (moral exclusion, racialization, and pigmentation variation).
+  - shot_id: S00-270
+    turn_id: f8765e1f93c57495
+    scene: MoralCommunity
+    instance: MoralCommunity
+    cues:
+      t270Connect: {word: Connect}
+      t270Tajfel: {word: Tajfel's}
+      t270Baseline: {word: baseline}
+      t270Outgroup: {word: Out-group, occurrence: 1}
+      t270Law: {word: law}
+      t270Doctrine: {word: doctrine}
+      t270Exclude: {word: exclude}
+  - shot_id: S00-271
+    turn_id: 6c9fc775975d9782
+    scene: MoralCommunity
+    instance: MoralCommunity
+    cues:
+      t271Lagos: {word: Lagos}
+      t271Parents: {word: parents}
+      t271Division: {word: division, occurrence: 2}
+      t271Salvation: {word: salvation}
+  - shot_id: S00-272
+    turn_id: e4c03ae488cbba2e
+    scene: MoralCommunity
+    instance: MoralCommunity
+    cues:
+      t272Moral: {word: moral-exclusion}
+      t272Wage: {word: wage}
+      t272Ranks: {word: ranks}
+  - shot_id: S00-273
+    turn_id: 564acff8e33f7f83
+    scene: ZeroDayExploit
+    instance: ZeroDayExploit
+    cues:
+      t273Chronology: {word: chronology}
+      t273ZeroDay: {word: zero-day, occurrence: 1}
+      t273Attacks: {word: attacks}
+      t273Vulnerability: {word: vulnerability}
+      t273Patch: {word: patch}
+  - shot_id: S00-274
+    turn_id: 914ea89d9eff05d6
+    scene: ZeroDayExploit
+    instance: ZeroDayExploit
+    cues:
+      t274Sorting: {word: sorting}
+      t274Industrialized: {word: industrialized}
+      t274Phenotype: {word: phenotype}
+      t274Heritable: {word: heritable}
+      t274Coded: {word: coded}
+      t274Capital: {word: capital}
+  - shot_id: S00-275
+    turn_id: 7d0a9ba52e7ca0a9
+    scene: ZeroDayExploit
+    instance: ZeroDayExploit
+    cues:
+      t275Antiquity: {word: antiquity}
+      t275Property: {word: property}
+      t275Inheritance: {word: inheritance}
+      t275Markets: {word: markets}
+  - shot_id: S00-276
+    turn_id: 2a0dd11cce42e1cf
+    scene: RacializedVariable
+    instance: RacializedVariable
+    cues:
+      t276Formal: {word: formal}
+      t276Race: {word: race}
+      t276Variable: {word: variable}
+      t276Racialized: {word: racialized}
+      t276Outgroup: {word: Out-group}
+      t276Function: {word: function}
+      t276Phenotype: {word: phenotype, occurrence: 1}
+      t276Written: {word: written}
+      t276Equals: {word: equals}
+  - shot_id: S00-277
+    turn_id: 1052dca74d05249b
+    scene: PigmentationCline
+    instance: PigmentationCline
+    cues:
+      t277Biological: {word: biological}
+      t277Binary: {word: binary}
+      t277Huxley: {word: Huxley}
+      t277Cline: {word: cline}
+      t277Polygenic: {word: polygenic}
+      t277Ultraviolet: {word: ultraviolet}
+  - shot_id: S00-278
+    turn_id: 201c520cc1e72bb5
+    scene: PigmentationCline
+    instance: PigmentationCline
+    cues:
+      t278Jablonski: {word: Jablonski}
+      t278Folate: {word: folate}
+      t278Vitamin: {word: vitamin}
+      t278Environments: {word: environments}
+  - shot_id: S00-279
+    turn_id: aafabf6c98c763be
+    scene: PigmentationCline
+    instance: PigmentationCline
+    cues:
+      t279GenomeWide: {word: genome-wide}
+      t279Regions: {word: regions, occurrence: 2}
+      t279Percent: {word: percent}
+  - shot_id: S00-280
+    turn_id: 42c1029698cb9e2c
+    scene: DeepTimeGradient
+    instance: DeepTimeGradient
+    cues:
+      t280Ancient: {word: Ancient}
+      t280LaBrana: {word: La}
+      t280Alleles: {word: alleles}
+      t280Haplotype: {word: haplotype}
+  - shot_id: S00-281
+    turn_id: 026e2ea986cbbf30
+    scene: DeepTimeGradient
+    instance: DeepTimeGradient
+    cues:
+      t281Cheddar: {word: Cheddar}
+      t281Bundles: {word: bundles}
+  - shot_id: S00-282
+    turn_id: 2d320f07ddc560b6
+    scene: DeepTimeGradient
+    instance: DeepTimeGradient
+    cues:
+      t282Ancestors: {word: ancestors}
+      t282MelaninRich: {word: melanin-rich}
+      t282Protection: {word: protection}
+      t282Hair: {word: hair}
+  - shot_id: S00-283
+    turn_id: 4e6394682d54ce22
+    scene: DeepTimeGradient
+    instance: DeepTimeGradient
+    cues:
+      t283Moved: {word: moved}
+      t283Lower: {word: lower}
+      t283Lighter: {word: lighter}
+      t283Paths: {word: paths}
+      t283Variants: {word: variants}
+      t283Years: {word: years}
