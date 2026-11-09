@@ -881,3 +881,160 @@ shots:
       t67Credit: {word: credit}
       t67Capital: {word: capital}
       t67Allocation: {word: allocation}
+  - shot_id: S00-68
+    turn_id: abdb5c883e0a49a1
+    scene: VectorCompletion
+    instance: VectorCompletion
+    cues:
+      t68Hat: {word: hat}
+      t68Unit: {word: unit}
+      t68Length: {word: length}
+      t68Magnitude: {word: magnitude}
+  - shot_id: S00-69
+    turn_id: 6610aaa433467a9a
+    scene: VectorCompletion
+    instance: VectorCompletion
+    cues:
+      t69Chapter: {word: Chapter}
+      t69Equation: {word: Equation}
+      t69Vector: {word: vector}
+      t69Equals: {word: equals}
+      t69Force: {word: force}
+      t69Hierarchy: {word: hierarchy}
+  - shot_id: S00-70
+    turn_id: d3890c0e29898a04
+    scene: VectorCompletion
+    instance: VectorCompletion
+    cues:
+      t70Definition: {word: definition}
+      t70Directed: {word: directed}
+      t70Law: {word: law}
+      t70Courts: {word: courts}
+      t70Policing: {word: policing}
+      t70Credit: {word: credit}
+      t70Capital: {word: capital}
+      t70Scalar: {word: scalar}
+  - shot_id: S00-71
+    turn_id: 76aecc2e9ca338d1
+    scene: WorkingDefinition
+    instance: WorkingDefinition
+    cues:
+      t71Section: {word: Section}
+      t71Working: {word: working}
+      t71Oppression: {word: oppression}
+      t71Weaponizes: {word: weaponizes}
+      t71Bias: {word: bias}
+      t71Prejudice: {word: prejudice}
+      t71Discrimination: {word: discrimination}
+      t71Mechanisms: {word: mechanisms}
+      t71Control: {word: control}
+  - shot_id: S00-72
+    turn_id: 3f2e2d4684f0e9fd
+    scene: WorkingDefinition
+    instance: WorkingDefinition
+    cues:
+      t72Formal: {word: formal}
+      t72Private: {word: private}
+      t72Machine: {word: machine}
+      t72Elite: {word: Elite}
+  - shot_id: S00-73
+    turn_id: 285f7fbc25e2620d
+    scene: WorkingDefinition
+    instance: WorkingDefinition
+    cues:
+      t73Systems: {word: systems}
+      t73Software: {word: software}
+      t73Wetware: {word: wetware}
+      t73Laws: {word: laws}
+      t73Brains: {word: brains}
+      t73Level: {word: level}
+  - shot_id: S00-74
+    turn_id: e7bf4950913fbd65
+    scene: SystemClass
+    instance: SystemClass
+    cues:
+      t74Structure: {word: structure}
+      t74Ism: {word: ism}
+      t74Capitalism: {word: capitalism}
+      t74Feudalism: {word: feudalism}
+      t74Colonialism: {word: colonialism}
+      t74Institutional: {word: institutional}
+  - shot_id: S00-75
+    turn_id: bac23bfea4b9416f
+    scene: SystemClass
+    instance: SystemClass
+    cues:
+      t75Racism: {word: racism}
+      t75Private: {word: private}
+      t75Allport: {word: Allport}
+      t75Precision: {word: precision}
+  - shot_id: S00-76
+    turn_id: 945565f74e8d0f62
+    scene: SystemClass
+    instance: SystemClass
+    cues:
+      t76Brain: {word: "brain's"}
+      t76Wiring: {word: wiring}
+      t76Software: {word: software}
+      t76Captured: {word: captured}
+      t76Extraction: {word: extraction}
+  - shot_id: S00-77
+    turn_id: 6513da0b49b5e9c5
+    scene: SystemClass
+    instance: SystemClass
+    cues:
+      t77Reserves: {word: reserves}
+      t77Separate: {word: separate}
+      t77MultiTier: {word: multi-tier}
+      t77Control: {word: control}
+  - shot_id: S00-78
+    turn_id: eca048ab140f0c51
+    scene: DefinitionCheckpoint
+    instance: DefinitionCheckpoint
+    cues:
+      t78Pause: {word: Pause}
+      t78Stock: {word: stock}
+  - shot_id: S00-79
+    turn_id: 1f43e268fc23dacc
+    scene: DefinitionCheckpoint
+    instance: DefinitionCheckpoint
+    cues:
+      t79Standard: {word: standard}
+      t79Dictionary: {word: dictionary}
+      t79Bias: {word: bias}
+      t79Prejudice: {word: prejudice}
+      t79Discrimination: {word: discrimination}
+      t79Literature: {word: literature, occurrence: 1}
+      t79Departs: {word: departs}
+      t79Classifying: {word: classifying}
+      t79Reversing: {word: reversing}
+  - shot_id: S00-80
+    turn_id: c3c0b94e12dcd353
+    scene: DefinitionCheckpoint
+    instance: DefinitionCheckpoint
+    cues:
+      t80Sociologist: {word: sociologist}
+      t80Psychologist: {word: psychologist}
+      t80Engineer: {word: engineer}
+      t80Departure: {word: departure}
+  - shot_id: S00-81
+    turn_id: b2695834e161f0ed
+    scene: CausalTest
+    instance: CausalTest
+    cues:
+      t81Remains: {word: remains}
+      t81Time: {word: time}
+      t81Attitudes: {word: attitudes}
+      t81Acts: {word: acts}
+      t81Rules: {word: rules, occurrence: 1}
+      t81Interests: {word: interests}
+  - shot_id: S00-82
+    turn_id: 429cc3007f0a0044
+    scene: CausalTest
+    instance: CausalTest
+    cues:
+      t82Equation: {word: Equation}
+      t82Section: {word: Section}
+      t82Conventional: {word: conventional}
+      t82Dictionary: {word: dictionary}
+      t82Policy: {word: policy}
