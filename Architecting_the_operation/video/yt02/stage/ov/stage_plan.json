@@ -3,10 +3,10 @@
   "fps": 30,
   "width": 1920,
   "height": 1080,
-  "duration_ms": 2488380,
+  "duration_ms": 2670090,
   "range": {
     "start_ms": 0,
-    "end_ms": 2488380
+    "end_ms": 2670090
   },
   "audio": "stage/YT02v2_ov/YT02v2_ov.mp3",
   "cues": {
@@ -1409,6 +1409,42 @@
     "t191Juries": 2484380,
     "t191Lenders": 2485280,
     "t191Hiring": 2486160,
+    "t192Equation": 2487930,
+    "t192Rlc": 2493310,
+    "t192Inertia": 2496830,
+    "t192Resistance": 2499030,
+    "t192Capacitance": 2502090,
+    "t193Shock": 2506160,
+    "t193Baseline": 2508260,
+    "t193Damped": 2511800,
+    "t194Raising": 2523840,
+    "t195Inductance": 2535440,
+    "t195Stores": 2546540,
+    "t196All": 2552280,
+    "t196Five": 2552440,
+    "t196Satisfied": 2555940,
+    "t196Mathematical": 2557300,
+    "t196Institutional": 2558400,
+    "t197Extend": 2560760,
+    "t197Five": 2562860,
+    "t197Equation": 2564520,
+    "t197Outgroup": 2568420,
+    "t198States": 2571800,
+    "t198Disjoint": 2573840,
+    "t199Racialized": 2585940,
+    "t199Black": 2587250,
+    "t200Adjacent": 2593300,
+    "t200Indigenous": 2598780,
+    "t201Splitting": 2613290,
+    "t201Border": 2625250,
+    "t202Splitting": 2627110,
+    "t202Divisions": 2636110,
+    "t203Equation": 2639150,
+    "t203Recursive": 2641350,
+    "t203Alpha": 2646930,
+    "t204Writes": 2649040,
+    "t204Intersection": 2654820,
+    "t204Gender": 2668040,
     "S00-00.title": 400,
     "S00-00.archives": 3960,
     "S00-00.equations": 4360,
@@ -2807,7 +2843,43 @@
     "S00-191.t191Voters": 2483920,
     "S00-191.t191Juries": 2484380,
     "S00-191.t191Lenders": 2485280,
-    "S00-191.t191Hiring": 2486160
+    "S00-191.t191Hiring": 2486160,
+    "S00-192.t192Equation": 2487930,
+    "S00-192.t192Rlc": 2493310,
+    "S00-192.t192Inertia": 2496830,
+    "S00-192.t192Resistance": 2499030,
+    "S00-192.t192Capacitance": 2502090,
+    "S00-193.t193Shock": 2506160,
+    "S00-193.t193Baseline": 2508260,
+    "S00-193.t193Damped": 2511800,
+    "S00-194.t194Raising": 2523840,
+    "S00-195.t195Inductance": 2535440,
+    "S00-195.t195Stores": 2546540,
+    "S00-196.t196All": 2552280,
+    "S00-196.t196Five": 2552440,
+    "S00-196.t196Satisfied": 2555940,
+    "S00-196.t196Mathematical": 2557300,
+    "S00-196.t196Institutional": 2558400,
+    "S00-197.t197Extend": 2560760,
+    "S00-197.t197Five": 2562860,
+    "S00-197.t197Equation": 2564520,
+    "S00-197.t197Outgroup": 2568420,
+    "S00-198.t198States": 2571800,
+    "S00-198.t198Disjoint": 2573840,
+    "S00-199.t199Racialized": 2585940,
+    "S00-199.t199Black": 2587250,
+    "S00-200.t200Adjacent": 2593300,
+    "S00-200.t200Indigenous": 2598780,
+    "S00-201.t201Splitting": 2613290,
+    "S00-201.t201Border": 2625250,
+    "S00-202.t202Splitting": 2627110,
+    "S00-202.t202Divisions": 2636110,
+    "S00-203.t203Equation": 2639150,
+    "S00-203.t203Recursive": 2641350,
+    "S00-203.t203Alpha": 2646930,
+    "S00-204.t204Writes": 2649040,
+    "S00-204.t204Intersection": 2654820,
+    "S00-204.t204Gender": 2668040
   },
   "segments": [
     {
@@ -5158,14 +5230,158 @@
       "instance": "MaintenanceFeedback",
       "scene": "MaintenanceFeedback",
       "start_ms": 2473180,
-      "end_ms": 2488380,
+      "end_ms": 2487930,
       "shots": [
         {
           "shot_id": "S00-191",
           "turn_id": "9c599cb078f9fc5d",
           "turn_index": 191,
           "start_ms": 2473180,
-          "end_ms": 2488380,
+          "end_ms": 2487930,
+          "props": {}
+        }
+      ]
+    },
+    {
+      "instance": "RlcResponse",
+      "scene": "RlcResponse",
+      "start_ms": 2487930,
+      "end_ms": 2552280,
+      "shots": [
+        {
+          "shot_id": "S00-192",
+          "turn_id": "c944df96496a5600",
+          "turn_index": 192,
+          "start_ms": 2487930,
+          "end_ms": 2505120,
+          "props": {}
+        },
+        {
+          "shot_id": "S00-193",
+          "turn_id": "5764e37f2102a777",
+          "turn_index": 193,
+          "start_ms": 2505120,
+          "end_ms": 2517160,
+          "props": {}
+        },
+        {
+          "shot_id": "S00-194",
+          "turn_id": "6bd2d3bf737b4701",
+          "turn_index": 194,
+          "start_ms": 2517160,
+          "end_ms": 2533880,
+          "props": {}
+        },
+        {
+          "shot_id": "S00-195",
+          "turn_id": "72fac1d6c2b57afa",
+          "turn_index": 195,
+          "start_ms": 2533880,
+          "end_ms": 2552280,
+          "props": {}
+        }
+      ]
+    },
+    {
+      "instance": "ChecklistComplete",
+      "scene": "ChecklistComplete",
+      "start_ms": 2552280,
+      "end_ms": 2560520,
+      "shots": [
+        {
+          "shot_id": "S00-196",
+          "turn_id": "74cc55e5f405ab7e",
+          "turn_index": 196,
+          "start_ms": 2552280,
+          "end_ms": 2560520,
+          "props": {}
+        }
+      ]
+    },
+    {
+      "instance": "ConeSetRefinement",
+      "scene": "ConeSetRefinement",
+      "start_ms": 2560520,
+      "end_ms": 2570740,
+      "shots": [
+        {
+          "shot_id": "S00-197",
+          "turn_id": "f763d0c4af909998",
+          "turn_index": 197,
+          "start_ms": 2560520,
+          "end_ms": 2570740,
+          "props": {}
+        }
+      ]
+    },
+    {
+      "instance": "OutgroupPartition",
+      "scene": "OutgroupPartition",
+      "start_ms": 2570740,
+      "end_ms": 2626630,
+      "shots": [
+        {
+          "shot_id": "S00-198",
+          "turn_id": "82306d7e1350173f",
+          "turn_index": 198,
+          "start_ms": 2570740,
+          "end_ms": 2583690,
+          "props": {}
+        },
+        {
+          "shot_id": "S00-199",
+          "turn_id": "515db4150d2852bf",
+          "turn_index": 199,
+          "start_ms": 2583690,
+          "end_ms": 2592980,
+          "props": {}
+        },
+        {
+          "shot_id": "S00-200",
+          "turn_id": "e43bcbfb32ea8ca9",
+          "turn_index": 200,
+          "start_ms": 2592980,
+          "end_ms": 2613290,
+          "props": {}
+        },
+        {
+          "shot_id": "S00-201",
+          "turn_id": "dda298627fdab622",
+          "turn_index": 201,
+          "start_ms": 2613290,
+          "end_ms": 2626630,
+          "props": {}
+        }
+      ]
+    },
+    {
+      "instance": "LocalPartition",
+      "scene": "LocalPartition",
+      "start_ms": 2626630,
+      "end_ms": 2670090,
+      "shots": [
+        {
+          "shot_id": "S00-202",
+          "turn_id": "8a4335ae9552decb",
+          "turn_index": 202,
+          "start_ms": 2626630,
+          "end_ms": 2639150,
+          "props": {}
+        },
+        {
+          "shot_id": "S00-203",
+          "turn_id": "302dbe9133ed9cfd",
+          "turn_index": 203,
+          "start_ms": 2639150,
+          "end_ms": 2647920,
+          "props": {}
+        },
+        {
+          "shot_id": "S00-204",
+          "turn_id": "f69fa0f0d9a47959",
+          "turn_index": 204,
+          "start_ms": 2647920,
+          "end_ms": 2670090,
           "props": {}
         }
       ]
