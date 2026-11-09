@@ -3,10 +3,10 @@
   "fps": 30,
   "width": 1920,
   "height": 1080,
-  "duration_ms": 1193110,
+  "duration_ms": 1373830,
   "range": {
     "start_ms": 0,
-    "end_ms": 1193110
+    "end_ms": 1373830
   },
   "audio": "stage/YT02v2_ov/YT02v2_ov.mp3",
   "cues": {
@@ -681,6 +681,71 @@
     "t97Elite": 1184670,
     "t97Racialization": 1187180,
     "t97Prejudice": 1191300,
+    "t98Figure": 1192660,
+    "t98Complete": 1195380,
+    "t98Elite": 1200040,
+    "t98Systemic": 1202000,
+    "t98Interpersonal": 1206120,
+    "t99Curving": 1207980,
+    "t99Dashed": 1210660,
+    "t99Feedback": 1211240,
+    "t100Laws": 1219600,
+    "t100Manufactured": 1223240,
+    "t100Subordinated": 1226600,
+    "t100Cultivated": 1228460,
+    "t100Stabilize": 1231260,
+    "t101Historian": 1235130,
+    "t101Barbara": 1235797,
+    "t101Essay": 1240110,
+    "t101Page": 1244450,
+    "t102Quotes": 1246890,
+    "t102People": 1249090,
+    "t102Inferior": 1250910,
+    "t102Oppressed": 1253710,
+    "t103Before": 1254890,
+    "t103Archive": 1256130,
+    "t103Definitions": 1258850,
+    "t103Direct": 1257630,
+    "t103Where": 1261910,
+    "t103AntiBlack": 1263510,
+    "t103Begin": 1264910,
+    "t104Separating": 1266330,
+    "t104Bias": 1266770,
+    "t104Prejudice": 1267370,
+    "t104Discrimination": 1268710,
+    "t104Racism": 1269630,
+    "t104Common": 1272150,
+    "t105Folding": 1282250,
+    "t105Blurry": 1286450,
+    "t105Ancient": 1289370,
+    "t105Modern": 1295410,
+    "t106Holding": 1299000,
+    "t106PreModern": 1304430,
+    "t106Scalars": 1306760,
+    "t106Structural": 1309660,
+    "t106Legal": 1312440,
+    "t106Chattel": 1316180,
+    "t107Historians": 1317900,
+    "t107James": 1319020,
+    "t107Francisco": 1321700,
+    "t107Documented": 1324720,
+    "t107Medieval": 1331880,
+    "t108Before": 1336260,
+    "t108Shifting": 1339860,
+    "t108Scalars": 1342380,
+    "t108Without": 1344400,
+    "t109Atlantic": 1351900,
+    "t109Compiled": 1356060,
+    "t109Durable": 1357300,
+    "t110Because": 1361310,
+    "t110Equation": 1361730,
+    "t110Testable": 1363310,
+    "t110Generates": 1365090,
+    "t110Four": 1365640,
+    "t110Three": 1367490,
+    "t110Refutation": 1368630,
+    "t110Historical": 1371430,
+    "t110Files": 1372210,
     "S00-00.title": 400,
     "S00-00.archives": 3960,
     "S00-00.equations": 4360,
@@ -1351,7 +1416,72 @@
     "S00-97.t97Sequence": 1177960,
     "S00-97.t97Elite": 1184670,
     "S00-97.t97Racialization": 1187180,
-    "S00-97.t97Prejudice": 1191300
+    "S00-97.t97Prejudice": 1191300,
+    "S00-98.t98Figure": 1192660,
+    "S00-98.t98Complete": 1195380,
+    "S00-98.t98Elite": 1200040,
+    "S00-98.t98Systemic": 1202000,
+    "S00-98.t98Interpersonal": 1206120,
+    "S00-99.t99Curving": 1207980,
+    "S00-99.t99Dashed": 1210660,
+    "S00-99.t99Feedback": 1211240,
+    "S00-100.t100Laws": 1219600,
+    "S00-100.t100Manufactured": 1223240,
+    "S00-100.t100Subordinated": 1226600,
+    "S00-100.t100Cultivated": 1228460,
+    "S00-100.t100Stabilize": 1231260,
+    "S00-101.t101Historian": 1235130,
+    "S00-101.t101Barbara": 1235797,
+    "S00-101.t101Essay": 1240110,
+    "S00-101.t101Page": 1244450,
+    "S00-102.t102Quotes": 1246890,
+    "S00-102.t102People": 1249090,
+    "S00-102.t102Inferior": 1250910,
+    "S00-102.t102Oppressed": 1253710,
+    "S00-103.t103Before": 1254890,
+    "S00-103.t103Archive": 1256130,
+    "S00-103.t103Definitions": 1258850,
+    "S00-103.t103Direct": 1257630,
+    "S00-103.t103Where": 1261910,
+    "S00-103.t103AntiBlack": 1263510,
+    "S00-103.t103Begin": 1264910,
+    "S00-104.t104Separating": 1266330,
+    "S00-104.t104Bias": 1266770,
+    "S00-104.t104Prejudice": 1267370,
+    "S00-104.t104Discrimination": 1268710,
+    "S00-104.t104Racism": 1269630,
+    "S00-104.t104Common": 1272150,
+    "S00-105.t105Folding": 1282250,
+    "S00-105.t105Blurry": 1286450,
+    "S00-105.t105Ancient": 1289370,
+    "S00-105.t105Modern": 1295410,
+    "S00-106.t106Holding": 1299000,
+    "S00-106.t106PreModern": 1304430,
+    "S00-106.t106Scalars": 1306760,
+    "S00-106.t106Structural": 1309660,
+    "S00-106.t106Legal": 1312440,
+    "S00-106.t106Chattel": 1316180,
+    "S00-107.t107Historians": 1317900,
+    "S00-107.t107James": 1319020,
+    "S00-107.t107Francisco": 1321700,
+    "S00-107.t107Documented": 1324720,
+    "S00-107.t107Medieval": 1331880,
+    "S00-108.t108Before": 1336260,
+    "S00-108.t108Shifting": 1339860,
+    "S00-108.t108Scalars": 1342380,
+    "S00-108.t108Without": 1344400,
+    "S00-109.t109Atlantic": 1351900,
+    "S00-109.t109Compiled": 1356060,
+    "S00-109.t109Durable": 1357300,
+    "S00-110.t110Because": 1361310,
+    "S00-110.t110Equation": 1361730,
+    "S00-110.t110Testable": 1363310,
+    "S00-110.t110Generates": 1365090,
+    "S00-110.t110Four": 1365640,
+    "S00-110.t110Three": 1367490,
+    "S00-110.t110Refutation": 1368630,
+    "S00-110.t110Historical": 1371430,
+    "S00-110.t110Files": 1372210
   },
   "segments": [
     {
@@ -2526,7 +2656,7 @@
       "instance": "CausalReversal",
       "scene": "CausalReversal",
       "start_ms": 1153840,
-      "end_ms": 1193110,
+      "end_ms": 1192660,
       "shots": [
         {
           "shot_id": "S00-95",
@@ -2549,7 +2679,159 @@
           "turn_id": "73767dc81257e68d",
           "turn_index": 97,
           "start_ms": 1177380,
-          "end_ms": 1193110,
+          "end_ms": 1192660,
+          "props": {}
+        }
+      ]
+    },
+    {
+      "instance": "MechanismLoop",
+      "scene": "MechanismLoop",
+      "start_ms": 1192660,
+      "end_ms": 1235030,
+      "shots": [
+        {
+          "shot_id": "S00-98",
+          "turn_id": "2a0deb5b5c6527dd",
+          "turn_index": 98,
+          "start_ms": 1192660,
+          "end_ms": 1207980,
+          "props": {}
+        },
+        {
+          "shot_id": "S00-99",
+          "turn_id": "88669e7f7aedee0f",
+          "turn_index": 99,
+          "start_ms": 1207980,
+          "end_ms": 1219400,
+          "props": {}
+        },
+        {
+          "shot_id": "S00-100",
+          "turn_id": "4854bfa54be88ad4",
+          "turn_index": 100,
+          "start_ms": 1219400,
+          "end_ms": 1235030,
+          "props": {}
+        }
+      ]
+    },
+    {
+      "instance": "FieldsEvidence",
+      "scene": "FieldsEvidence",
+      "start_ms": 1235030,
+      "end_ms": 1254890,
+      "shots": [
+        {
+          "shot_id": "S00-101",
+          "turn_id": "a306f21ffd253993",
+          "turn_index": 101,
+          "start_ms": 1235030,
+          "end_ms": 1246230,
+          "props": {}
+        },
+        {
+          "shot_id": "S00-102",
+          "turn_id": "89e1a5b93e30f814",
+          "turn_index": 102,
+          "start_ms": 1246230,
+          "end_ms": 1254890,
+          "props": {}
+        }
+      ]
+    },
+    {
+      "instance": "ArchiveQuestion",
+      "scene": "ArchiveQuestion",
+      "start_ms": 1254890,
+      "end_ms": 1266330,
+      "shots": [
+        {
+          "shot_id": "S00-103",
+          "turn_id": "8591d10d2c01ef00",
+          "turn_index": 103,
+          "start_ms": 1254890,
+          "end_ms": 1266330,
+          "props": {}
+        }
+      ]
+    },
+    {
+      "instance": "TermSeparation",
+      "scene": "TermSeparation",
+      "start_ms": 1266330,
+      "end_ms": 1317900,
+      "shots": [
+        {
+          "shot_id": "S00-104",
+          "turn_id": "a55c7548920bbe01",
+          "turn_index": 104,
+          "start_ms": 1266330,
+          "end_ms": 1281070,
+          "props": {}
+        },
+        {
+          "shot_id": "S00-105",
+          "turn_id": "2d57794657c3add6",
+          "turn_index": 105,
+          "start_ms": 1281070,
+          "end_ms": 1299000,
+          "props": {}
+        },
+        {
+          "shot_id": "S00-106",
+          "turn_id": "fd8f5ee7ea854f75",
+          "turn_index": 106,
+          "start_ms": 1299000,
+          "end_ms": 1317900,
+          "props": {}
+        }
+      ]
+    },
+    {
+      "instance": "ArchiveBoundary",
+      "scene": "ArchiveBoundary",
+      "start_ms": 1317900,
+      "end_ms": 1361310,
+      "shots": [
+        {
+          "shot_id": "S00-107",
+          "turn_id": "3b1df357a229d6f0",
+          "turn_index": 107,
+          "start_ms": 1317900,
+          "end_ms": 1336260,
+          "props": {}
+        },
+        {
+          "shot_id": "S00-108",
+          "turn_id": "0ea0ea6fdbc7b482",
+          "turn_index": 108,
+          "start_ms": 1336260,
+          "end_ms": 1351820,
+          "props": {}
+        },
+        {
+          "shot_id": "S00-109",
+          "turn_id": "c159e0c16cb2aa5e",
+          "turn_index": 109,
+          "start_ms": 1351820,
+          "end_ms": 1361310,
+          "props": {}
+        }
+      ]
+    },
+    {
+      "instance": "HypothesisGate",
+      "scene": "HypothesisGate",
+      "start_ms": 1361310,
+      "end_ms": 1373830,
+      "shots": [
+        {
+          "shot_id": "S00-110",
+          "turn_id": "d189343a091be8de",
+          "turn_index": 110,
+          "start_ms": 1361310,
+          "end_ms": 1373830,
           "props": {}
         }
       ]
