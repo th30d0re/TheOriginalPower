@@ -21,7 +21,7 @@ export function EmbarkationGrowth({segment}: SceneProps) {
   ];
   return <Scene segment={segment}>
     <Panel box={{x: 120, y: 106, w: 1280, h: 70}} at={cue.thirteen}/>
-    <Copy at={cue.thirteen} box={{x: 150, y: 124, w: 1200, h: 40}} size={32}>EMBARKED PER QUARTER-CENTURY</Copy>
+    <Copy at={cue.thirteen} box={{x: 150, y: 124, w: 1200, h: 40}} size={32}>TRAFFICKED PER QUARTER-CENTURY</Copy>
     <DrawLine points={[[170, 860], [1750, 860]]} startFrame={frame(cue.thirteen)} durationFrames={16} strokeToken="color/line/hairline-strong" strokeWidth={3}/>
     {bars.map((b, i) => {
       const x = 220 + i * 310;

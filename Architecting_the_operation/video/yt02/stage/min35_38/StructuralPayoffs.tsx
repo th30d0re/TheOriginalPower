@@ -49,10 +49,10 @@ export function StructuralPayoffs({segment}: SceneProps) {
         </div>
       </Flicker>
       <Copy at={cue.names + i * 140} box={{x: 350, y: row.y + 28, w: 320, h: 36}} size={26}>{row.name}</Copy>
-      <Copy at={verbAt[i]} box={{x: 740, y: row.y + 30, w: 260, h: 34}} size={24} tone="color/fill/gold">{row.verb}</Copy>
+      <Copy at={verbAt[i]} box={{x: 740, y: i === 3 ? row.y + 18 : row.y + 30, w: 260, h: 34}} size={24} tone="color/fill/gold">{row.verb}</Copy>
       <DrawRect box={{x: 1040, y: row.y + 24, w: row.bar, h: 48}} startFrame={frame(barAt[i])} durationFrames={16} strokeToken={i === 0 ? 'color/fill/accent' : 'color/fill/gold'} fillToken={i === 0 ? 'color/fill/accent-wash' : 'color/fill/gold-wash'} glowToken={i === 0 ? 'color/fill/accent' : 'color/fill/gold'} beat/>
     </React.Fragment>)}
-    <Copy at={cue.boundary} box={{x: 740, y: 748, w: 280, h: 26}} size={19} tone="color/text/dim">THE BOUNDARY</Copy>
+    <Copy at={cue.boundary} box={{x: 740, y: 760, w: 280, h: 26}} size={20} tone="color/text/dim">THE BOUNDARY</Copy>
     <Copy at={cue.payoffs} box={{x: 1040, y: 226, w: 500, h: 28}} size={20} mono tone="color/text/dim">MATERIAL PAYOFFS</Copy>
     <Copy at={cue.chapter} box={{x: 150, y: 830, w: 400, h: 26}} size={20} mono tone="color/text/dim">EQ. 0.3 · CHAPTER 0</Copy>
     <EquationTerms equation="Eq. 0.3 · benefit ordering" ms={ms} box={{x: 150, y: 870, w: 900, h: 56}} fontSize={36}
