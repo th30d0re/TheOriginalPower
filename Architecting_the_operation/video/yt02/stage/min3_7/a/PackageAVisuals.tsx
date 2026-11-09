@@ -3,7 +3,7 @@ import {BootIn, DrawLine, DrawRect, Flicker, KitSound, cubicOut, progress} from 
 import {color} from '../../tokens';
 import {ColoredTerm, type EquationTermId} from '../../equations';
 
-export {ActionIcon, CausalArrow, HeartIcon, NumberBadge, PersonIcon, ScanLines, SystemIcon, WordIcon} from '@stage';
+export {ActionIcon, HeartIcon, NumberBadge, ScanLines, StickFigure, SystemIcon, WordIcon} from '@stage';
 
 export type Box = {x:number; y:number; w:number; h:number};
 export type Point = readonly [number,number];

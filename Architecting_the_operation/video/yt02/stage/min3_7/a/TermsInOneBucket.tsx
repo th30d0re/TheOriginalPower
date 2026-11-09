@@ -2,7 +2,7 @@ import React from 'react';
 import {cubicInOut,progress,useCue,useStageMs,type SceneProps} from '@stage';
 import {color} from '../../tokens';
 import {StageSceneFrame} from '../shared';
-import {ActionIcon,AuditedTermBlock,FlickerLabel,KitSound,enter,HeartIcon,Label,lineAttrs,pathFrom,PersonIcon,SceneSource,shapeAttrs,SystemIcon,type Box,type Point} from './PackageAVisuals';
+import {ActionIcon,AuditedTermBlock,FlickerLabel,KitSound,enter,HeartIcon,Label,lineAttrs,pathFrom,SceneSource,shapeAttrs,StickFigure,SystemIcon,type Box,type Point} from './PackageAVisuals';
 
 export const TERMS_LAYOUT={
   header:{x:160,y:110,w:1600,h:100},
@@ -11,7 +11,7 @@ export const TERMS_LAYOUT={
 } as const;
 
 export const TERM_BLOCKS=[
-  {cue:'t16Bias',term:'BIAS',summary:'STARTING TENDENCY',accent:'color/fill/gold',glyph:<PersonIcon/>},
+  {cue:'t16Bias',term:'BIAS',summary:'STARTING TENDENCY',accent:'color/fill/gold',glyph:<StickFigure x={24} y={24} group="neutral" emphasis={1} scale={0.8} animate={false}/>},
   {cue:'t16Prejudice',term:'PREJUDICE',summary:'GROUP ANTIPATHY',accent:'color/marker/race',glyph:<HeartIcon/>},
   {cue:'t16Discrimination',term:'DISCRIMINATION',summary:'DIFFERENTIAL BEHAVIOR',accent:'color/text/accent',glyph:<ActionIcon/>},
   {cue:'t16Racism',term:'RACISM',summary:'SYSTEMIC STRUCTURE',accent:'color/text/primary',glyph:<SystemIcon/>},
