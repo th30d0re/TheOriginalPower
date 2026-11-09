@@ -1,5 +1,5 @@
 import React from 'react';
-import {DefinitionCard, DrawLine, DrawRect, StickFigure, useCue, useStageMs, type SceneProps} from '@stage';
+import {DefinitionCard, DrawLine, DrawRect, FitBox, StickFigure, useCue, useStageMs, type SceneProps} from '@stage';
 import {EquationTerms} from '../equations';
 import {Copy, Panel, Scene, frame} from './shared';
 
