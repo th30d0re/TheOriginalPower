@@ -1,5 +1,5 @@
 import React from 'react';
-import {DrawLine, Flicker, KitSound, cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
+import {DrawLine, Flicker, KitSound, StickFigure, cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../tokens';
 import {SceneBorder} from '../dashboard/SceneBorder';
 import {EntryRail, SenseCard, type RailSlotSpec} from './EntryRail';
@@ -22,15 +22,7 @@ const ARROW_LABELS = [
 ] as const;
 
 // Diagram geometry inside the card's svg (viewBox 1240 × 410).
-const GLYPH_A = 280, GLYPH_B = 960, ARROW_Y = 190, ARROW_X1 = 380, ARROW_X2 = 880;
-
-function PersonGlyph({cx, p}: {cx:number; p:number}) {
-  const stroke = color('color/line/hairline-strong');
-  return <g>
-    <circle cx={cx} cy={150} r={36} fill="none" stroke={stroke} strokeWidth={3} pathLength={1} strokeDasharray="1" strokeDashoffset={1-p}/>
-    <path d={`M ${cx-70} 280 Q ${cx} 200 ${cx+70} 280`} fill="none" stroke={stroke} strokeWidth={3} strokeLinecap="round" pathLength={1} strokeDasharray="1" strokeDashoffset={1-p}/>
-  </g>;
-}
+const GLYPH_A = 280, GLYPH_B = 960, GLYPH_CENTER_Y = 197, GLYPH_SCALE = 3, ARROW_Y = 190, ARROW_X1 = 380, ARROW_X2 = 880;
 
 export function SenseOne({segment}:SceneProps) {
   const ms = useStageMs();
@@ -59,8 +51,6 @@ export function SenseOne({segment}:SceneProps) {
       </div>
       <svg style={{position:'absolute', left:40, top:300}} width="1240" height="410" viewBox="0 0 1240 410" aria-label="One person acting on another">
         <defs><marker id="sense1-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0l10 5-10 5z" fill={color('color/fill/gold')}/></marker></defs>
-        <PersonGlyph cx={GLYPH_A} p={openP}/>
-        <PersonGlyph cx={GLYPH_B} p={openP}/>
         {ARROW_LABELS.map(({cue:name, text, y}) => {
           const at = cue[name].at;
           return ms >= at && <text key={name} data-arrow-label={text} x={630} y={y} textAnchor="middle" fontFamily="IBM Plex Mono" fontSize={22} fill={color('color/text/muted')} opacity={enter(ms, at, 350)}>{text}</text>;
@@ -70,6 +60,8 @@ export function SenseOne({segment}:SceneProps) {
           <text x={630} y={345} textAnchor="middle" fontFamily="IBM Plex Mono" fontSize={22} fill={color('color/text/muted')}>unit: one person</text>
         </g>}
       </svg>
+      <StickFigure x={40+GLYPH_A} y={300+GLYPH_CENTER_Y} group="neutral" emphasis={1} scale={GLYPH_SCALE} startFrame={cueFrame(cue.t7Sense.at)} durationFrames={15}/>
+      <StickFigure x={40+GLYPH_B} y={300+GLYPH_CENTER_Y} group="neutral" emphasis={1} scale={GLYPH_SCALE} startFrame={cueFrame(cue.t7Sense.at)} durationFrames={15}/>
       <div data-arrow="sense1" style={{position:'absolute', left:40, top:300, width:1240, height:410}}><DrawLine points={[[ARROW_X1,ARROW_Y],[ARROW_X2,ARROW_Y]]} startFrame={cueFrame(cue.t7Person.at)} durationFrames={15} strokeToken="color/fill/gold" strokeWidth={3} end="arrow" beat/></div>
     </SenseCard>
   </div></KitSound>;
