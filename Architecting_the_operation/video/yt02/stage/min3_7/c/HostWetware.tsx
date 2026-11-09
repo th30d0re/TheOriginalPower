@@ -126,7 +126,7 @@ export function HostWetware({segment}:SceneProps) {
 
       {ms>=cue.bandwidth&&<div data-bandwidth-meter="true" {...shapeAttrs('bandwidth-meter',L.bandwidth,'frame')} style={{position:'absolute',inset:0,opacity:bandwidthP}}>
         <DrawRect box={L.bandwidth} progress={bandwidthP} strokeToken="color/line/hairline-strong" fillToken="color/fill/panel-render"/>
-        <div style={{position:'absolute',inset:4,right:`${52+40*compressP}%`,background:color('color/fill/gold-wash'),borderRight:`4px solid ${gold}`}}/>
+        <div data-bandwidth-fill="true" style={{position:'absolute',left:L.bandwidth.x+4,top:L.bandwidth.y+4,height:L.bandwidth.h-8,width:(L.bandwidth.w-8)*(.48-.40*compressP),background:color('color/fill/gold-wash'),borderRight:`4px solid ${gold}`}}/>
       </div>}
       {ms>=cue.bandwidth&&<Label id="bandwidth" box={{x:L.bandwidth.x+16,y:L.bandwidth.y+7,w:400,h:26}} size={20} weight={500} ls={1.1} lh={1.25} opacity={bandwidthP}>FINITE MENTAL BANDWIDTH</Label>}
       {ms>=cue.compresses&&<div data-input-variation="true" style={{opacity:.35+.65*compressP}}>
