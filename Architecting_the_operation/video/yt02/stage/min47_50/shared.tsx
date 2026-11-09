@@ -8,7 +8,8 @@ export const frame = (ms:number) => Math.round(ms * 30 / 1000);
 
 export function Panel({box, at, red=false, beat=false}:{box:Box;at:number;red?:boolean;beat?:boolean}) {
   const stroke = red ? 'color/marker/race' : 'color/line/hairline-strong';
-  return <><BootIn box={box} startFrame={frame(at)} durationFrames={18} mode="scan" strokeToken={stroke} fillToken="color/fill/panel-render" glowToken={red ? 'color/marker/race' : 'color/fill/gold'} beat={beat}/><DrawRect box={box} startFrame={frame(at)} durationFrames={18} strokeToken={stroke} fillToken="color/fill/panel-render" glowToken={red ? 'color/marker/race' : 'color/fill/gold'}/></>;
+  const glow = red ? 'color/marker/race' : 'color/fill/gold';
+  return <><BootIn box={box} startFrame={frame(at)} durationFrames={18} mode="scan" strokeToken={stroke} fillToken="rgba(9,18,28,0.72)" glowToken={glow} beat={beat}/><DrawRect box={box} startFrame={frame(at)} durationFrames={18} strokeToken={stroke} fillToken="rgba(9,18,28,0.72)" glowToken={glow}/></>;
 }
 
 export function Copy({at, box, children, size=26, tone='color/text/primary'}:React.PropsWithChildren<{at:number;box:Box;size?:number;tone?:string}>){
@@ -20,18 +21,42 @@ export function Label({at, x, y, text, tag='TERM', red=false}:{at:number;x:numbe
 }
 
 const clamp={extrapolateLeft:'clamp',extrapolateRight:'clamp'} as const;
-export function AtlanticMap({at,drawAt=at,coastAt,label}:{at:number;drawAt?:number;coastAt?:number;label?:string}){
+const FADE_MS = 267; // ~8 frames at 30 fps
+
+export function AtlanticMap({at,until,drawAt=at,coastAt,label}:{at:number;until?:number;drawAt?:number;coastAt?:number;label?:string}){
   const ms=useStageMs();
-  const move=interpolate(ms,[coastAt??drawAt,(coastAt??drawAt)+3400],[0,1],clamp);
-  const draw=interpolate(ms,[drawAt,drawAt+5200],[0,1],clamp);
-  return <Flicker startFrame={frame(at)} durationFrames={14} beat><DashboardMap camera={{center:[-8-move*7,36-move*16],zoom:2.8}} draw={draw}/>{label&&<div data-text="map-label" data-box="116 928 500 28" style={{position:'absolute',left:116,top:928,font:'500 20px "IBM Plex Mono"',letterSpacing:1.4,color:color('color/text/primary')}}>{label}</div>}</Flicker>;
+  if(ms<at||(until!==undefined&&ms>=until))return null;
+  const end=until??at+6000;
+  const fade=Math.min(FADE_MS,(end-at)/2);
+  const move=interpolate(ms,[coastAt??drawAt,(coastAt??drawAt)+1200],[0,1],clamp);
+  const draw=interpolate(ms,[drawAt,drawAt+1000],[0,1],clamp);
+  const opacity=interpolate(ms,[at,at+fade,end-fade,end],[0,1,1,0],clamp);
+  return <div style={{position:'absolute',inset:0,opacity,pointerEvents:'none'}}>
+    <DashboardMap camera={{center:[-8-move*7,36-move*16],zoom:2.8}} draw={draw}/>
+    {label&&<div data-text="map-label" data-box="116 928 500 28" style={{position:'absolute',left:116,top:928,font:'500 20px "IBM Plex Mono"',letterSpacing:1.4,color:color('color/text/primary'),background:'rgba(9,18,28,.62)',padding:'7px 10px'}}>{label}</div>}
+  </div>;
 }
-export function WorldMap({at,label}:{at:number;label:string}){
-  return <Flicker startFrame={frame(at)} durationFrames={14} beat><DashboardMap world mapOpacity={.94}/><div data-text="map-label" data-box="116 928 620 28" style={{position:'absolute',left:116,top:928,font:'500 20px "IBM Plex Mono"',letterSpacing:1.4,color:color('color/text/primary')}}>{label}</div></Flicker>;
+
+export function WorldMap({at,until,label}:{at:number;until?:number;label:string}){
+  const ms=useStageMs();
+  if(ms<at||(until!==undefined&&ms>=until))return null;
+  const end=until??at+6000;
+  const fade=Math.min(FADE_MS,(end-at)/2);
+  const opacity=interpolate(ms,[at,at+fade,end-fade,end],[0,1,1,0],clamp);
+  return <div style={{position:'absolute',inset:0,opacity,pointerEvents:'none'}}>
+    <DashboardMap world mapOpacity={.94}/>
+    <div data-text="map-label" data-box="116 928 620 28" style={{position:'absolute',left:116,top:928,font:'500 20px "IBM Plex Mono"',letterSpacing:1.4,color:color('color/text/primary'),background:'rgba(9,18,28,.62)',padding:'7px 10px'}}>{label}</div>
+  </div>;
 }
 
 export function CineStill({at,name,caption,until}:{at:number;name:string;caption?:string;until?:number}){
-  const ms=useStageMs(),scale=interpolate(ms,[at,at+6000],[1,1.08],clamp);
-  if(until!==undefined&&ms>=until)return null;
-  return <Flicker startFrame={frame(at)} durationFrames={14} beat style={{zIndex:20}}><div style={{position:'absolute',inset:0,overflow:'hidden',background:'#0d1b2a'}}><Img src={staticFile(`stage/YT02v2_ov/cine/${name}.png`)} style={{width:'100%',height:'100%',objectFit:'cover',transform:`scale(${scale})`}}/>{caption&&<div data-text="still-caption" data-box="110 924 720 26" style={{position:'absolute',left:110,top:924,font:'500 20px "IBM Plex Mono"',letterSpacing:1.2,color:'#e8c99b',textShadow:'0 2px 8px #0d1b2a'}}>{caption}</div>}</div></Flicker>;
+  const ms=useStageMs();
+  if(ms<at||(until!==undefined&&ms>=until))return null;
+  const end=until??at+6000;
+  const fade=Math.min(FADE_MS,(end-at)/2);
+  const opacity=interpolate(ms,[at,at+fade,end-fade,end],[0,1,1,0],clamp),scale=interpolate(ms,[at,end],[1,1.05],clamp);
+  return <div style={{position:'absolute',inset:0,zIndex:20,overflow:'hidden',opacity,background:color('color/bg/field')}}>
+    <Img src={staticFile(`stage/YT02v2_ov/cine/${name}.png`)} style={{width:'100%',height:'100%',objectFit:'cover',transform:`scale(${scale})`}}/>
+    {caption&&<div data-text="still-caption" style={{position:'absolute',left:92,bottom:76,font:'500 20px "IBM Plex Mono"',letterSpacing:1.5,color:color('color/text/primary'),background:'rgba(9,18,28,.72)',padding:'10px 14px'}}>{caption}</div>}
+  </div>;
 }

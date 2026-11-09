@@ -5,7 +5,7 @@ export type Box={x:number;y:number;w:number;h:number};
 export const frame=(ms:number)=>Math.round(ms*30/1000);
 
 export function Panel({box,at,accent='color/fill/gold'}:{box:Box;at:number;accent?:string}) {
-  return <><BootIn box={box} startFrame={frame(at)} durationFrames={18} mode="scan" strokeToken={accent} fillToken="color/fill/panel-render" glowToken={accent} beat/><DrawRect box={box} startFrame={frame(at)} durationFrames={18} strokeToken={accent} fillToken="color/fill/panel-render" glowToken={accent}/></>;
+  return <><BootIn box={box} startFrame={frame(at)} durationFrames={18} mode="scan" strokeToken={accent} fillToken="rgba(9,18,28,0.72)" glowToken={accent} beat/><DrawRect box={box} startFrame={frame(at)} durationFrames={18} strokeToken={accent} fillToken="rgba(9,18,28,0.72)" glowToken={accent}/></>;
 }
 
 export function Copy({at,box,children,size=28,tone='color/text/primary',align='left',mono=false}:{at:number;box:Box;children:React.ReactNode;size?:number;tone?:string;align?:'left'|'center'|'right';mono?:boolean}) {

@@ -7,7 +7,7 @@ export const frame=(ms:number)=>Math.round(ms*30/1000);
 export function Panel({box,at,red=false,beat=false}:{box:Box;at:number;red?:boolean;beat?:boolean}){
   const stroke=red?'color/marker/race':'color/line/hairline-strong';
   const glow=red?'color/marker/race':'color/fill/gold';
-  return <><BootIn box={box} startFrame={frame(at)} durationFrames={18} mode="scan" strokeToken={stroke} fillToken="color/fill/panel-render" glowToken={glow} beat={beat}/><DrawRect box={box} startFrame={frame(at)} durationFrames={18} strokeToken={stroke} fillToken="color/fill/panel-render" glowToken={glow}/></>;
+  return <><BootIn box={box} startFrame={frame(at)} durationFrames={18} mode="scan" strokeToken={stroke} fillToken="rgba(9,18,28,0.72)" glowToken={glow} beat={beat}/><DrawRect box={box} startFrame={frame(at)} durationFrames={18} strokeToken={stroke} fillToken="rgba(9,18,28,0.72)" glowToken={glow}/></>;
 }
 
 export function Copy({at,box,children,size=26,tone='color/text/primary',align='left'}:React.PropsWithChildren<{at:number;box:Box;size?:number;tone?:string;align?:'left'|'center'|'right'}>){

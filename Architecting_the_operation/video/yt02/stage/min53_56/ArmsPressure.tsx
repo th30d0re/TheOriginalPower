@@ -6,7 +6,7 @@ import {AtlanticMap} from './PortugalVisuals';
 export function ArmsPressure({segment}:SceneProps){
   const cue={pause:useCue('t247Pause').at,claims:useCue('t247Claims').at,technology:useCue('t247Technology').at,iron:useCue('t248Iron').at,steel:useCue('t248Steel').at,gunpowder:useCue('t248Gunpowder').at,barrel:useCue('t248Barrel').at,advantage:useCue('t249Advantage').at,firearms:useCue('t249Firearms').at,armsRace:useCue('t249ArmsRace').at,rulers:useCue('t250Rulers').at,pressure:useCue('t250Pressure').at,cycle:useCue('t250Cycle').at};
   return <StageSceneFrame segment={segment}><KitSound mode="beats">
-    <AtlanticMap at={cue.technology} route="trade" focus="coast" labels={['Arguin','Senegal','CapeVerde']}/>
+    <AtlanticMap at={cue.technology} until={cue.iron} route="trade" focus="coast" labels={['Arguin','Senegal','CapeVerde']}/>
     <Panel box={{x:120,y:104,w:1680,h:88}} at={cue.pause} beat/><Copy at={cue.pause} box={{x:154,y:128,w:1120,h:38}} size={31}>TECHNOLOGY IS NOT A SINGLE MEASURE</Copy>
     <Panel box={{x:120,y:268,w:580,h:430}} at={cue.iron}/><Tag at={cue.iron} x={154} y={298} text="METALLURGY" tag="01"/><Copy at={cue.steel} box={{x:154,y:418,w:500,h:40}} size={31}>IRON + STEEL</Copy><Copy at={cue.technology} box={{x:154,y:508,w:500,h:35}} size={25} tone="color/text/soft">ADVANCED KNOWLEDGE</Copy>
     <Panel box={{x:760,y:268,w:580,h:430}} at={cue.gunpowder} red/><Tag at={cue.gunpowder} x={794} y={298} text="SPECIALIZATION" tag="02" red/><Copy at={cue.gunpowder} box={{x:794,y:418,w:500,h:40}} size={29}>GUNPOWDER</Copy><Copy at={cue.barrel} box={{x:794,y:508,w:500,h:35}} size={25}>PRECISION BARREL BORING</Copy>
