@@ -119,6 +119,7 @@ function TrayArtifactFrame(
           overflow: 'hidden',
           boxSizing: 'border-box',
           opacity: props.opacity ?? 1,
+          filter: props.status === 'off' ? 'grayscale(1) saturate(.12)' : 'none',
           zIndex: elevated ? 50 : undefined,
         }}
       >
