@@ -21,9 +21,10 @@ export function MagnitudeDirection({segment}: SceneProps) {
     <Flicker startFrame={frame(cue.state)} durationFrames={16} beat><EquationTerms equation="Eq. 3.1 · state direction" ms={ms} box={{x: 980, y: 360, w: 300, h: 70}} fontSize={52} align="center" tokens={[{term: 'StateDirection'}]} pulses={{StateDirection: [cue.direction, cue.state, cue.institutional]}}/></Flicker>
     <Text at={cue.where} box={{x: 1320, y: 380, w: 400, h: 36}} size={26} tone="color/text/soft">WHERE FORCE TRAVELS</Text>
     <DrawLine points={[[1030, 510], [1660, 510]]} startFrame={frame(cue.travels)} durationFrames={22} strokeToken="color/marker/race" glowToken="color/marker/race" strokeWidth={6} end="arrow" beat/>
-    {[['LAW', cue.law, 1020], ['COURTS', cue.courts, 1165], ['POLICING', cue.policing, 1335], ['CREDIT', cue.credit, 1530], ['CAPITAL ALLOCATION', cue.allocation, 1020]].map(([label, at, x], index) => {
+    {[['LAW', cue.law, 1020], ['COURTS', cue.courts, 1196], ['POLICING', cue.policing, 1372], ['CREDIT', cue.credit, 1548], ['CAPITAL ALLOCATION', cue.allocation, 1020]].map(([label, at, x], index) => {
       const y = index === 4 ? 665 : 575;
-      return <React.Fragment key={String(label)}><DrawRect box={{x: Number(x), y, w: index === 4 ? 500 : 128, h: 58}} startFrame={frame(Number(at))} durationFrames={14} strokeToken="color/line/hairline-strong" fillToken="color/fill/panel-render" glowToken="color/marker/race" beat/><Text at={Number(at)} box={{x: Number(x) + 14, y: y + 17, w: index === 4 ? 470 : 100, h: 24}} size={20} tone="color/text/primary">{label}</Text></React.Fragment>;
+      const w = index === 4 ? 656 : 128;
+      return <React.Fragment key={String(label)}><DrawRect box={{x: Number(x), y, w, h: 58}} startFrame={frame(Number(at))} durationFrames={14} strokeToken="color/line/hairline-strong" fillToken="color/fill/panel-render" glowToken="color/marker/race" beat/><Text at={Number(at)} box={{x: Number(x) + 14, y: y + 17, w: w - 28, h: 24}} size={20} tone="color/text/primary">{label}</Text></React.Fragment>;
     })}
     <Text at={cue.capital} box={{x: 1020, y: 748, w: 650, h: 30}} size={22} tone="color/marker/race">STATE &amp; INSTITUTIONAL DIRECTION</Text>
   </KitSound></StageSceneFrame>;

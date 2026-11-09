@@ -138,7 +138,7 @@ export function AllportAntipathy({segment}: SceneProps) {
             OBSERVER · ATTITUDE LOCUS
           </Label>
 
-          {/* Observer PersonMark and internal heart socket */}
+          {/* Observer figure with well-proportioned head and chest heart socket */}
           <div
             {...shapeAttrs('observer-mark', {x: 154, y: 635, w: 120, h: 160}, 'mark', 'observer')}
             style={{
@@ -151,17 +151,30 @@ export function AllportAntipathy({segment}: SceneProps) {
               borderRadius: 10,
             }}
           >
-            <PersonMark x={60} y={76} group="ingroup" emphasis={1} scale={1.35} />
-            {ms >= cue.t47Felt && (
-              <svg width="120" height="160" viewBox="0 0 120 160" style={{position: 'absolute', inset: 0}} aria-hidden="true">
-                <circle cx="60" cy="98" r="12" fill={raceRed} fillOpacity={0.28 * feltP} stroke={raceRed} strokeWidth="2" opacity={feltP} />
-                <path
-                  transform="translate(60 98) scale(0.6) translate(-60 -95)" d="M60 106 C56 102 49 97 49 91 C49 85 56 84 60 89 C64 84 71 85 71 91 C71 97 64 102 60 106 Z"
-                  fill={raceRed}
-                  opacity={feltP}
-                />
-              </svg>
-            )}
+            <svg width="120" height="160" viewBox="0 0 120 160" style={{position: 'absolute', inset: 0}} aria-hidden="true">
+              {/* Head with proper clearance above torso */}
+              <circle cx="60" cy="42" r="9.5" fill={gold} stroke={gold} strokeWidth="3" />
+              {/* Torso */}
+              <line x1="60" y1="52" x2="60" y2="96" stroke={gold} strokeWidth="4.5" strokeLinecap="round" />
+              {/* Arms */}
+              <line x1="60" y1="62" x2="42" y2="84" stroke={gold} strokeWidth="4" strokeLinecap="round" />
+              <line x1="60" y1="62" x2="78" y2="84" stroke={gold} strokeWidth="4" strokeLinecap="round" />
+              {/* Legs */}
+              <line x1="60" y1="96" x2="45" y2="134" stroke={gold} strokeWidth="4" strokeLinecap="round" />
+              <line x1="60" y1="96" x2="75" y2="134" stroke={gold} strokeWidth="4" strokeLinecap="round" />
+
+              {/* Heart socket on the chest */}
+              {ms >= cue.t47Felt && (
+                <>
+                  <circle cx="60" cy="72" r="12" fill={raceRed} fillOpacity={0.28 * feltP} stroke={raceRed} strokeWidth="2" opacity={feltP} />
+                  <path
+                    transform="translate(60 72) scale(0.6) translate(-60 -95)" d="M60 106 C56 102 49 97 49 91 C49 85 56 84 60 89 C64 84 71 85 71 91 C71 97 64 102 60 106 Z"
+                    fill={raceRed}
+                    opacity={feltP}
+                  />
+                </>
+              )}
+            </svg>
           </div>
 
           <Label

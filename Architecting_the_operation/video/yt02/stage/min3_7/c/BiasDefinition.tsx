@@ -1,5 +1,5 @@
 import React from 'react';
-import {BootIn, DrawRect, Flicker, KitSound, cubicInOut, cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
+import {BootIn, DrawLine, DrawRect, Flicker, KitSound, cubicInOut, cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../../tokens';
 import {StageSceneFrame} from '../shared';
 import {Label, SceneSource, leave, lineAttrs, mix, pathFrom, shapeAttrs, type LayoutBox, type Point} from '../d/sceneUtils';
@@ -80,6 +80,7 @@ export function BiasDefinition({segment}:SceneProps) {
     perception:useCue('t29Perception').at,evaluation:useCue('t29Evaluation').at,explanation:useCue('t29Explanation').at,
   };
   const baselineP=enter(ms,cue.baseline),experimentalP=enter(ms,cue.experimental),termsP=enter(ms,cue.three,600);
+  const baselineOpacity=baselineP*(1-0.4*termsP);
   const interpersonalP=enter(ms,cue.interpersonal),processP=enter(ms,cue.process,620),actP=enter(ms,cue.act),categoryP=enter(ms,cue.categories);
   // Turn 29 replaces the turn-28 picture: it fades out fully before the definition card enters.
   const turn28Opacity=leave(ms,cue.concept,320), turn28Shown=ms<cue.concept+320;
@@ -95,16 +96,23 @@ export function BiasDefinition({segment}:SceneProps) {
   const busSpine:Point[]=[[B.x+60,busCards[0].y+45],[B.x+60,busCards[2].y+45]];
   return <KitSound mode="beats"><StageSceneFrame segment={segment}>
     {turn28Shown&&<div data-turn-28-field="true" style={{opacity:turn28Opacity}}>
-      {ms>=cue.baseline&&<div data-host-bus-baseline="true" style={{opacity:.5*baselineP}}>
-        <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position:'absolute',inset:0}} aria-hidden="true">
-          <path {...lineAttrs('baseline-spine',busSpine)} d={pathFrom(busSpine)} stroke={gold} strokeWidth="4"/>
-          {busCards.map((box,index)=><React.Fragment key={index}>
-            <path {...lineAttrs(`baseline-channel-${index+1}`,[[B.x+60,box.y+45],[box.x,box.y+45]])} d={`M${B.x+60} ${box.y+45}H${box.x}`} stroke={gold} strokeWidth="3"/>
-          </React.Fragment>)}
-        </svg>
-        {busCards.map((box,index)=><DrawRect key={index} box={box} progress={baselineP} strokeToken="color/line/hairline-strong" fillToken="color/bg/field"/>) }
-        {busCards.map((box,index)=><Label key={`bl-${index}`} id={`baseline-${index}`} box={{x:box.x,y:box.y+28,w:box.w,h:34}} size={26} ls={2} align="center" ink={index===1?color('color/marker/race'):gold}>{['ALLY','STRANGER','UNKNOWN'][index]}</Label>)}
-        <Label id="baseline-caption" box={{x:busCards[0].x,y:busCards[0].y-44,w:busCards[0].w,h:28}} size={20} ls={1.4} align="center" ink={color('color/text/muted')}>SHARED BASELINE</Label>
+      {ms>=cue.baseline&&<div data-host-bus-baseline="true" style={{opacity:baselineOpacity}}>
+        <div {...lineAttrs('baseline-spine',busSpine)}>
+          <DrawLine points={busSpine} progress={baselineP} strokeToken="color/fill/gold" glowToken="color/fill/gold" strokeWidth={4} origin={false} nodes={false}/>
+        </div>
+        {busCards.map((box,index)=>{
+          const channelPts:Point[]=[[B.x+60,box.y+45],[box.x,box.y+45]];
+          return <div key={index} {...lineAttrs(`baseline-channel-${index+1}`,channelPts)}>
+            <DrawLine points={channelPts} progress={baselineP} strokeToken="color/fill/gold" glowToken="color/fill/gold" strokeWidth={3} origin={false} nodes={false}/>
+          </div>;
+        })}
+        {busCards.map((box,index)=><div key={index} {...shapeAttrs(`baseline-card-${index+1}`,box,'frame')} style={{position:'absolute',inset:0}}>
+          <BootIn box={box} progress={baselineP} mode="snap" strokeToken="color/line/hairline-strong" fillToken="color/bg/field">
+            <div style={{position:'absolute',inset:0}}/>
+          </BootIn>
+        </div>)}
+        {busCards.map((box,index)=><Label key={`bl-${index}`} id={`baseline-${index}`} box={{x:box.x,y:box.y+28,w:box.w,h:34}} size={26} ls={2} align="center" ink={index===1?color('color/marker/race'):gold} opacity={baselineP}>{['ALLY','STRANGER','UNKNOWN'][index]}</Label>)}
+        <Label id="baseline-caption" box={{x:busCards[0].x,y:busCards[0].y-44,w:busCards[0].w,h:28}} size={20} ls={1.4} align="center" ink={color('color/text/muted')} opacity={baselineP}>SHARED BASELINE</Label>
       </div>}
       {ms>=cue.experimental&&<Flicker startFrame={Math.round(cue.experimental*30/1000)} durationFrames={16}><Label id="experimental" box={L.heading} size={24} ls={1.5} opacity={experimentalP}>EXPERIMENTAL PSYCHOLOGY</Label></Flicker>}
       {ms>=cue.three&&TERMS.map(([term,kind,accent],index)=><ModuleCard key={term} box={L.terms[index]} term={term} kind={kind} accent={accent} opacity={termsP}/>)}

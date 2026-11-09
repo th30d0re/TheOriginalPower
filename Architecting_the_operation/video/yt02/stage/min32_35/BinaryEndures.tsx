@@ -30,7 +30,7 @@ export function BinaryEndures({segment}: SceneProps) {
     <div style={{position: 'absolute', inset: 0, opacity: .5}}>
       {[320, 390, 460].map((y, i) => <DrawLine key={y} points={[[900, y], [1400, y]]} startFrame={frame(cue.hiding + i * 120)} durationFrames={14} strokeToken="color/line/hatch" strokeWidth={3}/>)}
     </div>
-    <Copy at={cue.ranking} box={{x: 960, y: 218, w: 480, h: 28}} size={20} tone="color/text/dim">INTERNAL RANKING · HIDDEN</Copy>
+    <Copy at={cue.ranking} box={{x: 960, y: 200, w: 480, h: 28}} size={20} tone="color/text/dim">INTERNAL RANKING · HIDDEN</Copy>
     <DrawLine points={[[1440, 312], [1466, 302]]} startFrame={frame(cue.protected_)} durationFrames={10} strokeToken="color/line/hairline-strong" strokeWidth={2}/>
     <Copy at={cue.protected_} box={{x: 1470, y: 284, w: 330, h: 30}} size={22}>PROTECTED SIDE</Copy>
   </Scene>;

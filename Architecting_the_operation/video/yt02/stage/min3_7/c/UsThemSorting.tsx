@@ -132,7 +132,7 @@ export function UsThemSorting({segment}:SceneProps) {
       {ms>=cue.selfConcept&&<g data-self-ring="true" opacity={selfP}><ellipse {...shapeAttrs('self-ring',ring,'frame')} cx={self[0]} cy={self[1]} rx="31" ry="40" fill="none" stroke={gold} strokeWidth="4"/></g>}
     </svg>}
     {ms>=cue.sorting&&bandFrames.map((band,index)=><div key={index} data-band={index+1} {...shapeAttrs(`band-${index+1}`,band,'frame')} style={{opacity:contractP}}><DrawRect box={band} progress={contractP} strokeToken={index<2?'color/fill/gold':'color/marker/race'} fillToken="color/fill/gold-wash" strokeWidth={3}/></div>)}
-    {ms>=cue.belonging&&<div data-belonging-wrap="true" {...shapeAttrs('belonging-wrap',wrap,'frame')} style={{opacity:belongingP}}><DrawRect box={wrap} progress={belongingP} strokeToken="color/fill/gold" fillToken="color/bg/field" strokeWidth={6}/></div>}
+    {ms>=cue.belonging&&<div data-belonging-wrap="true" {...shapeAttrs('belonging-wrap',wrap,'frame')} style={{opacity:belongingP}}><DrawRect box={wrap} progress={belongingP} strokeToken="color/fill/gold" fillToken="none" strokeWidth={6}/></div>}
 
     {ms>=cue.speed&&<DrawLine points={[[800,150],[1120,150]]} startFrame={Math.round(cue.speed*30/1000)} durationFrames={15} strokeToken="color/fill/gold" glowToken="color/fill/gold" strokeWidth={5} origin={false} nodes={false}/>}
 

@@ -12,13 +12,13 @@ export function PigmentationCline({segment}:SceneProps) {
     <FitBox text="CLINE" x={230} y={205} size={32} weight={600} tag="JULIAN HUXLEY" startFrame={frame(c.huxley)} durationFrames={16} textToken="color/text/primary" strokeToken="color/fill/gold" fillToken="color/fill/panel-render" accentToken="color/fill/gold" beat/>
     <DrawLine points={[[310,510],[1610,510]]} startFrame={frame(c.cline)} durationFrames={24} strokeToken="color/fill/gold" glowToken="color/fill/gold" strokeWidth={10} end="arrow" beat/>
     {[0,1,2,3,4,5,6].map(i=><DrawRect key={i} box={{x:400+i*150,y:455-i*22,w:54,h:54}} startFrame={frame(c.polygenic+i*100)} durationFrames={10} strokeToken="color/line/hairline" fillToken="color/fill/gold-wash" glowToken="color/fill/gold"/>) }
-    <Copy at={c.polygenic} box={{x:530,y:330,w:860,h:36}} size={28} align="center">CONTINUOUS POLYGENIC GRADIENT</Copy>
+    <Copy at={c.polygenic} box={{x:530,y:265,w:860,h:36}} size={28} align="center">CONTINUOUS POLYGENIC GRADIENT</Copy>
     <Copy at={c.ultraviolet} box={{x:500,y:610,w:920,h:28}} size={21} align="center" mono tone="color/text/soft">PIGMENTATION · UV · LATITUDE</Copy>
     <DrawLine points={[[690,755],[690,830]]} startFrame={frame(c.folate)} durationFrames={14} strokeToken="color/fill/gold" strokeWidth={3} beat/>
     <DrawLine points={[[1230,755],[1230,830]]} startFrame={frame(c.vitamin)} durationFrames={14} strokeToken="color/fill/gold" strokeWidth={3}/>
     <Panel box={{x:410,y:835,w:560,h:96}} at={c.folate}/><Copy at={c.folate} box={{x:430,y:866,w:520,h:30}} size={22} align="center">FOLATE PROTECTION</Copy>
     <Panel box={{x:950,y:835,w:560,h:96}} at={c.vitamin}/><Copy at={c.vitamin} box={{x:970,y:866,w:520,h:30}} size={22} align="center">VITAMIN D SYNTHESIS</Copy>
-    <Copy at={c.regions} box={{x:1350,y:760,w:320,h:26}} size={19} align="center" mono tone="color/text/soft">4 REGIONS</Copy>
-    <Copy at={c.percent} box={{x:1350,y:792,w:320,h:24}} size={18} align="center" mono tone="color/text/dim">29 PERCENT</Copy>
+    <Copy at={c.regions} box={{x:1350,y:760,w:320,h:26}} size={20} align="center" mono tone="color/text/soft">4 REGIONS</Copy>
+    <Copy at={c.percent} box={{x:1350,y:792,w:320,h:24}} size={20} align="center" mono tone="color/text/dim">29 PERCENT</Copy>
   </KitSound></StageSceneFrame>;
 }
