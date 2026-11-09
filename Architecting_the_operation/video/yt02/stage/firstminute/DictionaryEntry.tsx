@@ -71,7 +71,7 @@ export function DefinitionHierarchy({state,ms=0,pulses={},dictionaryCueMs=0}: {s
       <div style={{font:'500 21px "IBM Plex Mono"', letterSpacing:2.4, color:color('color/fill/gold'), marginBottom:18, textTransform:'uppercase'}}>causal story</div>
       <div style={{display:'flex', alignItems:'stretch', gap:12}}>
         {([['IndividualPrejudice','Individual Prejudice'],['DiscriminatoryActions','Discriminatory Actions'],['SystemicOutcomes','Systemic Outcomes']] as const).map(([termId,label],i)=><React.Fragment key={label}>
-          <div style={{width:210, minHeight:108, padding:'18px 15px', display:'grid', placeItems:'center', textAlign:'center', fontSize:27, lineHeight:1.25, background:color('color/fill/panel-render'), border:`1px solid ${color('color/line/hairline')}`}}><ColoredTerm term={termId as EquationTermId} ms={ms} pulses={pulses[termId]} box={{x:DICTIONARY_LAYOUT.chainX+i*255,y:421,w:210,h:68}} display={label}/></div>
+          <div style={{width:210, minHeight:108, position:'relative'}}><DrawRect box={{x:0,y:0,w:210,h:108}} progress={state.causal} strokeToken="color/line/hairline" fillToken="color/fill/panel-render" glowToken="color/fill/gold" strokeWidth={1} seed={221+i}/><div style={{position:'relative',minHeight:108,padding:'18px 15px',display:'grid',placeItems:'center',textAlign:'center',fontSize:27,lineHeight:1.25}}><ColoredTerm term={termId as EquationTermId} ms={ms} pulses={pulses[termId]} box={{x:DICTIONARY_LAYOUT.chainX+i*255,y:421,w:210,h:68}} display={label}/></div></div>
           {i<2 && <div style={{display:'grid', placeItems:'center', font:'500 35px "IBM Plex Mono"', color:color('color/fill/gold')}}>→</div>}
         </React.Fragment>)}
       </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Flicker, KitSound, cubicInOut, cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
+import {DrawRect, Flicker, KitSound, cubicInOut, cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../tokens';
 import {SceneBorder} from '../dashboard/SceneBorder';
 import {RAIL, RAIL_LABEL_LINES, RailSlotContent} from './EntryRail';
@@ -118,7 +118,8 @@ export function FigureTwoThree({segment}:SceneProps) {
         const y = RAIL.slotY[i] + (F.layerY[i]-RAIL.slotY[i])*p;
         const h = RAIL.slotH + (F.layerH-RAIL.slotH)*p;
         const layer = LAYERS_LEFT[i];
-        return <div key={i} data-flight-layer={i+1} style={{position:'absolute', left:cx-w/2, top:y, width:w, height:h, background:color('color/fill/panel-render'), border:`1px solid ${color('color/line/hairline-strong')}`}}>
+        return <div key={i} data-flight-layer={i+1} style={{position:'absolute', left:cx-w/2, top:y, width:w, height:h}}>
+          <DrawRect box={{x:0,y:0,w,h}} progress={p} strokeToken="color/line/hairline-strong" fillToken="color/fill/panel-render" glowToken="color/fill/gold" strokeWidth={1.5} seed={301+i}/>
           {layerTextOpacity>0 && <span aria-hidden="true" style={{position:'absolute', inset:0, background:color(layer.fill), opacity:layerTextOpacity*layer.fillOp}}/>}
           <span aria-hidden="true" style={{position:'absolute', left:0, top:8, bottom:8, width:4, background:color('color/fill/gold'), opacity:1-layerTextOpacity}}/>
           {railTextOpacity>0 && <div data-rail-slot-text={i+1} data-opacity={railTextOpacity} style={{position:'absolute', left:'50%', top:'50%', width:RAIL.w, height:RAIL.slotH, transform:'translate(-50%,-50%)', opacity:railTextOpacity, color:color('color/fill/gold')}}>

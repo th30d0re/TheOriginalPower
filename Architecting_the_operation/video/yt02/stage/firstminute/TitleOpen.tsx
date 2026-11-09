@@ -1,13 +1,7 @@
 import React from 'react';
-import {Flicker, KitSound, MathText, cubicInOut, cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
+import {DrawRect, Flicker, KitSound, MathText, cubicInOut, cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../tokens';
 import {SceneBorder} from '../dashboard/SceneBorder';
-
-const panel: React.CSSProperties = {
-  background: color('color/fill/panel-render'),
-  border: `1px solid ${color('color/line/hairline')}`,
-  boxShadow: `inset 0 0 0 1px ${color('color/fill/panel-wash')}`,
-};
 
 const rise = (ms: number, at: number, duration = 500) => cubicOut(progress(ms, at, at + duration));
 
@@ -115,9 +109,10 @@ function MethodTile({label, at, children, ms, index, fold}: React.PropsWithChild
   const x = left + (foldedLeft - left) * fold;
   const y = TILE.y + (STRIP.y - TILE.y) * fold;
   const scale = 1 + (STRIP.scale - 1) * fold;
-  return <div style={{...panel, position:'absolute', left:x, top:y, width:TILE.w, height:TILE.h, opacity:visible, transform:`translateY(${18*(1-visible)}px) scale(${scale})`, transformOrigin:'top left', overflow:'hidden'}}>
-    <div style={{height:178, display:'grid', placeItems:'center'}}>{children}</div>
-    <div style={{borderTop:`1px solid ${color('color/line/hairline')}`, paddingTop:17, textAlign:'center', font:'500 28px "IBM Plex Mono"', letterSpacing:2, color:color('color/text/primary')}}>{label}</div>
+  return <div style={{position:'absolute', left:x, top:y, width:TILE.w, height:TILE.h, opacity:visible, transform:`translateY(${18*(1-visible)}px) scale(${scale})`, transformOrigin:'top left', overflow:'hidden'}}>
+    <DrawRect box={{x:0,y:0,w:TILE.w,h:TILE.h}} startFrame={cueFrame(at)} durationFrames={frames(480)} strokeToken="color/line/hairline" fillToken="color/fill/panel-render" glowToken="color/fill/gold" strokeWidth={1} seed={201+index}/>
+    <div style={{position:'relative'}}><div style={{height:178, display:'grid', placeItems:'center'}}>{children}</div>
+    <div style={{borderTop:`1px solid ${color('color/line/hairline')}`, paddingTop:17, textAlign:'center', font:'500 28px "IBM Plex Mono"', letterSpacing:2, color:color('color/text/primary')}}>{label}</div></div>
   </div>;
 }
 

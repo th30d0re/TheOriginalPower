@@ -1,5 +1,5 @@
 import React from 'react';
-import {DrawLine, Flicker, KitSound, useCue, useStageMs, type SceneProps} from '@stage';
+import {DrawLine, DrawRect, Flicker, KitSound, useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../tokens';
 import {SceneBorder} from '../dashboard/SceneBorder';
 
@@ -31,10 +31,13 @@ const blocks=[
 
 function LiteratureBlock({index,at}:{index:number;at:number}) {
   const block=blocks[index];
-  return <Flicker startFrame={cueFrame(at)} durationFrames={frames(480)}><div style={{position:'absolute',left:LITERATURE_LAYOUT.blockX,top:block.y,width:LITERATURE_LAYOUT.blockW,height:LITERATURE_LAYOUT.blockH,display:'grid',gridTemplateColumns:'280px 1fr 300px',alignItems:'center',padding:'0 30px',background:color('color/fill/panel-render'),border:`1px solid ${color('color/line/hairline')}`}}>
-    <strong style={{fontSize:38,fontWeight:500,color:color('color/fill/gold')}}>{block.name}</strong>
-    <span style={{fontSize:28,lineHeight:1.25,color:color('color/text/primary')}}>{block.definition}</span>
-    <span style={{font:'400 20px "IBM Plex Mono"',textAlign:'right',color:color('color/text/muted')}}>{block.citation}</span>
+  return <Flicker startFrame={cueFrame(at)} durationFrames={frames(480)}><div style={{position:'absolute',left:LITERATURE_LAYOUT.blockX,top:block.y,width:LITERATURE_LAYOUT.blockW,height:LITERATURE_LAYOUT.blockH}}>
+    <DrawRect box={{x:0,y:0,w:LITERATURE_LAYOUT.blockW,h:LITERATURE_LAYOUT.blockH}} startFrame={cueFrame(at)} durationFrames={frames(480)} strokeToken="color/line/hairline" fillToken="color/fill/panel-render" glowToken="color/fill/gold" strokeWidth={1} seed={41+index}/>
+    <div style={{position:'relative',height:'100%',display:'grid',gridTemplateColumns:'280px 1fr 300px',alignItems:'center',padding:'0 30px'}}>
+      <strong style={{fontSize:38,fontWeight:500,color:color('color/fill/gold')}}>{block.name}</strong>
+      <span style={{fontSize:28,lineHeight:1.25,color:color('color/text/primary')}}>{block.definition}</span>
+      <span style={{font:'400 20px "IBM Plex Mono"',textAlign:'right',color:color('color/text/muted')}}>{block.citation}</span>
+    </div>
   </div></Flicker>;
 }
 
@@ -48,9 +51,12 @@ function Tripartite({at}:{at:number}) {
     </svg>
     {LITERATURE_LAYOUT.connectors.map((points,index)=><DrawLine key={points[0][0]} {...({points:points.map(([x,y])=>[x-LITERATURE_LAYOUT.tripX,y-LITERATURE_LAYOUT.tripY]),startFrame:cueFrame(at)+frames(160+index*110),durationFrames:frames(320),strokeToken:'color/line/hairline',strokeWidth:2} as any)}/>) }
     <div style={{position:'absolute',left:58,right:0,top:18,display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:18}}>
-      {components.map(([kind,name])=><div key={kind} style={{height:92,display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',background:color('color/fill/panel-render'),border:`1px solid ${color('color/line/hairline')}`}}>
-        <span style={{font:'500 20px "IBM Plex Mono"',letterSpacing:1.4,color:color('color/text/muted')}}>{kind}</span>
-        <strong style={{marginTop:8,fontSize:28,fontWeight:500,color:color('color/text/primary')}}>{name}</strong>
+      {components.map(([kind,name],index)=><div key={kind} style={{height:92,position:'relative'}}>
+        <DrawRect box={{x:0,y:0,w:(LITERATURE_LAYOUT.tripW-58-36)/3,h:92}} startFrame={cueFrame(at)+frames(160+index*80)} durationFrames={frames(300)} strokeToken="color/line/hairline" fillToken="color/fill/panel-render" glowToken="color/fill/gold" strokeWidth={1} seed={61+index}/>
+        <div style={{position:'relative',height:'100%',display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center'}}>
+          <span style={{font:'500 20px "IBM Plex Mono"',letterSpacing:1.4,color:color('color/text/muted')}}>{kind}</span>
+          <strong style={{marginTop:8,fontSize:28,fontWeight:500,color:color('color/text/primary')}}>{name}</strong>
+        </div>
       </div>)}
     </div>
     <div style={{position:'absolute',left:58,bottom:0,font:'500 20px "IBM Plex Mono"',letterSpacing:1,color:color('color/fill/gold')}}>Tripartite model · Fiske 1998</div>

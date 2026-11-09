@@ -1,5 +1,5 @@
 import React from 'react';
-import {DrawLine, Flicker, KitSound, cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
+import {DrawLine, DrawRect, Flicker, KitSound, cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../tokens';
 import {SceneBorder} from '../dashboard/SceneBorder';
 import {EntryRail, SenseCard, type RailSlotSpec} from './EntryRail';
@@ -60,7 +60,7 @@ export function SenseThree({segment}:SceneProps) {
             const p = enter(ms, cue.t9Practices.at + i*90, 400);
             const cx = x + NODE_W/2, cy = y + NODE_H/2;
             return <g key={i} data-institution-node={i+1} opacity={p} transform={`translate(${cx} ${cy}) scale(${.8+.2*p}) translate(${-cx} ${-cy})`}>
-              <rect x={x} y={y} width={NODE_W} height={NODE_H} rx={10} fill={color('color/bg/field')} stroke={color('color/line/hairline-strong')} strokeWidth={2}/>
+              <foreignObject x={x} y={y} width={NODE_W} height={NODE_H}><DrawRect box={{x:0,y:0,w:NODE_W,h:NODE_H}} progress={p} strokeToken="color/line/hairline-strong" fillToken="color/bg/field" glowToken="color/fill/gold" strokeWidth={2} seed={151+i}/></foreignObject>
             </g>;
           })}
         </g>}
@@ -71,11 +71,11 @@ export function SenseThree({segment}:SceneProps) {
           <rect data-bar="b" x={M.barBX} y={M.baseline - M.barBH*meterP} width={M.barW} height={M.barBH*meterP} fill={color('color/fill/gold-wash')} stroke={color('color/fill/gold')} strokeWidth={2}/>
           <text x={895} y={328} textAnchor="middle" fontFamily="IBM Plex Mono" fontSize={20} fill={color('color/text/muted')}>category A</text>
           <text x={1105} y={328} textAnchor="middle" fontFamily="IBM Plex Mono" fontSize={20} fill={color('color/text/muted')}>category B</text>
-          <rect x={1000} y={40} width={164} height={34} rx={6} fill={color('color/fill/panel-render')} stroke={color('color/line/hairline')}/>
+          <foreignObject x={1000} y={40} width={164} height={34}><DrawRect box={{x:0,y:0,w:164,h:34}} progress={meterP} strokeToken="color/line/hairline" fillToken="color/fill/panel-render" glowToken="color/fill/gold" strokeWidth={1} seed={161}/></foreignObject>
           <text x={1082} y={63} textAnchor="middle" fontFamily="IBM Plex Mono" fontSize={20} fill={color('color/text/muted')}>illustrative</text>
         </g>}
         {ms >= cue.t9Categories.at && <g data-unit-tag="a system" opacity={unitP}>
-          <rect x={872} y={358} width={216} height={40} rx={6} fill={color('color/fill/panel-render')} stroke={color('color/line/hairline')}/>
+          <foreignObject x={872} y={358} width={216} height={40}><DrawRect box={{x:0,y:0,w:216,h:40}} progress={unitP} strokeToken="color/line/hairline" fillToken="color/fill/panel-render" glowToken="color/fill/gold" strokeWidth={1} seed={171}/></foreignObject>
           <text x={980} y={385} textAnchor="middle" fontFamily="IBM Plex Mono" fontSize={22} fill={color('color/text/muted')}>unit: a system</text>
         </g>}
       </svg>
