@@ -16,6 +16,11 @@ export const EQUATION_TERMS = {
   RacismVector: {show: 'R', math: 'R⃗_{racism}', meaning: 'the conceptual racism vector', slot: 11},
   Magnitude: {show: 'M', math: 'M_{force}', meaning: 'emotional and material magnitude', slot: 12},
   StateDirection: {show: 'd̂', math: 'd̂_{state}', meaning: 'unit direction of state and institutional enforcement', slot: 13},
+  // Eq. 2.1 (disjoint partition), introduced in YT02 turns 141–143. Slots 2 and 1 are reused
+  // because the 14-slot palette is full; StateDirection already reuses slot 13.
+  Universe: {show: 'U', meaning: 'population universe (Eq. 2.1)', slot: 9},
+  InGroupSet: {show: 'I', meaning: 'In-group set I (Eq. 2.1)', slot: 2},
+  OutGroupSet: {show: 'O', meaning: 'Out-group set O (Eq. 2.1)', slot: 1},
 } as const;
 
 export type EquationTermId = keyof typeof EQUATION_TERMS;
