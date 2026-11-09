@@ -3,10 +3,10 @@
   "fps": 30,
   "width": 1920,
   "height": 1080,
-  "duration_ms": 2670090,
+  "duration_ms": 2843870,
   "range": {
     "start_ms": 0,
-    "end_ms": 2670090
+    "end_ms": 2843870
   },
   "audio": "stage/YT02v2_ov/YT02v2_ov.mp3",
   "cues": {
@@ -1445,6 +1445,46 @@
     "t204Writes": 2649040,
     "t204Intersection": 2654820,
     "t204Gender": 2668040,
+    "t205Alpha": 2670560,
+    "t205Secondary": 2671640,
+    "t205Axis": 2672950,
+    "t206Inside": 2681920,
+    "t206Advantaged": 2685880,
+    "t206Subordinated": 2690600,
+    "t207Apply": 2693670,
+    "t207Gender": 2696770,
+    "t208Buffer": 2707740,
+    "t208Splits": 2706020,
+    "t209Second": 2720530,
+    "t209Compartments": 2726870,
+    "t210Inside": 2732880,
+    "t210Token": 2740500,
+    "t210Containment": 2745120,
+    "t211Table": 2747970,
+    "t211Ladder": 2750797,
+    "t211Figure": 2751790,
+    "t212Levels": 2761930,
+    "t212One": 2764540,
+    "t212Two": 2768740,
+    "t213Three": 2773570,
+    "t213Four": 2779280,
+    "t214Zooming": 2792000,
+    "t214Focus": 2797940,
+    "t215Confusion": 2800800,
+    "t216Level": 2811160,
+    "t216Binary": 2812560,
+    "t216Claim": 2815220,
+    "t216Uniform": 2820500,
+    "t216Elite": 2822300,
+    "t216Unresolved": 2825300,
+    "t217Level": 2826850,
+    "t217Ingroup": 2828263,
+    "t217Rebuttal": 2831090,
+    "t217Poverty": 2831810,
+    "t217Exploitation": 2834830,
+    "t217Elite": 2837110,
+    "t217Boundary": 2839550,
+    "t217Inside": 2841550,
     "S00-00.title": 400,
     "S00-00.archives": 3960,
     "S00-00.equations": 4360,
@@ -2879,7 +2919,47 @@
     "S00-203.t203Alpha": 2646930,
     "S00-204.t204Writes": 2649040,
     "S00-204.t204Intersection": 2654820,
-    "S00-204.t204Gender": 2668040
+    "S00-204.t204Gender": 2668040,
+    "S00-205.t205Alpha": 2670560,
+    "S00-205.t205Secondary": 2671640,
+    "S00-205.t205Axis": 2672950,
+    "S00-206.t206Inside": 2681920,
+    "S00-206.t206Advantaged": 2685880,
+    "S00-206.t206Subordinated": 2690600,
+    "S00-207.t207Apply": 2693670,
+    "S00-207.t207Gender": 2696770,
+    "S00-208.t208Buffer": 2707740,
+    "S00-208.t208Splits": 2706020,
+    "S00-209.t209Second": 2720530,
+    "S00-209.t209Compartments": 2726870,
+    "S00-210.t210Inside": 2732880,
+    "S00-210.t210Token": 2740500,
+    "S00-210.t210Containment": 2745120,
+    "S00-211.t211Table": 2747970,
+    "S00-211.t211Ladder": 2750797,
+    "S00-211.t211Figure": 2751790,
+    "S00-212.t212Levels": 2761930,
+    "S00-212.t212One": 2764540,
+    "S00-212.t212Two": 2768740,
+    "S00-213.t213Three": 2773570,
+    "S00-213.t213Four": 2779280,
+    "S00-214.t214Zooming": 2792000,
+    "S00-214.t214Focus": 2797940,
+    "S00-215.t215Confusion": 2800800,
+    "S00-216.t216Level": 2811160,
+    "S00-216.t216Binary": 2812560,
+    "S00-216.t216Claim": 2815220,
+    "S00-216.t216Uniform": 2820500,
+    "S00-216.t216Elite": 2822300,
+    "S00-216.t216Unresolved": 2825300,
+    "S00-217.t217Level": 2826850,
+    "S00-217.t217Ingroup": 2828263,
+    "S00-217.t217Rebuttal": 2831090,
+    "S00-217.t217Poverty": 2831810,
+    "S00-217.t217Exploitation": 2834830,
+    "S00-217.t217Elite": 2837110,
+    "S00-217.t217Boundary": 2839550,
+    "S00-217.t217Inside": 2841550
   },
   "segments": [
     {
@@ -5358,7 +5438,7 @@
       "instance": "LocalPartition",
       "scene": "LocalPartition",
       "start_ms": 2626630,
-      "end_ms": 2670090,
+      "end_ms": 2669640,
       "shots": [
         {
           "shot_id": "S00-202",
@@ -5381,7 +5461,151 @@
           "turn_id": "f69fa0f0d9a47959",
           "turn_index": 204,
           "start_ms": 2647920,
-          "end_ms": 2670090,
+          "end_ms": 2669640,
+          "props": {}
+        }
+      ]
+    },
+    {
+      "instance": "AlphaAxis",
+      "scene": "AlphaAxis",
+      "start_ms": 2669640,
+      "end_ms": 2693670,
+      "shots": [
+        {
+          "shot_id": "S00-205",
+          "turn_id": "c6474497ec912f78",
+          "turn_index": 205,
+          "start_ms": 2669640,
+          "end_ms": 2681920,
+          "props": {}
+        },
+        {
+          "shot_id": "S00-206",
+          "turn_id": "f82d1788ef1c134e",
+          "turn_index": 206,
+          "start_ms": 2681920,
+          "end_ms": 2693670,
+          "props": {}
+        }
+      ]
+    },
+    {
+      "instance": "RecursivePartitions",
+      "scene": "RecursivePartitions",
+      "start_ms": 2693670,
+      "end_ms": 2747970,
+      "shots": [
+        {
+          "shot_id": "S00-207",
+          "turn_id": "5d6788ad637e325c",
+          "turn_index": 207,
+          "start_ms": 2693670,
+          "end_ms": 2705100,
+          "props": {}
+        },
+        {
+          "shot_id": "S00-208",
+          "turn_id": "3fb614db39874127",
+          "turn_index": 208,
+          "start_ms": 2705100,
+          "end_ms": 2718850,
+          "props": {}
+        },
+        {
+          "shot_id": "S00-209",
+          "turn_id": "064cfc02ea4339d5",
+          "turn_index": 209,
+          "start_ms": 2718850,
+          "end_ms": 2731040,
+          "props": {}
+        },
+        {
+          "shot_id": "S00-210",
+          "turn_id": "307667f6e69e17ce",
+          "turn_index": 210,
+          "start_ms": 2731040,
+          "end_ms": 2747970,
+          "props": {}
+        }
+      ]
+    },
+    {
+      "instance": "ResolutionLadder",
+      "scene": "ResolutionLadder",
+      "start_ms": 2747970,
+      "end_ms": 2811020,
+      "shots": [
+        {
+          "shot_id": "S00-211",
+          "turn_id": "6154d9eef30d09d3",
+          "turn_index": 211,
+          "start_ms": 2747970,
+          "end_ms": 2760150,
+          "props": {}
+        },
+        {
+          "shot_id": "S00-212",
+          "turn_id": "c3e04139a912d886",
+          "turn_index": 212,
+          "start_ms": 2760150,
+          "end_ms": 2773180,
+          "props": {}
+        },
+        {
+          "shot_id": "S00-213",
+          "turn_id": "973d37e3a049e4b9",
+          "turn_index": 213,
+          "start_ms": 2773180,
+          "end_ms": 2785360,
+          "props": {}
+        },
+        {
+          "shot_id": "S00-214",
+          "turn_id": "2e5ed107beeff5fb",
+          "turn_index": 214,
+          "start_ms": 2785360,
+          "end_ms": 2799140,
+          "props": {}
+        },
+        {
+          "shot_id": "S00-215",
+          "turn_id": "c4594fcff1860b71",
+          "turn_index": 215,
+          "start_ms": 2799140,
+          "end_ms": 2811020,
+          "props": {}
+        }
+      ]
+    },
+    {
+      "instance": "LevelOne",
+      "scene": "LevelOne",
+      "start_ms": 2811020,
+      "end_ms": 2826730,
+      "shots": [
+        {
+          "shot_id": "S00-216",
+          "turn_id": "195283bf7fa407d0",
+          "turn_index": 216,
+          "start_ms": 2811020,
+          "end_ms": 2826730,
+          "props": {}
+        }
+      ]
+    },
+    {
+      "instance": "LevelTwo",
+      "scene": "LevelTwo",
+      "start_ms": 2826730,
+      "end_ms": 2843870,
+      "shots": [
+        {
+          "shot_id": "S00-217",
+          "turn_id": "32db3973e2ad9363",
+          "turn_index": 217,
+          "start_ms": 2826730,
+          "end_ms": 2843870,
           "props": {}
         }
       ]
