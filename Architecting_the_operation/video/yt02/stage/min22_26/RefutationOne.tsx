@@ -76,7 +76,7 @@ export function RefutationOne({segment}: SceneProps) {
         </Copy>
         <div style={{position: 'absolute', left: hypo.x + 32, top: hypo.y + 330, width: 416, height: 76}}>
           <DrawRect box={{x: 0, y: 0, w: 416, h: 76}} startFrame={frame(cue.refutation)} durationFrames={14} strokeToken="color/line/hairline-strong" fillToken="color/fill/panel-render" glowToken="color/fill/gold"/>
-          <Copy at={cue.refutation} box={{x: hypo.x + 50, y: hypo.y + 354, w: 380, h: 30}} size={22} tone="color/fill/gold">
+          <Copy at={cue.refutation} box={{x: 18, y: 24, w: 380, h: 30}} size={22} tone="color/fill/gold">
             EXPECTED ORDER HOLDS
           </Copy>
         </div>
@@ -140,10 +140,10 @@ export function RefutationOne({segment}: SceneProps) {
 
         <div style={{position: 'absolute', left: 120, top: 700, width: 1680, height: 76}}>
           <DrawRect box={{x: 0, y: 0, w: 1680, h: 76}} startFrame={frame(cue.falsify)} durationFrames={16} strokeToken="color/marker/race" fillToken="color/fill/panel-render" glowToken="color/marker/race"/>
-          <Copy at={cue.falsify} box={{x: 154, y: 722, w: 1100, h: 34}} size={28} tone="color/marker/race">
+          <Copy at={cue.falsify} box={{x: 34, y: 22, w: 1100, h: 34}} size={28} tone="color/marker/race">
             EITHER FALSIFIER WOULD FALSIFY THE HYPOTHESIS
           </Copy>
-          <Copy at={cue.hypothesis} box={{x: 1300, y: 726, w: 460, h: 28}} size={22} tone="color/text/soft">
+          <Copy at={cue.hypothesis} box={{x: 1180, y: 26, w: 460, h: 28}} size={22} tone="color/text/soft">
             EXPLICIT STANDARD
           </Copy>
         </div>

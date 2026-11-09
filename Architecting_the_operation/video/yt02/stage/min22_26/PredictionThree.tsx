@@ -97,7 +97,7 @@ export function PredictionThree({segment}: SceneProps) {
 
         <div style={{position: 'absolute', left: left.x + 32, top: left.y + 440, width: 416, height: 80}}>
           <DrawRect box={{x: 0, y: 0, w: 416, h: 80}} startFrame={frame(cue.struck)} durationFrames={14} strokeToken="color/marker/race" fillToken="color/fill/panel-render" glowToken="color/marker/race"/>
-          <Copy at={cue.struck} box={{x: left.x + 48, y: left.y + 466, w: 384, h: 28}} size={22} tone="color/marker/race">
+          <Copy at={cue.struck} box={{x: 16, y: 26, w: 384, h: 28}} size={22} tone="color/marker/race">
             STRUCK DOWN / DISCREDITED
           </Copy>
         </div>
@@ -151,10 +151,10 @@ export function PredictionThree({segment}: SceneProps) {
             fillToken="color/fill/panel-render"
             accentToken="color/fill/gold"
           />
-          <Copy at={cue.extraction} box={{x: middle.x + 52, y: middle.y + 400, w: 456, h: 32}} size={24}>
+          <Copy at={cue.extraction} box={{x: 20, y: 80, w: 456, h: 32}} size={24}>
             EXTRACTION RUNNING UNBROKEN
           </Copy>
-          <Copy at={cue.running} box={{x: middle.x + 52, y: middle.y + 444, w: 456, h: 60}} size={20} tone="color/fill/gold">
+          <Copy at={cue.running} box={{x: 20, y: 124, w: 456, h: 60}} size={20} tone="color/fill/gold">
             MATERIAL FLOW CONTINUES UNDER A REVISED LEGAL DESIGNATION
           </Copy>
         </div>
@@ -194,10 +194,10 @@ export function PredictionThree({segment}: SceneProps) {
 
         <div style={{position: 'absolute', left: right.x + 32, top: right.y + 360, width: 456, height: 170}}>
           <DrawRect box={{x: 0, y: 0, w: 456, h: 170}} startFrame={frame(cue.stereotypes)} durationFrames={14} strokeToken="color/line/hairline-strong" fillToken="color/fill/panel-render" glowToken="color/fill/gold"/>
-          <Copy at={cue.stereotypes} box={{x: right.x + 52, y: right.y + 386, w: 416, h: 28}} size={22} tone="color/fill/gold">
+          <Copy at={cue.stereotypes} box={{x: 20, y: 26, w: 416, h: 28}} size={22} tone="color/fill/gold">
             FEEDBACK TO POPULAR BELIEF
           </Copy>
-          <Copy at={cue.stereotypes} box={{x: right.x + 52, y: right.y + 426, w: 416, h: 80}} size={20} tone="color/text/soft">
+          <Copy at={cue.stereotypes} box={{x: 20, y: 66, w: 416, h: 80}} size={20} tone="color/text/soft">
             CULTIVATES PUBLIC SUPPORT FOR THE NEW NEUTRAL PROXY
           </Copy>
         </div>

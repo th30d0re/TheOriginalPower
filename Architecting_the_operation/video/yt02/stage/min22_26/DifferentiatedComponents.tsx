@@ -72,10 +72,10 @@ export function DifferentiatedComponents({segment}: SceneProps) {
 
         <div style={{position: 'absolute', left: 400, top: 310, width: 1120, height: 92}}>
           <DrawRect box={{x: 0, y: 0, w: 1120, h: 92}} startFrame={frame(cue.population)} durationFrames={16} strokeToken="color/line/hairline-strong" fillToken="color/fill/panel-render" glowToken="color/fill/gold"/>
-          <Copy at={cue.population} box={{x: 428, y: 330, w: 1064, h: 52}} size={28}>
+          <Copy at={cue.population} box={{x: 28, y: 18, w: 1064, h: 34}} size={28}>
             POPULATION
           </Copy>
-          <Copy at={cue.baseline} box={{x: 428, y: 366, w: 1064, h: 28}} size={20} tone="color/text/soft">
+          <Copy at={cue.baseline} box={{x: 28, y: 56, w: 1064, h: 24}} size={20} tone="color/text/soft">
             BASELINE DIVISION
           </Copy>
         </div>
@@ -152,8 +152,8 @@ export function DifferentiatedComponents({segment}: SceneProps) {
           strokeToken="color/line/hairline-strong"
           strokeWidth={3}
         />
-        <Copy at={cue.components} box={{x: 862, y: 620, w: 196, h: 26}} size={20} tone="color/text/soft">
-          DIVIDED
+        <Copy at={cue.components} box={{x: 872, y: 620, w: 176, h: 26}} size={18} tone="color/text/soft">
+          PARTITION
         </Copy>
 
         <Copy at={cue.system} box={{x: 240, y: 792, w: 1440, h: 34}} size={26} tone="color/fill/gold">

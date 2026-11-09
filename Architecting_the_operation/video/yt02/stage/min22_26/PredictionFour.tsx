@@ -188,7 +188,7 @@ export function PredictionFour({segment}: SceneProps) {
         <Copy at={cue.falls} box={{x: 700, y: 706, w: 180, h: 26}} size={20} tone="color/text/soft">
           CONTRACTION ↓
         </Copy>
-        <Copy at={cue.lockstep} box={{x: 1000, y: 470, w: 280, h: 26}} size={20} tone="color/fill/gold">
+        <Copy at={cue.lockstep} box={{x: 1220, y: 510, w: 360, h: 26}} size={20} tone="color/fill/gold">
           LOCKSTEP RATIO MAINTAINED
         </Copy>
 

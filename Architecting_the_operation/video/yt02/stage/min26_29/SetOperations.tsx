@@ -52,24 +52,24 @@ export function SetOperations({segment}: SceneProps) {
     <Copy at={c.plain} box={{x: 700, y: 162, w: 480, h: 28}} size={20} tone="color/text/soft" align="center">SPOKEN IN PLAIN WORDS</Copy>
     <Copy at={c.transparent} box={{x: 1220, y: 162, w: 580, h: 28}} size={20} tone="color/text/soft" align="center">EVERY SYMBOL TRANSPARENT</Copy>
     <Panel box={{x: 120, y: 225, w: 520, h: 490}} at={c.set} beat />
-    <Definition at={c.set} box={{x: 120, y: 225, w: 520, h: 490}} term="SET + SUBSET" definition="A defined collection; a subset stays entirely inside the larger set." />
-    <Circle at={c.circle} cx={380} cy={460} r={150} />
-    <Circle at={c.subset} cx={380} cy={460} r={68} tone="color/marker/race" />
-    <Dot at={c.collection} cx={380} cy={460} />
+    <Definition at={c.set} box={{x: 120, y: 225, w: 520, h: 490}} term="SET + SUBSET" definition="One collection inside another." />
+    <Circle at={c.circle} cx={380} cy={555} r={120} />
+    <Circle at={c.subset} cx={380} cy={555} r={54} tone="color/marker/race" />
+    <Dot at={c.collection} cx={380} cy={555} />
     <Panel box={{x: 700, y: 225, w: 520, h: 490}} at={c.union} beat />
-    <Definition at={c.union} box={{x: 700, y: 225, w: 520, h: 490}} term="UNION" definition="All members of both groups, joined in one set." />
-    <Circle at={c.union} cx={885} cy={460} r={118} fill />
-    <Circle at={c.union} cx={1035} cy={460} r={118} tone="color/marker/race" fill />
-    <Dot at={c.joins} cx={845} cy={460} />
-    <Dot at={c.joins} cx={960} cy={430} />
-    <Dot at={c.joins} cx={1075} cy={460} tone="color/marker/race" />
+    <Definition at={c.union} box={{x: 700, y: 225, w: 520, h: 490}} term="UNION" definition="All members, together." />
+    <Circle at={c.union} cx={885} cy={555} r={105} fill />
+    <Circle at={c.union} cx={1035} cy={555} r={105} tone="color/marker/race" fill />
+    <Dot at={c.joins} cx={845} cy={555} />
+    <Dot at={c.joins} cx={960} cy={530} />
+    <Dot at={c.joins} cx={1075} cy={555} tone="color/marker/race" />
     <Panel box={{x: 1280, y: 225, w: 520, h: 490}} at={c.intersection} accent="color/marker/race" beat />
-    <Definition at={c.intersection} box={{x: 1280, y: 225, w: 520, h: 490}} term="INTERSECTION" definition="Only members shared by both circles at the same time." accent="color/marker/race" />
-    <Circle at={c.intersection} cx={1465} cy={460} r={118} />
-    <Circle at={c.intersection} cx={1615} cy={460} r={118} tone="color/marker/race" />
-    <Lens at={c.intersection} cx1={1465} cx2={1615} cy={460} r={118} />
-    <Dot at={c.belong} cx={1540} cy={460} />
-    <Dot at={c.belong} cx={1540} cy={430} />
+    <Definition at={c.intersection} box={{x: 1280, y: 225, w: 520, h: 490}} term="INTERSECTION" definition="Members both groups share." accent="color/marker/race" />
+    <Circle at={c.intersection} cx={1465} cy={555} r={105} />
+    <Circle at={c.intersection} cx={1615} cy={555} r={105} tone="color/marker/race" />
+    <Lens at={c.intersection} cx1={1465} cx2={1615} cy={555} r={105} />
+    <Dot at={c.belong} cx={1540} cy={555} />
+    <Dot at={c.belong} cx={1540} cy={530} />
     <DrawLine points={[[270, 762], [1650, 762]]} startFrame={frame(c.zero)} durationFrames={18} strokeToken="color/line/hairline-strong" strokeWidth={2} />
     <Circle at={c.overlap} cx={430} cy={875} r={52} />
     <Circle at={c.overlap} cx={640} cy={875} r={52} tone="color/marker/race" />

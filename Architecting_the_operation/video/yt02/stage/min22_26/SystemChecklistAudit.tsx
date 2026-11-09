@@ -102,8 +102,8 @@ export function SystemChecklistAudit({segment}: SceneProps) {
           <DrawRect box={{x: 0, y: 0, w: 460, h: 620}} startFrame={frame(cue.audited)} durationFrames={20} strokeToken="color/fill/gold" fillToken="color/fill/panel-render" glowToken="color/fill/gold"/>
           <FitBox
             text="AUDIT"
-            x={1368}
-            y={226}
+            x={28}
+            y={22}
             size={28}
             weight={600}
             tag="TEST"
@@ -115,40 +115,40 @@ export function SystemChecklistAudit({segment}: SceneProps) {
             accentToken="color/fill/gold"
             beat
           />
-          <Copy at={cue.american} box={{x: 1368, y: 292, w: 404, h: 68}} size={26}>
+          <Copy at={cue.american} box={{x: 28, y: 88, w: 404, h: 68}} size={26}>
             AMERICAN RACIAL HIERARCHY
           </Copy>
-          <Copy at={cue.hierarchy} box={{x: 1368, y: 368, w: 404, h: 32}} size={22} tone="color/text/soft">
+          <Copy at={cue.hierarchy} box={{x: 28, y: 164, w: 404, h: 32}} size={22} tone="color/text/soft">
             AUDITED REQUIREMENT BY REQUIREMENT
           </Copy>
-          <Copy at={cue.five} box={{x: 1368, y: 424, w: 404, h: 30}} size={22} tone="color/fill/gold">
+          <Copy at={cue.five} box={{x: 28, y: 220, w: 404, h: 30}} size={22} tone="color/fill/gold">
             FIVE REQUIREMENTS
           </Copy>
-          <Copy at={cue.equations} box={{x: 1368, y: 462, w: 404, h: 30}} size={22}>
+          <Copy at={cue.equations} box={{x: 28, y: 258, w: 404, h: 30}} size={22}>
             EQUATIONS &amp; DIAGRAMS
           </Copy>
-          <div style={{position: 'absolute', left: 1368, top: 516, width: 124, height: 64}}>
+          <div style={{position: 'absolute', left: 28, top: 312, width: 124, height: 64}}>
             <DrawRect box={{x: 0, y: 0, w: 124, h: 64}} startFrame={frame(cue.ch0)} durationFrames={14} strokeToken="color/fill/gold" fillToken="color/fill/panel-render" glowToken="color/fill/gold"/>
-            <Copy at={cue.ch0} box={{x: 1382, y: 536, w: 96, h: 28}} size={24} tone="color/fill/gold">
+            <Copy at={cue.ch0} box={{x: 14, y: 20, w: 96, h: 28}} size={24} tone="color/fill/gold">
               CH. 0
             </Copy>
           </div>
-          <div style={{position: 'absolute', left: 1508, top: 516, width: 124, height: 64}}>
+          <div style={{position: 'absolute', left: 168, top: 312, width: 124, height: 64}}>
             <DrawRect box={{x: 0, y: 0, w: 124, h: 64}} startFrame={frame(cue.ch2)} durationFrames={14} strokeToken="color/fill/gold" fillToken="color/fill/panel-render" glowToken="color/fill/gold"/>
-            <Copy at={cue.ch2} box={{x: 1522, y: 536, w: 96, h: 28}} size={24} tone="color/fill/gold">
+            <Copy at={cue.ch2} box={{x: 14, y: 20, w: 96, h: 28}} size={24} tone="color/fill/gold">
               CH. 2
             </Copy>
           </div>
-          <div style={{position: 'absolute', left: 1648, top: 516, width: 124, height: 64}}>
+          <div style={{position: 'absolute', left: 308, top: 312, width: 124, height: 64}}>
             <DrawRect box={{x: 0, y: 0, w: 124, h: 64}} startFrame={frame(cue.ch4)} durationFrames={14} strokeToken="color/fill/gold" fillToken="color/fill/panel-render" glowToken="color/fill/gold"/>
-            <Copy at={cue.ch4} box={{x: 1662, y: 536, w: 96, h: 28}} size={24} tone="color/fill/gold">
+            <Copy at={cue.ch4} box={{x: 14, y: 20, w: 96, h: 28}} size={24} tone="color/fill/gold">
               CH. 4
             </Copy>
           </div>
-          <Copy at={cue.chapters} box={{x: 1368, y: 600, w: 404, h: 52}} size={20} tone="color/text/soft">
+          <Copy at={cue.chapters} box={{x: 28, y: 396, w: 404, h: 52}} size={20} tone="color/text/soft">
             THE BOOK SUPPLIES THE EVIDENCE FOR EACH ROW
           </Copy>
-          <Copy at={cue.requirements} box={{x: 1368, y: 664, w: 404, h: 52}} size={20} tone="color/fill/gold">
+          <Copy at={cue.requirements} box={{x: 28, y: 460, w: 404, h: 52}} size={20} tone="color/fill/gold">
             EACH ROW IS CHECKED IN TURN
           </Copy>
           {rows.map((row, i) => (
