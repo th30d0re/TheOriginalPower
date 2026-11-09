@@ -108,13 +108,13 @@ export function DifferentiatedComponents({segment}: SceneProps) {
             accentToken="color/fill/gold"
             beat
           />
-          <StickFigure x={340} y={600} group="ingroup" emphasis={1} scale={1.6} animate startFrame={frame(cue.inGroup)} durationFrames={18} beat/>
-          <StickFigure x={480} y={600} group="ingroup" emphasis={0.7} scale={1.6} animate startFrame={frame(cue.inGroup)} durationFrames={18}/>
-          <Copy at={cue.inGroup} box={{x: 208, y: 650, w: 644, h: 30}} size={24}>
-            MEMBERSHIP SIDE
+          <StickFigure x={160} y={120} group="ingroup" emphasis={1} scale={1.6} animate startFrame={frame(cue.inGroup)} durationFrames={18} beat/>
+          <StickFigure x={300} y={120} group="ingroup" emphasis={0.7} scale={1.6} animate startFrame={frame(cue.inGroup)} durationFrames={18}/>
+          <Copy at={cue.inGroup} box={{x: 28, y: 174, w: 644, h: 28}} size={22}>
+            IN-GROUP · SPECIALIZED ROLE
           </Copy>
-          <Copy at={cue.roles} box={{x: 208, y: 686, w: 644, h: 28}} size={20} tone="color/text/soft">
-            ONE SPECIALIZED ROLE
+          <Copy at={cue.roles} box={{x: 28, y: 208, w: 644, h: 24}} size={18} tone="color/text/soft">
+            A DIFFERENTIATED COMPONENT
           </Copy>
         </div>
 
@@ -135,13 +135,13 @@ export function DifferentiatedComponents({segment}: SceneProps) {
             accentToken="color/marker/race"
             beat
           />
-          <StickFigure x={1300} y={600} group="outgroup" emphasis={1} scale={1.6} animate startFrame={frame(cue.outGroup)} durationFrames={18} beat/>
-          <StickFigure x={1440} y={600} group="outgroup" emphasis={0.7} scale={1.6} animate startFrame={frame(cue.outGroup)} durationFrames={18}/>
-          <Copy at={cue.outGroup} box={{x: 1068, y: 650, w: 644, h: 30}} size={24}>
-            OUTSIDE SIDE
+          <StickFigure x={160} y={120} group="outgroup" emphasis={1} scale={1.6} animate startFrame={frame(cue.outGroup)} durationFrames={18} beat/>
+          <StickFigure x={300} y={120} group="outgroup" emphasis={0.7} scale={1.6} animate startFrame={frame(cue.outGroup)} durationFrames={18}/>
+          <Copy at={cue.outGroup} box={{x: 28, y: 174, w: 644, h: 28}} size={22}>
+            OUT-GROUP · SPECIALIZED ROLE
           </Copy>
-          <Copy at={cue.roles} box={{x: 1068, y: 686, w: 644, h: 28}} size={20} tone="color/text/soft">
-            THE OTHER SPECIALIZED ROLE
+          <Copy at={cue.roles} box={{x: 28, y: 208, w: 644, h: 24}} size={18} tone="color/text/soft">
+            A DIFFERENTIATED COMPONENT
           </Copy>
         </div>
 

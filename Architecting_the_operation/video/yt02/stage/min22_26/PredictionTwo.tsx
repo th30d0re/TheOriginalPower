@@ -126,11 +126,11 @@ export function PredictionTwo({segment}: SceneProps) {
             accentToken="color/marker/race"
             beat
           />
-          <Copy at={cue.statutory} box={{x: right.x + 60, y: right.y + 116, w: 700, h: 32}} size={24}>
+          <Copy at={cue.statutory} box={{x: 24, y: 86, w: 700, h: 30}} size={23}>
             1691/1705 VIRGINIA SLAVE CODES
           </Copy>
-          <Copy at={cue.enacted} box={{x: right.x + 60, y: right.y + 162, w: 700, h: 60}} size={22} tone="color/text/soft">
-            STRICT STATUTORY CASTE ESTABLISHED TO SEVER JOINT LABOR ALLIANCES
+          <Copy at={cue.enacted} box={{x: 24, y: 130, w: 700, h: 56}} size={21} tone="color/text/soft">
+            STRICT RACIAL BOUNDARIES AFTER A SOLIDARITY CRISIS
           </Copy>
         </div>
 
@@ -151,11 +151,11 @@ export function PredictionTwo({segment}: SceneProps) {
             accentToken="color/fill/gold"
             beat
           />
-          <Copy at={cue.white} box={{x: right.x + 60, y: right.y + 386, w: 700, h: 32}} size={24}>
-            CIVIC PREFERMENT &amp; ENFORCEMENT ROLES
+          <Copy at={cue.white} box={{x: 24, y: 86, w: 700, h: 30}} size={23}>
+            CIVIC PREFERMENT FOR POOR WHITES
           </Copy>
-          <Copy at={cue.privileges} box={{x: right.x + 60, y: right.y + 432, w: 700, h: 60}} size={22} tone="color/text/soft">
-            POOR WHITES RECEIVE BUFFER PRIVILEGES TO PATROL AND ENFORCE EXTRACTION
+          <Copy at={cue.privileges} box={{x: 24, y: 130, w: 700, h: 56}} size={21} tone="color/text/soft">
+            ENFORCEMENT ROLES TO PATROL EXTRACTION
           </Copy>
         </div>
 

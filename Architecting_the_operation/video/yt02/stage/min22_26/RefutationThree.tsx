@@ -79,8 +79,11 @@ export function RefutationThree({segment}: SceneProps) {
         </Copy>
         <div style={{position: 'absolute', left: left.x + 32, top: left.y + 492, width: 496, height: 72}}>
           <DrawRect box={{x: 0, y: 0, w: 496, h: 72}} startFrame={frame(cue.without)} durationFrames={14} strokeToken="color/marker/race" fillToken="color/fill/panel-render" glowToken="color/marker/race"/>
-          <Copy at={cue.without} box={{x: left.x + 50, y: left.y + 514, w: 460, h: 30}} size={22} tone="color/marker/race">
-            WITHOUT INSTITUTIONAL CONTROL
+          <Copy at={cue.without} box={{x: 18, y: 14, w: 460, h: 26}} size={20} tone="color/marker/race">
+            NO INSTITUTIONAL CONTROL
+          </Copy>
+          <Copy at={cue.without} box={{x: 18, y: 40, w: 460, h: 22}} size={17} tone="color/text/soft">
+            ATTITUDE CANNOT DIRECT A SYSTEM
           </Copy>
         </div>
 
@@ -135,27 +138,31 @@ export function RefutationThree({segment}: SceneProps) {
 
         <div style={{position: 'absolute', left: right.x + 32, top: right.y + 240, width: 420, height: 84}}>
           <DrawRect box={{x: 0, y: 0, w: 420, h: 84}} startFrame={frame(cue.legislatures)} durationFrames={14} strokeToken="color/line/hairline-strong" fillToken="color/fill/panel-render" glowToken="color/marker/race"/>
-          <Copy at={cue.legislatures} box={{x: right.x + 54, y: right.y + 268, w: 376, h: 30}} size={24}>
+          <Copy at={cue.legislatures} box={{x: 22, y: 16, w: 376, h: 26}} size={22}>
             LEGISLATURES
           </Copy>
+          <Copy at={cue.legislatures} box={{x: 22, y: 46, w: 376, h: 22}} size={17} tone="color/text/soft">WRITE RACE-BASED LAW</Copy>
         </div>
         <div style={{position: 'absolute', left: right.x + 488, top: right.y + 240, width: 420, height: 84}}>
           <DrawRect box={{x: 0, y: 0, w: 420, h: 84}} startFrame={frame(cue.policing)} durationFrames={14} strokeToken="color/line/hairline-strong" fillToken="color/fill/panel-render" glowToken="color/marker/race"/>
-          <Copy at={cue.policing} box={{x: right.x + 510, y: right.y + 268, w: 376, h: 30}} size={24}>
+          <Copy at={cue.policing} box={{x: 22, y: 16, w: 376, h: 26}} size={22}>
             POLICING
           </Copy>
+          <Copy at={cue.policing} box={{x: 22, y: 46, w: 376, h: 22}} size={17} tone="color/text/soft">ENFORCE THE ORDER</Copy>
         </div>
         <div style={{position: 'absolute', left: right.x + 32, top: right.y + 344, width: 420, height: 84}}>
           <DrawRect box={{x: 0, y: 0, w: 420, h: 84}} startFrame={frame(cue.courts)} durationFrames={14} strokeToken="color/line/hairline-strong" fillToken="color/fill/panel-render" glowToken="color/marker/race"/>
-          <Copy at={cue.courts} box={{x: right.x + 54, y: right.y + 372, w: 376, h: 30}} size={24}>
+          <Copy at={cue.courts} box={{x: 22, y: 16, w: 376, h: 26}} size={22}>
             COURTS
           </Copy>
+          <Copy at={cue.courts} box={{x: 22, y: 46, w: 376, h: 22}} size={17} tone="color/text/soft">SUSTAIN ITS RULES</Copy>
         </div>
         <div style={{position: 'absolute', left: right.x + 488, top: right.y + 344, width: 420, height: 84}}>
           <DrawRect box={{x: 0, y: 0, w: 420, h: 84}} startFrame={frame(cue.capital)} durationFrames={14} strokeToken="color/line/hairline-strong" fillToken="color/fill/panel-render" glowToken="color/marker/race"/>
-          <Copy at={cue.capital} box={{x: right.x + 510, y: right.y + 372, w: 376, h: 30}} size={24}>
+          <Copy at={cue.capital} box={{x: 22, y: 16, w: 376, h: 26}} size={22}>
             CAPITAL ALLOCATION
           </Copy>
+          <Copy at={cue.capital} box={{x: 22, y: 46, w: 376, h: 22}} size={17} tone="color/text/soft">DIRECT RESOURCES</Copy>
         </div>
 
         <Copy at={cue.allocation} box={{x: right.x + 32, y: right.y + 464, w: 876, h: 32}} size={22} tone="color/marker/race">

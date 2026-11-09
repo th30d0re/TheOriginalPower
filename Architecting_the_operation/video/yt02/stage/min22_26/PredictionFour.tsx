@@ -177,7 +177,7 @@ export function PredictionFour({segment}: SceneProps) {
             accentToken="color/fill/gold"
             beat
           />
-          <Copy at={cue.ratio} box={{x: 236, y: 22, w: 184, h: 28}} size={22} tone="color/fill/gold">
+          <Copy at={cue.ratio} box={{x: 236, y: 38, w: 184, h: 20}} size={15} tone="color/fill/gold">
             ENFORCEMENT / VALUE
           </Copy>
         </div>
