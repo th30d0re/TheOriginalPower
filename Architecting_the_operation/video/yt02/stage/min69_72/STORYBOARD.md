@@ -1,17 +1,17 @@
 # Minutes 69–72 · Turns 308–318
 
-`PowersTimeline` (308) sets the Atlantic entrants on one dated line: the Dutch chartered in 1621 and taking Brazil and Elmina, England planting Barbados, starting the sugar revolution, and monopolizing the African trade in 1672, France closing the century with Saint-Domingue in 1697.
+`PowersTimeline` (308) places the Atlantic entrants on the world map as named: Dutch routes to Brazil (1630) and Elmina (1637), England to Barbados (1627, sugar 1640s, monopoly 1672), France to Saint-Domingue (1697).
 
-`TriangularFlow` (309) draws the circuit as a single triangle — European ports above, African ports and the Americas below — with manufactured goods running down one side, the Middle Passage crossing the base, and sugar, tobacco, and rum returning to European markets.
+`TriangularFlow` (309) draws the Atlantic circuit on the map: European ports → West African ports, the Middle Passage to the Americas, and sugar/tobacco/rum back toward Europe, each leg drawn on its cue.
 
-`EmbarkationGrowth` (310) climbs five quarter-century bars from 13K to 353K embarked, so the early trade reads as a small trade becoming a mass system before the totals arrive.
+`EmbarkationGrowth` (310) climbs five quarter-century bars from 13K to 353K embarked. (Diagram beat retained.)
 
-`CrossingLoss` (311) holds one horizontal bar for the full trade: 12.5M embarked splits into 10.7M landed in gold and 1.8M died at sea in red, capped by the 14.5% mortality tag.
+`CrossingLoss` (311) holds one horizontal bar for the full trade: 12.5M embarked splits into 10.7M landed and 1.8M died at sea, capped by 14.5% mortality. (Diagram beat retained.)
 
-`DestinationShare` (312) keeps two tracks on the same scale so Brazil's 45% bar dwarfs mainland North America's 3.6% sliver, which is pulled out into a magnified callout reading 390K people.
+`DestinationShare` (312) shows destinations on the Atlantic map: the Africa → Brazil route drawn thick (45%) against the thin route to mainland North America (3.6%, 390K).
 
-`IberianHemisphere` (313) maps 1619 as three Iberian holdings — Brazil the sugar center, Spanish America around silver, agriculture, crafts, Cartagena and Veracruz, Spain holding the Caribbean strongpoints — above a dashed strip where England and France hold no plantation colonies yet.
+`IberianHemisphere` (313) maps 1619: Lisbon → Brazil sugar and Lisbon → Cartagena → Veracruz silver routes, Caribbean strongpoints labelled, with England and France holding no plantation colonies yet.
 
-`VirginiaPrediction` (314–316) builds in three columns: a marginal Virginia tobacco colony of 1,000–1,500 settlers worked by indentured labor, the second-test move from fifteenth-century Lisbon and Prediction 1 to Virginia 1619–1705 in Chapter 4, and Prediction 2 stated as a definition card — codification follows solidarity threats — flowing from a cross-racial coalition to race codes and Buffer privileges.
+`VirginiaPrediction` (314–316) opens on the Chesapeake tobacco-field still (shared indentured/African labour), then travels Lisbon → Virginia on the map for the second test, landing Prediction 2: codification follows solidarity threats.
 
-`PointComfort` (317–318) opens the Virginia record as a custody chain from São João Bautista through the White Lion's twenty and odd captives to Point Comfort in August 1619, then holds the statute book open beneath it: zero slave codes and zero white tier in English law.
+`PointComfort` (317–318) opens on the White Lion piracy still, cuts to the map route Angola (São João Bautista) → White Lion interception → Point Comfort with 20-and-odd captives traded, then holds the empty statute book: 0 slave codes, 0 white tier.
