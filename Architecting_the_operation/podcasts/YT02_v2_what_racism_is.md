@@ -75,7 +75,7 @@ The Original Power treats that causal ordering as a testable historical claim th
 
 
 Emmanuel Theodore (03:04)
-Why separate bias, prejudice, and discrimination before naming racism? Clear analysis requires exact words before any formal modeling begins. Everyday conversation blends four distinct terms into one shared bucket: bias, prejudice, discrimination, and racism.
+Why separate bias, prejudice, and discrimination before naming racism? Clear analysis requires exact words before any formal modeling begins. Everyday conversation throws all four into one shared bucket, and the differences between them disappear.
 <!-- [book Preface; §2.2] -->
 
 Emmanuel Theodore (03:24)
@@ -136,7 +136,7 @@ Why does the brain carry bias at all? Predictive-coding accounts treat perceptio
 <!-- [book §Bayesian Defense: Hardwiring the Priors] -->
 
 Emmanuel Theodore (06:04)
-In that architecture, bias names a tilt in the starting assumption, not a moral defect in the brain's wiring. The guessing machinery is general-purpose; harm enters when a legally enforced racial division is given overwhelming weight.
+In that architecture, bias names a tilt in the starting assumption: the guess leans one way before any evidence arrives. The guessing machinery is general-purpose; harm enters when a legally enforced racial division is given overwhelming weight.
 <!-- [book §Bayesian Defense: Hardwiring the Priors] -->
 
 Emmanuel Theodore (06:18)
@@ -224,7 +224,7 @@ Why does Fiske treat discrimination as its own category beside stereotyping and 
 <!-- [book Preface; §2.2, citing Fiske 1998] -->
 
 Emmanuel Theodore (10:31)
-Susan Fiske synthesized the standard three-part model in the nineteen ninety-eight fourth edition of the Handbook of Social Psychology, volume two, pages 357 through 411.
+Susan Fiske synthesized the standard three-part model in the nineteen ninety-eight fourth edition of the Handbook of Social Psychology, volume two, pages three fifty-seven through four eleven.
 <!-- [book Preface; §2.2, citing Fiske 1998] -->
 
 Emmanuel Theodore (10:43)

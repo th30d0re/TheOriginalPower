@@ -205,8 +205,8 @@ shots:
       t16Exact: {word: exact}
       t16Conversation: {word: conversation}
       t16Bucket: {word: bucket}
-      t16Distinct: {word: distinct}
-      t16Terms: {word: terms}
+      t16Distinct: {word: four}
+      t16Terms: {word: differences}
   - shot_id: S00-17
     turn_id: 6b0c581fadd5d3c6
     scene: LiteratureHandoff
