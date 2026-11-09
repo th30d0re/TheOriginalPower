@@ -1,5 +1,5 @@
 import React from 'react';
-import {KitSound, progress, useCue, useStageMs, type SceneProps} from '@stage';
+import {DrawRect, KitSound, progress, useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../../tokens';
 import {StageSceneFrame, PrecisionGauge} from '../shared';
 import {CurveLane, Label, MotionLabel, MotionPanel, MotionPath, SceneSource, clamp, enter, lineAttrs, mix, mixBox, pathFrom, shapeAttrs, type LayoutBox, type Point} from './sceneUtils';
@@ -88,7 +88,7 @@ export function PredictiveCoding({segment}:SceneProps) {
       <Label id="update" box={T.update} size={24} ls={0} lh={1.2} ink={accent} opacity={updateP}><span data-beat="t30Updates">UPDATE</span></Label>
     </>}
 
-    {ms>=cue.plain.at && <div data-beat="t30Plain" {...shapeAttrs('plain-loop',{x:L.core.x+12,y:L.core.y+12,w:L.core.w-24,h:L.core.h-24},'frame')} style={{position:'absolute',left:L.core.x+12,top:L.core.y+12,width:L.core.w-24,height:L.core.h-24,border:`2px solid ${gold}`,boxSizing:'border-box',opacity:.32*enter(ms,cue.plain.at)}}/>}
+    {ms>=cue.plain.at && <div data-beat="t30Plain" {...shapeAttrs('plain-loop',{x:L.core.x+12,y:L.core.y+12,w:L.core.w-24,h:L.core.h-24},'frame')} style={{opacity:.32*enter(ms,cue.plain.at)}}><DrawRect box={{x:L.core.x+12,y:L.core.y+12,w:L.core.w-24,h:L.core.h-24}} progress={enter(ms,cue.plain.at)} strokeToken="color/fill/gold" fillToken="color/bg/field" strokeWidth={2}/></div>}
 
     {ms>=cue.guesses.at && <>
       <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position:'absolute',inset:0}} aria-hidden="true"><circle data-sensory-mark="true" {...shapeAttrs('sensory-mark',{x:markX-SENSORY_MARK.r,y:SENSORY_MARK.y-SENSORY_MARK.r,w:2*SENSORY_MARK.r,h:2*SENSORY_MARK.r},'mark')} cx={markX} cy={SENSORY_MARK.y} r={SENSORY_MARK.r} fill={gold} opacity={enter(ms,cue.guesses.at)}/></svg>
@@ -110,7 +110,7 @@ export function PredictiveCoding({segment}:SceneProps) {
       {ms>=cue.starting.at && <Label id="starting" box={T.starting} size={24} weight={700} ls={0} lh={1.2} ink={red} opacity={enter(ms,cue.starting.at)}><span data-beat="t31Starting">BIAS = A TILT IN THE STARTING ASSUMPTION</span></Label>}
       {ms>=cue.general.at && <Label id="general" box={T.general} size={20} weight={500} ls={1} align="right" ink={color('color/text/soft')} opacity={enter(ms,cue.general.at)}><span data-beat="t31GeneralPurpose">GENERAL-PURPOSE PREDICTION</span></Label>}
       {ms>=cue.legally.at && <>
-        <div {...shapeAttrs('legal-bus',L.bus,'frame')} style={{position:'absolute',left:L.bus.x,top:L.bus.y,width:L.bus.w,height:L.bus.h,boxSizing:'border-box',border:`1px solid ${red}`,opacity:enter(ms,cue.legally.at)}}/>
+        <div {...shapeAttrs('legal-bus',L.bus,'frame')} style={{opacity:enter(ms,cue.legally.at)}}><DrawRect box={L.bus} progress={enter(ms,cue.legally.at)} strokeToken="color/marker/race" fillToken="color/bg/field"/></div>
         <Label id="legal" box={T.legal} size={22} ls={0} ink={red} opacity={enter(ms,cue.legally.at)}><span data-beat="t31Legally">LEGAL + SOCIAL REINFORCEMENT</span></Label>
         <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position:'absolute',inset:0}} aria-hidden="true"><path {...lineAttrs('legal-link',[[1520,L.bus.y],[1520,L.gauge.y+L.gauge.h]])} d={`M1520 ${L.bus.y}V${L.gauge.y+L.gauge.h}`} stroke={red} strokeWidth="4" opacity={enter(ms,cue.legally.at)}/></svg>
         <Label id="racial-prior" box={T.racial} size={24} weight={700} ls={0} lh={1.2} ink={red} opacity={enter(ms,cue.legally.at+180)}>RACIAL PRIOR</Label>

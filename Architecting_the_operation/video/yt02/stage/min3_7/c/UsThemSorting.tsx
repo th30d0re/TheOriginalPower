@@ -1,5 +1,5 @@
 import React from 'react';
-import {DrawLine, Flicker, KitSound, cubicInOut, cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
+import {DrawLine, DrawRect, Flicker, KitSound, cubicInOut, cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../../tokens';
 import {SORTING_FIELD, StageSceneFrame, UsThemSortingField, type SortingMark} from '../shared';
 import {Label, SceneSource, lineAttrs, pathFrom, shapeAttrs, type LayoutBox, type Point} from '../d/sceneUtils';
@@ -71,7 +71,7 @@ function Chip({id,box,text,tone,opacity,leader}:{id:string;box:LayoutBox;text:st
   const ink=tone==='gold'?color('color/fill/gold'):color('color/marker/race');
   return <div data-function-label={id} style={{opacity}}>
     <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position:'absolute',inset:0}} aria-hidden="true"><path {...lineAttrs(`${id}-leader`,leader)} d={pathFrom(leader)} fill="none" stroke={ink} strokeWidth="2"/></svg>
-    <div {...shapeAttrs(`${id}-chip`,box,'frame')} style={{position:'absolute',left:box.x,top:box.y,width:box.w,height:box.h,boxSizing:'border-box',background:color('color/fill/panel-render'),border:`1px solid ${ink}`}}/>
+    <div {...shapeAttrs(`${id}-chip`,box,'frame')}><DrawRect box={box} progress={opacity} strokeToken={tone==='gold'?'color/fill/gold':'color/marker/race'} fillToken="color/fill/panel-render"/></div>
     <Label id={`${id}-text`} box={{x:box.x+12,y:box.y+7,w:box.w-24,h:box.h-14}} size={20} weight={500} ls={1.1} lh={1.3} align="center" ink={ink}>{text}</Label>
   </div>;
 }
@@ -122,7 +122,6 @@ export function UsThemSorting({segment}:SceneProps) {
     {ms>=cue.demonstrates&&<svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position:'absolute',inset:0}} aria-hidden="true">
       <path data-categorization-pulse="true" {...lineAttrs('pulse',[[440,500],[1480,500]])} d="M440 500H1480" stroke={gold} strokeWidth="5" pathLength="1" strokeDasharray=".08 .92" strokeDashoffset={1-pulseP} opacity={pulseP*(1-contractP)}/>
       {ms>=cue.speed&&<path data-rapid-trace="true" {...lineAttrs('rapid-trace',[[800,150],[1120,150]])} d="M800 150H1120" stroke={gold} strokeWidth="5" opacity="0"/>}
-      {ms>=cue.sorting&&bandFrames.map((band,index)=><rect key={index} data-band={index+1} {...shapeAttrs(`band-${index+1}`,band,'frame')} x={band.x} y={band.y} width={band.w} height={band.h} rx="34" fill={color('color/fill/gold-wash')} fillOpacity=".35" stroke={index<2?gold:red} strokeWidth="3" opacity={contractP}/>)}
       {ms>=cue.sorting&&<path data-alliance-link="true" {...lineAttrs('alliance',alliance)} d={pathFrom(alliance)} stroke={gold} strokeWidth="5" strokeDasharray="8 6" opacity={contractP}/>}
       {ms>=cue.trust&&<path data-trust-bridge="true" {...lineAttrs('trust-bridge',[[trustA[0],trustY],[(trustA[0]+trustB[0])/2,trustY-10],[trustB[0],trustY]])} d={`M${trustA[0]} ${trustY}Q${(trustA[0]+trustB[0])/2} ${trustY-20} ${trustB[0]} ${trustY}`} fill="none" stroke={gold} strokeWidth="5" opacity={trustP}/>}
       {ms>=cue.threat&&<path data-threat-arc="true" {...lineAttrs('threat-arc',threat)} d="M1446 290Q1496 500 1446 710" fill="none" stroke={red} strokeWidth="5" pathLength="1" strokeDasharray=".12 .08" strokeDashoffset={1-threatP} opacity={threatP}/>}
@@ -130,9 +129,10 @@ export function UsThemSorting({segment}:SceneProps) {
         <path {...lineAttrs('reciprocity-left',[[recipB[0],recipY[0]],[recipA[0],recipY[0]]])} d={`M${recipB[0]} ${recipY[0]}H${recipA[0]}l14 -9m-14 9 14 9`} fill="none" stroke={gold} strokeWidth="4"/>
         <path {...lineAttrs('reciprocity-right',[[recipA[0],recipY[1]],[recipB[0],recipY[1]]])} d={`M${recipA[0]} ${recipY[1]}H${recipB[0]}l-14 -9m14 9 -14 9`} fill="none" stroke={gold} strokeWidth="4"/>
       </g>}
-      {ms>=cue.belonging&&<rect data-belonging-wrap="true" {...shapeAttrs('belonging-wrap',wrap,'frame')} x={wrap.x} y={wrap.y} width={wrap.w} height={wrap.h} rx="44" fill="none" stroke={gold} strokeWidth="6" opacity={belongingP}/>}
       {ms>=cue.selfConcept&&<g data-self-ring="true" opacity={selfP}><ellipse {...shapeAttrs('self-ring',ring,'frame')} cx={self[0]} cy={self[1]} rx="31" ry="40" fill="none" stroke={gold} strokeWidth="4"/></g>}
     </svg>}
+    {ms>=cue.sorting&&bandFrames.map((band,index)=><div key={index} data-band={index+1} {...shapeAttrs(`band-${index+1}`,band,'frame')} style={{opacity:contractP}}><DrawRect box={band} progress={contractP} strokeToken={index<2?'color/fill/gold':'color/marker/race'} fillToken="color/fill/gold-wash" strokeWidth={3}/></div>)}
+    {ms>=cue.belonging&&<div data-belonging-wrap="true" {...shapeAttrs('belonging-wrap',wrap,'frame')} style={{opacity:belongingP}}><DrawRect box={wrap} progress={belongingP} strokeToken="color/fill/gold" fillToken="color/bg/field" strokeWidth={6}/></div>}
 
     {ms>=cue.speed&&<DrawLine points={[[800,150],[1120,150]]} startFrame={Math.round(cue.speed*30/1000)} durationFrames={15} strokeToken="color/fill/gold" glowToken="color/fill/gold" strokeWidth={5} origin={false} nodes={false}/>}
 

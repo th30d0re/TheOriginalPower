@@ -1,5 +1,5 @@
 import React from 'react';
-import {KitSound, progress, useCue, useStageMs, type SceneProps} from '@stage';
+import {DrawRect, KitSound, progress, useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../../tokens';
 import {ColoredTerm, EquationTerms, TermChip, type EquationPulseMap, type EquationToken} from '../../equations';
 import {PrecisionGauge, StageSceneFrame, UsThemSortingField} from '../shared';
@@ -117,14 +117,14 @@ export function InstalledRacialPrior({segment}:SceneProps) {
         </svg>
       </div>
 
-      <div data-prior-socket="true" {...shapeAttrs('socket',L.socket,'frame')} style={{position:'absolute',left:L.socket.x,top:L.socket.y,width:L.socket.w,height:L.socket.h,boxSizing:'border-box',border:`2px dashed ${color('color/line/hairline-strong')}`,opacity:bookP*(1-cartridgeP)}}/>
+      <div data-prior-socket="true" {...shapeAttrs('socket',L.socket,'frame')} style={{opacity:bookP*(1-cartridgeP)}}><DrawRect box={L.socket} progress={bookP} strokeToken="color/line/hairline-strong" fillToken="color/bg/field" strokeWidth={2}/></div>
       <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position:'absolute',inset:0}} aria-hidden="true" opacity={bookP}>
         <path {...lineAttrs('socket-leader',[[L.socket.x+20,L.socket.y+L.socket.h],[xFor(BAYES.priorMean)+12,AXIS.y-heightFor(priorPrecision)-8]])} d={pathFrom([[L.socket.x+20,L.socket.y+L.socket.h],[xFor(BAYES.priorMean)+12,AXIS.y-heightFor(priorPrecision)-8]])} stroke={red} strokeWidth="2" strokeDasharray="4 6"/>
       </svg>
       {ms>=cue.installed.at && <>
         <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position:'absolute',inset:0}} aria-hidden="true" opacity={cartridgeP}><path {...lineAttrs('legal-bus',bus)} d={pathFrom(bus)} fill="none" stroke={red} strokeWidth="5"/></svg>
-        <div data-cartridge="true" {...shapeAttrs('cartridge',{...L.socket,x:cartridgeX},'frame')} style={{position:'absolute',left:cartridgeX,top:L.socket.y,width:L.socket.w,height:L.socket.h,boxSizing:'border-box',background:color('color/fill/red-wash'),border:`2px solid ${red}`,opacity:cartridgeP}}/>
-        <div {...shapeAttrs('reinforcement-box',L.reinforcement,'frame')} style={{position:'absolute',left:L.reinforcement.x,top:L.reinforcement.y,width:L.reinforcement.w,height:L.reinforcement.h,boxSizing:'border-box',border:`2px solid ${red}`,opacity:cartridgeP}}/>
+        <div data-cartridge="true" {...shapeAttrs('cartridge',{...L.socket,x:cartridgeX},'frame')} style={{opacity:cartridgeP}}><DrawRect box={{...L.socket,x:cartridgeX}} progress={cartridgeP} strokeToken="color/marker/race" fillToken="color/fill/red-wash" strokeWidth={2}/></div>
+        <div {...shapeAttrs('reinforcement-box',L.reinforcement,'frame')} style={{opacity:cartridgeP}}><DrawRect box={L.reinforcement} progress={cartridgeP} strokeToken="color/marker/race" fillToken="color/bg/field" strokeWidth={2}/></div>
         <Label id="reinforcement" box={T.reinforcement} size={20} ls={0} align="center" ink={red} opacity={cartridgeP}><span data-beat="t33Installed">INSTITUTIONAL REINFORCEMENT</span></Label>
       </>}
       {ms>=cue.prior.at && <Label id="cartridge-label" box={T.cartridge} size={20} weight={700} ls={0} align="center" ink={red} opacity={enter(ms,cue.prior.at)}><span data-beat="t33Prior">INSTALLED RACIAL PRIOR</span></Label>}
@@ -186,7 +186,7 @@ export function InstalledRacialPrior({segment}:SceneProps) {
         </svg>
         <Label id="prediction" box={T.prediction} size={30} weight={700} ls={0} align="center" ink={accent} opacity={enter(ms,cue.prediction.at)}><span data-beat="t34Prediction">PREDICTION FROM PRIOR EXPERIENCE</span></Label>
       </>}
-      <div data-cartridge-34="true" {...shapeAttrs('cartridge-34',L.cartridge34,'frame')} style={{position:'absolute',left:L.cartridge34.x,top:L.cartridge34.y,width:L.cartridge34.w,height:L.cartridge34.h,boxSizing:'border-box',background:color('color/fill/red-wash'),border:`2px solid ${red}`}}/>
+      <div data-cartridge-34="true" {...shapeAttrs('cartridge-34',L.cartridge34,'frame')}><DrawRect box={L.cartridge34} progress={1} strokeToken="color/marker/race" fillToken="color/fill/red-wash" strokeWidth={2}/></div>
       <ColoredTerm term="PiRace" ms={ms} pulses={termPulses.PiRace} box={T.pi34} style={{position:'absolute',left:T.pi34.x,top:T.pi34.y,width:T.pi34.w,height:T.pi34.h,display:'grid',placeItems:'center',font:'700 30px "IBM Plex Mono"'}}/>
       {ms>=cue.experience.at && (()=>{
         const p=enter(ms,cue.experience.at,650), shift=((ms-cue.experience.at)/40)%64;
@@ -201,7 +201,7 @@ export function InstalledRacialPrior({segment}:SceneProps) {
         if(ms<at) return null;
         const box={x:L.cards.x+index*450,y:L.cards.y,w:420,h:L.cards.h}, p=enter(ms,at);
         return <React.Fragment key={id}>
-          <div data-final-card={id} {...shapeAttrs(`card-${id}`,box,'frame')} style={{position:'absolute',left:box.x,top:box.y,width:box.w,height:box.h,boxSizing:'border-box',background:color('color/fill/panel-render'),border:`2px solid ${ink}`,opacity:p}}/>
+          <div data-final-card={id} {...shapeAttrs(`card-${id}`,box,'frame')} style={{opacity:p}}><DrawRect box={box} progress={p} strokeToken={index===1?'color/marker/race':index===0?'color/fill/gold':'color/text/primary'} fillToken="color/fill/panel-render" strokeWidth={2}/></div>
           <Label id={`card-${id}-text`} box={{x:box.x+20,y:box.y+56,w:380,h:38}} size={index===2?25:27} weight={700} ls={0} align="center" ink={ink} opacity={p}><span data-beat={beat}>{text}</span></Label>
         </React.Fragment>;
       })}
