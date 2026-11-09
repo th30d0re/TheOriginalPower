@@ -1,0 +1,21 @@
+import React from 'react';
+import {DrawLine, DrawRect, FitBox, StickFigure, useCue, useStageMs, type SceneProps} from '@stage';
+import {EquationTerms} from '../equations';
+import {Copy, Panel, Scene, frame} from './shared';
+
+export function PorousPartitions({segment}:SceneProps) {
+  const ms=useStageMs();
+  const c={second:useCue('t293Second').at,religion:useCue('t293Religion').at,equation:useCue('t293Equation').at,outgroup:useCue('t293Outgroup').at,doctrine:useCue('t293Doctrine').at,sect:useCue('t293Sect').at,heresy:useCue('t293Heresy').at,french:useCue('t294French').at,thirty:useCue('t294Thirty').at,porous:useCue('t294Porous').at,heretic:useCue('t295Heretic').at,identical:useCue('t295Identical').at,recant:useCue('t295Recant').at,conceal:useCue('t295Conceal').at,surveillance:useCue('t295Surveillance').at,third:useCue('t296Third').at,toledo:useCue('t296Toledo').at,sentencia:useCue('t296Sentencia').at,david:useCue('t296David').at,nirenberg:useCue('t296Nirenberg').at};
+  return <Scene segment={segment}>
+    <Panel box={{x:120,y:104,w:1680,h:72}} at={c.second}/><Copy at={c.religion} box={{x:150,y:122,w:1200,h:38}} size={30}>RELIGIOUS PARTITIONS</Copy>
+    <Panel box={{x:180,y:235,w:1560,h:150}} at={c.equation}/><FitBox text="EQUATION 3.11" x={220} y={204} size={24} weight={600} tag="EUROPE" startFrame={frame(c.equation)} durationFrames={16} textToken="color/text/primary" strokeToken="color/fill/gold" fillToken="color/fill/panel-render" accentToken="color/fill/gold" beat/>
+    <EquationTerms equation="Eq. 3.11 · religious partition" ms={ms} box={{x:360,y:280,w:1200,h:58}} fontSize={42} align="center" tokens={[{term:'O',math:'O_{religion}',revealAt:c.outgroup},{text:' = doctrine',revealAt:c.doctrine},{text:' + sect',revealAt:c.sect},{text:' + heresy',revealAt:c.heresy}]} pulses={{O:[c.outgroup]}}/>
+    <DrawRect box={{x:210,y:470,w:570,h:150}} startFrame={frame(c.french)} durationFrames={16} strokeToken="color/fill/gold" fillToken="color/fill/panel-render" glowToken="color/fill/gold" beat/><Copy at={c.french} box={{x:240,y:505,w:510,h:28}} size={24} align="center">FRENCH WARS OF RELIGION</Copy>
+    <DrawRect box={{x:1140,y:470,w:570,h:150}} startFrame={frame(c.thirty)} durationFrames={16} strokeToken="color/fill/gold" fillToken="color/fill/panel-render" glowToken="color/fill/gold" beat/><Copy at={c.thirty} box={{x:1170,y:505,w:510,h:28}} size={24} align="center">THIRTY YEARS' WAR</Copy>
+    <DrawLine points={[[800,545],[1120,545]]} startFrame={frame(c.porous)} durationFrames={14} strokeToken="color/fill/gold" strokeWidth={4} end="arrow" beat/><Copy at={c.porous} box={{x:780,y:640,w:360,h:30}} size={22} align="center" tone="color/fill/gold">POROUS BOUNDARY</Copy>
+    <StickFigure x={380} y={770} group="neutral" emphasis={1} scale={1.25} animate startFrame={frame(c.heretic)} durationFrames={16}/><StickFigure x={640} y={770} group="neutral" emphasis={1} scale={1.25} animate startFrame={frame(c.identical)} durationFrames={16}/>
+    <Copy at={c.identical} box={{x:235,y:860,w:550,h:28}} size={22} align="center">VISIBLY IDENTICAL</Copy><DrawLine points={[[790,770],[1050,770]]} startFrame={frame(c.recant)} durationFrames={16} strokeToken="color/marker/race" strokeWidth={5} end="arrow" beat/><Copy at={c.conceal} box={{x:830,y:738,w:170,h:24}} size={18} align="center" mono>RECANT · CONCEAL</Copy>
+    <DrawRect box={{x:1110,y:700,w:550,h:160}} startFrame={frame(c.surveillance)} durationFrames={16} strokeToken="color/marker/race" fillToken="color/fill/red-faint" glowToken="color/marker/race" beat/><Copy at={c.surveillance} box={{x:1150,y:750,w:470,h:28}} size={23} align="center" tone="color/marker/race">INQUISITORIAL SURVEILLANCE</Copy>
+    <Panel box={{x:250,y:915,w:1420,h:76}} at={c.sentencia} accent="color/marker/race"/><FitBox text="SENTENCIA-ESTATUTO · 1449" x={285} y={888} size={25} weight={600} tag="TOLEDO" startFrame={frame(c.sentencia)} durationFrames={14} textToken="color/text/primary" strokeToken="color/marker/race" fillToken="color/fill/panel-render" accentToken="color/marker/race" beat/><Copy at={c.nirenberg} box={{x:790,y:940,w:600,h:24}} size={19} align="center" mono tone="color/text/soft">DAVID NIRENBERG · CONTROL 3</Copy>
+  </Scene>;
+}

@@ -3221,3 +3221,147 @@ shots:
       t283Paths: {word: paths}
       t283Variants: {word: variants}
       t283Years: {word: years}
+  # Minutes 62–66: turns 284–296 (continuous variation, comparative control cases).
+  - shot_id: S00-284
+    turn_id: e4ea80da5ff61ff0
+    scene: GeneticGradient
+    instance: GeneticGradient
+    cues:
+      t284Africa: {word: Africa}
+      t284Genetic: {word: genetic}
+      t284Diversity: {word: diversity, occurrence: 1}
+      t284Collapse: {word: collapse}
+      t284False: {word: "false"}
+  - shot_id: S00-285
+    turn_id: 51ff343349b44de9
+    scene: GeneticGradient
+    instance: GeneticGradient
+    cues:
+      t285Legal: {word: legal, occurrence: 1}
+      t285Binary: {word: binary}
+      t285Continuous: {word: continuous, occurrence: 1}
+      t285Statutes: {word: Statutes}
+      t285Boxes: {word: boxes}
+  - shot_id: S00-286
+    turn_id: f48f93213d531386
+    scene: GeneticGradient
+    instance: GeneticGradient
+    cues:
+      t286Religious: {word: Religious}
+      t286Surveillance: {word: surveillance}
+      t286Conversion: {word: conversion}
+      t286Phenotype: {word: Phenotype}
+      t286Marker: {word: marker}
+      t286Mobility: {word: mobility}
+  - shot_id: S00-287
+    turn_id: 0101c37b6b7adb1d
+    scene: DescentCompile
+    instance: DescentCompile
+    cues:
+      t287Sentencia: {word: Sentencia-Estatuto}
+      t287Descent: {word: descent-keyed}
+      t287Portuguese: {word: Portuguese}
+      t287Plantation: {word: plantation}
+      t287Phenotype: {word: phenotype}
+  - shot_id: S00-288
+    turn_id: 639545e21e038dac
+    scene: DescentCompile
+    instance: DescentCompile
+    cues:
+      t288Deployment: {word: deployment}
+      t288Compile: {word: compile}
+      t288Captive: {word: captive}
+      t288Commercial: {word: commercial}
+      t288Papal: {word: papal}
+      t288Commissioned: {word: commissioned}
+      t288Fiscal: {word: fiscal}
+  - shot_id: S00-289
+    turn_id: e29f4479e53aaac2
+    scene: DescentCompile
+    instance: DescentCompile
+    cues:
+      t289Body: {word: body}
+      t289Extraction: {word: extraction}
+      t289Category: {word: category}
+      t289Boundary: {word: boundary}
+      t289Inheritance: {word: inheritance}
+      t289Enforcement: {word: enforcement}
+      t289Durable: {word: durable}
+  - shot_id: S00-290
+    turn_id: bda90fe32f139bdb
+    scene: ControlCases
+    instance: ControlCases
+    cues:
+      t290Why: {word: Why}
+      t290Atlantic: {word: Atlantic}
+      t290Gradient: {word: gradient}
+      t290Comparative: {word: comparative}
+      t290Chapter: {word: Chapter}
+      t290Engineering: {word: engineering}
+      t290Three: {word: three}
+      t290Cases: {word: cases}
+  - shot_id: S00-291
+    turn_id: 110b3d023efba17e
+    scene: RomanMobility
+    instance: RomanMobility
+    cues:
+      t291First: {word: First}
+      t291Roman: {word: Roman}
+      t291Equation: {word: Equation}
+      t291Slave: {word: O-sub-slave}
+      t291Conquest: {word: conquest}
+      t291Debt: {word: debt}
+      t291Sentence: {word: sentence}
+      t291Birth: {word: birth}
+      t291Captives: {word: captives}
+  - shot_id: S00-292
+    turn_id: f953843fa8f9c885
+    scene: RomanMobility
+    instance: RomanMobility
+    cues:
+      t292Keith: {word: Keith}
+      t292Peculium: {word: peculium}
+      t292Manumission: {word: manumission}
+      t292Blend: {word: blend}
+      t292Citizenry: {word: citizenry}
+      t292Marker: {word: marker}
+  - shot_id: S00-293
+    turn_id: 9ac03339f1e65e78
+    scene: PorousPartitions
+    instance: PorousPartitions
+    cues:
+      t293Second: {word: Second}
+      t293Religion: {word: Religion}
+      t293Equation: {word: Equation}
+      t293Outgroup: {word: Out-group}
+      t293Doctrine: {word: doctrine}
+      t293Sect: {word: sect}
+      t293Heresy: {word: heresy}
+  - shot_id: S00-294
+    turn_id: 88ea7b9bc67fa2d5
+    scene: PorousPartitions
+    instance: PorousPartitions
+    cues:
+      t294French: {word: French}
+      t294Thirty: {word: Thirty}
+      t294Porous: {word: porous}
+  - shot_id: S00-295
+    turn_id: aea0275fa6a21b52
+    scene: PorousPartitions
+    instance: PorousPartitions
+    cues:
+      t295Heretic: {word: heretic}
+      t295Identical: {word: identical}
+      t295Recant: {word: recant}
+      t295Conceal: {word: conceal}
+      t295Surveillance: {word: surveillance}
+  - shot_id: S00-296
+    turn_id: 346e04edabc21453
+    scene: PorousPartitions
+    instance: PorousPartitions
+    cues:
+      t296Third: {word: Third}
+      t296Toledo: {word: Toledo}
+      t296Sentencia: {word: Sentencia-Estatuto}
+      t296David: {word: David}
+      t296Nirenberg: {word: Nirenberg}
