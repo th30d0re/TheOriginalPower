@@ -2,11 +2,13 @@ import React from 'react';
 import {DrawLine, DrawRect, FitBox, KitSound, StageSceneFrame, useCue, useStageMs, type SceneProps} from '@stage';
 import {EquationTerms} from '../equations';
 import {Copy, Panel, frame} from './shared';
+import {AtlanticMap} from '../min53_56/PortugalVisuals';
 
 export function StatusWage({segment}:SceneProps) {
   const ms=useStageMs();
   const c={equation:useCue('t267Equation').at,status:useCue('t267Status').at,base:useCue('t267Base').at,suppression:useCue('t267Suppression').at,psi:useCue('t267Psi').at,psychological:useCue('t268Psychological').at,material:useCue('t268Material').at,racialized:useCue('t269Racialized').at,outgroup:useCue('t269Outgroup').at,crown:useCue('t269Crown').at,wage:useCue('t269Wage').at,elevated:useCue('t269Elevated').at};
   return <StageSceneFrame segment={segment}><KitSound mode="beats">
+    <AtlanticMap at={c.racialized} route="atlantic" focus="atlantic" labels={['Lisbon','CapeVerde','Elmina']}/>
     <Panel box={{x:120,y:104,w:1680,h:72}} at={c.equation}/><Copy at={c.equation} box={{x:150,y:122,w:980,h:38}} size={30}>EQ. 3.2 · STATUS ALLOCATION</Copy>
     <DrawRect box={{x:200,y:260,w:1520,h:190}} startFrame={frame(c.status)} durationFrames={22} strokeToken="color/fill/gold" fillToken="color/fill/panel-render" glowToken="color/fill/gold" beat/>
     <FitBox text="DOMESTIC STATUS" x={240} y={235} size={30} weight={600} tag="EQUATION 3.2" startFrame={frame(c.equation)} durationFrames={16} textToken="color/text/primary" strokeToken="color/fill/gold" fillToken="color/fill/panel-render" accentToken="color/fill/gold" beat/>
