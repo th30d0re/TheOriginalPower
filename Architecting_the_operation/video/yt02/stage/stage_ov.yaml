@@ -1705,6 +1705,130 @@ shots:
       t140Law: {word: law}
       t140Forbids: {word: forbids}
       t140Both: {word: both}
+  - shot_id: S00-141
+    turn_id: 84ae061bd21fde9c
+    scene: DisjointAssignment
+    instance: DisjointAssignment
+    cues:
+      t141Disjointness: {word: Disjointness}
+      t141Legal: {word: legal}
+      t141Administrative: {word: administrative}
+      t141Census: {word: census}
+      t141Slave: {word: slave}
+      t141Blood: {word: blood-quantum}
+      t141Immigration: {word: immigration}
+  - shot_id: S00-142
+    turn_id: 8f4b50e6b22d9d25
+    scene: BinaryProjection
+    instance: BinaryProjection
+    cues:
+      t142What: {word: What}
+      t142Equation: {word: Equation, occurrence: 1}
+      t142Visible: {word: visible, occurrence: 1}
+      t142Conceal: {word: conceal}
+  - shot_id: S00-143
+    turn_id: 57b902c77c6635a0
+    scene: BinaryProjection
+    instance: BinaryProjection
+    cues:
+      t143Flattens: {word: flattens, occurrence: 1}
+      t143Dominant: {word: dominant}
+      t143Ingroup: {word: In-group}
+      t143Outgroup: {word: Out-group}
+      t143Uniform: {word: uniform}
+      t143Mass: {word: mass}
+  - shot_id: S00-144
+    turn_id: 70e1f8eb4a44b970
+    scene: ProjectionGeometry
+    instance: ProjectionGeometry
+    cues:
+      t144Why: {word: Why}
+      t144Optical: {word: optical}
+      t144Geometry: {word: geometry}
+      t144Binary: {word: binary}
+  - shot_id: S00-145
+    turn_id: 03534587dd0969e1
+    scene: ProjectionGeometry
+    instance: ProjectionGeometry
+    cues:
+      t145Chapter: {word: Chapter}
+      t145Cone: {word: cone}
+      t145Debate: {word: debate}
+  - shot_id: S00-146
+    turn_id: 6f76fbae53f12d45
+    scene: ProjectionGeometry
+    instance: ProjectionGeometry
+    cues:
+      t146Orthographic: {word: Orthographic}
+      t146Plane: {word: plane}
+      t146Sight: {word: sight, occurrence: 1}
+      t146Depth: {word: Depth}
+      t146Overlap: {word: overlap}
+  - shot_id: S00-147
+    turn_id: 44c96da400175202
+    scene: FlatCeilingCone
+    instance: FlatCeilingCone
+    cues:
+      t147Up: {word: Up}
+      t147Line: {word: line}
+      t147White: {word: White}
+      t147Black: {word: black}
+      t147Coarse: {word: coarse}
+  - shot_id: S00-148
+    turn_id: db30110db2de6b49
+    scene: FlatCeilingCone
+    instance: FlatCeilingCone
+    cues:
+      t148Farther: {word: farther}
+      t148Tiers: {word: tiers}
+      t148Elite: {word: Elite}
+  - shot_id: S00-149
+    turn_id: 332938217ba8fedd
+    scene: FlatCeilingCone
+    instance: FlatCeilingCone
+    cues:
+      t149Observer: {word: observer}
+      t149Base: {word: base}
+      t149Pressing: {word: pressing}
+  - shot_id: S00-150
+    turn_id: 28e07b71fadccb79
+    scene: FlatCeilingCone
+    instance: FlatCeilingCone
+    cues:
+      t150Flat: {word: Flat}
+      t150Enforcement: {word: Enforcement}
+      t150Buffer: {word: Buffer}
+      t150Rotate: {word: rotate}
+  - shot_id: S00-151
+    turn_id: 7db5894c24b47a29
+    scene: FlatCeilingCone
+    instance: FlatCeilingCone
+    cues:
+      t151Down: {word: down}
+      t151Pressure: {word: pressure}
+  - shot_id: S00-152
+    turn_id: 4f8bca9717cbc26a
+    scene: FlatCeilingCone
+    instance: FlatCeilingCone
+    cues:
+      t152Wide: {word: wide}
+      t152Machine: {word: machine}
+  - shot_id: S00-153
+    turn_id: e66c28f2738d0d5b
+    scene: EliteObscuration
+    instance: EliteObscuration
+    cues:
+      t153Elite: {word: Elite, occurrence: 1}
+      t153Obscuration: {word: Obscuration}
+      t153Alignment: {word: alignment}
+      t153Top: {word: top}
+      t153Puppet: {word: Puppet}
+      t153Enforcement: {word: Enforcement}
+      t153Control: {word: control}
+      t153Bottom: {word: bottom}
+      t153Marginal: {word: marginal}
+      t153Outgroup: {word: Out-group}
+      t153Blends: {word: blends}
   - shot_id: S00-154
     turn_id: 77a0ff73439ab4e1
     scene: BinaryEndures
