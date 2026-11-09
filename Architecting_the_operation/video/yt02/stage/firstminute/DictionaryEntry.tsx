@@ -1,5 +1,5 @@
 import React from 'react';
-import {Flicker, KitSound, cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
+import {DrawRect, FitBox, Flicker, KitSound, cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../tokens';
 import {SceneBorder} from '../dashboard/SceneBorder';
 import {ColoredTerm, type EquationPulseMap, type EquationTermId} from '../equations';
@@ -44,18 +44,28 @@ function Sense({number, children, bright=1, tertiary=false, lift=0}: React.Props
   </div>;
 }
 
-export function DefinitionHierarchy({state,ms=0,pulses={}}: {state:DefinitionHierarchyState;ms?:number;pulses?:EquationPulseMap}) {
+export function DefinitionHierarchy({state,ms=0,pulses={},dictionaryCueMs=0}: {state:DefinitionHierarchyState;ms?:number;pulses?:EquationPulseMap;dictionaryCueMs?:number}) {
   // The panel shifts left while the numbers lift, so the lifted digits always rest in the
   // gutter clear of the shifted panel's right edge (965) and the chain (1050).
   const entryShift = state.order * DICTIONARY_LAYOUT.orderShiftX;
+  const panelX = DICTIONARY_LAYOUT.panelX + entryShift;
+  const dictionaryFrame = cueFrame(dictionaryCueMs);
+  const panelFrames = frames(560);
+  const headerFrame = dictionaryFrame + panelFrames;
+  const firstSenseFrame = headerFrame + frames(420);
+  const secondSenseFrame = firstSenseFrame + frames(260);
   return <>
-    {state.entry>0 && <div data-definition-entry="true" style={{position:'absolute', left:DICTIONARY_LAYOUT.panelX + entryShift, top:DICTIONARY_LAYOUT.panelY, width:DICTIONARY_LAYOUT.panelW, height:DICTIONARY_LAYOUT.panelH, opacity:state.entry, transform:`translateY(${20*(1-state.entry)}px)`, background:color('color/fill/panel-render'), border:`1px solid ${color('color/line/hairline')}`, boxShadow:`inset 0 0 0 1px ${color('color/fill/panel-wash')}`}}>
-      <div style={{padding:'28px 30px 22px', display:'flex', alignItems:'baseline', gap:18}}>
-        <strong style={{fontSize:48, letterSpacing:.5}}>rac·ism</strong><em style={{fontSize:25, color:color('color/text/muted')}}>(noun)</em>
+    {state.entry>0 && <div data-definition-entry="true" style={{position:'absolute', inset:0, opacity:state.entry, transform:`translateY(${20*(1-state.entry)}px)`, pointerEvents:'none'}}>
+      <DrawRect box={{x:panelX, y:DICTIONARY_LAYOUT.panelY, w:DICTIONARY_LAYOUT.panelW, h:DICTIONARY_LAYOUT.panelH}} startFrame={dictionaryFrame} durationFrames={panelFrames} strokeToken="color/line/hairline" fillToken="color/fill/panel-render" glowToken="color/fill/gold" seed={47}/>
+      <div style={{position:'absolute', left:panelX, top:DICTIONARY_LAYOUT.panelY, width:DICTIONARY_LAYOUT.panelW, height:DICTIONARY_LAYOUT.panelH}}>
+        <FitBox text="rac·ism" x={22} y={18} size={38} weight={600} lineHeight={1.1} padX="spacing/md" padY="spacing/sm" textToken="color/text/primary" strokeToken="color/fill/gold" fillToken="color/fill/panel-render" accentToken="color/fill/gold" tag="TERM" corners="tl-br" seed={17} intensity={.8} startFrame={headerFrame} durationFrames={frames(420)}/>
+        <Flicker startFrame={headerFrame} durationFrames={frames(300)} intensity={.5} style={{position:'absolute', inset:0}}><em style={{position:'absolute', left:205, top:37, fontSize:25, color:color('color/text/muted')}}>(noun)</em></Flicker>
+        <div style={{position:'absolute', left:0, top:105, width:'100%'}}>
+          <Flicker startFrame={firstSenseFrame} durationFrames={frames(260)} intensity={.55} style={{position:'relative', inset:'auto'}}><Sense number={1} bright={state.individual} lift={state.order}><ColoredTerm term="IndividualPrejudice" ms={ms} pulses={pulses.IndividualPrejudice} display="Individual prejudice" box={{x:DICTIONARY_LAYOUT.panelX+entryShift+102,y:438,w:280,h:42}}/> or discrimination based on race</Sense></Flicker>
+          <Flicker startFrame={secondSenseFrame} durationFrames={frames(260)} intensity={.45} style={{position:'relative', inset:'auto'}}><Sense number={2} bright={0} lift={state.order}>Belief in racial superiority</Sense></Flicker>
+          {state.institutional>0 && <div style={{opacity:state.institutional, transform:`translateY(${12*(1-state.institutional)}px)`}}><Sense number={3} bright={0} tertiary lift={state.order}><ColoredTerm term="SystemicOutcomes" ms={ms} pulses={pulses.SystemicOutcomes} display="Systemic or institutional discrimination" box={{x:DICTIONARY_LAYOUT.panelX+entryShift+102,y:620,w:470,h:42}}/> <span style={{marginLeft:12, padding:'4px 9px', border:`1px solid ${color('color/line/hairline')}`, font:'500 20px "IBM Plex Mono"', color:color('color/text/muted'), whiteSpace:'nowrap'}}>if present at all</span></Sense></div>}
+        </div>
       </div>
-      <Sense number={1} bright={state.individual} lift={state.order}><ColoredTerm term="IndividualPrejudice" ms={ms} pulses={pulses.IndividualPrejudice} display="Individual prejudice" box={{x:DICTIONARY_LAYOUT.panelX+entryShift+102,y:438,w:280,h:42}}/> or discrimination based on race</Sense>
-      <Sense number={2} bright={0} lift={state.order}>Belief in racial superiority</Sense>
-      {state.institutional>0 && <div style={{opacity:state.institutional, transform:`translateY(${12*(1-state.institutional)}px)`}}><Sense number={3} bright={0} tertiary lift={state.order}><ColoredTerm term="SystemicOutcomes" ms={ms} pulses={pulses.SystemicOutcomes} display="Systemic or institutional discrimination" box={{x:DICTIONARY_LAYOUT.panelX+entryShift+102,y:620,w:470,h:42}}/> <span style={{marginLeft:12, padding:'4px 9px', border:`1px solid ${color('color/line/hairline')}`, font:'500 20px "IBM Plex Mono"', color:color('color/text/muted'), whiteSpace:'nowrap'}}>if present at all</span></Sense></div>}
     </div>}
     {state.causal>0 && <div data-causal-chain="true" data-equation={DICTIONARY_EQ_25} style={{position:'absolute', left:DICTIONARY_LAYOUT.chainX, top:DICTIONARY_LAYOUT.chainY, width:DICTIONARY_LAYOUT.chainW, opacity:state.causal, transform:`translateX(${24*(1-state.causal)}px)`}}>
       <div style={{font:'500 21px "IBM Plex Mono"', letterSpacing:2.4, color:color('color/fill/gold'), marginBottom:18, textTransform:'uppercase'}}>causal story</div>
@@ -70,11 +80,11 @@ export function DefinitionHierarchy({state,ms=0,pulses={}}: {state:DefinitionHie
   </>;
 }
 
-export function DefinitionSceneContent({state,ms=0,pulses={}}: {state:DefinitionHierarchyState;ms?:number;pulses?:EquationPulseMap}) {
+export function DefinitionSceneContent({state,ms=0,pulses={},dictionaryCueMs=0}: {state:DefinitionHierarchyState;ms?:number;pulses?:EquationPulseMap;dictionaryCueMs?:number}) {
   return <div style={{position:'absolute', inset:0, width:1920, height:1080, color:color('color/text/primary'), fontFamily:'IBM Plex Sans'}}>
     {state.header>0 && <div style={{position:'absolute', left:150, top:105, opacity:state.header, transform:`translateY(${18*(1-state.header)}px)`, fontSize:68, fontWeight:500}}>The common definition of racism</div>}
     {state.wrong>0 && <div style={{position:'absolute', left:1375, top:118, opacity:state.wrong, transform:`translateY(${12*(1-state.wrong)}px) rotate(-2deg)`, padding:'9px 18px', border:`2px solid ${color('color/marker/race')}`, background:color('color/fill/red-faint'), font:'500 25px "IBM Plex Mono"', letterSpacing:3, textTransform:'uppercase', color:color('color/marker/race')}}>wrong</div>}
-    <DefinitionHierarchy state={state} ms={ms} pulses={pulses}/>
+    <DefinitionHierarchy state={state} ms={ms} pulses={pulses} dictionaryCueMs={dictionaryCueMs}/>
     {state.evidence>0 && <div style={{position:'absolute', left:150, bottom:78, opacity:state.evidence, font:'400 20px "IBM Plex Mono"', letterSpacing:.4, color:color('color/text/muted')}}>The Original Power, §Racism as Primary Example · Eq. 2.5</div>}
   </div>;
 }
@@ -95,6 +105,6 @@ export function DictionaryEntry({segment}:SceneProps) {
   };
   return <div data-scene="DictionaryEntry" style={{position:'absolute',inset:0,width:1920,height:1080,overflow:'hidden',background:color('color/bg/field')}}>
     <SceneBorder segment={segment}/>
-    <KitSound mode="beats"><Flicker startFrame={cueFrame(common.at)} durationFrames={frames(460)} beat><DefinitionSceneContent state={state} ms={ms} pulses={{IndividualPrejudice:[individual.at],SystemicOutcomes:[institutional.at]}}/></Flicker></KitSound>
+    <KitSound mode="beats"><Flicker startFrame={cueFrame(common.at)} durationFrames={frames(460)} beat><DefinitionSceneContent state={state} ms={ms} pulses={{IndividualPrejudice:[individual.at],SystemicOutcomes:[institutional.at]}} dictionaryCueMs={dictionary.at}/></Flicker></KitSound>
   </div>;
 }
