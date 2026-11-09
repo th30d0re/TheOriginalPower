@@ -13,7 +13,7 @@ export const EQUATION_TERMS = {
   q: {show: 'q(t)', meaning: 'equality-surplus charge', slot: 8},
   V: {show: 'V(t)', meaning: 'reform-shock driving voltage', slot: 10},
   // Eq. 3.1 (conceptual racism vector), introduced in YT02 turns 63–67.
-  RacismVector: {show: 'R⃗', math: 'R⃗_{racism}', meaning: 'the conceptual racism vector', slot: 11},
+  RacismVector: {show: 'R', math: 'R⃗_{racism}', meaning: 'the conceptual racism vector', slot: 11},
   Magnitude: {show: 'M', math: 'M_{force}', meaning: 'emotional and material magnitude', slot: 12},
   StateDirection: {show: 'd̂', math: 'd̂_{state}', meaning: 'unit direction of state and institutional enforcement', slot: 13},
 } as const;
