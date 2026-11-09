@@ -141,7 +141,7 @@ function TurnFifteen({ms,cue}:{ms:number;cue:CueMap}) {
         {ms>=cue.t15Centuries.at&&<line x1="26" y1="100" x2="26" y2={100+300*centuries} stroke={color('color/fill/gold')} strokeWidth="4"/>}
         {ms>=cue.t15Records.at&&<rect x="78" y="480" width="284" height="72" fill={color('color/fill/red-faint')} stroke={color('color/marker/race')} strokeWidth="2" opacity={records}/>}
       </svg>
-      {ms>=cue.t15Centuries.at&&<div {...textAttrs('five-centuries',{x:1348,y:660,w:170,h:28},{size:20,lh:1.25})} style={{position:'absolute',left:18,top:440,width:170,textAlign:'left',font:'500 20px "IBM Plex Mono"',color:color('color/fill/gold'),opacity:centuries}}>FIVE CENTURIES</div>}
+      {ms>=cue.t15Centuries.at&&<div {...textAttrs('five-centuries',{x:1348,y:661,w:170,h:28},{size:20,lh:1.25})} style={{position:'absolute',left:18,top:441,width:170,textAlign:'left',font:'500 20px "IBM Plex Mono"',color:color('color/fill/gold'),opacity:centuries}}>FIVE CENTURIES</div>}
       {ms>=cue.t15Records.at&&<div {...textAttrs('historical-test',{x:1408,y:720,w:284,h:30},{size:22,lh:1.25})} style={{position:'absolute',left:78,top:500,width:284,textAlign:'center',font:'500 22px "IBM Plex Mono"',color:color('color/marker/race'),opacity:records}}>HISTORICAL TEST</div>}
     </div>
   </div>;
