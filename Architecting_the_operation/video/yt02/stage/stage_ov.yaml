@@ -2021,3 +2021,116 @@ shots:
       t167Authority: {word: authority}
       t167Protection: {word: protection}
   # Minutes 22–26: turns 111–123 (Predictions 1–4, Refutation Standards 1–3, Empirical Test Matrix, and Formal System Definition).
+  # Minutes 47–50: turns 218–228 (Four-level audit and Portugal historical test).
+  - shot_id: S00-218
+    turn_id: a4f67b757513e539
+    scene: FourLevelsAudit
+    instance: FourLevelsAudit
+    cues:
+      t218Level: {word: Level}
+      t218Decomposition: {word: decomposition}
+      t218Income: {word: income}
+      t218Extraction: {word: extraction}
+  - shot_id: S00-219
+    turn_id: d1017cc91aaaf252
+    scene: FourLevelsAudit
+    instance: FourLevelsAudit
+    cues:
+      t219Level: {word: Level}
+      t219Partition: {word: partition}
+      t219Lineage: {word: lineage}
+      t219Intact: {word: intact}
+  - shot_id: S00-220
+    turn_id: 223a0630338de58f
+    scene: FourLevelsAudit
+    instance: FourLevelsAudit
+    cues:
+      t220Holding: {word: Holding}
+      t220Table: {word: Table}
+      t220Historical: {word: historical}
+      t220Drives: {word: drives}
+  - shot_id: S00-221
+    turn_id: 841601f9029a9579
+    scene: PortugalAuthorship
+    instance: PortugalAuthorship
+    cues:
+      t221Portugal: {word: Portugal}
+      t221Defenses: {word: defenses}
+      t221Institutions: {word: institutions}
+      t221Selected: {word: selected}
+  - shot_id: S00-222
+    turn_id: 0a4f7c7a74c7e737
+    scene: PortugalAuthorship
+    instance: PortugalAuthorship
+    cues:
+      t222Captains: {word: captains}
+      t222Crown: {word: Crown}
+      t222Papacy: {word: papacy}
+      t222Chronicler: {word: chronicler}
+      t222Casa: {word: Casa}
+  - shot_id: S00-223
+    turn_id: 7252c082908fd607
+    scene: PortugalAuthorship
+    instance: PortugalAuthorship
+    cues:
+      t223Profitable: {word: profitable}
+      t223Zurara: {word: "Zurara's"}
+      t223Cover: {word: cover}
+  - shot_id: S00-224
+    turn_id: b8c3ead37b2cbf8b
+    scene: PortugalAuthorship
+    instance: PortugalAuthorship
+    cues:
+      t224Bois: {word: Bois}
+      t224Propaganda: {word: Propaganda}
+      t224Downward: {word: downward}
+  - shot_id: S00-225
+    turn_id: 03f4c60be365f208
+    scene: PortugalArchive
+    instance: PortugalArchive
+    cues:
+      t225Why: {word: Why}
+      t225Portugal: {word: Portugal, occurrence: 1}
+      t225Virginia: {word: Virginia}
+      t225Historical: {word: historical}
+      t225Fourteen: {word: fourteen, occurrence: 1}
+      t225Version: {word: Version}
+      t225Vector: {word: Vector}
+  - shot_id: S00-226
+    turn_id: 205d79f83d4125e9
+    scene: PortugalArchive
+    instance: PortugalArchive
+    cues:
+      t226Prediction: {word: Prediction}
+      t226Institutional: {word: Institutional}
+      t226Refutation: {word: Refutation}
+      t226Dates: {word: dates}
+      t226Raids: {word: raids}
+      t226Royal: {word: royal}
+      t226Papal: {word: papal}
+      t226Chronicles: {word: chronicles}
+  - shot_id: S00-227
+    turn_id: b7235cfd40206ab3
+    scene: LaborOptimization
+    instance: LaborOptimization
+    cues:
+      t227Why: {word: Why}
+      t227Crown: {word: Crown, occurrence: 1}
+      t227Labor: {word: labor, occurrence: 1}
+      t227Material: {word: material}
+      t227Optimization: {word: optimization}
+      t227Nobility: {word: nobility, occurrence: 1}
+      t227Wealth: {word: wealth}
+      t227Resistance: {word: resistance}
+  - shot_id: S00-228
+    turn_id: ad6f24d1e4fd8cea
+    scene: LaborOptimization
+    instance: LaborOptimization
+    cues:
+      t228Black: {word: Black}
+      t228Wars: {word: wars}
+      t228Scarcity: {word: scarcity}
+      t228Elite: {word: elite}
+      t228Capital: {word: capital}
+      t228Maritime: {word: maritime}
+      t228Madeira: {word: Madeira}
