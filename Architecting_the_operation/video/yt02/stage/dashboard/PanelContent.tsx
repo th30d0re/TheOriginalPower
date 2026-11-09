@@ -16,8 +16,12 @@ import {BacklashOscillatorView} from './artifacts/BacklashOscillatorView';
 import {ThyristorLatchView} from './artifacts/ThyristorLatchView';
 import {AcExtractionMeterView} from './artifacts/AcExtractionMeterView';
 import {SnubberCircuitView} from './artifacts/SnubberCircuitView';
+import {instrumentSlug,type DashboardState,type InstrumentStatus} from './state';
 
 export const CameraContext = React.createContext<Camera>(iberiaCamera);
+// Undefined deliberately means the authored, fixed log-2 dashboard. This keeps legacy
+// callers (including the visual handoff checks) precisely on their original render path.
+export const DashboardStateContext = React.createContext<DashboardState | undefined>(undefined);
 
 // When a Dashboard sets `eraClockStandby`, the Era clock's compact panel shows a standby
 // state (a dash for the year, "STANDBY" for the place, no log chip) instead of the log-2
@@ -321,6 +325,64 @@ function PolicyTickerCompact() {
  </>;
 }
 
+const historicTitle=(name:string)=>name.toUpperCase().replaceAll(' ',' ');
+function StatusPanel({name,mode,status}:{name:string;mode:InstrumentMode;status:Exclude<InstrumentStatus,'live'>}) {
+ const compact=mode==='compact', label=status==='off'?'OFFLINE · NOT INITIALIZED':'INITIALIZING';
+ const small = compact && (name === 'Executing Function' || name === 'Policy ticker');
+ return <div data-dashboard-status={status} style={{position:'absolute',inset:0,fontFamily:Tokens.fonts.mono}}>
+  <div style={{position:'absolute',left:compact?10:18,top:small?5:compact?10:18,right:compact?10:18,fontSize:small?9:compact?10:13,letterSpacing:.7,color:color('color/text/muted'),whiteSpace:'nowrap',overflow:'hidden',textOverflow:'ellipsis'}}>{historicTitle(name)}</div>
+  <div style={{position:'absolute',left:compact?10:18,top:small?19:compact?28:58,right:compact?10:18,height:small?16:compact?20:28,display:'flex',alignItems:'center'}}>
+   <span style={{border:`1px solid ${color('color/line/hairline-strong')}`,borderRadius:3,padding:small?'1px 5px':compact?'2px 6px':'5px 9px',fontSize:small?8.5:compact?9:12,letterSpacing:.8,color:color(status==='off'?'color/text/faint':'color/fill/gold'),animation:status==='standby'?'dashboard-status-pulse 1.2s ease-in-out infinite':'none',lineHeight:small?'13px':compact?'15px':'18px'}}>{label}</span>
+  </div>
+ </div>;
+}
+function HistoricEraClock({state}:{state:DashboardState}) {
+ const [year,...where]=state.title.split(' ');
+ return <><div style={{position:'absolute',left:11,top:9,width:112,height:52,fontFamily:Tokens.fonts.sans,fontSize:40,fontWeight:700,lineHeight:'52px',color:color('color/text/primary')}}>{year}</div><div style={{position:'absolute',left:11,top:63.5,width:118,height:16,fontFamily:Tokens.fonts.sans,fontSize:11,fontWeight:500,letterSpacing:.5,lineHeight:'16px',color:color('color/text/primary'),whiteSpace:'nowrap',overflow:'hidden',textOverflow:'ellipsis'}}>{where.join(' ').replace(/[()]/g,'')}</div><div style={{position:'absolute',left:136,top:63,width:134,height:17,border:`1px solid ${color('color/fill/gold')}`,borderRadius:999,background:color('color/fill/gold-wash'),fontFamily:Tokens.fonts.mono,fontSize:9,lineHeight:'15px',textAlign:'center',color:color('color/fill/gold')}}>{`RUNTIME LOG ${state.eraLog}`}</div></>;
+}
+function HistoricBadge({name,value}:{name:string;value:string|null|undefined}) {
+ const accent=name==='System Stress'?'color/marker/race':'color/fill/accent';
+ return <><div style={{position:'absolute',left:11,top:9,fontFamily:Tokens.fonts.mono,fontSize:11,letterSpacing:.4,color:color('color/text/muted')}}>{name}</div><div style={{position:'absolute',left:11,top:27,maxWidth:96,height:26,padding:'3px 8px',boxSizing:'border-box',border:`1px solid ${color(accent)}`,borderRadius:5,background:color(name==='System Stress'?'color/fill/red-wash':'color/fill/accent-wash'),fontFamily:Tokens.fonts.sans,fontSize:13,fontWeight:700,letterSpacing:.4,lineHeight:'18px',color:color(accent),whiteSpace:'nowrap',overflow:'hidden',textOverflow:'ellipsis'}}>{value??'ACTIVE'}</div></>;
+}
+const range=(v:number[]|undefined)=>v?`[${v.map(n=>n.toFixed(2)).join(', ')}]`:'—';
+function HistoricInterference({state}:{state:DashboardState}) {
+ const values=state.values.interference_state, rho=range(values?.rho_tau), phi=range(values?.phi_load);
+ return <><div style={{position:'absolute',left:11,top:9,fontFamily:Tokens.fonts.mono,fontSize:11,letterSpacing:.4,color:color('color/text/muted')}}>Interference</div><div style={{position:'absolute',left:11,top:30,fontFamily:Tokens.fonts.sans,fontSize:16,color:color('color/text/primary')}}>ρ<sub>τ</sub></div><div style={{position:'absolute',left:42,top:31,fontFamily:Tokens.fonts.mono,fontSize:11,color:color('color/text/accent')}}>{rho}</div><div style={{position:'absolute',left:11,top:57,fontFamily:Tokens.fonts.sans,fontSize:12,color:color('color/text/primary')}}>Φ<sub>load</sub></div><div style={{position:'absolute',left:62,top:59,fontFamily:Tokens.fonts.mono,fontSize:10,color:color('color/text/accent')}}>{phi}</div><div style={{position:'absolute',left:11,top:82,right:11,height:8,borderRadius:4,background:color('color/surface/well')}}><div style={{height:8,width:`${Math.max(5,((values?.phi_load?.[1]??0)*100)).toFixed(1)}%`,borderRadius:4,background:color('color/fill/accent')}}/></div><div style={{position:'absolute',left:11,top:102,right:8,fontFamily:Tokens.fonts.mono,fontSize:8.5,lineHeight:'11px',color:color('color/text/muted'),whiteSpace:'normal'}}>{values?.rho_tau_crash?'THRESHOLD BREACH':'LIVE RANGE'}</div></>;
+}
+function HistoricPatch({state}:{state:DashboardState}) {return <><div style={{position:'absolute',left:11,top:9,fontFamily:Tokens.fonts.mono,fontSize:11,letterSpacing:.4,color:color('color/text/muted')}}>Active Patch</div><div style={{position:'absolute',left:11,top:27,right:11,height:24,padding:'4px 8px',boxSizing:'border-box',borderRadius:5,background:color('color/surface/well'),fontFamily:Tokens.fonts.mono,fontSize:10.5,color:color('color/text/accent'),whiteSpace:'nowrap',overflow:'hidden',textOverflow:'ellipsis'}}>{`> ${state.values.active_patch??'No patch active.'}`}</div></>}
+const toMath=(s:string)=>s.includes('_')?s.replace(/_([^{}\s]+)/g,'_{$1}'):s;
+function HistoricVariables({state}:{state:DashboardState}) {
+ const all=[...(state.values.variables_loaded??[]),...(state.values.variables_deployed??[])];
+ const labels=all.slice(0,3).map(v=>v.includes('I_buffer')?'I_buffer':v.includes('O_')?'O_racialized':v.includes('F_')?'F_enforce':v.includes('P_')?'P_uppet':v.startsWith('E')?'E':v.includes('I')?'I':v).filter(Boolean);
+ return <><div style={{position:'absolute',left:11,top:9,fontFamily:Tokens.fonts.mono,fontSize:11,letterSpacing:.4,color:color('color/text/muted')}}>Variables</div><div style={{position:'absolute',left:11,top:28,right:9,display:'flex',gap:4,overflow:'hidden'}}>{labels.map((label,i)=><span key={i} data-variable={label} style={{border:`1px solid ${color('color/fill/gold')}`,borderRadius:999,background:color('color/fill/gold-wash'),padding:'2px 7px',fontFamily:Tokens.fonts.mono,fontSize:9,color:color('color/fill/gold'),whiteSpace:'nowrap'}}><MathText>{toMath(label)}</MathText></span>)}</div></>;
+}
+function HistoricExecutingFunction({state}:{state:DashboardState}) {return <><div style={{position:'absolute',left:10,top:6,right:10,fontFamily:Tokens.fonts.mono,fontSize:9.5,letterSpacing:.6,color:color('color/text/dim'),whiteSpace:'nowrap'}}>EXECUTING FUNCTION</div><div style={{position:'absolute',left:10,top:20,right:10,fontFamily:Tokens.fonts.sans,fontSize:12,lineHeight:'15px',color:color('color/text/primary'),whiteSpace:'nowrap',overflow:'hidden',textOverflow:'ellipsis'}}>{state.values.executing_function??'—'}</div></>}
+function HistoricPolicyTicker({state}:{state:DashboardState}) {const latest=state.values.results?.at(-1)??'—';return <><div style={{position:'absolute',left:10,top:6,right:10,fontFamily:Tokens.fonts.mono,fontSize:9.5,letterSpacing:.6,color:color('color/text/dim'),whiteSpace:'nowrap'}}>RESULT</div><div style={{position:'absolute',left:10,top:21,width:3,height:13,background:color('color/fill/accent'),borderRadius:1}}/><div style={{position:'absolute',left:19,top:20,right:10,fontFamily:Tokens.fonts.sans,fontSize:12,lineHeight:'15px',color:color('color/text/primary'),whiteSpace:'nowrap',overflow:'hidden',textOverflow:'ellipsis'}}>{latest}</div></>}
+function HistoricDetail({name,state}:{name:string;state:DashboardState}) {
+ const v=state.values;
+ const rows=name==='System Stress'?[v.system_stress?.level??'ACTIVE',v.system_stress?.reason??'—']
+  :name==='Capital'?[v.capital?.level??'ACTIVE',v.capital?.reason??'—']
+  :name==='Interference'?[v.interference_state?.text??'—',`Φ_{load} ${range(v.interference_state?.phi_load)} · ρ_τ ${range(v.interference_state?.rho_tau)}`]
+  :name==='Active Patch'?[v.active_patch??'No patch active.']
+  :name==='Variables'?[`LOADED: ${(v.variables_loaded??[]).join(' · ')||'—'}`,`DEPLOYED: ${(v.variables_deployed??[]).join(' · ')||'—'}`]
+  :name==='Executing Function'?[v.executing_function??'—']
+  :name==='Policy ticker'?(v.results??['—'])
+  :[state.title];
+ return <div data-historical-detail={name} style={{position:'absolute',inset:0,padding:18,boxSizing:'border-box',fontFamily:Tokens.fonts.mono}}><div style={{fontSize:14,letterSpacing:.8,color:color('color/text/muted'),marginBottom:18}}>{historicTitle(name)} · {state.title}</div>{rows.map((row,i)=><div key={i} style={{marginBottom:10,padding:'8px 10px',borderRadius:6,background:color('color/surface/well'),fontFamily:i===0?'IBM Plex Sans':Tokens.fonts.mono,fontSize:i===0?16:12,lineHeight:'18px',color:color('color/text/primary')}}>{row.includes('_')?<MathText>{toMath(row)}</MathText>:row}</div>)}</div>;
+}
+function HistoricContent({name,mode,state}:{name:string;mode:InstrumentMode;state:DashboardState}) {
+ if(mode==='settings') return null;
+ if(mode==='expanded') return <HistoricDetail name={name} state={state}/>;
+ if(name==='Era clock') return <HistoricEraClock state={state}/>;
+ if(name==='System Stress'||name==='Capital') return <HistoricBadge name={name} value={name==='System Stress'?state.values.system_stress?.level:state.values.capital?.level}/>;
+ if(name==='Interference') return <HistoricInterference state={state}/>;
+ if(name==='Active Patch') return <HistoricPatch state={state}/>;
+ if(name==='Variables') return <HistoricVariables state={state}/>;
+ if(name==='Executing Function') return <HistoricExecutingFunction state={state}/>;
+ if(name==='Policy ticker') return <HistoricPolicyTicker state={state}/>;
+ return null;
+}
+
 function Nodes({nodes,compact}:{nodes:any[];compact:boolean}) {
  return <>{nodes.map((n,i)=>{
   let own:React.ReactNode;
@@ -387,32 +449,38 @@ export function TrayHeaderControls({mode}:{mode:'expanded'|'settings'}) {
 
 function ArtifactContent({name,mode,interactive}:{name:string;mode:InstrumentMode;interactive:boolean}) {
  const View=ARTIFACT_VIEWS[name];
+ const historicalState=useContext(DashboardStateContext);
+ const artifactEra=historicalState?{log:historicalState.eraLog,title:historicalState.title,fields:historicalState.values as Record<string,unknown>}:eraLog2;
  if(mode==='compact') {
   const left=(TRAY_CELL_WIDTH-TRAY_COMPACT_CONTENT.w)/2;
   const top=(TRAY.height-TRAY_COMPACT_CONTENT.h)/2;
   return <div data-artifact={name} style={{position:'absolute',left,top,width:TRAY_COMPACT_CONTENT.w,height:TRAY_COMPACT_CONTENT.h}}>
-   <View mode="compact" width={TRAY_COMPACT_CONTENT.w} height={TRAY_COMPACT_CONTENT.h} interactive={interactive} era={eraLog2}/>
+   <View mode="compact" width={TRAY_COMPACT_CONTENT.w} height={TRAY_COMPACT_CONTENT.h} interactive={interactive} era={artifactEra}/>
   </div>;
  }
  return <div data-artifact={name} style={{position:'absolute',left:16,top:16,width:TRAY_EXPANDED_CONTENT.w,height:TRAY_EXPANDED_CONTENT.h}}>
-  <View mode={mode} width={TRAY_EXPANDED_CONTENT.w} height={TRAY_EXPANDED_CONTENT.h} interactive={interactive} era={eraLog2}/>
+  <View mode={mode} width={TRAY_EXPANDED_CONTENT.w} height={TRAY_EXPANDED_CONTENT.h} interactive={interactive} era={artifactEra}/>
  </div>;
 }
 
 export function PanelContent({name,mode}:{name:string;mode:InstrumentMode}) {
  const {interactive}=useContext(ClockContext);
  const eraClockStandby=useContext(EraClockStandbyContext);
+ const historicalState=useContext(DashboardStateContext);
  const data=instruments[name][mode],compact=mode==='compact';
  const renderFill=`linear-gradient(${color('color/fill/panel-wash')}, ${color('color/fill/panel-wash')}), ${color('color/fill/panel-render')}`;
  const fill=interactive?color(compact?'color/fill/panel-wash':'color/fill/glass'):renderFill;
  const isArtifact=name in ARTIFACT_VIEWS;
+ const status=historicalState?.instruments[instrumentSlug(name)]??'live';
  return <GlassPanel fill={fill} blur={interactive&&compact?6:0} padding={0} radius={compact?8:10} style={{backdropFilter:interactive&&compact?'blur(6px)':'none',WebkitBackdropFilter:interactive&&compact?'blur(6px)':'none',position:'relative',width:data.w,height:data.h,border:'none',boxShadow:`inset 0 0 0 ${compact?1:1.6}px ${color('color/line/hairline')}`,color:color('color/text/primary')}}>{
- isArtifact?<ArtifactContent name={name} mode={mode} interactive={interactive}/>
- :name==='Era clock'&&compact&&eraClockStandby?<EraClockCompactStandby/>
+ status!=='live'?<StatusPanel name={name} mode={mode} status={status}/>
+ :isArtifact?<ArtifactContent name={name} mode={mode} interactive={interactive}/>
+ :name==='Compass'&&(mode==='compact'||mode==='expanded')?<CompassWidget mode={mode}/>
  :name==='Wage plane'&&mode==='compact'?<div data-artifact="Complex Wage Plane" data-compact-padding-x="11"><Nodes nodes={data.children} compact/></div>
  :name==='Wage plane'&&mode==='expanded'?<ComplexWagePlane/>
  :name==='Wage plane'&&mode==='settings'?<WagePlaneSettings data={data}/>
- :name==='Compass'&&(mode==='compact'||mode==='expanded')?<CompassWidget mode={mode}/>
+ :historicalState?<HistoricContent name={name} mode={mode} state={historicalState}/>
+ :name==='Era clock'&&compact&&eraClockStandby?<EraClockCompactStandby/>
  :name==='Executing Function'&&mode==='compact'?<ExecutingFunctionCompact/>
  :name==='Policy ticker'&&mode==='compact'?<PolicyTickerCompact/>
  :mode==='settings'?<Settings name={name} data={data}/>

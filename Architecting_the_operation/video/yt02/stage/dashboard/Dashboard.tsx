@@ -1,5 +1,5 @@
 import React,{useState,useContext} from 'react';
-import {ClockContext,TokensContext,useStageMs,resolveMode,type InstrumentMode,type ModeKey,type Camera,type InstrumentGrow} from '@stage';
+import {BootIn,ClockContext,Flicker,TokensContext,useStageMs,resolveMode,type InstrumentMode,type ModeKey,type Camera,type InstrumentGrow} from '@stage';
 import layout from '../handoff/layout.json';
 import {Tokens} from '../tokens';
 import {CompactBorder} from './CompactBorder';
@@ -7,7 +7,8 @@ import {CardBorder} from './CardBorder';
 import {EraStrip} from './EraStrip';
 import {DashboardMap} from './DashboardMap';
 import {worldCamera,iberiaCamera} from './mapGeometry';
-import {CameraContext,EraClockStandbyContext,instruments} from './PanelContent';
+import {CameraContext,DashboardStateContext,EraClockStandbyContext,instruments} from './PanelContent';
+import {dashboardStateAt,type InstrumentSlug,type InstrumentStatus} from './state';
 import {EraClock} from './instruments/era-clock';
 import {SystemStress} from './instruments/system-stress';
 import {Capital} from './instruments/capital';
@@ -40,7 +41,9 @@ const trayArtifactFor=(name:string)=>{
  return TrayCell;
 };
 const components=[EraClock,SystemStress,Capital,Interference,Compass,ActivePatch,Variables,ExecutingFunction,PolicyTicker,WagePlane,...TRAY_INSTRUMENTS.map(trayArtifactFor)];
-export type DashboardProps={era?:number;world?:boolean;camera?:Camera;worldOpacity?:number;routeDraw?:number;dim?:number;lights?:number[];empty?:boolean;mapOpacity?:number;eraClockStandby?:boolean;mapOutlineOnly?:boolean;notch?:number;modes?:Record<string,InstrumentMode>;modeTimelines?:Record<string,ModeKey[]>};
+/** A timestamped dashboard can advance through historical keyframes without changing callers
+ * that still intentionally render the authored 1486 dashboard. */
+export type DashboardProps={era?:number;year?:number;yearTimeline?:readonly (readonly [number,number])[];world?:boolean;camera?:Camera;worldOpacity?:number;routeDraw?:number;dim?:number;lights?:number[];empty?:boolean;mapOpacity?:number;eraClockStandby?:boolean;mapOutlineOnly?:boolean;notch?:number;modes?:Record<string,InstrumentMode>;modeTimelines?:Record<string,ModeKey[]>};
 type InteractiveState={interactiveModes?:Record<string,InstrumentMode|null>;onModeChange?:(slug:string,mode:InstrumentMode|null)=>void};
 export function Dashboard(props:DashboardProps) {
  const {interactive}=useContext(ClockContext);
@@ -50,15 +53,39 @@ function InteractiveDashboard(props:DashboardProps) {
  const [interactiveModes,setInteractiveModes]=useState<Record<string,InstrumentMode|null>>({});
  return <DashboardFrame {...props} interactiveModes={interactiveModes} onModeChange={(slug,mode)=>setInteractiveModes(previous=>({...previous,[slug]:mode}))}/>;
 }
-function DashboardFrame({era=2,world=false,camera,worldOpacity=0,routeDraw=1,dim=1,lights=[],empty=false,mapOpacity,eraClockStandby,mapOutlineOnly,notch,modes={},modeTimelines={},interactiveModes={},onModeChange}:DashboardProps & InteractiveState) {
+function timelineYear(ms:number, timeline:readonly (readonly [number,number])[], fallback:number|undefined) {
+ if(!timeline.length) return fallback;
+ if(ms < timeline[0][0]) return fallback ?? timeline[0][1];
+ return timeline.reduce((year,[at,next])=>ms>=at?next:year,timeline[0][1]);
+}
+function powerOnAt(ms:number,slug:InstrumentSlug,timeline:readonly (readonly [number,number])[]) {
+ let previous:InstrumentStatus|undefined;
+ for(const [nextAt,year] of timeline) {
+  const next=dashboardStateAt(year).instruments[slug];
+  if(next==='live'&&previous!==undefined&&previous!=='live') {
+   if(ms>=nextAt && ms<nextAt+700) return nextAt;
+  }
+  previous=next;
+ }
+ return undefined;
+}
+function DashboardFrame({era=2,year,yearTimeline=[],world=false,camera,worldOpacity=0,routeDraw=1,dim=1,lights=[],empty=false,mapOpacity,eraClockStandby,mapOutlineOnly,notch,modes={},modeTimelines={},interactiveModes={},onModeChange}:DashboardProps & InteractiveState) {
  const ms=useStageMs();
- if(era!==2) throw new Error(`YT02 handoff supplies instrument content for log 2; received ${era}`);
+ const historicalYear=timelineYear(ms,yearTimeline,year);
+ const historicalState=historicalYear===undefined?undefined:dashboardStateAt(historicalYear);
+ const activeEra=historicalState?.eraLog??era;
+ if(!historicalState&&era!==2) throw new Error(`YT02 handoff supplies instrument content for log 2; received ${era}`);
  const activeCamera=camera??(world?worldCamera:iberiaCamera);
  const heights=rail.map((p,i)=>{const d=instruments[p.instrument];const forced=interactiveModes[slugs[i]]??modes[slugs[i]],weights=resolveMode(ms,modeTimelines[slugs[i]]??[]).weights;return forced?d[forced].h:weights.compact*d.compact.h+weights.expanded*d.expanded.h+weights.settings*d.settings.h;});
- return <TokensContext.Provider value={Tokens}><CameraContext.Provider value={activeCamera}><EraClockStandbyContext.Provider value={eraClockStandby??false}><div className="yt02-dashboard" style={{position:'absolute',inset:0,width:1920,height:1080,background:Tokens.colours.background,overflow:'hidden'}}><style>{'.yt02-dashboard sub { vertical-align: baseline; position: relative; top: .2em; }'}</style><EraStrip activeLog={era} empty={empty}/><DashboardMap world={world} camera={camera} worldOpacity={worldOpacity} draw={routeDraw} mapOpacity={mapOpacity} outlineOnly={mapOutlineOnly}/>{rail.map((p,i)=>{
+ return <TokensContext.Provider value={Tokens}><CameraContext.Provider value={activeCamera}><DashboardStateContext.Provider value={historicalState}><EraClockStandbyContext.Provider value={eraClockStandby??false}><div className="yt02-dashboard" style={{position:'absolute',inset:0,width:1920,height:1080,background:Tokens.colours.background,overflow:'hidden'}}><style>{'.yt02-dashboard sub { vertical-align: baseline; position: relative; top: .2em; } @keyframes dashboard-status-pulse { 0%,100% { opacity:.42 } 50% { opacity:1 } }'}</style><EraStrip activeLog={activeEra} empty={empty}/><DashboardMap world={world} camera={camera} worldOpacity={worldOpacity} draw={routeDraw} mapOpacity={mapOpacity} outlineOnly={mapOutlineOnly}/>{rail.map((p,i)=>{
  const Component=components[i],start=i<5?0:5;
  const y=i<10?96+heights.slice(start,i).reduce((sum,h)=>sum+h+8,0):p.y;
  const grow:InstrumentGrow=i<5?'right-down':i<10?'left-down':'centre';
- return <Component onInteractiveModeChange={onModeChange?mode=>onModeChange(slugs[i],mode):undefined} key={slugs[i]} anchor={{x:i>=5?p.x+p.w-instruments[p.instrument].compact.w:p.x,y,width:instruments[p.instrument].compact.w,height:instruments[p.instrument].compact.h}} grow={grow} mode={modes[slugs[i]]} modeTimeline={modeTimelines[slugs[i]]} opacity={lights[i]??dim}/>;
- })}{notch===undefined?<CompactBorder/>:<CardBorder notch={notch}/>}</div></EraClockStandbyContext.Provider></CameraContext.Provider></TokensContext.Provider>;
+ const slug=slugs[i] as InstrumentSlug,status=historicalState?.instruments[slug]??'live';
+ const content=<Component onInteractiveModeChange={onModeChange?mode=>onModeChange(slug,mode):undefined} key={slug} status={status} anchor={{x:i>=5?p.x+p.w-instruments[p.instrument].compact.w:p.x,y,width:instruments[p.instrument].compact.w,height:instruments[p.instrument].compact.h}} grow={grow} mode={modes[slug]} modeTimeline={modeTimelines[slug]} opacity={(lights[i]??dim)*(status==='off'?.25:1)}/>;
+ const bootAt=historicalState?powerOnAt(ms,slug,yearTimeline):undefined;
+ if(bootAt===undefined) return content;
+ const box={x:i>=5?p.x+p.w-instruments[p.instrument].compact.w:p.x,y,w:instruments[p.instrument].compact.w,h:instruments[p.instrument].compact.h};
+ return <React.Fragment key={`${slug}-boot-${bootAt}`}><BootIn box={box} startFrame={Math.round(bootAt*30/1000)} durationFrames={16} mode="snap" strokeToken="color/fill/gold" fillToken="color/fill/panel-render" glowToken="color/fill/gold"/><Flicker startFrame={Math.round(bootAt*30/1000)} durationFrames={18} seed={i+11} glowToken="color/fill/gold">{content}</Flicker></React.Fragment>;
+ })}{notch===undefined?<CompactBorder/>:<CardBorder notch={notch}/>}</div></EraClockStandbyContext.Provider></DashboardStateContext.Provider></CameraContext.Provider></TokensContext.Provider>;
 }

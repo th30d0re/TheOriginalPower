@@ -9,6 +9,7 @@ import atlas from '/Users/emmanuel/Documents/Theory/scriptCast-stage/video/node_
 import {ClockContext,PlanContext,createProjection,catmullRomPath,resolveMode,flyTo,cubicInOut,type StagePlan} from '@stage';
 import {DashboardBoot,Dashboard1486} from '../Scenes';
 import {Dashboard,rail,slugs} from '../dashboard/Dashboard';
+import {dashboardStateAt,DASHBOARD_TIMELINE} from '../dashboard/state';
 import {DashboardMap,defaultPolities1486,type Polities} from '../dashboard/DashboardMap';
 import {ARTIFACT_VIEWS,PanelContent,TRAY_VIEW_LAYOUT_HEIGHTS,eraLog2,instruments,computeCompassMetrics,formatCoord} from '../dashboard/PanelContent';
 import {regionalProjection as project,worldCamera,iberiaCamera,iberiaFit,labelOffsets} from '../dashboard/mapGeometry';
@@ -407,5 +408,66 @@ if(process.env.DASHBOARD_SNAPSHOT==='1') {
  };
  fs.writeFileSync(new URL('../review/map-geometry-fix1.json',import.meta.url),JSON.stringify(geometry,null,2)+'\n');
  fs.writeFileSync(new URL('../review/map-geometry-fix2.json',import.meta.url),JSON.stringify(geometry,null,2)+'\n');
+ // 3. Historical Dashboard state machine assertions
+ assert.ok(DASHBOARD_TIMELINE.length >= 10, 'timeline keyframe count');
+ const s1441 = dashboardStateAt(1441);
+ assert.equal(s1441.year, 1441);
+ assert.equal(s1441.eraLog, 2);
+ assert.equal(s1441.instruments['era-clock'], 'live');
+ assert.equal(s1441.instruments['compass'], 'live');
+ assert.equal(s1441.instruments['system-stress'], 'live');
+ assert.equal(s1441.instruments['capital'], 'live');
+ assert.equal(s1441.instruments['policy-ticker'], 'off');
+ assert.equal(s1441.instruments['wage-plane'], 'off');
+ assert.equal(s1441.instruments['interference-engine'], 'off');
+
+ const s1452 = dashboardStateAt(1452);
+ assert.equal(s1452.instruments['policy-ticker'], 'live');
+ assert.equal(s1452.instruments['active-patch'], 'standby');
+ assert.equal(s1452.instruments['variables'], 'off');
+
+ const s1486 = dashboardStateAt(1486);
+ assert.equal(s1486.instruments['variables'], 'live');
+ assert.equal(s1486.instruments['policy-ticker'], 'live');
+ assert.equal(s1486.instruments['executing-function'], 'off');
+ assert.equal(s1486.instruments['wage-plane'], 'off');
+
+ const s1619 = dashboardStateAt(1619);
+ assert.equal(s1619.eraLog, 3);
+ assert.equal(s1619.instruments['wage-plane'], 'off');
+ assert.equal(s1619.instruments['executing-function'], 'off');
+
+ // Markup checks for Dashboard year prop
+ const html1441 = renderToStaticMarkup(<ClockContext.Provider value={{ms:0,fps:30,interactive:false}}><Dashboard year={1441}/></ClockContext.Provider>);
+ assert.ok(html1441.includes('1441') && html1441.includes('RIO D’OURO COAST'));
+ assert.equal((html1441.match(/data-dashboard-status="off"/g)??[]).length, 14);
+ assert.equal((html1441.match(/data-dashboard-status="standby"/g)??[]).length, 0);
+ assert.deepEqual(renderedUnderscoreText(html1441), []);
+
+ const html1452 = renderToStaticMarkup(<ClockContext.Provider value={{ms:0,fps:30,interactive:false}}><Dashboard year={1452}/></ClockContext.Provider>);
+ assert.ok(html1452.includes('1452') && html1452.includes('DUM DIVERSAS'));
+ assert.equal((html1452.match(/data-dashboard-status="off"/g)??[]).length, 12);
+ assert.equal((html1452.match(/data-dashboard-status="standby"/g)??[]).length, 1);
+ assert.deepEqual(renderedUnderscoreText(html1452), []);
+
+ const html1486 = renderToStaticMarkup(<ClockContext.Provider value={{ms:0,fps:30,interactive:false}}><Dashboard year={1486}/></ClockContext.Provider>);
+ assert.ok(html1486.includes('1486') && html1486.includes('LISBON, PORTUGAL'));
+ assert.equal((html1486.match(/data-dashboard-status="off"/g)??[]).length, 10);
+ assert.deepEqual(renderedUnderscoreText(html1486), []);
+
+ const html1619 = renderToStaticMarkup(<ClockContext.Provider value={{ms:0,fps:30,interactive:false}}><Dashboard year={1619}/></ClockContext.Provider>);
+ assert.ok(html1619.includes('1619') && html1619.includes('POINT COMFORT, VIRGINIA'));
+ assert.equal((html1619.match(/data-dashboard-status="off"/g)??[]).length, 10);
+ assert.deepEqual(renderedUnderscoreText(html1619), []);
+
+ // Animated power-on flicker check with yearTimeline
+ const tl = [[0, 1441], [5000, 1452]] as const;
+ const preBoot = renderToStaticMarkup(<ClockContext.Provider value={{ms:4000,fps:30,interactive:false}}><Dashboard yearTimeline={tl}/></ClockContext.Provider>);
+ assert.ok(!preBoot.includes('opus/Flicker'), 'no flicker before cue');
+ const atBoot = renderToStaticMarkup(<ClockContext.Provider value={{ms:5100,fps:30,interactive:false}}><Dashboard yearTimeline={tl}/></ClockContext.Provider>);
+ assert.ok(atBoot.includes('opus/Flicker'), 'flicker active on power-on');
+ const postBoot = renderToStaticMarkup(<ClockContext.Provider value={{ms:6000,fps:30,interactive:false}}><Dashboard yearTimeline={tl}/></ClockContext.Provider>);
+ assert.ok(!postBoot.includes('opus/Flicker'), 'flicker settled after animation');
+
  console.log(`PASS: Equal Earth route ${samples} samples / ${hits} land hits, bounds ${routeMinX.toFixed(2)}..${routeMaxX.toFixed(2)} × ${routeMinY.toFixed(2)}..${routeMaxY.toFixed(2)} above tray y=${trayTopLocal}; Portugal height ${portugalMainlandHeightPx}px mainland (${portugalWithEnclaveHeightPx}px with 1486 Moroccan enclave); ${times.length} deterministic timeline states; 5-panel right stack + 8-cell tray geometry; all 24 tray modes plus 3 Wage plane modes; 18 declared layouts ≤ 828px; no literal underscore text; shared 601-point Thyristor traces; Backlash static active preset; gear-only settings; no rendered interaction hints; 75 polities with ${polityLabelBoxes.length} non-colliding labels.`);
 }
