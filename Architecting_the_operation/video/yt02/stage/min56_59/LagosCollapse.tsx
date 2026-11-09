@@ -1,7 +1,7 @@
 import React from 'react';
 import {DrawLine, DrawRect, FitBox, Flicker, StickFigure, useCue, type SceneProps} from '@stage';
 import {Copy, Panel, Scene, frame} from './shared';
-import {AtlanticMap, CineStill} from '../min53_56/PortugalVisuals';
+import {AtlanticMap} from '../min53_56/PortugalVisuals';
 
 export function LagosCollapse({segment}:SceneProps) {
   const c={auction:useCue('t259Auction').at,lagos:useCue('t259Lagos').at,varied:useCue('t259Varied').at,skin:useCue('t259Skin').at,collapsed:useCue('t260Collapsed').at,degraded:useCue('t260Degraded').at,beasts:useCue('t260Beasts').at,enslavement:useCue('t261Enslavement').at,separation:useCue('t261Separation').at,rescue:useCue('t261Rescue').at};
@@ -18,6 +18,5 @@ export function LagosCollapse({segment}:SceneProps) {
     <Copy at={c.enslavement} box={{x:210,y:810,w:650,h:36}} size={26}>VIOLENT ENSLAVEMENT + SEPARATION</Copy>
     <DrawLine points={[[860,828],[1110,828]]} startFrame={frame(c.separation)} durationFrames={16} strokeToken="color/marker/race" strokeWidth={4} end="arrow" beat/>
     <Copy at={c.rescue} box={{x:1140,y:810,w:520,h:36}} size={26} tone="color/fill/gold">PRESENTED AS “RESCUE”</Copy>
-    <CineStill name="232-five-lots" at={c.auction} caption="LAGOS · 8 AUGUST 1444"/>
   </Scene>;
 }
