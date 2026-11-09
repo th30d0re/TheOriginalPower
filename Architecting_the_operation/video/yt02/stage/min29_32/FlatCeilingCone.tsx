@@ -438,25 +438,16 @@ export function FlatCeilingCone({segment}: SceneProps) {
           />
         </div>
 
-        {/* Bottom Banner */}
-        <Text
-          at={cue.rotate}
-          box={{x: 120, y: 855, w: 1680, h: 36}}
-          size={24}
-          tone="color/fill/gold"
-          align="center"
-          weight={600}
-        >
-          DISCRETE INDIVIDUALS ROTATE THROUGH ROLES · STRUCTURAL SETS REMAIN DISJOINT
-        </Text>
+        {/* Single footer, clear of the two in-panel projection captions. */}
         <Text
           at={cue.machine}
-          box={{x: 120, y: 895, w: 1680, h: 30}}
+          box={{x: 120, y: 960, w: 1680, h: 28}}
           size={21}
           tone="color/text/soft"
           align="center"
+          weight={500}
         >
-          ONE CONNECTED EXTRACTION MACHINE HOLDING ALL TIERS TOGETHER
+          ONE CONNECTED EXTRACTION MACHINE HOLDS THE DISJOINT STRUCTURAL SETS TOGETHER
         </Text>
       </KitSound>
     </StageSceneFrame>

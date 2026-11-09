@@ -283,7 +283,7 @@ export function BinaryProjection({segment}: SceneProps) {
           ))}
           <Text
             at={cue.mass}
-            box={{x: outgroupBox.x + 1100, y: outgroupBox.y + 24, w: 430, h: 40}}
+            box={{x: 1100, y: 24, w: 430, h: 40}}
             size={22}
             tone="color/marker/race"
             align="right"

@@ -9,9 +9,9 @@ const clampBoth = {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'} as const
 const CONE_PANEL = {x: 290, y: 220, w: 1410, h: 770};
 const CONE_INNER = {x: CONE_PANEL.x + 22, y: CONE_PANEL.y + 22, w: CONE_PANEL.w - 44, h: CONE_PANEL.h - 44};
 
-// Turns 160–164: the flat two-set picture is the collapsed cone seen from inside O (al = 1, E
-// hidden behind the lower tiers). Each numbered step of the narration pulls the tiers further
-// off their common axis — three-tier, fourth, fifth — until all five stand apart.
+// Turns 160–164: keep the completed five-tier structure legible in its side-on view. The
+// numbered beats briefly loosen the shared axis, then resolve it again rather than flinging
+// the discs out into the hull.
 export function TierSplits({segment}: SceneProps) {
   const ms = useStageMs();
   const cue = {
@@ -29,12 +29,20 @@ export function TierSplits({segment}: SceneProps) {
     fifth: useCue('t164Fifth').at,
     standing: useCue('t164Standing').at,
   };
-  // Hold each alignment, then swing to the next across the beat that names it.
-  const swing = (at: number) => [frame(at) - 12, frame(at) + 26];
+  // Each newly named tier gets a modest, temporary separation pulse.
   const al = interpolate(
     frame(ms),
-    [frame(cue.twoTier), ...swing(cue.threeTier), ...swing(cue.fourth), ...swing(cue.fifth)],
-    [1, 1, 0.62, 0.62, 0.3, 0.3, 0.05],
+    [
+      frame(cue.twoTier),
+      frame(cue.threeTier) - 12,
+      frame(cue.threeTier) + 18,
+      frame(cue.fourth) - 12,
+      frame(cue.fourth) + 18,
+      frame(cue.fifth) - 12,
+      frame(cue.fifth) + 18,
+      frame(cue.fifth) + 46,
+    ],
+    [1, 1, 0.6, 1, 0.6, 1, 0.6, 1],
     clampBoth,
   );
   const steps: [string, number][] = [['1', cue.splits], ['2', cue.twoTier], ['3', cue.threeTier], ['4', cue.fourth], ['5', cue.fifth]];
