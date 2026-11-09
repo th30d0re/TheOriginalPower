@@ -3365,3 +3365,128 @@ shots:
       t296Sentencia: {word: Sentencia-Estatuto}
       t296David: {word: David}
       t296Nirenberg: {word: Nirenberg}
+  # Minutes 66–69: turns 297–307 (blood-purity lock, archive sequence, and South Atlantic shuttle).
+  - shot_id: S00-297
+    turn_id: 209f5288f7f3a5a9
+    scene: BloodPurityLock
+    instance: BloodPurityLock
+    cues:
+      t297Statute: {word: statute}
+      t297Toledo: {word: Toledo}
+      t297Converts: {word: converts}
+      t297Blood: {word: blood}
+      t297Defect: {word: defect}
+      t297Baptism: {word: baptism}
+  - shot_id: S00-298
+    turn_id: 9c8206b0830788bb
+    scene: BloodPurityLock
+    instance: BloodPurityLock
+    cues:
+      t298Equation: {word: Equation}
+      t298Lock: {word: lock}
+      t298Iberian: {word: Iberian}
+      t298Slavery: {word: slavery}
+      t298ORacialized: {word: O-sub-racialized}
+      t298Phenotype: {word: phenotype}
+  - shot_id: S00-299
+    turn_id: c8d05287ba178c11
+    scene: BloodPurityLock
+    instance: BloodPurityLock
+    cues:
+      t299Phenotype: {word: Phenotype}
+      t299Capital: {word: capital}
+      t299Surveillance: {word: surveillance}
+      t299Tier: {word: tier}
+      t299Skin: {word: skin}
+  - shot_id: S00-300
+    turn_id: ff56038838dfc31e
+    scene: ArchiveSequence
+    instance: ArchiveSequence
+    cues:
+      t300Test: {word: Test}
+      t300Prediction: {word: Prediction}
+      t300Extraction: {word: extraction}
+      t300Doctrine: {word: doctrine}
+      t300Ledger: {word: ledger}
+  - shot_id: S00-301
+    turn_id: 9f9ec0dac608c293
+    scene: ArchiveSequence
+    instance: ArchiveSequence
+    cues:
+      t301Institutions: {word: institutions}
+      t301Crown: {word: Crown}
+      t301Papacy: {word: papacy}
+      t301Order: {word: Order}
+      t301Merchants: {word: merchants}
+      t301Chronicler: {word: chronicler}
+      t301Customs: {word: customs}
+  - shot_id: S00-302
+    turn_id: 532db1613221f68a
+    scene: ArchiveSequence
+    instance: ArchiveSequence
+    cues:
+      t302Refutation: {word: Refutation}
+      t302Phenotype: {word: phenotype-keyed}
+      t302Beneficiaries: {word: beneficiaries}
+  - shot_id: S00-303
+    turn_id: 694b2a645e65376f
+    scene: ArchiveSequence
+    instance: ArchiveSequence
+    cues:
+      t303Chronological: {word: chronological}
+      t303Licensing: {word: licensing}
+      t303Elite: {word: Elite}
+  - shot_id: S00-304
+    turn_id: 4fb5b9d50e284fb3
+    scene: AtlanticNetwork
+    instance: AtlanticNetwork
+    cues:
+      t304Casa: {word: Casa}
+      t304Registration: {word: registration}
+      t304Taxation: {word: taxation}
+      t304Authority: {word: authority}
+      t304Sao: {word: São}
+      t304Sugar: {word: sugar}
+      t304Colonization: {word: colonization}
+      t304Kongo: {word: Kongo}
+      t304Luanda: {word: Luanda}
+      t304Port: {word: port}
+  - shot_id: S00-305
+    turn_id: febc6d7cdd67738b
+    scene: AtlanticNetwork
+    instance: AtlanticNetwork
+    cues:
+      t305Spanish: {word: Spanish}
+      t305Hispaniola: {word: Hispaniola}
+      t305Asiento: {word: asiento}
+      t305Shipment: {word: shipment}
+      t305Licence: {word: licence}
+  - shot_id: S00-306
+    turn_id: 950b82a9b5ff90db
+    scene: AtlanticNetwork
+    instance: AtlanticNetwork
+    cues:
+      t306Engenho: {word: engenho}
+      t306Vicente: {word: Vicente}
+      t306Expansion: {word: expansion}
+      t306Driver: {word: driver}
+      t306Stressor: {word: stressor}
+  - shot_id: S00-307
+    turn_id: 7b7c8ff75e27d546
+    scene: BilateralShuttle
+    instance: BilateralShuttle
+    cues:
+      t307Traffic: {word: traffic}
+      t307Brazil: {word: Brazil}
+      t307Angola: {word: Angola}
+      t307Ships: {word: Ships}
+      t307Cachaca: {word: cachaça}
+      t307East: {word: east}
+      t307Captives: {word: captives}
+      t307West: {word: west}
+      t307Bilateral: {word: bilateral}
+      t307European: {word: European}
+      t307Triangle: {word: triangle}
+      t307Oversimplifies: {word: oversimplifies}
+      t307Share: {word: share}
+      t307Territories: {word: territories}
