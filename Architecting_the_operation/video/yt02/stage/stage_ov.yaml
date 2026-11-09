@@ -881,3 +881,163 @@ shots:
       t67Credit: {word: credit}
       t67Capital: {word: capital}
       t67Allocation: {word: allocation}
+  - shot_id: S00-124
+    turn_id: 87ff5d63ca3fbebb
+    scene: GroupBaseline
+    instance: GroupBaseline
+    cues:
+      t124Recall: {word: Recall}
+      t124Ingroup: {word: in-group}
+      t124Membership: {word: membership}
+      t124Outgroup: {word: out-group}
+      t124Boundary: {word: boundary}
+      t124Opposition: {word: opposition}
+  - shot_id: S00-125
+    turn_id: 9c9e49c20d9a4f50
+    scene: GroupBaseline
+    instance: GroupBaseline
+    cues:
+      t125First: {word: first}
+      t125Photograph: {word: photograph}
+      t125Oppressor: {word: Oppressor}
+      t125Binary: {word: binary}
+  - shot_id: S00-126
+    turn_id: a9ce4c44345d05ed
+    scene: MinimalGroups
+    instance: MinimalGroups
+    cues:
+      t126Henri: {word: Henri}
+      t126Minimal: {word: minimal-group}
+      t126Theory: {word: Theory}
+      t126Evidence: {word: evidence}
+  - shot_id: S00-127
+    turn_id: 6a34295d1e4219cd
+    scene: MinimalGroups
+    instance: MinimalGroups
+    cues:
+      t127Tajfel: {word: Tajfel}
+      t127Arbitrary: {word: arbitrary}
+      t127Klee: {word: Klee}
+      t127Dots: {word: dots}
+  - shot_id: S00-128
+    turn_id: 7e4d1b3aa579c22c
+    scene: MinimalGroups
+    instance: MinimalGroups
+    cues:
+      t128Zero: {word: zero, occurrence: 1}
+      t128History: {word: history}
+      t128Stake: {word: stake}
+  - shot_id: S00-129
+    turn_id: 7e3924860c70c154
+    scene: MinimalGroups
+    instance: MinimalGroups
+    cues:
+      t129Stripped: {word: stripped-down}
+      t129Favored: {word: favored}
+      t129Gap: {word: gap}
+  - shot_id: S00-130
+    turn_id: 91905526e34f3198
+    scene: MinimalGroups
+    instance: MinimalGroups
+    cues:
+      t130Finding: {word: finding}
+      t130Automatically: {word: automatically}
+      t130Boundary: {word: boundary}
+  - shot_id: S00-131
+    turn_id: 7c4a57a3c716d3dd
+    scene: SetTheoryBridge
+    instance: SetTheoryBridge
+    cues:
+      t131Political: {word: political}
+      t131Automatic: {word: automatic}
+      t131Section: {word: Section}
+      t131Models: {word: models}
+      t131Set: {word: set}
+  - shot_id: S00-132
+    turn_id: dc83cd6ec3a51b0e
+    scene: SetTheoryBridge
+    instance: SetTheoryBridge
+    cues:
+      t132Before: {word: Before}
+      t132Refresher: {word: refresher}
+      t132Useful: {word: useful}
+      t132Venn: {word: Venn}
+      t132Ingroup: {word: in-group}
+  - shot_id: S00-133
+    turn_id: 419f3ce21b1de4e3
+    scene: SetOperations
+    instance: SetOperations
+    cues:
+      t133Four: {word: Four}
+      t133Operations: {word: operations}
+      t133Plain: {word: plain}
+      t133Transparent: {word: transparent}
+  - shot_id: S00-134
+    turn_id: af1e52709a5b5b05
+    scene: SetOperations
+    instance: SetOperations
+    cues:
+      t134Set: {word: set, occurrence: 1}
+      t134Collection: {word: collection}
+      t134Circle: {word: circle, occurrence: 1}
+      t134Subset: {word: subset}
+  - shot_id: S00-135
+    turn_id: f759a2bc5a473e51
+    scene: SetOperations
+    instance: SetOperations
+    cues:
+      t135Union: {word: union}
+      t135Joins: {word: joins}
+      t135Intersection: {word: intersection}
+      t135Belong: {word: belong}
+  - shot_id: S00-136
+    turn_id: 647649eef480d708
+    scene: SetOperations
+    instance: SetOperations
+    cues:
+      t136Zero: {word: zero}
+      t136Overlap: {word: overlap}
+      t136Empty: {word: empty}
+      t136Partition: {word: partition}
+      t136Legal: {word: legal}
+      t136Line: {word: line}
+  - shot_id: S00-137
+    turn_id: 1c1677f190d30af6
+    scene: PartitionEquation
+    instance: PartitionEquation
+    cues:
+      t137Equation: {word: Equation}
+      t137Partition: {word: partition}
+      t137Population: {word: population}
+      t137Equals: {word: equals}
+      t137Disjoint: {word: disjoint}
+      t137Intersection: {word: intersection}
+      t137Empty: {word: empty}
+  - shot_id: S00-138
+    turn_id: 6d5340af09b37269
+    scene: PartitionEquation
+    instance: PartitionEquation
+    cues:
+      t138CapitalI: {word: I}
+      t138Dominant: {word: dominant}
+      t138CapitalO: {word: O}
+      t138Marginalized: {word: marginalized}
+  - shot_id: S00-139
+    turn_id: 51570c8900b0f58f
+    scene: PartitionEquation
+    instance: PartitionEquation
+    cues:
+      t139Requirement: {word: Requirement}
+      t139Policed: {word: policed}
+      t139Gradient: {word: gradient}
+      t139Inside: {word: inside}
+      t139Outside: {word: outside}
+  - shot_id: S00-140
+    turn_id: 89f4c0ef8cc01729
+    scene: PartitionEquation
+    instance: PartitionEquation
+    cues:
+      t140Rule: {word: rule}
+      t140Law: {word: law}
+      t140Forbids: {word: forbids}
+      t140Both: {word: both}
