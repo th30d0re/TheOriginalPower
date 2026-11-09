@@ -3,10 +3,10 @@
   "fps": 30,
   "width": 1920,
   "height": 1080,
-  "duration_ms": 3584210,
+  "duration_ms": 3779420,
   "range": {
     "start_ms": 0,
-    "end_ms": 3584210
+    "end_ms": 3779420
   },
   "audio": "stage/YT02v2_ov/YT02v2_ov.mp3",
   "cues": {
@@ -1727,6 +1727,73 @@
     "t269Crown": 3573450,
     "t269Wage": 3577230,
     "t269Elevated": 3578130,
+    "t270Connect": 3583760,
+    "t270Tajfel": 3585367,
+    "t270Baseline": 3586180,
+    "t270Outgroup": 3588980,
+    "t270Law": 3600080,
+    "t270Doctrine": 3601020,
+    "t270Exclude": 3601620,
+    "t271Lagos": 3608300,
+    "t271Parents": 3611950,
+    "t271Division": 3624710,
+    "t271Salvation": 3627170,
+    "t272Moral": 3629520,
+    "t272Wage": 3632770,
+    "t272Ranks": 3641050,
+    "t273Chronology": 3646000,
+    "t273ZeroDay": 3648253,
+    "t273Attacks": 3651660,
+    "t273Vulnerability": 3653020,
+    "t273Patch": 3655820,
+    "t274Sorting": 3659430,
+    "t274Industrialized": 3661150,
+    "t274Phenotype": 3662390,
+    "t274Heritable": 3663770,
+    "t274Coded": 3665210,
+    "t274Capital": 3665650,
+    "t275Antiquity": 3670800,
+    "t275Property": 3675210,
+    "t275Inheritance": 3676260,
+    "t275Markets": 3678580,
+    "t276Formal": 3681330,
+    "t276Race": 3682370,
+    "t276Variable": 3684230,
+    "t276Racialized": 3685150,
+    "t276Outgroup": 3685980,
+    "t276Function": 3686910,
+    "t276Phenotype": 3687470,
+    "t276Written": 3688070,
+    "t276Equals": 3690050,
+    "t277Biological": 3692180,
+    "t277Binary": 3694440,
+    "t277Huxley": 3695880,
+    "t277Cline": 3698990,
+    "t277Polygenic": 3702080,
+    "t277Ultraviolet": 3704580,
+    "t278Jablonski": 3707530,
+    "t278Folate": 3712020,
+    "t278Vitamin": 3713280,
+    "t278Environments": 3714760,
+    "t279GenomeWide": 3716680,
+    "t279Regions": 3723620,
+    "t279Percent": 3725820,
+    "t280Ancient": 3728180,
+    "t280LaBrana": 3731804,
+    "t280Alleles": 3735020,
+    "t280Haplotype": 3736540,
+    "t281Cheddar": 3739450,
+    "t281Bundles": 3746230,
+    "t282Ancestors": 3752750,
+    "t282MelaninRich": 3754810,
+    "t282Protection": 3757630,
+    "t282Hair": 3763030,
+    "t283Moved": 3765300,
+    "t283Lower": 3766960,
+    "t283Lighter": 3768960,
+    "t283Paths": 3771620,
+    "t283Variants": 3774860,
+    "t283Years": 3777800,
     "S00-00.title": 400,
     "S00-00.archives": 3960,
     "S00-00.equations": 4360,
@@ -3443,7 +3510,74 @@
     "S00-269.t269Outgroup": 3570450,
     "S00-269.t269Crown": 3573450,
     "S00-269.t269Wage": 3577230,
-    "S00-269.t269Elevated": 3578130
+    "S00-269.t269Elevated": 3578130,
+    "S00-270.t270Connect": 3583760,
+    "S00-270.t270Tajfel": 3585367,
+    "S00-270.t270Baseline": 3586180,
+    "S00-270.t270Outgroup": 3588980,
+    "S00-270.t270Law": 3600080,
+    "S00-270.t270Doctrine": 3601020,
+    "S00-270.t270Exclude": 3601620,
+    "S00-271.t271Lagos": 3608300,
+    "S00-271.t271Parents": 3611950,
+    "S00-271.t271Division": 3624710,
+    "S00-271.t271Salvation": 3627170,
+    "S00-272.t272Moral": 3629520,
+    "S00-272.t272Wage": 3632770,
+    "S00-272.t272Ranks": 3641050,
+    "S00-273.t273Chronology": 3646000,
+    "S00-273.t273ZeroDay": 3648253,
+    "S00-273.t273Attacks": 3651660,
+    "S00-273.t273Vulnerability": 3653020,
+    "S00-273.t273Patch": 3655820,
+    "S00-274.t274Sorting": 3659430,
+    "S00-274.t274Industrialized": 3661150,
+    "S00-274.t274Phenotype": 3662390,
+    "S00-274.t274Heritable": 3663770,
+    "S00-274.t274Coded": 3665210,
+    "S00-274.t274Capital": 3665650,
+    "S00-275.t275Antiquity": 3670800,
+    "S00-275.t275Property": 3675210,
+    "S00-275.t275Inheritance": 3676260,
+    "S00-275.t275Markets": 3678580,
+    "S00-276.t276Formal": 3681330,
+    "S00-276.t276Race": 3682370,
+    "S00-276.t276Variable": 3684230,
+    "S00-276.t276Racialized": 3685150,
+    "S00-276.t276Outgroup": 3685980,
+    "S00-276.t276Function": 3686910,
+    "S00-276.t276Phenotype": 3687470,
+    "S00-276.t276Written": 3688070,
+    "S00-276.t276Equals": 3690050,
+    "S00-277.t277Biological": 3692180,
+    "S00-277.t277Binary": 3694440,
+    "S00-277.t277Huxley": 3695880,
+    "S00-277.t277Cline": 3698990,
+    "S00-277.t277Polygenic": 3702080,
+    "S00-277.t277Ultraviolet": 3704580,
+    "S00-278.t278Jablonski": 3707530,
+    "S00-278.t278Folate": 3712020,
+    "S00-278.t278Vitamin": 3713280,
+    "S00-278.t278Environments": 3714760,
+    "S00-279.t279GenomeWide": 3716680,
+    "S00-279.t279Regions": 3723620,
+    "S00-279.t279Percent": 3725820,
+    "S00-280.t280Ancient": 3728180,
+    "S00-280.t280LaBrana": 3731804,
+    "S00-280.t280Alleles": 3735020,
+    "S00-280.t280Haplotype": 3736540,
+    "S00-281.t281Cheddar": 3739450,
+    "S00-281.t281Bundles": 3746230,
+    "S00-282.t282Ancestors": 3752750,
+    "S00-282.t282MelaninRich": 3754810,
+    "S00-282.t282Protection": 3757630,
+    "S00-282.t282Hair": 3763030,
+    "S00-283.t283Moved": 3765300,
+    "S00-283.t283Lower": 3766960,
+    "S00-283.t283Lighter": 3768960,
+    "S00-283.t283Paths": 3771620,
+    "S00-283.t283Variants": 3774860,
+    "S00-283.t283Years": 3777800
   },
   "segments": [
     {
@@ -6634,7 +6768,7 @@
       "instance": "StatusWage",
       "scene": "StatusWage",
       "start_ms": 3548210,
-      "end_ms": 3584210,
+      "end_ms": 3583760,
       "shots": [
         {
           "shot_id": "S00-267",
@@ -6657,7 +6791,159 @@
           "turn_id": "79306d1449b283e8",
           "turn_index": 269,
           "start_ms": 3568650,
-          "end_ms": 3584210,
+          "end_ms": 3583760,
+          "props": {}
+        }
+      ]
+    },
+    {
+      "instance": "MoralCommunity",
+      "scene": "MoralCommunity",
+      "start_ms": 3583760,
+      "end_ms": 3645900,
+      "shots": [
+        {
+          "shot_id": "S00-270",
+          "turn_id": "f8765e1f93c57495",
+          "turn_index": 270,
+          "start_ms": 3583760,
+          "end_ms": 3605390,
+          "props": {}
+        },
+        {
+          "shot_id": "S00-271",
+          "turn_id": "6c9fc775975d9782",
+          "turn_index": 271,
+          "start_ms": 3605390,
+          "end_ms": 3628950,
+          "props": {}
+        },
+        {
+          "shot_id": "S00-272",
+          "turn_id": "e4c03ae488cbba2e",
+          "turn_index": 272,
+          "start_ms": 3628950,
+          "end_ms": 3645900,
+          "props": {}
+        }
+      ]
+    },
+    {
+      "instance": "ZeroDayExploit",
+      "scene": "ZeroDayExploit",
+      "start_ms": 3645900,
+      "end_ms": 3680970,
+      "shots": [
+        {
+          "shot_id": "S00-273",
+          "turn_id": "564acff8e33f7f83",
+          "turn_index": 273,
+          "start_ms": 3645900,
+          "end_ms": 3656810,
+          "props": {}
+        },
+        {
+          "shot_id": "S00-274",
+          "turn_id": "914ea89d9eff05d6",
+          "turn_index": 274,
+          "start_ms": 3656810,
+          "end_ms": 3669100,
+          "props": {}
+        },
+        {
+          "shot_id": "S00-275",
+          "turn_id": "7d0a9ba52e7ca0a9",
+          "turn_index": 275,
+          "start_ms": 3669100,
+          "end_ms": 3680970,
+          "props": {}
+        }
+      ]
+    },
+    {
+      "instance": "RacializedVariable",
+      "scene": "RacializedVariable",
+      "start_ms": 3680970,
+      "end_ms": 3692080,
+      "shots": [
+        {
+          "shot_id": "S00-276",
+          "turn_id": "2a0dd11cce42e1cf",
+          "turn_index": 276,
+          "start_ms": 3680970,
+          "end_ms": 3692080,
+          "props": {}
+        }
+      ]
+    },
+    {
+      "instance": "PigmentationCline",
+      "scene": "PigmentationCline",
+      "start_ms": 3692080,
+      "end_ms": 3728180,
+      "shots": [
+        {
+          "shot_id": "S00-277",
+          "turn_id": "1052dca74d05249b",
+          "turn_index": 277,
+          "start_ms": 3692080,
+          "end_ms": 3707240,
+          "props": {}
+        },
+        {
+          "shot_id": "S00-278",
+          "turn_id": "201c520cc1e72bb5",
+          "turn_index": 278,
+          "start_ms": 3707240,
+          "end_ms": 3716240,
+          "props": {}
+        },
+        {
+          "shot_id": "S00-279",
+          "turn_id": "aafabf6c98c763be",
+          "turn_index": 279,
+          "start_ms": 3716240,
+          "end_ms": 3728180,
+          "props": {}
+        }
+      ]
+    },
+    {
+      "instance": "DeepTimeGradient",
+      "scene": "DeepTimeGradient",
+      "start_ms": 3728180,
+      "end_ms": 3779420,
+      "shots": [
+        {
+          "shot_id": "S00-280",
+          "turn_id": "42c1029698cb9e2c",
+          "turn_index": 280,
+          "start_ms": 3728180,
+          "end_ms": 3737850,
+          "props": {}
+        },
+        {
+          "shot_id": "S00-281",
+          "turn_id": "026e2ea986cbbf30",
+          "turn_index": 281,
+          "start_ms": 3737850,
+          "end_ms": 3749470,
+          "props": {}
+        },
+        {
+          "shot_id": "S00-282",
+          "turn_id": "2d320f07ddc560b6",
+          "turn_index": 282,
+          "start_ms": 3749470,
+          "end_ms": 3763980,
+          "props": {}
+        },
+        {
+          "shot_id": "S00-283",
+          "turn_id": "4e6394682d54ce22",
+          "turn_index": 283,
+          "start_ms": 3763980,
+          "end_ms": 3779420,
           "props": {}
         }
       ]
