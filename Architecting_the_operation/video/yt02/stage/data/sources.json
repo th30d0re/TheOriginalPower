@@ -1,0 +1,12 @@
+{
+  "_note": "QR targets for on-screen citations. DOIs verified against doi.org and Crossref on 2026-11-08; books without a DOI open a WorldCat search for the exact title.",
+  "Greenwald & Banaji 1995": "https://doi.org/10.1037/0033-295X.102.1.4",
+  "Banaji 1995": "https://doi.org/10.1037/0033-295X.102.1.4",
+  "Friston 2010": "https://doi.org/10.1038/nrn2787",
+  "Clark 2013": "https://doi.org/10.1017/S0140525X12000477",
+  "Schwartz 1998": "https://doi.org/10.1037/0022-3514.74.6.1464",
+  "Greenwald, McGhee & Schwartz 1998": "https://doi.org/10.1037/0022-3514.74.6.1464",
+  "Allport 1954": "https://search.worldcat.org/search?q=ti%3A%22The+Nature+of+Prejudice%22+au%3AAllport",
+  "Fiske 1998": "https://search.worldcat.org/search?q=ti%3A%22Handbook+of+Social+Psychology%22+Fiske+1998",
+  "Tajfel & Turner 1979": "https://search.worldcat.org/search?q=ti%3A%22The+Social+Psychology+of+Intergroup+Relations%22+1979"
+}

@@ -1,0 +1,11 @@
+diff --git a/Architecting_the_operation/video/yt02/stage/ov/stage_plan.json b/Architecting_the_operation/video/yt02/stage/ov/stage_plan.json
+index ed4c38d..9825895 100644
+--- a/Architecting_the_operation/video/yt02/stage/ov/stage_plan.json
++++ b/Architecting_the_operation/video/yt02/stage/ov/stage_plan.json
+@@ -115376,5 +115376,5 @@
+   "warnings": [
+     "Word timings normalized from relative milliseconds"
+   ],
+-  "episode_dir": "/Users/emmanuel/Documents/Theory/TheOriginalPower/Architecting_the_operation/video/yt02/stage"
++  "episode_dir": "/var/folders/95/ps3stnmx59j3ws19bprd4h9r0000gn/T/stage-repair-worktree-_1s1drjn/repo/Architecting_the_operation/video/yt02"
+ }
