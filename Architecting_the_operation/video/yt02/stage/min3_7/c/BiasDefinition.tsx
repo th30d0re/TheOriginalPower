@@ -1,5 +1,5 @@
 import React from 'react';
-import {BootIn, Flicker, KitSound, cubicInOut, cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
+import {BootIn, DrawRect, Flicker, KitSound, cubicInOut, cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../../tokens';
 import {StageSceneFrame} from '../shared';
 import {Label, SceneSource, leave, lineAttrs, mix, pathFrom, shapeAttrs, type LayoutBox, type Point} from '../d/sceneUtils';
@@ -48,7 +48,8 @@ function TermGlyph({kind}:{kind:'bias'|'prejudice'|'discrimination'|'act'}){
 function ModuleCard({box,term,kind,accent,opacity}:{box:LayoutBox;term:string;kind:'bias'|'prejudice'|'discrimination';accent:string;opacity:number}){
   const ink=color(accent), glyph={x:box.x+24,y:box.y+24,w:48,h:48};
   return <div data-term-module={kind} data-term={term} style={{opacity}}>
-    <div {...shapeAttrs(`module-${kind}`,box,'frame')} style={{position:'absolute',left:box.x,top:box.y,width:box.w,height:box.h,boxSizing:'border-box',background:color('color/fill/panel-render'),border:`1px solid ${color('color/line/hairline')}`}}>
+    <div {...shapeAttrs(`module-${kind}`,box,'frame')} style={{position:'absolute',inset:0}}>
+      <DrawRect box={box} progress={opacity} strokeToken="color/line/hairline" fillToken="color/fill/panel-render"/>
       <span aria-hidden="true" style={{position:'absolute',left:0,top:12,bottom:12,width:4,background:ink}}/>
     </div>
     <div {...shapeAttrs(`glyph-${kind}`,glyph,'mark','glyph')} style={{position:'absolute',left:glyph.x,top:glyph.y,width:glyph.w,height:glyph.h,color:ink}}><TermGlyph kind={kind}/></div>
@@ -59,7 +60,7 @@ function ModuleCard({box,term,kind,accent,opacity}:{box:LayoutBox;term:string;ki
 function TiltMeter({id,label,box,visible,labelVisible,favorProgress}:{id:string;label:string;box:LayoutBox;visible:number;labelVisible:number;favorProgress:number}){
   const center=box.x+box.w/2, trackY=box.y+90, offset=BIAS_TILT.travel*BIAS_TILT.fraction*favorProgress, track:Point[]=[[center-BIAS_TILT.travel,trackY],[center+BIAS_TILT.travel,trackY]];
   return <div data-tilt-meter={id} style={{opacity:visible}}>
-    <div {...shapeAttrs(`meter-${id}`,box,'frame')} style={{position:'absolute',left:box.x,top:box.y,width:box.w,height:box.h,boxSizing:'border-box',background:color('color/fill/panel-render'),border:`1px solid ${color('color/line/hairline')}`}}/>
+    <div {...shapeAttrs(`meter-${id}`,box,'frame')}><DrawRect box={box} progress={visible} strokeToken="color/line/hairline" fillToken="color/fill/panel-render"/></div>
     {labelVisible>0&&<Label id={`meter-${id}-label`} box={{x:box.x+24,y:box.y+18,w:300,h:28}} size={22} ls={1.3} lh={1.2} opacity={labelVisible}><span data-meter-label={id}>{label}</span></Label>}
     <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position:'absolute',inset:0}} aria-hidden="true">
       {favorProgress>0&&<rect data-favored-side="true" {...shapeAttrs(`meter-${id}-favored`,{x:center,y:trackY-12,w:BIAS_TILT.travel,h:24},'mark',`meter-${id}`)} x={center} y={trackY-12} width={BIAS_TILT.travel} height="24" fill={color('color/fill/gold-wash')} opacity={favorProgress}/>}
@@ -99,9 +100,9 @@ export function BiasDefinition({segment}:SceneProps) {
           <path {...lineAttrs('baseline-spine',busSpine)} d={pathFrom(busSpine)} stroke={gold} strokeWidth="4"/>
           {busCards.map((box,index)=><React.Fragment key={index}>
             <path {...lineAttrs(`baseline-channel-${index+1}`,[[B.x+60,box.y+45],[box.x,box.y+45]])} d={`M${B.x+60} ${box.y+45}H${box.x}`} stroke={gold} strokeWidth="3"/>
-            <rect {...shapeAttrs(`baseline-card-${index+1}`,box,'frame')} x={box.x} y={box.y} width={box.w} height={box.h} fill="none" stroke={color('color/line/hairline-strong')} strokeWidth="2"/>
           </React.Fragment>)}
         </svg>
+        {busCards.map((box,index)=><DrawRect key={index} box={box} progress={baselineP} strokeToken="color/line/hairline-strong" fillToken="color/bg/field"/>) }
       </div>}
       {ms>=cue.experimental&&<Flicker startFrame={Math.round(cue.experimental*30/1000)} durationFrames={16}><Label id="experimental" box={L.heading} size={24} ls={1.5} opacity={experimentalP}>EXPERIMENTAL PSYCHOLOGY</Label></Flicker>}
       {ms>=cue.three&&TERMS.map(([term,kind,accent],index)=><ModuleCard key={term} box={L.terms[index]} term={term} kind={kind} accent={accent} opacity={termsP}/>)}
@@ -111,7 +112,7 @@ export function BiasDefinition({segment}:SceneProps) {
       </>}
       {ms>=cue.process&&<>
         <Label id="process" box={L.process} size={22} ls={1.2} align="center" ink={gold} opacity={processP}>PROCESS</Label>
-        <div data-group-token="true" {...shapeAttrs('group-token',L.input,'frame')} style={{position:'absolute',left:L.input.x,top:L.input.y,width:L.input.w,height:L.input.h,boxSizing:'border-box',background:color('color/fill/panel-render'),border:`2px solid ${gold}`,opacity:processP}}/>
+        <div data-group-token="true" {...shapeAttrs('group-token',L.input,'frame')} style={{opacity:processP}}><DrawRect box={L.input} progress={processP} strokeToken="color/fill/gold" fillToken="color/fill/panel-render" strokeWidth={2}/></div>
         <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position:'absolute',inset:0}} aria-hidden="true">
           <path data-process-channel="bias" {...lineAttrs('channel-bias',biasChannel)} d={pathFrom(biasChannel)} fill="none" stroke={gold} strokeWidth="5" pathLength="1" strokeDasharray="1" strokeDashoffset={1-processP}/>
           <path data-process-channel="prejudice" {...lineAttrs('channel-prejudice',prejudiceChannel)} d={pathFrom(prejudiceChannel)} fill="none" stroke={color('color/text/accent')} strokeWidth="5" pathLength="1" strokeDasharray="1" strokeDashoffset={1-processP}/>
@@ -119,7 +120,7 @@ export function BiasDefinition({segment}:SceneProps) {
       </>}
       {ms>=cue.act&&<div style={{opacity:actP}}>
         <svg width="1920" height="1080" viewBox="0 0 1920 1080" style={{position:'absolute',inset:0}} aria-hidden="true"><path data-act-channel="true" {...lineAttrs('channel-act',actChannel)} d={pathFrom(actChannel)} fill="none" stroke={red} strokeWidth="5" pathLength="1" strokeDasharray="1" strokeDashoffset={1-actP}/></svg>
-        <div {...shapeAttrs('act-box',L.act,'frame')} style={{position:'absolute',left:L.act.x,top:L.act.y,width:L.act.w,height:L.act.h,boxSizing:'border-box',border:`2px solid ${red}`}}/>
+        <div {...shapeAttrs('act-box',L.act,'frame')}><DrawRect box={L.act} progress={actP} strokeToken="color/marker/race" fillToken="color/bg/field" strokeWidth={2}/></div>
         <Label id="act" box={{x:L.act.x+16,y:L.act.y+16,w:80,h:32}} size={22} ls={1.2} ink={red}>ACT</Label>
         <div {...shapeAttrs('act-glyph',{x:L.act.x+120,y:L.act.y+8,w:48,h:48},'mark','glyph')} style={{position:'absolute',left:L.act.x+120,top:L.act.y+8,width:48,height:48,color:red}}><TermGlyph kind="act"/></div>
       </div>}
@@ -128,7 +129,7 @@ export function BiasDefinition({segment}:SceneProps) {
 
     {ms>=cue.concept&&<>
       <div data-definition-wrap="true" data-definition-term={ms>=cue.bias?'BIAS':''} style={{opacity:definitionP}}>
-        <BootIn box={L.definition} startFrame={Math.round((cue.concept+300)*30/1000)} durationFrames={15} mode="snap" strokeToken="color/line/hairline" fillToken="color/fill/panel-render" beat><div {...shapeAttrs('definition-card',card,'frame')} style={{position:'absolute',left:0,top:0,width:'100%',height:'100%',boxSizing:'border-box',background:color('color/fill/panel-render'),border:`1px solid ${color('color/line/hairline')}`}}>
+        <BootIn box={L.definition} startFrame={Math.round((cue.concept+300)*30/1000)} durationFrames={15} mode="snap" strokeToken="color/line/hairline" fillToken="color/fill/panel-render" beat><div {...shapeAttrs('definition-card',card,'frame')} style={{position:'absolute',left:0,top:0,width:'100%',height:'100%',boxSizing:'border-box'}}>
           <span aria-hidden="true" style={{position:'absolute',left:0,top:0,bottom:0,width:5,background:gold}}/>
         </div></BootIn>
         {ms>=cue.bias&&<Label id="definition-title" box={{x:168,y:280,w:300,h:46}} size={38} weight={600} ls={0} lh={1.1} sans ink={gold} opacity={biasP}>BIAS</Label>}

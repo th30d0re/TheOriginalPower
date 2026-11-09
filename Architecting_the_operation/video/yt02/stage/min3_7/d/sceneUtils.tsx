@@ -49,7 +49,7 @@ export function FadeIn({ms, at, duration=500, children, style, dataBeat}:{ms:num
 }
 
 export function Panel({box, id, children, accent=false, style, dataPanel}:{box:LayoutBox;id?:string;children?:React.ReactNode;accent?:boolean;style?:React.CSSProperties;dataPanel?:string}) {
-  return <div data-panel={dataPanel} {...shapeAttrs(id??dataPanel??'panel', box, 'frame')} style={{position:'absolute',left:box.x,top:box.y,width:box.w,height:box.h,boxSizing:'border-box',overflow:'hidden',background:color('color/fill/panel-render'),border:`1px solid ${accent?color('color/line/hairline-strong'):color('color/line/hairline')}`,...style}}>{children}</div>;
+  return <div data-panel={dataPanel} {...shapeAttrs(id??dataPanel??'panel', box, 'frame')} style={{position:'absolute',inset:0,...style}}><DrawRect box={box} progress={1} strokeToken={accent?'color/line/hairline-strong':'color/line/hairline'} fillToken="color/fill/panel-render"/>{children}</div>;
 }
 
 /** Kit-powered frame that retains the audited panel node and resting fill exactly. */
@@ -57,7 +57,7 @@ export function MotionPanel({box,id,children,accent=false,style,dataPanel,startM
   const strokeToken=accent ? 'color/line/hairline-strong' : 'color/line/hairline';
   return <>
     <DrawRect box={box} startFrame={Math.round(startMs*30/1000)} durationFrames={Math.round(durationMs*30/1000)} strokeToken={strokeToken} fillToken="color/fill/panel-render" beat={beat}/>
-    <div data-panel={dataPanel} {...shapeAttrs(id??dataPanel??'panel',box,'frame')} style={{position:'absolute',left:box.x,top:box.y,width:box.w,height:box.h,boxSizing:'border-box',overflow:'hidden',background:color('color/fill/panel-render'),border:'none',...style}}>{children}</div>
+    <div data-panel={dataPanel} {...shapeAttrs(id??dataPanel??'panel',box,'frame')} style={{position:'absolute',left:box.x,top:box.y,width:box.w,height:box.h,boxSizing:'border-box',overflow:'hidden',background:'transparent',border:'none',...style}}>{children}</div>
   </>;
 }
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import {BootIn, Flicker} from '@stage';
+import {DrawRect, Flicker} from '@stage';
 import {color} from '../../tokens';
 
 export type Box={x:number;y:number;w:number;h:number};
@@ -15,14 +15,14 @@ export function Label({id,box,children,size=20,weight=500,ls=0,lh=1.25,sans=fals
   return <div {...textAttrs(id,box,{size,ls,lh,sans})} style={{position:'absolute',left:box.x,top:box.y,width:box.w,height:box.h,boxSizing:'border-box',font:`${weight} ${size}px "${sans?'IBM Plex Sans':'IBM Plex Mono'}"`,letterSpacing:ls,lineHeight:lh,textAlign:align,color:ink??color('color/text/primary'),opacity,...style}}>{children}</div>;
 }
 export function Panel({id,box,opacity=1,accent='color/line/hairline',style}:{id:string;box:Box;opacity?:number;accent?:string;style?:React.CSSProperties}){
-  return <div {...shapeAttrs(id,box,'frame')} style={{position:'absolute',left:box.x,top:box.y,width:box.w,height:box.h,boxSizing:'border-box',overflow:'hidden',background:color('color/fill/panel-render'),border:`1px solid ${color(accent)}`,opacity,...style}}/>;
+  return <div {...shapeAttrs(id,box,'frame')} style={{position:'absolute',inset:0,opacity,...style}}><DrawRect box={box} progress={1} strokeToken={accent} fillToken="color/fill/panel-render"/></div>;
 }
 
 /** Motion wrappers deliberately keep the approved Panel/Label geometry and audit attributes. */
 export const cueFrame=(ms:number)=>Math.round(ms*30/1000);
 export function BootPanel({startMs,durationMs=520,beat=false,...props}:{startMs:number;durationMs?:number;beat?:boolean}&React.ComponentProps<typeof Panel>){
   const {box}=props;
-  return <BootIn box={box} startFrame={cueFrame(startMs)} durationFrames={Math.round(durationMs*30/1000)} beat={beat}><div style={{position:'absolute',inset:0}}><Panel {...props} style={{position:'absolute',left:0,top:0,...props.style}}/></div></BootIn>;
+  return <div style={{position:'absolute',inset:0,opacity:props.opacity,...props.style}}><DrawRect box={box} startFrame={cueFrame(startMs)} durationFrames={Math.round(durationMs*30/1000)} strokeToken={props.accent??'color/line/hairline'} fillToken="color/fill/panel-render" beat={beat}/></div>;
 }
 export function FlickerLabel({startMs,durationMs=460,beat=false,...props}:{startMs:number;durationMs?:number;beat?:boolean}&React.ComponentProps<typeof Label>){
   return <Flicker startFrame={cueFrame(startMs)} durationFrames={Math.round(durationMs*30/1000)} beat={beat}><Label {...props}/></Flicker>;

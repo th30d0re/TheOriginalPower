@@ -1,5 +1,5 @@
 import React from 'react';
-import {BootIn, KitSound, cubicInOut, cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
+import {BootIn, DrawRect, KitSound, cubicInOut, cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../../tokens';
 import {NEURAL_FIELD, NeuralField, PersonMark, StageSceneFrame} from '../shared';
 import {Label, SceneSource, leave, lineAttrs, pathFrom, shapeAttrs, type LayoutBox, type Point} from '../d/sceneUtils';
@@ -69,7 +69,7 @@ function OutputCards({progressValue,labelsProgress}:{progressValue:number;labels
       {L.outputCards.map((card,index)=>{const y=card.y+card.h/2;return <path key={card.id} data-output-channel={index+1} {...lineAttrs(`channel-${card.id}`,[[1250,y],[card.x,y]])} d={`M1250 ${y}H${card.x}`} stroke={color('color/fill/gold')} strokeWidth="4" opacity={labelsProgress}/>;})}
     </svg>
     {labelsProgress>0&&L.outputCards.map((card,index)=><div key={card.id} style={{opacity:labelsProgress}}>
-      <div data-output-card={card.id} {...shapeAttrs(`card-${card.id}`,card,'frame')} style={{position:'absolute',left:card.x,top:card.y,width:card.w,height:card.h,boxSizing:'border-box',background:color('color/fill/panel-render'),border:`1px solid ${color('color/line/hairline-strong')}`}}/>
+      <div data-output-card={card.id} {...shapeAttrs(`card-${card.id}`,card,'frame')}><DrawRect box={card} progress={labelsProgress} strokeToken="color/line/hairline-strong" fillToken="color/fill/panel-render"/></div>
       <Label id={`card-${card.id}-text`} box={{x:card.x+20,y:card.y+45,w:card.w-40,h:36}} size={28} ls={1.5} lh={1.2} align="center" ink={index===0?color('color/fill/gold'):index===1?color('color/marker/race'):color('color/text/soft')}>{OUTPUTS[index]}</Label>
     </div>)}
   </div>;
@@ -99,7 +99,7 @@ export function HostWetware({segment}:SceneProps) {
   const allyLeader:Point[]=[[T.ally.x+T.ally.w,480],[BAND.cx-Math.sqrt(BAND.r*BAND.r-60*60),480]];
   return <KitSound mode="beats"><StageSceneFrame segment={segment}>
     {ms>=cue.terminology&&<>
-      <BootIn box={L.ribbon} startFrame={Math.round(cue.terminology*30/1000)} durationFrames={17} mode="snap" strokeToken="color/fill/gold" fillToken="color/fill/gold-wash" beat><div data-book-ribbon="true" {...shapeAttrs('ribbon',L.ribbon,'frame')} style={{position:'absolute',inset:0,width:'100%',height:'100%',boxSizing:'border-box',background:color('color/fill/gold-wash'),border:`1px solid ${gold}`,opacity:ribbonP}}/></BootIn>
+      <BootIn box={L.ribbon} startFrame={Math.round(cue.terminology*30/1000)} durationFrames={17} mode="snap" strokeToken="color/fill/gold" fillToken="color/fill/gold-wash" beat><div data-book-ribbon="true" {...shapeAttrs('ribbon',L.ribbon,'frame')} style={{position:'absolute',inset:0,opacity:ribbonP}}/></BootIn>
       <Label id="ribbon-text" box={{x:L.ribbon.x+20,y:L.ribbon.y+18,w:L.ribbon.w-40,h:36}} size={24} ls={2} align="center" ink={gold} opacity={ribbonP}>THE ORIGINAL POWER · CHAPTER 2 · §2.3.4 · HOST WETWARE</Label>
       <SceneSource text="The Original Power, Chapter 2, §2.3.4 · Host wetware" opacity={ribbonP}/>
     </>}
@@ -124,7 +124,8 @@ export function HostWetware({segment}:SceneProps) {
       {ms>=cue.pattern&&<OutputCards progressValue={patternP} labelsProgress={categorizationP}/>}
       {ms>=cue.categorization&&<Label id="fast" box={T.fast} size={23} ls={1.4} align="center" ink={gold} opacity={categorizationP}>FAST CATEGORIZATION</Label>}
 
-      {ms>=cue.bandwidth&&<div data-bandwidth-meter="true" {...shapeAttrs('bandwidth-meter',L.bandwidth,'frame')} style={{position:'absolute',left:L.bandwidth.x,top:L.bandwidth.y,width:L.bandwidth.w,height:L.bandwidth.h,boxSizing:'border-box',border:`1px solid ${color('color/line/hairline-strong')}`,opacity:bandwidthP}}>
+      {ms>=cue.bandwidth&&<div data-bandwidth-meter="true" {...shapeAttrs('bandwidth-meter',L.bandwidth,'frame')} style={{position:'absolute',inset:0,opacity:bandwidthP}}>
+        <DrawRect box={L.bandwidth} progress={bandwidthP} strokeToken="color/line/hairline-strong" fillToken="color/fill/panel-render"/>
         <div style={{position:'absolute',inset:4,right:`${52+40*compressP}%`,background:color('color/fill/gold-wash'),borderRight:`4px solid ${gold}`}}/>
       </div>}
       {ms>=cue.bandwidth&&<Label id="bandwidth" box={{x:L.bandwidth.x+16,y:L.bandwidth.y+7,w:400,h:26}} size={20} weight={500} ls={1.1} lh={1.25} opacity={bandwidthP}>FINITE MENTAL BANDWIDTH</Label>}
