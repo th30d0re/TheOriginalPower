@@ -3,7 +3,7 @@ import {useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../../tokens';
 import {EquationTerms, type EquationToken} from '../../equations';
 import {StageSceneFrame} from '../shared';
-import {AuditedTermBlock,DrawLine,FlickerLabel,KitSound,enter,HeartIcon,Label,lineAttrs,PANEL_STYLE,pathFrom,ScanLines,SceneSource,shapeAttrs,StickFigure,textAttrs,WordIcon,type Box,type Point} from './PackageAVisuals';
+import {AuditedTermBlock,DrawLine,DrawRect,FlickerLabel,KitSound,enter,HeartIcon,Label,lineAttrs,Panel,pathFrom,ScanLines,SceneSource,shapeAttrs,StickFigure,textAttrs,WordIcon,type Box,type Point} from './PackageAVisuals';
 import {EQ_25} from './SequenceAsTheory';
 
 const FORMAL_LINES:readonly (readonly EquationToken[])[]=[
@@ -42,7 +42,7 @@ function TurnThirteen({ms,cue}:{ms:number;cue:CueMap}) {
   ] as const;
   return <div data-audit-turn="13">
     {ms>=cue.t13Ordering.at&&<Header text="DEFAULT DEFINITION" p={ordering} startMs={cue.t13Ordering.at} beat/>}
-    <div {...shapeAttrs('debate-panel',HEARTS_LAYOUT.debate,'frame')} style={{...PANEL_STYLE,left:HEARTS_LAYOUT.debate.x,top:HEARTS_LAYOUT.debate.y,width:HEARTS_LAYOUT.debate.w,height:HEARTS_LAYOUT.debate.h,opacity:ordering}}>
+    <Panel id="debate-panel" box={HEARTS_LAYOUT.debate} opacity={ordering} startMs={cue.t13Ordering.at}>
       {ms>=cue.t13Public.at&&<div {...textAttrs('public-debate',{x:208,y:304,w:260,h:34},{size:25,lh:1.25})} style={{position:'absolute',left:48,top:54,width:260,font:'500 25px "IBM Plex Mono"',color:color('color/text/primary'),opacity:publicP}}>PUBLIC DEBATE</div>}
       <svg width="880" height="590" viewBox="0 0 880 590" style={{position:'absolute',inset:0}} aria-hidden="true">
         {ms>=cue.t13Public.at&&<path {...shapeAttrs('debate-funnel',{x:230,y:395,w:610,h:270},'frame')} d="M 70 145 H 550 L 680 280 L 550 415 H 70" fill={color('color/fill/gold-wash')} stroke={color('color/line/hairline-strong')} strokeWidth="2" opacity={publicP}/>}
@@ -53,7 +53,7 @@ function TurnThirteen({ms,cue}:{ms:number;cue:CueMap}) {
         {[190,270,350].map((y,index)=><path key={y} d={`M 80 ${y} H ${390-index*18}`} stroke={color('color/text/muted')} strokeWidth="8" opacity={.22*ordering}/>) }
       </svg>
       {ms>=cue.t13Audit.at&&<div {...textAttrs('individual-audit',{x:798,y:350,w:220,h:30},{size:20,lh:1.25})} style={{position:'absolute',right:22,top:100,width:220,textAlign:'center',font:'500 20px "IBM Plex Mono"',color:color('color/marker/race'),opacity:auditP}}>INDIVIDUAL AUDIT</div>}
-    </div>
+    </Panel>
     {targets.map((target,index)=>ms>=cue[target.cue].at&&<AuditedTermBlock key={target.label} id={`audit-target-${index+1}`} box={{x:HEARTS_LAYOUT.targets.x,y:HEARTS_LAYOUT.targets.y+index*174,w:580,h:142}} term={target.label} glyph={target.glyph} selected accent="color/marker/race" unit={`audit ${index+1}`} opacity={enter(ms,cue[target.cue].at,430)} titleSize={30}/>)}
     {ms>=cue.t13Intentions.at&&<Label id="ordering-directs-attention" box={{x:160,y:872,w:1580,h:42}} size={30} weight={400} sans align="center" opacity={enter(ms,cue.t13Intentions.at,500)}>The ordering directs attention.</Label>}
   </div>;
@@ -77,30 +77,31 @@ function TurnFourteen({ms,cue}:{ms:number;cue:CueMap}) {
   return <div data-audit-turn="14">
     {ms>=cue.t14Disparity.at&&<Header text="RACIAL DISPARITY" p={disparity} startMs={cue.t14Disparity.at} beat/>}
     <div style={{position:'absolute',left:HEARTS_LAYOUT.inputs.x,top:HEARTS_LAYOUT.inputs.y,width:HEARTS_LAYOUT.inputs.w,height:HEARTS_LAYOUT.inputs.h}}>
-      {rows.map((row,index)=>{const box={x:HEARTS_LAYOUT.inputs.x,y:HEARTS_LAYOUT.inputs.y+index*176,w:520,h:140};return ms>=cue[row.cue].at&&<div key={row.label} {...shapeAttrs(`disparity-row-${index+1}`,box,'frame')} style={{...PANEL_STYLE,left:0,top:index*176,width:520,height:140,opacity:enter(ms,cue[row.cue].at,450)}}>
+      {rows.map((row,index)=>{const box={x:HEARTS_LAYOUT.inputs.x,y:HEARTS_LAYOUT.inputs.y+index*176,w:520,h:140};return ms>=cue[row.cue].at&&<Panel key={row.label} id={`disparity-row-${index+1}`} box={{x:0,y:index*176,w:520,h:140}} opacity={enter(ms,cue[row.cue].at,450)} startMs={cue[row.cue].at}>
         <div style={{position:'absolute',left:22,top:20}}><DisparityGlyph kind={row.kind}/></div>
         <div {...textAttrs(`disparity-row-label-${index+1}`,{x:box.x+90,y:box.y+22,w:260,h:30},{size:22,lh:1.25})} style={{position:'absolute',left:90,top:22,font:'500 22px "IBM Plex Mono"'}}>{row.label}</div>
         <div {...shapeAttrs(`disparity-gold-bar-${index+1}`,{x:box.x+92,y:box.y+76,w:290,h:12},'mark',`bar-${index+1}`)} aria-hidden="true" style={{position:'absolute',left:92,top:76,width:290,height:12,background:color('color/fill/gold-wash')}}/>
         <div {...shapeAttrs(`disparity-red-bar-${index+1}`,{x:box.x+92,y:box.y+102,w:180-index*22,h:12},'mark',`bar-${index+1}`)} aria-hidden="true" style={{position:'absolute',left:92,top:102,width:180-index*22,height:12,background:color('color/fill/red-wash')}}/>
         {ms>=cue.t14Disparity.at&&<div aria-hidden="true" style={{position:'absolute',left:390,top:70,width:18,height:56,borderTop:`2px solid ${color('color/marker/race')}`,borderBottom:`2px solid ${color('color/marker/race')}`,borderRight:`2px solid ${color('color/marker/race')}`,opacity:disparity}}/>}
-      </div>;})}
+      </Panel>;})}
     </div>
-    {ms>=cue.t14Default.at&&<div data-definition-router="true" {...shapeAttrs('definition-router',HEARTS_LAYOUT.router,'frame')} style={{...PANEL_STYLE,left:HEARTS_LAYOUT.router.x,top:HEARTS_LAYOUT.router.y,width:HEARTS_LAYOUT.router.w,height:HEARTS_LAYOUT.router.h,opacity:route}}>
+    {ms>=cue.t14Default.at&&<Panel id="definition-router" box={HEARTS_LAYOUT.router} opacity={route} startMs={cue.t14Default.at}>
       <div {...textAttrs('definition-router-title',{x:780,y:345,w:310,h:30},{size:22,lh:1.25})} style={{position:'absolute',left:30,top:35,width:310,textAlign:'center',font:'500 22px "IBM Plex Mono"',color:color('color/fill/gold')}}>DEFAULT DEFINITION</div>
       <svg width="370" height="420" viewBox="0 0 370 420" aria-hidden="true">
         {[120,210,300].map((y,index)=>{const points:Point[]=[[768,HEARTS_LAYOUT.router.y+y],[916,HEARTS_LAYOUT.router.y+y],[975,520],[1098,520]];const k=enter(ms,cue.t14Default.at+index*90,500);return <path key={y} {...lineAttrs(`router-line-${index+1}`,points)} d={`M 18 ${y} H 166 Q 225 ${y} 225 210 H 348`} fill="none" stroke={color('color/fill/gold')} strokeWidth="2" pathLength={1} strokeDasharray={k>=1?undefined:`${k} 1`}/>;})}
       </svg>
-    </div>}
-    {ms>=cue.t14Malice.at&&<div {...shapeAttrs('thought-audit-panel',HEARTS_LAYOUT.thoughts,'frame')} style={{...PANEL_STYLE,left:HEARTS_LAYOUT.thoughts.x,top:HEARTS_LAYOUT.thoughts.y,width:HEARTS_LAYOUT.thoughts.w,height:HEARTS_LAYOUT.thoughts.h,opacity:malice}}>
+    </Panel>}
+    {ms>=cue.t14Malice.at&&<Panel id="thought-audit-panel" box={HEARTS_LAYOUT.thoughts} opacity={malice} startMs={cue.t14Malice.at}>
       <div {...textAttrs('malice-audit',{x:1210,y:272,w:550,h:32},{size:24,lh:1.25})} style={{position:'absolute',left:0,top:42,width:550,textAlign:'center',font:'500 24px "IBM Plex Mono"',color:color('color/marker/race')}}>MALICE AUDIT</div>
       <svg width="550" height="620" viewBox="0 0 550 620" aria-hidden="true">
-        <circle {...shapeAttrs('thought-head',{x:1373,y:373,w:224,h:224},'frame')} cx="275" cy="255" r="112" fill="none" stroke={color('color/line/hairline-strong')} strokeWidth="3"/>
-        <path d="M 205 370 Q 275 430 345 370" fill="none" stroke={color('color/line/hairline-strong')} strokeWidth="3"/>
-        <line {...lineAttrs('malice-probe',[[1690,335],[1510+(1-malice)*160,460+(1-malice)*-100]])} x1="480" y1="105" x2={300+(1-malice)*160} y2={230+(1-malice)*-100} stroke={color('color/marker/race')} strokeWidth="4"/>
-        <circle cx={300+(1-malice)*160} cy={230+(1-malice)*-100} r="12" fill={color('color/marker/race')}/>
+        <path {...shapeAttrs('sealed-thought-bubble',{x:1318,y:340,w:334,h:172},'frame')} d="M 112 190 C 112 130 165 98 250 98 C 335 98 388 130 388 190 C 388 244 345 274 274 280 L 246 310 L 236 276 C 160 268 112 238 112 190 Z" fill={color('color/surface/1')} stroke={color('color/line/hairline-strong')} strokeWidth="3"/>
+        <path d="M 184 181 C 204 164 226 158 250 158 C 274 158 296 164 316 181" fill="none" stroke={color('color/text/muted')} strokeWidth="2" opacity=".72"/>
+        <line {...lineAttrs('malice-probe',[[1690,335],[1588+(1-malice)*120,442+(1-malice)*-100]])} x1="480" y1="105" x2={378+(1-malice)*120} y2={212+(1-malice)*-100} stroke={color('color/marker/race')} strokeWidth="4"/>
+        <circle cx={378+(1-malice)*120} cy={212+(1-malice)*-100} r="10" fill={color('color/marker/race')}/>
       </svg>
+      <div style={{position:'absolute',left:230,top:290,width:90,height:126}}><StickFigure x={24} y={24} group="neutral" emphasis={1} scale={1.35} animate={false}/></div>
       {ms>=cue.t14Thoughts.at&&<div {...textAttrs('private-thoughts',{x:1285,y:730,w:400,h:38},{size:28,lh:1.25,sans:true})} style={{position:'absolute',left:75,top:500,width:400,textAlign:'center',fontSize:28,opacity:enter(ms,cue.t14Thoughts.at,450)}}>PRIVATE THOUGHTS</div>}
-    </div>}
+    </Panel>}
   </div>;
 }
 
@@ -114,15 +115,15 @@ function TurnFifteen({ms,cue}:{ms:number;cue:CueMap}) {
   const records=enter(ms,cue.t15Records.at,450);
   return <div data-audit-turn="15">
     {ms>=cue.t15Original.at&&<Header text="THE ORIGINAL POWER" p={original} startMs={cue.t15Original.at} beat/>}
-    <div {...shapeAttrs('claim-panel',HEARTS_LAYOUT.claim,'frame')} style={{...PANEL_STYLE,left:HEARTS_LAYOUT.claim.x,top:HEARTS_LAYOUT.claim.y,width:HEARTS_LAYOUT.claim.w,height:HEARTS_LAYOUT.claim.h,opacity:original}}>
+    <Panel id="claim-panel" box={HEARTS_LAYOUT.claim} opacity={original} startMs={cue.t15Original.at}>
       {ms>=cue.t15Causal.at&&<div {...textAttrs('claim-label',{x:162,y:288,w:426,h:30},{size:22,lh:1.25})} style={{position:'absolute',left:32,top:38,width:426,textAlign:'center',font:'500 22px "IBM Plex Mono"',color:color('color/fill/gold'),opacity:causal}}>CLAIM</div>}
       {ms>=cue.t15Testable.at&&<div {...textAttrs('historical-claim',{x:168,y:380,w:414,h:94},{size:34,lh:1.25,sans:true})} style={{position:'absolute',left:38,top:130,width:414,textAlign:'center',fontSize:34,lineHeight:1.25,fontWeight:600,opacity:testable}}>TESTABLE HISTORICAL CLAIM</div>}
-    </div>
+    </Panel>
     {ms>=cue.t15Testable.at&&<svg width="1920" height="1080" viewBox="0 0 1920 1080" aria-hidden="true" style={{position:'absolute',left:0,top:0,overflow:'visible'}}>
       <path {...lineAttrs('claim-test-lead',[[375,790],[375,880],[1550,880],[1550,832]])} d="M375 790 V880 H1550 V838" fill="none" stroke={color('color/fill/gold')} strokeWidth="3" strokeDasharray="10 9" opacity={testable}/>
       <path d="M1540 844 L1550 828 L1560 844" fill="none" stroke={color('color/fill/gold')} strokeWidth="3" opacity={testable}/>
     </svg>}
-    <div {...shapeAttrs('formal-panel',HEARTS_LAYOUT.formal,'frame')} style={{...PANEL_STYLE,left:HEARTS_LAYOUT.formal.x,top:HEARTS_LAYOUT.formal.y,width:HEARTS_LAYOUT.formal.w,height:HEARTS_LAYOUT.formal.h,opacity:testable}}>
+    <Panel id="formal-panel" box={HEARTS_LAYOUT.formal} opacity={testable} startMs={cue.t15Testable.at}>
       {ms>=cue.t15Formally.at&&<>
         <div {...textAttrs('formal-statement',{x:714,y:284,w:522,h:30},{size:22,lh:1.25})} style={{position:'absolute',left:24,top:34,width:522,textAlign:'center',font:'500 22px "IBM Plex Mono"',color:color('color/fill/gold'),opacity:formal}}>FORMAL STATEMENT</div>
         <div data-equation={EQ_25} style={{opacity:formal}}>
@@ -130,20 +131,20 @@ function TurnFifteen({ms,cue}:{ms:number;cue:CueMap}) {
         </div>
         <div {...textAttrs('formal-source',{x:740,y:640,w:470,h:30},{size:20,lh:1.25})} style={{position:'absolute',left:50,top:390,width:470,textAlign:'center',font:'400 20px "IBM Plex Mono"',color:color('color/text/muted'),opacity:formal}}>Eq. 2.5 · Tier 3 structural claim</div>
       </>}
-    </div>
-    <div {...shapeAttrs('archive-panel',HEARTS_LAYOUT.archive,'frame')} style={{...PANEL_STYLE,left:HEARTS_LAYOUT.archive.x,top:HEARTS_LAYOUT.archive.y,width:HEARTS_LAYOUT.archive.w,height:HEARTS_LAYOUT.archive.h,opacity:checked}}>
+    </Panel>
+    <Panel id="archive-panel" box={HEARTS_LAYOUT.archive} opacity={checked} startMs={cue.t15Checked.at}>
       {ms>=cue.t15Checked.at&&<div {...textAttrs('primary-records',{x:1350,y:250,w:400,h:30},{size:22,lh:1.25})} style={{position:'absolute',left:20,top:30,width:400,textAlign:'center',font:'500 22px "IBM Plex Mono"',color:color('color/fill/gold'),opacity:checked}}>PRIMARY RECORDS</div>}
+      {ms>=cue.t15Checked.at&&Array.from({length:6},(_,index)=>{const x=56+(index%2)*190,y=110+Math.floor(index/2)*116;return <DrawRect key={index} id={`archive-folio-${index+1}`} box={{x,y,w:150,h:86}} startFrame={Math.round((cue.t15Checked.at+index*80)*30/1000)} durationFrames={13} strokeToken="color/line/hairline" fillToken="color/surface/1"/>;})}
+      {ms>=cue.t15Records.at&&<DrawRect id="historical-test-frame" box={{x:78,y:480,w:284,h:72}} startFrame={Math.round(cue.t15Records.at*30/1000)} durationFrames={14} strokeToken="color/marker/race" fillToken="color/fill/red-faint"/>}
       <svg width="440" height="600" viewBox="0 0 440 600" aria-hidden="true">
         {ms>=cue.t15Checked.at&&Array.from({length:6},(_,index)=><g key={index} opacity={enter(ms,cue.t15Checked.at+index*80,420)}>
-          <rect {...shapeAttrs(`archive-folio-${index+1}`,{x:1386+(index%2)*190,y:330+Math.floor(index/2)*116,w:150,h:86},'frame')} x={56+(index%2)*190} y={110+Math.floor(index/2)*116} width="150" height="86" fill={color('color/surface/1')} stroke={color('color/line/hairline')}/>
           <path d={`M ${74+(index%2)*190} ${137+Math.floor(index/2)*116} H ${184+(index%2)*190} M ${74+(index%2)*190} ${160+Math.floor(index/2)*116} H ${164+(index%2)*190}`} stroke={color('color/text/muted')} strokeWidth="2"/>
         </g>)}
         {ms>=cue.t15Centuries.at&&<line x1="26" y1="100" x2="26" y2={100+300*centuries} stroke={color('color/fill/gold')} strokeWidth="4"/>}
-        {ms>=cue.t15Records.at&&<rect x="78" y="480" width="284" height="72" fill={color('color/fill/red-faint')} stroke={color('color/marker/race')} strokeWidth="2" opacity={records}/>}
       </svg>
       {ms>=cue.t15Centuries.at&&<div {...textAttrs('five-centuries',{x:1348,y:661,w:170,h:28},{size:20,lh:1.25})} style={{position:'absolute',left:18,top:441,width:170,textAlign:'left',font:'500 20px "IBM Plex Mono"',color:color('color/fill/gold'),opacity:centuries}}>FIVE CENTURIES</div>}
       {ms>=cue.t15Records.at&&<div {...textAttrs('historical-test',{x:1408,y:720,w:284,h:30},{size:22,lh:1.25})} style={{position:'absolute',left:78,top:500,width:284,textAlign:'center',font:'500 22px "IBM Plex Mono"',color:color('color/marker/race'),opacity:records}}>HISTORICAL TEST</div>}
-    </div>
+    </Panel>
   </div>;
 }
 
