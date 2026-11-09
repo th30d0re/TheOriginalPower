@@ -1293,6 +1293,258 @@ shots:
   # Minutes 32–35: turns 154–167. The binary endures, the illusion breaks, orthogonal deflection
   # and the kinetic decoy, the wide cone shot, then the two-set picture splits into five tiers and
   # meets the archive: slave patrols, the 13th Amendment exception, convict leasing.
+  - shot_id: S00-111
+    turn_id: 8a9bdebbb7086b56
+    scene: PredictionOne
+    instance: PredictionOne
+    cues:
+      t111Prediction: {word: Prediction}
+      t111Institutional: {word: Institutional}
+      t111Founding: {word: founding}
+      t111Archival: {word: archival}
+      t111Commercial: {word: commercial}
+      t111Extraction: {word: extraction}
+      t111Licensing: {word: licensing}
+      t111First: {word: first}
+      t111Commissioned: {word: commissioned}
+      t111Ideology: {word: ideology}
+      t111Written: {word: written}
+      t111Afterward: {word: afterward}
+      t111Justify: {word: justify}
+      t111Captives: {word: captives}
+  - shot_id: S00-112
+    turn_id: 269c18513f8a26cd
+    scene: PredictionTwo
+    instance: PredictionTwo
+    cues:
+      t112Prediction: {word: Prediction}
+      t112Codification: {word: Codification}
+      t112Solidarity: {word: solidarity, occurrence: 1}
+      t112Threats: {word: threats}
+      t112Statutory: {word: statutory}
+      t112Boundaries: {word: boundaries}
+      t112White: {word: white}
+      t112Buffer: {word: buffer}
+      t112Privileges: {word: privileges}
+      t112Enacted: {word: enacted}
+      t112Decades: {word: decades}
+      t112Joint: {word: joint}
+      t112Rebellions: {word: rebellions}
+      t112CrossRacial: {word: cross-racial}
+      t112Crises: {word: crises}
+  - shot_id: S00-113
+    turn_id: 73bc04b7222d2e72
+    scene: PredictionThree
+    instance: PredictionThree
+    cues:
+      t113Prediction: {word: Prediction}
+      t113Maintenance: {word: Maintenance}
+      t113Cultivation: {word: cultivation}
+      t113Visible: {word: visible}
+      t113Control: {word: control}
+      t113Struck: {word: struck}
+      t113Discredited: {word: discredited}
+      t113System: {word: system}
+      t113Swaps: {word: swaps}
+      t113Proxy: {word: proxy}
+      t113Extraction: {word: extraction}
+      t113Running: {word: running}
+      t113Cultivating: {word: cultivating}
+      t113Stereotypes: {word: stereotypes}
+  - shot_id: S00-114
+    turn_id: 4afdfd78ebd5f98c
+    scene: PredictionFour
+    instance: PredictionFour
+    cues:
+      t114Prediction: {word: Prediction}
+      t114Suppression: {word: Suppression}
+      t114Scales: {word: scales}
+      t114Extraction: {word: extraction, occurrence: 1}
+      t114Spending: {word: spending}
+      t114Physical: {word: physical}
+      t114Enforcement: {word: enforcement}
+      t114Rises: {word: rises}
+      t114Falls: {word: falls}
+      t114Lockstep: {word: lockstep}
+      t114Dollar: {word: dollar}
+      t114Value: {word: value}
+      t114Commodity: {word: commodity}
+      t114Stable: {word: stable}
+      t114Ratio: {word: ratio}
+  - shot_id: S00-115
+    turn_id: 048a3d67abf8e03e
+    scene: RefutationOne
+    instance: RefutationOne
+    cues:
+      t115Alongside: {word: Alongside}
+      t115Predictions: {word: predictions}
+      t115Standards: {word: standards}
+      t115Refutation: {word: Refutation, occurrence: 2}
+      t115Durable: {word: durable}
+      t115Caste: {word: caste}
+      t115Without: {word: without}
+      t115Elite: {word: Elite}
+      t115Sponsorship: {word: sponsorship}
+      t115Appearing: {word: appearing}
+      t115Before: {word: before}
+      t115Extraction: {word: extraction}
+      t115Falsify: {word: falsify}
+      t115Hypothesis: {word: hypothesis}
+  - shot_id: S00-116
+    turn_id: 0265db772246ea32
+    scene: RefutationTwo
+    instance: RefutationTwo
+    cues:
+      t116Refutation: {word: Refutation}
+      t116Empirical: {word: empirical}
+      t116Defeat: {word: defeat}
+      t116Conditions: {word: conditions}
+      t116Rising: {word: rising}
+      t116Cotton: {word: cotton}
+      t116Revenue: {word: revenue}
+      t116Flat: {word: flat}
+      t116Falling: {word: falling}
+      t116Patrol: {word: slave-patrol}
+      t116Spending: {word: spending}
+      t116Post1965: {word: post-nineteen-sixty-five}
+      t116Rise: {word: rise}
+      t116Union: {word: union}
+      t116Incarceration: {word: incarceration}
+      t116Wealth: {word: wealth}
+      t116Share: {word: share}
+  - shot_id: S00-117
+    turn_id: 3954c39892d9c194
+    scene: RefutationThree
+    instance: RefutationThree
+    cues:
+      t117Refutation: {word: Refutation}
+      t117Vector: {word: vector}
+      t117Definition: {word: definition}
+      t117Racism: {word: racism, occurrence: 1}
+      t117Fail: {word: fail}
+      t117Personal: {word: personal}
+      t117Prejudice: {word: prejudice}
+      t117Produced: {word: produced}
+      t117Systemic: {word: systemic}
+      t117Without: {word: without}
+      t117Institutional: {word: institutional}
+      t117Control: {word: control}
+      t117Legislatures: {word: legislatures}
+      t117Policing: {word: policing}
+      t117Courts: {word: courts}
+      t117Capital: {word: capital}
+      t117Allocation: {word: allocation}
+  - shot_id: S00-118
+    turn_id: eafe123e159078e1
+    scene: EmpiricalTestMatrix
+    instance: EmpiricalTestMatrix
+    cues:
+      t118Segments: {word: Segments}
+      t118Eight: {word: eight}
+      t118Nine: {word: nine}
+      t118Eleven: {word: eleven}
+      t118Test: {word: test}
+      t118Predictions: {word: Predictions}
+      t118Standards: {word: Standards}
+      t118Portugal: {word: Portugal}
+      t118Virginia: {word: Virginia}
+      t118Quantitative: {word: quantitative}
+      t118American: {word: American}
+      t118Record: {word: record}
+      t118Eighteen: {word: eighteen}
+      t118Twenty: {word: twenty, occurrence: 1}
+  - shot_id: S00-119
+    turn_id: 4e689b6b77911f85
+    scene: EngineeringQuestion
+    instance: EngineeringQuestion
+    cues:
+      t119Why: {word: Why}
+      t119Engineering: {word: engineering, occurrence: 1}
+      t119Checklist: {word: checklist}
+      t119Social: {word: social}
+      t119Definition: {word: definition}
+      t119Calling: {word: Calling}
+      t119System: {word: system, occurrence: 1}
+      t119Requires: {word: requires}
+      t119Working: {word: working}
+      t119Parts: {word: parts}
+      t119Formal: {word: formal}
+      t119Theory: {word: theory}
+  - shot_id: S00-120
+    turn_id: 5a5112ac1b631642
+    scene: AnalyticalSystem
+    instance: AnalyticalSystem
+    cues:
+      t120Strict: {word: strict}
+      t120Analytical: {word: analytical}
+      t120System: {word: system}
+      t120Bounded: {word: bounded}
+      t120Feedback: {word: feedback-regulated}
+      t120Machine: {word: machine}
+      t120Measurable: {word: measurable}
+      t120Variables: {word: variables}
+      t120Governing: {word: governing}
+      t120Equations: {word: equations}
+      t120Working: {word: working}
+      t120Apparatus: {word: apparatus}
+      t120Inputs: {word: inputs}
+      t120Internal: {word: internal}
+      t120Parts: {word: parts}
+      t120Outputs: {word: outputs}
+      t120Tracked: {word: tracked}
+  - shot_id: S00-121
+    turn_id: 64333e3934890372
+    scene: SystemChecklistAudit
+    instance: SystemChecklistAudit
+    cues:
+      t121Formal: {word: formal}
+      t121FivePart: {word: five-part}
+      t121Checklist: {word: checklist}
+      t121Components: {word: components}
+      t121Policed: {word: policed}
+      t121Boundary: {word: boundary}
+      t121Inputs: {word: inputs}
+      t121Outputs: {word: outputs}
+      t121Objective: {word: objective}
+      t121Purpose: {word: purpose}
+      t121Stabilizing: {word: stabilizing}
+      t121Feedback: {word: feedback}
+      t121Loops: {word: loops}
+  - shot_id: S00-122
+    turn_id: dba8f385427509b1
+    scene: SystemChecklistAudit
+    instance: SystemChecklistAudit
+    cues:
+      t122American: {word: American}
+      t122Hierarchy: {word: hierarchy}
+      t122Audited: {word: audited}
+      t122Five: {word: five}
+      t122Requirements: {word: requirements}
+      t122Equations: {word: equations}
+      t122Diagrams: {word: diagrams}
+      t122Chapters: {word: Chapters}
+      t122Ch0: {word: "0"}
+      t122Ch2: {word: "2"}
+      t122Ch4: {word: "4"}
+  - shot_id: S00-123
+    turn_id: 04a13af0496555ae
+    scene: DifferentiatedComponents
+    instance: DifferentiatedComponents
+    cues:
+      t123Makes: {word: makes}
+      t123Racism: {word: racism}
+      t123System: {word: system}
+      t123Requirement: {word: Requirement}
+      t123One: {word: one}
+      t123Differentiated: {word: differentiated}
+      t123Components: {word: components}
+      t123Specialized: {word: specialized}
+      t123Roles: {word: roles}
+      t123Baseline: {word: baseline}
+      t123Division: {word: division}
+      t123Population: {word: population}
+      t123InGroup: {word: in-group}
+      t123OutGroup: {word: out-group}
   - shot_id: S00-154
     turn_id: 77a0ff73439ab4e1
     scene: BinaryEndures
@@ -1484,3 +1736,4 @@ shots:
       t167Positions: {word: positions}
       t167Authority: {word: authority}
       t167Protection: {word: protection}
+  # Minutes 22–26: turns 111–123 (Predictions 1–4, Refutation Standards 1–3, Empirical Test Matrix, and Formal System Definition).
