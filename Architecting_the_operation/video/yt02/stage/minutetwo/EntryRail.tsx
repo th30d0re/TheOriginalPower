@@ -1,4 +1,5 @@
 import React from 'react';
+import {DrawRect} from '@stage';
 import {color} from '../tokens';
 
 // Shared minute-two geometry: the slim numbered entry rail on the left (turns 7–9, and the
@@ -38,8 +39,8 @@ export function RailSlot({index, spec}: {index:number; spec:RailSlotSpec}) {
   const gold = spec.state==='lit' || spec.state==='dim' || s>.5;
   const rule = (spec.state==='placeholder' ? 0 : 1) * s;
   return <div data-rail-slot={index+1} data-rail-state={spec.state} style={{position:'absolute', inset:0, opacity:op, background:color('color/fill/panel-render'), color:gold?color('color/fill/gold'):color('color/text/dim')}}>
-    <span aria-hidden="true" style={{position:'absolute', inset:0, border:`1px solid ${color('color/line/hairline')}`, opacity:s}}/>
-    <span aria-hidden="true" style={{position:'absolute', inset:0, border:`1px dashed ${color('color/line/hairline')}`, opacity:1-s}}/>
+    <div aria-hidden="true" style={{position:'absolute', inset:0, opacity:s}}><DrawRect box={{x:0,y:0,w:RAIL.w,h:RAIL.slotH}} progress={s} strokeToken="color/line/hairline" fillToken="color/fill/panel-render" glowToken="color/fill/gold" strokeWidth={1} seed={31+index}/></div>
+    {s<1 && <div aria-hidden="true" style={{position:'absolute', inset:0, opacity:1-s, backgroundImage:`repeating-linear-gradient(90deg, ${color('color/line/hairline')} 0 5px, transparent 5px 9px), repeating-linear-gradient(90deg, ${color('color/line/hairline')} 0 5px, transparent 5px 9px), repeating-linear-gradient(0deg, ${color('color/line/hairline')} 0 5px, transparent 5px 9px), repeating-linear-gradient(0deg, ${color('color/line/hairline')} 0 5px, transparent 5px 9px)`, backgroundSize:'100% 1px, 100% 1px, 1px 100%, 1px 100%', backgroundPosition:'top, bottom, left, right', backgroundRepeat:'no-repeat'}}/>}
     {rule>0 && <span aria-hidden="true" style={{position:'absolute', left:0, top:8, bottom:8, width:4, background:color('color/fill/gold'), transform:`scaleY(${rule})`, transformOrigin:'center top'}}/>}
     {spec.state==='placeholder'
       ? <>
@@ -65,9 +66,9 @@ export function EntryRail({slots, enter}: {slots:[RailSlotSpec,RailSlotSpec,Rail
 // from the dashed "when included at all" state (turn 9 opening) to the solid lit state.
 export function SenseCard({title, enter, dashed=0, children}: React.PropsWithChildren<{title:string; enter:number; dashed?:number}>) {
   return <div data-sense-card={title} data-card-border={dashed>.5?'dashed':'solid'} style={{position:'absolute', left:CARD.x, top:CARD.y, width:CARD.w, height:CARD.h, opacity:enter, background:color('color/fill/panel-render'), boxShadow:`inset 0 0 0 1px ${color('color/fill/panel-wash')}`}}>
-    <span aria-hidden="true" style={{position:'absolute', inset:0, border:`1px solid ${color('color/line/hairline')}`, opacity:1-dashed}}/>
-    <span aria-hidden="true" style={{position:'absolute', inset:0, border:`1px dashed ${color('color/line/hairline')}`, opacity:dashed}}/>
-    <div style={{position:'absolute', left:40, top:32, fontSize:48, fontWeight:500, color:color('color/text/primary')}}>{title}</div>
+    <div aria-hidden="true" style={{position:'absolute', inset:0, opacity:1-dashed}}><DrawRect box={{x:0,y:0,w:CARD.w,h:CARD.h}} progress={enter} strokeToken="color/line/hairline" fillToken="color/fill/panel-render" glowToken="color/fill/gold" strokeWidth={1} seed={71}/></div>
+    {dashed>0 && <div aria-hidden="true" style={{position:'absolute', inset:0, opacity:dashed, backgroundImage:`repeating-linear-gradient(90deg, ${color('color/line/hairline')} 0 6px, transparent 6px 11px), repeating-linear-gradient(90deg, ${color('color/line/hairline')} 0 6px, transparent 6px 11px), repeating-linear-gradient(0deg, ${color('color/line/hairline')} 0 6px, transparent 6px 11px), repeating-linear-gradient(0deg, ${color('color/line/hairline')} 0 6px, transparent 6px 11px)`, backgroundSize:'100% 1px, 100% 1px, 1px 100%, 1px 100%', backgroundPosition:'top, bottom, left, right', backgroundRepeat:'no-repeat'}}/>}
+    <div style={{position:'absolute', left:40, top:32, fontSize:48, fontWeight:500, color:color('color/text/primary'), zIndex:1}}>{title}</div>
     {children}
   </div>;
 }

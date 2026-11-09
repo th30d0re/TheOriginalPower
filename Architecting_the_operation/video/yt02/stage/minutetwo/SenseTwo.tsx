@@ -1,5 +1,5 @@
 import React from 'react';
-import {DrawLine, Flicker, KitSound, cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
+import {DrawLine, DrawRect, Flicker, KitSound, cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../tokens';
 import {SceneBorder} from '../dashboard/SceneBorder';
 import {EntryRail, SenseCard, type RailSlotSpec} from './EntryRail';
@@ -58,14 +58,14 @@ export function SenseTwo({segment}:SceneProps) {
           <rect x={60} y={30} width={1140} height={300} rx={80} fill="none" stroke={color('color/line/hairline')} strokeWidth={2} strokeDasharray="10 8"/>
           <circle cx={150} cy={366} r={13} fill="none" stroke={color('color/line/hairline')} strokeWidth={2}/>
           <circle cx={112} cy={394} r={7} fill="none" stroke={color('color/line/hairline')} strokeWidth={2}/>
-          <rect x={573} y={12} width={134} height={36} rx={6} fill={color('color/bg/field')} stroke={color('color/line/hairline')}/>
+          <foreignObject x={573} y={12} width={134} height={36}><DrawRect box={{x:0,y:0,w:134,h:36}} progress={bubbleP} strokeToken="color/line/hairline" fillToken="color/bg/field" glowToken="color/fill/gold" strokeWidth={1} seed={111}/></foreignObject>
           <text x={640} y={38} textAnchor="middle" fontFamily="IBM Plex Mono" fontSize={22} fill={color('color/text/muted')}>doctrine</text>
         </g>}
         {BOXES.map(({key, cue:name, label, x}) => {
           const at = cue[name].at;
           const p = enter(ms, at, 350);
           return ms >= at && <g key={key} data-diagram-box={label} opacity={p}>
-            <rect x={x} y={BOX_Y} width={BOX_W} height={BOX_H} rx={8} fill={color('color/fill/panel-render')} stroke={color('color/line/hairline-strong')} strokeWidth={1.5}/>
+            <foreignObject x={x} y={BOX_Y} width={BOX_W} height={BOX_H}><DrawRect box={{x:0,y:0,w:BOX_W,h:BOX_H}} progress={p} strokeToken="color/line/hairline-strong" fillToken="color/fill/panel-render" glowToken="color/fill/gold" strokeWidth={1.5} seed={121+x}/></foreignObject>
             <text x={x+BOX_W/2} y={BOX_Y+57} textAnchor="middle" fontFamily="IBM Plex Sans" fontSize={22} fill={color('color/text/primary')}>{label}</text>
           </g>;
         })}
@@ -73,7 +73,7 @@ export function SenseTwo({segment}:SceneProps) {
           <text x={630} y={266} textAnchor="middle" fontFamily="IBM Plex Mono" fontSize={20} fill={color('color/text/muted')} opacity={arrowP}>claimed to determine</text>
         </g>}
         {ms >= cue.t8Achievement.at && <g data-unit-tag="a belief" opacity={unitP}>
-          <rect x={525} y={348} width={210} height={40} rx={6} fill={color('color/fill/panel-render')} stroke={color('color/line/hairline')}/>
+          <foreignObject x={525} y={348} width={210} height={40}><DrawRect box={{x:0,y:0,w:210,h:40}} progress={unitP} strokeToken="color/line/hairline" fillToken="color/fill/panel-render" glowToken="color/fill/gold" strokeWidth={1} seed={131}/></foreignObject>
           <text x={630} y={375} textAnchor="middle" fontFamily="IBM Plex Mono" fontSize={22} fill={color('color/text/muted')}>unit: a belief</text>
         </g>}
       </svg>

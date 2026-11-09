@@ -1,5 +1,5 @@
 import React from 'react';
-import {Flicker, KitSound, cubicOut, progress, useCue, usePlan, useStageMs, type SceneProps} from '@stage';
+import {DrawRect, Flicker, KitSound, cubicOut, progress, useCue, usePlan, useStageMs, type SceneProps} from '@stage';
 import {color} from '../tokens';
 import {SceneBorder} from '../dashboard/SceneBorder';
 import {BacklashOscillatorView} from '../dashboard/artifacts/BacklashOscillatorView';
@@ -19,14 +19,15 @@ export const WHY_LAYOUT = {
 } as const;
 
 function ThumbFrame({children}:React.PropsWithChildren) {
-  return <div style={{position:'absolute',left:0,top:0,width:320,height:180,overflow:'hidden',background:color('color/fill/panel-render'),border:`1px solid ${color('color/line/hairline')}`}}>{children}</div>;
+  return <div style={{position:'absolute',left:0,top:0,width:320,height:180,overflow:'hidden'}}><DrawRect box={{x:0,y:0,w:320,h:180}} progress={1} strokeToken="color/line/hairline" fillToken="color/fill/panel-render" glowToken="color/fill/gold" strokeWidth={1} seed={81}/><div style={{position:'relative',height:'100%'}}>{children}</div></div>;
 }
 
 function BiasRacismThumb() {
   return <ThumbFrame><div style={{display:'flex',alignItems:'center',justifyContent:'center',gap:16,height:'100%',padding:'0 12px'}}>
-    {[['bias','a tendency in judgment'],['racism','psycho-legal social software']].map(([name,desc])=><div key={name} style={{width:132,minHeight:112,padding:'10px 8px',display:'flex',flexDirection:'column',justifyContent:'center',textAlign:'center',border:`1px solid ${color('color/line/hairline')}`}}>
-      <strong style={{font:'500 22px "IBM Plex Mono"',color:color('color/fill/gold')}}>{name}</strong>
-      <span style={{marginTop:9,fontSize:20,lineHeight:1.2,color:color('color/text/soft')}}>{desc}</span>
+    {[['bias','a tendency in judgment'],['racism','psycho-legal social software']].map(([name,desc],index)=><div key={name} style={{width:132,minHeight:112,position:'relative'}}>
+      <DrawRect box={{x:0,y:0,w:132,h:112}} progress={1} strokeToken="color/line/hairline" fillToken="color/fill/panel-render" glowToken="color/fill/gold" strokeWidth={1} seed={91+index}/>
+      <div style={{position:'relative',height:112,padding:'10px 8px',display:'flex',flexDirection:'column',justifyContent:'center',textAlign:'center'}}><strong style={{font:'500 22px "IBM Plex Mono"',color:color('color/fill/gold')}}>{name}</strong>
+      <span style={{marginTop:9,fontSize:20,lineHeight:1.2,color:color('color/text/soft')}}>{desc}</span></div>
     </div>)}
   </div></ThumbFrame>;
 }

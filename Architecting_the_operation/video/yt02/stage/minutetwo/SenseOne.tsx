@@ -1,5 +1,5 @@
 import React from 'react';
-import {DrawLine, Flicker, KitSound, StickFigure, cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
+import {DrawLine, DrawRect, Flicker, KitSound, StickFigure, cubicOut, progress, useCue, useStageMs, type SceneProps} from '@stage';
 import {color} from '../tokens';
 import {SceneBorder} from '../dashboard/SceneBorder';
 import {EntryRail, SenseCard, type RailSlotSpec} from './EntryRail';
@@ -56,7 +56,7 @@ export function SenseOne({segment}:SceneProps) {
           return ms >= at && <text key={name} data-arrow-label={text} x={630} y={y} textAnchor="middle" fontFamily="IBM Plex Mono" fontSize={22} fill={color('color/text/muted')} opacity={enter(ms, at, 350)}>{text}</text>;
         })}
         {ms >= cue.t7Race.at && <g data-unit-tag="one person" opacity={unitP}>
-          <rect x={512} y={318} width={236} height={40} rx={6} fill={color('color/fill/panel-render')} stroke={color('color/line/hairline')}/>
+          <foreignObject x={512} y={318} width={236} height={40}><DrawRect box={{x:0,y:0,w:236,h:40}} progress={unitP} strokeToken="color/line/hairline" fillToken="color/fill/panel-render" glowToken="color/fill/gold" strokeWidth={1} seed={101}/></foreignObject>
           <text x={630} y={345} textAnchor="middle" fontFamily="IBM Plex Mono" fontSize={22} fill={color('color/text/muted')}>unit: one person</text>
         </g>}
       </svg>
