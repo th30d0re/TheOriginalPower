@@ -37,31 +37,42 @@ export function Label({id,box,children,size=20,weight=500,ls=0,lh=1.25,sans=fals
   return <div {...textAttrs(id,box,{size,ls,lh,sans})} style={{position:'absolute',left:box.x,top:box.y,width:box.w,height:box.h,boxSizing:'border-box',font:`${weight} ${size}px "${sans?'IBM Plex Sans':'IBM Plex Mono'}"`,letterSpacing:ls,lineHeight:lh,textAlign:align,color:ink??color('color/text/primary'),opacity,...style}}>{children}</div>;
 }
 
-export function Panel({id,box,opacity=1,accent,style}:{id:string;box:Box;opacity?:number;accent?:string;style?:React.CSSProperties}){
-  return <div {...shapeAttrs(id,box,'frame')} style={{...PANEL_STYLE,left:box.x,top:box.y,width:box.w,height:box.h,opacity,border:accent?`1px solid ${color(accent)}`:PANEL_STYLE.border,...style}}/>;
+export function Panel({id,box,opacity=1,drawProgress,accent,strokeWidth,style}:{id:string;box:Box;opacity?:number;drawProgress?:number;accent?:string;strokeWidth?:number;style?:React.CSSProperties}){
+  const rest={...style};
+  const fillToken=rest.background===color('color/fill/red-wash')?'color/fill/red-wash':rest.background===color('color/fill/red-faint')?'color/fill/red-faint':rest.background===color('color/fill/gold-wash')?'color/fill/gold-wash':'color/fill/panel-render';
+  delete rest.background; delete rest.border; delete rest.borderColor; delete rest.borderWidth;
+  const strokeToken=accent??'color/line/hairline';
+  return <div {...shapeAttrs(id,box,'frame')} style={{position:'absolute',inset:0,opacity,...rest}}>
+    <DrawRect box={box} progress={drawProgress??1} strokeToken={strokeToken} fillToken={fillToken} glowToken="color/fill/gold" strokeWidth={strokeWidth} seed={box.x+box.y}/>
+  </div>;
 }
 
 /** A panel whose approved resting geometry remains the ordinary Panel geometry. */
 export function BootPanel({id,box,startMs,durationMs=500,beat=false,accent,style}:{id:string;box:Box;startMs:number;durationMs?:number;beat?:boolean;accent?:string;style?:React.CSSProperties}){
-  return <BootIn box={box} startFrame={cueFrame(startMs)} durationFrames={Math.round(durationMs * 30 / 1000)} beat={beat}>
-    <div {...shapeAttrs(id,box,'frame')} style={{...PANEL_STYLE,position:'absolute',inset:0,width:'100%',height:'100%',border:accent?`1px solid ${color(accent)}`:PANEL_STYLE.border,...style}}/>
-  </BootIn>;
+  const rest={...style};
+  const fillToken=rest.background===color('color/fill/gold-wash')?'color/fill/gold-wash':'color/fill/panel-render';
+  const {borderWidth}=rest;
+  delete rest.background; delete rest.border; delete rest.borderColor; delete rest.borderWidth;
+  return <div {...shapeAttrs(id,box,'frame')} style={{position:'absolute',inset:0,...rest}}>
+    <DrawRect box={box} startFrame={cueFrame(startMs)} durationFrames={Math.round(durationMs * 30 / 1000)} beat={beat} strokeToken={accent??'color/line/hairline'} fillToken={fillToken} glowToken="color/fill/gold" strokeWidth={typeof borderWidth==='number'?borderWidth:undefined} seed={box.x+box.y}/>
+  </div>;
 }
 
 export function FlickerLabel({startMs,durationMs=460,beat=false,...props}:{startMs:number;durationMs?:number;beat?:boolean}&React.ComponentProps<typeof Label>){
   return <Flicker startFrame={cueFrame(startMs)} durationFrames={Math.round(durationMs * 30 / 1000)} beat={beat}><Label {...props}/></Flicker>;
 }
 
-export function AuditedTermBlock({id,box,term,summary,glyph,accent='color/fill/gold',unit,opacity=1,selected=false,framed=false,titleSize=27,summarySize=24,termId,ms,pulses}:{
+export function AuditedTermBlock({id,box,term,summary,glyph,accent='color/fill/gold',unit,opacity=1,frameOpacity=opacity,selected=false,framed=false,titleSize=27,summarySize=24,termId,ms,pulses}:{
   id:string;box:Box;term:string;summary?:string;glyph:React.ReactNode;accent?:string;unit?:string;opacity?:number;selected?:boolean;framed?:boolean;titleSize?:number;summarySize?:number;
-  termId?:EquationTermId;ms?:number;pulses?:readonly number[];
+  frameOpacity?:number;termId?:EquationTermId;ms?:number;pulses?:readonly number[];
 }){
-  const title={x:box.x+92,y:box.y+18,w:box.w-112,h:66};
-  const summaryBox={x:box.x+92,y:box.y+91,w:box.w-112,h:36};
-  const icon={x:box.x+24,y:box.y+22,w:48,h:48};
+  const compact=box.h<140;
+  const title={x:box.x+(compact?58:92),y:box.y+(compact?10:18),w:box.w-(compact?70:112),h:compact?26:66};
+  const summaryBox={x:box.x+(compact?58:92),y:box.y+(compact?40:91),w:box.w-(compact?70:112),h:compact?18:36};
+  const icon={x:box.x+(compact?14:24),y:box.y+(compact?11:22),w:compact?34:48,h:compact?34:48};
   const unitBox={x:box.x+24,y:box.y+box.h-38,w:box.w-48,h:26};
   return <>
-    <Panel id={`${id}-frame`} box={box} opacity={opacity} accent={selected||framed?accent:undefined} style={{border:selected?`2px solid ${color(accent)}`:framed?`1.5px solid ${color(accent)}`:undefined}}/>
+    <Panel id={`${id}-frame`} box={box} opacity={frameOpacity} drawProgress={opacity} accent={selected||framed?accent:undefined} strokeWidth={selected?2:framed?1.5:undefined}/>
     <div {...shapeAttrs(`${id}-icon`,icon,'mark',`${id}-icon`)} style={{position:'absolute',left:icon.x,top:icon.y,width:icon.w,height:icon.h,opacity,display:'grid',placeItems:'center'}}>{glyph}</div>
     {termId&&ms!==undefined
       ? <ColoredTerm term={termId} ms={ms} pulses={pulses} box={title} display={term} style={{position:'absolute',left:title.x,top:title.y,width:title.w,height:title.h,font:`650 ${titleSize}px "IBM Plex Sans"`,lineHeight:1.15,opacity}}/>
@@ -74,8 +85,3 @@ export function AuditedTermBlock({id,box,term,summary,glyph,accent='color/fill/g
 export function SceneSource({id='source',text,opacity=1}:{id?:string;text:string;opacity?:number}){
   return <Label id={id} box={{x:116,y:968,w:740,h:30}} size={20} weight={400} ls={.35} lh={1.35} opacity={opacity} ink={color('color/text/muted')}>{text}</Label>;
 }
-
-export const PANEL_STYLE:React.CSSProperties = {
-  position:'absolute', boxSizing:'border-box', overflow:'hidden',
-  background:color('color/fill/panel-render'), border:`1px solid ${color('color/line/hairline')}`,
-};
