@@ -16,7 +16,7 @@ export function CrossingLoss({segment}: SceneProps) {
   return <Scene segment={segment}>
     <Panel box={{x: 120, y: 106, w: 1100, h: 70}} at={cue.across}/>
     <Copy at={cue.across} box={{x: 150, y: 124, w: 1000, h: 40}} size={32}>ACROSS THE FULL TRADE</Copy>
-    <Copy at={cue.embarked} box={{x: 240, y: 280, w: 500, h: 36}} size={28}>EMBARKED · 12.5M</Copy>
+    <Copy at={cue.embarked} box={{x: 240, y: 280, w: 500, h: 36}} size={28}>TRAFFICKED · 12.5M</Copy>
     <DrawRect box={{x: 240, y: 340, w: 1440, h: 110}} startFrame={frame(cue.embarked)} durationFrames={20} strokeToken="color/line/hairline-strong" fillToken="color/fill/panel-render" glowToken="color/fill/gold" beat/>
     <DrawRect box={{x: 240, y: 340, w: 1231, h: 110}} startFrame={frame(cue.landed)} durationFrames={18} strokeToken="color/fill/gold" fillToken="color/fill/gold-wash" glowToken="color/fill/gold" beat/>
     <DrawRect box={{x: 1471, y: 340, w: 209, h: 110}} startFrame={frame(cue.died)} durationFrames={18} strokeToken="color/marker/race" fillToken="color/fill/red-faint" glowToken="color/marker/race" beat/>
