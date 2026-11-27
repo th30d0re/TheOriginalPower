@@ -14,7 +14,7 @@ h3 { margin: 1.4em 0 0.5em; }
 p { margin: 0 0 0.85em; text-align: justify; hyphens: auto; -epub-hyphens: auto; }
 
 /* ---------- Callout boxes ---------- */
-.definition, .keyinsight, .historicalsource, .theorem, .conjecture,
+.definition, .keyinsight, .historicalsource, .theorem, .conjecture, .axiom,
 .tcolorbox, .uscdiff {
   margin: 1.4em 0;
   padding: 0.85em 1em;
@@ -26,7 +26,7 @@ p { margin: 0 0 0.85em; text-align: justify; hyphens: auto; -epub-hyphens: auto;
 .definition       { border-color: #2c5aa0; background-color: #eef3fb; }
 .keyinsight       { border-color: #2e7d32; background-color: #eef8f0; }
 .historicalsource { border-color: #c46a10; background-color: #fdf4e9; }
-.theorem, .conjecture { border-color: #444; background-color: #f2f2f2; }
+.theorem, .conjecture, .axiom { border-color: #444; background-color: #f2f2f2; }
 .tcolorbox        { border-color: #666; background-color: #f4f4f4; }
 .uscdiff          { border-color: #555; background-color: #f1f1f1; }
 
@@ -75,12 +75,12 @@ a { text-decoration: none; }
 /* Readers that theme the page themselves get panels tuned to match, rather
    than the light cards above showing through a dark page. */
 @media (prefers-color-scheme: dark) {
-  .definition, .keyinsight, .historicalsource, .theorem, .conjecture,
+  .definition, .keyinsight, .historicalsource, .theorem, .conjecture, .axiom,
   .tcolorbox, .uscdiff, pre, th { color: #e8e8e8; }
   .definition       { background-color: #16202e; }
   .keyinsight       { background-color: #15241a; }
   .historicalsource { background-color: #2a1e10; }
-  .theorem, .conjecture { background-color: #1e1e1e; }
+  .theorem, .conjecture, .axiom { background-color: #1e1e1e; }
   .tcolorbox, .uscdiff, pre { background-color: #1c1c1c; }
   th { background-color: #262626; }
   th, td { border-color: #555; }

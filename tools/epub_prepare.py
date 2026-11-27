@@ -26,7 +26,7 @@ ROMAN = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"]
 # Environments rendered as titled callout boxes.
 BOX_ENVS = ("definition", "keyinsight", "historicalsource")
 # Environments that carry a LaTeX counter.
-THEOREM_ENVS = ("theorem", "conjecture")
+THEOREM_ENVS = ("theorem", "conjecture", "axiom")
 
 # Commands stripped wholesale (print-only layout control).
 STRIP_CMDS = [
@@ -219,8 +219,8 @@ def replace_tikz(text: str) -> tuple[str, int]:
 SCAN = re.compile(
     r"\\(part|chapter|section|subsection|subsubsection)\*?\s*(?:\[)?"
     r"|\\appendix\b"
-    r"|\\begin\{(figure|table|longtable|equation|align|gather|multline|theorem|conjecture)\*?\}"
-    r"|\\end\{(figure|table|longtable|equation|align|gather|multline|theorem|conjecture)\*?\}"
+    r"|\\begin\{(figure|table|longtable|equation|align|gather|multline|theorem|conjecture|axiom)\*?\}"
+    r"|\\end\{(figure|table|longtable|equation|align|gather|multline|theorem|conjecture|axiom)\*?\}"
     r"|\\caption\s*(?:\[)?"
     r"|\\label\{([^}]*)\}"
     r"|\\setcounter\{(?P<ctr>chapter|part|section|equation|figure|table)\}"
@@ -247,7 +247,7 @@ def number_document(text: str) -> tuple[dict[str, str], set[str], dict[str, str]
     chapter = 0
     appendix = False
     sec = subsec = subsubsec = 0
-    eq = fig = tab = thm = conj = 0
+    eq = fig = tab = thm = conj = ax = 0
     stack: list[str] = []          # open numbered environments
     current = ("none", "")         # (kind, printed number) for bare \label
     started_body = False
@@ -301,7 +301,7 @@ def number_document(text: str) -> tuple[dict[str, str], set[str], dict[str, str]
                 current = ("part", ROMAN[part] if part < len(ROMAN) else str(part))
             elif sect == "chapter":
                 sec = subsec = subsubsec = 0
-                eq = fig = tab = thm = conj = 0
+                eq = fig = tab = thm = conj = ax = 0
                 if starred:
                     current = ("chapter*", "")
                 else:
@@ -340,6 +340,9 @@ def number_document(text: str) -> tuple[dict[str, str], set[str], dict[str, str]
             elif benv == "conjecture":
                 conj += 1
                 current = ("conjecture", "%s.%d" % (chap_label(), conj))
+            elif benv == "axiom":
+                ax += 1
+                current = ("axiom", "%s.%d" % (chap_label(), ax))
             continue
 
         if eenv:
@@ -403,7 +406,7 @@ def rewrite_boxes(text: str) -> str:
 
 
 def rewrite_theorems(text: str, numbers: dict[str, str]) -> str:
-    for env, word in (("theorem", "Theorem"), ("conjecture", "Conjecture")):
+    for env, word in (("theorem", "Theorem"), ("conjecture", "Conjecture"), ("axiom", "Axiom")):
         out, i = [], 0
         b = "\\begin{%s}" % env
         while True:
